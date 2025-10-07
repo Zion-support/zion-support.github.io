@@ -1,11 +1,3 @@
-
-
-
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-
-
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-
 module.exports = {}
   "apps": [{}]
       name: 'ziontechgroup-web',
@@ -132,11 +124,4 @@ module.exports = {}
       "log_date_format": 'YYYY-MM-DD HH:mm:ss Z'
     };
   ];
-
-
-
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-
-
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-
+};

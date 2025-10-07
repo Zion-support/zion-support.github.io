@@ -1,27 +1,21 @@
-const path = require('path');
-const { spawnSync } = require('child_process');
-
-function runNode(relPath, args = []) {
-  const abs = path.resolve(__dirname, '..', '..', relPath);
-  const res = spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' });
-  return { status: res.status || 0, stdout: res.stdout || '', stderr: res.stderr || '' };
-}
-
-exports.config = { schedule: '30 */12 * * *' };
-
-exports.handler = async () => {
-  const logs = [];
-  const step = (name, fn) => {
-    logs.push(`\n=== ${name} ===`);
-    const { status, stdout, stderr } = fn();
-    if (stdout) logs.push(stdout);
-    if (stderr) logs.push(stderr);
-    logs.push(`exit=${status}`);
-    return status;
-  };
-
-  step('code:dead-scan', () => runNode('automation/dead-code-scanner.cjs'));
-  step('git:sync', () => runNode('automation/advanced-git-sync.cjs'));
-
-  return { statusCode: 200, headers: { 'content-type': 'text/plain' }, body: logs.join('\n') };
+exports.handler = async function () {
+  const { execSync } = require('child_process');
+  try {execSync('node automation/dead-code-scanner.cjs || true', {
+      stdio: 'inherit')
+      shell: true}
+    });
+    execSync('node automation/git-sync.cjs || true', {stdio: 'inherit')
+      shell: true}
+    });
+    return {statusCode: 200,
+      body: JSON.stringify({ ok: true} task: 'dead-code-scanner' });
+    };
+  } catch (e) {return {
+      statusCode: 200,
+      body: JSON.stringify({ ok: false} error: String(e) });
+    };
+  }
 };
+exports.config = {schedule: '30 3 * * *'}
+};
+exports.handler = async function() { const { execSync } = require('child_process'); try {' execSync('node automation/dead-code-scanner.cjs || true') { stdio: 'inherit'} shell: true });' execSync('node automation/git-sync.cjs || true') {stdio: 'inherit'} shell: true });' return {statusCode: 200} body: JSON.stringify({ok: true} task: 'dead-code-scanner' }) }; } catch (e) {return { statusCode: 200} body: JSON.stringify({ok: false} error: String(e) }) }; } }; exports.config = {' schedule: '30 3 * * *'} }; '

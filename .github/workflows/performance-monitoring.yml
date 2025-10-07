@@ -1,56 +1,48 @@
-<<<<<<< HEAD
----
 name: Performance Monitoring
-
-on:
+'on':
   push:
-    branches: [ main, develop ]
+    branches:
+      - main
+      - develop
   pull_request:
-    branches: [ main, develop ]
+    branches:
+      - main
+      - develop
   workflow_dispatch: {}
   schedule:
-    - cron: '0 10 * * *' # Daily at 10 AM UTC
-
+    - cron: 0 10 * * *
 permissions:
   contents: read
   actions: read
-
 concurrency:
-  group: "performance-${{ github.ref }}"
+  group: performance-${{ github.ref }}
   cancel-in-progress: true
-
 jobs:
   lighthouse:
     name: Lighthouse Performance Audit
     runs-on: ubuntu-latest
     timeout-minutes: 30
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-          cache: 'npm'
-
+          cache: npm
       - name: Install dependencies
         run: npm ci --no-audit --no-fund
-
       - name: Build application
         run: npm run build
         env:
-          NODE_OPTIONS: "--max-old-space-size=4096"
-
+          NODE_OPTIONS: '--max-old-space-size=4096'
       - name: Start application
         run: |
           npm run start &
           echo "Starting application for performance testing..."
           sleep 10
         env:
-          NODE_OPTIONS: "--max-old-space-size=4096"
-
+          NODE_OPTIONS: '--max-old-space-size=4096'
       - name: Wait for app to be ready
         run: |
           echo "Waiting for application to be ready..."
@@ -65,15 +57,12 @@ jobs:
             fi
             sleep 2
           done
-
       - name: Install Lighthouse CI
         run: npm install -g @lhci/cli
-
       - name: Run Lighthouse CI
         run: |
           echo "Running Lighthouse performance audit..."
           lhci autorun --config=./lighthouserc.json || true
-
       - name: Stop application
         if: always()
         run: |
@@ -81,7 +70,6 @@ jobs:
           pkill -f "next start" || true
           pkill -f "node.*start" || true
           sleep 5
-
       - name: Upload Lighthouse results
         uses: actions/upload-artifact@v4
         if: always()
@@ -89,57 +77,28 @@ jobs:
           name: lighthouse-results
           path: .lighthouseci/
           retention-days: 7
-
+    runs_on: ubuntu-latest
   bundle-analysis:
     name: Bundle Analysis
     runs-on: ubuntu-latest
     timeout-minutes: 20
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-=======
-name: Performance Monitoring
-
-on:
-  workflow_dispatch: {}
-  schedule:
-    - cron: '*/10 * * * *'
-
-permissions:
-  contents: write
-  actions: read
-
-jobs:
-  main:
-    name: Main Job
-    runs-on: ubuntu-latest
-    timeout-minutes: 20
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
->>>>>>> origin/auto/autonomy-17186719616
-
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-          cache: 'npm'
-
+          cache: npm
       - name: Install dependencies
         run: npm ci --no-audit --no-fund
-
-<<<<<<< HEAD
       - name: Build with bundle analysis
         run: |
           echo "Building application with bundle analysis..."
           npm run build
           npx @next/bundle-analyzer .next/static/chunks/*.js --out dist/bundle-analysis.html || true
         env:
-          NODE_OPTIONS: "--max-old-space-size=4096"
-
+          NODE_OPTIONS: '--max-old-space-size=4096'
       - name: Upload bundle analysis
         uses: actions/upload-artifact@v4
         if: always()
@@ -147,9 +106,4 @@ jobs:
           name: bundle-analysis
           path: dist/
           retention-days: 7
-=======
-concurrency:
-  group: ${{ github.workflow }}-${{ github.ref }}
-  cancel-in-progress: true
-
->>>>>>> origin/auto/autonomy-17186719616
+    runs_on: ubuntu-latest

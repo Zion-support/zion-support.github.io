@@ -1,104 +1,95 @@
 #!/bin/bash
 
 <<<<<<< HEAD
-echo "Fixing syntax errors in the codebase..."
+# Script to fix syntax errors in TypeScript/TSX files
+echo "Fixing syntax errors in TypeScript/TSX files..."
 
-# Fix standalone semicolons at the beginning of lines
-find src -name "*.ts" -o -name "*.tsx" -o -name "*.js" -o -name "*.jsx" | while read file; do
-    if [ -f "$file" ]; then
-        echo "Processing $file..."
-        # Remove standalone semicolons at the beginning of lines
-        sed -i 's/^;.*$//' "$file"
-        # Remove empty lines that might have been created
-        sed -i '/^$/N;/^\n$/d' "$file"
-    fi
-done
+# Find all .tsx and .ts files with syntax errors (excluding .backup files)
+files_with_errors=$(find /workspace/src -name "*.tsx" -o -name "*.ts" | grep -v ".backup")
 
-# Fix common malformed patterns
-find src -name "*.ts" -o -name "*.tsx" -o -name "*.js" -o -name "*.jsx" | while read file; do
-    if [ -f "$file" ]; then
-        # Fix malformed export statements
-        sed -i 's/export const \([a-zA-Z_][a-zA-Z0-9_]*\) = {}$/export const \1 = {};/' "$file"
-        # Fix missing semicolons after export statements
-        sed -i 's/export default \([a-zA-Z_][a-zA-Z0-9_]*\)$/export default \1;/' "$file"
-    fi
-done
-
-echo "Syntax error fixes completed!"
+for file in $files_with_errors; do
+    echo "Checking: $file"
+    
+    # Fix common import syntax errors
+    sed -i 's/import, React, from '\''rea, c, t'\'';/import React from '\''react'\'';/g' "$file"
+    sed -i 's/import, React, { useSta, t, e, useEffe, c, t } fr, o, m '\''rea, c, t'\'';/import React, { useState, useEffect } from '\''react'\'';/g' "$file"
+    sed -i 's/import, React, { useEffe, c, t } fr, o, m '\''rea, c, t'\'';/import React, { useEffect } from '\''react'\'';/g' "$file"
+    sed -i 's/import, React, { useSta, t, e } fr, o, m '\''rea, c, t'\'';/import React, { useState } from '\''react'\'';/g' "$file"
+    sed -i 's/import, React, { useRef } fr, o, m '\''rea, c, t'\'';/import React, { useRef } from '\''react'\'';/g' "$file"
+    sed -i 's/import, React, { useMemo } fr, o, m '\''rea, c, t'\'';/import React, { useMemo } from '\''react'\'';/g' "$file"
+    sed -i 's/import, React, { useCallback } fr, o, m '\''rea, c, t'\'';/import React, { useCallback } from '\''react'\'';/g' "$file"
+    
+    # Fix other common syntax errors
+    sed -i 's/interface, /interface /g' "$file"
+    sed -i 's/const, /const /g' "$file"
+    sed -i 's/let, /let /g' "$file"
+    sed -i 's/var, /var /g' "$file"
+    sed -i 's/function, /function /g' "$file"
+    sed -i 's/export, /export /g' "$file"
+    sed -i 's/import, /import /g' "$file"
+    sed -i 's/from, /from /g' "$file"
+    sed -i 's/class, /class /g' "$file"
+    sed -i 's/type, /type /g' "$file"
+    
+    # Fix className syntax errors
+    sed -i 's/classNam, e=/className=/g' "$file"
+    sed -i 's/classNa, m, e=/className=/g' "$file"
+    
+    # Fix other common patterns
+    sed -i 's/useSta, t, e/useState/g' "$file"
+    sed -i 's/useEffe, c, t/useEffect/g' "$file"
+    sed -i 's/useRef/useRef/g' "$file"
+    sed -i 's/useMemo/useMemo/g' "$file"
+    sed -i 's/useCallback/useCallback/g' "$file"
+    
+    # Fix React.FC syntax
+    sed -i 's/Rea, c, t\.FC/React.FC/g' "$file"
+    sed -i 's/React\.FC/React.FC/g' "$file"
+    sed -i '/^/d' "$file"
+    sed -i '/^/d' "$file"
+    sed -i '/^    
 =======
-# Fix systematic syntax errors in the codebase
+# Script to fix common syntax errors in blog files
+echo "Starting syntax error fixes..."
 
-echo "Fixing systematic syntax errors..."
+# Find all blog files with syntax errors
+error_files=$(find /workspace/app/blog -name "*.tsx" -exec grep -l "Parsing error" {} \; 2>/dev/null || echo "")
 
-# Fix unterminated string literals with extra semicolons
-find src -name "*.tsx" -o -name "*.ts" | xargs sed -i '' "s/;'/'/g"
+if [ -z "$error_files" ]; then
+    echo "No files with parsing errors found via grep. Processing all blog files..."
+    error_files=$(find /workspace/app/blog -name "*.tsx")
+fi
 
-# Fix extra semicolons in import statements
-find src -name "*.tsx" -o -name "*.ts" | xargs sed -i '' "s/import \([^;]*\);'/\1'/g"
+count=0
+for file in $error_files; do
+    count=$((count + 1))
+    echo "Processing ($count): $file"
+    
+    # Create backup
+    cp "$file" "$file.syntax-backup"
+    
+    # Fix common issues
+    # 1. Remove invalid characters (non-printable characters)
+    sed -i 's/[[:cntrl:]]//g' "$file"
+    
+    # 2. Fix missing closing parentheses in function declarations
+    sed -i 's/export default function \([^(]*\)() {/export default function \1() {/' "$file"
+    
+    # 3. Ensure proper JSX structure - wrap content in a single parent div if needed
+    # This is a complex fix that would need more sophisticated parsing
+    # For now, let's just clean up obvious issues
+    
+    # 4. Remove any remaining merge conflict artifacts
+    sed -i '/^<<<<<<< HEAD/d' "$file"
+    sed -i '/^=======/d' "$file"
+    sed -i '/^>>>>>>> .*/d' "$file"
+    
+    # 5. Fix common JSX issues
+    # Remove any stray characters that might break JSX
+    sed -i 's/[^\x00-\x7F]//g' "$file"
+    
+done
 
-# Fix malformed type annotations
-find src -name "*.tsx" -o -name "*.ts" | xargs sed -i '' 's/: unknown "unknown = /: /g'
-find src -name "*.tsx" -o -name "*.ts" | xargs sed -i '' 's/: unknown {): unknown {): unknown {): unknown {): unknown {) {/: /g'
-
-# Fix malformed function declarations
-find src -name "*.tsx" -o -name "*.ts" | xargs sed -i '' 's/export default function \([^(]*\)(): unknown {): unknown {): unknown {): unknown {): unknown {) {/export default function \1() {/g'
-
-# Fix malformed object literals
-find src -name "*.tsx" -o -name "*.ts" | xargs sed -i '' 's/"{;",;";";";";"/{/g'
-find src -name "*.tsx" -o -name "*.ts" | xargs sed -i '' 's/",;";";";";"/"/g'
-
-# Fix malformed array literals
-find src -name "*.tsx" -o -name "*.ts" | xargs sed -i '' 's/\[;\[/[/g'
-find src -name "*.tsx" -o -name "*.ts" | xargs sed -i '' 's/\];\]/]/g'
-
-# Fix malformed JSX
-find src -name "*.tsx" -o -name "*.ts" | xargs sed -i '' 's/";";";";"/"/g'
-find src -name "*.tsx" -o -name "*.ts" | xargs sed -i '' 's/";";";"/"/g'
-find src -name "*.tsx" -o -name "*.ts" | xargs sed -i '' 's/";";"/"/g'
-
-# Fix malformed function calls
-find src -name "*.tsx" -o -name "*.ts" | xargs sed -i '' 's/\([a-zA-Z_][a-zA-Z0-9_]*\): unknown = /const \1 = /g'
-
-# Fix malformed return statements
-find src -name "*.tsx" -o -name "*.ts" | xargs sed -i '' 's/return \(;";";"/return (/g'
-
-# Fix malformed closing braces
-find src -name "*.tsx" -o -name "*.ts" | xargs sed -i '' 's/};";";";";"/}/g'
-find src -name "*.tsx" -o -name "*.ts" | xargs sed -i '' 's/};";";";"/}/g'
-find src -name "*.tsx" -o -name "*.ts" | xargs sed -i '' 's/};";";"/}/g'
-
-# Fix malformed semicolons
-find src -name "*.tsx" -o -name "*.ts" | xargs sed -i '' 's/;;;/;/g'
-find src -name "*.tsx" -o -name "*.ts" | xargs sed -i '' 's/;;/;/g'
-
-# Fix malformed quotes in strings
-find src -name "*.tsx" -o -name "*.ts" | xargs sed -i '' 's/"\([^"]*\)";"/"\1"/g'
-
-# Fix malformed type imports
-find src -name "*.tsx" -o -name "*.ts" | xargs sed -i '' "s/import type \([^;]*\);'/\1'/g"
-
-# Fix malformed React imports
-find src -name "*.tsx" -o -name "*.ts" | xargs sed -i '' "s/import \([^;]*\) from 'react-hook-form;'/\1 from 'react-hook-form'/g"
-
-# Fix malformed zod imports
-find src -name "*.tsx" -o -name "*.ts" | xargs sed -i '' "s/import \(\{ [^}]* \}\) from 'zod;'/\1 from 'zod'/g"
-
-# Fix malformed form field types
-find src -name "*.tsx" -o -name "*.ts" | xargs sed -i '' "s/field: \"ControllerRenderProps<FormValues\", '\([^']*\)'>/field: ControllerRenderProps<FormValues, '\1'>/g"
-
-# Fix malformed schema definitions
-find src -name "*.tsx" -o -name "*.ts" | xargs sed -i '' "s/\"z\.string\(\)\.min\(2\", 'Required'\)/z.string().min(2, 'Required')/g"
-find src -name "*.tsx" -o -name "*.ts" | xargs sed -i '' "s/\"z\.string\(\)\.min\(1\", 'Required'\)/z.string().min(1, 'Required')/g"
-find src -name "*.tsx" -o -name "*.ts" | xargs sed -i '' 's/"z\.string\(\)\.optional\(\)"/z.string().optional()/g'
-
-# Fix malformed resolver
-find src -name "*.tsx" -o -name "*.ts" | xargs sed -i '' 's/resolver: "zodResolver\(schema\)"/resolver: zodResolver(schema)/g'
-
-# Fix malformed default values
-find src -name "*.tsx" -o -name "*.ts" | xargs sed -i '' 's/defaultValues: "{;",;";";";";"/defaultValues: {/g'
-
-# Fix malformed log statements
-find src -name "*.tsx" -o -name "*.ts" | xargs sed -i '' "s/logInfo\('Partner API request', \{ data: \"{ data: values \"} \)/logInfo('Partner API request', { data: values })/g"
-
-echo "Syntax error fixes completed." 
->>>>>>> origin/auto/autonomy-17186719616
+echo "Syntax error fixes completed for $count files."
+echo "Note: Some complex syntax issues may require manual review."
+>>>>>>> origin/fix-errors-and-merge-final

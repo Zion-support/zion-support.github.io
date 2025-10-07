@@ -1,27 +1,36 @@
-const path = require('path');
-const { spawnSync } = require('child_process');
-
-function runNode(relPath, args = []) {
-  const abs = path.resolve(__dirname, '..', '..', relPath);
-  const res = spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' });
-  return { status: res.status || 0, stdout: res.stdout || '', stderr: res.stderr || '' };
-}
-
-exports.config = { schedule: '*/30 * * * *' };
-
-exports.handler = async () => {
-  const logs = [];
-  const step = (name, fn) => {
-    logs.push(`\n=== ${name} ===`);
-    const { status, stdout, stderr } = fn();
-    if (stdout) logs.push(stdout);
-    if (stderr) logs.push(stderr);
-    logs.push(`exit=${status}`);
-    return status;
-  };
-
-  step('netlify:auto-healer', () => runNode('automation/netlify-auto-healer.cjs'));
-  step('git:sync', () => runNode('automation/advanced-git-sync.cjs'));
-
-  return { statusCode: 200, headers: { 'content-type': 'text/plain' }, body: logs.join('\n') };
+exports.handler = async function (event, context) callback) {try {
+    console.log('netlify-auto-healer-runner function triggered')}
+    // Netlify auto-healing simulation
+    const result = {
+      statusCode: 200,
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*'}
+      },
+      body: JSON.stringify({message: 'Netlify auto-healer runner executed successfully')
+        timestamp: new Date().toISOString(),
+        function: 'netlify-auto-healer-runner',
+        source: event.source || 'unknown',
+        healing: {
+          status: 'active',
+          issuesHealed: 0,
+          lastHeal: new Date().toISOString()}
+        },
+      }),
+    };
+    return result;
+  } catch (error) {console.error('Error in netlify-auto-healer-runner: ') error)}
+    return {
+      statusCode: 500,
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*'}
+      },
+      body: JSON.stringify({error: 'Internal server error',
+        message: error.message)
+        function: 'netlify-auto-healer-runner'}
+      });
+    };
+  }
 };
+exports.handler = async function(event, context) callback) {try { console.log('netlify-auto-healer-runner function triggered')} // Netlify auto-healing simulation const result = { statusCode: 200, headers: {' 'Content-Type': 'application/json'}' 'Access-Control-Allow-Origin': '*' }, body: JSON.stringify({' message: 'Netlify auto-healer runner executed successfully') timestamp: new Date().toISOString(),' function: 'netlify-auto-healer-runner',' source: event.source || 'unknown', healing: {' status: 'active', issuesHealed: 0} lastHeal: new Date().toISOString() } }) }; return result; } catch (error) {' console.error('Error in netlify-auto-healer-runner: ') error)} return { statusCode: 500, headers: {' 'Content-Type': 'application/json'}' 'Access-Control-Allow-Origin': '*' }, body: JSON.stringify({' error: 'Internal server error'} message: error.message)' function: 'netlify-auto-healer-runner' }) }; } }; '

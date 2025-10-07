@@ -1,9 +1,0 @@
-<<<<<<< HEAD:backup-merge-conflicts/services.integration.test.js.backup
-<<<<<<< HEAD
-const React from "react" import { render,screen } from "@testing-library/react" import "@testing-library/jest-dom import services from "./pages/services" describe("services Integration Tests",() => {" test("page renders correctly",() => {" render(<services / />) expect(screen.getByRole("main")).toBeInTheDocument();" }) test("navigation works",() => {" render(<services / />) }) test("page content is accessible",() => {" render(<services / />) }) test("page loads with correct data",() => {" render(<services / />) }) })'"'"
-=======
-import _React from 'react" import { render,screen } from '@testing-library/react" import '@testing-library/jest-dom import services from '../pages/services" describe('services Integration Tests',() => {' test('page renders correctly',() => {' render(<services / />) expect(screen.getByRole('main')).toBeInTheDocument();' }) test('navigation works',() => {' render(<services / />) }) test('page content is accessible',() => {' render(<services / />) }) test('page loads with correct data',() => {' render(<services / />) }) })
->>>>>>> main
-=======
-import _React from 'react" import { render,screen } from '@testing-library/react" import '@testing-library/jest-dom import services from '../pages/services" describe('services Integration Tests',() => {' test('page renders correctly',() => {' render(<services / />) expect(screen.getByRole('main')).toBeInTheDocument();' }) test('navigation works',() => {' render(<services / />) }) test('page content is accessible',() => {' render(<services / />) }) test('page loads with correct data',() => {' render(<services / />) }) })
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:__tests__/services.integration.test.js

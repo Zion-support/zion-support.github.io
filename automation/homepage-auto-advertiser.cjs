@@ -36,10 +36,6 @@ function buildToolsSection(functionNames) {
     'sitemap_runner': 'Keep sitemap fresh for SEO.',
     'marketing-and-features-promo': 'Regenerate promos and deep links.',
     'fast-front-promoter': 'Fast iteration of front/home updates.',
-    'ai-trends-radar': 'AI ecosystem radar — fetches and publishes trends.',
-    'seo-audit': 'SEO audit and report generation.',
-    'newsroom-scheduler': 'Publishes the autonomous newsroom updates.',
-    'schedule-knowledge-graph': 'Weekly repo knowledge graph and metrics.',
   };
 
   const cards = functionNames
@@ -82,6 +78,41 @@ function ensureMarkers(content) {
   const insertAt = updaterStart !== -1 ? updaterStart : (mainClose !== -1 ? mainClose : content.length);
   const section = [START, END].join('\n');
   return content.slice(0, insertAt) + '\n' + section + '\n' + content.slice(insertAt);
+}
+
+function buildCard(item) {
+  const cardClass = 'bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10';
+  const textSpan = `<span className=\"text-white/90\">${item.label}${item.tagline ? ' — ' + item.tagline : ''}</span>`;
+  if (item.type === 'internal') {
+    return `            <Link href=\"${item.href}\"><a className=\"${cardClass}\">${textSpan}</a></Link>`;
+  }
+  return `            <a href=\"${item.href}\" target=\"_blank\" rel=\"noopener\" className=\"${cardClass}\">${textSpan}</a>`;
+}
+
+function generateSectionTSX(items) {
+  const header = `
+<section className=\"mx-auto max-w-7xl px-6 pb-16\">
+  <h2 className=\"text-center text-2xl font-bold tracking-wide text-white/90\">Explore more</h2>
+  <div className=\"mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4\">
+`;
+  const body = items.map(buildCard).join('\n\n');
+  const footer = `
+  </div>
+</section>`;
+  return header + (body ? `
+${body}
+` : '') + footer;
+}
+
+function replaceBetweenMarkers(source, startMarker, endMarker, replacement) {
+  const startIdx = source.indexOf(startMarker);
+  const endIdx = source.indexOf(endMarker);
+  if (startIdx === -1 || endIdx === -1 || endIdx < startIdx) {
+    throw new Error('Markers not found or in wrong order in pages/index.tsx');
+  }
+  const before = source.slice(0, startIdx + startMarker.length);
+  const after = source.slice(endIdx);
+  return `${before}\n${replacement}\n${after}`;
 }
 
 (function main() {

@@ -1,10 +1,31 @@
 
 
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
 
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+#!/usr/bin/env node;
 
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+const fs = require('fs')
+const path = require('path')
+#!/usr/bin/env node;
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
 
+#!/usr/bin/env node;
+
+const fs = require('fs')
+const path = require('path')
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
 const { execSync } = require('child_process')
 // console.log(' Comprehensive Code Fixer')
 console.log('')
@@ -27,7 +48,6 @@ console.log('')
     'pages/services.tsx'
     'pages/terms.tsx'
         let content = fs.readFileSync(filePath, 'utf8')
-        let content = fs.readFileSync(filePath, 'utf8')
         content = content.replace(/'/g, '&apos;')
           content = content.replace(/import Image from 'next\/image')
           content = content.replace(/import Image from 'next\/image'}/, '// import Image from \'next/image\';')
@@ -46,7 +66,8 @@ console.log('')
     execSync('npm run build', { "stdio"})
     console.log('\n Final "Report")
 
+    console.error(' Comprehensive Code Fixer "failed")
+    console.error(' Comprehensive Code Fixer "failed")
+console.log()
 
-
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 

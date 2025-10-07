@@ -1,10 +1,3 @@
-
-
-
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -35,8 +28,4 @@ const problematicFiles = ['pages/docs/integration-examples.tsx']
       "description"
       "features"
         <meta name="description" content="
-
-
-
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-
+        <meta property="og:description" content="

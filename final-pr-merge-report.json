@@ -1,0 +1,54 @@
+{
+  "timestamp": "2025-10-05T11:36:41.051Z",
+  "summary": {
+    "totalPRs": 4,
+    "merged": 1,
+    "conflicts": 0,
+    "notFound": 3,
+    "skipped": 0,
+    "successRate": "25%"
+  },
+  "systemChecks": {
+    "typeCheck": true,
+    "lintCheck": true,
+    "testCheck": true,
+    "buildCheck": true,
+    "allPassed": true
+  },
+  "results": [
+    {
+      "pr": 11935,
+      "title": "Fix web application console errors",
+      "status": "not_found",
+      "branch": "cursor/fix-web-application-console-errors-0bf5",
+      "priority": "critical"
+    },
+    {
+      "pr": 25063,
+      "title": "Build and deploy with vite and netlify",
+      "status": "not_found",
+      "branch": "cursor/build-and-deploy-with-vite-and-netlify-8b37",
+      "priority": "high"
+    },
+    {
+      "pr": 25062,
+      "title": "Fix errors and merge to main",
+      "status": "not_found",
+      "branch": "cursor/fix-errors-and-merge-to-main-fcbd",
+      "priority": "high"
+    },
+    {
+      "pr": 25061,
+      "title": "Fix errors and merge to main",
+      "status": "merged",
+      "branch": "cursor/fix-errors-and-merge-to-main-e6e1",
+      "priority": "high"
+    }
+  ],
+  "status": "success",
+  "repository": {
+    "branch": "main",
+    "status": "clean",
+    "lastCommit": "9cc8fc46cfec Merge branch 'main' of https://github.com/Zion-Holdings/zion.app"
+  }
+}

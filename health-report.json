@@ -1,32 +1,54 @@
 {
-  "timestamp": "2025-09-05T02:59:06.993Z",
-  "status": "unhealthy",
-  "checks": {
-    "disk": {
-      "status": "ok",
-      "details": "Disk usage: 13%",
-      "message": "Disk space is healthy"
-    },
-    "memory": {
-      "status": "ok",
-      "details": "Mem:            15Gi       1.4Gi       1.0Gi       7.5Mi        13Gi        14Gi",
-      "message": "Memory check completed"
-    },
-    "build": {
-      "status": "error",
-      "message": "Build failed"
-    },
-    "lint": {
-      "status": "error",
-      "message": "Linting failed and could not be auto-fixed"
-    },
-    "typeCheck": {
-      "status": "error",
-      "message": "Type checking failed"
-    },
-    "security": {
-      "status": "ok",
-      "message": "No security vulnerabilities found"
-    }
+  "timestamp": "2025-09-06T23:55:30.887Z",
+  "healthStatus": {
+    "overall": "unhealthy",
+    "checks": [
+      {
+        "type": "dependencies",
+        "status": "passed",
+        "message": "Dependencies check completed",
+        "timestamp": "2025-09-06T23:55:30.635Z"
+      },
+      {
+        "type": "configuration",
+        "status": "passed",
+        "message": "All configuration files present",
+        "timestamp": "2025-09-06T23:55:30.636Z"
+      },
+      {
+        "type": "build_process",
+        "status": "passed",
+        "message": "Build script found",
+        "timestamp": "2025-09-06T23:55:30.636Z"
+      },
+      {
+        "type": "linting",
+        "status": "passed",
+        "message": "Linting configuration found",
+        "timestamp": "2025-09-06T23:55:30.887Z"
+      }
+    ],
+    "issues": [
+      {
+        "type": "missing_critical_deps",
+        "message": "Missing critical dependencies: typescript",
+        "severity": "high",
+        "timestamp": "2025-09-06T23:55:30.635Z"
+      },
+      {
+        "type": "test_check_failed",
+        "message": "ENOENT: no such file or directory, stat '/workspace/media/docu-script/requirements.txt'",
+        "severity": "low",
+        "timestamp": "2025-09-06T23:55:30.887Z"
+      }
+    ],
+    "recommendations": []
+  },
+  "summary": {
+    "totalChecks": 4,
+    "passedChecks": 4,
+    "totalIssues": 2,
+    "criticalIssues": 0,
+    "highIssues": 1
   }
 }

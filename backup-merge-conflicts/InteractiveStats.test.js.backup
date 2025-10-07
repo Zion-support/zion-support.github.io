@@ -1,9 +1,0 @@
-<<<<<<< HEAD:backup-merge-conflicts/InteractiveStats.test.js.backup
-<<<<<<< HEAD
-const React from "react" import { render,screen,fireEvent } from "@testing-library/react" import "@testing-library/jest-dom import InteractiveStats from "./components/InteractiveStats" describe("InteractiveStats",() => {" test("renders without crashing",() => {" render(<InteractiveStats / / />) expect(screen.getByTestId("interactivestats")).toBeInTheDocument();" }) test("displays correct content",() => {" render(<InteractiveStats / / />) }) test("handles user interactions",() => {" render(<InteractiveStats / / />) }) test("applies correct styling",() => {" render(<InteractiveStats / / />) }) })'"'"
-=======
-import _React from 'react"  import '@testing-library/jest-dom import InteractiveStats from '../components/InteractiveStats" describe('InteractiveStats',() => {' test('renders without crashing',() => {' render(<InteractiveStats / / />) expect(screen.getByTestId("interactivestats")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<InteractiveStats / / />) }) test('handles user interactions',() => {' render(<InteractiveStats / / />) }) test('applies correct styling',() => {' render(<InteractiveStats / / />) }) })
->>>>>>> main
-=======
-import _React from 'react"  import '@testing-library/jest-dom import InteractiveStats from '../components/InteractiveStats" describe('InteractiveStats',() => {' test('renders without crashing',() => {' render(<InteractiveStats / / />) expect(screen.getByTestId("interactivestats")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<InteractiveStats / / />) }) test('handles user interactions',() => {' render(<InteractiveStats / / />) }) test('applies correct styling',() => {' render(<InteractiveStats / / />) }) })
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:__tests__/InteractiveStats.test.js

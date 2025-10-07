@@ -1,9 +1,8 @@
 name: Deploy
 
 on:
-<<<<<<< HEAD
   push:
-    branches: [main]
+    branches: [ main ]
   workflow_dispatch:
 
 permissions:
@@ -11,47 +10,22 @@ permissions:
 
 jobs:
   deploy:
-    name: Deploy to Production
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/main'
-    
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-=======
-  workflow_dispatch: {}
-  schedule:
-    - cron: '*/10 * * * *'
-
-permissions:
-  contents: write
-  actions: read
-
-jobs:
-  main:
-    name: Main Job
-    runs-on: ubuntu-latest
-    timeout-minutes: 20
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
->>>>>>> origin/auto/autonomy-17186719616
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '20'
           cache: 'npm'
-<<<<<<< HEAD
 
       - name: Install dependencies
         run: npm ci
 
       - name: Run linting
         run: npm run lint
-        continue-on-error: true
 
       - name: Run type checking
         run: npm run type-check
@@ -65,62 +39,37 @@ jobs:
             echo "Build failed: dist folder not found"
             exit 1
           fi
-          echo "Build successful - dist folder created"
-          
-          # Check for essential files
-          if [ -f dist/index.html ]; then
-            echo "✓ index.html found"
-          else
-            echo "✗ index.html not found"
-            exit 1
-          fi
-          
-          if [ -d dist/assets ]; then
-            echo "✓ assets folder found"
-          else
-            echo "✗ assets folder not found"
-            exit 1
-          fi
+          echo "Build completed successfully"
+          echo "Build contents:"
+          ls -la dist/
+          echo "Total files: $(find dist -type f | wc -l)"
 
       - name: Upload build artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: production-build
-          path: dist/
+          name: build-artifacts
+          path: dist
+          retention-days: 30
 
-      - name: Deploy to production
-        run: |
-          echo "Deployment completed successfully"
-          echo "Build artifacts are ready in the dist/ folder"
-=======
-      - name: Install dependencies (for Sentry CLI and potential build step)
-        run: npm ci
-      - name: Build application (to generate sourcemaps for Sentry)
-        env:
-          # Mimic Netlify's production environment as much as possible for consistent sourcemaps
-          # These are illustrative; actual values might need to match netlify.toml production context
-          NODE_ENV: production
-          NEXT_TELEMETRY_DISABLED: '1'
-          # Add other critical NEXT_PUBLIC_ vars if they affect sourcemap generation or IDs
-        run: npm run build # This uses the standard build, not the full optimized-build.cjs
-
-      - name: Create Sentry release
-        uses: getsentry/action-release@v1
-        env:
-          SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
-          SENTRY_ORG: zion-holdings # Make sure this is your Sentry org slug
-          SENTRY_PROJECT: javascript-nextjs # Make sure this is your Sentry project slug
+      - name: Deploy to Netlify (if configured)
+        if: env.NETLIFY_SITE_ID != ''
+        uses: nwtgck/actions-netlify@v2.0
         with:
-          environment: production
-          sourcemaps: # Path to sourcemaps
-            - './.next/**/*.js.map'
-            - './.next/static/**/*.js.map' # Common locations for Next.js sourcemaps
-          url_prefix: '~/_next' # Adjust if your assets are served from a different base path e.g. /_next or cdn
-          # version: ${{ github.sha }} # Explicitly set version, defaults to github.sha
-          set_commits: auto # Automatically associate commits with the release
-          # deploy: # Optional: if you want to mark the release as deployed in Sentry
-          # env: production
-          # started_at: ${{ steps.start_time.outputs.time }} # Requires a step to output current time
-          # name: "Netlify Production Deployment"
+          publish-dir: './dist'
+          production-branch: main
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          deploy-message: "Deploy from GitHub Actions"
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+        timeout-minutes: 1
 
->>>>>>> origin/auto/autonomy-17186719616
+      - name: Deploy to Vercel (if configured)
+        if: env.VERCEL_TOKEN != ''
+        uses: amondnet/vercel-action@v25
+        with:
+          vercel-token: ${{ secrets.VERCEL_TOKEN }}
+          vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
+          vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
+          working-directory: ./
+          vercel-args: '--prod'

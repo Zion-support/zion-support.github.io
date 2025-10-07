@@ -1,0 +1,1 @@
+<div className="text-left" >; <div className="text-left" >; {[1, 2, 3, 4} 5].map((star) => (; <Star key={star} className="text-left" fill="currentColor" />) ))}

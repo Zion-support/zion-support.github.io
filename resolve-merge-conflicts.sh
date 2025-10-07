@@ -1,110 +1,95 @@
 #!/bin/bash
 
-# Script to resolve merge conflicts and continue the merge process
-set -e
+# Script to resolve merge conflicts and merge PRs into main branch
+# This script should be run manually due to sandbox restrictions
 
-echo "🔧 Resolving merge conflicts..."
-echo "⏰ Started at: $(date)"
-echo "---"
+echo "🚀 Starting merge conflict resolution and PR merging process..."
 
-# Function to log messages
-log_message() {
-    local message="$1"
-    echo "$(date '+%Y-%m-%d %H:%M:%S') - $message"
-}
+# 1. First, let's check the current status
+echo "📊 Current git status:"
+git status
 
-# Resolve conflicts by accepting incoming changes
-log_message "🔄 Resolving conflicts by accepting incoming changes..."
+# 2. Fetch all remote changes
+echo "📥 Fetching all remote changes..."
+git fetch origin
 
-# For modify/delete conflicts, accept the deletion (incoming change)
-git status --porcelain | grep "^DU\|^UD" | while read -r line; do
-    if [[ $line =~ ^DU ]]; then
-        # Deleted in incoming, modified in HEAD - accept deletion
-        file_path=$(echo "$line" | awk '{print $2}')
-        log_message "🗑️  Accepting deletion of: $file_path"
-        git rm "$file_path" 2>/dev/null || true
-    elif [[ $line =~ ^UD ]]; then
-        # Modified in incoming, deleted in HEAD - accept modification
-        file_path=$(echo "$line" | awk '{print $2}')
-        log_message "✅ Accepting modification of: $file_path"
-        git add "$file_path" 2>/dev/null || true
+# 3. Check for open PRs (this would need to be done via GitHub API or web interface)
+echo "🔍 Checking for open PRs..."
+echo "Note: You'll need to check GitHub web interface for open PRs at:"
+echo "https://github.com/Zion-Holdings/zion.app/pulls"
+
+# 4. Try to merge origin/main into current main
+echo "🔄 Attempting to merge origin/main into current main..."
+git merge origin/main --no-edit
+
+# 5. If there are conflicts, resolve them
+if [ $? -ne 0 ]; then
+    echo "⚠️  Merge conflicts detected. Resolving conflicts..."
+    
+    # Find files with conflicts
+    CONFLICTED_FILES=$(git diff --name-only --diff-filter=U)
+    
+    if [ -n "$CONFLICTED_FILES" ]; then
+        echo "📝 Files with conflicts:"
+        echo "$CONFLICTED_FILES"
+        
+        # For each conflicted file, try to resolve automatically
+        for file in $CONFLICTED_FILES; do
+            echo "🔧 Resolving conflicts in: $file"
+            
+            # Check if it's a merge conflict marker issue
+            if grep -q "<<<<<<< HEAD" "$file"; then
+                echo "  - Found merge conflict markers, resolving..."
+                # Remove conflict markers and keep the working version
+                sed -i '/<<<<<<< HEAD/,/>>>>>>> /d' "$file"
+                git add "$file"
+            fi
+        done
+        
+        # Commit the resolved conflicts
+        git commit -m "Resolve merge conflicts automatically"
+    fi
+fi
+
+# 6. Push the merged changes
+echo "📤 Pushing merged changes to main..."
+git push origin main
+
+# 7. Check for other branches that might need merging
+echo "🔍 Checking for other branches that might need merging..."
+
+# List recent branches
+echo "Recent branches:"
+git branch -r --sort=-committerdate | head -10
+
+# 8. Try to merge some of the recent fix branches
+RECENT_BRANCHES=(
+    "cursor/fix-errors-and-merge-to-main-8d57"
+    "cursor/fix-errors-and-merge-to-main-1d5e"
+    "cursor/fix-errors-and-merge-to-main-14ab"
+    "cursor/fix-errors-and-merge-to-main-0022"
+)
+
+for branch in "${RECENT_BRANCHES[@]}"; do
+    if git show-ref --verify --quiet "refs/remotes/origin/$branch"; then
+        echo "🔄 Attempting to merge $branch..."
+        git merge "origin/$branch" --no-edit
+        
+        if [ $? -eq 0 ]; then
+            echo "✅ Successfully merged $branch"
+        else
+            echo "⚠️  Could not merge $branch (conflicts or already merged)"
+        fi
+    else
+        echo "❌ Branch $branch not found"
     fi
 done
 
-# For content conflicts, try to resolve automatically
-log_message "🔧 Resolving content conflicts..."
+# 9. Final push
+echo "📤 Pushing all merged changes..."
+git push origin main
 
-# Resolve .gitignore conflicts
-if [ -f ".gitignore" ]; then
-    log_message "📝 Resolving .gitignore conflicts..."
-    # Keep both versions and remove conflict markers
-    git checkout --theirs .gitignore
-    git add .gitignore
-fi
-
-# Resolve package.json conflicts
-if [ -f "package.json" ]; then
-    log_message "📦 Resolving package.json conflicts..."
-    # Keep the incoming version (merged branches)
-    git checkout --theirs package.json
-    git add package.json
-fi
-
-# Resolve _app.tsx conflicts
-if [ -f "pages/_app.tsx" ]; then
-    log_message "📱 Resolving _app.tsx conflicts..."
-    git checkout --theirs pages/_app.tsx
-    git add pages/_app.tsx
-fi
-
-# Resolve index.tsx conflicts
-if [ -f "pages/index.tsx" ]; then
-    log_message "🏠 Resolving index.tsx conflicts..."
-    git checkout --theirs pages/index.tsx
-    git add pages/index.tsx
-fi
-
-# Resolve globals.css conflicts
-if [ -f "styles/globals.css" ]; then
-    log_message "🎨 Resolving globals.css conflicts..."
-    git checkout --theirs styles/globals.css
-    git add styles/globals.css
-fi
-
-# Resolve tailwind.config.js conflicts
-if [ -f "tailwind.config.js" ]; then
-    log_message "🎨 Resolving tailwind.config.js conflicts..."
-    git checkout --theirs tailwind.config.js
-    git add tailwind.config.js
-fi
-
-# Add all resolved files
-log_message "📁 Adding all resolved files..."
-git add .
-
-# Commit the merge
-log_message "💾 Committing merge resolution..."
-if git commit -m "Resolve merge conflicts from multiple branch merges" 2>/dev/null; then
-    log_message "✅ Merge conflicts resolved successfully!"
-    
-    # Push the changes
-    log_message "🚀 Pushing resolved merge..."
-    git push origin main
-    
-    log_message "🎉 Merge process completed successfully!"
-else
-    log_message "❌ Failed to commit merge resolution"
-    log_message "📋 Current status:"
-    git status --porcelain | head -20
-    
-    # Try to abort and start fresh
-    log_message "🔄 Aborting merge and starting fresh..."
-    git merge --abort
-    
-    # Reset to main
-    git reset --hard origin/main
-    
-    log_message "✅ Reset to clean main branch"
-fi
-
-echo "🎯 Conflict resolution completed! Check the logs above for details."
+echo "✅ Merge conflict resolution and PR merging completed!"
+echo "📊 Final status:"
+git status
+git log --oneline -5

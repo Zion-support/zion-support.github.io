@@ -1,20 +1,14 @@
-<<<<<<< HEAD
----
 name: repo-radar
-
-on:
+'on':
   schedule:
-    - cron: '0 2 * * *'
-  workflow_dispatch:
-
+    - cron: 0 2 * * *
+  workflow_dispatch: null
 permissions:
   contents: read
   actions: read
-
 concurrency:
-  group: "${{ github.workflow }}-${{ github.ref }}"
+  group: repo-radar-${{ github.ref }}
   cancel-in-progress: true
-
 jobs:
   main:
     runs-on: ubuntu-latest
@@ -29,8 +23,8 @@ jobs:
           cache: npm
       - name: Install dependencies
         run: npm ci
-      - name: Run workflow
-        run: echo "Workflow executed successfully"
+      - name: Run repository radar
+        run: 
       - name: Upload results
         uses: actions/upload-artifact@v4
         if: always()
@@ -39,40 +33,4 @@ jobs:
           path: |
             .github/workflows/
           retention-days: 7
-=======
-name: Repo Radar
-
-on:
-  workflow_dispatch: {}
-  schedule:
-    - cron: '*/10 * * * *'
-
-permissions:
-  contents: write
-  actions: read
-
-jobs:
-  main:
-    name: Main Job
-    runs-on: ubuntu-latest
-    timeout-minutes: 20
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-          cache: 'npm'
-
-      - name: Install dependencies
-        run: npm ci --no-audit --no-fund
-
-concurrency:
-  group: ${{ github.workflow }}-${{ github.ref }}
-  cancel-in-progress: true
-
->>>>>>> origin/auto/autonomy-17186719616
+    runs_on: ubuntu-latest

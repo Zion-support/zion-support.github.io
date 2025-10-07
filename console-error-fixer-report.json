@@ -1,8 +1,633 @@
 {
-  "timestamp": "2025-08-29T23:17:50.335Z",
-  "consoleStatements": 272,
-  "buildConsoleStatements": 12,
-  "errorPatterns": 236,
-  "summary": "Console error fixer completed",
-  "status": "completed"
+  "timestamp": "2025-08-29T14:17:34.785Z",
+  "totalFiles": 117,
+  "files": [
+    {
+      "file": "src/components/AICodeGenerator.jsx",
+      "matches": ["console.log", "console.log", "console.error"]
+    },
+    {
+      "file": "src/components/AccessibilityEnhancer.tsx",
+      "matches": ["console.warn"]
+    },
+    {
+      "file": "src/components/AccessibilityPanel.jsx",
+      "matches": ["console.error"]
+    },
+    {
+      "file": "src/components/AdvancedAICodeGenerator.jsx",
+      "matches": ["console.error", "console.error", "console.log"]
+    },
+    {
+      "file": "src/components/AdvancedDataVisualization.jsx",
+      "matches": ["console.log"]
+    },
+    {
+      "file": "src/components/AdvancedForm.jsx",
+      "matches": ["console.error"]
+    },
+    {
+      "file": "src/components/AdvancedNotificationSystem.jsx",
+      "matches": [
+        "console.log",
+        "console.log",
+        "console.log",
+        "console.log",
+        "console.log",
+        "console.log",
+        "console.log",
+        "console.log"
+      ]
+    },
+    {
+      "file": "src/components/AdvancedReportingDashboard.tsx",
+      "matches": ["console.log", "console.log", "console.log", "console.log"]
+    },
+    {
+      "file": "src/components/BlockchainWeb3Dashboard.jsx",
+      "matches": ["console.error", "console.error", "console.error"]
+    },
+    {
+      "file": "src/components/BundleAnalyzer.jsx",
+      "matches": ["console.error"]
+    },
+    {
+      "file": "src/components/ChatAssistantTrigger.jsx",
+      "matches": ["console.error"]
+    },
+    {
+      "file": "src/components/CollaborativeTextEditor.jsx",
+      "matches": ["console.error"]
+    },
+    {
+      "file": "src/components/ContactPublisherModal.jsx",
+      "matches": ["console.error"]
+    },
+    {
+      "file": "src/components/ContentQualityDashboard.jsx",
+      "matches": ["console.error"]
+    },
+    {
+      "file": "src/components/DynamicListingPage.jsx",
+      "matches": ["console.log", "console.log", "console.log", "console.log"]
+    },
+    {
+      "file": "src/components/EnhancedContact.tsx",
+      "matches": ["console.error"]
+    },
+    {
+      "file": "src/components/EnhancedNewsletterForm.jsx",
+      "matches": ["console.error", "console.error"]
+    },
+    {
+      "file": "src/components/EnterpriseDashboard.jsx",
+      "matches": ["console.log", "console.error"]
+    },
+    {
+      "file": "src/components/ErrorBoundary.jsx",
+      "matches": ["console.error", "console.error", "console.error"]
+    },
+    {
+      "file": "src/components/ErrorBoundary.tsx",
+      "matches": [
+        "console.error",
+        "console.log",
+        "console.warn",
+        "console.log",
+        "console.warn",
+        "console.error"
+      ]
+    },
+    {
+      "file": "src/components/FavoriteButton.tsx",
+      "matches": ["console.log", "console.log"]
+    },
+    {
+      "file": "src/components/FooterNewsletter.tsx",
+      "matches": ["console.error"]
+    },
+    {
+      "file": "src/components/MachineLearningDashboard.jsx",
+      "matches": [
+        "console.error",
+        "console.log",
+        "console.error",
+        "console.error",
+        "console.error"
+      ]
+    },
+    {
+      "file": "src/components/MarketplaceErrorBoundary.jsx",
+      "matches": ["console.error", "console.error"]
+    },
+    {
+      "file": "src/components/MobileNavigation.jsx",
+      "matches": ["console.log"]
+    },
+    {
+      "file": "src/components/NewsletterSection.jsx",
+      "matches": ["console.log"]
+    },
+    {
+      "file": "src/components/NotificationSystem.tsx",
+      "matches": ["console.warn", "console.warn"]
+    },
+    {
+      "file": "src/components/PerformanceMonitor.jsx",
+      "matches": [
+        "console.warn",
+        "console.warn",
+        "console.warn",
+        "console.warn"
+      ]
+    },
+    {
+      "file": "src/components/PerformanceOptimizations.jsx",
+      "matches": ["console.log"]
+    },
+    {
+      "file": "src/components/PerformanceOptimizer.jsx",
+      "matches": ["console.log", "console.log"]
+    },
+    {
+      "file": "src/components/PerformanceOptimizer.tsx",
+      "matches": ["console.warn", "console.log", "console.error"]
+    },
+    {
+      "file": "src/components/QuoteRequestForm/ServiceTypeStep.jsx",
+      "matches": ["console.error"]
+    },
+    {
+      "file": "src/components/QuoteRequestForm.jsx",
+      "matches": ["console.log", "console.error"]
+    },
+    {
+      "file": "src/components/SEOOptimizer.jsx",
+      "matches": ["console.error"]
+    },
+    {
+      "file": "src/components/Sonner.jsx",
+      "matches": [
+        "console.log",
+        "console.log",
+        "console.log",
+        "console.log",
+        "console.log",
+        "console.log"
+      ]
+    },
+    {
+      "file": "src/components/WaitlistSection.jsx",
+      "matches": ["console.log"]
+    },
+    {
+      "file": "src/components/developers/ApiDocumentation.jsx",
+      "matches": [
+        "console.log",
+        "console.log",
+        "console.log",
+        "console.log",
+        "console.log",
+        "console.log",
+        "console.log",
+        "console.log"
+      ]
+    },
+    {
+      "file": "src/components/header/EnhancedSearchInput.jsx",
+      "matches": ["console.log"]
+    },
+    {
+      "file": "src/components/header/UserMenu.jsx",
+      "matches": ["console.error"]
+    },
+    {
+      "file": "src/components/interviews/InterviewRequestForm.jsx",
+      "matches": ["console.error"]
+    },
+    {
+      "file": "src/components/interviews/UpcomingInterviewsCard.jsx",
+      "matches": ["console.error"]
+    },
+    {
+      "file": "src/components/mobile-app/QrCodeDownload.jsx",
+      "matches": ["console.error", "console.error"]
+    },
+    {
+      "file": "src/components/profile/ServiceProviderRegistrationForm.jsx",
+      "matches": [
+        "console.error",
+        "console.error",
+        "console.error",
+        "console.error"
+      ]
+    },
+    {
+      "file": "src/components/profile/TalentRegistrationForm.jsx",
+      "matches": [
+        "console.error",
+        "console.error",
+        "console.error",
+        "console.error"
+      ]
+    },
+    {
+      "file": "src/components/support/ChatBotPanel.jsx",
+      "matches": [
+        "console.error",
+        "console.error",
+        "console.log",
+        "console.error"
+      ]
+    },
+    {
+      "file": "src/components/talent/TalentGrid.jsx",
+      "matches": ["console.log"]
+    },
+    {
+      "file": "src/components/ui/EnhancedNotificationSystem.tsx",
+      "matches": ["console.log", "console.log", "console.log", "console.log"]
+    },
+    {
+      "file": "src/components/unused/EnhancedAccessibility.jsx",
+      "matches": ["console.warn"]
+    },
+    {
+      "file": "src/components/unused/EnhancedErrorBoundary.jsx",
+      "matches": ["console.error", "console.log", "console.log"]
+    },
+    {
+      "file": "src/context/auth/AuthProvider.js.jsx",
+      "matches": ["console.error", "console.error", "console.error"]
+    },
+    {
+      "file": "src/context/auth/AuthProvider.jsx",
+      "matches": ["console.error", "console.error", "console.error"]
+    },
+    {
+      "file": "src/context/auth/useAuthState.ts",
+      "matches": ["console.error"]
+    },
+    {
+      "file": "src/hooks/use-toast.js",
+      "matches": ["console.log"]
+    },
+    {
+      "file": "src/hooks/use-toast.ts",
+      "matches": ["console.log"]
+    },
+    {
+      "file": "src/hooks/useAICodeGeneration.js.jsx",
+      "matches": [
+        "console.error",
+        "console.error",
+        "console.error",
+        "console.error",
+        "console.error",
+        "console.log",
+        "console.log",
+        "console.log",
+        "console.log",
+        "console.log",
+        "console.log",
+        "console.log",
+        "console.log"
+      ]
+    },
+    {
+      "file": "src/hooks/useAICodeGeneration.jsx",
+      "matches": [
+        "console.error",
+        "console.error",
+        "console.error",
+        "console.error",
+        "console.error",
+        "console.log",
+        "console.log",
+        "console.log",
+        "console.log",
+        "console.log",
+        "console.log",
+        "console.log",
+        "console.log"
+      ]
+    },
+    {
+      "file": "src/hooks/useAccessibility.js.jsx",
+      "matches": ["console.warn", "console.warn"]
+    },
+    {
+      "file": "src/hooks/useAnalytics.js.jsx",
+      "matches": ["console.error", "console.log", "console.error"]
+    },
+    {
+      "file": "src/hooks/useAuth.ts",
+      "matches": ["console.error"]
+    },
+    {
+      "file": "src/hooks/useLazyLoad.js.jsx",
+      "matches": ["console.error"]
+    },
+    {
+      "file": "src/hooks/usePerformance.js.jsx",
+      "matches": [
+        "console.warn",
+        "console.warn",
+        "console.log",
+        "console.warn",
+        "console.warn",
+        "console.warn"
+      ]
+    },
+    {
+      "file": "src/hooks/usePerformance.ts",
+      "matches": [
+        "console.warn",
+        "console.warn",
+        "console.warn",
+        "console.warn",
+        "console.warn"
+      ]
+    },
+    {
+      "file": "src/hooks/useRealTimeCollaboration.js.jsx",
+      "matches": ["console.error", "console.error", "console.error"]
+    },
+    {
+      "file": "src/layout/PrimaryNav.js.jsx",
+      "matches": ["console.log", "console.log"]
+    },
+    {
+      "file": "src/layout/PrimaryNav.jsx",
+      "matches": ["console.log", "console.log"]
+    },
+    {
+      "file": "src/layout/PrimaryNav.tsx",
+      "matches": ["console.log", "console.log"]
+    },
+    {
+      "file": "src/main.js.jsx",
+      "matches": ["console.log", "console.error", "console.error"]
+    },
+    {
+      "file": "src/main.jsx",
+      "matches": ["console.log", "console.error", "console.error"]
+    },
+    {
+      "file": "src/pages/AccountSettings.js.jsx",
+      "matches": [
+        "console.error",
+        "console.log",
+        "console.error",
+        "console.error"
+      ]
+    },
+    {
+      "file": "src/pages/AccountSettings.jsx",
+      "matches": [
+        "console.error",
+        "console.log",
+        "console.error",
+        "console.error"
+      ]
+    },
+    {
+      "file": "src/pages/Cart.js.jsx",
+      "matches": ["console.error"]
+    },
+    {
+      "file": "src/pages/Cart.jsx",
+      "matches": ["console.error"]
+    },
+    {
+      "file": "src/pages/Checkout.js.jsx",
+      "matches": ["console.error", "console.error"]
+    },
+    {
+      "file": "src/pages/Checkout.jsx",
+      "matches": ["console.error", "console.error"]
+    },
+    {
+      "file": "src/pages/CheckoutPage.js.jsx",
+      "matches": ["console.error"]
+    },
+    {
+      "file": "src/pages/CheckoutPage.jsx",
+      "matches": ["console.error"]
+    },
+    {
+      "file": "src/pages/ComprehensiveContact.js.jsx",
+      "matches": ["console.log"]
+    },
+    {
+      "file": "src/pages/ComprehensiveContact.jsx",
+      "matches": ["console.log"]
+    },
+    {
+      "file": "src/pages/ContentGenerator.js.jsx",
+      "matches": ["console.error", "console.error"]
+    },
+    {
+      "file": "src/pages/ContentGenerator.jsx",
+      "matches": ["console.error", "console.error"]
+    },
+    {
+      "file": "src/pages/Cookies.tsx",
+      "matches": ["console.log"]
+    },
+    {
+      "file": "src/pages/DeveloperPortal.tsx",
+      "matches": ["console.log"]
+    },
+    {
+      "file": "src/pages/Documentation.tsx",
+      "matches": ["console.log"]
+    },
+    {
+      "file": "src/pages/EquipmentPage.js.jsx",
+      "matches": [
+        "console.error",
+        "console.error",
+        "console.error",
+        "console.error",
+        "console.error",
+        "console.error"
+      ]
+    },
+    {
+      "file": "src/pages/Marketplace.js.jsx",
+      "matches": ["console.log", "console.log"]
+    },
+    {
+      "file": "src/pages/Marketplace.jsx",
+      "matches": ["console.log", "console.log"]
+    },
+    {
+      "file": "src/pages/Onboarding.js.jsx",
+      "matches": ["console.error"]
+    },
+    {
+      "file": "src/pages/Onboarding.jsx",
+      "matches": ["console.error"]
+    },
+    {
+      "file": "src/pages/ProfilePage.js.jsx",
+      "matches": ["console.error"]
+    },
+    {
+      "file": "src/pages/ProfilePage.jsx",
+      "matches": ["console.error"]
+    },
+    {
+      "file": "src/pages/ProjectDetails.js.jsx",
+      "matches": ["console.error", "console.error"]
+    },
+    {
+      "file": "src/pages/ProjectDetails.jsx",
+      "matches": ["console.error", "console.error"]
+    },
+    {
+      "file": "src/pages/SavedTalentsPage.js.jsx",
+      "matches": [
+        "console.warn",
+        "console.error",
+        "console.log",
+        "console.warn",
+        "console.error",
+        "console.error"
+      ]
+    },
+    {
+      "file": "src/pages/SavedTalentsPage.jsx",
+      "matches": [
+        "console.warn",
+        "console.error",
+        "console.log",
+        "console.warn",
+        "console.error",
+        "console.error"
+      ]
+    },
+    {
+      "file": "src/pages/TranslationManager.js.jsx",
+      "matches": ["console.error"]
+    },
+    {
+      "file": "src/pages/TranslationManager.jsx",
+      "matches": ["console.error"]
+    },
+    {
+      "file": "src/pages/UpdatePassword.js.jsx",
+      "matches": ["console.error"]
+    },
+    {
+      "file": "src/pages/UpdatePassword.jsx",
+      "matches": ["console.error"]
+    },
+    {
+      "file": "src/pages/admin/FraudDetection.js.jsx",
+      "matches": ["console.error", "console.error"]
+    },
+    {
+      "file": "src/pages/admin/FraudDetection.jsx",
+      "matches": ["console.error", "console.error"]
+    },
+    {
+      "file": "src/pages/admin/ReviewsModeration.js.jsx",
+      "matches": ["console.error"]
+    },
+    {
+      "file": "src/pages/admin/ReviewsModeration.jsx",
+      "matches": ["console.error"]
+    },
+    {
+      "file": "src/pages/admin/TenantOnboarding.js.jsx",
+      "matches": ["console.error"]
+    },
+    {
+      "file": "src/pages/admin/TenantOnboarding.jsx",
+      "matches": ["console.error"]
+    },
+    {
+      "file": "src/pages/launch/index.js.jsx",
+      "matches": [
+        "console.error",
+        "console.error",
+        "console.error",
+        "console.error"
+      ]
+    },
+    {
+      "file": "src/pages/launch/index.jsx",
+      "matches": [
+        "console.error",
+        "console.error",
+        "console.error",
+        "console.error"
+      ]
+    },
+    {
+      "file": "src/utils/apiErrorHandler.ts",
+      "matches": ["console.error"]
+    },
+    {
+      "file": "src/utils/authUtils.ts",
+      "matches": [
+        "console.error",
+        "console.error",
+        "console.error",
+        "console.error"
+      ]
+    },
+    {
+      "file": "src/utils/cartUtils.js",
+      "matches": [
+        "console.error",
+        "console.error",
+        "console.error",
+        "console.error",
+        "console.error",
+        "console.error"
+      ]
+    },
+    {
+      "file": "src/utils/productionLogger.js",
+      "matches": ["console.error"]
+    },
+    {
+      "file": "src/utils/productionLogger.ts",
+      "matches": ["console.error", "console.error"]
+    },
+    {
+      "file": "src/utils/safeStorage.js",
+      "matches": [
+        "console.error",
+        "console.error",
+        "console.warn",
+        "console.warn",
+        "console.warn",
+        "console.warn"
+      ]
+    },
+    {
+      "file": "src/utils/sitemapGenerator.js.jsx",
+      "matches": ["console.error"]
+    },
+    {
+      "file": "src/utils/sitemapGenerator.jsx",
+      "matches": ["console.error"]
+    },
+    {
+      "file": "pages/contact.tsx",
+      "matches": ["console.log"]
+    },
+    {
+      "file": "pages/login.tsx",
+      "matches": ["console.log", "console.error"]
+    },
+    {
+      "file": "pages/signup.tsx",
+      "matches": ["console.log", "console.error"]
+    }
+  ]
 }

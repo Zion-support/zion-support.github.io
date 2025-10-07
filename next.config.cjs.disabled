@@ -1,46 +1,193 @@
+ HEAD
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  reactStrictMode: true,
+  eslint: {
+    ignoreDuringBuilds: true },
+  typescript: {
+    ignoreBuildErrors: true },
+  poweredByHeader: false,
+  compress: true,
+  images: {
+    domains: ['ziontechgroup.com'],
+    formats: ['image/webp', 'image/avif'] },
+  experimental: {
+    optimizeCss: true,
+    optimizePackageImports: ['lucide-react', 'framer-motion'] },
+  webpack: (config { dev, isServer }) => {
+    if (!dev && !isServer) {
+      config.optimization.splitChunks.cacheGroups = {
+        ...config.optimization.splitChunks.cacheGroups,
+        vendor: {
+          test: /[\\/]node_modules[\\/]/,
+          name: 'vendors',
+          chunks: 'all' } }}
+    return config},
+  async headers() {
+    return [
+      {
+        source: '/(.*)',
+        headers: [
+          {
+            key: 'X-Frame-Options',
+            value: 'DENY' }, {
+            key: 'X-Content-Type-Options',
+            value: 'nosniff' }, {
+            key: 'Referrer-Policy',
+            value: 'origin-when-cross-origin' } ] } ]},
+  async redirects() {
+    return [
+      {
+        source: '/home',
+        destination: '/',
+        permanent: true } ]} };
+
+module.exports = nextConfig;
+ origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+  reactStrictMode: true,
+  eslint: {
+    ignoreDuringBuilds: true,
+    dirs: []
+  },
+  typescript: {
+    ignoreBuildErrors: true,
+    tsconfigPath: false
+  },
+  experimental: {
+    esmExternals: false
+
+  reactStrictMode: true,
+  eslint: {
+    ignoreDuringBuilds: true},
+  typescript: {
+    ignoreBuildErrors: true,
+  },
+  images: {
+    domains: ['ziontechgroup.com, images.unsplash.com', 'via.placeholder.com],
+    formats: [image/webp', 'image/avif],
+    unoptimized: true
+  },
+
+  compress: true,
+  poweredByHeader: false,
+  eslint: { ignoreDuringBuilds: true },
+  typescript: { ignoreBuildErrors: true },
+
+  },
+  experimental: {
+    esmExternals: false,
+    newNextLinkBehavior: true},
+  typescript: {
+    ignoreBuildErrors: true},
+  eslint: {
+    ignoreDuringBuilds: true},
+  typescript: {
+    ignoreBuildErrors: true},
+  images: {
+    domains: [ziontechgroup.com'],
+    unoptimized: true},
+  compiler: {
+    removeConsole: process.env.NODE_ENV === 'production
+  },
+  webpack: (config, { dev, isServer }) => {
+    // Exclude problematic directories from webpack compilation
+    config.watchOptions = {
+      ...config.watchOptions,
+      ignored: [
+        **/node_modules/**',
+        '**/.git/**,
+        **/pages_backup*/**',
+        '**/pages.*/**,
+        **/pages-*/**',
+        '**/pages_disabled*/**,
+        **/pages.disabled*/**',
+        '**/pages.broken*/**,
+        **/pages.corrupted*/**',
+        '**/pages.old*/**,
+        **/pages._*/**',
+        '**/pages.__*/**,
+        **/backup-pages/**',
+        '**/src.pages.disabled/**,
+        **/lib_backup*/**',
+        '**/src_backup*/**,
+        **/corrupted-files-backup*/**',
+        '**/performance-reports*/**,
+        **/log-analysis-reports*/**',
+        '**/link-reports*/**,
+        **/lint-target*/**',
+        '**/monitoring*/**,
+        **/pm2-automation*/**',
+        '**/automation/logs*/**,
+        **/automation/backup*/**',
+        '**/performance-*.json,
+        **/performance-*.js',
+        '**/performance-*.cjs,
+        **/performance-*.sh',
+        '**/performance-*.html,
+        **/performance-*.md',
+        '**/performance-*.txt
+      ],
+      poll: 1000,
+      aggregateTimeout: 300
+    }
+
+    // Add fallback for problematic modules
+    config.resolve.fallback = {
+      ...config.resolve.fallback,
+      fs: false,
+      net: false,
+      tls: false
+    }
+
+    return config;
+  },
+  pageExtensions: [tsx', 'ts, jsx', 'js],
+  onDemandEntries: {
+    maxInactiveAge: 25 * 1000,
+
+
+
+/** @type {import(next').NextConfig} */
   reactStrictMode: true,
   eslint: {
     ignoreDuringBuilds: true
   },
   typescript: {
     ignoreBuildErrors: true
-  },
-  pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
-  trailingSlash: true,
-  experimental: {
-    appDir: true
-  },
-  images: {
-    domains: [
-      'localhost',
-      'ziontechgroup.com',
-      'images.unsplash.com',
-      'via.placeholder.com'],
-    formats: ['image/webp', 'image/avif'],
-    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
-    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
-    minimumCacheTTL: 31536000
-  },
-  async redirects() {
-    return [
-      { source: '/api-documentation', destination: '/api-docs', permanent: true },
-      { source: '/ai-consciousness-evolution-2025', destination: '/ai-consciousness-evolution-2029', permanent: false }
-    ];
-  },
-  webpack: (config, { dev, isServer }) => {
-    if (dev) {
-      config.watchOptions = {
-        ignored: [
-          /node_modules/,
-          /.next/,
-          /\.git/
-        ]
-      };
-    }
-    return config;
-  }
-};
 
-module.exports = nextConfig
+  }
+}
+
+export default nextConfig;
+
+  images: {
+    domains: ["localhost, ziontechgroup.com"],
+    formats: ['image/webp, image/avif'],
+    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
+    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384]
+  },
+  experimental: {
+    // Remove optimizePackageImports to satisfy Next 12 validation
+  },
+  async headers() {
+    return [
+      {
+        source: '/(.*),
+        headers: [
+          { key: X-Content-Type-Options', value: 'nosniff },
+          { key: X-Frame-Options', value: 'DENY },
+          { key: X-XSS-Protection', value: '1; mode=block },
+          { key: Referrer-Policy', value: 'origin-when-cross-origin' }
+        ]
+      }
+    ];
+  }
+}
+
+module.exports = nextConfig;
+
+    pagesBufferLength: 2
+  }
+}
+
+module.exports = nextConfig;

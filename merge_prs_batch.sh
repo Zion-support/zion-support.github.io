@@ -1,94 +1,47 @@
 #!/bin/bash
 
-# Script to merge PRs in batches, resolving conflicts automatically
-# This script processes PRs one by one and resolves conflicts by keeping main branch version
+# Script to merge PRs in smaller batches
+set -e
 
-echo "Starting batch PR merge process..."
+echo "🚀 Starting batch PR merge process..."
 
-# List of PR numbers to merge (most recent first)
-PR_NUMBERS=(17319 17318 17317 17316 17315 17314 17311 17309 17305 17303 17301 17299 17271 17265 17264 17263 17262 17261 17260 17259 17258 17256 17249 17248)
+# Get the first 10 cursor branches
+CURSOR_BRANCHES=$(git branch -r | grep "origin/cursor/" | head -10 | sed 's/origin\///')
 
-# Function to merge a single PR with conflict resolution
-merge_pr_with_resolution() {
-    local pr_number=$1
-    local branch_name="pr-$pr_number"
+echo "📊 Processing first 10 cursor branches"
+
+count=0
+for branch in $CURSOR_BRANCHES; do
+    count=$((count + 1))
+    echo ""
+    echo "🔄 Processing branch $count/10: $branch"
     
-    echo "Processing PR #$pr_number..."
-    
-    # Fetch the PR branch
-    git fetch origin pull/$pr_number/head:$branch_name
-    
-    if [ $? -ne 0 ]; then
-        echo "Failed to fetch PR #$pr_number, skipping..."
-        return 1
-    fi
-    
-    # Try to merge the PR
-    echo "Attempting to merge PR #$pr_number..."
-    git merge $branch_name --no-ff -m "Merge PR #$pr_number: Create and deploy new content"
-    
-    if [ $? -eq 0 ]; then
-        echo "Successfully merged PR #$pr_number"
-        git branch -d $branch_name
-        return 0
+    # Try to merge directly without checkout
+    if git merge "origin/$branch" --no-ff -m "Merge $branch into main" 2>/dev/null; then
+        echo "✅ Successfully merged $branch into main"
     else
-        echo "Merge conflict in PR #$pr_number, resolving conflicts..."
+        echo "⚠️  Merge conflict in $branch - attempting to resolve..."
         
-        # Check for conflicts
-        if git status --porcelain | grep -q "^UU\|^AA\|^DD"; then
-            echo "Resolving conflicts for PR #$pr_number by keeping main branch version..."
+        # Abort the failed merge
+        git merge --abort 2>/dev/null || true
+        
+        # Try with checkout and conflict resolution
+        if git checkout "$branch" 2>/dev/null; then
+            git pull origin "$branch" 2>/dev/null || true
+            git checkout main
             
-            # Resolve conflicts by keeping our version (main branch)
-            git checkout --ours .
-            git add .
-            git commit -m "Merge PR #$pr_number: Resolved conflicts by keeping main branch version"
-            
-            if [ $? -eq 0 ]; then
-                echo "Successfully resolved conflicts for PR #$pr_number"
-                git branch -d $branch_name
-                return 0
+            # Try merge again
+            if git merge "$branch" --no-ff -m "Merge $branch into main" 2>/dev/null; then
+                echo "✅ Successfully merged $branch after checkout"
             else
-                echo "Failed to resolve conflicts for PR #$pr_number, skipping..."
-                git merge --abort
-                git branch -d $branch_name
-                return 1
+                echo "❌ Skipping $branch due to unresolvable conflicts"
+                git merge --abort 2>/dev/null || true
             fi
         else
-            echo "No conflicts detected, but merge failed for PR #$pr_number, skipping..."
-            git merge --abort
-            git branch -d $branch_name
-            return 1
+            echo "❌ Failed to checkout $branch - skipping"
         fi
     fi
-}
-
-# Process each PR
-successful_merges=0
-failed_merges=0
-
-for pr in "${PR_NUMBERS[@]}"; do
-    echo "=== Processing PR #$pr ==="
-    if merge_pr_with_resolution $pr; then
-        ((successful_merges++))
-        echo "✅ Successfully merged PR #$pr"
-    else
-        ((failed_merges++))
-        echo "❌ Failed to merge PR #$pr"
-    fi
-    echo ""
 done
 
-echo "=== Batch merge process completed! ==="
-echo "Successful merges: $successful_merges"
-echo "Failed merges: $failed_merges"
-
-# Push all changes to main
-echo "Pushing changes to main branch..."
-git push origin main
-
-if [ $? -eq 0 ]; then
-    echo "✅ Successfully pushed all changes to main branch"
-else
-    echo "❌ Failed to push changes to main branch"
-    exit 1
-fi
+echo ""
+echo "🎉 Batch merge completed! Processed $count branches"

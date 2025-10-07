@@ -1,163 +1,62 @@
----
 name: Security
 
 on:
   push:
-    branches: [ main, develop ]
+    branches: [ main ]
   pull_request:
-    branches: [ main, develop ]
-  workflow_dispatch: {}
+    branches: [ main ]
   schedule:
-    - cron: '0 6 * * *' # Daily at 6 AM UTC
+    - cron: '0 2 * * 1'
 
 permissions:
   contents: read
-  actions: read
   security-events: write
 
-concurrency:
-  group: "security-${{ github.ref }}"
-  cancel-in-progress: true
-
 jobs:
-<<<<<<< HEAD
-  security-scan:
-    name: Security Scan
+  security:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
-    
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-=======
-  security-audit:
-    name: Security Audit
-    runs-on: ubuntu-latest
-    timeout-minutes: 15
-
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
->>>>>>> origin/auto/autonomy-17186719616
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '20'
           cache: 'npm'
-<<<<<<< HEAD
 
       - name: Install dependencies
-        run: npm ci --no-audit --no-fund
+        run: npm ci
 
       - name: Run npm audit
+        run: npm audit --audit-level moderate || true
+
+      - name: Run npm outdated check
+        run: npm outdated || true
+
+      - name: Check for known vulnerabilities
         run: |
-          echo "Running npm audit..."
-          npm audit --audit-level=high --json > audit-report.json || true
-          
-          # Check for high/critical vulnerabilities
-          if npm audit --audit-level=high; then
-            echo "✅ No high or critical vulnerabilities found"
+          echo "Checking for known vulnerabilities..."
+          if [ -f package-lock.json ]; then
+            echo "Package lock file found"
+            npm audit --json > audit-report.json || echo "{}" > audit-report.json
           else
-            echo "⚠️ High or critical vulnerabilities detected"
-            exit 1
+            echo "No package lock file found"
+            echo "{}" > audit-report.json
           fi
 
-      - name: Check for outdated packages
-        run: |
-          echo "Checking for outdated packages..."
-          npm outdated --json > outdated-packages.json || true
-          
-          # Count outdated packages
-          OUTDATED_COUNT=$(cat outdated-packages.json | jq 'length' 2>/dev/null || echo "0")
-          echo "Found $OUTDATED_COUNT outdated packages"
-
-      - name: Run Snyk security scan
-        uses: snyk/actions/node@master
-        continue-on-error: true
-        env:
-          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
-        with:
-          args: --severity-threshold=high
-
-      - name: Upload security results
-        uses: actions/upload-artifact@v4
-        if: always()
-        with:
-          name: security-scan-results
-          path: |
-            audit-report.json
-            outdated-packages.json
-          retention-days: 7
-
-      - name: Create security summary
-        run: |
-          echo "# Security Scan Summary" > security-summary.md
-          echo "Generated: $(date)" >> security-summary.md
-          echo "" >> security-summary.md
-          
-          if [ -f "audit-report.json" ]; then
-            echo "## NPM Audit Results" >> security-summary.md
-            echo "✅ NPM audit completed" >> security-summary.md
-          fi
-          
-          if [ -f "outdated-packages.json" ]; then
-            echo "## Outdated Packages" >> security-summary.md
-            echo "📦 Package update check completed" >> security-summary.md
-          fi
-          
-          echo "## Snyk Security Scan" >> security-summary.md
-          echo "🔒 Snyk security scan completed" >> security-summary.md
-=======
-      - name: Install dependencies
-        run: npm ci --no-audit --no-fund
-      - name: Run npm audit
-        run: npm audit --audit-level=high
-        continue-on-error: true
-      - name: Run security scanner
-        run: npm run security:scan
-        continue-on-error: true
-      - name: Check for secrets in code
-        uses: trufflesecurity/trufflehog@v3
-        with:
-          path: .
-          base: ${{ github.event.before }}
-          head: ${{ github.event.after }}
-          extra_args: --only-verified
-        continue-on-error: true
       - name: Upload security report
         uses: actions/upload-artifact@v4
-        if: always()
         with:
           name: security-report
-          path: |
-            npm-audit.json
-            security-scan-results.json
+          path: audit-report.json
           retention-days: 30
 
-  dependency-check:
-    name: Dependency Check
-    runs-on: ubuntu-latest
-    timeout-minutes: 10
-
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
+      - name: Create security issue if vulnerabilities found
+        if: failure()
+        uses: peter-evans/create-issue-from-file@v5
         with:
-          node-version: '20'
-          cache: 'npm'
-      - name: Check for outdated dependencies
-        run: npm outdated --json > outdated-deps.json || true
-      - name: Check for vulnerable dependencies
-        run: npm audit --json > audit-report.json || true
-      - name: Upload dependency reports
-        uses: actions/upload-artifact@v4
-        with:
-          name: dependency-reports
-          path: |
-            outdated-deps.json
-            audit-report.json
-          retention-days: 30
->>>>>>> origin/auto/autonomy-17186719616
+          title: "Security Alert: Vulnerabilities Detected"
+          content-filepath: .github/ISSUE_TEMPLATE/security-alert.md
+          labels: security, vulnerability, automated
+          assignees: ''

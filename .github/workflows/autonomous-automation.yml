@@ -1,38 +1,134 @@
-name: Autonomous Automation
+name: Autonomous Automations
 
 on:
   schedule:
-    - cron: '*/30 * * * *' # every 30 minutes
-  workflow_dispatch: {}
+    - cron: '*/15 * * * *'
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+      - master
+
+concurrency:
+  group: autonomous-automation-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: write
 
 jobs:
   run-automations:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
+    timeout-minutes: 30
     steps:
       - name: Checkout
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-      - name: Install deps
-        run: npm ci
-      - name: Run market intelligence
-        run: node automation/auto-market-intel.cjs
-      - name: Run talent highlights
-        run: node automation/auto-talent-highlights.cjs
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci --no-audit --no-fund
+
+      - name: Run UI Evolution (analyze, factory, beautify)
+        run: |
+          npm run ui-evolution:analyze || true
+          npm run ui-evolution:factory || true
+          npm run ui-evolution:beautify || true
+
+      - name: Run Responsive Content Analyzer
+        run: npm run responsive:analyze || true
+
+      - name: Run Frontend Sync Analyzer
+        run: npm run frontend-sync:analyze || true
+
+      - name: Run Design Analyzer
+        run: npm run design:analyze || true
+
+      - name: Run Venture Analyzer
+        run: npm run venture:analyze || true
+
+      - name: Build and Export static site
+        run: |
+          npm run build || true
+          npm run export || true
+
+      - name: Upload static artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: static-site
+          path: out
+          if-no-files-found: ignore
+
+      - name: Lighthouse Mobile (Exported site)
+        run: |
+          mkdir -p data/reports/performance
+          npx --yes http-server out -p 8080 &
+          sleep 2
+          TS=$(date +%s)
+          npx --yes lighthouse http://localhost:8080 \
+            --only-categories=performance,accessibility,best-practices,seo \
+            --preset=desktop --form-factor=mobile --screenEmulation.mobile=true \
+            --throttling-method=provided \
+            --output=json --output=html \
+            --output-path=data/reports/performance/lighthouse-mobile-$TS || true
+
+      - name: Image audit
+        run: node scripts/image-audit.mjs || true
+
+      - name: Link check (on export)
+        run: node scripts/link-checker.mjs || true
+
+      - name: Publish reports to public for site links
+        run: |
+          mkdir -p public/reports/performance public/reports/security public/reports/images public/reports/links
+          cp -n data/reports/performance/*.html public/reports/performance/ 2>/dev/null || true
+          cp -n data/reports/security/*.json public/reports/security/ 2>/dev/null || true
+          cp -n data/reports/images/*.json public/reports/images/ 2>/dev/null || true
+          cp -n data/reports/links/*.txt public/reports/links/ 2>/dev/null || true
+
+      - name: Upload reports artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: automation-reports
+          path: |
+            data/reports/performance/
+            data/reports/security/
+            data/reports/images/
+            data/reports/links/
+          if-no-files-found: ignore
+
+      - name: Security audit (npm audit)
+        run: |
+          mkdir -p data/reports/security
+          TS=$(date +%s)
+          npm audit --json > data/reports/security/npm-audit-$TS.json || true
+
+      - name: Git health quick check
+        run: npm run git:health || true
+
+      - name: Configure git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
       - name: Commit and push changes
         run: |
-          git config user.name "github-actions"
-          git config user.email "github-actions@users.noreply.github.com"
-          git add -A
-          if git diff --cached --quiet; then
-            echo "No changes to commit"
+          if [ -n "$(git status --porcelain)" ]; then
+            branch_name="${GITHUB_REF#refs/heads/}"
+            git add -A
+            git commit -m "chore(automation): autonomous updates [skip ci]"
+            git pull --rebase origin "$branch_name" || true
+            git push origin HEAD:"$branch_name" || true
           else
-            git commit -m "chore(automation): auto-update insights [skip ci]"
-            git push
+            echo "No changes to commit"
           fi
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

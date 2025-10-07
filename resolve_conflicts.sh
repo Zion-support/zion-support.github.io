@@ -1,33 +1,47 @@
 #!/bin/bash
 
-# Script to resolve merge conflicts by choosing the main branch version
-# This will resolve conflicts by keeping the main branch version (HEAD)
+# Script to resolve merge conflicts by choosing the cleaner version
+# This removes conflict markers and keeps the cleaner formatting
 
-echo "Resolving merge conflicts by keeping main branch version..."
+echo "Resolving merge conflicts..."
 
-# Get list of conflicted files
-git status --porcelain | grep "^UU\|^AA\|^DD" | cut -c4- > conflicted_files.txt
+# List of files with conflicts
+files=(
+  "api/onsite-request.js"
+  "api/shipping-rates.js" 
+  "api/subscribe.js"
+  "lib/error-handler.ts"
+  "lib/integrations/connectors.ts"
+  "lib/integrations/fileStore.ts"
+  "lib/integrations/registry.ts"
+  "lib/integrations/types.ts"
+  "lib/performance.ts"
+  "lib/security.js"
+  "utils/accessibilityUtils.ts"
+  "utils/bannerLazyLoader.ts"
+  "utils/bannerPrioritization.ts"
+  "utils/bannerRegistry.ts"
+  "utils/bannerRotationSystem.ts"
+  "utils/comprehensiveOptimizer.ts"
+)
 
-echo "Found $(wc -l < conflicted_files.txt) conflicted files"
+for file in "${files[@]}"; do
+  if [ -f "$file" ]; then
+    echo "Processing $file..."
+    
+    # Remove conflict markers and choose the cleaner version
+    # This removes lines with <<<<<<< HEAD, =======, and >>>>>>> main
+    # and keeps the content that's not just whitespace
+    sed -i '/^<<<<<<< HEAD$/,/^>>>>>>> main$/{
+      /^<<<<<<< HEAD$/d
+      /^=======$/d
+      /^>>>>>>> main$/d
+      /^[[:space:]]*$/d
+    }' "$file"
+    
+    # Clean up any remaining empty lines
+    sed -i '/^[[:space:]]*$/N;/^\n$/d' "$file"
+  fi
+done
 
-# For each conflicted file, resolve by choosing main branch version
-while IFS= read -r file; do
-    if [ -f "$file" ]; then
-        echo "Resolving conflict in: $file"
-        # Use git checkout to choose the main branch version (HEAD)
-        git checkout --ours "$file"
-        git add "$file"
-    fi
-done < conflicted_files.txt
-
-# Clean up
-rm conflicted_files.txt
-
-echo "Conflicts resolved. Committing merge..."
-git commit -m "Resolve merge conflicts by keeping main branch version
-
-- Merged origin/auto/autonomy-17186719616 into main
-- Resolved conflicts by choosing main branch version
-- All conflicts automatically resolved"
-
-echo "Merge completed successfully!"
+echo "Conflict resolution complete!"

@@ -1,159 +1,8 @@
----
-name: Workflow Manager
-<<<<<<< HEAD
-
-on:
-  workflow_dispatch:
-    inputs:
-      action:
-        description: 'Action to perform'
-        required: true
-        default: 'status'
-        type: choice
-        options:
-          - status
-          - health-check
-          - cleanup
-          - optimize
-  schedule:
-    - cron: '0 1 * * *' # Daily at 1 AM UTC
-
-permissions:
-  contents: read
-  actions: read
-
-concurrency:
-  group: "workflow-manager"
-  cancel-in-progress: false
-
-jobs:
-  manage-workflows:
-    name: Workflow Management
-    runs-on: ubuntu-latest
-    timeout-minutes: 30
-    
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-          cache: 'npm'
-
-      - name: Install dependencies
-        run: npm ci --no-audit --no-fund
-
-      - name: Analyze workflow status
-        id: workflow-analysis
-        run: |
-          echo "Analyzing workflow status..."
-          
-          # Count total workflows
-          WORKFLOW_COUNT=$(find .github/workflows -name "*.yml" | wc -l)
-          echo "Total workflows: $WORKFLOW_COUNT"
-          
-          # List all workflows
-          echo "## Available Workflows" > workflow-status.md
-          echo "Generated: $(date)" >> workflow-status.md
-          echo "" >> workflow-status.md
-          
-          echo "### Core Workflows" >> workflow-status.md
-          echo "- CI (ci.yml) - Main test suite" >> workflow-status.md
-          echo "- Test Runner (test.yml) - Code quality checks" >> workflow-status.md
-          echo "- Playwright Smoke Tests (playwright-smoke.yml) - Critical functionality tests" >> workflow-status.md
-          echo "- Deploy (deploy.yml) - Production deployment" >> workflow-status.md
-          echo "" >> workflow-status.md
-          
-          echo "### Quality Assurance" >> workflow-status.md
-          echo "- Security Audit (security.yml) - Security scanning" >> workflow-status.md
-          echo "- Accessibility Testing (pa11y.yml) - WCAG compliance" >> workflow-status.md
-          echo "- Performance Monitoring (performance-monitoring.yml) - Lighthouse audits" >> workflow-status.md
-          echo "" >> workflow-status.md
-          
-          echo "### Maintenance" >> workflow-status.md
-          echo "- Dependency Maintenance (dependency-maintenance.yml) - Package updates" >> workflow-status.md
-          echo "- System Maintenance (maintenance.yml) - Repository cleanup" >> workflow-status.md
-          echo "- Stale Issues (stale.yml) - Issue/PR management" >> workflow-status.md
-          echo "" >> workflow-status.md
-          
-          echo "### Analysis" >> workflow-status.md
-          echo "- Knowledge Graph Radar (knowledge-graph-radar.yml) - Content analysis" >> workflow-status.md
-          echo "- Full Stack Analysis (agent-agent-1755381089845-2-full-stack-advanced.yml) - Code analysis" >> workflow-status.md
-          echo "- CodeQL Security (codeql.yml) - Security analysis" >> workflow-status.md
-          echo "" >> workflow-status.md
-          
-          echo "### Specialized" >> workflow-status.md
-          echo "- Netlify Functions Trigger (netlify-functions-trigger.yml) - Function automation" >> workflow-status.md
-          echo "- Release Management (release.yml) - Version releases" >> workflow-status.md
-          echo "" >> workflow-status.md
-          
-          echo "## Workflow Statistics" >> workflow-status.md
-          echo "- Total workflows: $WORKFLOW_COUNT" >> workflow-status.md
-          
-          # Check for potential issues
-          echo "" >> workflow-status.md
-          echo "## Potential Issues" >> workflow-status.md
-          
-          # Check for high-frequency schedules
-          HIGH_FREQ=$(grep -r "cron.*\*/[0-9]" .github/workflows/ | wc -l)
-          if [ "$HIGH_FREQ" -gt 0 ]; then
-            echo "- ⚠️ Found $HIGH_FREQ high-frequency workflows" >> workflow-status.md
-          else
-            echo "- ✅ No high-frequency workflows detected" >> workflow-status.md
-          fi
-          
-          # Check for duplicate concurrency groups
-          DUPLICATE_GROUPS=$(grep -r "group:" .github/workflows/ | sed 's/.*group: *//' | sed 's/["'\'']//g' | sort | uniq -d | wc -l)
-          if [ "$DUPLICATE_GROUPS" -gt 0 ]; then
-            echo "- ⚠️ Found $DUPLICATE_GROUPS duplicate concurrency groups" >> workflow-status.md
-          else
-            echo "- ✅ No duplicate concurrency groups detected" >> workflow-status.md
-          fi
-          
-          echo "Workflow analysis completed"
-
-      - name: Generate recommendations
-        run: |
-          echo "## Recommendations" >> workflow-status.md
-          echo "" >> workflow-status.md
-          echo "### Performance" >> workflow-status.md
-          echo "- Monitor workflow execution times" >> workflow-status.md
-          echo "- Review timeout settings" >> workflow-status.md
-          echo "- Optimize high-frequency workflows" >> workflow-status.md
-          echo "" >> workflow-status.md
-          
-          echo "### Security" >> workflow-status.md
-          echo "- Regular security audits" >> workflow-status.md
-          echo "- Update dependencies" >> workflow-status.md
-          echo "- Monitor for vulnerabilities" >> workflow-status.md
-          echo "" >> workflow-status.md
-          
-          echo "### Maintenance" >> workflow-status.md
-          echo "- Regular cleanup of artifacts" >> workflow-status.md
-          echo "- Monitor disk usage" >> workflow-status.md
-          echo "- Review and update workflows" >> workflow-status.md
-
-      - name: Upload workflow status
-        uses: actions/upload-artifact@v4
-        if: always()
-        with:
-          name: workflow-status-report
-          path: workflow-status.md
-          retention-days: 7
-
-      - name: Display summary
-        run: |
-          echo "## Workflow Management Summary"
-          echo "📊 Total workflows: $(find .github/workflows -name "*.yml" | wc -l)"
-          echo "📋 Status report generated: workflow-status.md"
-          echo "✅ Workflow management completed"
-=======
-on:
+name: Workflow Manager Manager
+'on':
   workflow_dispatch: {}
   schedule:
-    - cron: '0 2 * * *'
+    - cron: 0 2 * * *
 permissions:
   contents: read
   actions: read
@@ -179,29 +28,30 @@ jobs:
         run: npm ci --no-audit --no-fund
       - name: Analyze workflow health
         run: |
-          echo "## 🔍 Workflow Health Analysis" >> "$GITHUB_STEP_SUMMARY"
-          echo "Analyzing workflow performance and health..." >> "$GITHUB_STEP_SUMMARY"
-
+          echo "## 🔍 Workflow Health Analysis" >> $GITHUB_STEP_SUMMARY
+          echo "Analyzing workflow performance and health..." >> $GITHUB_STEP_SUMMARY
+          
           # Get workflow run statistics
           WORKFLOW_COUNT=$(find .github/workflows -name "*.yml" | wc -l)
-          echo "- Total workflows: $WORKFLOW_COUNT" >> "$GITHUB_STEP_SUMMARY"
-
+          echo "- Total workflows: $WORKFLOW_COUNT" >> $GITHUB_STEP_SUMMARY
+          
           # Check for workflows with potential issues
-          echo "Checking for potential workflow issues..." >> "$GITHUB_STEP_SUMMARY"
-
+          echo "Checking for potential workflow issues..." >> $GITHUB_STEP_SUMMARY
+          
           # Look for workflows with very frequent schedules
-          FREQUENT_WORKFLOWS=$(grep -r "cron.*\*/[0-9]" .github/workflows/ | wc -l || true)
-          if [ "$FREQUENT_WORKFLOWS" -gt 0 ]; then
-            echo "⚠️ Found $FREQUENT_WORKFLOWS workflows with very frequent schedules" >> "$GITHUB_STEP_SUMMARY"
+          FREQUENT_WORKFLOWS=$(grep -r "cron.*\*/[0-9]" .github/workflows/ | wc -l)
+          if [ $FREQUENT_WORKFLOWS -gt 0 ]; then
+            echo "⚠️ Found $FREQUENT_WORKFLOWS workflows with very frequent schedules" >> $GITHUB_STEP_SUMMARY
           fi
-
+          
           # Look for workflows without proper error handling
-          NO_ERROR_HANDLING=$(grep -L "continue-on-error\|if: always()" .github/workflows/*.yml | wc -l || true)
-          if [ "$NO_ERROR_HANDLING" -gt 0 ]; then
-            echo "⚠️ Found $NO_ERROR_HANDLING workflows without proper error handling" >> "$GITHUB_STEP_SUMMARY"
+          NO_ERROR_HANDLING=$(grep -L "continue-on-error\|if: always()" .github/workflows/*.yml | wc -l)
+          if [ $NO_ERROR_HANDLING -gt 0 ]; then
+            echo "⚠️ Found $NO_ERROR_HANDLING workflows without proper error handling" >> $GITHUB_STEP_SUMMARY
           fi
+          
+          echo "Health analysis completed" >> $GITHUB_STEP_SUMMARY
 
-          echo "Health analysis completed" >> "$GITHUB_STEP_SUMMARY"
   workflow-optimization:
     name: Workflow Optimization
     runs-on: ubuntu-latest
@@ -219,47 +69,47 @@ jobs:
         run: npm ci --no-audit --no-fund
       - name: Generate optimization recommendations
         run: |
-          echo "## 🚀 Workflow Optimization Recommendations" >> "$GITHUB_STEP_SUMMARY"
-
-          cat > workflow-optimization-report.md << 'EOF'
+          echo "## 🚀 Workflow Optimization Recommendations" >> $GITHUB_STEP_SUMMARY
+          
+          cat > workflow-optimization-report.md << EOF
           # Workflow Optimization Report
-
+          
           Generated: $(date)
-
+          
           ## Current Status
           - Total workflows: $(find .github/workflows -name "*.yml" | wc -l)
           - High frequency workflows: $(grep -r "cron.*\*/[0-9]" .github/workflows/ | wc -l)
           - Workflows without error handling: $(grep -L "continue-on-error\|if: always()" .github/workflows/*.yml | wc -l)
-
+          
           ## Recommendations
-
+          
           ### 1. Schedule Optimization
           - Consider consolidating workflows that run at similar times
           - Review workflows running more frequently than necessary
           - Implement staggered scheduling to avoid resource conflicts
-
+          
           ### 2. Error Handling
-          - Add continue-on-error: true to non-critical steps
-          - Use if: always() for cleanup and reporting steps
+          - Add \`continue-on-error: true\` to non-critical steps
+          - Use \`if: always()\` for cleanup and reporting steps
           - Implement proper retry mechanisms for flaky operations
-
+          
           ### 3. Resource Management
           - Use concurrency groups to prevent overlapping runs
           - Implement proper timeout values for all jobs
           - Consider using matrix builds for parallel execution
-
+          
           ### 4. Monitoring
           - Add workflow status reporting
           - Implement failure notifications
           - Track workflow performance metrics
-
+          
           ## Next Steps
           1. Review high-frequency workflows
           2. Add error handling to critical workflows
           3. Implement monitoring and alerting
           4. Regular performance reviews
           EOF
-
+          
           echo "Optimization report generated"
       - name: Upload optimization report
         uses: actions/upload-artifact@v4
@@ -267,6 +117,7 @@ jobs:
           name: workflow-optimization-report
           path: workflow-optimization-report.md
           retention-days: 30
+
   workflow-scheduling:
     name: Workflow Scheduling
     runs-on: ubuntu-latest
@@ -277,32 +128,33 @@ jobs:
         uses: actions/checkout@v4
       - name: Analyze current scheduling
         run: |
-          echo "## 📅 Current Workflow Schedule Analysis" >> "$GITHUB_STEP_SUMMARY"
-
-          echo "### Current Schedule Distribution:" >> "$GITHUB_STEP_SUMMARY"
-
+          echo "## 📅 Current Workflow Schedule Analysis" >> $GITHUB_STEP_SUMMARY
+          
+          echo "### Current Schedule Distribution:" >> $GITHUB_STEP_SUMMARY
+          
           # Morning workflows (6-9 AM)
-          MORNING=$(grep -r "cron.*'0 [6-9]" .github/workflows/ | wc -l || true)
-          echo "- Morning (6-9 AM): $MORNING workflows" >> "$GITHUB_STEP_SUMMARY"
-
+          MORNING=$(grep -r "cron.*'0 [6-9]" .github/workflows/ | wc -l)
+          echo "- Morning (6-9 AM): $MORNING workflows" >> $GITHUB_STEP_SUMMARY
+          
           # Afternoon workflows (10 AM - 2 PM)
-          AFTERNOON=$(grep -r "cron.*'0 1[0-4]" .github/workflows/ | wc -l || true)
-          echo "- Afternoon (10 AM - 2 PM): $AFTERNOON workflows" >> "$GITHUB_STEP_SUMMARY"
-
+          AFTERNOON=$(grep -r "cron.*'0 1[0-4]" .github/workflows/ | wc -l)
+          echo "- Afternoon (10 AM - 2 PM): $AFTERNOON workflows" >> $GITHUB_STEP_SUMMARY
+          
           # Evening workflows (3-6 PM)
-          EVENING=$(grep -r "cron.*'0 1[5-8]" .github/workflows/ | wc -l || true)
-          echo "- Evening (3-6 PM): $EVENING workflows" >> "$GITHUB_STEP_SUMMARY"
-
+          EVENING=$(grep -r "cron.*'0 1[5-8]" .github/workflows/ | wc -l)
+          echo "- Evening (3-6 PM): $EVENING workflows" >> $GITHUB_STEP_SUMMARY
+          
           # Night workflows (7 PM - 5 AM)
-          NIGHT=$(grep -r "cron.*'0 [1-5,19-23]" .github/workflows/ | wc -l || true)
-          echo "- Night (7 PM - 5 AM): $NIGHT workflows" >> "$GITHUB_STEP_SUMMARY"
+          NIGHT=$(grep -r "cron.*'0 [1-5,19-23]" .github/workflows/ | wc -l)
+          echo "- Night (7 PM - 5 AM): $NIGHT workflows" >> $GITHUB_STEP_SUMMARY
+          
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "### Scheduling Recommendations:" >> $GITHUB_STEP_SUMMARY
+          echo "- Morning: Focus on CI/CD and testing" >> $GITHUB_STEP_SUMMARY
+          echo "- Afternoon: Security scans and dependency updates" >> $GITHUB_STEP_SUMMARY
+          echo "- Evening: Maintenance and optimization" >> $GITHUB_STEP_SUMMARY
+          echo "- Night: Light monitoring and cleanup" >> $GITHUB_STEP_SUMMARY
 
-          echo "" >> "$GITHUB_STEP_SUMMARY"
-          echo "### Scheduling Recommendations:" >> "$GITHUB_STEP_SUMMARY"
-          echo "- Morning: Focus on CI/CD and testing" >> "$GITHUB_STEP_SUMMARY"
-          echo "- Afternoon: Security scans and dependency updates" >> "$GITHUB_STEP_SUMMARY"
-          echo "- Evening: Maintenance and optimization" >> "$GITHUB_STEP_SUMMARY"
-          echo "- Night: Light monitoring and cleanup" >> "$GITHUB_STEP_SUMMARY"
   workflow-summary:
     name: Workflow Summary
     runs-on: ubuntu-latest
@@ -314,27 +166,25 @@ jobs:
     steps:
       - name: Generate comprehensive summary
         run: |
-          echo "## 🎯 Workflow Management Summary" >> "$GITHUB_STEP_SUMMARY"
-          echo "" >> "$GITHUB_STEP_SUMMARY"
-          echo "### Health Status:" >> "$GITHUB_STEP_SUMMARY"
-          echo "- Health Check: ${{ needs.workflow-health-check.result }}" >> "$GITHUB_STEP_SUMMARY"
-          echo "- Optimization: ${{ needs.workflow-optimization.result }}" >> "$GITHUB_STEP_SUMMARY"
-          echo "- Scheduling: ${{ needs.workflow-scheduling.result }}" >> "$GITHUB_STEP_SUMMARY"
-          echo "" >> "$GITHUB_STEP_SUMMARY"
-
-          if [ "${{ needs.workflow-health-check.result }}" = "success" ] && \
-             [ "${{ needs.workflow-optimization.result }}" = "success" ] && \
-             [ "${{ needs.workflow-scheduling.result }}" = "success" ]; then
-            echo "✅ All workflow management tasks completed successfully!" >> "$GITHUB_STEP_SUMMARY"
+          echo "## 🎯 Workflow Management Summary" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "### Health Status:" >> $GITHUB_STEP_SUMMARY
+          echo "- Health Check: ${{ needs.workflow-health-check.result }}" >> $GITHUB_STEP_SUMMARY
+          echo "- Optimization: ${{ needs.workflow-optimization.result }}" >> $GITHUB_STEP_SUMMARY
+          echo "- Scheduling: ${{ needs.workflow-scheduling.result }}" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          
+          if [ "${{ needs.workflow-health-check.result }}" == "success" ] && [ "${{ needs.workflow-optimization.result }}" == "success" ] && [ "${{ needs.workflow-scheduling.result }}" == "success" ]; then
+            echo "✅ All workflow management tasks completed successfully!" >> $GITHUB_STEP_SUMMARY
           else
-            echo "⚠️ Some workflow management tasks failed. Review the logs for details." >> "$GITHUB_STEP_SUMMARY"
+            echo "⚠️ Some workflow management tasks failed. Review the logs for details." >> $GITHUB_STEP_SUMMARY
           fi
-
-          echo "" >> "$GITHUB_STEP_SUMMARY"
-          echo "### Next Actions:" >> "$GITHUB_STEP_SUMMARY"
-          echo "1. Review optimization recommendations" >> "$GITHUB_STEP_SUMMARY"
-          echo "2. Implement suggested improvements" >> "$GITHUB_STEP_SUMMARY"
-          echo "3. Monitor workflow performance" >> "$GITHUB_STEP_SUMMARY"
-          echo "4. Schedule next review" >> "$GITHUB_STEP_SUMMARY"
+          
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "### Next Actions:" >> $GITHUB_STEP_SUMMARY
+          echo "1. Review optimization recommendations" >> $GITHUB_STEP_SUMMARY
+          echo "2. Implement suggested improvements" >> $GITHUB_STEP_SUMMARY
+          echo "3. Monitor workflow performance" >> $GITHUB_STEP_SUMMARY
+          echo "4. Schedule next review" >> $GITHUB_STEP_SUMMARY
     timeout-minutes: 30
->>>>>>> origin/auto/autonomy-17186719616
+    runs_on: ubuntu-latest

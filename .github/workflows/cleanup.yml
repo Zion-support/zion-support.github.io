@@ -1,15 +1,14 @@
----
 name: Cleanup
-on:
+'on':
   schedule:
-    - cron: 0 3 * * *
+    - cron: '0 3 * * *'
   workflow_dispatch: {}
 permissions:
-  contents: read
+  contents: write
   actions: read
-  
+  pull-requests: write
 concurrency:
-  group: cleanup-\${{ github.ref }}
+  group: workflow-${{ github.ref }}
   cancel-in-progress: false
 jobs:
   cleanup:

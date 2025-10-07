@@ -1,0 +1,1 @@
+:backup-problematic-files/components/automation/services-schema.tsx <div className="text-left" > <h1 className="text-left" >Services Schema</h1> <p className="text-left" >schema.org JSON-LD is generated to <code className="text-left" >data/services/schema.json</code>.</p> <p className="text-left" >This runs daily and auto-PRs updates.</p> </div> ) } </div>)"

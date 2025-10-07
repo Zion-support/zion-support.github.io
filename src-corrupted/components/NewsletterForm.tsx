@@ -1,5 +1,0 @@
-export function NewsletterForm(props: any) { const [email, setEmail] = useState<any>("); const [isSubmitting, setIsSubmitting] = useState<any>(false); setIsSubmitting(true); try { await api.post("/newsletter", { email }); toast.success("Gracias por suscribirte!"); setEmail(")} catch { toast.error("Subscription failed.Please try again.")} finally { setIsSubmitting(false)} }; return (<div className="w-full max-w-md mx-auto"> <form onSubmit={handleSubmit} className="flex flex-col space-y-3 sm: fle x-row sm: spac e-y-0 sm: spac e-x-2"> <Input type="email" placeholder="Enter your email" className="flex-grow bg-zion-blue-light text-black border-zion-purple/20 focus: borde r-zion-purple focus: rin g-zion-purple" value={email} onChange={(e: Reac t.ChangeEvent<HTMLInputElement>) => setEmail(e.target.value)} required /> <Button type="submit" disabled={isSubmitting} className="bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white hover: fro m-zion-purple-light hover: t o-zion-purple" > {isSubmitting ? "Subscribing..." : "Subscribe"} </Button> </form> </div> )} ";"
-
-</HTMLInputElement>
-</any>
-</any>

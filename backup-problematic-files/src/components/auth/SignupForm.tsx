@@ -1,0 +1,1 @@
+const getFieldClasses = (fieldName: string) => {, const state = fieldStates[fieldName],} const isTouched = touchedFields[fieldName as keyof SignupFormData]}; errors.root.message ; }</div>) ; }{; /* Submit Button */ } }<Button > {'";' isSubmitting ? (<> <Loader2 className="text-left" /> Creating Account... </>) : ('Create Account') } }</Button> </form>) ; '

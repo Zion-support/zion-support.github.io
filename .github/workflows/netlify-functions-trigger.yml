@@ -1,99 +1,43 @@
-<<<<<<< HEAD
----
-=======
->>>>>>> origin/auto/autonomy-17186719616
-name: Netlify Functions Trigger
-
-on:
+name: netlify-functions-trigger
+'on':
   schedule:
-<<<<<<< HEAD
-    - cron: '*/30 * * * *' # every 30 minutes
-  workflow_dispatch: {}
-=======
-    - cron: '*/10 * * * *' # every 10 minutes
-  workflow_dispatch: {}
-  schedule:
-    - cron: '*/10 * * * *'
->>>>>>> origin/auto/autonomy-17186719616
-
+    - cron: 0 2 * * *
+  workflow_dispatch: null
 permissions:
-  contents: write
+  contents: read
   actions: read
-
-<<<<<<< HEAD
 concurrency:
-  group: netlify-functions-trigger
-  cancel-in-progress: false
-
+  group: netlify-functions-trigger-${{ github.ref }}
+  cancel-in-progress: true
 jobs:
-  trigger:
-    name: Trigger Netlify Functions
+  main:
     runs-on: ubuntu-latest
     timeout-minutes: 30
-    env:
-      NETLIFY_BASE_URL: ${{ vars.NETLIFY_BASE_URL }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          persist-credentials: true
-=======
-jobs:
-  main:
-    name: Main Job
-    runs-on: ubuntu-latest
-    timeout-minutes: 15
-    env:
-      NETLIFY_BASE_URL: ${{ vars.NETLIFY_BASE_URL }}
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-        with:
           fetch-depth: 0
-
->>>>>>> origin/auto/autonomy-17186719616
-      - name: Setup Node.js
+      
+      - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-          cache: 'npm'
-<<<<<<< HEAD
+          cache: npm
+      
       - name: Install dependencies
         run: npm ci
-      - name: Configure Git identity
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-      - name: Ensure branch up to date
-        env:
-          BRANCH: ${{ github.ref_name || 'main' }}
-        run: |
-          git fetch origin
-          git checkout "$BRANCH"
-          git pull --rebase origin "$BRANCH" || true
-      - name: Run Netlify trigger (live)
-        if: ${{ env.NETLIFY_BASE_URL != '' }}
-        run: npm run netlify:trigger -- --concurrency 10 --timeout 15000
-      - name: Run Netlify trigger (dry-run fallback)
-        if: ${{ env.NETLIFY_BASE_URL == '' }}
-        run: npm run netlify:trigger -- --dry-run --concurrency 10 --timeout 15000
-      - name: Commit and push changes
+      
+      - name: Run netlify functions trigger
+        run: node scripts/trigger-netlify-functions-local.cjs
+      
+      - name: Upload results
+        uses: actions/upload-artifact@v4
         if: always()
-        run: |
-          if [ -n "$(git status --porcelain)" ]; then
-            git add -A
-            git commit -m "chore(netlify): functions trigger updates [skip ci]"
-            git push
-          else
-            echo "No changes to commit"
-          fi
-=======
-
-      - name: Install dependencies
-        run: npm ci --no-audit --no-fund
-
-concurrency:
-  group: ${{ github.workflow }}-${{ github.ref }}
-  cancel-in-progress: true
-
->>>>>>> origin/auto/autonomy-17186719616
+        with:
+          name: workflow-results
+          path: |
+            automation/logs/
+            automation/netlify-local-stamp.txt
+          retention-days: 7
+    runs_on: ubuntu-latest

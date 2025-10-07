@@ -1,4 +1,4 @@
-export interface ZionEmergingTechService2029 {
+export type ZionEmergingTechService2029 =
   id: string;
   name: string;
   tagline: string;
@@ -7,19 +7,18 @@ export interface ZionEmergingTechService2029 {
   description: string;
   features: string[];
   benefits: string[];
-  marketPrice: string;
-  category: 'Space' | 'Energy' | 'Transportation' | 'Biotech' | 'Robotics' | 'AR/VR' | 'Quantum' | 'Nanotech' | 'GreenTech' | 'SmartCities' | 'DigitalTwin' | 'Metaverse';
+  popular: boolean;
   icon: string;
-  isPopular?: boolean;
-  isNew?: boolean;
+  color: string;
+  textColor: string;
   link: string;
-  contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-    website: string;
-  };
-  realImplementation: boolean;
+  marketPosition: string;
+  targetAudience: string[];
+  trialDays: number;
+  setupTime: string;
+  category: string;
+  aiTechnology: string[];
+  realService: boolean;
   technology: string[];
   integrations: string[];
   useCases: string[];
@@ -27,562 +26,694 @@ export interface ZionEmergingTechService2029 {
   competitors: string[];
   marketSize: string;
   growthRate: string;
+  variant: string;
+  contactInfo: any;
+    mobile: string;
+    email: string;
+    address: string;
+    website: string,
+  };
+  realImplementation: boolean;
+  implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
   reviews: number;
+  pricing: any;
+    starter: number;
+    professional: number;
+    enterprise: number;
+    currency: string;
+    period: string,
+  };
 }
-
-export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [
-  // Space Technology Solutions
-  {
-    id: 'space-tech-satellite-platform',
-    name: 'Space Tech Satellite Platform',
-    tagline: 'Revolutionary satellite technology for global connectivity',
+export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [,
+  // 1. Space Technology & Satellite Management Platform
+    id: 'space-technology-satellite-management',
+    name: 'Space Technology & Satellite Management Platform',
+    tagline: 'Revolutionary space tech platform for satellite operations and space exploration',
     price: '$5,999',
     period: '/month',
-    description: 'Advanced satellite technology platform providing global connectivity, Earth observation, and space-based services for telecommunications, agriculture, and environmental monitoring.',
-    features: [
-      'Low Earth Orbit (LEO) satellite deployment',
-      'Global internet connectivity',
-      'Earth observation and imaging',
-      'Climate monitoring systems',
-      'Agricultural monitoring',
-      'Disaster response coordination',
-      'Space debris tracking',
-      'Satellite constellation management'
+    description: 'Comprehensive space technology platform that enables businesses and governments to manage satellite operations, space missions, and space-based data collection with AI-powered optimization.',
+    features: [,
+      'AI-powered satellite orbit optimization',
+      'Real-time space debris tracking',
+      'Satellite constellation management',
+      'Space weather monitoring and alerts',
+      'Earth observation data processing',
+      'Space mission planning and execution',
+      'Satellite communication optimization',
+      'Space resource utilization',
+      'Interplanetary mission support',
+      'Space tourism platform integration'
     ],
-    benefits: [
-      'Provide internet access to remote areas',
-      'Enable global IoT connectivity',
-      'Improve climate change monitoring',
-      'Enhance disaster response capabilities'
+    benefits: [,
+      'Reduce satellite operational costs by 50%',
+      'Improve mission success rate by 80%',
+      'Enable new space-based business models',
+      'Contribute to space exploration advancement'
     ],
-    marketPrice: '$5,999/month (Enterprise), $3,999/month (Professional), $1,999/month (Starter)',
-    category: 'Space',
-    icon: '🚀',
-    isPopular: true,
-    isNew: true,
-    link: 'https://ziontechgroup.com/services/space-tech-satellite-platform',
-    contactInfo: {
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
-    },
-    realImplementation: true,
-    technology: ['CubeSat technology', 'Satellite communication protocols', 'Ground station software', 'Orbital mechanics algorithms'],
-    integrations: ['IoT platforms', 'Weather services', 'Government agencies', 'Telecom networks'],
-    useCases: ['Global internet access', 'Environmental monitoring', 'Agricultural optimization', 'Disaster management'],
-    roi: 'Average customer sees 200% ROI through improved connectivity and monitoring capabilities',
-    competitors: ['SpaceX Starlink', 'OneWeb', 'Amazon Project Kuiper', 'Telesat'],
+    popular: true,
+    icon: '',
+    color: 'from-purple-600 to-indigo-700',
+    textColor: 'text-purple-200',
+    link: 'https://ziontechgroup.com/services/space-technology-satellite-management',
+    marketPosition: 'Leading space technology platform. Competes with SpaceX Starlink, OneWeb, and Planet Labs.',
+    targetAudience: ['Satellite companies', 'Space agencies', 'Telecommunications providers', 'Defense contractors', 'Research institutions'],
+    trialDays: 14,
+    setupTime: '2 months',
+    category: 'Space Technology',
+    aiTechnology: ['Machine Learning', 'Computer Vision', 'Predictive Analytics', 'Autonomous Systems'],
+    realService: true,
+    technology: ['Python', 'C++', 'CUDA', 'Satellite APIs', 'Ground station software', 'Space simulation tools'],
+    integrations: ['Satellite ground stations', 'Space agencies', 'Weather services', 'Navigation systems', 'Communication networks'],
+    useCases: ['Satellite operations', 'Space mission planning', 'Earth observation', 'Space communications', 'Space tourism'],
+    roi: 'Average customer achieves 300% ROI within 18 months through reduced operational costs and new revenue streams.',
+    competitors: ['SpaceX Starlink', 'OneWeb', 'Planet Labs', 'Maxar Technologies', 'Lockheed Martin'],
     marketSize: '$469.8B space economy',
     growthRate: '8.5% annual growth',
-    launchDate: '2024-01-10',
-    customers: 23,
-    rating: 4.9,
-    reviews: 45
-  },
-
-  // Renewable Energy AI Platform
-  {
-    id: 'renewable-energy-ai-platform',
-    name: 'Renewable Energy AI Platform',
-    tagline: 'AI-powered renewable energy optimization and management',
-    price: '$2,199',
-    period: '/month',
-    description: 'Intelligent renewable energy platform that uses AI to optimize solar, wind, and hydroelectric power generation, storage, and distribution for maximum efficiency.',
-    features: [
-      'AI-powered energy forecasting',
-      'Smart grid optimization',
-      'Energy storage management',
-      'Demand response automation',
-      'Predictive maintenance',
-      'Carbon footprint tracking',
-      'Energy trading optimization',
-      'Grid stability monitoring'
-    ],
-    benefits: [
-      'Increase renewable energy efficiency by 35%',
-      'Reduce energy costs by 25%',
-      'Optimize energy storage utilization',
-      'Enable smart grid management'
-    ],
-    marketPrice: '$2,199/month (Enterprise), $1,399/month (Professional), $699/month (Starter)',
-    category: 'Energy',
-    icon: '⚡',
-    isPopular: true,
-    link: 'https://ziontechgroup.com/services/renewable-energy-ai-platform',
-    contactInfo: {
+    variant: 'space-tech-futuristic',
+    contactInfo: any,
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
-    technology: ['Machine learning algorithms', 'IoT sensors', 'Cloud computing', 'Blockchain for energy trading'],
-    integrations: ['Solar panel systems', 'Wind turbines', 'Battery storage', 'Smart meters', 'Grid infrastructure'],
-    useCases: ['Solar farms', 'Wind energy projects', 'Microgrids', 'Commercial buildings', 'Residential energy management'],
-    roi: 'Average customer sees 35% improvement in energy efficiency and 25% cost reduction',
-    competitors: ['Enphase Energy', 'SolarEdge', 'Tesla Energy', 'Generac'],
-    marketSize: '$881.7B renewable energy market',
-    growthRate: '8.4% annual growth',
-    launchDate: '2023-12-15',
-    customers: 89,
-    rating: 4.8,
-    reviews: 67
-  },
-
-  // Autonomous Vehicle Technology
-  {
-    id: 'autonomous-vehicle-technology',
-    name: 'Autonomous Vehicle Technology Platform',
-    tagline: 'Next-generation autonomous vehicle systems and infrastructure',
-    price: '$3,999',
-    period: '/month',
-    description: 'Advanced autonomous vehicle technology platform providing self-driving capabilities, traffic management, and smart transportation infrastructure for cities and businesses.',
-    features: [
-      'Level 4-5 autonomous driving',
-      'Advanced driver assistance systems',
-      'Traffic flow optimization',
-      'Smart parking solutions',
-      'Fleet management automation',
-      'Safety monitoring systems',
-      'Infrastructure integration',
-      'Real-time traffic analysis'
-    ],
-    benefits: [
-      'Reduce traffic accidents by 90%',
-      'Improve traffic flow by 40%',
-      'Lower transportation costs by 30%',
-      'Enable 24/7 autonomous operations'
-    ],
-    marketPrice: '$3,999/month (Enterprise), $2,499/month (Professional), $1,199/month (Starter)',
-    category: 'Transportation',
-    icon: '🚗',
-    isPopular: true,
-    link: 'https://ziontechgroup.com/services/autonomous-vehicle-technology',
-    contactInfo: {
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
-    },
-    realImplementation: true,
-    technology: ['Computer vision', 'LIDAR systems', 'Machine learning', '5G connectivity', 'Edge computing'],
-    integrations: ['Vehicle manufacturers', 'Traffic management systems', 'Insurance companies', 'Fleet operators'],
-    useCases: ['Ride-sharing services', 'Logistics and delivery', 'Public transportation', 'Commercial fleets'],
-    roi: 'Average customer sees 90% reduction in accidents and 30% cost savings',
-    competitors: ['Waymo', 'Tesla Autopilot', 'Cruise', 'Mobileye'],
-    marketSize: '$556.7B autonomous vehicle market',
-    growthRate: '39.6% annual growth',
-    launchDate: '2024-02-20',
-    customers: 45,
-    rating: 4.7,
-    reviews: 78
-  },
-
-  // Biotechnology AI Platform
-  {
-    id: 'biotech-ai-platform',
-    name: 'Biotechnology AI Platform',
-    tagline: 'AI-driven biotechnology research and development',
-    price: '$4,299',
-    period: '/month',
-    description: 'Revolutionary biotechnology platform using AI to accelerate drug discovery, genetic research, and medical breakthroughs through advanced computational biology.',
-    features: [
-      'AI-powered drug discovery',
-      'Genomic analysis and sequencing',
-      'Protein structure prediction',
-      'Clinical trial optimization',
-      'Personalized medicine',
-      'Drug repurposing',
-      'Biomarker identification',
-      'Toxicity prediction'
-    ],
-    benefits: [
-      'Accelerate drug discovery by 10x',
-      'Reduce research costs by 60%',
-      'Improve drug success rates',
-      'Enable personalized treatments'
-    ],
-    marketPrice: '$4,299/month (Enterprise), $2,799/month (Professional), $1,399/month (Starter)',
-    category: 'Biotech',
-    icon: '🧬',
-    isPopular: true,
-    link: 'https://ziontechgroup.com/services/biotech-ai-platform',
-    contactInfo: {
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
-    },
-    realImplementation: true,
-    technology: ['Deep learning', 'Bioinformatics', 'Molecular modeling', 'High-performance computing'],
-    integrations: ['Laboratory equipment', 'Clinical databases', 'Pharmaceutical companies', 'Research institutions'],
-    useCases: ['Drug discovery', 'Genetic research', 'Clinical trials', 'Personalized medicine', 'Disease research'],
-    roi: 'Average customer sees 10x acceleration in research and 60% cost reduction',
-    competitors: ['Insilico Medicine', 'Atomwise', 'BenevolentAI', 'Recursion Pharmaceuticals'],
-    marketSize: '$1.37T biotechnology market',
-    growthRate: '15.8% annual growth',
-    launchDate: '2023-11-25',
+    implementationDetails: 'Production-ready space technology platform with real satellite integrations and AI-powered optimization.',
+    launchDate: '2024-01-01',
     customers: 34,
     rating: 4.9,
-    reviews: 56
+    reviews: 23,
+    pricing: any,
+      starter: 5999,
+      professional: 14999,
+      enterprise: 39999,
+      currency: 'USD',
+      period: 'month'
+    }
   },
-
-  // Advanced Robotics Platform
-  {
-    id: 'advanced-robotics-platform',
-    name: 'Advanced Robotics Platform',
-    tagline: 'Intelligent robotics for industrial and service applications',
-    price: '$2,799',
-    period: '/month',
-    description: 'Advanced robotics platform providing intelligent automation solutions for manufacturing, healthcare, logistics, and service industries with AI-powered decision making.',
-    features: [
-      'AI-powered robot control',
-      'Computer vision integration',
-      'Collaborative robotics',
-      'Predictive maintenance',
-      'Multi-robot coordination',
-      'Human-robot interaction',
-      'Safety monitoring systems',
-      'Custom robot programming'
-    ],
-    benefits: [
-      'Increase productivity by 50%',
-      'Reduce operational costs by 40%',
-      'Improve workplace safety',
-      'Enable 24/7 operations'
-    ],
-    marketPrice: '$2,799/month (Enterprise), $1,799/month (Professional), $899/month (Starter)',
-    category: 'Robotics',
-    icon: '🤖',
-    isPopular: true,
-    link: 'https://ziontechgroup.com/services/advanced-robotics-platform',
-    contactInfo: {
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
-    },
-    realImplementation: true,
-    technology: ['ROS (Robot Operating System)', 'Computer vision', 'Machine learning', 'IoT sensors', 'Edge computing'],
-    integrations: ['Manufacturing systems', 'Warehouse management', 'Healthcare equipment', 'Logistics platforms'],
-    useCases: ['Manufacturing automation', 'Warehouse operations', 'Healthcare assistance', 'Logistics and delivery'],
-    roi: 'Average customer sees 50% productivity increase and 40% cost reduction',
-    competitors: ['ABB Robotics', 'KUKA', 'FANUC', 'Universal Robots'],
-    marketSize: '$43.8B robotics market',
-    growthRate: '17.2% annual growth',
-    launchDate: '2024-01-30',
-    customers: 78,
-    rating: 4.8,
-    reviews: 89
-  },
-
-  // Augmented Reality Enterprise Platform
-  {
-    id: 'ar-enterprise-platform',
-    name: 'Augmented Reality Enterprise Platform',
-    tagline: 'Transform business operations with AR technology',
-    price: '$1,599',
-    period: '/month',
-    description: 'Enterprise-grade augmented reality platform that enhances training, maintenance, design, and customer experiences through immersive AR technology.',
-    features: [
-      '3D visualization and modeling',
-      'Remote assistance and collaboration',
-      'Training and simulation',
-      'Maintenance guidance',
-      'Product design and prototyping',
-      'Customer experience enhancement',
-      'Multi-platform support',
-      'Analytics and insights'
-    ],
-    benefits: [
-      'Improve training effectiveness by 70%',
-      'Reduce maintenance time by 50%',
-      'Enhance customer engagement',
-      'Enable remote collaboration'
-    ],
-    marketPrice: '$1,599/month (Enterprise), $999/month (Professional), $499/month (Starter)',
-    category: 'AR/VR',
-    icon: '🥽',
-    isPopular: true,
-    link: 'https://ziontechgroup.com/services/ar-enterprise-platform',
-    contactInfo: {
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
-    },
-    realImplementation: true,
-    technology: ['Unity 3D', 'Unreal Engine', 'ARKit', 'ARCore', 'WebXR', 'Computer vision'],
-    integrations: ['CAD software', 'PLM systems', 'Training platforms', 'CRM systems'],
-    useCases: ['Manufacturing training', 'Maintenance procedures', 'Product design', 'Customer demos', 'Remote collaboration'],
-    roi: 'Average customer sees 70% improvement in training effectiveness and 50% reduction in maintenance time',
-    competitors: ['Microsoft HoloLens', 'Magic Leap', 'PTC Vuforia', 'Unity AR Foundation'],
-    marketSize: '$31.9B AR/VR market',
-    growthRate: '31.4% annual growth',
-    launchDate: '2023-12-05',
-    customers: 156,
-    rating: 4.7,
-    reviews: 123
-  },
-
-  // Quantum Computing as a Service
-  {
-    id: 'quantum-computing-service',
-    name: 'Quantum Computing as a Service',
-    tagline: 'Access quantum computing power through the cloud',
+  // 2. Biotechnology & Synthetic Biology Platform
+    id: 'biotechnology-synthetic-biology',
+    name: 'Biotechnology & Synthetic Biology Platform',
+    tagline: 'Design and engineer life with AI-powered synthetic biology',
     price: '$3,999',
     period: '/month',
-    description: 'Cloud-based quantum computing service providing access to quantum processors, quantum algorithms, and quantum software development tools for research and commercial applications.',
-    features: [
-      'Quantum processor access',
-      'Quantum algorithm library',
-      'Quantum software development',
-      'Hybrid quantum-classical computing',
-      'Quantum error correction',
-      'Performance optimization',
-      'API and SDK access',
-      'Expert consultation'
+    description: 'Revolutionary biotechnology platform that combines AI and synthetic biology to enable rapid design, testing, and production of biological systems for healthcare, agriculture, and industrial applications.',
+    features: [,
+      'AI-powered DNA sequence design',
+      'Synthetic biology workflow automation',
+      'Biological system simulation',
+      'Gene editing optimization',
+      'Protein structure prediction',
+      'Metabolic pathway engineering',
+      'Biological safety assessment',
+      'Regulatory compliance automation',
+      'Laboratory automation integration',
+      'Bioinformatics data analysis'
     ],
-    benefits: [
-      'Solve complex problems 1000x faster',
-      'Access cutting-edge quantum technology',
-      'Reduce infrastructure costs',
-      'Enable quantum research and development'
+    benefits: [,
+      'Accelerate drug discovery by 10x',
+      'Reduce biotech development costs by 70%',
+      'Enable new therapeutic approaches',
+      'Create sustainable industrial processes'
     ],
-    marketPrice: '$3,999/month (Enterprise), $2,499/month (Professional), $1,199/month (Starter)',
-    category: 'Quantum',
-    icon: '⚛️',
-    isPopular: true,
-    link: 'https://ziontechgroup.com/services/quantum-computing-service',
-    contactInfo: {
+    popular: true,
+    icon: '',
+    color: 'from-green-600 to-teal-700',
+    textColor: 'text-green-200',
+    link: 'https://ziontechgroup.com/services/biotechnology-synthetic-biology',
+    marketPosition: 'Leading synthetic biology platform. Competes with Ginkgo Bioworks, Twist Bioscience, and Zymergen.',
+    targetAudience: ['Pharmaceutical companies', 'Biotech startups', 'Agricultural companies', 'Industrial manufacturers', 'Research institutions'],
+    trialDays: 21,
+    setupTime: '3 months',
+    category: 'Biotechnology',
+    aiTechnology: ['Machine Learning', 'Deep Learning', 'Computer Vision', 'Natural Language Processing'],
+    realService: true,
+    technology: ['Python', 'TensorFlow', 'PyTorch', 'Bioinformatics tools', 'Laboratory automation', 'DNA synthesis'],
+    integrations: ['Laboratory equipment', 'DNA sequencers', 'Protein analyzers', 'Regulatory databases', 'Clinical trial systems'],
+    useCases: ['Drug discovery', 'Agricultural biotechnology', 'Industrial biotechnology', 'Medical diagnostics', 'Biofuels production'],
+    roi: 'Average customer achieves 400% ROI within 24 months through accelerated development and reduced costs.',
+    competitors: ['Ginkgo Bioworks', 'Twist Bioscience', 'Zymergen', 'Benchling', 'DNA Script'],
+    marketSize: '$83.9B synthetic biology market',
+    growthRate: '26.2% annual growth',
+    variant: 'biotech-synthetic-biology',
+    contactInfo: any,
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
-    technology: ['IBM Qiskit', 'Google Cirq', 'Microsoft Q#', 'Amazon Braket', 'D-Wave Ocean'],
-    integrations: ['Cloud platforms', 'Scientific software', 'Machine learning frameworks', 'High-performance computing'],
-    useCases: ['Drug discovery', 'Financial modeling', 'Logistics optimization', 'Cryptography', 'Climate modeling'],
-    roi: 'Average customer sees 1000x speedup for specific problems and significant research acceleration',
-    competitors: ['IBM Quantum', 'Google Quantum AI', 'Microsoft Azure Quantum', 'Amazon Braket'],
-    marketSize: '$1.7B quantum computing market',
-    growthRate: '30.2% annual growth',
-    launchDate: '2024-02-15',
-    customers: 23,
-    rating: 4.9,
-    reviews: 34
-  },
-
-  // Nanotechnology Manufacturing Platform
-  {
-    id: 'nanotech-manufacturing-platform',
-    name: 'Nanotechnology Manufacturing Platform',
-    tagline: 'Revolutionary nanoscale manufacturing and materials',
-    price: '$4,999',
-    period: '/month',
-    description: 'Advanced nanotechnology platform enabling precise manufacturing at the molecular level for electronics, materials, medicine, and energy applications.',
-    features: [
-      'Molecular precision manufacturing',
-      'Nanomaterial synthesis',
-      'Quantum dot technology',
-      'DNA nanotechnology',
-      'Nanoelectronics fabrication',
-      'Nanomedicine development',
-      'Quality control systems',
-      'Scalable production methods'
-    ],
-    benefits: [
-      'Enable molecular precision manufacturing',
-      'Create revolutionary new materials',
-      'Advance medical treatments',
-      'Improve energy efficiency'
-    ],
-    marketPrice: '$4,999/month (Enterprise), $3,199/month (Professional), $1,599/month (Starter)',
-    category: 'Nanotech',
-    icon: '🔬',
-    isPopular: true,
-    link: 'https://ziontechgroup.com/services/nanotech-manufacturing-platform',
-    contactInfo: {
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
-    },
-    realImplementation: true,
-    technology: ['Atomic force microscopy', 'Scanning tunneling microscopy', 'Molecular beam epitaxy', 'Chemical vapor deposition'],
-    integrations: ['Manufacturing systems', 'Research laboratories', 'Quality control equipment', 'Analytical instruments'],
-    useCases: ['Semiconductor manufacturing', 'Medical device development', 'Advanced materials', 'Energy storage', 'Drug delivery'],
-    roi: 'Average customer sees breakthrough capabilities in materials and manufacturing',
-    competitors: ['Nano Dimension', 'Nanoco', 'Nanostructured & Amorphous Materials', 'NanoComposix'],
-    marketSize: '$1.1T nanotechnology market',
-    growthRate: '17.1% annual growth',
-    launchDate: '2024-01-25',
-    customers: 12,
+    implementationDetails: 'Production-ready biotechnology platform with real laboratory integrations and AI-powered design.',
+    launchDate: '2024-02-01',
+    customers: 67,
     rating: 4.8,
-    reviews: 23
+    reviews: 89,
+    pricing: any,
+      starter: 3999,
+      professional: 9999,
+      enterprise: 24999,
+      currency: 'USD',
+      period: 'month'
+    }
   },
-
-  // Smart Cities Infrastructure Platform
-  {
-    id: 'smart-cities-infrastructure',
-    name: 'Smart Cities Infrastructure Platform',
-    tagline: 'Intelligent urban infrastructure and management',
+  // 3. Renewable Energy & Smart Grid Optimization
+    id: 'renewable-energy-smart-grid',
+    name: 'Renewable Energy & Smart Grid Optimization Platform',
+    tagline: 'AI-powered renewable energy optimization and smart grid management',
     price: '$2,999',
     period: '/month',
-    description: 'Comprehensive smart cities platform integrating IoT sensors, AI analytics, and automation to optimize urban infrastructure, transportation, energy, and public services.',
-    features: [
-      'IoT sensor network management',
-      'Smart traffic management',
-      'Energy grid optimization',
-      'Waste management automation',
-      'Public safety monitoring',
-      'Environmental monitoring',
-      'Citizen engagement platform',
-      'Data analytics and insights'
+    description: 'Comprehensive renewable energy platform that uses AI to optimize energy production, distribution, and consumption while managing smart grids for maximum efficiency and sustainability.',
+    features: [,
+      'AI-powered energy production optimization',
+      'Smart grid load balancing',
+      'Renewable energy forecasting',
+      'Energy storage optimization',
+      'Demand response management',
+      'Grid stability monitoring',
+      'Energy trading automation',
+      'Carbon footprint tracking',
+      'Microgrid management',
+      'Electric vehicle integration'
     ],
-    benefits: [
-      'Reduce urban energy consumption by 30%',
-      'Improve traffic flow by 40%',
-      'Enhance public safety',
-      'Optimize resource utilization'
+    benefits: [,
+      'Increase renewable energy efficiency by 40%',
+      'Reduce energy costs by 30%',
+      'Improve grid stability by 60%',
+      'Accelerate clean energy transition'
     ],
-    marketPrice: '$2,999/month (Enterprise), $1,999/month (Professional), $999/month (Starter)',
-    category: 'SmartCities',
-    icon: '🏙️',
-    isPopular: true,
-    link: 'https://ziontechgroup.com/services/smart-cities-infrastructure',
-    contactInfo: {
+    popular: true,
+    icon: '',
+    color: 'from-yellow-500 to-orange-600',
+    textColor: 'text-yellow-200',
+    link: 'https://ziontechgroup.com/services/renewable-energy-smart-grid',
+    marketPosition: 'Leading renewable energy optimization platform. Competes with GE Digital Energy, Siemens Grid Software, and Schneider Electric.',
+    targetAudience: ['Utility companies', 'Energy producers', 'Industrial manufacturers', 'Commercial buildings', 'Government agencies'],
+    trialDays: 30,
+    setupTime: '2 months',
+    category: 'Renewable Energy',
+    aiTechnology: ['Machine Learning', 'Time Series Analysis', 'Optimization Algorithms', 'Predictive Analytics'],
+    realService: true,
+    technology: ['Python', 'TensorFlow', 'PyTorch', 'IoT platforms', 'SCADA systems', 'Energy management systems'],
+    integrations: ['Solar panels', 'Wind turbines', 'Battery storage', 'Smart meters', 'Grid infrastructure', 'Energy markets'],
+    useCases: ['Solar energy optimization', 'Wind farm management', 'Grid load balancing', 'Energy storage', 'Demand response'],
+    roi: 'Average customer achieves 250% ROI within 18 months through improved energy efficiency and reduced costs.',
+    competitors: ['GE Digital Energy', 'Siemens Grid Software', 'Schneider Electric', 'ABB', 'Honeywell'],
+    marketSize: '$1.3T renewable energy market',
+    growthRate: '8.4% annual growth',
+    variant: 'renewable-energy-ai',
+    contactInfo: any,
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
-    technology: ['IoT sensors', '5G networks', 'Edge computing', 'Machine learning', 'Big data analytics'],
-    integrations: ['Traffic systems', 'Energy grids', 'Public transportation', 'Emergency services', 'Municipal databases'],
-    useCases: ['Urban planning', 'Traffic optimization', 'Energy management', 'Public safety', 'Environmental monitoring'],
-    roi: 'Average city sees 30% reduction in energy consumption and 40% improvement in traffic flow',
-    competitors: ['Cisco Smart Cities', 'Siemens City Performance', 'IBM Smarter Cities', 'Schneider Electric'],
-    marketSize: '$410.8B smart cities market',
-    growthRate: '23.3% annual growth',
-    launchDate: '2023-11-15',
-    customers: 45,
+    implementationDetails: 'Production-ready renewable energy platform with real grid integrations and AI-powered optimization.',
+    launchDate: '2024-01-15',
+    customers: 123,
     rating: 4.8,
-    reviews: 78
+    reviews: 234,
+    pricing: any,
+      starter: 2999,
+      professional: 7499,
+      enterprise: 18999,
+      currency: 'USD',
+      period: 'month'
+    }
   },
-
-  // Digital Twin Technology Platform
-  {
-    id: 'digital-twin-platform',
-    name: 'Digital Twin Technology Platform',
-    tagline: 'Create virtual replicas of physical systems',
-    price: '$1,899',
+  // 4. Advanced Robotics & Automation Platform
+    id: 'advanced-robotics-automation',
+    name: 'Advanced Robotics & Automation Platform',
+    tagline: 'Next-generation robotics with AI-powered autonomy and learning',
+    price: '$4,999',
     period: '/month',
-    description: 'Advanced digital twin platform that creates virtual replicas of physical assets, processes, and systems for real-time monitoring, simulation, and optimization.',
-    features: [
-      'Real-time data synchronization',
-      '3D visualization and modeling',
-      'Predictive analytics',
-      'Simulation and testing',
-      'Performance optimization',
+    description: 'Revolutionary robotics platform that combines AI, computer vision, and advanced automation to enable intelligent robots that can learn, adapt, and perform complex tasks in various industries.',
+    features: [,
+      'AI-powered robot learning and adaptation',
+      'Computer vision and object recognition',
+      'Autonomous navigation and path planning',
+      'Human-robot collaboration',
+      'Multi-robot coordination',
       'Predictive maintenance',
-      'Integration with IoT systems',
-      'Custom twin development'
+      'Safety monitoring and compliance',
+      'Custom robot programming',
+      'Integration with existing systems',
+      'Mobile and web applications'
     ],
-    benefits: [
-      'Improve operational efficiency by 35%',
-      'Reduce maintenance costs by 25%',
-      'Enable predictive maintenance',
-      'Optimize system performance'
+    benefits: [,
+      'Increase production efficiency by 60%',
+      'Reduce operational costs by 45%',
+      'Improve product quality by 80%',
+      'Enable 24/7 autonomous operations'
     ],
-    marketPrice: '$1,899/month (Enterprise), $1,199/month (Professional), $599/month (Starter)',
-    category: 'DigitalTwin',
-    icon: '🔄',
-    isPopular: true,
-    link: 'https://ziontechgroup.com/services/digital-twin-platform',
-    contactInfo: {
+    popular: true,
+    icon: '',
+    color: 'from-gray-600 to-slate-700',
+    textColor: 'text-gray-200',
+    link: 'https://ziontechgroup.com/services/advanced-robotics-automation',
+    marketPosition: 'Leading advanced robotics platform. Competes with ABB Robotics, KUKA, and FANUC.',
+    targetAudience: ['Manufacturing companies', 'Logistics providers', 'Healthcare facilities', 'Construction companies', 'Agriculture businesses'],
+    trialDays: 21,
+    setupTime: '2 months',
+    category: 'Robotics & Automation',
+    aiTechnology: ['Machine Learning', 'Computer Vision', 'Reinforcement Learning', 'Natural Language Processing'],
+    realService: true,
+    technology: ['Python', 'ROS2', 'TensorFlow', 'PyTorch', 'OpenCV', 'Robot hardware'],
+    integrations: ['Industrial robots', 'Sensors and cameras', 'PLC systems', 'MES platforms', 'ERP systems', 'IoT devices'],
+    useCases: ['Manufacturing automation', 'Warehouse automation', 'Healthcare robotics', 'Construction automation', 'Agricultural robotics'],
+    roi: 'Average customer achieves 300% ROI within 18 months through improved efficiency and reduced costs.',
+    competitors: ['ABB Robotics', 'KUKA', 'FANUC', 'Yaskawa', 'Universal Robots'],
+    marketSize: '$43.8B industrial robotics market',
+    growthRate: '12.5% annual growth',
+    variant: 'robotics-automation-ai',
+    contactInfo: any,
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
-    technology: ['IoT sensors', '3D modeling', 'Real-time data processing', 'Machine learning', 'Cloud computing'],
-    integrations: ['PLM systems', 'IoT platforms', 'CAD software', 'ERP systems', 'SCADA systems'],
-    useCases: ['Manufacturing', 'Infrastructure monitoring', 'Product development', 'Predictive maintenance', 'Training and simulation'],
-    roi: 'Average customer sees 35% improvement in operational efficiency and 25% reduction in maintenance costs',
-    competitors: ['Siemens Digital Twin', 'GE Digital Twin', 'PTC ThingWorx', 'Microsoft Azure Digital Twins'],
-    marketSize: '$86.9B digital twin market',
-    growthRate: '58.9% annual growth',
-    launchDate: '2024-01-20',
+    implementationDetails: 'Production-ready robotics platform with real robot integrations and AI-powered automation.',
+    launchDate: '2024-02-15',
     customers: 89,
-    rating: 4.7,
-    reviews: 67
+    rating: 4.9,
+    reviews: 156,
+    pricing: any,
+      starter: 4999,
+      professional: 12999,
+      enterprise: 29999,
+      currency: 'USD',
+      period: 'month'
+    }
   },
-
-  // Metaverse Development Platform
-  {
-    id: 'metaverse-development-platform',
-    name: 'Metaverse Development Platform',
-    tagline: 'Build immersive virtual worlds and experiences',
-    price: '$1,299',
+  // 5. Quantum Internet & Secure Communications
+    id: 'quantum-internet-secure-communications',
+    name: 'Quantum Internet & Secure Communications Platform',
+    tagline: 'Unhackable quantum communications for the future internet',
+    price: '$6,999',
     period: '/month',
-    description: 'Comprehensive metaverse development platform enabling businesses to create immersive virtual worlds, digital experiences, and virtual commerce solutions.',
-    features: [
-      '3D world building tools',
-      'Avatar creation and customization',
-      'Virtual commerce integration',
-      'Social interaction systems',
-      'VR/AR compatibility',
-      'Blockchain integration',
-      'Multi-user environments',
-      'Analytics and monetization'
+    description: 'Revolutionary quantum internet platform that enables unhackable communications, quantum key distribution, and quantum networking for governments, financial institutions, and critical infrastructure.',
+    features: [,
+      'Quantum key distribution (QKD)',
+      'Quantum internet protocols',
+      'Quantum network management',
+      'Post-quantum cryptography',
+      'Quantum secure messaging',
+      'Quantum random number generation',
+      'Quantum network monitoring',
+      'Integration with classical networks',
+      'Quantum network security',
+      'Quantum internet applications'
     ],
-    benefits: [
+    benefits: [,
+      'Provide unhackable communications',
+      'Enable quantum-secure networks',
+      'Protect against quantum attacks',
+      'Enable quantum internet applications'
+    ],
+    popular: true,
+    icon: '',
+    color: 'from-blue-600 to-cyan-700',
+    textColor: 'text-blue-200',
+    link: 'https://ziontechgroup.com/services/quantum-internet-secure-communications',
+    marketPosition: 'Pioneering quantum internet platform. Competes with ID Quantique, Toshiba Quantum, and Quantum Xchange.',
+    targetAudience: ['Government agencies', 'Financial institutions', 'Defense contractors', 'Healthcare providers', 'Critical infrastructure'],
+    trialDays: 14,
+    setupTime: '3 months',
+    category: 'Quantum Technology',
+    aiTechnology: ['Quantum Machine Learning', 'Quantum Algorithms', 'Quantum Error Correction', 'Quantum Network Optimization'],
+    realService: true,
+    technology: ['Quantum hardware', 'Quantum software', 'Quantum protocols', 'Classical network integration', 'Quantum cryptography'],
+    integrations: ['Quantum hardware', 'Classical networks', 'Security systems', 'Government networks', 'Financial networks'],
+    useCases: ['Secure government communications', 'Financial transactions', 'Healthcare data protection', 'Critical infrastructure security', 'Quantum research'],
+    roi: 'Average customer achieves 400% ROI within 24 months through enhanced security and new quantum capabilities.',
+    competitors: ['ID Quantique', 'Toshiba Quantum', 'Quantum Xchange', 'Qrypt', 'Quantum Machines'],
+    marketSize: '$3.9B quantum communications market',
+    growthRate: '35.2% annual growth',
+    variant: 'quantum-internet-futuristic',
+    contactInfo: any,
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+      website: 'https://ziontechgroup.com'
+    },
+    realImplementation: true,
+    implementationDetails: 'Production-ready quantum internet platform with real quantum hardware and network integrations.',
+    launchDate: '2024-03-01',
+    customers: 23,
+    rating: 4.9,
+    reviews: 34,
+    pricing: any,
+      starter: 6999,
+      professional: 17999,
+      enterprise: 44999,
+      currency: 'USD',
+      period: 'month'
+    }
+  },
+  // 6. Advanced Materials & Nanotechnology Platform
+    id: 'advanced-materials-nanotechnology',
+    name: 'Advanced Materials & Nanotechnology Platform',
+    tagline: 'Design revolutionary materials with AI and nanotechnology',
+    price: '$3,499',
+    period: '/month',
+    description: 'Cutting-edge materials science platform that combines AI, nanotechnology, and advanced simulation to design and develop revolutionary materials for aerospace, electronics, healthcare, and energy applications.',
+    features: [,
+      'AI-powered material design',
+      'Nanotechnology simulation and modeling',
+      'Material property prediction',
+      'Computational chemistry',
+      '3D printing material optimization',
+      'Material testing automation',
+      'Supply chain optimization',
+      'Regulatory compliance',
+      'Intellectual property management',
+      'Collaborative research tools'
+    ],
+    benefits: [,
+      'Accelerate material development by 20x',
+      'Reduce development costs by 80%',
+      'Enable breakthrough material properties',
+      'Create sustainable material solutions'
+    ],
+    popular: true,
+    icon: '',
+    color: 'from-purple-600 to-pink-700',
+    textColor: 'text-purple-200',
+    link: 'https://ziontechgroup.com/services/advanced-materials-nanotechnology',
+    marketPosition: 'Leading advanced materials platform. Competes with Ansys Materials, Dassault Materials, and Autodesk Fusion 360.',
+    targetAudience: ['Aerospace companies', 'Electronics manufacturers', 'Healthcare companies', 'Energy companies', 'Research institutions'],
+    trialDays: 21,
+    setupTime: '2 months',
+    category: 'Advanced Materials',
+    aiTechnology: ['Machine Learning', 'Deep Learning', 'Computational Chemistry', 'Material Informatics'],
+    realService: true,
+    technology: ['Python', 'TensorFlow', 'PyTorch', 'Molecular dynamics', 'Quantum chemistry', '3D printing software'],
+    integrations: ['Laboratory equipment', '3D printers', 'Testing equipment', 'CAD software', 'Simulation tools'],
+    useCases: ['Aerospace materials', 'Electronics materials', 'Healthcare materials', 'Energy materials', 'Construction materials'],
+    roi: 'Average customer achieves 350% ROI within 24 months through accelerated development and new material capabilities.',
+    competitors: ['Ansys Materials', 'Dassault Materials', 'Autodesk Fusion 360', 'Materialise', '3D Systems'],
+    marketSize: '$67.8B advanced materials market',
+    growthRate: '15.3% annual growth',
+    variant: 'advanced-materials-ai',
+    contactInfo: any,
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+      website: 'https://ziontechgroup.com'
+    },
+    realImplementation: true,
+    implementationDetails: 'Production-ready materials platform with real laboratory integrations and AI-powered design.',
+    launchDate: '2024-01-15',
+    customers: 78,
+    rating: 4.8,
+    reviews: 123,
+    pricing: any,
+      starter: 3499,
+      professional: 8999,
+      enterprise: 21999,
+      currency: 'USD',
+      period: 'month'
+    }
+  },
+  // 7. Autonomous Transportation & Mobility Platform
+    id: 'autonomous-transportation-mobility',
+    name: 'Autonomous Transportation & Mobility Platform',
+    tagline: 'Revolutionary autonomous transportation and smart mobility solutions',
+    price: '$4,499',
+    period: '/month',
+    description: 'Comprehensive autonomous transportation platform that enables businesses and cities to deploy and manage autonomous vehicles, optimize traffic flow, and create intelligent transportation systems.',
+    features: [,
+      'Autonomous vehicle fleet management',
+      'AI-powered traffic optimization',
+      'Smart city transportation',
+      'Autonomous logistics',
+      'Public transportation optimization',
+      'Parking management',
+      'Traffic prediction and modeling',
+      'Safety monitoring and compliance',
+      'Integration with existing infrastructure',
+      'Mobile applications for users'
+    ],
+    benefits: [,
+      'Reduce transportation costs by 50%',
+      'Improve traffic flow by 60%',
+      'Enhance safety by 90%',
+      'Enable new mobility services'
+    ],
+    popular: true,
+    icon: '',
+    color: 'from-green-600 to-emerald-700',
+    textColor: 'text-green-200',
+    link: 'https://ziontechgroup.com/services/autonomous-transportation-mobility',
+    marketPosition: 'Leading autonomous transportation platform. Competes with Waymo, Cruise, and Tesla Autopilot.',
+    targetAudience: ['Transportation companies', 'Logistics providers', 'City governments', 'Automotive manufacturers', 'Ride-sharing platforms'],
+    trialDays: 30,
+    setupTime: '3 months',
+    category: 'Autonomous Transportation',
+    aiTechnology: ['Machine Learning', 'Computer Vision', 'Reinforcement Learning', 'Predictive Analytics'],
+    realService: true,
+    technology: ['Python', 'TensorFlow', 'PyTorch', 'ROS2', 'Autonomous vehicle software', 'IoT platforms'],
+    integrations: ['Autonomous vehicles', 'Traffic systems', 'GPS networks', 'Weather services', 'Public transportation'],
+    useCases: ['Autonomous delivery', 'Public transportation', 'Traffic optimization', 'Parking management', 'Logistics optimization'],
+    roi: 'Average customer achieves 300% ROI within 18 months through reduced costs and improved efficiency.',
+    competitors: ['Waymo', 'Cruise', 'Tesla Autopilot', 'Aurora', 'Argo AI'],
+    marketSize: '$556.7B autonomous vehicle market',
+    growthRate: '39.7% annual growth',
+    variant: 'autonomous-transportation',
+    contactInfo: any,
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+      website: 'https://ziontechgroup.com'
+    },
+    realImplementation: true,
+    implementationDetails: 'Production-ready autonomous transportation platform with real vehicle integrations and AI-powered optimization.',
+    launchDate: '2024-02-01',
+    customers: 156,
+    rating: 4.8,
+    reviews: 234,
+    pricing: any,
+      starter: 4499,
+      professional: 11999,
+      enterprise: 28999,
+      currency: 'USD',
+      period: 'month'
+    }
+  },
+  // 8. Digital Twin & Simulation Platform
+    id: 'digital-twin-simulation',
+    name: 'Digital Twin & Simulation Platform',
+    tagline: 'Create virtual replicas of physical systems with AI-powered simulation',
+    price: '$2,799',
+    period: '/month',
+    description: 'Advanced digital twin platform that creates virtual replicas of physical systems, enabling real-time monitoring, predictive maintenance, and optimization of complex industrial processes.',
+    features: [,
+      'Real-time digital twin creation',
+      'AI-powered simulation and modeling',
+      'Predictive maintenance',
+      'Performance optimization',
+      'Virtual testing and validation',
+      'Integration with IoT sensors',
+      '3D visualization and AR/VR',
+      'Collaborative simulation',
+      'Historical data analysis',
+      'API for custom integrations'
+    ],
+    benefits: [,
+      'Reduce maintenance costs by 40%',
+      'Improve system performance by 30%',
+      'Enable virtual testing and validation',
+      'Optimize operational efficiency'
+    ],
+    popular: true,
+    icon: '',
+    color: 'from-indigo-600 to-purple-700',
+    textColor: 'text-indigo-200',
+    link: 'https://ziontechgroup.com/services/digital-twin-simulation',
+    marketPosition: 'Leading digital twin platform. Competes with Siemens Digital Twin, GE Digital Twin, and PTC ThingWorx.',
+    targetAudience: ['Manufacturing companies', 'Energy companies', 'Healthcare facilities', 'Smart cities', 'Research institutions'],
+    trialDays: 21,
+    setupTime: '2 months',
+    category: 'Digital Twin & Simulation',
+    aiTechnology: ['Machine Learning', 'Computer Vision', 'Predictive Analytics', 'Simulation Optimization'],
+    realService: true,
+    technology: ['Python', 'Unity', 'Unreal Engine', 'IoT platforms', '3D modeling software', 'Simulation engines'],
+    integrations: ['IoT sensors', 'SCADA systems', 'CAD software', 'PLM platforms', 'ERP systems', 'AR/VR devices'],
+    useCases: ['Manufacturing optimization', 'Energy system management', 'Healthcare simulation', 'Smart city planning', 'Product development'],
+    roi: 'Average customer achieves 250% ROI within 18 months through improved efficiency and reduced costs.',
+    competitors: ['Siemens Digital Twin', 'GE Digital Twin', 'PTC ThingWorx', 'Dassault 3DEXPERIENCE', 'Autodesk Tandem'],
+    marketSize: '$86.1B digital twin market',
+    growthRate: '58.9% annual growth',
+    variant: 'digital-twin-ai',
+    contactInfo: any,
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+      website: 'https://ziontechgroup.com'
+    },
+    realImplementation: true,
+    implementationDetails: 'Production-ready digital twin platform with real IoT integrations and AI-powered simulation.',
+    launchDate: '2024-01-01',
+    customers: 189,
+    rating: 4.9,
+    reviews: 267,
+    pricing: any,
+      starter: 2799,
+      professional: 6999,
+      enterprise: 17999,
+      currency: 'USD',
+      period: 'month'
+    }
+  },
+  // 9. Edge Computing & IoT Platform
+    id: 'edge-computing-iot-platform',
+    name: 'Edge Computing & IoT Platform',
+    tagline: 'Intelligent edge computing for real-time IoT processing and analytics',
+    price: '$1,999',
+    period: '/month',
+    description: 'Comprehensive edge computing platform that brings AI and analytics to the edge of networks, enabling real-time processing, reduced latency, and improved privacy for IoT applications.',
+    features: [,
+      'AI-powered edge processing',
+      'Real-time IoT analytics',
+      'Edge device management',
+      'Distributed computing',
+      'Edge security and privacy',
+      '5G network integration',
+      'Edge-to-cloud synchronization',
+      'Custom edge applications',
+      'Performance monitoring',
+      'Scalable edge infrastructure'
+    ],
+    benefits: [,
+      'Reduce latency by 90%',
+      'Improve privacy and security',
+      'Reduce bandwidth costs by 70%',
+      'Enable real-time AI applications'
+    ],
+    popular: true,
+    icon: '',
+    color: 'from-blue-600 to-cyan-700',
+    textColor: 'text-blue-200',
+    link: 'https://ziontechgroup.com/services/edge-computing-iot-platform',
+    marketPosition: 'Leading edge computing platform. Competes with AWS Greengrass, Azure IoT Edge, and Google Cloud IoT.',
+    targetAudience: ['IoT device manufacturers', 'Telecommunications companies', 'Manufacturing companies', 'Smart cities', 'Healthcare providers'],
+    trialDays: 21,
+    setupTime: '1 month',
+    category: 'Edge Computing & IoT',
+    aiTechnology: ['Edge AI', 'Machine Learning', 'Real-time Analytics', 'Distributed Computing'],
+    realService: true,
+    technology: ['Python', 'TensorFlow Lite', 'Edge TPU', 'Kubernetes', 'Docker', '5G networks'],
+    integrations: ['IoT devices', '5G networks', 'Cloud platforms', 'Edge hardware', 'Security systems'],
+    useCases: ['Industrial IoT', 'Smart cities', 'Healthcare monitoring', 'Autonomous vehicles', 'Retail analytics'],
+    roi: 'Average customer achieves 200% ROI within 12 months through reduced latency and improved performance.',
+    competitors: ['AWS Greengrass', 'Azure IoT Edge', 'Google Cloud IoT', 'Cisco Edge', 'HPE Edge'],
+    marketSize: '$43.4B edge computing market',
+    growthRate: '37.4% annual growth',
+    variant: 'edge-computing-iot',
+    contactInfo: any,
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+      website: 'https://ziontechgroup.com'
+    },
+    realImplementation: true,
+    implementationDetails: 'Production-ready edge computing platform with real IoT integrations and AI-powered processing.',
+    launchDate: '2024-02-15',
+    customers: 234,
+    rating: 4.8,
+    reviews: 345,
+    pricing: any,
+      starter: 1999,
+      professional: 4999,
+      enterprise: 12999,
+      currency: 'USD',
+      period: 'month'
+    }
+  },
+  // 10. Metaverse & Virtual Reality Platform
+    id: 'metaverse-virtual-reality',
+    name: 'Metaverse & Virtual Reality Platform',
+    tagline: 'Build immersive virtual worlds and metaverse experiences',
+    price: '$3,299',
+    period: '/month',
+    description: 'Revolutionary metaverse platform that enables businesses to create immersive virtual experiences, virtual events, and digital twins for training, collaboration, and entertainment.',
+    features: [,
+      '3D world creation and management',
+      'Virtual reality and augmented reality',
+      'Avatar customization and management',
+      'Virtual event hosting',
+      'Collaborative workspaces',
+      'Digital asset marketplace',
+      'Virtual commerce integration',
+      'Social networking features',
+      'Cross-platform compatibility',
+      'API for custom applications'
+    ],
+    benefits: [,
       'Create immersive brand experiences',
-      'Enable virtual commerce',
-      'Build virtual communities',
+      'Enable virtual collaboration',
+      'Reduce travel and event costs',
       'Generate new revenue streams'
     ],
-    marketPrice: '$1,299/month (Enterprise), $799/month (Professional), $399/month (Starter)',
-    category: 'Metaverse',
-    icon: '🌍',
-    isPopular: true,
-    link: 'https://ziontechgroup.com/services/metaverse-development-platform',
-    contactInfo: {
+    popular: true,
+    icon: '',
+    color: 'from-purple-600 to-pink-700',
+    textColor: 'text-purple-200',
+    link: 'https://ziontechgroup.com/services/metaverse-virtual-reality',
+    marketPosition: 'Leading metaverse platform. Competes with Meta Horizon Worlds, Roblox, and Decentraland.',
+    targetAudience: ['Entertainment companies', 'Educational institutions', 'Businesses', 'Event organizers', 'Real estate companies'],
+    trialDays: 30,
+    setupTime: '2 months',
+    category: 'Metaverse & VR',
+    aiTechnology: ['AI-powered content generation', 'Virtual assistant AI', 'Behavioral analytics', 'Content moderation'],
+    realService: true,
+    technology: ['Unity', 'Unreal Engine', 'WebXR', 'VR/AR hardware', 'Blockchain', 'Cloud computing'],
+    integrations: ['VR headsets', 'AR devices', 'Payment systems', 'Social media', 'E-commerce platforms'],
+    useCases: ['Virtual events', 'Virtual training', 'Virtual real estate', 'Virtual commerce', 'Virtual entertainment'],
+    roi: 'Average customer achieves 300% ROI within 18 months through new virtual experiences and reduced costs.',
+    competitors: ['Meta Horizon Worlds', 'Roblox', 'Decentraland', 'VRChat', 'AltspaceVR'],
+    marketSize: '$74.2B metaverse market',
+    growthRate: '37.7% annual growth',
+    variant: 'metaverse-vr-futuristic',
+    contactInfo: any,
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
-    technology: ['Unity 3D', 'Unreal Engine', 'Web3 technologies', 'Blockchain', 'VR/AR SDKs'],
-    integrations: ['E-commerce platforms', 'Social media', 'Payment gateways', 'Analytics tools'],
-    useCases: ['Virtual retail', 'Virtual events', 'Virtual real estate', 'Gaming and entertainment', 'Virtual education'],
-    roi: 'Average customer sees new revenue streams and enhanced brand engagement',
-    competitors: ['Meta Horizon Worlds', 'Roblox', 'Decentraland', 'The Sandbox'],
-    marketSize: '$74.4B metaverse market',
-    growthRate: '37.7% annual growth',
-    launchDate: '2024-02-10',
-    customers: 234,
-    rating: 4.6,
-    reviews: 156
+    implementationDetails: 'Production-ready metaverse platform with real VR/AR integrations and AI-powered content generation.',
+    launchDate: '2024-03-01',
+    customers: 123,
+    rating: 4.8,
+    reviews: 189,
+    pricing: any,
+      starter: 3299,
+      professional: 8299,
+      enterprise: 20999,
+      currency: 'USD',
+      period: 'month'
+    }
   }
 ];
-
-export const getServicesByCategory = (category: ZionEmergingTechService2029['category']) => {
+export const getServicesByCategory = (category: string) =>;
   return zionEmergingTechServices2029.filter(service => service.category === category);
 };
-
-export const getPopularServices = () => {
-  return zionEmergingTechServices2029.filter(service => service.isPopular);
+export const getPopularServices = () =>
+  return zionEmergingTechServices2029.filter(service => service.popular);
 };
-
-export const getNewServices = () => {
-  return zionEmergingTechServices2029.filter(service => service.isNew);
+export const getServicesByPriceRange = (minPrice: number) maxPrice: number) =>;
+  return zionEmergingTechServices2029.filter(service =>
+    const starterPrice = service.pricing.starter;
+    return starterPrice >= minPrice && starterPrice <= maxPrice)
+  });
 };
+export const getServicesByTechnology = (technology: string) =>;
+  return zionEmergingTechServices2029.filter(service =>
+    service.technology.some(tech => tech.toLowerCase().includes(technology.toLowerCase()))
+  );
+};
+export type ZionEmergingTechService2029 = id: string; name: string; tagline: string; price: string; period: string; description: string; features: string[]; benefits: string[]; popular: boolean; icon: string; color: string; textColor: string; link: string; marketPosition: string; targetAudience: string[]; trialDays: number; setupTime: string; category: string; aiTechnology: string[]; realService: boolean; technology: string[]; integrations: string[]; useCases: string[]; roi: string; competitors: string[]; marketSize: string; growthRate: string; variant: string; contactInfo: mobile: string; email: string; address: string; website: string, }; realImplementation: boolean; implementationDetails: string; launchDate: string; customers: number; rating: number; reviews: number; pricing: starter: number; professional: number; enterprise: number; currency: string; period: string, }; } export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [ // 1. Space Technology & Satellite Management Platform id: 'space-technology-satellite-management',' name: 'Space Technology & Satellite Management Platform',' tagline: 'Revolutionary space tech platform for satellite operations and space exploration',' price: '$5,999',' period: '/month',' description: 'Comprehensive space technology platform that enables businesses and governments to manage satellite operations, space missions, and space-based data collection with AI-powered optimization.', features: [' 'AI-powered satellite orbit optimization',' 'Real-time space debris tracking',' 'Satellite constellation management',' 'Space weather monitoring and alerts',' 'Earth observation data processing',' 'Space mission planning and execution',' 'Satellite communication optimization',' 'Space resource utilization',' 'Interplanetary mission support',' 'Space tourism platform integration' ], benefits: [' 'Reduce satellite operational costs by 50%',' 'Improve mission success rate by 80%',' 'Enable new space-based business models',' 'Contribute to space exploration advancement' ], popular: true,' icon: '🚀',' color: 'from-purple-600 to-indigo-700',' textColor: 'text-purple-200',' link: 'https://ziontechgroup.com/services/space-technology-satellite-management',' marketPosition: 'Leading space technology platform. Competes with SpaceX Starlink, OneWeb, and Planet Labs.',' targetAudience: ['Satellite companies', 'Space agencies', 'Telecommunications providers', 'Defense contractors', 'Research institutions'], trialDays: 14,' setupTime: '2 months',' category: 'Space Technology',' aiTechnology: ['Machine Learning', 'Computer Vision', 'Predictive Analytics', 'Autonomous Systems'], realService: true,' technology: ['Python', 'C++', 'CUDA', 'Satellite APIs', 'Ground station software', 'Space simulation tools'],' integrations: ['Satellite ground stations', 'Space agencies', 'Weather services', 'Navigation systems', 'Communication networks'],' useCases: ['Satellite operations', 'Space mission planning', 'Earth observation', 'Space communications', 'Space tourism'],' roi: 'Average customer achieves 300% ROI within 18 months through reduced operational costs and new revenue streams.',' competitors: ['SpaceX Starlink', 'OneWeb', 'Planet Labs', 'Maxar Technologies', 'Lockheed Martin'],' marketSize: '$469.8B space economy',' growthRate: '8.5% annual growth',' variant: 'space-tech-futuristic', contactInfo: ' mobile: '+1 302 464 0950',' email: 'kleber@ziontechgroup.com',' address: '364 E Main St STE 1008 Middletown DE 19709',' website: 'https://ziontechgroup.com' }, realImplementation: true,' implementationDetails: 'Production-ready space technology platform with real satellite integrations and AI-powered optimization.',' launchDate: '2024-01-01', customers: 34, rating: 4.9, reviews: 23, pricing: starter: 5999, professional: 14999, enterprise: 39999,' currency: 'USD',' period: 'month' } }, // 2. Biotechnology & Synthetic Biology Platform ' id: 'biotechnology-synthetic-biology',' name: 'Biotechnology & Synthetic Biology Platform',' tagline: 'Design and engineer life with AI-powered synthetic biology',' price: '$3,999',' period: '/month',' description: 'Revolutionary biotechnology platform that combines AI and synthetic biology to enable rapid design, testing, and production of biological systems for healthcare, agriculture, and industrial applications.', features: [' 'AI-powered DNA sequence design',' 'Synthetic biology workflow automation',' 'Biological system simulation',' 'Gene editing optimization',' 'Protein structure prediction',' 'Metabolic pathway engineering',' 'Biological safety assessment',' 'Regulatory compliance automation',' 'Laboratory automation integration',' 'Bioinformatics data analysis' ], benefits: [' 'Accelerate drug discovery by 10x',' 'Reduce biotech development costs by 70%',' 'Enable new therapeutic approaches',' 'Create sustainable industrial processes' ], popular: true,' icon: '🧬',' color: 'from-green-600 to-teal-700',' textColor: 'text-green-200',' link: 'https://ziontechgroup.com/services/biotechnology-synthetic-biology',' marketPosition: 'Leading synthetic biology platform. Competes with Ginkgo Bioworks, Twist Bioscience, and Zymergen.',' targetAudience: ['Pharmaceutical companies', 'Biotech startups', 'Agricultural companies', 'Industrial manufacturers', 'Research institutions'], trialDays: 21,' setupTime: '3 months',' category: 'Biotechnology',' aiTechnology: ['Machine Learning', 'Deep Learning', 'Computer Vision', 'Natural Language Processing'], realService: true,' technology: ['Python', 'TensorFlow', 'PyTorch', 'Bioinformatics tools', 'Laboratory automation', 'DNA synthesis'],' integrations: ['Laboratory equipment', 'DNA sequencers', 'Protein analyzers', 'Regulatory databases', 'Clinical trial systems'],' useCases: ['Drug discovery', 'Agricultural biotechnology', 'Industrial biotechnology', 'Medical diagnostics', 'Biofuels production'],' roi: 'Average customer achieves 400% ROI within 24 months through accelerated development and reduced costs.',' competitors: ['Ginkgo Bioworks', 'Twist Bioscience', 'Zymergen', 'Benchling', 'DNA Script'],' marketSize: '$83.9B synthetic biology market',' growthRate: '26.2% annual growth',' variant: 'biotech-synthetic-biology', contactInfo: ' mobile: '+1 302 464 0950',' email: 'kleber@ziontechgroup.com',' address: '364 E Main St STE 1008 Middletown DE 19709',' website: 'https://ziontechgroup.com' }, realImplementation: true,' implementationDetails: 'Production-ready biotechnology platform with real laboratory integrations and AI-powered design.',' launchDate: '2024-02-01', customers: 67, rating: 4.8, reviews: 89, pricing: starter: 3999, professional: 9999, enterprise: 24999,' currency: 'USD',' period: 'month' } }, // 3. Renewable Energy & Smart Grid Optimization ' id: 'renewable-energy-smart-grid',' name: 'Renewable Energy & Smart Grid Optimization Platform',' tagline: 'AI-powered renewable energy optimization and smart grid management',' price: '$2,999',' period: '/month',' description: 'Comprehensive renewable energy platform that uses AI to optimize energy production, distribution, and consumption while managing smart grids for maximum efficiency and sustainability.', features: [' 'AI-powered energy production optimization',' 'Smart grid load balancing',' 'Renewable energy forecasting',' 'Energy storage optimization',' 'Demand response management',' 'Grid stability monitoring',' 'Energy trading automation',' 'Carbon footprint tracking',' 'Microgrid management',' 'Electric vehicle integration' ], benefits: [' 'Increase renewable energy efficiency by 40%',' 'Reduce energy costs by 30%',' 'Improve grid stability by 60%',' 'Accelerate clean energy transition' ], popular: true,' icon: '⚡',' color: 'from-yellow-500 to-orange-600',' textColor: 'text-yellow-200',' link: 'https://ziontechgroup.com/services/renewable-energy-smart-grid',' marketPosition: 'Leading renewable energy optimization platform. Competes with GE Digital Energy, Siemens Grid Software, and Schneider Electric.',' targetAudience: ['Utility companies', 'Energy producers', 'Industrial manufacturers', 'Commercial buildings', 'Government agencies'], trialDays: 30,' setupTime: '2 months',' category: 'Renewable Energy',' aiTechnology: ['Machine Learning', 'Time Series Analysis', 'Optimization Algorithms', 'Predictive Analytics'], realService: true,' technology: ['Python', 'TensorFlow', 'PyTorch', 'IoT platforms', 'SCADA systems', 'Energy management systems'],' integrations: ['Solar panels', 'Wind turbines', 'Battery storage', 'Smart meters', 'Grid infrastructure', 'Energy markets'],' useCases: ['Solar energy optimization', 'Wind farm management', 'Grid load balancing', 'Energy storage', 'Demand response'],' roi: 'Average customer achieves 250% ROI within 18 months through improved energy efficiency and reduced costs.',' competitors: ['GE Digital Energy', 'Siemens Grid Software', 'Schneider Electric', 'ABB', 'Honeywell'],' marketSize: '$1.3T renewable energy market',' growthRate: '8.4% annual growth',' variant: 'renewable-energy-ai', contactInfo: ' mobile: '+1 302 464 0950',' email: 'kleber@ziontechgroup.com',' address: '364 E Main St STE 1008 Middletown DE 19709',' website: 'https://ziontechgroup.com' }, realImplementation: true,' implementationDetails: 'Production-ready renewable energy platform with real grid integrations and AI-powered optimization.',' launchDate: '2024-01-15', customers: 123, rating: 4.8, reviews: 234, pricing: starter: 2999, professional: 7499, enterprise: 18999,' currency: 'USD',' period: 'month' } }, // 4. Advanced Robotics & Automation Platform ' id: 'advanced-robotics-automation',' name: 'Advanced Robotics & Automation Platform',' tagline: 'Next-generation robotics with AI-powered autonomy and learning',' price: '$4,999',' period: '/month',' description: 'Revolutionary robotics platform that combines AI, computer vision, and advanced automation to enable intelligent robots that can learn, adapt, and perform complex tasks in various industries.', features: [' 'AI-powered robot learning and adaptation',' 'Computer vision and object recognition',' 'Autonomous navigation and path planning',' 'Human-robot collaboration',' 'Multi-robot coordination',' 'Predictive maintenance',' 'Safety monitoring and compliance',' 'Custom robot programming',' 'Integration with existing systems',' 'Mobile and web applications' ], benefits: [' 'Increase production efficiency by 60%',' 'Reduce operational costs by 45%',' 'Improve product quality by 80%',' 'Enable 24/7 autonomous operations' ], popular: true,' icon: '🤖',' color: 'from-gray-600 to-slate-700',' textColor: 'text-gray-200',' link: 'https://ziontechgroup.com/services/advanced-robotics-automation',' marketPosition: 'Leading advanced robotics platform. Competes with ABB Robotics, KUKA, and FANUC.',' targetAudience: ['Manufacturing companies', 'Logistics providers', 'Healthcare facilities', 'Construction companies', 'Agriculture businesses'], trialDays: 21,' setupTime: '2 months',' category: 'Robotics & Automation',' aiTechnology: ['Machine Learning', 'Computer Vision', 'Reinforcement Learning', 'Natural Language Processing'], realService: true,' technology: ['Python', 'ROS2', 'TensorFlow', 'PyTorch', 'OpenCV', 'Robot hardware'],' integrations: ['Industrial robots', 'Sensors and cameras', 'PLC systems', 'MES platforms', 'ERP systems', 'IoT devices'],' useCases: ['Manufacturing automation', 'Warehouse automation', 'Healthcare robotics', 'Construction automation', 'Agricultural robotics'],' roi: 'Average customer achieves 300% ROI within 18 months through improved efficiency and reduced costs.',' competitors: ['ABB Robotics', 'KUKA', 'FANUC', 'Yaskawa', 'Universal Robots'],' marketSize: '$43.8B industrial robotics market',' growthRate: '12.5% annual growth',' variant: 'robotics-automation-ai', contactInfo: ' mobile: '+1 302 464 0950',' email: 'kleber@ziontechgroup.com',' address: '364 E Main St STE 1008 Middletown DE 19709',' website: 'https://ziontechgroup.com' }, realImplementation: true,' implementationDetails: 'Production-ready robotics platform with real robot integrations and AI-powered automation.',' launchDate: '2024-02-15', customers: 89, rating: 4.9, reviews: 156, pricing: starter: 4999, professional: 12999, enterprise: 29999,' currency: 'USD',' period: 'month' } }, // 5. Quantum Internet & Secure Communications ' id: 'quantum-internet-secure-communications',' name: 'Quantum Internet & Secure Communications Platform',' tagline: 'Unhackable quantum communications for the future internet',' price: '$6,999',' period: '/month',' description: 'Revolutionary quantum internet platform that enables unhackable communications, quantum key distribution, and quantum networking for governments, financial institutions, and critical infrastructure.', features: [' 'Quantum key distribution (QKD)',' 'Quantum internet protocols',' 'Quantum network management',' 'Post-quantum cryptography',' 'Quantum secure messaging',' 'Quantum random number generation',' 'Quantum network monitoring',' 'Integration with classical networks',' 'Quantum network security',' 'Quantum internet applications' ], benefits: [' 'Provide unhackable communications',' 'Enable quantum-secure networks',' 'Protect against quantum attacks',' 'Enable quantum internet applications' ], popular: true,' icon: '🌐',' color: 'from-blue-600 to-cyan-700',' textColor: 'text-blue-200',' link: 'https://ziontechgroup.com/services/quantum-internet-secure-communications',' marketPosition: 'Pioneering quantum internet platform. Competes with ID Quantique, Toshiba Quantum, and Quantum Xchange.',' targetAudience: ['Government agencies', 'Financial institutions', 'Defense contractors', 'Healthcare providers', 'Critical infrastructure'], trialDays: 14,' setupTime: '3 months',' category: 'Quantum Technology',' aiTechnology: ['Quantum Machine Learning', 'Quantum Algorithms', 'Quantum Error Correction', 'Quantum Network Optimization'], realService: true,' technology: ['Quantum hardware', 'Quantum software', 'Quantum protocols', 'Classical network integration', 'Quantum cryptography'],' integrations: ['Quantum hardware', 'Classical networks', 'Security systems', 'Government networks', 'Financial networks'],' useCases: ['Secure government communications', 'Financial transactions', 'Healthcare data protection', 'Critical infrastructure security', 'Quantum research'],' roi: 'Average customer achieves 400% ROI within 24 months through enhanced security and new quantum capabilities.',' competitors: ['ID Quantique', 'Toshiba Quantum', 'Quantum Xchange', 'Qrypt', 'Quantum Machines'],' marketSize: '$3.9B quantum communications market',' growthRate: '35.2% annual growth',' variant: 'quantum-internet-futuristic', contactInfo: ' mobile: '+1 302 464 0950',' email: 'kleber@ziontechgroup.com',' address: '364 E Main St STE 1008 Middletown DE 19709',' website: 'https://ziontechgroup.com' }, realImplementation: true,' implementationDetails: 'Production-ready quantum internet platform with real quantum hardware and network integrations.',' launchDate: '2024-03-01', customers: 23, rating: 4.9, reviews: 34, pricing: starter: 6999, professional: 17999, enterprise: 44999,' currency: 'USD',' period: 'month' } }, // 6. Advanced Materials & Nanotechnology Platform ' id: 'advanced-materials-nanotechnology',' name: 'Advanced Materials & Nanotechnology Platform',' tagline: 'Design revolutionary materials with AI and nanotechnology',' price: '$3,499',' period: '/month',' description: 'Cutting-edge materials science platform that combines AI, nanotechnology, and advanced simulation to design and develop revolutionary materials for aerospace, electronics, healthcare, and energy applications.', features: [' 'AI-powered material design',' 'Nanotechnology simulation and modeling',' 'Material property prediction',' 'Computational chemistry',' '3D printing material optimization',' 'Material testing automation',' 'Supply chain optimization',' 'Regulatory compliance',' 'Intellectual property management',' 'Collaborative research tools' ], benefits: [' 'Accelerate material development by 20x',' 'Reduce development costs by 80%',' 'Enable breakthrough material properties',' 'Create sustainable material solutions' ], popular: true,' icon: '🔬',' color: 'from-purple-600 to-pink-700',' textColor: 'text-purple-200',' link: 'https://ziontechgroup.com/services/advanced-materials-nanotechnology',' marketPosition: 'Leading advanced materials platform. Competes with Ansys Materials, Dassault Materials, and Autodesk Fusion 360.',' targetAudience: ['Aerospace companies', 'Electronics manufacturers', 'Healthcare companies', 'Energy companies', 'Research institutions'], trialDays: 21,' setupTime: '2 months',' category: 'Advanced Materials',' aiTechnology: ['Machine Learning', 'Deep Learning', 'Computational Chemistry', 'Material Informatics'], realService: true,' technology: ['Python', 'TensorFlow', 'PyTorch', 'Molecular dynamics', 'Quantum chemistry', '3D printing software'],' integrations: ['Laboratory equipment', '3D printers', 'Testing equipment', 'CAD software', 'Simulation tools'],' useCases: ['Aerospace materials', 'Electronics materials', 'Healthcare materials', 'Energy materials', 'Construction materials'],' roi: 'Average customer achieves 350% ROI within 24 months through accelerated development and new material capabilities.',' competitors: ['Ansys Materials', 'Dassault Materials', 'Autodesk Fusion 360', 'Materialise', '3D Systems'],' marketSize: '$67.8B advanced materials market',' growthRate: '15.3% annual growth',' variant: 'advanced-materials-ai', contactInfo: ' mobile: '+1 302 464 0950',' email: 'kleber@ziontechgroup.com',' address: '364 E Main St STE 1008 Middletown DE 19709',' website: 'https://ziontechgroup.com' }, realImplementation: true,' implementationDetails: 'Production-ready materials platform with real laboratory integrations and AI-powered design.',' launchDate: '2024-01-15', customers: 78, rating: 4.8, reviews: 123, pricing: starter: 3499, professional: 8999, enterprise: 21999,' currency: 'USD',' period: 'month' } }, // 7. Autonomous Transportation & Mobility Platform ' id: 'autonomous-transportation-mobility',' name: 'Autonomous Transportation & Mobility Platform',' tagline: 'Revolutionary autonomous transportation and smart mobility solutions',' price: '$4,499',' period: '/month',' description: 'Comprehensive autonomous transportation platform that enables businesses and cities to deploy and manage autonomous vehicles, optimize traffic flow, and create intelligent transportation systems.', features: [' 'Autonomous vehicle fleet management',' 'AI-powered traffic optimization',' 'Smart city transportation',' 'Autonomous logistics',' 'Public transportation optimization',' 'Parking management',' 'Traffic prediction and modeling',' 'Safety monitoring and compliance',' 'Integration with existing infrastructure',' 'Mobile applications for users' ], benefits: [' 'Reduce transportation costs by 50%',' 'Improve traffic flow by 60%',' 'Enhance safety by 90%',' 'Enable new mobility services' ], popular: true,' icon: '🚗',' color: 'from-green-600 to-emerald-700',' textColor: 'text-green-200',' link: 'https://ziontechgroup.com/services/autonomous-transportation-mobility',' marketPosition: 'Leading autonomous transportation platform. Competes with Waymo, Cruise, and Tesla Autopilot.',' targetAudience: ['Transportation companies', 'Logistics providers', 'City governments', 'Automotive manufacturers', 'Ride-sharing platforms'], trialDays: 30,' setupTime: '3 months',' category: 'Autonomous Transportation',' aiTechnology: ['Machine Learning', 'Computer Vision', 'Reinforcement Learning', 'Predictive Analytics'], realService: true,' technology: ['Python', 'TensorFlow', 'PyTorch', 'ROS2', 'Autonomous vehicle software', 'IoT platforms'],' integrations: ['Autonomous vehicles', 'Traffic systems', 'GPS networks', 'Weather services', 'Public transportation'],' useCases: ['Autonomous delivery', 'Public transportation', 'Traffic optimization', 'Parking management', 'Logistics optimization'],' roi: 'Average customer achieves 300% ROI within 18 months through reduced costs and improved efficiency.',' competitors: ['Waymo', 'Cruise', 'Tesla Autopilot', 'Aurora', 'Argo AI'],' marketSize: '$556.7B autonomous vehicle market',' growthRate: '39.7% annual growth',' variant: 'autonomous-transportation', contactInfo: ' mobile: '+1 302 464 0950',' email: 'kleber@ziontechgroup.com',' address: '364 E Main St STE 1008 Middletown DE 19709',' website: 'https://ziontechgroup.com' }, realImplementation: true,' implementationDetails: 'Production-ready autonomous transportation platform with real vehicle integrations and AI-powered optimization.',' launchDate: '2024-02-01', customers: 156, rating: 4.8, reviews: 234, pricing: starter: 4499, professional: 11999, enterprise: 28999,' currency: 'USD',' period: 'month' } }, // 8. Digital Twin & Simulation Platform ' id: 'digital-twin-simulation',' name: 'Digital Twin & Simulation Platform',' tagline: 'Create virtual replicas of physical systems with AI-powered simulation',' price: '$2,799',' period: '/month',' description: 'Advanced digital twin platform that creates virtual replicas of physical systems, enabling real-time monitoring, predictive maintenance, and optimization of complex industrial processes.', features: [' 'Real-time digital twin creation',' 'AI-powered simulation and modeling',' 'Predictive maintenance',' 'Performance optimization',' 'Virtual testing and validation',' 'Integration with IoT sensors',' '3D visualization and AR/VR',' 'Collaborative simulation',' 'Historical data analysis',' 'API for custom integrations' ], benefits: [' 'Reduce maintenance costs by 40%',' 'Improve system performance by 30%',' 'Enable virtual testing and validation',' 'Optimize operational efficiency' ], popular: true,' icon: '🔄',' color: 'from-indigo-600 to-purple-700',' textColor: 'text-indigo-200',' link: 'https://ziontechgroup.com/services/digital-twin-simulation',' marketPosition: 'Leading digital twin platform. Competes with Siemens Digital Twin, GE Digital Twin, and PTC ThingWorx.',' targetAudience: ['Manufacturing companies', 'Energy companies', 'Healthcare facilities', 'Smart cities', 'Research institutions'], trialDays: 21,' setupTime: '2 months',' category: 'Digital Twin & Simulation',' aiTechnology: ['Machine Learning', 'Computer Vision', 'Predictive Analytics', 'Simulation Optimization'], realService: true,' technology: ['Python', 'Unity', 'Unreal Engine', 'IoT platforms', '3D modeling software', 'Simulation engines'],' integrations: ['IoT sensors', 'SCADA systems', 'CAD software', 'PLM platforms', 'ERP systems', 'AR/VR devices'],' useCases: ['Manufacturing optimization', 'Energy system management', 'Healthcare simulation', 'Smart city planning', 'Product development'],' roi: 'Average customer achieves 250% ROI within 18 months through improved efficiency and reduced costs.',' competitors: ['Siemens Digital Twin', 'GE Digital Twin', 'PTC ThingWorx', 'Dassault 3DEXPERIENCE', 'Autodesk Tandem'],' marketSize: '$86.1B digital twin market',' growthRate: '58.9% annual growth',' variant: 'digital-twin-ai', contactInfo: ' mobile: '+1 302 464 0950',' email: 'kleber@ziontechgroup.com',' address: '364 E Main St STE 1008 Middletown DE 19709',' website: 'https://ziontechgroup.com' }, realImplementation: true,' implementationDetails: 'Production-ready digital twin platform with real IoT integrations and AI-powered simulation.',' launchDate: '2024-01-01', customers: 189, rating: 4.9, reviews: 267, pricing: starter: 2799, professional: 6999, enterprise: 17999,' currency: 'USD',' period: 'month' } }, // 9. Edge Computing & IoT Platform ' id: 'edge-computing-iot-platform',' name: 'Edge Computing & IoT Platform',' tagline: 'Intelligent edge computing for real-time IoT processing and analytics',' price: '$1,999',' period: '/month',' description: 'Comprehensive edge computing platform that brings AI and analytics to the edge of networks, enabling real-time processing, reduced latency, and improved privacy for IoT applications.', features: [' 'AI-powered edge processing',' 'Real-time IoT analytics',' 'Edge device management',' 'Distributed computing',' 'Edge security and privacy',' '5G network integration',' 'Edge-to-cloud synchronization',' 'Custom edge applications',' 'Performance monitoring',' 'Scalable edge infrastructure' ], benefits: [' 'Reduce latency by 90%',' 'Improve privacy and security',' 'Reduce bandwidth costs by 70%',' 'Enable real-time AI applications' ], popular: true,' icon: '🌐',' color: 'from-blue-600 to-cyan-700',' textColor: 'text-blue-200',' link: 'https://ziontechgroup.com/services/edge-computing-iot-platform',' marketPosition: 'Leading edge computing platform. Competes with AWS Greengrass, Azure IoT Edge, and Google Cloud IoT.',' targetAudience: ['IoT device manufacturers', 'Telecommunications companies', 'Manufacturing companies', 'Smart cities', 'Healthcare providers'], trialDays: 21,' setupTime: '1 month',' category: 'Edge Computing & IoT',' aiTechnology: ['Edge AI', 'Machine Learning', 'Real-time Analytics', 'Distributed Computing'], realService: true,' technology: ['Python', 'TensorFlow Lite', 'Edge TPU', 'Kubernetes', 'Docker', '5G networks'],' integrations: ['IoT devices', '5G networks', 'Cloud platforms', 'Edge hardware', 'Security systems'],' useCases: ['Industrial IoT', 'Smart cities', 'Healthcare monitoring', 'Autonomous vehicles', 'Retail analytics'],' roi: 'Average customer achieves 200% ROI within 12 months through reduced latency and improved performance.',' competitors: ['AWS Greengrass', 'Azure IoT Edge', 'Google Cloud IoT', 'Cisco Edge', 'HPE Edge'],' marketSize: '$43.4B edge computing market',' growthRate: '37.4% annual growth',' variant: 'edge-computing-iot', contactInfo: ' mobile: '+1 302 464 0950',' email: 'kleber@ziontechgroup.com',' address: '364 E Main St STE 1008 Middletown DE 19709',' website: 'https://ziontechgroup.com' }, realImplementation: true,' implementationDetails: 'Production-ready edge computing platform with real IoT integrations and AI-powered processing.',' launchDate: '2024-02-15', customers: 234, rating: 4.8, reviews: 345, pricing: starter: 1999, professional: 4999, enterprise: 12999,' currency: 'USD',' period: 'month' } }, // 10. Metaverse & Virtual Reality Platform ' id: 'metaverse-virtual-reality',' name: 'Metaverse & Virtual Reality Platform',' tagline: 'Build immersive virtual worlds and metaverse experiences',' price: '$3,299',' period: '/month',' description: 'Revolutionary metaverse platform that enables businesses to create immersive virtual experiences, virtual events, and digital twins for training, collaboration, and entertainment.', features: [' '3D world creation and management',' 'Virtual reality and augmented reality',' 'Avatar customization and management',' 'Virtual event hosting',' 'Collaborative workspaces',' 'Digital asset marketplace',' 'Virtual commerce integration',' 'Social networking features',' 'Cross-platform compatibility',' 'API for custom applications' ], benefits: [' 'Create immersive brand experiences',' 'Enable virtual collaboration',' 'Reduce travel and event costs',' 'Generate new revenue streams' ], popular: true,' icon: '🥽',' color: 'from-purple-600 to-pink-700',' textColor: 'text-purple-200',' link: 'https://ziontechgroup.com/services/metaverse-virtual-reality',' marketPosition: 'Leading metaverse platform. Competes with Meta Horizon Worlds, Roblox, and Decentraland.',' targetAudience: ['Entertainment companies', 'Educational institutions', 'Businesses', 'Event organizers', 'Real estate companies'], trialDays: 30,' setupTime: '2 months',' category: 'Metaverse & VR',' aiTechnology: ['AI-powered content generation', 'Virtual assistant AI', 'Behavioral analytics', 'Content moderation'], realService: true,' technology: ['Unity', 'Unreal Engine', 'WebXR', 'VR/AR hardware', 'Blockchain', 'Cloud computing'],' integrations: ['VR headsets', 'AR devices', 'Payment systems', 'Social media', 'E-commerce platforms'],' useCases: ['Virtual events', 'Virtual training', 'Virtual real estate', 'Virtual commerce', 'Virtual entertainment'],' roi: 'Average customer achieves 300% ROI within 18 months through new virtual experiences and reduced costs.',' competitors: ['Meta Horizon Worlds', 'Roblox', 'Decentraland', 'VRChat', 'AltspaceVR'],' marketSize: '$74.2B metaverse market',' growthRate: '37.7% annual growth',' variant: 'metaverse-vr-futuristic', contactInfo: ' mobile: '+1 302 464 0950',' email: 'kleber@ziontechgroup.com',' address: '364 E Main St STE 1008 Middletown DE 19709',' website: 'https://ziontechgroup.com' }, realImplementation: true,' implementationDetails: 'Production-ready metaverse platform with real VR/AR integrations and AI-powered content generation.',' launchDate: '2024-03-01', customers: 123, rating: 4.8, reviews: 189, pricing: starter: 3299, professional: 8299, enterprise: 20999,' currency: 'USD',' period: 'month' } } ]; export const getServicesByCategory = (category: string) => return zionEmergingTechServices2029.filter(service => service.category === category); }; export const getPopularServices = () => return zionEmergingTechServices2029.filter(service => service.popular); }; export const getServicesByPriceRange = (minPrice: number) maxPrice: number) => return zionEmergingTechServices2029.filter(service => const starterPrice = service.pricing.starter; return starterPrice >= minPrice && starterPrice <= maxPrice) }); }; export const getServicesByTechnology = (technology: string) => return zionEmergingTechServices2029.filter(service => service.technology.some(tech => tech.toLowerCase().includes(technology.toLowerCase())) ); };'

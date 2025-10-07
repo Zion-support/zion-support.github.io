@@ -1,45 +1,54 @@
 {
-  "timestamp": "2025-07-17T17:35:19.614Z",
-  "version": "0.0.0",
-  "environment": "production",
-  "optimizations": [],
-  "bundleSize": 0,
-  "bundleSizeFormatted": "0 Bytes",
-  "warnings": [],
-  "recommendations": [
+  "timestamp": "2025-09-07T03:03:04.996Z",
+  "deploymentSteps": [
     {
-      "type": "monitoring",
-      "priority": "medium",
-      "title": "Setup production monitoring",
-      "description": "Enable performance monitoring in production.",
-      "action": "Configure Sentry alerts and performance budgets"
+      "step": "Dependencies Check",
+      "status": "success",
+      "description": "Installing dependencies"
+    },
+    {
+      "step": "Type Check",
+      "status": "failed",
+      "description": "Running TypeScript type checking",
+      "error": "spawnSync /bin/sh ENOBUFS"
+    },
+    {
+      "step": "Lint Check",
+      "status": "failed",
+      "description": "Running ESLint checks",
+      "error": "Command failed: npm run lint\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n"
+    },
+    {
+      "step": "Build Test",
+      "status": "success",
+      "description": "Testing production build"
+    },
+    {
+      "step": "Production Optimization",
+      "status": "success",
+      "description": "Optimized application for production"
+    },
+    {
+      "step": "Deployment Package",
+      "status": "success",
+      "description": "Generated deployment package"
+    },
+    {
+      "step": "Docker Configuration",
+      "status": "success",
+      "description": "Created Docker configuration files"
     }
   ],
-  "deploymentChecklist": [
-    {
-      "item": "Environment variables configured",
-      "status": "pending",
-      "required": true
-    },
-    {
-      "item": "Production build successful",
-      "status": "complete",
-      "required": true
-    },
-    {
-      "item": "Bundle size optimized",
-      "status": "complete",
-      "required": false
-    },
-    {
-      "item": "Security audit passed",
-      "status": "complete",
-      "required": false
-    },
-    {
-      "item": "Performance monitoring ready",
-      "status": "manual-check",
-      "required": false
-    }
-  ]
+  "errors": [
+    "Type Check: spawnSync /bin/sh ENOBUFS",
+    "Lint Check: Command failed: npm run lint\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n"
+  ],
+  "warnings": [],
+  "summary": {
+    "totalSteps": 7,
+    "successfulSteps": 5,
+    "failedSteps": 2,
+    "errorCount": 2,
+    "warningCount": 0
+  }
 }

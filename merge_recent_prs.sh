@@ -1,121 +1,70 @@
 #!/bin/bash
 
-# Merge Recent PRs Script
-# This script processes the most recent 100 branches
-
+# Script to merge the most recent PRs
 set -e
 
-echo "🚀 Starting Recent PRs Merge Process"
-echo "===================================="
+echo "🚀 Starting recent PRs merge process..."
 
-# Get the most recent 100 branches
-RECENT_BRANCHES=$(git branch -r | grep "cursor/create-and-deploy-new-content" | tail -100 | sed 's/origin\///' | sort)
+# Get the 20 most recent cursor branches
+RECENT_BRANCHES=$(git branch -r | grep "origin/cursor/" | head -50 | while read branch; do echo "$(git log --format="%ci %H" "$branch" | head -1) $branch"; done | sort -r | head -20 | cut -d' ' -f4-)
 
-echo "📋 Processing 100 most recent branches"
+echo "📊 Processing 20 most recent cursor branches"
 
-# Counter for tracking
-SUCCESS_COUNT=0
-FAILED_COUNT=0
-TOTAL_COUNT=$(echo "$RECENT_BRANCHES" | wc -l)
+count=0
+successful_merges=0
+failed_merges=0
 
-# Function to merge a single branch
-merge_branch() {
-    local branch=$1
-    local branch_num=$2
-    
-    echo ""
-    echo "🔄 [$branch_num/$TOTAL_COUNT] Processing: $branch"
-    echo "----------------------------------------"
-    
-    # Try to merge directly
-    if git merge "origin/$branch" --no-ff -m "Merge $branch into main" 2>/dev/null; then
-        echo "✅ Successfully merged $branch"
-        SUCCESS_COUNT=$((SUCCESS_COUNT + 1))
-        return 0
-    else
-        echo "❌ Merge conflict for $branch, attempting resolution..."
-        
-        # Try to resolve conflicts automatically
-        if resolve_conflicts_quick; then
-            echo "✅ Conflicts resolved for $branch"
-            git add .
-            git commit -m "Resolve merge conflicts for $branch"
-            SUCCESS_COUNT=$((SUCCESS_COUNT + 1))
-            return 0
-        else
-            echo "❌ Could not resolve conflicts for $branch"
-            git merge --abort 2>/dev/null || true
-            FAILED_COUNT=$((FAILED_COUNT + 1))
-            return 1
-        fi
-    fi
-}
-
-# Function to resolve conflicts quickly
-resolve_conflicts_quick() {
-    local resolved=false
-    
-    # Resolve common conflicts by taking the newer version
-    if git status --porcelain | grep -q "^UU\|^AA\|^DD"; then
-        # For all conflicted files, take the newer version (theirs)
-        git status --porcelain | grep "^UU\|^AA\|^DD" | while read line; do
-            file=$(echo "$line" | awk '{print $2}')
-            if [ -f "$file" ]; then
-                git checkout --theirs "$file" 2>/dev/null && git add "$file"
-                resolved=true
-            fi
-        done
-        
-        # Also resolve any remaining conflicts
-        git status --porcelain | grep "^UU\|^AA\|^DD" | while read line; do
-            file=$(echo "$line" | awk '{print $2}')
-            if [ -f "$file" ]; then
-                git checkout --ours "$file" 2>/dev/null && git add "$file"
-                resolved=true
-            fi
-        done
-    fi
-    
-    return 0
-}
-
-# Process each branch
-branch_num=1
 for branch in $RECENT_BRANCHES; do
-    merge_branch "$branch" "$branch_num"
-    branch_num=$((branch_num + 1))
+    count=$((count + 1))
+    branch_name=$(echo "$branch" | sed 's/origin\///')
+    echo ""
+    echo "🔄 Processing branch $count/20: $branch_name"
     
-    # Push every 10 branches
-    if [ $((branch_num % 10)) -eq 0 ]; then
-        echo ""
-        echo "🚀 Pushing changes after $branch_num branches..."
-        if git push origin main; then
-            echo "✅ Changes pushed successfully"
+    # Try to merge directly without checkout
+    if git merge "$branch" --no-ff -m "Merge $branch_name into main" 2>/dev/null; then
+        echo "✅ Successfully merged $branch_name into main"
+        successful_merges=$((successful_merges + 1))
+    else
+        echo "⚠️  Merge conflict in $branch_name - attempting to resolve..."
+        
+        # Abort the failed merge
+        git merge --abort 2>/dev/null || true
+        
+        # Try with checkout and conflict resolution
+        if git checkout "$branch_name" 2>/dev/null; then
+            git pull origin "$branch_name" 2>/dev/null || true
+            git checkout main
+            
+            # Try merge again
+            if git merge "$branch_name" --no-ff -m "Merge $branch_name into main" 2>/dev/null; then
+                echo "✅ Successfully merged $branch_name after checkout"
+                successful_merges=$((successful_merges + 1))
+            else
+                echo "❌ Skipping $branch_name due to unresolvable conflicts"
+                git merge --abort 2>/dev/null || true
+                failed_merges=$((failed_merges + 1))
+            fi
         else
-            echo "⚠️  Failed to push changes, will retry later"
+            echo "❌ Failed to checkout $branch_name - skipping"
+            failed_merges=$((failed_merges + 1))
         fi
     fi
-    
-    # Small delay
-    sleep 0.5
 done
 
-# Final push
 echo ""
-echo "🚀 Final push..."
+echo "🎉 Recent PRs merge completed!"
+echo "📊 Final stats: $count branches processed"
+echo "✅ Successful merges: $successful_merges"
+echo "❌ Failed merges: $failed_merges"
+
+# Push the merged changes
+echo "🚀 Pushing merged changes to origin/main..."
 if git push origin main; then
-    echo "✅ Final changes pushed successfully"
+    echo "✅ Successfully pushed all merged changes to origin/main"
 else
-    echo "⚠️  Failed to push final changes"
+    echo "❌ Failed to push changes to origin/main"
+    exit 1
 fi
 
-# Final summary
 echo ""
-echo "🎉 Recent PRs Merge Process Complete!"
-echo "====================================="
-echo "✅ Successfully merged: $SUCCESS_COUNT branches"
-echo "❌ Failed to merge: $FAILED_COUNT branches"
-echo "📊 Total processed: $TOTAL_COUNT branches"
-
-echo ""
-echo "🏁 Recent PRs processing complete!"
+echo "✨ Recent PRs merge process completed!"

@@ -1,470 +1,342 @@
-<<<<<<< HEAD
-## Automation
+# Cursor Chat Automation System
 
-This directory contains autonomous, credential-free local automations and logs.
-
-- `auto-health-monitor/`: scans code for missing internal routes and missing public assets and logs to `automation/logs/auto-health-monitor.log`.
-- `logs/`: central log directory used by all automations.
-
-### Run locally
-
-You can start any automation using Node 18+.
-
-```
-node automation/auto-health-monitor/index.mjs
-```
-
-It runs continuously and writes to both stdout and the log file.
-
-
-=======
-# Intelligent Automation System
-
-A comprehensive, autonomous automation system that provides intelligent task scheduling, self-healing capabilities, anomaly detection, and real-time monitoring for development workflows.
+A comprehensive automation system that continuously sends "proceed" commands to Cursor chat sessions to keep them running and active.
 
 ## 🚀 Features
 
-### Core Capabilities
-
-- **Autonomous Operation**: Runs independently with minimal human intervention
-- **Self-Healing**: Automatically detects and recovers from failures
-- **Adaptive Scheduling**: Adjusts task frequency based on system conditions
-- **Anomaly Detection**: Identifies unusual patterns in performance and errors
-- **Real-time Monitoring**: Web dashboard with live status and controls
-- **Intelligent Reporting**: Automated daily/weekly reports with recommendations
-
-### Automation Tasks
-
-- **Dependency Updater**: Automatically updates npm packages and creates PRs
-- **Security Scanner**: Scans for vulnerabilities and security issues
-- **Code Quality Enforcer**: Runs linting, formatting, and tests
-- **Stale Cleaner**: Removes old branches and pull requests
-
-### Communication & Control
-
-- **Slack Integration**: Real-time notifications and ChatOps commands
-- **Web Dashboard**: Real-time status, logs, and manual controls
-- **Email Notifications**: Configurable email alerts
-- **API Endpoints**: RESTful API for external integration
+- **Multi-Session Management**: Handle multiple Cursor chat sessions simultaneously
+- **Platform-Agnostic**: Works on macOS, Windows, and Linux
+- **Real Interface Interaction**: Actually interacts with Cursor's interface using keyboard automation
+- **Configurable Commands**: Support for multiple command patterns (proceed, continue, next, etc.)
+- **Health Monitoring**: Automatic health checks and session recovery
+- **Multiple Deployment Options**: Run as standalone script, background process, or PM2 service
+- **Comprehensive Logging**: Detailed logging with different log levels
+- **Error Recovery**: Automatic retry mechanisms and failure handling
+- **Resource Management**: Memory monitoring and garbage collection
 
 ## 📋 Requirements
 
-- Node.js 16+
-- Git
-- GitHub CLI (for PR management)
-- Slack webhook URL (optional)
+- **Node.js**: Version 16 or higher
+- **Operating System**: macOS, Windows, or Linux
+- **Permissions**: Ability to run shell scripts and Node.js processes
 
 ## 🛠️ Installation
 
-1. **Clone the repository**
-
+1. **Clone or download** the automation files to your project
+2. **Navigate** to the automation directory:
    ```bash
-   git clone <repository-url>
-   cd <repository-name>
+   cd automation
    ```
-
-2. **Install dependencies**
-
+3. **Make scripts executable**:
+   ```bash
+   chmod +x *.sh
+   ```
+4. **Install dependencies** (if any):
    ```bash
    npm install
    ```
 
-3. **Set up environment variables**
-
-   ```bash
-   # Required for Slack notifications
-   export SLACK_WEBHOOK_URL="https://hooks.slack.com/services/..."
-   export SLACK_CHANNEL="#automation"
-
-   # Optional dashboard configuration
-   export DASHBOARD_PORT=3001
-   export DASHBOARD_USERNAME=admin
-   export DASHBOARD_PASSWORD=secret
-   ```
-
-4. **Configure GitHub CLI** (for PR management)
-   ```bash
-   gh auth login
-   ```
-
 ## 🚀 Quick Start
 
-### Start the automation system
+### Option 1: Quick Start Script (Recommended)
+```bash
+cd automation
+./quick-start.sh
+```
+
+### Option 2: Manual Launch
+```bash
+cd automation
+./launch-cursor-automation.sh
+```
+
+### Option 3: Direct Node.js Execution
+```bash
+cd automation
+node cursor-chat-automation.js
+```
+
+## 📖 Usage
+
+### Starting the Automation
 
 ```bash
-node automation/index.js
+# Start automation
+./launch-cursor-automation.sh
+
+# Or start directly with Node.js
+node cursor-chat-automation.js
 ```
 
-### Start with custom configuration
+### Stopping the Automation
 
 ```bash
-node automation/index.js --config custom-config.json
+# Stop automation
+./stop-cursor-automation.sh
+
+# Or stop manually by finding and killing the process
+ps aux | grep cursor-chat-automation
+kill <PID>
 ```
 
-### Run in dry-run mode
+### Monitoring and Logs
 
 ```bash
-node automation/index.js --dry-run
+# View real-time logs
+tail -f cursor-automation.log
+
+# Check process status
+ps aux | grep cursor-chat-automation
+
+# View automation stats
+node cursor-chat-automation.js --stats
 ```
-
-### Disable dashboard
-
-```bash
-node automation/index.js --no-dashboard
-```
-
-## 📊 Dashboard
-
-Once started, access the web dashboard at:
-
-```
-http://localhost:3001
-```
-
-The dashboard provides:
-
-- Real-time system status
-- Task execution history
-- Performance metrics
-- Anomaly alerts
-- Manual task controls
-- Configuration management
 
 ## ⚙️ Configuration
 
-The system uses `automation/config.json` for configuration. Key sections:
-
-### Autonomous Settings
+The system uses `cursor-automation-config.json` for configuration:
 
 ```json
 {
-  "autonomous": {
+  "automation": {
     "enabled": true,
-    "selfHealing": true,
-    "learning": true,
-    "adaptiveScheduling": true
-  }
-}
-```
-
-### Task Configuration
-
-```json
-{
-  "tasks": {
-    "dependencyUpdater": {
-      "enabled": true,
-      "interval": 86400000,
-      "dryRun": false,
-      "autoCreatePR": true
+    "interval": 30000,
+    "maxSessions": 5,
+    "enableLogging": true,
+    "autoRestart": true
+  },
+  "sessions": [
+    {
+      "id": "main-dev",
+      "name": "Main Development Chat",
+      "interval": 25000,
+      "commands": ["proceed", "continue", "next"]
     }
-  }
+  ]
 }
 ```
 
-### Notification Settings
+### Configuration Options
 
-```json
-{
-  "notifications": {
-    "slack": {
-      "enabled": true,
-      "channel": "#automation"
-    }
-  }
-}
+| Option | Description | Default |
+|--------|-------------|---------|
+| `interval` | Main automation loop interval (ms) | 30000 |
+| `maxSessions` | Maximum number of concurrent sessions | 5 |
+| `enableLogging` | Enable file logging | true |
+| `autoRestart` | Automatically restart on failure | true |
+| `healthCheckInterval` | Health check frequency (ms) | 60000 |
+| `maxRetries` | Maximum retry attempts | 3 |
+| `retryDelay` | Delay between retries (ms) | 5000 |
+
+## 🔧 Session Management
+
+### Adding Sessions
+
+```javascript
+const automation = new CursorChatAutomation();
+
+automation.addSession({
+  id: 'my-session',
+  name: 'My Development Chat',
+  interval: 30000,
+  commands: ['proceed', 'continue', 'next'],
+  priority: 'high'
+});
 ```
 
-## 🔧 Automation Tasks
+### Session Configuration
 
-### Dependency Updater
+| Property | Description | Required |
+|----------|-------------|----------|
+| `id` | Unique session identifier | Yes |
+| `name` | Human-readable session name | Yes |
+| `interval` | Session-specific interval | No |
+| `commands` | Array of commands to send | No |
+| `priority` | Session priority (high/medium/low) | No |
+| `autoProceed` | Enable automatic command sending | No |
 
-Automatically checks for outdated npm packages and creates pull requests.
+## 📊 Monitoring and Health Checks
 
-**Features:**
+The system includes comprehensive monitoring:
 
-- Skips major updates for critical packages
-- Tests updates before creating PRs
-- Configurable update limits
-- Self-healing for network issues
+- **Session Health**: Tracks error rates and session status
+- **Resource Monitoring**: Memory usage and garbage collection
+- **Automatic Recovery**: Restarts failed sessions and processes
+- **Performance Metrics**: Response times and success rates
 
-**Configuration:**
+### Health Check Commands
 
-```json
-{
-  "dependencyUpdater": {
-    "enabled": true,
-    "interval": 86400000,
-    "dryRun": false,
-    "autoCreatePR": true,
-    "skipMajorUpdates": true,
-    "maxUpdates": 5
-  }
-}
+```bash
+# Check system health
+node cursor-chat-automation.js --health
+
+# View performance metrics
+node cursor-chat-automation.js --metrics
+
+# Get session statistics
+node cursor-chat-automation.js --stats
 ```
 
-### Security Scanner
-
-Scans for security vulnerabilities and code patterns.
-
-**Features:**
-
-- npm audit integration
-- Secret detection
-- Code pattern analysis
-- Auto-fix for low-severity issues
-
-**Configuration:**
-
-```json
-{
-  "securityScanner": {
-    "enabled": true,
-    "interval": 21600000,
-    "autoFix": true,
-    "alertThreshold": "high",
-    "scanPatterns": true,
-    "scanSecrets": true
-  }
-}
-```
-
-### Code Quality Enforcer
-
-Enforces code quality standards through linting and formatting.
-
-**Features:**
-
-- ESLint integration
-- Prettier formatting
-- TypeScript checking
-- Auto-fix capabilities
-- PR creation for violations
-
-**Configuration:**
-
-```json
-{
-  "codeQualityEnforcer": {
-    "enabled": true,
-    "interval": 7200000,
-    "autoFix": true,
-    "createPR": true,
-    "tools": ["eslint", "prettier", "typescript"]
-  }
-}
-```
-
-### Stale Cleaner
-
-Removes old branches and pull requests.
-
-**Features:**
-
-- Configurable age thresholds
-- Protected branch support
-- Unmerged commit detection
-- Dry-run mode
-
-**Configuration:**
-
-```json
-{
-  "staleCleaner": {
-    "enabled": true,
-    "interval": 43200000,
-    "staleBranchDays": 30,
-    "stalePRDays": 14,
-    "dryRun": false,
-    "autoDelete": false
-  }
-}
-```
-
-## 📈 Monitoring & Analytics
-
-### Anomaly Detection
-
-The system automatically detects:
-
-- High CPU/memory usage
-- Increased error rates
-- Unusual task durations
-- Pattern violations
-
-### Adaptive Scheduling
-
-Task frequencies are automatically adjusted based on:
-
-- System load
-- Error rates
-- Success rates
-- Task performance
-
-### Health Scoring
-
-Real-time health score (0-100) based on:
-
-- Task success rates
-- System performance
-- Anomaly frequency
-- Error rates
-
-## 📊 Reporting
-
-### Automated Reports
-
-- **Daily Reports**: Summary of daily activities
-- **Weekly Reports**: Trends and recommendations
-- **Monthly Reports**: Long-term analysis
-
-### Report Content
-
-- Executive summary
-- Task performance metrics
-- Anomaly analysis
-- System health status
-- Recommendations
-
-## 🔌 API Reference
-
-### REST Endpoints
-
-#### System Status
-
-```http
-GET /api/status
-```
-
-#### Task Management
-
-```http
-GET /api/tasks
-POST /api/tasks/:taskName/run
-POST /api/tasks/:taskName/pause
-POST /api/tasks/:taskName/resume
-```
-
-#### Scheduling
-
-```http
-GET /api/scheduling
-POST /api/scheduling/recalculate
-```
-
-#### Anomalies
-
-```http
-GET /api/anomalies
-```
-
-#### Reports
-
-```http
-GET /api/reports
-POST /api/reports/generate
-```
-
-#### System Controls
-
-```http
-POST /api/system/restart
-POST /api/system/shutdown
-```
-
-## 🚨 Troubleshooting
+## 🐛 Troubleshooting
 
 ### Common Issues
 
-**Task failures**
+1. **Permission Denied**
+   ```bash
+   chmod +x *.sh
+   ```
 
-- Check logs in dashboard
-- Verify task configuration
-- Ensure required tools are installed
+2. **Node.js Not Found**
+   ```bash
+   # Install Node.js from https://nodejs.org/
+   # Or use nvm:
+   nvm install 16
+   nvm use 16
+   ```
 
-**Slack notifications not working**
+3. **Port Already in Use**
+   ```bash
+   # Check what's using the port
+   lsof -i :<PORT>
+   # Kill the process or change port in config
+   ```
 
-- Verify SLACK_WEBHOOK_URL is set
-- Check webhook URL is valid
-- Ensure channel exists
+4. **High Memory Usage**
+   - The system automatically performs garbage collection
+   - Check for memory leaks in your custom code
+   - Consider reducing the number of concurrent sessions
 
-**Dashboard not accessible**
+### Debug Mode
 
-- Check port configuration
-- Verify firewall settings
-- Check for port conflicts
+Enable debug logging by setting the log level:
 
-**GitHub PR creation fails**
+```bash
+# Set debug level
+export LOG_LEVEL=DEBUG
+node cursor-chat-automation.js
 
-- Verify GitHub CLI is authenticated
-- Check repository permissions
-- Ensure branch protection rules allow automation
+# Or modify config file
+{
+  "logging": {
+    "level": "DEBUG"
+  }
+}
+```
 
-### Logs
+## 🔒 Security Considerations
 
-- System logs are available in the dashboard
-- Task-specific logs are shown in task details
-- Error logs include stack traces and context
+- **Local Execution**: The automation runs locally on your machine
+- **No External Calls**: Does not send data to external servers
+- **Process Isolation**: Each session runs in its own context
+- **Log Privacy**: Logs are stored locally and not transmitted
 
-### Self-Healing
+## 📈 Performance Optimization
 
-The system automatically attempts to recover from:
+### Recommended Settings
 
-- Network connectivity issues
-- Git configuration problems
-- Permission errors
-- Resource constraints
+- **High Performance**: 15-30 second intervals
+- **Balanced**: 30-60 second intervals  
+- **Low Resource**: 60+ second intervals
 
-## 🔒 Security
+### Resource Management
 
-### Authentication
+- **Memory**: Automatic garbage collection when usage > 100MB
+- **CPU**: Configurable intervals to control CPU usage
+- **Sessions**: Limit concurrent sessions based on system resources
 
-- Optional basic auth for dashboard
-- Environment variable configuration
-- Secure credential management
+## 🔄 Deployment Options
 
-### Permissions
+### 1. Standalone Script
+```bash
+./launch-cursor-automation.sh
+```
 
-- Minimal required permissions
-- Principle of least privilege
-- Audit trail for all actions
+### 2. Background Process
+```bash
+nohup ./launch-cursor-automation.sh > automation.log 2>&1 &
+```
 
-### Data Protection
+### 3. System Service (Linux/macOS)
+```bash
+# Create systemd service file
+sudo cp automation.service /etc/systemd/system/
+sudo systemctl enable cursor-automation
+sudo systemctl start cursor-automation
+```
 
-- No sensitive data logging
-- Secure configuration storage
-- Encrypted communication
+### 4. PM2 Process Manager
+```bash
+# Install PM2
+npm install -g pm2
+
+# Start with PM2
+pm2 start cursor-chat-automation.js --name "cursor-automation"
+
+# Monitor
+pm2 monit
+```
+
+## 📝 Logging
+
+### Log Levels
+
+- **ERROR**: Critical errors and failures
+- **WARN**: Warning messages and issues
+- **INFO**: General information and status updates
+- **DEBUG**: Detailed debugging information
+
+### Log Files
+
+- **Main Log**: `cursor-automation.log`
+- **Error Log**: `cursor-automation-error.log`
+- **Access Log**: `cursor-automation-access.log`
+
+### Log Rotation
+
+The system supports automatic log rotation:
+
+```json
+{
+  "logging": {
+    "maxSize": "10MB",
+    "maxFiles": 5
+  }
+}
+```
 
 ## 🤝 Contributing
 
-### Adding New Tasks
-
-1. Create task class extending `AutomationTask`
-2. Implement required methods
-3. Add to task registry
-4. Update configuration schema
-
-### Extending Components
-
-1. Follow existing patterns
-2. Add comprehensive error handling
-3. Include self-healing capabilities
-4. Add monitoring and metrics
+1. **Fork** the repository
+2. **Create** a feature branch
+3. **Make** your changes
+4. **Test** thoroughly
+5. **Submit** a pull request
 
 ## 📄 License
 
-This project is licensed under the MIT License.
+This project is licensed under the MIT License - see the LICENSE file for details.
 
 ## 🆘 Support
 
-For issues and questions:
+### Getting Help
 
-1. Check the troubleshooting section
-2. Review logs and error messages
-3. Check configuration settings
-4. Open an issue with detailed information
+1. **Check the logs**: `tail -f cursor-automation.log`
+2. **Review configuration**: Verify `cursor-automation-config.json`
+3. **Check system resources**: Monitor CPU, memory, and disk usage
+4. **Restart the system**: `./stop-cursor-automation.sh && ./launch-cursor-automation.sh`
+
+### Reporting Issues
+
+When reporting issues, please include:
+
+- Operating system and version
+- Node.js version
+- Error messages and logs
+- Steps to reproduce
+- Configuration file contents
 
 ---
 
-**Built with ❤️ for autonomous development workflows**
->>>>>>> origin/auto/autonomy-17186719616
+**Happy Automating! 🚀**
+
+The Cursor Chat Automation System will keep your development conversations flowing smoothly.

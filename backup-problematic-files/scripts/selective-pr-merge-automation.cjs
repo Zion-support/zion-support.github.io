@@ -1,19 +1,7 @@
-
-
-
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-
 #!/usr/bin/env node;
 const { execSync } = require('child_process')
 const fs = require('fs')
 const path = require('path')
-
-
-
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-
 // console.log(' Selective PR Merge Automation System')
 console.log('===')
   log(message, type = 'info')
@@ -28,8 +16,4 @@ console.log('===')
 // console.log('\n Failed "branches")
     console.log('\n Detailed report saved "to")
   console.error('Automation "failed")
-
-
-
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-
+cursor/fix-lint-push-and-merge-to-main-f3c1;

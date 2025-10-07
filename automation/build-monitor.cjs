@@ -1,14 +1,22 @@
+#!/usr/bin/env node
+
+/**
+ * Build Monitor Automation Script
+ * Monitors build performance and runs build tests
+ */
+
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 
 class BuildMonitor {
   constructor() {
-    this.logFile = path.join(__dirname, 'logs', 'build-monitor.log');
-    this.setupLogging();
+    this.workspace = process.cwd();
+    this.logFile = path.join(this.workspace, 'logs', 'performance-monitor.log');
+    this.ensureLogDir();
   }
 
-  setupLogging() {
+  ensureLogDir() {
     const logDir = path.dirname(this.logFile);
     if (!fs.existsSync(logDir)) {
       fs.mkdirSync(logDir, { recursive: true });
@@ -18,162 +26,94 @@ class BuildMonitor {
   log(message) {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] ${message}\n`;
-    console.log(logMessage.trim());
+    console.log(message);
     fs.appendFileSync(this.logFile, logMessage);
   }
 
+  async runCommand(command, description) {
+    try {
+      this.log(`Starting: ${description}`);
+      const startTime = Date.now();
+      const output = execSync(command, { 
+        cwd: this.workspace, 
+        encoding: 'utf8',
+        stdio: 'pipe'
+      });
+      const duration = Date.now() - startTime;
+      this.log(`✅ Success: ${description} (${duration}ms)`);
+      if (output) {
+        this.log(`Output: ${output.substring(0, 500)}...`);
+      }
+      return { success: true, duration };
+    } catch (error) {
+      this.log(`❌ Error in ${description}: ${error.message}`);
+      if (error.stdout) {
+        this.log(`STDOUT: ${error.stdout}`);
+      }
+      if (error.stderr) {
+        this.log(`STDERR: ${error.stderr}`);
+      }
+      return { success: false, duration: 0 };
+    }
+  }
+
   async runBuild() {
-    try {
-      this.log('Running build process...');
-      const result = execSync('npm run build', {
-        cwd: process.cwd(),
-        stdio: 'pipe',
-        encoding: 'utf8'
-      });
-      this.log('Build completed successfully');
-      return { success: true, output: result };
-    } catch (error) {
-      this.log(`Build failed: ${error.message}`);
-      return { success: false, output: error.stdout || error.message };
-    }
+    return await this.runCommand(
+      'npm run build',
+      'Building application'
+    );
   }
 
-  async runLint() {
-    try {
-      this.log('Running lint check...');
-      const result = execSync('npm run lint', {
-        cwd: process.cwd(),
-        stdio: 'pipe',
-        encoding: 'utf8'
-      });
-      this.log('Lint check passed');
-      return { success: true, output: result };
-    } catch (error) {
-      this.log(`Lint check failed: ${error.message}`);
-      return { success: false, output: error.stdout || error.message };
-    }
+  async runTests() {
+    return await this.runCommand(
+      'npm run test:smoke',
+      'Running smoke tests'
+    );
   }
 
-  async runTypeCheck() {
+  async checkBuildSize() {
     try {
-      this.log('Running type check...');
-      const result = execSync('npm run type-check', {
-        cwd: process.cwd(),
-        stdio: 'pipe',
-        encoding: 'utf8'
-      });
-      this.log('Type check passed');
-      return { success: true, output: result };
-    } catch (error) {
-      this.log(`Type check failed: ${error.message}`);
-      return { success: false, output: error.stdout || error.message };
-    }
-  }
-
-  async fixIssues() {
-    try {
-      this.log('Attempting to fix build issues...');
-      
-      // Try to fix lint issues
-      try {
-        execSync('npm run fix:all', {
-          cwd: process.cwd(),
-          stdio: 'pipe'
-        });
-        this.log('Lint fixes applied');
-      } catch (error) {
-        this.log(`Lint fix failed: ${error.message}`);
-      }
-      
-      // Try to fix TypeScript issues
-      try {
-        execSync('npx tsc --noEmit --skipLibCheck', {
-          cwd: process.cwd(),
-          stdio: 'pipe'
-        });
-        this.log('TypeScript check passed');
-      } catch (error) {
-        this.log(`TypeScript issues remain: ${error.message}`);
-      }
-      
-      return true;
-    } catch (error) {
-      this.log(`Failed to fix issues: ${error.message}`);
-      return false;
-    }
-  }
-
-  async commitAndPush() {
-    try {
-      this.log('Committing and pushing fixes...');
-      
-      // Add all changes
-      execSync('git add .', { cwd: process.cwd() });
-      
-      // Commit changes
-      const commitMessage = `fix: auto-fix build issues - ${new Date().toISOString()}`;
-      execSync(`git commit -m "${commitMessage}"`, { cwd: process.cwd() });
-      
-      // Push changes
-      execSync('git push origin main', { cwd: process.cwd() });
-      
-      this.log('Changes committed and pushed successfully');
-      return true;
-    } catch (error) {
-      this.log(`Failed to commit and push: ${error.message}`);
-      return false;
-    }
-  }
-
-  async monitorBuild() {
-    this.log('Starting build monitoring cycle...');
-    
-    // Run lint check
-    const lintResult = await this.runLint();
-    
-    // Run type check
-    const typeResult = await this.runTypeCheck();
-    
-    // Run build
-    const buildResult = await this.runBuild();
-    
-    if (!lintResult.success || !typeResult.success || !buildResult.success) {
-      this.log('Build issues detected, attempting to fix...');
-      
-      // Try to fix issues
-      await this.fixIssues();
-      
-      // Re-run checks
-      const recheckLint = await this.runLint();
-      const recheckType = await this.runTypeCheck();
-      const recheckBuild = await this.runBuild();
-      
-      if (recheckLint.success && recheckType.success && recheckBuild.success) {
-        this.log('All issues fixed successfully');
-        await this.commitAndPush();
+      const buildDir = path.join(this.workspace, '.next');
+      if (fs.existsSync(buildDir)) {
+        const stats = execSync(`du -sh ${buildDir}`, { encoding: 'utf8' });
+        this.log(`Build size: ${stats.trim()}`);
+        return true;
       } else {
-        this.log('Some issues remain after fix attempt');
+        this.log('Build directory not found');
+        return false;
       }
-    } else {
-      this.log('All checks passed, build is healthy');
+    } catch (error) {
+      this.log(`Error checking build size: ${error.message}`);
+      return false;
     }
   }
 
-  async start() {
-    this.log('Build Monitor started');
+  async runBuildMonitor() {
+    this.log('🏗️ Starting Build Monitor');
     
-    // Run initial build check
-    await this.monitorBuild();
+    const buildResult = await this.runBuild();
+    if (buildResult.success) {
+      await this.checkBuildSize();
+      await this.runTests();
+    }
     
-    // Set up periodic monitoring every 4 hours
-    setInterval(async () => {
-      await this.monitorBuild();
-    }, 4 * 60 * 60 * 1000);
+    this.log('✅ Build monitoring cycle completed');
+    return buildResult.success;
   }
 }
 
-// Start the build monitor
-const monitor = new BuildMonitor();
-monitor.start().catch(console.error);
+// Main execution
+if (require.main === module) {
+  const monitor = new BuildMonitor();
+  
+  monitor.runBuildMonitor()
+    .then(success => {
+      process.exit(success ? 0 : 1);
+    })
+    .catch(error => {
+      monitor.log(`Fatal error: ${error.message}`);
+      process.exit(1);
+    });
+}
 
 module.exports = BuildMonitor;

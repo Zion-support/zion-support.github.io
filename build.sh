@@ -1,52 +1,58 @@
-#!/bin/bash
-set -e
+#!/usr/bin/env bash
+set -euo pipefail
 
-echo "Starting Netlify build process..."
+echo "[build.sh] Starting Netlify build"
 
-# Check if we're in a Netlify environment
-if [ "$NETLIFY" = "true" ]; then
-  echo "Detected Netlify environment - using optimized build process..."
-  
-  # For Netlify, use a more conservative approach
-  echo "Installing dependencies with Netlify-optimized settings..."
-  yarn install --frozen-lockfile --network-timeout 60000
-  
+echo "[build.sh] Node: $(node -v || echo 'not found')"
+echo "[build.sh] NPM:  $(npm -v || echo 'not found')"
+
+if command -v python3 >/dev/null 2>&1; then
+  echo "[build.sh] Python: $(python3 --version)"
 else
-  echo "Local development environment detected - using full cleanup process..."
-  
-  # Clean everything for local development
-  echo "Cleaning previous installations..."
-  rm -rf node_modules
-  rm -rf .yarn-cache
-  rm -rf dist
+  echo "[build.sh] Python not found in PATH"
+fi
 
-  # Clean yarn cache completely
-  echo "Cleaning yarn cache..."
-  yarn cache clean --all
+# Ensure mise doesn't try to compile Python from source if present in image
+export MISE_SETTINGS="python.compile=false"
+export MISE_PYTHON_COMPILE="false"
 
-  # Install dependencies with retry logic for local development
-  echo "Installing dependencies..."
-  for i in {1..3}; do
-    echo "Attempt $i of 3..."
-    if yarn install --network-timeout 100000; then
-      echo "Dependencies installed successfully!"
-      break
-    else
-      echo "Installation failed, cleaning and retrying..."
-      rm -rf node_modules
-      rm -rf .yarn-cache
-      yarn cache clean --all
-      if [ $i -eq 3 ]; then
-        echo "All installation attempts failed!"
-        exit 1
+if [ -f requirements.txt ]; then
+  echo "[build.sh] Installing Python dependencies"
+  # Prefer virtual environment to avoid PEP 668 issues
+  VENV_CREATED=false
+  if [ ! -d .venv ]; then
+    if python3 -m venv .venv >/dev/null 2>&1; then
+      VENV_CREATED=true
+    fi
+  else
+    VENV_CREATED=true
+  fi
+
+  if [ "$VENV_CREATED" = true ]; then
+    # shellcheck disable=SC1091
+    source .venv/bin/activate || true
+    python -m pip install --upgrade pip || true
+    if ! python -m pip install -r requirements.txt; then
+      echo "[build.sh] venv install failed, falling back to system pip with safeguards"
+      deactivate 2>/dev/null || true
+      if ! python3 -m pip install --user -r requirements.txt; then
+        python3 -m pip install --break-system-packages -r requirements.txt
       fi
     fi
-  done
+  else
+    echo "[build.sh] venv unavailable, using system pip with safeguards"
+    if ! python3 -m pip install --user -r requirements.txt; then
+      python3 -m pip install --break-system-packages -r requirements.txt
+    fi
+  fi
+else
+  echo "[build.sh] No requirements.txt found, skipping Python deps"
 fi
 
-# Build the project
-echo "Building project..."
-pnpm run build
+echo "[build.sh] Installing Node dependencies"
+npm ci
 
-echo "Build completed successfully!"
-fi
+echo "[build.sh] Running build"
+npm run build
+
+echo "[build.sh] Build complete"

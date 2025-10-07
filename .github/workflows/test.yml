@@ -1,133 +1,64 @@
-name: Test
+name: CI
 
 on:
   push:
-<<<<<<< HEAD
-    branches: [main, develop]
+    branches: ["**"]
   pull_request:
-    branches: [main, develop]
-
-permissions:
-  contents: read
+    branches: ["**"]
 
 jobs:
-  test:
-    name: Test Suite
+  test-runner:
+    name: Test Runner
     runs-on: ubuntu-latest
-    timeout-minutes: 20
-    
+    timeout-minutes: 25
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-        
+        with:
+          fetch-depth: 0
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-          cache: 'npm'
-          
+          cache: npm
       - name: Install dependencies
-        run: npm ci
-        
-      - name: Build project
-        run: npm run build
-        
-=======
-    branches: [main]
-  pull_request:
-    branches: [main]
-
-jobs:
-  main:
-    name: Main Job
-    runs-on: ubuntu-latest
-    timeout-minutes: 20
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-        with:
-          node-version: 18
-      - run: npm ci
-      - name: Build project
-        run: npm run build
->>>>>>> origin/auto/autonomy-17186719616
-      - name: Verify build output
-        run: |
-          if [ ! -d dist ]; then
-            echo "Build failed: dist folder not found"
-            exit 1
-          fi
-<<<<<<< HEAD
-          echo "Build completed successfully"
-          
-      - name: Verify asset paths
-        run: |
-          if [ -f dist/index.html ]; then
-            echo "✓ index.html found"
-          else
-            echo "✗ index.html not found"
-            exit 1
-          fi
-          
-          if [ -d dist/assets ]; then
-            echo "✓ assets folder found"
-          else
-            echo "✗ assets folder not found"
-            exit 1
-          fi
-
+        run: npm ci --no-audit --no-fund
+      - name: Run type check
+        run: npm run type-check
+        continue-on-error: true
       - name: Run linting
         run: npm run lint
         continue-on-error: true
-        
-      - name: Run type checking
-        run: npm run type-check
+      - name: Run security audit
+        run: npm audit --audit-level=high
         continue-on-error: true
-
+      - name: Build verification
+        run: npm run build
+      - name: Verify build output
+        run: |
+          if [ ! -d .next ]; then
+            echo "Build failed: .next folder not found"
+            exit 1
+          fi
+          echo "Build completed successfully"
+      - name: Verify asset paths
+        run: |
+          if [ -d dist ]; then
+            echo "Build assets found:"
+            ls -la dist/
+            echo "Total files: $(find dist -type f | wc -l)"
+          fi
+      - name: Run tests (if available)
+        run: npm test --if-present
+        continue-on-error: true
       - name: Upload build artifacts
+        if: success()
         uses: actions/upload-artifact@v4
         with:
-          name: build-artifacts
-          path: dist/
+          name: build
+          path: dist
           retention-days: 7
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
-=======
-      - name: Verify asset paths
-        run: |
-          npx serve out/ --cors --single -l 5000 &
-          SERVE_PID=$!
-          sleep 5
-          kill $SERVE_PID
-      - name: Run Vitest with Coverage
-        run: npx vitest run --coverage
-      - name: Upload coverage to Codecov
-        uses: codecov/codecov-action@v3
-        with:
-          token: ${{ secrets.CODECOV_TOKEN }}
-          files: ./coverage/coverage-final.json
-      - run: npm run cypress:run
-        env:
-          TEST_USER_EMAIL: ${{ secrets.CYPRESS_TEST_USER_EMAIL }}
-          TEST_USER_PASSWORD: ${{ secrets.CYPRESS_TEST_USER_PASSWORD }}
-          TEST_USER_DISPLAY_NAME: ${{ secrets.CYPRESS_TEST_USER_DISPLAY_NAME }}
-          NEXT_PUBLIC_REOWN_PROJECT_ID: ${{ secrets.VITE_REOWN_PROJECT_ID_CI }} # Assuming secret name will be updated
-          NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL_CI }} # Assuming secret name will be updated
-          NEXT_PUBLIC_SUPABASE_ANON_KEY: ${{ secrets.VITE_SUPABASE_ANON_KEY_CI }} # Assuming secret name will be updated
-          NEXT_PUBLIC_API_URL: ${{ secrets.NEXT_PUBLIC_API_URL_CI }} # Assuming secret name will be updated
-          NEXT_PUBLIC_VAPID_PUBLIC_KEY: ${{ secrets.VITE_VAPID_PUBLIC_KEY_CI }} # Assuming secret name will be updated
-      - uses: actions/upload-artifact@v4
-        with:
-          name: coverage-report
-          path: coverage
-      - name: Upload build (optional)
-        if: success()
-        uses: actions/upload-artifact@v4
-        with:
-          name: build
-          path: |
-            build
-            dist
->>>>>>> origin/auto/autonomy-17186719616

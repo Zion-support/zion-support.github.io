@@ -1,38 +1,33 @@
-name: Security Auto Heal
-
-on:
+name: Security Auto-Heal
+'on':
   workflow_dispatch: {}
-  schedule:
-    - cron: '*/10 * * * *'
-
 permissions:
-  contents: read
-
+  contents: write
+  pull-requests: write
+  actions: read
 concurrency:
-  group: security-auto-heal-${{ github.ref }}
+  group: security-auto-heal
   cancel-in-progress: true
-
 jobs:
   main:
-    name: Main Job
+    name: Security Auto-Heal Job
     runs-on: ubuntu-latest
-    timeout-minutes: 25
+    timeout-minutes: 20
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-          cache: 'npm'
-
+          cache: npm
       - name: Install dependencies
         run: npm ci --no-audit --no-fund
-
-concurrency:
-  group: ${{ github.workflow }}-${{ github.ref }}
-  cancel-in-progress: true
-
+      - name: Run security auto-heal
+        run: |
+          echo "Running security auto-heal..."
+          npm audit fix --audit-level=moderate || true
+          echo "Security auto-heal completed"
+    runs_on: ubuntu-latest

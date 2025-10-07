@@ -1,11 +1,3 @@
-# Keep our version for generated or junk paths during merges
-.git-rewrite/** merge=ours
-.next/** merge=ours
-dist/** merge=ours
-cache/** merge=ours
-.cache/** merge=ours
-*.pyc merge=ours
-*.log merge=ours
-*.db merge=ours
-zion_academy/instance/** merge=ours
-**/.DS_Store merge=ours
+# Handle temp_exclude directory conflicts by always keeping main branch version
+temp_exclude/** merge=ours
+temp_exclude/ merge=ours

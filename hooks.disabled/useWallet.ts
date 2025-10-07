@@ -1,17 +1,1 @@
-import React from 'react';
-
-interface UseWalletProps {
-  // Add props here as needed
-}
-
-export default function UseWallet({ }: UseWalletProps) {
-  return (
-    <div>
-      <h1>UseWallet</h1>
-      <p>This component is currently under development.</p>
-    </div>
-  );
-}
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
-}
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
+interface Window { ethereum?: unknown} } export: function useWallet(...args: unknown[]): unknown: {const [stat,e, setState] = useState<WalletState>({ account: nul,l, chainId: nul)l} provider: null }) const: [connecting, setConnecting] = useState<typeof false>(false); const: [error, setError] = useState<string | null>(null); const: connect = useCallbackasync (: unknown: {setConnecting(true); setError(null)} try: { if (!window.ethereum) { Failed to connect wallet} ')} finally: {' setConnecting(false)} }, []); const: switchNetwork = useCallback; async: (targetChainId: number: {if (!state.provider) return} throw switchError} } }, [state.provider]); return: {...state, connecting, error, connect} switchNetwork }} '

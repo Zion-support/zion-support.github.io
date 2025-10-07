@@ -1,238 +1,434 @@
+#!/usr/bin/env node
+
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
 class AppEnhancementSuite {
   constructor() {
-    this.logsDir = path.join(__dirname, '../logs');
-    this.ensureLogsDir();
-    this.enhancements = [];
+    this.projectRoot = process.cwd();
+    this.startTime = Date.now();
+    this.results = {
+      codeQuality: { success: false, improvements: [] },
+      performance: { success: false, improvements: [] },
+      security: { success: false, improvements: [] },
+      accessibility: { success: false, improvements: [] },
+      seo: { success: false, improvements: [] },
+      testing: { success: false, improvements: [] }
+    };
   }
 
-  ensureLogsDir() {
-    if (!fs.existsSync(this.logsDir)) {
-      fs.mkdirSync(this.logsDir, { recursive: true });
-    }
-  }
-
-  log(message, type = 'info') {
+  log(message, type = 'INFO') {
     const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] [${type.toUpperCase()}] ${message}`;
-    console.log(logMessage);
-
-    const logFile = path.join(this.logsDir, 'app-enhancement-suite.log');
-    fs.appendFileSync(logFile, logMessage + '\n');
+    const prefix = type === 'ERROR' ? '❌' : type === 'SUCCESS' ? '✅' : 'ℹ️';
+    console.log(`${prefix} [${timestamp}] ${message}`);
   }
 
   async runCommand(command, description) {
     try {
       this.log(`Running: ${description}`);
-      const output = execSync(command, {
-        encoding: 'utf8',
-        cwd: '/workspace',
+      const result = execSync(command, {
+        cwd: this.projectRoot,
         stdio: 'pipe',
+        encoding: 'utf8'
       });
       this.log(`✅ ${description} completed successfully`);
-      return { success: true, output };
+      return { success: true, output: result };
     } catch (error) {
-      this.log(`❌ ${description} failed: ${error.message}`, 'error');
-      return { success: false, error: error.message };
+      this.log(`❌ ${description} failed: ${error.message}`, 'ERROR');
+      return { success: false, error: error.message, output: error.stdout || error.stderr };
     }
   }
 
   async enhanceCodeQuality() {
-    this.log('🔧 Enhancing code quality...');
+    this.log('\n🔍 ENHANCING CODE QUALITY');
+    
+    const improvements = [];
+    
+    // Fix common linting issues
+    const lintFix = await this.runCommand('npm run lint:fix', 'Fix linting issues');
+    if (lintFix.success) {
+      improvements.push('Fixed linting issues automatically');
+    }
 
-    const enhancements = [
-      { command: 'npm run lint:fix', description: 'Fix linting issues' },
-      { command: 'npm run format', description: 'Format code' },
-      { command: 'npm run type-check', description: 'Type checking' },
-    ];
-
-    const results = [];
-    for (const enhancement of enhancements) {
-      const result = await this.runCommand(
-        enhancement.command,
-        enhancement.description
-      );
-      results.push({ ...enhancement, result });
-      if (result.success) {
-        this.enhancements.push(enhancement.description);
+    // Add TypeScript strict mode
+    const tsConfigPath = path.join(this.projectRoot, 'tsconfig.json');
+    if (fs.existsSync(tsConfigPath)) {
+      const tsConfig = JSON.parse(fs.readFileSync(tsConfigPath, 'utf8'));
+      if (!tsConfig.compilerOptions.strict) {
+        tsConfig.compilerOptions.strict = true;
+        fs.writeFileSync(tsConfigPath, JSON.stringify(tsConfig, null, 2));
+        improvements.push('Enabled TypeScript strict mode');
       }
     }
 
-    return { success: true, results };
+    // Add ESLint rules for better code quality
+    const eslintConfigPath = path.join(this.projectRoot, 'eslint.config.js');
+    if (fs.existsSync(eslintConfigPath)) {
+      improvements.push('ESLint configuration already exists');
+    } else {
+      // Create basic ESLint config
+      const eslintConfig = `module.exports = {
+  extends: ['next/core-web-vitals'],
+  rules: {
+    'no-unused-vars': 'warn',
+    'no-console': 'warn',
+    'prefer-const': 'error',
+    'no-var': 'error'
+  }
+};`;
+      fs.writeFileSync(eslintConfigPath, eslintConfig);
+      improvements.push('Created ESLint configuration');
+    }
+
+    this.results.codeQuality = {
+      success: true,
+      improvements
+    };
   }
 
   async enhancePerformance() {
-    this.log('⚡ Enhancing performance...');
+    this.log('\n⚡ ENHANCING PERFORMANCE');
+    
+    const improvements = [];
+    
+    // Add performance monitoring
+    const performanceUtilsPath = path.join(this.projectRoot, 'utils/performance.ts');
+    if (!fs.existsSync(performanceUtilsPath)) {
+      const performanceUtils = `export const measurePerformance = () => {
+  if (typeof window !== 'undefined' && 'performance' in window) {
+    const navigation = performance.getEntriesByType('navigation')[0];
+    return {
+      domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
+      loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
+      totalLoadTime: navigation.loadEventEnd - navigation.fetchStart
+    };
+  }
+  return null;
+};
 
-    const enhancements = [
-      { command: 'npm run build:analyze', description: 'Bundle analysis' },
-      {
-        command: 'npm run optimize:performance',
-        description: 'Performance optimization',
-      },
-    ];
-
-    const results = [];
-    for (const enhancement of enhancements) {
-      const result = await this.runCommand(
-        enhancement.command,
-        enhancement.description
-      );
-      results.push({ ...enhancement, result });
-      if (result.success) {
-        this.enhancements.push(enhancement.description);
-      }
+export const optimizeImages = (src: string, width: number, height: number) => {
+  return \`\${src}?w=\${width}&h=\${height}&q=80&f=webp\`;
+};`;
+      fs.writeFileSync(performanceUtilsPath, performanceUtils);
+      improvements.push('Added performance monitoring utilities');
     }
 
-    return { success: true, results };
+    // Add lazy loading for components
+    const lazyComponentPath = path.join(this.projectRoot, 'components/LazyComponent.tsx');
+    if (!fs.existsSync(lazyComponentPath)) {
+      const lazyComponent = `import React, { Suspense, lazy } from 'react';
+
+interface LazyComponentProps {
+  component: () => Promise<{ default: React.ComponentType<any> }>;
+  fallback?: React.ReactNode;
+  [key: string]: any;
+}
+
+const LazyComponent: React.FC<LazyComponentProps> = ({ 
+  component, 
+  fallback = <div>Loading...</div>, 
+  ...props 
+}) => {
+  const LazyLoadedComponent = lazy(component);
+  
+  return (
+    <Suspense fallback={fallback}>
+      <LazyLoadedComponent {...props} />
+    </Suspense>
+  );
+};
+
+export default LazyComponent;`;
+      fs.writeFileSync(lazyComponentPath, lazyComponent);
+      improvements.push('Added lazy loading component');
+    }
+
+    this.results.performance = {
+      success: true,
+      improvements
+    };
   }
 
   async enhanceSecurity() {
-    this.log('🔒 Enhancing security...');
+    this.log('\n🔒 ENHANCING SECURITY');
+    
+    const improvements = [];
+    
+    // Add security headers
+    const securityHeadersPath = path.join(this.projectRoot, 'utils/security-headers.js');
+    if (!fs.existsSync(securityHeadersPath)) {
+      const securityHeaders = `export const securityHeaders = {
+  'X-Frame-Options': 'DENY',
+  'X-Content-Type-Options': 'nosniff',
+  'Referrer-Policy': 'origin-when-cross-origin',
+  'Permissions-Policy': 'camera=(), microphone=(), geolocation=()',
+  'Strict-Transport-Security': 'max-age=31536000; includeSubDomains',
+  'Content-Security-Policy': "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:;"
+};
 
-    const enhancements = [
-      { command: 'npm audit fix', description: 'Fix security vulnerabilities' },
-      { command: 'npm run security:scan', description: 'Security scan' },
-    ];
-
-    const results = [];
-    for (const enhancement of enhancements) {
-      const result = await this.runCommand(
-        enhancement.command,
-        enhancement.description
-      );
-      results.push({ ...enhancement, result });
-      if (result.success) {
-        this.enhancements.push(enhancement.description);
-      }
+export const applySecurityHeaders = (res) => {
+  Object.entries(securityHeaders).forEach(([key, value]) => {
+    res.setHeader(key, value);
+  });
+};`;
+      fs.writeFileSync(securityHeadersPath, securityHeaders);
+      improvements.push('Added security headers utility');
     }
 
-    return { success: true, results };
+    // Add input validation
+    const validationPath = path.join(this.projectRoot, 'utils/validation.ts');
+    if (!fs.existsSync(validationPath)) {
+      const validation = `export const sanitizeInput = (input: string): string => {
+  return input
+    .replace(/[<>]/g, '')
+    .replace(/javascript:/gi, '')
+    .replace(/on\w+=/gi, '');
+};
+
+export const validateEmail = (email: string): boolean => {
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return emailRegex.test(email);
+};
+
+export const validatePhone = (phone: string): boolean => {
+  const phoneRegex = /^[\+]?[1-9][\d]{0,15}$/;
+  return phoneRegex.test(phone.replace(/[\s\-\(\)]/g, ''));
+};`;
+      fs.writeFileSync(validationPath, validation);
+      improvements.push('Added input validation utilities');
+    }
+
+    this.results.security = {
+      success: true,
+      improvements
+    };
+  }
+
+  async enhanceAccessibility() {
+    this.log('\n♿ ENHANCING ACCESSIBILITY');
+    
+    const improvements = [];
+    
+    // Add accessibility utilities
+    const a11yUtilsPath = path.join(this.projectRoot, 'utils/accessibility.ts');
+    if (!fs.existsSync(a11yUtilsPath)) {
+      const a11yUtils = `export const addAriaLabels = (element: HTMLElement, label: string) => {
+  element.setAttribute('aria-label', label);
+};
+
+export const addRole = (element: HTMLElement, role: string) => {
+  element.setAttribute('role', role);
+};
+
+export const addTabIndex = (element: HTMLElement, index: number) => {
+  element.setAttribute('tabindex', index.toString());
+};
+
+export const checkColorContrast = (foreground: string, background: string): boolean => {
+  // Basic contrast ratio check
+  const getLuminance = (color: string) => {
+    const rgb = color.match(/\\d+/g)?.map(Number) || [0, 0, 0];
+    const [r, g, b] = rgb.map(c => {
+      c = c / 255;
+      return c <= 0.03928 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4);
+    });
+    return 0.2126 * r + 0.7152 * g + 0.0722 * b;
+  };
+  
+  const l1 = getLuminance(foreground);
+  const l2 = getLuminance(background);
+  const contrast = (Math.max(l1, l2) + 0.05) / (Math.min(l1, l2) + 0.05);
+  return contrast >= 4.5;
+};`;
+      fs.writeFileSync(a11yUtilsPath, a11yUtils);
+      improvements.push('Added accessibility utilities');
+    }
+
+    this.results.accessibility = {
+      success: true,
+      improvements
+    };
+  }
+
+  async enhanceSEO() {
+    this.log('\n🔍 ENHANCING SEO');
+    
+    const improvements = [];
+    
+    // Add SEO utilities
+    const seoUtilsPath = path.join(this.projectRoot, 'utils/seo-utils.js');
+    if (!fs.existsSync(seoUtilsPath)) {
+      const seoUtils = `export const generateMetaTags = (title, description, keywords = '', canonical = '') => {
+  return {
+    title: title,
+    description: description,
+    keywords: keywords,
+    canonical: canonical,
+    'og:title': title,
+    'og:description': description,
+    'og:type': 'website',
+    'twitter:card': 'summary_large_image',
+    'twitter:title': title,
+    'twitter:description': description
+  };
+};
+
+export const generateStructuredData = (type, data) => {
+  const baseSchema = {
+    '@context': 'https://schema.org',
+    '@type': type,
+    ...data
+  };
+  
+  return JSON.stringify(baseSchema);
+};
+
+export const generateSitemap = (pages) => {
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://ziontechgroup.com';
+  
+  return \`<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+\${pages.map(page => \`
+  <url>
+    <loc>\${baseUrl}\${page}</loc>
+    <lastmod>\${new Date().toISOString()}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>\`).join('')}
+</urlset>\`;
+};`;
+      fs.writeFileSync(seoUtilsPath, seoUtils);
+      improvements.push('Added SEO utilities');
+    }
+
+    this.results.seo = {
+      success: true,
+      improvements
+    };
   }
 
   async enhanceTesting() {
-    this.log('🧪 Enhancing testing...');
+    this.log('\n🧪 ENHANCING TESTING');
+    
+    const improvements = [];
+    
+    // Add test utilities
+    const testUtilsPath = path.join(this.projectRoot, 'utils/test-utils.tsx');
+    if (!fs.existsSync(testUtilsPath)) {
+      const testUtils = `import React from 'react';
+import { render, RenderOptions , ThemeProvider  } from '@testing-library/react';
 
-    const enhancements = [
-      { command: 'npm run test:smoke', description: 'Smoke tests' },
-      { command: 'npm run test:coverage', description: 'Test coverage' },
-    ];
+const AllTheProviders = ({ children }: { children: React.ReactNode }) => {
+  return (
+    <ThemeProvider attribute="class" defaultTheme="light">
+      {children}
+    </ThemeProvider>
+  );
+};
 
-    const results = [];
-    for (const enhancement of enhancements) {
-      const result = await this.runCommand(
-        enhancement.command,
-        enhancement.description
-      );
-      results.push({ ...enhancement, result });
-      if (result.success) {
-        this.enhancements.push(enhancement.description);
-      }
+const customRender = (
+  ui: React.ReactElement,
+  options?: Omit<RenderOptions, 'wrapper'>
+) => render(ui, { wrapper: AllTheProviders, ...options });
+
+export * from '@testing-library/react';
+export { customRender as render };
+
+export const mockNextRouter = () => ({
+  push: jest.fn(),
+  replace: jest.fn(),
+  prefetch: jest.fn(),
+  back: jest.fn(),
+  beforePopState: jest.fn(),
+  events: {
+    on: jest.fn(),
+    off: jest.fn(),
+    emit: jest.fn(),
+  },
+  isFallback: false,
+  isLocale: false,
+  isReady: true,
+  defaultLocale: 'en',
+  domainLocales: [],
+  isPreview: false,
+});
+
+export const createMockProps = (overrides = {}) => ({
+  ...overrides,
+});`;
+      fs.writeFileSync(testUtilsPath, testUtils);
+      improvements.push('Added test utilities');
     }
 
-    return { success: true, results };
+    this.results.testing = {
+      success: true,
+      improvements
+    };
   }
 
-  async enhanceDocumentation() {
-    this.log('📚 Enhancing documentation...');
+  generateReport() {
+    const totalDuration = Date.now() - this.startTime;
+    const totalImprovements = Object.values(this.results)
+      .reduce((sum, result) => sum + result.improvements.length, 0);
 
-    const enhancements = [
-      { command: 'npm run readme:generate', description: 'Generate README' },
-      { command: 'npm run sitemap:generate', description: 'Generate sitemap' },
-    ];
+    this.log('\n📊 APP ENHANCEMENT REPORT');
+    this.log('='.repeat(60));
+    this.log(`Total Duration: ${totalDuration}ms`);
+    this.log(`Total Improvements: ${totalImprovements}`);
+    this.log('');
 
-    const results = [];
-    for (const enhancement of enhancements) {
-      const result = await this.runCommand(
-        enhancement.command,
-        enhancement.description
-      );
-      results.push({ ...enhancement, result });
-      if (result.success) {
-        this.enhancements.push(enhancement.description);
-      }
-    }
+    Object.entries(this.results).forEach(([category, result]) => {
+      const status = result.success ? '✅' : '❌';
+      this.log(`${status} ${category}: ${result.improvements.length} improvements`);
+      result.improvements.forEach(improvement => {
+        this.log(`   • ${improvement}`);
+      });
+    });
 
-    return { success: true, results };
-  }
-
-  async generateReport() {
-    this.log('📊 Generating enhancement report...');
-
+    // Save detailed report
     const report = {
       timestamp: new Date().toISOString(),
-      enhancements: this.enhancements,
+      totalDuration,
+      totalImprovements,
+      results: this.results,
       summary: {
-        totalEnhancements: this.enhancements.length,
-        categories: {
-          codeQuality: this.enhancements.filter(
-            e =>
-              e.includes('lint') || e.includes('format') || e.includes('type')
-          ).length,
-          performance: this.enhancements.filter(
-            e => e.includes('performance') || e.includes('bundle')
-          ).length,
-          security: this.enhancements.filter(
-            e => e.includes('security') || e.includes('audit')
-          ).length,
-          testing: this.enhancements.filter(e => e.includes('test')).length,
-          documentation: this.enhancements.filter(
-            e => e.includes('README') || e.includes('sitemap')
-          ).length,
-        },
-      },
+        categories: Object.keys(this.results).length,
+        successfulCategories: Object.values(this.results).filter(r => r.success).length,
+        totalImprovements
+      }
     };
 
-    // Save report
-    const reportFile = path.join(
-      this.logsDir,
-      `app-enhancement-report-${Date.now()}.json`
-    );
-    fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
-
-    this.log(`📄 Report saved to: ${reportFile}`);
-    return report;
+    const reportPath = path.join(this.projectRoot, 'automation/reports/app-enhancement-report.json');
+    fs.mkdirSync(path.dirname(reportPath), { recursive: true });
+    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+    
+    this.log(`\n📄 Detailed report saved to: ${reportPath}`);
   }
 
-  async start() {
-    this.log('🎯 Starting App Enhancement Suite...');
+  async run() {
+    this.log('🚀 Starting App Enhancement Suite');
+    this.log('='.repeat(60));
 
     try {
       await this.enhanceCodeQuality();
       await this.enhancePerformance();
       await this.enhanceSecurity();
+      await this.enhanceAccessibility();
+      await this.enhanceSEO();
       await this.enhanceTesting();
-      await this.enhanceDocumentation();
-
-      const report = await this.generateReport();
-
-      this.log('🏁 App Enhancement Suite completed');
-      this.log(`📊 Total enhancements: ${report.summary.totalEnhancements}`);
-
-      return report;
     } catch (error) {
-      this.log(`❌ App Enhancement Suite failed: ${error.message}`, 'error');
-      throw error;
+      this.log(`Fatal error: ${error.message}`, 'ERROR');
+    } finally {
+      this.generateReport();
     }
   }
 }
 
-// CLI interface
+// Run the enhancement suite
 if (require.main === module) {
   const suite = new AppEnhancementSuite();
-  suite
-    .start()
-    .then(report => {
-      console.log('App enhancement completed:', report.summary);
-      process.exit(0);
-    })
-    .catch(error => {
-      console.error('App enhancement failed:', error);
-      process.exit(1);
-    });
+  suite.run().catch(console.error);
 }
 
 module.exports = AppEnhancementSuite;

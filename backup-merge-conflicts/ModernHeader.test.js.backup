@@ -1,9 +1,0 @@
-<<<<<<< HEAD:backup-merge-conflicts/ModernHeader.test.js.backup
-<<<<<<< HEAD
-const React from "react" import { render,screen,fireEvent } from "@testing-library/react" import "@testing-library/jest-dom import ModernHeader from "./components/ModernHeader" describe("ModernHeader",() => {" test("renders without crashing",() => {" render(<ModernHeader / / />) expect(screen.getByTestId("modernheader")).toBeInTheDocument();" }) test("displays correct content",() => {" render(<ModernHeader / / />) }) test("handles user interactions",() => {" render(<ModernHeader / / />) }) test("applies correct styling",() => {" render(<ModernHeader / / />) }) })'"'"
-=======
-import _React from 'react"  import '@testing-library/jest-dom import ModernHeader from '../components/ModernHeader" describe('ModernHeader',() => {' test('renders without crashing',() => {' render(<ModernHeader / / />) expect(screen.getByTestId("modernheader")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<ModernHeader / / />) }) test('handles user interactions',() => {' render(<ModernHeader / / />) }) test('applies correct styling',() => {' render(<ModernHeader / / />) }) })
->>>>>>> main
-=======
-import _React from 'react"  import '@testing-library/jest-dom import ModernHeader from '../components/ModernHeader" describe('ModernHeader',() => {' test('renders without crashing',() => {' render(<ModernHeader / / />) expect(screen.getByTestId("modernheader")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<ModernHeader / / />) }) test('handles user interactions',() => {' render(<ModernHeader / / />) }) test('applies correct styling',() => {' render(<ModernHeader / / />) }) })
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:__tests__/ModernHeader.test.js

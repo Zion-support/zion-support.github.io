@@ -1,16 +1,66 @@
-<<<<<<< HEAD
-    res.statusCode = 200;
-    res.json({ "points": 0, "history": [] })} catch (err) {
-    console.error(',
-      'Wallet API "error": err);
+const { withSentry } = require('./withSentry.cjs');
+
+async function handler(req, res) {
+  if (req.method !== 'POST') {
+    res.statusCode = 405;
+    res.setHeader('Allow', 'POST');
+    res.end('Method Not Allowed');
+    return;
+  }
+
+  const { action, amount, currency = 'USD' } = req.body || {};
+
+  if (!action) {
+    res.statusCode = 400;
+    res.json({ error: 'Action is required' });
+    return;
+  }
+
+  try {
+    switch (action) {
+      case 'create_payment_intent': {
+        if (!amount) {
+          res.statusCode = 400;
+          res.json({ error: 'Amount is required for payment intent' });
+          return;
+        }
+        
+        // Mock payment intent creation
+        const paymentIntent = {
+          id: `pi_${Date.now()}`,
+          amount: Math.round(amount * 100), // Convert to cents
+          currency: currency.toLowerCase(),
+          status: 'requires_payment_method',
+          client_secret: `pi_${Date.now()}_secret_${Math.random().toString(36).substr(2, 9)}`
+        };
+
+        res.statusCode = 200;
+        res.json({ success: true, paymentIntent });
+        break;
+      }
+
+      case 'get_balance': {
+        // Mock balance retrieval
+        const balance = {
+          available: 1000.00,
+          pending: 0.00,
+          currency: currency.toUpperCase()
+        };
+
+        res.statusCode = 200;
+        res.json({ success: true, balance });
+        break;
+      }
+
+      default:
+        res.statusCode = 400;
+        res.json({ error: 'Invalid action' });
+    }
+  } catch (error) {
+    console.error('Wallet error:', error);
     res.statusCode = 500;
-    res.json({ error: err.message || 'Failed to fetch wallet' });
+    res.json({ error: 'Wallet operation failed' });
   }
 }
 
-module.exports = withErrorLogging(handler);
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
-=======
-async function handler(req, res) {;
-  if (req.method !== 'GET') {'';    res.setHeader('Allow', GET');;    res.end('Method Not Allowed');;    console.error('Wallet API error:', error);;    res.json({ error: error.message || Failed to fetch wallet' });
->>>>>>> origin/auto/autonomy-17186719616
+module.exports = withSentry(handler);

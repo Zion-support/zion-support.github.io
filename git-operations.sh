@@ -1,10 +1,14 @@
 #!/bin/bash
 
+# Git operations script
 echo "Starting git operations..."
 
-# Check current branch
+# Check current status
 echo "Current branch:"
 git branch --show-current
+
+echo "Current status:"
+git status --porcelain
 
 # Add all changes
 echo "Adding all changes..."
@@ -12,25 +16,23 @@ git add .
 
 # Commit changes
 echo "Committing changes..."
-git commit -m "Fix syntax errors and merge conflicts
+git commit -m "Fix syntax errors and prepare for merge" || echo "No changes to commit"
 
-- Fixed merge conflict markers in test files
-- Fixed malformed code in App.test.ts, AccessibilityEnhancer.test.tsx, and products.test.ts
-- Cleaned up TypeScript syntax errors
-- Removed duplicate code sections
-- Fixed quote and bracket issues"
-
-# Push changes
-echo "Pushing changes..."
-git push origin cursor/fix-syntax-push-and-merge-to-main-1c2c
+# Push to current branch
+echo "Pushing to current branch..."
+git push origin $(git branch --show-current)
 
 # Switch to main branch
 echo "Switching to main branch..."
 git checkout main
 
+# Pull latest changes
+echo "Pulling latest changes..."
+git pull origin main
+
 # Merge the feature branch
 echo "Merging feature branch..."
-git merge cursor/fix-syntax-push-and-merge-to-main-1c2c
+git merge $(git branch --show-current) --no-ff -m "Merge syntax fixes into main"
 
 # Push to main
 echo "Pushing to main..."

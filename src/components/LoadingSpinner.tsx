@@ -1,15 +1,12 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 
 interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg';
-  color?: string;
   className?: string;
 }
 
 const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ 
   size = 'md', 
-  color = 'text-blue-500',
   className = '' 
 }) => {
   const sizeClasses = {
@@ -19,30 +16,12 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   };
 
   return (
-    <motion.div
-      className={`${sizeClasses[size]} ${color} ${className}`}
-      animate={{ rotate: 360 }}
-      transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
-    >
-      <svg
-        className="w-full h-full"
-        viewBox="0 0 24 24"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <circle
-          cx="12"
-          cy="12"
-          r="10"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeDasharray="60 40"
-          strokeDashoffset="0"
-        />
-      </svg>
-    </motion.div>
+    <div className={`flex items-center justify-center ${className}`}>
+      <div 
+        className={`${sizeClasses[size]} border-2 border-blue-200 border-t-blue-600 rounded-full animate-spin`}
+      />
+    </div>
   );
-};
+  };
 
 export default LoadingSpinner;

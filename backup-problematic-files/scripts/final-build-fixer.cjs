@@ -1,9 +1,24 @@
 
 
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
 
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+#!/usr/bin/env node;
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
 
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+#!/usr/bin/env node;
 
 // console.log(' Final Build Fixer')
 console.log('=====')
@@ -16,7 +31,7 @@ console.log('=====')
         {"pattern": /content="([^"]*)"\s*\/>/g,"replacement": 'content="$1"}
           "replacement": 'const Layout = dynamic(() => import("../components/Layout"), { "ssr"}
 
+          "pattern"
+          "pattern"
 
-
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 

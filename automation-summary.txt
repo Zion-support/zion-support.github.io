@@ -1,0 +1,167 @@
+
+Enhanced Automation Orchestrator Report
+Start Time: 2025-09-07T05:42:38.689Z
+End Time: 2025-09-07T05:43:11.971Z
+Duration: 33282ms
+
+Summary:
+- Total Scripts: 9
+- Successful: 2
+- Failed: 7
+- Success Rate: 22.22%
+
+Scripts Executed:
+- scripts/clean-syntax-fixer.cjs: ❌ (22ms)
+- scripts/performance-monitor.cjs: ❌ (21ms)
+- scripts/security-audit.cjs: ✅ (17ms)
+- scripts/seo-optimizer.cjs: ❌ (19ms)
+- scripts/health-checker.cjs: ❌ (18ms)
+- npm run lint:fix: ❌ (512ms)
+- npm run type-check: ❌ (21325ms)
+- npm run build: ✅ (9446ms)
+- npm run test:smoke: ❌ (1896ms)
+
+
+Errors:
+- scripts/clean-syntax-fixer.cjs: Command failed: node scripts/clean-syntax-fixer.cjs
+/workspace/scripts/clean-syntax-fixer.cjs:4
+const { execSync } = require('child_process');'
+                                              ^
+
+SyntaxError: Invalid or unexpected token
+    at wrapSafe (node:internal/modules/cjs/loader:1662:18)
+    at Module._compile (node:internal/modules/cjs/loader:1704:20)
+    at Object..js (node:internal/modules/cjs/loader:1895:10)
+    at Module.load (node:internal/modules/cjs/loader:1465:32)
+    at Function._load (node:internal/modules/cjs/loader:1282:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)
+    at node:internal/main/run_main_module:36:49
+
+Node.js v22.16.0
+
+- scripts/performance-monitor.cjs: Command failed: node scripts/performance-monitor.cjs
+/workspace/scripts/performance-monitor.cjs:2
+const fs = require('fs')''
+                        ^^
+
+SyntaxError: Unexpected string
+    at wrapSafe (node:internal/modules/cjs/loader:1662:18)
+    at Module._compile (node:internal/modules/cjs/loader:1704:20)
+    at Object..js (node:internal/modules/cjs/loader:1895:10)
+    at Module.load (node:internal/modules/cjs/loader:1465:32)
+    at Function._load (node:internal/modules/cjs/loader:1282:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)
+    at node:internal/main/run_main_module:36:49
+
+Node.js v22.16.0
+
+- scripts/seo-optimizer.cjs: Command failed: node scripts/seo-optimizer.cjs
+/workspace/scripts/seo-optimizer.cjs:4
+const path = require('path');'
+                             ^
+
+SyntaxError: Invalid or unexpected token
+    at wrapSafe (node:internal/modules/cjs/loader:1662:18)
+    at Module._compile (node:internal/modules/cjs/loader:1704:20)
+    at Object..js (node:internal/modules/cjs/loader:1895:10)
+    at Module.load (node:internal/modules/cjs/loader:1465:32)
+    at Function._load (node:internal/modules/cjs/loader:1282:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)
+    at node:internal/main/run_main_module:36:49
+
+Node.js v22.16.0
+
+- scripts/health-checker.cjs: Command failed: node scripts/health-checker.cjs
+/workspace/scripts/health-checker.cjs:8
+const { execSync } = require("child_process");"
+                                              ^
+
+SyntaxError: Invalid or unexpected token
+    at wrapSafe (node:internal/modules/cjs/loader:1662:18)
+    at Module._compile (node:internal/modules/cjs/loader:1704:20)
+    at Object..js (node:internal/modules/cjs/loader:1895:10)
+    at Module.load (node:internal/modules/cjs/loader:1465:32)
+    at Function._load (node:internal/modules/cjs/loader:1282:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)
+    at node:internal/main/run_main_module:36:49
+
+Node.js v22.16.0
+
+- npm run lint:fix: Command failed: npm run lint:fix
+npm warn config optional Use `--omit=optional` to exclude optional dependencies, or
+npm warn config `--include=optional` to include them.
+npm warn config
+npm warn config       Default value does install optional deps unless otherwise omitted.
+`next lint` is deprecated and will be removed in Next.js 16.
+For new projects, use create-next-app to choose your preferred linter.
+For existing projects, migrate to the ESLint CLI:
+npx @next/codemod@canary next-lint-to-eslint-cli .
+
+(node:5258) ESLintIgnoreWarning: The ".eslintignore" file is no longer supported. Switch to using the "ignores" property in "eslint.config.js": https://eslint.org/docs/latest/use/configure/migration-guide#ignoring-files
+(Use `node --trace-warnings ...` to show where the warning was created)
+Invalid or unexpected token
+
+- npm run type-check: Command failed: npm run type-check
+npm warn config optional Use `--omit=optional` to exclude optional dependencies, or
+npm warn config `--include=optional` to include them.
+npm warn config
+npm warn config       Default value does install optional deps unless otherwise omitted.
+/workspace/node_modules/typescript/lib/_tsc.js:17640
+  return text.replace(/\{(\d+)\}/g, (_match, index) => "" + Debug.checkDefined(args[+index]));
+              ^
+
+RangeError: Maximum call stack size exceeded
+    at String.replace (<anonymous>)
+    at formatStringFromArgs (/workspace/node_modules/typescript/lib/_tsc.js:17640:15)
+    at createDetachedDiagnostic (/workspace/node_modules/typescript/lib/_tsc.js:17656:12)
+    at parseErrorAtPosition (/workspace/node_modules/typescript/lib/_tsc.js:29379:16)
+    at parseErrorAt (/workspace/node_modules/typescript/lib/_tsc.js:29386:12)
+    at parseErrorAtCurrentToken (/workspace/node_modules/typescript/lib/_tsc.js:29373:12)
+    at createMissingNode (/workspace/node_modules/typescript/lib/_tsc.js:29701:7)
+    at createIdentifier (/workspace/node_modules/typescript/lib/_tsc.js:29760:12)
+    at parseIdentifier (/workspace/node_modules/typescript/lib/_tsc.js:29771:12)
+    at parsePrimaryExpression (/workspace/node_modules/typescript/lib/_tsc.js:32815:12)
+
+Node.js v22.16.0
+
+- npm run test:smoke: Command failed: npm run test:smoke
+npm warn config optional Use `--omit=optional` to exclude optional dependencies, or
+npm warn config `--include=optional` to include them.
+npm warn config
+npm warn config       Default value does install optional deps unless otherwise omitted.
+● Validation Warning:
+
+  Unknown option "moduleNameMapping" with value {"^@/(.*)$": "<rootDir>/$1"} was found.
+  This is probably a typing mistake. Fixing it will remove this message.
+
+  Configuration Documentation:
+  https://jestjs.io/docs/configuration
+
+[napi-postinstall@0.3.3] Trying to install package "@unrs/resolver-binding-linux-x64-gnu" using npm
+● Validation Warning:
+
+  Unknown option "moduleNameMapping" with value {"^@/(.*)$": "<rootDir>/$1"} was found.
+  This is probably a typing mistake. Fixing it will remove this message.
+
+  Configuration Documentation:
+  https://jestjs.io/docs/configuration
+
+Error: Cannot parse /workspace/backup-problematic-files/temp-exclude/zion-os/package.json as JSON: Unexpected non-whitespace character after JSON at position 462 (line 24 column 3)
+    at Object.worker (/workspace/node_modules/jest-haste-map/build/worker.js:267:13)
+    at execFunction (/workspace/node_modules/jest-worker/build/processChild.js:297:17)
+    at execHelper (/workspace/node_modules/jest-worker/build/processChild.js:285:5)
+    at execMethod (/workspace/node_modules/jest-worker/build/processChild.js:288:5)
+    at process.messageListener (/workspace/node_modules/jest-worker/build/processChild.js:196:7)
+    at process.emit (node:events:518:28)
+    at emit (node:internal/child_process:949:14)
+    at process.processTicksAndRejections (node:internal/process/task_queues:91:21)
+
+

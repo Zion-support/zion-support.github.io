@@ -1,8 +1,3 @@
-
-
-
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-
     log('info', `CPU "usage": ${monitoringReport.metrics.cpu}%`);
     log('info', `Memory "usage": ${monitoringReport.metrics.memory}%`);
     log('info', `Disk "usage": ${monitoringReport.metrics.disk}%`);
@@ -43,14 +38,8 @@
     process.exit(1)}
 }
 
-main();
-
+main();#!/usr/bin/env node;
 #!/usr/bin/env node;
-
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
@@ -100,8 +89,4 @@ console.log('')
     "message"
     "action"
       log('warn', 'Alerts "generated")
-
-
-
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-
+      log('info', 'Monitoring "Recommendations")

@@ -1,38 +1,32 @@
----
 name: Diverse Agent Matrix
-on:
+'on':
   workflow_dispatch: {}
   schedule:
-    - cron: '0 2 * * *' # Daily at 2 AM UTC
-
-permissions:
-  contents: read
-  actions: read
-
+    - cron: 0 2 * * *
 concurrency:
   group: diverse-agent-matrix-${{ github.ref }}
   cancel-in-progress: false
-
 jobs:
   run-diverse-agents:
-    name: Run ${{ matrix.task }}
+    name: Run ${matrix.task}
     runs-on: ubuntu-latest
-    timeout-minutes: 30
     strategy:
       fail-fast: false
       max-parallel: 3
       matrix:
         task:
-        - seo
-        - security
-        - testgen
-        - frontend-sync
-        - variation
-        - meta
-        - responsive
-        - monetization
-        - saas
-        - ui-evolution
+          - seo
+          - security
+          - testgen
+          - frontend-sync
+          - variation
+          - meta
+          - responsive
+          - monetization
+          - saas
+          - ui-evolution
+    permissions:
+      contents: read
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -45,20 +39,23 @@ jobs:
           cache: npm
       - name: Install dependencies
         run: npm ci
+        continue-on-error: true
       - name: Run diverse agent
         env:
           MATRIX_TASK: ${{ matrix.task }}
-        run: |
-          node automation/diverse-agent-runner.cjs "$MATRIX_TASK" || true
+        if: always()
+        run: node automation/diverse-agent-runner.cjs "$MATRIX_TASK" || true
+        continue-on-error: true
       - name: Upload agent logs
         uses: actions/upload-artifact@v4
         with:
           name: diverse-agent-${{ matrix.task }}-logs
-          path: |
-            automation/logs/diverse-agent-matrix/${{ matrix.task }}-*.log
+          path: automation/logs/diverse-agent-matrix/${{ matrix.task }}-*.log
           if-no-files-found: ignore
           retention-days: 7
+        if: always()
       - name: Commit and push changes
+        if: always()
         run: |
           if [ -n "$(git status --porcelain)" ]; then
             git config user.name "github-actions[bot]"
@@ -69,3 +66,18 @@ jobs:
           else
             echo "No changes to push"
           fi
+        continue-on-error: true
+      - name: Create summary
+        if: always()
+        run: |
+          echo "## Diverse Agent Matrix Summary" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "**Task:** ${{ matrix.task }}" >> $GITHUB_STEP_SUMMARY
+          echo "**Status:** Diverse agent execution completed" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "**Timestamp:** $(date -u)" >> $GITHUB_STEP_SUMMARY
+    timeout-minutes: 30
+    runs_on: ubuntu-latest
+permissions:
+  contents: read
+  actions: read

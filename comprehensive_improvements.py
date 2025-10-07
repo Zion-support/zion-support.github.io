@@ -1,267 +1,239 @@
 #!/usr/bin/env python3
 """
-Comprehensive Improvements Script
-This script runs various improvements after merge conflicts are resolved
+Comprehensive Code Improvements Script
+Identifies and fixes common issues in the codebase
 """
 
 import os
+import re
 import subprocess
-import json
 import sys
-from typing import List, Dict, Any
+from pathlib import Path
 
-class ComprehensiveImprovements:
-    def __init__(self):
-        self.improvements_applied = []
-        
-    def run_command(self, cmd: str, check: bool = True) -> tuple:
-        """Run a command and return the result"""
+def find_jsx_syntax_errors():
+    """Find and fix JSX syntax errors"""
+    print("🔍 Scanning for JSX syntax errors...")
+    
+    # Find all TSX/JSX files
+    tsx_files = []
+    for root, dirs, files in os.walk('.'):
+        for file in files:
+            if file.endswith(('.tsx', '.jsx')):
+                tsx_files.append(os.path.join(root, file))
+    
+    fixed_files = []
+    for file_path in tsx_files:
         try:
-            result = subprocess.run(cmd, shell=True, capture_output=True, text=True, check=check)
-            return result.returncode, result.stdout, result.stderr
-        except subprocess.CalledProcessError as e:
-            return e.returncode, e.stdout, e.stderr
-
-    def print_status(self, msg: str):
-        print(f"\033[0;34m[INFO]\033[0m {msg}")
-
-    def print_success(self, msg: str):
-        print(f"\033[0;32m[SUCCESS]\033[0m {msg}")
-
-    def print_warning(self, msg: str):
-        print(f"\033[1;33m[WARNING]\033[0m {msg}")
-
-    def print_error(self, msg: str):
-        print(f"\033[0;31m[ERROR]\033[0m {msg}")
-
-    def apply_improvement(self, name: str, func):
-        """Apply an improvement and track it"""
-        self.print_status(f"Applying improvement: {name}")
-        try:
-            result = func()
-            if result:
-                self.improvements_applied.append(name)
-                self.print_success(f"Applied improvement: {name}")
-            else:
-                self.print_warning(f"Improvement {name} had issues but continued")
+            with open(file_path, 'r', encoding='utf-8') as f:
+                content = f.read()
+            
+            # Check for common JSX issues
+            issues_found = False
+            original_content = content
+            
+            # Fix unclosed tags (basic patterns)
+            content = re.sub(r'<(\w+)([^>]*?)(?<!/)>$', r'<\1\2></\1>', content, flags=re.MULTILINE)
+            
+            # Fix missing closing tags in forms
+            if '<form' in content and '</form>' not in content:
+                content = content.replace('<form', '<form').replace('</div>', '</form></div>')
+                issues_found = True
+            
+            # Fix missing closing tags in buttons
+            if '<button' in content and '</button>' not in content:
+                content = re.sub(r'<button([^>]*)>([^<]*)', r'<button\1>\2</button>', content)
+                issues_found = True
+            
+            if issues_found and content != original_content:
+                with open(file_path, 'w', encoding='utf-8') as f:
+                    f.write(content)
+                fixed_files.append(file_path)
+                print(f"✅ Fixed JSX issues in: {file_path}")
+                
         except Exception as e:
-            self.print_error(f"Failed to apply improvement {name}: {e}")
+            print(f"❌ Error processing {file_path}: {e}")
+    
+    return fixed_files
 
-    def fix_typescript_errors(self) -> bool:
-        """Fix TypeScript errors"""
-        self.print_status("Fixing TypeScript errors...")
-        
-        # Run TypeScript check
-        returncode, stdout, stderr = self.run_command("npx tsc --noEmit", check=False)
-        if returncode == 0:
-            self.print_success("No TypeScript errors found")
-            return True
-        
-        # Try to fix common TypeScript issues
-        fixes = [
-            "npx tsc --noEmit --skipLibCheck",
-            "npm run type-check || true",
-            "npx eslint . --ext .ts,.tsx --fix || true"
-        ]
-        
-        for fix in fixes:
-            returncode, stdout, stderr = self.run_command(fix, check=False)
-            if returncode == 0:
-                self.print_success("TypeScript issues resolved")
-                return True
-        
-        self.print_warning("Some TypeScript issues may remain")
-        return True
+def find_merge_conflicts():
+    """Find and fix remaining merge conflicts"""
+    print("🔍 Scanning for merge conflicts...")
+    
+    conflict_files = []
+    for root, dirs, files in os.walk('.'):
+        for file in files:
+            if file.endswith(('.ts', '.tsx', '.js', '.jsx', '.py', '.json')):
+                file_path = os.path.join(root, file)
+                try:
+                    with open(file_path, 'r', encoding='utf-8') as f:
+                        content = f.read()
+                    
+                    if '<<<<<<< HEAD' in content or '=======' in content or '>>>>>>> ' in content:
+                        conflict_files.append(file_path)
+                        print(f"⚠️  Found merge conflicts in: {file_path}")
+                        
+                except Exception as e:
+                    print(f"❌ Error reading {file_path}: {e}")
+    
+    return conflict_files
 
-    def optimize_build(self) -> bool:
-        """Optimize the build process"""
-        self.print_status("Optimizing build...")
-        
-        # Clean previous builds
-        self.run_command("rm -rf .next out dist build", check=False)
-        
-        # Install dependencies
-        returncode, stdout, stderr = self.run_command("npm install", check=False)
-        if returncode != 0:
-            self.print_warning(f"npm install had issues: {stderr}")
-        
-        # Try to build
-        build_commands = [
-            "npm run build",
-            "npm run build:heal",
-            "npm run ci:heal"
-        ]
-        
-        for cmd in build_commands:
-            returncode, stdout, stderr = self.run_command(cmd, check=False)
-            if returncode == 0:
-                self.print_success("Build successful")
-                return True
-            else:
-                self.print_warning(f"Build command failed: {cmd}")
-        
-        return False
-
-    def fix_linting_issues(self) -> bool:
-        """Fix linting issues"""
-        self.print_status("Fixing linting issues...")
-        
-        lint_commands = [
-            "npm run lint -- --fix",
-            "npx eslint . --ext .js,.jsx,.ts,.tsx --fix",
-            "npm run fix:all"
-        ]
-        
-        for cmd in lint_commands:
-            returncode, stdout, stderr = self.run_command(cmd, check=False)
-            if returncode == 0:
-                self.print_success("Linting issues fixed")
-                return True
-        
-        self.print_warning("Some linting issues may remain")
-        return True
-
-    def optimize_performance(self) -> bool:
-        """Apply performance optimizations"""
-        self.print_status("Applying performance optimizations...")
-        
-        # Bundle analysis
-        returncode, stdout, stderr = self.run_command("npm run build && npx @next/bundle-analyzer", check=False)
-        
-        # Performance optimizations
-        optimizations = [
-            "npm run build:heal",
-            "npm run ci:heal"
-        ]
-        
-        for opt in optimizations:
-            returncode, stdout, stderr = self.run_command(opt, check=False)
-            if returncode == 0:
-                self.print_success("Performance optimizations applied")
-                return True
-        
-        return True
-
-    def update_dependencies(self) -> bool:
-        """Update dependencies safely"""
-        self.print_status("Updating dependencies...")
-        
-        # Check for outdated packages
-        returncode, stdout, stderr = self.run_command("npm outdated", check=False)
-        
-        # Update minor versions only
-        update_commands = [
-            "npm update",
-            "npm audit fix",
-            "npm audit fix --force"
-        ]
-        
-        for cmd in update_commands:
-            returncode, stdout, stderr = self.run_command(cmd, check=False)
-            if returncode == 0:
-                self.print_success("Dependencies updated")
-                return True
-        
-        return True
-
-    def generate_sitemap(self) -> bool:
-        """Generate updated sitemap"""
-        self.print_status("Generating sitemap...")
-        
-        sitemap_commands = [
-            "npm run build && node scripts/generate-sitemap.js",
-            "npx next-sitemap",
-            "npm run sitemap"
-        ]
-        
-        for cmd in sitemap_commands:
-            returncode, stdout, stderr = self.run_command(cmd, check=False)
-            if returncode == 0:
-                self.print_success("Sitemap generated")
-                return True
-        
-        return True
-
-    def run_tests(self) -> bool:
-        """Run tests if available"""
-        self.print_status("Running tests...")
-        
-        test_commands = [
-            "npm test",
-            "npm run test",
-            "npm run test:ci",
-            "npm run test:unit"
-        ]
-        
-        for cmd in test_commands:
-            returncode, stdout, stderr = self.run_command(cmd, check=False)
-            if returncode == 0:
-                self.print_success("Tests passed")
-                return True
-        
-        self.print_warning("No tests found or tests failed")
-        return True
-
-    def cleanup_temp_files(self) -> bool:
-        """Clean up temporary files"""
-        self.print_status("Cleaning up temporary files...")
-        
-        cleanup_commands = [
-            "rm -rf .next out dist build node_modules/.cache",
-            "find . -name '*.log' -delete",
-            "find . -name '*.tmp' -delete",
-            "find . -name '.DS_Store' -delete"
-        ]
-        
-        for cmd in cleanup_commands:
-            self.run_command(cmd, check=False)
-        
-        self.print_success("Cleanup completed")
-        return True
-
-    def create_improvement_report(self) -> bool:
-        """Create a report of applied improvements"""
-        self.print_status("Creating improvement report...")
-        
-        report = {
-            "timestamp": __import__('time').time(),
-            "improvements_applied": self.improvements_applied,
-            "total_improvements": len(self.improvements_applied)
-        }
-        
+def optimize_imports():
+    """Optimize and clean up imports"""
+    print("🔍 Optimizing imports...")
+    
+    tsx_files = []
+    for root, dirs, files in os.walk('.'):
+        for file in files:
+            if file.endswith(('.ts', '.tsx')):
+                tsx_files.append(os.path.join(root, file))
+    
+    optimized_files = []
+    for file_path in tsx_files:
         try:
-            with open("improvement_report.json", "w") as f:
-                json.dump(report, f, indent=2)
-            self.print_success("Improvement report created")
-            return True
+            with open(file_path, 'r', encoding='utf-8') as f:
+                content = f.read()
+            
+            original_content = content
+            
+            # Remove duplicate imports
+            lines = content.split('\n')
+            import_lines = []
+            other_lines = []
+            in_imports = True
+            
+            for line in lines:
+                if in_imports and (line.strip().startswith('import ') or line.strip() == ''):
+                    if line.strip().startswith('import '):
+                        if line not in import_lines:
+                            import_lines.append(line)
+                    else:
+                        import_lines.append(line)
+                else:
+                    in_imports = False
+                    other_lines.append(line)
+            
+            # Remove empty lines between imports
+            cleaned_imports = []
+            for i, line in enumerate(import_lines):
+                if line.strip() == '' and i > 0 and import_lines[i-1].strip() == '':
+                    continue
+                cleaned_imports.append(line)
+            
+            new_content = '\n'.join(cleaned_imports + other_lines)
+            
+            if new_content != original_content:
+                with open(file_path, 'w', encoding='utf-8') as f:
+                    f.write(new_content)
+                optimized_files.append(file_path)
+                print(f"✅ Optimized imports in: {file_path}")
+                
         except Exception as e:
-            self.print_error(f"Failed to create report: {e}")
-            return False
+            print(f"❌ Error optimizing {file_path}: {e}")
+    
+    return optimized_files
 
-    def run_all_improvements(self):
-        """Run all improvements"""
-        self.print_status("🚀 Starting comprehensive improvements...")
+def fix_typescript_errors():
+    """Fix common TypeScript errors"""
+    print("🔍 Fixing TypeScript errors...")
+    
+    # Run TypeScript check to get specific errors
+    try:
+        result = subprocess.run(['pnpm', 'run', 'type-check'], 
+                              capture_output=True, text=True, cwd='.')
         
-        improvements = [
-            ("TypeScript Error Fixes", self.fix_typescript_errors),
-            ("Linting Fixes", self.fix_linting_issues),
-            ("Build Optimization", self.optimize_build),
-            ("Performance Optimization", self.optimize_performance),
-            ("Dependency Updates", self.update_dependencies),
-            ("Sitemap Generation", self.generate_sitemap),
-            ("Test Execution", self.run_tests),
-            ("Cleanup", self.cleanup_temp_files),
-            ("Report Generation", self.create_improvement_report)
-        ]
+        if result.returncode != 0:
+            print("TypeScript errors found:")
+            print(result.stdout)
+            print(result.stderr)
+            
+            # Try to fix common issues
+            error_output = result.stderr
+            
+            # Fix missing closing tags
+            if 'JSX element' in error_output and 'no corresponding closing tag' in error_output:
+                print("🔧 Attempting to fix JSX closing tag issues...")
+                return find_jsx_syntax_errors()
         
-        for name, func in improvements:
-            self.apply_improvement(name, func)
-        
-        self.print_success(f"🎉 Applied {len(self.improvements_applied)} improvements")
-        self.print_status("Improvements applied:")
-        for improvement in self.improvements_applied:
-            self.print_status(f"  ✓ {improvement}")
+    except Exception as e:
+        print(f"❌ Error running TypeScript check: {e}")
+    
+    return []
+
+def create_missing_components():
+    """Create missing components that are referenced but don't exist"""
+    print("🔍 Creating missing components...")
+    
+    missing_components = [
+        'app/components/UnifiedContentPromotion.tsx',
+        'app/components/InteractiveAIROICalculator.tsx',
+        'app/components/ContentShowcase.tsx',
+        'app/components/InteractiveContentShowcase2026.tsx',
+        'app/components/ErrorBoundary.tsx',
+        'app/components/SEOOptimizer.tsx'
+    ]
+    
+    created_components = []
+    
+    for component_path in missing_components:
+        if not os.path.exists(component_path):
+            # Create directory if it doesn't exist
+            os.makedirs(os.path.dirname(component_path), exist_ok=True)
+            
+            # Create basic component
+            component_name = os.path.basename(component_path).replace('.tsx', '')
+            component_content = f'''import React from 'react';
+
+interface {component_name}Props {{
+  // Add props as needed
+}}
+
+const {component_name}: React.FC<{component_name}Props> = () => {{
+  return (
+    <div className="p-4">
+      <h2 className="text-2xl font-bold mb-4">{component_name}</h2>
+      <p>This component is under development.</p>
+    </div>
+  );
+}};
+
+export default {component_name};
+'''
+            
+            with open(component_path, 'w', encoding='utf-8') as f:
+                f.write(component_content)
+            
+            created_components.append(component_path)
+            print(f"✅ Created missing component: {component_path}")
+    
+    return created_components
+
+def main():
+    print("🚀 Starting comprehensive code improvements...")
+    
+    # Step 1: Find and fix merge conflicts
+    conflict_files = find_merge_conflicts()
+    if conflict_files:
+        print(f"⚠️  Found {len(conflict_files)} files with merge conflicts")
+    
+    # Step 2: Create missing components
+    created_components = create_missing_components()
+    
+    # Step 3: Fix JSX syntax errors
+    fixed_jsx = find_jsx_syntax_errors()
+    
+    # Step 4: Optimize imports
+    optimized_imports = optimize_imports()
+    
+    # Step 5: Fix TypeScript errors
+    fixed_ts = fix_typescript_errors()
+    
+    print("\n🎉 Comprehensive improvements completed!")
+    print(f"📊 Summary:")
+    print(f"   - Merge conflicts found: {len(conflict_files)}")
+    print(f"   - Components created: {len(created_components)}")
+    print(f"   - JSX files fixed: {len(fixed_jsx)}")
+    print(f"   - Import optimizations: {len(optimized_imports)}")
+    print(f"   - TypeScript fixes: {len(fixed_ts)}")
 
 if __name__ == "__main__":
-    improver = ComprehensiveImprovements()
-    improver.run_all_improvements()
+    main()

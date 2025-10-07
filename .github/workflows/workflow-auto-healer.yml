@@ -1,117 +1,53 @@
----
-<<<<<<< HEAD
-name: Workflow Auto-Healer
-
-on:
-  schedule:
-    - cron: '0 */2 * * *'  # Every 2 hours
+name: Workflow Auto Healer Auto-Healer
+'on':
   workflow_dispatch: {}
-  workflow_run:
-    workflows: ['CI', 'Test Suite', 'Security Scan']
-    types: [completed, failed]
-
 permissions:
-  contents: read
+  contents: write
   actions: read
-  
-
+  pull-requests: write
+concurrency:
+  group: workflow-auto-healer
+  cancel-in-progress: false
 jobs:
   auto-heal:
     name: Auto-Heal Workflows
     runs-on: ubuntu-latest
     timeout-minutes: 30
-
-=======
-name: Workflow Auto Healer
-
-on:
-  workflow_run:
-    workflows: ["*"]
-    types: [completed]
-  schedule:
-    - cron: '0 */6 * * *'  # Every 6 hours
-  workflow_dispatch:
-
-permissions:
-  contents: write
-  actions: read
-  pull-requests: write
-  issues: write
-
-concurrency:
-  group: workflow-auto-healer
-  cancel-in-progress: true
-
-jobs:
-  analyze-and-heal:
-    name: Analyze and Heal Workflows
-    runs-on: ubuntu-latest
-    timeout-minutes: 30
->>>>>>> origin/auto/autonomy-17186719616
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
       - name: Setup Python
-<<<<<<< HEAD
-        uses: actions/setup-python@v4
-=======
         uses: actions/setup-python@v5
->>>>>>> origin/auto/autonomy-17186719616
         with:
-          python-version: '3.11'
+          python-version: '3.10'
       - name: Install dependencies
         run: |
           pip install pyyaml
-<<<<<<< HEAD
-      - name: Run workflow validation
-        id: validate
-        run: |
-          echo "Validating all workflow files..."
-          invalid_files = []
-
-          for workflow_file in $(find .github/workflows -name "*.yml" -o -name "*.yaml"); do
-            if ! python3 -c "import yaml; yaml.safe_load(open('$workflow_file', 'r'))" 2>/dev/null; then
-              invalid_files.append("$workflow_file")
-              echo "Invalid workflow: $workflow_file"
-            fi
-          done
-
-          if [ ${#invalid_files[@]} -gt 0 ]; then
-            echo "needs_fix=true" >> $GITHUB_OUTPUT
-            echo "invalid_count=${#invalid_files[@]}" >> $GITHUB_OUTPUT
-            echo "Found ${#invalid_files[@]} invalid workflows"
-          else
-            echo "needs_fix=false" >> $GITHUB_OUTPUT
-=======
       - name: Run workflow auto healer validation
         id: validate
         run: |
           echo "Validating all workflow files..."
-
           invalid_files=()
 
           while IFS= read -r workflow_file; do
-            if ! python3 -c "import yaml, sys; yaml.safe_load(open('$workflow_file','r'))" 2>/dev/null; then
+            if ! python3 -c "import sys,yaml; yaml.safe_load(open(sys.argv[1],'r'))" "$workflow_file" 2>/dev/null; then
               invalid_files+=("$workflow_file")
               echo "Invalid workflow: $workflow_file"
             fi
-          done < <(find .github/workflows -type f \( -name "*.yml" -o -name "*.yaml" \))
+          done < <(find .github/workflows -name "*.yml" -o -name "*.yaml")
 
-          invalid_count=${#invalid_files[@]}
-          if [ "$invalid_count" -gt 0 ]; then
+          if [ ${#invalid_files[@]} -gt 0 ]; then
             echo "needs_fix=true" >> "$GITHUB_OUTPUT"
-            echo "invalid_count=$invalid_count" >> "$GITHUB_OUTPUT"
-            echo "Found $invalid_count invalid workflows"
+            echo "invalid_count=${#invalid_files[@]}" >> "$GITHUB_OUTPUT"
+            echo "Found ${#invalid_files[@]} invalid workflows"
           else
             echo "needs_fix=false" >> "$GITHUB_OUTPUT"
->>>>>>> origin/auto/autonomy-17186719616
             echo "All workflows are valid"
           fi
       - name: Report workflow status
         run: |
-<<<<<<< HEAD
           echo "Workflow validation completed"
           echo "Needs fix: ${{ steps.validate.outputs.needs_fix }}"
           echo "Invalid count: ${{ steps.validate.outputs.invalid_count }}"
@@ -119,9 +55,12 @@ jobs:
         if: steps.validate.outputs.needs_fix == 'true'
         uses: actions/github-script@v7
         with:
-          script: |
+          script: >
             const invalidCount = '${{ steps.validate.outputs.invalid_count }}';
-            const message = `🔧 **Workflow Auto-Healer Report**\n\nFound ${invalidCount} invalid workflow files that need manual attention.\n\nPlease review and fix these workflows manually.`;
+
+            const message = `🔧 **Workflow Auto-Healer Report**\n\nFound ${invalidCount} invalid workflow files that
+            need manual attention.\n\nPlease review and fix these workflows manually.`;
+
 
             github.rest.issues.create({
               owner: context.repo.owner,
@@ -130,103 +69,4 @@ jobs:
               body: message,
               labels: ['workflow-fix', 'automation', 'needs-attention']
             });
-=======
-          echo "📊 Auto-Heal Report" > auto-heal-report.md
-          echo "===================" >> auto-heal-report.md
-          echo "" >> auto-heal-report.md
-          echo "**Timestamp:** $(date)" >> auto-heal-report.md
-          echo "**Workflows Checked:** $(ls .github/workflows/*.yml | wc -l)" >> auto-heal-report.md
-          echo "" >> auto-heal-report.md
-          echo "## Fixes Applied:" >> auto-heal-report.md
-          echo "- YAML syntax fixes" >> auto-heal-report.md
-          echo "- Structural fixes" >> auto-heal-report.md
-          echo "- Missing sections added" >> auto-heal-report.md
-          echo "" >> auto-heal-report.md
-          echo "## Health Status:" >> auto-heal-report.md
-          node automation/workflow-health-monitor.cjs | grep "Health Score" >> auto-heal-report.md
-
-      - name: Create Pull Request for Fixes
-        if: failure()
-        uses: peter-evans/create-pull-request@v6
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          commit-message: "chore(auto-heal): automated workflow fixes"
-          title: "chore(auto-heal): automated workflow fixes and improvements"
-          body: |
-            Automated workflow fixes applied by the Workflow Auto-Healer.
-
-            ## What was fixed:
-            - YAML syntax issues
-            - Missing workflow sections
-            - Structural problems
-            - Permissions and concurrency settings
-
-            ## Files modified:
-            - Multiple workflow files (see diff)
-
-            This PR was automatically created to fix failing workflows.
-          branch: automation/workflow-auto-heal
-          delete-branch: true
-          labels: |
-            automation
-            auto-merge
-            workflow-fix
-
-  monitor-workflow-failures:
-    name: Monitor Workflow Failures
-    runs-on: ubuntu-latest
-    timeout-minutes: 15
-    if: github.event.workflow_run.conclusion == 'failure'
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: Analyze Failed Workflow
-        run: |
-          echo "🔍 Analyzing failed workflow: ${{ github.event.workflow_run.name }}"
-          echo "Workflow ID: ${{ github.event.workflow_run.id }}"
-          echo "Conclusion: ${{ github.event.workflow_run.conclusion }}"
-          echo "Created at: ${{ github.event.workflow_run.created_at }}"
-          echo "Updated at: ${{ github.event.workflow_run.updated_at }}"
-
-      - name: Create Issue for Failed Workflow
-        uses: actions/github-script@v7
-        with:
-          script: |
-            const workflowName = '${{ github.event.workflow_run.name }}';
-            const workflowId = '${{ github.event.workflow_run.id }}';
-            const conclusion = '${{ github.event.workflow_run.conclusion }}';
-            
-            const title = `Workflow Failure: ${workflowName}`;
-            const body = `## Workflow Failure Detected
-            
-            **Workflow:** ${workflowName}
-            **Status:** ${conclusion}
-            **Workflow ID:** ${workflowId}
-            **Triggered by:** ${{ github.event.workflow_run.event }}
-            
-            ## Next Steps
-            1. Review the workflow logs
-            2. Check for configuration issues
-            3. Verify dependencies and secrets
-            4. Run the auto-healer if needed
-            
-            ## Auto-Healing
-            The Workflow Auto-Healer will attempt to fix common issues automatically.
-            
-            ---
-            *This issue was automatically created by the Workflow Auto-Healer*`;
-            
-            try {
-              await github.rest.issues.create({
-                owner: context.repo.owner,
-                repo: context.repo.repo,
-                title: title,
-                body: body,
-                labels: ['workflow-failure', 'needs-attention']
-              });
-              console.log('Issue created successfully');
-            } catch (error) {
-              console.log('Failed to create issue:', error.message);
-            }
->>>>>>> origin/auto/autonomy-17186719616
+    runs_on: ubuntu-latest

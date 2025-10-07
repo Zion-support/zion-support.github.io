@@ -1,0 +1,1 @@
+describe(statusCode: 200, body: {i, d:, t-123',' full_name: 'Cypress Talent, ' bio: ')' Testing: bio''}; skills: [ '

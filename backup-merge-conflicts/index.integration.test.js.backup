@@ -1,9 +1,0 @@
-<<<<<<< HEAD:backup-merge-conflicts/index.integration.test.js.backup
-<<<<<<< HEAD
-const React from "react" import { render,screen } from "@testing-library/react" import "@testing-library/jest-dom import index from "./pages/index" describe("index Integration Tests",() => {" test("page renders correctly",() => {" render(<index / />) expect(screen.getByRole("main")).toBeInTheDocument();" }) test("navigation works",() => {" render(<index / />) }) test("page content is accessible",() => {" render(<index / />) }) test("page loads with correct data",() => {" render(<index / />) }) })'"'"
-=======
-import _React from 'react" import { render,screen } from '@testing-library/react" import '@testing-library/jest-dom import index from '../pages/index" describe('index Integration Tests',() => {' test('page renders correctly',() => {' render(<index / />) expect(screen.getByRole('main')).toBeInTheDocument();' }) test('navigation works',() => {' render(<index / />) }) test('page content is accessible',() => {' render(<index / />) }) test('page loads with correct data',() => {' render(<index / />) }) })
->>>>>>> main
-=======
-import _React from 'react" import { render,screen } from '@testing-library/react" import '@testing-library/jest-dom import index from '../pages/index" describe('index Integration Tests',() => {' test('page renders correctly',() => {' render(<index / />) expect(screen.getByRole('main')).toBeInTheDocument();' }) test('navigation works',() => {' render(<index / />) }) test('page content is accessible',() => {' render(<index / />) }) test('page loads with correct data',() => {' render(<index / />) }) })
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:__tests__/index.integration.test.js

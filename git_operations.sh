@@ -1,70 +1,33 @@
 #!/bin/bash
+set -e
 
-# Simple git operations script
-cd /workspace
-
-echo "Adding all changes..."
-git add -A
-
-echo "Checking git status..."
-git status --porcelain
-
-echo "Committing changes..."
-git commit -m "Resolve merge conflicts and integrate Q4 content updates" || echo "No changes to commit"
-
-echo "Checking current branch..."
-git branch --show-current
-
-echo "Pushing to origin..."
-git push origin main || echo "Push failed"
-
-echo "Done!"
-cd /workspace
-
-echo "Starting git operations..."
+echo "=== Starting Git Operations ==="
 
 # Check current status
-echo "Checking git status..."
-git status --porcelain
+echo "Current git status:"
+git status --short
 
-# Add all changes
-echo "Adding all changes..."
-git add .
-
-# Commit changes
-echo "Committing changes..."
-git commit -m "Resolve merge conflicts and clean up repository
-
-- Resolved conflicts in tailwind.config.ts
-- Resolved conflicts in components/layout/Header.tsx
-- Resolved conflicts in components/layout/Footer.tsx
-- Resolved conflicts in components/layout/EnhancedLayout.tsx
-- Removed conflicted backup files
-- Cleaned up repository structure"
-
-# Check branches
-echo "Checking available branches..."
-git branch -a
-
-# Try to merge any open PRs
-echo "Attempting to merge open PRs..."
-
-# Check if we're on main branch
-current_branch=$(git branch --show-current)
-echo "Current branch: $current_branch"
-
-# If not on main, switch to main
-if [ "$current_branch" != "main" ]; then
-    echo "Switching to main branch..."
-    git checkout main
+# Check if we're in a rebase
+if [ -f ".git/rebase-merge/head-name" ]; then
+    echo "In rebase state, completing rebase..."
+    git add jest.config.cjs
+    git rebase --continue
+    echo "Rebase completed"
+else
+    echo "Not in rebase state"
 fi
 
-# Pull latest changes
-echo "Pulling latest changes from origin..."
-git pull origin main
-
-# Push changes
-echo "Pushing changes to origin..."
+# Push main branch
+echo "Pushing main branch..."
 git push origin main
 
-echo "Git operations completed successfully!"
+# Check for open PRs using GitHub CLI if available
+if command -v gh &> /dev/null; then
+    echo "Checking for open PRs..."
+    gh pr list --state open --repo Zion-Holdings/zion.app
+else
+    echo "GitHub CLI not available, checking via API..."
+    curl -s "https://api.github.com/repos/Zion-Holdings/zion.app/pulls?state=open" | jq -r '.[].title' 2>/dev/null || echo "Could not fetch PRs"
+fi
+
+echo "=== Git Operations Complete ==="

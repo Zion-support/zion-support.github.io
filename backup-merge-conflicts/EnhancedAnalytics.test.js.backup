@@ -1,9 +1,0 @@
-<<<<<<< HEAD:backup-merge-conflicts/EnhancedAnalytics.test.js.backup
-<<<<<<< HEAD
-const React from "react" import { render,screen,fireEvent } from "@testing-library/react" import "@testing-library/jest-dom import EnhancedAnalytics from "./components/EnhancedAnalytics" describe("EnhancedAnalytics",() => {" test("renders without crashing",() => {" render(<EnhancedAnalytics / / />) expect(screen.getByTestId("enhancedanalytics")).toBeInTheDocument();" }) test("displays correct content",() => {" render(<EnhancedAnalytics / / />) }) test("handles user interactions",() => {" render(<EnhancedAnalytics / / />) }) test("applies correct styling",() => {" render(<EnhancedAnalytics / / />) }) })'"'"
-=======
-import _React from 'react"  import '@testing-library/jest-dom import EnhancedAnalytics from '../components/EnhancedAnalytics" describe('EnhancedAnalytics',() => {' test('renders without crashing',() => {' render(<EnhancedAnalytics / / />) expect(screen.getByTestId("enhancedanalytics")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<EnhancedAnalytics / / />) }) test('handles user interactions',() => {' render(<EnhancedAnalytics / / />) }) test('applies correct styling',() => {' render(<EnhancedAnalytics / / />) }) })
->>>>>>> main
-=======
-import _React from 'react"  import '@testing-library/jest-dom import EnhancedAnalytics from '../components/EnhancedAnalytics" describe('EnhancedAnalytics',() => {' test('renders without crashing',() => {' render(<EnhancedAnalytics / / />) expect(screen.getByTestId("enhancedanalytics")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<EnhancedAnalytics / / />) }) test('handles user interactions',() => {' render(<EnhancedAnalytics / / />) }) test('applies correct styling',() => {' render(<EnhancedAnalytics / / />) }) })
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:__tests__/EnhancedAnalytics.test.js

@@ -1,11 +1,3 @@
-
-
-
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-
-
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-
 #!/usr/bin/env node;
 /**
  * Master Automation Script;
@@ -13,8 +5,6 @@
  */
 const fs = require('fs')
 const path = require('path')
-
-
 class MasterAutomation {
   constructor() { 
     this.startTime = Date.now();
@@ -165,15 +155,6 @@ if ( {
     console.error('Master automation "failed": ', error);
     process.exit(1)})}
 module.exports = MasterAutomation;
-
-
-
-
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-
-
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-
   log(message, type = 'INFO')
       'INFO': 'ℹ'
       'SUCCESS': ''
@@ -205,11 +186,4 @@ module.exports = MasterAutomation;
     this.log(`🧪 "Testing"`)
     this.log(`� "Git"`)
       this.log(`Master Automation "failed"`)
-
-
-
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-
-
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-
+    console.error('Master automation "failed")

@@ -4,134 +4,125 @@ This directory contains all the GitHub Actions workflows for the Zion Tech Group
 
 ## Workflows Overview
 
-### 🔄 CI (Continuous Integration)
-- **File**: `.github/workflows/ci.yml`
+### 1. CI (Continuous Integration)
+**File**: `.github/workflows/ci.yml`
 - **Trigger**: Push to main branch or pull requests
-- **Purpose**: Build verification, linting, and type checking
-- **Jobs**: Build and Test
+- **Purpose**: Build, test, and validate code changes
+- **Jobs**:
+  - Build: Install dependencies, lint, type-check, and build the project
+  - Test: Run tests and upload build artifacts
 
-### 🧪 Test
-- **File**: `.github/workflows/test.yml`
+### 2. Test
+**File**: `.github/workflows/test.yml`
 - **Trigger**: Push to main branch or pull requests
-- **Purpose**: Comprehensive testing and build verification
-- **Jobs**: Main testing job with build artifacts
+- **Purpose**: Comprehensive testing and validation
+- **Jobs**:
+  - Main: Build, test, and verify the application
 
-### 🔒 CodeQL Security Analysis
-- **File**: `.github/workflows/codeql.yml`
-- **Trigger**: Push to main/develop branches, pull requests, and weekly schedule
-- **Purpose**: Security vulnerability scanning using GitHub's CodeQL
-- **Jobs**: JavaScript/TypeScript security analysis
-
-### 📦 NPM Package Check
-- **File**: `.github/workflows/npm-publish.yml`
-- **Trigger**: Push to main branch (excluding markdown files)
-- **Purpose**: Package verification and build testing
-- **Jobs**: Package validation and build verification
-
-### 🚀 Deploy to Production
-- **File**: `.github/workflows/deploy.yml`
+### 3. Deploy
+**File**: `.github/workflows/deploy.yml`
 - **Trigger**: Push to main branch or manual dispatch
-- **Purpose**: Production deployment with build verification
-- **Jobs**: Production deployment with artifacts
+- **Purpose**: Deploy the application to production
+- **Jobs**:
+  - Deploy: Build and deploy to Netlify/Vercel (if configured)
 
-### 🔍 Dependency Review
-- **File**: `.github/workflows/dependency-review.yml`
-- **Trigger**: Pull requests to main/develop branches
-- **Purpose**: Security vulnerability checking in dependencies
-- **Jobs**: Dependency security analysis
+### 4. Security
+**File**: `.github/workflows/security.yml`
+- **Trigger**: Push to main branch, pull requests, or weekly schedule
+- **Purpose**: Security vulnerability scanning
+- **Jobs**:
+  - Security: Run npm audit and security checks
 
-### ✅ Quality Check
-- **File**: `.github/workflows/quality-check.yml`
-- **Trigger**: Push to main/develop branches and pull requests
-- **Purpose**: Code quality, linting, and security audits
-- **Jobs**: Comprehensive quality assurance
+### 5. CodeQL
+**File**: `.github/workflows/codeql.yml`
+- **Trigger**: Push to main/develop branches, pull requests, or weekly schedule
+- **Purpose**: Static code analysis for security vulnerabilities
+- **Jobs**:
+  - Analyze: CodeQL analysis for JavaScript/TypeScript
 
-### 🔄 Continuous Improvement
-- **File**: `.github/workflows/continuous-improvement.yml`
-- **Trigger**: Every 4 hours and manual dispatch
-- **Purpose**: Automated improvement suggestions and PR creation
-- **Jobs**: Improvement automation with auto-merge
+### 6. Continuous Improvement
+**File**: `.github/workflows/continuous-improvement.yml`
+- **Trigger**: Every 4 hours or manual dispatch
+- **Purpose**: Automated code quality improvements
+- **Jobs**:
+  - Improve: Run linting, type checking, and create improvement PRs
 
-### 🕷️ Link Crawler Factory
-- **File**: `.github/workflows/agent-factory.yml`
-- **Trigger**: Every 30 minutes and manual dispatch
-- **Purpose**: Automated link checking and broken link detection
-- **Jobs**: Distributed link crawling with issue reporting
+### 7. Link Checker
+**File**: `.github/workflows/agent-factory.yml`
+- **Trigger**: Every 6 hours or manual dispatch
+- **Purpose**: Check for broken links on the website
+- **Jobs**:
+  - Check-links: Verify internal and external links
 
-## Configuration Files
+## Required Secrets
 
-### CodeQL Configuration
-- **File**: `.github/codeql/codeql-config.yml`
-- **Purpose**: Security analysis configuration for TypeScript/React projects
+### For Deployment
+- `NETLIFY_AUTH_TOKEN`: Netlify authentication token
+- `NETLIFY_SITE_ID`: Netlify site ID
+- `VERCEL_TOKEN`: Vercel authentication token
+- `VERCEL_ORG_ID`: Vercel organization ID
+- `VERCEL_PROJECT_ID`: Vercel project ID
 
-## Scripts Required
+### For Testing (Optional)
+- `CODECOV_TOKEN`: Codecov token for test coverage
+- `CYPRESS_TEST_USER_EMAIL`: Test user email for Cypress
+- `CYPRESS_TEST_USER_PASSWORD`: Test user password for Cypress
 
-The following npm scripts must be available in `package.json`:
+## Local Development
 
-```json
-{
-  "scripts": {
-    "test": "echo 'No tests configured yet'",
-    "test:ci": "echo 'CI tests placeholder'",
-    "security:scan": "echo 'Security scan placeholder'",
-    "cypress:run": "echo 'Cypress tests placeholder'",
-    "automation:improvement": "echo 'Automation improvement placeholder'",
-    "diversify": "echo 'Diversification placeholder'"
-  }
-}
+To test workflows locally, you can use [act](https://github.com/nektos/act):
+
+```bash
+# Install act
+brew install act
+
+# Run a specific workflow
+act -W .github/workflows/ci.yml
+
+# Run with specific event
+act push -W .github/workflows/ci.yml
 ```
 
-## Environment Variables
+## Workflow Dependencies
 
-The following secrets may be required (depending on your setup):
-
-- `GITHUB_TOKEN` - Automatically provided by GitHub
-- `NPM_TOKEN` - For NPM package publishing (if applicable)
-- `CYPRESS_*` - For Cypress testing (if applicable)
-- `CODECOV_TOKEN` - For code coverage reporting (if applicable)
-
-## Branch Protection
-
-Recommended branch protection rules for `main`:
-
-- Require status checks to pass before merging
-- Require branches to be up to date before merging
-- Require pull request reviews before merging
-- Require conversation resolution before merging
-
-## Monitoring
-
-- All workflows run on Ubuntu latest with Node.js 20
-- Build artifacts are uploaded for inspection
-- Security scans run automatically
-- Quality checks run on every push and PR
+The workflows are designed to work together:
+1. **CI** runs on every push/PR
+2. **Test** provides comprehensive testing
+3. **Security** runs security checks
+4. **Deploy** deploys successful builds
+5. **Continuous Improvement** maintains code quality
+6. **Link Checker** ensures website integrity
 
 ## Troubleshooting
 
 ### Common Issues
 
-1. **Build Failures**: Check Node.js version compatibility
-2. **Missing Scripts**: Ensure all required npm scripts exist
-3. **Permission Errors**: Verify workflow permissions are correctly set
-4. **Timeout Issues**: Increase timeout values for long-running jobs
+1. **Build Failures**: Check Node.js version compatibility and dependency issues
+2. **Test Failures**: Ensure all tests pass locally before pushing
+3. **Deployment Issues**: Verify deployment secrets are configured correctly
+4. **Security Alerts**: Review npm audit output and update vulnerable dependencies
 
-### Debug Mode
+### Debugging
 
-To debug workflows, add `ACTIONS_STEP_DEBUG: true` to your repository secrets.
+- Check workflow logs in the Actions tab
+- Use `act` for local testing
+- Review artifact uploads for debugging information
+- Check issue creation for automated reports
 
 ## Contributing
 
 When adding new workflows:
-
 1. Follow the existing naming conventions
-2. Include proper error handling and continue-on-error where appropriate
-3. Add comprehensive documentation
-4. Test workflows in a fork before submitting
+2. Include proper error handling
+3. Add appropriate permissions
+4. Document the workflow purpose
+5. Test locally with `act`
 
-## Support
+## Best Practices
 
-For workflow issues, check:
-1. GitHub Actions logs for detailed error messages
-2. Required scripts and dependencies
-3. Permission configurations
-4. Environment variable requirements
+- Use Node.js 20 for consistency
+- Cache npm dependencies for faster builds
+- Upload artifacts for debugging
+- Use appropriate permissions (principle of least privilege)
+- Include proper error handling and continue-on-error where appropriate
+- Use concurrency groups to prevent workflow conflicts

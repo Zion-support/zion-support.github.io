@@ -1,63 +1,37 @@
-<<<<<<< HEAD
----
 name: Playwright Smoke Tests
-
-on:
+'on':
   push:
-    branches: [ main, develop ]
+    branches:
+      - main
+      - develop
   pull_request:
-    branches: [ main, develop ]
+    branches:
+      - main
+      - develop
   workflow_dispatch: {}
   schedule:
-    - cron: '0 4 * * *' # Daily at 4 AM UTC
-
+    - cron: 0 4 * * *
 permissions:
   contents: read
   actions: read
-
 concurrency:
-  group: "smoke-test-${{ github.ref }}"
+  group: smoke-test-${{ github.ref }}
   cancel-in-progress: true
-
 jobs:
   smoke-test:
     name: Smoke Tests
     runs-on: ubuntu-latest
     timeout-minutes: 20
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-=======
-name: Playwright Smoke
-
-on:
-  workflow_dispatch: {}
-  schedule:
-    - cron: '*/10 * * * *'
-
-permissions:
-  contents: write
-  actions: read
-
-jobs:
-  main:
-    name: Main Job
-    runs-on: ubuntu-latest
-    timeout-minutes: 20
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-
->>>>>>> origin/auto/autonomy-17186719616
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '20'
           cache: 'npm'
-<<<<<<< HEAD
+      - name: Install serve
+        run: npm install -g serve
       - name: Install dependencies
         run: npm ci --no-audit --no-fund
       - name: Install Playwright browsers
@@ -65,14 +39,14 @@ jobs:
       - name: Build application
         run: npm run build
         env:
-          NODE_OPTIONS: "--max-old-space-size=4096"
+          NODE_OPTIONS: '--max-old-space-size=4096'
       - name: Start application
         run: |
           npm run start &
           echo "Starting application for smoke tests..."
           sleep 10
         env:
-          NODE_OPTIONS: "--max-old-space-size=4096"
+          NODE_OPTIONS: '--max-old-space-size=4096'
       - name: Wait for app to be ready
         run: |
           echo "Waiting for application to be ready..."
@@ -88,7 +62,7 @@ jobs:
             sleep 2
           done
       - name: Run smoke tests
-        run: npx playwright test smoke.spec.ts --project=chromium --reporter=html
+        run: npx playwright test tests/smoke.spec.ts --project=chromium --reporter=html
         env:
           BASE_URL: http://localhost:3000
         continue-on-error: false
@@ -106,13 +80,4 @@ jobs:
           name: smoke-test-results
           path: playwright-report/
           retention-days: 7
-=======
-
-      - name: Install dependencies
-        run: npm ci --no-audit --no-fund
-
-concurrency:
-  group: ${{ github.workflow }}-${{ github.ref }}
-  cancel-in-progress: true
-
->>>>>>> origin/auto/autonomy-17186719616
+    runs_on: ubuntu-latest

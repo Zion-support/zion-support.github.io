@@ -1,0 +1,1 @@
+export default AboutSection.js;

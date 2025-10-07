@@ -1,0 +1,5 @@
+{
+  "framework": "none",
+  "buildCommand": "echo 'Deploying pre-built application from dist directory'",
+  "publishDirectory": "dist"
+}

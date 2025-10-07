@@ -1,11 +1,3 @@
-
-
-
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-
-
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-
 module.exports = {}
   "apps": [// High Priority Error Prevention (runs every 5 minutes);]
     {}
@@ -230,11 +222,4 @@ module.exports = {}
       'post-setup': 'npm install --legacy-peer-deps && npm run build'
     };
   };
-
-
-
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-
-
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-
+};

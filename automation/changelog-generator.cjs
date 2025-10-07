@@ -1,41 +1,42 @@
 #!/usr/bin/env node
-/* Generate/Update CHANGELOG.md from recent commits. */
-const fs = require('fs');
 const { execSync } = require('child_process');
+const fs = require('fs');
+const path = require('path');
 
-function getRecentCommits(limit = 50){
-  try{
-    const out = execSync(`git log -n ${limit} --pretty=format:%h|%ad|%s --date=short`, { encoding: 'utf8' });
-    return out.split('\n').filter(Boolean).map(line => {
-      const [hash, date, ...rest] = line.split('|');
-      const subject = rest.join('|');
-      return { hash, date, subject };
-    });
-  }catch(e){
-    console.error('git log failed', e.message);
-    return [];
+function getRecentCommits() {
+  try {
+    const log = execSync('git log --since="2 days ago" --pretty=format:"- %s (%h)"', { encoding: 'utf8' });
+    return log.trim();
+  } catch (e) {
+    return '';
   }
 }
 
-function buildChangelog(commits){
-  const today = new Date().toISOString().slice(0,10);
-  let body = `# Changelog\n\n## ${today}\n`;
-  for (const c of commits){
-    body += `- ${c.subject} (${c.hash}, ${c.date})\n`;
-  }
-  return body;
-}
-
-(function main(){
-  const commits = getRecentCommits(100);
-  if (commits.length === 0){
-    console.log('No commits found');
+function main() {
+  const commits = getRecentCommits();
+  if (!commits) {
+    console.log('No recent commits to add to changelog.');
     return;
   }
+
+  const changelogPath = path.join(process.cwd(), 'CHANGELOG.md');
+  const date = new Date().toISOString().slice(0, 10);
+  const header = `\n\n## ${date}\n`;
+  const section = `${header}${commits}\n`;
+
   let existing = '';
-  try { existing = fs.readFileSync('CHANGELOG.md','utf8'); } catch {}
-  const header = buildChangelog(commits);
-  const content = existing ? header + '\n\n' + existing : header + '\n';
-  fs.writeFileSync('CHANGELOG.md', content);
-  console.log('CHANGELOG.md updated');
-})();
+  if (fs.existsSync(changelogPath)) existing = fs.readFileSync(changelogPath, 'utf8');
+
+  if (existing.includes(header.trim())) {
+    console.log('Changelog already has an entry for today. Skipping.');
+    return;
+  }
+
+  const content = existing ? `${existing}${section}` : `# Changelog\n${section}`;
+  fs.writeFileSync(changelogPath, content);
+  console.log('Changelog updated.');
+}
+
+if (require.main === module) {
+  main();
+}

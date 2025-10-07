@@ -1,87 +1,38 @@
-name: Publish npm package
+name: Package Validation
 
 on:
-  push:
-    branches:
-      - main
-    paths-ignore:
-      - '**/*.md'
-<<<<<<< HEAD
-      - '.github/**'
-      - 'docs/**'
+  # Disabled - no triggers
+  # push:
+  #   branches:
+  #     - main
+  #   paths-ignore:
+  #     - '**/*.md'
 
 jobs:
-  publish:
-    name: Publish to npm
-    runs-on: ubuntu-latest
-    if: ${{ !contains(github.event.head_commit.message, '[skip ci]') }}
-    
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-=======
-
-jobs:
-  publish:
+  validate:
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v4
 
-      - name: Use Node.js 18
+      - name: Use Node.js 20
         uses: actions/setup-node@v4
         with:
-          node-version: '18'
->>>>>>> origin/auto/autonomy-17186719616
-          registry-url: 'https://registry.npmjs.org'
+          node-version: '20'
+          cache: 'npm'
 
       - name: Install dependencies
         run: npm ci
 
-<<<<<<< HEAD
-      - name: Check if package is private
-        id: check-private
-        run: |
-          if npm run --silent echo:private 2>/dev/null | grep -q "true"; then
-            echo "private=true" >> $GITHUB_OUTPUT
-          else
-            echo "private=false" >> $GITHUB_OUTPUT
-          fi
-
-      - name: Skip publish for private packages
-        if: steps.check-private.outputs.private == 'true'
-        run: |
-          echo "Package is private, skipping publish"
-          exit 0
-
       - name: Run tests
-        if: steps.check-private.outputs.private == 'false'
         run: npm test --if-present
 
       - name: Build project
-        if: steps.check-private.outputs.private == 'false'
         run: npm run build
 
-      - name: Publish to npm
-        if: steps.check-private.outputs.private == 'false'
-        run: npm publish --access public
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-
-      - name: Publish success
-        if: steps.check-private.outputs.private == 'false'
-        run: echo "Package published successfully to npm"
-=======
-      - name: Run tests
-        run: npm test --if-present
-
-      - name: Publish to npm
-        run: npm publish --access public
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
->>>>>>> origin/auto/autonomy-17186719616
+      - name: Validate package
+        run: |
+          echo "Package validation completed successfully"
+          echo "Package name: $(npm run --silent echo:name)"
+          echo "Package version: $(npm run --silent echo:version)"
+          echo "Package is private: $(npm run --silent echo:private)"

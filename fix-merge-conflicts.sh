@@ -1,62 +1,23 @@
 #!/bin/bash
 
-# Script to fix merge conflicts by keeping HEAD version
-echo "Fixing merge conflicts in pages/ directory..."
+# Script to fix merge conflict markers in all files
+echo "Fixing merge conflict markers..."
 
-# Find all files with merge conflicts
-files_with_conflicts=$(find pages/ -name "*.tsx" -exec grep -l "" {} \;)
-
-for file in $files_with_conflicts; do
+# Find all files with merge conflict markers and fix them
+find /workspace -type f \( -name "*.ts" -o -name "*.tsx" -o -name "*.js" -o -name "*.jsx" -o -name "*.json" -o -name "*.css" -o -name "*.md" \) -exec grep -l "<<<<<<< HEAD\|=======\|>>>>>>> " {} \; | while read file; do
     echo "Fixing merge conflicts in: $file"
     
     # Create a backup
     cp "$file" "$file.backup"
     
-    # Use sed to remove merge conflict markers and keep HEAD version
-    # Remove lines from  to  (inclusive)
-    # Remove lines from  to     sed -i '//,//d' "$file"
-    sed -i '//,/    
-    echo "Fixed: $file"
+    # Remove merge conflict markers and keep the HEAD version (first part)
+    sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
+    sed -i '/>>>>>>> /d' "$file"
+    
+    # Clean up any remaining conflict markers
+    sed -i '/^<<<<<<< /d' "$file"
+    sed -i '/^=======$/d' "$file"
+    sed -i '/^>>>>>>> /d' "$file"
 done
 
-echo "Merge conflicts fixed!"
-echo "Fixing merge conflicts in the codebase..."
-
-# Find all files with merge conflicts
-files_with_conflicts=$(grep -r "files_with_conflicts=$(grep -r "files_with_conflicts=$(find pages/ -name "*.tsx" -exec grep -l "
-echo "Found files with merge conflicts:"
-echo "$files_with_conflicts"
-
-# Create backup directory
-mkdir -p /workspace/backup-merge-conflicts
-
-# Process each file
-for file in $files_with_conflicts; do
-    echo "Processing: $file"
-    
-    # Create backup
-    cp "$file" "/workspace/backup-merge-conflicts/$(basename "$file").backup"
-    
-    # Remove merge conflict markers and keep the main branch content
-    sed -i '/    sed -i '/# Script to fix merge conflicts by keeping HEAD version
-echo "Fixing merge conflicts in pages/ directory..."
-
-# Find all files with merge conflicts
-files_with_conflicts=$(find pages/ -name "*.tsx" -exec grep -l "
-for file in $files_with_conflicts; do
-    echo "Fixing merge conflicts in: $file"
-    
-    # Create a backup
-    cp "$file" "$file.backup"
-    
-    # Remove merge conflict markers and keep the main branch content
-    sed -i '/    sed -i '/    # Use sed to remove merge conflict markers and keep HEAD version
-    # Remove lines from     # Remove lines from     sed -i '/    sed -i '/    
-    echo "Fixed: $file"
-done
-
-echo "Merge conflicts fixed. Backups saved to /workspace/backup-merge-conflicts/"
-echo "Please review the changes and test the build."
-echo "Merge conflicts fixed. Backups saved to /workspace/backup-merge-conflicts/"
-echo "Please review the changes and test the build."
-echo "Merge conflicts fixed!"
+echo "Merge conflict markers fixed!"

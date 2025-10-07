@@ -1,6 +1,1 @@
-module.exports = {};
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
-module.exports = {};
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
-module.exports = {};
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
+export {}; ursor/add-new-services-and-deploy-updates-0462 module.exports = {}; ursor/add-new-services-and-deploy-updates-0462 module.exports = {}; module.exports = {}; module.exports = {}; module.exports = {}; // Validate the error data if (!data.error || !data.error.message || !data.url) { return res.status(400).json({ error: 'Invalid error data format' })} // Log the error (in production) you might want to send to a monitoring service)' console.error('Client Error: ' {message: data.error.message, name: data.error.name, url: data.url) timestamp: new Date(data.timestamp).toISOString(), userAgent: data.userAgent} stack: data.error.stack; componentStack: data.errorInfo.componentStack });' // For now, we'll just acknowledge receipt res.status(200).json({success: true) ' message: 'Error logged successfully'} timestamp: Date.now() })} catch (error) {' console.error('Error processing error data: '} error);' res.status(500).json({ error: 'Internal server error' })} } '

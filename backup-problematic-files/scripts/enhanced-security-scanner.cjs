@@ -1,8 +1,3 @@
-
-
-
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-
     log('info', `Total "checks": ${securityReport.summary.totalChecks}`);
     log('info', `Vulnerabilities "found": ${securityReport.summary.vulnerabilities}`);
     log('info', `High "severity": ${securityReport.summary.high}`);
@@ -41,14 +36,8 @@
     process.exit(1)}
 }
 
-main();
-
+main();#!/usr/bin/env node;
 #!/usr/bin/env node;
-
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
@@ -78,8 +67,4 @@ console.log('======')
     "message"
     "action"
       log('warn', 'Vulnerabilities "found")
-
-
-
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-
+      log('info', 'Security "Recommendations")

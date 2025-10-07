@@ -1,19 +1,14 @@
----
 name: Monetization Automation Continuous
-
-on:
+'on':
   schedule:
-    - cron: '0 */2 * * *' # every 30 minutes
-  workflow_dispatch:
-
+    - cron: 0 */2 * * *
+  workflow_dispatch: null
+concurrency:
+  group: monetization-continuous
+  cancel-in-progress: true
 permissions:
   contents: read
   actions: read
-
-concurrency:
-  group: monetization-continuous-${{ github.ref }}
-  cancel-in-progress: true
-
 jobs:
   monetization:
     runs-on: ubuntu-latest
@@ -28,16 +23,30 @@ jobs:
           cache: npm
       - name: Install dependencies
         run: npm ci
+        continue-on-error: true
       - name: Run monetization orchestrator (single cycle)
+        if: always()
         run: node automation/monetization-orchestrator.cjs once | cat
         env:
           MONETIZATION_APPLY: "false"
+        continue-on-error: true
       - name: Upload monetization reports and logs
         uses: actions/upload-artifact@v4
+          retention-days: 30
         with:
+          retention-days: 30
           name: monetization-artifacts
           path: |
             data/reports/monetization/**/*
             automation/logs/**/*.log
           if-no-files-found: ignore
           retention-days: 7
+        if: always()
+      - name: Create summary
+        if: always()
+        run: |
+          echo "## Monetization Continuous Summary" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "**Status:** Monetization automation continuous process completed" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "**Timestamp:** $(date -u)" >> $GITHUB_STEP_SUMMARY

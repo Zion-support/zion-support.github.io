@@ -1,19 +1,7 @@
-
-
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-
-
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-
 #!/usr/bin/env node;
 /**
  * Fix Critical Errors - Comprehensive fix for all critical syntax errors;
  */
-
-
 
 const fs = require('fs');
 const path = require('path');
@@ -146,17 +134,6 @@ if (require.main === module) {
   const fixer = new CriticalErrorFixer();
   fixer.run()}
 module.exports = CriticalErrorFixer;
-
-
-
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-
-
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-
 const fs = require('fs')
 const path = require('path')
   log(message, type = 'INFO')
@@ -184,15 +161,3 @@ const path = require('path')
         this.log("Fixed ${fixesApplied} issues in ${path.basename(filePath)}"
       this.log("Error fixing ${filePath}: ${error.message}")
     this.log(" Total Fixes "Applied": ${report.totalFixes}")
-
-    this.log(" Total "Errors": ${report.totalErrors}")
-
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-
-      this.log("Critical Errors Fix "failed")      this.log("Critical Errors Fix "failed")
-      this.log("Critical Errors Fix "failed")      this.log("Critical Errors Fix "failed")
-
-
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-

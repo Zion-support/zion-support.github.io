@@ -1,20 +1,14 @@
-<<<<<<< HEAD
----
 name: release-drafter
-
-on:
+'on':
   schedule:
-    - cron: '0 2 * * *'
-  workflow_dispatch:
-
+    - cron: 0 2 * * *
+  workflow_dispatch: null
 permissions:
   contents: read
   actions: read
-
 concurrency:
-  group: "${{ github.workflow }}-${{ github.ref }}"
+  group: release-drafter-${{ github.ref }}
   cancel-in-progress: true
-
 jobs:
   main:
     runs-on: ubuntu-latest
@@ -29,8 +23,8 @@ jobs:
           cache: npm
       - name: Install dependencies
         run: npm ci
-      - name: Run workflow
-        run: echo "Workflow executed successfully"
+      - name: Run release drafter
+        run: 
       - name: Upload results
         uses: actions/upload-artifact@v4
         if: always()
@@ -39,24 +33,4 @@ jobs:
           path: |
             .github/workflows/
           retention-days: 7
-=======
-name: Release Drafter
-
-on:
-  push:
-    branches:
-      - main
-  workflow_dispatch:
-
-permissions:
-  contents: write
-
-jobs:
-  update_release_draft:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: release-drafter/release-drafter@v6
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
->>>>>>> origin/auto/autonomy-17186719616
+    runs_on: ubuntu-latest

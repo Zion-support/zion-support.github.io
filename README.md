@@ -1,206 +1,82 @@
-# Zion Tech Group - Leading-Edge Technology Solutions
+# Zion Tech Group Website
 
-A modern, responsive website built with Next.js, TypeScript, and Tailwind CSS, showcasing cutting-edge technology solutions in AI, quantum computing, and cybersecurity.
+Advanced AI and IT Solutions Website built with React, TypeScript, and Vite.
 
-## 🚀 Features
+## 🚀 Quick Start
 
-- **Modern Design**: Beautiful, responsive design with gradient backgrounds and glassmorphism effects
-- **Performance Optimized**: Built with Next.js for optimal performance and SEO
-- **TypeScript**: Full type safety and better development experience
-- **Responsive**: Mobile-first design that works on all devices
-- **Animations**: Smooth animations powered by Framer Motion
-- **Accessibility**: Built with accessibility best practices
+```bash
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+
+# Build for production
+npm run build
+
+# Run tests
+npm test
+
+# Run health check
+npm run health-check
+```
+
+## 📋 Available Scripts
+
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run test` - Run tests
+- `npm run lint` - Run ESLint
+- `npm run type-check` - Run TypeScript type checking
+- `npm run health-check` - Run all checks (type-check, lint, build, test)
 
 ## 🛠️ Tech Stack
 
-- **Framework**: Next.js 13+ with App Router
-- **Language**: TypeScript
+- **Frontend**: React 18, TypeScript, Vite
 - **Styling**: Tailwind CSS
-- **Animations**: Framer Motion
 - **Icons**: Lucide React
-- **Build Tool**: Webpack with Babel
-- **Deployment**: Ready for Vercel, Netlify, or any static hosting
+- **Testing**: Jest
+- **Linting**: ESLint
+- **Build**: Vite with Terser minification
 
 ## 📁 Project Structure
 
 ```
-zion-tech-group/
-├── components/                 # Reusable UI components
-│   ├── EnhancedNavigation.tsx # Main navigation component
-│   ├── EnhancedFooter.tsx     # Footer component
-│   ├── EnhancedServicesShowcase.tsx # Services showcase
-│   └── EnhancedTestimonialsSection.tsx # Testimonials
-├── pages/                     # Next.js pages
-│   ├── index.tsx             # Homepage
-│   ├── about.tsx             # About page
-│   ├── contact.tsx           # Contact page
-│   ├── _app.tsx              # App wrapper
-│   ├── _document.tsx         # Document wrapper
-│   └── 404.tsx               # 404 error page
-├── data/                      # Data files
-│   └── enhanced-micro-saas-services-2025.ts
-├── public/                    # Static assets
-├── styles/                    # Global styles
-├── babel.config.js           # Babel configuration
-├── next.config.js            # Next.js configuration
-├── package.json              # Dependencies and scripts
-└── tailwind.config.js        # Tailwind CSS configuration
+├── app/                    # Next.js app directory
+├── src/                    # Source code
+├── components/             # Reusable components
+├── __tests__/             # Test files
+├── dist/                  # Build output
+└── public/                # Static assets
 ```
 
-## 🚀 Getting Started
+## 🔧 Development
 
-### Prerequisites
-
-- Node.js 18+ 
-- npm or yarn
-
-### Installation
-
-1. Clone the repository:
-```bash
-git clone <repository-url>
-cd zion-tech-group
-```
-
-2. Install dependencies:
-```bash
-npm install
-```
-
-3. Run the development server:
-```bash
-npm run dev
-```
-
-4. Open [http://localhost:3000](http://localhost:3000) in your browser.
-
-### Build for Production
-
-```bash
-npm run build
-npm start
-```
-
-## 📱 Pages
-
-### Homepage (`/`)
-- Hero section with compelling messaging
-- Features showcase
-- Core services overview
-- Statistics and social proof
-- Call-to-action sections
-
-### About (`/about`)
-- Company mission and values
-- Leadership team
-- Company statistics
-- Why choose us section
-
-### Contact (`/contact`)
-- Contact form
-- Company information
-- Office details
-- Response time commitments
-
-## 🎨 Design System
-
-### Colors
-- **Primary**: Cyan to Blue gradients
-- **Background**: Dark slate themes
-- **Accent**: Purple and pink highlights
-- **Text**: White with various opacity levels
-
-### Typography
-- **Headings**: Large, bold with gradient text effects
-- **Body**: Clean, readable text with proper hierarchy
-- **Fonts**: System fonts for optimal performance
-
-### Components
-- **Cards**: Glassmorphism effect with backdrop blur
-- **Buttons**: Gradient backgrounds with hover effects
-- **Navigation**: Fixed header with smooth transitions
-- **Forms**: Modern input styling with focus states
-
-## 🔧 Configuration
-
-### Next.js Configuration
-The project uses a simplified Next.js configuration optimized for performance and compatibility.
-
-### Babel Configuration
-Custom Babel setup for optimal compatibility with modern JavaScript features.
-
-### Tailwind CSS
-Fully configured with custom color schemes and component utilities.
-
-## 📊 Performance
-
-- **Lighthouse Score**: Optimized for 90+ scores
-- **Bundle Size**: Optimized with code splitting
-- **Images**: Optimized and responsive
-- **SEO**: Meta tags and structured data ready
+1. Clone the repository
+2. Install dependencies: `npm install`
+3. Start development server: `npm run dev`
+4. Open http://localhost:5173
 
 ## 🚀 Deployment
 
-### Vercel (Recommended)
-1. Connect your GitHub repository
-2. Deploy automatically on push
-3. Optimized for Next.js
+1. Build the project: `npm run build`
+2. The `dist/` folder contains the production build
+3. Deploy the `dist/` folder to your hosting provider
 
-### Netlify
-1. Build command: `npm run build`
-2. Publish directory: `out`
-3. Environment variables as needed
+## 📝 Contributing
 
-### Static Export
-```bash
-npm run build
-npm run export
-```
+1. Run `npm run health-check` before committing
+2. Ensure all tests pass
+3. Follow the existing code style
+4. Update documentation as needed
 
-## 🤝 Contributing
+## 🐛 Troubleshooting
 
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Test thoroughly
-5. Submit a pull request
+- **TypeScript errors**: Run `npm run type-check`
+- **Linting errors**: Run `npm run lint:fix`
+- **Build issues**: Run `npm run build` and check the output
+- **Test failures**: Run `npm test` for details
 
 ## 📄 License
 
-This project is proprietary to Zion Tech Group.
-
-## 📞 Support
-
-For support or questions:
-- Email: contact@ziontechgroup.com
-- Phone: +1 (555) 123-4567
-
-## 🚀 Latest Content & Features (January 2025)
-
-### Revolutionary New Content
-- **AI Business Automation Guide**: Complete roadmap to AI transformation
-- **Quantum Computing Applications**: Business applications and implementation
-- **Success Stories**: Real case studies with proven ROI results
-- **Implementation Guides**: Step-by-step automation implementation
-
-### Enhanced Features
-- ✅ **Interactive Content Showcase**: Dynamic content promotion
-- ✅ **Advanced Service Pages**: Comprehensive service descriptions
-- ✅ **Case Study Library**: Proven success stories and results
-- ✅ **Resource Center**: Implementation guides and best practices
-- ✅ **Promotional Components**: Enhanced content advertising
-- ✅ **Responsive Design**: Mobile-optimized user experience
-
-## 🔮 Future Enhancements
-
-- [ ] Multi-language support
-- [ ] Advanced analytics dashboard
-- [ ] Customer portal
-- [ ] API documentation
-- [ ] Interactive demos
-- [ ] Video content integration
-- [ ] Advanced search functionality
-
----
-
-Built with ❤️ by Zion Tech Group
+MIT License - see LICENSE file for details.

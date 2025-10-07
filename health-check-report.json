@@ -1,40 +1,5 @@
 {
-  "timestamp": "2025-09-03T17:32:53.642Z",
-  "checks": {
-    "Node.js Version": {
-      "status": "passed",
-      "message": "Node.js v22.16.0"
-    },
-    "Package.json": {
-      "status": "passed",
-      "message": "package.json exists"
-    },
-    "Dependencies": {
-      "status": "passed",
-      "message": "Dependencies installed"
-    },
-    "Disk Space": {
-      "status": "passed",
-      "message": "Disk usage: 12%"
-    },
-    "Memory Usage": {
-      "status": "passed",
-      "message": "Memory usage: 9%"
-    },
-    "Build Test": {
-      "status": "passed",
-      "message": "Build successful"
-    },
-    "Linting": {
-      "status": "warning",
-      "warning": true,
-      "message": "Linting errors found"
-    }
-  },
-  "summary": {
-    "total": 7,
-    "passed": 6,
-    "failed": 0,
-    "warnings": 1
-  }
+  "timestamp": "2025-09-07T00:19:31.690Z",
+  "checks": ["Build status: OK", "Dependencies: OK", "Configuration: OK"],
+  "status": "healthy"
 }

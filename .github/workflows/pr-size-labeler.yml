@@ -1,20 +1,14 @@
-<<<<<<< HEAD
----
 name: pr-size-labeler
-
-on:
+'on':
   schedule:
-    - cron: '0 2 * * *'
-  workflow_dispatch:
-
+    - cron: 0 2 * * *
+  workflow_dispatch: null
 permissions:
   contents: read
   actions: read
-
 concurrency:
-  group: "${{ github.workflow }}-${{ github.ref }}"
+  group: pr-size-labeler-${{ github.ref }}
   cancel-in-progress: true
-
 jobs:
   main:
     runs-on: ubuntu-latest
@@ -29,8 +23,8 @@ jobs:
           cache: npm
       - name: Install dependencies
         run: npm ci
-      - name: Run workflow
-        run: echo "Workflow executed successfully"
+      - name: Run pr size labeler
+        run: 
       - name: Upload results
         uses: actions/upload-artifact@v4
         if: always()
@@ -39,29 +33,4 @@ jobs:
           path: |
             .github/workflows/
           retention-days: 7
-=======
-name: PR Size Labeler
-
-on:
-  pull_request:
-    types: [opened, synchronize, reopened]
-
-permissions:
-  contents: read
-  pull-requests: write
-
-jobs:
-  size-label:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: codelytv/pr-size-labeler@v1
-        with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          xs_label: size/XS
-          s_label: size/S
-          m_label: size/M
-          l_label: size/L
-          xl_label: size/XL
-          fail_if_xl: false
-          update_always: true
->>>>>>> origin/auto/autonomy-17186719616
+    runs_on: ubuntu-latest

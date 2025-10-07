@@ -1,0 +1,1 @@
+:backup-problematic-files/components/automation/bundle-report.tsx <div className="text-left" > <h1 className="text-left" >Bundle Size Report</h1> <p className="text-left" >Build artifact sizes are summarized in <code className="text-left" >data/perf/bundles.json</code>.</p> <p className="text-left" >Runs every 30 minutes and auto-PRs updates.</p> </div> ) } </div>)"

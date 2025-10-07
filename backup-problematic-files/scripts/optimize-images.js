@@ -1,0 +1,1 @@
+const imageFiles = files && files.filter(file =>

@@ -1,6 +1,1 @@
-module.exports = {};
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
-module.exports = {};
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
-module.exports = {};
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
+export {}; ursor/add-new-services-and-deploy-updates-0462 module.exports = {}; ursor/add-new-services-and-deploy-updates-0462 module.exports = {}; module.exports = {}; module.exports = {}; module.exports = {}; // Validate the data if (!data.url || !data.timestamp || !data.metrics) { return res.status(400).json({ error: 'Invalid data format' })} // Log performance metrics (in production) you might want to send to a database or analytics service)' console.log('Performance Metrics: ' {url: data.url} timestamp: new Date(data.timestamp).toISOString(); metrics: data.metrics });' // For now, we'll just acknowledge receipt res.status(200).json({success: true) ' message: 'Performance metrics recorded'} timestamp: Date.now() })} catch (error) {' console.error('Error processing performance data: '} error);' res.status(500).json({ error: 'Internal server error' })} } '

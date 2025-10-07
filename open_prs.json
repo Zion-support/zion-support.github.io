@@ -1,0 +1,16 @@
+[
+  {
+    "number": 24960,
+    "head": {
+      "ref": "cursor/fix-errors-and-merge-to-main-ba52"
+    },
+    "title": "Fix errors and merge to main"
+  },
+  {
+    "number": 11935,
+    "head": {
+      "ref": "cursor/fix-errors-and-merge-to-main-b467"
+    },
+    "title": "Fix web application console errors"
+  }
+]

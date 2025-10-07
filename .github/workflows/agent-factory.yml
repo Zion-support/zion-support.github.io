@@ -1,35 +1,9 @@
-<<<<<<< HEAD
-name: Agent Factory
+name: Link Checker
 
 on:
   schedule:
-    - cron: '0 */6 * * *'  # Every 6 hours
+    - cron: '0 */6 * * *'
   workflow_dispatch:
-  push:
-    branches: [main]
-    paths:
-      - 'data/**'
-      - 'src/**'
-      - 'pages/**'
-
-permissions:
-  contents: read
-=======
-name: Link Crawler Factory
-
-on:
-  schedule:
-    - cron: '*/30 * * * *'
-  workflow_dispatch:
-    inputs:
-      max_shards:
-        description: Max number of parallel agents
-        default: '16'
-        required: true
-      max_depth:
-        description: Crawl depth
-        default: '3'
-        required: true
 
 permissions:
   contents: write
@@ -37,67 +11,16 @@ permissions:
   issues: write
 
 concurrency:
-  group: link-crawler-factory
+  group: link-checker
   cancel-in-progress: false
->>>>>>> origin/auto/autonomy-17186719616
 
 jobs:
-  generate-matrix:
+  check-links:
     runs-on: ubuntu-latest
-    outputs:
-<<<<<<< HEAD
-      matrix: ${{ steps.set-matrix.outputs.matrix }}
-    steps:
-      - name: Generate matrix
-        id: set-matrix
-        run: |
-          # Generate a matrix with 4 shards for parallel processing
-          matrix='{"include":[{"shard":0,"num_shards":4},{"shard":1,"num_shards":4},{"shard":2,"num_shards":4},{"shard":3,"num_shards":4}]}'
-          echo "matrix=$matrix" >> $GITHUB_OUTPUT
-=======
-      matrix: ${{ steps.mk.outputs.matrix }}
-      depth: ${{ steps.depth.outputs.depth }}
     steps:
       - uses: actions/checkout@v4
-      - id: queue
-        name: Read queue length
-        run: |
-          file="state/queue.json"
-          if [ ! -f "$file" ]; then mkdir -p state && echo '[]' > "$file"; fi
-          echo "len=$(jq 'length' "$file")" >> "$GITHUB_OUTPUT"
-      - id: mk
-        name: Compute shard matrix
-        env:
-          LEN: ${{ steps.queue.outputs.len }}
-          MAX: ${{ github.event.inputs.max_shards || '16' }}
-        run: |
-          python - <<'PY' | tee matrix.json
-import json, os, math
-length = int(os.environ.get('LEN','0'))
-cap = int(os.environ.get('MAX','8'))
-# Exponential-ish scaling: shards = min(cap, max(1, 2^k)) where k grows with backlog
-k = 0 if length < 50 else 1 if length < 200 else 2 if length < 800 else 3 if length < 2000 else 4
-shards = min(cap, max(1, 2 ** k))
-matrix = {"include":[{"shard":i,"num_shards":shards} for i in range(shards)]}
-print(json.dumps(matrix))
-PY
-          echo "matrix=$(cat matrix.json)" >> "$GITHUB_OUTPUT"
-      - id: depth
-        run: echo "depth=${{ github.event.inputs.max_depth || '3' }}" >> "$GITHUB_OUTPUT"
->>>>>>> origin/auto/autonomy-17186719616
-
-  agent:
-    needs: [generate-matrix]
-    runs-on: ubuntu-latest
-    strategy:
-<<<<<<< HEAD
-      max-parallel: 4
-      matrix: ${{ fromJson(needs.generate-matrix.outputs.matrix).include }}
-    timeout-minutes: 30
-    
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -107,235 +30,62 @@ PY
 
       - name: Install linkinator
         run: npm install -g linkinator
-=======
-      max-parallel: 16
-      matrix: ${{ fromJson(needs.generate-matrix.outputs.matrix).include }}
-    steps:
-      - uses: actions/checkout@v4
->>>>>>> origin/auto/autonomy-17186719616
 
-      - name: Partition queue for this shard
-        id: part
-        env:
-          SHARD: ${{ matrix.shard }}
-          NUM_SHARDS: ${{ matrix.num_shards }}
+      - name: Check main site links
         run: |
-          file="state/queue.json"
-          if [ ! -f "$file" ]; then mkdir -p state && echo '[]' > "$file"; fi
-          jq -r --argjson s "$SHARD" --argjson n "$NUM_SHARDS" '
-            to_entries | map(select(.key % $n == $s)) | map(.value) | .[]
-          ' "$file" > shard_urls.txt || true
-<<<<<<< HEAD
-          wc -l shard_urls.txt || true
-          if [ ! -s shard_urls.txt ]; then echo "No URLs for this shard"; fi
+          echo "Checking main site links..."
+          linkinator https://ziontechgroup.com --recurse --concurrency 10 --skip '.*(logout|signout).*' --format json > main-site-report.json || true
 
-      - name: Check external links
+      - name: Check internal links
         run: |
-          # Create a simple list of external links to check
-          cat > external_links.txt << EOF
-          https://ziontechgroup.com
-          https://github.com/ziontechgroup
-          https://www.linkedin.com/company/zion-marketplace
-          https://www.facebook.com/zionmarketplace
-          https://instagram.com/ziontechgroup
-          https://twitter.com/ziontechgroup
-          EOF
+          echo "Checking internal links..."
+          find . -name "*.tsx" -o -name "*.ts" -o -name "*.jsx" -o -name "*.js" | head -20 | xargs grep -h "href=" | grep -o 'href="[^"]*"' | sed 's/href="//g' | sed 's/"//g' | grep -v "^#" | grep -v "^mailto:" | sort | uniq > internal-links.txt || true
           
-          # Run linkinator on the external links
-          linkinator external_links.txt --format json > link_report.json || true
-
-=======
-          wc -l shard_urls.txt
-          if [ ! -s shard_urls.txt ]; then echo "No URLs for this shard"; fi
-
-      - uses: actions/setup-node@v4
->>>>>>> origin/auto/autonomy-17186719616
-      - name: Run crawler (linkinator) on shard
-        run: |
-          set -e
-          urls=$(paste -sd' ' shard_urls.txt || true)
-<<<<<<< HEAD
-          if [ -z "$urls" ]; then 
-            echo '{"links":[]}' > report.json
-            exit 0
-          fi
-          
-          # Run linkinator with error handling
-          if ! npx linkinator $urls --recurse --concurrency 20 --skip '.*(logout|signout).*' --format json > report.json 2>/dev/null; then
-            echo "Linkinator failed, creating empty report"
-            echo '{"links":[]}' > report.json
+          if [ -s internal-links.txt ]; then
+            echo "Found internal links to check:"
+            cat internal-links.txt
+          else
+            echo "No internal links found to check"
           fi
 
-      - name: Analyze results
+      - name: Generate report
         run: |
-          if [ -f link_report.json ]; then
-            # Count broken links
-            broken_count=$(jq '.links[] | select(.state=="BROKEN") | length' link_report.json 2>/dev/null || echo "0")
-            echo "Broken links found: $broken_count"
-            
-            # Create summary
-            echo "# Link Check Report" > LINK_REPORT.md
+          echo "# Link Check Report" > LINK_REPORT.md
+          echo "" >> LINK_REPORT.md
+          echo "Generated: $(date)" >> LINK_REPORT.md
+          echo "" >> LINK_REPORT.md
+          
+          if [ -f main-site-report.json ]; then
+            echo "## Main Site Check" >> LINK_REPORT.md
             echo "" >> LINK_REPORT.md
-            echo "Generated on: $(date)" >> LINK_REPORT.md
-            echo "" >> LINK_REPORT.md
-            echo "## Summary" >> LINK_REPORT.md
-            echo "- Total links checked: $(jq '.links | length' link_report.json 2>/dev/null || echo "0")" >> LINK_REPORT.md
-            echo "- Broken links: $broken_count" >> LINK_REPORT.md
-            echo "" >> LINK_REPORT.md
-            
-            if [ "$broken_count" -gt 0 ]; then
-              echo "## Broken Links" >> LINK_REPORT.md
-              echo "| URL | Status |" >> LINK_REPORT.md
-              echo "|-----|--------|" >> LINK_REPORT.md
-              jq -r '.links[] | select(.state=="BROKEN") | "| \(.url) | \(.status // "unknown") |"' link_report.json >> LINK_REPORT.md 2>/dev/null || echo "| Error parsing results | |" >> LINK_REPORT.md
-            fi
+            echo "Main site link check completed." >> LINK_REPORT.md
           fi
-=======
-          if [ -z "$urls" ]; then echo '{}' > report.json; exit 0; fi
-          npx --yes linkinator $urls --recurse --concurrency 20 --skip '.*(logout|signout).*' --format json > report.json || true
->>>>>>> origin/auto/autonomy-17186719616
-
-      - name: Upload shard report
-        uses: actions/upload-artifact@v4
-        with:
-          name: shard-${{ matrix.shard }}-report
-<<<<<<< HEAD
-          path: |
-            report.json
-            link_report.json
-            LINK_REPORT.md
-          retention-days: 7
-
-  collect-results:
-    needs: [agent]
-    runs-on: ubuntu-latest
-    timeout-minutes: 10
-    
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-        
-      - name: Download all artifacts
-        uses: actions/download-artifact@v4
-        with:
-          path: artifacts
           
-      - name: Combine results
-        run: |
-          echo "# Combined Link Check Report" > COMBINED_REPORT.md
-          echo "" >> COMBINED_REPORT.md
-          echo "Generated on: $(date)" >> COMBINED_REPORT.md
-          echo "" >> COMBINED_REPORT.md
-          
-          total_broken=0
-          total_checked=0
-          
-          for report in artifacts/shard-*-report/report.json; do
-            if [ -f "$report" ]; then
-              broken=$(jq '.links[] | select(.state=="BROKEN") | length' "$report" 2>/dev/null || echo "0")
-              checked=$(jq '.links | length' "$report" 2>/dev/null || echo "0")
-              total_broken=$((total_broken + broken))
-              total_checked=$((total_checked + checked))
-            fi
-          done
-          
-          echo "## Overall Summary" >> COMBINED_REPORT.md
-          echo "- Total links checked: $total_checked" >> COMBINED_REPORT.md
-          echo "- Total broken links: $total_broken" >> COMBINED_REPORT.md
-          echo "" >> COMBINED_REPORT.md
-          
-          if [ $total_broken -gt 0 ]; then
-            echo "## Broken Links by Shard" >> COMBINED_REPORT.md
-            for report in artifacts/shard-*-report/report.json; do
-              if [ -f "$report" ]; then
-                shard=$(echo "$report" | sed 's/.*shard-\([0-9]*\)-report.*/\1/')
-                broken=$(jq '.links[] | select(.state=="BROKEN") | length' "$report" 2>/dev/null || echo "0")
-                echo "- Shard $shard: $broken broken links" >> COMBINED_REPORT.md
-              fi
+          if [ -s internal-links.txt ]; then
+            echo "" >> LINK_REPORT.md
+            echo "## Internal Links Found" >> LINK_REPORT.md
+            echo "" >> LINK_REPORT.md
+            echo "Internal links found in codebase:" >> LINK_REPORT.md
+            echo "" >> LINK_REPORT.md
+            cat internal-links.txt | while read link; do
+              echo "- $link" >> LINK_REPORT.md
             done
           fi
 
-      - name: Upload combined report
+      - name: Upload report
         uses: actions/upload-artifact@v4
         with:
-          name: combined-report
-          path: COMBINED_REPORT.md
-          retention-days: 30
-=======
-          path: report.json
-
-  aggregate:
-    needs: [agent, generate-matrix]
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-
-      - name: Download all shard reports
-        uses: actions/download-artifact@v4
-        with:
-          path: reports
-
-      - name: Merge reports and summarize
-        id: merge
-        run: |
-          set -e
-          find reports -name 'report.json' -maxdepth 2 -type f -print0 | xargs -0 jq -s '
-            reduce .[] as $r ({"links":[]};
-              .links += ($r.links // [])
-            )
-          ' > merged.json
-
-          # Broken links summary
-          jq '
-            [.links[] | select(.state=="BROKEN") |
-              {source:.parent, target:.url, status:(.status // "unknown")}
-            ] | sort_by(.source, .target)
-          ' merged.json > broken.json
-
-          # Next queue (new seeds from successes, bounded)
-          jq '
-            [.links[] | select(.state!="BROKEN") | .url] |
-            unique | .[:5000]
-          ' merged.json > next_queue.json
-
-          # Markdown summary
-          {
-            broken: (input | length),
-            sample: (input | .[:50])
-          } as $meta
-          | "Broken links: \($meta.broken)\n\n" +
-            (if $meta.broken>0 then
-              "| Source | Target | Status |\n|---|---|---|\n" +
-              ([$meta.sample[] | "| " + .source + " | " + .target + " | " + (.status|tostring) + " |"] | join("\n"))
-             else "No broken links found."
-            )
-        ' broken.json > BROKEN_SUMMARY.md
-
-      - name: Upload merged artifacts
-        uses: actions/upload-artifact@v4
-        with:
-          name: merged
+          name: link-check-report
           path: |
-            merged.json
-            broken.json
-            BROKEN_SUMMARY.md
-            next_queue.json
+            LINK_REPORT.md
+            main-site-report.json
+            internal-links.txt
+          retention-days: 30
 
-      - name: Open/Update issue with summary
+      - name: Create issue with report
         uses: peter-evans/create-issue-from-file@v5
         with:
-          title: "Broken links report"
-          content-filepath: BROKEN_SUMMARY.md
+          title: "Link Check Report - $(date +%Y-%m-%d)"
+          content-filepath: LINK_REPORT.md
           labels: link-check, automated
           assignees: ''
-
-      - name: Update queue
-        run: |
-          mkdir -p state
-          cp next_queue.json state/queue.json
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add state/queue.json
-          git commit -m "chore(crawler): update queue" || echo "No queue changes"
-          git push || true
->>>>>>> origin/auto/autonomy-17186719616

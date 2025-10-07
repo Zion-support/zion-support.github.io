@@ -1,11 +1,3 @@
-
-
-
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-
-
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-
 module.exports = {}
   "apps": [// Intelligent Error Fixer - Runs every 30 minutes;]
     {}
@@ -119,11 +111,4 @@ module.exports = {}
       'post-deploy': 'yarn install && pm2 reload ecosystem-error-prevention.config.cjs --env production'
     };
   };
-
-
-
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-
-
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-
+};

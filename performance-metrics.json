@@ -1,50 +1,19 @@
-  "timestamp": "2025-09-03T20:00:06.726Z",
-  "bundleSize": {
-    ".next": {
-      "size": 28534499,
-      "sizeMB": "27.21"
-    },
-    "node_modules": {
-      "size": 0,
-      "sizeMB": "0.00"
-    }
+{
+  "timestamp": "2025-09-29T09:40:50.872Z",
+  "buildTime": 6900,
+  "bundleSize": 692104,
+  "linting": {
+    "warnings": 1,
+    "errors": 0
   },
-  "fileCounts": {
-    ".tsx": 25,
-    ".ts": 0,
-    ".jsx": 0,
-    ".js": 0,
-    ".css": 2,
-    ".json": 0
-  },
-  "recommendations": []
+  "improvements": [
+    "Dependencies check completed - 43 total dependencies",
+    "No high-severity security vulnerabilities found",
+    "Found 3 images that could be optimized",
+    "Identified 3 images for optimization",
+    "Build test passed in 6900ms",
+    "Bundle analysis completed - Total size: 675.88 KB",
+    "Linting passed with 1 warnings"
+  ],
+  "errors": []
 }
-[
-  {
-    "buildTime": "101.66ms",
-    "bundleSize": null,
-    "chunkCount": null,
-    "timestamp": "2025-06-29T04:25:36.759Z",
-    "warnings": [],
-    "errors": [],
-    "devServerHealth": "offline"
-  },
-  {
-    "buildTime": "67.93ms",
-    "bundleSize": null,
-    "chunkCount": null,
-    "timestamp": "2025-06-29T04:26:43.238Z",
-    "warnings": [],
-    "errors": [],
-    "devServerHealth": "offline"
-  },
-  {
-    "buildTime": "1296.60ms",
-    "bundleSize": "43.64 MB",
-    "chunkCount": 171,
-    "timestamp": "2025-06-29T04:45:16.879Z",
-    "warnings": [],
-    "errors": [],
-    "devServerHealth": "healthy"
-  }
-]

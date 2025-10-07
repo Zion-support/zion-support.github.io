@@ -2,116 +2,124 @@
 
 const fs = require('fs');
 const path = require('path');
-const cheerio = require('cheerio');
 
-function log(msg) {
-  process.stdout.write(`[a11y-audit] ${msg}\n`);
+const ROOT = process.cwd();
+const TARGET_DIRS = ['pages', 'components'];
+const OUTPUT_JSON = path.join(ROOT, 'data', 'a11y-report.json');
+const OUTPUT_MD = path.join(ROOT, 'docs', 'a11y-report.md');
+
+function ensureDir(filePath) {
+  fs.mkdirSync(path.dirname(filePath), { recursive: true });
 }
 
-function ensureDir(dir) {
-  fs.mkdirSync(dir, { recursive: true });
-}
-
-async function fetchHtml(url) {
-  const res = await fetch(url, { headers: { 'User-Agent': 'zion.app-a11y-audit' } });
-  if (!res.ok) throw new Error(`GET ${url} -> ${res.status}`);
-  return await res.text();
-}
-
-function auditDocument(html, url) {
-  const $ = cheerio.load(html);
-  const issues = [];
-
-  // Title present
-  const title = $('head > title').text().trim();
-  if (!title) issues.push({ type: 'meta', code: 'missing-title', message: 'Missing <title>', selector: 'head > title' });
-
-  // Images alt attributes
-  $('img').each((_, el) => {
-    const src = $(el).attr('src') || '';
-    const alt = $(el).attr('alt');
-    if (typeof alt === 'undefined' || alt.trim() === '') {
-      issues.push({ type: 'img', code: 'missing-alt', message: 'Image missing alt text', selector: $.root().find(el).get(0)?.name || 'img', context: { src } });
+function walk(dir) {
+  const out = [];
+  for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+    const p = path.join(dir, entry.name);
+    if (entry.isDirectory()) {
+      out.push(...walk(p));
+    } else if (/\.(tsx|jsx|ts|js)$/.test(entry.name)) {
+      out.push(p);
     }
-  });
-
-  // Links with accessible text
-  $('a').each((_, el) => {
-    const href = $(el).attr('href') || '';
-    const text = $(el).text().replace(/\s+/g, ' ').trim();
-    const ariaLabel = $(el).attr('aria-label') || '';
-    if (!text && !ariaLabel) {
-      issues.push({ type: 'a', code: 'empty-link-text', message: 'Link has no accessible text', selector: 'a', context: { href } });
-    }
-  });
-
-  // Heading order: warn if skipping levels frequently
-  const headings = $('h1, h2, h3, h4, h5, h6').toArray().map(el => ({
-    level: Number(el.tagName.replace('h', '')),
-    text: $(el).text().trim().slice(0, 120)
-  }));
-  let last = 0;
-  for (const h of headings) {
-    if (last && h.level > last + 1) {
-      issues.push({ type: 'heading', code: 'skipped-level', message: `Heading level jumped from h${last} to h${h.level}`, selector: `h${h.level}`, context: { text: h.text } });
-    }
-    last = h.level;
   }
-
-  // Form controls with labels
-  $('input, select, textarea').each((_, el) => {
-    const id = $(el).attr('id');
-    const ariaLabel = $(el).attr('aria-label');
-    const labelled = id && $(`label[for="${id}"]`).length > 0;
-    if (!labelled && !ariaLabel) {
-      issues.push({ type: 'form', code: 'unlabeled-control', message: 'Form control without label or aria-label', selector: el.tagName, context: { id: id || null } });
-    }
-  });
-
-  return { url, issues };
+  return out;
 }
 
-function renderHtmlReport(results) {
-  const totalIssues = results.reduce((sum, r) => sum + r.issues.length, 0);
-  const sections = results.map(r => {
-    const items = r.issues.map(i => `<li><code>${i.code}</code> — ${i.message}${i.context?.href ? ` — <small>${i.context.href}</small>` : ''}</li>`).join('\n');
-    return `<section><h2>${r.url}</h2><ul>${items || '<li>No issues found</li>'}</ul></section>`;
-  }).join('\n');
-  return `<!doctype html><html><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>A11y Audit Report</title><style>body{font-family:system-ui,Segoe UI,Roboto,Inter,sans-serif;margin:24px}h1{margin:0 0 8px}h2{margin-top:24px}code{background:#f1f5f9;padding:2px 4px;border-radius:4px}</style></head><body><h1>A11y Audit Report</h1><p>Total issues: ${totalIssues}</p>${sections}</body></html>`;
+function approximateLineNumber(source, index) {
+  let line = 1;
+  for (let i = 0; i < index && i < source.length; i++) {
+    if (source.charCodeAt(i) === 10) line++;
+  }
+  return line;
 }
 
-async function main() {
-  const base = process.env.CANONICAL_URL || process.env.SITE_URL || process.env.URL || 'https://ziontechgroup.com';
-  const pages = Array.from(new Set([
-    '/', '/automation', '/main/front', '/newsroom', '/site-health'
-  ]));
-  const targets = pages.map(p => `${base.replace(/\/$/, '')}${p}`);
+function analyzeFile(filePath) {
+  const source = fs.readFileSync(filePath, 'utf8');
+  const findings = [];
 
-  log(`Base: ${base}`);
-  const results = [];
-  for (const url of targets) {
-    try {
-      const html = await fetchHtml(url);
-      results.push(auditDocument(html, url));
-      log(`Audited: ${url}`);
-    } catch (e) {
-      results.push({ url, issues: [{ type: 'network', code: 'fetch-error', message: String(e) }] });
-      log(`Failed: ${url} -> ${e.message || e}`);
+  // <img ...> without alt=
+  const imgRegex = /<img\b((?:(?!>).)*)>/gis;
+  let m;
+  while ((m = imgRegex.exec(source))) {
+    const tag = m[0];
+    if (!/\balt\s*=/.test(tag)) {
+      findings.push({
+        type: 'img-missing-alt',
+        line: approximateLineNumber(source, m.index),
+        snippet: tag.slice(0, 120)
+      });
     }
   }
 
-  const outDir = path.join(__dirname, '..', 'public', 'reports', 'a11y');
-  ensureDir(outDir);
-  const stamp = new Date().toISOString().replace(/[:.]/g, '-');
-  const summary = { generatedAt: new Date().toISOString(), totalIssues: results.reduce((s, r) => s + r.issues.length, 0), pages: results.length };
-  fs.writeFileSync(path.join(outDir, 'latest.json'), JSON.stringify({ ...summary, results }, null, 2));
-  fs.writeFileSync(path.join(outDir, `${stamp}.json`), JSON.stringify({ ...summary, results }, null, 2));
-  fs.writeFileSync(path.join(outDir, 'index.html'), renderHtmlReport(results));
+  // <Image ...> (Next.js) without alt=
+  const nextImgRegex = /<Image\b((?:(?!>).)*)>/gis;
+  while ((m = nextImgRegex.exec(source))) {
+    const tag = m[0];
+    if (!/\balt\s*=/.test(tag)) {
+      findings.push({
+        type: 'next-image-missing-alt',
+        line: approximateLineNumber(source, m.index),
+        snippet: tag.slice(0, 120)
+      });
+    }
+  }
 
-  log(`Wrote reports to ${outDir}`);
+  // <a ...> without discernible text (very naive: innerHTML empty)
+  const anchorRegex = /<a\b[^>]*>(\s*)<\/a>/gis;
+  while ((m = anchorRegex.exec(source))) {
+    findings.push({
+      type: 'anchor-empty-text',
+      line: approximateLineNumber(source, m.index),
+      snippet: m[0].slice(0, 120)
+    });
+  }
+
+  return findings;
 }
 
-main().catch(err => {
-  console.error(err);
-  process.exitCode = 1;
-});
+function main() {
+  const files = [];
+  for (const d of TARGET_DIRS) {
+    const abs = path.join(ROOT, d);
+    if (fs.existsSync(abs)) files.push(...walk(abs));
+  }
+
+  const report = {
+    generatedAt: new Date().toISOString(),
+    summary: { filesScanned: files.length, issues: 0 },
+    results: {}
+  };
+
+  for (const f of files) {
+    const rel = path.relative(ROOT, f);
+    const findings = analyzeFile(f);
+    if (findings.length) {
+      report.results[rel] = findings;
+      report.summary.issues += findings.length;
+    }
+  }
+
+  ensureDir(OUTPUT_JSON);
+  fs.writeFileSync(OUTPUT_JSON, JSON.stringify(report, null, 2));
+
+  const lines = [];
+  lines.push('# Accessibility Report');
+  lines.push('');
+  lines.push(`Generated: ${report.generatedAt}`);
+  lines.push(`Files scanned: ${report.summary.filesScanned}`);
+  lines.push(`Issues found: ${report.summary.issues}`);
+  lines.push('');
+  for (const [file, findings] of Object.entries(report.results)) {
+    lines.push(`## ${file}`);
+    for (const item of findings) {
+      lines.push(`- [${item.type}] line ${item.line}: ${'`' + item.snippet.replace(/`/g, '\\`') + '`'}`);
+    }
+    lines.push('');
+  }
+  ensureDir(OUTPUT_MD);
+  fs.writeFileSync(OUTPUT_MD, lines.join('\n'));
+
+  console.log(`A11y report written to: ${path.relative(ROOT, OUTPUT_JSON)} and ${path.relative(ROOT, OUTPUT_MD)}`);
+}
+
+main();

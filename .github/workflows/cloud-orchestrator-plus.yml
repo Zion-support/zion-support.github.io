@@ -1,19 +1,18 @@
-<<<<<<< HEAD
 name: cloud-orchestrator-plus
-on:
+'on':
   workflow_dispatch: {}
   schedule:
-  - cron: '0 2 * * *'
+    - cron: 0 */2 * * *
 permissions:
-  contents: read
+  contents: write
   actions: read
-  
+  pull-requests: write
 concurrency:
-  group: cloud-orchestrator-plus-\${{ github.ref }}
+  group: workflow-${{ github.ref }}
   cancel-in-progress: false
 jobs:
   main:
-    name: Cloud Orchestrator Plus Job
+    name: Main Job
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
@@ -29,54 +28,6 @@ jobs:
       - name: Install dependencies
         run: npm ci --no-audit --no-fund
       - name: Run workflow
-        run: echo "Workflow completed successfully"
-=======
-name: Cloud Orchestrator Plus
-
-on:
-  schedule:
-    - cron: "*/3 * * * *"
-  workflow_dispatch: {}
-
-jobs:
-  run:
-    runs-on: ubuntu-latest
-    timeout-minutes: 10
-    permissions:
-      contents: write
-      pull-requests: write
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-
-      - name: Setup Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-
-      - name: Install
-        run: npm ci
-
-      - name: Extended Cloud Content Orchestration
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          GITHUB_REPOSITORY: ${{ github.repository }}
-          CANONICAL_URL: https://ziontechgroup.com
         run: |
-          node automation/cloud-orchestrator-plus.cjs || true
-          node automation/front-index-directory-builder.cjs || true
-          node automation/front-index-advertiser.cjs || true
-          node automation/homepage-updater.cjs || true
-
-      - name: Advanced git sync
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          GITHUB_REPOSITORY: ${{ github.repository }}
-        run: node automation/advanced-git-sync.cjs || node automation/git-sync.cjs
-
-
->>>>>>> origin/auto/autonomy-17186719616
+          echo "✅ Workflow completed successfully"
+          

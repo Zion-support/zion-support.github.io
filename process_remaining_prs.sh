@@ -1,58 +1,54 @@
 #!/bin/bash
 
-# Process remaining PRs efficiently
+# Process remaining PR branches more efficiently
 set -e
 
-echo "Processing remaining PRs..."
+echo "Processing remaining PR branches..."
 
-# List of remaining PR branches to process
-REMAINING_BRANCHES=(
-    "origin/cursor/create-and-deploy-new-content-fe7f"
-    "origin/cursor/create-and-deploy-new-content-fe5c"
-    "origin/cursor/create-and-deploy-new-content-fe5a"
-    "origin/cursor/create-and-deploy-new-content-fe01"
-    "origin/cursor/create-and-deploy-new-content-fdac"
-    "origin/cursor/create-and-deploy-new-content-fd98"
-    "origin/cursor/create-and-deploy-new-content-fd6a"
-    "origin/cursor/create-and-deploy-new-content-fd4a"
-    "origin/cursor/create-and-deploy-new-content-fd2e"
-    "origin/cursor/create-and-deploy-new-content-fd1a"
-)
+# Get all cursor/fix-errors-and-merge-to-main branches
+branches=$(git branch -r | grep "cursor/fix-errors-and-merge-to-main" | sed 's/origin\///' | head -30)
 
-# Ensure we're on main and up to date
-git checkout main
-git pull origin main
+successful=0
+failed=0
 
-# Process each branch
-for branch in "${REMAINING_BRANCHES[@]}"; do
-    echo "Processing $branch..."
+for branch in $branches; do
+    echo "Processing: $branch"
     
-    # Checkout the branch
-    git checkout "$branch" || {
-        echo "Failed to checkout $branch, skipping..."
-        continue
-    }
-    
-    # Merge main into the branch
-    git merge main || {
-        echo "Failed to merge main into $branch, skipping..."
-        continue
-    }
-    
-    # Create a merged branch
-    merged_branch="${branch#origin/}-merged"
-    git checkout -b "$merged_branch"
-    
-    # Push the merged branch
-    git push origin "$merged_branch"
-    
-    # Switch back to main and merge
-    git checkout main
-    git merge "$merged_branch" || {
-        echo "Failed to merge $merged_branch into main, continuing..."
-    }
-    
-    echo "Completed processing $branch"
+    if git checkout "$branch" 2>/dev/null; then
+        # Try to merge with main
+        if git merge origin/main --no-edit 2>/dev/null; then
+            echo "  ✓ Merged successfully"
+            ((successful++))
+            
+            # Try to push (may fail due to sandbox restrictions)
+            git push origin "$branch" 2>/dev/null || echo "  ⚠ Push failed (sandbox restriction)"
+        else
+            echo "  ⚠ Merge conflict - attempting resolution"
+            
+            # Check for specific conflicts and resolve them
+            if grep -q "process\.env\.NODE_ENV" components/PerformanceDashboard.tsx 2>/dev/null; then
+                sed -i "s/process\.env\.NODE_ENV/process.env['NODE_ENV']/g" components/PerformanceDashboard.tsx
+                git add components/PerformanceDashboard.tsx
+                git commit -m "Fix TypeScript process.env access" 2>/dev/null || true
+            fi
+            
+            # Try merge again
+            if git merge origin/main --no-edit 2>/dev/null; then
+                echo "  ✓ Resolved and merged"
+                ((successful++))
+            else
+                echo "  ❌ Could not resolve conflicts"
+                ((failed++))
+            fi
+        fi
+    else
+        echo "  ❌ Could not checkout"
+        ((failed++))
+    fi
 done
 
-echo "All PRs processed successfully!"
+echo ""
+echo "Results: $successful successful, $failed failed"
+
+# Return to main
+git checkout main

@@ -1,0 +1,38 @@
+[2025-09-07T21:00:46.734Z] 🚀 Starting Master Automation Orchestrator...
+[2025-09-07T21:00:46.736Z] Starting: ESLint Fix
+[2025-09-07T21:00:46.821Z] Error in ESLint Fix: Command failed: npm run lint:fix
+npm warn config optional Use `--omit=optional` to exclude optional dependencies, or
+npm warn config `--include=optional` to include them.
+npm warn config
+npm warn config       Default value does install optional deps unless otherwise omitted.
+npm error code EJSONPARSE
+npm error JSON.parse Invalid package.json: JSONParseError: Expected double-quoted property name in JSON at position 3247 (line 73 column 1) while parsing near "...ase/ssr\": \"^0.6.1\",\n\n    \"@s..."
+npm error JSON.parse Failed to parse JSON data.
+npm error JSON.parse Invalid package.json: JSONParseError: Expected double-quoted property name in JSON at position 3247 (line 73 column 1) while parsing near "...ase/ssr\": \"^0.6.1\",\n\n    \"@s..."
+npm error JSON.parse Failed to parse JSON data.
+npm error JSON.parse Invalid package.json: JSONParseError: Expected double-quoted property name in JSON at position 3247 (line 73 column 1) while parsing near "...ase/ssr\": \"^0.6.1\",\n\n    \"@s..."
+npm error JSON.parse Failed to parse JSON data.
+npm error JSON.parse Invalid package.json: JSONParseError: Expected double-quoted property name in JSON at position 3247 (line 73 column 1) while parsing near "...ase/ssr\": \"^0.6.1\",\n\n    \"@s..."
+npm error JSON.parse Failed to parse JSON data.
+npm error JSON.parse Invalid package.json: JSONParseError: Expected double-quoted property name in JSON at position 3488 (line 79 column 1) while parsing near "...-query\": \"^5.85.5\",\n\n    \"@supaba..."
+npm error JSON.parse Failed to parse JSON data.
+npm error JSON.parse Invalid package.json: JSONParseError: Expected double-quoted property name in JSON at position 3488 (line 79 column 1) while parsing near "...-query\": \"^5.85.5\",\n\n    \"@supaba..."
+npm error JSON.parse Failed to parse JSON data.
+npm error JSON.parse Invalid package.json: JSONParseError: Expected double-quoted property name in JSON at position 3488 (line 79 column 1) while parsing near "...-query\": \"^5.85.5\",\n\n    \"@supaba..."
+npm error JSON.parse Failed to parse JSON data.
+npm error JSON.parse Invalid package.json: JSONParseError: Expected double-quoted property name in JSON at position 3488 (line 79 column 1) while parsing near "...-query\": \"^5.85.5\",\n\n    \"@supaba..."
+npm error JSON.parse Failed to parse JSON data.
+npm error JSON.parse Invalid package.json: JSONParseError: Expected double-quoted property name in JSON at position 3247 (line 73 column 1) while parsing near "...ase/ssr\": \"^0.6.1\",\n\n    \"@s..."
+npm error JSON.parse Failed to parse JSON data.
+npm error JSON.parse Invalid package.json: JSONParseError: Expected double-quoted property name in JSON at position 3247 (line 73 column 1) while parsing near "...ase/ssr\": \"^0.6.1\",\n\n    \"@s..."
+npm error JSON.parse Failed to parse JSON data.
+npm error JSON.parse Invalid package.json: JSONParseError: Expected double-quoted property name in JSON at position 3247 (line 73 column 1) while parsing near "...ase/ssr\": \"^0.6.1\",\n\n    \"@s..."
+npm error JSON.parse Failed to parse JSON data.
+npm error JSON.parse Invalid package.json: JSONParseError: Expected double-quoted property name in JSON at position 3488 (line 79 column 1) while parsing near "...-query\": \"^5.85.5\",\n\n    \"@supaba..."
+npm error JSON.parse Failed to parse JSON data.
+npm error JSON.parse Invalid package.json: JSONParseError: Expected double-quoted property name in JSON at position 3488 (line 79 column 1) while parsing near "...-query\": \"^5.85.5\",\n\n    \"@supaba..."
+npm error JSON.parse Failed to parse JSON data.
+npm error JSON.parse Invalid package.json: JSONParseError: Expected double-quoted property name in JSON at position 3488 (line 79 column 1) while parsing near "...-query\": \"^5.85.5\",\n\n    \"@supaba..."
+npm error JSON.parse Failed to parse JSON data.
+npm error JSON.parse Invalid package.json: JSONParseError: Expected double-quoted property name in JSON at position 3488 (line 79 column 1) while parsing near "...-query\": \"^5.85.5\",\n\n    \"@supaba..."
+npm error JSON.parse Failed to parse JSON data.

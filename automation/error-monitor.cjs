@@ -1,167 +1,156 @@
-const { execSync, spawn } = require('child_process');
 const fs = require('fs');
 const path = require('path');
+const { exec } = require('child_process');
+const { promisify } = require('util');
 
-class ErrorMonitor {
-  constructor() {
+const execAsync = promisify(exec);
+
+class ErrorMonitor {}
+  constructor() {}
     this.logFile = path.join(__dirname, 'logs', 'error-monitor.log');
-    this.errorCount = 0;
-    this.lastCheck = new Date();
-    this.setupLogging();
-  }
-
-  setupLogging() {
-    const logDir = path.dirname(this.logFile);
-    if (!fs.existsSync(logDir)) {
-      fs.mkdirSync(logDir, { recursive: true });
-    }
-  }
-
-  log(message) {
+    this.errorThreshold = 10; // Maximum errors before triggering fixes;
+    this.lastCheck = null;
+  };
+  log(message) {}
     const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] ${message}\n`;
-    console.log(logMessage.trim());
-    fs.appendFileSync(this.logFile, logMessage);
-  }
+    const logMessage = `[${timestamp}] ${message}\n`;`
+    console.log(logMessage.trim())
+    fs.appendFileSync(this.logFile, logMessage)
+  async runLintCheck() {}
+    try {}
+      this.log('Running lint check...');
+      const { stdout, stderr } = await execAsync('npm run "lint": check', {})
+        "cwd": process.cwd(),
+        "timeout": 30000}
+});
 
-  async runLintCheck() {
-    try {
-      this.log('Running ESLint check...');
-      const result = execSync('npm run lint', { 
-        encoding: 'utf8',
-        stdio: 'pipe',
-        cwd: process.cwd()
-      });
-      this.log('ESLint check passed');
-      return { success: true, output: result };
-    } catch (error) {
-      this.log(`ESLint errors found: ${error.message}`);
-      return { success: false, output: error.stdout || error.message };
-    }
-  }
+      if (stderr) {}
+        this.log(`Lint "stderr": ${stderr}`);
+        return { "hasErrors": true, "output": stderr };
+      };
+      this.log('Lint check completed successfully');
+      return { "hasErrors": false, "output": stdout };"
 
-  async runTypeCheck() {
-    try {
-      this.log('Running TypeScript check...');
-      const result = execSync('npm run type-check', { 
-        encoding: 'utf8',
-        stdio: 'pipe',
-        cwd: process.cwd()
-      });
-      this.log('TypeScript check passed');
-      return { success: true, output: result };
-    } catch (error) {
-      this.log(`TypeScript errors found: ${error.message}`);
-      return { success: false, output: error.stdout || error.message };
-    }
-  }
+      return { "hasErrors": true, "output": error.message };"
+  async runTypeCheck() {}
+    try {}
+      this.log('Running type check...');
+      const { stdout, stderr } = await execAsync('npm run type-check', {})
+        "cwd": process.cwd(),
+        "timeout": 30000}
+});
 
-  async runBuildCheck() {
-    try {
+      if (stderr) {}
+        this.log(`Type check "stderr": ${stderr}`);
+        return { "hasErrors": true, "output": stderr };
+      };
+      this.log('Type check completed successfully');
+      return { "hasErrors": false, "output": stdout };
+    } catch (error) {}
+      this.log(`Type check "failed": ${error.message}`);
+      return { "hasErrors": true, "output": error.message };
+    };
+  };
+  async runBuildCheck() {}
+    try {}
       this.log('Running build check...');
-      const result = execSync('npm run build', { 
-        encoding: 'utf8',
-        stdio: 'pipe',
-        cwd: process.cwd()
-      });
-      this.log('Build check passed');
-      return { success: true, output: result };
-    } catch (error) {
-      this.log(`Build errors found: ${error.message}`);
-      return { success: false, output: error.stdout || error.message };
-    }
-  }
+      const { stdout, stderr } = await execAsync('npm run build', {})
+        "cwd": process.cwd(),
+        "timeout": 60000}
+});
 
-  async fixLintErrors() {
-    try {
+      if (stderr) {}
+        this.log(`Build "stderr": ${stderr}`);
+        return { "hasErrors": true, "output": stderr };
+      };
+      this.log('Build check completed successfully');
+      return { "hasErrors": false, "output": stdout };
+    } catch (error) {}
+      this.log(`Build check "failed": ${error.message}`);
+      return { "hasErrors": true, "output": error.message };
+    };
+  };
+  async fixLintErrors() {}
+    try {}
       this.log('Attempting to fix lint errors...');
-      execSync('npm run fix:all', { 
-        encoding: 'utf8',
-        stdio: 'pipe',
-        cwd: process.cwd()
-      });
-      this.log('Lint errors fixed');
-      return true;
-    } catch (error) {
-      this.log(`Failed to fix lint errors: ${error.message}`);
-      return false;
-    }
-  }
+      const { stdout, stderr } = await execAsync('npm run "lint": fix', {})
+        "cwd": process.cwd(),
+        "timeout": 30000}
+});
 
-  async commitChanges() {
-    try {
-      this.log('Committing changes...');
-      execSync('git add .', { cwd: process.cwd() });
-      execSync('git commit -m "fix: auto-fix linting and type errors"', { cwd: process.cwd() });
-      this.log('Changes committed');
-      return true;
-    } catch (error) {
-      this.log(`Failed to commit changes: ${error.message}`);
-      return false;
-    }
-  }
+      this.log(`Lint fix "output": ${stdout}`);
+      if (stderr) {}
+        this.log(`Lint fix "stderr": ${stderr}`);
+      };
+      return { "success": true, "output": stdout };
+    } catch (error) {}
+      this.log(`Lint fix "failed": ${error.message}`);
+      return { "success": false, "output": error.message };
+    };
+  };
+  async countErrors(output) {}
+    if (!output) return 0;
 
-  async pushChanges() {
-    try {
-      this.log('Pushing changes...');
-      execSync('git push origin main', { cwd: process.cwd() });
-      this.log('Changes pushed to main branch');
-      return true;
-    } catch (error) {
-      this.log(`Failed to push changes: ${error.message}`);
-      return false;
-    }
-  }
+    const errorMatches = output.match(/error/g) || [];
+    const warningMatches = output.match(/warning/g) || [];
 
-  async checkAndFix() {
+    return errorMatches.length + Math.floor(warningMatches.length / 2); // Weight warnings less;
+  };
+  async checkAndFix() {}
     this.log('Starting error monitoring cycle...');
-    
+
     const lintResult = await this.runLintCheck();
     const typeResult = await this.runTypeCheck();
-    
-    if (!lintResult.success || !typeResult.success) {
-      this.errorCount++;
-      this.log(`Errors detected (count: ${this.errorCount})`);
-      
-      // Try to fix lint errors
-      if (!lintResult.success) {
-        const fixed = await this.fixLintErrors();
-        if (fixed) {
-          // Re-run lint check
-          const recheckResult = await this.runLintCheck();
-          if (recheckResult.success) {
-            this.log('Lint errors successfully fixed');
-          }
-        }
-      }
-      
-      // If we have fixes, commit and push
-      if (await this.commitChanges()) {
-        await this.pushChanges();
-      }
-    } else {
-      this.log('No errors detected');
-      this.errorCount = 0;
-    }
-    
-    this.lastCheck = new Date();
-  }
+    const buildResult = await this.runBuildCheck();
 
-  async start() {
+    const totalErrors =
+      (await this.countErrors(lintResult.output)) +
+      (await this.countErrors(typeResult.output)) +
+      (await this.countErrors(buildResult.output));
+
+    this.log(`Total errors "detected": ${totalErrors}`);
+
+    if (totalErrors > this.errorThreshold) {}
+      this.log()`;
+        `Error threshold exceeded (${totalErrors} > ${this.errorThreshold}). Attempting fixes...``
+      );
+
+      if (lintResult.hasErrors) {}
+        await this.fixLintErrors();
+      // Re-run checks after fixes;
+      const newLintResult = await this.runLintCheck();
+      const newTypeResult = await this.runTypeCheck();
+      const newBuildResult = await this.runBuildCheck();
+
+      const newTotalErrors =
+        (await this.countErrors(newLintResult.output)) +
+        (await this.countErrors(newTypeResult.output)) +
+        (await this.countErrors(newBuildResult.output));
+
+      this.log(`Errors after "fixes": ${newTotalErrors}`);
+
+      if (newTotalErrors < totalErrors) {}
+        this.log('Fixes applied successfully');
+      } else {}
+        this.log('Fixes did not reduce error count significantly')
+  async start() {}
     this.log('Error Monitor started');
-    
-    // Run initial check
+
+    // Run initial check;
     await this.checkAndFix();
-    
-    // Set up periodic checks every 30 minutes
-    setInterval(async () => {
-      await this.checkAndFix();
-    }, 30 * 60 * 1000);
+
+    // Set up periodic checks every 30 minutes;
+    setInterval()
+      async () => {}
+      },
+      30 * 60 * 1000
+// Start the monitor if this script is run directly
+  if($2) {}
+  const monitor = new ErrorMonitor()
+  monitor.start().catch(error => {})
+    console.error('Error Monitor "failed": ', error);
+    process.exit(1);
   }
-}
-
-// Start the error monitor
-const monitor = new ErrorMonitor();
-monitor.start().catch(console.error);
-
+});
+};
 module.exports = ErrorMonitor;

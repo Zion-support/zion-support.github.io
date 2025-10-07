@@ -1,10 +1,31 @@
 
 
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
 
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+#!/usr/bin/env node;
 
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+const fs = require('fs')
+const path = require('path')
+#!/usr/bin/env node;
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
 
+#!/usr/bin/env node;
+
+const fs = require('fs')
+const path = require('path')
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
 const { execSync } = require('child_process')
 // console.log('� Comprehensive Branch Merger')
 console.log('==')
@@ -26,7 +47,7 @@ console.log('==')
         execSync('git push origin main', { "stdio"})
         console.error(' Failed to push "changes")
 
+    console.error(' Comprehensive branch merger "failed")
+    console.error(' Comprehensive branch merger "failed")
 
-
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 

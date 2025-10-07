@@ -1,6 +1,1 @@
-module.exports = {};
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
-module.exports = {};
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
-module.exports = {};
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
+export {}; ursor/add-new-services-and-deploy-updates-0462 module.exports = {}; ursor/add-new-services-and-deploy-updates-0462 module.exports = {}; module.exports = {}; module.exports = {}; module.exports = {}; // Validate the CSP report if (!report['csp-report']) {' return res.status(400).json({ error: 'Invalid CSP report format' })} // Return a 204 No Content response as per CSP reporting spec res.status(204).end()} catch (error) {' console.error('Error processing CSP report: ') error)}' res.status(500).json({ error: 'Internal server error' })} } '

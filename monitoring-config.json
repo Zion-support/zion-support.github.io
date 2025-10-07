@@ -1,0 +1,16 @@
+{
+  "healthChecks": {
+    "enabled": true,
+    "interval": 60000,
+    "endpoints": ["/health", "/api/status"]
+  },
+  "logging": {
+    "level": "info",
+    "format": "json",
+    "rotation": true
+  },
+  "alerts": {
+    "errorThreshold": 10,
+    "responseTimeThreshold": 5000
+  }
+}

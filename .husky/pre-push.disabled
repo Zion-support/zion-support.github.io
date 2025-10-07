@@ -2,12 +2,12 @@
 
 echo "🚀 Running pre-push checks..."
 
-# Temporarily disable tests due to ESLint configuration issues
-# echo "🧪 Running available tests..."
-# npm run lint && npm run type-check || {
-#     echo "❌ Tests failed. Please fix the issues before pushing."
-#     exit 1
-# }
+# Run available tests
+echo "🧪 Running available tests..."
+npm run lint && npm run type-check || {
+    echo "❌ Tests failed. Please fix the issues before pushing."
+    exit 1
+}
 
 # Check if automation system is running properly
 if [ -f "automation/universal-automation-launcher.sh" ]; then

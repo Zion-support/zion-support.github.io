@@ -1,69 +1,70 @@
 {
-
-
+  "timestamp": "2025-09-06T09:17:27.840Z",
+  "totalDuration": 164850,
+  "successfulTasks": 3,
   "totalTasks": 8,
   "results": {
     "dependencyFix": {
       "success": true,
-
-
+      "duration": 7721,
       "errors": [],
       "warnings": []
     },
     "codeQuality": {
       "success": false,
-
-
-      "duration": 6393,
-      "errors": [],
+      "duration": 42831,
+      "errors": ["spawnSync /bin/sh ENOBUFS", "spawnSync /bin/sh ENOBUFS"],
       "warnings": []
     },
     "securityAudit": {
-      "success": true,
-      "duration": 1714,
-      "errors": [],
+      "success": false,
+      "duration": 2476,
+      "errors": [
+        "Command failed: npm audit --audit-level moderate\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n"
+      ],
       "warnings": []
     },
     "buildOptimization": {
-      "success": true,
-      "duration": 5672,
-      "errors": [],
-
-
+      "success": false,
+      "duration": 37480,
+      "errors": [
+        "Command failed: npm run build\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n ⚠ Invalid next.config.js options detected: \n ⚠     Unrecognized key(s) in object: 'swcMinify'\n ⚠ See more info here: https://nextjs.org/docs/messages/invalid-next-config\nwarning package.json: \"dependencies\" has dependency \"postcss\" with range \"^8.4.32\" that collides with a dependency in \"devDependencies\" of the same name with version \"^8.5.6\"\nwarning package.json: \"dependencies\" has dependency \"postcss\" with range \"^8.4.32\" that collides with a dependency in \"devDependencies\" of the same name with version \"^8.5.6\"\n[BABEL] Note: The code generator has deoptimised the styling of /workspace/node_modules/lucide-react/dist/cjs/lucide-react.js as it exceeds the max of 500KB.\nFailed to compile.\n\n./data/talent.ts:27:4\nSyntax error: Unexpected token\n\n  25 |     originalLanguage: 'en',\n  26 |     translations: {},\n> 27 |   },\n     |     ^\n\n./pages/api/book/export/epub.ts\nModule not found: Can't resolve 'epub'\nDid you mean './epub'?\nRequests that should resolve in the current directory need to start with './'.\nRequests that start with a name are treated as module requests and resolve within module directories (node_modules, /workspace).\nIf changing the source code is not an option there is also a resolve options called 'preferRelative' which tries to resolve these kind of requests in the current directory too.\n\nhttps://nextjs.org/docs/messages/module-not-found\n\n./pages/api/dao/metrics.ts:18:1\nSyntax error: 'import' and 'export' may only appear at the top level. (18:0)\n\n  16 | }\n  17 |\n> 18 | export default async function handler(\n     | ^\n  19 |   _req: NextApiRequest,\n  20 |   res: NextApiResponse\n  21 | ) {\n\n./pages/api/deploy/genesis.ts:29:1\nSyntax error: 'import' and 'export' may only appear at the top level. (29:0)\n\n  27 | }\n  28 |\n> 29 | export default async function handler(\n     | ^\n  30 |   req: NextApiRequest,\n  31 |   res: NextApiResponse\n  32 | ) {\n\n./pages/api/disputes/[id].ts:5:24\nSyntax error: Unexpected token\n\n  3 | import {\n  4 |   parseUserFromRequest,\n> 5 |   ensureInvolvedOrAdmin,;\n    |                         ^\n  6 | } from '../../../utils/auth';\n  7 |\n  8 | export default async function handler(\n\n\n> Build failed because of webpack errors\n"
+      ],
       "warnings": []
     },
     "seoOptimization": {
       "success": true,
-
-
+      "duration": 44,
       "errors": [],
       "warnings": []
     },
     "accessibilityImprovement": {
       "success": false,
-
-
-      "duration": 291,
-      "errors": [],
+      "duration": 1378,
+      "errors": [
+        "Command failed: npx eslint . --rule \"jsx-a11y/alt-text: warn\" --rule \"jsx-a11y/aria-role: warn\"\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n\nOops! Something went wrong! :(\n\nESLint: 9.35.0\n\nA configuration object specifies rule \"jsx-a11y/alt-text\", but could not find plugin \"jsx-a11y\".\n\nCommon causes of this problem include:\n\n1. The \"jsx-a11y\" plugin is not defined in your configuration file.\n2. The \"jsx-a11y\" plugin is not defined within the same configuration object in which the \"jsx-a11y/alt-text\" rule is applied.\n\n"
+      ],
       "warnings": []
     },
     "performanceOptimization": {
-      "success": true,
-      "duration": 6276,
-      "errors": [],
-
-
+      "success": false,
+      "duration": 70708,
+      "errors": [
+        "Command failed: npm run build:analyze\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n ⚠ Invalid next.config.js options detected: \n ⚠     Unrecognized key(s) in object: 'swcMinify'\n ⚠ See more info here: https://nextjs.org/docs/messages/invalid-next-config\n[BABEL] Note: The code generator has deoptimised the styling of /workspace/node_modules/lucide-react/dist/cjs/lucide-react.js as it exceeds the max of 500KB.\nFailed to compile.\n\n./data/talent.ts:27:4\nSyntax error: Unexpected token\n\n  25 |     originalLanguage: 'en',\n  26 |     translations: {},\n> 27 |   },\n     |     ^\n\n./pages/api/book/export/epub.ts\nModule not found: Can't resolve 'epub'\nDid you mean './epub'?\nRequests that should resolve in the current directory need to start with './'.\nRequests that start with a name are treated as module requests and resolve within module directories (node_modules, /workspace).\nIf changing the source code is not an option there is also a resolve options called 'preferRelative' which tries to resolve these kind of requests in the current directory too.\n\nhttps://nextjs.org/docs/messages/module-not-found\n\n./pages/api/dao/metrics.ts:18:1\nSyntax error: 'import' and 'export' may only appear at the top level. (18:0)\n\n  16 | }\n  17 |\n> 18 | export default async function handler(\n     | ^\n  19 |   _req: NextApiRequest,\n  20 |   res: NextApiResponse\n  21 | ) {\n\n./pages/api/deploy/genesis.ts:29:1\nSyntax error: 'import' and 'export' may only appear at the top level. (29:0)\n\n  27 | }\n  28 |\n> 29 | export default async function handler(\n     | ^\n  30 |   req: NextApiRequest,\n  31 |   res: NextApiResponse\n  32 | ) {\n\n./pages/api/disputes/[id].ts:5:24\nSyntax error: Unexpected token\n\n  3 | import {\n  4 |   parseUserFromRequest,\n> 5 |   ensureInvolvedOrAdmin,;\n    |                         ^\n  6 | } from '../../../utils/auth';\n  7 |\n  8 | export default async function handler(\n\n\n> Build failed because of webpack errors\n"
+      ],
       "warnings": []
     },
     "deployment": {
       "success": true,
-
-
-      "duration": 1796,
+      "duration": 2208,
       "errors": [],
       "warnings": []
     }
-  }
+  },
+  "recommendations": [
+    "Review and fix code quality issues",
+    "Address security vulnerabilities",
+    "Optimize application performance",
+    "Enhance accessibility features"
+  ]
 }
-
-

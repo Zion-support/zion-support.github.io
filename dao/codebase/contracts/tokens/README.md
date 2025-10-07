@@ -1,1 +1,0 @@
-This directory contains Zion DAO token contracts.

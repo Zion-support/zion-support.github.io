@@ -1,1 +1,0 @@
-import React from 'react'; export default function FAQ(props: any) {; return (; <div className="container mx-auto px-4 py-12">" <h1 className="text-2xl font-bold mb-2">FAQ</h1>" <p className="text-gray-300">Frequently asked questions will appear here.</p>;" </div>;";" );";" };"

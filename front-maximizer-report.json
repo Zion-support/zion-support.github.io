@@ -1,6 +1,16 @@
 {
-  "timestamp": "2025-08-28T19:52:56.154Z",
-  "buildSize": 2180783,
-  "largeFiles": 0,
-  "summary": "Front maximizer completed"
+  "timestamp": "2025-08-29T16:45:05.659Z",
+  "bundleAnalysis": null,
+  "unusedDependencies": null,
+  "imageOptimization": null,
+  "cssOptimization": null,
+  "javascriptOptimization": null,
+  "summary": {
+    "totalBundleSizeMB": 0,
+    "totalFiles": 0,
+    "totalImages": 0,
+    "totalCSSFiles": 0,
+    "totalJSFiles": 0,
+    "optimizationOpportunities": 0
+  }
 }

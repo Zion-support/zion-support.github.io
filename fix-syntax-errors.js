@@ -1,92 +1,102 @@
+#!/usr/bin/env node
 
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
+import fs from 'fs';
+import path from 'path';
+import { execSync } from 'child_process';
 
-// Function to fix common syntax errors
-function fixSyntaxErrors(content, filePath) {
-  let fixed = content;
-  
-  // Fix import statements without quotes
-  fixed = fixed.replace(/import\s+(\w+)\s+from\s+(\w+);/g, "import $1 from $2';");
-  fixed = fixed.replace(/import\s+(\w+)\s+from\s+(\w+);/g, "import $1 from $2';");
-  
-  // Fix export statements
-  fixed = fixed.replace(/export\s*;/g, );
-  fixed = fixed.replace(/export\s+default\s+function\s+(\w+)/g, export default function $1');
-  
-  // Fix React imports specifically
-  fixed = fixed.replace(/import\s+React\s+from\s+react;/g, "import React from react';");
-  
-  // Fix any remaining unquoted imports
-  fixed = fixed.replace(/from\s+([a-zA-Z][a-zA-Z0-9]*);/g, "from $1';");
-  
-  // Remove any trailing semicolons after export
-  fixed = fixed.replace(/export\s*;\s*\n/g, \n');
-  
-  return fixed;
+console.log('🔧 Starting comprehensive syntax error fixes...');
+
+//Files with known issues
+const filesToFix = [
+  'src/components/October2025CuttingEdgeContentBanner.tsx',
+  'src/components/October2025CuttingEdgeAIBanner.tsx',
+  'src/components/October2025AdvancedAIInnovationsBanner.tsx',
+];
+
+function fixDuplicateKeys(filePath) {
+  if (!fs.existsSync(filePath)) return;
+
+  let content = fs.readFileSync(filePath, 'utf8');
+
+  //Fix duplicate icon keys
+  content = content.replace(/icon: '🚀',\s*icon: <[^>]+>/g, match => {
+    const iconMatch = match.match(/icon: <([^>]+)>/);
+    return iconMatch ? `icon: ${iconMatch[1]}` : match;
+  });
+
+  fs.writeFileSync(filePath, content);
+  console.log(`✅ Fixed duplicate keys in ${filePath}`);
 }
 
-// Function to process a file
-function processFile(filePath) {
-  try {
-    const content = fs.readFileSync(filePath, 'utf8');
-    const fixed = fixSyntaxErrors(content, filePath);
-    
-    if (content !== fixed) {
-      fs.writeFileSync(filePath, fixed);
-      console.log(`Fixed: ${filePath}`);
-      return true;
+function fixJSXStructure(filePath) {
+  if (!fs.existsSync(filePath)) return;
+
+  let content = fs.readFileSync(filePath, 'utf8');
+
+  //Fix common JSX structure issues
+  content = content.replace(
+    /<div className="flex items-center gap-3 mb-4">\s*<div className="[^"]*">\s*<[^>]+>\s*<\/div>\s*<div className="[^"]*">\s*<[^>]+>\s*<\/div>\s*<\/div>\s*<div className="flex-1">/g,
+    '<div className="flex items-center gap-3 mb-4">\n              <div className="p-3 bg-emerald-500/20 rounded-xl group-hover:bg-emerald-500/30 transition-colors">\n                <Shield className="w-8 h-8 text-emerald-300" />\n              </div>\n              <div className="flex-1">'
+  );
+
+  //Fix missing closing tags
+  content = content.replace(
+    /<Link[^>]*>\s*<div className="flex items-center gap-3 mb-4">\s*<div className="[^"]*">\s*<[^>]+>\s*<\/div>\s*<div className="flex-1">\s*<span[^>]*>[^<]*<\/span>\s*<\/div>\s*<\/div>\s*<h3[^>]*>[^<]*<\/h3>\s*<p[^>]*>[^<]*<\/p>\s*<div className="flex items-center justify-between">\s*<div[^>]*>[^<]*<\/div>\s*<[^>]+>\s*<\/div>\s*<\/div>\s*<\/Link>/g,
+    match => {
+      return match.replace(/<\/div>\s*<\/Link>/, '</div>\n            </Link>');
     }
-    return false;
-  } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
-    return false;
-  }
+  );
+
+  fs.writeFileSync(filePath, content);
+  console.log(`✅ Fixed JSX structure in ${filePath}`);
 }
 
-// Function to find and process all JS/TS/TSX files
-function processDirectory(dir) {
-  const extensions = ['.js', .ts', .tsx', .jsx'];
-  let fixedCount = 0;
-  
-  function walkDir(currentDir) {
-    const items = fs.readdirSync(currentDir);
-    
-    for (const item of items) {
-      const fullPath = path.join(currentDir, item);
-      const stat = fs.statSync(fullPath);
-      
-      if (stat.isDirectory()) {
-        // Skip node_modules and other build directories
-        if (!['node_modules', .next', dist', build', coverage'].includes(item)) {
-          walkDir(fullPath);
-        }
-      } else if (extensions.some(ext => item.endsWith(ext))) {
-        if (processFile(fullPath)) {
-          fixedCount++;
-        }
-      }
-    }
+function addMissingImports(filePath) {
+  if (!fs.existsSync(filePath)) return;
+
+  let content = fs.readFileSync(filePath, 'utf8');
+
+  //Add common missing imports
+  if (content.includes('Shield') && !content.includes('import { Shield')) {
+    content = content.replace(
+      /import React[^;]+;/,
+      `import React from 'react';\nimport { Shield, Zap, Sparkles, TrendingUp, ArrowRight } from 'lucide-react';`
+    );
   }
-  
-  walkDir(dir);
-  return fixedCount;
+
+  if (content.includes('Link') && !content.includes('import { Link')) {
+    content = content.replace(
+      /import React[^;]+;/,
+      `import React from 'react';\nimport { Link } from 'react-router-dom';\nimport { Shield, Zap, Sparkles, TrendingUp, ArrowRight } from 'lucide-react';`
+    );
+  }
+
+  fs.writeFileSync(filePath, content);
+  console.log(`✅ Added missing imports to ${filePath}`);
 }
 
-// Main execution
-console.log('🔧 Starting syntax error fixes...');
+// Fix each file
+filesToFix.forEach(filePath => {
+  const fullPath = path.join(process.cwd(), filePath);
 
-const startTime = Date.now();
-const fixedCount = processDirectory('.');
+  if (fs.existsSync(fullPath)) {
+    console.log(`\n🔧 Fixing ${filePath}...`);
 
-console.log(`✅ Fixed ${fixedCount} files in ${Date.now() - startTime}ms`);
+    fixDuplicateKeys(fullPath);
+    fixJSXStructure(fullPath);
+    addMissingImports(fullPath);
+  } else {
+    console.log(`⚠️  File not found: ${filePath}`);
+  }
+});
 
-// Run ESLint to check if issues are resolved
-console.log('🔍 Running ESLint to verify fixes...');
+console.log('\n✅ Syntax error fixes completed!');
+console.log('🚀 Running build test...');
+
 try {
-  execSync('npx eslint . --ext .js,.ts,.tsx --max-warnings 100', { stdio: 'inherit' });
-  console.log('✅ ESLint passed!');
+  execSync('pnpm run build:no-check', { stdio: 'inherit' });
+  console.log('🎉 Build successful!');
 } catch (error) {
-  console.log('⚠️  Some ESLint issues remain, but syntax errors should be fixed.');
-} 
+  console.log('❌ Build still has errors. Manual fixes needed.');
+  process.exit(1);
+}

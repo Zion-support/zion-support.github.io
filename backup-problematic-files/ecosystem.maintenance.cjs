@@ -1,11 +1,3 @@
-
-
-
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-
-
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-
 module.exports = {}
   "apps": [{}]
       name: 'maintenance-runner',
@@ -21,11 +13,5 @@ module.exports = {}
       "error_file": 'logs/maintenance-runner-error.log',
       "out_file": 'logs/maintenance-runner-out.log',
       "merge_logs": true},
-
-
-
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-
-
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+  ]};
 

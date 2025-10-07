@@ -1,0 +1,88 @@
+{
+  "totalSize": 508058,
+  "totalSizeFormatted": "496.15 KB",
+  "fileCount": 16,
+  "files": [
+    {
+      "path": "assets/js/chunk-DjWUf90q.js",
+      "size": 185402,
+      "sizeFormatted": "181.06 KB"
+    },
+    {
+      "path": "assets/js/chunk-BvKFL9da.js",
+      "size": 155056,
+      "sizeFormatted": "151.42 KB"
+    },
+    {
+      "path": "assets/js/main-gwOh-PqP.js",
+      "size": 97917,
+      "sizeFormatted": "95.62 KB"
+    },
+    {
+      "path": "assets/css/main-C45_LrBN.css",
+      "size": 36188,
+      "sizeFormatted": "35.34 KB"
+    },
+    {
+      "path": "index.html",
+      "size": 9213,
+      "sizeFormatted": "9 KB"
+    },
+    {
+      "path": "sw-enhanced.js",
+      "size": 7084,
+      "sizeFormatted": "6.92 KB"
+    },
+    {
+      "path": "assets/js/chunk-BGbh3Eci.js",
+      "size": 5300,
+      "sizeFormatted": "5.18 KB"
+    },
+    {
+      "path": "assets/js/chunk-Ep4FA2S1.js",
+      "size": 4721,
+      "sizeFormatted": "4.61 KB"
+    },
+    {
+      "path": "offline.html",
+      "size": 2003,
+      "sizeFormatted": "1.96 KB"
+    },
+    {
+      "path": "site.webmanifest",
+      "size": 1902,
+      "sizeFormatted": "1.86 KB"
+    },
+    {
+      "path": "sw.js",
+      "size": 1095,
+      "sizeFormatted": "1.07 KB"
+    },
+    {
+      "path": "sitemap.xml",
+      "size": 819,
+      "sizeFormatted": "819 Bytes"
+    },
+    {
+      "path": "_headers",
+      "size": 618,
+      "sizeFormatted": "618 Bytes"
+    },
+    {
+      "path": "manifest.json",
+      "size": 594,
+      "sizeFormatted": "594 Bytes"
+    },
+    {
+      "path": "robots.txt",
+      "size": 123,
+      "sizeFormatted": "123 Bytes"
+    },
+    {
+      "path": "_redirects",
+      "size": 23,
+      "sizeFormatted": "23 Bytes"
+    }
+  ],
+  "recommendations": []
+}

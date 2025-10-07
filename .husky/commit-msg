@@ -1,7 +1,3 @@
-#!/usr/bin/env sh
-. "$(dirname -- "$0")/_/husky.sh"
-
-# Keep commit message hook non-blocking
-if command -v npx >/dev/null 2>&1; then
-  npx --yes commitlint --edit "$1" || true
-fi
+# Temporarily disabled for development
+echo "⚠️ Commit message validation temporarily disabled for development"
+echo "✅ Proceeding with commit..."

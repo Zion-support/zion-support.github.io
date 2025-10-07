@@ -1,0 +1,1 @@
+import React from 'react' interface LoadingSpinnerProps { // TODO: Implement }' size?: 'sm' | 'md' | 'lg' className?: string; const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({<div></div> <div></div>" <span className="text-left" >Loading...<" </div>)"`}'

@@ -1,68 +1,65 @@
 #!/bin/bash
 
-# Script to merge all open PRs from GitHub
-REPO="Zion-Holdings/zion.app"
-API_BASE="https://api.github.com/repos/$REPO"
+# Script to merge all open PRs into main branch
+set -e
 
-echo "Starting PR merge process for $REPO..."
+echo "Starting PR merge process..."
 
-# Get all open PRs
-echo "Fetching open PRs..."
-PRS_JSON=$(curl -s "$API_BASE/pulls?state=open")
+# Ensure we're on main branch
+git checkout main
 
-# Extract PR numbers using a more reliable method
-PRS=$(echo "$PRS_JSON" | grep -o '"number":[0-9]*' | sed 's/"number"://')
+# Update main branch
+git pull origin main
 
-echo "Found PRs: $PRS"
+# List of PR branches to merge
+PR_BRANCHES=(
+    "origin/cursor/fix-web-application-console-errors-0bf5"
+    "origin/cursor/build-and-deploy-with-vite-and-netlify-8b37"
+    "origin/cursor/fix-errors-and-merge-to-main-fcbd"
+    "origin/cursor/fix-errors-and-merge-to-main-e6e1"
+)
 
-if [ -z "$PRS" ]; then
-    echo "No PRs found or failed to extract PR numbers"
-    exit 1
-fi
-
-for pr in $PRS; do
-    echo "Processing PR #$pr..."
+# Merge each PR branch
+for branch in "${PR_BRANCHES[@]}"; do
+    echo "Attempting to merge $branch..."
     
-    # Get PR details
-    PR_INFO=$(curl -s "$API_BASE/pulls/$pr")
-    PR_TITLE=$(echo "$PR_INFO" | grep -o '"title":"[^"]*"' | head -1 | cut -d'"' -f4)
-    PR_BRANCH=$(echo "$PR_INFO" | grep -o '"ref":"[^"]*"' | head -1 | cut -d'"' -f4)
-    
-    echo "  Title: $PR_TITLE"
-    echo "  Branch: $PR_BRANCH"
-    
-    # Get files changed in this PR
-    echo "  Fetching changed files..."
-    FILES_JSON=$(curl -s "$API_BASE/pulls/$pr/files")
-    FILES=$(echo "$FILES_JSON" | grep -o '"filename":"[^"]*"' | cut -d'"' -f4)
-    
-    echo "  Files to process: $FILES"
-    
-    for file in $FILES; do
-        echo "    Processing file: $file"
+    # Check if branch exists
+    if git show-ref --verify --quiet refs/remotes/$branch; then
+        echo "Merging $branch into main..."
         
-        # Get the content of the file from the PR branch
-        CONTENT_URL="$API_BASE/contents/$file?ref=$PR_BRANCH"
-        FILE_CONTENT_JSON=$(curl -s "$CONTENT_URL")
-        FILE_CONTENT=$(echo "$FILE_CONTENT_JSON" | grep -o '"content":"[^"]*"' | cut -d'"' -f4)
-        
-        if [ ! -z "$FILE_CONTENT" ]; then
-            # Create directory if it doesn't exist
-            DIR=$(dirname "$file")
-            if [ ! -d "$DIR" ]; then
-                mkdir -p "$DIR"
-            fi
-            
-            # Write the file content (base64 decode if needed)
-            echo "$FILE_CONTENT" | base64 -d > "$file" 2>/dev/null || echo "$FILE_CONTENT" > "$file"
-            echo "      Updated $file"
+        # Try to merge with strategy
+        if git merge $branch --no-ff -m "Merge $branch into main"; then
+            echo "Successfully merged $branch"
         else
-            echo "      No content found for $file"
+            echo "Merge conflict detected for $branch, attempting to resolve..."
+            
+            # Check for conflicts
+            if git status --porcelain | grep -q "^UU\|^AA\|^DD"; then
+                echo "Resolving conflicts for $branch..."
+                
+                # Auto-resolve conflicts by accepting incoming changes for most cases
+                git status --porcelain | grep "^UU\|^AA\|^DD" | while read status file; do
+                    echo "Resolving conflict in $file"
+                    # For now, accept the incoming changes (theirs)
+                    git checkout --theirs "$file" 2>/dev/null || true
+                    git add "$file" 2>/dev/null || true
+                done
+                
+                # Complete the merge
+                git commit --no-edit || git merge --abort
+                echo "Resolved conflicts for $branch"
+            else
+                echo "No conflicts found, completing merge for $branch"
+                git commit --no-edit
+            fi
         fi
-    done
-    
-    echo "  Completed PR #$pr"
-    echo ""
+    else
+        echo "Branch $branch not found, skipping..."
+    fi
 done
 
 echo "PR merge process completed!"
+
+# Show final status
+git status
+git log --oneline -10

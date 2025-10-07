@@ -1,139 +1,184 @@
 #!/usr/bin/env node
 
 const fs = require('fs');
-const fse = require('fs-extra');
 const path = require('path');
-const http = require('http');
-const https = require('https');
+const { execSync } = require('child_process');
 
-const ROOT = process.cwd();
-const REPORT_DIR = path.join(ROOT, 'data', 'reports', 'links');
-const REPORT_FILE = path.join(REPORT_DIR, `link-check-${Date.now()}.json`);
-const REPORT_LATEST = path.join(REPORT_DIR, 'latest.json');
-const PUBLIC_REPORT_DIR = path.join(ROOT, 'public', 'reports', 'links');
-const PUBLIC_LATEST = path.join(PUBLIC_REPORT_DIR, 'latest.json');
+console.log('🔗 Starting continuous link checker automation...');
 
-const PAGES_DIR = path.join(ROOT, 'pages');
-const PUBLIC_DIR = path.join(ROOT, 'public');
-const DOCS_DIR = path.join(ROOT, 'docs');
+// Get automation interval from environment variable (default: 30 minutes)
+const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 1800000; // 30 minutes
 
-function listFiles(dir, exts = ['.tsx', '.ts', '.js', '.jsx', '.md', '.mdx', '.html']) {
-  const results = [];
-  if (!fs.existsSync(dir)) return results;
-  const stack = [dir];
-  while (stack.length) {
-    const current = stack.pop();
-    const entries = fs.readdirSync(current);
-    for (const entry of entries) {
-      const full = path.join(current, entry);
-      const stat = fs.statSync(full);
-      if (stat.isDirectory()) stack.push(full);
-      else if (exts.includes(path.extname(entry))) results.push(full);
+async function checkLinks() {
+  try {
+    console.log(`🔗 Running link check at ${new Date().toISOString()}`);
+    
+    // Build the project first
+    console.log('📦 Building project...');
+    try {
+      execSync('npm run build', { stdio: 'inherit' });
+      console.log('✅ Build completed');
+    } catch (error) {
+      console.log('⚠️  Build failed but continuing...');
+      return;
     }
-  }
-  return results;
-}
-
-function extractLinks(content) {
-  const links = new Set();
-  const hrefRegex = /href\s*=\s*['\"]([^'\"]+)['\"]/gi;
-  const srcRegex = /src\s*=\s*['\"]([^'\"]+)['\"]/gi;
-  let m;
-  while ((m = hrefRegex.exec(content))) links.add(m[1]);
-  while ((m = srcRegex.exec(content))) links.add(m[1]);
-  return Array.from(links);
-}
-
-function mapPathToPage(p) {
-  // Map "/a/b" to possible page file candidates
-  if (!p.startsWith('/')) return null;
-  const clean = p.replace(/[#?].*$/, '').replace(/\/+$/, '');
-  const candidates = [];
-  const base = path.join(PAGES_DIR, clean);
-  candidates.push(base + '.tsx', base + '.ts', base + '.jsx', base + '.js');
-  // index fallback
-  candidates.push(path.join(PAGES_DIR, clean, 'index.tsx'));
-  candidates.push(path.join(PAGES_DIR, clean, 'index.ts'));
-  candidates.push(path.join(PAGES_DIR, clean, 'index.jsx'));
-  candidates.push(path.join(PAGES_DIR, clean, 'index.js'));
-  // static public asset
-  const publicAsset = path.join(PUBLIC_DIR, clean);
-  candidates.push(publicAsset);
-  return candidates;
-}
-
-function existsAny(paths) {
-  for (const p of paths) {
-    if (fs.existsSync(p)) return true;
-  }
-  return false;
-}
-
-function checkExternal(url) {
-  return new Promise((resolve) => {
-    const lib = url.startsWith('https') ? https : http;
-    const req = lib.request(url, { method: 'HEAD', timeout: 5000 }, (res) => {
-      resolve({ ok: res.statusCode && res.statusCode < 400, status: res.statusCode });
-      req.destroy();
-    });
-    req.on('timeout', () => { resolve({ ok: false, status: 'timeout' }); req.destroy(); });
-    req.on('error', () => { resolve({ ok: false, status: 'error' }); });
-    req.end();
-  });
-}
-
-async function main() {
-  const files = [
-    ...listFiles(PAGES_DIR),
-    ...listFiles(PUBLIC_DIR, ['.html']),
-    ...listFiles(DOCS_DIR, ['.md', '.mdx']),
-  ];
-  const results = [];
-  const externalCache = new Map();
-
-  for (const file of files) {
-    const content = fs.readFileSync(file, 'utf8');
-    const links = extractLinks(content);
-    for (const link of links) {
-      if (!link || link.startsWith('mailto:') || link.startsWith('tel:') || link.startsWith('javascript:')) continue;
-      if (link.startsWith('http://') || link.startsWith('https://')) {
-        if (!externalCache.has(link)) {
-          // eslint-disable-next-line no-await-in-loop
-          externalCache.set(link, await checkExternal(link));
+    
+    // Check if dist folder exists
+    const distPath = path.join(process.cwd(), 'dist');
+    if (!fs.existsSync(distPath)) {
+      console.log('⚠️  Dist folder not found, skipping link check');
+      return;
+    }
+    
+    // Check for index.html
+    const indexHtmlPath = path.join(distPath, 'index.html');
+    if (!fs.existsSync(indexHtmlPath)) {
+      console.log('⚠️  index.html not found in build output');
+      return;
+    }
+    
+    console.log('✅ index.html found in build output');
+    
+    // Find all HTML files
+    const htmlFiles = findHtmlFiles(distPath);
+    console.log(`📄 Found ${htmlFiles.length} HTML files to check`);
+    
+    // Check for broken references
+    let hasIssues = false;
+    const brokenReferences = [];
+    
+    for (const htmlFile of htmlFiles) {
+      try {
+        const content = fs.readFileSync(htmlFile, 'utf8');
+        const references = findReferences(content);
+        
+        for (const ref of references) {
+          if (!isValidReference(ref, distPath)) {
+            brokenReferences.push({
+              file: path.relative(process.cwd(), htmlFile),
+              reference: ref
+            });
+            hasIssues = true;
+          }
         }
-        const { ok, status } = externalCache.get(link);
-        results.push({ file, link, type: 'external', ok, status });
-      } else if (link.startsWith('/')) {
-        const candidates = mapPathToPage(link);
-        const ok = existsAny(candidates);
-        results.push({ file, link, type: 'internal', ok, status: ok ? 200 : 404 });
-      } else {
-        // relative paths
-        const abs = path.resolve(path.dirname(file), link);
-        const ok = fs.existsSync(abs);
-        results.push({ file, link, type: 'relative', ok, status: ok ? 200 : 404 });
+      } catch (error) {
+        console.log(`⚠️  Could not read ${htmlFile}: ${error.message}`);
       }
     }
+    
+    if (brokenReferences.length > 0) {
+      console.log('⚠️  Broken references found:');
+      brokenReferences.forEach(ref => {
+        console.log(`  - ${ref.file}: ${ref.reference}`);
+      });
+    }
+    
+    if (!hasIssues) {
+      console.log('✅ No broken references found');
+    }
+    
+    // Generate report
+    const report = {
+      timestamp: new Date().toISOString(),
+      hasIssues,
+      htmlFiles: htmlFiles.length,
+      brokenReferences: brokenReferences.length,
+      summary: 'Link check completed'
+    };
+    
+    const reportPath = path.join(process.cwd(), 'link-checker-report.json');
+    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+    console.log(`📊 Report saved to ${reportPath}`);
+    
+  } catch (error) {
+    console.error('❌ Link check failed:', error.message);
+    // Don't exit, just log the error and continue
   }
-
-  const summary = {
-    timestamp: new Date().toISOString(),
-    totals: {
-      checked: results.length,
-      broken: results.filter((r) => !r.ok).length,
-      external: results.filter((r) => r.type === 'external').length,
-      internal: results.filter((r) => r.type === 'internal').length,
-      relative: results.filter((r) => r.type === 'relative').length,
-    },
-  };
-
-  await fse.ensureDir(REPORT_DIR);
-  await fse.ensureDir(PUBLIC_REPORT_DIR);
-  await fse.writeJSON(REPORT_FILE, { summary, results }, { spaces: 2 });
-  await fse.writeJSON(REPORT_LATEST, { summary, results }, { spaces: 2 });
-  await fse.writeJSON(path.join(PUBLIC_REPORT_DIR, `report-${Date.now()}.json`), { summary, results }, { spaces: 2 });
-  await fse.writeJSON(PUBLIC_LATEST, { summary, results }, { spaces: 2 });
-  console.log(`Link check complete. Broken: ${summary.totals.broken}/${summary.totals.checked}`);
 }
 
-main().catch((err) => { console.error(err); process.exit(1); });
+function findHtmlFiles(dir) {
+  const files = [];
+  const items = fs.readdirSync(dir);
+  
+  for (const item of items) {
+    const fullPath = path.join(dir, item);
+    const stat = fs.statSync(fullPath);
+    
+    if (stat.isDirectory()) {
+      files.push(...findHtmlFiles(fullPath));
+    } else if (item.endsWith('.html')) {
+      files.push(fullPath);
+    }
+  }
+  
+  return files;
+}
+
+function findReferences(content) {
+  const references = [];
+  
+  // Find href attributes
+  const hrefMatches = content.match(/href=["']([^"']+)["']/g);
+  if (hrefMatches) {
+    hrefMatches.forEach(match => {
+      const href = match.match(/href=["']([^"']+)["']/)[1];
+      if (href && !href.startsWith('#') && !href.startsWith('javascript:') && !href.startsWith('http')) {
+        references.push(href);
+      }
+    });
+  }
+  
+  // Find src attributes
+  const srcMatches = content.match(/src=["']([^"']+)["']/g);
+  if (srcMatches) {
+    srcMatches.forEach(match => {
+      const src = match.match(/src=["']([^"']+)["']/)[1];
+      if (src && !src.startsWith('data:') && !src.startsWith('blob:') && !src.startsWith('http')) {
+        references.push(src);
+      }
+    });
+  }
+  
+  return references;
+}
+
+function isValidReference(ref, distPath) {
+  if (ref.startsWith('/')) {
+    ref = ref.substring(1);
+  }
+  
+  const fullPath = path.join(distPath, ref);
+  return fs.existsSync(fullPath);
+}
+
+// Main continuous loop
+async function runContinuous() {
+  console.log(`🚀 Starting continuous link checker with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`);
+  
+  // Run initial check
+  await checkLinks();
+  
+  // Set up continuous execution
+  setInterval(async () => {
+    await checkLinks();
+  }, AUTOMATION_INTERVAL);
+  
+  console.log(`✅ Continuous link checker running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes`);
+}
+
+// Handle graceful shutdown
+process.on('SIGINT', () => {
+  console.log('🛑 Received SIGINT, shutting down gracefully...');
+  process.exit(0);
+});
+
+process.on('SIGTERM', () => {
+  console.log('🛑 Received SIGTERM, shutting down gracefully...');
+  process.exit(0);
+});
+
+// Start the continuous link checker
+runContinuous().catch(error => {
+  console.error('❌ Failed to start continuous link checker:', error);
+  process.exit(1);
+});

@@ -1,11 +1,3 @@
-
-
-
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-
-
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {}
   "reactStrictMode": true,
@@ -50,8 +42,6 @@ const nextConfig = {}
         "headers": [{ key: 'Cache-Control', "value": 'public, max-age=31536000, immutable' };]
         ];
       },
-
-
       {
         source: '/public/(.*)',
         headers: [
@@ -59,15 +49,6 @@ const nextConfig = {}
         ]
       }
     ]}
-
-
-
-
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-
-
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-
       {}
         "source": '/public/(.*)',
         "headers": [{ key: 'Cache-Control', "value": 'public, max-age=31536000, immutable' };]
@@ -76,10 +57,5 @@ const nextConfig = {}
     ]};
 };
 
-
-
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-
-
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+module.exports = nextConfig;
 
