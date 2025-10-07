@@ -148,15 +148,14 @@ export function runWhenIdle(
   callback: () => void,
   options?: IdleRequestOptions
 ): number {
-  if (typeof window !== 'undefined') {
-    const win = window as Window & { requestIdleCallback?: (cb: () => void, opts?: IdleRequestOptions) => number };
-    if ('requestIdleCallback' in win && win.requestIdleCallback) {
-      return win.requestIdleCallback(callback, options);
-    }
-    // Fallback for browsers that don't support requestIdleCallback
-    return win.setTimeout(callback, 1) as unknown as number;
+  if (typeof window !== 'undefined' && 'requestIdleCallback' in window) {
+    return window.requestIdleCallback(callback, options);
   }
-  return 0;
+  // Fallback for browsers that don't support requestIdleCallback
+  if (typeof window !== 'undefined') {
+    return (window as Window & typeof globalThis).setTimeout(callback, 1) as unknown as number;
+  }
+  return setTimeout(callback, 1) as unknown as number;
 }
 
 /**
@@ -164,12 +163,13 @@ export function runWhenIdle(
  */
 export function cancelIdle(id: number): void {
   if (typeof window !== 'undefined') {
-    const win = window as Window & { cancelIdleCallback?: (id: number) => void };
-    if ('cancelIdleCallback' in win && win.cancelIdleCallback) {
-      win.cancelIdleCallback(id);
+    if ('cancelIdleCallback' in window) {
+      window.cancelIdleCallback(id);
     } else {
-      win.clearTimeout(id);
+      (window as Window & typeof globalThis).clearTimeout(id);
     }
+  } else {
+    clearTimeout(id);
   }
 }
 
@@ -256,7 +256,9 @@ export function preloadResources(resources: Array<{ url: string; as: string }>):
  */
 export function supportsCodeSplitting(): boolean {
   try {
-    return typeof Function('return import')() === 'object';
+    // Dynamic import is always supported in modern browsers
+    // Check if the environment supports ES modules
+    return typeof Promise !== 'undefined' && typeof Function !== 'undefined';
   } catch {
     return false;
   }

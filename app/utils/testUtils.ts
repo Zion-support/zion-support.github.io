@@ -218,7 +218,9 @@ export const generateTestData = {
 export function createTestWrapper(providers: Array<React.ComponentType<{ children: React.ReactNode }>>): React.ComponentType<{ children: React.ReactNode }> {
   return ({ children }) => {
     return providers.reduceRight<ReactElement>(
-      (acc, Provider) => React.createElement(Provider, { children: acc }),
+      (acc, Provider) => {
+        return React.createElement(Provider, null, acc);
+      },
       children as ReactElement
     );
   };
