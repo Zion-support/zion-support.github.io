@@ -208,8 +208,18 @@ export function sortBy<T>(
       const aVal = typeof key === 'function' ? key(a) : a[key];
       const bVal = typeof key === 'function' ? key(b) : b[key];
 
-      if (aVal < bVal) return order === 'asc' ? -1 : 1;
-      if (aVal > bVal) return order === 'asc' ? 1 : -1;
+      // Handle comparison with type safety
+      if (aVal == null || bVal == null) {
+        if (aVal == null && bVal == null) continue;
+        return aVal == null ? 1 : -1;
+      }
+
+      // Convert to comparable values
+      const aComp = typeof aVal === 'string' || typeof aVal === 'number' || typeof aVal === 'boolean' ? aVal : String(aVal);
+      const bComp = typeof bVal === 'string' || typeof bVal === 'number' || typeof bVal === 'boolean' ? bVal : String(bVal);
+
+      if (aComp < bComp) return order === 'asc' ? -1 : 1;
+      if (aComp > bComp) return order === 'asc' ? 1 : -1;
     }
     return 0;
   });

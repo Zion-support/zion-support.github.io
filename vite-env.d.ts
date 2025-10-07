@@ -1,9 +1,4 @@
-declare global {
-  interface Window {
-    gtag?: (command: string, action: string, parameters?: Record<string, unknown>) => void;
-    dataLayer?: unknown[];
-  }
-}
+/// <reference types="vite/client" />
 
 interface ImportMetaEnv {
   readonly DEV: boolean;
@@ -17,5 +12,3 @@ interface ImportMeta {
   readonly env: ImportMetaEnv;
   readonly url: string;
 }
-
-export {};
