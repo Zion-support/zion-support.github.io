@@ -2,13 +2,6 @@
 
 import React, { useEffect } from 'react';
 
-declare global {
-  interface Window {
-    dataLayer: unknown[];
-    gtag: (...args: any[]) => void;
-  }
-}
-
 interface AnalyticsEvent {
   action: string;
   category: string;

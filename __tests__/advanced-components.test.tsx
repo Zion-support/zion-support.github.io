@@ -89,7 +89,7 @@ describe('AdvancedSEOOptimizer', () => {
   it('renders without crashing', () => {
     render(
       <HelmetProvider>
-        <AdvancedSEOOptimizer config={mockSEOData} />
+        <AdvancedSEOOptimizer seoData={mockSEOData} />
         <div>Test content</div>
       </HelmetProvider>
     );
@@ -100,7 +100,7 @@ describe('AdvancedSEOOptimizer', () => {
   it('sets document title', () => {
     render(
       <HelmetProvider>
-        <AdvancedSEOOptimizer config={mockSEOData} />
+        <AdvancedSEOOptimizer seoData={mockSEOData} />
       </HelmetProvider>
     );
     
@@ -110,7 +110,8 @@ describe('AdvancedSEOOptimizer', () => {
   it('renders structured data when enabled', () => {
     render(
       <HelmetProvider>
-        <AdvancedSEOOptimizer config={mockSEOData} 
+        <AdvancedSEOOptimizer 
+          seoData={mockSEOData} 
           enableStructuredData={true}
         />
       </HelmetProvider>
@@ -123,7 +124,8 @@ describe('AdvancedSEOOptimizer', () => {
   it('renders Open Graph tags when enabled', () => {
     render(
       <HelmetProvider>
-        <AdvancedSEOOptimizer config={mockSEOData} 
+        <AdvancedSEOOptimizer 
+          seoData={mockSEOData} 
           enableStructuredData={true}
         />
       </HelmetProvider>
@@ -136,7 +138,8 @@ describe('AdvancedSEOOptimizer', () => {
   it('renders Twitter Card tags when enabled', () => {
     render(
       <HelmetProvider>
-        <AdvancedSEOOptimizer config={mockSEOData} 
+        <AdvancedSEOOptimizer 
+          seoData={mockSEOData} 
           enableStructuredData={true}
         />
       </HelmetProvider>

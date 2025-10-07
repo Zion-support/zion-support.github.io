@@ -4,11 +4,12 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: "AI 2026: Autonomous Enterprise Architecture Revolution",
-  description: "Revolutionary autonomous enterprise architecture transforming business operations",publishedTime: "2026-01-15T00:00:00Z",
-  authors: [{ name: 'Zion Tech Group' }],
+  description: "Revolutionary autonomous enterprise architecture transforming business operations",
   openGraph: {
     title: 'AI 2026: Autonomous Enterprise Architecture Revolution',
-    description: 'Revolutionary autonomous enterprise architecture transforming business operations',publishedTime: '2026-01-15T00:00:00Z',
+    description: 'Revolutionary autonomous enterprise architecture transforming business operations',
+    type: 'article',
+    publishedTime: '2026-01-15T00:00:00Z',
     authors: ['Zion Tech Group']
   }
 };

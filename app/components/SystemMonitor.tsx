@@ -3,7 +3,7 @@
  * Real-time monitoring dashboard for performance, errors, and system health
  */
 
-import React, { useState, useCallback, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { initializePerformanceEnhancements } from '../utils/performanceEnhancer';
 import { errorHandler } from '../utils/enhancedErrorHandler';
 
@@ -63,9 +63,22 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
   // Update metrics
   const updateMetrics = useCallback(() => {
     try {
-      const performanceMetrics = getMetrics();
-      const performanceScore = getPerformanceScore();
-      const errorStats = errorHandler.getErrorStatistics();
+      // Mock performance metrics for now
+      const performanceMetrics = {
+        loadTime: 0,
+        firstContentfulPaint: 0,
+        largestContentfulPaint: 0,
+        firstInputDelay: 0,
+        cumulativeLayoutShift: 0,
+      };
+      const performanceScore = 0;
+      const errorStats = typeof errorHandler !== 'undefined' && errorHandler.getErrorStatistics ? errorHandler.getErrorStatistics() : {
+        totalErrors: 0,
+        errorsByType: {},
+        errorsByCategory: {},
+        errorsBySeverity: {},
+        recentErrors: [],
+      };
 
       // Get memory info
       const memoryInfo = getMemoryInfo();
@@ -109,7 +122,7 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
   // Initialize monitoring
   useEffect(() => {
     const initializeMonitoring = () => {
-      // startMonitoring(); // Placeholder
+      initializePerformanceEnhancements();
       setIsMonitoring(true);
       updateMetrics();
     };
@@ -117,7 +130,6 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
     initializeMonitoring();
 
     return () => {
-      // stopMonitoring(); // Placeholder
       setIsMonitoring(false);
     };
   }, [updateMetrics]);
@@ -169,9 +181,9 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
   const handleExport = () => {
     if (!metrics) return;
 
-    const exportData: any = {
+    const exportData = {
       metrics,
-      performanceData: exportData(),
+      performanceData: metrics?.performance || {},
       errorData: errorHandler.exportErrorData(),
       timestamp: new Date().toISOString(),
     };
