@@ -14,10 +14,10 @@ import React, { useEffect } from 'react';
 const PerformanceMonitor: React.FC = () => {
   useEffect(() => {
     // Web Vitals monitoring
-    const reportWebVitals = (metric: { name: string; value: number; id: string }) => {
+    const reportWebVitals = (metric: { name: string; value: number; id?: string }) => {
       // Send to analytics service
-      if (typeof window !== 'undefined' && (window as { gtag?: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag) {
-        (window as unknown as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag('event', 'web_vitals', {
+      if (typeof window !== 'undefined' && (window as { gtag?: (command: string, eventName: string, parameters: Record<string, unknown>) => void }).gtag) {
+        (window as unknown as { gtag: (command: string, eventName: string, parameters: Record<string, unknown>) => void }).gtag('event', 'web_vitals', {
           event_category: 'Performance',
           event_label: metric.name,
           value: Math.round(metric.value),
@@ -42,18 +42,16 @@ const PerformanceMonitor: React.FC = () => {
           reportWebVitals({
             name: 'LCP',
             value: lastEntry.startTime,
-            id: lastEntry.entryType,
           });
         }).observe({ entryTypes: ['largest-contentful-paint'] });
 
         // FID - First Input Delay
         new PerformanceObserver((list) => {
           const entries = list.getEntries();
-          entries.forEach((entry: PerformanceEventTiming) => {
+          entries.forEach((entry: PerformanceEntry & { processingStart?: number }) => {
             reportWebVitals({
               name: 'FID',
               value: (entry.processingStart || entry.startTime) - entry.startTime,
-              id: entry.entryType,
             });
           });
         }).observe({ entryTypes: ['first-input'] });
@@ -62,15 +60,14 @@ const PerformanceMonitor: React.FC = () => {
         let clsValue = 0;
         new PerformanceObserver((list) => {
           const entries = list.getEntries();
-          entries.forEach((entry: LayoutShift) => {
-            if (!entry.hadRecentInput) {
+          entries.forEach((entry: PerformanceEntry & { hadRecentInput?: boolean; value?: number }) => {
+            if (!entry.hadRecentInput && entry.value) {
               clsValue += entry.value;
             }
           });
           reportWebVitals({
             name: 'CLS',
             value: clsValue,
-            id: 'cls',
           });
         }).observe({ entryTypes: ['layout-shift'] });
 
@@ -81,7 +78,6 @@ const PerformanceMonitor: React.FC = () => {
             reportWebVitals({
               name: 'FCP',
               value: entry.startTime,
-              id: entry.entryType,
             });
           });
         }).observe({ entryTypes: ['paint'] });
@@ -102,7 +98,6 @@ const PerformanceMonitor: React.FC = () => {
           reportWebVitals({
             name: 'TTFB',
             value: ttfb,
-            id: 'ttfb',
           });
         }
       });

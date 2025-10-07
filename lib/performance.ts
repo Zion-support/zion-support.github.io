@@ -111,10 +111,9 @@ function sendToAnalytics(metric: Metric): void {
         userAgent: navigator.userAgent,
       }),
       keepalive: true,
-    }).catch(error => {
-      // eslint-disable-next-line no-console
-      console.error('Performance reporting error:', error);
-    });
+    }).catch(error => 
+    // eslint-disable-next-line no-console
+    console.error('Performance reporting error:', error));
   }
 }
 
@@ -301,7 +300,6 @@ export function monitorLongTasks(
     });
     observer.observe({ entryTypes: ['longtask'] });
     return observer;
-<<<<<<< HEAD
   } catch (error) {
     // eslint-disable-next-line no-console
     console.error('Error monitoring long tasks:', error);
