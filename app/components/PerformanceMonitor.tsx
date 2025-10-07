@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from 'react';
 import performanceOptimizer from '../utils/performanceOptimizer';
+import { logger } from '../utils/logger';
 
 interface LayoutShift extends PerformanceEntry {
   hadRecentInput: boolean;
@@ -75,8 +76,10 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       setPerformanceScore(score);
 
       if (enableConsoleLogging) {
-        console.log('Performance Metrics:', currentMetrics);
-        console.log('Performance Score:', score);
+        logger.group('Performance Metrics', () => {
+          logger.log('Metrics:', currentMetrics);
+          logger.log('Score:', score);
+        });
       }
     };
 
@@ -241,10 +244,10 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
             <button
               onClick={() => {
                 // Trigger optimization suggestions
-                console.log('Performance optimization suggestions:', {
-                  'Reduce bundle size': metrics.bundleSize > 500000,
-                  'Optimize images': metrics.loadTime > 3000,
-                  'Improve caching': metrics.cacheHitRate < 0.8,
+                logger.group('Performance Optimization Suggestions', () => {
+                  if (metrics.bundleSize > 500000) logger.log('⚠️ Reduce bundle size');
+                  if (metrics.loadTime > 3000) logger.log('⚠️ Optimize images');
+                  if (metrics.cacheHitRate < 0.8) logger.log('⚠️ Improve caching');
                 });
               }}
               className="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition-colors text-sm"

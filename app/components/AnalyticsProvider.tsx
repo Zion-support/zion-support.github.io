@@ -1,6 +1,7 @@
 'use client';
 
 import React, { createContext, useContext, useEffect, useState } from 'react';
+import { logger } from '../utils/logger';
 
 interface AnalyticsEvent {
   event: string;
@@ -80,8 +81,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
     if (!isInitialized || typeof window === 'undefined') return;
 
     if (enableDebug) {
-      // eslint-disable-next-line no-console
-      console.log('Analytics Event:', event);
+      logger.log('Analytics Event:', event);
     }
 
     if ((window as unknown as { gtag: (...args: unknown[]) => void }).gtag) {
@@ -97,8 +97,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
     if (!isInitialized || typeof window === 'undefined') return;
 
     if (enableDebug) {
-      // eslint-disable-next-line no-console
-      console.log('Page View:', page);
+      logger.log('Page View:', page);
     }
 
     if ((window as unknown as { gtag: (...args: unknown[]) => void }).gtag) {
@@ -113,8 +112,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
     if (!isInitialized || typeof window === 'undefined') return;
 
     if (enableDebug) {
-      // eslint-disable-next-line no-console
-      console.log('Performance Metric:', metric, value);
+      logger.perf(metric, value);
     }
 
     if ((window as unknown as { gtag: (...args: unknown[]) => void }).gtag) {

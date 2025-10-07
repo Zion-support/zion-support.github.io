@@ -197,6 +197,33 @@ class Logger {
   exportLogs(): string {
     return JSON.stringify(this.logs, null, 2);
   }
+
+  /**
+   * Log performance metrics (development only)
+   */
+  perf(label: string, value: number, unit = 'ms'): void {
+    this.debug(`${label}: ${value}${unit}`, { component: 'performance' });
+  }
+
+  /**
+   * Group related logs (development only)
+   */
+  group(label: string, fn: () => void): void {
+    if (isDevelopment()) {
+      console.group(label);
+      fn();
+      console.groupEnd();
+    }
+  }
+
+  /**
+   * Log with custom styling (development only)
+   */
+  styled(message: string, style: string): void {
+    if (isDevelopment()) {
+      console.log(`%c${message}`, style);
+    }
+  }
 }
 
 // Create and export singleton instance
