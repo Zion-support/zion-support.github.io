@@ -79,16 +79,12 @@ class AdvancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
 
   private reportError = (error: Error, errorInfo: ErrorInfo) => {
     const errorReport: ErrorReport = {
-      errorId: this.state.errorId,
-      error: error,
-      errorInfo: errorInfo,
-      message: error.message,
-      stack: error.stack,
-      componentStack: errorInfo.componentStack,
+      errorId: this.state.errorId || this.generateErrorId(),
+      error,
+      errorInfo,
       timestamp: new Date().toISOString(),
       userAgent: navigator.userAgent,
       url: window.location.href,
-      userId: this.getUserId(),
       sessionId: this.getSessionId(),
     };
 
@@ -117,6 +113,10 @@ class AdvancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
     } catch {
       return `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
     }
+  };
+
+  private generateErrorId = (): string => {
+    return `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
   };
 
   private sendErrorReport = async (errorReport: ErrorReport) => {
