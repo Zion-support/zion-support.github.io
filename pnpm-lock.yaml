@@ -94,7 +94,7 @@ importers:
         specifier: ^10.4.1
         version: 10.4.1
       '@testing-library/jest-dom':
-        specifier: ^6.6.3
+        specifier: ^6.9.1
         version: 6.9.1
       '@testing-library/react':
         specifier: ^16.1.0
