@@ -31,10 +31,10 @@ function App() {
   }, []);
 
   return (
-    <HelmetProvider>
-      <ErrorBoundary>
-        <AccessibilityEnhancer>
-          <SEOOptimizer>
+    <ErrorBoundary>
+      <HelmetProvider>
+        <SEOOptimizer>
+          <AccessibilityEnhancer>
             <Router>
               <div className="App">
                 <Suspense fallback={<LoadingSpinner />}>
@@ -48,10 +48,10 @@ function App() {
                 </Suspense>
               </div>
             </Router>
-          </SEOOptimizer>
-        </AccessibilityEnhancer>
-      </ErrorBoundary>
-    </HelmetProvider>
+          </AccessibilityEnhancer>
+        </SEOOptimizer>
+      </HelmetProvider>
+    </ErrorBoundary>
   );
 }
 
