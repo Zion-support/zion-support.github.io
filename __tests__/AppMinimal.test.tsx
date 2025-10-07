@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import { describe, it, expect } from '@jest/globals';
+// Jest globals are available globally in test environment
 import '@testing-library/jest-dom';
 import React from 'react';
 
