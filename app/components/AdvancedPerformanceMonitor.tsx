@@ -1,0 +1,215 @@
+import React, { useEffect, useState, useCallback } from 'react';
+
+interface PerformanceMetrics {
+  fcp: number | null;
+  lcp: number | null;
+  fid: number | null;
+  cls: number | null;
+  ttfb: number | null;
+  memory: number | null;
+}
+
+interface PerformanceMonitorProps {
+  onMetricsUpdate?: (metrics: PerformanceMetrics) => void;
+  enableRealTimeMonitoring?: boolean;
+}
+
+const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
+  onMetricsUpdate,
+  enableRealTimeMonitoring = true,
+}) => {
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+    fcp: null,
+    lcp: null,
+    fid: null,
+    cls: null,
+    ttfb: null,
+    memory: null,
+  });
+
+  const measureWebVitals = useCallback(() => {
+    if (typeof window === 'undefined' || !('performance' in window)) return;
+
+    // Measure First Contentful Paint (FCP)
+    const fcpEntry = performance.getEntriesByName('first-contentful-paint')[0];
+    const fcp = fcpEntry ? fcpEntry.startTime : null;
+
+    // Measure Largest Contentful Paint (LCP)
+    const lcpObserver = new PerformanceObserver((list) => {
+      const entries = list.getEntries();
+      const lastEntry = entries[entries.length - 1];
+      setMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }));
+    });
+    lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
+
+    // Measure First Input Delay (FID)
+    const fidObserver = new PerformanceObserver((list) => {
+      const entries = list.getEntries();
+      entries.forEach((entry: any) => {
+        setMetrics(prev => ({ ...prev, fid: entry.processingStart - entry.startTime }));
+      });
+    });
+    fidObserver.observe({ entryTypes: ['first-input'] });
+
+    // Measure Cumulative Layout Shift (CLS)
+    let clsValue = 0;
+    const clsObserver = new PerformanceObserver((list) => {
+      const entries = list.getEntries();
+      entries.forEach((entry: any) => {
+        if (!entry.hadRecentInput) {
+          clsValue += entry.value;
+          setMetrics(prev => ({ ...prev, cls: clsValue }));
+        }
+      });
+    });
+    clsObserver.observe({ entryTypes: ['layout-shift'] });
+
+    // Measure Time to First Byte (TTFB)
+    const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+    const ttfb = navigationEntry ? navigationEntry.responseStart - navigationEntry.requestStart : null;
+
+    // Measure Memory Usage
+    const memory = (performance as any).memory ? (performance as any).memory.usedJSHeapSize : null;
+
+    setMetrics(prev => ({
+      ...prev,
+      fcp,
+      ttfb,
+      memory,
+    }));
+
+    // Cleanup observers
+    return () => {
+      lcpObserver.disconnect();
+      fidObserver.disconnect();
+      clsObserver.disconnect();
+    };
+  }, []);
+
+  const measureResourceTiming = useCallback(() => {
+    if (typeof window === 'undefined' || !('performance' in window)) return;
+
+    const resources = performance.getEntriesByType('resource');
+    const slowResources = resources.filter((resource: any) => resource.duration > 1000);
+    
+    if (slowResources.length > 0) {
+      console.warn('Slow resources detected:', slowResources.map((r: any) => ({
+        name: r.name,
+        duration: r.duration,
+        size: r.transferSize,
+      })));
+    }
+  }, []);
+
+  const measureCoreWebVitals = useCallback(() => {
+    if (typeof window === 'undefined') return;
+
+    // Use web-vitals library if available
+    try {
+      import('web-vitals').then((webVitals: any) => {
+        if (webVitals.getCLS) {
+          webVitals.getCLS((metric: any) => setMetrics(prev => ({ ...prev, cls: metric.value })));
+        }
+        if (webVitals.getFID) {
+          webVitals.getFID((metric: any) => setMetrics(prev => ({ ...prev, fid: metric.value })));
+        }
+        if (webVitals.getFCP) {
+          webVitals.getFCP((metric: any) => setMetrics(prev => ({ ...prev, fcp: metric.value })));
+        }
+        if (webVitals.getLCP) {
+          webVitals.getLCP((metric: any) => setMetrics(prev => ({ ...prev, lcp: metric.value })));
+        }
+        if (webVitals.getTTFB) {
+          webVitals.getTTFB((metric: any) => setMetrics(prev => ({ ...prev, ttfb: metric.value })));
+        }
+      }).catch(() => {
+        // web-vitals not available, continue without it
+      });
+    } catch (error) {
+      // web-vitals not available, continue without it
+    }
+  }, []);
+
+  useEffect(() => {
+    if (!enableRealTimeMonitoring) return;
+
+    const cleanup = measureWebVitals();
+    measureResourceTiming();
+    measureCoreWebVitals();
+
+    // Monitor performance every 5 seconds
+    const interval = setInterval(() => {
+      measureResourceTiming();
+    }, 5000);
+
+    return () => {
+      if (cleanup) cleanup();
+      clearInterval(interval);
+    };
+  }, [enableRealTimeMonitoring, measureWebVitals, measureResourceTiming, measureCoreWebVitals]);
+
+  useEffect(() => {
+    if (onMetricsUpdate) {
+      onMetricsUpdate(metrics);
+    }
+  }, [metrics, onMetricsUpdate]);
+
+  // Performance recommendations
+  const getPerformanceRecommendations = useCallback(() => {
+    const recommendations: string[] = [];
+
+    if (metrics.fcp && metrics.fcp > 1800) {
+      recommendations.push('First Contentful Paint is slow. Consider optimizing critical rendering path.');
+    }
+
+    if (metrics.lcp && metrics.lcp > 2500) {
+      recommendations.push('Largest Contentful Paint is slow. Optimize images and reduce render-blocking resources.');
+    }
+
+    if (metrics.fid && metrics.fid > 100) {
+      recommendations.push('First Input Delay is high. Reduce JavaScript execution time.');
+    }
+
+    if (metrics.cls && metrics.cls > 0.1) {
+      recommendations.push('Cumulative Layout Shift is high. Ensure stable layout and avoid dynamic content insertion.');
+    }
+
+    if (metrics.ttfb && metrics.ttfb > 600) {
+      recommendations.push('Time to First Byte is slow. Optimize server response time.');
+    }
+
+    return recommendations;
+  }, [metrics]);
+
+  const recommendations = getPerformanceRecommendations();
+
+  if (process.env.NODE_ENV === 'development') {
+    return (
+      <div className="fixed bottom-4 right-4 bg-white p-4 rounded-lg shadow-lg border max-w-sm z-50">
+        <h3 className="font-semibold text-sm mb-2">Performance Monitor</h3>
+        <div className="text-xs space-y-1">
+          <div>FCP: {metrics.fcp ? `${metrics.fcp.toFixed(0)}ms` : 'N/A'}</div>
+          <div>LCP: {metrics.lcp ? `${metrics.lcp.toFixed(0)}ms` : 'N/A'}</div>
+          <div>FID: {metrics.fid ? `${metrics.fid.toFixed(0)}ms` : 'N/A'}</div>
+          <div>CLS: {metrics.cls ? metrics.cls.toFixed(3) : 'N/A'}</div>
+          <div>TTFB: {metrics.ttfb ? `${metrics.ttfb.toFixed(0)}ms` : 'N/A'}</div>
+          <div>Memory: {metrics.memory ? `${(metrics.memory / 1024 / 1024).toFixed(1)}MB` : 'N/A'}</div>
+        </div>
+        {recommendations.length > 0 && (
+          <div className="mt-2">
+            <h4 className="font-semibold text-xs text-red-600">Recommendations:</h4>
+            <ul className="text-xs text-red-600">
+              {recommendations.map((rec, index) => (
+                <li key={index}>• {rec}</li>
+              ))}
+            </ul>
+          </div>
+        )}
+      </div>
+    );
+  }
+
+  return null;
+};
+
+export default AdvancedPerformanceMonitor;
