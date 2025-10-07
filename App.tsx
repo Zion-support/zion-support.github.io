@@ -197,6 +197,52 @@ export default function App() {
   }, []);
 
   return (
+<<<<<<< HEAD
+    <EnhancedErrorBoundary
+      enableErrorReporting={true}
+      enableRetry={true}
+      maxRetries={3}
+      enableAnalytics={true}
+    >
+      <AccessibilityEnhancer
+        config={{
+          enableKeyboardNavigation: true,
+          enableScreenReaderSupport: true,
+          enableHighContrast: true,
+          enableReducedMotion: true,
+          enableFocusManagement: true,
+          enableSkipLinks: true,
+          enableARIALabels: true,
+          enableColorContrast: true,
+        }}
+      >
+        <AdvancedSEOOptimizer
+          config={{
+            title: 'Zion Tech Group - Advanced AI and IT Solutions',
+            description: 'Enterprise-grade AI and IT solutions designed for large organizations. Scalable, secure, and reliable technology solutions.',
+            keywords: ['AI', 'IT Solutions', 'Enterprise', 'Technology', 'Digital Transformation'],
+            canonicalUrl: 'https://ziontechgroup.com',
+            ogImage: 'https://ziontechgroup.com/og-image.jpg',
+          }}
+          enableStructuredData={true}
+          enableOpenGraph={true}
+          enableTwitterCards={true}
+        />
+        <HelmetProvider>
+          <BrowserRouter>
+            <Suspense fallback={
+              <div className="flex items-center justify-center min-h-screen">
+                <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-indigo-600"></div>
+              </div>
+            }>
+              <HomePage />
+            </Suspense>
+            <PerformanceMonitor />
+          </BrowserRouter>
+        </HelmetProvider>
+      </AccessibilityEnhancer>
+    </EnhancedErrorBoundary>
+=======
     <ErrorBoundary>
       <HelmetProvider>
         <Helmet>
@@ -237,5 +283,6 @@ export default function App() {
         </div>
       </HelmetProvider>
     </ErrorBoundary>
+>>>>>>> main
   );
 }
