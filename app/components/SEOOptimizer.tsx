@@ -1,6 +1,7 @@
+'use client';
+
 import React, { useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { useLocation } from 'react-router-dom';
+import { usePathname } from 'next/navigation';
 
 interface SEOOptimizerProps {
   title?: string;
@@ -19,24 +20,24 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   url = 'https://ziontechgroup.com',
   type = 'website'
 }) => {
-  const location = useLocation();
+  const pathname = usePathname();
 
   useEffect(() => {
     // Track page view
     if (typeof window !== 'undefined' && (window as { gtag?: Function }).gtag) {
       (window as unknown as { gtag: Function }).gtag('event', 'page_view', {
         page_title: title,
-        page_location: url + location.pathname
+        page_location: url + pathname
       });
     }
-  }, [title, url, location.pathname]);
+  }, [title, url, pathname]);
 
   const structuredData = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
     name: 'Zion Tech Group',
     description,
-    url: url + location.pathname,
+    url: url + pathname,
     logo: 'https://ziontechgroup.com/logo.png',
     image,
     contactPoint: {
@@ -67,42 +68,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
     },
   };
 
-  return (
-    <Helmet>
-      <title>{title}</title>
-      <meta name="description" content={description} />
-      <meta name="keywords" content={keywords.join(', ')} />
-      <meta name="author" content="Zion Tech Group" />
-      
-      {/* Open Graph / Facebook */}
-      <meta property="og:type" content={type} />
-      <meta property="og:url" content={url + location.pathname} />
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
-      <meta property="og:image" content={image} />
-      <meta property="og:site_name" content="Zion Tech Group" />
-      <meta property="og:locale" content="en_US" />
-      
-      {/* Twitter */}
-      <meta property="twitter:card" content="summary_large_image" />
-      <meta property="twitter:url" content={url + location.pathname} />
-      <meta property="twitter:title" content={title} />
-      <meta property="twitter:description" content={description} />
-      <meta property="twitter:image" content={image} />
-      <meta name="twitter:site" content="@ziontechgroup" />
-      <meta name="twitter:creator" content="@ziontechgroup" />
-      
-      {/* Additional SEO */}
-      <meta name="robots" content="index,follow" />
-      <meta name="theme-color" content="#4f46e5" />
-      <link rel="canonical" href={url + location.pathname} />
-      
-      {/* Structured Data */}
-      <script type="application/ld+json">
-        {JSON.stringify(structuredData)}
-      </script>
-    </Helmet>
-  );
+  return null;
 };
 
 export default SEOOptimizer;

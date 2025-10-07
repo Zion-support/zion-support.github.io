@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useEffect, useRef, useState } from 'react';
 
 interface AccessibilityConfig {
@@ -16,10 +18,15 @@ interface AccessibilityEnhancerProps {
   children: React.ReactNode;
 }
 
-const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
+interface AccessibilityEnhancerRef {
+  announceToScreenReader: (message: string) => void;
+  setFontSize: (size: number) => void;
+}
+
+const AccessibilityEnhancer = React.forwardRef<AccessibilityEnhancerRef, AccessibilityEnhancerProps>(({
   config = {},
   children,
-}) => {
+}, ref) => {
   const [isHighContrast, setIsHighContrast] = useState(false);
   const [isReducedMotion, setIsReducedMotion] = useState(false);
   const [fontSize, setFontSize] = useState(16);
@@ -193,7 +200,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     skipToMain.href = '#main-content';
     skipToMain.textContent = 'Skip to main content';
     skipToMain.className = 'skip-link';
-    skipToMain.ref = skipLinkRef;
+    // skipToMain.ref = skipLinkRef; // Removed incorrect ref assignment
     
     const skipToNav = document.createElement('a');
     skipToNav.href = '#main-navigation';
@@ -268,7 +275,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     if (mainElement) {
       mainElement.setAttribute('role', 'main');
       mainElement.setAttribute('id', 'main-content');
-      mainElement.ref = mainContentRef;
+      // mainElement.ref = mainContentRef; // Removed incorrect ref assignment
     }
 
     // Add navigation landmark
@@ -410,10 +417,10 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   };
 
   // Expose utility functions
-  React.useImperativeHandle(React.forwardRef(() => null), () => ({
+  React.useImperativeHandle(ref, () => ({
     announceToScreenReader,
     setFontSize: (size: number) => setFontSize(size),
-  }));
+  }), []);
 
   return (
     <div
@@ -423,6 +430,8 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       {children}
     </div>
   );
-};
+});
+
+AccessibilityEnhancer.displayName = 'AccessibilityEnhancer';
 
 export default AccessibilityEnhancer;
