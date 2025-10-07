@@ -9,6 +9,9 @@ interface PerformanceMetrics {
   fid?: number;
   cls?: number;
   ttfb?: number;
+  loadTime?: number;
+  renderTime?: number;
+  memoryUsage?: number;
 }
 
 export default function PerformanceMonitor() {
@@ -68,7 +71,6 @@ export default function PerformanceMonitor() {
       <div className="text-xs text-gray-400 mt-2">
         Press Ctrl+Shift+P to toggle
       </div>
->>>>>>> acb7be8aee560111b0c604d2546781c6b7658122
     </div>
   );
 }
