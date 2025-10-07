@@ -388,7 +388,7 @@ export class TestRunner {
       }
 
       // Run the test
-      await this.runWithTimeout(test.fn, test.timeout ?? this.config.timeout ?? 5000);
+      await this.runWithTimeout(test.fn, test.timeout || this.config.timeout || 5000);
 
       // Run afterEach hooks
       for (const hook of suite.afterEach) {
