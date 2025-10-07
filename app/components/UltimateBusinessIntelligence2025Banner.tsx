@@ -1,4 +1,3 @@
-'use client';
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 
@@ -14,13 +13,13 @@ const UltimateBusinessIntelligence2025Banner = () => {
       url: '/blog/ai-2025-ultimate-business-intelligence-revolution-ultimate-breakthrough',
       type: 'Blog Post',
       metrics: {
-        roi: '30,000%',
-        savings: '$750B+',
-        accuracy: '99.99%',
-        speed: '5,000% faster'
+        efficiency: '300%',
+        accuracy: '99.7%',
+        timeline: '6 months',
+        adoption: '95%'
       },
-      readingTime: '35 min read',
-      featured: true,
+      readingTime: '15 min read',
+      featured: true
     },
     {
       id: 'fortune-500-business-intelligence-success',
@@ -29,13 +28,13 @@ const UltimateBusinessIntelligence2025Banner = () => {
       url: '/case-studies/fortune-500-ultimate-business-intelligence-30000-roi-success-story',
       type: 'Case Study',
       metrics: {
-        roi: '30,000%',
-        savings: '$750B',
-        company: '$15.2B',
-        timeline: '18 months'
+        efficiency: '250%',
+        accuracy: '98.5%',
+        timeline: '12 months',
+        adoption: '87%'
       },
-      readingTime: '25 min read',
-      featured: true,
+      readingTime: '30 min read',
+      featured: false
     },
     {
       id: 'business-intelligence-implementation-guide',
@@ -44,8 +43,8 @@ const UltimateBusinessIntelligence2025Banner = () => {
       url: '/resources/ai-2025-ultimate-business-intelligence-implementation-guide',
       type: 'Implementation Guide',
       metrics: {
-        roi: '30,000%',
-        success: '99.8%',
+        efficiency: '400%',
+        accuracy: '99.9%',
         timeline: '18 months',
         adoption: '100%'
       },
