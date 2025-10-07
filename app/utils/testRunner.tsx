@@ -1,6 +1,6 @@
 /**
- * Comprehensive Test Runner and Testing Utilities
- * Provides advanced testing capabilities, mocking, and test automation
+ * Advanced Test Runner
+ * Comprehensive testing utilities for React applications
  */
 
 import React, { ReactElement, useCallback } from 'react';

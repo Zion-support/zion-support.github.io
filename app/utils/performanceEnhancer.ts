@@ -187,6 +187,85 @@ export const optimizeScrollPerformance = () => {
 
   window.addEventListener('scroll', requestTick, { passive: true });
 
+  // Track Core Web Vitals
+  const trackCLS = () => {
+    let clsValue = 0;
+
+    interface LayoutShiftEntry extends PerformanceEntry {
+      hadRecentInput?: boolean;
+      value: number;
+    }
+
+    const observer = new PerformanceObserver((list) => {
+      for (const entry of list.getEntries()) {
+        const layoutEntry = entry as LayoutShiftEntry;
+        if (!layoutEntry.hadRecentInput) {
+          clsValue += layoutEntry.value;
+        }
+      }
+    });
+
+    observer.observe({ entryTypes: ['layout-shift'] });
+
+    return () => {
+      observer.disconnect();
+      return clsValue;
+    };
+  };
+
+  const trackLCP = () => {
+    let lcpValue = 0;
+
+    interface LargestContentfulPaintEntry extends PerformanceEntry {
+      renderTime: number;
+      loadTime: number;
+    }
+
+    const observer = new PerformanceObserver((list) => {
+      const entries = list.getEntries();
+      const lastEntry = entries[entries.length - 1] as LargestContentfulPaintEntry;
+      lcpValue = lastEntry.renderTime || lastEntry.loadTime;
+      // eslint-disable-next-line no-console
+      console.log('[Web Vitals] LCP:', lcpValue);
+    });
+
+    observer.observe({ entryTypes: ['largest-contentful-paint'] });
+
+    return () => {
+      observer.disconnect();
+      return lcpValue;
+    };
+  };
+
+  const trackFID = () => {
+    interface FirstInputEntry extends PerformanceEntry {
+      processingStart: number;
+    }
+    
+    const observer = new PerformanceObserver((list) => {
+      for (const entry of list.getEntries()) {
+        const fidEntry = entry as FirstInputEntry;
+        const fid = fidEntry.processingStart - entry.startTime;
+        // eslint-disable-next-line no-console
+        console.log('[Web Vitals] FID:', fid);
+      }
+    });
+
+    observer.observe({ entryTypes: ['first-input'] });
+
+    return () => observer.disconnect();
+  };
+
+  // Start tracking
+  const cleanupCLS = trackCLS();
+  const cleanupLCP = trackLCP();
+  const cleanupFID = trackFID();
+
+  return () => {
+    cleanupCLS();
+    cleanupLCP();
+    cleanupFID();
+  };
 };
 
 // Memory usage monitoring

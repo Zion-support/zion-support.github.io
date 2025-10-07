@@ -96,8 +96,8 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
   const updateMetrics = useCallback(() => {
     try {
       // Get basic performance metrics
-      const navigationTiming = performance.timing;
-      const loadTime = navigationTiming.loadEventEnd - navigationTiming.navigationStart;
+      const performanceMetrics = collectPerformanceMetrics();
+      const performanceScore = calculatePerformanceScore();
       
       // Calculate performance score
       const performanceScore = calculatePerformanceScore();
