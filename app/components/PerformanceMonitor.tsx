@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useEffect, useState } from 'react';
-import { performanceOptimizer } from '../utils/performanceOptimizer';
+import { PerformanceMonitor as PerfMonitor } from '../utils/performanceEnhancer';
 
 interface LayoutShift extends PerformanceEntry {
   hadRecentInput: boolean;
@@ -43,9 +43,24 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   useEffect(() => {
     if (!enableRealTimeMonitoring) return;
 
+    const perfMonitor = PerfMonitor.getInstance();
+    
     const updateMetrics = () => {
-      const currentMetrics = performanceOptimizer.getMetrics();
-      const score = performanceOptimizer.getPerformanceScore();
+      const rawMetrics = perfMonitor.getMetrics();
+      
+      // Convert raw metrics to our PerformanceMetrics format
+      const currentMetrics: PerformanceMetrics = {
+        loadTime: rawMetrics['loadTime'] || 0,
+        renderTime: rawMetrics['renderTime'] || 0,
+        memoryUsage: rawMetrics['memoryUsage'] || 0,
+        bundleSize: rawMetrics['bundleSize'] || 0,
+        cacheHitRate: rawMetrics['cacheHitRate'] || 0,
+      };
+      
+      // Calculate a simple performance score (0-100)
+      const score = Math.min(100, Math.max(0, 
+        100 - (currentMetrics.loadTime / 50) - (currentMetrics.renderTime / 20)
+      ));
       
       setMetrics(currentMetrics);
       setPerformanceScore(score);
@@ -215,10 +230,14 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
           {/* Actions */}
           <div className="mt-4 pt-4 border-t border-gray-200">
             <button
-              onClick={() => performanceOptimizer.optimize()}
+              onClick={() => {
+                const perfMonitor = PerfMonitor.getInstance();
+                perfMonitor.clearMetrics();
+                console.log('Performance metrics cleared');
+              }}
               className="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition-colors text-sm"
             >
-              Optimize Performance
+              Clear Metrics
             </button>
           </div>
         </div>
