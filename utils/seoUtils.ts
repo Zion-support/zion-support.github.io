@@ -196,6 +196,8 @@ export const seoAudit = async (): Promise<{
   results.score = (score / (Object.keys(results).length - 1)) * 100;
 
   return results;
+};
+
 // Generate sitemap
 export const generateSitemap = (urls: string[]): string => {
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
