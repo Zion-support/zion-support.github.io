@@ -1,9 +1,17 @@
 'use client';
 
-import React, { Suspense, lazy, useCallback } from 'react';
+import React, { Suspense, lazy, useCallback, useEffect } from 'react';
 import Link from 'next/link';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import SEOOptimizer from './components/SEOOptimizer';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
+import { HelmetProvider } from 'react-helmet-async';
+import AdvancedErrorBoundary from './components/AdvancedErrorBoundary';
+import SEOEnhancer from './components/SEOEnhancer';
+import AdvancedSEOOptimizer from './components/AdvancedSEOOptimizer';
+import LoadingSpinner from './components/LoadingSpinner';
+import PerformanceDashboard from './components/PerformanceDashboard';
+import AdvancedPerformanceMonitor from './components/AdvancedPerformanceMonitor';
 
 // Lazy load components for better performance
 const ContentShowcase = lazy(() => import('./components/ContentShowcase'));
@@ -16,6 +24,7 @@ const InteractiveAIROICalculator = lazy(
 
 // Utils
 import { performanceOptimizer } from './utils/performanceOptimizer';
+import { logger } from './utils/logger';
 
 // Styles
 import './globals.css';

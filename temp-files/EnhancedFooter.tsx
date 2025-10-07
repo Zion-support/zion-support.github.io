@@ -8,7 +8,7 @@ import {
   Twitter,
 } from 'lucide-react';
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 const EnhancedFooter: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -86,7 +86,7 @@ const EnhancedFooter: React.FC = () => {
             <ul className='space-y-2'>
               {services.slice(0, 6).map(service => (
                 <li key={service.name}>
-                  <Link to={service.href}>
+                  <Link href={service.href}>
                     <span className='text-gray-300 hover:text-white transition-colors'>
                       {service.name}
                     </span>
@@ -100,7 +100,7 @@ const EnhancedFooter: React.FC = () => {
             <ul className='space-y-2'>
               {products.slice(0, 6).map(product => (
                 <li key={product.name}>
-                  <Link to={product.href}>
+                  <Link href={product.href}>
                     <span className='text-gray-300 hover:text-white transition-colors'>
                       {product.name}
                     </span>
@@ -114,7 +114,7 @@ const EnhancedFooter: React.FC = () => {
             <ul className='space-y-2'>
               {quickLinks.map(item => (
                 <li key={item.name}>
-                  <Link to={item.href}>
+                  <Link href={item.href}>
                     <span className='text-gray-300 hover:text-white transition-colors'>
                       {item.name}
                     </span>
@@ -155,20 +155,27 @@ const EnhancedFooter: React.FC = () => {
               &copy, {currentYear} Zion Tech Group. All rights reserved.
             </p>
             <div className='flex space-x-6 mt-4 md:mt-0'>
-              <Link to='/legal/privacy'>
+              <Link href='/privacy'>
                 <span className='text-gray-400 hover:text-white text-sm transition-colors'>
                   Privacy Policy
                 </span>
               </Link>
-              <Link to='/legal/terms'>
+              <Link href='/terms'>
                 <span className='text-gray-400 hover:text-white text-sm transition-colors'>
                   Terms of Service
                 </span>
               </Link>
-              <Link to='/legal/cookies'>
+              <Link href='/legal/cookies'>
                 <span className='text-gray-400 hover:text-white text-sm transition-colors'>
                   Cookie Policy
                 </span>
               </Link>
             </div>
           </div>
+        </div>
+      </div>
+    </footer>
+  );
+};
+
+export default EnhancedFooter;
