@@ -1,17 +1,12 @@
-<<<<<<< HEAD
-// import { Menu, X } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-=======
-import React from 'react';
->>>>>>> cb79024a938ec4cdfb9bf2295cb3ecd71e1ace22
 
 interface ModernNavigationProps {
   className?: string;
 }
 
 const ModernNavigation: React.FC<ModernNavigationProps> = ({ className = '' }) => {
-<<<<<<< HEAD
   const [isOpen, setIsOpen] = useState(false);
   
   const navigationItems = [
@@ -47,7 +42,7 @@ const ModernNavigation: React.FC<ModernNavigationProps> = ({ className = '' }) =
             onClick={() => setIsOpen(!isOpen)}
             className='md:hidden text-gray-700 hover:text-blue-600 transition-colors'
           >
-            {isOpen ? <span className='w-6 h-6'>✕</span> : <span className='w-6 h-6'>☰</span>}
+            {isOpen ? <X className='w-6 h-6' /> : <Menu className='w-6 h-6' />}
           </button>
         </div>
         
@@ -72,25 +67,3 @@ const ModernNavigation: React.FC<ModernNavigationProps> = ({ className = '' }) =
 };
 
 export default ModernNavigation;
-=======
-  return (
-    <div className={className}>
-      <div className="container mx-auto px-4">
-        <nav className="flex items-center justify-between py-4">
-          <div className="text-xl font-bold text-blue-600">
-            Zion Tech Group
-          </div>
-          <div className="hidden md:flex space-x-8">
-            <a href="/" className="text-gray-700 hover:text-blue-600 transition-colors">Home</a>
-            <a href="/services" className="text-gray-700 hover:text-blue-600 transition-colors">Services</a>
-            <a href="/about" className="text-gray-700 hover:text-blue-600 transition-colors">About</a>
-            <a href="/contact" className="text-gray-700 hover:text-blue-600 transition-colors">Contact</a>
-          </div>
-        </nav>
-      </div>
-    </div>
-  );
-};
-
-export default ModernNavigation;
->>>>>>> cb79024a938ec4cdfb9bf2295cb3ecd71e1ace22
