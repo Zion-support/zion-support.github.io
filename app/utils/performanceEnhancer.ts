@@ -3,7 +3,7 @@
  * Comprehensive performance optimization utilities for React applications
  */
 
-import { useEffect, useCallback, useRef, useState } from 'react';
+import { useEffect, useCallback, useRef } from 'react';
 
 // Performance monitoring utilities
 export class PerformanceMonitor {
@@ -30,8 +30,10 @@ export class PerformanceMonitor {
   // Track memory usage
   trackMemory(componentName: string) {
     if ('memory' in performance) {
-      const memory = (performance as any).memory;
-      this.metrics.set(`${componentName}_memory`, memory.usedJSHeapSize);
+      const memory = (performance as { memory?: { usedJSHeapSize: number } }).memory;
+      if (memory) {
+        this.metrics.set(`${componentName}_memory`, memory.usedJSHeapSize);
+      }
     }
   }
 
@@ -197,9 +199,10 @@ export const trackWebVitals = () => {
 
     const observer = new PerformanceObserver((list) => {
       for (const entry of list.getEntries()) {
-        if (!(entry as any).hadRecentInput) {
+        const layoutShiftEntry = entry as PerformanceEntry & { hadRecentInput?: boolean; value?: number };
+        if (!layoutShiftEntry.hadRecentInput) {
           clsEntries.push(entry);
-          clsValue += (entry as any).value;
+          clsValue += layoutShiftEntry.value || 0;
         }
       }
     });
@@ -227,7 +230,8 @@ export const trackWebVitals = () => {
   const trackFID = () => {
     const observer = new PerformanceObserver((list) => {
       for (const entry of list.getEntries()) {
-        const fid = (entry as any).processingStart - entry.startTime;
+        const fidEntry = entry as PerformanceEntry & { processingStart?: number };
+        const fid = (fidEntry.processingStart || 0) - entry.startTime;
         console.log('[Web Vitals] FID:', fid);
       }
     });

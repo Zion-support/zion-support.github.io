@@ -39,7 +39,7 @@ export interface AppError {
   url?: string;
   userAgent?: string;
   componentStack?: string;
-  context?: Record<string, any>;
+  context?: Record<string, unknown>;
   resolved?: boolean;
   retryCount?: number;
 }
@@ -90,7 +90,7 @@ export class ErrorHandler {
   }
 
   // Handle error
-  handleError(error: Error, errorInfo?: ErrorInfo, context?: Record<string, any>): AppError {
+  handleError(error: Error, errorInfo?: ErrorInfo, context?: Record<string, unknown>): AppError {
     const appError: AppError = {
       id: this.generateErrorId(),
       type: this.determineErrorType(error),
@@ -157,7 +157,7 @@ export class ErrorHandler {
   }
 
   // Handle validation error
-  handleValidationError(field: string, message: string, value?: any): AppError {
+  handleValidationError(field: string, message: string, value?: unknown): AppError {
     const appError: AppError = {
       id: this.generateErrorId(),
       type: ErrorType.VALIDATION,
@@ -181,7 +181,7 @@ export class ErrorHandler {
 
   // Generate unique error ID
   private generateErrorId(): string {
-    return `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+    return `error_${Date.now()}_${Math.random().toString(36).substring(2, 11)}`;
   }
 
   // Determine error type
@@ -304,8 +304,8 @@ export class ErrorHandler {
           timestamp: error.timestamp.toISOString(),
         }),
       });
-    } catch (err) {
-      console.error('Failed to report error:', err);
+    } catch {
+      console.error('Failed to report error');
     }
   }
 
@@ -402,7 +402,7 @@ export class ErrorHandler {
         console.log(`Retrying network request (attempt ${retryItem.retryCount})`);
         // Add your retry logic here
       }
-    } catch (err) {
+    } catch {
       if (retryItem.retryCount < this.config.maxRetries) {
         this.scheduleRetry(retryItem.error);
       } else {
@@ -532,7 +532,7 @@ export class ErrorBoundary extends React.Component<
 export const useErrorHandler = () => {
   const errorHandler = ErrorHandler.getInstance();
 
-  const handleError = useCallback((error: Error, context?: Record<string, any>) => {
+  const handleError = useCallback((error: Error, context?: Record<string, unknown>) => {
     return errorHandler.handleError(error, undefined, context);
   }, [errorHandler]);
 
@@ -540,7 +540,7 @@ export const useErrorHandler = () => {
     return errorHandler.handleNetworkError(error, url, status);
   }, [errorHandler]);
 
-  const handleValidationError = useCallback((field: string, message: string, value?: any) => {
+  const handleValidationError = useCallback((field: string, message: string, value?: unknown) => {
     return errorHandler.handleValidationError(field, message, value);
   }, [errorHandler]);
 

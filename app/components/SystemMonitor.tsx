@@ -13,17 +13,17 @@ import { errorHandler } from '../utils/enhancedErrorHandler';
 const calculatePerformanceScore = () => {
   const monitor = PerformanceMonitor.getInstance();
   const metrics = monitor.getMetrics();
-  if (!metrics) return 0;
+  if (!metrics || Object.keys(metrics).length === 0) return 0;
   
   let score = 100;
   
-  // Deduct points for slow load times
-  if (metrics.navigation.totalTime > 3000) score -= 20;
-  if (metrics.navigation.totalTime > 5000) score -= 30;
+  // Deduct points for slow render times
+  const renderTimes = Object.values(metrics).filter(value => typeof value === 'number') as number[];
+  const avgRenderTime = renderTimes.length > 0 ? renderTimes.reduce((a, b) => a + b, 0) / renderTimes.length : 0;
   
-  // Deduct points for slow paint times
-  if (metrics.paint.firstContentfulPaint > 2000) score -= 15;
-  if (metrics.paint.firstContentfulPaint > 3000) score -= 25;
+  if (avgRenderTime > 16) score -= 10; // 60fps threshold
+  if (avgRenderTime > 33) score -= 20; // 30fps threshold
+  if (avgRenderTime > 100) score -= 30; // Very slow
   
   return Math.max(0, score);
 };
@@ -98,7 +98,8 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
   // Update metrics
   const updateMetrics = useCallback(() => {
     try {
-      const performanceMetrics = collectPerformanceMetrics();
+      const monitor = PerformanceMonitor.getInstance();
+      const performanceMetrics = monitor.getMetrics();
       const performanceScore = calculatePerformanceScore();
       const errorStats = errorHandler.getErrorStatistics();
 
@@ -111,8 +112,8 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
       const newMetrics: SystemMetrics = {
         performance: {
           score: performanceScore,
-          loadTime: performanceMetrics?.navigation?.totalTime || 0,
-          firstContentfulPaint: performanceMetrics?.paint?.firstContentfulPaint || 0,
+          loadTime: 0, // Not available in current metrics
+          firstContentfulPaint: 0, // Not available in current metrics
           largestContentfulPaint: 0, // Not available in current metrics
           firstInputDelay: 0, // Not available in current metrics
           cumulativeLayoutShift: 0, // Not available in current metrics
@@ -208,7 +209,7 @@ console.error('Failed to update metrics:', error);
 
     const exportData = {
       metrics,
-      performanceData: collectPerformanceMetrics(),
+      performanceData: PerformanceMonitor.getInstance().getMetrics(),
       errorData: errorHandler.exportErrorData(),
       timestamp: new Date().toISOString(),
     };

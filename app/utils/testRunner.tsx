@@ -75,7 +75,7 @@ export class TestRunner {
   async runPerformanceTest(
     component: ReactElement,
     testName: string
-  ): Promise<{ passed: boolean; metrics: any }> {
+  ): Promise<{ passed: boolean; metrics: Record<string, unknown> }> {
     const startTime = performance.now();
     
     const { unmount } = this.customRender(component);
@@ -85,7 +85,10 @@ export class TestRunner {
     // Measure memory usage if available
     let memoryUsage = 0;
     if ('memory' in performance) {
-      memoryUsage = (performance as any).memory.usedJSHeapSize;
+      const memory = (performance as { memory?: { usedJSHeapSize: number } }).memory;
+      if (memory) {
+        memoryUsage = memory.usedJSHeapSize;
+      }
     }
 
     unmount();
@@ -112,7 +115,7 @@ export class TestRunner {
   async runAccessibilityTest(
     component: ReactElement,
     testName: string
-  ): Promise<{ passed: boolean; violations: any[] }> {
+  ): Promise<{ passed: boolean; violations: string[] }> {
     const { container } = this.customRender(component);
     
     // Basic accessibility checks
@@ -238,7 +241,7 @@ export class TestRunner {
   async runVisualRegressionTest(
     component: ReactElement,
     testName: string
-  ): Promise<{ passed: boolean; diff?: any }> {
+  ): Promise<{ passed: boolean; diff?: Record<string, unknown> }> {
     // This would typically use a tool like Percy or Chromatic
     // For now, we'll just return a placeholder
     console.log(`Visual regression test for ${testName} would run here`);
@@ -253,7 +256,7 @@ export class TestRunner {
   }
 
   // Coverage test
-  async runCoverageTest(): Promise<{ passed: boolean; coverage: any }> {
+  async runCoverageTest(): Promise<{ passed: boolean; coverage: Record<string, unknown> }> {
     // This would typically use Istanbul or similar
     // For now, we'll just return a placeholder
     const coverage = {
@@ -282,7 +285,7 @@ export class TestRunner {
     component: ReactElement;
     assertions?: (result: RenderResult) => void;
     userInteractions?: (result: RenderResult) => Promise<void>;
-  }>): Promise<{ passed: boolean; results: any[] }> {
+  }>): Promise<{ passed: boolean; results: Record<string, unknown>[] }> {
     const results = [];
 
     for (const test of tests) {

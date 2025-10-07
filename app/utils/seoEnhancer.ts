@@ -16,7 +16,7 @@ export interface SEOConfig {
   twitterCard: string;
   twitterSite: string;
   twitterCreator: string;
-  structuredData: Record<string, any>;
+  structuredData: Record<string, unknown>;
   robots: string;
   language: string;
   locale: string;
@@ -141,7 +141,7 @@ export class SEOEnhancer {
   }
 
   // Update structured data
-  updateStructuredData(data: Record<string, any>) {
+  updateStructuredData(data: Record<string, unknown>) {
     const script = document.createElement('script');
     script.type = 'application/ld+json';
     script.textContent = JSON.stringify(data);
