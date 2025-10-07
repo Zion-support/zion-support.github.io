@@ -93,14 +93,12 @@ class EnhancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
     }
   }
 
-  componentWillUnmount() {
-    if (this.retryTimeoutId) {
-      clearTimeout(this.retryTimeoutId);
-    }
-  }
-
   private generateSessionId(): string {
-    return `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+    try {
+      return `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+    } catch {
+      return `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+    }
   }
 
   private async reportError(
@@ -118,52 +116,45 @@ class EnhancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
           stack: error.stack,
         },
         errorInfo: {
-          componentStack: errorInfo.componentStack || '',
+          componentStack: errorInfo.componentStack,
         },
         timestamp: new Date().toISOString(),
-        userAgent: typeof window !== 'undefined' ? window.navigator.userAgent : 'Unknown',
-        url: typeof window !== 'undefined' ? window.location.href : 'Unknown',
+        userAgent: navigator.userAgent,
+        url: window.location.href,
         sessionId: this.sessionId,
         retryCount,
-        buildVersion: process.env.NEXT_PUBLIC_BUILD_VERSION || 'unknown',
+        userId: this.getUserId(),
+        buildVersion: process.env.REACT_APP_VERSION || 'unknown',
       };
 
       // Send to error reporting service
-      if (typeof window !== 'undefined' && process.env.NODE_ENV === 'production') {
-        // Example: Send to error reporting service
-        // Uncomment to enable error reporting to a backend service
-        /*
-        await fetch('/api/error-report', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(errorReport),
-        });
-        */
+      await fetch('/api/error-report', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(errorReport),
+      });
 
-        // Send to analytics if enabled
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        if (this.props.enableAnalytics && (window as any).gtag) {
-          // eslint-disable-next-line @typescript-eslint/no-explicit-any
-          (window as any).gtag('event', 'exception', {
-            description: error.message,
-            fatal: false,
-            custom_map: {
-              error_id: errorId,
-              component: errorInfo.componentStack?.split('\n')[0] || 'Unknown',
-              retry_count: retryCount.toString(),
-            },
-          });
-        }
+      // Send to analytics if enabled
+      if (this.props.enableAnalytics && typeof window !== 'undefined' && 'gtag' in window) {
+        (window as unknown as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag('event', 'error_boundary_error', {
+          event_category: 'Error',
+          event_label: error.name,
+          value: retryCount,
+        });
       }
-      
-      // Log error report in development
-      if (process.env.NODE_ENV === 'development') {
-        // eslint-disable-next-line no-console
-        console.log('Error Report:', errorReport);
-      }
-    } catch (reportingError) {
-      // eslint-disable-next-line no-console
-      console.error('Failed to report error:', reportingError);
+    } catch (reportError) {
+      console.error('Failed to report error:', reportError);
+    }
+  }
+
+  private getUserId(): string | undefined {
+    try {
+      // Try to get user ID from localStorage or other sources
+      return localStorage.getItem('userId') || undefined;
+    } catch {
+      return undefined;
     }
   }
 
@@ -171,110 +162,165 @@ class EnhancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
     const { maxRetries = 3, retryDelay = 1000 } = this.props;
     const { retryCount } = this.state;
 
-    if (retryCount < maxRetries) {
-      this.setState(
-        (prevState) => ({
-          hasError: false,
-          error: null,
-          errorInfo: null,
-          retryCount: prevState.retryCount + 1,
-        }),
-        () => {
-          // Retry after delay
-          this.retryTimeoutId = setTimeout(() => {
-            // Force re-render to retry
-            this.forceUpdate();
-          }, retryDelay);
-        }
-      );
+    if (retryCount >= maxRetries) {
+      return;
     }
+
+    // Clear any existing timeout
+    if (this.retryTimeoutId) {
+      clearTimeout(this.retryTimeoutId);
+    }
+
+    // Retry after delay
+    this.retryTimeoutId = setTimeout(() => {
+      this.setState(prevState => ({
+        hasError: false,
+        error: null,
+        errorInfo: null,
+        errorId: '',
+        retryCount: prevState.retryCount + 1,
+      }));
+    }, retryDelay);
   };
 
-  private handleReset = (): void => {
-    this.setState({
-      hasError: false,
-      error: null,
-      errorInfo: null,
-      retryCount: 0,
-    });
+  private handleReload = (): void => {
+    window.location.reload();
   };
+
+  private handleGoHome = (): void => {
+    window.location.href = '/';
+  };
+
+  private handleReportBug = (): void => {
+    const { error, errorId } = this.state;
+    const subject = encodeURIComponent(`Error Report - ${errorId}`);
+    const body = encodeURIComponent(`
+Error ID: ${errorId}
+Error: ${error?.name}: ${error?.message}
+URL: ${window.location.href}
+User Agent: ${navigator.userAgent}
+Time: ${new Date().toISOString()}
+    `);
+    
+    window.open(`mailto:support@ziontechgroup.com?subject=${subject}&body=${body}`);
+  };
+
+  componentWillUnmount() {
+    if (this.retryTimeoutId) {
+      clearTimeout(this.retryTimeoutId);
+    }
+  }
 
   render() {
+    const { hasError, error, errorInfo, errorId, retryCount } = this.state;
     const { children, fallback, enableRetry = true, maxRetries = 3 } = this.props;
-    const { hasError, error, errorInfo, retryCount } = this.state;
 
     if (hasError) {
-      // Custom fallback UI
       if (fallback) {
         return fallback;
       }
 
-      // Default error UI
       return (
-        <div className="min-h-screen flex items-center justify-center bg-gray-50">
-          <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6">
-            <div className="flex items-center justify-center w-12 h-12 mx-auto bg-red-100 rounded-full mb-4">
-              <svg
-                className="w-6 h-6 text-red-600"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.732-.833-2.5 0L4.268 19.5c-.77.833.192 2.5 1.732 2.5z"
-                />
-              </svg>
-            </div>
-            
-            <div className="text-center">
-              <h1 className="text-lg font-medium text-gray-900 mb-2">
-                Something went wrong
-              </h1>
-              <p className="text-sm text-gray-600 mb-4">
-                We're sorry, but something unexpected happened. Please try again.
-              </p>
-              
+        <div className="min-h-screen bg-gray-50 flex flex-col justify-center py-12 sm:px-6 lg:px-8">
+          <div className="sm:mx-auto sm:w-full sm:max-w-md">
+            <div className="bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10">
+              <div className="text-center">
+                <div className="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-red-100">
+                  <svg
+                    className="h-6 w-6 text-red-600"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z"
+                    />
+                  </svg>
+                </div>
+                <h2 className="mt-6 text-3xl font-extrabold text-gray-900">
+                  Oops! Something went wrong
+                </h2>
+                <p className="mt-2 text-sm text-gray-600">
+                  We're sorry, but something unexpected happened. Our team has been notified.
+                </p>
+                <p className="mt-1 text-xs text-gray-500">
+                  Error ID: {errorId}
+                </p>
+              </div>
+
               {process.env.NODE_ENV === 'development' && error && (
-                <div className="mb-4 p-3 bg-red-50 border border-red-200 rounded text-left">
-                  <p className="text-xs text-red-800 font-mono">
-                    <strong>Error:</strong> {error.message}
-                  </p>
-                  {errorInfo && (
-                    <p className="text-xs text-red-700 font-mono mt-1">
-                      <strong>Component Stack:</strong>
-                      <br />
-                      {errorInfo.componentStack}
-                    </p>
-                  )}
+                <div className="mt-6">
+                  <details className="bg-red-50 border border-red-200 rounded-md p-4">
+                    <summary className="cursor-pointer font-medium text-red-800">
+                      Error Details (Development Only)
+                    </summary>
+                    <div className="mt-2 text-sm text-red-700">
+                      <p><strong>Error:</strong> {error.name}: {error.message}</p>
+                      {error.stack && (
+                        <pre className="mt-2 text-xs overflow-auto whitespace-pre-wrap">
+                          {error.stack}
+                        </pre>
+                      )}
+                      {errorInfo && (
+                        <details className="mt-2">
+                          <summary className="cursor-pointer font-medium">Component Stack</summary>
+                          <pre className="mt-2 text-xs overflow-auto whitespace-pre-wrap">
+                            {errorInfo.componentStack}
+                          </pre>
+                        </details>
+                      )}
+                    </div>
+                  </details>
                 </div>
               )}
-              
-              <div className="flex flex-col sm:flex-row gap-2 justify-center">
+
+              <div className="mt-6 space-y-3">
                 {enableRetry && retryCount < maxRetries && (
                   <button
                     onClick={this.handleRetry}
-                    className="px-4 py-2 bg-blue-600 text-white text-sm font-medium rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+                    className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 disabled:opacity-50 disabled:cursor-not-allowed"
+                    disabled={retryCount >= maxRetries}
                   >
                     Try Again ({maxRetries - retryCount} attempts left)
                   </button>
                 )}
                 
                 <button
-                  onClick={this.handleReset}
-                  className="px-4 py-2 bg-gray-600 text-white text-sm font-medium rounded-md hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2"
+                  onClick={this.handleReload}
+                  className="w-full flex justify-center py-2 px-4 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                 >
-                  Reset
+                  Reload Page
+                </button>
+                
+                <button
+                  onClick={this.handleGoHome}
+                  className="w-full flex justify-center py-2 px-4 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                >
+                  Go to Homepage
+                </button>
+
+                <button
+                  onClick={this.handleReportBug}
+                  className="w-full flex justify-center py-2 px-4 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                >
+                  Report Bug
                 </button>
               </div>
-              
-              {retryCount >= maxRetries && (
-                <p className="text-xs text-gray-500 mt-2">
-                  Maximum retry attempts reached. Please refresh the page.
+
+              <div className="mt-6 text-center">
+                <p className="text-xs text-gray-500">
+                  If this problem persists, please contact our support team at{' '}
+                  <a
+                    href="mailto:support@ziontechgroup.com"
+                    className="text-indigo-600 hover:text-indigo-500"
+                  >
+                    support@ziontechgroup.com
+                  </a>
                 </p>
-              )}
+              </div>
             </div>
           </div>
         </div>

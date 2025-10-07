@@ -1,3 +1,5 @@
+'use client';
+
 /**
  * System Monitor Component
  * Real-time monitoring dashboard for performance, errors, and system health
@@ -95,10 +97,8 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
   // Update metrics
   const updateMetrics = useCallback(() => {
     try {
-      // Get basic performance metrics
       const performanceMetrics = collectPerformanceMetrics();
       const performanceScore = calculatePerformanceScore();
-      
       const errorStats = errorHandler.getErrorStatistics();
 
       // Get memory info
@@ -136,14 +136,15 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
       setMetrics(newMetrics);
       setLastUpdate(new Date());
     } catch (error) {
-      console.error('Failed to update metrics:', error);
+       
+console.error('Failed to update metrics:', error);
     }
   }, []);
 
   // Initialize monitoring
   useEffect(() => {
     const initializeMonitoring = () => {
-      // startMonitoring(); // Placeholder
+      // Start monitoring (placeholder - implement as needed)
       setIsMonitoring(true);
       updateMetrics();
     };
@@ -151,7 +152,7 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
     initializeMonitoring();
 
     return () => {
-      // stopMonitoring(); // Placeholder
+      // Stop monitoring (placeholder - implement as needed)
       setIsMonitoring(false);
     };
   }, [updateMetrics]);
@@ -182,11 +183,12 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
   // Get network information
   const getNetworkInfo = () => {
     if ('connection' in navigator) {
-      const connection = (navigator as Navigator & { connection: { effectiveType?: string; downlink?: number; rtt?: number; saveData?: boolean } }).connection;
+      const nav = navigator as NavigatorWithConnection;
+      const connection = nav.connection;
       return {
-        effectiveType: connection.effectiveType || 'unknown',
-        downlink: connection.downlink || 0,
-        rtt: connection.rtt || 0,
+        effectiveType: connection?.effectiveType || 'unknown',
+        downlink: connection?.downlink || 0,
+        rtt: connection?.rtt || 0,
         saveData: connection.saveData || false,
       };
     }
@@ -203,14 +205,14 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
   const handleExport = () => {
     if (!metrics) return;
 
-    const dataToExport: Record<string, unknown> = {
+    const exportData = {
       metrics,
-      performanceData: metrics.performance,
+      performanceData: collectPerformanceMetrics(),
       errorData: errorHandler.exportErrorData(),
       timestamp: new Date().toISOString(),
     };
 
-    const blob = new Blob([JSON.stringify(dataToExport, null, 2)], {
+    const blob = new Blob([JSON.stringify(exportData, null, 2)], {
       type: 'application/json',
     });
     const url = URL.createObjectURL(blob);
