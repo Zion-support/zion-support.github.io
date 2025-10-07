@@ -35,6 +35,23 @@ describe('Performance Tests', () => {
     });
   });
 
+  beforeEach(() => {
+    // Mock window.location using delete and redefine
+    delete window.location;
+    window.location = {
+      href: 'http://localhost:3000',
+      reload: jest.fn(),
+    };
+  });
+
+  afterEach(() => {
+    // Clean up
+    if (locationSpy) {
+      locationSpy.mockRestore();
+    }
+  });
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-1679
   test('PerformanceOptimizer should initialize correctly', () => {
     const { performanceOptimizer } = require('../app/utils/performanceOptimizer');
     
