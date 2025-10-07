@@ -158,7 +158,7 @@ export const initializePerformanceEnhancements = () => {
   // Collect performance metrics
   const metrics = collectPerformanceMetrics();
   if (metrics) {
-    // eslint-disable-next-line no-console
+     
     console.log('Performance metrics:', metrics);
   }
 };

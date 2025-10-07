@@ -94,7 +94,6 @@ export default [{
     'out/**',
     'dist/**',
     'build/**',
-    'app/**',
     'src/pages/services/**',
     'src/pages/solutions/**',
     'src/pages/talent/**',

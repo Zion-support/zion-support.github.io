@@ -107,7 +107,7 @@ export const usePerformanceOptimization = () => {
       const metrics = measurePerformance();
       if (metrics && process.env.NODE_ENV === 'production') {
         // Send metrics to analytics
-        // eslint-disable-next-line no-console
+         
 console.log('Performance Metrics:', metrics);
       }
     }, 1000);

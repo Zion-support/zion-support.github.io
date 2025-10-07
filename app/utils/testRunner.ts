@@ -206,7 +206,7 @@ class TestRunner {
     this.results = [];
 
     try {
-      // eslint-disable-next-line no-console
+       
 console.log('🚀 Starting test run...');
       
       for (const suite of this.suites) {
@@ -224,7 +224,7 @@ console.log('🚀 Starting test run...');
    * Run a test suite
    */
   private async runSuite(suite: TestSuite): Promise<void> {
-    // eslint-disable-next-line no-console
+     
 console.log(`\n📁 Running suite: ${suite.name}`);
 
     // Run beforeAll hooks
@@ -283,7 +283,7 @@ console.log(`\n📁 Running suite: ${suite.name}`);
       });
 
       if (this.config.verbose) {
-        // eslint-disable-next-line no-console
+         
 console.log(`✅ ${testName} (${Date.now() - startTime}ms)`);
       }
     } catch (error) {
@@ -295,9 +295,9 @@ console.log(`✅ ${testName} (${Date.now() - startTime}ms)`);
         assertions,
       });
 
-      // eslint-disable-next-line no-console
+       
 console.error(`❌ ${testName} (${Date.now() - startTime}ms)`);
-      // eslint-disable-next-line no-console
+       
 console.error(error);
 
       if (this.config.bail) {
@@ -313,7 +313,7 @@ console.error(error);
     try {
       await hook();
     } catch (error) {
-      // eslint-disable-next-line no-console
+       
 console.error(`❌ ${hookName} hook failed:`, error);
       throw error;
     }
@@ -349,17 +349,17 @@ console.error(`❌ ${hookName} hook failed:`, error);
     const failed = this.results.filter(r => r.status === 'failed').length;
     const skipped = this.results.filter(r => r.status === 'skipped').length;
 
-    // eslint-disable-next-line no-console
+     
 console.log('\n📊 Test Results:');
-    // eslint-disable-next-line no-console
+     
 console.log(`Total: ${this.results.length}`);
-    // eslint-disable-next-line no-console
+     
 console.log(`Passed: ${passed}`);
-    // eslint-disable-next-line no-console
+     
 console.log(`Failed: ${failed}`);
-    // eslint-disable-next-line no-console
+     
 console.log(`Skipped: ${skipped}`);
-    // eslint-disable-next-line no-console
+     
 console.log(`Duration: ${duration}ms`);
 
     if (this.config.reporter === 'json') {
@@ -387,9 +387,9 @@ console.log(`Duration: ${duration}ms`);
       timestamp: new Date().toISOString(),
     };
 
-    // eslint-disable-next-line no-console
+     
 console.log('\n📄 JSON Report:');
-    // eslint-disable-next-line no-console
+     
 console.log(JSON.stringify(report, null, 2));
   }
 
@@ -434,9 +434,9 @@ console.log(JSON.stringify(report, null, 2));
 </body>
 </html>`;
 
-    // eslint-disable-next-line no-console
+     
 console.log('\n📄 HTML Report generated');
-    // eslint-disable-next-line no-console
+     
 console.log(html);
   }
 
@@ -456,9 +456,9 @@ console.log(html);
     </testsuite>
 </testsuites>`;
 
-    // eslint-disable-next-line no-console
+     
 console.log('\n📄 JUnit Report:');
-    // eslint-disable-next-line no-console
+     
 console.log(xml);
   }
 }
