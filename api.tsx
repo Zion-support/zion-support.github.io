@@ -1,32 +1,38 @@
-import { ArrowRight, Code, ExternalLink, Shield, Zap, Atom } from 'lucide-react';
 import React from 'react';
 import { Link } from 'react-router-dom';
 
 const API: React.FC = () => {
   const apiEndpoints = [
     {
-      method: 'GET',
-      endpoint: '/api/content',
-      description: 'Retrieve all content items',
-      example: 'GET /api/content?limit=10&offset=0'
-    },
-    {
+      name: 'Authentication',
       method: 'POST',
-      endpoint: '/api/content',
-      description: 'Create a new content item',
-      example: 'POST /api/content'
+      endpoint: '/api/auth/login',
+      description: 'Authenticate users and get access tokens',
+      parameters: [
+        { name: 'email', type: 'string', required: true },
+        { name: 'password', type: 'string', required: true }
+      ]
     },
     {
-      method: 'PUT',
-      endpoint: '/api/content/{id}',
-      description: 'Update an existing content item',
-      example: 'PUT /api/content/123'
+      name: 'Get Users',
+      method: 'GET',
+      endpoint: '/api/users',
+      description: 'Retrieve a list of all users',
+      parameters: [
+        { name: 'page', type: 'number', required: false },
+        { name: 'limit', type: 'number', required: false }
+      ]
     },
     {
-      method: 'DELETE',
-      endpoint: '/api/content/{id}',
-      description: 'Delete a content item',
-      example: 'DELETE /api/content/123'
+      name: 'Create User',
+      method: 'POST',
+      endpoint: '/api/users',
+      description: 'Create a new user account',
+      parameters: [
+        { name: 'name', type: 'string', required: true },
+        { name: 'email', type: 'string', required: true },
+        { name: 'role', type: 'string', required: false }
+      ]
     }
   ];
 
@@ -38,29 +44,22 @@ const API: React.FC = () => {
           <h1 className='text-5xl font-bold mb-6'>API Documentation</h1>
           <p className='text-xl mb-8 max-w-3xl mx-auto'>
             Comprehensive API documentation for integrating with Zion Tech Group's
-            powerful AI and technology solutions.
+            powerful services and solutions.
           </p>
           <div className='flex flex-col sm:flex-row gap-4 justify-center'>
             <Link
               to='/contact'
-              className='bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors inline-flex items-center'
-            >
-              Get API Key
-              <ArrowRight className='ml-2 w-5 h-5' />
-            </Link>
-            <a
-              href='#endpoints'
               className='bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-flex items-center'
             >
-              View Endpoints
-              <ArrowRight className='ml-2 w-5 h-5' />
-            </a>
+              Get API Key
+              <span className='ml-2'>→</span>
+            </Link>
             <a
               href='https://docs.ziontechgroup.com'
               className='border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors inline-flex items-center'
             >
               Full Documentation
-              <Atom className='ml-2 w-5 h-5' />
+              <span className='ml-2'>⚛️</span>
             </a>
           </div>
         </div>
@@ -72,46 +71,38 @@ const API: React.FC = () => {
           <div className='grid md:grid-cols-3 gap-8'>
             <div className='text-center'>
               <div className='w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4'>
-                <Atom className='w-8 h-8 text-blue-600' />
+                <span className='text-2xl'>⚛️</span>
               </div>
               <h3 className='text-xl font-semibold text-gray-900 mb-2'>
                 RESTful APIs
               </h3>
               <p className='text-gray-600'>
-                Clean, intuitive REST endpoints following industry best
+                Clean, intuitive RESTful endpoints following industry best
                 practices for easy integration.
               </p>
             </div>
             <div className='text-center'>
               <div className='w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4'>
-                <Shield className='w-8 h-8 text-green-600' />
+                <span className='text-2xl'>🛡️</span>
               </div>
               <h3 className='text-xl font-semibold text-gray-900 mb-2'>
                 Secure & Reliable
               </h3>
               <p className='text-gray-600'>
-                Enterprise-grade security with 99.9% uptime and
+                Enterprise-grade security with OAuth 2.0, rate limiting, and
                 comprehensive error handling.
               </p>
             </div>
             <div className='text-center'>
               <div className='w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4'>
-                <Zap className='w-8 h-8 text-purple-600' />
+                <span className='text-2xl'>⚡</span>
               </div>
               <h3 className='text-xl font-semibold text-gray-900 mb-2'>
-<<<<<<< HEAD
-                High Performance
-              </h3>
-              <p className='text-gray-600'>
-                Optimized for speed with sub-100ms response times and
-                comprehensive error handling.
-=======
                 Fast & Scalable
               </h3>
               <p className='text-gray-600'>
                 High-performance APIs designed to scale with your business
                 needs and growth.
->>>>>>> 9f279756f4679d4a3fe100469cdf0ea089dda745
               </p>
             </div>
           </div>
@@ -119,32 +110,43 @@ const API: React.FC = () => {
       </div>
 
       {/* API Endpoints Section */}
-      <div id='endpoints' className='py-16 bg-gray-50'>
+      <div className='py-16 bg-gray-100' id='endpoints'>
         <div className='container mx-auto px-4'>
-          <h2 className='text-3xl font-bold text-gray-900 text-center mb-12'>
-            API Endpoints
-          </h2>
-          <div className='max-w-4xl mx-auto'>
+          <h2 className='text-3xl font-bold text-center mb-12'>API Endpoints</h2>
+          <div className='space-y-8'>
             {apiEndpoints.map((endpoint, index) => (
-              <div key={index} className='bg-white rounded-lg shadow-md p-6 mb-6'>
+              <div key={index} className='bg-white rounded-lg shadow-md p-6'>
                 <div className='flex items-center justify-between mb-4'>
-                  <div className='flex items-center space-x-4'>
-                    <span className={`px-3 py-1 rounded text-sm font-semibold ${
-                      endpoint.method === 'GET' ? 'bg-green-100 text-green-800' :
-                      endpoint.method === 'POST' ? 'bg-blue-100 text-blue-800' :
-                      endpoint.method === 'PUT' ? 'bg-yellow-100 text-yellow-800' :
-                      'bg-red-100 text-red-800'
-                    }`}>
-                      {endpoint.method}
-                    </span>
-                    <code className='text-lg font-mono text-gray-800'>
-                      {endpoint.endpoint}
-                    </code>
-                  </div>
+                  <h3 className='text-xl font-semibold'>{endpoint.name}</h3>
+                  <span className={`px-3 py-1 rounded-full text-sm font-medium ${
+                    endpoint.method === 'GET' ? 'bg-green-100 text-green-800' :
+                    endpoint.method === 'POST' ? 'bg-blue-100 text-blue-800' :
+                    'bg-gray-100 text-gray-800'
+                  }`}>
+                    {endpoint.method}
+                  </span>
                 </div>
-                <p className='text-gray-600 mb-3'>{endpoint.description}</p>
-                <div className='bg-gray-100 p-3 rounded'>
-                  <code className='text-sm text-gray-700'>{endpoint.example}</code>
+                <div className='mb-4'>
+                  <code className='bg-gray-100 px-3 py-1 rounded text-sm font-mono'>
+                    {endpoint.endpoint}
+                  </code>
+                </div>
+                <p className='text-gray-600 mb-4'>{endpoint.description}</p>
+                <div>
+                  <h4 className='font-semibold mb-2'>Parameters:</h4>
+                  <div className='space-y-2'>
+                    {endpoint.parameters.map((param, paramIndex) => (
+                      <div key={paramIndex} className='flex items-center space-x-4 text-sm'>
+                        <span className='font-mono bg-gray-100 px-2 py-1 rounded'>
+                          {param.name}
+                        </span>
+                        <span className='text-gray-500'>{param.type}</span>
+                        {param.required && (
+                          <span className='text-red-500 text-xs'>Required</span>
+                        )}
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
             ))}
@@ -152,19 +154,40 @@ const API: React.FC = () => {
         </div>
       </div>
 
-<<<<<<< HEAD
+      {/* CTA Section */}
+      <div className='py-16 bg-blue-600 text-white text-center'>
+        <div className='container mx-auto px-4'>
+          <h2 className='text-3xl font-bold mb-4'>
+            Ready to Get Started?
+          </h2>
+          <p className='text-lg text-gray-600 mb-8'>
+            Ready to integrate with our APIs? Get your API key and start
+            building amazing applications.
+          </p>
+          <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+            <Link
+              to='/contact'
+              className='bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-flex items-center'
+            >
+              Get API Key
+              <span className='ml-2'>→</span>
+            </Link>
+            <a
+              href='https://docs.ziontechgroup.com'
+              className='border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors inline-flex items-center'
+            >
+              View Documentation
+            </a>
+          </div>
+        </div>
+      </div>
+
+      {/* Getting Started Section */}
       <div className='py-16 bg-white'>
         <div className='container mx-auto px-4'>
           <div className='max-w-3xl mx-auto text-center'>
             <h2 className='text-3xl font-bold text-gray-900 mb-6'>
               Getting Started
-=======
-        {/* CTA Section */}
-        <div className='py-16 bg-blue-600 text-white text-center'>
-          <div className='container mx-auto px-4'>
-            <h2 className='text-3xl font-bold mb-4'>
-              Ready to Get Started?
->>>>>>> 9f279756f4679d4a3fe100469cdf0ea089dda745
             </h2>
             <p className='text-lg text-gray-600 mb-8'>
               Ready to integrate with our APIs? Get your API key and start
@@ -176,59 +199,15 @@ const API: React.FC = () => {
                 className='bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors inline-flex items-center'
               >
                 Get API Key
-                <ArrowRight className='ml-2 w-5 h-5' />
-<<<<<<< HEAD
               </Link>
               <a
                 href='https://docs.ziontechgroup.com'
                 className='border border-gray-300 text-gray-700 px-8 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-colors inline-flex items-center'
               >
                 View Full Docs
-                <ExternalLink className='ml-2 w-5 h-5' />
+                <span className='ml-2'>→</span>
               </a>
             </div>
-=======
-              </a>
-              <a
-                href='https://docs.ziontechgroup.com'
-                className='border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors inline-flex items-center'
-              >
-                View Documentation
-                <ExternalLink className='ml-2 w-5 h-5' />
-              </a>
-            </div>
-          </div>
-        </div>
-
-        {/* Getting Started Section */}
-        <div className='py-16 bg-white'>
-          <div className='container mx-auto px-4'>
-            <div className='max-w-3xl mx-auto text-center'>
-              <h2 className='text-3xl font-bold text-gray-900 mb-6'>
-                Getting Started
-              </h2>
-              <p className='text-lg text-gray-600 mb-8'>
-                Ready to integrate with our APIs? Get your API key and start
-                building amazing applications.
-              </p>
-              <div className='flex flex-col sm:flex-row gap-4 justify-center'>
-                <Link
-                  to='/contact'
-                  className='bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors inline-flex items-center'
-                >
-                  Get API Key
-                  <ArrowRight className='ml-2 w-5 h-5' />
-                </Link>
-                <a
-                  href='https://docs.ziontechgroup.com'
-                  className='border border-gray-300 text-gray-700 px-8 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-colors inline-flex items-center'
-                >
-                  View Full Docs
-                  <ExternalLink className='ml-2 w-5 h-5' />
-                </a>
-              </div>
-            </div>
->>>>>>> 9f279756f4679d4a3fe100469cdf0ea089dda745
           </div>
         </div>
       </div>
