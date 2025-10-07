@@ -47,7 +47,7 @@ const App = () => {
             if (process.env.NODE_ENV === 'production' && typeof window !== 'undefined') {
               // Send to analytics service
               if ('gtag' in window) {
-                (window as any).gtag('event', 'page_load_performance', {
+                (window as unknown as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag('event', 'page_load_performance', {
                   event_category: 'Performance',
                   event_label: 'Page Load',
                   value: Math.round(performanceMetrics.totalTime)
