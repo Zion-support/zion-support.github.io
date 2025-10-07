@@ -114,6 +114,8 @@ const UltimateBusinessIntelligence2025Banner = () => {
               />
             ))}
           </div>
+        )}
+        
         {/* Stats Section */}
         <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8">
           {[
@@ -128,8 +130,6 @@ const UltimateBusinessIntelligence2025Banner = () => {
             </div>
           ))}
         </div>
-=======
-        )}
       </div>
     </div>
   );
