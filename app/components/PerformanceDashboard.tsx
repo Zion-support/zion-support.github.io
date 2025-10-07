@@ -1,9 +1,4 @@
 import React, { useState, useEffect } from 'react';
-<<<<<<< HEAD
-=======
-import performanceOptimizer from '../../utils/performanceOptimizer';
-import { getErrorMetrics } from '../../utils/errorHandling';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-58c9
 
 interface PerformanceMetrics {
   loadTime: number;
