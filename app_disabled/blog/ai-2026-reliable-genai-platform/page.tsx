@@ -37,7 +37,7 @@ export default function ReliableGenAIPlatform2026Page() {
           </p>
         </header>
 
-        <article Name='prose prose-invert prose-slate max-w-none'>
+        <article name='prose prose-invert prose-slate max-w-none'>
           <h2>Why Reliability First</h2>
           <p>
             Production GenAI requires deterministic behavior under constraints.

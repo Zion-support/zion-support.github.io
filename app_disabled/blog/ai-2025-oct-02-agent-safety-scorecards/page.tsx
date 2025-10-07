@@ -4,19 +4,19 @@ import React from 'react';
 const Page: React.FC = () => {
   return (
     <main
-      class
-      Name
-      Name='min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white'
+      className
+      name
+      name='min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white'
     >
-      <div class Name Name='container mx-auto px-6 py-16'>
-        <h1 class Name Name='text-4xl md:text-5xl font-bold mb-4'>
+      <div className name name='container mx-auto px-6 py-16'>
+        <h1 className name name='text-4xl md:text-5xl font-bold mb-4'>
           AI 2025: Agent Safety Scorecards
         </h1>
-        <p class Name Name='text-zion-slate-light mb-6'>
+        <p className name name='text-zion-slate-light mb-6'>
           KP Isbudgetsand rollback triggers that keep autonomous agents safe at
           speed.
         </p>
-        <article Name='prose prose-invert max-w-3xl'>
+        <article name='prose prose-invert max-w-3xl'>
           <p>
             Design scorecards for autonomous agents that connect service‑level
             indicators to business KP Is. Use budgeted actions, live canaries,

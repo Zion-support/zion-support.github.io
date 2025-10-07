@@ -7,7 +7,36 @@ export default [
   js.configs.recommended,
   ...typescriptEslint.configs.recommended,
   {
-    files: ['**/*.{js,jsx,ts,tsx}'],
+    ignores: [
+      '.next/**', 
+      'node_modules/**', 
+      'dist/**', 
+      'build/**',
+      '__tests__/**',
+      '__mocks__/**',
+      '_app_disabled/**',
+      '_conflicted_disabled/**',
+      '_pages_api_disabled/**',
+      '_pages_disabled/**',
+      '**/*.test.js',
+      '**/*.test.ts',
+      '**/*.test.tsx',
+      '**/*.spec.js',
+      '**/*.spec.ts',
+      '**/*.spec.tsx'
+    ],
+  },
+  {
+    files: [
+      'app/**/*.{js,jsx,ts,tsx}',
+      'components/**/*.{js,jsx,ts,tsx}',
+      'lib/**/*.{js,jsx,ts,tsx}',
+      'src/**/*.{js,jsx,ts,tsx}',
+      'utils/**/*.{js,jsx,ts,tsx}',
+      'types/**/*.{js,jsx,ts,tsx}',
+      'hooks/**/*.{js,jsx,ts,tsx}',
+      '*.{js,jsx,ts,tsx}'
+    ],
     languageOptions: {
       ecmaVersion: 'latest',
       sourceType: 'module',
