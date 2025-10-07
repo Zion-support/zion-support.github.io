@@ -1,7 +1,8 @@
 'use client';
 
 import React, { useEffect, useState } from 'react';
-import { performanceOptimizer } from '../utils/performanceOptimizer';
+import performanceOptimizer from '../utils/performanceOptimizer';
+import { logger } from '../utils/logger';
 
 interface LayoutShift extends PerformanceEntry {
   hadRecentInput: boolean;
@@ -43,16 +44,42 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   useEffect(() => {
     if (!enableRealTimeMonitoring) return;
 
+    const getMetrics = (): PerformanceMetrics => {
+      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming | undefined;
+      const memory = (performance as any).memory;
+      
+      return {
+        loadTime: navigation?.loadEventEnd ?? 0,
+        renderTime: navigation?.domContentLoadedEventEnd ?? 0,
+        memoryUsage: memory?.usedJSHeapSize ?? 0,
+        bundleSize: 0,
+        cacheHitRate: 0,
+      };
+    };
+
+    const getPerformanceScore = (): number => {
+      const metrics = getMetrics();
+      let score = 100;
+      
+      if (metrics.loadTime > 3000) score -= 20;
+      if (metrics.renderTime > 1500) score -= 15;
+      if (metrics.memoryUsage > 50000000) score -= 15;
+      
+      return Math.max(0, score);
+    };
+
     const updateMetrics = () => {
-      const currentMetrics = performanceOptimizer.getMetrics();
-      const score = performanceOptimizer.getPerformanceScore();
+      const currentMetrics = getMetrics();
+      const score = getPerformanceScore();
       
       setMetrics(currentMetrics);
       setPerformanceScore(score);
 
       if (enableConsoleLogging) {
-        console.log('Performance Metrics:', currentMetrics);
-        console.log('Performance Score:', score);
+        logger.group('Performance Metrics', () => {
+          logger.info('Metrics:', { metrics: currentMetrics });
+          logger.info('Score:', { score });
+        });
       }
     };
 
@@ -215,7 +242,14 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
           {/* Actions */}
           <div className="mt-4 pt-4 border-t border-gray-200">
             <button
-              onClick={() => performanceOptimizer.optimize()}
+              onClick={() => {
+                // Trigger optimization suggestions
+                logger.group('Performance Optimization Suggestions', () => {
+                  if (metrics.bundleSize > 500000) logger.info('⚠️ Reduce bundle size');
+                  if (metrics.loadTime > 3000) logger.info('⚠️ Optimize images');
+                  if (metrics.cacheHitRate < 0.8) logger.info('⚠️ Improve caching');
+                });
+              }}
               className="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition-colors text-sm"
             >
               Optimize Performance
