@@ -19,7 +19,7 @@ const PerformanceDashboard: React.FC = () => {
     const updateMetrics = () => {
       if (typeof window !== 'undefined' && 'performance' in window) {
         const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-        const memory = (performance as any).memory;
+        const memory = (performance as Performance & { memory?: { usedJSHeapSize: number } }).memory;
         
         setMetrics({
           loadTime: navigation ? navigation.loadEventEnd - navigation.fetchStart : 0,
