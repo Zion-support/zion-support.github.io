@@ -55,13 +55,9 @@ const Contact = () => (
   </div>
 );
 
-=======
->>>>>>> d036f175540638f8b5413a83a3b4c745136e895b
-
 function App(): React.JSX.Element {
   const initializeOptimizations = useCallback(() => {
     try {
-=======
       console.log('All optimization systems initialized successfully');
       
       // Preload critical resources
@@ -74,7 +70,6 @@ function App(): React.JSX.Element {
       }
     } catch (error) {
       console.error('Failed to initialize optimization systems:', error);
->>>>>>> d036f175540638f8b5413a83a3b4c745136e895b
     }
   }, []);
 
@@ -112,4 +107,6 @@ function App(): React.JSX.Element {
     </HelmetProvider>
   );
 }
+
+export default App;
 

@@ -57,7 +57,6 @@ class Analytics {
       userAgent: window.navigator.userAgent,
       language: window.navigator.language,
       timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
-      referrer: document.referrer || '',
       referrer: document.referrer || undefined,
     };
   }
@@ -65,7 +64,7 @@ class Analytics {
   /**
    * Track an event
    */
-  public track(
+  track(
     name: string,
     category: string,
     action?: string,
@@ -80,18 +79,6 @@ class Analytics {
       label,
       value,
       properties,
-      action: action || '',
-      label: label || undefined,
-      value,
-      properties,
-      action: action || '',
-      label: label || '',
-      value: value || 0,
-      properties: properties || {},
-      action: action || undefined,
-      label: label || undefined,
-      value: value || undefined,
-      properties: properties || undefined,
       timestamp: Date.now(),
     };
 
@@ -101,7 +88,6 @@ class Analytics {
     this.sendToAnalytics(event);
 
     // Log in development
-    if (process.env.NODE_ENV === 'development') {
     if (process.env['NODE_ENV'] === 'development') {
       console.log('Analytics event:', event);
     }
@@ -110,7 +96,7 @@ class Analytics {
   /**
    * Track page view
    */
-  public trackPageView(page: string, title?: string): void {
+  trackPageView(page: string, title?: string): void {
     this.track('page_view', 'navigation', 'view', page, undefined, {
       page_title: title || document.title,
       page_url: typeof window !== 'undefined' ? window.location.href : page,
@@ -120,7 +106,7 @@ class Analytics {
   /**
    * Track user interaction
    */
-  public trackInteraction(
+  trackInteraction(
     element: string,
     action: string,
     category: string = 'user_interaction'
@@ -131,7 +117,7 @@ class Analytics {
   /**
    * Track performance metrics
    */
-  public trackPerformance(
+  trackPerformance(
     metric: string,
     value: number,
     unit: string = 'ms'
@@ -142,7 +128,7 @@ class Analytics {
   /**
    * Track business events
    */
-  public trackBusinessEvent(
+  trackBusinessEvent(
     event: string,
     value?: number,
     properties?: Record<string, any>
@@ -166,35 +152,35 @@ class Analytics {
   /**
    * Get all events
    */
-  public getEvents(): AnalyticsEvent[] {
+  getEvents(): AnalyticsEvent[] {
     return [...this.events];
   }
 
   /**
    * Get events by category
    */
-  public getEventsByCategory(category: string): AnalyticsEvent[] {
+  getEventsByCategory(category: string): AnalyticsEvent[] {
     return this.events.filter(event => event.category === category);
   }
 
   /**
    * Clear all events
    */
-  public clearEvents(): void {
+  clearEvents(): void {
     this.events = [];
   }
 
   /**
    * Get user properties
    */
-  public getUserProperties(): UserProperties {
+  getUserProperties(): UserProperties {
     return { ...this.userProperties };
   }
 
   /**
    * Update user properties
    */
-  public updateUserProperties(properties: Partial<UserProperties>): void {
+  updateUserProperties(properties: Partial<UserProperties>): void {
     this.userProperties = { ...this.userProperties, ...properties };
   }
 }
