@@ -38,7 +38,6 @@ const App = () => {
       }
     }
   }, []);
-
   return (
     <HelmetProvider>
       <BrowserRouter>
