@@ -297,10 +297,17 @@ export const performanceMonitor = {
 };
 
 // Collect performance metrics array
+<<<<<<< HEAD
 export const collectPerformanceMetricsArray = async (): Promise<Record<string, unknown>[]> => {
   if (typeof window === 'undefined') return [];
 
   const metrics: Record<string, unknown>[] = [];
+=======
+export const collectPerformanceMetricsArray = async (): Promise<Array<{ name: string; value: number }>> => {
+  if (typeof window === 'undefined') return [];
+
+  const metrics: Array<{ name: string; value: number }> = [];
+>>>>>>> 70bc12821306b80c749458dd79d42cb25e604290
 
   // Navigation timing
   if (performance.timing) {
@@ -326,12 +333,25 @@ export const collectPerformanceMetricsArray = async (): Promise<Record<string, u
 };
 
 // Get memory usage
+<<<<<<< HEAD
 export const getMemoryUsage = (): Record<string, unknown> | null => {
+=======
+export const getMemoryUsage = (): Record<string, number> | null => {
+>>>>>>> 70bc12821306b80c749458dd79d42cb25e604290
   if (typeof window === 'undefined' || !(performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory) {
     return null;
   }
 
+<<<<<<< HEAD
   return (performance as Performance & { memory: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
+=======
+  const memory = (performance as Performance & { memory: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
+  return {
+    usedJSHeapSize: memory.usedJSHeapSize,
+    totalJSHeapSize: memory.totalJSHeapSize,
+    jsHeapSizeLimit: memory.jsHeapSizeLimit
+  };
+>>>>>>> 70bc12821306b80c749458dd79d42cb25e604290
 };
 
 export default {

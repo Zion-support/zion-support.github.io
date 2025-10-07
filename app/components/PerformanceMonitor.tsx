@@ -19,7 +19,12 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ children }) => 
             console.log('FID:', fidEntry.processingStart - fidEntry.startTime);
           }
           if (entry.entryType === 'layout-shift') {
+<<<<<<< HEAD
             console.log('CLS:', (entry as LayoutShift).value);
+=======
+            const clsEntry = entry as PerformanceEntry & { value: number };
+            console.log('CLS:', clsEntry.value);
+>>>>>>> 70bc12821306b80c749458dd79d42cb25e604290
           }
         }
       });
