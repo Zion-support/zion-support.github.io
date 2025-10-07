@@ -2,6 +2,8 @@
  * Performance optimization utilities
  */
 
+import { logger } from './logger';
+
 // Debounce function for performance optimization
 export const debounce = <T extends (...args: unknown[]) => unknown>(
   func: T,
@@ -576,10 +578,11 @@ class PerformanceOptimizer {
 
     return {
       ttfb: navigation.responseStart - navigation.requestStart,
-      fcp: this.metrics.fcp,
-      lcp: this.metrics.lcp,
-      fid: this.metrics.fid,
-      cls: this.metrics.cls,
+      fcp: this.metrics.fcp || 0,
+      lcp: this.metrics.lcp || 0,
+      fid: this.metrics.fid || 0,
+      cls: this.metrics.cls || 0,
+      fmp: this.metrics.fmp || 0,
     };
   }
 
@@ -587,7 +590,7 @@ class PerformanceOptimizer {
    * Report web vitals
    */
   reportWebVitals(metrics: PerformanceMetrics): void {
-    logger.performance('Web Vitals reported', metrics, 'PerformanceOptimizer');
+    logger.performance('Web Vitals reported', metrics as unknown as Record<string, unknown>, 'PerformanceOptimizer');
     
     // Send to analytics if available
     if (typeof window !== 'undefined' && (window as { gtag?: Function }).gtag) {
