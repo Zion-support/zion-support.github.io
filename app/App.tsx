@@ -11,7 +11,7 @@ import Footer from './components/Footer';
 import LoadingSpinner from './components/LoadingSpinner';
 
 // Performance utilities
-import performanceOptimizer from './utils/performanceOptimizer';
+import { performanceOptimizer } from './utils/performanceOptimizer';
 
 // Lazy load pages for better performance
 const HomePage = lazy(() => import('./page'));
@@ -33,12 +33,10 @@ const App: React.FC = () => {
     });
 
     // Initialize performance monitoring
-    lazyLoadImages();
-    // Initialize Web Vitals monitoring
     if (typeof window !== 'undefined' && 'performance' in window) {
-      const metrics = performanceOptimizer.getMetrics();
-      const score = performanceOptimizer.getPerformanceScore();
-      console.log('Performance metrics:', metrics, 'Score:', score);
+      performanceOptimizer.optimize();
+      performanceOptimizer.optimizeImages();
+      console.log('Performance monitoring initialized');
     }
     // Performance monitoring is handled by other components
   }, []);

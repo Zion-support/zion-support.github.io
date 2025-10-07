@@ -1,7 +1,8 @@
 // Performance monitoring setup
 import { analytics } from '../app/utils/analytics';
-import { ErrorHandler } from '../src/utils/errorHandler';
+import { ErrorHandler } from '../app/utils/errorHandler';
 import { performanceOptimizer } from '../app/utils/performanceOptimizer';
+import { logger } from '../src/utils/logger';
 
 // Create error handler instance
 const errorHandler = new ErrorHandler();
@@ -27,27 +28,47 @@ function initializeMonitoring(): void {
     // Track errors globally
     window.addEventListener('error', (event) => {
       const error = event.error || new Error(event.message);
-      errorHandler.handleError(error, undefined, {
-        filename: event.filename,
-        lineno: event.lineno,
-        colno: event.colno,
+      errorHandler.logError(error, {
+        message: `Error in ${event.filename}:${event.lineno}:${event.colno}`,
       });
     });
 
     // Track unhandled promise rejections
     window.addEventListener('unhandledrejection', (event) => {
       const error = new Error(`Unhandled Promise Rejection: ${event.reason}`);
-      errorHandler.handleError(error, undefined, {
-        reason: event.reason,
+      errorHandler.logError(error, {
+        message: `Unhandled Promise Rejection: ${event.reason}`,
       });
     });
 
     // Initialize performance optimizer
     performanceOptimizer.optimizeImages();
 
+    // Monitor long tasks using PerformanceObserver
+    if (typeof PerformanceObserver !== 'undefined') {
+      try {
+        const observer = new PerformanceObserver((list) => {
+          const entries = list.getEntries();
+          entries.forEach((entry: PerformanceEntry) => {
+            analytics.track({
+              event: 'long_task',
+              category: 'performance',
+              label: 'detected',
+              value: entry.duration,
+            });
+          });
+        });
+        observer.observe({ entryTypes: ['longtask'] });
+      } catch {
+        // PerformanceObserver may not support 'longtask' in some environments
+      }
+    }
+
     // Get performance metrics
-    const metrics = performanceOptimizer.getMetrics();
     const score = performanceOptimizer.getPerformanceScore();
+    
+    // Log performance data for monitoring
+    logger.info('Performance metrics:', { metrics, score });
     
     // Track performance metrics
     analytics.track({
