@@ -108,12 +108,12 @@ global.PerformanceObserver = class MockPerformanceObserver {
   takeRecords() {
     return [];
   }
-  static readonly supportedEntryTypes: readonly string[] = ['navigation', 'paint', 'largest-contentful-paint'];
+  static readonly supportedEntryTypes: readonly string[] = ['paint', 'largest-contentful-paint', 'first-input', 'layout-shift', 'navigation'];
 };
 
 // Mock window.location
 delete (window as { location?: unknown }).location;
-(window as { location: { href: string; origin: string; protocol: string; host: string; hostname: string; port: string; pathname: string; search: string; hash: string } }).location = {
+(window as { location: Location }).location = {
   href: 'http://localhost:3000',
   origin: 'http://localhost:3000',
   protocol: 'http:',
@@ -123,4 +123,6 @@ delete (window as { location?: unknown }).location;
   pathname: '/',
   search: '',
   hash: '',
+  assign: jest.fn(),
+  replace: jest.fn(),
 };
