@@ -242,7 +242,7 @@ Time: ${new Date().toISOString()}
                   Oops! Something went wrong
                 </h2>
                 <p className="mt-2 text-sm text-gray-600">
-                  We're sorry, but something unexpected happened. Our team has been notified.
+                  We&apos;re sorry, but something unexpected happened. Our team has been notified.
                 </p>
                 <p className="mt-1 text-xs text-gray-500">
                   Error ID: {errorId}
