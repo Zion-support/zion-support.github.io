@@ -1,4 +1,6 @@
-import { Metadata } from 'next';
+:app_disabled/case-studies/ai-retail-automation-2026/page.tsx
+import { Star } from 'lucide-react';
+import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'AI Retail Automation 2026: $8M ROI Case Study',
@@ -274,7 +276,8 @@ const retailAutomation = {
       revenueIncrease: '15%'
     }
   }
-};`}
+};
+  }
               </pre>
             </div>
           </div>
@@ -677,4 +680,4 @@ const retailAutomation = {
       </div>
     </div>
   );
-}
+  }

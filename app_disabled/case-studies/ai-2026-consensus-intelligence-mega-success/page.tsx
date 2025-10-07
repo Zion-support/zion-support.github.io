@@ -1,3 +1,4 @@
+import { Star } from 'lucide-react';
 export default function AI2026ConsensusIntelligenceMegaSuccess() {
   return (
     <div className='min-h-screen bg-slate-950 text-white'>
@@ -315,7 +316,7 @@ export default function AI2026ConsensusIntelligenceMegaSuccess() {
                     </h4>
                     <p className='text-gray-300 mb-2'>
                       Automated decision processes eliminated manual work and
-                      reduced operational costs by $1.4B.
+                      reduced operational costs by $1?.4B.
                     </p>
                     <div className='text-sm text-gray-400'>
                       • 85% reduction in manual processes
@@ -327,7 +328,7 @@ export default function AI2026ConsensusIntelligenceMegaSuccess() {
                     </h4>
                     <p className='text-gray-300 mb-2'>
                       Improved decision accuracy reduced regulatory fines and
-                      operational losses by $1.0B.
+                      operational losses by $1?.0B.
                     </p>
                     <div className='text-sm text-gray-400'>
                       • 99.97% decision accuracy

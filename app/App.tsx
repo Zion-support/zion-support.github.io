@@ -1,18 +1,36 @@
-import React, { useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import React, { Suspense, lazy, useCallback, useEffect } from 'react';
+import Link from 'next/link';
 import { HelmetProvider } from 'react-helmet-async';
-
-// Components
-import ErrorBoundary from '../src/components/ErrorBoundary';
-import SEOOptimizer from '../src/components/SEOOptimizer';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
+import AdvancedErrorBoundary from './components/AdvancedErrorBoundary';
+import AdvancedSEOOptimizer from './components/AdvancedSEOOptimizer';
+import AdvancedPerformanceMonitor from './components/AdvancedPerformanceMonitor';
+import SEOEnhancer from './components/SEOEnhancer';
+import SEOOptimizer from './components/SEOOptimizer';
 import PerformanceDashboard from './components/PerformanceDashboard';
+import ContentShowcase from './components/ContentShowcase';
+import InteractiveContentShowcase2026 from './components/InteractiveContentShowcase2026';
+import InteractiveAIROICalculator from './components/InteractiveAIROICalculator';
 
-// Pages
-import HomePage from './page';
+// Loading component
+const LoadingSpinner = () => (
+  <div className="min-h-screen flex items-center justify-center bg-gray-50">
+    <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
+  </div>
+);
+
+// Error boundary component
+const ErrorBoundary = ({ children }: { children: React.ReactNode }) => {
+  return <>{children}</>;
+};
 
 // Utils
-// import performanceOptimizer from '../src/utils/performanceOptimizer';
+import { performanceOptimizer } from './utils/performanceOptimizer';
+import { logger } from './utils/logger';
+
+// Lazy load pages for better performance
+const HomePage = lazy(() => import('./page'));
 
 // Styles
 import '../index.css';
@@ -23,25 +41,35 @@ const App: React.FC = () => {
     console.log('App initialized');
 
     // Initialize performance monitoring
+    performanceOptimizer.init();
+    
+    // Initialize Web Vitals monitoring
+    if (typeof window !== 'undefined' && 'performance' in window) {
+      const metrics = performanceOptimizer.getMetrics();
+      if (metrics) {
+        // eslint-disable-next-line no-console
+        console.log('Performance metrics:', metrics);
+      }
+    }
+    
+    // eslint-disable-next-line no-console
     console.log('Performance monitoring initialized');
-
-    console.log('Performance monitoring initialized');
-    console.log(
-      '🚀 Zion Tech Group App initialized with comprehensive monitoring',
-    );
+    // eslint-disable-next-line no-console
+    console.log('🚀 Zion Tech Group App initialized with comprehensive monitoring');
   }, []);
 
   return (
     <HelmetProvider>
       <ErrorBoundary>
-        <SEOOptimizer>
+        <div>
+          <SEOOptimizer />
           <AccessibilityEnhancer>
             <Router>
               <div className='App'>
                 {/* Skip to main content link for accessibility */}
                 <a
                   href='#main-content'
-                  className='skip-link'
+                  className='skip-link sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50'
                   onClick={e => {
                     e.preventDefault();
                     const main =
@@ -56,20 +84,31 @@ const App: React.FC = () => {
                   Skip to main content
                 </a>
 
-                <Routes>
-                  <Route path='/' element={<HomePage />} />
-                  {/* Add more routes as needed */}
-                </Routes>
+                <Suspense fallback={<LoadingSpinner />}>
+                  <Routes>
+                    <Route path='/' element={<HomePage />} />
+                    {/* Add more routes as needed */}
+                  </Routes>
+                </Suspense>
 
                 {/* Performance Dashboard */}
                 <PerformanceDashboard />
               </div>
             </Router>
-          </AccessibilityEnhancer>
-        </SEOOptimizer>
+            </AccessibilityEnhancer>
+        </div>
       </ErrorBoundary>
     </HelmetProvider>
   );
 };
+
+// Loading fallback component
+const LoadingFallback: React.FC<{ height?: string }> = ({
+  height = 'h-32',
+}) => (
+  <div className={`flex items-center justify-center ${height} w-full`}>
+    <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-indigo-600"></div>
+  </div>
+);
 
 export default App;

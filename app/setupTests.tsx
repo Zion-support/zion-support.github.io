@@ -1,4 +1,21 @@
+/**
+ * Jest setup file for testing environment
+ */
+
 import '@testing-library/jest-dom';
+
+// Suppress jsdom navigation warnings
+// eslint-disable-next-line no-console
+const originalConsoleError = console.error;
+// eslint-disable-next-line no-console
+console.error = (...args) => {
+  const message = args[0]?.toString?.() || args[0]?.message || '';
+  if (message.includes('Not implemented: navigation') || 
+      message.includes('navigation (except hash changes)')) {
+    return;
+  }
+  originalConsoleError(...args);
+};
 
 // Mock window.matchMedia
 Object.defineProperty(window, 'matchMedia', {
@@ -16,22 +33,111 @@ Object.defineProperty(window, 'matchMedia', {
 });
 
 // Mock IntersectionObserver
-global.IntersectionObserver = class IntersectionObserver {
-  root: Element | null = null;
+global.IntersectionObserver = class MockIntersectionObserver {
+  root: Element | Document | null = null;
   rootMargin: string = '';
-  thresholds: ReadonlyArray<number> = Object.freeze([]);
-  
-  constructor() {}
-  disconnect(): void {}
-  observe(): void {}
-  unobserve(): void {}
-  takeRecords(): IntersectionObserverEntry[] { return []; }
-} as unknown as typeof IntersectionObserver;
+  thresholds: ReadonlyArray<number> = [];
+
+  constructor(
+    public callback: IntersectionObserverCallback,
+    options?: IntersectionObserverInit
+  ) {
+    if (options) {
+      this.root = options.root || null;
+      this.rootMargin = options.rootMargin || '0px';
+      this.thresholds = options.threshold
+        ? Array.isArray(options.threshold)
+          ? options.threshold
+          : [options.threshold]
+        : [0];
+    }
+  }
+
+  observe() {}
+  unobserve() {}
+  disconnect() {}
+  takeRecords() {
+    return [];
+  }
+};
 
 // Mock ResizeObserver
-global.ResizeObserver = class ResizeObserver {
-  constructor() {}
-  disconnect(): void {}
-  observe(): void {}
-  unobserve(): void {}
-} as unknown as typeof ResizeObserver;
+global.ResizeObserver = class MockResizeObserver {
+  constructor(public callback: ResizeObserverCallback) {}
+  observe() {}
+  unobserve() {}
+  disconnect() {}
+};
+
+// Mock performance API
+Object.defineProperty(window, 'performance', {
+  writable: true,
+  value: {
+    now: jest.fn(() => Date.now()),
+    getEntriesByType: jest.fn(() => []),
+    mark: jest.fn(),
+    measure: jest.fn(),
+    clearMarks: jest.fn(),
+    clearMeasures: jest.fn(),
+  },
+});
+
+// Mock localStorage
+const localStorageMock = {
+  getItem: jest.fn(),
+  setItem: jest.fn(),
+  removeItem: jest.fn(),
+  clear: jest.fn(),
+};
+Object.defineProperty(window, 'localStorage', {
+  value: localStorageMock,
+});
+
+// Mock sessionStorage
+const sessionStorageMock = {
+  getItem: jest.fn(),
+  setItem: jest.fn(),
+  removeItem: jest.fn(),
+  clear: jest.fn(),
+};
+Object.defineProperty(window, 'sessionStorage', {
+  value: sessionStorageMock,
+});
+
+// Mock TextEncoder and TextDecoder for Node.js environment
+if (typeof TextEncoder === 'undefined') {
+  global.TextEncoder = require('util').TextEncoder;
+  global.TextDecoder = require('util').TextDecoder;
+}
+
+// Mock URL for Node.js environment
+global.URL = URL;
+
+// Mock PerformanceObserver
+global.PerformanceObserver = class MockPerformanceObserver {
+  static readonly supportedEntryTypes: readonly string[] = ['navigation', 'paint', 'largest-contentful-paint', 'first-input', 'layout-shift'];
+  
+  constructor(public callback: PerformanceObserverCallback) {}
+  observe() {}
+  disconnect() {}
+  takeRecords() {
+    return [];
+  }
+};
+
+// Mock window.location
+delete (window as unknown as Record<string, unknown>).location;
+(window as unknown as Record<string, unknown>).location = {
+  href: 'http://localhost:3000',
+  origin: 'http://localhost:3000',
+  protocol: 'http:',
+  host: 'localhost:3000',
+  hostname: 'localhost',
+  port: '3000',
+  pathname: '/',
+  search: '',
+  hash: '',
+  reload: jest.fn(),
+  assign: jest.fn(),
+  replace: jest.fn(),
+};

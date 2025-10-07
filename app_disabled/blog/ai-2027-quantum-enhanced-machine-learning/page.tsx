@@ -252,7 +252,7 @@ origin/cursor/fix-errors-and-merge-to-main-cc0a
       </div>
     </div>
   );
-}
+  }
 </span>
 </span>
 </span>)

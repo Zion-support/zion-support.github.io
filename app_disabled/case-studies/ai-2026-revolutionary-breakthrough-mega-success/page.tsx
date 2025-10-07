@@ -1,4 +1,6 @@
-import { Metadata } from 'next';
+:app_disabled/case-studies/ai-2026-revolutionary-breakthrough-mega-success/page.tsx
+import { Star } from 'lucide-react';
+import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'AI 2026 Revolutionary Breakthrough Mega Success | Zion Tech Group',
@@ -302,4 +304,4 @@ export default function AI2026RevolutionaryBreakthroughMegaSuccess() {
       </div>
     </main>
   );
-}
+  }

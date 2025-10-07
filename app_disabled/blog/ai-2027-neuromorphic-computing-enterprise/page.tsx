@@ -257,7 +257,7 @@ export default function AI2027Neuromorphic Computing Enterprise() {/* return (
       </div>
     </div>
   );
-}
+  }
 </span>
 </span>
 </span>)

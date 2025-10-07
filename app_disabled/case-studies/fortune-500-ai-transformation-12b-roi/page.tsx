@@ -1,4 +1,7 @@
-import { Metadata } from 'next';
+:app_disabled/case-studies/fortune-500-ai-transformation-12b-roi/page.tsx
+import { Zap, ArrowRight, Target, CheckCircle } from 'lucide-react';
+import { Star } from 'lucide-react';
+import type { Metadata } from 'next';
 import {
   ArrowRight,
   Award,
@@ -522,4 +525,4 @@ export default function Fortune500AITransformation12BROI() {
       </div>
     </div>
   );
-}
+  }

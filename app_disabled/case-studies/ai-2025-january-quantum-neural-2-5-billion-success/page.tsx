@@ -1,3 +1,4 @@
+import { Star } from 'lucide-react';
 export default function AI2025JanuaryQuantumNeuralSuccess() {
   return (
     <div className='min-h-screen bg-slate-950'>

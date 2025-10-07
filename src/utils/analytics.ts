@@ -6,20 +6,20 @@
 export interface AnalyticsEvent {
   name: string;
   category: string;
-  action?: string | undefined;
-  label?: string | undefined;
-  value?: number | undefined;
-  properties?: Record<string, any> | undefined;
+  action?: string;
+  label?: string;
+  value?: number;
+  properties?: Record<string, unknown>;
   timestamp: number;
 }
 
 export interface UserProperties {
-  userId?: string | undefined;
+  userId?: string;
   sessionId: string;
   userAgent: string;
   language: string;
   timezone: string;
-  referrer?: string | undefined;
+  referrer?: string;
 }
 
 class Analytics {
@@ -64,21 +64,21 @@ class Analytics {
   /**
    * Track an event
    */
-  public track(
+  track(
     name: string,
     category: string,
     action?: string,
     label?: string,
     value?: number,
-    properties?: Record<string, any>
+    properties?: Record<string, unknown>
   ): void {
     const event: AnalyticsEvent = {
       name,
       category,
-      action: action || undefined,
-      label: label || undefined,
-      value: value || undefined,
-      properties: properties || undefined,
+      action,
+      label,
+      value,
+      properties,
       timestamp: Date.now(),
     };
 
@@ -89,14 +89,14 @@ class Analytics {
 
     // Log in development
     if (process.env['NODE_ENV'] === 'development') {
-      console.log('Analytics event:', event);
+      // Analytics event logged for development
     }
   }
 
   /**
    * Track page view
    */
-  public trackPageView(page: string, title?: string): void {
+  trackPageView(page: string, title?: string): void {
     this.track('page_view', 'navigation', 'view', page, undefined, {
       page_title: title || document.title,
       page_url: typeof window !== 'undefined' ? window.location.href : page,
@@ -106,7 +106,7 @@ class Analytics {
   /**
    * Track user interaction
    */
-  public trackInteraction(
+  trackInteraction(
     element: string,
     action: string,
     category: string = 'user_interaction'
@@ -117,17 +117,21 @@ class Analytics {
   /**
    * Track performance metrics
    */
-  public trackPerformance(metric: string, value: number, unit: string = 'ms'): void {
+  trackPerformance(
+    metric: string,
+    value: number,
+    unit: string = 'ms'
+  ): void {
     this.track('performance', 'metrics', metric, unit, value);
   }
 
   /**
    * Track business events
    */
-  public trackBusinessEvent(
+  trackBusinessEvent(
     event: string,
     value?: number,
-    properties?: Record<string, any>
+    properties?: Record<string, unknown>
   ): void {
     this.track(event, 'business', 'event', undefined, value, properties);
   }
@@ -135,48 +139,47 @@ class Analytics {
   /**
    * Send event to analytics service
    */
-  private async sendToAnalytics(event: AnalyticsEvent): Promise<void> {
+  private async sendToAnalytics(_event: AnalyticsEvent): Promise<void> {
     try {
       // In a real application, you would send to services like Google Analytics, Mixpanel, etc.
-      // For now, we'll just log to console
-      console.log('Analytics event sent:', event);
-    } catch (err) {
-      console.error('Failed to send analytics event:', err);
+      // Analytics event sent successfully
+    } catch {
+      // Failed to send analytics event - could be reported to error tracking
     }
   }
 
   /**
    * Get all events
    */
-  public getEvents(): AnalyticsEvent[] {
+  getEvents(): AnalyticsEvent[] {
     return [...this.events];
   }
 
   /**
    * Get events by category
    */
-  public getEventsByCategory(category: string): AnalyticsEvent[] {
+  getEventsByCategory(category: string): AnalyticsEvent[] {
     return this.events.filter(event => event.category === category);
   }
 
   /**
    * Clear all events
    */
-  public clearEvents(): void {
+  clearEvents(): void {
     this.events = [];
   }
 
   /**
    * Get user properties
    */
-  public getUserProperties(): UserProperties {
+  getUserProperties(): UserProperties {
     return { ...this.userProperties };
   }
 
   /**
    * Update user properties
    */
-  public updateUserProperties(properties: Partial<UserProperties>): void {
+  updateUserProperties(properties: Partial<UserProperties>): void {
     this.userProperties = { ...this.userProperties, ...properties };
   }
 }

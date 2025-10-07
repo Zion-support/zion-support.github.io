@@ -1,4 +1,4 @@
-// Content Security Policy configuration
+//Content Security Policy configuration
 const cspHeader = {'Content-Security-Policy': [
     {
       key: 'default-src',

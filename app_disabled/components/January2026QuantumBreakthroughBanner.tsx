@@ -1,8 +1,7 @@
+import { Zap } from 'lucide-react';
+import { Star } from 'lucide-react';
 import Link from 'next/link';
-import { ArrowRight, Brain, TrendingUp, Zap } from 'lucide-react';
-
-
-
+import { ArrowRight, Brain, TrendingUp, Zap, Star } from 'lucide-react';
 
 export default function January2026QuantumBreakthroughBanner() {
   return (
@@ -140,4 +139,4 @@ export default function January2026QuantumBreakthroughBanner() {
       <div className='absolute bottom-20 right-10 w-2 h-2 bg-indigo-300 rounded-full animate-ping opacity-75 animation-delay-3000'></div>
     </div>
   );
-}
+  }

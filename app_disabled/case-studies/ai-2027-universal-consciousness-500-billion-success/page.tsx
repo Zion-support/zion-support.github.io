@@ -1,5 +1,6 @@
+import { Star } from 'lucide-react';
 // @ts-nocheck
-import { Metadata } from 'next';
+import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title:

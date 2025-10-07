@@ -408,16 +408,32 @@ export default function AISpaceTechSuccess2026() {
           </div>
         </div>
 
-        <div className="border-t border-gray-200 pt-8">
-          <h4 className="text-lg font-bold text-gray-900 mb-4">Related Case Studies</h4>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <ArrowRight href="/case-studies/ai-autonomous-enterprise-success-2026" className="block p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors">
-              <h5 className="font-semibold text-gray-900 mb-2">AI Autonomous Enterprise Success 2026</h5>
-              <p className="text-sm text-gray-600">$25M ROI with autonomous business operations</p>
+        <div className='border-t border-gray-200 pt-8'>
+          <h4 className='text-lg font-bold text-gray-900 mb-4'>
+            Related Case Studies
+          </h4>
+          <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
+            <ArrowRight
+              href='/case-studies/ai-autonomous-enterprise-success-2026'
+              className='block p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors'
+            >
+              <h5 className='font-semibold text-gray-900 mb-2'>
+                AI Autonomous Enterprise Success 2026
+              </h5>
+              <p className='text-sm text-gray-600'>
+                $25M ROI with autonomous business operations
+              </p>
             </ArrowRight>
-            <ArrowRight href="/case-studies/ai-fintech-transformation-2026" className="block p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors">
-              <h5 className="font-semibold text-gray-900 mb-2">AI FinTech Transformation 2026</h5>
-              <p className="text-sm text-gray-600">$5M+ savings with AI financial automation</p>
+            <ArrowRight
+              href='/case-studies/ai-fintech-transformation-2026'
+              className='block p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors'
+            >
+              <h5 className='font-semibold text-gray-900 mb-2'>
+                AI FinTech Transformation 2026
+              </h5>
+              <p className='text-sm text-gray-600'>
+                $5M+ savings with AI financial automation
+              </p>
             </ArrowRight>
           </div>
         </div>

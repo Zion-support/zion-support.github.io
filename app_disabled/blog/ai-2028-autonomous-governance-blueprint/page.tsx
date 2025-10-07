@@ -1,8 +1,10 @@
+:app_disabled/blog/ai-2028-autonomous-governance-blueprint/page.tsx
+import { Shield } from 'lucide-react';
+import React from 'react';
 import Link from 'next/link';
 
 import { ArrowRight, Shield } from 'lucide-react';
 import React from 'react';
-import Link from 'next/link';
 
 import {Shield} from 'lucide-react';
 
@@ -62,4 +64,4 @@ export default function Autonomous Governance Blueprint2028() {
       </div>
     </div>
   );
-}
+  }

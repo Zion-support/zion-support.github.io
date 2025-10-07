@@ -76,4 +76,4 @@ export default function Autonomous Governance Blueprint2027() {
       </div>
     </div>
   );
-}
+  }

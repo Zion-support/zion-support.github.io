@@ -1,4 +1,6 @@
-import { Metadata } from 'next';
+:app_disabled/case-studies/ai-2026-march-ultimate-breakthrough-15-billion-success/page.tsx
+import { Star } from 'lucide-react';
+import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'AI 2026 March Ultimate Breakthrough: $15B Success Story',
@@ -351,4 +353,4 @@ export default function MarchUltimateBreakthroughSuccess() {
       </div>
     </div>
   );
-}
+  }

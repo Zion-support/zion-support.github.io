@@ -1,3 +1,4 @@
+import { Star } from 'lucide-react';
 import React from 'react';
 // @ts-nocheck
 
@@ -33,32 +34,5 @@ export default function AIAgent Reliability Playbook2026() {return (<main classN
           <h3>Key    Practices</h3>
           <ul>
             <li>
-              Define SL Is that map to business KP Is; enforce SL    Os    with error
-              budgets.
-            </li>
-            <li>
-              Gate    risky actions with policy checks, approvals, and spending
-              limits.
-            </li>
-            <li>
-              Use    canary workflows and offline evals wired into CI to prevent
-              regressions.
-            </li>
-            <li>
-              Instrument    traces and decisions; enable audit and post-incident
-              reviews.
-            </li>
-            <li>
-              Automate    rollback and safe fallbacks to protect user experience.
-            </li>
-          </ul>
-          <h3>Implementation    Blueprint</h3>
-          <p>
-            Start with a reference guardrail pipeline, connect it to scorecards,
-            then add budget-aware routing and progressive delivery.    Pair    with
-            semantic caches and quality tiers for predictable cost and latency.
-          </p>
-        </div>
-      </section>
-    </main>
-  ); }
+              Define SL Is that map to business KP Is;
+  }

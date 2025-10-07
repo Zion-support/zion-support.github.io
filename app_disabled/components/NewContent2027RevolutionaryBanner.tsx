@@ -273,4 +273,4 @@ export default function NewContent2027RevolutionaryBanner() {
       </div>
     </section>
   );
-}
+  }

@@ -1,3 +1,4 @@
+import { Star } from 'lucide-react';
 import React from 'react';
 // @ts-nocheck
 import Link from 'next/link';
@@ -103,4 +104,5 @@ export default function EnterpriseInnovation Roadmap Sept302025() {return (<div 
         </article>
       </div>
     </div>
-  ); }
+  );
+  }

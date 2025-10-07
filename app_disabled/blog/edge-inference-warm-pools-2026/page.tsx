@@ -50,10 +50,20 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="py-12 bg-gray-50 border-t border-gray-200">
-        <div className="max-w-4xl mx-auto px-6 flex items-center justify-between">
-          <ArrowRight href="/blog" className="text-emerald-700 font-semibold hover:text-emerald-800">← Back to Blog</ArrowRight>
-          <ArrowRight href="/blog/agent-release-guardrails-2026" className="text-teal-700 font-semibold hover:text-teal-800">Next: Agent Release Guardrails →</ArrowRight>
+      <section className='py-12 bg-gray-50 border-t border-gray-200'>
+        <div className='max-w-4xl mx-auto px-6 flex items-center justify-between'>
+          <ArrowRight
+            href='/blog'
+            className='text-emerald-700 font-semibold hover:text-emerald-800'
+          >
+            ← Back to Blog
+          </ArrowRight>
+          <ArrowRight
+            href='/blog/agent-release-guardrails-2026'
+            className='text-teal-700 font-semibold hover:text-teal-800'
+          >
+            Next: Agent Release Guardrails →
+          </ArrowRight>
         </div>
       </section>
     </main>

@@ -1,4 +1,6 @@
-import { Metadata } from 'next';
+:app_disabled/case-studies/ai-2027-universal-intelligence-singularity-10-trillion-success/page.tsx
+import { Star } from 'lucide-react';
+import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title:
@@ -382,4 +384,4 @@ export default function AI2027UniversalIntelligenceSingularity10TrillionSuccess(
       </section>
     </div>
   );
-}
+  }

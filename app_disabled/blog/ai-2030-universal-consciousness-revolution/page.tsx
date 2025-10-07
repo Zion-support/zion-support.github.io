@@ -1,5 +1,6 @@
-import React from 'react';
+:app_disabled/blog/ai-2030-universal-consciousness-revolution/page.tsx
 import { Metadata } from 'next';
+import type { Metadata } from 'next';
 
 export const metadata = {
   
@@ -364,4 +365,5 @@ export default function AI2030Universal Consciousness Revolution() {return (<div
         </div>
       </article>
     </div>
-  ); }
+  );
+  }

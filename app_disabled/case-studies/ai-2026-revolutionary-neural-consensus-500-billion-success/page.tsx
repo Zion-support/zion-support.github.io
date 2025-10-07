@@ -1,4 +1,6 @@
-import { Metadata } from 'next';
+:app_disabled/case-studies/ai-2026-revolutionary-neural-consensus-500-billion-success/page.tsx
+import { Star } from 'lucide-react';
+import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title:
@@ -434,4 +436,4 @@ export default function AI2026RevolutionaryNeuralConsensus500BillionSuccess() {
       </section>
     </div>
   );
-}
+  }

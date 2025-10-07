@@ -28,4 +28,5 @@ export default function Edge Privacy Insights2026() {return (<div className="min
         </section>
       </main>
     </div>
-  ); }
+  );
+  }

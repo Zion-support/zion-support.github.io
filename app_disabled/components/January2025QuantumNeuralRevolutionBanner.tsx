@@ -1,3 +1,4 @@
+import { Star } from 'lucide-react';
 export default function January2025QuantumNeuralRevolutionBanner() {
   return (
     <section className='py-16 bg-gradient-to-r from-purple-900/30 via-indigo-900/30 to-cyan-900/30 backdrop-blur-sm border-b border-purple-500/20'>

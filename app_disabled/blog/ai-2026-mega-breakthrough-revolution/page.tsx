@@ -244,7 +244,7 @@ origin/cursor/fix-errors-and-merge-to-main-cc0a
       </footer>
     </div>
   );
-}</div></div></div></div></div></div></div></div>
+  }</div></div></div></div></div></div></div></div>
 </span>
 </span>
 </span>

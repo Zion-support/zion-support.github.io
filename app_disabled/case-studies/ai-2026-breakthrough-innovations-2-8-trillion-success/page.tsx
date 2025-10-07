@@ -1,3 +1,5 @@
+import { Zap, ArrowRight, Target } from 'lucide-react';
+import { Star } from 'lucide-react';
 import Link from 'next/link';
 import {
   ArrowRight,
@@ -355,27 +357,27 @@ export default function AI2026BreakthroughInnovationsCaseStudyPage() {
           Join the Fortune 500 companies already generating unprecedented value
           with AI 2026 breakthrough innovations.
         </p>
-        <div className="flex flex-wrap gap-4 justify-center">
-          <ArrowRight 
-            href="/blog/ai-2026-breakthrough-innovations-mega-success" 
-            className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-green-600 hover:to-emerald-600 transition-all flex items-center gap-2"
+        <div className='flex flex-wrap gap-4 justify-center'>
+          <ArrowRight
+            href='/blog/ai-2026-breakthrough-innovations-mega-success'
+            className='bg-gradient-to-r from-green-500 to-emerald-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-green-600 hover:to-emerald-600 transition-all flex items-center gap-2'
           >
             Read Full Blog Post
-            <ArrowRight className="w-5 h-5" />
+            <ArrowRight className='w-5 h-5' />
           </ArrowRight>
-          <ArrowRight 
-            href="/services/ai-2026-breakthrough-innovations-implementation" 
-            className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-cyan-600 transition-all flex items-center gap-2"
+          <ArrowRight
+            href='/services/ai-2026-breakthrough-innovations-implementation'
+            className='bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-cyan-600 transition-all flex items-center gap-2'
           >
             Start Implementation
-            <ArrowRight className="w-5 h-5" />
+            <ArrowRight className='w-5 h-5' />
           </ArrowRight>
-          <ArrowRight 
-            href="/contact" 
-            className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-indigo-600 transition-all flex items-center gap-2"
+          <ArrowRight
+            href='/contact'
+            className='bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-indigo-600 transition-all flex items-center gap-2'
           >
             Get Expert Consultation
-            <ArrowRight className="w-5 h-5" />
+            <ArrowRight className='w-5 h-5' />
           </ArrowRight>
         </div>
       </section>

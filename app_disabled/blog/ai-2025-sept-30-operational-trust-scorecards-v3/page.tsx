@@ -119,9 +119,19 @@ export default function Page() {
             </ol>
           </div>
 
-          <div className="flex items-center justify-between pt-6 border-t border-white/10">
-            <ArrowRight href="/content-hub" className="text-emerald-300 hover:text-emerald-200 font-semibold">← Back to Content Hub</ArrowRight>
-            <ArrowRight href="/blog/ai-2027-cost-optimization-playbook" className="text-cyan-300 hover:text-cyan-200 font-semibold">Next: Cost Optimization Playbook →</ArrowRight>
+          <div className='flex items-center justify-between pt-6 border-t border-white/10'>
+            <ArrowRight
+              href='/content-hub'
+              className='text-emerald-300 hover:text-emerald-200 font-semibold'
+            >
+              ← Back to Content Hub
+            </ArrowRight>
+            <ArrowRight
+              href='/blog/ai-2027-cost-optimization-playbook'
+              className='text-cyan-300 hover:text-cyan-200 font-semibold'
+            >
+              Next: Cost Optimization Playbook →
+            </ArrowRight>
           </div>
         </div>
       </section>

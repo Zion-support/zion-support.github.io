@@ -1,65 +1,198 @@
+import { Zap, ArrowLeft, CheckCircle } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { Star } from 'lucide-react';
 import Link from 'next/link';
-import { ArrowLeft, Bookmark, Brain, Calendar, CheckCircle, Clock, Shield, TrendingUp, User, Zap } from 'lucide-react';
-
+import {
+  ArrowLeft,
+  Bookmark,
+  Brain,
+  Calendar,
+  CheckCircle,
+  Clock,
+  Shield,
+  TrendingUp,
+  User,
+  Zap,
+} from 'lucide-react';
 
 // Use simple SVG icons instead of lucide-react to avoid TypeScript issues
 const ArrowLeft = ({ className }: { className?: string }) => (
-  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24" width="24" height="24">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+  <svg
+    className={className}
+    fill='none'
+    stroke='currentColor'
+    viewBox='0 0 24 24'
+    width='24'
+    height='24'
+  >
+    <path
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      strokeWidth={2}
+      d='M15 19l-7-7 7-7'
+    />
   </svg>
 );
 
 const Calendar = ({ className }: { className?: string }) => (
-  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24" width="24" height="24">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+  <svg
+    className={className}
+    fill='none'
+    stroke='currentColor'
+    viewBox='0 0 24 24'
+    width='24'
+    height='24'
+  >
+    <path
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      strokeWidth={2}
+      d='M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z'
+    />
   </svg>
 );
 
 const User = ({ className }: { className?: string }) => (
-  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24" width="24" height="24">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+  <svg
+    className={className}
+    fill='none'
+    stroke='currentColor'
+    viewBox='0 0 24 24'
+    width='24'
+    height='24'
+  >
+    <path
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      strokeWidth={2}
+      d='M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z'
+    />
   </svg>
 );
 
 const Clock = ({ className }: { className?: string }) => (
-  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24" width="24" height="24">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+  <svg
+    className={className}
+    fill='none'
+    stroke='currentColor'
+    viewBox='0 0 24 24'
+    width='24'
+    height='24'
+  >
+    <path
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      strokeWidth={2}
+      d='M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z'
+    />
   </svg>
 );
 
 const Bookmark = ({ className }: { className?: string }) => (
-  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24" width="24" height="24">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" />
+  <svg
+    className={className}
+    fill='none'
+    stroke='currentColor'
+    viewBox='0 0 24 24'
+    width='24'
+    height='24'
+  >
+    <path
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      strokeWidth={2}
+      d='M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z'
+    />
   </svg>
 );
 
 const TrendingUp = ({ className }: { className?: string }) => (
-  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24" width="24" height="24">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+  <svg
+    className={className}
+    fill='none'
+    stroke='currentColor'
+    viewBox='0 0 24 24'
+    width='24'
+    height='24'
+  >
+    <path
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      strokeWidth={2}
+      d='M13 7h8m0 0v8m0-8l-8 8-4-4-6 6'
+    />
   </svg>
 );
 
 const Brain = ({ className }: { className?: string }) => (
-  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24" width="24" height="24">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+  <svg
+    className={className}
+    fill='none'
+    stroke='currentColor'
+    viewBox='0 0 24 24'
+    width='24'
+    height='24'
+  >
+    <path
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      strokeWidth={2}
+      d='M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z'
+    />
   </svg>
 );
 
 const Zap = ({ className }: { className?: string }) => (
-  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24" width="24" height="24">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+  <svg
+    className={className}
+    fill='none'
+    stroke='currentColor'
+    viewBox='0 0 24 24'
+    width='24'
+    height='24'
+  >
+    <path
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      strokeWidth={2}
+      d='M13 10V3L4 14h7v7l9-11h-7z'
+    />
   </svg>
 );
 
 const Shield = ({ className }: { className?: string }) => (
-  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24" width="24" height="24">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+  <svg
+    className={className}
+    fill='none'
+    stroke='currentColor'
+    viewBox='0 0 24 24'
+    width='24'
+    height='24'
+  >
+    <path
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      strokeWidth={2}
+      d='M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z'
+    />
   </svg>
 );
 
 const CheckCircle = ({ className }: { className?: string }) => (
-  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24" width="24" height="24">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+  <svg
+    className={className}
+    fill='none'
+    stroke='currentColor'
+    viewBox='0 0 24 24'
+    width='24'
+    height='24'
+  >
+    <path
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      strokeWidth={2}
+      d='M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z'
+    />
   </svg>
 );
 
@@ -76,11 +209,11 @@ export default function AI2025DecemberAutonomousRevolution28BillionSuccess() {
   return (
     <div className='min-h-screen bg-white'>
       {/* Header */}
-      <header className="border-b border-gray-200 bg-white sticky top-0 z-50">
-        <div className="max-w-4xl mx-auto px-4 py-4">
-          <Link 
-            href="/" 
-            className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium"
+      <header className='border-b border-gray-200 bg-white sticky top-0 z-50'>
+        <div className='max-w-4xl mx-auto px-4 py-4'>
+          <Link
+            href='/'
+            className='inline-flex items-center text-blue-600 hover:text-blue-700 font-medium'
           >
             <ArrowLeft className='w-4 h-4 mr-2' />
             Back to Home
@@ -117,11 +250,20 @@ export default function AI2025DecemberAutonomousRevolution28BillionSuccess() {
             December 2025 AI autonomous enterprise platform, delivering $2.8B in
             annual cost savings and 99.9% operational autonomy.
           </p>
-          
-          <div className="flex flex-wrap gap-2">
-            {['AI Success Story', '$2.8B Savings', 'Autonomous Enterprise', 'December 2025', 'Fortune 100'].map((tag) => (
-              <span key={tag} className="inline-flex items-center gap-1 bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium">
-                <Bookmark className="w-3 h-3" />
+
+          <div className='flex flex-wrap gap-2'>
+            {[
+              'AI Success Story',
+              '$2.8B Savings',
+              'Autonomous Enterprise',
+              'December 2025',
+              'Fortune 100',
+            ].map(tag => (
+              <span
+                key={tag}
+                className='inline-flex items-center gap-1 bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium'
+              >
+                <Bookmark className='w-3 h-3' />
                 {tag}
               </span>
             ))}

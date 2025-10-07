@@ -1,3 +1,4 @@
+import { Star } from 'lucide-react';
 // @ts-nocheck
 import Link from 'next/link';
 

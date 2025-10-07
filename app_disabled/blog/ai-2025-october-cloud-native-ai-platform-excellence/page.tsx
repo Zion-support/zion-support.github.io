@@ -54,24 +54,5 @@ export default function CloudNativeAIPlatform Excellence Page() {return (<main c
           <h3>Operations    playbook</h3>
           <ul>
             <li>
-              Define    uptime/error budgets per surface; gate deployments on
-              scorecards.
-            </li>
-            <li>
-              Automate    incident response with policy-aware runbooks and audits.
-            </li>
-            <li>
-              Continuously    right-size models and infra for latency and cost.
-            </li>
-          </ul>
-
-          <h3>Outcomes</h3>
-          <p>
-            Enterprises    achieve near-perfect uptime, predictable spend, and
-            faster iteration while meeting compliance and safety requirements at
-            scale.
-          </p>
-        </section>
-      </article>
-    </main>
-  ); }
+              Define    uptime/error budgets per surface;
+  }

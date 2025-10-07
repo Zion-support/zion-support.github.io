@@ -1,5 +1,7 @@
+import { Cog, Zap } from 'lucide-react';
+import { Factory, Cog } from 'lucide-react';
 import React from 'react';
-import { ArrowRight, TrendingUp, Zap } from 'lucide-react';
+import { ArrowRight, TrendingUp, Zap, Factory, Cog } from 'lucide-react';
 
 import Link from 'next/link';
 
@@ -48,7 +50,7 @@ const AutonomousManufacturingRevolutionBanner: React.FC = () => {
             <div className='grid grid-cols-1 sm:grid-cols-2 gap-4'>
               <div className='flex items-center space-x-3'>
                 <div className='w-8 h-8 bg-orange-600/30 rounded-lg flex items-center justify-center'>
-                  <Cogs className='w-4 h-4 text-orange-300' />
+                  <Cog className='w-4 h-4 text-orange-300' />
                 </div>
                 <span className='text-gray-300'>Self-Managing Production</span>
               </div>
@@ -169,6 +171,6 @@ const AutonomousManufacturingRevolutionBanner: React.FC = () => {
       </div>
     </div>
   );
-};
+  };
 
 export default AutonomousManufacturingRevolutionBanner;

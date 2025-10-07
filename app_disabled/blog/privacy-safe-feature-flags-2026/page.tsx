@@ -1,3 +1,4 @@
+import { Star } from 'lucide-react';
 import React from 'react';
 // @ts-nocheck
 
@@ -48,4 +49,5 @@ export default function PrivacySafe Feature Flags2026() {return (<main className
         </div>
       </section>
     </main>
-  ); }
+  );
+  }

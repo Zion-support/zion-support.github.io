@@ -1,3 +1,4 @@
+import { Star } from 'lucide-react';
 export default function Ultimate2026ContentShowcase() {
   return (
     <section className='py-16 bg-gradient-to-br from-slate-900 via-purple-900/20 to-indigo-900/20'>

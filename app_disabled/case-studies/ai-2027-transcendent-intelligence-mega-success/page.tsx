@@ -1,4 +1,6 @@
-import { Metadata } from 'next';
+:app_disabled/case-studies/ai-2027-transcendent-intelligence-mega-success/page.tsx
+import { Star } from 'lucide-react';
+import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title:
@@ -286,4 +288,4 @@ export default function TranscendentIntelligenceMegaSuccess() {
       </div>
     </div>
   );
-}
+  }

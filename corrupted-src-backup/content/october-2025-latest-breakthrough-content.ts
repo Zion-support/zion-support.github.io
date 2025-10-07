@@ -13,12 +13,7 @@ export interface LatestBreakthroughContent {
   icon?: string;
   gradient?: string;
   highlights?: string[];
-  metrics?: {
-    value: string;
-    accuracy: string;
-    downtime: string;
-    market: string;
-  };
+:corrupted-src-backup/content/october-2025-latest-breakthrough-content.ts
 }
 
 export const octoberLatestBreakthroughContent: LatestBreakthroughContent[] = [

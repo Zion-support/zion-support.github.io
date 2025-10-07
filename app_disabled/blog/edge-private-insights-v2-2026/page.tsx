@@ -1,9 +1,4 @@
 
-
-
-
-
-
 import { Calendar, Clock, Cpu, Shield } from 'lucide-react';
 
 import React from 'react';
@@ -69,23 +64,8 @@ export default function Page() {
               Scoped I    Ds    per device/app that cannot be joined across surfaces
             </li>
             <li>Differential    privacy noise calibrated to KPI sensitivity</li>
-            <li>On   -device rollups; only aggregates leave the device</li>
-            <li>Signed    configs with rotation and revocation</li>
-          </ul>
-          <h3>Deployment    Checklist</h3>
-          <ol>
-            <li>Threat    model and privacy budget selection</li>
-            <li>Edge    runtime packaging and key management</li>
-            <li>Aggregate    schemas and validation</li>
-            <li>Server   -side attestation and anomaly detection</li>
-          </ol>
-        </div>
-      </section>
-
-      <section className="py-12 bg-white">
-        <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-6">
-          {[
-            { label: "   Latency    p95", value: "< 100ms", color: 'text-cyan-600' },
+            <li>On   -device rollups;
+  },
             { label: "PII Collected", value: "0", color: 'text-emerald-600' },
             { label: "Coverage", value: "Global", color: 'text-fuchsia-600' },
           ].map((kpi, i) => (

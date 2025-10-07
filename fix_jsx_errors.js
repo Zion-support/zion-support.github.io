@@ -8,30 +8,30 @@ function fixJSXErrors(filePath) {
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
 
-    // Fix malformed JSX elements like: className="..." <span> -> className="..." /> <span>
+    //Fix malformed JSX elements like: className="..." <span> -> className="..." /> <span>
     const patterns = [
       {
-        // Fix CheckCircleIcon and similar patterns
+        //Fix CheckCircleIcon and similar patterns
         pattern: /(<CheckCircleIcon[^>]*>)\s*<span/g,
         replacement: '$1 />\n                  <span',
       },
       {
-        // Fix other icon patterns
+        //Fix other icon patterns
         pattern: /(<[A-Z][a-zA-Z]*Icon[^>]*>)\s*<[^/]/g,
         replacement: '$1 />\n                <',
       },
       {
-        // Fix closing tag issues
+        //Fix closing tag issues
         pattern: /(<[A-Z][a-zA-Z]*Icon[^>]*>)\s*<\/[^>]*>/g,
         replacement: '$1 />\n              </',
       },
       {
-        // Fix ArrowRightIcon patterns
+        //Fix ArrowRightIcon patterns
         pattern: /(<ArrowRightIcon[^>]*>)\s*<\/Link>/g,
         replacement: '$1 />\n            </Link>',
       },
       {
-        // Fix TruckIcon patterns
+        //Fix TruckIcon patterns
         pattern: /(<TruckIcon[^>]*>)\s*<\/div>/g,
         replacement: '$1 />\n          </div>',
       },

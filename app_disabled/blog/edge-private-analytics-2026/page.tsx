@@ -20,36 +20,5 @@ export default function Edge Private Analytics2026Page() {
           </h1>
           <p className="text-slate-300">
             Scoped I    Ds   , on‑device metrics, and DP noise for compliant analytics
-            under &lt;100ms.
-          </p>
-          <div className="mt-3 text-slate-400 text-sm">
-            7 min read • Category:    Analytics
-          </div>
-        </div>
-
-        <div className="prose prose-invert prose-slate max-w-none">
-          <h2>Why This    Matters</h2>
-          <p>
-            Unlock    actionable insights without collecting PII by shifting
-            metrics to the edge.
-          </p>
-          <h3>Key    Techniques</h3>
-          <ul>
-            <li>Scoped    identifiers and consent‑aware telemetry</li>
-            <li>On   ‑device aggregation and filtering</li>
-            <li>Differential    privacy for safe reporting</li>
-          </ul>
-        </div>
-
-        <div className="mt-12">
-          <Arrow Right
-            href="/blog"
-            className="inline-block bg-white text-cyan-700 px-6 py-3 rounded-lg font-bold hover:bg-cyan-50"
-          >
-            ← Back to    Blog
-          </Arrow>
-        </div>
-      </main>
-    </div>
-  );
-}
+            under &lt;
+  }

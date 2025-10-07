@@ -1,3 +1,4 @@
+import { Star } from 'lucide-react';
 import React from 'react';
 export default function AI2026AutonomousEnterprise Operations Breakthrough() {/* return (<div class Name='min-h-screen bg-slate-950text-white'>
       {   Hero    Section   */}
@@ -475,4 +476,5 @@ export default function AI2026AutonomousEnterprise Operations Breakthrough() {/*
         </div>
       </footer>
     </div>
-  ); }
+  );
+  }

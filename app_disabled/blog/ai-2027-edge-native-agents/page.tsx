@@ -9,26 +9,30 @@ export const metadata = {
 };
 
 export default function Page() {
-	return (
-		<div className="min-h-screen bg-slate-950 text-white">
-			<main className="max-w-3xl mx-auto px-6 py-16">
-				<div className="mb-8">
-					<ArrowRight href="/blog" className="text-blue-400 hover:text-blue-300">← Back to Blog</ArrowRight>
-				</div>
-				<h1>
-					AI 2027: Edge‑Native Agents — Real‑Time, Reliable, Low‑Latency
-				</h1>
-				<p>
-					How to run agentic workloads at the edge for sub‑50ms interactions, with
-					policy guardrails, observability, and aggressive cost optimization.
-				</p>
-				<div>
-					<span>⚡ Technical Guide</span>
-					<span>•</span>
-					<span>September 30, 2025</span>
-					<span>•</span>
-					<span>14 min read</span>
-				</div>
+  return (
+    <div className='min-h-screen bg-slate-950 text-white'>
+      <main className='max-w-3xl mx-auto px-6 py-16'>
+        <div className='mb-8'>
+          <ArrowRight
+            href='/blog'
+            className='text-blue-400 hover:text-blue-300'
+          >
+            ← Back to Blog
+          </ArrowRight>
+        </div>
+        <h1>AI 2027: Edge‑Native Agents — Real‑Time, Reliable, Low‑Latency</h1>
+        <p>
+          How to run agentic workloads at the edge for sub‑50ms interactions,
+          with policy guardrails, observability, and aggressive cost
+          optimization.
+        </p>
+        <div>
+          <span>⚡ Technical Guide</span>
+          <span>•</span>
+          <span>September 30, 2025</span>
+          <span>•</span>
+          <span>14 min read</span>
+        </div>
 
         <section className='space-y-6 text-slate-200 leading-7'>
           <h2 className='text-2xl font-bold'>Why Edge‑Native Agents</h2>
@@ -65,14 +69,24 @@ export default function Page() {
           </ul>
         </section>
 
-				<div className="mt-12 p-6 rounded-lg bg-slate-900 border border-white/10">
-					<div className="font-semibold mb-2">Next up</div>
-					<div className="flex flex-col sm:flex-row gap-3">
-						<ArrowRight href="/blog/ai-2027-cost-optimization-playbook" className="text-emerald-400 hover:text-emerald-300">AI 2027 Cost Optimization Playbook →</ArrowRight>
-						<ArrowRight href="/content-hub" className="text-blue-400 hover:text-blue-300">Explore the Content Hub →</ArrowRight>
-					</div>
-				</div>
-			</main>
-		</div>
-	);
+        <div className='mt-12 p-6 rounded-lg bg-slate-900 border border-white/10'>
+          <div className='font-semibold mb-2'>Next up</div>
+          <div className='flex flex-col sm:flex-row gap-3'>
+            <ArrowRight
+              href='/blog/ai-2027-cost-optimization-playbook'
+              className='text-emerald-400 hover:text-emerald-300'
+            >
+              AI 2027 Cost Optimization Playbook →
+            </ArrowRight>
+            <ArrowRight
+              href='/content-hub'
+              className='text-blue-400 hover:text-blue-300'
+            >
+              Explore the Content Hub →
+            </ArrowRight>
+          </div>
+        </div>
+      </main>
+    </div>
+  );
 }

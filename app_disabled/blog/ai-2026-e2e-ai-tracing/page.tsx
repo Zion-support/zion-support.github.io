@@ -55,9 +55,19 @@ export default function Page() {
           </p>
         </div>
 
-        <div className="mt-10 flex gap-3">
-          <ArrowRight href="/blog" className="bg-white text-blue-700 px-5 py-3 rounded-lg font-semibold hover:bg-slate-100">Back to Blog</ArrowRight>
-          <ArrowRight href="/content-hub" className="border border-white/30 text-white px-5 py-3 rounded-lg font-semibold hover:bg-white/10">Explore Content Hub</ArrowRight>
+        <div className='mt-10 flex gap-3'>
+          <ArrowRight
+            href='/blog'
+            className='bg-white text-blue-700 px-5 py-3 rounded-lg font-semibold hover:bg-slate-100'
+          >
+            Back to Blog
+          </ArrowRight>
+          <ArrowRight
+            href='/content-hub'
+            className='border border-white/30 text-white px-5 py-3 rounded-lg font-semibold hover:bg-white/10'
+          >
+            Explore Content Hub
+          </ArrowRight>
         </div>
       </div>
     </div>

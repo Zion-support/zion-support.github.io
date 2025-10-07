@@ -1,5 +1,4 @@
 // import Link from 'next/link'; // Unused for now
-
 export const metadata = {
   title: 'Enterprise Solutions - Zion Tech Group',
   description:
@@ -7,7 +6,6 @@ export const metadata = {
   keywords:
     'enterprise AI, Fortune 500, autonomous systems, quantum computing, enterprise transformation, business intelligence',
 };
-
 export default function EnterprisePage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -20,7 +18,6 @@ export default function EnterprisePage() {
             style={{ animationDelay: '2s' }}
           ></div>
         </div>
-
         <div className="relative z-10 container mx-auto px-4 py-24">
           <div className="text-center">
             <div className="flex items-center justify-center gap-3 mb-6">
@@ -29,19 +26,16 @@ export default function EnterprisePage() {
                 Enterprise AI Solutions
               </span>
             </div>
-
             <h1 className="text-5xl md:text-6xl font-extrabold text-white mb-6">
               <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
                 Enterprise Solutions
               </span>
             </h1>
-
             <p className="text-lg text-gray-400 mb-12 max-w-3xl mx-auto">
               Transform your enterprise with our proven AI solutions. Achieve
               $100M+ cost savings, 500% productivity gains, and 99.9% system
               uptime with enterprise-grade security and compliance.
             </p>
-
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
               <a
                 href="/contact"
@@ -72,7 +66,6 @@ export default function EnterprisePage() {
           </div>
         </div>
       </header>
-
       {/* Solutions Section */}
       <section id="solutions" className="py-24">
         <div className="container mx-auto px-4">
@@ -85,7 +78,6 @@ export default function EnterprisePage() {
               transformation
             </p>
           </div>
-
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Solution 1 */}
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-cyan-500/50 transition-all duration-300 group">
@@ -104,6 +96,7 @@ export default function EnterprisePage() {
               </ul>
             </div>
 
+>>>>>>> ad3f5667eee57a9969ff433042f2200dd6375572
             {/* Solution 2 */}
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-purple-500/50 transition-all duration-300 group">
               <div className="text-4xl mb-4">⚡</div>
@@ -121,6 +114,25 @@ export default function EnterprisePage() {
               </ul>
             </div>
 
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {[
+              { number: '500+', label: 'Fortune 500 Clients' },
+              { number: '$2.5T+', label: 'Cost Savings Delivered' },
+              { number: '99.9%', label: 'System Uptime' },
+              { number: '500%', label: 'Productivity Increase' },
+            ].map((stat, index) => (
+              <div
+                key={index}
+                className="text-center bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-8"
+              >
+                <div className="text-4xl md:text-5xl font-bold text-cyan-400 mb-2">
+                  {stat.number}
+                </div>
+                <div className="text-gray-300">{stat.label}</div>
+              </div>
+            ))}
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-e42d
             {/* Solution 3 */}
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-green-500/50 transition-all duration-300 group">
               <div className="text-4xl mb-4">🔒</div>
@@ -137,10 +149,11 @@ export default function EnterprisePage() {
                 <li>• Real-time threat detection</li>
               </ul>
             </div>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-e42d
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-24 bg-gradient-to-r from-cyan-500/10 to-purple-500/10">
         <div className="container mx-auto px-4 text-center">
@@ -164,6 +177,8 @@ export default function EnterprisePage() {
             >
               Call: +1 (302) 464-0950
             </a>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-e42d
           </div>
         </div>
       </section>

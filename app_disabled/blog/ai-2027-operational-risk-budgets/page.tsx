@@ -100,4 +100,4 @@ export default function AI2027OperationalRisk Budgets Page() {
       </div>
     </div>
   );
-}
+  }

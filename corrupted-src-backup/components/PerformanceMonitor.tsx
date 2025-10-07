@@ -108,7 +108,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
 
   // Development mode: Log performance metrics
   useEffect(() => {
-    if (process.env.NODE_ENV === 'development' && Object.keys(metrics).length > 0) {
+    if (process.env['NODE_ENV'] === 'development' && Object.keys(metrics).length > 0) {
       console.log('Performance Metrics:', metrics);
     }
   }, [metrics]);

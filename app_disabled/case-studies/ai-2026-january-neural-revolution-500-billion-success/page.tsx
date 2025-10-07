@@ -1,4 +1,6 @@
-import { Metadata } from 'next';
+:app_disabled/case-studies/ai-2026-january-neural-revolution-500-billion-success/page.tsx
+import { Star } from 'lucide-react';
+import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
@@ -549,4 +551,4 @@ export default function January2026NeuralRevolution500BSuccessPage() {
       </section>
     </div>
   );
-}
+  }

@@ -1,3 +1,4 @@
+import { Star } from 'lucide-react';
 import Link from 'next/link';
 export const metadata = {
   title:
@@ -257,22 +258,32 @@ export default function AI2028AutonomousEnterpriseMegaSuccess() {
           </Link>
         </div>
 
-        <div className="border-t pt-6 mt-8">
-          <h4 className="text-xl font-bold text-gray-900 mb-4">Related Success Stories</h4>
-          <div className="grid md:grid-cols-2 gap-4">
-            <ArrowRight 
-              href="/case-studies/ai-2028-neuromorphic-superintelligence-success" 
-              className="block p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors"
+        <div className='border-t pt-6 mt-8'>
+          <h4 className='text-xl font-bold text-gray-900 mb-4'>
+            Related Success Stories
+          </h4>
+          <div className='grid md:grid-cols-2 gap-4'>
+            <ArrowRight
+              href='/case-studies/ai-2028-neuromorphic-superintelligence-success'
+              className='block p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors'
             >
-              <h5 className="font-semibold text-blue-600 mb-2">Neuromorphic $75B Success</h5>
-              <p className="text-sm text-gray-600">Brain-inspired computing breakthrough</p>
+              <h5 className='font-semibold text-blue-600 mb-2'>
+                Neuromorphic $75B Success
+              </h5>
+              <p className='text-sm text-gray-600'>
+                Brain-inspired computing breakthrough
+              </p>
             </ArrowRight>
-            <ArrowRight 
-              href="/blog/ai-2028-next-generation-autonomous-enterprise" 
-              className="block p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors"
+            <ArrowRight
+              href='/blog/ai-2028-next-generation-autonomous-enterprise'
+              className='block p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors'
             >
-              <h5 className="font-semibold text-blue-600 mb-2">Autonomous Enterprise Technology</h5>
-              <p className="text-sm text-gray-600">Learn about the breakthrough technology</p>
+              <h5 className='font-semibold text-blue-600 mb-2'>
+                Autonomous Enterprise Technology
+              </h5>
+              <p className='text-sm text-gray-600'>
+                Learn about the breakthrough technology
+              </p>
             </ArrowRight>
           </div>
         </div>

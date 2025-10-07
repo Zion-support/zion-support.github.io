@@ -1,3 +1,5 @@
+import { ArrowRight } from 'lucide-react';
+import { Star } from 'lucide-react';
 import Link from 'next/link';
 import {
   Award,
@@ -464,4 +466,4 @@ export default function AIMegaTransformationSuccess() {
       </div>
     </div>
   );
-}
+  }

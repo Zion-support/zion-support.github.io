@@ -1,7 +1,6 @@
 import Link from 'next/link';
 import { ArrowRight, Calendar, CheckCircle, Clock, DollarSign, Target, TrendingUp, User, Users } from 'lucide-react';
 
-
 import { ArrowRight } from 'lucide-react';
 import { Calendar } from 'lucide-react';
 import { Clock } from 'lucide-react';
@@ -11,7 +10,6 @@ import { DollarSign } from 'lucide-react';
 import { Target } from 'lucide-react';
 import { CheckCircle } from 'lucide-react';
 import React from 'react';
-import Link from 'next/link';
 import {ArrowRight,Calendar,Clock,Users,TrendingUp,DollarSign,Target,CheckCircle} from 'lucide-react';
 
 export const metadata = {

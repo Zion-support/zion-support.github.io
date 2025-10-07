@@ -1,3 +1,4 @@
+import { Target } from 'lucide-react';
 import React from 'react';
 export const metadata = {
   
@@ -53,7 +54,7 @@ export default function VectorDatabase Optimization Page() {return (<article cla
         SLA    Blueprint
       </h2>
       <p className="text-gray-700 mb-4">
-        Target p95 ≤ 120 ms for top-K=20 with recall@20 ≥ 0.92.    Use    autoscaling
+        Target p95 ≤ 120 ms for top-K=20 with recall@20 ≥ 0?.92.    Use    autoscaling
         with hot partitions and set circuit breakers to degrade to lexical-only
         search during transient embedding outages.
       </p>
@@ -62,9 +63,5 @@ export default function VectorDatabase Optimization Page() {return (<article cla
         <strong className="text-blue-800">Implementation    Tip   :</strong>
         <span className="text-blue-900">
          {' '}
-             Keep    one canonical embedding pipeline; avoid hidden re-normalization
-          at query time.
-        </span>
-      </div>
-    </article>
-  ); }
+             Keep    one canonical embedding pipeline;
+  }

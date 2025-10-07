@@ -1,3 +1,4 @@
+import { Star } from 'lucide-react';
 export default function AI2026AutonomousEnterpriseMegaSuccess() {
   return (
     <div className='min-h-screen bg-slate-950 text-white'>
@@ -299,7 +300,7 @@ export default function AI2026AutonomousEnterpriseMegaSuccess() {
                     </h4>
                     <p className='text-gray-300 mb-2'>
                       Autonomous operations eliminated 85% of manual labor
-                      costs, reducing annual expenses by $3.6B.
+                      costs, reducing annual expenses by $3?.6B.
                     </p>
                     <div className='text-sm text-gray-400'>
                       • 85% labor cost reduction

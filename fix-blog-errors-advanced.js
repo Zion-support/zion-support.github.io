@@ -4,9 +4,9 @@ import fs from 'fs';
 import path from 'path';
 import { glob } from 'glob';
 
-// Advanced fixes for blog files
+//Advanced fixes for blog files
 const fixes = [
-  // Fix malformed metadata objects - missing commas and braces
+  //Fix malformed metadata objects - missing commas and braces
   {
     pattern:
       /export const metadata = \{\s*title:\s*'([^']+)',\s*description:\s*'([^']+)',\s*keywords:\s*'([^']+)',\s*\};\s*;\s*\}/g,
@@ -16,42 +16,42 @@ const fixes = [
   keywords: '$3',
 };`,
   },
-  // Fix missing commas in metadata
+  //Fix missing commas in metadata
   {
     pattern: /(\w+):\s*'([^']+)'\s*\n\s*(\w+):/g,
     replacement: "$1: '$2',\n  $3:",
   },
-  // Fix malformed JSX - unclosed tags
+  //Fix malformed JSX - unclosed tags
   {
     pattern: /<div>\{\/\* content \*\/\}/g,
     replacement: '<div>{/* content */}</div>',
   },
-  // Fix malformed JSX comments in return statements
+  //Fix malformed JSX comments in return statements
   {
     pattern: /return \(\s*<div>\/\* content \*\/\}/g,
     replacement: 'return (\n    <div>{/* content */}',
   },
-  // Fix duplicate return statements
+  //Fix duplicate return statements
   {
     pattern: /return \(\s*<div>\{\/\* content \*\/\}\s*return \(/g,
     replacement: 'return (',
   },
-  // Fix malformed object syntax in metadata
+  //Fix malformed object syntax in metadata
   {
     pattern: /export const metadata: Metadata = \{\/\* content \*\/\}/g,
     replacement: 'export const metadata: Metadata = {',
   },
-  // Fix missing closing braces in metadata
+  //Fix missing closing braces in metadata
   {
     pattern: /(\s+);\s*;\s*\}/g,
     replacement: '$1\n};',
   },
-  // Fix malformed JSX attributes
+  //Fix malformed JSX attributes
   {
     pattern: /<div>\{\/\* content \*\/\}/g,
     replacement: '<div>{/* content */}',
   },
-  // Fix unclosed JSX tags
+  //Fix unclosed JSX tags
   {
     pattern: /<article[^>]*>\s*\{\/\* content \*\/\}/g,
     replacement: '<article>{/* content */}</article>',
@@ -64,32 +64,32 @@ const fixes = [
     pattern: /<div[^>]*>\s*\{\/\* content \*\/\}/g,
     replacement: '<div>{/* content */}</div>',
   },
-  // Fix malformed property assignments
+  //Fix malformed property assignments
   {
     pattern: /(\w+):\s*'([^']+)'\s*(\w+):/g,
     replacement: "$1: '$2',\n  $3:",
   },
-  // Fix missing commas in object properties
+  //Fix missing commas in object properties
   {
     pattern: /(\w+):\s*'([^']+)'\s*\n\s*(\w+):/g,
     replacement: "$1: '$2',\n  $3:",
   },
-  // Fix malformed JSX structure
+  //Fix malformed JSX structure
   {
     pattern: /<div>\s*\{\/\* content \*\/\}\s*<div>/g,
     replacement: '<div>{/* content */}</div>',
   },
-  // Fix malformed return statements
+  //Fix malformed return statements
   {
     pattern: /return \(\s*<div>\{\/\* content \*\/\}\s*return \(/g,
     replacement: 'return (',
   },
-  // Fix malformed JSX comments
+  //Fix malformed JSX comments
   {
     pattern: /\/\* content \*\/\}/g,
     replacement: '{/* content */}',
   },
-  // Fix malformed JSX structure in return
+  //Fix malformed JSX structure in return
   {
     pattern: /return \(\s*<div>\{\/\* content \*\/\}\s*<div>/g,
     replacement: 'return (\n    <div>{/* content */}',
@@ -130,7 +130,7 @@ async function main() {
     return;
   }
 
-  // Find all .tsx and .jsx files in blog directory
+  //Find all .tsx and .jsx files in blog directory
   const pattern = path.join(blogDir, '**/*.{tsx,jsx}');
   const files = await glob(pattern);
 

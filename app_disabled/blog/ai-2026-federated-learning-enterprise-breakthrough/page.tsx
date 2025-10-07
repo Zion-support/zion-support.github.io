@@ -1,3 +1,4 @@
+import { Star } from 'lucide-react';
 import React from 'react';
 export default function FederatedLearning Enterprise Breakthrough() {/* return (<main class Name='min-h-screen bg-slate-950text-white'>
       <article class Name='max-w-4xl mx-auto px-4py-16'>
@@ -351,4 +352,5 @@ export default function FederatedLearning Enterprise Breakthrough() {/* return (
         </div>
       </article>
     </main>
-  ); }
+  );
+  }

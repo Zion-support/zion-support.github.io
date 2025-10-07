@@ -1,3 +1,4 @@
+import { Star } from 'lucide-react';
 import React from 'react';
 // Using React 17+ automatic runtime; no import needed
 
@@ -193,4 +194,4 @@ export default function EnterpriseAI Safety Highlights2025() {
       </main>
     </div>
   );
-}
+  }

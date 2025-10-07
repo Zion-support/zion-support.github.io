@@ -9,11 +9,7 @@ const PerformanceMonitor = React.memo(function PerformanceMonitor({
   className = '',
   children,
 }: PerformanceMonitorProps) {
-  return (
-    <div className={className}>
-      {children}
-    </div>
-  );
+  return <div className={className}>{children}</div>;
 });
 
 export default PerformanceMonitor;

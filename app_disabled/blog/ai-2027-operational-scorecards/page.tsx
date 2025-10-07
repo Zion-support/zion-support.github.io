@@ -43,12 +43,27 @@ export default function Page() {
           KPI canaries regress.
         </p>
 
-        <div className="mt-10 p-6 border rounded-xl bg-gray-50">
-          <h3 className="font-semibold mb-2">Next up</h3>
-          <div className="flex flex-wrap gap-3">
-            <ArrowRight href="/blog/edge-consentless-analytics-2026" className="text-blue-600 hover:underline">Edge Consentless Analytics 2026</ArrowRight>
-            <ArrowRight href="/blog/agent-release-guardrails-2026" className="text-blue-600 hover:underline">Agent Release Guardrails 2026</ArrowRight>
-            <ArrowRight href="/blog/ai-2027-autonomous-governance-blueprint" className="text-blue-600 hover:underline">Autonomous Governance 2027</ArrowRight>
+        <div className='mt-10 p-6 border rounded-xl bg-gray-50'>
+          <h3 className='font-semibold mb-2'>Next up</h3>
+          <div className='flex flex-wrap gap-3'>
+            <ArrowRight
+              href='/blog/edge-consentless-analytics-2026'
+              className='text-blue-600 hover:underline'
+            >
+              Edge Consentless Analytics 2026
+            </ArrowRight>
+            <ArrowRight
+              href='/blog/agent-release-guardrails-2026'
+              className='text-blue-600 hover:underline'
+            >
+              Agent Release Guardrails 2026
+            </ArrowRight>
+            <ArrowRight
+              href='/blog/ai-2027-autonomous-governance-blueprint'
+              className='text-blue-600 hover:underline'
+            >
+              Autonomous Governance 2027
+            </ArrowRight>
           </div>
         </div>
       </article>

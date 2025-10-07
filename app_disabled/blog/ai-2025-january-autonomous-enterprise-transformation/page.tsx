@@ -1,4 +1,6 @@
-import Link from 'next/link';
+:app_disabled/blog/ai-2025-january-autonomous-enterprise-transformation/page.tsx
+import { Star } from 'lucide-react';
+import React from 'react';
 import Link from 'next/link';
 
 export default function AI2025JanuaryAutonomous Enterprise Transformation() {/* return (<div className="min-h-screen bg-slate-950">
@@ -399,4 +401,5 @@ export default function AI2025JanuaryAutonomous Enterprise Transformation() {/* 
         </div>
       </div>
     </div>
-  ); }
+  );
+  }

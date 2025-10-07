@@ -10,7 +10,8 @@ const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'Zion Tech Group - Leading AI and Technology Solutions',
-  description: 'Zion Tech Group is a leading technology company specializing in AI, autonomous systems, quantum computing, and innovative business solutions. Transform your business with cutting-edge technology.',
+  description:
+    'Zion Tech Group is a leading technology company specializing in AI, autonomous systems, quantum computing, and innovative business solutions. Transform your business with cutting-edge technology.',
   keywords: [
     'AI artificial intelligence',
     'technology innovation',
@@ -23,7 +24,8 @@ export const metadata: Metadata = {
   robots: 'index, follow',
   openGraph: {
     title: 'Zion Tech Group - Leading AI and Technology Solutions',
-    description: 'Transform your business with cutting-edge AI and technology solutions from Zion Tech Group.',
+    description:
+      'Transform your business with cutting-edge AI and technology solutions from Zion Tech Group.',
     url: 'https://ziontechgroup.com',
     siteName: 'Zion Tech Group',
     images: [
@@ -31,8 +33,8 @@ export const metadata: Metadata = {
         url: '/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Zion Tech Group'
-      }
+        alt: 'Zion Tech Group',
+      },
     ],
     locale: 'en_US',
     type: 'website',
@@ -40,16 +42,19 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Zion Tech Group - Leading AI and Technology Solutions',
-    description: 'Transform your business with cutting-edge AI and technology solutions.',
-    images: ['/og-image.jpg']
+    description:
+      'Transform your business with cutting-edge AI and technology solutions.',
+    images: ['/og-image.jpg'],
   },
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://ziontechgroup.com')
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_SITE_URL || 'https://ziontechgroup.com'
+  ),
 };
 
 export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
-  themeColor: '#000000'
+  themeColor: '#000000',
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {

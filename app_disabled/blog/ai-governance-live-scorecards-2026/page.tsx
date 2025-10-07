@@ -113,4 +113,4 @@ export default function AIGovernance Live Scorecards2026() {
       </main>
     </div>
   );
-}
+  }

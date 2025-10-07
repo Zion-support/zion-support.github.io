@@ -1,3 +1,4 @@
+import { Star } from 'lucide-react';
 import React from 'react';
 export default function AI2025JanuaryQuantum Neural Revolution() {/* return (<div className="min-h-screenbg-slate-950">
       <div className="container mx-auto px-6py-12">
@@ -318,4 +319,5 @@ export default function AI2025JanuaryQuantum Neural Revolution() {/* return (<di
         </div>
       </div>
     </div>
-  ); }
+  );
+  }
