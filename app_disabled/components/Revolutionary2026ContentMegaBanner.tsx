@@ -222,4 +222,4 @@ export default function Revolutionary2026ContentMegaBanner() {
       </div>
     </section>
   );
-  }
+}

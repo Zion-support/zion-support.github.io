@@ -11,18 +11,18 @@ const ipToRequests: Record<string, { timestamps: number[] }> = {};
 function isRateLimited(ip: string): boolean {
   const now = Date.now();
   const bucket = ipToRequests[ip] || { timestamps: [] };
-  
+
   // Drop old timestamps
   bucket.timestamps = bucket.timestamps.filter(
     timestamp => now - timestamp < RATE_LIMIT_WINDOW_MS
   );
-  
+
   const limited = bucket.timestamps.length >= RATE_LIMIT_MAX_REQUESTS;
-  
+
   if (!limited) {
     bucket.timestamps.push(now);
   }
-  
+
   ipToRequests[ip] = bucket;
   return limited;
 }

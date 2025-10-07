@@ -5,15 +5,18 @@ interface October2025NewContentAdvertisingBannerProps {
   children?: React.ReactNode;
 }
 
-const October2025NewContentAdvertisingBanner: React.FC<October2025NewContentAdvertisingBannerProps> = ({ 
-  className = '', 
-  children 
-}) => {
+const October2025NewContentAdvertisingBanner: React.FC<
+  October2025NewContentAdvertisingBannerProps
+> = ({ className = '', children }) => {
   return (
-    <div className={`october2025newcontentadvertisingbanner-component ${className}`}>
+    <div
+      className={`october2025newcontentadvertisingbanner-component ${className}`}
+    >
       {children || (
-        <div className="p-4 text-center text-gray-600">
-          <h3 className="text-lg font-semibold mb-2">October2025NewContentAdvertisingBanner</h3>
+        <div className='p-4 text-center text-gray-600'>
+          <h3 className='text-lg font-semibold mb-2'>
+            October2025NewContentAdvertisingBanner
+          </h3>
           <p>Component placeholder - implementation needed</p>
         </div>
       )}
@@ -22,4 +25,3 @@ const October2025NewContentAdvertisingBanner: React.FC<October2025NewContentAdve
 };
 
 export default October2025NewContentAdvertisingBanner;
-

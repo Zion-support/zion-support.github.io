@@ -424,4 +424,4 @@ export default function March2026CaseStudyPage() {
       </main>
     </div>
   );
-  }
+}

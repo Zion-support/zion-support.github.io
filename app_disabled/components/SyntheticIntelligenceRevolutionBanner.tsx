@@ -127,4 +127,4 @@ export default function SyntheticIntelligenceRevolutionBanner() {
       </div>
     </section>
   );
-  }
+}

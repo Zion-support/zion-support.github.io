@@ -1,15 +1,18 @@
 //SEO Optimizer utility functions
 
 interface GtagWindow extends Window {
-  gtag?: (command: string,
-  targetId: string, config?: Record<string, unknown>) => void;
+  gtag?: (
+    command: string,
+    targetId: string,
+    config?: Record<string, unknown>
+  ) => void;
 }
 
 export const seoOptimizer = {
   updateTitle: (title: string) => {
     document.title = title;
   },
-  
+
   updateMeta: (name: string, content: string) => {
     let meta = document.querySelector(`meta[name="${name}"]`);
     if (!meta) {
@@ -19,15 +22,15 @@ export const seoOptimizer = {
     }
     meta.setAttribute('content', content);
   },
-  
+
   updateDescription: (description: string) => {
     seoOptimizer.updateMeta('description', description);
   },
-  
+
   updateKeywords: (keywords: string) => {
     seoOptimizer.updateMeta('keywords', keywords);
   },
-  
+
   trackPageView: () => {
     // Basic analytics tracking
     if (typeof window !== 'undefined' && (window as GtagWindow).gtag) {
@@ -36,5 +39,5 @@ export const seoOptimizer = {
         page_location: window.location.href,
       });
     }
-  }
+  },
 };

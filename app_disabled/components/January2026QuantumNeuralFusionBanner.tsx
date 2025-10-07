@@ -143,6 +143,6 @@ const January2026QuantumNeuralFusionBanner: React.FC = () => {
       </div>
     </section>
   );
-  };
+};
 
 export default January2026QuantumNeuralFusionBanner;

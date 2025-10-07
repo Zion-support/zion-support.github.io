@@ -110,4 +110,4 @@ export default function August2026TranscendentIntelligenceBanner() {
       </div>
     </section>
   );
-  }
+}

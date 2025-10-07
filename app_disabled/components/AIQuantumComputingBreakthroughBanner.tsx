@@ -166,4 +166,4 @@ export default function AIQuantumComputingBreakthroughBanner() {
       </div>
     </section>
   );
-  }
+}

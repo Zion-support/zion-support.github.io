@@ -14,7 +14,10 @@ import PerformanceDashboard from './components/PerformanceDashboard';
 const HomePage = lazy(() => import('./page'));
 
 // Utils
-import { performanceOptimizer, prefetchResources } from '../utils/performanceOptimizer';
+import {
+  performanceOptimizer,
+  prefetchResources,
+} from '../utils/performanceOptimizer';
 
 // Styles
 import './globals.css';
@@ -28,7 +31,7 @@ const App: React.FC = () => {
     performanceOptimizer.lazyLoadImages();
     performanceOptimizer.addCriticalResourceHints();
     prefetchResources(['/api/health']);
-    
+
     // Initialize Web Vitals monitoring
     if (typeof window !== 'undefined' && 'performance' in window) {
       const pageLoadMetrics = performanceOptimizer.measurePageLoad();
@@ -36,10 +39,10 @@ const App: React.FC = () => {
         performanceOptimizer.reportWebVitals(pageLoadMetrics);
       }
     }
-    
+
     console.log('Performance monitoring initialized');
     console.log(
-      '🚀 Zion Tech Group App initialized with comprehensive monitoring',
+      '🚀 Zion Tech Group App initialized with comprehensive monitoring'
     );
   }, []);
 
@@ -49,8 +52,8 @@ const App: React.FC = () => {
         <PerformanceOptimizer>
           <AccessibilityEnhancer>
             <SEOEnhancer
-              title="Zion Tech Group - Advanced AI and IT Solutions"
-              description="Leading provider of enterprise AI solutions, quantum computing, and autonomous systems. Transform your business with our cutting-edge technology."
+              title='Zion Tech Group - Advanced AI and IT Solutions'
+              description='Leading provider of enterprise AI solutions, quantum computing, and autonomous systems. Transform your business with our cutting-edge technology.'
             >
               <Router>
                 <div className='App'>

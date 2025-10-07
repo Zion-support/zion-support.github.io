@@ -127,6 +127,6 @@ const February2026UltimateAutonomousRevolutionBanner: React.FC = () => {
       </div>
     </section>
   );
-  };
+};
 
 export default February2026UltimateAutonomousRevolutionBanner;

@@ -57,10 +57,13 @@ const THRESHOLDS = {
 /**
  * Get performance rating based on thresholds
  */
-function getRating(name: string, value: number): 'good' | 'needs-improvement' | 'poor' {
+function getRating(
+  name: string,
+  value: number
+): 'good' | 'needs-improvement' | 'poor' {
   const threshold = THRESHOLDS[name as keyof typeof THRESHOLDS];
   if (!threshold) return 'good';
-  
+
   if (value <= threshold.good) return 'good';
   if (value <= threshold.poor) return 'needs-improvement';
   return 'poor';
@@ -173,7 +176,11 @@ export function markPerformance(name: string): void {
 /**
  * Measure between two performance marks
  */
-export function measureBetween(name: string, startMark: string, endMark: string): number {
+export function measureBetween(
+  name: string,
+  startMark: string,
+  endMark: string
+): number {
   if (typeof performance === 'undefined') return 0;
 
   try {
@@ -191,18 +198,24 @@ export function measureBetween(name: string, startMark: string, endMark: string)
  */
 export function getNavigationTiming(): Record<string, number> | null {
   if (typeof window === 'undefined' || !window.performance) return null;
-  
-  const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+
+  const navigation = performance.getEntriesByType(
+    'navigation'
+  )[0] as PerformanceNavigationTiming;
   if (!navigation) return null;
 
   return {
-    domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
+    domContentLoaded:
+      navigation.domContentLoadedEventEnd -
+      navigation.domContentLoadedEventStart,
     loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
     domInteractive: navigation.domInteractive - navigation.fetchStart,
     firstByte: navigation.responseStart - navigation.fetchStart,
     dns: navigation.domainLookupEnd - navigation.domainLookupStart,
     tcp: navigation.connectEnd - navigation.connectStart,
-    ssl: navigation.secureConnectionStart ? navigation.connectEnd - navigation.secureConnectionStart : 0,
+    ssl: navigation.secureConnectionStart
+      ? navigation.connectEnd - navigation.secureConnectionStart
+      : 0,
   };
 }
 
@@ -211,14 +224,18 @@ export function getNavigationTiming(): Record<string, number> | null {
  */
 export function getResourceTiming(): PerformanceResourceTiming[] {
   if (typeof window === 'undefined' || !window.performance) return [];
-  
-  return performance.getEntriesByType('resource') as PerformanceResourceTiming[];
+
+  return performance.getEntriesByType(
+    'resource'
+  ) as PerformanceResourceTiming[];
 }
 
 /**
  * Get slow resources
  */
-export function getSlowResources(threshold: number = 1000): PerformanceResourceTiming[] {
+export function getSlowResources(
+  threshold: number = 1000
+): PerformanceResourceTiming[] {
   return getResourceTiming().filter(resource => resource.duration > threshold);
 }
 
@@ -226,9 +243,21 @@ export function getSlowResources(threshold: number = 1000): PerformanceResourceT
  * Get memory usage (Chrome only)
  */
 export function getMemoryUsage(): Record<string, number> | null {
-  if (typeof window === 'undefined' || !(window as Window & { performance: Performance & { memory?: PerformanceMemory } }).performance?.memory) return null;
+  if (
+    typeof window === 'undefined' ||
+    !(
+      window as Window & {
+        performance: Performance & { memory?: PerformanceMemory };
+      }
+    ).performance?.memory
+  )
+    return null;
 
-  const memory = (window as Window & { performance: Performance & { memory?: PerformanceMemory } }).performance.memory;
+  const memory = (
+    window as Window & {
+      performance: Performance & { memory?: PerformanceMemory };
+    }
+  ).performance.memory;
   return {
     usedJSHeapSize: memory.usedJSHeapSize,
     totalJSHeapSize: memory.totalJSHeapSize,
@@ -295,7 +324,10 @@ export function monitorLayoutShifts(
  * Check if connection is slow
  */
 export function isSlowConnection(): boolean {
-  if (typeof navigator === 'undefined' || !(navigator as NavigatorWithConnection).connection) {
+  if (
+    typeof navigator === 'undefined' ||
+    !(navigator as NavigatorWithConnection).connection
+  ) {
     return false;
   }
 
@@ -310,7 +342,10 @@ export function isSlowConnection(): boolean {
  * Get connection type
  */
 export function getConnectionType(): string {
-  if (typeof navigator === 'undefined' || !(navigator as NavigatorWithConnection).connection) {
+  if (
+    typeof navigator === 'undefined' ||
+    !(navigator as NavigatorWithConnection).connection
+  ) {
     return 'unknown';
   }
 

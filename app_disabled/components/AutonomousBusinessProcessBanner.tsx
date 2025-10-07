@@ -171,4 +171,4 @@ export default function AutonomousBusinessProcessBanner() {
       </div>
     </section>
   );
-  }
+}

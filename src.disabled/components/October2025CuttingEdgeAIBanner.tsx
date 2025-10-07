@@ -5,19 +5,19 @@ interface October2025CuttingEdgeAIBannerProps {
   children?: React.ReactNode;
 }
 
-const October2025CuttingEdgeAIBanner: React.FC<October2025CuttingEdgeAIBannerProps> = ({ 
-  className = '', 
-  children 
-}) => {
+const October2025CuttingEdgeAIBanner: React.FC<
+  October2025CuttingEdgeAIBannerProps
+> = ({ className = '', children }) => {
   return (
     <div className={`october2025cuttingedgeaibanner-component ${className}`}>
       {children || (
-        <div className="p-4 text-center text-gray-600">
-          <h3 className="text-lg font-semibold mb-2">October2025CuttingEdgeAIBanner</h3>
+        <div className='p-4 text-center text-gray-600'>
+          <h3 className='text-lg font-semibold mb-2'>
+            October2025CuttingEdgeAIBanner
+          </h3>
           <p>Component placeholder - implementation needed</p>
         </div>
       )}
-
     </div>
   );
 };

@@ -9,6 +9,5 @@ export const defaultNewServices2026Config: NewServices2026Config = {
 };
 
 export default {
-  defaultNewServices2026Config
+  defaultNewServices2026Config,
 };
-

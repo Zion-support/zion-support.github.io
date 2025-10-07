@@ -350,4 +350,4 @@ export default function January2026UltimateBreakthrough500BSuccess() {
       </section>
     </div>
   );
-  }
+}

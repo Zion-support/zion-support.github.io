@@ -151,4 +151,4 @@ export default function Ultimate2025ContentShowcaseBanner() {
       </div>
     </section>
   );
-  }
+}

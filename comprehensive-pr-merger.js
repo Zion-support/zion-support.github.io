@@ -3,7 +3,7 @@
 /**
  * Comprehensive PR Merger - Resolves conflicts and merges all open PRs
  * This script will systematically find, resolve conflicts, and merge all open PRs
- */import { execSync } from 'child_process';
+ */ import { execSync } from 'child_process';
 import fs from 'fs';
 
 console.log('🚀 Starting Comprehensive PR Merge Process...\n');
@@ -206,11 +206,9 @@ const results = {
   failed: [],
   summary: {
     total: 0,
-  successful: 0,
+    successful: 0,
     failed: 0,
-    methods: { direct: 0,
-  theirs: 0, ours: 0,
-  manual: 0, failed: 0 },
+    methods: { direct: 0, theirs: 0, ours: 0, manual: 0, failed: 0 },
   },
 };
 

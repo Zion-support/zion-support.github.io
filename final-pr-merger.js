@@ -171,9 +171,9 @@ const finalReport = {
   summary: {
     totalPRs: allPRs.length,
     merged: mergedCount,
-  conflicts: conflictCount,
+    conflicts: conflictCount,
     notFound: notFoundCount,
-  skipped: skippedCount,
+    skipped: skippedCount,
     successRate: `${Math.round((mergedCount / allPRs.length) * 100)}%`,
   },
   systemChecks: {

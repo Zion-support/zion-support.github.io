@@ -30,7 +30,7 @@ export const errorHandler = (
     method: req.method,
     timestamp: new Date().toISOString(),
     userAgent: req.headers['user-agent'],
-    ip: req.headers['x-forwarded-for'] || req.connection.remoteAddress
+    ip: req.headers['x-forwarded-for'] || req.connection.remoteAddress,
   });
 
   res.status(statusCode).json({
@@ -40,14 +40,14 @@ export const errorHandler = (
           ? 'Internal Server Error'
           : message,
       statusCode,
-      timestamp: new Date().toISOString()
-    }
+      timestamp: new Date().toISOString(),
+    },
   });
 };
 
 export const asyncHandler = (fn: Function) => {
   return (req: NextApiRequest, res: NextApiResponse) => {
-    Promise.resolve(fn(req, res)).catch((err) => {
+    Promise.resolve(fn(req, res)).catch(err => {
       errorHandler(err, req, res);
     });
   };

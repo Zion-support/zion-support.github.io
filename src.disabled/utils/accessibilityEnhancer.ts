@@ -51,7 +51,7 @@ export class AccessibilityEnhancer {
   private setupKeyboardNavigation(): void {
     if (typeof document === 'undefined') return;
 
-    document.addEventListener('keydown', (event) => {
+    document.addEventListener('keydown', event => {
       //Skip to main content
       if (event.key === 'Tab' && event.ctrlKey) {
         const mainContent = document.querySelector('main, [role="main"]');
@@ -63,9 +63,13 @@ export class AccessibilityEnhancer {
 
       //Escape key handling
       if (event.key === 'Escape') {
-        const modal = document.querySelector('[role="dialog"]:not([aria-hidden="true"])');
+        const modal = document.querySelector(
+          '[role="dialog"]:not([aria-hidden="true"])'
+        );
         if (modal) {
-          const closeButton = modal.querySelector('[aria-label*="close"], [aria-label*="Close"]');
+          const closeButton = modal.querySelector(
+            '[aria-label*="close"], [aria-label*="Close"]'
+          );
           if (closeButton) {
             (closeButton as HTMLElement).click();
           }
@@ -78,15 +82,17 @@ export class AccessibilityEnhancer {
     if (typeof document === 'undefined') return;
 
     //Track focus changes
-    document.addEventListener('focusin', (event) => {
+    document.addEventListener('focusin', event => {
       const element = event.target as HTMLElement;
       this.ensureFocusVisible(element);
     });
 
     //Trap focus in modals
-    document.addEventListener('keydown', (event) => {
+    document.addEventListener('keydown', event => {
       if (event.key === 'Tab') {
-        const modal = document.querySelector('[role="dialog"]:not([aria-hidden="true"])');
+        const modal = document.querySelector(
+          '[role="dialog"]:not([aria-hidden="true"])'
+        );
         if (modal) {
           this.trapFocusInModal(modal as HTMLElement, event);
         }
@@ -97,20 +103,26 @@ export class AccessibilityEnhancer {
   private ensureFocusVisible(element: HTMLElement): void {
     //Add focus-visible class for better focus indication
     element.classList.add('focus-visible');
-    
+
     //Remove focus-visible class when focus is lost
-    element.addEventListener('focusout', () => {
-      element.classList.remove('focus-visible');
-    }, { once: true });
+    element.addEventListener(
+      'focusout',
+      () => {
+        element.classList.remove('focus-visible');
+      },
+      { once: true }
+    );
   }
 
   private trapFocusInModal(modal: HTMLElement, event: KeyboardEvent): void {
     const focusableElements = modal.querySelectorAll(
       'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
     );
-    
+
     const firstElement = focusableElements[0] as HTMLElement;
-    const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
+    const lastElement = focusableElements[
+      focusableElements.length - 1
+    ] as HTMLElement;
 
     if (event.shiftKey) {
       if (document.activeElement === firstElement) {
@@ -144,8 +156,8 @@ export class AccessibilityEnhancer {
     }
 
     //Announce page changes
-    const observer = new MutationObserver((mutations) => {
-      mutations.forEach((mutation) => {
+    const observer = new MutationObserver(mutations => {
+      mutations.forEach(mutation => {
         if (mutation.type === 'childList' && mutation.addedNodes.length > 0) {
           const addedNode = mutation.addedNodes[0] as HTMLElement;
           if (addedNode.nodeType === Node.ELEMENT_NODE) {
@@ -160,7 +172,7 @@ export class AccessibilityEnhancer {
 
     observer.observe(document.body, {
       childList: true,
-      subtree: true
+      subtree: true,
     });
 
     this.observers.push(observer);
@@ -178,13 +190,18 @@ export class AccessibilityEnhancer {
 
     const checkContrast = () => {
       const elements = document.querySelectorAll('*');
-      elements.forEach((element) => {
+      elements.forEach(element => {
         const htmlElement = element as HTMLElement;
         const styles = window.getComputedStyle(htmlElement);
         const color = styles.color;
         const backgroundColor = styles.backgroundColor;
 
-        if (color && backgroundColor && color !== 'rgba(0, 0, 0, 0)' && backgroundColor !== 'rgba(0, 0, 0, 0)') {
+        if (
+          color &&
+          backgroundColor &&
+          color !== 'rgba(0, 0, 0, 0)' &&
+          backgroundColor !== 'rgba(0, 0, 0, 0)'
+        ) {
           const contrast = this.calculateContrast(color, backgroundColor);
           if (contrast < 4.5) {
             this.addIssue({
@@ -192,7 +209,8 @@ export class AccessibilityEnhancer {
               severity: contrast < 3 ? 'high' : 'medium',
               element: htmlElement,
               message: `Low color contrast: ${contrast.toFixed(2)}:1`,
-              suggestion: 'Increase color contrast to at least 4.5:1 for normal text'
+              suggestion:
+                'Increase color contrast to at least 4.5:1 for normal text',
             });
           }
         }
@@ -205,7 +223,7 @@ export class AccessibilityEnhancer {
     observer.observe(document.body, {
       attributes: true,
       attributeFilter: ['style', 'class'],
-      subtree: true
+      subtree: true,
     });
 
     this.observers.push(observer);
@@ -222,12 +240,15 @@ export class AccessibilityEnhancer {
 
     const validateARIA = () => {
       //Check for missing aria-labels on interactive elements
-      const interactiveElements = document.querySelectorAll('button, input, select, textarea, a[href]');
-      interactiveElements.forEach((element) => {
+      const interactiveElements = document.querySelectorAll(
+        'button, input, select, textarea, a[href]'
+      );
+      interactiveElements.forEach(element => {
         const htmlElement = element as HTMLElement;
-        const hasLabel = htmlElement.getAttribute('aria-label') || 
-                        htmlElement.getAttribute('aria-labelledby') ||
-                        htmlElement.textContent?.trim();
+        const hasLabel =
+          htmlElement.getAttribute('aria-label') ||
+          htmlElement.getAttribute('aria-labelledby') ||
+          htmlElement.textContent?.trim();
 
         if (!hasLabel) {
           this.addIssue({
@@ -235,18 +256,19 @@ export class AccessibilityEnhancer {
             severity: 'medium',
             element: htmlElement,
             message: 'Interactive element missing accessible name',
-            suggestion: 'Add aria-label, aria-labelledby, or visible text content'
+            suggestion:
+              'Add aria-label, aria-labelledby, or visible text content',
           });
         }
       });
 
       //Check for invalid ARIA attributes
       const elementsWithARIA = document.querySelectorAll('[aria-*]');
-      elementsWithARIA.forEach((element) => {
+      elementsWithARIA.forEach(element => {
         const htmlElement = element as HTMLElement;
         const attributes = Array.from(htmlElement.attributes);
-        
-        attributes.forEach((attr) => {
+
+        attributes.forEach(attr => {
           if (attr.name.startsWith('aria-')) {
             if (!this.isValidARIAAttribute(attr.name, attr.value)) {
               this.addIssue({
@@ -254,7 +276,7 @@ export class AccessibilityEnhancer {
                 severity: 'low',
                 element: htmlElement,
                 message: `Invalid ARIA attribute: ${attr.name}="${attr.value}"`,
-                suggestion: 'Use valid ARIA attribute values'
+                suggestion: 'Use valid ARIA attribute values',
               });
             }
           }
@@ -266,8 +288,8 @@ export class AccessibilityEnhancer {
     const observer = new MutationObserver(validateARIA);
     observer.observe(document.body, {
       attributes: true,
-  childList: true,
-      subtree: true
+      childList: true,
+      subtree: true,
     });
 
     this.observers.push(observer);
@@ -284,7 +306,7 @@ export class AccessibilityEnhancer {
 
     const validateImages = () => {
       const images = document.querySelectorAll('img');
-      images.forEach((img) => {
+      images.forEach(img => {
         const alt = img.getAttribute('alt');
         if (!alt) {
           this.addIssue({
@@ -292,7 +314,7 @@ export class AccessibilityEnhancer {
             severity: 'high',
             element: img,
             message: 'Image missing alt text',
-            suggestion: 'Add descriptive alt text for screen readers'
+            suggestion: 'Add descriptive alt text for screen readers',
           });
         } else if (alt === 'image' || alt === 'picture') {
           this.addIssue({
@@ -300,7 +322,7 @@ export class AccessibilityEnhancer {
             severity: 'medium',
             element: img,
             message: 'Image has generic alt text',
-            suggestion: 'Use descriptive alt text instead of generic terms'
+            suggestion: 'Use descriptive alt text instead of generic terms',
           });
         }
       });
@@ -310,7 +332,7 @@ export class AccessibilityEnhancer {
     const observer = new MutationObserver(validateImages);
     observer.observe(document.body, {
       childList: true,
-      subtree: true
+      subtree: true,
     });
 
     this.observers.push(observer);
@@ -321,20 +343,24 @@ export class AccessibilityEnhancer {
 
     const validateForms = () => {
       const forms = document.querySelectorAll('form');
-      forms.forEach((form) => {
+      forms.forEach(form => {
         const inputs = form.querySelectorAll('input, select, textarea');
-        inputs.forEach((input) => {
+        inputs.forEach(input => {
           const htmlInput = input as HTMLInputElement;
           const id = htmlInput.id;
           const label = form.querySelector(`label[for="${id}"]`);
-          
-          if (!label && !htmlInput.getAttribute('aria-label') && !htmlInput.getAttribute('aria-labelledby')) {
+
+          if (
+            !label &&
+            !htmlInput.getAttribute('aria-label') &&
+            !htmlInput.getAttribute('aria-labelledby')
+          ) {
             this.addIssue({
               type: 'missing-form-label',
               severity: 'high',
               element: htmlInput,
               message: 'Form input missing label',
-              suggestion: 'Add a label element or aria-label attribute'
+              suggestion: 'Add a label element or aria-label attribute',
             });
           }
         });
@@ -345,7 +371,7 @@ export class AccessibilityEnhancer {
     const observer = new MutationObserver(validateForms);
     observer.observe(document.body, {
       childList: true,
-      subtree: true
+      subtree: true,
     });
 
     this.observers.push(observer);
@@ -353,7 +379,7 @@ export class AccessibilityEnhancer {
 
   private addIssue(issue: AccessibilityIssue): void {
     this.issues.push(issue);
-    
+
     //Limit issues to prevent memory leaks
     if (this.issues.length > 1000) {
       this.issues = this.issues.slice(-500);
@@ -366,7 +392,8 @@ export class AccessibilityEnhancer {
 
     this.issues.forEach(issue => {
       issuesByType[issue.type] = (issuesByType[issue.type] || 0) + 1;
-      issuesBySeverity[issue.severity] = (issuesBySeverity[issue.severity] || 0) + 1;
+      issuesBySeverity[issue.severity] =
+        (issuesBySeverity[issue.severity] || 0) + 1;
     });
 
     const score = this.calculateAccessibilityScore();
@@ -376,17 +403,25 @@ export class AccessibilityEnhancer {
       issuesByType,
       issuesBySeverity,
       lastCheckTime: Date.now(),
-      score
+      score,
     };
   }
 
   private calculateAccessibilityScore(): number {
     if (this.issues.length === 0) return 100;
 
-    const criticalIssues = this.issues.filter(issue => issue.severity === 'critical').length;
-    const highIssues = this.issues.filter(issue => issue.severity === 'high').length;
-    const mediumIssues = this.issues.filter(issue => issue.severity === 'medium').length;
-    const lowIssues = this.issues.filter(issue => issue.severity === 'low').length;
+    const criticalIssues = this.issues.filter(
+      issue => issue.severity === 'critical'
+    ).length;
+    const highIssues = this.issues.filter(
+      issue => issue.severity === 'high'
+    ).length;
+    const mediumIssues = this.issues.filter(
+      issue => issue.severity === 'medium'
+    ).length;
+    const lowIssues = this.issues.filter(
+      issue => issue.severity === 'low'
+    ).length;
 
     let score = 100;
     score -= criticalIssues * 20;

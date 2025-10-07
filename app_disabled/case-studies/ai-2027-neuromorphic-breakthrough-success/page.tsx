@@ -428,4 +428,4 @@ export default function AI2027NeuromorphicBreakthroughSuccess() {
       </div>
     </div>
   );
-  }
+}

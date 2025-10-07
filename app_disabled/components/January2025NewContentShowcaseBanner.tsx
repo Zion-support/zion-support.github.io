@@ -213,6 +213,6 @@ const January2025NewContentShowcaseBanner: React.FC = () => {
       </div>
     </section>
   );
-  };
+};
 
 export default January2025NewContentShowcaseBanner;

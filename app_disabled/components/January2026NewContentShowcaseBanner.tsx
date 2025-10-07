@@ -370,4 +370,4 @@ export default function January2026NewContentShowcaseBanner() {
       </div>
     </section>
   );
-  }
+}

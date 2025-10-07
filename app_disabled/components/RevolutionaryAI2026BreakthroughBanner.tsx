@@ -151,4 +151,4 @@ export default function RevolutionaryAI2026BreakthroughBanner() {
       </div>
     </div>
   );
-  }
+}

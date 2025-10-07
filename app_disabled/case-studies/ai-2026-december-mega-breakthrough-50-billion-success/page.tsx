@@ -750,4 +750,4 @@ export default function December2026MegaBreakthroughSuccessPage() {
       </section>
     </div>
   );
-  }
+}

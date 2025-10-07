@@ -24,7 +24,7 @@ global.IntersectionObserver = class MockIntersectionObserver {
   root: Element | Document | null = null;
   rootMargin: string = '';
   thresholds: ReadonlyArray<number> = [];
-  
+
   constructor(
     public callback: IntersectionObserverCallback,
     options?: IntersectionObserverInit
@@ -32,14 +32,20 @@ global.IntersectionObserver = class MockIntersectionObserver {
     if (options) {
       this.root = options.root || null;
       this.rootMargin = options.rootMargin || '0px';
-      this.thresholds = options.threshold ? (Array.isArray(options.threshold) ? options.threshold : [options.threshold]) : [0];
+      this.thresholds = options.threshold
+        ? Array.isArray(options.threshold)
+          ? options.threshold
+          : [options.threshold]
+        : [0];
     }
   }
-  
+
   observe() {}
   unobserve() {}
   disconnect() {}
-  takeRecords() { return []; }
+  takeRecords() {
+    return [];
+  }
 };
 
 // Mock ResizeObserver

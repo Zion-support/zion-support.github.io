@@ -15,8 +15,8 @@ export default function AgenticRiskMitigation2026Page() {
             Agentic Risk Mitigation 2026
           </h1>
           <p className='mt-4 text-lg md:text-xl text-purple-50'>
-            A practical playbook for safe, reliable and governed autonomous agents
-            in the enterprise.
+            A practical playbook for safe, reliable and governed autonomous
+            agents in the enterprise.
           </p>
           <div className='mt-6 flex flex-wrap gap-3 text-sm'>
             <span className='bg-white/20 px-3 py-1 rounded-full'>

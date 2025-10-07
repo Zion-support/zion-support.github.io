@@ -2,18 +2,18 @@
 const nextConfig = {
   reactStrictMode: true,
   eslint: {
-    ignoreDuringBuilds: true
+    ignoreDuringBuilds: true,
   },
   typescript: {
-    ignoreBuildErrors: true
+    ignoreBuildErrors: true,
   },
   pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
   images: {
-    domains: ["localhost", "ziontechgroup.com"]
+    domains: ['localhost', 'ziontechgroup.com'],
   },
   output: 'standalone',
   trailingSlash: false,
-  distDir: '.next'
+  distDir: '.next',
 };
 
 module.exports = nextConfig;

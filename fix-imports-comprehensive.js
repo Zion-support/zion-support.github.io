@@ -81,7 +81,8 @@ function fixImportsInFile(filePath) {
       //Skip lucide-react individual imports
       if (line.includes('lucide-react/dist/esm/icons/')) {
         const match = line.match(
-          /import\s+(\w+)\s+from\s+'lucide-react\/dist\/esm\/icons\/(\w+)';/);
+          /import\s+(\w+)\s+from\s+'lucide-react\/dist\/esm\/icons\/(\w+)';/
+        );
         if (match) {
           const iconName = match[1];
           const brokenName = match[2];

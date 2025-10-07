@@ -143,4 +143,4 @@ export default function October2025RealTimeIntelligenceBanner() {
       </div>
     </section>
   );
-  }
+}

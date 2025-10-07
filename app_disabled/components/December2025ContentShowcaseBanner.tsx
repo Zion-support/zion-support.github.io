@@ -191,4 +191,4 @@ export default function December2025ContentShowcaseBanner() {
       </div>
     </section>
   );
-  }
+}

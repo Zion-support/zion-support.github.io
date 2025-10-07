@@ -166,4 +166,4 @@ export default function September30FreshContentBanner() {
       </div>
     </div>
   );
-  }
+}

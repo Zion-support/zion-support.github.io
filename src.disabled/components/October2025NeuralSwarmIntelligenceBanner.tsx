@@ -5,20 +5,22 @@ interface October2025NeuralSwarmIntelligenceBannerProps {
   children?: React.ReactNode;
 }
 
-const October2025NeuralSwarmIntelligenceBanner: React.FC<October2025NeuralSwarmIntelligenceBannerProps> = ({ 
-  className = '', 
-  children 
-}) => {
+const October2025NeuralSwarmIntelligenceBanner: React.FC<
+  October2025NeuralSwarmIntelligenceBannerProps
+> = ({ className = '', children }) => {
   return (
-    <div className={`october2025neuralswarmintelligencebanner-component ${className}`}>
+    <div
+      className={`october2025neuralswarmintelligencebanner-component ${className}`}
+    >
       {children || (
-        <div className="p-4 text-center text-gray-600">
-          <h3 className="text-lg font-semibold mb-2">October2025NeuralSwarmIntelligenceBanner</h3>
+        <div className='p-4 text-center text-gray-600'>
+          <h3 className='text-lg font-semibold mb-2'>
+            October2025NeuralSwarmIntelligenceBanner
+          </h3>
           <p>Component placeholder - implementation needed</p>
         </div>
       )}
     </div>
-
   );
 };
 

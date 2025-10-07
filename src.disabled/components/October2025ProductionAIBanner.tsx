@@ -5,15 +5,16 @@ interface October2025ProductionAIBannerProps {
   children?: React.ReactNode;
 }
 
-const October2025ProductionAIBanner: React.FC<October2025ProductionAIBannerProps> = ({ 
-  className = '', 
-  children 
-}) => {
+const October2025ProductionAIBanner: React.FC<
+  October2025ProductionAIBannerProps
+> = ({ className = '', children }) => {
   return (
     <div className={`october2025productionaibanner-component ${className}`}>
       {children || (
-        <div className="p-4 text-center text-gray-600">
-          <h3 className="text-lg font-semibold mb-2">October2025ProductionAIBanner</h3>
+        <div className='p-4 text-center text-gray-600'>
+          <h3 className='text-lg font-semibold mb-2'>
+            October2025ProductionAIBanner
+          </h3>
           <p>Component placeholder - implementation needed</p>
         </div>
       )}
@@ -22,4 +23,3 @@ const October2025ProductionAIBanner: React.FC<October2025ProductionAIBannerProps
 };
 
 export default October2025ProductionAIBanner;
-

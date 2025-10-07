@@ -575,4 +575,4 @@ export default function Page() {
       </article>
     </div>
   );
-  }
+}

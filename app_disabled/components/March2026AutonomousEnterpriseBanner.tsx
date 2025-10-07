@@ -153,4 +153,4 @@ export default function March2026AutonomousEnterpriseBanner() {
       </div>
     </section>
   );
-  }
+}

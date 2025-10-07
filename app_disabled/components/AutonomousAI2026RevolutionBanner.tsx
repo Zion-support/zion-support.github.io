@@ -153,4 +153,4 @@ export default function AutonomousAI2026RevolutionBanner() {
       </div>
     </div>
   );
-  }
+}
