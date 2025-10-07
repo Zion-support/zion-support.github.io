@@ -1,6 +1,7 @@
-import React, { Suspense, lazy } from 'react';
-import { Helmet } from 'react-helmet-async';
+import React, { Suspense, lazy, useCallback } from 'react';
 import { Link } from 'react-router-dom';
+import SEOOptimizer from './components/SEOOptimizer';
+import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 
 // Lazy load components for better performance
 const ContentShowcase = lazy(() => import('./components/ContentShowcase'));
@@ -21,39 +22,77 @@ const LoadingFallback: React.FC<{ height?: string }> = ({
 );
 
 const HomePage: React.FC = () => {
+  // Analytics tracking for phone clicks
+  const handlePhoneClick = useCallback(() => {
+    if (typeof window !== 'undefined' && (window as unknown as { gtag?: Function }).gtag) {
+      ((window as unknown as { gtag: Function }).gtag)('event', 'phone_click', {
+        event_category: 'engagement',
+        event_label: 'main_phone_number'
+      });
+    }
+  }, []);
+
   return (
     <>
-      <Helmet>
-        <title>Zion Tech Group - Advanced AI and IT Solutions</title>
-        <meta
-          name='description'
-          content='Leading provider of AI-powered enterprise solutions, automation, and digital transformation services. Transform your business with cutting-edge AI micro SaaS services and cloud automation.'
-        />
-        <meta
-          name='keywords'
-          content='AI solutions, enterprise AI, digital transformation, automation, cloud services, AI consulting, business intelligence, machine learning, artificial intelligence, enterprise software'
-        />
-      </Helmet>
-
-      <div className='min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100'>
-        <header className="bg-white shadow-sm sticky top-0 z-50">
+      <SEOOptimizer 
+        title="Zion Tech Group - Advanced AI and IT Solutions"
+        description="Leading provider of AI-powered enterprise solutions, automation, and digital transformation services. Transform your business with cutting-edge AI micro SaaS services and cloud automation."
+        keywords={['AI solutions', 'enterprise AI', 'digital transformation', 'automation', 'cloud services', 'AI consulting', 'business intelligence', 'machine learning', 'artificial intelligence', 'enterprise software']}
+      />
+      <AccessibilityEnhancer>
+        <div className='min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100'>
+          <header className="bg-white shadow-sm sticky top-0 z-50" role="banner">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex justify-between items-center py-6">
               <div className="flex items-center">
-                <Link to="/" className="text-2xl font-bold text-indigo-600 hover:text-indigo-700 transition-colors">
+                <Link 
+                  to="/" 
+                  className="text-2xl font-bold text-indigo-600 hover:text-indigo-700 transition-colors focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 rounded"
+                  aria-label="Zion Tech Group - Home"
+                >
                   Zion Tech Group
                 </Link>
               </div>
-              <nav className="hidden md:flex space-x-8">
-                <Link to="/" className="text-gray-700 hover:text-indigo-600 transition-colors font-medium">Home</Link>
-                <Link to="/services" className="text-gray-700 hover:text-indigo-600 transition-colors font-medium">Services</Link>
-                <Link to="/blog" className="text-gray-700 hover:text-indigo-600 transition-colors font-medium">Blog</Link>
-                <Link to="/case-studies" className="text-gray-700 hover:text-indigo-600 transition-colors font-medium">Case Studies</Link>
-                <Link to="/contact" className="text-gray-700 hover:text-indigo-600 transition-colors font-medium">Contact</Link>
+              <nav className="hidden md:flex space-x-8" role="navigation" aria-label="Main navigation">
+                <Link 
+                  to="/" 
+                  className="text-gray-700 hover:text-indigo-600 transition-colors font-medium focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 rounded"
+                  aria-current="page"
+                >
+                  Home
+                </Link>
+                <Link 
+                  to="/services" 
+                  className="text-gray-700 hover:text-indigo-600 transition-colors font-medium focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 rounded"
+                >
+                  Services
+                </Link>
+                <Link 
+                  to="/blog" 
+                  className="text-gray-700 hover:text-indigo-600 transition-colors font-medium focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 rounded"
+                >
+                  Blog
+                </Link>
+                <Link 
+                  to="/case-studies" 
+                  className="text-gray-700 hover:text-indigo-600 transition-colors font-medium focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 rounded"
+                >
+                  Case Studies
+                </Link>
+                <Link 
+                  to="/contact" 
+                  className="text-gray-700 hover:text-indigo-600 transition-colors font-medium focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 rounded"
+                >
+                  Contact
+                </Link>
               </nav>
               <div className="md:hidden">
-                <button className="text-gray-700 hover:text-indigo-600 transition-colors">
-                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <button 
+                  className="text-gray-700 hover:text-indigo-600 transition-colors focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 rounded p-2"
+                  aria-label="Open mobile menu"
+                  aria-expanded="false"
+                >
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
                   </svg>
                 </button>
@@ -62,15 +101,15 @@ const HomePage: React.FC = () => {
           </div>
         </header>
 
-        <main>
-          <section className="py-20 relative overflow-hidden">
+        <main role="main">
+          <section className="py-20 relative overflow-hidden" aria-labelledby="hero-heading">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
               <div className="mb-8">
-                <span className="inline-block bg-indigo-100 text-indigo-800 px-4 py-2 rounded-full text-sm font-medium mb-6">
+                <span className="inline-block bg-indigo-100 text-indigo-800 px-4 py-2 rounded-full text-sm font-medium mb-6" role="img" aria-label="Rocket emoji">
                   🚀 Leading AI Innovation Since 2025
                 </span>
               </div>
-              <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+              <h1 id="hero-heading" className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
                 Transform Your Business with
                 <span className="text-indigo-600 block mt-2 bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
                   AI-Powered Solutions
@@ -83,12 +122,15 @@ const HomePage: React.FC = () => {
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
                 <Link
                   to="/services"
-                  className="bg-indigo-600 text-white px-8 py-4 rounded-lg hover:bg-indigo-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl font-medium">
+                  className="bg-indigo-600 text-white px-8 py-4 rounded-lg hover:bg-indigo-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl font-medium focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+                  aria-label="Explore our AI and IT services">
                   Explore Our Services
                 </Link>
                 <a
                   href="tel:+13024640950"
-                  className="bg-white text-indigo-600 px-8 py-4 rounded-lg border-2 border-indigo-600 hover:bg-indigo-50 transition-all duration-300 transform hover:scale-105 font-medium">
+                  onClick={handlePhoneClick}
+                  className="bg-white text-indigo-600 px-8 py-4 rounded-lg border-2 border-indigo-600 hover:bg-indigo-50 transition-all duration-300 transform hover:scale-105 font-medium focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+                  aria-label="Call us at +1 302 464 0950">
                   Call +1 302 464 0950
                 </a>
               </div>
@@ -116,10 +158,10 @@ const HomePage: React.FC = () => {
           </section>
 
           {/* Enhanced Services Section */}
-          <section className="py-20 bg-white">
+          <section className="py-20 bg-white" aria-labelledby="services-heading">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="text-center mb-16">
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                <h2 id="services-heading" className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                   Comprehensive AI & IT Solutions
                 </h2>
                 <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -127,48 +169,48 @@ const HomePage: React.FC = () => {
                 </p>
               </div>
               
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div className="bg-gradient-to-br from-indigo-50 to-purple-50 p-8 rounded-xl hover:shadow-lg transition-all duration-300">
-                  <div className="text-indigo-600 text-4xl mb-4">🤖</div>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" role="list">
+                <article className="bg-gradient-to-br from-indigo-50 to-purple-50 p-8 rounded-xl hover:shadow-lg transition-all duration-300" role="listitem">
+                  <div className="text-indigo-600 text-4xl mb-4" role="img" aria-label="Robot emoji">🤖</div>
                   <h3 className="text-xl font-bold text-gray-900 mb-3">AI Micro SaaS Services</h3>
                   <p className="text-gray-600 mb-4">
                     Scalable AI solutions including chatbots, automation tools, and intelligent business processes.
                   </p>
-                  <ul className="text-sm text-gray-500 space-y-1">
+                  <ul className="text-sm text-gray-500 space-y-1" role="list">
                     <li>• Custom AI Model Development</li>
                     <li>• Natural Language Processing</li>
                     <li>• Predictive Analytics</li>
                     <li>• Machine Learning Pipelines</li>
                   </ul>
-                </div>
+                </article>
                 
-                <div className="bg-gradient-to-br from-blue-50 to-cyan-50 p-8 rounded-xl hover:shadow-lg transition-all duration-300">
-                  <div className="text-blue-600 text-4xl mb-4">☁️</div>
+                <article className="bg-gradient-to-br from-blue-50 to-cyan-50 p-8 rounded-xl hover:shadow-lg transition-all duration-300" role="listitem">
+                  <div className="text-blue-600 text-4xl mb-4" role="img" aria-label="Cloud emoji">☁️</div>
                   <h3 className="text-xl font-bold text-gray-900 mb-3">Cloud Automation</h3>
                   <p className="text-gray-600 mb-4">
                     Streamline operations with automated cloud infrastructure and deployment pipelines.
                   </p>
-                  <ul className="text-sm text-gray-500 space-y-1">
+                  <ul className="text-sm text-gray-500 space-y-1" role="list">
                     <li>• Infrastructure as Code</li>
                     <li>• CI/CD Pipeline Setup</li>
                     <li>• Auto-scaling Solutions</li>
                     <li>• Cloud Cost Optimization</li>
                   </ul>
-                </div>
+                </article>
                 
-                <div className="bg-gradient-to-br from-green-50 to-emerald-50 p-8 rounded-xl hover:shadow-lg transition-all duration-300">
-                  <div className="text-green-600 text-4xl mb-4">🏢</div>
+                <article className="bg-gradient-to-br from-green-50 to-emerald-50 p-8 rounded-xl hover:shadow-lg transition-all duration-300" role="listitem">
+                  <div className="text-green-600 text-4xl mb-4" role="img" aria-label="Building emoji">🏢</div>
                   <h3 className="text-xl font-bold text-gray-900 mb-3">Enterprise Solutions</h3>
                   <p className="text-gray-600 mb-4">
                     Comprehensive digital transformation services for large-scale business operations.
                   </p>
-                  <ul className="text-sm text-gray-500 space-y-1">
+                  <ul className="text-sm text-gray-500 space-y-1" role="list">
                     <li>• Digital Transformation</li>
                     <li>• Legacy System Modernization</li>
                     <li>• Data Migration</li>
                     <li>• Enterprise Integration</li>
                   </ul>
-                </div>
+                </article>
               </div>
             </div>
           </section>
@@ -260,12 +302,13 @@ const HomePage: React.FC = () => {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   to="/contact"
-                  className="bg-white text-indigo-600 px-8 py-4 rounded-lg hover:bg-gray-50 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl font-medium">
+                  className="bg-white text-indigo-600 px-8 py-4 rounded-lg hover:bg-gray-50 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl font-medium focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-indigo-600">
                   Get Started Today
                 </Link>
                 <a
                   href="tel:+13024640950"
-                  className="bg-transparent text-white px-8 py-4 rounded-lg border-2 border-white hover:bg-white hover:text-indigo-600 transition-all duration-300 transform hover:scale-105 font-medium">
+                  onClick={handlePhoneClick}
+                  className="bg-transparent text-white px-8 py-4 rounded-lg border-2 border-white hover:bg-white hover:text-indigo-600 transition-all duration-300 transform hover:scale-105 font-medium focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-indigo-600">
                   Call +1 302 464 0950
                 </a>
               </div>
@@ -273,7 +316,7 @@ const HomePage: React.FC = () => {
           </section>
         </main>
 
-        <footer className="bg-gray-900 text-white py-12">
+        <footer className="bg-gray-900 text-white py-12" role="contentinfo">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
               <div>
@@ -284,28 +327,28 @@ const HomePage: React.FC = () => {
               </div>
               <div>
                 <h4 className="font-semibold mb-4">Services</h4>
-                <ul className="space-y-2 text-sm text-gray-400">
-                  <li><Link to="/services" className="hover:text-white transition-colors">AI Solutions</Link></li>
-                  <li><Link to="/services" className="hover:text-white transition-colors">Cloud Automation</Link></li>
-                  <li><Link to="/services" className="hover:text-white transition-colors">Enterprise IT</Link></li>
-                  <li><Link to="/services" className="hover:text-white transition-colors">Digital Transformation</Link></li>
+                <ul className="space-y-2 text-sm text-gray-400" role="list">
+                  <li><Link to="/services" className="hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-900 rounded">AI Solutions</Link></li>
+                  <li><Link to="/services" className="hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-900 rounded">Cloud Automation</Link></li>
+                  <li><Link to="/services" className="hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-900 rounded">Enterprise IT</Link></li>
+                  <li><Link to="/services" className="hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-900 rounded">Digital Transformation</Link></li>
                 </ul>
               </div>
               <div>
                 <h4 className="font-semibold mb-4">Company</h4>
-                <ul className="space-y-2 text-sm text-gray-400">
-                  <li><Link to="/about" className="hover:text-white transition-colors">About Us</Link></li>
-                  <li><Link to="/case-studies" className="hover:text-white transition-colors">Case Studies</Link></li>
-                  <li><Link to="/blog" className="hover:text-white transition-colors">Blog</Link></li>
-                  <li><Link to="/contact" className="hover:text-white transition-colors">Contact</Link></li>
+                <ul className="space-y-2 text-sm text-gray-400" role="list">
+                  <li><Link to="/about" className="hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-900 rounded">About Us</Link></li>
+                  <li><Link to="/case-studies" className="hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-900 rounded">Case Studies</Link></li>
+                  <li><Link to="/blog" className="hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-900 rounded">Blog</Link></li>
+                  <li><Link to="/contact" className="hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-900 rounded">Contact</Link></li>
                 </ul>
               </div>
               <div>
                 <h4 className="font-semibold mb-4">Contact</h4>
                 <div className="text-sm text-gray-400 space-y-2">
-                  <p>Phone: +1 302 464 0950</p>
-                  <p>Email: info@zion.app</p>
-                  <p>Website: zion.app</p>
+                  <p>Phone: <a href="tel:+13024640950" className="hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-900 rounded">+1 302 464 0950</a></p>
+                  <p>Email: <a href="mailto:info@zion.app" className="hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-900 rounded">info@zion.app</a></p>
+                  <p>Website: <a href="https://zion.app" className="hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-900 rounded">zion.app</a></p>
                 </div>
               </div>
             </div>
@@ -314,7 +357,8 @@ const HomePage: React.FC = () => {
             </div>
           </div>
         </footer>
-      </div>
+        </div>
+      </AccessibilityEnhancer>
     </>
   );
 };

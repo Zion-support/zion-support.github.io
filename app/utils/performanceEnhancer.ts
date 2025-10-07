@@ -105,7 +105,9 @@ class PerformanceEnhancer {
     this.initializeErrorTracking();
     this.initializeRealTimeMonitoring();
 
-    console.log('🚀 Performance monitoring started');
+    if (process.env.NODE_ENV === 'development') {
+      console.log('🚀 Performance monitoring started');
+    }
   }
 
   /**
@@ -118,7 +120,9 @@ class PerformanceEnhancer {
     this.observers = [];
     this.isMonitoring = false;
 
-    console.log('⏹️ Performance monitoring stopped');
+    if (process.env.NODE_ENV === 'development') {
+      console.log('⏹️ Performance monitoring stopped');
+    }
   }
 
   /**
@@ -187,13 +191,17 @@ class PerformanceEnhancer {
 
     this.observePerformanceEntry('measure', (entries) => {
       entries.forEach(entry => {
-        console.log(`📊 User Timing: ${entry.name} - ${entry.duration.toFixed(2)}ms`);
+        if (process.env.NODE_ENV === 'development') {
+          console.log(`📊 User Timing: ${entry.name} - ${entry.duration.toFixed(2)}ms`);
+        }
       });
     });
 
     this.observePerformanceEntry('mark', (entries) => {
       entries.forEach(entry => {
-        console.log(`📍 Performance Mark: ${entry.name}`);
+        if (process.env.NODE_ENV === 'development') {
+          console.log(`📍 Performance Mark: ${entry.name}`);
+        }
       });
     });
   }
@@ -206,7 +214,9 @@ class PerformanceEnhancer {
 
     this.observePerformanceEntry('longtask', (entries) => {
       entries.forEach(entry => {
-        console.warn(`⚠️ Long Task detected: ${entry.duration.toFixed(2)}ms`);
+        if (process.env.NODE_ENV === 'development') {
+          console.warn(`⚠️ Long Task detected: ${entry.duration.toFixed(2)}ms`);
+        }
         this.metrics.totalBlockingTime += entry.duration - 50; // 50ms threshold
       });
     });
@@ -222,11 +232,13 @@ class PerformanceEnhancer {
     if ('memory' in performance) {
       setInterval(() => {
         const memory = (performance as Performance & { memory: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
-        console.log('🧠 Memory Usage:', {
-          used: `${(memory.usedJSHeapSize / 1024 / 1024).toFixed(2)} MB`,
-          total: `${(memory.totalJSHeapSize / 1024 / 1024).toFixed(2)} MB`,
-          limit: `${(memory.jsHeapSizeLimit / 1024 / 1024).toFixed(2)} MB`,
-        });
+        if (process.env.NODE_ENV === 'development') {
+          console.log('🧠 Memory Usage:', {
+            used: `${(memory.usedJSHeapSize / 1024 / 1024).toFixed(2)} MB`,
+            total: `${(memory.totalJSHeapSize / 1024 / 1024).toFixed(2)} MB`,
+            limit: `${(memory.jsHeapSizeLimit / 1024 / 1024).toFixed(2)} MB`,
+          });
+        }
       }, 10000); // Check every 10 seconds
     }
   }
