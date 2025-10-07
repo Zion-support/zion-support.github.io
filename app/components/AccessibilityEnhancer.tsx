@@ -1,6 +1,10 @@
 import React, { useEffect } from 'react';
 
-const AccessibilityEnhancer: React.FC = () => {
+interface AccessibilityEnhancerProps {
+  children: React.ReactNode;
+}
+
+const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {
   useEffect(() => {
     // Add keyboard navigation improvements
     const handleKeyDown = (event: KeyboardEvent) => {
@@ -106,7 +110,7 @@ const AccessibilityEnhancer: React.FC = () => {
     };
   }, []);
 
-  return null; // This component doesn't render anything
+  return <>{children}</>; // Render children while providing accessibility enhancements
 };
 
 export default AccessibilityEnhancer;
