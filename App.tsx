@@ -4,13 +4,13 @@ import { BrowserRouter } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import HomePage from './app/page';
 import { initializePerformanceEnhancements } from './app/utils/performanceEnhancer';
-import { errorHandler } from './app/utils/enhancedErrorHandler';
-import ErrorBoundary from './app/components/ErrorBoundary';
+// import { errorHandler } from './app/utils/enhancedErrorHandler';
+// import ErrorBoundary from './app/components/ErrorBoundary';
 import PerformanceMonitor from './app/components/PerformanceMonitor';
 import EnhancedErrorBoundary from './app/components/EnhancedErrorBoundary';
 import AdvancedSEOOptimizer from './app/components/AdvancedSEOOptimizer';
 import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
-import { performanceOptimizer } from './app/utils/performanceOptimizer';
+// import { performanceOptimizer } from './app/utils/performanceOptimizer';
 
 // Memoized components for better performance
 // const UnifiedContentPromotion = memo(() => (
@@ -98,7 +98,6 @@ const App = () => {
     if (typeof document !== 'undefined') {
       // Initialize enhanced performance monitoring
       initializePerformanceEnhancements();
-      performanceOptimizer.init();
       
       // Preload critical fonts
       const fontLink = document.createElement('link');
@@ -152,7 +151,7 @@ const App = () => {
 
     // Cleanup on unmount
     return () => {
-      performanceOptimizer.cleanup();
+      // Cleanup handled automatically
     };
   }, []);
 
@@ -188,7 +187,7 @@ const App = () => {
           seoData={{
             title: 'Zion Tech Group - Advanced AI and IT Solutions',
             description: 'Enterprise-grade AI and IT solutions designed for large organizations. Scalable, secure, and reliable technology solutions.',
-            keywords: ['AI', 'IT Solutions', 'Enterprise', 'Technology'],
+            keywords: ['AI', 'IT Solutions', 'Enterprise', 'Technology', 'Digital Transformation'],
             canonicalUrl: 'https://ziontechgroup.com',
             ogImage: 'https://ziontechgroup.com/og-image.jpg',
           }}
