@@ -49,12 +49,13 @@ const PerformanceMonitor: React.FC = () => {
         // FID - First Input Delay
         new PerformanceObserver((list) => {
           const entries = list.getEntries();
-          entries.forEach((entry) => {
+          entries.forEach((entry: any) => {
+            const fid = entry.processingStart - entry.startTime;
             reportWebVitals({
               name: 'FID',
-              value: entry.processingStart - entry.startTime,
+              value: fid,
             });
-            setMetrics(prev => ({ ...prev, fid: entry.processingStart - entry.startTime }));
+            setMetrics(prev => ({ ...prev, fid }));
           });
         }).observe({ entryTypes: ['first-input'] });
 
@@ -89,7 +90,7 @@ const PerformanceMonitor: React.FC = () => {
         // TTFB - Time to First Byte
         new PerformanceObserver((list) => {
           const entries = list.getEntries();
-          entries.forEach((entry) => {
+          entries.forEach((entry: any) => {
             if (entry.responseStart > 0) {
               const ttfb = entry.responseStart - entry.requestStart;
               reportWebVitals({
