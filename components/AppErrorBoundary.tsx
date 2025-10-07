@@ -80,12 +80,8 @@ export class AppErrorBoundary extends Component<
     return { hasError: true, error };
   }
 
-  override componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    // Log error for monitoring - in production, send to monitoring service
-    if (process.env.NODE_ENV === 'development') {
-      // eslint-disable-next-line no-console
-      console.error('Error caught by boundary:', error, errorInfo);
-    }
+  override componentDidCatch(_error: Error, _errorInfo: ErrorInfo) {
+    // Log error for monitoring (removed console.error for production)
     // Here you could send error to monitoring service
   }
 

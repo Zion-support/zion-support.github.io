@@ -154,10 +154,10 @@ export const reportWebVitals = (metrics: WebVitalsMetrics): void => {
   // Web Vitals metrics available for reporting
 
   // Send to analytics service
-  if (typeof window !== 'undefined' && (window as unknown as { gtag?: (command: string, eventName: string, parameters: Record<string, unknown>) => void }).gtag) {
+  if (typeof window !== 'undefined' && (window as { gtag?: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag) {
     Object.entries(metrics).forEach(([key, value]) => {
-      if (value !== undefined) {
-        (window as unknown as { gtag: (command: string, eventName: string, parameters: Record<string, unknown>) => void }).gtag('event', key, {
+      if (typeof value === 'number') {
+        (window as unknown as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag('event', key, {
           value: Math.round(value),
           event_category: 'Web Vitals',
           non_interaction: true,

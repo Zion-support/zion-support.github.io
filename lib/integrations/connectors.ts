@@ -1,4 +1,5 @@
 import type { ProviderConnection, SyncLogEntry } from './types';
+// import { v4 as uuidv4 } from 'uuid'; // Unused import
 
 export async function simulateAction<T = unknown>(
   connection: ProviderConnection,

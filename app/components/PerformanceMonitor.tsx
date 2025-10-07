@@ -42,18 +42,18 @@ const PerformanceMonitor: React.FC = () => {
           reportWebVitals({
             name: 'LCP',
             value: lastEntry.startTime,
-            id: 'lcp',
+            id: 'lcp-' + Date.now(),
           });
         }).observe({ entryTypes: ['largest-contentful-paint'] });
 
         // FID - First Input Delay
         new PerformanceObserver((list) => {
           const entries = list.getEntries();
-          entries.forEach((entry: PerformanceEventTiming) => {
+          entries.forEach((entry: PerformanceEntry & { processingStart?: number }) => {
             reportWebVitals({
               name: 'FID',
               value: (entry.processingStart || entry.startTime) - entry.startTime,
-              id: 'fid',
+              id: 'fid-' + Date.now(),
             });
           });
         }).observe({ entryTypes: ['first-input'] });
@@ -62,15 +62,15 @@ const PerformanceMonitor: React.FC = () => {
         let clsValue = 0;
         new PerformanceObserver((list) => {
           const entries = list.getEntries();
-          entries.forEach((entry: LayoutShift) => {
-            if (!entry.hadRecentInput) {
+          entries.forEach((entry: PerformanceEntry & { hadRecentInput?: boolean; value?: number }) => {
+            if (!entry.hadRecentInput && entry.value) {
               clsValue += entry.value;
             }
           });
           reportWebVitals({
             name: 'CLS',
             value: clsValue,
-            id: 'cls',
+            id: 'cls-' + Date.now(),
           });
         }).observe({ entryTypes: ['layout-shift'] });
 
@@ -81,7 +81,7 @@ const PerformanceMonitor: React.FC = () => {
             reportWebVitals({
               name: 'FCP',
               value: entry.startTime,
-              id: 'fcp',
+              id: 'fcp-' + Date.now(),
             });
           });
         }).observe({ entryTypes: ['paint'] });
@@ -102,7 +102,7 @@ const PerformanceMonitor: React.FC = () => {
           reportWebVitals({
             name: 'TTFB',
             value: ttfb,
-            id: 'ttfb',
+            id: 'ttfb-' + Date.now(),
           });
         }
       });
