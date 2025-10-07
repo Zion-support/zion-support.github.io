@@ -24,9 +24,6 @@ const ErrorBoundary = ({ children }: { children: React.ReactNode }) => {
 // Utils
 import { preloadCriticalResources, performanceOptimizer } from './utils/performanceOptimizer';
 
-// Lazy load pages for better performance
-const HomePage = lazy(() => import('./page'));
-
 // Styles
 import '../index.css';
 
@@ -92,4 +89,3 @@ const App: React.FC = () => {
   );
 };
 
-export default App;
