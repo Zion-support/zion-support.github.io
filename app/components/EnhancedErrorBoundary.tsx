@@ -116,7 +116,7 @@ class EnhancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
           stack: error.stack,
         },
         errorInfo: {
-          componentStack: errorInfo.componentStack,
+          componentStack: errorInfo.componentStack || '',
         },
         timestamp: new Date().toISOString(),
         userAgent: navigator.userAgent,
