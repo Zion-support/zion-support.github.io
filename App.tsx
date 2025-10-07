@@ -229,15 +229,13 @@ export default function App() {
           </script>
         </Helmet>
         
-        <div className="min-h-screen bg-white">
-          <main role="main">
-            <Suspense fallback={<LoadingSpinner />}>
-              <UnifiedContentPromotion />
-              <InteractiveAIROICalculator />
-              <ContentShowcase />
-              <InteractiveContentShowcase2026 />
-            </Suspense>
-          </main>
+        <div className="min-h-screen bg-white" role="main">
+          <Suspense fallback={<LoadingSpinner />}>
+            <UnifiedContentPromotion />
+            <InteractiveAIROICalculator />
+            <ContentShowcase />
+            <InteractiveContentShowcase2026 />
+          </Suspense>
           
           {/* Scroll to top button */}
           <button

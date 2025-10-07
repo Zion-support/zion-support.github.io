@@ -5,6 +5,16 @@ import AdvancedErrorBoundary from '../app/components/AdvancedErrorBoundary';
 import AdvancedSEOOptimizer from '../app/components/AdvancedSEOOptimizer';
 import AdvancedPerformanceMonitor from '../app/components/AdvancedPerformanceMonitor';
 
+// Mock Next.js Head component
+jest.mock('next/head', () => {
+  return {
+    __esModule: true,
+    default: ({ children }: { children: React.ReactNode }) => {
+      return <>{children}</>;
+    },
+  };
+});
+
 // Mock component that throws an error
 const ThrowError = ({ shouldThrow }: { shouldThrow: boolean }) => {
   if (shouldThrow) {
@@ -30,12 +40,16 @@ describe('AdvancedErrorBoundary', () => {
       .mockImplementation(() => {});
 
     render(
-      <AdvancedErrorBoundary>
+      <AdvancedErrorBoundary enableRetry={true}>
         <ThrowError shouldThrow={true} />
       </AdvancedErrorBoundary>
     );
 
     expect(screen.getByText('Oops! Something went wrong')).toBeInTheDocument();
+<<<<<<< HEAD
+    expect(screen.getByText(/Try Again/)).toBeInTheDocument();
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2d9f
     expect(screen.getByText('Reload Page')).toBeInTheDocument();
     expect(screen.getByText('Go to Homepage')).toBeInTheDocument();
 
@@ -58,36 +72,33 @@ describe('AdvancedErrorBoundary', () => {
     consoleSpy.mockRestore();
   });
 
-  it('retries when retry button is clicked', () => {
+  it('retries when retry button is clicked', async () => {
     const consoleSpy = jest
       .spyOn(console, 'error')
       .mockImplementation(() => {});
 
     let shouldThrow = true;
-    const ConditionalError = () => {
-      if (shouldThrow) {
-        throw new Error('Test error');
-      }
-      return <div>No error</div>;
-    };
+    const TestComponent = () => <ThrowError shouldThrow={shouldThrow} />;
 
-    render(
+    const { rerender } = render(
       <AdvancedErrorBoundary enableRetry={true}>
-        <ConditionalError />
+        <TestComponent />
       </AdvancedErrorBoundary>
     );
 
     const retryButton = screen.getByText('Try Again (3 attempts left)');
-    shouldThrow = false; // Stop throwing on retry
+    
+    // Change shouldThrow before clicking retry
+    shouldThrow = false;
     fireEvent.click(retryButton);
 
-    // After retry, the error boundary should reset and show content
-    waitFor(() => {
+    // After retry, the error boundary should reset and show the child component
+    await waitFor(() => {
       expect(
         screen.queryByText('Oops! Something went wrong')
       ).not.toBeInTheDocument();
     });
-    
+
     consoleSpy.mockRestore();
   });
 });
@@ -136,8 +147,10 @@ describe('AdvancedSEOOptimizer', () => {
       </HelmetProvider>
     );
 
-    // AdvancedSEOOptimizer should render without crashing
-    expect(container).toBeInTheDocument();
+    const structuredDataScript = container.querySelector(
+      'script[type="application/ld+json"]'
+    );
+    expect(structuredDataScript).toBeTruthy();
   });
 
   it('renders Open Graph tags when enabled', () => {
@@ -147,8 +160,12 @@ describe('AdvancedSEOOptimizer', () => {
       </HelmetProvider>
     );
 
-    // AdvancedSEOOptimizer should render without crashing
-    expect(container).toBeInTheDocument();
+    expect(
+      container.querySelector('meta[property="og:title"]')
+    ).toBeTruthy();
+    expect(
+      container.querySelector('meta[property="og:description"]')
+    ).toBeTruthy();
   });
 
   it('renders Twitter Card tags when enabled', () => {
@@ -158,26 +175,46 @@ describe('AdvancedSEOOptimizer', () => {
       </HelmetProvider>
     );
 
-    // AdvancedSEOOptimizer should render without crashing
-    expect(container).toBeInTheDocument();
+    expect(
+      container.querySelector('meta[name="twitter:card"]')
+    ).toBeTruthy();
+    expect(
+      container.querySelector('meta[name="twitter:title"]')
+    ).toBeTruthy();
   });
 });
 
 describe('AdvancedPerformanceMonitor', () => {
   // Mock performance API
   const mockPerformance = {
-    getEntriesByName: jest.fn(),
-    getEntriesByType: jest.fn(),
-    getEntries: jest.fn(),
+    getEntriesByName: jest.fn(() => []),
+    getEntriesByType: jest.fn(() => []),
+    getEntries: jest.fn(() => []),
     measurePageLoad: jest.fn(),
     reportWebVitals: jest.fn(),
   };
 
+  // Mock PerformanceObserver
+  class MockPerformanceObserver {
+    constructor(callback: PerformanceObserverCallback) {
+      this.callback = callback;
+    }
+    callback: PerformanceObserverCallback;
+    observe() {}
+    disconnect() {}
+    takeRecords() { return []; }
+  }
+
   beforeEach(() => {
+    // Mock performance API
     Object.defineProperty(window, 'performance', {
       value: mockPerformance,
       writable: true,
+      configurable: true,
     });
+
+    // Mock PerformanceObserver
+    global.PerformanceObserver = MockPerformanceObserver as any;
   });
 
   afterEach(() => {
