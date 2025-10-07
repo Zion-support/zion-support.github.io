@@ -1,30 +1,52 @@
 // Performance monitoring setup
 import { analytics } from '../app/utils/analytics';
-import { errorHandler } from '../app/utils/errorHandler';
-import { performanceOptimizer } from '../app/utils/performanceOptimizer';
+import { ErrorHandler } from '../app/utils/errorHandler';
 
-// Initialize performance monitoring
-if (typeof window !== 'undefined') {
-  // Track page load
-  analytics.trackPageView(window.location.pathname);
+// Create error handler instance
+const errorHandler = new ErrorHandler();
 
-  // Initialize performance optimizer
-  performanceOptimizer.lazyLoadImages();
-
-  // Track Web Vitals
-  const metrics = performanceOptimizer.measurePageLoad();
-  if (metrics) {
-    performanceOptimizer.reportWebVitals(metrics);
+/**
+ * Initialize performance monitoring for the application
+ * Tracks page views and errors
+ */
+function initializeMonitoring(): void {
+  if (typeof window === 'undefined') {
+    return;
   }
-  
-  // Monitor long tasks (if available)
-  if ('monitorLongTasks' in performanceOptimizer && typeof performanceOptimizer.monitorLongTasks === 'function') {
-    performanceOptimizer.monitorLongTasks((entries: PerformanceEntry[]) => {
-      entries.forEach((entry: PerformanceEntry) => {
-        analytics.track('long_task', 'performance', 'detected', undefined, entry.duration);
+
+  try {
+    // Track initial page load
+    analytics.trackPageView(window.location.pathname);
+
+    // Setup navigation tracking
+    window.addEventListener('popstate', () => {
+      analytics.trackPageView(window.location.pathname);
+    });
+
+    // Track errors globally
+    window.addEventListener('error', (event) => {
+      const error = event.error || new Error(event.message);
+      errorHandler.handleError(error, undefined, {
+        filename: event.filename,
+        lineno: event.lineno,
+        colno: event.colno,
       });
     });
+
+    // Track unhandled promise rejections
+    window.addEventListener('unhandledrejection', (event) => {
+      const error = new Error(`Unhandled Promise Rejection: ${event.reason}`);
+      errorHandler.handleError(error, undefined, {
+        reason: event.reason,
+      });
+    });
+  } catch (error) {
+    // eslint-disable-next-line no-console
+    console.error('Failed to initialize monitoring:', error);
   }
 }
 
-export { analytics, errorHandler, performanceOptimizer };
+// Initialize monitoring on load
+initializeMonitoring();
+
+export { analytics, errorHandler, initializeMonitoring };
