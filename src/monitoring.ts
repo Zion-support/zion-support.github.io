@@ -1,6 +1,6 @@
 // Performance monitoring setup
 import { analytics } from '../app/utils/analytics';
-import { errorHandler } from '../app/utils/errorHandler';
+import { ErrorHandler } from '../app/utils/errorHandler';
 import { performanceOptimizer } from '../app/utils/performanceOptimizer';
 
 // Initialize performance monitoring
@@ -9,22 +9,27 @@ if (typeof window !== 'undefined') {
   analytics.trackPageView(window.location.pathname);
 
   // Initialize performance optimizer
-  performanceOptimizer.lazyLoadImages();
+  performanceOptimizer.optimizeImages();
 
-  // Track Web Vitals
-  const metrics = performanceOptimizer.measurePageLoad();
-  if (metrics) {
-    performanceOptimizer.reportWebVitals(metrics);
-  }
-  
-  // Monitor long tasks (if available)
-  if ('monitorLongTasks' in performanceOptimizer && typeof performanceOptimizer.monitorLongTasks === 'function') {
-    performanceOptimizer.monitorLongTasks((entries: PerformanceEntry[]) => {
-      entries.forEach((entry: PerformanceEntry) => {
-        analytics.track('long_task', 'performance', 'detected', undefined, entry.duration);
+  // Monitor long tasks using PerformanceObserver
+  if (typeof PerformanceObserver !== 'undefined') {
+    try {
+      const observer = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        entries.forEach((entry: PerformanceEntry) => {
+          analytics.track({
+            event: 'long_task',
+            category: 'performance',
+            label: 'detected',
+            value: entry.duration,
+          });
+        });
       });
-    });
+      observer.observe({ entryTypes: ['longtask'] });
+    } catch {
+      // PerformanceObserver may not support 'longtask' in some environments
+    }
   }
 }
 
-export { analytics, errorHandler, performanceOptimizer };
+export { analytics, ErrorHandler, performanceOptimizer };
