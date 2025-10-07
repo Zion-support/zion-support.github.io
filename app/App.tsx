@@ -19,7 +19,8 @@ import AdvancedPerformanceMonitor from './components/AdvancedPerformanceMonitor'
 const HomePage = lazy(() => import('./page'));
 
 // Utils
-import { performanceOptimizer, lazyLoadImages, preloadCriticalResources, collectPerformanceMetrics } from './utils/performanceOptimizer';
+import { performanceOptimizer } from './utils/performanceOptimizer';
+import { lazyLoadImages, preloadCriticalResources, collectPerformanceMetrics } from './utils/performanceOptimizer';
 
 // Styles
 import './globals.css';

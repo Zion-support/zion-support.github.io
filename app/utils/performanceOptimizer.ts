@@ -166,7 +166,7 @@ class PerformanceOptimizer {
   /**
    * Initialize performance monitoring
    */
-  init(): void {
+  public init(): void {
     if (typeof window === 'undefined') return;
 
     this.measureWebVitals();

@@ -67,7 +67,6 @@ const App = memo(() => {
     if (typeof document !== 'undefined') {
       // Initialize performance monitoring
       performanceEnhancer.startMonitoring();
-      performanceOptimizer.init();
       
       // Add structured data to head
       const script = document.createElement('script');
