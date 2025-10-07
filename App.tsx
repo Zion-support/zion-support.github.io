@@ -1,12 +1,16 @@
-import React, { memo, useMemo, useCallback } from 'react';
+import React, { memo, useMemo, useCallback, Suspense } from 'react';
 import { createRoot } from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import HomePage from './app/page';
 import { performanceEnhancer } from './app/utils/performanceEnhancer';
-// import { errorHandler } from './app/utils/enhancedErrorHandler';
+import { errorHandler } from './app/utils/enhancedErrorHandler';
 import ErrorBoundary from './app/components/ErrorBoundary';
 import PerformanceMonitor from './app/components/PerformanceMonitor';
+import EnhancedErrorBoundary from './app/components/EnhancedErrorBoundary';
+import AdvancedSEOOptimizer, { defaultSEOConfig } from './app/components/AdvancedSEOOptimizer';
+import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
+import { performanceOptimizer } from './app/utils/performanceOptimizer';
 
 // Memoized components for better performance
 // const UnifiedContentPromotion = memo(() => (
@@ -92,8 +96,9 @@ const App = () => {
   // Performance optimization: Preload critical resources
   React.useEffect(() => {
     if (typeof document !== 'undefined') {
-      // Initialize performance monitoring
+      // Initialize enhanced performance monitoring
       performanceEnhancer.startMonitoring();
+      performanceOptimizer.initialize();
       
       // Preload critical fonts
       const fontLink = document.createElement('link');
@@ -148,6 +153,7 @@ const App = () => {
     // Cleanup on unmount
     return () => {
       performanceEnhancer.stopMonitoring();
+      performanceOptimizer.cleanup();
     };
   }, []);
 
@@ -161,14 +167,44 @@ const App = () => {
   //   }
   // }, []);
   return (
-    <ErrorBoundary>
-      <HelmetProvider>
-        <BrowserRouter>
-          <HomePage />
-          <PerformanceMonitor />
-        </BrowserRouter>
-      </HelmetProvider>
-    </ErrorBoundary>
+    <EnhancedErrorBoundary
+      enableErrorReporting={true}
+      enableRetry={true}
+      maxRetries={3}
+      enableAnalytics={true}
+    >
+      <AccessibilityEnhancer
+        config={{
+          enableKeyboardNavigation: true,
+          enableScreenReaderSupport: true,
+          enableHighContrast: true,
+          enableReducedMotion: true,
+          enableFocusManagement: true,
+          enableSkipLinks: true,
+          enableARIALabels: true,
+          enableColorContrast: true,
+        }}
+      >
+        <AdvancedSEOOptimizer
+          config={defaultSEOConfig}
+          enableStructuredData={true}
+          enableAnalytics={true}
+          enablePerformanceTracking={true}
+        />
+        <HelmetProvider>
+          <BrowserRouter>
+            <Suspense fallback={
+              <div className="flex items-center justify-center min-h-screen">
+                <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-indigo-600"></div>
+              </div>
+            }>
+              <HomePage />
+            </Suspense>
+            <PerformanceMonitor />
+          </BrowserRouter>
+        </HelmetProvider>
+      </AccessibilityEnhancer>
+    </EnhancedErrorBoundary>
   );
 }
 
