@@ -354,7 +354,7 @@ export const collectPerformanceMetricsArray = async (): Promise<
 
 // Get memory usage (duplicate removed - using the one above)
 
-export default {
+const performanceUtils = {
   debounce,
   throttle,
   lazyLoadImages,
@@ -365,3 +365,5 @@ export default {
   collectPerformanceMetricsArray,
   getMemoryUsage,
 };
+
+export default performanceUtils;

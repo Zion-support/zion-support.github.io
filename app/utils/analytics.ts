@@ -26,12 +26,13 @@ class Analytics {
     if (!this.isInitialized || typeof window === 'undefined') {
       // Fallback to console in development
       if (process.env.NODE_ENV === 'development') {
-        console.log('Analytics Event:', event);
+        // eslint-disable-next-line no-console
+console.log('Analytics Event:', event);
       }
       return;
     }
 
-    const gtag = (window as unknown as { gtag: Function }).gtag;
+    const gtag = (window as unknown as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag;
     gtag('event', event.event, {
       event_category: event.category,
       event_label: event.label,

@@ -60,30 +60,6 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
   const [isMonitoring, setIsMonitoring] = useState(false);
   const [lastUpdate, setLastUpdate] = useState<Date | null>(null);
 
-  // Initialize monitoring
-  useEffect(() => {
-    const initializeMonitoring = () => {
-      performanceEnhancer.startMonitoring();
-      setIsMonitoring(true);
-      updateMetrics();
-    };
-
-    initializeMonitoring();
-
-    return () => {
-      performanceEnhancer.stopMonitoring();
-      setIsMonitoring(false);
-    };
-  }, [updateMetrics]);
-
-  // Update metrics periodically
-  useEffect(() => {
-    if (!isMonitoring) return;
-
-    const interval = setInterval(updateMetrics, refreshInterval);
-    return () => clearInterval(interval);
-  }, [isMonitoring, refreshInterval, updateMetrics]);
-
   // Update metrics
   const updateMetrics = useCallback(() => {
     try {
@@ -126,9 +102,34 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
       setMetrics(newMetrics);
       setLastUpdate(new Date());
     } catch (error) {
-      console.error('Failed to update metrics:', error);
+      // eslint-disable-next-line no-console
+console.error('Failed to update metrics:', error);
     }
   }, []);
+
+  // Initialize monitoring
+  useEffect(() => {
+    const initializeMonitoring = () => {
+      performanceEnhancer.startMonitoring();
+      setIsMonitoring(true);
+      updateMetrics();
+    };
+
+    initializeMonitoring();
+
+    return () => {
+      performanceEnhancer.stopMonitoring();
+      setIsMonitoring(false);
+    };
+  }, [updateMetrics]);
+
+  // Update metrics periodically
+  useEffect(() => {
+    if (!isMonitoring) return;
+
+    const interval = setInterval(updateMetrics, refreshInterval);
+    return () => clearInterval(interval);
+  }, [isMonitoring, refreshInterval, updateMetrics]);
 
   // Get memory information
   const getMemoryInfo = () => {
@@ -148,7 +149,7 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
   // Get network information
   const getNetworkInfo = () => {
     if ('connection' in navigator) {
-      const connection = (navigator as Navigator & { connection: { effectiveType?: string; downlink?: number; rtt?: number } }).connection;
+      const connection = (navigator as Navigator & { connection: { effectiveType?: string; downlink?: number; rtt?: number; saveData?: boolean } }).connection;
       return {
         effectiveType: connection.effectiveType || 'unknown',
         downlink: connection.downlink || 0,

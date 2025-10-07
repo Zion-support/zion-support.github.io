@@ -28,8 +28,6 @@ class ErrorBoundary extends Component<Props, State> {
   }
 
   override componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-
     // Report error to analytics/monitoring service
     this.reportError(error, errorInfo);
 
@@ -41,8 +39,8 @@ class ErrorBoundary extends Component<Props, State> {
 
   private reportError = (error: Error, errorInfo: ErrorInfo) => {
     // Report to external service (e.g., Sentry, LogRocket, etc.)
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('event', 'exception', {
+    if (typeof window !== 'undefined' && (window as unknown as { gtag?: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag) {
+      (window as unknown as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag('event', 'exception', {
         description: error.message,
         fatal: false,
         custom_map: {
@@ -71,7 +69,7 @@ class ErrorBoundary extends Component<Props, State> {
             <AlertTriangle className="w-16 h-16 text-red-500 mx-auto mb-4" />
             <h1 className="text-2xl font-bold text-white mb-4">Something went wrong</h1>
             <p className="text-gray-300 mb-6">
-              We're sorry, but something unexpected happened. Our team has been notified.
+              We&apos;re sorry, but something unexpected happened. Our team has been notified.
             </p>
             {this.state.errorId && (
               <p className="text-gray-400 mb-4 text-sm">

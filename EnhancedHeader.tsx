@@ -37,6 +37,7 @@ const EnhancedHeader: React.FC = () => {
           >
             {isOpen ? '✕' : '☰'}
           </button>
+        </div>
         {isOpen && (
           <div className='md:hidden py-4 border-t'>
             {navigationItems.map(item => (

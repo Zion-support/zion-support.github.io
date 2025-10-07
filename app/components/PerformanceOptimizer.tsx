@@ -61,7 +61,8 @@ const PerformanceOptimizerComponent: React.FC<PerformanceOptimizerProps> = ({
       const observer = new PerformanceObserver(list => {
         list.getEntries().forEach(entry => {
           if (entry.entryType === 'navigation') {
-            console.log('Navigation timing:', entry);
+            // eslint-disable-next-line no-console
+console.log('Navigation timing:', entry);
           }
         });
       });

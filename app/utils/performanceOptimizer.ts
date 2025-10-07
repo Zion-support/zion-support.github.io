@@ -172,7 +172,8 @@ class PerformanceOptimizer {
     this.measureWebVitals();
     this.setupPerformanceObservers();
 
-    console.log('Performance monitoring initialized');
+    // eslint-disable-next-line no-console
+console.log('Performance monitoring initialized');
   }
 
   /**
@@ -203,7 +204,8 @@ class PerformanceOptimizer {
       entries.forEach((entry) => {
         if (entry.name === entryName) {
           this.metrics[metricName] = entry.startTime;
-          console.log(`${String(metricName).toUpperCase()} measured:`, entry.startTime);
+          // eslint-disable-next-line no-console
+console.log(`${String(metricName).toUpperCase()} measured:`, entry.startTime);
         }
       });
     });
@@ -217,7 +219,8 @@ class PerformanceOptimizer {
       const entries = list.getEntries();
       const lastEntry = entries[entries.length - 1];
       this.metrics.lcp = lastEntry.startTime;
-      console.log('LCP measured:', lastEntry.startTime);
+      // eslint-disable-next-line no-console
+console.log('LCP measured:', lastEntry.startTime);
     });
 
     observer.observe({ entryTypes: ['largest-contentful-paint'] });
@@ -231,7 +234,8 @@ class PerformanceOptimizer {
         if (entry.entryType === 'first-input' && 'processingStart' in entry && 'startTime' in entry) {
           const fid = (entry as PerformanceEventTiming).processingStart - (entry as PerformanceEventTiming).startTime;
           this.metrics.fid = fid;
-          console.log('FID measured:', fid);
+          // eslint-disable-next-line no-console
+console.log('FID measured:', fid);
         }
       });
     });
@@ -250,7 +254,8 @@ class PerformanceOptimizer {
           if (!layoutEntry.hadRecentInput) {
             clsValue += layoutEntry.value;
             this.metrics.cls = clsValue;
-            console.log('CLS measured:', clsValue);
+            // eslint-disable-next-line no-console
+console.log('CLS measured:', clsValue);
           }
         }
       });
@@ -265,7 +270,8 @@ class PerformanceOptimizer {
     if (navigationEntry) {
       const ttfb = navigationEntry.responseStart - navigationEntry.requestStart;
       this.metrics.ttfb = ttfb;
-      console.log('TTFB measured:', ttfb);
+      // eslint-disable-next-line no-console
+console.log('TTFB measured:', ttfb);
     }
   }
 
@@ -473,7 +479,8 @@ class PerformanceOptimizer {
 
       // Log in development
       if (process.env.NODE_ENV === 'development') {
-        console.log(`📊 Performance Metric - ${name}: ${value}ms`);
+        // eslint-disable-next-line no-console
+console.log(`📊 Performance Metric - ${name}: ${value}ms`);
       }
     }
   }
@@ -593,10 +600,10 @@ class PerformanceOptimizer {
     logger.performance('Web Vitals reported', metrics as unknown as Record<string, unknown>, 'PerformanceOptimizer');
     
     // Send to analytics if available
-    if (typeof window !== 'undefined' && (window as { gtag?: Function }).gtag) {
+    if (typeof window !== 'undefined' && (window as { gtag?: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag) {
       Object.entries(metrics).forEach(([key, value]) => {
         if (typeof value === 'number') {
-          (window as unknown as { gtag: Function }).gtag('event', 'web_vitals', {
+          (window as unknown as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag('event', 'web_vitals', {
             metric_name: key,
             metric_value: value,
             metric_rating: value < 100 ? 'good' : value < 300 ? 'needs-improvement' : 'poor'
