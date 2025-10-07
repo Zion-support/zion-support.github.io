@@ -12,34 +12,28 @@
 //   initAccessibility
 // } from './accessibilityUtils';
 
-import {
-  getMemoryUsage,
-  collectPerformanceMetrics,
-  performanceMonitor,
-  // debounce,
-  // throttle,
-  lazyLoadImages,
-  preloadCriticalResources,
-  optimizeScrollPerformance
-} from './performanceUtils';
+// Performance utilities are imported but not used in current implementation
+// import {
+//   getMemoryUsage,
+//   collectPerformanceMetrics,
+//   performanceMonitor,
+//   lazyLoadImages,
+//   preloadCriticalResources,
+//   optimizeScrollPerformance
+// } from './performanceUtils';
 
-import {
-  // setMetaTags,
-  setOpenGraphTags,
-  setTwitterCardTags,
-  setStructuredData,
-  // generateSitemap,
-  // optimizeImages,
-  setCanonicalUrl,
-  setPageTitle,
-  setMetaDescription,
-  setKeywords,
-  // setRobotsMeta,
-  // setLanguage,
-  // setViewport,
-  schemaGenerators,
-  seoAudit
-} from './seoUtils';
+// SEO utilities are imported but not used in current implementation
+// import {
+//   setOpenGraphTags,
+//   setTwitterCardTags,
+//   setStructuredData,
+//   setCanonicalUrl,
+//   setPageTitle,
+//   setMetaDescription,
+//   setKeywords,
+//   schemaGenerators,
+//   seoAudit
+// } from './seoUtils';
 
 // import {
 //   getMemoryUsage,
