@@ -4,7 +4,7 @@
  */
 
 // Debounce function for performance optimization
-export const debounce = <T extends (...args: any[]) => any>(
+export const debounce = <T extends (...args: unknown[]) => unknown>(
   func: T,
   wait: number
 ): ((...args: Parameters<T>) => void) => {
@@ -16,7 +16,7 @@ export const debounce = <T extends (...args: any[]) => any>(
 };
 
 // Throttle function for performance optimization
-export const throttle = <T extends (...args: any[]) => any>(
+export const throttle = <T extends (...args: unknown[]) => unknown>(
   func: T,
   limit: number
 ): ((...args: Parameters<T>) => void) => {
@@ -98,7 +98,7 @@ export const getMemoryUsage = () => {
     return null;
   }
 
-  const memory = (performance as any).memory;
+  const memory = (performance as unknown as { memory: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
   return {
     used: memory.usedJSHeapSize,
     total: memory.totalJSHeapSize,
@@ -143,7 +143,8 @@ export const initializePerformanceEnhancements = () => {
 
   // Collect performance metrics
   const metrics = collectPerformanceMetrics();
-  if (metrics) {
+  if (metrics && process.env.NODE_ENV === 'development') {
+    // eslint-disable-next-line no-console
     console.log('Performance metrics:', metrics);
   }
 };
