@@ -1,6 +1,3 @@
-import { Zap, Target, CheckCircle } from 'lucide-react';
-import { Shield } from 'lucide-react';
-import { Star } from 'lucide-react';
 import React from 'react';
 import Link from 'next/link';
 import {
@@ -16,6 +13,7 @@ import {
   Shield,
   Settings,
   BarChart3,
+  Star,
 } from 'lucide-react';
 import type { Metadata } from 'next';
 

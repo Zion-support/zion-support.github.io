@@ -1,16 +1,15 @@
-import { ArrowRight, Target, CheckCircle } from 'lucide-react';
-import { Star } from 'lucide-react';
 import React from 'react';
 import Link from 'next/link';
 import {
   ArrowLeft,
+  ArrowRight,
   Calendar,
   User,
   Clock,
   Tag,
   Target,
   CheckCircle,
-  ArrowRight,
+  Star,
 } from 'lucide-react';
 
 export const metadata = {
