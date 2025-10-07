@@ -70,6 +70,13 @@ export default function Page() {
           <div>
             <h2 className="text-2xl font-bold mb-3">Operational    Guardrails</h2>
             <p className="text-gray-300">
-              Tie each KPI to budgets and routing rules.    If    reliability falls,
-              route to safer tier;
-  }
+              Tie each KPI to budgets and routing rules. If reliability falls,
+              route to safer tier; if cost exceeds budget, throttle usage; if
+              safety violations spike, auto-rollback to last known good state.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+  );
+}

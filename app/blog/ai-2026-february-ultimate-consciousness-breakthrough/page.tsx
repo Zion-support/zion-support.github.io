@@ -7,11 +7,7 @@ export const metadata = {
   
   title: "AI 2026 February Ultimate Consciousness Breakthrough - Zion Tech Group",
   description: "Discover the groundbreaking February 2026 AI breakthrough achieving synthetic consciousness, universal awareness, and $100B enterprise transformation potential.",
-  keywords: 'AI consciousness, synthetic intelligence, enterprise transformation, February 2026, Zion Tech Group'};;
-export const metadata: Metadata = 
-  title: 'AI 2026 February Ultimate Consciousness Breakthrough - Zion Tech Group',
-  description: 'Discover the groundbreaking February 2026 AI breakthrough achieving synthetic consciousness, universal awareness, and $100B enterprise transformation potential.',
-  keywords: 'AI consciousness, synthetic intelligence, enterprise transformation, February 2026, Zion Tech Group',
+  keywords: 'AI consciousness, synthetic intelligence, enterprise transformation, February 2026, Zion Tech Group'
 };
 
 export default function AI2026FebruaryUltimateConsciousnessBreakthrough() {

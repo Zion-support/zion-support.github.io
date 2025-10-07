@@ -8,19 +8,16 @@ export const metadata = {
   title: "AI 2026 Enterprise Breakthrough: The Next Frontier of Business Transformation",
     description: "Discover how AI is revolutionizing enterprise operations in 2026 with autonomous systems, quantum computing, and advanced automation that deliver unprecedented ROI.",
     type: "article",
-    published Time: "2025-01-30T00:00:00Z",
-    authors: ['Zion Tech Group']};
-export const metadata: Metadata = 
-  title: 'AI 2026 Enterprise Breakthrough: The Next Frontier of Business Transformation',
-  description: 'Discover how AI is revolutionizing enterprise operations in 2026 with autonomous systems, quantum computing, and advanced automation that deliver unprecedented ROI.',
-  keywords: 'AI 2026, enterprise AI, business transformation, autonomous systems, quantum computing, AI automation',
+    publishedTime: "2025-01-30T00:00:00Z",
+    authors: ['Zion Tech Group']
+  },
   openGraph: {
     title: 'AI 2026 Enterprise Breakthrough: The Next Frontier of Business Transformation',
     description: 'Discover how AI is revolutionizing enterprise operations in 2026 with autonomous systems, quantum computing, and advanced automation that deliver unprecedented ROI.',
     type: 'article',
     publishedTime: '2025-01-30T00:00:00Z',
-    authors: ['Zion Tech Group'],
-  },
+    authors: ['Zion Tech Group']
+  }
 };
 
 export default function AI2026EnterpriseBreakthrough() {
