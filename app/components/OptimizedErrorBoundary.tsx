@@ -162,7 +162,7 @@ const ErrorFallback = memo<ErrorFallbackProps>(({ error, errorInfo, errorId, onR
       </h1>
       
       <p className="text-gray-600 mb-4">
-        We're sorry, but something unexpected happened. Please try again.
+        We&apos;re sorry, but something unexpected happened. Please try again.
       </p>
       
       {process.env.NODE_ENV === 'development' && error && (

@@ -56,8 +56,8 @@ class ErrorBoundary extends Component<Props, State> {
                   Oops! Something went wrong
                 </h1>
                 <p className='text-gray-600 mb-6'>
-                  We're sorry for the inconvenience. Please try refreshing the
-                  page.
+                We&apos;re sorry for the inconvenience. Please try refreshing the
+                page.
                 </p>
                 <div className='space-y-3'>
                   <button
