@@ -31,12 +31,12 @@ function App() {
   }, []);
 
   return (
-    <ErrorBoundary>
-      <HelmetProvider>
-        <SEOOptimizer>
-          <AccessibilityEnhancer>
-            <Router>
-              <div className="App">
+    <HelmetProvider>
+      <ErrorBoundary>
+        <Router>
+          <div className="App">
+            <SEOOptimizer>
+              <AccessibilityEnhancer>
                 <Suspense fallback={<LoadingSpinner />}>
                   <Routes>
                     <Route path="/" element={<HomePage />} />
@@ -46,12 +46,12 @@ function App() {
                     <Route path="/enterprise" element={<EnterprisePage />} />
                   </Routes>
                 </Suspense>
-              </div>
-            </Router>
-          </AccessibilityEnhancer>
-        </SEOOptimizer>
-      </HelmetProvider>
-    </ErrorBoundary>
+              </AccessibilityEnhancer>
+            </SEOOptimizer>
+          </div>
+        </Router>
+      </ErrorBoundary>
+    </HelmetProvider>
   );
 }
 
