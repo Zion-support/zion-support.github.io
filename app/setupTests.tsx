@@ -112,8 +112,8 @@ global.PerformanceObserver = class MockPerformanceObserver {
 };
 
 // Mock window.location
-delete (window as { location?: unknown }).location;
-(window as { location: Location }).location = {
+delete (window as any).location;
+(window as any).location = {
   href: 'http://localhost:3000',
   origin: 'http://localhost:3000',
   protocol: 'http:',
@@ -127,4 +127,4 @@ delete (window as { location?: unknown }).location;
   replace: jest.fn(),
   reload: jest.fn(),
   ancestorOrigins: [] as unknown as DOMStringList,
-} as Location;
+};
