@@ -162,3 +162,6 @@ export const initializePerformanceEnhancements = () => {
     console.log('Performance metrics:', metrics);
   }
 };
+
+// Export the main performance enhancer function
+export const performanceEnhancer = initializePerformanceEnhancements;

@@ -1,18 +1,18 @@
 import React from 'react';
 import Link from 'next/link';
 import {
-  ArrowLeftIcon as ArrowLeft,
-  CalendarIcon as Calendar,
-  UserIcon as User,
-  ClockIcon as Clock,
-  TagIcon as Tag,
-  TargetIcon as Target,
-  CheckCircleIcon as CheckCircle,
-  ArrowRightIcon as ArrowRight,
-  ZapIcon as Zap,
-  TrendingUpIcon as TrendingUp,
-  BrainIcon as Brain,
-  CpuIcon as Cpu,
+  ArrowLeft,
+  Calendar,
+  User,
+  Clock,
+  Tag,
+  Target,
+  CheckCircle,
+  ArrowRight,
+  Zap,
+  TrendingUp,
+  Brain,
+  Cpu,
 } from 'lucide-react';
 
 export const metadata = {

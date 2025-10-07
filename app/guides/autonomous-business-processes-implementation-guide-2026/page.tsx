@@ -1,19 +1,19 @@
 import React from 'react';
 import Link from 'next/link';
 import {
-  ArrowLeftIcon as ArrowLeft,
-  BookOpenIcon as BookOpen,
-  CheckCircleIcon as CheckCircle,
-  ClockIcon as Clock,
-  TargetIcon as Target,
-  UsersIcon as Users,
-  ZapIcon as Zap,
-  TrendingUpIcon as TrendingUp,
-  BrainIcon as Brain,
-  ShieldIcon as Shield,
-  SettingsIcon as Settings,
-  BarChart3Icon as BarChart3,
-  StarIcon as Star,
+  ArrowLeft,
+  BookOpen,
+  CheckCircle,
+  Clock,
+  Target,
+  Users,
+  Zap,
+  TrendingUp,
+  Brain,
+  Shield,
+  Settings,
+  BarChart3,
+  Star,
 } from 'lucide-react';
 import type { Metadata } from 'next';
 
