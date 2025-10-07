@@ -168,12 +168,8 @@
     "terser": "^5.31.0",
     "ts-jest": "^29.4.4",
     "typescript": "^5.7.2",
-<<<<<<< HEAD
-    "typescript-eslint": "8.44.1"
-=======
     "typescript-eslint": "8.44.1",
     "vite": "^7.1.9"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-6fe3
   },
   "packageManager": "pnpm@10.17.1",
   "engines": {

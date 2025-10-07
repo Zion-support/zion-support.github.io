@@ -111,6 +111,7 @@ global.PerformanceObserver = class MockPerformanceObserver {
   static readonly supportedEntryTypes: readonly string[] = ['navigation', 'paint', 'largest-contentful-paint', 'first-input', 'layout-shift'];
 };
 
+<<<<<<< HEAD
 // Suppress jsdom navigation warnings
 const originalConsoleError = console.error;
 console.error = (...args) => {
@@ -119,6 +120,13 @@ console.error = (...args) => {
     args[0].includes('Not implemented: navigation')
   ) {
     return;
+=======
+// Suppress JSDOM navigation warnings
+const originalConsoleError = console.error;
+console.error = (...args) => {
+  if (args[0] && args[0].type === 'not implemented' && args[0].message?.includes('navigation')) {
+    return; // Suppress JSDOM navigation warnings
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-d1a0
   }
   originalConsoleError.apply(console, args);
 };
