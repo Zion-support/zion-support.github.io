@@ -4,7 +4,7 @@ import React, { Suspense, lazy, useCallback, useEffect } from 'react';
 import Link from 'next/link';
 import { HelmetProvider } from 'react-helmet-async';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import SEOOptimizer from './components/SEOOptimizer';
+// import SEOOptimizer from './components/SEOOptimizer'; // Unused import
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import PerformanceDashboard from './components/PerformanceDashboard';
 import AdvancedPerformanceMonitor from './components/AdvancedPerformanceMonitor';
@@ -282,4 +282,4 @@ const HomePage: React.FC = () => {
   );
 };
 
-export default HomePage;
+export default App;

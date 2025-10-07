@@ -3,8 +3,8 @@ import React, { useEffect } from 'react';
 // Extend Window interface for Google Analytics
 declare global {
   interface Window {
-    gtag?: (...args: any[]) => void;
-    dataLayer?: any[];
+    gtag?: (...args: unknown[]) => void;
+    dataLayer?: unknown[];
   }
 }
 
