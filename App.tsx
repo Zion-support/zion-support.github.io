@@ -161,25 +161,51 @@ export default function App() {
         window.addEventListener('load', () => {
           const perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
           if (perfData) {
-            console.log('Page Load Performance:', {
+            // Send performance metrics to analytics instead of console
+            const metrics = {
               domContentLoaded: perfData.domContentLoadedEventEnd - perfData.domContentLoadedEventStart,
               loadComplete: perfData.loadEventEnd - perfData.loadEventStart,
               totalTime: perfData.loadEventEnd - perfData.fetchStart
-            });
+            };
+            // Track performance metrics
+            if (typeof window !== 'undefined' && (window as unknown as { gtag?: Function }).gtag) {
+              ((window as unknown as { gtag: Function }).gtag)('event', 'page_performance', {
+                event_category: 'performance',
+                event_label: 'page_load',
+                value: Math.round(metrics.totalTime)
+              });
+            }
+            // Only log in development mode
+            if (process.env.NODE_ENV === 'development') {
+              console.log('Page Load Performance:', metrics);
+            }
           }
         });
       }
     }
   }, []);
+  // State for toast notifications
+  const [showToast, setShowToast] = React.useState(false);
+  const [toastMessage, setToastMessage] = React.useState('');
+
   // Memoized event handlers for better performance
   const handleNewsletterSubmit = useCallback((e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const target = e.target as HTMLFormElement;
     const email = (target.elements.namedItem('email') as HTMLInputElement)?.value;
     if (email) {
-      console.log('Newsletter signup:', email);
-      // Add actual newsletter signup logic here
-      alert('Thank you for subscribing!');
+      // Track newsletter signup
+      if (typeof window !== 'undefined' && (window as unknown as { gtag?: Function }).gtag) {
+        ((window as unknown as { gtag: Function }).gtag)('event', 'newsletter_signup', {
+          event_category: 'engagement',
+          event_label: 'newsletter_form'
+        });
+      }
+      // Show user-friendly toast notification instead of alert
+      setToastMessage('Thank you for subscribing!');
+      setShowToast(true);
+      setTimeout(() => setShowToast(false), 3000);
+      target.reset();
     }
   }, []);
   const handlePhoneClick = useCallback(() => {
@@ -234,6 +260,17 @@ export default function App() {
           >
             ↑
           </button>
+
+          {/* Toast notification */}
+          {showToast && (
+            <div
+              className="fixed top-4 right-4 bg-green-600 text-white px-6 py-3 rounded-lg shadow-lg z-50 animate-fade-in"
+              role="alert"
+              aria-live="polite"
+            >
+              {toastMessage}
+            </div>
+          )}
         </div>
       </HelmetProvider>
     </ErrorBoundary>
