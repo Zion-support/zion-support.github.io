@@ -211,6 +211,18 @@ export const optimizeScrollPerformance = () => {
     };
   };
 
+  const trackLCP = () => {
+    const observer = new PerformanceObserver((list) => {
+      for (const entry of list.getEntries()) {
+        console.log('[Web Vitals] LCP:', entry.startTime);
+      }
+    });
+
+    observer.observe({ entryTypes: ['largest-contentful-paint'] });
+
+    return () => observer.disconnect();
+  };
+
   const trackFID = () => {
     interface FirstInputEntry extends PerformanceEntry {
       processingStart: number;
@@ -233,10 +245,12 @@ export const optimizeScrollPerformance = () => {
 
   // Start tracking
   const cleanupCLS = trackCLS();
+  const cleanupLCP = trackLCP();
   const cleanupFID = trackFID();
 
   return () => {
     cleanupCLS();
+    cleanupLCP();
     cleanupFID();
   };
 };
