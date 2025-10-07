@@ -3,6 +3,8 @@
  * Provides utilities for optimizing performance in React applications
  */
 
+import React from 'react';
+
 /**
  * Debounce function to limit execution rate
  */
@@ -146,21 +148,28 @@ export function runWhenIdle(
   callback: () => void,
   options?: IdleRequestOptions
 ): number {
-  if ('requestIdleCallback' in window) {
+  if (typeof window !== 'undefined' && 'requestIdleCallback' in window) {
     return window.requestIdleCallback(callback, options);
   }
   // Fallback for browsers that don't support requestIdleCallback
-  return window.setTimeout(callback, 1) as unknown as number;
+  if (typeof window !== 'undefined') {
+    return (window as Window & typeof globalThis).setTimeout(callback, 1) as unknown as number;
+  }
+  return setTimeout(callback, 1) as unknown as number;
 }
 
 /**
  * Cancel idle callback
  */
 export function cancelIdle(id: number): void {
-  if ('cancelIdleCallback' in window) {
-    window.cancelIdleCallback(id);
+  if (typeof window !== 'undefined') {
+    if ('cancelIdleCallback' in window) {
+      window.cancelIdleCallback(id);
+    } else {
+      (window as Window & typeof globalThis).clearTimeout(id);
+    }
   } else {
-    window.clearTimeout(id);
+    clearTimeout(id);
   }
 }
 
@@ -246,7 +255,13 @@ export function preloadResources(resources: Array<{ url: string; as: string }>):
  * Check if code splitting is supported
  */
 export function supportsCodeSplitting(): boolean {
-  return typeof import === 'function';
+  try {
+    // Dynamic import is always supported in modern browsers
+    // Check if the environment supports ES modules
+    return typeof Promise !== 'undefined' && typeof Function !== 'undefined';
+  } catch {
+    return false;
+  }
 }
 
 /**
