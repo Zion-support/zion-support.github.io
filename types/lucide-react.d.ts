@@ -26,7 +26,5 @@ declare module 'lucide-react' {
   export const TrendingUp: LucideIcon;
   export const Zap: LucideIcon;
   export const CheckCircle: LucideIcon;
-  export const Phone: LucideIcon;
-  export const Star: LucideIcon;
   // Add more icons as needed
 }

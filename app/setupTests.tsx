@@ -4,6 +4,15 @@
 
 import '@testing-library/jest-dom';
 
+// Suppress jsdom navigation warnings
+const originalConsoleError = console.error;
+console.error = (...args) => {
+  if (args[0]?.includes?.('Not implemented: navigation')) {
+    return;
+  }
+  originalConsoleError(...args);
+};
+
 // Mock window.matchMedia
 Object.defineProperty(window, 'matchMedia', {
   writable: true,
@@ -110,6 +119,7 @@ global.PerformanceObserver = class MockPerformanceObserver {
   takeRecords() {
     return [];
   }
+  static readonly supportedEntryTypes: readonly string[] = ['navigation', 'paint', 'largest-contentful-paint', 'first-input', 'layout-shift'];
 };
 
 // Mock window.location

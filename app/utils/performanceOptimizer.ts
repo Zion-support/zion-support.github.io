@@ -140,6 +140,11 @@ interface PerformanceConfig {
   maxRetries: number;
 }
 
+// LayoutShift interface for type safety
+// interface LayoutShift extends PerformanceEntry {
+//   value: number;
+//   hadRecentInput: boolean;
+// }
 
 class PerformanceOptimizer {
   private config: PerformanceConfig;

@@ -1,5 +1,9 @@
+'use client';
+
 import React, { Suspense, lazy, useCallback } from 'react';
 import Link from 'next/link';
+import SEOOptimizer from './components/SEOOptimizer';
+import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 
 // Lazy load components for better performance
 const ContentShowcase = lazy(() => import('./components/ContentShowcase'));
@@ -32,8 +36,14 @@ const HomePage: React.FC = () => {
 
   return (
     <>
+      <SEOOptimizer 
+        title="Zion Tech Group - Advanced AI and IT Solutions"
+        description="Leading provider of AI-powered enterprise solutions, automation, and digital transformation services. Transform your business with cutting-edge AI micro SaaS services and cloud automation."
+        keywords={['AI solutions', 'enterprise AI', 'digital transformation', 'automation', 'cloud services', 'AI consulting', 'business intelligence', 'machine learning', 'artificial intelligence', 'enterprise software']}
+      />
+      <AccessibilityEnhancer>
         <div className='min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100'>
-          <header className="bg-white shadow-sm sticky top-0 z-50" role="banner">
+        <header className="bg-white shadow-sm sticky top-0 z-50" role="banner">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex justify-between items-center py-6">
               <div className="flex items-center">
@@ -300,7 +310,7 @@ const HomePage: React.FC = () => {
                 <a
                   href="tel:+13024640950"
                   onClick={handlePhoneClick}
-                  className="bg-transparent text-white px-8 py-4 rounded-lg border-2 border-white hover:bg-white hover:text-indigo-600 transition-all duration-300 transform hover:scale-105 font-medium focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-indigo-600">
+                  className="bg-transparent text-white px-8 py-4 rounded-lg border-2 border-white hover:bg-white hover:text-indigo-600 transition-all duration-300 transform hover:scale-105 font-medium">
                   Call +1 302 464 0950
                 </a>
               </div>
@@ -350,6 +360,7 @@ const HomePage: React.FC = () => {
           </div>
         </footer>
         </div>
+      </AccessibilityEnhancer>
     </>
   );
 };
