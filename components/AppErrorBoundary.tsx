@@ -80,8 +80,9 @@ export class AppErrorBoundary extends Component<
     return { hasError: true, error };
   }
 
-  override componentDidCatch(_error: Error, _errorInfo: ErrorInfo) {
-    // Log error for monitoring (removed console.error for production)
+  override componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+     
+    console.error('Error caught by boundary:', error, errorInfo);
     // Here you could send error to monitoring service
   }
 
