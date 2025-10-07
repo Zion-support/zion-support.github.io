@@ -18,6 +18,12 @@ const HomePage = lazy(() => import('./page'));
 const ContactPage = lazy(() => import('./contact/page'));
 const EnterprisePage = lazy(() => import('./enterprise/page'));
 
+<<<<<<< HEAD
+=======
+// Utils
+import { performanceOptimizer } from './utils/performanceOptimizer';
+
+>>>>>>> 48f8bb41616f (Fix TypeScript errors and merge conflicts)
 // Styles
 import '../src/index.css';
 
@@ -32,6 +38,14 @@ const App: React.FC = () => {
       console.error('Unhandled promise rejection:', event.reason);
     });
 
+    // Initialize performance monitoring
+    lazyLoadImages();
+    // Initialize Web Vitals monitoring
+    if (typeof window !== 'undefined' && 'performance' in window) {
+      const metrics = performanceOptimizer.getMetrics();
+      const score = performanceOptimizer.getPerformanceScore();
+      console.log('Performance metrics:', metrics, 'Score:', score);
+    }
     // Performance monitoring is handled by other components
   }, []);
 

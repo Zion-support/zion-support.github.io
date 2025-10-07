@@ -1,6 +1,7 @@
 // Performance monitoring setup
 import { analytics } from '../app/utils/analytics';
-import { ErrorHandler } from '../app/utils/errorHandler';
+import { ErrorHandler } from '../src/utils/errorHandler';
+import { performanceOptimizer } from '../app/utils/performanceOptimizer';
 
 // Create error handler instance
 const errorHandler = new ErrorHandler();
@@ -40,6 +41,21 @@ function initializeMonitoring(): void {
         reason: event.reason,
       });
     });
+
+    // Initialize performance optimizer
+    performanceOptimizer.optimizeImages();
+
+    // Get performance metrics
+    const metrics = performanceOptimizer.getMetrics();
+    const score = performanceOptimizer.getPerformanceScore();
+    
+    // Track performance metrics
+    analytics.track({
+      event: 'performance_metrics',
+      category: 'performance',
+      label: 'measured',
+      value: score
+    });
   } catch (error) {
     // eslint-disable-next-line no-console
     console.error('Failed to initialize monitoring:', error);
@@ -49,4 +65,4 @@ function initializeMonitoring(): void {
 // Initialize monitoring on load
 initializeMonitoring();
 
-export { analytics, errorHandler, initializeMonitoring };
+export { analytics, errorHandler, initializeMonitoring, ErrorHandler, performanceOptimizer };
