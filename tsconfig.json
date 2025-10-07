@@ -118,6 +118,7 @@
     "pages_disabled",
     "src.disabled",
     "temp-files",
+    "temp_disabled",
     "utils.disabled",
     "zion-website_disabled",
     "blockchain-solutions.tsx",
