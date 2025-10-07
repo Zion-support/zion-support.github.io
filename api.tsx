@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // import { ArrowRight, Code, ExternalLink, Shield, Zap } from 'lucide-react';
 import React from 'react';
 import { Link } from 'react-router-dom';
@@ -30,13 +29,8 @@ const API: React.FC = () => {
       example: 'DELETE /api/content/123'
     }
   ];
-=======
-import React from 'react';
->>>>>>> 800d0c7aac9826a6606b7f370413ac3309436671
 
-const Api: React.FC = () => {
   return (
-<<<<<<< HEAD
     <div className='min-h-screen bg-gray-50'>
       {/* Hero Section */}
       <div className='bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20'>
@@ -62,20 +56,9 @@ const Api: React.FC = () => {
               <span className='ml-2 w-5 h-5'>⚛️</span>
             </a>
           </div>
-=======
-    <div className="min-h-screen bg-gray-50 py-12">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            API Services
-          </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Access our powerful API services for AI, cloud, and enterprise solutions
-          </p>
->>>>>>> 800d0c7aac9826a6606b7f370413ac3309436671
         </div>
+      </div>
 
-<<<<<<< HEAD
       {/* Features Section */}
       <div className='py-16 bg-white'>
         <div className='container mx-auto px-4'>
@@ -177,46 +160,6 @@ const Api: React.FC = () => {
               View Documentation
               <span className='ml-2 w-5 h-5'>⚛️</span>
             </a>
-=======
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div className="bg-white rounded-lg shadow-lg p-6">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">
-              AI Services
-            </h3>
-            <p className="text-gray-600 mb-4">
-              Access our AI-powered services including machine learning models,
-              natural language processing, and computer vision.
-            </p>
-            <div className="text-sm text-blue-600">
-              Endpoint: /api/v1/ai
-            </div>
-          </div>
-
-          <div className="bg-white rounded-lg shadow-lg p-6">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">
-              Cloud Services
-            </h3>
-            <p className="text-gray-600 mb-4">
-              Manage cloud infrastructure, deploy applications, and monitor
-              performance through our cloud API.
-            </p>
-            <div className="text-sm text-blue-600">
-              Endpoint: /api/v1/cloud
-            </div>
-          </div>
-
-          <div className="bg-white rounded-lg shadow-lg p-6">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">
-              Analytics
-            </h3>
-            <p className="text-gray-600 mb-4">
-              Get insights from your data with our analytics API for
-              business intelligence and reporting.
-            </p>
-            <div className="text-sm text-blue-600">
-              Endpoint: /api/v1/analytics
-            </div>
->>>>>>> 800d0c7aac9826a6606b7f370413ac3309436671
           </div>
         </div>
       </div>
@@ -224,8 +167,4 @@ const Api: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
 export default API;
-=======
-export default Api;
->>>>>>> 800d0c7aac9826a6606b7f370413ac3309436671

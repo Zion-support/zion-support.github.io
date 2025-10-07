@@ -13,7 +13,6 @@ const UltimateBusinessIntelligence2025Banner = () => {
       description: 'Transform your enterprise with next-generation AI-powered business intelligence that delivers unprecedented insights and competitive advantage.',
       url: '/blog/ai-2025-ultimate-business-intelligence-revolution-ultimate-breakthrough',
       type: 'Blog Post',
-<<<<<<< HEAD
       metrics: {
         roi: '30,000%',
         savings: '$750B+',
@@ -52,49 +51,6 @@ const UltimateBusinessIntelligence2025Banner = () => {
       },
       readingTime: '60 min read',
       featured: true
-=======
-      category: 'AI & Business Intelligence',
-      readTime: '12 min read',
-      publishDate: 'September 30, 2025',
-      featured: true,
-      stats: {
-        roi: '300%',
-        efficiency: '90%',
-        costReduction: '70%'
-      }
-    },
-    {
-      id: 'advanced-analytics-platform',
-      title: 'Advanced Analytics Platform: Real-Time Intelligence',
-      description: 'Deploy cutting-edge analytics that process millions of data points in real-time, delivering actionable insights instantly.',
-      url: '/solutions/advanced-analytics-platform',
-      type: 'Solution',
-      category: 'Analytics & Data',
-      readTime: '8 min read',
-      publishDate: 'September 30, 2025',
-      featured: true,
-      stats: {
-        processingSpeed: '1M+',
-        accuracy: '99.9%',
-        latency: '<100ms'
-      }
-    },
-    {
-      id: 'enterprise-ai-automation',
-      title: 'Enterprise AI Automation: The Future is Now',
-      description: 'Revolutionize your business processes with intelligent automation that learns, adapts, and optimizes continuously.',
-      url: '/solutions/enterprise-ai-automation',
-      type: 'Solution',
-      category: 'AI & Automation',
-      readTime: '15 min read',
-      publishDate: 'September 30, 2025',
-      featured: true,
-      stats: {
-        automation: '95%',
-        timeSaved: '80%',
-        productivity: '200%'
-      }
->>>>>>> 800d0c7aac9826a6606b7f370413ac3309436671
     }
   ];
 
@@ -106,18 +62,16 @@ const UltimateBusinessIntelligence2025Banner = () => {
     return () => clearInterval(timer);
   }, [content.length]);
 
-<<<<<<< HEAD
   useEffect(() => {
     const dismissed = localStorage.getItem('ultimate-business-intelligence-2025-banner-dismissed');
     if (dismissed === 'true') {
       setIsVisible(false);
     }
   }, []);
-=======
+
   const handleSlideChange = (index: number) => {
     setCurrentSlide(index);
   };
->>>>>>> 800d0c7aac9826a6606b7f370413ac3309436671
 
   const handleClose = () => {
     setIsVisible(false);
@@ -136,11 +90,7 @@ const UltimateBusinessIntelligence2025Banner = () => {
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
       </div>
 
-<<<<<<< HEAD
       <div className="relative z-10 container mx-auto px-4 py-16">
-=======
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
->>>>>>> 800d0c7aac9826a6606b7f370413ac3309436671
         {/* Header */}
         <div className="text-center mb-12">
           <div className="flex items-center justify-center gap-2 mb-6">
@@ -189,14 +139,10 @@ const UltimateBusinessIntelligence2025Banner = () => {
 
             {/* Stats */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-              {Object.entries(currentContent.stats).map(([key, value], index) => (
+              {Object.entries(currentContent.metrics).map(([key, value], index) => (
                 <div key={key} className="text-center">
                   <div className="text-3xl font-bold text-cyan-400 mb-2">{value}</div>
-<<<<<<< HEAD
-                  <div className="text-gray-300 text-sm capitalize">{key.replace(/([A-Z])/g, ' $1')}</div>
-=======
                   <div className="text-sm text-gray-300 capitalize">{key.replace(/([A-Z])/g, ' $1').trim()}</div>
->>>>>>> 800d0c7aac9826a6606b7f370413ac3309436671
                 </div>
               ))}
             </div>
@@ -221,23 +167,15 @@ const UltimateBusinessIntelligence2025Banner = () => {
           </div>
 
           {/* Slide Indicators */}
-<<<<<<< HEAD
           <div className="flex justify-center mt-8 space-x-2">
-=======
-          <div className="flex justify-center space-x-2">
->>>>>>> 800d0c7aac9826a6606b7f370413ac3309436671
             {content.map((_, index) => (
               <button
                 key={index}
                 onClick={() => handleSlideChange(index)}
                 className={`w-3 h-3 rounded-full transition-all duration-300 ${
-<<<<<<< HEAD
-                  index === currentSlide ? 'bg-cyan-400' : 'bg-white/30'
-=======
                   index === currentSlide 
                     ? 'bg-cyan-400 scale-125' 
                     : 'bg-white/30 hover:bg-white/50'
->>>>>>> 800d0c7aac9826a6606b7f370413ac3309436671
                 }`}
                 aria-label={`Go to slide ${index + 1}`}
               />
@@ -245,7 +183,6 @@ const UltimateBusinessIntelligence2025Banner = () => {
           </div>
         </div>
 
-<<<<<<< HEAD
         {/* Stats Section */}
         <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8">
           {[
@@ -259,13 +196,6 @@ const UltimateBusinessIntelligence2025Banner = () => {
               <div className="text-gray-300">{stat.label}</div>
             </div>
           ))}
-=======
-        {/* Additional Info */}
-        <div className="text-center text-gray-400 text-sm">
-          <p>
-            {currentContent.readTime} • {currentContent.publishDate} • {currentContent.category}
-          </p>
->>>>>>> 800d0c7aac9826a6606b7f370413ac3309436671
         </div>
       </div>
     </section>
