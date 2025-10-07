@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
-import { LoadingSpinner } from '../app/components/LoadingSpinner';
-import { SEOEnhancer } from '../app/components/SEOEnhancer';
+import LoadingSpinner from '../app/components/LoadingSpinner';
+import SEOEnhancer from '../app/components/SEOEnhancer';
 
 describe('Component Tests', () => {
   test('LoadingSpinner renders correctly', () => {

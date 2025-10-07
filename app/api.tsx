@@ -1,5 +1,5 @@
 // import { ArrowRight, Code, ExternalLink, Shield, Zap } from 'lucide-react';
-import { ArrowRight, Code, ExternalLink, Shield, Zap } from 'lucide-react';
+import { ArrowRight, Code, ExternalLink, Shield, Zap, Cpu } from 'lucide-react';
 import React from 'react';
 import { Link } from 'react-router-dom';
 
@@ -54,7 +54,7 @@ const Api: React.FC = () => {
               className='bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-flex items-center'
             >
               View Endpoints
-              <Atom className='ml-2 w-5 h-5' />
+              <Cpu className='ml-2 w-5 h-5' />
             </a>
           </div>
         </div>
@@ -66,7 +66,7 @@ const Api: React.FC = () => {
           <div className='grid md:grid-cols-3 gap-8'>
             <div className='text-center'>
               <div className='w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4'>
-                <Atom className='w-8 h-8 text-blue-600' />
+                <Cpu className='w-8 h-8 text-blue-600' />
               </div>
               <h3 className='text-xl font-semibold text-gray-900 mb-2'>
                 RESTful APIs
