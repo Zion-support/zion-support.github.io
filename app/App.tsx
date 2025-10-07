@@ -34,9 +34,9 @@ const App: React.FC = () => {
 
     // Initialize performance monitoring
     if (typeof window !== 'undefined' && 'performance' in window) {
-      const metrics = performanceOptimizer.getMetrics();
-      const score = performanceOptimizer.getPerformanceScore();
-      console.log('Performance metrics:', metrics, 'Score:', score);
+      performanceOptimizer.optimize();
+      performanceOptimizer.optimizeImages();
+      console.log('Performance monitoring initialized');
     }
     // Performance monitoring is handled by other components
   }, []);
