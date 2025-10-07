@@ -2,11 +2,7 @@
   "compilerOptions": {
     "target": "ES2020",
     "useDefineForClassFields": true,
-    "lib": [
-      "ES2020",
-      "DOM",
-      "DOM.Iterable"
-    ],
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
     "module": "ESNext",
     "skipLibCheck": true,
     "allowImportingTsExtensions": false,
@@ -23,33 +19,15 @@
     "moduleResolution": "bundler",
     "baseUrl": ".",
     "paths": {
-      "@/*": [
-        "src/*"
-      ],
-      "@/components/*": [
-        "src/components/*"
-      ],
-      "@/pages/*": [
-        "src/pages/*"
-      ],
-      "@/utils/*": [
-        "src/utils/*"
-      ],
-      "@/types/*": [
-        "src/types/*"
-      ],
-      "@/hooks/*": [
-        "src/hooks/*"
-      ],
-      "@/config/*": [
-        "src/config/*"
-      ],
-      "@/data/*": [
-        "src/data/*"
-      ],
-      "@/content/*": [
-        "src/content/*"
-      ]
+      "@/*": ["src/*"],
+      "@/components/*": ["src/components/*"],
+      "@/pages/*": ["src/pages/*"],
+      "@/utils/*": ["src/utils/*"],
+      "@/types/*": ["src/types/*"],
+      "@/hooks/*": ["src/hooks/*"],
+      "@/config/*": ["src/config/*"],
+      "@/data/*": ["src/data/*"],
+      "@/content/*": ["src/content/*"]
     },
     "incremental": true,
     "plugins": [
@@ -63,12 +41,6 @@
     "next-env.d.ts",
     "app/**/*.ts",
     "app/**/*.tsx",
-    "components/**/*.ts",
-    "components/**/*.tsx",
-    "api/**/*.ts",
-    "api/**/*.js",
-    "*.ts",
-    "*.tsx",
     ".next/types/**/*.ts"
   ],
   "exclude": [
@@ -107,10 +79,14 @@
     "hooks/**/*",
     "lib_backup/**/*",
     "services/**/*",
+<<<<<<< HEAD
     "middleware/**/*",
     "automation/**/*",
     "app/blog/**/*",
     "_app_disabled/blog/**/*",
     "app_disabled/blog/**/*"
+=======
+    "middleware/**/*"
+>>>>>>> cursor/fix-errors-and-merge-to-main-edf2
   ]
 }
