@@ -99,6 +99,8 @@ export const getMemoryUsage = () => {
   }
 
   const memory = (performance as { memory?: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
+  if (!memory) return null;
+  
   return {
     used: memory.usedJSHeapSize,
     total: memory.totalJSHeapSize,

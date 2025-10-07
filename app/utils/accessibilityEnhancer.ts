@@ -54,7 +54,7 @@ export const focusManagement = {
       }
     };
 
-    element.addEventListener('keydown', handleTabKey);
+    element.addEventListener('keydown', handleTabKey as EventListener);
     firstElement?.focus();
 
     return () => {
@@ -151,9 +151,10 @@ export const addKeyboardNavigation = () => {
   const customElements = document.querySelectorAll('[data-keyboard-navigation]');
   customElements.forEach((element) => {
     element.setAttribute('tabindex', '0');
-    element.addEventListener('keydown', (e: KeyboardEvent) => {
-      if (e.key === 'Enter' || e.key === ' ') {
-        e.preventDefault();
+    element.addEventListener('keydown', (e: Event) => {
+      const keyEvent = e as KeyboardEvent;
+      if (keyEvent.key === 'Enter' || keyEvent.key === ' ') {
+        keyEvent.preventDefault();
         (element as HTMLElement).click();
       }
     });
