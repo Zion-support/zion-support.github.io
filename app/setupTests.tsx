@@ -62,10 +62,13 @@ Object.defineProperty(window, 'scrollTo', {
 });
 
 // Mock console methods to reduce noise in tests
+// eslint-disable-next-line no-console
 const originalError = console.error;
+// eslint-disable-next-line no-console
 const originalWarn = console.warn;
 
 beforeAll(() => {
+  // eslint-disable-next-line no-console
   console.error = (...args: unknown[]) => {
     if (
       typeof args[0] === 'string' &&
@@ -76,6 +79,7 @@ beforeAll(() => {
     originalError.call(console, ...args);
   };
   
+  // eslint-disable-next-line no-console
   console.warn = (...args: unknown[]) => {
     if (
       typeof args[0] === 'string' &&
@@ -89,7 +93,9 @@ beforeAll(() => {
 });
 
 afterAll(() => {
+  // eslint-disable-next-line no-console
   console.error = originalError;
+  // eslint-disable-next-line no-console
   console.warn = originalWarn;
 });
 

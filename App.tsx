@@ -3,14 +3,14 @@ import { createRoot } from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import HomePage from './app/page';
-import { performanceEnhancer } from './app/utils/performanceEnhancer';
-import { errorHandler } from './app/utils/enhancedErrorHandler';
-import ErrorBoundary from './app/components/ErrorBoundary';
+import { initializePerformanceEnhancements } from './app/utils/performanceEnhancer';
+// import { errorHandler } from './app/utils/enhancedErrorHandler';
+// import ErrorBoundary from './app/components/ErrorBoundary';
 import PerformanceMonitor from './app/components/PerformanceMonitor';
 import EnhancedErrorBoundary from './app/components/EnhancedErrorBoundary';
-import AdvancedSEOOptimizer, { defaultSEOConfig } from './app/components/AdvancedSEOOptimizer';
+import AdvancedSEOOptimizer from './app/components/AdvancedSEOOptimizer';
 import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
-import { performanceOptimizer } from './app/utils/performanceOptimizer';
+// import { performanceOptimizer } from './app/utils/performanceOptimizer';
 
 // Memoized components for better performance
 // const UnifiedContentPromotion = memo(() => (
@@ -97,8 +97,7 @@ const App = () => {
   React.useEffect(() => {
     if (typeof document !== 'undefined') {
       // Initialize enhanced performance monitoring
-      performanceEnhancer.startMonitoring();
-      performanceOptimizer.init();
+      initializePerformanceEnhancements();
       
       // Preload critical fonts
       const fontLink = document.createElement('link');
@@ -152,8 +151,7 @@ const App = () => {
 
     // Cleanup on unmount
     return () => {
-      performanceEnhancer.stopMonitoring();
-      performanceOptimizer.cleanup();
+      // Cleanup handled automatically
     };
   }, []);
 
@@ -186,10 +184,16 @@ const App = () => {
         }}
       >
         <AdvancedSEOOptimizer
-          config={defaultSEOConfig}
+          seoData={{
+            title: 'Zion Tech Group - AI & IT Solutions',
+            description: 'Leading provider of AI-powered enterprise solutions and digital transformation services',
+            keywords: ['AI', 'IT Solutions', 'Digital Transformation', 'Enterprise'],
+            canonicalUrl: 'https://ziontechgroup.com',
+            ogImage: 'https://ziontechgroup.com/og-image.jpg'
+          }}
           enableStructuredData={true}
-          enableAnalytics={true}
-          enablePerformanceTracking={true}
+          enableOpenGraph={true}
+          enableTwitterCards={true}
         />
         <HelmetProvider>
           <BrowserRouter>

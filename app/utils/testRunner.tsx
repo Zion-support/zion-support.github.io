@@ -243,6 +243,7 @@ export class TestRunner {
   ): Promise<{ passed: boolean; diff?: Record<string, unknown> }> {
     // This would typically use a tool like Percy or Chromatic
     // For now, we'll just return a placeholder
+    // eslint-disable-next-line no-console
     console.log(`Visual regression test for ${testName} would run here`);
     
     this.testResults.push({

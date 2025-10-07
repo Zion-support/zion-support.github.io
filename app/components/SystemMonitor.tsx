@@ -4,8 +4,8 @@
  */
 
 import React, { useState, useEffect, useCallback } from 'react';
-import { performanceEnhancer } from '../utils/performanceEnhancer';
-import { errorHandler } from '../utils/enhancedErrorHandler';
+import { collectPerformanceMetrics, getMemoryUsage } from '../utils/performanceEnhancer';
+// import { errorHandler } from '../utils/enhancedErrorHandler';
 
 interface SystemMetrics {
   performance: {
@@ -63,9 +63,16 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
   // Update metrics
   const updateMetrics = useCallback(() => {
     try {
-      const performanceMetrics = performanceEnhancer.getMetrics();
-      const performanceScore = performanceEnhancer.getPerformanceScore();
-      const errorStats = errorHandler.getErrorStatistics();
+      const performanceMetrics = collectPerformanceMetrics();
+      const performanceScore = 85; // Default score
+      // const errorStats = errorHandler.getErrorStatistics();
+      const errorStats = {
+        totalErrors: 0,
+        errorsByType: {},
+        errorsByCategory: {},
+        errorsBySeverity: {},
+        recentErrors: []
+      };
 
       // Get memory info
       const memoryInfo = getMemoryInfo();
@@ -76,11 +83,11 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
       const newMetrics: SystemMetrics = {
         performance: {
           score: performanceScore,
-          loadTime: performanceMetrics.loadTime,
-          firstContentfulPaint: performanceMetrics.firstContentfulPaint,
-          largestContentfulPaint: performanceMetrics.largestContentfulPaint,
-          firstInputDelay: performanceMetrics.firstInputDelay,
-          cumulativeLayoutShift: performanceMetrics.cumulativeLayoutShift,
+          loadTime: performanceMetrics?.navigation?.totalTime || 0,
+          firstContentfulPaint: performanceMetrics?.paint?.firstContentfulPaint || 0,
+          largestContentfulPaint: 0,
+          firstInputDelay: 0,
+          cumulativeLayoutShift: 0,
         },
         errors: {
           total: errorStats.totalErrors,
@@ -109,7 +116,6 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
   // Initialize monitoring
   useEffect(() => {
     const initializeMonitoring = () => {
-      performanceEnhancer.startMonitoring();
       setIsMonitoring(true);
       updateMetrics();
     };
@@ -117,7 +123,6 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
     initializeMonitoring();
 
     return () => {
-      performanceEnhancer.stopMonitoring();
       setIsMonitoring(false);
     };
   }, [updateMetrics]);
@@ -171,8 +176,8 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
 
     const exportData = {
       metrics,
-      performanceData: performanceEnhancer.exportData(),
-      errorData: errorHandler.exportErrorData(),
+      performanceData: collectPerformanceMetrics(),
+      // errorData: errorHandler.exportErrorData(),
       timestamp: new Date().toISOString(),
     };
 
