@@ -357,7 +357,8 @@ const HomePage: React.FC = () => {
             </div>
           </div>
         </footer>
-      </div>
+        </div>
+      </AccessibilityEnhancer>
     </>
   );
 };
