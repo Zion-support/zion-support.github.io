@@ -84,7 +84,10 @@ export class TestRunner {
     // Measure memory usage if available
     let memoryUsage = 0;
     if ('memory' in performance) {
-      memoryUsage = (performance as Performance & { memory: { usedJSHeapSize: number } }).memory.usedJSHeapSize;
+      const memory = (performance as { memory?: { usedJSHeapSize: number } }).memory;
+      if (memory) {
+        memoryUsage = memory.usedJSHeapSize;
+      }
     }
 
     unmount();
@@ -469,4 +472,48 @@ export const testUtils = {
   },
 };
 
+// Test helpers
+export const waitForAsync = (ms: number = 0): Promise<void> => {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+};
+
+export const flushPromises = (): Promise<void> => {
+  return new Promise((resolve) => setImmediate(resolve));
+};
+
+// Performance testing utilities
+export const measureRenderTime = async (
+  fn: () => void | Promise<void>
+): Promise<number> => {
+  const startTime = performance.now();
+  await fn();
+  return performance.now() - startTime;
+};
+
+export const measureMemoryUsage = (): number => {
+  if ('memory' in performance) {
+    const memory = (performance as { memory?: { usedJSHeapSize: number } }).memory;
+    return memory?.usedJSHeapSize || 0;
+  }
+  return 0;
+};
+
+// Test data generators
+export const generateTestId = (prefix: string = 'test'): string => {
+  return `${prefix}-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
+};
+
+export const generateTestData = <T extends Record<string, unknown>>(
+  schema: T,
+  overrides?: Partial<T>
+): T => {
+  return { ...schema, ...overrides };
+};
+
+// Initialize test runner
+export const initializeTestRunner = (config?: Partial<TestConfig>): TestRunner => {
+  return TestRunner.getInstance(config);
+};
+
+// Export test runner instance
 export default TestRunner;
