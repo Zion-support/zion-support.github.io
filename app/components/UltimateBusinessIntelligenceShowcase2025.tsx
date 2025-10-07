@@ -4,7 +4,11 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 
 const UltimateBusinessIntelligenceShowcase2025 = () => {
+<<<<<<< HEAD
   const [activeTab, setActiveTab] = useState('all');
+=======
+  const [currentSlide, setCurrentSlide] = useState(0);
+>>>>>>> origin/main
   
   const content = [
     {
@@ -60,6 +64,7 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
     }
   ];
 
+<<<<<<< HEAD
   const filteredContent = activeTab === 'all' 
     ? content 
     : content.filter(item => item.category === activeTab);
@@ -70,6 +75,9 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
     { id: 'case-study', label: 'Case Studies', count: content.filter(item => item.category === 'case-study').length },
     { id: 'resource', label: 'Resources', count: content.filter(item => item.category === 'resource').length }
   ];
+=======
+  const currentContent = content[currentSlide];
+>>>>>>> origin/main
 
   return (
     <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">
@@ -96,6 +104,7 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
             </span>
             <span className="text-2xl">⚡</span>
           </div>
+<<<<<<< HEAD
 
           <h2 className="text-4xl md:text-6xl font-extrabold text-white mb-6">
             Revolutionary AI Content
@@ -224,6 +233,100 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
             </div>
           </div>
         </div>
+=======
+          <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-6">
+            {currentContent.title}
+          </h1>
+          <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8">
+            {currentContent.description}
+          </p>
+        </div>
+
+        {/* Main Content Card */}
+        <div className="max-w-6xl mx-auto">
+          <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-8 md:p-12 border border-white/20 shadow-2xl">
+            {/* Content Type Badge */}
+            <div className="flex items-center justify-between mb-8">
+              <div className="flex items-center gap-4">
+                <span className="px-4 py-2 bg-gradient-to-r from-cyan-500/30 to-blue-500/30 text-cyan-200 text-sm font-bold rounded-full border border-cyan-400/50">
+                  {currentContent.type}
+                </span>
+                <span className="text-gray-300 text-sm">⏱️ {currentContent.readingTime}</span>
+              </div>
+            </div>
+
+            {/* Metrics Grid */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8">
+              {Object.entries(currentContent.metrics).map(([key, value]) => (
+                <div key={key} className="text-center">
+                  <div className="text-3xl font-bold text-cyan-400 mb-2">{value}</div>
+                  <div className="text-gray-300 text-sm capitalize">{key.replace(/([A-Z])/g, ' $1')}</div>
+                </div>
+              ))}
+            </div>
+
+            {/* Tags */}
+            <div className="flex flex-wrap gap-2 mb-8">
+              {currentContent.tags.map((tag, index) => (
+                <span
+                  key={index}
+                  className="px-3 py-1 bg-white/10 text-gray-300 text-sm rounded-full border border-white/20"
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
+
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
+              <Link
+                href={currentContent.url}
+                className="flex items-center gap-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl hover:shadow-cyan-500/25"
+              >
+                <span className="text-xl">📖</span>
+                <span>Read {currentContent.type}</span>
+                <span className="group-hover:translate-x-1 transition-transform">→</span>
+              </Link>
+              <a
+                href="tel:+13024640950"
+                className="flex items-center gap-3 border-2 border-white/30 hover:border-white/60 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 hover:bg-white/10"
+              >
+                <span className="text-xl">📞</span>
+                <span>Call +1 302 464 0950</span>
+              </a>
+            </div>
+          </div>
+
+          {/* Slide Indicators */}
+          <div className="flex justify-center mt-8 space-x-2">
+            {content.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentSlide(index)}
+                className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                  index === currentSlide ? 'bg-cyan-400' : 'bg-white/30'
+                }`}
+                aria-label={`Go to slide ${index + 1}`}
+              />
+            ))}
+          </div>
+        </div>
+
+        {/* Stats Section */}
+        <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8">
+          {[
+            { value: '500+', label: 'Enterprise Clients' },
+            { value: '30,000%', label: 'Average ROI' },
+            { value: '99.9%', label: 'Success Rate' },
+            { value: '5M+', label: 'Data Points Processed' },
+          ].map((stat, index) => (
+            <div key={index} className="text-center">
+              <div className="text-3xl font-bold text-cyan-400 mb-2">{stat.value}</div>
+              <div className="text-gray-300">{stat.label}</div>
+            </div>
+          ))}
+        </div>
+>>>>>>> origin/main
       </div>
     </section>
   );

@@ -65,6 +65,7 @@
     "app/**/*.tsx",
     "components/**/*.ts",
     "components/**/*.tsx",
+<<<<<<< HEAD
     "lib/**/*.ts",
     "lib/**/*.tsx",
     "utils/**/*.ts",
@@ -79,6 +80,10 @@
     "data/**/*.tsx",
     "content/**/*.ts",
     "content/**/*.tsx",
+=======
+    "api/**/*.ts",
+    "api/**/*.js",
+>>>>>>> origin/main
     "*.ts",
     "*.tsx",
     ".next/types/**/*.ts"
@@ -88,6 +93,7 @@
     ".next",
     "out",
     "dist",
+<<<<<<< HEAD
     "_app_disabled",
     "_conflicted_disabled",
     "_pages_api_disabled",
@@ -123,5 +129,28 @@
     "middleware",
     "lib/integrations",
     "lint-target"
+=======
+    "_app_disabled/**/*",
+    "_conflicted_disabled/**/*",
+    "_pages_api_disabled/**/*",
+    "_pages_disabled/**/*",
+    "admin-api-disabled/**/*",
+    "api-disabled/**/*",
+    "api.disabled/**/*",
+    "api.disabled.temp/**/*",
+    "api-backup/**/*",
+    "apps.backup/**/*",
+    "automation_backup/**/*",
+    "ai-optimization-backups/**/*",
+    "automation_logs/**/*",
+    "all-automations-reports/**/*",
+    "accessibility-reports/**/*",
+    "corrupted-files-backup/**/*",
+    "corrupted_backup/**/*",
+    "corrupted_files_backup_2/**/*",
+    "components_backup/**/*",
+    "data_backup/**/*",
+    "lib_backup/**/*"
+>>>>>>> origin/main
   ]
 }
