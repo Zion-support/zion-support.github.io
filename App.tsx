@@ -4,6 +4,8 @@ import { BrowserRouter } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import HomePage from './app/page';
 import { performanceEnhancer } from './app/utils/performanceEnhancer';
+import ErrorBoundary from './app/components/ErrorBoundary';
+import PerformanceMonitor from './app/components/PerformanceMonitor';
 
 // Memoized components for better performance
 const App = () => {
@@ -69,11 +71,14 @@ const App = () => {
     };
   }, []);
   return (
-    <HelmetProvider>
-      <BrowserRouter>
-        <HomePage />
-      </BrowserRouter>
-    </HelmetProvider>
+    <ErrorBoundary>
+      <HelmetProvider>
+        <BrowserRouter>
+          <HomePage />
+          <PerformanceMonitor />
+        </BrowserRouter>
+      </HelmetProvider>
+    </ErrorBoundary>
   );
 };
 

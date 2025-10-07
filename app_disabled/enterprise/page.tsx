@@ -79,6 +79,7 @@ export default function EnterprisePage() {
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+<<<<<<< HEAD
             {/* Solution Cards */}
             {[
               {
@@ -157,6 +158,8 @@ export default function EnterprisePage() {
           </div>
         </div>
       </section>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-e42d
             {/* Solution 1 */}
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-cyan-500/50 transition-all duration-300 group">
               <div className="text-4xl mb-4">🤖</div>
@@ -192,6 +195,7 @@ export default function EnterprisePage() {
               </ul>
             </div>
 
+<<<<<<< HEAD
 >>>>>>> ad3f5667eee57a9969ff433042f2200dd6375572
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
@@ -210,6 +214,8 @@ export default function EnterprisePage() {
                 <div className="text-gray-300">{stat.label}</div>
               </div>
             ))}
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-e42d
             {/* Solution 3 */}
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-green-500/50 transition-all duration-300 group">
               <div className="text-4xl mb-4">🔒</div>
@@ -226,11 +232,15 @@ export default function EnterprisePage() {
                 <li>• Real-time threat detection</li>
               </ul>
             </div>
+<<<<<<< HEAD
 >>>>>>> ad3f5667eee57a9969ff433042f2200dd6375572
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-e42d
           </div>
         </div>
       </section>
       {/* CTA Section */}
+<<<<<<< HEAD
       <section className="py-24">
         <div className="container mx-auto px-4">
           <div className="text-center bg-white/5 backdrop-blur-lg rounded-3xl p-12 border border-white/20">
@@ -257,6 +267,8 @@ export default function EnterprisePage() {
                 <span>Get Enterprise Consultation</span>
               </a>
             </div>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-e42d
       <section className="py-24 bg-gradient-to-r from-cyan-500/10 to-purple-500/10">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold text-white mb-6">
@@ -279,7 +291,10 @@ export default function EnterprisePage() {
             >
               Call: +1 (302) 464-0950
             </a>
+<<<<<<< HEAD
 >>>>>>> ad3f5667eee57a9969ff433042f2200dd6375572
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-e42d
           </div>
         </div>
       </section>
