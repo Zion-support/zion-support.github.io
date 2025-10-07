@@ -8,7 +8,6 @@ export const metadata: Metadata = {
     title: 'January 2025 Advanced AI Revolution: Next-Generation Enterprise Transformation',
     description: 'Revolutionary AI breakthroughs with $2.8B proven ROI, 99.9% operational autonomy, and zero downtime.',
     type: 'article',
-    publishedTime: '2025-01-15T00:00:00Z',
     authors: ['Zion Tech Group'],
   },
   twitter: {
