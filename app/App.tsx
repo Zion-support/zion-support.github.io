@@ -32,13 +32,13 @@ const App: React.FC = () => {
       console.error('Unhandled promise rejection:', event.reason);
     });
 
-    // Initialize performance monitoring
+    // Initialize performance monitoring and Web Vitals
     if (typeof window !== 'undefined' && 'performance' in window) {
-      performanceOptimizer.optimize();
       performanceOptimizer.optimizeImages();
-      console.log('Performance monitoring initialized');
+      const metrics = performanceOptimizer.getMetrics();
+      const score = performanceOptimizer.getPerformanceScore();
+      console.log('Performance metrics:', metrics, 'Score:', score);
     }
-    // Performance monitoring is handled by other components
   }, []);
 
   return (
