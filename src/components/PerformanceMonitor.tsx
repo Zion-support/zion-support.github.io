@@ -56,8 +56,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       const observer = performanceOptimizer.monitorLongTasks(
         (entries: PerformanceEntryList) => {
           setLongTasks(prev => [...prev, ...entries]);
-          // eslint-disable-next-line no-console
-console.warn('Long tasks detected:', entries);
+          // Long tasks detected - could be reported to analytics
         }
       );
 
@@ -106,9 +105,8 @@ console.warn('Long tasks detected:', entries);
       observer.observe({
         entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'],
       });
-    } catch (e) {
-      // eslint-disable-next-line no-console
-console.warn('Performance Observer not supported:', e);
+    } catch {
+      // Performance Observer not supported - fallback handling
     }
 
     return () => {
@@ -122,8 +120,7 @@ console.warn('Performance Observer not supported:', e);
       process?.env.NODE_ENV === 'development' &&
       Object.keys(metrics).length > 0
     ) {
-      // eslint-disable-next-line no-console
-console.log('Performance Metrics:', metrics);
+      // Performance metrics available for development debugging
     }
   }, [metrics]);
 
