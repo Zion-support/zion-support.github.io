@@ -170,6 +170,25 @@ class PerformanceOptimizer {
 
   // Measure page load performance
   measurePageLoad(): WebVitalsMetrics | null {
+  public reportWebVitals(metrics: WebVitalsMetrics): void {
+    reportWebVitals(metrics);
+  }
+
+  public measurePageLoadMetrics(): WebVitalsMetrics | null {
+    return measurePageLoad();
+  }
+
+  public monitorLongTasks(callback: (entries: PerformanceEntry[]) => void): PerformanceObserver | null {
+    return monitorLongTasks(callback);
+  }
+
+  // Get performance metrics
+  getMetrics(): Record<string, number> {
+    return Object.fromEntries(this.metrics);
+  }
+
+  // Measure page load performance
+  measurePageLoadTiming(): Record<string, number> | null {
     if (typeof window === 'undefined' || !window.performance) {
       return null;
     }
@@ -183,6 +202,20 @@ class PerformanceOptimizer {
       FCP: navigation?.responseStart - navigation?.fetchStart,
       TTFB: timing.responseStart - timing.navigationStart
     };
+  }
+
+    return {
+      loadTime: timing.loadEventEnd - timing.navigationStart,
+      interactiveTime: timing.domInteractive - timing.navigationStart,
+      domContentLoaded: timing.domContentLoadedEventEnd - timing.navigationStart
+    };
+  }
+
+  // Report web vitals
+  reportWebVitals(metrics: Record<string, number>): void {
+    if (process.env.NODE_ENV === 'development') {
+      console.log('Web Vitals:', metrics);
+    }
   }
 
   // Initialize all optimizations
@@ -316,6 +349,8 @@ export const checkPerformanceBudget = (budget: PerformanceBudget): {
 export const performanceOptimizer = PerformanceOptimizer.getInstance();
 
 // Export default object with all functions
+export const performanceOptimizer = PerformanceOptimizer.getInstance();
+
 export default {
   prefetchResources,
   preconnectDomains,
