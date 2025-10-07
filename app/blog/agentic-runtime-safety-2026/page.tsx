@@ -12,13 +12,13 @@ export default function AgenticRuntimeSafety2026() {
           Agentic Runtime Safety 2026
         </h1>
         <p className='text-white/70 mb-8'>
-          Budgets, sandboxes, and instant rollback for safe autonomy.
+          Budgets, sandboxes and instant rollback for safe autonomy.
         </p>
 
         <section className='space-y-6'>
           <p className='text-slate-300'>
             Operate agent systems confidently with explicit budgets, sandboxed
-            tools, and automated rollback paths tied to KPI-linked canaries.
+            tools and automated rollback paths tied to KPI-linked canaries.
           </p>
           <ul className='list-disc list-inside space-y-2 text-slate-300'>
             <li>Budgeted actions with approvals and audit trails</li>

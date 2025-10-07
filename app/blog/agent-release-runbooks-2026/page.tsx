@@ -1,16 +1,11 @@
-import ArrowRight from 'next/link';
+import Link from 'next/link';
 
 export const metadata = {
-  title: 'Agent Release Runbooks 2026: Approvals, Budgets, Instant Rollback',
+  title: 'Agent Release Runbooks 2026',
   description:
-    'Operational playbooks for safe autonomous agent releases: approvals, budget guards, canary evals, and instant rollback.',
-  openGraph: {
-    title: 'Agent Release Runbooks 2026',
-    description:
-      'Approvals + budgets + KPI-linked canary evals with instant rollback for safe agent releases.',
-    type: 'article',
-    publishedTime: '2026-01-30T00:00:00Z',
-  },
+    'Approvals + budgets + KPI-linked canary evals with instant rollback for safe agent releases.',
+  type: 'article',
+  publishedTime: '2026-01-30T00:00:00Z',
 };
 
 export default function AgentReleaseRunbooks2026() {
@@ -18,12 +13,12 @@ export default function AgentReleaseRunbooks2026() {
     <div className='min-h-screen bg-gradient-to-br from-fuchsia-950 via-purple-950 to-indigo-950 text-white'>
       <main className='container mx-auto px-6 py-12'>
         <nav className='mb-8'>
-          <ArrowRight
+          <Link
             href='/blog'
             className='text-fuchsia-300 hover:text-fuchsia-200 transition-colors'
           >
             ← Back to Blog
-          </ArrowRight>
+          </Link>
         </nav>
 
         <article className='max-w-4xl mx-auto'>
@@ -37,11 +32,11 @@ export default function AgentReleaseRunbooks2026() {
               <span className='text-white/60 text-sm'>15 min read</span>
             </div>
             <h1 className='text-4xl md:text-5xl font-extrabold mb-4 bg-gradient-to-r from-fuchsia-300 to-purple-300 bg-clip-text text-transparent'>
-              Agent Release Runbooks: Approvals, Budgets, and Instant Rollback
+              Agent Release Runbooks: Approvals, Budgets and Instant Rollback
             </h1>
             <p className='text-lg text-white/80'>
               Ship autonomous capabilities with confidence using standardized
-              approvals, budget guards, KPI-linked canary evals, and automated
+              approvals, budget guards, KPI-linked canary evals and automated
               rollback playbooks.
             </p>
           </header>

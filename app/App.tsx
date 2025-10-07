@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, lazy, Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 
@@ -6,69 +6,50 @@ import { HelmetProvider } from 'react-helmet-async';
 import ErrorBoundary from '../src/components/ErrorBoundary';
 import SEOOptimizer from '../src/components/SEOOptimizer';
 import AccessibilityEnhancer from '../src/components/AccessibilityEnhancer';
-import PerformanceDashboard from './components/PerformanceDashboard';
+import LoadingSpinner from '../src/components/LoadingSpinner';
 
-// Pages
-import HomePage from './page';
+// Lazy load pages for better performance
+const HomePage = lazy(() => import('./page'));
+const AboutPage = lazy(() => import('./about/page'));
+const ServicesPage = lazy(() => import('./services/page'));
+const ContactPage = lazy(() => import('./contact/page'));
+const TeamPage = lazy(() => import('./team/page'));
+const PrivacyPage = lazy(() => import('./privacy/page'));
+const TermsPage = lazy(() => import('./terms/page'));
+const EnterprisePage = lazy(() => import('./enterprise/page'));
 
 // Utils
-import { performanceOptimizer } from '../src/utils/performanceOptimizer';
-
-// Styles
-import '../index.css';
+import performanceOptimizer from '../src/utils/performanceOptimizer';
 
 const App: React.FC = () => {
   useEffect(() => {
-    // Initialize global error handling
-    console.log('App initialized');
-
-    // Initialize performance monitoring
-    performanceOptimizer.startRender('App');
-
-    console.log('Performance monitoring initialized');
-    console.log(
-      '🚀 Zion Tech Group App initialized with comprehensive monitoring',
-    );
+    // Initialize performance optimizations
+    performanceOptimizer.init();
   }, []);
 
   return (
-    <HelmetProvider>
-      <ErrorBoundary>
-        <SEOOptimizer>
-          <AccessibilityEnhancer>
-            <Router>
-              <div className='App'>
-                {/* Skip to main content link for accessibility */}
-                <a
-                  href='#main-content'
-                  className='skip-link'
-                  onClick={e => {
-                    e.preventDefault();
-                    const main =
-                      document.querySelector('main') ||
-                      document.querySelector('#main-content');
-                    if (main) {
-                      main.focus();
-                      main.scrollIntoView({ behavior: 'smooth' });
-                    }
-                  }}
-                >
-                  Skip to main content
-                </a>
-
-                <Routes>
-                  <Route path='/' element={<HomePage />} />
-                  {/* Add more routes as needed */}
-                </Routes>
-
-                {/* Performance Dashboard */}
-                <PerformanceDashboard />
-              </div>
-            </Router>
-          </AccessibilityEnhancer>
-        </SEOOptimizer>
-      </ErrorBoundary>
-    </HelmetProvider>
+    <ErrorBoundary>
+      <HelmetProvider>
+        <SEOOptimizer />
+        <AccessibilityEnhancer>
+          <div></div>
+        </AccessibilityEnhancer>
+        <Router>
+          <Suspense fallback={<LoadingSpinner />}>
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+              <Route path="/about" element={<AboutPage />} />
+              <Route path="/services" element={<ServicesPage />} />
+              <Route path="/contact" element={<ContactPage />} />
+              <Route path="/team" element={<TeamPage />} />
+              <Route path="/privacy" element={<PrivacyPage />} />
+              <Route path="/terms" element={<TermsPage />} />
+              <Route path="/enterprise" element={<EnterprisePage />} />
+            </Routes>
+          </Suspense>
+        </Router>
+      </HelmetProvider>
+    </ErrorBoundary>
   );
 };
 

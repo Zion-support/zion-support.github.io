@@ -1,4 +1,4 @@
-import ArrowRight from 'next/link';
+import Link from 'next/link';
 
 export const metadata = {
   title: 'Agentic Risk Mitigation 2026 — Guardrails, Evals, and Safe Autonomy',
@@ -15,8 +15,8 @@ export default function AgenticRiskMitigation2026Page() {
             Agentic Risk Mitigation 2026
           </h1>
           <p className='mt-4 text-lg md:text-xl text-purple-50'>
-            A practical playbook for safe, reliable, and governed autonomous
-            agents in the enterprise.
+            A practical playbook for safe, reliable and governed autonomous agents
+            in the enterprise.
           </p>
           <div className='mt-6 flex flex-wrap gap-3 text-sm'>
             <span className='bg-white/20 px-3 py-1 rounded-full'>
@@ -72,7 +72,7 @@ export default function AgenticRiskMitigation2026Page() {
           <h3>Deployment quickstart</h3>
           <ol>
             <li>Define risk taxonomy and map to agent capabilities</li>
-            <li>Instrument policies, budgets, and escalation paths</li>
+            <li>Instrument policies, budgets and escalation paths</li>
             <li>Stand up eval pipelines with golden tasks</li>
             <li>
               Pilot under tight budgets; expand with observed safety margins
@@ -88,12 +88,12 @@ export default function AgenticRiskMitigation2026Page() {
               Download the operational checklist to productionize these controls
               inside your platform.
             </p>
-            <ArrowRight
+            <Link
               href='/case-studies'
               className='inline-block bg-purple-600 hover:bg-purple-700 text-white px-5 py-3 rounded-lg font-semibold'
             >
               Explore case studies →
-            </ArrowRight>
+            </Link>
           </div>
         </div>
       </section>

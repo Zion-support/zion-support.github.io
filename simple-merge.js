@@ -2,14 +2,12 @@
 
 /**
  * Simple Merge - Handles new branches with conflict resolution
- */
-
-import { execSync } from 'child_process';
+ */import { execSync } from 'child_process';
 import fs from 'fs';
 
 console.log('🚀 Starting Simple Merge Process...\n');
 
-// List of new branches to merge (from the fetch output)
+//List of new branches to merge (from the fetch output)
 const newBranches = [
   'cursor/fix-errors-and-merge-to-main-214f',
   'cursor/fix-errors-and-merge-to-main-25ca',
@@ -40,32 +38,32 @@ const newBranches = [
 
 console.log(`📊 Found ${newBranches.length} new branches to process\n`);
 
-// Function to merge a single branch
+//Function to merge a single branch
 function mergeBranch(branchName) {
   console.log(`\n🔄 Processing ${branchName}...`);
 
   try {
-    // Try direct merge
+    //Try direct merge
     execSync(
       `git merge origin/${branchName} --no-ff -m "Merge ${branchName} into main"`,
-      { stdio: 'inherit' },
+      { stdio: 'inherit' }
     );
     console.log(`✅ Successfully merged ${branchName}`);
     return { success: true, method: 'direct' };
   } catch (error) {
     console.log(
-      `⚠️  Direct merge failed for ${branchName}, attempting conflict resolution...`,
+      `⚠️  Direct merge failed for ${branchName}, attempting conflict resolution...`
     );
 
     try {
-      // Try auto-resolve with theirs strategy
+      //Try auto-resolve with theirs strategy
       execSync('git reset --hard HEAD', { stdio: 'inherit' });
       execSync(
         `git merge origin/${branchName} -X theirs --no-ff -m "Auto-merge ${branchName} (theirs strategy)"`,
-        { stdio: 'inherit' },
+        { stdio: 'inherit' }
       );
       console.log(
-        `✅ Auto-resolved conflicts for ${branchName} using 'theirs' strategy`,
+        `✅ Auto-resolved conflicts for ${branchName} using 'theirs' strategy`
       );
       return { success: true, method: 'theirs' };
     } catch (theirsError) {
@@ -73,14 +71,14 @@ function mergeBranch(branchName) {
     }
 
     try {
-      // Try auto-resolve with ours strategy
+      //Try auto-resolve with ours strategy
       execSync('git reset --hard HEAD', { stdio: 'inherit' });
       execSync(
         `git merge origin/${branchName} -X ours --no-ff -m "Auto-merge ${branchName} (ours strategy)"`,
-        { stdio: 'inherit' },
+        { stdio: 'inherit' }
       );
       console.log(
-        `✅ Auto-resolved conflicts for ${branchName} using 'ours' strategy`,
+        `✅ Auto-resolved conflicts for ${branchName} using 'ours' strategy`
       );
       return { success: true, method: 'ours' };
     } catch (oursError) {
@@ -88,10 +86,10 @@ function mergeBranch(branchName) {
     }
 
     try {
-      // Try manual conflict resolution
+      //Try manual conflict resolution
       execSync('git reset --hard HEAD', { stdio: 'inherit' });
 
-      // Get conflicted files
+      //Get conflicted files
       const conflictedFiles = execSync('git diff --name-only --diff-filter=U', {
         encoding: 'utf8',
       })
@@ -99,10 +97,10 @@ function mergeBranch(branchName) {
         .filter(file => file.trim());
 
       console.log(
-        `🔧 Manually resolving ${conflictedFiles.length} conflicted files...`,
+        `🔧 Manually resolving ${conflictedFiles.length} conflicted files...`
       );
 
-      // For each conflicted file, try to resolve
+      //For each conflicted file, try to resolve
       for (const file of conflictedFiles) {
         if (file.trim()) {
           try {
@@ -115,7 +113,7 @@ function mergeBranch(branchName) {
         }
       }
 
-      // Complete the merge
+      //Complete the merge
       execSync(`git commit -m "Manual conflict resolution for ${branchName}"`, {
         stdio: 'inherit',
       });
@@ -125,7 +123,7 @@ function mergeBranch(branchName) {
       console.log(`❌ Manual resolution failed for ${branchName}`);
     }
 
-    // If all strategies fail, abort and skip
+    //If all strategies fail, abort and skip
     try {
       execSync('git merge --abort', { stdio: 'inherit' });
       console.log(`⏭️  Skipping ${branchName} due to unresolvable conflicts`);
@@ -137,7 +135,7 @@ function mergeBranch(branchName) {
   }
 }
 
-// Execute merge process
+//Execute merge process
 console.log('🚀 Starting merge process...\n');
 
 const results = {
@@ -145,13 +143,15 @@ const results = {
   failed: [],
   summary: {
     total: 0,
-    successful: 0,
+  successful: 0,
     failed: 0,
-    methods: { direct: 0, theirs: 0, ours: 0, manual: 0, failed: 0 },
+    methods: { direct: 0,
+  theirs: 0, ours: 0,
+  manual: 0, failed: 0 },
   },
 };
 
-// Merge each branch
+//Merge each branch
 for (const branch of newBranches) {
   const result = mergeBranch(branch);
   results.summary.total++;
@@ -167,7 +167,7 @@ for (const branch of newBranches) {
   }
 }
 
-// Generate report
+//Generate report
 console.log('\n📊 MERGE RESULTS:');
 console.log(`  Total branches processed: ${results.summary.total}`);
 console.log(`  Successful merges: ${results.summary.successful}`);

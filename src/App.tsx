@@ -1,82 +1,136 @@
-import { Suspense, lazy, useEffect } from 'react';
+import React, { Suspense, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-// import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
-// import EnhancedSEO from './components/EnhancedSEO';
-import EnhancedLoading from './components/EnhancedLoading';
-import performanceOptimizer from './utils/performance-optimizer';
-import SystemMonitor from './components/SystemMonitor';
-import performanceMonitor from './utils/advanced-performance-monitor';
+import { HelmetProvider } from 'react-helmet-async';
 import './index.css';
 
-// Lazy load pages for better performance
-const Home = lazy(() => import('./pages/Home'));
-const About = lazy(() => import('./pages/About'));
-const Services = lazy(() => import('./pages/Services'));
-const Blog = lazy(() => import('./pages/Blog'));
-const Contact = lazy(() => import('./pages/Contact'));
-const Team = lazy(() => import('./pages/Team'));
-const Privacy = lazy(() => import('./pages/Privacy'));
-const Terms = lazy(() => import('./pages/Terms'));
+// Import components
+import ErrorBoundary from './components/ErrorBoundary';
+import SEOOptimizer from './components/SEOOptimizer';
+import AccessibilityEnhancer from './components/AccessibilityEnhancer';
+import LoadingSpinner from './components/LoadingSpinner';
+
+// Import page components
+import HomePage from '../app/page';
+import AboutPage from '../app/about/page';
+import ContactPage from '../app/contact/page';
+import ServicesPage from '../app/services/page';
+import TeamPage from '../app/team/page';
+import PrivacyPage from '../app/privacy/page';
+import TermsPage from '../app/terms/page';
+
+// Simple placeholder components
+const Home = () => (
+  <div className="min-h-screen flex items-center justify-center bg-gray-50">
+    <div className="text-center">
+      <h1 className="text-4xl font-bold text-gray-900 mb-4">Welcome to Zion Tech Group</h1>
+      <p className="text-xl text-gray-600">Advanced AI and IT Solutions</p>
+    </div>
+  </div>
+);
+
+const About = () => (
+  <div className="min-h-screen flex items-center justify-center bg-gray-50">
+    <div className="text-center">
+      <h1 className="text-4xl font-bold text-gray-900 mb-4">About Us</h1>
+      <p className="text-xl text-gray-600">Leading AI and IT Solutions Provider</p>
+    </div>
+  </div>
+);
+
+const Services = () => (
+  <div className="min-h-screen flex items-center justify-center bg-gray-50">
+    <div className="text-center">
+      <h1 className="text-4xl font-bold text-gray-900 mb-4">Our Services</h1>
+      <p className="text-xl text-gray-600">Comprehensive AI and IT Solutions</p>
+    </div>
+  </div>
+);
+
+const Blog = () => (
+  <div className="min-h-screen flex items-center justify-center bg-gray-50">
+    <div className="text-center">
+      <h1 className="text-4xl font-bold text-gray-900 mb-4">Blog</h1>
+      <p className="text-xl text-gray-600">Latest AI and Technology Insights</p>
+    </div>
+  </div>
+);
+
+const Contact = () => (
+  <div className="min-h-screen flex items-center justify-center bg-gray-50">
+    <div className="text-center">
+      <h1 className="text-4xl font-bold text-gray-900 mb-4">Contact Us</h1>
+      <p className="text-xl text-gray-600">Get in touch with our experts</p>
+    </div>
+  </div>
+);
+
+const Team = () => (
+  <div className="min-h-screen flex items-center justify-center bg-gray-50">
+    <div className="text-center">
+      <h1 className="text-4xl font-bold text-gray-900 mb-4">Our Team</h1>
+      <p className="text-xl text-gray-600">Meet our expert professionals</p>
+    </div>
+  </div>
+);
+
+const Privacy = () => (
+  <div className="min-h-screen flex items-center justify-center bg-gray-50">
+    <div className="text-center">
+      <h1 className="text-4xl font-bold text-gray-900 mb-4">Privacy Policy</h1>
+      <p className="text-xl text-gray-600">Your privacy is important to us</p>
+    </div>
+  </div>
+);
+
+const Terms = () => (
+  <div className="min-h-screen flex items-center justify-center bg-gray-50">
+    <div className="text-center">
+      <h1 className="text-4xl font-bold text-gray-900 mb-4">Terms of Service</h1>
+      <p className="text-xl text-gray-600">Terms and conditions</p>
+    </div>
+  </div>
+);
 
 function App() {
   useEffect(() => {
-    // Initialize all optimization systems
+    // Initialize basic optimizations
     const initializeOptimizations = () => {
       try {
-        // Initialize performance monitoring
-        performanceOptimizer.startPerformanceMonitoring();
-        performanceMonitor.startMonitoring();
-        
-        // Initialize security enhancements
-        // securityEnhancer.setupSecurityMonitoring();
-        
-        // Initialize SEO tracking
-        // seoOptimizer.trackPageView();
-        
-        // Set up error reporting
-        // errorHandler.setReportingEnabled(true);
-        
-        console.log('All optimization systems initialized successfully');
+        console.log('App initialized successfully');
       } catch (error) {
-        console.error('Failed to initialize optimization systems:', error);
-        // errorHandler.handleError({
-        //   type: 'Initialization Error' 
-        //   message: 'Failed to initialize optimization systems' 
-        //   error: error.message 
-        //   timestamp: new Date().toISOString()
-        // });
+        console.error('Failed to initialize app:', error);
       }
     };
 
     // Initialize optimizations after component mount
     initializeOptimizations();
-
-    // Cleanup on unmount
-    return () => {
-      performanceOptimizer.cleanup();
-      performanceMonitor.stopMonitoring();
-    };
   }, []);
 
   return (
-    <div>
-      {/* <EnhancedSEO /> */}
-      <Router>
-        <Suspense fallback={<EnhancedLoading />}>
-          <Routes>
-            <Route path='/' element={<Home />} />
-            <Route path='/about' element={<About />} />
-            <Route path='/services' element={<Services />} />
-            <Route path='/blog' element={<Blog />} />
-            <Route path='/contact' element={<Contact />} />
-            <Route path='/team' element={<Team />} />
-            <Route path='/privacy' element={<Privacy />} />
-            <Route path='/terms' element={<Terms />} />
-          </Routes>
-        </Suspense>
-      </Router>
-      <SystemMonitor />
-    </div>
+    <HelmetProvider>
+      <ErrorBoundary>
+        <SEOOptimizer>
+          <AccessibilityEnhancer>
+            <Router>
+              <div className="App">
+                <Suspense fallback={<LoadingSpinner />}>
+                  <Routes>
+                    <Route path="/" element={<HomePage />} />
+                    <Route path="/about" element={<AboutPage />} />
+                    <Route path="/contact" element={<ContactPage />} />
+                    <Route path="/services" element={<ServicesPage />} />
+                    <Route path="/team" element={<TeamPage />} />
+                    <Route path="/privacy" element={<PrivacyPage />} />
+                    <Route path="/terms" element={<TermsPage />} />
+                    <Route path="/blog" element={<Blog />} />
+                  </Routes>
+                </Suspense>
+              </div>
+            </Router>
+          </AccessibilityEnhancer>
+        </SEOOptimizer>
+      </ErrorBoundary>
+    </HelmetProvider>
   );
 }
 

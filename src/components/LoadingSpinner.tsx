@@ -1,12 +1,31 @@
-import, React, from 'rea, c, t';
+import React from 'react';
 
-interface, LoadingSpinnerProp, s { 
-  si, z, e?: 'sma, l, l' | 'medi, u, m' | 'lar, g, e';
-  col, o, r?: 'bl, u, e' | 'whi, t, e' | 'gr, a, y';
-  te, x, t?: string;
-  fullScre, e, n ?  : boolean;
- }
+interface LoadingSpinnerProps {
+  size?: 'sm' | 'md' | 'lg';
+  className?: string;
+}
 
-const, LoadingSpinne, r: Rea, c, t.FC<LoadingSpinnerPro, p, s> = ({
-  si, z, e = 'me, d, i, u, m',
-  te, x, t = 'Load, i, n, g...',
+const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
+  size = 'md',
+  className = '',
+}) => {
+  const sizeClasses = {
+    sm: 'w-4 h-4',
+    md: 'w-8 h-8',
+    lg: 'w-12 h-12',
+  };
+
+  return (
+    <div className={`flex justify-center items-center ${className}`}>
+      <div
+        className={`${sizeClasses[size]} border-4 border-gray-200 border-t-blue-600 rounded-full animate-spin`}
+        role="status"
+        aria-label="Loading"
+      >
+        <span className="sr-only">Loading...</span>
+      </div>
+    </div>
+  );
+};
+
+export default LoadingSpinner;

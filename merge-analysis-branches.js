@@ -3,14 +3,12 @@
 /**
  * Merge Analysis and Improvement Branches
  * This script will merge all the analysis and improvement branches
- */
-
-import { execSync } from 'child_process';
+ */import { execSync } from 'child_process';
 import fs from 'fs';
 
 console.log('🚀 Starting Analysis and Improvement Branch Merge Process...\n');
 
-// Step 1: Ensure we're on main and up to date
+//Step 1: Ensure we're on main and up to date
 console.log('📋 Step 1: Preparing main branch...');
 try {
   execSync('git checkout main', { stdio: 'inherit' });
@@ -21,7 +19,7 @@ try {
   process.exit(1);
 }
 
-// Step 2: Get analysis and improvement branches
+//Step 2: Get analysis and improvement branches
 console.log('🔍 Step 2: Finding analysis and improvement branches...');
 const analysisBranches = [
   'cursor/analyze-improve-and-deploy-application-0472',
@@ -37,40 +35,40 @@ const analysisBranches = [
 ];
 
 console.log(
-  `📊 Found ${analysisBranches.length} analysis branches to process\n`,
+  `📊 Found ${analysisBranches.length} analysis branches to process\n`
 );
 
-// Step 3: Enhanced merge function with conflict resolution
+//Step 3: Enhanced merge function with conflict resolution
 function mergeAnalysisBranch(branchName) {
   console.log(`\n🔄 Processing ${branchName}...`);
 
   try {
-    // Fetch the branch
+    //Fetch the branch
     execSync(`git fetch origin ${branchName}`, { stdio: 'inherit' });
 
-    // Try direct merge first
+    //Try direct merge first
     execSync(
       `git merge origin/${branchName} --no-ff -m "Merge ${branchName} - Analysis and improvement"`,
-      { stdio: 'inherit' },
+      { stdio: 'inherit' }
     );
 
     console.log(`✅ Successfully merged ${branchName}`);
     return { success: true, method: 'direct' };
   } catch (error) {
     console.log(
-      `⚠️  Direct merge failed for ${branchName}, attempting conflict resolution...`,
+      `⚠️  Direct merge failed for ${branchName}, attempting conflict resolution...`
     );
 
     try {
-      // Strategy 1: Auto-resolve with theirs (prefer incoming changes for improvements)
+      //Strategy 1: Auto-resolve with theirs (prefer incoming changes for improvements)
       execSync('git reset --hard HEAD', { stdio: 'inherit' });
       execSync(
         `git merge origin/${branchName} -X theirs --no-ff -m "Auto-merge ${branchName} (theirs strategy)"`,
-        { stdio: 'inherit' },
+        { stdio: 'inherit' }
       );
 
       console.log(
-        `✅ Auto-resolved conflicts for ${branchName} using 'theirs' strategy`,
+        `✅ Auto-resolved conflicts for ${branchName} using 'theirs' strategy`
       );
       return { success: true, method: 'theirs' };
     } catch (theirsError) {
@@ -80,21 +78,21 @@ function mergeAnalysisBranch(branchName) {
         execSync('git reset --hard HEAD', { stdio: 'inherit' });
         execSync(
           `git merge origin/${branchName} -X ours --no-ff -m "Auto-merge ${branchName} (ours strategy)"`,
-          { stdio: 'inherit' },
+          { stdio: 'inherit' }
         );
 
         console.log(
-          `✅ Auto-resolved conflicts for ${branchName} using 'ours' strategy`,
+          `✅ Auto-resolved conflicts for ${branchName} using 'ours' strategy`
         );
         return { success: true, method: 'ours' };
       } catch (oursError) {
         console.log(`❌ All merge strategies failed for ${branchName}`);
 
-        // Abort and skip
+        //Abort and skip
         try {
           execSync('git reset --hard HEAD', { stdio: 'inherit' });
         } catch (resetError) {
-          // Continue anyway
+          //Continue anyway
         }
 
         return { success: false, method: 'failed' };
@@ -103,15 +101,16 @@ function mergeAnalysisBranch(branchName) {
   }
 }
 
-// Step 4: Process all analysis branches
+//Step 4: Process all analysis branches
 console.log('🚀 Step 4: Processing analysis and improvement branches...\n');
 
 const results = {
   summary: {
     total: 0,
-    successful: 0,
+  successful: 0,
     failed: 0,
-    methods: { direct: 0, theirs: 0, ours: 0, failed: 0 },
+    methods: { direct: 0,
+  theirs: 0, ours: 0, failed: 0 },
   },
   branches: [],
   failed: [],
@@ -133,13 +132,13 @@ for (const branch of analysisBranches) {
   }
 }
 
-// Step 5: Generate report
+//Step 5: Generate report
 fs.writeFileSync(
   'analysis-merge-report.json',
-  JSON.stringify(results, null, 2),
+  JSON.stringify(results, null, 2)
 );
 
-// Step 6: Display summary
+//Step 6: Display summary
 console.log('\n🎉 ANALYSIS MERGE COMPLETED!\n');
 console.log('📊 SUMMARY:');
 console.log(`  Total branches processed: ${results.summary.total}`);

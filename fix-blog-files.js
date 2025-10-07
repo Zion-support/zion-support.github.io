@@ -1,12 +1,12 @@
 const fs = require('fs');
 const path = require('path');
 
-// Template for blog pages
+//Template for blog pages
 const blogTemplate = (
   title,
   description,
   slug,
-  content,
+  content
 ) => `import React from "react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
@@ -42,7 +42,7 @@ export default function BlogPage(): React.JSX.Element {
   );
 }`;
 
-// Find all corrupted blog files
+//Find all corrupted blog files
 const blogDir = 'src/pages/blog';
 const corruptedFiles = [];
 
@@ -59,8 +59,8 @@ function findCorruptedFiles(dir) {
       const content = fs.readFileSync(filePath, 'utf8');
       if (
         content.includes('Merge conflict') ||
-        content.includes('<<<<<<< HEAD') ||
-        content.includes('=======') ||
+        content.includes('') ||
+        content.includes('') ||
         content.includes('className=')
       ) {
         corruptedFiles.push(filePath);
@@ -73,7 +73,7 @@ findCorruptedFiles(blogDir);
 
 console.log(`Found ${corruptedFiles.length} corrupted files`);
 
-// Fix each corrupted file
+//Fix each corrupted file
 for (const filePath of corruptedFiles) {
   try {
     const slug = filePath.split('/').slice(-2, -1)[0];

@@ -3,14 +3,12 @@
 /**
  * Merge New Services Branches
  * This script will merge all the new service branches that haven't been merged yet
- */
-
-import { execSync } from 'child_process';
+ */import { execSync } from 'child_process';
 import fs from 'fs';
 
 console.log('🚀 Starting New Services Branch Merge Process...\n');
 
-// Step 1: Ensure we're on main and up to date
+//Step 1: Ensure we're on main and up to date
 console.log('📋 Step 1: Preparing main branch...');
 try {
   execSync('git checkout main', { stdio: 'inherit' });
@@ -21,7 +19,7 @@ try {
   process.exit(1);
 }
 
-// Step 2: Get new service branches
+//Step 2: Get new service branches
 console.log('🔍 Step 2: Finding new service branches...');
 const newServiceBranches = [
   'cursor/add-new-services-and-deploy-updates-0c4f',
@@ -47,40 +45,40 @@ const newServiceBranches = [
 ];
 
 console.log(
-  `📊 Found ${newServiceBranches.length} new service branches to process\n`,
+  `📊 Found ${newServiceBranches.length} new service branches to process\n`
 );
 
-// Step 3: Enhanced merge function with conflict resolution
+//Step 3: Enhanced merge function with conflict resolution
 function mergeServiceBranch(branchName) {
   console.log(`\n🔄 Processing ${branchName}...`);
 
   try {
-    // Fetch the branch
+    //Fetch the branch
     execSync(`git fetch origin ${branchName}`, { stdio: 'inherit' });
 
-    // Try direct merge first
+    //Try direct merge first
     execSync(
       `git merge origin/${branchName} --no-ff -m "Merge ${branchName} - Add new services and deploy updates"`,
-      { stdio: 'inherit' },
+      { stdio: 'inherit' }
     );
 
     console.log(`✅ Successfully merged ${branchName}`);
     return { success: true, method: 'direct' };
   } catch (error) {
     console.log(
-      `⚠️  Direct merge failed for ${branchName}, attempting conflict resolution...`,
+      `⚠️  Direct merge failed for ${branchName}, attempting conflict resolution...`
     );
 
     try {
-      // Strategy 1: Auto-resolve with theirs (prefer incoming changes for new services)
+      //Strategy 1: Auto-resolve with theirs (prefer incoming changes for new services)
       execSync('git reset --hard HEAD', { stdio: 'inherit' });
       execSync(
         `git merge origin/${branchName} -X theirs --no-ff -m "Auto-merge ${branchName} (theirs strategy)"`,
-        { stdio: 'inherit' },
+        { stdio: 'inherit' }
       );
 
       console.log(
-        `✅ Auto-resolved conflicts for ${branchName} using 'theirs' strategy`,
+        `✅ Auto-resolved conflicts for ${branchName} using 'theirs' strategy`
       );
       return { success: true, method: 'theirs' };
     } catch (theirsError) {
@@ -90,21 +88,21 @@ function mergeServiceBranch(branchName) {
         execSync('git reset --hard HEAD', { stdio: 'inherit' });
         execSync(
           `git merge origin/${branchName} -X ours --no-ff -m "Auto-merge ${branchName} (ours strategy)"`,
-          { stdio: 'inherit' },
+          { stdio: 'inherit' }
         );
 
         console.log(
-          `✅ Auto-resolved conflicts for ${branchName} using 'ours' strategy`,
+          `✅ Auto-resolved conflicts for ${branchName} using 'ours' strategy`
         );
         return { success: true, method: 'ours' };
       } catch (oursError) {
         console.log(`❌ All merge strategies failed for ${branchName}`);
 
-        // Abort and skip
+        //Abort and skip
         try {
           execSync('git reset --hard HEAD', { stdio: 'inherit' });
         } catch (resetError) {
-          // Continue anyway
+          //Continue anyway
         }
 
         return { success: false, method: 'failed' };
@@ -113,15 +111,16 @@ function mergeServiceBranch(branchName) {
   }
 }
 
-// Step 4: Process all new service branches
+//Step 4: Process all new service branches
 console.log('🚀 Step 4: Processing new service branches...\n');
 
 const results = {
   summary: {
     total: 0,
-    successful: 0,
+  successful: 0,
     failed: 0,
-    methods: { direct: 0, theirs: 0, ours: 0, failed: 0 },
+    methods: { direct: 0,
+  theirs: 0, ours: 0, failed: 0 },
   },
   branches: [],
   failed: [],
@@ -143,13 +142,13 @@ for (const branch of newServiceBranches) {
   }
 }
 
-// Step 5: Generate report
+//Step 5: Generate report
 fs.writeFileSync(
   'new-services-merge-report.json',
-  JSON.stringify(results, null, 2),
+  JSON.stringify(results, null, 2)
 );
 
-// Step 6: Display summary
+//Step 6: Display summary
 console.log('\n🎉 NEW SERVICES MERGE COMPLETED!\n');
 console.log('📊 SUMMARY:');
 console.log(`  Total branches processed: ${results.summary.total}`);

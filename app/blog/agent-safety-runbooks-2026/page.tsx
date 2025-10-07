@@ -1,14 +1,9 @@
-import ArrowRight from 'next/link';
+import Link from 'next/link';
 
 export const metadata = {
-  title: 'Agent Safety Runbooks 2026 | Zion Tech Group',
-  description:
-    'Approvals, budgeted actions, and KPI‑linked canaries for safe agent releases.',
-  openGraph: {
-    title: 'Agent Safety Runbooks 2026',
-    description: 'Approvals, budgets, and KPI‑linked canary evals.',
-    type: 'article',
-  },
+  title: 'Agent Safety Runbooks 2026',
+  description: 'Approvals, budgets, and KPI‑linked canary evals.',
+  type: 'article',
 };
 
 export default function AgentSafetyRunbooks2026Page() {
@@ -23,7 +18,7 @@ export default function AgentSafetyRunbooks2026Page() {
             Agent Safety Runbooks 2026
           </h1>
           <p className='text-slate-300'>
-            Approvals, budgeted actions, and KPI‑linked canaries for safe agent
+            Approvals, budgeted actions and KPI‑linked canaries for safe agent
             releases.
           </p>
           <div className='mt-3 text-slate-400 text-sm'>
@@ -46,12 +41,12 @@ export default function AgentSafetyRunbooks2026Page() {
         </div>
 
         <div className='mt-12'>
-          <ArrowRight
+          <Link
             href='/blog'
             className='inline-block bg-white text-fuchsia-700 px-6 py-3 rounded-lg font-bold hover:bg-fuchsia-50'
           >
             ← Back to Blog
-          </ArrowRight>
+          </Link>
         </div>
       </main>
     </div>

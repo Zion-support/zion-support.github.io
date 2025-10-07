@@ -6,6 +6,7 @@
 echo "Starting merge conflict resolution..."
 
 # Find all files with merge conflicts
+<<<<<<< HEAD
 conflict_files=$(grep -l "^
     sed -i '/^
 for file in $files_with_conflicts; do
@@ -25,5 +26,23 @@ for file in $files_with_conflicts; do
     
     # Replace the original file with the cleaned version
     mv "$temp_file" "$file"
+=======
+conflict_files=$(grep -l "^<<<<<<< HEAD" /workspace/app/blog -r | head -50)
+
+for file in $conflict_files; do
+    echo "Processing: $file"
+    
+    # Create a backup
+    cp "$file" "$file.backup"
+    
+    # Remove merge conflict markers and keep HEAD version
+    # This removes everything from <<<<<<< HEAD to ======= and from ======= to >>>>>>> branch
+    sed -i '/^<<<<<<< HEAD/,/^=======/d' "$file"
+    sed -i '/^>>>>>>> .*/d' "$file"
+    
+    echo "Fixed: $file"
+done
+
+>>>>>>> origin/fix-errors-and-merge-final
 echo "Merge conflict resolution completed for first 50 files."
 echo "Run this script again to process more files if needed."

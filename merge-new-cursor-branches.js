@@ -2,14 +2,12 @@
 
 /**
  * Merge New Cursor Branches - Process the latest cursor branches
- */
-
-import { execSync } from 'child_process';
+ */import { execSync } from 'child_process';
 import fs from 'fs';
 
 console.log('🚀 Starting New Cursor Branches Merge Process...\n');
 
-// New cursor branches to merge
+//New cursor branches to merge
 const newCursorBranches = [
   'cursor/fix-errors-and-merge-to-main-016f',
   'cursor/fix-errors-and-merge-to-main-073a',
@@ -24,10 +22,10 @@ const newCursorBranches = [
 ];
 
 console.log(
-  `📊 Found ${newCursorBranches.length} new cursor branches to process\n`,
+  `📊 Found ${newCursorBranches.length} new cursor branches to process\n`
 );
 
-// Function to safely execute git commands
+//Function to safely execute git commands
 function safeGitCommand(command, description) {
   try {
     console.log(`📋 Executing: ${description}`);
@@ -40,12 +38,12 @@ function safeGitCommand(command, description) {
   }
 }
 
-// Function to check if branch exists
+//Function to check if branch exists
 function branchExists(branchName) {
   try {
     execSync(
       `git show-ref --verify --quiet refs/remotes/origin/${branchName}`,
-      { stdio: 'pipe' },
+      { stdio: 'pipe' }
     );
     return true;
   } catch {
@@ -53,7 +51,7 @@ function branchExists(branchName) {
   }
 }
 
-// Ensure we're on main branch
+//Ensure we're on main branch
 console.log('📍 Setting up environment...');
 safeGitCommand('git checkout main', 'Switch to main branch');
 safeGitCommand('git pull origin main', 'Pull latest changes from main');
@@ -64,11 +62,11 @@ let mergedCount = 0;
 let notFoundCount = 0;
 const results = [];
 
-// Process each branch
+//Process each branch
 for (const branch of newCursorBranches) {
   console.log(`\n--- Processing ${branch} ---`);
 
-  // Check if branch exists
+  //Check if branch exists
   if (!branchExists(branch)) {
     console.log(`❌ Branch ${branch} not found, skipping...`);
     notFoundCount++;
@@ -81,10 +79,10 @@ for (const branch of newCursorBranches) {
 
   console.log(`✅ Branch ${branch} found`);
 
-  // Try to merge the branch
+  //Try to merge the branch
   const mergeResult = safeGitCommand(
     `git merge origin/${branch} --no-ff -m "Merge ${branch} into main"`,
-    `Merge ${branch}`,
+    `Merge ${branch}`
   );
 
   if (mergeResult.success) {
@@ -97,7 +95,7 @@ for (const branch of newCursorBranches) {
   } else {
     console.log(`⚠️  Merge conflict or error for ${branch}`);
 
-    // Try to abort the merge if there was a conflict
+    //Try to abort the merge if there was a conflict
     safeGitCommand('git merge --abort', `Abort merge for ${branch}`);
 
     results.push({
@@ -108,25 +106,25 @@ for (const branch of newCursorBranches) {
   }
 }
 
-// Run system checks
+//Run system checks
 console.log('\n🔧 Running system checks...');
 const typeCheck = safeGitCommand(
   'pnpm run type-check',
-  'TypeScript type checking',
+  'TypeScript type checking'
 );
 const lintCheck = safeGitCommand('pnpm run lint', 'ESLint linting');
 const testCheck = safeGitCommand('pnpm run test', 'Jest testing');
 const buildCheck = safeGitCommand(
   'pnpm run build:no-check',
-  'Production build',
+  'Production build'
 );
 
-// Push changes if any were merged
+//Push changes if any were merged
 if (mergedCount > 0) {
   console.log('\n📤 Pushing changes to main...');
   const pushResult = safeGitCommand(
     'git push origin main',
-    'Push changes to main',
+    'Push changes to main'
   );
   if (pushResult.success) {
     console.log('✅ All changes pushed to main successfully');
@@ -135,13 +133,13 @@ if (mergedCount > 0) {
   }
 }
 
-// Generate comprehensive report
+//Generate comprehensive report
 const report = {
   timestamp: new Date().toISOString(),
   summary: {
     totalBranches: newCursorBranches.length,
     merged: mergedCount,
-    notFound: notFoundCount,
+  notFound: notFoundCount,
     successRate: `${Math.round((mergedCount / newCursorBranches.length) * 100)}%`,
   },
   systemChecks: {
@@ -162,7 +160,7 @@ const report = {
 // Save detailed report
 fs.writeFileSync(
   'new-cursor-branches-merge-report.json',
-  JSON.stringify(report, null, 2),
+  JSON.stringify(report, null, 2)
 );
 
 console.log('\n📊 === MERGE SUMMARY ===');
@@ -178,13 +176,13 @@ console.log(`Build: ${buildCheck.success ? '✅' : '❌'}`);
 
 if (report.systemChecks.allPassed) {
   console.log(
-    '\n🎉 All system checks passed! Repository is in excellent condition.',
+    '\n🎉 All system checks passed! Repository is in excellent condition.'
   );
 } else {
   console.log('\n⚠️  Some system checks failed. Please review the issues.');
 }
 
 console.log(
-  '\n📄 Detailed report saved to: new-cursor-branches-merge-report.json',
+  '\n📄 Detailed report saved to: new-cursor-branches-merge-report.json'
 );
 console.log('\n🏁 New Cursor Branches Merge completed!');
