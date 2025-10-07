@@ -251,6 +251,85 @@ const NewestContent2025Banner = () => {
           ))}
         </div>
 
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-6">
+            September 30, 2025 — Cutting-Edge AI Insights
+          </h2>
+          <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
+            Edge Computing • Neural Networks • Quantum Security — The future of
+            enterprise AI starts here
+          </p>
+        </div>
+
+        {/* Content Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+          {/* Article 1 */}
+          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300">
+            <div className="flex items-center gap-3 mb-4">
+              <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
+              <span className="text-green-400 font-semibold text-sm">LIVE NOW</span>
+            </div>
+            <h3 className="text-xl font-bold text-white mb-4">
+              Edge Computing Revolution: 2025 Implementation Guide
+            </h3>
+            <p className="text-gray-300 mb-6">
+              Discover how edge computing is transforming enterprise infrastructure
+              and learn practical implementation strategies.
+            </p>
+            <Link
+              href="/guides/edge-computing-2025"
+              className="inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors"
+            >
+              Read Article
+              <span className="text-lg">→</span>
+            </Link>
+          </div>
+
+          {/* Article 2 */}
+          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300">
+            <div className="flex items-center gap-3 mb-4">
+              <div className="w-3 h-3 bg-yellow-400 rounded-full animate-pulse"></div>
+              <span className="text-yellow-400 font-semibold text-sm">HOT</span>
+            </div>
+            <h3 className="text-xl font-bold text-white mb-4">
+              Neural Networks in Production: Real-World Case Studies
+            </h3>
+            <p className="text-gray-300 mb-6">
+              Explore successful neural network implementations across different
+              industries and their measurable business impact.
+            </p>
+            <Link
+              href="/guides/neural-networks-production"
+              className="inline-flex items-center gap-2 bg-purple-600 text-white px-6 py-3 rounded-lg hover:bg-purple-700 transition-colors"
+            >
+              Read Article
+              <span className="text-lg">→</span>
+            </Link>
+          </div>
+
+          {/* Article 3 */}
+          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300">
+            <div className="flex items-center gap-3 mb-4">
+              <div className="w-3 h-3 bg-red-400 rounded-full animate-pulse"></div>
+              <span className="text-red-400 font-semibold text-sm">BREAKING</span>
+            </div>
+            <h3 className="text-xl font-bold text-white mb-4">
+              Quantum Security: The Next Frontier in Data Protection
+            </h3>
+            <p className="text-gray-300 mb-6">
+              Learn about quantum-resistant encryption and how to prepare your
+              systems for the quantum computing era.
+            </p>
+            <Link
+              href="/guides/quantum-security-2025"
+              className="inline-flex items-center gap-2 bg-red-600 text-white px-6 py-3 rounded-lg hover:bg-red-700 transition-colors"
+            >
+              Read Article
+              <span className="text-lg">→</span>
+            </Link>
+          </div>
+        </div>
+
         {/* Call to Action */}
         <div className="text-center">
           <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8">
