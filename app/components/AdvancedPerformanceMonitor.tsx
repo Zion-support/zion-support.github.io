@@ -44,7 +44,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     const fcpEntries = performance.getEntriesByName('first-contentful-paint') || [];
     const fcp = fcpEntries.length > 0 ? fcpEntries[0].startTime : null;
 
-    // Keep track of observers for cleanup
+    // Declare observers outside try-catch blocks so they can be cleaned up
     let lcpObserver: PerformanceObserver | null = null;
     let fidObserver: PerformanceObserver | null = null;
     let clsObserver: PerformanceObserver | null = null;
@@ -141,7 +141,9 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
 
     // Cleanup observers
     return () => {
-      observers.forEach(observer => observer.disconnect());
+      if (lcpObserver) lcpObserver.disconnect();
+      if (fidObserver) fidObserver.disconnect();
+      if (clsObserver) clsObserver.disconnect();
     };
   }, []);
 

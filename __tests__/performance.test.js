@@ -27,7 +27,7 @@ describe('Performance Tests', () => {
       },
     };
 
-    // Mock window object
+    // Mock window object - save original location
     delete window.location;
     window.location = {
       href: 'http://localhost:3000',
@@ -43,17 +43,8 @@ describe('Performance Tests', () => {
   });
 
   beforeEach(() => {
-    // Mock window.location.reload if it exists
-    if (window.location.reload) {
-      locationSpy = jest.fn();
-    }
-  });
-
-  afterEach(() => {
-    // No need to restore if we didn't create a spy
-    if (locationSpy) {
-      locationSpy = null;
-    }
+    // Clear all mocks before each test
+    jest.clearAllMocks();
   });
 
   test('PerformanceOptimizer should initialize correctly', () => {
