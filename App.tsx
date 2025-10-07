@@ -3,12 +3,6 @@ import { createRoot } from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import HomePage from './app/page';
-<<<<<<< HEAD
-
-// Memoized components for better performance
-// Error Boundary and Loading components removed as they are not used
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-abd1
 const App = () => {
   // Performance optimization: Preload critical resources
   React.useEffect(() => {
@@ -44,10 +38,6 @@ const App = () => {
       }
     }
   }, []);
-<<<<<<< HEAD
-  // Event handlers removed as they are not used
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-abd1
   return (
     <HelmetProvider>
       <BrowserRouter>
