@@ -102,6 +102,8 @@ global.URL = URL;
 
 // Mock PerformanceObserver
 global.PerformanceObserver = class MockPerformanceObserver {
+  static readonly supportedEntryTypes: readonly string[] = ['navigation', 'paint', 'largest-contentful-paint'];
+  
   constructor(public callback: PerformanceObserverCallback) {}
   observe() {}
   disconnect() {}
@@ -111,8 +113,8 @@ global.PerformanceObserver = class MockPerformanceObserver {
 };
 
 // Mock window.location
-delete (window as any).location;
-(window as any).location = {
+delete (window as unknown as Record<string, unknown>).location;
+(window as unknown as Record<string, unknown>).location = {
   href: 'http://localhost:3000',
   origin: 'http://localhost:3000',
   protocol: 'http:',
