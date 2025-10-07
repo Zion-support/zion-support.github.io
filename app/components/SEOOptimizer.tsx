@@ -14,10 +14,14 @@ interface SEOOptimizerProps {
 
 const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   title = 'Zion Tech Group - AI & IT Solutions',
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   description: _description = 'Leading provider of AI-powered enterprise solutions, automation, and digital transformation services.',
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   keywords: _keywords = ['AI solutions', 'enterprise AI', 'digital transformation', 'automation', 'cloud services'],
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   image: _image = 'https://ziontechgroup.com/og-image.jpg',
   url = 'https://ziontechgroup.com',
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   type: _type = 'website'
 }) => {
   const pathname = usePathname();

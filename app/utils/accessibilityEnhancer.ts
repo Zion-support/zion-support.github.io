@@ -173,6 +173,7 @@ export const initializeAccessibilityEnhancements = () => {
   // Validate accessibility
   const issues = validateAccessibility();
   if (issues.length > 0) {
+    // eslint-disable-next-line no-console
     console.warn('Accessibility issues found:', issues);
   }
 };

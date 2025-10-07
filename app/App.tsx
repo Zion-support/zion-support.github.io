@@ -1,6 +1,6 @@
 'use client';
 
-import React, { Suspense, lazy, useEffect } from 'react';
+import React, { Suspense, useEffect } from 'react';
 import { HelmetProvider } from 'react-helmet-async';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
@@ -25,7 +25,10 @@ const ErrorBoundary = ({ children }: { children: React.ReactNode }) => {
 import { preloadCriticalResources, performanceOptimizer } from './utils/performanceOptimizer';
 
 // Styles
-import '../index.css';
+import './globals.css';
+
+// Import HomePage component
+import HomePage from '../page';
 
 const App: React.FC = () => {
   useEffect(() => {
@@ -88,4 +91,6 @@ const App: React.FC = () => {
     </HelmetProvider>
   );
 };
+
+export default App;
 
