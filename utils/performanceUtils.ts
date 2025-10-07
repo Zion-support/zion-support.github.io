@@ -85,7 +85,23 @@ export const collectPerformanceMetrics = async (): Promise<{
   firstInputDelay: number;
   cumulativeLayoutShift: number;
 }> => {
-  const metrics: Record<string, unknown> = {};
+  const metrics: {
+    loadTime: number;
+    domContentLoaded: number;
+    firstPaint: number;
+    firstContentfulPaint: number;
+    largestContentfulPaint: number;
+    firstInputDelay: number;
+    cumulativeLayoutShift: number;
+  } = {
+    loadTime: 0,
+    domContentLoaded: 0,
+    firstPaint: 0,
+    firstContentfulPaint: 0,
+    largestContentfulPaint: 0,
+    firstInputDelay: 0,
+    cumulativeLayoutShift: 0,
+  };
 
   // Basic timing metrics
   if (typeof window !== 'undefined' && window.performance) {
