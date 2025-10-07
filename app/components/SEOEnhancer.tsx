@@ -8,7 +8,7 @@ interface SEOEnhancerProps {
   keywords?: string;
   canonicalUrl?: string;
   ogImage?: string;
-  structuredData?: any;
+  structuredData?: Record<string, unknown>;
 }
 
 const SEOEnhancer: React.FC<SEOEnhancerProps> = ({

@@ -28,7 +28,7 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({
 
         // Initialize gtag
         window.dataLayer = window.dataLayer || [];
-        function gtag(...args: any[]) {
+        function gtag(...args: unknown[]) {
           window.dataLayer.push(args);
         }
         window.gtag = gtag;
@@ -142,8 +142,8 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({
     trackPageView(window.location.pathname);
 
     // Expose tracking functions globally for manual tracking
-    (window as any).trackEvent = trackEvent;
-    (window as any).trackPageView = trackPageView;
+    (window as Window & { trackEvent?: typeof trackEvent; trackPageView?: typeof trackPageView }).trackEvent = trackEvent;
+    (window as Window & { trackEvent?: typeof trackEvent; trackPageView?: typeof trackPageView }).trackPageView = trackPageView;
 
   }, [trackingId]);
 
