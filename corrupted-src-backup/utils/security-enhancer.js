@@ -272,7 +272,7 @@ class SecurityEnhancer {
     fileInputs.forEach(input => {
       input.addEventListener('change', event => {
         const files = event.target.files;
-        for (let file of files) {
+        for (const file of files) {
           if (!this.validateFile(file)) {
             event.preventDefault();
             this.showSecurityWarning(`File ${file.name} is not allowed`);

@@ -72,10 +72,10 @@ export const BannerRotationManager: React.FC<BannerRotationManagerProps> = ({
   const BannerComponent = bannerComponents[currentBanner];
 
   return (
-    <div className={`banner-rotation-manager ${className}`}>
+    <div className={`banner-rotation-manager ${className}`}></div>
       <Suspense
         fallback={
-          <div className='flex items-center justify-center py-16'>
+          <div className='flex items-center justify-center py-16'></Suspense>
             <div className='animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600'></div>
           </div>
         }
@@ -85,7 +85,7 @@ export const BannerRotationManager: React.FC<BannerRotationManagerProps> = ({
 
       {/* Banner indicators */}
       {visibleBanners.length > 1 && (
-        <div className='flex justify-center mt-4 space-x-2'>
+        <div className='flex justify-center mt-4 space-x-2'></div>
           {visibleBanners.map((_, index) => (
             <button
               key={index}
@@ -98,7 +98,7 @@ export const BannerRotationManager: React.FC<BannerRotationManagerProps> = ({
               aria-label={`Go to banner ${index + 1}`}
             />
           ))}
-        </div>
+        </button></div>
       )}
     </div>
   );

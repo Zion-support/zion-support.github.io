@@ -6,7 +6,7 @@ import fs from 'fs';
 console.log('🚀 FINAL PR MERGER - COMPREHENSIVE MERGE COMPLETION');
 console.log('====================================================');
 
-// Function to safely execute git commands
+//Function to safely execute git commands
 function safeGitCommand(command, description) {
   try {
     console.log(`📋 Executing: ${description}`);
@@ -19,7 +19,7 @@ function safeGitCommand(command, description) {
   }
 }
 
-// Function to check if branch exists
+//Function to check if branch exists
 function branchExists(branchName) {
   try {
     execSync(
@@ -32,7 +32,7 @@ function branchExists(branchName) {
   }
 }
 
-// All PRs to process
+//All PRs to process
 const allPRs = [
   {
     number: 11935,
@@ -68,7 +68,7 @@ const allPRs = [
   },
 ];
 
-// Ensure we're on main branch
+//Ensure we're on main branch
 console.log('\n📍 Setting up environment...');
 safeGitCommand('git checkout main', 'Switch to main branch');
 safeGitCommand('git pull origin main', 'Pull latest changes from main');
@@ -78,17 +78,17 @@ console.log('\n🔍 Checking all PR branches...');
 let mergedCount = 0;
 let conflictCount = 0;
 let notFoundCount = 0;
-let skippedCount = 0;
+const skippedCount = 0;
 const results = [];
 
-// Process each PR
+//Process each PR
 for (const pr of allPRs) {
   console.log(
     `\n--- Processing PR #${pr.number}: ${pr.title} (Priority: ${pr.priority}) ---`
   );
   console.log(`📝 Description: ${pr.description}`);
 
-  // Check if branch exists
+  //Check if branch exists
   if (!branchExists(pr.branch)) {
     console.log(`❌ Branch ${pr.branch} not found, skipping...`);
     notFoundCount++;
@@ -104,7 +104,7 @@ for (const pr of allPRs) {
 
   console.log(`✅ Branch ${pr.branch} found`);
 
-  // Try to merge the branch
+  //Try to merge the branch
   const mergeResult = safeGitCommand(
     `git merge origin/${pr.branch} --no-ff -m "Merge PR #${pr.number}: ${pr.title}"`,
     `Merge ${pr.branch}`
@@ -124,7 +124,7 @@ for (const pr of allPRs) {
     conflictCount++;
     console.log(`⚠️  Merge conflict or error for PR #${pr.number}`);
 
-    // Try to abort the merge if there was a conflict
+    //Try to abort the merge if there was a conflict
     safeGitCommand('git merge --abort', `Abort merge for ${pr.branch}`);
 
     results.push({
@@ -138,7 +138,7 @@ for (const pr of allPRs) {
   }
 }
 
-// Run comprehensive system checks
+//Run comprehensive system checks
 console.log('\n🔧 Running comprehensive system checks...');
 const typeCheck = safeGitCommand(
   'pnpm run type-check',
@@ -151,7 +151,7 @@ const buildCheck = safeGitCommand(
   'Production build'
 );
 
-// Push changes if any were merged
+//Push changes if any were merged
 if (mergedCount > 0) {
   console.log('\n📤 Pushing changes to main...');
   const pushResult = safeGitCommand(
@@ -165,7 +165,7 @@ if (mergedCount > 0) {
   }
 }
 
-// Generate comprehensive final report
+//Generate comprehensive final report
 const finalReport = {
   timestamp: new Date().toISOString(),
   summary: {
@@ -196,7 +196,7 @@ const finalReport = {
   },
 };
 
-// Save detailed final report
+//Save detailed final report
 fs.writeFileSync(
   'final-pr-merge-report.json',
   JSON.stringify(finalReport, null, 2)

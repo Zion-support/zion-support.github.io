@@ -1,137 +1,110 @@
 /**
- * Centralized Error Handling Utility
- * Provides comprehensive error handling and reporting for the application
+ * Error handling utility for centralized error management
  */
 
-export interface ErrorContext {
-  component?: string | undefined;
-  action?: string | undefined;
-  userId?: string | undefined;
+export interface ErrorInfo {
+  message: string;
+  stack?: string;
+  componentStack?: string;
+  errorBoundary?: string;
   timestamp: number;
-  userAgent?: string | undefined;
-  url?: string | undefined;
+  userId?: string;
+  sessionId?: string;
 }
 
-export interface ErrorReport {
-  message: string;
-  stack?: string | undefined;
-  context: ErrorContext;
-  severity: 'low' | 'medium' | 'high' | 'critical';
+export interface ErrorHandlerConfig {
+  enableReporting: boolean;
+  enableLogging: boolean;
+  enableUserNotification: boolean;
+  reportEndpoint?: string;
 }
 
 class ErrorHandler {
-  private errorQueue: ErrorReport[] = [];
-  private maxQueueSize = 100;
+  private config: ErrorHandlerConfig;
+  private errors: ErrorInfo[] = [];
 
-  /**
-   * Log an error with context
-   */
-  public logError(
-    error: Error | string,
-    context: Partial<ErrorContext> = {},
-    severity: ErrorReport['severity'] = 'medium'
-  ): void {
-    const errorReport: ErrorReport = {
-      message: typeof error === 'string' ? error : error.message,
-      stack: typeof error === 'string' ? '' : error.stack || '',
-      context: {
-        timestamp: Date.now(),
-        userAgent:
-          typeof window !== 'undefined' ? window.navigator.userAgent : '',
-        url: typeof window !== 'undefined' ? window.location.href : '',
-        ...context,
-      } as ErrorContext,
-      severity,
-    };
-
-    this.errorQueue.push(errorReport);
-
-    // Keep queue size manageable
-    if (this.errorQueue.length > this.maxQueueSize) {
-      this.errorQueue.shift();
-    }
-
-    // Log to console in development
-    if (process.env['NODE_ENV'] === 'development') {
-      console.error('Error logged:', errorReport);
-    }
-
-    // Send to external service in production
-    if (process.env['NODE_ENV'] === 'production') {
-      this.sendToErrorService(errorReport);
-    }
+  constructor(config: ErrorHandlerConfig = {
+    enableReporting: true,
+    enableLogging: true,
+    enableUserNotification: false
+  }) {
+    this.config = config;
+    this.setupGlobalErrorHandling();
   }
 
-  /**
-   * Send error to external error reporting service
-   */
-  private async sendToErrorService(errorReport: ErrorReport): Promise<void> {
-    try {
-      // In a real application, you would send to services like Sentry, LogRocket, etc.
-      // For now, we'll just log to console
-      console.error('Error report:', errorReport);
-    } catch (err) {
-      console.error('Failed to send error report:', err);
-    }
-  }
-
-  /**
-   * Get all errors from the queue
-   */
-  public getErrors(): ErrorReport[] {
-    return [...this.errorQueue];
-  }
-
-  /**
-   * Clear error queue
-   */
-  public clearErrors(): void {
-    this.errorQueue = [];
-  }
-
-  /**
-   * Get errors by severity
-   */
-  public getErrorsBySeverity(severity: ErrorReport['severity']): ErrorReport[] {
-    return this.errorQueue.filter(error => error.severity === severity);
-  }
-
-  /**
-   * Setup global error handlers
-   */
-  public setupGlobalHandlers(): void {
+  private setupGlobalErrorHandling(): void {
     if (typeof window === 'undefined') return;
 
-    // Handle unhandled promise rejections
-    window.addEventListener('unhandledrejection', event => {
-      this.logError(
-        new Error(event.reason),
-        { action: 'unhandledrejection' },
-        'high'
-      );
+    // Global error handler
+    window.addEventListener('error', (event) => {
+      this.handleError({
+        message: event.message,
+        stack: event.error?.stack,
+        timestamp: Date.now()
+      });
     });
 
-    // Handle JavaScript errors
-    window.addEventListener('error', event => {
-      this.logError(
-        event.error || new Error(event.message),
-        {
-          action: 'javascript_error',
-          url: event.filename,
-          component: 'global',
-        },
-        'high'
-      );
+    // Unhandled promise rejection handler
+    window.addEventListener('unhandledrejection', (event) => {
+      this.handleError({
+        message: `Unhandled Promise Rejection: ${event.reason}`,
+        stack: event.reason?.stack,
+        timestamp: Date.now()
+      });
     });
+  }
+
+  handleError(errorInfo: ErrorInfo): void {
+    const errorWithId = {
+      ...errorInfo,
+      id: this.generateErrorId()
+    };
+
+    this.errors.push(errorWithId);
+
+    if (this.config.enableLogging) {
+      console.error('Error Handler:', errorWithId);
+    }
+
+    if (this.config.enableReporting) {
+      this.reportError(errorWithId);
+    }
+
+    if (this.config.enableUserNotification) {
+      this.notifyUser(errorWithId);
+    }
+  }
+
+  private generateErrorId(): string {
+    return `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+  }
+
+  private reportError(errorInfo: ErrorInfo): void {
+    if (!this.config.reportEndpoint) return;
+
+    // In a real implementation, this would send to an error reporting service
+    if (process.env.NODE_ENV === 'development') {
+      console.log('Error reported:', errorInfo);
+    }
+  }
+
+  private notifyUser(errorInfo: ErrorInfo): void {
+    // Simple user notification - in a real app, this might show a toast or modal
+    console.warn('An error occurred:', errorInfo.message);
+  }
+
+  getErrors(): ErrorInfo[] {
+    return [...this.errors];
+  }
+
+  clearErrors(): void {
+    this.errors = [];
+  }
+
+  getErrorCount(): number {
+    return this.errors.length;
   }
 }
 
-// Create singleton instance
 export const errorHandler = new ErrorHandler();
-
-// Setup global handlers
-if (typeof window !== 'undefined') {
-  errorHandler.setupGlobalHandlers();
-}
-
 export default errorHandler;

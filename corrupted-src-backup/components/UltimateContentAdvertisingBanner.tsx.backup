@@ -1,4 +1,8 @@
 import React from 'react';
+<<<<<<< HEAD:src/components/UltimateContentAdvertisingBanner.tsx
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main:corrupted-src-backup/components/UltimateContentAdvertisingBanner.tsx.backup
 import { motion } from 'framer-motion';
 
 const UltimateContentAdvertisingBanner: React.FC = () => {
@@ -264,8 +268,39 @@ const UltimateContentAdvertisingBanner: React.FC = () => {
           </div>
         </div>
       </div>
+<<<<<<< HEAD:src/components/UltimateContentAdvertisingBanner.tsx
+=======
+
+interface UltimateContentAdvertisingBannerProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const UltimateContentAdvertisingBanner: React.FC<UltimateContentAdvertisingBannerProps> = ({ 
+  className = '', 
+  children 
+}) => {
+  return (
+    <div className={`ultimatecontentadvertisingbanner-component ${className}`}>
+      {children || (
+        <div className="p-4 text-center text-gray-600">
+          <h3 className="text-lg font-semibold mb-2">UltimateContentAdvertisingBanner</h3>
+          <p>Component placeholder - implementation needed</p>
+        </div>
+      )}
+>>>>>>> cursor/fix-errors-and-merge-to-main-8d57
+=======
+>>>>>>> origin/main:corrupted-src-backup/components/UltimateContentAdvertisingBanner.tsx.backup
     </div>
   );
 };
 
+<<<<<<< HEAD:src/components/UltimateContentAdvertisingBanner.tsx
+<<<<<<< HEAD
 export default UltimateContentAdvertisingBanner;
+=======
+export default UltimateContentAdvertisingBanner;
+>>>>>>> cursor/fix-errors-and-merge-to-main-8d57
+=======
+export default UltimateContentAdvertisingBanner;
+>>>>>>> origin/main:corrupted-src-backup/components/UltimateContentAdvertisingBanner.tsx.backup

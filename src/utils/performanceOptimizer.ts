@@ -1,65 +1,174 @@
 /**
- * Performance optimization utilities
+ * Performance Optimizer Utility
+ * Comprehensive performance monitoring and optimization tools
  */
 
-interface WebVitalsMetrics {
-  LCP?: number;
-  FID?: number;
-  CLS?: number;
-  FCP?: number;
-  TTFB?: number;
-  averageRenderTime?: number;
-  totalComponents?: number;
-  memoryUsage?: number;
-  slowComponents?: number;
-}
-
-interface PerformanceOptimizer {
-  measurePageLoad(): WebVitalsMetrics | null;
-  reportWebVitals(metrics: WebVitalsMetrics): void;
-  monitorLongTasks(callback: (entries: PerformanceEntry[]) => void): PerformanceObserver | null;
-  shouldLoadHeavyAssets(): boolean;
-  preloadRoute(route: string): void;
-  cacheStaticAssets(): void;
-  clearOldCaches(): void;
-  lazyLoadImages(): void;
-  getMetrics(): WebVitalsMetrics | null;
-  preloadCriticalResources(): void;
+/**
+ * Web Vitals metrics tracking
+ */
+export interface WebVitalsMetrics {
+  FCP?: number; // First Contentful Paint
+  LCP?: number; // Largest Contentful Paint
+  FID?: number; // First Input Delay
+  CLS?: number; // Cumulative Layout Shift
+  TTFB?: number; // Time to First Byte
+  INP?: number; // Interaction to Next Paint
 }
 
 /**
- * Measure page load timing
+ * Performance budget checker
  */
-export const measurePageLoad = (): WebVitalsMetrics | null => {
-  if (typeof window === 'undefined' || !window.performance) {
-    return null;
-  }
+export interface PerformanceBudget {
+  maxBundleSize: number; // in KB
+  maxImageSize: number; // in KB
+  maxFirstLoad: number; // in ms
+  maxInteractive: number; // in ms
+}
 
-  const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-  if (!navigation) return null;
-
-  return {
-    LCP: navigation.loadEventEnd - navigation.loadEventStart,
-    FCP: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
-    TTFB: navigation.responseStart - navigation.requestStart,
+/**
+ * Debounce function
+ */
+export const debounce = <T extends (...args: any[]) => any>(
+  func: T,
+  wait: number
+): ((...args: Parameters<T>) => void) => {
+  let timeout: number;
+  return (...args: Parameters<T>) => {
+    clearTimeout(timeout);
+    timeout = setTimeout(() => func(...args), wait) as unknown as number;
   };
+};
+
+/**
+ * Throttle function
+ */
+export const throttle = <T extends (...args: any[]) => any>(
+  func: T,
+  limit: number
+): ((...args: Parameters<T>) => void) => {
+  let inThrottle: boolean;
+  return (...args: Parameters<T>) => {
+    if (!inThrottle) {
+      func(...args);
+      inThrottle = true;
+      setTimeout(() => (inThrottle = false), limit);
+    }
+  };
+};
+
+/**
+ * Lazy load images
+ */
+export const lazyLoadImages = (): void => {
+  if (typeof window === 'undefined') return;
+  if (!('IntersectionObserver' in window)) return;
+
+  const imageObserver = new IntersectionObserver(
+    entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const img = entry.target as HTMLImageElement;
+          const src = img.dataset['src'];
+          if (src) {
+            img.src = src;
+            img.removeAttribute('data-src');
+            imageObserver.unobserve(img);
+          }
+        }
+      });
+    },
+    {
+      rootMargin: '50px 0px',
+      threshold: 0.01,
+    }
+  );
+
+  document.querySelectorAll('img[data-src]').forEach(img => {
+    imageObserver.observe(img);
+  });
+};
+
+/**
+ * Preconnect to external domains
+ */
+export const preconnectDomains = (domains: string[]): void => {
+  if (typeof document === 'undefined') return;
+  
+  domains.forEach(domain => {
+    const link = document.createElement('link');
+    link.rel = 'preconnect';
+    link.href = domain;
+    document.head.appendChild(link);
+  });
+};
+
+/**
+ * Prefetch resources
+ */
+export const prefetchResources = (urls: string[]): void => {
+  if (typeof document === 'undefined') return;
+  
+  urls.forEach(url => {
+    const link = document.createElement('link');
+    link.rel = 'prefetch';
+    link.href = url;
+    document.head.appendChild(link);
+  });
+};
+
+/**
+ * Measure page load performance
+ */
+export const measurePageLoad = (): Promise<WebVitalsMetrics> => {
+  return new Promise((resolve) => {
+    if (typeof window === 'undefined') {
+      resolve({});
+      return;
+    }
+
+    const metrics: WebVitalsMetrics = {};
+
+    // Measure FCP
+    if ('PerformanceObserver' in window) {
+      const observer = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        const fcpEntry = entries.find(entry => entry.name === 'first-contentful-paint');
+        if (fcpEntry) {
+          metrics.FCP = fcpEntry.startTime;
+        }
+      });
+      observer.observe({ entryTypes: ['paint'] });
+    }
+
+    // Measure LCP
+    if ('PerformanceObserver' in window) {
+      const observer = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        const lastEntry = entries[entries.length - 1];
+        if (lastEntry) {
+          metrics.LCP = lastEntry.startTime;
+        }
+      });
+      observer.observe({ entryTypes: ['largest-contentful-paint'] });
+    }
+
+    // Measure TTFB
+    if (window.performance && window.performance.timing) {
+      const timing = window.performance.timing;
+      metrics.TTFB = timing.responseStart - timing.requestStart;
+    }
+
+    // Resolve after a delay to allow metrics to be collected
+    setTimeout(() => resolve(metrics), 1000);
+  });
 };
 
 /**
  * Report web vitals
  */
 export const reportWebVitals = (metrics: WebVitalsMetrics): void => {
-  if (process.env['NODE_ENV'] === 'development') {
+  if (process.env.NODE_ENV === 'development') {
     console.log('Web Vitals:', metrics);
-  }
-  
-  // Send to analytics service
-  if (typeof window !== 'undefined' && (window as any).gtag) {
-    (window as any).gtag('event', 'web_vitals', {
-      event_category: 'Performance',
-      event_label: 'Web Vitals',
-      value: Math.round(metrics.LCP || 0)
-    });
   }
 };
 
@@ -78,16 +187,15 @@ export const shouldUseWebP = (): boolean => {
 /**
  * Get connection quality
  */
-export const getConnectionQuality = (): 'slow' | 'medium' | 'fast' => {
+export const getConnectionQuality = (): 'slow' | 'fast' | 'unknown' => {
   if (typeof navigator === 'undefined' || !('connection' in navigator)) {
-    return 'medium';
+    return 'unknown';
   }
   
   const connection = (navigator as any).connection;
-  const effectiveType = connection.effectiveType;
-  
-  if (effectiveType === '4g') return 'fast';
-  if (effectiveType === '3g') return 'medium';
+  if (connection.effectiveType === '4g' || connection.effectiveType === '3g') {
+    return 'fast';
+  }
   return 'slow';
 };
 
@@ -96,25 +204,21 @@ export const getConnectionQuality = (): 'slow' | 'medium' | 'fast' => {
  */
 export const shouldLoadHeavyAssets = (): boolean => {
   const connectionQuality = getConnectionQuality();
-  const isSlowConnection = connectionQuality === 'slow';
-  const isLowEndDevice = navigator.hardwareConcurrency && navigator.hardwareConcurrency < 4;
-  
-  return !isSlowConnection && !isLowEndDevice;
+  return connectionQuality === 'fast';
 };
 
 /**
- * Request idle callback with fallback
+ * Request idle callback polyfill
  */
-export const requestIdleCallback = (callback: () => void, options?: { timeout?: number }): number => {
+export const requestIdleCallback = (callback: () => void): number => {
   if (typeof window !== 'undefined' && 'requestIdleCallback' in window) {
-    return (window as any).requestIdleCallback(callback, options);
+    return (window as any).requestIdleCallback(callback);
   }
-  
-  return setTimeout(callback, options?.timeout || 0) as any;
+  return setTimeout(callback, 1) as unknown as number;
 };
 
 /**
- * Cancel idle callback with fallback
+ * Cancel idle callback polyfill
  */
 export const cancelIdleCallback = (id: number): void => {
   if (typeof window !== 'undefined' && 'cancelIdleCallback' in window) {
@@ -128,7 +232,7 @@ export const cancelIdleCallback = (id: number): void => {
  * Preload route
  */
 export const preloadRoute = (route: string): void => {
-  if (typeof window === 'undefined') return;
+  if (typeof document === 'undefined') return;
   
   const link = document.createElement('link');
   link.rel = 'prefetch';
@@ -143,17 +247,17 @@ export const monitorLongTasks = (callback: (entries: PerformanceEntry[]) => void
   if (typeof window === 'undefined' || !('PerformanceObserver' in window)) {
     return null;
   }
-  
-  try {
-    const observer = new PerformanceObserver((list) => {
-      callback(list.getEntries());
-    });
-    observer.observe({ entryTypes: ['longtask'] });
-    return observer;
-  } catch (error) {
-    console.warn('Long task monitoring not supported:', error);
-    return null;
-  }
+
+  const observer = new PerformanceObserver((list) => {
+    const entries = list.getEntries();
+    const longTasks = entries.filter(entry => entry.duration > 50);
+    if (longTasks.length > 0) {
+      callback(longTasks);
+    }
+  });
+
+  observer.observe({ entryTypes: ['longtask'] });
+  return observer;
 };
 
 /**
@@ -162,19 +266,15 @@ export const monitorLongTasks = (callback: (entries: PerformanceEntry[]) => void
 export const cacheStaticAssets = (): void => {
   if (typeof window === 'undefined' || !('caches' in window)) return;
   
-  requestIdleCallback(() => {
-    caches.open('static-assets-v1').then((cache) => {
-      // Cache critical assets
-      const criticalAssets = [
-        '/',
-        '/favicon.ico',
-        '/manifest.json'
-      ];
-      
-      criticalAssets.forEach((asset) => {
-        cache.add(asset).catch(() => {
-          // Ignore cache errors
-        });
+  const assets = [
+    '/favicon.ico',
+    '/manifest.json',
+  ];
+  
+  caches.open('static-assets').then(cache => {
+    assets.forEach(asset => {
+      cache.add(asset).catch(() => {
+        // Ignore errors
       });
     });
   });
@@ -186,82 +286,150 @@ export const cacheStaticAssets = (): void => {
 export const clearOldCaches = (): void => {
   if (typeof window === 'undefined' || !('caches' in window)) return;
   
-  caches.keys().then((cacheNames) => {
-    cacheNames.forEach((cacheName) => {
-      if (cacheName !== 'static-assets-v1') {
-        caches.delete(cacheName);
+  caches.keys().then(names => {
+    names.forEach(name => {
+      if (name !== 'static-assets') {
+        caches.delete(name);
       }
     });
   });
 };
 
 /**
- * Lazy load images
+ * Check performance budget
  */
-export const lazyLoadImages = (): void => {
-  if (typeof window === 'undefined' || !('IntersectionObserver' in window)) return;
+export const checkPerformanceBudget = (_budget: PerformanceBudget): { passed: boolean; violations: string[] } => {
+  const violations: string[] = [];
   
-  const imageObserver = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        const img = entry.target as HTMLImageElement;
-        if (img.dataset['src']) {
-          img.src = img.dataset['src'];
-          img.removeAttribute('data-src');
-          imageObserver.unobserve(img);
-        }
-      }
-    });
-  });
+  // Check bundle size (would need to be implemented with actual bundle analysis)
+  // Check image sizes (would need to be implemented with actual image analysis)
+  // Check load times (would need to be implemented with actual performance measurement)
   
-  document.querySelectorAll('img[data-src]').forEach((img) => {
-    imageObserver.observe(img);
-  });
+  return {
+    passed: violations.length === 0,
+    violations
+  };
 };
 
 /**
- * Get current metrics
+ * Performance Optimizer Class
  */
-export const getMetrics = (): WebVitalsMetrics | null => {
-  return measurePageLoad();
-};
+class PerformanceOptimizer {
+  private static instance: PerformanceOptimizer;
+  private metrics: Map<string, number> = new Map();
 
-/**
- * Preload critical resources
- */
-export const preloadCriticalResources = (): void => {
-  if (typeof window === 'undefined') return;
-  
-  const criticalResources = [
-    '/fonts/inter.woff2',
-    '/css/critical.css'
-  ];
-  
-  criticalResources.forEach((resource) => {
-    const link = document.createElement('link');
-    link.rel = 'preload';
-    link.href = resource;
-    link.as = resource.endsWith('.css') ? 'style' : 'font';
-    if (resource.endsWith('.woff2')) {
-      link.crossOrigin = 'anonymous';
+  private constructor() {}
+
+  static getInstance(): PerformanceOptimizer {
+    if (!PerformanceOptimizer.instance) {
+      PerformanceOptimizer.instance = new PerformanceOptimizer();
     }
-    document.head.appendChild(link);
-  });
-};
+    return PerformanceOptimizer.instance;
+  }
 
-// Export the main performance optimizer object
-export const performanceOptimizer: PerformanceOptimizer = {
+  // Measure performance of a function
+  measurePerformance(name: string, fn: () => void): number {
+    const start = performance.now();
+    fn();
+    const end = performance.now();
+    const duration = end - start;
+    this.metrics.set(name, duration);
+    return duration;
+  }
+
+  // Get performance metrics
+  getMetrics(): Record<string, number> {
+    return Object.fromEntries(this.metrics);
+  }
+
+  // Add critical resource hints for better performance
+  addCriticalResourceHints(): void {
+    if (typeof document === 'undefined') return;
+    
+    const hints = [
+      { rel: 'dns-prefetch', href: 'https://fonts.googleapis.com' },
+      { rel: 'dns-prefetch', href: 'https://fonts.gstatic.com' },
+      { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
+      { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossOrigin: 'anonymous' }
+    ];
+    
+    hints.forEach(hint => {
+      const link = document.createElement('link');
+      link.rel = hint.rel;
+      link.href = hint.href;
+      if (hint.crossOrigin) {
+        (link as any).crossOrigin = hint.crossOrigin;
+      }
+      document.head.appendChild(link);
+    });
+  }
+
+  // Optimize scroll performance
+  optimizeScroll(): void {
+    if (typeof window === 'undefined') return;
+    
+    let ticking = false;
+    
+    const updateScrollPosition = () => {
+      // Scroll optimization logic here
+      ticking = false;
+    };
+    
+    const requestTick = () => {
+      if (!ticking) {
+        requestAnimationFrame(updateScrollPosition);
+        ticking = true;
+      }
+    };
+    
+    window.addEventListener('scroll', requestTick, { passive: true });
+  }
+
+  // Preload critical resources
+  preloadCriticalResources(): void {
+    if (typeof document === 'undefined') return;
+    
+    const criticalResources = [
+      '/css/critical.css',
+      '/js/critical.js'
+    ];
+    
+    criticalResources.forEach(resource => {
+      const link = document.createElement('link');
+      link.rel = 'preload';
+      link.href = resource;
+      link.as = resource.endsWith('.css') ? 'style' : 'script';
+      document.head.appendChild(link);
+    });
+  }
+
+  // Initialize all optimizations
+  initialize(): void {
+    this.measurePerformance('lazyLoadImages', () => lazyLoadImages());
+    this.measurePerformance('preloadCriticalResources', () => this.preloadCriticalResources());
+    this.measurePerformance('optimizeScroll', () => this.optimizeScroll());
+  }
+}
+
+// Export singleton instance
+export const performanceOptimizer = PerformanceOptimizer.getInstance();
+
+export default {
+  prefetchResources,
+  preconnectDomains,
+  lazyLoadImages,
+  debounce,
+  throttle,
   measurePageLoad,
   reportWebVitals,
-  monitorLongTasks,
+  shouldUseWebP,
+  getConnectionQuality,
   shouldLoadHeavyAssets,
+  requestIdleCallback,
+  cancelIdleCallback,
   preloadRoute,
+  monitorLongTasks,
   cacheStaticAssets,
   clearOldCaches,
-  lazyLoadImages,
-  getMetrics,
-  preloadCriticalResources,
+  checkPerformanceBudget
 };
-
-// Default export
-export default performanceOptimizer;

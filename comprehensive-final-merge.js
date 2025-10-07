@@ -3,14 +3,12 @@
 /**
  * Comprehensive Final Merge - Handles all remaining branches systematically
  * This script processes all remaining branches in batches to avoid conflicts
- */
-
-import { execSync } from 'child_process';
+ */ import { execSync } from 'child_process';
 import fs from 'fs';
 
 console.log('🚀 Starting Comprehensive Final Merge Process...\n');
 
-// Step 1: Ensure we're on main and up to date
+//Step 1: Ensure we're on main and up to date
 console.log('📋 Step 1: Preparing main branch...');
 try {
   execSync('git checkout main', { stdio: 'inherit' });
@@ -21,7 +19,7 @@ try {
   process.exit(1);
 }
 
-// Step 2: Get all remaining branches
+//Step 2: Get all remaining branches
 console.log('🔍 Step 2: Discovering remaining branches...');
 let allBranches = [];
 try {
@@ -42,7 +40,7 @@ try {
 
 console.log(`📊 Found ${allBranches.length} branches to process\n`);
 
-// Step 3: Process branches in batches to avoid conflicts
+//Step 3: Process branches in batches to avoid conflicts
 const BATCH_SIZE = 50;
 const batches = [];
 for (let i = 0; i < allBranches.length; i += BATCH_SIZE) {
@@ -53,15 +51,15 @@ console.log(
   `📦 Processing ${batches.length} batches of up to ${BATCH_SIZE} branches each\n`
 );
 
-// Step 4: Enhanced conflict resolution function
+//Step 4: Enhanced conflict resolution function
 function resolveConflictsAndMerge(branchName) {
   console.log(`🔄 Processing ${branchName}...`);
 
   try {
-    // Fetch the branch
+    //Fetch the branch
     execSync(`git fetch origin ${branchName}`, { stdio: 'pipe' });
 
-    // Check if branch exists and has commits
+    //Check if branch exists and has commits
     try {
       execSync(`git rev-parse origin/${branchName}`, { stdio: 'pipe' });
     } catch (e) {
@@ -69,7 +67,7 @@ function resolveConflictsAndMerge(branchName) {
       return { success: false, method: 'not_found' };
     }
 
-    // Check if branch is already merged
+    //Check if branch is already merged
     try {
       const mergeBase = execSync(`git merge-base HEAD origin/${branchName}`, {
         encoding: 'utf8',
@@ -83,10 +81,10 @@ function resolveConflictsAndMerge(branchName) {
         return { success: true, method: 'already_merged' };
       }
     } catch (e) {
-      // Continue with merge attempt
+      //Continue with merge attempt
     }
 
-    // Try initial merge
+    //Try initial merge
     execSync(
       `git merge origin/${branchName} --no-ff -m "Merge ${branchName} into main"`,
       { stdio: 'pipe' }
@@ -100,7 +98,7 @@ function resolveConflictsAndMerge(branchName) {
     );
 
     try {
-      // Strategy 1: Auto-resolve with theirs for most conflicts
+      //Strategy 1: Auto-resolve with theirs for most conflicts
       execSync('git reset --hard HEAD', { stdio: 'pipe' });
       execSync(
         `git merge origin/${branchName} -X theirs --no-ff -m "Auto-merge ${branchName} (theirs strategy)"`,
@@ -115,7 +113,7 @@ function resolveConflictsAndMerge(branchName) {
     }
 
     try {
-      // Strategy 2: Auto-resolve with ours
+      //Strategy 2: Auto-resolve with ours
       execSync('git reset --hard HEAD', { stdio: 'pipe' });
       execSync(
         `git merge origin/${branchName} -X ours --no-ff -m "Auto-merge ${branchName} (ours strategy)"`,
@@ -130,10 +128,10 @@ function resolveConflictsAndMerge(branchName) {
     }
 
     try {
-      // Strategy 3: Manual conflict resolution
+      //Strategy 3: Manual conflict resolution
       execSync('git reset --hard HEAD', { stdio: 'pipe' });
 
-      // Get conflicted files
+      //Get conflicted files
       const conflictedFiles = execSync('git diff --name-only --diff-filter=U', {
         encoding: 'utf8',
       })
@@ -144,11 +142,11 @@ function resolveConflictsAndMerge(branchName) {
         `🔧 Manually resolving ${conflictedFiles.length} conflicted files...`
       );
 
-      // For each conflicted file, try to resolve
+      //For each conflicted file, try to resolve
       for (const file of conflictedFiles) {
         if (file.trim()) {
           try {
-            // Try to resolve by taking the incoming version
+            //Try to resolve by taking the incoming version
             execSync(`git checkout --theirs "${file}"`, { stdio: 'pipe' });
             execSync(`git add "${file}"`, { stdio: 'pipe' });
             console.log(`  ✅ Resolved conflict in ${file}`);
@@ -158,7 +156,7 @@ function resolveConflictsAndMerge(branchName) {
         }
       }
 
-      // Complete the merge
+      //Complete the merge
       execSync(`git commit -m "Manual conflict resolution for ${branchName}"`, {
         stdio: 'pipe',
       });
@@ -168,7 +166,7 @@ function resolveConflictsAndMerge(branchName) {
       console.log(`❌ Manual resolution failed for ${branchName}`);
     }
 
-    // If all strategies fail, abort and skip
+    //If all strategies fail, abort and skip
     try {
       execSync('git merge --abort', { stdio: 'pipe' });
       console.log(`⏭️  Skipping ${branchName} due to unresolvable conflicts`);
@@ -180,7 +178,7 @@ function resolveConflictsAndMerge(branchName) {
   }
 }
 
-// Step 5: Process each batch
+//Step 5: Process each batch
 const results = {
   batches: [],
   total: {
@@ -243,7 +241,7 @@ for (let i = 0; i < batches.length; i++) {
 
   results.batches.push(batchResults);
 
-  // Push changes after each batch to avoid conflicts
+  //Push changes after each batch to avoid conflicts
   if (i % 5 === 0 || i === batches.length - 1) {
     console.log(`\n🚀 Pushing changes after batch ${i + 1}...`);
     try {
@@ -259,7 +257,7 @@ for (let i = 0; i < batches.length; i++) {
   );
 }
 
-// Step 6: Generate comprehensive report
+//Step 6: Generate comprehensive report
 console.log('\n📊 Step 6: Generating comprehensive merge report...');
 results.timestamp = new Date().toISOString();
 results.summary = {
@@ -277,7 +275,7 @@ fs.writeFileSync(
   JSON.stringify(results, null, 2)
 );
 
-// Step 7: Display final summary
+//Step 7: Display final summary
 console.log('\n🎉 COMPREHENSIVE FINAL MERGE PROCESS COMPLETED!\n');
 console.log('📊 FINAL SUMMARY:');
 console.log(`  Total batches processed: ${results.summary.totalBatches}`);

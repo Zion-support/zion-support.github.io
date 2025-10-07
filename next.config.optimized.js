@@ -3,9 +3,9 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 });
 
 module.exports = withBundleAnalyzer({
-  // Next.js config options
+  //Next.js config options
   webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
-    // Optimize bundle size
+    //Optimize bundle size
     config.optimization.splitChunks = {
       chunks: 'all',
       cacheGroups: {

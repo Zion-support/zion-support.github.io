@@ -2,14 +2,12 @@
 
 /**
  * Comprehensive PR Merge - Handles all remaining branches and PRs
- */
-
-import { execSync } from 'child_process';
+ */ import { execSync } from 'child_process';
 import fs from 'fs';
 
 console.log('🚀 Starting Comprehensive PR Merge Process...\n');
 
-// Step 1: Ensure we're on main and up to date
+//Step 1: Ensure we're on main and up to date
 console.log('📋 Step 1: Preparing main branch...');
 try {
   execSync('git checkout main', { stdio: 'inherit' });
@@ -20,10 +18,10 @@ try {
   process.exit(1);
 }
 
-// Step 2: Get all branches that might need merging
+//Step 2: Get all branches that might need merging
 console.log('📊 Step 2: Identifying branches to merge...');
 
-// Get recent branches (last 7 days)
+//Get recent branches (last 7 days)
 const recentBranches = execSync(
   'git for-each-ref --sort=-committerdate refs/remotes/origin --format="%(committerdate:short) %(refname:short)"',
   { encoding: 'utf8' }
@@ -62,15 +60,15 @@ const recentBranches = execSync(
 
 console.log(`📊 Found ${recentBranches.length} recent branches to process\n`);
 
-// Step 3: Enhanced merge function with conflict resolution
+//Step 3: Enhanced merge function with conflict resolution
 function mergeBranch(branchName) {
   console.log(`\n🔄 Processing ${branchName}...`);
 
   try {
-    // Check if branch exists
+    //Check if branch exists
     execSync(`git fetch origin ${branchName}`, { stdio: 'pipe' });
 
-    // Check if already merged
+    //Check if already merged
     const isMerged = execSync(
       `git branch --merged main | grep -q "${branchName}" || echo "not_merged"`,
       { encoding: 'utf8' }
@@ -80,7 +78,7 @@ function mergeBranch(branchName) {
       return { success: true, method: 'already_merged' };
     }
 
-    // Try to merge
+    //Try to merge
     try {
       execSync(
         `git merge origin/${branchName} --no-ff -m "Merge ${branchName}: automated merge"`,
@@ -93,9 +91,9 @@ function mergeBranch(branchName) {
         `⚠️  Merge conflict detected for ${branchName}, attempting resolution...`
       );
 
-      // Try different conflict resolution strategies
+      //Try different conflict resolution strategies
       try {
-        // Strategy 1: Use theirs
+        //Strategy 1: Use theirs
         execSync(
           `git merge origin/${branchName} --strategy-option=theirs --no-ff -m "Merge ${branchName}: using theirs strategy"`,
           { stdio: 'inherit' }
@@ -106,7 +104,7 @@ function mergeBranch(branchName) {
         return { success: true, method: 'theirs' };
       } catch (theirsError) {
         try {
-          // Strategy 2: Use ours
+          //Strategy 2: Use ours
           execSync(
             `git merge origin/${branchName} --strategy-option=ours --no-ff -m "Merge ${branchName}: using ours strategy"`,
             { stdio: 'inherit' }
@@ -129,7 +127,7 @@ function mergeBranch(branchName) {
   }
 }
 
-// Step 4: Process branches in batches
+//Step 4: Process branches in batches
 const results = {
   successful: [],
   failed: [],
@@ -150,7 +148,7 @@ const results = {
 
 console.log('🚀 Step 3: Executing merge strategy...\n');
 
-// Process in batches of 20 to avoid overwhelming the system
+//Process in batches of 20 to avoid overwhelming the system
 const batchSize = 20;
 const totalBatches = Math.ceil(recentBranches.length / batchSize);
 
@@ -186,7 +184,7 @@ for (let batch = 0; batch < totalBatches; batch++) {
     }
   }
 
-  // Push changes after each batch
+  //Push changes after each batch
   if (batch % 3 === 0 || batch === totalBatches - 1) {
     try {
       execSync('git push origin main', { stdio: 'inherit' });
@@ -200,7 +198,7 @@ for (let batch = 0; batch < totalBatches; batch++) {
   }
 }
 
-// Step 5: Generate final report
+//Step 5: Generate final report
 console.log('\n📊 Step 4: Generating final merge report...');
 const report = {
   ...results,
@@ -212,7 +210,7 @@ fs.writeFileSync(
   JSON.stringify(report, null, 2)
 );
 
-// Step 6: Final push
+//Step 6: Final push
 console.log('\n🚀 Step 5: Final push...');
 try {
   execSync('git push origin main', { stdio: 'inherit' });

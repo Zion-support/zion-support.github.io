@@ -1,12 +1,12 @@
-// Advanced caching configuration;
+//Advanced caching configuration;
 const cacheConfig = {
-  // Static generation
+  //Static generation
   staticGeneration: {
-    revalidate: 3600, // 1 hour
+    revalidate: 3600, //1 hour
     tags: ['services', 'pricing', 'content'],
   },
 
-  // API caching
+  //API caching
   apiCaching: {
     'Cache-Control': 'public, max-age=3600, stale-while-revalidate=86400',
     'CDN-Cache-Control': 'public, max-age=86400',

@@ -3,7 +3,7 @@
 import fs from 'fs';
 import path from 'path';
 
-// Correct icon mappings - using actual lucide-react exports
+//Correct icon mappings - using actual lucide-react exports
 const iconMappings = {
   rrowleft: 'ArrowLeft',
   alendar: 'Calendar',
@@ -35,7 +35,7 @@ const iconMappings = {
   ward: 'Award',
 };
 
-// Icons that don't exist in lucide-react - replace with similar ones
+//Icons that don't exist in lucide-react - replace with similar ones
 const iconReplacements = {
   Tag: 'Hash',
   Globe: 'Globe2',
@@ -53,13 +53,13 @@ const iconReplacements = {
   Award: 'Award',
 };
 
-// Function to fix imports in a file
+//Function to fix imports in a file
 function fixImportsInFile(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
 
-    // Remove duplicate Link imports
+    //Remove duplicate Link imports
     const linkImportRegex =
       /import Link from 'next\/link';\s*\n\s*import Link from 'next\/link';/g;
     if (linkImportRegex.test(content)) {
@@ -70,7 +70,7 @@ function fixImportsInFile(filePath) {
       modified = true;
     }
 
-    // Fix lucide-react imports - replace individual imports with single import
+    //Fix lucide-react imports - replace individual imports with single import
     const lucideImports = [];
     const importLines = content.split('\n');
     const newImportLines = [];
@@ -78,7 +78,7 @@ function fixImportsInFile(filePath) {
     for (let i = 0; i < importLines.length; i++) {
       const line = importLines[i];
 
-      // Skip lucide-react individual imports
+      //Skip lucide-react individual imports
       if (line.includes('lucide-react/dist/esm/icons/')) {
         const match = line.match(
           /import\s+(\w+)\s+from\s+'lucide-react\/dist\/esm\/icons\/(\w+)';/
@@ -95,19 +95,19 @@ function fixImportsInFile(filePath) {
         line.includes('import {') &&
         line.includes("} from 'lucide-react'")
       ) {
-        // Skip existing lucide-react imports
+        //Skip existing lucide-react imports
         continue;
       } else {
         newImportLines.push(line);
       }
     }
 
-    // Add consolidated lucide-react import
+    //Add consolidated lucide-react import
     if (lucideImports.length > 0) {
       const uniqueImports = [...new Set(lucideImports)];
       const lucideImportLine = `import { ${uniqueImports.join(', ')} } from 'lucide-react';`;
 
-      // Find the best place to insert the import
+      //Find the best place to insert the import
       let insertIndex = 0;
       for (let i = 0; i < newImportLines.length; i++) {
         if (newImportLines[i].startsWith('import ')) {
@@ -121,7 +121,7 @@ function fixImportsInFile(filePath) {
       content = newImportLines.join('\n');
     }
 
-    // Fix Link component usage - replace 'to' prop with 'href'
+    //Fix Link component usage - replace 'to' prop with 'href'
     content = content.replace(/<Link\s+to=/g, '<Link href=');
     modified = true;
 
@@ -134,7 +134,7 @@ function fixImportsInFile(filePath) {
   }
 }
 
-// Get all files that need fixing
+//Get all files that need fixing
 const directories = ['/workspace/app/blog', '/workspace/app/case-studies'];
 const files = [];
 

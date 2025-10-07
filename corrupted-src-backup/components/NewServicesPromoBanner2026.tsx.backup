@@ -1,6 +1,10 @@
 import React from 'react';
+<<<<<<< HEAD:src/components/NewServicesPromoBanner2026.tsx
+<<<<<<< HEAD
+=======
 import { ArrowLeft, ArrowRight, Award, Brain, Calendar, CheckCircle, Clock, DollarSign, Globe, Rocket, Satellite, Share2, Bookmark, Tag, Target, TrendingUp, Users, User, Zap, BarChart3, BookOpen } from 'lucide-react';
 
+>>>>>>> origin/main:corrupted-src-backup/components/NewServicesPromoBanner2026.tsx.backup
 import { Link } from 'react-router-dom';
 
 const NewServicesPromoBanner2026: React.FC = () => {
@@ -290,8 +294,39 @@ const NewServicesPromoBanner2026: React.FC = () => {
           </div>
         </div>
       </div>
+<<<<<<< HEAD:src/components/NewServicesPromoBanner2026.tsx
+=======
+
+interface NewServicesPromoBanner2026Props {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const NewServicesPromoBanner2026: React.FC<NewServicesPromoBanner2026Props> = ({ 
+  className = '', 
+  children 
+}) => {
+  return (
+    <div className={`newservicespromobanner2026-component ${className}`}>
+      {children || (
+        <div className="p-4 text-center text-gray-600">
+          <h3 className="text-lg font-semibold mb-2">NewServicesPromoBanner2026</h3>
+          <p>Component placeholder - implementation needed</p>
+        </div>
+      )}
+>>>>>>> cursor/fix-errors-and-merge-to-main-8d57
+=======
+>>>>>>> origin/main:corrupted-src-backup/components/NewServicesPromoBanner2026.tsx.backup
     </div>
   );
 };
 
+<<<<<<< HEAD:src/components/NewServicesPromoBanner2026.tsx
+<<<<<<< HEAD
 export default NewServicesPromoBanner2026;
+=======
+export default NewServicesPromoBanner2026;
+>>>>>>> cursor/fix-errors-and-merge-to-main-8d57
+=======
+export default NewServicesPromoBanner2026;
+>>>>>>> origin/main:corrupted-src-backup/components/NewServicesPromoBanner2026.tsx.backup
