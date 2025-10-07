@@ -1,11 +1,9 @@
-import React, { memo, useMemo, useCallback, Suspense } from 'react';
+import React, { Suspense } from 'react';
 import { createRoot } from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import HomePage from './app/page';
 import { performanceEnhancer } from './app/utils/performanceEnhancer';
-import { errorHandler } from './app/utils/enhancedErrorHandler';
-import ErrorBoundary from './app/components/ErrorBoundary';
 import PerformanceMonitor from './app/components/PerformanceMonitor';
 import EnhancedErrorBoundary from './app/components/EnhancedErrorBoundary';
 import AdvancedSEOOptimizer, { defaultSEOConfig } from './app/components/AdvancedSEOOptimizer';

@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState, useCallback } from 'react';
 
 interface AccessibilityConfig {
   enableKeyboardNavigation: boolean;
@@ -22,10 +22,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
 }) => {
   const [isHighContrast, setIsHighContrast] = useState(false);
   const [isReducedMotion, setIsReducedMotion] = useState(false);
-  const [fontSize, setFontSize] = useState(16);
-  const [focusVisible, setFocusVisible] = useState(false);
   const skipLinkRef = useRef<HTMLAnchorElement>(null);
-  const mainContentRef = useRef<HTMLElement>(null);
 
   const defaultConfig: AccessibilityConfig = {
     enableKeyboardNavigation: true,
@@ -39,38 +36,39 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     ...config,
   };
 
-  useEffect(() => {
-    // Initialize accessibility features
-    initializeAccessibility();
-    
-    // Setup keyboard navigation
-    if (defaultConfig.enableKeyboardNavigation) {
-      setupKeyboardNavigation();
+  const updateHighContrastStyles = (enabled: boolean) => {
+    if (enabled) {
+      document.body.classList.add('high-contrast');
+    } else {
+      document.body.classList.remove('high-contrast');
     }
+  };
 
-    // Setup screen reader support
-    if (defaultConfig.enableScreenReaderSupport) {
-      setupScreenReaderSupport();
+  const updateReducedMotionStyles = (enabled: boolean) => {
+    if (enabled) {
+      document.body.classList.add('reduced-motion');
+    } else {
+      document.body.classList.remove('reduced-motion');
     }
+  };
 
-    // Setup focus management
-    if (defaultConfig.enableFocusManagement) {
-      setupFocusManagement();
+  const detectHighContrast = useCallback(() => {
+    if (window.matchMedia) {
+      const query = window.matchMedia('(prefers-contrast: high)');
+      setIsHighContrast(query.matches);
+      updateHighContrastStyles(query.matches);
     }
+  }, [setIsHighContrast]);
 
-    // Setup media queries for user preferences
-    setupMediaQueries();
+  const detectReducedMotion = useCallback(() => {
+    if (window.matchMedia) {
+      const query = window.matchMedia('(prefers-reduced-motion: reduce)');
+      setIsReducedMotion(query.matches);
+      updateReducedMotionStyles(query.matches);
+    }
+  }, [setIsReducedMotion]);
 
-    // Setup ARIA live regions
-    setupARIALiveRegions();
-
-    // Cleanup
-    return () => {
-      cleanupEventListeners();
-    };
-  }, []);
-
-  const initializeAccessibility = () => {
+  const initializeAccessibility = useCallback(() => {
     // Add accessibility attributes to body
     document.body.setAttribute('role', 'application');
     document.body.setAttribute('aria-live', 'polite');
@@ -89,9 +87,9 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     if (defaultConfig.enableReducedMotion) {
       detectReducedMotion();
     }
-  };
+  }, [defaultConfig.enableSkipLinks, defaultConfig.enableHighContrast, defaultConfig.enableReducedMotion, detectHighContrast, detectReducedMotion]);
 
-  const setupKeyboardNavigation = () => {
+  const setupKeyboardNavigation = useCallback(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
       // Skip to main content
       if (event.key === 'Tab' && event.shiftKey === false && !event.ctrlKey && !event.altKey) {
@@ -116,9 +114,9 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     };
 
     document.addEventListener('keydown', handleKeyDown);
-  };
+  }, [skipLinkRef]);
 
-  const setupScreenReaderSupport = () => {
+  const setupScreenReaderSupport = useCallback(() => {
     // Add screen reader only text
     addScreenReaderOnlyText();
     
@@ -127,16 +125,9 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     
     // Setup form labels
     setupFormLabels();
-  };
+  }, []);
 
-  const setupFocusManagement = () => {
-    // Track focus visibility
-    const handleFocusIn = () => setFocusVisible(true);
-    const handleFocusOut = () => setFocusVisible(false);
-    
-    document.addEventListener('focusin', handleFocusIn);
-    document.addEventListener('focusout', handleFocusOut);
-
+  const setupFocusManagement = useCallback(() => {
     // Trap focus in modals
     const handleTabKey = (event: KeyboardEvent) => {
       if (event.key === 'Tab') {
@@ -148,9 +139,9 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     };
 
     document.addEventListener('keydown', handleTabKey);
-  };
+  }, []);
 
-  const setupMediaQueries = () => {
+  const setupMediaQueries = useCallback(() => {
     // High contrast media query
     if (window.matchMedia) {
       const highContrastQuery = window.matchMedia('(prefers-contrast: high)');
@@ -173,7 +164,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       setIsHighContrast(highContrastQuery.matches);
       setIsReducedMotion(reducedMotionQuery.matches);
     }
-  };
+  }, [setIsHighContrast, setIsReducedMotion]);
 
   const setupARIALiveRegions = () => {
     // Create live region for announcements
@@ -362,59 +353,51 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     }
   };
 
-  const detectHighContrast = () => {
-    if (window.matchMedia) {
-      const query = window.matchMedia('(prefers-contrast: high)');
-      setIsHighContrast(query.matches);
-      updateHighContrastStyles(query.matches);
-    }
-  };
 
-  const detectReducedMotion = () => {
-    if (window.matchMedia) {
-      const query = window.matchMedia('(prefers-reduced-motion: reduce)');
-      setIsReducedMotion(query.matches);
-      updateReducedMotionStyles(query.matches);
-    }
-  };
 
-  const updateHighContrastStyles = (enabled: boolean) => {
-    if (enabled) {
-      document.body.classList.add('high-contrast');
-    } else {
-      document.body.classList.remove('high-contrast');
-    }
-  };
-
-  const updateReducedMotionStyles = (enabled: boolean) => {
-    if (enabled) {
-      document.body.classList.add('reduced-motion');
-    } else {
-      document.body.classList.remove('reduced-motion');
-    }
-  };
-
-  const cleanupEventListeners = () => {
+  const cleanupEventListeners = useCallback(() => {
     // Remove event listeners
     document.removeEventListener('keydown', setupKeyboardNavigation);
     document.removeEventListener('focusin', setupFocusManagement);
     document.removeEventListener('focusout', setupFocusManagement);
-  };
+  }, [setupKeyboardNavigation, setupFocusManagement]);
 
-  // Announce changes to screen readers
-  const announceToScreenReader = (message: string) => {
-    const liveRegion = document.getElementById('live-region');
-    if (liveRegion) {
-      liveRegion.textContent = message;
+  useEffect(() => {
+    // Initialize accessibility features
+    initializeAccessibility();
+    
+    // Setup keyboard navigation
+    if (defaultConfig.enableKeyboardNavigation) {
+      setupKeyboardNavigation();
     }
-  };
+
+    // Setup screen reader support
+    if (defaultConfig.enableScreenReaderSupport) {
+      setupScreenReaderSupport();
+    }
+
+    // Setup focus management
+    if (defaultConfig.enableFocusManagement) {
+      setupFocusManagement();
+    }
+
+    // Setup media queries for user preferences
+    setupMediaQueries();
+
+    // Setup ARIA live regions
+    setupARIALiveRegions();
+
+    // Cleanup
+    return () => {
+      cleanupEventListeners();
+    };
+  }, [cleanupEventListeners, defaultConfig.enableFocusManagement, defaultConfig.enableKeyboardNavigation, defaultConfig.enableScreenReaderSupport, initializeAccessibility, setupFocusManagement, setupKeyboardNavigation, setupMediaQueries, setupScreenReaderSupport]);
 
   // Utility functions are available through the component's internal state
 
   return (
     <div
       className={`accessibility-enhancer ${isHighContrast ? 'high-contrast' : ''} ${isReducedMotion ? 'reduced-motion' : ''}`}
-      style={{ fontSize: `${fontSize}px` }}
     >
       {children}
     </div>

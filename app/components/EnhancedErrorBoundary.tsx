@@ -136,7 +136,7 @@ class EnhancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
 
       // Send to analytics if enabled
       if (this.props.enableAnalytics && typeof window !== 'undefined' && 'gtag' in window) {
-        (window as any).gtag('event', 'error_boundary_error', {
+        (window as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag('event', 'error_boundary_error', {
           event_category: 'Error',
           event_label: error.name,
           value: retryCount,

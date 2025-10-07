@@ -11,11 +11,10 @@ export const metadata = {
     type: 'article',
     url: 'https://ziontechgroup.com/blog/ai-autonomous-business-systems-2026',
     images: [
-      
+      {
         url: '/og-autonomous-business-2026.jpg',
-        url: "/og-autonomous-business-2026.jpg",
         width: 1200,
-  height: 630,
+        height: 630,
         alt: 'AI Autonomous Business Systems 2026',
       },
     ],

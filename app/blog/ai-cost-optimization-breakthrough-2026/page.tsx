@@ -1,4 +1,3 @@
-import { ArrowRight, Target, CheckCircle } from 'lucide-react';
 import React from 'react';
 import Link from 'next/link';
 import { ArrowRight, Calendar, Clock, Users, TrendingUp, DollarSign, Target, CheckCircle } from 'lucide-react';
@@ -13,23 +12,18 @@ export const metadata = {
     type: 'article',
     url: 'https://ziontechgroup.com/blog/ai-cost-optimization-breakthrough-2026',
     images: [
-      
+      {
         url: '/og-ai-cost-optimization-2026.jpg',
-        url: "/og-ai-cost-optimization-2026.jpg",
         width: 1200,
-  height: 630,
+        height: 630,
         alt: 'AI Cost Optimization Breakthrough 2026 - 90% Cost Reduction',
       },
     ],
   },
-  twitter: 
+  twitter: {
     card: "summary_large_image",
     title: "AI Cost Optimization Breakthrough 2026: Cut AI Spending by 90%",
     description: "Revolutionary AI cost optimization strategies delivering 90% cost reduction, $200M+ savings, and 10x efficiency gains for Fortune 500 companies.",
-    images: ['/og-ai-cost-optimization-2026.jpg']};
-    card: 'summary_large_image',
-    title: 'AI Cost Optimization Breakthrough 2026: Cut AI Spending by 90%',
-    description: 'Revolutionary AI cost optimization strategies delivering 90% cost reduction, $200M+ savings, and 10x efficiency gains for Fortune 500 companies.',
     images: ['/og-ai-cost-optimization-2026.jpg'],
   },
 };
