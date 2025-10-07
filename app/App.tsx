@@ -23,7 +23,6 @@ const ErrorBoundary = ({ children }: { children: React.ReactNode }) => {
 
 // Utils
 import { preloadCriticalResources, performanceOptimizer } from './utils/performanceOptimizer';
-import { logger } from './utils/logger';
 
 // Lazy load pages for better performance
 const HomePage = lazy(() => import('./page'));
@@ -33,9 +32,6 @@ import '../index.css';
 
 const App: React.FC = () => {
   useEffect(() => {
-    // Initialize global error handling
-    logger.info('App initialized');
-
     // Initialize performance monitoring
     performanceOptimizer.init();
     
@@ -50,9 +46,6 @@ const App: React.FC = () => {
 
     // Preload critical resources
     preloadCriticalResources();
-    
-    logger.info('Performance monitoring initialized');
-    logger.info('🚀 Zion Tech Group App initialized with comprehensive monitoring');
   }, []);
 
   return (
