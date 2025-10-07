@@ -24,6 +24,9 @@ const ErrorBoundary = ({ children }: { children: React.ReactNode }) => {
 // Utils
 import { preloadCriticalResources, performanceOptimizer } from './utils/performanceOptimizer';
 import { logger } from './utils/logger';
+import { initializePerformanceEnhancements } from './utils/performanceEnhancer';
+import { initializeAccessibilityEnhancements } from './utils/accessibilityEnhancer';
+import { initializeSEOEnhancements } from './utils/seoEnhancer';
 
 // Lazy load pages for better performance
 const HomePage = lazy(() => import('./page'));
@@ -46,6 +49,11 @@ const App: React.FC = () => {
 
     // Preload critical resources
     preloadCriticalResources();
+    
+    // Initialize all enhancement utilities
+    initializePerformanceEnhancements();
+    initializeAccessibilityEnhancements();
+    initializeSEOEnhancements();
     
     logger.info('Performance monitoring initialized', 'App');
     logger.info('🚀 Zion Tech Group App initialized with comprehensive monitoring', 'App');
