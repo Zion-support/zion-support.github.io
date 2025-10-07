@@ -1,5 +1,15 @@
 import React, { useEffect } from 'react';
 
+// Extend Window interface for Google Analytics
+declare global {
+  interface Window {
+    dataLayer: unknown[];
+    gtag?: (...args: unknown[]) => void;
+    trackEvent?: (event: AnalyticsEvent) => void;
+    trackPageView?: (url: string) => void;
+  }
+}
+
 interface AnalyticsEvent {
   action: string;
   category: string;

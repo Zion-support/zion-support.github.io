@@ -31,11 +31,10 @@ export default function BlogPage() {
             <p className="text-gray-300 mb-6">
               We're working on bringing you the latest insights and breakthroughs in AI and enterprise technology.
             </p>
-            <Link 
-              href="/" 
-              className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded-lg transition-colors"
-            >
-              Back to Home
+            <Link href="/">
+              <span className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded-lg transition-colors">
+                Back to Home
+              </span>
             </Link>
           </div>
         </div>

@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 interface AccessibilityConfig {
   enableKeyboardNavigation: boolean;
@@ -31,8 +31,6 @@ const AccessibilityEnhancer = React.forwardRef<AccessibilityEnhancerRef, Accessi
   const [isReducedMotion, setIsReducedMotion] = useState(false);
   const [fontSize, setFontSize] = useState(16);
   const [focusVisible, setFocusVisible] = useState(false);
-  const skipLinkRef = useRef<HTMLAnchorElement>(null);
-  const mainContentRef = useRef<HTMLElement>(null);
 
   const defaultConfig: AccessibilityConfig = {
     enableKeyboardNavigation: true,
@@ -262,7 +260,7 @@ const AccessibilityEnhancer = React.forwardRef<AccessibilityEnhancerRef, Accessi
     initializeAccessibility();
 
     return cleanupEventListeners;
-  }, []);
+  }, [mergedConfig.enableSkipLinks, mergedConfig.enableScreenReaderSupport, mergedConfig.enableKeyboardNavigation, mergedConfig.enableFocusManagement, mergedConfig.enableARIALabels, mergedConfig.enableColorContrast, focusVisible]);
 
   // Announce changes to screen readers
   const announceToScreenReader = (message: string) => {

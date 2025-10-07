@@ -1,6 +1,5 @@
 import React from 'react';
 import Link from 'next/link';
-import { Sparkles, Target, ArrowRight, Zap, TrendingUp } from 'lucide-react';
 
 const NewContentPromotionalBanner2026: React.FC = () => {
   const featuredContent = [
@@ -99,7 +98,7 @@ const NewContentPromotionalBanner2026: React.FC = () => {
         {/* Header */}
         <div className='text-center mb-16'>
           <div className='flex items-center justify-center gap-3 mb-6'>
-            <Sparkles className='w-8 h-8 text-blue-400' />
+            <span className='text-3xl'>✨</span>
             <h2 className='text-4xl font-bold text-white'>
               Revolutionary AI Content 2026
             </h2>
@@ -116,7 +115,7 @@ const NewContentPromotionalBanner2026: React.FC = () => {
             <span className='text-sm font-bold text-yellow-400 flex items-center gap-2'>
               🚀 JUST PUBLISHED • SEPTEMBER 2026
             </span>
-            <Sparkles className='w-6 h-6 text-yellow-400' />
+            <span className='text-xl'>✨</span>
           </div>
 
           <h2 className='text-5xl md:text-6xl font-extrabold text-white mb-6'>
@@ -138,15 +137,15 @@ const NewContentPromotionalBanner2026: React.FC = () => {
 
           <div className='flex items-center justify-center gap-8 text-gray-300'>
             <div className='flex items-center gap-2'>
-              <TrendingUp className='w-5 h-5 text-green-400' />
+              <span className='text-green-400'>📈</span>
               <span className='font-semibold'>10,000+ Readers</span>
             </div>
             <div className='flex items-center gap-2'>
-              <Zap className='w-5 h-5 text-yellow-400' />
+              <span className='text-yellow-400'>⚡</span>
               <span className='font-semibold'>3 New Articles</span>
             </div>
             <div className='flex items-center gap-2'>
-              <Target className='w-5 h-5 text-blue-400' />
+              <span className='text-blue-400'>🎯</span>
               <span className='font-semibold'>Proven Results</span>
             </div>
           </div>
@@ -196,12 +195,11 @@ const NewContentPromotionalBanner2026: React.FC = () => {
                 </p>
 
                 {/* CTA Button */}
-                <Link
-                  href={`/blog/${content.slug}`}
-                  className='inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-cyan-500/25'
-                >
-                  Read More
-                  <ArrowRight className='w-4 h-4 group-hover:translate-x-1 transition-transform' />
+                <Link href={`/blog/${content.slug}`}>
+                  <span className='inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-cyan-500/25'>
+                    Read More
+                    <span className='group-hover:translate-x-1 transition-transform'>→</span>
+                  </span>
                 </Link>
               </div>
             </div>
@@ -211,11 +209,11 @@ const NewContentPromotionalBanner2026: React.FC = () => {
         {/* Call to Action */}
         <div className='text-center bg-white/5 backdrop-blur-sm border border-white/20 rounded-2xl p-12'>
           <div className='flex items-center justify-center gap-3 mb-6'>
-            <Sparkles className='w-8 h-8 text-cyan-400' />
+            <span className='text-3xl text-cyan-400'>✨</span>
             <h3 className='text-3xl font-bold text-white'>
               Ready to Transform Your Enterprise?
             </h3>
-            <Sparkles className='w-8 h-8 text-purple-400' />
+            <span className='text-3xl text-purple-400'>✨</span>
           </div>
 
           <p className='text-xl text-gray-300 mb-8 max-w-4xl mx-auto'>
@@ -231,12 +229,11 @@ const NewContentPromotionalBanner2026: React.FC = () => {
           </p>
 
           <div className='flex flex-col sm:flex-row items-center justify-center gap-4 mb-12'>
-            <Link
-              href='/contact'
-              className='group flex items-center gap-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl'
-            >
-              <Sparkles className='w-5 h-5' />
-              <span>Start Your AI Journey</span>
+            <Link href='/contact'>
+              <span className='group flex items-center gap-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl'>
+                <span>✨</span>
+                <span>Start Your AI Journey</span>
+              </span>
             </Link>
 
             <Link
@@ -244,7 +241,7 @@ const NewContentPromotionalBanner2026: React.FC = () => {
               className='group flex items-center gap-3 border-2 border-white/30 hover:border-white/60 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1'
             >
               <span>Explore All Content</span>
-              <ArrowRight className='w-5 h-5 group-hover:translate-x-1 transition-transform' />
+              <span className='group-hover:translate-x-1 transition-transform'>→</span>
             </Link>
           </div>
 
