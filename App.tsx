@@ -3,6 +3,7 @@ import { createRoot } from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 import { HelmetProvider, Helmet } from 'react-helmet-async';
 import HomePage from './app/page';
+import { performanceEnhancer } from './app/utils/performanceEnhancer';
 import ErrorBoundary from './app/components/ErrorBoundary';
 import PerformanceMonitor from './app/components/PerformanceMonitor';
 
@@ -101,6 +102,7 @@ class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundarySta
   }
 }
 
+<<<<<<< HEAD
 // Loading component
 const LoadingSpinner = memo(() => (
   <div className="animate-pulse bg-gray-200 h-32 rounded flex items-center justify-center">
@@ -108,6 +110,8 @@ const LoadingSpinner = memo(() => (
   </div>
 ));
 
+=======
+>>>>>>> 025881f891b15c7d2a155d069a9bdf519fbae28d
 export default function App() {
   const structuredData = useMemo(
     () => ({
@@ -149,12 +153,18 @@ export default function App() {
     []
   );
 
+<<<<<<< HEAD
 =======
 const App = () => {
 >>>>>>> c97f6dee3bc17b688177bad000795d260eae3d63
+=======
+>>>>>>> 025881f891b15c7d2a155d069a9bdf519fbae28d
   // Performance optimization: Preload critical resources
   React.useEffect(() => {
     if (typeof document !== 'undefined') {
+      // Initialize performance monitoring
+      performanceEnhancer.startMonitoring();
+      
       // Preload critical fonts
       const fontLink = document.createElement('link');
       fontLink.rel = 'preload';
@@ -162,6 +172,7 @@ const App = () => {
         'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap';
       fontLink.as = 'style';
       document.head.appendChild(fontLink);
+      
       // Preload critical images
       const preloadImages = [
         'https://ziontechgroup.com/og-image.jpg',
@@ -171,12 +182,11 @@ const App = () => {
         const img = new Image();
         img.src = src;
       });
-      // Add performance monitoring
+
+      // Enhanced performance monitoring with Web Vitals
       if ('performance' in window) {
         window.addEventListener('load', () => {
-          const perfData = performance.getEntriesByType(
-            'navigation'
-          )[0] as PerformanceNavigationTiming;
+          const perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
           if (perfData) {
             const performanceMetrics = {
               domContentLoaded: perfData.domContentLoadedEventEnd - perfData.domContentLoadedEventStart,
@@ -193,7 +203,7 @@ const App = () => {
             if (process.env.NODE_ENV === 'production' && typeof window !== 'undefined') {
               // Send to analytics service
               if ('gtag' in window) {
-                (window as unknown as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag('event', 'page_load_performance', {
+                (window as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag('event', 'page_load_performance', {
                   event_category: 'Performance',
                   event_label: 'Page Load',
                   value: Math.round(performanceMetrics.totalTime)
@@ -203,6 +213,21 @@ const App = () => {
           }
         });
       }
+    }
+
+    // Cleanup on unmount
+    return () => {
+      performanceEnhancer.stopMonitoring();
+    };
+  }, []);
+
+  const handlePhoneClick = useCallback(() => {
+    // Track phone clicks for analytics
+    if (typeof window !== 'undefined' && (window as unknown as { gtag?: Function }).gtag) {
+      ((window as unknown as { gtag: Function }).gtag)('event', 'phone_click', {
+        event_category: 'engagement',
+        event_label: 'main_phone_number'
+      });
     }
   }, []);
 <<<<<<< HEAD
@@ -235,5 +260,8 @@ if (container) {
   const root = createRoot(container);
   root.render(<App />);
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 025881f891b15c7d2a155d069a9bdf519fbae28d
 export default App;
