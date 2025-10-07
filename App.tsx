@@ -1,16 +1,5 @@
-import React, { Suspense, memo, useMemo, useCallback } from 'react';
-import { createRoot } from 'react-dom/client';
-import { BrowserRouter } from 'react-router-dom';
+import React, { memo, useMemo, useCallback, Suspense } from 'react';
 import { HelmetProvider, Helmet } from 'react-helmet-async';
-import HomePage from './app/page';
-import { initializePerformanceEnhancements } from './app/utils/performanceEnhancer';
-// import { errorHandler } from './app/utils/enhancedErrorHandler';
-// import ErrorBoundary from './app/components/ErrorBoundary';
-import PerformanceMonitor from './app/components/PerformanceMonitor';
-import EnhancedErrorBoundary from './app/components/EnhancedErrorBoundary';
-import AdvancedSEOOptimizer from './app/components/AdvancedSEOOptimizer';
-import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
-// import { performanceOptimizer } from './app/utils/performanceOptimizer';
 
 // Memoized components for better performance
 const UnifiedContentPromotion = memo(() => (
