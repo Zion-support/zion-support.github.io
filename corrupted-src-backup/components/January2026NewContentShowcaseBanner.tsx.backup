@@ -1,4 +1,8 @@
 import React from 'react';
+<<<<<<< HEAD:src/components/January2026NewContentShowcaseBanner.tsx
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main:corrupted-src-backup/components/January2026NewContentShowcaseBanner.tsx.backup
 import { motion } from 'framer-motion';
 
 const January2026NewContentShowcaseBanner: React.FC = () => {
@@ -125,4 +129,33 @@ const January2026NewContentShowcaseBanner: React.FC = () => {
   );
 };
 
+<<<<<<< HEAD:src/components/January2026NewContentShowcaseBanner.tsx
 export default January2026NewContentShowcaseBanner;
+=======
+
+interface January2026NewContentShowcaseBannerProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const January2026NewContentShowcaseBanner: React.FC<January2026NewContentShowcaseBannerProps> = ({ 
+  className = '', 
+  children 
+}) => {
+  return (
+    <div className={`january2026newcontentshowcasebanner-component ${className}`}>
+      {children || (
+        <div className="p-4 text-center text-gray-600">
+          <h3 className="text-lg font-semibold mb-2">January2026NewContentShowcaseBanner</h3>
+          <p>Component placeholder - implementation needed</p>
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default January2026NewContentShowcaseBanner;
+>>>>>>> cursor/fix-errors-and-merge-to-main-8d57
+=======
+export default January2026NewContentShowcaseBanner;
+>>>>>>> origin/main:corrupted-src-backup/components/January2026NewContentShowcaseBanner.tsx.backup

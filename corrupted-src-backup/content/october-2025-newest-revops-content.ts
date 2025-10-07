@@ -70,7 +70,16 @@ export const octoberNewestRevOpsContent: RevOpsContent[] = [
     category: 'RevOps',
     date: '2025-10-02',
     readTime: '18 min read',
-    tags: ['RevOps', 'Autonomous', 'Self-Healing', '2025', 'Case Study', 'SaaS', 'Revenue Operations', 'Enterprise AI'],
+    tags: [
+      'RevOps',
+      'Autonomous',
+      'Self-Healing',
+      '2025',
+      'Case Study',
+      'SaaS',
+      'Revenue Operations',
+      'Enterprise AI',
+    ],
     featured: true,
     breaking: true,
     highlights: [

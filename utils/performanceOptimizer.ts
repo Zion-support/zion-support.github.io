@@ -1,29 +1,42 @@
 /**
- * Performance Optimization Utility
- *
- * Provides tools for optimizing application performance including:
- * - Component lazy loading
- * - Image optimization
- * - Bundle size monitoring
- * - Memory leak detection
- * - Render performance tracking
+ * Performance Optimizer Utilities
  */
 
-import * as React from 'react';
+import React, { forwardRef } from 'react';
+import type { ComponentType } from 'react';
 
-export interface PerformanceMetrics {
+interface PerformanceMetrics {
   componentName: string;
   renderTime: number;
-  mountTime: number;
-  updateCount: number;
-  memoryUsage: number;
-  timestamp: Date;
+  timestamp: number;
+  memoryUsage?: number | undefined;
+  renderCount: number;
+}
+
+interface OptimizationConfig {
+  enableLazyLoading?: boolean;
+  enableMemoization?: boolean;
+  enableVirtualization?: boolean;
+  maxRenderTime?: number;
+  enableMemoryMonitoring?: boolean;
 }
 
 export class PerformanceOptimizer {
   private metrics: Map<string, PerformanceMetrics[]> = new Map();
   private renderStartTimes: Map<string, number> = new Map();
   private observedComponents: Set<string> = new Set();
+  private config: OptimizationConfig;
+
+  constructor(config: OptimizationConfig = {}) {
+    this.config = {
+      enableLazyLoading: true,
+      enableMemoization: true,
+      enableVirtualization: false,
+      maxRenderTime: 16, // 60fps
+      enableMemoryMonitoring: true,
+      ...config,
+    };
+  }
 
   /**
    * Start tracking a component render
@@ -34,67 +47,101 @@ export class PerformanceOptimizer {
   }
 
   /**
-   * Start tracking a component (alias for startRender for compatibility)
-   */
-  startTracking(componentName: string): void {
-    this.startRender(componentName);
-  }
-
-  /**
-   * End tracking a component render and record metrics
+   * End tracking a component render
    */
   endRender(componentName: string): void {
     const startTime = this.renderStartTimes.get(componentName);
     if (!startTime) return;
 
     const renderTime = performance.now() - startTime;
-    const metrics: PerformanceMetrics = {
+    const memoryUsage = this.config.enableMemoryMonitoring
+      ? this.getMemoryUsage()
+      : undefined;
+
+    const metric: PerformanceMetrics = {
       componentName,
       renderTime,
-      mountTime: renderTime,
-      updateCount: this.getUpdateCount(componentName),
-      memoryUsage: this.getMemoryUsage(),
-      timestamp: new Date(),
+      timestamp: Date.now(),
+      memoryUsage,
+      renderCount: this.getRenderCount(componentName) + 1,
     };
 
-    this.recordMetrics(componentName, metrics);
+    this.recordMetric(metric);
     this.renderStartTimes.delete(componentName);
+
+    // Check if optimization is needed
+    if (renderTime > (this.config.maxRenderTime || 16)) {
+      this.suggestOptimization(componentName, renderTime);
+    }
   }
 
   /**
-   * Record performance metrics for a component
+   * Record a performance metric
    */
-  private recordMetrics(
-    componentName: string,
-    metrics: PerformanceMetrics
-  ): void {
-    const existingMetrics = this.metrics.get(componentName) || [];
-    existingMetrics.push(metrics);
+  private recordMetric(metric: PerformanceMetrics): void {
+    const existingMetrics = this.metrics.get(metric.componentName) || [];
+    existingMetrics.push(metric);
 
     // Keep only last 100 metrics per component
     if (existingMetrics.length > 100) {
       existingMetrics.splice(0, existingMetrics.length - 100);
     }
 
-    this.metrics.set(componentName, existingMetrics);
+    this.metrics.set(metric.componentName, existingMetrics);
   }
 
   /**
-   * Get update count for a component
+   * Get render count for a component
    */
-  private getUpdateCount(componentName: string): number {
-    const existingMetrics = this.metrics.get(componentName) || [];
-    return existingMetrics.length;
+  private getRenderCount(componentName: string): number {
+    const metrics = this.metrics.get(componentName) || [];
+    return metrics.length;
   }
 
   /**
-   * Get current memory usage (if available)
+   * Get memory usage if available
    */
-  private getMemoryUsage(): number {
+  private getMemoryUsage(): number | undefined {
     if ('memory' in performance) {
-      return (performance as any).memory.usedJSHeapSize;
+      return (
+        performance as Performance & { memory: { usedJSHeapSize: number } }
+      ).memory.usedJSHeapSize;
     }
-    return 0;
+    return undefined;
+  }
+
+  /**
+   * Suggest optimization for slow components
+   */
+  private suggestOptimization(componentName: string, renderTime: number): void {
+    if (process.env.NODE_ENV === 'development') {
+      console.warn(
+        `Performance warning: ${componentName} took ${renderTime.toFixed(2)}ms to render`
+      );
+    }
+
+    const suggestions = [];
+
+    if (renderTime > 50) {
+      suggestions.push('Consider using React.memo() for memoization');
+    }
+
+    if (renderTime > 100) {
+      suggestions.push('Consider code splitting or lazy loading');
+    }
+
+    if (renderTime > 200) {
+      suggestions.push('Consider virtualization for large lists');
+    }
+
+    if (suggestions.length > 0) {
+      if (process.env.NODE_ENV === 'development') {
+        console.log(
+          `Optimization suggestions for ${componentName}:`,
+          suggestions
+        );
+      }
+    }
   }
 
   /**
@@ -102,13 +149,6 @@ export class PerformanceOptimizer {
    */
   getMetrics(componentName: string): PerformanceMetrics[] {
     return this.metrics.get(componentName) || [];
-  }
-
-  /**
-   * Get all performance metrics
-   */
-  getAllMetrics(): Map<string, PerformanceMetrics[]> {
-    return new Map(this.metrics);
   }
 
   /**
@@ -126,207 +166,305 @@ export class PerformanceOptimizer {
   }
 
   /**
-   * Get slowest components
-   */
-  getSlowestComponents(
-    limit: number = 10
-  ): Array<{ componentName: string; averageTime: number }> {
-    const results: Array<{ componentName: string; averageTime: number }> = [];
-
-    for (const [componentName] of this.metrics) {
-      const averageTime = this.getAverageRenderTime(componentName);
-      results.push({ componentName, averageTime });
-    }
-
-    return results
-      .sort((a, b) => b.averageTime - a.averageTime)
-      .slice(0, limit);
-  }
-
-  /**
-   * Check if a component is performing poorly
-   */
-  isComponentSlow(componentName: string, threshold: number = 16): boolean {
-    const averageTime = this.getAverageRenderTime(componentName);
-    return averageTime > threshold; // 16ms = 60fps threshold
-  }
-
-  /**
    * Get performance summary
    */
-  getPerformanceSummary(): {
-    totalComponents: number;
-    slowComponents: number;
-    averageRenderTime: number;
-    memoryUsage: number;
-  } {
-    const allMetrics = Array.from(this.metrics.values()).flat();
-    const slowComponents = Array.from(this.metrics.keys()).filter(name =>
-      this.isComponentSlow(name)
-    ).length;
-
-    const totalRenderTime = allMetrics.reduce(
-      (sum, metric) => sum + metric.renderTime,
-      0
-    );
-    const averageRenderTime =
-      allMetrics.length > 0 ? totalRenderTime / allMetrics.length : 0;
-
-    return {
-      totalComponents: this.metrics.size,
-      slowComponents,
-      averageRenderTime,
+  getPerformanceSummary(): object {
+    const summary = {
+      totalComponents: this.observedComponents.size,
+      slowComponents: [] as Array<{ name: string; avgTime: number }>,
+      totalRenders: 0,
+      averageRenderTime: 0,
       memoryUsage: this.getMemoryUsage(),
     };
+
+    let totalRenderTime = 0;
+    let totalRenders = 0;
+
+    this.observedComponents.forEach(componentName => {
+      const metrics = this.getMetrics(componentName);
+      const avgTime = this.getAverageRenderTime(componentName);
+
+      totalRenders += metrics.length;
+      totalRenderTime += metrics.reduce(
+        (sum, metric) => sum + metric.renderTime,
+        0
+      );
+
+      if (avgTime > (this.config.maxRenderTime || 16)) {
+        summary.slowComponents.push({
+          name: componentName,
+          avgTime: Math.round(avgTime * 100) / 100,
+        });
+      }
+    });
+
+    summary.totalRenders = totalRenders;
+    summary.averageRenderTime =
+      totalRenders > 0
+        ? Math.round((totalRenderTime / totalRenders) * 100) / 100
+        : 0;
+
+    return summary;
+  }
+
+  /**
+   * Optimize component with memoization
+   */
+  optimizeWithMemo<T extends React.ComponentType<Record<string, unknown>>>(
+    Component: T
+  ): T {
+    if (!this.config.enableMemoization) return Component;
+
+    return React.memo(Component) as unknown as T;
+  }
+
+  /**
+   * Create lazy loaded component
+   */
+  createLazyComponent<T extends React.ComponentType<Record<string, unknown>>>(
+    importFunc: () => Promise<{ default: T }>
+  ): React.LazyExoticComponent<T> {
+    if (!this.config.enableLazyLoading) {
+      throw new Error('Lazy loading is disabled');
+    }
+
+    return React.lazy(importFunc);
+  }
+
+  /**
+   * Check if component needs optimization
+   */
+  needsOptimization(componentName: string): boolean {
+    const avgTime = this.getAverageRenderTime(componentName);
+    return avgTime > (this.config.maxRenderTime || 16);
+  }
+
+  /**
+   * Get optimization recommendations
+   */
+  getOptimizationRecommendations(componentName: string): string[] {
+    const recommendations = [];
+    const avgTime = this.getAverageRenderTime(componentName);
+    const metrics = this.getMetrics(componentName);
+
+    if (avgTime > 16) {
+      recommendations.push('Consider using React.memo() for memoization');
+    }
+
+    if (avgTime > 50) {
+      recommendations.push('Consider code splitting or lazy loading');
+    }
+
+    if (avgTime > 100) {
+      recommendations.push('Consider virtualization for large lists');
+    }
+
+    if (metrics.length > 10) {
+      recommendations.push(
+        'Component is rendering frequently - check for unnecessary re-renders'
+      );
+    }
+
+    return recommendations;
+  }
+
+  /**
+   * Clear metrics for a component
+   */
+  clearMetrics(componentName: string): void {
+    this.metrics.delete(componentName);
+    this.observedComponents.delete(componentName);
   }
 
   /**
    * Clear all metrics
    */
-  clearMetrics(): void {
+  clearAllMetrics(): void {
     this.metrics.clear();
-    this.renderStartTimes.clear();
     this.observedComponents.clear();
-  }
-
-  /**
-   * Clear metrics for a specific component
-   */
-  clearComponentMetrics(componentName: string): void {
-    this.metrics.delete(componentName);
-    this.renderStartTimes.delete(componentName);
-    this.observedComponents.delete(componentName);
+    this.renderStartTimes.clear();
   }
 
   /**
    * Export metrics as JSON
    */
   exportMetrics(): string {
-    const exportData = {
-      timestamp: new Date().toISOString(),
+    const data = {
       summary: this.getPerformanceSummary(),
-      components: Object.fromEntries(this.metrics),
+      componentMetrics: Object.fromEntries(this.metrics),
+      config: this.config,
+      timestamp: new Date().toISOString(),
     };
 
-    return JSON.stringify(exportData, null, 2);
+    return JSON.stringify(data, null, 2);
   }
 
   /**
-   * Import metrics from JSON
+   * Destroy the optimizer
    */
-  importMetrics(jsonData: string): void {
-    try {
-      const data = JSON.parse(jsonData);
-      if (data.components) {
-        this.metrics = new Map(Object.entries(data.components));
+  destroy(): void {
+    this.clearAllMetrics();
+  }
+
+  /**
+   * Preload critical resources
+   */
+  preloadCriticalResources(): void {
+    if (typeof window === 'undefined') return;
+
+    // Preload critical CSS
+    const criticalCSS = document.querySelector(
+      'link[rel="preload"][as="style"]'
+    );
+    if (criticalCSS) {
+      criticalCSS.setAttribute('rel', 'stylesheet');
+    }
+
+    // Preload critical fonts
+    const fontLinks = document.querySelectorAll(
+      'link[rel="preload"][as="font"]'
+    );
+    fontLinks.forEach(link => {
+      link.setAttribute('rel', 'stylesheet');
+    });
+  }
+
+  /**
+   * Lazy load images
+   */
+  lazyLoadImages(): void {
+    if (typeof window === 'undefined') return;
+
+    const images = document.querySelectorAll('img[data-src]');
+    const imageObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const img = entry.target as HTMLImageElement;
+          img.src = img.dataset['src'] || '';
+          img.removeAttribute('data-src');
+          imageObserver.unobserve(img);
+        }
+      });
+    });
+
+    images.forEach(img => imageObserver.observe(img));
+  }
+
+  /**
+   * Add critical resource hints for performance optimization
+   */
+  addCriticalResourceHints(): void {
+    if (typeof document === 'undefined') return;
+
+    const hints = [
+      { rel: 'dns-prefetch', href: 'https://fonts.googleapis.com' },
+      { rel: 'dns-prefetch', href: 'https://fonts.gstatic.com' },
+      { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
+      {
+        rel: 'preconnect',
+        href: 'https://fonts.gstatic.com',
+        crossOrigin: 'anonymous',
+      },
+    ];
+
+    hints.forEach(hint => {
+      const link = document.createElement('link');
+      link.rel = hint.rel;
+      link.href = hint.href;
+      if (hint.crossOrigin) {
+        link.crossOrigin = hint.crossOrigin;
       }
-    } catch (error) {
-      console.error('Failed to import metrics:', error);
+      document.head.appendChild(link);
+    });
+  }
+
+  /**
+   * Measure page load performance
+   */
+  measurePageLoad(): Record<string, unknown> | null {
+    if (typeof window === 'undefined' || !('performance' in window)) {
+      return null;
+    }
+
+    const timing = performance.getEntriesByType(
+      'navigation'
+    )[0] as PerformanceNavigationTiming;
+    if (!timing) return null;
+
+    return {
+      domContentLoaded:
+        timing.domContentLoadedEventEnd - timing.domContentLoadedEventStart,
+      loadComplete: timing.loadEventEnd - timing.loadEventStart,
+      totalTime: timing.loadEventEnd - timing.fetchStart,
+    };
+  }
+
+  /**
+   * Report Web Vitals
+   */
+  reportWebVitals(metrics: Record<string, unknown>): void {
+    if (typeof window === 'undefined') return;
+
+    if (process.env.NODE_ENV === 'development') {
+      console.log('Web Vitals:', metrics);
+    }
+
+    // Send to analytics if available
+    if ('gtag' in window) {
+      (window as Window & { gtag?: (...args: unknown[]) => void }).gtag?.(
+        'event',
+        'web_vitals',
+        {
+          event_category: 'Performance',
+          event_label: 'Page Load',
+          value: Math.round((metrics.totalTime as number) || 0),
+        }
+      );
     }
   }
 }
 
-// Global instance
-export const performanceOptimizer = new PerformanceOptimizer();
-
-// React HOC for performance tracking
-export function withPerformanceTracking<P extends object>(
-  WrappedComponent: React.ComponentType<P>,
-  componentName?: string
-) {
-  const displayName =
-    componentName ||
-    WrappedComponent.displayName ||
-    WrappedComponent.name ||
-    'Component';
-
-  const TrackedComponent = React.forwardRef<any, P>((props, ref) => {
-    React.useEffect(() => {
-      performanceOptimizer.startRender(displayName);
-
-      return () => {
-        performanceOptimizer.endRender(displayName);
-      };
-    });
-
-    return React.createElement(WrappedComponent, { ...props, ref } as P);
-  });
-
-  TrackedComponent.displayName = `withPerformanceTracking(${displayName})`;
-
-  return TrackedComponent;
-}
-
-// Hook for performance tracking
-export function usePerformanceTracking(componentName: string) {
-  React.useEffect(() => {
-    performanceOptimizer.startRender(componentName);
-
-    return () => {
-      performanceOptimizer.endRender(componentName);
-    };
-  });
-}
-
 // Utility functions
-export const performanceUtils = {
-  /**
-   * Debounce function for performance
-   */
-  debounce<T extends (...args: any[]) => any>(
-    func: T,
-    wait: number
-  ): (...args: Parameters<T>) => void {
-    let timeout: NodeJS.Timeout;
-    return (...args: Parameters<T>) => {
-      clearTimeout(timeout);
-      timeout = setTimeout(() => func(...args), wait);
-    };
-  },
-
-  /**
-   * Throttle function for performance
-   */
-  throttle<T extends (...args: any[]) => any>(
-    func: T,
-    limit: number
-  ): (...args: Parameters<T>) => void {
-    let inThrottle: boolean;
-    return (...args: Parameters<T>) => {
-      if (!inThrottle) {
-        func(...args);
-        inThrottle = true;
-        setTimeout(() => (inThrottle = false), limit);
-      }
-    };
-  },
-
-  /**
-   * Check if component should re-render
-   */
-  shouldComponentUpdate<P extends object>(
-    prevProps: P,
-    nextProps: P,
-    keys: (keyof P)[]
-  ): boolean {
-    return keys.some(key => prevProps[key] !== nextProps[key]);
-  },
-
-  /**
-   * Memoize expensive calculations
-   */
-  memoize<T extends (...args: any[]) => any>(fn: T): T {
-    const cache = new Map();
-    return ((...args: Parameters<T>) => {
-      const key = JSON.stringify(args);
-      if (cache.has(key)) {
-        return cache.get(key);
-      }
-      const result = fn(...args);
-      cache.set(key, result);
-      return result;
-    }) as T;
-  },
+export const createPerformanceOptimizer = (
+  config?: OptimizationConfig
+): PerformanceOptimizer => {
+  return new PerformanceOptimizer(config);
 };
 
-export default performanceOptimizer;
+export const withPerformanceTracking = <P extends object>(
+  Component: ComponentType<P>,
+  componentName?: string
+): ComponentType<P> => {
+  const optimizer = createPerformanceOptimizer();
+  const name =
+    componentName || Component.displayName || Component.name || 'Unknown';
+
+  const WrappedComponent = forwardRef<unknown, P>((props, ref) => {
+    React.useEffect(() => {
+      optimizer.startRender(name);
+      return () => optimizer.endRender(name);
+    });
+
+    return React.createElement(Component, { ...props, ref } as P);
+  });
+
+  WrappedComponent.displayName = `withPerformanceTracking(${name})`;
+  return WrappedComponent as unknown as ComponentType<P>;
+};
+
+// Create and export a default instance
+export const performanceOptimizer = new PerformanceOptimizer();
+
+// Export utility functions
+export const prefetchResources = (urls: string[]): void => {
+  if (typeof window === 'undefined') return;
+
+  urls.forEach(url => {
+    const link = document.createElement('link');
+    link.rel = 'prefetch';
+    link.href = url;
+    document.head.appendChild(link);
+  });
+};
+
+export default PerformanceOptimizer;

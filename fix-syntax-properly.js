@@ -3,12 +3,12 @@
 import fs from 'fs';
 import path from 'path';
 
-// Function to properly fix corrupted syntax
+//Function to properly fix corrupted syntax
 function fixCorruptedSyntax(content) {
-  // Remove the corrupted comment at the top
+  //Remove the corrupted comment at the top
   content = content.replace(/^\/\/ @ts-noch, e, c, k\s*\n/, '');
 
-  // Fix import statements - reconstruct properly
+  //Fix import statements - reconstruct properly
   content = content.replace(
     /imp, o, r, t\s+([^;]+);/g,
     (match, importContent) => {
@@ -20,7 +20,7 @@ function fixCorruptedSyntax(content) {
     }
   );
 
-  // Fix export const statements
+  //Fix export const statements
   content = content.replace(
     /exp, o, r, t\s+co, n, s, t\s+([^=]+)=/g,
     (match, exportContent) => {
@@ -32,7 +32,7 @@ function fixCorruptedSyntax(content) {
     }
   );
 
-  // Fix export default function statements
+  //Fix export default function statements
   content = content.replace(
     /exp, o, r, t\s+defa, u, l, t\s+f, u, n, c, t, i, o, n\s+([^(]+)/g,
     (match, funcName) => {
@@ -41,7 +41,7 @@ function fixCorruptedSyntax(content) {
     }
   );
 
-  // Fix string literals in metadata
+  //Fix string literals in metadata
   content = content.replace(/ti, t, l, e:\s*'([^']+)'/g, (match, title) => {
     const cleaned = title.replace(/,/g, '').replace(/\s+/g, ' ').trim();
     return `title: '${cleaned}'`;
@@ -55,7 +55,7 @@ function fixCorruptedSyntax(content) {
     }
   );
 
-  // Fix JSX attributes
+  //Fix JSX attributes
   content = content.replace(
     /cl a s s N a m e\s*=\s*'([^']+)'/g,
     (match, className) => {
@@ -69,7 +69,7 @@ function fixCorruptedSyntax(content) {
     return `href='${cleaned}'`;
   });
 
-  // Fix JSX tags
+  //Fix JSX tags
   content = content.replace(/<m a i n/g, '<main');
   content = content.replace(/<\/m a i n>/g, '</main>');
   content = content.replace(/<sect i o n/g, '<section');
@@ -95,16 +95,16 @@ function fixCorruptedSyntax(content) {
   content = content.replace(/<s p a n/g, '<span');
   content = content.replace(/<\/s p a n>/g, '</span>');
 
-  // Fix ArrowRight component
+  //Fix ArrowRight component
   content = content.replace(/Arr o w R i g h t/g, 'ArrowRight');
 
-  // Clean up multiple spaces but preserve single spaces
+  //Clean up multiple spaces but preserve single spaces
   content = content.replace(/\s{2,}/g, ' ');
 
   return content;
 }
 
-// Function to find all corrupted blog files
+//Function to find all corrupted blog files
 function findCorruptedFiles() {
   const blogDir = path.join(process.cwd(), 'app', 'blog');
   const corruptedFiles = [];

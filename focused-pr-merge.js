@@ -2,14 +2,12 @@
 
 /**
  * Focused PR Merger - Merges specific recent branches that are likely open PRs
- */
-
-import { execSync } from 'child_process';
+ */ import { execSync } from 'child_process';
 import fs from 'fs';
 
 console.log('🚀 Starting Focused PR Merge Process...\n');
 
-// Step 1: Ensure we're on main and up to date
+//Step 1: Ensure we're on main and up to date
 console.log('📋 Step 1: Preparing main branch...');
 try {
   execSync('git checkout main', { stdio: 'inherit' });
@@ -20,25 +18,25 @@ try {
   process.exit(1);
 }
 
-// Step 2: Define specific branches to merge (most recent and relevant)
+//Step 2: Define specific branches to merge (most recent and relevant)
 const branchesToMerge = [
-  // Recent error fixing branches
+  //Recent error fixing branches
   'cursor/build-and-fix-errors-008f',
   'cursor/build-and-fix-errors-079c',
   'cursor/build-and-fix-errors-0ebf',
   'cursor/build-and-fix-errors-0ec8',
   'cursor/build-and-fix-errors-0f78',
-  // Enhancement branches
+  //Enhancement branches
   'cursor/automate-futuristic-front-page-enhancements-738d',
   'cursor/automate-futuristic-front-page-enhancements-aafa',
   'cursor/automate-project-enhancement-and-merge-cac0',
   'cursor/automate-site-navigation-enhancement-285c',
-  // Build improvement branches
+  //Build improvement branches
   'cursor/automate-automation-redundancy-and-build-improvement-e3e4',
   'cursor/automate-automation-redundancy-and-build-improvement-ea74',
   'cursor/automate-netlify-build-fixes-and-monitoring-43ee',
   'cursor/automate-netlify-build-fixing-and-monitoring-f10e',
-  // AI-powered features
+  //AI-powered features
   'cursor/build-ai-powered-project-teams-dcf8',
   'cursor/build-ai-powered-smart-contract-generator-b22e',
   'cursor/build-ai-pricing-suggestion-engine-ea4e',
@@ -47,15 +45,15 @@ const branchesToMerge = [
 
 console.log(`📊 Found ${branchesToMerge.length} branches to process\n`);
 
-// Step 3: Enhanced conflict resolution function
+//Step 3: Enhanced conflict resolution function
 function resolveConflictsAndMerge(branchName) {
   console.log(`\n🔄 Processing ${branchName}...`);
 
   try {
-    // Check if branch exists
+    //Check if branch exists
     execSync(`git fetch origin ${branchName}`, { stdio: 'pipe' });
 
-    // Check if already merged
+    //Check if already merged
     const isMerged = execSync(
       `git branch --merged main | grep -q "${branchName}" || echo "not_merged"`,
       { encoding: 'utf8' }
@@ -65,7 +63,7 @@ function resolveConflictsAndMerge(branchName) {
       return { success: true, method: 'already_merged' };
     }
 
-    // Try direct merge
+    //Try direct merge
     execSync(
       `git merge origin/${branchName} --no-ff -m "Merge ${branchName} into main"`,
       { stdio: 'inherit' }
@@ -78,7 +76,7 @@ function resolveConflictsAndMerge(branchName) {
     );
 
     try {
-      // Check for merge conflicts
+      //Check for merge conflicts
       const status = execSync('git status --porcelain', { encoding: 'utf8' });
 
       if (
@@ -88,7 +86,7 @@ function resolveConflictsAndMerge(branchName) {
       ) {
         console.log(`🔧 Resolving conflicts for ${branchName}...`);
 
-        // Strategy 1: Auto-resolve with theirs
+        //Strategy 1: Auto-resolve with theirs
         try {
           execSync('git reset --hard HEAD', { stdio: 'inherit' });
           execSync(
@@ -105,7 +103,7 @@ function resolveConflictsAndMerge(branchName) {
           );
         }
 
-        // Strategy 2: Auto-resolve with ours
+        //Strategy 2: Auto-resolve with ours
         try {
           execSync('git reset --hard HEAD', { stdio: 'inherit' });
           execSync(
@@ -122,11 +120,11 @@ function resolveConflictsAndMerge(branchName) {
           );
         }
 
-        // Strategy 3: Manual conflict resolution
+        //Strategy 3: Manual conflict resolution
         try {
           execSync('git reset --hard HEAD', { stdio: 'inherit' });
 
-          // Get conflicted files
+          //Get conflicted files
           const conflictedFiles = execSync(
             'git diff --name-only --diff-filter=U',
             { encoding: 'utf8' }
@@ -138,11 +136,11 @@ function resolveConflictsAndMerge(branchName) {
             `🔧 Manually resolving ${conflictedFiles.length} conflicted files...`
           );
 
-          // For each conflicted file, try to resolve
+          //For each conflicted file, try to resolve
           for (const file of conflictedFiles) {
             if (file.trim()) {
               try {
-                // Try to resolve by taking the incoming version
+                //Try to resolve by taking the incoming version
                 execSync(`git checkout --theirs "${file}"`, {
                   stdio: 'inherit',
                 });
@@ -154,7 +152,7 @@ function resolveConflictsAndMerge(branchName) {
             }
           }
 
-          // Complete the merge
+          //Complete the merge
           execSync(
             `git commit -m "Manual conflict resolution for ${branchName}"`,
             { stdio: 'inherit' }
@@ -169,7 +167,7 @@ function resolveConflictsAndMerge(branchName) {
       console.log(`❌ Could not check merge status for ${branchName}`);
     }
 
-    // If all strategies fail, abort and skip
+    //If all strategies fail, abort and skip
     try {
       execSync('git merge --abort', { stdio: 'inherit' });
       console.log(`⏭️  Skipping ${branchName} due to unresolvable conflicts`);
@@ -181,7 +179,7 @@ function resolveConflictsAndMerge(branchName) {
   }
 }
 
-// Step 4: Execute merge process
+//Step 4: Execute merge process
 console.log('🚀 Step 3: Executing merge strategy...\n');
 
 const results = {
@@ -202,7 +200,7 @@ const results = {
   },
 };
 
-// Process each branch
+//Process each branch
 for (const branch of branchesToMerge) {
   const result = resolveConflictsAndMerge(branch);
   results.summary.total++;
@@ -218,7 +216,7 @@ for (const branch of branchesToMerge) {
   }
 }
 
-// Step 5: Generate report
+//Step 5: Generate report
 console.log('\n📊 MERGE RESULTS:');
 console.log(`  Total branches processed: ${results.summary.total}`);
 console.log(`  Successful merges: ${results.summary.successful}`);
@@ -236,7 +234,7 @@ if (results.failed.length > 0) {
   results.failed.forEach(result => console.log(`  - ${result.branch}`));
 }
 
-// Save report
+//Save report
 results.timestamp = new Date().toISOString();
 fs.writeFileSync(
   'focused-pr-merge-report.json',

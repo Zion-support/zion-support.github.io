@@ -49,8 +49,7 @@ export const october2025RevolutionaryContent: RevolutionaryContent[] = [
     category: 'Quantum AI',
     date: '2025-10-02',
     readTime: '22 min read',
-    tags: ['Quantum AI', 'Synthesis', 'Computing', '2025', 'Healthcare', 'Security', 'AI', 'Compliance'],
-    featured: true,
+:corrupted-src-backup/content/october-2025-revolutionary-content.ts
     highlights: [
       '$280M+ breach prevention',
       '100% compliance maintained',

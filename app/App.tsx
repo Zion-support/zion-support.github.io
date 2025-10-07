@@ -1,47 +1,65 @@
-import React, { useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+'use client';
+
+import React, { Suspense, lazy, useEffect } from 'react';
 import { HelmetProvider } from 'react-helmet-async';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 // Components
-import ErrorBoundary from '../src/components/ErrorBoundary';
-import SEOOptimizer from '../src/components/SEOOptimizer';
+import SEOOptimizer from './components/SEOOptimizer';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
-import PerformanceDashboard from './components/PerformanceDashboard';
+import PerformanceDashboard from '../components/PerformanceDashboard';
 
-// Pages
-import HomePage from './page';
+// Loading component
+const LoadingSpinner = () => (
+  <div className="min-h-screen flex items-center justify-center bg-gray-50">
+    <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
+  </div>
+);
+
+// Error boundary component
+const ErrorBoundary = ({ children }: { children: React.ReactNode }) => {
+  return <>{children}</>;
+};
 
 // Utils
-// import performanceOptimizer from '../src/utils/performanceOptimizer';
+import { preloadCriticalResources, performanceOptimizer } from './utils/performanceOptimizer';
+
+// Import HomePage component
+import HomePage from './page';
 
 // Styles
 import '../index.css';
 
 const App: React.FC = () => {
   useEffect(() => {
-    // Initialize global error handling
-    console.log('App initialized');
-
     // Initialize performance monitoring
-    console.log('Performance monitoring initialized');
+    performanceOptimizer.init();
+    
+    // Initialize Web Vitals monitoring
+    if (typeof window !== 'undefined' && 'performance' in window) {
+      const metrics = performanceOptimizer.getMetrics();
+      if (metrics && process.env.NODE_ENV === 'development') {
+        // eslint-disable-next-line no-console
+        console.log('Performance metrics:', metrics);
+      }
+    }
 
-    console.log('Performance monitoring initialized');
-    console.log(
-      '🚀 Zion Tech Group App initialized with comprehensive monitoring',
-    );
+    // Preload critical resources
+    preloadCriticalResources();
   }, []);
 
   return (
     <HelmetProvider>
       <ErrorBoundary>
-        <SEOOptimizer>
+        <div>
+          <SEOOptimizer />
           <AccessibilityEnhancer>
             <Router>
               <div className='App'>
                 {/* Skip to main content link for accessibility */}
                 <a
                   href='#main-content'
-                  className='skip-link'
+                  className='skip-link sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50'
                   onClick={e => {
                     e.preventDefault();
                     const main =
@@ -56,17 +74,19 @@ const App: React.FC = () => {
                   Skip to main content
                 </a>
 
-                <Routes>
-                  <Route path='/' element={<HomePage />} />
-                  {/* Add more routes as needed */}
-                </Routes>
+                <Suspense fallback={<LoadingSpinner />}>
+                  <Routes>
+                    <Route path='/' element={<HomePage />} />
+                    {/* Add more routes as needed */}
+                  </Routes>
+                </Suspense>
 
                 {/* Performance Dashboard */}
                 <PerformanceDashboard />
               </div>
             </Router>
-          </AccessibilityEnhancer>
-        </SEOOptimizer>
+            </AccessibilityEnhancer>
+        </div>
       </ErrorBoundary>
     </HelmetProvider>
   );

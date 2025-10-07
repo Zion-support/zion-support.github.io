@@ -1,6 +1,10 @@
 import React from 'react';
+<<<<<<< HEAD:src/components/January2026RevolutionaryBanner.tsx
+<<<<<<< HEAD
+=======
 import { ArrowLeft, ArrowRight, Award, Brain, Calendar, CheckCircle, Clock, DollarSign, Globe, Rocket, Satellite, Share2, Bookmark, Tag, Target, TrendingUp, Users, User, Zap, BarChart3, BookOpen } from 'lucide-react';
 
+>>>>>>> origin/main:corrupted-src-backup/components/January2026RevolutionaryBanner.tsx.backup
 import { Link } from 'react-router-dom';
 
 const January2026RevolutionaryBanner: React.FC = () => {
@@ -232,8 +236,39 @@ const January2026RevolutionaryBanner: React.FC = () => {
           </div>
         </div>
       </div>
+<<<<<<< HEAD:src/components/January2026RevolutionaryBanner.tsx
+=======
+
+interface January2026RevolutionaryBannerProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const January2026RevolutionaryBanner: React.FC<January2026RevolutionaryBannerProps> = ({ 
+  className = '', 
+  children 
+}) => {
+  return (
+    <div className={`january2026revolutionarybanner-component ${className}`}>
+      {children || (
+        <div className="p-4 text-center text-gray-600">
+          <h3 className="text-lg font-semibold mb-2">January2026RevolutionaryBanner</h3>
+          <p>Component placeholder - implementation needed</p>
+        </div>
+      )}
+>>>>>>> cursor/fix-errors-and-merge-to-main-8d57
+=======
+>>>>>>> origin/main:corrupted-src-backup/components/January2026RevolutionaryBanner.tsx.backup
     </div>
   );
 };
 
+<<<<<<< HEAD:src/components/January2026RevolutionaryBanner.tsx
+<<<<<<< HEAD
 export default January2026RevolutionaryBanner;
+=======
+export default January2026RevolutionaryBanner;
+>>>>>>> cursor/fix-errors-and-merge-to-main-8d57
+=======
+export default January2026RevolutionaryBanner;
+>>>>>>> origin/main:corrupted-src-backup/components/January2026RevolutionaryBanner.tsx.backup
