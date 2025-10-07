@@ -32,6 +32,17 @@ export interface TestConfig {
   coverageThreshold: number;
   performanceThreshold: number;
   accessibilityThreshold: number;
+  timeout?: number;
+  verbose?: boolean;
+  bail?: boolean;
+  reporter?: 'console' | 'json' | 'html' | 'junit';
+  retries?: number;
+  parallel?: boolean;
+  watch?: boolean;
+  coverage?: boolean;
+  outputDir?: string;
+  includePattern?: string[];
+  excludePattern?: string[];
 }
 
 // Default test configuration
@@ -45,45 +56,6 @@ export const defaultTestConfig: TestConfig = {
   performanceThreshold: 100,
   accessibilityThreshold: 90,
 };
-
-// Test utilities class
-export class TestRunner {
-  private static instance: TestRunner;
-  private config: TestConfig;
-  private testResults: Array<{
-    name: string;
-    status: 'passed' | 'failed' | 'skipped';
-    duration: number;
-    error?: string;
-  }> = [];
-
-  constructor(config: Partial<TestConfig> = {}) {
-    this.config = { ...defaultTestConfig, ...config };
-  }
-
-  static getInstance(config?: Partial<TestConfig>): TestRunner {
-    if (!TestRunner.instance) {
-      TestRunner.instance = new TestRunner(config);
-    }
-    return TestRunner.instance;
-  }
-
-  // Custom render function with providers
-  customRender(
-    ui: ReactElement,
-    options?: Omit<RenderOptions, 'wrapper'>
-  ): RenderResult {
-    const AllTheProviders = ({ children }: { children: React.ReactNode }) => {
-      return (
-        <BrowserRouter>
-          {children}
-        </BrowserRouter>
-      );
-    };
-
-    return render(ui, { wrapper: AllTheProviders, ...options });
-  }
-}
 
 interface TestResult {
   name: string;
@@ -127,16 +99,24 @@ interface Test {
   only?: boolean;
 }
 
-class TestRunner {
+export class TestRunner {
+  private static instance: TestRunner;
   private config: TestConfig;
   private suites: TestSuite[] = [];
   private currentSuite: TestSuite | null = null;
   private results: TestResult[] = [];
+  private testResults: Array<{
+    name: string;
+    status: 'passed' | 'failed' | 'skipped';
+    duration: number;
+    error?: string;
+  }> = [];
   private isRunning: boolean = false;
   private startTime: number = 0;
 
   constructor(config: Partial<TestConfig> = {}) {
     this.config = {
+      ...defaultTestConfig,
       timeout: 5000,
       retries: 0,
       parallel: false,
@@ -155,6 +135,29 @@ class TestRunner {
       excludePattern: ['**/node_modules/**', '**/dist/**'],
       ...config,
     };
+  }
+
+  static getInstance(config?: Partial<TestConfig>): TestRunner {
+    if (!TestRunner.instance) {
+      TestRunner.instance = new TestRunner(config);
+    }
+    return TestRunner.instance;
+  }
+
+  // Custom render function with providers
+  customRender(
+    ui: ReactElement,
+    options?: Omit<RenderOptions, 'wrapper'>
+  ): RenderResult {
+    const AllTheProviders = ({ children }: { children: React.ReactNode }) => {
+      return (
+        <BrowserRouter>
+          {children}
+        </BrowserRouter>
+      );
+    };
+
+    return render(ui, { wrapper: AllTheProviders, ...options });
   }
 
   /**
@@ -181,7 +184,6 @@ class TestRunner {
     }
   }
 
-<<<<<<<< HEAD:app/utils/testRunner.ts
   /**
    * Create a test case
    */
@@ -194,11 +196,18 @@ class TestRunner {
       throw new Error('Test must be inside a describe block');
     }
 
-    // Performance test
-    async runPerformanceTest(
-      component: ReactElement,
-      testName: string
-    ): Promise<{ passed: boolean; metrics: PerformanceMetrics }> {
+    this.currentSuite.tests.push({
+      name,
+      fn,
+      timeout: timeout || this.config.timeout,
+    });
+  }
+
+  // Performance test
+  async runPerformanceTest(
+    component: ReactElement,
+    testName: string
+  ): Promise<{ passed: boolean; metrics: PerformanceMetrics }> {
       const startTime = performance.now();
       
       const { unmount } = this.customRender(component);
@@ -679,16 +688,6 @@ class TestRunner {
     console.log('\n📄 JUnit Report:');
     // eslint-disable-next-line no-console
     console.log(xml);
-      
-      this.testResults.push({
-        name: `Component: ${testName}`,
-        status: 'failed',
-        duration: 0,
-        error: errorMessage,
-      });
-
-      return { passed: false, error: errorMessage };
-    }
   }
 
   // Integration test
@@ -772,11 +771,7 @@ class TestRunner {
     component: ReactElement;
     assertions?: (result: RenderResult) => void;
     userInteractions?: (result: RenderResult) => Promise<void>;
-<<<<<<< HEAD
-  }>): Promise<{ passed: boolean; results: Record<string, unknown>[] }> {
-=======
   }>): Promise<{ passed: boolean; results: Array<{ name: string; type: string; passed: boolean; error?: string }> }> {
->>>>>>> e2aec618376f3db9bd60312768ea5d9abc7086c8
     const results = [];
 
     for (const test of tests) {
@@ -855,7 +850,6 @@ class TestRunner {
       timestamp: new Date().toISOString(),
       config: this.config,
     };
-<<<<<<< HEAD
   }
 }
 
@@ -966,15 +960,11 @@ export const testUtils = {
 };
 
 export default TestRunner;
-=======
->>>>>>>> e2aec618376f3db9bd60312768ea5d9abc7086c8:app/utils/testRunner.tsx
-  }
-}
 
 /**
  * Assertion utilities
  */
-class Assert {
+export class Assert {
   /**
    * Assert that a value is truthy
    */
@@ -1281,13 +1271,11 @@ interface MockFunction {
 
 // Export test runner and utilities
 export const testRunner = new TestRunner();
-export { TestRunner, Assert, Mock };
+export { Mock };
 export type {
-  TestConfig,
   TestResult,
   TestSuite,
   Test,
   AssertionResult,
   CoverageResult,
 };
->>>>>>> e2aec618376f3db9bd60312768ea5d9abc7086c8
