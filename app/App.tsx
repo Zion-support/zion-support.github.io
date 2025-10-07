@@ -22,16 +22,8 @@ const ErrorBoundary = ({ children }: { children: React.ReactNode }) => {
 // Lazy load pages for better performance
 const HomePage = lazy(() => import('./page'));
 
-<<<<<<< HEAD
 // Utils
-<<<<<<< HEAD
-import { lazyLoadImages, preloadCriticalResources, collectPerformanceMetrics } from './utils/performanceOptimizer';
-=======
-import { performanceOptimizer } from './utils/performanceOptimizer';
->>>>>>> cursor/fix-errors-and-merge-to-main-0754
-=======
-// Utils - performanceOptimizer removed as it doesn't exist
->>>>>>> cursor/fix-errors-and-merge-to-main-1e62
+import { performanceOptimizer } from '../utils/performanceOptimizer';
 
 // Styles
 import '../index.css';
@@ -41,32 +33,17 @@ const App: React.FC = () => {
     // Initialize global error handling
     console.log('App initialized');
 
-<<<<<<< HEAD
     // Initialize performance monitoring
-<<<<<<< HEAD
-    lazyLoadImages();
-    preloadCriticalResources();
+    performanceOptimizer.lazyLoadImages();
+    performanceOptimizer.addCriticalResourceHints();
     
     // Initialize Web Vitals monitoring
     if (typeof window !== 'undefined' && 'performance' in window) {
-      const pageLoadMetrics = collectPerformanceMetrics();
+      const pageLoadMetrics = performanceOptimizer.measurePageLoad();
       if (pageLoadMetrics) {
-        console.log('Performance metrics collected:', pageLoadMetrics);
-=======
-    performanceOptimizer.init();
-    
-    // Initialize Web Vitals monitoring
-    if (typeof window !== 'undefined' && 'performance' in window) {
-      const metrics = performanceOptimizer.getMetrics();
-      if (metrics) {
-        console.log('Performance metrics:', metrics);
->>>>>>> cursor/fix-errors-and-merge-to-main-0754
+        performanceOptimizer.reportWebVitals(pageLoadMetrics);
       }
     }
-=======
-    // Initialize performance monitoring - performanceOptimizer removed
-    // Web Vitals monitoring can be added here if needed
->>>>>>> cursor/fix-errors-and-merge-to-main-1e62
     
     console.log('Performance monitoring initialized');
     console.log(
