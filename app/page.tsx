@@ -1,5 +1,6 @@
 import React, { Suspense, lazy } from 'react';
 import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 
 // Lazy load components for better performance
 const ContentShowcase = lazy(() => import('./components/ContentShowcase'));
@@ -11,6 +12,27 @@ const UnifiedContentPromotion = lazy(() => import('./components/UnifiedContentPr
 const LoadingFallback: React.FC<{ height?: string }> = ({ height = 'h-32' }) => (
   <div className={`animate-pulse bg-gray-200 rounded-lg ${height} w-full`} />
 );
+
+// Structured data for SEO
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Zion Tech Group",
+  "description": "Leading provider of enterprise AI solutions, quantum computing, and autonomous systems",
+  "url": "https://ziontechgroup.com",
+  "logo": "https://ziontechgroup.com/logo.png",
+  "sameAs": [
+    "https://linkedin.com/company/ziontechgroup",
+    "https://twitter.com/ziontechgroup"
+  ],
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+1-555-0123",
+    "contactType": "customer service",
+    "areaServed": "US",
+    "availableLanguage": "English"
+  }
+};
 
 const HomePage: React.FC = () => {
   return (
@@ -43,7 +65,8 @@ const HomePage: React.FC = () => {
               </div>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
         {/* Main Content */}
         <main className="py-16">
