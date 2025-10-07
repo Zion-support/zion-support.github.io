@@ -27,6 +27,13 @@ describe('Performance Tests', () => {
       },
     };
 
+    // Mock window object
+    delete window.location;
+    window.location = {
+      href: 'http://localhost:3000',
+      reload: jest.fn(),
+    };
+
     // Mock navigator
     Object.defineProperty(navigator, 'userAgent', {
       value: 'Mozilla/5.0 (Test Browser)',
@@ -36,18 +43,16 @@ describe('Performance Tests', () => {
   });
 
   beforeEach(() => {
-    // Mock window.location using delete and redefine
-    delete window.location;
-    window.location = {
-      href: 'http://localhost:3000',
-      reload: jest.fn(),
-    };
+    // Mock window.location.reload if it exists
+    if (window.location.reload) {
+      locationSpy = jest.fn();
+    }
   });
 
   afterEach(() => {
-    // Clean up
+    // No need to restore if we didn't create a spy
     if (locationSpy) {
-      locationSpy.mockRestore();
+      locationSpy = null;
     }
   });
 
