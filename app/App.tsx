@@ -26,11 +26,7 @@ const ErrorBoundary = ({ children }: { children: React.ReactNode }) => {
 };
 
 // Utils
-<<<<<<< HEAD
-import { performanceOptimizer } from './utils/performanceOptimizer';
-=======
 import { lazyLoadImages, preloadCriticalResources, collectPerformanceMetrics, performanceOptimizer } from './utils/performanceOptimizer';
->>>>>>> cursor/fix-errors-and-merge-to-main-d868
 import { logger } from './utils/logger';
 
 // Lazy load pages for better performance
@@ -106,7 +102,6 @@ const App: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
 // Loading fallback component
 const LoadingFallback: React.FC<{ height?: string }> = ({
   height = 'h-32',
@@ -115,7 +110,4 @@ const LoadingFallback: React.FC<{ height?: string }> = ({
     <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-indigo-600"></div>
   </div>
 );
-
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-d868
 export default App;
