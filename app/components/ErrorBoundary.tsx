@@ -32,10 +32,12 @@ class ErrorBoundary extends Component<Props, State> {
       console.error('ErrorBoundary caught an error:', error, errorInfo);
     }
 
-    // Log error to analytics in production
-    if (process.env.NODE_ENV === 'production' && typeof window !== 'undefined') {
+    // Report error to monitoring service in production
+    if (process.env.NODE_ENV === 'production') {
+      console.error('Production error caught:', error.message);
+      
       // Send to error tracking service
-      if ('gtag' in window) {
+      if (typeof window !== 'undefined' && 'gtag' in window) {
         (window as unknown as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag('event', 'exception', {
           description: error.message,
           fatal: false

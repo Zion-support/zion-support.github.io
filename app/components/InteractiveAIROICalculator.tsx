@@ -1,12 +1,24 @@
 // import { Calculator } from 'lucide-react';
-import React, { useState } from 'react';
+import React, { useState, memo, useCallback, useMemo } from 'react';
 
-const InteractiveAIROICalculator: React.FC = () => {
+const InteractiveAIROICalculator: React.FC = memo(() => {
   const [investment, setInvestment] = useState(100000);
   const [savings, setSavings] = useState(300000);
   const [timeframe, setTimeframe] = useState(12);
 
-  const roi = ((savings - investment) / investment) * 100;
+  const roi = useMemo(() => ((savings - investment) / investment) * 100, [savings, investment]);
+
+  const handleInvestmentChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
+    setInvestment(Number(e.target.value));
+  }, []);
+
+  const handleSavingsChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
+    setSavings(Number(e.target.value));
+  }, []);
+
+  const handleTimeframeChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
+    setTimeframe(Number(e.target.value));
+  }, []);
 
   return (
     <div className='bg-white rounded-lg shadow-lg p-8'>
@@ -20,7 +32,7 @@ const InteractiveAIROICalculator: React.FC = () => {
           <input
             type='number'
             value={investment}
-            onChange={e => setInvestment(Number(e.target.value))}
+            onChange={handleInvestmentChange}
             className='w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent'
           />
         </div>
@@ -32,7 +44,7 @@ const InteractiveAIROICalculator: React.FC = () => {
           <input
             type='number'
             value={savings}
-            onChange={e => setSavings(Number(e.target.value))}
+            onChange={handleSavingsChange}
             className='w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent'
           />
         </div>
@@ -44,7 +56,7 @@ const InteractiveAIROICalculator: React.FC = () => {
           <input
             type='number'
             value={timeframe}
-            onChange={e => setTimeframe(Number(e.target.value))}
+            onChange={handleTimeframeChange}
             className='w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent'
           />
         </div>
@@ -63,6 +75,8 @@ const InteractiveAIROICalculator: React.FC = () => {
       </div>
     </div>
   );
-};
+});
+
+InteractiveAIROICalculator.displayName = 'InteractiveAIROICalculator';
 
 export default InteractiveAIROICalculator;
