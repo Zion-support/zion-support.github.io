@@ -1,12 +1,14 @@
-import React, { Suspense } from 'react';
+import React, { memo, useMemo, useCallback, Suspense } from 'react';
 import { createRoot } from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import HomePage from './app/page';
-import { initializePerformanceEnhancements } from './app/utils/performanceEnhancer';
+import { performanceEnhancer } from './app/utils/performanceEnhancer';
+import { errorHandler } from './app/utils/enhancedErrorHandler';
+import ErrorBoundary from './app/components/ErrorBoundary';
 import PerformanceMonitor from './app/components/PerformanceMonitor';
 import EnhancedErrorBoundary from './app/components/EnhancedErrorBoundary';
-import AdvancedSEOOptimizer from './app/components/AdvancedSEOOptimizer';
+import AdvancedSEOOptimizer, { defaultSEOConfig } from './app/components/AdvancedSEOOptimizer';
 import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
 import { performanceOptimizer } from './app/utils/performanceOptimizer';
 
@@ -95,7 +97,8 @@ const App = () => {
   React.useEffect(() => {
     if (typeof document !== 'undefined') {
       // Initialize enhanced performance monitoring
-      initializePerformanceEnhancements();
+      performanceEnhancer.startMonitoring();
+      performanceOptimizer.init();
       
       // Preload critical fonts
       const fontLink = document.createElement('link');
@@ -149,6 +152,7 @@ const App = () => {
 
     // Cleanup on unmount
     return () => {
+      performanceEnhancer.stopMonitoring();
       performanceOptimizer.cleanup();
     };
   }, []);
@@ -182,14 +186,11 @@ const App = () => {
         }}
       >
         <AdvancedSEOOptimizer
-          seoData={{
-            title: 'Zion Tech Group - Advanced AI and IT Solutions',
-            description: 'Leading provider of AI-powered solutions, IT services, and digital transformation',
-            keywords: ['AI', 'IT Solutions', 'Digital Transformation', 'Technology'],
-            canonicalUrl: 'https://ziontechgroup.com',
-            ogImage: 'https://ziontechgroup.com/og-image.png',
-          }}
+          seoData={defaultSEOConfig}
           enableStructuredData={true}
+          enableOpenGraph={true}
+          enableTwitterCards={true}
+          enableSchemaMarkup={true}
         />
         <HelmetProvider>
           <BrowserRouter>

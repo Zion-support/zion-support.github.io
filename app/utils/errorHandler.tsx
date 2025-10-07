@@ -253,6 +253,7 @@ export class ErrorHandler {
     if (this.config.enableConsoleLogging) {
       const logMessage = `[${error.severity}] ${error.type}: ${error.message}`;
       
+      /* eslint-disable no-console */
       switch (error.severity) {
         case ErrorSeverity.CRITICAL:
         case ErrorSeverity.HIGH:
@@ -268,6 +269,7 @@ export class ErrorHandler {
           console.info(logMessage, error);
           break;
       }
+      /* eslint-enable no-console */
     }
 
     if (this.config.enableNetworkLogging) {

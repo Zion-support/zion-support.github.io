@@ -4,6 +4,21 @@
 
 import '@testing-library/jest-dom';
 
+// Suppress jsdom navigation warnings
+// eslint-disable-next-line no-console
+const originalConsoleError = console.error;
+// eslint-disable-next-line no-console
+console.error = (...args) => {
+  const message = args[0]?.toString?.() || args[0]?.message || '';
+  if (
+    message.includes('Not implemented: navigation') ||
+    message.includes('navigation (except hash changes)')
+  ) {
+    return;
+  }
+  originalConsoleError(...args);
+};
+
 // Mock window.matchMedia
 Object.defineProperty(window, 'matchMedia', {
   writable: true,
@@ -21,40 +36,64 @@ Object.defineProperty(window, 'matchMedia', {
 
 // Mock IntersectionObserver
 global.IntersectionObserver = class MockIntersectionObserver {
-  root: Element | Document | null = null;
+  root: Element | null = null;
   rootMargin: string = '';
-  thresholds: ReadonlyArray<number> = [];
-
-  constructor(
-    public callback: IntersectionObserverCallback,
-    options?: IntersectionObserverInit
-  ) {
-    if (options) {
-      this.root = options.root || null;
-      this.rootMargin = options.rootMargin || '0px';
-      this.thresholds = options.threshold
-        ? Array.isArray(options.threshold)
-          ? options.threshold
-          : [options.threshold]
-        : [0];
-    }
-  }
-
-  observe() {}
-  unobserve() {}
-  disconnect() {}
-  takeRecords() {
-    return [];
-  }
-};
+  thresholds: ReadonlyArray<number> = Object.freeze([]);
+  
+  constructor() {}
+  disconnect(): void {}
+  observe(): void {}
+  unobserve(): void {}
+  takeRecords(): IntersectionObserverEntry[] { return []; }
+} as unknown as typeof IntersectionObserver;
 
 // Mock ResizeObserver
 global.ResizeObserver = class MockResizeObserver {
-  constructor(public callback: ResizeObserverCallback) {}
+  constructor() {}
+  disconnect() {}
   observe() {}
   unobserve() {}
-  disconnect() {}
-};
+} as unknown as typeof ResizeObserver;
+
+// Mock scrollTo
+Object.defineProperty(window, 'scrollTo', {
+  value: jest.fn(),
+  writable: true
+});
+
+// Mock console methods to reduce noise in tests
+/* eslint-disable no-console */
+const originalError = console.error;
+const originalWarn = console.warn;
+
+beforeAll(() => {
+  console.error = (...args: unknown[]) => {
+    if (
+      typeof args[0] === 'string' &&
+      args[0].includes('Warning: ReactDOM.render is no longer supported')
+    ) {
+      return;
+    }
+    originalError.call(console, ...args);
+  };
+  
+  console.warn = (...args: unknown[]) => {
+    if (
+      typeof args[0] === 'string' &&
+      (args[0].includes('componentWillReceiveProps') ||
+       args[0].includes('componentWillMount'))
+    ) {
+      return;
+    }
+    originalWarn.call(console, ...args);
+  };
+});
+
+afterAll(() => {
+  console.error = originalError;
+  console.warn = originalWarn;
+});
+/* eslint-enable no-console */
 
 // Mock performance API
 Object.defineProperty(window, 'performance', {
@@ -64,8 +103,6 @@ Object.defineProperty(window, 'performance', {
     getEntriesByType: jest.fn(() => []),
     mark: jest.fn(),
     measure: jest.fn(),
-    clearMarks: jest.fn(),
-    clearMeasures: jest.fn(),
   },
 });
 
@@ -104,29 +141,22 @@ global.URL = URL;
 
 // Mock PerformanceObserver
 global.PerformanceObserver = class MockPerformanceObserver {
+  static readonly supportedEntryTypes: readonly string[] = [
+    'navigation',
+    'paint',
+    'largest-contentful-paint',
+    'first-input',
+    'layout-shift',
+  ];
+
   constructor(public callback: PerformanceObserverCallback) {}
   observe() {}
   disconnect() {}
   takeRecords() {
     return [];
   }
-  static readonly supportedEntryTypes: readonly string[] = ['paint', 'largest-contentful-paint', 'first-input', 'layout-shift', 'navigation'];
 };
 
-// Mock window.location
-delete (window as { location?: unknown }).location;
-(window as { location: Location }).location = {
-  href: 'http://localhost:3000',
-  origin: 'http://localhost:3000',
-  protocol: 'http:',
-  host: 'localhost:3000',
-  hostname: 'localhost',
-  port: '3000',
-  pathname: '/',
-  search: '',
-  hash: '',
-  assign: jest.fn(),
-  replace: jest.fn(),
-  reload: jest.fn(),
-  ancestorOrigins: {} as DOMStringList,
-} as Location;
+global.cancelAnimationFrame = (id: number) => {
+  clearTimeout(id);
+};

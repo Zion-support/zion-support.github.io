@@ -244,4 +244,18 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
   );
 };
 
+// Default SEO configuration
+export const defaultSEOConfig: SEOData = {
+  title: 'Zion Tech Group - Advanced AI and IT Solutions',
+  description: 'Leading provider of AI-powered enterprise solutions and digital transformation services. Transform your business with cutting-edge AI technology.',
+  keywords: ['AI', 'artificial intelligence', 'enterprise solutions', 'digital transformation', 'IT services', 'automation', 'cloud services'],
+  canonicalUrl: 'https://ziontechgroup.com',
+  ogImage: 'https://ziontechgroup.com/og-image.jpg',
+  structuredData: {
+    '@type': 'Organization',
+    name: 'Zion Tech Group',
+    description: 'Leading provider of AI-powered enterprise solutions and digital transformation services',
+  },
+};
+
 export default AdvancedSEOOptimizer;
