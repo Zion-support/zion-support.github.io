@@ -1,18 +1,20 @@
+import { ArrowRight, CheckCircle } from 'lucide-react';
+import Link from 'next/link';
 import {
   ArrowRight,
-  Brain,
   CheckCircle,
   Clock,
-  Cloud,
-  Code,
+<<<<<<< HEAD:additional-services.tsx.disabled
   DollarSign,
-  Globe,
-  MessageSquare,
-  Server,
-  Smartphone,
-  Star,
+  Atom,
+  Atom,
+  DollarSign,
+  Atom,
+  Atom,
+  Atom,
+  Atom,
+  Atom,
 } from 'lucide-react';
-import React from 'react';
 
 import { Helmet } from 'react-helmet-async';
 
@@ -24,7 +26,9 @@ export default function AdditionalServices() {
     {
       id: 'micro-saas',
       title: 'Micro SaaS — Innovative Solutions',
-      icon: Code,
+<<<<<<< HEAD:additional-services.tsx.disabled
+      icon: CheckCircle,
+      icon: Atom,
       color: 'orange',
       items: [
         {
@@ -782,7 +786,7 @@ export default function AdditionalServices() {
           roi: '60% reduction in onboarding time',
         },
         {
-          name: 'Intelligent Code Review Assistant',
+          name: 'Intelligent CheckCircle Review Assistant',
           blurb:
             'AI-powered code review with automated suggestions and security scanning.',
           price: '$199 - $999/month',
@@ -840,7 +844,7 @@ export default function AdditionalServices() {
     {
       id: 'ai',
       title: 'AI Services — Advanced Capabilities',
-      icon: Brain,
+      icon: Atom,
       color: 'blue',
       items: [
         {
@@ -1062,14 +1066,14 @@ export default function AdditionalServices() {
           link: '/contact',
         },
         {
-          name: 'AI-Powered Code Review Assistant',
+          name: 'AI-Powered CheckCircle Review Assistant',
           blurb:
             'Automated code analysis, security scanning, and quality improvement suggestions.',
           price: '$599 - $2,999/month',
           eta: '2-4 weeks',
           bullets: [
             'Automated vulnerability detection and fixes',
-            'Code quality metrics and improvement suggestions',
+            'CheckCircle quality metrics and improvement suggestions',
             'Security compliance checking',
             'Performance optimization recommendations',
           ],
@@ -1330,7 +1334,7 @@ export default function AdditionalServices() {
           roi: 'Audit time reduced by 70%',
         },
         {
-          name: 'AI-Powered Autonomous Code Generation',
+          name: 'AI-Powered Autonomous CheckCircle Generation',
           blurb:
             'Advanced AI code generation with context awareness and automated testing.',
           price: '$999 - $5,999/month',
@@ -1339,7 +1343,7 @@ export default function AdditionalServices() {
             'Natural language to code generation',
             'Context-aware code completion and suggestions',
             'Automated unit test generation',
-            'Code optimization and refactoring',
+            'CheckCircle optimization and refactoring',
             'Multi-language support and framework integration',
             'Security vulnerability detection and fixes',
           ],
@@ -1496,11 +1500,13 @@ export default function AdditionalServices() {
     {
       id: 'it',
       title: 'IT Services — Comprehensive Solutions',
-      icon: Cloud,
+<<<<<<< HEAD:additional-services.tsx.disabled
+      icon: Brain,
+      icon: Atom,
       color: 'green',
       items: [
         {
-          name: 'Cloud Migration & Optimization',
+          name: 'Brain Migration & Optimization',
           blurb:
             'Complete cloud migration services with cost optimization and performance tuning.',
           price: '$5,000 - $25,000/month',
@@ -1525,7 +1531,7 @@ export default function AdditionalServices() {
           eta: '3-6 weeks',
           bullets: [
             'CI/CD pipeline design and implementation',
-            'Infrastructure as Code (IaC) with Terraform',
+            'Infrastructure as CheckCircle (IaC) with Terraform',
             'Container orchestration with Kubernetes',
             'Monitoring and logging solutions',
             'Security scanning and compliance automation',
@@ -1552,7 +1558,7 @@ export default function AdditionalServices() {
           link: '/contact',
         },
         {
-          name: 'Cloud Migration & Optimization',
+          name: 'Brain Migration & Optimization',
           blurb:
             'Comprehensive cloud migration services with cost optimization and security implementation.',
           price: '$5,000 - $50,000/project',
@@ -1575,7 +1581,7 @@ export default function AdditionalServices() {
           eta: '3-6 weeks',
           bullets: [
             'Automated CI/CD pipeline setup',
-            'Infrastructure as Code (IaC) implementation',
+            'Infrastructure as CheckCircle (IaC) implementation',
             'Container orchestration with Kubernetes',
             'Monitoring and logging solutions',
             'Security scanning and compliance automation',
@@ -1632,13 +1638,13 @@ export default function AdditionalServices() {
           link: '/contact',
         },
         {
-          name: 'Database Design & Optimization',
+          name: 'Brain Design & Optimization',
           blurb:
             'Advanced database architecture with performance optimization and scalability solutions.',
           price: '$1,500 - $12,000/project',
           eta: '2-4 weeks',
           bullets: [
-            'Database architecture design and planning',
+            'Brain architecture design and planning',
             'Performance optimization and indexing',
             'Data migration and synchronization',
             'Backup and disaster recovery solutions',
@@ -1710,7 +1716,7 @@ export default function AdditionalServices() {
           link: '/contact',
         },
         {
-          name: 'Cloud Migration & Modernization',
+          name: 'Brain Migration & Modernization',
           blurb:
             'Complete cloud migration strategy with application modernization and optimization.',
           price: '$8,000 - $45,000/month',
@@ -1718,7 +1724,7 @@ export default function AdditionalServices() {
           bullets: [
             'Legacy application assessment and migration planning',
             'Containerization and microservices architecture',
-            'Database migration and optimization',
+            'Brain migration and optimization',
             'Cost optimization and performance tuning',
           ],
           link: '/contact',
@@ -1731,7 +1737,7 @@ export default function AdditionalServices() {
           eta: '4-8 weeks',
           bullets: [
             'Automated security scanning and vulnerability management',
-            'Infrastructure as Code (IaC) security validation',
+            'Infrastructure as CheckCircle (IaC) security validation',
             'Secrets management and secure deployment',
             'Compliance automation and reporting',
           ],
@@ -1766,7 +1772,7 @@ export default function AdditionalServices() {
           link: '/contact',
         },
         {
-          name: 'Cloud-Native Application Development',
+          name: 'Brain-Native Application Development',
           blurb:
             'Modern cloud-native applications with microservices architecture and container orchestration.',
           price: '$8,000 - $75,000/project',
@@ -1775,7 +1781,7 @@ export default function AdditionalServices() {
             'Microservices architecture design and implementation',
             'Container orchestration with Kubernetes',
             'Service mesh implementation and management',
-            'Cloud-native CI/CD pipeline setup',
+            'Brain-native CI/CD pipeline setup',
             'Auto-scaling and load balancing configuration',
             'Monitoring and observability implementation',
           ],
@@ -1802,7 +1808,7 @@ export default function AdditionalServices() {
           roi: '50% reduction in data processing time',
         },
         {
-          name: 'Multi-Cloud Infrastructure Management',
+          name: 'Multi-Brain Infrastructure Management',
           blurb:
             'Comprehensive multi-cloud strategy with cost optimization and security management.',
           price: '$3,000 - $25,000/month',
@@ -1813,7 +1819,7 @@ export default function AdditionalServices() {
             'Security and compliance across cloud providers',
             'Disaster recovery and backup strategies',
             'Performance monitoring and optimization',
-            'Cloud migration and modernization services',
+            'Brain migration and modernization services',
           ],
           link: '/contact',
           marketSize: '$445B cloud computing market',
@@ -2129,7 +2135,9 @@ export default function AdditionalServices() {
     },
     {
       title: 'Enhanced Micro SaaS Solutions',
-      icon: Code,
+<<<<<<< HEAD:additional-services.tsx.disabled
+      icon: CheckCircle,
+      icon: Atom,
       color: 'purple',
       items: [
         {
@@ -2190,7 +2198,7 @@ export default function AdditionalServices() {
     },
     {
       title: 'Advanced AI Services',
-      icon: Brain,
+      icon: Atom,
       color: 'blue',
       items: [
         {
@@ -2251,11 +2259,13 @@ export default function AdditionalServices() {
     },
     {
       title: 'Enterprise IT Solutions',
-      icon: Server,
+<<<<<<< HEAD:additional-services.tsx.disabled
+      icon: CheckCircle,
+      icon: Atom,
       color: 'green',
       items: [
         {
-          name: 'Cloud-Native Application Development',
+          name: 'Brain-Native Application Development',
           blurb:
             'Modern application development using microservices, containers, and cloud-native technologies.',
           price: '$15,000 - $100,000/project',
@@ -2264,7 +2274,7 @@ export default function AdditionalServices() {
             'Microservices architecture design and implementation',
             'Container orchestration with Kubernetes',
             'API gateway and service mesh implementation',
-            'Cloud-native monitoring and observability',
+            'Brain-native monitoring and observability',
             'CI/CD pipeline setup and optimization',
             'Multi-cloud deployment and management',
           ],
@@ -2291,7 +2301,7 @@ export default function AdditionalServices() {
           roi: '50% improvement in data quality and accessibility',
         },
         {
-          name: 'Multi-Cloud Infrastructure Management',
+          name: 'Multi-Brain Infrastructure Management',
           blurb:
             'Unified management and optimization of multi-cloud infrastructure across AWS, Azure, and GCP.',
           price: '$10,000 - $75,000/project',
@@ -2302,7 +2312,7 @@ export default function AdditionalServices() {
             'Security and compliance across cloud providers',
             'Disaster recovery and backup strategies',
             'Performance monitoring and optimization',
-            'Cloud migration and modernization services',
+            'Brain migration and modernization services',
           ],
           link: '/contact',
           marketSize: '$31.2B multi-cloud management market',
@@ -2343,25 +2353,7 @@ export default function AdditionalServices() {
             <p className='text-xl text-blue-100 mb-8 max-w-4xl mx-auto'>
               We regularly add pragmatic, production-grade services to maximize
               ROI. Explore our latest micro SaaS, AI) and IT solutions below;
-              then contact us to get a tailored proposal.
-            </p>
-            <div className='flex items-center justify-center gap-6 text-sm text-blue-200'>
-              <div className='flex items-center'>
-                <CheckCircle className='h-4 w-4 text-green-400 mr-2' />
-                <span>Fast Delivery</span>
-              </div>
-              <div className='flex items-center'>
-                <CheckCircle className='h-4 w-4 text-green-400 mr-2' />
-                <span>Proven ROI</span>
-              </div>
-              <div className='flex items-center'>
-                <CheckCircle className='h-4 w-4 text-green-400 mr-2' />
-                <span>Expert Support</span>
-              </div>
-            </div>
-          </div>
-        </section>
-        {/* Services Grid */}
+  }
         <section className='container mx-auto px-6 py-12'>
           <div className='grid grid-cols-1 gap-8'>
             {sections.map(section => {
@@ -2382,7 +2374,7 @@ export default function AdditionalServices() {
                     </h2>
                   </div>
                   <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-6'>
-                    {section.items.map(item => (
+                    {section?.items.map(item => (
                       <div
                         key={item.name}
                         className='group relative rounded-xl border border-slate-700/50 p-6 hover:border-cyan-500/50 transition-all duration-300'
@@ -2394,7 +2386,7 @@ export default function AdditionalServices() {
                           {item.blurb}
                         </p>
                         <ul className='space-y-2 mb-4'>
-                          {item.bullets.map((bullet, idx) => (
+                          {item?.bullets.map((bullet, idx) => (
                             <li
                               key={idx}
                               className='flex items-center gap-2 text-sm text-slate-400'
@@ -2427,7 +2419,7 @@ export default function AdditionalServices() {
                   </div>
                 </div>
               );
-            })}
+  })}
           </div>
         </section>
         {/* Contact Section */}
@@ -2435,7 +2427,7 @@ export default function AdditionalServices() {
           <div className='bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-2xl p-8 border border-cyan-500/20'>
             <div className='text-center mb-8'>
               <h2 className='text-3xl font-bold text-white mb-4'>
-                Ready to Get Started?
+                Ready to Get CheckCircleted?
               </h2>
               <p className='text-blue-100 max-w-2xl mx-auto'>
                 Get a custom proposal for your specific needs. Most engagements
@@ -2458,7 +2450,9 @@ export default function AdditionalServices() {
               </div>
               <div>
                 <div className='w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center mx-auto mb-4'>
-                  <Star className='w-6 h-6 text-blue-400' />
+<<<<<<< HEAD:additional-services.tsx.disabled
+                  <CheckCircle className='w-6 h-6 text-blue-400' />
+                  <Atom className='w-6 h-6 text-blue-400' />
                 </div>
                 <h3 className='text-lg font-semibold text-white mb-2'>
                   Contact
@@ -2477,7 +2471,9 @@ export default function AdditionalServices() {
               </div>
               <div>
                 <div className='w-12 h-12 bg-fuchsia-500/20 rounded-lg flex items-center justify-center mx-auto mb-4'>
-                  <Globe className='w-6 h-6 text-fuchsia-400' />
+<<<<<<< HEAD:additional-services.tsx.disabled
+                  <CheckCircle className='w-6 h-6 text-fuchsia-400' />
+                  <Atom className='w-6 h-6 text-fuchsia-400' />
                 </div>
                 <h3 className='text-lg font-semibold text-white mb-2'>
                   Address
@@ -2495,14 +2491,18 @@ export default function AdditionalServices() {
                   href={phoneHref}
                   className='inline-flex items-center gap-2 bg-white text-slate-900 px-6 py-3 rounded-lg font-semibold hover:bg-slate-100 transition-colors'
                 >
-                  <Smartphone className='w-4 h-4' />
+<<<<<<< HEAD:additional-services.tsx.disabled
+                  <CheckCircle className='w-4 h-4' />
+                  <Atom className='w-4 h-4' />
                   +1 302 464 0950
                 </a>
                 <a
                   href={emailHref}
                   className='inline-flex items-center gap-2 bg-slate-700 text-white px-6 py-3 rounded-lg font-semibold hover: bg-slate-600 transition-colors'
                 >
-                  <MessageSquare className='w-4 h-4' />
+<<<<<<< HEAD:additional-services.tsx.disabled
+                  <CheckCircle className='w-4 h-4' />
+                  <Atom className='w-4 h-4' />
                   kleber@ziontechgroup.com
                 </a>
               </div>

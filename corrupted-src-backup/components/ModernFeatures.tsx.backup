@@ -1,4 +1,9 @@
 import React from 'react';
+<<<<<<< HEAD:src/components/ModernFeatures.tsx
+<<<<<<< HEAD
+import { Zap, Shield, TrendingUp, Users, Globe, Award } from 'lucide-react';
+=======
+>>>>>>> origin/main:corrupted-src-backup/components/ModernFeatures.tsx.backup
 
 const ModernFeatures: React.FC = () => {
   const features = [
@@ -92,4 +97,33 @@ key={index}              className="bg-white rounded-2xl p-8 shadow-lg hover:sha
   );
 };
 
+<<<<<<< HEAD:src/components/ModernFeatures.tsx
 export default ModernFeatures;
+=======
+
+interface ModernFeaturesProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const ModernFeatures: React.FC<ModernFeaturesProps> = ({ 
+  className = '', 
+  children 
+}) => {
+  return (
+    <div className={`modernfeatures-component ${className}`}>
+      {children || (
+        <div className="p-4 text-center text-gray-600">
+          <h3 className="text-lg font-semibold mb-2">ModernFeatures</h3>
+          <p>Component placeholder - implementation needed</p>
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default ModernFeatures;
+>>>>>>> cursor/fix-errors-and-merge-to-main-8d57
+=======
+export default ModernFeatures;
+>>>>>>> origin/main:corrupted-src-backup/components/ModernFeatures.tsx.backup

@@ -1,3 +1,5 @@
+import Link from 'next/link';
+import { Star } from 'lucide-react';
 import React from 'react';
 import ArrowRight from 'next/link';
 

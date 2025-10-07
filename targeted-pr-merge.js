@@ -2,14 +2,12 @@
 
 /**
  * Targeted PR Merge - Focus on the most recent and important branches
- */
-
-import { execSync } from 'child_process';
+ */ import { execSync } from 'child_process';
 import fs from 'fs';
 
 console.log('🚀 Starting Targeted PR Merge Process...\n');
 
-// Step 1: Ensure we're on main and up to date
+//Step 1: Ensure we're on main and up to date
 console.log('📋 Step 1: Preparing main branch...');
 try {
   execSync('git checkout main', { stdio: 'inherit' });
@@ -20,9 +18,9 @@ try {
   process.exit(1);
 }
 
-// Step 2: Define specific branches to merge (most recent and important)
+//Step 2: Define specific branches to merge (most recent and important)
 const targetBranches = [
-  // Recent cursor branches from today
+  //Recent cursor branches from today
   'cursor/fix-errors-and-merge-to-main-100d',
   'cursor/fix-errors-and-merge-to-main-2f1b',
   'cursor/fix-errors-and-merge-to-main-4800',
@@ -48,12 +46,12 @@ const targetBranches = [
   'cursor/fix-errors-and-merge-to-main-ffab',
   'cursor/fix-errors-and-merge-to-main-ffee',
   'cursor/fix-errors-and-merge-to-main-dc0f',
-  // Content and feature branches
+  //Content and feature branches
   'add-new-2026-content',
   'ai-2027-content-integration',
   'ai-dashboard-improvements',
   'ai-dashboard-improvements-merged',
-  // Important fix branches
+  //Important fix branches
   'fix-typescript-errors-and-build',
   'merge-pr-25212',
   'resolve-pr-25168',
@@ -63,15 +61,15 @@ const targetBranches = [
 
 console.log(`📊 Found ${targetBranches.length} target branches to process\n`);
 
-// Step 3: Enhanced merge function with conflict resolution
+//Step 3: Enhanced merge function with conflict resolution
 function mergeBranch(branchName) {
   console.log(`\n🔄 Processing ${branchName}...`);
 
   try {
-    // Check if branch exists
+    //Check if branch exists
     execSync(`git fetch origin ${branchName}`, { stdio: 'pipe' });
 
-    // Check if already merged
+    //Check if already merged
     const isMerged = execSync(
       `git branch --merged main | grep -q "${branchName}" || echo "not_merged"`,
       { encoding: 'utf8' }
@@ -81,7 +79,7 @@ function mergeBranch(branchName) {
       return { success: true, method: 'already_merged' };
     }
 
-    // Try to merge
+    //Try to merge
     try {
       execSync(
         `git merge origin/${branchName} --no-ff -m "Merge ${branchName}: automated merge"`,
@@ -94,9 +92,9 @@ function mergeBranch(branchName) {
         `⚠️  Merge conflict detected for ${branchName}, attempting resolution...`
       );
 
-      // Try different conflict resolution strategies
+      //Try different conflict resolution strategies
       try {
-        // Strategy 1: Use theirs
+        //Strategy 1: Use theirs
         execSync(
           `git merge origin/${branchName} --strategy-option=theirs --no-ff -m "Merge ${branchName}: using theirs strategy"`,
           { stdio: 'inherit' }
@@ -107,7 +105,7 @@ function mergeBranch(branchName) {
         return { success: true, method: 'theirs' };
       } catch (theirsError) {
         try {
-          // Strategy 2: Use ours
+          //Strategy 2: Use ours
           execSync(
             `git merge origin/${branchName} --strategy-option=ours --no-ff -m "Merge ${branchName}: using ours strategy"`,
             { stdio: 'inherit' }
@@ -130,7 +128,7 @@ function mergeBranch(branchName) {
   }
 }
 
-// Step 4: Process all target branches
+//Step 4: Process all target branches
 const results = {
   successful: [],
   failed: [],
@@ -174,7 +172,7 @@ for (const branch of targetBranches) {
   }
 }
 
-// Step 5: Generate report
+//Step 5: Generate report
 console.log('\n📊 Step 4: Generating merge report...');
 const report = {
   ...results,
@@ -186,7 +184,7 @@ fs.writeFileSync(
   JSON.stringify(report, null, 2)
 );
 
-// Step 6: Push changes
+//Step 6: Push changes
 console.log('\n🚀 Step 5: Pushing merged changes...');
 try {
   execSync('git push origin main', { stdio: 'inherit' });

@@ -1,3 +1,6 @@
+import { Zap, Target, CheckCircle } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { Star } from 'lucide-react';
 import React from 'react';
 import Link from 'next/link';
 import {
@@ -14,7 +17,7 @@ import {
   Settings,
   BarChart3,
 } from 'lucide-react';
-import { Metadata } from 'next';
+import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title:

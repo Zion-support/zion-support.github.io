@@ -1,6 +1,21 @@
-import { Suspense, useEffect } from 'react';
+import React, { Suspense, useEffect, useCallback } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
 import './index.css';
+
+// Import components
+import ErrorBoundary from './components/ErrorBoundary';
+import SEOOptimizer from './components/SEOOptimizer';
+import AccessibilityEnhancer from './components/AccessibilityEnhancer';
+import PerformanceMonitor from './components/PerformanceMonitor';
+import LoadingSpinner from '../app/components/LoadingSpinner';
+// import performanceOptimizer from './utils/performanceOptimizer';
+
+// Import page components
+import AboutPage from '../app/about/page';
+import PrivacyPage from '../app/privacy/page';
+import TeamPage from '../app/team/page';
+import TermsPage from '../app/terms/page';
 
 // Simple placeholder components
 const Home = () => (
@@ -10,17 +25,6 @@ const Home = () => (
         Welcome to Zion Tech Group
       </h1>
       <p className='text-xl text-gray-600'>Advanced AI and IT Solutions</p>
-    </div>
-  </div>
-);
-
-const About = () => (
-  <div className='min-h-screen flex items-center justify-center bg-gray-50'>
-    <div className='text-center'>
-      <h1 className='text-4xl font-bold text-gray-900 mb-4'>About Us</h1>
-      <p className='text-xl text-gray-600'>
-        Leading AI and IT Solutions Provider
-      </p>
     </div>
   </div>
 );
@@ -52,76 +56,58 @@ const Contact = () => (
   </div>
 );
 
-const Team = () => (
-  <div className='min-h-screen flex items-center justify-center bg-gray-50'>
-    <div className='text-center'>
-      <h1 className='text-4xl font-bold text-gray-900 mb-4'>Our Team</h1>
-      <p className='text-xl text-gray-600'>Meet our expert professionals</p>
-    </div>
-  </div>
-);
-
-const Privacy = () => (
-  <div className='min-h-screen flex items-center justify-center bg-gray-50'>
-    <div className='text-center'>
-      <h1 className='text-4xl font-bold text-gray-900 mb-4'>Privacy Policy</h1>
-      <p className='text-xl text-gray-600'>Your privacy is important to us</p>
-    </div>
-  </div>
-);
-
-const Terms = () => (
-  <div className='min-h-screen flex items-center justify-center bg-gray-50'>
-    <div className='text-center'>
-      <h1 className='text-4xl font-bold text-gray-900 mb-4'>
-        Terms of Service
-      </h1>
-      <p className='text-xl text-gray-600'>Terms and conditions</p>
-    </div>
-  </div>
-);
-
-function App() {
-  useEffect(() => {
-    // Initialize basic optimizations
-    const initializeOptimizations = () => {
-      try {
-        console.log('App initialized successfully');
-      } catch (error) {
-        console.error('Failed to initialize app:', error);
+function App(): React.JSX.Element {
+  const initializeOptimizations = useCallback(() => {
+    try {
+      console.log('All optimization systems initialized successfully');
+      
+      // Preload critical resources
+      if ('requestIdleCallback' in window) {
+        requestIdleCallback(() => {
+          // Preload critical pages
+          import('./pages/Home');
+          import('./pages/About');
+        });
       }
-    };
+    } catch (error) {
+      console.error('Failed to initialize optimization systems:', error);
+    }
 
-    // Initialize optimizations after component mount
     initializeOptimizations();
   }, []);
 
+  useEffect(() => {
+    initializeOptimizations();
+  }, [initializeOptimizations]);
+
   return (
-    <div>
-      <Router>
-        <Suspense
-          fallback={
-            <div className='min-h-screen flex items-center justify-center bg-gray-50'>
-              <div className='text-center'>
-                <div className='animate-spin rounded-full h-32 w-32 border-b-2 border-blue-600 mx-auto'></div>
-                <p className='mt-4 text-gray-600'>Loading...</p>
+    <HelmetProvider>
+      <ErrorBoundary>
+        <SEOOptimizer>
+          <AccessibilityEnhancer>
+            <Router>
+              <div className='App'>
+                <Suspense fallback={<LoadingSpinner />}>
+                  <Routes>
+                    <Route path='/' element={<Home />} />
+                    <Route path='/about' element={<AboutPage />} />
+                    <Route path='/services' element={<Services />} />
+                    <Route path='/blog' element={<Blog />} />
+                    <Route path='/contact' element={<Contact />} />
+                    <Route path='/team' element={<TeamPage />} />
+                    <Route path='/privacy' element={<PrivacyPage />} />
+                    <Route path='/terms' element={<TermsPage />} />
+                  </Routes>
+                </Suspense>
+                <PerformanceMonitor>
+                  <div></div>
+                </PerformanceMonitor>
               </div>
-            </div>
-          }
-        >
-          <Routes>
-            <Route path='/' element={<Home />} />
-            <Route path='/about' element={<About />} />
-            <Route path='/services' element={<Services />} />
-            <Route path='/blog' element={<Blog />} />
-            <Route path='/contact' element={<Contact />} />
-            <Route path='/team' element={<Team />} />
-            <Route path='/privacy' element={<Privacy />} />
-            <Route path='/terms' element={<Terms />} />
-          </Routes>
-        </Suspense>
-      </Router>
-    </div>
+            </Router>
+          </AccessibilityEnhancer>
+        </SEOOptimizer>
+      </ErrorBoundary>
+    </HelmetProvider>
   );
 }
 

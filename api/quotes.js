@@ -1,23 +1,44 @@
-export default async function handler(req) res) {if (req.method !== 'POST') {
-    res.statusCode = 405}
-    res.setHeader('Allow'} 'POST');
+export default async function handler(req, res) {
+  if (req.method !== 'POST') {
+    res.statusCode = 405;
+    res.setHeader('Allow', 'POST');
     res.end('Method Not Allowed');
     return;
   }
-  try {const { name, email, phone, details, country} service } = req.body || {};
-    if (!name || !email || !phone || !details) {res.statusCode = 400}
-      res.json({ error: 'Name, email) phone} and details are required' });
+
+  try {
+    const { name, email, phone, details, country, service } = req.body || {};
+
+    if (!name || !email || !phone || !details) {
+      res.statusCode = 400;
+      res.json({ error: 'Name, email, phone, and details are required' });
       return;
     }
+
     // Process quote submission logic here
-    const quote = {id: 'quote_' + Date.now(),
+    const quote = {
+      id: 'quote_' + Date.now(),
+      name,
+      email,
+      phone,
+      details,
       country: country || 'US',
       service: service || 'general',
-      submittedAt: new Date().toISOString()}
-  } catch (error) {res.statusCode = 500}
+      submittedAt: new Date().toISOString(),
+    };
+
+    // In a real application, you would save this to a database
+    console.log('Quote submission:', quote);
+
+    res.statusCode = 200;
+    res.json({
+      success: true,
+      message: 'Quote submitted successfully',
+      quote,
+    });
+  } catch (error) {
+    console.error('Quote submission error:', error);
+    res.statusCode = 500;
     res.json({ error: error.message || 'Quote submission failed' });
-      country: country || 'US',
-      service: service || 'general',
-      submittedAt: new Date().toISOString()}
-  } catch (error) {res.statusCode = 500}
-    res.json({ error: error.message || 'Quote submission failed' });
+  }
+}

@@ -1,4 +1,8 @@
 import React from 'react';
+<<<<<<< HEAD:src/components/EnhancedPromotionalBanner.tsx
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main:corrupted-src-backup/components/EnhancedPromotionalBanner.tsx.backup
 import { Link } from 'react-router-dom';
 import type { EnhancedPromotionalBanner as BannerType } from '../content/enhanced-promotional-banners';
 
@@ -42,8 +46,39 @@ const EnhancedPromotionalBanner: React.FC<EnhancedPromotionalBannerProps> = ({
           </Link>
         </div>
       </div>
+<<<<<<< HEAD:src/components/EnhancedPromotionalBanner.tsx
+=======
+
+interface EnhancedPromotionalBannerProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const EnhancedPromotionalBanner: React.FC<EnhancedPromotionalBannerProps> = ({ 
+  className = '', 
+  children 
+}) => {
+  return (
+    <div className={`enhancedpromotionalbanner-component ${className}`}>
+      {children || (
+        <div className="p-4 text-center text-gray-600">
+          <h3 className="text-lg font-semibold mb-2">EnhancedPromotionalBanner</h3>
+          <p>Component placeholder - implementation needed</p>
+        </div>
+      )}
+>>>>>>> cursor/fix-errors-and-merge-to-main-8d57
+=======
+>>>>>>> origin/main:corrupted-src-backup/components/EnhancedPromotionalBanner.tsx.backup
     </div>
   );
 };
 
+<<<<<<< HEAD:src/components/EnhancedPromotionalBanner.tsx
+<<<<<<< HEAD
 export default EnhancedPromotionalBanner;
+=======
+export default EnhancedPromotionalBanner;
+>>>>>>> cursor/fix-errors-and-merge-to-main-8d57
+=======
+export default EnhancedPromotionalBanner;
+>>>>>>> origin/main:corrupted-src-backup/components/EnhancedPromotionalBanner.tsx.backup

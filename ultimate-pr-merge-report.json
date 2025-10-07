@@ -1,12 +1,12 @@
 {
-  "timestamp": "2025-10-05T11:52:02.311Z",
+  "timestamp": "2025-10-07T07:12:08.379Z",
   "summary": {
     "totalPRs": 4,
-    "merged": 1,
+    "merged": 2,
     "conflicts": 0,
-    "notFound": 3,
+    "notFound": 2,
     "skipped": 0,
-    "successRate": "25%"
+    "successRate": "50%"
   },
   "systemChecks": {
     "typeCheck": true,
@@ -26,7 +26,7 @@
     {
       "pr": 25063,
       "title": "Build and deploy with vite and netlify",
-      "status": "not_found",
+      "status": "merged",
       "branch": "cursor/build-and-deploy-with-vite-and-netlify-8b37",
       "priority": "high"
     },
@@ -49,6 +49,6 @@
   "repository": {
     "branch": "main",
     "status": "clean",
-    "lastCommit": "e1c41c6ddbb7 Merge branch 'main' of https://github.com/Zion-Holdings/zion.app"
+    "lastCommit": "6fe4e41f8938 Resolve merge conflicts in App.tsx"
   }
 }

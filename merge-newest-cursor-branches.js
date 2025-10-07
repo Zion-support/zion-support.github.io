@@ -2,14 +2,12 @@
 
 /**
  * Merge Newest Cursor Branches - Process the newest cursor branches
- */
-
-import { execSync } from 'child_process';
+ */ import { execSync } from 'child_process';
 import fs from 'fs';
 
 console.log('🚀 Starting Newest Cursor Branches Merge Process...\n');
 
-// Newest cursor branches to merge
+//Newest cursor branches to merge
 const newestCursorBranches = [
   'cursor/fix-errors-and-merge-to-main-2639',
   'cursor/fix-errors-and-merge-to-main-7e2b',
@@ -21,7 +19,7 @@ console.log(
   `📊 Found ${newestCursorBranches.length} newest cursor branches to process\n`
 );
 
-// Function to safely execute git commands
+//Function to safely execute git commands
 function safeGitCommand(command, description) {
   try {
     console.log(`📋 Executing: ${description}`);
@@ -34,7 +32,7 @@ function safeGitCommand(command, description) {
   }
 }
 
-// Function to check if branch exists
+//Function to check if branch exists
 function branchExists(branchName) {
   try {
     execSync(
@@ -47,7 +45,7 @@ function branchExists(branchName) {
   }
 }
 
-// Ensure we're on main branch
+//Ensure we're on main branch
 console.log('📍 Setting up environment...');
 safeGitCommand('git checkout main', 'Switch to main branch');
 safeGitCommand('git pull origin main', 'Pull latest changes from main');
@@ -58,11 +56,11 @@ let mergedCount = 0;
 let notFoundCount = 0;
 const results = [];
 
-// Process each branch
+//Process each branch
 for (const branch of newestCursorBranches) {
   console.log(`\n--- Processing ${branch} ---`);
 
-  // Check if branch exists
+  //Check if branch exists
   if (!branchExists(branch)) {
     console.log(`❌ Branch ${branch} not found, skipping...`);
     notFoundCount++;
@@ -75,7 +73,7 @@ for (const branch of newestCursorBranches) {
 
   console.log(`✅ Branch ${branch} found`);
 
-  // Try to merge the branch
+  //Try to merge the branch
   const mergeResult = safeGitCommand(
     `git merge origin/${branch} --no-ff -m "Merge ${branch} into main"`,
     `Merge ${branch}`
@@ -91,7 +89,7 @@ for (const branch of newestCursorBranches) {
   } else {
     console.log(`⚠️  Merge conflict or error for ${branch}`);
 
-    // Try to abort the merge if there was a conflict
+    //Try to abort the merge if there was a conflict
     safeGitCommand('git merge --abort', `Abort merge for ${branch}`);
 
     results.push({
@@ -102,7 +100,7 @@ for (const branch of newestCursorBranches) {
   }
 }
 
-// Run system checks
+//Run system checks
 console.log('\n🔧 Running system checks...');
 const typeCheck = safeGitCommand(
   'pnpm run type-check',
@@ -115,7 +113,7 @@ const buildCheck = safeGitCommand(
   'Production build'
 );
 
-// Push changes if any were merged
+//Push changes if any were merged
 if (mergedCount > 0) {
   console.log('\n📤 Pushing changes to main...');
   const pushResult = safeGitCommand(
@@ -129,7 +127,7 @@ if (mergedCount > 0) {
   }
 }
 
-// Generate comprehensive report
+//Generate comprehensive report
 const report = {
   timestamp: new Date().toISOString(),
   summary: {

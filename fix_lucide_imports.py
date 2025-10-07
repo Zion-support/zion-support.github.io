@@ -5,7 +5,7 @@ Script to fix lucide-react import issues by converting from named imports to def
 """
 
 =======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-ec17
+>>>>>>> cursor/fix-errors-and-merge-to-main-e42d
 import os
 import re
 import glob
@@ -16,7 +16,7 @@ def fix_lucide_imports_in_file(file_path):
 =======
 def fix_lucide_imports(file_path):
     """Fix lucide-react imports to use default imports instead of named imports"""
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-ec17
+>>>>>>> cursor/fix-errors-and-merge-to-main-e42d
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
@@ -83,7 +83,7 @@ def fix_lucide_imports(file_path):
         
         return False
         
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-ec17
+>>>>>>> cursor/fix-errors-and-merge-to-main-e42d
     except Exception as e:
         print(f"Error processing {file_path}: {e}")
         return False
@@ -138,7 +138,7 @@ def main():
             print(f"  - No changes needed or error occurred")
     
     print(f"\nFixed lucide-react imports in {fixed_count} files")
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-ec17
+>>>>>>> cursor/fix-errors-and-merge-to-main-e42d
 
 if __name__ == "__main__":
     main()

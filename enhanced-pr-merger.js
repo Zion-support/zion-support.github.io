@@ -5,7 +5,7 @@ import fs from 'fs';
 
 console.log('🚀 Starting Enhanced PR Merger...');
 
-// Function to safely execute git commands
+//Function to safely execute git commands
 function safeGitCommand(command, description) {
   try {
     console.log(`📋 Executing: ${description}`);
@@ -18,7 +18,7 @@ function safeGitCommand(command, description) {
   }
 }
 
-// Function to check if branch exists
+//Function to check if branch exists
 function branchExists(branchName) {
   try {
     execSync(
@@ -31,7 +31,7 @@ function branchExists(branchName) {
   }
 }
 
-// Current PRs to process
+//Current PRs to process
 const prs = [
   {
     number: 11935,
@@ -63,7 +63,7 @@ const prs = [
   },
 ];
 
-// Ensure we're on main branch
+//Ensure we're on main branch
 console.log('\n📍 Setting up environment...');
 safeGitCommand('git checkout main', 'Switch to main branch');
 safeGitCommand('git pull origin main', 'Pull latest changes from main');
@@ -75,13 +75,13 @@ let conflictCount = 0;
 let notFoundCount = 0;
 const results = [];
 
-// Process each PR
+//Process each PR
 for (const pr of prs) {
   console.log(
     `\n--- Processing PR #${pr.number}: ${pr.title} (Priority: ${pr.priority}) ---`
   );
 
-  // Check if branch exists
+  //Check if branch exists
   if (!branchExists(pr.branch)) {
     console.log(`❌ Branch ${pr.branch} not found, skipping...`);
     notFoundCount++;
@@ -96,7 +96,7 @@ for (const pr of prs) {
 
   console.log(`✅ Branch ${pr.branch} found`);
 
-  // Try to merge the branch
+  //Try to merge the branch
   const mergeResult = safeGitCommand(
     `git merge origin/${pr.branch} --no-ff -m "Merge PR #${pr.number}: ${pr.title}"`,
     `Merge ${pr.branch}`
@@ -115,7 +115,7 @@ for (const pr of prs) {
     conflictCount++;
     console.log(`⚠️  Merge conflict or error for PR #${pr.number}`);
 
-    // Try to abort the merge if there was a conflict
+    //Try to abort the merge if there was a conflict
     safeGitCommand('git merge --abort', `Abort merge for ${pr.branch}`);
 
     results.push({
@@ -128,7 +128,7 @@ for (const pr of prs) {
   }
 }
 
-// Run system checks
+//Run system checks
 console.log('\n🔧 Running system checks...');
 const typeCheck = safeGitCommand(
   'pnpm run type-check',
@@ -141,7 +141,7 @@ const buildCheck = safeGitCommand(
   'Production build'
 );
 
-// Push changes if any were merged
+//Push changes if any were merged
 if (mergedCount > 0) {
   console.log('\n📤 Pushing changes to main...');
   const pushResult = safeGitCommand(
@@ -155,7 +155,7 @@ if (mergedCount > 0) {
   }
 }
 
-// Generate comprehensive report
+//Generate comprehensive report
 const report = {
   timestamp: new Date().toISOString(),
   summary: {
@@ -180,7 +180,7 @@ const report = {
   status: mergedCount > 0 ? 'success' : 'no-changes',
 };
 
-// Save detailed report
+//Save detailed report
 fs.writeFileSync(
   'enhanced-pr-merge-report.json',
   JSON.stringify(report, null, 2)

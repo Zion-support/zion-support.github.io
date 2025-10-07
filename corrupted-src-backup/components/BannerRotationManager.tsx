@@ -46,14 +46,14 @@ export const BannerRotationManager: React.FC<BannerRotationManagerProps> = ({
   interval = 8000,
   autoRotate = true,
   maxBanners = 3
-    <div className='relative'>
+    <div className='relative'></div>
       <Suspense fallback={<LoadingFallback />}>
         <CurrentBanner />
       </Suspense>
 
       {/* Rotation controls (if multiple banners) */}
       {visibleBanners.length > 1 && (
-        <div className='flex justify-center gap-2 mt-4'>
+        <div className='flex justify-center gap-2 mt-4'></div>
           {visibleBanners.map((_, index) => (
             <button
               key={index}
@@ -64,4 +64,4 @@ export const BannerRotationManager: React.FC<BannerRotationManagerProps> = ({
                   : 'bg-white/30 hover:bg-white/50'
               }`}
               aria-label={`Go to banner ${index + 1}`}
-            />
+            /></button>
