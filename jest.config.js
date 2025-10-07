@@ -1,100 +1,51 @@
-export default {
-  testEnvironment: 'jsdom',
-  setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
-  extensionsToTreatAsEsm: ['.ts', '.tsx'],
-  transform: {
-    '^.+\\.(ts|tsx|js|jsx)$': [
-      'babel-jest',
-      {
-        presets: [
-          '@babel/preset-env',
-          '@babel/preset-react',
-          '@babel/preset-typescript',
-        ],
-      },
-    ],
-  },
-  transformIgnorePatterns: [
-    'node_modules/(?!(react-error-boundary|@testing-library|react|react-dom|framer-motion|lucide-react)/)',
-  ],
+const nextJest = require('next/jest');
+
+const createJestConfig = nextJest({
+  // Provide the path to your Next.js app to load next.config.js and .env files in your test environment
+  dir: './',
+});
+
+// Add any custom config to be passed to Jest
+const customJestConfig = {
+  setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
+  testEnvironment: 'jest-environment-jsdom',
   moduleNameMapper: {
-    '^@/(.*)$': '<rootDir>/app/$1',
-    '\\.(css|less|scss|sass)$': 'identity-obj-proxy',
-    '\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$':
-      '<rootDir>/__mocks__/fileMock.js',
+    '^@/(.*)$': '<rootDir>/src/$1',
+    '^@/app/(.*)$': '<rootDir>/app/$1',
+    '^@/components/(.*)$': '<rootDir>/app/components/$1',
+    '^@/utils/(.*)$': '<rootDir>/src/utils/$1',
   },
-  transformIgnorePatterns: [
-    'node_modules/(?!(react-error-boundary|@testing-library)/)',
-  ],
   testMatch: [
-    '<rootDir>/app/**/__tests__/**/*.{js,jsx,ts,tsx}',
-    '<rootDir>/app/**/*.{test,spec}.{js,jsx,ts,tsx}',
-    '<rootDir>/__tests__/**/*.{js,jsx,ts,tsx}',
-    '<rootDir>/__tests__/simple.test.js',
-    '<rootDir>/__tests__/basic.smoke.test.js',
+    '**/__tests__/**/*.[jt]s?(x)',
+    '**/?(*.)+(spec|test).[jt]s?(x)',
   ],
   collectCoverageFrom: [
+    'app/**/*.{js,jsx,ts,tsx}',
     'src/**/*.{js,jsx,ts,tsx}',
-    '!src/**/*.d.ts',
-    '!src/vite-env.d.ts',
-    '!src/main.tsx',
-    '!src/utils/improvementRunner.ts',
-    '!src/pages/blog-disabled/**/*',
+    '!**/*.d.ts',
+    '!**/node_modules/**',
+    '!**/.next/**',
+    '!**/coverage/**',
+    '!**/dist/**',
   ],
-  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json'],
-  testTimeout: 10000,
+  coverageThreshold: {
+    global: {
+      branches: 70,
+      functions: 70,
+      lines: 70,
+      statements: 70,
+    },
+  },
   testPathIgnorePatterns: [
-    '/node_modules/',
-    '/automation/',
-    '/backup-problematic-files/',
-    '/_app_disabled/',
-    '/_conflicted_disabled/',
-    '/_pages_api_disabled/',
-    '/_pages_disabled/',
-    '/admin-api-disabled/',
-    '/api-disabled/',
-    '/api.disabled/',
-    '/api.disabled.temp/',
-    '/api-backup/',
-    '/apps.backup/',
-    '/automation_backup/',
-    '/ai-optimization-backups/',
-    '/automation_logs/',
-    '/all-automations-reports/',
-    '/accessibility-reports/',
-    '/corrupted-files-backup/',
-    '/corrupted_backup/',
-    '/corrupted_files_backup_2/',
-    '/content/',
-    '/contracts/',
-    '/components_backup/',
-    '/data/',
-    '/data_backup/',
-    '/dao/',
-    '/deployments/',
-    '/disabled-api/',
-    '/e2e/',
-    '/factories/',
-    '/hooks/',
-    '/lib_backup/',
-    '/services/',
-    '/middleware/',
-    '/__tests__/auth/',
-    '/__tests__/server/',
-    '/__tests__/pages/',
-    '/__tests__/disabled/',
-    '/src/pages/blog-disabled/',
+    '<rootDir>/node_modules/',
+    '<rootDir>/.next/',
+    '<rootDir>/out/',
+    '<rootDir>/dist/',
   ],
-  modulePathIgnorePatterns: [
-    '/automation/',
-    '/backup-problematic-files/',
-    '/automation_backup/',
-    '/ai-optimization-backups/',
-    '/automation/backups/',
-  ],
-  watchPathIgnorePatterns: [
-    '/node_modules/',
-    '/automation/',
-    '/backup-problematic-files/',
+  transformIgnorePatterns: [
+    '/node_modules/(?!(lucide-react|@heroicons/react)/)',
   ],
 };
+
+// createJestConfig is exported this way to ensure that next/jest can load the Next.js config which is async
+module.exports = createJestConfig(customJestConfig);
