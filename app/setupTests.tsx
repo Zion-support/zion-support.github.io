@@ -5,9 +5,13 @@
 import '@testing-library/jest-dom';
 
 // Suppress jsdom navigation warnings
+// eslint-disable-next-line no-console
 const originalConsoleError = console.error;
+// eslint-disable-next-line no-console
 console.error = (...args) => {
-  if (args[0]?.includes?.('Not implemented: navigation')) {
+  const message = args[0]?.toString?.() || args[0]?.message || '';
+  if (message.includes('Not implemented: navigation') || 
+      message.includes('navigation (except hash changes)')) {
     return;
   }
   originalConsoleError(...args);
@@ -111,14 +115,29 @@ global.URL = URL;
 
 // Mock PerformanceObserver
 global.PerformanceObserver = class MockPerformanceObserver {
+  static readonly supportedEntryTypes: readonly string[] = ['navigation', 'paint', 'largest-contentful-paint', 'first-input', 'layout-shift'];
+  
   constructor(public callback: PerformanceObserverCallback) {}
   observe() {}
   disconnect() {}
   takeRecords() {
     return [];
   }
-  static readonly supportedEntryTypes: readonly string[] = ['navigation', 'paint', 'largest-contentful-paint', 'first-input', 'layout-shift'];
 };
 
-// Note: JSDOM location navigation is not fully supported
-// Tests that need location mocking should handle it individually
+// Mock window.location
+delete (window as unknown as Record<string, unknown>).location;
+(window as unknown as Record<string, unknown>).location = {
+  href: 'http://localhost:3000',
+  origin: 'http://localhost:3000',
+  protocol: 'http:',
+  host: 'localhost:3000',
+  hostname: 'localhost',
+  port: '3000',
+  pathname: '/',
+  search: '',
+  hash: '',
+  reload: jest.fn(),
+  assign: jest.fn(),
+  replace: jest.fn(),
+};
