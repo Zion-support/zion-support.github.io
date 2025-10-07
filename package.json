@@ -12,7 +12,7 @@
     "build:analyze": "ANALYZE=true next build",
     "preview": "next start",
     "lint": "eslint src/ --ext .ts,.tsx,.js,.jsx --ignore-pattern 'src/components/**' --ignore-pattern 'src/pages/**' --ignore-pattern 'src/content/**' --ignore-pattern 'src/data/**' --ignore-pattern 'src/hooks/**' --ignore-pattern 'src/types/**' --ignore-pattern 'src/utils/**' --ignore-pattern 'src/config/**' --max-warnings 0",
-    "lint:fix": "eslint . --config eslint.config.cjs --fix",
+    "lint:fix": "eslint . --config eslint.config.js --fix",
     "type-check": "tsc --noEmit",
     "type-check:ci": "tsc --noEmit -p tsconfig.ci.json",
     "test": "jest --passWithNoTests",
