@@ -129,6 +129,7 @@ export function monitorMemoryUsage(): void {
 
       // Log memory usage in development
       if (process.env.NODE_ENV === 'development') {
+        // eslint-disable-next-line no-console
         console.log('Memory Usage:', memoryUsage);
       }
 
@@ -161,6 +162,7 @@ export function monitorNetworkConnection(): void {
 
       // Log network info in development
       if (process.env.NODE_ENV === 'development') {
+        // eslint-disable-next-line no-console
         console.log('Network Connection:', networkInfo);
       }
 
@@ -178,7 +180,7 @@ export function monitorNetworkConnection(): void {
 // Initialize performance monitoring
 export function initializePerformanceMonitoring(): void {
   // Collect initial metrics
-  const report = collectPerformanceMetrics();
+  collectPerformanceMetrics();
   
   // Monitor memory usage
   monitorMemoryUsage();

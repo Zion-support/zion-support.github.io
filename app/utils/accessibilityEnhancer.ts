@@ -173,6 +173,10 @@ export const initializeAccessibilityEnhancements = () => {
   // Validate accessibility
   const issues = validateAccessibility();
   if (issues.length > 0) {
-    console.warn('Accessibility issues found:', issues);
+    // Log accessibility issues in development only
+    if (process.env.NODE_ENV === 'development') {
+      // eslint-disable-next-line no-console
+      console.warn('Accessibility issues found:', issues);
+    }
   }
 };
