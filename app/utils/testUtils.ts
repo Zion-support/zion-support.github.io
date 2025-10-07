@@ -3,7 +3,7 @@
  * Provides helper functions for testing React components and utilities
  */
 
-import { ReactElement } from 'react';
+import React, { ReactElement } from 'react';
 
 /**
  * Mock localStorage for testing
@@ -217,8 +217,8 @@ export const generateTestData = {
  */
 export function createTestWrapper(providers: Array<React.ComponentType<{ children: React.ReactNode }>>): React.ComponentType<{ children: React.ReactNode }> {
   return ({ children }) => {
-    return providers.reduceRight(
-      (acc, Provider) => <Provider>{acc}</Provider>,
+    return providers.reduceRight<ReactElement>(
+      (acc, Provider) => React.createElement(Provider, null, acc),
       children as ReactElement
     );
   };
