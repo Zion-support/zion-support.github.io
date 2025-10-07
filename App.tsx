@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useMemo, useCallback, useEffect } from 'react';
 import { createRoot } from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
@@ -7,13 +7,60 @@ import { performanceEnhancer } from './app/utils/performanceEnhancer';
 import ErrorBoundary from './app/components/ErrorBoundary';
 import PerformanceMonitor from './app/components/PerformanceMonitor';
 
-export default function App() {
+// App component
+const App = () => {
+  // Structured data for SEO
+  const structuredData = useMemo(
+    () => ({
+      '@context': 'https://schema.org',
+      '@type': 'Organization',
+      name: 'Zion Tech Group',
+      description:
+        'Leading provider of AI-powered enterprise solutions and digital transformation services',
+      url: 'https://ziontechgroup.com',
+      logo: 'https://ziontechgroup.com/logo.png',
+      contactPoint: {
+        '@type': 'ContactPoint',
+        telephone: '+1-302-464-0950',
+        contactType: 'customer service',
+        email: 'kleber@ziontechgroup.com',
+      },
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: '364 E Main St STE 1008',
+        addressLocality: 'Middletown',
+        addressRegion: 'DE',
+        postalCode: '19709',
+        addressCountry: 'US',
+      },
+      sameAs: [
+        'https://linkedin.com/company/zion-tech-group',
+        'https://twitter.com/ziontechgroup',
+      ],
+      offers: {
+        '@type': 'Offer',
+        name: 'AI Enterprise Transformation Services',
+        description:
+          'Transform your enterprise with AI-powered solutions achieving 300% ROI, 70% cost reduction, and 90% efficiency gains',
+        price: '50000',
+        priceCurrency: 'USD',
+        availability: 'https://schema.org/InStock',
+      },
+    }),
+    []
+  );
 
   // Performance optimization: Preload critical resources
-  React.useEffect(() => {
+  useEffect(() => {
     if (typeof document !== 'undefined') {
       // Initialize performance monitoring
       performanceEnhancer.startMonitoring();
+      
+      // Add structured data to head
+      const script = document.createElement('script');
+      script.type = 'application/ld+json';
+      script.textContent = JSON.stringify(structuredData);
+      document.head.appendChild(script);
       
       // Preload critical fonts
       const fontLink = document.createElement('link');
@@ -69,6 +116,16 @@ export default function App() {
     return () => {
       performanceEnhancer.stopMonitoring();
     };
+  }, [structuredData]);
+
+  // Analytics tracking for phone clicks
+  const handlePhoneClick = useCallback(() => {
+    if (typeof window !== 'undefined' && (window as unknown as { gtag?: Function }).gtag) {
+      ((window as unknown as { gtag: Function }).gtag)('event', 'phone_click', {
+        event_category: 'engagement',
+        event_label: 'main_phone_number'
+      });
+    }
   }, []);
 
   return (
@@ -81,10 +138,12 @@ export default function App() {
       </HelmetProvider>
     </ErrorBoundary>
   );
-}
+};
 
 const container = document.getElementById('root');
 if (container) {
   const root = createRoot(container);
   root.render(<App />);
 }
+
+export default App;

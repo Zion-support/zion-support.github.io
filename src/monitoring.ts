@@ -9,7 +9,6 @@ if (typeof window !== 'undefined') {
   analytics.trackPageView(window.location.pathname);
 
   // Initialize performance optimizer
-  performanceOptimizer.lazyLoadImages();
 
   // Monitor long tasks
   performanceOptimizer.monitorLongTasks((entries: PerformanceEntry[]) => {
@@ -28,6 +27,7 @@ if (typeof window !== 'undefined') {
   measurePageLoad().then((metrics: { fcp?: number; lcp?: number; fid?: number; cls?: number; ttfb?: number }) => {
     reportWebVitals(metrics);
   });
+  
   // Monitor long tasks (if available)
   if ('monitorLongTasks' in performanceOptimizer) {
     (performanceOptimizer as { monitorLongTasks: (callback: (entries: PerformanceEntryList) => void) => void }).monitorLongTasks((entries: PerformanceEntryList) => {

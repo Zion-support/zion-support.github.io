@@ -11,7 +11,7 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   size = 'md',
   className = '',
   color = 'blue',
-  text,
+  text
 }) => {
   const sizeClasses = {
     sm: 'h-4 w-4',

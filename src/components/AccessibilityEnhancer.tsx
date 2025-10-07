@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 
 interface AccessibilityEnhancerProps {
   children: React.ReactNode;
@@ -7,8 +7,46 @@ interface AccessibilityEnhancerProps {
 const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   children,
 }) => {
+  const [isHighContrast, setIsHighContrast] = useState(false);
+  const [fontSize, setFontSize] = useState<'small' | 'normal' | 'large'>('normal');
+  const [reducedMotion, setReducedMotion] = useState(false);
+
+  const applyAccessibilityStyles = (highContrast: boolean, fontSize: 'small' | 'normal' | 'large', reducedMotion: boolean) => {
+    const root = document.documentElement;
+    
+    // Apply high contrast
+    if (highContrast) {
+      root.classList.add('high-contrast');
+    } else {
+      root.classList.remove('high-contrast');
+    }
+
+    // Apply font size
+    root.classList.remove('font-small', 'font-normal', 'font-large');
+    root.classList.add(`font-${fontSize}`);
+
+    // Apply reduced motion
+    if (reducedMotion) {
+      root.classList.add('reduced-motion');
+    } else {
+      root.classList.remove('reduced-motion');
+    }
+  };
+
+  const toggleHighContrast = () => {
+    const newValue = !isHighContrast;
+    setIsHighContrast(newValue);
+    localStorage.setItem('highContrast', newValue.toString());
+    applyAccessibilityStyles(newValue, fontSize, reducedMotion);
+  };
+
+  const changeFontSize = (size: 'small' | 'normal' | 'large') => {
+    setFontSize(size);
+    localStorage.setItem('fontSize', size);
+    applyAccessibilityStyles(isHighContrast, size, reducedMotion);
+  };
+
   useEffect(() => {
-    // Add skip links
     // Check for user's motion preferences
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     setReducedMotion(prefersReducedMotion);
@@ -101,6 +139,24 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
           clip: auto;
           white-space: normal;
         }
+
+        .font-small {
+          font-size: 0.875rem;
+        }
+
+        .font-normal {
+          font-size: 1rem;
+        }
+
+        .font-large {
+          font-size: 1.125rem;
+        }
+
+        .reduced-motion * {
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.01ms !important;
+        }
       `;
       document.head.appendChild(style);
     };
@@ -160,62 +216,11 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
 
     // Announce after a short delay to ensure content is loaded
     const timeoutId = setTimeout(announcePageChange, 1000);
-      .font-normal {
-        font-size: 1rem;
-      }
-
-      .font-large {
-        font-size: 1.125rem;
-      }
-
-      .reduced-motion * {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-      }
-    `;
-    document.head.appendChild(style);
 
     return () => {
       clearTimeout(timeoutId);
     };
   }, []);
-
-  return <>{children}</>;
-  const applyAccessibilityStyles = (highContrast: boolean, fontSize: 'small' | 'normal' | 'large', reducedMotion: boolean) => {
-    const root = document.documentElement;
-    
-    // Apply high contrast
-    if (highContrast) {
-      root.classList.add('high-contrast');
-    } else {
-      root.classList.remove('high-contrast');
-    }
-
-    // Apply font size
-    root.classList.remove('font-small', 'font-normal', 'font-large');
-    root.classList.add(`font-${fontSize}`);
-
-    // Apply reduced motion
-    if (reducedMotion) {
-      root.classList.add('reduced-motion');
-    } else {
-      root.classList.remove('reduced-motion');
-    }
-  };
-
-  const toggleHighContrast = () => {
-    const newValue = !isHighContrast;
-    setIsHighContrast(newValue);
-    localStorage.setItem('highContrast', newValue.toString());
-    applyAccessibilityStyles(newValue, fontSize, reducedMotion);
-  };
-
-  const changeFontSize = (size: 'small' | 'normal' | 'large') => {
-    setFontSize(size);
-    localStorage.setItem('fontSize', size);
-    applyAccessibilityStyles(isHighContrast, size, reducedMotion);
-  };
 
   return (
     <>
