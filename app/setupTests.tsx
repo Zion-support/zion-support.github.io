@@ -4,19 +4,6 @@
 
 import '@testing-library/jest-dom';
 
-// Suppress jsdom navigation warnings
-// eslint-disable-next-line no-console
-const originalConsoleError = console.error;
-// eslint-disable-next-line no-console
-console.error = (...args) => {
-  const message = args[0]?.toString?.() || args[0]?.message || '';
-  if (message.includes('Not implemented: navigation') || 
-      message.includes('navigation (except hash changes)')) {
-    return;
-  }
-  originalConsoleError(...args);
-};
-
 // Mock window.matchMedia
 Object.defineProperty(window, 'matchMedia', {
   writable: true,
@@ -106,9 +93,7 @@ Object.defineProperty(window, 'sessionStorage', {
 
 // Mock TextEncoder and TextDecoder for Node.js environment
 if (typeof TextEncoder === 'undefined') {
-  // eslint-disable-next-line @typescript-eslint/no-require-imports
   global.TextEncoder = require('util').TextEncoder;
-  // eslint-disable-next-line @typescript-eslint/no-require-imports
   global.TextDecoder = require('util').TextDecoder;
 }
 
@@ -117,19 +102,18 @@ global.URL = URL;
 
 // Mock PerformanceObserver
 global.PerformanceObserver = class MockPerformanceObserver {
-  static readonly supportedEntryTypes: readonly string[] = ['navigation', 'paint', 'largest-contentful-paint', 'first-input', 'layout-shift'];
-  
   constructor(public callback: PerformanceObserverCallback) {}
   observe() {}
   disconnect() {}
   takeRecords() {
     return [];
   }
+  static readonly supportedEntryTypes: readonly string[] = ['paint', 'largest-contentful-paint', 'first-input', 'layout-shift', 'navigation'];
 };
 
 // Mock window.location
-delete (window as unknown as Record<string, unknown>).location;
-(window as unknown as Record<string, unknown>).location = {
+delete (window as { location?: unknown }).location;
+(window as { location: Location }).location = {
   href: 'http://localhost:3000',
   origin: 'http://localhost:3000',
   protocol: 'http:',
@@ -139,7 +123,8 @@ delete (window as unknown as Record<string, unknown>).location;
   pathname: '/',
   search: '',
   hash: '',
-  reload: jest.fn(),
   assign: jest.fn(),
   replace: jest.fn(),
+  ancestorOrigins: {} as DOMStringList,
+  reload: jest.fn(),
 };

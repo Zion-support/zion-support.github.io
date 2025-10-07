@@ -1,10 +1,12 @@
+'use client';
+
 /**
  * System Monitor Component
  * Real-time monitoring dashboard for performance, errors, and system health
  */
 
 import React, { useState, useEffect, useCallback } from 'react';
-import { collectPerformanceMetrics } from '../utils/performanceEnhancer';
+import { collectPerformanceMetrics } from '../utils/performanceOptimizer';
 import { errorHandler } from '../utils/enhancedErrorHandler';
 
 // Helper functions
@@ -15,17 +17,29 @@ const calculatePerformanceScore = () => {
   let score = 100;
   
   // Deduct points for slow load times
-  if (metrics.navigation.totalTime > 3000) score -= 20;
-  if (metrics.navigation.totalTime > 5000) score -= 30;
+  if (metrics.loadTime > 3000) score -= 20;
+  if (metrics.loadTime > 5000) score -= 30;
   
   // Deduct points for slow paint times
-  if (metrics.paint.firstContentfulPaint > 2000) score -= 15;
-  if (metrics.paint.firstContentfulPaint > 3000) score -= 25;
+  if (metrics.firstContentfulPaint > 2000) score -= 15;
+  if (metrics.firstContentfulPaint > 3000) score -= 25;
   
   return Math.max(0, score);
 };
 
-// Removed unused functions getMemoryInfo and getNetworkInfo
+// Network connection interface
+interface NetworkConnection {
+  effectiveType?: string;
+  downlink?: number;
+  rtt?: number;
+  saveData?: boolean;
+}
+
+interface NavigatorWithConnection extends Navigator {
+  connection?: NetworkConnection;
+  mozConnection?: NetworkConnection;
+  webkitConnection?: NetworkConnection;
+}
 
 interface SystemMetrics {
   performance: {
@@ -93,11 +107,15 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
       // Get network info
       const networkInfo = getNetworkInfo();
 
+      // Calculate performance score
+      const performanceMetrics = collectPerformanceMetrics();
+      const performanceScore = calculatePerformanceScore();
+
       const newMetrics: SystemMetrics = {
         performance: {
           score: performanceScore,
-          loadTime: performanceMetrics?.navigation?.totalTime || 0,
-          firstContentfulPaint: performanceMetrics?.paint?.firstContentfulPaint || 0,
+          loadTime: performanceMetrics?.loadTime || loadTime,
+          firstContentfulPaint: performanceMetrics?.firstContentfulPaint || 0,
           largestContentfulPaint: 0, // Not available in current metrics
           firstInputDelay: 0, // Not available in current metrics
           cumulativeLayoutShift: 0, // Not available in current metrics
@@ -122,7 +140,7 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
       setMetrics(newMetrics);
       setLastUpdate(new Date());
     } catch (error) {
-      // eslint-disable-next-line no-console
+       
 console.error('Failed to update metrics:', error);
     }
   }, []);
@@ -169,11 +187,12 @@ console.error('Failed to update metrics:', error);
   // Get network information
   const getNetworkInfo = () => {
     if ('connection' in navigator) {
-      const connection = (navigator as Navigator & { connection: { effectiveType?: string; downlink?: number; rtt?: number; saveData?: boolean } }).connection;
+      const nav = navigator as NavigatorWithConnection;
+      const connection = nav.connection;
       return {
-        effectiveType: connection.effectiveType || 'unknown',
-        downlink: connection.downlink || 0,
-        rtt: connection.rtt || 0,
+        effectiveType: connection?.effectiveType || 'unknown',
+        downlink: connection?.downlink || 0,
+        rtt: connection?.rtt || 0,
         saveData: connection.saveData || false,
       };
     }

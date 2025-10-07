@@ -117,11 +117,7 @@ class Analytics {
   /**
    * Track performance metrics
    */
-  trackPerformance(
-    metric: string,
-    value: number,
-    unit: string = 'ms'
-  ): void {
+  trackPerformance(metric: string, value: number, unit: string = 'ms'): void {
     this.track('performance', 'metrics', metric, unit, value);
   }
 
@@ -139,7 +135,7 @@ class Analytics {
   /**
    * Send event to analytics service
    */
-  private async sendToAnalytics(): Promise<void> {
+  private async sendToAnalytics(_event: AnalyticsEvent): Promise<void> {
     try {
       // In a real application, you would send to services like Google Analytics, Mixpanel, etc.
       // Analytics event sent successfully

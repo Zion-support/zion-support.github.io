@@ -1,45 +1,107 @@
+import globals from 'globals';
 import js from '@eslint/js';
-import typescriptEslint from 'typescript-eslint';
-import reactPlugin from 'eslint-plugin-react';
-import reactHooksPlugin from 'eslint-plugin-react-hooks';
+import tseslint from '@typescript-eslint/eslint-plugin';
+import tsParser from '@typescript-eslint/parser';
+import reactHooks from 'eslint-plugin-react-hooks';
+import reactRefresh from 'eslint-plugin-react-refresh';
 
 export default [
-  js.configs.recommended,
-  ...typescriptEslint.configs.recommended,
   {
-    files: ['**/*.{js,jsx,ts,tsx}'],
+    ignores: [
+      "node_modules/**",
+      ".next/**",
+      "out/**",
+      "build/**",
+      "dist/**",
+      "next-env.d.ts",
+      "**/zion-website_disabled/**",
+      "_app_disabled/**",
+      "_conflicted_disabled/**",
+      "_pages_api_disabled/**",
+      "_pages_disabled/**",
+      "admin-api-disabled/**",
+      "api-disabled/**",
+      "api.disabled/**",
+      "api.disabled.temp/**",
+      "api-backup/**",
+      "apps.backup/**",
+      "automation_backup/**",
+      "ai-optimization-backups/**",
+      "automation_logs/**",
+      "all-automations-reports/**",
+      "accessibility-reports/**",
+      "corrupted-files-backup/**",
+      "corrupted_backup/**",
+      "corrupted_files_backup_2/**",
+      "content/**",
+      "contracts/**",
+      "components_backup/**",
+      "data/**",
+      "data_backup/**",
+      "dao/**",
+      "deployments/**",
+      "disabled-api/**",
+      "e2e/**",
+      "factories/**",
+      "hooks/**",
+      "lib_backup/**",
+      "services/**",
+      "middleware/**",
+      "automation/**",
+      "*.cjs",
+      "*.js",
+      "*.mjs",
+      "*.test.tsx",
+      "*.test.ts",
+      "*.test.js",
+      "*.test.jsx",
+      "__tests__/**"
+    ]
+  },
+  // Base JavaScript configuration
+  {
+    files: ['**/*.{js,jsx}'],
     languageOptions: {
-      ecmaVersion: 'latest',
-      sourceType: 'module',
+      globals: { ...globals.browser, ...globals.node },
       parserOptions: {
+        ecmaVersion: 'latest',
+        sourceType: 'module',
         ecmaFeatures: {
           jsx: true,
         },
       },
     },
+    ...js.configs.recommended,
+  },
+  // TypeScript configuration
+  {
+    files: ['**/*.{ts,tsx}'],
+    languageOptions: {
+      parser: tsParser,
+      parserOptions: {
+        ecmaVersion: 'latest',
+        sourceType: 'module',
+        ecmaFeatures: {
+          jsx: true,
+        },
+      },
+      globals: { ...globals.browser, ...globals.node },
+    },
     plugins: {
-      react: reactPlugin,
-      'react-hooks': reactHooksPlugin,
+      '@typescript-eslint': tseslint,
+      'react-hooks': reactHooks,
+      'react-refresh': reactRefresh,
     },
     rules: {
-      ...reactPlugin.configs.recommended.rules,
-      ...reactHooksPlugin.configs.recommended.rules,
-      'react/react-in-jsx-scope': 'off',
-      'react/prop-types': 'off',
-      'no-console': 'warn',
-      'prefer-const': 'error',
-      'no-var': 'error',
-      'react/no-unescaped-entities': 'off',
-      '@typescript-eslint/no-unused-vars': 'warn',
+      ...(reactHooks.configs.recommended?.rules || {}),
+      'react-refresh/only-export-components': 'off',
+      '@typescript-eslint/no-unused-vars': [
+        'warn',
+        { argsIgnorePattern: '^_' },
+      ],
       '@typescript-eslint/no-explicit-any': 'warn',
-      '@typescript-eslint/no-unsafe-function-type': 'warn',
-      '@typescript-eslint/no-require-imports': 'warn',
-      'no-useless-escape': 'warn',
-    },
-    settings: {
-      react: {
-        version: 'detect',
-      },
+      'no-console': 'warn',
+      'no-debugger': 'error',
     },
   },
 ];

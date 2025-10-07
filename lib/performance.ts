@@ -131,6 +131,7 @@ export function initPerformanceMonitoring(): void {
     onLCP(sendToAnalytics);
     onTTFB(sendToAnalytics);
   } catch (error) {
+     
     // eslint-disable-next-line no-console
     console.error('Error initializing performance monitoring:', error);
   }
@@ -159,6 +160,7 @@ export function measurePerformance(name: string, startTime: number): number {
   }
 
   if (process.env.NODE_ENV === 'development') {
+     
     // eslint-disable-next-line no-console
     console.log(`Performance: ${name} took ${duration.toFixed(2)}ms`);
   }
@@ -175,6 +177,7 @@ export function markPerformance(name: string): void {
   try {
     performance.mark(name);
   } catch (error) {
+     
     // eslint-disable-next-line no-console
     console.error('Error marking performance:', error);
   }
@@ -195,6 +198,7 @@ export function measureBetween(
     const measure = performance.getEntriesByName(name)[0] as PerformanceEntry;
     return measure.duration;
   } catch (error) {
+     
     // eslint-disable-next-line no-console
     console.error('Error measuring between marks:', error);
     return 0;
@@ -302,6 +306,7 @@ export function monitorLongTasks(
     observer.observe({ entryTypes: ['longtask'] });
     return observer;
   } catch (error) {
+     
     // eslint-disable-next-line no-console
     console.error('Error monitoring long tasks:', error);
     return null;
@@ -324,6 +329,7 @@ export function monitorLayoutShifts(
     observer.observe({ entryTypes: ['layout-shift'] });
     return observer;
   } catch (error) {
+     
     // eslint-disable-next-line no-console
     console.error('Error monitoring layout shifts:', error);
     return null;

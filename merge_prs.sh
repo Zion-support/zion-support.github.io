@@ -1,65 +1,64 @@
 #!/bin/bash
 
 # Script to merge all open PRs into main branch
-set -e
-
 echo "Starting PR merge process..."
 
-# Ensure we're on main branch
-git checkout main
+# Get list of open PRs
+echo "Fetching open PRs..."
+curl -s "https://api.github.com/repos/Zion-Holdings/zion.app/pulls?state=open&per_page=100" > prs.json
 
-# Update main branch
-git pull origin main
+# Extract PR numbers and branch names
+echo "Processing PRs..."
+jq -r '.[] | "\(.number) \(.head.ref)"' prs.json > pr_list.txt
 
-# List of PR branches to merge
-PR_BRANCHES=(
-    "origin/cursor/fix-web-application-console-errors-0bf5"
-    "origin/cursor/build-and-deploy-with-vite-and-netlify-8b37"
-    "origin/cursor/fix-errors-and-merge-to-main-fcbd"
-    "origin/cursor/fix-errors-and-merge-to-main-e6e1"
-)
-
-# Merge each PR branch
-for branch in "${PR_BRANCHES[@]}"; do
-    echo "Attempting to merge $branch..."
+# Process each PR
+while IFS=' ' read -r pr_number branch_name; do
+    echo "Processing PR #$pr_number from branch $branch_name"
     
-    # Check if branch exists
-    if git show-ref --verify --quiet refs/remotes/$branch; then
-        echo "Merging $branch into main..."
-        
-        # Try to merge with strategy
-        if git merge $branch --no-ff -m "Merge $branch into main"; then
-            echo "Successfully merged $branch"
-        else
-            echo "Merge conflict detected for $branch, attempting to resolve..."
-            
-            # Check for conflicts
-            if git status --porcelain | grep -q "^UU\|^AA\|^DD"; then
-                echo "Resolving conflicts for $branch..."
-                
-                # Auto-resolve conflicts by accepting incoming changes for most cases
-                git status --porcelain | grep "^UU\|^AA\|^DD" | while read status file; do
-                    echo "Resolving conflict in $file"
-                    # For now, accept the incoming changes (theirs)
-                    git checkout --theirs "$file" 2>/dev/null || true
-                    git add "$file" 2>/dev/null || true
-                done
-                
-                # Complete the merge
-                git commit --no-edit || git merge --abort
-                echo "Resolved conflicts for $branch"
-            else
-                echo "No conflicts found, completing merge for $branch"
-                git commit --no-edit
-            fi
-        fi
-    else
-        echo "Branch $branch not found, skipping..."
-    fi
-done
+    # Fetch the branch
+    git fetch origin "$branch_name" 2>/dev/null || {
+        echo "Failed to fetch branch $branch_name, skipping PR #$pr_number"
+        continue
+    }
+    
+    # Checkout the branch
+    git checkout -b "pr-$pr_number" "origin/$branch_name" 2>/dev/null || {
+        echo "Failed to checkout branch $branch_name, skipping PR #$pr_number"
+        continue
+    }
+    
+    # Try to merge with main
+    echo "Attempting to merge PR #$pr_number..."
+    git merge main --no-ff -m "Merge PR #$pr_number: $branch_name" 2>/dev/null || {
+        echo "Merge conflict in PR #$pr_number, attempting to resolve..."
+        # Auto-resolve conflicts by accepting main branch changes
+        git checkout --theirs . 2>/dev/null || true
+        git add . 2>/dev/null || true
+        git commit -m "Resolve merge conflicts for PR #$pr_number" 2>/dev/null || {
+            echo "Failed to resolve conflicts for PR #$pr_number, skipping"
+            git merge --abort 2>/dev/null || true
+            git checkout main
+            git branch -D "pr-$pr_number" 2>/dev/null || true
+            continue
+        }
+    }
+    
+    # Switch back to main and merge
+    git checkout main
+    git merge "pr-$pr_number" --no-ff -m "Merge PR #$pr_number into main"
+    
+    # Clean up
+    git branch -D "pr-$pr_number"
+    
+    echo "Successfully merged PR #$pr_number"
+    
+done < pr_list.txt
+
+# Push all changes
+echo "Pushing changes to main..."
+git push origin main
+
+# Clean up
+rm -f prs.json pr_list.txt
 
 echo "PR merge process completed!"
-
-# Show final status
-git status
-git log --oneline -10

@@ -85,7 +85,23 @@ export const collectPerformanceMetrics = async (): Promise<{
   firstInputDelay: number;
   cumulativeLayoutShift: number;
 }> => {
-  const metrics: Record<string, unknown> = {};
+  const metrics: {
+    loadTime: number;
+    domContentLoaded: number;
+    firstPaint: number;
+    firstContentfulPaint: number;
+    largestContentfulPaint: number;
+    firstInputDelay: number;
+    cumulativeLayoutShift: number;
+  } = {
+    loadTime: 0,
+    domContentLoaded: 0,
+    firstPaint: 0,
+    firstContentfulPaint: 0,
+    largestContentfulPaint: 0,
+    firstInputDelay: 0,
+    cumulativeLayoutShift: 0,
+  };
 
   // Basic timing metrics
   if (typeof window !== 'undefined' && window.performance) {
@@ -149,7 +165,9 @@ export const collectPerformanceMetrics = async (): Promise<{
       });
       clsObserver.observe({ entryTypes: ['layout-shift'] });
     } catch (error) {
-      console.warn('Performance Observer not fully supported:', error);
+      if (process.env.NODE_ENV === 'development') {
+        console.warn('Performance Observer not fully supported:', error);
+      }
     }
   }
 
@@ -171,13 +189,17 @@ export class PerformanceMonitor {
       try {
         const longTaskObserver = new PerformanceObserver(list => {
           for (const entry of list.getEntries()) {
-            console.warn(`Long task detected: ${entry.duration}ms`);
+            if (process.env.NODE_ENV === 'development') {
+              console.warn(`Long task detected: ${entry.duration}ms`);
+            }
           }
         });
         longTaskObserver.observe({ entryTypes: ['longtask'] });
         this.observers.push(longTaskObserver);
       } catch (error) {
-        console.warn('Long task monitoring not supported:', error);
+        if (process.env.NODE_ENV === 'development') {
+          console.warn('Long task monitoring not supported:', error);
+        }
       }
     }
   }
@@ -295,31 +317,7 @@ export const optimizeScrollPerformance = (): void => {
   window.addEventListener('scroll', requestTick, { passive: true });
 };
 
-// Performance monitor
-export const performanceMonitor = {
-  start: () => {
-    if (typeof window === 'undefined') return;
-
-    // Monitor Core Web Vitals
-    if ('PerformanceObserver' in window) {
-      const observer = new PerformanceObserver(list => {
-        list.getEntries().forEach(entry => {
-          console.log(
-            'Performance metric:',
-            entry.name,
-            (entry as PerformanceEntry & { value?: number }).value
-          );
-        });
-      });
-
-      observer.observe({ entryTypes: ['measure', 'navigation', 'paint'] });
-    }
-  },
-
-  stop: () => {
-    // Cleanup if needed
-  },
-};
+// Performance monitor object (using the class instance)
 
 // Collect performance metrics array
 export const collectPerformanceMetricsArray = async (): Promise<
@@ -339,7 +337,7 @@ export const collectPerformanceMetricsArray = async (): Promise<
   // Memory usage
   const memory = getMemoryUsage();
   if (memory) {
-    metrics.push({ name: 'memoryUsage', value: memory.usedJSHeapSize });
+    metrics.push({ name: 'memoryUsage', value: memory.used });
   }
 
   // Resource timing

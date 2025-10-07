@@ -1,15 +1,17 @@
 import React from 'react';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {
+const metadata: Metadata = {
   title: 'Terms of Service - Zion Tech Group',
-  description: 'Terms of service and usage agreement for Zion Tech Group services and website.',
+  description:
+    'Terms of service and usage agreement for Zion Tech Group services and website.',
 };
+
+export { metadata };
 
 const TermsPage: React.FC = () => {
   return (
     <>
-
       <div className='min-h-screen bg-slate-50 py-16'>
         <div className='container mx-auto px-4'>
           <div className='max-w-4xl mx-auto'>

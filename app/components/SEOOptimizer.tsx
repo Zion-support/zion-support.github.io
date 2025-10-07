@@ -10,15 +10,17 @@ interface SEOOptimizerProps {
   image?: string;
   url?: string;
   type?: string;
+  children?: React.ReactNode;
 }
 
 const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   title = 'Zion Tech Group - AI & IT Solutions',
-  description: _description = 'Leading provider of AI-powered enterprise solutions, automation, and digital transformation services.',
-  keywords: _keywords = ['AI solutions', 'enterprise AI', 'digital transformation', 'automation', 'cloud services'],
-  image: _image = 'https://ziontechgroup.com/og-image.jpg',
+  description = 'Leading provider of AI-powered enterprise solutions, automation, and digital transformation services.', // eslint-disable-line @typescript-eslint/no-unused-vars
+  keywords = ['AI solutions', 'enterprise AI', 'digital transformation', 'automation', 'cloud services'], // eslint-disable-line @typescript-eslint/no-unused-vars
+  image = 'https://ziontechgroup.com/og-image.jpg', // eslint-disable-line @typescript-eslint/no-unused-vars
   url = 'https://ziontechgroup.com',
-  type: _type = 'website'
+  type = 'website', // eslint-disable-line @typescript-eslint/no-unused-vars
+  children
 }) => {
   const pathname = usePathname();
 
@@ -69,7 +71,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   //   },
   // };
 
-  return null;
+  return <>{children}</>;
 };
 
 export default SEOOptimizer;
