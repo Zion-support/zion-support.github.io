@@ -4,6 +4,15 @@
 
 import '@testing-library/jest-dom';
 
+// Suppress jsdom navigation warnings
+const originalConsoleError = console.error;
+console.error = (...args) => {
+  if (args[0]?.includes?.('Not implemented: navigation')) {
+    return;
+  }
+  originalConsoleError(...args);
+};
+
 // Mock window.matchMedia
 Object.defineProperty(window, 'matchMedia', {
   writable: true,
@@ -111,14 +120,5 @@ global.PerformanceObserver = class MockPerformanceObserver {
   static readonly supportedEntryTypes: readonly string[] = ['navigation', 'paint', 'largest-contentful-paint', 'first-input', 'layout-shift'];
 };
 
-// Suppress jsdom navigation warnings
-const originalConsoleError = console.error;
-console.error = (...args) => {
-  if (
-    typeof args[0] === 'string' &&
-    args[0].includes('Not implemented: navigation')
-  ) {
-    return;
-  }
-  originalConsoleError.apply(console, args);
-};
+// Note: JSDOM location navigation is not fully supported
+// Tests that need location mocking should handle it individually
