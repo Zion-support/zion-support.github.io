@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
+=======
+import React, { useEffect, useState, memo } from 'react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6fe3
 
 interface PerformanceMetrics {
   loadTime: number;
