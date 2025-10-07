@@ -52,13 +52,8 @@ const App: React.FC = () => {
       }
     }
     
-<<<<<<< HEAD
-    logger.lifecycle('performance monitoring initialized', 'App');
-    logger.info('🚀 Zion Tech Group App initialized with comprehensive monitoring', 'App');
-=======
     console.log('Performance monitoring initialized');
     console.log('🚀 Zion Tech Group App initialized with comprehensive monitoring');
->>>>>>> 66f2409a72d6502f743b9af976ac4e828aac768e
   }, []);
 
   return (
