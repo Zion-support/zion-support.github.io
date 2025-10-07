@@ -1,16 +1,13 @@
 'use client';
 
-<<<<<<< HEAD
 import React, { Suspense, lazy, useCallback, useEffect, ErrorInfo } from 'react';
-=======
-import React, { Suspense, lazy, useEffect } from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-90ff
 import { HelmetProvider } from 'react-helmet-async';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 // Components
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import PerformanceDashboard from './components/PerformanceDashboard';
+import SEOOptimizer from './components/SEOOptimizer';
 
 // Loading component
 const LoadingSpinner = () => (
@@ -25,15 +22,7 @@ const ErrorBoundary = ({ children }: { children: React.ReactNode }) => {
 };
 
 // Utils
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { lazyLoadImages, preloadCriticalResources, collectPerformanceMetrics, performanceOptimizer } from './utils/performanceOptimizer';
-=======
-import { performanceOptimizer } from './utils/performanceOptimizer';
->>>>>>> cursor/fix-errors-and-merge-to-main-d703
-=======
-import { preloadCriticalResources, performanceOptimizer } from './utils/performanceOptimizer';
->>>>>>> cursor/fix-errors-and-merge-to-main-90ff
 import { logger } from './utils/logger';
 
 // Lazy load pages for better performance
@@ -62,12 +51,9 @@ const App: React.FC = () => {
     logger.info('🚀 Zion Tech Group App initialized with comprehensive monitoring', 'App');
   }, []);
 
-<<<<<<< HEAD
   const handleError = useCallback((error: Error, errorInfo: ErrorInfo) => {
     logger.error('Application Error', 'ErrorBoundary', { error: error.message, errorInfo });
   }, []);
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-90ff
 
   return (
     <HelmetProvider>
@@ -113,8 +99,4 @@ const App: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/fix-errors-and-merge-to-main-d703
 export default App;
