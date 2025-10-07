@@ -18,7 +18,7 @@ describe('Performance Tests', () => {
 
   beforeAll(() => {
     // Mock performance API
-    global.performance = {
+    const performanceMock = {
       now: jest.fn(() => Date.now()),
       getEntriesByType: jest.fn(() => []),
       getEntriesByName: jest.fn(() => []),
@@ -28,13 +28,31 @@ describe('Performance Tests', () => {
         usedJSHeapSize: 1024 * 1024 * 10, // 10MB
       },
     };
+    
+    global.performance = performanceMock;
+    Object.defineProperty(window, 'performance', {
+      value: performanceMock,
+      writable: true,
+      configurable: true,
+    });
+
+    // Mock PerformanceObserver
+    global.PerformanceObserver = jest.fn().mockImplementation((callback) => ({
+      observe: jest.fn(),
+      disconnect: jest.fn(),
+      takeRecords: jest.fn(() => []),
+    }));
 
     // Mock window object
     delete window.location;
-    window.location = {
-      href: 'http://localhost:3000',
-      reload: jest.fn(),
-    };
+    Object.defineProperty(window, 'location', {
+      value: {
+        href: 'http://localhost:3000',
+        reload: jest.fn(),
+      },
+      writable: true,
+      configurable: true,
+    });
 
     // Mock navigator
     Object.defineProperty(navigator, 'userAgent', {

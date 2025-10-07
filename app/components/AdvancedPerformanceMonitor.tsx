@@ -33,6 +33,8 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     if (typeof window === 'undefined' || !('performance' in window)) return;
     if (typeof PerformanceObserver === 'undefined') return;
 
+    const observers: PerformanceObserver[] = [];
+
     // Measure First Contentful Paint (FCP)
     const fcpEntries = performance.getEntriesByName('first-contentful-paint') || [];
     const fcp = fcpEntries.length > 0 ? fcpEntries[0].startTime : null;
@@ -46,6 +48,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
           setMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }));
         });
         lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
+        observers.push(lcpObserver);
       } catch (error) {
         console.warn('LCP observer not supported:', error);
       }
@@ -71,6 +74,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
           });
         });
         fidObserver.observe({ entryTypes: ['first-input'] });
+        observers.push(fidObserver);
       } catch (error) {
         console.warn('FID observer not supported:', error);
       }
@@ -97,35 +101,44 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
           });
         });
         clsObserver.observe({ entryTypes: ['layout-shift'] });
+        observers.push(clsObserver);
       } catch (error) {
         console.warn('CLS observer not supported:', error);
       }
     }
 
     // Measure Time to First Byte (TTFB)
-    const navigationEntries = performance.getEntriesByType('navigation') || [];
-    const navigationEntry = navigationEntries[0] as PerformanceNavigationTiming;
-    const ttfb = navigationEntry
-      ? navigationEntry.responseStart - navigationEntry.requestStart
-      : null;
+    try {
+      const navigationEntries = performance.getEntriesByType?.('navigation') || [];
+      const navigationEntry = navigationEntries[0] as PerformanceNavigationTiming;
+      const ttfb = navigationEntry
+        ? navigationEntry.responseStart - navigationEntry.requestStart
+        : null;
 
-    // Measure Memory Usage
-    const memory =
-      (performance as Performance & { memory?: { usedJSHeapSize: number } })
-        .memory?.usedJSHeapSize || null;
+      // Measure Memory Usage
+      const memory =
+        (performance as Performance & { memory?: { usedJSHeapSize: number } })
+          .memory?.usedJSHeapSize || null;
 
-    setMetrics(prev => ({
-      ...prev,
-      fcp,
-      ttfb,
-      memory,
-    }));
+      setMetrics(prev => ({
+        ...prev,
+        fcp,
+        ttfb,
+        memory,
+      }));
+    } catch (error) {
+      console.warn('Performance measurement failed:', error);
+    }
 
     // Cleanup observers
     return () => {
-      lcpObserver.disconnect();
-      fidObserver.disconnect();
-      clsObserver.disconnect();
+      observers.forEach(observer => {
+        try {
+          observer.disconnect();
+        } catch (error) {
+          console.warn('Error disconnecting observer:', error);
+        }
+      });
     };
   }, []);
 
