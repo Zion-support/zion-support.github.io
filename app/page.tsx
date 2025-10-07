@@ -65,8 +65,7 @@ const HomePage: React.FC = () => {
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
         {/* Main Content */}
         <main className="py-16">
@@ -91,10 +90,8 @@ const HomePage: React.FC = () => {
                 <InteractiveContentShowcase2026 />
               </Suspense>
             </section>
-
-        <Suspense fallback={<LoadingFallback height="h-64" />}>
-          <InteractiveContentShowcase2026 />
-        </Suspense>
+          </div>
+        </main>
       </div>
     </>
   );

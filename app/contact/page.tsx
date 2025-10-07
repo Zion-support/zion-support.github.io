@@ -111,29 +111,6 @@ const ContactPage: React.FC = () => {
                     <p>Sunday: Closed</p>
                   </div>
                 </div>
-                className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded-lg font-semibold transition-colors"
-              >
-                Send Message
-              </button>
-            </form>
-          </div>
-          <div className="bg-white p-6 rounded-lg shadow-md">
-            <h3 className="text-xl font-semibold mb-4">Contact Information</h3>
-            <div className="space-y-4">
-              <div>
-                <h4 className="font-medium text-gray-900">Email</h4>
-                <p className="text-gray-600">info@ziontech.com</p>
-              </div>
-              <div>
-                <h4 className="font-medium text-gray-900">Phone</h4>
-                <p className="text-gray-600">(555) 123-4567</p>
-              </div>
-              <div>
-                <h4 className="font-medium text-gray-900">Address</h4>
-                <p className="text-gray-600">
-                  123 Tech Street<br />
-                  Innovation City, IC 12345
-                </p>
               </div>
             </div>
           </div>
@@ -141,6 +118,6 @@ const ContactPage: React.FC = () => {
       </div>
     </>
   );
-  };
+};
 
 export default ContactPage;
