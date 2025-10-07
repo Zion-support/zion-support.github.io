@@ -40,8 +40,9 @@ export const useErrorMonitoring = () => {
     };
 
     // React error boundary handler (if available)
-    const handleReactError = (error: Error, errorInfo: { componentStack?: string }) => {
-      reportError(error, `react_error_boundary: ${errorInfo.componentStack || 'unknown'}`);
+    const handleReactError = (error: Error, errorInfo: unknown) => {
+      const info = errorInfo as { componentStack?: string };
+      reportError(error, `react_error_boundary: ${info.componentStack || 'unknown'}`);
     };
 
     // Add event listeners
@@ -49,7 +50,7 @@ export const useErrorMonitoring = () => {
     window.addEventListener('unhandledrejection', handleUnhandledRejection);
 
     // Expose React error handler globally for error boundaries
-    (window as Window & { __REACT_ERROR_HANDLER__?: (error: Error, errorInfo: { componentStack?: string }) => void }).__REACT_ERROR_HANDLER__ = handleReactError;
+    (window as Window & { __REACT_ERROR_HANDLER__?: (error: Error, errorInfo: unknown) => void }).__REACT_ERROR_HANDLER__ = handleReactError;
 
     // Cleanup
     return () => {
