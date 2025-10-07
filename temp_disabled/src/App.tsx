@@ -328,7 +328,6 @@ class ErrorBoundary extends React.Component<
     console.error('Error caught by boundary:', errorInfo);
   }
 
->>>>>>> main
   override render() {
     if (this.state.hasError) {
       return this.props.fallback || (
@@ -352,12 +351,3 @@ class ErrorBoundary extends React.Component<
 
 export { ErrorBoundary };
 export default App;
-
->>>>>>> main
->>>>>>> main
-export default App;
->>>>>>> main
->>>>>>> main
-=======
-export default App;
->>>>>>> 6c45f99dc7ca17bbf478e03055adf8e9c75097bc

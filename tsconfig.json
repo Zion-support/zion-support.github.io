@@ -121,9 +121,7 @@
     "utils.disabled",
     "zion-website_disabled",
     "blockchain-solutions.tsx",
-    "app/components/NewestContent2025Banner.tsx",
-    "app/components/UltimateBusinessIntelligence2025Banner.tsx",
-    "app/components/UltimateBusinessIntelligenceShowcase2025.tsx",
+    "temp_disabled",
     "zion-website_disabled"
   ]
 }
