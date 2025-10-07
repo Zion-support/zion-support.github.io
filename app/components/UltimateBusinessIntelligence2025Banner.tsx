@@ -1,24 +1,52 @@
-'use client';
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 
 const UltimateBusinessIntelligence2025Banner = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
-  
+
   const content = [
     {
-      id: 'ultimate-business-intelligence-revolution',
-      title: 'AI 2025: The Ultimate Business Intelligence Revolution',
-      description: 'Transform your enterprise with next-generation AI-powered business intelligence that delivers unprecedented insights and competitive advantage.',
-      url: '/blog/ai-2025-ultimate-business-intelligence-revolution-ultimate-breakthrough',
+      id: 'ultimate-business-intelligence-2025',
+      title: 'Ultimate Business Intelligence Revolution 2025',
+      description: 'Transform your enterprise with AI-powered business intelligence achieving 30,000% ROI, 70% cost reduction, and 90% efficiency gains.',
+      url: '/blog/ultimate-business-intelligence-2025',
       type: 'Blog Post',
       metrics: {
-        efficiency: '300%',
-        accuracy: '99.7%',
-        timeline: '6 months',
-        adoption: '95%'
-      }
+        roi: '30,000%',
+        savings: '$750B+',
+        accuracy: '99.99%',
+        speed: '5,000% faster'
+      },
+      tags: ['AI', 'Business Intelligence', 'Enterprise', 'ROI', '2025']
+    },
+    {
+      id: 'ai-dashboard-2025',
+      title: 'Revolutionary AI Dashboard 2025',
+      description: 'Experience the future of data visualization with our cutting-edge AI dashboard featuring real-time analytics and predictive insights.',
+      url: '/services/ai-dashboard',
+      type: 'Service',
+      metrics: {
+        users: '1M+',
+        uptime: '99.9%',
+        response: '<100ms',
+        insights: 'Real-time'
+      },
+      tags: ['Dashboard', 'Analytics', 'Real-time', 'AI', '2025']
+    },
+    {
+      id: 'enterprise-automation-2025',
+      title: 'Enterprise Automation Suite 2025',
+      description: 'Automate your entire business process with our comprehensive automation suite, reducing manual work by 95% and increasing productivity by 300%.',
+      url: '/services/automation',
+      type: 'Service',
+      metrics: {
+        automation: '95%',
+        productivity: '300%',
+        efficiency: '400%',
+        cost: '80% reduction'
+      },
+      tags: ['Automation', 'Enterprise', 'Productivity', 'Efficiency', '2025']
     }
   ];
 
@@ -36,97 +64,92 @@ const UltimateBusinessIntelligence2025Banner = () => {
 
   if (!isVisible) return null;
 
+  const currentContent = content[currentSlide];
+
   return (
     <div className="relative bg-gradient-to-r from-blue-900 via-purple-900 to-indigo-900 text-white overflow-hidden">
-      <div className="absolute inset-0">
-        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-blue-600/20 to-purple-600/20 animate-pulse"></div>
-        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl animate-bounce"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl animate-bounce" style={{ animationDelay: '1s' }}></div>
-      </div>
-
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="flex items-center justify-between">
-          <div className="flex-1">
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
-              <span className="text-green-400 font-semibold text-sm uppercase tracking-wide">
-                New Release
-              </span>
+      <div className="absolute inset-0 bg-black/20"></div>
+      <div className="relative z-10 p-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex items-center justify-between">
+            <div className="flex-1">
+              <div className="flex items-center gap-3 mb-2">
+                <span className="bg-blue-500/20 text-blue-300 px-3 py-1 rounded-full text-sm font-semibold">
+                  {currentContent.type}
+                </span>
+                <span className="text-yellow-400 text-sm font-medium">
+                  NEW 2025
+                </span>
+              </div>
+              
+              <h2 className="text-2xl font-bold mb-2">
+                {currentContent.title}
+              </h2>
+              
+              <p className="text-gray-200 mb-4 max-w-2xl">
+                {currentContent.description}
+              </p>
+              
+              <div className="flex flex-wrap gap-4 mb-4">
+                {Object.entries(currentContent.metrics).map(([key, value]) => (
+                  <div key={key} className="text-center">
+                    <div className="text-2xl font-bold text-cyan-400">{value}</div>
+                    <div className="text-xs text-gray-300 capitalize">
+                      {key.replace(/([A-Z])/g, ' $1').trim()}
+                    </div>
+                  </div>
+                ))}
+              </div>
+              
+              <div className="flex flex-wrap gap-2 mb-4">
+                {currentContent.tags.map((tag) => (
+                  <span
+                    key={tag}
+                    className="bg-white/10 text-white px-2 py-1 rounded text-xs"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+              
+              <div className="flex items-center gap-4">
+                <Link
+                  href={currentContent.url}
+                  className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-2 px-6 rounded-lg transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg"
+                >
+                  Learn More
+                </Link>
+                <button
+                  onClick={() => setCurrentSlide((prev) => (prev + 1) % content.length)}
+                  className="text-gray-300 hover:text-white transition-colors"
+                >
+                  Next →
+                </button>
+              </div>
             </div>
             
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              {content[currentSlide].title}
-            </h2>
-            
-            <p className="text-lg text-gray-200 mb-6 max-w-3xl">
-              {content[currentSlide].description}
-            </p>
-
-            <div className="flex flex-wrap gap-4 mb-6">
-              {Object.entries(content[currentSlide].metrics).map(([key, value]) => (
-                <div key={key} className="bg-white/10 backdrop-blur-sm rounded-lg px-4 py-2">
-                  <div className="text-2xl font-bold text-cyan-400">{value}</div>
-                  <div className="text-sm text-gray-300 capitalize">{key.replace(/([A-Z])/g, ' $1')}</div>
-                </div>
+            <div className="flex items-center gap-2 ml-8">
+              {content.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentSlide(index)}
+                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                    index === currentSlide
+                      ? 'bg-cyan-400 scale-125'
+                      : 'bg-white/30 hover:bg-white/50'
+                  }`}
+                />
               ))}
             </div>
-
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Link
-                href={content[currentSlide].url}
-                className="inline-flex items-center px-6 py-3 bg-white text-blue-600 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-              >
-                Read Full Article
-                <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </Link>
-              
-              <button className="inline-flex items-center px-6 py-3 border border-white/30 text-white rounded-lg font-semibold hover:bg-white/10 transition-colors">
-                Learn More
-              </button>
-            </div>
+            
+            <button
+              onClick={handleClose}
+              className="ml-4 text-gray-300 hover:text-white transition-colors"
+              aria-label="Close banner"
+            >
+              ×
+            </button>
           </div>
-
-          <button
-            onClick={handleClose}
-            className="ml-4 p-2 hover:bg-white/10 rounded-lg transition-colors"
-            aria-label="Close banner"
-          >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-            </svg>
-          </button>
-        </div>
-
-        {content.length > 1 && (
-          <div className="flex justify-center mt-8 space-x-2">
-            {content.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => setCurrentSlide(index)}
-                className={`w-3 h-3 rounded-full transition-colors ${
-                  index === currentSlide ? 'bg-white' : 'bg-white/30'
-                }`}
-                aria-label={`Go to slide ${index + 1}`}
-              />
-            ))}
-          </div>
-        )}
-
-        {/* Stats Section */}
-        <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8">
-          {[
-            { value: '500+', label: 'Enterprise Clients' },
-            { value: '30,000%', label: 'Average ROI' },
-            { value: '99.9%', label: 'Success Rate' },
-            { value: '5M+', label: 'Data Points Processed' },
-          ].map((stat, index) => (
-            <div key={index} className="text-center">
-              <div className="text-3xl font-bold text-cyan-400 mb-2">{stat.value}</div>
-              <div className="text-gray-300">{stat.label}</div>
-            </div>
-          ))}
         </div>
       </div>
     </div>
