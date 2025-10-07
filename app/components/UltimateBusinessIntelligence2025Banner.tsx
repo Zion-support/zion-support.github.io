@@ -3,7 +3,6 @@ import Link from 'next/link';
 
 const UltimateBusinessIntelligence2025Banner = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-<<<<<<< HEAD
   const [isVisible, setIsVisible] = useState(true);
   
   const content = [
@@ -13,21 +12,6 @@ const UltimateBusinessIntelligence2025Banner = () => {
       description: 'Transform your enterprise with next-generation AI-powered business intelligence that delivers unprecedented insights and competitive advantage.',
       url: '/blog/ai-2025-ultimate-business-intelligence-revolution-ultimate-breakthrough',
       type: 'Blog Post',
-=======
-
-  const content = [
-    {
-      id: 1,
-      title: 'AI-Powered Business Intelligence Suite',
-      subtitle: 'Transform Your Data into Strategic Insights',
-      description: 'Revolutionary AI-driven analytics platform that transforms raw data into actionable business intelligence, enabling data-driven decision making at scale.',
-      features: [
-        'Real-time data processing',
-        'Predictive analytics',
-        'Automated reporting',
-        'Custom dashboards'
-      ],
->>>>>>> cursor/fix-errors-and-merge-to-main-ccfd
       metrics: {
         efficiency: '300%',
         accuracy: '99.7%',
@@ -38,63 +22,33 @@ const UltimateBusinessIntelligence2025Banner = () => {
       featured: true
     },
     {
-<<<<<<< HEAD
       id: 'fortune-500-business-intelligence-success',
       title: 'Fortune 500 Ultimate Business Intelligence Success',
       description: 'How a $15.2B manufacturing giant achieved unprecedented business intelligence transformation with AI-powered analytics.',
       url: '/case-studies/fortune-500-ultimate-business-intelligence-30000-roi-success-story',
       type: 'Case Study',
-=======
-      id: 2,
-      title: 'Advanced Machine Learning Pipeline',
-      subtitle: 'Build, Deploy, and Scale ML Models',
-      description: 'End-to-end machine learning platform that simplifies model development, deployment, and monitoring for enterprise applications.',
-      features: [
-        'AutoML capabilities',
-        'Model versioning',
-        'A/B testing',
-        'Performance monitoring'
-      ],
->>>>>>> cursor/fix-errors-and-merge-to-main-ccfd
       metrics: {
-        efficiency: '250%',
-        accuracy: '98.5%',
-        timeline: '12 months',
-        adoption: '87%'
+        roi: '30,000%',
+        costReduction: '70%',
+        timeToInsight: '90%',
+        dataAccuracy: '99.9%'
       },
-      readingTime: '30 min read',
-      featured: false
+      readingTime: '12 min read',
+      featured: true
     },
     {
-<<<<<<< HEAD
-      id: 'business-intelligence-implementation-guide',
-      title: 'AI 2025 Ultimate Business Intelligence Implementation Guide',
-      description: 'Complete roadmap to 30,000% ROI through revolutionary AI-powered business intelligence transformation.',
-      url: '/resources/ai-2025-ultimate-business-intelligence-implementation-guide',
-      type: 'Implementation Guide',
-=======
-      id: 3,
-      title: 'Quantum-Ready Security Framework',
-      subtitle: 'Future-Proof Your Data Protection',
-      description: 'Next-generation security framework designed to protect against quantum computing threats while maintaining current performance standards.',
-      features: [
-        'Quantum-resistant encryption',
-        'Zero-trust architecture',
-        'Real-time threat detection',
-        'Compliance automation'
-      ],
->>>>>>> cursor/fix-errors-and-merge-to-main-ccfd
+      id: 'ai-powered-dashboard-suite',
+      title: 'AI-Powered Dashboard Suite 2025',
+      description: 'Revolutionary dashboard technology that transforms complex data into actionable insights with real-time AI analysis.',
+      url: '/products/ai-dashboard-suite-2025',
+      type: 'Product',
       metrics: {
-        efficiency: '400%',
-        accuracy: '99.9%',
-        timeline: '18 months',
-        adoption: '100%'
+        realTimeProcessing: '99.9%',
+        userSatisfaction: '98%',
+        implementationTime: '2 weeks',
+        costSavings: '60%'
       },
-<<<<<<< HEAD
-      readingTime: '60 min read',
-=======
-      readingTime: '45 min read',
->>>>>>> cursor/fix-errors-and-merge-to-main-ccfd
+      readingTime: '8 min read',
       featured: true
     }
   ];
@@ -103,291 +57,166 @@ const UltimateBusinessIntelligence2025Banner = () => {
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % content.length);
     }, 5000);
+
     return () => clearInterval(interval);
   }, [content.length]);
 
-<<<<<<< HEAD
-  useEffect(() => {
-    const dismissed = localStorage.getItem('ultimate-business-intelligence-2025-banner-dismissed');
-    if (dismissed === 'true') {
-      setIsVisible(false);
-    }
-  }, []);
-
-  const handleDismiss = () => {
-    setIsVisible(false);
-    localStorage.setItem('ultimate-business-intelligence-2025-banner-dismissed', 'true');
-  };
-
   if (!isVisible) return null;
 
-  const currentContent = content[currentSlide];
-
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-ccfd
   return (
-    <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">
-      {/* Animated Background Effects */}
+    <section className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 py-20 overflow-hidden">
+      {/* Background Effects */}
       <div className="absolute inset-0">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl animate-pulse"></div>
-        <div
-          className="absolute top-3/4 right-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-pulse"
-          style={{ animationDelay: '2s' }}
-        ></div>
-        <div
-          className="absolute bottom-1/4 left-1/3 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl animate-pulse"
-          style={{ animationDelay: '1s' }}
-        ></div>
+        <div className="absolute top-20 left-20 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-20 right-20 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-cyan-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '4s' }}></div>
       </div>
 
-<<<<<<< HEAD
-      <div className="relative z-10 container mx-auto px-4 py-16">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
           <div className="flex items-center justify-center gap-3 mb-6">
-            <span className="text-2xl">🚀</span>
-            <span className="text-cyan-400 font-bold text-xl">
-              BREAKING: ULTIMATE BUSINESS INTELLIGENCE REVOLUTION 2025
+            <span className="text-3xl">🚀</span>
+            <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-transparent bg-clip-text text-2xl font-bold">
+              ULTIMATE BREAKTHROUGH: AI Business Intelligence 2025
             </span>
-            <span className="text-2xl">⚡</span>
+            <span className="text-3xl">⚡</span>
           </div>
-          <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-6">
-            {currentContent.title}
-          </h1>
-          <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8">
-            {currentContent.description}
-          </p>
-        </div>
-
-        {/* Main Content Card */}
-        <div className="max-w-6xl mx-auto">
-          <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-8 md:p-12 border border-white/20 shadow-2xl">
-            {/* Content Type Badge */}
-            <div className="flex items-center justify-between mb-8">
-              <div className="flex items-center gap-4">
-                <span className="px-4 py-2 bg-gradient-to-r from-cyan-500/30 to-blue-500/30 text-cyan-200 text-sm font-bold rounded-full border border-cyan-400/50">
-                  {currentContent.type}
-                </span>
-                <span className="text-gray-300 text-sm">⏱️ {currentContent.readingTime}</span>
-              </div>
-              <button
-                onClick={handleDismiss}
-                className="text-gray-400 hover:text-white transition-colors"
-                aria-label="Dismiss banner"
-              >
-                ✕
-              </button>
-            </div>
-
-            {/* Metrics Grid */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8">
-              {Object.entries(currentContent.metrics).map(([key, value]) => (
-                <div key={key} className="text-center">
-                  <div className="text-3xl font-bold text-cyan-400 mb-2">{value}</div>
-                  <div className="text-gray-300 text-sm capitalize">{key.replace(/([A-Z])/g, ' $1')}</div>
-=======
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        {/* Header */}
-        <div className="text-center mb-16">
-          <div className="flex items-center justify-center gap-2 mb-6">
-            <span className="text-2xl">🚀</span>
-            <span className="text-yellow-400 font-bold text-lg">
-              ULTIMATE BUSINESS INTELLIGENCE 2025
+          <h2 className="text-4xl md:text-6xl font-extrabold text-white mb-6">
+            Revolutionary AI-Powered
+            <span className="block bg-gradient-to-r from-blue-400 to-purple-400 text-transparent bg-clip-text">
+              Business Intelligence
             </span>
-            <span className="text-2xl">⚡</span>
-          </div>
-
-          <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-6">
-            Transform Your Business with
-            <span className="block bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-              AI-Powered Intelligence
-            </span>
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
-            Discover the revolutionary suite of business intelligence tools that are
-            reshaping enterprise decision-making in 2025
+          </h2>
+          <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+            Transform your enterprise with cutting-edge AI analytics that deliver 300% efficiency gains, 
+            99.7% accuracy, and unprecedented competitive advantage in just 6 months.
           </p>
         </div>
 
         {/* Content Carousel */}
         <div className="relative">
           <div className="overflow-hidden rounded-2xl">
-            <div
+            <div 
               className="flex transition-transform duration-500 ease-in-out"
               style={{ transform: `translateX(-${currentSlide * 100}%)` }}
             >
               {content.map((item, index) => (
                 <div key={item.id} className="w-full flex-shrink-0">
                   <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 md:p-12 border border-white/20">
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                    <div className="grid md:grid-cols-2 gap-8 items-center">
                       {/* Content */}
                       <div>
                         <div className="flex items-center gap-3 mb-4">
-                          <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
-                          <span className="text-green-400 font-semibold text-sm">
-                            {item.featured ? 'FEATURED' : 'NEW'}
+                          <span className="px-4 py-2 bg-gradient-to-r from-blue-500/20 to-purple-500/20 text-blue-300 text-sm font-semibold rounded-full">
+                            {item.type}
                           </span>
-                          <span className="text-gray-400 text-sm">
-                            {item.readingTime}
-                          </span>
+                          <span className="text-gray-400 text-sm">{item.readingTime}</span>
+                          {item.featured && (
+                            <span className="px-3 py-1 bg-yellow-500/20 text-yellow-300 text-xs font-bold rounded-full">
+                              FEATURED
+                            </span>
+                          )}
                         </div>
-
-                        <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                        
+                        <h3 className="text-3xl md:text-4xl font-bold text-white mb-6 leading-tight">
                           {item.title}
-                        </h2>
-                        <h3 className="text-xl text-cyan-400 mb-6">
-                          {item.subtitle}
                         </h3>
-                        <p className="text-gray-300 mb-8 text-lg">
+                        
+                        <p className="text-lg text-gray-300 mb-8 leading-relaxed">
                           {item.description}
                         </p>
 
-                        {/* Features */}
+                        {/* Metrics */}
                         <div className="grid grid-cols-2 gap-4 mb-8">
-                          {item.features.map((feature, idx) => (
-                            <div key={idx} className="flex items-center gap-2">
-                              <div className="w-2 h-2 bg-cyan-400 rounded-full"></div>
-                              <span className="text-gray-300 text-sm">{feature}</span>
+                          {Object.entries(item.metrics).map(([key, value]) => (
+                            <div key={key} className="text-center">
+                              <div className="text-2xl font-bold text-blue-400">{value}</div>
+                              <div className="text-sm text-gray-400 capitalize">
+                                {key.replace(/([A-Z])/g, ' $1').trim()}
+                              </div>
                             </div>
                           ))}
                         </div>
 
-                        {/* Metrics */}
-                        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-                          <div className="text-center">
-                            <div className="text-2xl font-bold text-cyan-400">
-                              {item.metrics.efficiency}
-                            </div>
-                            <div className="text-gray-400 text-sm">Efficiency</div>
-                          </div>
-                          <div className="text-center">
-                            <div className="text-2xl font-bold text-green-400">
-                              {item.metrics.accuracy}
-                            </div>
-                            <div className="text-gray-400 text-sm">Accuracy</div>
-                          </div>
-                          <div className="text-center">
-                            <div className="text-2xl font-bold text-purple-400">
-                              {item.metrics.timeline}
-                            </div>
-                            <div className="text-gray-400 text-sm">Timeline</div>
-                          </div>
-                          <div className="text-center">
-                            <div className="text-2xl font-bold text-yellow-400">
-                              {item.metrics.adoption}
-                            </div>
-                            <div className="text-gray-400 text-sm">Adoption</div>
-                          </div>
-                        </div>
-
                         <Link
-                          href={`/guides/business-intelligence-${item.id}`}
-                          className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-700 hover:to-purple-700 transition-all duration-300"
+                          href={item.url}
+                          className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
                         >
-                          Learn More
+                          Explore {item.type}
                           <span className="text-lg">→</span>
                         </Link>
                       </div>
 
-                      {/* Visual */}
+                      {/* Visual Element */}
                       <div className="relative">
-                        <div className="bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-2xl p-8 border border-white/20">
+                        <div className="bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-2xl p-8 h-80 flex items-center justify-center">
                           <div className="text-center">
-                            <div className="text-6xl mb-4">📊</div>
-                            <h4 className="text-xl font-bold text-white mb-2">
-                              Interactive Dashboard
-                            </h4>
-                            <p className="text-gray-300 text-sm">
-                              Real-time analytics and insights
-                            </p>
+                            <div className="w-32 h-32 bg-gradient-to-br from-blue-400 to-purple-400 rounded-full flex items-center justify-center mx-auto mb-4">
+                              <span className="text-4xl">📊</span>
+                            </div>
+                            <h4 className="text-xl font-bold text-white mb-2">AI Analytics</h4>
+                            <p className="text-gray-300">Real-time insights powered by advanced machine learning</p>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-ccfd
                 </div>
               ))}
             </div>
-
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-              <Link
-                href={currentContent.url}
-                className="flex items-center gap-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl hover:shadow-cyan-500/25"
-              >
-                <span className="text-xl">📖</span>
-                <span>Read {currentContent.type}</span>
-                <span className="group-hover:translate-x-1 transition-transform">→</span>
-              </Link>
-              <a
-                href="tel:+13024640950"
-                className="flex items-center gap-3 border-2 border-white/30 hover:border-white/60 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 hover:bg-white/10"
-              >
-                <span className="text-xl">📞</span>
-                <span>Call +1 302 464 0950</span>
-              </a>
-            </div>
           </div>
 
-<<<<<<< HEAD
-          {/* Slide Indicators */}
-          <div className="flex justify-center mt-8 space-x-2">
-=======
           {/* Navigation Dots */}
-          <div className="flex justify-center gap-2 mt-8">
->>>>>>> cursor/fix-errors-and-merge-to-main-ccfd
+          <div className="flex justify-center mt-8 space-x-2">
             {content.map((_, index) => (
               <button
                 key={index}
                 onClick={() => setCurrentSlide(index)}
                 className={`w-3 h-3 rounded-full transition-all duration-300 ${
-<<<<<<< HEAD
-                  index === currentSlide ? 'bg-cyan-400' : 'bg-white/30'
-=======
-                  index === currentSlide
-                    ? 'bg-cyan-400 w-8'
+                  index === currentSlide 
+                    ? 'bg-blue-400 scale-125' 
                     : 'bg-white/30 hover:bg-white/50'
->>>>>>> cursor/fix-errors-and-merge-to-main-ccfd
                 }`}
-                aria-label={`Go to slide ${index + 1}`}
               />
             ))}
           </div>
         </div>
 
-<<<<<<< HEAD
-        {/* Stats Section */}
-        <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8">
-          {[
-            { value: '500+', label: 'Enterprise Clients' },
-            { value: '30,000%', label: 'Average ROI' },
-            { value: '99.9%', label: 'Success Rate' },
-            { value: '5M+', label: 'Data Points Processed' },
-          ].map((stat, index) => (
-            <div key={index} className="text-center">
-              <div className="text-3xl font-bold text-cyan-400 mb-2">{stat.value}</div>
-              <div className="text-gray-300">{stat.label}</div>
-            </div>
-          ))}
-=======
         {/* Call to Action */}
         <div className="text-center mt-16">
-          <div className="bg-gradient-to-r from-cyan-600 to-purple-600 rounded-2xl p-8">
-            <h3 className="text-2xl font-bold text-white mb-4">
-              Ready to Transform Your Business?
+          <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/20 max-w-4xl mx-auto">
+            <h3 className="text-3xl font-bold text-white mb-4">
+              Ready to Transform Your Business Intelligence?
             </h3>
-            <p className="text-cyan-100 mb-6">
-              Join thousands of enterprises already using our AI-powered solutions
+            <p className="text-xl text-gray-300 mb-8">
+              Join thousands of enterprises already using our AI-powered analytics platform.
             </p>
-            <Link
-              href="/contact"
-              className="inline-block bg-white text-cyan-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-            >
-              Get Started Today
-            </Link>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href="/contact"
+                className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
+              >
+                Get Started Today
+              </Link>
+              <Link
+                href="/demo"
+                className="border border-white/30 text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300"
+              >
+                Schedule Demo
+              </Link>
+            </div>
           </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-ccfd
+        </div>
+
+        {/* Close Button */}
+        <div className="flex justify-center mt-8">
+          <button
+            onClick={() => setIsVisible(false)}
+            className="text-gray-400 hover:text-white transition-colors text-sm"
+          >
+            Close this banner
+          </button>
         </div>
       </div>
     </section>
