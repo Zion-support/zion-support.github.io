@@ -14,7 +14,7 @@ import React, { useEffect } from 'react';
 const PerformanceMonitor: React.FC = () => {
   useEffect(() => {
     // Web Vitals monitoring
-    const reportWebVitals = (metric: { name: string; value: number; id?: string }) => {
+    const reportWebVitals = (metric: { name: string; value: number; id: string }) => {
       // Send to analytics service
       if (typeof window !== 'undefined' && (window as { gtag?: (command: string, eventName: string, parameters: Record<string, unknown>) => void }).gtag) {
         (window as unknown as { gtag: (command: string, eventName: string, parameters: Record<string, unknown>) => void }).gtag('event', 'web_vitals', {
@@ -42,6 +42,7 @@ const PerformanceMonitor: React.FC = () => {
           reportWebVitals({
             name: 'LCP',
             value: lastEntry.startTime,
+            id: 'lcp-' + Date.now(),
           });
         }).observe({ entryTypes: ['largest-contentful-paint'] });
 
@@ -52,6 +53,7 @@ const PerformanceMonitor: React.FC = () => {
             reportWebVitals({
               name: 'FID',
               value: (entry.processingStart || entry.startTime) - entry.startTime,
+              id: 'fid-' + Date.now(),
             });
           });
         }).observe({ entryTypes: ['first-input'] });
@@ -68,6 +70,7 @@ const PerformanceMonitor: React.FC = () => {
           reportWebVitals({
             name: 'CLS',
             value: clsValue,
+            id: 'cls-' + Date.now(),
           });
         }).observe({ entryTypes: ['layout-shift'] });
 
@@ -78,6 +81,7 @@ const PerformanceMonitor: React.FC = () => {
             reportWebVitals({
               name: 'FCP',
               value: entry.startTime,
+              id: 'fcp-' + Date.now(),
             });
           });
         }).observe({ entryTypes: ['paint'] });
@@ -98,6 +102,7 @@ const PerformanceMonitor: React.FC = () => {
           reportWebVitals({
             name: 'TTFB',
             value: ttfb,
+            id: 'ttfb-' + Date.now(),
           });
         }
       });
