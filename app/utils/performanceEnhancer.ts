@@ -98,7 +98,7 @@ export const getMemoryUsage = () => {
     return null;
   }
 
-  const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
+  const memory = (performance as { memory?: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
   return {
     used: memory.usedJSHeapSize,
     total: memory.totalJSHeapSize,
@@ -143,7 +143,7 @@ export const initializePerformanceEnhancements = () => {
 
   // Collect performance metrics
   const metrics = collectPerformanceMetrics();
-  if (metrics) {
+  if (metrics && process.env.NODE_ENV === 'development') {
     // eslint-disable-next-line no-console
     console.log('Performance metrics:', metrics);
   }
