@@ -75,7 +75,7 @@ class AdvancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
 
   private reportError = (error: Error, errorInfo: ErrorInfo) => {
     const errorReport: ErrorReport = {
-      errorId: this.state.errorId,
+      errorId: this.state.errorId || this.generateErrorId(),
       error: error,
       errorInfo: errorInfo,
       message: error.message,
@@ -116,8 +116,15 @@ class AdvancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
   };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   private sendErrorReport = async (errorReport: Record<string, unknown>) => {
 =======
+=======
+  private generateErrorId = (): string => {
+    return `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+  };
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-7904
   private sendErrorReport = async (errorReport: ErrorReport) => {
 >>>>>>> 37545c2e32f35044aa55b03169325560ba719e8b
     try {
