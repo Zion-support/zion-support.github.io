@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState, useCallback, useMemo } from 'react';
 
 interface AccessibilityConfig {
   enableKeyboardNavigation: boolean;
@@ -22,12 +22,12 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
 }) => {
   const [isHighContrast, setIsHighContrast] = useState(false);
   const [isReducedMotion, setIsReducedMotion] = useState(false);
-  const [fontSize, setFontSize] = useState(16);
-  const [focusVisible, setFocusVisible] = useState(false);
+  const [fontSize] = useState(16);
+  // const [focusVisible] = useState(false);
   const skipLinkRef = useRef<HTMLAnchorElement>(null);
-  const mainContentRef = useRef<HTMLElement>(null);
+  // const mainContentRef = useRef<HTMLElement>(null);
 
-  const defaultConfig: AccessibilityConfig = {
+  const defaultConfig: AccessibilityConfig = useMemo(() => ({
     enableKeyboardNavigation: true,
     enableScreenReaderSupport: true,
     enableHighContrast: true,
@@ -37,40 +37,26 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     enableARIALabels: true,
     enableColorContrast: true,
     ...config,
-  };
+  }), [config]);
 
-  useEffect(() => {
-    // Initialize accessibility features
-    initializeAccessibility();
-    
-    // Setup keyboard navigation
-    if (defaultConfig.enableKeyboardNavigation) {
-      setupKeyboardNavigation();
+  // Helper functions
+  const detectHighContrast = useCallback(() => {
+    if (window.matchMedia) {
+      const query = window.matchMedia('(prefers-contrast: high)');
+      setIsHighContrast(query.matches);
+      updateHighContrastStyles(query.matches);
     }
+  }, [setIsHighContrast]);
 
-    // Setup screen reader support
-    if (defaultConfig.enableScreenReaderSupport) {
-      setupScreenReaderSupport();
+  const detectReducedMotion = useCallback(() => {
+    if (window.matchMedia) {
+      const query = window.matchMedia('(prefers-reduced-motion: reduce)');
+      setIsReducedMotion(query.matches);
+      updateReducedMotionStyles(query.matches);
     }
+  }, [setIsReducedMotion]);
 
-    // Setup focus management
-    if (defaultConfig.enableFocusManagement) {
-      setupFocusManagement();
-    }
-
-    // Setup media queries for user preferences
-    setupMediaQueries();
-
-    // Setup ARIA live regions
-    setupARIALiveRegions();
-
-    // Cleanup
-    return () => {
-      cleanupEventListeners();
-    };
-  }, []);
-
-  const initializeAccessibility = () => {
+  const initializeAccessibility = useCallback(() => {
     // Add accessibility attributes to body
     document.body.setAttribute('role', 'application');
     document.body.setAttribute('aria-live', 'polite');
@@ -89,9 +75,9 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     if (defaultConfig.enableReducedMotion) {
       detectReducedMotion();
     }
-  };
+  }, [defaultConfig, detectHighContrast, detectReducedMotion]);
 
-  const setupKeyboardNavigation = () => {
+  const setupKeyboardNavigation = useCallback(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
       // Skip to main content
       if (event.key === 'Tab' && event.shiftKey === false && !event.ctrlKey && !event.altKey) {
@@ -116,9 +102,9 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     };
 
     document.addEventListener('keydown', handleKeyDown);
-  };
+  }, [skipLinkRef]);
 
-  const setupScreenReaderSupport = () => {
+  const setupScreenReaderSupport = useCallback(() => {
     // Add screen reader only text
     addScreenReaderOnlyText();
     
@@ -127,15 +113,15 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     
     // Setup form labels
     setupFormLabels();
-  };
+  }, []);
 
-  const setupFocusManagement = () => {
+  const setupFocusManagement = useCallback(() => {
     // Track focus visibility
-    const handleFocusIn = () => setFocusVisible(true);
-    const handleFocusOut = () => setFocusVisible(false);
+    // const handleFocusIn = () => setFocusVisible(true);
+    // const handleFocusOut = () => setFocusVisible(false);
     
-    document.addEventListener('focusin', handleFocusIn);
-    document.addEventListener('focusout', handleFocusOut);
+    // document.addEventListener('focusin', handleFocusIn);
+    // document.addEventListener('focusout', handleFocusOut);
 
     // Trap focus in modals
     const handleTabKey = (event: KeyboardEvent) => {
@@ -148,9 +134,9 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     };
 
     document.addEventListener('keydown', handleTabKey);
-  };
+  }, []);
 
-  const setupMediaQueries = () => {
+  const setupMediaQueries = useCallback(() => {
     // High contrast media query
     if (window.matchMedia) {
       const highContrastQuery = window.matchMedia('(prefers-contrast: high)');
@@ -173,9 +159,9 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       setIsHighContrast(highContrastQuery.matches);
       setIsReducedMotion(reducedMotionQuery.matches);
     }
-  };
+  }, [setIsHighContrast, setIsReducedMotion]);
 
-  const setupARIALiveRegions = () => {
+  const setupARIALiveRegions = useCallback(() => {
     // Create live region for announcements
     const liveRegion = document.createElement('div');
     liveRegion.setAttribute('aria-live', 'polite');
@@ -183,7 +169,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     liveRegion.className = 'sr-only';
     liveRegion.id = 'live-region';
     document.body.appendChild(liveRegion);
-  };
+  }, []);
 
   const addSkipLinks = () => {
     const skipLinksContainer = document.createElement('div');
@@ -362,22 +348,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     }
   };
 
-  const detectHighContrast = () => {
-    if (window.matchMedia) {
-      const query = window.matchMedia('(prefers-contrast: high)');
-      setIsHighContrast(query.matches);
-      updateHighContrastStyles(query.matches);
-    }
-  };
-
-  const detectReducedMotion = () => {
-    if (window.matchMedia) {
-      const query = window.matchMedia('(prefers-reduced-motion: reduce)');
-      setIsReducedMotion(query.matches);
-      updateReducedMotionStyles(query.matches);
-    }
-  };
-
   const updateHighContrastStyles = (enabled: boolean) => {
     if (enabled) {
       document.body.classList.add('high-contrast');
@@ -394,20 +364,51 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     }
   };
 
-  const cleanupEventListeners = () => {
+  const cleanupEventListeners = useCallback(() => {
     // Remove event listeners
     document.removeEventListener('keydown', setupKeyboardNavigation);
     document.removeEventListener('focusin', setupFocusManagement);
     document.removeEventListener('focusout', setupFocusManagement);
-  };
+  }, [setupKeyboardNavigation, setupFocusManagement]);
+
+  useEffect(() => {
+    // Initialize accessibility features
+    initializeAccessibility();
+    
+    // Setup keyboard navigation
+    if (defaultConfig.enableKeyboardNavigation) {
+      setupKeyboardNavigation();
+    }
+
+    // Setup screen reader support
+    if (defaultConfig.enableScreenReaderSupport) {
+      setupScreenReaderSupport();
+    }
+
+    // Setup focus management
+    if (defaultConfig.enableFocusManagement) {
+      setupFocusManagement();
+    }
+
+    // Setup media queries for user preferences
+    setupMediaQueries();
+
+    // Setup ARIA live regions
+    setupARIALiveRegions();
+
+    // Cleanup
+    return () => {
+      cleanupEventListeners();
+    };
+  }, [cleanupEventListeners, defaultConfig.enableFocusManagement, defaultConfig.enableKeyboardNavigation, defaultConfig.enableScreenReaderSupport, initializeAccessibility, setupFocusManagement, setupKeyboardNavigation, setupMediaQueries, setupScreenReaderSupport, setupARIALiveRegions]);
 
   // Announce changes to screen readers
-  const announceToScreenReader = (message: string) => {
-    const liveRegion = document.getElementById('live-region');
-    if (liveRegion) {
-      liveRegion.textContent = message;
-    }
-  };
+  // const announceToScreenReader = (message: string) => {
+  //   const liveRegion = document.getElementById('live-region');
+  //   if (liveRegion) {
+  //     liveRegion.textContent = message;
+  //   }
+  // };
 
   // Utility functions are available through the component's internal state
 
