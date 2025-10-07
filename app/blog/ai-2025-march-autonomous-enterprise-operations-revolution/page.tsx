@@ -7,11 +7,10 @@ export const metadata: Metadata = {
   description: 'Discover how autonomous AI agents are revolutionizing enterprise operations, delivering 85% automation rates and $35 billion in operational savings.',
   keywords: ['Autonomous AI', 'Enterprise Operations', 'Business Automation', 'AI Agents', 'Operational Efficiency'],
   openGraph: {
-    title: 'March 2025: Autonomous Enterprise Operations Revolution - The Future of Business Automation',
-    description: 'AI agents now manage complex business operations with unprecedented efficiency, delivering $35 billion in operational savings.',
+    title: 'March 2025: Autonomous Enterprise Operations Revolution | Zion Tech Group',
+    description: 'Discover how autonomous AI agents are revolutionizing enterprise operations, delivering 85% automation rates and $35 billion in operational savings.',
     type: 'article',
-    publishedTime: '2025-03-01T00:00:00Z',
-    authors: ['Zion Tech Group AI Research Team'],
+    authors: ['Zion Tech Group'],
   },
   twitter: {
     card: 'summary_large_image',

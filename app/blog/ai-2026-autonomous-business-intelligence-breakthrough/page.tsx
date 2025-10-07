@@ -7,10 +7,6 @@ export const metadata: Metadata = {
   description: 'Revolutionary autonomous BI systems delivering 300% ROI improvements and automated decision-making.',
   keywords: 'AI 2026, autonomous business intelligence, BI automation, enterprise AI, data analytics, business intelligence',
   openGraph: {
-    title: 'AI 2026 Autonomous Business Intelligence Breakthrough',
-    description: 'Revolutionary autonomous BI systems delivering 300% ROI improvements and automated decision-making.',
-    type: 'article',
-    publishedTime: '2026-01-30T00:00:00Z',
     authors: ['Zion Tech Group'],
     siteName: 'Zion Tech Group',
   },

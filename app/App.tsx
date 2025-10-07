@@ -31,19 +31,13 @@ const App: React.FC = () => {
     logger.lifecycle('initialized', 'App');
 
     // Initialize performance monitoring
-    performanceOptimizer.lazyLoadImages();
-    performanceOptimizer.addCriticalResourceHints();
     lazyLoadImages();
     preloadCriticalResources();
-    performanceOptimizer.init();
+    performanceOptimizer.initialize();
     // Initialize Web Vitals monitoring
     if (typeof window !== 'undefined' && 'performance' in window) {
-      const pageLoadMetrics = performanceOptimizer.measurePageLoad();
       const collectMetrics = collectPerformanceMetrics();
       const metrics = performanceOptimizer.getMetrics();
-      if (pageLoadMetrics) {
-        performanceOptimizer.reportWebVitals(pageLoadMetrics);
-      }
       if (collectMetrics) {
         console.log('Performance metrics collected:', collectMetrics);
       }
@@ -72,7 +66,7 @@ const App: React.FC = () => {
               description='Leading provider of enterprise AI solutions, quantum computing, and autonomous systems. Transform your business with our cutting-edge technology.'
             >
               <AdvancedSEOOptimizer
-                seoData={{
+                config={{
                   title: 'Zion Tech Group - Advanced AI and IT Solutions',
                   description: 'Leading provider of enterprise AI solutions, quantum computing, and autonomous systems. Transform your business with our cutting-edge technology.',
                   keywords: ['AI solutions', 'enterprise AI', 'quantum computing', 'autonomous systems', 'digital transformation', 'automation', 'cloud services', 'AI consulting', 'business intelligence', 'machine learning'],
@@ -95,9 +89,8 @@ const App: React.FC = () => {
                   }
                 }}
                 enableStructuredData={true}
-                enableOpenGraph={true}
-                enableTwitterCards={true}
-                enableSchemaMarkup={true}
+                enableAnalytics={true}
+                enablePerformanceTracking={true}
               />
               <Router>
                 <div className='App'>

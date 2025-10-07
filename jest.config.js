@@ -29,6 +29,7 @@ export default {
   testMatch: [
     '<rootDir>/app/**/__tests__/**/*.{js,jsx,ts,tsx}',
     '<rootDir>/app/**/*.{test,spec}.{js,jsx,ts,tsx}',
+    '<rootDir>/__tests__/**/*.{js,jsx,ts,tsx}',
     '<rootDir>/__tests__/simple.test.js',
     '<rootDir>/__tests__/basic.smoke.test.js',
   ],

@@ -3,7 +3,7 @@ import { createRoot } from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import HomePage from './app/page';
-import { performanceEnhancer } from './app/utils/performanceEnhancer';
+import { initializePerformanceEnhancements } from './app/utils/performanceEnhancer';
 import PerformanceMonitor from './app/components/PerformanceMonitor';
 import EnhancedErrorBoundary from './app/components/EnhancedErrorBoundary';
 import AdvancedSEOOptimizer, { defaultSEOConfig } from './app/components/AdvancedSEOOptimizer';
@@ -95,7 +95,7 @@ const App = () => {
   React.useEffect(() => {
     if (typeof document !== 'undefined') {
       // Initialize enhanced performance monitoring
-      performanceEnhancer.startMonitoring();
+      initializePerformanceEnhancements();
       performanceOptimizer.initialize();
       
       // Preload critical fonts
@@ -150,7 +150,6 @@ const App = () => {
 
     // Cleanup on unmount
     return () => {
-      performanceEnhancer.stopMonitoring();
       performanceOptimizer.cleanup();
     };
   }, []);

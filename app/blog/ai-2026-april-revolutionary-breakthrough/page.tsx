@@ -5,16 +5,13 @@ import { Metadata } from 'next';
 export const metadata: Metadata = {
   title: "AI 2026 April Revolutionary Breakthrough: Meta-Cognitive Superintelligence Platform",
   description: "Revolutionary AI breakthrough featuring meta-cognitive superintelligence and quantum-neural consciousness fusion delivering unprecedented enterprise transformation.",
-  type: "article",
-  publishedTime: "2026-04-01T00:00:00.000Z",
-  authors: ['Zion Tech Group'],
+  authors: [{ name: 'Zion Tech Group' }],
   openGraph: {
     title: 'AI 2026 April Revolutionary Breakthrough: Meta-Cognitive Superintelligence Platform',
     description: 'Revolutionary AI breakthrough featuring meta-cognitive superintelligence and quantum-neural consciousness fusion delivering unprecedented enterprise transformation.',
-    type: 'article',
-    publishedTime: '2026-04-01T00:00:00.000Z',
-    authors: ['Zion Tech Group']
-  }
+    authors: ['Zion Tech Group'],
+  
+    publishedTime: '2026-04-01T00:00:00.000Z',}
 };
 
 export default function AI2026AprilRevolutionaryBreakthrough() {

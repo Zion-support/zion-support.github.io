@@ -1,5 +1,5 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { AlertTriangleIcon as AlertTriangle, RefreshCwIcon as RefreshCw, HomeIcon as Home } from 'lucide-react';
+import { AlertTriangle as AlertTriangle, RefreshCw as RefreshCw, Home as Home } from 'lucide-react';
 
 interface Props {
   children: ReactNode;
