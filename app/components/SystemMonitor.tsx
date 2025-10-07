@@ -99,8 +99,12 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
       const navigationTiming = performance.timing;
       const loadTime = navigationTiming.loadEventEnd - navigationTiming.navigationStart;
       
+      // Calculate performance score
       const performanceScore = calculatePerformanceScore();
+      
+      // Collect performance metrics
       const performanceMetrics = collectPerformanceMetrics();
+      
       const errorStats = errorHandler.getErrorStatistics();
 
       // Get memory info
@@ -112,7 +116,7 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
       const newMetrics: SystemMetrics = {
         performance: {
           score: performanceScore,
-          loadTime: performanceMetrics?.loadTime || loadTime,
+          loadTime: performanceMetrics?.loadTime || loadTime || 0,
           firstContentfulPaint: performanceMetrics?.firstContentfulPaint || 0,
           largestContentfulPaint: 0, // Not available in current metrics
           firstInputDelay: 0, // Not available in current metrics

@@ -185,11 +185,8 @@ export const optimizeScrollPerformance = () => {
     }
   };
 
-  // Track Core Web Vitals
-  // Note: This is a placeholder for CLS tracking functionality
-  // Uncomment and use if needed in the future
-
   window.addEventListener('scroll', requestTick, { passive: true });
+
 };
 
 // Memory usage monitoring
