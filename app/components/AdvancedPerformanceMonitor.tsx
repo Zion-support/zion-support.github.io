@@ -46,8 +46,10 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     const fidObserver = new PerformanceObserver((list) => {
       const entries = list.getEntries();
       entries.forEach((entry) => {
-        const eventEntry = entry as PerformanceEventTiming;
-        setMetrics(prev => ({ ...prev, fid: eventEntry.processingStart - eventEntry.startTime }));
+        if (entry.entryType === 'first-input' && 'processingStart' in entry && 'startTime' in entry) {
+          const fidEntry = entry as PerformanceEventTiming;
+          setMetrics(prev => ({ ...prev, fid: fidEntry.processingStart - fidEntry.startTime }));
+        }
       });
     });
     fidObserver.observe({ entryTypes: ['first-input'] });
@@ -57,10 +59,12 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     const clsObserver = new PerformanceObserver((list) => {
       const entries = list.getEntries();
       entries.forEach((entry) => {
-        const layoutEntry = entry as LayoutShift;
-        if (!layoutEntry.hadRecentInput) {
-          clsValue += layoutEntry.value;
-          setMetrics(prev => ({ ...prev, cls: clsValue }));
+        if (entry.entryType === 'layout-shift' && 'hadRecentInput' in entry && 'value' in entry) {
+          const clsEntry = entry as LayoutShift;
+          if (!clsEntry.hadRecentInput) {
+            clsValue += clsEntry.value;
+            setMetrics(prev => ({ ...prev, cls: clsValue }));
+          }
         }
       });
     });
@@ -108,11 +112,21 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
 
     // Use web-vitals library if available
     try {
-      import('web-vitals').then(({ onCLS, onFCP, onLCP, onTTFB }) => {
-        onCLS((metric: { value: number }) => setMetrics(prev => ({ ...prev, cls: metric.value })));
-        onFCP((metric: { value: number }) => setMetrics(prev => ({ ...prev, fcp: metric.value })));
-        onLCP((metric: { value: number }) => setMetrics(prev => ({ ...prev, lcp: metric.value })));
-        onTTFB((metric: { value: number }) => setMetrics(prev => ({ ...prev, ttfb: metric.value })));
+      import('web-vitals').then((webVitals) => {
+        const { onCLS, onFCP, onLCP, onTTFB } = webVitals;
+        
+        if (onCLS) {
+          onCLS((metric: { value: number }) => setMetrics(prev => ({ ...prev, cls: metric.value })));
+        }
+        if (onFCP) {
+          onFCP((metric: { value: number }) => setMetrics(prev => ({ ...prev, fcp: metric.value })));
+        }
+        if (onLCP) {
+          onLCP((metric: { value: number }) => setMetrics(prev => ({ ...prev, lcp: metric.value })));
+        }
+        if (onTTFB) {
+          onTTFB((metric: { value: number }) => setMetrics(prev => ({ ...prev, ttfb: metric.value })));
+        }
       }).catch(() => {
         // web-vitals not available, continue without it
       });
