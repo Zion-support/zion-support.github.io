@@ -110,7 +110,7 @@ const NewestContent2025Banner = () => {
                 </div>
 
                 <div className="mb-4">
-                  <span className="inline-block px-4 py-2 bg-gradient-to-r from-purple-50 to-pink-50 text-gray-900 text-sm font-semibold rounded-full border border-white/20">
+                  <span className="inline-block px-4 py-2 rounded-full bg-gradient-to-r from-purple-500/30 to-fuchsia-500/30 text-purple-200 text-sm font-bold border border-purple-400/50">
                     Neural Networks & AI
                   </span>
                 </div>
@@ -118,28 +118,30 @@ const NewestContent2025Banner = () => {
                 <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-purple-400 transition-colors">
                   AI Neural Networks Enterprise Transformation 2025
                 </h3>
+
                 <p className="text-gray-300 mb-6 leading-relaxed">
-                  Deploy advanced neural network architectures. Fortune 500 implementations achieving 98.5% accuracy, 
-                  10x ROI, and 85% operational efficiency gains.
+                  Transform your enterprise with advanced neural networks.
+                  Achieve 300% ROI, 70% automation, and 90% accuracy in
+                  complex business processes.
                 </p>
 
                 <div className="grid grid-cols-3 gap-4 mb-6">
                   <div className="text-center">
-                    <div className="text-2xl font-bold text-purple-400">98.5%</div>
-                    <div className="text-gray-400 text-sm">Accuracy</div>
+                    <div className="text-2xl font-bold text-purple-400">300%</div>
+                    <div className="text-sm text-gray-300">ROI</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-2xl font-bold text-green-400">10x</div>
-                    <div className="text-gray-400 text-sm">ROI</div>
+                    <div className="text-2xl font-bold text-green-400">70%</div>
+                    <div className="text-sm text-gray-300">Automation</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-2xl font-bold text-yellow-400">85%</div>
-                    <div className="text-gray-400 text-sm">Efficiency</div>
+                    <div className="text-2xl font-bold text-yellow-400">90%</div>
+                    <div className="text-sm text-gray-300">Accuracy</div>
                   </div>
                 </div>
 
-                <div className="flex items-center gap-4 text-gray-400 text-sm mb-6">
-                  <span>⏱️ 40 min read</span>
+                <div className="flex items-center justify-between text-sm text-gray-400 mb-6">
+                  <span>⏱️ 28 min read</span>
                   <span>📅 Sep 30, 2025</span>
                 </div>
 
@@ -152,53 +154,55 @@ const NewestContent2025Banner = () => {
           </Link>
 
           {/* Article 3: Quantum Security */}
-          <Link href="/blog/ai-quantum-security-protocols-2026" className="group">
+          <Link href="/blog/quantum-security-enterprise-2025" className="group">
             <div className="relative bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:border-white/40 transition-all duration-500 hover:scale-105 h-full">
-              <div className="absolute inset-0 bg-gradient-to-br from-red-500/20 to-orange-600/20 opacity-0 group-hover:opacity-100 transition-all duration-500 rounded-2xl"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/20 to-teal-600/20 opacity-0 group-hover:opacity-100 transition-all duration-500 rounded-2xl"></div>
               <div className="relative z-10">
                 <div className="flex items-center justify-between mb-6">
-                  <div className="text-4xl">⚛️</div>
+                  <div className="text-4xl">🔐</div>
                   <div className="flex gap-2">
-                    <span className="px-3 py-1 bg-red-600 text-white text-xs font-bold rounded-full">🚨 CRITICAL</span>
+                    <span className="px-3 py-1 bg-red-500 text-white text-xs font-bold rounded-full">🔥 HOT</span>
                     <span className="px-3 py-1 bg-green-500 text-white text-xs font-bold rounded-full">NEW TODAY</span>
                   </div>
                 </div>
 
                 <div className="mb-4">
-                  <span className="inline-block px-4 py-2 bg-gradient-to-r from-red-50 to-orange-50 text-gray-900 text-sm font-semibold rounded-full border border-white/20">
+                  <span className="inline-block px-4 py-2 rounded-full bg-gradient-to-r from-emerald-500/30 to-teal-500/30 text-emerald-200 text-sm font-bold border border-emerald-400/50">
                     Quantum Security
                   </span>
                 </div>
 
-                <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-red-400 transition-colors">
-                  AI Quantum Security Protocols 2026
+                <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-emerald-400 transition-colors">
+                  Quantum Security Enterprise Implementation 2025
                 </h3>
+
                 <p className="text-gray-300 mb-6 leading-relaxed">
-                  Protect AI systems with quantum-resistant cryptography. Achieve 99.99% security against classical 
-                  and quantum attacks with sub-millisecond overhead.
+                  Future-proof your enterprise with quantum-resistant security.
+                  Protect against quantum attacks with 99.9% security
+                  guarantee and zero-trust architecture.
                 </p>
 
                 <div className="grid grid-cols-3 gap-4 mb-6">
                   <div className="text-center">
-                    <div className="text-2xl font-bold text-red-400">99.99%</div>
-                    <div className="text-gray-400 text-sm">Security</div>
+                    <div className="text-2xl font-bold text-emerald-400">99.9%</div>
+                    <div className="text-sm text-gray-300">Security</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-2xl font-bold text-green-400">&lt;1ms</div>
-                    <div className="text-gray-400 text-sm">Overhead</div>
+                    <div className="text-2xl font-bold text-green-400">Zero</div>
+                    <div className="text-sm text-gray-300">Trust</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-2xl font-bold text-yellow-400">Zero</div>
-                    <div className="text-gray-400 text-sm">Breaches</div>
+                    <div className="text-2xl font-bold text-yellow-400">∞</div>
+                    <div className="text-sm text-gray-300">Future-Proof</div>
                   </div>
                 </div>
 
-                <div className="flex items-center gap-4 text-gray-400 text-sm mb-6">
-                  <span>⏱️ 45 min read</span>
+                <div className="flex items-center justify-between text-sm text-gray-400 mb-6">
+                  <span>⏱️ 42 min read</span>
                   <span>📅 Sep 30, 2025</span>
                 </div>
 
-                <div className="flex items-center justify-center gap-2 text-red-400 font-semibold group-hover:text-white transition-colors">
+                <div className="flex items-center justify-center gap-2 text-emerald-400 font-semibold group-hover:text-white transition-colors">
                   <span>Read Full Article</span>
                   <span className="group-hover:translate-x-1 transition-transform">→</span>
                 </div>
@@ -249,103 +253,6 @@ const NewestContent2025Banner = () => {
               <div className="text-gray-300">{stat.label}</div>
             </div>
           ))}
-        </div>
-
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-6">
-            September 30, 2025 — Cutting-Edge AI Insights
-          </h2>
-          <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
-            Edge Computing • Neural Networks • Quantum Security — The future of
-            enterprise AI starts here
-          </p>
-        </div>
-
-        {/* Content Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-          {/* Article 1 */}
-          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300">
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
-              <span className="text-green-400 font-semibold text-sm">LIVE NOW</span>
-            </div>
-            <h3 className="text-xl font-bold text-white mb-4">
-              Edge Computing Revolution: 2025 Implementation Guide
-            </h3>
-            <p className="text-gray-300 mb-6">
-              Discover how edge computing is transforming enterprise infrastructure
-              and learn practical implementation strategies.
-            </p>
-            <Link
-              href="/guides/edge-computing-2025"
-              className="inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors"
-            >
-              Read Article
-              <span className="text-lg">→</span>
-            </Link>
-          </div>
-
-          {/* Article 2 */}
-          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300">
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-3 h-3 bg-yellow-400 rounded-full animate-pulse"></div>
-              <span className="text-yellow-400 font-semibold text-sm">HOT</span>
-            </div>
-            <h3 className="text-xl font-bold text-white mb-4">
-              Neural Networks in Production: Real-World Case Studies
-            </h3>
-            <p className="text-gray-300 mb-6">
-              Explore successful neural network implementations across different
-              industries and their measurable business impact.
-            </p>
-            <Link
-              href="/guides/neural-networks-production"
-              className="inline-flex items-center gap-2 bg-purple-600 text-white px-6 py-3 rounded-lg hover:bg-purple-700 transition-colors"
-            >
-              Read Article
-              <span className="text-lg">→</span>
-            </Link>
-          </div>
-
-          {/* Article 3 */}
-          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300">
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-3 h-3 bg-red-400 rounded-full animate-pulse"></div>
-              <span className="text-red-400 font-semibold text-sm">BREAKING</span>
-            </div>
-            <h3 className="text-xl font-bold text-white mb-4">
-              Quantum Security: The Next Frontier in Data Protection
-            </h3>
-            <p className="text-gray-300 mb-6">
-              Learn about quantum-resistant encryption and how to prepare your
-              systems for the quantum computing era.
-            </p>
-            <Link
-              href="/guides/quantum-security-2025"
-              className="inline-flex items-center gap-2 bg-red-600 text-white px-6 py-3 rounded-lg hover:bg-red-700 transition-colors"
-            >
-              Read Article
-              <span className="text-lg">→</span>
-            </Link>
-          </div>
-        </div>
-
-        {/* Call to Action */}
-        <div className="text-center">
-          <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8">
-            <h3 className="text-2xl font-bold text-white mb-4">
-              Stay Ahead of the Curve
-            </h3>
-            <p className="text-blue-100 mb-6">
-              Get exclusive access to our latest research and implementation guides
-            </p>
-            <Link
-              href="/contact"
-              className="inline-block bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-            >
-              Get Started Today
-            </Link>
-          </div>
         </div>
       </div>
     </section>
