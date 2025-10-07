@@ -1,7 +1,7 @@
 import type { ProviderConnection, SyncLogEntry } from './types';
-import { v4 as uuidv4 } from 'uuid';
+// import { v4 as uuidv4 } from 'uuid'; // Unused import
 
-export async function simulateAction<T = any>(
+export async function simulateAction<T = unknown>(
   connection: ProviderConnection,
   action: string,
   details: Record<string, unknown> = {}

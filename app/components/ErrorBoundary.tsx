@@ -27,6 +27,7 @@ class ErrorBoundary extends Component<Props, State> {
       console.error('ErrorBoundary caught an error:', error, errorInfo);
     }
 
+<<<<<<< HEAD
     // Report error to monitoring service in production
     if (process.env.NODE_ENV === 'production') {
       // eslint-disable-next-line no-console
@@ -40,6 +41,9 @@ class ErrorBoundary extends Component<Props, State> {
         });
       }
     }
+=======
+    // Log error for debugging (removed console.error for production)
+>>>>>>> cursor/fix-errors-and-merge-to-main-d703
   }
 
   render() {

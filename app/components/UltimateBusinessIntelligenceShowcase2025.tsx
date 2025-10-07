@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 
 const UltimateBusinessIntelligenceShowcase2025 = () => {
@@ -168,6 +168,7 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
               </div>
             </div>
 
+<<<<<<< HEAD
             <div className="relative">
               <div className="bg-gradient-to-br from-cyan-500/20 to-blue-600/20 rounded-2xl p-8 border border-cyan-400/30">
                 <div className="text-center">
@@ -179,6 +180,14 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
                     <div>Accuracy: 99.9%</div>
                     <div>Response Time: 47ms</div>
                   </div>
+=======
+            {/* Stats Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+              {Object.entries(currentFeature.stats).map(([key, value]) => (
+                <div key={key} className="text-center">
+                  <div className="text-3xl font-bold text-cyan-400 mb-2">{value}</div>
+                  <div className="text-sm text-gray-300">{key}</div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-d703
                 </div>
               </div>
             </div>

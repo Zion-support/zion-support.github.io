@@ -7,9 +7,6 @@ import {
   User,
   Clock,
   Tag,
-  Target,
-  CheckCircle,
-  Star,
 } from 'lucide-react';
 
 export const metadata = {
