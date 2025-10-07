@@ -162,22 +162,106 @@ class PerformanceOptimizer {
   /**
    * Initialize performance monitoring
    */
-  public async initialize(): Promise<void> {
-    if (!this.config.enableMonitoring || this.isMonitoring) {
-      return;
-    }
+  init(): void {
+    if (typeof window === 'undefined') return;
 
-    try {
-      await this.setupPerformanceObservers();
-      await this.optimizeCriticalResources();
-      await this.setupPreloading();
-      this.isMonitoring = true;
-      
-      if (process.env.NODE_ENV === 'development') {
-        console.log('🚀 Performance Optimizer initialized');
-      }
-    } catch (error) {
-      console.error('Failed to initialize performance optimizer:', error);
+    this.measureWebVitals();
+    this.setupPerformanceObservers();
+
+    console.log('Performance monitoring initialized');
+  }
+
+  /**
+   * Measure Core Web Vitals
+   */
+  private measureWebVitals(): void {
+    if (!('performance' in window)) return;
+
+    // First Contentful Paint (FCP)
+    this.observePaint('first-contentful-paint', 'fcp');
+
+    // Largest Contentful Paint (LCP)
+    this.observeLCP();
+
+    // First Input Delay (FID)
+    this.observeFID();
+
+    // Cumulative Layout Shift (CLS)
+    this.observeCLS();
+
+    // Time to First Byte (TTFB)
+    this.measureTTFB();
+  }
+
+  private observePaint(entryName: string, metricName: keyof PerformanceMetrics): void {
+    const observer = new PerformanceObserver((list) => {
+      const entries = list.getEntries();
+      entries.forEach((entry) => {
+        if (entry.name === entryName) {
+          this.metrics[metricName] = entry.startTime;
+          console.log(`${String(metricName).toUpperCase()} measured:`, entry.startTime);
+        }
+      });
+    });
+
+    observer.observe({ entryTypes: ['paint'] });
+    this.observers.push(observer);
+  }
+
+  private observeLCP(): void {
+    const observer = new PerformanceObserver((list) => {
+      const entries = list.getEntries();
+      const lastEntry = entries[entries.length - 1];
+      this.metrics.lcp = lastEntry.startTime;
+      console.log('LCP measured:', lastEntry.startTime);
+    });
+
+    observer.observe({ entryTypes: ['largest-contentful-paint'] });
+    this.observers.push(observer);
+  }
+
+  private observeFID(): void {
+    const observer = new PerformanceObserver((list) => {
+      const entries = list.getEntries();
+      entries.forEach((entry) => {
+        if (entry.entryType === 'first-input' && 'processingStart' in entry && 'startTime' in entry) {
+          const fid = (entry as PerformanceEventTiming).processingStart - (entry as PerformanceEventTiming).startTime;
+          this.metrics.fid = fid;
+          console.log('FID measured:', fid);
+        }
+      });
+    });
+
+    observer.observe({ entryTypes: ['first-input'] });
+    this.observers.push(observer);
+  }
+
+  private observeCLS(): void {
+    let clsValue = 0;
+    const observer = new PerformanceObserver((list) => {
+      const entries = list.getEntries();
+      entries.forEach((entry) => {
+        if (entry.entryType === 'layout-shift' && 'hadRecentInput' in entry && 'value' in entry) {
+          const layoutEntry = entry as PerformanceEntry & { hadRecentInput: boolean; value: number };
+          if (!layoutEntry.hadRecentInput) {
+            clsValue += layoutEntry.value;
+            this.metrics.cls = clsValue;
+            console.log('CLS measured:', clsValue);
+          }
+        }
+      });
+    });
+
+    observer.observe({ entryTypes: ['layout-shift'] });
+    this.observers.push(observer);
+  }
+
+  private measureTTFB(): void {
+    const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+    if (navigationEntry) {
+      const ttfb = navigationEntry.responseStart - navigationEntry.requestStart;
+      this.metrics.ttfb = ttfb;
+      console.log('TTFB measured:', ttfb);
     }
   }
 

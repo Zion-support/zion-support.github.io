@@ -193,7 +193,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     skipToMain.href = '#main-content';
     skipToMain.textContent = 'Skip to main content';
     skipToMain.className = 'skip-link';
-    skipToMain.ref = skipLinkRef;
+    // skipToMain.ref = skipLinkRef; // ref is not a valid property for HTMLAnchorElement
     
     const skipToNav = document.createElement('a');
     skipToNav.href = '#main-navigation';
@@ -268,7 +268,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     if (mainElement) {
       mainElement.setAttribute('role', 'main');
       mainElement.setAttribute('id', 'main-content');
-      mainElement.ref = mainContentRef;
+      // mainElement.ref = mainContentRef; // ref is not a valid property for HTMLElement
     }
 
     // Add navigation landmark
@@ -409,11 +409,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     }
   };
 
-  // Expose utility functions
-  React.useImperativeHandle(React.forwardRef(() => null), () => ({
-    announceToScreenReader,
-    setFontSize: (size: number) => setFontSize(size),
-  }));
+  // Utility functions are available through the component's internal state
 
   return (
     <div
