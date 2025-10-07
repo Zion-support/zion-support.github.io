@@ -1,4 +1,3 @@
-// import * as LucideIcons from 'lucide-react';
 import {
   Github,
   Linkedin,

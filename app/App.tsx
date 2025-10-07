@@ -24,7 +24,7 @@ const InteractiveAIROICalculator = lazy(
 );
 
 // Utils
-import { lazyLoadImages, preloadCriticalResources, collectPerformanceMetrics, performanceOptimizer } from './utils/performanceOptimizer';
+import { performanceOptimizer, collectPerformanceMetrics } from './utils/performanceOptimizer';
 import { logger } from './utils/logger';
 
 // Styles
@@ -42,7 +42,7 @@ const App: React.FC = () => {
     }
 
     // Preload critical resources
-    preloadCriticalResources();
+    // preloadCriticalResources();
   }, []);
 
   const handleError = useCallback((error: Error, errorInfo: any) => {
