@@ -3,7 +3,7 @@
 /**
  * Comprehensive Final Merge - Handles all remaining branches systematically
  * This script processes all remaining branches in batches to avoid conflicts
- */import { execSync } from 'child_process';
+ */ import { execSync } from 'child_process';
 import fs from 'fs';
 
 console.log('🚀 Starting Comprehensive Final Merge Process...\n');
@@ -183,15 +183,15 @@ const results = {
   batches: [],
   total: {
     branches: 0,
-  successful: 0,
+    successful: 0,
     failed: 0,
     methods: {
       direct: 0,
-  theirs: 0,
+      theirs: 0,
       ours: 0,
-  manual: 0,
+      manual: 0,
       failed: 0,
-  not_found: 0,
+      not_found: 0,
       already_merged: 0,
     },
   },
@@ -207,14 +207,14 @@ for (let i = 0; i < batches.length; i++) {
     batchNumber: i + 1,
     branches: [],
     successful: 0,
-  failed: 0,
+    failed: 0,
     methods: {
       direct: 0,
-  theirs: 0,
+      theirs: 0,
       ours: 0,
-  manual: 0,
+      manual: 0,
       failed: 0,
-  not_found: 0,
+      not_found: 0,
       already_merged: 0,
     },
   };

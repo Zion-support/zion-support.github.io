@@ -9,6 +9,5 @@ export const defaultContentConfigConfig: ContentConfigConfig = {
 };
 
 export default {
-  defaultContentConfigConfig
-
+  defaultContentConfigConfig,
 };

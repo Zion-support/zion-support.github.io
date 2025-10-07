@@ -9,6 +9,5 @@ export const defaultCaseStudiesConfig: CaseStudiesConfig = {
 };
 
 export default {
-  defaultCaseStudiesConfig
+  defaultCaseStudiesConfig,
 };
-

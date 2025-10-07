@@ -572,4 +572,4 @@ export default function AI2027TranscendentMetaIntelligenceSuccessStory() {
       </section>
     </div>
   );
-  }
+}

@@ -129,4 +129,4 @@ export default function January2026QuantumNeuralBanner() {
       </div>
     </div>
   );
-  }
+}

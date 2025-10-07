@@ -4,13 +4,21 @@ interface AccessibilityEnhancerProps {
   children: React.ReactNode;
 }
 
-const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {
+const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
+  children,
+}) => {
   useEffect(() => {
     // Add keyboard navigation improvements
     const handleSkipToMain = (event: KeyboardEvent) => {
       // Skip to main content
-      if (event.key === 'Tab' && event.shiftKey && event.target === document.body) {
-        const skipLink = document.querySelector('[data-skip-to-main]') as HTMLElement;
+      if (
+        event.key === 'Tab' &&
+        event.shiftKey &&
+        event.target === document.body
+      ) {
+        const skipLink = document.querySelector(
+          '[data-skip-to-main]'
+        ) as HTMLElement;
         if (skipLink) {
           skipLink.focus();
         }
@@ -23,18 +31,28 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
       if (target && target.closest('[data-focus-trap]')) {
         // Handle Tab key for focus trap
         if (event.key === 'Tab') {
-          const focusableElements = target.closest('[data-focus-trap]')?.querySelectorAll(
-            'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
-          );
-          
+          const focusableElements = target
+            .closest('[data-focus-trap]')
+            ?.querySelectorAll(
+              'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+            );
+
           if (focusableElements && focusableElements.length > 0) {
             const firstElement = focusableElements[0] as HTMLElement;
-            const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
-            
-            if (event.target === lastElement && (event as unknown as KeyboardEvent).shiftKey) {
+            const lastElement = focusableElements[
+              focusableElements.length - 1
+            ] as HTMLElement;
+
+            if (
+              event.target === lastElement &&
+              (event as unknown as KeyboardEvent).shiftKey
+            ) {
               firstElement.focus();
               event.preventDefault();
-            } else if (event.target === firstElement && !(event as unknown as KeyboardEvent).shiftKey) {
+            } else if (
+              event.target === firstElement &&
+              !(event as unknown as KeyboardEvent).shiftKey
+            ) {
               lastElement.focus();
               event.preventDefault();
             }
@@ -87,8 +105,8 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
     document.addEventListener('keydown', handleKeyDown);
 
     // Monitor for dynamic content changes
-    const observer = new MutationObserver((mutations) => {
-      mutations.forEach((mutation) => {
+    const observer = new MutationObserver(mutations => {
+      mutations.forEach(mutation => {
         if (mutation.type === 'childList' && mutation.addedNodes.length > 0) {
           // Announce new content
           announcePageChange('New content has been loaded');
@@ -98,7 +116,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
 
     observer.observe(document.body, {
       childList: true,
-      subtree: true
+      subtree: true,
     });
 
     return () => {
@@ -112,13 +130,13 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
     <>
       {/* Skip to main content link */}
       <a
-        href="#main-content"
-        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50"
+        href='#main-content'
+        className='sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50'
         data-skip-to-main
       >
         Skip to main content
       </a>
-      
+
       {children}
     </>
   );

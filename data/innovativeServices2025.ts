@@ -14,7 +14,7 @@ export const INNOVATIVE_SERVICES_2025: Service[] = [
     category: 'AI',
     description: 'Complete AI automation solution for business processes',
     price: 5000,
-    features: ['Process automation', 'Machine learning', 'Data analysis']
+    features: ['Process automation', 'Machine learning', 'Data analysis'],
   },
   {
     id: 'blockchain-integration',
@@ -22,7 +22,7 @@ export const INNOVATIVE_SERVICES_2025: Service[] = [
     category: 'Blockchain',
     description: 'Secure blockchain integration for enterprise applications',
     price: 8000,
-    features: ['Smart contracts', 'Security', 'Scalability']
+    features: ['Smart contracts', 'Security', 'Scalability'],
   },
   {
     id: 'cloud-optimization',
@@ -30,6 +30,6 @@ export const INNOVATIVE_SERVICES_2025: Service[] = [
     category: 'Cloud',
     description: 'Advanced cloud infrastructure optimization',
     price: 3000,
-    features: ['Cost reduction', 'Performance', 'Scalability']
-  }
+    features: ['Cost reduction', 'Performance', 'Scalability'],
+  },
 ];

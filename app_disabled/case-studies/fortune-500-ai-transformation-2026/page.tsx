@@ -475,4 +475,4 @@ export default function Fortune500AITransformation() {
       </article>
     </div>
   );
-  }
+}

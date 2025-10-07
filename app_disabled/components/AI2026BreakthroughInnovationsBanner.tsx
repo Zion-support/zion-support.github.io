@@ -183,6 +183,6 @@ const AI2026BreakthroughInnovationsBanner = () => {
       </div>
     </section>
   );
-  };
+};
 
 export default AI2026BreakthroughInnovationsBanner;

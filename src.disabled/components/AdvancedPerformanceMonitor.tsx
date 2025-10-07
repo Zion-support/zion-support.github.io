@@ -5,15 +5,17 @@ interface AdvancedPerformanceMonitorProps {
   children?: React.ReactNode;
 }
 
-const AdvancedPerformanceMonitor: React.FC<AdvancedPerformanceMonitorProps> = ({ 
-  className = '', 
-  children 
+const AdvancedPerformanceMonitor: React.FC<AdvancedPerformanceMonitorProps> = ({
+  className = '',
+  children,
 }) => {
   return (
     <div className={`advancedperformancemonitor-component ${className}`}>
       {children || (
-        <div className="p-4 text-center text-gray-600">
-          <h3 className="text-lg font-semibold mb-2">AdvancedPerformanceMonitor</h3>
+        <div className='p-4 text-center text-gray-600'>
+          <h3 className='text-lg font-semibold mb-2'>
+            AdvancedPerformanceMonitor
+          </h3>
           <p>Component placeholder - implementation needed</p>
         </div>
       )}

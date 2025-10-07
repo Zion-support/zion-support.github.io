@@ -272,4 +272,4 @@ export default function January2026NewServicesBanner() {
       </div>
     </section>
   );
-  }
+}

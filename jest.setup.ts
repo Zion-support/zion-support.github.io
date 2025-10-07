@@ -10,5 +10,6 @@ if (typeof (global as any).TextEncoder === 'undefined') {
 //@ts-ignore
 if (typeof (global as any).TextDecoder === 'undefined') {
   // @ts-ignore
-  (global as any).TextDecoder = TextDecoder as unknown as typeof globalThis.TextDecoder;
+  (global as any).TextDecoder =
+    TextDecoder as unknown as typeof globalThis.TextDecoder;
 }

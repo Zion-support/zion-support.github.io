@@ -653,4 +653,4 @@ export default function QuantumConsciousnessFusionSuccessPage() {
       </footer>
     </div>
   );
-  }
+}

@@ -9,10 +9,15 @@ export const metadata = {
 
 export default function ReliableGenAIPlatform2026Page() {
   return (
-    <div className="min-h-screen bg-slate-950 text-white">
-      <main className="max-w-3xl mx-auto px-6 py-16">
-        <div className="mb-8">
-          <ArrowRight href="/blog" className="text-blue-400 hover:text-blue-300">← Back to Blog</ArrowRight>
+    <div className='min-h-screen bg-slate-950 text-white'>
+      <main className='max-w-3xl mx-auto px-6 py-16'>
+        <div className='mb-8'>
+          <ArrowRight
+            href='/blog'
+            className='text-blue-400 hover:text-blue-300'
+          >
+            ← Back to Blog
+          </ArrowRight>
         </div>
         <header className='mb-6'>
           <div className='flex items-center gap-3 text-sm text-white/60 mb-3'>

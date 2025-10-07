@@ -261,14 +261,15 @@ export default function CaseStudiesPage() {
               {caseStudies[0]?.excerpt}
             </p>
             <div className='flex flex-wrap gap-4 mb-6'>
-              {caseStudies[0]?.results && Object.entries(caseStudies[0].results).map(([key, value]) => (
-                <span
-                  key={key}
-                  className='bg-white text-green-600 px-4 py-2 rounded-full text-sm font-medium'
-                >
-                  {key.replace(/([A-Z])/g, ' $1').trim()}: {value}
-                </span>
-              ))}
+              {caseStudies[0]?.results &&
+                Object.entries(caseStudies[0].results).map(([key, value]) => (
+                  <span
+                    key={key}
+                    className='bg-white text-green-600 px-4 py-2 rounded-full text-sm font-medium'
+                  >
+                    {key.replace(/([A-Z])/g, ' $1').trim()}: {value}
+                  </span>
+                ))}
             </div>
             <Link
               href={`/case-studies/${caseStudies[0]?.slug}`}
@@ -435,4 +436,4 @@ export default function CaseStudiesPage() {
       </section>
     </div>
   );
-  }
+}

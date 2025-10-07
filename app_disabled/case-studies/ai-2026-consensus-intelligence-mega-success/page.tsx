@@ -601,4 +601,4 @@ export default function AI2026ConsensusIntelligenceMegaSuccess() {
       </footer>
     </div>
   );
-  }
+}

@@ -102,7 +102,7 @@ export const DEFAULT_OPTIMIZATION_CONFIG: OptimizationConfig = {
     enableCanonicalUrl: true,
   },
   accessibilityLevel: 'AA',
-  seoLevel: 'advanced'
+  seoLevel: 'advanced',
 };
 
 /**
@@ -166,7 +166,7 @@ export class ComprehensiveOptimizer {
 
     // Set up keyboard navigation
     if (this.config.accessibility.enableKeyboardNavigation) {
-      document.addEventListener('keydown', (e) => {
+      document.addEventListener('keydown', e => {
         // Handle global keyboard shortcuts
         if (e.key === 'Tab') {
           // Enhanced tab navigation
@@ -282,8 +282,12 @@ export class ComprehensiveOptimizer {
       if (this.config.accessibility.enableFocusManagement) {
         results.accessibility = {
           focusManagement: 'enabled',
-          ariaUtils: this.config.accessibility.enableAriaUtils ? 'enabled' : 'disabled',
-          keyboardNavigation: this.config.accessibility.enableKeyboardNavigation ? 'enabled' : 'disabled',
+          ariaUtils: this.config.accessibility.enableAriaUtils
+            ? 'enabled'
+            : 'disabled',
+          keyboardNavigation: this.config.accessibility.enableKeyboardNavigation
+            ? 'enabled'
+            : 'disabled',
         };
       }
 

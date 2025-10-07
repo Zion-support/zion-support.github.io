@@ -198,4 +198,4 @@ export default function December2026QuantumConsciousnessFusionBanner() {
       </div>
     </section>
   );
-  }
+}

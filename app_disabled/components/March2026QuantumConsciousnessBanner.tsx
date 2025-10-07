@@ -277,4 +277,4 @@ export default function March2026QuantumConsciousnessBanner() {
       </div>
     </div>
   );
-  }
+}

@@ -492,4 +492,4 @@ export default function AutonomousEnterprise2BillionSuccess() {
       </div>
     </div>
   );
-  }
+}

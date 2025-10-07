@@ -2,7 +2,7 @@
 /**
  * Script to fix syntax errors in blog files
  * Fixes common JSX syntax issues like malformed comments and duplicate returns
- */import { execSync } from 'child_process';
+ */ import { execSync } from 'child_process';
 import fs from 'fs';
 import path from 'path';
 
@@ -13,7 +13,9 @@ const blogDir = './app/blog';
 const files = [];
 
 try {
-  const blogFiles = execSync(`find ${blogDir} -name "*.tsx" -type f`, { encoding: 'utf8' })
+  const blogFiles = execSync(`find ${blogDir} -name "*.tsx" -type f`, {
+    encoding: 'utf8',
+  })
     .split('\n')
     .filter(file => file.trim());
 
@@ -32,22 +34,28 @@ try {
       }
 
       //Fix duplicate return statements
-      const returnPattern = /return\s*\(\s*<div>\s*\{\/\* content \*\/\}\s*<\/div>\s*\)\s*return\s*\(/g;
+      const returnPattern =
+        /return\s*\(\s*<div>\s*\{\/\* content \*\/\}\s*<\/div>\s*\)\s*return\s*\(/g;
       if (returnPattern.test(newContent)) {
         newContent = newContent.replace(returnPattern, 'return (');
         modified = true;
       }
 
       //Fix malformed metadata objects
-      const metadataPattern = /export const metadata: Metadata = \{\/\* content \*\/\}/g;
+      const metadataPattern =
+        /export const metadata: Metadata = \{\/\* content \*\/\}/g;
       if (metadataPattern.test(newContent)) {
-        newContent = newContent.replace(metadataPattern, 'export const metadata: Metadata = {');
+        newContent = newContent.replace(
+          metadataPattern,
+          'export const metadata: Metadata = {'
+        );
         modified = true;
       }
 
       //Fix unclosed JSX tags and malformed structures
       //Look for patterns like <div>/* content */} return (
-      const malformedPattern = /<div>\s*\{\/\* content \*\/\}\s*\}\s*return\s*\(/g;
+      const malformedPattern =
+        /<div>\s*\{\/\* content \*\/\}\s*\}\s*return\s*\(/g;
       if (malformedPattern.test(newContent)) {
         newContent = newContent.replace(malformedPattern, 'return (');
         modified = true;
@@ -56,7 +64,10 @@ try {
       //Fix missing semicolons in metadata
       const semicolonPattern = /export const metadata: Metadata = \{\s*title:/g;
       if (semicolonPattern.test(newContent)) {
-        newContent = newContent.replace(semicolonPattern, 'export const metadata: Metadata = {\n  title:');
+        newContent = newContent.replace(
+          semicolonPattern,
+          'export const metadata: Metadata = {\n  title:'
+        );
         modified = true;
       }
 
@@ -78,16 +89,17 @@ try {
   }
 
   console.log(`\n🎉 Fixed syntax errors in ${files.length} files`);
-  
+
   // Run linting to check if errors are resolved
   console.log('\n🔍 Running linting to verify fixes...');
   try {
     execSync('npm run lint:comprehensive', { stdio: 'inherit' });
     console.log('✅ All syntax errors have been resolved!');
   } catch (error) {
-    console.log('⚠️ Some syntax errors may still exist. Check the output above.');
+    console.log(
+      '⚠️ Some syntax errors may still exist. Check the output above.'
+    );
   }
-
 } catch (error) {
   console.log(`❌ Error: ${error.message}`);
   process.exit(1);

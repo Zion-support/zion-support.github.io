@@ -305,4 +305,4 @@ export default function EnterpriseAITransformationCaseStudy() {
       </section>
     </main>
   );
-  }
+}

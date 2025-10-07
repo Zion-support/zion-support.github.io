@@ -23,9 +23,9 @@ class PerformanceEnhancer {
   private metrics: Map<string, number> = new Map();
   private config: OptimizationConfig = {
     enableLazyLoading: true,
-  enablePreloading: true,
+    enablePreloading: true,
     enableCompression: true,
-  enableCaching: true,
+    enableCaching: true,
     enableMonitoring: true,
   };
 
@@ -57,8 +57,8 @@ class PerformanceEnhancer {
   private setupPerformanceMonitoring(): void {
     //Monitor Core Web Vitals
     if ('PerformanceObserver' in window) {
-      const observer = new PerformanceObserver((list) => {
-        list.getEntries().forEach((entry) => {
+      const observer = new PerformanceObserver(list => {
+        list.getEntries().forEach(entry => {
           this.recordMetric(entry.name, entry.duration);
         });
       });
@@ -69,7 +69,11 @@ class PerformanceEnhancer {
     //Monitor memory usage
     if ('memory' in performance) {
       setInterval(() => {
-        const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number } }).memory;
+        const memory = (
+          performance as Performance & {
+            memory?: { usedJSHeapSize: number; totalJSHeapSize: number };
+          }
+        ).memory;
         if (memory) {
           this.recordMetric('memory-used', memory.usedJSHeapSize);
           this.recordMetric('memory-total', memory.totalJSHeapSize);
@@ -80,25 +84,28 @@ class PerformanceEnhancer {
 
   private setupLazyLoading(): void {
     //Enhanced lazy loading with intersection observer
-    const imageObserver = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          const img = entry.target as HTMLImageElement;
-          const src = img.dataset['src'];
-          if (src) {
-            img.src = src;
-            img.removeAttribute('data-src');
-            imageObserver.unobserve(img);
+    const imageObserver = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const img = entry.target as HTMLImageElement;
+            const src = img.dataset['src'];
+            if (src) {
+              img.src = src;
+              img.removeAttribute('data-src');
+              imageObserver.unobserve(img);
+            }
           }
-        }
-      });
-    }, {
-      rootMargin: '50px 0px',
-      threshold: 0.1,
-    });
+        });
+      },
+      {
+        rootMargin: '50px 0px',
+        threshold: 0.1,
+      }
+    );
 
     //Observe all images with data-src
-    document.querySelectorAll('img[data-src]').forEach((img) => {
+    document.querySelectorAll('img[data-src]').forEach(img => {
       imageObserver.observe(img);
     });
   }
@@ -111,7 +118,7 @@ class PerformanceEnhancer {
       { href: '/images/logo.svg', as: 'image' },
     ];
 
-    criticalResources.forEach((resource) => {
+    criticalResources.forEach(resource => {
       const link = document.createElement('link');
       link.rel = 'preload';
       link.href = resource.href;
@@ -145,10 +152,10 @@ class PerformanceEnhancer {
 
     //Implement bundle optimization strategies
     //Optimizing bundle...
-    
+
     //Tree shaking optimization
     this.enableTreeShaking();
-    
+
     //Code splitting optimization
     this.enableCodeSplitting();
   }
@@ -168,11 +175,12 @@ class PerformanceEnhancer {
 
     //Implement service worker caching
     if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('/sw.js')
-        .then((registration) => {
+      navigator.serviceWorker
+        .register('/sw.js')
+        .then(registration => {
           //Service Worker registered successfully
         })
-        .catch((error) => {
+        .catch(error => {
           //Service Worker registration failed
         });
     }
@@ -183,7 +191,7 @@ class PerformanceEnhancer {
     return `
 Performance Report:
 - Render Time: ${metrics.renderTime}ms
-- Memory Usage: ${(metrics.memoryUsage / 1024 /1024).toFixed(2)}MB
+- Memory Usage: ${(metrics.memoryUsage / 1024 / 1024).toFixed(2)}MB
 - Component Count: ${metrics.componentCount}
 - Bundle Size: ${(metrics.bundleSize / 1024).toFixed(2)}KB
 - Load Time: ${metrics.loadTime}ms

@@ -5,15 +5,15 @@ interface BannerManagerProps {
   children?: React.ReactNode;
 }
 
-const BannerManager: React.FC<BannerManagerProps> = ({ 
-  className = '', 
-  children 
+const BannerManager: React.FC<BannerManagerProps> = ({
+  className = '',
+  children,
 }) => {
   return (
     <div className={`bannermanager-component ${className}`}>
       {children || (
-        <div className="p-4 text-center text-gray-600">
-          <h3 className="text-lg font-semibold mb-2">BannerManager</h3>
+        <div className='p-4 text-center text-gray-600'>
+          <h3 className='text-lg font-semibold mb-2'>BannerManager</h3>
           <p>Component placeholder - implementation needed</p>
         </div>
       )}

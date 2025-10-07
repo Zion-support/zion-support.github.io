@@ -9,10 +9,7 @@ const Button: React.FC<{
   className?: string;
   children: React.ReactNode;
 }> = ({ onClick, className = '', children }) => (
-  <button
-    onClick={onClick}
-    className={`px-4 py-2 rounded ${className}`}
-  >
+  <button onClick={onClick} className={`px-4 py-2 rounded ${className}`}>
     {children}
   </button>
 );

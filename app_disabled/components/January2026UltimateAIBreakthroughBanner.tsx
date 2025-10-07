@@ -217,6 +217,6 @@ const January2026UltimateAIBreakthroughBanner: React.FC = () => {
       </div>
     </section>
   );
-  };
+};
 
 export default January2026UltimateAIBreakthroughBanner;

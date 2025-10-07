@@ -296,4 +296,4 @@ export default function Fortune500TransformationShowcaseBanner() {
       </div>
     </div>
   );
-  }
+}

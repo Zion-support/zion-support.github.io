@@ -700,4 +700,4 @@ export default function Fortune500AITransformationMegaSuccess2026() {
       </div>
     </div>
   );
-  }
+}

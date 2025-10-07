@@ -5,17 +5,16 @@ interface BannerRotationManagerProps {
   children?: React.ReactNode;
 }
 
-const BannerRotationManager: React.FC<BannerRotationManagerProps> = ({ 
-  className = '', 
-  children 
+const BannerRotationManager: React.FC<BannerRotationManagerProps> = ({
+  className = '',
+  children,
 }) => {
   return (
     <div className={`bannerrotationmanager-component ${className}`}>
       {children || (
-        <div className="p-4 text-center text-gray-600">
-          <h3 className="text-lg font-semibold mb-2">BannerRotationManager</h3>
+        <div className='p-4 text-center text-gray-600'>
+          <h3 className='text-lg font-semibold mb-2'>BannerRotationManager</h3>
           <p>Component placeholder - implementation needed</p>
-
         </div>
       )}
     </div>

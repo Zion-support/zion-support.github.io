@@ -134,6 +134,6 @@ const December2026UltimateSingularityBanner: React.FC = () => {
       </div>
     </section>
   );
-  };
+};
 
 export default December2026UltimateSingularityBanner;

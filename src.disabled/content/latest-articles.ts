@@ -9,6 +9,5 @@ export const defaultLatestArticlesConfig: LatestArticlesConfig = {
 };
 
 export default {
-  defaultLatestArticlesConfig
+  defaultLatestArticlesConfig,
 };
-

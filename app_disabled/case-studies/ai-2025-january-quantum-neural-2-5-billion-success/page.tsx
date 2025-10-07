@@ -409,4 +409,4 @@ export default function AI2025JanuaryQuantumNeuralSuccess() {
       </div>
     </div>
   );
-  }
+}

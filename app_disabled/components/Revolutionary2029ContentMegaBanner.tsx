@@ -101,4 +101,4 @@ export default function Revolutionary2029ContentMegaBanner() {
       </div>
     </section>
   );
-  }
+}

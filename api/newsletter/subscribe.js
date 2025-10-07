@@ -10,13 +10,13 @@ async function handler(req, res) {
   }
   try {
     const { email } = req.body || {};
-    
+
     if (!email) {
       res.statusCode = 400;
       res.json({ error: 'Email is required' });
       return;
     }
-    
+
     if (!isValidEmail(email)) {
       res.statusCode = 400;
       res.json({ error: 'Invalid email format' });
@@ -26,13 +26,13 @@ async function handler(req, res) {
     const subscription = {
       email,
       subscribedAt: new Date().toISOString(),
-      status: 'active'
+      status: 'active',
     };
-    
+
     res.statusCode = 200;
     res.json({
       message: 'Successfully subscribed to newsletter',
-      subscription
+      subscription,
     });
   } catch (error) {
     console.error('Newsletter subscription error:', error);

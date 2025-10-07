@@ -9,6 +9,5 @@ export const defaultNewArticles2025Config: NewArticles2025Config = {
 };
 
 export default {
-  defaultNewArticles2025Config
+  defaultNewArticles2025Config,
 };
-

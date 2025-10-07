@@ -5,7 +5,9 @@
 // Meta tags management
 export const setMetaTags = (tags: Record<string, string>): void => {
   Object.entries(tags).forEach(([name, content]) => {
-    let meta = document.querySelector(`meta[name="${name}"]`) as HTMLMetaElement;
+    let meta = document.querySelector(
+      `meta[name="${name}"]`
+    ) as HTMLMetaElement;
     if (!meta) {
       meta = document.createElement('meta');
       meta.name = name;
@@ -35,7 +37,9 @@ export const setOpenGraphTags = (ogData: {
 
   Object.entries(ogTags).forEach(([property, content]) => {
     if (content) {
-      let meta = document.querySelector(`meta[property="${property}"]`) as HTMLMetaElement;
+      let meta = document.querySelector(
+        `meta[property="${property}"]`
+      ) as HTMLMetaElement;
       if (!meta) {
         meta = document.createElement('meta');
         meta.setAttribute('property', property);
@@ -54,7 +58,7 @@ export const setTwitterCardTags = (twitterData: {
   image?: string;
   site?: string;
   creator?: string;
-  }): void => {
+}): void => {
   const twitterTags = {
     'twitter:card': twitterData.card || 'summary_large_image',
     'twitter:title': twitterData.title,
@@ -66,7 +70,9 @@ export const setTwitterCardTags = (twitterData: {
 
   Object.entries(twitterTags).forEach(([name, content]) => {
     if (content) {
-      let meta = document.querySelector(`meta[name="${name}"]`) as HTMLMetaElement;
+      let meta = document.querySelector(
+        `meta[name="${name}"]`
+      ) as HTMLMetaElement;
       if (!meta) {
         meta = document.createElement('meta');
         meta.name = name;
@@ -87,7 +93,9 @@ export const setStructuredData = (data: Record<string, unknown>): void => {
 
 // Canonical URL
 export const setCanonicalUrl = (url: string): void => {
-  let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
+  let canonical = document.querySelector(
+    'link[rel="canonical"]'
+  ) as HTMLLinkElement;
   if (!canonical) {
     canonical = document.createElement('link');
     canonical.rel = 'canonical';
@@ -123,7 +131,9 @@ export const setLanguage = (language: string): void => {
 
 // Viewport
 export const setViewport = (viewport: string): void => {
-  let viewportMeta = document.querySelector('meta[name="viewport"]') as HTMLMetaElement;
+  let viewportMeta = document.querySelector(
+    'meta[name="viewport"]'
+  ) as HTMLMetaElement;
   if (!viewportMeta) {
     viewportMeta = document.createElement('meta');
     viewportMeta.name = 'viewport';
@@ -150,11 +160,7 @@ export const schemaGenerators = {
     sameAs: data.sameAs,
   }),
 
-  website: (data: {
-    name: string;
-    url: string;
-    description?: string;
-  }) => ({
+  website: (data: { name: string; url: string; description?: string }) => ({
     '@context': 'https://schema.org',
     '@type': 'WebSite',
     name: data.name,
@@ -202,14 +208,18 @@ export const seoAudit = async (): Promise<{
 export const generateSitemap = (urls: string[]): string => {
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${urls.map(url => `  <url>
+${urls
+  .map(
+    url => `  <url>
     <loc>${url}</loc>
     <lastmod>${new Date().toISOString()}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-  </url>`).join('\n')}
+  </url>`
+  )
+  .join('\n')}
 </urlset>`;
-  
+
   return sitemap;
 };
 
@@ -254,5 +264,5 @@ export default {
   setStructuredData,
   generateSitemap,
   optimizeImages,
-  generateRobotsTxt
+  generateRobotsTxt,
 };

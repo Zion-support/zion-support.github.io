@@ -9,6 +9,5 @@ export const defaultpostsConfig: postsConfig = {
 };
 
 export default {
-  defaultpostsConfig
+  defaultpostsConfig,
 };
-

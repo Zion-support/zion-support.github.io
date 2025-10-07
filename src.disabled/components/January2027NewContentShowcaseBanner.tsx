@@ -5,15 +5,18 @@ interface January2027NewContentShowcaseBannerProps {
   children?: React.ReactNode;
 }
 
-const January2027NewContentShowcaseBanner: React.FC<January2027NewContentShowcaseBannerProps> = ({ 
-  className = '', 
-  children 
-}) => {
+const January2027NewContentShowcaseBanner: React.FC<
+  January2027NewContentShowcaseBannerProps
+> = ({ className = '', children }) => {
   return (
-    <div className={`january2027newcontentshowcasebanner-component ${className}`}>
+    <div
+      className={`january2027newcontentshowcasebanner-component ${className}`}
+    >
       {children || (
-        <div className="p-4 text-center text-gray-600">
-          <h3 className="text-lg font-semibold mb-2">January2027NewContentShowcaseBanner</h3>
+        <div className='p-4 text-center text-gray-600'>
+          <h3 className='text-lg font-semibold mb-2'>
+            January2027NewContentShowcaseBanner
+          </h3>
           <p>Component placeholder - implementation needed</p>
         </div>
       )}
@@ -22,4 +25,3 @@ const January2027NewContentShowcaseBanner: React.FC<January2027NewContentShowcas
 };
 
 export default January2027NewContentShowcaseBanner;
-

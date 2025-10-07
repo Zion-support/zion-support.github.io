@@ -17,20 +17,20 @@ const MainLayout: React.FC<MainLayoutProps> = ({
   title = 'Zion Tech Group - Leading Technology Solutions Provider',
   description = 'Zion Tech Group provides cutting-edge technology solutions for modern businesses. From AI development to cloud architecture, we help companies transform their digital presence.',
   keywords = 'technology solutions, AI development, cloud architecture, digital transformation, micro SaaS, IT services',
-  ogImage = '/og-image.jpg'
+  ogImage = '/og-image.jpg',
 }) => {
   return (
     <>
-      <SEOEnhancer 
-        title={title} 
-        description={description} 
-        keywords={keywords} 
-        ogImage={ogImage} 
+      <SEOEnhancer
+        title={title}
+        description={description}
+        keywords={keywords}
+        ogImage={ogImage}
       />
       <AccessibilityEnhancer>
-        <div className="text-left">
+        <div className='text-left'>
           <Header />
-          <main id="main-content" className="text-left" role="main">
+          <main id='main-content' className='text-left' role='main'>
             {children}
           </main>
           <Footer />
