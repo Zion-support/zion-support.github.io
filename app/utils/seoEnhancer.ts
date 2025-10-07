@@ -3,6 +3,48 @@
  * Tools to improve search engine optimization
  */
 
+// SEO Configuration
+export interface SEOConfig {
+  title: string;
+  description: string;
+  keywords: string[];
+  canonicalUrl: string;
+  ogImage: string;
+  ogType: string;
+  twitterCard: string;
+  twitterSite: string;
+  twitterCreator: string;
+  structuredData: Record<string, unknown>;
+  robots: string;
+  language: string;
+  locale: string;
+  siteName: string;
+  author: string;
+  publishedTime?: string;
+  modifiedTime?: string;
+  section?: string;
+  tags?: string[];
+}
+
+// Default SEO config
+const defaultSEOConfig: SEOConfig = {
+  title: 'Zion Holdings',
+  description: 'Leading provider of AI-powered business solutions',
+  keywords: ['AI', 'business', 'solutions', 'technology'],
+  canonicalUrl: 'https://zion.app',
+  ogImage: '/og-image.jpg',
+  ogType: 'website',
+  twitterCard: 'summary_large_image',
+  twitterSite: '@zionholdings',
+  twitterCreator: '@zionholdings',
+  structuredData: {},
+  robots: 'index, follow',
+  language: 'en',
+  locale: 'en_US',
+  siteName: 'Zion Holdings',
+  author: 'Zion Holdings',
+};
+
 // Generate meta tags
 export const generateMetaTags = (data: {
   title: string;
@@ -47,25 +89,6 @@ export const generateMetaTags = (data: {
       content: data.twitterImage || data.ogImage || '/og-image.jpg',
     },
   ];
-=======
-  keywords: string[];
-  canonicalUrl: string;
-  ogImage: string;
-  ogType: string;
-  twitterCard: string;
-  twitterSite: string;
-  twitterCreator: string;
-  structuredData: Record<string, unknown>;
-  robots: string;
-  language: string;
-  locale: string;
-  siteName: string;
-  author: string;
-  publishedTime?: string;
-  modifiedTime?: string;
-  section?: string;
-  tags?: string[];
-}
 
   return tags;
 };
@@ -288,7 +311,38 @@ Sitemap: ${this.config.canonicalUrl}/sitemap.xml`;
   // Get current SEO data
   getCurrentSEO() {
     if (typeof document === 'undefined') return {};
->>>>>>> e2aec618376f3db9bd60312768ea5d9abc7086c8
+
+    return {
+      title: document.title,
+      description: document.querySelector('meta[name="description"]')?.getAttribute('content') || '',
+      keywords: document.querySelector('meta[name="keywords"]')?.getAttribute('content')?.split(', ') || [],
+      canonical: document.querySelector('link[rel="canonical"]')?.getAttribute('href') || '',
+      robots: document.querySelector('meta[name="robots"]')?.getAttribute('content') || '',
+      language: document.documentElement.lang || '',
+      author: document.querySelector('meta[name="author"]')?.getAttribute('content') || '',
+    };
+  }
+}
+
+// Generate structured data (standalone function)
+export const generateStructuredDataForType = (data: {
+  type: 'Organization' | 'WebSite' | 'Article' | 'Service';
+  name: string;
+  description: string;
+  url?: string;
+  logo?: string;
+  sameAs?: string[];
+  [key: string]: unknown;
+}) => {
+  const baseStructure = {
+    '@context': 'https://schema.org',
+    '@type': data.type,
+    name: data.name,
+    description: data.description,
+    url: data.url || '',
+    logo: data.logo || '',
+    sameAs: data.sameAs || [],
+  };
 
   // Add type-specific properties
   if (data.type === 'Organization') {

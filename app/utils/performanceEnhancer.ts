@@ -3,7 +3,7 @@
  * Advanced performance optimization tools for the application
  */
 
-import { useEffect, useCallback, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 
 // Debounce function for performance optimization
 export const debounce = <T extends (...args: unknown[]) => unknown>(
@@ -50,6 +50,7 @@ export class PerformanceMonitor {
     this.metrics.set(`${componentName}_render`, renderTime);
     
     if (process.env.NODE_ENV === 'development') {
+      // eslint-disable-next-line no-console
       console.log(`[Performance] ${componentName} rendered in ${renderTime.toFixed(2)}ms`);
     }
   }
@@ -83,6 +84,7 @@ export class PerformanceMonitor {
     const observer = new PerformanceObserver((list) => {
       list.getEntries().forEach((entry) => {
         if (entry.duration > 50) { // Tasks longer than 50ms
+          // eslint-disable-next-line no-console
           console.warn(`[Performance] Long task detected: ${entry.duration.toFixed(2)}ms`);
         }
       });
@@ -120,7 +122,6 @@ export const usePerformanceMonitor = (componentName: string) => {
       fn();
       const duration = performance.now() - start;
       monitor.trackRender(`${componentName}_function`, duration);
->>>>>>> e2aec618376f3db9bd60312768ea5d9abc7086c8
     }
   };
 };
@@ -184,10 +185,13 @@ export const optimizeScrollPerformance = () => {
     }
   };
 
+  // Set up scroll listener
+  window.addEventListener('scroll', requestTick, { passive: true });
+
   // Track Core Web Vitals
   const trackCLS = () => {
     let clsValue = 0;
-    let clsEntries: PerformanceEntry[] = [];
+    const clsEntries: PerformanceEntry[] = [];
 
     interface LayoutShiftEntry extends PerformanceEntry {
       hadRecentInput?: boolean;
@@ -210,17 +214,31 @@ export const optimizeScrollPerformance = () => {
       observer.disconnect();
       return clsValue;
     };
->>>>>>> e2aec618376f3db9bd60312768ea5d9abc7086c8
   };
 
-  const requestTick = () => {
-    if (!ticking) {
-      requestAnimationFrame(updateScrollPosition);
-      ticking = true;
+  const trackLCP = () => {
+    let lcpValue = 0;
+
+    interface LargestContentfulPaintEntry extends PerformanceEntry {
+      renderTime: number;
+      loadTime: number;
+      size: number;
     }
-  };
 
-  window.addEventListener('scroll', requestTick, { passive: true });
+    const observer = new PerformanceObserver((list) => {
+      for (const entry of list.getEntries()) {
+        const lcpEntry = entry as LargestContentfulPaintEntry;
+        lcpValue = lcpEntry.renderTime || lcpEntry.loadTime;
+      }
+    });
+
+    observer.observe({ entryTypes: ['largest-contentful-paint'] });
+
+    return () => {
+      observer.disconnect();
+      return lcpValue;
+    };
+  };
 
   const trackFID = () => {
     interface FirstInputEntry extends PerformanceEntry {
@@ -231,6 +249,7 @@ export const optimizeScrollPerformance = () => {
       for (const entry of list.getEntries()) {
         const fidEntry = entry as FirstInputEntry;
         const fid = fidEntry.processingStart - entry.startTime;
+        // eslint-disable-next-line no-console
         console.log('[Web Vitals] FID:', fid);
       }
     });
@@ -250,7 +269,6 @@ export const optimizeScrollPerformance = () => {
     cleanupLCP();
     cleanupFID();
   };
->>>>>>> e2aec618376f3db9bd60312768ea5d9abc7086c8
 };
 
 // Memory usage monitoring
