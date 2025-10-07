@@ -95,7 +95,7 @@ const App = () => {
   React.useEffect(() => {
     if (typeof document !== 'undefined') {
       // Initialize enhanced performance monitoring
-      performanceEnhancer.startMonitoring();
+      performanceEnhancer();
       performanceOptimizer.initialize();
       
       // Preload critical fonts
@@ -150,7 +150,7 @@ const App = () => {
 
     // Cleanup on unmount
     return () => {
-      performanceEnhancer.stopMonitoring();
+      // performanceEnhancer cleanup handled by performanceOptimizer
       performanceOptimizer.cleanup();
     };
   }, []);

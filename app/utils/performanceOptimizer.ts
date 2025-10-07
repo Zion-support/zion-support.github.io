@@ -449,6 +449,45 @@ class PerformanceOptimizer {
     this.observers = [];
     this.isMonitoring = false;
   }
+
+  /**
+   * Lazy load images
+   */
+  public lazyLoadImages(): void {
+    if (typeof window === 'undefined') return;
+    lazyLoadImages();
+  }
+
+  /**
+   * Add critical resource hints
+   */
+  public addCriticalResourceHints(): void {
+    if (typeof window === 'undefined') return;
+    preloadCriticalResources();
+  }
+
+  /**
+   * Initialize performance optimizer
+   */
+  public init(): void {
+    this.initialize();
+  }
+
+  /**
+   * Measure page load metrics
+   */
+  public measurePageLoad(): Partial<PerformanceMetrics> | null {
+    if (typeof window === 'undefined') return null;
+    return this.getMetrics();
+  }
+
+  /**
+   * Report web vitals
+   */
+  public reportWebVitals(metrics: Partial<PerformanceMetrics>): void {
+    if (typeof window === 'undefined') return;
+    console.log('Web Vitals:', metrics);
+  }
 }
 
 // Export singleton instance
