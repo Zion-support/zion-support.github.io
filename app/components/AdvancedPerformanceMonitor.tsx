@@ -45,8 +45,9 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     // Measure First Input Delay (FID)
     const fidObserver = new PerformanceObserver((list) => {
       const entries = list.getEntries();
-      entries.forEach((entry: any) => {
-        setMetrics(prev => ({ ...prev, fid: entry.processingStart - entry.startTime }));
+      entries.forEach((entry) => {
+        const fidEntry = entry as PerformanceEntry & { processingStart: number };
+        setMetrics(prev => ({ ...prev, fid: fidEntry.processingStart - fidEntry.startTime }));
       });
     });
     fidObserver.observe({ entryTypes: ['first-input'] });
@@ -55,9 +56,10 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     let clsValue = 0;
     const clsObserver = new PerformanceObserver((list) => {
       const entries = list.getEntries();
-      entries.forEach((entry: any) => {
-        if (!entry.hadRecentInput) {
-          clsValue += entry.value;
+      entries.forEach((entry) => {
+        const clsEntry = entry as PerformanceEntry & { hadRecentInput?: boolean; value: number };
+        if (!clsEntry.hadRecentInput) {
+          clsValue += clsEntry.value;
           setMetrics(prev => ({ ...prev, cls: clsValue }));
         }
       });
@@ -69,7 +71,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     const ttfb = navigationEntry ? navigationEntry.responseStart - navigationEntry.requestStart : null;
 
     // Measure Memory Usage
-    const memory = (performance as any).memory ? (performance as any).memory.usedJSHeapSize : null;
+    const memory = (performance as Performance & { memory?: { usedJSHeapSize: number } }).memory ? (performance as Performance & { memory: { usedJSHeapSize: number } }).memory.usedJSHeapSize : null;
 
     setMetrics(prev => ({
       ...prev,
@@ -90,10 +92,10 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     if (typeof window === 'undefined' || !('performance' in window)) return;
 
     const resources = performance.getEntriesByType('resource');
-    const slowResources = resources.filter((resource: any) => resource.duration > 1000);
+    const slowResources = resources.filter((resource: PerformanceResourceTiming) => resource.duration > 1000);
     
     if (slowResources.length > 0) {
-      console.warn('Slow resources detected:', slowResources.map((r: any) => ({
+      console.warn('Slow resources detected:', slowResources.map((r: PerformanceResourceTiming) => ({
         name: r.name,
         duration: r.duration,
         size: r.transferSize,
@@ -106,26 +108,23 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
 
     // Use web-vitals library if available
     try {
-      import('web-vitals').then((webVitals: any) => {
-        if (webVitals.getCLS) {
-          webVitals.getCLS((metric: any) => setMetrics(prev => ({ ...prev, cls: metric.value })));
+      import('web-vitals').then((webVitals) => {
+        if (webVitals.onCLS) {
+          webVitals.onCLS((metric: { value: number }) => setMetrics(prev => ({ ...prev, cls: metric.value })));
         }
-        if (webVitals.getFID) {
-          webVitals.getFID((metric: any) => setMetrics(prev => ({ ...prev, fid: metric.value })));
+        if (webVitals.onFCP) {
+          webVitals.onFCP((metric: { value: number }) => setMetrics(prev => ({ ...prev, fcp: metric.value })));
         }
-        if (webVitals.getFCP) {
-          webVitals.getFCP((metric: any) => setMetrics(prev => ({ ...prev, fcp: metric.value })));
+        if (webVitals.onLCP) {
+          webVitals.onLCP((metric: { value: number }) => setMetrics(prev => ({ ...prev, lcp: metric.value })));
         }
-        if (webVitals.getLCP) {
-          webVitals.getLCP((metric: any) => setMetrics(prev => ({ ...prev, lcp: metric.value })));
-        }
-        if (webVitals.getTTFB) {
-          webVitals.getTTFB((metric: any) => setMetrics(prev => ({ ...prev, ttfb: metric.value })));
+        if (webVitals.onTTFB) {
+          webVitals.onTTFB((metric: { value: number }) => setMetrics(prev => ({ ...prev, ttfb: metric.value })));
         }
       }).catch(() => {
         // web-vitals not available, continue without it
       });
-    } catch (error) {
+    } catch {
       // web-vitals not available, continue without it
     }
   }, []);

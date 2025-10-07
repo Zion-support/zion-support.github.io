@@ -15,7 +15,9 @@ const InteractiveAIROICalculator = lazy(
 const LoadingFallback: React.FC<{ height?: string }> = ({
   height = 'h-32',
 }) => (
-  <div className={`animate-pulse bg-gray-200 rounded-lg ${height} w-full`} />
+  <div className={`flex items-center justify-center ${height} w-full`}>
+    <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-indigo-600"></div>
+  </div>
 );
 
 const HomePage: React.FC = () => {
