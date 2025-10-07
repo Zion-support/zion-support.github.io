@@ -3,6 +3,8 @@
  */
 
 describe('Performance Tests', () => {
+  let originalLocation;
+  
   beforeEach(() => {
     // Mock performance API
     global.performance = {
@@ -15,20 +17,25 @@ describe('Performance Tests', () => {
       },
     };
 
-    // Mock window object
-    Object.defineProperty(window, 'location', {
-      value: {
-        href: 'http://localhost:3000',
-        reload: jest.fn(),
-      },
-      writable: true,
-    });
+    // Save and mock window.location
+    originalLocation = window.location;
+    delete window.location;
+    window.location = {
+      href: 'http://localhost:3000',
+      reload: jest.fn(),
+    };
 
     // Mock navigator
     Object.defineProperty(navigator, 'userAgent', {
       value: 'Mozilla/5.0 (Test Browser)',
       writable: true,
+      configurable: true,
     });
+  });
+  
+  afterEach(() => {
+    // Restore original location
+    window.location = originalLocation;
   });
 
   test('PerformanceOptimizer should initialize correctly', () => {
