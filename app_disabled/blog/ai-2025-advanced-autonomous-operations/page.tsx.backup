@@ -1,6 +1,7 @@
 import { Star } from 'lucide-react';
 import React from 'react';
 <<<<<<< HEAD:app_disabled/blog/ai-2025-advanced-autonomous-operations/page.tsx.backup
+<<<<<<< HEAD:app_disabled/blog/ai-2025-advanced-autonomous-operations/page.tsx.backup
 import {Metadata} from 'next';
 <<<<<<< HEAD:app_disabled/blog/ai-2025-advanced-autonomous-operations/page.tsx.backup
 <<<<<<< HEAD:app/blog/ai-2025-advanced-autonomous-operations/page.tsx
@@ -14,6 +15,9 @@ export const metadata = {
     published Time: "2025-01-15T00:00:00Z",
     authors: ['Zion Tech Group']};
 export const metadata: Metadata = 
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
   title: 'AI 2025: Advanced Autonomous Operations Revolution | Zion Tech Group',
   description: 'Discover how Fortune 500 companies are achieving 99.9% operational autonomy with AI-driven autonomous operations. Learn about the $2.7B ROI success stories and implementation strategies.',
   keywords: 'autonomous operations, AI automation, Fortune 500, operational autonomy, AI-driven processes, enterprise automation',
@@ -25,6 +29,7 @@ export const metadata: Metadata =
     authors: ['Zion Tech Group'],
   },
 };
+<<<<<<< HEAD:app_disabled/blog/ai-2025-advanced-autonomous-operations/page.tsx.backup
 <<<<<<< HEAD:app_disabled/blog/ai-2025-advanced-autonomous-operations/page.tsx.backup
 
 export default function AI2025Advanced Autonomous Operations() {/* return (

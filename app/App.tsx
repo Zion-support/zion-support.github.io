@@ -3,29 +3,18 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 
 // Components
-<<<<<<< HEAD
 import ErrorBoundary from './components/ErrorBoundary';
 import SEOOptimizer from './components/SEOOptimizer';
-=======
-import ErrorBoundary from '../src/components/ErrorBoundary';
-import SEOOptimizer from '../src/components/SEOOptimizer';
-import { LoadingSpinner } from '../components/LoadingComponents';
->>>>>>> cursor/fix-errors-and-merge-to-main-629e
+import LoadingSpinner from './components/LoadingSpinner';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import PerformanceDashboard from './components/PerformanceDashboard';
-
-// Loading component
-const LoadingSpinner = () => (
-  <div className="min-h-screen flex items-center justify-center bg-gray-50">
-    <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
-  </div>
-);
+import PerformanceMonitor from './components/PerformanceMonitor';
 
 // Lazy load pages for better performance
 const HomePage = lazy(() => import('./page'));
 
 // Utils
-import { performanceOptimizer } from '../src/utils/performanceOptimizer';
+import { performanceOptimizer, prefetchResources } from '../src/utils/performanceOptimizer';
 
 // Styles
 import './globals.css';
@@ -38,6 +27,7 @@ const App: React.FC = () => {
     // Initialize performance monitoring
     performanceOptimizer.lazyLoadImages();
     performanceOptimizer.addCriticalResourceHints();
+    prefetchResources(['/api/health']);
     
     // Initialize Web Vitals monitoring
     if (typeof window !== 'undefined' && 'performance' in window) {
