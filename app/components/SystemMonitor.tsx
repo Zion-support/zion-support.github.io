@@ -4,7 +4,7 @@
  */
 
 import React, { useState, useEffect, useCallback } from 'react';
-import { initializePerformanceEnhancements } from '../utils/performanceEnhancer';
+import { performanceOptimizer } from '../utils/performanceOptimizer';
 import { errorHandler } from '../utils/enhancedErrorHandler';
 
 interface SystemMetrics {
@@ -63,8 +63,8 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
   // Update metrics
   const updateMetrics = useCallback(() => {
     try {
-      const performanceMetrics = performanceEnhancer.getMetrics();
-      const performanceScore = performanceEnhancer.getPerformanceScore();
+      const performanceMetrics = performanceOptimizer.getMetrics();
+      const performanceScore = performanceOptimizer.getPerformanceScore();
       const errorStats = errorHandler.getErrorStatistics();
 
       // Get memory info
@@ -76,11 +76,11 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
       const newMetrics: SystemMetrics = {
         performance: {
           score: performanceScore,
-          loadTime: performanceMetrics.loadTime,
-          firstContentfulPaint: performanceMetrics.firstContentfulPaint,
-          largestContentfulPaint: performanceMetrics.largestContentfulPaint,
-          firstInputDelay: performanceMetrics.firstInputDelay,
-          cumulativeLayoutShift: performanceMetrics.cumulativeLayoutShift,
+          loadTime: performanceMetrics.ttfb || 0,
+          firstContentfulPaint: performanceMetrics.fcp || 0,
+          largestContentfulPaint: performanceMetrics.lcp || 0,
+          firstInputDelay: performanceMetrics.fid || 0,
+          cumulativeLayoutShift: performanceMetrics.cls || 0,
         },
         errors: {
           total: errorStats.totalErrors,
@@ -109,7 +109,7 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
   // Initialize monitoring
   useEffect(() => {
     const initializeMonitoring = () => {
-      performanceEnhancer.startMonitoring();
+      performanceOptimizer.init();
       setIsMonitoring(true);
       updateMetrics();
     };
@@ -117,7 +117,7 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
     initializeMonitoring();
 
     return () => {
-      performanceEnhancer.stopMonitoring();
+      performanceOptimizer.cleanup();
       setIsMonitoring(false);
     };
   }, [updateMetrics]);
@@ -171,7 +171,7 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
 
     const exportData = {
       metrics,
-      performanceData: performanceEnhancer.exportData(),
+      performanceData: performanceOptimizer.getMetrics(),
       errorData: errorHandler.exportErrorData(),
       timestamp: new Date().toISOString(),
     };

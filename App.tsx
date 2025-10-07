@@ -182,9 +182,21 @@ const App = () => {
         }}
       >
         <AdvancedSEOOptimizer
+          seoData={{
+            title: 'Zion Tech Group - Advanced AI and IT Solutions',
+            description: 'Leading provider of AI-powered enterprise solutions and digital transformation services',
+            keywords: ['AI', 'IT Solutions', 'Digital Transformation', 'Enterprise Solutions', 'Automation'],
+            canonicalUrl: 'https://ziontechgroup.com',
+            ogImage: 'https://ziontechgroup.com/og-image.jpg',
+            structuredData: {
+              '@type': 'Organization',
+              name: 'Zion Tech Group'
+            }
+          }}
           enableStructuredData={true}
-          enableAnalytics={true}
-          enablePerformanceTracking={true}
+          enableOpenGraph={true}
+          enableTwitterCards={true}
+          enableSchemaMarkup={true}
         />
         <HelmetProvider>
           <BrowserRouter>

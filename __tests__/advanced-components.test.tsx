@@ -89,7 +89,7 @@ describe('AdvancedSEOOptimizer', () => {
   it('renders without crashing', () => {
     render(
       <HelmetProvider>
-        <AdvancedSEOOptimizer config={mockSEOData} />
+        <AdvancedSEOOptimizer seoData={mockSEOData} />
         <div>Test content</div>
       </HelmetProvider>
     );
@@ -100,7 +100,7 @@ describe('AdvancedSEOOptimizer', () => {
   it('sets document title', () => {
     render(
       <HelmetProvider>
-        <AdvancedSEOOptimizer config={mockSEOData} />
+        <AdvancedSEOOptimizer seoData={mockSEOData} />
       </HelmetProvider>
     );
     
@@ -111,7 +111,7 @@ describe('AdvancedSEOOptimizer', () => {
     render(
       <HelmetProvider>
         <AdvancedSEOOptimizer 
-          config={mockSEOData} 
+          seoData={mockSEOData} 
           enableStructuredData={true}
         />
       </HelmetProvider>
@@ -125,7 +125,7 @@ describe('AdvancedSEOOptimizer', () => {
     render(
       <HelmetProvider>
         <AdvancedSEOOptimizer 
-          config={mockSEOData} 
+          seoData={mockSEOData} 
           enableStructuredData={true}
         />
       </HelmetProvider>
@@ -139,7 +139,7 @@ describe('AdvancedSEOOptimizer', () => {
     render(
       <HelmetProvider>
         <AdvancedSEOOptimizer 
-          config={mockSEOData} 
+          seoData={mockSEOData} 
           enableStructuredData={true}
         />
       </HelmetProvider>
