@@ -9,7 +9,7 @@ import SEOOptimizer from './components/SEOOptimizer';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import LoadingSpinner from '../app/components/LoadingSpinner';
-import performanceOptimizer from './utils/performanceOptimizer';
+// import performanceOptimizer from './utils/performanceOptimizer';
 
 // Import page components
 import AboutPage from '../app/about/page';
