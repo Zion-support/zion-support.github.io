@@ -1,10 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { ArrowLeft, Clock, User, Tag, BookOpen, CheckCircle, TrendingUp, Brain, Zap } from 'lucide-react';
-<<<<<<< HEAD
-=======
 import * as LucideReact from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-4c6a
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
