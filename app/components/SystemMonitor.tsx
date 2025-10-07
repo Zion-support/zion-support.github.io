@@ -4,7 +4,7 @@
  */
 
 import React, { useState, useCallback, useEffect } from 'react';
-import { initializePerformanceEnhancements } from '../utils/performanceEnhancer';
+import { initializePerformanceEnhancements, collectPerformanceMetrics, getMemoryUsage } from '../utils/performanceEnhancer';
 import { errorHandler } from '../utils/enhancedErrorHandler';
 
 interface SystemMetrics {
@@ -63,12 +63,13 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
   // Update metrics
   const updateMetrics = useCallback(() => {
     try {
-      const performanceMetrics = getMetrics();
-      const performanceScore = getPerformanceScore();
+      const performanceMetrics = collectPerformanceMetrics();
+      const performanceScore = performanceMetrics ? 
+        Math.round((performanceMetrics.paint.firstContentfulPaint || 0) / 10) : 0;
       const errorStats = errorHandler.getErrorStatistics();
 
       // Get memory info
-      const memoryInfo = getMemoryInfo();
+      const memoryInfo = getMemoryUsage();
 
       // Get network info
       const networkInfo = getNetworkInfo();
