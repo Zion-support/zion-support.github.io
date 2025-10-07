@@ -8,7 +8,7 @@ import { useAnalytics } from '../components/AnalyticsProvider';
 // Global type definitions for browser events
 declare global {
   interface Window {
-    __REACT_ERROR_HANDLER__?: (error: Error, errorInfo: unknown) => void;
+    __REACT_ERROR_HANDLER__?: (error: Error, errorInfo: { componentStack?: string }) => void;
   }
 }
 
@@ -59,14 +59,7 @@ export const useErrorMonitoring = () => {
     window.addEventListener('unhandledrejection', handleUnhandledRejection);
 
     // Expose React error handler globally for error boundaries
-    (
-      window as Window & {
-        __REACT_ERROR_HANDLER__?: (
-          error: Error,
-          errorInfo: { componentStack?: string }
-        ) => void;
-      }
-    ).__REACT_ERROR_HANDLER__ = handleReactError;
+    window.__REACT_ERROR_HANDLER__ = handleReactError;
 
     // Cleanup
     return () => {
@@ -75,8 +68,7 @@ export const useErrorMonitoring = () => {
         'unhandledrejection',
         handleUnhandledRejection
       );
-      delete (window as Window & { __REACT_ERROR_HANDLER__?: unknown })
-        .__REACT_ERROR_HANDLER__;
+      delete window.__REACT_ERROR_HANDLER__;
     };
   }, [reportError]);
 

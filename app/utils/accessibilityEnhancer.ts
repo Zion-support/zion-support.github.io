@@ -38,17 +38,18 @@ export const focusManagement = {
     const firstElement = focusableElements[0] as HTMLElement;
     const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
 
-    const handleTabKey = (e: KeyboardEvent) => {
-      if (e.key === 'Tab') {
-        if (e.shiftKey) {
+    const handleTabKey = (e: Event) => {
+      const keyEvent = e as KeyboardEvent;
+      if (keyEvent.key === 'Tab') {
+        if (keyEvent.shiftKey) {
           if (document.activeElement === firstElement) {
             lastElement.focus();
-            e.preventDefault();
+            keyEvent.preventDefault();
           }
         } else {
           if (document.activeElement === lastElement) {
             firstElement.focus();
-            e.preventDefault();
+            keyEvent.preventDefault();
           }
         }
       }
@@ -151,9 +152,10 @@ export const addKeyboardNavigation = () => {
   const customElements = document.querySelectorAll('[data-keyboard-navigation]');
   customElements.forEach((element) => {
     element.setAttribute('tabindex', '0');
-    element.addEventListener('keydown', (e: KeyboardEvent) => {
-      if (e.key === 'Enter' || e.key === ' ') {
-        e.preventDefault();
+    element.addEventListener('keydown', (e: Event) => {
+      const keyEvent = e as KeyboardEvent;
+      if (keyEvent.key === 'Enter' || keyEvent.key === ' ') {
+        keyEvent.preventDefault();
         (element as HTMLElement).click();
       }
     });

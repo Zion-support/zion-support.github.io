@@ -11,6 +11,11 @@ interface PerformanceMetrics {
   firstInputDelay: number;
 }
 
+interface LayoutShiftEntry extends PerformanceEntry {
+  hadRecentInput: boolean;
+  value: number;
+}
+
 const PerformanceMonitor: React.FC = memo(() => {
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
   const [isVisible, setIsVisible] = useState(false);
@@ -30,8 +35,8 @@ const PerformanceMonitor: React.FC = memo(() => {
       if ('PerformanceObserver' in window) {
         const observer = new PerformanceObserver((list) => {
           for (const entry of list.getEntries()) {
-            if (entry.entryType === 'layout-shift' && !(entry as LayoutShift).hadRecentInput) {
-              cumulativeLayoutShift += (entry as LayoutShift).value;
+            if (entry.entryType === 'layout-shift' && !(entry as LayoutShiftEntry).hadRecentInput) {
+              cumulativeLayoutShift += (entry as LayoutShiftEntry).value;
             }
           }
         });
