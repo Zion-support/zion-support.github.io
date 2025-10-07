@@ -26,7 +26,7 @@ export default function NotFound() {
       description: 'Get in touch with our AI experts',
       href: '/contact',
       icon: '📞'
-    }
+    },
   ];
 
   return (
@@ -34,20 +34,20 @@ export default function NotFound() {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         {/* Error Code */}
         <div className="mb-8">
-          <h1 className="text-9xl font-extrabold text-white mb-4">
+          <h1 className="text-9xl font-bold text-gray-300 mb-4">
             404
           </h1>
           <div className="text-6xl mb-4">🔍</div>
         </div>
 
         {/* Error Message */}
-        <div className="mb-12">
-          <h2 className="text-4xl font-bold text-white mb-4">
+        <div className="mb-8">
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">
             Oops! Page Not Found
           </h2>
-          <p className="text-xl text-gray-300 mb-8">
+          <p className="text-lg text-gray-600 mb-6">
             The page you're looking for doesn't exist or has been moved. 
-            Let's get you back on track with our AI-powered solutions.
+            Don't worry, let's get you back on track!
           </p>
         </div>
 
