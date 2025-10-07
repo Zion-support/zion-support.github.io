@@ -3,10 +3,7 @@ import React from 'react';
 interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg';
   className?: string;
-<<<<<<< HEAD
   color?: 'blue' | 'gray' | 'white';
-=======
->>>>>>> 025881f891b15c7d2a155d069a9bdf519fbae28d
   text?: string;
 }
 

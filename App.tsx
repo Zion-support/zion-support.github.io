@@ -4,7 +4,7 @@ import { BrowserRouter } from 'react-router-dom';
 import { HelmetProvider, Helmet } from 'react-helmet-async';
 import HomePage from './app/page';
 import { performanceEnhancer } from './app/utils/performanceEnhancer';
-import ErrorBoundary from './app/components/ErrorBoundary';
+// ErrorBoundary is defined below
 import PerformanceMonitor from './app/components/PerformanceMonitor';
 
 // Memoized components for better performance
@@ -102,7 +102,6 @@ class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundarySta
   }
 }
 
-<<<<<<< HEAD
 // Loading component
 const LoadingSpinner = memo(() => (
   <div className="animate-pulse bg-gray-200 h-32 rounded flex items-center justify-center">
@@ -110,8 +109,6 @@ const LoadingSpinner = memo(() => (
   </div>
 ));
 
-=======
->>>>>>> 025881f891b15c7d2a155d069a9bdf519fbae28d
 export default function App() {
   const structuredData = useMemo(
     () => ({
@@ -153,12 +150,7 @@ export default function App() {
     []
   );
 
-<<<<<<< HEAD
-=======
 const App = () => {
->>>>>>> c97f6dee3bc17b688177bad000795d260eae3d63
-=======
->>>>>>> 025881f891b15c7d2a155d069a9bdf519fbae28d
   // Performance optimization: Preload critical resources
   React.useEffect(() => {
     if (typeof document !== 'undefined') {
@@ -230,19 +222,6 @@ const App = () => {
       });
     }
   }, []);
-<<<<<<< HEAD
-
-  const handlePhoneClick = useCallback(() => {
-    // Track phone clicks for analytics
-    if (typeof window !== 'undefined' && (window as unknown as { gtag?: Function }).gtag) {
-      ((window as unknown as { gtag: Function }).gtag)('event', 'phone_click', {
-        event_category: 'engagement',
-        event_label: 'main_phone_number'
-      });
-    }
-  }, []);
-=======
->>>>>>> c97f6dee3bc17b688177bad000795d260eae3d63
   return (
     <ErrorBoundary>
       <HelmetProvider>
@@ -260,8 +239,5 @@ if (container) {
   const root = createRoot(container);
   root.render(<App />);
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> 025881f891b15c7d2a155d069a9bdf519fbae28d
 export default App;
