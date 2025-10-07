@@ -1,13 +1,15 @@
-'use client';
-
-import React, { Suspense, lazy, useCallback, useEffect, ErrorInfo } from 'react';
-import { HelmetProvider } from 'react-helmet-async';
+import React, { useEffect, lazy, Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
 
 // Components
-import AccessibilityEnhancer from './components/AccessibilityEnhancer';
-import PerformanceDashboard from './components/PerformanceDashboard';
 import SEOOptimizer from './components/SEOOptimizer';
+import AccessibilityEnhancer from './components/AccessibilityEnhancer';
+import AdvancedErrorBoundary from './components/AdvancedErrorBoundary';
+import AdvancedSEOOptimizer from './components/AdvancedSEOOptimizer';
+import AdvancedPerformanceMonitor from './components/AdvancedPerformanceMonitor';
+import SEOEnhancer from './components/SEOEnhancer';
+import PerformanceDashboard from './components/PerformanceDashboard';
 
 // Loading component
 const LoadingSpinner = () => (
@@ -21,38 +23,42 @@ const ErrorBoundary = ({ children }: { children: React.ReactNode }) => {
   return <>{children}</>;
 };
 
-// Utils
-import { lazyLoadImages, preloadCriticalResources, collectPerformanceMetrics, performanceOptimizer } from './utils/performanceOptimizer';
-import { logger } from './utils/logger';
-
 // Lazy load pages for better performance
 const HomePage = lazy(() => import('./page'));
+
+// Utils
+import { performanceOptimizer, collectPerformanceMetrics } from './utils/performanceOptimizer';
+import { logger } from './utils/logger';
 
 // Styles
 import '../index.css';
 
 const App: React.FC = () => {
   useEffect(() => {
+    // Initialize global error handling
+    console.log('App initialized');
+
     // Initialize performance monitoring
     performanceOptimizer.init();
     
     // Initialize Web Vitals monitoring
     if (typeof window !== 'undefined' && 'performance' in window) {
+      const pageLoadMetrics = collectPerformanceMetrics();
       const metrics = performanceOptimizer.getMetrics();
+      if (pageLoadMetrics) {
+        // eslint-disable-next-line no-console
+        console.log('Performance metrics collected:', pageLoadMetrics);
+      }
       if (metrics) {
-        logger.info('Performance metrics collected', 'App', { metrics });
+        // eslint-disable-next-line no-console
+        console.log('Performance metrics:', metrics);
       }
     }
-
-    // Preload critical resources
-    preloadCriticalResources();
     
-    logger.info('Performance monitoring initialized', 'App');
-    logger.info('🚀 Zion Tech Group App initialized with comprehensive monitoring', 'App');
-  }, []);
-
-  const handleError = useCallback((error: Error, errorInfo: ErrorInfo) => {
-    logger.error('Application Error', 'ErrorBoundary', { error: error.message, errorInfo });
+    // eslint-disable-next-line no-console
+    console.log('Performance monitoring initialized');
+    // eslint-disable-next-line no-console
+    console.log('🚀 Zion Tech Group App initialized with comprehensive monitoring');
   }, []);
 
   return (
