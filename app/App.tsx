@@ -1,13 +1,13 @@
 'use client';
 
-import React, { Suspense, useEffect } from 'react';
+import React, { Suspense, lazy, useEffect } from 'react';
 import { HelmetProvider } from 'react-helmet-async';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 // Components
 import SEOOptimizer from './components/SEOOptimizer';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
-// import PerformanceDashboard from './components/PerformanceDashboard';
+import PerformanceDashboard from './components/PerformanceDashboard';
 
 // Loading component
 const LoadingSpinner = () => (
@@ -24,11 +24,11 @@ const ErrorBoundary = ({ children }: { children: React.ReactNode }) => {
 // Utils
 import { preloadCriticalResources, performanceOptimizer } from './utils/performanceOptimizer';
 
-// Styles
-import './globals.css';
-
 // Import HomePage component
-import HomePage from '../page';
+import HomePage from './page';
+
+// Styles
+import '../index.css';
 
 const App: React.FC = () => {
   useEffect(() => {
@@ -79,13 +79,13 @@ const App: React.FC = () => {
                     <Route path='/' element={<HomePage />} />
                     {/* Add more routes as needed */}
                   </Routes>
-            </Suspense>
+                </Suspense>
 
-            {/* Performance Dashboard */}
-            {/* <PerformanceDashboard /> */}
-          </div>
-        </Router>
-        </AccessibilityEnhancer>
+                {/* Performance Dashboard */}
+                <PerformanceDashboard />
+              </div>
+            </Router>
+            </AccessibilityEnhancer>
         </div>
       </ErrorBoundary>
     </HelmetProvider>
@@ -93,4 +93,3 @@ const App: React.FC = () => {
 };
 
 export default App;
-
