@@ -16,12 +16,16 @@ interface ErrorBoundaryProps {
 }
 
 interface ErrorReport {
-  errorId: string;
+  errorId: string | null;
   error: Error;
   errorInfo: ErrorInfo;
+  message: string;
+  stack: string | undefined;
+  componentStack: string | null | undefined;
   timestamp: string;
   userAgent: string;
   url: string;
+  userId: string | null;
   sessionId: string;
 }
 
@@ -70,11 +74,13 @@ class AdvancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
   }
 
   private reportError = (error: Error, errorInfo: ErrorInfo) => {
-    const errorReport = {
+    const errorReport: ErrorReport = {
+      errorId: this.state.errorId,
+      error: error,
+      errorInfo: errorInfo,
       message: error.message,
       stack: error.stack,
       componentStack: errorInfo.componentStack,
-      errorId: this.state.errorId,
       timestamp: new Date().toISOString(),
       userAgent: navigator.userAgent,
       url: window.location.href,
@@ -109,7 +115,11 @@ class AdvancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
     }
   };
 
+<<<<<<< HEAD
   private sendErrorReport = async (errorReport: Record<string, unknown>) => {
+=======
+  private sendErrorReport = async (errorReport: ErrorReport) => {
+>>>>>>> 37545c2e32f35044aa55b03169325560ba719e8b
     try {
       // Send to your error reporting service
       await fetch('/api/errors', {
