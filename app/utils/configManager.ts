@@ -252,20 +252,29 @@ export class ConfigManager {
    * Deep merge two config objects
    */
   private mergeConfig(base: AppConfig, override: Partial<AppConfig>): AppConfig {
-    const result = { ...base };
+    const result: AppConfig = { ...base };
 
-    for (const key in override) {
-      const value = override[key as keyof AppConfig];
-      if (value !== undefined) {
-        if (typeof value === 'object' && !Array.isArray(value)) {
-          result[key as keyof AppConfig] = {
-            ...result[key as keyof AppConfig],
-            ...value,
-          } as AppConfig[keyof AppConfig];
-        } else {
-          result[key as keyof AppConfig] = value as AppConfig[keyof AppConfig];
-        }
-      }
+    // Handle each property type safely
+    if (override.environment !== undefined) {
+      result.environment = override.environment;
+    }
+    if (override.api !== undefined) {
+      result.api = { ...base.api, ...override.api };
+    }
+    if (override.features !== undefined) {
+      result.features = { ...base.features, ...override.features };
+    }
+    if (override.performance !== undefined) {
+      result.performance = { ...base.performance, ...override.performance };
+    }
+    if (override.security !== undefined) {
+      result.security = { ...base.security, ...override.security };
+    }
+    if (override.ui !== undefined) {
+      result.ui = { ...base.ui, ...override.ui };
+    }
+    if (override.logging !== undefined) {
+      result.logging = { ...base.logging, ...override.logging };
     }
 
     return result;
@@ -303,12 +312,17 @@ export class ConfigManager {
     nestedKeyOrValue: NK | AppConfig[K],
     value?: AppConfig[K][NK]
   ): void {
-    if (value !== undefined && typeof nestedKeyOrValue === 'string') {
-      this.config[key] = {
-        ...this.config[key],
-        [nestedKeyOrValue]: value,
-      } as AppConfig[K];
+    if (value !== undefined && typeof nestedKeyOrValue !== 'object') {
+      // Handle nested property update
+      const currentValue = this.config[key];
+      if (typeof currentValue === 'object' && !Array.isArray(currentValue) && currentValue !== null) {
+        (this.config[key] as Record<string, unknown>) = {
+          ...(currentValue as Record<string, unknown>),
+          [nestedKeyOrValue as string]: value,
+        };
+      }
     } else {
+      // Handle direct property update
       this.config[key] = nestedKeyOrValue as AppConfig[K];
     }
   }
