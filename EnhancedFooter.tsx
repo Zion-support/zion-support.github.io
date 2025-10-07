@@ -1,3 +1,5 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
 import {
   Github,
   Linkedin,
@@ -6,8 +8,6 @@ import {
   Phone,
   Twitter,
 } from 'lucide-react';
-import React from 'react';
-import { Link } from 'react-router-dom';
 
 const EnhancedFooter: React.FC = () => {
   const currentYear = new Date().getFullYear();
