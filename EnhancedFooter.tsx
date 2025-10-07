@@ -1,4 +1,4 @@
-import { GithubIcon, LinkedinIcon, Mail, MapPin, Phone, Twitter } from 'lucide-react';
+import { Github, Linkedin, Mail, MapPin, Phone, Twitter } from 'lucide-react';
 import React from 'react';
 import { Link } from 'react-router-dom';
 
@@ -63,7 +63,7 @@ const EnhancedFooter: React.FC = () => {
                 href='https://github.com/ziontechgroup'
                 className='text-gray-400 hover:text-white transition-colors'
               >
-                <GithubIcon className='w-5 h-5' />
+                <Github className='w-5 h-5' />
               </a>
             </div>
           </div>
