@@ -22,12 +22,16 @@ const ErrorBoundary = ({ children }: { children: React.ReactNode }) => {
 // Lazy load pages for better performance
 const HomePage = lazy(() => import('./page'));
 
+<<<<<<< HEAD
 // Utils
 <<<<<<< HEAD
 import { lazyLoadImages, preloadCriticalResources, collectPerformanceMetrics } from './utils/performanceOptimizer';
 =======
 import { performanceOptimizer } from './utils/performanceOptimizer';
 >>>>>>> cursor/fix-errors-and-merge-to-main-0754
+=======
+// Utils - performanceOptimizer removed as it doesn't exist
+>>>>>>> cursor/fix-errors-and-merge-to-main-1e62
 
 // Styles
 import '../index.css';
@@ -37,6 +41,7 @@ const App: React.FC = () => {
     // Initialize global error handling
     console.log('App initialized');
 
+<<<<<<< HEAD
     // Initialize performance monitoring
 <<<<<<< HEAD
     lazyLoadImages();
@@ -58,6 +63,10 @@ const App: React.FC = () => {
 >>>>>>> cursor/fix-errors-and-merge-to-main-0754
       }
     }
+=======
+    // Initialize performance monitoring - performanceOptimizer removed
+    // Web Vitals monitoring can be added here if needed
+>>>>>>> cursor/fix-errors-and-merge-to-main-1e62
     
     console.log('Performance monitoring initialized');
     console.log(

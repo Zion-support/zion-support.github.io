@@ -99,9 +99,12 @@ const App = () => {
       // Initialize enhanced performance monitoring
       performanceEnhancer.startMonitoring();
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       performanceOptimizer.init();
 >>>>>>> cursor/fix-errors-and-merge-to-main-0754
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-1e62
       
       // Preload critical fonts
       const fontLink = document.createElement('link');
