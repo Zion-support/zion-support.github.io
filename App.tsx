@@ -183,8 +183,7 @@ const App = () => {
       >
         <AdvancedSEOOptimizer
           enableStructuredData={true}
-          enableAnalytics={true}
-          enablePerformanceTracking={true}
+          enableAnalytics={true} enablePerformanceTracking={true}
         />
         <HelmetProvider>
           <BrowserRouter>
