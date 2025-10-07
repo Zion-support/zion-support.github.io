@@ -1,13 +1,11 @@
 import { render, screen } from '@testing-library/react';
-import { describe, it, expect } from '@jest/globals';
-import '@testing-library/jest-dom';
+import { describe, it, expect } from 'vitest';
+import HomePage from './app/page-minimal';
 import React from 'react';
 
-describe('AppMinimal', () => {
+describe('HomePage', () => {
   it('renders without crashing', () => {
-    // Mock component for testing
-    const MockAppMinimal = () => <div>Zion Tech Group</div>;
-    render(<MockAppMinimal />);
+    render(<HomePage />);
     expect(screen.getByText(/Zion Tech Group/i)).toBeInTheDocument();
   });
 });
