@@ -148,7 +148,7 @@ export function startHealthMonitoring(intervalMs: number = 60000): () => void {
     const health = await performHealthCheck();
     
     if (health.status !== 'healthy') {
-      logger.warn('Application health degraded', { status: health.status, checks: JSON.stringify(health.checks) });
+      logger.warn('Application health degraded:', { status: health.status, checks: health.checks, metrics: health.metrics });
     }
   }, intervalMs);
 
