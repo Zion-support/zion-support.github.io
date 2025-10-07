@@ -25,7 +25,7 @@ const SidebarNavigation: React.FC = () => {
             {isOpen ? <X className='w-6 h-6' /> : <Menu className='w-6 h-6' />}
           </button>
         </div>
-        
+
         <nav className='px-4 space-y-2'>
           {navigationItems.map(item => {
             const IconComponent = item.icon;
@@ -38,13 +38,15 @@ const SidebarNavigation: React.FC = () => {
                 }`}
               >
                 <IconComponent className='w-5 h-5' />
-                {isOpen && <span className='ml-3 font-medium'>{item.name}</span>}
+                {isOpen && (
+                  <span className='ml-3 font-medium'>{item.name}</span>
+                )}
               </Link>
             );
           })}
         </nav>
       </div>
-      
+
       {/* Main Content */}
       <div className='flex-1 p-8'>
         <h1 className='text-2xl font-bold text-gray-800'>Dashboard</h1>

@@ -78,7 +78,12 @@ class TestRunner {
       bail: false,
       reporter: 'console',
       outputDir: './test-results',
-      includePattern: ['**/*.test.ts', '**/*.test.tsx', '**/*.spec.ts', '**/*.spec.tsx'],
+      includePattern: [
+        '**/*.test.ts',
+        '**/*.test.tsx',
+        '**/*.spec.ts',
+        '**/*.spec.tsx',
+      ],
       excludePattern: ['**/node_modules/**', '**/dist/**'],
       ...config,
     };
@@ -111,7 +116,11 @@ class TestRunner {
   /**
    * Create a test case
    */
-  public it(name: string, fn: () => void | Promise<void>, timeout?: number): void {
+  public it(
+    name: string,
+    fn: () => void | Promise<void>,
+    timeout?: number
+  ): void {
     if (!this.currentSuite) {
       throw new Error('Test must be inside a describe block');
     }
@@ -207,8 +216,8 @@ class TestRunner {
 
     try {
       // eslint-disable-next-line no-console
-console.log('🚀 Starting test run...');
-      
+      console.log('🚀 Starting test run...');
+
       for (const suite of this.suites) {
         await this.runSuite(suite);
       }
@@ -225,7 +234,7 @@ console.log('🚀 Starting test run...');
    */
   private async runSuite(suite: TestSuite): Promise<void> {
     // eslint-disable-next-line no-console
-console.log(`\n📁 Running suite: ${suite.name}`);
+    console.log(`\n📁 Running suite: ${suite.name}`);
 
     // Run beforeAll hooks
     for (const hook of suite.beforeAll) {
@@ -284,7 +293,7 @@ console.log(`\n📁 Running suite: ${suite.name}`);
 
       if (this.config.verbose) {
         // eslint-disable-next-line no-console
-console.log(`✅ ${testName} (${Date.now() - startTime}ms)`);
+        console.log(`✅ ${testName} (${Date.now() - startTime}ms)`);
       }
     } catch (error) {
       this.results.push({
@@ -296,9 +305,9 @@ console.log(`✅ ${testName} (${Date.now() - startTime}ms)`);
       });
 
       // eslint-disable-next-line no-console
-console.error(`❌ ${testName} (${Date.now() - startTime}ms)`);
+      console.error(`❌ ${testName} (${Date.now() - startTime}ms)`);
       // eslint-disable-next-line no-console
-console.error(error);
+      console.error(error);
 
       if (this.config.bail) {
         throw error;
@@ -309,12 +318,15 @@ console.error(error);
   /**
    * Run a hook
    */
-  private async runHook(hook: () => void | Promise<void>, hookName: string): Promise<void> {
+  private async runHook(
+    hook: () => void | Promise<void>,
+    hookName: string
+  ): Promise<void> {
     try {
       await hook();
     } catch (error) {
       // eslint-disable-next-line no-console
-console.error(`❌ ${hookName} hook failed:`, error);
+      console.error(`❌ ${hookName} hook failed:`, error);
       throw error;
     }
   }
@@ -322,7 +334,10 @@ console.error(`❌ ${hookName} hook failed:`, error);
   /**
    * Run function with timeout
    */
-  private async runWithTimeout(fn: () => void | Promise<void>, timeout: number): Promise<void> {
+  private async runWithTimeout(
+    fn: () => void | Promise<void>,
+    timeout: number
+  ): Promise<void> {
     return new Promise((resolve, reject) => {
       const timer = setTimeout(() => {
         reject(new Error(`Test timed out after ${timeout}ms`));
@@ -350,17 +365,17 @@ console.error(`❌ ${hookName} hook failed:`, error);
     const skipped = this.results.filter(r => r.status === 'skipped').length;
 
     // eslint-disable-next-line no-console
-console.log('\n📊 Test Results:');
+    console.log('\n📊 Test Results:');
     // eslint-disable-next-line no-console
-console.log(`Total: ${this.results.length}`);
+    console.log(`Total: ${this.results.length}`);
     // eslint-disable-next-line no-console
-console.log(`Passed: ${passed}`);
+    console.log(`Passed: ${passed}`);
     // eslint-disable-next-line no-console
-console.log(`Failed: ${failed}`);
+    console.log(`Failed: ${failed}`);
     // eslint-disable-next-line no-console
-console.log(`Skipped: ${skipped}`);
+    console.log(`Skipped: ${skipped}`);
     // eslint-disable-next-line no-console
-console.log(`Duration: ${duration}ms`);
+    console.log(`Duration: ${duration}ms`);
 
     if (this.config.reporter === 'json') {
       this.generateJsonReport();
@@ -388,9 +403,9 @@ console.log(`Duration: ${duration}ms`);
     };
 
     // eslint-disable-next-line no-console
-console.log('\n📄 JSON Report:');
+    console.log('\n📄 JSON Report:');
     // eslint-disable-next-line no-console
-console.log(JSON.stringify(report, null, 2));
+    console.log(JSON.stringify(report, null, 2));
   }
 
   /**
@@ -422,22 +437,26 @@ console.log(JSON.stringify(report, null, 2));
         <p>Duration: ${Date.now() - this.startTime}ms</p>
     </div>
     <div class="tests">
-        ${this.results.map(result => `
+        ${this.results
+          .map(
+            result => `
             <div class="test ${result.status}">
                 <h3>${result.name}</h3>
                 <p>Status: ${result.status}</p>
                 <p>Duration: ${result.duration}ms</p>
                 ${result.error ? `<p>Error: ${result.error.message}</p>` : ''}
             </div>
-        `).join('')}
+        `
+          )
+          .join('')}
     </div>
 </body>
 </html>`;
 
     // eslint-disable-next-line no-console
-console.log('\n📄 HTML Report generated');
+    console.log('\n📄 HTML Report generated');
     // eslint-disable-next-line no-console
-console.log(html);
+    console.log(html);
   }
 
   /**
@@ -447,19 +466,23 @@ console.log(html);
     const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
     <testsuite name="Test Suite" tests="${this.results.length}" failures="${this.results.filter(r => r.status === 'failed').length}" skipped="${this.results.filter(r => r.status === 'skipped').length}" time="${(Date.now() - this.startTime) / 1000}">
-        ${this.results.map(result => `
+        ${this.results
+          .map(
+            result => `
             <testcase name="${result.name}" time="${result.duration / 1000}">
                 ${result.status === 'failed' ? `<failure message="${result.error?.message}">${result.error?.stack}</failure>` : ''}
                 ${result.status === 'skipped' ? '<skipped/>' : ''}
             </testcase>
-        `).join('')}
+        `
+          )
+          .join('')}
     </testsuite>
 </testsuites>`;
 
     // eslint-disable-next-line no-console
-console.log('\n📄 JUnit Report:');
+    console.log('\n📄 JUnit Report:');
     // eslint-disable-next-line no-console
-console.log(xml);
+    console.log(xml);
   }
 }
 
@@ -488,7 +511,11 @@ class Assert {
   /**
    * Assert that two values are equal
    */
-  public static assertEquals(actual: unknown, expected: unknown, message?: string): void {
+  public static assertEquals(
+    actual: unknown,
+    expected: unknown,
+    message?: string
+  ): void {
     if (actual !== expected) {
       throw new Error(message || `Expected ${actual} to equal ${expected}`);
     }
@@ -497,7 +524,11 @@ class Assert {
   /**
    * Assert that two values are not equal
    */
-  public static assertNotEquals(actual: unknown, expected: unknown, message?: string): void {
+  public static assertNotEquals(
+    actual: unknown,
+    expected: unknown,
+    message?: string
+  ): void {
     if (actual === expected) {
       throw new Error(message || `Expected ${actual} to not equal ${expected}`);
     }
@@ -542,7 +573,10 @@ class Assert {
   /**
    * Assert that a value throws an error
    */
-  public static assertThrows(fn: () => void, expectedError?: string | RegExp): void {
+  public static assertThrows(
+    fn: () => void,
+    expectedError?: string | RegExp
+  ): void {
     try {
       fn();
       throw new Error('Expected function to throw an error');
@@ -551,11 +585,15 @@ class Assert {
         const errorMessage = (error as Error).message;
         if (typeof expectedError === 'string') {
           if (!errorMessage.includes(expectedError)) {
-            throw new Error(`Expected error message to contain "${expectedError}", but got "${errorMessage}"`);
+            throw new Error(
+              `Expected error message to contain "${expectedError}", but got "${errorMessage}"`
+            );
           }
         } else {
           if (!expectedError.test(errorMessage)) {
-            throw new Error(`Expected error message to match ${expectedError}, but got "${errorMessage}"`);
+            throw new Error(
+              `Expected error message to match ${expectedError}, but got "${errorMessage}"`
+            );
           }
         }
       }
@@ -569,16 +607,24 @@ class Assert {
     try {
       fn();
     } catch (error) {
-      throw new Error(`Expected function not to throw, but it threw: ${(error as Error).message}`);
+      throw new Error(
+        `Expected function not to throw, but it threw: ${(error as Error).message}`
+      );
     }
   }
 
   /**
    * Assert that a value is an instance of a class
    */
-  public static assertInstanceOf(value: unknown, constructor: new (...args: unknown[]) => unknown, message?: string): void {
+  public static assertInstanceOf(
+    value: unknown,
+    constructor: new (...args: unknown[]) => unknown,
+    message?: string
+  ): void {
     if (!(value instanceof constructor)) {
-      throw new Error(message || `Expected ${value} to be an instance of ${constructor.name}`);
+      throw new Error(
+        message || `Expected ${value} to be an instance of ${constructor.name}`
+      );
     }
   }
 
@@ -646,7 +692,9 @@ class Mock {
   /**
    * Create a mock function
    */
-  public static fn(implementation?: (...args: unknown[]) => unknown): MockFunction {
+  public static fn(
+    implementation?: (...args: unknown[]) => unknown
+  ): MockFunction {
     const calls: unknown[][] = [];
     const mockFn = (...args: unknown[]) => {
       calls.push(args);
@@ -655,20 +703,22 @@ class Mock {
       }
       return undefined;
     };
-    
+
     (mockFn as MockFunction).mock = {
       calls,
       results: [],
       instances: [],
     };
-    
+
     return mockFn as MockFunction;
   }
 
   /**
    * Create a mock object
    */
-  public static object<T extends Record<string, unknown>>(overrides: Partial<T> = {}): T {
+  public static object<T extends Record<string, unknown>>(
+    overrides: Partial<T> = {}
+  ): T {
     return new Proxy({} as T, {
       get(target, prop) {
         if (prop in overrides) {
@@ -690,7 +740,7 @@ class Mock {
       const instance = new constructor(...args) as InstanceType<T>;
       return Object.assign(instance as object, overrides);
     });
-    
+
     return mockFn;
   }
 
@@ -703,13 +753,13 @@ class Mock {
   ): MockFunction {
     const original = object[method];
     const mockFn = Mock.fn();
-    
+
     (object as Record<string, unknown>)[method as string] = mockFn;
-    
+
     (mockFn as MockFunction & { mockRestore: () => void }).mockRestore = () => {
       (object as Record<string, unknown>)[method as string] = original;
     };
-    
+
     return mockFn as MockFunction;
   }
 
@@ -747,4 +797,11 @@ interface MockFunction {
 // Export test runner and utilities
 export const testRunner = new TestRunner();
 export { TestRunner, Assert, Mock };
-export type { TestConfig, TestResult, TestSuite, Test, AssertionResult, CoverageResult };
+export type {
+  TestConfig,
+  TestResult,
+  TestSuite,
+  Test,
+  AssertionResult,
+  CoverageResult,
+};

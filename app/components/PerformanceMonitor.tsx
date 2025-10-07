@@ -16,9 +16,9 @@ export default function PerformanceMonitor() {
   useEffect(() => {
     if (typeof window === 'undefined') return;
 
-    const observer = new PerformanceObserver((list) => {
+    const observer = new PerformanceObserver(list => {
       const entries = list.getEntries();
-      entries.forEach((entry) => {
+      entries.forEach(entry => {
         if (entry.entryType === 'paint') {
           if (entry.name === 'first-contentful-paint') {
             const newMetrics = { fcp: entry.startTime };
@@ -28,7 +28,14 @@ export default function PerformanceMonitor() {
       });
     });
 
-    observer.observe({ entryTypes: ['paint', 'largest-contentful-paint', 'first-input', 'layout-shift'] });
+    observer.observe({
+      entryTypes: [
+        'paint',
+        'largest-contentful-paint',
+        'first-input',
+        'layout-shift',
+      ],
+    });
 
     return () => observer.disconnect();
   }, []);
@@ -38,8 +45,8 @@ export default function PerformanceMonitor() {
   }
 
   return (
-    <div className="fixed bottom-4 right-4 bg-black bg-opacity-75 text-white p-4 rounded-lg text-xs font-mono">
-      <div className="font-bold mb-2">Performance Metrics</div>
+    <div className='fixed bottom-4 right-4 bg-black bg-opacity-75 text-white p-4 rounded-lg text-xs font-mono'>
+      <div className='font-bold mb-2'>Performance Metrics</div>
       {metrics.fcp && <div>FCP: {metrics.fcp.toFixed(2)}ms</div>}
       {metrics.lcp && <div>LCP: {metrics.lcp.toFixed(2)}ms</div>}
       {metrics.fid && <div>FID: {metrics.fid.toFixed(2)}ms</div>}

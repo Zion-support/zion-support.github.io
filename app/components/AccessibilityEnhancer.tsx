@@ -23,10 +23,10 @@ interface AccessibilityEnhancerRef {
   setFontSize: (size: number) => void;
 }
 
-const AccessibilityEnhancer = React.forwardRef<AccessibilityEnhancerRef, AccessibilityEnhancerProps>(({
-  config = {},
-  children,
-}, ref) => {
+const AccessibilityEnhancer = React.forwardRef<
+  AccessibilityEnhancerRef,
+  AccessibilityEnhancerProps
+>(({ config = {}, children }, ref) => {
   const [isHighContrast, setIsHighContrast] = useState(false);
   const [isReducedMotion, setIsReducedMotion] = useState(false);
   const [fontSize, setFontSize] = useState(16);
@@ -72,18 +72,18 @@ const AccessibilityEnhancer = React.forwardRef<AccessibilityEnhancerRef, Accessi
     const setupSkipLinks = () => {
       const skipLinksContainer = document.createElement('div');
       skipLinksContainer.className = 'skip-links';
-      
+
       const skipToMain = document.createElement('a');
       skipToMain.href = '#main-content';
       skipToMain.textContent = 'Skip to main content';
       skipToMain.className = 'skip-link';
       // skipToMain.ref = skipLinkRef; // Removed incorrect ref assignment
-      
+
       const skipToNav = document.createElement('a');
       skipToNav.href = '#main-navigation';
       skipToNav.textContent = 'Skip to navigation';
       skipToNav.className = 'skip-link';
-      
+
       skipLinksContainer.appendChild(skipToMain);
       skipLinksContainer.appendChild(skipToNav);
       document.body.insertBefore(skipLinksContainer, document.body.firstChild);
@@ -145,7 +145,9 @@ const AccessibilityEnhancer = React.forwardRef<AccessibilityEnhancerRef, Accessi
 
     const setupARIALandmarks = () => {
       // Add main landmark
-      const mainElement = document.querySelector('main') || document.querySelector('#main-content');
+      const mainElement =
+        document.querySelector('main') ||
+        document.querySelector('#main-content');
       if (mainElement) {
         mainElement.setAttribute('role', 'main');
         mainElement.setAttribute('id', 'main-content');
@@ -175,7 +177,7 @@ const AccessibilityEnhancer = React.forwardRef<AccessibilityEnhancerRef, Accessi
 
     const setupScreenReaderSupport = () => {
       addScreenReaderOnlyText();
-      
+
       // Add live region for announcements
       const liveRegion = document.createElement('div');
       liveRegion.id = 'live-region';
@@ -206,8 +208,9 @@ const AccessibilityEnhancer = React.forwardRef<AccessibilityEnhancerRef, Accessi
     };
 
     const setupFocusManagement = () => {
-      const focusableElements = 'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
-      
+      const focusableElements =
+        'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
+
       const handleFocusIn = (event: FocusEvent) => {
         const target = event.target as HTMLElement;
         if (focusVisible && target.matches(focusableElements)) {
@@ -231,7 +234,9 @@ const AccessibilityEnhancer = React.forwardRef<AccessibilityEnhancerRef, Accessi
 
     const setupMediaQueries = () => {
       const highContrastQuery = window.matchMedia('(prefers-contrast: high)');
-      const reducedMotionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+      const reducedMotionQuery = window.matchMedia(
+        '(prefers-reduced-motion: reduce)'
+      );
 
       const handleHighContrastChange = (e: MediaQueryListEvent) => {
         setIsHighContrast(e.matches);
@@ -249,8 +254,14 @@ const AccessibilityEnhancer = React.forwardRef<AccessibilityEnhancerRef, Accessi
       setIsReducedMotion(reducedMotionQuery.matches);
 
       return () => {
-        highContrastQuery.removeEventListener('change', handleHighContrastChange);
-        reducedMotionQuery.removeEventListener('change', handleReducedMotionChange);
+        highContrastQuery.removeEventListener(
+          'change',
+          handleHighContrastChange
+        );
+        reducedMotionQuery.removeEventListener(
+          'change',
+          handleReducedMotionChange
+        );
       };
     };
 
@@ -262,7 +273,15 @@ const AccessibilityEnhancer = React.forwardRef<AccessibilityEnhancerRef, Accessi
     initializeAccessibility();
 
     return cleanupEventListeners;
-  }, [focusVisible, mergedConfig.enableARIALabels, mergedConfig.enableColorContrast, mergedConfig.enableFocusManagement, mergedConfig.enableKeyboardNavigation, mergedConfig.enableScreenReaderSupport, mergedConfig.enableSkipLinks]);
+  }, [
+    focusVisible,
+    mergedConfig.enableARIALabels,
+    mergedConfig.enableColorContrast,
+    mergedConfig.enableFocusManagement,
+    mergedConfig.enableKeyboardNavigation,
+    mergedConfig.enableScreenReaderSupport,
+    mergedConfig.enableSkipLinks,
+  ]);
 
   // Announce changes to screen readers
   const announceToScreenReader = (message: string) => {
@@ -273,10 +292,14 @@ const AccessibilityEnhancer = React.forwardRef<AccessibilityEnhancerRef, Accessi
   };
 
   // Expose utility functions
-  React.useImperativeHandle(ref, () => ({
-    announceToScreenReader,
-    setFontSize: (size: number) => setFontSize(size),
-  }), []);
+  React.useImperativeHandle(
+    ref,
+    () => ({
+      announceToScreenReader,
+      setFontSize: (size: number) => setFontSize(size),
+    }),
+    []
+  );
 
   return (
     <div

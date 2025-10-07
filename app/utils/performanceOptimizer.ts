@@ -38,7 +38,7 @@ export const lazyLoadImages = () => {
   }
 
   const imageObserver = new IntersectionObserver((entries, observer) => {
-    entries.forEach((entry) => {
+    entries.forEach(entry => {
       if (entry.isIntersecting) {
         const img = entry.target as HTMLImageElement;
         if (img.dataset.src) {
@@ -51,19 +51,16 @@ export const lazyLoadImages = () => {
   });
 
   const lazyImages = document.querySelectorAll('img[data-src]');
-  lazyImages.forEach((img) => imageObserver.observe(img));
+  lazyImages.forEach(img => imageObserver.observe(img));
 };
 
 // Preload critical resources
 export const preloadCriticalResources = () => {
   if (typeof document === 'undefined') return;
 
-  const criticalResources = [
-    '/fonts/inter.woff2',
-    '/css/critical.css',
-  ];
+  const criticalResources = ['/fonts/inter.woff2', '/css/critical.css'];
 
-  criticalResources.forEach((resource) => {
+  criticalResources.forEach(resource => {
     const link = document.createElement('link');
     link.rel = 'preload';
     link.href = resource;
@@ -102,7 +99,11 @@ export const getMemoryUsage = (): number | null => {
     return null;
   }
 
-  const memory = (performance as { memory: { usedJSHeapSize: number; totalJSHeapSize: number } }).memory;
+  const memory = (
+    performance as {
+      memory: { usedJSHeapSize: number; totalJSHeapSize: number };
+    }
+  ).memory;
   return memory.usedJSHeapSize / memory.totalJSHeapSize;
 };
 
@@ -112,13 +113,19 @@ export const collectPerformanceMetrics = () => {
     return null;
   }
 
-  const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+  const navigation = performance.getEntriesByType(
+    'navigation'
+  )[0] as PerformanceNavigationTiming;
   const paintEntries = performance.getEntriesByType('paint');
-  
+
   return {
     loadTime: navigation.loadEventEnd - navigation.fetchStart,
-    domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
-    firstContentfulPaint: paintEntries.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0,
+    domContentLoaded:
+      navigation.domContentLoadedEventEnd -
+      navigation.domContentLoadedEventStart,
+    firstContentfulPaint:
+      paintEntries.find(entry => entry.name === 'first-contentful-paint')
+        ?.startTime || 0,
     memoryUsage: getMemoryUsage(),
   };
 };
@@ -173,7 +180,7 @@ class PerformanceOptimizer {
     this.setupPerformanceObservers();
 
     // eslint-disable-next-line no-console
-console.log('Performance monitoring initialized');
+    console.log('Performance monitoring initialized');
   }
 
   /**
@@ -198,14 +205,20 @@ console.log('Performance monitoring initialized');
     this.measureTTFB();
   }
 
-  private observePaint(entryName: string, metricName: keyof PerformanceMetrics): void {
-    const observer = new PerformanceObserver((list) => {
+  private observePaint(
+    entryName: string,
+    metricName: keyof PerformanceMetrics
+  ): void {
+    const observer = new PerformanceObserver(list => {
       const entries = list.getEntries();
-      entries.forEach((entry) => {
+      entries.forEach(entry => {
         if (entry.name === entryName) {
           this.metrics[metricName] = entry.startTime;
           // eslint-disable-next-line no-console
-console.log(`${String(metricName).toUpperCase()} measured:`, entry.startTime);
+          console.log(
+            `${String(metricName).toUpperCase()} measured:`,
+            entry.startTime
+          );
         }
       });
     });
@@ -215,12 +228,12 @@ console.log(`${String(metricName).toUpperCase()} measured:`, entry.startTime);
   }
 
   private observeLCP(): void {
-    const observer = new PerformanceObserver((list) => {
+    const observer = new PerformanceObserver(list => {
       const entries = list.getEntries();
       const lastEntry = entries[entries.length - 1];
       this.metrics.lcp = lastEntry.startTime;
       // eslint-disable-next-line no-console
-console.log('LCP measured:', lastEntry.startTime);
+      console.log('LCP measured:', lastEntry.startTime);
     });
 
     observer.observe({ entryTypes: ['largest-contentful-paint'] });
@@ -228,14 +241,20 @@ console.log('LCP measured:', lastEntry.startTime);
   }
 
   private observeFID(): void {
-    const observer = new PerformanceObserver((list) => {
+    const observer = new PerformanceObserver(list => {
       const entries = list.getEntries();
-      entries.forEach((entry) => {
-        if (entry.entryType === 'first-input' && 'processingStart' in entry && 'startTime' in entry) {
-          const fid = (entry as PerformanceEventTiming).processingStart - (entry as PerformanceEventTiming).startTime;
+      entries.forEach(entry => {
+        if (
+          entry.entryType === 'first-input' &&
+          'processingStart' in entry &&
+          'startTime' in entry
+        ) {
+          const fid =
+            (entry as PerformanceEventTiming).processingStart -
+            (entry as PerformanceEventTiming).startTime;
           this.metrics.fid = fid;
           // eslint-disable-next-line no-console
-console.log('FID measured:', fid);
+          console.log('FID measured:', fid);
         }
       });
     });
@@ -246,16 +265,23 @@ console.log('FID measured:', fid);
 
   private observeCLS(): void {
     let clsValue = 0;
-    const observer = new PerformanceObserver((list) => {
+    const observer = new PerformanceObserver(list => {
       const entries = list.getEntries();
-      entries.forEach((entry) => {
-        if (entry.entryType === 'layout-shift' && 'hadRecentInput' in entry && 'value' in entry) {
-          const layoutEntry = entry as PerformanceEntry & { hadRecentInput: boolean; value: number };
+      entries.forEach(entry => {
+        if (
+          entry.entryType === 'layout-shift' &&
+          'hadRecentInput' in entry &&
+          'value' in entry
+        ) {
+          const layoutEntry = entry as PerformanceEntry & {
+            hadRecentInput: boolean;
+            value: number;
+          };
           if (!layoutEntry.hadRecentInput) {
             clsValue += layoutEntry.value;
             this.metrics.cls = clsValue;
             // eslint-disable-next-line no-console
-console.log('CLS measured:', clsValue);
+            console.log('CLS measured:', clsValue);
           }
         }
       });
@@ -266,12 +292,14 @@ console.log('CLS measured:', clsValue);
   }
 
   private measureTTFB(): void {
-    const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+    const navigationEntry = performance.getEntriesByType(
+      'navigation'
+    )[0] as PerformanceNavigationTiming;
     if (navigationEntry) {
       const ttfb = navigationEntry.responseStart - navigationEntry.requestStart;
       this.metrics.ttfb = ttfb;
       // eslint-disable-next-line no-console
-console.log('TTFB measured:', ttfb);
+      console.log('TTFB measured:', ttfb);
     }
   }
 
@@ -284,9 +312,11 @@ console.log('TTFB measured:', ttfb);
     }
 
     // First Contentful Paint (FCP)
-    const fcpObserver = new PerformanceObserver((list) => {
+    const fcpObserver = new PerformanceObserver(list => {
       const entries = list.getEntries();
-      const fcpEntry = entries.find(entry => entry.name === 'first-contentful-paint');
+      const fcpEntry = entries.find(
+        entry => entry.name === 'first-contentful-paint'
+      );
       if (fcpEntry) {
         this.metrics.fcp = fcpEntry.startTime;
         this.reportMetric('fcp', fcpEntry.startTime);
@@ -295,7 +325,7 @@ console.log('TTFB measured:', ttfb);
     fcpObserver.observe({ entryTypes: ['paint'] });
 
     // Largest Contentful Paint (LCP)
-    const lcpObserver = new PerformanceObserver((list) => {
+    const lcpObserver = new PerformanceObserver(list => {
       const entries = list.getEntries();
       const lastEntry = entries[entries.length - 1];
       if (lastEntry) {
@@ -306,13 +336,16 @@ console.log('TTFB measured:', ttfb);
     lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
 
     // First Input Delay (FID)
-    const fidObserver = new PerformanceObserver((list) => {
+    const fidObserver = new PerformanceObserver(list => {
       const entries = list.getEntries();
       entries.forEach((entry: PerformanceEntry) => {
         if (entry.entryType === 'first-input') {
           const fidEntry = entry as PerformanceEventTiming;
           this.metrics.fid = fidEntry.processingStart - fidEntry.startTime;
-          this.reportMetric('fid', fidEntry.processingStart - fidEntry.startTime);
+          this.reportMetric(
+            'fid',
+            fidEntry.processingStart - fidEntry.startTime
+          );
         }
       });
     });
@@ -320,10 +353,13 @@ console.log('TTFB measured:', ttfb);
 
     // Cumulative Layout Shift (CLS)
     let clsValue = 0;
-    const clsObserver = new PerformanceObserver((list) => {
+    const clsObserver = new PerformanceObserver(list => {
       const entries = list.getEntries();
       entries.forEach((entry: PerformanceEntry) => {
-        const clsEntry = entry as PerformanceEntry & { hadRecentInput?: boolean; value: number };
+        const clsEntry = entry as PerformanceEntry & {
+          hadRecentInput?: boolean;
+          value: number;
+        };
         if (!clsEntry.hadRecentInput) {
           clsValue += clsEntry.value;
           this.metrics.cls = clsValue;
@@ -334,7 +370,7 @@ console.log('TTFB measured:', ttfb);
     clsObserver.observe({ entryTypes: ['layout-shift'] });
 
     // Time to First Byte (TTFB)
-    const navigationObserver = new PerformanceObserver((list) => {
+    const navigationObserver = new PerformanceObserver(list => {
       const entries = list.getEntries();
       const navEntry = entries[0] as PerformanceNavigationTiming;
       if (navEntry) {
@@ -344,7 +380,13 @@ console.log('TTFB measured:', ttfb);
     });
     navigationObserver.observe({ entryTypes: ['navigation'] });
 
-    this.observers.push(fcpObserver, lcpObserver, fidObserver, clsObserver, navigationObserver);
+    this.observers.push(
+      fcpObserver,
+      lcpObserver,
+      fidObserver,
+      clsObserver,
+      navigationObserver
+    );
   }
 
   /**
@@ -357,13 +399,13 @@ console.log('TTFB measured:', ttfb);
 
     // Preload critical fonts
     this.preloadFonts();
-    
+
     // Optimize images
     this.optimizeImages();
-    
+
     // Setup resource hints
     this.setupResourceHints();
-    
+
     // Optimize third-party scripts
     this.optimizeThirdPartyScripts();
   }
@@ -391,9 +433,9 @@ console.log('TTFB measured:', ttfb);
    */
   private optimizeImages(): void {
     const images = document.querySelectorAll('img[data-src]');
-    
+
     if ('IntersectionObserver' in window) {
-      const imageObserver = new IntersectionObserver((entries) => {
+      const imageObserver = new IntersectionObserver(entries => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
             const img = entry.target as HTMLImageElement;
@@ -417,8 +459,16 @@ console.log('TTFB measured:', ttfb);
     const hints = [
       { rel: 'dns-prefetch', href: 'https://fonts.googleapis.com' },
       { rel: 'dns-prefetch', href: 'https://fonts.gstatic.com' },
-      { rel: 'preconnect', href: 'https://fonts.googleapis.com', crossorigin: 'anonymous' },
-      { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: 'anonymous' },
+      {
+        rel: 'preconnect',
+        href: 'https://fonts.googleapis.com',
+        crossorigin: 'anonymous',
+      },
+      {
+        rel: 'preconnect',
+        href: 'https://fonts.gstatic.com',
+        crossorigin: 'anonymous',
+      },
     ];
 
     hints.forEach(hint => {
@@ -445,10 +495,7 @@ console.log('TTFB measured:', ttfb);
    * Setup preloading for critical resources
    */
   private async setupPreloading(): Promise<void> {
-    const criticalResources = [
-      '/app/main.tsx',
-      '/sw.js',
-    ];
+    const criticalResources = ['/app/main.tsx', '/sw.js'];
 
     criticalResources.forEach(resource => {
       const link = document.createElement('link');
@@ -470,7 +517,15 @@ console.log('TTFB measured:', ttfb);
     if (process.env.NODE_ENV === 'production' || this.config.enableReporting) {
       // Send to analytics service
       if (typeof window !== 'undefined' && 'gtag' in window) {
-        (window as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag('event', 'performance_metric', {
+        (
+          window as {
+            gtag: (
+              command: string,
+              action: string,
+              parameters: Record<string, unknown>
+            ) => void;
+          }
+        ).gtag('event', 'performance_metric', {
           event_category: 'Performance',
           event_label: name,
           value: Math.round(value),
@@ -480,7 +535,7 @@ console.log('TTFB measured:', ttfb);
       // Log in development
       if (process.env.NODE_ENV === 'development') {
         // eslint-disable-next-line no-console
-console.log(`📊 Performance Metric - ${name}: ${value}ms`);
+        console.log(`📊 Performance Metric - ${name}: ${value}ms`);
       }
     }
   }
@@ -535,7 +590,7 @@ console.log(`📊 Performance Metric - ${name}: ${value}ms`);
     if (typeof window === 'undefined') return;
 
     const images = document.querySelectorAll('img[data-src]');
-    const imageObserver = new IntersectionObserver((entries) => {
+    const imageObserver = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           const img = entry.target as HTMLImageElement;
@@ -557,7 +612,12 @@ console.log(`📊 Performance Metric - ${name}: ${value}ms`);
     if (typeof window === 'undefined') return;
 
     const criticalResources = [
-      { href: '/fonts/inter.woff2', as: 'font', type: 'font/woff2', crossorigin: 'anonymous' },
+      {
+        href: '/fonts/inter.woff2',
+        as: 'font',
+        type: 'font/woff2',
+        crossorigin: 'anonymous',
+      },
       { href: '/css/critical.css', as: 'style' },
     ];
 
@@ -578,9 +638,12 @@ console.log(`📊 Performance Metric - ${name}: ${value}ms`);
    * Measure page load metrics
    */
   measurePageLoad(): PerformanceMetrics | null {
-    if (typeof window === 'undefined' || !('performance' in window)) return null;
+    if (typeof window === 'undefined' || !('performance' in window))
+      return null;
 
-    const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+    const navigation = performance.getEntriesByType(
+      'navigation'
+    )[0] as PerformanceNavigationTiming;
     if (!navigation) return null;
 
     return {
@@ -597,16 +660,40 @@ console.log(`📊 Performance Metric - ${name}: ${value}ms`);
    * Report web vitals
    */
   reportWebVitals(metrics: PerformanceMetrics): void {
-    logger.performance('Web Vitals reported', metrics as unknown as Record<string, unknown>, 'PerformanceOptimizer');
-    
+    logger.performance(
+      'Web Vitals reported',
+      metrics as unknown as Record<string, unknown>,
+      'PerformanceOptimizer'
+    );
+
     // Send to analytics if available
-    if (typeof window !== 'undefined' && (window as { gtag?: (command: string, eventName: string, parameters: Record<string, unknown>) => void }).gtag) {
+    if (
+      typeof window !== 'undefined' &&
+      (
+        window as {
+          gtag?: (
+            command: string,
+            eventName: string,
+            parameters: Record<string, unknown>
+          ) => void;
+        }
+      ).gtag
+    ) {
       Object.entries(metrics).forEach(([key, value]) => {
         if (typeof value === 'number') {
-          (window as unknown as { gtag: (command: string, eventName: string, parameters: Record<string, unknown>) => void }).gtag('event', 'web_vitals', {
+          (
+            window as unknown as {
+              gtag: (
+                command: string,
+                eventName: string,
+                parameters: Record<string, unknown>
+              ) => void;
+            }
+          ).gtag('event', 'web_vitals', {
             metric_name: key,
             metric_value: value,
-            metric_rating: value < 100 ? 'good' : value < 300 ? 'needs-improvement' : 'poor'
+            metric_rating:
+              value < 100 ? 'good' : value < 300 ? 'needs-improvement' : 'poor',
           });
         }
       });
@@ -627,4 +714,8 @@ console.log(`📊 Performance Metric - ${name}: ${value}ms`);
 export const performanceOptimizer = new PerformanceOptimizer();
 
 // Export class for custom instances
-export { PerformanceOptimizer, type PerformanceMetrics, type PerformanceConfig };
+export {
+  PerformanceOptimizer,
+  type PerformanceMetrics,
+  type PerformanceConfig,
+};

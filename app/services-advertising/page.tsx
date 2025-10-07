@@ -1,11 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import {
-  ArrowLeft,
-  ArrowRight,
-  Target,
-  CheckCircle,
-} from 'lucide-react';
+import { ArrowLeft, ArrowRight, Target, CheckCircle } from 'lucide-react';
 
 export default function ServicesAdvertisingPage() {
   return (

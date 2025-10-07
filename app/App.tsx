@@ -23,11 +23,14 @@ const InteractiveAIROICalculator = lazy(
 );
 
 // Utils
-import { performanceOptimizer, preloadCriticalResources } from './utils/performanceOptimizer';
+import {
+  performanceOptimizer,
+  preloadCriticalResources,
+} from './utils/performanceOptimizer';
 import { logger } from './utils/logger';
 
 // Lazy load pages for better performance
-const HomePage = lazy(() => import('./page'));
+// const HomePage = lazy(() => import('./page'));
 
 // Styles
 import './globals.css';
@@ -41,63 +44,88 @@ const App: React.FC = () => {
     if (typeof window !== 'undefined' && 'performance' in window) {
       const metrics = performanceOptimizer.getMetrics();
       if (metrics) {
-        logger.performance('Performance Metrics', metrics as unknown as Record<string, unknown>, 'PerformanceMonitor');
+        logger.performance(
+          'Performance Metrics',
+          metrics as unknown as Record<string, unknown>,
+          'PerformanceMonitor'
+        );
         logger.info('Performance metrics collected', 'App', { metrics });
       }
     }
 
     // Preload critical resources
     preloadCriticalResources();
-    
+
     logger.info('Performance monitoring initialized', 'App');
-    logger.info('🚀 Zion Tech Group App initialized with comprehensive monitoring', 'App');
+    logger.info(
+      '🚀 Zion Tech Group App initialized with comprehensive monitoring',
+      'App'
+    );
   }, []);
 
-  const handleError = useCallback((error: Error, errorInfo: React.ErrorInfo) => {
-    logger.error('Application Error', 'ErrorBoundary', { error: error.message, errorInfo });
-  }, []);
+  const handleError = useCallback(
+    (error: Error, errorInfo: React.ErrorInfo) => {
+      logger.error('Application Error', 'ErrorBoundary', {
+        error: error.message,
+        errorInfo,
+      });
+    },
+    []
+  );
 
   return (
     <AdvancedErrorBoundary onError={handleError}>
       <HelmetProvider>
         <AccessibilityEnhancer>
           <SEOOptimizer />
-          <AdvancedSEOOptimizer seoData={{
-            title: 'Zion Tech Group - AI Solutions',
-            description: 'Leading provider of AI-powered enterprise solutions',
-            keywords: ['AI', 'technology', 'enterprise solutions'],
-            canonicalUrl: 'https://ziontechgroup.com',
-            ogImage: 'https://ziontechgroup.com/og-image.jpg'
-          }} />
+          <AdvancedSEOOptimizer
+            seoData={{
+              title: 'Zion Tech Group - AI Solutions',
+              description:
+                'Leading provider of AI-powered enterprise solutions',
+              keywords: ['AI', 'technology', 'enterprise solutions'],
+              canonicalUrl: 'https://ziontechgroup.com',
+              ogImage: 'https://ziontechgroup.com/og-image.jpg',
+            }}
+          />
           <AdvancedPerformanceMonitor />
           <PerformanceDashboard />
-          
+
           <Router>
             <Routes>
-              <Route path="/" element={
-                <Suspense fallback={<LoadingSpinner />}>
-                  <div className="min-h-screen">
-                    <h1 className="text-4xl font-bold text-center py-20">
-                      Welcome to Zion Tech Group
-                    </h1>
-                    <div className="container mx-auto px-4">
-                      <ContentShowcase />
-                      <InteractiveContentShowcase2026 />
-                      <InteractiveAIROICalculator />
+              <Route
+                path='/'
+                element={
+                  <Suspense fallback={<LoadingSpinner />}>
+                    <div className='min-h-screen'>
+                      <h1 className='text-4xl font-bold text-center py-20'>
+                        Welcome to Zion Tech Group
+                      </h1>
+                      <div className='container mx-auto px-4'>
+                        <ContentShowcase />
+                        <InteractiveContentShowcase2026 />
+                        <InteractiveAIROICalculator />
+                      </div>
                     </div>
+                  </Suspense>
+                }
+              />
+              <Route
+                path='/about'
+                element={
+                  <div className='min-h-screen flex items-center justify-center'>
+                    <h1 className='text-4xl font-bold'>About Us</h1>
                   </div>
-                </Suspense>
-              } />
-              <Route path="/about" element={
-                <div className="min-h-screen flex items-center justify-center">
-                  <h1 className="text-4xl font-bold">About Us</h1>
-                </div>
-              } />
-              <Route path="/contact" element={
-                <div className="min-h-screen flex items-center justify-center">
-                  <h1 className="text-4xl font-bold">Contact Us</h1>
-                </div>
-              } />
+                }
+              />
+              <Route
+                path='/contact'
+                element={
+                  <div className='min-h-screen flex items-center justify-center'>
+                    <h1 className='text-4xl font-bold'>Contact Us</h1>
+                  </div>
+                }
+              />
             </Routes>
           </Router>
         </AccessibilityEnhancer>

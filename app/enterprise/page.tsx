@@ -3,7 +3,8 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Enterprise Solutions - Zion Tech Group',
-  description: 'Enterprise-grade AI and IT solutions designed for large organizations. Scalable, secure, and reliable technology solutions.',
+  description:
+    'Enterprise-grade AI and IT solutions designed for large organizations. Scalable, secure, and reliable technology solutions.',
 };
 
 const EnterprisePage: React.FC = () => {
@@ -36,7 +37,6 @@ const EnterprisePage: React.FC = () => {
 
   return (
     <>
-
       <div className='min-h-screen bg-slate-50 py-16'>
         <div className='container mx-auto px-4'>
           <div className='max-w-6xl mx-auto'>

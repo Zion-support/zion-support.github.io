@@ -8,12 +8,18 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   children,
 }) => {
   const [isHighContrast, setIsHighContrast] = useState(false);
-  const [fontSize, setFontSize] = useState<'small' | 'normal' | 'large'>('normal');
+  const [fontSize, setFontSize] = useState<'small' | 'normal' | 'large'>(
+    'normal'
+  );
   const [reducedMotion, setReducedMotion] = useState(false);
 
-  const applyAccessibilityStyles = (highContrast: boolean, fontSize: 'small' | 'normal' | 'large', reducedMotion: boolean) => {
+  const applyAccessibilityStyles = (
+    highContrast: boolean,
+    fontSize: 'small' | 'normal' | 'large',
+    reducedMotion: boolean
+  ) => {
     const root = document.documentElement;
-    
+
     // Apply high contrast
     if (highContrast) {
       root.classList.add('high-contrast');
@@ -48,18 +54,26 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
 
   useEffect(() => {
     // Check for user's motion preferences
-    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const prefersReducedMotion = window.matchMedia(
+      '(prefers-reduced-motion: reduce)'
+    ).matches;
     setReducedMotion(prefersReducedMotion);
 
     // Load saved preferences
     const savedHighContrast = localStorage.getItem('highContrast') === 'true';
-    const savedFontSize = (localStorage.getItem('fontSize') as 'small' | 'normal' | 'large') || 'normal';
-    
+    const savedFontSize =
+      (localStorage.getItem('fontSize') as 'small' | 'normal' | 'large') ||
+      'normal';
+
     setIsHighContrast(savedHighContrast);
     setFontSize(savedFontSize);
 
     // Apply initial styles
-    applyAccessibilityStyles(savedHighContrast, savedFontSize, prefersReducedMotion);
+    applyAccessibilityStyles(
+      savedHighContrast,
+      savedFontSize,
+      prefersReducedMotion
+    );
 
     // Add accessibility enhancements
     const addSkipLinks = () => {
@@ -225,29 +239,33 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   return (
     <>
       {children}
-      
+
       {/* Accessibility Controls - Only show in development */}
       {process.env['NODE_ENV'] === 'development' && (
-        <div className="fixed top-4 right-4 z-50 bg-white border border-gray-200 rounded-lg shadow-lg p-4">
-          <h3 className="text-sm font-semibold text-gray-900 mb-3">Accessibility Controls</h3>
-          
-          <div className="space-y-3">
+        <div className='fixed top-4 right-4 z-50 bg-white border border-gray-200 rounded-lg shadow-lg p-4'>
+          <h3 className='text-sm font-semibold text-gray-900 mb-3'>
+            Accessibility Controls
+          </h3>
+
+          <div className='space-y-3'>
             <div>
-              <label className="flex items-center space-x-2">
+              <label className='flex items-center space-x-2'>
                 <input
-                  type="checkbox"
+                  type='checkbox'
                   checked={isHighContrast}
                   onChange={toggleHighContrast}
-                  className="rounded"
+                  className='rounded'
                 />
-                <span className="text-sm">High Contrast</span>
+                <span className='text-sm'>High Contrast</span>
               </label>
             </div>
-            
+
             <div>
-              <label className="text-sm text-gray-600 mb-1 block">Font Size:</label>
-              <div className="flex space-x-1">
-                {(['small', 'normal', 'large'] as const).map((size) => (
+              <label className='text-sm text-gray-600 mb-1 block'>
+                Font Size:
+              </label>
+              <div className='flex space-x-1'>
+                {(['small', 'normal', 'large'] as const).map(size => (
                   <button
                     key={size}
                     onClick={() => changeFontSize(size)}

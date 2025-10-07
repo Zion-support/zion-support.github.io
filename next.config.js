@@ -2,7 +2,12 @@
 const nextConfig = {
   experimental: {
     optimizeCss: false,
-    optimizePackageImports: ['@mui/material', '@mui/icons-material', 'lucide-react', 'framer-motion'],
+    optimizePackageImports: [
+      '@mui/material',
+      '@mui/icons-material',
+      'lucide-react',
+      'framer-motion',
+    ],
     webVitalsAttribution: ['CLS', 'LCP', 'FCP', 'FID', 'TTFB'],
   },
   poweredByHeader: false,

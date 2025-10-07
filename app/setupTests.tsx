@@ -10,8 +10,10 @@ const originalConsoleError = console.error;
 // eslint-disable-next-line no-console
 console.error = (...args) => {
   const message = args[0]?.toString?.() || args[0]?.message || '';
-  if (message.includes('Not implemented: navigation') || 
-      message.includes('navigation (except hash changes)')) {
+  if (
+    message.includes('Not implemented: navigation') ||
+    message.includes('navigation (except hash changes)')
+  ) {
     return;
   }
   originalConsoleError(...args);
@@ -117,8 +119,14 @@ global.URL = URL;
 
 // Mock PerformanceObserver
 global.PerformanceObserver = class MockPerformanceObserver {
-  static readonly supportedEntryTypes: readonly string[] = ['navigation', 'paint', 'largest-contentful-paint', 'first-input', 'layout-shift'];
-  
+  static readonly supportedEntryTypes: readonly string[] = [
+    'navigation',
+    'paint',
+    'largest-contentful-paint',
+    'first-input',
+    'layout-shift',
+  ];
+
   constructor(public callback: PerformanceObserverCallback) {}
   observe() {}
   disconnect() {}

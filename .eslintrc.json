@@ -1,5 +1,6 @@
 {
-  "extends": ["next/core-web-vitals"],
+  "extends": ["next/core-web-vitals", "next/typescript"],
+  "plugins": ["@next/next"],
   "rules": {
     "react/react-in-jsx-scope": "off",
     "react/prop-types": "off",

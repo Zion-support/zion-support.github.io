@@ -27,16 +27,24 @@ class Analytics {
       // Fallback to console in development
       if (process.env.NODE_ENV === 'development') {
         // eslint-disable-next-line no-console
-console.log('Analytics Event:', event);
+        console.log('Analytics Event:', event);
       }
       return;
     }
 
-    const gtag = (window as unknown as { gtag: (command: string, eventName: string, parameters: Record<string, unknown>) => void }).gtag;
+    const gtag = (
+      window as unknown as {
+        gtag: (
+          command: string,
+          eventName: string,
+          parameters: Record<string, unknown>
+        ) => void;
+      }
+    ).gtag;
     gtag('event', event.event, {
       event_category: event.category,
       event_label: event.label,
-      value: event.value
+      value: event.value,
     });
   }
 
@@ -44,7 +52,7 @@ console.log('Analytics Event:', event);
     this.track({
       event: 'page_view',
       category: 'Navigation',
-      label: pageName
+      label: pageName,
     });
   }
 
@@ -53,7 +61,7 @@ console.log('Analytics Event:', event);
       event: 'performance_metric',
       category: 'Performance',
       label: metric,
-      value: Math.round(value)
+      value: Math.round(value),
     });
   }
 
@@ -61,7 +69,7 @@ console.log('Analytics Event:', event);
     this.track({
       event: 'user_interaction',
       category: 'Engagement',
-      label: `${action}_${element}`
+      label: `${action}_${element}`,
     });
   }
 
@@ -69,7 +77,7 @@ console.log('Analytics Event:', event);
     this.track({
       event: 'error_occurred',
       category: 'Error',
-      label: context ? `${error}_${context}` : error
+      label: context ? `${error}_${context}` : error,
     });
   }
 }

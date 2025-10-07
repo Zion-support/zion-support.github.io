@@ -3,13 +3,13 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Privacy Policy - Zion Tech Group',
-  description: 'Privacy policy and data protection information for Zion Tech Group services and website.',
+  description:
+    'Privacy policy and data protection information for Zion Tech Group services and website.',
 };
 
 const PrivacyPage: React.FC = () => {
   return (
     <>
-
       <div className='min-h-screen bg-slate-50 py-16'>
         <div className='container mx-auto px-4'>
           <div className='max-w-4xl mx-auto'>

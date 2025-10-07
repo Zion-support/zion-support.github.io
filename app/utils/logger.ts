@@ -38,11 +38,17 @@ class Logger {
     const contextStr = context ? `[${context}]` : '';
     const dataStr = data ? ` | Data: ${JSON.stringify(data)}` : '';
     const errorStr = error ? ` | Error: ${error.message}` : '';
-    
+
     return `${timestamp} ${levelName}${contextStr} ${message}${dataStr}${errorStr}`;
   }
 
-  private log(level: LogLevel, message: string, context?: string, data?: Record<string, unknown>, error?: Error): void {
+  private log(
+    level: LogLevel,
+    message: string,
+    context?: string,
+    data?: Record<string, unknown>,
+    error?: Error
+  ): void {
     if (!this.shouldLog(level)) return;
 
     const entry: LogEntry = {
@@ -60,19 +66,19 @@ class Logger {
     switch (level) {
       case LogLevel.DEBUG:
         // eslint-disable-next-line no-console
-console.debug(formattedMessage);
+        console.debug(formattedMessage);
         break;
       case LogLevel.INFO:
         // eslint-disable-next-line no-console
-console.info(formattedMessage);
+        console.info(formattedMessage);
         break;
       case LogLevel.WARN:
         // eslint-disable-next-line no-console
-console.warn(formattedMessage);
+        console.warn(formattedMessage);
         break;
       case LogLevel.ERROR:
         // eslint-disable-next-line no-console
-console.error(formattedMessage);
+        console.error(formattedMessage);
         break;
     }
 
@@ -86,7 +92,15 @@ console.error(formattedMessage);
     try {
       // Send to external logging service (e.g., Sentry, LogRocket, etc.)
       if (typeof window !== 'undefined' && 'gtag' in window) {
-        (window as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag('event', 'error_logged', {
+        (
+          window as {
+            gtag: (
+              command: string,
+              action: string,
+              parameters: Record<string, unknown>
+            ) => void;
+          }
+        ).gtag('event', 'error_logged', {
           event_category: 'Error',
           event_label: entry.message,
           value: entry.level,
@@ -95,33 +109,58 @@ console.error(formattedMessage);
     } catch (error) {
       // Fallback to console if external logging fails
       // eslint-disable-next-line no-console
-console.error('Failed to send log to external service:', error);
+      console.error('Failed to send log to external service:', error);
     }
   }
 
-  debug(message: string, context?: string, data?: Record<string, unknown>): void {
+  debug(
+    message: string,
+    context?: string,
+    data?: Record<string, unknown>
+  ): void {
     this.log(LogLevel.DEBUG, message, context, data);
   }
 
-  info(message: string, context?: string, data?: Record<string, unknown>): void {
+  info(
+    message: string,
+    context?: string,
+    data?: Record<string, unknown>
+  ): void {
     this.log(LogLevel.INFO, message, context, data);
   }
 
-  warn(message: string, context?: string, data?: Record<string, unknown>): void {
+  warn(
+    message: string,
+    context?: string,
+    data?: Record<string, unknown>
+  ): void {
     this.log(LogLevel.WARN, message, context, data);
   }
 
-  error(message: string, context?: string, data?: Record<string, unknown>, error?: Error): void {
+  error(
+    message: string,
+    context?: string,
+    data?: Record<string, unknown>,
+    error?: Error
+  ): void {
     this.log(LogLevel.ERROR, message, context, data, error);
   }
 
   // Performance logging
-  performance(message: string, metrics: Record<string, unknown>, context?: string): void {
+  performance(
+    message: string,
+    metrics: Record<string, unknown>,
+    context?: string
+  ): void {
     this.log(LogLevel.INFO, message, context || 'Performance', metrics);
   }
 
   // Application lifecycle logging
-  lifecycle(event: string, context?: string, data?: Record<string, unknown>): void {
+  lifecycle(
+    event: string,
+    context?: string,
+    data?: Record<string, unknown>
+  ): void {
     this.log(LogLevel.INFO, `App ${event}`, context || 'Lifecycle', data);
   }
 }

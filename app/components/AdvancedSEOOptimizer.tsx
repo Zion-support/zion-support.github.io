@@ -128,7 +128,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     // Update page title and meta description for better SEO
     if (typeof document !== 'undefined') {
       document.title = seoData.title;
-      
+
       let metaDescription = document.querySelector('meta[name="description"]');
       if (!metaDescription) {
         metaDescription = document.createElement('meta');
@@ -152,79 +152,84 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     <Helmet>
       {/* Basic Meta Tags */}
       <title>{seoData.title}</title>
-      <meta name="description" content={seoData.description} />
-      <meta name="keywords" content={seoData.keywords.join(', ')} />
-      <link rel="canonical" href={seoData.canonicalUrl} />
-      
+      <meta name='description' content={seoData.description} />
+      <meta name='keywords' content={seoData.keywords.join(', ')} />
+      <link rel='canonical' href={seoData.canonicalUrl} />
+
       {/* Open Graph Tags */}
       {enableOpenGraph && (
         <>
-          <meta property="og:title" content={seoData.title} />
-          <meta property="og:description" content={seoData.description} />
-          <meta property="og:url" content={seoData.canonicalUrl} />
-          <meta property="og:type" content="website" />
-          <meta property="og:image" content={seoData.ogImage} />
-          <meta property="og:image:width" content="1200" />
-          <meta property="og:image:height" content="630" />
-          <meta property="og:site_name" content="Zion Tech Group" />
-          <meta property="og:locale" content="en_US" />
+          <meta property='og:title' content={seoData.title} />
+          <meta property='og:description' content={seoData.description} />
+          <meta property='og:url' content={seoData.canonicalUrl} />
+          <meta property='og:type' content='website' />
+          <meta property='og:image' content={seoData.ogImage} />
+          <meta property='og:image:width' content='1200' />
+          <meta property='og:image:height' content='630' />
+          <meta property='og:site_name' content='Zion Tech Group' />
+          <meta property='og:locale' content='en_US' />
         </>
       )}
 
       {/* Twitter Card Tags */}
       {enableTwitterCards && (
         <>
-          <meta name="twitter:card" content="summary_large_image" />
-          <meta name="twitter:title" content={seoData.title} />
-          <meta name="twitter:description" content={seoData.description} />
-          <meta name="twitter:image" content={seoData.ogImage} />
-          <meta name="twitter:site" content="@ziontechgroup" />
-          <meta name="twitter:creator" content="@ziontechgroup" />
+          <meta name='twitter:card' content='summary_large_image' />
+          <meta name='twitter:title' content={seoData.title} />
+          <meta name='twitter:description' content={seoData.description} />
+          <meta name='twitter:image' content={seoData.ogImage} />
+          <meta name='twitter:site' content='@ziontechgroup' />
+          <meta name='twitter:creator' content='@ziontechgroup' />
         </>
       )}
 
       {/* Additional SEO Meta Tags */}
-      <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
-      <meta name="googlebot" content="index, follow" />
-      <meta name="bingbot" content="index, follow" />
-      <meta name="author" content="Zion Tech Group" />
-      <meta name="publisher" content="Zion Tech Group" />
-      <meta name="copyright" content="Zion Tech Group" />
-      <meta name="language" content="en" />
-      <meta name="revisit-after" content="7 days" />
-      <meta name="distribution" content="global" />
-      <meta name="rating" content="general" />
-      <meta name="theme-color" content="#4F46E5" />
+      <meta
+        name='robots'
+        content='index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1'
+      />
+      <meta name='googlebot' content='index, follow' />
+      <meta name='bingbot' content='index, follow' />
+      <meta name='author' content='Zion Tech Group' />
+      <meta name='publisher' content='Zion Tech Group' />
+      <meta name='copyright' content='Zion Tech Group' />
+      <meta name='language' content='en' />
+      <meta name='revisit-after' content='7 days' />
+      <meta name='distribution' content='global' />
+      <meta name='rating' content='general' />
+      <meta name='theme-color' content='#4F46E5' />
 
       {/* Structured Data */}
       {enableSchemaMarkup && structuredData && (
-        <script type="application/ld+json">
+        <script type='application/ld+json'>
           {JSON.stringify(structuredData)}
         </script>
       )}
 
       {enableSchemaMarkup && breadcrumbData && (
-        <script type="application/ld+json">
+        <script type='application/ld+json'>
           {JSON.stringify(breadcrumbData)}
         </script>
       )}
 
       {enableSchemaMarkup && faqData && (
-        <script type="application/ld+json">
-          {JSON.stringify(faqData)}
-        </script>
+        <script type='application/ld+json'>{JSON.stringify(faqData)}</script>
       )}
 
       {/* Preconnect to external domains for performance */}
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-      <link rel="preconnect" href="https://www.google-analytics.com" />
-      <link rel="preconnect" href="https://www.googletagmanager.com" />
+      <link rel='preconnect' href='https://fonts.googleapis.com' />
+      <link
+        rel='preconnect'
+        href='https://fonts.gstatic.com'
+        crossOrigin='anonymous'
+      />
+      <link rel='preconnect' href='https://www.google-analytics.com' />
+      <link rel='preconnect' href='https://www.googletagmanager.com' />
 
       {/* DNS Prefetch for better performance */}
-      <link rel="dns-prefetch" href="//fonts.googleapis.com" />
-      <link rel="dns-prefetch" href="//www.google-analytics.com" />
-      <link rel="dns-prefetch" href="//www.googletagmanager.com" />
+      <link rel='dns-prefetch' href='//fonts.googleapis.com' />
+      <link rel='dns-prefetch' href='//www.google-analytics.com' />
+      <link rel='dns-prefetch' href='//www.googletagmanager.com' />
     </Helmet>
   );
 };
