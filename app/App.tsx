@@ -34,16 +34,7 @@ const App: React.FC = () => {
     console.log('App initialized');
 
     // Initialize performance monitoring
-    performanceOptimizer.lazyLoadImages();
-    performanceOptimizer.addCriticalResourceHints();
-    
-    // Initialize Web Vitals monitoring
-    if (typeof window !== 'undefined' && 'performance' in window) {
-      const pageLoadMetrics = performanceOptimizer.measurePageLoad();
-      if (pageLoadMetrics) {
-        performanceOptimizer.reportWebVitals(pageLoadMetrics);
-      }
-    }
+    performanceOptimizer.init();
     
     console.log('Performance monitoring initialized');
     console.log(
