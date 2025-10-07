@@ -1,4 +1,4 @@
-import React, { Suspense, useEffect } from 'react';
+import React, { Suspense, useEffect, useCallback } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import './index.css';
@@ -104,6 +104,22 @@ function App(): React.JSX.Element {
             </Router>
           </AccessibilityEnhancer>
         </SEOOptimizer>
+        <Router>
+          <div className="App">
+            <Suspense fallback={<LoadingSpinner />}>
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/services" element={<Services />} />
+                <Route path="/blog" element={<Blog />} />
+                <Route path="/contact" element={<Contact />} />
+                <Route path="/team" element={<Team />} />
+                <Route path="/privacy" element={<Privacy />} />
+                <Route path="/terms" element={<Terms />} />
+              </Routes>
+            </Suspense>
+          </div>
+        </Router>
       </ErrorBoundary>
     </HelmetProvider>
   );
