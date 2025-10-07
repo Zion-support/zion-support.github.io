@@ -6,13 +6,13 @@ const SidebarNavigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const navigationItems = [
-    { name: 'Home', href: '/', icon: Home },
+    { name: 'Dashboard', href: '/', icon: Home },
     { name: 'Profile', href: '/profile', icon: User },
     { name: 'Settings', href: '/settings', icon: Settings },
   ];
 
   return (
-    <div className="flex h-screen bg-gray-100">
+    <div className="flex h-screen">
       {/* Sidebar */}
       <div
         className={`${isOpen ? 'w-64' : 'w-16'} transition-all duration-300 bg-white shadow-lg`}
@@ -27,18 +27,21 @@ const SidebarNavigation: React.FC = () => {
         </div>
         
         <nav className="px-4">
-          {navigationItems.map((item) => (
-            <Link
-              key={item.name}
-              to={item.href}
-              className={`flex items-center p-3 rounded-lg hover:bg-gray-100 transition-colors mb-2 ${
-                isOpen ? 'justify-start' : 'justify-center'
-              }`}
-            >
-              <item.icon className="w-5 h-5" />
-              {isOpen && <span className="ml-3">{item.name}</span>}
-            </Link>
-          ))}
+          {navigationItems.map((item) => {
+            const Icon = item.icon;
+            return (
+              <Link
+                key={item.name}
+                to={item.href}
+                className={`flex items-center p-3 rounded-lg hover:bg-gray-100 transition-colors mb-2 ${
+                  isOpen ? 'justify-start' : 'justify-center'
+                }`}
+              >
+                <Icon className="w-6 h-6" />
+                {isOpen && <span className="ml-3">{item.name}</span>}
+              </Link>
+            );
+          })}
         </nav>
       </div>
 
