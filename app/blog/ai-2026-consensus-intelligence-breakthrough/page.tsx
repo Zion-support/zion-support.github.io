@@ -5,12 +5,10 @@ import { Metadata } from 'next';
 export const metadata: Metadata = {
   title: "AI 2026: Consensus Intelligence Breakthrough",
   description: "Revolutionary AI system enabling unanimous decisions through quantum-accelerated consensus protocols.",
-  authors: [{ name: 'Zion Tech Group' }],
   openGraph: {
     title: 'AI 2026: Consensus Intelligence Breakthrough',
     description: 'Revolutionary AI system enabling unanimous decisions through quantum-accelerated consensus protocols.',
     type: 'article',
-    publishedTime: '2026-01-15T00:00:00.000Z',
     authors: ['Zion Tech Group']
   }
 };

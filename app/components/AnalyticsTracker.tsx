@@ -2,12 +2,7 @@
 
 import React, { useEffect } from 'react';
 
-// Extend Window interface for Google Analytics
-declare global {
-  interface Window {
-    gtag?: (...args: unknown[]) => void;
-  }
-}
+// Window interface for Google Analytics is already declared in types/global.d.ts
 
 interface AnalyticsEvent {
   action: string;

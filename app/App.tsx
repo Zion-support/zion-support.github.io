@@ -7,7 +7,6 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 // Components
 import SEOOptimizer from './components/SEOOptimizer';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
-import PerformanceDashboard from '../components/PerformanceDashboard';
 
 // Loading component
 const LoadingSpinner = () => (
@@ -79,11 +78,11 @@ const App: React.FC = () => {
                     <Route path='/' element={<HomePage />} />
                     {/* Add more routes as needed */}
                   </Routes>
-                </Suspense>
+              </Suspense>
 
-                {/* Performance Dashboard */}
-                <PerformanceDashboard />
-              </div>
+              {/* Performance Dashboard */}
+              {/* <PerformanceDashboard /> */}
+            </div>
             </Router>
             </AccessibilityEnhancer>
         </div>

@@ -11,8 +11,18 @@ interface SEOData {
 }
 
 interface AdvancedSEOOptimizerProps {
-  seoData: SEOData;
+  config?: {
+    title: string;
+    description: string;
+    keywords: string[];
+    canonicalUrl: string;
+    ogImage: string;
+    structuredData?: any;
+  };
   enableStructuredData?: boolean;
+  enableAnalytics?: boolean;
+  enablePerformanceTracking?: boolean;
+  seoData?: any;
   enableOpenGraph?: boolean;
   enableTwitterCards?: boolean;
   enableSchemaMarkup?: boolean;

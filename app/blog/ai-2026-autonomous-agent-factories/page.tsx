@@ -8,9 +8,7 @@ export const metadata: Metadata = {
   authors: [{ name: 'Zion Tech Group' }],
   openGraph: {
     title: 'AI 2026: Autonomous Agent Factories - The Future of Enterprise Automation',
-    description: 'Revolutionary autonomous agent factories achieving 95% enterprise automation rates through self-replicating AI systems and advanced agent orchestration.',
-    type: 'article',
-    publishedTime: '2025-01-30T00:00:00Z',
+    description: 'Revolutionary autonomous agent factories achieving 95% enterprise automation rates through self-replicating AI systems and advanced agent orchestration.',publishedTime: '2025-01-30T00:00:00Z',
     authors: ['Zion Tech Group']
   }
 };
