@@ -1,4 +1,4 @@
-<<<<<<< HEAD:app_disabled/case-studies/ai-2026-next-generation-autonomous-intelligence-5-2-billion-success/page.tsx
+:app_disabled/case-studies/ai-2026-next-generation-autonomous-intelligence-5-2-billion-success/page.tsx
 import { Star } from 'lucide-react';
 import type { Metadata } from 'next';
 import Link from 'next/link';

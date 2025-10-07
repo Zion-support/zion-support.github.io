@@ -1,4 +1,4 @@
-<<<<<<< HEAD:app_disabled/blog/quantum-ai-2026-business-intelligence-revolution/page.tsx
+:app_disabled/blog/quantum-ai-2026-business-intelligence-revolution/page.tsx
 import { ArrowLeft } from 'lucide-react';
 import { Star } from 'lucide-react';
 import React from 'react';
@@ -17,7 +17,7 @@ export const metadata = {
   
   title: "Quantum AI 2026: Business Intelligence Revolution - Zion Tech Group",
   description: "Explore how quantum AI is revolutionizing business intelligence in 2026. Discover breakthrough technologies transforming raw data into strategic competitive advantages.",
-  keywords: 'Quantum AI, Business Intelligence, Data Analytics, 2026 Innovation, Strategic Intelligence, Quantum Computing'};;
+  keywords: 'Quantum AI, Business Intelligence, Data Analytics, 2026 Innovation, Strategic Intelligence, Quantum Computing'};
 
 export default function QuantumAI Business Intelligence() {/* return (
     <div> content */}

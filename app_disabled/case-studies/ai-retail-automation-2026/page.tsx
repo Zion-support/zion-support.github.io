@@ -1,4 +1,4 @@
-<<<<<<< HEAD:app_disabled/case-studies/ai-retail-automation-2026/page.tsx
+:app_disabled/case-studies/ai-retail-automation-2026/page.tsx
 import { Star } from 'lucide-react';
 import type { Metadata } from 'next';
 

@@ -1,4 +1,4 @@
-<<<<<<< HEAD:app_disabled/blog/edge-consentless-personalization-2027/page.tsx
+:app_disabled/blog/edge-consentless-personalization-2027/page.tsx
 "use client";
 import Link from 'next/link';
 

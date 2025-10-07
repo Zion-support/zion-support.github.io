@@ -1,4 +1,4 @@
-<<<<<<< HEAD:app_disabled/blog/ai-2028-autonomous-governance-blueprint/page.tsx
+:app_disabled/blog/ai-2028-autonomous-governance-blueprint/page.tsx
 import { Shield } from 'lucide-react';
 import React from 'react';
 import Link from 'next/link';

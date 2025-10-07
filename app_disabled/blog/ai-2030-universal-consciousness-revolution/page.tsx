@@ -1,5 +1,4 @@
-import React from 'react';
-<<<<<<< HEAD:app_disabled/blog/ai-2030-universal-consciousness-revolution/page.tsx
+:app_disabled/blog/ai-2030-universal-consciousness-revolution/page.tsx
 import { Metadata } from 'next';
 import type { Metadata } from 'next';
 

@@ -1,4 +1,4 @@
-<<<<<<< HEAD:app_disabled/case-studies/fortune-500-ai-2026-june-mega-success/page.tsx
+:app_disabled/case-studies/fortune-500-ai-2026-june-mega-success/page.tsx
 import { Star } from 'lucide-react';
 import type { Metadata } from 'next';
 

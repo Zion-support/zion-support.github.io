@@ -1,4 +1,4 @@
-<<<<<<< HEAD:app_disabled/case-studies/ai-2026-june-ultimate-breakthrough-100-billion-success/page.tsx
+:app_disabled/case-studies/ai-2026-june-ultimate-breakthrough-100-billion-success/page.tsx
 import { Star } from 'lucide-react';
 import type { Metadata } from 'next';
 import fs from 'fs';

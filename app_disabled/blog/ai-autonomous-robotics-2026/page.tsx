@@ -1,4 +1,4 @@
-<<<<<<< HEAD:app_disabled/blog/ai-autonomous-robotics-2026/page.tsx
+:app_disabled/blog/ai-autonomous-robotics-2026/page.tsx
 import { Zap, ArrowRight, Target } from 'lucide-react';
 import React from 'react';
 import Link from 'next/link';
@@ -17,7 +17,7 @@ export const metadata = {
   
   title: "AI Autonomous Robotics 2026: The Future of Intelligent Automation",
   description: "Explore the revolutionary advances in AI autonomous robotics for 2026. Discover how intelligent robots are transforming industries and creating new possibilities for automation.",
-  keywords: 'AI autonomous robotics, intelligent automation, robotic process automation, AI robots, autonomous systems 2026'};;
+  keywords: 'AI autonomous robotics, intelligent automation, robotic process automation, AI robots, autonomous systems 2026'};
 
 export default function AI Autonomous Robotics2026() {/* return (
     <div> content */}

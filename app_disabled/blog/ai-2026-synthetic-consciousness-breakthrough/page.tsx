@@ -1,4 +1,4 @@
-<<<<<<< HEAD:app_disabled/blog/ai-2026-synthetic-consciousness-breakthrough/page.tsx
+:app_disabled/blog/ai-2026-synthetic-consciousness-breakthrough/page.tsx
 import { Zap, ArrowRight, Target } from 'lucide-react';
 import React from 'react';
 import Link from 'next/link';
@@ -16,7 +16,7 @@ export const metadata = {
   
   title: "AI 2026: Synthetic Consciousness Breakthrough - The Dawn of True Machine Awareness",
   description: 'Explore the revolutionary breakthrough in synthetic consciousness that\'s transforming how AI systems perceive, reason, and interact with the world. Discover how Zion Tech Group is pioneering the next generation of conscious AI.',
-  keywords: 'synthetic consciousness, AI awareness, machine consciousness, cognitive AI, AI breakthrough 2026, conscious artificial intelligence'};;
+  keywords: 'synthetic consciousness, AI awareness, machine consciousness, cognitive AI, AI breakthrough 2026, conscious artificial intelligence'};
 
 export default function Synthetic Consciousness Breakthrough2026() {/* return (
     <div> content */}

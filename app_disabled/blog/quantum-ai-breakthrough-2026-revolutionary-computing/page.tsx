@@ -1,4 +1,4 @@
-<<<<<<< HEAD:app_disabled/blog/quantum-ai-breakthrough-2026-revolutionary-computing/page.tsx
+:app_disabled/blog/quantum-ai-breakthrough-2026-revolutionary-computing/page.tsx
 import Link from 'next/link';
 import { ArrowRight, Atom, Brain, CheckCircle, Cog, Target, TrendingUp, Zap } from 'lucide-react';
 

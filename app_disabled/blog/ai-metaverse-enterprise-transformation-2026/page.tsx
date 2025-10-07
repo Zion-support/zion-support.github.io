@@ -1,4 +1,4 @@
-<<<<<<< HEAD:app_disabled/blog/ai-metaverse-enterprise-transformation-2026/page.tsx
+:app_disabled/blog/ai-metaverse-enterprise-transformation-2026/page.tsx
 import { Zap, ArrowRight, Target } from 'lucide-react';
 import React from 'react';
 import Link from 'next/link';
@@ -17,7 +17,7 @@ export const metadata = {
   
   title: "AI Metaverse Enterprise Transformation 2026: The Future of Virtual Business Operations",
   description: "Discover how AI-powered metaverse technologies are revolutionizing enterprise operations in 2026. Learn about virtual workspaces, AI avatars, and immersive business solutions.",
-  keywords: 'AI metaverse, enterprise transformation, virtual workspace, AI avatars, immersive business, metaverse 2026'};;
+  keywords: 'AI metaverse, enterprise transformation, virtual workspace, AI avatars, immersive business, metaverse 2026'};
 
 export default function AIMetaverse Enterprise Transformation2026() {/* return (
     <div> content */}

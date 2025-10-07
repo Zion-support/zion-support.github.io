@@ -1,8 +1,4 @@
-import { Sparkles, Zap, ArrowRight } from 'lucide-react';
-import { Star } from 'lucide-react';
-import React from 'react';
-import Link from 'next/link';
-<<<<<<< HEAD:app_disabled/components/September30NewContent2025Banner.tsx
+:app_disabled/components/September30NewContent2025Banner.tsx
 
 const September30NewContent2025Banner: React.FC = () => {
   const newArticles = [
@@ -123,7 +119,7 @@ const September30NewContent2025Banner: React.FC = () => {
         </div>
 
         {/* Call-to-Action Section */}
-<<<<<<< HEAD:app_disabled/components/September30NewContent2025Banner.tsx
+:app_disabled/components/September30NewContent2025Banner.tsx
         <div className="text-center bg-white/5 backdrop-blur-lg rounded-3xl p-12 border border-white/20 mb-16">
           <h3 className="text-4xl font-bold text-white mb-6">
             Transform Your Enterprise with Cutting-Edge AI

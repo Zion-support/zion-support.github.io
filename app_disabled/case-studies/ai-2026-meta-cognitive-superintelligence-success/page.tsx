@@ -1,4 +1,4 @@
-<<<<<<< HEAD:app_disabled/case-studies/ai-2026-meta-cognitive-superintelligence-success/page.tsx
+:app_disabled/case-studies/ai-2026-meta-cognitive-superintelligence-success/page.tsx
 import Link from 'next/link';
 import type { Metadata } from 'next';
 

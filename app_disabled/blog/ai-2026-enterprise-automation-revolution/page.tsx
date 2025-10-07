@@ -1,4 +1,4 @@
-<<<<<<< HEAD:app_disabled/blog/ai-2026-enterprise-automation-revolution/page.tsx
+:app_disabled/blog/ai-2026-enterprise-automation-revolution/page.tsx
 import { Zap } from 'lucide-react';
 import { Shield } from 'lucide-react';
 import { Star } from 'lucide-react';
@@ -14,7 +14,7 @@ export const metadata = {
   
   title: "AI 2026 Enterprise Automation Revolution: Transform Your Business Operations",
   description: "Discover how AI-powered automation is revolutionizing enterprise operations in 2026. Learn about autonomous workflows, intelligent process optimization, and the future of business automation.",
-  keywords: 'AI automation, enterprise automation, business process automation, AI workflows, autonomous operations, 2026 automation'};;
+  keywords: 'AI automation, enterprise automation, business process automation, AI workflows, autonomous operations, 2026 automation'};
 
 export default function AI2026Enterprise Automation Revolution() {/* return (
     <div> content */}

@@ -1,4 +1,4 @@
-<<<<<<< HEAD:app_disabled/blog/ai-2026-next-generation-enterprise-automation/page.tsx
+:app_disabled/blog/ai-2026-next-generation-enterprise-automation/page.tsx
 import Link from 'next/link';
 import { ArrowRight, Brain, CheckCircle, Cog, Target, TrendingUp, User, Users, Zap } from 'lucide-react';
 

@@ -1,4 +1,4 @@
-<<<<<<< HEAD:app_disabled/case-studies/ai-2027-universal-intelligence-singularity-10-trillion-success/page.tsx
+:app_disabled/case-studies/ai-2027-universal-intelligence-singularity-10-trillion-success/page.tsx
 import { Star } from 'lucide-react';
 import type { Metadata } from 'next';
 

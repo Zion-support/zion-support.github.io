@@ -1,4 +1,4 @@
-<<<<<<< HEAD:app_disabled/case-studies/fortune-500-april-2026-meta-cognitive-success/page.tsx
+:app_disabled/case-studies/fortune-500-april-2026-meta-cognitive-success/page.tsx
 import { Target } from 'lucide-react';
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
