@@ -1,4 +1,4 @@
-import React, { Suspense, lazy } from 'react';
+import React, { Suspense, lazy, useCallback } from 'react';
 import { Link } from 'react-router-dom';
 import SEOOptimizer from './components/SEOOptimizer';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
@@ -22,6 +22,16 @@ const LoadingFallback: React.FC<{ height?: string }> = ({
 );
 
 const HomePage: React.FC = () => {
+  // Analytics tracking for phone clicks
+  const handlePhoneClick = useCallback(() => {
+    if (typeof window !== 'undefined' && (window as unknown as { gtag?: Function }).gtag) {
+      ((window as unknown as { gtag: Function }).gtag)('event', 'phone_click', {
+        event_category: 'engagement',
+        event_label: 'main_phone_number'
+      });
+    }
+  }, []);
+
   return (
     <>
       <SEOOptimizer 
@@ -83,6 +93,7 @@ const HomePage: React.FC = () => {
                 </Link>
                 <a
                   href="tel:+13024640950"
+                  onClick={handlePhoneClick}
                   className="bg-white text-indigo-600 px-8 py-4 rounded-lg border-2 border-indigo-600 hover:bg-indigo-50 transition-all duration-300 transform hover:scale-105 font-medium">
                   Call +1 302 464 0950
                 </a>
@@ -260,6 +271,7 @@ const HomePage: React.FC = () => {
                 </Link>
                 <a
                   href="tel:+13024640950"
+                  onClick={handlePhoneClick}
                   className="bg-transparent text-white px-8 py-4 rounded-lg border-2 border-white hover:bg-white hover:text-indigo-600 transition-all duration-300 transform hover:scale-105 font-medium">
                   Call +1 302 464 0950
                 </a>
