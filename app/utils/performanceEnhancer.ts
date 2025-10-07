@@ -120,7 +120,6 @@ export const usePerformanceMonitor = (componentName: string) => {
       fn();
       const duration = performance.now() - start;
       monitor.trackRender(`${componentName}_function`, duration);
->>>>>>> e2aec618376f3db9bd60312768ea5d9abc7086c8
     }
   };
 };
@@ -187,7 +186,7 @@ export const optimizeScrollPerformance = () => {
   // Track Core Web Vitals
   const trackCLS = () => {
     let clsValue = 0;
-    let clsEntries: PerformanceEntry[] = [];
+    const clsEntries: PerformanceEntry[] = [];
 
     interface LayoutShiftEntry extends PerformanceEntry {
       hadRecentInput?: boolean;
@@ -210,17 +209,25 @@ export const optimizeScrollPerformance = () => {
       observer.disconnect();
       return clsValue;
     };
->>>>>>> e2aec618376f3db9bd60312768ea5d9abc7086c8
   };
 
-  const requestTick = () => {
-    if (!ticking) {
-      requestAnimationFrame(updateScrollPosition);
-      ticking = true;
-    }
-  };
+  const trackLCP = () => {
+    let lcpValue = 0;
 
-  window.addEventListener('scroll', requestTick, { passive: true });
+    const observer = new PerformanceObserver((list) => {
+      const entries = list.getEntries();
+      const lastEntry = entries[entries.length - 1];
+      lcpValue = lastEntry.startTime;
+      console.log('[Web Vitals] LCP:', lcpValue);
+    });
+
+    observer.observe({ entryTypes: ['largest-contentful-paint'] });
+
+    return () => {
+      observer.disconnect();
+      return lcpValue;
+    };
+  };
 
   const trackFID = () => {
     interface FirstInputEntry extends PerformanceEntry {
@@ -250,7 +257,28 @@ export const optimizeScrollPerformance = () => {
     cleanupLCP();
     cleanupFID();
   };
->>>>>>> e2aec618376f3db9bd60312768ea5d9abc7086c8
+};
+
+// Optimize scroll performance wrapper
+const optimizeScrollPerformanceWrapper = () => {
+  if (typeof window === 'undefined') return;
+
+  let ticking = false;
+  const updateScrollPosition = () => {
+    // Update scroll position indicators
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    document.documentElement.style.setProperty('--scroll-top', `${scrollTop}px`);
+    ticking = false;
+  };
+
+  const requestTick = () => {
+    if (!ticking) {
+      requestAnimationFrame(updateScrollPosition);
+      ticking = true;
+    }
+  };
+
+  window.addEventListener('scroll', requestTick, { passive: true });
 };
 
 // Memory usage monitoring
