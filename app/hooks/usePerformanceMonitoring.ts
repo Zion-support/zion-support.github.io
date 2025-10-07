@@ -22,7 +22,7 @@ export const usePerformanceMonitoring = (options: UsePerformanceMonitoringOption
   } = options;
 
   const metricsRef = useRef<PerformanceMetrics>({});
-  const observerRef = useRef<PerformanceObserver | null>(null);
+  const observersRef = useRef<PerformanceObserver[]>([]);
 
   const updateMetrics = useCallback((newMetrics: Partial<PerformanceMetrics>) => {
     metricsRef.current = { ...metricsRef.current, ...newMetrics };
@@ -45,6 +45,7 @@ export const usePerformanceMonitoring = (options: UsePerformanceMonitoringOption
       updateMetrics({ lcp: lastEntry.startTime });
     });
     lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
+    observersRef.current.push(lcpObserver);
 
     // Measure First Input Delay (FID)
     const fidObserver = new PerformanceObserver((list) => {
@@ -57,6 +58,7 @@ export const usePerformanceMonitoring = (options: UsePerformanceMonitoringOption
       });
     });
     fidObserver.observe({ entryTypes: ['first-input'] });
+    observersRef.current.push(fidObserver);
 
     // Measure Cumulative Layout Shift (CLS)
     let clsValue = 0;
@@ -71,15 +73,13 @@ export const usePerformanceMonitoring = (options: UsePerformanceMonitoringOption
       updateMetrics({ cls: clsValue });
     });
     clsObserver.observe({ entryTypes: ['layout-shift'] });
+    observersRef.current.push(clsObserver);
 
     // Measure Time to First Byte (TTFB)
     const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
     if (navigationEntry) {
       updateMetrics({ ttfb: navigationEntry.responseStart - navigationEntry.requestStart });
     }
-
-    // Store observers for cleanup
-    observerRef.current = new PerformanceObserver(() => {});
   }, [updateMetrics]);
 
   const measureLongTasks = useCallback(() => {
@@ -96,6 +96,7 @@ export const usePerformanceMonitoring = (options: UsePerformanceMonitoringOption
 
     try {
       longTaskObserver.observe({ entryTypes: ['longtask'] });
+      observersRef.current.push(longTaskObserver);
     } catch {
       // Long task API not supported
       if (process.env.NODE_ENV === 'development') {
@@ -138,9 +139,8 @@ export const usePerformanceMonitoring = (options: UsePerformanceMonitoringOption
 
     return () => {
       clearTimeout(reportTimer);
-      if (observerRef.current) {
-        observerRef.current.disconnect();
-      }
+      observersRef.current.forEach(observer => observer.disconnect());
+      observersRef.current = [];
     };
   }, [measureWebVitals, measureLongTasks, reportMetrics]);
 
