@@ -26,7 +26,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   const [isReducedMotion, setIsReducedMotion] = useState(false);
   const [focusVisible, setFocusVisible] = useState(false);
   const [fontSize, _setFontSize] = useState(16);
-  const skipLinkRef = useRef<HTMLAnchorElement>(null);
+  const skipLinkRef = useRef<HTMLAnchorElement | null>(null);
 
   const defaultConfig: AccessibilityConfig = {
     enableKeyboardNavigation: true,
@@ -49,8 +49,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     skipToMain.href = '#main-content';
     skipToMain.textContent = 'Skip to main content';
     skipToMain.className = 'skip-link';
-    // Store reference for focus management
-    (skipLinkRef as any).current = skipToMain;
+    skipToMain.setAttribute('data-skip-link', 'main');
 
     const skipToNav = document.createElement('a');
     skipToNav.href = '#navigation';

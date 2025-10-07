@@ -46,7 +46,13 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
 
     const getMetrics = (): PerformanceMetrics => {
       const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming | undefined;
-      const memory = (performance as any).memory;
+      const memory = (performance as Performance & {
+        memory?: {
+          usedJSHeapSize: number;
+          totalJSHeapSize: number;
+          jsHeapSizeLimit: number;
+        };
+      }).memory;
       
       return {
         loadTime: navigation?.loadEventEnd ?? 0,
