@@ -1,35 +1,60 @@
-//eslint.config.js
+import { FlatCompat } from '@eslint/eslintrc';
 import js from '@eslint/js';
-import globals from 'globals';
-import tseslint from '@typescript-eslint/eslint-plugin';
-import tsParser from '@typescript-eslint/parser';
-import reactHooks from 'eslint-plugin-react-hooks';
-import reactRefresh from 'eslint-plugin-react-refresh';
+import nextPlugin from '@next/eslint-plugin-next';
+import typescriptEslint from '@typescript-eslint/eslint-plugin';
+import typescriptParser from '@typescript-eslint/parser';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+const compat = new FlatCompat({
+  baseDirectory: __dirname,
+  recommendedConfig: js.configs.recommended,
+});
 
 export default [
-  //Global ignores - ignore everything except src, app directories and main files
+  ...compat.extends('next/core-web-vitals'),
+  {
+    files: ['**/*.{js,jsx,ts,tsx}'],
+    languageOptions: {
+      parser: typescriptParser,
+      parserOptions: {
+        ecmaVersion: 'latest',
+        sourceType: 'module',
+        ecmaFeatures: {
+          jsx: true,
+        },
+      },
+    },
+    plugins: {
+      'next': nextPlugin,
+      '@typescript-eslint': typescriptEslint,
+    },
+    rules: {
+      ...nextPlugin.configs.recommended.rules,
+      'react/react-in-jsx-scope': 'off',
+      'react/prop-types': 'off',
+      '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
+      '@typescript-eslint/explicit-function-return-type': 'off',
+      '@typescript-eslint/explicit-module-boundary-types': 'off',
+      '@typescript-eslint/no-explicit-any': ['warn', { 
+        ignoreRestArgs: true,
+        fixToUnknown: false 
+      }],
+      'no-unused-vars': 'off',
+      'no-console': 'warn',
+      'no-undef': 'off',
+    },
+  },
   {
     ignores: [
-      '**/*',
-      '!src/**',
-      '!app/**',
-      '!App.tsx',
-      '!components/**',
-      '!api/**',
-      '!lib/**',
-      '!hooks/**',
-      '!utils/**',
-      '!types/**',
-      'src/pages/blog-disabled/**',
-      'src/components/**',
-      'src/pages/**',
-      'src/content/**',
-      'src/data/**',
-      'src/hooks/**',
-      'src/types/**',
-      'src/utils/**',
-      'src/config/**',
-      //Ignore all disabled directories
+      'node_modules/',
+      '.next/',
+      'out/',
+      'build/',
+      'dist/',
       '_app_disabled/**',
       '_conflicted_disabled/**',
       '_pages_api_disabled/**',
@@ -61,6 +86,7 @@ export default [
       'disabled-api/**',
       'e2e/**',
       'factories/**',
+      'src/pages/blog-disabled/**',
       'hooks/**',
       'lib_backup/**',
       'services/**',
@@ -85,107 +111,7 @@ export default [
       'app/page-optimized.tsx',
       'app/services-advertising/page.tsx',
       'fix_typescript_syntax_errors.jsx',
-      'fix_utils_files.ts',
-      // Additional ignores from .eslintignore
-      'node_modules/**',
-      '.next/**',
-      'out/**',
-      'dist/**',
-      'build/**',
-      'app/**',
-      'src/pages/services/**',
-      'src/pages/solutions/**',
-      'src/pages/talent/**',
-      'src/pages/terms.tsx',
-      'src/pages/webinars.tsx',
-      'src/pages/zion-hire-ai.tsx',
-      'src/pages/services.tsx',
-      'src/pages/solutions.tsx',
-      'src/routes/**',
-      'src/services/**',
-      'src/store/**',
-      'src/test/**',
-      'src/types/**',
-      'src/utils/**',
-      '*.config.js',
-      '*.config.ts',
-      '*.config.cjs',
-      '*.config.mjs',
-      'backup-banner-components/**',
-      'blog/**',
-      'automation/**',
-      '*.cjs',
-      '*.js',
-      '*.mjs',
-      'advanced-*.js',
-      'aggressive-*.js',
-      'analyze-*.js',
-      'app-*.js',
-      'automated-*.js',
-      'automation-*.js',
-      'basic-*.js',
-      'blockchain-*.tsx',
-      'additional-*.tsx',
-      'ai-*.tsx',
-      'ModernNavigation.tsx',
-      '.storybook/**',
-      'apps/api/**',
-      'apps/slack-bot/**',
-      'api/**',
-      '__tests__/**',
-      '*.test.tsx',
-      '*.test.ts',
-      '*.test.js',
-      '*.test.jsx'
+      'fix_utils_files.ts'
     ],
-  },
-  //Base JavaScript configuration (limit to app source only)
-  {
-    files: ['src/**/*.{js,cjs,mjs}', '**/*.{js,jsx}'],
-    languageOptions: {
-      globals: { ...globals.node },
-      parserOptions: {
-        ecmaVersion: 'latest',
-        sourceType: 'module',
-        ecmaFeatures: {
-          jsx: true,
-        },
-      },
-    },
-    ...js.configs.recommended,
-  },
-  //Simplified TypeScript configuration (non type-aware)
-  {
-    files: [
-      'src/**/*.{ts,tsx}',
-      'pages/**/*.{ts,tsx}',
-      'app/**/*.{ts,tsx}',
-      '**/*.{ts,tsx}',
-    ],
-    languageOptions: {
-      parser: tsParser,
-      parserOptions: {
-        ecmaVersion: 'latest',
-        sourceType: 'module',
-        ecmaFeatures: {
-          jsx: true,
-        },
-      },
-      globals: { ...globals.browser },
-    },
-    plugins: {
-      '@typescript-eslint': tseslint,
-      'react-hooks': reactHooks,
-      'react-refresh': reactRefresh,
-    },
-    rules: {
-      ...(reactHooks.configs.recommended?.rules || {}),
-      'react-refresh/only-export-components': 'off',
-      '@typescript-eslint/no-unused-vars': [
-        'warn',
-        { argsIgnorePattern: '^_' },
-      ],
-      '@typescript-eslint/no-explicit-any': 'warn',
-    },
   },
 ];
