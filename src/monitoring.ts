@@ -47,22 +47,26 @@ function initializeMonitoring(): void {
 
     // Track errors globally
     window.addEventListener('error', (event) => {
-      const errorMessage = event.error?.message || event.message;
-      const additionalInfo = event.filename ? ` (${event.filename}:${event.lineno}:${event.colno})` : '';
-      errorHandler.logError(event.error || new Error(errorMessage + additionalInfo), {
-        url: event.filename,
-      });
+      errorHandler.logError(
+        event.error || new Error(event.message),
+        {
+          message: `${event.message} at ${event.filename}:${event.lineno}:${event.colno}`,
+        }
+      );
     });
 
     // Track unhandled promise rejections
     window.addEventListener('unhandledrejection', (event) => {
-      const errorMessage = `Unhandled Promise Rejection: ${event.reason}`;
-      errorHandler.logError(new Error(errorMessage), {
-        componentStack: 'unhandledrejection',
-      });
+      errorHandler.logError(
+        new Error(`Unhandled Promise Rejection: ${event.reason}`),
+        {
+          message: `Unhandled Promise Rejection: ${event.reason}`,
+        }
+      );
     });
   } catch (error) {
-    logger.error('Failed to initialize monitoring:', error as Error);
+    // eslint-disable-next-line no-console
+    console.error('Failed to initialize monitoring:', error);
   }
 }
 
