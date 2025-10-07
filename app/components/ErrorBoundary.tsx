@@ -24,8 +24,7 @@ class ErrorBoundary extends Component<Props, State> {
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
-      error,
-      errorInfo
+      error
     });
 
     // Log error to console in development
@@ -55,7 +54,15 @@ class ErrorBoundary extends Component<Props, State> {
             <div className='max-w-md w-full mx-4'>
               <div className='bg-white rounded-2xl shadow-xl p-8 text-center'>
                 <div className='inline-flex items-center justify-center w-16 h-16 rounded-full bg-red-100 mb-4'>
+<<<<<<< HEAD
                   <FileWarning className='w-8 h-8 text-red-600' />
+=======
+<<<<<<< HEAD
+                  <span className='text-4xl text-red-600'>⚠️</span>
+=======
+                  <FileWarning className='w-8 h-8 text-red-600' />
+>>>>>>> cursor/fix-errors-and-merge-to-main-32ba
+>>>>>>> 73bd67674ef5ee67febe1c7bc72f795ff8e93e28
                 </div>
                 <h1 className='text-2xl font-bold text-gray-900 mb-2'>
                   Oops! Something went wrong
