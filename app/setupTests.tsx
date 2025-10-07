@@ -111,19 +111,14 @@ global.PerformanceObserver = class MockPerformanceObserver {
   static readonly supportedEntryTypes: readonly string[] = ['navigation', 'paint', 'largest-contentful-paint', 'first-input', 'layout-shift'];
 };
 
-// Mock window.location
-delete (window as { location?: unknown }).location;
-(window as { location: { href: string; origin: string; protocol: string; host: string; hostname: string; port: string; pathname: string; search: string; hash: string; reload: () => void; assign: (url: string) => void; replace: (url: string) => void } }).location = {
-  href: 'http://localhost:3000',
-  origin: 'http://localhost:3000',
-  protocol: 'http:',
-  host: 'localhost:3000',
-  hostname: 'localhost',
-  port: '3000',
-  pathname: '/',
-  search: '',
-  hash: '',
-  reload: jest.fn(),
-  assign: jest.fn(),
-  replace: jest.fn(),
+// Suppress jsdom navigation warnings
+const originalConsoleError = console.error;
+console.error = (...args) => {
+  if (
+    typeof args[0] === 'string' &&
+    args[0].includes('Not implemented: navigation')
+  ) {
+    return;
+  }
+  originalConsoleError.apply(console, args);
 };
