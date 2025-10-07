@@ -17,7 +17,7 @@ export const usePerformanceMonitoring = () => {
 
   useEffect(() => {
     if (typeof window === 'undefined' || !('PerformanceObserver' in window)) {
-      return undefined;
+      return () => {};
     }
 
     try {

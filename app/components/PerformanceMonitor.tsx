@@ -16,6 +16,11 @@ interface PerformanceMetrics {
   firstInputDelay: number;
 }
 
+interface LayoutShift extends PerformanceEntry {
+  value: number;
+  hadRecentInput: boolean;
+}
+
 const PerformanceMonitor: React.FC = memo(() => {
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
   const [isVisible, setIsVisible] = useState(false);
