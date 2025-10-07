@@ -1,4 +1,5 @@
 import { Component, ErrorInfo, ReactNode } from 'react';
+import { FileWarning } from 'lucide-react';
 
 interface Props {
   children: ReactNode;
@@ -23,17 +24,15 @@ class ErrorBoundary extends Component<Props, State> {
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
+      // eslint-disable-next-line no-console
       console.error('ErrorBoundary caught an error:', error, errorInfo);
     }
 
     // Report error to monitoring service in production
     if (process.env.NODE_ENV === 'production') {
-      // eslint-disable-next-line no-console
-      console.error('Production error caught:', error.message);
-      
       // Send to error tracking service
       if (typeof window !== 'undefined' && 'gtag' in window) {
-        (window as unknown as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag('event', 'exception', {
+        (window as unknown as { gtag: (command: string, eventName: string, parameters: Record<string, unknown>) => void }).gtag('event', 'exception', {
           description: error.message,
           fatal: false
         });
@@ -49,7 +48,7 @@ class ErrorBoundary extends Component<Props, State> {
             <div className='max-w-md w-full mx-4'>
               <div className='bg-white rounded-2xl shadow-xl p-8 text-center'>
                 <div className='inline-flex items-center justify-center w-16 h-16 rounded-full bg-red-100 mb-4'>
-                  <div className='w-8 h-8 text-red-600 text-4xl font-bold'>⚠</div>
+                  <FileWarning className='w-8 h-8 text-red-600' />
                 </div>
                 <h1 className='text-2xl font-bold text-gray-900 mb-2'>
                   Oops! Something went wrong

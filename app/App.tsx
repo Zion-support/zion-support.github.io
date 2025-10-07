@@ -1,14 +1,12 @@
-import React, { Suspense, lazy, useCallback, useEffect } from 'react';
-import Link from 'next/link';
+'use client';
+
+import React, { Suspense, lazy, useEffect } from 'react';
 import { HelmetProvider } from 'react-helmet-async';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
+// Components
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
-import AdvancedErrorBoundary from './components/AdvancedErrorBoundary';
-import AdvancedSEOOptimizer from './components/AdvancedSEOOptimizer';
-import AdvancedPerformanceMonitor from './components/AdvancedPerformanceMonitor';
-import SEOEnhancer from './components/SEOEnhancer';
 import PerformanceDashboard from './components/PerformanceDashboard';
-import { performanceOptimizer, collectPerformanceMetrics } from './utils/performanceOptimizer';
 import SEOOptimizer from './components/SEOOptimizer';
 
 // Loading component
@@ -23,40 +21,34 @@ const ErrorBoundary = ({ children }: { children: React.ReactNode }) => {
   return <>{children}</>;
 };
 
+// Utils
+import { preloadCriticalResources, performanceOptimizer } from './utils/performanceOptimizer';
+import { logger } from './utils/logger';
+
 // Lazy load pages for better performance
 const HomePage = lazy(() => import('./page'));
-
-// Utils
 
 // Styles
 import '../index.css';
 
 const App: React.FC = () => {
   useEffect(() => {
-    // Initialize global error handling
-    console.log('App initialized');
-
     // Initialize performance monitoring
     performanceOptimizer.init();
     
     // Initialize Web Vitals monitoring
     if (typeof window !== 'undefined' && 'performance' in window) {
-      const pageLoadMetrics = collectPerformanceMetrics();
       const metrics = performanceOptimizer.getMetrics();
-      if (pageLoadMetrics) {
-        // eslint-disable-next-line no-console
-        console.log('Performance metrics collected:', pageLoadMetrics);
-      }
       if (metrics) {
-        // eslint-disable-next-line no-console
-        console.log('Performance metrics:', metrics);
+        logger.info('Performance metrics collected', 'App', { metrics });
       }
     }
+
+    // Preload critical resources
+    preloadCriticalResources();
     
-    // eslint-disable-next-line no-console
-    console.log('Performance monitoring initialized');
-    // eslint-disable-next-line no-console
-    console.log('🚀 Zion Tech Group App initialized with comprehensive monitoring');
+    logger.info('Performance monitoring initialized', 'App');
+    logger.info('🚀 Zion Tech Group App initialized with comprehensive monitoring', 'App');
   }, []);
 
   return (
