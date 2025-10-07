@@ -2,6 +2,14 @@
 
 import React, { createContext, useContext, useEffect, useState } from 'react';
 
+// Type definitions for Google Analytics
+interface WindowWithGtag extends Window {
+  dataLayer: unknown[];
+  gtag: (...args: unknown[]) => void;
+}
+
+type WindowWithAnalytics = Window & WindowWithGtag;
+
 interface AnalyticsEvent {
   event: string;
   category: string;
@@ -51,11 +59,11 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
 
     script.onload = () => {
       // Initialize gtag
-      (window as any).dataLayer = (window as any).dataLayer || [];
+      (window as WindowWithAnalytics).dataLayer = (window as WindowWithAnalytics).dataLayer || [];
       function gtag(...args: unknown[]) {
-        (window as any).dataLayer.push(args);
+        (window as WindowWithAnalytics).dataLayer.push(args);
       }
-      (window as any).gtag = gtag;
+      (window as WindowWithAnalytics).gtag = gtag;
 
       gtag('js', new Date());
       gtag('config', googleAnalyticsId, {
@@ -82,8 +90,8 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
       console.log('Analytics Event:', event);
     }
 
-    if ((window as any).gtag) {
-      (window as any).gtag('event', event.action, {
+    if ((window as WindowWithAnalytics).gtag) {
+      (window as WindowWithAnalytics).gtag('event', event.action, {
         event_category: event.category,
         event_label: event.label,
         value: event.value,
@@ -99,8 +107,8 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
       console.log('Page View:', page);
     }
 
-    if ((window as any).gtag) {
-      (window as any).gtag('config', googleAnalyticsId, {
+    if ((window as WindowWithAnalytics).gtag) {
+      (window as WindowWithAnalytics).gtag('config', googleAnalyticsId, {
         page_title: document.title,
         page_location: page,
       });
@@ -115,8 +123,8 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
       console.log('Performance Metric:', metric, value);
     }
 
-    if ((window as any).gtag) {
-      (window as any).gtag('event', 'web_vitals', {
+    if ((window as WindowWithAnalytics).gtag) {
+      (window as WindowWithAnalytics).gtag('event', 'web_vitals', {
         event_category: 'Performance',
         event_label: metric,
         value: Math.round(value),
@@ -133,8 +141,8 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
       console.error('Analytics Error:', error, context);
     }
 
-    if ((window as any).gtag) {
-      (window as any).gtag('event', 'exception', {
+    if ((window as WindowWithAnalytics).gtag) {
+      (window as WindowWithAnalytics).gtag('event', 'exception', {
         description: error.message,
         fatal: false,
         custom_map: {
