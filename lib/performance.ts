@@ -110,7 +110,8 @@ function sendToAnalytics(metric: Metric): void {
         userAgent: navigator.userAgent,
       }),
       keepalive: true,
-    }).catch(error => console.error('Performance reporting error:', error));
+    }).catch(error => 
+    console.error('Performance reporting error:', error));
   }
 }
 
@@ -353,7 +354,7 @@ export function getConnectionType(): string {
   return connection.effectiveType || connection.type || 'unknown';
 }
 
-export default {
+const performanceUtils = {
   init: initPerformanceMonitoring,
   measure: measurePerformance,
   mark: markPerformance,
@@ -368,3 +369,5 @@ export default {
   isSlowConnection,
   getConnectionType,
 };
+
+export default performanceUtils;
