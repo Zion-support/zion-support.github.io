@@ -7,7 +7,9 @@ import '@testing-library/jest-dom';
 // Suppress jsdom navigation warnings
 const originalConsoleError = console.error;
 console.error = (...args) => {
-  if (args[0]?.includes?.('Not implemented: navigation')) {
+  const message = args[0]?.toString?.() || args[0]?.message || '';
+  if (message.includes('Not implemented: navigation') || 
+      message.includes('navigation (except hash changes)')) {
     return;
   }
   originalConsoleError(...args);
