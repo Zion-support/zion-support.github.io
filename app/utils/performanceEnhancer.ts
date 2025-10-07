@@ -3,7 +3,60 @@
  * Comprehensive performance optimization utilities for React applications
  */
 
-import { useEffect, useCallback, useRef, useState } from 'react';
+import { useEffect, useCallback, useRef } from 'react';
+
+// Performance metrics interface
+export interface PerformanceMetrics {
+  navigation: {
+    totalTime: number;
+    domContentLoaded: number;
+    loadComplete: number;
+  };
+  paint: {
+    firstPaint: number;
+    firstContentfulPaint: number;
+  };
+  resources: {
+    count: number;
+    totalSize: number;
+  };
+}
+
+// Collect performance metrics
+export const collectPerformanceMetrics = (): PerformanceMetrics | null => {
+  if (typeof window === 'undefined' || !('performance' in window)) {
+    return null;
+  }
+
+  const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+  const paintEntries = performance.getEntriesByType('paint');
+
+  if (!navigation) {
+    return null;
+  }
+
+  const firstPaint = paintEntries.find(entry => entry.name === 'first-paint');
+  const firstContentfulPaint = paintEntries.find(entry => entry.name === 'first-contentful-paint');
+
+  const resources = performance.getEntriesByType('resource');
+  const totalSize = resources.reduce((acc, resource) => acc + ((resource as PerformanceResourceTiming).transferSize || 0), 0);
+
+  return {
+    navigation: {
+      totalTime: navigation.loadEventEnd - navigation.fetchStart,
+      domContentLoaded: navigation.domContentLoadedEventEnd - navigation.fetchStart,
+      loadComplete: navigation.loadEventEnd - navigation.fetchStart,
+    },
+    paint: {
+      firstPaint: firstPaint?.startTime || 0,
+      firstContentfulPaint: firstContentfulPaint?.startTime || 0,
+    },
+    resources: {
+      count: resources.length,
+      totalSize,
+    },
+  };
+};
 
 // Performance monitoring utilities
 export class PerformanceMonitor {
@@ -30,7 +83,7 @@ export class PerformanceMonitor {
   // Track memory usage
   trackMemory(componentName: string) {
     if ('memory' in performance) {
-      const memory = (performance as any).memory;
+      const memory = (performance as Performance & { memory: { usedJSHeapSize: number } }).memory;
       this.metrics.set(`${componentName}_memory`, memory.usedJSHeapSize);
     }
   }
@@ -52,8 +105,8 @@ export class PerformanceMonitor {
     }
 
     const observer = new PerformanceObserver((list) => {
-      list.getEntries().forEach((entry) => {
-        if (entry.duration > 50) { // Tasks longer than 50ms
+      list.getEntries().forEach((entry: PerformanceEntry) => {
+        if (entry.duration && entry.duration > 50) { // Tasks longer than 50ms
           console.warn(`[Performance] Long task detected: ${entry.duration.toFixed(2)}ms`);
         }
       });
@@ -197,9 +250,10 @@ export const trackWebVitals = () => {
 
     const observer = new PerformanceObserver((list) => {
       for (const entry of list.getEntries()) {
-        if (!(entry as any).hadRecentInput) {
+        const layoutShiftEntry = entry as PerformanceEntry & { hadRecentInput?: boolean; value?: number };
+        if (!layoutShiftEntry.hadRecentInput) {
           clsEntries.push(entry);
-          clsValue += (entry as any).value;
+          clsValue += layoutShiftEntry.value || 0;
         }
       }
     });
@@ -227,7 +281,8 @@ export const trackWebVitals = () => {
   const trackFID = () => {
     const observer = new PerformanceObserver((list) => {
       for (const entry of list.getEntries()) {
-        const fid = (entry as any).processingStart - entry.startTime;
+        const firstInputEntry = entry as PerformanceEntry & { processingStart?: number };
+        const fid = (firstInputEntry.processingStart || 0) - entry.startTime;
         console.log('[Web Vitals] FID:', fid);
       }
     });
