@@ -171,8 +171,23 @@ const NewestContent2025Banner = () => {
                 </div>
                 </div>
               </div>
+
+              {/* Meta Info */}
+              <div className="flex items-center justify-between text-sm text-gray-400 mb-6">
+                <span>⏱️ 35 min read</span>
+                <span>📅 Sep 30, 2025</span>
+              </div>
+
+              {/* CTA Button */}
+              <Link 
+                href="/blog/ai-edge-computing-real-time-intelligence-2025"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-cyan-500/25"
+              >
+                Read Full Article
+                <span className="group-hover:translate-x-1 transition-transform">→</span>
+              </Link>
             </div>
-          </Link>
+          </div>
 
           {/* Article 2: Neural Networks */}
           <Link href="/blog/ai-neural-networks-enterprise-transformation-2025" className="group">
@@ -209,6 +224,7 @@ const NewestContent2025Banner = () => {
                     Neural Networks & AI
                   </span>
                 </div>
+              </div>
 
                 <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-purple-300 transition-colors">
                   AI Neural Networks Enterprise Transformation 2025
@@ -277,8 +293,21 @@ const NewestContent2025Banner = () => {
                   </span>
                 </div>
               </div>
+
+              <div className="flex items-center justify-between text-sm text-gray-400 mb-6">
+                <span>⏱️ 28 min read</span>
+                <span>📅 Sep 30, 2025</span>
+              </div>
+
+              <Link 
+                href="/blog/quantum-enhanced-neural-networks-2025"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-purple-500 to-fuchsia-600 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-fuchsia-700 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-purple-500/25"
+              >
+                Explore Breakthrough
+                <span className="group-hover:translate-x-1 transition-transform">→</span>
+              </Link>
             </div>
-          </Link>
+          </div>
 
           {/* Article 3: Quantum Security */}
           <Link href="/blog/ai-quantum-security-protocols-2026" className="group">
@@ -315,6 +344,7 @@ const NewestContent2025Banner = () => {
                     Quantum Security
                   </span>
                 </div>
+              </div>
 
                 <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-red-300 transition-colors">
                   AI Quantum Security Protocols 2026
@@ -387,9 +417,6 @@ const NewestContent2025Banner = () => {
                   </span>
                 </div>
               </div>
-            </div>
-          </Link>
-        </div>
 
         {/* Call-to-Action Section */}
         <div className='text-center bg-white/5 backdrop-blur-lg rounded-3xl p-12 border border-white/20 mb-16'>
@@ -457,7 +484,7 @@ const NewestContent2025Banner = () => {
               </div>
               <div className='text-gray-300'>{stat.label}</div>
             </div>
-          ))}
+          </div>
         </div>
       </div>
     </section>
