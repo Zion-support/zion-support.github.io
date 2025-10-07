@@ -4,7 +4,7 @@
  */
 
 import React, { useState, useEffect, useCallback } from 'react';
-import { collectPerformanceMetrics } from '../utils/performanceOptimizer';
+import { collectPerformanceMetrics } from '../utils/performanceEnhancer';
 import { errorHandler } from '../utils/enhancedErrorHandler';
 
 // Helper functions
@@ -15,12 +15,12 @@ const calculatePerformanceScore = () => {
   let score = 100;
   
   // Deduct points for slow load times
-  if (metrics.loadTime > 3000) score -= 20;
-  if (metrics.loadTime > 5000) score -= 30;
+  if (metrics.navigation.totalTime > 3000) score -= 20;
+  if (metrics.navigation.totalTime > 5000) score -= 30;
   
   // Deduct points for slow paint times
-  if (metrics.firstContentfulPaint > 2000) score -= 15;
-  if (metrics.firstContentfulPaint > 3000) score -= 25;
+  if (metrics.paint.firstContentfulPaint > 2000) score -= 15;
+  if (metrics.paint.firstContentfulPaint > 3000) score -= 25;
   
   return Math.max(0, score);
 };
@@ -95,7 +95,7 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
   // Update metrics
   const updateMetrics = useCallback(() => {
     try {
-      // Get collected performance metrics
+      // Get basic performance metrics
       const performanceMetrics = collectPerformanceMetrics();
       const performanceScore = calculatePerformanceScore();
       
@@ -110,8 +110,8 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
       const newMetrics: SystemMetrics = {
         performance: {
           score: performanceScore,
-          loadTime: performanceMetrics?.loadTime || 0,
-          firstContentfulPaint: performanceMetrics?.firstContentfulPaint || 0,
+          loadTime: performanceMetrics?.navigation.totalTime || 0,
+          firstContentfulPaint: performanceMetrics?.paint.firstContentfulPaint || 0,
           largestContentfulPaint: 0, // Not available in current metrics
           firstInputDelay: 0, // Not available in current metrics
           cumulativeLayoutShift: 0, // Not available in current metrics
