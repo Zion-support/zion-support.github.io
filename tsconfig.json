@@ -57,7 +57,8 @@
         "name": "next"
       }
     ],
-    "allowJs": true
+    "allowJs": true,
+    "tsBuildInfoFile": ".next/cache/tsconfig.tsbuildinfo"
   },
   "include": [
     "next-env.d.ts",
