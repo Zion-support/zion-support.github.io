@@ -151,6 +151,7 @@ class SEOOptimizer {
     // Twitter Card tags
     this.setMetaTag('twitter:title', this.currentPageData?.title || 'Zion Tech Group');
   }
+  
   /**
    * Set meta tag
    */

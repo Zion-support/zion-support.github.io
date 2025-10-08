@@ -101,11 +101,39 @@ export function useEnhancedPerformance(
   const measureOperation = useCallback(
     (operationName: string) => {
       const markName = `${component}-${operationName}`;
-      if (performanceOptimizer.startMark) performanceOptimizer.startMark(markName);
+<<<<<<< HEAD
+<<<<<<< HEAD
+      const startTime = performance.now();
 
       return {
         end: () => {
-          const duration = performanceOptimizer.endMark ? performanceOptimizer.endMark(markName) : 0;
+          const duration = performance.now() - startTime;
+=======
+      if (typeof performance !== 'undefined' && performance.mark) {
+        performance.mark(markName);
+      }
+
+      return {
+        end: () => {
+          let duration = 0;
+          if (typeof performance !== 'undefined' && performance.mark && performance.measure) {
+            try {
+              performance.mark(`${markName}-end`);
+              performance.measure(markName, markName, `${markName}-end`);
+              const measure = performance.getEntriesByName(markName, 'measure')[0];
+              duration = measure ? measure.duration : 0;
+            } catch (e) {
+              // Ignore measurement errors
+            }
+          }
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-32a9
+=======
+      // Performance marking - startMark not available
+
+      return {
+        end: () => {
+          const duration = 0; // Performance marking - endMark not available
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-fd0a
           if (duration && trackPerformance) {
             analytics.trackPerformance(
               `${component}-${operationName}`,
@@ -119,53 +147,3 @@ export function useEnhancedPerformance(
     },
     [component, trackPerformance]
   );
-
-  const withErrorBoundary = useCallback(
-    <T extends unknown[], R>(fn: (...args: T) => R) => {
-      return (...args: T): R | undefined => {
-        try {
-          return fn(...args);
-        } catch (error) {
-          trackError(error as Error, {
-            action: 'Function Call',
-            args: args.map(String),
-          });
-          return undefined;
-        }
-      };
-    },
-    [trackError]
-  );
-
-  const withPerformanceTracking = useCallback(
-    <T extends unknown[], R>(
-      operationName: string,
-      fn: (...args: T) => R
-    ) => {
-      return (...args: T): R => {
-        const measurement = measureOperation(operationName);
-        try {
-          const result = fn(...args);
-          measurement.end();
-          return result;
-        } catch (error) {
-          measurement.end();
-          throw error;
-        }
-      };
-    },
-    [measureOperation]
-  );
-
-  return {
-    trackError,
-    trackUserAction,
-    measureOperation,
-    withErrorBoundary,
-    withPerformanceTracking,
-    renderCount: renderCountRef.current,
-    component,
-  };
-}
-
-export default useEnhancedPerformance;

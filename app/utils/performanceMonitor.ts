@@ -10,7 +10,9 @@ interface PerformanceMetrics {
   cls?: number; // Cumulative Layout Shift
   ttfb?: number; // Time to First Byte
   fmp?: number; // First Meaningful Paint
-  customMetrics: Record<string, number>;
+  tti?: number; // Time to Interactive
+  tbt?: number; // Total Blocking Time
+  customMetrics?: Record<string, number>;
 }
 
 class PerformanceMonitor {
@@ -48,7 +50,11 @@ class PerformanceMonitor {
       const observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           if (entry.name === name) {
+<<<<<<< HEAD
             (this.metrics[metricKey] as number) = entry.startTime;
+=======
+            (this.metrics as any)[metricKey] = entry.startTime;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-fd0a
             this.logMetric(metricKey as string, entry.startTime);
           }
         }
@@ -167,6 +173,7 @@ class PerformanceMonitor {
   }
 
   addCustomMetric(name: string, value: number): void {
+    if (!this.metrics.customMetrics) this.metrics.customMetrics = {};
     this.metrics.customMetrics[name] = value;
     this.logMetric(name, value);
   }
@@ -233,6 +240,7 @@ class PerformanceMonitor {
     const metrics = this.getMetrics();
     
     return `
+<<<<<<< HEAD
 Performance Report
 ==================
 Performance Score: ${score}/100
@@ -243,6 +251,15 @@ Core Web Vitals:
 - CLS: ${metrics.cls ? metrics.cls.toFixed(3) : "N/A"}
 - FCP: ${metrics.fcp ? metrics.fcp.toFixed(0) : "N/A"}ms
 - TTFB: ${metrics.ttfb ? metrics.ttfb.toFixed(0) : "N/A"}ms
+=======
+      Performance Report (Score: ${score}/100):
+      - First Contentful Paint: ${metrics.fcp?.toFixed(2)}ms
+      - Largest Contentful Paint: ${metrics.lcp?.toFixed(2)}ms
+      - First Input Delay: ${metrics.fid?.toFixed(2)}ms
+      - Cumulative Layout Shift: ${metrics.cls?.toFixed(4)}
+      - Time to Interactive: ${metrics.tti?.toFixed(2)}ms
+      - Total Blocking Time: ${metrics.tbt?.toFixed(2)}ms
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-fd0a
     `;
   }
 }
