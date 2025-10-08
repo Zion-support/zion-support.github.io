@@ -212,14 +212,39 @@ export class SecureStorage {
   }
 }
 
+// Add missing functions that are expected by other modules
+export const sanitizeInput = (input: string): string => {
+  return sanitizeHtml(input);
+};
+
+export const validatePassword = (password: string): boolean => {
+  if (!password || typeof password !== 'string') return false;
+  if (password.length < 8) return false;
+  if (password.length > 128) return false;
+  
+  const hasUpperCase = /[A-Z]/.test(password);
+  const hasLowerCase = /[a-z]/.test(password);
+  const hasNumbers = /\d/.test(password);
+  const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>]/.test(password);
+  
+  return hasUpperCase && hasLowerCase && hasNumbers && hasSpecialChar;
+};
+
+export const generateSecureToken = (): string => {
+  return CSRFProtection.generateToken();
+};
+
 export const securityUtils = {
   sanitizeHtml,
+  sanitizeInput,
   isValidUrl,
   isInternalUrl,
   escapeHtml,
   generateCSP,
   isValidEmail,
   isValidPhone,
+  validatePassword,
+  generateSecureToken,
   RateLimiter,
   CSRFProtection,
   SecureStorage,
