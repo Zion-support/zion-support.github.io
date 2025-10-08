@@ -2,8 +2,10 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 
-export default function OperationalTrustScorecardsV3() {
+const OperationalTrustScorecardsPage: React.FC = () => {
+
   return (
+
     <>
 
       <Helmet>
@@ -87,3 +89,5 @@ export default function OperationalTrustScorecardsV3() {
     </>
   );
 }
+
+export default OperationalTrustScorecardsPage;
