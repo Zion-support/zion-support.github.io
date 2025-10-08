@@ -199,7 +199,9 @@
     "fix-*.ts",
     "jest.setup.*",
     "**/*.disabled/**",
-    "**/*.backup/**"
+    "**/*.backup/**",
+    "vite.config.ts",
+    "vite.config.*.ts"
   ],
   "references": [
     {
