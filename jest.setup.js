@@ -1,9 +1,9 @@
 // Learn more: https://github.com/testing-library/jest-dom
 import '@testing-library/jest-dom';
-import React from 'react';
 
-// Polyfill TextEncoder for Node.js environment
+// Polyfill TextEncoder and TextDecoder for Node.js environment
 import { TextEncoder, TextDecoder } from 'util';
+
 global.TextEncoder = TextEncoder;
 global.TextDecoder = TextDecoder;
 
@@ -56,9 +56,13 @@ jest.mock('react-router-dom', () => ({
     state: null,
   }),
   useParams: () => ({}),
-  Link: ({ children, to, ...props }) => React.createElement('a', { href: to, ...props }, children),
-  BrowserRouter: ({ children }) => React.createElement('div', { 'data-testid': 'browser-router' }, children),
-  MemoryRouter: ({ children }) => React.createElement('div', { 'data-testid': 'memory-router' }, children),
+  BrowserRouter: ({ children }) => children,
+  MemoryRouter: ({ children }) => children,
+  Router: ({ children }) => children,
+  Routes: ({ children }) => children,
+  Route: ({ children }) => children,
+  Link: ({ children, ...props }) => <a {...props}>{children}</a>,
+  NavLink: ({ children, ...props }) => <a {...props}>{children}</a>,
 }));
 
 // Mock window.matchMedia
