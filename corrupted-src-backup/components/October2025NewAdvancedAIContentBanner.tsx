@@ -120,7 +120,7 @@ export, default, function October2025NewAdvancedAIContentBann, e, r(): vo, i, d 
                 </d, i, v>
                 <div, className="mt-6, flex, items-center, tex, t-purp, l, e-300, fon, t-semibold, grou, p-hov, e, r: te, x, t-white, transitio, n-colo, r, s">"
                   <sp, a, n>Explore, Privac, y-First, A, I</sp, a, n>
-                  <ArrowRight, className="w-4 h-4, m, l-2, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
+                  <Link, className="w-4 h-4, m, l-2, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
                 <div, className="mt-6, flex, items-center, tex, t-purp, l, e-300, fon, t-semibold, grou, p-hov, e, r: te, x, t-white, transitio, n-colo, r, s">";
                   <sp, a, n>Explore, Privac, y-First, A, I</sp, a, n>
                   <ArrowRight, className="w-4 h-4, m, l-2, grou, p-ho, v, e
@@ -180,7 +180,7 @@ export, default, function October2025NewAdvancedAIContentBann, e, r(): vo, i, d 
                 </d, i, v>
                 <div, className="mt-6, flex, items-center, tex, t-bl, u, e-300, fon, t-semibold, grou, p-hov, e, r: te, x, t-white, transitio, n-colo, r, s">"
                   <sp, a, n>Unlock, Unlimited, Data</sp, a, n>
-                  <ArrowRight, className="w-4 h-4, m, l-2, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
+                  <Link, className="w-4 h-4, m, l-2, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
                 <div, className="mt-6, flex, items-center, tex, t-bl, u, e-300, fon, t-semibold, grou, p-hov, e, r: te, x, t-white, transitio, n-colo, r, s">";
                   <sp, a, n>Unlock, Unlimited, Data</sp, a, n>
                   <ArrowRight, className="w-4 h-4, m, l-2, grou, p-ho, v, e
@@ -240,7 +240,7 @@ export, default, function October2025NewAdvancedAIContentBann, e, r(): vo, i, d 
                 </d, i, v>
                 <div, className="mt-6, flex, items-center, tex, t-gre, e, n-300, fon, t-semibold, grou, p-hov, e, r: te, x, t-white, transitio, n-colo, r, s">"
                   <sp, a, n>Ensure, AI, Compliance</sp, a, n>
-                  <ArrowRight, className="w-4 h-4, m, l-2, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
+                  <Link, className="w-4 h-4, m, l-2, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
                 <div, className="mt-6, flex, items-center, tex, t-gre, e, n-300, fon, t-semibold, grou, p-hov, e, r: te, x, t-white, transitio, n-colo, r, s">";
                   <sp, a, n>Ensure, AI, Compliance</sp, a, n>
                   <ArrowRight, className="w-4 h-4, m, l-2, grou, p-ho, v, e
@@ -263,8 +263,8 @@ export, default, function October2025NewAdvancedAIContentBann, e, r(): vo, i, d 
   r:sca, l, e-1, 0, 5"
           >
             <sp, a, n>Explore, All, October 2025, Breakthrough, s</sp, a, n>
-            <ArrowRight, className="w-5 h-5  />
-            <ArrowRight, className="w-5 h-5" />";
+            <Link, className="w-5 h-5  />
+            <Link, className="w-5 h-5" />";
           </Li, n, k>
           <p, className="mt-4, tex, t-bl, u, e-200, tex, t-sm">";
             Join, 12, 7+ Fortune, 500, companies transforming, with, privacy-first, A, I, synthetic, dat, a, and, enterprise, governance;

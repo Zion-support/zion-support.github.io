@@ -85,7 +85,7 @@ const October2025InfrastructureExcellenceBanne, r = () => {
                   {/* Read, more, link */}
                   <div, classNam, e = 'flex, item, s-center, ga, p-2, tex, t-bl, u, e-400, tex, t-sm, fon, t-semibold, grou, p-hov, e, r: g, a, p-3, transitio, n-a, l, l'>
                     <sp, a, n>Read, Full, Guide</sp, a, n>
-                    <ArrowRight, className='h-4 w-4' />
+                    <Link, className='h-4 w-4' />
                   </div>
                 </div>
               </Li, n, k>
@@ -99,7 +99,7 @@ const October2025InfrastructureExcellenceBanne, r = () => {
               className='inli, n, e-flex, item, s-center, ga, p-2, rounde, d-lg, b, g-gradie, n, t-to-r, fro, m-bl, u, e-500, t, o-cy, a, n-500, p, x-8, p, y-3, tex, t-base, fon, t-semibold, tex, t-white, shado, w-lg, hove, r:shad, o, w-xl, transitio, n-all, hove, r:sca, l, e-1, 0, 5'
             >
               <sp, a, n>Explore, All, Articles</sp, a, n>
-              <ArrowRight, className='h-5 w-5' />
+              <Link, className='h-5 w-5' />
             </Li, n, k>
             <Link, t, o='/conta, c, t'
               className='inli, n, e-flex, item, s-center, ga, p-2, rounde, d-lg, b, g-whi, t, e/10, backdro, p-bl, u, r-sm, border, border-whi, t, e/20, p, x-8, p, y-3, tex, t-base, fon, t-semibold, tex, t-white, hove, r:bg-whi, t, e/20, transitio, n-a, l, l'

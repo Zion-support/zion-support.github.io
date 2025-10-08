@@ -66,12 +66,12 @@ key={index}
                       <span className="text-sm text-gray-700">{metric}</span>
                     </div>
                   Read Full Story
-                  <ArrowRight className="w-4 h-4" />
+                  <Link className="w-4 h-4" />
                 </Link>
               </div>
             </div>
             View All Success Stories
-            <ArrowRight className="w-6 h-6" />
+            <Link className="w-6 h-6" />
           </Link>
         </div>
       </div>

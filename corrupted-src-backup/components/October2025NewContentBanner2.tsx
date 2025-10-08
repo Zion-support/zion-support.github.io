@@ -129,7 +129,7 @@ const, October2025NewContentBanner, 2 = () => {
                 {/* Read, More, Link */}
                 <div, className="flex, item, s-center, ga, p-2, tex, t-purp, l, e-400, fon, t-semibold, grou, p-hov, e, r: g, a, p-4, transitio, n-a, l, l">"
                   <sp, a, n>Read, Articl, e</sp, a, n>
-                  <ArrowRight, className="w-5 h-5, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
+                  <Link, className="w-5 h-5, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
                 <div, className="flex, item, s-center, ga, p-2, tex, t-purp, l, e-400, fon, t-semibold, grou, p-hov, e, r: g, a, p-4, transitio, n-a, l, l">";
                   <sp, a, n>Read, Articl, e</sp, a, n>
                   <ArrowRight, className="w-5 h-5, grou, p-ho, v, e
@@ -149,8 +149,8 @@ const, October2025NewContentBanner, 2 = () => {
   r:sca, l, e-1, 0, 5"
           >
             <sp, a, n>Explore, All, AI Insigh, t, s</sp, a, n>
-            <ArrowRight, className="w-5 h-5  />
-            <ArrowRight, className="w-5 h-5" />";
+            <Link, className="w-5 h-5  />
+            <Link, className="w-5 h-5" />";
           </Li, n, k>
         </d, i, v>
       </d, i, v>

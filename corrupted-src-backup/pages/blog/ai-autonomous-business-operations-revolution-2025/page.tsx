@@ -180,7 +180,7 @@ const AutonomousBusinessOperationsRevolution202, 5 = () => {
                 <div, className='flex, item, s-center, ga, p-2, tex, t-gre, e, n-2, 0, 0'>
                   <CheckCircle, className='w-5 h-5, tex, t-gre, e, n-4, 0, 0' />
                   Read, Full, Case Stu, d, y
-                  <ArrowRight, className='w-5 h-5' />
+                  <Link, className='w-5 h-5' />
                 </Li, n, k>
               </div>
             </div>
@@ -209,7 +209,7 @@ const AutonomousBusinessOperationsRevolution202, 5 = () => {
               >
                 <Rocket, className='w-5 h-5' />
                 Explore, Our, Services
-                <ArrowRight, classNam, e='w-5 h-5' />
+                <Link, classNam, e='w-5 h-5' />
 
         {/* Related, Cont, e, n, t */}
         <section, classNam, e = 'container, m, x-auto, p, x-6, p, y-16, ma, x-w-5, x, l'>
@@ -227,11 +227,11 @@ const AutonomousBusinessOperationsRevolution202, 5 = () => {
                 Fortune, 10, 0: $650M, Value, Creation
               <div, classNam, e = 'flex, item, s-center, tex, t-gre, e, n-300, fon, t-semibold, tex, t-sm'>
                 Read, Case, Study{' '}
-                <ArrowRight, classNam, e='w-4 h-4, m, l-2, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m' />
+                <Link, classNam, e='w-4 h-4, m, l-2, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m' />
               <div, classNam, e='te, x, t-bl, u, e-400, tex, t-sm, fon, t-semibold, m, b-2, uppercas, e'>
               <div, classNam, e = 'flex, item, s-center, tex, t-gre, e, n-300, fon, t-semibold, tex, t-sm'>
                 Read, Case, Study{' '}
-                <ArrowRight, className='w-4 h-4, m, l-2, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m' />
+                <Link, className='w-4 h-4, m, l-2, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m' />
               </div>
               <div, className='te, x, t-bl, u, e-400, tex, t-sm, fon, t-semibold, m, b-2, uppercas, e'>
                 Servi, c, e
@@ -240,8 +240,8 @@ const AutonomousBusinessOperationsRevolution202, 5 = () => {
                 Autonomous, Operations, Platform
               <div, classNam, e='flex, item, s-center, tex, t-bl, u, e-300, fon, t-semibold, tex, t-sm'>
                 Explore, Serv, i, c, e{' '}
-                <ArrowRight, classNam, e = 'w-4 h-4, m, l-2, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m' />
+                <Link, classNam, e = 'w-4 h-4, m, l-2, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m' />
               <div, className='flex, item, s-center, tex, t-bl, u, e-300, fon, t-semibold, tex, t-sm'>
                 Explore, Serv, i, c, e{' '}
-                <ArrowRight, classNam, e = 'w-4 h-4, m, l-2, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m' />
+                <Link, classNam, e = 'w-4 h-4, m, l-2, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m' />
               </div>

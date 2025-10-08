@@ -48,7 +48,7 @@ const Pricing: React.FC = () => {
                 to="/contact"
                 className="w-full inline-flex items-center justify-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-medium"
               >
-                Get Started <ArrowRight className="h-5 w-5 ml-2" />
+                Get Started <Link className="h-5 w-5 ml-2" />
               </Link>
             </div>
 
@@ -85,7 +85,7 @@ const Pricing: React.FC = () => {
                 to="/contact"
                 className="w-full inline-flex items-center justify-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-medium"
               >
-                Get Started <ArrowRight className="h-5 w-5 ml-2" />
+                Get Started <Link className="h-5 w-5 ml-2" />
               </Link>
             </div>
 
@@ -117,7 +117,7 @@ const Pricing: React.FC = () => {
                 to="/contact"
                 className="w-full inline-flex items-center justify-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-medium"
               >
-                Contact Sales <ArrowRight className="h-5 w-5 ml-2" />
+                Contact Sales <Link className="h-5 w-5 ml-2" />
               </Link>
             </div>
           </div>

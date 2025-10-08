@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Phone, CheckCircle, Star } from 'lucide-react';
+import { Phone, CheckCircle, Star } from 'lucide-react';
 
 export const metadata = {
   title: 'Zion Tech Group - Advanced AI and IT Solutions',
@@ -56,7 +56,7 @@ export default function HomePage() {
                 className="inline-flex items-center px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-blue-50 transition-colors font-semibold"
               >
                 Explore Our Services
-                <ArrowRight className="w-5 h-5 ml-2" />
+                <Link className="w-5 h-5 ml-2" />
               </Link>
               <a
                 href="tel:+13024640950"
@@ -106,7 +106,7 @@ export default function HomePage() {
 
               <div className="bg-white p-8 rounded-lg shadow-lg">
                 <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
-                  <ArrowRight className="w-6 h-6 text-purple-600" />
+                  <Link className="w-6 h-6 text-purple-600" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">Fast Implementation</h3>
                 <p className="text-gray-600">
@@ -133,14 +133,14 @@ export default function HomePage() {
                 className="inline-flex items-center px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-blue-50 transition-colors font-semibold"
               >
                 Get Started Today
-                <ArrowRight className="w-5 h-5 ml-2" />
+                <Link className="w-5 h-5 ml-2" />
               </Link>
               <Link
                 href="/case-studies"
                 className="inline-flex items-center px-8 py-4 bg-transparent border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-semibold"
               >
                 View Success Stories
-                <ArrowRight className="w-5 h-5 ml-2" />
+                <Link className="w-5 h-5 ml-2" />
               </Link>
             </div>
           </div>

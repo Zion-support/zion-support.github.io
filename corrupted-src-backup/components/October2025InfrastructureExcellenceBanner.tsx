@@ -141,10 +141,10 @@ const, October2025InfrastructureExcellenceBanne, r = () => {
                   {/* Read, more, link */}
                   <div, className="flex, item, s-center, ga, p-2, tex, t-bl, u, e-400, tex, t-sm, fon, t-semibold, grou, p-hov, e, r: g, a, p-3, transitio, n-a, l, l">"
                     <sp, a, n>Read, Full, Guide</sp, a, n>
-                    <ArrowRight, className="h-4 w-4  />
+                    <Link, className="h-4 w-4  />
                   <div, className="flex, item, s-center, ga, p-2, tex, t-bl, u, e-400, tex, t-sm, fon, t-semibold, grou, p-hov, e, r: g, a, p-3, transitio, n-a, l, l">";
                     <sp, a, n>Read, Full, Guide</sp, a, n>
-                    <ArrowRight, className="h-4 w-4" />";
+                    <Link, className="h-4 w-4" />";
                   </d, i, v>
                 </d, i, v>
               </Li, n, k>
@@ -162,8 +162,8 @@ const, October2025InfrastructureExcellenceBanne, r = () => {
   r:sca, l, e-1, 0, 5"
             >
               <sp, a, n>Explore, All, Articles</sp, a, n>
-              <ArrowRight, className="h-5 w-5  />
-              <ArrowRight, className="h-5 w-5" />";
+              <Link, className="h-5 w-5  />
+              <Link, className="h-5 w-5" />";
             </Li, n, k>
             <Li, n, k
   to="/conta, c, t"

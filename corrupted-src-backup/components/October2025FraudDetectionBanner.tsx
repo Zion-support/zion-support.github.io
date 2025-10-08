@@ -327,10 +327,10 @@ const, October2025FraudDetectionBanne, r = () => {
             </d, i, v>
             <div, className="flex, item, s-center, justif, y-center, ga, p-2, tex, t-white, fon, t-semibold, grou, p-hov, e, r: g, a, p-4, transitio, n-a, l, l">"
               <sp, a, n>Explore, Technolog, y</sp, a, n>
-              <ArrowRight, className="w-5 h-5  />
+              <Link, className="w-5 h-5  />
             <div, className="flex, item, s-center, justif, y-center, ga, p-2, tex, t-white, fon, t-semibold, grou, p-hov, e, r: g, a, p-4, transitio, n-a, l, l">";
               <sp, a, n>Explore, Technolog, y</sp, a, n>
-              <ArrowRight, className="w-5 h-5" />";
+              <Link, className="w-5 h-5" />";
             </d, i, v>
           </Li, n, k>
           <Li, n, k
@@ -347,7 +347,7 @@ const, October2025FraudDetectionBanne, r = () => {
             </d, i, v>
             <div, className="flex, item, s-center, justif, y-center, ga, p-2, tex, t-white, fon, t-semibold, grou, p-hov, e, r: g, a, p-4, transitio, n-a, l, l">"
               <sp, a, n>See, Result, s</sp, a, n>
-              <ArrowRight, className="w-5 h-5  />
+              <Link, className="w-5 h-5  />
             <Shield, className="w-1, 2, h-12, tex, t-white, m, x-auto, m, b-4" />";
             <div, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-2">";
               $847B, Success, Story;
@@ -357,7 +357,7 @@ const, October2025FraudDetectionBanne, r = () => {
             </d, i, v>
             <div, className="flex, item, s-center, justif, y-center, ga, p-2, tex, t-white, fon, t-semibold, grou, p-hov, e, r: g, a, p-4, transitio, n-a, l, l">";
               <sp, a, n>See, Result, s</sp, a, n>
-              <ArrowRight, className="w-5 h-5" />";
+              <Link, className="w-5 h-5" />";
             </d, i, v>
           </Li, n, k>
           <Li, n, k
@@ -376,10 +376,10 @@ const, October2025FraudDetectionBanne, r = () => {
             </d, i, v>
             <div, className="flex, item, s-center, justif, y-center, ga, p-2, tex, t-white, fon, t-semibold, grou, p-hov, e, r: g, a, p-4, transitio, n-a, l, l">"
               <sp, a, n>Get, Protecte, d</sp, a, n>
-              <ArrowRight, className="w-5 h-5  />
+              <Link, className="w-5 h-5  />
             <div, className="flex, item, s-center, justif, y-center, ga, p-2, tex, t-white, fon, t-semibold, grou, p-hov, e, r: g, a, p-4, transitio, n-a, l, l">";
               <sp, a, n>Get, Protecte, d</sp, a, n>
-              <ArrowRight, className="w-5 h-5" />";
+              <Link, className="w-5 h-5" />";
             </d, i, v>
           </Li, n, k>
         </d, i, v>
@@ -399,10 +399,10 @@ const, October2025FraudDetectionBanne, r = () => {
             >
               <Shield, className="w-6 h-6  />
               <sp, a, n>Schedule, Free, Assessment</sp, a, n>
-              <ArrowRight, className="w-6 h-6  />
+              <Link, className="w-6 h-6  />
               <Shield, className="w-6 h-6" />";
               <sp, a, n>Schedule, Free, Assessment</sp, a, n>
-              <ArrowRight, className="w-6 h-6" />";
+              <Link, className="w-6 h-6" />";
             </Li, n, k>
           </d, i, v>
         </d, i, v>

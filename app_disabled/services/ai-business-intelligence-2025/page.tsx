@@ -5,9 +5,9 @@ export default function AIBusinessIntelligence2025() {
       {/* Header */}
       <div className="mb-12">
         <div className="flex items-center gap-3 mb-4">
-          <ArrowRight href="/services" className="text-blue-600 hover:text-blue-700 font-medium">
+          <Link href="/services" className="text-blue-600 hover:text-blue-700 font-medium">
             ← Back to Services
-          </ArrowRight>
+          </Link>
           <span className="text-gray-400">|</span>
           <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-semibold">
             NEW 2025
@@ -313,7 +313,7 @@ export default function AIBusinessIntelligence2025() {
               className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold text-center block hover:bg-blue-700 transition-colors"
             >
               Get Started
-            </ArrowRight>
+            </Link>
           </div>
 
           <div>
@@ -362,7 +362,7 @@ export default function AIBusinessIntelligence2025() {
               className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold text-center block hover:bg-blue-700 transition-colors"
             >
               Get Started
-            </ArrowRight>
+            </Link>
           </div>
 
           <div>
@@ -406,7 +406,7 @@ export default function AIBusinessIntelligence2025() {
               className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold text-center block hover:bg-blue-700 transition-colors"
             >
               Contact Sales
-            </ArrowRight>
+            </Link>
           </div>
         </div>
       </section>
@@ -521,7 +521,7 @@ export default function AIBusinessIntelligence2025() {
               className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-50 transition-colors inline-block"
             >
               Get Your Custom ROI Analysis
-            </ArrowRight>
+            </Link>
           </div>
         </div>
       </section>
@@ -536,7 +536,7 @@ export default function AIBusinessIntelligence2025() {
             className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-700 transition-colors"
           >
             Get Free Consultation
-          </ArrowRight>
+          </Link>
           <a
             href="tel:+13024640950"
             className="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-600 hover:text-white transition-colors"
@@ -550,7 +550,7 @@ export default function AIBusinessIntelligence2025() {
       <section className="mt-16">
         <h2 className="text-2xl font-bold text-gray-900 mb-6">Related Services</h2>
         <div className="grid md:grid-cols-2 gap-6">
-          <ArrowRight href="/services/ai-data-analytics" className="group">
+          <Link href="/services/ai-data-analytics" className="group">
             <div className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
               <h3 className="text-lg font-bold text-gray-900 group-hover:text-blue-600 transition-colors mb-2">
                 AI Data Analytics
@@ -560,8 +560,8 @@ export default function AIBusinessIntelligence2025() {
                 dashboards.
               </p>
             </div>
-          </ArrowRight>
-          <ArrowRight href="/services/ai-workflow-automation" className="group">
+          </Link>
+          <Link href="/services/ai-workflow-automation" className="group">
             <div className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
               <h3 className="text-lg font-bold text-gray-900 group-hover:text-blue-600 transition-colors mb-2">
                 AI Workflow Automation
@@ -570,7 +570,7 @@ export default function AIBusinessIntelligence2025() {
                 Automate business processes with intelligent workflow design and smart triggers.
               </p>
             </div>
-          </ArrowRight>
+          </Link>
         </div>
       </section>
     </div>

@@ -149,7 +149,7 @@ const September30MegaBanner202, 5 = () => {
                   {/* Read, More, Arrow */}
                   <div, className="flex, item, s-center, ga, p-2, tex, t-white, fon, t-bold, tex, t-sm, grou, p-hov, e, r: g, a, p-4, transitio, n-a, l, l">
                     <sp, a, n>Explore, No, w</sp, a, n>
-                    <ArrowRight, className="w-5 h-5, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m" />
+                    <Link, className="w-5 h-5, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m" />
                   </div>
                 </div>
               </Li, n, k>
@@ -213,7 +213,7 @@ const September30MegaBanner202, 5 = () => {
           >
             <Rocket, className="w-7 h-7, grou, p-hov, e, r:rota, t, e-12, transitio, n-transfo, r, m" />
             <sp, a, n>Explore, All, 8 Breakthroug, h, s</sp, a, n>
-            <ArrowRight, className="w-6 h-6, grou, p-hov, e, r:transla, t, e-x-2, transitio, n-transfo, r, m" />
+            <Link, className="w-6 h-6, grou, p-hov, e, r:transla, t, e-x-2, transitio, n-transfo, r, m" />
           </Li, n, k>
           <Link, t, o="/conta, c, t"
             className="group, borde, r-3, borde, r-white, hove, r:bg-white, tex, t-white, hove, r:te, x, t-indi, g, o-900, p, x-12, p, y-5, rounde, d-full, fon, t-black, tex, t-xl, transitio, n-all, duratio, n-300, hove, r:sca, l, e-110, flex, items-center, justif, y-center, ga, p-4, shado, w-xl, hove, r:shad, o, w-2, x, l"

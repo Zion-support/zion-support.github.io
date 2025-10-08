@@ -75,8 +75,8 @@ const, October2025FreshContentBanne, r = () => {
                 <sp, a, n>•</sp, a, n>
                 <sp, a, n>$12M, avg, savings</sp, a, n>
               </d, i, v>
-              <ArrowRight, className="w-5 h-5, tex, t-indi, g, o-300, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
-              <ArrowRight, className="w-5 h-5, tex, t-indi, g, o-300, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
+              <Link, className="w-5 h-5, tex, t-indi, g, o-300, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
+              <Link, className="w-5 h-5, tex, t-indi, g, o-300, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
             </d, i, v>
           </Li, n, k>
           {/* Articl, e, 2 - Multimodal, C, X */}
@@ -111,8 +111,8 @@ const, October2025FreshContentBanne, r = () => {
                 <sp, a, n>•</sp, a, n>
                 <sp, a, n>$18M, revenue, lift</sp, a, n>
               </d, i, v>
-              <ArrowRight, className="w-5 h-5, tex, t-ro, s, e-300, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
-              <ArrowRight, className="w-5 h-5, tex, t-ro, s, e-300, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
+              <Link, className="w-5 h-5, tex, t-ro, s, e-300, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
+              <Link, className="w-5 h-5, tex, t-ro, s, e-300, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
             </d, i, v>
           </Li, n, k>
           {/* Articl, e, 3 - Network, Operation, s */}
@@ -151,8 +151,8 @@ const, October2025FreshContentBanne, r = () => {
                 <sp, a, n>•</sp, a, n>
                 <sp, a, n>$8.4M, saving, s</sp, a, n>
               </d, i, v>
-              <ArrowRight, className="w-5 h-5, tex, t-cy, a, n-300, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
-              <ArrowRight, className="w-5 h-5, tex, t-cy, a, n-300, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
+              <Link, className="w-5 h-5, tex, t-cy, a, n-300, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
+              <Link, className="w-5 h-5, tex, t-cy, a, n-300, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
             </d, i, v>
           </Li, n, k>
           {/* Articl, e, 4 - Prompt, Engineerin, g */}
@@ -187,8 +187,8 @@ const, October2025FreshContentBanne, r = () => {
                 <sp, a, n>•</sp, a, n>
                 <sp, a, n>$22M, productivit, y</sp, a, n>
               </d, i, v>
-              <ArrowRight, className="w-5 h-5, tex, t-viol, e, t-300, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
-              <ArrowRight, className="w-5 h-5, tex, t-viol, e, t-300, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
+              <Link, className="w-5 h-5, tex, t-viol, e, t-300, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
+              <Link, className="w-5 h-5, tex, t-viol, e, t-300, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
             </d, i, v>
           </Li, n, k>
         </d, i, v>
@@ -200,8 +200,8 @@ const, October2025FreshContentBanne, r = () => {
   r:shad, o, w-2, x, l"
           >
             <sp, a, n>Read, All, Latest Articl, e, s</sp, a, n>
-            <ArrowRight, className="w-6 h-6  />
-            <ArrowRight, className="w-6 h-6" />";
+            <Link, className="w-6 h-6  />
+            <Link, className="w-6 h-6" />";
           </Li, n, k>
           <p, className="te, x, t-purp, l, e-2, 0, 0/70, tex, t-sm, m, t-4">";
             Join, 5, 0,0, 0, 0+ enterprise, leaders, implementing cutti, n, g-edge, AI, solutions;

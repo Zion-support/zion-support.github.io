@@ -198,7 +198,7 @@ const Revolutionary2026ContentMegaBanne, r: React.FC = () => {
                 >
                   <div, className="w-4 h-4, b, g-gradie, n, t-to-r, fro, m-bl, u, e-500, t, o-purp, l, e-600, rounde, d-fu, l, l" />
                   <sp, a, n>Explore, Breakthroug, h</sp, a, n>
-                  <ArrowRight, className="w-4 h-4, grou, p-hov, e, r/b, t, n:transla, t, e-x-1, transitio, n-transform, duratio, n-3, 0, 0" />
+                  <Link, className="w-4 h-4, grou, p-hov, e, r/b, t, n:transla, t, e-x-1, transitio, n-transform, duratio, n-3, 0, 0" />
                 </a>
               </div>
             </moti, o, n.d, i, v>
@@ -253,7 +253,7 @@ const Revolutionary2026ContentMegaBanne, r: React.FC = () => {
                   className="bord, e, r-2, borde, r-purp, l, e-500, tex, t-purp, l, e-400, hove, r:bg-purp, l, e-500, hove, r:te, x, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, flex, items-center, justif, y-center, ga, p-2"
                 >
                   <sp, a, n>Explore, All, Breakthroughs</sp, a, n>
-                  <ArrowRight, className="w-5 h-5" />
+                  <Link, className="w-5 h-5" />
                 </a>
               </div>
             </div>

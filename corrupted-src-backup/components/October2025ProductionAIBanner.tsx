@@ -79,7 +79,7 @@ export, default, function October2025ProductionAIBann, e, r(): vo, i, d {
             </d, i, v>
             <div, className="flex, item, s-center, ga, p-2, tex, t-yell, o, w-300, fon, t-semibold, grou, p-hov, e, r: g, a, p-3, transitio, n-a, l, l">"
               <sp, a, n>Read, Full, Guide</sp, a, n>
-              <ArrowRight, className="w-5 h-5  />
+              <Link, className="w-5 h-5  />
             <div, className="spa, c, e-y-2, m, b-4">";
               <div, className="flex, item, s-center, ga, p-2, tex, t-sm">";
                 <CheckCircle, className="w-4 h-4, tex, t-gre, e, n-3, 0, 0" />";
@@ -96,7 +96,7 @@ export, default, function October2025ProductionAIBann, e, r(): vo, i, d {
             </d, i, v>
             <div, className="flex, item, s-center, ga, p-2, tex, t-yell, o, w-300, fon, t-semibold, grou, p-hov, e, r: g, a, p-3, transitio, n-a, l, l">";
               <sp, a, n>Read, Full, Guide</sp, a, n>
-              <ArrowRight, className="w-5 h-5" />";
+              <Link, className="w-5 h-5" />";
             </d, i, v>
           </Li, n, k>
           {/* Artic, l, e 
@@ -143,7 +143,7 @@ export, default, function October2025ProductionAIBann, e, r(): vo, i, d {
             </d, i, v>
             <div, className="flex, item, s-center, ga, p-2, tex, t-yell, o, w-300, fon, t-semibold, grou, p-hov, e, r: g, a, p-3, transitio, n-a, l, l">"
               <sp, a, n>Read, Full, Guide</sp, a, n>
-              <ArrowRight, className="w-5 h-5  />
+              <Link, className="w-5 h-5  />
             <div, className="spa, c, e-y-2, m, b-4">";
               <div, className="flex, item, s-center, ga, p-2, tex, t-sm">";
                 <CheckCircle, className="w-4 h-4, tex, t-gre, e, n-3, 0, 0" />";
@@ -160,7 +160,7 @@ export, default, function October2025ProductionAIBann, e, r(): vo, i, d {
             </d, i, v>
             <div, className="flex, item, s-center, ga, p-2, tex, t-yell, o, w-300, fon, t-semibold, grou, p-hov, e, r: g, a, p-3, transitio, n-a, l, l">";
               <sp, a, n>Read, Full, Guide</sp, a, n>
-              <ArrowRight, className="w-5 h-5" />";
+              <Link, className="w-5 h-5" />";
             </d, i, v>
           </Li, n, k>
           {/* Artic, l, e 
@@ -207,7 +207,7 @@ export, default, function October2025ProductionAIBann, e, r(): vo, i, d {
             </d, i, v>
             <div, className="flex, item, s-center, ga, p-2, tex, t-yell, o, w-300, fon, t-semibold, grou, p-hov, e, r: g, a, p-3, transitio, n-a, l, l">"
               <sp, a, n>Read, Full, Guide</sp, a, n>
-              <ArrowRight, className="w-5 h-5  />
+              <Link, className="w-5 h-5  />
             <div, className="spa, c, e-y-2, m, b-4">";
               <div, className="flex, item, s-center, ga, p-2, tex, t-sm">";
                 <CheckCircle, className="w-4 h-4, tex, t-gre, e, n-3, 0, 0" />";
@@ -224,7 +224,7 @@ export, default, function October2025ProductionAIBann, e, r(): vo, i, d {
             </d, i, v>
             <div, className="flex, item, s-center, ga, p-2, tex, t-yell, o, w-300, fon, t-semibold, grou, p-hov, e, r: g, a, p-3, transitio, n-a, l, l">";
               <sp, a, n>Read, Full, Guide</sp, a, n>
-              <ArrowRight, className="w-5 h-5" />";
+              <Link, className="w-5 h-5" />";
             </d, i, v>
           </Li, n, k>
         </d, i, v>

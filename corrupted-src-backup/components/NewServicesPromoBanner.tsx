@@ -24,9 +24,9 @@ const, NewServicesPromoBanne, r: Rea, c, t.FC<NewServicesPromoBannerPro, p, s> =
                       <span, classNam, e="te, x, t-sm, tex, t-whi, t, e">{benef, i, t}</sp, a, n>
                     </di, v>
                     Learn, Mor, e
-                    <ArrowRight, classNam, e="w-4 h-4" />
+                    <Link, classNam, e="w-4 h-4" />
               View, All, Services
-              <ArrowRight, classNam, e="w-6 h-6" />
+              <Link, classNam, e="w-6 h-6" />
   if (varia, n, t = == 'prem, i, u, m') {
     retu, r, n (
       <div, classNam, e = {`bg-gradie, n, t-to-r, fro, m-oran, g, e-600, t, o-r, e, d-600, rounde, d-2x, l, p-8, tex, t-whi, t, e ${classNa, m, e}`}>
@@ -41,7 +41,7 @@ const, NewServicesPromoBanne, r: Rea, c, t.FC<NewServicesPromoBannerPro, p, s> =
               <p, classNam, e="te, x, t-oran, g, e-100, tex, t-sm, m, b-4, lin, e-cla, m, p-2">{servi, c, e.description}</p>
               <div, classNam, e="mb-4">
                 <span, classNam, e="te, x, t-sm, fon, t-semibold, tex, t-yell, o, w-3, 0, 0">{servi, c, e.benefi, t, s[0]}</sp, a, n>
-                Learn, Mor, e <ArrowRight, classNam, e="w-4 h-4" />
+                Learn, Mor, e <Link, classNam, e="w-4 h-4" />
         <div, classNam, e="grid, m, d:gr, i, d-co, l, s-3, ga, p-6">
           { servic, e, s.m, a, p((serv, i, c, e) = > (
             <Link, ke, y = { servi, c, e., i, d  }, to={ servi, c, e.li, n, k } classNa, m, e="border, borde, r-gr, a, y-200, rounde, d-x, l, p-5, hove, r: shad, o, w-xl, hove, r:bord, e, r-indi, g, o-300, transitio, n-all, grou, p"

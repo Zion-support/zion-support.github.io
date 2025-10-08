@@ -63,7 +63,7 @@ export default function NewContent2026PromotionalBanner() {
 
             <div className="flex items-center text-yellow-300 font-semibold group-hover:text-yellow-200">
               Read Full Guide
-              <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-2 transition-transform" />
+              <Link className="w-5 h-5 ml-2 group-hover:translate-x-2 transition-transform" />
             </div>
           </Link>
 
@@ -107,7 +107,7 @@ export default function NewContent2026PromotionalBanner() {
 
             <div className="flex items-center text-cyan-300 font-semibold group-hover:text-cyan-200">
               Read Full Guide
-              <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-2 transition-transform" />
+              <Link className="w-5 h-5 ml-2 group-hover:translate-x-2 transition-transform" />
             </div>
           </Link>
 
@@ -151,21 +151,20 @@ export default function NewContent2026PromotionalBanner() {
 
             <div className="flex items-center text-green-300 font-semibold group-hover:text-green-200">
               Read Case Study
-              <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-2 transition-transform" />
+              <Link className="w-5 h-5 ml-2 group-hover:translate-x-2 transition-transform" />
             </div>
           </Link>
         </div>
 
         {/* CTA Section */}
         <div className="mt-12 text-center">
-          <ArrowRight
+          <Link
             href="/blog"
             className="inline-flex items-center bg-gradient-to-r from-yellow-400 to-orange-500 text-gray-900 px-8 py-4 rounded-full font-bold text-lg hover:from-yellow-300 hover:to-orange-400 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-2xl"
           >
             <Zap className="w-5 h-5 mr-2" />
             Explore All Latest Content
-            <ArrowRight className="w-5 h-5 ml-2" />
-          </ArrowRight>
+          </Link>
         </div>
       </div>
     </section>

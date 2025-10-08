@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowLeft, Calendar, User, Clock, Tag, ArrowRight } from 'lucide-react';
+import { ArrowLeft, Calendar, User, Clock, Tag } from 'lucide-react';
 
 export const metadata = {
   title: 'AI 2026 Implementation Roadmap: Complete Guide to Enterprise AI Transformation',
@@ -429,14 +429,14 @@ export default function AI2026ImplementationRoadmap() {
                 className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
               >
                 View Success Stories
-                <ArrowRight className="w-4 h-4 ml-2" />
+                <Link className="w-4 h-4 ml-2" />
               </Link>
               <Link
                 to="/tools/ai-roi-calculator"
                 className="inline-flex items-center px-6 py-3 bg-white text-blue-600 border border-blue-600 rounded-lg hover:bg-blue-50 transition-colors"
               >
                 Calculate Your ROI
-                <ArrowRight className="w-4 h-4 ml-2" />
+                <Link className="w-4 h-4 ml-2" />
               </Link>
             </div>
           </div>
