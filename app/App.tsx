@@ -1,51 +1,95 @@
-import React, { Suspense, lazy, useEffect, useCallback } from 'react';
+'use client';
+
+import React, { Suspense, lazy, useEffect } from 'react';
 import { HelmetProvider } from 'react-helmet-async';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 // Components
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
-import AdvancedErrorBoundary from './components/AdvancedErrorBoundary';
-import AdvancedSEOOptimizer from './components/AdvancedSEOOptimizer';
-import AdvancedPerformanceMonitor from './components/AdvancedPerformanceMonitor';
-import SEOEnhancer from './components/SEOEnhancer';
 import PerformanceDashboard from './components/PerformanceDashboard';
+import AdvancedPerformanceMonitor from './components/AdvancedPerformanceMonitor';
+import AdvancedErrorBoundary from './components/AdvancedErrorBoundary';
+import SEOEnhancer from './components/SEOEnhancer';
+import AdvancedSEOOptimizer from './components/AdvancedSEOOptimizer';
 import LoadingSpinner from './components/LoadingSpinner';
 
-// Lazy load pages
-const HomePage = lazy(() => import('./page').catch(() => ({ default: () => <div>Error loading page</div> })));
+// Lazy load components for better performance
+const ContentShowcase = lazy(() => import('./components/ContentShowcase'));
+const InteractiveContentShowcase2026 = lazy(
+  () => import('./components/InteractiveContentShowcase2026')
+);
+const InteractiveAIROICalculator = lazy(
+  () => import('./components/InteractiveAIROICalculator')
+);
 
-// Import proper utilities
-import { performanceOptimizer, lazyLoadImages, preloadCriticalResources, collectPerformanceMetrics } from './utils/performanceOptimizer';
+// Lazy load pages for better performance
+const HomePage = lazy(() => import('./page'));
+
+// Utils
+import { lazyLoadImages, preloadCriticalResources, collectPerformanceMetrics, performanceOptimizer } from './utils/performanceOptimizer';
 import { logger } from './utils/logger';
+import performanceMonitor from './utils/performanceMonitor';
+import seoOptimizer from './utils/seoOptimizer';
+import accessibilityEnhancer from './utils/accessibilityEnhancer';
+
+// Styles
+import './globals.css';
 
 const App: React.FC = () => {
   useEffect(() => {
     // Initialize global error handling
-    logger.info('App initialized', 'App');
+    logger.info('initialized', { component: 'App' });
 
     // Initialize performance monitoring
     lazyLoadImages();
     preloadCriticalResources();
     performanceOptimizer.init();
+    performanceMonitor.init();
+    
+    // Initialize SEO optimization
+    seoOptimizer.init();
+    
+    // Initialize accessibility enhancements
+    accessibilityEnhancer.init();
     
     // Initialize Web Vitals monitoring
     if (typeof window !== 'undefined' && 'performance' in window) {
       const pageLoadMetrics = collectPerformanceMetrics();
       const metrics = performanceOptimizer.getMetrics();
+      const performanceMetrics = performanceMonitor.getMetrics();
+      
       if (pageLoadMetrics) {
-        logger.info('Performance metrics collected', 'App', { metrics: pageLoadMetrics });
+        console.log('Performance metrics collected:', pageLoadMetrics);
       }
       if (metrics) {
-        logger.info('Core Web Vitals metrics', 'App', { metrics });
+        console.log('Performance metrics:', metrics);
+      }
+      if (performanceMetrics) {
+        console.log('Core Web Vitals:', performanceMetrics);
       }
     }
     
-    logger.info('Performance monitoring initialized', 'App');
-    logger.info('🚀 Zion Tech Group App initialized with comprehensive monitoring');
-  }, []);
+    // Log performance and accessibility metrics periodically
+    const metricsInterval = setInterval(() => {
+      const performanceMetrics = performanceMonitor.getMetrics();
+      const accessibilityMetrics = accessibilityEnhancer.getMetrics();
+      
+      if (process.env.NODE_ENV === 'development') {
+        console.log('Performance Score:', performanceMonitor.getScore());
+        console.log('Accessibility Score:', accessibilityMetrics.overallScore);
+      }
+    }, 30000);
+    
+    logger.info('performance monitoring initialized', { component: 'App' });
+    logger.info('🚀 Zion Tech Group App initialized with comprehensive monitoring', { component: 'App' });
 
-  const handleError = useCallback((error: Error, errorInfo: React.ErrorInfo) => {
-    logger.error('Application Error', error, { errorInfo, component: 'ErrorBoundary' });
+    return () => {
+      // Cleanup
+      performanceOptimizer.cleanup();
+      performanceMonitor.cleanup();
+      accessibilityEnhancer.cleanup();
+      clearInterval(metricsInterval);
+    };
   }, []);
 
   return (
@@ -53,7 +97,9 @@ const App: React.FC = () => {
       <AdvancedErrorBoundary
         enableErrorReporting={true}
         enableRetry={true}
-        onError={handleError}
+        onError={(error, errorInfo) => {
+          logger.error(error.message, { error, errorInfo });
+        }}
       >
         <AccessibilityEnhancer>
           <SEOEnhancer
@@ -61,11 +107,27 @@ const App: React.FC = () => {
             description="Leading provider of enterprise AI solutions, quantum computing, and autonomous systems. Transform your business with our cutting-edge technology."
           >
             <AdvancedSEOOptimizer
-              seoData={{
+              config={{
                 title: 'Zion Tech Group - Advanced AI and IT Solutions',
                 description: 'Leading provider of enterprise AI solutions, quantum computing, and autonomous systems. Transform your business with our cutting-edge technology.',
                 keywords: ['AI solutions', 'enterprise AI', 'quantum computing', 'autonomous systems', 'digital transformation', 'automation', 'cloud services', 'AI consulting', 'business intelligence', 'machine learning'],
-                canonicalUrl: 'https://ziontechgroup.com'
+                canonicalUrl: 'https://ziontechgroup.com',
+                ogImage: 'https://ziontechgroup.com/og-image.jpg',
+                structuredData: {
+                  '@type': 'TechCompany',
+                  name: 'Zion Tech Group',
+                  description: 'Advanced AI and IT Solutions Provider',
+                  foundingDate: '2020',
+                  numberOfEmployees: '50-100',
+                  industry: 'Technology',
+                  services: [
+                    'AI Solutions',
+                    'Digital Transformation',
+                    'Cloud Services',
+                    'Automation',
+                    'Business Intelligence'
+                  ]
+                }
               }}
               enableStructuredData={true}
               enableOpenGraph={true}
@@ -82,8 +144,19 @@ const App: React.FC = () => {
                     </Routes>
                   </Suspense>
                 </main>
-                <AdvancedPerformanceMonitor />
+
+                {/* Performance Dashboard */}
                 <PerformanceDashboard />
+                
+                {/* Advanced Performance Monitor */}
+                <AdvancedPerformanceMonitor
+                  enableRealTimeMonitoring={process.env['NODE_ENV'] === 'development'}
+                  onMetricsUpdate={(metrics) => {
+                    if (process.env['NODE_ENV'] === 'development') {
+                      logger.info('Performance Metrics', { component: 'PerformanceMonitor', metrics });
+                    }
+                  }}
+                />
               </div>
             </Router>
           </SEOEnhancer>

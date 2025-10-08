@@ -72,8 +72,13 @@ jest.mock('react-router-dom', () => {
       return mockReact.createElement(RouterProvider, { router });
     },
     RouterProvider: ({ router }) => null,
+<<<<<<< HEAD
     Link: ({ children, to, ...props }) => mockReact.createElement('a', { href: to, ...props }, children),
     NavLink: ({ children, to, ...props }) => mockReact.createElement('a', { href: to, ...props }, children),
+=======
+    Link: ({ children, to, ...props }) => React.createElement('a', { href: to, ...props }, children),
+    NavLink: ({ children, to, ...props }) => React.createElement('a', { href: to, ...props }, children),
+>>>>>>> origin/main
   };
 });
 

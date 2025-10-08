@@ -45,8 +45,8 @@ class Logger {
     enableRemote: isProduction(),
     maxBufferSize: 100,
     batchSize: 10,
-    flushInterval: 30000, // 30 seconds
-  };
+    flushInterval: 30000 // 30 seconds
+  }
   private buffer: LogEntry[] = []
   private flushTimer?: ReturnType<typeof setInterval>
 
@@ -73,11 +73,6 @@ class Logger {
   /**
    * Log a debug message
    */
-  debug(message: string, contextOrMetadata?: string | Record<string, unknown>, _metadata?: Record<string, unknown>): void {
-    const [context, meta] = this.parseArgs(contextOrMetadata, _metadata);
-    this.log(LogLevel.DEBUG, message, context, meta);
-  }
-
   debug(message: string, contextOrMetadata?: string | Record<string, unknown>, metadata?: Record<string, unknown>): void {
     const [context, meta] = this.parseArgs(contextOrMetadata, metadata)
 
@@ -87,14 +82,21 @@ class Logger {
    * Log an info message
    */
   info(message: string, contextOrMetadata?: string | Record<string, unknown>, metadata?: Record<string, unknown>): void {
-    const [context, meta] = this.parseArgs(contextOrMetadata, metadata);
-    this.log(LogLevel.INFO, message, context, meta);
+    const [context, meta] = this.parseArgs(contextOrMetadata, metadata)
+
+    this.log(LogLevel.INFO, message, context, meta)
   }
   /**
    * Log a warning message
    */
+<<<<<<< HEAD
   warn(message: string, contextOrMetadata?: string | Record<string, unknown>, _metadata?: Record<string, unknown>): void {
     const [context, meta] = this.parseArgs(contextOrMetadata, _metadata)
+=======
+  warn(message: string, contextOrMetadata?: string | Record<string, unknown>, metadata?: Record<string, unknown>): void {
+    const [context, meta] = this.parseArgs(contextOrMetadata, metadata)
+
+>>>>>>> origin/main
     this.log(LogLevel.WARN, message, context, meta)
   }
   /**
@@ -125,7 +127,11 @@ class Logger {
         ...meta,
         error: error ? {
           name: error.name,
+<<<<<<< HEAD
           message: error.message,
+=======
+          message: error.message
+>>>>>>> origin/main
           stack: error.stack
         } : undefined
       },

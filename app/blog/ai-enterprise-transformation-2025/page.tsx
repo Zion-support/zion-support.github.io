@@ -2,7 +2,8 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 
-export default function AIEnterpriseTransformation2025() {
+const EnterpriseTransformationPage: React.FC = () => {
+
   return (
 
     <>
@@ -130,3 +131,5 @@ export default function AIEnterpriseTransformation2025() {
     </>
   );
 }
+
+export default EnterpriseTransformationPage;

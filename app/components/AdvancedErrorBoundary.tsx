@@ -1,5 +1,8 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
+<<<<<<< HEAD
 import { Link } from 'react-router-dom';
+=======
+>>>>>>> origin/main
 import { logger } from '../utils/logger';
 
 interface ErrorBoundaryState {
@@ -67,7 +70,7 @@ class AdvancedErrorBoundary extends Component<
       logger.error(
         'Error Boundary caught an error',
         error,
-        { component: 'ErrorBoundary', errorInfo, stack: error.stack }
+        { context: 'ErrorBoundary', errorInfo }
       );
     }
 
@@ -142,7 +145,7 @@ class AdvancedErrorBoundary extends Component<
       logger.error(
         'Failed to send error report',
         reportError as Error,
-        { component: 'ErrorReporting' }
+        { context: 'ErrorReporting' }
       );
     }
   };

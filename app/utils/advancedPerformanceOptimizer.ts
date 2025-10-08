@@ -73,6 +73,7 @@ export class PerformanceOptimizer {
    */
 
   debounce<T extends (...args: unknown[]) => unknown>(
+
     func: T,
     wait: number,
   ): (...args: Parameters<T>) => void {
@@ -92,6 +93,7 @@ export class PerformanceOptimizer {
    */
 
   throttle<T extends (...args: unknown[]) => unknown>(
+
     func: T,
     limit: number,
   ): (...args: Parameters<T>) => void {
@@ -112,6 +114,7 @@ export class PerformanceOptimizer {
    */
 
   memoize<T extends (...args: unknown[]) => unknown>(
+
     func: T,
   ): (...args: Parameters<T>) => ReturnType<T> {
     const cache = new Map<string, ReturnType<T>>()
@@ -137,7 +140,7 @@ export class PerformanceOptimizer {
       summary[name] = {
         avg: this.getAverageMetric(name),
         count: values.length
-      };
+      }
     })
     
     return summary

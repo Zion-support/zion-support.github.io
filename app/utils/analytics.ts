@@ -48,12 +48,12 @@ class AnalyticsService {
       }
       // Send to Google Analytics if available
       if (this.hasGtag()) {
-        (window as any).gtag('event', event.action, {
+        gtag('event', event.action, {
           event_category: event.category,
           event_label: event.label,
           value: event.value,
           ...event.metadata
-        });
+        })
       }
       // Log in development
       if (process.env['NODE_ENV'] === 'development') {
@@ -69,10 +69,10 @@ class AnalyticsService {
   trackPageView(path: string, title?: string): void {
     try {
       if (this.hasGtag()) {
-        (window as any).gtag('config', this.config.gaId, {
+        gtag('config', this.config.gaId, {
           page_path: path,
           page_title: title,
-        });
+        })
       }
     } catch (error) {
       console.error('Failed to track page view:', error)
@@ -84,10 +84,10 @@ class AnalyticsService {
   identifyUser(user: AnalyticsUser): void {
     try {
       if (this.hasGtag() && user.id) {
-        (window as any).gtag('config', this.config.gaId, {
+        gtag('config', this.config.gaId, {
           user_id: user.id,
           ...user.properties
-        });
+        })
       }
     } catch (error) {
       console.error('Failed to identify user:', error)
@@ -98,11 +98,11 @@ class AnalyticsService {
    */
   trackError(error: Error, metadata?: Record<string, unknown>): void {
     this.trackEvent({
-      action: 'error'
-      category: 'exception'
-      label: error.message
+      action: 'error',
+      category: 'exception',
+      label: error.message,
       metadata: {
-        stack: error.stack
+        stack: error.stack,
         ...metadata
       }
     })
@@ -118,8 +118,9 @@ class AnalyticsService {
   ): void {
     try {
       if (this.hasGtag()) {
+        gtag('event', 'timing_complete', {
           name: variable,
-          value: Math.round(value)
+          value: Math.round(value),
           event_category: category,
           event_label: label,
         })
