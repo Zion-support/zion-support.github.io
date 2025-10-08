@@ -169,7 +169,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     document.head.appendChild(metaTag);
   };
 
-  const updateCanonicalUrl = (url: string) => {
+  const _updateCanonicalUrl = (url: string) => {
     let canonicalLink = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
 
     if (canonicalLink) {
@@ -210,7 +210,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     }
   };
 
-  const trackPerformanceMetrics = () => {
+  const _trackPerformanceMetrics = () => {
     if (typeof window !== 'undefined' && 'performance' in window) {
       window.addEventListener('load', () => {
         const perfData = performance.getEntriesByType(

@@ -381,15 +381,10 @@ class ContextLogger {
   fatal(message: string, error?: Error, metadata?: Record<string, unknown>): void {
     this.logger.fatal(message, error, this.context, metadata)
   }
-<<<<<<< HEAD
   perf(metric: string, value: number, metadata?: Record<string, unknown>): void {
     this.logger.perf(metric, value, { ...metadata, context: this.context })
-=======
-  perf(metric: string, value: number, _metadata?: Record<string, unknown>): void {
-    this.logger.perf(metric, value, { ..._metadata, context: this.context })
->>>>>>> cursor/fix-errors-and-merge-to-main-bdc9
   }
-  lifecycle(message: string, metadata?: Record<string, unknown>): void {
+  lifecycle(message: string, _metadata?: Record<string, unknown>): void {
     this.logger.lifecycle(message, this.context)
   }
   performance(message: string, data: unknown, _metadata?: Record<string, unknown>): void {
