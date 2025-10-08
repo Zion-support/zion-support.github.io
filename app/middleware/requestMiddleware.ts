@@ -75,8 +75,7 @@ export const loggingMiddleware: Middleware = async (context, next) => {
     const result = await next();
     const duration = Date.now() - startTime;
 
-    logger.info('Request completed', {
-      component: 'RequestMiddleware',
+    logger.info('Request completed', 'RequestMiddleware', {
       method: context.request.method,
       url: context.request.url,
       status: context.response?.status,
