@@ -72,14 +72,14 @@ class PerformanceMonitor {
     fn: () => Promise<T>,
     tags?: Record<string, string>
   ): Promise<T> {
-//     const start = performance.now();
+    const start = performance.now();
     try {
-//       const result = await fn();
-//       const duration = performance.now() - start;
+      const result = await fn();
+      const duration = performance.now() - start;
       this.trackMetric(name, duration, 'ms', tags);
       return result;
     } catch (error) {
-//       const duration = performance.now() - start;
+      const duration = performance.now() - start;
       this.trackMetric(`${name}_error`, duration, 'ms', { ...tags, error: 'true' });
       throw error;
     }
@@ -89,14 +89,14 @@ class PerformanceMonitor {
    * Measure execution time of a synchronous function
    */
   measure<T>(name: string, fn: () => T, tags?: Record<string, string>): T {
-//     const start = performance.now();
+    const start = performance.now();
     try {
-//       const result = fn();
-//       const duration = performance.now() - start;
+      const result = fn();
+      const duration = performance.now() - start;
       this.trackMetric(name, duration, 'ms', tags);
       return result;
     } catch (error) {
-//       const duration = performance.now() - start;
+      const duration = performance.now() - start;
       this.trackMetric(`${name}_error`, duration, 'ms', { ...tags, error: 'true' });
       throw error;
     }
@@ -121,7 +121,7 @@ class PerformanceMonitor {
       performance.measure(name, startMark, endMark);
       const entries = performance.getEntriesByName(name, 'measure');
       if (entries.length > 0) {
-//         const duration = entries[entries.length - 1].duration;
+        const duration = entries[entries.length - 1].duration;
         this.trackMetric(name, duration, 'ms');
         return duration;
       }
@@ -218,7 +218,7 @@ class PerformanceMonitor {
       // Observe First Input Delay (FID)
       const fidObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
-        entries.forEach((entry: unknown) => {
+        entries.forEach((entry: any) => {
           const metric = this.createMetric('FID', entry.processingStart - entry.startTime);
           this.webVitals.FID = metric;
           this.notifyCallbacks(metric);
@@ -231,7 +231,7 @@ class PerformanceMonitor {
       let clsValue = 0;
       const clsObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
-        entries.forEach((entry: unknown) => {
+        entries.forEach((entry: any) => {
           if (!entry.hadRecentInput) {
             clsValue += entry.value;
           }

@@ -12,21 +12,21 @@ export const getContrastRatio = (foreground: string, background: string): number
     const hex = color.replace('#', '');
     const r = parseInt(hex.substring(0, 2), 16) / 255;
     const g = parseInt(hex.substring(2, 4), 16) / 255;
-//     const b = parseInt(hex.substring(4, 6), 16) / 255;
+    const b = parseInt(hex.substring(4, 6), 16) / 255;
 
     // Calculate relative luminance
-//     const rsRGB = r <= 0.03928 ? r / 12.92 : Math.pow((r + 0.055) / 1.055, 2.4);
-//     const gsRGB = g <= 0.03928 ? g / 12.92 : Math.pow((g + 0.055) / 1.055, 2.4);
-//     const bsRGB = b <= 0.03928 ? b / 12.92 : Math.pow((b + 0.055) / 1.055, 2.4);
+    const rsRGB = r <= 0.03928 ? r / 12.92 : Math.pow((r + 0.055) / 1.055, 2.4);
+    const gsRGB = g <= 0.03928 ? g / 12.92 : Math.pow((g + 0.055) / 1.055, 2.4);
+    const bsRGB = b <= 0.03928 ? b / 12.92 : Math.pow((b + 0.055) / 1.055, 2.4);
 
     return 0.2126 * rsRGB + 0.7152 * gsRGB + 0.0722 * bsRGB;
   };
 
-//   const l1 = getLuminance(foreground);
-//   const l2 = getLuminance(background);
+  const l1 = getLuminance(foreground);
+  const l2 = getLuminance(background);
 
-//   const lighter = Math.max(l1, l2);
-//   const darker = Math.min(l1, l2);
+  const lighter = Math.max(l1, l2);
+  const darker = Math.min(l1, l2);
 
   return (lighter + 0.05) / (darker + 0.05);
 };
@@ -35,7 +35,7 @@ export const getContrastRatio = (foreground: string, background: string): number
  * Check if contrast ratio meets WCAG AA standards
  */
 export const meetsWCAGAA = (foreground: string, background: string, largeText: boolean = false): boolean => {
-//   const ratio = getContrastRatio(foreground, background);
+  const ratio = getContrastRatio(foreground, background);
   return largeText ? ratio >= 3 : ratio >= 4.5;
 };
 
@@ -43,7 +43,7 @@ export const meetsWCAGAA = (foreground: string, background: string, largeText: b
  * Check if contrast ratio meets WCAG AAA standards
  */
 export const meetsWCAGAAA = (foreground: string, background: string, largeText: boolean = false): boolean => {
-//   const ratio = getContrastRatio(foreground, background);
+  const ratio = getContrastRatio(foreground, background);
   return largeText ? ratio >= 4.5 : ratio >= 7;
 };
 
@@ -65,7 +65,7 @@ export const generateARIALabel = (elementType: string, context?: string): string
     alert: 'Important message',
   };
 
-//   const baseLabel = labels[elementType] || 'Interactive element';
+  const baseLabel = labels[elementType] || 'Interactive element';
   return context ? `${baseLabel}: ${context}` : baseLabel;
 };
 
@@ -177,7 +177,7 @@ export const addKeyboardNavigation = (
   const elements = Array.from(container.querySelectorAll<HTMLElement>(selector));
 
   const handleKeyDown = (e: KeyboardEvent) => {
-//     const currentIndex = elements.indexOf(e.target as HTMLElement);
+    const currentIndex = elements.indexOf(e.target as HTMLElement);
     if (currentIndex === -1) return;
 
     let nextIndex = currentIndex;
@@ -274,7 +274,7 @@ export const validateARIA = (element: HTMLElement): string[] => {
   const issues: string[] = [];
 
   // Check for required ARIA attributes based on role
-//   const role = element.getAttribute('role');
+  const role = element.getAttribute('role');
   
   if (role) {
     const requiredAttributes: Record<string, string[]> = {
@@ -299,12 +299,12 @@ export const validateARIA = (element: HTMLElement): string[] => {
   }
 
   // Check for invalid ARIA references
-//   const labelledby = element.getAttribute('aria-labelledby');
+  const labelledby = element.getAttribute('aria-labelledby');
   if (labelledby && !document.getElementById(labelledby)) {
     issues.push(`aria-labelledby references non-existent id: ${labelledby}`);
   }
 
-//   const describedby = element.getAttribute('aria-describedby');
+  const describedby = element.getAttribute('aria-describedby');
   if (describedby && !document.getElementById(describedby)) {
     issues.push(`aria-describedby references non-existent id: ${describedby}`);
   }
