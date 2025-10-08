@@ -77,8 +77,7 @@ class ErrorLogger {
       `%c[${entry.severity.toUpperCase()}] ${entry.message}`,
       styles[entry.severity]
     );
-<<<<<<< HEAD
-    // eslint-disable-next-line no-console
+// eslint-disable-next-line no-console
     console.log('Timestamp:', entry.timestamp);
     if (entry.error) {
       // eslint-disable-next-line no-console
@@ -91,17 +90,6 @@ class ErrorLogger {
     if (entry.stackTrace) {
       // eslint-disable-next-line no-console
     console.log('Stack Trace:', entry.stackTrace);
-=======
-    logger.info('Timestamp:', entry.timestamp);
-    if (entry.error) {
-      logger.error('Error:', entry.error);
-    }
-    if (entry.context) {
-      logger.info('Context:', entry.context);
-    }
-    if (entry.stackTrace) {
-      logger.info('Stack Trace:', entry.stackTrace);
->>>>>>> cursor/fix-errors-and-merge-to-main-add2
     }
     console.groupEnd();
   }
@@ -134,12 +122,8 @@ class ErrorLogger {
       });
     } catch (error) {
       // Silently fail to avoid infinite loop
-<<<<<<< HEAD
-      // eslint-disable-next-line no-console
+// eslint-disable-next-line no-console
     console.error('Failed to send error to external service:', error);
-=======
-      logger.error('Failed to send error to external service:', error);
->>>>>>> cursor/fix-errors-and-merge-to-main-add2
     }
   }
 

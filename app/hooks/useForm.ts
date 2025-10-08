@@ -147,12 +147,8 @@ export function useForm<T extends Record<string, unknown>>({
       try {
         await onSubmit(values);
       } catch (error) {
-<<<<<<< HEAD
-        // eslint-disable-next-line no-console
+// eslint-disable-next-line no-console
     console.error('Form submission error:', error);
-=======
-        logger.error('Form submission error:', error);
->>>>>>> cursor/fix-errors-and-merge-to-main-add2
       } finally {
         setIsSubmitting(false);
       }

@@ -51,12 +51,8 @@ export class PerformanceMonitor {
     this.metrics.set(`${componentName}_render`, renderTime);
     
     if (process.env['NODE_ENV'] === 'development') {
-<<<<<<< HEAD
-      if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { // eslint-disable-next-line no-console
+if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { // eslint-disable-next-line no-console
     console.log(`[Performance] ${componentName} rendered in ${renderTime.toFixed(2)}ms`); } }
-=======
-      if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { logger.info(`[Performance] ${componentName} rendered in ${renderTime.toFixed(2)}ms`); } }
->>>>>>> cursor/fix-errors-and-merge-to-main-add2
     }
   }
 
@@ -89,12 +85,8 @@ export class PerformanceMonitor {
     const observer = new PerformanceObserver((list) => {
       list.getEntries().forEach((entry) => {
         if (entry.duration > 50) { // Tasks longer than 50ms
-<<<<<<< HEAD
-          // eslint-disable-next-line no-console
+// eslint-disable-next-line no-console
     console.warn(`[Performance] Long task detected: ${entry.duration.toFixed(2)}ms`);
-=======
-          logger.warn(`[Performance] Long task detected: ${entry.duration.toFixed(2)}ms`);
->>>>>>> cursor/fix-errors-and-merge-to-main-add2
         }
       });
     });
@@ -225,12 +217,8 @@ export const optimizeScrollPerformance = () => {
   const trackLCP = () => {
     const observer = new PerformanceObserver((list) => {
       for (const entry of list.getEntries()) {
-<<<<<<< HEAD
-        if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { // eslint-disable-next-line no-console
+if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { // eslint-disable-next-line no-console
     console.log('[Web Vitals] LCP:', entry.startTime); } }
-=======
-        if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { logger.info('[Web Vitals] LCP:', entry.startTime); } }
->>>>>>> cursor/fix-errors-and-merge-to-main-add2
       }
     });
 
@@ -248,12 +236,8 @@ export const optimizeScrollPerformance = () => {
       for (const entry of list.getEntries()) {
         const fidEntry = entry as FirstInputEntry;
         const fid = fidEntry.processingStart - entry.startTime;
-<<<<<<< HEAD
-        if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { // eslint-disable-next-line no-console
+if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { // eslint-disable-next-line no-console
     console.log('[Web Vitals] FID:', fid); } }
-=======
-        if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { logger.info('[Web Vitals] FID:', fid); } }
->>>>>>> cursor/fix-errors-and-merge-to-main-add2
       }
     });
 
@@ -329,11 +313,7 @@ export const initializePerformanceEnhancements = () => {
   const metrics = collectPerformanceMetrics();
   if (metrics && process.env['NODE_ENV'] === 'development') {
      
-<<<<<<< HEAD
-    if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { // eslint-disable-next-line no-console
+if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { // eslint-disable-next-line no-console
     console.log('Performance metrics:', metrics); } }
-=======
-    if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { logger.info('Performance metrics:', metrics); } }
->>>>>>> cursor/fix-errors-and-merge-to-main-add2
   }
 };
