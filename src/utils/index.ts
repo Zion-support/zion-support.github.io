@@ -55,7 +55,8 @@ export {
   ErrorSeverity,
   ErrorCategory,
   type ErrorInfo,
-  ErrorHandler,
+  
+  default as ErrorHandler,
 } from './errorHandler';
 export { default as errorHandler } from './errorHandler';
 
