@@ -17,8 +17,6 @@ export const bannerConfigurations: BannerConfig[] = [
   },
 ];
 
-export default bannerConfigurations;
-
 export const selectBannersForDisplay = (
   strategy: RotationStrategy = 'sequential',
   maxBanners: number = 3
@@ -32,16 +30,12 @@ export const selectBalancedBanners = (maxBanners: number = 3): BannerConfig[] =>
 
 export const trackImpression = (bannerId: string): void => {
   // Track banner impression
-  if (typeof window !== 'undefined') {
-    console.log('Banner impression:', bannerId);
-  }
+  console.log('Banner impression:', bannerId);
 };
 
 export const trackClick = (bannerId: string): void => {
   // Track banner click
-  if (typeof window !== 'undefined') {
-    console.log('Banner click:', bannerId);
-  }
+  console.log('Banner click:', bannerId);
 };
 
 export const loadBannerStats = (): Record<string, { impressions: number; clicks: number }> => {
@@ -55,3 +49,5 @@ export const getRefreshInterval = (): number => {
 export const getRotationStrategy = (): RotationStrategy => {
   return 'sequential';
 };
+
+export default bannerConfigurations;

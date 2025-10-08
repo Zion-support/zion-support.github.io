@@ -54,7 +54,6 @@ export default function NotFound() {
 
         {/* Error Message */}
         <div className="mb-12">
-<<<<<<< HEAD
           <h2 className="text-4xl font-bold text-white mb-4">
             Page Not Found
           </h2>
