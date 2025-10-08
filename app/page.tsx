@@ -53,7 +53,14 @@ const HomePage: React.FC = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid relative overflow-hidden">
+      {/* Animated Background Elements */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute top-3/4 right-1/4 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        <div className="absolute bottom-1/4 left-1/3 w-64 h-64 bg-pink-500/10 rounded-full blur-3xl animate-pulse delay-2000"></div>
+      </div>
+      
       {/* Navigation */}
       <Navigation />
       
@@ -80,7 +87,7 @@ const HomePage: React.FC = () => {
         >
           <h1 
             id="hero-heading" 
-            className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 neon-text"
+            className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 neon-text-strong floating"
           >
             Zion Tech Group
           </h1>
@@ -141,9 +148,9 @@ const HomePage: React.FC = () => {
           </p>
           <div className="grid md:grid-cols-3 gap-8 mb-12">
             <Suspense fallback={<ServiceCardSkeleton />}>
-              <article className="cyber-card hologram-card">
-                <div className="text-5xl mb-6 text-center">🤖</div>
-                <h3 className="text-2xl font-bold text-white mb-4 text-center">AI Services</h3>
+              <article className="cyber-card hologram-card glow-pulse">
+                <div className="text-5xl mb-6 text-center floating">🤖</div>
+                <h3 className="text-2xl font-bold text-white mb-4 text-center neon-text">AI Services</h3>
                 <p className="text-gray-300 mb-6 text-center leading-relaxed">
                   Advanced artificial intelligence solutions including machine learning, natural language processing, and computer vision.
                 </p>
@@ -157,9 +164,9 @@ const HomePage: React.FC = () => {
             </Suspense>
 
             <Suspense fallback={<ServiceCardSkeleton />}>
-              <article className="cyber-card hologram-card">
-                <div className="text-5xl mb-6 text-center">📢</div>
-                <h3 className="text-2xl font-bold text-white mb-4 text-center">AI Marketing</h3>
+              <article className="cyber-card hologram-card glow-pulse">
+                <div className="text-5xl mb-6 text-center floating">📢</div>
+                <h3 className="text-2xl font-bold text-white mb-4 text-center neon-text">AI Marketing</h3>
                 <p className="text-gray-300 mb-6 text-center leading-relaxed">
                   Revolutionary AI-powered marketing automation, ad optimization, and content generation.
                 </p>
@@ -173,9 +180,9 @@ const HomePage: React.FC = () => {
             </Suspense>
 
             <Suspense fallback={<ServiceCardSkeleton />}>
-              <article className="cyber-card hologram-card">
-                <div className="text-5xl mb-6 text-center">⚙️</div>
-                <h3 className="text-2xl font-bold text-white mb-4 text-center">AI Automation</h3>
+              <article className="cyber-card hologram-card glow-pulse">
+                <div className="text-5xl mb-6 text-center floating">⚙️</div>
+                <h3 className="text-2xl font-bold text-white mb-4 text-center neon-text">AI Automation</h3>
                 <p className="text-gray-300 mb-6 text-center leading-relaxed">
                   Intelligent automation of business processes with decision-making capabilities and exception handling.
                 </p>

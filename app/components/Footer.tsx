@@ -153,40 +153,36 @@ const Footer: React.FC = () => {
           {/* Contact */}
           <div>
             <h4 className="text-lg font-semibold mb-4">Contact</h4>
-<<<<<<< HEAD
-            <div className="space-y-2 text-gray-300">
-              <p>Email: kleber@ziontechgroup.com</p>
-              <p>Phone: +1 (302) 464-0950</p>
-              <p>Website: ziontechgroup.com</p>
-=======
             <div className="space-y-3">
               <div className="flex items-center">
-                <Phone className="w-5 h-5 mr-3 text-blue-400" />
-                <a href="tel:+13024640950" className="text-gray-300 hover:text-white transition-colors">
+                <Phone className="w-5 h-5 mr-3 text-cyan-400" />
+                <a href="tel:+13024640950" className="text-gray-300 hover:text-cyan-400 transition-colors">
                   +1 (302) 464-0950
                 </a>
               </div>
               <div className="flex items-center">
-                <Mail className="w-5 h-5 mr-3 text-blue-400" />
-                <a href="mailto:contact@ziontechgroup.com" className="text-gray-300 hover:text-white transition-colors">
-                  contact@ziontechgroup.com
+                <Mail className="w-5 h-5 mr-3 text-cyan-400" />
+                <a href="mailto:kleber@ziontechgroup.com" className="text-gray-300 hover:text-cyan-400 transition-colors">
+                  kleber@ziontechgroup.com
                 </a>
               </div>
               <div className="flex items-center">
-                <MapPin className="w-5 h-5 mr-3 text-blue-400" />
+                <MapPin className="w-5 h-5 mr-3 text-cyan-400" />
                 <span className="text-gray-300">364 E Main St STE 1008, Middletown DE 19709</span>
               </div>
               <div className="flex items-center">
-                <Clock className="w-5 h-5 mr-3 text-blue-400" />
+                <Clock className="w-5 h-5 mr-3 text-cyan-400" />
                 <span className="text-gray-300">24/7 Support Available</span>
               </div>
->>>>>>> cursor/analyze-improve-and-deploy-application-1a78
               <div className="flex space-x-4 mt-4">
-                <a href="https://linkedin.com/company/ziontechgroup" className="text-gray-300 hover:text-white transition-colors">
+                <a href="https://linkedin.com/company/ziontechgroup" className="text-gray-300 hover:text-cyan-400 transition-colors">
                   LinkedIn
                 </a>
-                <a href="https://twitter.com/ziontechgroup" className="text-gray-300 hover:text-white transition-colors">
+                <a href="https://twitter.com/ziontechgroup" className="text-gray-300 hover:text-cyan-400 transition-colors">
                   Twitter
+                </a>
+                <a href="https://github.com/ziontechgroup" className="text-gray-300 hover:text-cyan-400 transition-colors">
+                  GitHub
                 </a>
               </div>
             </div>
