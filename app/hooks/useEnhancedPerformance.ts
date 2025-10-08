@@ -99,7 +99,7 @@ export function useEnhancedPerformance(
 
   const measureOperation = useCallback(
     (operationName: string) => {
-      const markName = `${component}-${operationName}`;
+      const _markName = `${component}-${operationName}`;
       const startTime = performance.now();
 
       return {
