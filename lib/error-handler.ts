@@ -6,10 +6,6 @@ import { NextApiRequest, NextApiResponse } from 'next';
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 =======
-import { NextApiRequest, NextApiResponse } from 'next';
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-8344
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-3fed
@@ -51,13 +47,13 @@ import { NextApiRequest, NextApiResponse } from 'next';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-ee0f
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-4b0f
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-cfbc
 export interface ApiError extends Error {
   statusCode?: number;
   isOperational?: boolean;
 }
 =======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3fed
-=======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-1f83
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-9d58
@@ -77,14 +73,14 @@ export interface ApiError extends Error {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-ee0f
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-4b0f
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-cfbc
 
 export class AppError extends Error implements ApiError {
   public statusCode: number;
   public isOperational: boolean;
 
 =======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-8344
-=======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-3fed
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-1f83
@@ -106,6 +102,8 @@ export class AppError extends Error implements ApiError {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-ee0f
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-4b0f
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-cfbc
   constructor(message: string, statusCode: number = 500) {
     super(message);
     this.statusCode = statusCode;
@@ -115,9 +113,6 @@ export class AppError extends Error implements ApiError {
 }
 =======
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-8344
-=======
-
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-3fed
 =======
 
@@ -149,6 +144,9 @@ export class AppError extends Error implements ApiError {
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-4b0f
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-cfbc
 export const errorHandler = (
   err: ApiError,
   req: NextApiRequest,
@@ -156,9 +154,6 @@ export const errorHandler = (
 ) => {
   const { statusCode = 500, message } = err;
 =======
-  
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8
-=======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-8344
 =======
@@ -194,6 +189,9 @@ export const errorHandler = (
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-4b0f
+=======
+  
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-cfbc
   // Log error for monitoring
   console.error(`API Error [${statusCode}]: ${message}`, {
     url: req.url,
@@ -218,9 +216,6 @@ export const errorHandler = (
   });
 =======
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-8344
-=======
-
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-3fed
 =======
 
@@ -249,6 +244,9 @@ export const errorHandler = (
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-4b0f
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-cfbc
   res.status(statusCode).json({
     error: {
       message:
@@ -297,18 +295,6 @@ export const errorHandler = (
 
 export const asyncHandler =
   (fn: Function) =>
-export const asyncHandler = (fn: Function) => {
-  return (req: NextApiRequest, res: NextApiResponse) => {
-    Promise.resolve(fn(req, res)).catch((err) => {
-      errorHandler(err, req, res);
-    });
-  };
-};
-=======
-  (req: NextApiRequest, res: NextApiResponse, next: Function) => {
-    Promise.resolve(fn(req, res, next)).catch((error: Error) => next(error));
-  };
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0a8c
 =======
   (req: NextApiRequest, res: NextApiResponse, next: Function) => {
     Promise.resolve(fn(req, res, next)).catch((error: Error) => next(error));
@@ -399,3 +385,8 @@ export const asyncHandler =
     Promise.resolve(fn(req, res, next)).catch((error: Error) => next(error));
   };
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-4b0f
+=======
+  (req: NextApiRequest, res: NextApiResponse, next: Function) => {
+    Promise.resolve(fn(req, res, next)).catch((error: Error) => next(error));
+  };
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-cfbc

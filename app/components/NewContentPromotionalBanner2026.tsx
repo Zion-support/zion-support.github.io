@@ -1,9 +1,9 @@
 import React from 'react';
-import { ArrowRight, Bot, Rocket, Shield, Target, TrendingUp, Zap } from 'lucide-react';
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-e42d
 =======
 
+=======
+import { ArrowRight, Rocket, Shield, Target, TrendingUp, Zap } from 'lucide-react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-cfbc
 import Link from 'next/link';
 import {
   Sparkles,

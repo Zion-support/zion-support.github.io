@@ -64,4 +64,3 @@ const InteractiveContentShowcase2026: React.FC = () => {
   );
 };
 
-export default InteractiveContentShowcase2026;
