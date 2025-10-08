@@ -98,7 +98,7 @@ class ErrorBoundary extends Component<Props, State> {
                     <div className="mb-2">
                       <strong>Error:</strong> {this.state.error.message}
                     </div>
-                  )}
+                    </div>
                 </div>
               </details>
             )}
