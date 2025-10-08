@@ -97,8 +97,6 @@ class PerformanceOptimizer {
       observer.observe({ entryTypes: ['largest-contentful-paint'] })
       this.observers.push(observer)
     } catch {
-    } catch {
-    } catch {
       // Ignore if not supported
     }
   }
@@ -109,13 +107,10 @@ class PerformanceOptimizer {
         entries.forEach((entry: PerformanceEntry) => {
           const fidEntry = entry as PerformanceEntry & { processingStart: number }
           this.metrics.fid = fidEntry.processingStart - fidEntry.startTime
-
         })
       })
       observer.observe({ entryTypes: ['first-input'] })
       this.observers.push(observer)
-    } catch {
-    } catch {
     } catch {
       // Ignore if not supported
     }
@@ -129,15 +124,12 @@ class PerformanceOptimizer {
           const clsEntry = entry as PerformanceEntry & { hadRecentInput?: boolean; value: number }
           if (!clsEntry.hadRecentInput) {
             clsValue += clsEntry.value
-
           }
         })
         this.metrics.cls = clsValue
       })
       observer.observe({ entryTypes: ['layout-shift'] })
       this.observers.push(observer)
-    } catch {
-    } catch {
     } catch {
       // Ignore if not supported
     }
@@ -154,8 +146,6 @@ class PerformanceOptimizer {
       })
       observer.observe({ entryTypes: ['paint'] })
       this.observers.push(observer)
-    } catch {
-    } catch {
     } catch {
       // Ignore if not supported
     }

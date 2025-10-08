@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-import { useEffect, useCallback } from 'react'
-
-interface PerformanceMetrics {
-  loadTime: number
-  firstContentfulPaint: number
-  largestContentfulPaint: number
-  cumulativeLayoutShift: number
-  firstInputDelay: number
-=======
 import { useEffect, useCallback } from 'react';
 
 interface PerformanceMetrics {
@@ -16,28 +6,18 @@ interface PerformanceMetrics {
   largestContentfulPaint: number;
   cumulativeLayoutShift: number;
   firstInputDelay: number;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f5eb
 }
 
 export const usePerformanceOptimization = () => {
   const measurePerformance = useCallback(() => {
     if (typeof window === 'undefined' || !('performance' in window)) {
-<<<<<<< HEAD
-      return null
-=======
       return null;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f5eb
     }
 
     const navigation = performance.getEntriesByType(
       'navigation'
-<<<<<<< HEAD
-    )[0] as PerformanceNavigationTiming
-    const paintEntries = performance.getEntriesByType('paint')
-=======
     )[0] as PerformanceNavigationTiming;
     const paintEntries = performance.getEntriesByType('paint');
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f5eb
 
     const metrics: PerformanceMetrics = {
       loadTime: navigation
@@ -49,35 +29,6 @@ export const usePerformanceOptimization = () => {
       largestContentfulPaint: 0,
       cumulativeLayoutShift: 0,
       firstInputDelay: 0,
-<<<<<<< HEAD
-    }
-
-    // Measure LCP
-    const lcpObserver = new PerformanceObserver(list => {
-      const entries = list.getEntries()
-      const lastEntry = entries[entries.length - 1]
-      if (lastEntry) {
-        metrics.largestContentfulPaint = lastEntry.startTime
-      }
-    })
-    lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] })
-
-    // Measure CLS
-    let clsValue = 0
-    const clsObserver = new PerformanceObserver(list => {
-      for (const entry of list.getEntries()) {
-        const layoutShiftEntry = entry as PerformanceEntry & {
-          hadRecentInput?: boolean
-          value?: number
-        }
-        if (!layoutShiftEntry.hadRecentInput) {
-          clsValue += layoutShiftEntry.value || 0
-        }
-      }
-      metrics.cumulativeLayoutShift = clsValue
-    })
-    clsObserver.observe({ entryTypes: ['layout-shift'] })
-=======
     };
 
     // Measure LCP
@@ -105,85 +56,11 @@ export const usePerformanceOptimization = () => {
       metrics.cumulativeLayoutShift = clsValue;
     });
     clsObserver.observe({ entryTypes: ['layout-shift'] });
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f5eb
 
     // Measure FID
     const fidObserver = new PerformanceObserver(list => {
       for (const entry of list.getEntries()) {
         const fidEntry = entry as PerformanceEntry & {
-<<<<<<< HEAD
-          processingStart?: number
-        }
-        metrics.firstInputDelay =
-          (fidEntry.processingStart || 0) - entry.startTime
-      }
-    })
-    fidObserver.observe({ entryTypes: ['first-input'] })
-
-    // Cleanup observers after a delay
-    setTimeout(() => {
-      lcpObserver.disconnect()
-      clsObserver.disconnect()
-      fidObserver.disconnect()
-    }, 10000)
-
-    return metrics
-  }, [])
-
-  const optimizeImages = useCallback(() => {
-    const images = document.querySelectorAll('img[data-src]')
-    const imageObserver = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const img = entry.target as HTMLImageElement
-          img['src'] = img.dataset['src'] || ''
-          img.classList.remove('lazy')
-          imageObserver.unobserve(img)
-        }
-      })
-    })
-
-    images.forEach(img => imageObserver.observe(img))
-  }, [])
-
-  const preloadCriticalResources = useCallback(() => {
-    const criticalResources = ['/fonts/inter-var.woff2', '/css/critical.css']
-
-    criticalResources.forEach(resource => {
-      const link = document.createElement('link')
-      link.rel = 'preload'
-      link.href = resource
-      link.as = resource.endsWith('.woff2') ? 'font' : 'style'
-      if (resource.endsWith('.woff2')) {
-        link.crossOrigin = 'anonymous'
-      }
-      document.head.appendChild(link)
-    })
-  }, [])
-
-  useEffect(() => {
-    // Measure performance after page load
-    const timer = setTimeout(() => {
-      const metrics = measurePerformance()
-      if (metrics) {
-        // Send metrics to analytics in production
-        if (process.env['NODE_ENV'] === 'production') {
-          // Track metrics in production
-        }
-         
-        if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { console.log('Performance Metrics:', metrics); } }
-      }
-    }, 1000)
-
-    // Optimize images
-    optimizeImages()
-
-    // Preload critical resources
-    preloadCriticalResources()
-
-    return () => clearTimeout(timer)
-  }, [measurePerformance, optimizeImages, preloadCriticalResources])
-=======
           processingStart?: number;
         };
         metrics.firstInputDelay =
@@ -259,16 +136,10 @@ export const usePerformanceOptimization = () => {
 
     return () => clearTimeout(timer);
   }, [measurePerformance, optimizeImages, preloadCriticalResources]);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f5eb
 
   return {
     measurePerformance,
     optimizeImages,
     preloadCriticalResources,
-<<<<<<< HEAD
-  }
-}
-=======
   };
 };
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f5eb
