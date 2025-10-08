@@ -66,7 +66,7 @@ class AdvancedErrorBoundary extends Component<
       logger.error(
         'Error Boundary caught an error',
         error,
-        { component: 'ErrorBoundary', errorInfo }
+        { component: 'ErrorBoundary', errorInfo, stack: error.stack }
       );
     }
 
