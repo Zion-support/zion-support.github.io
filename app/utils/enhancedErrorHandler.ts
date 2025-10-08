@@ -604,7 +604,9 @@ class EnhancedErrorHandler {
 
     if (recentErrors.length > 5) {
       // eslint-disable-next-line no-console
-      if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { console.log('🔄 Attempting error recovery...'); } }
+      if (process.env['NODE_ENV'] === 'development') {
+        console.log('🔄 Attempting error recovery...');
+      }
       // Implement recovery strategies here
       this.clearErrorState();
     }
@@ -620,7 +622,9 @@ class EnhancedErrorHandler {
     this.errorRateLimit = 0;
 
     // eslint-disable-next-line no-console
-    if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { console.log('🧹 Error state cleared'); } }
+    if (process.env['NODE_ENV'] === 'development') {
+      console.log('🧹 Error state cleared');
+    }
   }
 
   /**
@@ -635,7 +639,9 @@ class EnhancedErrorHandler {
     );
 
     // eslint-disable-next-line no-console
-    if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { console.log(`🧹 Cleaned up old errors, ${this.errors.length} remaining`); } }
+    if (process.env['NODE_ENV'] === 'development') {
+      console.log(`🧹 Cleaned up old errors, ${this.errors.length} remaining`);
+    }
   }
 
   /**

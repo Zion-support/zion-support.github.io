@@ -136,8 +136,5 @@ export function useEnhancedPerformance(
     trackError,
     trackUserAction,
     measureOperation,
-    renderCount: renderCountRef.current,
   };
 }
-
-export default useEnhancedPerformance;
