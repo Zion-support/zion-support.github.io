@@ -1,8 +1,4 @@
 
-<<<<<<< HEAD
-// Sitemap for Vite + React Router
-export default function sitemap() {
-=======
 interface SitemapEntry {
   url: string;
   lastModified: Date;
@@ -11,8 +7,6 @@ interface SitemapEntry {
 }
 
 export default function sitemap(): SitemapEntry[] {
-
->>>>>>> main
   const baseUrl = 'https://ziontechgroup.com';
 
   return [

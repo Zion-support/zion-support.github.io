@@ -20,8 +20,6 @@ export interface PerformanceThresholds {
 }
 
 // Extended types for specific performance entry types
-<<<<<<< HEAD
-<<<<<<< HEAD
 interface PerformancePaintTiming extends PerformanceEntry {
   name: 'first-paint' | 'first-contentful-paint';
 }
@@ -41,245 +39,133 @@ interface PerformanceEventTiming extends PerformanceEntry {
   cancelable: boolean;
   target: EventTarget | null;
 }
-=======
-// These interfaces are defined for future use but not currently used
-// interface _PerformancePaintTiming extends PerformanceEntry {
-//   name: 'first-paint' | 'first-contentful-paint';
-// }
-
-// interface _LargestContentfulPaint extends PerformanceEntry {
-//   renderTime: number;
-//   loadTime: number;
-//   size: number;
-//   id: string;
-//   url: string;
-//   element: Element | null;
-// }
-
-// interface _PerformanceEventTiming extends PerformanceEntry {
-//   processingStart: number;
-//   processingEnd: number;
-//   cancelable: boolean;
-//   target: EventTarget | null;
-// }
->>>>>>> cursor/fix-errors-and-merge-to-main-fbf5
-=======
-// Performance entry types are handled inline where needed
->>>>>>> cursor/fix-errors-and-merge-to-main-5c5e
 
 class PerformanceMonitor {
-  private metrics: Map<string, PerformanceMetric> = new Map();
+  private static instance: PerformanceMonitor;
+  private metrics: Map<string, PerformanceMetric[]> = new Map();
   private observers: PerformanceObserver[] = [];
-  
-  // Web Vitals thresholds (in milliseconds)
-  private readonly thresholds: Record<string, PerformanceThresholds> = {
-    FCP: { good: 1800, needsImprovement: 3000 },
-    LCP: { good: 2500, needsImprovement: 4000 },
-    FID: { good: 100, needsImprovement: 300 },
-    CLS: { good: 0.1, needsImprovement: 0.25 },
-    TTFB: { good: 800, needsImprovement: 1800 },
-    INP: { good: 200, needsImprovement: 500 },
-  };
+  private isInitialized = false;
 
-  constructor() {
+  private constructor() {
     if (typeof window !== 'undefined') {
-      this.initializeObservers();
-      this.setupNavigationTiming();
-      this.setupResourceTiming();
+      this.initialize();
     }
   }
 
-  /**
-   * Initialize performance observers
-   */
-  private initializeObservers(): void {
+  static getInstance(): PerformanceMonitor {
+    if (!PerformanceMonitor.instance) {
+      PerformanceMonitor.instance = new PerformanceMonitor();
+    }
+    return PerformanceMonitor.instance;
+  }
+
+  private initialize(): void {
+    if (this.isInitialized) return;
+
     try {
-      // Observe paint metrics
-      if ('PerformanceObserver' in window) {
-        // First Contentful Paint
-        this.observeEntry('paint', (entries) => {
-          entries.forEach((entry) => {
-            if (entry.name === 'first-contentful-paint') {
-              this.recordMetric('FCP', entry.startTime);
-            }
-          });
-        });
+      this.observeWebVitals();
+      this.observeLongTasks();
+      this.observeResourceTiming();
+      this.isInitialized = true;
+      
+      logger.info('Performance monitoring initialized');
+    } catch (error) {
+      logger.error('Failed to initialize performance monitoring', error as Error);
+    }
+  }
 
-        // Largest Contentful Paint
-        this.observeEntry('largest-contentful-paint', (entries) => {
-<<<<<<< HEAD
-          const lastEntry = entries[entries.length - 1] as { renderTime?: number; loadTime?: number; startTime: number };
-=======
-          const lastEntry = entries[entries.length - 1] as PerformanceEntry;
->>>>>>> cursor/fix-errors-and-merge-to-main-5c5e
-          if (lastEntry) {
-            this.recordMetric('LCP', lastEntry.renderTime || lastEntry.loadTime || lastEntry.startTime);
-          }
-        });
+  private observeWebVitals(): void {
+    // LCP - Largest Contentful Paint
+    const lcpObserver = new PerformanceObserver((list) => {
+      const entries = list.getEntries();
+      const lastEntry = entries[entries.length - 1] as LargestContentfulPaint;
+      this.recordMetric('lcp', lastEntry.renderTime);
+    });
+    lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
+    this.observers.push(lcpObserver);
 
-        // First Input Delay
-        this.observeEntry('first-input', (entries) => {
-<<<<<<< HEAD
-          const firstInput = entries[0] as { processingStart: number; startTime: number };
-=======
-          const firstInput = entries[0] as PerformanceEntry & { processingStart: number };
->>>>>>> cursor/fix-errors-and-merge-to-main-5c5e
-          if (firstInput && firstInput.processingStart !== undefined) {
-            const fid = firstInput.processingStart - firstInput.startTime;
-            this.recordMetric('FID', fid);
-          }
-        });
-
-        // Cumulative Layout Shift
-        this.observeEntry('layout-shift', (entries) => {
-          let clsValue = 0;
-          entries.forEach((entry: any) => {
-            if (!entry.hadRecentInput) {
-              clsValue += entry.value;
-            }
-          });
-          if (clsValue > 0) {
-            this.recordMetric('CLS', clsValue);
-          }
-        });
+    // FID - First Input Delay
+    const fidObserver = new PerformanceObserver((list) => {
+      for (const entry of list.getEntries() as PerformanceEventTiming[]) {
+        const fid = entry.processingStart - entry.startTime;
+        this.recordMetric('fid', fid);
       }
-    } catch (error) {
-      logger.error('Failed to initialize performance observers', error as Error);
-    }
+    });
+    fidObserver.observe({ entryTypes: ['first-input'] });
+    this.observers.push(fidObserver);
+
+    // CLS - Cumulative Layout Shift
+    let clsValue = 0;
+    const clsObserver = new PerformanceObserver((list) => {
+      for (const entry of list.getEntries() as PerformanceEntry[]) {
+        const clsEntry = entry as PerformanceEntry & { hadRecentInput?: boolean; value: number };
+        if (!clsEntry.hadRecentInput) {
+          clsValue += clsEntry.value;
+          this.recordMetric('cls', clsValue);
+        }
+      }
+    });
+    clsObserver.observe({ entryTypes: ['layout-shift'] });
+    this.observers.push(clsObserver);
+
+    // FCP - First Contentful Paint
+    const fcpObserver = new PerformanceObserver((list) => {
+      for (const entry of list.getEntries() as PerformancePaintTiming[]) {
+        if (entry.name === 'first-contentful-paint') {
+          this.recordMetric('fcp', entry.startTime);
+        }
+      }
+    });
+    fcpObserver.observe({ entryTypes: ['paint'] });
+    this.observers.push(fcpObserver);
+
+    // TTFB - Time to First Byte
+    const ttfbObserver = new PerformanceObserver((list) => {
+      for (const entry of list.getEntries() as PerformanceEntry[]) {
+        const navEntry = entry as PerformanceEntry & { responseStart: number; requestStart: number };
+        if (navEntry.responseStart > 0) {
+          const ttfb = navEntry.responseStart - navEntry.requestStart;
+          this.recordMetric('ttfb', ttfb);
+        }
+      }
+    });
+    ttfbObserver.observe({ entryTypes: ['navigation'] });
+    this.observers.push(ttfbObserver);
   }
 
-  /**
-   * Observe specific performance entry types
-   */
-  private observeEntry(
-    type: string,
-    callback: (entries: PerformanceEntry[]) => void
-  ): void {
-    try {
-      const observer = new PerformanceObserver((list) => {
-        callback(list.getEntries());
-      });
-      observer.observe({ type, buffered: true });
-      this.observers.push(observer);
-    } catch (error) {
-      logger.debug(`Could not observe ${type}:`, { error });
-    }
-  }
-
-  /**
-   * Setup navigation timing metrics
-   */
-  private setupNavigationTiming(): void {
-    if ('performance' in window && 'getEntriesByType' in performance) {
-      window.addEventListener('load', () => {
-        setTimeout(() => {
-          const [navigationEntry] = performance.getEntriesByType(
-            'navigation'
-          ) as PerformanceNavigationTiming[];
-          
-          if (navigationEntry) {
-            // Time to First Byte
-            const ttfb = navigationEntry.responseStart - navigationEntry.requestStart;
-            this.recordMetric('TTFB', ttfb);
-
-            // DOM Content Loaded
-            const dcl = navigationEntry.domContentLoadedEventEnd - navigationEntry.fetchStart;
-            this.recordMetric('DCL', dcl);
-
-            // Load Complete
-            const load = navigationEntry.loadEventEnd - navigationEntry.fetchStart;
-            this.recordMetric('Load', load);
-
-            // DNS Lookup
-            const dns = navigationEntry.domainLookupEnd - navigationEntry.domainLookupStart;
-            this.recordMetric('DNS', dns);
-
-            // TCP Connection
-            const tcp = navigationEntry.connectEnd - navigationEntry.connectStart;
-            this.recordMetric('TCP', tcp);
-          }
-        }, 0);
-      });
-    }
-  }
-
-  /**
-   * Setup resource timing tracking
-   */
-  private setupResourceTiming(): void {
+  private observeLongTasks(): void {
     if ('PerformanceObserver' in window) {
-      try {
-        const observer = new PerformanceObserver((list) => {
-          list.getEntries().forEach((entry) => {
-            if (entry.entryType === 'resource') {
-              const resourceEntry = entry as PerformanceResourceTiming;
-              this.trackResourceLoad(resourceEntry);
-            }
-          });
-        });
-        observer.observe({ entryTypes: ['resource'] });
-        this.observers.push(observer);
-      } catch (error) {
-        logger.debug('Could not observe resource timing:', { error });
-      }
+      const longTaskObserver = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          if (entry.duration > 50) { // Tasks longer than 50ms
+            this.recordMetric('long-task', entry.duration);
+          }
+        }
+      });
+      longTaskObserver.observe({ entryTypes: ['longtask'] });
+      this.observers.push(longTaskObserver);
     }
   }
 
-  /**
-   * Track individual resource load performance
-   */
-  private trackResourceLoad(entry: PerformanceResourceTiming): void {
-    const duration = entry.duration;
-    const type = this.getResourceType(entry.name);
-
-    // Only track slow resources
-    if (duration > 1000) {
-      logger.warn('Slow resource load detected', {
-        url: entry.name,
-        duration,
-        type,
-        size: entry.transferSize,
+  private observeResourceTiming(): void {
+    if ('PerformanceObserver' in window) {
+      const resourceObserver = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          const resourceEntry = entry as PerformanceResourceTiming;
+          if (resourceEntry.duration > 1000) { // Resources taking longer than 1s
+            this.recordMetric('slow-resource', resourceEntry.duration, {
+              name: resourceEntry.name,
+              initiatorType: resourceEntry.initiatorType,
+            });
+          }
+        }
       });
-
-      analytics.trackEvent({
-        action: 'slow_resource',
-        category: 'performance',
-        label: type,
-        value: Math.round(duration),
-        metadata: {
-          url: entry.name,
-          size: entry.transferSize,
-        },
-      });
+      resourceObserver.observe({ entryTypes: ['resource'] });
+      this.observers.push(resourceObserver);
     }
   }
 
-  /**
-   * Get resource type from URL
-   */
-  private getResourceType(url: string): string {
-    const extension = url.split('.').pop()?.toLowerCase();
-    const typeMap: Record<string, string> = {
-      js: 'script',
-      css: 'style',
-      jpg: 'image',
-      jpeg: 'image',
-      png: 'image',
-      gif: 'image',
-      svg: 'image',
-      webp: 'image',
-      woff: 'font',
-      woff2: 'font',
-      ttf: 'font',
-      eot: 'font',
-    };
-    return typeMap[extension || ''] || 'other';
-  }
-
-  /**
-   * Record a performance metric
-   */
-  recordMetric(name: string, value: number): void {
+  private recordMetric(name: string, value: number, metadata?: Record<string, unknown>): void {
     const rating = this.getRating(name, value);
     const metric: PerformanceMetric = {
       name,
@@ -288,180 +174,150 @@ class PerformanceMonitor {
       timestamp: Date.now(),
     };
 
-    this.metrics.set(name, metric);
+    if (!this.metrics.has(name)) {
+      this.metrics.set(name, []);
+    }
 
-    // Log the metric
-    logger.perf(name, value, { rating });
+    const metrics = this.metrics.get(name)!;
+    metrics.push(metric);
 
-    // Track in analytics
-    analytics.trackPerformance(name, value, { rating });
+    // Keep only last 100 measurements per metric
+    if (metrics.length > 100) {
+      metrics.shift();
+    }
 
-    // Warn if performance is poor
-    if (rating === 'poor') {
-      logger.warn(`Poor ${name} performance detected`, { value, rating });
+    // Send to analytics
+    analytics.trackPerformance(name, value);
+
+    // Log in development
+    if (process.env['NODE_ENV'] === 'development') {
+      console.log(`Performance Metric: ${name} = ${value}ms (${rating})`, metadata);
+    }
+  }
+
+  private getRating(name: string, value: number): 'good' | 'needs-improvement' | 'poor' {
+    const thresholds: Record<string, PerformanceThresholds> = {
+      lcp: { good: 2500, needsImprovement: 4000 },
+      fid: { good: 100, needsImprovement: 300 },
+      cls: { good: 0.1, needsImprovement: 0.25 },
+      fcp: { good: 1800, needsImprovement: 3000 },
+      ttfb: { good: 800, needsImprovement: 1800 },
+      'long-task': { good: 50, needsImprovement: 100 },
+      'slow-resource': { good: 1000, needsImprovement: 2000 },
+    };
+
+    const threshold = thresholds[name];
+    if (!threshold) {
+      return 'good';
+    }
+
+    if (value <= threshold.good) {
+      return 'good';
+    } else if (value <= threshold.needsImprovement) {
+      return 'needs-improvement';
+    } else {
+      return 'poor';
     }
   }
 
   /**
-   * Get performance rating for a metric
+   * Get metrics for a specific name
    */
-  private getRating(name: string, value: number): 'good' | 'needs-improvement' | 'poor' {
-    const threshold = this.thresholds[name];
-    if (!threshold) return 'good';
-
-    if (value <= threshold.good) return 'good';
-    if (value <= threshold.needsImprovement) return 'needs-improvement';
-    return 'poor';
-  }
-
-  /**
-   * Get all recorded metrics
-   */
-  getMetrics(): Map<string, PerformanceMetric> {
+  getMetrics(name?: string): PerformanceMetric[] | Map<string, PerformanceMetric[]> {
+    if (name) {
+      return this.metrics.get(name) || [];
+    }
     return new Map(this.metrics);
   }
 
   /**
-   * Get a specific metric
+   * Get performance summary
    */
-  getMetric(name: string): PerformanceMetric | undefined {
-    return this.metrics.get(name);
-  }
-
-  /**
-   * Mark a custom timing point
-   */
-  mark(name: string): void {
-    if ('performance' in window && 'mark' in performance) {
-      performance.mark(name);
-    }
-  }
-
-  /**
-   * Measure time between two marks
-   */
-  measure(name: string, startMark: string, endMark?: string): number | undefined {
-    if ('performance' in window && 'measure' in performance) {
-      try {
-        if (!endMark) {
-          this.mark(`${startMark}-end`);
-          endMark = `${startMark}-end`;
-        }
-        
-        performance.measure(name, startMark, endMark);
-        const measures = performance.getEntriesByName(name, 'measure');
-        const lastMeasure = measures[measures.length - 1];
-        
-        if (lastMeasure) {
-          this.recordMetric(name, lastMeasure.duration);
-          return lastMeasure.duration;
-        }
-      } catch (error) {
-        logger.error('Failed to measure performance', error as Error);
-      }
-    }
-    return undefined;
-  }
-
-  /**
-   * Time an async function
-   */
-  async timeAsync<T>(name: string, fn: () => Promise<T>): Promise<T> {
-    const startMark = `${name}-start`;
-    this.mark(startMark);
-    
-    try {
-      const result = await fn();
-      this.measure(name, startMark);
-      return result;
-    } catch (error) {
-      this.measure(name, startMark);
-      throw error;
-    }
-  }
-
-  /**
-   * Time a synchronous function
-   */
-  time<T>(name: string, fn: () => T): T {
-    const startMark = `${name}-start`;
-    this.mark(startMark);
-    
-    try {
-      const result = fn();
-      this.measure(name, startMark);
-      return result;
-    } catch (error) {
-      this.measure(name, startMark);
-      throw error;
-    }
-  }
-
-  /**
-   * Get performance report
-   */
-  getReport(): {
-    metrics: Record<string, PerformanceMetric>;
-    summary: {
-      good: number;
-      needsImprovement: number;
-      poor: number;
-    };
+  getSummary(): {
+    totalMetrics: number;
+    averageRating: number;
+    byRating: Record<string, number>;
+    recommendations: string[];
   } {
-    const metricsObj: Record<string, PerformanceMetric> = {};
-    const summary = { good: 0, needsImprovement: 0, poor: 0 };
+    const allMetrics: PerformanceMetric[] = [];
+    this.metrics.forEach(metrics => allMetrics.push(...metrics));
 
-    this.metrics.forEach((metric, name) => {
-      metricsObj[name] = metric;
-      summary[metric.rating === 'needs-improvement' ? 'needsImprovement' : metric.rating]++;
+    const totalMetrics = allMetrics.length;
+    const byRating: Record<string, number> = { good: 0, 'needs-improvement': 0, poor: 0 };
+    
+    allMetrics.forEach(metric => {
+      byRating[metric.rating]++;
     });
 
-    return { metrics: metricsObj, summary };
+    const ratingScores = { good: 3, 'needs-improvement': 2, poor: 1 };
+    const averageRating = totalMetrics > 0 
+      ? allMetrics.reduce((sum, metric) => sum + ratingScores[metric.rating], 0) / totalMetrics 
+      : 0;
+
+    const recommendations: string[] = [];
+    
+    // Generate recommendations based on poor metrics
+    this.metrics.forEach((metrics, name) => {
+      const poorCount = metrics.filter(m => m.rating === 'poor').length;
+      if (poorCount > 0) {
+        switch (name) {
+          case 'lcp':
+            recommendations.push('Optimize largest contentful paint - consider image optimization and critical CSS');
+            break;
+          case 'fid':
+            recommendations.push('Reduce first input delay - minimize JavaScript execution time');
+            break;
+          case 'cls':
+            recommendations.push('Fix cumulative layout shift - reserve space for dynamic content');
+            break;
+          case 'fcp':
+            recommendations.push('Improve first contentful paint - optimize critical rendering path');
+            break;
+          case 'ttfb':
+            recommendations.push('Reduce time to first byte - optimize server response time');
+            break;
+          case 'long-task':
+            recommendations.push('Break up long tasks - use code splitting and async operations');
+            break;
+          case 'slow-resource':
+            recommendations.push('Optimize slow resources - compress images and enable caching');
+            break;
+        }
+      }
+    });
+
+    return {
+      totalMetrics,
+      averageRating: Math.round(averageRating * 100) / 100,
+      byRating,
+      recommendations,
+    };
   }
 
   /**
    * Clear all metrics
    */
-  clear(): void {
+  clearMetrics(): void {
     this.metrics.clear();
-    if ('performance' in window) {
-      try {
-        performance.clearMarks();
-        performance.clearMeasures();
-      } catch (error) {
-        logger.debug('Could not clear performance marks:', { error });
-      }
-    }
   }
 
   /**
-   * Disconnect all observers
+   * Stop monitoring
    */
-  disconnect(): void {
-    this.observers.forEach((observer) => {
-      try {
-        observer.disconnect();
-      } catch (error) {
-        logger.debug('Could not disconnect observer:', { error });
-      }
-    });
+  stop(): void {
+    this.observers.forEach(observer => observer.disconnect());
     this.observers = [];
+    this.isInitialized = false;
   }
 }
 
-// Export singleton instance
-export const performanceMonitor = new PerformanceMonitor();
+// Create singleton instance
+export const performanceMonitor = PerformanceMonitor.getInstance();
 
 // Export convenience functions
-export const recordMetric = (name: string, value: number) =>
-  performanceMonitor.recordMetric(name, value);
-export const mark = (name: string) => performanceMonitor.mark(name);
-export const measure = (name: string, startMark: string, endMark?: string) =>
-  performanceMonitor.measure(name, startMark, endMark);
-export const timeAsync = <T>(name: string, fn: () => Promise<T>) =>
-  performanceMonitor.timeAsync(name, fn);
-export const time = <T>(name: string, fn: () => T) =>
-  performanceMonitor.time(name, fn);
-export const getPerformanceReport = () => performanceMonitor.getReport();
+export const getMetrics = (name?: string) => performanceMonitor.getMetrics(name);
+export const getSummary = () => performanceMonitor.getSummary();
+export const clearMetrics = () => performanceMonitor.clearMetrics();
+export const stopMonitoring = () => performanceMonitor.stop();
 
 export default performanceMonitor;

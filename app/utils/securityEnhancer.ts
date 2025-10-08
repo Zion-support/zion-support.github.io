@@ -55,6 +55,7 @@ class SecurityEnhancer {
     this.setupXSSProtection();
     this.setupCSRFProtection();
     this.monitorSuspiciousActivity();
+    this.monitorConsoleAccess();
     this.setupSecureHeaders();
   }
 
@@ -63,14 +64,16 @@ class SecurityEnhancer {
 
     const csp = [
       "default-src 'self'",
-      "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.jsdelivr.net",
+      "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com",
       "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
       "font-src 'self' https://fonts.gstatic.com",
-      "img-src 'self' data: https:",
-      "connect-src 'self' https://api.zion.app",
-      "frame-ancestors 'none'",
+      "img-src 'self' data: https: blob:",
+      "connect-src 'self' https://www.google-analytics.com https://analytics.google.com",
+      "frame-src 'none'",
+      "object-src 'none'",
       "base-uri 'self'",
       "form-action 'self'",
+      "frame-ancestors 'none'",
     ].join('; ');
 
     const meta = document.createElement('meta');
@@ -93,10 +96,10 @@ class SecurityEnhancer {
 
     // Generate CSRF token
     const token = this.generateCSRFToken();
-    document.cookie = `csrf-token=${token}; Secure; SameSite=Strict; HttpOnly`;
-    
+    sessionStorage.setItem('csrf-token', token);
+
     // Add token to all forms
-    this.addCSRFTokenToForms(token);
+    this.addCSRFTokenToForms();
   }
 
   private generateCSRFToken(): string {
@@ -105,55 +108,39 @@ class SecurityEnhancer {
     return Array.from(array, byte => byte.toString(16).padStart(2, '0')).join('');
   }
 
-  private addCSRFTokenToForms(token: string): void {
+  private addCSRFTokenToForms(): void {
     const forms = document.querySelectorAll('form');
     forms.forEach(form => {
-      const input = document.createElement('input');
-      input.type = 'hidden';
-      input.name = 'csrf-token';
-      input.value = token;
-      form.appendChild(input);
+      const tokenInput = document.createElement('input');
+      tokenInput.type = 'hidden';
+      tokenInput.name = 'csrf-token';
+      tokenInput.value = sessionStorage.getItem('csrf-token') || '';
+      form.appendChild(tokenInput);
     });
   }
 
   private monitorSuspiciousActivity(): void {
     // Monitor for suspicious patterns
-    this.monitorConsoleAccess();
-    this.monitorDOMManipulation();
-    this.monitorNetworkRequests();
-  }
+    const suspiciousPatterns = [
+      /<script[^>]*>.*?<\/script>/gi,
+      /javascript:/gi,
+      /on\w+\s*=/gi,
+      /eval\s*\(/gi,
+      /document\.write/gi,
+    ];
 
-  private monitorConsoleAccess(): void {
-    const originalConsole = { ...console };
-    
-    // Override console methods to detect debugging
-    ['log', 'warn', 'error', 'info'].forEach(method => {
-<<<<<<< HEAD
-<<<<<<< HEAD
-      (console as any)[method] = (...args: any[]) => {
-=======
-      (console as { [key: string]: (...args: unknown[]) => void })[method] = (...args: unknown[]) => {
->>>>>>> cursor/fix-errors-and-merge-to-main-fbf5
-=======
-      (console as Record<string, Function>)[method] = (...args: unknown[]) => {
->>>>>>> cursor/fix-errors-and-merge-to-main-5c5e
-        this.metrics.suspiciousActivity++;
-        originalConsole[method](...args);
-      };
-    });
-  }
-
-  private monitorDOMManipulation(): void {
     const observer = new MutationObserver((mutations) => {
       mutations.forEach((mutation) => {
         if (mutation.type === 'childList') {
           mutation.addedNodes.forEach((node) => {
-            if (node.nodeType === Node.ELEMENT_NODE) {
-              const element = node as Element;
-              if (element.tagName === 'SCRIPT' && !element.getAttribute('src')) {
-                this.metrics.securityViolations++;
-                console.warn('Suspicious inline script detected');
-              }
+            if (node.nodeType === Node.TEXT_NODE) {
+              const text = node.textContent || '';
+              suspiciousPatterns.forEach(pattern => {
+                if (pattern.test(text)) {
+                  this.metrics.securityViolations++;
+                  this.logSecurityViolation('Suspicious content detected', text);
+                }
+              });
             }
           });
         }
@@ -168,118 +155,177 @@ class SecurityEnhancer {
     this.eventListeners.push(() => observer.disconnect());
   }
 
-  private monitorNetworkRequests(): void {
-    const originalFetch = window.fetch;
-    window.fetch = async (input, init) => {
-      const url = typeof input === 'string' ? input : input instanceof Request ? input.url : input.toString();
-      
-      // Check if request is to allowed origins
-      if (!this.isAllowedOrigin(url)) {
-        this.metrics.blockedRequests++;
-        throw new Error('Request blocked: Origin not allowed');
-      }
-
-      return originalFetch(input, init);
-    };
-  }
-
-  private isAllowedOrigin(url: string): boolean {
-    try {
-      const urlObj = new URL(url);
-      return this.config.allowedOrigins.some(origin => 
-        urlObj.origin === origin || urlObj.hostname.endsWith(origin.replace('https://', ''))
-      );
-    } catch {
-      return false;
-    }
+  private monitorConsoleAccess(): void {
+    const originalConsole = { ...console };
+    
+    // Override console methods to detect debugging
+    ['log', 'warn', 'error', 'info'].forEach(method => {
+      (console as Record<string, Function>)[method] = (...args: unknown[]) => {
+        this.metrics.suspiciousActivity++;
+        originalConsole[method](...args);
+      };
+    });
   }
 
   private setupSecureHeaders(): void {
     // These would typically be set by the server, but we can add meta tags
     const headers = [
-      { name: 'X-Frame-Options', content: 'DENY' },
-      { name: 'X-Content-Type-Options', content: 'nosniff' },
-      { name: 'Referrer-Policy', content: 'strict-origin-when-cross-origin' },
-      { name: 'Permissions-Policy', content: 'camera=(), microphone=(), geolocation=()' },
+      { name: 'X-Content-Type-Options', value: 'nosniff' },
+      { name: 'X-Frame-Options', value: 'DENY' },
+      { name: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
     ];
+
+    if (this.config.enableHSTS) {
+      headers.push({ name: 'Strict-Transport-Security', value: 'max-age=31536000; includeSubDomains' });
+    }
 
     headers.forEach(header => {
       const meta = document.createElement('meta');
       meta.httpEquiv = header.name;
-      meta.content = header.content;
+      meta.content = header.value;
       document.head.appendChild(meta);
     });
   }
 
-  public sanitizeInput(input: string): string {
-    return input
-      .replace(/[<>]/g, '') // Remove potential HTML tags
-      .replace(/javascript:/gi, '') // Remove javascript: protocol
-      .replace(/on\w+=/gi, '') // Remove event handlers
-      .trim();
-  }
+  private logSecurityViolation(type: string, details: string): void {
+    const violation = {
+      type,
+      details,
+      timestamp: new Date().toISOString(),
+      url: window.location.href,
+      userAgent: navigator.userAgent,
+    };
 
-  public validateInput(input: string, type: 'email' | 'url' | 'text'): boolean {
-    switch (type) {
-      case 'email':
-        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(input);
-      case 'url':
-        try {
-          new URL(input);
-          return true;
-        } catch {
-          return false;
-        }
-      case 'text':
-        return input.length > 0 && input.length < 1000;
-      default:
-        return false;
-    }
-  }
-
-  public generateSecurePassword(length: number = 16): string {
-    const charset = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*';
-    let password = '';
-    
-    for (let i = 0; i < length; i++) {
-      password += charset.charAt(Math.floor(Math.random() * charset.length));
-    }
-    
-    return password;
-  }
-
-  public hashPassword(password: string): Promise<string> {
-    return crypto.subtle.digest('SHA-256', new TextEncoder().encode(password))
-      .then(hash => {
-        return Array.from(new Uint8Array(hash))
-          .map(b => b.toString(16).padStart(2, '0'))
-          .join('');
+    // Send to security monitoring service
+    if ('gtag' in window) {
+      (window as any).gtag('event', 'security_violation', {
+        violation_type: type,
+        violation_details: details,
       });
+    }
+
+    // Log in development
+    if (process.env['NODE_ENV'] === 'development') {
+      console.warn('Security Violation:', violation);
+    }
   }
 
-  public getMetrics(): SecurityMetrics {
+  /**
+   * Validate input for XSS
+   */
+  sanitizeInput(input: string): string {
+    const div = document.createElement('div');
+    div.textContent = input;
+    return div.innerHTML;
+  }
+
+  /**
+   * Validate URL for security
+   */
+  validateUrl(url: string): boolean {
+    try {
+      const urlObj = new URL(url);
+      return this.config.allowedOrigins.includes(urlObj.origin);
+    } catch {
+      return false;
+    }
+  }
+
+  /**
+   * Check if domain is trusted
+   */
+  isTrustedDomain(domain: string): boolean {
+    return this.config.trustedDomains.some(trusted => 
+      domain === trusted || domain.endsWith('.' + trusted)
+    );
+  }
+
+  /**
+   * Get security metrics
+   */
+  getMetrics(): SecurityMetrics {
     return { ...this.metrics };
   }
 
-  public generateSecurityReport(): string {
-    const metrics = this.getMetrics();
-    return `
-Security Report:
-- Blocked Requests: ${metrics.blockedRequests}
-- Suspicious Activity: ${metrics.suspiciousActivity}
-- Security Violations: ${metrics.securityViolations}
-- Last Scan: ${new Date(metrics.lastScanTime).toLocaleString()}
-    `.trim();
+  /**
+   * Get security recommendations
+   */
+  getRecommendations(): string[] {
+    const recommendations: string[] = [];
+
+    if (this.metrics.securityViolations > 0) {
+      recommendations.push('Review and fix security violations detected');
+    }
+
+    if (this.metrics.suspiciousActivity > 10) {
+      recommendations.push('High suspicious activity detected - review security logs');
+    }
+
+    if (this.metrics.blockedRequests > 0) {
+      recommendations.push('Some requests were blocked - review CSP and security policies');
+    }
+
+    return recommendations;
   }
 
-  public cleanup(): void {
+  /**
+   * Run security scan
+   */
+  runSecurityScan(): {
+    score: number;
+    issues: string[];
+    recommendations: string[];
+  } {
+    const issues: string[] = [];
+    let score = 100;
+
+    // Check for mixed content
+    if (window.location.protocol === 'https:') {
+      const mixedContent = document.querySelectorAll('img[src^="http:"], script[src^="http:"], link[href^="http:"]');
+      if (mixedContent.length > 0) {
+        issues.push('Mixed content detected - some resources are loaded over HTTP');
+        score -= 20;
+      }
+    }
+
+    // Check for external scripts without integrity
+    const externalScripts = document.querySelectorAll('script[src]:not([integrity])');
+    if (externalScripts.length > 0) {
+      issues.push('External scripts without integrity checks detected');
+      score -= 15;
+    }
+
+    // Check for forms without CSRF protection
+    const forms = document.querySelectorAll('form:not([data-csrf-protected])');
+    if (forms.length > 0) {
+      issues.push('Forms without CSRF protection detected');
+      score -= 10;
+    }
+
+    // Check for insecure cookies
+    const cookies = document.cookie.split(';');
+    const insecureCookies = cookies.filter(cookie => 
+      cookie.trim().includes('=') && !cookie.includes('Secure') && !cookie.includes('HttpOnly')
+    );
+    if (insecureCookies.length > 0) {
+      issues.push('Insecure cookies detected');
+      score -= 10;
+    }
+
+    return {
+      score: Math.max(0, score),
+      issues,
+      recommendations: this.getRecommendations(),
+    };
+  }
+
+  /**
+   * Cleanup security monitoring
+   */
+  cleanup(): void {
     this.eventListeners.forEach(cleanup => cleanup());
     this.eventListeners = [];
   }
 }
 
-// Export singleton instance
-export const securityEnhancer = new SecurityEnhancer();
-
-// Export class for custom instances
-export { SecurityEnhancer, type SecurityConfig, type SecurityMetrics };
+export default SecurityEnhancer;

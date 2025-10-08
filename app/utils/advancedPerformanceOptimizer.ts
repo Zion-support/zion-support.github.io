@@ -78,15 +78,7 @@ export class PerformanceOptimizer {
   /**
    * Implement debounce for performance
    */
-<<<<<<< HEAD
-<<<<<<< HEAD
-  debounce<T extends (...args: any[]) => any>(
-=======
   debounce<T extends (...args: unknown[]) => unknown>(
->>>>>>> cursor/fix-errors-and-merge-to-main-fbf5
-=======
-  debounce<T extends (...args: unknown[]) => unknown>(
->>>>>>> cursor/fix-errors-and-merge-to-main-5c5e
     func: T,
     wait: number
   ): (...args: Parameters<T>) => void {
@@ -106,76 +98,64 @@ export class PerformanceOptimizer {
   /**
    * Implement throttle for performance
    */
-<<<<<<< HEAD
-<<<<<<< HEAD
-  throttle<T extends (...args: any[]) => any>(
-=======
   throttle<T extends (...args: unknown[]) => unknown>(
->>>>>>> cursor/fix-errors-and-merge-to-main-fbf5
-=======
-  throttle<T extends (...args: unknown[]) => unknown>(
->>>>>>> cursor/fix-errors-and-merge-to-main-5c5e
     func: T,
     limit: number
   ): (...args: Parameters<T>) => void {
-    let inThrottle: boolean = false;
+    let inThrottle: boolean;
     
     return (...args: Parameters<T>) => {
       if (!inThrottle) {
         func(...args);
         inThrottle = true;
-        setTimeout(() => {
-          inThrottle = false;
-        }, limit);
+        setTimeout(() => inThrottle = false, limit);
       }
     };
   }
 
   /**
-   * Memoize function results
+   * Get all metrics
    */
-<<<<<<< HEAD
-<<<<<<< HEAD
-  memoize<T extends (...args: any[]) => any>(
-=======
-  memoize<T extends (...args: unknown[]) => unknown>(
->>>>>>> cursor/fix-errors-and-merge-to-main-fbf5
-=======
-  memoize<T extends (...args: unknown[]) => unknown>(
->>>>>>> cursor/fix-errors-and-merge-to-main-5c5e
-    func: T
-  ): (...args: Parameters<T>) => ReturnType<T> {
-    const cache = new Map<string, ReturnType<T>>();
-    
-    return (...args: Parameters<T>): ReturnType<T> => {
-      const key = JSON.stringify(args);
-      
-      if (cache.has(key)) {
-        return cache.get(key)!;
-      }
-      
-      const result = func(...args);
-      cache.set(key, result);
-      
-      return result;
-    };
+  getAllMetrics(): Record<string, number[]> {
+    const result: Record<string, number[]> = {};
+    this.metrics.forEach((value, key) => {
+      result[key] = [...value];
+    });
+    return result;
   }
 
   /**
-   * Get all metrics summary
+   * Clear all metrics
    */
-  getMetricsSummary(): Record<string, { avg: number; count: number }> {
-    const summary: Record<string, { avg: number; count: number }> = {};
+  clearMetrics(): void {
+    this.metrics.clear();
+  }
+
+  /**
+   * Get performance summary
+   */
+  getPerformanceSummary(): Record<string, { average: number; count: number; min: number; max: number }> {
+    const summary: Record<string, { average: number; count: number; min: number; max: number }> = {};
     
     this.metrics.forEach((values, name) => {
-      summary[name] = {
-        avg: this.getAverageMetric(name),
-        count: values.length,
-      };
+      if (values.length > 0) {
+        const average = values.reduce((acc, val) => acc + val, 0) / values.length;
+        const min = Math.min(...values);
+        const max = Math.max(...values);
+        
+        summary[name] = {
+          average,
+          count: values.length,
+          min,
+          max
+        };
+      }
     });
     
     return summary;
   }
 }
 
-export default PerformanceOptimizer.getInstance();
+// Export singleton instance
+export const performanceOptimizer = PerformanceOptimizer.getInstance();
+export default performanceOptimizer;

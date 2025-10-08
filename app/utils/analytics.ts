@@ -52,11 +52,7 @@ class AnalyticsService {
 
       // Send to Google Analytics if available
       if (this.hasGtag()) {
-<<<<<<< HEAD
-        (window as { gtag: (command: string, action: string, params: Record<string, unknown>) => void }).gtag('event', event.action, {
-=======
         (window as unknown as { gtag: Function }).gtag('event', event.action, {
->>>>>>> cursor/fix-errors-and-merge-to-main-5c5e
           event_category: event.category,
           event_label: event.label,
           value: event.value,
@@ -69,106 +65,77 @@ class AnalyticsService {
         console.log('Analytics Event:', event);
       }
     } catch (error) {
-      console.error('Failed to track event:', error);
+      console.error('Analytics tracking failed:', error);
     }
   }
 
   /**
    * Track page view
    */
-  trackPageView(path: string, title?: string): void {
-    try {
-      if (this.hasGtag()) {
-<<<<<<< HEAD
-        (window as { gtag: (command: string, id: string, params: Record<string, unknown>) => void }).gtag('config', this.getGtagId(), {
-=======
-        (window as unknown as { gtag: Function }).gtag('config', this.getGtagId(), {
->>>>>>> cursor/fix-errors-and-merge-to-main-5c5e
-          page_path: path,
-          page_title: title,
-        });
-      }
-    } catch (error) {
-      console.error('Failed to track page view:', error);
-    }
-  }
-
-  /**
-   * Track user properties
-   */
-  identifyUser(user: AnalyticsUser): void {
-    try {
-      if (this.hasGtag() && user.id) {
-<<<<<<< HEAD
-        (window as { gtag: (command: string, target: string, params: Record<string, unknown>) => void }).gtag('set', 'user_properties', {
-=======
-        (window as unknown as { gtag: Function }).gtag('set', 'user_properties', {
->>>>>>> cursor/fix-errors-and-merge-to-main-5c5e
-          user_id: user.id,
-          ...user.properties,
-        });
-      }
-    } catch (error) {
-      console.error('Failed to identify user:', error);
-    }
-  }
-
-  /**
-   * Track error events
-   */
-  trackError(error: Error, metadata?: Record<string, unknown>): void {
+  trackPageView(page: string, title?: string): void {
     this.trackEvent({
-      action: 'error',
-      category: 'exception',
-      label: error.message,
+      action: 'page_view',
+      category: 'navigation',
+      label: page,
       metadata: {
-        stack: error.stack,
-        ...metadata,
+        page_title: title || document.title,
+        page_location: window.location.href,
       },
     });
   }
 
   /**
-   * Track timing events (for performance monitoring)
+   * Track user interaction
    */
-  trackTiming(
-    category: string,
-    variable: string,
-    value: number,
-    label?: string
-  ): void {
-    try {
-      if (this.hasGtag()) {
-<<<<<<< HEAD
-        (window as { gtag: (command: string, action: string, params: Record<string, unknown>) => void }).gtag('event', 'timing_complete', {
-=======
-        (window as unknown as { gtag: Function }).gtag('event', 'timing_complete', {
->>>>>>> cursor/fix-errors-and-merge-to-main-5c5e
-          name: variable,
-          value: Math.round(value),
-          event_category: category,
-          event_label: label,
-        });
-      }
-    } catch (error) {
-      console.error('Failed to track timing:', error);
-    }
+  trackInteraction(element: string, action: string, category = 'interaction'): void {
+    this.trackEvent({
+      action,
+      category,
+      label: element,
+    });
   }
 
   /**
    * Track performance metrics
    */
-  trackPerformance(metric: string, value: number, metadata?: Record<string, unknown>): void {
+  trackPerformance(metric: string, value: number, category = 'performance'): void {
+    this.trackEvent({
+      action: 'performance_metric',
+      category,
+      label: metric,
+      value: Math.round(value),
+    });
+  }
+
+  /**
+   * Track error events
+   */
+  trackError(error: Error, context?: string): void {
+    this.trackEvent({
+      action: 'error',
+      category: 'error',
+      label: error.message,
+      metadata: {
+        error_name: error.name,
+        error_stack: error.stack,
+        context,
+      },
+    });
+  }
+
+  /**
+   * Set user properties
+   */
+  setUser(user: AnalyticsUser): void {
     try {
-      this.trackEvent({
-        action: 'performance',
-        category: 'web_vitals',
-        label: metric,
-        value: Math.round(value),
-        metadata,
-      });
+      if (this.hasGtag()) {
+        (window as unknown as { gtag: Function }).gtag('config', 'GA_MEASUREMENT_ID', {
+          user_id: user.id,
+          custom_map: user.properties,
+        });
+      }
     } catch (error) {
-      console.error('Failed to track performance:', error);
+      console.error('Failed to set user properties:', error);
     }
   }
 
@@ -176,27 +143,17 @@ class AnalyticsService {
    * Check if gtag is available
    */
   private hasGtag(): boolean {
-    return (
-      typeof window !== 'undefined' &&
-      typeof window.gtag === 'function'
-    );
-  }
-
-  /**
-   * Get Google Analytics ID
-   */
-  private getGtagId(): string {
-    // Return the tracking ID from environment or config
-    return process.env['NEXT_PUBLIC_GA_ID'] || 'GA_MEASUREMENT_ID';
+    return typeof window !== 'undefined' && 'gtag' in window;
   }
 
   /**
    * Queue event for later processing
    */
   private queueEvent(event: AnalyticsEvent): void {
-    if (this.queue.length < this.maxQueueSize) {
-      this.queue.push(event);
+    if (this.queue.length >= this.maxQueueSize) {
+      this.queue.shift(); // Remove oldest event
     }
+    this.queue.push(event);
   }
 
   /**
@@ -210,30 +167,36 @@ class AnalyticsService {
       }
     }
   }
+
+  /**
+   * Get analytics data
+   */
+  getAnalyticsData(): { events: AnalyticsEvent[]; isInitialized: boolean } {
+    return {
+      events: [...this.queue],
+      isInitialized: this.isInitialized,
+    };
+  }
+
+  /**
+   * Clear analytics data
+   */
+  clearData(): void {
+    this.queue = [];
+  }
 }
 
-// Export singleton instance
+// Create singleton instance
 export const analytics = new AnalyticsService();
 
 // Export convenience functions
 export const trackEvent = (event: AnalyticsEvent) => analytics.trackEvent(event);
-export const trackPageView = (path: string, title?: string) =>
-  analytics.trackPageView(path, title);
-export const trackError = (error: Error, metadata?: Record<string, unknown>) =>
-  analytics.trackError(error, metadata);
-export const trackPerformance = (metric: string, value: number, metadata?: Record<string, unknown>) =>
-  analytics.trackPerformance(metric, value, metadata);
-export const trackTiming = (
-  category: string,
-  variable: string,
-  value: number,
-  label?: string
-) => analytics.trackTiming(category, variable, value, label);
-export const identifyUser = (user: AnalyticsUser) => analytics.identifyUser(user);
-
-// Initialize on import
-if (typeof window !== 'undefined') {
-  analytics.initialize();
-}
+export const trackPageView = (page: string, title?: string) => analytics.trackPageView(page, title);
+export const trackInteraction = (element: string, action: string, category?: string) => 
+  analytics.trackInteraction(element, action, category);
+export const trackPerformance = (metric: string, value: number, category?: string) => 
+  analytics.trackPerformance(metric, value, category);
+export const trackError = (error: Error, context?: string) => analytics.trackError(error, context);
+export const setUser = (user: AnalyticsUser) => analytics.setUser(user);
 
 export default analytics;

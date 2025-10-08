@@ -49,8 +49,8 @@ class EnhancedErrorMonitoring {
 
   private constructor() {
     this.sessionId = this.generateSessionId();
-    this.initializeMonitoring();
-    this.setupNetworkMonitoring();
+    this.setupEventListeners();
+    this.setupErrorHandlers();
   }
 
   static getInstance(): EnhancedErrorMonitoring {
@@ -60,15 +60,37 @@ class EnhancedErrorMonitoring {
     return EnhancedErrorMonitoring.instance;
   }
 
-  /**
-   * Initialize comprehensive error monitoring
-   */
-  private initializeMonitoring(): void {
+  private generateSessionId(): string {
+    return `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+  }
+
+  private setupEventListeners(): void {
     if (typeof window === 'undefined') return;
 
-    // JavaScript errors
+    // Online/offline status
+    window.addEventListener('online', () => {
+      this.isOnline = true;
+      this.flushErrorQueue();
+    });
+
+    window.addEventListener('offline', () => {
+      this.isOnline = false;
+    });
+
+    // Page visibility changes
+    document.addEventListener('visibilitychange', () => {
+      if (document.visibilityState === 'visible') {
+        this.flushErrorQueue();
+      }
+    });
+  }
+
+  private setupErrorHandlers(): void {
+    if (typeof window === 'undefined') return;
+
+    // Global JavaScript errors
     window.addEventListener('error', (event) => {
-      this.handleError(event.error || new Error(event.message), {
+      this.handleError(new Error(event.message), {
         filename: event.filename,
         lineno: event.lineno,
         colno: event.colno,
@@ -78,7 +100,7 @@ class EnhancedErrorMonitoring {
 
     // Unhandled promise rejections
     window.addEventListener('unhandledrejection', (event) => {
-      this.handleError(new Error(`Unhandled Promise Rejection: ${event.reason}`), {
+      this.handleError(new Error(event.reason?.message || 'Unhandled promise rejection'), {
         reason: event.reason,
         category: 'promise'
       });
@@ -87,201 +109,119 @@ class EnhancedErrorMonitoring {
     // Resource loading errors
     window.addEventListener('error', (event) => {
       if (event.target !== window) {
-<<<<<<< HEAD
         const target = event.target as HTMLElement;
         const src = (target as HTMLImageElement).src || (target as HTMLAnchorElement).href;
         this.handleError(new Error(`Resource loading error: ${src}`), {
           resource: src,
-=======
-        this.handleError(new Error(`Resource loading error: ${(event.target as HTMLImageElement | HTMLScriptElement | HTMLLinkElement)['src'] || (event.target as HTMLLinkElement).href}`), {
-          resource: (event.target as HTMLImageElement | HTMLScriptElement | HTMLLinkElement)['src'] || (event.target as HTMLLinkElement).href,
->>>>>>> cursor/fix-errors-and-merge-to-main-5c5e
           category: 'resource'
         });
       }
     }, true);
 
     // Network errors
-    this.setupNetworkErrorMonitoring();
-
-    // Performance monitoring
-    this.setupPerformanceErrorMonitoring();
-  }
-
-  /**
-   * Setup network error monitoring
-   */
-  private setupNetworkErrorMonitoring(): void {
-    const originalFetch = window.fetch;
-    const self = this;
-
-    window.fetch = async function(...args) {
-      try {
-        const response = await originalFetch.apply(this, args);
-        
-        if (!response.ok) {
-          self.handleError(new Error(`HTTP ${response.status}: ${response.statusText}`), {
-            url: args[0] as string,
-            status: response.status,
-            statusText: response.statusText,
-            category: 'network'
-          });
-        }
-        
-        return response;
-      } catch (error) {
-        self.handleError(error as Error, {
-          url: args[0] as string,
+    window.addEventListener('unhandledrejection', (event) => {
+      if (event.reason?.status) {
+        this.handleError(new Error(`Network error: ${event.reason.status} ${event.reason.statusText}`), {
+          status: event.reason.status,
+          statusText: event.reason.statusText,
           category: 'network'
         });
-        throw error;
       }
+    });
+  }
+
+  private handleError(error: Error, context: Partial<ErrorContext> = {}): void {
+    const errorContext: ErrorContext = {
+      sessionId: this.sessionId,
+      userId: this.userId,
+      url: window.location.href,
+      userAgent: navigator.userAgent,
+      timestamp: new Date().toISOString(),
+      ...context
     };
-  }
 
-  /**
-   * Setup performance error monitoring
-   */
-  private setupPerformanceErrorMonitoring(): void {
-    // Monitor long tasks
-    if ('PerformanceObserver' in window) {
-      new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
-          if (entry.duration > 50) { // Tasks longer than 50ms
-            this.handleError(new Error(`Long task detected: ${entry.duration}ms`), {
-              duration: entry.duration,
-              startTime: entry.startTime,
-              category: 'performance'
-            });
-          }
-        }
-      }).observe({ entryTypes: ['longtask'] });
-
-      // Monitor memory leaks
-      new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
-          if (entry.entryType === 'memory') {
-<<<<<<< HEAD
-            const memory = entry as { usedJSHeapSize: number };
-=======
-            const memory = entry as PerformanceEntry & { usedJSHeapSize: number };
->>>>>>> cursor/fix-errors-and-merge-to-main-5c5e
-            if (memory.usedJSHeapSize > 100 * 1024 * 1024) { // 100MB
-              this.handleError(new Error(`High memory usage detected: ${memory.usedJSHeapSize / 1024 / 1024}MB`), {
-                memoryUsage: memory.usedJSHeapSize,
-                category: 'performance'
-              });
-            }
-          }
-        }
-      }).observe({ entryTypes: ['memory'] });
-    }
-  }
-
-  /**
-   * Setup network status monitoring
-   */
-  private setupNetworkMonitoring(): void {
-    if (typeof window === 'undefined') return;
-
-    window.addEventListener('online', () => {
-      this.isOnline = true;
-      this.flushErrorQueue();
-    });
-
-    window.addEventListener('offline', () => {
-      this.isOnline = false;
-    });
-  }
-
-  /**
-   * Handle error with comprehensive context
-   */
-  handleError(error: Error, context: Partial<ErrorContext> = {}): void {
     const errorReport: ErrorReport = {
-      id: this.generateErrorId(),
+      id: this.generateErrorId(error, errorContext),
       message: error.message,
       stack: error.stack,
-      context: {
-        sessionId: this.sessionId,
-        userId: this.userId,
-        url: window.location.href,
-        userAgent: navigator.userAgent,
-        timestamp: new Date().toISOString(),
-        ...context
-      },
-      severity: this.calculateSeverity(error, context),
-      category: (context.category as 'javascript' | 'network' | 'promise' | 'resource' | 'custom') || 'javascript',
+      context: errorContext,
+      severity: this.determineSeverity(error, errorContext),
+      category: context.category || 'javascript',
       resolved: false,
       occurrences: 1,
-      firstSeen: new Date().toISOString(),
-      lastSeen: new Date().toISOString()
+      firstSeen: errorContext.timestamp,
+      lastSeen: errorContext.timestamp
     };
 
-    // Check if similar error already exists
-    const existingError = this.findSimilarError(errorReport);
+    // Check if this error already exists
+    const existingError = this.errorQueue.find(e => e.id === errorReport.id);
     if (existingError) {
       existingError.occurrences++;
-      existingError.lastSeen = new Date().toISOString();
+      existingError.lastSeen = errorContext.timestamp;
     } else {
       this.errorQueue.push(errorReport);
+      
+      // Keep queue size manageable
+      if (this.errorQueue.length > this.maxQueueSize) {
+        this.errorQueue.shift();
+      }
     }
 
-    // Keep queue size manageable
-    if (this.errorQueue.length > this.maxQueueSize) {
-      this.errorQueue.shift();
+    // Log in development
+    if (process.env['NODE_ENV'] === 'development') {
+      console.error('Error captured:', errorReport);
     }
 
     // Send to external service if online
     if (this.isOnline) {
       this.sendErrorReport(errorReport);
     }
-
-    // Log to console in development
-    if (process.env['NODE_ENV'] === 'development') {
-      console.error('Error captured:', errorReport);
-    }
   }
 
-  /**
-   * Find similar error in queue
-   */
-  private findSimilarError(newError: ErrorReport): ErrorReport | undefined {
-    return this.errorQueue.find(error => 
-      error.message === newError.message &&
-      error.context.url === newError.context.url &&
-      error.category === newError.category
-    );
+  private generateErrorId(error: Error, context: ErrorContext): string {
+    const key = `${error.message}-${context.filename}-${context.lineno}-${context.colno}`;
+    return btoa(key).replace(/[^a-zA-Z0-9]/g, '').substr(0, 16);
   }
 
-  /**
-   * Calculate error severity
-   */
-  private calculateSeverity(error: Error, context: Partial<ErrorContext>): 'low' | 'medium' | 'high' | 'critical' {
-    // Critical: Network errors, unhandled promise rejections
-    if (context.category === 'network' || context.category === 'promise') {
+  private determineSeverity(error: Error, context: ErrorContext): 'low' | 'medium' | 'high' | 'critical' {
+    // Critical: Errors that prevent core functionality
+    if (error.message.includes('Cannot read property') || 
+        error.message.includes('Cannot read properties') ||
+        error.message.includes('is not a function')) {
       return 'critical';
     }
 
-    // High: JavaScript errors in critical components
-    if (context.component && ['App', 'Router', 'Auth'].includes(context.component)) {
+    // High: Network errors, resource loading failures
+    if (context.category === 'network' || context.category === 'resource') {
       return 'high';
     }
 
-    // Medium: Resource loading errors
-    if (context.category === 'resource') {
+    // Medium: Promise rejections, component errors
+    if (context.category === 'promise' || context.component) {
       return 'medium';
     }
 
-    // Low: Other errors
+    // Low: Everything else
     return 'low';
   }
 
-  /**
-   * Send error report to external service
-   */
   private async sendErrorReport(errorReport: ErrorReport): Promise<void> {
     try {
+      // Send to Google Analytics if available
+      if ('gtag' in window) {
+        (window as any).gtag('event', 'exception', {
+          description: errorReport.message,
+          fatal: errorReport.severity === 'critical',
+          custom_map: {
+            error_id: errorReport.id,
+            category: errorReport.category,
+            severity: errorReport.severity,
+            occurrences: errorReport.occurrences,
+          }
+        });
+      }
+
+      // Send to custom error reporting service
       await fetch('/api/errors', {
         method: 'POST',
         headers: {
@@ -290,82 +230,68 @@ class EnhancedErrorMonitoring {
         body: JSON.stringify(errorReport)
       });
     } catch (error) {
-      // If sending fails, keep in queue for retry
-      console.warn('Failed to send error report:', error);
+      console.error('Failed to send error report:', error);
     }
   }
 
-  /**
-   * Flush error queue when back online
-   */
   private async flushErrorQueue(): Promise<void> {
-    if (!this.isOnline) return;
+    if (!this.isOnline || this.errorQueue.length === 0) return;
 
     const errorsToSend = [...this.errorQueue];
     this.errorQueue = [];
 
-    for (const error of errorsToSend) {
-      await this.sendErrorReport(error);
+    for (const errorReport of errorsToSend) {
+      await this.sendErrorReport(errorReport);
     }
   }
 
   /**
-   * Generate unique session ID
+   * Manually report an error
    */
-  private generateSessionId(): string {
-    return `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+  reportError(error: Error, context: Partial<ErrorContext> = {}): void {
+    this.handleError(error, context);
   }
 
   /**
-   * Generate unique error ID
-   */
-  private generateErrorId(): string {
-    return `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-  }
-
-  /**
-   * Set user ID for error context
+   * Set user ID for error tracking
    */
   setUserId(userId: string): void {
     this.userId = userId;
   }
 
   /**
-   * Get error statistics
+   * Get error reports
    */
-  getErrorStats(): {
-    total: number;
-    bySeverity: Record<string, number>;
-    byCategory: Record<string, number>;
-    recent: ErrorReport[];
-  } {
-    const recent = this.errorQueue
-      .filter(error => Date.now() - new Date(error.lastSeen).getTime() < 24 * 60 * 60 * 1000) // Last 24 hours
-      .sort((a, b) => new Date(b.lastSeen).getTime() - new Date(a.lastSeen).getTime());
-
-    const bySeverity = this.errorQueue.reduce((acc, error) => {
-      acc[error.severity] = (acc[error.severity] || 0) + 1;
-      return acc;
-    }, {} as Record<string, number>);
-
-    const byCategory = this.errorQueue.reduce((acc, error) => {
-      acc[error.category] = (acc[error.category] || 0) + 1;
-      return acc;
-    }, {} as Record<string, number>);
-
-    return {
-      total: this.errorQueue.length,
-      bySeverity,
-      byCategory,
-      recent: recent.slice(0, 10)
-    };
+  getErrorReports(): ErrorReport[] {
+    return [...this.errorQueue];
   }
 
   /**
-   * Clear resolved errors
+   * Get error summary
    */
-  clearResolvedErrors(): void {
-    this.errorQueue = this.errorQueue.filter(error => !error.resolved);
+  getErrorSummary(): {
+    total: number;
+    bySeverity: Record<string, number>;
+    byCategory: Record<string, number>;
+    unresolved: number;
+  } {
+    const total = this.errorQueue.length;
+    const bySeverity: Record<string, number> = {};
+    const byCategory: Record<string, number> = {};
+    let unresolved = 0;
+
+    this.errorQueue.forEach(error => {
+      bySeverity[error.severity] = (bySeverity[error.severity] || 0) + 1;
+      byCategory[error.category] = (byCategory[error.category] || 0) + 1;
+      if (!error.resolved) unresolved++;
+    });
+
+    return {
+      total,
+      bySeverity,
+      byCategory,
+      unresolved
+    };
   }
 
   /**
@@ -379,37 +305,23 @@ class EnhancedErrorMonitoring {
   }
 
   /**
-   * Get error report for debugging
+   * Clear all errors
    */
-  getErrorReport(): string {
-    const stats = this.getErrorStats();
-    
-    return `
-# Error Monitoring Report
-
-## Summary
-- Total Errors: ${stats.total}
-- Recent Errors (24h): ${stats.recent.length}
-
-## By Severity
-${Object.entries(stats.bySeverity).map(([severity, count]) => `- ${severity}: ${count}`).join('\n')}
-
-## By Category
-${Object.entries(stats.byCategory).map(([category, count]) => `- ${category}: ${count}`).join('\n')}
-
-## Recent Errors
-${stats.recent.map(error => `
-### ${error.message}
-- Severity: ${error.severity}
-- Category: ${error.category}
-- Occurrences: ${error.occurrences}
-- Last Seen: ${error.lastSeen}
-- URL: ${error.context.url}
-`).join('\n')}
-    `.trim();
+  clearErrors(): void {
+    this.errorQueue = [];
   }
 }
 
-// Export singleton instance
-export const enhancedErrorMonitoring = EnhancedErrorMonitoring.getInstance();
-export default enhancedErrorMonitoring;
+// Create singleton instance
+export const errorMonitoring = EnhancedErrorMonitoring.getInstance();
+
+// Export convenience functions
+export const reportError = (error: Error, context?: Partial<ErrorContext>) => 
+  errorMonitoring.reportError(error, context);
+export const setUserId = (userId: string) => errorMonitoring.setUserId(userId);
+export const getErrorReports = () => errorMonitoring.getErrorReports();
+export const getErrorSummary = () => errorMonitoring.getErrorSummary();
+export const markErrorResolved = (errorId: string) => errorMonitoring.markErrorResolved(errorId);
+export const clearErrors = () => errorMonitoring.clearErrors();
+
+export default errorMonitoring;
