@@ -80,23 +80,3 @@ async function handler(req, res) {
 
 module.exports = withSentry(handler);
 
-module.exports = withSentry(handler);
-}
-
-module.exports = withSentry(handler);
-}
-}
-}
-}
-}
-}
-}
-}
-}
-}
-}
-}
-}
-}
-
-module.exports = withSentry(handler);

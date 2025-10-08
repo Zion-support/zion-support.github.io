@@ -186,8 +186,6 @@ export default function App() {
     }),
     []
   );
-  }, []);
-
   return (
     <ErrorBoundary>
       <HelmetProvider>

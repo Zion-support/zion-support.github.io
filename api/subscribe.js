@@ -166,39 +166,9 @@ async function handler(req, res) {
     res.statusCode = 200;
     res.json({ success: true });
   } catch (err) {
-    console.error('Subscribe API error:', err);
-  } catch (error) {
-    console.error('Subscribe API error:', error);
-  } catch (error) {
-  } catch (error) {
-
-    existing.push({
-      email,
-      name,
-      source,
-      subscribedAt: new Date().toISOString(),
-    });
-
-    fs.writeFileSync(file, JSON.stringify(existing, null, 2));
-    res.statusCode = 200;
-    res.json({ success: true });
-  } catch (err) {
-    console.error('Subscribe API error:', err);
     res.statusCode = 500;
     res.json({ error: err.message || 'Subscription failed' });
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-module.exports = withSentry(handler);
 
 module.exports = withSentry(handler);
