@@ -1,5 +1,4 @@
 import React from 'react';
-
 interface PerformanceMetrics {
   lcp?: number;
   fid?: number;
@@ -76,6 +75,10 @@ class PerformanceOptimizer {
       try {
         performance.measure(`${markName}-duration`, markName);
       } catch {
+=======
+      } catch {
+=======
+      } catch {
         // Ignore measure errors
       }
     }
@@ -109,6 +112,10 @@ class PerformanceOptimizer {
       observer.observe({ entryTypes: ['largest-contentful-paint'] });
       this.observers.push(observer);
     } catch {
+=======
+    } catch {
+=======
+    } catch {
       // Ignore if not supported
     }
   }
@@ -124,6 +131,10 @@ class PerformanceOptimizer {
       });
       observer.observe({ entryTypes: ['first-input'] });
       this.observers.push(observer);
+    } catch {
+=======
+    } catch {
+=======
     } catch {
       // Ignore if not supported
     }
@@ -145,6 +156,10 @@ class PerformanceOptimizer {
       observer.observe({ entryTypes: ['layout-shift'] });
       this.observers.push(observer);
     } catch {
+=======
+    } catch {
+=======
+    } catch {
       // Ignore if not supported
     }
   }
@@ -161,6 +176,10 @@ class PerformanceOptimizer {
       });
       observer.observe({ entryTypes: ['paint'] });
       this.observers.push(observer);
+    } catch {
+=======
+    } catch {
+=======
     } catch {
       // Ignore if not supported
     }
@@ -179,6 +198,10 @@ class PerformanceOptimizer {
       });
       observer.observe({ entryTypes: ['navigation'] });
       this.observers.push(observer);
+    } catch {
+=======
+    } catch {
+=======
     } catch {
       // Ignore if not supported
     }

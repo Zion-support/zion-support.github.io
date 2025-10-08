@@ -98,12 +98,16 @@ class HealthCheckService {
           name,
           duration,
         });
+=======
       } catch {
-        logger.error(`Health check "${name}" failed`);
+logger._error(`Health check "${name}" failed`, _error as Error);
+=======
+      } catch (error) {
+        logger.error(`Health check "${name}" failed`, error as Error);
         checks.push({
           name,
           status: 'fail',
-          message: 'Health check failed',
+          message: error instanceof Error ? error.message : 'Unknown error',
         });
       }
     }
@@ -162,7 +166,6 @@ class HealthCheckService {
     }
 
     try {
-      const memory = (performance as { memory: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
       const usedPercent = (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100;
 
       let status: 'pass' | 'warn' | 'fail' = 'pass';
@@ -187,7 +190,11 @@ class HealthCheckService {
           usedPercent,
         },
       };
-    } catch {      return {
+=======
+    } catch {
+=======
+    } catch (error) {
+      return {
         name: 'memory',
         status: 'warn',
         message: 'Could not check memory usage',
@@ -224,7 +231,11 @@ class HealthCheckService {
           summary: report.summary,
         },
       };
-    } catch {      return {
+=======
+    } catch {
+=======
+    } catch (error) {
+      return {
         name: 'performance',
         status: 'warn',
         message: 'Could not check performance',
@@ -294,7 +305,11 @@ class HealthCheckService {
       try {
         localStorage.setItem('_size_test', testData);
         localStorage.removeItem('_size_test');
-      } catch {        return {
+=======
+      } catch {
+=======
+      } catch (error) {
+        return {
           name: 'storage',
           status: 'warn',
           message: 'LocalStorage space limited',
@@ -306,7 +321,11 @@ class HealthCheckService {
         status: 'pass',
         message: 'Storage working correctly',
       };
-    } catch {      return {
+=======
+    } catch {
+=======
+    } catch (error) {
+      return {
         name: 'storage',
         status: 'fail',
         message: 'LocalStorage not available',
