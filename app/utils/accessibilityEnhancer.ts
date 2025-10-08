@@ -1,4 +1,3 @@
-// @ts-nocheck
 /**
  * Advanced Accessibility Enhancement Utility
  * Provides comprehensive accessibility improvements and monitoring
@@ -153,8 +152,8 @@ class AccessibilityEnhancer {
     if (!currentElement) return;
 
     // Handle radio button groups
-    if (currentElement instanceof HTMLInputElement && currentElement.type === 'radio') {
-      this.handleRadioGroupNavigation(event, currentElement);
+    if ((currentElement as HTMLInputElement).type === 'radio') {
+      this.handleRadioGroupNavigation(event, currentElement as HTMLInputElement);
     }
     
     // Handle menu navigation
@@ -677,6 +676,32 @@ class AccessibilityEnhancer {
     const metrics = this.getMetrics();
     
     return `
-Accessibility Report:`
+Accessibility Report:
+====================
+Overall Score: ${metrics.overallScore}/100
+
+Keyboard Navigation: ${metrics.keyboardNavigationScore}/100
+Screen Reader Support: ${metrics.screenReaderScore}/100
+
+Issues Found:
+- Images without alt text: ${metrics.imagesWithoutAlt}
+- Links without text: ${metrics.linksWithoutText}
+- Empty headings: ${metrics.headingsWithoutContent}
+- Color contrast issues: ${metrics.colorContrastIssues}
+
+Focusable Elements: ${metrics.focusableElements}
+    `.trim();
+  }
+
+  /**
+   * Cleanup
+   */
+  cleanup(): void {
+    this.observers.forEach(observer => observer.disconnect());
+    this.observers = [];
+    this.isInitialized = false;
+  }
 }
-}
+
+export const accessibilityEnhancer = new AccessibilityEnhancer();
+export default accessibilityEnhancer;
