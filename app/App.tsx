@@ -8,31 +8,30 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import AdvancedErrorBoundary from './components/AdvancedErrorBoundary';
 import AdvancedSEOOptimizer from './components/AdvancedSEOOptimizer';
+import AdvancedPerformanceMonitor from './components/AdvancedPerformanceMonitor';
 import SEOEnhancer from './components/SEOEnhancer';
+import PerformanceDashboard from './components/PerformanceDashboard';
 import LoadingSpinner from './components/LoadingSpinner';
 
-// Lazy load pages and components
-const HomePage = lazy(() => import('./page').then(module => ({ default: module.default || (() => <div>Home Page</div>) })));
-const PerformanceDashboard = lazy(() => import('./components/PerformanceDashboard').catch(() => ({ default: () => null })));
-const AdvancedPerformanceMonitor = lazy(() => import('./components/AdvancedPerformanceMonitor').catch(() => ({ default: () => null })));
+// Lazy load pages
+const HomePage = lazy(() => import('./page').catch(() => ({ default: () => <div>Error loading page</div> })));
 
-// Utils
-import { logger } from './utils/logger';
-import { performanceOptimizer } from './utils/performanceOptimizer';
-
-// Helper functions
-const lazyLoadImages = () => {
-  // Implement lazy loading for images
+// Performance monitoring
+const performanceOptimizer = {
+  init: () => {},
+  getMetrics: () => ({ lcp: 0, fid: 0, cls: 0 })
 };
 
-const preloadCriticalResources = () => {
-  // Implement critical resource preloading
+const logger = {
+  lifecycle: (message: string, component: string) => console.log(`[${component}] ${message}`),
+  info: (message: string, data?: any) => console.log(message, data),
+  error: (message: string, error: Error, data?: any) => console.error(message, error, data),
+  performance: (message: string, metrics: any, component: string) => console.log(`[${component}] ${message}`, metrics)
 };
 
-const collectPerformanceMetrics = () => {
-  // Collect and return performance metrics
-  return {};
-};
+const lazyLoadImages = () => {};
+const preloadCriticalResources = () => {};
+const collectPerformanceMetrics = () => ({ lcp: 0, fid: 0, cls: 0 });
 
 const App: React.FC = () => {
   useEffect(() => {
@@ -94,22 +93,6 @@ const App: React.FC = () => {
             />
             <Router>
               <div className="App">
-                {/* Skip to main content link for accessibility */}
-                <a
-                  href="#main-content"
-                  className="skip-link sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    const main = document.querySelector('main') || document.querySelector('#main-content');
-                    if (main) {
-                      (main as HTMLElement).focus();
-                      main.scrollIntoView({ behavior: 'smooth' });
-                    }
-                  }}
-                >
-                  Skip to main content
-                </a>
-
                 <main id="main-content">
                   <Suspense fallback={<LoadingSpinner />}>
                     <Routes>
@@ -118,19 +101,8 @@ const App: React.FC = () => {
                     </Routes>
                   </Suspense>
                 </main>
-
-                {/* Performance Dashboard */}
+                <AdvancedPerformanceMonitor />
                 <PerformanceDashboard />
-                
-                {/* Advanced Performance Monitor */}
-                <AdvancedPerformanceMonitor
-                  enableRealTimeMonitoring={process.env['NODE_ENV'] === 'development'}
-                  onMetricsUpdate={(metrics) => {
-                    if (process.env['NODE_ENV'] === 'development') {
-                      logger.performance('Performance Metrics', metrics as unknown as Record<string, unknown>, 'PerformanceMonitor');
-                    }
-                  }}
-                />
               </div>
             </Router>
           </SEOEnhancer>
