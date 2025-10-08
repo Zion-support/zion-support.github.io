@@ -111,8 +111,8 @@ export async function waitFor(
  */
 export function createMockFn<T extends (...args: any[]) => any>(
   implementation?: T
-): jest.Mock {
-  return jest.fn(implementation) as any;
+): jest.Mock<ReturnType<T>, Parameters<T>> {
+  return jest.fn(implementation) as jest.Mock<ReturnType<T>, Parameters<T>>;
 }
 
 /**
