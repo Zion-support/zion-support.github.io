@@ -16,7 +16,7 @@ function initializeMonitoring() {
       performanceOptimizer.init();
       
       // Set up error tracking
-      errorHandler.init();
+      // errorHandler.init();
       
       // Initialize analytics
       analytics.init();

@@ -678,3 +678,10 @@ class AccessibilityEnhancer {
     
     return `
 Accessibility Report:
+- Total Checks: ${metrics.totalChecks}
+- Issues Found: ${metrics.issuesFound}
+- Warnings: ${metrics.warnings}
+- Success Rate: ${metrics.successRate.toFixed(2)}%
+`;
+  }
+}
