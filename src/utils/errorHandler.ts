@@ -135,6 +135,19 @@ class ErrorHandler {
   clearErrors(): void {
     this.errorQueue = [];
   }
+
+  public getErrorStats(): { total: number; recent: number } {
+    const now = new Date();
+    const oneHourAgo = new Date(now.getTime() - 60 * 60 * 1000);
+    const recent = this.errorQueue.filter(
+      error => new Date(error.timestamp) > oneHourAgo
+    ).length;
+    
+    return {
+      total: this.errorQueue.length,
+      recent
+    };
+  }
 }
 
 export default ErrorHandler;

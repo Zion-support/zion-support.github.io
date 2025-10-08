@@ -1,247 +1,379 @@
 /**
- * Logger Utility
- * Provides structured logging with different log levels and context
+ * Enhanced Logger Utility
+ * Production-ready logging with multiple levels and formatting
  */
-
-import { isDevelopment, isProduction } from '../config/appConfig';
 
 export enum LogLevel {
   DEBUG = 0,
   INFO = 1,
   WARN = 2,
   ERROR = 3,
-}
-
-export interface LogContext {
-  component?: string;
-  action?: string;
-  userId?: string;
-  sessionId?: string;
-  [key: string]: unknown;
+  FATAL = 4,
 }
 
 export interface LogEntry {
-  timestamp: string;
   level: LogLevel;
   message: string;
-  context?: LogContext;
-  error?: Error;
+  timestamp: Date;
+  context?: string;
+  metadata?: Record<string, unknown>;
+  stack?: string;
+}
+
+export interface LoggerConfig {
+  minLevel: LogLevel;
+  enableConsole: boolean;
+  enableRemote: boolean;
+  remoteEndpoint?: string;
+  maxBufferSize: number;
+  batchSize: number;
+  flushInterval: number;
 }
 
 class Logger {
-  private minLevel: LogLevel;
-  private logs: LogEntry[] = [];
-  private maxLogSize: number = 1000;
+  private config: LoggerConfig = {
+    minLevel: process.env['NODE_ENV'] === 'production' ? LogLevel.WARN : LogLevel.DEBUG,
+    enableConsole: true,
+    enableRemote: process.env['NODE_ENV'] === 'production',
+    maxBufferSize: 100,
+    batchSize: 10,
+    flushInterval: 30000, // 30 seconds
+  };
 
-  constructor(minLevel: LogLevel = LogLevel.INFO) {
-    this.minLevel = minLevel;
+  private buffer: LogEntry[] = [];
+  private flushTimer?: NodeJS.Timeout;
+
+  constructor() {
+    if (typeof window !== 'undefined' && this.config.enableRemote) {
+      this.startFlushTimer();
+      
+      // Flush on page unload
+      window.addEventListener('beforeunload', () => this.flush());
+    }
   }
 
   /**
-   * Set minimum log level
+   * Log a debug message
    */
-  setMinLevel(level: LogLevel): void {
-    this.minLevel = level;
+  debug(message: string, context?: string, metadata?: Record<string, unknown>): void {
+    this.log(LogLevel.DEBUG, message, context, metadata);
   }
 
   /**
-   * Create a log entry
+   * Log an info message
    */
-  private createLogEntry(
-    level: LogLevel,
+  info(message: string, context?: string, metadata?: Record<string, unknown>): void {
+    this.log(LogLevel.INFO, message, context, metadata);
+  }
+
+  /**
+   * Log a warning message
+   */
+  warn(message: string, context?: string, metadata?: Record<string, unknown>): void {
+    this.log(LogLevel.WARN, message, context, metadata);
+  }
+
+  /**
+   * Log an error message
+   */
+  error(
     message: string,
-    context?: LogContext,
-    error?: Error
-  ): LogEntry {
-    return {
-      timestamp: new Date().toISOString(),
-      level,
+    error?: Error,
+    context?: string,
+    metadata?: Record<string, unknown>
+  ): void {
+    const entry: LogEntry = {
+      level: LogLevel.ERROR,
       message,
+      timestamp: new Date(),
       context,
-      error,
+      metadata: {
+        ...metadata,
+        error: error ? {
+          name: error.name,
+          message: error.message,
+          stack: error.stack,
+        } : undefined,
+      },
+      stack: error?.stack,
     };
+
+    this.processLog(entry);
   }
 
   /**
-   * Store log entry
+   * Log a fatal error message
    */
-  private storeLog(entry: LogEntry): void {
-    this.logs.push(entry);
-    if (this.logs.length > this.maxLogSize) {
-      this.logs = this.logs.slice(-this.maxLogSize);
+  fatal(
+    message: string,
+    error?: Error,
+    context?: string,
+    metadata?: Record<string, unknown>
+  ): void {
+    const entry: LogEntry = {
+      level: LogLevel.FATAL,
+      message,
+      timestamp: new Date(),
+      context,
+      metadata: {
+        ...metadata,
+        error: error ? {
+          name: error.name,
+          message: error.message,
+          stack: error.stack,
+        } : undefined,
+      },
+      stack: error?.stack,
+    };
+
+    this.processLog(entry);
+    // Immediately flush fatal errors
+    this.flush();
+  }
+
+  /**
+   * Log a performance metric
+   */
+  perf(metric: string, value: number, metadata?: Record<string, unknown>): void {
+    this.log(LogLevel.DEBUG, `Performance: ${metric}`, 'Performance', {
+      ...metadata,
+      metric,
+      value,
+    });
+  }
+
+  /**
+   * Group related log messages
+   */
+  group(label: string, fn: () => void): void {
+    if (this.config.enableConsole) {
+      console.group(label);
+      try {
+        fn();
+      } finally {
+        console.groupEnd();
+      }
+    } else {
+      fn();
     }
   }
 
   /**
-   * Format log message for console
+   * Create a child logger with a specific context
    */
-  private formatMessage(entry: LogEntry): string {
-    const levelName = LogLevel[entry.level];
-    let message = `[${entry.timestamp}] ${levelName}: ${entry.message}`;
-    
-    if (entry.context && Object.keys(entry.context).length > 0) {
-      message += ` | Context: ${JSON.stringify(entry.context)}`;
-    }
-    
-    return message;
+  child(context: string): ContextLogger {
+    return new ContextLogger(this, context);
   }
 
   /**
-   * Log a message with a specific level
+   * Flush buffered logs to remote endpoint
+   */
+  async flush(): Promise<void> {
+    if (this.buffer.length === 0 || !this.config.enableRemote) {
+      return;
+    }
+
+    const logs = [...this.buffer];
+    this.buffer = [];
+
+    try {
+      if (this.config.remoteEndpoint) {
+        await fetch(this.config.remoteEndpoint, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ logs }),
+        });
+      }
+    } catch (error) {
+      console.error('Failed to flush logs:', error);
+      // Put logs back in buffer if flush failed
+      this.buffer = [...logs, ...this.buffer];
+    }
+  }
+
+  /**
+   * Set logger configuration
+   */
+  configure(config: Partial<LoggerConfig>): void {
+    this.config = { ...this.config, ...config };
+
+    if (this.flushTimer) {
+      clearInterval(this.flushTimer);
+    }
+
+    if (this.config.enableRemote) {
+      this.startFlushTimer();
+    }
+  }
+
+  /**
+   * Core logging method
    */
   private log(
     level: LogLevel,
     message: string,
-    context?: LogContext,
-    error?: Error
+    context?: string,
+    metadata?: Record<string, unknown>
   ): void {
-    if (level < this.minLevel) {
+    const entry: LogEntry = {
+      level,
+      message,
+      timestamp: new Date(),
+      context,
+      metadata,
+    };
+
+    this.processLog(entry);
+  }
+
+  /**
+   * Process a log entry
+   */
+  private processLog(entry: LogEntry): void {
+    // Check if log level meets minimum threshold
+    if (entry.level < this.config.minLevel) {
       return;
     }
 
-    const entry = this.createLogEntry(level, message, context, error);
-    this.storeLog(entry);
-
-    // Only output to console in development or for errors/warnings in production
-    if (isDevelopment() || level >= LogLevel.WARN) {
-      const formattedMessage = this.formatMessage(entry);
-
-      switch (level) {
-        case LogLevel.DEBUG:
-          if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { console.debug(formattedMessage); } }
-          break;
-        case LogLevel.INFO:
-          if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { console.info(formattedMessage); } }
-          break;
-        case LogLevel.WARN:
-          console.warn(formattedMessage);
-          if (error) console.warn(error);
-          break;
-        case LogLevel.ERROR:
-          console.error(formattedMessage);
-          if (error) console.error(error);
-          break;
-      }
+    // Console output
+    if (this.config.enableConsole) {
+      this.writeToConsole(entry);
     }
 
-    // Send errors to monitoring service in production
-    if (isProduction() && level === LogLevel.ERROR && error) {
-      this.sendToMonitoring(entry);
+    // Buffer for remote logging
+    if (this.config.enableRemote) {
+      this.addToBuffer(entry);
     }
   }
 
   /**
-   * Send error to monitoring service
+   * Write log entry to console
    */
-  private sendToMonitoring(entry: LogEntry): void {
-    // In production, this would send to a monitoring service like Sentry
-    // For now, we'll just store it
-    if (typeof window !== 'undefined' && (window as unknown as { errorMonitoring?: unknown }).errorMonitoring) {
-      try {
-        // Send to error monitoring service
-        const monitoring = (window as unknown as { errorMonitoring: { captureException: (error: Error, context?: LogContext) => void } }).errorMonitoring;
-        if (entry.error) {
-          monitoring.captureException(entry.error, entry.context);
+  private writeToConsole(entry: LogEntry): void {
+    const prefix = `[${this.getLevelName(entry.level)}]`;
+    const timestamp = entry.timestamp.toISOString();
+    const context = entry.context ? `[${entry.context}]` : '';
+    const message = `${timestamp} ${prefix} ${context} ${entry.message}`;
+
+    switch (entry.level) {
+      case LogLevel.DEBUG:
+        console.debug(message, entry.metadata);
+        break;
+      case LogLevel.INFO:
+        console.info(message, entry.metadata);
+        break;
+      case LogLevel.WARN:
+        console.warn(message, entry.metadata);
+        break;
+      case LogLevel.ERROR:
+      case LogLevel.FATAL:
+        console.error(message, entry.metadata);
+        if (entry.stack) {
+          console.error(entry.stack);
         }
-      } catch (e) {
-        console.error('Failed to send error to monitoring:', e);
-      }
+        break;
     }
   }
 
   /**
-   * Debug level logging
+   * Add log entry to buffer
    */
-  debug(message: string, context?: LogContext): void {
-    this.log(LogLevel.DEBUG, message, context);
-  }
+  private addToBuffer(entry: LogEntry): void {
+    this.buffer.push(entry);
 
-  /**
-   * Info level logging
-   */
-  info(message: string, context?: LogContext): void {
-    this.log(LogLevel.INFO, message, context);
-  }
+    // Trim buffer if it exceeds max size
+    if (this.buffer.length > this.config.maxBufferSize) {
+      this.buffer = this.buffer.slice(-this.config.maxBufferSize);
+    }
 
-  /**
-   * Warning level logging
-   */
-  warn(message: string, context?: LogContext, error?: Error): void {
-    this.log(LogLevel.WARN, message, context, error);
-  }
-
-  /**
-   * Error level logging
-   */
-  error(message: string, error?: Error, context?: LogContext): void {
-    this.log(LogLevel.ERROR, message, context, error);
-  }
-
-  /**
-   * Get recent logs
-   */
-  getRecentLogs(count: number = 100): LogEntry[] {
-    return this.logs.slice(-count);
-  }
-
-  /**
-   * Clear all logs
-   */
-  clearLogs(): void {
-    this.logs = [];
-  }
-
-  /**
-   * Export logs as JSON
-   */
-  exportLogs(): string {
-    return JSON.stringify(this.logs, null, 2);
-  }
-
-  /**
-   * Log performance metrics (development only)
-   */
-  perf(label: string, value: number, unit = 'ms'): void {
-    this.debug(`${label}: ${value}${unit}`, { component: 'performance' });
-  }
-
-  /**
-   * Log lifecycle events
-   */
-  lifecycle(message: string, context?: string): void {
-    this.info(message, context ? { component: context } : undefined);
-  }
-
-  /**
-   * Log performance data
-   */
-  performance(message: string, data: Record<string, unknown>, context?: string): void {
-    this.info(message, { ...data, component: context || 'Performance' });
-  }
-
-  /**
-   * Group related logs (development only)
-   */
-  group(label: string, fn: () => void): void {
-    if (isDevelopment()) {
-      console.group(label);
-      fn();
-      console.groupEnd();
+    // Flush if buffer reaches batch size
+    if (this.buffer.length >= this.config.batchSize) {
+      this.flush();
     }
   }
 
   /**
-   * Log with custom styling (development only)
+   * Start periodic flush timer
    */
-  styled(message: string, style: string): void {
-    if (isDevelopment()) {
-      if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { console.log(`%c${message}`, style); } }
+  private startFlushTimer(): void {
+    this.flushTimer = setInterval(() => {
+      this.flush();
+    }, this.config.flushInterval);
+  }
+
+  /**
+   * Get human-readable log level name
+   */
+  private getLevelName(level: LogLevel): string {
+    switch (level) {
+      case LogLevel.DEBUG:
+        return 'DEBUG';
+      case LogLevel.INFO:
+        return 'INFO';
+      case LogLevel.WARN:
+        return 'WARN';
+      case LogLevel.ERROR:
+        return 'ERROR';
+      case LogLevel.FATAL:
+        return 'FATAL';
+      default:
+        return 'UNKNOWN';
     }
   }
 }
 
-// Create and export singleton instance
-const logger = new Logger(isDevelopment() ? LogLevel.DEBUG : LogLevel.INFO);
+/**
+ * Context Logger - provides logging with a fixed context
+ */
+class ContextLogger {
+  constructor(private logger: Logger, private context: string) {}
 
-export { logger };
+  debug(message: string, metadata?: Record<string, unknown>): void {
+    this.logger.debug(message, this.context, metadata);
+  }
+
+  info(message: string, metadata?: Record<string, unknown>): void {
+    this.logger.info(message, this.context, metadata);
+  }
+
+  warn(message: string, metadata?: Record<string, unknown>): void {
+    this.logger.warn(message, this.context, metadata);
+  }
+
+  error(message: string, error?: Error, metadata?: Record<string, unknown>): void {
+    this.logger.error(message, error, this.context, metadata);
+  }
+
+  fatal(message: string, error?: Error, metadata?: Record<string, unknown>): void {
+    this.logger.fatal(message, error, this.context, metadata);
+  }
+
+  child(subContext: string): ContextLogger {
+    return new ContextLogger(this.logger, `${this.context}:${subContext}`);
+  }
+}
+
+// Export singleton instance
+export const logger = new Logger();
+
+// Export convenience functions
+export const debug = (message: string, context?: string, metadata?: Record<string, unknown>) =>
+  logger.debug(message, context, metadata);
+export const info = (message: string, context?: string, metadata?: Record<string, unknown>) =>
+  logger.info(message, context, metadata);
+export const warn = (message: string, context?: string, metadata?: Record<string, unknown>) =>
+  logger.warn(message, context, metadata);
+export const error = (
+  message: string,
+  err?: Error,
+  context?: string,
+  metadata?: Record<string, unknown>
+) => logger.error(message, err, context, metadata);
+export const fatal = (
+  message: string,
+  err?: Error,
+  context?: string,
+  metadata?: Record<string, unknown>
+) => logger.fatal(message, err, context, metadata);
+
 export default logger;

@@ -1,0 +1,20 @@
+{
+  "enabled": true,
+  "windowMs": 60000,
+  "maxRequests": 100,
+  "message": "Too many requests, please try again later.",
+  "standardHeaders": true,
+  "legacyHeaders": false,
+  "skipSuccessfulRequests": false,
+  "skipFailedRequests": false,
+  "endpoints": {
+    "/api/auth": {
+      "windowMs": 300000,
+      "maxRequests": 5
+    },
+    "/api/data": {
+      "windowMs": 60000,
+      "maxRequests": 50
+    }
+  }
+}

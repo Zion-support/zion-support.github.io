@@ -1,22 +1,22 @@
 /**
- * Performance Monitor utility
+ * Performance Monitoring Utility
  * Tracks and reports application performance metrics
  */
 
-export interface PerformanceMetrics {
-  FCP?: number; // First Contentful Paint
-  LCP?: number; // Largest Contentful Paint
-  FID?: number; // First Input Delay
-  CLS?: number; // Cumulative Layout Shift
-  TTFB?: number; // Time to First Byte
+export interface PerformanceMetric {
+  name: string;
+  value: number;
+  rating: 'good' | 'needs-improvement' | 'poor';
+  timestamp: number;
 }
 
 export class PerformanceMonitor {
   private static instance: PerformanceMonitor;
-  private metrics: PerformanceMetrics = {};
+  private metrics: Map<string, PerformanceMetric[]> = new Map();
+  private readonly maxMetricsPerType = 100;
 
   private constructor() {
-    this.initializeMonitoring();
+    this.initializeObservers();
   }
 
   static getInstance(): PerformanceMonitor {
@@ -26,76 +26,154 @@ export class PerformanceMonitor {
     return PerformanceMonitor.instance;
   }
 
-  /**
-   * Initialize performance monitoring
-   */
-  private initializeMonitoring(): void {
-    if (typeof window === 'undefined' || !window.performance) {
-      return;
-    }
+  private initializeObservers(): void {
+    if (typeof window === 'undefined') return;
 
-    // Monitor Web Vitals
-    this.monitorWebVitals();
-  }
-
-  /**
-   * Monitor Web Vitals metrics
-   */
-  private monitorWebVitals(): void {
-    // Monitor FCP (First Contentful Paint)
+    // Observe long tasks
     if ('PerformanceObserver' in window) {
       try {
-        const observer = new PerformanceObserver(list => {
-          list.getEntries().forEach(entry => {
-            if (entry.name === 'first-contentful-paint') {
-              this.metrics.FCP = entry.startTime;
-            }
-          });
+        const longTaskObserver = new PerformanceObserver((list) => {
+          for (const entry of list.getEntries()) {
+            this.recordMetric('long-task', entry.duration);
+          }
         });
-        observer.observe({ type: 'paint', buffered: true });
-      } catch (error) {
-        console.warn('Failed to observe FCP', error);
-      }
-    }
-
-    // Monitor LCP (Largest Contentful Paint)
-    if ('PerformanceObserver' in window) {
-      try {
-        const observer = new PerformanceObserver(list => {
-          const entries = list.getEntries();
-          const lastEntry = entries[entries.length - 1];
-          this.metrics.LCP = lastEntry.startTime;
-        });
-        observer.observe({ type: 'largest-contentful-paint', buffered: true });
-      } catch (error) {
-        console.warn('Failed to observe LCP', error);
+        longTaskObserver.observe({ entryTypes: ['longtask'] });
+      } catch (e) {
+        console.warn('Long task observer not supported');
       }
     }
   }
 
   /**
-   * Get current metrics
+   * Record a performance metric
    */
-  getMetrics(): PerformanceMetrics {
-    return { ...this.metrics };
+  recordMetric(name: string, value: number): void {
+    const rating = this.getRating(name, value);
+    const metric: PerformanceMetric = {
+      name,
+      value,
+      rating,
+      timestamp: Date.now(),
+    };
+
+    if (!this.metrics.has(name)) {
+      this.metrics.set(name, []);
+    }
+
+    const metricsArray = this.metrics.get(name)!;
+    metricsArray.push(metric);
+
+    // Keep only the last N metrics
+    if (metricsArray.length > this.maxMetricsPerType) {
+      metricsArray.shift();
+    }
   }
 
   /**
-   * Clear metrics
+   * Get rating for a metric based on web vitals thresholds
    */
-  clearMetrics(): void {
-    this.metrics = {};
+  private getRating(name: string, value: number): 'good' | 'needs-improvement' | 'poor' {
+    const thresholds: Record<string, { good: number; poor: number }> = {
+      'FCP': { good: 1800, poor: 3000 },
+      'LCP': { good: 2500, poor: 4000 },
+      'FID': { good: 100, poor: 300 },
+      'CLS': { good: 0.1, poor: 0.25 },
+      'TTFB': { good: 800, poor: 1800 },
+      'long-task': { good: 50, poor: 100 },
+    };
+
+    const threshold = thresholds[name] || { good: 100, poor: 500 };
+
+    if (value <= threshold.good) return 'good';
+    if (value <= threshold.poor) return 'needs-improvement';
+    return 'poor';
   }
 
   /**
-   * Log metrics to console
+   * Get all metrics for a specific type
    */
-  logMetrics(): void {
-    console.log('Performance Metrics:', this.metrics);
+  getMetrics(name?: string): PerformanceMetric[] {
+    if (name) {
+      return this.metrics.get(name) || [];
+    }
+
+    const allMetrics: PerformanceMetric[] = [];
+    this.metrics.forEach((metrics) => {
+      allMetrics.push(...metrics);
+    });
+    return allMetrics;
+  }
+
+  /**
+   * Get average value for a metric
+   */
+  getAverage(name: string): number {
+    const metrics = this.metrics.get(name) || [];
+    if (metrics.length === 0) return 0;
+
+    const sum = metrics.reduce((acc, metric) => acc + metric.value, 0);
+    return sum / metrics.length;
+  }
+
+  /**
+   * Get performance summary
+   */
+  getSummary(): Record<string, { average: number; count: number; rating: string }> {
+    const summary: Record<string, { average: number; count: number; rating: string }> = {};
+
+    this.metrics.forEach((metrics, name) => {
+      const average = this.getAverage(name);
+      const rating = this.getRating(name, average);
+      summary[name] = {
+        average,
+        count: metrics.length,
+        rating,
+      };
+    });
+
+    return summary;
+  }
+
+  /**
+   * Clear all metrics
+   */
+  clear(): void {
+    this.metrics.clear();
+  }
+
+  /**
+   * Measure execution time of a function
+   */
+  async measureAsync<T>(name: string, fn: () => Promise<T>): Promise<T> {
+    const start = performance.now();
+    try {
+      const result = await fn();
+      const duration = performance.now() - start;
+      this.recordMetric(name, duration);
+      return result;
+    } catch (error) {
+      const duration = performance.now() - start;
+      this.recordMetric(`${name}-error`, duration);
+      throw error;
+    }
+  }
+
+  /**
+   * Measure execution time of a synchronous function
+   */
+  measure<T>(name: string, fn: () => T): T {
+    const start = performance.now();
+    try {
+      const result = fn();
+      const duration = performance.now() - start;
+      this.recordMetric(name, duration);
+      return result;
+    } catch (error) {
+      const duration = performance.now() - start;
+      this.recordMetric(`${name}-error`, duration);
+      throw error;
+    }
   }
 }
 
-// Export singleton instance
-export const performanceMonitor = PerformanceMonitor.getInstance();
-
-export default PerformanceMonitor;
+export default PerformanceMonitor.getInstance();
