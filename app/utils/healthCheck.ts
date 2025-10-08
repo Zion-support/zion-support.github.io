@@ -8,17 +8,17 @@ import { logger } from './logger'
 import { performanceMonitor } from './performanceMonitor'
 
 export interface HealthStatus {
-  status: 'healthy' | 'degraded' | 'unhealthy'
-  timestamp: number,
-  uptime: number,
-  checks: HealthCheck[]
+  status: 'healthy' | 'degraded' | 'unhealthy';
+  timestamp: number;
+  uptime: number;
+  checks: HealthCheck[];
 }
 export interface HealthCheck {
-  name: string,
-  status: 'pass' | 'warn' | 'fail'
-  message?: string
-  details?: Record<string, unknown>
-  duration?: number
+  name: string;
+  status: 'pass' | 'warn' | 'fail';
+  message?: string;
+  details?: Record<string, unknown>;
+  duration?: number;
 }
 export type HealthCheckFunction = () => Promise<HealthCheck> | HealthCheck
 

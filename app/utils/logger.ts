@@ -15,19 +15,19 @@ function isProduction(): boolean {
   }
 }
 export enum LogLevel {
-  DEBUG = 0
-  INFO = 1
-  WARN = 2
-  ERROR = 3
+  DEBUG = 0,
+  INFO = 1,
+  WARN = 2,
+  ERROR = 3,
   FATAL = 4
 }
 export interface LogEntry {
-  level: LogLevel,
-  message: string,
-  timestamp: Date,
-  context?: string
-  metadata?: Record<string, unknown>
-  stack?: string
+  level: LogLevel;
+  message: string;
+  timestamp: Date;
+  context?: string;
+  metadata?: Record<string, unknown>;
+  stack?: string;
 }
 export interface LoggerConfig {
   minLevel: LogLevel,
