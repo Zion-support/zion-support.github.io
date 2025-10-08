@@ -28,7 +28,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   const [performanceScore, setPerformanceScore] = useState(100);
 
   useEffect(() => {
-    const reportWebVitals = (metric: { name: string; value: number }) => {
+    const _reportWebVitals = (metric: { name: string; value: number }) => {
       // Log to console in development (only on client side)
       if (typeof window !== 'undefined' && enableConsoleLogging) {
         logger.info('Web Vital captured', { name: metric.name, value: metric.value });
