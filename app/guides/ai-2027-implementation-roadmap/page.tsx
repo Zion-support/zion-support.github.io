@@ -1,5 +1,23 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+<<<<<<< HEAD
+=======
+import {
+  ArrowLeft,
+  Calendar,
+  User,
+  Clock,
+  Tag,
+  Target,
+  CheckCircle,
+  ArrowRight,
+  Zap,
+  TrendingUp,
+  Brain,
+  _Cpu,
+} from 'lucide-react';
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-62d6
 import { ArrowLeft, Calendar, User, Clock, Tag, Target, CheckCircle, ArrowRight, Zap, TrendingUp, Brain, Cpu } from 'lucide-react';
 
 export default function AI2027ImplementationRoadmap() {

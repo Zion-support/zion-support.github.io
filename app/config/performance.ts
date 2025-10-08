@@ -55,4 +55,10 @@ export const performanceConfig = {
   },
 } as const;
 
+<<<<<<< HEAD
 export type PerformanceConfig = typeof performanceConfig;
+=======
+export type PerformanceConfig = typeof performanceConfig;
+
+export default performanceConfig;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-62d6
