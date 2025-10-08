@@ -128,9 +128,13 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
     if (!isInitialized || typeof window === 'undefined') return;
 
     if (enableDebug) {
+<<<<<<< HEAD
        
       // eslint-disable-next-line no-console
       console.error('Analytics Error:', error, context);origin/cursor/fix-errors-and-merge-to-main-6395
+=======
+      logger.error('Analytics Error:', error, context);
+>>>>>>> cursor/analyze-improve-and-deploy-application-186f
     }
 
     if ((window as unknown as { gtag: (...args: unknown[]) => void }).gtag) {
