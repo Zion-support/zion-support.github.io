@@ -404,12 +404,6 @@ export const info = (message: string, context?: string, metadata?: Record<string
   logger.info(message, context, metadata)
 export const warn = (message: string, context?: string, metadata?: Record<string, unknown>) =>
   logger.warn(message, context, metadata)
-export const debug = (message: string, context?: string, _metadata?: Record<string, unknown>) =>
-  logger.debug(message, context, _metadata)
-export const info = (message: string, context?: string, _metadata?: Record<string, unknown>) =>
-  logger.info(message, context, _metadata)
-export const warn = (message: string, context?: string, _metadata?: Record<string, unknown>) =>
-  logger.warn(message, context, _metadata)
 
 export const error = (
   message: string,

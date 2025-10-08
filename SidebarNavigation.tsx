@@ -1,4 +1,4 @@
-import { Home, Menu, Settings, X } from 'lucide-react';
+import { Home, Menu, Settings, X, User } from 'lucide-react';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
@@ -37,7 +37,7 @@ const SidebarNavigation: React.FC = () => {
                   isOpen ? 'justify-start' : 'justify-center'
                 }`}
               >
-                <IconComponent className='w-5 h-5' />
+                <item.icon className='w-5 h-5' />
                 {isOpen && <span className='ml-3 font-medium'>{item.name}</span>}
               </Link>
             );
