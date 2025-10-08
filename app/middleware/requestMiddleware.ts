@@ -66,7 +66,7 @@ export class MiddlewareExecutor {
 export const loggingMiddleware: Middleware = async (context, next) => {
   const startTime = Date.now();
   
-  logger.info('Request started', {
+  logger.info('Request started', undefined, {
     component: 'RequestMiddleware',
     method: context.request.method,
     url: context.request.url,
@@ -76,7 +76,7 @@ export const loggingMiddleware: Middleware = async (context, next) => {
     const result = await next();
     const duration = Date.now() - startTime;
 
-    logger.info('Request completed', {
+    logger.info('Request completed', undefined, {
       component: 'RequestMiddleware',
       method: context.request.method,
       url: context.request.url,
@@ -88,7 +88,7 @@ export const loggingMiddleware: Middleware = async (context, next) => {
   } catch (error) {
     const duration = Date.now() - startTime;
 
-    logger.error('Request failed', error as Error, {
+    logger.error('Request failed', error as Error, undefined, {
       component: 'RequestMiddleware',
       method: context.request.method,
       url: context.request.url,
@@ -135,7 +135,7 @@ export const errorHandlingMiddleware: Middleware = async (context, next) => {
       method: context.request.method,
     };
 
-    logger.error('Request error handled', error as Error, {
+    logger.error('Request error handled', error as Error, undefined, {
       component: 'ErrorHandlingMiddleware',
       ...standardError,
     });
@@ -187,7 +187,7 @@ export const cachingMiddleware = (ttl: number): Middleware => {
     const cached = cache.get(key);
 
     if (cached && Date.now() - cached.timestamp < ttl) {
-      logger.debug('Cache hit', { component: 'CachingMiddleware', url: key });
+      logger.debug('Cache hit', undefined, { component: 'CachingMiddleware', url: key });
       return cached.data;
     }
 

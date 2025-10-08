@@ -63,11 +63,7 @@ class AdvancedErrorBoundary extends Component<
 
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
-      logger.error(
-        'Error Boundary caught an error',
-        { component: 'ErrorBoundary', errorInfo },
-        error
-      );
+      logger.error('Error Boundary caught an error', error, undefined, { component: 'ErrorBoundary', errorInfo });
     }
 
     // Call custom error handler
@@ -138,10 +134,7 @@ class AdvancedErrorBoundary extends Component<
         body: JSON.stringify(errorReport),
       });
     } catch (reportError) {
-      logger.error(
-        'Failed to send error report',
-        { component: 'ErrorReporting' },
-        reportError instanceof Error ? reportError : new Error(String(reportError))
+      logger.error('Failed to send error report', reportError instanceof Error ? reportError : new Error(String(reportError, undefined, { component: 'ErrorReporting' }))
       );
     }
   };
