@@ -1,3 +1,4 @@
+import React from 'react';
 import './globals.css';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
@@ -6,11 +7,11 @@ import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import PWAInstaller from './components/PWAInstaller';
 import { GlobalErrorBoundary } from './components/GlobalErrorBoundary';
 
-export default function RootLayout({
-  children,
-}: {
+interface LayoutProps {
   children: React.ReactNode;
-}) {
+}
+
+const Layout: React.FC<LayoutProps> = ({ children }) => {
   const structuredData = {
     '@context': 'https://schema.org',
     '@type': 'TechCompany',
@@ -192,4 +193,6 @@ export default function RootLayout({
       </body>
     </html>
   );
-}
+};
+
+export default Layout;

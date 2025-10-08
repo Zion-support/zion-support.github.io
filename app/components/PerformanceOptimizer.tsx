@@ -2,82 +2,25 @@ import React, { useEffect } from 'react';
 
 const PerformanceOptimizer: React.FC = () => {
   useEffect(() => {
-    // Preload critical resources
-    const preloadCriticalResources = () => {
-      const criticalResources = [
-        '/fonts/inter-var.woff2',
-        '/images/hero-bg.webp',
-        '/images/logo.svg'
-      ];
+    // Performance optimization logic
+    if (typeof window !== 'undefined') {
+      // Preload critical resources
+      const preloadLink = document.createElement('link');
+      preloadLink.rel = 'preload';
+      preloadLink.href = '/fonts/inter.woff2';
+      preloadLink.as = 'font';
+      preloadLink.type = 'font/woff2';
+      preloadLink.crossOrigin = 'anonymous';
+      document.head.appendChild(preloadLink);
 
-      criticalResources.forEach(resource => {
-        const link = document.createElement('link');
-        link.rel = 'preload';
-        link.href = resource;
-        link.as = resource.endsWith('.woff2') ? 'font' : 'image';
-        if (resource.endsWith('.woff2')) {
-          link.crossOrigin = 'anonymous';
+      // Optimize images
+      const images = document.querySelectorAll('img');
+      images.forEach((img) => {
+        if (!img.loading) {
+          img.loading = 'lazy';
         }
-        document.head.appendChild(link);
       });
-    };
-
-    // Optimize images
-    const optimizeImages = () => {
-      const images = document.querySelectorAll('img[data-src]');
-      const imageObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            const img = entry.target as HTMLImageElement;
-            img.src = img.dataset.src || '';
-            img.classList.remove('lazy');
-            imageObserver.unobserve(img);
-          }
-        });
-      });
-
-      images.forEach(img => imageObserver.observe(img));
-    };
-
-    // Defer non-critical JavaScript
-    const deferNonCriticalJS = () => {
-      const scripts = document.querySelectorAll('script[data-defer]');
-      scripts.forEach(script => {
-        const newScript = document.createElement('script');
-        newScript.src = script.getAttribute('src') || '';
-        newScript.async = true;
-        script.parentNode?.replaceChild(newScript, script);
-      });
-    };
-
-    // Initialize optimizations
-    preloadCriticalResources();
-    optimizeImages();
-    deferNonCriticalJS();
-
-    // Performance monitoring
-    if ('performance' in window) {
-      const observer = new PerformanceObserver((list) => {
-        list.getEntries().forEach((entry) => {
-          if (entry.entryType === 'largest-contentful-paint') {
-            console.log('LCP:', entry.startTime);
-          }
-          if (entry.entryType === 'first-input') {
-            console.log('FID:', entry.processingStart - entry.startTime);
-          }
-        });
-      });
-
-      try {
-        observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input'] });
-      } catch (e) {
-        console.warn('Performance Observer not supported');
-      }
     }
-
-    return () => {
-      // Cleanup if needed
-    };
   }, []);
 
   return null;
