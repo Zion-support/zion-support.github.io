@@ -10,6 +10,8 @@ import AdvancedErrorBoundary from './components/AdvancedErrorBoundary';
 import AdvancedSEOOptimizer from './components/AdvancedSEOOptimizer';
 import SEOEnhancer from './components/SEOEnhancer';
 import LoadingSpinner from './components/LoadingSpinner';
+import PerformanceDashboard from './components/PerformanceDashboard';
+import AdvancedPerformanceMonitor from './components/AdvancedPerformanceMonitor';
 
 // Lazy load pages for better performance
 const HomePage = lazy(() => import('./page'));
@@ -44,11 +46,11 @@ const App: React.FC = () => {
     }
     
     logger.lifecycle('performance monitoring initialized', 'App');
-    logger.info('🚀 Zion Tech Group App initialized with comprehensive monitoring', 'App');
+    logger.info('🚀 Zion Tech Group App initialized with comprehensive monitoring', { component: 'App' });
   }, []);
 
   const handleError = useCallback((error: Error, errorInfo: any) => {
-    logger.error('Application Error', 'ErrorBoundary', { error: error.message, errorInfo });
+    logger.error('Application Error', error, { component: 'ErrorBoundary', errorInfo });
   }, []);
 
   return (
@@ -66,7 +68,7 @@ const App: React.FC = () => {
             description="Leading provider of enterprise AI solutions, quantum computing, and autonomous systems. Transform your business with our cutting-edge technology."
           >
             <AdvancedSEOOptimizer
-              config={{
+              seoData={{
                 title: 'Zion Tech Group - Advanced AI and IT Solutions',
                 description: 'Leading provider of enterprise AI solutions, quantum computing, and autonomous systems. Transform your business with our cutting-edge technology.',
                 keywords: ['AI solutions', 'enterprise AI', 'quantum computing', 'autonomous systems', 'digital transformation', 'automation', 'cloud services', 'AI consulting', 'business intelligence', 'machine learning'],

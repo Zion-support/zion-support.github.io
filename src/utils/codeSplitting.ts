@@ -237,7 +237,7 @@ export class ChunkLoadMonitor {
   }
 
   static getAllMetrics() {
-    const metrics = [];
+    const metrics: Array<ReturnType<typeof ChunkLoadMonitor.getMetrics>> = [];
     for (const [chunkName] of this.chunks) {
       const m = this.getMetrics(chunkName); if (m) metrics.push(m);
     }
