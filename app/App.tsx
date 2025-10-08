@@ -40,6 +40,11 @@ const App: React.FC = () => {
           colno: event.colno,
         },
       });
+      
+      // Prevent default error handling to avoid console clutter in production
+      if (import.meta.env.PROD) {
+        event.preventDefault();
+      }
     };
 
     const handleUnhandledRejection = (event: PromiseRejectionEvent) => {
@@ -51,10 +56,27 @@ const App: React.FC = () => {
           context: { reason: event.reason },
         }
       );
+      
+      // Prevent default handling in production
+      if (import.meta.env.PROD) {
+        event.preventDefault();
+      }
     };
 
     window.addEventListener('error', handleGlobalError);
     window.addEventListener('unhandledrejection', handleUnhandledRejection);
+
+    // Register Service Worker for offline support
+    if ('serviceWorker' in navigator && import.meta.env.PROD) {
+      navigator.serviceWorker
+        .register('/sw.js')
+        .then((registration) => {
+          logger.info('Service Worker registered', { scope: registration.scope });
+        })
+        .catch((error) => {
+          logger.error('Service Worker registration failed', { error });
+        });
+    }
 
     // Initialize performance monitoring and Web Vitals
     if (typeof window !== 'undefined' && 'performance' in window) {
