@@ -163,6 +163,7 @@
     "pages_disabled/**",
     "src.disabled/**",
     "utils.disabled/**",
+    "vite.config.ts",
     "vite.config.performance.ts",
     "vite.config.ts",
     "vite.config.js",
