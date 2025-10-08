@@ -38,7 +38,7 @@ import './globals.css';
 const App: React.FC = () => {
   useEffect(() => {
     // Initialize global error handling
-    logger.lifecycle('initialized', 'App');
+    logger.debug('initialized', { component: 'App' });
 
     // Initialize performance monitoring
     lazyLoadImages();
@@ -80,8 +80,8 @@ const App: React.FC = () => {
       }
     }, 30000);
     
-    logger.lifecycle('performance monitoring initialized', 'App');
-    logger.info('🚀 Zion Tech Group App initialized with comprehensive monitoring', 'App');
+    logger.debug('performance monitoring initialized', { component: 'App' });
+    logger.info('🚀 Zion Tech Group App initialized with comprehensive monitoring', { component: 'App' });
 
     return () => {
       // Cleanup
@@ -98,7 +98,7 @@ const App: React.FC = () => {
         enableErrorReporting={true}
         enableRetry={true}
         onError={(error, errorInfo) => {
-          logger.error('Application Error', 'ErrorBoundary', { error: error.message, errorInfo });
+          logger.error('Application Error', error, 'ErrorBoundary');
         }}
       >
         <AccessibilityEnhancer>
@@ -153,7 +153,7 @@ const App: React.FC = () => {
                   enableRealTimeMonitoring={process.env['NODE_ENV'] === 'development'}
                   onMetricsUpdate={(metrics) => {
                     if (process.env['NODE_ENV'] === 'development') {
-                      logger.performance('Performance Metrics', metrics as unknown as Record<string, unknown>, 'PerformanceMonitor');
+                      logger.debug('Performance Metrics', metrics as unknown as Record<string, unknown>, 'PerformanceMonitor');
                     }
                   }}
                 />
