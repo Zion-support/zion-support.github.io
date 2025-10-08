@@ -105,7 +105,6 @@ const App: React.FC = () => {
 
   return (
     <HelmetProvider>
-<<<<<<< HEAD
       <AdvancedErrorBoundary
         enableErrorReporting={true}
         enableRetry={true}
@@ -148,43 +147,27 @@ const App: React.FC = () => {
             />
             <Router>
               <div className="App">
+                <Navigation />
                 <main id="main-content">
                   <Suspense fallback={<LoadingSpinner />}>
                     <Routes>
                       <Route path="/" element={<HomePage />} />
-                      {/* Add more routes as needed */}
+                      <Route path="/about" element={<AboutPage />} />
+                      <Route path="/services" element={<ServicesPage />} />
+                      <Route path="/contact" element={<ContactPage />} />
+                      <Route path="/team" element={<TeamPage />} />
+                      <Route path="/privacy" element={<PrivacyPage />} />
+                      <Route path="/terms" element={<TermsPage />} />
+                      <Route path="/enterprise" element={<EnterprisePage />} />
+                      <Route path="/services-advertising" element={<ServicesAdvertisingPage />} />
+                      <Route path="/case-studies" element={<CaseStudiesPage />} />
+                      <Route path="/ai-services" element={<lazy(() => import('./ai-services/page')) />} />
+                      <Route path="/it-services" element={<lazy(() => import('./it-services/page')) />} />
+                      <Route path="/micro-saas" element={<lazy(() => import('./micro-saas/page')) />} />
                     </Routes>
                   </Suspense>
                 </main>
-=======
-      <EnhancedErrorBoundary>
-        <PerformanceOptimizer>
-          <AccessibilityEnhancer>
-            <SEOEnhancer
-              title="Zion Tech Group - Advanced AI and IT Solutions"
-              description="Leading provider of enterprise AI solutions, quantum computing, and autonomous systems. Transform your business with our cutting-edge technology."
-            >
-              <Router>
-                <div className='App'>
-                  <Navigation />
-                  <main id='main-content'>
-                    <Suspense fallback={<LoadingSpinner />}>
-                      <Routes>
-                        <Route path='/' element={<HomePage />} />
-                        <Route path='/about' element={<AboutPage />} />
-                        <Route path='/services' element={<ServicesPage />} />
-                        <Route path='/contact' element={<ContactPage />} />
-                        <Route path='/team' element={<TeamPage />} />
-                        <Route path='/privacy' element={<PrivacyPage />} />
-                        <Route path='/terms' element={<TermsPage />} />
-                        <Route path='/enterprise' element={<EnterprisePage />} />
-                        <Route path='/services-advertising' element={<ServicesAdvertisingPage />} />
-                        <Route path='/case-studies' element={<CaseStudiesPage />} />
-                      </Routes>
-                    </Suspense>
-                  </main>
-                  <Footer />
->>>>>>> cursor/website-audit-and-content-update-7e9e
+                <Footer />
 
                 {/* Performance Dashboard */}
                 <PerformanceDashboard />
