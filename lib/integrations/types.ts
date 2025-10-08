@@ -1,12 +1,38 @@
-export type IntegrationProviderId =
-  | 'salesforce'
-  | 'hubspot'
-  | 'zoho'
-  | 'pipedrive'
-  | 'greenhouse'
-  | 'lever'
-  | 'workable'
+export type IntegrationProviderId = 
+  | 'salesforce' 
+  | 'hubspot' 
+  | 'zoho' 
+  | 'pipedrive' 
+  | 'greenhouse' 
+  | 'lever' 
+  | 'workable' 
   | 'bamboohr';
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+export type SyncStatus = 'connected' | 'warning' | 'disconnected';
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3d1d
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-4606
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e3b
@@ -20,6 +46,8 @@ export type IntegrationProviderId =
 
 export type SyncStatus = 'connected' | 'warning' | 'disconnected';
 
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0a8c
 =======
 
 export type SyncStatus = 'connected' | 'warning' | 'disconnected';
@@ -35,16 +63,28 @@ export type SyncStatus = 'connected' | 'warning' | 'disconnected';
 export type SyncStatus = 'connected' | 'warning' | 'disconnected';
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-6abd
-=======
-
-export type SyncStatus = 'connected' | 'warning' | 'disconnected';
-
->>>>>>> origin/main
 export interface IntegrationProviderMeta {
   id: IntegrationProviderId;
   name: string;
   category: 'crm' | 'ats';
   description: string;
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-4854
+=======
+}
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0a8c
 =======
 
 export type SyncStatus = 'connected' | 'warning' | 'disconnected';
@@ -92,6 +132,10 @@ export interface IntegrationProviderMeta {
 }
 >>>>>>> cursor/fix-errors-and-merge-to-main-bd65
 >>>>>>> 73aae067a8789e7f94c7cf242d65c42e6717fb43
+<<<<<<< HEAD
+
+>>>>>>> 40f0d19ecc0819e0cd100e68e36dd415011c7be9
+=======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-e42d
 =======
 }
@@ -102,12 +146,33 @@ export interface IntegrationProviderMeta {
 export type SyncStatus = 'connected' | 'warning' | 'disconnected';
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-ee0f
+>>>>>>> ad3f5667eee57a9969ff433042f2200dd6375572
 export interface ProviderConnection {
   id: string;
   providerId: IntegrationProviderId;
   accessToken: string;
   refreshToken?: string;
   expiresAt?: number;
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+  status: SyncStatus;
+  lastSync?: number;
+<<<<<<< HEAD
+  createdAt: number;
+  updatedAt: number;
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-bcb8
 =======
 =======
 =======
@@ -130,6 +195,9 @@ export interface ProviderConnection {
   lastSyncAt?: number;
   createdAt: number;
   updatedAt: number;
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3d1d
 }
 =======
 =======
@@ -137,8 +205,6 @@ export interface ProviderConnection {
 =======
   expiresAt?: number;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-6231
-=======
->>>>>>> origin/main
 }
 
 export interface ProviderConnection {
@@ -146,6 +212,17 @@ export interface ProviderConnection {
   providerId: IntegrationProviderId;
   name: string;
   status: SyncStatus;
+  accessToken: string;
+  refreshToken?: string;
+  expiresAt?: number;
+  lastSyncAt?: number;
+  createdAt: number;
+<<<<<<< HEAD
+=======
+  updatedAt: number;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e3b
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-895b
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-b781
 }
@@ -158,6 +235,8 @@ export interface ProviderConnection {
   lastSync?: number;
 }
 
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0a8c
 =======
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-8344
@@ -173,6 +252,16 @@ export interface ProviderConnection {
   lastSync?: number;
   createdAt: number;
   updatedAt: number;
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-8344
 =======
@@ -183,6 +272,10 @@ export interface ProviderConnection {
   config?: Record<string, any>;
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-bd65
+<<<<<<< HEAD
+>>>>>>> 40f0d19ecc0819e0cd100e68e36dd415011c7be9
+=======
+>>>>>>> ad3f5667eee57a9969ff433042f2200dd6375572
   expiresAt?: number;
   status: SyncStatus;
   lastSync?: number;
@@ -194,7 +287,11 @@ export interface ProviderConnection {
   lastSync?: number;
   config?: Record<string, any>;
 >>>>>>> 73aae067a8789e7f94c7cf242d65c42e6717fb43
+<<<<<<< HEAD
+>>>>>>> 40f0d19ecc0819e0cd100e68e36dd415011c7be9
+=======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-e42d
+>>>>>>> ad3f5667eee57a9969ff433042f2200dd6375572
 }
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-1f83
@@ -237,18 +334,37 @@ export type SyncStatus = 'connected' | 'warning' | 'disconnected';
 }
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-ee0f
-=======
-  lastSync?: Date;
-  config: Record<string, unknown>;
-  createdAt: Date;
-  updatedAt: Date;
-}
-
->>>>>>> origin/main
 export interface SyncLogEntry {
   id: string;
-  connectionId: string;
+  timestamp: number;
+  providerId: IntegrationProviderId;
+  level: 'info' | 'warn' | 'error';
   action: string;
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+  details?: Record<string, unknown>;
+}
+=======
+  details?: Record<string, any>;
+}
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0a8c
+=======
+  details?: Record<string, any>;
+}
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8
 =======
   details?: Record<string, any>;
 }
@@ -309,6 +425,22 @@ export interface ManualOverride {
   disableCrmSync?: boolean;
   disableAtsSync?: boolean;
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0a8c
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8
@@ -349,6 +481,37 @@ export interface ZapierEvent {
   id: string;
   type: 'zion.job.posted' | 'zion.talent.matched';
   timestamp: number;
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+  payload: Record<string, unknown>;
+}
+=======
+  payload: Record<string, any>;
+}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-bcb8
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-3d1d
 =======
@@ -359,44 +522,57 @@ export interface ZapierEvent {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-895b
 =======
 export interface IntegrationProviderMeta {
+  id: string;
+  name: string;
+  category: 'crm' | 'ats' | 'hr';
+  description: string;
+}
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-4854
 =======
-  status: 'success' | 'error' | 'warning';
-  message: string;
-  details?: Record<string, unknown>;
-  timestamp: Date;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b781
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6231
+=======
+  payload: Record<string, any>;
 }
 
-export interface IntegrationOverride {
-  id: string;
-  connectionId: string;
-  field: string;
-  value: unknown;
-  reason: string;
-  createdAt: Date;
-  updatedAt: Date;
-}
-
-export interface IntegrationEvent {
->>>>>>> origin/main
-  id: string;
-  type: 'sync' | 'error' | 'warning' | 'connection';
-  connectionId?: string;
-  message: string;
-  details?: Record<string, unknown>;
-  timestamp: Date;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0a8c
+=======
+  payload: Record<string, any>;
+=======
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-9008
+  payload: Record<string, any>;
 }
 
 export interface IntegrationsState {
   connections: ProviderConnection[];
   logs: SyncLogEntry[];
+  overrides: ManualOverride[];
+  events: ZapierEvent[];
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-8344
+}
+=======
+  payload: Record<string, any>;
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-9d58
 
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-e42d
+>>>>>>> ad3f5667eee57a9969ff433042f2200dd6375572
 export interface IntegrationProviderMeta {
   id: IntegrationProviderId;
   name: string;
   category: 'crm' | 'ats';
   description: string;
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+<<<<<<< HEAD
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8
 =======
   payload: Record<string, any>;
 }
@@ -431,13 +607,25 @@ export interface IntegrationProviderMeta {
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-bd65
 >>>>>>> 73aae067a8789e7f94c7cf242d65c42e6717fb43
+<<<<<<< HEAD
+
+>>>>>>> 40f0d19ecc0819e0cd100e68e36dd415011c7be9
+=======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-e42d
+>>>>>>> ad3f5667eee57a9969ff433042f2200dd6375572
 export interface IntegrationsState {
   connections: ProviderConnection[];
   logs: SyncLogEntry[];
   overrides: ManualOverride[];
   events: ZapierEvent[];
   lastError?: string | null;
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-8344
 }
 =======
 }
@@ -462,6 +650,10 @@ export interface IntegrationProviderMeta {
   name: string;
   category: 'crm' | 'ats';
   description: string;
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
 =======
   payload: Record<string, any>;
 }
@@ -486,6 +678,10 @@ export interface ProviderConnection {
   status: SyncStatus;
   lastSync?: number;
   createdAt: number;
+<<<<<<< HEAD
+=======
+  updatedAt: number;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-efe9
 }
 
 export interface IntegrationProviderMeta {
@@ -493,6 +689,9 @@ export interface IntegrationProviderMeta {
   name: string;
   category: 'crm' | 'ats' | 'hr';
   description: string;
+<<<<<<< HEAD
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a0d
 =======
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-d12c
@@ -515,6 +714,10 @@ export interface IntegrationsState {
   overrides: ManualOverride[];
   events: ZapierEvent[];
   lastError?: string | null;
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-efe9
 =======
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-9008
@@ -524,8 +727,3 @@ export interface IntegrationsState {
 =======
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-ee0f
-=======
-  overrides: IntegrationOverride[];
-  events: IntegrationEvent[];
-}
->>>>>>> origin/main

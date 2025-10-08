@@ -1,3 +1,38 @@
+<<<<<<< HEAD
+import { IntegrationProviderMeta } from './types';
+>>>>>>> b0d6dda8406c2e54af3529a18b3e8c5f6ab37739
+>>>>>>> 73aae067a8789e7f94c7cf242d65c42e6717fb43
+>>>>>>> 40f0d19ecc0819e0cd100e68e36dd415011c7be9
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+import type { IntegrationProviderMeta } from './types';
+export const PROVIDERS: IntegrationProviderMeta[] = [
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+import { IntegrationProviderMeta } from './types';
+
+export const PROVIDERS: IntegrationProviderMeta[] = [
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0a8c
+=======
+import { IntegrationProviderMeta } from './types';
+
+export const PROVIDERS: IntegrationProviderMeta[] = [
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-8344
 =======
 import type { IntegrationProviderMeta } from './types';
 
@@ -17,6 +52,7 @@ export const PROVIDERS: IntegrationProviderMeta[] = [
 import { IntegrationProviderMeta } from './types';
 >>>>>>> b0d6dda8406c2e54af3529a18b3e8c5f6ab37739
 >>>>>>> 73aae067a8789e7f94c7cf242d65c42e6717fb43
+>>>>>>> ad3f5667eee57a9969ff433042f2200dd6375572
 import type { IntegrationProviderMeta } from './types';
 export const PROVIDERS: IntegrationProviderMeta[] = [
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-e42d
@@ -32,6 +68,20 @@ export const PROVIDERS: IntegrationProviderMeta[] = [
   { id: 'greenhouse', name: 'Greenhouse', category: 'ats', description: 'ATS & recruiting' },
   { id: 'lever', name: 'Lever', category: 'ats', description: 'ATS & CRM' },
   { id: 'workable', name: 'Workable', category: 'ats', description: 'Recruiting software' },
+<<<<<<< HEAD
+  { id: 'bamboohr', name: 'BambooHR', category: 'ats', description: 'HRIS & ATS' }
+import { IntegrationProviderMeta } from './types';
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+  { id: 'bamboohr', name: 'BambooHR', category: 'ats', description: 'HRIS & ATS' },
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-bcb8
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-4854
 =======
@@ -39,7 +89,10 @@ export const PROVIDERS: IntegrationProviderMeta[] = [
 =======
 import type { IntegrationProviderMeta } from './types';
 
+>>>>>>> ad3f5667eee57a9969ff433042f2200dd6375572
 export const PROVIDERS: IntegrationProviderMeta[] = [
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8
 =======
 import type { IntegrationProviderMeta } from './types';
 
@@ -77,57 +130,74 @@ import { IntegrationProviderMeta } from './types';
 
 export const PROVIDERS: IntegrationProviderMeta[] = [
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-ee0f
-=======
-import type { IntegrationProviderMeta } from './types';
-
-export const PROVIDERS: IntegrationProviderMeta[] = [
->>>>>>> origin/main
   {
     id: 'salesforce',
     name: 'Salesforce',
     category: 'crm',
-    description: 'Enterprise CRM',
+    description: 'Enterprise CRM'
   },
   {
     id: 'hubspot',
     name: 'HubSpot',
     category: 'crm',
-    description: 'Marketing & Sales CRM',
+    description: 'Marketing & Sales CRM'
   },
   {
     id: 'zoho',
     name: 'Zoho CRM',
     category: 'crm',
-    description: 'All-in-one CRM',
+    description: 'All-in-one CRM'
   },
   {
     id: 'pipedrive',
     name: 'PipeDrive',
     category: 'crm',
-    description: 'Sales pipeline CRM',
+    description: 'Sales pipeline CRM'
   },
   {
     id: 'greenhouse',
     name: 'Greenhouse',
     category: 'ats',
-    description: 'ATS & recruiting',
+    description: 'ATS & recruiting'
   },
   {
     id: 'lever',
     name: 'Lever',
     category: 'ats',
-    description: 'ATS & CRM',
+    description: 'ATS & CRM'
   },
   {
     id: 'workable',
     name: 'Workable',
     category: 'ats',
-    description: 'Recruiting software',
+    description: 'Recruiting software'
   },
   {
     id: 'bamboohr',
     name: 'BambooHR',
     category: 'ats',
+    description: 'HRIS & ATS'
+  }
+<<<<<<< HEAD
+>>>>>>> 40f0d19ecc0819e0cd100e68e36dd415011c7be9
+=======
+>>>>>>> ad3f5667eee57a9969ff433042f2200dd6375572
+];
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+  { id: 'bamboohr', name: 'BambooHR', category: 'ats', description: 'HRIS & ATS' }
+];
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0a8c
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8
 =======
   { id: 'bamboohr', name: 'BambooHR', category: 'ats', description: 'HRIS & ATS' }
 ];
@@ -172,14 +242,5 @@ export const PROVIDERS: IntegrationProviderMeta[] = [
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-ee0f
 export function getProviderById(id: string): IntegrationProviderMeta | undefined {
-=======
-    description: 'HRIS & ATS',
-  },
-];
-
-export function getProviderById(
-  id: string
-): IntegrationProviderMeta | undefined {
->>>>>>> origin/main
   return PROVIDERS.find(p => p.id === id);
 }

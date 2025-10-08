@@ -1,3 +1,39 @@
+<<<<<<< HEAD
+import fs from "fs";
+import path from "path";
+import { IntegrationsState } from "./types";
+const DATA_DIR = path.resolve(process.cwd(), "data", "integrations");
+const STATE_FILE = path.join(DATA_DIR, "state.json");
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+import * as fs from 'fs';
+import * as path from 'path';
+=======
+>>>>>>> ad3f5667eee57a9969ff433042f2200dd6375572
+import fs from 'fs';
+import path from 'path';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8
+=======
+import fs from 'fs';
+import path from 'path';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-1f83
 =======
 import fs from 'fs';
 import path from 'path';
@@ -10,14 +46,22 @@ import path from 'path';
 import fs from 'fs';
 import path from 'path';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-9008
-=======
-import * as fs from 'fs';
-import * as path from 'path';
->>>>>>> origin/main
 import type { IntegrationsState } from './types';
 
 const DATA_DIR = path.resolve(process.cwd(), 'data', 'integrations');
 const STATE_FILE = path.join(DATA_DIR, 'state.json');
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-4606
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e3b
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-b781
 =======
@@ -26,10 +70,15 @@ const STATE_FILE = path.join(DATA_DIR, 'state.json');
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-6abd
 import fs from "fs";
 import path from "path";
+>>>>>>> ad3f5667eee57a9969ff433042f2200dd6375572
 import type { IntegrationsState } from "./types";
 
 const DATA_DIR = path.resolve(process.cwd(), "data", "integrations");
 const STATE_FILE = path.join(DATA_DIR, "state.json");
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3d1d
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-b781
 =======
@@ -47,6 +96,11 @@ import { IntegrationsState } from "./types";
 
 const DATA_DIR = path.resolve(process.cwd(), "data", "integrations");
 const STATE_FILE = path.join(DATA_DIR, "state.json");
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0a8c
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8
 =======
@@ -77,19 +131,47 @@ const STATE_FILE = path.join(DATA_DIR, 'state.json');
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-6abd
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-ee0f
-=======
->>>>>>> origin/main
 
+<<<<<<< HEAD
+>>>>>>> 40f0d19ecc0819e0cd100e68e36dd415011c7be9
+=======
+>>>>>>> ad3f5667eee57a9969ff433042f2200dd6375572
 function ensureDataDir(): void {
   if (!fs.existsSync(DATA_DIR)) {
     fs.mkdirSync(DATA_DIR, { recursive: true });
   }
+<<<<<<< HEAD
+  
+>>>>>>> 40f0d19ecc0819e0cd100e68e36dd415011c7be9
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+  
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-4854
+=======
+  
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b781
 =======
   
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8
 =======
   
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-9d58
+>>>>>>> ad3f5667eee57a9969ff433042f2200dd6375572
   if (!fs.existsSync(STATE_FILE)) {
 =======
 =======
@@ -98,22 +180,67 @@ function ensureDataDir(): void {
 
 export function readState(): IntegrationsState {
   ensureDataDir();
+<<<<<<< HEAD
+  try {
+    const raw = fs.readFileSync(STATE_FILE, "utf8");
+    return JSON.parse(raw) as IntegrationsState;
+  } catch (error) {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-d12c
 =======
   
-=======
-
->>>>>>> origin/main
   if (!fs.existsSync(STATE_FILE)) {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-efe9
+=======
+  
+  if (!fs.existsSync(STATE_FILE)) {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6abd
+=======
+  
+  if (!fs.existsSync(STATE_FILE)) {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-ee0f
     const initial: IntegrationsState = {
       connections: [],
       logs: [],
       overrides: [],
-      events: [],
+      events: []
     };
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+    fs.writeFileSync(STATE_FILE, JSON.stringify(initial, null, 2), 'utf8');
+  }
+<<<<<<< HEAD
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd65
+>>>>>>> 40f0d19ecc0819e0cd100e68e36dd415011c7be9
+}
+export function readState(): IntegrationsState {
+  ensureDataDir();
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd65
+  try {
+    const raw = fs.readFileSync(STATE_FILE, "utf8");
+  try {
+    const raw = fs.readFileSync(STATE_FILE, 'utf8');
+=======
+}
+export function readState(): IntegrationsState {
+  ensureDataDir();
+<<<<<<< HEAD
+=======
+  
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-4854
   try {
     const raw = fs.readFileSync(STATE_FILE, 'utf8');
     return JSON.parse(raw) as IntegrationsState;
   } catch {
+=======
+    fs.writeFileSync(STATE_FILE, JSON.stringify(initial, null, 2), "utf8");
+  }
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0a8c
 }
 =======
     fs.writeFileSync(STATE_FILE, JSON.stringify(initial, null, 2), 'utf8');
@@ -158,8 +285,28 @@ export function readState(): IntegrationsState {
 
 export function readState(): IntegrationsState {
   ensureDataDir();
+>>>>>>> ad3f5667eee57a9969ff433042f2200dd6375572
   
   try {
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+    const raw = fs.readFileSync(STATE_FILE, "utf8");
+<<<<<<< HEAD
+>>>>>>> 40f0d19ecc0819e0cd100e68e36dd415011c7be9
+=======
+>>>>>>> ad3f5667eee57a9969ff433042f2200dd6375572
+    return JSON.parse(raw) as IntegrationsState;
+  } catch (error) {
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b781
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0a8c
 =======
@@ -220,14 +367,32 @@ export function readState(): IntegrationsState {
   } catch (error) {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-ee0f
     return {
-=======
-    const initial: IntegrationsState = {
->>>>>>> origin/main
       connections: [],
       logs: [],
       overrides: [],
-      events: [],
+      events: []
     };
+  }
+}
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b781
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0a8c
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8
@@ -251,29 +416,66 @@ export function readState(): IntegrationsState {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a0d
 =======
     fs.writeFileSync(STATE_FILE, JSON.stringify(initial, null, 2), "utf8");
-=======
-    fs.writeFileSync(STATE_FILE, JSON.stringify(initial, null, 2), 'utf8');
->>>>>>> origin/main
     return initial;
   }
 }
 
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-d12c
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-efe9
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-9008
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6abd
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-ee0f
 export function writeState(
   mutator: (state: IntegrationsState) => void
 ): IntegrationsState {
   ensureDataDir();
   const current = readState();
   mutator(current);
+<<<<<<< HEAD
+  fs.writeFileSync(STATE_FILE, JSON.stringify(current, null, 2), "utf8");
+  fs.writeFileSync(STATE_FILE, JSON.stringify(current, null, 2), 'utf8');
+>>>>>>> 40f0d19ecc0819e0cd100e68e36dd415011c7be9
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+  fs.writeFileSync(STATE_FILE, JSON.stringify(current, null, 2), 'utf8');
+>>>>>>> ad3f5667eee57a9969ff433042f2200dd6375572
+  return current;
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+<<<<<<< HEAD
+=======
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3d1d
+=======
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-4606
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e3b
 =======
 import fs from 'fs';
 import path from 'path';
-=======
-  fs.writeFileSync(STATE_FILE, JSON.stringify(current, null, 2), 'utf8');
-  return current;
-}
->>>>>>> origin/main
 
 export interface FileStoreOptions {
   basePath: string;
@@ -297,10 +499,10 @@ export class FileStore {
   async writeFile(filePath: string, content: string): Promise<void> {
     const fullPath = path.join(this.basePath, filePath);
     const dir = path.dirname(fullPath);
-
+    
     // Ensure directory exists
     await fs.promises.mkdir(dir, { recursive: true });
-
+    
     return fs.promises.writeFile(fullPath, content, this.encoding);
   }
 
@@ -338,5 +540,75 @@ export class FileStore {
   }
 }
 
-export const createFileStore = (options: FileStoreOptions) =>
-  new FileStore(options);
+export const createFileStore = (options: FileStoreOptions) => new FileStore(options);
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-895b
+=======
+  fs.writeFileSync(STATE_FILE, JSON.stringify(current, null, 2), "utf8");
+  return current;
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b781
+=======
+  fs.writeFileSync(STATE_FILE, JSON.stringify(current, null, 2), "utf8");
+  return current;
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0a8c
+=======
+  fs.writeFileSync(STATE_FILE, JSON.stringify(current, null, 2), 'utf8');
+  return current;
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8
+=======
+  fs.writeFileSync(STATE_FILE, JSON.stringify(current, null, 2), "utf8");
+  return current;
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-8344
+=======
+  fs.writeFileSync(STATE_FILE, JSON.stringify(current, null, 2), "utf8");
+  return current;
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3fed
+=======
+  fs.writeFileSync(STATE_FILE, JSON.stringify(current, null, 2), 'utf8');
+  return current;
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-1f83
+=======
+  fs.writeFileSync(STATE_FILE, JSON.stringify(current, null, 2), 'utf8');
+  return current;
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-9d58
+=======
+  fs.writeFileSync(STATE_FILE, JSON.stringify(current, null, 2), "utf8");
+  return current;
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
+=======
+  fs.writeFileSync(STATE_FILE, JSON.stringify(current, null, 2), 'utf8');
+  return current;
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a0d
+=======
+  fs.writeFileSync(STATE_FILE, JSON.stringify(current, null, 2), "utf8");
+  return current;
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-d12c
+=======
+  fs.writeFileSync(STATE_FILE, JSON.stringify(current, null, 2), 'utf8');
+  return current;
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-efe9
+=======
+  fs.writeFileSync(STATE_FILE, JSON.stringify(current, null, 2), 'utf8');
+  return current;
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-9008
+=======
+  fs.writeFileSync(STATE_FILE, JSON.stringify(current, null, 2), "utf8");
+  return current;
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6abd
+=======
+  fs.writeFileSync(STATE_FILE, JSON.stringify(current, null, 2), "utf8");
+  return current;
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-ee0f
