@@ -126,7 +126,10 @@ class PerformanceOptimizer {
     const fidObserver = new PerformanceObserver((list) => {
       const entries = list.getEntries();
       entries.forEach((entry) => {
-        console.log('FID:', entry.processingStart - entry.startTime);
+        const eventEntry = entry as PerformanceEventTiming;
+        if (eventEntry.processingStart) {
+          console.log('FID:', eventEntry.processingStart - entry.startTime);
+        }
       });
     });
     fidObserver.observe({ entryTypes: ['first-input'] });
@@ -247,6 +250,65 @@ Performance Report:
 - Bundle Size: ${metrics.bundleSize}KB
 - Cache Hit Rate: ${(metrics.cacheHitRate * 100).toFixed(2)}%
     `.trim();
+  }
+
+  public optimize(): void {
+    // Comprehensive optimization method
+    this.optimizeImages();
+    this.enableCaching();
+    this.enableCompression();
+  }
+
+  public startMark(markName: string): void {
+    if (typeof window !== 'undefined' && window.performance && window.performance.mark) {
+      try {
+        window.performance.mark(`${markName}-start`);
+      } catch (error) {
+        console.warn('Failed to create performance mark:', error);
+      }
+    }
+  }
+
+  public endMark(markName: string): number | null {
+    if (typeof window !== 'undefined' && window.performance && window.performance.mark && window.performance.measure) {
+      try {
+        window.performance.mark(`${markName}-end`);
+        const measureName = `${markName}-duration`;
+        window.performance.measure(measureName, `${markName}-start`, `${markName}-end`);
+        
+        const measures = window.performance.getEntriesByName(measureName);
+        if (measures.length > 0) {
+          return measures[0].duration;
+        }
+      } catch (error) {
+        console.warn('Failed to measure performance:', error);
+      }
+    }
+    return null;
+  }
+
+  public getPerformanceScore(): number {
+    const metrics = this.getMetrics();
+    let score = 100;
+
+    // Deduct points for slow load times
+    if (metrics.loadTime > 3000) score -= 20;
+    else if (metrics.loadTime > 2000) score -= 10;
+    else if (metrics.loadTime > 1000) score -= 5;
+
+    // Deduct points for high memory usage
+    if (metrics.memoryUsage > 0.8) score -= 20;
+    else if (metrics.memoryUsage > 0.6) score -= 10;
+
+    // Deduct points for low cache hit rate
+    if (metrics.cacheHitRate < 0.5) score -= 15;
+    else if (metrics.cacheHitRate < 0.7) score -= 10;
+
+    // Deduct points for large bundle size
+    if (metrics.bundleSize > 1000) score -= 15;
+    else if (metrics.bundleSize > 500) score -= 10;
+
+    return Math.max(0, Math.min(100, score));
   }
 
   public cleanup(): void {
