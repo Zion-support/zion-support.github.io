@@ -250,36 +250,6 @@ class Logger {
   }
 
   /**
-   * Log a performance metric
-   */
-  perf(metric: string, value: number, metadata?: Record<string, unknown>): void {
-    this.info(`Performance: ${metric} = ${value}ms`, metadata);
-  }
-
-  /**
-   * Start a console group
-   */
-  group(label: string, fn: () => void): void {
-    if (this.config.enableConsole && typeof console.group === 'function') {
-      console.group(label);
-    }
-    try {
-      fn();
-    } finally {
-      this.groupEnd();
-    }
-  }
-
-  /**
-   * End a console group
-   */
-  groupEnd(): void {
-    if (this.config.enableConsole && typeof console.groupEnd === 'function') {
-      console.groupEnd();
-    }
-  }
-
-  /**
    * Core logging method
    */
   private log(
@@ -372,33 +342,6 @@ class Logger {
     this.flushTimer = setInterval(() => {
       this.flush();
     }, this.config.flushInterval);
-  }
-
-  /**
-   * Log a performance metric
-   */
-  perf(metric: string, value: number, metadata?: Record<string, unknown>): void {
-    this.log(LogLevel.DEBUG, `Performance: ${metric}`, 'Performance', {
-      ...metadata,
-      metric,
-      value,
-    });
-  }
-
-  /**
-   * Group related log messages
-   */
-  group(label: string, fn: () => void): void {
-    if (this.config.enableConsole) {
-      console.group(label);
-      try {
-        fn();
-      } finally {
-        console.groupEnd();
-      }
-    } else {
-      fn();
-    }
   }
 
   /**
