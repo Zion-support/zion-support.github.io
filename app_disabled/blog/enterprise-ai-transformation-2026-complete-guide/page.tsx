@@ -1,4 +1,5 @@
 import Link from 'next/link';
+<<<<<<< HEAD
 
 export const metadata = {
   title: "Enterprise AI Transformation 2026: Complete Guide",
@@ -17,6 +18,11 @@ export const metadata = {
 
 export default function EnterpriseAITransformation2026CompleteGuidePage() {
   return (
+=======
+export default function EnterpriseAITransformation2026CompleteGuide() {
+  return (
+    <div> content */}
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbf5
     <div>
       <h1>Enterprise AI Transformation 2026: Complete Guide</h1>
       <p>The definitive roadmap for enterprise AI transformation, featuring proven strategies, implementation frameworks, and real-world case studies from Fortune 500 companies.</p>

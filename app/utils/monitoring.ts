@@ -74,7 +74,7 @@ class MonitoringService {
         // Cumulative Layout Shift
         let clsValue = 0;
         const clsObserver = new PerformanceObserver((list) => {
-          for (const entry of list.getEntries() as any[]) {
+          for (const entry of list.getEntries() as { hadRecentInput: boolean; value: number }[]) {
             if (!entry.hadRecentInput) {
               clsValue += entry.value;
               this.metrics.cls = clsValue;
@@ -112,7 +112,11 @@ class MonitoringService {
           }
         });
         longTaskObserver.observe({ entryTypes: ['longtask'] });
+<<<<<<< HEAD
       } catch (error) {
+=======
+      } catch {
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbf5
         // Long task API might not be available
       }
     }
@@ -181,8 +185,8 @@ class MonitoringService {
     }
 
     // Send to analytics (if configured)
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('event', name, {
+    if (typeof window !== 'undefined' && (window as { gtag?: (command: string, action: string, params: Record<string, unknown>) => void }).gtag) {
+      (window as { gtag: (command: string, action: string, params: Record<string, unknown>) => void }).gtag('event', name, {
         value: Math.round(name === 'cls' ? value * 1000 : value),
         event_category: 'Web Vitals',
         non_interaction: true,
@@ -201,8 +205,8 @@ class MonitoringService {
     console.error('[Error]', error);
 
     // Send to error tracking service (if configured)
-    if (typeof window !== 'undefined' && (window as any).Sentry) {
-      (window as any).Sentry.captureException(new Error(error.message));
+    if (typeof window !== 'undefined' && (window as { Sentry?: { captureException: (error: Error) => void } }).Sentry) {
+      (window as { Sentry: { captureException: (error: Error) => void } }).Sentry.captureException(new Error(error.message));
     }
   }
 
@@ -220,8 +224,14 @@ class MonitoringService {
 
   public measureMemory(): void {
     if ('memory' in performance && performanceConfig.monitoring.enableMemoryMonitoring) {
+<<<<<<< HEAD
       const memory = (performance as any).memory;
       console.log('[Memory]', {
+=======
+      const memory = (performance as { memory: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
+ 
+    console.log('[Memory]', {
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbf5
         used: `${Math.round(memory.usedJSHeapSize / 1048576)}MB`,
         total: `${Math.round(memory.totalJSHeapSize / 1048576)}MB`,
         limit: `${Math.round(memory.jsHeapSizeLimit / 1048576)}MB`,

@@ -98,8 +98,13 @@ class HealthCheckService {
           name,
           duration,
         });
+<<<<<<< HEAD
       } catch (error) {
         logger.error(`Health check "${name}" failed`, error as Error);
+=======
+      } catch {
+logger._error(`Health check "${name}" failed`, _error as Error);
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbf5
         checks.push({
           name,
           status: 'fail',
@@ -162,7 +167,7 @@ class HealthCheckService {
     }
 
     try {
-      const memory = (performance as any).memory;
+      const memory = (performance as { memory: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
       const usedPercent = (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100;
 
       let status: 'pass' | 'warn' | 'fail' = 'pass';
@@ -187,7 +192,11 @@ class HealthCheckService {
           usedPercent,
         },
       };
+<<<<<<< HEAD
     } catch (error) {
+=======
+    } catch {
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbf5
       return {
         name: 'memory',
         status: 'warn',
@@ -225,7 +234,11 @@ class HealthCheckService {
           summary: report.summary,
         },
       };
+<<<<<<< HEAD
     } catch (error) {
+=======
+    } catch {
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbf5
       return {
         name: 'performance',
         status: 'warn',
@@ -296,7 +309,11 @@ class HealthCheckService {
       try {
         localStorage.setItem('_size_test', testData);
         localStorage.removeItem('_size_test');
+<<<<<<< HEAD
       } catch (error) {
+=======
+      } catch {
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbf5
         return {
           name: 'storage',
           status: 'warn',
@@ -309,7 +326,11 @@ class HealthCheckService {
         status: 'pass',
         message: 'Storage working correctly',
       };
+<<<<<<< HEAD
     } catch (error) {
+=======
+    } catch {
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbf5
       return {
         name: 'storage',
         status: 'fail',
