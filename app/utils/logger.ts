@@ -240,6 +240,23 @@ class Logger {
       if (process.env.NODE_ENV === 'development') { if (import.meta.env.DEV) { console.log(`%c${message}`, style); } }
     }
   }
+
+  /**
+   * Log lifecycle events
+   */
+  lifecycle(event: string, context?: string | LogContext): void {
+    const logContext = typeof context === 'string' 
+      ? { component: context } 
+      : context;
+    this.info(`Lifecycle: ${event}`, logContext);
+  }
+
+  /**
+   * Log performance metrics
+   */
+  performance(message: string, context?: LogContext): void {
+    this.debug(message, { ...context, type: 'performance' });
+  }
 }
 
 // Create and export singleton instance
