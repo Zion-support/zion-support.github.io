@@ -1,4 +1,4 @@
-import React, { useEffect, useCallback } from 'react';
+import React, { useEffect, useCallback, useRef } from 'react';
 import { Helmet } from 'react-helmet-async';
 
 interface SEOData {
@@ -6,8 +6,28 @@ interface SEOData {
   description: string;
   keywords: string[];
   canonicalUrl: string;
-  ogImage: string;
+  ogTitle?: string;
+  ogDescription?: string;
+  ogImage?: string;
+  ogType?: string;
+  twitterCard?: string;
+  twitterTitle?: string;
+  twitterDescription?: string;
+  twitterImage?: string;
   structuredData?: Record<string, unknown>;
+  robots?: string;
+  author?: string;
+  publishedTime?: string;
+  modifiedTime?: string;
+  section?: string;
+  tags?: string[];
+}
+
+interface SEOConfig {
+  title: string;
+  description: string;
+  url: string;
+  canonicalUrl: string;
 }
 
 interface AdvancedSEOOptimizerProps {
@@ -25,6 +45,8 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
   enableTwitterCards = true,
   enableSchemaMarkup = true,
 }) => {
+  const structuredDataRef = useRef<HTMLScriptElement | null>(null);
+
   const generateStructuredData = useCallback(() => {
     if (!enableStructuredData || !seoData.structuredData) return null;
 
@@ -83,70 +105,75 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     };
   }, [seoData, enableSchemaMarkup]);
 
-  const generateFAQStructuredData = useCallback(() => {
-    if (!enableSchemaMarkup) return null;
+  const addCanonicalLink = useCallback(() => {
+    // Remove existing canonical link
+    const existingCanonical = document.querySelector('link[rel="canonical"]');
+    if (existingCanonical) {
+      existingCanonical.remove();
+    }
 
-    const faqData = {
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
-      mainEntity: [
-        {
-          '@type': 'Question',
-          name: 'What services does Zion Tech Group offer?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Zion Tech Group offers comprehensive AI-powered enterprise solutions, digital transformation services, automation, cloud services, AI consulting, business intelligence, and machine learning solutions.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'How can I contact Zion Tech Group?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'You can contact us at kleber@ziontechgroup.com or call +1 302 464 0950. Our office is located at 364 E Main St STE 1008, Middletown DE 19709.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'What makes Zion Tech Group different?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'We specialize in cutting-edge AI micro SaaS services, cloud automation, and provide comprehensive digital transformation solutions with a focus on enterprise-grade security and performance.',
-          },
-        },
-      ],
-    };
+    // Add new canonical link
+    const canonicalLink = document.createElement('link');
+    canonicalLink.rel = 'canonical';
+    canonicalLink.href = seoData.canonicalUrl;
+    document.head.appendChild(canonicalLink);
+  }, [seoData.canonicalUrl]);
 
-    return faqData;
-  }, [enableSchemaMarkup]);
+  const addStructuredData = (data: Record<string, unknown>) => {
+    // Remove existing structured data
+    if (structuredDataRef.current) {
+      structuredDataRef.current.remove();
+    }
 
-  const structuredData = generateStructuredData();
-  const breadcrumbData = generateBreadcrumbStructuredData();
-  const faqData = generateFAQStructuredData();
+    // Add new structured data
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.textContent = JSON.stringify(data);
+    script.id = 'structured-data';
+    document.head.appendChild(script);
+    structuredDataRef.current = script;
+  };
+
+  const trackPageView = (config: SEOConfig) => {
+    if (typeof window !== 'undefined' && 'gtag' in window) {
+      (window as unknown as { gtag: (command: string, targetId: string, config: Record<string, unknown>) => void }).gtag('config', 'GA_MEASUREMENT_ID', {
+        page_title: config.title,
+        page_location: config.canonicalUrl,
+      });
+    }
+  };
 
   useEffect(() => {
-    // Update page title and meta description for better SEO
-    if (typeof document !== 'undefined') {
-      document.title = seoData.title;
-      
-      let metaDescription = document.querySelector('meta[name="description"]');
-      if (!metaDescription) {
-        metaDescription = document.createElement('meta');
-        metaDescription.setAttribute('name', 'description');
-        document.head.appendChild(metaDescription);
-      }
-      metaDescription.setAttribute('content', seoData.description);
+    // Add canonical link
+    addCanonicalLink();
 
-      // Update canonical URL
-      let canonicalLink = document.querySelector('link[rel="canonical"]');
-      if (!canonicalLink) {
-        canonicalLink = document.createElement('link');
-        canonicalLink.setAttribute('rel', 'canonical');
-        document.head.appendChild(canonicalLink);
-      }
-      canonicalLink.setAttribute('href', seoData.canonicalUrl);
+    // Add structured data
+    const structuredData = generateStructuredData();
+    if (structuredData) {
+      addStructuredData(structuredData);
     }
-  }, [seoData]);
+
+    // Add breadcrumb structured data
+    const breadcrumbData = generateBreadcrumbStructuredData();
+    if (breadcrumbData) {
+      addStructuredData(breadcrumbData);
+    }
+
+    // Track page view
+    trackPageView({
+      title: seoData.title,
+      description: seoData.description,
+      url: seoData.canonicalUrl,
+      canonicalUrl: seoData.canonicalUrl,
+    });
+
+    // Cleanup on unmount
+    return () => {
+      if (structuredDataRef.current) {
+        structuredDataRef.current.remove();
+      }
+    };
+  }, [seoData, addCanonicalLink, generateStructuredData, generateBreadcrumbStructuredData]);
 
   return (
     <Helmet>
@@ -159,72 +186,38 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
       {/* Open Graph Tags */}
       {enableOpenGraph && (
         <>
-          <meta property="og:title" content={seoData.title} />
-          <meta property="og:description" content={seoData.description} />
+          <meta property="og:title" content={seoData.ogTitle || seoData.title} />
+          <meta property="og:description" content={seoData.ogDescription || seoData.description} />
+          <meta property="og:image" content={seoData.ogImage || 'https://ziontechgroup.com/og-image.jpg'} />
           <meta property="og:url" content={seoData.canonicalUrl} />
-          <meta property="og:type" content="website" />
-          <meta property="og:image" content={seoData.ogImage} />
-          <meta property="og:image:width" content="1200" />
-          <meta property="og:image:height" content="630" />
+          <meta property="og:type" content={seoData.ogType || 'website'} />
           <meta property="og:site_name" content="Zion Tech Group" />
-          <meta property="og:locale" content="en_US" />
         </>
       )}
 
       {/* Twitter Card Tags */}
       {enableTwitterCards && (
         <>
-          <meta name="twitter:card" content="summary_large_image" />
-          <meta name="twitter:title" content={seoData.title} />
-          <meta name="twitter:description" content={seoData.description} />
-          <meta name="twitter:image" content={seoData.ogImage} />
-          <meta name="twitter:site" content="@ziontechgroup" />
-          <meta name="twitter:creator" content="@ziontechgroup" />
+          <meta name="twitter:card" content={seoData.twitterCard || 'summary_large_image'} />
+          <meta name="twitter:title" content={seoData.twitterTitle || seoData.title} />
+          <meta name="twitter:description" content={seoData.twitterDescription || seoData.description} />
+          <meta name="twitter:image" content={seoData.twitterImage || 'https://ziontechgroup.com/twitter-image.jpg'} />
         </>
       )}
 
-      {/* Additional SEO Meta Tags */}
-      <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
-      <meta name="googlebot" content="index, follow" />
-      <meta name="bingbot" content="index, follow" />
-      <meta name="author" content="Zion Tech Group" />
-      <meta name="publisher" content="Zion Tech Group" />
-      <meta name="copyright" content="Zion Tech Group" />
-      <meta name="language" content="en" />
-      <meta name="revisit-after" content="7 days" />
-      <meta name="distribution" content="global" />
-      <meta name="rating" content="general" />
-      <meta name="theme-color" content="#4F46E5" />
+      {/* Additional Meta Tags */}
+      {seoData.robots && <meta name="robots" content={seoData.robots} />}
+      {seoData.author && <meta name="author" content={seoData.author} />}
+      {seoData.publishedTime && <meta property="article:published_time" content={seoData.publishedTime} />}
+      {seoData.modifiedTime && <meta property="article:modified_time" content={seoData.modifiedTime} />}
+      {seoData.section && <meta property="article:section" content={seoData.section} />}
+      {seoData.tags && seoData.tags.map((tag, index) => (
+        <meta key={index} property="article:tag" content={tag} />
+      ))}
 
-      {/* Structured Data */}
-      {enableSchemaMarkup && structuredData && (
-        <script type="application/ld+json">
-          {JSON.stringify(structuredData)}
-        </script>
-      )}
-
-      {enableSchemaMarkup && breadcrumbData && (
-        <script type="application/ld+json">
-          {JSON.stringify(breadcrumbData)}
-        </script>
-      )}
-
-      {enableSchemaMarkup && faqData && (
-        <script type="application/ld+json">
-          {JSON.stringify(faqData)}
-        </script>
-      )}
-
-      {/* Preconnect to external domains for performance */}
+      {/* Preconnect to external domains */}
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-      <link rel="preconnect" href="https://www.google-analytics.com" />
-      <link rel="preconnect" href="https://www.googletagmanager.com" />
-
-      {/* DNS Prefetch for better performance */}
-      <link rel="dns-prefetch" href="//fonts.googleapis.com" />
-      <link rel="dns-prefetch" href="//www.google-analytics.com" />
-      <link rel="dns-prefetch" href="//www.googletagmanager.com" />
     </Helmet>
   );
 };

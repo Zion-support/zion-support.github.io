@@ -33,40 +33,49 @@ Object.defineProperty(window, 'matchMedia', {
 });
 
 // Mock IntersectionObserver
-global.IntersectionObserver = class MockIntersectionObserver {
-  root: Element | Document | null = null;
-  rootMargin: string = '';
-  thresholds: ReadonlyArray<number> = [];
-
-  constructor(
-    public callback: IntersectionObserverCallback,
-    options?: IntersectionObserverInit
-  ) {
-    if (options) {
-      this.root = options.root || null;
-      this.rootMargin = options.rootMargin || '0px';
-      this.thresholds = options.threshold
-        ? Array.isArray(options.threshold)
-          ? options.threshold
-          : [options.threshold]
-        : [0];
-    }
+global.IntersectionObserver = class IntersectionObserver {
+  root: Element | null = null;
+  rootMargin: string = '0px';
+  thresholds: ReadonlyArray<number> = [0];
+  
+  constructor() {}
+  observe() {
+    return null;
   }
-
-  observe() {}
-  unobserve() {}
-  disconnect() {}
+  disconnect() {
+    return null;
+  }
+  unobserve() {
+    return null;
+  }
   takeRecords() {
     return [];
   }
-};
+} as any;
 
 // Mock ResizeObserver
-global.ResizeObserver = class MockResizeObserver {
-  constructor(public callback: ResizeObserverCallback) {}
+global.ResizeObserver = class ResizeObserver {
+  constructor() {}
   observe() {}
   unobserve() {}
   disconnect() {}
+};
+
+// Mock window.location
+delete (window as unknown as Record<string, unknown>).location;
+(window as unknown as Record<string, unknown>).location = {
+  href: 'http://localhost:3000',
+  origin: 'http://localhost:3000',
+  protocol: 'http:',
+  host: 'localhost:3000',
+  hostname: 'localhost',
+  port: '3000',
+  pathname: '/',
+  search: '',
+  hash: '',
+  reload: jest.fn(),
+  assign: jest.fn(),
+  replace: jest.fn(),
 };
 
 // Mock performance API
@@ -74,13 +83,18 @@ Object.defineProperty(window, 'performance', {
   writable: true,
   value: {
     now: jest.fn(() => Date.now()),
-    getEntriesByType: jest.fn(() => []),
     mark: jest.fn(),
     measure: jest.fn(),
+    getEntriesByType: jest.fn(() => []),
+    getEntriesByName: jest.fn(() => []),
     clearMarks: jest.fn(),
     clearMeasures: jest.fn(),
   },
 });
+
+// Mock requestAnimationFrame
+global.requestAnimationFrame = jest.fn(cb => setTimeout(cb, 0));
+global.cancelAnimationFrame = jest.fn(id => clearTimeout(id));
 
 // Mock localStorage
 const localStorageMock = {
@@ -104,6 +118,7 @@ Object.defineProperty(window, 'sessionStorage', {
   value: sessionStorageMock,
 });
 
+<<<<<<< HEAD
 // Mock TextEncoder and TextDecoder for Node.js environment
 if (typeof TextEncoder === 'undefined') {
   // eslint-disable-next-line @typescript-eslint/no-require-imports
@@ -111,35 +126,27 @@ if (typeof TextEncoder === 'undefined') {
   // eslint-disable-next-line @typescript-eslint/no-require-imports
   global.TextDecoder = require('util').TextDecoder;
 }
+=======
+// Mock fetch
+global.fetch = jest.fn();
+>>>>>>> origin/main
 
-// Mock URL for Node.js environment
-global.URL = URL;
+// Mock console methods for cleaner test output
+const originalConsoleWarn = console.warn;
+const originalConsoleInfo = console.info;
 
-// Mock PerformanceObserver
-global.PerformanceObserver = class MockPerformanceObserver {
-  static readonly supportedEntryTypes: readonly string[] = ['navigation', 'paint', 'largest-contentful-paint', 'first-input', 'layout-shift'];
-  
-  constructor(public callback: PerformanceObserverCallback) {}
-  observe() {}
-  disconnect() {}
-  takeRecords() {
-    return [];
+console.warn = (...args) => {
+  const message = args[0]?.toString?.() || '';
+  if (message.includes('Warning: ReactDOM.render is no longer supported')) {
+    return;
   }
+  originalConsoleWarn(...args);
 };
 
-// Mock window.location
-delete (window as unknown as Record<string, unknown>).location;
-(window as unknown as Record<string, unknown>).location = {
-  href: 'http://localhost:3000',
-  origin: 'http://localhost:3000',
-  protocol: 'http:',
-  host: 'localhost:3000',
-  hostname: 'localhost',
-  port: '3000',
-  pathname: '/',
-  search: '',
-  hash: '',
-  reload: jest.fn(),
-  assign: jest.fn(),
-  replace: jest.fn(),
+console.info = (...args) => {
+  const message = args[0]?.toString?.() || '';
+  if (message.includes('ReactDOM.render is no longer supported')) {
+    return;
+  }
+  originalConsoleInfo(...args);
 };
