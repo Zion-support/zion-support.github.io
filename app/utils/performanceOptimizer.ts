@@ -485,6 +485,27 @@ class PerformanceOptimizer {
   }
 
   /**
+   * Report web vitals
+   */
+  reportWebVitals(metrics: PerformanceMetrics): void {
+    logger.performance('Web Vitals reported', metrics as unknown as Record<string, unknown>, 'PerformanceOptimizer');
+    
+    // Send to analytics if available
+    if (typeof window !== 'undefined' && (window as { gtag?: Function }).gtag) {
+      Object.entries(metrics).forEach(([key, value]) => {
+        if (typeof value === 'number') {
+          (window as unknown as { gtag: Function }).gtag('event', 'web_vitals', {
+            metric_name: key,
+            metric_value: value,
+            metric_rating: value < 100 ? 'good' : value < 300 ? 'needs-improvement' : 'poor'
+          });
+        }
+      });
+    }
+  }
+
+  /**
+   * Cleanup observers and resources
    * Get performance recommendations
    */
   private getRecommendations(): string[] {
@@ -512,26 +533,6 @@ class PerformanceOptimizer {
     }
 
     return recommendations;
-  }
-
-  /**
-   * Report web vitals
-   */
-  reportWebVitals(metrics: PerformanceMetrics): void {
-    logger.performance('Web Vitals reported', metrics as unknown as Record<string, unknown>, 'PerformanceOptimizer');
-    
-    // Send to analytics if available
-    if (typeof window !== 'undefined' && (window as { gtag?: Function }).gtag) {
-      Object.entries(metrics).forEach(([key, value]) => {
-        if (typeof value === 'number') {
-          (window as unknown as { gtag: Function }).gtag('event', 'web_vitals', {
-            metric_name: key,
-            metric_value: value,
-            metric_rating: value < 100 ? 'good' : value < 300 ? 'needs-improvement' : 'poor'
-          });
-        }
-      });
-    }
   }
 
   /**

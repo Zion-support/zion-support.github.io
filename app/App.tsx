@@ -1,10 +1,12 @@
 'use client';
 
-import React, { Suspense, lazy, useEffect, useCallback } from 'react';
+import React, { Suspense, lazy, useCallback, useEffect } from 'react';
+import Link from 'next/link';
 import { HelmetProvider } from 'react-helmet-async';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 // Components
+import SEOOptimizer from './components/SEOOptimizer';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import AdvancedErrorBoundary from './components/AdvancedErrorBoundary';
 import AdvancedSEOOptimizer from './components/AdvancedSEOOptimizer';
@@ -15,13 +17,26 @@ import ContentShowcase from './components/ContentShowcase';
 import InteractiveContentShowcase2026 from './components/InteractiveContentShowcase2026';
 import InteractiveAIROICalculator from './components/InteractiveAIROICalculator';
 
+// Loading component
+const LoadingSpinner = () => (
+  <div className="min-h-screen flex items-center justify-center bg-gray-50">
+    <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
+  </div>
+);
+
+// Error boundary component
+const ErrorBoundary = ({ children }: { children: React.ReactNode }) => {
+  return <>{children}</>;
+};
 
 // Utils
 import { lazyLoadImages, preloadCriticalResources, collectPerformanceMetrics, performanceOptimizer } from './utils/performanceOptimizer';
 import { logger } from './utils/logger';
 
+// Lazy load pages for better performance
+
 // Styles
-import './globals.css';
+import '../index.css';
 
 const App: React.FC = () => {
   useEffect(() => {
@@ -29,7 +44,7 @@ const App: React.FC = () => {
     console.log('App initialized');
 
     // Initialize performance monitoring
-    performanceOptimizer.init();
+    performanceOptimizer.initialize();
     
     // Initialize Web Vitals monitoring
     if (typeof window !== 'undefined' && 'performance' in window) {
