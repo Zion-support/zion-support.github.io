@@ -35,7 +35,7 @@ describe('Email Validation', () => {
   });
 
   test('rejects email addresses that are too long', () => {
-    const _longEmail = 'a'.repeat(255) + '@example.com';
+    const longEmail = 'a'.repeat(255) + '@example.com';
     expect(validateEmail(longEmail).isValid).toBe(false);
   });
 });
@@ -91,7 +91,7 @@ describe('String Length Validation', () => {
   });
 
   test('provides custom field names in error messages', () => {
-    const _result = validateLength('hi', 3, 10, 'Username');
+    const result = validateLength('hi', 3, 10, 'Username');
     expect(result.error).toContain('Username');
   });
 });
@@ -146,7 +146,7 @@ describe('Password Validation', () => {
   });
 
   test('rejects passwords that are too long', () => {
-    const _longPassword = 'A'.repeat(129) + 'a1!';
+    const longPassword = 'A'.repeat(129) + 'a1!';
     expect(validatePassword(longPassword).isValid).toBe(false);
   });
 });
@@ -176,8 +176,8 @@ describe('Input Sanitization', () => {
   });
 
   test('enforces maximum length', () => {
-    const _longInput = 'a'.repeat(2000);
-    const _result = sanitizeInput(longInput, 100);
+    const longInput = 'a'.repeat(2000);
+    const result = sanitizeInput(longInput, 100);
     expect(result?.length).toBe(100);
   });
 
@@ -251,7 +251,7 @@ describe('Composite Validation', () => {
       (val: unknown) => validateLength(val as string, 10, 20, 'Test'),
     ];
 
-    const _result = validateComposite('short', validators);
+    const result = validateComposite('short', validators);
     expect(result.isValid).toBe(false);
     expect(result.error).toContain('at least 10');
   });
@@ -265,7 +265,7 @@ describe('Async Validation', () => {
       });
     };
 
-    const _result = await validateAsync(asyncValidator, 'test');
+    const result = await validateAsync(asyncValidator, 'test');
     expect(result.isValid).toBe(true);
   });
 
@@ -274,7 +274,7 @@ describe('Async Validation', () => {
       throw new Error('Validation failed');
     };
 
-    const _result = await validateAsync(asyncValidator, 'test');
+    const result = await validateAsync(asyncValidator, 'test');
     expect(result.isValid).toBe(false);
     expect(result.error).toContain('Validation failed');
   });
