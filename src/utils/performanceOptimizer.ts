@@ -238,6 +238,14 @@ class PerformanceOptimizer {
 
   private constructor() {}
 
+  public init(): void {
+    // Initialize performance optimizations
+    this.lazyLoadImages();
+    this.optimizeScroll();
+    this.preloadCriticalResources();
+    this.addCriticalResourceHints();
+  }
+
   static getInstance(): PerformanceOptimizer {
     if (!PerformanceOptimizer.instance) {
       PerformanceOptimizer.instance = new PerformanceOptimizer();
