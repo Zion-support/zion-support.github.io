@@ -10,7 +10,7 @@ const UnifiedBanner = dynamic(() => import('./components/NewestContent2025Banner
   ssr: false
 });
 
-const ContentPromotion = dynamic(() => import('./components/UltimateBusinessIntelligence2025Banner').catch(() => ({ default: () => null as any })), {
+const ContentPromotion = dynamic(() => import('./components/UltimateBusinessIntelligence2025Banner').catch(() => import('./components/EmptyComponent')), {
   loading: () => <div className="animate-pulse bg-gray-200 h-64 rounded-lg"></div>,
   ssr: false
 });
@@ -67,6 +67,17 @@ export const metadata = {
 
 export default function OptimizedHomePage() {
   return (
+<<<<<<< HEAD
+    <main className="min-h-screen">
+      <SEOOptimizer />
+      <PerformanceMonitor />
+      <AccessibilityEnhancer>
+        <UnifiedBanner />
+        <ContentPromotion />
+        <ContentShowcase />
+      </AccessibilityEnhancer>
+    </main>
+=======
     <AccessibilityEnhancer>
       <div className="min-h-screen bg-white">
         <SEOOptimizer />
@@ -119,5 +130,6 @@ export default function OptimizedHomePage() {
         </main>
       </div>
     </AccessibilityEnhancer>
+>>>>>>> origin/main
   );
 }
