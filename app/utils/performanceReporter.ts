@@ -78,11 +78,6 @@ class PerformanceReporter {
         const lastEntry = entries[entries.length - 1];
         
         if (lastEntry && 'renderTime' in lastEntry) {
-<<<<<<< HEAD
-          const value = (lastEntry as { renderTime?: number; loadTime?: number }).renderTime || (lastEntry as { renderTime?: number; loadTime?: number }).loadTime;
-=======
-          const value = (lastEntry as PerformanceEntry & { renderTime?: number; loadTime?: number }).renderTime || (lastEntry as PerformanceEntry & { renderTime?: number; loadTime?: number }).loadTime;
->>>>>>> cursor/fix-errors-and-merge-to-main-5c5e
           this.addMetric('LCP', value, this.getRating('lcp', value));
         }
       });
@@ -94,11 +89,6 @@ class PerformanceReporter {
         const entries = entryList.getEntries();
         entries.forEach((entry) => {
           if ('processingStart' in entry && 'startTime' in entry) {
-<<<<<<< HEAD
-            const value = (entry as { processingStart: number; startTime: number }).processingStart - entry.startTime;
-=======
-            const value = (entry as PerformanceEntry & { processingStart: number }).processingStart - entry.startTime;
->>>>>>> cursor/fix-errors-and-merge-to-main-5c5e
             this.addMetric('FID', value, this.getRating('fid', value));
           }
         });
@@ -110,13 +100,6 @@ class PerformanceReporter {
       let clsValue = 0;
       const clsObserver = new PerformanceObserver((entryList) => {
         entryList.getEntries().forEach((entry) => {
-<<<<<<< HEAD
-          if ('value' in entry && !(entry as { hadRecentInput: boolean }).hadRecentInput) {
-            clsValue += (entry as { value: number }).value;
-=======
-          if ('value' in entry && !(entry as PerformanceEntry & { hadRecentInput?: boolean }).hadRecentInput) {
-            clsValue += (entry as PerformanceEntry & { value: number }).value;
->>>>>>> cursor/fix-errors-and-merge-to-main-5c5e
           }
         });
         this.addMetric('CLS', clsValue, this.getRating('cls', clsValue));
@@ -258,11 +241,6 @@ class PerformanceReporter {
     }
 
     // Google Analytics
-<<<<<<< HEAD
-    const gtag = (window as { gtag?: (command: string, action: string, params: Record<string, unknown>) => void }).gtag;
-=======
-    const gtag = (window as unknown as { gtag: Function }).gtag;
->>>>>>> cursor/fix-errors-and-merge-to-main-5c5e
     if (typeof gtag === 'function') {
       gtag('event', metric.name, {
         event_category: 'Web Vitals',
