@@ -50,7 +50,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         observers.push(lcpObserver);
       } catch (error) {
         // eslint-disable-next-line no-console
-        console.warn('LCP observer not supported:', error);origin/cursor/fix-errors-and-merge-to-main-6395
+        console.warn('LCP observer not supported:', error);
       }
     }
 

@@ -134,7 +134,7 @@ const AutonomousSystemsPage: React.FC = () => {
       benefits: ['Reduce testing time by 75%', 'Improve test coverage', 'Catch bugs earlier'],
       marketPrice: '$5,000-12,000/month',
       category: 'Quality Assurance',
-      technologies: ['Selenium', 'Appium', 'TestNG', 'Performance Tools', 'Security Scanners']cursor/add-new-services-and-deploy-updates-f159
+      technologies: ['Selenium', 'Appium', 'TestNG', 'Performance Tools', 'Security Scanners']
     }
   ];
 
