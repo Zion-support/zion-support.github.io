@@ -52,6 +52,30 @@ const ServicesPage: React.FC = () => {
       link: '/business-intelligence',
       features: ['Real-time Analytics', 'Data Visualization', 'Reporting', 'Dashboard Creation'],
       price: 'Starting at $1,800/month'
+    },
+    {
+      title: 'Blockchain & Web3',
+      description: 'Decentralized applications, smart contracts, and Web3 solutions.',
+      icon: '⛓️',
+      link: '/blockchain-web3',
+      features: ['Smart Contracts', 'DeFi Protocols', 'NFTs', 'DAOs'],
+      price: 'Starting at $8,000/project'
+    },
+    {
+      title: 'IoT & Edge Computing',
+      description: 'Connected devices and edge computing solutions for smart environments.',
+      icon: '📡',
+      link: '/iot-edge-computing',
+      features: ['Sensor Networks', 'Edge Processing', 'Smart Cities', 'Industrial IoT'],
+      price: 'Starting at $3,500/month'
+    },
+    {
+      title: 'Cybersecurity',
+      description: 'Advanced security solutions including threat detection and compliance.',
+      icon: '🛡️',
+      link: '/cybersecurity',
+      features: ['Threat Detection', 'Zero Trust', 'Penetration Testing', 'SOC Services'],
+      price: 'Starting at $2,500/month'
     }
   ];
 
