@@ -143,6 +143,15 @@ class EnhancedErrorHandler {
             message: `Failed to load resource: ${target?.src || target?.href}`,
             element: event.target?.constructor.name,
             src: target?.src || target?.href,
+
+
+
+
+
+
+
+
+
           });
         }
       },
