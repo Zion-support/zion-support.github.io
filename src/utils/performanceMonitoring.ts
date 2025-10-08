@@ -3,6 +3,20 @@
  * Tracks Web Vitals, custom metrics, and provides performance insights
  */
 
+// Import web vitals types
+interface LayoutShift extends PerformanceEntry {
+  value: number;
+  hadRecentInput: boolean;
+  lastInputTime: number;
+  sources: LayoutShiftAttribution[];
+}
+
+interface LayoutShiftAttribution {
+  node?: Node;
+  previousRect: DOMRectReadOnly;
+  currentRect: DOMRectReadOnly;
+}
+
 export interface PerformanceMetric {
   name: string;
   value: number;
@@ -25,6 +39,11 @@ export interface CustomMetric {
   unit: string;
   timestamp: number;
   tags?: Record<string, string>;
+}
+
+interface LayoutShift extends PerformanceEntry {
+  value: number;
+  hadRecentInput: boolean;
 }
 
 class PerformanceMonitor {
@@ -218,8 +237,9 @@ class PerformanceMonitor {
       // Observe First Input Delay (FID)
       const fidObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
-        entries.forEach((entry: any) => {
-          const metric = this.createMetric('FID', entry.processingStart - entry.startTime);
+        entries.forEach((entry: unknown) => {
+          const fidEntry = entry as PerformanceEventTiming;
+          const metric = this.createMetric('FID', fidEntry.processingStart - fidEntry.startTime);
           this.webVitals.FID = metric;
           this.notifyCallbacks(metric);
         });
@@ -231,9 +251,10 @@ class PerformanceMonitor {
       let clsValue = 0;
       const clsObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
-        entries.forEach((entry: any) => {
-          if (!entry.hadRecentInput) {
-            clsValue += entry.value;
+        entries.forEach((entry: unknown) => {
+          const clsEntry = entry as PerformanceEntry & { hadRecentInput?: boolean; value?: number };
+          if (!clsEntry.hadRecentInput) {
+            clsValue += clsEntry.value || 0;
           }
         });
         const metric = this.createMetric('CLS', clsValue);
@@ -243,7 +264,7 @@ class PerformanceMonitor {
       clsObserver.observe({ entryTypes: ['layout-shift'] });
       this.observers.push(clsObserver);
     } catch (error) {
-//       console.warn('Failed to observe Web Vitals:', error);
+      console.warn('Failed to observe Web Vitals:', error);
     }
   }
 
@@ -294,13 +315,14 @@ class PerformanceMonitor {
     try {
       const resourceObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
-        entries.forEach((entry: any) => {
-          if (entry.initiatorType) {
+        entries.forEach((entry: unknown) => {
+          const resourceEntry = entry as PerformanceResourceTiming;
+          if (resourceEntry.initiatorType) {
             this.trackMetric(
-              `resource_${entry.initiatorType}`,
-              entry.duration,
+              `resource_${resourceEntry.initiatorType}`,
+              resourceEntry.duration,
               'ms',
-              { name: entry.name }
+              { name: resourceEntry.name }
             );
           }
         });
