@@ -1,31 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { ChevronDown, Phone, Mail, MapPin, Menu, X } from 'lucide-react';
-const Navigation: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [servicesOpen, setServicesOpen] = useState(false);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-bd1c
 import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap } from 'lucide-react';
-=======
-import { ChevronDown, Menu, X } from 'lucide-react';
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-14d1
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-012c
-
-const Navigation: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [servicesOpen, setServicesOpen] = useState(false);
->>>>>>> cursor/fix-errors-and-merge-to-main-ea96
 
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -46,79 +21,64 @@ const Navigation: React.FC = () => {
     setServicesOpen(false);
     setAiServicesOpen(false);
     setItServicesOpen(false);
+    setIsOpen(false);
   };
 
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-    if (isOpen) {
-      closeAllMenus();
+  const serviceCategories = [
+    {
+      title: 'AI Services',
+      icon: Brain,
+      color: 'text-purple-600',
+      bgColor: 'bg-purple-50',
+      services: [
+        { name: 'AI Services', path: '/ai-services' },
+        { name: 'AI Marketing', path: '/ai-marketing' },
+        { name: 'AI Automation', path: '/ai-automation' },
+        { name: 'AI Healthcare', path: '/ai-healthcare' },
+        { name: 'AI Fintech', path: '/ai-fintech' },
+        { name: 'AI Data Analytics', path: '/ai-data-analytics' },
+        { name: 'AI Cybersecurity', path: '/ai-cybersecurity' },
+        { name: 'AI Workflow Automation', path: '/ai-workflow-automation' },
+        { name: 'AI Cloud Infrastructure', path: '/ai-cloud-infrastructure' },
+        { name: 'AI E-commerce Solutions', path: '/ai-ecommerce-solutions' },
+        { name: 'AI Mobile App Development', path: '/ai-mobile-app-development' }
+      ]
+    },
+    {
+      title: 'IT Services',
+      icon: Code,
+      color: 'text-blue-600',
+      bgColor: 'bg-blue-50',
+      services: [
+        { name: 'IT Services', path: '/it-services' },
+        { name: 'Micro SAAS', path: '/micro-saas' },
+        { name: 'Cybersecurity', path: '/cybersecurity' }
+      ]
+    },
+    {
+      title: 'Advanced Technologies',
+      icon: Zap,
+      color: 'text-green-600',
+      bgColor: 'bg-green-50',
+      services: [
+        { name: 'Quantum Computing', path: '/quantum-computing' },
+        { name: 'Autonomous Systems', path: '/autonomous-systems' },
+        { name: 'Blockchain & Web3', path: '/blockchain-web3' },
+        { name: 'IoT & Edge Computing', path: '/iot-edge-computing' },
+        { name: 'Business Intelligence', path: '/business-intelligence' }
+      ]
     }
-  };
-
-  const aiServices = [
-    { name: 'AI Consulting', href: '/ai-services', icon: Brain },
-    { name: 'Machine Learning', href: '/ai-services', icon: Brain },
-    { name: 'Natural Language Processing', href: '/ai-services', icon: Brain },
-    { name: 'Computer Vision', href: '/ai-services', icon: Brain },
-    { name: 'Predictive Analytics', href: '/ai-services', icon: BarChart },
-    { name: 'AI Automation', href: '/ai-services', icon: Zap },
   ];
-
-  const itServices = [
-    { name: 'Cloud Infrastructure', href: '/cloud-solutions', icon: Cloud },
-    { name: 'Cybersecurity', href: '/cybersecurity', icon: Shield },
-    { name: 'Data Analytics', href: '/data-analytics', icon: BarChart },
-    { name: 'Mobile Development', href: '/mobile-development', icon: Code },
-    { name: 'Web Development', href: '/web-development', icon: Code },
-    { name: 'DevOps', href: '/devops', icon: Code },
-  ];
-
-  const emergingTech = [
-    { name: 'Blockchain & Web3', href: '/blockchain', icon: Shield },
-    { name: 'Quantum Computing', href: '/quantum-computing', icon: Zap },
-    { name: 'IoT Solutions', href: '/iot-solutions', icon: Cloud },
-    { name: 'AR/VR Development', href: '/ar-vr', icon: Code },
-    { name: 'Edge Computing', href: '/edge-computing', icon: Cloud },
-    { name: '5G Solutions', href: '/5g-solutions', icon: Zap },
-  ];
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-1ed2
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-ea96
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-14d1
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-012c
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-bd1c
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-gray-900/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
+      isScrolled 
+        ? 'bg-white/95 backdrop-blur-md shadow-lg border-b border-gray-200' 
+        : 'bg-transparent'
     }`}>
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center py-4">
           {/* Logo */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-errors-and-merge-to-main-deb0
-          <Link to="/" className="text-2xl font-bold text-blue-600 flex items-center">
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-ea96
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-14d1
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-012c
-          <Link to="/" className="text-2xl font-bold text-cyan-400 neon-text flex items-center">
-            <span className="text-3xl mr-2">⚡</span>
-            Zion Tech Group
-=======
           <Link 
             to="/" 
             className="flex items-center space-x-2 text-2xl font-bold"
@@ -130,153 +90,55 @@ const Navigation: React.FC = () => {
             <span className={`transition-colors ${isScrolled ? 'text-gray-900' : 'text-white'}`}>
               Zion Tech Group
             </span>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-1ed2
-          </Link>
-          {/* Desktop Menu */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-          <div className="hidden lg:flex space-x-8">
-            <Link to="/" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
-              Home
-            </Link>
-<<<<<<< HEAD
-            <Link to="/about" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">              About
-            </Link>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-ea96
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-14d1
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-012c
-=======
-          <Link to="/" className="flex items-center space-x-2 text-white font-bold text-xl">
-            <span className="text-3xl">⚡</span>
-            <span className="hidden sm:block">Zion Tech Group</span>
           </Link>
 
-          {/* Desktop Navigation */}
->>>>>>> cursor/fix-errors-and-merge-to-main-bd1c
+          {/* Desktop Menu */}
           <div className="hidden lg:flex items-center space-x-8">
-            <Link
-              to="/"
-              className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
+            <Link 
+              to="/" 
+              className={`transition-colors font-medium ${isScrolled ? 'text-gray-700 hover:text-purple-600' : 'text-white hover:text-purple-200'}`}
+              onClick={closeAllMenus}
             >
               Home
             </Link>
+            <Link 
+              to="/about" 
+              className={`transition-colors font-medium ${isScrolled ? 'text-gray-700 hover:text-purple-600' : 'text-white hover:text-purple-200'}`}
+              onClick={closeAllMenus}
+            >
+              About
+            </Link>
             
-            {/* AI Services Dropdown */}
+            {/* Services Dropdown */}
             <div className="relative group">
               <button
-<<<<<<< HEAD
-                onClick={() => setServicesOpen(!servicesOpen)}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-                className="text-gray-300 hover:text-cyan-400 transition-colors flex items-center font-medium"              >
-=======
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-14d1
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-012c
-                className="text-gray-300 hover:text-cyan-400 transition-colors flex items-center font-medium"
-                aria-expanded={servicesOpen}
-                aria-haspopup="true"
+                className={`flex items-center space-x-1 transition-colors font-medium ${isScrolled ? 'text-gray-700 hover:text-purple-600' : 'text-white hover:text-purple-200'}`}
+                onMouseEnter={() => setServicesOpen(true)}
+                onMouseLeave={() => setServicesOpen(false)}
               >
->>>>>>> cursor/fix-errors-and-merge-to-main-ea96
-                Services
-                <ChevronDown className="w-4 h-4 ml-1" />
-=======
-                className={`flex items-center space-x-1 font-medium transition-colors hover:text-purple-600 ${
-                  isScrolled ? 'text-gray-700' : 'text-white'
-                }`}
-=======
-                className="flex items-center space-x-1 text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
-                onMouseEnter={() => setAiServicesOpen(true)}
-                onMouseLeave={() => setAiServicesOpen(false)}
->>>>>>> cursor/fix-errors-and-merge-to-main-bd1c
-              >
-                <Brain className="w-4 h-4" />
-                <span>AI Services</span>
+                <span>Services</span>
                 <ChevronDown className="w-4 h-4" />
               </button>
               
-<<<<<<< HEAD
               {servicesOpen && (
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-ea96
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-14d1
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-012c
-                <div className="absolute top-full left-0 mt-2 w-96 bg-white rounded-lg shadow-xl border py-4 z-50">
-                  <div className="grid grid-cols-2 gap-4 px-4">
-                    <div>
-                      <h3 className="font-semibold text-gray-900 mb-3">Core Services</h3>
-                      {services.slice(0, 8).map((service, index) => (
-                        <Link
-                          key={index}
-                          to={service.url}
-                          className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded transition-colors"
-                          onClick={() => setServicesOpen(false)}
-                        >
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-                          {service.name}                        </Link>
-=======
-                          {service.name}
-                        </Link>
->>>>>>> cursor/fix-errors-and-merge-to-main-ea96
-=======
-                          {service.name}
-                        </Link>
->>>>>>> cursor/website-audit-and-update-with-deployment-14d1
-=======
-                          {service.name}
-                        </Link>
->>>>>>> cursor/fix-errors-and-merge-to-main-012c
-                      ))}
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-gray-900 mb-3">Additional Services</h3>
-                      {services.slice(8).map((service, index) => (
-                        <Link
-                          key={index}
-                          to={service.url}
-                          className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded transition-colors"
-                          onClick={() => setServicesOpen(false)}
-                        >
-                          {service.name}
-                        </Link>
-                      ))}
-                    </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-                <div className="absolute top-full left-0 mt-2 w-96 bg-white rounded-xl shadow-2xl border border-gray-200 py-6 z-50">
-                  <div className="grid grid-cols-2 gap-6 px-6">
+                <div 
+                  className="absolute top-full left-0 mt-2 w-96 bg-white rounded-lg shadow-xl border border-gray-200 py-4"
+                  onMouseEnter={() => setServicesOpen(true)}
+                  onMouseLeave={() => setServicesOpen(false)}
+                >
+                  <div className="grid grid-cols-1 gap-4 px-4">
                     {serviceCategories.map((category, index) => (
-                      <div key={index} className="space-y-3">
-                        <div className="flex items-center space-x-2 mb-3">
-                          <div className={`w-8 h-8 ${category.bgColor} rounded-lg flex items-center justify-center`}>
-                            <category.icon className={`w-4 h-4 ${category.color}`} />
-                          </div>
-                          <h3 className="font-semibold text-gray-900 text-sm">{category.title}</h3>
+                      <div key={index} className="space-y-2">
+                        <div className="flex items-center space-x-2 text-sm font-semibold text-gray-900 mb-2">
+                          <category.icon className={`w-4 h-4 ${category.color}`} />
+                          <span>{category.title}</span>
                         </div>
-                        <div className="space-y-2">
+                        <div className="space-y-1">
                           {category.services.map((service, serviceIndex) => (
                             <Link
                               key={serviceIndex}
                               to={service.path}
-                              className="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-purple-600 rounded-lg transition-colors"
+                              className="block px-2 py-1 text-sm text-gray-600 hover:text-purple-600 hover:bg-purple-50 rounded transition-colors"
                               onClick={closeAllMenus}
                             >
                               {service.name}
@@ -286,497 +148,153 @@ const Navigation: React.FC = () => {
                       </div>
                     ))}
                   </div>
-                  <div className="border-t border-gray-200 mt-6 pt-4 px-6">
-=======
-              {aiServicesOpen && (
-                <div
-                  className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-xl py-2 z-50"
-                  onMouseEnter={() => setAiServicesOpen(true)}
-                  onMouseLeave={() => setAiServicesOpen(false)}
-                >
-                  {aiServices.map((service, index) => (
->>>>>>> cursor/fix-errors-and-merge-to-main-bd1c
-                    <Link
-                      key={index}
-                      to={service.href}
-                      className="flex items-center space-x-3 px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-cyan-600 transition-colors duration-200"
-                    >
-                      <service.icon className="w-4 h-4" />
-                      <span>{service.name}</span>
-                    </Link>
-                  ))}
                 </div>
               )}
             </div>
 
-            {/* IT Services Dropdown */}
-            <div className="relative group">
-              <button
-                className="flex items-center space-x-1 text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
-                onMouseEnter={() => setItServicesOpen(true)}
-                onMouseLeave={() => setItServicesOpen(false)}
-              >
-                <Code className="w-4 h-4" />
-                <span>IT Solutions</span>
-                <ChevronDown className="w-4 h-4" />
-              </button>
-              
-              {itServicesOpen && (
-                <div
-                  className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-xl py-2 z-50"
-                  onMouseEnter={() => setItServicesOpen(true)}
-                  onMouseLeave={() => setItServicesOpen(false)}
-                >
-                  {itServices.map((service, index) => (
-                    <Link
-                      key={index}
-                      to={service.href}
-                      className="flex items-center space-x-3 px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-cyan-600 transition-colors duration-200"
-                    >
-                      <service.icon className="w-4 h-4" />
-                      <span>{service.name}</span>
-                    </Link>
-                  ))}
-                </div>
-              )}
-            </div>
-
-            {/* Emerging Tech Dropdown */}
-            <div className="relative group">
-              <button
-                className="flex items-center space-x-1 text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
-                onMouseEnter={() => setServicesOpen(true)}
-                onMouseLeave={() => setServicesOpen(false)}
-              >
-                <Zap className="w-4 h-4" />
-                <span>Emerging Tech</span>
-                <ChevronDown className="w-4 h-4" />
-              </button>
-              
-              {servicesOpen && (
-                <div
-                  className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-xl py-2 z-50"
-                  onMouseEnter={() => setServicesOpen(true)}
-                  onMouseLeave={() => setServicesOpen(false)}
-                >
-                  {emergingTech.map((service, index) => (
-                    <Link
-                      key={index}
-                      to={service.href}
-                      className="flex items-center space-x-3 px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-cyan-600 transition-colors duration-200"
-                    >
-                      <service.icon className="w-4 h-4" />
-                      <span>{service.name}</span>
-                    </Link>
-                  ))}
-                </div>
-              )}
-            </div>
-
-            <Link
-              to="/about"
-              className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
+            <Link 
+              to="/team" 
+              className={`transition-colors font-medium ${isScrolled ? 'text-gray-700 hover:text-purple-600' : 'text-white hover:text-purple-200'}`}
+              onClick={closeAllMenus}
             >
-              About
-            </Link>
-            <Link
-              to="/blog"
-              className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
-            >
-              Blog
-            </Link>
-            <Link
-              to="/contact"
-              className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
-            >
-              Contact
-            </Link>
-          </div>
-
-          {/* CTA Button */}
-          <div className="hidden lg:flex items-center space-x-4">
-            <Link
-              to="/contact"
-              className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-200"
-            >
-              Get Started
-            </Link>
-          </div>
-
-          {/* Mobile Menu Button */}
-          <button
-            onClick={toggleMenu}
-            className="lg:hidden text-white hover:text-cyan-400 transition-colors duration-200"
-            aria-label="Toggle menu"
-          >
-            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
-        </div>
-
-        {/* Mobile Navigation */}
-        {isOpen && (
-          <div className="lg:hidden bg-gray-900/95 backdrop-blur-md rounded-lg mt-2 p-4">
-            <div className="space-y-4">
-              <Link
-                to="/"
-                className="block text-white hover:text-cyan-400 transition-colors duration-200 font-medium py-2"
-                onClick={closeAllMenus}
-              >
-                Home
-              </Link>
-              
-<<<<<<< HEAD
->>>>>>> cursor/fix-errors-and-merge-to-main-deb0
-              {/* Services Section */}
-              <div className="space-y-2">
-                <div className="text-gray-700 font-semibold text-lg">Services</div>
-                <div className="ml-4 space-y-2">
-                  <Link to="/services" className="block text-gray-600 hover:text-blue-600 transition-colors">
-                    All Services
-                  </Link>
-                  <Link to="/micro-saas" className="block text-gray-600 hover:text-blue-600 transition-colors">
-                    Micro SAAS Solutions
-                  </Link>
-                  <Link to="/ai-services" className="block text-gray-600 hover:text-blue-600 transition-colors">
-                    AI Services
-                  </Link>
-                  <Link to="/it-services" className="block text-gray-600 hover:text-blue-600 transition-colors">
-                    IT Services
-                  </Link>
-                  <Link to="/quantum-computing" className="block text-gray-600 hover:text-blue-600 transition-colors">
-                    Quantum Computing
-                  </Link>
-                  <Link to="/autonomous-systems" className="block text-gray-600 hover:text-blue-600 transition-colors">
-                    Autonomous Systems
-                  </Link>
-                  <Link to="/blockchain-web3" className="block text-gray-600 hover:text-blue-600 transition-colors">
-                    Blockchain & Web3
-                  </Link>
-                  <Link to="/cybersecurity" className="block text-gray-600 hover:text-blue-600 transition-colors">
-                    Cybersecurity
-                  </Link>
-<<<<<<< HEAD
-                </div>              </div>
-=======
-                </div>
-              </div>
-              
->>>>>>> cursor/fix-errors-and-merge-to-main-deb0
-              <Link to="/case-studies" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
-                Case Studies
-              </Link>
-              <Link to="/enterprise" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
-                Enterprise
-              </Link>
-              <Link to="/team" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
-                Team
-              </Link>
-              <Link to="/contact" className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors font-medium text-center">
-                Contact Us
-              </Link>
-            </div>
-          </div>
-<<<<<<< HEAD
-=======
-                  </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-ea96
-=======
-                  </div>
->>>>>>> cursor/website-audit-and-update-with-deployment-14d1
-                </div>
-              )}
-            </div>
-            {/* Technologies Dropdown */}
-            <div className="relative">
-              <button
-                onClick={() => setServicesOpen(!servicesOpen)}
-                className="text-gray-300 hover:text-cyan-400 transition-colors flex items-center font-medium"
-              >
-                Technologies
-                <ChevronDown className="w-4 h-4 ml-1" />
-              </button>
-              {servicesOpen && (
-                <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-xl border py-4 z-50">
-                  <div className="px-4">
-                    {technologies.map((tech, index) => (
-=======
-              {/* Mobile AI Services */}
-              <div>
-                <button
-                  className="flex items-center justify-between w-full text-white hover:text-cyan-400 transition-colors duration-200 font-medium py-2"
-                  onClick={() => setAiServicesOpen(!aiServicesOpen)}
-                >
-                  <div className="flex items-center space-x-2">
-                    <Brain className="w-4 h-4" />
-                    <span>AI Services</span>
-                  </div>
-                  <ChevronDown className={`w-4 h-4 transition-transform ${aiServicesOpen ? 'rotate-180' : ''}`} />
-                </button>
-                {aiServicesOpen && (
-                  <div className="ml-4 space-y-2 mt-2">
-                    {aiServices.map((service, index) => (
->>>>>>> cursor/fix-errors-and-merge-to-main-bd1c
-                      <Link
-                        key={index}
-                        to={service.href}
-                        className="flex items-center space-x-3 text-gray-300 hover:text-cyan-400 transition-colors duration-200 py-1"
-                        onClick={closeAllMenus}
-                      >
-                        <service.icon className="w-4 h-4" />
-                        <span>{service.name}</span>
-                      </Link>
-<<<<<<< HEAD
-<<<<<<< HEAD
-                    ))}                  </div>
-=======
-                    ))}
-                  </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-ea96
-=======
-                  </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-012c
-                </div>
-              )}
-            </div>
-            <Link to="/case-studies" className="text-gray-300 hover:text-cyan-400 transition-colors font-medium">
-              Case Studies
-            </Link>
-            <Link to="/enterprise" className="text-gray-300 hover:text-cyan-400 transition-colors font-medium">
-              Enterprise
-            </Link>
-            <Link to="/team" className="text-gray-300 hover:text-cyan-400 transition-colors font-medium">
               Team
             </Link>
-            <Link to="/contact" className="bg-cyan-600 text-white px-6 py-2 rounded-lg hover:bg-cyan-700 transition-colors font-medium">
-              Contact
+            <Link 
+              to="/case-studies" 
+              className={`transition-colors font-medium ${isScrolled ? 'text-gray-700 hover:text-purple-600' : 'text-white hover:text-purple-200'}`}
+              onClick={closeAllMenus}
+            >
+              Case Studies
             </Link>
-          </div>
-          {/* Mobile Menu Button */}
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden text-gray-300 hover:text-cyan-400 transition-colors"
-            aria-expanded={isOpen}
-            aria-label="Toggle mobile menu"
-          >
-            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
-        </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-        )}
-      </div>
-=======
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-14d1
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-012c
-
->>>>>>> cursor/fix-errors-and-merge-to-main-ea96
-        {/* Mobile Menu */}
-        {isOpen && (
-          <div className="lg:hidden py-4 border-t border-gray-700">
-            <div className="flex flex-col space-y-4">
-              <Link 
-                to="/" 
-                className="text-gray-300 hover:text-cyan-400 transition-colors font-medium"
-                onClick={() => setIsOpen(false)}
-              >
-                Home
-              </Link>
-              {/* Services Section */}
-              <div className="space-y-2">
-                <div className="text-gray-300 font-semibold text-lg">Services</div>
-                <div className="ml-4 space-y-2">
-                  {services.map((service, index) => (
-                    <Link
-                      key={index}
-                      to={service.url}
-                      className="block text-gray-400 hover:text-cyan-400 transition-colors"
-                      onClick={() => setIsOpen(false)}
-                    >
-                      {service.name}
-                    </Link>
-                  ))}
-                </div>
-=======
-                    ))}
-                  </div>
-                )}
->>>>>>> cursor/fix-errors-and-merge-to-main-bd1c
-              </div>
-
-              {/* Mobile IT Services */}
-              <div>
-                <button
-                  className="flex items-center justify-between w-full text-white hover:text-cyan-400 transition-colors duration-200 font-medium py-2"
-                  onClick={() => setItServicesOpen(!itServicesOpen)}
-                >
-                  <div className="flex items-center space-x-2">
-                    <Code className="w-4 h-4" />
-                    <span>IT Solutions</span>
-                  </div>
-                  <ChevronDown className={`w-4 h-4 transition-transform ${itServicesOpen ? 'rotate-180' : ''}`} />
-                </button>
-                {itServicesOpen && (
-                  <div className="ml-4 space-y-2 mt-2">
-                    {itServices.map((service, index) => (
-                      <Link
-                        key={index}
-                        to={service.href}
-                        className="flex items-center space-x-3 text-gray-300 hover:text-cyan-400 transition-colors duration-200 py-1"
-                        onClick={closeAllMenus}
-                      >
-                        <service.icon className="w-4 h-4" />
-                        <span>{service.name}</span>
-                      </Link>
-                    ))}
-                  </div>
-                )}
-              </div>
-
-              {/* Mobile Emerging Tech */}
-              <div>
-                <button
-                  className="flex items-center justify-between w-full text-white hover:text-cyan-400 transition-colors duration-200 font-medium py-2"
-                  onClick={() => setServicesOpen(!servicesOpen)}
-                >
-                  <div className="flex items-center space-x-2">
-                    <Zap className="w-4 h-4" />
-                    <span>Emerging Tech</span>
-                  </div>
-                  <ChevronDown className={`w-4 h-4 transition-transform ${servicesOpen ? 'rotate-180' : ''}`} />
-                </button>
-                {servicesOpen && (
-                  <div className="ml-4 space-y-2 mt-2">
-                    {emergingTech.map((service, index) => (
-                      <Link
-                        key={index}
-                        to={service.href}
-                        className="flex items-center space-x-3 text-gray-300 hover:text-cyan-400 transition-colors duration-200 py-1"
-                        onClick={closeAllMenus}
-                      >
-                        <service.icon className="w-4 h-4" />
-                        <span>{service.name}</span>
-                      </Link>
-                    ))}
-                  </div>
-                )}
-              </div>
-
-              <Link
-<<<<<<< HEAD
-                to="/contact"
-                className="bg-cyan-600 text-white px-6 py-2 rounded-lg hover:bg-cyan-700 transition-colors font-medium text-center mt-4"
-                onClick={() => setIsOpen(false)}
-              >
-                Contact Us
-              </Link>
-            </div>
-          </div>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-deb0
-        )}
-      </div>
-    </nav>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-  );
-};
-=======
-            {/* Contact Button */}
             <Link 
               to="/contact" 
-              className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-2 rounded-lg font-medium hover:from-purple-700 hover:to-blue-700 transition-all shadow-lg hover:shadow-xl"
+              className={`transition-colors font-medium ${isScrolled ? 'text-gray-700 hover:text-purple-600' : 'text-white hover:text-purple-200'}`}
               onClick={closeAllMenus}
             >
               Contact
             </Link>
           </div>
 
+          {/* Contact Info - Desktop */}
+          <div className="hidden lg:flex items-center space-x-4">
+            <a 
+              href="tel:+13024640950" 
+              className={`flex items-center space-x-1 text-sm ${isScrolled ? 'text-gray-600' : 'text-white'}`}
+            >
+              <Phone className="w-4 h-4" />
+              <span>+1 302 464 0950</span>
+            </a>
+            <a 
+              href="mailto:kleber@ziontechgroup.com" 
+              className={`flex items-center space-x-1 text-sm ${isScrolled ? 'text-gray-600' : 'text-white'}`}
+            >
+              <Mail className="w-4 h-4" />
+              <span>Email</span>
+            </a>
+          </div>
+
           {/* Mobile Menu Button */}
           <button
+            className="lg:hidden p-2"
             onClick={() => setIsOpen(!isOpen)}
-            className={`lg:hidden p-2 rounded-lg transition-colors ${
-              isScrolled 
-                ? 'text-gray-700 hover:bg-gray-100' 
-                : 'text-white hover:bg-white/10'
-            }`}
+            aria-label="Toggle menu"
           >
-            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            {isOpen ? (
+              <X className={`w-6 h-6 ${isScrolled ? 'text-gray-700' : 'text-white'}`} />
+            ) : (
+              <Menu className={`w-6 h-6 ${isScrolled ? 'text-gray-700' : 'text-white'}`} />
+            )}
           </button>
         </div>
 
         {/* Mobile Menu */}
         {isOpen && (
-          <div className="lg:hidden border-t border-gray-200 py-6 bg-white">
-            <div className="space-y-6">
+          <div className="lg:hidden bg-white border-t border-gray-200">
+            <div className="px-4 py-6 space-y-4">
               <Link 
                 to="/" 
-                className="block text-lg font-medium text-gray-900 hover:text-purple-600 transition-colors"
+                className="block text-gray-700 hover:text-purple-600 font-medium"
                 onClick={closeAllMenus}
               >
                 Home
               </Link>
-              
               <Link 
                 to="/about" 
-                className="block text-lg font-medium text-gray-900 hover:text-purple-600 transition-colors"
-=======
-                to="/about"
-                className="block text-white hover:text-cyan-400 transition-colors duration-200 font-medium py-2"
->>>>>>> cursor/fix-errors-and-merge-to-main-bd1c
+                className="block text-gray-700 hover:text-purple-600 font-medium"
                 onClick={closeAllMenus}
               >
                 About
               </Link>
-              <Link
-                to="/blog"
-                className="block text-white hover:text-cyan-400 transition-colors duration-200 font-medium py-2"
+              
+              {/* Mobile Services */}
+              <div className="space-y-2">
+                <div className="text-gray-700 font-semibold">Services</div>
+                {serviceCategories.map((category, index) => (
+                  <div key={index} className="ml-4 space-y-1">
+                    <div className="text-sm font-medium text-gray-600">{category.title}</div>
+                    {category.services.map((service, serviceIndex) => (
+                      <Link
+                        key={serviceIndex}
+                        to={service.path}
+                        className="block text-sm text-gray-500 hover:text-purple-600 ml-4"
+                        onClick={closeAllMenus}
+                      >
+                        {service.name}
+                      </Link>
+                    ))}
+                  </div>
+                ))}
+              </div>
+
+              <Link 
+                to="/team" 
+                className="block text-gray-700 hover:text-purple-600 font-medium"
                 onClick={closeAllMenus}
               >
-                Blog
+                Team
               </Link>
-              <Link
-                to="/contact"
-                className="block text-white hover:text-cyan-400 transition-colors duration-200 font-medium py-2"
+              <Link 
+                to="/case-studies" 
+                className="block text-gray-700 hover:text-purple-600 font-medium"
+                onClick={closeAllMenus}
+              >
+                Case Studies
+              </Link>
+              <Link 
+                to="/contact" 
+                className="block text-gray-700 hover:text-purple-600 font-medium"
                 onClick={closeAllMenus}
               >
                 Contact
               </Link>
-              
-              {/* Mobile CTA */}
-              <div className="pt-4 border-t border-gray-700">
-                <Link
-                  to="/contact"
-                  className="block w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-center px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-200"
-                  onClick={closeAllMenus}
+
+              {/* Mobile Contact Info */}
+              <div className="pt-4 border-t border-gray-200 space-y-2">
+                <a 
+                  href="tel:+13024640950" 
+                  className="flex items-center space-x-2 text-gray-600"
                 >
-                  Get Started
-                </Link>
+                  <Phone className="w-4 h-4" />
+                  <span>+1 302 464 0950</span>
+                </a>
+                <a 
+                  href="mailto:kleber@ziontechgroup.com" 
+                  className="flex items-center space-x-2 text-gray-600"
+                >
+                  <Mail className="w-4 h-4" />
+                  <span>kleber@ziontechgroup.com</span>
+                </a>
+                <div className="flex items-center space-x-2 text-gray-600">
+                  <MapPin className="w-4 h-4" />
+                  <span>364 E Main St STE 1008, Middletown DE 19709</span>
+                </div>
               </div>
             </div>
           </div>
         )}
       </div>
     </nav>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-ea96
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-012c
-  );
-};
-
-<<<<<<< HEAD
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-1ed2
-export default Navigation;
-=======
   );
 };
 
 export default Navigation;
->>>>>>> cursor/website-audit-and-update-with-deployment-14d1
-=======
-export default Navigation;
->>>>>>> cursor/fix-errors-and-merge-to-main-bd1c
