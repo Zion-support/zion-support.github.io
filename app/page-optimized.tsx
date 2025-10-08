@@ -1,4 +1,4 @@
-import { lazy } from 'react';
+import { lazy, Suspense } from 'react';
 import React from 'react';
 // import dynamic from 'next/dynamic'; // Replaced with React.lazy
 import SEOOptimizer from './components/SEOOptimizer';

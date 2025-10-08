@@ -193,7 +193,11 @@ class MonitoringService {
     if (typeof gtag !== 'undefined') {
       gtag('event', 'exception', {
         description: error.message,
+<<<<<<< HEAD
         fatal: false
+=======
+        fatal: false,
+>>>>>>> cursor/fix-errors-and-merge-to-main-1bbf
       })
     }
   }

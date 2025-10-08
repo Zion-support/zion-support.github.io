@@ -108,10 +108,10 @@ class Logger {
     let meta: Record<string, unknown> | undefined
 
     if (errorOrContextOrMetadata instanceof Error) {
-      error = errorOrContextOrMetadata
-      [context, meta] = this.parseArgs(contextOrMetadata, _metadata)
+      error = errorOrContextOrMetadata;
+      [context, meta] = this.parseArgs(contextOrMetadata, _metadata);
     } else {
-      [context, meta] = this.parseArgs(errorOrContextOrMetadata, contextOrMetadata as Record<string, unknown> | undefined)
+      [context, meta] = this.parseArgs(errorOrContextOrMetadata, contextOrMetadata as Record<string, unknown> | undefined);
     }
     const entry: LogEntry = {
       level: LogLevel.ERROR,
@@ -144,10 +144,10 @@ class Logger {
     let meta: Record<string, unknown> | undefined
 
     if (errorOrContextOrMetadata instanceof Error) {
-      error = errorOrContextOrMetadata
-      [context, meta] = this.parseArgs(contextOrMetadata, _metadata)
+      error = errorOrContextOrMetadata;
+      [context, meta] = this.parseArgs(contextOrMetadata, _metadata);
     } else {
-      [context, meta] = this.parseArgs(errorOrContextOrMetadata, contextOrMetadata as Record<string, unknown> | undefined)
+      [context, meta] = this.parseArgs(errorOrContextOrMetadata, contextOrMetadata as Record<string, unknown> | undefined);
     }
     const entry: LogEntry = {
       level: LogLevel.FATAL,
@@ -377,12 +377,15 @@ class ContextLogger {
   warn(message: string, metadata?: Record<string, unknown>): void {
     this.logger.warn(message, this.context, metadata)
   }
+<<<<<<< HEAD
   error(message: string, error?: Error, metadata?: Record<string, unknown>): void {
     this.logger.error(message, error, this.context, metadata)
   }
   fatal(message: string, error?: Error, metadata?: Record<string, unknown>): void {
     this.logger.fatal(message, error, this.context, metadata)
   }
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-1bbf
   perf(metric: string, value: number, _metadata?: Record<string, unknown>): void {
     this.logger.perf(metric, value, { ..._metadata, context: this.context })
   }

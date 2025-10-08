@@ -118,7 +118,7 @@ class SecurityEnhancer {
       (console as { [key: string]: (...args: unknown[]) => void })[method] = (...args: unknown[]) => {
         this.metrics.suspiciousActivity++;
         originalConsole[method](...args);
-      }
+      };
     });
   }
   private monitorDOMManipulation(): void {
