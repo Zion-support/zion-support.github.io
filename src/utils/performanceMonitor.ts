@@ -1,17 +1,23 @@
 /**
- * Performance monitoring utilities
+ * Performance Monitor utility
+ * Tracks and reports application performance metrics
  */
 
 export interface PerformanceMetrics {
-  loadTime?: number;
-  firstContentfulPaint?: number;
-  largestContentfulPaint?: number;
-  cumulativeLayoutShift?: number;
-  firstInputDelay?: number;
+  FCP?: number; // First Contentful Paint
+  LCP?: number; // Largest Contentful Paint
+  FID?: number; // First Input Delay
+  CLS?: number; // Cumulative Layout Shift
+  TTFB?: number; // Time to First Byte
 }
 
 export class PerformanceMonitor {
   private static instance: PerformanceMonitor;
+  private metrics: PerformanceMetrics = {};
+
+  private constructor() {
+    this.initializeMonitoring();
+  }
 
   static getInstance(): PerformanceMonitor {
     if (!PerformanceMonitor.instance) {
@@ -21,43 +27,75 @@ export class PerformanceMonitor {
   }
 
   /**
-   * Collect performance metrics
+   * Initialize performance monitoring
    */
-  public collectMetrics(): PerformanceMetrics {
+  private initializeMonitoring(): void {
     if (typeof window === 'undefined' || !window.performance) {
-      return {};
+      return;
     }
 
-    const navigation = window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-    const paintEntries = window.performance.getEntriesByType('paint');
-    const fcp = paintEntries.find(entry => entry.name === 'first-contentful-paint');
-
-    return {
-      loadTime: navigation ? navigation.loadEventEnd - navigation.loadEventStart : 0,
-      firstContentfulPaint: fcp ? fcp.startTime : 0,
-      largestContentfulPaint: 0,
-      cumulativeLayoutShift: 0,
-      firstInputDelay: 0,
-    };
+    // Monitor Web Vitals
+    this.monitorWebVitals();
   }
 
   /**
-   * Report metrics to analytics
+   * Monitor Web Vitals metrics
    */
-  public reportMetrics(metrics: PerformanceMetrics): void {
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      Object.entries(metrics).forEach(([key, value]) => {
-        if (value !== undefined) {
-          (window as any).gtag('event', key, {
-            value: Math.round(value),
-            event_category: 'Performance',
-            non_interaction: true,
+  private monitorWebVitals(): void {
+    // Monitor FCP (First Contentful Paint)
+    if ('PerformanceObserver' in window) {
+      try {
+        const observer = new PerformanceObserver(list => {
+          list.getEntries().forEach(entry => {
+            if (entry.name === 'first-contentful-paint') {
+              this.metrics.FCP = entry.startTime;
+            }
           });
-        }
-      });
+        });
+        observer.observe({ type: 'paint', buffered: true });
+      } catch (error) {
+        console.warn('Failed to observe FCP', error);
+      }
     }
+
+    // Monitor LCP (Largest Contentful Paint)
+    if ('PerformanceObserver' in window) {
+      try {
+        const observer = new PerformanceObserver(list => {
+          const entries = list.getEntries();
+          const lastEntry = entries[entries.length - 1];
+          this.metrics.LCP = lastEntry.startTime;
+        });
+        observer.observe({ type: 'largest-contentful-paint', buffered: true });
+      } catch (error) {
+        console.warn('Failed to observe LCP', error);
+      }
+    }
+  }
+
+  /**
+   * Get current metrics
+   */
+  getMetrics(): PerformanceMetrics {
+    return { ...this.metrics };
+  }
+
+  /**
+   * Clear metrics
+   */
+  clearMetrics(): void {
+    this.metrics = {};
+  }
+
+  /**
+   * Log metrics to console
+   */
+  logMetrics(): void {
+    console.log('Performance Metrics:', this.metrics);
   }
 }
 
+// Export singleton instance
 export const performanceMonitor = PerformanceMonitor.getInstance();
-export default performanceMonitor;
+
+export default PerformanceMonitor;

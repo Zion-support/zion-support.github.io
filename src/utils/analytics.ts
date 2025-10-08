@@ -82,7 +82,15 @@ class Analytics {
     };
 
     this.events.push(event);
-    this.sendEvent(event);
+    
+    // Send to analytics service if available
+    if (typeof window !== 'undefined' && 'gtag' in window) {
+      (window as { gtag: (...args: unknown[]) => void }).gtag('event', name, {
+        event_category: category,
+        event_label: label,
+        value: value,
+      });
+    }
   }
 
   /**
@@ -116,7 +124,7 @@ class Analytics {
   /**
    * Track business events
    */
-  trackBusiness(
+  trackBusinessEvent(
     event: string,
     value?: number,
     properties?: Record<string, unknown>
@@ -127,17 +135,9 @@ class Analytics {
   /**
    * Send event to analytics service
    */
-  private sendEvent(event: AnalyticsEvent): void {
-    // Send to analytics service (e.g., Google Analytics, Mixpanel, etc.)
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('event', event.name, {
-        event_category: event.category,
-        event_action: event.action,
-        event_label: event.label,
-        value: event.value,
-        ...event.properties,
-      });
-    }
+  private sendToAnalyticsService(event: AnalyticsEvent): void {
+    // Implementation would go here
+    console.log('Analytics event:', event);
   }
 
   /**
@@ -178,4 +178,5 @@ class Analytics {
 
 // Export singleton instance
 export const analytics = new Analytics();
+
 export default analytics;

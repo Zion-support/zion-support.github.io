@@ -1,28 +1,42 @@
 import { useEffect } from 'react';
 import { analytics } from '../utils/analytics';
 
-const usePerformance = (): void => {
+/**
+ * Custom hook for performance monitoring
+ */
+export const usePerformance = () => {
   useEffect(() => {
-    if (typeof window === 'undefined') return;
+    if (typeof window === 'undefined' || !('PerformanceObserver' in window)) {
+      return;
+    }
 
-    // Monitor performance metrics
-    const observer = new PerformanceObserver((list) => {
-      list.getEntries().forEach((entry) => {
-        analytics.track(
-          'long_task',
-          'performance',
-          'detected',
-          undefined,
-          entry.duration
-        );
+    try {
+      // Monitor long tasks
+      const observer = new PerformanceObserver(list => {
+        list.getEntries().forEach(entry => {
+          if (entry.duration > 50) {
+            analytics.track(
+              'long_task',
+              'performance',
+              'detected',
+              undefined,
+              entry.duration
+            );
+          }
+        });
       });
-    });
 
-    return () => {
-      if (observer && typeof observer.disconnect === 'function') {
-        observer.disconnect();
-      }
-    };
+      observer.observe({ type: 'longtask', buffered: true });
+
+      return () => {
+        if (observer && typeof observer.disconnect === 'function') {
+          observer.disconnect();
+        }
+      };
+    } catch (error) {
+      console.warn('Performance monitoring not supported', error);
+      return undefined;
+    }
   }, []);
 };
 

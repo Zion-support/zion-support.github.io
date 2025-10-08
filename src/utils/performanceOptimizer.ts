@@ -150,13 +150,6 @@ export const measurePageLoad = (): WebVitalsMetrics | null => {
 };
 
 /**
- * Collect performance metrics
- */
-export const collectPerformanceMetrics = (): WebVitalsMetrics | null => {
-  return measurePageLoad();
-};
-
-/**
  * Report Web Vitals to analytics
  */
 export const reportWebVitals = (metrics: WebVitalsMetrics): void => {
@@ -304,10 +297,6 @@ class PerformanceOptimizer {
 
   public getMetrics(): Record<string, number> {
     return Object.fromEntries(this.metrics);
-  }
-
-  public init(): void {
-    this.initialize();
   }
 
   public initialize(): void {

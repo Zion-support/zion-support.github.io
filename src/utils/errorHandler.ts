@@ -66,19 +66,20 @@ export class ErrorHandler {
       ...errorInfo,
     };
 
+    // Add to queue
     this.addToQueue(errorData);
-    
+
     // Send to error reporting service
     this.reportError(errorData);
   }
 
   /**
-   * Categorize error based on error type and message
+   * Categorize error based on message
    */
   private categorizeError(error: Error): ErrorCategory {
     const message = error.message.toLowerCase();
     
-    if (message.includes('network') || message.includes('fetch') || message.includes('timeout')) {
+    if (message.includes('network') || message.includes('fetch')) {
       return ErrorCategory.NETWORK;
     }
     if (message.includes('validation') || message.includes('invalid')) {
@@ -87,41 +88,43 @@ export class ErrorHandler {
     if (message.includes('api') || message.includes('endpoint')) {
       return ErrorCategory.API;
     }
-    if (error.name === 'TypeError' || error.name === 'ReferenceError') {
-      return ErrorCategory.RUNTIME;
+    if (message.includes('render') || message.includes('component')) {
+      return ErrorCategory.UI;
     }
     
-    return ErrorCategory.UNKNOWN;
+    return ErrorCategory.RUNTIME;
   }
 
   /**
    * Determine error severity
    */
   private determineSeverity(error: Error, category: ErrorCategory): ErrorSeverity {
-    if (category === ErrorCategory.CRITICAL) {
-      return ErrorSeverity.CRITICAL;
-    }
-    if (category === ErrorCategory.NETWORK || category === ErrorCategory.API) {
+    if (category === ErrorCategory.NETWORK) {
       return ErrorSeverity.MEDIUM;
     }
-    if (category === ErrorCategory.VALIDATION) {
-      return ErrorSeverity.LOW;
+    if (category === ErrorCategory.API) {
+      return ErrorSeverity.HIGH;
     }
-    return ErrorSeverity.MEDIUM;
+    if (error.message.includes('critical')) {
+      return ErrorSeverity.CRITICAL;
+    }
+    return ErrorSeverity.LOW;
   }
 
   /**
    * Generate unique error ID
    */
   private generateErrorId(): string {
-    return `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+    return `err_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
   }
 
   /**
    * Add error to queue
    */
-  private addToQueue(errorInfo: ErrorInfo): void {
-    this.errorQueue.push(errorInfo);
+  private addToQueue(errorData: ErrorInfo): void {
+    this.errorQueue.push(errorData);
+    
+    // Remove oldest errors if queue is full
     if (this.errorQueue.length > this.maxQueueSize) {
       this.errorQueue.shift();
     }
@@ -130,12 +133,14 @@ export class ErrorHandler {
   /**
    * Report error to external service
    */
-  private reportError(errorInfo: ErrorInfo): void {
-    // Report to error tracking service (e.g., Sentry, LogRocket, etc.)
-    if (typeof window !== 'undefined' && process.env.NODE_ENV === 'production') {
-      // Send to error reporting service
-      console.error('Error reported:', errorInfo);
+  private reportError(errorData: ErrorInfo): void {
+    // Log to console in development
+    if (process.env['NODE_ENV'] === 'development') {
+      console.error('Error:', errorData);
     }
+    
+    // Here you would send to an error reporting service like Sentry
+    // Example: Sentry.captureException(errorData);
   }
 
   /**
@@ -153,20 +158,21 @@ export class ErrorHandler {
   }
 
   /**
-   * Get errors by severity
-   */
-  getErrorsBySeverity(severity: ErrorSeverity): ErrorInfo[] {
-    return this.errorQueue.filter(error => error.severity === severity);
-  }
-
-  /**
    * Get errors by category
    */
   getErrorsByCategory(category: ErrorCategory): ErrorInfo[] {
     return this.errorQueue.filter(error => error.category === category);
   }
+
+  /**
+   * Get errors by severity
+   */
+  getErrorsBySeverity(severity: ErrorSeverity): ErrorInfo[] {
+    return this.errorQueue.filter(error => error.severity === severity);
+  }
 }
 
 // Export singleton instance
 export const errorHandler = ErrorHandler.getInstance();
-export default errorHandler;
+
+export default ErrorHandler;

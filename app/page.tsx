@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useCallback } from 'react';
+import React, { useState, useCallback, Suspense } from 'react';
 import Link from 'next/link';
 
 // Loading fallback component
@@ -50,92 +50,113 @@ const HomePage: React.FC = () => {
 
   return (
     <>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <div className='min-h-screen bg-gradient-to-br from-blue-600 via-blue-700 to-cyan-600'>
         {/* Hero Section */}
-        <div className="container mx-auto px-4 py-20">
-          <div className="max-w-6xl mx-auto text-center">
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              Transform Your Business with AI
+        <section className='py-20 px-4'>
+          <div className='container mx-auto max-w-6xl text-center'>
+            <h1 className='text-5xl md:text-6xl font-bold text-white mb-6'>
+              Welcome to Zion Tech Group
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Leading provider of enterprise AI solutions, quantum computing, and autonomous systems.
-              Transform your business with our cutting-edge technology.
+            <p className='text-xl md:text-2xl text-white/90 mb-8 max-w-3xl mx-auto'>
+              Leading provider of advanced AI and IT solutions. Transform your business with cutting-edge technology.
             </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
+            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
               <Link
-                href="/contact"
-                className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl"
+                href='/contact'
+                className='inline-flex items-center justify-center px-8 py-4 bg-white text-blue-600 rounded-xl font-bold hover:bg-gray-100 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl'
               >
                 Get Started
               </Link>
-              <a
-                href="tel:+13024640950"
-                onClick={handlePhoneClick}
-                className="bg-white/10 hover:bg-white/20 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:-translate-y-1 border border-white/30"
+              <Link
+                href='/about'
+                className='inline-flex items-center justify-center px-8 py-4 bg-white/10 text-white border border-white/30 rounded-xl font-bold hover:bg-white/20 transition-all duration-300 transform hover:-translate-y-1'
               >
-                📞 Call: (302) 464-0950
-              </a>
+                Learn More
+              </Link>
             </div>
           </div>
-        </div>
+        </section>
 
-        {/* Features Section */}
-        <div className="container mx-auto px-4 py-16">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-4xl font-bold text-white text-center mb-12">
+        {/* Services Section */}
+        <section className='py-16 bg-white'>
+          <div className='container mx-auto px-4 max-w-6xl'>
+            <h2 className='text-4xl font-bold text-gray-900 text-center mb-12'>
               Our Services
             </h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-8 hover:bg-white/15 transition-all duration-300">
-                <div className="text-4xl mb-4">🤖</div>
-                <h3 className="text-xl font-bold text-white mb-3">
-                  AI Solutions
-                </h3>
-                <p className="text-gray-300">
-                  Advanced machine learning, natural language processing, and computer vision solutions.
-                </p>
-              </div>
-              
-              <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-8 hover:bg-white/15 transition-all duration-300">
-                <div className="text-4xl mb-4">🔐</div>
-                <h3 className="text-xl font-bold text-white mb-3">
-                  Quantum Security
-                </h3>
-                <p className="text-gray-300">
-                  Next-generation quantum-resistant encryption to protect your critical business data.
-                </p>
-              </div>
-              
-              <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-8 hover:bg-white/15 transition-all duration-300">
-                <div className="text-4xl mb-4">⚡</div>
-                <h3 className="text-xl font-bold text-white mb-3">
-                  Autonomous Systems
-                </h3>
-                <p className="text-gray-300">
-                  Self-managing and self-optimizing systems for enterprise operations.
-                </p>
-              </div>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+              {[
+                {
+                  title: 'AI Solutions',
+                  description: 'Advanced machine learning and AI integration for your business',
+                  icon: '🤖',
+                },
+                {
+                  title: 'Cloud Services',
+                  description: 'Scalable cloud infrastructure and migration services',
+                  icon: '☁️',
+                },
+                {
+                  title: 'Business Intelligence',
+                  description: 'Data-driven insights and analytics solutions',
+                  icon: '📊',
+                },
+                {
+                  title: 'Automation',
+                  description: 'Process automation and optimization services',
+                  icon: '⚙️',
+                },
+                {
+                  title: 'Consulting',
+                  description: 'Expert technology consulting and strategy',
+                  icon: '💼',
+                },
+                {
+                  title: 'Support',
+                  description: '24/7 technical support and maintenance',
+                  icon: '🛠️',
+                },
+              ].map((service, index) => (
+                <div
+                  key={index}
+                  className='bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-200'
+                >
+                  <div className='text-5xl mb-4'>{service.icon}</div>
+                  <h3 className='text-2xl font-bold text-gray-900 mb-3'>
+                    {service.title}
+                  </h3>
+                  <p className='text-gray-600'>{service.description}</p>
+                </div>
+              ))}
             </div>
           </div>
-        </div>
+        </section>
 
         {/* CTA Section */}
-        <div className="container mx-auto px-4 py-16">
-          <div className="max-w-4xl mx-auto text-center bg-white/5 backdrop-blur-lg rounded-3xl p-12 border border-white/20">
-            <h2 className="text-4xl font-bold text-white mb-6">
-              Ready to Transform Your Enterprise?
+        <section className='py-20 px-4 bg-gradient-to-br from-blue-600 to-cyan-600'>
+          <div className='container mx-auto max-w-4xl text-center'>
+            <h2 className='text-4xl font-bold text-white mb-6'>
+              Ready to Transform Your Business?
             </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Contact us today to learn how our AI solutions can help your business grow.
+            <p className='text-xl text-white/90 mb-8'>
+              Contact us today to learn how we can help you achieve your goals
             </p>
-            <Link
-              href="/contact"
-              className="inline-block bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl"
-            >
-              Contact Us
-            </Link>
+            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+              <a
+                href='tel:+13024640950'
+                onClick={handlePhoneClick}
+                className='inline-flex items-center justify-center px-8 py-4 bg-white text-blue-600 rounded-xl font-bold hover:bg-gray-100 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl'
+              >
+                📞 Call Now
+              </a>
+              <Link
+                href='/contact'
+                className='inline-flex items-center justify-center px-8 py-4 bg-white/10 text-white border border-white/30 rounded-xl font-bold hover:bg-white/20 transition-all duration-300 transform hover:-translate-y-1'
+              >
+                Contact Us
+              </Link>
+            </div>
           </div>
-        </div>
+        </section>
       </div>
     </>
   );
