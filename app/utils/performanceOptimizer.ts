@@ -227,6 +227,42 @@ class PerformanceOptimizer {
     };
   }
 
+  startMark(markName: string) {
+    if (typeof window === 'undefined' || !window.performance) return;
+    
+    try {
+      window.performance.mark(`${markName}-start`);
+    } catch (error) {
+      console.warn(`Failed to create performance mark: ${markName}`, error);
+    }
+  }
+
+  endMark(markName: string): number | null {
+    if (typeof window === 'undefined' || !window.performance) return null;
+    
+    try {
+      window.performance.mark(`${markName}-end`);
+      const measureName = `${markName}-duration`;
+      window.performance.measure(measureName, `${markName}-start`, `${markName}-end`);
+      
+      const measures = window.performance.getEntriesByName(measureName, 'measure');
+      if (measures.length > 0) {
+        const duration = measures[0].duration;
+        
+        // Clean up marks and measures
+        window.performance.clearMarks(`${markName}-start`);
+        window.performance.clearMarks(`${markName}-end`);
+        window.performance.clearMeasures(measureName);
+        
+        return duration;
+      }
+    } catch (error) {
+      console.warn(`Failed to measure performance: ${markName}`, error);
+    }
+    
+    return null;
+  }
+
   cleanup() {
     this.observers.forEach(observer => observer.disconnect());
     this.observers = [];
