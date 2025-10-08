@@ -117,7 +117,7 @@ export const validationRules = {
       const hasUpperCase = /[A-Z]/.test(value);
       const hasLowerCase = /[a-z]/.test(value);
       const hasNumber = /[0-9]/.test(value);
-      const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>]/.test(value);
+      const hasSpecialChar = /[!@#$%^&*(),.?":{}|<div>]/.test(value);
       const hasMinLength = value.length >= 8;
       return hasUpperCase && hasLowerCase && hasNumber && hasSpecialChar && hasMinLength;
     },
@@ -221,7 +221,7 @@ export function getFormErrors<T extends Record<string, unknown>>(
 export function sanitizeInput(input: string): string {
   return input
     .trim()
-    .replace(/[<>]/g, '') // Remove potential HTML tags
+    .replace(/[<div>]/g, '') // Remove potential HTML tags
     .replace(/[^\w\s@.-]/gi, ''); // Keep only alphanumeric, spaces, @, ., -
 }
 

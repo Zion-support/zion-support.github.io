@@ -93,7 +93,7 @@ export const validationPatterns = {
  */
 export function sanitizeInput(input: string): string {
   return input
-    .replace(/[<>]/g, '') // Remove < and >
+    .replace(/[<div>]/g, '') // Remove < and >
     .replace(/javascript:/gi, '') // Remove javascript: protocol
     .replace(/on\w+\s*=/gi, '') // Remove event handlers
     .trim();

@@ -1,8 +1,7 @@
 import React from 'react';
 import { Star } from 'lucide-react';
-import { Metadata } from 'next';
 
-export const metadata: Metadata = {
+const metadata = {
   title: "AI 2026 February Mega Breakthrough Revolution: Transform Your Business",
   description: "Experience the revolutionary AI 2026 February mega breakthrough featuring advanced automation, intelligent systems, and unprecedented business transformation.",
   keywords: 'AI 2026, February breakthrough, mega revolution, business transformation, intelligent automation'
@@ -21,7 +20,7 @@ export default function AI2026FebruaryMegaBreakthroughRevolution() {
             Transform Your Business with Revolutionary AI Technology
           </p>
           <div className="flex items-center justify-center gap-2 text-yellow-400">
-            <Star className="w-6 h-6 fill-current" />
+            <Star className="w-6 h-6 fill-current"  />
             <span className="text-lg font-semibold">Mega Revolution</span>
           </div>
         </div>
@@ -32,19 +31,19 @@ export default function AI2026FebruaryMegaBreakthroughRevolution() {
             <h2 className="text-3xl font-bold text-white mb-6">Revolutionary Features</h2>
             <ul className="space-y-4 text-gray-300">
               <li className="flex items-center gap-3">
-                <Star className="w-5 h-5 text-cyan-400" />
+                <Star className="w-5 h-5 text-cyan-400"  />
                 Advanced Automation
               </li>
               <li className="flex items-center gap-3">
-                <Star className="w-5 h-5 text-cyan-400" />
+                <Star className="w-5 h-5 text-cyan-400"  />
                 Intelligent Systems
               </li>
               <li className="flex items-center gap-3">
-                <Star className="w-5 h-5 text-cyan-400" />
+                <Star className="w-5 h-5 text-cyan-400"  />
                 Business Transformation
               </li>
               <li className="flex items-center gap-3">
-                <Star className="w-5 h-5 text-cyan-400" />
+                <Star className="w-5 h-5 text-cyan-400"  />
                 Mega Revolution Technology
               </li>
             </ul>
@@ -54,19 +53,19 @@ export default function AI2026FebruaryMegaBreakthroughRevolution() {
             <h2 className="text-3xl font-bold text-white mb-6">Benefits</h2>
             <ul className="space-y-4 text-gray-300">
               <li className="flex items-center gap-3">
-                <Star className="w-5 h-5 text-green-400" />
+                <Star className="w-5 h-5 text-green-400"  />
                 Revolutionary Efficiency
               </li>
               <li className="flex items-center gap-3">
-                <Star className="w-5 h-5 text-green-400" />
+                <Star className="w-5 h-5 text-green-400"  />
                 Massive Cost Savings
               </li>
               <li className="flex items-center gap-3">
-                <Star className="w-5 h-5 text-green-400" />
+                <Star className="w-5 h-5 text-green-400"  />
                 Enhanced Productivity
               </li>
               <li className="flex items-center gap-3">
-                <Star className="w-5 h-5 text-green-400" />
+                <Star className="w-5 h-5 text-green-400"  />
                 Future-Ready Solutions
               </li>
             </ul>

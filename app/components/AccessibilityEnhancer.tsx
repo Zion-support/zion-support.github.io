@@ -1,4 +1,4 @@
-'use client';
+
 
 import React, { useEffect, useRef, useState, useCallback } from 'react';
 
@@ -146,7 +146,7 @@ const AccessibilityEnhancer = React.forwardRef<AccessibilityEnhancerRef, Accessi
           className="sr-only"
           aria-live="polite"
           aria-atomic="true"
-        />
+         />
       )}
     </div>
   );

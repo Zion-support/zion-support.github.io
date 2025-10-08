@@ -1,7 +1,6 @@
 import React from 'react';
-import { Metadata } from 'next';
 
-export const metadata: Metadata = {
+const metadata = {
   title: "AI 2026: Autonomous Enterprise Architecture Revolution",
   description: "Revolutionary autonomous enterprise architecture transforming business operations",
   authors: [{ name: 'Zion Tech Group' }],

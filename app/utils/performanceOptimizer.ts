@@ -1,4 +1,4 @@
-'use client';
+
 
 interface PerformanceMetrics {
   lcp?: number;

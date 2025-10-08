@@ -1,12 +1,7 @@
-'use client';
-
-import React, { useCallback, useState, useEffect, Suspense } from 'react';
-import dynamic from 'next/dynamic';
+import React, { useCallback, useState, useEffect, Suspense, lazy } from 'react';
 
 // Dynamically import heavy components for better performance
-const ServiceCard = dynamic(() => import('./components/ServiceCard'), {
-  loading: () => <ServiceCardSkeleton />,
-});
+const ServiceCard = lazy(() => import('./components/ServiceCard').catch(() => ({ default: () => <ServiceCardSkeleton  /> })));
 
 // Loading skeleton component
 const ServiceCardSkeleton: React.FC = () => (
@@ -88,7 +83,7 @@ const HomePage: React.FC = () => {
         >
           <h2 id="services-heading" className="sr-only">Our Services</h2>
           
-          <Suspense fallback={<ServiceCardSkeleton />}>
+          <Suspense fallback={<ServiceCardSkeleton  />}>
             <article className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
               <h3 className="text-2xl font-semibold text-gray-900 mb-4">
                 AI Solutions
@@ -99,7 +94,7 @@ const HomePage: React.FC = () => {
             </article>
           </Suspense>
 
-          <Suspense fallback={<ServiceCardSkeleton />}>
+          <Suspense fallback={<ServiceCardSkeleton  />}>
             <article className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
               <h3 className="text-2xl font-semibold text-gray-900 mb-4">
                 Digital Transformation
@@ -110,7 +105,7 @@ const HomePage: React.FC = () => {
             </article>
           </Suspense>
 
-          <Suspense fallback={<ServiceCardSkeleton />}>
+          <Suspense fallback={<ServiceCardSkeleton  />}>
             <article className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
               <h3 className="text-2xl font-semibold text-gray-900 mb-4">
                 Cloud Services

@@ -1,5 +1,5 @@
 import React from 'react';
-import dynamic from 'next/dynamic';
+import { lazy } from 'react';
 import SEOOptimizer from './components/SEOOptimizer';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
@@ -8,25 +8,11 @@ import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 const EmptyComponent = () => null;
 
 // Lazy load heavy components - these may not exist, so make them optional
-const UnifiedBanner = dynamic(() => import('./components/NewestContent2025Banner').catch(() => import('./components/EmptyComponent').catch(() => ({ default: EmptyComponent }))), {
-  loading: () => <div className="animate-pulse bg-gray-200 h-32 rounded-lg"></div>,
-  ssr: false
-});
+const UnifiedBanner = lazy(() => import('./components/NewestContent2025Banner').catch(() => import('./components/EmptyComponent').catch(() => ({ default: EmptyComponent }))));
 
-const ContentPromotion = dynamic(
-  () => import('./components/UltimateBusinessIntelligence2025Banner').catch(() => {
-    return { default: EmptyComponent } as any;
-  }), 
-  {
-    loading: () => <div className="animate-pulse bg-gray-200 h-64 rounded-lg"></div>,
-    ssr: false
-  }
-);
+const ContentPromotion = lazy(() => import('./components/UltimateBusinessIntelligence2025Banner').catch(() => ({ default: EmptyComponent })));
 
-const ContentShowcase = dynamic(() => import('./components/UltimateBusinessIntelligenceShowcase2025').catch(() => ({ default: EmptyComponent })), {
-  loading: () => <div className="animate-pulse bg-gray-200 h-48 rounded-lg"></div>,
-  ssr: false
-});
+const ContentShowcase = lazy(() => import('./components/UltimateBusinessIntelligenceShowcase2025').catch(() => ({ default: EmptyComponent })));
 
 export const metadata = {
   title: 'Zion Tech Group — AI Enterprise Transformation & IT Services | 300% ROI Guaranteed',
@@ -77,11 +63,11 @@ export default function OptimizedHomePage() {
   return (
     <AccessibilityEnhancer>
       <div className="min-h-screen bg-white">
-        <SEOOptimizer />
-        <PerformanceMonitor />
+        <SEOOptimizer  />
+        <PerformanceMonitor  />
         
         {/* Unified Banner System */}
-        <UnifiedBanner />
+        <UnifiedBanner  />
         
         {/* Main Content */}
         <main className="relative">
@@ -120,10 +106,10 @@ export default function OptimizedHomePage() {
           </section>
 
           {/* Content Showcase */}
-          <ContentShowcase />
+          <ContentShowcase  />
           
           {/* Content Promotion */}
-          <ContentPromotion />
+          <ContentPromotion  />
         </main>
       </div>
     </AccessibilityEnhancer>

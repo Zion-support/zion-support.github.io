@@ -31,7 +31,7 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
       <div
         className={`${sizeClasses[size]} ${colorClasses[color]} animate-spin rounded-full border-4 border-t-transparent border-current`}
         aria-hidden="true"
-      />
+       />
       {text && <p className="mt-2 text-sm text-gray-600">{text}</p>}
     </div>
   );

@@ -1,4 +1,4 @@
-'use client';
+
 
 import React, { useEffect, useState } from 'react';
 
@@ -146,7 +146,7 @@ const PWAInstaller: React.FC = () => {
                   strokeLinejoin='round'
                   strokeWidth={2}
                   d='M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z'
-                />
+                 />
               </svg>
             </div>
           </div>
@@ -189,7 +189,7 @@ const PWAInstaller: React.FC = () => {
                 strokeLinejoin='round'
                 strokeWidth={2}
                 d='M6 18L18 6M6 6l12 12'
-              />
+               />
             </svg>
           </button>
         </div>

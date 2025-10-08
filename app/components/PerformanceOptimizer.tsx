@@ -1,4 +1,4 @@
-'use client';
+
 
 import React, { useEffect, useCallback } from 'react';
 
@@ -79,7 +79,7 @@ const PerformanceOptimizerComponent: React.FC<PerformanceOptimizerProps> = ({
     return undefined;
   }, []);
 
-  return <>{children}</>;
+  return <div>{children}</div>;
 };
 
 export default PerformanceOptimizerComponent;

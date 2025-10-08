@@ -187,7 +187,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
               {/* Header */}
               <div className="text-center mb-6">
                 <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-red-100 mb-4">
-                  <AlertTriangle className="w-8 h-8 text-red-600" />
+                  <AlertTriangle className="w-8 h-8 text-red-600"  />
                 </div>
                 <h1 className="text-2xl font-bold text-gray-900 mb-2">
                   Oops! Something went wrong
@@ -206,7 +206,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
               {this.props.showErrorDetails && error && (
                 <div className="mb-6 p-4 bg-gray-50 rounded-lg">
                   <h3 className="text-sm font-semibold text-gray-700 mb-2 flex items-center">
-                    <AlertTriangle className="w-4 h-4 mr-2" />
+                    <AlertTriangle className="w-4 h-4 mr-2"  />
                     Error Details
                   </h3>
                   <div className="text-xs text-gray-600 font-mono">
@@ -232,7 +232,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
                     onClick={this.handleRetry}
                     className="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors flex items-center justify-center"
                   >
-                    <RefreshCw className="w-4 h-4 mr-2" />
+                    <RefreshCw className="w-4 h-4 mr-2"  />
                     Try Again ({this.maxRetries - retryCount} attempts left)
                   </button>
                 ) : (
@@ -240,7 +240,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
                     onClick={this.handleReload}
                     className="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors flex items-center justify-center"
                   >
-                    <RefreshCw className="w-4 h-4 mr-2" />
+                    <RefreshCw className="w-4 h-4 mr-2"  />
                     Reload Page
                   </button>
                 )}
@@ -250,7 +250,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
                     onClick={this.handleGoHome}
                     className="border-2 border-indigo-600 text-indigo-600 hover:bg-indigo-50 font-semibold py-3 px-6 rounded-lg transition-colors flex items-center justify-center"
                   >
-                    <Home className="w-4 h-4 mr-2" />
+                    <Home className="w-4 h-4 mr-2"  />
                     Go Home
                   </button>
 
@@ -260,7 +260,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
                       onClick={this.copyErrorDetails}
                       className="border-2 border-gray-300 text-gray-600 hover:bg-gray-50 font-semibold py-3 px-6 rounded-lg transition-colors flex items-center justify-center"
                     >
-                      <AlertTriangle className="w-4 h-4 mr-2" />
+                      <AlertTriangle className="w-4 h-4 mr-2"  />
                       Copy Details
                     </button>
                   )}

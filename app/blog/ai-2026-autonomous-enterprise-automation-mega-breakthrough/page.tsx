@@ -1,8 +1,7 @@
 import React from 'react';
 import { Star } from 'lucide-react';
-import { Metadata } from 'next';
 
-export const metadata: Metadata = {
+const metadata = {
   title: "AI 2026 Autonomous Enterprise Automation Mega Breakthrough: Complete Business Transformation",
   description: "Discover the revolutionary autonomous enterprise automation breakthrough of 2026, featuring 99.98% self-managing operations, intelligent process optimization, and $15 billion in proven enterprise value.",
   keywords: 'AI 2026, autonomous enterprise automation, business transformation, intelligent automation, enterprise AI, process optimization'
@@ -21,7 +20,7 @@ export default function AutonomousEnterpriseAutomationMegaBreakthrough() {
             Complete Business Transformation with 99.98% Self-Managing Operations
           </p>
           <div className="flex items-center justify-center gap-2 text-yellow-400">
-            <Star className="w-6 h-6 fill-current" />
+            <Star className="w-6 h-6 fill-current"  />
             <span className="text-lg font-semibold">Revolutionary Technology</span>
           </div>
         </div>
@@ -32,19 +31,19 @@ export default function AutonomousEnterpriseAutomationMegaBreakthrough() {
             <h2 className="text-3xl font-bold text-white mb-6">Key Features</h2>
             <ul className="space-y-4 text-gray-300">
               <li className="flex items-center gap-3">
-                <Star className="w-5 h-5 text-cyan-400" />
+                <Star className="w-5 h-5 text-cyan-400"  />
                 99.98% Self-Managing Operations
               </li>
               <li className="flex items-center gap-3">
-                <Star className="w-5 h-5 text-cyan-400" />
+                <Star className="w-5 h-5 text-cyan-400"  />
                 Intelligent Process Optimization
               </li>
               <li className="flex items-center gap-3">
-                <Star className="w-5 h-5 text-cyan-400" />
+                <Star className="w-5 h-5 text-cyan-400"  />
                 $15 Billion Proven Enterprise Value
               </li>
               <li className="flex items-center gap-3">
-                <Star className="w-5 h-5 text-cyan-400" />
+                <Star className="w-5 h-5 text-cyan-400"  />
                 Complete Business Transformation
               </li>
             </ul>
@@ -54,19 +53,19 @@ export default function AutonomousEnterpriseAutomationMegaBreakthrough() {
             <h2 className="text-3xl font-bold text-white mb-6">Benefits</h2>
             <ul className="space-y-4 text-gray-300">
               <li className="flex items-center gap-3">
-                <Star className="w-5 h-5 text-green-400" />
+                <Star className="w-5 h-5 text-green-400"  />
                 Massive Cost Reduction
               </li>
               <li className="flex items-center gap-3">
-                <Star className="w-5 h-5 text-green-400" />
+                <Star className="w-5 h-5 text-green-400"  />
                 Increased Efficiency
               </li>
               <li className="flex items-center gap-3">
-                <Star className="w-5 h-5 text-green-400" />
+                <Star className="w-5 h-5 text-green-400"  />
                 Enhanced Productivity
               </li>
               <li className="flex items-center gap-3">
-                <Star className="w-5 h-5 text-green-400" />
+                <Star className="w-5 h-5 text-green-400"  />
                 Future-Ready Operations
               </li>
             </ul>

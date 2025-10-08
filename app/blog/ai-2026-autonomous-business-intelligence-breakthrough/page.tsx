@@ -1,7 +1,6 @@
 import React from 'react';
-import { Metadata } from 'next';
 
-export const metadata: Metadata = {
+const metadata = {
   title: 'AI 2026 Autonomous Business Intelligence Breakthrough',
   description: 'Revolutionary autonomous BI systems delivering 300% ROI improvements and automated decision-making.',
   keywords: 'AI 2026, autonomous business intelligence, BI automation, enterprise AI, data analytics, business intelligence',

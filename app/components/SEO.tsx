@@ -100,47 +100,47 @@ export const SEO: React.FC<SEOProps> = ({
     <Helmet>
       {/* Basic Meta Tags */}
       <title>{seo.title}</title>
-      <meta name="description" content={seo.description} />
-      {seo.keywords && <meta name="keywords" content={seo.keywords.join(', ')} />}
+      <meta name="description" content={seo.description}  />
+      {seo.keywords && <meta name="keywords" content={seo.keywords.join(', ')}  />}
       
       {/* Canonical URL */}
-      {canonical && <link rel="canonical" href={canonical} />}
+      {canonical && <link rel="canonical" href={canonical}  />}
       
       {/* No Index */}
-      {noIndex && <meta name="robots" content="noindex, nofollow" />}
+      {noIndex && <meta name="robots" content="noindex, nofollow"  />}
 
       {/* Open Graph Meta Tags */}
-      <meta property="og:title" content={seo.title} />
-      <meta property="og:description" content={seo.description} />
-      <meta property="og:type" content={seo.type} />
-      <meta property="og:url" content={seo.url} />
-      <meta property="og:image" content={seo.image} />
-      <meta property="og:locale" content={seo.locale} />
-      <meta property="og:site_name" content="Zion Tech Group" />
+      <meta property="og:title" content={seo.title}  />
+      <meta property="og:description" content={seo.description}  />
+      <meta property="og:type" content={seo.type}  />
+      <meta property="og:url" content={seo.url}  />
+      <meta property="og:image" content={seo.image}  />
+      <meta property="og:locale" content={seo.locale}  />
+      <meta property="og:site_name" content="Zion Tech Group"  />
 
       {/* Alternate Locales */}
       {alternateLocales.map(({ locale: altLocale, url: altUrl }) => (
         <React.Fragment key={altLocale}>
-          <meta property="og:locale:alternate" content={altLocale} />
-          <link rel="alternate" hrefLang={altLocale} href={altUrl} />
+          <meta property="og:locale:alternate" content={altLocale}  />
+          <link rel="alternate" hrefLang={altLocale} href={altUrl}  />
         </React.Fragment>
       ))}
 
       {/* Twitter Card Meta Tags */}
-      <meta name="twitter:card" content={seo.twitterCard} />
-      <meta name="twitter:title" content={seo.title} />
-      <meta name="twitter:description" content={seo.description} />
-      <meta name="twitter:image" content={seo.image} />
-      <meta name="twitter:site" content="@ziontechgroup" />
-      {author && <meta name="twitter:creator" content={`@${author}`} />}
+      <meta name="twitter:card" content={seo.twitterCard}  />
+      <meta name="twitter:title" content={seo.title}  />
+      <meta name="twitter:description" content={seo.description}  />
+      <meta name="twitter:image" content={seo.image}  />
+      <meta name="twitter:site" content="@ziontechgroup"  />
+      {author && <meta name="twitter:creator" content={`@${author}`}  />}
 
       {/* Article Meta Tags */}
       {type === 'article' && (
-        <>
-          {publishDate && <meta property="article:published_time" content={publishDate} />}
-          {modifiedDate && <meta property="article:modified_time" content={modifiedDate} />}
-          {author && <meta property="article:author" content={author} />}
-        </>
+        <div>
+          {publishDate && <meta property="article:published_time" content={publishDate}  />}
+          {modifiedDate && <meta property="article:modified_time" content={modifiedDate}  />}
+          {author && <meta property="article:author" content={author}  />}
+        </div>
       )}
 
       {/* Structured Data */}
@@ -149,18 +149,18 @@ export const SEO: React.FC<SEOProps> = ({
       </script>
 
       {/* Preconnect to external domains */}
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+      <link rel="preconnect" href="https://fonts.googleapis.com"  />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous"  />
       
       {/* DNS Prefetch */}
-      <link rel="dns-prefetch" href="https://www.google-analytics.com" />
+      <link rel="dns-prefetch" href="https://www.google-analytics.com"  />
       
       {/* Preload critical resources */}
       <link
         rel="preload"
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
         as="style"
-      />
+       />
     </Helmet>
   );
 };

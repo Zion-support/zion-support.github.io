@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 const NewestContent2025Banner: React.FC = () => {
   return (
@@ -40,8 +40,7 @@ const NewestContent2025Banner: React.FC = () => {
               Advanced machine learning solutions that automate complex business processes 
               and drive unprecedented efficiency gains.
             </p>
-            <Link 
-              href="/blog/ai-edge-computing-real-time-intelligence-2025"
+            <Link to="/blog/ai-edge-computing-real-time-intelligence-2025"
               className="text-cyan-400 hover:text-cyan-300 font-semibold transition-colors inline-flex items-center gap-2"
             >
               Learn More →
@@ -57,8 +56,7 @@ const NewestContent2025Banner: React.FC = () => {
               Next-generation quantum computing solutions revolutionizing data processing 
               and complex problem-solving capabilities.
             </p>
-            <Link 
-              href="/blog/quantum-enhanced-neural-networks-2025"
+            <Link to="/blog/quantum-enhanced-neural-networks-2025"
               className="text-purple-400 hover:text-purple-300 font-semibold transition-colors inline-flex items-center gap-2"
             >
               Explore →
@@ -74,8 +72,7 @@ const NewestContent2025Banner: React.FC = () => {
               Enterprise-grade security with quantum-enhanced encryption protecting 
               your most critical business data and operations.
             </p>
-            <Link 
-              href="/blog/quantum-secure-ai-infrastructure-2025"
+            <Link to="/blog/quantum-secure-ai-infrastructure-2025"
               className="text-blue-400 hover:text-blue-300 font-semibold transition-colors inline-flex items-center gap-2"
             >
               Discover →
@@ -92,14 +89,12 @@ const NewestContent2025Banner: React.FC = () => {
             AI technologies to achieve unprecedented competitive advantage.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              href="/services/ai-services"
+            <Link to="/services/ai-services"
               className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 text-center"
             >
               Explore AI Services
             </Link>
-            <Link 
-              href="/contact"
+            <Link to="/contact"
               className="px-8 py-4 border border-slate-600 text-white font-semibold rounded-lg hover:bg-slate-800/50 transition-all duration-300 text-center"
             >
               Schedule Consultation
@@ -111,7 +106,7 @@ const NewestContent2025Banner: React.FC = () => {
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
             <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg flex items-center justify-center mb-4">
               <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"  />
               </svg>
             </div>
             <h3 className="text-xl font-semibold text-white mb-2">AI Innovation</h3>

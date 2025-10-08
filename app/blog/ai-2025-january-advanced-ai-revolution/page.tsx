@@ -1,6 +1,6 @@
-import { Metadata } from 'next';
+import React from 'react';
 
-export const metadata: Metadata = {
+const metadata = {
   title: 'January 2025 Advanced AI Revolution: Next-Generation Enterprise Transformation | Zion Tech Group',
   description: 'Discover the revolutionary AI breakthroughs transforming enterprise operations in January 2025. Advanced autonomous systems, quantum-enhanced intelligence, and $2.8B proven ROI.',
   keywords: 'AI revolution 2025, enterprise AI transformation, autonomous systems, quantum AI, machine learning, artificial intelligence, business automation',

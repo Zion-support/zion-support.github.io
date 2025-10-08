@@ -1,7 +1,6 @@
 import React from 'react';
-import { Metadata } from 'next';
 
-const metadata: Metadata = {
+const metadata = {
   title: 'Terms of Service - Zion Tech Group',
   description:
     'Terms of service and usage agreement for Zion Tech Group services and website.',
@@ -11,7 +10,7 @@ export { metadata };
 
 const TermsPage: React.FC = () => {
   return (
-    <>
+    <div>
       <div className='min-h-screen bg-slate-50 py-16'>
         <div className='container mx-auto px-4'>
           <div className='max-w-4xl mx-auto'>
@@ -121,9 +120,9 @@ const TermsPage: React.FC = () => {
                   <div className='mt-4 p-4 bg-gray-50 rounded-lg'>
                     <p className='text-gray-600'>
                       <strong>Email:</strong> legal@ziontechgroup.com
-                      <br />
+                      <br  />
                       <strong>Phone:</strong> +1 (555) 123-4567
-                      <br />
+                      <br  />
                       <strong>Address:</strong> 123 Tech Street, San Francisco,
                       CA 94105
                     </p>
@@ -134,7 +133,7 @@ const TermsPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { ArrowLeft, Calendar, User, Clock, Tag, Target, CheckCircle, ArrowRight, Zap, TrendingUp, Brain, Cpu } from 'lucide-react';
 
 export const metadata = {
@@ -21,11 +21,10 @@ export default function AI2027ImplementationRoadmap() {
       {/* Header */}
       <header className="bg-gradient-to-r from-purple-900 to-blue-900 text-white">
         <div className="max-w-6xl mx-auto px-4 py-12">
-          <Link 
-            href="/"
+          <Link to="/"
             className="inline-flex items-center text-blue-200 hover:text-white transition-colors mb-8"
           >
-            <ArrowLeft className="w-4 h-4 mr-2" />
+            <ArrowLeft className="w-4 h-4 mr-2"  />
             Back to Home
           </Link>
           
@@ -38,15 +37,15 @@ export default function AI2027ImplementationRoadmap() {
           
           <div className="flex flex-wrap gap-4">
             <span className="inline-flex items-center px-4 py-2 bg-green-500 text-white rounded-full text-sm font-semibold">
-              <CheckCircle className="w-4 h-4 mr-2" />
+              <CheckCircle className="w-4 h-4 mr-2"  />
               FREE ROADMAP
             </span>
             <span className="inline-flex items-center px-4 py-2 bg-blue-500 text-white rounded-full text-sm font-semibold">
-              <Clock className="w-4 h-4 mr-2" />
+              <Clock className="w-4 h-4 mr-2"  />
               12-MONTH PLAN
             </span>
             <span className="inline-flex items-center px-4 py-2 bg-purple-500 text-white rounded-full text-sm font-semibold">
-              <TrendingUp className="w-4 h-4 mr-2" />
+              <TrendingUp className="w-4 h-4 mr-2"  />
               $2.8T PROVEN
             </span>
           </div>
@@ -77,19 +76,19 @@ export default function AI2027ImplementationRoadmap() {
                 <h4 className="text-xl font-semibold text-gray-800 mb-4">Technical Requirements</h4>
                 <ul className="space-y-3">
                   <li className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0"  />
                     <span>Quantum computing infrastructure</span>
                   </li>
                   <li className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0"  />
                     <span>Advanced neural network hardware</span>
                   </li>
                   <li className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0"  />
                     <span>High-speed data processing systems</span>
                   </li>
                   <li className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0"  />
                     <span>Edge computing capabilities</span>
                   </li>
                 </ul>
@@ -99,19 +98,19 @@ export default function AI2027ImplementationRoadmap() {
                 <h4 className="text-xl font-semibold text-gray-800 mb-4">Organizational Readiness</h4>
                 <ul className="space-y-3">
                   <li className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0"  />
                     <span>Executive leadership commitment</span>
                   </li>
                   <li className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0"  />
                     <span>AI talent acquisition strategy</span>
                   </li>
                   <li className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0"  />
                     <span>Change management framework</span>
                   </li>
                   <li className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0"  />
                     <span>Ethical AI governance</span>
                   </li>
                 </ul>
@@ -253,25 +252,25 @@ export default function AI2027ImplementationRoadmap() {
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="bg-gradient-to-br from-blue-500 to-blue-600 text-white p-6 rounded-lg text-center">
-              <Brain className="w-12 h-12 mx-auto mb-4" />
+              <Brain className="w-12 h-12 mx-auto mb-4"  />
               <div className="text-3xl font-bold mb-2">1,000,000x</div>
               <div className="text-blue-100">Performance Improvement</div>
             </div>
             
             <div className="bg-gradient-to-br from-green-500 to-green-600 text-white p-6 rounded-lg text-center">
-              <TrendingUp className="w-12 h-12 mx-auto mb-4" />
+              <TrendingUp className="w-12 h-12 mx-auto mb-4"  />
               <div className="text-3xl font-bold mb-2">$2.8T</div>
               <div className="text-green-100">Enterprise Value</div>
             </div>
             
             <div className="bg-gradient-to-br from-purple-500 to-purple-600 text-white p-6 rounded-lg text-center">
-              <Zap className="w-12 h-12 mx-auto mb-4" />
+              <Zap className="w-12 h-12 mx-auto mb-4"  />
               <div className="text-3xl font-bold mb-2">99.9%</div>
               <div className="text-purple-100">Automation Rate</div>
             </div>
             
             <div className="bg-gradient-to-br from-orange-500 to-orange-600 text-white p-6 rounded-lg text-center">
-              <Target className="w-12 h-12 mx-auto mb-4" />
+              <Target className="w-12 h-12 mx-auto mb-4"  />
               <div className="text-3xl font-bold mb-2">12</div>
               <div className="text-orange-100">Months to ROI</div>
             </div>
@@ -312,19 +311,17 @@ export default function AI2027ImplementationRoadmap() {
             Join the leaders in neural superintelligence implementation. Get your personalized roadmap today.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <Link 
-              href="/contact"
+            <Link to="/contact"
               className="inline-flex items-center px-8 py-4 bg-white text-purple-900 rounded-lg hover:bg-blue-50 transition-colors font-semibold"
             >
               Get Your Roadmap
-              <ArrowRight className="w-5 h-5 ml-2" />
+              <ArrowRight className="w-5 h-5 ml-2"  />
             </Link>
-            <Link 
-              href="/case-studies"
+            <Link to="/case-studies"
               className="inline-flex items-center px-8 py-4 bg-transparent border-2 border-white text-white rounded-lg hover:bg-white hover:text-purple-900 transition-colors font-semibold"
             >
               View Success Stories
-              <ArrowRight className="w-5 h-5 ml-2" />
+              <ArrowRight className="w-5 h-5 ml-2"  />
             </Link>
           </div>
         </div>

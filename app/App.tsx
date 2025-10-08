@@ -1,4 +1,4 @@
-'use client';
+
 
 import React, { Suspense, lazy, useEffect, useCallback } from 'react';
 import { HelmetProvider } from 'react-helmet-async';
@@ -73,19 +73,19 @@ const App: React.FC = () => {
               enableOpenGraph={true}
               enableTwitterCards={true}
               enableSchemaMarkup={true}
-            />
+             />
             <Router>
               <div className="App">
                 <main id="main-content">
-                  <Suspense fallback={<LoadingSpinner />}>
+                  <Suspense fallback={<LoadingSpinner  />}>
                     <Routes>
-                      <Route path="/" element={<HomePage />} />
+                      <Route path="/" element={<HomePage  />}  />
                       {/* Add more routes as needed */}
                     </Routes>
                   </Suspense>
                 </main>
-                <AdvancedPerformanceMonitor />
-                <PerformanceDashboard />
+                <AdvancedPerformanceMonitor  />
+                <PerformanceDashboard  />
               </div>
             </Router>
           </SEOEnhancer>
