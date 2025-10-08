@@ -57,7 +57,8 @@ const PerformanceMonitor: React.FC = () => {
         if (typeof console !== 'undefined') {
           logger.debug('Performance Metrics', {
             metrics: currentMetrics,
-            score,          });
+            score,
+          });
         });
         
         try {

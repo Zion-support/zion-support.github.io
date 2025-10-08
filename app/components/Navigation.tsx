@@ -100,9 +100,9 @@ const Navigation: React.FC = () => {
               </Link>
             </div>
           </div>
-                </div>
-              )}
-            </div>
+        </div>
+      )}
+      </div>
             {/* Technologies Dropdown */}
             <div className="relative">
               <button

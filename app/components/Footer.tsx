@@ -105,10 +105,11 @@ const Footer: React.FC = memo(() => {  return (
                     Documentation
                   </a>
                 </li>
-              </ul>            </div>
+              </ul>
+            </div>
           </div>
         </div>
-      </div>
+      </footer>
 
       {/* Bottom Footer */}
       <div className="border-t border-gray-700 py-8">

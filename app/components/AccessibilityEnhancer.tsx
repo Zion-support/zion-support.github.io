@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 
 interface AccessibilityEnhancerProps {
   children: React.ReactNode;
@@ -20,41 +20,56 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   const [isReducedMotion, setIsReducedMotion] = useState(false);
   const [isHighContrast, setIsHighContrast] = useState(false);
   const [fontSize, setFontSize] = useState(16);
-      // Add skip links
-      const skipLink = document.createElement('a');
-      skipLink.href = '#main-content';
-      skipLink.textContent = 'Skip to main content';
-      skipLink.className = 'skip-link';
-      document.body.insertBefore(skipLink, document.body.firstChild);
+
+  useEffect(() => {
+    // Check for reduced motion preference
+    const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+    const handleChange = (e: MediaQueryListEvent) => {
+      setIsReducedMotion(e.matches);
     };
 
+    setIsReducedMotion(mediaQuery.matches);
     mediaQuery.addEventListener('change', handleChange);
 
     // Check for high contrast preference
     const highContrastQuery = window.matchMedia('(prefers-contrast: high)');
     setIsHighContrast(highContrastQuery.matches);
-      // Add ARIA labels to links
-      const links = document.querySelectorAll('a:not([aria-label]):not([aria-labelledby])');
-      links.forEach((link, index) => {
-        if (!link.getAttribute('aria-label') && !link.textContent?.trim()) {
-          link.setAttribute('aria-label', `Link ${index + 1}`);
-        }
-      });
 
-      // Add role attributes to sections
-      const sections = document.querySelectorAll('section:not([role])');
-      sections.forEach(section => {
-        section.setAttribute('role', 'region');
-      });
+    // Add skip links
+    if (enableSkipLinks) {
+      const skipLink = document.createElement('a');
+      skipLink.href = '#main-content';
+      skipLink.textContent = 'Skip to main content';
+      skipLink.className = 'skip-link';
+      document.body.insertBefore(skipLink, document.body.firstChild);
+    }
 
-      // Add heading hierarchy
-      const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
-      headings.forEach((heading, index) => {
-        if (!heading.id) {
-          heading.id = `heading-${index}`;
-        }
-      });
+    // Add ARIA labels to links
+    const links = document.querySelectorAll('a:not([aria-label]):not([aria-labelledby])');
+    links.forEach((link, index) => {
+      if (!link.getAttribute('aria-label') && !link.textContent?.trim()) {
+        link.setAttribute('aria-label', `Link ${index + 1}`);
+      }
+    });
+
+    // Add role attributes to sections
+    const sections = document.querySelectorAll('section:not([role])');
+    sections.forEach(section => {
+      section.setAttribute('role', 'region');
+    });
+
+    // Add heading hierarchy
+    const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
+    headings.forEach((heading, index) => {
+      if (!heading.id) {
+        heading.id = `heading-${index}`;
+      }
+    });
+
+    return () => {
+      mediaQuery.removeEventListener('change', handleChange);
     };
+  }, [enableSkipLinks]);
 
     // Enhance color contrast
     const enhanceColorContrast = () => {
@@ -261,7 +276,8 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       if (announcement.parentNode) {
         announcement.parentNode.removeChild(announcement);
       }
-    }, 1000);  }, []);
+    }, 1000);
+  }, []);
 
   return <>{children}</>;
 };
