@@ -74,16 +74,13 @@
     "tsBuildInfoFile": ".next/cache/tsconfig.tsbuildinfo"
   },
   "include": [
-    "next-env.d.ts",
-    "app/**/*",
     "src/**/*",
     "App.tsx",
     "components/**/*",
     "api/**/*.ts",
     "api/**/*.js",
     "*.ts",
-    "*.tsx",
-    ".next/types/**/*.ts"
+    "*.tsx"
   ],
   "exclude": [
     "node_modules",

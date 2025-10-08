@@ -12,7 +12,9 @@ export default defineConfig({
       brotliSize: true,
     }),
   ],
+  root: '.',
   build: {
+    outDir: 'dist',
     target: 'es2015',
     minify: 'terser',
     sourcemap: false,
