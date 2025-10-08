@@ -237,25 +237,22 @@ const HomePage: React.FC = () => {
                 </div>
               </article>
             </Suspense>
-<<<<<<< HEAD
-=======
 
             <Suspense fallback={<ServiceCardSkeleton />}>
-              <article className="bg-white rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
+              <article className="cyber-card hologram-card">
                 <div className="text-5xl mb-6 text-center">🔄</div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">Autonomous Systems</h3>
-                <p className="text-gray-600 mb-6 text-center leading-relaxed">
+                <h3 className="text-2xl font-bold text-white mb-4 text-center">Autonomous Systems</h3>
+                <p className="text-gray-300 mb-6 text-center leading-relaxed">
                   Self-managing and self-optimizing systems for enterprise operations and infrastructure.
                 </p>
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-green-600 mb-2">Starting at $2,500/month</div>
-                  <a href="/autonomous-systems" className="text-green-600 hover:text-green-700 font-medium">
+                  <div className="text-2xl font-bold text-green-400 mb-2">Starting at $2,500/month</div>
+                  <a href="/autonomous-systems" className="text-green-400 hover:text-green-300 font-medium">
                     Learn More →
                   </a>
                 </div>
               </article>
             </Suspense>
->>>>>>> cursor/analyze-improve-and-deploy-application-144c
           </div>
           
           <div className="grid md:grid-cols-3 gap-8">
@@ -303,18 +300,15 @@ const HomePage: React.FC = () => {
               </ul>
             </article>
           </div>
-<<<<<<< HEAD
-=======
           
           <div className="text-center mt-8">
             <a 
               href="/services"
-              className="inline-block bg-indigo-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-4 focus:ring-indigo-300"
+              className="cyber-button"
             >
               View All Services
             </a>
           </div>
->>>>>>> cursor/analyze-improve-and-deploy-application-144c
         </section>
 
         {/* Content Carousel */}
