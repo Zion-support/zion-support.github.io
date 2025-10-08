@@ -50,12 +50,11 @@ export {
   isValidUuid,
 } from './validation';
 
-// Export errorHandler module items individually
+// Export errorHandler module items
 export {
   ErrorSeverity,
   ErrorCategory,
   type ErrorInfo,
-  ErrorHandler,
 } from './errorHandler';
 export { default as errorHandler } from './errorHandler';
 
