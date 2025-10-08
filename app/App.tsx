@@ -1,7 +1,6 @@
 'use client';
 
-import React, { Suspense, lazy, useCallback, useEffect } from 'react';
-import Link from 'next/link';
+import React, { Suspense, lazy, useEffect } from 'react';
 import { HelmetProvider } from 'react-helmet-async';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
