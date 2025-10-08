@@ -2,7 +2,6 @@ import React, { memo, useMemo, useCallback, Suspense } from 'react';
 import { HelmetProvider, Helmet } from 'react-helmet-async';
 
 // Memoized components for better performance
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3f25
 const UnifiedContentPromotion = memo(() => (
   <div className='bg-gradient-to-r from-blue-600 to-purple-700 text-white py-16'>
     <div className='container mx-auto px-4 text-center'>
@@ -46,59 +45,13 @@ const InteractiveContentShowcase2026 = memo(() => (
     </div>
   </div>
 ));
-interface ErrorBoundaryState {
-  hasError: boolean;
-  error: Error | null;
-}
-interface ErrorBoundaryProps {
-  children: React.ReactNode;
-}
-class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundaryState> {
-  constructor(props: ErrorBoundaryProps) {
-    super(props);
-    this.state = { hasError: false, error: null };
-  }
-  static getDerivedStateFromError(error: Error): ErrorBoundaryState {
-    return { hasError: true, error };
-  }
-  override componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
-    console.error('App Error Boundary caught an error:', error, errorInfo);
-  }
-  override render() {
-    if (this.state.hasError) {
-      return (
-        <div className="min-h-screen flex items-center justify-center bg-gray-50">
-          <div className="text-center p-8">
-            <h1 className="text-2xl font-bold text-gray-900 mb-4">
-              Something went wrong
-            </h1>
-            <p className="text-gray-600 mb-4">
-              We're working to fix this issue. Please try refreshing the page.
-            </p>
-            <button
-              onClick={() => window.location.reload()}
-              className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors"
-            >
-              Refresh Page
-            </button>
-          </div>
-        </div>
-      );
-    }
-    return this.props.children;
-  }
-}
-//Loading component
-=======
 
 // Loading component
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3f25
 const LoadingSpinner = memo(() => (
   <div className="animate-pulse bg-gray-200 h-32 rounded flex items-center justify-center">
     <div className="text-gray-500">Loading...</div>
   </div>
 ));
-=======
 
 // Error Boundary Component
 interface ErrorBoundaryState {
@@ -128,18 +81,18 @@ class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundarySta
     if (this.state.hasError) {
       return (
         <div className="min-h-screen flex items-center justify-center bg-gray-50">
-          <div className="text-center">
+          <div className="text-center p-8">
             <h1 className="text-2xl font-bold text-gray-900 mb-4">
               Something went wrong
             </h1>
             <p className="text-gray-600 mb-4">
-              We're sorry, but something unexpected happened.
+              We're working to fix this issue. Please try refreshing the page.
             </p>
             <button
               onClick={() => window.location.reload()}
-              className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+              className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors"
             >
-              Reload Page
+              Refresh Page
             </button>
           </div>
         </div>
@@ -150,7 +103,6 @@ class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundarySta
   }
 }
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3f25
 export default function App() {
   const structuredData = useMemo(
     () => ({
@@ -191,7 +143,6 @@ export default function App() {
     }),
     []
   );
-  }, []);
 
   return (
     <ErrorBoundary>
@@ -214,6 +165,14 @@ export default function App() {
             {JSON.stringify(structuredData)}
           </script>
         </Helmet>
+        <div className="min-h-screen">
+          <Suspense fallback={<LoadingSpinner />}>
+            <UnifiedContentPromotion />
+            <InteractiveAIROICalculator />
+            <ContentShowcase />
+            <InteractiveContentShowcase2026 />
+          </Suspense>
+        </div>
       </HelmetProvider>
     </ErrorBoundary>
   );
