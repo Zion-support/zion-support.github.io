@@ -4,9 +4,13 @@ import SEOOptimizer from './components/SEOOptimizer';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 
-// Lazy load heavy components - these may not exist, so make them optional
+// Fallback component for optional imports
+const FallbackBanner = () => <div className="hidden" />;
+
+// Lazy load heavy components - these may not exist, so provide fallbacks
 const UnifiedBanner = dynamic(
-  () => import('./components/NewestContent2025Banner').catch(() => Promise.resolve({ default: () => null })),
+  () => import('./components/NewestContent2025Banner')
+    .catch(() => ({ default: FallbackBanner })),
   {
     loading: () => <div className="animate-pulse bg-gray-200 h-32 rounded-lg"></div>,
     ssr: false
@@ -14,7 +18,8 @@ const UnifiedBanner = dynamic(
 );
 
 const ContentPromotion = dynamic(
-  () => import('./components/UltimateBusinessIntelligence2025Banner').catch(() => Promise.resolve({ default: () => null })),
+  () => import('./components/UltimateBusinessIntelligence2025Banner')
+    .catch(() => ({ default: FallbackBanner })),
   {
     loading: () => <div className="animate-pulse bg-gray-200 h-64 rounded-lg"></div>,
     ssr: false
@@ -22,7 +27,8 @@ const ContentPromotion = dynamic(
 );
 
 const ContentShowcase = dynamic(
-  () => import('./components/UltimateBusinessIntelligenceShowcase2025').catch(() => Promise.resolve({ default: () => null })),
+  () => import('./components/UltimateBusinessIntelligenceShowcase2025')
+    .catch(() => ({ default: FallbackBanner })),
   {
     loading: () => <div className="animate-pulse bg-gray-200 h-48 rounded-lg"></div>,
     ssr: false
@@ -98,8 +104,8 @@ export default function OptimizedHomePage() {
                   </span>
                 </h1>
                 <p className="text-xl md:text-2xl mb-8 text-blue-100 max-w-4xl mx-auto">
-                  Transform your enterprise with AI-powered solutions that deliver 300% ROI,
-                  70% cost reduction, and 90% efficiency gains. Expert AI consulting,
+                  Transform your enterprise with AI-powered solutions that deliver 300% ROI, 
+                  70% cost reduction, and 90% efficiency gains. Expert AI consulting, 
                   autonomous systems, and digital transformation services.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
