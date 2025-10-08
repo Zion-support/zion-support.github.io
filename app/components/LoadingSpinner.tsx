@@ -1,36 +1,23 @@
+'use client';
 import React from 'react';
 
 interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg';
-  color?: 'indigo' | 'blue' | 'green' | 'purple';
-  text?: string;
   className?: string;
 }
 
-const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
-  size = 'md',
-  color = 'indigo',
-  text,
-  className = '',
-}) => {
+export default function LoadingSpinner({ size = 'md', className = '' }: LoadingSpinnerProps) {
   const sizeClasses = {
-    sm: 'w-4 h-4',
-    md: 'w-8 h-8',
-    lg: 'w-12 h-12',
-  };
-
-  const colorClasses = {
-    indigo: 'text-indigo-600',
-    blue: 'text-blue-600',
-    green: 'text-green-600',
-    purple: 'text-purple-600',
+    sm: 'h-4 w-4',
+    md: 'h-8 w-8',
+    lg: 'h-12 w-12',
   };
 
   return (
-    <div className={`flex flex-col items-center justify-center ${className}`} role="status" aria-live="polite">
+    <div className="flex items-center justify-center">
       <div
+        className={"animate-spin rounded-full border-b-2 border-indigo-600 " + sizeClasses[size] + " " + className}
+      />
     </div>
   );
-};
-
-export default LoadingSpinner;
+}

@@ -1,101 +1,72 @@
+'use client';
+
 import React from 'react';
+
+export default function AboutPage() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-white to-purple-50">
+      <main className="container mx-auto px-4 py-16">
+        <section className="mb-16">
+          <h1 className="text-5xl font-bold text-gray-900 mb-6">About Zion Tech Group</h1>
+          <p className="text-xl text-gray-700 mb-8">
+            Leading the future of AI-powered enterprise solutions and digital transformation.
+          </p>
+        </section>
+
+        <section className="grid md:grid-cols-2 gap-12 mb-16">
+          <div>
+            <h2 className="text-3xl font-semibold text-gray-900 mb-4">Our Mission</h2>
+            <p className="text-gray-700 leading-relaxed">
+              To empower businesses with cutting-edge AI and technology solutions that drive
+              innovation, efficiency, and growth in the digital age.
+            </p>
+          </div>
+
+          <div>
+            <h2 className="text-3xl font-semibold text-gray-900 mb-4">Our Vision</h2>
+            <p className="text-gray-700 leading-relaxed">
+              To be the global leader in AI-powered enterprise transformation, helping organizations
+              achieve unprecedented levels of automation and intelligence.
+            </p>
+          </div>
+        </section>
+
+        <section className="mb-16">
+          <h2 className="text-3xl font-semibold text-gray-900 mb-8">Our Values</h2>
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="bg-white rounded-lg shadow-lg p-6">
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">Innovation</h3>
+              <p className="text-gray-600">
+                Continuously pushing boundaries with cutting-edge technology solutions.
               </p>
             </div>
 
-            <div className='prose prose-lg max-w-none'>
-              <div className='bg-white rounded-lg shadow-lg p-8 mb-8'>
-                <h2 className='text-2xl font-bold text-gray-900 mb-4'>
-                  Our Mission
-                </h2>
-                <p className='text-gray-600 mb-4'>
-                  At Zion Tech Group, we are dedicated to transforming
-                  businesses through cutting-edge AI and IT solutions. Our
-                  mission is to empower organizations with the technology they
-                  need to thrive in the digital age.
-                </p>
-                <p className='text-gray-600'>
-                  We combine deep technical expertise with innovative thinking
-                  to deliver solutions that drive real business value.
-                </p>
-              </div>
+            <div className="bg-white rounded-lg shadow-lg p-6">
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">Excellence</h3>
+              <p className="text-gray-600">
+                Delivering exceptional quality in every project and interaction.
+              </p>
+            </div>
 
-              <div className='bg-white rounded-lg shadow-lg p-8 mb-8'>
-                <h2 className='text-2xl font-bold text-gray-900 mb-4'>
-                  Our Expertise
-                </h2>
-                <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
-                  <div>
-                    <h3 className='text-lg font-semibold text-gray-900 mb-2'>
-                      AI Solutions
-                    </h3>
-                    <p className='text-gray-600'>
-                      Advanced machine learning, natural language processing,
-                      and computer vision solutions.
-                    </p>
-                  </div>
-                  <div>
-                    <h3 className='text-lg font-semibold text-gray-900 mb-2'>
-                      Quantum Computing
-                    </h3>
-                    <p className='text-gray-600'>
-                      Next-generation quantum algorithms and quantum security
-                      implementations.
-                    </p>
-                  </div>
-                  <div>
-                    <h3 className='text-lg font-semibold text-gray-900 mb-2'>
-                      Autonomous Systems
-                    </h3>
-                    <p className='text-gray-600'>
-                      Self-managing and self-optimizing systems for enterprise
-                      operations.
-                    </p>
-                  </div>
-                  <div>
-                    <h3 className='text-lg font-semibold text-gray-900 mb-2'>
-                      Business Intelligence
-                    </h3>
-                    <p className='text-gray-600'>
-                      Data-driven insights and analytics for strategic decision
-                      making.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div className='bg-white rounded-lg shadow-lg p-8'>
-                <h2 className='text-2xl font-bold text-gray-900 mb-4'>
-                  Why Choose Us
-                </h2>
-                <ul className='space-y-3 text-gray-600'>
-                  <li className='flex items-start'>
-                    <span className='w-2 h-2 bg-blue-500 rounded-full mr-3 mt-2'></span>
-                    <span>
-                      Proven track record of successful AI implementations
-                    </span>
-                  </li>
-                  <li className='flex items-start'>
-                    <span className='w-2 h-2 bg-blue-500 rounded-full mr-3 mt-2'></span>
-                    <span>Expert team with deep technical knowledge</span>
-                  </li>
-                  <li className='flex items-start'>
-                    <span className='w-2 h-2 bg-blue-500 rounded-full mr-3 mt-2'></span>
-                    <span>
-                      Cutting-edge technology and innovative approaches
-                    </span>
-                  </li>
-                  <li className='flex items-start'>
-                    <span className='w-2 h-2 bg-blue-500 rounded-full mr-3 mt-2'></span>
-                    <span>Comprehensive support and maintenance services</span>
-                  </li>
-                </ul>
-              </div>
+            <div className="bg-white rounded-lg shadow-lg p-6">
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">Partnership</h3>
+              <p className="text-gray-600">
+                Building lasting relationships through trust and collaboration.
+              </p>
             </div>
           </div>
-        </div>
-      </div>
-    </>
-  );
-};
+        </section>
 
-export default AboutPage;
+        <section className="text-center">
+          <h2 className="text-3xl font-semibold text-gray-900 mb-6">Ready to Transform Your Business?</h2>
+          <a
+            href="tel:+13026009898"
+            className="inline-block bg-indigo-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-colors"
+          >
+            Contact Us Today
+          </a>
+        </section>
+      </main>
+    </div>
+  );
+}
