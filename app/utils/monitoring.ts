@@ -61,7 +61,7 @@ class MonitoringService {
         const fidObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
           entries.forEach((entry: PerformanceEntry) => {
-            this.metrics.fid = (entry as PerformanceEventTiming).processingStart - entry.startTime;
+            this.metrics.fid = (entry as PerformanceEntry & { processingStart: number }).processingStart - entry.startTime;
             this.reportMetric('fid', this.metrics.fid);
           });
         });
@@ -72,7 +72,7 @@ class MonitoringService {
         const clsObserver = new PerformanceObserver(list => {
           const entries = list.getEntries();
           entries.forEach((entry: PerformanceEntry) => {
-            if (!(entry as PerformanceEventTiming).hadRecentInput) {
+            if (!(entry as PerformanceEntry & { hadRecentInput: boolean }).hadRecentInput) {
               clsValue += entry.value;
               this.metrics.cls = clsValue;
               this.reportMetric('cls', clsValue);
@@ -107,7 +107,7 @@ class MonitoringService {
           }
         });
         longTaskObserver.observe({ entryTypes: ['longtask'] });
-      } catch (_error) {
+      } catch {
         // Long task API might not be available
       }
     }
@@ -122,7 +122,7 @@ class MonitoringService {
               console.warn('Slow resource detected:', {
                 name: entry.name,
                 duration: entry.duration,
-                type: (entry as PerformanceResourceTiming).initiatorType,
+                type: (entry as PerformanceEntry & { initiatorType: string }).initiatorType,
               });
             }
           });

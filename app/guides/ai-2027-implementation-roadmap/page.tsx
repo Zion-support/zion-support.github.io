@@ -2,12 +2,16 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import {
   ArrowLeft,
+  // Calendar,
+  // User,
   Clock,
+  // Tag,
   Target,
   CheckCircle,
   Zap,
   TrendingUp,
   Brain,
+  // Cpu,
 } from 'lucide-react';
 
 export const metadata = {

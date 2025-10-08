@@ -162,7 +162,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     }
   }, [seoData]);
 
-  // Helper function for adding meta tags (currently unused)
+  // Helper functions for SEO optimization (currently unused but available for future use)
   // const _addMetaTag = (name: string, content: string, attribute: string = 'name') => {
   //   const metaTag = document.createElement('meta');
   //   metaTag.setAttribute(attribute, name);
@@ -170,9 +170,9 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
   //   document.head.appendChild(metaTag);
   // };
 
-  // Helper function for updating canonical URL (currently unused)
   // const _updateCanonicalUrl = (url: string) => {
   //   let canonicalLink = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
+
   //   if (canonicalLink) {
   //     canonicalLink.href = url;
   //   } else {
@@ -183,12 +183,12 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
   //   }
   // };
 
-  // Helper function for adding structured data (currently unused)
   // const _addStructuredData = (data: Record<string, unknown>) => {
   //   // Remove existing structured data
   //   if (structuredDataRef.current) {
   //     structuredDataRef.current.remove();
   //   }
+
   //   // Add new structured data
   //   const script = document.createElement('script');
   //   script.type = 'application/ld+json';
@@ -198,7 +198,6 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
   //   structuredDataRef.current = script;
   // };
 
-  // Helper function for tracking page views (currently unused)
   // const _trackPageView = (config: SEOData) => {
   //   if (typeof window !== 'undefined' && 'gtag' in window) {
   //     (
@@ -212,7 +211,6 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
   //   }
   // };
 
-  // Helper function for tracking performance metrics (currently unused)
   // const _trackPerformanceMetrics = () => {
   //   if (typeof window !== 'undefined' && 'performance' in window) {
   //     window.addEventListener('load', () => {
@@ -233,13 +231,6 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
   //     });
   //   }
   // };
-
-  // Suppress unused variable warnings - these functions are commented out but referenced to avoid linting warnings
-  // void _addMetaTag;
-  // void _updateCanonicalUrl;
-  // void _addStructuredData;
-  // void _trackPageView;
-  // void _trackPerformanceMetrics;
 
   return (
     <Helmet>

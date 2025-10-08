@@ -167,10 +167,10 @@ class HealthCheckService {
           used: memory.usedJSHeapSize,
           total: memory.totalJSHeapSize,
           limit: memory.jsHeapSizeLimit,
-          usedPercent
-        }
-      }
-    } catch (error) {
+          usedPercent,
+        },
+      };
+    } catch {
       return {
         name: 'memory',
         status: 'warn',
@@ -202,10 +202,10 @@ class HealthCheckService {
         message,
         details: {
           metrics: report.metrics,
-          summary: report.summary
-        }
-      }
-    } catch (error) {
+          summary: report.summary,
+        },
+      };
+    } catch {
       return {
         name: 'performance',
         status: 'warn'
@@ -270,11 +270,9 @@ class HealthCheckService {
       // Check available space (approximate)
       const testData = 'x'.repeat(1024 * 1024); // 1MB
       try {
-        localStorage.setItem('_size_test', testData)
-        localStorage.removeItem('_size_test')
-
+        localStorage.setItem('_size_test', testData);
+        localStorage.removeItem('_size_test');
       } catch {
-      } catch (error) {
         return {
           name: 'storage'
           status: 'warn'
@@ -282,12 +280,11 @@ class HealthCheckService {
         }
       }
       return {
-        name: 'storage'
-        status: 'pass'
-        message: 'Storage working correctly'
-      }
+        name: 'storage',
+        status: 'pass',
+        message: 'Storage working correctly',
+      };
     } catch {
-    } catch (error) {
       return {
         name: 'storage'
         status: 'fail'
