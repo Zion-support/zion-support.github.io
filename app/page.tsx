@@ -128,7 +128,117 @@ const HomePage: React.FC = () => {
           <p className="text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto">
             Comprehensive AI and IT solutions designed to transform your business operations
           </p>
-          <div className="grid md:grid-cols-3 gap-8 mb-12">
+          
+          {/* Micro SAAS Services */}
+          <div className="mb-16">
+            <h3 className="text-2xl md:text-3xl font-bold text-cyan-400 mb-8 text-center">
+              🚀 Micro SAAS Solutions
+            </h3>
+            <p className="text-lg text-gray-300 text-center mb-8 max-w-4xl mx-auto">
+              Affordable, powerful AI-driven tools for modern businesses. Start from $49/month.
+            </p>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+              <article className="cyber-card hologram-card">
+                <div className="text-4xl mb-4">🔍</div>
+                <h4 className="text-xl font-bold text-white mb-3">AI Code Review Assistant</h4>
+                <p className="text-gray-300 mb-4 text-sm">
+                  Automated code analysis, bug detection, and security vulnerability scanning.
+                </p>
+                <div className="text-center">
+                  <div className="text-xl font-bold text-cyan-400 mb-2">$89/month</div>
+                  <div className="text-sm text-gray-400 mb-3">Market Price: $150-300/month</div>
+                  <a href="/micro-saas" className="text-cyan-400 hover:text-cyan-300 font-medium text-sm">
+                    Learn More →
+                  </a>
+                </div>
+              </article>
+
+              <article className="cyber-card hologram-card">
+                <div className="text-4xl mb-4">🎯</div>
+                <h4 className="text-xl font-bold text-white mb-3">AI SEO Optimizer</h4>
+                <p className="text-gray-300 mb-4 text-sm">
+                  Advanced SEO analysis with AI-driven content suggestions and keyword research.
+                </p>
+                <div className="text-center">
+                  <div className="text-xl font-bold text-pink-400 mb-2">$199/month</div>
+                  <div className="text-sm text-gray-400 mb-3">Market Price: $300-600/month</div>
+                  <a href="/micro-saas" className="text-pink-400 hover:text-pink-300 font-medium text-sm">
+                    Learn More →
+                  </a>
+                </div>
+              </article>
+
+              <article className="cyber-card hologram-card">
+                <div className="text-4xl mb-4">💰</div>
+                <h4 className="text-xl font-bold text-white mb-3">Smart Invoice Generator</h4>
+                <p className="text-gray-300 mb-4 text-sm">
+                  AI-powered invoice creation with automated billing and payment tracking.
+                </p>
+                <div className="text-center">
+                  <div className="text-xl font-bold text-green-400 mb-2">$79/month</div>
+                  <div className="text-sm text-gray-400 mb-3">Market Price: $120-250/month</div>
+                  <a href="/micro-saas" className="text-green-400 hover:text-green-300 font-medium text-sm">
+                    Learn More →
+                  </a>
+                </div>
+              </article>
+
+              <article className="cyber-card hologram-card">
+                <div className="text-4xl mb-4">🎬</div>
+                <h4 className="text-xl font-bold text-white mb-3">AI Video Creator</h4>
+                <p className="text-gray-300 mb-4 text-sm">
+                  Automated video creation with AI-generated scripts and voiceovers.
+                </p>
+                <div className="text-center">
+                  <div className="text-xl font-bold text-purple-400 mb-2">$299/month</div>
+                  <div className="text-sm text-gray-400 mb-3">Market Price: $500-1000/month</div>
+                  <a href="/micro-saas" className="text-purple-400 hover:text-purple-300 font-medium text-sm">
+                    Learn More →
+                  </a>
+                </div>
+              </article>
+
+              <article className="cyber-card hologram-card">
+                <div className="text-4xl mb-4">📋</div>
+                <h4 className="text-xl font-bold text-white mb-3">Smart Project Management</h4>
+                <p className="text-gray-300 mb-4 text-sm">
+                  AI-driven project management with automated task assignment and optimization.
+                </p>
+                <div className="text-center">
+                  <div className="text-xl font-bold text-blue-400 mb-2">$149/month</div>
+                  <div className="text-sm text-gray-400 mb-3">Market Price: $200-400/month</div>
+                  <a href="/micro-saas" className="text-blue-400 hover:text-blue-300 font-medium text-sm">
+                    Learn More →
+                  </a>
+                </div>
+              </article>
+
+              <article className="cyber-card hologram-card">
+                <div className="text-4xl mb-4">⚖️</div>
+                <h4 className="text-xl font-bold text-white mb-3">AI Legal Analyzer</h4>
+                <p className="text-gray-300 mb-4 text-sm">
+                  Intelligent legal document review with contract analysis and risk assessment.
+                </p>
+                <div className="text-center">
+                  <div className="text-xl font-bold text-orange-400 mb-2">$399/month</div>
+                  <div className="text-sm text-gray-400 mb-3">Market Price: $600-1200/month</div>
+                  <a href="/micro-saas" className="text-orange-400 hover:text-orange-300 font-medium text-sm">
+                    Learn More →
+                  </a>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          {/* Enterprise AI Services */}
+          <div className="mb-16">
+            <h3 className="text-2xl md:text-3xl font-bold text-purple-400 mb-8 text-center">
+              🤖 Enterprise AI Services
+            </h3>
+            <p className="text-lg text-gray-300 text-center mb-8 max-w-4xl mx-auto">
+              Advanced AI solutions for enterprise organizations. Custom pricing available.
+            </p>
+            <div className="grid md:grid-cols-3 gap-8 mb-12">
             <Suspense fallback={<ServiceCardSkeleton />}>
               <article className="cyber-card hologram-card">
                 <div className="text-5xl mb-6 text-center">🤖</div>
