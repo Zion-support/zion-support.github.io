@@ -218,8 +218,9 @@ class PerformanceMonitor {
       // Observe First Input Delay (FID)
       const fidObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
-        entries.forEach((entry: any) => {
-          const metric = this.createMetric('FID', entry.processingStart - entry.startTime);
+        entries.forEach((entry: unknown) => {
+          const fidEntry = entry as PerformanceEventTiming;
+          const metric = this.createMetric('FID', fidEntry.processingStart - fidEntry.startTime);
           this.webVitals.FID = metric;
           this.notifyCallbacks(metric);
         });
@@ -231,9 +232,10 @@ class PerformanceMonitor {
       let clsValue = 0;
       const clsObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
-        entries.forEach((entry: any) => {
-          if (!entry.hadRecentInput) {
-            clsValue += entry.value;
+        entries.forEach((entry: unknown) => {
+          const clsEntry = entry as PerformanceEntry & { hadRecentInput?: boolean; value?: number };
+          if (!clsEntry.hadRecentInput) {
+            clsValue += clsEntry.value || 0;
           }
         });
         const metric = this.createMetric('CLS', clsValue);
@@ -294,13 +296,14 @@ class PerformanceMonitor {
     try {
       const resourceObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
-        entries.forEach((entry: any) => {
-          if (entry.initiatorType) {
+        entries.forEach((entry: unknown) => {
+          const resourceEntry = entry as PerformanceResourceTiming;
+          if (resourceEntry.initiatorType) {
             this.trackMetric(
-              `resource_${entry.initiatorType}`,
-              entry.duration,
+              `resource_${resourceEntry.initiatorType}`,
+              resourceEntry.duration,
               'ms',
-              { name: entry.name }
+              { name: resourceEntry.name }
             );
           }
         });

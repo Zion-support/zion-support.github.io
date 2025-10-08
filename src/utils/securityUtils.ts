@@ -90,7 +90,7 @@ export const generateCSRFToken = (): string => {
   if (typeof window !== 'undefined' && window.crypto) {
     window.crypto.getRandomValues(array);
   }
-  return Array.from(array, (byte) => byte.toString(16).padStart(2, '0')).join('');
+  return Array.from(array, (byte: number) => byte.toString(16).padStart(2, '0')).join('');
 };
 
 /**
@@ -172,9 +172,9 @@ export class SecureStorage {
    */
   setItem(key: string, value: unknown): void {
     try {
-//       const data = JSON.stringify(value);
+      const data = JSON.stringify(value);
       // In production, you'd want to encrypt this data
-//       const encryptedData = btoa(data);
+      const encryptedData = btoa(data);
       localStorage.setItem(`${this.prefix}${key}`, encryptedData);
     } catch (error) {
 //       console.error('Failed to set storage item:', error);
@@ -186,14 +186,14 @@ export class SecureStorage {
    */
   getItem<T>(key: string): T | null {
     try {
-//       const encryptedData = localStorage.getItem(`${this.prefix}${key}`);
+      const encryptedData = localStorage.getItem(`${this.prefix}${key}`);
       if (!encryptedData) return null;
 
       // In production, you'd want to decrypt this data
-//       const data = atob(encryptedData);
+      const data = atob(encryptedData);
       return JSON.parse(data) as T;
     } catch (error) {
-//       console.error('Failed to get storage item:', error);
+      console.error('Failed to get storage item:', error);
       return null;
     }
   }
@@ -295,7 +295,7 @@ export const isAllowedFileType = (
  */
 export const generateNonce = (): string => {
   if (typeof window !== 'undefined' && window.crypto) {
-//     const array = new Uint8Array(16);
+    const array = new Uint8Array(16);
     window.crypto.getRandomValues(array);
     return btoa(String.fromCharCode.apply(null, Array.from(array)));
   }
