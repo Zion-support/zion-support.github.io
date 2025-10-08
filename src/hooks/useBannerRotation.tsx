@@ -3,7 +3,7 @@
  * Manages banner display tracking and rotation logic
  */
 
-import React, { useState, useEffect, useCallback, useMemo } from 'react';
+import { useState, useEffect, useCallback, useMemo } from 'react';
 import bannerConfigurations, { BannerConfig, RotationStrategy } from "../data/bannerConfigurations";
 
 interface UseBannerRotationOptions {
