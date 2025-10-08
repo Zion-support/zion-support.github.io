@@ -348,6 +348,207 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$300-600/month',
       category: 'Education'
     },
+    // New Innovative Micro SAAS Services
+    {
+      title: 'AI-Powered Carbon Footprint Tracker',
+      description: 'Real-time carbon footprint monitoring and sustainability optimization for businesses.',
+      icon: '🌱',
+      price: '$129/month',
+      features: ['Carbon tracking', 'Sustainability reporting', 'Emission reduction strategies', 'ESG compliance', 'Green certification'],
+      benefits: ['Reduce carbon footprint by 40%', 'Achieve ESG goals', 'Improve brand reputation'],
+      marketPrice: '$200-400/month',
+      category: 'Sustainability'
+    },
+    {
+      title: 'Smart Mental Health Assistant',
+      description: 'AI-powered mental wellness tracking, stress monitoring, and personalized wellness recommendations.',
+      icon: '🧠',
+      price: '$79/month',
+      features: ['Mood tracking', 'Stress monitoring', 'Wellness recommendations', 'Crisis intervention', 'Team wellness analytics'],
+      benefits: ['Improve employee wellbeing', 'Reduce burnout by 35%', 'Increase productivity'],
+      marketPrice: '$120-250/month',
+      category: 'Health & Wellness'
+    },
+    {
+      title: 'AI-Powered Voice Cloning Studio',
+      description: 'Professional voice cloning and synthetic speech generation for content creators and businesses.',
+      icon: '🎤',
+      price: '$199/month',
+      features: ['Voice cloning', 'Text-to-speech', 'Voice customization', 'Multi-language support', 'API integration'],
+      benefits: ['Create content 10x faster', 'Reduce voiceover costs', 'Maintain brand consistency'],
+      marketPrice: '$300-600/month',
+      category: 'Content Creation'
+    },
+    {
+      title: 'Smart Contract Security Auditor',
+      description: 'Automated smart contract analysis, vulnerability detection, and security auditing for blockchain projects.',
+      icon: '🔐',
+      price: '$299/month',
+      features: ['Smart contract analysis', 'Vulnerability detection', 'Gas optimization', 'Compliance checking', 'Audit reports'],
+      benefits: ['Prevent costly exploits', 'Ensure contract security', 'Optimize gas usage'],
+      marketPrice: '$500-1000/month',
+      category: 'Blockchain'
+    },
+    {
+      title: 'AI-Powered Patent Analyzer',
+      description: 'Intelligent patent search, analysis, and prior art detection for inventors and legal teams.',
+      icon: '📋',
+      price: '$249/month',
+      features: ['Patent search', 'Prior art analysis', 'Patentability assessment', 'Competitor monitoring', 'Filing assistance'],
+      benefits: ['Reduce patent research time by 70%', 'Improve patent quality', 'Avoid infringement risks'],
+      marketPrice: '$400-800/month',
+      category: 'Legal & IP'
+    },
+    {
+      title: 'Smart Restaurant Management',
+      description: 'AI-driven restaurant operations optimization including inventory, staffing, and customer experience.',
+      icon: '🍽️',
+      price: '$149/month',
+      features: ['Inventory optimization', 'Staff scheduling', 'Customer analytics', 'Menu optimization', 'Waste reduction'],
+      benefits: ['Increase profits by 25%', 'Reduce food waste by 40%', 'Improve customer satisfaction'],
+      marketPrice: '$250-500/month',
+      category: 'Hospitality'
+    },
+    {
+      title: 'AI-Powered Real Estate Valuator',
+      description: 'Automated property valuation, market analysis, and investment opportunity identification.',
+      icon: '🏘️',
+      price: '$179/month',
+      features: ['Property valuation', 'Market analysis', 'Investment scoring', 'Rental yield prediction', 'Location insights'],
+      benefits: ['Make better investment decisions', 'Save 15+ hours on research', 'Increase ROI by 25%'],
+      marketPrice: '$300-600/month',
+      category: 'Real Estate'
+    },
+    {
+      title: 'Smart Fleet Management System',
+      description: 'AI-powered fleet optimization, route planning, and vehicle maintenance scheduling.',
+      icon: '🚛',
+      price: '$199/month',
+      features: ['Route optimization', 'Fuel efficiency', 'Maintenance scheduling', 'Driver behavior analysis', 'Cost tracking'],
+      benefits: ['Reduce fuel costs by 20%', 'Improve delivery times', 'Extend vehicle life'],
+      marketPrice: '$300-600/month',
+      category: 'Logistics'
+    },
+    {
+      title: 'AI-Powered Code Quality Monitor',
+      description: 'Continuous code quality monitoring, technical debt tracking, and automated refactoring suggestions.',
+      icon: '💻',
+      price: '$89/month',
+      features: ['Code quality metrics', 'Technical debt tracking', 'Refactoring suggestions', 'Performance monitoring', 'Security scanning'],
+      benefits: ['Improve code quality by 60%', 'Reduce technical debt', 'Accelerate development'],
+      marketPrice: '$150-300/month',
+      category: 'Development'
+    },
+    {
+      title: 'Smart Event Management Platform',
+      description: 'AI-driven event planning, attendee engagement, and post-event analytics for conferences and meetings.',
+      icon: '🎪',
+      price: '$159/month',
+      features: ['Event planning', 'Attendee matching', 'Engagement tracking', 'Feedback analysis', 'ROI measurement'],
+      benefits: ['Increase event attendance by 30%', 'Improve attendee satisfaction', 'Maximize event ROI'],
+      marketPrice: '$250-500/month',
+      category: 'Events'
+    },
+    {
+      title: 'AI-Powered Personal Stylist',
+      description: 'Virtual personal styling assistant with outfit recommendations and wardrobe optimization.',
+      icon: '👗',
+      price: '$49/month',
+      features: ['Outfit recommendations', 'Wardrobe analysis', 'Style matching', 'Shopping suggestions', 'Trend tracking'],
+      benefits: ['Improve personal style', 'Save shopping time', 'Build confidence'],
+      marketPrice: '$80-150/month',
+      category: 'Fashion'
+    },
+    {
+      title: 'Smart Home Security AI',
+      description: 'Intelligent home security system with facial recognition, anomaly detection, and automated responses.',
+      icon: '🏠',
+      price: '$99/month',
+      features: ['Facial recognition', 'Anomaly detection', 'Automated alerts', 'Remote monitoring', 'Integration management'],
+      benefits: ['Enhance home security', 'Reduce false alarms', 'Peace of mind'],
+      marketPrice: '$150-300/month',
+      category: 'Security'
+    },
+    {
+      title: 'AI-Powered Language Translator Pro',
+      description: 'Real-time translation with context awareness, cultural adaptation, and business terminology support.',
+      icon: '🌐',
+      price: '$79/month',
+      features: ['Real-time translation', 'Context awareness', 'Cultural adaptation', 'Business terminology', 'Voice translation'],
+      benefits: ['Break language barriers', 'Improve global communication', 'Expand market reach'],
+      marketPrice: '$120-250/month',
+      category: 'Communication'
+    },
+    {
+      title: 'Smart Investment Portfolio Manager',
+      description: 'AI-driven portfolio optimization, risk assessment, and automated rebalancing for individual investors.',
+      icon: '📈',
+      price: '$129/month',
+      features: ['Portfolio optimization', 'Risk assessment', 'Automated rebalancing', 'Market analysis', 'Tax optimization'],
+      benefits: ['Optimize investment returns', 'Reduce risk exposure', 'Automate portfolio management'],
+      marketPrice: '$200-400/month',
+      category: 'Finance'
+    },
+    {
+      title: 'AI-Powered Wedding Planner',
+      description: 'Comprehensive wedding planning assistant with vendor matching, budget optimization, and timeline management.',
+      icon: '💒',
+      price: '$199/month',
+      features: ['Vendor matching', 'Budget optimization', 'Timeline management', 'Guest management', 'Checklist automation'],
+      benefits: ['Reduce planning stress', 'Stay within budget', 'Create perfect wedding'],
+      marketPrice: '$300-600/month',
+      category: 'Events'
+    },
+    {
+      title: 'Smart Pet Care Assistant',
+      description: 'AI-powered pet health monitoring, behavior analysis, and personalized care recommendations.',
+      icon: '🐕',
+      price: '$59/month',
+      features: ['Health monitoring', 'Behavior analysis', 'Care recommendations', 'Vet scheduling', 'Emergency alerts'],
+      benefits: ['Improve pet health', 'Reduce vet visits', 'Peace of mind'],
+      marketPrice: '$100-200/month',
+      category: 'Pet Care'
+    },
+    {
+      title: 'AI-Powered Job Interview Coach',
+      description: 'Personalized interview preparation with mock interviews, feedback analysis, and confidence building.',
+      icon: '💼',
+      price: '$89/month',
+      features: ['Mock interviews', 'Feedback analysis', 'Answer suggestions', 'Confidence building', 'Industry insights'],
+      benefits: ['Improve interview performance', 'Increase job success rate', 'Build confidence'],
+      marketPrice: '$150-300/month',
+      category: 'Career Development'
+    },
+    {
+      title: 'Smart Plant Care Monitor',
+      description: 'AI-powered plant health monitoring, watering schedules, and gardening advice for plant enthusiasts.',
+      icon: '🌿',
+      price: '$39/month',
+      features: ['Plant identification', 'Health monitoring', 'Watering schedules', 'Care reminders', 'Expert advice'],
+      benefits: ['Keep plants healthy', 'Learn gardening skills', 'Create beautiful gardens'],
+      marketPrice: '$60-120/month',
+      category: 'Gardening'
+    },
+    {
+      title: 'AI-Powered Sleep Optimizer',
+      description: 'Personalized sleep analysis, optimization recommendations, and sleep quality tracking.',
+      icon: '😴',
+      price: '$69/month',
+      features: ['Sleep analysis', 'Optimization tips', 'Sleep tracking', 'Environment monitoring', 'Habit building'],
+      benefits: ['Improve sleep quality', 'Increase energy levels', 'Better overall health'],
+      marketPrice: '$100-200/month',
+      category: 'Health & Wellness'
+    },
+    {
+      title: 'Smart Travel Planner AI',
+      description: 'Intelligent travel planning with personalized itineraries, budget optimization, and real-time updates.',
+      icon: '✈️',
+      price: '$99/month',
+      features: ['Itinerary planning', 'Budget optimization', 'Real-time updates', 'Local recommendations', 'Booking management'],
+      benefits: ['Plan perfect trips', 'Save money on travel', 'Discover hidden gems'],
+      marketPrice: '$150-300/month',
+      category: 'Travel'
+    },
     {
       title: 'Smart Property Management',
       description: 'AI-driven property management with tenant screening, maintenance scheduling, and rent optimization.',

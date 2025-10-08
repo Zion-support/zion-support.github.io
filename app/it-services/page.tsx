@@ -289,6 +289,205 @@ const ITServicesPage: React.FC = () => {
       marketPrice: '$2,500-6,000/month',
       category: 'Asset Management',
       technologies: ['ServiceNow', 'Lansweeper', 'Asset Panda', 'Flexera', 'Microsoft Intune']
+    },
+    // New Innovative IT Services
+    {
+      title: 'AI-Powered IT Operations (AIOps)',
+      description: 'Intelligent IT operations with automated incident response, root cause analysis, and predictive maintenance.',
+      icon: '🤖',
+      price: 'Starting at $3,500/month',
+      features: ['Automated incident response', 'Root cause analysis', 'Predictive maintenance', 'Anomaly detection', 'Self-healing systems'],
+      benefits: ['Reduce MTTR by 70%', 'Prevent outages', 'Improve system reliability'],
+      marketPrice: '$6,000-18,000/month',
+      category: 'AIOps',
+      technologies: ['Machine Learning', 'Anomaly Detection', 'Event Correlation', 'Automation Tools', 'Custom AI Models']
+    },
+    {
+      title: 'Zero Trust Security Architecture',
+      description: 'Comprehensive zero trust security implementation with identity verification and micro-segmentation.',
+      icon: '🛡️',
+      price: 'Starting at $4,500/month',
+      features: ['Identity verification', 'Micro-segmentation', 'Continuous monitoring', 'Least privilege access', 'Threat detection'],
+      benefits: ['Enhance security posture', 'Reduce attack surface', 'Comply with regulations'],
+      marketPrice: '$8,000-25,000/month',
+      category: 'Security',
+      technologies: ['Zero Trust Framework', 'Identity Management', 'Network Segmentation', 'SIEM', 'EDR']
+    },
+    {
+      title: 'Cloud-Native Application Development',
+      description: 'Modern cloud-native applications built with microservices, containers, and serverless architecture.',
+      icon: '☁️',
+      price: 'Starting at $5,000/month',
+      features: ['Microservices architecture', 'Container orchestration', 'Serverless functions', 'API management', 'Auto-scaling'],
+      benefits: ['Improve scalability', 'Reduce costs', 'Enable rapid deployment'],
+      marketPrice: '$8,000-20,000/month',
+      category: 'Cloud Development',
+      technologies: ['Kubernetes', 'Docker', 'AWS Lambda', 'Azure Functions', 'Google Cloud Run']
+    },
+    {
+      title: 'Edge Computing Infrastructure',
+      description: 'Distributed computing infrastructure for low-latency applications and IoT deployments.',
+      icon: '📡',
+      price: 'Starting at $3,000/month',
+      features: ['Edge node deployment', 'Latency optimization', 'Data processing', 'IoT integration', 'Remote management'],
+      benefits: ['Reduce latency', 'Improve performance', 'Enable real-time processing'],
+      marketPrice: '$5,000-15,000/month',
+      category: 'Edge Computing',
+      technologies: ['Edge Servers', 'IoT Platforms', '5G Networks', 'Edge AI', 'Distributed Systems']
+    },
+    {
+      title: 'Quantum-Safe Cryptography',
+      description: 'Post-quantum cryptographic solutions to protect against future quantum computing threats.',
+      icon: '🔐',
+      price: 'Starting at $6,000/month',
+      features: ['Quantum-safe algorithms', 'Key management', 'Migration planning', 'Compliance assessment', 'Implementation support'],
+      benefits: ['Future-proof security', 'Protect against quantum threats', 'Ensure long-term security'],
+      marketPrice: '$10,000-30,000/month',
+      category: 'Security',
+      technologies: ['Post-Quantum Cryptography', 'NIST Standards', 'Key Management', 'Migration Tools', 'Custom Solutions']
+    },
+    {
+      title: '5G Network Implementation',
+      description: 'Complete 5G network deployment and optimization for enterprise and industrial applications.',
+      icon: '📶',
+      price: 'Starting at $8,000/month',
+      features: ['5G infrastructure', 'Network optimization', 'Performance monitoring', 'Security implementation', 'Integration services'],
+      benefits: ['Ultra-fast connectivity', 'Low latency', 'Enable new applications'],
+      marketPrice: '$15,000-50,000/month',
+      category: 'Networking',
+      technologies: ['5G Core', 'RAN', 'Network Slicing', 'Edge Computing', 'IoT Integration']
+    },
+    {
+      title: 'Hyperconverged Infrastructure (HCI)',
+      description: 'Integrated compute, storage, and networking solutions for simplified data center management.',
+      icon: '🏗️',
+      price: 'Starting at $4,000/month',
+      features: ['Integrated infrastructure', 'Simplified management', 'Scalable architecture', 'High availability', 'Disaster recovery'],
+      benefits: ['Reduce complexity', 'Improve efficiency', 'Lower TCO'],
+      marketPrice: '$7,000-20,000/month',
+      category: 'Infrastructure',
+      technologies: ['VMware vSAN', 'Nutanix', 'Microsoft HCI', 'Dell VxRail', 'HPE SimpliVity']
+    },
+    {
+      title: 'Software-Defined Everything (SDx)',
+      description: 'Software-defined infrastructure including networking, storage, and security for maximum flexibility.',
+      icon: '⚙️',
+      price: 'Starting at $3,500/month',
+      features: ['SDN implementation', 'SDS deployment', 'SD-WAN setup', 'Automation', 'Policy management'],
+      benefits: ['Increase flexibility', 'Reduce costs', 'Improve agility'],
+      marketPrice: '$6,000-18,000/month',
+      category: 'Infrastructure',
+      technologies: ['SDN', 'SDS', 'SD-WAN', 'Orchestration', 'Policy Engines']
+    },
+    {
+      title: 'Green IT Solutions',
+      description: 'Sustainable IT infrastructure and practices to reduce environmental impact and energy consumption.',
+      icon: '🌱',
+      price: 'Starting at $2,500/month',
+      features: ['Energy optimization', 'Carbon footprint tracking', 'Sustainable procurement', 'Waste reduction', 'Green certifications'],
+      benefits: ['Reduce environmental impact', 'Lower energy costs', 'Improve sustainability'],
+      marketPrice: '$4,000-12,000/month',
+      category: 'Sustainability',
+      technologies: ['Energy Management', 'Carbon Tracking', 'Green Computing', 'Renewable Energy', 'Sustainability Tools']
+    },
+    {
+      title: 'IT Service Management (ITSM)',
+      description: 'Comprehensive IT service management with automated workflows and self-service portals.',
+      icon: '🎯',
+      price: 'Starting at $2,000/month',
+      features: ['Service catalog', 'Incident management', 'Change management', 'Self-service portal', 'Service level management'],
+      benefits: ['Improve service quality', 'Reduce costs', 'Enhance user experience'],
+      marketPrice: '$3,500-10,000/month',
+      category: 'Service Management',
+      technologies: ['ServiceNow', 'Jira Service Management', 'BMC Remedy', 'Cherwell', 'Custom Solutions']
+    },
+    {
+      title: 'Multi-Cloud Management',
+      description: 'Unified management and optimization across multiple cloud providers for maximum efficiency.',
+      icon: '☁️',
+      price: 'Starting at $3,000/month',
+      features: ['Multi-cloud orchestration', 'Cost optimization', 'Security management', 'Compliance monitoring', 'Migration services'],
+      benefits: ['Avoid vendor lock-in', 'Optimize costs', 'Improve resilience'],
+      marketPrice: '$5,000-15,000/month',
+      category: 'Cloud Management',
+      technologies: ['Terraform', 'Ansible', 'CloudHealth', 'RightScale', 'Custom Tools']
+    },
+    {
+      title: 'IT Governance & Risk Management',
+      description: 'Comprehensive IT governance framework with risk assessment and compliance management.',
+      icon: '📋',
+      price: 'Starting at $2,800/month',
+      features: ['Governance framework', 'Risk assessment', 'Compliance monitoring', 'Policy management', 'Audit support'],
+      benefits: ['Ensure compliance', 'Manage risks', 'Improve governance'],
+      marketPrice: '$4,500-12,000/month',
+      category: 'Governance',
+      technologies: ['GRC Tools', 'Risk Management', 'Compliance Software', 'Policy Management', 'Audit Tools']
+    },
+    {
+      title: 'Digital Workplace Solutions',
+      description: 'Modern digital workplace with collaboration tools, productivity apps, and employee experience optimization.',
+      icon: '💼',
+      price: 'Starting at $2,200/month',
+      features: ['Collaboration tools', 'Productivity apps', 'Employee experience', 'Mobile solutions', 'Integration services'],
+      benefits: ['Improve productivity', 'Enhance collaboration', 'Boost employee satisfaction'],
+      marketPrice: '$3,500-8,000/month',
+      category: 'Digital Workplace',
+      technologies: ['Microsoft 365', 'Google Workspace', 'Slack', 'Zoom', 'Custom Solutions']
+    },
+    {
+      title: 'IT Automation & Orchestration',
+      description: 'Comprehensive IT process automation with intelligent orchestration and self-healing capabilities.',
+      icon: '🤖',
+      price: 'Starting at $3,200/month',
+      features: ['Process automation', 'Workflow orchestration', 'Self-healing systems', 'Intelligent routing', 'Exception handling'],
+      benefits: ['Reduce manual work', 'Improve efficiency', 'Minimize errors'],
+      marketPrice: '$5,500-15,000/month',
+      category: 'Automation',
+      technologies: ['RPA Tools', 'Orchestration Platforms', 'AI/ML', 'Workflow Engines', 'Custom Scripts']
+    },
+    {
+      title: 'IT Performance Optimization',
+      description: 'Comprehensive performance tuning and optimization for applications, databases, and infrastructure.',
+      icon: '⚡',
+      price: 'Starting at $2,500/month',
+      features: ['Performance monitoring', 'Bottleneck identification', 'Optimization recommendations', 'Capacity planning', 'Load testing'],
+      benefits: ['Improve performance', 'Reduce costs', 'Enhance user experience'],
+      marketPrice: '$4,000-12,000/month',
+      category: 'Performance',
+      technologies: ['APM Tools', 'Database Tuning', 'Load Testing', 'Monitoring Tools', 'Custom Solutions']
+    },
+    {
+      title: 'IT Disaster Recovery & Business Continuity',
+      description: 'Comprehensive disaster recovery planning and business continuity solutions for critical systems.',
+      icon: '🔄',
+      price: 'Starting at $3,500/month',
+      features: ['Disaster recovery planning', 'Backup strategies', 'Recovery testing', 'Business continuity', 'Crisis management'],
+      benefits: ['Minimize downtime', 'Protect critical data', 'Ensure business continuity'],
+      marketPrice: '$6,000-18,000/month',
+      category: 'Disaster Recovery',
+      technologies: ['Backup Solutions', 'Replication Tools', 'Recovery Platforms', 'Testing Tools', 'Custom Solutions']
+    },
+    {
+      title: 'IT Cost Optimization',
+      description: 'Comprehensive IT cost analysis and optimization to reduce expenses while maintaining performance.',
+      icon: '💰',
+      price: 'Starting at $2,000/month',
+      features: ['Cost analysis', 'Optimization recommendations', 'Vendor management', 'License optimization', 'ROI tracking'],
+      benefits: ['Reduce IT costs', 'Improve ROI', 'Optimize spending'],
+      marketPrice: '$3,500-10,000/month',
+      category: 'Cost Management',
+      technologies: ['Cost Management Tools', 'Analytics Platforms', 'Vendor Management', 'License Tools', 'Custom Solutions']
+    },
+    {
+      title: 'IT Innovation Lab',
+      description: 'Dedicated innovation lab for exploring emerging technologies and piloting new solutions.',
+      icon: '🔬',
+      price: 'Starting at $5,000/month',
+      features: ['Technology exploration', 'Proof of concepts', 'Pilot programs', 'Innovation workshops', 'Technology roadmaps'],
+      benefits: ['Stay ahead of trends', 'Innovate faster', 'Reduce risk'],
+      marketPrice: '$8,000-25,000/month',
+      category: 'Innovation',
+      technologies: ['Emerging Technologies', 'Pilot Platforms', 'Innovation Tools', 'Research Methods', 'Custom Solutions']
     }
   ];
 

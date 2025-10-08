@@ -165,6 +165,88 @@ const ServicesPage: React.FC = () => {
       link: '/cybersecurity',
       features: ['Threat Detection', 'Penetration Testing', 'Zero Trust Security', 'SOC Services'],
       price: 'Starting at $2,500/month'
+    },
+    // New Innovative Services
+    {
+      title: 'AI-Powered Metaverse Development',
+      description: 'Complete metaverse solutions including virtual worlds, avatars, and immersive experiences.',
+      icon: '🌐',
+      link: '/ai-metaverse-development',
+      features: ['Virtual World Creation', 'Avatar Development', '3D Asset Generation', 'Multi-user Experiences'],
+      price: 'Starting at $25,000/month',
+      popular: true
+    },
+    {
+      title: 'Quantum-Safe Security',
+      description: 'Post-quantum cryptographic solutions to protect against future quantum computing threats.',
+      icon: '🔐',
+      link: '/quantum-safe-security',
+      features: ['Quantum-Safe Algorithms', 'Key Management', 'Migration Planning', 'Compliance Assessment'],
+      price: 'Starting at $6,000/month'
+    },
+    {
+      title: 'Edge AI Computing',
+      description: 'Deploy AI models on edge devices for real-time processing and decision making.',
+      icon: '📱',
+      link: '/edge-ai-computing',
+      features: ['Model Optimization', 'Edge Deployment', 'Real-time Inference', 'Federated Learning'],
+      price: 'Starting at $5,000/month'
+    },
+    {
+      title: 'Digital Twin Technology',
+      description: 'Real-time digital replicas of physical systems with predictive analytics and optimization.',
+      icon: '🔄',
+      link: '/digital-twin-technology',
+      features: ['Real-time Synchronization', 'Predictive Modeling', 'What-if Scenarios', 'Performance Optimization'],
+      price: 'Starting at $15,000/month'
+    },
+    {
+      title: '5G Network Solutions',
+      description: 'Complete 5G network deployment and optimization for enterprise and industrial applications.',
+      icon: '📶',
+      link: '/5g-network-solutions',
+      features: ['5G Infrastructure', 'Network Optimization', 'Performance Monitoring', 'Security Implementation'],
+      price: 'Starting at $8,000/month'
+    },
+    {
+      title: 'Green IT Solutions',
+      description: 'Sustainable IT infrastructure and practices to reduce environmental impact and energy consumption.',
+      icon: '🌱',
+      link: '/green-it-solutions',
+      features: ['Energy Optimization', 'Carbon Footprint Tracking', 'Sustainable Procurement', 'Green Certifications'],
+      price: 'Starting at $2,500/month'
+    },
+    {
+      title: 'Hyperconverged Infrastructure',
+      description: 'Integrated compute, storage, and networking solutions for simplified data center management.',
+      icon: '🏗️',
+      link: '/hyperconverged-infrastructure',
+      features: ['Integrated Infrastructure', 'Simplified Management', 'Scalable Architecture', 'High Availability'],
+      price: 'Starting at $4,000/month'
+    },
+    {
+      title: 'AI-Powered IT Operations',
+      description: 'Intelligent IT operations with automated incident response and predictive maintenance.',
+      icon: '🤖',
+      link: '/ai-powered-it-operations',
+      features: ['Automated Incident Response', 'Root Cause Analysis', 'Predictive Maintenance', 'Self-healing Systems'],
+      price: 'Starting at $3,500/month'
+    },
+    {
+      title: 'Multi-Cloud Management',
+      description: 'Unified management and optimization across multiple cloud providers for maximum efficiency.',
+      icon: '☁️',
+      link: '/multi-cloud-management',
+      features: ['Multi-cloud Orchestration', 'Cost Optimization', 'Security Management', 'Compliance Monitoring'],
+      price: 'Starting at $3,000/month'
+    },
+    {
+      title: 'Digital Workplace Solutions',
+      description: 'Modern digital workplace with collaboration tools and employee experience optimization.',
+      icon: '💼',
+      link: '/digital-workplace-solutions',
+      features: ['Collaboration Tools', 'Productivity Apps', 'Employee Experience', 'Mobile Solutions'],
+      price: 'Starting at $2,200/month'
     }
   ];
 
