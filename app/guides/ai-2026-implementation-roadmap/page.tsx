@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, Calendar, User, Clock, Tag, ArrowRight } from 'lucide-react';
 
-const AI2026ImplementationRoadmap: React.FC = () => {
+export default function AI2026ImplementationRoadmap() {
   return (
 
     <>

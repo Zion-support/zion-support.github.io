@@ -15,7 +15,7 @@ const ContentPromotion = lazy(() => import('./components/UltimateBusinessIntelli
 
 const ContentShowcase = lazy(() => import('./components/UltimateBusinessIntelligenceShowcase2025').catch(() => ({ default: EmptyComponent })));
 
-const OptimizedHomePage: React.FC = () => {
+export default function OptimizedHomePage() {
   return (
 
     <>
