@@ -803,7 +803,6 @@ export class TestRunner {
   }
 
   // Run all tests
-<<<<<<< HEAD
   async runAllTests(
     tests: Array<{
       name: string;
@@ -816,21 +815,7 @@ export class TestRunner {
     passed: boolean;
     results: Array<{ name: string; type: string; passed: boolean; error?: string }>;
   }> {
-<<<<<<< HEAD
     const results: Array<{ name: string; type: string; passed: boolean; error?: string }> = [];
-=======
-    const results: unknown[] = [];
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-283b
-=======
-  async runAllTests(tests: Array<{
-    name: string;
-    type: 'component' | 'integration' | 'performance' | 'accessibility' | 'visual';
-    component: ReactElement;
-    assertions?: (result: RenderResult) => void;
-    userInteractions?: (result: RenderResult) => Promise<void>;
-  }>): Promise<{ passed: boolean; results: Array<{ name: string; type: string; passed: boolean; error?: string }> }> {
-    const results: Array<{ name: string; type: string; passed: boolean; error?: string }> = [];
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3228
 
     for (const test of tests) {
       let result;
@@ -858,7 +843,7 @@ export class TestRunner {
       results.push({ ...result, name: test.name, type: test.type });
     }
 
-    const passed = results.every((result: any) => result.passed);
+    const passed = results.every(result => result.passed);
 
     return { passed, results };
   }
@@ -946,11 +931,7 @@ export const useTestRunner = () => {
 export const testUtils = {
   // Create mock data
   createMockData: (type: string, count: number = 10) => {
-<<<<<<< HEAD
     const mockData: Array<{ id: number; name: string; description: string; [key: string]: unknown }> = [];
-=======
-    const mockData: unknown[] = [];
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-283b
     for (let i = 0; i < count; i++) {
       mockData.push({
         id: i + 1,

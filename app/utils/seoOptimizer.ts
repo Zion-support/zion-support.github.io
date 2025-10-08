@@ -250,7 +250,7 @@ class SEOOptimizer {
   /**
    * Add structured data to page
    */
-  private addStructuredData(data: any): void {
+  private addStructuredData(data: Record<string, unknown>): void {
     const script = document.createElement('script');
     script.type = 'application/ld+json';
     script.textContent = JSON.stringify(data);
@@ -311,7 +311,7 @@ class SEOOptimizer {
   /**
    * Generate sitemap data
    */
-  generateSitemapData(): any[] {
+  generateSitemapData(): Array<{ url: string; lastmod: string; changefreq: string; priority: string }> {
     // This would typically come from your CMS or routing system
     return [
       {

@@ -3,7 +3,6 @@
  * Tracks and reports performance metrics with Web Vitals support
  */
 
-import React from 'react';
 import { logger } from './logger';
 import { analytics } from './analytics';
 
@@ -19,15 +18,35 @@ export interface PerformanceThresholds {
   needsImprovement: number;
 }
 
+// These interfaces are defined for future use but not currently used
+// interface _PerformancePaintTiming extends PerformanceEntry {
+//   name: 'first-paint' | 'first-contentful-paint';
+// }
+
+// interface _LargestContentfulPaint extends PerformanceEntry {
+//   renderTime: number;
+//   loadTime: number;
+//   size: number;
+//   id: string;
+//   url: string;
+//   element: Element | null;
+// }
+
+// interface _PerformanceEventTiming extends PerformanceEntry {
+//   processingStart: number;
+//   processingEnd: number;
+//   cancelable: boolean;
+//   target: EventTarget | null;
+// }
+
 // Extended types for specific performance entry types
-=======
+
 // Performance entry types are handled inline where needed
->>>>>>> cursor/fix-errors-and-merge-to-main-5c5e
 
 class PerformanceMonitor {
   private metrics: Map<string, PerformanceMetric> = new Map();
   private observers: PerformanceObserver[] = [];
-  
+
   // Web Vitals thresholds (in milliseconds)
   private readonly thresholds: Record<string, PerformanceThresholds> = {
     FCP: { good: 1800, needsImprovement: 3000 },
@@ -54,8 +73,8 @@ class PerformanceMonitor {
       // Observe paint metrics
       if ('PerformanceObserver' in window) {
         // First Contentful Paint
-        this.observeEntry('paint', (entries) => {
-          entries.forEach((entry) => {
+        this.observeEntry('paint', entries => {
+          entries.forEach(entry => {
             if (entry.name === 'first-contentful-paint') {
               this.recordMetric('FCP', entry.startTime);
             }
@@ -63,14 +82,17 @@ class PerformanceMonitor {
         });
 
         // Largest Contentful Paint
-        this.observeEntry('largest-contentful-paint', (entries) => {
+        this.observeEntry('largest-contentful-paint', _entries => {
           if (lastEntry) {
-            this.recordMetric('LCP', lastEntry.renderTime || lastEntry.loadTime || lastEntry.startTime);
+            this.recordMetric(
+              'LCP',
+              lastEntry.renderTime || lastEntry.loadTime || lastEntry.startTime
+            );
           }
         });
 
         // First Input Delay
-        this.observeEntry('first-input', (entries) => {
+        this.observeEntry('first-input', _entries => {
           if (firstInput && firstInput.processingStart !== undefined) {
             const fid = firstInput.processingStart - firstInput.startTime;
             this.recordMetric('FID', fid);
@@ -78,18 +100,11 @@ class PerformanceMonitor {
         });
 
         // Cumulative Layout Shift
-        this.observeEntry('layout-shift', (entries) => {
+        this.observeEntry('layout-shift', entries => {
           let clsValue = 0;
-<<<<<<< HEAD
-          entries.forEach((entry: any) => {
+          entries.forEach((entry: PerformanceEntry) => {
             if (!entry.hadRecentInput) {
               clsValue += entry.value;
-=======
-          entries.forEach((entry: unknown) => {
-            const layoutShiftEntry = entry as any;
-            if (!layoutShiftEntry.hadRecentInput) {
-              clsValue += layoutShiftEntry.value;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3228
             }
           });
           if (clsValue > 0) {
@@ -105,12 +120,9 @@ class PerformanceMonitor {
   /**
    * Observe specific performance entry types
    */
-  private observeEntry(
-    type: string,
-    callback: (entries: PerformanceEntry[]) => void
-  ): void {
+  private observeEntry(type: string, callback: (entries: PerformanceEntry[]) => void): void {
     try {
-      const observer = new PerformanceObserver((list) => {
+      const observer = new PerformanceObserver(list => {
         callback(list.getEntries());
       });
       observer.observe({ type, buffered: true });
@@ -130,7 +142,7 @@ class PerformanceMonitor {
           const [navigationEntry] = performance.getEntriesByType(
             'navigation'
           ) as PerformanceNavigationTiming[];
-          
+
           if (navigationEntry) {
             // Time to First Byte
             const ttfb = navigationEntry.responseStart - navigationEntry.requestStart;
@@ -163,8 +175,8 @@ class PerformanceMonitor {
   private setupResourceTiming(): void {
     if ('PerformanceObserver' in window) {
       try {
-        const observer = new PerformanceObserver((list) => {
-          list.getEntries().forEach((entry) => {
+        const observer = new PerformanceObserver(list => {
+          list.getEntries().forEach(entry => {
             if (entry.entryType === 'resource') {
               const resourceEntry = entry as PerformanceResourceTiming;
               this.trackResourceLoad(resourceEntry);
@@ -301,11 +313,11 @@ class PerformanceMonitor {
           this.mark(`${startMark}-end`);
           endMark = `${startMark}-end`;
         }
-        
+
         performance.measure(name, startMark, endMark);
         const measures = performance.getEntriesByName(name, 'measure');
         const lastMeasure = measures[measures.length - 1];
-        
+
         if (lastMeasure) {
           this.recordMetric(name, lastMeasure.duration);
           return lastMeasure.duration;
@@ -323,7 +335,7 @@ class PerformanceMonitor {
   async timeAsync<T>(name: string, fn: () => Promise<T>): Promise<T> {
     const startMark = `${name}-start`;
     this.mark(startMark);
-    
+
     try {
       const result = await fn();
       this.measure(name, startMark);
@@ -340,7 +352,7 @@ class PerformanceMonitor {
   time<T>(name: string, fn: () => T): T {
     const startMark = `${name}-start`;
     this.mark(startMark);
-    
+
     try {
       const result = fn();
       this.measure(name, startMark);
@@ -392,7 +404,7 @@ class PerformanceMonitor {
    * Disconnect all observers
    */
   disconnect(): void {
-    this.observers.forEach((observer) => {
+    this.observers.forEach(observer => {
       try {
         observer.disconnect();
       } catch (error) {
@@ -414,8 +426,7 @@ export const measure = (name: string, startMark: string, endMark?: string) =>
   performanceMonitor.measure(name, startMark, endMark);
 export const timeAsync = <T>(name: string, fn: () => Promise<T>) =>
   performanceMonitor.timeAsync(name, fn);
-export const time = <T>(name: string, fn: () => T) =>
-  performanceMonitor.time(name, fn);
+export const time = <T>(name: string, fn: () => T) => performanceMonitor.time(name, fn);
 export const getPerformanceReport = () => performanceMonitor.getReport();
 
 export default performanceMonitor;
