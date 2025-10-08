@@ -35,6 +35,9 @@ const TermsPage = lazy(() => import('./terms/page'));
 const EnterprisePage = lazy(() => import('./enterprise/page'));
 const ServicesAdvertisingPage = lazy(() => import('./services-advertising/page'));
 const CaseStudiesPage = lazy(() => import('./case-studies/page'));
+const AIServicesPage = lazy(() => import('./ai-services/page'));
+const ITServicesPage = lazy(() => import('./it-services/page'));
+const MicroSaasPage = lazy(() => import('./micro-saas/page'));
 
 // Utils
 import { lazyLoadImages, preloadCriticalResources, collectPerformanceMetrics, performanceOptimizer } from './utils/performanceOptimizer';
@@ -161,12 +164,9 @@ const App: React.FC = () => {
                       <Route path="/enterprise" element={<EnterprisePage />} />
                       <Route path="/services-advertising" element={<ServicesAdvertisingPage />} />
                       <Route path="/case-studies" element={<CaseStudiesPage />} />
-<<<<<<< HEAD
-                      <Route path="/ai-services" element={<lazy(() => import('./ai-services/page')) />} />
-                      <Route path="/it-services" element={<lazy(() => import('./it-services/page')) />} />
-                      <Route path="/micro-saas" element={<lazy(() => import('./micro-saas/page')) />} />
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-913d
+                      <Route path="/ai-services" element={<AIServicesPage />} />
+                      <Route path="/it-services" element={<ITServicesPage />} />
+                      <Route path="/micro-saas" element={<MicroSaasPage />} />
                     </Routes>
                   </Suspense>
                 </main>
