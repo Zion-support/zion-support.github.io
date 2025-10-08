@@ -433,8 +433,12 @@ class ContextLogger {
     this.logger.perf(metric, value, { ...metadata, context: this.context });
   }
 
-  group(label: string, fn: () => void): void {
-    this.logger.group(`${this.context}: ${label}`, fn);
+  group(label: string): void {
+    this.logger.group(`${this.context}: ${label}`);
+  }
+
+  groupEnd(): void {
+    this.logger.groupEnd();
   }
 
   child(subContext: string): ContextLogger {

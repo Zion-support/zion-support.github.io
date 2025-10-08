@@ -360,17 +360,17 @@ export class EnhancedLogger {
 
       switch (entry.level) {
         case LogLevel.DEBUG:
-          if (this.isDevelopment()) { logger.debug(message, structuredLog); }
+          if (this.isDevelopment()) { console.debug(message, structuredLog); }
           break;
         case LogLevel.INFO:
           if (this.isDevelopment()) { console.info(message, structuredLog); }
           break;
         case LogLevel.WARN:
-          logger.warn(message, structuredLog);
+          console.warn(message, structuredLog);
           break;
         case LogLevel.ERROR:
         case LogLevel.FATAL:
-          logger.error(message, structuredLog);
+          console.error(message, structuredLog);
           if (entry.stack) {
             console.info('Stack trace:', { stack: entry.stack });
           }
@@ -380,17 +380,17 @@ export class EnhancedLogger {
       // Simple console output
       switch (entry.level) {
         case LogLevel.DEBUG:
-          if (this.isDevelopment()) { logger.debug(message, entry.data); }
+          if (this.isDevelopment()) { console.debug(message, entry.data); }
           break;
         case LogLevel.INFO:
           if (this.isDevelopment()) { console.info(message, entry.data); }
           break;
         case LogLevel.WARN:
-          logger.warn(message, entry.data);
+          console.warn(message, entry.data);
           break;
         case LogLevel.ERROR:
         case LogLevel.FATAL:
-          logger.error(message, entry.data);
+          console.error(message, entry.data);
           break;
       }
     }
