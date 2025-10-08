@@ -1,8 +1,4 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/fix-errors-and-merge-to-main-fe06
 import { Link } from 'react-router-dom';
 import { logger } from '../utils/logger';
 
