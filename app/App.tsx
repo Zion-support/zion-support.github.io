@@ -5,7 +5,6 @@ import { HelmetProvider } from 'react-helmet-async';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 // Components
-<<<<<<< HEAD
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import PerformanceDashboard from './components/PerformanceDashboard';
 import AdvancedPerformanceMonitor from './components/AdvancedPerformanceMonitor';
@@ -14,34 +13,17 @@ import SEOEnhancer from './components/SEOEnhancer';
 import AdvancedSEOOptimizer from './components/AdvancedSEOOptimizer';
 import LoadingSpinner from './components/LoadingSpinner';
 
-// Lazy load components for better performance
-const ContentShowcase = lazy(() => import('./components/ContentShowcase'));
-const InteractiveContentShowcase2026 = lazy(
-  () => import('./components/InteractiveContentShowcase2026')
-);
-const InteractiveAIROICalculator = lazy(
-  () => import('./components/InteractiveAIROICalculator')
-);
-
 // Lazy load pages for better performance
 const HomePage = lazy(() => import('./page'));
 
 // Utils
 import { lazyLoadImages, preloadCriticalResources, collectPerformanceMetrics, performanceOptimizer } from './utils/performanceOptimizer';
 import { logger } from './utils/logger';
-import performanceMonitor from './utils/performanceMonitor';
-import seoOptimizer from './utils/seoOptimizer';
-import accessibilityEnhancer from './utils/accessibilityEnhancer';
-=======
-// Lazy load pages for better performance
-const HomePage = lazy(() => import('./page'));
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-1035
 
 // Styles
 import './globals.css';
 
 const App: React.FC = () => {
-<<<<<<< HEAD
   useEffect(() => {
     // Initialize global error handling
     logger.lifecycle('initialized', 'App');
@@ -50,52 +32,21 @@ const App: React.FC = () => {
     lazyLoadImages();
     preloadCriticalResources();
     performanceOptimizer.init();
-    performanceMonitor.init();
-    
-    // Initialize SEO optimization
-    seoOptimizer.init();
-    
-    // Initialize accessibility enhancements
-    accessibilityEnhancer.init();
     
     // Initialize Web Vitals monitoring
     if (typeof window !== 'undefined' && 'performance' in window) {
       const pageLoadMetrics = collectPerformanceMetrics();
       const metrics = performanceOptimizer.getMetrics();
-      const performanceMetrics = performanceMonitor.getMetrics();
-      
       if (pageLoadMetrics) {
         console.log('Performance metrics collected:', pageLoadMetrics);
       }
       if (metrics) {
         console.log('Performance metrics:', metrics);
       }
-      if (performanceMetrics) {
-        console.log('Core Web Vitals:', performanceMetrics);
-      }
     }
-    
-    // Log performance and accessibility metrics periodically
-    const metricsInterval = setInterval(() => {
-      const performanceMetrics = performanceMonitor.getMetrics();
-      const accessibilityMetrics = accessibilityEnhancer.getMetrics();
-      
-      if (process.env.NODE_ENV === 'development') {
-        console.log('Performance Score:', performanceMonitor.getScore());
-        console.log('Accessibility Score:', accessibilityMetrics.overallScore);
-      }
-    }, 30000);
     
     logger.lifecycle('performance monitoring initialized', 'App');
     logger.info('🚀 Zion Tech Group App initialized with comprehensive monitoring', 'App');
-
-    return () => {
-      // Cleanup
-      performanceOptimizer.cleanup();
-      performanceMonitor.cleanup();
-      accessibilityEnhancer.cleanup();
-      clearInterval(metricsInterval);
-    };
   }, []);
 
   return (
@@ -168,28 +119,8 @@ const App: React.FC = () => {
           </SEOEnhancer>
         </AccessibilityEnhancer>
       </AdvancedErrorBoundary>
-=======
-  return (
-    <HelmetProvider>
-      <Router>
-        <div className="App">
-          <main id="main-content">
-            <Suspense fallback={<div>Loading...</div>}>
-              <Routes>
-                <Route path="/" element={<HomePage />} />
-                {/* Add more routes as needed */}
-              </Routes>
-            </Suspense>
-          </main>
-        </div>
-      </Router>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-1035
     </HelmetProvider>
   );
 };
 
-<<<<<<< HEAD
 export default App;
-=======
-export default App;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-1035
