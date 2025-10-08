@@ -4,21 +4,30 @@ import SEOOptimizer from './components/SEOOptimizer';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 
-// Lazy load heavy components - these may not exist, so make them optional
-const UnifiedBanner = dynamic(() => import('./components/UltimateBusinessIntelligence2025Banner').catch(() => import('./page').then(m => ({ default: () => <div></div> }))) as any, {
-  loading: () => <div className="animate-pulse bg-gray-200 h-32 rounded-lg"></div>,
-  ssr: false
-});
+// Lazy load heavy components
+const UnifiedBanner = dynamic(
+  () => import('./components/NewestContent2025Banner'),
+  {
+    loading: () => <div className="animate-pulse bg-gray-200 h-32 rounded-lg"></div>,
+    ssr: false
+  }
+);
 
-const ContentPromotion = dynamic(() => import('./components/UltimateBusinessIntelligenceShowcase2025').catch(() => import('./page').then(m => ({ default: () => <div></div> }))) as any, {
-  loading: () => <div className="animate-pulse bg-gray-200 h-64 rounded-lg"></div>,
-  ssr: false
-});
+const ContentPromotion = dynamic(
+  () => import('./components/UltimateBusinessIntelligence2025Banner'),
+  {
+    loading: () => <div className="animate-pulse bg-gray-200 h-64 rounded-lg"></div>,
+    ssr: false
+  }
+);
 
-const ContentShowcase = dynamic(() => import('./components/UltimateBusinessIntelligenceShowcase2025').catch(() => import('./page').then(m => ({ default: () => <div></div> }))) as any, {
-  loading: () => <div className="animate-pulse bg-gray-200 h-48 rounded-lg"></div>,
-  ssr: false
-});
+const ContentShowcase = dynamic(
+  () => import('./components/UltimateBusinessIntelligenceShowcase2025'),
+  {
+    loading: () => <div className="animate-pulse bg-gray-200 h-48 rounded-lg"></div>,
+    ssr: false
+  }
+);
 
 export const metadata = {
   title: 'Zion Tech Group — AI Enterprise Transformation & IT Services | 300% ROI Guaranteed',
@@ -60,8 +69,8 @@ export const metadata = {
   },
   verification: {
     google: 'your-google-verification-code',
-    yandex: 'your-yandex-verification-code',
-    yahoo: 'your-yahoo-verification-code',
+    yandex: 'yandex-verification-code',
+    yahoo: 'yahoo-verification-code',
   },
 };
 
