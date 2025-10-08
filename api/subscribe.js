@@ -3,8 +3,6 @@ const { isValidEmail } = require('./emailUtils.cjs');
 const fs = require('fs');
 const path = require('path');
 
-<<<<<<< HEAD
-=======
 
 
 
@@ -17,7 +15,6 @@ const path = require('path');
 
 
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-1035
 async function handler(req, res) {
   if (req.method !== 'POST') {
     res.statusCode = 405;
@@ -35,8 +32,6 @@ async function handler(req, res) {
   }
 
   try {
-<<<<<<< HEAD
-=======
     const { email } = req.body || {};
     
 
@@ -97,15 +92,12 @@ async function handler(req, res) {
       return;
     }
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-1035
     if (!isValidEmail(email)) {
       res.statusCode = 400;
       res.json({ error: 'Invalid email' });
       return;
     }
 
-<<<<<<< HEAD
-=======
 
 
 
@@ -118,14 +110,11 @@ async function handler(req, res) {
 
 
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-1035
     const file = path.join(
       process.cwd(),
       'data',
       'newsletter-subscriptions.json'
     );
-<<<<<<< HEAD
-=======
     
     let existing = [];
     
@@ -147,7 +136,6 @@ async function handler(req, res) {
     
     let existing = [];
     
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-1035
 
     let existing = [];
 
@@ -157,8 +145,6 @@ async function handler(req, res) {
     } catch {
       // File doesn't exist or is invalid, use empty array
     }
-<<<<<<< HEAD
-=======
 
 
 
@@ -185,7 +171,6 @@ async function handler(req, res) {
     console.error('Subscribe API error:', error);
   } catch (error) {
   } catch (error) {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-1035
 
     existing.push({
       email,
@@ -204,9 +189,6 @@ async function handler(req, res) {
   }
 }
 
-<<<<<<< HEAD
-module.exports = withSentry(handler);
-=======
 
 
 
@@ -220,4 +202,3 @@ module.exports = withSentry(handler);
 module.exports = withSentry(handler);
 
 module.exports = withSentry(handler);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-1035
