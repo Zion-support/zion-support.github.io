@@ -15,7 +15,7 @@ interface ErrorContext {
   filename?: string;
   lineno?: number;
   colno?: number;
-  reason?: unknown;
+  reason?: any;
   resource?: string;
   status?: number;
   statusText?: string;
@@ -227,7 +227,7 @@ class EnhancedErrorMonitoring {
 
     // Log to console in development
     if (process.env['NODE_ENV'] === 'development') {
-//       console.error('Error captured:', errorReport);
+      if (process.env.NODE_ENV === 'development') console.error('Error captured:', errorReport); }
     }
   }
 
@@ -279,7 +279,7 @@ class EnhancedErrorMonitoring {
       });
     } catch (error) {
       // If sending fails, keep in queue for retry
-//       console.warn('Failed to send error report:', error);
+      if (process.env.NODE_ENV === 'development') console.warn('Failed to send error report:', error); }
     }
   }
 
@@ -289,7 +289,7 @@ class EnhancedErrorMonitoring {
   private async flushErrorQueue(): Promise<void> {
     if (!this.isOnline) return;
 
-//     const errorsToSend = [...this.errorQueue];
+    const errorsToSend = [...this.errorQueue];
     this.errorQueue = [];
 
     for (const error of errorsToSend) {

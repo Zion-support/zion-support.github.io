@@ -109,16 +109,16 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
       const errorStats = errorHandler.getErrorStatistics();
 
       // Get memory info
-//       const memoryInfo = getMemoryInfo();
+      const memoryInfo = getMemoryInfo();
 
       // Get network info
-//       const networkInfo = getNetworkInfo();
+      const networkInfo = getNetworkInfo();
 
       // Calculate performance metrics
       const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming | undefined;
       const loadTime = navigation ? navigation.loadEventEnd - navigation.fetchStart : 0;
       const firstContentfulPaint = performance.getEntriesByType('paint').find(e => e.name === 'first-contentful-paint')?.startTime || 0;
-//       const performanceScore = calculatePerformanceScore(loadTime, firstContentfulPaint);
+      const performanceScore = calculatePerformanceScore(loadTime, firstContentfulPaint);
 
       const newMetrics: SystemMetrics = {
         performance: {
@@ -150,7 +150,7 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
       setLastUpdate(new Date());
     } catch (error) {
        
-// console.error('Failed to update metrics:', error);
+if (process.env.NODE_ENV === 'development') console.error('Failed to update metrics:', error); }
     }
   }, []);
 
@@ -174,7 +174,7 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
   useEffect(() => {
     if (!isMonitoring) return;
 
-//     const interval = setInterval(updateMetrics, refreshInterval);
+    const interval = setInterval(updateMetrics, refreshInterval);
     return () => clearInterval(interval);
   }, [isMonitoring, refreshInterval, updateMetrics]);
 
@@ -185,7 +185,7 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
       const used = memory.usedJSHeapSize / 1024 / 1024; // MB
       const total = memory.totalJSHeapSize / 1024 / 1024; // MB
       const limit = memory.jsHeapSizeLimit / 1024 / 1024; // MB
-//       const percentage = (used / limit) * 100;
+      const percentage = (used / limit) * 100;
 
       return { used, total, limit, percentage };
     }
@@ -197,7 +197,7 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
   const getNetworkInfo = () => {
     if ('connection' in navigator) {
       const nav = navigator as NavigatorWithConnection;
-//       const connection = nav.connection;
+      const connection = nav.connection;
       return {
         effectiveType: connection?.effectiveType || 'unknown',
         downlink: connection?.downlink || 0,
@@ -227,7 +227,7 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
     const blob = new Blob([JSON.stringify(exportData, null, 2)], {
       type: 'application/json',
     });
-//     const url = URL.createObjectURL(blob);
+    const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = url;
     a.download = `system-metrics-${new Date().toISOString().split('T')[0]}.json`;

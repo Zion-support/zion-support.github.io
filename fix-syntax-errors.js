@@ -1,75 +1,75 @@
 #!/usr/bin/env node
 
 import fs from 'fs';
-import { execSync } from 'child_process';
+import path from 'path';
+import { fileURLToPath } from 'url';
 
-// Get all files with syntax errors
-const files = execSync("find /workspace/app -name '*.tsx' -o -name '*.ts' | xargs grep -l '// Metadata moved to Helmet component'", { encoding: 'utf8' })
-  .trim()
-  .split('\n')
-  .filter(file => file.length > 0);
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
-// console.log(`Found ${files.length} files with metadata syntax errors`);
+// Function to fix console statement syntax errors
+function fixConsoleSyntax(content) {
+  // Fix console statements with extra closing braces
+  content = content.replace(
+    /if \(process\.env\.NODE_ENV === 'development'\) console\.(log|error|warn|info)\([^)]*\); \}/g,
+    (match) => {
+      return match.replace(/; \}$/, '; }');
+    }
+  );
+  
+  // Fix console statements missing closing braces
+  content = content.replace(
+    /if \(process\.env\.NODE_ENV === 'development'\) console\.(log|error|warn|info)\([^)]*\);$/gm,
+    (match) => {
+      return match + ' }';
+    }
+  );
+  
+  // Fix typeof issues
+  content = content.replace(
+    /typeof\s+process\.env\.NODE_ENV/g,
+    'typeof process.env.NODE_ENV'
+  );
+  
+  return content;
+}
 
-// Function to process a single file
-function processFile(filePath) {
+// Files that need syntax fixes
+const filesToFix = [
+  'app/components/EnhancedErrorBoundary.tsx',
+  'app/components/ImprovedErrorBoundary.tsx',
+  'app/components/PWAInstaller.tsx',
+  'app/components/PerformanceMonitor.tsx',
+  'app/components/SystemMonitor.tsx',
+  'app/hooks/useEnhancedPerformance.ts',
+  'app/hooks/useForm.ts',
+  'app/utils/advancedAnalytics.ts',
+  'app/utils/advancedCaching.ts',
+  'app/utils/analytics.ts',
+  'app/utils/analyticsTracker.ts'
+];
+
+function fixFile(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    let modified = false;
-    
-    // Fix metadata object syntax errors
-    const metadataRegex = /\/\/ Metadata moved to Helmet component[\s\S]*?^};/gm;
-    content = content.replace(metadataRegex, '');
-    modified = true;
-    
-    // Fix any remaining syntax issues with metadata objects
-    const brokenMetadataRegex = /^[^/]*?title:[\s\S]*?^};/gm;
-    content = content.replace(brokenMetadataRegex, '');
-    
-    // Remove any remaining broken metadata lines
-    const lines = content.split('\n');
-    const filteredLines = [];
-    let skipUntilSemicolon = false;
-    
-    for (let i = 0; i < lines.length; i++) {
-      const line = lines[i];
-      
-      if (line.includes('title:') && !line.includes('//')) {
-        skipUntilSemicolon = true;
-        continue;
-      }
-      
-      if (skipUntilSemicolon && line.trim() === '};') {
-        skipUntilSemicolon = false;
-        continue;
-      }
-      
-      if (!skipUntilSemicolon) {
-        filteredLines.push(line);
-      }
+    const fullPath = path.join(__dirname, filePath);
+    if (!fs.existsSync(fullPath)) {
+      console.log(`File not found: ${filePath}`);
+      return;
     }
+
+    let content = fs.readFileSync(fullPath, 'utf8');
     
-//     const newContent = filteredLines.join('\n');
+    // Apply fixes
+    content = fixConsoleSyntax(content);
     
-    if (newContent !== content) {
-      fs.writeFileSync(filePath, newContent);
-//       console.log(`✓ Fixed: ${filePath}`);
-      return true;
-    }
-    
-    return false;
+    fs.writeFileSync(fullPath, content);
+    console.log(`Fixed: ${filePath}`);
   } catch (error) {
-//     console.error(`Error processing ${filePath}:`, error.message);
-    return false;
+    console.error(`Error fixing ${filePath}:`, error.message);
   }
 }
 
-// Process all files
-let fixedCount = 0;
-files.forEach(file => {
-  if (processFile(file)) {
-    fixedCount++;
-  }
-});
+// Fix all files
+filesToFix.forEach(fixFile);
 
-// console.log(`\nFixed ${fixedCount} out of ${files.length} files`);
+console.log('Syntax errors fixed!');

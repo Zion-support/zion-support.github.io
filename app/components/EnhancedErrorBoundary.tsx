@@ -53,11 +53,11 @@ class EnhancedErrorBoundary extends Component<Props, State> {
 
     // Log to console in development
     if (process.env.NODE_ENV === 'development') {
-//       console.group('🚨 Error Boundary Caught Error');
-//       console.error('Error:', error);
-//       console.error('Error Info:', errorInfo);
-//       console.error('Component Stack:', errorInfo.componentStack);
-//       console.groupEnd();
+      console.group('🚨 Error Boundary Caught Error');
+      if (process.env.NODE_ENV === 'development') console.error('Error:', error);
+      if (process.env.NODE_ENV === 'development') console.error('Error Info:', errorInfo);
+      if (process.env.NODE_ENV === 'development') console.error('Component Stack:', errorInfo.componentStack);
+      console.groupEnd();
     }
   }
 
@@ -91,12 +91,11 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     }
   };
 
-  private sendErrorReport = async (errorReport: unknown) => {
+  private sendErrorReport = async (errorReport: any) => {
     try {
       // In a real app, you would send this to your error reporting service
       // For now, we'll just log it
-//       console.log('Error Report:', errorReport);
-      
+      if (process.env.NODE_ENV === 'development') console.log('Error Report:', errorReport);
       // Example: Send to error reporting service
       // await fetch('/api/errors', {
       //   method: 'POST',
@@ -104,7 +103,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       //   body: JSON.stringify(errorReport)
       // });
     } catch (reportingError) {
-//       console.warn('Failed to send error report:', reportingError);
+      if (process.env.NODE_ENV === 'development') console.warn('Failed to send error report:', reportingError);
     }
   };
 
@@ -159,7 +158,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
         // Show success message
         const button = document.getElementById('copy-error-details');
         if (button) {
-//           const originalText = button.textContent;
+          const originalText = button.textContent;
           button.textContent = 'Copied!';
           setTimeout(() => {
             button.textContent = originalText;
@@ -167,7 +166,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
         }
       })
       .catch(() => {
-//         console.warn('Failed to copy error details');
+        if (process.env.NODE_ENV === 'development') console.warn('Failed to copy error details');
       });
   };
 
@@ -178,7 +177,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       }
 
       const { retryCount, error, errorInfo, errorId } = this.state;
-//       const canRetry = retryCount < this.maxRetries;
+      const canRetry = retryCount < this.maxRetries;
 
       return (
         <div className={`min-h-screen flex items-center justify-center bg-gradient-to-br from-red-50 to-orange-50 ${this.props.className || ''}`}>

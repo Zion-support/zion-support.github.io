@@ -14,10 +14,10 @@ export class AppError extends Error {
 }
 
 export const errorHandler = (error: AppError | Error) => {
-//   const isDevelopment = process.env.NODE_ENV === 'development';
+  const isDevelopment = process.env.NODE_ENV === 'development';
   const appError = error instanceof AppError ? error : new AppError(error.message);
   
-//   console.error({
+  if (process.env.NODE_ENV === 'development') console.error({
     message: appError.message,
     stack: isDevelopment ? appError.stack : undefined,
     timestamp: new Date().toISOString(),
@@ -30,6 +30,6 @@ export const errorHandler = (error: AppError | Error) => {
   };
 };
 
-export const asyncHandler = (fn: Function) => (req: unknown, res: unknown, next: unknown) => {
+export const asyncHandler = (fn: Function) => (_req: any, _res: any, next: any) => {
   Promise.resolve(fn(req, res, next)).catch(next);
 };

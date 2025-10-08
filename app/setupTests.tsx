@@ -2,7 +2,7 @@
  * Jest setup file for testing environment
  */
 
-import '@testing-library/jest-dom';
+import '@testing-library/_jest-dom';
 
 // Suppress jsdom navigation warnings
 // eslint-disable-next-line no-console
@@ -20,28 +20,28 @@ import '@testing-library/jest-dom';
 // Mock window.matchMedia
 Object.defineProperty(window, 'matchMedia', {
   writable: true,
-  value: jest.fn().mockImplementation(query => ({
+  value: _jest.fn().mockImplementation(query => ({
     matches: false,
     media: query,
     onchange: null,
-    addListener: jest.fn(), // deprecated
-    removeListener: jest.fn(), // deprecated
-    addEventListener: jest.fn(),
-    removeEventListener: jest.fn(),
-    dispatchEvent: jest.fn(),
+    addListener: _jest.fn(), // deprecated
+    removeListener: _jest.fn(), // deprecated
+    addEventListener: _jest.fn(),
+    removeEventListener: _jest.fn(),
+    dispatchEvent: _jest.fn(),
   })),
 });
 
 // Mock requestAnimationFrame
-global.requestAnimationFrame = jest.fn(cb => setTimeout(cb, 0));
-global.cancelAnimationFrame = jest.fn(id => clearTimeout(id));
+global.requestAnimationFrame = _jest.fn(cb => setTimeout(cb, 0));
+global.cancelAnimationFrame = _jest.fn(id => clearTimeout(id));
 
 // Mock localStorage
 const localStorageMock = {
-  getItem: jest.fn(),
-  setItem: jest.fn(),
-  removeItem: jest.fn(),
-  clear: jest.fn(),
+  getItem: _jest.fn(),
+  setItem: _jest.fn(),
+  removeItem: _jest.fn(),
+  clear: _jest.fn(),
 };
 Object.defineProperty(window, 'localStorage', {
   value: localStorageMock,
@@ -49,17 +49,17 @@ Object.defineProperty(window, 'localStorage', {
 
 // Mock sessionStorage
 const sessionStorageMock = {
-  getItem: jest.fn(),
-  setItem: jest.fn(),
-  removeItem: jest.fn(),
-  clear: jest.fn(),
+  getItem: _jest.fn(),
+  setItem: _jest.fn(),
+  removeItem: _jest.fn(),
+  clear: _jest.fn(),
 };
 Object.defineProperty(window, 'sessionStorage', {
   value: sessionStorageMock,
 });
 
 // Mock fetch
-global.fetch = jest.fn();
+global.fetch = _jest.fn();
 
 // Mock console methods for cleaner test output
 // const originalConsoleWarn = console.warn;
@@ -114,7 +114,7 @@ delete (window as unknown as Record<string, unknown>).location;
   pathname: '/',
   search: '',
   hash: '',
-  reload: jest.fn(),
-  assign: jest.fn(),
-  replace: jest.fn(),
+  reload: _jest.fn(),
+  assign: _jest.fn(),
+  replace: _jest.fn(),
 };

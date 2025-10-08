@@ -40,7 +40,7 @@ export function useEnhancedPerformance(
     return () => {
       // Track component unmount duration
       if (trackPerformance) {
-//         const duration = performance.now() - mountTimeRef.current;
+        const duration = performance.now() - mountTimeRef.current;
         if (duration > 5000) {
           // Long-lived component
           analytics.trackCustomEvent(
@@ -65,9 +65,9 @@ export function useEnhancedPerformance(
 
     if (trackPerformance && renderCountRef.current > 10) {
       // Many re-renders detected
-//       console.warn(
-//         `Component ${component} has re-rendered ${renderCountRef.current} times`
-//       );
+      if (process.env.NODE_ENV === 'development') console.warn(
+        `Component ${component} has re-rendered ${renderCountRef.current} times`
+      ); }
       analytics.trackCustomEvent(
         'Performance',
         'High Render Count',
@@ -100,12 +100,12 @@ export function useEnhancedPerformance(
 
   const measureOperation = useCallback(
     (operationName: string) => {
-//       const markName = `${component}-${operationName}`;
-//       const startTime = performance.now();
+      const markName = `${component}-${operationName}`;
+      const startTime = performance.now();
 
       return {
         end: () => {
-//           const duration = performance.now() - startTime;
+          const duration = performance.now() - startTime;
           
           if (trackPerformance) {
             analytics.trackPerformance(

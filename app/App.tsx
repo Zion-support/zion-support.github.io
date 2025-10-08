@@ -1,6 +1,6 @@
-// // 'use client'; // Removed for Vite compatibility // Removed for Vite compatibility
+'use client';
 
-import React, { Suspense, lazy, useEffect, useCallback } from 'react';
+import React, { Suspense, lazy, useEffect } from 'react';
 import { HelmetProvider } from 'react-helmet-async';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
@@ -14,7 +14,7 @@ import PerformanceDashboard from './components/PerformanceDashboard';
 import LoadingSpinner from './components/LoadingSpinner';
 
 // Lazy load pages
-// const HomePage = lazy(() => import('./page').catch(() => ({ default: () => <div>Error loading page</div> })));
+const HomePage = lazy(() => import('./page').catch(() => ({ default: () => <div>Error loading page</div> })));
 
 // Import proper utilities
 import { performanceOptimizer, lazyLoadImages, preloadCriticalResources, collectPerformanceMetrics } from './utils/performanceOptimizer';
@@ -32,8 +32,8 @@ const App: React.FC = () => {
     
     // Initialize Web Vitals monitoring
     if (typeof window !== 'undefined' && 'performance' in window) {
-//       const pageLoadMetrics = collectPerformanceMetrics();
-//       const metrics = performanceOptimizer.getMetrics();
+      const pageLoadMetrics = collectPerformanceMetrics();
+      const metrics = performanceOptimizer.getMetrics();
       if (pageLoadMetrics) {
         logger.info('Performance metrics collected', 'App', { metrics: pageLoadMetrics });
       }
@@ -46,7 +46,7 @@ const App: React.FC = () => {
     logger.info('🚀 Zion Tech Group App initialized with comprehensive monitoring');
   }, []);
 
-  const handleError = useCallback((error: Error, errorInfo: unknown) => {
+  const handleError = useCallback((error: Error, errorInfo: React.ErrorInfo) => {
     logger.error('Application Error', error, { errorInfo, component: 'ErrorBoundary' });
   }, []);
 
