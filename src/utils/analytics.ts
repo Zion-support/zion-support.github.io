@@ -82,16 +82,7 @@ class Analytics {
     };
 
     this.events.push(event);
-    
-    // Send to analytics service if configured
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('event', name, {
-        event_category: category,
-        event_label: label,
-        value: value,
-        ...properties,
-      });
-    }
+    this.sendEvent(event);
   }
 
   /**
@@ -118,14 +109,14 @@ class Analytics {
   /**
    * Track performance metrics
    */
-  trackPerformance(metric: string, value: number, unit?: string): void {
+  trackPerformance(metric: string, value: number, unit: string = 'ms'): void {
     this.track('performance', 'metrics', metric, unit, value);
   }
 
   /**
    * Track business events
    */
-  trackBusinessEvent(
+  trackBusiness(
     event: string,
     value?: number,
     properties?: Record<string, unknown>
@@ -136,8 +127,8 @@ class Analytics {
   /**
    * Send event to analytics service
    */
-  private sendToAnalytics(event: AnalyticsEvent): void {
-    // Implementation for sending to analytics service
+  private sendEvent(event: AnalyticsEvent): void {
+    // Send to analytics service (e.g., Google Analytics, Mixpanel, etc.)
     if (typeof window !== 'undefined' && (window as any).gtag) {
       (window as any).gtag('event', event.name, {
         event_category: event.category,
@@ -181,10 +172,7 @@ class Analytics {
    * Update user properties
    */
   updateUserProperties(properties: Partial<UserProperties>): void {
-    this.userProperties = {
-      ...this.userProperties,
-      ...properties,
-    };
+    this.userProperties = { ...this.userProperties, ...properties };
   }
 }
 

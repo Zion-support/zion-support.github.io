@@ -66,13 +66,8 @@ export class ErrorHandler {
       ...errorInfo,
     };
 
-    this.errorQueue.push(errorData);
+    this.addToQueue(errorData);
     
-    // Limit queue size
-    if (this.errorQueue.length > this.maxQueueSize) {
-      this.errorQueue.shift();
-    }
-
     // Send to error reporting service
     this.reportError(errorData);
   }
@@ -83,7 +78,7 @@ export class ErrorHandler {
   private categorizeError(error: Error): ErrorCategory {
     const message = error.message.toLowerCase();
     
-    if (message.includes('network') || message.includes('fetch') || message.includes('ajax')) {
+    if (message.includes('network') || message.includes('fetch') || message.includes('timeout')) {
       return ErrorCategory.NETWORK;
     }
     if (message.includes('validation') || message.includes('invalid')) {
@@ -103,16 +98,16 @@ export class ErrorHandler {
    * Determine error severity
    */
   private determineSeverity(error: Error, category: ErrorCategory): ErrorSeverity {
-    if (category === ErrorCategory.NETWORK || category === ErrorCategory.API) {
-      return ErrorSeverity.HIGH;
-    }
-    if (category === ErrorCategory.RUNTIME) {
+    if (category === ErrorCategory.CRITICAL) {
       return ErrorSeverity.CRITICAL;
     }
-    if (category === ErrorCategory.VALIDATION) {
+    if (category === ErrorCategory.NETWORK || category === ErrorCategory.API) {
       return ErrorSeverity.MEDIUM;
     }
-    return ErrorSeverity.LOW;
+    if (category === ErrorCategory.VALIDATION) {
+      return ErrorSeverity.LOW;
+    }
+    return ErrorSeverity.MEDIUM;
   }
 
   /**
@@ -123,16 +118,24 @@ export class ErrorHandler {
   }
 
   /**
+   * Add error to queue
+   */
+  private addToQueue(errorInfo: ErrorInfo): void {
+    this.errorQueue.push(errorInfo);
+    if (this.errorQueue.length > this.maxQueueSize) {
+      this.errorQueue.shift();
+    }
+  }
+
+  /**
    * Report error to external service
    */
-  private reportError(errorData: ErrorInfo): void {
-    // Log to console in development
-    if (process.env['NODE_ENV'] === 'development') {
-      console.error('Error logged:', errorData);
+  private reportError(errorInfo: ErrorInfo): void {
+    // Report to error tracking service (e.g., Sentry, LogRocket, etc.)
+    if (typeof window !== 'undefined' && process.env.NODE_ENV === 'production') {
+      // Send to error reporting service
+      console.error('Error reported:', errorInfo);
     }
-
-    // Send to error reporting service (e.g., Sentry, LogRocket)
-    // Implementation depends on the service being used
   }
 
   /**
@@ -150,17 +153,17 @@ export class ErrorHandler {
   }
 
   /**
-   * Get errors by category
-   */
-  getErrorsByCategory(category: ErrorCategory): ErrorInfo[] {
-    return this.errorQueue.filter(error => error.category === category);
-  }
-
-  /**
    * Get errors by severity
    */
   getErrorsBySeverity(severity: ErrorSeverity): ErrorInfo[] {
     return this.errorQueue.filter(error => error.severity === severity);
+  }
+
+  /**
+   * Get errors by category
+   */
+  getErrorsByCategory(category: ErrorCategory): ErrorInfo[] {
+    return this.errorQueue.filter(error => error.category === category);
   }
 }
 
