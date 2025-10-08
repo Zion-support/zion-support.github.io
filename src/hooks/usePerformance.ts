@@ -17,4 +17,3 @@
 };
 
 export default usePerformance;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-88f7

@@ -1,54 +1,32 @@
-);
+import React from 'react';
 
-// Loading fallback component
-const LoadingFallback: React.FC<{ height?: string }> = ({
-  height = 'h-32',
-}) => (
-  <div className={`flex items-center justify-center ${height} w-full`}>
-    <div className='animate-spin rounded-full h-8 w-8 border-b-2 border-indigo-600'></div>
-  </div>
-);
-
-const HomePage: React.FC = () => {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
-  // Analytics tracking for phone clicks
-  const handlePhoneClick = useCallback(() => {
-    if (
-      typeof window !== 'undefined' &&
-      (
-        window as unknown as {
-          gtag?: (
-            command: string,
-            action: string,
-            parameters: Record<string, unknown>
-          ) => void;
-        }
-      ).gtag
-    ) {
-      (
-        window as unknown as {
-          gtag: (
-            command: string,
-            action: string,
-            parameters: Record<string, unknown>
-          ) => void;
-        }
-      ).gtag('event', 'phone_click', {
-        event_category: 'engagement',
-        event_label: 'main_phone_number',
-      });
-    }
-  }, []);
-
-  const toggleMobileMenu = useCallback(() => {
-    setIsMobileMenuOpen((prev) => !prev);
-  }, []);
-
+export default function HomePage() {
   return (
-    <>
-    </>
+    <div className='min-h-screen bg-gray-50'>
+      <div className='container mx-auto px-4 py-16'>
+        <div className='text-center'>
+          <h1 className='text-5xl font-bold text-gray-900 mb-6'>
+            Welcome to Zion Tech Group
+          </h1>
+          <p className='text-xl text-gray-600 mb-8'>
+            Leading provider of AI-powered enterprise solutions and digital transformation services
+          </p>
+          <div className='flex justify-center gap-4'>
+            <a
+              href='/contact'
+              className='bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors'
+            >
+              Get Started
+            </a>
+            <a
+              href='/about'
+              className='bg-gray-200 text-gray-800 px-8 py-3 rounded-lg font-semibold hover:bg-gray-300 transition-colors'
+            >
+              Learn More
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
   );
-};
-
-export default HomePage;
+}
