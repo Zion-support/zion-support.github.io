@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
 
 interface PerformanceMetrics {
@@ -48,11 +49,22 @@ const PerformanceOptimizer: React.FC = () => {
       window.addEventListener('load', measurePerformance);
     }
 
+=======
+import React, { useEffect } from 'react';
+
+const PerformanceOptimizer: React.FC = () => {
+  useEffect(() => {
+>>>>>>> cursor/analyze-improve-and-deploy-application-3d67
     // Preload critical resources
     const preloadCriticalResources = () => {
       const criticalImages = [
         '/og-image.jpg',
+<<<<<<< HEAD
         '/logo.png'
+=======
+        '/logo.png',
+        '/favicon.ico'
+>>>>>>> cursor/analyze-improve-and-deploy-application-3d67
       ];
 
       criticalImages.forEach(src => {
@@ -64,7 +76,42 @@ const PerformanceOptimizer: React.FC = () => {
       });
     };
 
+    // Optimize images
+    const optimizeImages = () => {
+      const images = document.querySelectorAll('img');
+      images.forEach(img => {
+        // Add loading="lazy" to non-critical images
+        if (!img.hasAttribute('loading')) {
+          img.setAttribute('loading', 'lazy');
+        }
+        
+        // Add decoding="async" for better performance
+        if (!img.hasAttribute('decoding')) {
+          img.setAttribute('decoding', 'async');
+        }
+      });
+    };
+
+    // Intersection Observer for animations
+    const setupIntersectionObserver = () => {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('animate-fade-in');
+            }
+          });
+        },
+        { threshold: 0.1 }
+      );
+
+      const elements = document.querySelectorAll('.animate-on-scroll');
+      elements.forEach(el => observer.observe(el));
+    };
+
+    // Initialize optimizations
     preloadCriticalResources();
+<<<<<<< HEAD
 
     // Optimize images
     const optimizeImages = () => {
@@ -111,6 +158,17 @@ const PerformanceOptimizer: React.FC = () => {
   }, []);
 
   // Don't render anything visible
+=======
+    optimizeImages();
+    setupIntersectionObserver();
+
+    // Cleanup
+    return () => {
+      // Cleanup if needed
+    };
+  }, []);
+
+>>>>>>> cursor/analyze-improve-and-deploy-application-3d67
   return null;
 };
 
