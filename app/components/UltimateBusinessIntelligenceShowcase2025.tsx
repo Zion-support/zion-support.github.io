@@ -4,7 +4,6 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 
 const UltimateBusinessIntelligenceShowcase2025 = () => {
-  const [selectedCategory, setSelectedCategory] = useState('all');
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const content = [
@@ -61,25 +60,14 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
     }
   ];
 
-  const categories = [
-    { id: 'all', name: 'All Content' },
-    { id: 'blog', name: 'Blog' },
-    { id: 'case-study', name: 'Case Studies' },
-    { id: 'resource', name: 'Resources' }
-  ];
-
-  const filteredContent = selectedCategory === 'all' 
-    ? content 
-    : content.filter(item => item.category === selectedCategory);
-
-  const currentContent = content[currentSlide];
-
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % content.length);
     }, 5000);
     return () => clearInterval(interval);
   }, [content.length]);
+
+  const currentContent = content[currentSlide];
 
   return (
     <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">
@@ -119,25 +107,8 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
           </p>
         </div>
 
-        {/* Category Filter */}
-        <div className="flex justify-center gap-4 mb-12">
-          {categories.map((category) => (
-            <button
-              key={category.id}
-              onClick={() => setSelectedCategory(category.id)}
-              className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
-                selectedCategory === category.id
-                  ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white'
-                  : 'bg-white/10 text-gray-300 hover:bg-white/20'
-              }`}
-            >
-              {category.name}
-            </button>
-          ))}
-        </div>
-
         {/* Main Content Card */}
-        <div className="max-w-6xl mx-auto mb-16">
+        <div className="max-w-6xl mx-auto">
           <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-8 md:p-12 border border-white/20 shadow-2xl">
             {/* Content Type Badge */}
             <div className="flex items-center justify-between mb-8">
@@ -149,22 +120,18 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
               </div>
             </div>
 
-            {/* Title */}
-            <h2 className="text-3xl font-bold text-white mb-4">
-              {currentContent.title}
-            </h2>
+            {/* Title & Description */}
+            <h2 className="text-3xl font-bold text-white mb-4">{currentContent.title}</h2>
+            <p className="text-xl text-gray-300 mb-8">{currentContent.description}</p>
 
-            {/* Description */}
-            <p className="text-gray-300 mb-8 text-lg">
-              {currentContent.description}
-            </p>
-
-            {/* Stats Grid */}
+            {/* Metrics Grid */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8">
               {Object.entries(currentContent.metrics).map(([key, value]) => (
                 <div key={key} className="text-center">
                   <div className="text-3xl font-bold text-cyan-400 mb-2">{value}</div>
-                  <div className="text-sm text-gray-300 capitalize">{key}</div>
+                  <div className="text-sm text-gray-300 capitalize">
+                    {key.replace(/([A-Z])/g, ' $1').trim()}
+                  </div>
                 </div>
               ))}
             </div>
@@ -217,8 +184,8 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
         </div>
 
         {/* Content Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {filteredContent.map((item) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16 mt-16">
+          {content.map((item) => (
             <div
               key={item.id}
               className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 group"
