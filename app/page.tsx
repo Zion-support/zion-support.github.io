@@ -31,21 +31,10 @@ const HomePage: React.FC = () => {
     return () => clearTimeout(timer);
   }, []);
 
-  // Analytics tracking for phone clicks
+  // Analytics tracking for phone clicks - optimized
   const handlePhoneClick = useCallback(() => {
-    if (
-      typeof window !== 'undefined' &&
-      (
-        window as unknown as {
-          gtag?: (command: string, action: string, parameters: Record<string, unknown>) => void;
-        }
-      ).gtag
-    ) {
-      (
-        window as unknown as {
-          gtag: (command: string, action: string, parameters: Record<string, unknown>) => void;
-        }
-      ).gtag('event', 'phone_click', {
+    if (typeof window !== 'undefined' && 'gtag' in window) {
+      (window as any).gtag('event', 'phone_click', {
         event_category: 'engagement',
         event_label: 'main_phone_number',
       });
