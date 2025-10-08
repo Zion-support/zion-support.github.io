@@ -7,11 +7,12 @@ interface OptimizedImageProps {
   height?: number;
   className?: string;
   priority?: boolean;
-  placeholder?: string;
+  _placeholder?: string;
   onLoad?: () => void;
   onError?: () => void;
 }
 
+ 
 const OptimizedImage: React.FC<OptimizedImageProps> = memo(({
   src,
   alt,

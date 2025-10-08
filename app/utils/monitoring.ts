@@ -102,14 +102,13 @@ class MonitoringService {
         const longTaskObserver = new PerformanceObserver((list) => {
           for (const entry of list.getEntries()) {
             console.warn('Long task detected:', {
-              duration: entry.duration
-              startTime: entry.startTime
+            duration: entry.duration,
+            startTime: entry.startTime
             })
           }
         })
         longTaskObserver.observe({ entryTypes: ['longtask'] })
 
-      } catch {
       } catch (error) {
         // Long task API might not be available
       }
