@@ -3,12 +3,21 @@
  * Provides tools for monitoring and optimizing application performance
  */
 
+import { logger } from './logger';
+
 interface PerformanceMetrics {
   loadTime: number;
   renderTime: number;
   memoryUsage: number;
   bundleSize: number;
   cacheHitRate: number;
+  ttfb?: number;
+  fcp?: number;
+  lcp?: number;
+  fid?: number;
+  cls?: number;
+  fmp?: number;
+  firstContentfulPaint?: number;
 }
 
 interface OptimizationConfig {
