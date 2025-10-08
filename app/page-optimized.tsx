@@ -10,7 +10,7 @@ const UnifiedBanner = dynamic(() => import('./components/NewestContent2025Banner
   ssr: false
 });
 
-const ContentPromotion = dynamic(() => import('./components/UltimateBusinessIntelligence2025Banner').catch(() => ({ default: () => null as any })), {
+const ContentPromotion = dynamic(() => import('./components/UltimateBusinessIntelligence2025Banner').catch(() => import('./components/NewestContent2025Banner')), {
   loading: () => <div className="animate-pulse bg-gray-200 h-64 rounded-lg"></div>,
   ssr: false
 });
@@ -25,11 +25,11 @@ export default function OptimizedHomePage() {
     <main className="min-h-screen">
       <SEOOptimizer />
       <PerformanceMonitor />
-      <AccessibilityEnhancer />
-      
-      <UnifiedBanner />
-      <ContentPromotion />
-      <ContentShowcase />
+      <AccessibilityEnhancer>
+        <UnifiedBanner />
+        <ContentPromotion />
+        <ContentShowcase />
+      </AccessibilityEnhancer>
     </main>
   );
 }
