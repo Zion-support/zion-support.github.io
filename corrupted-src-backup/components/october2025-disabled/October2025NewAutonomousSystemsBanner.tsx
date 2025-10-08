@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 const October2025NewAutonomousSystemsBanner = () => {
   return (
     <div className="bg-gradient-to-r from-purple-900 via-indigo-900 to-blue-900 border-b border-purple-500/30 relative overflow-hidden">

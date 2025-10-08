@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 export default function October2025LatestAIBreakthroughsBanner() {
   return (
     <div className="bg-gradient-to-r from-purple-900 via-indigo-900 to-rose-900 border-y border-white/10">

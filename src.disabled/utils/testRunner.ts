@@ -149,24 +149,6 @@ export const testUtils = {
       return fn(...args);
     };
 
-<<<<<<< HEAD:src.disabled/utils/testRunner.ts
-    // Add properties to the spy function
-    Object.assign(spyFn, {
-      callCount: () => callCount,
-      lastArgs: () => lastArgs,
-      reset: () => {
-        callCount = 0;
-        lastArgs = [];
-      }
-    });
-=======
-    (spyFn as unknown as Function & { callCount: () => number; lastArgs: () => unknown[]; reset: () => void }).callCount = () => callCount;
-    (spyFn as unknown as Function & { callCount: () => number; lastArgs: () => unknown[]; reset: () => void }).lastArgs = () => lastArgs;
-    (spyFn as unknown as Function & { callCount: () => number; lastArgs: () => unknown[]; reset: () => void }).reset = () => {
-      callCount = 0;
-      lastArgs = [];
-    };
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3927:src/utils/testRunner.ts
 
     return spyFn as unknown as Function & { callCount: () => number; lastArgs: () => unknown[]; reset: () => void };
   },

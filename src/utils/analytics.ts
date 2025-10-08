@@ -76,7 +76,7 @@ class Analytics {
     //Send to analytics service
     this.sendToAnalytics(event);
     //Log in development
-    if (process.env.NODE_ENV === 'development') {
+    if (process.env['NODE_ENV'] === 'development') {
       //Analytics event logged
     }
   }

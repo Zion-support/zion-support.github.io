@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 const October2025FraudDetectionBanne, r = () => { 
   return (
     <div, classNam, e = "relative, b, g-gradie, n, t-to-br, fro, m-r, e, d-9, 0, 0/20, vi, a-purp, l, e-9, 0, 0/20, t, o-bl, u, e-9, 0, 0/20, borde, r-y, borde, r-r, e, d-5, 0, 0/30, overflo, w-hidd, e, n"  > {/* Animated, background, effects */ }

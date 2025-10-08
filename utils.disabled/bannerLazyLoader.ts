@@ -4,16 +4,6 @@
  * Optimizes banner loading by implementing lazy loading and code splitting
  * to improve initial page load performance.
  */
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { lazy } from 'react';
-=======
-import React, { lazy } from 'react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-1f83
 import type { ComponentType } from 'react';
 =======
 import { lazy, ComponentType } from 'react';
@@ -53,17 +43,6 @@ export const lazyLoadBanner = (
           importFn()
             .then(resolve)
             .catch(retryError => {
-<<<<<<< HEAD
-              console.error(
-                `Retry failed for banner: ${componentName}`,
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-9d58
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
 =======
@@ -76,26 +55,6 @@ export const lazyLoadBanner = (
               );
               // Return a fallback component
               resolve({ default: () => null });
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-                retryError,
-              );
-              // Return a fallback component
-              resolve({
-                default: () => {
-                  const div = document.createElement('div');
-                  div.className = 'banner-error';
-                  const p = document.createElement('p');
-                  p.textContent = `Failed to load banner: ${componentName}`;
-                  div.appendChild(p);
-                  return div as any;
-                },
-              });
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3fed
 =======
               console.error(`Retry failed for banner: ${componentName}`, retryError);
               // Return a fallback component
@@ -124,55 +83,6 @@ export const lazyLoadBanner = (
  * Preload banner components for better performance
  */
 export const preloadBanner = (importFn: () => Promise<BannerModule>): void => {
-<<<<<<< HEAD
-  if (typeof window !== 'undefined') {
-    // Use requestIdleCallback for non-blocking preloading
-    if ('requestIdleCallback' in window) {
-      requestIdleCallback(() => {
-        importFn().catch(error => {
-          console.warn('Banner preload failed:', error);
-        });
-      });
-<<<<<<< HEAD
-    });
-  }
-};
-
-/**
- * Get banner priority based on content date and value
- */
-export const getBannerPriority = (bannerName: string): number => {
-  // October 2025 content gets highest priority
-  if (bannerName.includes('October2025')) {
-    if (bannerName.includes('MultiAgent') || bannerName.includes('RealTime')) {
-      return 1; // Highest priority
-    }
-    return 2;
-  }
-  
-  // 2026+ content gets medium priority
-  if (bannerName.includes('2026') || bannerName.includes('2027')) {
-    return 3;
-  }
-  
-  // Older content gets lower priority
-  return 4;
-};
-
-/**
- * Sort banners by priority for optimal loading
- */
-export const sortBannersByPriority = (bannerNames: string[]): string[] => {
-  return [...bannerNames].sort((a, b) => {
-    return getBannerPriority(a) - getBannerPriority(b);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-  // Preload in the background
-  importFn().catch(error => {
-    console.warn('Banner preload failed:', error);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-1f83
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
 =======
@@ -183,14 +93,6 @@ export const sortBannersByPriority = (bannerNames: string[]): string[] => {
 };
 
 /**
-<<<<<<< HEAD
- * Banner loading state management
- */
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-9008
 export class BannerObserver {
@@ -226,11 +128,6 @@ export class BannerObserver {
       }, 100);
     }
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-9008
 
@@ -244,60 +141,14 @@ export class BannerObserver {
   }
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-};
-
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-9008
 /**
  * Banner loading state management
  */
-<<<<<<< HEAD
-<<<<<<< HEAD
-export class BannerLoader {
-  private loadingStates = new Map<string, boolean>();
-  private loadedComponents = new Set<string>();
-
-  isLoaded(componentName: string): boolean {
-    return this.loadedComponents.has(componentName);
-  }
-
-  isLoading(componentName: string): boolean {
-    return this.loadingStates.get(componentName) || false;
-  }
-
-  setLoading(componentName: string, loading: boolean): void {
-    this.loadingStates.set(componentName, loading);
-  }
-
-  setLoaded(componentName: string): void {
-    this.loadedComponents.add(componentName);
-    this.loadingStates.delete(componentName);
-  }
-
-  getLoadingCount(): number {
-    return Array.from(this.loadingStates.values()).filter(Boolean).length;
-  }
-
-  getAllLoadedComponents(): string[] {
-    return Array.from(this.loadedComponents);
-  }
-}
-
-// Global banner loader instance
-export const bannerLoader = new BannerLoader();
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3fed
 /**
  * Hook for banner loading state
  */
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-9008
 export const trackBannerPerformance = (
@@ -324,62 +175,6 @@ export default {
   sortBannersByPriority,
   BannerObserver,
   trackBannerPerformance,
-<<<<<<< HEAD
-<<<<<<< HEAD
-};
-=======
-export const useBannerLoadingState = (componentName: string) => {
-  return {
-    isLoading: bannerLoader.isLoading(componentName),
-    isLoaded: bannerLoader.isLoaded(componentName),
-  };
-};
-
-/**
- * Banner loading configuration
- */
-export interface BannerConfig {
-  componentName: string;
-  importFn: () => Promise<BannerModule>;
-  preload?: boolean;
-  retryAttempts?: number;
-  retryDelay?: number;
-}
-
-/**
- * Load multiple banners with configuration
- */
-export const loadBanners = async (configs: BannerConfig[]): Promise<void> => {
-  const loadPromises = configs.map(async config => {
-    const { componentName, importFn, preload = false } = config;
-    
-    if (preload) {
-      preloadBanner(importFn);
-    }
-
-    try {
-      bannerLoader.setLoading(componentName, true);
-      await importFn();
-      bannerLoader.setLoaded(componentName);
-    } catch (error) {
-      console.error(`Failed to load banner: ${componentName}`, error);
-    } finally {
-      bannerLoader.setLoading(componentName, false);
-    }
-  });
-
-  await Promise.allSettled(loadPromises);
-};
-
-export default {
-  lazyLoadBanner,
-  preloadBanner,
-  BannerLoader,
-  bannerLoader,
-  useBannerLoadingState,
-  loadBanners,
-};
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3fed
 =======
 export class BannerLoader {
   private static loadingStates = new Map<string, boolean>();

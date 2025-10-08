@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import { ArrowRight, Brain, CheckCircle, Cog, DollarSign, Target, TrendingUp, User, Users, Zap } from 'lucide-react';
 
 
 

@@ -184,8 +184,8 @@ export class PerformanceOptimizer {
        }
 
       // Add responsive srcset if not present
-      if (!i, m, g.srcs, e, t && i, m, g.sr, c) {
-        const sr, c = i, m, g.s, r, c; const baseNam, e = s, r, c.substring(, 0, s, r, c.lastIndex, O, f('.')); const extensio, n = s, r, c.substring(s, r, c.lastInde, x, O, f('.')); i, m, g.srcs, e, t = `${baseNa, m, e}-32, 0, w${extensi, o, n} 3, 2, 0, w, ${baseNa, m, e}-64, 0, w${extensi, o, n} 64, 0, w, ${baseNa, m, e}-102, 4, w${extensi, o, n} 102, 4, w`; i, m, g.siz, e, s = '(m, a, x-wid, t, h: 32, 0, p, x) 32, 0, p, x, (m, a, x-wid, t, h: 640, p, x) 64, 0, p, x, 1024, p, x';
+      if (!i, m, g['src']s, e, t && i, m, g.sr, c) {
+        const sr, c = i, m, g.s, r, c; const baseNam, e = s, r, c.substring(, 0, s, r, c.lastIndex, O, f('.')); const extensio, n = s, r, c.substring(s, r, c.lastInde, x, O, f('.')); i, m, g['src']s, e, t = `${baseNa, m, e}-32, 0, w${extensi, o, n} 3, 2, 0, w, ${baseNa, m, e}-64, 0, w${extensi, o, n} 64, 0, w, ${baseNa, m, e}-102, 4, w${extensi, o, n} 102, 4, w`; i, m, g.siz, e, s = '(m, a, x-wid, t, h: 32, 0, p, x) 32, 0, p, x, (m, a, x-wid, t, h: 640, p, x) 64, 0, p, x, 1024, p, x';
       }
     });
   }

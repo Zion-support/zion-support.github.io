@@ -1,22 +1,6 @@
 const { withSentry } = require('./withSentry.cjs');
 const fs = require('fs');
 const path = require('path');
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0a8c
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8
@@ -60,22 +44,6 @@ async function handler(req, res) {
     res.end('Method Not Allowed');
     return;
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0a8c
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8
@@ -120,22 +88,6 @@ async function handler(req, res) {
     location,
     details: _details
   } = req.body || {};
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0a8c
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8
@@ -180,28 +132,6 @@ async function handler(req, res) {
 
   const file = path.join(process.cwd(), 'data', 'onsite-requests.json');
   let existing = [];
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-  
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3d1d
 =======
   
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-4606
@@ -262,22 +192,6 @@ async function handler(req, res) {
   } catch {
     // File doesn't exist or is invalid, use empty array
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0a8c
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8
@@ -323,22 +237,6 @@ async function handler(req, res) {
     details: _details,
     createdAt: new Date().toISOString()
   });
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0a8c
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8
@@ -379,22 +277,6 @@ async function handler(req, res) {
   res.statusCode = 200;
   res.json({ success: true });
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0a8c
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8

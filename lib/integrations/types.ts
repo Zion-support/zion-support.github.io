@@ -7,29 +7,6 @@ export type IntegrationProviderId =
   | 'lever' 
   | 'workable' 
   | 'bamboohr';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-export type SyncStatus = 'connected' | 'warning' | 'disconnected';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3d1d
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-4606
@@ -46,8 +23,6 @@ export type SyncStatus = 'connected' | 'warning' | 'disconnected';
 
 export type SyncStatus = 'connected' | 'warning' | 'disconnected';
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0a8c
 =======
 
 export type SyncStatus = 'connected' | 'warning' | 'disconnected';
@@ -68,19 +43,6 @@ export interface IntegrationProviderMeta {
   name: string;
   category: 'crm' | 'ats';
   description: string;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-4854
 =======
 }
 
@@ -148,26 +110,6 @@ export interface ProviderConnection {
   accessToken: string;
   refreshToken?: string;
   expiresAt?: number;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-  status: SyncStatus;
-  lastSync?: number;
-<<<<<<< HEAD
-  createdAt: number;
-  updatedAt: number;
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-bcb8
 =======
 =======
 =======
@@ -190,9 +132,6 @@ export interface ProviderConnection {
   lastSyncAt?: number;
   createdAt: number;
   updatedAt: number;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3d1d
 }
 =======
 =======
@@ -212,10 +151,6 @@ export interface ProviderConnection {
   expiresAt?: number;
   lastSyncAt?: number;
   createdAt: number;
-<<<<<<< HEAD
-=======
-  updatedAt: number;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e3b
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-895b
 =======
@@ -230,8 +165,6 @@ export interface ProviderConnection {
   lastSync?: number;
 }
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0a8c
 =======
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-8344
@@ -247,16 +180,6 @@ export interface ProviderConnection {
   lastSync?: number;
   createdAt: number;
   updatedAt: number;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-8344
 =======
@@ -327,26 +250,6 @@ export interface SyncLogEntry {
   providerId: IntegrationProviderId;
   level: 'info' | 'warn' | 'error';
   action: string;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-  details?: Record<string, unknown>;
-}
-=======
-  details?: Record<string, any>;
-}
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0a8c
 =======
   details?: Record<string, any>;
 }
@@ -412,22 +315,6 @@ export interface ManualOverride {
   disableCrmSync?: boolean;
   disableAtsSync?: boolean;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0a8c
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8
@@ -468,35 +355,6 @@ export interface ZapierEvent {
   id: string;
   type: 'zion.job.posted' | 'zion.talent.matched';
   timestamp: number;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-  payload: Record<string, unknown>;
-}
-=======
-  payload: Record<string, any>;
-}
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-bcb8
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-3d1d
 =======
@@ -536,8 +394,6 @@ export interface IntegrationsState {
   logs: SyncLogEntry[];
   overrides: ManualOverride[];
   events: ZapierEvent[];
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-8344
 }
 =======
   payload: Record<string, any>;
@@ -551,12 +407,6 @@ export interface IntegrationProviderMeta {
   name: string;
   category: 'crm' | 'ats';
   description: string;
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8
 =======
   payload: Record<string, any>;
 }
@@ -598,13 +448,6 @@ export interface IntegrationsState {
   overrides: ManualOverride[];
   events: ZapierEvent[];
   lastError?: string | null;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-8344
 }
 =======
 }
@@ -629,10 +472,6 @@ export interface IntegrationProviderMeta {
   name: string;
   category: 'crm' | 'ats';
   description: string;
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
 =======
   payload: Record<string, any>;
 }
@@ -657,10 +496,6 @@ export interface ProviderConnection {
   status: SyncStatus;
   lastSync?: number;
   createdAt: number;
-<<<<<<< HEAD
-=======
-  updatedAt: number;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-efe9
 }
 
 export interface IntegrationProviderMeta {
@@ -668,9 +503,6 @@ export interface IntegrationProviderMeta {
   name: string;
   category: 'crm' | 'ats' | 'hr';
   description: string;
-<<<<<<< HEAD
-}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a0d
 =======
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-d12c
@@ -693,10 +525,6 @@ export interface IntegrationsState {
   overrides: ManualOverride[];
   events: ZapierEvent[];
   lastError?: string | null;
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-efe9
 =======
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-9008

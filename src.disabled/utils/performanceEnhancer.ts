@@ -86,7 +86,7 @@ class PerformanceEnhancer {
           const img = entry.target as HTMLImageElement;
           const src = img.dataset['src'];
           if (src) {
-            img.src = src;
+            img['src'] = src;
             img.removeAttribute('data-src');
             imageObserver.unobserve(img);
           }

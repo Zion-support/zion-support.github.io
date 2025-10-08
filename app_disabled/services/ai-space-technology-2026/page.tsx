@@ -1,5 +1,4 @@
 // Using regular anchor tags instead of react-router-dom for simplicity
-import { ArrowRight, Satellite } from 'lucide-react';
 
 
 const metadata = {

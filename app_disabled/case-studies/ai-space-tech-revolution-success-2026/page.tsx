@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import { ArrowRight, DollarSign, Globe, Rocket, Satellite, Zap } from 'lucide-react';
 
 
 

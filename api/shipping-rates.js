@@ -1,27 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-export default async function handler(req, res) {
-=======
-const { withSentry } = require('./withSentry.cjs');
-
-async function handler(req, res) {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3d1d
 =======
 const { withSentry } = require('./withSentry.cjs');
 
@@ -87,27 +63,6 @@ export default async function handler(req, res) {
     res.end('Method Not Allowed');
     return;
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3d1d
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-4606
@@ -123,10 +78,6 @@ export default async function handler(req, res) {
   try {
     const { fromAddress, toAddress, parcel } = req.body || {};
     const apiKey = process.env.EASYPOST_API_KEY;
-<<<<<<< HEAD
-=======
-    
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-4854
 =======
 
   try {
@@ -222,23 +173,6 @@ export default async function handler(req, res) {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-        'Authorization': `Bearer ${apiKey}`,
-=======
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-8344
 =======
@@ -276,23 +210,6 @@ export default async function handler(req, res) {
     });
 
     const data = await response.json();
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-    
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-4854
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0a8c
@@ -345,28 +262,6 @@ export default async function handler(req, res) {
     res.statusCode = 500;
     res.json({ error: err.message });
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-}
-
-module.exports = withSentry(handler);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3d1d
 =======
 
 module.exports = withSentry(handler);

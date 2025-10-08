@@ -1,6 +1,4 @@
 import React, { memo, useMemo, useCallback, Suspense } from 'react';
-<<<<<<< HEAD
->>>>>>> main
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-3927
 import { HelmetProvider, Helmet } from 'react-helmet-async';
@@ -45,8 +43,6 @@ const InteractiveContentShowcase2026 = memo(() => (
     </div>
   </div>
 ));
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-e42d
 // Error Boundary Component
 =======
 //Loading component (removed unused LoadingSpinner)
@@ -100,11 +96,6 @@ const LoadingSpinner = memo(() => (
     <div className="text-gray-500">Loading...</div>
   </div>
 ));
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-e42d
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-3927
 export default function App() {
@@ -164,7 +155,7 @@ export default function App() {
       ];
       preloadImages.forEach(src => {
         const img = new Image();
-        img.src = src;
+        img['src'] = src;
       });
       //Add performance monitoring
       if ('performance' in window) {

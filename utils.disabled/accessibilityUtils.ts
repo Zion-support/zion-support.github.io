@@ -7,18 +7,6 @@ export const focusManagement = {
   // Trap focus within an element
   trapFocus: (element: HTMLElement): (() => void) => {
     const focusableElements = element.querySelectorAll(
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-698a
       'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
 =======
       'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])',
@@ -49,14 +37,6 @@ export const focusManagement = {
     const lastElement = focusableElements[
       focusableElements.length - 1
     ] as HTMLElement;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
-    );
-    const firstElement = focusableElements[0] as HTMLElement;
-    const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-9008
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-6abd
 =======
@@ -77,13 +57,6 @@ export const focusManagement = {
         }
       }
     };
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-efe9
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-9008
 =======
@@ -94,14 +67,6 @@ export const focusManagement = {
     element.addEventListener('keydown', handleKeyDown);
     firstElement?.focus();
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-    element.addEventListener('keydown', handleKeyDown);
-    firstElement?.focus();
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a0d
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-efe9
 =======
@@ -114,19 +79,6 @@ export const focusManagement = {
       element.removeEventListener('keydown', handleKeyDown);
     };
   },
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-  },
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-8344
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
@@ -143,17 +95,6 @@ export const focusManagement = {
   restoreFocus: (element: HTMLElement): void => {
     element.focus();
   },
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-  // Restore focus to previous element
-  restoreFocus: (element: HTMLElement): void => {
-    element.focus();
-  },
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3fed
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
 =======
@@ -184,17 +125,12 @@ export const focusManagement = {
   focusNext: (currentElement: HTMLElement): HTMLElement | null => {
     const focusableElements = document.querySelectorAll(
       'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-9d58
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-efe9
     );
     const currentIndex = Array.from(focusableElements).indexOf(currentElement);
     const nextElement = focusableElements[currentIndex + 1] as HTMLElement;
     nextElement?.focus();
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-1f83
   },
 
   // Move focus to previous focusable element
@@ -223,11 +159,6 @@ export const focusManagement = {
     const currentIndex = Array.from(focusableElements).indexOf(currentElement);
     const previousElement = focusableElements[currentIndex - 1] as HTMLElement;
     previousElement?.focus();
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-    return previousElement;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-9d58
 =======
     return previousElement || null;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-efe9
@@ -236,26 +167,6 @@ export const focusManagement = {
 
 // ARIA utilities
 export const ariaUtils = {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-  // Generate unique IDs for ARIA relationships
-  generateId: (prefix: string = 'aria'): string => {
-    return `${prefix}-${Math.random().toString(36).substr(2, 9)}`;
-  },
-
-  // Set ARIA attributes
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-  setAriaAttributes: (element: HTMLElement, attributes: Record<string, string>): void => {
-=======
-  // Set ARIA attributes
-  setAriaAttributes: (element: HTMLElement, attributes: Record<string, string>) => {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-9d58
 =======
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a0d
@@ -267,10 +178,6 @@ export const ariaUtils = {
     element: HTMLElement,
     attributes: Record<string, string>
   ): void => {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a0d
 =======
@@ -292,20 +199,6 @@ export const ariaUtils = {
     });
   },
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-  // Announce to screen readers
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-  announce: (message: string, priority: 'polite' | 'assertive' = 'polite'): void => {
-=======
-  // Announce text to screen readers
-  announce: (text: string, priority: 'polite' | 'assertive' = 'polite'): void => {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-1f83
 =======
   announce: (message: string, priority: 'polite' | 'assertive' = 'polite') => {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-9d58
@@ -320,9 +213,6 @@ export const ariaUtils = {
     message: string,
     priority: 'polite' | 'assertive' = 'polite'
   ): void => {
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
 =======
   announce: (
     message: string,
@@ -356,16 +246,6 @@ export const ariaUtils = {
     announcement.setAttribute('aria-live', priority);
     announcement.setAttribute('aria-atomic', 'true');
     announcement.className = 'sr-only';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a0d
 =======
@@ -375,15 +255,6 @@ export const ariaUtils = {
     announcement.textContent = message;
     
     document.body.appendChild(announcement);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-    
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8
 =======
     
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-3fed
@@ -421,23 +292,6 @@ export const ariaUtils = {
   }
 };
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-// Keyboard navigation utilities
-export const keyboardNavigation = {
-  // Handle arrow key navigation for lists
-<<<<<<< HEAD
-=======
-// Keyboard navigation utilities
-export const keyboardUtils = {
-  // Handle arrow key navigation
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3fed
 =======
 // Keyboard navigation utilities
 export const keyboardNavigation = {
@@ -459,22 +313,6 @@ export const keyboardNavigation = {
     event: KeyboardEvent,
     items: HTMLElement[],
     currentIndex: number,
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    orientation: 'horizontal' | 'vertical' = 'vertical',
-  ): number => {
-    const isVertical = orientation === 'vertical';
-    // const isHorizontal = orientation === 'horizontal';
-=======
-    orientation: 'horizontal' | 'vertical' = 'vertical'
-  ): number => {
-    const isVertical = orientation === 'vertical';
-    const isHorizontal = orientation === 'horizontal';
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
 =======
     orientation: 'horizontal' | 'vertical' = 'vertical'
   ): number => {
@@ -509,38 +347,6 @@ export const keyboardNavigation = {
       case 'End':
         event.preventDefault();
         return items.length - 1;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-      default:
-        return currentIndex;
-<<<<<<< HEAD
-=======
-    orientation: 'horizontal' | 'vertical' = 'horizontal'
-  ): number => {
-    const { key } = event;
-    const isHorizontal = orientation === 'horizontal';
-    const isVertical = orientation === 'vertical';
-
-    if (
-      (isHorizontal && (key === 'ArrowLeft' || key === 'ArrowRight')) ||
-      (isVertical && (key === 'ArrowUp' || key === 'ArrowDown'))
-    ) {
-      event.preventDefault();
-
-      let nextIndex = currentIndex;
-      if (
-        (isHorizontal && key === 'ArrowLeft') ||
-        (isVertical && key === 'ArrowUp')
-      ) {
-        nextIndex = currentIndex > 0 ? currentIndex - 1 : items.length - 1;
-      } else {
-        nextIndex = currentIndex < items.length - 1 ? currentIndex + 1 : 0;
-      }
-
-      items[nextIndex]?.focus();
-      return nextIndex;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3fed
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
 =======
@@ -559,13 +365,6 @@ export const keyboardNavigation = {
         return currentIndex;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a0d
   },
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-6abd
@@ -574,24 +373,6 @@ export const keyboardNavigation = {
     if (event.key === 'Enter' || event.key === ' ') {
       event.preventDefault();
       callback();
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-  // Handle home/end keys
-  handleHomeEndKeys: (
-    event: KeyboardEvent,
-    items: HTMLElement[],
-    currentIndex: number
-  ): number => {
-    const { key } = event;
-
-    if (key === 'Home') {
-      event.preventDefault();
-      items[0]?.focus();
-      return 0;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3fed
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
 =======
@@ -620,14 +401,6 @@ export const keyboardNavigation = {
     return currentIndex;
   },
 };
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-4854
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-6231
@@ -636,12 +409,6 @@ export const keyboardNavigation = {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-698a
 // Color contrast utilities
 export const colorContrast = {
-<<<<<<< HEAD
-=======
-
-// Color contrast utilities
-export const contrastUtils = {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3fed
 =======
 // Keyboard navigation utilities
 export const keyboardNavigation = {
@@ -697,28 +464,12 @@ export const colorContrast = {
       c = c / 255;
       return c <= 0.03928 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4);
     });
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3fed
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-1f83
     return 0.2126 * (rs || 0) + 0.7152 * (gs || 0) + 0.0722 * (bs || 0);
   },
 
   // Calculate contrast ratio
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-  getContrastRatio: (_color1: [number, number, number], _color2: [number, number, number]): number => {
-    const lum1 = colorContrast.getLuminance(..._color1);
-    const lum2 = colorContrast.getLuminance(..._color2);
-=======
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-bcb8
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-6231
   getContrastRatio: (color1: [number, number, number], color2: [number, number, number]): number => {
@@ -842,16 +593,6 @@ export const colorContrast = {
   },
 
   // Calculate contrast ratio
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-  getContrastRatio: (
-    color1: [number, number, number],
-    color2: [number, number, number]
-<<<<<<< HEAD
-=======
-  )
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a0d
   ): number => {
 =======
   getContrastRatio: (color1: [number, number, number], color2: [number, number, number]): number => {
@@ -869,10 +610,6 @@ export const colorContrast = {
     const lum2 = colorContrast.getLuminance(...color2);
     const brightest = Math.max(lum1, lum2);
     const darkest = Math.min(lum1, lum2);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a0d
 =======
@@ -883,26 +620,6 @@ export const colorContrast = {
   },
 
   // Check if contrast meets WCAG standards
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-  meetsWCAG: (contrastRatio: number, level: 'AA' | 'AAA' = 'AA'): boolean => {
-    const thresholds = { AA: 4.5, AAA: 7 };
-    return contrastRatio >= thresholds[level];
-=======
-  meetsWCAG: (contrastRatio: number, level: 'AA' | 'AAA' = 'AA'): boolean => {
-    const thresholds = { AA: 4.5, AAA: 7 };
-    return contrastRatio >= thresholds[level];
-  },
-};
-<<<<<<< HEAD
-};
-=======
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-698a
 // Motion and animation utilities
 export const motionUtils = {
   // Check if user prefers reduced motion
@@ -935,45 +652,6 @@ export const motionUtils = {
     if (motionUtils.prefersReducedMotion()) {
       element.style.animation = 'none';
       element.style.transition = 'none';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-// Color contrast utilities
-export const colorContrast = {
-  // Check if color combination meets WCAG standards
-  checkContrast: (foreground: string, background: string): boolean => {
-    // This is a simplified check - in production, use a proper color contrast library
-    return true;
-  },
-<<<<<<< HEAD
-
-  // Get high contrast version of color
-  getHighContrast: (color: string): string => {
-    // Simplified implementation
-    return color === '#ffffff' ? '#000000' : '#ffffff';
-  },
-};
-
-// Keyboard navigation utilities
-export const keyboardNavigation = {
-  // Handle arrow key navigation
-  handleArrowKeys: (event: KeyboardEvent, items: HTMLElement[]): void => {
-    const currentIndex = items.indexOf(event.target as HTMLElement);
-    let nextIndex = currentIndex;
-
-    switch (event.key) {
-      case 'ArrowDown':
-      case 'ArrowRight':
-        nextIndex = (currentIndex + 1) % items.length;
-        break;
-      case 'ArrowUp':
-      case 'ArrowLeft':
-        nextIndex = currentIndex === 0 ? items.length - 1 : currentIndex - 1;
-        break;
-      default:
-        return;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8
     }
 
     event.preventDefault();
@@ -1020,72 +698,20 @@ export const formAccessibility = {
     return label;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-698a
   },
-<<<<<<< HEAD
-<<<<<<< HEAD
-  // Respect user's motion preferences
-  conditionalAnimation: (animation: string, fallback: string = ''): string => {
-    return motionUtils.prefersReducedMotion() ? fallback : animation;
-=======
-  meetsWCAG: (color1: string, color2: string, level: 'AA' | 'AAA' = 'AA'): boolean => {
-    const ratio = contrastUtils.getContrastRatio(color1, color2);
-    return level === 'AA' ? ratio >= 4.5 : ratio >= 7;
-  },
-};
-
-// Screen reader utilities
-export const screenReaderUtils = {
-  // Hide element from screen readers
-  hideFromScreenReader: (element: HTMLElement): void => {
-    element.setAttribute('aria-hidden', 'true');
-  },
-
-  // Show element to screen readers
-  showToScreenReader: (element: HTMLElement): void => {
-    element.removeAttribute('aria-hidden');
-  },
-
-  // Check if element is visible to screen readers
-  isVisibleToScreenReader: (element: HTMLElement): boolean => {
-    return element.getAttribute('aria-hidden') !== 'true' && 
-           !element.classList.contains('sr-only');
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3fed
   },
 };
 
 // Form accessibility utilities
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a0d
     }
   },
 
   // Respect user's motion preferences
   conditionalAnimation: (animation: string, fallback: string = ''): string => {
     return motionUtils.prefersReducedMotion() ? fallback : animation;
-<<<<<<< HEAD
-  }
-};
-
-// Form accessibility utilities
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
 export const formAccessibility = {
   // Associate label with input
   associateLabel: (
     input: HTMLInputElement,
-<<<<<<< HEAD
-    labelText: string,
-  ): HTMLLabelElement => {
-    const label = document.createElement('label');
-    label.textContent = labelText;
-    label.setAttribute('for', input.id || `input-${Math.random().toString(36).substr(2, 9)}`);
-=======
-    labelText: string
-  ): HTMLLabelElement => {
-    const label = document.createElement('label');
-    label.textContent = labelText;
-    label.setAttribute('for', input.id || formAccessibility.generateInputId());
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
 =======
   },
 };
@@ -1103,10 +729,6 @@ export const formAccessibility = {
       input.id = label.getAttribute('for')!;
     }
     return label;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-6231
   },
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-6abd
@@ -1116,16 +738,6 @@ export const formAccessibility = {
     return `input-${Math.random().toString(36).substr(2, 9)}`;
   },
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-  // Check color contrast
-  checkContrast: (foreground: string, background: string, level: 'AA' | 'AAA' = 'AA'): boolean => {
-    const thresholds = { AA: 4.5, AAA: 7 };
-    // Simplified contrast calculation - in real implementation, use a proper color contrast library
-    const contrastRatio = 4.5; // Placeholder
-    return contrastRatio >= thresholds[level];
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-bcb8
 =======
 
   // Handle Enter and Space key activation
@@ -1146,13 +758,6 @@ export const formUtils = {
   },
 
   // Add error message association
-<<<<<<< HEAD
-  addErrorMessage: (input: HTMLElement, errorMessage: string): void => {
-    const errorId = ariaUtils.generateId('error');
-=======
-  // Add error message association
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a0d
 =======
   // Add error message association
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-6abd
@@ -1218,24 +823,6 @@ export const formUtils = {
     const errorElement = document.createElement('div');
     
     errorElement.id = errorId;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    errorElement.textContent = errorMessage;
-    errorElement.setAttribute('role', 'alert');
-    errorElement.setAttribute('aria-live', 'polite');
-    
-    input.setAttribute('aria-describedby', errorId);
-    input.setAttribute('aria-invalid', 'true');
-    
-=======
-    errorElement.className = 'error-message';
-    errorElement.textContent = errorMessage;
-    errorElement.setAttribute('role', 'alert');
-    input.setAttribute('aria-describedby', errorId);
-    input.setAttribute('aria-invalid', 'true');
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
 =======
     errorElement.className = 'error-message';
     errorElement.textContent = errorMessage;
@@ -1254,13 +841,6 @@ export const formUtils = {
   },
 
   // Remove error message
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-  removeErrorMessage: (input: HTMLElement): void => {
-=======
-  removeErrorMessage: (input: HTMLInputElement): void => {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
 =======
   removeErrorMessage: (input: HTMLInputElement): void => {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a0d
@@ -1273,10 +853,6 @@ export const formUtils = {
       errorElement?.remove();
       input.removeAttribute('aria-describedby');
       input.removeAttribute('aria-invalid');
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3fed
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
 =======
@@ -1307,19 +883,6 @@ export const formUtils = {
     }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8
   },
-<<<<<<< HEAD
-};
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-// Screen reader utilities
-<<<<<<< HEAD
-<<<<<<< HEAD
-export const screenReaderUtils = {
-=======
-export const screenReader = {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8
 =======
 // Screen reader utilities
 export const screenReaderUtils = {
@@ -1346,24 +909,12 @@ export const screenReaderUtils = {
   showToScreenReader: (element: HTMLElement): void => {
     element.removeAttribute('aria-hidden');
   },
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
   // Create screen reader only text
   createScreenReaderText: (text: string): HTMLElement => {
     const element = document.createElement('span');
     element.textContent = text;
     element.className = 'sr-only';
     return element;
-<<<<<<< HEAD
-<<<<<<< HEAD
-  },
-=======
-  }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
 =======
   },
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a0d
@@ -1407,15 +958,6 @@ export const accessibilityTesting = {
 
   // Check for missing form labels
   checkFormLabels: (): HTMLInputElement[] => {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    const inputs = Array.from(
-      document.querySelectorAll('input, select, textarea')
-    );
-=======
-    const inputs = Array.from(document.querySelectorAll('input, select, textarea'));
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
 =======
     const inputs = Array.from(document.querySelectorAll('input, select, textarea'));
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a0d
@@ -1435,37 +977,14 @@ export const accessibilityTesting = {
 
   // Check for proper heading hierarchy
   checkHeadingHierarchy: (): { issues: string[]; structure: string[] } => {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    const headings = Array.from(
-      document.querySelectorAll('h1, h2, h3, h4, h5, h6'),
-=======
-    const headings = Array.from(
-      document.querySelectorAll('h1, h2, h3, h4, h5, h6')
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-6abd
     );
     const issues: string[] = [];
     const structure: string[] = [];
     let previousLevel = 0;
-<<<<<<< HEAD
-    headings.forEach((heading, index) => {
-      const level = parseInt(heading.tagName[1] || '0');
-      structure.push(`${heading.tagName}: ${heading.textContent?.trim() || ''}`);
-=======
-    const headings = Array.from(document.querySelectorAll('h1, h2, h3, h4, h5, h6'));
-    const issues: string[] = [];
-    const structure: string[] = [];
-    let previousLevel = 0;
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-6abd
 
     headings.forEach((heading, index) => {
       const level = parseInt(heading.tagName[1]);
       structure.push(`${heading.tagName}: ${heading.textContent?.trim()}`);
-<<<<<<< HEAD
-      
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
 =======
     const headings = Array.from(document.querySelectorAll('h1, h2, h3, h4, h5, h6'));
     const issues: string[] = [];
@@ -1483,15 +1002,6 @@ export const accessibilityTesting = {
       }
       
       if (level > previousLevel + 1) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-        issues.push(
-          `Heading level skipped from h${previousLevel} to h${level}`,
-        );
-=======
-        issues.push(`Heading level skipped from h${previousLevel} to h${level}`);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
 =======
         issues.push(`Heading level skipped from h${previousLevel} to h${level}`);
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a0d
@@ -1502,12 +1012,6 @@ export const accessibilityTesting = {
       
       previousLevel = level;
     });
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a0d
 =======
@@ -1521,11 +1025,6 @@ export const accessibilityTesting = {
     images: { missing: number; empty: number };
     forms: { unlabeled: number };
     headings: { issues: string[]; structure: string[] };
-<<<<<<< HEAD
-<<<<<<< HEAD
-    score: number;
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a0d
 =======
     score: number;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-6abd
@@ -1539,42 +1038,15 @@ export const accessibilityTesting = {
       imageCheck.empty.length +
       formCheck.length +
       headingCheck.issues.length;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a0d
     const score = Math.max(0, 100 - totalIssues * 10);
     return {
       images: {
         missing: imageCheck.missing.length,
-<<<<<<< HEAD
-=======
-    const score = Math.max(0, 100 - totalIssues * 10);
-
-    return {
-      images: {
-        missing: imageCheck.missing.length,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-6abd
         empty: imageCheck.empty.length,
       },
       forms: { unlabeled: formCheck.length },
       headings: headingCheck,
       score,
-<<<<<<< HEAD
-=======
-    
-    const score = Math.max(0, 100 - totalIssues * 10);
-    
-    return {
-      images: {
-        missing: imageCheck.missing.length,
-        empty: imageCheck.empty.length
-      },
-      forms: { unlabeled: formCheck.length },
-      headings: headingCheck,
-      score
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
 =======
         empty: imageCheck.empty.length
       },
@@ -1585,14 +1057,6 @@ export const accessibilityTesting = {
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-6abd
     };
-<<<<<<< HEAD
-=======
-
-  // Check if element is visible to screen readers
-  isVisibleToScreenReader: (element: HTMLElement): boolean => {
-    return element.getAttribute('aria-hidden') !== 'true' && 
-           !element.classList.contains('sr-only');
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8
 =======
 
   // Create screen reader only text
@@ -1603,12 +1067,6 @@ export const accessibilityTesting = {
     return element;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-9008
   },
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0a61
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-bcb8
 =======
@@ -1628,46 +1086,6 @@ export const accessibilityTesting = {
     ];
     return focusableSelectors.some(selector => element.matches(selector));
   }
-<<<<<<< HEAD
-=======
-  meetsWCAG: (color1: string, color2: string, level: 'AA' | 'AAA' = 'AA'): boolean => {
-    const ratio = colorContrast.getContrastRatio(color1, color2);
-    return level === 'AA' ? ratio >= 4.5 : ratio >= 7;
-  },
-};
-
-// Keyboard navigation utilities
-export const keyboardNavigation = {
-  // Handle arrow key navigation
-  handleArrowKeys: (e: KeyboardEvent, items: HTMLElement[], currentIndex: number): number => {
-    switch (e.key) {
-      case 'ArrowDown':
-      case 'ArrowRight':
-        e.preventDefault();
-        return (currentIndex + 1) % items.length;
-      case 'ArrowUp':
-      case 'ArrowLeft':
-        e.preventDefault();
-        return currentIndex === 0 ? items.length - 1 : currentIndex - 1;
-      case 'Home':
-        e.preventDefault();
-        return 0;
-      case 'End':
-        e.preventDefault();
-        return items.length - 1;
-      default:
-        return currentIndex;
-    }
-  },
-
-  // Handle Enter and Space key activation
-  handleActivation: (e: KeyboardEvent, callback: () => void): void => {
-    if (e.key === 'Enter' || e.key === ' ') {
-      e.preventDefault();
-      callback();
-    }
-  },
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-4854
 };
 =======
 // Animation utilities
@@ -1770,15 +1188,6 @@ export const keyboardUtils = {
 export default {
   focusManagement,
   ariaUtils,
-<<<<<<< HEAD
-  keyboardUtils,
-  contrastUtils,
-  screenReaderUtils,
-  formUtils,
-  animationUtils,
-  highContrastUtils,
-};
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3fed
 =======
   getContrastRatio: (color1: string, color2: string): number => {
     // This is a simplified version - in production, use a proper color parsing library
@@ -1916,11 +1325,6 @@ export const keyboardNavigation = {
 };
 
 // Screen reader utilities
-<<<<<<< HEAD
-export const screenReaderUtils = {
-=======
-export const screenReader = {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-efe9
   // Hide element from screen readers
   hideFromScreenReader: (element: HTMLElement): void => {
     element.setAttribute('aria-hidden', 'true');
@@ -1931,24 +1335,6 @@ export const screenReader = {
     element.removeAttribute('aria-hidden');
   },
 
-<<<<<<< HEAD
-  // Make element focusable for screen readers
-  makeFocusable: (element: HTMLElement): void => {
-    element.setAttribute('tabindex', '0');
-  },
-
-  // Remove element from tab order but keep it accessible to screen readers
-  removeFromTabOrder: (element: HTMLElement): void => {
-    element.setAttribute('tabindex', '-1');
-  },
-
-  // Improve ARIA labels
-  improveAriaLabels: (): void => {
-    // Implementation for improving ARIA labels
-    console.log('Improving ARIA labels');
-  }
-};
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-1f83
 =======
   keyboardUtils
 };

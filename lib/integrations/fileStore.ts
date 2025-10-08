@@ -1,27 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import * as fs from 'fs';
-import * as path from 'path';
-=======
-import fs from 'fs';
-import path from 'path';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8
 =======
 import fs from 'fs';
 import path from 'path';
@@ -42,14 +18,6 @@ import type { IntegrationsState } from './types';
 
 const DATA_DIR = path.resolve(process.cwd(), 'data', 'integrations');
 const STATE_FILE = path.join(DATA_DIR, 'state.json');
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-4606
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e3b
 =======
@@ -64,10 +32,6 @@ import type { IntegrationsState } from "./types";
 
 const DATA_DIR = path.resolve(process.cwd(), "data", "integrations");
 const STATE_FILE = path.join(DATA_DIR, "state.json");
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3d1d
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-b781
 =======
@@ -85,11 +49,6 @@ import { IntegrationsState } from "./types";
 
 const DATA_DIR = path.resolve(process.cwd(), "data", "integrations");
 const STATE_FILE = path.join(DATA_DIR, "state.json");
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0a8c
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8
 =======
@@ -125,24 +84,6 @@ function ensureDataDir(): void {
   if (!fs.existsSync(DATA_DIR)) {
     fs.mkdirSync(DATA_DIR, { recursive: true });
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-  
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-4854
 =======
   
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-b781
@@ -160,12 +101,6 @@ function ensureDataDir(): void {
 
 export function readState(): IntegrationsState {
   ensureDataDir();
-<<<<<<< HEAD
-  try {
-    const raw = fs.readFileSync(STATE_FILE, "utf8");
-    return JSON.parse(raw) as IntegrationsState;
-  } catch (error) {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-d12c
 =======
   
   if (!fs.existsSync(STATE_FILE)) {
@@ -184,22 +119,6 @@ export function readState(): IntegrationsState {
       overrides: [],
       events: []
     };
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    fs.writeFileSync(STATE_FILE, JSON.stringify(initial, null, 2), 'utf8');
-  }
-}
-export function readState(): IntegrationsState {
-  ensureDataDir();
-<<<<<<< HEAD
-=======
-  
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-4854
   try {
     const raw = fs.readFileSync(STATE_FILE, 'utf8');
     return JSON.parse(raw) as IntegrationsState;
@@ -255,21 +174,6 @@ export function readState(): IntegrationsState {
   ensureDataDir();
   
   try {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    const raw = fs.readFileSync(STATE_FILE, "utf8");
-    return JSON.parse(raw) as IntegrationsState;
-  } catch (error) {
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b781
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0a8c
 =======
@@ -337,22 +241,6 @@ export function readState(): IntegrationsState {
     };
   }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b781
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0a8c
@@ -402,29 +290,6 @@ export function writeState(
   ensureDataDir();
   const current = readState();
   mutator(current);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-  fs.writeFileSync(STATE_FILE, JSON.stringify(current, null, 2), 'utf8');
-  return current;
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-<<<<<<< HEAD
-=======
-}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3d1d
 =======
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-4606

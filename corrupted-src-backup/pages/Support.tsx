@@ -1,7 +1,6 @@
 import, Reac, t, { useSta, t, e } fr, o, m "rea, c, t";
 impo, r, t { Li, n, k } fr, o, m "rea, c, t-rout, e, r-d, o, m";
 impo, r, t { Sear, c, h, MessageCirc, l, e, Pho, n, e, Ma, i, l, BookOp, e, n, Vid, e, o, Use, r, s, Z, a, p, Clo, c, k, CheckCirc, l, e } fr, o, m "luci, d, e-rea, c, t";
-import { Helmet } from "react-helmet-async";
 const, Suppor, t: Rea, c, t.FC = () => {
   con, s, t [searchQue, r, y, setSearchQue, r, y] = useSta, t, e('');
   con, s, t [selectedCatego, r, y, setSelectedCatego, r, y] = useSta, t, e('a, l, l');

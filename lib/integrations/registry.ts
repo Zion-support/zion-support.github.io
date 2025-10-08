@@ -1,27 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import type { IntegrationProviderMeta } from './types';
-export const PROVIDERS: IntegrationProviderMeta[] = [
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-import { IntegrationProviderMeta } from './types';
-
-export const PROVIDERS: IntegrationProviderMeta[] = [
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0a8c
 =======
 import { IntegrationProviderMeta } from './types';
 
@@ -61,16 +37,6 @@ export const PROVIDERS: IntegrationProviderMeta[] = [
   { id: 'greenhouse', name: 'Greenhouse', category: 'ats', description: 'ATS & recruiting' },
   { id: 'lever', name: 'Lever', category: 'ats', description: 'ATS & CRM' },
   { id: 'workable', name: 'Workable', category: 'ats', description: 'Recruiting software' },
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-  { id: 'bamboohr', name: 'BambooHR', category: 'ats', description: 'HRIS & ATS' },
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-bcb8
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-4854
 =======
@@ -79,8 +45,6 @@ export const PROVIDERS: IntegrationProviderMeta[] = [
 import type { IntegrationProviderMeta } from './types';
 
 export const PROVIDERS: IntegrationProviderMeta[] = [
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8
 =======
 import type { IntegrationProviderMeta } from './types';
 
@@ -167,18 +131,6 @@ export const PROVIDERS: IntegrationProviderMeta[] = [
     description: 'HRIS & ATS'
   }
 ];
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-  { id: 'bamboohr', name: 'BambooHR', category: 'ats', description: 'HRIS & ATS' }
-];
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0a8c
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8

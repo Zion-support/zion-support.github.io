@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import { ArrowRight, Brain, TrendingUp, Zap, Star } from 'lucide-react';
 
 
 

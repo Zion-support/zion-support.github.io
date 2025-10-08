@@ -2,28 +2,6 @@ const { withSentry } = require('./withSentry.cjs');
 const { isValidEmail } = require('./emailUtils.cjs');
 const fs = require('fs');
 const path = require('path');
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-function isValidEmail(email) {
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  return emailRegex.test(email);
-}
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-4606
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0a8c
@@ -70,30 +48,6 @@ async function handler(req, res) {
     res.end('Method Not Allowed');
     return;
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-  try {
-    const { email } = req.body || {};
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-895b
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-b781
 
@@ -109,8 +63,6 @@ async function handler(req, res) {
   try {
     const { email } = req.body || {};
     
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-4606
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-4854
 =======
@@ -192,23 +144,6 @@ async function handler(req, res) {
       res.json({ error: 'Invalid email' });
       return;
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-4606
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0a8c
@@ -253,20 +188,6 @@ async function handler(req, res) {
       'data',
       'newsletter-subscriptions.json'
     );
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-    
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-4606
 =======
     
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-4854
@@ -274,13 +195,6 @@ async function handler(req, res) {
     
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0a8c
     let existing = [];
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-    
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8
 =======
     
     let existing = [];
@@ -328,23 +242,6 @@ async function handler(req, res) {
     } catch {
       // File doesn't exist or is invalid, use empty array
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-4606
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0a8c
@@ -388,66 +285,6 @@ async function handler(req, res) {
       email,
       subscribedAt: new Date().toISOString()
     });
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    fs.writeFileSync(file, JSON.stringify(existing, null, 2));
-    res.statusCode = 200;
-    res.json({ success: true });
-=======
-
-  try {
-    const { email, name, source = 'website' } = req.body || {};
-
-    if (!email) {
-      res.statusCode = 400;
-      res.json({ error: 'Email is required' });
-      return;
-    }
-
-    const file = path.join(process.cwd(), 'data', 'subscribers.json');
-    let subscribers = [];
-
-    try {
-      subscribers = JSON.parse(fs.readFileSync(file, 'utf8'));
-      if (!Array.isArray(subscribers)) subscribers = [];
-    } catch {
-      // File doesn't exist or is invalid, use empty array
-    }
-
-    // Check if email already exists
-    const existingSubscriber = subscribers.find(sub => sub.email === email);
-    if (existingSubscriber) {
-      res.statusCode = 409;
-      res.json({ error: 'Email already subscribed' });
-      return;
-    }
-
-    subscribers.push({
-      email,
-      name: name || '',
-      source,
-      subscribedAt: new Date().toISOString()
-    });
-
-    fs.writeFileSync(file, JSON.stringify(subscribers, null, 2));
-    res.statusCode = 200;
-    res.json({ success: true, message: 'Successfully subscribed to newsletter' });
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3d1d
 =======
 
     fs.writeFileSync(file, JSON.stringify(existing, null, 2));
@@ -574,22 +411,6 @@ async function handler(req, res) {
     res.json({ error: err.message || 'Subscription failed' });
   }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0a8c
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8

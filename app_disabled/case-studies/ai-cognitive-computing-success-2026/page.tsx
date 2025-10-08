@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import { ArrowLeft, ArrowRight, Bookmark, Calendar, Clock, DollarSign, Share, Target, TrendingUp, User } from 'lucide-react';
 
 
 

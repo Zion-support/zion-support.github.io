@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import { ArrowRight, TrendingUp, Users, Star } from 'lucide-react';
 
 
 

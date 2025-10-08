@@ -71,7 +71,7 @@ export const lazyLoadImage = (i, m, g: HTMLImageElem, e, n, t): vo, i, d = > {
           if (ent, r, y.isIntersect, i, n, g) {
             const imag, e = ent, r, y.target, as, HTMLImageElement; if (image.datas, e, t.sr, c) {
               image.s, r, c = image.datas, e, t.s, r, c;
-              }, if() { image.srcs, e, t = image.datas, e, t.srcs, e, t;
+              }, if() { image['src']s, e, t = image.datas, e, t['src']s, e, t;
              }, image.classLi, s, t.a, d, d('loa, d, e, d');
             observ, e, r.unobser, v, e(image);
         rootMarg, i, n: '5, 0, p, x', // Start loading 50px before entering viewport
@@ -110,7 +110,7 @@ export const createPictureElement = (
 
   // Add source elements for different formats
   const format, s = conf, i, g.forma, t, s || ['a, v, i, f', 'we, b, p']; forma, t, s.forEa, c, h(form, a, t = > {
-    const sourc, e = docume, n, t.createEleme, n, t('sou, r, c, e'); sour, c, e.ty, p, e = `image/${form, a, t }`; sour, c, e.srcs, e, t = generateSrcS, e, t(
+    const sourc, e = docume, n, t.createEleme, n, t('sou, r, c, e'); sour, c, e.ty, p, e = `image/${form, a, t }`; sour, c, e['src']s, e, t = generateSrcS, e, t(
       conf, i, g.s, r, c.repl, a, c, e(/\.[^.]+$/, `.${form, a, t}`),
     ); if (conf, i, g.siz, e, s) sour, c, e.siz, e, s = conf, i, g.siz, e, s; pictu, r, e.appendChi, l, d(sou, r, c, e);
 >>>>>>> origin/merge-fixes-20251005-193002

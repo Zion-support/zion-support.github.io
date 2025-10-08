@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import { ArrowRight, Brain, Clock, TrendingUp } from 'lucide-react';
 
 
 

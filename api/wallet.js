@@ -1,26 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-const { withErrorLogging } = require('./withErrorLogging.cjs');
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-const { withErrorLogging } = require('./withErrorLogging.cjs');
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-4606
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0a8c
@@ -64,22 +41,6 @@ async function handler(req, res) {
   if (req.method !== 'GET') {
     res.statusCode = 405;
     res.setHeader('Allow', 'GET');
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0a8c
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8
 =======
@@ -109,24 +70,6 @@ async function handler(req, res) {
   }
 
   try {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    // Wallet functionality implementation
-    res.statusCode = 200;
-    res.json({ message: 'Wallet endpoint' });
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0a8c
     // Wallet functionality would go here
 =======
     // Wallet functionality implementation would go here
@@ -188,23 +131,6 @@ async function handler(req, res) {
   }
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-module.exports = withErrorLogging(handler);
-=======
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e3b
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-895b
 =======
@@ -215,11 +141,6 @@ async function handler(req, res) {
   if (req.method !== 'POST') {
     res.statusCode = 405;
     res.setHeader('Allow', 'POST');
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-4606
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e3b
 =======
@@ -284,10 +205,6 @@ async function handler(req, res) {
 }
 
 module.exports = withSentry(handler);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3d1d
 =======
   try {
 =======
@@ -302,9 +219,6 @@ module.exports = withSentry(handler);
   }
 }
 
-<<<<<<< HEAD
-module.exports = withErrorLogging(handler);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-4606
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e3b
 =======

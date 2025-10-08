@@ -1,20 +1,6 @@
 /**
  * SEO Utilities
  */
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-// Meta tags management
-export const setMetaTags = (tags: Record<string, string>): void => {
-<<<<<<< HEAD
-=======
-
-// Meta tags management
-export const setMetaTags = (tags: Record<string, string>): void => {
-  if (typeof document === 'undefined') return;
-  
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-1f83
 =======
 
 // Meta tags management
@@ -40,15 +26,6 @@ export const setOpenGraphTags = (ogData: {
   image?: string;
   url?: string;
   type?: string;
-<<<<<<< HEAD
-<<<<<<< HEAD
-  siteName?: string;
-}): void => {
-  const ogTags = {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8
 =======
   siteName?: string;
 }): void => {
@@ -58,13 +35,6 @@ export const setOpenGraphTags = (ogData: {
     'og:description': ogData.description,
     'og:image': ogData.image,
     'og:url': ogData.url,
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-    'og:type': ogData.type || 'website',
-    'og:site_name': ogData.siteName,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a4f
   };
 
 =======
@@ -119,31 +89,11 @@ export const setOpenGraphTags = (ogData: {
 // Twitter Card tags
 export const setTwitterCardTags = (twitterData: {
   card?: string;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-1f83
   title?: string;
   description?: string;
   image?: string;
   site?: string;
   creator?: string;
-<<<<<<< HEAD
-<<<<<<< HEAD
-}) => {
-=======
-}): void => {
-  const twitterTags = {
-    'twitter:card': twitterData.card || 'summary_large_image',
-    'twitter:title': twitterData.title,
-    'twitter:description': twitterData.description,
-    'twitter:image': twitterData.image,
-    'twitter:site': twitterData.site,
-    'twitter:creator': twitterData.creator
-}): void => {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a4f
   const twitterTags = {
     'twitter:card': twitterData.card || 'summary_large_image',
     'twitter:title': twitterData.title,
@@ -165,15 +115,6 @@ export const setTwitterCardTags = (twitterData: {
   image?: string;
 }): void => {
   const twitterTags = {
-<<<<<<< HEAD
-    'twitter: card': twitterData.card || 'summary_large_image',
-    'twitter: site': twitterData.site,
-    'twitter: creator': twitterData.creator,
-    'twitter: title': twitterData.title,
-    'twitter: description': twitterData.description,
-    'twitter: image': twitterData.image
-  };
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3b0a
 =======
   title?: string;
   description?: string;
@@ -229,17 +170,6 @@ export const setTwitterCardTags = (twitterData: {
     }
   });
 };
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-// Structured data
-export const setStructuredData = (data: Record<string, unknown>): void => {
-=======
-=======
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
 // Structured data (JSON-LD)
 export const setStructuredData = (data: any): void => {
   // Remove existing structured data
@@ -268,17 +198,6 @@ export const setStructuredData = (data: any): void => {
   script.type = 'application/ld+json';
   script.textContent = JSON.stringify(data);
   document.head.appendChild(script);
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-};
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-};
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a4f
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
@@ -291,27 +210,11 @@ export const setCanonicalUrl = (url: string): void => {
     canonical = document.createElement('link');
     canonical.rel = 'canonical';
     document.head.appendChild(canonical);
-<<<<<<< HEAD
-=======
-
-// Canonical URL
-export const setCanonicalUrl = (url: string): void => {
-  let link = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
-  if (!link) {
-    link = document.createElement('link');
-    link.rel = 'canonical';
-    document.head.appendChild(link);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
   }
   link.href = url;
 };
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
 // Page title optimization
 export const setPageTitle = (title: string, siteName?: string): void => {
   const fullTitle = siteName ? `${title} | ${siteName}` : title;
@@ -326,10 +229,6 @@ export const setPageTitle = (title: string): void => {
 
 // Meta description
 export const setMetaDescription = (description: string): void => {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
   let meta = document.querySelector(
     'meta[name="description"]'
   ) as HTMLMetaElement;
@@ -366,10 +265,6 @@ export const setRobotsMeta = (robots: {
   if (robots.noarchive) directives.push('noarchive');
   if (robots.nosnippet) directives.push('nosnippet');
   if (robots.noimageindex) directives.push('noimageindex');
-<<<<<<< HEAD
-=======
-  
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
   if (directives.length === 0) {
     directives.push('index', 'follow');
   }
@@ -437,159 +332,6 @@ export const setViewport = (viewport: string): void => {
   }
   meta.content = viewport;
 };
-<<<<<<< HEAD
-// Schema.org structured data generators
-export const schemaGenerators = {
-  organization: (data: {
-    name: string;
-    url?: string;
-    logo?: string;
-    description?: string;
-    address?: any;
-    contactPoint?: any;
-  }) => ({
-    '@context': 'https://schema.org',
-    '@type': 'Organization',
-    name: data.name,
-    url: data.url,
-    logo: data.logo,
-    description: data.description,
-    address: data.address,
-    contactPoint: data.contactPoint
-  }),
-  website: (data: {
-    name: string;
-    url: string;
-    description?: string;
-    publisher?: any;
-  }) => ({
-    '@context': 'https://schema.org',
-    '@type': 'WebSite',
-    name: data.name,
-    url: data.url,
-    description: data.description,
-    publisher: data.publisher
-  }),
-  article: (data: {
-    headline: string;
-    author: any;
-    datePublished: string;
-    dateModified?: string;
-    description?: string;
-    image?: string;
-    url?: string;
-  }) => ({
-    '@context': 'https://schema.org',
-    '@type': 'Article',
-    headline: data.headline,
-    author: data.author,
-    datePublished: data.datePublished,
-    dateModified: data.dateModified || data.datePublished,
-    description: data.description,
-    image: data.image,
-    url: data.url
-  }),
-  breadcrumb: (items: Array<{name: string; url: string}>) => ({
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    itemListElement: items.map((item, index) => ({
-      '@type': 'ListItem',
-      position: index + 1,
-      name: item.name,
-      item: item.url
-    })),
-  }),
-};
-<<<<<<< HEAD
-// SEO audit helpers
-export const seoAudit = {
-  checkTitle: (): {
-    hasTitle: boolean;
-    titleLength: number;
-    isValid: boolean;
-  } => {
-    const title = document.title;
-    return {
-      hasTitle: !!title,
-      titleLength: title.length,
-      isValid: title.length >= 30 && title.length <= 60
-    };
-  },
-  checkDescription: (): {
-    hasDescription: boolean;
-    descriptionLength: number;
-    isValid: boolean;
-  } => {
-    const meta = document.querySelector('meta[name="description"]') as HTMLMetaElement;
-    const description = meta?.content || '';
-    return {
-      hasDescription: !!description,
-      descriptionLength: description.length,
-      isValid: description.length >= 120 && description.length <= 160
-    };
-  },
-  checkHeadings: (): {
-    h1Count: number;
-    hasH1: boolean;
-    headingStructure: string[];
-  } => {
-    const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
-    const h1Count = document.querySelectorAll('h1').length;
-    const headingStructure = Array.from(headings).map(h =>
-      h.tagName.toLowerCase()
-    );
-    return {
-      h1Count,
-      hasH1: h1Count > 0,
-      headingStructure
-    };
-  },
-  checkImages: (): {
-    totalImages: number;
-    imagesWithoutAlt: number;
-    imagesWithoutAltText: string[];
-  } => {
-    const images = document.querySelectorAll('img');
-    const imagesWithoutAlt = Array.from(images).filter(img => !img.alt);
-    const imagesWithoutAltText = Array.from(imagesWithoutAlt).map(img => img.src);
-    return {
-      totalImages: images.length,
-      imagesWithoutAlt: imagesWithoutAlt.length,
-      imagesWithoutAltText
-    };
-  },
-  checkLinks: (): {
-    totalLinks: number;
-    internalLinks: number;
-    externalLinks: number;
-  } => {
-    const links = document.querySelectorAll('a[href]');
-    const currentDomain = window.location.hostname;
-    let internalLinks = 0;
-    let externalLinks = 0;
-    links.forEach(link => {
-      const href = link.getAttribute('href');
-      if (href) {
-        try {
-          const url = new URL(href, window.location.href);
-          if (url.hostname === currentDomain) {
-            internalLinks++;
-          } else {
-            externalLinks++;
-          }
-        } catch {
-          // Relative links are considered internal
-          internalLinks++;
-        }
-      }
-    });
-    return {
-      totalLinks: links.length,
-      internalLinks,
-      externalLinks
-    };
-  },
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3b0a
 =======
 
 // SEO audit

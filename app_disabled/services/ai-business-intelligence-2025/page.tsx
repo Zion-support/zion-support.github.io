@@ -1,5 +1,4 @@
 // Using regular anchor tags instead of react-router-dom for simplicity
-import { ArrowRight, Calculator, User } from 'lucide-react';
 
 const metadata = {
   title: 'AI Business Intelligence 2025: Advanced Analytics & Insights Platform',

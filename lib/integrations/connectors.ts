@@ -1,21 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-import { ProviderConnection, SyncLogEntry } from './types';
-import { v4 as uuidv4 } from 'uuid';
->>>>>>> b0d6dda8406c2e54af3529a18b3e8c5f6ab37739
 import type { ProviderConnection, SyncLogEntry } from './types';
 import { v4 as uuidv4 } from 'uuid';
 // Simple UUID v4 implementation
@@ -31,14 +13,6 @@ import { v4 as uuidv4 } from 'uuid';
 >>>>>>> cursor/fix-errors-and-merge-to-main-bd65
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-e42d
 import type { ProviderConnection, SyncLogEntry } from './types';
-<<<<<<< HEAD
-// import { v4 as uuidv4 } from 'uuid';
-=======
-import { v4 as uuidv4 } from 'uuid';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-bcb8
 
 export async function simulateAction<T = unknown>(
 =======
@@ -66,8 +40,6 @@ import { v4 as uuidv4 } from 'uuid';
 =======
 import type { ProviderConnection, SyncLogEntry } from './types';
 import { v4 as uuidv4 } from 'uuid';
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3fed
 =======
 import type { ProviderConnection, SyncLogEntry } from './types';
 // Simple UUID generator since uuid package is not available
@@ -121,20 +93,6 @@ export async function simulateAction<T = any>(
   details: Record<string, any> = {}
 ): Promise<{ log: SyncLogEntry; result: T }> {
   const log: SyncLogEntry = {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    id: uuidv4(),
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0a8c
 =======
     id: `log_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8
@@ -177,22 +135,6 @@ export async function simulateAction<T = any>(
     action,
     details
   };
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0a8c
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8
@@ -235,50 +177,12 @@ export async function simulateAction<T = any>(
     result: { ok: true } as unknown as T
   };
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-// CRM actions
-export const crm = {
-  async syncContact(connection: ProviderConnection, contact: Record<string, unknown>) {
-    return simulateAction(connection, 'crm.syncContact', { contact });
-  },
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-  async addProjectNote(connection: ProviderConnection, note: Record<string, unknown>) {
-    return simulateAction(connection, 'crm.addProjectNote', { note });
-  },
-<<<<<<< HEAD
-  async addEmailTouchpoint(connection: ProviderConnection, touch: Record<string, unknown>) {
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-4606
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e3b
   
   async addProjectNote(connection: ProviderConnection, note: Record<string, any>) {
     return simulateAction(connection, 'crm.addProjectNote', { note });
   },
-<<<<<<< HEAD
-  
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3d1d
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-4606
 =======
@@ -289,8 +193,6 @@ export const crm = {
     return simulateAction(connection, 'crm.addProjectNote', { note });
   },
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-895b
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-4854
 =======
@@ -322,15 +224,6 @@ export const ats = {
   async pushApplicant(connection: ProviderConnection, applicant: Record<string, unknown>) {
     return simulateAction(connection, 'ats.pushApplicant', { applicant });
   },
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-  async updateStatus(connection: ProviderConnection, change: Record<string, unknown>) {
-=======
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-4606
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e3b
   
@@ -373,29 +266,11 @@ export const crm = {
   async syncContact(connection: ProviderConnection, contact: Record<string, any>) {
     return simulateAction(connection, 'crm.syncContact', { contact });
   },
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-  async addProjectNote(connection: ProviderConnection, note: Record<string, any>) {
-    return simulateAction(connection, 'crm.addProjectNote', { note });
-  },
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a0d
 
   async addProjectNote(connection: ProviderConnection, note: Record<string, any>) {
     return simulateAction(connection, 'crm.addProjectNote', { note });
   },
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-1f83
 =======
   async addProjectNote(connection: ProviderConnection, note: Record<string, any>) {
     return simulateAction(connection, 'crm.addProjectNote', { note });
@@ -447,21 +322,6 @@ export const ats = {
   async pushApplicant(connection: ProviderConnection, applicant: Record<string, any>) {
     return simulateAction(connection, 'ats.pushApplicant', { applicant });
   },
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-  async updateStatus(connection: ProviderConnection, change: Record<string, any>) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0a8c
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8
 =======

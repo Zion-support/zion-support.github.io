@@ -6,7 +6,6 @@ impo, r, t { Trending, U, p } fr, o, m 'luci, d, e-rea, c, t';
 impo, r, t { Targ, e, t } fr, o, m 'luci, d, e-rea, c, t';
 impo, r, t { Awa, r, d } fr, o, m 'luci, d, e-rea, c, t';
 impo, r, t { Sparkl, e, s } fr, o, m 'luci, d, e-rea, c, t';
-import { Link } from 'react-router-dom';
 
 const October2025TechBreakthroughBanne, r = () => { 
   return (

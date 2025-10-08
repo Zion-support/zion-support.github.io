@@ -3,17 +3,17 @@
  * Tools and helpers for development and debugging
  */
 export const devLog = (message: string, data?: any) => {
-  if (process.env.NODE_ENV === 'development') {
+  if (process.env['NODE_ENV'] === 'development') {
     //DEV: ${message}
   }
 };
 export const devError = (message: string, error?: any) => {
-  if (process.env.NODE_ENV === 'development') {
+  if (process.env['NODE_ENV'] === 'development') {
     //DEV ERROR: ${message}
   }
 };
 export const devWarn = (message: string, data?: any) => {
-  if (process.env.NODE_ENV === 'development') {
+  if (process.env['NODE_ENV'] === 'development') {
     //DEV WARN: ${message}
   }
 };

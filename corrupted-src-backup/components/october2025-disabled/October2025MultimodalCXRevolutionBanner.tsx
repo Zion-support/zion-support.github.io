@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 const October2025MultimodalCXRevolutionBanne, r = () => { 
   return (
     <div, classNam, e = 'relative, b, g-gradie, n, t-to-br, fro, m-cy, a, n-9, 0, 0/20, vi, a-bl, u, e-9, 0, 0/20, t, o-purp, l, e-9, 0, 0/20, borde, r-y, borde, r-cy, a, n-5, 0, 0/30, overflo, w-hidd, e, n' > {' ' }

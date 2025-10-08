@@ -1,71 +1,6 @@
 /**
  * Banner Rotation System Utility
  */
-<<<<<<< HEAD
-
-interface BannerConfig {
-  id: string;
-  component: string;
-  priority: number;
-  maxDailyImpressions?: number;
-  targetAudience?: string[];
-  conversionGoal?: string;
-  abTestGroup?: 'A' | 'B' | 'control';
-}
-
-interface BannerImpression {
-  bannerId: string;
-  timestamp: number;
-  sessionId: string;
-  pageUrl: string;
-  scrollDepth?: number;
-  timeVisible?: number;
-  clicked?: boolean;
-}
-
-const STORAGE_KEY = 'zion_banner_impressions';
-const SESSION_KEY = 'zion_session_id';
-const MAX_VISIBLE_BANNERS = 10; // Limit visible banners for performance
-
-/**
- * Get or create session ID
- */
-const getSessionId = (): string => {
-  let sessionId = sessionStorage.getItem(SESSION_KEY);
-  if (!sessionId) {
-    sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-    sessionStorage.setItem(SESSION_KEY, sessionId);
-  }
-  return sessionId;
-};
-
-/**
- * Get stored impressions
- */
-const getStoredImpressions = (): BannerImpression[] => {
-  try {
-    const stored = localStorage.getItem(STORAGE_KEY);
-    return stored ? JSON.parse(stored) : [];
-  } catch {
-    return [];
-  }
-};
-
-const getBannerImpressions = (): BannerImpression[] => {
-  return getStoredImpressions();
-};
-
-/**
- * Store impressions
- */
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-const storeImpressions = (impressions: BannerImpression[]): void => {
-=======
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-1f83
 export const recordBannerImpression = (impression: Omit<BannerImpression, 'timestamp' | 'sessionId'>) => {
   if (typeof window === 'undefined') return;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8
@@ -80,24 +15,11 @@ export const recordBannerImpression = (impression: Omit<BannerImpression, 'times
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
   try {
-<<<<<<< HEAD
-    // Limit to last 1000 impressions to prevent storage bloat
-    const trimmedImpressions = impressions.slice(-1000);
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(trimmedImpressions));
-=======
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(impressions));
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a4f
   } catch (error) {
     console.error('Failed to store banner impressions:', error);
   }
 };
 
-<<<<<<< HEAD
-=======
-/**
- * Record a banner impression
- */
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a4f
 export const recordBannerImpression = (impression: Omit<BannerImpression, 'timestamp' | 'sessionId'>) => {
   if (typeof window === 'undefined') return;
   
@@ -110,15 +32,6 @@ export const recordBannerImpression = (impression: Omit<BannerImpression, 'times
     };
     
     impressions.push(newImpression);
-<<<<<<< HEAD
-    storeImpressions(impressions);
-=======
-    
-    // Keep only last 1000 impressions to prevent storage bloat
-    const trimmedImpressions = impressions.slice(-1000);
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(trimmedImpressions));
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-11d4
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a4f
   } catch (error) {
@@ -148,38 +61,6 @@ export const shouldShowBanner = (banner: BannerConfig): boolean => {
 /**
  * Get rotation score for banner prioritization
  */
-<<<<<<< HEAD
-<<<<<<< HEAD
-export const getRotationScore = (banner: BannerConfig): number => {
-<<<<<<< HEAD
-<<<<<<< HEAD
-  // Simple scoring based on priority and recent performance
-  const priorityScore = banner.priority;
-  const recentImpressions = getBannerImpressionCount(banner.id, 24);
-  const performanceScore = Math.max(0, 10 - recentImpressions); // Lower impressions = higher score
-  
-  return priorityScore + performanceScore;
-=======
-  const impressions = getBannerImpressions();
-  const bannerImpressions = impressions.filter(imp => imp.bannerId === banner.id);
-  
-  // Calculate engagement rate
-  const totalImpressions = bannerImpressions.length;
-  const clicks = bannerImpressions.filter(imp => imp.clicked).length;
-  const engagementRate = totalImpressions > 0 ? clicks / totalImpressions : 0;
-  
-  // Calculate recency score (more recent = higher score)
-  const recentImpressions = bannerImpressions.filter(imp => 
-    imp.timestamp > Date.now() - 24 * 60 * 60 * 1000
-  ).length;
-  const recencyScore = Math.min(recentImpressions / 10, 1);
-  
-  // Calculate fatigue score (fewer impressions = higher score)
-  const fatigueScore = Math.max(0, 1 - (totalImpressions / 50));
-  
-  // Weighted combination
-  return (banner.priority * 0.4) + (engagementRate * 0.3) + (recencyScore * 0.2) + (fatigueScore * 0.1);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-bcb8
 =======
   // Calculate score based on various factors
   let score = 0;
@@ -217,16 +98,6 @@ export const selectBannersForRotation = (allBanners: BannerConfig[], maxBanners:
  * Get banner analytics
  */
 export const getBannerAnalytics = (bannerId?: string) => {
-<<<<<<< HEAD
-  if (!bannerId) return null;
-  
-  const impressions = getStoredImpressions();
-  const bannerImpressions = impressions.filter(imp => imp.bannerId === bannerId);
-=======
-  const impressions = getBannerImpressions();
-<<<<<<< HEAD
-  const bannerImpressions = bannerId ? impressions.filter(imp => imp.bannerId === bannerId) : impressions;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0a61
   
   // Calculate engagement rate
   const clicks = bannerImpressions.filter(imp => imp.clicked).length;
@@ -239,21 +110,12 @@ export const getBannerAnalytics = (bannerId?: string) => {
   // Calculate fatigue score (too many impressions = lower score)
   const fatigueScore = Math.max(0, 1 - (bannerImpressions.length / 50));
   
-<<<<<<< HEAD
-=======
-  // Return analytics data
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0a61
   return {
     totalImpressions: bannerImpressions.length,
     clicks,
     engagementRate,
     recencyScore,
     fatigueScore,
-<<<<<<< HEAD
-    score: (engagementRate * 0.3) + (recencyScore * 0.2) + (fatigueScore * 0.1)
-=======
-    overallScore: (engagementRate * 0.3) + (recencyScore * 0.2) + (fatigueScore * 0.1)
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0a61
 =======
   const bannerImpressions = bannerId ? 
     impressions.filter(imp => imp.bannerId === bannerId) : 
@@ -438,11 +300,6 @@ export class BannerRotationEngine {
 // Export singleton instance
 export const bannerRotationEngine = new BannerRotationEngine();
 
-<<<<<<< HEAD
-export const trackBannerClickWithPage = (bannerId: string, pageUrl: string): void => {
-=======
-export const trackBannerClick = (bannerId: string, pageUrl: string): void => {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a4f
   recordBannerImpression({
     bannerId,
     pageUrl,
@@ -472,11 +329,6 @@ export default {
   trackBannerClickWithPage,
   trackBannerVisibility
 };
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-11d4
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a4f
 =======

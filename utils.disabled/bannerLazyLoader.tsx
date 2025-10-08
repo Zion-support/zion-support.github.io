@@ -4,14 +4,6 @@
  * Optimizes banner loading by implementing lazy loading and code splitting
  * to improve initial page load performance.
  */
-<<<<<<< HEAD:utils/bannerLazyLoader.ts
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { lazy } from 'react';
-import type { ComponentType } from 'react';
-=======
-import { lazy, type ComponentType } from 'react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-bcb8
 =======
 import React, { lazy, ComponentType } from 'react';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-3b0a
@@ -41,28 +33,6 @@ export const lazyLoadBanner = (
             .catch(retryError => {
               console.error(
                 `Retry failed for banner: ${componentName}`,
-<<<<<<< HEAD
-<<<<<<< HEAD
-                retryError
-              );
-=======
-                retryError,
-              );
-              // Return a fallback component
-              resolve({
-<<<<<<< HEAD:utils/bannerLazyLoader.ts
-<<<<<<< HEAD
-                default: () => {
-                  const React = require('react');
-                  return React.createElement('div', { className: 'banner-fallback' },
-                    React.createElement('p', null, 'Banner temporarily unavailable')
-                  );
-                }
-=======
-                default: () => React.createElement('div', { className: 'banner-fallback' },
-                  React.createElement('p', null, 'Banner temporarily unavailable')
-                )
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3b0a
               });
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-bcb8
 =======
@@ -94,16 +64,6 @@ export const preloadBanner = (importFn: () => Promise<BannerModule>): void => {
       importFn().catch(() => {
         // Silently fail for preload
       });
-<<<<<<< HEAD:utils/bannerLazyLoader.ts
-<<<<<<< HEAD
-    }
-  }
-};
-=======
-    });
-=======
-    }, 0);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a05b:utils/bannerLazyLoader.tsx
   }
 };
 /**
@@ -156,15 +116,6 @@ export class BannerObserver {
               this.observer?.unobserve(entry.target);
             }
           }
-<<<<<<< HEAD:utils/bannerLazyLoader.ts
-=======
-        });
-      }, this.options);
-    } else {
-      setTimeout(() => {
-        importFn().catch(() => {
-          // Silently fail for preload
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a05b:utils/bannerLazyLoader.tsx
         });
       }, {
         rootMargin: '50px',
@@ -207,28 +158,6 @@ export class BannerLoadingManager {
 /**
  * Banner loader with intersection observer
  */
-<<<<<<< HEAD
-=======
-export const trackBannerPerformance = (
-  bannerName: string,
-  metrics: {
-    loadTime?: number;
-    renderTime?: number;
-    visible?: boolean;
-    clicked?: boolean;
-  },
-) => {
-  if (typeof window !== 'undefined' && 'performance' in window) {
-    // Send to analytics
-    console.log(`Banner Performance [${bannerName}]:`, metrics);
-    // You can integrate with your analytics service here
-    // Example: gtag('event', 'banner_performance', {...metrics, banner: bannerName });
-  }
-};
-<<<<<<< HEAD:utils/bannerLazyLoader.ts
-
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a05b:utils/bannerLazyLoader.tsx
 export const useBannerLoading = (componentName: string) => {
   const manager = new BannerLoadingManager();
   return {
@@ -240,19 +169,11 @@ export const useBannerLoading = (componentName: string) => {
 
 export default {
   lazyLoadBanner,
-<<<<<<< HEAD:utils/bannerLazyLoader.ts
-  preloadBanners,
-=======
-  preloadBanner,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a05b:utils/bannerLazyLoader.tsx
   getBannerPriority,
   sortBannersByPriority,
   BannerObserver,
   trackBannerPerformance,
   useBannerLoading
-<<<<<<< HEAD:utils/bannerLazyLoader.ts
-};
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-bcb8
 =======
 };
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-a05b:utils/bannerLazyLoader.tsx
