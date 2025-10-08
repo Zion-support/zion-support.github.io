@@ -198,14 +198,14 @@ class PerformanceReporter {
    */
   private getRating(metric: string, value: number): 'good' | 'needs-improvement' | 'poor' {
     const thresholds: Record<string, { good: number; poor: number }> = {
-      lcp: { good: 2500, poor: 4000 }
-      fid: { good: 100, poor: 300 }
-      cls: { good: 0.1, poor: 0.25 }
-      fcp: { good: 1800, poor: 3000 }
-      ttfb: { good: 800, poor: 1800 }
-      dcl: { good: 1000, poor: 3000 }
+      lcp: { good: 2500, poor: 4000 },
+      fid: { good: 100, poor: 300 },
+      cls: { good: 0.1, poor: 0.25 },
+      fcp: { good: 1800, poor: 3000 },
+      ttfb: { good: 800, poor: 1800 },
+      dcl: { good: 1000, poor: 3000 },
       load: { good: 2000, poor: 4000 }
-    }
+    };
     const threshold = thresholds[metric.toLowerCase()]
     if (!threshold) {
       return 'good'
