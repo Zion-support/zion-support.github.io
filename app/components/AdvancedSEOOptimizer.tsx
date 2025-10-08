@@ -1,4 +1,4 @@
-import React, { useEffect, useCallback } from 'react';
+import React, { useEffect, useCallback, useRef } from 'react';
 import { Helmet } from 'react-helmet-async';
 
 interface SEOData {
@@ -38,7 +38,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
   enableTwitterCards = true,
   enableSchemaMarkup = true,
 }) => {
-  // const structuredDataRef = useRef<HTMLScriptElement | null>(null);
+  const structuredDataRef = useRef<HTMLScriptElement | null>(null);
   const generateStructuredData = useCallback(() => {
     if (!enableStructuredData || !seoData.structuredData) return null;
 
@@ -142,7 +142,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     // Update page title and meta description for better SEO
     if (typeof document !== 'undefined') {
       document.title = seoData.title;
-
+      
       let metaDescription = document.querySelector('meta[name="description"]');
       if (!metaDescription) {
         metaDescription = document.createElement('meta');
@@ -162,61 +162,64 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     }
   }, [seoData]);
 
-  // SEO utility functions (available for future use)
-  // const addMetaTag = (name: string, content: string, attribute: string = 'name') => {
-  //   const metaTag = document.createElement('meta');
-  //   metaTag.setAttribute(attribute, name);
-  //   metaTag.content = content;
-  //   document.head.appendChild(metaTag);
-  // };
+  const addMetaTag = (name: string, content: string, attribute: string = 'name') => {
+    const metaTag = document.createElement('meta');
+    metaTag.setAttribute(attribute, name);
+    metaTag.content = content;
+    document.head.appendChild(metaTag);
+  };
 
-  // const updateCanonicalUrl = (url: string) => {
-  //   let canonicalLink = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
-  //   if (canonicalLink) {
-  //     canonicalLink.href = url;
-  //   } else {
-  //     canonicalLink = document.createElement('link');
-  //     canonicalLink.rel = 'canonical';
-  //     canonicalLink.href = url;
-  //     document.head.appendChild(canonicalLink);
-  //   }
-  // };
+  const updateCanonicalUrl = (url: string) => {
+    let canonicalLink = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
+    
+    if (canonicalLink) {
+      canonicalLink.href = url;
+    } else {
+      canonicalLink = document.createElement('link');
+      canonicalLink.rel = 'canonical';
+      canonicalLink.href = url;
+      document.head.appendChild(canonicalLink);
+    }
+  };
 
-  // const addStructuredData = (data: Record<string, unknown>) => {
-  //   if (structuredDataRef.current) {
-  //     structuredDataRef.current.remove();
-  //   }
-  //   const script = document.createElement('script');
-  //   script.type = 'application/ld+json';
-  //   script.textContent = JSON.stringify(data);
-  //   script.id = 'structured-data';
-  //   document.head.appendChild(script);
-  //   structuredDataRef.current = script;
-  // };
+  const addStructuredData = (data: Record<string, unknown>) => {
+    // Remove existing structured data
+    if (structuredDataRef.current) {
+      structuredDataRef.current.remove();
+    }
 
-  // const trackPageView = (config: SEOData) => {
-  //   if (typeof window !== 'undefined' && 'gtag' in window) {
-  //     (window as any).gtag('config', 'GA_MEASUREMENT_ID', {
-  //       page_title: config.title,
-  //       page_location: config.canonicalUrl,
-  //     });
-  //   }
-  // };
+    // Add new structured data
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.textContent = JSON.stringify(data);
+    script.id = 'structured-data';
+    document.head.appendChild(script);
+    structuredDataRef.current = script;
+  };
 
-  // const trackPerformanceMetrics = () => {
-  //   if (typeof window !== 'undefined' && 'performance' in window) {
-  //     window.addEventListener('load', () => {
-  //       const perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-  //       if (perfData && typeof window !== 'undefined' && 'gtag' in window) {
-  //         (window as any).gtag('event', 'page_load_performance', {
-  //           event_category: 'Performance',
-  //           event_label: 'Page Load',
-  //           value: Math.round(perfData.loadEventEnd - perfData.fetchStart),
-  //         });
-  //       }
-  //     });
-  //   }
-  // };
+  const trackPageView = (config: SEOData) => {
+    if (typeof window !== 'undefined' && 'gtag' in window) {
+      (window as unknown as { gtag: (command: string, targetId: string, config: Record<string, unknown>) => void }).gtag('config', 'GA_MEASUREMENT_ID', {
+        page_title: config.title,
+        page_location: config.canonicalUrl,
+      });
+    }
+  };
+
+  const trackPerformanceMetrics = () => {
+    if (typeof window !== 'undefined' && 'performance' in window) {
+      window.addEventListener('load', () => {
+        const perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+        if (perfData && typeof window !== 'undefined' && 'gtag' in window) {
+          (window as unknown as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag('event', 'page_load_performance', {
+            event_category: 'Performance',
+            event_label: 'Page Load',
+            value: Math.round(perfData.loadEventEnd - perfData.fetchStart),
+          });
+        }
+      });
+    }
+  };
 
   return (
     <Helmet>
@@ -225,7 +228,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
       <meta name="description" content={seoData.description} />
       <meta name="keywords" content={seoData.keywords.join(', ')} />
       <link rel="canonical" href={seoData.canonicalUrl} />
-
+      
       {/* Open Graph Tags */}
       {enableOpenGraph && (
         <>
@@ -254,10 +257,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
       )}
 
       {/* Additional SEO Meta Tags */}
-      <meta
-        name="robots"
-        content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
-      />
+      <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
       <meta name="googlebot" content="index, follow" />
       <meta name="bingbot" content="index, follow" />
       <meta name="author" content="Zion Tech Group" />
@@ -271,15 +271,21 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
 
       {/* Structured Data */}
       {enableSchemaMarkup && structuredData && (
-        <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
+        <script type="application/ld+json">
+          {JSON.stringify(structuredData)}
+        </script>
       )}
 
       {enableSchemaMarkup && breadcrumbData && (
-        <script type="application/ld+json">{JSON.stringify(breadcrumbData)}</script>
+        <script type="application/ld+json">
+          {JSON.stringify(breadcrumbData)}
+        </script>
       )}
 
       {enableSchemaMarkup && faqData && (
-        <script type="application/ld+json">{JSON.stringify(faqData)}</script>
+        <script type="application/ld+json">
+          {JSON.stringify(faqData)}
+        </script>
       )}
 
       {/* Preconnect to external domains for performance */}

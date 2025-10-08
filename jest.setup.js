@@ -1,6 +1,11 @@
 // Learn more: https://github.com/testing-library/jest-dom
 import '@testing-library/jest-dom';
 
+// Polyfill for TextEncoder/TextDecoder
+import { TextEncoder, TextDecoder } from 'util';
+global.TextEncoder = TextEncoder;
+global.TextDecoder = TextDecoder;
+
 // Mock files that use import.meta.env
 jest.mock('./app/utils/logger.ts', () => ({
   logger: {
@@ -37,9 +42,11 @@ jest.mock('./app/hooks/usePerformanceMonitoring.ts', () => ({
   })),
 }));
 
-// Mock react-router-dom
+
+// Mock React Router (this is a Vite project, not Next.js)
 jest.mock('react-router-dom', () => ({
   ...jest.requireActual('react-router-dom'),
+
   useNavigate: () => jest.fn(),
   useLocation: () => ({
     pathname: '/',
@@ -48,9 +55,14 @@ jest.mock('react-router-dom', () => ({
     state: null,
   }),
   useParams: () => ({}),
-  Link: ({ children, to }) => {
-    return <a href={to}>{children}</a>;
+  BrowserRouter: ({ children }) => children,
+  MemoryRouter: ({ children, basename = '/' }) => {
+    const React = require('react');
+    const { createContext } = React;
+    const RouterContext = createContext({ basename });
+    return React.createElement(RouterContext.Provider, { value: { basename } }, children);
   },
+  RouterProvider: ({ router }) => null,
 }));
 
 // Mock window.matchMedia
@@ -78,6 +90,8 @@ global.IntersectionObserver = class IntersectionObserver {
   }
   unobserve() {}
 };
+
+// TextEncoder and TextDecoder are already set above
 
 // Suppress console errors in tests
 const originalError = console.error;
