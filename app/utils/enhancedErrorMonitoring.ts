@@ -1,4 +1,3 @@
-import React from 'react';
 /**
  * Enhanced Error Monitoring System for Zion Tech Group Website
  * Provides comprehensive error tracking, reporting, and recovery
@@ -16,7 +15,7 @@ interface ErrorContext {
   filename?: string;
   lineno?: number;
   colno?: number;
-  reason?: any;
+  reason?: unknown;
   resource?: string;
   status?: number;
   statusText?: string;
@@ -86,7 +85,7 @@ class EnhancedErrorMonitoring {
       event => {
         if (event.target !== window) {
           this.handleError(new Error(`Resource loading error: ${event.target}`), {
-            resource: (event.target as any).src || (event.target as any).href,
+            resource: (event.target as HTMLImageElement | HTMLLinkElement).src || (event.target as HTMLLinkElement).href,
             category: 'resource',
           });
         }

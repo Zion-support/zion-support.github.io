@@ -1,4 +1,3 @@
-import React from 'react'
 /**
  * Advanced SEO Optimization Utility
  * Provides comprehensive SEO enhancements and monitoring
@@ -229,7 +228,7 @@ class SEOOptimizer {
   /**
    * Add structured data to page
    */
-  private addStructuredData(data: any): void {
+  private addStructuredData(data: Record<string, unknown>): void {
     const script = document.createElement('script')
     script.type = 'application/ld+json'
     script.textContent = JSON.stringify(data)
@@ -263,9 +262,10 @@ class SEOOptimizer {
       // Monitor CLS (Cumulative Layout Shift)
       let clsValue = 0
       new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
-          // Process layout shift entries
-        }
+        // Process layout shift entries
+        list.getEntries().forEach(_entry => {
+          // Process each entry
+        });
         if (clsValue > 0.25) { // Poor CLS
           this.trackSEOMetric('poor_cls', clsValue)
         }
@@ -295,7 +295,7 @@ class SEOOptimizer {
   /**
    * Generate sitemap data
    */
-  generateSitemapData(): any[] {
+  generateSitemapData(): Array<{ url: string; lastmod: string; changefreq: string; priority: number }> {
     // This would typically come from your CMS or routing system
     return [
       {

@@ -5,7 +5,7 @@ interface PerformanceMetrics {
   fcp?: number
   ttfb?: number
   memory?: number
-  navigation?: any
+  navigation?: PerformanceNavigationTiming
 }
 interface PerformanceOptimizerConfig {
   enableLazyLoading: boolean;

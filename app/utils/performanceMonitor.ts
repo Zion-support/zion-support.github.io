@@ -82,7 +82,7 @@ class PerformanceMonitor {
         });
 
         // Largest Contentful Paint
-        this.observeEntry('largest-contentful-paint', entries => {
+        this.observeEntry('largest-contentful-paint', _entries => {
           if (lastEntry) {
             this.recordMetric(
               'LCP',
@@ -92,7 +92,7 @@ class PerformanceMonitor {
         });
 
         // First Input Delay
-        this.observeEntry('first-input', entries => {
+        this.observeEntry('first-input', _entries => {
           if (firstInput && firstInput.processingStart !== undefined) {
             const fid = firstInput.processingStart - firstInput.startTime;
             this.recordMetric('FID', fid);
@@ -102,7 +102,7 @@ class PerformanceMonitor {
         // Cumulative Layout Shift
         this.observeEntry('layout-shift', entries => {
           let clsValue = 0;
-          entries.forEach((entry: any) => {
+          entries.forEach((entry: PerformanceEntry) => {
             if (!entry.hadRecentInput) {
               clsValue += entry.value;
             }
