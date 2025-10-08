@@ -154,7 +154,7 @@ class SEOOptimizer {
    * Set meta tag
    */
   private setMetaTag(name: string, content: string, attribute: string = 'name'): void {
-    let meta = document.querySelector(`meta[${attribute}="${name}"]`) as HTMLMetaElement;
+    let meta = document.querySelector(`meta[${attribute}="${name}"]`);
     
     if (!meta) {
       meta = document.createElement('meta');
@@ -162,7 +162,7 @@ class SEOOptimizer {
       document.head.appendChild(meta);
     }
     
-    meta.content = content;
+    (meta as HTMLMetaElement).content = content;
   }
 
   /**

@@ -47,8 +47,13 @@ const PerformanceMonitor: React.FC = () => {
       const score = getPerformanceScore();
       setPerformanceScore(score);
       if (enableConsoleLogging) {
-        logger.debug('Metrics', { metrics: currentMetrics });
-        console.groupEnd();
+        if (typeof console !== 'undefined') { console.group('Performance Metrics');
+          logger.debug('Metrics', { metrics: currentMetrics });
+          logger.debug('Score', { score });
+          console.groupEnd();
+        }
+      }
+    };
 
     updateMetrics();
     const interval = setInterval(updateMetrics, updateInterval);
