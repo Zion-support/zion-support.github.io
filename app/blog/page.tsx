@@ -1,246 +1,206 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
-import ContentPreviewCard from '../components/ContentPreviewCard';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 
-interface BlogPost {
-  id: string;
-  title: string;
-  description: string;
-  category: string;
-  readTime: string;
-  date: string;
-  path: string;
-  image: string;
-  featured: boolean;
-  stats?: {
-    views: number;
-    engagement: number;
-  };
-}
-
-export default function BlogPage() {
-  const [posts, setPosts] = useState<BlogPost[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
-
-  const blogPosts: BlogPost[] = [
+const BlogPage: React.FC = () => {
+  const blogPosts = [
     {
-      id: 'ai-enterprise-transformation-2025',
-      title: 'AI Enterprise Transformation: $50M Annual Savings Blueprint',
-      description: 'Discover how Fortune 500 companies achieve $50M annual savings, 95% process automation, and 300% ROI through comprehensive AI transformation strategies.',
-      category: 'Success Story',
-      readTime: '50 min read',
-      date: '2025-01-28',
-      path: '/blog/ai-enterprise-transformation-2025',
-      image: '💰',
-      featured: true,
-      stats: { views: 18750, engagement: 97 }
+      id: 1,
+      title: 'The Future of AI in Enterprise: 2025 Predictions',
+      excerpt: 'Explore the latest trends and predictions for AI adoption in enterprise environments.',
+      category: 'AI Insights',
+      date: 'January 15, 2025',
+      readTime: '8 min read',
+      image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=400&fit=crop',
+      featured: true
     },
     {
-      id: 'ai-2025-2026-mega-trends-breakthrough',
-      title: 'AI 2025-2026 Mega Trends Breakthrough: Revolutionary Enterprise Transformation',
-      description: 'Discover the groundbreaking AI trends and breakthroughs that will revolutionize enterprise operations in 2025-2026.',
-      category: 'Mega Trends',
-      readTime: '15 min read',
-      date: '2025-01-15',
-      path: '/blog/ai-2025-2026-mega-trends-breakthrough',
-      image: '🚀',
-      featured: true,
-      stats: { views: 12500, engagement: 94 }
+      id: 2,
+      title: 'Quantum Computing: Breaking Down the Barriers',
+      excerpt: 'Understanding how quantum computing is revolutionizing problem-solving capabilities.',
+      category: 'Quantum Computing',
+      date: 'January 10, 2025',
+      readTime: '6 min read',
+      image: 'https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=800&h=400&fit=crop',
+      featured: false
     },
     {
-      id: 'ai-2026-autonomous-enterprise-architecture',
-      title: 'AI 2026: Autonomous Enterprise Architecture Revolution',
-      description: 'Revolutionary autonomous enterprise architecture transforming business operations with self-healing systems and predictive infrastructure.',
-      category: 'Architecture',
-      readTime: '12 min read',
-      date: '2026-01-15',
-      path: '/blog/ai-2026-autonomous-enterprise-architecture',
-      image: '🏗️',
-      featured: true,
-      stats: { views: 8900, engagement: 91 }
+      id: 3,
+      title: 'AI Automation: Transforming Business Processes',
+      excerpt: 'Learn how AI automation is reshaping traditional business workflows.',
+      category: 'Automation',
+      date: 'January 5, 2025',
+      readTime: '7 min read',
+      image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=400&fit=crop',
+      featured: false
     },
     {
-      id: 'ai-2026-autonomous-agent-factories',
-      title: 'AI 2026: Autonomous Agent Factories Revolution',
-      description: 'Revolutionary autonomous agent factories transforming business operations with self-managing AI systems.',
-      category: 'AI Agents',
-      readTime: '18 min read',
-      date: '2026-02-01',
-      path: '/blog/ai-2026-autonomous-agent-factories',
-      image: '🤖',
-      featured: false,
-      stats: { views: 7200, engagement: 88 }
+      id: 4,
+      title: 'Cybersecurity in the Age of AI',
+      excerpt: 'How artificial intelligence is both enhancing and challenging cybersecurity practices.',
+      category: 'Cybersecurity',
+      date: 'December 28, 2024',
+      readTime: '9 min read',
+      image: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?w=800&h=400&fit=crop',
+      featured: false
     },
     {
-      id: 'ai-2026-consensus-intelligence-breakthrough',
-      title: 'AI 2026: Consensus Intelligence Breakthrough',
-      description: 'Revolutionary consensus intelligence systems enabling collaborative AI decision-making across enterprise operations.',
-      category: 'Intelligence',
-      readTime: '14 min read',
-      date: '2026-02-15',
-      path: '/blog/ai-2026-consensus-intelligence-breakthrough',
-      image: '🧠',
-      featured: false,
-      stats: { views: 6500, engagement: 85 }
+      id: 5,
+      title: 'Blockchain and Web3: The Next Digital Revolution',
+      excerpt: 'Understanding the impact of blockchain technology on modern business operations.',
+      category: 'Blockchain',
+      date: 'December 20, 2024',
+      readTime: '10 min read',
+      image: 'https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=800&h=400&fit=crop',
+      featured: false
     },
     {
-      id: 'ai-cost-optimization-breakthrough-2026',
-      title: 'AI Cost Optimization Breakthrough 2026',
-      description: 'Revolutionary cost optimization strategies delivering 90% reduction in operational expenses through intelligent AI systems.',
-      category: 'Cost Optimization',
-      readTime: '20 min read',
-      date: '2026-03-01',
-      path: '/blog/ai-cost-optimization-breakthrough-2026',
-      image: '💡',
-      featured: false,
-      stats: { views: 9800, engagement: 92 }
-    },
-    {
-      id: 'ai-2026-hyperconscious-computing-revolution',
-      title: 'AI 2026: Hyperconscious Computing Revolution',
-      description: 'Revolutionary hyperconscious computing systems delivering unprecedented AI capabilities and enterprise transformation.',
-      category: 'Computing',
-      readTime: '16 min read',
-      date: '2026-03-15',
-      path: '/blog/ai-2026-hyperconscious-computing-revolution',
-      image: '⚡',
-      featured: false,
-      stats: { views: 5800, engagement: 87 }
-    },
-    {
-      id: 'ai-enterprise-transformation-ultimate-guide-2025',
-      title: 'AI Enterprise Transformation: Ultimate Guide 2025',
-      description: 'The complete guide to AI enterprise transformation with proven frameworks, implementation strategies, and success metrics.',
-      category: 'Transformation',
-      readTime: '45 min read',
-      date: '2025-02-10',
-      path: '/blog/ai-enterprise-transformation-ultimate-guide-2025',
-      image: '📚',
-      featured: false,
-      stats: { views: 11200, engagement: 93 }
+      id: 6,
+      title: 'IoT and Edge Computing: Connecting the Future',
+      excerpt: 'Exploring the convergence of IoT devices and edge computing technologies.',
+      category: 'IoT',
+      date: 'December 15, 2024',
+      readTime: '6 min read',
+      image: 'https://images.unsplash.com/photo-1518432031352-d6fc5c10da5a?w=800&h=400&fit=crop',
+      featured: false
     }
   ];
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setPosts(blogPosts);
-      setLoading(false);
-    }, 500);
+  const categories = ['All', 'AI Insights', 'Quantum Computing', 'Automation', 'Cybersecurity', 'Blockchain', 'IoT'];
 
-    return () => clearTimeout(timer);
-  }, []);
-
-  const _categories = ['all', ...Array.from(new Set(blogPosts.map(post => post.category)))];
-  const filteredPosts = selectedCategory === 'all' 
-    ? posts 
-    : posts.filter(post => post.category === selectedCategory);
-
-  const _featuredPosts = posts.filter(post => post.featured);
-  const _regularPosts = posts.filter(post => !post.featured);
-
-  if (loading) {
-    return (
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-4 py-8">
-          <div className="text-center mb-12">
-            <div className="h-12 bg-gray-200 rounded w-96 mx-auto mb-4 animate-pulse"></div>
-            <div className="h-6 bg-gray-200 rounded w-64 mx-auto animate-pulse"></div>
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Navigation />
+      
+      <main className="container mx-auto px-4 py-16">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
+              Blog & Insights
+            </h1>
+            <p className="text-lg text-gray-300 max-w-3xl mx-auto">
+              Stay updated with the latest trends, insights, and innovations in AI, quantum computing, 
+              and cutting-edge technology solutions.
+            </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[1, 2, 3, 4, 5, 6].map(item => (
-              <div key={item} className="bg-gray-100 rounded-lg p-6 animate-pulse">
-                <div className="h-48 bg-gray-200 rounded-lg mb-4"></div>
-                <div className="h-6 bg-gray-200 rounded mb-2"></div>
-                <div className="h-4 bg-gray-200 rounded mb-2"></div>
-                <div className="h-4 bg-gray-200 rounded w-3/4"></div>
+
+          {/* Featured Post */}
+          <div className="mb-16">
+            {blogPosts.filter(post => post.featured).map(post => (
+              <div key={post.id} className="cyber-card hologram-card overflow-hidden">
+                <div className="md:flex">
+                  <div className="md:w-1/2">
+                    <img 
+                      src={post.image} 
+                      alt={post.title}
+                      className="w-full h-64 md:h-full object-cover"
+                    />
+                  </div>
+                  <div className="md:w-1/2 p-8">
+                    <div className="flex items-center mb-4">
+                      <span className="bg-cyan-500 text-white px-3 py-1 rounded-full text-sm font-medium">
+                        {post.category}
+                      </span>
+                      <span className="text-gray-400 text-sm ml-4">{post.date}</span>
+                    </div>
+                    <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
+                      {post.title}
+                    </h2>
+                    <p className="text-gray-300 mb-6 text-lg">
+                      {post.excerpt}
+                    </p>
+                    <div className="flex items-center justify-between">
+                      <span className="text-gray-400 text-sm">{post.readTime}</span>
+                      <button className="cyber-button">
+                        Read More
+                      </button>
+                    </div>
+                  </div>
+                </div>
               </div>
             ))}
           </div>
-        </div>
-      </div>
-    );
-  }
 
-  return (
-    <div className="min-h-screen bg-gray-50">
-      <div className="container mx-auto px-4 py-8">
-        {/* Header */}
-        <header className="text-center mb-12">
-          <h1 className="text-5xl font-bold text-gray-900 mb-4">AI & Technology Blog</h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Latest insights on AI, enterprise automation, and digital transformation from our expert team
-          </p>
-        </header>
-
-        {/* Category Filter */}
-        <div className="flex flex-wrap justify-center gap-2 mb-12">
-          {categories.map((category) => (
-            <button
-              key={category}
-              onClick={() => setSelectedCategory(category)}
-              className={`px-6 py-2 rounded-full font-medium transition-colors ${
-                selectedCategory === category
-                  ? 'bg-indigo-600 text-white'
-                  : 'bg-white text-gray-600 hover:bg-gray-100'
-              }`}
-            >
-              {category === 'all' ? 'All Articles' : category}
-            </button>
-          ))}
-        </div>
-
-        {/* Featured Posts */}
-        {selectedCategory === 'all' && (
-          <section className="mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
-              🌟 Featured Articles
-            </h2>
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-              {featuredPosts.map((post) => (
-                <ContentPreviewCard
-                  key={post.id}
-                  {...post}
-                />
+          {/* Category Filter */}
+          <div className="mb-12">
+            <div className="flex flex-wrap justify-center gap-4">
+              {categories.map(category => (
+                <button
+                  key={category}
+                  className={`px-6 py-2 rounded-full transition-colors ${
+                    category === 'All' 
+                      ? 'bg-cyan-500 text-white' 
+                      : 'bg-gray-700 text-gray-300 hover:bg-gray-600'
+                  }`}
+                >
+                  {category}
+                </button>
               ))}
             </div>
-          </section>
-        )}
+          </div>
 
-        {/* All Posts */}
-        <section>
-          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
-            {selectedCategory === 'all' ? 'All Articles' : `${selectedCategory} Articles`}
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredPosts.map((post) => (
-              <ContentPreviewCard
-                key={post.id}
-                {...post}
-              />
+          {/* Blog Posts Grid */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {blogPosts.filter(post => !post.featured).map(post => (
+              <article key={post.id} className="cyber-card hologram-card overflow-hidden group">
+                <div className="relative">
+                  <img 
+                    src={post.image} 
+                    alt={post.title}
+                    className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                  <div className="absolute top-4 left-4">
+                    <span className="bg-cyan-500 text-white px-3 py-1 rounded-full text-sm font-medium">
+                      {post.category}
+                    </span>
+                  </div>
+                </div>
+                <div className="p-6">
+                  <div className="flex items-center text-sm text-gray-400 mb-3">
+                    <span>{post.date}</span>
+                    <span className="mx-2">•</span>
+                    <span>{post.readTime}</span>
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">
+                    {post.title}
+                  </h3>
+                  <p className="text-gray-300 mb-4">
+                    {post.excerpt}
+                  </p>
+                  <button className="text-cyan-400 hover:text-cyan-300 font-medium">
+                    Read More →
+                  </button>
+                </div>
+              </article>
             ))}
           </div>
-        </section>
 
-        {/* Newsletter CTA */}
-        <div className="mt-16 text-center">
-          <div className="bg-gradient-to-r from-indigo-50 to-purple-50 rounded-2xl p-8">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">
-              Never Miss an Update
-            </h3>
-            <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-              Subscribe to our newsletter and get the latest AI insights, enterprise transformation guides, 
-              and breakthrough content delivered directly to your inbox.
+          {/* Newsletter Signup */}
+          <div className="mt-16 cyber-card hologram-card p-8 text-center">
+            <h2 className="text-2xl font-bold text-white mb-4">
+              Stay Updated with Our Latest Insights
+            </h2>
+            <p className="text-gray-300 mb-6">
+              Subscribe to our newsletter and never miss the latest AI and technology insights.
             </p>
-            <Link
-              to="/"
-              className="inline-block bg-indigo-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-colors"
-            >
-              Subscribe to Newsletter
-            </Link>
+            <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+              <input
+                type="email"
+                placeholder="Enter your email"
+                className="flex-1 px-4 py-3 rounded-lg bg-gray-800 text-white border border-gray-600 focus:border-cyan-500 focus:outline-none"
+              />
+              <button className="cyber-button">
+                Subscribe
+              </button>
+            </div>
           </div>
         </div>
-      </div>
+      </main>
+      
+      <Footer />
     </div>
   );
-}
+};
+
+export default BlogPage;
