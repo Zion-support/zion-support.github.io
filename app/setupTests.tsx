@@ -118,7 +118,6 @@ Object.defineProperty(window, 'sessionStorage', {
   value: sessionStorageMock,
 });
 
-<<<<<<< HEAD
 // Mock TextEncoder and TextDecoder for Node.js environment
 if (typeof TextEncoder === 'undefined') {
   // eslint-disable-next-line @typescript-eslint/no-require-imports
@@ -126,10 +125,9 @@ if (typeof TextEncoder === 'undefined') {
   // eslint-disable-next-line @typescript-eslint/no-require-imports
   global.TextDecoder = require('util').TextDecoder;
 }
-=======
+
 // Mock fetch
 global.fetch = jest.fn();
->>>>>>> origin/main
 
 // Mock console methods for cleaner test output
 const originalConsoleWarn = console.warn;

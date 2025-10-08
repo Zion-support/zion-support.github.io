@@ -63,24 +63,23 @@ const AccessibilityEnhancer = React.forwardRef<AccessibilityEnhancerRef, Accessi
   }, []);
 
   useEffect(() => {
-<<<<<<< HEAD
     const initializeAccessibility = () => {
-      if (mergedConfig.enableSkipLinks) {
+      if (defaultConfig.enableSkipLinks) {
         setupSkipLinks();
       }
-      if (mergedConfig.enableScreenReaderSupport) {
+      if (defaultConfig.enableScreenReaderSupport) {
         setupScreenReaderSupport();
       }
-      if (mergedConfig.enableKeyboardNavigation) {
+      if (defaultConfig.enableKeyboardNavigation) {
         setupKeyboardNavigation();
       }
-      if (mergedConfig.enableFocusManagement) {
+      if (defaultConfig.enableFocusManagement) {
         setupFocusManagement();
       }
-      if (mergedConfig.enableARIALabels) {
+      if (defaultConfig.enableARIALabels) {
         setupARIALandmarks();
       }
-      if (mergedConfig.enableColorContrast) {
+      if (defaultConfig.enableColorContrast) {
         setupMediaQueries();
       }
     };
@@ -278,19 +277,19 @@ const AccessibilityEnhancer = React.forwardRef<AccessibilityEnhancerRef, Accessi
     initializeAccessibility();
 
     return cleanupEventListeners;
-  }, [focusVisible, mergedConfig.enableARIALabels, mergedConfig.enableColorContrast, mergedConfig.enableFocusManagement, mergedConfig.enableKeyboardNavigation, mergedConfig.enableScreenReaderSupport, mergedConfig.enableSkipLinks]);
+  }, [focusVisible]);
 
   // Announce changes to screen readers
   const announceToScreenReader = (message: string) => {
     const liveRegion = document.getElementById('live-region');
     if (liveRegion) {
       liveRegion.textContent = message;
-=======
+    }
+
     // Check for user preferences
     if (defaultConfig.enableHighContrast) {
       const prefersHighContrast = window.matchMedia('(prefers-contrast: high)').matches;
       setIsHighContrast(prefersHighContrast);
->>>>>>> origin/main
     }
 
     if (defaultConfig.enableReducedMotion) {
@@ -306,7 +305,7 @@ const AccessibilityEnhancer = React.forwardRef<AccessibilityEnhancerRef, Accessi
       document.removeEventListener('keydown', handleKeyDown);
       document.removeEventListener('mousedown', handleMouseDown);
     };
-  }, [defaultConfig.enableHighContrast, defaultConfig.enableReducedMotion, handleKeyDown, handleMouseDown]);
+  }, [handleKeyDown, handleMouseDown]);
 
   useEffect(() => {
     // Apply accessibility styles

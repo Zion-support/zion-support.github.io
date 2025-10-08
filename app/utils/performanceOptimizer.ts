@@ -227,7 +227,6 @@ class PerformanceOptimizer {
     };
   }
 
-<<<<<<< HEAD
   /**
    * Report web vitals
    */
@@ -251,10 +250,7 @@ class PerformanceOptimizer {
   /**
    * Cleanup observers and resources
    */
-  public cleanup(): void {
-=======
   cleanup() {
->>>>>>> origin/main
     this.observers.forEach(observer => observer.disconnect());
     this.observers = [];
   }
