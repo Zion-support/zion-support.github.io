@@ -94,9 +94,9 @@ class PerformanceOptimizer {
       this.observeFCP();
       this.observeTTFB();
       this.observeMemory();
-    } catch (_error) {
+    } catch (error) {
        
-      console.warn('Performance monitoring initialization failed:', _error);
+      console.warn('Performance monitoring initialization failed:', error);
     }
   }
 

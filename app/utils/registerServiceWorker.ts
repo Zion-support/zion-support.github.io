@@ -27,7 +27,6 @@ export async function registerServiceWorker(
       window.location.hostname === '[::1]' ||
       window.location.hostname.match(/^127(?:\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$/)
   );
-
   try {
     // Wait for page to load
     await new Promise<void>((resolve) => {
@@ -45,7 +44,7 @@ export async function registerServiceWorker(
       scope: '/',
     });
 
- 
+     
     console.log('[SW] Service worker registered:', registration);
 
     // Handle updates

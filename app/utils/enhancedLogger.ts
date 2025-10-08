@@ -364,7 +364,8 @@ export class EnhancedLogger {
           break;
         case LogLevel.INFO:
           if (this.isDevelopment()) {  
-            console.info(message, structuredLog); }
+            console.info(message, structuredLog); 
+          }
           break;
         case LogLevel.WARN:
           logger.warn(message, structuredLog);
@@ -385,7 +386,8 @@ export class EnhancedLogger {
           break;
         case LogLevel.INFO:
           if (this.isDevelopment()) {  
-            console.info(message, entry.data); }
+            console.info(message, entry.data); 
+          }
           break;
         case LogLevel.WARN:
           logger.warn(message, entry.data);

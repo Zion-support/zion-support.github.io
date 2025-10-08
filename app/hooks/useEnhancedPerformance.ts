@@ -66,7 +66,8 @@ export function useEnhancedPerformance(
 
     if (trackPerformance && renderCountRef.current > 10) {
       // Many re-renders detected
-      logger.warn(
+ 
+    console.warn(
         `Component ${component} has re-rendered ${renderCountRef.current} times`
       );
       analytics.trackCustomEvent(
