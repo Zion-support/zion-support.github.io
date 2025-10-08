@@ -101,6 +101,7 @@ export default defineConfig({
   },
   optimizeDeps: {
     include: ['react', 'react-dom', 'react-router-dom', 'framer-motion', 'lucide-react'],
+    exclude: ['@vite/client', '@vite/env']
   },
   css: {
     devSourcemap: false,

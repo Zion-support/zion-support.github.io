@@ -17,18 +17,39 @@ export default function RootLayout({
     name: 'Zion Tech Group',
     url: 'https://ziontechgroup.com',
     logo: 'https://ziontechgroup.com/logo.png',
-    description: 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.',
+    description: 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. $2.5B+ in cost savings delivered to 500+ enterprise clients.',
     foundingDate: '2020',
     numberOfEmployees: '50-100',
     industry: 'Technology',
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '5.0',
+      reviewCount: '150',
+      bestRating: '5',
+      worstRating: '1'
+    },
     services: [
       'AI Solutions',
+      'AI Marketing',
+      'AI Automation',
+      'AI Healthcare',
+      'AI Fintech',
+      'AI Data Analytics',
+      'AI Cybersecurity',
+      'AI Workflow Automation',
+      'AI Cloud Infrastructure',
+      'AI E-commerce Solutions',
+      'AI Mobile App Development',
       'Quantum Computing',
       'Autonomous Systems',
       'Digital Transformation',
       'Cloud Services',
       'Automation',
-      'Business Intelligence'
+      'Business Intelligence',
+      'Micro SAAS',
+      'IT Services',
+      'Blockchain & Web3',
+      'IoT & Edge Computing'
     ],
     contactPoint: {
       '@type': 'ContactPoint',
@@ -124,11 +145,12 @@ export default function RootLayout({
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         {/* Primary meta tags */}
-        <meta name="description" content="Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology." />
-        <meta name="keywords" content="AI solutions, quantum computing, autonomous systems, digital transformation, enterprise AI, machine learning, automation, cloud services, business intelligence" />
+        <meta name="description" content="Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology. $2.5B+ in cost savings delivered to 500+ enterprise clients." />
+        <meta name="keywords" content="AI solutions, quantum computing, autonomous systems, digital transformation, enterprise AI, machine learning, automation, cloud services, business intelligence, AI marketing, AI healthcare, AI fintech, AI automation, AI cybersecurity, AI workflow automation, AI cloud infrastructure, AI e-commerce solutions, AI mobile app development, micro SAAS, IT services, blockchain web3, IoT edge computing" />
         <meta name="author" content="Zion Tech Group" />
-        <meta name="robots" content="index, follow" />
-        <meta name="googlebot" content="index, follow" />
+        <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+        <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+        <meta name="bingbot" content="index, follow" />
         
         {/* Favicons */}
         <link rel='icon' href='/favicon.ico' />
