@@ -2,7 +2,7 @@
  * Custom React hooks for common patterns
  */
 
-import { useState, useEffect, useRef, useCallback, useMemo } from 'react';
+import { useState, useEffect, useRef, useCallback } from 'react';
 
 /**
  * Hook for managing local storage with React state

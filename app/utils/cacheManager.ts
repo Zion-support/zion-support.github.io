@@ -153,7 +153,7 @@ export class CacheManager {
           JSON.stringify(entry)
         );
       } catch (error) {
-        logger.error('Failed to set localStorage cache', error);
+        logger.error('Failed to set localStorage cache', error as Error);
         // Fallback to memory cache
         this.memoryCache.set(key, entry);
       }
@@ -164,7 +164,7 @@ export class CacheManager {
           JSON.stringify(entry)
         );
       } catch (error) {
-        logger.error('Failed to set sessionStorage cache', error);
+        logger.error('Failed to set sessionStorage cache', error as Error);
         // Fallback to memory cache
         this.memoryCache.set(key, entry);
       }
@@ -188,7 +188,7 @@ export class CacheManager {
           entry = JSON.parse(item) as CacheEntry<T>;
         }
       } catch (error) {
-        logger.error('Failed to get localStorage cache', error);
+        logger.error('Failed to get localStorage cache', error as Error);
       }
     } else if (this.storage === CacheStorage.SessionStorage && typeof window !== 'undefined' && window.sessionStorage) {
       try {
@@ -197,7 +197,7 @@ export class CacheManager {
           entry = JSON.parse(item) as CacheEntry<T>;
         }
       } catch (error) {
-        logger.error('Failed to get sessionStorage cache', error);
+        logger.error('Failed to get sessionStorage cache', error as Error);
       }
     }
 
