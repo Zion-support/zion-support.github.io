@@ -50,7 +50,7 @@ class PerformanceMonitor {
       const observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           if (entry.name === name) {
-            (this.metrics as any)[metricKey] = entry.startTime;
+            (this.metrics[metricKey] as number) = entry.startTime;
             this.logMetric(metricKey as string, entry.startTime);
           }
         }

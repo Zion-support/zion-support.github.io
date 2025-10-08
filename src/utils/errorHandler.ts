@@ -3,57 +3,75 @@
  * Enhanced with retry logic, error categorization, and better reporting
  */
 
-export enum ErrorCategory {
-  NETWORK = 'NETWORK',
-  VALIDATION = 'VALIDATION',
-  API = 'API',
-  UI = 'UI',
-  RUNTIME = 'RUNTIME',
-  UNKNOWN = 'UNKNOWN',
+export enum ErrorSeverity {
+  LOW = 'low',
+  MEDIUM = 'medium',
+  HIGH = 'high',
+  CRITICAL = 'critical',
 }
 
-export enum ErrorSeverity {
-  LOW = 'LOW',
-  MEDIUM = 'MEDIUM',
-  HIGH = 'HIGH',
-  CRITICAL = 'CRITICAL',
+export enum ErrorCategory {
+  NETWORK = 'network',
+  VALIDATION = 'validation',
+  RUNTIME = 'runtime',
+  API = 'api',
+  UI = 'ui',
+  UNKNOWN = 'unknown',
 }
 
 export interface ErrorInfo {
-  id: string;
-  timestamp: number;
   message: string;
   stack?: string;
-  category: ErrorCategory;
-  severity: ErrorSeverity;
-  context?: Record<string, unknown>;
+  componentStack?: string;
+  errorBoundary?: string;
+  errorBoundaryStack?: string;
+  errorId?: string;
+  timestamp?: string;
+  userAgent?: string;
+  url?: string;
+  userId?: string;
+  severity?: ErrorSeverity;
+  category?: ErrorCategory;
+  metadata?: Record<string, unknown>;
 }
 
-class ErrorHandler {
+export class ErrorHandler {
+  private static instance: ErrorHandler;
   private errorQueue: ErrorInfo[] = [];
-  private readonly maxQueueSize = 100;
+  private maxQueueSize = 100;
+
+  static getInstance(): ErrorHandler {
+    if (!ErrorHandler.instance) {
+      ErrorHandler.instance = new ErrorHandler();
+    }
+    return ErrorHandler.instance;
+  }
 
   /**
-   * Track an error
+   * Log an error with automatic categorization
    */
-  trackError(error: Error, context?: Record<string, unknown>): void {
+  logError(error: Error, errorInfo?: Partial<ErrorInfo>): void {
     const category = this.categorizeError(error);
     const severity = this.determineSeverity(error, category);
     
     const errorData: ErrorInfo = {
-      id: this.generateErrorId(),
-      timestamp: Date.now(),
       message: error.message,
       stack: error.stack,
+      timestamp: new Date().toISOString(),
+      userAgent: typeof window !== 'undefined' ? window.navigator.userAgent : undefined,
+      url: typeof window !== 'undefined' ? window.location.href : undefined,
+      errorId: this.generateErrorId(),
       category,
       severity,
-      context,
+      ...errorInfo,
     };
 
+    // Add to queue
     this.errorQueue.push(errorData);
     if (this.errorQueue.length > this.maxQueueSize) {
       this.errorQueue.shift();
     }
+
     // Send to error reporting service
     this.reportError(errorData);
   }
@@ -65,19 +83,19 @@ class ErrorHandler {
     const message = error.message.toLowerCase();
     const stack = error.stack?.toLowerCase() || '';
 
-    if (message.includes('network') || message.includes('fetch') || message.includes('xhr')) {
+    if (message.includes('network') || message.includes('fetch') || message.includes('xhr') || message.includes('timeout')) {
       return ErrorCategory.NETWORK;
     }
     if (message.includes('validation') || message.includes('invalid')) {
       return ErrorCategory.VALIDATION;
     }
-    if (message.includes('api') || stack.includes('api')) {
+    if (message.includes('api') || message.includes('request') || stack.includes('api')) {
       return ErrorCategory.API;
     }
     if (message.includes('component') || stack.includes('react')) {
       return ErrorCategory.UI;
     }
-    if (message.includes('runtime') || stack.includes('runtime')) {
+    if (message.includes('runtime') || stack.includes('runtime') || error.name === 'TypeError' || error.name === 'ReferenceError') {
       return ErrorCategory.RUNTIME;
     }
     return ErrorCategory.UNKNOWN;
@@ -113,8 +131,17 @@ class ErrorHandler {
    * Report error to external service
    */
   private reportError(errorData: ErrorInfo): void {
-    // Implementation for reporting to external service
-    console.error('Error reported:', errorData);
+    // Log to console in development
+    if (process.env.NODE_ENV === 'development') {
+      console.error('Error reported:', errorData);
+    }
+
+    // Send to error tracking service (e.g., Sentry, LogRocket)
+    if (typeof window !== 'undefined' && (window as any).Sentry) {
+      (window as any).Sentry.captureException(new Error(errorData.message), {
+        extra: errorData,
+      });
+    }
   }
 
   /**
@@ -125,6 +152,20 @@ class ErrorHandler {
   }
 
   /**
+   * Get errors by category
+   */
+  getErrorsByCategory(category: ErrorCategory): ErrorInfo[] {
+    return this.errorQueue.filter(error => error.category === category);
+  }
+
+  /**
+   * Get errors by severity
+   */
+  getErrorsBySeverity(severity: ErrorSeverity): ErrorInfo[] {
+    return this.errorQueue.filter(error => error.severity === severity);
+  }
+
+  /**
    * Clear error queue
    */
   clearErrors(): void {
@@ -132,6 +173,6 @@ class ErrorHandler {
   }
 }
 
-export const errorHandler = new ErrorHandler();
-export { ErrorHandler };
-export default ErrorHandler;
+// Export singleton instance
+export const errorHandler = ErrorHandler.getInstance();
+export default errorHandler;

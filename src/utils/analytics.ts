@@ -76,6 +76,16 @@ class Analytics {
   }
 
   /**
+   * Track page view
+   */
+  trackPageView(page: string, title?: string): void {
+    this.track('page_view', 'navigation', 'view', page, undefined, {
+      page_title: title || (typeof document !== 'undefined' ? document.title : ''),
+      page_url: typeof window !== 'undefined' ? window.location.href : page,
+    });
+  }
+
+  /**
    * Track user interaction
    */
   trackInteraction(
@@ -88,7 +98,8 @@ class Analytics {
 
   /**
    * Track performance metrics
-   */  trackPerformance(metric: string, value: number, unit: string = 'ms'): void {
+   */
+  trackPerformance(metric: string, value: number, unit: string = 'ms'): void {
     this.track('performance', 'metrics', metric, unit, value);
   }
 
@@ -113,22 +124,41 @@ class Analytics {
 
   /**
    * Get all events
-   */  getEvents(): AnalyticsEvent[] {
+   */
+  getEvents(): AnalyticsEvent[] {
     return [...this.events];
   }
 
   /**
+   * Get events by category
+   */
+  getEventsByCategory(category: string): AnalyticsEvent[] {
+    return this.events.filter(event => event.category === category);
+  }
+
+  /**
    * Clear all events
-   */  clearEvents(): void {
+   */
+  clearEvents(): void {
     this.events = [];
   }
 
   /**
+   * Get user properties
+   */
+  getUserProperties(): UserProperties {
+    return { ...this.userProperties };
+  }
+
+  /**
    * Update user properties
-   */  updateUserProperties(properties: Partial<UserProperties>): void {
+   */
+  updateUserProperties(properties: Partial<UserProperties>): void {
     this.userProperties = { ...this.userProperties, ...properties };
   }
 }
 
 const analytics = new Analytics();
-export { analytics };export default analytics;
+
+export { analytics };
+export default analytics;

@@ -3,8 +3,8 @@
  * Manages banner display tracking and rotation logic
  */
 
-import React, { useState, useEffect, useCallback } from 'react';
-import bannerConfigurations, { BannerConfig, RotationStrategy } from '../data/bannerConfigurations';
+import React, { useState, useEffect, useCallback, useMemo } from 'react';
+import bannerConfigurations, { type BannerConfig, type RotationStrategy } from '../data/bannerConfigurations';
 
 interface UseBannerRotationOptions {
   strategy?: RotationStrategy;
@@ -25,17 +25,17 @@ interface BannerRotationState {
 }
 
 // Helper functions defined inline
-const selectBannersForDisplay = (banners: BannerConfig[], maxBanners: number, strategy: RotationStrategy): BannerConfig[] => {
-  const enabled = banners.filter((b) => b.enabled !== false);
-  const sorted = enabled.sort((a, b) => (b.priority || 0) - (a.priority || 0));
+const selectBannersForDisplay = (banners: any[], maxBanners: number, strategy: RotationStrategy) => {
+  const enabled = banners.filter((b: any) => b.enabled !== false);
+  const sorted = enabled.sort((a: any, b: any) => (b.priority || 0) - (a.priority || 0));
   return sorted.slice(0, maxBanners);
 };
 
-const selectBalancedBanners = (banners: BannerConfig[], maxBanners: number): BannerConfig[] => {
+const selectBalancedBanners = (banners: any[], maxBanners: number) => {
   return selectBannersForDisplay(banners, maxBanners, 'balanced');
 };
 
-const trackImpression = (bannerId: string): void => {
+const trackImpression = (bannerId: string) => {
   if (typeof window !== 'undefined') {
     const key = `banner_impression_${bannerId}`;
     const current = parseInt(localStorage.getItem(key) || '0');
@@ -43,7 +43,7 @@ const trackImpression = (bannerId: string): void => {
   }
 };
 
-const trackClick = (bannerId: string): void => {
+const trackClick = (bannerId: string) => {
   if (typeof window !== 'undefined') {
     const key = `banner_click_${bannerId}`;
     const current = parseInt(localStorage.getItem(key) || '0');
@@ -58,6 +58,9 @@ const loadBannerStats = () => {
     ctr: 0
   };
 };
+
+const getRefreshInterval = () => 30000;
+const getRotationStrategy = (): RotationStrategy => 'balanced';
 
 export const useBannerRotation = (options: UseBannerRotationOptions = {}) => {
   const {
