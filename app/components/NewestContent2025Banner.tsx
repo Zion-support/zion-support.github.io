@@ -1,14 +1,45 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
+import { ArrowRight, Sparkles } from 'lucide-react';
 
-const NewestContent2025Banner: React.FC = () => {
+const NewestContent2025Banner = () => {
+  const featuredArticles = [
+    {
+      id: 1,
+      title: 'Edge Computing Revolution',
+      description: 'Discover how edge computing is transforming enterprise AI deployment',
+      slug: 'edge-computing-revolution',
+      icon: '💻',
+    },
+    {
+      id: 2,
+      title: 'Neural Networks Breakthrough',
+      description: 'Latest advances in neural network architectures and applications',
+      slug: 'neural-networks-breakthrough',
+      icon: '🧠',
+    },
+    {
+      id: 3,
+      title: 'Quantum Security',
+      description: 'Next-generation security powered by quantum computing',
+      slug: 'quantum-security',
+      icon: '🔐',
+    },
+  ];
+
   return (
     <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">
       {/* Animated Background Effects */}
-      <div className="absolute inset-0">
-        <div className="absolute top-10 left-10 w-72 h-72 bg-blue-500/20 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute top-40 right-20 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
-        <div className="absolute bottom-20 left-1/3 w-80 h-80 bg-cyan-500/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+      <div className="absolute inset-0 opacity-20">
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500 rounded-full blur-3xl animate-pulse"></div>
+        <div
+          className="absolute top-3/4 right-1/4 w-96 h-96 bg-purple-500 rounded-full blur-3xl animate-pulse"
+          style={{ animationDelay: '2s' }}
+        ></div>
+        <div
+          className="absolute bottom-1/4 left-1/3 w-96 h-96 bg-blue-500 rounded-full blur-3xl animate-pulse"
+          style={{ animationDelay: '1s' }}
+        ></div>
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">

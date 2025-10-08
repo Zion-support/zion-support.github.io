@@ -3,13 +3,13 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Contact Us - Zion Tech Group',
-  description: 'Get in touch with Zion Tech Group for AI and IT solutions. Contact our experts for consultation and support.',
+  description:
+    'Get in touch with Zion Tech Group for AI and IT solutions. Contact our experts for consultation and support.',
 };
 
 const ContactPage: React.FC = () => {
   return (
     <>
-
       <div className='min-h-screen bg-slate-50 py-16'>
         <div className='container mx-auto px-4'>
           <div className='max-w-4xl mx-auto'>
@@ -18,7 +18,7 @@ const ContactPage: React.FC = () => {
                 Contact Us
               </h1>
               <p className='text-xl text-gray-600'>
-                Ready to transform your business? Let's discuss your needs.
+                Ready to transform your business? Let&apos;s discuss your needs.
               </p>
             </div>
 
@@ -95,40 +95,24 @@ const ContactPage: React.FC = () => {
                   </button>
                 </form>
               </div>
-
-              <div className='space-y-6'>
-                <div className='bg-white rounded-lg shadow-lg p-8'>
-                  <h3 className='text-xl font-bold text-gray-900 mb-4'>
-                    Contact Information
-                  </h3>
-                  <div className='space-y-4'>
-                    <div>
-                      <h4 className='font-semibold text-gray-900'>Email</h4>
-                      <p className='text-gray-600'>contact@ziontechgroup.com</p>
-                    </div>
-                    <div>
-                      <h4 className='font-semibold text-gray-900'>Phone</h4>
-                      <p className='text-gray-600'>+1 (555) 123-4567</p>
-                    </div>
-                    <div>
-                      <h4 className='font-semibold text-gray-900'>Address</h4>
-                      <p className='text-gray-600'>
-                        123 Tech Street
-                        <br />
-                        San Francisco, CA 94105
-                      </p>
-                    </div>
+              <div className="bg-white p-6 rounded-lg shadow-md">
+                <h3 className="text-xl font-semibold mb-4">Contact Information</h3>
+                <div className="space-y-4">
+                  <div>
+                    <h4 className="font-medium text-gray-900">Email</h4>
+                    <p className="text-gray-600">kleber@ziontechgroup.com</p>
                   </div>
-                </div>
-
-                <div className='bg-white rounded-lg shadow-lg p-8'>
-                  <h3 className='text-xl font-bold text-gray-900 mb-4'>
-                    Business Hours
-                  </h3>
-                  <div className='space-y-2 text-gray-600'>
-                    <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
-                    <p>Saturday: 10:00 AM - 4:00 PM</p>
-                    <p>Sunday: Closed</p>
+                  <div>
+                    <h4 className="font-medium text-gray-900">Phone</h4>
+                    <p className="text-gray-600">+1 (302) 464-0950</p>
+                  </div>
+                  <div>
+                    <h4 className="font-medium text-gray-900">Address</h4>
+                    <p className="text-gray-600">
+                      364 E Main St STE 1008<br />
+                      Middletown, DE 19709<br />
+                      United States
+                    </p>
                   </div>
                 </div>
               </div>

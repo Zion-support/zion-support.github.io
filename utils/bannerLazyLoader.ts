@@ -20,17 +20,23 @@ export const lazyLoadBanner = (
 ) => {
   return lazy(() =>
     importFn().catch(error => {
-      console.error(`Failed to load banner: ${componentName}`, error);
+      // Log error for debugging in development
+      if (process.env.NODE_ENV === 'development') {
+        console.error(`Failed to load banner: ${componentName}`, error);
+      }
       // Retry once after a delay
       return new Promise<BannerModule>(resolve => {
         setTimeout(() => {
           importFn()
             .then(resolve)
             .catch(retryError => {
-              console.error(
-                `Retry failed for banner: ${componentName}`,
-                retryError
-              );
+              // Log retry error for debugging in development
+              if (process.env.NODE_ENV === 'development') {
+                console.error(
+                  `Retry failed for banner: ${componentName}`,
+                  retryError
+                );
+              }
             });
         }, 1000);
       });

@@ -4,19 +4,6 @@
 
 import '@testing-library/jest-dom';
 
-// Suppress jsdom navigation warnings
-// eslint-disable-next-line no-console
-const originalConsoleError = console.error;
-// eslint-disable-next-line no-console
-console.error = (...args) => {
-  const message = args[0]?.toString?.() || args[0]?.message || '';
-  if (message.includes('Not implemented: navigation') || 
-      message.includes('navigation (except hash changes)')) {
-    return;
-  }
-  originalConsoleError(...args);
-};
-
 // Mock window.matchMedia
 Object.defineProperty(window, 'matchMedia', {
   writable: true,

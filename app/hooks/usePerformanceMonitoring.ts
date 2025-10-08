@@ -1,154 +1,155 @@
-import { useEffect, useCallback, useRef } from 'react';
+'use client';
 
-interface PerformanceMetrics {
-  fcp?: number;
-  lcp?: number;
-  fid?: number;
-  cls?: number;
-  ttfb?: number;
-}
+import { useEffect, useCallback } from 'react';
+import { useAnalytics } from '../components/AnalyticsProvider';
 
-interface UsePerformanceMonitoringOptions {
-  enableReporting?: boolean;
-  enableLongTaskMonitoring?: boolean;
-  onMetricsUpdate?: (metrics: PerformanceMetrics) => void;
-}
+// PerformanceMetrics interface removed as it's not used in this hook
 
-export const usePerformanceMonitoring = (options: UsePerformanceMonitoringOptions = {}) => {
-  const {
-    enableReporting = true,
-    enableLongTaskMonitoring = true,
-    onMetricsUpdate
-  } = options;
+export const usePerformanceMonitoring = () => {
+  const { trackPerformance } = useAnalytics();
 
-  const metricsRef = useRef<PerformanceMetrics>({});
-  const observersRef = useRef<PerformanceObserver[]>([]);
-
-  const updateMetrics = useCallback((newMetrics: Partial<PerformanceMetrics>) => {
-    metricsRef.current = { ...metricsRef.current, ...newMetrics };
-    onMetricsUpdate?.(metricsRef.current);
-  }, [onMetricsUpdate]);
-
-  const measureWebVitals = useCallback(() => {
-    if (typeof window === 'undefined' || !('performance' in window)) return;
-
-    // Measure First Contentful Paint (FCP)
-    const fcpEntry = performance.getEntriesByName('first-contentful-paint')[0];
-    if (fcpEntry) {
-      updateMetrics({ fcp: fcpEntry.startTime });
-    }
-
-    // Measure Largest Contentful Paint (LCP)
-    const lcpObserver = new PerformanceObserver((list) => {
-      const entries = list.getEntries();
-      const lastEntry = entries[entries.length - 1];
-      updateMetrics({ lcp: lastEntry.startTime });
-    });
-    lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
-    observersRef.current.push(lcpObserver);
-
-    // Measure First Input Delay (FID)
-    const fidObserver = new PerformanceObserver((list) => {
-      const entries = list.getEntries();
-      entries.forEach((entry) => {
-        const processingStart = (entry as PerformanceEventTiming).processingStart;
-        if (processingStart) {
-          updateMetrics({ fid: processingStart - entry.startTime });
-        }
-      });
-    });
-    fidObserver.observe({ entryTypes: ['first-input'] });
-    observersRef.current.push(fidObserver);
-
-    // Measure Cumulative Layout Shift (CLS)
-    let clsValue = 0;
-    const clsObserver = new PerformanceObserver((list) => {
-      const entries = list.getEntries();
-      entries.forEach((entry) => {
-        const layoutShiftEntry = entry as PerformanceEntry & { hadRecentInput?: boolean; value?: number };
-        if (!layoutShiftEntry.hadRecentInput && layoutShiftEntry.value) {
-          clsValue += layoutShiftEntry.value;
-        }
-      });
-      updateMetrics({ cls: clsValue });
-    });
-    clsObserver.observe({ entryTypes: ['layout-shift'] });
-    observersRef.current.push(clsObserver);
-
-    // Measure Time to First Byte (TTFB)
-    const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-    if (navigationEntry) {
-      updateMetrics({ ttfb: navigationEntry.responseStart - navigationEntry.requestStart });
-    }
-  }, [updateMetrics]);
-
-  const measureLongTasks = useCallback(() => {
-    if (!enableLongTaskMonitoring || typeof window === 'undefined') return;
-
-    const longTaskObserver = new PerformanceObserver((list) => {
-      const entries = list.getEntries();
-      entries.forEach((entry) => {
-        if (process.env.NODE_ENV === 'development') {
-          // eslint-disable-next-line no-console
-console.warn(`Long task detected: ${entry.duration}ms`, entry);
-        }
-      });
-    });
-
-    try {
-      longTaskObserver.observe({ entryTypes: ['longtask'] });
-      observersRef.current.push(longTaskObserver);
-    } catch {
-      // Long task API not supported
-      if (process.env.NODE_ENV === 'development') {
-        // eslint-disable-next-line no-console
-console.warn('Long task monitoring not supported');
-      }
-    }
-  }, [enableLongTaskMonitoring]);
-
-  const reportMetrics = useCallback(() => {
-    if (!enableReporting || typeof window === 'undefined') return;
-
-    const metrics = metricsRef.current;
-    
-    // Report to analytics
-    if ('gtag' in window) {
-      Object.entries(metrics).forEach(([key, value]) => {
-        if (value !== undefined) {
-          const gtag = (window as unknown as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag;
-          gtag('event', 'web_vitals', {
-            event_category: 'Performance',
-            event_label: key.toUpperCase(),
-            value: Math.round(value)
-          });
-        }
-      });
-    }
-
-    // Report to console in development
-    if (process.env.NODE_ENV === 'development') {
-      // eslint-disable-next-line no-console
-console.log('Performance Metrics:', metrics);
-    }
-  }, [enableReporting]);
+  const reportMetric = useCallback(
+    (name: string, value: number) => {
+      trackPerformance(name, value);
+    },
+    [trackPerformance]
+  );
 
   useEffect(() => {
-    measureWebVitals();
-    measureLongTasks();
+    if (typeof window === 'undefined' || !('PerformanceObserver' in window)) {
+      return () => {};
+    }
 
-    // Report metrics after page load
-    const reportTimer = setTimeout(reportMetrics, 2000);
+    try {
+      // LCP - Largest Contentful Paint
+      const lcpObserver = new PerformanceObserver(list => {
+        const entries = list.getEntries();
+        const lastEntry = entries[entries.length - 1];
+        reportMetric('LCP', lastEntry.startTime);
+      });
+      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
 
-    return () => {
-      clearTimeout(reportTimer);
-      observersRef.current.forEach(observer => observer.disconnect());
-      observersRef.current = [];
+      // FID - First Input Delay
+      const fidObserver = new PerformanceObserver(list => {
+        const entries = list.getEntries();
+        entries.forEach(
+          (entry: PerformanceEntry & { processingStart?: number }) => {
+            const fid =
+              (entry.processingStart || entry.startTime) - entry.startTime;
+            reportMetric('FID', fid);
+          }
+        );
+      });
+      fidObserver.observe({ entryTypes: ['first-input'] });
+
+      // CLS - Cumulative Layout Shift
+      let clsValue = 0;
+      const clsObserver = new PerformanceObserver(list => {
+        const entries = list.getEntries();
+        entries.forEach(
+          (
+            entry: PerformanceEntry & {
+              hadRecentInput?: boolean;
+              value?: number;
+            }
+          ) => {
+            if (!entry.hadRecentInput && entry.value) {
+              clsValue += entry.value;
+            }
+          }
+        );
+        reportMetric('CLS', clsValue);
+      });
+      clsObserver.observe({ entryTypes: ['layout-shift'] });
+
+      // FCP - First Contentful Paint
+      const fcpObserver = new PerformanceObserver(list => {
+        const entries = list.getEntries();
+        entries.forEach(entry => {
+          if (entry.name === 'first-contentful-paint') {
+            reportMetric('FCP', entry.startTime);
+          }
+        });
+      });
+      fcpObserver.observe({ entryTypes: ['paint'] });
+
+      // TTFB - Time to First Byte
+      const navigationObserver = new PerformanceObserver(list => {
+        const entries = list.getEntries();
+        entries.forEach((entry) => {
+          if (entry.entryType === 'navigation') {
+            const navEntry = entry as PerformanceNavigationTiming;
+            const ttfb = navEntry.responseStart - navEntry.requestStart;
+            reportMetric('TTFB', ttfb);
+          }
+        });
+      });
+      navigationObserver.observe({ entryTypes: ['navigation'] });
+
+      // Resource timing
+      const resourceObserver = new PerformanceObserver(list => {
+        const entries = list.getEntries();
+        entries.forEach((entry) => {
+          if (entry.entryType === 'resource') {
+            const resourceEntry = entry as PerformanceResourceTiming;
+            const loadTime = resourceEntry.responseEnd - resourceEntry.requestStart;
+            if (loadTime > 1000) {
+              // Only track slow resources
+              reportMetric('SLOW_RESOURCE', loadTime);
+            }
+          }
+        });
+      });
+      resourceObserver.observe({ entryTypes: ['resource'] });
+
+      // Cleanup
+      return () => {
+        lcpObserver.disconnect();
+        fidObserver.disconnect();
+        clsObserver.disconnect();
+        fcpObserver.disconnect();
+        navigationObserver.disconnect();
+        resourceObserver.disconnect();
+      };
+    } catch (error) {
+      // eslint-disable-next-line no-console
+      console.warn('Performance monitoring not supported:', error);
+      return () => {};
+    }
+  }, [reportMetric]);
+
+  // Monitor page load performance
+  useEffect(() => {
+    const handleLoad = () => {
+      if (typeof window === 'undefined') return;
+
+      const navigation = performance.getEntriesByType(
+        'navigation'
+      )[0] as PerformanceNavigationTiming;
+
+      if (navigation) {
+        const metrics = {
+          domContentLoaded:
+            navigation.domContentLoadedEventEnd -
+            navigation.domContentLoadedEventStart,
+          loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
+          domInteractive: navigation.domInteractive - navigation.fetchStart,
+          totalLoadTime: navigation.loadEventEnd - navigation.fetchStart,
+        };
+
+        Object.entries(metrics).forEach(([key, value]) => {
+          reportMetric(key.toUpperCase(), value);
+        });
+      }
     };
-  }, [measureWebVitals, measureLongTasks, reportMetrics]);
+
+    window.addEventListener('load', handleLoad);
+    return () => window.removeEventListener('load', handleLoad);
+  }, [reportMetric]);
 
   return {
-    metrics: metricsRef.current,
-    updateMetrics
+    reportMetric,
   };
 };
+
+export default usePerformanceMonitoring;

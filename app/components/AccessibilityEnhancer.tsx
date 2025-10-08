@@ -18,12 +18,7 @@ interface AccessibilityEnhancerProps {
   children: React.ReactNode;
 }
 
-interface AccessibilityEnhancerRef {
-  announceToScreenReader: (message: string) => void;
-  setFontSize: (size: number) => void;
-}
-
-const AccessibilityEnhancer = React.forwardRef<AccessibilityEnhancerRef, AccessibilityEnhancerProps>(({
+const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   config = {},
   children
 }, ref) => {
@@ -150,8 +145,6 @@ const AccessibilityEnhancer = React.forwardRef<AccessibilityEnhancerRef, Accessi
       )}
     </div>
   );
-});
-
-AccessibilityEnhancer.displayName = 'AccessibilityEnhancer';
+};
 
 export default AccessibilityEnhancer;

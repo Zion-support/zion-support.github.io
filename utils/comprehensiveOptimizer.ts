@@ -126,31 +126,47 @@ export class ComprehensiveOptimizer {
       // Initialize accessibility features
       if (this.config.accessibility.enableFocusManagement) {
         // initAccessibility();
-        console.log('Accessibility features would be initialized here');
+        if (process.env.NODE_ENV === 'development') {
+          if (process.env.NODE_ENV === 'development') {
+      console.log('Accessibility features would be initialized here');
+    }
+        }
       }
 
       // Initialize performance monitoring
       if (this.config.performance.enablePerformanceMetrics) {
         // performanceMonitor.start();
-        console.log('Performance monitoring would be started here');
+        if (process.env.NODE_ENV === 'development') {
+          if (process.env.NODE_ENV === 'development') {
+      console.log('Performance monitoring would be started here');
+    }
+        }
       }
 
       // Initialize lazy loading
       if (this.config.performance.enableLazyLoading) {
         // lazyLoadImages();
-        console.log('Lazy loading would be initialized here');
+        if (process.env.NODE_ENV === 'development') {
+          console.log('Lazy loading would be initialized here');
+        }
       }
 
       // Initialize scroll optimization
       if (this.config.performance.enableScrollOptimization) {
         // optimizeScrollPerformance();
-        console.log('Scroll optimization would be initialized here');
+        if (process.env.NODE_ENV === 'development') {
+          console.log('Scroll optimization would be initialized here');
+        }
       }
 
       this.isInitialized = true;
-      console.log('Comprehensive optimizer initialized successfully');
+      if (process.env.NODE_ENV === 'development') {
+        console.log('Comprehensive optimizer initialized successfully');
+      }
     } catch (error) {
-      console.error('Failed to initialize comprehensive optimizer:', error);
+      if (process.env.NODE_ENV === 'development') {
+        console.error('Failed to initialize comprehensive optimizer:', error);
+      }
     }
   }
 
@@ -162,7 +178,9 @@ export class ComprehensiveOptimizer {
 
     // Initialize accessibility features
     // initAccessibility();
-    console.log('Accessibility features would be initialized here');
+    if (process.env.NODE_ENV === 'development') {
+      console.log('Accessibility features would be initialized here');
+    }
 
     // Set up keyboard navigation
     if (this.config.accessibility.enableKeyboardNavigation) {
@@ -186,12 +204,16 @@ export class ComprehensiveOptimizer {
 
     // Start performance monitoring
     // performanceMonitor.start();
-    console.log('Performance monitoring would be started here');
+    if (process.env.NODE_ENV === 'development') {
+      console.log('Performance monitoring would be started here');
+    }
 
     // Preload critical resources
     if (this.config.performance.enablePreloading) {
       // preloadCriticalResources();
-      console.log('Critical resources would be preloaded here');
+      if (process.env.NODE_ENV === 'development') {
+        console.log('Critical resources would be preloaded here');
+      }
     }
 
     // Monitor memory usage
@@ -201,7 +223,9 @@ export class ComprehensiveOptimizer {
         // if (memoryUsage.used > memoryUsage.total * 0.8) {
         //   console.warn('High memory usage detected:', memoryUsage);
         // }
-        console.log('Memory usage monitoring would be active here');
+        if (process.env.NODE_ENV === 'development') {
+          console.log('Memory usage monitoring would be active here');
+        }
       }, 30000);
     }
   }
@@ -223,7 +247,9 @@ export class ComprehensiveOptimizer {
     // setMetaDescription(pageData.description);
     // setKeywords(pageData.keywords);
     // setCanonicalUrl(pageData.url);
-    console.log('Meta tags would be set here');
+    if (process.env.NODE_ENV === 'development') {
+      console.log('Meta tags would be set here');
+    }
 
     // Set Open Graph tags
     if (this.config.seo.enableOpenGraph) {
@@ -236,7 +262,9 @@ export class ComprehensiveOptimizer {
         ogData.image = pageData.image;
       }
       // setOpenGraphTags(ogData);
-      console.log('Open Graph tags would be set here');
+      if (process.env.NODE_ENV === 'development') {
+        console.log('Open Graph tags would be set here');
+      }
     }
 
     // Set Twitter Card tags
@@ -249,7 +277,9 @@ export class ComprehensiveOptimizer {
         twitterData.image = pageData.image;
       }
       // setTwitterCardTags(twitterData);
-      console.log('Twitter Card tags would be set here');
+      if (process.env.NODE_ENV === 'development') {
+        console.log('Twitter Card tags would be set here');
+      }
     }
 
     // Set structured data
@@ -259,7 +289,9 @@ export class ComprehensiveOptimizer {
       //   url: pageData.url,
       //   description: pageData.description,
       // }));
-      console.log('Structured data would be set here');
+      if (process.env.NODE_ENV === 'development') {
+        console.log('Structured data would be set here');
+      }
     }
   }
 
@@ -303,7 +335,9 @@ export class ComprehensiveOptimizer {
         results.seo = { status: 'SEO audit would run here' };
       }
     } catch (error) {
-      console.error('Audit failed:', error);
+      if (process.env.NODE_ENV === 'development') {
+        console.error('Audit failed:', error);
+      }
     }
 
     return results;

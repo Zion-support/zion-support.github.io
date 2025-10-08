@@ -114,9 +114,11 @@ export class PerformanceOptimizer {
    * Suggest optimization for slow components
    */
   private suggestOptimization(componentName: string, renderTime: number): void {
-    console.warn(
-      `Performance warning: ${componentName} took ${renderTime.toFixed(2)}ms to render`
-    );
+    if (process.env.NODE_ENV === 'development') {
+      console.warn(
+        `Performance warning: ${componentName} took ${renderTime.toFixed(2)}ms to render`
+      );
+    }
 
     const suggestions = [];
 
@@ -133,10 +135,12 @@ export class PerformanceOptimizer {
     }
 
     if (suggestions.length > 0) {
-      console.log(
-        `Optimization suggestions for ${componentName}:`,
-        suggestions
-      );
+      if (process.env.NODE_ENV === 'development') {
+        console.log(
+          `Optimization suggestions for ${componentName}:`,
+          suggestions
+        );
+      }
     }
   }
 
@@ -401,7 +405,9 @@ export class PerformanceOptimizer {
   reportWebVitals(metrics: Record<string, unknown>): void {
     if (typeof window === 'undefined') return;
 
-    console.log('Web Vitals:', metrics);
+    if (process.env.NODE_ENV === 'development') {
+      console.log('Web Vitals:', metrics);
+    }
 
     // Send to analytics if available
     if ('gtag' in window) {

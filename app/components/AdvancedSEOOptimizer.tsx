@@ -1,7 +1,7 @@
 import React, { useEffect, useCallback, useRef } from 'react';
 import { Helmet } from 'react-helmet-async';
 
-interface SEOData {
+interface SEOConfig {
   title: string;
   description: string;
   keywords: string[];
@@ -38,45 +38,93 @@ interface AdvancedSEOOptimizerProps {
   enableSchemaMarkup?: boolean;
 }
 
+interface AdvancedSEOOptimizerProps {
+  config: SEOConfig;
+  enableStructuredData?: boolean;
+  enableOpenGraph?: boolean;
+  enableTwitterCards?: boolean;
+}
+
 const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
-  seoData,
+  config,
   enableStructuredData = true,
   enableOpenGraph = true,
   enableTwitterCards = true,
-  enableSchemaMarkup = true,
 }) => {
   const structuredDataRef = useRef<HTMLScriptElement | null>(null);
 
   const generateStructuredData = useCallback(() => {
     if (!enableStructuredData || !seoData.structuredData) return null;
 
-    const baseStructuredData = {
+    // Update meta description
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', config.description);
+    } else {
+      const meta = document.createElement('meta');
+      meta.name = 'description';
+      meta.content = config.description;
+      document.head.appendChild(meta);
+    }
+
+    // Update keywords
+    const metaKeywords = document.querySelector('meta[name="keywords"]');
+    if (metaKeywords) {
+      metaKeywords.setAttribute('content', config.keywords.join(', '));
+    } else {
+      const meta = document.createElement('meta');
+      meta.name = 'keywords';
+      meta.content = config.keywords.join(', ');
+      document.head.appendChild(meta);
+    }
+
+    // Update canonical URL
+    const canonicalLink = document.querySelector('link[rel="canonical"]');
+    if (canonicalLink) {
+      canonicalLink.setAttribute('href', config.canonicalUrl);
+    } else {
+      const link = document.createElement('link');
+      link.rel = 'canonical';
+      link.href = config.canonicalUrl;
+      document.head.appendChild(link);
+    }
+  }, [config]);
+
+  const generateStructuredData = () => {
+    if (!enableStructuredData) return null;
+
+    const structuredData = {
       '@context': 'https://schema.org',
       '@type': 'Organization',
       name: 'Zion Tech Group',
-      url: 'https://ziontechgroup.com',
-      logo: 'https://ziontechgroup.com/logo.png',
-      description: seoData.description,
-      address: {
-        '@type': 'PostalAddress',
-        streetAddress: '364 E Main St STE 1008',
-        addressLocality: 'Middletown',
-        addressRegion: 'DE',
-        postalCode: '19709',
-        addressCountry: 'US',
-      },
+      description: config.description,
+      url: config.canonicalUrl,
+      logo: config.ogImage,
+      sameAs: [
+        'https://twitter.com/ziontechgroup',
+        'https://linkedin.com/company/ziontechgroup',
+        'https://github.com/ziontechgroup',
+      ],
       contactPoint: {
         '@type': 'ContactPoint',
-        telephone: '+1-302-464-0950',
+        telephone: '+1-555-0123',
         contactType: 'customer service',
-        email: 'kleber@ziontechgroup.com',
+        areaServed: 'US',
+        availableLanguage: 'English',
       },
-      sameAs: [
-        'https://linkedin.com/company/zion-tech-group',
-        'https://twitter.com/ziontechgroup',
-        'https://github.com/Zion-Holdings',
-      ],
-      ...seoData.structuredData,
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: '123 Tech Street',
+        addressLocality: 'San Francisco',
+        addressRegion: 'CA',
+        postalCode: '94105',
+        addressCountry: 'US',
+      },
+      offers: {
+        '@type': 'Offer',
+        description: 'AI and IT Solutions',
+        category: 'Technology Services',
+      },
     };
 
     return baseStructuredData;
@@ -119,19 +167,23 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     document.head.appendChild(canonicalLink);
   }, [seoData.canonicalUrl]);
 
-  const addStructuredData = (data: Record<string, unknown>) => {
-    // Remove existing structured data
-    if (structuredDataRef.current) {
-      structuredDataRef.current.remove();
-    }
-
-    // Add new structured data
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
-    script.textContent = JSON.stringify(data);
-    script.id = 'structured-data';
-    document.head.appendChild(script);
-    structuredDataRef.current = script;
+  const generateAdditionalMetaTags = () => {
+    return (
+      <>
+        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+        <meta name="googlebot" content="index, follow" />
+        <meta name="bingbot" content="index, follow" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#2563eb" />
+        <meta name="msapplication-TileColor" content="#2563eb" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+        <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <link rel="manifest" href="/manifest.json" />
+      </>
+    );
   };
 
   const trackPageView = (config: SEOConfig) => {
@@ -177,11 +229,10 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
 
   return (
     <Helmet>
-      {/* Basic Meta Tags */}
-      <title>{seoData.title}</title>
-      <meta name="description" content={seoData.description} />
-      <meta name="keywords" content={seoData.keywords.join(', ')} />
-      <link rel="canonical" href={seoData.canonicalUrl} />
+      <title>{config.title}</title>
+      <meta name="description" content={config.description} />
+      <meta name="keywords" content={config.keywords.join(', ')} />
+      <link rel="canonical" href={config.canonicalUrl} />
       
       {/* Open Graph Tags */}
       {enableOpenGraph && (

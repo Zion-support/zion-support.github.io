@@ -2,12 +2,9 @@
 
 import React, { useEffect, useState, memo } from 'react';
 
-interface PerformanceMetrics {
-  lcp?: number;
-  fid?: number;
-  cls?: number;
-  fcp?: number;
-  ttfb?: number;
+interface LayoutShift extends PerformanceEntry {
+  hadRecentInput: boolean;
+  value: number;
 }
 
 const PerformanceMonitor: React.FC = () => {
@@ -26,13 +23,79 @@ const PerformanceMonitor: React.FC = () => {
         });
       }
 
-      // Log to console in development
-      if (process.env.NODE_ENV === 'development') {
-        console.log('Web Vital:', metric);
+interface PerformanceMonitorProps {
+  enableRealTimeMonitoring?: boolean;
+  enableConsoleLogging?: boolean;
+  enableVisualIndicator?: boolean;
+  updateInterval?: number;
+}
+
+const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
+  enableRealTimeMonitoring = true,
+  enableConsoleLogging = false,
+  enableVisualIndicator = false,
+  updateInterval = 5000,
+}) => {
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+    loadTime: 0,
+    renderTime: 0,
+    memoryUsage: 0,
+    bundleSize: 0,
+    cacheHitRate: 0,
+  });
+
+  const [performanceScore, setPerformanceScore] = useState<number>(0);
+  const [isVisible, setIsVisible] = useState<boolean>(false);
+
+  useEffect(() => {
+    if (!enableRealTimeMonitoring) return;
+
+    const getMetrics = (): PerformanceMetrics => {
+      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming | undefined;
+      const memory = (performance as any).memory;
+      
+      return {
+        loadTime: navigation?.loadEventEnd ?? 0,
+        renderTime: navigation?.domContentLoadedEventEnd ?? 0,
+        memoryUsage: memory?.usedJSHeapSize ?? 0,
+        bundleSize: 0,
+        cacheHitRate: 0,
+      };
+    };
+
+    const getPerformanceScore = (): number => {
+      const metrics = getMetrics();
+      let score = 100;
+      
+      if (metrics.loadTime > 3000) score -= 20;
+      if (metrics.renderTime > 1500) score -= 15;
+      if (metrics.memoryUsage > 50000000) score -= 15;
+      
+      return Math.max(0, score);
+    };
+
+    const updateMetrics = () => {
+      const currentMetrics = getMetrics();
+      const score = getPerformanceScore();
+      
+      setMetrics(currentMetrics);
+      setPerformanceScore(score);
+
+      if (enableConsoleLogging) {
+        logger.group('Performance Metrics', () => {
+          logger.debug('Metrics', { metrics: currentMetrics });
+          logger.debug('Score', { score });
+        });
       }
     };
 
-    // Monitor Core Web Vitals
+    // Initial update
+    updateMetrics();
+
+    // Set up interval for real-time monitoring
+    const interval = setInterval(updateMetrics, updateInterval);
+
+    // Set up performance observer for more detailed monitoring
     if (typeof window !== 'undefined' && 'PerformanceObserver' in window) {
       try {
         // LCP - Largest Contentful Paint
