@@ -53,14 +53,14 @@ const HomePage: React.FC = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid-advanced">
       {/* Navigation */}
       <Navigation />
       
       {/* Skip to main content for accessibility */}
       <a
         href="#main-content"
-        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-indigo-600 text-white px-4 py-2 rounded-md z-50"
+        className="sr-only focus:not-sr-only focus:absolute focus:top-20 focus:left-4 bg-indigo-600 text-white px-4 py-2 rounded-md z-50"
       >
         Skip to main content
       </a>
@@ -68,7 +68,7 @@ const HomePage: React.FC = () => {
       {/* Content Promotion Banner */}
       <ContentPromotionBanner />
 
-      <main id="main-content" className="container mx-auto px-4 py-16" role="main">
+      <main id="main-content" className="container mx-auto px-4 pt-24 pb-16" role="main">
         {/* Hero Section */}
         <section
           className={`text-center mb-16 transition-all duration-1000 ${
