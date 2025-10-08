@@ -19,7 +19,9 @@ function initializeMonitoring() {
       // errorHandler.init(); // Method may not exist
       
       // Initialize analytics
-      (analytics as unknown as { init?: () => void }).init?.();
+      if (analytics && typeof analytics === 'object' && 'init' in analytics && typeof analytics.init === 'function') {
+        analytics.init();
+      }
       
       logger.info('Monitoring initialized successfully');
     }
