@@ -15,39 +15,38 @@ import AdvancedPerformanceMonitor from './components/AdvancedPerformanceMonitor'
 import { logger } from './utils/logger';
 import { lazyLoadImages, preloadCriticalResources, collectPerformanceMetrics, performanceOptimizer } from './utils/performanceOptimizer';
 
+<<<<<<< HEAD
 // Lazy load pages  
 const HomePage = lazy(() => import('./pages/Home').catch(() => ({ default: () => <div>Home Page</div> })));
+=======
+// Lazy load the HomePage
+const HomePage = lazy(() => import('./page'));
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-16e0
 
 const App: React.FC = () => {
   useEffect(() => {
     // Initialize global error handling
-    logger.lifecycle('initialized', 'App');
+    if (typeof console !== 'undefined') {
+      console.log('App initialized');
+    }
 
     // Initialize performance monitoring
-    lazyLoadImages();
-    preloadCriticalResources();
-    performanceOptimizer.init();
-    
-    // Initialize Web Vitals monitoring
     if (typeof window !== 'undefined' && 'performance' in window) {
-      const pageLoadMetrics = collectPerformanceMetrics();
-      const metrics = performanceOptimizer.getMetrics();
+      const pageLoadMetrics = window.performance.timing;
       if (pageLoadMetrics) {
         // eslint-disable-next-line no-console
         console.log('Performance metrics collected:', pageLoadMetrics);
       }
-      if (metrics) {
-        // eslint-disable-next-line no-console
-        console.log('Performance metrics:', metrics);
-      }
     }
     
-    logger.lifecycle('Performance monitoring initialized', 'App');
-    logger.info('🚀 Zion Tech Group App initialized with comprehensive monitoring', { component: 'App' });
+    if (typeof console !== 'undefined') {
+      console.log('🚀 Zion Tech Group App initialized with comprehensive monitoring');
+    }
+
   }, []);
 
   const handleError = useCallback((error: Error, errorInfo: any) => {
-    logger.error('Application Error', error, { component: 'ErrorBoundary' });
+    console.error('Application Error:', error);
     // eslint-disable-next-line no-console
     console.error('Error info:', errorInfo);
   }, []);
@@ -69,9 +68,13 @@ const App: React.FC = () => {
                 title: 'Zion Tech Group - Advanced AI and IT Solutions',
                 description: 'Leading provider of enterprise AI solutions, quantum computing, and autonomous systems. Transform your business with our cutting-edge technology.',
                 keywords: ['AI solutions', 'enterprise AI', 'quantum computing', 'autonomous systems', 'digital transformation', 'automation', 'cloud services', 'AI consulting', 'business intelligence', 'machine learning'],
+<<<<<<< HEAD
                 url: 'https://ziontechgroup.com',
                 canonicalUrl: 'https://ziontechgroup.com',
                 structuredData: {}
+=======
+                canonicalUrl: 'https://ziontechgroup.com'
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-16e0
               }}
               enableStructuredData={true}
               enableOpenGraph={true}
@@ -113,7 +116,7 @@ const App: React.FC = () => {
                   enableRealTimeMonitoring={process.env['NODE_ENV'] === 'development'}
                   onMetricsUpdate={(metrics) => {
                     if (process.env['NODE_ENV'] === 'development') {
-                      logger.performance('Performance Metrics', metrics as unknown as Record<string, unknown>, 'PerformanceMonitor');
+                      console.log('Performance Metrics:', metrics);
                     }
                   }}
                 />

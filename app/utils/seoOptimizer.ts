@@ -43,9 +43,10 @@ class SEOOptimizer {
    * Initialize SEO optimization
    */
   init(): void {
+    if (typeof document === 'undefined') return;
+    
     this.setupStructuredData();
     this.setupCanonicalUrls();
-    // this.setupMetaTags();
     this.setupPerformanceMonitoring();
   }
 
@@ -90,13 +91,14 @@ class SEOOptimizer {
    * Update meta tags
    */
   private updateMetaTags(): void {
+    if (typeof document === 'undefined') return;
     if (!this.currentPageData) return;
 
     const title = this.generateTitle();
     const description = this.generateDescription();
     const keywords = this.generateKeywords();
     const image = this.currentPageData.image || this.config.defaultImage;
-    const url = this.currentPageData.url || window.location.href;
+    const url = this.currentPageData.url || (typeof window !== 'undefined' ? window.location.href : '');
 
     // Update title
     document.title = title;
@@ -134,6 +136,8 @@ class SEOOptimizer {
    * Set meta tag
    */
   private setMetaTag(name: string, content: string, attribute: string = 'name'): void {
+    if (typeof document === 'undefined') return;
+    
     let meta = document.querySelector(`meta[${attribute}="${name}"]`);
     
     if (!meta) {
@@ -172,6 +176,8 @@ class SEOOptimizer {
    * Setup structured data
    */
   private setupStructuredData(): void {
+    if (typeof document === 'undefined') return;
+    
     const structuredData = {
       '@context': 'https://schema.org',
       '@type': 'WebSite',
@@ -183,51 +189,57 @@ class SEOOptimizer {
         'query-input': 'required name=search_term_string'
       }
     };
-
+    
     this.addStructuredData(structuredData);
   }
 
   /**
-   * Update structured data for current page
+   * Update structured data
    */
   private updateStructuredData(): void {
+    if (typeof document === 'undefined') return;
     if (!this.currentPageData) return;
-
-    const structuredData = {
+    
+    const structuredData: any = {
       '@context': 'https://schema.org',
       '@type': this.currentPageData.type === 'article' ? 'Article' : 'WebPage',
-      headline: this.generateTitle(),
-      description: this.generateDescription(),
-      url: this.currentPageData.url || window.location.href,
-      image: this.currentPageData.image || this.config.defaultImage,
-      publisher: {
+      name: this.currentPageData.title,
+      description: this.currentPageData.description,
+      url: this.currentPageData.url || (typeof window !== 'undefined' ? window.location.href : ''),
+      image: this.currentPageData.image || this.config.defaultImage
+    };
+    
+    if (this.currentPageData.type === 'article') {
+      structuredData.headline = this.currentPageData.title;
+      structuredData.author = {
+        '@type': 'Person',
+        name: this.currentPageData.author || this.config.siteName
+      };
+      structuredData.publisher = {
         '@type': 'Organization',
         name: this.config.siteName,
-        url: this.config.siteUrl
+        logo: {
+          '@type': 'ImageObject',
+          url: this.config.defaultImage
+        }
+      };
+      if (this.currentPageData.publishedTime) {
+        structuredData.datePublished = this.currentPageData.publishedTime;
       }
-    };
-
-    // Add article-specific properties
-    if (this.currentPageData.type === 'article') {
-      Object.assign(structuredData, {
-        author: {
-          '@type': 'Person',
-          name: this.currentPageData.author || this.config.siteName
-        },
-        datePublished: this.currentPageData.publishedTime,
-        dateModified: this.currentPageData.modifiedTime,
-        articleSection: this.currentPageData.section,
-        keywords: this.generateKeywords()
-      });
+      if (this.currentPageData.modifiedTime) {
+        structuredData.dateModified = this.currentPageData.modifiedTime;
+      }
     }
-
+    
     this.addStructuredData(structuredData);
   }
 
   /**
-   * Add structured data to page
+   * Add structured data
    */
   private addStructuredData(data: any): void {
+    if (typeof document === 'undefined') return;
+    
     const script = document.createElement('script');
     script.type = 'application/ld+json';
     script.textContent = JSON.stringify(data);
@@ -238,6 +250,9 @@ class SEOOptimizer {
    * Setup canonical URLs
    */
   private setupCanonicalUrls(): void {
+    if (typeof document === 'undefined') return;
+    if (typeof window === 'undefined') return;
+    
     const canonical = document.createElement('link');
     canonical.rel = 'canonical';
     canonical.href = window.location.href;
@@ -245,46 +260,59 @@ class SEOOptimizer {
   }
 
   /**
-   * Setup performance monitoring for SEO
+   * Setup performance monitoring
    */
   private setupPerformanceMonitoring(): void {
-    // Monitor Core Web Vitals for SEO impact
+    if (typeof window === 'undefined') return;
+    
     if (typeof window !== 'undefined' && 'performance' in window) {
-      // Monitor LCP (Largest Contentful Paint)
-      new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        const lastEntry = entries[entries.length - 1];
-        
-        if (lastEntry.startTime > 4000) { // Poor LCP
-          this.trackSEOMetric('poor_lcp', lastEntry.startTime);
+      // Monitor Core Web Vitals
+      const observer = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          if (entry.entryType === 'largest-contentful-paint') {
+            this.trackSEOMetric('LCP', entry.startTime);
+          }
+          if (entry.entryType === 'first-input') {
+            this.trackSEOMetric('FID', (entry as any).processingStart - entry.startTime);
+          }
         }
-      }).observe({ entryTypes: ['largest-contentful-paint'] });
-
-      // Monitor CLS (Cumulative Layout Shift)
+      });
+      
+      try {
+        observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input'] });
+      } catch (e) {
+        // Observer not supported
+      }
+      
+      // Track CLS
       let clsValue = 0;
-      new PerformanceObserver((list) => {
+      const clsObserver = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           if (!(entry as any).hadRecentInput) {
             clsValue += (entry as any).value;
+            this.trackSEOMetric('CLS', clsValue);
           }
         }
-        
-        if (clsValue > 0.25) { // Poor CLS
-          this.trackSEOMetric('poor_cls', clsValue);
-        }
-      }).observe({ entryTypes: ['layout-shift'] });
+      });
+      
+      try {
+        clsObserver.observe({ type: 'layout-shift', buffered: true });
+      } catch (e) {
+        // Observer not supported
+      }
     }
   }
 
   /**
-   * Track SEO-related metrics
+   * Track SEO metric
    */
   private trackSEOMetric(metric: string, value: number): void {
     if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('event', 'seo_metric', {
-        metric_name: metric,
-        metric_value: Math.round(value),
-        event_category: 'seo'
+      (window as any).gtag('event', 'web_vitals', {
+        event_category: 'SEO',
+        event_label: metric,
+        value: Math.round(value),
+        non_interaction: true
       });
     }
   }
@@ -293,13 +321,12 @@ class SEOOptimizer {
    * Generate sitemap data
    */
   generateSitemapData(): any[] {
-    // This would typically come from your CMS or routing system
     return [
       {
         url: this.config.siteUrl,
-        lastmod: new Date().toISOString(),
-        changefreq: 'daily',
-        priority: '1.0'
+        lastModified: new Date(),
+        changeFrequency: 'daily',
+        priority: 1.0
       }
     ];
   }
@@ -310,57 +337,60 @@ class SEOOptimizer {
   generateRobotsTxt(): string {
     return `User-agent: *
 Allow: /
-
 Sitemap: ${this.config.siteUrl}/sitemap.xml
 
-# Disallow admin and private areas
-Disallow: /admin/
-Disallow: /private/
-Disallow: /api/
-Disallow: /_next/
-Disallow: /static/`;
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /`;
   }
 
   /**
-   * Check for SEO issues
+   * Check SEO issues
    */
   checkSEOIssues(): string[] {
     const issues: string[] = [];
     
+    if (typeof document === 'undefined') return issues;
+    
     // Check title length
-    const title = document.title;
-    if (title.length < 30) {
-      issues.push('Title is too short (less than 30 characters)');
-    } else if (title.length > 60) {
-      issues.push('Title is too long (more than 60 characters)');
+    if (document.title.length < 30 || document.title.length > 60) {
+      issues.push('Title length should be between 30-60 characters');
     }
-
-    // Check description length
-    const description = document.querySelector('meta[name="description"]')?.getAttribute('content');
+    
+    // Check description
+    const description = document.querySelector('meta[name="description"]');
     if (!description) {
       issues.push('Missing meta description');
-    } else if (description.length < 120) {
-      issues.push('Description is too short (less than 120 characters)');
-    } else if (description.length > 160) {
-      issues.push('Description is too long (more than 160 characters)');
-    }
-
-    // Check for images without alt text
-    const images = document.querySelectorAll('img');
-    images.forEach((img, index) => {
-      if (!img.alt) {
-        issues.push(`Image ${index + 1} is missing alt text`);
+    } else {
+      const content = (description as HTMLMetaElement).content;
+      if (content.length < 120 || content.length > 160) {
+        issues.push('Description length should be between 120-160 characters');
       }
-    });
-
-    // Check for heading structure
-    const h1s = document.querySelectorAll('h1');
-    if (h1s.length === 0) {
-      issues.push('Page is missing H1 tag');
-    } else if (h1s.length > 1) {
-      issues.push('Page has multiple H1 tags');
     }
-
+    
+    // Check canonical URL
+    if (!document.querySelector('link[rel="canonical"]')) {
+      issues.push('Missing canonical URL');
+    }
+    
+    // Check Open Graph tags
+    if (!document.querySelector('meta[property="og:title"]')) {
+      issues.push('Missing Open Graph title');
+    }
+    if (!document.querySelector('meta[property="og:description"]')) {
+      issues.push('Missing Open Graph description');
+    }
+    if (!document.querySelector('meta[property="og:image"]')) {
+      issues.push('Missing Open Graph image');
+    }
+    
+    // Check structured data
+    if (!document.querySelector('script[type="application/ld+json"]')) {
+      issues.push('Missing structured data');
+    }
+    
     return issues;
   }
 
@@ -369,23 +399,10 @@ Disallow: /static/`;
    */
   getSEOScore(): number {
     const issues = this.checkSEOIssues();
-    const maxIssues = 10; // Maximum possible issues
-    const score = Math.max(0, 100 - (issues.length / maxIssues) * 100);
-    return Math.round(score);
+    const maxScore = 100;
+    const deduction = issues.length * 10;
+    return Math.max(0, maxScore - deduction);
   }
 }
 
-// Default configuration
-const defaultConfig: SEOConfig = {
-  siteName: 'Zion Tech Group',
-  siteUrl: 'https://zion.app',
-  defaultTitle: 'Advanced AI and IT Solutions',
-  defaultDescription: 'Zion Tech Group provides cutting-edge AI and IT solutions for businesses. Transform your operations with our innovative technology and expert consulting services.',
-  defaultImage: 'https://zion.app/og-image.jpg',
-  twitterHandle: 'ZionTechGroup',
-  googleAnalyticsId: process.env.GOOGLE_ANALYTICS_ID,
-  googleTagManagerId: process.env.GOOGLE_TAG_MANAGER_ID
-};
-
-export const seoOptimizer = new SEOOptimizer(defaultConfig);
-export default seoOptimizer;
+export default SEOOptimizer;
