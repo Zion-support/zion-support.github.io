@@ -1,7 +1,7 @@
 import React from 'react';
-import { Metadata } from 'next';
+// import { Metadata } from "next" // Removed for Vite compatibility;
 
-export const metadata: Metadata = {
+export const metadata = {
   title: "AI 2026: Consensus Intelligence Breakthrough",
   description: "Revolutionary AI system enabling unanimous decisions through quantum-accelerated consensus protocols.",
   authors: [{ name: 'Zion Tech Group' }],

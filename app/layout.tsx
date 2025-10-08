@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+// import type { Metadata } from "next" // Removed for Vite compatibility;
 import './globals.css';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import AnalyticsProvider from './components/AnalyticsProvider';
@@ -6,7 +6,7 @@ import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import PWAInstaller from './components/PWAInstaller';
 import { GlobalErrorBoundary } from './components/GlobalErrorBoundary';
 
-export const metadata: Metadata = {
+export const metadata = {
   title: 'Zion Tech Group - AI & IT Solutions',
   description:
     'Leading provider of AI-powered enterprise solutions, automation, and digital transformation services.',

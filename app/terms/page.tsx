@@ -1,7 +1,7 @@
 import React from 'react';
-import { Metadata } from 'next';
+// import { Metadata } from "next" // Removed for Vite compatibility;
 
-const metadata: Metadata = {
+const metadata = {
   title: 'Terms of Service - Zion Tech Group',
   description:
     'Terms of service and usage agreement for Zion Tech Group services and website.',

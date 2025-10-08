@@ -1,11 +1,11 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { ArrowRight, Phone, CheckCircle, Star } from 'lucide-react';
 
-export const metadata = {
-  title: 'Zion Tech Group - Advanced AI and IT Solutions',
-  description: 'Leading provider of AI-powered enterprise solutions, automation, and digital transformation services.',
-};
+// export const metadata = {
+//   title: 'Zion Tech Group - Advanced AI and IT Solutions',
+//   description: 'Leading provider of AI-powered enterprise solutions, automation, and digital transformation services.',
+// };
 
 export default function HomePage() {
   return (
@@ -15,15 +15,15 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-6">
             <div className="flex items-center">
-              <Link href="/" className="text-2xl font-bold text-gray-900">
+              <Link to="/" className="text-2xl font-bold text-gray-900">
                 Zion Tech Group
               </Link>
             </div>
             <nav className="hidden md:flex space-x-8">
-              <Link href="/" className="text-gray-900 hover:text-blue-600">Home</Link>
-              <Link href="/services" className="text-gray-900 hover:text-blue-600">Services</Link>
-              <Link href="/blog" className="text-gray-900 hover:text-blue-600">Blog</Link>
-              <Link href="/case-studies" className="text-gray-900 hover:text-blue-600">Case Studies</Link>
+              <Link to="/" className="text-gray-900 hover:text-blue-600">Home</Link>
+              <Link to="/services" className="text-gray-900 hover:text-blue-600">Services</Link>
+              <Link to="/blog" className="text-gray-900 hover:text-blue-600">Blog</Link>
+              <Link to="/case-studies" className="text-gray-900 hover:text-blue-600">Case Studies</Link>
             </nav>
           </div>
         </div>
@@ -42,8 +42,7 @@ export default function HomePage() {
               and enterprise IT solutions that drive growth, efficiency, and innovation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/services"
+              <Link to="/services"
                 className="inline-flex items-center px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-blue-50 transition-colors font-semibold"
               >
                 Explore Our Services
@@ -122,15 +121,13 @@ export default function HomePage() {
               Let's discuss how our AI solutions can drive your success.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/contact"
+              <Link to="/contact"
                 className="inline-flex items-center px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-blue-50 transition-colors font-semibold"
               >
                 Get Started Today
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
-              <Link
-                href="/case-studies"
+              <Link to="/case-studies"
                 className="inline-flex items-center px-8 py-4 bg-transparent border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-semibold"
               >
                 View Success Stories
@@ -150,10 +147,10 @@ export default function HomePage() {
               Advanced AI and IT Solutions for Enterprise Transformation
             </p>
             <div className="flex justify-center space-x-6">
-              <Link href="/services" className="text-gray-400 hover:text-white">Services</Link>
-              <Link href="/about" className="text-gray-400 hover:text-white">About</Link>
-              <Link href="/contact" className="text-gray-400 hover:text-white">Contact</Link>
-              <Link href="/privacy" className="text-gray-400 hover:text-white">Privacy</Link>
+              <Link to="/services" className="text-gray-400 hover:text-white">Services</Link>
+              <Link to="/about" className="text-gray-400 hover:text-white">About</Link>
+              <Link to="/contact" className="text-gray-400 hover:text-white">Contact</Link>
+              <Link to="/privacy" className="text-gray-400 hover:text-white">Privacy</Link>
             </div>
             <div className="mt-8 pt-8 border-t border-gray-800">
               <p className="text-gray-400 text-sm">

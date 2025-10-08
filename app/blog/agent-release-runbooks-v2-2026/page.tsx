@@ -1,19 +1,19 @@
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { ListChecks, Calendar, Clock, FileWarning, RefreshCw } from 'lucide-react';
 
-export const metadata = {
-  title: 'Agent Release Runbooks v2 (2026)',
-  description: 
-    'Budgets, canaries, approvals, and instant rollback for safe autonomy.',
-  type: 'article',
-  url: 'https://ziontechgroup.com/blog/agent-release-runbooks-v2-2026',
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Agent Release Runbooks v2 (2026)',
-    description: 
-      'Budgets, canaries, approvals, and instant rollback for safe autonomy.',
-  },
-};
+// export const metadata = {
+//   title: 'Agent Release Runbooks v2 (2026)',
+//   description: 
+//     'Budgets, canaries, approvals, and instant rollback for safe autonomy.',
+//   type: 'article',
+//   url: 'https://ziontechgroup.com/blog/agent-release-runbooks-v2-2026',
+//   twitter: {
+//     card: 'summary_large_image',
+//     title: 'Agent Release Runbooks v2 (2026)',
+//     description: 
+//       'Budgets, canaries, approvals, and instant rollback for safe autonomy.',
+//   },
+// };
 
 export default function Page() {
   return (
@@ -98,8 +98,7 @@ export default function Page() {
                 We implement v2 runbooks in 4–6 weeks with audits and training.
               </p>
             </div>
-            <Link
-              href='/contact'
+            <Link to='/contact'
               className='bg-white text-fuchsia-700 px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2'
             >
               Engage <RefreshCw />

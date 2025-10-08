@@ -1,7 +1,7 @@
 import React from 'react';
-import { Metadata } from 'next';
+// import { Metadata } from "next" // Removed for Vite compatibility;
 
-export const metadata: Metadata = {
+export const metadata = {
   title: 'March 2025: Autonomous Enterprise Operations Revolution | Zion Tech Group',
   description: 'Discover how autonomous AI agents are revolutionizing enterprise operations, delivering 85% automation rates and $35 billion in operational savings.',
   keywords: ['Autonomous AI', 'Enterprise Operations', 'Business Automation', 'AI Agents', 'Operational Efficiency'],
