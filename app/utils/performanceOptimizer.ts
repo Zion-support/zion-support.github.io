@@ -100,11 +100,6 @@ class PerformanceOptimizer {
       console.warn('Performance API not fully supported:', error);
     }
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
   /**
    * Measure render time
@@ -127,7 +122,7 @@ class PerformanceOptimizer {
       console.warn('Performance Observer not supported:', error);
     }
   }
->>>>>>> cursor/fix-errors-and-merge-to-main-fa65
+
   private observeLCP() {
     try {
       const observer = new PerformanceObserver((list) => {
@@ -217,63 +212,6 @@ class PerformanceOptimizer {
       }
     }
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-    const images = document.querySelectorAll('img[data-src]')
-=======
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-6ad8
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-e97f
-
-  /**
-   * Measure render time
-   */
-  private measureRenderTime(): void {
-    if (typeof window === 'undefined' || !window.performance) return;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-errors-and-merge-to-main-eab2
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-6ad8
-=======
-  /**
-   * Measure render time using PerformanceObserver
-   */
-  private measureRenderTime(): void {
-    if (typeof window === 'undefined') return;
->>>>>>> cursor/fix-errors-and-merge-to-main-b1a4
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-e97f
-    
-=======
-  private measureRenderTime(): void {
-    if (typeof window === 'undefined') return
-
->>>>>>> cursor/fix-errors-and-merge-to-main-5f6c
-    // Check if PerformanceObserver exists (may not be available in test environments)
-    if (typeof PerformanceObserver === 'undefined') return;
-
-    try {
-      const observer = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        entries.forEach((entry) => {
-          if (entry.entryType === 'measure') {
-            this.metrics.renderTime = entry.duration;
-          }
-        });
-      });
-
-      observer.observe({ entryTypes: ['measure'] });
-      this.observers.push(observer);
-    } catch (error) {
-      // PerformanceObserver may not support 'measure' entryType in some environments
-    }
-  }
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-fa65
 
   /**
    * Measure memory usage
@@ -489,22 +427,15 @@ class PerformanceOptimizer {
   }
 
   /**
-<<<<<<< HEAD
    * Cleanup observers and resources
    */
-<<<<<<< HEAD
   public cleanup(): void {
-=======
-  cleanup(): void {
->>>>>>> cursor/fix-errors-and-merge-to-main-b1a4
     this.observers.forEach(observer => observer.disconnect());
     this.observers = [];
     this.isMonitoring = false;
   }
 
   /**
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-5f6c
    * Generate comprehensive performance report
    */
   generateComprehensiveReport(): string {

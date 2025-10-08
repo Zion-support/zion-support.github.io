@@ -12,66 +12,24 @@ export * from './hooks';
 
 // Export security and validation separately to avoid conflicts
 export { 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-  sanitizeHtml as sanitizeInput, 
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-6ad8
-  escapeHtml, 
-  isValidEmail as isValidEmailFromSecurity,
-  isValidUrl as isValidUrlFromSecurity,
-=======
-  sanitizeInput, 
-=======
-  sanitizeHtml as sanitizeInput, 
-  escapeHtml, 
->>>>>>> cursor/fix-errors-and-merge-to-main-5f6c
-=======
-  escapeHtml, 
->>>>>>> cursor/fix-errors-and-merge-to-main-fa65
-  isValidEmail as isValidEmailFromSecurity,
-  isValidUrl as isValidUrlFromSecurity
+  sanitizeHTML as sanitizeInput, 
+  isValidEmail as isValidEmailFromValidation,
+  isValidUrl as isValidUrlFromValidation
 } from './validation';
 
 export { 
   escapeHtml,
->>>>>>> cursor/fix-errors-and-merge-to-main-b1a4
-  isValidPhone
+  isValidPhone,
+  isValidEmail as isValidEmailFromSecurity,
+  isValidUrl as isValidUrlFromSecurity
 } from './security';
 
 export { 
   validateEmail as validateForm, 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-5f6c
   validateRequired as validateField,
   isValidEmail,
   isValidUrl,
-  validatePhone as isValidPhone 
-<<<<<<< HEAD
-=======
-  validateEmail as validateField,
-  isValidEmail,
-  isValidUrl,
-  sanitizeInput
->>>>>>> cursor/fix-errors-and-merge-to-main-6ad8
-=======
-  validateRequired as validateField,
-  isValidEmail,
-  isValidUrl
->>>>>>> cursor/fix-errors-and-merge-to-main-b1a4
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-5f6c
-=======
-  validatePhone as validateField,
-  isValidEmail,
-  isValidUrl
->>>>>>> cursor/fix-errors-and-merge-to-main-fa65
+  validatePhone as validatePhoneNumber 
 } from './validation';
 
 // Default exports
