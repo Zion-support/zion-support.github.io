@@ -92,7 +92,7 @@ class PerformanceMonitor {
         });
 
         // First Input Delay
-        this.observeEntry('first-input', entries => {
+        this.observeEntry('first-input', _entries => {
           if (firstInput && firstInput.processingStart !== undefined) {
             const fid = firstInput.processingStart - firstInput.startTime;
             this.recordMetric('FID', fid);
@@ -102,9 +102,9 @@ class PerformanceMonitor {
         // Cumulative Layout Shift
         this.observeEntry('layout-shift', entries => {
           let clsValue = 0;
-          entries.forEach((entry: any) => {
-            if (!entry.hadRecentInput) {
-              clsValue += entry.value;
+          entries.forEach((entry: PerformanceEntry) => {
+            if (!(entry as any).hadRecentInput) {
+              clsValue += (entry as any).value;
             }
           });
           if (clsValue > 0) {
