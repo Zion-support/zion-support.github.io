@@ -94,17 +94,17 @@ const HomePage: React.FC = () => {
           
           {/* Key Benefits */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto mb-12">
-            <div className="cyber-card hologram-card">
+            <div className="cyber-card hologram-card float-animation">
               <div className="text-3xl mb-3">🚀</div>
               <h3 className="font-bold text-white mb-3 text-lg">AI-Powered Solutions</h3>
               <p className="text-sm text-gray-300 leading-relaxed">Transform your business with cutting-edge artificial intelligence, machine learning, and automation technologies</p>
             </div>
-            <div className="cyber-card hologram-card">
+            <div className="cyber-card hologram-card float-animation" style={{animationDelay: '0.5s'}}>
               <div className="text-3xl mb-3">⚡</div>
               <h3 className="font-bold text-white mb-3 text-lg">Proven Results</h3>
               <p className="text-sm text-gray-300 leading-relaxed">Delivering $50M+ annual savings, 95% process automation, and 300% ROI for enterprise clients</p>
             </div>
-            <div className="cyber-card hologram-card">
+            <div className="cyber-card hologram-card float-animation" style={{animationDelay: '1s'}}>
               <div className="text-3xl mb-3">🔒</div>
               <h3 className="font-bold text-white mb-3 text-lg">Enterprise Security</h3>
               <p className="text-sm text-gray-300 leading-relaxed">Bank-level security and compliance for your critical data and infrastructure</p>
@@ -237,25 +237,22 @@ const HomePage: React.FC = () => {
                 </div>
               </article>
             </Suspense>
-<<<<<<< HEAD
-=======
 
             <Suspense fallback={<ServiceCardSkeleton />}>
-              <article className="bg-white rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
+              <article className="cyber-card hologram-card">
                 <div className="text-5xl mb-6 text-center">🔄</div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">Autonomous Systems</h3>
-                <p className="text-gray-600 mb-6 text-center leading-relaxed">
+                <h3 className="text-2xl font-bold text-white mb-4 text-center">Autonomous Systems</h3>
+                <p className="text-gray-300 mb-6 text-center leading-relaxed">
                   Self-managing and self-optimizing systems for enterprise operations and infrastructure.
                 </p>
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-green-600 mb-2">Starting at $2,500/month</div>
-                  <a href="/autonomous-systems" className="text-green-600 hover:text-green-700 font-medium">
+                  <div className="text-2xl font-bold text-green-400 mb-2">Starting at $2,500/month</div>
+                  <a href="/autonomous-systems" className="text-green-400 hover:text-green-300 font-medium">
                     Learn More →
                   </a>
                 </div>
               </article>
             </Suspense>
->>>>>>> cursor/analyze-improve-and-deploy-application-144c
           </div>
           
           <div className="grid md:grid-cols-3 gap-8">
@@ -303,32 +300,41 @@ const HomePage: React.FC = () => {
               </ul>
             </article>
           </div>
-<<<<<<< HEAD
-=======
           
           <div className="text-center mt-8">
             <a 
               href="/services"
-              className="inline-block bg-indigo-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-4 focus:ring-indigo-300"
+              className="cyber-button"
             >
               View All Services
             </a>
           </div>
->>>>>>> cursor/analyze-improve-and-deploy-application-144c
         </section>
 
         {/* Content Carousel */}
-        <Suspense fallback={<div className="h-64 bg-gray-100 rounded-lg animate-pulse"></div>}>
+        <Suspense fallback={
+          <div className="h-64 bg-gradient-to-r from-slate-800 to-purple-900 rounded-lg animate-pulse flex items-center justify-center">
+            <div className="text-white text-lg">Loading amazing content...</div>
+          </div>
+        }>
           <ContentCarousel />
         </Suspense>
 
         {/* Dynamic Content Showcase */}
-        <Suspense fallback={<div className="h-64 bg-gray-100 rounded-lg animate-pulse"></div>}>
+        <Suspense fallback={
+          <div className="h-64 bg-gradient-to-r from-slate-800 to-purple-900 rounded-lg animate-pulse flex items-center justify-center">
+            <div className="text-white text-lg">Loading showcase...</div>
+          </div>
+        }>
           <DynamicContentShowcase />
         </Suspense>
 
         {/* Content Statistics */}
-        <Suspense fallback={<div className="h-64 bg-gray-100 rounded-lg animate-pulse"></div>}>
+        <Suspense fallback={
+          <div className="h-64 bg-gradient-to-r from-slate-800 to-purple-900 rounded-lg animate-pulse flex items-center justify-center">
+            <div className="text-white text-lg">Loading statistics...</div>
+          </div>
+        }>
           <ContentStatistics />
         </Suspense>
 
@@ -390,7 +396,11 @@ const HomePage: React.FC = () => {
         </section>
 
         {/* Newsletter Signup */}
-        <Suspense fallback={<div className="h-32 bg-gray-100 rounded-lg animate-pulse"></div>}>
+        <Suspense fallback={
+          <div className="h-32 bg-gradient-to-r from-slate-800 to-purple-900 rounded-lg animate-pulse flex items-center justify-center">
+            <div className="text-white text-lg">Loading newsletter...</div>
+          </div>
+        }>
           <ContentNewsletterSignup />
         </Suspense>
 
