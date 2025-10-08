@@ -4,7 +4,12 @@ import { visualizer } from 'rollup-plugin-visualizer';
 
 export default defineConfig({
   plugins: [
-    react(),
+    react({
+      // Enable React Fast Refresh
+      fastRefresh: true,
+      // Optimize JSX runtime
+      jsxRuntime: 'automatic',
+    }),
     visualizer({
       filename: 'dist/stats.html',
       open: false,
@@ -52,13 +57,6 @@ export default defineConfig({
       treeshake: {
         moduleSideEffects: false,
       },
-      external: id => {
-        // Externalize Next.js modules to prevent build errors
-        if (id.includes('next/') || id.includes('next')) {
-          return true;
-        }
-        return false;
-      },
       output: {
         manualChunks: id => {
           // Core React libraries
@@ -94,18 +92,48 @@ export default defineConfig({
   server: {
     port: 3000,
     host: true,
+    // Enable HMR
+    hmr: {
+      overlay: true,
+    },
   },
   preview: {
     port: 4173,
     host: true,
   },
   optimizeDeps: {
-    include: ['react', 'react-dom', 'react-router-dom', 'framer-motion', 'lucide-react'],
+    include: [
+      'react', 
+      'react-dom', 
+      'react-router-dom', 
+      'framer-motion', 
+      'lucide-react',
+      'react-helmet-async',
+      'web-vitals'
+    ],
+    // Exclude problematic dependencies
+    exclude: ['@vite/client', '@vite/env'],
   },
   css: {
     devSourcemap: false,
   },
   esbuild: {
     drop: ['console', 'debugger'],
+    // Optimize JSX
+    jsxFactory: 'React.createElement',
+    jsxFragment: 'React.Fragment',
+  },
+  // Define global constants
+  define: {
+    __DEV__: JSON.stringify(process.env.NODE_ENV === 'development'),
+    __VERSION__: JSON.stringify(process.env.npm_package_version),
+  },
+  // Resolve configuration
+  resolve: {
+    alias: {
+      '@': '/src',
+      '@app': '/app',
+      '@components': '/app/components',
+    },
   },
 });

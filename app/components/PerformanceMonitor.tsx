@@ -1,154 +1,167 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 
 interface PerformanceMetrics {
-  lcp: number | null;
-  fid: number | null;
-  cls: number | null;
-  fcp: number | null;
-  ttfb: number | null;
+  loadTime: number;
+  renderTime: number;
+  memoryUsage: number;
+  fps: number;
+  lcp: number; // Largest Contentful Paint
+  fid: number; // First Input Delay
+  cls: number; // Cumulative Layout Shift
 }
 
 const PerformanceMonitor: React.FC = () => {
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+    loadTime: 0,
+    renderTime: 0,
+    memoryUsage: 0,
+    fps: 0,
+    lcp: 0,
+    fid: 0,
+    cls: 0,
+  });
+
   useEffect(() => {
-    const metrics: PerformanceMetrics = {
-      lcp: null,
-      fid: null,
-      cls: null,
-      fcp: null,
-      ttfb: null
+    // Only run in development
+    if (process.env.NODE_ENV !== 'development') {
+      return;
+    }
+
+    const measurePerformance = () => {
+      if (typeof window !== 'undefined' && 'performance' in window) {
+        // Navigation timing
+        const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+        const loadTime = navigation.loadEventEnd - navigation.loadEventStart;
+        
+        // Memory usage (if available)
+        const memory = (performance as any).memory;
+        const memoryUsage = memory ? memory.usedJSHeapSize / 1024 / 1024 : 0;
+
+        // Web Vitals
+        let lcp = 0, fid = 0, cls = 0;
+
+        // Largest Contentful Paint
+        const lcpEntries = performance.getEntriesByType('largest-contentful-paint');
+        if (lcpEntries.length > 0) {
+          lcp = lcpEntries[lcpEntries.length - 1].startTime;
+        }
+
+        // First Input Delay
+        const fidEntries = performance.getEntriesByType('first-input');
+        if (fidEntries.length > 0) {
+          fid = fidEntries[0].processingStart - fidEntries[0].startTime;
+        }
+
+        // Cumulative Layout Shift
+        let clsValue = 0;
+        const clsEntries = performance.getEntriesByType('layout-shift');
+        clsEntries.forEach((entry: any) => {
+          if (!entry.hadRecentInput) {
+            clsValue += entry.value;
+          }
+        });
+        cls = clsValue;
+
+        setMetrics(prev => ({
+          ...prev,
+          loadTime,
+          memoryUsage,
+          lcp,
+          fid,
+          cls,
+        }));
+      }
     };
 
-    // Measure Core Web Vitals
-    const measureWebVitals = () => {
-      // LCP - Largest Contentful Paint
-      if ('PerformanceObserver' in window) {
-        const lcpObserver = new PerformanceObserver((list) => {
-          const entries = list.getEntries();
-          const lastEntry = entries[entries.length - 1];
-          metrics.lcp = lastEntry.startTime;
-        });
-        
-        try {
-          lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
-        } catch (e) {
-          console.warn('LCP observer not supported');
-        }
-
-        // FID - First Input Delay
-        const fidObserver = new PerformanceObserver((list) => {
-          list.getEntries().forEach((entry: any) => {
-            metrics.fid = entry.processingStart - entry.startTime;
-          });
-        });
-        
-        try {
-          fidObserver.observe({ entryTypes: ['first-input'] });
-        } catch (e) {
-          console.warn('FID observer not supported');
-        }
-
-        // CLS - Cumulative Layout Shift
-        let clsValue = 0;
-        const clsObserver = new PerformanceObserver((list) => {
-          list.getEntries().forEach((entry: any) => {
-            if (!entry.hadRecentInput) {
-              clsValue += entry.value;
-            }
-          });
-          metrics.cls = clsValue;
-        });
-        
-        try {
-          clsObserver.observe({ entryTypes: ['layout-shift'] });
-        } catch (e) {
-          console.warn('CLS observer not supported');
-        }
-
-        // FCP - First Contentful Paint
-        const fcpObserver = new PerformanceObserver((list) => {
-          list.getEntries().forEach((entry) => {
-            if (entry.name === 'first-contentful-paint') {
-              metrics.fcp = entry.startTime;
-            }
-          });
-        });
-        
-        try {
-          fcpObserver.observe({ entryTypes: ['paint'] });
-        } catch (e) {
-          console.warn('FCP observer not supported');
-        }
+    // FPS monitoring
+    let lastTime = performance.now();
+    let frameCount = 0;
+    
+    const measureFPS = () => {
+      frameCount++;
+      const currentTime = performance.now();
+      
+      if (currentTime - lastTime >= 1000) {
+        setMetrics(prev => ({
+          ...prev,
+          fps: Math.round((frameCount * 1000) / (currentTime - lastTime)),
+        }));
+        frameCount = 0;
+        lastTime = currentTime;
       }
+      
+      requestAnimationFrame(measureFPS);
+    };
 
-      // TTFB - Time to First Byte
-      if ('performance' in window && 'timing' in performance) {
-        const timing = performance.timing;
-        metrics.ttfb = timing.responseStart - timing.navigationStart;
-      }
+    // Initial measurement
+    measurePerformance();
+    measureFPS();
 
-      // Send metrics to analytics after page load
-      window.addEventListener('load', () => {
-        setTimeout(() => {
-          // Send to Google Analytics if available
-          if (typeof window !== 'undefined' && (window as any).gtag) {
-            if (metrics.lcp !== null) {
-              (window as any).gtag('event', 'web_vitals', {
-                event_category: 'Performance',
-                event_label: 'LCP',
-                value: Math.round(metrics.lcp)
-              });
-            }
-            if (metrics.fid !== null) {
-              (window as any).gtag('event', 'web_vitals', {
-                event_category: 'Performance',
-                event_label: 'FID',
-                value: Math.round(metrics.fid)
-              });
-            }
-            if (metrics.cls !== null) {
-              (window as any).gtag('event', 'web_vitals', {
-                event_category: 'Performance',
-                event_label: 'CLS',
-                value: Math.round(metrics.cls * 1000) / 1000
-              });
+    // Re-measure on route changes
+    const handleRouteChange = () => {
+      setTimeout(measurePerformance, 100);
+    };
+
+    window.addEventListener('popstate', handleRouteChange);
+
+    // Performance observer for Web Vitals
+    if ('PerformanceObserver' in window) {
+      const observer = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          if (entry.entryType === 'largest-contentful-paint') {
+            setMetrics(prev => ({
+              ...prev,
+              lcp: entry.startTime,
+            }));
+          } else if (entry.entryType === 'first-input') {
+            const fidEntry = entry as any;
+            setMetrics(prev => ({
+              ...prev,
+              fid: fidEntry.processingStart - fidEntry.startTime,
+            }));
+          } else if (entry.entryType === 'layout-shift') {
+            const clsEntry = entry as any;
+            if (!clsEntry.hadRecentInput) {
+              setMetrics(prev => ({
+                ...prev,
+                cls: prev.cls + clsEntry.value,
+              }));
             }
           }
-
-          // Log metrics for debugging
-          console.log('Performance Metrics:', metrics);
-        }, 2000);
-      });
-    };
-
-    measureWebVitals();
-
-    // Monitor resource loading
-    const monitorResources = () => {
-      if ('PerformanceObserver' in window) {
-        const resourceObserver = new PerformanceObserver((list) => {
-          list.getEntries().forEach((entry) => {
-            if (entry.duration > 1000) { // Log slow resources
-              console.warn('Slow resource:', entry.name, entry.duration + 'ms');
-            }
-          });
-        });
-        
-        try {
-          resourceObserver.observe({ entryTypes: ['resource'] });
-        } catch (e) {
-          console.warn('Resource observer not supported');
         }
-      }
-    };
+      });
 
-    monitorResources();
+      observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
+
+      return () => {
+        observer.disconnect();
+        window.removeEventListener('popstate', handleRouteChange);
+      };
+    }
 
     return () => {
-      // Cleanup observers if needed
+      window.removeEventListener('popstate', handleRouteChange);
     };
   }, []);
 
-  return null;
+  // Only show in development
+  if (process.env.NODE_ENV !== 'development') {
+    return null;
+  }
+
+  return (
+    <div className="fixed top-4 right-4 z-50 bg-black/80 backdrop-blur-sm text-white p-4 rounded-lg text-xs font-mono max-w-xs">
+      <div className="mb-2 font-bold text-cyan-400">Performance Monitor</div>
+      <div className="space-y-1">
+        <div>Load Time: <span className="text-green-400">{metrics.loadTime.toFixed(2)}ms</span></div>
+        <div>Memory: <span className="text-yellow-400">{metrics.memoryUsage.toFixed(2)}MB</span></div>
+        <div>FPS: <span className={metrics.fps >= 60 ? 'text-green-400' : metrics.fps >= 30 ? 'text-yellow-400' : 'text-red-400'}>{metrics.fps}</span></div>
+        <div>LCP: <span className={metrics.lcp < 2500 ? 'text-green-400' : metrics.lcp < 4000 ? 'text-yellow-400' : 'text-red-400'}>{metrics.lcp.toFixed(2)}ms</span></div>
+        <div>FID: <span className={metrics.fid < 100 ? 'text-green-400' : metrics.fid < 300 ? 'text-yellow-400' : 'text-red-400'}>{metrics.fid.toFixed(2)}ms</span></div>
+        <div>CLS: <span className={metrics.cls < 0.1 ? 'text-green-400' : metrics.cls < 0.25 ? 'text-yellow-400' : 'text-red-400'}>{metrics.cls.toFixed(3)}</span></div>
+      </div>
+    </div>
+  );
 };
 
 export default PerformanceMonitor;
