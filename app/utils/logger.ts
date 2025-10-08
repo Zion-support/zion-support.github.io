@@ -170,6 +170,15 @@ class Logger {
   }
 
   /**
+   * End a console group
+   */
+  groupEnd(): void {
+    if (typeof console !== 'undefined' && console.groupEnd) {
+      console.groupEnd();
+    }
+  }
+
+  /**
    * Create a child logger with a specific context
    */
   child(context: string): ContextLogger {
