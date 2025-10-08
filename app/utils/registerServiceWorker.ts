@@ -27,7 +27,6 @@ export async function registerServiceWorker(
       window.location.hostname === '[::1]' ||
       window.location.hostname.match(/^127(?:\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$/)
   );
-
   try {
     // Wait for page to load
     await new Promise<void>((resolve) => {
@@ -38,14 +37,14 @@ export async function registerServiceWorker(
       }
     });
 
-    // eslint-disable-next-line no-console
+     
     console.log('[SW] Registering service worker...');
 
     const registration = await navigator.serviceWorker.register('/service-worker.js', {
       scope: '/',
     });
 
-    // eslint-disable-next-line no-console
+ 
     console.log('[SW] Service worker registered:', registration);
 
     // Handle updates
@@ -58,16 +57,16 @@ export async function registerServiceWorker(
         if (installingWorker.state === 'installed') {
           if (navigator.serviceWorker.controller) {
             // New update available
-            // eslint-disable-next-line no-console
-            console.log('[SW] New content available; please refresh.');
+ 
+    console.log('[SW] New content available; please refresh.');
             
             if (config.onUpdate) {
               config.onUpdate(registration);
             }
           } else {
             // Content cached for offline use
-            // eslint-disable-next-line no-console
-            console.log('[SW] Content cached for offline use.');
+ 
+    console.log('[SW] Content cached for offline use.');
             
             if (config.onSuccess) {
               config.onSuccess(registration);
