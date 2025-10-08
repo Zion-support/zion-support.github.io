@@ -75,10 +75,10 @@ const HomePage: React.FC = () => {
       {/* Content Promotion Banner */}
       <ContentPromotionBanner />
 
-      <main id="main-content" className="container mx-auto px-4 py-16" role="main">
+      <main id="main-content" className="container mx-auto px-4 py-8 md:py-16" role="main">
         {/* Hero Section */}
         <section
-          className={`text-center mb-16 transition-all duration-1000 ${
+          className={`text-center mb-12 md:mb-16 transition-all duration-1000 ${
             isLoaded && isVisible 
               ? 'opacity-100 translate-y-0' 
               : 'opacity-0 translate-y-8'
@@ -138,7 +138,7 @@ const HomePage: React.FC = () => {
         </section>
 
         {/* Services Section */}
-        <section className="mb-16" aria-labelledby="services-heading">
+        <section className="mb-12 md:mb-16" aria-labelledby="services-heading">
           <h2 id="services-heading" className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 text-center">
             Our Services
           </h2>
@@ -252,7 +252,7 @@ const HomePage: React.FC = () => {
         <ContentStatistics />
 
         {/* Social Proof Section */}
-        <section className="bg-gray-50 py-16" aria-labelledby="social-proof-heading">
+        <section className="bg-gray-50 py-12 md:py-16" aria-labelledby="social-proof-heading">
           <div className="max-w-7xl mx-auto px-4">
             <h2 id="social-proof-heading" className="text-3xl font-bold text-center text-gray-900 mb-12">
               Trusted by Industry Leaders
@@ -312,7 +312,7 @@ const HomePage: React.FC = () => {
         <ContentNewsletterSignup />
 
         {/* Call to Action Section */}
-        <section className="text-center bg-gradient-to-r from-indigo-50 to-purple-50 rounded-2xl p-12" aria-labelledby="cta-heading">
+        <section className="text-center bg-gradient-to-r from-indigo-50 to-purple-50 rounded-2xl p-8 md:p-12" aria-labelledby="cta-heading">
           <h2 id="cta-heading" className="text-4xl font-bold text-gray-900 mb-6">
             Ready to Transform Your Business?
           </h2>

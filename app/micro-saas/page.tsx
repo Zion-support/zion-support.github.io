@@ -1646,7 +1646,7 @@ const MicroSAASPage: React.FC = () => {
 
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
         {/* Hero Section */}
-        <section className="relative overflow-hidden bg-gradient-to-r from-indigo-600 to-purple-700 text-white py-20">
+        <section className="relative overflow-hidden bg-gradient-to-r from-indigo-600 to-purple-700 text-white py-12 md:py-20">
           <div className="absolute inset-0 bg-black opacity-20"></div>
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
@@ -1669,7 +1669,7 @@ const MicroSAASPage: React.FC = () => {
         </section>
 
         {/* Key Benefits */}
-        <section className="py-16 bg-white">
+        <section className="py-12 md:py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -1714,7 +1714,7 @@ const MicroSAASPage: React.FC = () => {
 
         {/* Services by Category */}
         {categories.map(category => (
-          <section key={category} className="py-16 bg-gray-50">
+          <section key={category} className="py-12 md:py-16 bg-gray-50">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="text-center mb-12">
                 <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
