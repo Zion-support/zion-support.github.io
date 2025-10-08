@@ -5,7 +5,6 @@ import React from 'react';
 
 describe('AppMinimal', () => {
   it('renders without crashing', () => {
-<<<<<<< HEAD:__tests__/AppMinimal.test.tsx
     // Mock component for testing
     const MockAppMinimal = () => <div>Zion Tech Group</div>;
     render(<MockAppMinimal />);

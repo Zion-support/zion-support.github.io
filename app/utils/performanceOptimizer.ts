@@ -219,7 +219,23 @@ class PerformanceOptimizer {
    */
   generateReport(): string {
     const score = this.getPerformanceScore();
-    return `Performance Score: ${score}`;
+    const metrics = this.getMetrics();
+
+    return `
+Performance Report - Zion Tech Group Website
+==========================================
+Performance Score: ${score}/100
+Load Time: ${metrics.loadTime.toFixed(2)}ms
+Render Time: ${metrics.renderTime.toFixed(2)}ms
+Memory Usage: ${(metrics.memoryUsage / 1024 / 1024).toFixed(2)}MB
+Bundle Size: ${metrics.bundleSize}KB
+Cache Hit Rate: ${metrics.cacheHitRate}%
+
+Recommendations:
+${score < 80 ? '- Consider optimizing images and enabling compression' : ''}
+${metrics.loadTime > 2000 ? '- Implement lazy loading for better initial load time' : ''}
+${metrics.memoryUsage > 30 * 1024 * 1024 ? '- Review memory usage and optimize components' : ''}
+    `.trim();
   }
 
   /**
@@ -241,7 +257,9 @@ class PerformanceOptimizer {
     });
 
     images.forEach(img => imageObserver.observe(img));
-    logger.info('Lazy loading initialized for images', 'PerformanceOptimizer');
+    if (process.env.NODE_ENV === 'development') {
+      console.log('Lazy loading initialized for images');
+    }
   }
 
   /**
@@ -265,33 +283,18 @@ class PerformanceOptimizer {
       document.head.appendChild(link);
     });
 
-    logger.info('Critical resource hints added', 'PerformanceOptimizer');
-  }
-
-  /**
-   * Measure page load metrics
-   */
-  measurePageLoad(): PerformanceMetrics | null {
-    if (typeof window === 'undefined' || !('performance' in window)) return null;
-
-    const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-    if (!navigation) return null;
-
-    return {
-      ttfb: navigation.responseStart - navigation.requestStart,
-      fcp: this.metrics.fcp || 0,
-      lcp: this.metrics.lcp || 0,
-      fid: this.metrics.fid || 0,
-      cls: this.metrics.cls || 0,
-      fmp: this.metrics.fmp || 0,
-    };
+    if (process.env.NODE_ENV === 'development') {
+      console.log('Critical resource hints added');
+    }
   }
 
   /**
    * Report web vitals
    */
   reportWebVitals(metrics: PerformanceMetrics): void {
-    logger.performance('Web Vitals reported', metrics as unknown as Record<string, unknown>, 'PerformanceOptimizer');
+    if (process.env.NODE_ENV === 'development') {
+      console.log('Web Vitals reported', metrics);
+    }
     
     // Send to analytics if available
     if (typeof window !== 'undefined' && (window as { gtag?: Function }).gtag) {
@@ -308,27 +311,6 @@ class PerformanceOptimizer {
   }
 
   /**
-   * Cleanup observers and resources
-    const metrics = this.getMetrics();
-
-    return `
-Performance Report - Zion Tech Group Website
-==========================================
-Performance Score: ${score}/100
-Load Time: ${metrics.loadTime.toFixed(2)}ms
-Render Time: ${metrics.renderTime.toFixed(2)}ms
-Memory Usage: ${(metrics.memoryUsage / 1024 / 1024).toFixed(2)}MB
-Bundle Size: ${metrics.bundleSize}KB
-Cache Hit Rate: ${metrics.cacheHitRate}%
-
-Recommendations:
-${score < 80 ? '- Consider optimizing images and enabling compression' : ''}
-${metrics.loadTime > 2000 ? '- Implement lazy loading for better initial load time' : ''}
-${metrics.memoryUsage > 30 * 1024 * 1024 ? '- Review memory usage and optimize components' : ''}
-    `.trim();
-  }
-
-  /**
    * Optimize the entire application
    */
   optimize(): void {
@@ -336,19 +318,14 @@ ${metrics.memoryUsage > 30 * 1024 * 1024 ? '- Review memory usage and optimize c
     this.enableCodeSplitting();
     this.enableCaching();
     
-    if (process.env.NODE_ENV === 'development') { 
-      console.log('Performance optimization completed'); 
-      console.log(this.generateReport()); 
+    if (process.env.NODE_ENV === 'development') {
+      console.log('Performance optimization completed');
+      console.log(this.generateReport());
     }
-  }
-  public cleanup(): void {
-    this.observers.forEach(observer => observer.disconnect());
-    this.observers = [];
-    this.isMonitoring = false;
   }
 }
 
 // Export singleton instance
 export const performanceOptimizer = new PerformanceOptimizer();
 export default PerformanceOptimizer;
-export { PerformanceOptimizer, type PerformanceMetrics, type PerformanceConfig };
+export { PerformanceOptimizer, type PerformanceMetrics, type OptimizationConfig };
