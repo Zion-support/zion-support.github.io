@@ -504,11 +504,8 @@ export class AccessibilityChecker {
    */
   private checkLandmarks(element: Element): void {
     const hasMain = element.querySelector('main, [role="main"]');
-<<<<<<< HEAD
-=======
     const _hasNav = element.querySelector('nav, [role="navigation"]');
 
->>>>>>> cursor/fix-errors-and-merge-to-main-add2
     if (!hasMain) {
       this.addIssue({
         type: 'missing-main-landmark',

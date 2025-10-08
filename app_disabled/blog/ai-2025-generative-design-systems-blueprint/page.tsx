@@ -7,4 +7,10 @@ export default function GenerativeDesignSystemsBlueprintPage() {
           <div>
             <div>
               <span>🎨 GENERATIVE DESIGN SYSTEMS</span>
-import Link from 'next/link';
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}
