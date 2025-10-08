@@ -1,4 +1,4 @@
-import React, { useEffect, useCallback, useRef } from 'react';
+import React, { useEffect, useCallback } from 'react';
 import { Helmet } from 'react-helmet-async';
 
 interface SEOData {
@@ -38,7 +38,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
   enableTwitterCards = true,
   enableSchemaMarkup = true,
 }) => {
-  const structuredDataRef = useRef<HTMLScriptElement | null>(null);
+  // const structuredDataRef = useRef<HTMLScriptElement | null>(null);
   const generateStructuredData = useCallback(() => {
     if (!enableStructuredData || !seoData.structuredData) return null;
 
@@ -162,14 +162,14 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     }
   }, [seoData]);
 
-  const _addMetaTag = (_name: string, _content: string, _attribute: string = 'name') => {
+  const _addMetaTag = (name: string, content: string, attribute: string = 'name') => {
     const metaTag = document.createElement('meta');
     metaTag.setAttribute(attribute, name);
     metaTag.content = content;
     document.head.appendChild(metaTag);
   };
 
-  const _updateCanonicalUrl = (_url: string) => {
+  const _updateCanonicalUrl = (url: string) => {
     let canonicalLink = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
     
     if (canonicalLink) {
@@ -182,22 +182,19 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     }
   };
 
-  const _addStructuredData = (_data: Record<string, unknown>) => {
+  const _addStructuredData = (data: Record<string, unknown>) => {
     // Remove existing structured data
     if (structuredDataRef.current) {
       structuredDataRef.current.remove();
     }
 
-    // Add new structured data
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
-    script.textContent = JSON.stringify(data);
-    script.id = 'structured-data';
-    document.head.appendChild(script);
-    structuredDataRef.current = script;
-  };
+  // const _addStructuredData = (data: Record<string, unknown>) => {
+  //   // Remove existing structured data
+  //   if (structuredDataRef.current) {
+  //     structuredDataRef.current.remove();
+  //   }
 
-  const _trackPageView = (_config: SEOData) => {
+  const _trackPageView = (config: SEOData) => {
     if (typeof window !== 'undefined' && 'gtag' in window) {
       (window as unknown as { gtag: (command: string, targetId: string, config: Record<string, unknown>) => void }).gtag('config', 'GA_MEASUREMENT_ID', {
         page_title: config.title,

@@ -598,7 +598,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
                     rel="noopener noreferrer"
                   >
                     Get Started
-                    <ArrowRight className="text-left" />
+                    <Link className="text-left" />
                   </a>
         {/* Contact Information */}
         <div className="text-left">

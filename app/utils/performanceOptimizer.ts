@@ -78,6 +78,13 @@ class PerformanceOptimizer {
   }
 
   /**
+   * Public init method for external initialization
+   */
+  public init(): void {
+    this.initializePerformanceMonitoring();
+  }
+
+  /**
    * Measure page load time
    */
   private measureLoadTime(): void {
@@ -116,6 +123,97 @@ class PerformanceOptimizer {
       this.observers.push(observer);
     } catch (error) {
       // PerformanceObserver may not support 'measure' entryType in some environments
+      console.warn('Performance Observer not supported:', error);
+    }
+  }
+
+  private observeLCP() {
+    try {
+      const observer = new PerformanceObserver((list) => {
+        const entries = list.getEntries()
+        const lastEntry = entries[entries.length - 1]
+        this.metrics.lcp = lastEntry.startTime
+      })
+      observer.observe({ entryTypes: ['largest-contentful-paint'] })
+      this.observers.push(observer)
+    } catch {
+      // Ignore if not supported
+    }
+  }
+  private observeFID() {
+    try {
+      const observer = new PerformanceObserver((list) => {
+        const entries = list.getEntries()
+        entries.forEach((entry: PerformanceEntry) => {
+          const fidEntry = entry as PerformanceEntry & { processingStart: number }
+          this.metrics.fid = fidEntry.processingStart - fidEntry.startTime
+
+        })
+      })
+      observer.observe({ entryTypes: ['first-input'] })
+      this.observers.push(observer)
+    } catch {
+      // Ignore if not supported
+    }
+  }
+  private observeCLS() {
+    try {
+      let clsValue = 0
+      const observer = new PerformanceObserver((list) => {
+        const entries = list.getEntries()
+        entries.forEach((entry: PerformanceEntry) => {
+          const clsEntry = entry as PerformanceEntry & { hadRecentInput?: boolean; value: number }
+          if (!clsEntry.hadRecentInput) {
+            clsValue += clsEntry.value
+          }
+        })
+        this.metrics.cls = clsValue
+      })
+      observer.observe({ entryTypes: ['layout-shift'] })
+      this.observers.push(observer)
+    } catch {
+      // Ignore if not supported
+    }
+  }
+  private observeFCP() {
+    try {
+      const observer = new PerformanceObserver((list) => {
+        const entries = list.getEntries()
+        entries.forEach((entry) => {
+          if (entry.name === 'first-contentful-paint') {
+            this.metrics.fcp = entry.startTime
+          }
+        })
+      })
+      observer.observe({ entryTypes: ['paint'] })
+      this.observers.push(observer)
+    } catch {
+      // Ignore if not supported
+    }
+  }
+  private observeTTFB() {
+    try {
+      const observer = new PerformanceObserver((list) => {
+        const entries = list.getEntries()
+        entries.forEach((entry: PerformanceEntry) => {
+          const navEntry = entry as PerformanceEntry & { responseStart: number; requestStart: number }
+          if (navEntry.responseStart > 0) {
+            this.metrics.ttfb = navEntry.responseStart - navEntry.requestStart
+          }
+        })
+      })
+      observer.observe({ entryTypes: ['navigation'] })
+      this.observers.push(observer)
+    } catch {
+      // Ignore if not supported
+    }
+  }
+  private observeMemory() {
+    if (typeof window !== 'undefined' && 'memory' in performance) {
+      const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; jsHeapSizeLimit: number } }).memory
+      if (memory) {
+        this.metrics.memoryUsage = memory.usedJSHeapSize
+      }
     }
   }
 

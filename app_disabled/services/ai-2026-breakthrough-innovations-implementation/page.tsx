@@ -1,4 +1,4 @@
-import Link from 'next/link';
+// import Link from 'next/link';
 
 export const metadata = {
   title: 'AI 2026 Breakthrough Innovations Implementation | Zion Tech Group',
@@ -274,22 +274,22 @@ export default function AI2026BreakthroughInnovationsImplementationPage() {
             className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-green-600 hover:to-emerald-600 transition-all flex items-center gap-2"
           >
             Start Implementation
-            <ArrowRight className="w-5 h-5" />
-          </ArrowRight>
+            <Link className="w-5 h-5" />
+          </Link>
           <ArrowRight
             href="/case-studies/ai-2026-breakthrough-innovations-2-8-trillion-success"
             className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-cyan-600 transition-all flex items-center gap-2"
           >
             View Success Stories
-            <ArrowRight className="w-5 h-5" />
-          </ArrowRight>
+            <Link className="w-5 h-5" />
+          </Link>
           <ArrowRight
             href="/blog/ai-2026-breakthrough-innovations-mega-success"
             className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-indigo-600 transition-all flex items-center gap-2"
           >
             Read Full Analysis
-            <ArrowRight className="w-5 h-5" />
-          </ArrowRight>
+            <Link className="w-5 h-5" />
+          </Link>
         </div>
       </section>
 
@@ -315,7 +315,7 @@ export default function AI2026BreakthroughInnovationsImplementationPage() {
             <p className="text-gray-700">
               Deploy quantum-enhanced consciousness achieving 99.999% awareness levels.
             </p>
-          </ArrowRight>
+          </Link>
           <ArrowRight
             href="/services/ai-2026-autonomous-enterprise-systems"
             className="block p-6 bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl border border-green-200 hover:shadow-lg transition-all"
@@ -332,7 +332,7 @@ export default function AI2026BreakthroughInnovationsImplementationPage() {
             <p className="text-gray-700">
               Implement 99.9% autonomous operations with 24/7 optimized business processes.
             </p>
-          </ArrowRight>
+          </Link>
         </div>
       </section>
     </div>

@@ -29,18 +29,58 @@ class PerformanceMonitor {
     this.setupResourceTiming();
   }
 
-  private setupWebVitals(): void {
-    // First Contentful Paint
-    this.observePaint('first-contentful-paint', 'fcp');
-    
-    // Largest Contentful Paint
-    this.observeLCP();
-    
-    // First Input Delay
-    this.observeFID();
-    
-    // Cumulative Layout Shift
-    this.observeCLS();
+  /**
+   * Initialize performance observers
+   */
+  private initializeObservers(): void {
+    try {
+      // Observe paint metrics
+      if ('PerformanceObserver' in window) {
+        // First Contentful Paint
+        this.observeEntry('paint', (entries) => {
+          entries.forEach((entry) => {
+            if (entry.name === 'first-contentful-paint') {
+              this.recordMetric('FCP', entry.startTime);
+            }
+          });
+        });
+
+        // Largest Contentful Paint
+        this.observeEntry('largest-contentful-paint', entries => {
+          const lastEntry = entries[entries.length - 1];
+          if (lastEntry) {
+            this.recordMetric(
+              'LCP',
+              (lastEntry as any).renderTime || (lastEntry as any).loadTime || lastEntry.startTime
+            );
+          }
+        });
+
+        // First Input Delay
+        this.observeEntry('first-input', entries => {
+          const firstInput = entries[0];
+          if (firstInput && (firstInput as any).processingStart !== undefined) {
+            const fid = (firstInput as any).processingStart - firstInput.startTime;
+            this.recordMetric('FID', fid);
+          }
+        });
+
+        // Cumulative Layout Shift
+        this.observeEntry('layout-shift', (entries) => {
+          let clsValue = 0;
+          entries.forEach((entry: PerformanceEntry) => {
+            if (!(entry as any).hadRecentInput) {
+              clsValue += (entry as any).value;
+            }
+          });
+          if (clsValue > 0) {
+            this.recordMetric('CLS', clsValue);
+          }
+        });
+      }
+    } catch (error) {
+      logger.error('Failed to initialize performance observers', error as Error);
+    }
   }
 
   private observePaint(name: string, metricKey: keyof PerformanceMetrics): void {

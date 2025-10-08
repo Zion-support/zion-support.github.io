@@ -85,7 +85,7 @@ export default function October2025NewAdvancedAIContentBann, e, r() {
                 </div>
                 <div, className='mt-6, flex, items-center, tex, t-purp, l, e-300, fon, t-semibold, grou, p-hov, e, r: te, x, t-white, transitio, n-colo, r, s'>
                   <sp, a, n>Explore, Privac, y-First, A, I</sp, a, n>
-                  <ArrowRight, className='w-4 h-4, m, l-2, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m' />
+                  <Link, className='w-4 h-4, m, l-2, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m' />
                 </div>
               </div>
             </Li, n, k>
@@ -131,7 +131,7 @@ export default function October2025NewAdvancedAIContentBann, e, r() {
                 </div>
                 <div, className='mt-6, flex, items-center, tex, t-bl, u, e-300, fon, t-semibold, grou, p-hov, e, r: te, x, t-white, transitio, n-colo, r, s'>
                   <sp, a, n>Unlock, Unlimited, Data</sp, a, n>
-                  <ArrowRight, className='w-4 h-4, m, l-2, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m' />
+                  <Link, className='w-4 h-4, m, l-2, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m' />
                 </div>
               </div>
             </Li, n, k>
@@ -177,7 +177,7 @@ export default function October2025NewAdvancedAIContentBann, e, r() {
                 </div>
                 <div, className='mt-6, flex, items-center, tex, t-gre, e, n-300, fon, t-semibold, grou, p-hov, e, r: te, x, t-white, transitio, n-colo, r, s'>
                   <sp, a, n>Ensure, AI, Compliance</sp, a, n>
-                  <ArrowRight, className='w-4 h-4, m, l-2, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m' />
+                  <Link, className='w-4 h-4, m, l-2, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m' />
                 </div>
               </div>
             </Li, n, k>
@@ -193,7 +193,7 @@ export default function October2025NewAdvancedAIContentBann, e, r() {
             className='inli, n, e-flex, item, s-center, ga, p-3, b, g-gradie, n, t-to-r, fro, m-purp, l, e-600, t, o-bl, u, e-600, hove, r: fr, o, m-purp, l, e-500, hove, r:to-bl, u, e-500, tex, t-white, p, x-8, p, y-4, rounde, d-full, fon, t-bold, tex, t-lg, shado, w-2xl, hove, r:shad, o, w-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-300, transform, hover:sca, l, e-1, 0, 5'
           >
             <sp, a, n>Explore, All, October 2025, Breakthrough, s</sp, a, n>
-            <ArrowRight, className='w-5 h-5' />
+            <Link, className='w-5 h-5' />
           </Li, n, k>
           <p, className='mt-4, tex, t-bl, u, e-200, tex, t-sm'>
             Join, 12, 7+ Fortune, 500, companies transforming, with, privacy-fir, s, t , A, I,

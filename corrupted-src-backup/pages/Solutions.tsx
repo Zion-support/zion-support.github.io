@@ -98,7 +98,7 @@ const Solutions: React.FC = () => {
                 to="/solutions/ai-platform"
                 className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium"
               >
-                Learn More <ArrowRight className="h-4 w-4 ml-2" />
+                Learn More <Link className="h-4 w-4 ml-2" />
               </Link>
             </div>
 
@@ -114,7 +114,7 @@ const Solutions: React.FC = () => {
                 to="/solutions/ai-security"
                 className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium"
               >
-                Learn More <ArrowRight className="h-4 w-4 ml-2" />
+                Learn More <Link className="h-4 w-4 ml-2" />
               </Link>
             </div>
 
@@ -130,7 +130,7 @@ const Solutions: React.FC = () => {
                 to="/solutions/ai-performance"
                 className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium"
               >
-                Learn More <ArrowRight className="h-4 w-4 ml-2" />
+                Learn More <Link className="h-4 w-4 ml-2" />
               </Link>
             </div>
           </div>

@@ -1,7 +1,6 @@
-import React, { useCallback, useState, useEffect, Suspense } from 'react';
+import React, { useCallback, useState, useEffect, Suspense, lazy } from 'react';
 
 // Dynamically import heavy components for better performance
-// const _ServiceCard = lazy(() => import('./components/ServiceCard'));
 
 // Loading skeleton component
 const ServiceCardSkeleton: React.FC = () => (
@@ -49,6 +48,9 @@ const HomePage: React.FC = () => {
       >
         Skip to main content
       </a>
+
+      {/* Content Promotion Banner */}
+      <ContentPromotionBanner />
 
       <main id="main-content" className="container mx-auto px-4 py-16" role="main">
         {/* Hero Section */}
@@ -103,6 +105,18 @@ const HomePage: React.FC = () => {
             </article>
           </Suspense>
         </section>
+
+        {/* Content Carousel */}
+        <ContentCarousel />
+
+        {/* Dynamic Content Showcase */}
+        <DynamicContentShowcase />
+
+        {/* Content Statistics */}
+        <ContentStatistics />
+
+        {/* Newsletter Signup */}
+        <ContentNewsletterSignup />
 
         {/* Call to Action Section */}
         <section className="text-center" aria-labelledby="cta-heading">

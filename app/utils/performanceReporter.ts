@@ -71,8 +71,9 @@ class PerformanceReporter {
         const lastEntry = entries[entries.length - 1]
         
         if (lastEntry && 'renderTime' in lastEntry) {
-          const value = (lastEntry as any).renderTime || (lastEntry as any).loadTime || 0;
-          this.addMetric('LCP', value, this.getRating('lcp', value))
+          const value = (lastEntry as PerformanceEntry & { renderTime?: number; loadTime?: number }).renderTime || 
+                       (lastEntry as PerformanceEntry & { renderTime?: number; loadTime?: number }).loadTime || 0;
+          this.addMetric('LCP', value, this.getRating('lcp', value));
         }
       })
 
@@ -83,8 +84,8 @@ class PerformanceReporter {
         const entries = entryList.getEntries()
         entries.forEach((entry) => {
           if ('processingStart' in entry && 'startTime' in entry) {
-            const value = (entry as any).processingStart - (entry as any).startTime;
-            this.addMetric('FID', value, this.getRating('fid', value))
+            const value = (entry as PerformanceEventTiming).processingStart - (entry as PerformanceEventTiming).startTime;
+            this.addMetric('FID', value, this.getRating('fid', value));
           }
         })
       })
@@ -94,9 +95,9 @@ class PerformanceReporter {
       // Cumulative Layout Shift (CLS)
       let clsValue = 0
       const clsObserver = new PerformanceObserver((entryList) => {
-        entryList.getEntries().forEach((entry: any) => {
-          if (!entry.hadRecentInput) {
-            clsValue += entry.value;
+        entryList.getEntries().forEach((entry) => {
+          if (!(entry as any).hadRecentInput) {
+            clsValue += (entry as any).value;
           }
         })
         this.addMetric('CLS', clsValue, this.getRating('cls', clsValue))
@@ -231,7 +232,7 @@ class PerformanceReporter {
         event_category: 'Web Vitals',
         value: Math.round(metric.value),
         event_label: metric.rating,
-        non_interaction: true
+        non_interaction: true,
       })
     }
   }

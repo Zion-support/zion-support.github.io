@@ -55,7 +55,7 @@ const API: React.FC = () => {
               className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors inline-flex items-center"
             >
               Get API Key
-              <ArrowRight className="ml-2 w-5 h-5" />
+              <Link className="ml-2 w-5 h-5" />
             </Link>
             <a
               href="#endpoints"
@@ -165,7 +165,7 @@ const API: React.FC = () => {
                 className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors inline-flex items-center"
               >
                 Get API Key
-                <ArrowRight className="ml-2 w-5 h-5" />
+                <Link className="ml-2 w-5 h-5" />
               </Link>
               <a
                 href="https://docs?.ziontechgroup.com"

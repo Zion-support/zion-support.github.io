@@ -1,4 +1,4 @@
-import Link from 'next/link';
+// import Link from 'next/link';
 
 export const metadata = {
   title:
@@ -461,9 +461,9 @@ export default function AIPoweredDataAnalytics2026() {
 
           <p className="mt-8 text-lg opacity-90">
             Or explore our{' '}
-            <ArrowRight href="/case-studies" className="underline hover:text-yellow-300">
+            <Link href="/case-studies" className="underline hover:text-yellow-300">
               success stories
-            </ArrowRight>{' '}
+            </Link>{' '}
             to see AI analytics in action
           </p>
         </div>
@@ -482,21 +482,21 @@ export default function AIPoweredDataAnalytics2026() {
               <p className="text-sm text-gray-600">
                 99.99% threat detection with zero-trust architecture
               </p>
-            </ArrowRight>
+            </Link>
             <ArrowRight
               href="/services/ai-cloud-infrastructure-2025"
               className="block p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition-all hover:scale-105"
             >
               <h3 className="font-bold text-gray-900 mb-2 text-lg">AI Cloud Infrastructure</h3>
               <p className="text-sm text-gray-600">Self-healing systems with 99.999% uptime</p>
-            </ArrowRight>
+            </Link>
             <ArrowRight
               href="/services/ai-blockchain-integration-2025"
               className="block p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition-all hover:scale-105"
             >
               <h3 className="font-bold text-gray-900 mb-2 text-lg">AI Blockchain Integration</h3>
               <p className="text-sm text-gray-600">10,000 TPS with intelligent smart contracts</p>
-            </ArrowRight>
+            </Link>
           </div>
         </div>
       </section>

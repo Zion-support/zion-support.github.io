@@ -442,7 +442,7 @@ const QuantumSafeCryptography = () =>
               to="/<contact" className="text-left"
             >
               Schedule Quantum Security Assessment
-              <ArrowRight className="text-left" />
+              <Link className="text-left" />
             </Link>
           </section>
           <section></section>

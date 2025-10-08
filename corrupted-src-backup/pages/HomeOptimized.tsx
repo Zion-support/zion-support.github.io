@@ -57,7 +57,7 @@ const HomeOptimized: React.FC = () => {
                 to="/services"
                 className="inline-flex items-center px-8 py-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-medium"
               >
-                Get Started <ArrowRight className="h-5 w-5 ml-2" />
+                Get Started <Link className="h-5 w-5 ml-2" />
               </Link>
               <Link
                 to="/demo"
@@ -95,7 +95,7 @@ const HomeOptimized: React.FC = () => {
                 to="/services/ai-platform"
                 className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium"
               >
-                Learn More <ArrowRight className="h-4 w-4 ml-2" />
+                Learn More <Link className="h-4 w-4 ml-2" />
               </Link>
             </div>
 
@@ -112,7 +112,7 @@ const HomeOptimized: React.FC = () => {
                 to="/services/quantum-ai-security"
                 className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium"
               >
-                Learn More <ArrowRight className="h-4 w-4 ml-2" />
+                Learn More <Link className="h-4 w-4 ml-2" />
               </Link>
             </div>
 
@@ -128,7 +128,7 @@ const HomeOptimized: React.FC = () => {
                 to="/services/ai-performance"
                 className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium"
               >
-                Learn More <ArrowRight className="h-4 w-4 ml-2" />
+                Learn More <Link className="h-4 w-4 ml-2" />
               </Link>
             </div>
           </div>

@@ -1,7 +1,7 @@
 import React, { useEffect, useCallback } from 'react';
 
 
-import { Link } from 'react-router-dom';interface PerformanceOptimizerProps {
+interface PerformanceOptimizerProps {
   children: React.ReactNode;
 }
 

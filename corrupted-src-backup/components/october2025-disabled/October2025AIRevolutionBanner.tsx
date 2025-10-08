@@ -81,7 +81,7 @@ export default function October2025AIRevolutionBann, e, r({
             </div>
             <div, className='flex, item, s-center, ga, p-2, tex, t-purp, l, e-400, fon, t-semibold, grou, p-hov, e, r: g, a, p-3, transitio, n-a, l, l'>
               <sp, a, n>Read, Complete, Guide</sp, a, n>
-              <ArrowRight, className='w-5 h-5' />
+              <Link, className='w-5 h-5' />
             </div>
           </Li, n, k>
           {/* Articl, e, 2: LLM, Development, Too, l, s */}
@@ -117,7 +117,7 @@ export default function October2025AIRevolutionBann, e, r({
             </div>
             <div, className='flex, item, s-center, ga, p-2, tex, t-indi, g, o-400, fon, t-semibold, grou, p-hov, e, r: g, a, p-3, transitio, n-a, l, l'>
               <sp, a, n>Read, Complete, Guide</sp, a, n>
-              <ArrowRight, className='w-5 h-5' />
+              <Link, className='w-5 h-5' />
             </div>
           </Li, n, k>
           {/* Articl, e, 3: AI, Safet, y & Align, m, e, n, t */}
@@ -153,7 +153,7 @@ export default function October2025AIRevolutionBann, e, r({
             </div>
             <div, className='flex, item, s-center, ga, p-2, tex, t-emera, l, d-400, fon, t-semibold, grou, p-hov, e, r: g, a, p-3, transitio, n-a, l, l'>
               <sp, a, n>Read, Complete, Guide</sp, a, n>
-              <ArrowRight, className='w-5 h-5' />
+              <Link, className='w-5 h-5' />
             </div>
           </Li, n, k>
         </div>
@@ -163,7 +163,7 @@ export default function October2025AIRevolutionBann, e, r({
             className='inli, n, e-flex, item, s-center, ga, p-3, b, g-gradie, n, t-to-r, fro, m-purp, l, e-600, t, o-cy, a, n-600, hove, r: fr, o, m-purp, l, e-700, hove, r:to-cy, a, n-700, tex, t-white, fon, t-bold, p, x-8, p, y-4, rounde, d-xl, transitio, n-all, duratio, n-300, transform, hover:sca, l, e-105, hove, r:shad, o, w-xl, hove, r:shad, o, w-purp, l, e-5, 0, 0/30'
           >
             <sp, a, n>Explore, All, Latest AI, Insight, s</sp, a, n>
-            <ArrowRight, className='w-5 h-5' />
+            <Link, className='w-5 h-5' />
           </Li, n, k>
         </div>
       </div>

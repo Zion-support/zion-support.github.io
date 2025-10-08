@@ -59,7 +59,7 @@ export default function RevolutionaryBreakthroughs2025() {
               <a 
                 href="/"
                 className="text-left"> </a><span>Get Implementation Guide</span>
-                <ArrowRight className="text-left" />
+                <Link className="text-left" />
               </a>
             </div>
         </div>
@@ -124,7 +124,7 @@ export default function RevolutionaryBreakthroughs2025() {
                     href={`/blog/${breakthrough.slug}`}
                     className="text-left"> </a><IconComponent className="text-left" />
                     <span>Explore Breakthrough</span>
-                    <ArrowRight className="text-left" />
+                    <Link className="text-left" />
                   </a>
                 </div>
               );
@@ -191,7 +191,7 @@ export default function RevolutionaryBreakthroughs2025() {
                     href="/contact"
                     className="text-left"> </a><IconComponent className="text-left" />
                     <span>Get Started</span>
-                    <ArrowRight className="text-left" />
+                    <Link className="text-left" />
                   </a>
                 </div>
               );
@@ -245,7 +245,7 @@ export default function RevolutionaryBreakthroughs2025() {
                 <a
                   href={`/case-studies/${caseStudy.slug}`}
                   className="text-left"> </a><span>View Full Case Study</span>
-                  <ArrowRight className="text-left" />
+                  <Link className="text-left" />
                 </a>
               </div>
             ))}
@@ -267,7 +267,7 @@ export default function RevolutionaryBreakthroughs2025() {
                   <a
                     href="/contact"
                     className="text-left"> </a><span>Schedule Consultation</span>
-                    <ArrowRight className="text-left" />
+                    <Link className="text-left" />
                   </a>
                 </div>
             </div>

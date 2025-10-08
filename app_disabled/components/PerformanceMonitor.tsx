@@ -11,3 +11,14 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   const [isMonitoring, setIsMonitoring] = useState(false);
   useEffect(() => {
     // Initialize performance monitoring
+    setIsMonitoring(true);
+  }, []);
+
+  return (
+    <div className={className}>
+      {children}
+    </div>
+  );
+};
+
+export default PerformanceMonitor;

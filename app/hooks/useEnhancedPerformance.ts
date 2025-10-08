@@ -4,8 +4,6 @@
  */
 
 import { useEffect, useCallback, useRef } from 'react';
-// import { logger as _logger } from '../utils/logger';
-// import { _performanceOptimizer } from '../utils/_performanceOptimizer';
 import { errorTracker } from '../utils/enhancedErrorTracking';
 import { analytics } from '../utils/enhancedAnalytics';
 
@@ -99,7 +97,7 @@ export function useEnhancedPerformance(_options: UseEnhancedPerformanceOptions =
 
   const measureOperation = useCallback(
     (operationName: string) => {
-      // const _markName = `${component}-${operationName}`;
+      const _markName = `${component}-${operationName}`;
       const startTime = performance.now();
 
       return {

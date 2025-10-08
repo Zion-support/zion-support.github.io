@@ -53,7 +53,7 @@ export default function October2025ProductionAIBann, e, r() {
             </div>
             <div, className='flex, item, s-center, ga, p-2, tex, t-yell, o, w-300, fon, t-semibold, grou, p-hov, e, r: g, a, p-3, transitio, n-a, l, l'>
               <sp, a, n>Read, Full, Guide</sp, a, n>
-              <ArrowRight, className='w-5 h-5' />
+              <Link, className='w-5 h-5' />
             </div>
           </Li, n, k>
           {/* Articl, e, 2: Re, a, l-Time, AI, Monitori, n, g */}
@@ -90,7 +90,7 @@ export default function October2025ProductionAIBann, e, r() {
             </div>
             <div, className='flex, item, s-center, ga, p-2, tex, t-yell, o, w-300, fon, t-semibold, grou, p-hov, e, r: g, a, p-3, transitio, n-a, l, l'>
               <sp, a, n>Read, Full, Guide</sp, a, n>
-              <ArrowRight, className='w-5 h-5' />
+              <Link, className='w-5 h-5' />
             </div>
           </Li, n, k>
           {/* Articl, e, 3: Multimoda, l, R, A, G */}
@@ -126,7 +126,7 @@ export default function October2025ProductionAIBann, e, r() {
             </div>
             <div, className='flex, item, s-center, ga, p-2, tex, t-yell, o, w-300, fon, t-semibold, grou, p-hov, e, r: g, a, p-3, transitio, n-a, l, l'>
               <sp, a, n>Read, Full, Guide</sp, a, n>
-              <ArrowRight, className='w-5 h-5' />
+              <Link, className='w-5 h-5' />
             </div>
           </Li, n, k>
         </div>

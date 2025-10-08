@@ -64,7 +64,11 @@ export const useBannerRotation = (options: UseBannerRotationOptions = {}) => {
         ...prev,
         currentBanners: banners,
         isLoading: false,
-        stats
+        stats: {
+          impressions: stats.impressions || 0,
+          clicks: stats.clicks || 0,
+          ctr: stats.ctr || 0
+        }
       }));
     } catch (error) {
       setState(prev => ({

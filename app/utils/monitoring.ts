@@ -59,40 +59,39 @@ class MonitoringService {
 
         // First Input Delay
         const fidObserver = new PerformanceObserver((list) => {
-          const entries = list.getEntries()
-          entries.forEach((entry: any) => {
-            this.metrics.fid = entry.processingStart - entry.startTime
-            this.reportMetric('fid', this.metrics.fid)
-          })
-        })
-        fidObserver.observe({ entryTypes: ['first-input'] })
+          const entries = list.getEntries();
+          entries.forEach((entry: PerformanceEntry) => {
+            this.metrics.fid = (entry as any).processingStart - entry.startTime;
+            this.reportMetric('fid', this.metrics.fid);
+          });
+        });
+        fidObserver.observe({ entryTypes: ['first-input'] });
 
         // Cumulative Layout Shift
-        let clsValue = 0
-        const clsObserver = new PerformanceObserver((list) => {
-          const entries = list.getEntries()
-          entries.forEach((entry: any) => {
-            if (!entry.hadRecentInput) {
-              clsValue += entry.value
-              this.metrics.cls = clsValue
-              this.reportMetric('cls', clsValue)
+        let clsValue = 0;
+        const clsObserver = new PerformanceObserver(list => {
+          const entries = list.getEntries();
+          entries.forEach((entry: PerformanceEntry) => {
+            if (!(entry as any).hadRecentInput) {
+              clsValue += entry.value;
+              this.metrics.cls = clsValue;
+              this.reportMetric('cls', clsValue);
             }
           })
         })
         clsObserver.observe({ entryTypes: ['layout-shift'] })
 
         // First Contentful Paint
-        const fcpObserver = new PerformanceObserver((list) => {
-          const entries = list.getEntries()
-          entries.forEach((entry) => {
-            this.metrics.fcp = entry.startTime
-            this.reportMetric('fcp', entry.startTime)
-          })
-        })
-        fcpObserver.observe({ entryTypes: ['paint'] })
-
+        const fcpObserver = new PerformanceObserver(list => {
+          const entries = list.getEntries();
+          entries.forEach(entry => {
+            this.metrics.fcp = entry.startTime;
+            this.reportMetric('fcp', entry.startTime);
+          });
+        });
+        fcpObserver.observe({ entryTypes: ['paint'] });
       } catch (error) {
-        console.error('Error setting up performance observers:', error)
+        console.error('Error setting up performance observers:', error);
       }
     }
   }
@@ -118,8 +117,8 @@ class MonitoringService {
     if ('PerformanceObserver' in window) {
       try {
         const resourceObserver = new PerformanceObserver((list) => {
-          const entries = list.getEntries()
-          entries.forEach((entry: any) => {
+          const entries = list.getEntries();
+          entries.forEach((entry: PerformanceResourceTiming) => {
             if (entry.duration > 1000) {
               console.warn('Slow resource detected:', {
                 name: entry.name,
@@ -127,11 +126,11 @@ class MonitoringService {
                 type: entry.initiatorType
               })
             }
-          })
-        })
-        resourceObserver.observe({ entryTypes: ['resource'] })
-      } catch (error) {
-        console.error('Error monitoring resources:', error)
+          });
+        });
+        resourceObserver.observe({ entryTypes: ['resource'] });
+      } catch (_error) {
+        console.error('Error monitoring resources:', _error);
       }
     }
   }
@@ -177,7 +176,6 @@ class MonitoringService {
       gtag('event', name, {
         value: Math.round(name === 'cls' ? value * 1000 : value),
         event_category: 'Web Vitals'
-        non_interaction: true,
       })
     }
   }
