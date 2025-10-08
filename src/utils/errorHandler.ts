@@ -25,28 +25,41 @@ export interface ErrorInfo {
   stack?: string;
   category: ErrorCategory;
   severity: ErrorSeverity;
-  timestamp: number;
-  context?: Record<string, unknown>;
+  timestamp: string;
+  url: string;
+  userAgent: string;
+  userId?: string;
 }
 
 class ErrorHandler {
   private static instance: ErrorHandler;
   private errorQueue: ErrorInfo[] = [];
-  private readonly maxQueueSize: number = 100;
+  private maxQueueSize = 50;
 
-  private constructor() {}
+  private constructor() {
+    this.setupGlobalErrorHandlers();
+  }
 
-  static getInstance(): ErrorHandler {
+  public static getInstance(): ErrorHandler {
     if (!ErrorHandler.instance) {
       ErrorHandler.instance = new ErrorHandler();
     }
     return ErrorHandler.instance;
   }
 
-  /**
-   * Handle an error with categorization and reporting
-   */
-  handleError(error: Error, context?: Record<string, unknown>): ErrorInfo {
+  private setupGlobalErrorHandlers(): void {
+    if (typeof window !== 'undefined') {
+      window.addEventListener('error', (event) => {
+        this.handleError(event.error);
+      });
+
+      window.addEventListener('unhandledrejection', (event) => {
+        this.handleError(new Error(event.reason));
+      });
+    }
+  }
+
+  public handleError(error: Error): void {
     const category = this.categorizeError(error);
     const severity = this.determineSeverity(error, category);
 
@@ -56,8 +69,9 @@ class ErrorHandler {
       stack: error.stack,
       category,
       severity,
-      timestamp: Date.now(),
-      context,
+      timestamp: new Date().toISOString(),
+      url: typeof window !== 'undefined' ? window.location.href : '',
+      userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : '',
     };
 
     this.errorQueue.push(errorData);
@@ -66,8 +80,6 @@ class ErrorHandler {
     }
 
     this.reportError(errorData);
-    
-    return errorData;
   }
 
   private categorizeError(error: Error): ErrorCategory {
@@ -130,13 +142,12 @@ class ErrorHandler {
     const recent = this.errorQueue.filter(
       error => new Date(error.timestamp) > oneHourAgo
     ).length;
-
+    
     return {
       total: this.errorQueue.length,
-      recent,
+      recent
     };
   }
 }
 
-// Export singleton instance as default
-export default ErrorHandler.getInstance();
+export default ErrorHandler;
