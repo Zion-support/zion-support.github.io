@@ -137,5 +137,26 @@
     {
       "path": "./tsconfig.node.json"
     }
+    "_app_disabled/**/*",
+    "_conflicted_disabled/**/*",
+    "_pages_api_disabled/**/*",
+    "_pages_disabled/**/*",
+    "admin-api-disabled/**/*",
+    "api-disabled/**/*",
+    "api.disabled/**/*",
+    "api.disabled.temp/**/*",
+    "api-backup/**/*",
+    "apps.backup/**/*",
+    "automation_backup/**/*",
+    "ai-optimization-backups/**/*",
+    "automation_logs/**/*",
+    "all-automations-reports/**/*",
+    "accessibility-reports/**/*",
+    "corrupted-files-backup/**/*",
+    "corrupted_backup/**/*",
+    "corrupted_files_backup_2/**/*",
+    "components_backup/**/*",
+    "data_backup/**/*",
+    "lib_backup/**/*"
   ]
 }

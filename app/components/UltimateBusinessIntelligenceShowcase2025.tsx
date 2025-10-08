@@ -14,6 +14,14 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
       url: '/articles/ai-revolution-ultimate-business-intelligence-2025-30000-roi-breakthrough',
       type: 'Article',
       category: 'article',
+  const content = [
+    {
+      id: 'ultimate-business-intelligence-revolution',
+      title: 'AI 2025: The Ultimate Business Intelligence Revolution',
+      description: 'Transform your enterprise with next-generation AI-powered business intelligence that delivers unprecedented insights and competitive advantage.',
+      url: '/blog/ai-2025-ultimate-business-intelligence-revolution-ultimate-breakthrough',
+      type: 'Blog Post',
+      category: 'blog',
       metrics: {
         roi: '30,000%',
         efficiency: '500%',
@@ -26,9 +34,9 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
     },
     {
       id: 'fortune-500-business-intelligence-success',
-      title: 'Fortune 500 Ultimate Business Intelligence Success: $750B Annual Savings - 30,000% ROI Success Story',
-      description: 'How a $15.2B manufacturing giant achieved unprecedented business intelligence transformation with AI-powered analytics and decision-making systems.',
-      url: '/case-studies/fortune-500-ultimate-business-intelligence-30000-roi-success-story',
+      title: 'Fortune 500 Ultimate Business Intelligence Success',
+      description: 'How a $15.2B manufacturing giant achieved unprecedented business intelligence transformation with AI-powered analytics.',
+      url: '/case-studies/fortune-500-ultimate-business-intelligence-success',
       type: 'Case Study',
       category: 'case-study',
       metrics: {
@@ -43,8 +51,8 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
     },
     {
       id: 'business-intelligence-implementation-guide',
-      title: 'AI 2025 Ultimate Business Intelligence Implementation Guide: Complete Roadmap to 30,000% ROI',
-      description: 'The definitive guide to implementing revolutionary AI-powered business intelligence that delivers unprecedented competitive advantage and financial returns.',
+      title: 'AI 2025 Ultimate Business Intelligence Implementation Guide',
+      description: 'Complete roadmap to 30,000% ROI through revolutionary AI-powered business intelligence transformation.',
       url: '/resources/ai-2025-ultimate-business-intelligence-implementation-guide',
       type: 'Implementation Guide',
       category: 'resource',
@@ -77,6 +85,7 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
     }, 5000);
     return () => clearInterval(interval);
   }, [content.length]);
+  const currentContent = content[currentSlide];
 
   return (
     <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">

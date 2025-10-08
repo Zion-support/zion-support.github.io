@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const ApiDocumentation: React.FC = () => {
+const APIDocumentation: React.FC = () => {
   return (
     <div className='bg-white rounded-lg shadow-lg p-8 mb-8'>
       <h2 className='text-2xl font-semibold text-gray-800 mb-6'>
@@ -59,6 +60,7 @@ const createContent = async () => {
     const response = await axios.post(\`\${baseUrl}/content\`, {
       title: 'New Content',
       body: 'Content body'
+      body: 'Content body here'
     }, {
       headers: {
         'Authorization': \`Bearer \${apiKey}\`
@@ -70,6 +72,29 @@ const createContent = async () => {
   }
 }`}
           </pre>
+        </div>
+      body: 'Content body'
+    }, {
+      headers: {
+        'Authorization': \`Bearer \${apiKey}\`
+      }
+    })
+    console.log(response.data)
+  } catch (error) {
+    console.error('Error:', error)
+  }
+}`}
+            </pre>
+          </div>
+        </div>
+        
+        <div className="mt-8 text-center">
+          <Link
+            to='/contact'
+            className='inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors'
+          >
+            Contact Support
+          </Link>
         </div>
       </div>
       <div className='mt-8 text-center'>
@@ -85,3 +110,4 @@ const createContent = async () => {
 };
 
 export default ApiDocumentation;
+export default APIDocumentation;
