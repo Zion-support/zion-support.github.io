@@ -65,13 +65,10 @@ class ErrorBoundary extends React.Component<
     return { hasError: true, error };
   }
 
-<<<<<<< HEAD
   override componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
     console.error('App Error Boundary caught an error:', error, errorInfo);
-=======
   componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-271e
   }
 
   override render() {
@@ -143,7 +140,6 @@ const App: React.FC = () => {
     },
   }), []);
 
-<<<<<<< HEAD
   // Performance optimization: Preload critical resources
   React.useEffect(() => {
     if (typeof document !== 'undefined') {
@@ -187,9 +183,7 @@ const App: React.FC = () => {
     e.preventDefault();
     const target = e.target as HTMLFormElement;
     const email = (target.elements.namedItem('email') as HTMLInputElement)?.value;
-=======
   const handleNewsletterSignup = useCallback((email: string) => {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-271e
     if (email) {
       console.log('Newsletter signup:', email);
       // Add actual newsletter signup logic here

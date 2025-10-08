@@ -12,6 +12,13 @@ export enum ErrorCategory {
   UNKNOWN = 'unknown',
 }
 
+export enum ErrorSeverity {
+  LOW = 'low',
+  MEDIUM = 'medium',
+  HIGH = 'high',
+  CRITICAL = 'critical',
+}
+
 export interface ErrorInfo {
   message: string;
   stack?: string;
@@ -28,49 +35,61 @@ export interface ErrorInfo {
   metadata?: Record<string, unknown>;
 }
 
-export class ErrorHandler {
-  private static instance: ErrorHandler;
+class ErrorHandler {
   private errorQueue: ErrorInfo[] = [];
   private maxQueueSize = 100;
 
-  static getInstance(): ErrorHandler {
-    if (!ErrorHandler.instance) {
-      ErrorHandler.instance = new ErrorHandler();
-    }
-    return ErrorHandler.instance;
-  }
-
   /**
-   * Log an error with automatic categorization
+   * Handle an error
    */
-  logError(error: Error, errorInfo?: Partial<ErrorInfo>): void {
-    const category = this.categorizeError(error);
-    const severity = this.determineSeverity(error, category);
-    
+  handleError(error: Error | ErrorInfo, category: ErrorCategory = ErrorCategory.UNKNOWN): void {
     const errorData: ErrorInfo = {
-      message: error.message,
-      stack: error.stack,
-      timestamp: new Date().toISOString(),
-      userAgent: typeof window !== 'undefined' ? window.navigator.userAgent : undefined,
-      url: typeof window !== 'undefined' ? window.location.href : undefined,
-      errorId: this.generateErrorId(),
+      message: error instanceof Error ? error.message : error.message,
+      stack: error instanceof Error ? error.stack : error.stack,
       category,
-      severity,
-      ...errorInfo,
+      timestamp: new Date().toISOString(),
+      errorId: this.generateErrorId(),
     };
+
+    this.errorQueue.push(errorData);
+    if (this.errorQueue.length > this.maxQueueSize) {
+      this.errorQueue.shift();
     }
 
-    // Send to error reporting service
     this.reportError(errorData);
   }
 
   /**
-    }
+   * Generate unique error ID
+   */
+  private generateErrorId(): string {
+    return `err_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
   }
 
   /**
+   * Report error to external service
+   */
+  private reportError(error: ErrorInfo): void {
+    // Placeholder for error reporting service
+    console.error('[ErrorHandler]', error);
+  }
+
+  /**
+   * Get error queue
+   */
+  getErrors(): ErrorInfo[] {
     return [...this.errorQueue];
   }
 
   /**
    * Clear error queue
+   */
+  clearErrors(): void {
+    this.errorQueue = [];
+  }
+}
+
+const errorHandler = new ErrorHandler();
+
+export default errorHandler;
+export { ErrorHandler };

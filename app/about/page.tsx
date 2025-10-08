@@ -1,8 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
 
-=======
->>>>>>> ad3f5667eee57a9969ff433042f2200dd6375572
 const AboutPage: React.FC = () => {
   return (
     <div className='min-h-screen bg-white py-16'>
@@ -107,7 +104,6 @@ const AboutPage: React.FC = () => {
                 View Our Services
               </a>
             </div>
-<<<<<<< HEAD
 export default function AboutPage() {
   return (
     <div className='min-h-screen flex items-center justify-center bg-gray-50'>
@@ -128,8 +124,6 @@ export default function AboutPage() {
             <p className='text-gray-600'>
               To be the global leader in AI-driven business transformation, empowering organizations to achieve unprecedented efficiency and innovation.
             </p>
-=======
->>>>>>> ad3f5667eee57a9969ff433042f2200dd6375572
           </div>
         </div>
       </div>
@@ -137,7 +131,4 @@ export default function AboutPage() {
   );
 };
 export default AboutPage;
-<<<<<<< HEAD
 }
-=======
->>>>>>> ad3f5667eee57a9969ff433042f2200dd6375572

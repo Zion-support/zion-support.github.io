@@ -103,12 +103,6 @@ const ContactPage: React.FC = () => {
                     United States
                   </p>
                 </div>
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
     <div className="min-h-screen bg-slate-50 py-16">
       <div className="container mx-auto px-4">
         <h1 className="text-4xl font-bold text-gray-900 mb-8 text-center">
@@ -138,7 +132,6 @@ const ContactPage: React.FC = () => {
               </div>
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">
->>>>>>> main
                   Message
                 </label>
                 <textarea
@@ -149,7 +142,6 @@ const ContactPage: React.FC = () => {
               <button
                 type="submit"
                 className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors"
->>>>>>> main
               >
                 Send Message
               </button>
@@ -184,7 +176,6 @@ const ContactPage: React.FC = () => {
               <div>
                 <h4 className="font-medium text-gray-900">Address</h4>
                 <p className="text-gray-600">
->>>>>>> main
                   Zion Tech Group<br />
                   364 E Main St STE 1008<br />
                   Middletown, DE 19709<br />
@@ -204,15 +195,7 @@ const ContactPage: React.FC = () => {
                   Zion Tech Group<br />
                   Wilmington, DE 19801<br />
                   United States
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
                 </p>
->>>>>>> main
               </div>
             </div>
           </div>
