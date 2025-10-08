@@ -1,0 +1,13 @@
+PR Merge Summary - Wed Oct  8 06:24:14 AM UTC 2025
+
+Successful Merges: 1
+PR #25821 - cursor/fix-errors-and-merge-to-main-8876
+
+Conflicted Merges: 0
+
+
+Failed Merges: 4
+PR #25824 - cursor/fix-errors-and-merge-to-main-ffbe (fetch failed)
+PR #25823 - cursor/fix-errors-and-merge-to-main-bf21 (fetch failed)
+PR #25822 - cursor/fix-errors-and-merge-to-main-a502 (fetch failed)
+PR #11935 - cursor/fix-web-application-console-errors-0bf5 (fetch failed)
