@@ -296,7 +296,6 @@ ${metrics.memoryUsage > 30 * 1024 * 1024 ? '- Review memory usage and optimize c
       document.head.appendChild(link);
     });
 
-<<<<<<< HEAD
     if (process.env.NODE_ENV === 'development') {
       console.log('Critical resource hints added');
     }
@@ -361,6 +360,15 @@ ${metrics.memoryUsage > 30 * 1024 * 1024 ? '- Review memory usage and optimize c
       console.log('Performance optimization completed');
       console.log(this.generateReport());
     }
+  }
+
+  /**
+   * Cleanup observers and resources
+   */
+  public cleanup(): void {
+    this.observers.forEach(observer => observer.disconnect());
+    this.observers = [];
+    this.isMonitoring = false;
   }
 }
 
