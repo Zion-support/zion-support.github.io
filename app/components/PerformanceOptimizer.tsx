@@ -47,13 +47,6 @@ const PerformanceOptimizerComponent: React.FC<PerformanceOptimizerProps> = ({
     } else {
       window.addEventListener('load', measurePerformance);
     }
-
-=======
-import React, { useEffect } from 'react';
-
-const PerformanceOptimizer: React.FC = () => {
-  useEffect(() => {
->>>>>>> cursor/analyze-improve-and-deploy-application-3d67
     // Preload critical resources
     const preloadCriticalResources = () => {
       const criticalImages = [
@@ -155,17 +148,6 @@ const PerformanceOptimizer: React.FC = () => {
   }, []);
 
   // Don't render anything visible
-=======
-    optimizeImages();
-    setupIntersectionObserver();
-
-    // Cleanup
-    return () => {
-      // Cleanup if needed
-    };
-  }, []);
-
->>>>>>> cursor/analyze-improve-and-deploy-application-3d67
   return null;
 };
 
