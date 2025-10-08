@@ -10,14 +10,6 @@ interface PerformanceMetrics {
 
 const PerformanceMonitor: React.FC = () => {
   useEffect(() => {
-<<<<<<< HEAD
-    const metrics: PerformanceMetrics = {
-      lcp: null,
-      fid: null,
-      cls: null,
-      fcp: null,
-      ttfb: null
-=======
     // const _reportWebVitals = (_metric: { name: string; value: number }) => {
     //   // Log to console in development (only on client side)
     //   if (typeof window !== 'undefined' && enableConsoleLogging) {
@@ -38,9 +30,7 @@ const PerformanceMonitor: React.FC = () => {
       if (metrics.renderTime > 1500) score -= 15;
       if (metrics.loadTime > 3000) score -= 20;
       if (metrics.memoryUsage > 50) score -= 10;
-      return Math.max(0, score);
->>>>>>> cursor/analyze-improve-and-deploy-application-1a78
-    };
+      return Math.max(0, score);    };
 
     // Measure Core Web Vitals
     const measureWebVitals = () => {
@@ -58,12 +48,6 @@ const PerformanceMonitor: React.FC = () => {
           console.warn('LCP observer not supported');
         }
 
-<<<<<<< HEAD
-        // FID - First Input Delay
-        const fidObserver = new PerformanceObserver((list) => {
-          list.getEntries().forEach((entry: any) => {
-            metrics.fid = entry.processingStart - entry.startTime;
-=======
       setMetrics(currentMetrics);
 
       const score = getPerformanceScore();
@@ -73,9 +57,7 @@ const PerformanceMonitor: React.FC = () => {
         if (typeof console !== 'undefined') {
           logger.debug('Performance Metrics', {
             metrics: currentMetrics,
-            score,
->>>>>>> cursor/analyze-improve-and-deploy-application-1a78
-          });
+            score,          });
         });
         
         try {
@@ -180,16 +162,8 @@ const PerformanceMonitor: React.FC = () => {
 
     monitorResources();
 
-<<<<<<< HEAD
-    return () => {
-      // Cleanup observers if needed
-    };
-  }, []);
-=======
     // Set up interval for continuous monitoring
     const interval = setInterval(updateMetrics, updateInterval);
->>>>>>> cursor/analyze-improve-and-deploy-application-1a78
-
   return null;
 };
 
