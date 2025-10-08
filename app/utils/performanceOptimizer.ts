@@ -124,38 +124,6 @@ class PerformanceOptimizer {
       this.observers.push(observer);
     } catch (error) {
       // PerformanceObserver may not support 'measure' entryType in some environments
-=======
-
-  /**
-   * Measure render time
-   */
-  private measureRenderTime(): void {
-    if (typeof window === 'undefined' || !window.performance) return;
-<<<<<<< HEAD
-    
-    // Check if PerformanceObserver exists (may not be available in test environments)
-    if (typeof PerformanceObserver === 'undefined') return;
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-e6a3
-
-    try {
-      const observer = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        entries.forEach((entry) => {
-          if (entry.entryType === 'measure') {
-            this.metrics.renderTime = entry.duration;
-          }
-        });
-      });
-<<<<<<< HEAD
-
-      observer.observe({ entryTypes: ['measure'] });
-    } catch (error) {
-      // PerformanceObserver may not support 'measure' entryType in some environments
-=======
-      observer.observe({ entryTypes: ['measure'] });
-      this.observers.push(observer);
-    } catch (error) {
       console.warn('Performance Observer not supported:', error);
     }
   }
@@ -247,8 +215,6 @@ class PerformanceOptimizer {
       if (memory) {
         this.metrics.memoryUsage = memory.usedJSHeapSize
       }
->>>>>>> cursor/fix-errors-and-merge-to-main-e6a3
->>>>>>> a7119bfa53804b6c6a2ba21def506372a6d54f84
     }
   }
 
