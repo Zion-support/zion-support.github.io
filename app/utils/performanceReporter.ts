@@ -3,7 +3,7 @@
  * Comprehensive performance monitoring and reporting
  */
 
-import { logger } from './logger';
+import { _logger} from './logger';
 
 export interface PerformanceMetric {
   name: string;
@@ -72,7 +72,7 @@ class PerformanceReporter {
 
     try {
       // Largest Contentful Paint (LCP)
-      const lcpObserver = new PerformanceObserver((entryList) => {
+      const lcpObserver = new PerformanceObserver((__entryList) => {
         const entries = entryList.getEntries();
         const lastEntry = entries[entries.length - 1];
         
@@ -85,9 +85,9 @@ class PerformanceReporter {
       lcpObserver.observe({ type: 'largest-contentful-paint', buffered: true });
 
       // First Input Delay (FID)
-      const fidObserver = new PerformanceObserver((entryList) => {
+      const fidObserver = new PerformanceObserver((__entryList) => {
         const entries = entryList.getEntries();
-        entries.forEach((entry) => {
+        entries.forEach((__entry) => {
           if ('processingStart' in entry && 'startTime' in entry) {
             const value = (entry as any).processingStart - entry.startTime;
             this.addMetric('FID', value, this.getRating('fid', value));
@@ -99,8 +99,8 @@ class PerformanceReporter {
 
       // Cumulative Layout Shift (CLS)
       let clsValue = 0;
-      const clsObserver = new PerformanceObserver((entryList) => {
-        entryList.getEntries().forEach((entry) => {
+      const clsObserver = new PerformanceObserver((__entryList) => {
+        entryList.getEntries().forEach((__entry) => {
           if ('value' in entry && !(entry as any).hadRecentInput) {
             clsValue += (entry as any).value;
           }
@@ -111,9 +111,9 @@ class PerformanceReporter {
       clsObserver.observe({ type: 'layout-shift', buffered: true });
 
       // First Contentful Paint (FCP)
-      const fcpObserver = new PerformanceObserver((entryList) => {
+      const fcpObserver = new PerformanceObserver((__entryList) => {
         const entries = entryList.getEntries();
-        entries.forEach((entry) => {
+        entries.forEach((__entry) => {
           if (entry.name === 'first-contentful-paint') {
             this.addMetric('FCP', entry.startTime, this.getRating('fcp', entry.startTime));
           }
@@ -170,11 +170,11 @@ class PerformanceReporter {
         
         // Find slowest resources
         const slowResources = resources
-          .filter((resource) => resource.duration > 1000)
-          .sort((a, b) => b.duration - a.duration)
+          .filter((__resource) => resource.duration > 1000)
+          .sort((__a, __b) => b.duration - a.duration)
           .slice(0, 10);
 
-        slowResources.forEach((resource) => {
+        slowResources.forEach((__resource) => {
           logger.warn('Slow resource detected', {
             name: resource.name,
             duration: resource.duration,

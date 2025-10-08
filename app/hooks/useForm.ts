@@ -4,13 +4,14 @@
  */
 
 import { useState, useCallback, ChangeEvent } from 'react';
-// import { logger } from '../utils/logger';
+import { _logger} from '../utils/logger';
 import {
   ValidationRule,
   validateField,
   validateForm,
   isFormValid,
   getFormErrors,
+  _ValidationResult
 } from '../utils/formValidation';
 
 export interface UseFormConfig<T extends Record<string, unknown>> {
@@ -39,7 +40,11 @@ export interface UseFormReturn<T extends Record<string, unknown>> {
 }
 
 export function useForm<T extends Record<string, unknown>>({
-  initialValues, validationSchema = {}, onSubmit: _onSubmit, validateOnChange = true, validateOnBlur = true
+  initialValues,
+  validationSchema = {},
+  onSubmit,
+  validateOnChange = true,
+  validateOnBlur = true
 }: UseFormConfig<T>): UseFormReturn<T> {
   const [values, setValues] = useState<T>(initialValues);
   const [errors, setErrors] = useState<Record<keyof T, string[]>>({} as Record<keyof T, string[]>);
@@ -124,7 +129,7 @@ export function useForm<T extends Record<string, unknown>>({
       e.preventDefault();
 
       // Mark all fields as touched
-      const allTouched = Object.keys(values).reduce((acc, key) => {
+      const allTouched = Object.keys(values).reduce((__acc, __key) => {
         acc[key as keyof T] = true;
         return acc;
       }, {} as Record<keyof T, boolean>);
@@ -140,14 +145,15 @@ export function useForm<T extends Record<string, unknown>>({
       setIsSubmitting(true);
 
       try {
-        await _onSubmit(values);
+        await onSubmit(values);
       } catch (error) {
-        console.error('Form submission error:', error);
+ 
+    console.error('Form submission error:', error);
       } finally {
         setIsSubmitting(false);
       }
     },
-    [values, validateAllFields, _onSubmit]
+    [values, validateAllFields, onSubmit]
   );
 
   // Set field value programmatically

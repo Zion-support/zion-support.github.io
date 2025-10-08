@@ -70,7 +70,7 @@ export class PerformanceOptimizer {
       return 0;
     }
     
-    const sum = metrics.reduce((acc, val) => acc + val, 0);
+    const sum = metrics.reduce((__acc, __val) => acc + val, 0);
     return sum / metrics.length;
   }
 
@@ -142,7 +142,7 @@ export class PerformanceOptimizer {
   getMetricsSummary(): Record<string, { avg: number; count: number }> {
     const summary: Record<string, { avg: number; count: number }> = {};
     
-    this.metrics.forEach((values, name) => {
+    this.metrics.forEach((__values, __name) => {
       summary[name] = {
         avg: this.getAverageMetric(name),
         count: values.length,

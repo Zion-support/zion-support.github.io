@@ -1,7 +1,7 @@
 // // 'use client'; // Removed for Vite compatibility // Removed for Vite compatibility
 
 import React, { useEffect, useState } from 'react';
-// import { logger as _logger } from '../utils/logger';
+import { _logger} from '../utils/logger';
 
 /**
  * PWA Installer Component
@@ -30,7 +30,7 @@ const PWAInstaller: React.FC = () => {
     if ('serviceWorker' in navigator && process.env['NODE_ENV'] === 'production') {
       navigator.serviceWorker
         .register('/service-worker.js')
-        .then((registration) => {
+        .then((__registration) => {
           // Service Worker registered
 
           // Check for updates periodically

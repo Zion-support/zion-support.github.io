@@ -4,8 +4,8 @@
  */
 
 import { useEffect, useCallback, useRef } from 'react';
-// import { logger as _logger } from '../utils/logger';
-// import { _performanceOptimizer } from '../utils/_performanceOptimizer';
+import { _logger} from '../utils/logger';
+import { _performanceOptimizer } from '../utils/_performanceOptimizer';
 import { errorTracker } from '../utils/enhancedErrorTracking';
 import { analytics } from '../utils/enhancedAnalytics';
 
@@ -16,13 +16,15 @@ export interface UseEnhancedPerformanceOptions {
   trackAnalytics?: boolean;
 }
 
-export function useEnhancedPerformance(_options: UseEnhancedPerformanceOptions = {}) {
+export function useEnhancedPerformance(
+  options: UseEnhancedPerformanceOptions = {}
+) {
   const {
     component = 'Unknown',
     trackErrors = true,
     trackPerformance = true,
     trackAnalytics = true,
-  } = _options;
+  } = options;
 
   const mountTimeRef = useRef<number>(0);
   const renderCountRef = useRef<number>(0);
@@ -64,7 +66,8 @@ export function useEnhancedPerformance(_options: UseEnhancedPerformanceOptions =
 
     if (trackPerformance && renderCountRef.current > 10) {
       // Many re-renders detected
-      console.warn(
+ 
+    console.warn(
         `Component ${component} has re-rendered ${renderCountRef.current} times`
       );
       analytics.trackCustomEvent(
@@ -91,7 +94,7 @@ export function useEnhancedPerformance(_options: UseEnhancedPerformanceOptions =
   const trackUserAction = useCallback(
     (action: string, metadata?: Record<string, unknown>) => {
       if (trackAnalytics) {
-        analytics.trackCustomEvent('User Action', action, component, undefined, metadata);
+        analytics.trackCustomEvent('User Action', action, component, undefined, __metadata);
       }
     },
     [component, trackAnalytics]
@@ -99,7 +102,7 @@ export function useEnhancedPerformance(_options: UseEnhancedPerformanceOptions =
 
   const measureOperation = useCallback(
     (operationName: string) => {
-      // const _markName = `${component}-${operationName}`;
+      const _markName = `${component}-${operationName}`;
       const startTime = performance.now();
 
       return {

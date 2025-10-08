@@ -152,7 +152,7 @@ class PerformanceOptimizer {
     try {
       const observer = new PerformanceObserver((list) => {
         const entries = list.getEntries();
-        entries.forEach((entry) => {
+        entries.forEach((entry: any) => {
           if (entry.name === 'first-contentful-paint') {
             this.metrics.fcp = entry.startTime;
           }

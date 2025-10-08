@@ -135,10 +135,10 @@ class SecurityEnhancer {
   }
 
   private monitorDOMManipulation(): void {
-    const observer = new MutationObserver((mutations) => {
-      mutations.forEach((mutation) => {
+    const observer = new MutationObserver((__mutations) => {
+      mutations.forEach((__mutation) => {
         if (mutation.type === 'childList') {
-          mutation.addedNodes.forEach((node) => {
+          mutation.addedNodes.forEach((__node) => {
             if (node.nodeType === Node.ELEMENT_NODE) {
               const element = node as Element;
               if (element.tagName === 'SCRIPT' && !element.getAttribute('src')) {
@@ -162,7 +162,7 @@ class SecurityEnhancer {
 
   private monitorNetworkRequests(): void {
     const originalFetch = window.fetch;
-    window.fetch = async (input, init) => {
+    window.fetch = async (__input, __init) => {
       const url = typeof input === 'string' ? input : input instanceof Request ? input.url : input.toString();
       
       // Check if request is to allowed origins
