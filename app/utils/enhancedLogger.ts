@@ -1,3 +1,4 @@
+import React from 'react';
 /**
  * Enhanced Logging Utility
  * 
@@ -363,9 +364,7 @@ export class EnhancedLogger {
           if (this.isDevelopment()) { logger.debug(message, structuredLog); }
           break;
         case LogLevel.INFO:
-          if (this.isDevelopment()) {  
-            console.info(message, structuredLog); 
-          }
+          if (this.isDevelopment()) { console.info(message, structuredLog); }
           break;
         case LogLevel.WARN:
           logger.warn(message, structuredLog);
@@ -385,9 +384,7 @@ export class EnhancedLogger {
           if (this.isDevelopment()) { logger.debug(message, entry.data); }
           break;
         case LogLevel.INFO:
-          if (this.isDevelopment()) {  
-            console.info(message, entry.data); 
-          }
+          if (this.isDevelopment()) { console.info(message, entry.data); }
           break;
         case LogLevel.WARN:
           logger.warn(message, entry.data);

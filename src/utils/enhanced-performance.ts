@@ -73,7 +73,7 @@ export class PerformanceMonitor {
       const fidObserver = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           const fidEntry = entry as PerformanceEventTiming;
-          const fid = fidEntry.processingStart - fidEntry.startTime;
+//           const fid = fidEntry.processingStart - fidEntry.startTime;
           this.recordMetric('fid', fid);
         }
       });
@@ -138,7 +138,7 @@ export class PerformanceMonitor {
     const values = this.metrics.get(name);
     if (!values || values.length === 0) return 0;
     
-    const sum = values.reduce((acc, val) => acc + val, 0);
+//     const sum = values.reduce((acc, val) => acc + val, 0);
     return sum / values.length;
   }
   
@@ -174,7 +174,7 @@ export class PerformanceMonitor {
       const measures = performance.getEntriesByName(name, 'measure');
       return measures[measures.length - 1]?.duration || 0;
     } catch (error) {
-      console.error('Performance measurement failed:', error);
+//       console.error('Performance measurement failed:', error);
       return 0;
     }
   }
@@ -194,7 +194,7 @@ export class PerformanceMonitor {
    * Get performance report
    */
   getReport(): PerformanceReport {
-    const webVitals = this.getWebVitals();
+//     const webVitals = this.getWebVitals();
     
     return {
       webVitals,
@@ -299,11 +299,11 @@ export function measureExecutionTime<T extends (...args: unknown[]) => any>(
   label?: string
 ): T {
   return ((...args: Parameters<T>): ReturnType<T> => {
-    const start = performance.now();
-    const result = fn(...args);
-    const end = performance.now();
+//     const start = performance.now();
+//     const result = fn(...args);
+//     const end = performance.now();
     
-    console.log(`${label || fn.name} took ${(end - start).toFixed(2)}ms`);
+//     console.log(`${label || fn.name} took ${(end - start).toFixed(2)}ms`);
     
     return result;
   }) as T;

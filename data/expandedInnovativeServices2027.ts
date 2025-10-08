@@ -1061,7 +1061,7 @@ export const getExpandedServicesBySubcategory = (subcategory: string): ExpandedS
 };
 // Helper function to search services
 export const searchExpandedServices = (query: string): ExpandedService2027[] =>;
-  const lowercaseQuery = query.toLowerCase();
+//   const lowercaseQuery = query.toLowerCase();
   return ALL_EXPANDED_SERVICES_2027.filter(service =>
     service.name.toLowerCase().includes(lowercaseQuery) ||
     service.description.toLowerCase().includes(lowercaseQuery) ||

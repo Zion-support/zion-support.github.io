@@ -42,10 +42,10 @@ export const accessibilityUtils = {
   // Color contrast checker
   checkColorContrast: (foreground, background) => {
     const getLuminance = color => {
-      const rgb = parseInt(color.replace('#', ''), 16);
+//       const rgb = parseInt(color.replace('#', ''), 16);
       const r = (rgb >> 16) & 0xff;
-      const g = (rgb >> 8) & 0xff;
-      const b = (rgb >> 0) & 0xff;
+//       const g = (rgb >> 8) & 0xff;
+//       const b = (rgb >> 0) & 0xff;
 
       const [rs, gs, bs] = [r, g, b].map(c => {
         c = c / 255;
@@ -55,9 +55,9 @@ export const accessibilityUtils = {
       return 0.2126 * rs + 0.7152 * gs + 0.0722 * bs;
     };
 
-    const l1 = getLuminance(foreground);
-    const l2 = getLuminance(background);
-    const ratio = (Math.max(l1, l2) + 0.05) / (Math.min(l1, l2) + 0.05);
+//     const l1 = getLuminance(foreground);
+//     const l2 = getLuminance(background);
+//     const ratio = (Math.max(l1, l2) + 0.05) / (Math.min(l1, l2) + 0.05);
 
     return {
       ratio,

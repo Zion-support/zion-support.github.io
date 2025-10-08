@@ -27,7 +27,7 @@ class DeploymentReadinessChecker {
   }
 
   log(message, color = 'reset') {
-    console.log(`${colors[color]}${message}${colors.reset}`);
+//     console.log(`${colors[color]}${message}${colors.reset}`);
   }
 
   addCheck(name, fn) {
@@ -81,8 +81,8 @@ class DeploymentReadinessChecker {
     this.log('📊 SUMMARY', 'blue');
     this.log('='.repeat(60), 'blue');
 
-    const totalChecks = this.checks.length;
-    const passed = totalChecks - this.failures.length - this.warnings.length;
+//     const totalChecks = this.checks.length;
+//     const passed = totalChecks - this.failures.length - this.warnings.length;
 
     this.log(`\nTotal Checks: ${totalChecks}`, 'cyan');
     this.log(`✅ Passed: ${passed}`, 'green');
@@ -122,7 +122,7 @@ function setupChecks(checker) {
   // Check 1: Package.json exists and is valid
   checker.addCheck('Package.json Validation', async () => {
     try {
-      const pkgPath = path.join(process.cwd(), 'package.json');
+//       const pkgPath = path.join(process.cwd(), 'package.json');
       const pkg = JSON.parse(fs.readFileSync(pkgPath, 'utf8'));
       
       if (!pkg.name || !pkg.version) {
@@ -202,7 +202,7 @@ function setupChecks(checker) {
     try {
       const result = execSync('pnpm test', { stdio: 'pipe' }).toString();
       const match = result.match(/(\d+) passed/);
-      const passedTests = match ? match[1] : '0';
+//       const passedTests = match ? match[1] : '0';
       return {
         success: true,
         message: `${passedTests} tests passed`
@@ -229,6 +229,7 @@ function setupChecks(checker) {
       }
       
       // Check dist size
+//       const stats = fs.statSync('dist');
       return {
         success: true,
         message: 'Build successful'
@@ -280,7 +281,7 @@ function setupChecks(checker) {
   // Check 9: Git status
   checker.addCheck('Git Status', async () => {
     try {
-      const status = execSync('git status --porcelain', { stdio: 'pipe' }).toString().trim();
+//       const status = execSync('git status --porcelain', { stdio: 'pipe' }).toString().trim();
       
       if (status) {
         return {
@@ -337,13 +338,13 @@ async function main() {
   const checker = new DeploymentReadinessChecker();
   setupChecks(checker);
   
-  const success = await checker.runAll();
+//   const success = await checker.runAll();
   
   process.exit(success ? 0 : 1);
 }
 
 // Run the checker
 main().catch(error => {
-  console.error('Fatal error:', error);
+//   console.error('Fatal error:', error);
   process.exit(1);
 });

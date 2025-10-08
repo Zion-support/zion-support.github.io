@@ -110,7 +110,7 @@ class AISecurityFramework
       request.credentials
     ),
     // 2. Context evaluation
-    const context = this.buildSecurityContext(request) identity);
+//     const context = this.buildSecurityContext(request) identity);
     // 3. Policy evaluation
     const decision = await this.accessControl.evaluate(identity,
       request.resource)
@@ -167,7 +167,7 @@ class SecureModelLoader
       throw new UnauthorizedError('Model access denied');
     }
     // Load encrypted model
-    const encryptedModel = await this.fetchEncryptedModel(modelId);
+//     const encryptedModel = await this.fetchEncryptedModel(modelId);
     // Decrypt in secure enclave
     const model = await this.encryptionService.decrypt(encryptedModel,
       this.getDerivedKey(requester) modelId)
@@ -251,7 +251,7 @@ class AIThreatDetector
       request.caller
     );
     // Monitor output for data leakage
-    const output = await this.executeInference(request);
+//     const output = await this.executeInference(request);
     const leakageRisk = this.detectDataLeakage(output)}
     // Aggregate risk scores
     const totalRisk = this.calculateRiskScore(input: inputAnalysis.risk)

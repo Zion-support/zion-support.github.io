@@ -1,3 +1,4 @@
+import React from 'react';
 /**
  * Performance Metrics Utility
  * Advanced performance tracking and monitoring for web applications
@@ -136,8 +137,7 @@ export class PerformanceMetrics {
         clsObserver.observe({ entryTypes: ['layout-shift'] });
         this.observers.push(clsObserver);
       } catch (error) {
- 
-    console.warn('Failed to initialize performance observers:', error);
+        console.warn('Failed to initialize performance observers:', error);
       }
     }
   }

@@ -1,5 +1,4 @@
-// // 'use client'; // Removed for Vite compatibility // Removed for Vite compatibility
-
+import React from 'react';
 interface PerformanceMetrics {
   lcp?: number;
   fid?: number;
@@ -7,7 +6,7 @@ interface PerformanceMetrics {
   fcp?: number;
   ttfb?: number;
   memory?: number;
-  navigation?: unknown;
+  navigation?: any;
 }
 
 interface PerformanceOptimizerConfig {
@@ -75,7 +74,11 @@ class PerformanceOptimizer {
     if ('measure' in performance && 'mark' in performance) {
       try {
         performance.measure(`${markName}-duration`, markName);
-      } catch (_error) {
+<<<<<<< HEAD
+      } catch (error) {
+=======
+      } catch {
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbf5
         // Ignore measure errors
       }
     }
@@ -95,7 +98,6 @@ class PerformanceOptimizer {
       this.observeTTFB();
       this.observeMemory();
     } catch (error) {
-       
       console.warn('Performance monitoring initialization failed:', error);
     }
   }
@@ -109,7 +111,11 @@ class PerformanceOptimizer {
       });
       observer.observe({ entryTypes: ['largest-contentful-paint'] });
       this.observers.push(observer);
-    } catch (_error) {
+<<<<<<< HEAD
+    } catch (error) {
+=======
+    } catch {
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbf5
       // Ignore if not supported
     }
   }
@@ -118,13 +124,19 @@ class PerformanceOptimizer {
     try {
       const observer = new PerformanceObserver((list) => {
         const entries = list.getEntries();
-        entries.forEach((entry: any) => {
-          this.metrics.fid = entry.processingStart - entry.startTime;
+        entries.forEach((entry) => {
+          if ('processingStart' in entry && 'startTime' in entry) {
+            this.metrics.fid = (entry as { processingStart: number; startTime: number }).processingStart - entry.startTime;
+          }
         });
       });
       observer.observe({ entryTypes: ['first-input'] });
       this.observers.push(observer);
-    } catch (_error) {
+<<<<<<< HEAD
+    } catch (error) {
+=======
+    } catch {
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbf5
       // Ignore if not supported
     }
   }
@@ -134,16 +146,23 @@ class PerformanceOptimizer {
       let clsValue = 0;
       const observer = new PerformanceObserver((list) => {
         const entries = list.getEntries();
-        entries.forEach((entry: any) => {
-          if (!entry.hadRecentInput) {
-            clsValue += entry.value;
+        entries.forEach((entry) => {
+          if ('hadRecentInput' in entry && 'value' in entry) {
+            const clsEntry = entry as { hadRecentInput: boolean; value: number };
+            if (!clsEntry.hadRecentInput) {
+              clsValue += clsEntry.value;
+            }
           }
         });
         this.metrics.cls = clsValue;
       });
       observer.observe({ entryTypes: ['layout-shift'] });
       this.observers.push(observer);
-    } catch (_error) {
+<<<<<<< HEAD
+    } catch (error) {
+=======
+    } catch {
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbf5
       // Ignore if not supported
     }
   }
@@ -160,7 +179,11 @@ class PerformanceOptimizer {
       });
       observer.observe({ entryTypes: ['paint'] });
       this.observers.push(observer);
-    } catch (_error) {
+<<<<<<< HEAD
+    } catch (error) {
+=======
+    } catch {
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbf5
       // Ignore if not supported
     }
   }
@@ -169,22 +192,29 @@ class PerformanceOptimizer {
     try {
       const observer = new PerformanceObserver((list) => {
         const entries = list.getEntries();
-        entries.forEach((entry: any) => {
-          if (entry.responseStart > 0) {
-            this.metrics.ttfb = entry.responseStart - entry.requestStart;
+        entries.forEach((entry) => {
+          if ('responseStart' in entry && 'requestStart' in entry) {
+            const navEntry = entry as { responseStart: number; requestStart: number };
+            if (navEntry.responseStart > 0) {
+              this.metrics.ttfb = navEntry.responseStart - navEntry.requestStart;
+            }
           }
         });
       });
       observer.observe({ entryTypes: ['navigation'] });
       this.observers.push(observer);
-    } catch (_error) {
+<<<<<<< HEAD
+    } catch (error) {
+=======
+    } catch {
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbf5
       // Ignore if not supported
     }
   }
 
   private observeMemory() {
     if ('memory' in performance) {
-      const memory = (performance as any).memory;
+      const memory = (performance as { memory: { usedJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
       this.metrics.memory = memory.usedJSHeapSize / memory.jsHeapSizeLimit;
     }
   }
@@ -246,11 +276,9 @@ class PerformanceOptimizer {
     window.addEventListener('load', () => {
       navigator.serviceWorker.register('/sw.js')
         .then((registration) => {
-           
           console.log('SW registered: ', registration);
         })
         .catch((registrationError) => {
-           
           console.log('SW registration failed: ', registrationError);
         });
     });
@@ -263,13 +291,13 @@ class PerformanceOptimizer {
   getNavigationMetrics() {
     if (typeof window === 'undefined') return null;
 
-    const navigation = performance.getEntriesByType('navigation')[0] as any;
+    const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
     if (!navigation) return null;
 
     return {
       domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
       loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
-      domInteractive: navigation.domInteractive - navigation.navigationStart,
+      domInteractive: navigation.domInteractive - navigation.fetchStart,
       redirect: navigation.redirectEnd - navigation.redirectStart,
       dns: navigation.domainLookupEnd - navigation.domainLookupStart,
       tcp: navigation.connectEnd - navigation.connectStart,

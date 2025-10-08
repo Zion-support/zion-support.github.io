@@ -1,4 +1,3 @@
-
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { Link } from 'react-router-dom';
 import { FileWarning } from 'lucide-react';
@@ -30,9 +29,8 @@ class ErrorBoundary extends Component<Props, State> {
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     // Log error to console in development
     if (process.env['NODE_ENV'] === 'development') {
-       
-       
-    console.error('ErrorBoundary caught an error:', error, errorInfo);
+      // eslint-disable-next-line no-console
+      console.error('ErrorBoundary caught an error:', error, errorInfo);
     }
 
     // Report error to monitoring service in production
@@ -53,9 +51,8 @@ class ErrorBoundary extends Component<Props, State> {
     }
 
     if (this.props.enableErrorReporting && process.env.NODE_ENV === 'development') {
-       
-       
-    console.error('Error caught by boundary:', error, errorInfo);
+      // eslint-disable-next-line no-console
+      console.error('Error caught by boundary:', error, errorInfo);
     }
   }
 
@@ -85,7 +82,7 @@ class ErrorBoundary extends Component<Props, State> {
                   Refresh Page
                 </button>
                 <Link
-                  to="/"
+                  href="/"
                   className="block w-full border-2 border-red-600 text-red-600 hover:bg-red-50 font-semibold py-3 px-6 rounded-lg transition-colors"
                 >
                   Go to Homepage

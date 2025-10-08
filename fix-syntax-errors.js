@@ -1,75 +1,114 @@
 #!/usr/bin/env node
 
 import fs from 'fs';
-import { execSync } from 'child_process';
+import { glob } from 'glob';
 
-// Get all files with syntax errors
-const files = execSync("find /workspace/app -name '*.tsx' -o -name '*.ts' | xargs grep -l '// Metadata moved to Helmet component'", { encoding: 'utf8' })
-  .trim()
-  .split('\n')
-  .filter(file => file.length > 0);
-
-console.log(`Found ${files.length} files with metadata syntax errors`);
-
-// Function to process a single file
-function processFile(filePath) {
+// Function to fix syntax errors in a file
+function fixSyntaxErrors(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
     
-    // Fix metadata object syntax errors
-    const metadataRegex = /\/\/ Metadata moved to Helmet component[\s\S]*?^};/gm;
-    content = content.replace(metadataRegex, '');
-    modified = true;
+    // Fix double brace imports
+    content = content.replace(/import\s*{\s*{\s*([^}]+)\s*}\s*}\s*from\s*['"]([^'"]+)['"];?/g, 'import { $1 } from \'$2\';');
     
-    // Fix any remaining syntax issues with metadata objects
-    const brokenMetadataRegex = /^[^/]*?title:[\s\S]*?^};/gm;
-    content = content.replace(brokenMetadataRegex, '');
-    
-    // Remove any remaining broken metadata lines
-    const lines = content.split('\n');
-    const filteredLines = [];
-    let skipUntilSemicolon = false;
-    
-    for (let i = 0; i < lines.length; i++) {
-      const line = lines[i];
-      
-      if (line.includes('title:') && !line.includes('//')) {
-        skipUntilSemicolon = true;
-        continue;
+    // Fix malformed imports with extra braces
+    content = content.replace(/import\s*{\s*([^}]+)\s*}\s*from\s*['"]([^'"]+)['"];?\s*import\s*{\s*([^}]+)\s*}\s*from\s*['"]([^'"]+)['"];?/g, (match, imports1, module1, imports2, module2) => {
+      if (module1 === module2) {
+        return `import { ${imports1}, ${imports2} } from '${module1}';`;
+      } else {
+        return `import { ${imports1} } from '${module1}';\nimport { ${imports2} } from '${module2}';`;
       }
-      
-      if (skipUntilSemicolon && line.trim() === '};') {
-        skipUntilSemicolon = false;
-        continue;
-      }
-      
-      if (!skipUntilSemicolon) {
-        filteredLines.push(line);
-      }
-    }
+    });
     
-    const newContent = filteredLines.join('\n');
+    // Fix empty imports
+    content = content.replace(/import\s*{\s*}\s*from\s*['"][^'"]+['"];?\s*\n/g, '');
     
-    if (newContent !== content) {
-      fs.writeFileSync(filePath, newContent);
-      console.log(`✓ Fixed: ${filePath}`);
+    // Fix malformed metadata exports
+    content = content.replace(/\/\/ Metadata moved to Helmet component\s*([^}]+)\s*};/g, '');
+    
+    // Fix malformed function declarations
+    content = content.replace(/export\s+default\s+function\s+([^(]+)\s*\(\s*\)\s*{\s*return\s*\(\s*<>\s*<Helmet>\s*([^<]+)\s*<\/Helmet>/g, (match, funcName, helmetContent) => {
+      return `export default function ${funcName}() {\n  return (\n    <>\n      <Helmet>\n        ${helmetContent}\n      </Helmet>`;
+    });
+    
+    // Fix missing semicolons and brackets
+    content = content.replace(/([^;}])\s*$/gm, '$1;');
+    
+    // Clean up excessive whitespace
+    content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
+    
+    // Fix React import issues
+    content = content.replace(/import\s*{\s*React\s*,\s*([^}]+)\s*}\s*from\s*['"]react['"];?/g, 'import React, { $1 } from \'react\';');
+    
+    // Fix Helmet import issues
+    content = content.replace(/import\s*{\s*Helmet\s*}\s*from\s*['"]react-helmet-async['"];?/g, 'import { Helmet } from \'react-helmet-async\';');
+    
+    // Fix Router import issues
+    content = content.replace(/import\s*{\s*([^}]+)\s*}\s*from\s*['"]react-router-dom['"];?/g, 'import { $1 } from \'react-router-dom\';');
+    
+    if (content !== fs.readFileSync(filePath, 'utf8')) {
+      fs.writeFileSync(filePath, content);
+      console.log(`✅ Fixed syntax errors in: ${filePath}`);
       return true;
     }
     
     return false;
   } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
+    console.error(`❌ Error fixing ${filePath}:`, error.message);
     return false;
   }
 }
 
-// Process all files
-let fixedCount = 0;
-files.forEach(file => {
-  if (processFile(file)) {
-    fixedCount++;
+// Main execution
+async function main() {
+  console.log('🔧 Fixing syntax errors in converted files...\n');
+  
+  const patterns = [
+    'app/**/*.tsx',
+    'app/**/*.ts'
+  ];
+  
+  let totalFiles = 0;
+  let fixedFiles = 0;
+  
+  for (const pattern of patterns) {
+    const files = await glob(pattern, { 
+      cwd: process.cwd(),
+      ignore: [
+        '**/node_modules/**',
+        '**/dist/**',
+        '**/build/**',
+        '**/*.disabled/**',
+        '**/*backup*/**',
+        '**/*corrupted*/**',
+        '**/*temp*/**',
+        '**/*.broken/**'
+      ]
+    });
+    
+    for (const file of files) {
+      totalFiles++;
+      if (fixSyntaxErrors(file)) {
+        fixedFiles++;
+      }
+    }
   }
-});
+  
+  console.log(`\n📊 Summary:`);
+  console.log(`   Total files processed: ${totalFiles}`);
+  console.log(`   Files fixed: ${fixedFiles}`);
+  console.log(`   Files unchanged: ${totalFiles - fixedFiles}`);
+  
+  if (fixedFiles > 0) {
+    console.log('\n✨ Syntax error fixes completed!');
+  } else {
+    console.log('\n✅ No syntax errors found.');
+  }
+}
 
-console.log(`\nFixed ${fixedCount} out of ${files.length} files`);
+if (import.meta.url === `file://${process.argv[1]}`) {
+  main();
+}
+
+export { fixSyntaxErrors };

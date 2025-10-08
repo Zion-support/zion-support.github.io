@@ -131,11 +131,11 @@ class Analytics {
 
   private sendEvent(event: AnalyticsEvent): void {
     // In a real implementation, this would send the event to your analytics service
-    console.log('Analytics Event:', event);
+//     console.log('Analytics Event:', event);
   }
 }
 
 // Create singleton instance
-const analytics = new Analytics();
+// const analytics = new Analytics();
 
 export default analytics;

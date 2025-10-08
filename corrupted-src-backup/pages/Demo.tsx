@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import {
   Calendar,
   Clock,
-  User,
   Mail,
   Phone,
   CheckCircle,
@@ -26,7 +25,7 @@ const Demo: React.FC = () => {
     }));
   };
     // Handle form submission
-    console.log('Form submitted:', formData);
+//     console.log('Form submitted:', formData);
   };
   return (
     <div className='min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100'>

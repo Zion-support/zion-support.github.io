@@ -1,7 +1,9 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const AIEnterpriseTransformationPage: React.FC = () => {
+
+const Page: React.FC = () => {
+
   return (
 
     <>
@@ -112,16 +114,14 @@ const AIEnterpriseTransformationPage: React.FC = () => {
                 Join Fortune 500 companies achieving breakthrough results through strategic AI transformation
               </p>
               <div className="space-x-4">
-                <a 
-                  href="/contact"
+                <Link to="/contact"
                   className="inline-block bg-indigo-600 text-white px-6 py-3 rounded-lg hover:bg-indigo-700 transition-colors">
                   Get Transformation Assessment
-                </a>
-                <a 
-                  href="/services"
+                </Link>
+                <Link to="/services"
                   className="inline-block bg-white text-indigo-600 px-6 py-3 rounded-lg border-2 border-indigo-600 hover:bg-indigo-50 transition-colors">
                   Explore AI Services
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -130,6 +130,4 @@ const AIEnterpriseTransformationPage: React.FC = () => {
     </div>
     </>
   );
-};
-
-export default AIEnterpriseTransformationPage;
+}

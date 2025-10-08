@@ -1,3 +1,4 @@
+import React from 'react';
 /**
  * Advanced Caching Utility
  * Provides intelligent caching with TTL, LRU eviction, and storage options
@@ -59,8 +60,7 @@ class AdvancedCache<T = unknown> {
         this.accessOrder = parsed.accessOrder || [];
       }
     } catch (error) {
- 
-    console.warn('Failed to load cache from storage:', error);
+      console.warn('Failed to load cache from storage:', error);
     }
   }
 
@@ -75,8 +75,7 @@ class AdvancedCache<T = unknown> {
       };
       storage?.setItem(this.storageKey, JSON.stringify(data));
     } catch (error) {
- 
-    console.warn('Failed to save cache to storage:', error);
+      console.warn('Failed to save cache to storage:', error);
     }
   }
 

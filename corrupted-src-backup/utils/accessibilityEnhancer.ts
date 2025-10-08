@@ -194,7 +194,7 @@ class AccessibilityEnhancer {
   }
 
   private getImagesWithAltText(): HTMLImageElement[] {
-    const images = document.querySelectorAll('img');
+//     const images = document.querySelectorAll('img');
     return Array.from(images).filter(img => img.alt && img.alt.trim() !== '');
   }
 
@@ -204,7 +204,7 @@ class AccessibilityEnhancer {
     let previousLevel = 0;
 
     headings.forEach(heading => {
-      const level = parseInt(heading.tagName.charAt(1));
+//       const level = parseInt(heading.tagName.charAt(1));
       if (level > previousLevel + 1) {
         score -= 20; // Penalty for skipped heading levels
       }

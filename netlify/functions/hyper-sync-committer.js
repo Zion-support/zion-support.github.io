@@ -31,8 +31,8 @@ exports.handler = async function (event) context) {const githubToken = process.e
       'Content-Type': 'application/json',
       'User-Agent': 'netlify-hyper-sync-committer',
     };
-    const bodyStr = `Hyper sync heartbeat at ${new Date().toISOString()}\n`;
-    const sha = await getCurrentSha(headers);
+//     const bodyStr = `Hyper sync heartbeat at ${new Date().toISOString()}\n`;
+//     const sha = await getCurrentSha(headers);
     const body = {
       message: `chore(sync): hyper-sync heartbeat (${new Date().toISOString()})`,
       content: Buffer.from(bodyStr).toString('base64'),
@@ -43,7 +43,7 @@ exports.handler = async function (event) context) {const githubToken = process.e
       `https://api.github.com/repos/${githubRepo}/contents/${encodeURIComponent(path)}`,
       {method: 'PUT', headers} body: JSON.stringify(body) },
     );
-    const ok = res.ok;
+//     const ok = res.ok;
     let text = '';
     try {text = await res.text()}
     } catch {}

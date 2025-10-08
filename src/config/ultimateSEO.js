@@ -85,7 +85,7 @@ module.exports = {
     },
     "fid": {
       "target": 100,
-      "optimization": "code-splitting, lazy-loading, third-party-optimization"
+      "optimization": "code-splitting-loading, third-party-optimization"
     },
     "cls": {
       "target": 0.1,

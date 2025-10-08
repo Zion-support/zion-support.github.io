@@ -1,8 +1,7 @@
-// // 'use client'; // Removed for Vite compatibility // Removed for Vite compatibility
-
 import React, { useEffect, useState, useCallback } from 'react';
 
-interface PerformanceMetrics {
+
+import { Link } from 'react-router-dom';interface PerformanceMetrics {
   fcp: number | null;
   lcp: number | null;
   fid: number | null;
@@ -49,8 +48,8 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         });
         lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
         observers.push(lcpObserver);
-      } catch {
-        // LCP observer not supported
+      } catch (error) {
+        console.warn('LCP observer not supported:', error);
       }
     }
 
@@ -75,8 +74,8 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         });
         fidObserver.observe({ entryTypes: ['first-input'] });
         observers.push(fidObserver);
-      } catch {
-        // FID observer not supported
+      } catch (error) {
+        console.warn('FID observer not supported:', error);
       }
     }
 
@@ -102,8 +101,8 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         });
         clsObserver.observe({ entryTypes: ['layout-shift'] });
         observers.push(clsObserver);
-      } catch {
-        // CLS observer not supported
+      } catch (error) {
+        console.warn('CLS observer not supported:', error);
       }
     }
 
@@ -126,8 +125,8 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         ttfb,
         memory,
       }));
-    } catch {
-      // Performance measurement failed
+    } catch (error) {
+      console.warn('Performance measurement failed:', error);
     }
 
     // Cleanup observers
@@ -135,8 +134,8 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       observers.forEach(observer => {
         try {
           observer.disconnect();
-        } catch {
-          // Error disconnecting observer
+        } catch (error) {
+          console.warn('Error disconnecting observer:', error);
         }
       });
     };
@@ -151,13 +150,15 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     );
 
     if (slowResources.length > 0) {
-      // Slow resources detected - could be logged to monitoring service
-      // const _slowResourceData = slowResources.map((r: PerformanceResourceTiming) => ({
-      //   name: r.name,
-      //   duration: r.duration,
-      //   size: r.transferSize,
-      // }));
-      // Could send to monitoring service here
+      // eslint-disable-next-line no-console
+      console.warn(
+        'Slow resources detected:',
+        slowResources.map((r: PerformanceResourceTiming) => ({
+          name: r.name,
+          duration: r.duration,
+          size: r.transferSize,
+        }))
+      );
     }
   }, []);
 

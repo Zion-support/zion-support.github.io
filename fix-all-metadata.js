@@ -16,7 +16,7 @@ const filesToFix = [
   '/workspace/app/terms/page.tsx'
 ];
 
-console.log(`Fixing ${filesToFix.length} files`);
+// console.log(`Fixing ${filesToFix.length} files`);
 
 // Function to process a single file
 function processFile(filePath) {
@@ -89,7 +89,7 @@ function processFile(filePath) {
     
     // Add proper export at the end if missing
     if (!content.includes('export default') && content.includes('const ')) {
-      const componentName = content.match(/const (\w+): React\.FC/)?.[1];
+//       const componentName = content.match(/const (\w+): React\.FC/)?.[1];
       if (componentName) {
         content = content.replace(/^\s*}\s*$/, `  );\n};\n\nexport default ${componentName};`);
         modified = true;
@@ -98,7 +98,7 @@ function processFile(filePath) {
     
     // Update Helmet with extracted metadata
     if (metadata.title || metadata.description) {
-      const helmetMatch = content.match(/(<Helmet>[\s\S]*?<\/Helmet>)/);
+//       const helmetMatch = content.match(/(<Helmet>[\s\S]*?<\/Helmet>)/);
       if (helmetMatch) {
         const newHelmet = `<Helmet>
         <title>${metadata.title || 'Zion Tech Group'}</title>
@@ -114,13 +114,13 @@ function processFile(filePath) {
     
     if (modified || content !== fs.readFileSync(filePath, 'utf8')) {
       fs.writeFileSync(filePath, content);
-      console.log(`✓ Fixed: ${filePath}`);
+//       console.log(`✓ Fixed: ${filePath}`);
       return true;
     }
     
     return false;
   } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
+//     console.error(`Error processing ${filePath}:`, error.message);
     return false;
   }
 }
@@ -133,4 +133,4 @@ filesToFix.forEach(file => {
   }
 });
 
-console.log(`\nFixed ${fixedCount} out of ${filesToFix.length} files`);
+// console.log(`\nFixed ${fixedCount} out of ${filesToFix.length} files`);

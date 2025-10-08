@@ -1,5 +1,3 @@
-// // 'use client'; // Removed for Vite compatibility // Removed for Vite compatibility
-
 import { useEffect, useCallback } from 'react';
 import { useAnalytics } from '../components/AnalyticsProvider';
 

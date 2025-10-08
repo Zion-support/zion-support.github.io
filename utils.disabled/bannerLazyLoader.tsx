@@ -8,7 +8,7 @@
  * Get banner priority based on content date and value
  */
 
-import React, { lazy, ComponentType, Suspense, useState, useEffect } from 'react';
+import React, { ComponentType, Suspense, useState, useEffect } from 'react';
 
 interface LazyBannerProps {
   importPath: string;
@@ -81,7 +81,7 @@ export class BannerObserver {
       this.observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
-            const bannerId = entry.target.getAttribute('data-banner-id');
+//             const bannerId = entry.target.getAttribute('data-banner-id');
             if (bannerId && !this.loadedBanners.has(bannerId)) {
               this.loadedBanners.add(bannerId);
               this.onBannerVisible(bannerId);

@@ -1,8 +1,7 @@
-'use client';
-
 import React, { useState, useEffect } from 'react';
 
-interface PerformanceMetrics {
+
+import { Link } from 'react-router-dom';interface PerformanceMetrics {
   loadTime: number;
   renderTime: number;
   memoryUsage: number;
@@ -29,22 +28,12 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   const [performanceScore, setPerformanceScore] = useState(100);
 
   useEffect(() => {
-<<<<<<< HEAD
-    // const reportWebVitals = (metric: { name: string; value: number }) => {
-    //   // Log to console in development (only on client side)
-    //   if (typeof window !== 'undefined' && enableConsoleLogging) {
-    //     console.log('Web Vital:', metric.name, metric.value);
-    //   }
-    // };
-=======
-    const _reportWebVitals = (metric: { name: string; value: number }) => {
+    const reportWebVitals = (metric: { name: string; value: number }) => {
       // Log to console in development (only on client side)
       if (typeof window !== 'undefined' && enableConsoleLogging) {
-         
-    console.log('Web Vital:', metric.name, metric.value);
+        console.log('Web Vital:', metric.name, metric.value);
       }
     };
->>>>>>> cursor/fix-errors-and-merge-to-main-7716
 
     // Monitor Core Web Vitals
     const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming | undefined;
@@ -74,10 +63,8 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       if (enableConsoleLogging) {
         if (typeof console !== 'undefined') {
           console.group('Performance Metrics');
-           
-    console.debug('Metrics', { metrics: currentMetrics });
-           
-    console.debug('Score', { score });
+          console.debug('Metrics', { metrics: currentMetrics });
+          console.debug('Score', { score });
           console.groupEnd();
         }
       }

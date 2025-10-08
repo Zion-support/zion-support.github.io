@@ -111,7 +111,8 @@ const UltimateBusinessIntelligenceShowcase2025: React.FC = () => {
               with our advanced business intelligence solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <Link to="/contact"
+              <Link 
+                href="/contact"
                 className="inline-flex items-center px-12 py-6 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-bold text-xl rounded-2xl hover:from-blue-700 hover:to-indigo-700 transition-all duration-300 transform hover:scale-105 shadow-2xl"
               >
                 Start Your Transformation
@@ -119,7 +120,8 @@ const UltimateBusinessIntelligenceShowcase2025: React.FC = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
               </Link>
-              <Link to="/services"
+              <Link 
+                href="/services"
                 className="inline-flex items-center px-12 py-6 border-2 border-blue-400 text-blue-300 font-bold text-xl rounded-2xl hover:bg-blue-400/10 transition-all duration-300"
               >
                 Learn More

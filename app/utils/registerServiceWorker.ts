@@ -1,3 +1,4 @@
+import React from 'react';
 /**
  * Service Worker Registration Utility
  */
@@ -16,17 +17,25 @@ export async function registerServiceWorker(
 ): Promise<ServiceWorkerRegistration | undefined> {
   // Check if service workers are supported
   if (typeof window === 'undefined' || !('serviceWorker' in navigator)) {
- 
     console.log('[SW] Service Workers not supported');
     return;
   }
 
   // Only register in production or if explicitly enabled
-  const _isLocalhost = Boolean(
+<<<<<<< HEAD
+  const isLocalhost = Boolean(
     window.location.hostname === 'localhost' ||
       window.location.hostname === '[::1]' ||
       window.location.hostname.match(/^127(?:\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$/)
   );
+
+=======
+  // const isLocalhost = Boolean(
+  //   window.location.hostname === 'localhost' ||
+  //     window.location.hostname === '[::1]' ||
+  //     window.location.hostname.match(/^127(?:\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$/)
+  // );
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbf5
   try {
     // Wait for page to load
     await new Promise<void>((resolve) => {
@@ -37,14 +46,12 @@ export async function registerServiceWorker(
       }
     });
 
-     
     console.log('[SW] Registering service worker...');
 
     const registration = await navigator.serviceWorker.register('/service-worker.js', {
       scope: '/',
     });
 
-     
     console.log('[SW] Service worker registered:', registration);
 
     // Handle updates
@@ -57,16 +64,14 @@ export async function registerServiceWorker(
         if (installingWorker.state === 'installed') {
           if (navigator.serviceWorker.controller) {
             // New update available
- 
-    console.log('[SW] New content available; please refresh.');
+            console.log('[SW] New content available; please refresh.');
             
             if (config.onUpdate) {
               config.onUpdate(registration);
             }
           } else {
             // Content cached for offline use
- 
-    console.log('[SW] Content cached for offline use.');
+            console.log('[SW] Content cached for offline use.');
             
             if (config.onSuccess) {
               config.onSuccess(registration);
@@ -78,7 +83,6 @@ export async function registerServiceWorker(
 
     return registration;
   } catch (error) {
- 
     console.error('[SW] Registration failed:', error);
     
     if (config.onError && error instanceof Error) {
@@ -98,11 +102,9 @@ export async function unregisterServiceWorker(): Promise<boolean> {
   try {
     const registration = await navigator.serviceWorker.ready;
     const result = await registration.unregister();
- 
     console.log('[SW] Service worker unregistered:', result);
     return result;
   } catch (error) {
-     
     console.error('[SW] Unregistration failed:', error);
     return false;
   }
@@ -119,10 +121,8 @@ export async function checkForUpdates(): Promise<void> {
   try {
     const registration = await navigator.serviceWorker.ready;
     await registration.update();
- 
     console.log('[SW] Update check completed');
   } catch (error) {
-     
     console.error('[SW] Update check failed:', error);
   }
 }
@@ -147,8 +147,7 @@ export function clearCaches(): void {
   }
 
   navigator.serviceWorker.controller.postMessage({ action: 'clearCache' });
- 
-    console.log('[SW] Cache clear requested');
+  console.log('[SW] Cache clear requested');
 }
 
 /**

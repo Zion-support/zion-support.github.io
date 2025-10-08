@@ -1,3 +1,4 @@
+import React from 'react';
 /**
  * Advanced Analytics System for Zion Tech Group Website
  * Provides comprehensive user behavior tracking and insights
@@ -14,7 +15,7 @@ interface UserEvent {
   sessionId: string;
   userId?: string;
   url: string;
-  metadata?: Record<string, any>;
+  metadata?: Record<string, unknown>;
 }
 
 interface UserSession {
@@ -401,8 +402,7 @@ class AdvancedAnalytics {
         body: JSON.stringify(event)
       });
     } catch (error) {
- 
-    console.warn('Failed to send analytics event:', error);
+      console.warn('Failed to send analytics event:', error);
     }
   }
 
@@ -592,8 +592,7 @@ class AdvancedAnalytics {
         body: JSON.stringify(session)
       });
     } catch (error) {
- 
-    console.warn('Failed to send session data:', error);
+      console.warn('Failed to send session data:', error);
     }
   }
 

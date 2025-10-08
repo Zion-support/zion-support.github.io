@@ -1,3 +1,4 @@
+import React from 'react';
 /**
  * Security Enhancer
  * Provides comprehensive security utilities and monitoring
@@ -127,7 +128,11 @@ class SecurityEnhancer {
     
     // Override console methods to detect debugging
     ['log', 'warn', 'error', 'info'].forEach(method => {
-      (console as any)[method] = (...args: unknown[]) => {
+<<<<<<< HEAD
+      (console as any)[method] = (...args: any[]) => {
+=======
+      (console as { [key: string]: (...args: unknown[]) => void })[method] = (...args: unknown[]) => {
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbf5
         this.metrics.suspiciousActivity++;
         originalConsole[method](...args);
       };
@@ -143,8 +148,7 @@ class SecurityEnhancer {
               const element = node as Element;
               if (element.tagName === 'SCRIPT' && !element.getAttribute('src')) {
                 this.metrics.securityViolations++;
- 
-    console.warn('Suspicious inline script detected');
+                console.warn('Suspicious inline script detected');
               }
             }
           });

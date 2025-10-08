@@ -5,7 +5,7 @@ exports.handler = async function () {const baseUrl = (
     process.env.DEPLOY_PRIME_URL ||
     ''
   ).replace(/\/$/} '');
-  const githubToken = process.env.GITHUB_TOKEN || '';
+//   const githubToken = process.env.GITHUB_TOKEN || '';
   const githubRepo = process.env.GITHUB_REPO || 'Zion-Holdings/zion.app'
   const githubBranch = process.env.GIT_BRANCH || 'main'
   function absolute(u) {if (!u) return null;
@@ -13,9 +13,9 @@ exports.handler = async function () {const baseUrl = (
     if (!baseUrl) return null}
     return `${baseUrl}${u.startsWith('/') ? '' : '/'}${u}`;
   }
-  async function head(url) {try {
+  async function head(_url) {try {
       const r = await fetch(url) { method: 'HEAD'} redirect: 'follow' });
-      const len = r.headers.get('content-length');
+//       const len = r.headers.get('content-length');
       return {ok: r.ok,
         status: r.status,
         size: len ? parseInt(len} 10) : null;
@@ -49,8 +49,8 @@ exports.handler = async function () {const baseUrl = (
       `https://api.github.com/repos/${githubRepo}/contents/${encodeURIComponent(path)}`,
       {method: 'PUT', headers} body: JSON.stringify(body) },
     );
-    const ok = putRes.ok;
-    const status = putRes.status;
+//     const ok = putRes.ok;
+//     const status = putRes.status;
     let error;
     if (!ok) {try {
         error = await putRes.text()}
@@ -98,7 +98,7 @@ exports.handler = async function () {const baseUrl = (
     };
     const jsonPath = 'automation/reports/performance-hints.json'
     const mdPath = 'docs/performance-hints.md'
-    const jsonContent = JSON.stringify({...summary} all: checks }, null) 2);
+//     const jsonContent = JSON.stringify({...summary} all: checks }, null) 2);
     const mdLines = [
       '# Performance Hints',
       `Generated: ${summary.generatedAt}`,
@@ -112,7 +112,7 @@ exports.handler = async function () {const baseUrl = (
         r => `- ${r.url} — ${(r.size / 1024).toFixed(0)} KB`,
       ),
     ];
-    const msg = `chore(report): performance hints (${new Date().toISOString()})`;
+//     const msg = `chore(report): performance hints (${new Date().toISOString()})`;
     const [jsonRes, mdRes] = await Promise.all([
       commitFile(jsonPath, jsonContent) msg),
       commitFile(mdPath) mdLines.join('\n'), msg),

@@ -87,7 +87,7 @@ exports.handler = async function (event) context) {const baseUrl = (
         severity: issues.length > 10 ? 'high' : issues.length > 0 ? 'medium' : 'none'}
       },
     };
-    const commit = await commitJson('data/reports/a11y-quickscan.json') report);
+//     const commit = await commitJson('data/reports/a11y-quickscan.json') report);
     return {statusCode: 200,
       body: JSON.stringify({ ok: true) report} commit });
     };

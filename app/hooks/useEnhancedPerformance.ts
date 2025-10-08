@@ -3,14 +3,9 @@
  * Combines performance monitoring, error tracking, and analytics
  */
 
+import React from 'react';
 import { useEffect, useCallback, useRef } from 'react';
-<<<<<<< HEAD
-// import { logger } from '../utils/logger';
-// import { _performanceOptimizer } from '../utils/_performanceOptimizer';
-=======
-import { logger as _logger } from '../utils/logger';
-import { _performanceOptimizer } from '../utils/_performanceOptimizer';
->>>>>>> cursor/fix-errors-and-merge-to-main-7716
+import { performanceOptimizer } from '../utils/performanceOptimizer';
 import { errorTracker } from '../utils/enhancedErrorTracking';
 import { analytics } from '../utils/enhancedAnalytics';
 
@@ -21,7 +16,9 @@ export interface UseEnhancedPerformanceOptions {
   trackAnalytics?: boolean;
 }
 
-export function useEnhancedPerformance(_options: UseEnhancedPerformanceOptions = {}) {
+export function useEnhancedPerformance(
+  options: UseEnhancedPerformanceOptions = {}
+) {
   const {
     component = 'Unknown',
     trackErrors = true,
@@ -104,7 +101,7 @@ export function useEnhancedPerformance(_options: UseEnhancedPerformanceOptions =
 
   const measureOperation = useCallback(
     (operationName: string) => {
-      // const _markName = `${component}-${operationName}`;
+      const markName = `${component}-${operationName}`;
       const startTime = performance.now();
 
       return {

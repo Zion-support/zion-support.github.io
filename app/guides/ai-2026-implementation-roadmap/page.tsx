@@ -1,27 +1,21 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { ArrowLeft, Calendar, User, Clock, Tag, ArrowRight } from 'lucide-react';
+import { ArrowLeft, Calendar, User, Clock, Tag, Target, CheckCircle, ArrowRight } from 'lucide-react';
 
-const _AI2026ImplementationRoadmap: React.FC = () => {
+export const metadata = {
+  title: 'AI 2026 Implementation Roadmap: Complete Guide to Enterprise AI Transformation',
+  description: 'Master the art of AI implementation with our comprehensive 2026 roadmap. From strategy development to full-scale deployment, learn how to successfully transform your enterprise.',
+  keywords: 'AI Implementation, Enterprise AI, Digital Transformation, AI Strategy, 2026 Roadmap, Implementation Guide',
+};
+
+export default function AI2026ImplementationRoadmap() {
   return (
-
-    <>
-
-      <Helmet>
-
-        <title>Zion Tech Group</title>
-
-        <meta name="description" content="Advanced AI and IT Solutions" />
-
-      </Helmet>
-
-      <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white">
       {/* Header */}
       <header className="bg-white border-b border-gray-200">
         <div className="max-w-4xl mx-auto px-4 py-6">
           <Link 
-            to="/"
+            href="/"
             className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors"
           >
             <ArrowLeft className="w-4 h-4 mr-2" />
@@ -376,14 +370,14 @@ const _AI2026ImplementationRoadmap: React.FC = () => {
             </p>
             <div className="flex flex-wrap gap-4">
               <Link 
-                to="/case-studies/fortune-500-ai-transformation-success"
+                href="/case-studies/fortune-500-ai-transformation-success"
                 className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
               >
                 View Success Stories
                 <ArrowRight className="w-4 h-4 ml-2" />
               </Link>
               <Link 
-                to="/tools/ai-roi-calculator"
+                href="/tools/ai-roi-calculator"
                 className="inline-flex items-center px-6 py-3 bg-white text-blue-600 border border-blue-600 rounded-lg hover:bg-blue-50 transition-colors"
               >
                 Calculate Your ROI
@@ -394,6 +388,5 @@ const _AI2026ImplementationRoadmap: React.FC = () => {
         </div>
       </article>
     </div>
-    </>
   );
 }

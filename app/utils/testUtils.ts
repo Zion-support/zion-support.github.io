@@ -1,3 +1,4 @@
+import React from 'react';
 /**
  * Testing Utilities
  * Provides helper functions and utilities for testing
@@ -211,17 +212,14 @@ export class ConsoleSpy {
   }
 
   private mock(): void {
-     
     console.log = (...args: unknown[]) => {
       this.logs.push(args.map(String).join(' '));
     };
 
-     
     console.error = (...args: unknown[]) => {
       this.errors.push(args.map(String).join(' '));
     };
 
-     
     console.warn = (...args: unknown[]) => {
       this.warnings.push(args.map(String).join(' '));
     };
@@ -240,11 +238,8 @@ export class ConsoleSpy {
   }
 
   restore(): void {
-     
     console.log = this.originalConsole.log;
-     
     console.error = this.originalConsole.error;
-     
     console.warn = this.originalConsole.warn;
   }
 

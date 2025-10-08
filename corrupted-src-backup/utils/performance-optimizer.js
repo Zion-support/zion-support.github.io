@@ -87,10 +87,10 @@ class PerformanceOptimizer {
       navigator.serviceWorker
         .register('/sw.js')
         .then(registration => {
-          console.log('SW registered: ', registration);
+//           console.log('SW registered: ', registration);
         })
         .catch(registrationError => {
-          console.log('SW registration failed: ', registrationError);
+//           console.log('SW registration failed: ', registrationError);
         });
     }
   }
@@ -183,12 +183,12 @@ class PerformanceOptimizer {
 
   preloadNextRoutes(routes) {
     // Preload likely next routes based on user behavior
-    const currentPath = window.location.pathname;
+//     const currentPath = window.location.pathname;
     const likelyNextRoutes = this.getLikelyNextRoutes(currentPath);
 
     likelyNextRoutes.forEach(route => {
       if (routes[route]) {
-        routes[route]().catch(console.error);
+//         routes[route]().catch(console.error);
       }
     });
   }
@@ -241,7 +241,7 @@ class PerformanceOptimizer {
       ];
 
       if (staticallyImportedComponents.includes(componentName)) {
-        console.warn(
+//         console.warn(
           `Component ${componentName} is already statically imported, skipping dynamic import`
         );
         return;
@@ -253,19 +253,19 @@ class PerformanceOptimizer {
         element.innerHTML = component.default();
       }
     } catch (error) {
-      console.error(`Failed to load component ${componentName}:`, error);
+//       console.error(`Failed to load component ${componentName}:`, error);
     }
   }
 
   async loadLazyComponent(element) {
-    const componentPath = element.dataset.lazy;
+//     const componentPath = element.dataset.lazy;
     try {
       const component = await import(componentPath);
       if (component.default) {
         element.innerHTML = component.default();
       }
     } catch (error) {
-      console.error(`Failed to load lazy component:`, error);
+//       console.error(`Failed to load lazy component:`, error);
     }
   }
 
@@ -286,7 +286,7 @@ class PerformanceOptimizer {
 
     // Log to console in development
     if (process.env['NODE_ENV'] === 'development') {
-      console.log('Performance Metrics:', this.metrics);
+//       console.log('Performance Metrics:', this.metrics);
     }
   }
 

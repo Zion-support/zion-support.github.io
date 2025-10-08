@@ -1,3 +1,4 @@
+import React from 'react';
 /**
  * Advanced Performance Optimizer
  * Generated: 2025-10-08T02:06:22.084Z
@@ -77,7 +78,11 @@ export class PerformanceOptimizer {
   /**
    * Implement debounce for performance
    */
-  debounce<T extends (...args: unknown[]) => any>(
+<<<<<<< HEAD
+  debounce<T extends (...args: any[]) => any>(
+=======
+  debounce<T extends (...args: unknown[]) => unknown>(
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbf5
     func: T,
     wait: number
   ): (...args: Parameters<T>) => void {
@@ -97,7 +102,11 @@ export class PerformanceOptimizer {
   /**
    * Implement throttle for performance
    */
-  throttle<T extends (...args: unknown[]) => any>(
+<<<<<<< HEAD
+  throttle<T extends (...args: any[]) => any>(
+=======
+  throttle<T extends (...args: unknown[]) => unknown>(
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbf5
     func: T,
     limit: number
   ): (...args: Parameters<T>) => void {
@@ -117,7 +126,11 @@ export class PerformanceOptimizer {
   /**
    * Memoize function results
    */
-  memoize<T extends (...args: unknown[]) => any>(
+<<<<<<< HEAD
+  memoize<T extends (...args: any[]) => any>(
+=======
+  memoize<T extends (...args: unknown[]) => unknown>(
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbf5
     func: T
   ): (...args: Parameters<T>) => ReturnType<T> {
     const cache = new Map<string, ReturnType<T>>();

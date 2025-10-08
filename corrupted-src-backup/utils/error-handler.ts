@@ -65,7 +65,7 @@ class ErrorHandler {
     this.setupReactErrorBoundary();
 
     this.isInitialized = true;
-    console.log('Error handling system initialized');
+//     console.log('Error handling system initialized');
   }
 
   private generateSessionId(): string {
@@ -140,7 +140,7 @@ class ErrorHandler {
 
   private setupReactErrorBoundary(): void {
     // This would integrate with React Error Boundary
-    console.log('React Error Boundary setup complete');
+//     console.log('React Error Boundary setup complete');
   }
 
   handleError(errorData: {
@@ -156,7 +156,7 @@ class ErrorHandler {
     props?: unknown;
     state?: unknown;
   }): void {
-    const errorId = this.generateErrorId(errorData);
+//     const errorId = this.generateErrorId(errorData);
     const now = new Date().toISOString();
 
     const context: ErrorContext = {
@@ -199,7 +199,7 @@ class ErrorHandler {
 
     // Log error for development
     if (process.env['NODE_ENV'] === 'development') {
-      console.error('Error captured:', errorData);
+//       console.error('Error captured:', errorData);
     }
 
     // Send to error reporting service in production
@@ -214,7 +214,7 @@ class ErrorHandler {
   }
 
   private generateErrorId(errorData: unknown): string {
-    const key = `${errorData.type}_${errorData.message}_${errorData.filename || ''}_${errorData.lineno || ''}`;
+//     const key = `${errorData.type}_${errorData.message}_${errorData.filename || ''}_${errorData.lineno || ''}`;
     return btoa(key)
       .replace(/[^a-zA-Z0-9]/g, '')
       .substr(0, 16);
@@ -246,7 +246,7 @@ class ErrorHandler {
   private sendErrorReport(errorReport: ErrorReport): void {
     // In a real application, this would send to an error reporting service
     // like Sentry, LogRocket, or a custom API endpoint
-    console.log('Sending error report:', errorReport.id);
+//     console.log('Sending error report:', errorReport.id);
 
     // Example: Send to external service
     // fetch('/api/errors', {
@@ -283,7 +283,7 @@ class ErrorHandler {
 
   getErrorMetrics(): ErrorMetrics {
     const errors = this.getErrors();
-    const totalErrors = errors.length;
+//     const totalErrors = errors.length;
 
     const errorsByType = errors.reduce(
       (acc, error) => {
@@ -363,7 +363,7 @@ Last Updated: ${new Date().toISOString()}
     this.errors.clear();
     this.isInitialized = false;
     this.errorCount = 0;
-    console.log('Error handling system cleaned up');
+//     console.log('Error handling system cleaned up');
   }
 }
 

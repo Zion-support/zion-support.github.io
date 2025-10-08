@@ -281,7 +281,7 @@ export const handleNetworkError = (err, o, r: E, r, r, o, r, endpoi, n, t: strin
 
   // Check if offline
   if (typeof, navigato, r !== 'undefin, e, d' && !navigat, o, r.onLi, n, e) {
-    conso, l, e.wa, r, n('User, is, offline');
+    conso, l, e.wa, r, n('is, offline');
     return { offli, n, e: t, r, u, e };
   }
 

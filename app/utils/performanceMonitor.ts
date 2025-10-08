@@ -3,6 +3,7 @@
  * Tracks and reports performance metrics with Web Vitals support
  */
 
+import React from 'react';
 import { logger } from './logger';
 import { analytics } from './analytics';
 
@@ -19,11 +20,12 @@ export interface PerformanceThresholds {
 }
 
 // Extended types for specific performance entry types
-interface _PerformancePaintTiming extends PerformanceEntry {
+<<<<<<< HEAD
+interface PerformancePaintTiming extends PerformanceEntry {
   name: 'first-paint' | 'first-contentful-paint';
 }
 
-interface _LargestContentfulPaint extends PerformanceEntry {
+interface LargestContentfulPaint extends PerformanceEntry {
   renderTime: number;
   loadTime: number;
   size: number;
@@ -32,12 +34,34 @@ interface _LargestContentfulPaint extends PerformanceEntry {
   element: Element | null;
 }
 
-interface _PerformanceEventTiming extends PerformanceEntry {
+interface PerformanceEventTiming extends PerformanceEntry {
   processingStart: number;
   processingEnd: number;
   cancelable: boolean;
   target: EventTarget | null;
 }
+=======
+// These interfaces are defined for future use but not currently used
+// interface _PerformancePaintTiming extends PerformanceEntry {
+//   name: 'first-paint' | 'first-contentful-paint';
+// }
+
+// interface _LargestContentfulPaint extends PerformanceEntry {
+//   renderTime: number;
+//   loadTime: number;
+//   size: number;
+//   id: string;
+//   url: string;
+//   element: Element | null;
+// }
+
+// interface _PerformanceEventTiming extends PerformanceEntry {
+//   processingStart: number;
+//   processingEnd: number;
+//   cancelable: boolean;
+//   target: EventTarget | null;
+// }
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbf5
 
 class PerformanceMonitor {
   private metrics: Map<string, PerformanceMetric> = new Map();
@@ -79,7 +103,7 @@ class PerformanceMonitor {
 
         // Largest Contentful Paint
         this.observeEntry('largest-contentful-paint', (entries) => {
-          const lastEntry = entries[entries.length - 1] as any;
+          const lastEntry = entries[entries.length - 1] as { renderTime?: number; loadTime?: number; startTime: number };
           if (lastEntry) {
             this.recordMetric('LCP', lastEntry.renderTime || lastEntry.loadTime || lastEntry.startTime);
           }
@@ -87,7 +111,7 @@ class PerformanceMonitor {
 
         // First Input Delay
         this.observeEntry('first-input', (entries) => {
-          const firstInput = entries[0] as any;
+          const firstInput = entries[0] as { processingStart: number; startTime: number };
           if (firstInput && firstInput.processingStart !== undefined) {
             const fid = firstInput.processingStart - firstInput.startTime;
             this.recordMetric('FID', fid);
@@ -97,7 +121,7 @@ class PerformanceMonitor {
         // Cumulative Layout Shift
         this.observeEntry('layout-shift', (entries) => {
           let clsValue = 0;
-          entries.forEach((entry: unknown) => {
+          entries.forEach((entry: any) => {
             if (!entry.hadRecentInput) {
               clsValue += entry.value;
             }

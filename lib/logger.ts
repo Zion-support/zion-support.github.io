@@ -1,7 +1,7 @@
 /**
  * Enhanced Logger Utility
  * Provides structured logging with levels and formatting
- * Replaces direct console.log usage throughout the application
+//  * Replaces direct console.log usage throughout the application
  */
 
 export enum LogLevel {
@@ -41,7 +41,7 @@ class Logger {
 
   private getLogLevelFromEnv(): LogLevel {
     if (typeof process !== 'undefined' && process.env) {
-      const envLevel = process.env.NEXT_PUBLIC_LOG_LEVEL || process.env.LOG_LEVEL;
+//       const envLevel = process.env.NEXT_PUBLIC_LOG_LEVEL || process.env.LOG_LEVEL;
       switch (envLevel?.toUpperCase()) {
         case 'DEBUG': return LogLevel.DEBUG;
         case 'INFO': return LogLevel.INFO;
@@ -58,8 +58,8 @@ class Logger {
     const timestamp = this.config.timestamp 
       ? `[${new Date().toISOString()}]` 
       : '';
-    const prefix = this.config.prefix ? `[${this.config.prefix}]` : '';
-    const formattedArgs = args.length > 0 ? JSON.stringify(args, null, 2) : '';
+//     const prefix = this.config.prefix ? `[${this.config.prefix}]` : '';
+//     const formattedArgs = args.length > 0 ? JSON.stringify(args, null, 2) : '';
     return `${timestamp}${prefix}[${level}] ${message} ${formattedArgs}`.trim();
   }
 
@@ -69,19 +69,19 @@ class Logger {
 
   public debug(message: string, ...args: unknown[]): void {
     if (this.shouldLog(LogLevel.DEBUG)) {
-      console.log(this.formatMessage('DEBUG', message, ...args));
+//       console.log(this.formatMessage('DEBUG', message, ...args));
     }
   }
 
   public info(message: string, ...args: unknown[]): void {
     if (this.shouldLog(LogLevel.INFO)) {
-      console.info(this.formatMessage('INFO', message, ...args));
+//       console.info(this.formatMessage('INFO', message, ...args));
     }
   }
 
   public warn(message: string, ...args: unknown[]): void {
     if (this.shouldLog(LogLevel.WARN)) {
-      console.warn(this.formatMessage('WARN', message, ...args));
+//       console.warn(this.formatMessage('WARN', message, ...args));
     }
   }
 
@@ -90,7 +90,7 @@ class Logger {
       const errorDetails = error instanceof Error 
         ? { message: error.message, stack: error.stack }
         : error;
-      console.error(this.formatMessage('ERROR', message, errorDetails, ...args));
+//       console.error(this.formatMessage('ERROR', message, errorDetails, ...args));
     }
   }
 

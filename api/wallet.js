@@ -56,8 +56,8 @@ async function handler(req, res) {
         res.statusCode = 400;
         res.json({ error: 'Invalid action' });
     }
-  } catch (error) {
-    console.error('Wallet error:', error);
+  } catch {
+//     console.error('Wallet error:', error);
     res.statusCode = 500;
     res.json({ error: 'Wallet operation failed' });
   }

@@ -1,8 +1,7 @@
-// // 'use client'; // Removed for Vite compatibility // Removed for Vite compatibility
-
 import React from 'react';
 
-const Home: React.FC = () => {
+
+import { Link } from 'react-router-dom';const Home: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       <div className="container mx-auto px-4 py-16">

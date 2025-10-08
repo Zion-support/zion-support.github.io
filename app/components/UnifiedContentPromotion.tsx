@@ -44,7 +44,7 @@ const UnifiedContentPromotion: React.FC = () => {
                 {feature.description}
               </p>
               <Link 
-                to={feature.link}
+                href={feature.link}
                 className="text-blue-600 hover:text-blue-700 font-medium inline-flex items-center"
               >
                 Learn More →
@@ -55,7 +55,6 @@ const UnifiedContentPromotion: React.FC = () => {
       </div>
     </div>
   );
-
 };
 
 export default UnifiedContentPromotion;

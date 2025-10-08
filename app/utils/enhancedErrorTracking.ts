@@ -1,3 +1,4 @@
+import React from 'react';
 /**
  * Enhanced Error Tracking Utility
  * Provides comprehensive error tracking with detailed context
@@ -76,8 +77,7 @@ class EnhancedErrorTracker {
 
     // Log to console in development
     if (process.env['NODE_ENV'] === 'development') {
- 
-    console.error('Tracked Error:', trackedError);
+      console.error('Tracked Error:', trackedError);
     }
 
     // Send to analytics if available

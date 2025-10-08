@@ -1,3 +1,4 @@
+import React from 'react';
 /**
  * Enhanced Structured Data (JSON-LD) utilities for improved SEO
  */
@@ -200,7 +201,7 @@ export const getHomepageSchemas = () => [
 /**
  * Render structured data scripts
  */
-export const renderStructuredData = (schemas: unknown[]) => {
+export const renderStructuredData = (schemas: any[]) => {
   return schemas.map((schema, index) => (
     JSON.stringify(schema)
   ));

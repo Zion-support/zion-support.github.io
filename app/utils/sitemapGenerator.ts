@@ -1,3 +1,4 @@
+import React from 'react';
 /**
  * Sitemap Generation Utility
  * Generates XML sitemaps for better SEO and search engine crawling

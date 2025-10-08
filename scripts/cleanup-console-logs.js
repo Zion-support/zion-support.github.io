@@ -12,19 +12,19 @@ function removeConsoleLogs(filePath) {
     const consoleLogRegex = /^\s*console\.log\([^)]*\);\s*$/gm;
     const consoleLogMultiLineRegex = /^\s*console\.log\(\s*[^)]*\s*\);\s*$/gm;
     
-    const originalContent = content;
+//     const originalContent = content;
     content = content.replace(consoleLogRegex, '');
     content = content.replace(consoleLogMultiLineRegex, '');
     
     if (content !== originalContent) {
       modified = true;
       fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Cleaned console.log statements from: ${filePath}`);
+//       console.log(`Cleaned console.log statements from: ${filePath}`);
     }
     
     return modified;
   } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
+//     console.error(`Error processing ${filePath}:`, error.message);
     return false;
   }
 }
@@ -58,10 +58,10 @@ async function processFiles() {
     });
   });
   
-  console.log(`\nCleanup complete!`);
-  console.log(`Total files processed: ${totalFiles}`);
-  console.log(`Files modified: ${modifiedFiles}`);
+//   console.log(`\nCleanup complete!`);
+//   console.log(`Total files processed: ${totalFiles}`);
+//   console.log(`Files modified: ${modifiedFiles}`);
 }
 
 // Run the cleanup
-processFiles().catch(console.error);
+// processFiles().catch(console.error);

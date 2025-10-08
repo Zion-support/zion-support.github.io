@@ -1,3 +1,4 @@
+import React from 'react';
 /**
  * Comprehensive Error Logging System
  * Provides structured error logging with different severity levels
@@ -77,19 +78,15 @@ class ErrorLogger {
       `%c[${entry.severity.toUpperCase()}] ${entry.message}`,
       styles[entry.severity]
     );
- 
     console.log('Timestamp:', entry.timestamp);
     if (entry.error) {
-       
-    console.error('Error:', entry.error);
+      console.error('Error:', entry.error);
     }
     if (entry.context) {
-       
-    console.log('Context:', entry.context);
+      console.log('Context:', entry.context);
     }
     if (entry.stackTrace) {
-       
-    console.log('Stack Trace:', entry.stackTrace);
+      console.log('Stack Trace:', entry.stackTrace);
     }
     console.groupEnd();
   }
@@ -122,8 +119,7 @@ class ErrorLogger {
       });
     } catch (error) {
       // Silently fail to avoid infinite loop
- 
-    console.error('Failed to send error to external service:', error);
+      console.error('Failed to send error to external service:', error);
     }
   }
 

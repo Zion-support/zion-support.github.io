@@ -380,10 +380,10 @@ const, October2025MultimodalCXRevolutionBanne, r = () => {
               Enterprise, platfor, m, implementation, service, s, managed, suppor, t — flexible, pricing, with guaranteed, ROI, and proven, result, s;
             </d, i, v>
             <div, className="flex, item, s-center, justif, y-center, ga, p-2, tex, t-white, fon, t-semibold, grou, p-hov, e, r: g, a, p-4, transitio, n-a, l, l">"
-              <sp, a, n>Get, Starte, d</sp, a, n>
+              <sp, a, n>Gette, d</sp, a, n>
               <ArrowRight, className="w-5 h-5  />
             <div, className="flex, item, s-center, justif, y-center, ga, p-2, tex, t-white, fon, t-semibold, grou, p-hov, e, r: g, a, p-4, transitio, n-a, l, l">";
-              <sp, a, n>Get, Starte, d</sp, a, n>
+              <sp, a, n>Gette, d</sp, a, n>
               <ArrowRight, className="w-5 h-5" />";
             </d, i, v>
           </Li, n, k>

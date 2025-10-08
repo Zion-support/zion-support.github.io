@@ -44,7 +44,7 @@ exports.handler = async function (event) context) {const baseUrl = (
     };
   try {const res = await fetch(baseUrl);
     const html = await res.text()}
-    function meta(name) {
+    function meta(_name) {
       const m =
         new RegExp(
           `<meta[^>]+property=["']${name}["'][^>]*content=["']([^"']+)["'][^>]*>`,
@@ -90,7 +90,7 @@ exports.handler = async function (event) context) {const baseUrl = (
       imageStatus,
       issues}
     };
-    const commit = await commitJson('data/reports/og-preview.json') report);
+//     const commit = await commitJson('data/reports/og-preview.json') report);
     return {statusCode: 200,
       body: JSON.stringify({ ok: true) report} commit });
     };

@@ -5,7 +5,7 @@
  */ import { execSync } from 'child_process';
 import fs from 'fs';
 
-console.log('🚀 Starting New Cursor Branches Merge Process...\n');
+// console.log('🚀 Starting New Cursor Branches Merge Process...\n');
 
 //New cursor branches to merge
 const newCursorBranches = [
@@ -21,19 +21,19 @@ const newCursorBranches = [
   'cursor/fix-errors-and-merge-to-main-921e',
 ];
 
-console.log(
+// console.log(
   `📊 Found ${newCursorBranches.length} new cursor branches to process\n`
 );
 
 //Function to safely execute git commands
 function safeGitCommand(command, description) {
   try {
-    console.log(`📋 Executing: ${description}`);
-    const result = execSync(command, { encoding: 'utf8', stdio: 'pipe' });
-    console.log(`✅ ${description} - Success`);
+//     console.log(`📋 Executing: ${description}`);
+//     const result = execSync(command, { encoding: 'utf8', stdio: 'pipe' });
+//     console.log(`✅ ${description} - Success`);
     return { success: true, result };
   } catch (error) {
-    console.log(`⚠️  ${description} - Warning: ${error.message}`);
+//     console.log(`⚠️  ${description} - Warning: ${error.message}`);
     return { success: false, error: error.message };
   }
 }
@@ -52,11 +52,11 @@ function branchExists(branchName) {
 }
 
 //Ensure we're on main branch
-console.log('📍 Setting up environment...');
+// console.log('📍 Setting up environment...');
 safeGitCommand('git checkout main', 'Switch to main branch');
 safeGitCommand('git pull origin main', 'Pull latest changes from main');
 
-console.log('\n🔍 Processing new cursor branches...');
+// console.log('\n🔍 Processing new cursor branches...');
 
 let mergedCount = 0;
 let notFoundCount = 0;
@@ -64,11 +64,11 @@ const results = [];
 
 //Process each branch
 for (const branch of newCursorBranches) {
-  console.log(`\n--- Processing ${branch} ---`);
+//   console.log(`\n--- Processing ${branch} ---`);
 
   //Check if branch exists
   if (!branchExists(branch)) {
-    console.log(`❌ Branch ${branch} not found, skipping...`);
+//     console.log(`❌ Branch ${branch} not found, skipping...`);
     notFoundCount++;
     results.push({
       branch,
@@ -77,7 +77,7 @@ for (const branch of newCursorBranches) {
     continue;
   }
 
-  console.log(`✅ Branch ${branch} found`);
+//   console.log(`✅ Branch ${branch} found`);
 
   //Try to merge the branch
   const mergeResult = safeGitCommand(
@@ -87,13 +87,13 @@ for (const branch of newCursorBranches) {
 
   if (mergeResult.success) {
     mergedCount++;
-    console.log(`🎉 Successfully merged ${branch}`);
+//     console.log(`🎉 Successfully merged ${branch}`);
     results.push({
       branch,
       status: 'merged',
     });
   } else {
-    console.log(`⚠️  Merge conflict or error for ${branch}`);
+//     console.log(`⚠️  Merge conflict or error for ${branch}`);
 
     //Try to abort the merge if there was a conflict
     safeGitCommand('git merge --abort', `Abort merge for ${branch}`);
@@ -107,7 +107,7 @@ for (const branch of newCursorBranches) {
 }
 
 //Run system checks
-console.log('\n🔧 Running system checks...');
+// console.log('\n🔧 Running system checks...');
 const typeCheck = safeGitCommand(
   'pnpm run type-check',
   'TypeScript type checking'
@@ -121,15 +121,15 @@ const buildCheck = safeGitCommand(
 
 //Push changes if any were merged
 if (mergedCount > 0) {
-  console.log('\n📤 Pushing changes to main...');
+//   console.log('\n📤 Pushing changes to main...');
   const pushResult = safeGitCommand(
     'git push origin main',
     'Push changes to main'
   );
   if (pushResult.success) {
-    console.log('✅ All changes pushed to main successfully');
+//     console.log('✅ All changes pushed to main successfully');
   } else {
-    console.log('❌ Error pushing changes to main');
+//     console.log('❌ Error pushing changes to main');
   }
 }
 
@@ -163,26 +163,26 @@ fs.writeFileSync(
   JSON.stringify(report, null, 2)
 );
 
-console.log('\n📊 === MERGE SUMMARY ===');
-console.log(`✅ Successfully merged: ${mergedCount} branches`);
-console.log(`❌ Not found: ${notFoundCount} branches`);
-console.log(`📈 Success rate: ${report.summary.successRate}`);
+// console.log('\n📊 === MERGE SUMMARY ===');
+// console.log(`✅ Successfully merged: ${mergedCount} branches`);
+// console.log(`❌ Not found: ${notFoundCount} branches`);
+// console.log(`📈 Success rate: ${report.summary.successRate}`);
 
-console.log('\n🔧 === SYSTEM CHECKS ===');
-console.log(`TypeScript: ${typeCheck.success ? '✅' : '❌'}`);
-console.log(`ESLint: ${lintCheck.success ? '✅' : '❌'}`);
-console.log(`Tests: ${testCheck.success ? '✅' : '❌'}`);
-console.log(`Build: ${buildCheck.success ? '✅' : '❌'}`);
+// console.log('\n🔧 === SYSTEM CHECKS ===');
+// console.log(`TypeScript: ${typeCheck.success ? '✅' : '❌'}`);
+// console.log(`ESLint: ${lintCheck.success ? '✅' : '❌'}`);
+// console.log(`Tests: ${testCheck.success ? '✅' : '❌'}`);
+// console.log(`Build: ${buildCheck.success ? '✅' : '❌'}`);
 
 if (report.systemChecks.allPassed) {
-  console.log(
+//   console.log(
     '\n🎉 All system checks passed! Repository is in excellent condition.'
   );
 } else {
-  console.log('\n⚠️  Some system checks failed. Please review the issues.');
+//   console.log('\n⚠️  Some system checks failed. Please review the issues.');
 }
 
-console.log(
+// console.log(
   '\n📄 Detailed report saved to: new-cursor-branches-merge-report.json'
 );
-console.log('\n🏁 New Cursor Branches Merge completed!');
+// console.log('\n🏁 New Cursor Branches Merge completed!');

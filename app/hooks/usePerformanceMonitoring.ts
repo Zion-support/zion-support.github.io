@@ -1,5 +1,3 @@
-'use client';
-
 import { useEffect, useCallback } from 'react';
 import { useAnalytics } from '../components/AnalyticsProvider';
 
@@ -112,9 +110,8 @@ export const usePerformanceMonitoring = () => {
         resourceObserver.disconnect();
       };
     } catch (error) {
-       
-       
-    console.warn('Performance monitoring not supported:', error);
+      // eslint-disable-next-line no-console
+      console.warn('Performance monitoring not supported:', error);
       return () => {};
     }
   }, [reportMetric]);

@@ -4,17 +4,19 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
-const __filename = fileURLToPath(import.meta.url);
-console.log('🎨 Optimizing assets...');
+// const __filename = fileURLToPath(import.meta.url);
+// const __dirname = path.dirname(__filename);
+
+// console.log('🎨 Optimizing assets...');
 
 // Optimize CSS
 function optimizeCSS() {
-  const cssPath = path.join(process.cwd(), '.next/static/css');
+//   const cssPath = path.join(process.cwd(), '.next/static/css');
   if (fs.existsSync(cssPath)) {
     const files = fs.readdirSync(cssPath);
     files.forEach(file => {
       if (file.endsWith('.css')) {
-        const filePath = path.join(cssPath, file);
+//         const filePath = path.join(cssPath, file);
         let content = fs.readFileSync(filePath, 'utf8');
         
         // Remove unnecessary whitespace
@@ -25,18 +27,18 @@ function optimizeCSS() {
         fs.writeFileSync(filePath, content);
       }
     });
-    console.log('✅ CSS optimized');
+//     console.log('✅ CSS optimized');
   }
 }
 
 // Optimize JavaScript bundles
 function optimizeJS() {
-  const jsPath = path.join(process.cwd(), '.next/static/chunks');
+//   const jsPath = path.join(process.cwd(), '.next/static/chunks');
   if (fs.existsSync(jsPath)) {
     const files = fs.readdirSync(jsPath);
     files.forEach(file => {
       if (file.endsWith('.js')) {
-        const filePath = path.join(jsPath, file);
+//         const filePath = path.join(jsPath, file);
         let content = fs.readFileSync(filePath, 'utf8');
         
         // Remove console.log statements in production
@@ -49,10 +51,10 @@ function optimizeJS() {
         fs.writeFileSync(filePath, content);
       }
     });
-    console.log('✅ JavaScript bundles optimized');
+//     console.log('✅ JavaScript bundles optimized');
   }
 }
 
 optimizeCSS();
 optimizeJS();
-console.log('🎉 Asset optimization complete!');
+// console.log('🎉 Asset optimization complete!');

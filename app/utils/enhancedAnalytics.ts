@@ -1,3 +1,4 @@
+import React from 'react';
 /**
  * Enhanced Analytics Utility
  * Provides comprehensive analytics tracking with event batching and offline support
@@ -205,8 +206,7 @@ class EnhancedAnalytics {
 
     // In a real implementation, send to analytics backend
     if (process.env['NODE_ENV'] === 'development') {
- 
-    console.log('Analytics batch:', this.queue);
+      console.log('Analytics batch:', this.queue);
     }
 
     // Clear queue

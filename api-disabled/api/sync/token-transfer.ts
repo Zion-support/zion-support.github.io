@@ -43,7 +43,7 @@ export default async function handler(
     });
   }
 
-  const version = nextVersionFor(state, txId);
+//   const version = nextVersionFor(state, txId);
   const event = {
     eventId: uuidv4(),
     type: 'token_transfer' as const,
@@ -64,16 +64,16 @@ export default async function handler(
   upsertEvent(state, event);
   writeState(state);
 
-  const body = { ...event, propagate: false };
+//   const body = { ...event, propagate: false };
   const headers: Record<string, string> = {};
-  const sig = signPayload(body);
+//   const sig = signPayload(body);
   if (sig) headers['x-zion-signature'] = sig;
 
   await Promise.all(
     state.config.peers
       .filter(p => !p.paused)
       .map(async peer => {
-        const url = new URL('/api/sync/publish', peer.baseUrl).toString();
+//         const url = new URL('/api/sync/publish', peer.baseUrl).toString();
         try {
           await axios.post(url, body, { headers, timeout: 5000 });
         } catch {

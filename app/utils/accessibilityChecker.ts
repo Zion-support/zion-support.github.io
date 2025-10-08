@@ -1,3 +1,4 @@
+import React from 'react';
 /**
  * Accessibility Checker Utility
  * 
@@ -84,8 +85,7 @@ export interface A11yCheckResult {
  * ```typescript
  * const checker = new AccessibilityChecker();
  * const result = checker.checkElement(document.getElementById('main'));
- * if (import.meta.env.DEV) { // eslint-disable-next-line no-console
-    console.log(`Score: ${result.score}, Issues: ${result.issueCount}`); }
+ * if (import.meta.env.DEV) { console.log(`Score: ${result.score}, Issues: ${result.issueCount}`); }
  * ```
  */
 export class AccessibilityChecker {
@@ -268,9 +268,9 @@ export class AccessibilityChecker {
           wcagLevel: WCAGLevel.A,
           wcagCriterion: '2.4.4',
           message: `Link ${index + 1} has no accessible text`,
-          element: `a[href="${link.getAttribute('href')}"]`,
+          element: `a[to="${link.getAttribute('href')}"]`,
           fix: 'Add descriptive text or aria-label to the link',
-          codeExample: '<a href="..." aria-label="Description">...</a>',
+          codeExample: '<Link to="..." aria-label="Description">...</Link>',
         });
       }
 
@@ -282,7 +282,7 @@ export class AccessibilityChecker {
           wcagLevel: WCAGLevel.AA,
           wcagCriterion: '2.4.4',
           message: `Link ${index + 1} has generic text: "${text}"`,
-          element: `a[href="${link.getAttribute('href')}"]`,
+          element: `a[to="${link.getAttribute('href')}"]`,
           fix: 'Use descriptive link text that explains the destination',
           codeExample: 'Use "Read full article" instead of "Read more"',
         });
@@ -297,9 +297,9 @@ export class AccessibilityChecker {
           wcagLevel: WCAGLevel.AAA,
           wcagCriterion: '3.2.5',
           message: `Link ${index + 1} opens in new window without warning`,
-          element: `a[href="${link.getAttribute('href')}"]`,
+          element: `a[to="${link.getAttribute('href')}"]`,
           fix: 'Add indication that link opens in new window',
-          codeExample: '<a href="..." target="_blank" rel="noopener noreferrer">Link text (opens in new window)</a>',
+          codeExample: '<Link to="..." target="_blank" rel="noopener noreferrer">Link text (opens in new window)</Link>',
         });
       }
     });
@@ -504,7 +504,8 @@ export class AccessibilityChecker {
    */
   private checkLandmarks(element: Element): void {
     const hasMain = element.querySelector('main, [role="main"]');
-    // const _hasNav = element.querySelector('nav, [role="navigation"]');
+    const hasNav = element.querySelector('nav, [role="navigation"]');
+
     if (!hasMain) {
       this.addIssue({
         type: 'missing-main-landmark',

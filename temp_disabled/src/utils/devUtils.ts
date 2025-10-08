@@ -19,9 +19,9 @@ export const devWarn = (message: string, data?: unknown) => {
 };
 export const measurePerformance = (name: string, fn: () => void) => {
   if (process.env['NODE_ENV'] === 'development') {
-    const start = performance.now();
+//     const start = performance.now();
     fn();
-    const end = performance.now();
+//     const end = performance.now();
     // PERF: ${name}: ${(end - start).toFixed(2)}ms
   } else {
     fn();

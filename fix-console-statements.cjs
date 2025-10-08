@@ -1,81 +1,80 @@
 #!/usr/bin/env node
 
 const fs = require('fs');
+const path = require('path');
+const glob = require('glob');
 
-// Function to fix console statements properly
-function fixConsoleStatements(content) {
-  // Fix double-wrapped console statements
-  content = content.replace(
-    /if \(process\.env\.NODE_ENV === 'development'\)\s*{\s*if \(process\.env\.NODE_ENV === 'development'\)\s*{\s*console\.([^}]+)\s*}\s*}/g,
-    'if (process.env.NODE_ENV === \'development\') { console.$1 }'
-  );
-  
-  // Fix console statements with wrong method names
-  content = content.replace(/console\._/g, 'console.');
-  
-  // Fix any remaining unwrapped console statements
-  content = content.replace(
-    /console\.(log|error|warn|info|debug)\([^)]*\);/g,
-    (match) => {
-      // Check if it's already wrapped
-      if (content.includes(`if (process.env.NODE_ENV === 'development') { ${match}`)) {
-        return match;
-      }
-      return `if (process.env.NODE_ENV === 'development') { ${match} }`;
-    }
-  );
-  
-  return content;
-}
+// Find all TypeScript and JavaScript files
+const files = glob.sync('**/*.{ts,tsx,js,jsx}', {
+  ignore: [
+    'node_modules/**',
+    'dist/**',
+    '.next/**',
+    'out/**',
+    '**/__tests__/**',
+    '**/test/**',
+    '**/tests/**',
+    '**/*.test.*',
+    '**/*.spec.*'
+  ]
+});
 
-// List of files to fix
-const filesToFix = [
-  '/workspace/app/components/AdvancedPerformanceMonitor.tsx',
-  '/workspace/app/components/EnhancedErrorBoundary.tsx',
-  '/workspace/app/components/ImprovedErrorBoundary.tsx',
-  '/workspace/app/components/PWAInstaller.tsx',
-  '/workspace/app/components/PerformanceMonitor.tsx',
-  '/workspace/app/components/SystemMonitor.tsx',
-  '/workspace/app/hooks/useEnhancedPerformance.ts',
-  '/workspace/app/hooks/useForm.ts',
-  '/workspace/app/hooks/usePerformanceMonitoringEnhanced.ts',
-  '/workspace/app/utils/accessibilityChecker.ts',
-  '/workspace/app/utils/accessibilityEnhancer.ts',
-  '/workspace/app/utils/advancedAnalytics.ts',
-  '/workspace/app/utils/advancedCaching.ts',
-  '/workspace/app/utils/analytics.ts',
-  '/workspace/app/utils/analyticsTracker.ts',
-  '/workspace/app/utils/enhancedAnalytics.ts',
-  '/workspace/app/utils/enhancedErrorHandler.ts',
-  '/workspace/app/utils/enhancedErrorMonitoring.ts',
-  '/workspace/app/utils/enhancedErrorTracking.ts',
-  '/workspace/app/utils/enhancedLogger.ts',
-  '/workspace/app/utils/envConfig.ts',
-  '/workspace/app/utils/envValidator.ts',
-  '/workspace/app/utils/errorHandler.tsx',
-  '/workspace/app/utils/errorHandlerEnhanced.ts',
-  '/workspace/app/utils/errorLogger.ts',
-  '/workspace/app/utils/errorReporter.ts',
-  '/workspace/app/utils/healthCheck.ts',
-  '/workspace/app/utils/logger.ts',
-  '/workspace/app/utils/monitoring.ts',
-  '/workspace/app/setupTests.tsx'
-];
+let fixedFiles = 0;
 
-let fixedCount = 0;
-
-filesToFix.forEach(filePath => {
+files.forEach(filePath => {
   try {
-    if (fs.existsSync(filePath)) {
-      let content = fs.readFileSync(filePath, 'utf8');
-      const originalContent = content;
+    const fullPath = path.join(__dirname, filePath);
+    if (fs.existsSync(fullPath)) {
+      let content = fs.readFileSync(fullPath, 'utf8');
+      let modified = false;
       
-      content = fixConsoleStatements(content);
+      // Replace console statements with proper logging or remove them
+      const consoleRegex = /^\s*console\.(log|warn|error|info|debug)\([^)]*\);\s*$/gm;
       
-      if (content !== originalContent) {
-        fs.writeFileSync(filePath, content);
-        console.log(`Fixed: ${filePath}`);
-        fixedCount++;
+      // Check if file has logger import or is a utility file
+      const hasLogger = content.includes('import') && content.includes('logger');
+      const isUtilityFile = filePath.includes('utils/') || filePath.includes('config/');
+      
+      if (consoleRegex.test(content)) {
+        if (hasLogger) {
+          // Replace with logger calls
+          content = content.replace(
+            /console\.log\(([^)]*)\);/g,
+            'logger.info($1);'
+          );
+          content = content.replace(
+            /console\.warn\(([^)]*)\);/g,
+            'logger.warn($1);'
+          );
+          content = content.replace(
+            /console\.error\(([^)]*)\);/g,
+            'logger.error($1);'
+          );
+          content = content.replace(
+            /console\.info\(([^)]*)\);/g,
+            'logger.info($1);'
+          );
+          content = content.replace(
+            /console\.debug\(([^)]*)\);/g,
+            'logger.debug($1);'
+          );
+        } else if (isUtilityFile) {
+          // For utility files, wrap in development check
+          content = content.replace(
+            /console\.(log|warn|error|info|debug)\(([^)]*)\);/g,
+            'if (process.env.NODE_ENV === \'development\') { console.$1($2); }'
+          );
+        } else {
+          // For other files, remove console statements
+          content = content.replace(consoleRegex, '');
+        }
+        modified = true;
+      }
+      
+      if (modified) {
+        fs.writeFileSync(fullPath, content);
+        console.log(`Fixed console statements in: ${filePath}`);
+        fixedFiles++;
       }
     }
   } catch (error) {
@@ -83,4 +82,4 @@ filesToFix.forEach(filePath => {
   }
 });
 
-console.log(`Fixed ${fixedCount} files`);
+console.log(`Fixed console statements in ${fixedFiles} files`);

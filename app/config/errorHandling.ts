@@ -1,3 +1,4 @@
+import React from 'react';
 /**
  * Error Handling Configuration
  * Centralized error tracking and reporting settings
@@ -73,7 +74,7 @@ export class AppError extends Error {
     message: string,
     public category: ErrorCategory = ErrorCategory.UNKNOWN,
     public severity: ErrorSeverity = ErrorSeverity.MEDIUM,
-    public metadata?: Record<string, unknown>
+    public metadata?: Record<string, any>
   ) {
     super(message);
     this.name = 'AppError';

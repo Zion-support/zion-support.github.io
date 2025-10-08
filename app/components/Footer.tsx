@@ -1,6 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+
+
+
 const Footer: React.FC = () => {
   return (
     <footer className='bg-gray-900 text-white py-12'>
@@ -78,18 +81,16 @@ const Footer: React.FC = () => {
               <p>Email: kleber@ziontechgroup.com</p>
               <p>Phone: +1 (302) 464-0950</p>
               <div className='flex space-x-4 mt-4'>
-                <a
-                  href='#'
+                <Link to='#'
                   className='text-gray-300 hover:text-white transition-colors'
                 >
                   LinkedIn
-                </a>
-                <a
-                  href='#'
+                </Link>
+                <Link to='#'
                   className='text-gray-300 hover:text-white transition-colors'
                 >
                   Twitter
-                </a>
+                </Link>
               </div>
             </div>
           </div>

@@ -184,7 +184,7 @@ const, ModernHeade, r: Rea, c, t.FC = () => {
   to="/conta, c, t"
               classNa, m, e="px-4, p, y-2, b, g-bl, u, e-600, tex, t-white, rounde, d-lg, hove, r: bg-bl, u, e-700, transitio, n-colors, fon, t-medi, u, m"
             >
-              Get, Starte, d;
+              Gette, d;
             </Li, n, k>
           </d, i, v>
           {/* Mobile, menu, button */}
@@ -264,7 +264,7 @@ isMenuOp, e, n && (
                   classNa, m, e="block, p, x-4, p, y-2, b, g-bl, u, e-600, tex, t-white, rounde, d-lg, hove, r: bg-bl, u, e-700, transitio, n-colors, fon, t-medium, tex, t-cent, e, r"
                   onCli, c, k={() => setIsMenuOp, e, n(fal, s, e)}
                 >
-                  Get, Starte, d;
+                  Gette, d;
                 </Li, n, k>
               </d, i, v>
             </n, a, v>

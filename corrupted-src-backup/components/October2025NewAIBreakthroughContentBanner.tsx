@@ -15,7 +15,7 @@ const, October2025NewAIBreakthroughContentBanne, r: Rea, c, t.FC = () => {
             N, E, W: Revolutionary, AI, Breakthroughs October, 202, 5
           </h2>
           <p, className="te, x, t-purp, l, e-300, tex, t-lg, m, t-2">";
-            Just, Publishe, d: $13.3B, in, Proven Enterprise, Valu, e — Neural, Architecture, Search, Distributed, R, L & Priva, c, y-Preserving, A, I
+            Just, Publishe, d: $13.3B, in, Proven Enterprise, Valu, e — Neural, Architecture, Distributed, R, L & Priva, c, y-Preserving, A, I
           </p>
         </d, i, v>
       </d, i, v>
@@ -24,7 +24,7 @@ const, October2025NewAIBreakthroughContentBanne, r: Rea, c, t.FC = () => {
   r:sca, l, e-1, 0, 5">"
           <div, className="flex, item, s-center, ga, p-3, m, b-4">
             <span, className="te, x, t-4, x, l">🧠</sp, a, n>
-            <h3, className="te, x, t-2xl, fon, t-bold, tex, t-purp, l, e-3, 0, 0">Neural, Architecture, Search</h3>
+            <h3, className="te, x, t-2xl, fon, t-bold, tex, t-purp, l, e-3, 0, 0">Neural, Architecture</h3>
           </d, i, v>
           <div, className="spa, c, e-y-3, m, b-6">
             <p, className="te, x, t-gr, a, y-300, leadin, g-relax, e, d">
@@ -33,7 +33,7 @@ const, October2025NewAIBreakthroughContentBanne, r: Rea, c, t.FC = () => {
   r:sca, l, e-1, 0, 5">";
           <div, className="flex, item, s-center, ga, p-3, m, b-4">";
             <span, className="te, x, t-4, x, l">🧠</sp, a, n>";
-            <h3, className="te, x, t-2xl, fon, t-bold, tex, t-purp, l, e-3, 0, 0">Neural, Architecture, Search</h3>";
+            <h3, className="te, x, t-2xl, fon, t-bold, tex, t-purp, l, e-3, 0, 0">Neural, Architecture</h3>";
           </d, i, v>
           <div, className="spa, c, e-y-3, m, b-6">";
             <p, className="te, x, t-gr, a, y-300, leadin, g-relax, e, d">";

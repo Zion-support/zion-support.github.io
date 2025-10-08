@@ -3,8 +3,8 @@
  * Real-time application monitoring, performance tracking, and error reporting
  */
 
+import React from 'react';
 import { performanceConfig } from '../../performance.config';
-// import { logger } from './logger';
 
 export interface PerformanceMetrics {
   lcp?: number;
@@ -64,7 +64,7 @@ class MonitoringService {
         // First Input Delay
         const fidObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
-          entries.forEach((entry: unknown) => {
+          entries.forEach((entry: any) => {
             this.metrics.fid = entry.processingStart - entry.startTime;
             this.reportMetric('fid', this.metrics.fid);
           });
@@ -74,7 +74,7 @@ class MonitoringService {
         // Cumulative Layout Shift
         let clsValue = 0;
         const clsObserver = new PerformanceObserver((list) => {
-          for (const entry of list.getEntries() as any[]) {
+          for (const entry of list.getEntries() as { hadRecentInput: boolean; value: number }[]) {
             if (!entry.hadRecentInput) {
               clsValue += entry.value;
               this.metrics.cls = clsValue;
@@ -94,9 +94,8 @@ class MonitoringService {
         });
         fcpObserver.observe({ entryTypes: ['paint'] });
 
-} catch (error) {
-         
-    console.error('Error setting up performance observers:', error);
+      } catch (error) {
+        console.error('Error setting up performance observers:', error);
       }
     }
   }
@@ -106,15 +105,18 @@ class MonitoringService {
       try {
         const longTaskObserver = new PerformanceObserver((list) => {
           for (const entry of list.getEntries()) {
- 
-    console.warn('Long task detected:', {
+            console.warn('Long task detected:', {
               duration: entry.duration,
               startTime: entry.startTime,
             });
           }
         });
         longTaskObserver.observe({ entryTypes: ['longtask'] });
-      } catch (_error) {
+<<<<<<< HEAD
+      } catch (error) {
+=======
+      } catch {
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbf5
         // Long task API might not be available
       }
     }
@@ -125,10 +127,9 @@ class MonitoringService {
       try {
         const resourceObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
-          entries.forEach((entry: unknown) => {
+          entries.forEach((entry: any) => {
             if (entry.duration > 1000) {
- 
-    console.warn('Slow resource detected:', {
+              console.warn('Slow resource detected:', {
                 name: entry.name,
                 duration: entry.duration,
                 type: entry.initiatorType,
@@ -137,9 +138,8 @@ class MonitoringService {
           });
         });
         resourceObserver.observe({ entryTypes: ['resource'] });
-} catch (error) {
-         
-    console.error('Error monitoring resources:', error);
+      } catch (error) {
+        console.error('Error monitoring resources:', error);
       }
     }
   }
@@ -177,8 +177,7 @@ class MonitoringService {
     if (thresholds) {
       const rating = value <= thresholds.good ? 'good' : value <= thresholds.needsImprovement ? 'needs-improvement' : 'poor';
       
- 
-    console.log(`[Performance] ${name}:`, {
+      console.log(`[Performance] ${name}:`, {
         value,
         rating,
         unit: name === 'cls' ? 'score' : 'ms',
@@ -186,8 +185,8 @@ class MonitoringService {
     }
 
     // Send to analytics (if configured)
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('event', name, {
+    if (typeof window !== 'undefined' && (window as { gtag?: (command: string, action: string, params: Record<string, unknown>) => void }).gtag) {
+      (window as { gtag: (command: string, action: string, params: Record<string, unknown>) => void }).gtag('event', name, {
         value: Math.round(name === 'cls' ? value * 1000 : value),
         event_category: 'Web Vitals',
         non_interaction: true,
@@ -203,12 +202,11 @@ class MonitoringService {
       this.errors = this.errors.slice(-50);
     }
 
- 
     console.error('[Error]', error);
 
     // Send to error tracking service (if configured)
-    if (typeof window !== 'undefined' && (window as any).Sentry) {
-      (window as any).Sentry.captureException(new Error(error.message));
+    if (typeof window !== 'undefined' && (window as { Sentry?: { captureException: (error: Error) => void } }).Sentry) {
+      (window as { Sentry: { captureException: (error: Error) => void } }).Sentry.captureException(new Error(error.message));
     }
   }
 
@@ -226,9 +224,14 @@ class MonitoringService {
 
   public measureMemory(): void {
     if ('memory' in performance && performanceConfig.monitoring.enableMemoryMonitoring) {
+<<<<<<< HEAD
       const memory = (performance as any).memory;
+      console.log('[Memory]', {
+=======
+      const memory = (performance as { memory: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
  
     console.log('[Memory]', {
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbf5
         used: `${Math.round(memory.usedJSHeapSize / 1048576)}MB`,
         total: `${Math.round(memory.totalJSHeapSize / 1048576)}MB`,
         limit: `${Math.round(memory.jsHeapSizeLimit / 1048576)}MB`,
@@ -240,8 +243,7 @@ class MonitoringService {
     if ('performance' in window && 'getEntriesByType' in performance) {
       const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
       if (navigation) {
- 
-    console.log('[Navigation Timing]', {
+        console.log('[Navigation Timing]', {
           'DNS Lookup': `${Math.round(navigation.domainLookupEnd - navigation.domainLookupStart)}ms`,
           'TCP Connect': `${Math.round(navigation.connectEnd - navigation.connectStart)}ms`,
           'TTFB': `${Math.round(navigation.responseStart - navigation.requestStart)}ms`,
