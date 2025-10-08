@@ -58,14 +58,16 @@ export const useBannerRotation = (options: UseBannerRotationOptions = {}) => {
     try {
       setState(prev => ({ ...prev, isLoading: true, error: null }));
       
-      const banners = await selectBannersForDisplay(strategy, maxBanners);
-      const stats = enableTracking ? await loadBannerStats() : { impressions: 0, clicks: 0, ctr: 0 };
+      // Import bannerConfigurations
+      const { default: bannerConfigs } = await import('../data/bannerConfigurations');
+      const banners = selectBannersForDisplay(bannerConfigs, maxBanners);
+      const stats = enableTracking ? loadBannerStats() : { impressions: 0, clicks: 0, ctr: 0 };
       
-      setState(prev => ({
+      setState((prev) => ({
         ...prev,
         currentBanners: banners,
         isLoading: false,
-        stats
+        stats: stats
       }));
     } catch (error) {
       setState(prev => ({
