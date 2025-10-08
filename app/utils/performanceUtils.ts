@@ -3,9 +3,6 @@
  * Provides utilities for optimizing performance in React applications
  */
 
-import { lazy } from 'react';
-import React from 'react';
-// import { logger } from './logger';
 
 /**
  * Debounce function to limit execution rate
@@ -50,9 +47,7 @@ export function throttle<T extends (...args: unknown[]) => unknown>(
 /**
  * Memoize function results
  */
-export function memoize<T extends (...args: unknown[]) => unknown>(
-  func: T
-): T {
+export function memoize<T extends (...args: unknown[]) => unknown>(func: T): T {
   const cache = new Map<string, ReturnType<T>>();
 
   return ((...args: Parameters<T>): ReturnType<T> => {
@@ -74,11 +69,11 @@ export function lazyLoad<T extends React.ComponentType<unknown>>(
   fallback?: React.ReactNode
 ): React.LazyExoticComponent<T> {
   const LazyComponent = React.lazy(importFunc);
-  
+
   if (fallback) {
     return LazyComponent;
   }
-  
+
   return LazyComponent;
 }
 
@@ -92,9 +87,13 @@ export async function measureTime<T>(
   const start = performance.now();
   const result = await func();
   const duration = performance.now() - start;
-  
-  if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { console.log(`[Performance] ${name}: ${duration.toFixed(2)}ms`); } }
-  
+
+  if (process.env['NODE_ENV'] === 'development') {
+    if (import.meta.env.DEV) {
+      console.log(`[Performance] ${name}: ${duration.toFixed(2)}ms`);
+    }
+  }
+
   return { result, duration };
 }
 
@@ -107,13 +106,13 @@ export async function batchAsync<T, R>(
   batchSize = 10
 ): Promise<R[]> {
   const results: R[] = [];
-  
+
   for (let i = 0; i < items.length; i += batchSize) {
     const batch = items.slice(i, i + batchSize);
     const batchResults = await Promise.all(batch.map(operation));
     results.push(...batchResults);
   }
-  
+
   return results;
 }
 
@@ -126,7 +125,7 @@ export function rafLoop(callback: (time: number) => boolean | void): () => void 
 
   function loop(time: number) {
     if (!running) return;
-    
+
     const shouldContinue = callback(time);
     if (shouldContinue !== false) {
       rafId = requestAnimationFrame(loop);
@@ -146,10 +145,7 @@ export function rafLoop(callback: (time: number) => boolean | void): () => void 
 /**
  * Idle callback wrapper
  */
-export function runWhenIdle(
-  callback: () => void,
-  options?: IdleRequestOptions
-): number {
+export function runWhenIdle(callback: () => void, options?: IdleRequestOptions): number {
   if (typeof window !== 'undefined' && 'requestIdleCallback' in window) {
     return window.requestIdleCallback(callback, options);
   }
@@ -217,13 +213,13 @@ export function setupLazyImages(
   options?: IntersectionObserverInit
 ): () => void {
   const images = document.querySelectorAll<HTMLImageElement>(selector);
-  
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
       if (entry.isIntersecting) {
         const img = entry.target as HTMLImageElement;
         const src = img.dataset['src'];
-        
+
         if (src) {
           img['src'] = src;
           img.removeAttribute('data-src');
@@ -233,7 +229,7 @@ export function setupLazyImages(
     });
   }, options);
 
-  images.forEach((img) => observer.observe(img));
+  images.forEach(img => observer.observe(img));
 
   return () => observer.disconnect();
 }
@@ -284,7 +280,11 @@ export function getMemoryUsage(): {
   limit: number;
 } | null {
   if ('memory' in performance) {
-    const memory = (performance as Performance & { memory: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
+    const memory = (
+      performance as Performance & {
+        memory: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number };
+      }
+    ).memory;
     return {
       used: memory.usedJSHeapSize,
       total: memory.totalJSHeapSize,

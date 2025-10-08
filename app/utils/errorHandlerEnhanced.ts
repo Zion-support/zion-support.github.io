@@ -19,25 +19,14 @@ export const errorHandler = (error: AppError | Error) => {
     message: appError.message,
     stack: isDevelopment ? appError.stack : undefined,
     timestamp: new Date().toISOString(),
-    statusCode: appError.statusCode || 500
+    statusCode: appError.statusCode || 500,
   });
 
   return {
     message: appError.isOperational ? appError.message : 'An unexpected error occurred',
-    statusCode: appError.statusCode || 500
+    statusCode: appError.statusCode || 500,
   };
 };
-<<<<<<< HEAD
-export const asyncHandler = (fn: Function) => (req: any, res: any, next: any) => {
+export const asyncHandler = (fn: Function) => (req: unknown, res: unknown, next: unknown) => {
   Promise.resolve(fn(req, res, next)).catch(next);
 };
-=======
-
-export const asyncHandler = (fn: Function) => (req: unknown, res: unknown, next: unknown) => {
-  Promise.resolve(fn(req, res, next)).catch((error: unknown) => {
-    if (next && typeof next === 'function') {
-      next(error);
-    }
-  });
-};
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3228

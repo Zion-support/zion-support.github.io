@@ -5,7 +5,7 @@
 
 import React, { ReactElement, useCallback } from 'react';
 
-import { Link } from 'react-router-dom';import { render, RenderOptions, RenderResult } from '@testing-library/react';
+import { render, RenderOptions, RenderResult } from '@testing-library/react';
 import { BrowserRouter } from 'react-router-dom';
 
 // Test result types
@@ -127,12 +127,7 @@ export class TestRunner {
       bail: false,
       reporter: 'console',
       outputDir: './test-results',
-      includePattern: [
-        '**/*.test.ts',
-        '**/*.test.tsx',
-        '**/*.spec.ts',
-        '**/*.spec.tsx',
-      ],
+      includePattern: ['**/*.test.ts', '**/*.test.tsx', '**/*.spec.ts', '**/*.spec.tsx'],
       excludePattern: ['**/node_modules/**', '**/dist/**'],
       ...config,
     };
@@ -146,16 +141,9 @@ export class TestRunner {
   }
 
   // Custom render function with providers
-  customRender(
-    ui: ReactElement,
-    options?: Omit<RenderOptions, 'wrapper'>
-  ): RenderResult {
+  customRender(ui: ReactElement, options?: Omit<RenderOptions, 'wrapper'>): RenderResult {
     const AllTheProviders = ({ children }: { children: React.ReactNode }) => {
-      return (
-        <BrowserRouter>
-          {children}
-        </BrowserRouter>
-      );
+      return <BrowserRouter>{children}</BrowserRouter>;
     };
 
     return render(ui, { wrapper: AllTheProviders, ...options });
@@ -188,11 +176,7 @@ export class TestRunner {
   /**
    * Create a test case
    */
-  public it(
-    name: string,
-    fn: () => void | Promise<void>,
-    timeout?: number
-  ): void {
+  public it(name: string, fn: () => void | Promise<void>, timeout?: number): void {
     if (!this.currentSuite) {
       throw new Error('Test must be inside a describe block');
     }
@@ -209,22 +193,22 @@ export class TestRunner {
     component: ReactElement,
     testName: string
   ): Promise<{ passed: boolean; metrics: PerformanceMetrics }> {
-      const startTime = performance.now();
-      
-      const { unmount } = this.customRender(component);
-      
-      const renderTime = performance.now() - startTime;
-      
-      // Measure memory usage if available
-      let memoryUsage = 0;
-      if ('memory' in performance) {
-        const memory = (performance as { memory?: { usedJSHeapSize: number } }).memory;
-        if (memory) {
-          memoryUsage = memory.usedJSHeapSize;
-        }
-      }
+    const startTime = performance.now();
 
-      unmount();
+    const { unmount } = this.customRender(component);
+
+    const renderTime = performance.now() - startTime;
+
+    // Measure memory usage if available
+    let memoryUsage = 0;
+    if ('memory' in performance) {
+      const memory = (performance as { memory?: { usedJSHeapSize: number } }).memory;
+      if (memory) {
+        memoryUsage = memory.usedJSHeapSize;
+      }
+    }
+
+    unmount();
 
     const metrics = {
       renderTime,
@@ -238,7 +222,9 @@ export class TestRunner {
       name: `Performance: ${testName}`,
       status: passed ? 'passed' : 'failed',
       duration: renderTime,
-      error: passed ? undefined : `Render time ${renderTime}ms exceeded threshold ${this.config.performanceThreshold}ms`,
+      error: passed
+        ? undefined
+        : `Render time ${renderTime}ms exceeded threshold ${this.config.performanceThreshold}ms`,
     });
 
     return { passed, metrics };
@@ -327,8 +313,11 @@ export class TestRunner {
     this.results = [];
 
     try {
-       
-      if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { console.log('🚀 Starting test run...'); } }
+      if (process.env['NODE_ENV'] === 'development') {
+        if (import.meta.env.DEV) {
+          console.log('🚀 Starting test run...');
+        }
+      }
 
       for (const suite of this.suites) {
         await this.runSuite(suite);
@@ -345,8 +334,11 @@ export class TestRunner {
    * Run a test suite
    */
   private async runSuite(suite: TestSuite): Promise<void> {
-     
-    if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { console.log(`\n📁 Running suite: ${suite.name}`); } }
+    if (process.env['NODE_ENV'] === 'development') {
+      if (import.meta.env.DEV) {
+        console.log(`\n📁 Running suite: ${suite.name}`);
+      }
+    }
 
     // Run beforeAll hooks
     for (const hook of suite.beforeAll) {
@@ -404,8 +396,11 @@ export class TestRunner {
       });
 
       if (this.config.verbose) {
-         
-        if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { console.log(`✅ ${testName} (${Date.now() - startTime}ms)`); } }
+        if (process.env['NODE_ENV'] === 'development') {
+          if (import.meta.env.DEV) {
+            console.log(`✅ ${testName} (${Date.now() - startTime}ms)`);
+          }
+        }
       }
     } catch (error) {
       this.results.push({
@@ -416,9 +411,8 @@ export class TestRunner {
         assertions,
       });
 
-       
       console.error(`❌ ${testName} (${Date.now() - startTime}ms)`);
-       
+
       console.error(error);
 
       if (this.config.bail) {
@@ -430,14 +424,10 @@ export class TestRunner {
   /**
    * Run a hook
    */
-  private async runHook(
-    hook: () => void | Promise<void>,
-    hookName: string
-  ): Promise<void> {
+  private async runHook(hook: () => void | Promise<void>, hookName: string): Promise<void> {
     try {
       await hook();
     } catch (error) {
-       
       console.error(`❌ ${hookName} hook failed:`, error);
       throw error;
     }
@@ -446,10 +436,7 @@ export class TestRunner {
   /**
    * Run function with timeout
    */
-  private async runWithTimeout(
-    fn: () => void | Promise<void>,
-    timeout: number
-  ): Promise<void> {
+  private async runWithTimeout(fn: () => void | Promise<void>, timeout: number): Promise<void> {
     return new Promise((resolve, reject) => {
       const timer = setTimeout(() => {
         reject(new Error(`Test timed out after ${timeout}ms`));
@@ -476,18 +463,41 @@ export class TestRunner {
     const failed = this.results.filter(r => r.status === 'failed').length;
     const skipped = this.results.filter(r => r.status === 'skipped').length;
 
-     
-    if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { console.log('\n📊 Test Results:'); } }
-     
-    if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { console.log(`Total: ${this.results.length}`); } }
-     
-    if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { console.log(`Passed: ${passed}`); } }
-     
-    if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { console.log(`Failed: ${failed}`); } }
-     
-    if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { console.log(`Skipped: ${skipped}`); } }
-     
-    if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { console.log(`Duration: ${duration}ms`); } }
+    if (process.env['NODE_ENV'] === 'development') {
+      if (import.meta.env.DEV) {
+        console.log('\n📊 Test Results:');
+      }
+    }
+
+    if (process.env['NODE_ENV'] === 'development') {
+      if (import.meta.env.DEV) {
+        console.log(`Total: ${this.results.length}`);
+      }
+    }
+
+    if (process.env['NODE_ENV'] === 'development') {
+      if (import.meta.env.DEV) {
+        console.log(`Passed: ${passed}`);
+      }
+    }
+
+    if (process.env['NODE_ENV'] === 'development') {
+      if (import.meta.env.DEV) {
+        console.log(`Failed: ${failed}`);
+      }
+    }
+
+    if (process.env['NODE_ENV'] === 'development') {
+      if (import.meta.env.DEV) {
+        console.log(`Skipped: ${skipped}`);
+      }
+    }
+
+    if (process.env['NODE_ENV'] === 'development') {
+      if (import.meta.env.DEV) {
+        console.log(`Duration: ${duration}ms`);
+      }
+    }
 
     if (this.config.reporter === 'json') {
       this.generateJsonReport();
@@ -513,10 +523,17 @@ export class TestRunner {
       results: this.results,
     };
 
-     
-    if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { console.log('\n📄 JSON Report:'); } }
-     
-    if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { console.log(JSON.stringify(report, null, 2)); } }
+    if (process.env['NODE_ENV'] === 'development') {
+      if (import.meta.env.DEV) {
+        console.log('\n📄 JSON Report:');
+      }
+    }
+
+    if (process.env['NODE_ENV'] === 'development') {
+      if (import.meta.env.DEV) {
+        console.log(JSON.stringify(report, null, 2));
+      }
+    }
   }
 
   /**
@@ -563,11 +580,18 @@ export class TestRunner {
     </div>
 </body>
 </html>`;
-    
-     
-    if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { console.log('\n📄 HTML Report generated'); } }
-     
-    if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { console.log(html); } }
+
+    if (process.env['NODE_ENV'] === 'development') {
+      if (import.meta.env.DEV) {
+        console.log('\n📄 HTML Report generated');
+      }
+    }
+
+    if (process.env['NODE_ENV'] === 'development') {
+      if (import.meta.env.DEV) {
+        console.log(html);
+      }
+    }
   }
 
   // Accessibility test
@@ -576,10 +600,10 @@ export class TestRunner {
     testName: string
   ): Promise<{ passed: boolean; violations: string[] }> {
     const { container } = this.customRender(component);
-    
+
     // Basic accessibility checks
     const violations: string[] = [];
-    
+
     // Check for missing alt text on images
     const images = container.querySelectorAll('img');
     images.forEach((img, index) => {
@@ -594,7 +618,7 @@ export class TestRunner {
       const id = input.getAttribute('id');
       const ariaLabel = input.getAttribute('aria-label');
       const ariaLabelledBy = input.getAttribute('aria-labelledby');
-      
+
       if (!id && !ariaLabel && !ariaLabelledBy) {
         violations.push(`Input ${index} missing label`);
       }
@@ -616,7 +640,7 @@ export class TestRunner {
     buttons.forEach((button, index) => {
       const text = button.textContent?.trim();
       const ariaLabel = button.getAttribute('aria-label');
-      
+
       if (!text && !ariaLabel) {
         violations.push(`Button ${index} missing accessible text`);
       }
@@ -643,7 +667,7 @@ export class TestRunner {
     try {
       const result = this.customRender(component);
       assertions(result);
-      
+
       this.testResults.push({
         name: `Component: ${testName}`,
         status: 'passed',
@@ -653,7 +677,7 @@ export class TestRunner {
       return { passed: true };
     } catch (error) {
       const errorMessage = error instanceof Error ? error.message : String(error);
-      
+
       this.testResults.push({
         name: `Component: ${testName}`,
         status: 'failed',
@@ -685,10 +709,17 @@ export class TestRunner {
     </testsuite>
 </testsuites>`;
 
-     
-    if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { console.log('\n📄 JUnit Report:'); } }
-     
-    if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { console.log(xml); } }
+    if (process.env['NODE_ENV'] === 'development') {
+      if (import.meta.env.DEV) {
+        console.log('\n📄 JUnit Report:');
+      }
+    }
+
+    if (process.env['NODE_ENV'] === 'development') {
+      if (import.meta.env.DEV) {
+        console.log(xml);
+      }
+    }
   }
 
   // Integration test
@@ -700,7 +731,7 @@ export class TestRunner {
     try {
       const result = this.customRender(component);
       await userInteractions(result);
-      
+
       this.testResults.push({
         name: `Integration: ${testName}`,
         status: 'passed',
@@ -710,7 +741,7 @@ export class TestRunner {
       return { passed: true };
     } catch (error) {
       const errorMessage = error instanceof Error ? error.message : 'Unknown error';
-      
+
       this.testResults.push({
         name: `Integration: ${testName}`,
         status: 'failed',
@@ -729,9 +760,13 @@ export class TestRunner {
   ): Promise<{ passed: boolean; diff?: unknown }> {
     // This would typically use a tool like Percy or Chromatic
     // For now, we'll just return a placeholder
-     
-    if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { console.log(`Visual regression test for ${testName} would run here`); } }
-    
+
+    if (process.env['NODE_ENV'] === 'development') {
+      if (import.meta.env.DEV) {
+        console.log(`Visual regression test for ${testName} would run here`);
+      }
+    }
+
     this.testResults.push({
       name: `Visual: ${testName}`,
       status: 'passed',
@@ -759,39 +794,38 @@ export class TestRunner {
       name: 'Coverage',
       status: passed ? 'passed' : 'failed',
       duration: 0,
-      error: passed ? undefined : `Coverage ${coverage.statements}% below threshold ${this.config.coverageThreshold}%`,
+      error: passed
+        ? undefined
+        : `Coverage ${coverage.statements}% below threshold ${this.config.coverageThreshold}%`,
     });
 
     return { passed, coverage };
   }
 
   // Run all tests
-  async runAllTests(tests: Array<{
-    name: string;
-    type: 'component' | 'integration' | 'performance' | 'accessibility' | 'visual';
-    component: ReactElement;
-    assertions?: (result: RenderResult) => void;
-    userInteractions?: (result: RenderResult) => Promise<void>;
-  }>): Promise<{ passed: boolean; results: Array<{ name: string; type: string; passed: boolean; error?: string }> }> {
-    const results: any[] = [];
+  async runAllTests(
+    tests: Array<{
+      name: string;
+      type: 'component' | 'integration' | 'performance' | 'accessibility' | 'visual';
+      component: ReactElement;
+      assertions?: (result: RenderResult) => void;
+      userInteractions?: (result: RenderResult) => Promise<void>;
+    }>
+  ): Promise<{
+    passed: boolean;
+    results: Array<{ name: string; type: string; passed: boolean; error?: string }>;
+  }> {
+    const results: Array<{ name: string; type: string; passed: boolean; error?: string }> = [];
 
     for (const test of tests) {
       let result;
-      
+
       switch (test.type) {
         case 'component':
-          result = await this.runComponentTest(
-            test.component,
-            test.name,
-            test.assertions!
-          );
+          result = await this.runComponentTest(test.component, test.name, test.assertions!);
           break;
         case 'integration':
-          result = await this.runIntegrationTest(
-            test.component,
-            test.name,
-            test.userInteractions!
-          );
+          result = await this.runIntegrationTest(test.component, test.name, test.userInteractions!);
           break;
         case 'performance':
           result = await this.runPerformanceTest(test.component, test.name);
@@ -858,28 +892,31 @@ export class TestRunner {
 export const useTestRunner = () => {
   const testRunner = TestRunner.getInstance();
 
-  const runTest = useCallback(async (
-    component: ReactElement,
-    testName: string,
-    type: 'component' | 'integration' | 'performance' | 'accessibility' | 'visual',
-    assertions?: (result: RenderResult) => void,
-    userInteractions?: (result: RenderResult) => Promise<void>
-  ) => {
-    switch (type) {
-      case 'component':
-        return testRunner.runComponentTest(component, testName, assertions!);
-      case 'integration':
-        return testRunner.runIntegrationTest(component, testName, userInteractions!);
-      case 'performance':
-        return testRunner.runPerformanceTest(component, testName);
-      case 'accessibility':
-        return testRunner.runAccessibilityTest(component, testName);
-      case 'visual':
-        return testRunner.runVisualRegressionTest(component, testName);
-      default:
-        return { passed: false, error: 'Unknown test type' };
-    }
-  }, [testRunner]);
+  const runTest = useCallback(
+    async (
+      component: ReactElement,
+      testName: string,
+      type: 'component' | 'integration' | 'performance' | 'accessibility' | 'visual',
+      assertions?: (result: RenderResult) => void,
+      userInteractions?: (result: RenderResult) => Promise<void>
+    ) => {
+      switch (type) {
+        case 'component':
+          return testRunner.runComponentTest(component, testName, assertions!);
+        case 'integration':
+          return testRunner.runIntegrationTest(component, testName, userInteractions!);
+        case 'performance':
+          return testRunner.runPerformanceTest(component, testName);
+        case 'accessibility':
+          return testRunner.runAccessibilityTest(component, testName);
+        case 'visual':
+          return testRunner.runVisualRegressionTest(component, testName);
+        default:
+          return { passed: false, error: 'Unknown test type' };
+      }
+    },
+    [testRunner]
+  );
 
   return {
     runTest,
@@ -894,7 +931,7 @@ export const useTestRunner = () => {
 export const testUtils = {
   // Create mock data
   createMockData: (type: string, count: number = 10) => {
-    const mockData: any[] = [];
+    const mockData: Array<Record<string, unknown>> = [];
     for (let i = 0; i < count; i++) {
       mockData.push({
         id: i + 1,
@@ -987,11 +1024,7 @@ export class Assert {
   /**
    * Assert that two values are equal
    */
-  public static assertEquals(
-    actual: unknown,
-    expected: unknown,
-    message?: string
-  ): void {
+  public static assertEquals(actual: unknown, expected: unknown, message?: string): void {
     if (actual !== expected) {
       throw new Error(message || `Expected ${actual} to equal ${expected}`);
     }
@@ -1000,11 +1033,7 @@ export class Assert {
   /**
    * Assert that two values are not equal
    */
-  public static assertNotEquals(
-    actual: unknown,
-    expected: unknown,
-    message?: string
-  ): void {
+  public static assertNotEquals(actual: unknown, expected: unknown, message?: string): void {
     if (actual === expected) {
       throw new Error(message || `Expected ${actual} to not equal ${expected}`);
     }
@@ -1049,10 +1078,7 @@ export class Assert {
   /**
    * Assert that a value throws an error
    */
-  public static assertThrows(
-    fn: () => void,
-    expectedError?: string | RegExp
-  ): void {
+  public static assertThrows(fn: () => void, expectedError?: string | RegExp): void {
     try {
       fn();
       throw new Error('Expected function to throw an error');
@@ -1083,9 +1109,7 @@ export class Assert {
     try {
       fn();
     } catch (error) {
-      throw new Error(
-        `Expected function not to throw, but it threw: ${(error as Error).message}`
-      );
+      throw new Error(`Expected function not to throw, but it threw: ${(error as Error).message}`);
     }
   }
 
@@ -1098,9 +1122,7 @@ export class Assert {
     message?: string
   ): void {
     if (!(value instanceof constructor)) {
-      throw new Error(
-        message || `Expected ${value} to be an instance of ${constructor.name}`
-      );
+      throw new Error(message || `Expected ${value} to be an instance of ${constructor.name}`);
     }
   }
 
@@ -1168,9 +1190,7 @@ class Mock {
   /**
    * Create a mock function
    */
-  public static fn(
-    implementation?: (...args: unknown[]) => unknown
-  ): MockFunction {
+  public static fn(implementation?: (...args: unknown[]) => unknown): MockFunction {
     const calls: unknown[][] = [];
     const mockFn = (...args: unknown[]) => {
       calls.push(args);
@@ -1192,9 +1212,7 @@ class Mock {
   /**
    * Create a mock object
    */
-  public static object<T extends Record<string, unknown>>(
-    overrides: Partial<T> = {}
-  ): T {
+  public static object<T extends Record<string, unknown>>(overrides: Partial<T> = {}): T {
     return new Proxy({} as T, {
       get(target, prop) {
         if (prop in overrides) {
@@ -1223,10 +1241,7 @@ class Mock {
   /**
    * Create a spy
    */
-  public static spyOn<T extends object, K extends keyof T>(
-    object: T,
-    method: K
-  ): MockFunction {
+  public static spyOn<T extends object, K extends keyof T>(object: T, method: K): MockFunction {
     const original = object[method];
     const mockFn = Mock.fn();
 
@@ -1273,10 +1288,4 @@ interface MockFunction {
 // Export test runner and utilities
 export const testRunner = new TestRunner();
 export { Mock };
-export type {
-  TestResult,
-  TestSuite,
-  Test,
-  AssertionResult,
-  CoverageResult,
-};
+export type { TestResult, TestSuite, Test, AssertionResult, CoverageResult };
