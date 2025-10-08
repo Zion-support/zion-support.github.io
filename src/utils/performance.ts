@@ -62,7 +62,9 @@ export const logPerformance = (label: string) => {
       performance.measure(label, mark, endMark);
       
       const measure = performance.getEntriesByName(label)[0];
-      if (process.env.DEV) { }ms`); }
+      if (process.env.DEV) { 
+        console.log(`Performance: ${label} took ${measure.duration.toFixed(2)}ms`); 
+      }
     };
   }
   
