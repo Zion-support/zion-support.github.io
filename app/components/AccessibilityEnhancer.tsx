@@ -277,7 +277,6 @@ const AccessibilityEnhancer = React.forwardRef<AccessibilityEnhancerRef, Accessi
     announceToScreenReader,
     setFontSize: (size: number) => setFontSize(size),
   }), []);
-=======
   // Helper functions
   const addSkipLinks = useCallback(() => {
     const skipLinksContainer = document.createElement('div');
@@ -587,7 +586,6 @@ const AccessibilityEnhancer = React.forwardRef<AccessibilityEnhancerRef, Accessi
       cleanupEventListeners();
     };
   }, [cleanupEventListeners, defaultConfig.enableFocusManagement, defaultConfig.enableKeyboardNavigation, defaultConfig.enableScreenReaderSupport, initializeAccessibility, setupFocusManagement, setupKeyboardNavigation, setupMediaQueries, setupScreenReaderSupport, setupARIALiveRegions]);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-6fe3
 
   return (
     <div

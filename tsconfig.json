@@ -153,6 +153,5 @@
     "fix-*.jsx",
     "fix-*.ts",
     "jest.setup.*"
->>>>>>> 02b5aeb280239cc5b972bae46c8dc15c38a3f84a
   ]
 }

@@ -219,7 +219,6 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
       });
     }
   };
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-6fe3
 
   return (
     <Helmet>

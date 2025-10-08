@@ -97,9 +97,7 @@ class ErrorBoundary extends Component<Props, State> {
                 </div>
               </details>
             )}
->>>>>>> cursor/fix-errors-and-merge-to-main-88cd
           </div>
-        )
       );
     }
 
