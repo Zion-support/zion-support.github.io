@@ -13,10 +13,10 @@ async function handler(req, res) {
   const {
     name,
     email,
-    phone,
-    company,
+    phone: _phone,
+    company: _company,
     location,
-    details,
+    details: _details,
   } = req.body || {};
 
   if (!name || !email || !location) {
@@ -38,23 +38,16 @@ async function handler(req, res) {
   existing.push({
     name,
     email,
-    phone,
-    company,
+    phone: _phone,
+    company: _company,
     location,
-    details,
-    timestamp: new Date().toISOString(),
+    details: _details,
+    createdAt: new Date().toISOString(),
   });
 
-  try {
-    fs.mkdirSync(path.dirname(file), { recursive: true });
-    fs.writeFileSync(file, JSON.stringify(existing, null, 2));
-    res.statusCode = 200;
-    res.json({ success: true, message: 'Request submitted successfully' });
-  } catch (error) {
-    console.error('Error saving request:', error);
-    res.statusCode = 500;
-    res.json({ error: 'Failed to save request' });
-  }
+  fs.writeFileSync(file, JSON.stringify(existing, null, 2));
+  res.statusCode = 200;
+  res.json({ success: true });
 }
 
 module.exports = withSentry(handler);

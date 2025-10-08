@@ -5,9 +5,7 @@
 import '@testing-library/jest-dom';
 
 // Suppress jsdom navigation warnings
-// eslint-disable-next-line no-console
 const originalConsoleError = console.error;
-// eslint-disable-next-line no-console
 console.error = (...args) => {
   const message = args[0]?.toString?.() || args[0]?.message || '';
   if (message.includes('Not implemented: navigation') || 
@@ -24,8 +22,8 @@ Object.defineProperty(window, 'matchMedia', {
     matches: false,
     media: query,
     onchange: null,
-    addListener: jest.fn(), // deprecated
-    removeListener: jest.fn(), // deprecated
+    addListener: jest.fn(),
+    removeListener: jest.fn(),
     addEventListener: jest.fn(),
     removeEventListener: jest.fn(),
     dispatchEvent: jest.fn(),
@@ -60,23 +58,3 @@ Object.defineProperty(window, 'sessionStorage', {
 
 // Mock fetch
 global.fetch = jest.fn();
-
-// Mock console methods for cleaner test output
-const originalConsoleWarn = console.warn;
-const originalConsoleInfo = console.info;
-
-console.warn = (...args) => {
-  const message = args[0]?.toString?.() || '';
-  if (message.includes('Warning: ReactDOM.render is no longer supported')) {
-    return;
-  }
-  originalConsoleWarn(...args);
-};
-
-console.info = (...args) => {
-  const message = args[0]?.toString?.() || '';
-  if (message.includes('ReactDOM.render is no longer supported')) {
-    return;
-  }
-  originalConsoleInfo(...args);
-};
