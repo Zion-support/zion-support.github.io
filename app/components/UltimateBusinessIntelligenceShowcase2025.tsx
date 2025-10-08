@@ -132,11 +132,11 @@ const UltimateBusinessIntelligenceShowcase2025: React.FC = () => {
 
         {/* Call to Action */}
         <div className="text-center">
-          <div className="bg-gradient-to-r from-cyan-600 to-purple-600 rounded-2xl p-8">
-            <h3 className="text-2xl font-bold text-white mb-4">
+          <div className="bg-gradient-to-r from-cyan-600 to-purple-600 rounded-2xl p-12">
+            <h3 className="text-3xl font-bold text-white mb-4">
               Ready to Transform Your Business?
             </h3>
-            <p className="text-cyan-100 mb-6">
+            <p className="text-xl text-cyan-100 mb-8">
               Join thousands of enterprises already using our AI-powered solutions
             </p>
             <Link

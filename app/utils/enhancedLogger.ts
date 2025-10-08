@@ -113,8 +113,20 @@ export class EnhancedLogger {
   public static getInstance(config?: Partial<LoggerConfig>): EnhancedLogger {
     if (!EnhancedLogger.instance) {
       EnhancedLogger.instance = new EnhancedLogger(config);
+    } else if (config) {
+      // Update config if provided
+      EnhancedLogger.instance.updateConfig(config);
     }
     return EnhancedLogger.instance;
+  }
+
+  /**
+   * Reset singleton instance (mainly for testing)
+   * 
+   * @internal
+   */
+  public static resetInstance(): void {
+    EnhancedLogger.instance = undefined as unknown as EnhancedLogger;
   }
 
   /**

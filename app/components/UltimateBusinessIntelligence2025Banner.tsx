@@ -98,7 +98,7 @@ const UltimateBusinessIntelligence2025Banner: React.FC = () => {
             { value: '99.9%', label: 'Success Rate' },
             { value: '5M+', label: 'Data Points Processed' },
           ].map((stat, index) => (
-            <div key={index} className="text-center">
+            <div key={index} className="text-center bg-white/5 rounded-xl p-6 border border-white/10">
               <div className="text-3xl font-bold text-cyan-400 mb-2">{stat.value}</div>
               <div className="text-gray-300">{stat.label}</div>
             </div>

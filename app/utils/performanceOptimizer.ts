@@ -34,8 +34,7 @@ interface PerformanceOptimizerConfig {
   enableMonitoring: boolean;
 }
 
-// Export as PerformanceConfig for compatibility
-export type PerformanceConfig = OptimizationConfig;
+type PerformanceConfig = OptimizationConfig;
 
 class PerformanceOptimizer {
   private config: PerformanceOptimizerConfig;

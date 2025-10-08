@@ -26,12 +26,12 @@ const calculatePerformanceScore = (loadTime: number, firstContentfulPaint: numbe
   let score = 100;
   
   // Deduct points for slow load times
-  if (loadTime > 3000) score -= 20;
-  if (loadTime > 5000) score -= 30;
+  if (metrics.loadTime > 3000) score -= 20;
+  if (metrics.loadTime > 5000) score -= 30;
   
   // Deduct points for slow paint times
-  if (firstContentfulPaint > 2000) score -= 15;
-  if (firstContentfulPaint > 3000) score -= 25;
+  if (metrics.firstContentfulPaint > 2000) score -= 15;
+  if (metrics.firstContentfulPaint > 3000) score -= 25;
   
   return Math.max(0, score);
 };
