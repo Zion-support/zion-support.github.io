@@ -164,14 +164,14 @@ const HomePage: React.FC = () => {
 
             <Suspense fallback={<ServiceCardSkeleton />}>
               <article className="bg-white rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
-                <div className="text-5xl mb-6 text-center">⚛️</div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">Quantum Computing</h3>
+                <div className="text-5xl mb-6 text-center">📢</div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">AI Marketing</h3>
                 <p className="text-gray-600 mb-6 text-center leading-relaxed">
-                  Next-generation quantum computing capabilities for complex problem solving and optimization.
+                  Revolutionary AI-powered marketing automation, ad optimization, and content generation.
                 </p>
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-purple-600 mb-2">Custom Pricing</div>
-                  <a href="/quantum-computing" className="text-purple-600 hover:text-purple-700 font-medium">
+                  <div className="text-2xl font-bold text-pink-600 mb-2">Starting at $199/month</div>
+                  <a href="/ai-marketing" className="text-pink-600 hover:text-pink-700 font-medium">
                     Learn More →
                   </a>
                 </div>
@@ -180,14 +180,64 @@ const HomePage: React.FC = () => {
 
             <Suspense fallback={<ServiceCardSkeleton />}>
               <article className="bg-white rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
-                <div className="text-5xl mb-6 text-center">🔄</div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">Autonomous Systems</h3>
+                <div className="text-5xl mb-6 text-center">⚙️</div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">AI Automation</h3>
                 <p className="text-gray-600 mb-6 text-center leading-relaxed">
-                  Self-managing and self-optimizing systems for enterprise operations and infrastructure.
+                  Intelligent automation of business processes with decision-making capabilities and exception handling.
                 </p>
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-green-600 mb-2">Starting at $2,500/month</div>
-                  <a href="/autonomous-systems" className="text-green-600 hover:text-green-700 font-medium">
+                  <div className="text-2xl font-bold text-blue-600 mb-2">Starting at $399/month</div>
+                  <a href="/ai-automation" className="text-blue-600 hover:text-blue-700 font-medium">
+                    Learn More →
+                  </a>
+                </div>
+              </article>
+            </Suspense>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8 mb-12">
+            <Suspense fallback={<ServiceCardSkeleton />}>
+              <article className="bg-white rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
+                <div className="text-5xl mb-6 text-center">🏥</div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">AI Healthcare</h3>
+                <p className="text-gray-600 mb-6 text-center leading-relaxed">
+                  Cutting-edge AI solutions for medical imaging, drug discovery, and personalized medicine.
+                </p>
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-green-600 mb-2">Starting at $1,999/month</div>
+                  <a href="/ai-healthcare" className="text-green-600 hover:text-green-700 font-medium">
+                    Learn More →
+                  </a>
+                </div>
+              </article>
+            </Suspense>
+
+            <Suspense fallback={<ServiceCardSkeleton />}>
+              <article className="bg-white rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
+                <div className="text-5xl mb-6 text-center">💰</div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">AI Fintech</h3>
+                <p className="text-gray-600 mb-6 text-center leading-relaxed">
+                  Revolutionary AI-powered financial services including trading, fraud detection, and risk management.
+                </p>
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-indigo-600 mb-2">Starting at $1,499/month</div>
+                  <a href="/ai-fintech" className="text-indigo-600 hover:text-indigo-700 font-medium">
+                    Learn More →
+                  </a>
+                </div>
+              </article>
+            </Suspense>
+
+            <Suspense fallback={<ServiceCardSkeleton />}>
+              <article className="bg-white rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
+                <div className="text-5xl mb-6 text-center">⚛️</div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">Quantum Computing</h3>
+                <p className="text-gray-600 mb-6 text-center leading-relaxed">
+                  Next-generation quantum computing capabilities for complex problem solving and optimization.
+                </p>
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-purple-600 mb-2">Custom Pricing</div>
+                  <a href="/quantum-computing" className="text-purple-600 hover:text-purple-700 font-medium">
                     Learn More →
                   </a>
                 </div>

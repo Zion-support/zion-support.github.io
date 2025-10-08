@@ -4,12 +4,6 @@ interface AccessibilityEnhancerProps {
   children: React.ReactNode;
 }
 
-<<<<<<< HEAD
-const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {
-  const [isHighContrast, setIsHighContrast] = useState(false);
-  const [fontSize, setFontSize] = useState(16);
-  const [isReducedMotion, setIsReducedMotion] = useState(false);
-=======
 /**
  * Accessibility Enhancer Component
  * Provides comprehensive accessibility improvements
@@ -30,8 +24,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       announcement.setAttribute('aria-atomic', 'true');
       announcement.className = 'sr-only';
       announcement.textContent = `Navigated to ${title}`;
-      document.body.appendChild(announcement);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-6395
+      document.body.appendChild(announcement);origin/cursor/fix-errors-and-merge-to-main-6395
 
   // Check for user preferences
   useEffect(() => {
@@ -47,19 +40,13 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
 
     mediaQuery.addEventListener('change', handleChange);
 
-<<<<<<< HEAD
-    // Check for high contrast preference
-    const highContrastQuery = window.matchMedia('(prefers-contrast: high)');
-    setIsHighContrast(highContrastQuery.matches);
-=======
     const _titleElement = document.querySelector('title');
     if (titleElement) {
       observer.observe(titleElement.parentNode as Node, {
         childList: true,
         subtree: true,
       });
-    }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-6395
+    }origin/cursor/fix-errors-and-merge-to-main-6395
 
     const handleContrastChange = (e: MediaQueryListEvent) => {
       setIsHighContrast(e.matches);
@@ -83,46 +70,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   useEffect(() => {
     if (typeof window === 'undefined') return;
 
-<<<<<<< HEAD
-    const root = document.documentElement;
-    
-    // Apply high contrast styles
-    if (isHighContrast) {
-      root.classList.add('high-contrast');
-    } else {
-      root.classList.remove('high-contrast');
-    }
-
-    // Apply reduced motion styles
-    if (isReducedMotion) {
-      root.classList.add('reduced-motion');
-    } else {
-      root.classList.remove('reduced-motion');
-    }
-
-    // Apply font size
-    root.style.fontSize = `${fontSize}px`;
-  }, [isHighContrast, isReducedMotion, fontSize]);
-
-  // Keyboard navigation enhancement
-  useEffect(() => {
-    const handleKeyDown = (event: KeyboardEvent) => {
-      // Skip to main content
-      if (event.key === 'Tab' && event.shiftKey && event.target === document.body) {
-        const skipLink = document.querySelector('[href="#main-content"]') as HTMLElement;
-        if (skipLink) {
-          skipLink.focus();
-        }
-      }
-
-      // Escape key to close modals/dropdowns
-      if (event.key === 'Escape') {
-        const activeElement = document.activeElement as HTMLElement;
-        if (activeElement && activeElement.getAttribute('aria-expanded') === 'true') {
-          activeElement.click();
-        }
-      }
-=======
     // Enhanced keyboard navigation
     const handleKeyDown = (e: KeyboardEvent) => {
       // Skip to main content with Alt + M
@@ -164,8 +111,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
 
     // Remove keyboard navigation class on mouse use
     const handleMouseDown = () => {
-      document.body.classList.remove('keyboard-navigation');
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-6395
+      document.body.classList.remove('keyboard-navigation');origin/cursor/fix-errors-and-merge-to-main-6395
     };
 
     document.addEventListener('keydown', handleKeyDown);
@@ -188,10 +134,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   }, []);
 
   useEffect(() => {
-<<<<<<< HEAD
-    document.addEventListener('focusin', handleFocusIn);
-    document.addEventListener('focusout', handleFocusOut);
-=======
     if (!enableFocusIndicators) return;
 
     // Add custom focus styles
@@ -271,8 +213,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
         outline-offset: 2px;
       }
     `;
-    document.head.appendChild(style);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-6395
+    document.head.appendChild(style);origin/cursor/fix-errors-and-merge-to-main-6395
 
     return () => {
       document.removeEventListener('focusin', handleFocusIn);

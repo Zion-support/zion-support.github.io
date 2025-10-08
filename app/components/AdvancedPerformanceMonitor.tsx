@@ -49,12 +49,8 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
         observers.push(lcpObserver);
       } catch (error) {
-<<<<<<< HEAD
         // eslint-disable-next-line no-console
-        console.warn('LCP observer not supported:', error);
-=======
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-6395
+        console.warn('LCP observer not supported:', error);origin/cursor/fix-errors-and-merge-to-main-6395
       }
     }
 
@@ -80,12 +76,8 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         fidObserver.observe({ entryTypes: ['first-input'] });
         observers.push(fidObserver);
       } catch (error) {
-<<<<<<< HEAD
         // eslint-disable-next-line no-console
-        console.warn('FID observer not supported:', error);
-=======
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-6395
+        console.warn('FID observer not supported:', error);origin/cursor/fix-errors-and-merge-to-main-6395
       }
     }
 
@@ -112,12 +104,8 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         clsObserver.observe({ entryTypes: ['layout-shift'] });
         observers.push(clsObserver);
       } catch (error) {
-<<<<<<< HEAD
         // eslint-disable-next-line no-console
-        console.warn('CLS observer not supported:', error);
-=======
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-6395
+        console.warn('CLS observer not supported:', error);origin/cursor/fix-errors-and-merge-to-main-6395
       }
     }
 
@@ -141,12 +129,8 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         memory,
       }));
     } catch (error) {
-<<<<<<< HEAD
       // eslint-disable-next-line no-console
-      console.warn('Performance measurement failed:', error);
-=======
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-6395
+      console.warn('Performance measurement failed:', error);origin/cursor/fix-errors-and-merge-to-main-6395
     }
 
     // Cleanup observers
@@ -155,12 +139,8 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         try {
           observer.disconnect();
         } catch (error) {
-<<<<<<< HEAD
           // eslint-disable-next-line no-console
-          console.warn('Error disconnecting observer:', error);
-=======
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-6395
+          console.warn('Error disconnecting observer:', error);origin/cursor/fix-errors-and-merge-to-main-6395
         }
       });
     };
