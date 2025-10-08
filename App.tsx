@@ -1,5 +1,6 @@
 import React, { memo, useMemo, Suspense } from 'react';
 import { HelmetProvider, Helmet } from 'react-helmet-async';
+import EnhancedErrorBoundary from './app/components/EnhancedErrorBoundary';
 
 // Memoized components for better performance
 const UnifiedContentPromotion = memo(() => (
@@ -136,7 +137,7 @@ export default function App() {
   );
 
   return (
-    <ErrorBoundary>
+    <EnhancedErrorBoundary>
       <HelmetProvider>
         <Helmet>
           <title>Zion Tech Group - AI & IT Solutions</title>
@@ -178,6 +179,6 @@ export default function App() {
           </Suspense>
         </div>
       </HelmetProvider>
-    </ErrorBoundary>
+    </EnhancedErrorBoundary>
   );
 }
