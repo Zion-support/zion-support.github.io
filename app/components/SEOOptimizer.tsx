@@ -15,10 +15,10 @@ interface SEOOptimizerProps {
 const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   title = 'Zion Tech Group - AI & IT Solutions',
   description = 'Leading provider of AI-powered enterprise solutions, automation, and digital transformation services.',
-  keywords = ['AI solutions', 'enterprise AI', 'digital transformation', 'automation', 'cloud services'],
+  keywords: _keywords = ['AI solutions', 'enterprise AI', 'digital transformation', 'automation', 'cloud services'],
   image = 'https://ziontechgroup.com/og-image.jpg',
   url = 'https://ziontechgroup.com',
-  type = 'website'
+  type: _type = 'website'
 }) => {
   const pathname = usePathname();
 
@@ -32,7 +32,9 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
     }
   }, [title, url, pathname]);
 
-  const structuredData = {
+  // Structured data for SEO (currently not used but available for future implementation)
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const _structuredData = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
     name: 'Zion Tech Group',

@@ -1,1 +1,0 @@
-return (; <div className="text-left" >; {onBack && (} <Button variant="outline" onClick={onBack}>; {backLabel} </Button>) )} {onNext && (}
