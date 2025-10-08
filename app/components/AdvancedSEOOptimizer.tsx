@@ -4,8 +4,9 @@ import { Helmet } from 'react-helmet-async';
 interface SEOConfig {
   title: string;
   description: string;
-  keywords: string[];
+  url: string;
   canonicalUrl: string;
+  keywords: string[];
   ogTitle?: string;
   ogDescription?: string;
   ogImage?: string;
@@ -21,14 +22,6 @@ interface SEOConfig {
   modifiedTime?: string;
   section?: string;
   tags?: string[];
-}
-
-interface SEOConfig {
-  title: string;
-  description: string;
-  url: string;
-  canonicalUrl: string;
-  keywords: string[];
 }
 
 interface AdvancedSEOOptimizerProps {
@@ -187,6 +180,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
       description: config.description,
       url: config.canonicalUrl,
       canonicalUrl: config.canonicalUrl,
+      keywords: config.keywords,
     });
 
     // Cleanup on unmount
