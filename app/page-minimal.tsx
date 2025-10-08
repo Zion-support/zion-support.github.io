@@ -177,4 +177,10 @@ export default function HomePage() {
       </footer>
     </div>
   );
+<<<<<<< HEAD
 }
+=======
+};
+
+export default HomePage;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3228

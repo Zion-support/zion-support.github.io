@@ -152,4 +152,10 @@ export default function OptimizedHomePage() {
       </div>
     </AccessibilityEnhancer>
   );
+<<<<<<< HEAD
 }
+=======
+};
+
+export default OptimizedHomePage;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3228

@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import { Home, Menu, Settings, X, User } from 'lucide-react';
+=======
+import { Menu, X, Home, User, Settings } from 'lucide-react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3228
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 

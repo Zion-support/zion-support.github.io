@@ -64,8 +64,14 @@ class MonitoringService {
         // First Input Delay
         const fidObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
+<<<<<<< HEAD
           entries.forEach((entry: any) => {
             this.metrics.fid = entry.processingStart - entry.startTime;
+=======
+          entries.forEach((entry: unknown) => {
+            const perfEntry = entry as PerformanceEventTiming;
+            this.metrics.fid = perfEntry.processingStart - perfEntry.startTime;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3228
             this.reportMetric('fid', this.metrics.fid);
           });
         });
@@ -74,8 +80,15 @@ class MonitoringService {
         // Cumulative Layout Shift
         let clsValue = 0;
         const clsObserver = new PerformanceObserver((list) => {
+<<<<<<< HEAD
             if (!entry.hadRecentInput) {
               clsValue += entry.value;
+=======
+          for (const entry of list.getEntries() as PerformanceEntry[]) {
+            const layoutShiftEntry = entry as any;
+            if (!layoutShiftEntry.hadRecentInput) {
+              clsValue += layoutShiftEntry.value;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3228
               this.metrics.cls = clsValue;
               this.reportMetric('cls', clsValue);
             }
@@ -87,8 +100,9 @@ class MonitoringService {
         const fcpObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
           entries.forEach((entry) => {
-            this.metrics.fcp = entry.startTime;
-            this.reportMetric('fcp', entry.startTime);
+            const paintEntry = entry as PerformancePaintTiming;
+            this.metrics.fcp = paintEntry.startTime;
+            this.reportMetric('fcp', paintEntry.startTime);
           });
         });
         fcpObserver.observe({ entryTypes: ['paint'] });
@@ -124,12 +138,23 @@ class MonitoringService {
       try {
         const resourceObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
+<<<<<<< HEAD
           entries.forEach((entry: any) => {
             if (entry.duration > 1000) {
               console.warn('Slow resource detected:', {
                 name: entry.name,
                 duration: entry.duration,
                 type: entry.initiatorType,
+=======
+          entries.forEach((entry: unknown) => {
+            const resourceEntry = entry as PerformanceResourceTiming;
+            if (resourceEntry.duration > 1000) {
+
+    console.warn('Slow resource detected:', {
+                name: resourceEntry.name,
+                duration: resourceEntry.duration,
+                type: resourceEntry.initiatorType,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3228
               });
             }
           });

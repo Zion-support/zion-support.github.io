@@ -803,6 +803,7 @@ export class TestRunner {
   }
 
   // Run all tests
+<<<<<<< HEAD
   async runAllTests(
     tests: Array<{
       name: string;
@@ -820,6 +821,16 @@ export class TestRunner {
 =======
     const results: unknown[] = [];
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-283b
+=======
+  async runAllTests(tests: Array<{
+    name: string;
+    type: 'component' | 'integration' | 'performance' | 'accessibility' | 'visual';
+    component: ReactElement;
+    assertions?: (result: RenderResult) => void;
+    userInteractions?: (result: RenderResult) => Promise<void>;
+  }>): Promise<{ passed: boolean; results: Array<{ name: string; type: string; passed: boolean; error?: string }> }> {
+    const results: Array<{ name: string; type: string; passed: boolean; error?: string }> = [];
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3228
 
     for (const test of tests) {
       let result;
@@ -847,7 +858,7 @@ export class TestRunner {
       results.push({ ...result, name: test.name, type: test.type });
     }
 
-    const passed = results.every(result => result.passed);
+    const passed = results.every((result: any) => result.passed);
 
     return { passed, results };
   }
