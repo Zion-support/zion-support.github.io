@@ -101,42 +101,35 @@ export function useEnhancedPerformance(
   const measureOperation = useCallback(
     (operationName: string) => {
       const markName = `${component}-${operationName}`;
-      const startMark = `${markName}-start`;
-      const endMark = `${markName}-end`;
+      const startMarkName = `${markName}-start`;
+      const endMarkName = `${markName}-end`;
       
-      // Use native Performance API
-      if (typeof window !== 'undefined' && window.performance) {
-        performance.mark(startMark);
+      if (typeof performance !== 'undefined' && performance.mark) {
+        performance.mark(startMarkName);
       }
 
       return {
         end: () => {
-          if (typeof window !== 'undefined' && window.performance) {
-            performance.mark(endMark);
+          if (typeof performance !== 'undefined' && performance.mark && performance.measure) {
             try {
-              const measure = performance.measure(markName, startMark, endMark);
+              performance.mark(endMarkName);
+              const measure = performance.measure(markName, startMarkName, endMarkName);
               const duration = measure.duration;
               
-              if (trackPerformance) {
+              if (duration && trackPerformance) {
                 analytics.trackPerformance(
                   `${component}-${operationName}`,
                   duration,
                   duration > 1000 ? 'slow' : 'fast'
                 );
               }
-              
-              // Clean up marks
-              performance.clearMarks(startMark);
-              performance.clearMarks(endMark);
-              performance.clearMeasures(markName);
-              
               return duration;
             } catch (error) {
-              console.warn('Failed to measure performance:', error);
-              return 0;
+              console.warn('Performance measurement failed:', error);
+              return undefined;
             }
           }
-          return 0;
+          return undefined;
         },
       };
     },
