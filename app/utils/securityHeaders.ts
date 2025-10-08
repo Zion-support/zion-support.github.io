@@ -1,4 +1,3 @@
-import React from 'react';
 /**
  * Security Headers Configuration
  * Comprehensive security headers for production applications

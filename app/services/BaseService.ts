@@ -3,7 +3,6 @@
  * Provides common functionality for all service classes
  */
 
-import React from 'react';
 import { apiClient } from '../utils/apiClient';
 import logger from '../utils/logger';
 

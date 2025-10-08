@@ -1,11 +1,11 @@
 import React from 'react';
 // import { Metadata } from 'next'; // Removed for Vite
 
-// export const metadata: Metadata = // Removed for Vite {
-  title: 'Contact Us - Zion Tech Group',
-  description:
-    'Get in touch with Zion Tech Group for AI and IT solutions. Contact our experts for consultation and support.',
-};
+// export const metadata: Metadata = { // Removed for Vite
+//   title: 'Contact Us - Zion Tech Group',
+//   description:
+//     'Get in touch with Zion Tech Group for AI and IT solutions. Contact our experts for consultation and support.',
+// };
 
 const ContactPage: React.FC = () => {
   return (

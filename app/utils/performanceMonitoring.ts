@@ -3,7 +3,6 @@
  * Tracks Core Web Vitals and custom performance metrics
  */
 
-import React from 'react';
 import { logger } from './logger';
 
 export interface PerformanceMetric {

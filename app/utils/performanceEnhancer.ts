@@ -3,7 +3,6 @@
  * Advanced performance optimization tools for the application
  */
 
-import React from 'react';
 import { useEffect, useRef } from 'react';
 
 // Debounce function for performance optimization
@@ -308,7 +307,7 @@ export const initializePerformanceEnhancements = () => {
   // Collect performance metrics
   const metrics = collectPerformanceMetrics();
   if (metrics && process.env['NODE_ENV'] === 'development') {
-    // eslint-disable-next-line no-console
+     
     if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { console.log('Performance metrics:', metrics); } }
   }
 };

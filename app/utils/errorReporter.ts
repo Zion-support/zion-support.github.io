@@ -3,7 +3,6 @@
  * Provides comprehensive error tracking, logging, and reporting capabilities
  */
 
-import React from 'react';
 import { logger } from './logger';
 
 export interface ErrorReport {
