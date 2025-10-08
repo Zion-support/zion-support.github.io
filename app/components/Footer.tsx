@@ -2,8 +2,7 @@ import React, { memo } from 'react';
 import { Link } from 'react-router-dom';
 import { Phone, Mail, MapPin, Clock, Award, Shield, Zap, ArrowRight } from 'lucide-react';
 
-<<<<<<< HEAD
-const Footer: React.FC = () => {
+const Footer: React.FC = memo(() => {
   const aiServices = [
     { name: 'AI Services', url: '/ai-services' },
     { name: 'AI Marketing', url: '/ai-marketing' },
@@ -48,9 +47,6 @@ const Footer: React.FC = () => {
     { name: 'Sitemap', url: '/sitemap' },
   ];
 
-=======
-const Footer: React.FC = memo(() => {
->>>>>>> cursor/fix-errors-and-merge-to-main-ef5d
   return (
     <footer className="bg-gray-900 text-white">
       {/* Main Footer Content */}
@@ -66,7 +62,6 @@ const Footer: React.FC = memo(() => {
               Leading provider of enterprise AI solutions, quantum computing, and autonomous systems. 
               Transform your business with cutting-edge technology.
             </p>
-<<<<<<< HEAD
             <div className="text-gray-300">
               <p>364 E Main St STE 1008</p>
               <p>Middletown, DE 19709</p>
@@ -74,226 +69,6 @@ const Footer: React.FC = memo(() => {
             </div>
           </div>
 
-          {/* Quick Links */}
-          <div>
-            <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
-            <ul className="space-y-2">
-              <li>
-                <Link to="/" className="text-gray-300 hover:text-white transition-colors">
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link to="/about" className="text-gray-300 hover:text-white transition-colors">
-                  About
-                </Link>
-              </li>
-              <li>
-                <Link to="/services" className="text-gray-300 hover:text-white transition-colors">
-                  Services
-                </Link>
-              </li>
-              <li>
-                <Link to="/services-advertising" className="text-gray-300 hover:text-white transition-colors">
-                  AI Advertising
-                </Link>
-              </li>
-              <li>
-                <Link to="/case-studies" className="text-gray-300 hover:text-white transition-colors">
-                  Case Studies
-                </Link>
-              </li>
-              <li>
-                <Link to="/enterprise" className="text-gray-300 hover:text-white transition-colors">
-                  Enterprise
-                </Link>
-              </li>
-              <li>
-                <Link to="/team" className="text-gray-300 hover:text-white transition-colors">
-                  Team
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* Services */}
-          <div>
-            <h4 className="text-lg font-semibold mb-4">Services</h4>
-            <ul className="space-y-2 text-gray-300">
-              <li>
-                <Link to="/services" className="hover:text-white transition-colors">
-                  All Services
-                </Link>
-              </li>
-              <li>
-                <Link to="/ai-services" className="hover:text-white transition-colors">
-                  AI Services
-                </Link>
-              </li>
-              <li>
-                <Link to="/ai-data-analytics" className="hover:text-white transition-colors">
-                  AI Data Analytics
-                </Link>
-              </li>
-              <li>
-                <Link to="/ai-cybersecurity" className="hover:text-white transition-colors">
-                  AI Cybersecurity
-                </Link>
-              </li>
-              <li>
-                <Link to="/ai-workflow-automation" className="hover:text-white transition-colors">
-                  AI Workflow Automation
-                </Link>
-              </li>
-              <li>
-                <Link to="/ai-cloud-infrastructure" className="hover:text-white transition-colors">
-                  AI Cloud Infrastructure
-                </Link>
-              </li>
-              <li>
-                <Link to="/ai-ecommerce-solutions" className="hover:text-white transition-colors">
-                  AI E-commerce Solutions
-                </Link>
-              </li>
-              <li>
-                <Link to="/ai-mobile-app-development" className="hover:text-white transition-colors">
-                  AI Mobile App Development
-                </Link>
-              </li>
-              <li>
-                <Link to="/it-services" className="hover:text-white transition-colors">
-                  IT Services
-                </Link>
-              </li>
-              <li>
-                <Link to="/micro-saas" className="hover:text-white transition-colors">
-                  Micro SAAS
-                </Link>
-              </li>
-              <li>
-                <Link to="/quantum-computing" className="hover:text-white transition-colors">
-                  Quantum Computing
-                </Link>
-              </li>
-              <li>
-                <Link to="/autonomous-systems" className="hover:text-white transition-colors">
-                  Autonomous Systems
-                </Link>
-              </li>
-              <li>
-                <Link to="/business-intelligence" className="hover:text-white transition-colors">
-                  Business Intelligence
-                </Link>
-              </li>
-              <li>
-                <Link to="/blockchain-web3" className="hover:text-white transition-colors">
-                  Blockchain & Web3
-                </Link>
-              </li>
-              <li>
-                <Link to="/iot-edge-computing" className="hover:text-white transition-colors">
-                  IoT & Edge Computing
-                </Link>
-              </li>
-              <li>
-                <Link to="/cybersecurity" className="hover:text-white transition-colors">
-                  Cybersecurity
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* Contact */}
-          <div>
-            <h4 className="text-lg font-semibold mb-4">Contact</h4>
-<<<<<<< HEAD
-            <div className="space-y-2 text-gray-300">
-              <p>Email: kleber@ziontechgroup.com</p>
-              <p>Phone: +1 (302) 464-0950</p>
-              <p>Website: ziontechgroup.com</p>
-=======
-            <div className="space-y-3">
-              <div className="flex items-center">
-                <Phone className="w-5 h-5 mr-3 text-blue-400" />
-                <a href="tel:+13024640950" className="text-gray-300 hover:text-white transition-colors">
-                  +1 (302) 464-0950
-                </a>
-              </div>
-              <div className="flex items-center">
-                <Mail className="w-5 h-5 mr-3 text-blue-400" />
-                <a href="mailto:contact@ziontechgroup.com" className="text-gray-300 hover:text-white transition-colors">
-                  contact@ziontechgroup.com
-                </a>
-              </div>
-              <div className="flex items-center">
-                <MapPin className="w-5 h-5 mr-3 text-blue-400" />
-                <span className="text-gray-300">364 E Main St STE 1008, Middletown DE 19709</span>
-              </div>
-              <div className="flex items-center">
-                <Clock className="w-5 h-5 mr-3 text-blue-400" />
-                <span className="text-gray-300">24/7 Support Available</span>
-              </div>
->>>>>>> cursor/analyze-improve-and-deploy-application-1a78
-              <div className="flex space-x-4 mt-4">
-                <a href="https://linkedin.com/company/ziontechgroup" className="text-gray-300 hover:text-white transition-colors">
-                  LinkedIn
-                </a>
-                <a href="https://twitter.com/ziontechgroup" className="text-gray-300 hover:text-white transition-colors">
-                  Twitter
-                </a>
-              </div>
-<<<<<<< HEAD
-=======
-            <div className="space-y-3">
-              <div className="flex items-center">
-                <Phone className="w-5 h-5 mr-3 text-cyan-400" />
-                <a href="tel:+13024640950" className="text-gray-300 hover:text-white transition-colors">
-                  +1 (302) 464-0950
-                </a>
-              </div>
-              <div className="flex items-center">
-                <Mail className="w-5 h-5 mr-3 text-cyan-400" />
-                <a href="mailto:kleber@ziontechgroup.com" className="text-gray-300 hover:text-white transition-colors">
-                  kleber@ziontechgroup.com
-                </a>
-              </div>
-              <div className="flex items-center">
-                <MapPin className="w-5 h-5 mr-3 text-cyan-400" />
-                <span className="text-gray-300">364 E Main St STE 1008, Middletown DE 19709</span>
-              </div>
-              <div className="flex items-center">
-                <Clock className="w-5 h-5 mr-3 text-cyan-400" />
-                <span className="text-gray-300">24/7 Support Available</span>
-=======
-              
-              {/* Contact Info */}
-              <div className="space-y-3 mt-6">
-                <div className="flex items-center">
-                  <Phone className="w-5 h-5 mr-3 text-blue-400" />
-                  <a href="tel:+13024640950" className="text-gray-300 hover:text-white transition-colors">
-                    +1 302 464 0950
-                  </a>
-                </div>
-                <div className="flex items-center">
-                  <Mail className="w-5 h-5 mr-3 text-blue-400" />
-                  <a href="mailto:kleber@ziontechgroup.com" className="text-gray-300 hover:text-white transition-colors">
-                    kleber@ziontechgroup.com
-                  </a>
-                </div>
-                <div className="flex items-center">
-                  <MapPin className="w-5 h-5 mr-3 text-blue-400" />
-                  <span className="text-gray-300">364 E Main St STE 1008, Middletown DE 19709</span>
-                </div>
-                <div className="flex items-center">
-                  <Clock className="w-5 h-5 mr-3 text-blue-400" />
-                  <span className="text-gray-300">24/7 Support Available</span>
-                </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-ef5d
-              </div>
-            </div>
-          </div>
-
-<<<<<<< HEAD
           {/* AI Services */}
           <div>
             <h4 className="text-lg font-semibold mb-6 text-cyan-400">AI Services</h4>
@@ -402,50 +177,12 @@ const Footer: React.FC = memo(() => {
             <div className="cyber-card">
               <div className="text-4xl font-bold text-orange-400 mb-2">24/7</div>
               <div className="text-gray-300">Support Available</div>
->>>>>>> cursor/website-audit-and-update-with-deployment-73aa
-=======
-            {/* Resources */}
-            <div>
-              <h4 className="text-lg font-semibold mb-4">Resources</h4>
-              <ul className="space-y-2">
-                <li>
-                  <Link to="/blog" className="text-gray-300 hover:text-white transition-colors">
-                    Blog & Insights
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/guides" className="text-gray-300 hover:text-white transition-colors">
-                    Technical Guides
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/privacy" className="text-gray-300 hover:text-white transition-colors">
-                    Privacy Policy
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/terms" className="text-gray-300 hover:text-white transition-colors">
-                    Terms of Service
-                  </Link>
-                </li>
-                <li>
-                  <a href="https://github.com/ziontechgroup" className="text-gray-300 hover:text-white transition-colors">
-                    GitHub
-                  </a>
-                </li>
-                <li>
-                  <a href="https://docs.ziontechgroup.com" className="text-gray-300 hover:text-white transition-colors">
-                    Documentation
-                  </a>
-                </li>
-              </ul>
->>>>>>> cursor/fix-errors-and-merge-to-main-ef5d
             </div>
           </div>
         </div>
       </div>
 
-      {/* Bottom Footer */}
+      {/* Contact Info */}
       <div className="border-t border-gray-700 py-8">
         <div className="container mx-auto px-4">
           <div className="flex flex-col lg:flex-row justify-between items-center">
@@ -466,8 +203,28 @@ const Footer: React.FC = memo(() => {
               </div>
             </div>
             
+            {/* Contact Details */}
+            <div className="flex flex-col lg:flex-row items-center space-y-4 lg:space-y-0 lg:space-x-8">
+              <div className="flex items-center">
+                <Phone className="w-5 h-5 mr-3 text-cyan-400" />
+                <a href="tel:+13024640950" className="text-gray-300 hover:text-white transition-colors">
+                  +1 (302) 464-0950
+                </a>
+              </div>
+              <div className="flex items-center">
+                <Mail className="w-5 h-5 mr-3 text-cyan-400" />
+                <a href="mailto:kleber@ziontechgroup.com" className="text-gray-300 hover:text-white transition-colors">
+                  kleber@ziontechgroup.com
+                </a>
+              </div>
+              <div className="flex items-center">
+                <MapPin className="w-5 h-5 mr-3 text-cyan-400" />
+                <span className="text-gray-300">364 E Main St STE 1008, Middletown DE 19709</span>
+              </div>
+            </div>
+            
             {/* Social Links */}
-            <div className="flex space-x-4">
+            <div className="flex space-x-4 mt-4 lg:mt-0">
               <a 
                 href="https://linkedin.com/company/ziontechgroup" 
                 className="text-gray-300 hover:text-cyan-400 transition-colors"

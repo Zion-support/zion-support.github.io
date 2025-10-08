@@ -42,10 +42,19 @@ body {
 /* Futuristic Animations */
 @keyframes neon-glow {
   0%, 100% {
-    text-shadow: 0 0 5px currentColor, 0 0 10px currentColor, 0 0 15px currentColor;
+    text-shadow: 0 0 5px currentColor, 0 0 10px currentColor, 0 0 15px currentColor, 0 0 20px currentColor;
   }
   50% {
-    text-shadow: 0 0 10px currentColor, 0 0 20px currentColor, 0 0 30px currentColor;
+    text-shadow: 0 0 10px currentColor, 0 0 20px currentColor, 0 0 30px currentColor, 0 0 40px currentColor;
+  }
+}
+
+@keyframes neon-pulse-intense {
+  0%, 100% {
+    box-shadow: 0 0 5px currentColor, 0 0 10px currentColor, 0 0 15px currentColor, 0 0 20px currentColor;
+  }
+  50% {
+    box-shadow: 0 0 10px currentColor, 0 0 20px currentColor, 0 0 30px currentColor, 0 0 40px currentColor;
   }
 }
 
@@ -95,6 +104,52 @@ body {
   }
 }
 
+@keyframes matrix-rain-enhanced {
+  0% {
+    transform: translateY(-100vh) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+@keyframes hologram-scan {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
+
+@keyframes energy-pulse {
+  0%, 100% {
+    transform: scale(1);
+    filter: brightness(1);
+  }
+  50% {
+    transform: scale(1.05);
+    filter: brightness(1.2);
+  }
+}
+
+@keyframes cyber-grid-move {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 20px 20px;
+  }
+}
+
 /* Futuristic Components */
 .neon-text {
   color: var(--neon-cyan);
@@ -125,6 +180,17 @@ body {
     linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px),
     linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px);
   background-size: 20px 20px;
+  animation: cyber-grid-move 20s linear infinite;
+}
+
+.cyber-grid-enhanced {
+  background-image: 
+    linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px),
+    linear-gradient(45deg, rgba(139, 92, 246, 0.05) 1px, transparent 1px),
+    linear-gradient(-45deg, rgba(236, 72, 153, 0.05) 1px, transparent 1px);
+  background-size: 20px 20px, 20px 20px, 40px 40px, 40px 40px;
+  animation: cyber-grid-move 20s linear infinite;
 }
 
 .data-stream {
@@ -187,12 +253,45 @@ body {
   position: relative;
   overflow: hidden;
   transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.cyber-card-enhanced {
+  background: linear-gradient(135deg, rgba(15, 15, 35, 0.95) 0%, rgba(26, 26, 46, 0.95) 50%, rgba(22, 33, 62, 0.95) 100%);
+  border: 2px solid rgba(0, 255, 255, 0.4);
+  border-radius: 16px;
+  padding: 32px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  backdrop-filter: blur(15px);
+  box-shadow: 0 8px 32px rgba(0, 255, 255, 0.1);
+}
+
+.cyber-card-enhanced::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, transparent 30%, rgba(0, 255, 255, 0.1) 50%, transparent 70%);
+  animation: hologram-scan 3s ease-in-out infinite;
+  pointer-events: none;
 }
 
 .cyber-card:hover {
   transform: translateY(-5px);
   border-color: var(--neon-cyan);
   box-shadow: 0 20px 40px rgba(0, 255, 255, 0.2);
+  animation: energy-pulse 2s ease-in-out infinite;
+}
+
+.cyber-card-enhanced:hover {
+  transform: translateY(-8px) scale(1.02);
+  border-color: var(--neon-cyan);
+  box-shadow: 0 25px 50px rgba(0, 255, 255, 0.3);
+  animation: neon-pulse-intense 1.5s ease-in-out infinite;
 }
 
 .cyber-card::before {
@@ -460,6 +559,129 @@ button:focus-visible {
 
 .text-low-contrast {
   color: #6b7280;
+}
+
+/* Additional Futuristic Components */
+.neon-border-enhanced {
+  border: 2px solid var(--neon-cyan);
+  box-shadow: 
+    0 0 10px var(--neon-cyan), 
+    inset 0 0 10px var(--neon-cyan),
+    0 0 20px rgba(0, 255, 255, 0.3);
+  animation: neon-pulse-intense 2s ease-in-out infinite alternate;
+}
+
+.hologram-text {
+  background: linear-gradient(45deg, var(--neon-cyan), var(--neon-purple), var(--neon-pink));
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: hologram-scan 3s ease-in-out infinite;
+}
+
+.cyber-glow {
+  position: relative;
+  overflow: hidden;
+}
+
+.cyber-glow::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, var(--neon-cyan), var(--neon-purple), var(--neon-pink), var(--neon-cyan));
+  background-size: 400% 400%;
+  animation: hologram-scan 4s ease-in-out infinite;
+  z-index: -1;
+  border-radius: inherit;
+}
+
+.matrix-bg {
+  position: relative;
+  overflow: hidden;
+}
+
+.matrix-bg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 20% 50%, rgba(0, 255, 255, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(139, 92, 246, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 40% 80%, rgba(236, 72, 153, 0.1) 0%, transparent 50%);
+  animation: energy-pulse 6s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.cyber-text-shadow {
+  text-shadow: 
+    0 0 5px currentColor,
+    0 0 10px currentColor,
+    0 0 15px currentColor,
+    0 0 20px currentColor,
+    0 0 35px currentColor,
+    0 0 40px currentColor;
+}
+
+.energy-flow {
+  position: relative;
+  overflow: hidden;
+}
+
+.energy-flow::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(0, 255, 255, 0.4), transparent);
+  animation: data-stream 2s linear infinite;
+}
+
+/* Enhanced Responsive Design */
+@media (max-width: 768px) {
+  .cyber-card {
+    padding: 16px;
+  }
+  
+  .cyber-card-enhanced {
+    padding: 20px;
+  }
+  
+  .cyber-button {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+  
+  .neon-text {
+    animation-duration: 3s;
+  }
+  
+  .cyber-grid {
+    background-size: 15px 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .cyber-card {
+    padding: 12px;
+  }
+  
+  .cyber-card-enhanced {
+    padding: 16px;
+  }
+  
+  .cyber-button {
+    padding: 8px 16px;
+    font-size: 12px;
+  }
 }
 
 /* Print styles */
