@@ -210,7 +210,7 @@ class HealthCheckService {
     } catch (error) {
       return {
         name: 'performance',
-        status: 'warn'
+        status: 'warn',
         message: 'Could not check performance'
       }
     }
@@ -220,12 +220,12 @@ class HealthCheckService {
    */
   private checkBrowserAPIs(): HealthCheck {
     const requiredAPIs = [
-      'fetch'
-      'localStorage'
-      'sessionStorage'
-      'console'
+      'fetch',
+      'localStorage',
+      'sessionStorage',
+      'console',
       'navigator'
-    ]
+    ];
 
     const missingAPIs: string[] = []
 

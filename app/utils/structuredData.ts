@@ -2,6 +2,8 @@
  * Enhanced Structured Data (JSON-LD) utilities for improved SEO
  */
 
+import React from 'react';
+
 export interface StructuredDataConfig {
   title?: string;
   description?: string;
@@ -202,7 +204,12 @@ export const getHomepageSchemas = () => [
  */
 export const renderStructuredData = (schemas: unknown[]) => {
   return schemas.map((schema, _index) => (
-=======
-    JSON.stringify(schema)
+    <script
+      key={_index}
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{
+        __html: JSON.stringify(schema)
+      }}
+    />
   ));
 };
