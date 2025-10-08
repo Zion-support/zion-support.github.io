@@ -55,10 +55,7 @@ function fixCorruptedSyntax(text) {
     /const\s*([a-zA-Z_$][a-zA-Z0-9_$]*)\s*:\s*React\.FC\s*=\s*\(/g,
     'const $1: React.FC = ('
   );
-  fixed = fixed.replace(
-    /const\s*([a-zA-Z_$][a-zA-Z0-9_$]*)\s*=\s*\(/g,
-    'const $1 = ('
-  );
+  fixed = fixed.replace(/const\s*([a-zA-Z_$][a-zA-Z0-9_$]*)\s*=\s*\(/g, 'const $1 = (');
 
   //Fix corrupted JSX
   fixed = fixed.replace(/<([A-Z][a-zA-Z0-9_$]*)\s*([^>]*)\s*>/g, '<$1 $2>');
@@ -74,10 +71,7 @@ function fixCorruptedSyntax(text) {
   fixed = fixed.replace(/\[\s*([^[\]]+)\s*\]/g, '[$1]');
 
   //Fix corrupted function calls
-  fixed = fixed.replace(
-    /([a-zA-Z_$][a-zA-Z0-9_$]*)\s*\(\s*([^)]*)\s*\)/g,
-    '$1($2)'
-  );
+  fixed = fixed.replace(/([a-zA-Z_$][a-zA-Z0-9_$]*)\s*\(\s*([^)]*)\s*\)/g, '$1($2)');
 
   //Fix corrupted arrow functions
   fixed = fixed.replace(/\([^)]*\)\s*=>\s*\{/g, match => {
@@ -91,18 +85,9 @@ function fixCorruptedSyntax(text) {
   fixed = fixed.replace(/`([^`]*),\s*([^`]*)`/g, '`$1$2`');
 
   //Fix corrupted variable declarations
-  fixed = fixed.replace(
-    /const\s*([a-zA-Z_$][a-zA-Z0-9_$]*)\s*=\s*([^;]+);?/g,
-    'const $1 = $2;'
-  );
-  fixed = fixed.replace(
-    /let\s*([a-zA-Z_$][a-zA-Z0-9_$]*)\s*=\s*([^;]+);?/g,
-    'let $1 = $2;'
-  );
-  fixed = fixed.replace(
-    /var\s*([a-zA-Z_$][a-zA-Z0-9_$]*)\s*=\s*([^;]+);?/g,
-    'var $1 = $2;'
-  );
+  fixed = fixed.replace(/const\s*([a-zA-Z_$][a-zA-Z0-9_$]*)\s*=\s*([^;]+);?/g, 'const $1 = $2;');
+  fixed = fixed.replace(/let\s*([a-zA-Z_$][a-zA-Z0-9_$]*)\s*=\s*([^;]+);?/g, 'let $1 = $2;');
+  fixed = fixed.replace(/var\s*([a-zA-Z_$][a-zA-Z0-9_$]*)\s*=\s*([^;]+);?/g, 'var $1 = $2;');
 
   //Fix corrupted return statements
   fixed = fixed.replace(/return\s*([^;]+);?/g, 'return $1;');
@@ -128,34 +113,19 @@ function fixCorruptedSyntax(text) {
     /class\s*([a-zA-Z_$][a-zA-Z0-9_$]*)\s*extends\s*([a-zA-Z_$][a-zA-Z0-9_$]*)\s*\{/g,
     'class $1 extends $2 {'
   );
-  fixed = fixed.replace(
-    /class\s*([a-zA-Z_$][a-zA-Z0-9_$]*)\s*\{/g,
-    'class $1 {'
-  );
+  fixed = fixed.replace(/class\s*([a-zA-Z_$][a-zA-Z0-9_$]*)\s*\{/g, 'class $1 {');
 
   //Fix corrupted method declarations
-  fixed = fixed.replace(
-    /([a-zA-Z_$][a-zA-Z0-9_$]*)\s*\(\s*([^)]*)\s*\)\s*\{/g,
-    '$1($2) {'
-  );
+  fixed = fixed.replace(/([a-zA-Z_$][a-zA-Z0-9_$]*)\s*\(\s*([^)]*)\s*\)\s*\{/g, '$1($2) {');
 
   //Fix corrupted property access
-  fixed = fixed.replace(
-    /([a-zA-Z_$][a-zA-Z0-9_$]*)\s*\.\s*([a-zA-Z_$][a-zA-Z0-9_$]*)/g,
-    '$1.$2'
-  );
+  fixed = fixed.replace(/([a-zA-Z_$][a-zA-Z0-9_$]*)\s*\.\s*([a-zA-Z_$][a-zA-Z0-9_$]*)/g, '$1.$2');
 
   //Fix corrupted array access
-  fixed = fixed.replace(
-    /([a-zA-Z_$][a-zA-Z0-9_$]*)\s*\[\s*([^\]]+)\s*\]/g,
-    '$1[$2]'
-  );
+  fixed = fixed.replace(/([a-zA-Z_$][a-zA-Z0-9_$]*)\s*\[\s*([^\]]+)\s*\]/g, '$1[$2]');
 
   //Fix corrupted ternary operators
-  fixed = fixed.replace(
-    /([^?]+)\s*\?\s*([^:]+)\s*:\s*([^;]+)/g,
-    '$1 ? $2 : $3'
-  );
+  fixed = fixed.replace(/([^?]+)\s*\?\s*([^:]+)\s*:\s*([^;]+)/g, '$1 ? $2 : $3');
 
   //Fix corrupted logical operators
   fixed = fixed.replace(/([^&]+)\s*&&\s*([^&]+)/g, '$1 && $2');
@@ -168,10 +138,7 @@ function fixCorruptedSyntax(text) {
   fixed = fixed.replace(/([^!]+)\s*!=\s*([^!]+)/g, '$1 != $2');
 
   //Fix corrupted assignment operators
-  fixed = fixed.replace(
-    /([a-zA-Z_$][a-zA-Z0-9_$]*)\s*=\s*([^;]+);?/g,
-    '$1 = $2;'
-  );
+  fixed = fixed.replace(/([a-zA-Z_$][a-zA-Z0-9_$]*)\s*=\s*([^;]+);?/g, '$1 = $2;');
 
   //Fix corrupted semicolons
   fixed = fixed.replace(/;\s*;/g, ';');
@@ -222,17 +189,17 @@ function fixCorruptedSyntax(text) {
 //Function to process a file
 function processFile(filePath) {
   try {
-//     const content = fs.readFileSync(filePath, 'utf8');
-//     const fixedContent = fixCorruptedSyntax(content);
+    //     const content = fs.readFileSync(filePath, 'utf8');
+    //     const fixedContent = fixCorruptedSyntax(content);
 
     if (content !== fixedContent) {
       fs.writeFileSync(filePath, fixedContent, 'utf8');
-//       console.log(`Fixed: ${filePath}`);
+      //       console.log(`Fixed: ${filePath}`);
       return true;
     }
     return false;
   } catch (error) {
-//     console.error(`Error processing ${filePath}:`, error.message);
+    //     console.error(`Error processing ${filePath}:`, error.message);
     return false;
   }
 }
@@ -242,10 +209,10 @@ function processDirectory(dirPath) {
   let processedCount = 0;
 
   try {
-//     const items = fs.readdirSync(dirPath);
+    //     const items = fs.readdirSync(dirPath);
 
     for (const item of items) {
-//       const fullPath = path.join(dirPath, item);
+      //       const fullPath = path.join(dirPath, item);
       const stat = fs.statSync(fullPath);
 
       if (stat.isDirectory()) {
@@ -265,7 +232,7 @@ function processDirectory(dirPath) {
       }
     }
   } catch (error) {
-//     console.error(`Error processing directory ${dirPath}:`, error.message);
+    //     console.error(`Error processing directory ${dirPath}:`, error.message);
   }
 
   return processedCount;

@@ -19,7 +19,7 @@ const filesToFix = [
   '/workspace/app/hooks/useForm.ts',
   '/workspace/app/page-minimal.tsx',
   '/workspace/app/page-optimized.tsx',
-  '/workspace/app/utils/__tests__/performanceMonitoring.test.ts'
+  '/workspace/app/utils/__tests__/performanceMonitoring.test.ts',
 ];
 
 function fixUnusedVariables(filePath) {
@@ -34,29 +34,33 @@ function fixUnusedVariables(filePath) {
   // Fix unused variables by prefixing with underscore
   const unusedVarPatterns = [
     // Unused imports
-    { pattern: /import\s+{\s*([^}]+)\s*}\s+from\s+['"][^'"]+['"];?\s*$/gm, 
+    {
+      pattern: /import\s+{\s*([^}]+)\s*}\s+from\s+['"][^'"]+['"];?\s*$/gm,
       fix: (match, imports) => {
         const importList = imports.split(',').map(imp => imp.trim());
         const unusedImports = importList.filter(imp => {
           const varName = imp.split(' as ')[0].trim();
           return !content.includes(varName) || content.split(varName).length <= 2;
         });
-        
+
         if (unusedImports.length > 0) {
-          const fixedImports = importList.map(imp => {
-            const varName = imp.split(' as ')[0].trim();
-            if (unusedImports.includes(imp)) {
-              return imp.replace(varName, `_${varName}`);
-            }
-            return imp;
-          }).join(', ');
+          const fixedImports = importList
+            .map(imp => {
+              const varName = imp.split(' as ')[0].trim();
+              if (unusedImports.includes(imp)) {
+                return imp.replace(varName, `_${varName}`);
+              }
+              return imp;
+            })
+            .join(', ');
           return match.replace(imports, fixedImports);
         }
         return match;
-      }
+      },
     },
     // Unused variable declarations
-    { pattern: /const\s+([a-zA-Z_$][a-zA-Z0-9_$]*)\s*=/g, 
+    {
+      pattern: /const\s+([a-zA-Z_$][a-zA-Z0-9_$]*)\s*=/g,
       fix: (match, varName) => {
         if (varName.startsWith('_')) return match;
         const regex = new RegExp(`\\b${varName}\\b`, 'g');
@@ -65,22 +69,25 @@ function fixUnusedVariables(filePath) {
           return match.replace(varName, `_${varName}`);
         }
         return match;
-      }
+      },
     },
     // Unused function parameters
-    { pattern: /function\s+[^(]*\(([^)]+)\)/g,
+    {
+      pattern: /function\s+[^(]*\(([^)]+)\)/g,
       fix: (match, params) => {
         const paramList = params.split(',').map(p => p.trim());
-        const fixedParams = paramList.map(param => {
-          const paramName = param.split(':')[0].trim();
-          if (!paramName.startsWith('_') && !paramName.includes('=')) {
-            return param.replace(paramName, `_${paramName}`);
-          }
-          return param;
-        }).join(', ');
+        const fixedParams = paramList
+          .map(param => {
+            const paramName = param.split(':')[0].trim();
+            if (!paramName.startsWith('_') && !paramName.includes('=')) {
+              return param.replace(paramName, `_${paramName}`);
+            }
+            return param;
+          })
+          .join(', ');
         return match.replace(params, fixedParams);
-      }
-    }
+      },
+    },
   ];
 
   // Apply fixes

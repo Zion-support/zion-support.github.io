@@ -25,8 +25,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       const mediaQuery = window.matchMedia('(prefers-contrast: high)');
       setIsHighContrast(mediaQuery.matches);
 
-      const handleChange = (e: MediaQueryListEvent) =>
-        setIsHighContrast(e.matches);
+      const handleChange = (e: MediaQueryListEvent) => setIsHighContrast(e.matches);
       mediaQuery.addEventListener('change', handleChange);
       return () => mediaQuery.removeEventListener('change', handleChange);
     }
@@ -39,8 +38,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
       setIsReducedMotion(mediaQuery.matches);
 
-      const handleChange = (e: MediaQueryListEvent) =>
-        setIsReducedMotion(e.matches);
+      const handleChange = (e: MediaQueryListEvent) => setIsReducedMotion(e.matches);
       mediaQuery.addEventListener('change', handleChange);
       return () => mediaQuery.removeEventListener('change', handleChange);
     }
@@ -143,18 +141,16 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   return (
     <div
       className={`accessibility-enhancer ${isHighContrast ? 'high-contrast' : ''} ${isReducedMotion ? 'reduced-motion' : ''}`}
-      role='main'
-      aria-label='Main content'
+      role="main"
+      aria-label="Main content"
     >
       {/* Skip to main content link */}
       <a
-        href='#main-content'
-        className='skip-link'
+        href="#main-content"
+        className="skip-link"
         onClick={e => {
           e.preventDefault();
-          const main =
-            document.querySelector('main') ||
-            document.querySelector('#main-content');
+          const main = document.querySelector('main') || document.querySelector('#main-content');
           if (main) {
             (main as HTMLElement).focus();
             (main as HTMLElement).scrollIntoView({ behavior: 'smooth' });
@@ -165,14 +161,10 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       </a>
 
       {/* Accessibility controls */}
-      <div
-        className='accessibility-controls'
-        role='toolbar'
-        aria-label='Accessibility controls'
-      >
+      <div className="accessibility-controls" role="toolbar" aria-label="Accessibility controls">
         <button
           onClick={() => setIsHighContrast(!isHighContrast)}
-          className='accessibility-toggle'
+          className="accessibility-toggle"
           aria-label={`${isHighContrast ? 'Disable' : 'Enable'} high contrast mode`}
         >
           {isHighContrast ? '🔆' : '🌙'} High Contrast
@@ -180,7 +172,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
 
         <button
           onClick={() => setIsReducedMotion(!isReducedMotion)}
-          className='accessibility-toggle'
+          className="accessibility-toggle"
           aria-label={`${isReducedMotion ? 'Disable' : 'Enable'} reduced motion`}
         >
           {isReducedMotion ? '🏃' : '🚶'} Motion

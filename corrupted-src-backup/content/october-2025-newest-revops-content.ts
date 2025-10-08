@@ -36,12 +36,7 @@ export const octoberNewestRevOpsContent: RevOpsContent[] = [
     gradient: 'from-emerald-600 to-teal-600',
     featured: true,
     breaking: true,
-    tags: [
-      'RevOps',
-      'Revenue Intelligence',
-      'AI Automation',
-      'Sales Optimization',
-    ],
+    tags: ['RevOps', 'Revenue Intelligence', 'AI Automation', 'Sales Optimization'],
     highlights: [
       '127% ROI within first year',
       '89% forecast accuracy (vs 52% traditional)',
@@ -65,8 +60,7 @@ export const octoberNewestRevOpsContent: RevOpsContent[] = [
   {
     id: 'autonomous-revenue-operations-2025',
     title: 'Autonomous Revenue Operations 2025: Self-Healing Systems',
-    description:
-      'Self-healing RevOps systems with 99.9% uptime and 85% cost reduction.',
+    description: 'Self-healing RevOps systems with 99.9% uptime and 85% cost reduction.',
     category: 'RevOps',
     date: '2025-10-02',
     readTime: '18 min read',
@@ -105,9 +99,7 @@ export const getFeaturedRevOpsContent = () => {
 };
 
 export const getBreakingRevOpsContent = () => {
-  return octoberNewestRevOpsContent.filter(content =>
-    content.tags.includes('Breaking')
-  );
+  return octoberNewestRevOpsContent.filter(content => content.tags.includes('Breaking'));
 };
 
 export const getAllRevOpsContent = () => {

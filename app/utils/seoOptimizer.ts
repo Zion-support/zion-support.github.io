@@ -276,11 +276,12 @@ class SEOOptimizer {
    * Track SEO-related metrics
    */
   private trackSEOMetric(metric: string, value: number): void {
-        metric_name: metric,
-        metric_value: Math.round(value)
-        event_category: 'seo'
-      })
-    }
+    // Track SEO metrics
+    console.log('SEO Metric:', {
+      metric_name: metric,
+      metric_value: Math.round(value),
+      event_category: 'seo'
+    });
   }
   /**
    * Generate sitemap data

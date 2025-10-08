@@ -48,7 +48,7 @@ export class GlobalErrorBoundary extends Component<Props, State> {
     });
 
     // Update state
-    this.setState((prevState) => ({
+    this.setState(prevState => ({
       errorInfo,
       errorCount: prevState.errorCount + 1,
     }));
@@ -111,11 +111,10 @@ export class GlobalErrorBoundary extends Component<Props, State> {
                   />
                 </svg>
               </div>
-              <h1 className="text-3xl font-bold text-white mb-2">
-                Oops! Something went wrong
-              </h1>
+              <h1 className="text-3xl font-bold text-white mb-2">Oops! Something went wrong</h1>
               <p className="text-gray-300 mb-6">
-                We're sorry for the inconvenience. Our team has been notified and is working on a fix.
+                We're sorry for the inconvenience. Our team has been notified and is working on a
+                fix.
               </p>
             </div>
 
@@ -123,14 +122,10 @@ export class GlobalErrorBoundary extends Component<Props, State> {
             {this.state.error && (
               <div className="mb-6 p-4 bg-red-500/10 border border-red-500/20 rounded-lg">
                 <h3 className="text-lg font-semibold text-red-400 mb-2">Error Details:</h3>
-                <p className="text-sm text-gray-300 font-mono mb-2">
-                  {this.state.error.message}
-                </p>
+                <p className="text-sm text-gray-300 font-mono mb-2">{this.state.error.message}</p>
                 {this.state.error.stack && (
                   <details className="text-xs text-gray-400 mt-2">
-                    <summary className="cursor-pointer hover:text-gray-300">
-                      Stack Trace
-                    </summary>
+                    <summary className="cursor-pointer hover:text-gray-300">Stack Trace</summary>
                     <pre className="mt-2 p-2 bg-black/20 rounded overflow-x-auto">
                       {this.state.error.stack}
                     </pre>

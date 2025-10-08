@@ -42,7 +42,7 @@ describe('performanceMonitoring', () => {
 
       const metrics = getMetrics();
       const metric = metrics['test-metric'];
-      
+
       expect(metric.count).toBe(3);
       expect(metric.average).toBe(200);
       expect(metric.min).toBe(100);
@@ -106,9 +106,9 @@ describe('performanceMonitoring', () => {
       };
 
       const result = measureFunction('test-function', testFn);
-      
+
       expect(result).toBe(499500); // Sum of 0 to 999
-      
+
       const metrics = getMetrics();
       expect(metrics['test-function']).toBeDefined();
       expect(metrics['test-function'].values.length).toBe(1);
@@ -129,9 +129,9 @@ describe('performanceMonitoring', () => {
       };
 
       const result = await measureAsyncFunction('async-test', asyncFn);
-      
+
       expect(result).toBe('completed');
-      
+
       const metrics = getMetrics();
       expect(metrics['async-test']).toBeDefined();
       expect(metrics['async-test'].values[0]).toBeGreaterThan(0);
@@ -151,7 +151,7 @@ describe('performanceMonitoring', () => {
       // Good performance metrics
       recordMetric('FCP', 1000); // < 1800 = good
       recordMetric('LCP', 2000); // < 2500 = good
-      recordMetric('FID', 50);   // < 100 = good
+      recordMetric('FID', 50); // < 100 = good
       recordMetric('CLS', 0.05); // < 0.1 = good
 
       const score = getPerformanceScore();
@@ -200,10 +200,9 @@ describe('performanceMonitoring', () => {
       recordMetric('FCP', 3000);
 
       const recommendations = getRecommendations();
-      expect(recommendations.some(r => 
-        r.includes('critical CSS') || 
-        r.includes('render-blocking')
-      )).toBe(true);
+      expect(
+        recommendations.some(r => r.includes('critical CSS') || r.includes('render-blocking'))
+      ).toBe(true);
     });
   });
 

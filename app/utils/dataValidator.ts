@@ -88,7 +88,7 @@ export function validateNumberRange(value: number, min: number, max: number): bo
  */
 export function validateCreditCard(cardNumber: string): boolean {
   const cleaned = cardNumber.replace(/\s/g, '');
-  
+
   if (!/^\d+$/.test(cleaned)) return false;
   if (cleaned.length < 13 || cleaned.length > 19) return false;
 
@@ -117,7 +117,7 @@ export function validateDate(value: unknown): boolean {
   if (value instanceof Date) {
     return !isNaN(value.getTime());
   }
-  
+
   if (typeof value === 'string') {
     const date = new Date(value);
     return !isNaN(date.getTime());
@@ -131,11 +131,11 @@ export function validateDate(value: unknown): boolean {
  */
 export function validateDateRange(date: Date, min?: Date, max?: Date): boolean {
   if (!validateDate(date)) return false;
-  
+
   const time = date.getTime();
   if (min && time < min.getTime()) return false;
   if (max && time > max.getTime()) return false;
-  
+
   return true;
 }
 
@@ -145,11 +145,11 @@ export function validateDateRange(date: Date, min?: Date, max?: Date): boolean {
 export function sanitizeHTML(html: string): string {
   // Remove script tags
   let clean = html.replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, '');
-  
+
   // Remove event handlers
   clean = clean.replace(/on\w+="[^"]*"/gi, '');
   clean = clean.replace(/on\w+='[^']*'/gi, '');
-  
+
   return clean;
 }
 
@@ -228,14 +228,10 @@ export function validateForm<T extends Record<string, unknown>>(
 
     if (fieldErrors.length > 0) {
       errors[field] = fieldErrors;
-      
+
       // Track validation errors
       errorTracking.trackError(
-        new ValidationError(
-          `Validation failed for ${field}`,
-          field,
-          fieldErrors
-        ),
+        new ValidationError(`Validation failed for ${field}`, field, fieldErrors),
         {
           category: ErrorCategory.Validation,
           severity: ErrorSeverity.Low,
@@ -298,10 +294,7 @@ export const ValidationRulesBuilder = {
     message: `Must be between ${min} and ${max}`,
   }),
 
-  custom: <T>(
-    validator: (value: T) => boolean,
-    message: string
-  ): ValidationRule<T> => ({
+  custom: <T>(validator: (value: T) => boolean, message: string): ValidationRule<T> => ({
     validate: validator,
     message,
   }),

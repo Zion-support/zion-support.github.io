@@ -28,7 +28,6 @@ export async function registerServiceWorker(
       window.location.hostname.match(/^127(?:\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$/)
   );
 
-  
   // Use isLocalhost for conditional logic if needed
   if (isLocalhost) {
     console.log('[SW] Running on localhost - service worker registration may be limited');
@@ -36,7 +35,7 @@ export async function registerServiceWorker(
 
   try {
     // Wait for page to load
-    await new Promise<void>((resolve) => {
+    await new Promise<void>(resolve => {
       if (document.readyState === 'complete') {
         resolve();
       } else {
@@ -55,7 +54,7 @@ export async function registerServiceWorker(
     // Handle updates
     registration.addEventListener('updatefound', () => {
       const installingWorker = registration.installing;
-      
+
       if (!installingWorker) return;
 
       installingWorker.addEventListener('statechange', () => {
@@ -63,14 +62,14 @@ export async function registerServiceWorker(
           if (navigator.serviceWorker.controller) {
             // New update available
             console.log('[SW] New content available; please refresh.');
-            
+
             if (config.onUpdate) {
               config.onUpdate(registration);
             }
           } else {
             // Content cached for offline use
             console.log('[SW] Content cached for offline use.');
-            
+
             if (config.onSuccess) {
               config.onSuccess(registration);
             }
@@ -82,7 +81,7 @@ export async function registerServiceWorker(
     return registration;
   } catch (error) {
     console.error('[SW] Registration failed:', error);
-    
+
     if (config.onError && error instanceof Error) {
       config.onError(error);
     }

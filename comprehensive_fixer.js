@@ -140,8 +140,7 @@ const fixes = [
   },
   //Fix map functions
   {
-    pattern:
-      /\.map\s*\(\s*\(([^)]+)\)\s*=>\s*<([^>]+)>\s*([^<]+)\s*<\/\2>\s*\)\s*(\w+)/g,
+    pattern: /\.map\s*\(\s*\(([^)]+)\)\s*=>\s*<([^>]+)>\s*([^<]+)\s*<\/\2>\s*\)\s*(\w+)/g,
     replacement: '.map(($1) => <$2> $3 </$2>) $4',
   },
   //Fix filter functions
@@ -151,20 +150,17 @@ const fixes = [
   },
   //Fix reduce functions
   {
-    pattern:
-      /\.reduce\s*\(\s*\(([^)]+)\)\s*=>\s*([^,]+),\s*([^)]+)\s*\)\s*(\w+)/g,
+    pattern: /\.reduce\s*\(\s*\(([^)]+)\)\s*=>\s*([^,]+),\s*([^)]+)\s*\)\s*(\w+)/g,
     replacement: '.reduce(($1) => $2, $3) $4',
   },
   //Fix useState hooks
   {
-    pattern:
-      /const\s*\[\s*(\w+),\s*(\w+)\s*\]\s*=\s*useState\s*\(\s*([^)]+)\s*\)\s*(\w+)/g,
+    pattern: /const\s*\[\s*(\w+),\s*(\w+)\s*\]\s*=\s*useState\s*\(\s*([^)]+)\s*\)\s*(\w+)/g,
     replacement: 'const [$1, $2] = useState($3); $4',
   },
   //Fix useEffect hooks
   {
-    pattern:
-      /useEffect\s*\(\s*\(\s*\)\s*=>\s*{\s*([^}]+)}\s*,\s*\[([^\]]+)\]\s*\)\s*(\w+)/g,
+    pattern: /useEffect\s*\(\s*\(\s*\)\s*=>\s*{\s*([^}]+)}\s*,\s*\[([^\]]+)\]\s*\)\s*(\w+)/g,
     replacement: 'useEffect(() => { $1 }, [$2]); $3',
   },
   //Fix useCallback hooks
@@ -187,7 +183,7 @@ function fixFile(filePath) {
     let modified = false;
 
     fixes.forEach(fix => {
-//       const newContent = content.replace(fix.pattern, fix.replacement);
+      //       const newContent = content.replace(fix.pattern, fix.replacement);
       if (newContent !== content) {
         content = newContent;
         modified = true;
@@ -196,12 +192,12 @@ function fixFile(filePath) {
 
     if (modified) {
       fs.writeFileSync(filePath, content, 'utf8');
-//       console.log(`Fixed: ${filePath}`);
+      //       console.log(`Fixed: ${filePath}`);
       return true;
     }
     return false;
   } catch (error) {
-//     console.error(`Error fixing ${filePath}:`, error.message);
+    //     console.error(`Error fixing ${filePath}:`, error.message);
     return false;
   }
 }
@@ -211,7 +207,7 @@ async function main() {
   //Find all TypeScript/TSX files
   const files = await glob('src/**/*.{ts,tsx}');
 
-//   console.log(`Found ${files.length} TypeScript files to check...`);
+  //   console.log(`Found ${files.length} TypeScript files to check...`);
 
   let fixedCount = 0;
   files.forEach(file => {
@@ -220,7 +216,7 @@ async function main() {
     }
   });
 
-//   console.log(`Fixed ${fixedCount} files`);
+  //   console.log(`Fixed ${fixedCount} files`);
 }
 
 // main().catch(console.error);

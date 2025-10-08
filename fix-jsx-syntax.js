@@ -19,10 +19,7 @@ function fixJSXSyntax(content) {
   fixed = fixed.replace(/<(\w+)([^>]*?)><\/\1>\s*([^<]+)/g, '<$1$2>$3</$1>');
 
   //Fix malformed JSX elements with attributes
-  fixed = fixed.replace(
-    /<(\w+)([^>]*?)><\/\1>\s*<(\w+)([^>]*?)><\/\3>/g,
-    '<$1$2><$3$4></$3></$1>'
-  );
+  fixed = fixed.replace(/<(\w+)([^>]*?)><\/\1>\s*<(\w+)([^>]*?)><\/\3>/g, '<$1$2><$3$4></$3></$1>');
 
   //Fix array syntax issues
   fixed = fixed.replace(/\[\s*\{\/\*\s*content\s*\/\}/g, '[{');
@@ -42,29 +39,24 @@ function fixJSXSyntax(content) {
 //Function to process a single file
 function processFile(filePath) {
   try {
-//     const content = fs.readFileSync(filePath, 'utf8');
+    //     const content = fs.readFileSync(filePath, 'utf8');
     const fixed = fixJSXSyntax(content);
 
     if (content !== fixed) {
       fs.writeFileSync(filePath, fixed, 'utf8');
-//       console.log(`Fixed: ${filePath}`);
+      //       console.log(`Fixed: ${filePath}`);
       return true;
     }
     return false;
   } catch (error) {
-//     console.error(`Error processing ${filePath}:`, error.message);
+    //     console.error(`Error processing ${filePath}:`, error.message);
     return false;
   }
 }
 
 //Main function
 async function main() {
-  const patterns = [
-    'src/**/*.tsx',
-    'src/**/*.ts',
-    'app/**/*.tsx',
-    'app/**/*.ts',
-  ];
+  const patterns = ['src/**/*.tsx', 'src/**/*.ts', 'app/**/*.tsx', 'app/**/*.ts'];
 
   let totalFixed = 0;
 
@@ -100,11 +92,11 @@ async function main() {
     }
   }
 
-//   console.log(`\nTotal files fixed: ${totalFixed}`);
+  //   console.log(`\nTotal files fixed: ${totalFixed}`);
 }
 
 if (import.meta.url === `file://${process.argv[1]}`) {
-//   main().catch(console.error);
+  //   main().catch(console.error);
 }
 
 export { fixJSXSyntax, processFile };

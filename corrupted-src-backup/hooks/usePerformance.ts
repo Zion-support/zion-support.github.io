@@ -40,7 +40,7 @@ export const usePerformance = (options: UsePerformanceOptions) => {
     mountTimeRef.current = performance.now();
 
     return () => {
-//       const mountDuration = performance.now() - mountTimeRef.current;
+      //       const mountDuration = performance.now() - mountTimeRef.current;
       analytics.trackPerformance(`${componentName}_mount_time`, mountDuration);
     };
   }, [componentName]);
@@ -53,8 +53,8 @@ export const usePerformance = (options: UsePerformanceOptions) => {
 
     // Use requestAnimationFrame to measure actual render time
     requestAnimationFrame(() => {
-//       const renderTime = performance.now() - renderStartTimeRef.current;
-//       const isSlowRender = renderTime > slowRenderThreshold;
+      //       const renderTime = performance.now() - renderStartTimeRef.current;
+      //       const isSlowRender = renderTime > slowRenderThreshold;
 
       const metrics: PerformanceMetrics = {
         renderTime,
@@ -72,13 +72,7 @@ export const usePerformance = (options: UsePerformanceOptions) => {
       analytics.trackPerformance(`${componentName}_render_time`, renderTime);
 
       if (isSlowRender) {
-        analytics.track(
-          'slow_render',
-          'performance',
-          'warning',
-          componentName,
-          renderTime
-        );
+        analytics.track('slow_render', 'performance', 'warning', componentName, renderTime);
       }
     });
   }, [componentName, trackRenderTime, slowRenderThreshold, trackMemoryUsage]);
@@ -108,12 +102,10 @@ export const usePageLoadPerformance = () => {
         if (navigation) {
           const metrics = {
             domContentLoaded:
-              navigation.domContentLoadedEventEnd -
-              navigation.domContentLoadedEventStart,
+              navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
             loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
             firstByte: navigation.responseStart - navigation.requestStart,
-            domInteractive:
-              navigation.domInteractive - navigation.navigationStart,
+            domInteractive: navigation.domInteractive - navigation.navigationStart,
             totalLoadTime: navigation.loadEventEnd - navigation.navigationStart,
           };
 
@@ -176,13 +168,7 @@ export const useLongTaskMonitoring = () => {
   useEffect(() => {
     const observer = performanceOptimizer.monitorLongTasks(entries => {
       entries.forEach(entry => {
-        analytics.track(
-          'long_task',
-          'performance',
-          'detected',
-          undefined,
-          entry.duration
-        );
+        analytics.track('long_task', 'performance', 'detected', undefined, entry.duration);
       });
     });
 

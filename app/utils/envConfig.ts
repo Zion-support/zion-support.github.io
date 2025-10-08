@@ -26,16 +26,19 @@ class EnvironmentConfig {
   private loadConfig(): EnvConfig {
     // Safely access environment variables with defaults
     const nodeEnv = (process.env['NODE_ENV'] || 'development') as EnvConfig['nodeEnv'];
-    
+
     return {
       nodeEnv,
-      apiUrl: process.env.NEXT_PUBLIC_API_URL || process.env.VITE_API_URL || 'http://localhost:3000/api',
+      apiUrl:
+        process.env.NEXT_PUBLIC_API_URL || process.env.VITE_API_URL || 'http://localhost:3000/api',
       apiKey: process.env.NEXT_PUBLIC_API_KEY || process.env.VITE_API_KEY,
-      enableAnalytics: process.env.NEXT_PUBLIC_ENABLE_ANALYTICS === 'true' || nodeEnv === 'production',
+      enableAnalytics:
+        process.env.NEXT_PUBLIC_ENABLE_ANALYTICS === 'true' || nodeEnv === 'production',
       enableLogging: nodeEnv !== 'test',
-      logLevel: (process.env.NEXT_PUBLIC_LOG_LEVEL || (nodeEnv === 'production' ? 'warn' : 'debug')) as EnvConfig['logLevel'],
+      logLevel: (process.env.NEXT_PUBLIC_LOG_LEVEL ||
+        (nodeEnv === 'production' ? 'warn' : 'debug')) as EnvConfig['logLevel'],
       sentryDsn: process.env.NEXT_PUBLIC_SENTRY_DSN || process.env.VITE_SENTRY_DSN,
-      gaTrackingId: process.env.NEXT_PUBLIC_GA_TRACKING_ID || process.env.VITE_GA_TRACKING_ID
+      gaTrackingId: process.env.NEXT_PUBLIC_GA_TRACKING_ID || process.env.VITE_GA_TRACKING_ID,
     };
   }
 
@@ -91,7 +94,7 @@ class EnvironmentConfig {
 
     return {
       valid: missing.length === 0,
-      missing
+      missing,
     };
   }
 
@@ -117,14 +120,14 @@ class EnvironmentConfig {
     if (this.isDevelopment()) {
       console.group('🔧 Environment Configuration');
       console.table({
-        'Environment': this.config.nodeEnv,
+        Environment: this.config.nodeEnv,
         'API URL': this.config.apiUrl,
         'Analytics Enabled': this.config.enableAnalytics,
         'Logging Enabled': this.config.enableLogging,
         'Log Level': this.config.logLevel,
         'API Key Set': !!this.config.apiKey,
         'Sentry DSN Set': !!this.config.sentryDsn,
-        'GA Tracking ID Set': !!this.config.gaTrackingId
+        'GA Tracking ID Set': !!this.config.gaTrackingId,
       });
       console.groupEnd();
     }

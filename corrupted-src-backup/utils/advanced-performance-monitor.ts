@@ -53,7 +53,7 @@ class AdvancedPerformanceMonitor {
     this.setupMemoryMonitoring();
     this.setupNetworkMonitoring();
 
-//     console.log('Advanced Performance Monitor started');
+    //     console.log('Advanced Performance Monitor started');
   }
 
   /**
@@ -65,7 +65,7 @@ class AdvancedPerformanceMonitor {
       this.observer.disconnect();
       this.observer = null;
     }
-//     console.log('Advanced Performance Monitor stopped');
+    //     console.log('Advanced Performance Monitor stopped');
   }
 
   /**
@@ -97,20 +97,13 @@ class AdvancedPerformanceMonitor {
       };
     }
 
-    const avgLoadTime =
-      this.data.reduce((sum, d) => sum + d.loadTime, 0) / this.data.length;
-    const avgFCP =
-      this.data.reduce((sum, d) => sum + d.firstContentfulPaint, 0) /
-      this.data.length;
+    const avgLoadTime = this.data.reduce((sum, d) => sum + d.loadTime, 0) / this.data.length;
+    const avgFCP = this.data.reduce((sum, d) => sum + d.firstContentfulPaint, 0) / this.data.length;
     const avgLCP =
-      this.data.reduce((sum, d) => sum + d.largestContentfulPaint, 0) /
-      this.data.length;
+      this.data.reduce((sum, d) => sum + d.largestContentfulPaint, 0) / this.data.length;
     const avgCLS =
-      this.data.reduce((sum, d) => sum + d.cumulativeLayoutShift, 0) /
-      this.data.length;
-    const avgFID =
-      this.data.reduce((sum, d) => sum + d.firstInputDelay, 0) /
-      this.data.length;
+      this.data.reduce((sum, d) => sum + d.cumulativeLayoutShift, 0) / this.data.length;
+    const avgFID = this.data.reduce((sum, d) => sum + d.firstInputDelay, 0) / this.data.length;
 
     // Calculate performance score (0-100)
     const performanceScore = this.calculatePerformanceScore({
@@ -146,15 +139,10 @@ class AdvancedPerformanceMonitor {
 
     try {
       this.observer.observe({
-        entryTypes: [
-          'navigation',
-          'paint',
-          'largest-contentful-paint',
-          'layout-shift',
-        ],
+        entryTypes: ['navigation', 'paint', 'largest-contentful-paint', 'layout-shift'],
       });
     } catch (error) {
-//       console.warn('Performance Observer setup failed:', error);
+      //       console.warn('Performance Observer setup failed:', error);
     }
   }
 
@@ -188,7 +176,7 @@ class AdvancedPerformanceMonitor {
         });
       })
       .catch(error => {
-//         console.warn('Web Vitals import failed:', error);
+        //         console.warn('Web Vitals import failed:', error);
       });
   }
 
@@ -216,7 +204,7 @@ class AdvancedPerformanceMonitor {
   private setupNetworkMonitoring(): void {
     if (!('connection' in navigator)) return;
 
-//     const connection = (navigator as any).connection;
+    //     const connection = (navigator as any).connection;
     if (connection) {
       this.updateMetric('networkInfo', connection);
     }
@@ -235,8 +223,7 @@ class AdvancedPerformanceMonitor {
       case 'navigation':
         const navEntry = entry as PerformanceNavigationTiming;
         data.loadTime = navEntry.loadEventEnd - navEntry.loadEventStart;
-        data.timeToInteractive =
-          navEntry.domInteractive - navEntry.navigationStart;
+        data.timeToInteractive = navEntry.domInteractive - navEntry.navigationStart;
         break;
       case 'paint':
         const paintEntry = entry as PerformancePaintTiming;
@@ -309,9 +296,7 @@ class AdvancedPerformanceMonitor {
     const warnings: string[] = [];
 
     if (data.loadTime > this.thresholds.loadTime) {
-      warnings.push(
-        `Load time ${data.loadTime}ms exceeds threshold ${this.thresholds.loadTime}ms`
-      );
+      warnings.push(`Load time ${data.loadTime}ms exceeds threshold ${this.thresholds.loadTime}ms`);
     }
     if (data.firstContentfulPaint > this.thresholds.firstContentfulPaint) {
       warnings.push(
@@ -335,7 +320,7 @@ class AdvancedPerformanceMonitor {
     }
 
     if (warnings.length > 0) {
-//       console.warn('Performance threshold exceeded:', warnings);
+      //       console.warn('Performance threshold exceeded:', warnings);
     }
   }
 

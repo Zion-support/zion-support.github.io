@@ -8,12 +8,12 @@ import fs from 'fs';
 //Function to safely execute git commands
 function safeGitCommand(command, description) {
   try {
-//     console.log(`Executing: ${description}`);
-//     const result = execSync(command, { encoding: 'utf8', stdio: 'pipe' });
-//     console.log(`✓ ${description} - Success`);
+    //     console.log(`Executing: ${description}`);
+    //     const result = execSync(command, { encoding: 'utf8', stdio: 'pipe' });
+    //     console.log(`✓ ${description} - Success`);
     return { success: true, result };
   } catch (error) {
-//     console.log(`⚠ ${description} - Warning: ${error.message}`);
+    //     console.log(`⚠ ${description} - Warning: ${error.message}`);
     return { success: false, error: error.message };
   }
 }
@@ -36,7 +36,7 @@ let mergedCount = 0;
 let conflictCount = 0;
 
 for (const branch of prBranches) {
-//   console.log(`\n--- Processing branch: ${branch} ---`);
+  //   console.log(`\n--- Processing branch: ${branch} ---`);
 
   //Check if branch exists
   const branchCheck = safeGitCommand(
@@ -45,7 +45,7 @@ for (const branch of prBranches) {
   );
 
   if (!branchCheck.success) {
-//     console.log(`⚠ Branch ${branch} not found, skipping...`);
+    //     console.log(`⚠ Branch ${branch} not found, skipping...`);
     continue;
   }
 
@@ -57,10 +57,10 @@ for (const branch of prBranches) {
 
   if (mergeResult.success) {
     mergedCount++;
-//     console.log(`✓ Successfully merged ${branch}`);
+    //     console.log(`✓ Successfully merged ${branch}`);
   } else {
     conflictCount++;
-//     console.log(`⚠ Merge conflict or error for ${branch}`);
+    //     console.log(`⚠ Merge conflict or error for ${branch}`);
 
     //Try to abort the merge if there was a conflict
     safeGitCommand('git merge --abort', `Abort merge for ${branch}`);
@@ -73,14 +73,11 @@ for (const branch of prBranches) {
 
 //Push changes if any were merged
 if (mergedCount > 0) {
-  const pushResult = safeGitCommand(
-    'git push origin main',
-    'Push changes to main'
-  );
+  const pushResult = safeGitCommand('git push origin main', 'Push changes to main');
   if (pushResult.success) {
-//     console.log('✓ All changes pushed to main successfully');
+    //     console.log('✓ All changes pushed to main successfully');
   } else {
-//     console.log('⚠ Error pushing changes to main');
+    //     console.log('⚠ Error pushing changes to main');
   }
 }
 

@@ -27,10 +27,7 @@ function fixCorruptedText(text) {
   fixed = fixed.replace(/toBeGreaterTh,\s*a,\s*n/g, 'toBeGreaterThan');
   fixed = fixed.replace(/toBeLessTh,\s*a,\s*n/g, 'toBeLessThan');
   fixed = fixed.replace(/toHaveLeng,\s*t,\s*h/g, 'toHaveLength');
-  fixed = fixed.replace(
-    /toBeGreaterThanOrEqu,\s*a,\s*l/g,
-    'toBeGreaterThanOrEqual'
-  );
+  fixed = fixed.replace(/toBeGreaterThanOrEqu,\s*a,\s*l/g, 'toBeGreaterThanOrEqual');
   fixed = fixed.replace(/toBeLessThanOrEqu,\s*a,\s*l/g, 'toBeLessThanOrEqual');
   fixed = fixed.replace(/forEa,\s*c,\s*h/g, 'forEach');
   fixed = fixed.replace(/Obje,\s*c,\s*t/g, 'Object');
@@ -85,10 +82,7 @@ function fixCorruptedText(text) {
   fixed = fixed.replace(/forEa,\s*c,\s*h/g, 'forEach');
   fixed = fixed.replace(/Obje,\s*c,\s*t/g, 'Object');
   fixed = fixed.replace(/toBeLessThanOrEqu,\s*a,\s*l/g, 'toBeLessThanOrEqual');
-  fixed = fixed.replace(
-    /toBeGreaterThanOrEqu,\s*a,\s*l/g,
-    'toBeGreaterThanOrEqual'
-  );
+  fixed = fixed.replace(/toBeGreaterThanOrEqu,\s*a,\s*l/g, 'toBeGreaterThanOrEqual');
   fixed = fixed.replace(/toHaveLeng,\s*t,\s*h/g, 'toHaveLength');
   fixed = fixed.replace(/toBeGreaterTh,\s*a,\s*n/g, 'toBeGreaterThan');
   fixed = fixed.replace(/toBeLessTh,\s*a,\s*n/g, 'toBeLessThan');
@@ -109,30 +103,12 @@ function fixCorruptedText(text) {
   fixed = fixed.replace(/\}\s*\]/g, '}]');
 
   //Fix function calls
-  fixed = fixed.replace(
-    /calculateEngagementSco,\s*r,\s*e/g,
-    'calculateEngagementScore'
-  );
-  fixed = fixed.replace(
-    /calculateFreshnessSco,\s*r,\s*e/g,
-    'calculateFreshnessScore'
-  );
-  fixed = fixed.replace(
-    /calculateBannerSco,\s*r,\s*e/g,
-    'calculateBannerScore'
-  );
-  fixed = fixed.replace(
-    /selectBannersForDispl,\s*a,\s*y/g,
-    'selectBannersForDisplay'
-  );
-  fixed = fixed.replace(
-    /groupBannersByCatego,\s*r,\s*y/g,
-    'groupBannersByCategory'
-  );
-  fixed = fixed.replace(
-    /selectBalancedBanne,\s*r,\s*s/g,
-    'selectBalancedBanners'
-  );
+  fixed = fixed.replace(/calculateEngagementSco,\s*r,\s*e/g, 'calculateEngagementScore');
+  fixed = fixed.replace(/calculateFreshnessSco,\s*r,\s*e/g, 'calculateFreshnessScore');
+  fixed = fixed.replace(/calculateBannerSco,\s*r,\s*e/g, 'calculateBannerScore');
+  fixed = fixed.replace(/selectBannersForDispl,\s*a,\s*y/g, 'selectBannersForDisplay');
+  fixed = fixed.replace(/groupBannersByCatego,\s*r,\s*y/g, 'groupBannersByCategory');
+  fixed = fixed.replace(/selectBalancedBanne,\s*r,\s*s/g, 'selectBalancedBanners');
 
   //Fix variable names
   fixed = fixed.replace(/testBanner,\s*s/g, 'testBanners');
@@ -152,17 +128,17 @@ function fixCorruptedText(text) {
 //Function to process a file
 function processFile(filePath) {
   try {
-//     const content = fs.readFileSync(filePath, 'utf8');
-//     const fixedContent = fixCorruptedText(content);
+    //     const content = fs.readFileSync(filePath, 'utf8');
+    //     const fixedContent = fixCorruptedText(content);
 
     if (content !== fixedContent) {
       fs.writeFileSync(filePath, fixedContent, 'utf8');
-//       console.log(`Fixed: ${filePath}`);
+      //       console.log(`Fixed: ${filePath}`);
       return true;
     }
     return false;
   } catch (error) {
-//     console.error(`Error processing ${filePath}:`, error.message);
+    //     console.error(`Error processing ${filePath}:`, error.message);
     return false;
   }
 }
@@ -172,10 +148,10 @@ function processDirectory(dirPath) {
   let processedCount = 0;
 
   try {
-//     const items = fs.readdirSync(dirPath);
+    //     const items = fs.readdirSync(dirPath);
 
     for (const item of items) {
-//       const fullPath = path.join(dirPath, item);
+      //       const fullPath = path.join(dirPath, item);
       const stat = fs.statSync(fullPath);
 
       if (stat.isDirectory()) {
@@ -195,7 +171,7 @@ function processDirectory(dirPath) {
       }
     }
   } catch (error) {
-//     console.error(`Error processing directory ${dirPath}:`, error.message);
+    //     console.error(`Error processing directory ${dirPath}:`, error.message);
   }
 
   return processedCount;

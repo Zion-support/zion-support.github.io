@@ -8,22 +8,22 @@ interface EnvConfig {
   NODE_ENV: 'development' | 'production' | 'test';
   APP_URL: string;
   APP_NAME: string;
-  
+
   // Analytics
   GOOGLE_ANALYTICS_ID?: string;
-  
+
   // API Configuration
   API_BASE_URL: string;
   API_TIMEOUT: number;
-  
+
   // Feature Flags
   ENABLE_ANALYTICS: boolean;
   ENABLE_ERROR_TRACKING: boolean;
   ENABLE_PERFORMANCE_MONITORING: boolean;
-  
+
   // Logging
   LOG_LEVEL: 'DEBUG' | 'INFO' | 'WARN' | 'ERROR' | 'NONE';
-  
+
   // Build Configuration
   BUILD_ID?: string;
   VERSION?: string;
@@ -48,10 +48,7 @@ class EnvironmentConfig {
   private getEnvVar(key: string, defaultValue?: string): string {
     if (typeof process !== 'undefined' && process.env) {
       // Check both regular and NEXT_PUBLIC_ prefixed versions
-      return process.env[key] || 
-             process.env[`NEXT_PUBLIC_${key}`] || 
-             defaultValue || 
-             '';
+      return process.env[key] || process.env[`NEXT_PUBLIC_${key}`] || defaultValue || '';
     }
     return defaultValue || '';
   }
@@ -64,7 +61,7 @@ class EnvironmentConfig {
 
   private getNumberEnvVar(key: string, defaultValue: number): number {
     const value = this.getEnvVar(key);
-//     const parsed = parseInt(value, 10);
+    //     const parsed = parseInt(value, 10);
     return isNaN(parsed) ? defaultValue : parsed;
   }
 
@@ -74,22 +71,22 @@ class EnvironmentConfig {
       NODE_ENV: (this.getEnvVar('NODE_ENV', 'development') as any) || 'development',
       APP_URL: this.getEnvVar('APP_URL', 'https://ziontechgroup.com'),
       APP_NAME: this.getEnvVar('APP_NAME', 'Zion Tech Group'),
-      
+
       // Analytics
       GOOGLE_ANALYTICS_ID: this.getEnvVar('GOOGLE_ANALYTICS_ID'),
-      
+
       // API Configuration
       API_BASE_URL: this.getEnvVar('API_BASE_URL', 'https://api.ziontechgroup.com'),
       API_TIMEOUT: this.getNumberEnvVar('API_TIMEOUT', 30000),
-      
+
       // Feature Flags
       ENABLE_ANALYTICS: this.getBooleanEnvVar('ENABLE_ANALYTICS', true),
       ENABLE_ERROR_TRACKING: this.getBooleanEnvVar('ENABLE_ERROR_TRACKING', true),
       ENABLE_PERFORMANCE_MONITORING: this.getBooleanEnvVar('ENABLE_PERFORMANCE_MONITORING', true),
-      
+
       // Logging
       LOG_LEVEL: (this.getEnvVar('LOG_LEVEL', 'INFO') as any) || 'INFO',
-      
+
       // Build Configuration
       BUILD_ID: this.getEnvVar('BUILD_ID'),
       VERSION: this.getEnvVar('VERSION', '1.0.0'),
@@ -119,7 +116,7 @@ class EnvironmentConfig {
     }
 
     if (errors.length > 0) {
-//       console.error('Environment configuration errors:', errors);
+      //       console.error('Environment configuration errors:', errors);
       // In production, we might want to throw, but in development just warn
       if (this.config.NODE_ENV === 'production') {
         throw new Error(`Environment validation failed: ${errors.join(', ')}`);

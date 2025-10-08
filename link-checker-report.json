@@ -63,9 +63,7 @@
     },
     {
       "file": "src/components/ContactSection.tsx",
-      "links": [
-        "https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709"
-      ]
+      "links": ["https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709"]
     },
     {
       "file": "src/components/ContentQualityAnalyzer.jsx",
@@ -78,9 +76,7 @@
     },
     {
       "file": "src/components/EnhancedContact.jsx",
-      "links": [
-        "https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709'"
-      ]
+      "links": ["https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709'"]
     },
     {
       "file": "src/components/EnhancedFuturisticFooter.tsx",
@@ -468,9 +464,7 @@
     },
     {
       "file": "src/components/support/ChatBotPanel.jsx",
-      "links": [
-        "https://ziontechgroup.functions.supabase.co/functions/v1/ai-chat"
-      ]
+      "links": ["https://ziontechgroup.functions.supabase.co/functions/v1/ai-chat"]
     },
     {
       "file": "src/components/ui/Button.jsx",
@@ -490,9 +484,7 @@
     },
     {
       "file": "src/components/unused/EnhancedErrorBoundary.jsx",
-      "links": [
-        "https://github.com/ziontechgroup/zion-website/issues/new?title=Error:"
-      ]
+      "links": ["https://github.com/ziontechgroup/zion-website/issues/new?title=Error:"]
     },
     {
       "file": "src/context/WhitelabelContext.js.jsx",
@@ -2549,15 +2541,11 @@
     },
     {
       "file": "src/pages/AIAutonomousInfrastructureSecurity.js.jsx",
-      "links": [
-        "https://ziontechgroup.com/ai-autonomous-infrastructure-security"
-      ]
+      "links": ["https://ziontechgroup.com/ai-autonomous-infrastructure-security"]
     },
     {
       "file": "src/pages/AIAutonomousInfrastructureSecurity.jsx",
-      "links": [
-        "https://ziontechgroup.com/ai-autonomous-infrastructure-security"
-      ]
+      "links": ["https://ziontechgroup.com/ai-autonomous-infrastructure-security"]
     },
     {
       "file": "src/pages/AIAutonomousInnovation.js.jsx",
@@ -2907,15 +2895,11 @@
     },
     {
       "file": "src/pages/AIAutonomousVulnerabilityAssessment.js.jsx",
-      "links": [
-        "https://ziontechgroup.com/ai-autonomous-vulnerability-assessment"
-      ]
+      "links": ["https://ziontechgroup.com/ai-autonomous-vulnerability-assessment"]
     },
     {
       "file": "src/pages/AIAutonomousVulnerabilityAssessment.jsx",
-      "links": [
-        "https://ziontechgroup.com/ai-autonomous-vulnerability-assessment"
-      ]
+      "links": ["https://ziontechgroup.com/ai-autonomous-vulnerability-assessment"]
     },
     {
       "file": "src/pages/AIAutonomousWebSecurity.js.jsx",
@@ -3431,17 +3415,11 @@
     },
     {
       "file": "src/pages/AdvancedServicesPage.js.jsx",
-      "links": [
-        "https://ziontechgroup.com/advanced-services",
-        "https://ziontechgroup.com"
-      ]
+      "links": ["https://ziontechgroup.com/advanced-services", "https://ziontechgroup.com"]
     },
     {
       "file": "src/pages/AdvancedServicesPage.jsx",
-      "links": [
-        "https://ziontechgroup.com/advanced-services",
-        "https://ziontechgroup.com"
-      ]
+      "links": ["https://ziontechgroup.com/advanced-services", "https://ziontechgroup.com"]
     },
     {
       "file": "src/pages/AdvancedServicesShowcase2025.js.jsx",
@@ -3505,15 +3483,11 @@
     },
     {
       "file": "src/pages/AutonomousBusinessOperationsPlatform.js.jsx",
-      "links": [
-        "https://ziontechgroup.com/autonomous-business-operations-platform"
-      ]
+      "links": ["https://ziontechgroup.com/autonomous-business-operations-platform"]
     },
     {
       "file": "src/pages/AutonomousBusinessOperationsPlatform.jsx",
-      "links": [
-        "https://ziontechgroup.com/autonomous-business-operations-platform"
-      ]
+      "links": ["https://ziontechgroup.com/autonomous-business-operations-platform"]
     },
     {
       "file": "src/pages/BlockchainServicesPage.js.jsx",
@@ -3843,17 +3817,11 @@
     },
     {
       "file": "src/pages/ComprehensiveServicesPage.js.jsx",
-      "links": [
-        "https://ziontechgroup.com/comprehensive-services",
-        "https://ziontechgroup.com"
-      ]
+      "links": ["https://ziontechgroup.com/comprehensive-services", "https://ziontechgroup.com"]
     },
     {
       "file": "src/pages/ComprehensiveServicesPage.jsx",
-      "links": [
-        "https://ziontechgroup.com/comprehensive-services",
-        "https://ziontechgroup.com"
-      ]
+      "links": ["https://ziontechgroup.com/comprehensive-services", "https://ziontechgroup.com"]
     },
     {
       "file": "src/pages/ComprehensiveServicesShowcase2025.tsx",
@@ -3864,10 +3832,7 @@
     },
     {
       "file": "src/pages/ComprehensiveServicesShowcase2026.tsx",
-      "links": [
-        "https://ziontechgroup.com/contact",
-        "https://ziontechgroup.com/contact"
-      ]
+      "links": ["https://ziontechgroup.com/contact", "https://ziontechgroup.com/contact"]
     },
     {
       "file": "src/pages/ComprehensiveServicesShowcase2027.tsx",
@@ -3921,10 +3886,7 @@
     },
     {
       "file": "src/pages/CybersecurityServicesPage.tsx",
-      "links": [
-        "https://schema.org",
-        "https://ziontechgroup.com/services/cybersecurity"
-      ]
+      "links": ["https://schema.org", "https://ziontechgroup.com/services/cybersecurity"]
     },
     {
       "file": "src/pages/CybersecuritySuite.js.jsx",
@@ -3940,17 +3902,11 @@
     },
     {
       "file": "src/pages/DeveloperPortal.js.jsx",
-      "links": [
-        "https://ziontechgroup.com/developers",
-        "https://github.com/ziontechgroup"
-      ]
+      "links": ["https://ziontechgroup.com/developers", "https://github.com/ziontechgroup"]
     },
     {
       "file": "src/pages/DeveloperPortal.jsx",
-      "links": [
-        "https://ziontechgroup.com/developers",
-        "https://github.com/ziontechgroup"
-      ]
+      "links": ["https://ziontechgroup.com/developers", "https://github.com/ziontechgroup"]
     },
     {
       "file": "src/pages/DeveloperPortal.tsx",
@@ -4541,24 +4497,15 @@
     },
     {
       "file": "src/pages/Services.js.jsx",
-      "links": [
-        "https://ziontechgroup.com'",
-        "https://ziontechgroup.com/services"
-      ]
+      "links": ["https://ziontechgroup.com'", "https://ziontechgroup.com/services"]
     },
     {
       "file": "src/pages/Services.jsx",
-      "links": [
-        "https://ziontechgroup.com'",
-        "https://ziontechgroup.com/services"
-      ]
+      "links": ["https://ziontechgroup.com'", "https://ziontechgroup.com/services"]
     },
     {
       "file": "src/pages/Services.tsx",
-      "links": [
-        "https://ziontechgroup.com'",
-        "https://ziontechgroup.com/services"
-      ]
+      "links": ["https://ziontechgroup.com'", "https://ziontechgroup.com/services"]
     },
     {
       "file": "src/pages/ServicesCatalog.tsx",
@@ -4566,17 +4513,11 @@
     },
     {
       "file": "src/pages/ServicesComparisonPage.js.jsx",
-      "links": [
-        "https://ziontechgroup.com/services-comparison",
-        "https://ziontechgroup.com"
-      ]
+      "links": ["https://ziontechgroup.com/services-comparison", "https://ziontechgroup.com"]
     },
     {
       "file": "src/pages/ServicesComparisonPage.jsx",
-      "links": [
-        "https://ziontechgroup.com/services-comparison",
-        "https://ziontechgroup.com"
-      ]
+      "links": ["https://ziontechgroup.com/services-comparison", "https://ziontechgroup.com"]
     },
     {
       "file": "src/pages/ServicesMarketingPage.js.jsx",
@@ -4592,10 +4533,7 @@
     },
     {
       "file": "src/pages/ServicesOverview.jsx",
-      "links": [
-        "https://ziontechgroup.com'",
-        "https://ziontechgroup.com/services-overview"
-      ]
+      "links": ["https://ziontechgroup.com'", "https://ziontechgroup.com/services-overview"]
     },
     {
       "file": "src/pages/ServicesOverview.tsx",
@@ -4717,24 +4655,15 @@
     },
     {
       "file": "src/pages/ServicesPage.tsx",
-      "links": [
-        "https://ziontechgroup.com/services",
-        "https://ziontechgroup.com"
-      ]
+      "links": ["https://ziontechgroup.com/services", "https://ziontechgroup.com"]
     },
     {
       "file": "src/pages/ServicesPricing.js.jsx",
-      "links": [
-        "https://ziontechgroup.com/services-pricing",
-        "https://ziontechgroup.com"
-      ]
+      "links": ["https://ziontechgroup.com/services-pricing", "https://ziontechgroup.com"]
     },
     {
       "file": "src/pages/ServicesPricing.jsx",
-      "links": [
-        "https://ziontechgroup.com/services-pricing",
-        "https://ziontechgroup.com"
-      ]
+      "links": ["https://ziontechgroup.com/services-pricing", "https://ziontechgroup.com"]
     },
     {
       "file": "src/pages/ServicesPricingGuide.js.jsx",
@@ -4754,17 +4683,11 @@
     },
     {
       "file": "src/pages/ServicesPricingPage.js.jsx",
-      "links": [
-        "https://ziontechgroup.com/services-pricing",
-        "https://ziontechgroup.com"
-      ]
+      "links": ["https://ziontechgroup.com/services-pricing", "https://ziontechgroup.com"]
     },
     {
       "file": "src/pages/ServicesPricingPage.jsx",
-      "links": [
-        "https://ziontechgroup.com/services-pricing",
-        "https://ziontechgroup.com"
-      ]
+      "links": ["https://ziontechgroup.com/services-pricing", "https://ziontechgroup.com"]
     },
     {
       "file": "src/pages/ServicesPricingPage.tsx",
@@ -4880,39 +4803,27 @@
     },
     {
       "file": "src/pages/ai-services/AIAutonomousBusinessManager.js.jsx",
-      "links": [
-        "https://ziontechgroup.com/ai-services/ai-autonomous-business-manager/"
-      ]
+      "links": ["https://ziontechgroup.com/ai-services/ai-autonomous-business-manager/"]
     },
     {
       "file": "src/pages/ai-services/AIAutonomousBusinessManager.jsx",
-      "links": [
-        "https://ziontechgroup.com/ai-services/ai-autonomous-business-manager/"
-      ]
+      "links": ["https://ziontechgroup.com/ai-services/ai-autonomous-business-manager/"]
     },
     {
       "file": "src/pages/ai-services/AIAutonomousBusinessPlatform.js.jsx",
-      "links": [
-        "https://ziontechgroup.com/ai-services/ai-autonomous-business-platform/"
-      ]
+      "links": ["https://ziontechgroup.com/ai-services/ai-autonomous-business-platform/"]
     },
     {
       "file": "src/pages/ai-services/AIAutonomousBusinessPlatform.jsx",
-      "links": [
-        "https://ziontechgroup.com/ai-services/ai-autonomous-business-platform/"
-      ]
+      "links": ["https://ziontechgroup.com/ai-services/ai-autonomous-business-platform/"]
     },
     {
       "file": "src/pages/ai-services/AIAutonomousCodeReview.js.jsx",
-      "links": [
-        "https://ziontechgroup.com/ai-services/ai-autonomous-code-review/"
-      ]
+      "links": ["https://ziontechgroup.com/ai-services/ai-autonomous-code-review/"]
     },
     {
       "file": "src/pages/ai-services/AIAutonomousCodeReview.jsx",
-      "links": [
-        "https://ziontechgroup.com/ai-services/ai-autonomous-code-review/"
-      ]
+      "links": ["https://ziontechgroup.com/ai-services/ai-autonomous-code-review/"]
     },
     {
       "file": "src/pages/contact.tsx",
@@ -5195,10 +5106,7 @@
     },
     {
       "file": "src/pages/services/AISupportHelpdesk.tsx",
-      "links": [
-        "https://www.zendesk.com/pricing/",
-        "https://www.intercom.com/pricing"
-      ]
+      "links": ["https://www.zendesk.com/pricing/", "https://www.intercom.com/pricing"]
     },
     {
       "file": "src/pages/services/AIWorkflowAutomation.tsx",
@@ -5214,10 +5122,7 @@
     },
     {
       "file": "src/pages/services/AffiliateMarketingTracker.tsx",
-      "links": [
-        "https://www.partnerstack.com/pricing",
-        "https://tapfiliate.com/pricing/"
-      ]
+      "links": ["https://www.partnerstack.com/pricing", "https://tapfiliate.com/pricing/"]
     },
     {
       "file": "src/pages/services/AiLeadScoring.tsx",
@@ -5251,10 +5156,7 @@
     },
     {
       "file": "src/pages/services/CustomerFeedbackSurveys.tsx",
-      "links": [
-        "https://www.typeform.com/pricing/",
-        "https://www.surveymonkey.com/pricing/"
-      ]
+      "links": ["https://www.typeform.com/pricing/", "https://www.surveymonkey.com/pricing/"]
     },
     {
       "file": "src/pages/services/DataAnalytics.js.jsx",
@@ -5282,17 +5184,11 @@
     },
     {
       "file": "src/pages/services/EmployeeSchedulingSaaS.tsx",
-      "links": [
-        "https://www.deputy.com/pricing",
-        "https://www.wheniwork.com/pricing"
-      ]
+      "links": ["https://www.deputy.com/pricing", "https://www.wheniwork.com/pricing"]
     },
     {
       "file": "src/pages/services/FinOpsAdvisor.tsx",
-      "links": [
-        "https://www.cloudzero.com/pricing",
-        "https://www.kubecost.com/pricing"
-      ]
+      "links": ["https://www.cloudzero.com/pricing", "https://www.kubecost.com/pricing"]
     },
     {
       "file": "src/pages/services/ITInfrastructure.js.jsx",
@@ -5379,10 +5275,7 @@
     },
     {
       "file": "src/pages/services/UptimeSLAMonitor.tsx",
-      "links": [
-        "https://uptime.com/pricing/",
-        "https://www.datadoghq.com/pricing/"
-      ]
+      "links": ["https://uptime.com/pricing/", "https://www.datadoghq.com/pricing/"]
     },
     {
       "file": "src/pages/services/VendorRiskManagement.tsx",
@@ -5502,17 +5395,11 @@
     },
     {
       "file": "pages/login.tsx",
-      "links": [
-        "https://ziontechgroup.com/login",
-        "https://ziontechgroup.com/login"
-      ]
+      "links": ["https://ziontechgroup.com/login", "https://ziontechgroup.com/login"]
     },
     {
       "file": "pages/partners.tsx",
-      "links": [
-        "https://ziontechgroup.com/partners/",
-        "https://ziontechgroup.com/partners/"
-      ]
+      "links": ["https://ziontechgroup.com/partners/", "https://ziontechgroup.com/partners/"]
     },
     {
       "file": "pages/products.tsx",

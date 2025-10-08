@@ -25,12 +25,8 @@ async function handler(req, res) {
       return;
     }
 
-    const file = path.join(
-      process.cwd(),
-      'data',
-      'newsletter-subscriptions.json'
-    );
-    
+    const file = path.join(process.cwd(), 'data', 'newsletter-subscriptions.json');
+
     let existing = [];
 
     try {
@@ -44,7 +40,7 @@ async function handler(req, res) {
       email,
       name: name || '',
       source,
-      subscribedAt: new Date().toISOString()
+      subscribedAt: new Date().toISOString(),
     });
 
     fs.writeFileSync(file, JSON.stringify(existing, null, 2));
@@ -57,4 +53,3 @@ async function handler(req, res) {
 }
 
 module.exports = { handler };
-

@@ -37,8 +37,8 @@ function fixImportsInFile(filePath) {
 
     //Fix lucide-react imports
     for (const [broken, correct] of Object.entries(iconMappings)) {
-//       const oldImport = `lucide-react/dist/esm/icons/${broken}`;
-//       const newImport = `lucide-react`;
+      //       const oldImport = `lucide-react/dist/esm/icons/${broken}`;
+      //       const newImport = `lucide-react`;
 
       if (content.includes(oldImport)) {
         content = content.replace(
@@ -50,20 +50,17 @@ function fixImportsInFile(filePath) {
     }
 
     //Fix Link imports if missing
-    if (
-      content.includes('Link') &&
-      !content.includes("import Link from 'next/link'")
-    ) {
+    if (content.includes('Link') && !content.includes("import Link from 'next/link'")) {
       content = "import Link from 'next/link';\n" + content;
       modified = true;
     }
 
     if (modified) {
       fs.writeFileSync(filePath, content);
-//       console.log(`Fixed imports in: ${filePath}`);
+      //       console.log(`Fixed imports in: ${filePath}`);
     }
   } catch (error) {
-//     console.error(`Error processing ${filePath}:`, error.message);
+    //     console.error(`Error processing ${filePath}:`, error.message);
   }
 }
 

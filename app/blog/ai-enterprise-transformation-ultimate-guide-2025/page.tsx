@@ -39,17 +39,16 @@ export default function AIEnterpriseTransformationUltimateGuide2025() {
             <h1 className="text-4xl font-bold text-gray-900 mb-4">
               AI Enterprise Transformation Ultimate Guide 2025: $2B+ ROI Strategies
             </h1>
-            <p className="text-gray-600 text-lg">
-              January 28, 2025 · 60 min read · Enterprise AI
-            </p>
+            <p className="text-gray-600 text-lg">January 28, 2025 · 60 min read · Enterprise AI</p>
           </div>
 
           <div className="prose max-w-none">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">🎯 Transformation Overview</h2>
             <p className="text-gray-700 mb-6">
-              This comprehensive guide reveals how Fortune 500 companies achieve <strong>$2B+ ROI</strong> through 
-              strategic AI enterprise transformation. Learn the proven methodologies, frameworks, and implementation 
-              strategies that deliver breakthrough results.
+              This comprehensive guide reveals how Fortune 500 companies achieve{' '}
+              <strong>$2B+ ROI</strong> through strategic AI enterprise transformation. Learn the
+              proven methodologies, frameworks, and implementation strategies that deliver
+              breakthrough results.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
               <div className="bg-indigo-50 p-6 rounded-lg text-center">
@@ -66,12 +65,17 @@ export default function AIEnterpriseTransformationUltimateGuide2025() {
               </div>
             </div>
 
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">🏢 Enterprise Transformation Framework</h2>
+            <h2 className="text-2xl font-bold text-gray-900 mb-6">
+              🏢 Enterprise Transformation Framework
+            </h2>
             <p className="text-gray-700 mb-6">
-              Our proven 6-phase transformation framework has guided 500+ enterprises to successful AI adoption:
+              Our proven 6-phase transformation framework has guided 500+ enterprises to successful
+              AI adoption:
             </p>
 
-            <h3 className="text-xl font-semibold text-gray-800 mb-4">Phase 1: Strategic Foundation</h3>
+            <h3 className="text-xl font-semibold text-gray-800 mb-4">
+              Phase 1: Strategic Foundation
+            </h3>
             <ul className="list-disc list-inside text-gray-700 mb-4 space-y-2">
               <li>• Executive leadership alignment and vision setting</li>
               <li>• Comprehensive AI readiness assessment</li>
@@ -79,7 +83,9 @@ export default function AIEnterpriseTransformationUltimateGuide2025() {
               <li>• Change management and culture transformation</li>
             </ul>
 
-            <h3 className="text-xl font-semibold text-gray-800 mb-4">Phase 2: Quick Wins & Pilots</h3>
+            <h3 className="text-xl font-semibold text-gray-800 mb-4">
+              Phase 2: Quick Wins & Pilots
+            </h3>
             <ul className="list-disc list-inside text-gray-700 mb-4 space-y-2">
               <li>• Deploy AI solutions in high-impact, low-risk areas</li>
               <li>• Demonstrate immediate value and ROI</li>
@@ -115,10 +121,18 @@ export default function AIEnterpriseTransformationUltimateGuide2025() {
 
             <h3 className="text-xl font-semibold text-gray-800 mb-4">Financial Impact</h3>
             <ul className="list-disc list-inside text-gray-700 mb-6 space-y-2">
-              <li>• <strong>$2B+ total ROI</strong> across all implementations</li>
-              <li>• <strong>300% average ROI</strong> within 24 months</li>
-              <li>• <strong>$500M+ cost savings</strong> annually</li>
-              <li>• <strong>18-month payback period</strong> on average</li>
+              <li>
+                • <strong>$2B+ total ROI</strong> across all implementations
+              </li>
+              <li>
+                • <strong>300% average ROI</strong> within 24 months
+              </li>
+              <li>
+                • <strong>$500M+ cost savings</strong> annually
+              </li>
+              <li>
+                • <strong>18-month payback period</strong> on average
+              </li>
             </ul>
 
             <h2 className="text-2xl font-bold text-gray-900 mb-6">🚀 Implementation Roadmap</h2>
@@ -127,19 +141,24 @@ export default function AIEnterpriseTransformationUltimateGuide2025() {
             </p>
 
             <div className="bg-indigo-50 p-6 rounded-lg text-center">
-              <h3 className="text-xl font-semibold text-gray-800 mb-4">Begin Your $2B+ Transformation</h3>
+              <h3 className="text-xl font-semibold text-gray-800 mb-4">
+                Begin Your $2B+ Transformation
+              </h3>
               <p className="text-gray-700 mb-4">
-                Join Fortune 500 companies achieving breakthrough results through strategic AI transformation
+                Join Fortune 500 companies achieving breakthrough results through strategic AI
+                transformation
               </p>
               <div className="space-x-4">
-                <a 
+                <a
                   href="/contact"
-                  className="inline-block bg-indigo-600 text-white px-6 py-3 rounded-lg hover:bg-indigo-700 transition-colors">
+                  className="inline-block bg-indigo-600 text-white px-6 py-3 rounded-lg hover:bg-indigo-700 transition-colors"
+                >
                   Get Transformation Assessment
                 </a>
-                <a 
+                <a
                   href="/services"
-                  className="inline-block bg-white text-indigo-600 px-6 py-3 rounded-lg border-2 border-indigo-600 hover:bg-indigo-50 transition-colors">
+                  className="inline-block bg-white text-indigo-600 px-6 py-3 rounded-lg border-2 border-indigo-600 hover:bg-indigo-50 transition-colors"
+                >
                   Explore AI Services
                 </a>
               </div>

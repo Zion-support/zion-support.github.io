@@ -22,7 +22,7 @@ async function handler(req, res) {
 
   const file = path.join(process.cwd(), 'data', 'onsite-requests.json');
   const dir = path.dirname(file);
-  
+
   if (!fs.existsSync(dir)) {
     fs.mkdirSync(dir, { recursive: true });
   }

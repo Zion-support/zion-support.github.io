@@ -32,14 +32,14 @@ export class PerformanceMonitor {
     // Observe long tasks
     if ('PerformanceObserver' in window) {
       try {
-        const longTaskObserver = new PerformanceObserver((list) => {
+        const longTaskObserver = new PerformanceObserver(list => {
           for (const entry of list.getEntries()) {
             this.recordMetric('long-task', entry.duration);
           }
         });
         longTaskObserver.observe({ entryTypes: ['longtask'] });
       } catch (e) {
-//         console.warn('Long task observer not supported');
+        //         console.warn('Long task observer not supported');
       }
     }
   }
@@ -74,11 +74,11 @@ export class PerformanceMonitor {
    */
   private getRating(name: string, value: number): 'good' | 'needs-improvement' | 'poor' {
     const thresholds: Record<string, { good: number; poor: number }> = {
-      'FCP': { good: 1800, poor: 3000 },
-      'LCP': { good: 2500, poor: 4000 },
-      'FID': { good: 100, poor: 300 },
-      'CLS': { good: 0.1, poor: 0.25 },
-      'TTFB': { good: 800, poor: 1800 },
+      FCP: { good: 1800, poor: 3000 },
+      LCP: { good: 2500, poor: 4000 },
+      FID: { good: 100, poor: 300 },
+      CLS: { good: 0.1, poor: 0.25 },
+      TTFB: { good: 800, poor: 1800 },
       'long-task': { good: 50, poor: 100 },
     };
 
@@ -98,7 +98,7 @@ export class PerformanceMonitor {
     }
 
     const allMetrics: PerformanceMetric[] = [];
-    this.metrics.forEach((metrics) => {
+    this.metrics.forEach(metrics => {
       allMetrics.push(...metrics);
     });
     return allMetrics;

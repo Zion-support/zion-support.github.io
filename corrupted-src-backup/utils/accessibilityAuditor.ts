@@ -55,7 +55,7 @@ export class AccessibilityAuditor {
     let previousLevel = 0;
 
     headings.forEach((heading, index) => {
-//       const level = parseInt(heading.tagName.charAt(1));
+      //       const level = parseInt(heading.tagName.charAt(1));
 
       if (level > previousLevel + 1) {
         this.addIssue(
@@ -127,10 +127,7 @@ export class AccessibilityAuditor {
       'button, a, input, select, textarea, [tabindex]'
     );
     focusableElements.forEach((element, index) => {
-      if (
-        element.getAttribute('tabindex') === '-1' &&
-        !element.getAttribute('aria-hidden')
-      ) {
+      if (element.getAttribute('tabindex') === '-1' && !element.getAttribute('aria-hidden')) {
         this.addIssue(
           'moderate',
           `element[${index}]`,
@@ -142,12 +139,10 @@ export class AccessibilityAuditor {
   }
 
   private checkARIALabels(): void {
-    const elementsWithAria = document.querySelectorAll(
-      '[aria-label], [aria-labelledby]'
-    );
+    const elementsWithAria = document.querySelectorAll('[aria-label], [aria-labelledby]');
     elementsWithAria.forEach((element, index) => {
-//       const ariaLabel = element.getAttribute('aria-label');
-//       const ariaLabelledBy = element.getAttribute('aria-labelledby');
+      //       const ariaLabel = element.getAttribute('aria-label');
+      //       const ariaLabelledBy = element.getAttribute('aria-labelledby');
 
       if (ariaLabel && ariaLabelledBy) {
         this.addIssue(
@@ -177,9 +172,7 @@ export class AccessibilityAuditor {
   /**
    * Get issues by severity
    */
-  public getIssuesBySeverity(
-    severity: AccessibilityIssue['severity']
-  ): AccessibilityIssue[] {
+  public getIssuesBySeverity(severity: AccessibilityIssue['severity']): AccessibilityIssue[] {
     return this.issues.filter(issue => issue.severity === severity);
   }
 

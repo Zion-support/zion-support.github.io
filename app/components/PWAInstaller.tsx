@@ -28,13 +28,16 @@ const PWAInstaller: React.FC = () => {
     if ('serviceWorker' in navigator && process.env['NODE_ENV'] === 'production') {
       navigator.serviceWorker
         .register('/service-worker.js')
-        .then((registration) => {
+        .then(registration => {
           logger.info('Service Worker registered', { registration });
 
           // Check for updates periodically
-          setInterval(() => {
-            registration.update();
-          }, 60 * 60 * 1000); // Check every hour
+          setInterval(
+            () => {
+              registration.update();
+            },
+            60 * 60 * 1000
+          ); // Check every hour
 
           // Listen for updates
           registration.addEventListener('updatefound', () => {
@@ -52,7 +55,7 @@ const PWAInstaller: React.FC = () => {
             }
           });
         })
-        .catch((error) => {
+        .catch(error => {
           logger.error('Service Worker registration failed', error as Error);
         });
 
@@ -67,7 +70,7 @@ const PWAInstaller: React.FC = () => {
       e.preventDefault();
       setDeferredPrompt(e as BeforeInstallPromptEvent);
       setIsInstallable(true);
-      
+
       // Show prompt after a delay
       setTimeout(() => {
         setShowPrompt(true);
@@ -113,7 +116,7 @@ const PWAInstaller: React.FC = () => {
 
   const handleDismiss = () => {
     setShowPrompt(false);
-    
+
     // Don't show again for this session
     sessionStorage.setItem('pwa-prompt-dismissed', 'true');
   };
@@ -129,44 +132,41 @@ const PWAInstaller: React.FC = () => {
   }
 
   return (
-    <div className='fixed bottom-4 left-4 right-4 md:left-auto md:right-4 md:max-w-md z-50 animate-slide-up'>
-      <div className='bg-white rounded-lg shadow-2xl p-6 border border-gray-200'>
-        <div className='flex items-start'>
-          <div className='flex-shrink-0'>
-            <div className='w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center'>
+    <div className="fixed bottom-4 left-4 right-4 md:left-auto md:right-4 md:max-w-md z-50 animate-slide-up">
+      <div className="bg-white rounded-lg shadow-2xl p-6 border border-gray-200">
+        <div className="flex items-start">
+          <div className="flex-shrink-0">
+            <div className="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center">
               <svg
-                className='w-6 h-6 text-indigo-600'
-                fill='none'
-                stroke='currentColor'
-                viewBox='0 0 24 24'
+                className="w-6 h-6 text-indigo-600"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
               >
                 <path
-                  strokeLinecap='round'
-                  strokeLinejoin='round'
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                   strokeWidth={2}
-                  d='M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z'
+                  d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"
                 />
               </svg>
             </div>
           </div>
-          <div className='ml-4 flex-1'>
-            <h3 className='text-lg font-semibold text-gray-900'>
-              Install Zion Tech App
-            </h3>
-            <p className='mt-1 text-sm text-gray-600'>
-              Get quick access and offline support. Install our app for a better
-              experience!
+          <div className="ml-4 flex-1">
+            <h3 className="text-lg font-semibold text-gray-900">Install Zion Tech App</h3>
+            <p className="mt-1 text-sm text-gray-600">
+              Get quick access and offline support. Install our app for a better experience!
             </p>
-            <div className='mt-4 flex space-x-3'>
+            <div className="mt-4 flex space-x-3">
               <button
                 onClick={handleInstallClick}
-                className='px-4 py-2 bg-indigo-600 text-white text-sm font-medium rounded-lg hover:bg-indigo-700 transition-colors focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2'
+                className="px-4 py-2 bg-indigo-600 text-white text-sm font-medium rounded-lg hover:bg-indigo-700 transition-colors focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
               >
                 Install
               </button>
               <button
                 onClick={handleDismiss}
-                className='px-4 py-2 bg-gray-100 text-gray-700 text-sm font-medium rounded-lg hover:bg-gray-200 transition-colors focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2'
+                className="px-4 py-2 bg-gray-100 text-gray-700 text-sm font-medium rounded-lg hover:bg-gray-200 transition-colors focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2"
               >
                 Not Now
               </button>
@@ -174,20 +174,15 @@ const PWAInstaller: React.FC = () => {
           </div>
           <button
             onClick={handleDismiss}
-            className='ml-4 flex-shrink-0 text-gray-400 hover:text-gray-500 focus:outline-none'
-            aria-label='Close'
+            className="ml-4 flex-shrink-0 text-gray-400 hover:text-gray-500 focus:outline-none"
+            aria-label="Close"
           >
-            <svg
-              className='w-5 h-5'
-              fill='none'
-              stroke='currentColor'
-              viewBox='0 0 24 24'
-            >
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path
-                strokeLinecap='round'
-                strokeLinejoin='round'
+                strokeLinecap="round"
+                strokeLinejoin="round"
                 strokeWidth={2}
-                d='M6 18L18 6M6 6l12 12'
+                d="M6 18L18 6M6 6l12 12"
               />
             </svg>
           </button>

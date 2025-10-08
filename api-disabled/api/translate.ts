@@ -3,10 +3,7 @@ import OpenAI from 'openai';
 
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 
-export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse
-) {
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' });
   }
@@ -43,14 +40,13 @@ export default async function handler(
         temperature: 0.2,
       });
 
-      const translated =
-        completion.choices?.[0]?.message?.content?.trim() || '';
+      const translated = completion.choices?.[0]?.message?.content?.trim() || '';
       results[lng] = translated;
     }
 
     return res.status(200).json(results);
   } catch (err: unknown) {
-//     console.error('Translation error:', err);
+    //     console.error('Translation error:', err);
     return res.status(500).json({ error: 'Translation failed' });
   }
 }

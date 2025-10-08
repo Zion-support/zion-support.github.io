@@ -1,4 +1,4 @@
-export interface BlogPost { 
+export interface BlogPost {
   slug: string;
   title: string;
   description: string;
@@ -21,7 +21,8 @@ export const posts: BlogPost[] = [
   {
     slug: 'ai-2027-enterprise-rag-quality-budgets',
     title: 'AI 2027: Enterprise RAG Quality Budgets',
-    description: 'Freshness windows, retrieval tiers, and semantic caches that raise answer quality while reducing cost.',
+    description:
+      'Freshness windows, retrieval tiers, and semantic caches that raise answer quality while reducing cost.',
     category: 'RAG',
     publishedAt: '2027-02-07',
     featured: true,
@@ -30,12 +31,13 @@ export const posts: BlogPost[] = [
   {
     slug: 'ai-2027-genai-cost-optimization-v7',
     title: 'AI 2027: GenAI Cost Optimization v7',
-    description: 'Cut inference spend 60–85% with tiered routing, request coalescing, and selective distillation.',
+    description:
+      'Cut inference spend 60–85% with tiered routing, request coalescing, and selective distillation.',
     category: 'GenAI',
     publishedAt: '2027-02-07',
     featured: true,
     readTime: '9 min read',
-  }
+  },
 ];
 
 export const getFeaturedPosts = (): BlogPost[] => {

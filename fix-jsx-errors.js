@@ -8,24 +8,24 @@ function processFile(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
-    
+
     // Fix malformed JSX closing tags
     if (content.includes('< />')) {
       content = content.replace(/< \/>/g, '</div>');
       modified = true;
     }
-    
+
     // Fix malformed JSX fragments
     if (content.includes('<>') && !content.includes('</>')) {
       content = content.replace(/<>/g, '<div>');
       content = content.replace(/<\/>/g, '</div>');
       modified = true;
     }
-    
+
     // Fix missing closing tags by counting opening and closing divs
     const openDivs = (content.match(/<div/g) || []).length;
     const closeDivs = (content.match(/<\/div>/g) || []).length;
-    
+
     if (openDivs > closeDivs) {
       const missingDivs = openDivs - closeDivs;
       // Add missing closing divs before the last closing brace
@@ -38,26 +38,26 @@ function processFile(filePath) {
         modified = true;
       }
     }
-    
+
     // Fix malformed Helmet tags
     if (content.includes('<Helmet>') && !content.includes('</Helmet>')) {
       content = content.replace(/<Helmet>/g, '<div>');
       content = content.replace(/<\/Helmet>/g, '</div>');
       modified = true;
     }
-    
+
     // Fix other common JSX issues
     if (content.includes('</Helmet>') && !content.includes('<Helmet>')) {
       content = content.replace(/<\/Helmet>/g, '</div>');
       modified = true;
     }
-    
+
     if (modified) {
       fs.writeFileSync(filePath, content, 'utf8');
       console.log(`Fixed: ${filePath}`);
       return true;
     }
-    
+
     return false;
   } catch (error) {
     console.error(`Error processing ${filePath}:`, error.message);

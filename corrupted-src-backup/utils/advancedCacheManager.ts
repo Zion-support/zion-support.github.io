@@ -102,7 +102,7 @@ class AdvancedCacheManager<T> {
   }
 
   public getStats(): { hits: number; misses: number; hitRate: number } {
-//     const total = this.hits + this.misses;
+    //     const total = this.hits + this.misses;
     return {
       hits: this.hits,
       misses: this.misses,

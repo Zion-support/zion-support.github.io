@@ -57,7 +57,11 @@ export class RateLimiter {
     if (record.count < this.config.max) {
       record.count++;
       this.requests.set(identifier, record);
-      return { allowed: true, remaining: this.config.max - record.count, resetTime: record.resetTime };
+      return {
+        allowed: true,
+        remaining: this.config.max - record.count,
+        resetTime: record.resetTime,
+      };
     }
 
     // Limit exceeded

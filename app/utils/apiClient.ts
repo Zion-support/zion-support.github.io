@@ -41,7 +41,10 @@ export class ApiError extends Error {
 }
 
 class ApiClient {
-  private config: Required<Omit<ApiClientConfig, 'cacheOptions' | 'baseURL'>> & { baseURL: string; cacheOptions?: CacheOptions };
+  private config: Required<Omit<ApiClientConfig, 'cacheOptions' | 'baseURL'>> & {
+    baseURL: string;
+    cacheOptions?: CacheOptions;
+  };
   private abortControllers: Map<string, AbortController> = new Map();
 
   constructor(config: ApiClientConfig = {}) {
@@ -209,11 +212,7 @@ class ApiClient {
 
         // Cache successful GET requests
         if (method === 'GET' && !skipCache) {
-          cacheManager.set(
-            cacheKey,
-            data,
-            cacheConfig || this.config.cacheOptions || {}
-          );
+          cacheManager.set(cacheKey, data, cacheConfig || this.config.cacheOptions || {});
         }
 
         return {
@@ -277,7 +276,7 @@ class ApiClient {
    * Cancel all pending requests
    */
   cancelAll(): void {
-    this.abortControllers.forEach((controller) => {
+    this.abortControllers.forEach(controller => {
       controller.abort();
     });
     this.abortControllers.clear();
@@ -315,7 +314,7 @@ class ApiClient {
    * Delay helper
    */
   private delay(ms: number): Promise<void> {
-    return new Promise((resolve) => setTimeout(resolve, ms));
+    return new Promise(resolve => setTimeout(resolve, ms));
   }
 
   /**

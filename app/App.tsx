@@ -13,10 +13,17 @@ import PerformanceDashboard from './components/PerformanceDashboard';
 import LoadingSpinner from './components/LoadingSpinner';
 
 // Lazy load pages
-const HomePage = lazy(() => import('./page').catch(() => ({ default: () => <div>Error loading page</div> })));
+const HomePage = lazy(() =>
+  import('./page').catch(() => ({ default: () => <div>Error loading page</div> }))
+);
 
 // Import proper utilities
-import { performanceOptimizer, lazyLoadImages, preloadCriticalResources, collectPerformanceMetrics } from './utils/performanceOptimizer';
+import {
+  performanceOptimizer,
+  lazyLoadImages,
+  preloadCriticalResources,
+  collectPerformanceMetrics,
+} from './utils/performanceOptimizer';
 import { logger } from './utils/logger';
 
 const App: React.FC = () => {
@@ -28,7 +35,7 @@ const App: React.FC = () => {
     lazyLoadImages();
     preloadCriticalResources();
     performanceOptimizer.init();
-    
+
     // Initialize Web Vitals monitoring
     if (typeof window !== 'undefined' && 'performance' in window) {
       const pageLoadMetrics = collectPerformanceMetrics();
@@ -40,7 +47,7 @@ const App: React.FC = () => {
         logger.info('Core Web Vitals metrics', 'App', { metrics });
       }
     }
-    
+
     logger.info('Performance monitoring initialized', 'App');
     logger.info('🚀 Zion Tech Group App initialized with comprehensive monitoring');
   }, []);
@@ -51,11 +58,7 @@ const App: React.FC = () => {
 
   return (
     <HelmetProvider>
-      <AdvancedErrorBoundary
-        enableErrorReporting={true}
-        enableRetry={true}
-        onError={handleError}
-      >
+      <AdvancedErrorBoundary enableErrorReporting={true} enableRetry={true} onError={handleError}>
         <AccessibilityEnhancer>
           <SEOEnhancer
             title="Zion Tech Group - Advanced AI and IT Solutions"
@@ -64,9 +67,21 @@ const App: React.FC = () => {
             <AdvancedSEOOptimizer
               seoData={{
                 title: 'Zion Tech Group - Advanced AI and IT Solutions',
-                description: 'Leading provider of enterprise AI solutions, quantum computing, and autonomous systems. Transform your business with our cutting-edge technology.',
-                keywords: ['AI solutions', 'enterprise AI', 'quantum computing', 'autonomous systems', 'digital transformation', 'automation', 'cloud services', 'AI consulting', 'business intelligence', 'machine learning'],
-                canonicalUrl: 'https://ziontechgroup.com'
+                description:
+                  'Leading provider of enterprise AI solutions, quantum computing, and autonomous systems. Transform your business with our cutting-edge technology.',
+                keywords: [
+                  'AI solutions',
+                  'enterprise AI',
+                  'quantum computing',
+                  'autonomous systems',
+                  'digital transformation',
+                  'automation',
+                  'cloud services',
+                  'AI consulting',
+                  'business intelligence',
+                  'machine learning',
+                ],
+                canonicalUrl: 'https://ziontechgroup.com',
               }}
               enableStructuredData={true}
               enableOpenGraph={true}

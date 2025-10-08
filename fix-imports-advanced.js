@@ -20,10 +20,10 @@ function processFile(filePath) {
     const isInComponents = filePath.includes('/components/');
     const isInGuides = filePath.includes('/guides/');
     const isInPages = filePath.includes('/pages/');
-    
+
     let utilsPath = '../utils/';
     let typesPath = '../types/';
-    
+
     if (isInBlog || isInGuides || isInPages) {
       utilsPath = '../../utils/';
       typesPath = '../../types/';
@@ -36,44 +36,44 @@ function processFile(filePath) {
     const replacements = [
       {
         pattern: /import\s+Link\s+from\s+'next\/link';/g,
-        replacement: `import Link from '${utilsPath}link';`
+        replacement: `import Link from '${utilsPath}link';`,
       },
       {
         pattern: /import\s+Image\s+from\s+'next\/image';/g,
-        replacement: `import Image from '${utilsPath}image';`
+        replacement: `import Image from '${utilsPath}image';`,
       },
       {
         pattern: /import\s+dynamic\s+from\s+'next\/dynamic';/g,
-        replacement: `import dynamic from '${utilsPath}dynamic';`
+        replacement: `import dynamic from '${utilsPath}dynamic';`,
       },
       {
         pattern: /import\s+{\s*useRouter\s*}\s+from\s+'next\/navigation';/g,
-        replacement: `import { useRouter } from '${utilsPath}navigation';`
+        replacement: `import { useRouter } from '${utilsPath}navigation';`,
       },
       {
         pattern: /import\s+{\s*usePathname\s*}\s+from\s+'next\/navigation';/g,
-        replacement: `import { usePathname } from '${utilsPath}navigation';`
+        replacement: `import { usePathname } from '${utilsPath}navigation';`,
       },
       {
         pattern: /import\s+{\s*useSearchParams\s*}\s+from\s+'next\/navigation';/g,
-        replacement: `import { useSearchParams } from '${utilsPath}navigation';`
+        replacement: `import { useSearchParams } from '${utilsPath}navigation';`,
       },
       {
         pattern: /import\s+{\s*Metadata\s*}\s+from\s+'next';/g,
-        replacement: `import { Metadata } from '${typesPath}next';`
+        replacement: `import { Metadata } from '${typesPath}next';`,
       },
       {
         pattern: /import\s+{\s*MetadataRoute\s*}\s+from\s+'next';/g,
-        replacement: `import { MetadataRoute } from '${typesPath}next';`
+        replacement: `import { MetadataRoute } from '${typesPath}next';`,
       },
       {
         pattern: /import\s+type\s+{\s*Metadata\s*}\s+from\s+'next';/g,
-        replacement: `import type { Metadata } from '${typesPath}next';`
+        replacement: `import type { Metadata } from '${typesPath}next';`,
       },
       {
         pattern: /'use client';/g,
-        replacement: "// 'use client'; // Removed for Vite compatibility"
-      }
+        replacement: "// 'use client'; // Removed for Vite compatibility",
+      },
     ];
 
     replacements.forEach(({ pattern, replacement }) => {

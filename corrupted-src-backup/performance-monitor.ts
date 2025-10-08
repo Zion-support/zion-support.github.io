@@ -16,12 +16,12 @@ class PerformanceMonitor {
       return;
     }
     this.isInitialized = true;
-//     console.log('Performance monitor initialized');
+    //     console.log('Performance monitor initialized');
   }
 
   cleanup(): void {
     this.isInitialized = false;
-//     console.log('Performance monitor cleaned up');
+    //     console.log('Performance monitor cleaned up');
   }
 }
 

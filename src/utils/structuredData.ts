@@ -130,9 +130,10 @@ export function generateWebSiteSchema(
  * @returns JSON-LD structured data
  */
 export function generateArticleSchema(article: Article): Record<string, unknown> {
-  const author = typeof article.author === 'string'
-    ? { '@type': 'Person', name: article.author }
-    : article.author;
+  const author =
+    typeof article.author === 'string'
+      ? { '@type': 'Person', name: article.author }
+      : article.author;
 
   return {
     '@context': 'https://schema.org',
@@ -189,11 +190,13 @@ export function generateServiceSchema(service: Service): Record<string, unknown>
  * @param questions - Array of Q&A pairs
  * @returns JSON-LD structured data
  */
-export function generateFAQSchema(questions: Array<{ question: string; answer: string }>): Record<string, unknown> {
+export function generateFAQSchema(
+  questions: Array<{ question: string; answer: string }>
+): Record<string, unknown> {
   return {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
-    mainEntity: questions.map((qa) => ({
+    mainEntity: questions.map(qa => ({
       '@type': 'Question',
       name: qa.question,
       acceptedAnswer: {
@@ -342,11 +345,9 @@ export function generatePageStructuredData(config: {
   schemas.push(generateOrganizationSchema(config.organization));
 
   // Website schema
-  schemas.push(generateWebSiteSchema(
-    config.websiteName,
-    config.websiteUrl,
-    config.websiteDescription
-  ));
+  schemas.push(
+    generateWebSiteSchema(config.websiteName, config.websiteUrl, config.websiteDescription)
+  );
 
   // Breadcrumbs if provided
   if (config.breadcrumbs && config.breadcrumbs.length > 0) {
@@ -360,7 +361,7 @@ export function generatePageStructuredData(config: {
 
   // Services if provided
   if (config.services && config.services.length > 0) {
-    config.services.forEach((service) => {
+    config.services.forEach(service => {
       schemas.push(generateServiceSchema(service));
     });
   }

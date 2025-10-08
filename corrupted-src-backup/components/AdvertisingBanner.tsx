@@ -21,7 +21,7 @@ const AdvertisingBanner: React.FC<AdvertisingBannerProps> = ({
 }) => {
   return (
     <div
-      className='advertising-banner'
+      className="advertising-banner"
       style={{
         backgroundColor,
         color: textColor,
@@ -34,7 +34,7 @@ const AdvertisingBanner: React.FC<AdvertisingBannerProps> = ({
       }}
     >
       {imageUrl && (
-        <div className='banner-image'>
+        <div className="banner-image">
           <img
             src={imageUrl}
             alt={title}
@@ -47,11 +47,9 @@ const AdvertisingBanner: React.FC<AdvertisingBannerProps> = ({
         </div>
       )}
 
-      <div className='banner-content' style={{ flex: 1 }}>
+      <div className="banner-content" style={{ flex: 1 }}>
         <h2 style={{ margin: '0 0 1rem 0', fontSize: '1.5rem' }}>{title}</h2>
-        <p style={{ margin: '0 0 1.5rem 0', fontSize: '1rem', opacity: 0.9 }}>
-          {description}
-        </p>
+        <p style={{ margin: '0 0 1.5rem 0', fontSize: '1rem', opacity: 0.9 }}>{description}</p>
         <a
           href={ctaUrl}
           style={{

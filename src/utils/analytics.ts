@@ -78,11 +78,7 @@ class Analytics {
   /**
    * Track user interaction
    */
-  trackInteraction(
-    element: string,
-    action: string,
-    category: string = 'user_interaction'
-  ): void {
+  trackInteraction(element: string, action: string, category: string = 'user_interaction'): void {
     this.track('interaction', category, action, element);
   }
 
@@ -96,11 +92,7 @@ class Analytics {
   /**
    * Track business events
    */
-  trackBusiness(
-    event: string,
-    value?: number,
-    properties?: Record<string, unknown>
-  ): void {
+  trackBusiness(event: string, value?: number, properties?: Record<string, unknown>): void {
     this.track(event, 'business', 'event', undefined, value, properties);
   }
 
@@ -109,7 +101,7 @@ class Analytics {
    */
   private async sendToAnalytics(event: AnalyticsEvent): Promise<void> {
     // Implementation for sending to this service
-//     console.log('Analytics event:', event);
+    //     console.log('Analytics event:', event);
   }
 
   /**

@@ -14,22 +14,22 @@ export interface SecurityHeaders {
 export const securityHeaders: SecurityHeaders = {
   // Prevent clickjacking attacks
   'X-Frame-Options': 'SAMEORIGIN',
-  
+
   // Prevent MIME type sniffing
   'X-Content-Type-Options': 'nosniff',
-  
+
   // Enable XSS protection
   'X-XSS-Protection': '1; mode=block',
-  
+
   // Referrer policy
   'Referrer-Policy': 'strict-origin-when-cross-origin',
-  
+
   // Permissions policy
   'Permissions-Policy': 'camera=(), microphone=(), geolocation=()',
-  
+
   // HSTS (HTTP Strict Transport Security)
   'Strict-Transport-Security': 'max-age=31536000; includeSubDomains',
-  
+
   // Content Security Policy
   'Content-Security-Policy': [
     "default-src 'self'",
@@ -62,6 +62,7 @@ export function getCorsHeaders(): Record<string, string> {
     'Access-Control-Allow-Credentials': 'true',
     'Access-Control-Allow-Origin': process.env.ALLOWED_ORIGIN || '*',
     'Access-Control-Allow-Methods': 'GET,DELETE,PATCH,POST,PUT,OPTIONS',
-    'Access-Control-Allow-Headers': 'X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version, Authorization',
+    'Access-Control-Allow-Headers':
+      'X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version, Authorization',
   };
 }

@@ -24,7 +24,7 @@ const EnhancedLoading: React.FC<LoadingProps> = ({
   );
 
   const renderDots = () => (
-    <div className='flex space-x-1'>
+    <div className="flex space-x-1">
       {[0, 1, 2].map(i => (
         <div
           key={i}
@@ -39,9 +39,7 @@ const EnhancedLoading: React.FC<LoadingProps> = ({
   );
 
   const renderPulse = () => (
-    <div
-      className={`bg-blue-600 rounded-full animate-pulse ${sizeClasses[size]}`}
-    />
+    <div className={`bg-blue-600 rounded-full animate-pulse ${sizeClasses[size]}`} />
   );
 
   const renderLoader = () => {
@@ -56,9 +54,9 @@ const EnhancedLoading: React.FC<LoadingProps> = ({
   };
 
   return (
-    <div className='flex flex-col items-center justify-center p-8'>
-      <div className='mb-4'>{renderLoader()}</div>
-      <p className='text-gray-600 text-sm font-medium'>{message}</p>
+    <div className="flex flex-col items-center justify-center p-8">
+      <div className="mb-4">{renderLoader()}</div>
+      <p className="text-gray-600 text-sm font-medium">{message}</p>
     </div>
   );
 };

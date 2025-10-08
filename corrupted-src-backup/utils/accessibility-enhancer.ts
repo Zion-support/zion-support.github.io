@@ -91,8 +91,7 @@ class AccessibilityEnhancer {
     // Skip to main content
     if (key === 'Tab' && e.shiftKey && element.id === 'skip-to-main') {
       e.preventDefault();
-      const main =
-        document.querySelector('main') || document.querySelector('#main');
+      const main = document.querySelector('main') || document.querySelector('#main');
       if (main) {
         (main as HTMLElement).focus();
       }
@@ -124,7 +123,7 @@ class AccessibilityEnhancer {
 
     e.preventDefault();
     const items = Array.from(menu.querySelectorAll('[role="menuitem"]'));
-//     const currentIndex = items.indexOf(element);
+    //     const currentIndex = items.indexOf(element);
     let nextIndex = currentIndex;
 
     switch (key) {
@@ -174,9 +173,7 @@ class AccessibilityEnhancer {
 
     // Announce focus changes to screen readers
     if (this.config.enableScreenReaderSupport) {
-      this.announceToScreenReader(
-        `Focused on ${this.getElementDescription(element)}`
-      );
+      this.announceToScreenReader(`Focused on ${this.getElementDescription(element)}`);
     }
   }
 
@@ -191,9 +188,7 @@ class AccessibilityEnhancer {
       'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
     );
     const firstElement = focusableElements[0] as HTMLElement;
-    const lastElement = focusableElements[
-      focusableElements.length - 1
-    ] as HTMLElement;
+    const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
 
     if (e.shiftKey && document.activeElement === firstElement) {
       e.preventDefault();
@@ -221,16 +216,11 @@ class AccessibilityEnhancer {
     });
 
     // Add ARIA labels to form inputs
-    const inputs = document.querySelectorAll(
-      'input:not([aria-label]):not([aria-labelledby])'
-    );
+    const inputs = document.querySelectorAll('input:not([aria-label]):not([aria-labelledby])');
     inputs.forEach(input => {
       const label = this.findAssociatedLabel(input as HTMLInputElement);
       if (label) {
-        input.setAttribute(
-          'aria-labelledby',
-          label.id || this.generateId(label)
-        );
+        input.setAttribute('aria-labelledby', label.id || this.generateId(label));
       }
     });
 
@@ -247,8 +237,8 @@ class AccessibilityEnhancer {
     const elements = document.querySelectorAll('*');
     elements.forEach(element => {
       const styles = window.getComputedStyle(element);
-//       const color = styles.color;
-//       const backgroundColor = styles.backgroundColor;
+      //       const color = styles.color;
+      //       const backgroundColor = styles.backgroundColor;
 
       if (color && backgroundColor && backgroundColor !== 'rgba(0, 0, 0, 0)') {
         const contrast = this.calculateContrast(color, backgroundColor);
@@ -307,21 +297,13 @@ class AccessibilityEnhancer {
       // Add form labels
       const inputs = form.querySelectorAll('input, select, textarea');
       inputs.forEach(input => {
-        if (
-          !input.hasAttribute('aria-label') &&
-          !input.hasAttribute('aria-labelledby')
-        ) {
+        if (!input.hasAttribute('aria-label') && !input.hasAttribute('aria-labelledby')) {
           const label = this.findAssociatedLabel(input as HTMLInputElement);
           if (!label) {
-            const generatedLabel = this.generateFormLabel(
-              input as HTMLInputElement
-            );
+            const generatedLabel = this.generateFormLabel(input as HTMLInputElement);
             const labelElement = document.createElement('label');
             labelElement.textContent = generatedLabel;
-            labelElement.setAttribute(
-              'for',
-              input.id || this.generateId(input)
-            );
+            labelElement.setAttribute('for', input.id || this.generateId(input));
             input.id = input.id || this.generateId(input);
             input.parentNode?.insertBefore(labelElement, input);
           }
@@ -385,7 +367,7 @@ class AccessibilityEnhancer {
    * Generate accessibility report
    */
   public generateReport(): AccessibilityReport {
-//     const score = this.calculateScore();
+    //     const score = this.calculateScore();
     const recommendations = this.generateRecommendations();
 
     return {
@@ -425,8 +407,8 @@ class AccessibilityEnhancer {
   private generateRecommendations(): string[] {
     const recommendations: string[] = [];
 
-//     const errorCount = this.issues.filter(i => i.type === 'error').length;
-//     const warningCount = this.issues.filter(i => i.type === 'warning').length;
+    //     const errorCount = this.issues.filter(i => i.type === 'error').length;
+    //     const warningCount = this.issues.filter(i => i.type === 'warning').length;
 
     if (errorCount > 0) {
       recommendations.push(`Fix ${errorCount} accessibility errors`);
@@ -454,10 +436,8 @@ class AccessibilityEnhancer {
     return 'Button';
   }
 
-  private findAssociatedLabel(
-    input: HTMLInputElement
-  ): HTMLLabelElement | null {
-//     const id = input.id;
+  private findAssociatedLabel(input: HTMLInputElement): HTMLLabelElement | null {
+    //     const id = input.id;
     if (id) {
       return document.querySelector(`label[for="${id}"]`);
     }
@@ -470,15 +450,13 @@ class AccessibilityEnhancer {
 
   private generateAltText(img: HTMLImageElement): string {
     const src = img['src'];
-//     const filename = src.split('/').pop()?.split('.')[0] || 'image';
-    return filename
-      .replace(/[-_]/g, ' ')
-      .replace(/\b\w/g, l => l.toUpperCase());
+    //     const filename = src.split('/').pop()?.split('.')[0] || 'image';
+    return filename.replace(/[-_]/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
   }
 
   private generateFormLabel(input: HTMLInputElement): string {
-//     const type = input.type;
-//     const placeholder = input.placeholder;
+    //     const type = input.type;
+    //     const placeholder = input.placeholder;
 
     if (placeholder) return placeholder;
 
@@ -510,9 +488,9 @@ class AccessibilityEnhancer {
     // Add ARIA descriptions for complex elements
     const complexElements = document.querySelectorAll('[data-description]');
     complexElements.forEach(element => {
-//       const description = element.getAttribute('data-description');
+      //       const description = element.getAttribute('data-description');
       if (description) {
-//         const descId = `desc-${Math.random().toString(36).substr(2, 9)}`;
+        //         const descId = `desc-${Math.random().toString(36).substr(2, 9)}`;
         const descElement = document.createElement('div');
         descElement.id = descId;
         descElement.textContent = description;
@@ -532,22 +510,20 @@ class AccessibilityEnhancer {
 
   private closeModal(modal: HTMLElement): void {
     modal.setAttribute('aria-hidden', 'true');
-    const focusableElement = modal.querySelector(
-      '[data-focus-trap-start]'
-    ) as HTMLElement;
+    const focusableElement = modal.querySelector('[data-focus-trap-start]') as HTMLElement;
     if (focusableElement) {
       focusableElement.focus();
     }
   }
 
   private getElementDescription(element: HTMLElement): string {
-//     const ariaLabel = element.getAttribute('aria-label');
+    //     const ariaLabel = element.getAttribute('aria-label');
     if (ariaLabel) return ariaLabel;
 
-//     const text = element.textContent?.trim();
+    //     const text = element.textContent?.trim();
     if (text) return text;
 
-//     const alt = element.getAttribute('alt');
+    //     const alt = element.getAttribute('alt');
     if (alt) return alt;
 
     return element.tagName.toLowerCase();

@@ -103,8 +103,8 @@ class SEOOptimizer {
   }
 
   buildSitemapXML(pages) {
-//     const baseUrl = this.seoConfig.siteUrl;
-//     const lastmod = new Date().toISOString().split('T')[0];
+    //     const baseUrl = this.seoConfig.siteUrl;
+    //     const lastmod = new Date().toISOString().split('T')[0];
 
     let xml = '<?xml version="1.0" encoding="UTF-8"?>\n';
     xml += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n';
@@ -230,7 +230,7 @@ Disallow: /middleware/`;
   }
 
   addPageSchema() {
-//     const currentPath = window.location.pathname;
+    //     const currentPath = window.location.pathname;
     let schema = null;
 
     switch (currentPath) {
@@ -276,8 +276,7 @@ Disallow: /middleware/`;
       '@context': 'https://schema.org',
       '@type': 'AboutPage',
       name: 'About Zion Tech Group',
-      description:
-        'Learn about Zion Tech Group, a leading AI and IT solutions company.',
+      description: 'Learn about Zion Tech Group, a leading AI and IT solutions company.',
       url: `${this.seoConfig.siteUrl}/about`,
       mainEntity: this.seoConfig.structuredData.organization,
     };
@@ -348,10 +347,8 @@ Disallow: /middleware/`;
   }
 
   generateAltText(src) {
-//     const filename = src.split('/').pop().split('.')[0];
-    return filename
-      .replace(/[-_]/g, ' ')
-      .replace(/\b\w/g, l => l.toUpperCase());
+    //     const filename = src.split('/').pop().split('.')[0];
+    return filename.replace(/[-_]/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
   }
 
   optimizeFonts() {
@@ -388,7 +385,7 @@ Disallow: /middleware/`;
   }
 
   getPageTitle() {
-//     const currentPath = window.location.pathname;
+    //     const currentPath = window.location.pathname;
     const titles = {
       '/': 'Zion Tech Group - Advanced AI and IT Solutions',
       '/about': 'About Us - Zion Tech Group',
@@ -403,7 +400,7 @@ Disallow: /middleware/`;
   }
 
   getPageDescription() {
-//     const currentPath = window.location.pathname;
+    //     const currentPath = window.location.pathname;
     const descriptions = {
       '/': 'Leading AI and IT solutions company providing cutting-edge technology consulting, machine learning, and software development services.',
       '/about':
@@ -412,10 +409,8 @@ Disallow: /middleware/`;
         'Comprehensive AI and IT consulting services including machine learning, software development, and technology strategy.',
       '/blog':
         'Stay updated with the latest insights on AI, technology trends, and IT solutions from our expert team.',
-      '/contact':
-        'Get in touch with Zion Tech Group for your AI and IT consulting needs.',
-      '/team':
-        "Meet the talented team behind Zion Tech Group's innovative AI and IT solutions.",
+      '/contact': 'Get in touch with Zion Tech Group for your AI and IT consulting needs.',
+      '/team': "Meet the talented team behind Zion Tech Group's innovative AI and IT solutions.",
       '/privacy': 'Privacy Policy for Zion Tech Group website and services.',
       '/terms': 'Terms of Service for Zion Tech Group website and services.',
     };
@@ -423,7 +418,7 @@ Disallow: /middleware/`;
   }
 
   getPageImage() {
-//     const currentPath = window.location.pathname;
+    //     const currentPath = window.location.pathname;
     const images = {
       '/': '/images/og-home.jpg',
       '/about': '/images/og-about.jpg',
@@ -432,10 +427,7 @@ Disallow: /middleware/`;
       '/contact': '/images/og-contact.jpg',
       '/team': '/images/og-team.jpg',
     };
-    return (
-      this.seoConfig.siteUrl +
-      (images[currentPath] || this.seoConfig.defaultImage)
-    );
+    return this.seoConfig.siteUrl + (images[currentPath] || this.seoConfig.defaultImage);
   }
 
   // Public methods
