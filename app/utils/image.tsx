@@ -34,7 +34,7 @@ export const Image: React.FC<ImageProps> = ({
   onError,
   ...props
 }) => {
-  const [_isLoaded, setIsLoaded] = useState(false);
+  const [, setIsLoaded] = useState(false);
   const [hasError, setHasError] = useState(false);
 
   const handleLoad = useCallback(() => {

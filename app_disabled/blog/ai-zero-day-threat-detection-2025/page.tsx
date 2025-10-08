@@ -5,3 +5,5 @@ export const metadata = {
     type: "article",
     url: "https://ziontechgroup.com/blog/ai-zero-day-threat-detection-2025",
     images: [
+      "https://ziontechgroup.com/images/ai-zero-day-threat-detection-2025.jpg"
+    ]

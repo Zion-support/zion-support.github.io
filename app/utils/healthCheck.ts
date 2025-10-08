@@ -97,7 +97,7 @@ class HealthCheckService {
           name,
           duration,
         });
-      } catch (_error) {
+      } catch {
 logger._error(`Health check "${name}" failed`, _error as Error);
         checks.push({
           name,
@@ -161,7 +161,7 @@ logger._error(`Health check "${name}" failed`, _error as Error);
     }
 
     try {
-      const memory = (performance as any).memory;
+      const memory = (performance as { memory: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
       const usedPercent = (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100;
 
       let status: 'pass' | 'warn' | 'fail' = 'pass';
@@ -186,7 +186,7 @@ logger._error(`Health check "${name}" failed`, _error as Error);
           usedPercent,
         },
       };
-    } catch (_error) {
+    } catch {
       return {
         name: 'memory',
         status: 'warn',
@@ -224,7 +224,7 @@ logger._error(`Health check "${name}" failed`, _error as Error);
           summary: report.summary,
         },
       };
-    } catch (_error) {
+    } catch {
       return {
         name: 'performance',
         status: 'warn',
@@ -295,7 +295,7 @@ logger._error(`Health check "${name}" failed`, _error as Error);
       try {
         localStorage.setItem('_size_test', testData);
         localStorage.removeItem('_size_test');
-      } catch (_error) {
+      } catch {
         return {
           name: 'storage',
           status: 'warn',
@@ -308,7 +308,7 @@ logger._error(`Health check "${name}" failed`, _error as Error);
         status: 'pass',
         message: 'Storage working correctly',
       };
-    } catch (_error) {
+    } catch {
       return {
         name: 'storage',
         status: 'fail',

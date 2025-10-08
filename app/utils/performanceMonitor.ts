@@ -19,25 +19,26 @@ export interface PerformanceThresholds {
 }
 
 // Extended types for specific performance entry types
-interface _PerformancePaintTiming extends PerformanceEntry {
-  name: 'first-paint' | 'first-contentful-paint';
-}
+// These interfaces are defined for future use but not currently used
+// interface _PerformancePaintTiming extends PerformanceEntry {
+//   name: 'first-paint' | 'first-contentful-paint';
+// }
 
-interface _LargestContentfulPaint extends PerformanceEntry {
-  renderTime: number;
-  loadTime: number;
-  size: number;
-  id: string;
-  url: string;
-  element: Element | null;
-}
+// interface _LargestContentfulPaint extends PerformanceEntry {
+//   renderTime: number;
+//   loadTime: number;
+//   size: number;
+//   id: string;
+//   url: string;
+//   element: Element | null;
+// }
 
-interface _PerformanceEventTiming extends PerformanceEntry {
-  processingStart: number;
-  processingEnd: number;
-  cancelable: boolean;
-  target: EventTarget | null;
-}
+// interface _PerformanceEventTiming extends PerformanceEntry {
+//   processingStart: number;
+//   processingEnd: number;
+//   cancelable: boolean;
+//   target: EventTarget | null;
+// }
 
 class PerformanceMonitor {
   private metrics: Map<string, PerformanceMetric> = new Map();
@@ -79,7 +80,7 @@ class PerformanceMonitor {
 
         // Largest Contentful Paint
         this.observeEntry('largest-contentful-paint', (entries) => {
-          const lastEntry = entries[entries.length - 1] as any;
+          const lastEntry = entries[entries.length - 1] as { renderTime?: number; loadTime?: number; startTime: number };
           if (lastEntry) {
             this.recordMetric('LCP', lastEntry.renderTime || lastEntry.loadTime || lastEntry.startTime);
           }
@@ -87,7 +88,7 @@ class PerformanceMonitor {
 
         // First Input Delay
         this.observeEntry('first-input', (entries) => {
-          const firstInput = entries[0] as any;
+          const firstInput = entries[0] as { processingStart: number; startTime: number };
           if (firstInput && firstInput.processingStart !== undefined) {
             const fid = firstInput.processingStart - firstInput.startTime;
             this.recordMetric('FID', fid);

@@ -1,5 +1,6 @@
 import Link from 'next/link';
-export default function EnterpriseAITransformation2026 Complete Guide() {/* return (
+export default function EnterpriseAITransformation2026CompleteGuide() {
+  return (
     <div> content */}
     <div>
       <div> </div><div> </div>

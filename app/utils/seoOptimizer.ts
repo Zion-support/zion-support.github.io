@@ -286,8 +286,8 @@ class SEOOptimizer {
       let clsValue = 0;
       new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
-          if (!(entry as any).hadRecentInput) {
-            clsValue += (entry as any).value;
+          if (!(entry as { hadRecentInput: boolean }).hadRecentInput) {
+            clsValue += (entry as { value: number }).value;
           }
         }
         
@@ -302,8 +302,8 @@ class SEOOptimizer {
    * Track SEO-related metrics
    */
   private trackSEOMetric(metric: string, value: number): void {
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('event', 'seo_metric', {
+    if (typeof window !== 'undefined' && (window as { gtag?: (command: string, action: string, params: Record<string, unknown>) => void }).gtag) {
+      (window as { gtag: (command: string, action: string, params: Record<string, unknown>) => void }).gtag('event', 'seo_metric', {
         metric_name: metric,
         metric_value: Math.round(value),
         event_category: 'seo'

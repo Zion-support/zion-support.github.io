@@ -5,3 +5,5 @@ export const metadata = {
     type: "article",
     url: "https://ziontechgroup.com/blog/sustainable-ai-green-computing-2025",
     images: [
+      "https://ziontechgroup.com/images/sustainable-ai-green-computing-2025.jpg"
+    ]
