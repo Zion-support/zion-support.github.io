@@ -678,15 +678,13 @@ class AccessibilityEnhancer {
     
     return `
 Accessibility Report:
-- Color Contrast Checks: ${metrics.colorContrastChecks}
-- Keyboard Navigation Tests: ${metrics.keyboardNavigationTests}
-- Screen Reader Announcements: ${metrics.screenReaderAnnouncements}
-- Focus Management Updates: ${metrics.focusManagementUpdates}
-- ARIA Labels Added: ${metrics.ariaLabelsAdded}
-- Skip Links Added: ${metrics.skipLinksAdded}
-`;
+- Keyboard Navigation Issues: ${metrics.keyboardNavigationIssues}
+- Focus Issues: ${metrics.focusIssues}
+- ARIA Issues: ${metrics.ariaIssues}
+- Color Contrast Issues: ${metrics.colorContrastIssues}
+- Total Fixes Applied: ${metrics.fixesApplied}
+    `.trim();
   }
 }
 
-export const accessibilityEnhancer = new AccessibilityEnhancer();
-export default accessibilityEnhancer;
+export default AccessibilityEnhancerService;
