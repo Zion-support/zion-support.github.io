@@ -16,27 +16,46 @@ const ContactPage: React.FC = () => {
           </p>
         </div>
 
-          <div className='grid grid-cols-1 lg:grid-cols-2 gap-12'>
-            <div className='bg-white rounded-lg shadow-lg p-8'>
-              <h2 className='text-2xl font-bold text-gray-900 mb-6'>
-                Get In Touch
-              </h2>
-              <div className='space-y-6'>
-                <div>
-                  <h3 className='text-lg font-semibold text-gray-900 mb-2'>
-                    Address
-                  </h3>
-                  <p className='text-gray-600'>
-                    364 E Main St STE 1008<br />
-                    Middletown, DE 19709<br />
-                    United States
-                  </p>
-                </div>
+        <div className='grid grid-cols-1 lg:grid-cols-2 gap-12'>
+          <div className='bg-white rounded-lg shadow-lg p-8'>
+            <h2 className='text-2xl font-bold text-gray-900 mb-6'>
+              Get In Touch
+            </h2>
+            <div className='space-y-6'>
+              <div>
+                <h3 className='text-lg font-semibold text-gray-900 mb-2'>
+                  Address
+                </h3>
+                <p className='text-gray-600'>
+                  364 E Main St STE 1008<br />
+                  Middletown, DE 19709<br />
+                  United States
+                </p>
+              </div>
+              <div>
+                <h3 className='text-lg font-semibold text-gray-900 mb-2'>
+                  Phone
+                </h3>
+                <p className='text-gray-600'>
+                  <a href="tel:+13024640950" className="text-blue-600 hover:text-blue-800">
+                    +1 (302) 464-0950
+                  </a>
+                </p>
+              </div>
+              <div>
+                <h3 className='text-lg font-semibold text-gray-900 mb-2'>
+                  Email
+                </h3>
+                <p className='text-gray-600'>
+                  <a href="mailto:contact@ziontechgroup.com" className="text-blue-600 hover:text-blue-800">
+                    contact@ziontechgroup.com
+                  </a>
+                </p>
               </div>
             </div>
           </div>
 
-          <div>
+          <div className='bg-white rounded-lg shadow-lg p-8'>
             <h2 className="text-2xl font-bold text-gray-900 mb-6">
               Send us a Message
             </h2>
@@ -76,6 +95,7 @@ const ContactPage: React.FC = () => {
               </button>
             </form>
           </div>
+        </div>
         </div>
       </div>
   );
