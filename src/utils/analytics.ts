@@ -85,79 +85,32 @@ class Analytics {
     });
   }
 
-  /**
-   * Track user interaction
-   */
-  trackInteraction(
-    element: string,
-    action: string,
-    category: string = 'user_interaction'
-  ): void {
+  trackInteraction(element: string, action: string, category: string = 'user_interaction'): void {
     this.track('interaction', category, action, element);
   }
-
-  /**
-   * Track performance metrics
-   */
   trackPerformance(metric: string, value: number, unit: string = 'ms'): void {
     this.track('performance', 'metrics', metric, unit, value);
   }
-
-  /**
-   * Track business events
-   */
-  trackBusiness(
-    event: string,
-    value?: number,
-    properties?: Record<string, unknown>
-  ): void {
+  trackBusinessEvent(event: string, value?: number, properties?: Record<string, unknown>): void {
     this.track(event, 'business', 'event', undefined, value, properties);
   }
-
-  /**
-   * Send event to analytics service
-   */
-  private async sendToAnalytics(event: AnalyticsEvent): Promise<void> {
-    // Implementation for sending to analytics service
-    console.log('Analytics event:', event);
-  }
-
-  /**
-   * Get all events
-   */
   getEvents(): AnalyticsEvent[] {
     return [...this.events];
   }
-
-  /**
-   * Get events by category
-   */
   getEventsByCategory(category: string): AnalyticsEvent[] {
     return this.events.filter(event => event.category === category);
   }
 
-  /**
-   * Clear all events
-   */
   clearEvents(): void {
     this.events = [];
   }
-
-  /**
-   * Get user properties
-   */
   getUserProperties(): UserProperties {
     return { ...this.userProperties };
   }
 
-  /**
-   * Update user properties
-   */
   updateUserProperties(properties: Partial<UserProperties>): void {
     this.userProperties = { ...this.userProperties, ...properties };
   }
 }
-
 const analytics = new Analytics();
-export { analytics };
 export default analytics;

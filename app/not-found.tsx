@@ -23,9 +23,9 @@ export default function NotFound() {
     },
     {
       title: 'About Us',
-      description: 'Learn more about Zion Tech Group',
+      description: 'Learn about Zion Tech Group and our mission',
       href: '/about',
-      icon: '👥'
+      icon: '🏢'
     },
     {
       title: 'Case Studies',

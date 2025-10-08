@@ -14,7 +14,9 @@ const UnifiedBanner = dynamic(
 );
 
 const ContentPromotion = dynamic(
-  () => import('./components/UltimateBusinessIntelligence2025Banner').catch(() => Promise.resolve({ default: () => null })), 
+  () => import('./components/UltimateBusinessIntelligence2025Banner').catch(() => ({
+    default: () => null
+  })) as Promise<any>, 
   {
     loading: () => <div className="animate-pulse bg-gray-200 h-64 rounded-lg"></div>,
     ssr: false

@@ -19,13 +19,6 @@ export enum ErrorCategory {
   UNKNOWN = 'unknown',
 }
 
-export enum ErrorSeverity {
-  LOW = 'low',
-  MEDIUM = 'medium',
-  HIGH = 'high',
-  CRITICAL = 'critical',
-}
-
 export interface ErrorInfo {
   message: string;
   stack?: string;
@@ -73,40 +66,30 @@ export class ErrorHandler {
       ...errorInfo,
     };
 
-    this.errorQueue.push(errorData);
-    if (this.errorQueue.length > this.maxQueueSize) {
-      this.errorQueue.shift();
-    }
-
+    // Add to queue
+    this.addToQueue(errorData);
     // Send to error reporting service
     this.reportError(errorData);
   }
-
   /**
-   * Categorize error based on message and stack
+   * Categorize error based on type and message
    */
   private categorizeError(error: Error): ErrorCategory {
     const message = error.message.toLowerCase();
-    const stack = error.stack?.toLowerCase() || '';
-
-    if (message.includes('network') || message.includes('fetch') || message.includes('xhr')) {
+    if (message.includes('network') || message.includes('fetch') || message.includes('timeout')) {
       return ErrorCategory.NETWORK;
     }
     if (message.includes('validation') || message.includes('invalid')) {
       return ErrorCategory.VALIDATION;
     }
-    if (message.includes('api') || stack.includes('api')) {
+    if (message.includes('api') || message.includes('request')) {
       return ErrorCategory.API;
     }
-    if (message.includes('component') || stack.includes('react')) {
-      return ErrorCategory.UI;
-    }
-    if (message.includes('runtime') || stack.includes('runtime')) {
+    if (error.name === 'TypeError' || error.name === 'ReferenceError') {
       return ErrorCategory.RUNTIME;
     }
     return ErrorCategory.UNKNOWN;
   }
-
   /**
    * Determine error severity
    */
@@ -114,46 +97,69 @@ export class ErrorHandler {
     if (category === ErrorCategory.NETWORK) {
       return ErrorSeverity.MEDIUM;
     }
-    if (category === ErrorCategory.VALIDATION) {
-      return ErrorSeverity.LOW;
-    }
     if (category === ErrorCategory.RUNTIME) {
       return ErrorSeverity.HIGH;
     }
-    if (category === ErrorCategory.API) {
-      return ErrorSeverity.MEDIUM;
+    if (category === ErrorCategory.VALIDATION) {
+      return ErrorSeverity.LOW;
     }
     return ErrorSeverity.MEDIUM;
   }
-
   /**
    * Generate unique error ID
    */
   private generateErrorId(): string {
     return `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
   }
-
   /**
-   * Report error to external service
+   * Add error to queue
+   */
+  private addToQueue(errorData: ErrorInfo): void {
+    this.errorQueue.push(errorData);
+    if (this.errorQueue.length > this.maxQueueSize) {
+      this.errorQueue.shift();
+    }
+  }
+  /**
+   * Report error to service
    */
   private reportError(errorData: ErrorInfo): void {
-    // Implementation for reporting to external service
-    console.error('Error reported:', errorData);
+    // Log to console in development
+    if (process.env.NODE_ENV === 'development') {
+      console.error('Error reported:', errorData);
+    }
+    // Send to error tracking service (e.g., Sentry, LogRocket)
+    if (typeof window !== 'undefined' && (window as any).Sentry) {
+      (window as any).Sentry.captureException(new Error(errorData.message), {
+        extra: errorData,
+      });
+    }
   }
-
   /**
-   * Get all errors
+   * Get all errors from queue
    */
   getErrors(): ErrorInfo[] {
     return [...this.errorQueue];
   }
-
   /**
    * Clear error queue
    */
   clearErrors(): void {
     this.errorQueue = [];
   }
+  /**
+   * Get errors by category
+   */
+  getErrorsByCategory(category: ErrorCategory): ErrorInfo[] {
+    return this.errorQueue.filter(error => error.category === category);
+  }
+  /**
+   * Get errors by severity
+   */
+  getErrorsBySeverity(severity: ErrorSeverity): ErrorInfo[] {
+    return this.errorQueue.filter(error => error.severity === severity);
+  }
 }
-
-export default ErrorHandler;
+// Export singleton instance
+export const errorHandler = ErrorHandler.getInstance();
+export default errorHandler;

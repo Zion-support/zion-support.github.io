@@ -71,7 +71,7 @@ const EnterprisePage: React.FC = () => {
               </Link>
               <Link
                 href="#solutions"
-                className="group flex items-center gap-3 bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 border border-blue-700"
+                className="group flex items-center gap-3 bg-gray-200 hover:bg-gray-300 text-gray-900 font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-300"
               >
                 <span>View Solutions</span>
                 <span className="group-hover:translate-x-1 transition-transform">
@@ -96,17 +96,17 @@ const EnterprisePage: React.FC = () => {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+            {features.map((solution, index) => (
               <div
                 key={index}
                 className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300"
               >
-                <div className="text-4xl mb-4">{feature.icon}</div>
+                <div className="text-4xl mb-4">{solution.icon}</div>
                 <h3 className="text-2xl font-bold text-white mb-4">
-                  {feature.title}
+                  {solution.title}
                 </h3>
                 <p className='text-gray-300'>
-                  {feature.description}
+                  {solution.description}
                 </p>
               </div>
             ))}
@@ -117,11 +117,11 @@ const EnterprisePage: React.FC = () => {
       {/* CTA Section */}
       <section className="py-24 bg-slate-50">
         <div className="container mx-auto px-4">
-          <div className="text-center bg-gradient-to-r from-blue-600 to-purple-600 rounded-3xl p-12 shadow-2xl">
+          <div className="text-center bg-gradient-to-br from-blue-600 to-purple-600 rounded-3xl p-12 border border-white/20">
             <h3 className="text-4xl font-bold text-white mb-6">
               Ready to Transform Your Enterprise?
             </h3>
-            <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-100 mb-8 max-w-3xl mx-auto">
               Join 500+ Fortune 500 companies achieving unprecedented
               transformation with our enterprise AI solutions.
             </p>

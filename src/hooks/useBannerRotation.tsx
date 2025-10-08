@@ -4,7 +4,18 @@
  */
 
 import React, { useState, useEffect, useCallback, useMemo } from 'react';
-import bannerConfigurations from "../data/bannerConfigurations"; // @ts-ignore
+import bannerConfigurations from '../data/bannerConfigurations';
+
+// Define types inline since they're not exported
+type RotationStrategy = 'sequential' | 'random' | 'weighted' | 'balanced';
+
+interface BannerConfig {
+  id: string;
+  component: string;
+  priority: number;
+  weight?: number;
+  enabled: boolean;
+}
 
 interface UseBannerRotationOptions {
   strategy?: RotationStrategy;
