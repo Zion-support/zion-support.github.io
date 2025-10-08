@@ -85,14 +85,10 @@ const HomePage: React.FC = () => {
           }`}
           aria-labelledby="hero-heading"
         >
-<<<<<<< HEAD
           <h1 
             id="hero-heading" 
             className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent"
           >
-=======
-          <h1 id="hero-heading" className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
->>>>>>> cursor/fix-errors-and-merge-to-main-a8ed
             Zion Tech Group
           </h1>
           <p className="text-xl md:text-2xl text-gray-600 mb-8 font-medium" role="doc-subtitle">
@@ -139,9 +135,6 @@ const HomePage: React.FC = () => {
             >
               Get Free Consultation
             </a>
-=======
-            </div>cursor/analyze-improve-and-deploy-application-3d67
->>>>>>> cursor/fix-errors-and-merge-to-main-a8ed
           </div>
         </section>
 
@@ -251,11 +244,7 @@ const HomePage: React.FC = () => {
                 </div>
               </article>
             </Suspense>
-<<<<<<< HEAD
           </div>
-=======
-          </div>cursor/analyze-improve-and-deploy-application-3d67
->>>>>>> cursor/fix-errors-and-merge-to-main-a8ed
           
           <div className="grid md:grid-cols-3 gap-8">
             <article className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 focus-within:ring-4 focus-within:ring-indigo-300">
@@ -404,17 +393,6 @@ const HomePage: React.FC = () => {
             <p>✓ Custom solution design</p>
             <p>✓ 24/7 support available</p>
           </div>
-=======
-          
-          <div className="text-center mt-8">
-            <a 
-              href="/services"
-              className="inline-block bg-indigo-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-4 focus:ring-indigo-300"
-            >
-              View All Services
-            </a>cursor/analyze-improve-and-deploy-application-3d67
->>>>>>> origin/main
->>>>>>> cursor/fix-errors-and-merge-to-main-a8ed
         </section>
       </main>
       
