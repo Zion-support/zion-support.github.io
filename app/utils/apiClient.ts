@@ -2,7 +2,7 @@
  * Enhanced API Client with retry logic, caching, and error handling
  */
 
-import { getCache, setCache, CacheOptions } from './cacheManager';
+import { cacheManager, CacheOptions } from './cacheManager';
 import { logError, logCritical } from './errorLogger';
 
 export interface ApiClientConfig {
@@ -14,9 +14,9 @@ export interface ApiClientConfig {
   cache?: CacheOptions;
 }
 
-export interface RequestConfig extends RequestInit {
+export interface RequestConfig extends Omit<RequestInit, 'cache'> {
   url: string;
-  cache?: CacheOptions;
+  cacheOptions?: CacheOptions;
   retries?: number;
   timeout?: number;
   skipCache?: boolean;
@@ -153,8 +153,8 @@ class ApiClient {
 
     // Check cache for GET requests
     if (method === 'GET' && !skipCache) {
-      const cached = await getCache<T>(cacheKey, cacheConfig?.strategy);
-      if (cached !== null) {
+      const cached = cacheManager.get<T>(cacheKey);
+      if (cached !== undefined) {
         return {
           data: cached,
           status: 200,
@@ -209,7 +209,7 @@ class ApiClient {
 
         // Cache successful GET requests
         if (method === 'GET' && !skipCache) {
-          await setCache(
+          cacheManager.set(
             cacheKey,
             data,
             cacheConfig || this.config.cache
@@ -339,7 +339,6 @@ const apiClient = new ApiClient({
   retryDelay: 1000,
   cache: {
     ttl: 5 * 60 * 1000, // 5 minutes
-    strategy: 'memory',
   },
 });
 
