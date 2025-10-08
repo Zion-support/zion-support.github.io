@@ -19,7 +19,7 @@ function initializeMonitoring() {
       // errorHandler.init(); // Method may not exist
       
       // Initialize analytics
-      (analytics as any).init?.();
+      (analytics as unknown as { init?: () => void }).init?.();
       
       logger.info('Monitoring initialized successfully');
     }
