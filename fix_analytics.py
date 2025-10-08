@@ -1,4 +1,4 @@
-/**
+content = """/**
  * Analytics and Tracking Utility
  * Provides comprehensive analytics tracking for the application
  */
@@ -170,3 +170,8 @@ class Analytics {
 const analytics = new Analytics();
 
 export default analytics;
+"""
+
+with open('src/utils/analytics.ts', 'w') as f:
+    f.write(content)
+print('Fixed src/utils/analytics.ts')
