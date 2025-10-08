@@ -323,11 +323,52 @@ body {
 }
 
 /* High contrast mode */
-@media (prefers-contrast: high) {
-  .high-contrast {
-    filter: contrast(150%);
-  }
+.high-contrast {
+  filter: contrast(150%) brightness(1.2);
 }
+
+.high-contrast .cyber-card {
+  border: 2px solid #ffffff;
+  background: #000000;
+  color: #ffffff;
+}
+
+.high-contrast .neon-text {
+  color: #00ffff;
+  text-shadow: 0 0 10px #00ffff;
+}
+
+.high-contrast .cyber-button {
+  border: 2px solid #ffffff;
+  background: #000000;
+  color: #ffffff;
+}
+
+.high-contrast .cyber-button:hover {
+  background: #ffffff;
+  color: #000000;
+}
+
+/* Font size adjustments */
+.font-small {
+  font-size: 0.875rem;
+}
+
+.font-medium {
+  font-size: 1rem;
+}
+
+.font-large {
+  font-size: 1.125rem;
+}
+
+.font-small h1 { font-size: 2rem; }
+.font-small h2 { font-size: 1.5rem; }
+.font-small h3 { font-size: 1.25rem; }
+
+.font-large h1 { font-size: 3rem; }
+.font-large h2 { font-size: 2.25rem; }
+.font-large h3 { font-size: 1.875rem; }
 
 /* Reduced motion */
 @media (prefers-reduced-motion: reduce) {

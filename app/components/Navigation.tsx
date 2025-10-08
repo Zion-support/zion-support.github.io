@@ -1,289 +1,428 @@
-import React, { useState } from 'react';
+import React, { useState, useCallback, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { ChevronDown, Phone, Mail, MapPin } from 'lucide-react';
+import { ChevronDown, Menu, X, Phone } from 'lucide-react';
 
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
-  const [aiServicesOpen, setAiServicesOpen] = useState(false);
-  const [itServicesOpen, setItServicesOpen] = useState(false);
+
+  // Close mobile menu when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (isOpen && !(event.target as Element).closest('nav')) {
+        setIsOpen(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, [isOpen]);
+
+  // Close dropdowns when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (servicesOpen && !(event.target as Element).closest('.services-dropdown')) {
+        setServicesOpen(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, [servicesOpen]);
+
+  const toggleMobileMenu = useCallback(() => {
+    setIsOpen(!isOpen);
+  }, [isOpen]);
+
+  const toggleServices = useCallback(() => {
+    setServicesOpen(!servicesOpen);
+  }, [servicesOpen]);
+
+  const closeMobileMenu = useCallback(() => {
+    setIsOpen(false);
+  }, []);
 
   return (
-    <nav className="bg-slate-900/90 backdrop-blur-md shadow-lg sticky top-0 z-50 border-b border-cyan-500/20">
+    <nav className="bg-slate-900/95 backdrop-blur-md shadow-lg sticky top-0 z-50 border-b border-cyan-500/20">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
-          <Link to="/" className="text-2xl font-bold text-cyan-400 neon-text">
+          <Link 
+            to="/" 
+            className="text-2xl font-bold text-cyan-400 neon-text flex items-center focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-slate-900 rounded-md px-2 py-1"
+            aria-label="Zion Tech Group - Home"
+          >
+            <span className="text-3xl mr-2" aria-hidden="true">⚡</span>
             Zion Tech Group
           </Link>
 
           {/* Desktop Menu */}
-          <div className="hidden md:flex space-x-8">
-            <Link to="/" className="text-gray-300 hover:text-cyan-400 transition-colors">
+          <div className="hidden lg:flex space-x-8">
+            <Link 
+              to="/" 
+              className="text-gray-300 hover:text-cyan-400 transition-colors font-medium focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-slate-900 rounded-md px-2 py-1"
+            >
               Home
             </Link>
-            <Link to="/about" className="text-gray-300 hover:text-cyan-400 transition-colors">
+            <Link 
+              to="/about" 
+              className="text-gray-300 hover:text-cyan-400 transition-colors font-medium focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-slate-900 rounded-md px-2 py-1"
+            >
               About
             </Link>
-            <div className="relative">
+            
+            {/* Services Dropdown */}
+            <div className="relative services-dropdown">
               <button
-                onClick={() => setServicesOpen(!servicesOpen)}
-                className="text-gray-700 hover:text-blue-600 transition-colors flex items-center"
+                onClick={toggleServices}
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    toggleServices();
+                  }
+                }}
+                className="text-gray-300 hover:text-cyan-400 transition-colors flex items-center font-medium focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-slate-900 rounded-md px-2 py-1"
+                aria-expanded={servicesOpen}
+                aria-haspopup="true"
+                aria-label="Services menu"
               >
                 Services
-                <ChevronDown className="w-4 h-4 ml-1" />
+                <ChevronDown 
+                  className={`w-4 h-4 ml-1 transition-transform ${servicesOpen ? 'rotate-180' : ''}`} 
+                  aria-hidden="true"
+                />
               </button>
               {servicesOpen && (
-                <div className="absolute top-full left-0 mt-2 w-96 bg-white rounded-lg shadow-lg border py-2 z-50">
-                  <div className="grid grid-cols-2 gap-2 p-2">
-                    <Link to="/services" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
-                      All Services
-                    </Link>
-                    <Link to="/micro-saas" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
-                      Micro SAAS
-                    </Link>
-                    <Link to="/ai-services" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
-                      AI Services
-                    </Link>
-                    <Link to="/ai-marketing" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
-                      AI Marketing
-                    </Link>
-                    <Link to="/ai-automation" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
-                      AI Automation
-                    </Link>
-                    <Link to="/ai-healthcare" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
-                      AI Healthcare
-                    </Link>
-                    <Link to="/ai-fintech" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
-                      AI Fintech
-                    </Link>
-                    <Link to="/it-services" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
-                      IT Services
-                    </Link>
-                    <Link to="/quantum-computing" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
-                      Quantum Computing
-                    </Link>
-                    <Link to="/autonomous-systems" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
-                      Autonomous Systems
-                    </Link>
-                    <Link to="/business-intelligence" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
-                      Business Intelligence
-                    </Link>
-                    <Link to="/blockchain-web3" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
-                      Blockchain & Web3
-                    </Link>
-                    <Link to="/iot-edge-computing" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
-                      IoT & Edge Computing
-                    </Link>
-                    <Link to="/cybersecurity" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
-                      Cybersecurity
-                    </Link>
-                    <Link to="/services-advertising" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
-                      Advertising Services
-                    </Link>
+                <div 
+                  className="absolute top-full left-0 mt-2 w-96 bg-white rounded-lg shadow-xl border py-4 z-50"
+                  role="menu"
+                  aria-label="Services submenu"
+                >
+                  <div className="grid grid-cols-3 gap-4 px-4">
+                    <div>
+                      <h3 className="font-semibold text-gray-900 mb-2">Core Services</h3>
+                      <Link 
+                        to="/services" 
+                        className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        onClick={closeMobileMenu}
+                        role="menuitem"
+                      >
+                        All Services
+                      </Link>
+                      <Link 
+                        to="/micro-saas" 
+                        className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        onClick={closeMobileMenu}
+                        role="menuitem"
+                      >
+                        Micro SAAS Solutions
+                      </Link>
+                      <Link 
+                        to="/ai-services" 
+                        className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        onClick={closeMobileMenu}
+                        role="menuitem"
+                      >
+                        AI Services
+                      </Link>
+                      <Link 
+                        to="/it-services" 
+                        className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        onClick={closeMobileMenu}
+                        role="menuitem"
+                      >
+                        IT Services
+                      </Link>
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-gray-900 mb-2">AI Solutions</h3>
+                      <Link 
+                        to="/ai-data-analytics" 
+                        className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        onClick={closeMobileMenu}
+                        role="menuitem"
+                      >
+                        AI Data Analytics
+                      </Link>
+                      <Link 
+                        to="/ai-cybersecurity" 
+                        className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        onClick={closeMobileMenu}
+                        role="menuitem"
+                      >
+                        AI Cybersecurity
+                      </Link>
+                      <Link 
+                        to="/ai-workflow-automation" 
+                        className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        onClick={closeMobileMenu}
+                        role="menuitem"
+                      >
+                        AI Workflow Automation
+                      </Link>
+                      <Link 
+                        to="/ai-cloud-infrastructure" 
+                        className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        onClick={closeMobileMenu}
+                        role="menuitem"
+                      >
+                        AI Cloud Infrastructure
+                      </Link>
+                      <Link 
+                        to="/ai-ecommerce-solutions" 
+                        className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        onClick={closeMobileMenu}
+                        role="menuitem"
+                      >
+                        AI E-commerce Solutions
+                      </Link>
+                      <Link 
+                        to="/ai-mobile-app-development" 
+                        className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        onClick={closeMobileMenu}
+                        role="menuitem"
+                      >
+                        AI Mobile App Development
+                      </Link>
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-gray-900 mb-2">Specialized</h3>
+                      <Link 
+                        to="/quantum-computing" 
+                        className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        onClick={closeMobileMenu}
+                        role="menuitem"
+                      >
+                        Quantum Computing
+                      </Link>
+                      <Link 
+                        to="/autonomous-systems" 
+                        className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        onClick={closeMobileMenu}
+                        role="menuitem"
+                      >
+                        Autonomous Systems
+                      </Link>
+                      <Link 
+                        to="/blockchain-web3" 
+                        className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        onClick={closeMobileMenu}
+                        role="menuitem"
+                      >
+                        Blockchain & Web3
+                      </Link>
+                      <Link 
+                        to="/cybersecurity" 
+                        className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        onClick={closeMobileMenu}
+                        role="menuitem"
+                      >
+                        Cybersecurity
+                      </Link>
+                    </div>
                   </div>
                 </div>
-              )}origin/main
+              )}
             </div>
-          </div>
-        </div>
-      </div>
 
-      {/* Main Navigation */}
-      <nav className="bg-white shadow-lg sticky top-0 z-50">
-        <div className="container mx-auto px-4">
-          <div className="flex justify-between items-center py-4">
-            {/* Logo */}
-            <Link to="/" className="text-2xl font-bold text-blue-600 flex items-center">
-              <span className="text-3xl mr-2">⚡</span>
-              Zion Tech Group
+            <Link 
+              to="/case-studies" 
+              className="text-gray-300 hover:text-cyan-400 transition-colors font-medium focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-slate-900 rounded-md px-2 py-1"
+            >
+              Case Studies
             </Link>
+            <Link 
+              to="/enterprise" 
+              className="text-gray-300 hover:text-cyan-400 transition-colors font-medium focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-slate-900 rounded-md px-2 py-1"
+            >
+              Enterprise
+            </Link>
+            <Link 
+              to="/team" 
+              className="text-gray-300 hover:text-cyan-400 transition-colors font-medium focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-slate-900 rounded-md px-2 py-1"
+            >
+              Team
+            </Link>
+            <Link 
+              to="/contact" 
+              className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-6 py-2 rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 font-medium focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-slate-900 transform hover:scale-105"
+            >
+              Contact
+            </Link>
+          </div>
 
-            {/* Desktop Menu */}
-            <div className="hidden lg:flex space-x-8">
-              <Link to="/" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
+          {/* Mobile Menu Button */}
+          <button
+            onClick={toggleMobileMenu}
+            className="lg:hidden text-gray-300 hover:text-cyan-400 transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-slate-900 rounded-md p-2"
+            aria-expanded={isOpen}
+            aria-label="Toggle mobile menu"
+          >
+            {isOpen ? (
+              <X className="w-6 h-6" aria-hidden="true" />
+            ) : (
+              <Menu className="w-6 h-6" aria-hidden="true" />
+            )}
+          </button>
+        </div>
+
+        {/* Mobile Menu */}
+        {isOpen && (
+          <div className="lg:hidden py-4 border-t border-cyan-500/20">
+            <div className="flex flex-col space-y-4">
+              <Link 
+                to="/" 
+                className="text-gray-300 hover:text-cyan-400 transition-colors font-medium focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-slate-900 rounded-md px-2 py-1"
+                onClick={closeMobileMenu}
+              >
                 Home
               </Link>
-              <Link to="/about" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
+              <Link 
+                to="/about" 
+                className="text-gray-300 hover:text-cyan-400 transition-colors font-medium focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-slate-900 rounded-md px-2 py-1"
+                onClick={closeMobileMenu}
+              >
                 About
               </Link>
               
-              {/* Services Dropdown */}
-              <div className="relative">
-                <button
-                  onClick={() => setServicesOpen(!servicesOpen)}
-                  className="text-gray-700 hover:text-blue-600 transition-colors flex items-center font-medium"
-                >
-                  Services
-                  <ChevronDown className="w-4 h-4 ml-1" />
-                </button>
-                {servicesOpen && (
-                  <div className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-xl border py-4 z-50">
-                    <div className="grid grid-cols-3 gap-4 px-4">
-                      <div>
-                        <h3 className="font-semibold text-gray-900 mb-2">Core Services</h3>
-                        <Link to="/services" className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
-                          All Services
-                        </Link>
-                        <Link to="/micro-saas" className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
-                          Micro SAAS Solutions
-                        </Link>
-                        <Link to="/ai-services" className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
-                          AI Services
-                        </Link>
-                        <Link to="/it-services" className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
-                          IT Services
-                        </Link>
-                      </div>
-                      <div>
-                        <h3 className="font-semibold text-gray-900 mb-2">AI Solutions</h3>
-                        <Link to="/ai-data-analytics" className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
-                          AI Data Analytics
-                        </Link>
-                        <Link to="/ai-cybersecurity" className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
-                          AI Cybersecurity
-                        </Link>
-                        <Link to="/ai-workflow-automation" className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
-                          AI Workflow Automation
-                        </Link>
-                        <Link to="/ai-cloud-infrastructure" className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
-                          AI Cloud Infrastructure
-                        </Link>
-                        <Link to="/ai-ecommerce-solutions" className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
-                          AI E-commerce Solutions
-                        </Link>
-                        <Link to="/ai-mobile-app-development" className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
-                          AI Mobile App Development
-                        </Link>
-                      </div>
-                      <div>
-                        <h3 className="font-semibold text-gray-900 mb-2">Specialized</h3>
-                        <Link to="/quantum-computing" className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
-                          Quantum Computing
-                        </Link>
-                        <Link to="/autonomous-systems" className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
-                          Autonomous Systems
-                        </Link>
-                        <Link to="/blockchain-web3" className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
-                          Blockchain & Web3
-                        </Link>
-                        <Link to="/cybersecurity" className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
-                          Cybersecurity
-                        </Link>
-                      </div>
-                    </div>
-                  </div>
-                )}origin/main
+              {/* Services Section */}
+              <div className="space-y-2">
+                <div className="text-gray-300 font-semibold text-lg">Services</div>
+                <div className="ml-4 space-y-2">
+                  <Link 
+                    to="/services" 
+                    className="block text-gray-400 hover:text-cyan-400 transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-slate-900 rounded-md px-2 py-1"
+                    onClick={closeMobileMenu}
+                  >
+                    All Services
+                  </Link>
+                  <Link 
+                    to="/micro-saas" 
+                    className="block text-gray-400 hover:text-cyan-400 transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-slate-900 rounded-md px-2 py-1"
+                    onClick={closeMobileMenu}
+                  >
+                    Micro SAAS Solutions
+                  </Link>
+                  <Link 
+                    to="/ai-services" 
+                    className="block text-gray-400 hover:text-cyan-400 transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-slate-900 rounded-md px-2 py-1"
+                    onClick={closeMobileMenu}
+                  >
+                    AI Services
+                  </Link>
+                  <Link 
+                    to="/it-services" 
+                    className="block text-gray-400 hover:text-cyan-400 transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-slate-900 rounded-md px-2 py-1"
+                    onClick={closeMobileMenu}
+                  >
+                    IT Services
+                  </Link>
+                  <Link 
+                    to="/ai-data-analytics" 
+                    className="block text-gray-400 hover:text-cyan-400 transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-slate-900 rounded-md px-2 py-1"
+                    onClick={closeMobileMenu}
+                  >
+                    AI Data Analytics
+                  </Link>
+                  <Link 
+                    to="/ai-cybersecurity" 
+                    className="block text-gray-400 hover:text-cyan-400 transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-slate-900 rounded-md px-2 py-1"
+                    onClick={closeMobileMenu}
+                  >
+                    AI Cybersecurity
+                  </Link>
+                  <Link 
+                    to="/ai-workflow-automation" 
+                    className="block text-gray-400 hover:text-cyan-400 transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-slate-900 rounded-md px-2 py-1"
+                    onClick={closeMobileMenu}
+                  >
+                    AI Workflow Automation
+                  </Link>
+                  <Link 
+                    to="/ai-cloud-infrastructure" 
+                    className="block text-gray-400 hover:text-cyan-400 transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-slate-900 rounded-md px-2 py-1"
+                    onClick={closeMobileMenu}
+                  >
+                    AI Cloud Infrastructure
+                  </Link>
+                  <Link 
+                    to="/ai-ecommerce-solutions" 
+                    className="block text-gray-400 hover:text-cyan-400 transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-slate-900 rounded-md px-2 py-1"
+                    onClick={closeMobileMenu}
+                  >
+                    AI E-commerce Solutions
+                  </Link>
+                  <Link 
+                    to="/ai-mobile-app-development" 
+                    className="block text-gray-400 hover:text-cyan-400 transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-slate-900 rounded-md px-2 py-1"
+                    onClick={closeMobileMenu}
+                  >
+                    AI Mobile App Development
+                  </Link>
+                  <Link 
+                    to="/quantum-computing" 
+                    className="block text-gray-400 hover:text-cyan-400 transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-slate-900 rounded-md px-2 py-1"
+                    onClick={closeMobileMenu}
+                  >
+                    Quantum Computing
+                  </Link>
+                  <Link 
+                    to="/autonomous-systems" 
+                    className="block text-gray-400 hover:text-cyan-400 transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-slate-900 rounded-md px-2 py-1"
+                    onClick={closeMobileMenu}
+                  >
+                    Autonomous Systems
+                  </Link>
+                  <Link 
+                    to="/blockchain-web3" 
+                    className="block text-gray-400 hover:text-cyan-400 transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-slate-900 rounded-md px-2 py-1"
+                    onClick={closeMobileMenu}
+                  >
+                    Blockchain & Web3
+                  </Link>
+                  <Link 
+                    to="/cybersecurity" 
+                    className="block text-gray-400 hover:text-cyan-400 transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-slate-900 rounded-md px-2 py-1"
+                    onClick={closeMobileMenu}
+                  >
+                    Cybersecurity
+                  </Link>
+                </div>
               </div>
-
-              <Link to="/case-studies" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
+              
+              <Link 
+                to="/case-studies" 
+                className="text-gray-300 hover:text-cyan-400 transition-colors font-medium focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-slate-900 rounded-md px-2 py-1"
+                onClick={closeMobileMenu}
+              >
                 Case Studies
               </Link>
-              <Link to="/enterprise" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
+              <Link 
+                to="/enterprise" 
+                className="text-gray-300 hover:text-cyan-400 transition-colors font-medium focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-slate-900 rounded-md px-2 py-1"
+                onClick={closeMobileMenu}
+              >
                 Enterprise
               </Link>
-              <Link to="/team" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
+              <Link 
+                to="/team" 
+                className="text-gray-300 hover:text-cyan-400 transition-colors font-medium focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-slate-900 rounded-md px-2 py-1"
+                onClick={closeMobileMenu}
+              >
                 Team
               </Link>
-              <Link to="/contact" className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors font-medium">
-                Contact
+              <Link 
+                to="/contact" 
+                className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-6 py-2 rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 font-medium text-center focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-slate-900 transform hover:scale-105"
+                onClick={closeMobileMenu}
+              >
+                Contact Us
               </Link>
             </div>
-
-            {/* Mobile Menu Button */}
-            <button
-              onClick={() => setIsOpen(!isOpen)}
-              className="lg:hidden text-gray-700 hover:text-blue-600"
-            >
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M4 6h16M4 12h16M4 18h16"
-                />
-              </svg>
-            </button>
           </div>
-
-          {/* Mobile Menu */}
-          {isOpen && (
-            <div className="lg:hidden py-4 border-t">
-              <div className="flex flex-col space-y-4">
-                <Link to="/" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
-                  Home
-                </Link>
-                <Link to="/about" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
-                  About
-                </Link>
-                
-                {/* Services Section */}
-                <div className="space-y-2">
-                  <div className="text-gray-700 font-semibold text-lg">Services</div>
-                  <div className="ml-4 space-y-2">
-                    <Link to="/services" className="block text-gray-600 hover:text-blue-600 transition-colors">
-                      All Services
-                    </Link>
-                    <Link to="/micro-saas" className="block text-gray-600 hover:text-blue-600 transition-colors">
-                      Micro SAAS Solutions
-                    </Link>
-                    <Link to="/ai-services" className="block text-gray-600 hover:text-blue-600 transition-colors">
-                      AI Services
-                    </Link>
-                    <Link to="/it-services" className="block text-gray-600 hover:text-blue-600 transition-colors">
-                      IT Services
-                    </Link>
-                    <Link to="/ai-data-analytics" className="block text-gray-600 hover:text-blue-600 transition-colors">
-                      AI Data Analytics
-                    </Link>
-                    <Link to="/ai-cybersecurity" className="block text-gray-600 hover:text-blue-600 transition-colors">
-                      AI Cybersecurity
-                    </Link>
-                    <Link to="/ai-workflow-automation" className="block text-gray-600 hover:text-blue-600 transition-colors">
-                      AI Workflow Automation
-                    </Link>
-                    <Link to="/ai-cloud-infrastructure" className="block text-gray-600 hover:text-blue-600 transition-colors">
-                      AI Cloud Infrastructure
-                    </Link>
-                    <Link to="/ai-ecommerce-solutions" className="block text-gray-600 hover:text-blue-600 transition-colors">
-                      AI E-commerce Solutions
-                    </Link>
-                    <Link to="/ai-mobile-app-development" className="block text-gray-600 hover:text-blue-600 transition-colors">
-                      AI Mobile App Development
-                    </Link>
-                    <Link to="/quantum-computing" className="block text-gray-600 hover:text-blue-600 transition-colors">
-                      Quantum Computing
-                    </Link>
-                    <Link to="/autonomous-systems" className="block text-gray-600 hover:text-blue-600 transition-colors">
-                      Autonomous Systems
-                    </Link>
-                    <Link to="/blockchain-web3" className="block text-gray-600 hover:text-blue-600 transition-colors">
-                      Blockchain & Web3
-                    </Link>
-                    <Link to="/cybersecurity" className="block text-gray-600 hover:text-blue-600 transition-colors">
-                      Cybersecurity
-                    </Link>
-                  </div>
-                </div>
-                
-                <Link to="/case-studies" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
-                  Case Studies
-                </Link>
-                <Link to="/enterprise" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
-                  Enterprise
-                </Link>
-                <Link to="/team" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
-                  Team
-                </Link>
-                <Link to="/contact" className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors font-medium text-center">
-                  Contact Us
-                </Link>
-              </div>
-            </div>
-          )}
-        </div>
-      </nav>
-    </>
+        )}
+      </div>
+    </nav>
   );
 };
 
