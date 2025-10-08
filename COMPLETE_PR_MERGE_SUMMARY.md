@@ -26,10 +26,7 @@ This document provides a complete summary of all work performed and scripts crea
 
 ```typescript
 // Before (Conflicted):
-<<<<<<< HEAD
     window.location = { href: 'http://localhost:3000', reload: jest.fn() };
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2d9f
 
 // After (Fixed):
 beforeEach(() => {
