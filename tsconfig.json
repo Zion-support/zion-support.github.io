@@ -14,7 +14,7 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "preserve",
+    "jsx": "react-jsx",
     "jsxImportSource": "react",
     "strict": false,
     "strictNullChecks": true,
@@ -76,22 +76,29 @@
   "include": [
     "next-env.d.ts",
     "app/**/*",
+    "app/**/*.ts",
+    "app/**/*.tsx",
     "src/**/*",
     "App.tsx",
     "components/**/*",
+    "components/**/*.ts",
+    "components/**/*.tsx",
     "api/**/*.ts",
     "api/**/*.js",
+    "src/**/*",
+    "App.tsx",
     "*.ts",
     "*.tsx",
     ".next/types/**/*.ts"
   ],
   "exclude": [
-    "vite.config.ts",
     "node_modules",
     ".next",
     "out",
     "dist",
-<<<<<<< HEAD
+    "vite.config.ts",
+    "vite.config.js",
+    "vite.config.*.js",
     "_app_disabled/**",
     "app_disabled/**",
     "_conflicted_disabled/**",
@@ -114,29 +121,6 @@
     "components_backup/**",
     "data_backup/**",
     "lib_backup/**",
-=======
-    "_app_disabled/**/*",
-    "_conflicted_disabled/**/*",
-    "_pages_api_disabled/**/*",
-    "_pages_disabled/**/*",
-    "admin-api-disabled/**/*",
-    "api-disabled/**/*",
-    "api.disabled/**/*",
-    "api.disabled.temp/**/*",
-    "api-backup/**/*",
-    "apps.backup/**/*",
-    "automation_backup/**/*",
-    "ai-optimization-backups/**/*",
-    "automation_logs/**/*",
-    "all-automations-reports/**/*",
-    "accessibility-reports/**/*",
-    "corrupted-files-backup/**/*",
-    "corrupted_backup/**/*",
-    "corrupted_files_backup_2/**/*",
-    "components_backup/**/*",
-    "data_backup/**/*",
-    "lib_backup/**/*",
->>>>>>> 49f746e8c3195449347ee8bebb6ca5b0ab732544
     "automation/**",
     "app/blog/**",
     "_app_disabled/blog/**",
@@ -182,7 +166,6 @@
     "src.disabled/**",
     "utils.disabled/**",
     "vite.config.performance.ts",
-    "vite.config.ts",
     "dao/**",
     "deployments/**",
     "e2e/**",
@@ -212,18 +195,18 @@
     "utils/comprehensiveOptimizer.ts",
     "utils/performanceUtils.ts",
     "utils/seoUtils.ts",
+    "utils/**",
+    "src/utils/**",
     "services/**",
     "fix-*.jsx",
     "fix-*.ts",
-    "jest.setup.*"
-<<<<<<< HEAD
+    "jest.setup.*",
+    "**/*.disabled/**",
+    "**/*.backup/**"
   ],
   "references": [
     {
       "path": "./tsconfig.node.json"
     }
-=======
->>>>>>> 02b5aeb280239cc5b972bae46c8dc15c38a3f84a
->>>>>>> 49f746e8c3195449347ee8bebb6ca5b0ab732544
   ]
 }

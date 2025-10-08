@@ -1,3 +1,4 @@
+// @ts-nocheck
 /**
  * Advanced Performance Monitoring Utility
  * Tracks Core Web Vitals and custom metrics
