@@ -81,13 +81,13 @@ export function validateEnv(): ValidationResult {
   // Validate ENABLE_ANALYTICS
   const enableAnalytics = getEnvVar('VITE_ENABLE_ANALYTICS');
   if (enableAnalytics !== undefined) {
-    config.ENABLE_ANALYTICS = enableAnalytics === 'true' || enableAnalytics === true;
+    config.ENABLE_ANALYTICS = enableAnalytics === 'true';
   }
 
   // Validate ENABLE_ERROR_REPORTING
   const enableErrorReporting = getEnvVar('VITE_ENABLE_ERROR_REPORTING');
   if (enableErrorReporting !== undefined) {
-    config.ENABLE_ERROR_REPORTING = enableErrorReporting === 'true' || enableErrorReporting === true;
+    config.ENABLE_ERROR_REPORTING = enableErrorReporting === 'true';
   }
 
   // Validate SENTRY_DSN
