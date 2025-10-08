@@ -6,6 +6,7 @@ interface SEOConfig {
   description: string;
   keywords: string[];
   canonicalUrl: string;
+  url: string;
   ogTitle?: string;
   ogDescription?: string;
   ogImage?: string;
@@ -24,25 +25,7 @@ interface SEOConfig {
 }
 
 interface AdvancedSEOOptimizerProps {
-  title: string;
-  description: string;
-  keywords: string[];
-  canonicalUrl: string;
-  ogTitle?: string;
-  ogDescription?: string;
-  ogImage?: string;
-  ogType?: string;
-  twitterCard?: string;
-  twitterTitle?: string;
-  twitterDescription?: string;
-  twitterImage?: string;
-  structuredData?: Record<string, unknown>;
-  robots?: string;
-  author?: string;
-  publishedTime?: string;
-  modifiedTime?: string;
-  section?: string;
-  tags?: string[];
+  config: SEOConfig;
   enableStructuredData?: boolean;
   enableOpenGraph?: boolean;
   enableTwitterCards?: boolean;
@@ -50,51 +33,12 @@ interface AdvancedSEOOptimizerProps {
 }
 
 const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
-  title,
-  description,
-  keywords,
-  canonicalUrl,
-  ogTitle,
-  ogDescription,
-  ogImage,
-  ogType = 'website',
-  twitterCard = 'summary_large_image',
-  twitterTitle,
-  twitterDescription,
-  twitterImage,
-  structuredData,
-  robots = 'index, follow',
-  author,
-  publishedTime,
-  modifiedTime,
-  section,
-  tags,
+  config,
   enableStructuredData = true,
   enableOpenGraph = true,
   enableTwitterCards = true,
   enableSchemaMarkup = true,
 }) => {
-  const config: SEOConfig = {
-    title,
-    description,
-    keywords,
-    canonicalUrl,
-    ogTitle,
-    ogDescription,
-    ogImage,
-    ogType,
-    twitterCard,
-    twitterTitle,
-    twitterDescription,
-    twitterImage,
-    structuredData,
-    robots,
-    author,
-    publishedTime,
-    modifiedTime,
-    section,
-    tags,
-  };
   const structuredDataRef = useRef<HTMLScriptElement | null>(null);
 
   const generateStructuredData = useCallback(() => {
@@ -234,8 +178,9 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     trackPageView({
       title: config.title,
       description: config.description,
-      keywords: config.keywords,
+      url: config.canonicalUrl,
       canonicalUrl: config.canonicalUrl,
+      keywords: config.keywords,
     });
 
     // Cleanup on unmount

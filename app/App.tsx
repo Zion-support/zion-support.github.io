@@ -33,7 +33,7 @@ import './globals.css';
 const App: React.FC = () => {
   useEffect(() => {
     // Initialize global error handling
-    logger.info('App initialized', { component: 'App' });
+    logger.info('initialized', { component: 'App' });
 
     // Initialize performance monitoring
     lazyLoadImages();
@@ -52,7 +52,7 @@ const App: React.FC = () => {
       }
     }
     
-    logger.info('Performance monitoring initialized', { component: 'App' });
+    logger.info('performance monitoring initialized', { component: 'App' });
     logger.info('🚀 Zion Tech Group App initialized with comprehensive monitoring', { component: 'App' });
   }, []);
 
@@ -71,10 +71,13 @@ const App: React.FC = () => {
             description="Leading provider of enterprise AI solutions, quantum computing, and autonomous systems. Transform your business with our cutting-edge technology."
           >
             <AdvancedSEOOptimizer
-              title="Zion Tech Group - Advanced AI and IT Solutions"
-              description="Leading provider of enterprise AI solutions, quantum computing, and autonomous systems. Transform your business with our cutting-edge technology."
-              keywords={['AI solutions', 'enterprise AI', 'quantum computing', 'autonomous systems', 'digital transformation', 'automation', 'cloud services', 'AI consulting', 'business intelligence', 'machine learning']}
-              canonicalUrl="https://ziontechgroup.com"
+              config={{
+                title: 'Zion Tech Group - Advanced AI and IT Solutions',
+                description: 'Leading provider of enterprise AI solutions, quantum computing, and autonomous systems. Transform your business with our cutting-edge technology.',
+                keywords: ['AI solutions', 'enterprise AI', 'quantum computing', 'autonomous systems', 'digital transformation', 'automation', 'cloud services', 'AI consulting', 'business intelligence', 'machine learning'],
+                url: 'https://ziontechgroup.com',
+                canonicalUrl: 'https://ziontechgroup.com'
+              }}
               enableStructuredData={true}
               enableOpenGraph={true}
               enableTwitterCards={true}
@@ -99,7 +102,7 @@ const App: React.FC = () => {
                   enableRealTimeMonitoring={process.env.NODE_ENV === 'development'}
                   onMetricsUpdate={(metrics) => {
                     if (process.env.NODE_ENV === 'development') {
-                      logger.info('Performance Metrics', { component: 'PerformanceMonitor', metrics: metrics as unknown as Record<string, unknown> });
+                      logger.debug('Performance Metrics', { component: 'PerformanceMonitor', metrics });
                     }
                   }}
                 />
