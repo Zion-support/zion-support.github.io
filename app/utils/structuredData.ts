@@ -200,6 +200,11 @@ export const getHomepageSchemas = () => [
 /**
  * Render structured data scripts
  */
+export const renderStructuredData = (schemas: unknown[]) => {
+  return schemas.map((schema, _index) => (
+>>>>>>> cursor/fix-errors-and-merge-to-main-4e61
+=======
+>>>>>>> 1684f58a157a4496bdf1f11291796d45799723dd
     JSON.stringify(schema)
   ));
 };

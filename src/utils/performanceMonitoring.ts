@@ -126,7 +126,7 @@ class PerformanceMonitor {
         return duration;
       }
     } catch (error) {
-//       console.warn('Failed to measure performance:', error);
+      console.warn('Failed to measure performance:', error);
     }
     return null;
   }
@@ -218,7 +218,7 @@ class PerformanceMonitor {
       // Observe First Input Delay (FID)
       const fidObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
-        entries.forEach((entry: unknown) => {
+        entries.forEach((entry: any) => {
           const metric = this.createMetric('FID', entry.processingStart - entry.startTime);
           this.webVitals.FID = metric;
           this.notifyCallbacks(metric);
@@ -231,7 +231,7 @@ class PerformanceMonitor {
       let clsValue = 0;
       const clsObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
-        entries.forEach((entry: unknown) => {
+        entries.forEach((entry: any) => {
           if (!entry.hadRecentInput) {
             clsValue += entry.value;
           }
@@ -243,7 +243,7 @@ class PerformanceMonitor {
       clsObserver.observe({ entryTypes: ['layout-shift'] });
       this.observers.push(clsObserver);
     } catch (error) {
-//       console.warn('Failed to observe Web Vitals:', error);
+      console.warn('Failed to observe Web Vitals:', error);
     }
   }
 
@@ -268,8 +268,8 @@ class PerformanceMonitor {
         this.trackMetric('load_event', nav.loadEventEnd - nav.loadEventStart);
 
         // TTFB (Time to First Byte)
-//         const ttfb = nav.responseStart - nav.requestStart;
-//         const ttfbMetric = this.createMetric('TTFB', ttfb);
+        const ttfb = nav.responseStart - nav.requestStart;
+        const ttfbMetric = this.createMetric('TTFB', ttfb);
         this.webVitals.TTFB = ttfbMetric;
         this.notifyCallbacks(ttfbMetric);
 
@@ -277,7 +277,7 @@ class PerformanceMonitor {
         const paintEntries = performance.getEntriesByType('paint');
         const fcpEntry = paintEntries.find((entry) => entry.name === 'first-contentful-paint');
         if (fcpEntry) {
-//           const fcpMetric = this.createMetric('FCP', fcpEntry.startTime);
+          const fcpMetric = this.createMetric('FCP', fcpEntry.startTime);
           this.webVitals.FCP = fcpMetric;
           this.notifyCallbacks(fcpMetric);
         }
@@ -294,7 +294,7 @@ class PerformanceMonitor {
     try {
       const resourceObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
-        entries.forEach((entry: unknown) => {
+        entries.forEach((entry: any) => {
           if (entry.initiatorType) {
             this.trackMetric(
               `resource_${entry.initiatorType}`,

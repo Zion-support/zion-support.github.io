@@ -137,9 +137,6 @@ export class MemoryCache<T = unknown> {
       age: Date.now() - entry.timestamp,
     }));
 
-//     const totalHits = entries.reduce((sum, e) => sum + e.hits, 0);
-//     const totalAccesses = Math.max(totalHits, 1);
-
     const totalHits = entries.reduce((sum, e) => sum + e.hits, 0);
     const totalAccesses = Math.max(totalHits, 1);
 

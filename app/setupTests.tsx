@@ -5,6 +5,11 @@
 import React from 'react';
 import '@testing-library/jest-dom';
 
+// Polyfill for TextEncoder/TextDecoder
+import { TextEncoder, TextDecoder } from 'util';
+global.TextEncoder = TextEncoder;
+global.TextDecoder = TextDecoder as any;
+
 // Suppress jsdom navigation warnings
 // eslint-disable-next-line no-console
 const originalConsoleError = console.error;

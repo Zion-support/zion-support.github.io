@@ -32,132 +32,89 @@ export class PerformanceOptimizer {
       const result = fn();
       
       if (result instanceof Promise) {
-        return result.finally(() => {
-          this.recordMetric(name, performance.now() - start);
-        }) as Promise<T>;
+        return result.then((res) => {
+          const duration = performance.now() - start;
+          this.recordMetric(name, duration);
+          return res;
+        });
       } else {
-        this.recordMetric(name, performance.now() - start);
+        const duration = performance.now() - start;
+        this.recordMetric(name, duration);
         return result;
       }
     } catch (error) {
-      this.recordMetric(name, performance.now() - start);
+      const duration = performance.now() - start;
+      this.recordMetric(`${name}_error`, duration);
       throw error;
     }
   }
 
   /**
-   * Record performance metric
+   * Record a performance metric
    */
-  private recordMetric(name: string, duration: number): void {
+  recordMetric(name: string, value: number): void {
     if (!this.metrics.has(name)) {
       this.metrics.set(name, []);
     }
     
-    const metrics = this.metrics.get(name)!;
-    metrics.push(duration);
+    const values = this.metrics.get(name)!;
+    values.push(value);
     
-    // Keep only last 100 measurements
-    if (metrics.length > 100) {
-      metrics.shift();
+    // Keep only the last 100 measurements
+    if (values.length > 100) {
+      values.shift();
     }
   }
 
   /**
-   * Get average performance metric
+   * Get average performance for a metric
    */
   getAverageMetric(name: string): number {
-    const metrics = this.metrics.get(name);
-    if (!metrics || metrics.length === 0) {
-      return 0;
-    }
+    const values = this.metrics.get(name);
+    if (!values || values.length === 0) return 0;
     
-    const sum = metrics.reduce((acc, val) => acc + val, 0);
-    return sum / metrics.length;
+    const sum = values.reduce((acc, val) => acc + val, 0);
+    return sum / values.length;
   }
 
   /**
-   * Implement debounce for performance
+   * Get all metrics
    */
-=======
-  debounce<T extends (...args: unknown[]) => unknown>(
->>>>>>> cursor/fix-errors-and-merge-to-main-5c5e
-    func: T,
-    wait: number
-  ): (...args: Parameters<T>) => void {
-    let timeout: NodeJS.Timeout | null = null;
-    
-    return (...args: Parameters<T>) => {
-      if (timeout) {
-        clearTimeout(timeout);
-      }
-      
-      timeout = setTimeout(() => {
-        func(...args);
-      }, wait);
-    };
+  getAllMetrics(): Map<string, number[]> {
+    return new Map(this.metrics);
   }
 
   /**
-   * Implement throttle for performance
+   * Clear all metrics
    */
-=======
-  throttle<T extends (...args: unknown[]) => unknown>(
->>>>>>> cursor/fix-errors-and-merge-to-main-5c5e
-    func: T,
-    limit: number
-  ): (...args: Parameters<T>) => void {
-    let inThrottle: boolean = false;
-    
-    return (...args: Parameters<T>) => {
-      if (!inThrottle) {
-        func(...args);
-        inThrottle = true;
-        setTimeout(() => {
-          inThrottle = false;
-        }, limit);
-      }
-    };
+  clearMetrics(): void {
+    this.metrics.clear();
   }
 
   /**
-   * Memoize function results
+   * Get performance summary
    */
-=======
-  memoize<T extends (...args: unknown[]) => unknown>(
->>>>>>> cursor/fix-errors-and-merge-to-main-5c5e
-    func: T
-  ): (...args: Parameters<T>) => ReturnType<T> {
-    const cache = new Map<string, ReturnType<T>>();
-    
-    return (...args: Parameters<T>): ReturnType<T> => {
-      const key = JSON.stringify(args);
-      
-      if (cache.has(key)) {
-        return cache.get(key)!;
-      }
-      
-      const result = func(...args);
-      cache.set(key, result);
-      
-      return result;
-    };
-  }
-
-  /**
-   * Get all metrics summary
-   */
-  getMetricsSummary(): Record<string, { avg: number; count: number }> {
-    const summary: Record<string, { avg: number; count: number }> = {};
+  getPerformanceSummary(): Record<string, { average: number; count: number; min: number; max: number }> {
+    const summary: Record<string, { average: number; count: number; min: number; max: number }> = {};
     
     this.metrics.forEach((values, name) => {
-      summary[name] = {
-        avg: this.getAverageMetric(name),
-        count: values.length,
-      };
+      if (values.length > 0) {
+        const average = values.reduce((acc, val) => acc + val, 0) / values.length;
+        const min = Math.min(...values);
+        const max = Math.max(...values);
+        
+        summary[name] = {
+          average,
+          count: values.length,
+          min,
+          max
+        };
+      }
     });
     
     return summary;
   }
 }
 
-export default PerformanceOptimizer.getInstance();
+// Export singleton instance
+export const performanceOptimizer = PerformanceOptimizer.getInstance();

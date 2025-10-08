@@ -3,7 +3,7 @@
 # Script to resolve merge conflicts by keeping the main branch version
 # and removing conflict markers
 
-echo "Resolving merge conflicts..."
+echo "Resolving all merge conflicts..."
 
 # Find all files with conflict markers
 conflict_files=$(git status --porcelain | grep "^UU" | cut -c4-)
@@ -26,4 +26,4 @@ for file in $conflict_files; do
     fi
 done
 
-echo "Conflict resolution complete!"
+echo "All conflicts resolved!"

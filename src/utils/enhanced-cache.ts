@@ -326,7 +326,7 @@ export function cachedAsync<T>(
       return cache.get(key)!;
     }
     
-//     const result = await fn();
+    const result = await fn();
     cache.set(key, result);
     
     return result;

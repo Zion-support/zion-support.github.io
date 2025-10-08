@@ -299,11 +299,11 @@ export function measureExecutionTime<T extends (...args: unknown[]) => any>(
   label?: string
 ): T {
   return ((...args: Parameters<T>): ReturnType<T> => {
-//     const start = performance.now();
-//     const result = fn(...args);
-//     const end = performance.now();
+    const start = performance.now();
+    const result = fn(...args);
+    const end = performance.now();
     
-//     console.log(`${label || fn.name} took ${(end - start).toFixed(2)}ms`);
+    console.log(`${label || fn.name} took ${(end - start).toFixed(2)}ms`);
     
     return result;
   }) as T;

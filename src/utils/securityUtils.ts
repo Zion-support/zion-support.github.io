@@ -295,7 +295,7 @@ export const isAllowedFileType = (
  */
 export const generateNonce = (): string => {
   if (typeof window !== 'undefined' && window.crypto) {
-//     const array = new Uint8Array(16);
+    const array = new Uint8Array(16);
     window.crypto.getRandomValues(array);
     return btoa(String.fromCharCode.apply(null, Array.from(array)));
   }

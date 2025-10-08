@@ -31,4 +31,4 @@ function initializeMonitoring() {
 // Initialize monitoring on load
 initializeMonitoring();
 
-export { analytics, errorHandler, initializeMonitoring, ErrorHandler, performanceOptimizer };
+export { analytics, errorHandler, initializeMonitoring, ErrorHandler };
