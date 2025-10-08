@@ -1,9 +1,19 @@
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import { HelmetProvider } from 'react-helmet-async';
-import { MemoryRouter } from 'react-router-dom';
+import { MemoryRouter, BrowserRouter } from 'react-router-dom';
 import AdvancedErrorBoundary from '../app/components/AdvancedErrorBoundary';
 import AdvancedSEOOptimizer from '../app/components/AdvancedSEOOptimizer';
 import AdvancedPerformanceMonitor from '../app/components/AdvancedPerformanceMonitor';
+
+// Mock react-router-dom
+jest.mock('react-router-dom', () => ({
+  ...jest.requireActual('react-router-dom'),
+  Link: ({ children, to, ...props }: any) => (
+    <a href={to} {...props}>
+      {children}
+    </a>
+  ),
+}));
 
 
 
@@ -18,11 +28,11 @@ const ThrowError = ({ shouldThrow }: { shouldThrow: boolean }) => {
 describe('AdvancedErrorBoundary', () => {
   it('renders children when there is no error', () => {
     render(
-      <MemoryRouter>
+      <BrowserRouter>
         <AdvancedErrorBoundary>
           <div>Test content</div>
         </AdvancedErrorBoundary>
-      </MemoryRouter>
+      </BrowserRouter>
     );
 
     expect(screen.getByText('Test content')).toBeInTheDocument();
@@ -34,11 +44,11 @@ describe('AdvancedErrorBoundary', () => {
       .mockImplementation(() => {});
 
     render(
-      <MemoryRouter>
+      <BrowserRouter>
         <AdvancedErrorBoundary enableRetry={true}>
           <ThrowError shouldThrow={true} />
         </AdvancedErrorBoundary>
-      </MemoryRouter>
+      </BrowserRouter>
     );
 
     expect(screen.getByText('Oops! Something went wrong')).toBeInTheDocument();
@@ -56,11 +66,11 @@ describe('AdvancedErrorBoundary', () => {
       .mockImplementation(() => {});
 
     render(
-      <MemoryRouter>
+      <BrowserRouter>
         <AdvancedErrorBoundary onError={onError}>
           <ThrowError shouldThrow={true} />
         </AdvancedErrorBoundary>
-      </MemoryRouter>
+      </BrowserRouter>
     );
 
     expect(onError).toHaveBeenCalled();
@@ -76,11 +86,11 @@ describe('AdvancedErrorBoundary', () => {
     const TestComponent = () => <ThrowError shouldThrow={shouldThrow} />;
 
     const { rerender } = render(
-      <MemoryRouter>
+      <BrowserRouter>
         <AdvancedErrorBoundary enableRetry={true}>
           <TestComponent />
         </AdvancedErrorBoundary>
-      </MemoryRouter>
+      </BrowserRouter>
     );
 
     const retryButton = screen.getByText('Try Again (3 attempts left)');
