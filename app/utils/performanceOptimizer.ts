@@ -405,7 +405,6 @@ class PerformanceOptimizer {
   }
 
   /**
-<<<<<<< HEAD
    * Lazy load images for better performance
    */
   lazyLoadImages(): void {
@@ -467,7 +466,10 @@ class PerformanceOptimizer {
       fid: this.metrics.fid || 0,
       cls: this.metrics.cls || 0,
       fmp: this.metrics.fmp || 0,
-=======
+    };
+  }
+
+  /**
    * Generate performance report
    */
   public generateReport(): object {
@@ -479,34 +481,10 @@ class PerformanceOptimizer {
       metrics,
       score,
       recommendations: this.getRecommendations(),
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-6fe3
     };
   }
 
   /**
-<<<<<<< HEAD
-   * Report web vitals
-   */
-  reportWebVitals(metrics: PerformanceMetrics): void {
-    logger.performance('Web Vitals reported', metrics as unknown as Record<string, unknown>, 'PerformanceOptimizer');
-    
-    // Send to analytics if available
-    if (typeof window !== 'undefined' && (window as { gtag?: Function }).gtag) {
-      Object.entries(metrics).forEach(([key, value]) => {
-        if (typeof value === 'number') {
-          (window as unknown as { gtag: Function }).gtag('event', 'web_vitals', {
-            metric_name: key,
-            metric_value: value,
-            metric_rating: value < 100 ? 'good' : value < 300 ? 'needs-improvement' : 'poor'
-          });
-        }
-      });
-    }
-  }
-
-  /**
-   * Cleanup observers and resources
-=======
    * Get performance recommendations
    */
   private getRecommendations(): string[] {
@@ -537,8 +515,27 @@ class PerformanceOptimizer {
   }
 
   /**
+   * Report web vitals
+   */
+  reportWebVitals(metrics: PerformanceMetrics): void {
+    logger.performance('Web Vitals reported', metrics as unknown as Record<string, unknown>, 'PerformanceOptimizer');
+    
+    // Send to analytics if available
+    if (typeof window !== 'undefined' && (window as { gtag?: Function }).gtag) {
+      Object.entries(metrics).forEach(([key, value]) => {
+        if (typeof value === 'number') {
+          (window as unknown as { gtag: Function }).gtag('event', 'web_vitals', {
+            metric_name: key,
+            metric_value: value,
+            metric_rating: value < 100 ? 'good' : value < 300 ? 'needs-improvement' : 'poor'
+          });
+        }
+      });
+    }
+  }
+
+  /**
    * Cleanup observers and stop monitoring
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-6fe3
    */
   public cleanup(): void {
     this.observers.forEach(observer => observer.disconnect());
@@ -551,8 +548,4 @@ class PerformanceOptimizer {
 export const performanceOptimizer = new PerformanceOptimizer();
 
 // Export class for custom instances
-<<<<<<< HEAD
 export { PerformanceOptimizer, type PerformanceMetrics, type PerformanceConfig };
-=======
-export { PerformanceOptimizer, type PerformanceMetrics, type PerformanceConfig };
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-6fe3
