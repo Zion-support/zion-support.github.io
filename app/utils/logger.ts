@@ -218,6 +218,36 @@ class Logger {
   }
 
   /**
+   * Log a performance metric
+   */
+  perf(metric: string, value: number, metadata?: Record<string, unknown>): void {
+    this.info(`Performance: ${metric} = ${value}ms`, metadata);
+  }
+
+  /**
+   * Start a console group
+   */
+  group(label: string, fn: () => void): void {
+    if (this.config.enableConsole && typeof console.group === 'function') {
+      console.group(label);
+    }
+    try {
+      fn();
+    } finally {
+      this.groupEnd();
+    }
+  }
+
+  /**
+   * End a console group
+   */
+  groupEnd(): void {
+    if (this.config.enableConsole && typeof console.groupEnd === 'function') {
+      console.groupEnd();
+    }
+  }
+
+  /**
    * Core logging method
    */
   private log(
