@@ -82,11 +82,6 @@ class Logger {
    */
   debug(message: string, contextOrMetadata?: string | Record<string, unknown>, _metadata?: Record<string, unknown>): void {
     const [context, meta] = this.parseArgs(contextOrMetadata, _metadata);
->>>>>>> cursor/fix-errors-and-merge-to-main-4e61
-=======
-  debug(message: string, contextOrMetadata?: string | Record<string, unknown>, metadata?: Record<string, unknown>): void {
-    const [context, meta] = this.parseArgs(contextOrMetadata, metadata);
->>>>>>> 1684f58a157a4496bdf1f11291796d45799723dd
     this.log(LogLevel.DEBUG, message, context, meta);
   }
 
@@ -95,11 +90,6 @@ class Logger {
    */
   info(message: string, contextOrMetadata?: string | Record<string, unknown>, _metadata?: Record<string, unknown>): void {
     const [context, meta] = this.parseArgs(contextOrMetadata, _metadata);
->>>>>>> cursor/fix-errors-and-merge-to-main-4e61
-=======
-  info(message: string, contextOrMetadata?: string | Record<string, unknown>, metadata?: Record<string, unknown>): void {
-    const [context, meta] = this.parseArgs(contextOrMetadata, metadata);
->>>>>>> 1684f58a157a4496bdf1f11291796d45799723dd
     this.log(LogLevel.INFO, message, context, meta);
   }
 
@@ -108,11 +98,6 @@ class Logger {
    */
   warn(message: string, contextOrMetadata?: string | Record<string, unknown>, _metadata?: Record<string, unknown>): void {
     const [context, meta] = this.parseArgs(contextOrMetadata, _metadata);
->>>>>>> cursor/fix-errors-and-merge-to-main-4e61
-=======
-  warn(message: string, contextOrMetadata?: string | Record<string, unknown>, metadata?: Record<string, unknown>): void {
-    const [context, meta] = this.parseArgs(contextOrMetadata, metadata);
->>>>>>> 1684f58a157a4496bdf1f11291796d45799723dd
     this.log(LogLevel.WARN, message, context, meta);
   }
 
@@ -418,7 +403,6 @@ class Logger {
 class ContextLogger {
   constructor(private logger: Logger, private context: string) {}
 
->>>>>>> 1684f58a157a4496bdf1f11291796d45799723dd
   debug(message: string, metadata?: Record<string, unknown>): void {
     this.logger.debug(message, this.context, metadata);
   }
@@ -455,9 +439,6 @@ class ContextLogger {
 
   fatal(message: string, error?: Error, _metadata?: Record<string, unknown>): void {
     this.logger.fatal(message, error, this.context, _metadata);
->>>>>>> cursor/fix-errors-and-merge-to-main-4e61
-=======
->>>>>>> 1684f58a157a4496bdf1f11291796d45799723dd
   }
 
   perf(metric: string, value: number, _metadata?: Record<string, unknown>): void {
@@ -485,7 +466,6 @@ class ContextLogger {
 export const logger = new Logger();
 
 // Export convenience functions
->>>>>>> 1684f58a157a4496bdf1f11291796d45799723dd
 export const debug = (message: string, context?: string, metadata?: Record<string, unknown>) =>
   logger.debug(message, context, metadata);
 export const info = (message: string, context?: string, metadata?: Record<string, unknown>) =>
@@ -498,30 +478,17 @@ export const info = (message: string, context?: string, _metadata?: Record<strin
   logger.info(message, context, _metadata);
 export const warn = (message: string, context?: string, _metadata?: Record<string, unknown>) =>
   logger.warn(message, context, _metadata);
->>>>>>> cursor/fix-errors-and-merge-to-main-4e61
-=======
->>>>>>> 1684f58a157a4496bdf1f11291796d45799723dd
 export const error = (
   message: string,
   err?: Error,
   context?: string,
   _metadata?: Record<string, unknown>
 ) => logger.error(message, err, context, _metadata);
->>>>>>> cursor/fix-errors-and-merge-to-main-4e61
-=======
-  metadata?: Record<string, unknown>
-) => logger.error(message, err, context, metadata);
->>>>>>> 1684f58a157a4496bdf1f11291796d45799723dd
 export const fatal = (
   message: string,
   err?: Error,
   context?: string,
   _metadata?: Record<string, unknown>
 ) => logger.fatal(message, err, context, _metadata);
->>>>>>> cursor/fix-errors-and-merge-to-main-4e61
-=======
-  metadata?: Record<string, unknown>
-) => logger.fatal(message, err, context, metadata);
->>>>>>> 1684f58a157a4496bdf1f11291796d45799723dd
 
 export default logger;

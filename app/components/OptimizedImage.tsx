@@ -1,9 +1,6 @@
 import React, { useState, useCallback, memo } from 'react';
 
->>>>>>> 1684f58a157a4496bdf1f11291796d45799723dd
-
-
-import { Link } from 'react-router-dom';interface OptimizedImageProps {
+interface OptimizedImageProps {
   src: string;
   alt: string;
   width?: number;

@@ -1,30 +1,25 @@
 #!/bin/bash
 
-# Script to fix merge conflicts by choosing HEAD version and cleaning up markers
+# Script to fix merge conflicts by choosing HEAD version
+# This will remove all merge conflict markers and keep the HEAD version
 
-echo "Fixing merge conflicts in TypeScript/React files..."
+echo "Fixing merge conflicts..."
 
 # Find all files with merge conflicts
-files=$(find /workspace -name "*.tsx" -exec grep -l "<<<<<<< HEAD" {} \;)
+files_with_conflicts=$(grep -l "^<<<<<<<\|^=======\|^>>>>>>>" -r . --include="*.ts" --include="*.tsx" --include="*.js" --include="*.jsx" 2>/dev/null | grep -v node_modules | grep -v ".git")
 
-for file in $files; do
-    echo "Processing: $file"
+for file in $files_with_conflicts; do
+    echo "Fixing merge conflicts in: $file"
     
-    # Create a temporary file
-    temp_file="${file}.tmp"
+    # Create a backup
+    cp "$file" "$file.backup"
     
-    # Process the file to resolve conflicts
-    awk '
-    /^<<<<<<< HEAD/ { in_head = 1; next }
-    /^=======/ { in_head = 0; in_other = 1; next }
-    /^>>>>>>> / { in_other = 0; next }
-    in_head { print; next }
-    in_other { next }
-    { print }
-    ' "$file" > "$temp_file"
+    # Use sed to remove merge conflict markers and keep HEAD version
+    # This removes everything from <<<<<<< to ======= (inclusive) and from ======= to >>>>>>> (inclusive)
+    sed -i '/^<<<<<<< HEAD/,/^=======/d; /^=======/,/^>>>>>>>/d' "$file"
     
-    # Replace the original file
-    mv "$temp_file" "$file"
+    # Remove any remaining merge conflict markers
+    sed -i '/^<<<<<<< /d; /^=======/d; /^>>>>>>> /d' "$file"
     
     echo "Fixed: $file"
 done

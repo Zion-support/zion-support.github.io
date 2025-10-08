@@ -2,11 +2,11 @@ import React from 'react';
 import { Star } from 'lucide-react';
 // import { Metadata } from 'next'; // Removed for Vite
 
-// export const metadata: Metadata = // Removed for Vite {
-  title: "AI 2026 February Ultimate Consciousness Breakthrough: Mind-Expanding Technology",
-  description: "Discover the ultimate consciousness breakthrough of AI 2026 February, featuring mind-expanding technology, advanced cognitive systems, and revolutionary AI consciousness.",
-  keywords: 'AI 2026, consciousness breakthrough, mind-expanding technology, cognitive systems, AI consciousness'
-};
+// export const metadata: Metadata = { // Removed for Vite
+//  title: "AI 2026 February Ultimate Consciousness Breakthrough: Mind-Expanding Technology",
+//  description: "Discover the ultimate consciousness breakthrough of AI 2026 February, featuring mind-expanding technology, advanced cognitive systems, and revolutionary AI consciousness.",
+//  keywords: 'AI 2026, consciousness breakthrough, mind-expanding technology, cognitive systems, AI consciousness'
+// };
 
 export default function AI2026FebruaryUltimateConsciousnessBreakthrough() {
   return (

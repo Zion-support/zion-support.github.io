@@ -74,7 +74,6 @@ class MonitoringService {
         // Cumulative Layout Shift
         let clsValue = 0;
         const clsObserver = new PerformanceObserver((list) => {
->>>>>>> 1684f58a157a4496bdf1f11291796d45799723dd
             if (!entry.hadRecentInput) {
               clsValue += entry.value;
               this.metrics.cls = clsValue;
@@ -112,13 +111,6 @@ class MonitoringService {
           }
         });
         longTaskObserver.observe({ entryTypes: ['longtask'] });
->>>>>>> 1684f58a157a4496bdf1f11291796d45799723dd
-=======
-      } catch {
->>>>>>> cursor/fix-errors-and-merge-to-main-5c5e
-=======
-      } catch (error) {
->>>>>>> 5a6fab5466218b5fd438f48f6649158efa56a5c3
         // Long task API might not be available
       }
     }
@@ -187,7 +179,6 @@ class MonitoringService {
     }
 
     // Send to analytics (if configured)
->>>>>>> 1684f58a157a4496bdf1f11291796d45799723dd
         value: Math.round(name === 'cls' ? value * 1000 : value),
         event_category: 'Web Vitals',
         non_interaction: true,
@@ -206,7 +197,6 @@ class MonitoringService {
     console.error('[Error]', error);
 
     // Send to error tracking service (if configured)
->>>>>>> 1684f58a157a4496bdf1f11291796d45799723dd
     }
   }
 
@@ -224,13 +214,7 @@ class MonitoringService {
 
   public measureMemory(): void {
     if ('memory' in performance && performanceConfig.monitoring.enableMemoryMonitoring) {
->>>>>>> 5a6fab5466218b5fd438f48f6649158efa56a5c3
       const memory = (performance as { memory: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
-=======
-      const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
->>>>>>> cursor/fix-errors-and-merge-to-main-5c5e
-=======
->>>>>>> 1684f58a157a4496bdf1f11291796d45799723dd
  
       console.log('[Memory]', {
         used: `${Math.round(memory.usedJSHeapSize / 1048576)}MB`,

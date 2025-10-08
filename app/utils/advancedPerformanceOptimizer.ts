@@ -78,13 +78,6 @@ export class PerformanceOptimizer {
   /**
    * Implement debounce for performance
    */
->>>>>>> 1684f58a157a4496bdf1f11291796d45799723dd
-=======
-  debounce<T extends (...args: unknown[]) => unknown>(
->>>>>>> cursor/fix-errors-and-merge-to-main-5c5e
-=======
-  debounce<T extends (...args: unknown[]) => unknown>(
->>>>>>> 5a6fab5466218b5fd438f48f6649158efa56a5c3
     func: T,
     wait: number
   ): (...args: Parameters<T>) => void {
@@ -104,13 +97,6 @@ export class PerformanceOptimizer {
   /**
    * Implement throttle for performance
    */
->>>>>>> 1684f58a157a4496bdf1f11291796d45799723dd
-=======
-  throttle<T extends (...args: unknown[]) => unknown>(
->>>>>>> cursor/fix-errors-and-merge-to-main-5c5e
-=======
-  throttle<T extends (...args: unknown[]) => unknown>(
->>>>>>> 5a6fab5466218b5fd438f48f6649158efa56a5c3
     func: T,
     limit: number
   ): (...args: Parameters<T>) => void {
@@ -130,13 +116,6 @@ export class PerformanceOptimizer {
   /**
    * Memoize function results
    */
->>>>>>> 1684f58a157a4496bdf1f11291796d45799723dd
-=======
-  memoize<T extends (...args: unknown[]) => unknown>(
->>>>>>> cursor/fix-errors-and-merge-to-main-5c5e
-=======
-  memoize<T extends (...args: unknown[]) => unknown>(
->>>>>>> 5a6fab5466218b5fd438f48f6649158efa56a5c3
     func: T
   ): (...args: Parameters<T>) => ReturnType<T> {
     const cache = new Map<string, ReturnType<T>>();
