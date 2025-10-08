@@ -101,18 +101,41 @@ export function useEnhancedPerformance(
   const measureOperation = useCallback(
     (operationName: string) => {
       const markName = `${component}-${operationName}`;
-      performanceOptimizer.startMark(markName);
+      const startMarkName = `${markName}-start`;
+      const endMarkName = `${markName}-end`;
+      
+      // Use native Performance API
+      if (typeof performance !== 'undefined' && performance.mark) {
+        performance.mark(startMarkName);
+      }
 
       return {
         end: () => {
-          const duration = performanceOptimizer.endMark(markName);
-          if (duration && trackPerformance) {
-            analytics.trackPerformance(
-              `${component}-${operationName}`,
-              duration,
-              duration > 1000 ? 'slow' : 'fast'
-            );
+          let duration: number | undefined;
+          
+          if (typeof performance !== 'undefined' && performance.mark && performance.measure) {
+            try {
+              performance.mark(endMarkName);
+              const measure = performance.measure(markName, startMarkName, endMarkName);
+              duration = measure.duration;
+              
+              // Clean up marks
+              performance.clearMarks(startMarkName);
+              performance.clearMarks(endMarkName);
+              performance.clearMeasures(markName);
+              
+              if (duration && trackPerformance) {
+                analytics.trackPerformance(
+                  `${component}-${operationName}`,
+                  duration,
+                  duration > 1000 ? 'slow' : 'fast'
+                );
+              }
+            } catch (error) {
+              console.warn('Performance measurement failed:', error);
+            }
           }
+          
           return duration;
         },
       };
