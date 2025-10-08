@@ -35,7 +35,7 @@ const SidebarNavigation: React.FC = () => {
                   isOpen ? 'justify-start' : 'justify-center'
                 }`}
               >
-                <IconComponent className="w-5 h-5" />
+                <item.icon className="w-5 h-5" />
                 {isOpen && <span className="ml-3 font-medium">{item.name}</span>}
               </Link>
             );

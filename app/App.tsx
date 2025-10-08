@@ -7,12 +7,13 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 // Components
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import PerformanceDashboard from './components/PerformanceDashboard';
-<<<<<<< HEAD
 import AdvancedPerformanceMonitor from './components/AdvancedPerformanceMonitor';
 import AdvancedErrorBoundary from './components/AdvancedErrorBoundary';
 import SEOEnhancer from './components/SEOEnhancer';
 import AdvancedSEOOptimizer from './components/AdvancedSEOOptimizer';
 import LoadingSpinner from './components/LoadingSpinner';
+import Navigation from './components/Navigation';
+import Footer from './components/Footer';
 
 // Lazy load components for better performance
 const ContentShowcase = lazy(() => import('./components/ContentShowcase'));
@@ -22,10 +23,6 @@ const InteractiveContentShowcase2026 = lazy(
 const InteractiveAIROICalculator = lazy(
   () => import('./components/InteractiveAIROICalculator')
 );
-=======
-import Navigation from './components/Navigation';
-import Footer from './components/Footer';
->>>>>>> cursor/website-audit-and-content-update-7e9e
 
 // Lazy load pages for better performance
 const HomePage = lazy(() => import('./page'));

@@ -570,7 +570,7 @@ const NeuromorphicComputing = () => {
               to="/<contact" className="text-left"
             >
               Start Your Neuromorphic AI Project
-              <ArrowRight className="text-left" />
+              <Link className="text-left" />
             </Link>
           </section>
           <section></section>

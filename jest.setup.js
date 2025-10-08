@@ -56,6 +56,8 @@ jest.mock('react-router-dom', () => {
       state: null,
     }),
     useParams: () => ({}),
+    Link: ({ children, to, ...props }) => React.createElement('a', { href: to, ...props }, children),
+    NavLink: ({ children, to, ...props }) => React.createElement('a', { href: to, ...props }, children),
     BrowserRouter: ({ children }) => children,
     MemoryRouter: ({ children }) => {
       const { createMemoryRouter, RouterProvider } = actual;
@@ -68,7 +70,7 @@ jest.mock('react-router-dom', () => {
         initialEntries: ['/'],
         initialIndex: 0,
       });
-      return <RouterProvider router={router} />;
+      return React.createElement(RouterProvider, { router });
     },
     RouterProvider: ({ router }) => null,
     Link: ({ children, to, ...props }) => {
@@ -108,7 +110,6 @@ global.IntersectionObserver = class IntersectionObserver {
   unobserve() {}
 };
 
-// TextEncoder and TextDecoder are already declared above
 // Suppress console errors in tests
 const originalError = console.error;
 beforeAll(() => {

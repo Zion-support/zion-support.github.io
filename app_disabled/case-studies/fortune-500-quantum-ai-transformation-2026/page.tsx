@@ -1,4 +1,4 @@
-import Link from 'next/link';
+// import Link from 'next/link';
 
 
 
@@ -456,7 +456,7 @@ export default function Fortune500QuantumAITransformation2026() {
                 href="/case-studies" 
                 className="flex items-center gap-2 text-green-400 hover:text-green-300 transition-colors"
               >
-                <ArrowRight className='w-4 h-4 rotate-180' />
+                <Link className='w-4 h-4 rotate-180' />
                 Back to Case Studies
               </Link>
               <Link
@@ -464,7 +464,11 @@ export default function Fortune500QuantumAITransformation2026() {
                 className='flex items-center gap-2 bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-400 hover:to-blue-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300'
               >
                 Read More Success Stories
+<<<<<<< HEAD
                 <ArrowRight className="w-4 h-4" />
+=======
+                <Link className="w-4 h-4" />
+>>>>>>> 1d68394de6252bd8b85f69f386dad01902598b0b
               </Link>
             </div>
           </div>

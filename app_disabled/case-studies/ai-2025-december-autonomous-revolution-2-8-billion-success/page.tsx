@@ -1,4 +1,4 @@
-import Link from 'next/link';
+// import Link from 'next/link';
 
 // Use simple SVG icons instead of lucide-react to avoid TypeScript issues
 const ArrowLeft = ({ className }: { className?: string }) => (

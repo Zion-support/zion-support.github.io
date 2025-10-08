@@ -1,4 +1,4 @@
-import Link from 'next/link';
+// import Link from 'next/link';
 
 export default function NewContent2026RevolutionaryBanner() {
   return (
@@ -45,38 +45,38 @@ export default function NewContent2026RevolutionaryBanner() {
             </div>
           </div>
           <div className="flex flex-col gap-4 min-w-fit">
-            <ArrowRight
+            <Link
               href="/blog/ai-2026-synthetic-consciousness-breakthrough"
               className="inline-flex items-center gap-2 bg-white/20 hover:bg-white/30 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 border border-white/30"
             >
               <Brain className="w-5 h-5" />
               Synthetic Consciousness
-              <ArrowRight className="w-4 h-4" />
-            </ArrowRight>
-            <ArrowRight
+              <Link className="w-4 h-4" />
+            </Link>
+            <Link
               href="/blog/ai-2026-quantum-neural-superintelligence"
               className="inline-flex items-center gap-2 bg-white/20 hover:bg-white/30 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 border border-white/30"
             >
               <Zap className="w-5 h-5" />
               Quantum Superintelligence
-              <ArrowRight className="w-4 h-4" />
-            </ArrowRight>
-            <ArrowRight
+              <Link className="w-4 h-4" />
+            </Link>
+            <Link
               href="/case-studies/ai-2026-synthetic-consciousness-10-billion-success"
               className="inline-flex items-center gap-2 bg-gradient-to-r from-green-500 to-blue-500 hover:from-green-600 hover:to-blue-600 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105"
             >
               <TrendingUp className="w-5 h-5" />
               $10B Success Story
-              <ArrowRight className="w-4 h-4" />
-            </ArrowRight>
-            <ArrowRight
+              <Link className="w-4 h-4" />
+            </Link>
+            <Link
               href="/case-studies/ai-2026-quantum-neural-superintelligence-25-billion-success"
               className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105"
             >
               <Star className="w-5 h-5" />
               $25B Success Story
-              <ArrowRight className="w-4 h-4" />
-            </ArrowRight>
+              <Link className="w-4 h-4" />
+            </Link>
           </div>
         </div>
       </div>

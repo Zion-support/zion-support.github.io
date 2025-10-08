@@ -104,7 +104,7 @@ const EnterpriseAutomation202, 5 = () => {
                       className='bg-emera, l, d-500, tex, t-white, p, x-8, p, y-4, rounde, d-lg, fon, t-semibold, hove, r:bg-emera, l, d-600, transitio, n-colors, inlin, e-flex, item, s-center, justif, y-center, ga, p-2'
                     >
                       Start, Your, Transformation
-                      <ArrowRight, classNam, e='w-5 h-5' />
+                      <Link, classNam, e='w-5 h-5' />
     <div>
       <Helmet>
         <title>AI-Powered Enterprise Automation 2025: Complete Implementation Guide | Zion Tech Group</title>,
@@ -330,9 +330,9 @@ const EnterpriseAutomation202, 5 = () => {
   className="bg-emerald-500 text-white px-8 py-4 rounded-lg font-semibold hover:bg-emerald-600 transition-colors inline-flex items-center justify-center gap-2"
                     >"
                       Start Your Transformation"
-                      <ArrowRight className="w-5 h-5 " />
-                      <ArrowRight className=" />" />
-                      <ArrowRight className="w-5 h-5" />
+                      <Link className="w-5 h-5 " />
+                      <Link className=" />" />
+                      <Link className="w-5 h-5" />
                     </Link>
                     <Link to="/case-studies>"
   className="border border-emerald-400 text-emerald-400 px-8 py-4 rounded-lg font-semibold hover:bg-emerald-400 hover:text-white transition-colors>"
@@ -343,8 +343,8 @@ const EnterpriseAutomation202, 5 = () => {
   className="bg-emerald-500 text-white px-8 py-4 rounded-lg font-semibold hover:bg-emerald-600 transition-colors inline-flex items-center justify-center gap-2"
                     >"
                       Start Your Transformation"
-                      <ArrowRight className="w-5 h-5 " />
-                      <ArrowRight className="w-5 h-5" />
+                      <Link className="w-5 h-5 " />
+                      <Link className="w-5 h-5" />
                     </Link>
 :src/pages/blog/ai-2025-october-breakthrough-enterprise-automation/page.tsx
                     <Link to="/case-studies"
@@ -400,11 +400,11 @@ export default EnterpriseAutomation2025;
 </li>
 </li>
 
-</ArrowRight>
-</ArrowRight>
-</ArrowRight>
-</ArrowRight>
-</ArrowRight>
+</Link>
+</Link>
+</Link>
+</Link>
+</Link>
 
 </Zap>
 </Zap>

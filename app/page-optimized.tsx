@@ -4,8 +4,27 @@ import SEOOptimizer from './components/SEOOptimizer';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import PerformanceMonitor from './components/PerformanceMonitor';
 
-// Note: Some lazy-loaded components have been commented out as they may not exist
-// Uncomment and update paths as needed based on your component structure
+// Fallback component
+const EmptyComponent = () => null;
+
+// Lazy load heavy components - these may not exist, so make them optional
+const UnifiedBanner = lazy(() =>
+  import('./components/NewestContent2025Banner').catch(() =>
+    import('./components/EmptyComponent').catch(() => ({ default: EmptyComponent }))
+  )
+);
+
+const ContentPromotion = lazy(() =>
+  import('./components/UltimateBusinessIntelligence2025Banner').catch(() => {
+    return { default: EmptyComponent } as { default: React.ComponentType };
+  })
+);
+
+const ContentShowcase = lazy(() =>
+  import('./components/UltimateBusinessIntelligenceShowcase2025').catch(() => ({
+    default: EmptyComponent,
+  }))
+);
 
 export const metadata = {
   title: 'Zion Tech Group — AI Enterprise Transformation & IT Services | 300% ROI Guaranteed',
@@ -99,4 +118,6 @@ export default function OptimizedHomePage() {
       </main>
     </div>
   );
-}
+};
+
+export default OptimizedHomePage;

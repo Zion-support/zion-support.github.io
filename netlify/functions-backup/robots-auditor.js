@@ -1,4 +1,4 @@
-exports.handler = async function (event, context) callback) {try {
+exports.handler = async function (event, context) {try {
 //     console.log('robots-auditor function triggered')}
     // Robots auditing simulation
     const result = {
@@ -7,7 +7,7 @@ exports.handler = async function (event, context) callback) {try {
         'Content-Type': 'application/json',
         'Access-Control-Allow-Origin': '*'}
       },
-      body: JSON.stringify({message: 'Robots auditor executed successfully')
+      body: JSON.stringify({message: Robots auditor executed successfully,
         timestamp: new Date().toISOString(),
         function: 'robots-auditor',
         source: event.source || 'unknown',
@@ -20,7 +20,8 @@ exports.handler = async function (event, context) callback) {try {
       }),
     };
     return result;
-//   } catch (error) {console.error('Error in robots-auditor: ') error)}
+//   } catch (error) {console.error('Error in robots-auditor: ') error
+      }
     return {
       statusCode: 500,
       headers: {
@@ -28,10 +29,12 @@ exports.handler = async function (event, context) callback) {try {
         'Access-Control-Allow-Origin': '*'}
       },
       body: JSON.stringify({error: 'Internal server error',
-        message: error.message)
+        message: error.message,
         function: 'robots-auditor'}
       });
     };
   }
 };
-// exports.handler = async function(event, context) callback) {try { console.log('robots-auditor function triggered')} // Robots auditing simulation const result = { statusCode: 200, headers: {' 'Content-Type': 'application/json'}' 'Access-Control-Allow-Origin': '*' }, body: JSON.stringify({' message: 'Robots auditor executed successfully') timestamp: new Date().toISOString(),' function: 'robots-auditor',' source: event.source || 'unknown', audit: {' status: 'active', robotsFiles: 0, issuesFound: 0} lastAudit: new Date().toISOString() } }) }; return result; } catch (error) {' console.error('Error in robots-auditor: ') error)} return { statusCode: 500, headers: {' 'Content-Type': 'application/json'}' 'Access-Control-Allow-Origin': '*' }, body: JSON.stringify({' error: 'Internal server error'} message: error.message)' function: 'robots-auditor' }) }; } };'
+        timestamp: new Date().toISOString(),' function: 'robots-auditor',' source: event.source || 'unknown', audit: {' status: 'active', robotsFiles: 0, issuesFound: 0,
+        lastAudit: new Date().toISOString() } }) }; return result; } catch (error) {' console.error('Error in robots-auditor: ') error
+      } return { statusCode: 500, headers: {' 'Content-Type': 'application/json'}' 'Access-Control-Allow-Origin': '*' }, body: JSON.stringify({' error: 'Internal server error'} message: error.message)' function: 'robots-auditor' }) }; } };'

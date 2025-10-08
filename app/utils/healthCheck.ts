@@ -89,11 +89,9 @@ class HealthCheckService {
           ...check,
           name,
           duration
-        });
-
+        })
       } catch (error) {
         logger.error(`Health check "${name}" failed`, error as Error);
-
         checks.push({
           name,
           status: 'fail',
@@ -210,7 +208,7 @@ class HealthCheckService {
     } catch (error) {
       return {
         name: 'performance',
-        status: 'warn'
+        status: 'warn',
         message: 'Could not check performance'
       }
     }
@@ -272,11 +270,9 @@ class HealthCheckService {
       // Check available space (approximate)
       const testData = 'x'.repeat(1024 * 1024); // 1MB
       try {
-        localStorage.setItem('_size_test', testData)
-        localStorage.removeItem('_size_test')
-
+        localStorage.setItem('_size_test', testData);
+        localStorage.removeItem('_size_test');
       } catch {
-      } catch (error) {
         return {
           name: 'storage'
           status: 'warn'
@@ -284,12 +280,11 @@ class HealthCheckService {
         }
       }
       return {
-        name: 'storage'
-        status: 'pass'
-        message: 'Storage working correctly'
-      }
+        name: 'storage',
+        status: 'pass',
+        message: 'Storage working correctly',
+      };
     } catch {
-    } catch (error) {
       return {
         name: 'storage'
         status: 'fail'

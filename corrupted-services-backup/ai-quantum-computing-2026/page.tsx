@@ -113,7 +113,7 @@ export default function AIQuantumComputingServices2026() {
                     href="/contact"
                     className="text-left">
                     Get Quantum Consultation
-                    <ArrowRight className="text-left" />
+                    <Link className="text-left" />
                   </Link>
                 </div>
               ))}
