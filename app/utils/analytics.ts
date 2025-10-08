@@ -3,14 +3,6 @@
  * Provides type-safe analytics tracking with error handling
  */
 
-// Extend Window interface for gtag
-declare global {
-  interface Window {
-    gtag?: (...args: unknown[]) => void;
-    dataLayer?: unknown[];
-  }
-}
-
 export interface AnalyticsEvent {
   action: string;
   category: string;
@@ -176,7 +168,7 @@ class AnalyticsService {
   private hasGtag(): boolean {
     return (
       typeof window !== 'undefined' &&
-      typeof window.gtag === 'function'
+      typeof (window as any).gtag === 'function'
     );
   }
 
@@ -221,8 +213,6 @@ export const trackError = (error: Error, metadata?: Record<string, unknown>) =>
 export const trackPerformance = (metric: string, value: number) =>
   analytics.trackPerformance(metric, value);
   analytics.trackError(error, metadata);
-export const trackPerformance = (metric: string, value: number, metadata?: Record<string, unknown>) =>
-  analytics.trackPerformance(metric, value, metadata);
 export const trackTiming = (
   category: string,
   variable: string,

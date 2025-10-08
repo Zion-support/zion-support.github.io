@@ -372,7 +372,7 @@ export class EnhancedLogger {
         case LogLevel.FATAL:
           logger.error(message, structuredLog);
           if (entry.stack) {
-            logger.info('Stack trace:', 'Logger', { stack: entry.stack });
+            console.info('Stack trace:', { stack: entry.stack });
           }
           break;
       }
