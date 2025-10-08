@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 
 const InteractiveContentShowcase2026: React.FC = () => {
   const [activeTab, setActiveTab] = useState(0);
@@ -17,11 +18,6 @@ const InteractiveContentShowcase2026: React.FC = () => {
       title: "Security",
       content: "Bank-level security for your most sensitive data.",
       icon: "🔒"
-    },
-    {
-      title: "Analytics",
-      content: "Live insights and predictive analytics for better decisions.",
-      icon: "📊"
     }
   ];
 
@@ -30,11 +26,10 @@ const InteractiveContentShowcase2026: React.FC = () => {
       <div className='container mx-auto px-4'>
         <div className='text-center mb-12'>
           <h2 className='text-4xl font-bold text-gray-900 mb-4'>
-            Future-Ready Solutions
+            Future-Ready Solutions 2026
           </h2>
           <p className='text-xl text-gray-600 max-w-3xl mx-auto'>
-            Prepare your enterprise for the next generation of AI technology
-            with our advanced solutions.
+            Prepare your enterprise for the next generation of AI technology.
           </p>
         </div>
 
@@ -62,9 +57,15 @@ const InteractiveContentShowcase2026: React.FC = () => {
               <h3 className='text-2xl font-bold text-gray-900 mb-4'>
                 {tabs[activeTab].title}
               </h3>
+              <p className='text-lg text-gray-600'>
+                {tabs[activeTab].content}
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
   );
 };
 
+export default InteractiveContentShowcase2026;
