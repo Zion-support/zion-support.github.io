@@ -1,89 +1,33 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ChevronDown, Phone, Mail, MapPin } from 'lucide-react';
+import { ChevronDown, Phone, Mail, MapPin, Menu, X } from 'lucide-react';
 
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
-  const [aiServicesOpen, setAiServicesOpen] = useState(false);
-  const [itServicesOpen, setItServicesOpen] = useState(false);
 
   return (
-    <nav className="bg-slate-900/90 backdrop-blur-md shadow-lg sticky top-0 z-50 border-b border-cyan-500/20">
-      <div className="container mx-auto px-4">
-        <div className="flex justify-between items-center py-4">
-          {/* Logo */}
-          <Link to="/" className="text-2xl font-bold text-cyan-400 neon-text">
-            Zion Tech Group
-          </Link>
-
-          {/* Desktop Menu */}
-          <div className="hidden md:flex space-x-8">
-            <Link to="/" className="text-gray-300 hover:text-cyan-400 transition-colors">
-              Home
-            </Link>
-            <Link to="/about" className="text-gray-300 hover:text-cyan-400 transition-colors">
-              About
-            </Link>
-            <div className="relative">
-              <button
-                onClick={() => setServicesOpen(!servicesOpen)}
-                className="text-gray-700 hover:text-blue-600 transition-colors flex items-center"
-              >
-                Services
-                <ChevronDown className="w-4 h-4 ml-1" />
-              </button>
-              {servicesOpen && (
-                <div className="absolute top-full left-0 mt-2 w-96 bg-white rounded-lg shadow-lg border py-2 z-50">
-                  <div className="grid grid-cols-2 gap-2 p-2">
-                    <Link to="/services" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
-                      All Services
-                    </Link>
-                    <Link to="/micro-saas" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
-                      Micro SAAS
-                    </Link>
-                    <Link to="/ai-services" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
-                      AI Services
-                    </Link>
-                    <Link to="/ai-marketing" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
-                      AI Marketing
-                    </Link>
-                    <Link to="/ai-automation" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
-                      AI Automation
-                    </Link>
-                    <Link to="/ai-healthcare" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
-                      AI Healthcare
-                    </Link>
-                    <Link to="/ai-fintech" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
-                      AI Fintech
-                    </Link>
-                    <Link to="/it-services" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
-                      IT Services
-                    </Link>
-                    <Link to="/quantum-computing" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
-                      Quantum Computing
-                    </Link>
-                    <Link to="/autonomous-systems" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
-                      Autonomous Systems
-                    </Link>
-                    <Link to="/business-intelligence" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
-                      Business Intelligence
-                    </Link>
-                    <Link to="/blockchain-web3" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
-                      Blockchain & Web3
-                    </Link>
-                    <Link to="/iot-edge-computing" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
-                      IoT & Edge Computing
-                    </Link>
-                    <Link to="/cybersecurity" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
-                      Cybersecurity
-                    </Link>
-                    <Link to="/services-advertising" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
-                      Advertising Services
-                    </Link>
-                  </div>
-                </div>
-              )}origin/main
+    <>
+      {/* Top Contact Bar */}
+      <div className="bg-slate-900 text-white py-2 text-sm">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-col md:flex-row justify-between items-center">
+            <div className="flex flex-col md:flex-row items-center space-y-1 md:space-y-0 md:space-x-6">
+              <a href="tel:+13024640950" className="flex items-center hover:text-cyan-400 transition-colors">
+                <Phone className="w-4 h-4 mr-2" />
+                +1 302 464 0950
+              </a>
+              <a href="mailto:kleber@ziontechgroup.com" className="flex items-center hover:text-cyan-400 transition-colors">
+                <Mail className="w-4 h-4 mr-2" />
+                kleber@ziontechgroup.com
+              </a>
+              <div className="flex items-center text-gray-300">
+                <MapPin className="w-4 h-4 mr-2" />
+                364 E Main St STE 1008, Middletown DE 19709
+              </div>
+            </div>
+            <div className="hidden md:flex space-x-4">
+              <a href="https://ziontechgroup.com" className="hover:text-cyan-400 transition-colors">Visit Our Site</a>
             </div>
           </div>
         </div>
@@ -118,7 +62,7 @@ const Navigation: React.FC = () => {
                   <ChevronDown className="w-4 h-4 ml-1" />
                 </button>
                 {servicesOpen && (
-                  <div className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-xl border py-4 z-50">
+                  <div className="absolute top-full left-0 mt-2 w-96 bg-white rounded-lg shadow-xl border py-4 z-50">
                     <div className="grid grid-cols-2 gap-4 px-4">
                       <div>
                         <h3 className="font-semibold text-gray-900 mb-2">Core Services</h3>
@@ -152,7 +96,7 @@ const Navigation: React.FC = () => {
                       </div>
                     </div>
                   </div>
-                )}origin/main
+                )}
               </div>
 
               <Link to="/case-studies" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
@@ -174,14 +118,7 @@ const Navigation: React.FC = () => {
               onClick={() => setIsOpen(!isOpen)}
               className="lg:hidden text-gray-700 hover:text-blue-600"
             >
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M4 6h16M4 12h16M4 18h16"
-                />
-              </svg>
+              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
           </div>
 
