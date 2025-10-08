@@ -3,9 +3,7 @@
  * Combines performance monitoring, error tracking, and analytics
  */
 
-import React from 'react';
 import { useEffect, useCallback, useRef } from 'react';
-=======
 import { errorTracker } from '../utils/enhancedErrorTracking';
 import { analytics } from '../utils/enhancedAnalytics';
 
@@ -16,9 +14,7 @@ export interface UseEnhancedPerformanceOptions {
   trackAnalytics?: boolean;
 }
 
-export function useEnhancedPerformance(
-  options: UseEnhancedPerformanceOptions = {}
-) {
+export function useEnhancedPerformance(options: UseEnhancedPerformanceOptions = {}) {
   const {
     component = 'Unknown',
     trackErrors = true,
@@ -66,9 +62,7 @@ export function useEnhancedPerformance(
 
     if (trackPerformance && renderCountRef.current > 10) {
       // Many re-renders detected
-      console.warn(
-        `Component ${component} has re-rendered ${renderCountRef.current} times`
-      );
+      console.warn(`Component ${component} has re-rendered ${renderCountRef.current} times`);
       analytics.trackCustomEvent(
         'Performance',
         'High Render Count',
@@ -101,13 +95,12 @@ export function useEnhancedPerformance(
 
   const measureOperation = useCallback(
     (operationName: string) => {
-      const markName = `${component}-${operationName}`;
       const startTime = performance.now();
 
       return {
         end: () => {
           const duration = performance.now() - startTime;
-          
+
           if (trackPerformance) {
             analytics.trackPerformance(
               `${component}-${operationName}`,
@@ -115,7 +108,7 @@ export function useEnhancedPerformance(
               duration > 1000 ? 'slow' : 'fast'
             );
           }
-          
+
           return duration;
         },
       };
