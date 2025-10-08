@@ -54,7 +54,7 @@ class PerformanceOptimizer {
     }
   }
 
-  private initMonitoring() {
+  private async initMonitoring() {
     if (typeof window === 'undefined' || !('PerformanceObserver' in window)) return;
 
     try {
