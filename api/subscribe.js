@@ -33,7 +33,7 @@ async function handler(req, res) {
     );
     
     let existing = [];
-    
+
     try {
       existing = JSON.parse(fs.readFileSync(file, 'utf8'));
       if (!Array.isArray(existing)) existing = [];

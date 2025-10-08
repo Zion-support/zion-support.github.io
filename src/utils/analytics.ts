@@ -32,7 +32,7 @@ class Analytics {
   }
 
   /**
-   * Generate unique session ID
+   * Generate a unique session ID
    */
   private generateSessionId(): string {
     return `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
@@ -45,7 +45,7 @@ class Analytics {
     if (typeof window === 'undefined') {
       return {
         sessionId: this.sessionId,
-        userAgent: 'server',
+        userAgent: 'SSR',
         language: 'en',
         timezone: 'UTC',
       };
@@ -61,7 +61,7 @@ class Analytics {
   }
 
   /**
-   * Track an event
+   * Track an analytics event
    */
   track(
     name: string,
@@ -82,6 +82,20 @@ class Analytics {
     };
 
     this.events.push(event);
+
+    // Send to analytics service if available
+    if (typeof window !== 'undefined' && 'gtag' in window) {
+      try {
+        (window as unknown as { gtag: (command: string, eventName: string, parameters: Record<string, unknown>) => void }).gtag('event', name, {
+          event_category: category,
+          event_label: label,
+          value: value,
+          ...properties,
+        });
+      } catch (error) {
+        console.error('Error sending analytics event:', error);
+      }
+    }
   }
 
   /**
@@ -108,7 +122,7 @@ class Analytics {
   /**
    * Track performance metrics
    */
-  trackPerformance(metric: string, value: number, unit: string): void {
+  trackPerformance(metric: string, value: number, unit?: string): void {
     this.track('performance', 'metrics', metric, unit, value);
   }
 
@@ -121,6 +135,24 @@ class Analytics {
     properties?: Record<string, unknown>
   ): void {
     this.track(event, 'business', 'event', undefined, value, properties);
+  }
+
+  /**
+   * Send event to analytics service
+   */
+  sendToAnalytics(event: AnalyticsEvent): void {
+    if (typeof window !== 'undefined' && 'gtag' in window) {
+      try {
+        (window as unknown as { gtag: (command: string, eventName: string, parameters: Record<string, unknown>) => void }).gtag('event', event.name, {
+          event_category: event.category,
+          event_label: event.label,
+          value: event.value,
+          ...event.properties,
+        });
+      } catch (error) {
+        console.error('Error sending event to analytics:', error);
+      }
+    }
   }
 
   /**
@@ -159,9 +191,6 @@ class Analytics {
   }
 }
 
+// Create and export a singleton instance
 const analytics = new Analytics();
-
-export default analytics;
-
-export const analytics = new Analytics();
 export default analytics;
