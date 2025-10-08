@@ -24,7 +24,7 @@ import './globals.css';
 const App: React.FC = () => {
   useEffect(() => {
     // Initialize global error handling
-    logger.lifecycle('initialized', { component: 'App' });
+    logger.lifecycle('initialized', 'App');
 
     // Initialize performance monitoring
     lazyLoadImages();
@@ -43,7 +43,7 @@ const App: React.FC = () => {
       }
     }
     
-    logger.lifecycle('performance monitoring initialized', { component: 'App' });
+    logger.lifecycle('performance monitoring initialized', 'App');
     logger.info('🚀 Zion Tech Group App initialized with comprehensive monitoring', { component: 'App' });
   }, []);
 
