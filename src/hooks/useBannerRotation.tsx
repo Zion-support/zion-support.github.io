@@ -129,4 +129,3 @@ export const useBannerRotation = (options: UseBannerRotationOptions = {}) => {
   };
 };
 
-export default useBannerRotation;
