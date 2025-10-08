@@ -1,11 +1,11 @@
-import { useEffect, useCallback } from 'react'
+import { useEffect, useCallback } from 'react';
 
 interface PerformanceMetrics {
-  loadTime: number
-  firstContentfulPaint: number
-  largestContentfulPaint: number
-  cumulativeLayoutShift: number
-  firstInputDelay: number
+  loadTime: number;
+  firstContentfulPaint: number;
+  largestContentfulPaint: number;
+  cumulativeLayoutShift: number;
+  firstInputDelay: number;
 }
 
 export const usePerformanceOptimization = () => {
@@ -31,180 +31,75 @@ export const usePerformanceOptimization = () => {
       firstInputDelay: 0,
     };
 
-    // Measure LCP
-    const lcpObserver = new PerformanceObserver(list => {
-      const entries = list.getEntries();
-      const lastEntry = entries[entries.length - 1];
-      if (lastEntry) {
-        metrics.largestContentfulPaint = lastEntry.startTime;
-      }
-    });
-    lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
-
-    // Measure CLS
-    let clsValue = 0
-    const clsObserver = new PerformanceObserver(list => {
-      for (const entry of list.getEntries()) {
-        const layoutShiftEntry = entry as PerformanceEntry & {
-          hadRecentInput?: boolean
-          value?: number
-        }
-        if (!layoutShiftEntry.hadRecentInput) {
-          clsValue += layoutShiftEntry.value || 0
-        }
-      }
-      metrics.cumulativeLayoutShift = clsValue
-    })
-    clsObserver.observe({ entryTypes: ['layout-shift'] })
-=======
-    };
-
-    // Measure LCP
-    const lcpObserver = new PerformanceObserver(list => {
-      const entries = list.getEntries();
-      const lastEntry = entries[entries.length - 1];
-      if (lastEntry) {
-        metrics.largestContentfulPaint = lastEntry.startTime;
-      }
-    });
-    lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
-
-    // Measure CLS
-    let clsValue = 0;
-    const clsObserver = new PerformanceObserver(list => {
-      for (const entry of list.getEntries()) {
-        const layoutShiftEntry = entry as PerformanceEntry & {
-          hadRecentInput?: boolean;
-          value?: number;
-        };
-        if (!layoutShiftEntry.hadRecentInput) {
-          clsValue += layoutShiftEntry.value || 0;
-        }
-      }
-      metrics.cumulativeLayoutShift = clsValue;
-    });
-    clsObserver.observe({ entryTypes: ['layout-shift'] });
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f5eb
-
     // Measure FID
     const fidObserver = new PerformanceObserver(list => {
       for (const entry of list.getEntries()) {
         const fidEntry = entry as PerformanceEntry & {
-          processingStart?: number;
+          processingStart: number;
+          processingEnd: number;
         };
-        metrics.firstInputDelay =
-          (fidEntry.processingStart || 0) - entry.startTime;
+        metrics.firstInputDelay = fidEntry.processingStart - fidEntry.startTime;
       }
     });
+
     fidObserver.observe({ entryTypes: ['first-input'] });
 
-    // Cleanup observers after a delay
-    setTimeout(() => {
-      lcpObserver.disconnect()
-      clsObserver.disconnect()
-      fidObserver.disconnect()
-    }, 10000)
-
-    return metrics
-  }, [])
-
-  const optimizeImages = useCallback(() => {
-    const images = document.querySelectorAll('img[data-src]')
-    const imageObserver = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const img = entry.target as HTMLImageElement
-          img['src'] = img.dataset['src'] || ''
-          img.classList.remove('lazy')
-          imageObserver.unobserve(img)
-        }
-      })
-    })
-
-    images.forEach(img => imageObserver.observe(img))
-  }, [])
-
-  const preloadCriticalResources = useCallback(() => {
-    const criticalResources = ['/fonts/inter-var.woff2', '/css/critical.css']
-
-    criticalResources.forEach(resource => {
-      const link = document.createElement('link')
-      link.rel = 'preload'
-      link.href = resource
-      link.as = resource.endsWith('.woff2') ? 'font' : 'style'
-      if (resource.endsWith('.woff2')) {
-        link.crossOrigin = 'anonymous'
-      }
-      document.head.appendChild(link)
-    })
-  }, [])
-
-  useEffect(() => {
-    // Measure performance after page load
-    const timer = setTimeout(() => {
-      const metrics = measurePerformance()
-      if (metrics) {
-        // Send metrics to analytics in production
-        if (process.env['NODE_ENV'] === 'production') {
-          // Track metrics in production
-        }
-         
-        if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { console.log('Performance Metrics:', metrics); } }
-      }
-    }, 1000)
-
-    // Optimize images
-    optimizeImages()
-
-    // Preload critical resources
-    preloadCriticalResources()
-
-    return () => clearTimeout(timer)
-  }, [measurePerformance, optimizeImages, preloadCriticalResources])
-=======
-          processingStart?: number;
-        };
-        metrics.firstInputDelay =
-          (fidEntry.processingStart || 0) - entry.startTime;
+    // Measure CLS
+    const clsObserver = new PerformanceObserver(list => {
+      for (const entry of list.getEntries()) {
+        const clsEntry = entry as PerformanceEntry & { value: number };
+        metrics.cumulativeLayoutShift += clsEntry.value;
       }
     });
-    fidObserver.observe({ entryTypes: ['first-input'] });
 
-    // Cleanup observers after a delay
-    setTimeout(() => {
-      lcpObserver.disconnect();
-      clsObserver.disconnect();
-      fidObserver.disconnect();
-    }, 10000);
+    clsObserver.observe({ entryTypes: ['layout-shift'] });
 
+    // Measure LCP
+    const lcpObserver = new PerformanceObserver(list => {
+      const entries = list.getEntries();
+      const lastEntry = entries[entries.length - 1] as PerformanceEntry & { startTime: number };
+      metrics.largestContentfulPaint = lastEntry.startTime;
+    });
+
+    lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
     return metrics;
   }, []);
 
   const optimizeImages = useCallback(() => {
-    const images = document.querySelectorAll('img[data-src]');
-    const imageObserver = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const img = entry.target as HTMLImageElement;
-          img.src = img.dataset.src || '';
-          img.classList.remove('lazy');
-          imageObserver.unobserve(img);
-        }
-      });
-    });
+    if (typeof window === 'undefined') return;
 
-    images.forEach(img => imageObserver.observe(img));
+    const images = document.querySelectorAll('img');
+    images.forEach(img => {
+      // Handle lazy loading
+      if (!img.loading) {
+        img.loading = 'lazy';
+      }
+      if (!img.decoding) {
+        img.decoding = 'async';
+      }
+      // Handle data-src lazy loading
+      const src = img.getAttribute('data-src');
+      if (src) {
+        img.setAttribute('src', src);
+        img.removeAttribute('data-src');
+      }
+    });
   }, []);
 
   const preloadCriticalResources = useCallback(() => {
-    const criticalResources = ['/fonts/inter-var.woff2', '/css/critical.css'];
+    if (typeof window === 'undefined') return;
 
-    criticalResources.forEach(resource => {
+    const criticalResources = [
+      '/fonts/inter-var.woff2',
+      '/css/critical.css',
+    ];
+
+    criticalResources.forEach(href => {
       const link = document.createElement('link');
       link.rel = 'preload';
-      link.href = resource;
-      link.as = resource.endsWith('.woff2') ? 'font' : 'style';
-      if (resource.endsWith('.woff2')) {
+      link.href = href;
+      link.as = href.endsWith('.css') ? 'style' : 'font';
+      if (href.endsWith('.woff2')) {
         link.crossOrigin = 'anonymous';
       }
       document.head.appendChild(link);
@@ -212,32 +107,9 @@ export const usePerformanceOptimization = () => {
   }, []);
 
   useEffect(() => {
-    // Measure performance after page load
-    const timer = setTimeout(() => {
-      const metrics = measurePerformance();
-      if (metrics) {
-        // Send metrics to analytics in production
-        if (process.env['NODE_ENV'] === 'production') {
-          // Track metrics in production
-        }
-         
-        if (process.env['NODE_ENV'] === 'development') { 
-          if (import.meta.env.DEV) { 
-            console.log('Performance Metrics:', metrics); 
-          } 
-        }
-      }
-    }, 1000);
-
-    // Optimize images
     optimizeImages();
-
-    // Preload critical resources
     preloadCriticalResources();
-
-    return () => clearTimeout(timer);
-  }, [measurePerformance, optimizeImages, preloadCriticalResources]);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f5eb
+  }, [optimizeImages, preloadCriticalResources]);
 
   return {
     measurePerformance,
