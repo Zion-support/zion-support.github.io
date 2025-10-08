@@ -28,6 +28,9 @@ const HomePage = lazy(() => import('./page'));
 // Utils
 import { lazyLoadImages, preloadCriticalResources, collectPerformanceMetrics, performanceOptimizer } from './utils/performanceOptimizer';
 import { logger } from './utils/logger';
+import performanceMonitor from './utils/performanceMonitor';
+import seoOptimizer from './utils/seoOptimizer';
+import accessibilityEnhancer from './utils/accessibilityEnhancer';
 
 // Styles
 import './globals.css';
@@ -41,21 +44,52 @@ const App: React.FC = () => {
     lazyLoadImages();
     preloadCriticalResources();
     performanceOptimizer.init();
+    performanceMonitor.init();
+    
+    // Initialize SEO optimization
+    seoOptimizer.init();
+    
+    // Initialize accessibility enhancements
+    accessibilityEnhancer.init();
     
     // Initialize Web Vitals monitoring
     if (typeof window !== 'undefined' && 'performance' in window) {
       const pageLoadMetrics = collectPerformanceMetrics();
       const metrics = performanceOptimizer.getMetrics();
+      const performanceMetrics = performanceMonitor.getMetrics();
+      
       if (pageLoadMetrics) {
         console.log('Performance metrics collected:', pageLoadMetrics);
       }
       if (metrics) {
         console.log('Performance metrics:', metrics);
       }
+      if (performanceMetrics) {
+        console.log('Core Web Vitals:', performanceMetrics);
+      }
     }
+    
+    // Log performance and accessibility metrics periodically
+    const metricsInterval = setInterval(() => {
+      const performanceMetrics = performanceMonitor.getMetrics();
+      const accessibilityMetrics = accessibilityEnhancer.getMetrics();
+      
+      if (process.env.NODE_ENV === 'development') {
+        console.log('Performance Score:', performanceMonitor.getScore());
+        console.log('Accessibility Score:', accessibilityMetrics.overallScore);
+      }
+    }, 30000);
     
     logger.lifecycle('performance monitoring initialized', 'App');
     logger.info('🚀 Zion Tech Group App initialized with comprehensive monitoring', 'App');
+
+    return () => {
+      // Cleanup
+      performanceOptimizer.cleanup();
+      performanceMonitor.cleanup();
+      accessibilityEnhancer.cleanup();
+      clearInterval(metricsInterval);
+    };
   }, []);
 
   return (
