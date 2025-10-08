@@ -149,7 +149,7 @@ class EnhancedErrorMonitoring {
           if (entry.entryType === 'memory') {
             if (memory.usedJSHeapSize > 100 * 1024 * 1024) { // 100MB
               this.handleError(new Error(`High memory usage detected: ${memory.usedJSHeapSize / 1024 / 1024}MB`), {
-                memoryUsage: memory.usedJSHeapSize
+                memoryUsage: memory.usedJSHeapSize,
                 category: 'performance'
               })
             }
@@ -178,22 +178,22 @@ class EnhancedErrorMonitoring {
    */
   handleError(error: Error, context: Partial<ErrorContext> = {}): void {
     const errorReport: ErrorReport = {
-      id: this.generateErrorId()
-      message: error.message
-      stack: error.stack
+      id: this.generateErrorId(),
+      message: error.message,
+      stack: error.stack,
       context: {
-        sessionId: this.sessionId
-        userId: this.userId
-        url: window.location.href
-        userAgent: navigator.userAgent
-        timestamp: new Date().toISOString()
+        sessionId: this.sessionId,
+        userId: this.userId,
+        url: window.location.href,
+        userAgent: navigator.userAgent,
+        timestamp: new Date().toISOString(),
         ...context
-      }
-      severity: this.calculateSeverity(error, context)
-      category: (context.category as 'javascript' | 'network' | 'promise' | 'resource' | 'custom') || 'javascript'
+      },
+      severity: this.calculateSeverity(error, context),
+      category: (context.category as 'javascript' | 'network' | 'promise' | 'resource' | 'custom') || 'javascript',
       resolved: false,
       occurrences: 1,
-      firstSeen: new Date().toISOString()
+      firstSeen: new Date().toISOString(),
       lastSeen: new Date().toISOString()
     }
     // Check if similar error already exists
@@ -252,10 +252,10 @@ class EnhancedErrorMonitoring {
   private async sendErrorReport(errorReport: ErrorReport): Promise<void> {
     try {
       await fetch('/api/errors', {
-        method: 'POST'
+        method: 'POST',
         headers: {
           'Content-Type': 'application/json'
-        }
+        },
         body: JSON.stringify(errorReport)
       })
     } catch (error) {
@@ -318,9 +318,9 @@ class EnhancedErrorMonitoring {
     }, {} as Record<string, number>)
 
     return {
-      total: this.errorQueue.length
-      bySeverity
-      byCategory
+      total: this.errorQueue.length,
+      bySeverity,
+      byCategory,
       recent: recent.slice(0, 10)
     }
   }
