@@ -3,6 +3,22 @@
 import React, { useEffect } from 'react';
 import { usePathname } from 'next/navigation';
 
+const SEOOptimizer: React.FC = () => {
+  const pathname = usePathname();
+
+  useEffect(() => {
+    // Update page title based on route
+    const titles: Record<string, string> = {
+      '/': 'Zion Tech Group - Advanced AI and IT Solutions',
+      '/services': 'Services - Zion Tech Group',
+      '/about': 'About Us - Zion Tech Group',
+      '/contact': 'Contact - Zion Tech Group',
+    };
+
+    document.title = titles[pathname || '/'] || 'Zion Tech Group';
+  }, [pathname]);
+
+  return null;
 };
 
 export default SEOOptimizer;

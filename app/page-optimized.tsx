@@ -50,4 +50,3 @@ export const metadata = {
 export default function OptimizedHomePage() {
   return (
   );
-}

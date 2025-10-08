@@ -72,5 +72,3 @@ import Link from 'next/link';
     </section>
   );
 };
-
-export default UltimateBusinessIntelligence2025Banner;
