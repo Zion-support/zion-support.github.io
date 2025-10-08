@@ -72,14 +72,14 @@ class PerformanceMonitor {
     fn: () => Promise<T>,
     tags?: Record<string, string>
   ): Promise<T> {
-//     const start = performance.now();
+    const start = performance.now();
     try {
-//       const result = await fn();
-//       const duration = performance.now() - start;
+      const result = await fn();
+      const duration = performance.now() - start;
       this.trackMetric(name, duration, 'ms', tags);
       return result;
     } catch (error) {
-//       const duration = performance.now() - start;
+      const duration = performance.now() - start;
       this.trackMetric(`${name}_error`, duration, 'ms', { ...tags, error: 'true' });
       throw error;
     }
@@ -89,14 +89,14 @@ class PerformanceMonitor {
    * Measure execution time of a synchronous function
    */
   measure<T>(name: string, fn: () => T, tags?: Record<string, string>): T {
-//     const start = performance.now();
+    const start = performance.now();
     try {
-//       const result = fn();
-//       const duration = performance.now() - start;
+      const result = fn();
+      const duration = performance.now() - start;
       this.trackMetric(name, duration, 'ms', tags);
       return result;
     } catch (error) {
-//       const duration = performance.now() - start;
+      const duration = performance.now() - start;
       this.trackMetric(`${name}_error`, duration, 'ms', { ...tags, error: 'true' });
       throw error;
     }
@@ -121,12 +121,12 @@ class PerformanceMonitor {
       performance.measure(name, startMark, endMark);
       const entries = performance.getEntriesByName(name, 'measure');
       if (entries.length > 0) {
-//         const duration = entries[entries.length - 1].duration;
+        const duration = entries[entries.length - 1].duration;
         this.trackMetric(name, duration, 'ms');
         return duration;
       }
     } catch (error) {
-//       console.warn('Failed to measure performance:', error);
+      console.warn('Failed to measure performance:', error);
     }
     return null;
   }
@@ -219,7 +219,8 @@ class PerformanceMonitor {
       const fidObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
         entries.forEach((entry: unknown) => {
-          const metric = this.createMetric('FID', entry.processingStart - entry.startTime);
+          const fidEntry = entry as PerformanceEventTiming;
+          const metric = this.createMetric('FID', fidEntry.processingStart - fidEntry.startTime);
           this.webVitals.FID = metric;
           this.notifyCallbacks(metric);
         });
@@ -232,8 +233,9 @@ class PerformanceMonitor {
       const clsObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
         entries.forEach((entry: unknown) => {
-          if (!entry.hadRecentInput) {
-            clsValue += entry.value;
+          const clsEntry = entry as any; // LayoutShift type not available in all environments
+          if (!clsEntry.hadRecentInput) {
+            clsValue += clsEntry.value;
           }
         });
         const metric = this.createMetric('CLS', clsValue);
@@ -268,8 +270,8 @@ class PerformanceMonitor {
         this.trackMetric('load_event', nav.loadEventEnd - nav.loadEventStart);
 
         // TTFB (Time to First Byte)
-//         const ttfb = nav.responseStart - nav.requestStart;
-//         const ttfbMetric = this.createMetric('TTFB', ttfb);
+        const ttfb = nav.responseStart - nav.requestStart;
+        const ttfbMetric = this.createMetric('TTFB', ttfb);
         this.webVitals.TTFB = ttfbMetric;
         this.notifyCallbacks(ttfbMetric);
 
@@ -277,7 +279,7 @@ class PerformanceMonitor {
         const paintEntries = performance.getEntriesByType('paint');
         const fcpEntry = paintEntries.find((entry) => entry.name === 'first-contentful-paint');
         if (fcpEntry) {
-//           const fcpMetric = this.createMetric('FCP', fcpEntry.startTime);
+          const fcpMetric = this.createMetric('FCP', fcpEntry.startTime);
           this.webVitals.FCP = fcpMetric;
           this.notifyCallbacks(fcpMetric);
         }
@@ -295,12 +297,13 @@ class PerformanceMonitor {
       const resourceObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
         entries.forEach((entry: unknown) => {
-          if (entry.initiatorType) {
+          const resourceEntry = entry as PerformanceResourceTiming;
+          if (resourceEntry.initiatorType) {
             this.trackMetric(
-              `resource_${entry.initiatorType}`,
-              entry.duration,
+              `resource_${resourceEntry.initiatorType}`,
+              resourceEntry.duration,
               'ms',
-              { name: entry.name }
+              { name: resourceEntry.name }
             );
           }
         });
@@ -308,7 +311,7 @@ class PerformanceMonitor {
       resourceObserver.observe({ entryTypes: ['resource'] });
       this.observers.push(resourceObserver);
     } catch (error) {
-//       console.warn('Failed to observe resource timing:', error);
+      console.warn('Failed to observe resource timing:', error);
     }
   }
 
