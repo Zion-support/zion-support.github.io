@@ -12,6 +12,8 @@ function initializeMonitoring() {
   try {
     // Set up performance monitoring
     if (typeof window !== 'undefined') {
+      // Monitor web vitals - performanceOptimizer doesn't have init method
+      // performanceOptimizer.init();
       
       // Set up error tracking
       // errorHandler.init(); // Method does not exist

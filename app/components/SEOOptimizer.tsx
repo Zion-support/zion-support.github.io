@@ -1,7 +1,7 @@
 'use client';
 
-import React, { useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
+import React from 'react';
+// import { useLocation } from 'react-router-dom';
 
 const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   children,
