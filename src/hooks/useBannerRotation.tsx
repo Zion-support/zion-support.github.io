@@ -26,8 +26,8 @@ interface BannerRotationState {
 
 // Helper functions defined inline
 const selectBannersForDisplay = (banners: unknown[], maxBanners: number, strategy: RotationStrategy) => {
-  const enabled = banners.filter((b: unknown) => b.enabled !== false);
-  const sorted = enabled.sort((a: unknown, b: unknown) => (b.priority || 0) - (a.priority || 0));
+  const enabled = banners.filter((b: any) => b.enabled !== false);
+  const sorted = enabled.sort((a: any, b: any) => (b.priority || 0) - (a.priority || 0));
   return sorted.slice(0, maxBanners);
 };
 

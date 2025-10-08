@@ -133,7 +133,7 @@ class PerformanceOptimizer {
       let clsValue = 0;
       const observer = new PerformanceObserver((list) => {
         const entries = list.getEntries();
-        entries.forEach((entry: LayoutShift) => {
+        entries.forEach((entry: any) => {
           if (!entry.hadRecentInput) {
             clsValue += entry.value;
           }

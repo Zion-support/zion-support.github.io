@@ -261,10 +261,10 @@ export class CacheManager<T = unknown> {
     if (typeof window === 'undefined') return;
     
     try {
-//       const storage = this.getStorage();
+      const storage = this.getStorage();
       storage?.removeItem('cache');
     } catch (error) {
-//       console.error('Failed to clear cache storage:', error);
+      console.error('Failed to clear cache storage:', error);
     }
   }
   

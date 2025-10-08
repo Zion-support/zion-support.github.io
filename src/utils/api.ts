@@ -39,7 +39,7 @@ export const fetchWithRetry = async <T = unknown>(
     try {
       // Create abort controller for timeout
       const controller = new AbortController();
-//       const timeoutId = setTimeout(() => controller.abort(), timeout);
+      const timeoutId = setTimeout(() => controller.abort(), timeout);
 
       const response = await fetch(url, {
         ...fetchOptions,
