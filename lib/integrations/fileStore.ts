@@ -1,108 +1,29 @@
-=======
-import fs from 'fs';
-import path from 'path';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a0d
-=======
-import fs from 'fs';
-import path from 'path';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-efe9
-=======
-import fs from 'fs';
-import path from 'path';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-9008
-=======
-import * as fs from 'fs';
-import * as path from 'path';
->>>>>>> origin/main
 import type { IntegrationsState } from './types';
 
 const DATA_DIR = path.resolve(process.cwd(), 'data', 'integrations');
 const STATE_FILE = path.join(DATA_DIR, 'state.json');
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b781
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3fed
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-6abd
 import fs from "fs";
 import path from "path";
 import type { IntegrationsState } from "./types";
 
 const DATA_DIR = path.resolve(process.cwd(), "data", "integrations");
 const STATE_FILE = path.join(DATA_DIR, "state.json");
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b781
-=======
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-8344
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-d12c
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-ee0f
 import fs from "fs";
 import path from "path";
 import { IntegrationsState } from "./types";
 
 const DATA_DIR = path.resolve(process.cwd(), "data", "integrations");
 const STATE_FILE = path.join(DATA_DIR, "state.json");
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-8344
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3fed
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-1f83
-=======
-import fs from 'fs';
-import path from 'path';
-import { IntegrationsState } from './types';
-
-const DATA_DIR = path.resolve(process.cwd(), 'data', 'integrations');
-const STATE_FILE = path.join(DATA_DIR, 'state.json');
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-9d58
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a0d
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-d12c
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-efe9
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-9008
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-6abd
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-ee0f
-=======
->>>>>>> origin/main
 
 function ensureDataDir(): void {
   if (!fs.existsSync(DATA_DIR)) {
     fs.mkdirSync(DATA_DIR, { recursive: true });
   }
-=======
-  
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8
-=======
-  
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-9d58
   if (!fs.existsSync(STATE_FILE)) {
-=======
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-9008
 }
 
 export function readState(): IntegrationsState {
   ensureDataDir();
-=======
-  
-=======
-
->>>>>>> origin/main
   if (!fs.existsSync(STATE_FILE)) {
     const initial: IntegrationsState = {
       connections: [],
@@ -115,145 +36,17 @@ export function readState(): IntegrationsState {
     return JSON.parse(raw) as IntegrationsState;
   } catch {
 }
-=======
-    fs.writeFileSync(STATE_FILE, JSON.stringify(initial, null, 2), 'utf8');
-  }
-}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8
-=======
-}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-8344
-=======
-}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3fed
-=======
-}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-1f83
-=======
-    fs.writeFileSync(STATE_FILE, JSON.stringify(initial, null, 2), 'utf8');
-  }
-}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-9d58
-=======
-}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
-=======
-}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a0d
-=======
-    fs.writeFileSync(STATE_FILE, JSON.stringify(initial, null, 2), 'utf8');
-  }
-}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-efe9
-=======
-    fs.writeFileSync(STATE_FILE, JSON.stringify(initial, null, 2), "utf8");
-  }
-}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-6abd
-=======
-    fs.writeFileSync(STATE_FILE, JSON.stringify(initial, null, 2), "utf8");
-  }
-}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-ee0f
 
 export function readState(): IntegrationsState {
   ensureDataDir();
   
   try {
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0a8c
-=======
-    const raw = fs.readFileSync(STATE_FILE, 'utf8');
-    return JSON.parse(raw) as IntegrationsState;
-  } catch (error) {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8
-=======
-    const raw = fs.readFileSync(STATE_FILE, "utf8");
-    return JSON.parse(raw) as IntegrationsState;
-  } catch (error) {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-8344
-=======
-    const raw = fs.readFileSync(STATE_FILE, "utf8");
-    return JSON.parse(raw) as IntegrationsState;
-  } catch (error) {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3fed
-=======
-    const raw = fs.readFileSync(STATE_FILE, 'utf8');
-    return JSON.parse(raw) as IntegrationsState;
-  } catch (error) {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-1f83
-=======
-    const raw = fs.readFileSync(STATE_FILE, 'utf8');
-    return JSON.parse(raw) as IntegrationsState;
-  } catch (error) {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-9d58
-=======
-    const raw = fs.readFileSync(STATE_FILE, "utf8");
-    return JSON.parse(raw) as IntegrationsState;
-  } catch (error) {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
-=======
-    const raw = fs.readFileSync(STATE_FILE, 'utf8');
-    return JSON.parse(raw) as IntegrationsState;
-  } catch (error) {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a0d
-=======
-    const raw = fs.readFileSync(STATE_FILE, 'utf8');
-    return JSON.parse(raw) as IntegrationsState;
-  } catch (error) {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-efe9
-=======
-  
-  try {
-    const raw = fs.readFileSync(STATE_FILE, 'utf8');
-    return JSON.parse(raw) as IntegrationsState;
-  } catch (error) {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-9008
-=======
-    const raw = fs.readFileSync(STATE_FILE, "utf8");
-    return JSON.parse(raw) as IntegrationsState;
-  } catch (error) {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-6abd
-=======
-    const raw = fs.readFileSync(STATE_FILE, "utf8");
-    return JSON.parse(raw) as IntegrationsState;
-  } catch (error) {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-ee0f
     return {
-=======
-    const initial: IntegrationsState = {
->>>>>>> origin/main
       connections: [],
       logs: [],
       overrides: [],
       events: [],
     };
-=======
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8
-=======
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-8344
-=======
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3fed
-=======
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-1f83
-=======
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-9d58
-=======
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
-=======
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a0d
-=======
-    fs.writeFileSync(STATE_FILE, JSON.stringify(initial, null, 2), "utf8");
-=======
-    fs.writeFileSync(STATE_FILE, JSON.stringify(initial, null, 2), 'utf8');
->>>>>>> origin/main
     return initial;
   }
 }
@@ -264,16 +57,6 @@ export function writeState(
   ensureDataDir();
   const current = readState();
   mutator(current);
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e3b
-=======
-import fs from 'fs';
-import path from 'path';
-=======
-  fs.writeFileSync(STATE_FILE, JSON.stringify(current, null, 2), 'utf8');
-  return current;
-}
->>>>>>> origin/main
 
 export interface FileStoreOptions {
   basePath: string;

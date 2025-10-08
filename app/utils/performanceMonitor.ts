@@ -234,29 +234,3 @@ class PerformanceMonitor {
     
     return `
 Performance Report:
-==================
-Overall Score: ${score}/100
-
-Core Web Vitals:
-- First Contentful Paint: ${metrics.fcp?.toFixed(2) || 'N/A'}ms
-- Largest Contentful Paint: ${metrics.lcp?.toFixed(2) || 'N/A'}ms
-- First Input Delay: ${metrics.fid?.toFixed(2) || 'N/A'}ms
-- Cumulative Layout Shift: ${metrics.cls?.toFixed(3) || 'N/A'}
-- Time to First Byte: ${metrics.ttfb?.toFixed(2) || 'N/A'}ms
-
-Custom Metrics:
-${Object.entries(metrics.customMetrics)
-  .map(([key, value]) => `- ${key}: ${value.toFixed(2)}ms`)
-  .join('\n')}
-    `.trim();
-  }
-
-  cleanup(): void {
-    this.observers.forEach(observer => observer.disconnect());
-    this.observers = [];
-    this.isInitialized = false;
-  }
-}
-
-export const performanceMonitor = new PerformanceMonitor();
-export default performanceMonitor;

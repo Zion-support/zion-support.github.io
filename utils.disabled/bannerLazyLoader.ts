@@ -4,11 +4,6 @@
  * Optimizes banner loading by implementing lazy loading and code splitting
  * to improve initial page load performance.
  */
-=======
-import { lazy, ComponentType } from 'react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3f25:utils/bannerLazyLoader.ts
 
 import { lazy, ComponentType } from 'react';
 
@@ -19,108 +14,6 @@ interface LazyBannerConfig {
   onError?: (error: Error) => void;
 }
 
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-9008
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-ee0f
-=======
-export class BannerLazyLoader {
-  private loadedBanners: Map<string, ComponentType<any>> = new Map();
-  private loadingPromises: Map<string, Promise<ComponentType<any>>> = new Map();
-
-  async loadBanner(importPath: string): Promise<ComponentType<any>> {
-    // Return cached component if already loaded
-    if (this.loadedBanners.has(importPath)) {
-      return this.loadedBanners.get(importPath)!;
-    }
-
-    // Return existing promise if already loading
-    if (this.loadingPromises.has(importPath)) {
-      return this.loadingPromises.get(importPath)!;
-    }
-
-    // Create new loading promise
-    const loadPromise = this.performLoad(importPath);
-    this.loadingPromises.set(importPath, loadPromise);
-
-    try {
-      const component = await loadPromise;
-      this.loadedBanners.set(importPath, component);
-      return component;
-    } finally {
-      this.loadingPromises.delete(importPath);
-    }
-  }
-
-  private async performLoad(importPath: string): Promise<ComponentType<any>> {
-    try {
-      const module = await import(importPath);
-      return module.default || module;
-    } catch (error) {
-      throw new Error(`Failed to load banner from ${importPath}: ${error}`);
-    }
-  }
-
-  getBanner(importPath: string): ComponentType<any> | null {
-    return this.loadedBanners.get(importPath) || null;
-  }
-
-  isLoaded(importPath: string): boolean {
-    return this.loadedBanners.has(importPath);
-  }
-
-  isLoading(importPath: string): boolean {
-    return this.loadingPromises.has(importPath);
-  }
-
-  clear(): void {
-    this.loadedBanners.clear();
-    this.loadingPromises.clear();
-  }
-
-  destroy(): void {
-    this.clear();
-  }
-}
-
-export const createBannerLazyLoader = (): BannerLazyLoader => {
-  return new BannerLazyLoader();
-};
-
-export default BannerLazyLoader;
-import { lazy } from 'react';
-import type { ComponentType } from 'react';
-import { lazy, ComponentType } from 'react';
-import { lazy, ComponentType } from 'react';
-
-import { lazy, ComponentType } from 'react';
-import { lazy, ComponentType } from 'react';
-
-import { lazy, ComponentType } from 'react';
-
-interface BannerModule {
-  default: ComponentType<any>;
-}
-
-/**
- * Lazy load a banner component with retry logic
- */
-export const lazyLoadBanner = (
-  importFn: () => Promise<BannerModule>,
-  componentName: string,
-) => {
-  return lazy(() =>
-    importFn().catch(error => {
-      console.error(`Failed to load banner: ${componentName}`, error);
-      // Retry once after a delay
-      return new Promise<BannerModule>(resolve => {
-        setTimeout(() => {
-          importFn()
-            .then(resolve)
-            .catch(retryError => {
-              console.error(
-                `Retry failed for banner: ${componentName}`,
->>>>>>> origin/main
                 retryError
               );
               // Return a fallback component
@@ -141,59 +34,10 @@ export const lazyLoadBanner = (
  * Preload banner components for better performance
  */
 export const preloadBanner = (importFn: () => Promise<BannerModule>): void => {
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-9008
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-ee0f
-=======
-  if (typeof window !== 'undefined') {
-    // Use requestIdleCallback for non-blocking preloading
-    if ('requestIdleCallback' in window) {
-      requestIdleCallback(() => {
-        importFn().catch(error => {
-          console.warn('Banner preload failed:', error);
-        });
-      });
-    });
-  }
-};
-
-/**
- * Get banner priority based on content date and value
- */
-export const getBannerPriority = (bannerName: string): number => {
-  // October 2025 content gets highest priority
-  if (bannerName.includes('October2025')) {
-    if (bannerName.includes('MultiAgent') || bannerName.includes('RealTime')) {
-      return 1; // Highest priority
-    }
-    return 2;
-  }
-  
-  // 2026+ content gets medium priority
-  if (bannerName.includes('2026') || bannerName.includes('2027')) {
-    return 3;
-  }
-  
-  // Older content gets lower priority
-  return 4;
-};
-
-/**
- * Sort banners by priority for optimal loading
- */
-export const sortBannersByPriority = (bannerNames: string[]): string[] => {
-  return [...bannerNames].sort((a, b) => {
-    return getBannerPriority(a) - getBannerPriority(b);
->>>>>>> origin/main
   });
 };
 
 /**
-=======
- * Banner loading state management
- */
->>>>>>> origin/main
 export class BannerObserver {
   private observer: IntersectionObserver | null = null;
   private loadedBanners = new Set<string>();
@@ -225,8 +69,6 @@ export class BannerObserver {
       }, 100);
     }
   }
-=======
->>>>>>> origin/main
 
   observe(element: Element): void {
     this.observer?.observe(element);
@@ -244,49 +86,6 @@ export class BannerObserver {
 /**
  * Hook for banner loading state
  */
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-9008
-=======
-/**
- * Banner loading state management
- */
-export class BannerLoader {
-  private loadingStates = new Map<string, boolean>();
-  private loadedComponents = new Set<string>();
-
-  isLoaded(componentName: string): boolean {
-    return this.loadedComponents.has(componentName);
-  }
-
-  isLoading(componentName: string): boolean {
-    return this.loadingStates.get(componentName) || false;
-  }
-
-  setLoading(componentName: string, loading: boolean): void {
-    this.loadingStates.set(componentName, loading);
-  }
-
-  setLoaded(componentName: string): void {
-    this.loadedComponents.add(componentName);
-    this.loadingStates.delete(componentName);
-  }
-
-  getLoadingCount(): number {
-    return Array.from(this.loadingStates.values()).filter(Boolean).length;
-  }
-
-  getAllLoadedComponents(): string[] {
-    return Array.from(this.loadedComponents);
-  }
-}
-
-// Global banner loader instance
-export const bannerLoader = new BannerLoader();
-
-/**
- * Hook for banner loading state
- */
->>>>>>> origin/main
 export const trackBannerPerformance = (
   bannerName: string,
   metrics: {
@@ -399,8 +198,6 @@ export const createBannerConfig = (
  */
 export class BannerManager {
   private configs: BannerConfig[] = [];
-=======
->>>>>>> origin/main
   private loadedBanners: Map<string, ComponentType<any>> = new Map();
 
   addBanner(config: BannerConfig): void {

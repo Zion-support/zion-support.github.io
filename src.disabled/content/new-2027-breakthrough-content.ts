@@ -13,20 +13,6 @@
   },
   {
     id: 'ai-2027-quantum-consciousness-singularity',
-=======
-:src/content/new-2027-breakthrough-content.ts
-    title: 'Quantum Consciousness Singularity: The $1.2T Enterprise Revolution',
-    description: 'Breakthrough quantum consciousness technology delivering unprecedented enterprise transformation with guaranteed 500% ROI. The future of business intelligence is here.',
-    content: `
-*Transform your enterprise with quantum consciousness. Schedule your consultation today.*
-    `,
-    author: 'Dr. Marcus Quantum, Quantum Consciousness Director',
-    title: 'AI 2027 Quantum Consciousness Singularity: The Convergence of Intelligence and Reality',
-    description: 'Revolutionary breakthrough achieving quantum consciousness singularity with infinite processing power, universal intelligence, and $1 trillion enterprise value generation.',
-content: `
-*Ready to transcend limitations with quantum consciousness? Contact our Singularity Specialists today.*
-    `,
->>>>>>> origin/main
     author: 'Dr. Marcus Quantum, Chief Singularity Officer',
     date: '2027-01-20',
     category: 'Quantum AI',
