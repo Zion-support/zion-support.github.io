@@ -177,7 +177,7 @@ export class SecureStorage {
       const encryptedData = btoa(data);
       localStorage.setItem(`${this.prefix}${key}`, encryptedData);
     } catch (error) {
-//       console.error('Failed to set storage item:', error);
+      console.error('Failed to set storage item:', error);
     }
   }
 
@@ -193,7 +193,7 @@ export class SecureStorage {
       const data = atob(encryptedData);
       return JSON.parse(data) as T;
     } catch (error) {
-//       console.error('Failed to get storage item:', error);
+      console.error('Failed to get storage item:', error);
       return null;
     }
   }
