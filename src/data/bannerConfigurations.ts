@@ -25,13 +25,11 @@ export const selectBalancedBanners = async (maxBanners: number): Promise<BannerC
 
 export const trackImpression = async (bannerId: string): Promise<void> => {
   // Implementation would track banner impressions
-  console.log(`Tracking impression for banner: ${bannerId}`);
-};
+  };
 
 export const trackClick = async (bannerId: string): Promise<void> => {
   // Implementation would track banner clicks
-  console.log(`Tracking click for banner: ${bannerId}`);
-};
+  };
 
 export const loadBannerStats = async (): Promise<{ impressions: number; clicks: number; ctr: number }> => {
   return {

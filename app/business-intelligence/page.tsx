@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, Star, BarChart, TrendingUp, Target, Eye, Database, Zap, Brain, PieChart, LineChart, Activity } from 'lucide-react';
+import { CheckCircle, Star, BarChart, TrendingUp, Target, Database, Zap, Brain, PieChart, LineChart, Activity } from 'lucide-react';
 
 const BusinessIntelligencePage: React.FC = () => {
   const biServices = [

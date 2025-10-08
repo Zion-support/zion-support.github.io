@@ -184,14 +184,16 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
 
   // const _addStructuredData = (data: Record<string, unknown>) => {
   //   // Remove existing structured data
-  //   // if (structuredDataRef.current) {
-  //   //   structuredDataRef.current.remove();
-  //   // }
+  //   if (structuredDataRef.current) {
+  //     structuredDataRef.current.remove();
+  //   }
   //   
   //   const script = document.createElement('script');
   //   script.type = 'application/ld+json';
   //   script.textContent = JSON.stringify(data);
+  //   script.id = 'structured-data';
   //   document.head.appendChild(script);
+  //   structuredDataRef.current = script;
   // };
 
   const _trackPageView = (config: SEOData) => {
