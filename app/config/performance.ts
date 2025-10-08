@@ -65,10 +65,12 @@ export const performanceConfig = {
       cacheGroups: {
         vendor: {
           test: /[\\/]node_modules[\\/]/,
+          priority: -10,
           reuseExistingChunk: true,
         },
         default: {
           minChunks: 2,
+          priority: -20,
           reuseExistingChunk: true,
         },
       },
@@ -82,3 +84,8 @@ export const performanceConfig = {
     sendToAnalytics: true,
     logThreshold: 'needsImprovement',
   },
+};
+
+export type PerformanceConfig = typeof performanceConfig;
+
+export default performanceConfig;

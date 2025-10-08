@@ -1,3 +1,16 @@
+import { useEffect, useCallback } from 'react';
+
+export const usePerformanceMonitoring = () => {
+  const reportWebVitals = useCallback((metric: any) => {
+    const body = JSON.stringify(metric);
+    const url = '/api/analytics';
+
+    if (navigator.sendBeacon) {
+      navigator.sendBeacon(url, body);
+    } else {
+      fetch(url, { body, method: 'POST', keepalive: true }).catch(console.error);
+    }
+  }, []);
 
   useEffect(() => {
     if (typeof window !== 'undefined' && 'performance' in window) {
@@ -8,3 +21,15 @@
             name: entry.name,
             value: entry.startTime,
             timestamp: Date.now()
+          });
+        }
+      });
+
+      observer.observe({ entryTypes: ['navigation', 'paint', 'largest-contentful-paint'] });
+
+      return () => observer.disconnect();
+    }
+  }, [reportWebVitals]);
+
+  return { reportWebVitals };
+};
