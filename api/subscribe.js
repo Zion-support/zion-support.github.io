@@ -21,53 +21,40 @@ async function handler(req, res) {
 
   if (!isValidEmail(email)) {
     res.statusCode = 400;
-    res.json({ error: 'Invalid email address' });
+    res.json({ error: 'Invalid email' });
     return;
   }
 
   try {
-    // Mock subscription - in production, this would integrate with a real service
-    const subscriber = {
+    const file = path.join(
+      process.cwd(),
+      'data',
+      'newsletter-subscriptions.json'
+    );
+    
+    let existing = [];
+    
+    try {
+      existing = JSON.parse(fs.readFileSync(file, 'utf8'));
+      if (!Array.isArray(existing)) existing = [];
+    } catch {
+      // File doesn't exist or is invalid, use empty array
+    }
+
+    existing.push({
       email,
-      name: name || '',
+      name,
       source,
       subscribedAt: new Date().toISOString(),
-      status: 'active',
-    };
+    });
 
-    // Log to file (mock implementation)
-    const subscriptionsDir = path.join(process.cwd(), '.data');
-    const subscriptionsFile = path.join(subscriptionsDir, 'subscribers.json');
-
-    // Ensure directory exists
-    if (!fs.existsSync(subscriptionsDir)) {
-      fs.mkdirSync(subscriptionsDir, { recursive: true });
-    }
-
-    // Read existing subscribers
-    let subscribers = [];
-    if (fs.existsSync(subscriptionsFile)) {
-      const data = fs.readFileSync(subscriptionsFile, 'utf8');
-      subscribers = JSON.parse(data);
-    }
-
-    // Check if already subscribed
-    if (subscribers.some(sub => sub.email === email)) {
-      res.statusCode = 200;
-      res.json({ success: true, message: 'Already subscribed', subscriber });
-      return;
-    }
-
-    // Add new subscriber
-    subscribers.push(subscriber);
-    fs.writeFileSync(subscriptionsFile, JSON.stringify(subscribers, null, 2));
-
+    fs.writeFileSync(file, JSON.stringify(existing, null, 2));
     res.statusCode = 200;
-    res.json({ success: true, message: 'Successfully subscribed', subscriber });
-  } catch (error) {
-    console.error('Subscribe error:', error);
+    res.json({ success: true });
+  } catch (err) {
+    console.error('Subscribe API error:', err);
     res.statusCode = 500;
-    res.json({ error: 'Subscription failed' });
+    res.json({ error: err.message || 'Subscription failed' });
   }
 }
 

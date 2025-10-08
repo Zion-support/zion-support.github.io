@@ -3,13 +3,6 @@
  * Enhanced with retry logic, error categorization, and better reporting
  */
 
-export enum ErrorSeverity {
-  LOW = 'low',
-  MEDIUM = 'medium',
-  HIGH = 'high',
-  CRITICAL = 'critical',
-}
-
 export enum ErrorCategory {
   NETWORK = 'network',
   VALIDATION = 'validation',
@@ -17,6 +10,13 @@ export enum ErrorCategory {
   API = 'api',
   UI = 'ui',
   UNKNOWN = 'unknown',
+}
+
+export enum ErrorSeverity {
+  LOW = 'low',
+  MEDIUM = 'medium',
+  HIGH = 'high',
+  CRITICAL = 'critical',
 }
 
 export interface ErrorInfo {
@@ -74,25 +74,28 @@ export class ErrorHandler {
   }
 
   /**
-   * Categorize error based on message
+   * Categorize error based on type and message
    */
   private categorizeError(error: Error): ErrorCategory {
     const message = error.message.toLowerCase();
     
-    if (message.includes('network') || message.includes('fetch')) {
+    if (message.includes('network') || message.includes('fetch') || message.includes('timeout')) {
       return ErrorCategory.NETWORK;
     }
+    
     if (message.includes('validation') || message.includes('invalid')) {
       return ErrorCategory.VALIDATION;
     }
-    if (message.includes('api') || message.includes('endpoint')) {
+    
+    if (message.includes('api') || message.includes('request')) {
       return ErrorCategory.API;
     }
-    if (message.includes('render') || message.includes('component')) {
-      return ErrorCategory.UI;
+    
+    if (error.name === 'TypeError' || error.name === 'ReferenceError') {
+      return ErrorCategory.RUNTIME;
     }
     
-    return ErrorCategory.RUNTIME;
+    return ErrorCategory.UNKNOWN;
   }
 
   /**
@@ -102,20 +105,23 @@ export class ErrorHandler {
     if (category === ErrorCategory.NETWORK) {
       return ErrorSeverity.MEDIUM;
     }
-    if (category === ErrorCategory.API) {
+    
+    if (category === ErrorCategory.RUNTIME) {
       return ErrorSeverity.HIGH;
     }
-    if (error.message.includes('critical')) {
-      return ErrorSeverity.CRITICAL;
+    
+    if (category === ErrorCategory.VALIDATION) {
+      return ErrorSeverity.LOW;
     }
-    return ErrorSeverity.LOW;
+    
+    return ErrorSeverity.MEDIUM;
   }
 
   /**
    * Generate unique error ID
    */
   private generateErrorId(): string {
-    return `err_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+    return `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
   }
 
   /**
@@ -124,23 +130,26 @@ export class ErrorHandler {
   private addToQueue(errorData: ErrorInfo): void {
     this.errorQueue.push(errorData);
     
-    // Remove oldest errors if queue is full
     if (this.errorQueue.length > this.maxQueueSize) {
       this.errorQueue.shift();
     }
   }
 
   /**
-   * Report error to external service
+   * Report error to service
    */
   private reportError(errorData: ErrorInfo): void {
     // Log to console in development
-    if (process.env['NODE_ENV'] === 'development') {
-      console.error('Error:', errorData);
+    if (process.env.NODE_ENV === 'development') {
+      console.error('Error reported:', errorData);
     }
-    
-    // Here you would send to an error reporting service like Sentry
-    // Example: Sentry.captureException(errorData);
+
+    // Send to error tracking service (e.g., Sentry, LogRocket)
+    if (typeof window !== 'undefined' && (window as any).Sentry) {
+      (window as any).Sentry.captureException(new Error(errorData.message), {
+        extra: errorData,
+      });
+    }
   }
 
   /**
@@ -174,5 +183,4 @@ export class ErrorHandler {
 
 // Export singleton instance
 export const errorHandler = ErrorHandler.getInstance();
-
-export default ErrorHandler;
+export default errorHandler;

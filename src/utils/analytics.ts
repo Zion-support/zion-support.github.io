@@ -82,15 +82,6 @@ class Analytics {
     };
 
     this.events.push(event);
-    
-    // Send to analytics service if available
-    if (typeof window !== 'undefined' && 'gtag' in window) {
-      (window as { gtag: (...args: unknown[]) => void }).gtag('event', name, {
-        event_category: category,
-        event_label: label,
-        value: value,
-      });
-    }
   }
 
   /**
@@ -98,7 +89,7 @@ class Analytics {
    */
   trackPageView(page: string, title?: string): void {
     this.track('page_view', 'navigation', 'view', page, undefined, {
-      page_title: title || document.title,
+      page_title: title || (typeof document !== 'undefined' ? document.title : ''),
       page_url: typeof window !== 'undefined' ? window.location.href : page,
     });
   }
@@ -117,7 +108,7 @@ class Analytics {
   /**
    * Track performance metrics
    */
-  trackPerformance(metric: string, value: number, unit: string = 'ms'): void {
+  trackPerformance(metric: string, value: number, unit: string): void {
     this.track('performance', 'metrics', metric, unit, value);
   }
 
@@ -133,17 +124,9 @@ class Analytics {
   }
 
   /**
-   * Send event to analytics service
-   */
-  private sendToAnalyticsService(event: AnalyticsEvent): void {
-    // Implementation would go here
-    console.log('Analytics event:', event);
-  }
-
-  /**
    * Get all events
    */
-  getEvents(): AnalyticsEvent[] {
+  getAllEvents(): AnalyticsEvent[] {
     return [...this.events];
   }
 
@@ -176,7 +159,6 @@ class Analytics {
   }
 }
 
-// Export singleton instance
-export const analytics = new Analytics();
+const analytics = new Analytics();
 
 export default analytics;

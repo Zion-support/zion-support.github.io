@@ -8,44 +8,45 @@ async function handler(req, res) {
     return;
   }
 
-  const { weight, destination, serviceType = 'standard' } = req.body || {};
-
-  if (!weight || !destination) {
-    res.statusCode = 400;
-    res.json({ error: 'Weight and destination are required' });
-    return;
-  }
-
   try {
-    // Mock shipping rate calculation
-    const baseRate = 5.0;
-    const perPoundRate = 0.5;
-    const calculatedRate = baseRate + (weight * perPoundRate);
+    const { fromAddress, toAddress, parcel } = req.body || {};
+    const apiKey = process.env.EASYPOST_API_KEY;
 
-    const serviceMultipliers = {
-      standard: 1.0,
-      express: 1.5,
-      overnight: 2.5,
-    };
+    if (!apiKey) {
+      res.statusCode = 500;
+      res.json({ error: 'EasyPost API key not configured' });
+      return;
+    }
 
-    const multiplier = serviceMultipliers[serviceType] || 1.0;
-    const finalRate = (calculatedRate * multiplier).toFixed(2);
+    const response = await fetch('https://api.easypost.com/v2/shipments', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${apiKey}`,
+      },
+      body: JSON.stringify({
+        shipment: {
+          to_address: toAddress,
+          from_address: fromAddress,
+          parcel,
+        },
+      }),
+    });
 
-    const shippingRate = {
-      weight,
-      destination,
-      serviceType,
-      rate: parseFloat(finalRate),
-      currency: 'USD',
-      estimatedDays: serviceType === 'overnight' ? 1 : serviceType === 'express' ? 2 : 5,
-    };
+    const data = await response.json();
+
+    if (!response.ok) {
+      res.statusCode = 500;
+      res.json({ error: data.error || 'Failed to fetch rates' });
+      return;
+    }
 
     res.statusCode = 200;
-    res.json({ success: true, shippingRate });
-  } catch (error) {
-    console.error('Shipping rates error:', error);
+    res.json({ rates: data.rates });
+  } catch (err) {
+    console.error('EasyPost error:', err);
     res.statusCode = 500;
-    res.json({ error: 'Failed to calculate shipping rates' });
+    res.json({ error: err.message });
   }
 }
 
