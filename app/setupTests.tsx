@@ -127,6 +127,8 @@ delete (window as { location?: unknown }).location;
   replace: jest.fn(),
   ancestorOrigins: {} as DOMStringList,
   reload: jest.fn(),
+};
+
 // Suppress jsdom navigation warnings
 const originalConsoleError = console.error;
 console.error = (...args) => {

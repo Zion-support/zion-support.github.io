@@ -219,6 +219,10 @@ class PerformanceOptimizer {
    */
   generateReport(): string {
     const score = this.getPerformanceScore();
+    return `Performance Score: ${score}`;
+  }
+
+  /**
    * Lazy load images for better performance
    */
   lazyLoadImages(): void {
@@ -332,9 +336,11 @@ ${metrics.memoryUsage > 30 * 1024 * 1024 ? '- Review memory usage and optimize c
     this.enableCodeSplitting();
     this.enableCaching();
     
-    if (process.env.NODE_ENV === 'development') { console.log('Performance optimization completed'); }
-    if (process.env.NODE_ENV === 'development') { console.log(this.generateReport()); }
-   */
+    if (process.env.NODE_ENV === 'development') { 
+      console.log('Performance optimization completed'); 
+      console.log(this.generateReport()); 
+    }
+  }
   public cleanup(): void {
     this.observers.forEach(observer => observer.disconnect());
     this.observers = [];

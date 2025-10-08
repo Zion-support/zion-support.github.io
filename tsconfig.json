@@ -137,6 +137,8 @@
     {
       "path": "./tsconfig.node.json"
     }
+  ],
+  "exclude": [
     "_app_disabled/**/*",
     "_conflicted_disabled/**/*",
     "_pages_api_disabled/**/*",
