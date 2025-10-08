@@ -45,7 +45,6 @@ const InteractiveContentShowcase2026 = memo(() => (
     </div>
   </div>
 ));
-<<<<<<< HEAD
 interface ErrorBoundaryState {
   hasError: boolean;
   error: Error | null;
@@ -88,9 +87,6 @@ class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundarySta
     return this.props.children;
   }
 }
-=======
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-17a6
 // Loading component
 const LoadingSpinner = memo(() => (
   <div className="animate-pulse bg-gray-200 h-32 rounded flex items-center justify-center">
