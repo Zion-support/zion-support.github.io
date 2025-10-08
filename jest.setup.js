@@ -1,8 +1,9 @@
 // Learn more: https://github.com/testing-library/jest-dom
-import '@testing-library/jest-dom';
+require('@testing-library/jest-dom');
+const React = require('react');
 
 // Mock files that use import.meta.env
-jest.mock('./app/utils/logger.ts', () => ({
+jest.mock('./src/utils/logger.ts', () => ({
   logger: {
     debug: jest.fn(),
     info: jest.fn(),
@@ -12,72 +13,37 @@ jest.mock('./app/utils/logger.ts', () => ({
   },
 }));
 
-jest.mock('./app/utils/analytics.ts', () => ({
+jest.mock('./src/utils/analytics.ts', () => ({
   trackEvent: jest.fn(),
   trackPageView: jest.fn(),
   initAnalytics: jest.fn(),
 }));
 
-jest.mock('./app/utils/errorReporter.ts', () => ({
+jest.mock('./src/utils/errorTracking.ts', () => ({
   reportError: jest.fn(),
   initErrorReporting: jest.fn(),
 }));
 
-jest.mock('./app/hooks/usePerformanceOptimization.ts', () => ({
-  usePerformanceOptimization: jest.fn(() => ({
+jest.mock('./src/hooks/usePerformance.ts', () => ({
+  usePerformance: jest.fn(() => ({
     metrics: {},
     optimize: jest.fn(),
   })),
 }));
 
-jest.mock('./app/hooks/usePerformanceMonitoring.ts', () => ({
-  usePerformanceMonitoring: jest.fn(() => ({
-    metrics: {},
-    report: {},
-  })),
-}));
-
-// Mock Next.js router
-jest.mock('next/router', () => ({
-  useRouter() {
-    return {
-      route: '/',
-      pathname: '/',
-      query: {},
-      asPath: '/',
-      push: jest.fn(),
-      replace: jest.fn(),
-      reload: jest.fn(),
-      back: jest.fn(),
-      prefetch: jest.fn(),
-      beforePopState: jest.fn(),
-      events: {
-        on: jest.fn(),
-        off: jest.fn(),
-        emit: jest.fn(),
-      },
-      isFallback: false,
-      isLocaleDomain: false,
-      isReady: true,
-      isPreview: false,
-    };
-  },
-}));
-
-// Mock Next.js Link
-jest.mock('next/link', () => {
-  return ({ children, href }) => {
-    return <a href={href}>{children}</a>;
-  };
-});
-
-// Mock Next.js Image
-jest.mock('next/image', () => ({
-  __esModule: true,
-  default: (props) => {
-    // eslint-disable-next-line jsx-a11y/alt-text
-    return <img {...props} />;
-  },
+// Mock React Router
+jest.mock('react-router-dom', () => ({
+  ...jest.requireActual('react-router-dom'),
+  useNavigate: () => jest.fn(),
+  useLocation: () => ({
+    pathname: '/',
+    search: '',
+    hash: '',
+    state: null,
+  }),
+  useParams: () => ({}),
+  Link: ({ children, to, ...props }) => React.createElement('a', { href: to, ...props }, children),
+  NavLink: ({ children, to, ...props }) => React.createElement('a', { href: to, ...props }, children),
 }));
 
 // Mock window.matchMedia

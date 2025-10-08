@@ -74,16 +74,13 @@
     "tsBuildInfoFile": ".next/cache/tsconfig.tsbuildinfo"
   },
   "include": [
-    "next-env.d.ts",
-    "app/**/*",
     "src/**/*",
     "App.tsx",
     "components/**/*",
     "api/**/*.ts",
     "api/**/*.js",
     "*.ts",
-    "*.tsx",
-    ".next/types/**/*.ts"
+    "*.tsx"
   ],
   "exclude": [
     "node_modules",
@@ -164,11 +161,7 @@
     "src/pages/blog-disabled/**",
     "hooks/**",
     "middleware/**",
-    "app/page-optimized.tsx",
-    "app/services/**/*",
-    "app/case-studies/**/*",
-    "app/guides/**/*",
-    "app/components/**/*",
+    "app/**/*",
     "src/components/disabled-corrupted/**",
     "EnhancedFooter.tsx",
     "EnhancedHeader.tsx",
