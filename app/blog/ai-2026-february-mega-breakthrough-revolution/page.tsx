@@ -1,12 +1,6 @@
 import React from 'react';
 import { Star } from 'lucide-react';
-import { Metadata } from 'next';
-
-export const metadata: Metadata = {
-  title: "AI 2026 February Mega Breakthrough Revolution: Transform Your Business",
-  description: "Experience the revolutionary AI 2026 February mega breakthrough featuring advanced automation, intelligent systems, and unprecedented business transformation.",
-  keywords: 'AI 2026, February breakthrough, mega revolution, business transformation, intelligent automation'
-};
+// Metadata removed - use React Helmet instead
 
 export default function AI2026FebruaryMegaBreakthroughRevolution() {
   return (

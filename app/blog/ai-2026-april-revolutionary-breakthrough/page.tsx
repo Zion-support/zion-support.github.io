@@ -1,10 +1,5 @@
 import React from 'react';
-import { Metadata } from 'next';
-
-export const metadata: Metadata = {
-  title: "AI 2026 April Revolutionary Breakthrough: Meta-Cognitive Superintelligence Platform",
-  description: "Revolutionary AI breakthrough featuring meta-cognitive superintelligence and quantum-neural consciousness fusion delivering unprecedented enterprise transformation.",
-  authors: [{ name: 'Zion Tech Group' }],
+// Metadata removed - use React Helmet instead],
   openGraph: {
     title: 'AI 2026 April Revolutionary Breakthrough: Meta-Cognitive Superintelligence Platform',
     description: 'Revolutionary AI breakthrough featuring meta-cognitive superintelligence and quantum-neural consciousness fusion delivering unprecedented enterprise transformation.',

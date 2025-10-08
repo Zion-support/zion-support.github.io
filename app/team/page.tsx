@@ -1,6 +1,4 @@
 import React from 'react';
-import { Metadata } from 'next';
-
 const metadata: Metadata = {
   title: 'Our Team - Zion Tech Group',
   description:

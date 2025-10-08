@@ -1,5 +1,4 @@
-import { MetadataRoute } from 'next';
-
+// Next.js import removed
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://ziontechgroup.com';
 

@@ -1,15 +1,4 @@
-import { Metadata } from 'next';
-
-export const metadata: Metadata = {
-  title: 'January 2025 Cutting-Edge AI Trends: Revolutionary Breakthrough Technologies | Zion Tech Group',
-  description: 'Explore the latest cutting-edge AI trends and breakthrough technologies transforming enterprise operations in January 2025. Neural consciousness, quantum optimization, and autonomous intelligence.',
-  keywords: 'AI trends 2025, cutting-edge AI, breakthrough technologies, neural consciousness, quantum AI, autonomous intelligence, enterprise AI',
-  openGraph: {
-    title: 'January 2025 Cutting-Edge AI Trends: Revolutionary Breakthrough Technologies | Zion Tech Group',
-    description: 'Explore the latest cutting-edge AI trends and breakthrough technologies transforming enterprise operations in January 2025. Neural consciousness, quantum optimization, and autonomous intelligence.',
-    type: 'article',
-    authors: ['Zion Tech Group'],
-  },
+// Metadata removed - use React Helmet instead,
   twitter: {
     card: 'summary_large_image',
     title: 'January 2025 Cutting-Edge AI Trends: Revolutionary Breakthrough Technologies',

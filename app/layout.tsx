@@ -1,4 +1,3 @@
-import type { Metadata } from 'next';
 import './globals.css';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import AnalyticsProvider from './components/AnalyticsProvider';
@@ -6,18 +5,7 @@ import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import PWAInstaller from './components/PWAInstaller';
 import { GlobalErrorBoundary } from './components/GlobalErrorBoundary';
 
-export const metadata: Metadata = {
-  title: 'Zion Tech Group - AI & IT Solutions',
-  description:
-    'Leading provider of AI-powered enterprise solutions, automation, and digital transformation services.',
-  keywords: [
-    'AI solutions',
-    'enterprise AI',
-    'digital transformation',
-    'automation',
-    'cloud services',
-  ],
-  authors: [{ name: 'Zion Tech Group' }],
+// Metadata removed - use React Helmet instead],
   creator: 'Zion Tech Group',
   publisher: 'Zion Tech Group',
   formatDetection: {

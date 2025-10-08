@@ -1,7 +1,7 @@
 'use client';
 
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { FileWarning } from 'lucide-react';
 
 interface Props {
