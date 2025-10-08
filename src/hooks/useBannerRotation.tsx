@@ -59,8 +59,8 @@ const loadBannerStats = () => {
   };
 };
 
-const getRefreshInterval = () => 30000;
-const getRotationStrategy = (): RotationStrategy => 'balanced';
+// const getRefreshInterval = () => 30000;
+// const getRotationStrategy = (): RotationStrategy => 'balanced';
 
 export const useBannerRotation = (options: UseBannerRotationOptions = {}) => {
   const {
@@ -84,7 +84,7 @@ export const useBannerRotation = (options: UseBannerRotationOptions = {}) => {
   // Load initial banners
   useEffect(() => {
     try {
-      const configs = Array.isArray(bannerConfigurations) ? bannerConfigurations : [];
+      const configs = Array.isArray(bannerConfigurations) ? bannerConfigurations as BannerConfig[] : [];
       const selected = strategy === 'balanced' 
         ? selectBalancedBanners(configs, maxBanners)
         : selectBannersForDisplay(configs, maxBanners, strategy);
