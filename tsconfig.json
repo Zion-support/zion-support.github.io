@@ -77,12 +77,12 @@
     "next-env.d.ts",
     "app/**/*.ts",
     "app/**/*.tsx",
-    "src/**/*",
-    "App.tsx",
     "components/**/*.ts",
     "components/**/*.tsx",
     "api/**/*.ts",
     "api/**/*.js",
+    "src/**/*",
+    "App.tsx",
     "*.ts",
     "*.tsx",
     ".next/types/**/*.ts"
@@ -193,7 +193,9 @@
     "middleware/**",
     "fix-*.jsx",
     "fix-*.ts",
-    "jest.setup.*"
+    "jest.setup.*",
+    "**/*.disabled/**",
+    "**/*.backup/**"
   ],
   "references": [
     {

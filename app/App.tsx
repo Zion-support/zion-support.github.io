@@ -23,6 +23,9 @@ const InteractiveAIROICalculator = lazy(
   () => import('./components/InteractiveAIROICalculator')
 );
 
+// Lazy load pages for better performance
+const HomePage = lazy(() => import('./page'));
+
 // Utils
 import { lazyLoadImages, preloadCriticalResources, collectPerformanceMetrics, performanceOptimizer } from './utils/performanceOptimizer';
 import { logger } from './utils/logger';
