@@ -9,6 +9,12 @@ interface PerformanceMetrics {
   memoryUsage: number;
   bundleSize: number;
   cacheHitRate: number;
+  ttfb?: number;
+  fcp?: number;
+  lcp?: number;
+  fid?: number;
+  cls?: number;
+  fmp?: number;
 }
 
 interface OptimizationConfig {
@@ -35,6 +41,9 @@ class PerformanceOptimizer {
     enableCaching: true,
     enableCompression: true,
   };
+
+  private observers: IntersectionObserver[] = [];
+  private isMonitoring = false;
 
   constructor(config?: Partial<OptimizationConfig>) {
     this.config = { ...this.config, ...config };
@@ -289,11 +298,31 @@ ${metrics.memoryUsage > 30 * 1024 * 1024 ? '- Review memory usage and optimize c
   }
 
   /**
+   * Measure page load metrics
+   */
+  measurePageLoad(): Partial<PerformanceMetrics> | null {
+    if (typeof window === 'undefined' || !('performance' in window)) return null;
+
+    const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+    if (!navigation) return null;
+
+    return {
+      ttfb: navigation.responseStart - navigation.requestStart,
+      fcp: this.metrics.fcp || 0,
+      lcp: this.metrics.lcp || 0,
+      fid: this.metrics.fid || 0,
+      cls: this.metrics.cls || 0,
+      fmp: this.metrics.fmp || 0,
+    };
+  }
+  }
+
+  /**
    * Report web vitals
    */
   reportWebVitals(metrics: PerformanceMetrics): void {
     if (process.env.NODE_ENV === 'development') {
-      console.log('Web Vitals reported', metrics);
+      console.log('Web Vitals reported:', metrics);
     }
     
     // Send to analytics if available
