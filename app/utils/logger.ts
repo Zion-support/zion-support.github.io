@@ -62,7 +62,7 @@ class Logger {
    * Parse arguments to determine context and metadata
    */
   private parseArgs(
-    contextOrMetadata?: string | Record<string, unknown>
+    contextOrMetadata?: string | Record<string, unknown>,
     metadata?: Record<string, unknown>
   ): [string | undefined, Record<string, unknown> | undefined] {
     if (typeof contextOrMetadata === 'string') {

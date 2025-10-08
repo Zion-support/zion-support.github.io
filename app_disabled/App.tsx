@@ -34,6 +34,10 @@ const App: React.FC = () => {
       }
     }
 
+    console.log('Performance monitoring initialized');
+    console.log(
+      '🚀 Zion Tech Group App initialized with comprehensive monitoring'
+    );
   }, []);
 
   return (
