@@ -55,14 +55,11 @@ export {
   ErrorSeverity,
   ErrorCategory,
   type ErrorInfo,
+  
+  default as ErrorHandler,
 } from './errorHandler';
-
-// Export ErrorHandler default class
 export { default as ErrorHandler } from './errorHandler';
-
-// Create and export an instance
-import ErrorHandlerClass from './errorHandler';
-export const errorHandler = new ErrorHandlerClass();
+export { default as errorHandler } from './errorHandler';
 
 // Default exports
 export { default as analytics } from './analytics';

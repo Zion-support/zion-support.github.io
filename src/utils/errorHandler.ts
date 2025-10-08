@@ -5,8 +5,8 @@
 
 export enum ErrorCategory {
   NETWORK = 'network',
-  API = 'api',
   VALIDATION = 'validation',
+  API = 'api',
   UI = 'ui',
   RUNTIME = 'runtime',
   UNKNOWN = 'unknown',
@@ -21,7 +21,8 @@ export enum ErrorSeverity {
 
 export interface ErrorInfo {
   id: string;
-  error: Error;
+  message: string;
+  stack?: string;
   category: ErrorCategory;
   severity: ErrorSeverity;
   timestamp: number;
@@ -29,16 +30,30 @@ export interface ErrorInfo {
 }
 
 class ErrorHandler {
+  private static instance: ErrorHandler;
   private errorQueue: ErrorInfo[] = [];
-  private maxQueueSize: number = 100;
+  private readonly maxQueueSize: number = 100;
 
-  trackError(error: Error, context?: Record<string, unknown>): void {
+  private constructor() {}
+
+  static getInstance(): ErrorHandler {
+    if (!ErrorHandler.instance) {
+      ErrorHandler.instance = new ErrorHandler();
+    }
+    return ErrorHandler.instance;
+  }
+
+  /**
+   * Handle an error with categorization and reporting
+   */
+  handleError(error: Error, context?: Record<string, unknown>): void {
     const category = this.categorizeError(error);
     const severity = this.determineSeverity(error, category);
 
     const errorData: ErrorInfo = {
       id: this.generateErrorId(),
-      error,
+      message: error.message,
+      stack: error.stack,
       category,
       severity,
       timestamp: Date.now(),
@@ -51,6 +66,8 @@ class ErrorHandler {
     }
 
     this.reportError(errorData);
+    
+    return errorData;
   }
 
   private categorizeError(error: Error): ErrorCategory {
@@ -106,6 +123,18 @@ class ErrorHandler {
   clearErrors(): void {
     this.errorQueue = [];
   }
+
+  public getErrorStats(): { total: number; recent: number } {
+    const now = new Date();
+    const oneHourAgo = new Date(now.getTime() - 60 * 60 * 1000);
+    const recent = this.errorQueue.filter(
+      error => new Date(error.timestamp) > oneHourAgo
+    ).length;
+
+    return {
+      total: this.errorQueue.length,
+      recent,
+    };
+  }
 }
 
-export default ErrorHandler;
