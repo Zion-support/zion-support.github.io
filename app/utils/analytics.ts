@@ -200,23 +200,28 @@ export const analytics = new AnalyticsService();
 
 // Export convenience functions
 export const trackEvent = (event: AnalyticsEvent) => analytics.trackEvent(event);
+
 export const trackPageView = (path: string, title?: string) =>
   analytics.trackPageView(path, title);
+
 export const trackError = (error: Error, metadata?: Record<string, unknown>) =>
   analytics.trackError(error, metadata);
+
 export const trackPerformance = (metric: string, value: number) =>
   analytics.trackPerformance(metric, value);
+
 export const trackTiming = (
   category: string,
   variable: string,
   value: number,
   label?: string
 ) => analytics.trackTiming(category, variable, value, label);
+
 export const identifyUser = (user: AnalyticsUser) => analytics.identifyUser(user);
+
+export default analytics;
 
 // Initialize on import
 if (typeof window !== 'undefined') {
   analytics.initialize();
 }
-
-export default analytics;
