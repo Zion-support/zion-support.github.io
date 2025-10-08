@@ -17,7 +17,7 @@ export const errorHandler = (error: AppError | Error) => {
   const isDevelopment = process.env.NODE_ENV === 'development';
   const appError = error instanceof AppError ? error : new AppError(error.message);
   
-   
+ 
     console.error({
     message: appError.message,
     stack: isDevelopment ? appError.stack : undefined,

@@ -19,11 +19,11 @@ export interface PerformanceThresholds {
 }
 
 // Extended types for specific performance entry types
-interface PerformancePaintTiming extends PerformanceEntry {
+interface _PerformancePaintTiming extends PerformanceEntry {
   name: 'first-paint' | 'first-contentful-paint';
 }
 
-interface LargestContentfulPaint extends PerformanceEntry {
+interface _LargestContentfulPaint extends PerformanceEntry {
   renderTime: number;
   loadTime: number;
   size: number;
@@ -32,7 +32,7 @@ interface LargestContentfulPaint extends PerformanceEntry {
   element: Element | null;
 }
 
-interface PerformanceEventTiming extends PerformanceEntry {
+interface _PerformanceEventTiming extends PerformanceEntry {
   processingStart: number;
   processingEnd: number;
   cancelable: boolean;

@@ -1,19 +1,29 @@
 #!/bin/bash
 
-# Script to resolve merge conflicts by accepting incoming changes
-echo "Resolving merge conflicts by accepting incoming changes..."
+# Script to resolve merge conflicts by keeping the main branch version
+# and removing conflict markers
 
-# Get list of conflicted files
-conflicted_files=$(git status --porcelain | grep "^UU\|^AA\|^DD" | awk '{print $2}')
+echo "Resolving merge conflicts..."
 
-for file in $conflicted_files; do
+# Find all files with conflict markers
+conflict_files=$(git status --porcelain | grep "^UU" | cut -c4-)
+
+for file in $conflict_files; do
+    echo "Processing $file..."
+    
+    # Check if file exists
     if [ -f "$file" ]; then
-        echo "Resolving conflict in: $file"
-        # Use git checkout to accept the incoming version (theirs)
-        git checkout --theirs "$file"
-        git add "$file"
+        # Create a backup
+        cp "$file" "${file}.backup"
+        
+        # Use sed to resolve conflicts by keeping the main branch version (after =======)
+        # and removing conflict markers
+        sed -i '/^<<<<<<< HEAD/,/^=======/d; /^>>>>>>> main/d' "$file"
+        
+        echo "Resolved conflicts in $file"
+    else
+        echo "File $file not found, skipping..."
     fi
 done
 
-echo "All conflicts resolved. Committing merge..."
-git commit -m "Merge: Resolve conflicts by accepting incoming changes from cursor/fix-errors-and-merge-to-main-489f"
+echo "Conflict resolution complete!"

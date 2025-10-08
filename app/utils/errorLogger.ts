@@ -77,7 +77,7 @@ class ErrorLogger {
       `%c[${entry.severity.toUpperCase()}] ${entry.message}`,
       styles[entry.severity]
     );
-     
+ 
     console.log('Timestamp:', entry.timestamp);
     if (entry.error) {
        
@@ -122,7 +122,7 @@ class ErrorLogger {
       });
     } catch (error) {
       // Silently fail to avoid infinite loop
-       
+ 
     console.error('Failed to send error to external service:', error);
     }
   }

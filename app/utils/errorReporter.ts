@@ -99,7 +99,7 @@ export class ErrorReporter {
   private logToConsole(report: ErrorReport): void {
     const style = this.getConsoleStyle(report.severity);
     console.group(`%c[${report.severity.toUpperCase()}] Error Report`, style);
-    if (process.env['NODE_ENV'] === 'development') {  
+if (process.env['NODE_ENV'] === 'development') {  
     console.log('Message:', report.message); }
     if (process.env['NODE_ENV'] === 'development') {  
     console.log('Timestamp:', report.timestamp); }

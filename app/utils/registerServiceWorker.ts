@@ -16,12 +16,17 @@ export async function registerServiceWorker(
 ): Promise<ServiceWorkerRegistration | undefined> {
   // Check if service workers are supported
   if (typeof window === 'undefined' || !('serviceWorker' in navigator)) {
-     
+ 
     console.log('[SW] Service Workers not supported');
     return;
   }
 
   // Only register in production or if explicitly enabled
+  const _isLocalhost = Boolean(
+    window.location.hostname === 'localhost' ||
+      window.location.hostname === '[::1]' ||
+      window.location.hostname.match(/^127(?:\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$/)
+  );
   try {
     // Wait for page to load
     await new Promise<void>((resolve) => {
@@ -52,7 +57,7 @@ export async function registerServiceWorker(
         if (installingWorker.state === 'installed') {
           if (navigator.serviceWorker.controller) {
             // New update available
-             
+ 
     console.log('[SW] New content available; please refresh.');
             
             if (config.onUpdate) {
@@ -60,7 +65,7 @@ export async function registerServiceWorker(
             }
           } else {
             // Content cached for offline use
-             
+ 
     console.log('[SW] Content cached for offline use.');
             
             if (config.onSuccess) {
@@ -73,7 +78,7 @@ export async function registerServiceWorker(
 
     return registration;
   } catch (error) {
-     
+ 
     console.error('[SW] Registration failed:', error);
     
     if (config.onError && error instanceof Error) {
@@ -93,7 +98,7 @@ export async function unregisterServiceWorker(): Promise<boolean> {
   try {
     const registration = await navigator.serviceWorker.ready;
     const result = await registration.unregister();
-     
+ 
     console.log('[SW] Service worker unregistered:', result);
     return result;
   } catch (error) {
@@ -114,7 +119,7 @@ export async function checkForUpdates(): Promise<void> {
   try {
     const registration = await navigator.serviceWorker.ready;
     await registration.update();
-     
+ 
     console.log('[SW] Update check completed');
   } catch (error) {
      
@@ -142,7 +147,7 @@ export function clearCaches(): void {
   }
 
   navigator.serviceWorker.controller.postMessage({ action: 'clearCache' });
-   
+ 
     console.log('[SW] Cache clear requested');
 }
 

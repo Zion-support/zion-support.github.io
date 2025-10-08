@@ -98,7 +98,7 @@ class HealthCheckService {
           duration,
         });
       } catch (_error) {
-        logger._error(`Health check "${name}" failed`, _error as Error);
+logger._error(`Health check "${name}" failed`, _error as Error);
         checks.push({
           name,
           status: 'fail',
