@@ -166,7 +166,7 @@ export default function App() {
           </script>
         </Helmet>
         <Suspense fallback={<LoadingSpinner />}>
-          <div>
+          <div className="min-h-screen">
             <UnifiedContentPromotion />
             <InteractiveAIROICalculator />
             <ContentShowcase />

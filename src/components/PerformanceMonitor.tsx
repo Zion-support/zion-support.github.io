@@ -24,14 +24,13 @@ export const PerformanceMonitor: React.FC = () => {
         loadTime: navigation.loadEventEnd - navigation.loadEventStart,
         firstContentfulPaint: fcp ? fcp.startTime : 0,
         largestContentfulPaint: lcp ? lcp.startTime : 0,
-        cumulativeLayoutShift: 0, // Would need to be measured with observer
-        firstInputDelay: 0, // Would need to be measured with observer
+        cumulativeLayoutShift: 0,
+        firstInputDelay: 0,
       };
 
       setMetrics(metrics);
     };
 
-    // Measure after page load
     if (document.readyState === 'complete') {
       measurePerformance();
     } else {
@@ -40,7 +39,6 @@ export const PerformanceMonitor: React.FC = () => {
     return undefined;
   }, []);
 
-  // Toggle visibility with keyboard shortcut (Ctrl+Shift+P)
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.ctrlKey && e.shiftKey && e.key === 'P') {
@@ -69,9 +67,7 @@ export const PerformanceMonitor: React.FC = () => {
         <div>Load Time: {metrics.loadTime.toFixed(2)}ms</div>
         <div>FCP: {metrics.firstContentfulPaint.toFixed(2)}ms</div>
         <div>LCP: {metrics.largestContentfulPaint.toFixed(2)}ms</div>
-        <div className="text-xs text-gray-400 mt-2">
-          Press Ctrl+Shift+P to toggle
-        </div>
+        <div className="text-xs text-gray-400 mt-2">Press Ctrl+Shift+P to toggle</div>
       </div>
     </div>
   );

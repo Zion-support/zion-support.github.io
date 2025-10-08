@@ -67,6 +67,7 @@ export class ErrorHandler {
     };
 
     this.errorQueue.push(errorData);
+    
     if (this.errorQueue.length > this.maxQueueSize) {
       this.errorQueue.shift();
     }
@@ -76,19 +77,22 @@ export class ErrorHandler {
   }
 
   /**
-   * Categorize error based on error type and message
+   * Categorize error based on type and message
    */
   private categorizeError(error: Error): ErrorCategory {
-    if (error.message.includes('fetch') || error.message.includes('network')) {
+    const message = error.message.toLowerCase();
+    
+    if (message.includes('network') || message.includes('fetch')) {
       return ErrorCategory.NETWORK;
     }
-    if (error.message.includes('validation')) {
+    if (message.includes('validation') || message.includes('invalid')) {
       return ErrorCategory.VALIDATION;
     }
-    if (error.message.includes('API')) {
+    if (message.includes('api') || message.includes('response')) {
       return ErrorCategory.API;
     }
-    return ErrorCategory.RUNTIME;
+    
+    return ErrorCategory.UNKNOWN;
   }
 
   /**
@@ -112,16 +116,15 @@ export class ErrorHandler {
   }
 
   /**
-   * Report error to monitoring service
+   * Report error to external service
    */
   private reportError(errorData: ErrorInfo): void {
-    if (typeof window !== 'undefined' && process.env.NODE_ENV === 'production') {
-      console.error('Error reported:', errorData);
-    }
+    // In production, send to error tracking service
+    console.error('Error reported:', errorData);
   }
 
   /**
-   * Get all errors
+   * Get error queue
    */
   getErrors(): ErrorInfo[] {
     return [...this.errorQueue];
@@ -135,5 +138,4 @@ export class ErrorHandler {
   }
 }
 
-export const errorHandler = ErrorHandler.getInstance();
-export default errorHandler;
+export default ErrorHandler.getInstance();

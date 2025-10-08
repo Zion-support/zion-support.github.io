@@ -82,7 +82,6 @@ class Analytics {
     };
 
     this.events.push(event);
-    this.sendEvent(event);
   }
 
   /**
@@ -90,7 +89,7 @@ class Analytics {
    */
   trackPageView(page: string, title?: string): void {
     this.track('page_view', 'navigation', 'view', page, undefined, {
-      page_title: title || document.title,
+      page_title: title || (typeof document !== 'undefined' ? document.title : ''),
       page_url: typeof window !== 'undefined' ? window.location.href : page,
     });
   }
@@ -109,29 +108,19 @@ class Analytics {
   /**
    * Track performance metrics
    */
-  trackPerformance(metric: string, value: number, unit: string): void {
+  trackPerformance(metric: string, value: number, unit?: string): void {
     this.track('performance', 'metrics', metric, unit, value);
   }
 
   /**
    * Track business events
    */
-  trackBusinessEvent(
+  trackBusiness(
     event: string,
     value?: number,
     properties?: Record<string, unknown>
   ): void {
     this.track(event, 'business', 'event', undefined, value, properties);
-  }
-
-  /**
-   * Send event to analytics service
-   */
-  private sendEvent(event: AnalyticsEvent): void {
-    if (typeof window !== 'undefined' && process.env.NODE_ENV === 'production') {
-      // Send to analytics service
-      console.log('Analytics event:', event);
-    }
   }
 
   /**
@@ -171,4 +160,5 @@ class Analytics {
 }
 
 const analytics = new Analytics();
+
 export default analytics;

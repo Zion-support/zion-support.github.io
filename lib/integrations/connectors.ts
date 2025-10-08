@@ -1,5 +1,6 @@
 import type { ProviderConnection, SyncLogEntry } from './types';
 import type { ProviderConnection, SyncLogEntry } from './types';
+=======
 
 export async function simulateAction<T = unknown>(
   connection: ProviderConnection,
@@ -8,6 +9,46 @@ export async function simulateAction<T = unknown>(
 ): Promise<{ log: SyncLogEntry; result: T }> {
   const log: SyncLogEntry = {
     id: Math.random().toString(36).substr(2, 9),
+=======
+import { ProviderConnection, SyncLogEntry } from './types';
+import { v4 as uuidv4 } from 'uuid';
+=======
+import type { ProviderConnection, SyncLogEntry } from './types';
+import { v4 as uuidv4 } from 'uuid';
+=======
+import type { ProviderConnection, SyncLogEntry } from './types';
+// Simple UUID generator since uuid package is not available
+const generateId = (): string => {
+  return Math.random().toString(36).substr(2, 9);
+};
+=======
+import { ProviderConnection, SyncLogEntry } from './types';
+import { v4 as uuidv4 } from 'uuid';
+=======
+import { ProviderConnection, SyncLogEntry } from './types';
+import { v4 as uuidv4 } from 'uuid';
+=======
+import type { ProviderConnection, SyncLogEntry } from './types';
+import { v4 as uuidv4 } from 'uuid';
+=======
+import { ProviderConnection, SyncLogEntry } from './types';
+import { v4 as uuidv4 } from 'uuid';
+=======
+=======
+import type { ProviderConnection, SyncLogEntry } from './types';
+import { v4 as uuidv4 } from 'uuid';
+=======
+import type { ProviderConnection, SyncLogEntry } from './types';
+import { v4 as uuidv4 } from 'uuid';
+
+=======
+=======
+import type { ProviderConnection, SyncLogEntry } from './types';
+import { v4 as uuidv4 } from 'uuid';
+
+=======
+import { ProviderConnection, SyncLogEntry } from './types';
+import { v4 as uuidv4 } from 'uuid';
 
 export async function simulateAction<T = any>(
   connection: ProviderConnection,
@@ -15,9 +56,35 @@ export async function simulateAction<T = any>(
   details: Record<string, any> = {}
 ): Promise<{ log: SyncLogEntry; result: T }> {
   const log: SyncLogEntry = {
+=======
+    id: `log_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
+=======
+    id: uuidv4(),
+=======
+    id: uuidv4(),
+=======
+    id: generateId(),
+=======
+    id: uuidv4(),
+=======
+    id: uuidv4(),
+=======
+    id: uuidv4(),
+=======
+    id: uuidv4(),
+=======
+    id: uuidv4(),
+=======
+    id: uuidv4(),
+=======
+    id: uuidv4(),
+=======
+    id: uuidv4(),
     timestamp: Date.now(),
     providerId: connection.providerId,
     level: 'info',
+=======
+    connectionId: connection.id,
     action,
     status: 'success',
     message: `Action ${action} completed successfully`,
@@ -50,6 +117,29 @@ export async function simulateAction<T = any>(
   async addProjectNote(connection: ProviderConnection, note: Record<string, any>) {
     return simulateAction(connection, 'crm.addProjectNote', { note });
   },
+=======
+=======
+=======
+
+  async addProjectNote(connection: ProviderConnection, note: Record<string, any>) {
+    return simulateAction(connection, 'crm.addProjectNote', { note });
+  },
+
+=======
+=======
+
+  async addProjectNote(connection: ProviderConnection, note: Record<string, any>) {
+    return simulateAction(connection, 'crm.addProjectNote', { note });
+  },
+
+=======
+=======
+  async addProjectNote(connection: ProviderConnection, note: Record<string, any>) {
+    return simulateAction(connection, 'crm.addProjectNote', { note });
+  },
+  async addProjectNote(connection: ProviderConnection, note: Record<string, any>) {
+    return simulateAction(connection, 'crm.addProjectNote', { note });
+  },
   async addEmailTouchpoint(connection: ProviderConnection, touch: Record<string, any>) {
     return simulateAction(connection, 'crm.addEmailTouchpoint', { touch });
   }
@@ -59,7 +149,21 @@ export const ats = {
   async pushApplicant(connection: ProviderConnection, applicant: Record<string, unknown>) {
     return simulateAction(connection, 'ats.pushApplicant', { applicant });
   },
+=======
   
+=======
+=======
+
+export async function testConnection(
+  connection: ProviderConnection
+): Promise<boolean> {
+  try {
+    await simulateAction(connection, 'test_connection');
+    return true;
+  } catch {
+    return false;
+  }
+}
 
 export async function syncData(
   connection: ProviderConnection
@@ -67,6 +171,19 @@ export async function syncData(
   const logs: SyncLogEntry[] = [];
 
   async updateStatus(connection: ProviderConnection, change: Record<string, any>) {
+=======
+=======
+=======
+=======
+=======
+=======
+=======
+=======
+=======
+=======
+=======
+=======
+=======
 
 // CRM actions
 export const crm = {
@@ -78,11 +195,84 @@ export const crm = {
     return simulateAction(connection, 'crm.addProjectNote', { note });
   },
 
+=======
+  async addProjectNote(connection: ProviderConnection, note: Record<string, any>) {
+    return simulateAction(connection, 'crm.addProjectNote', { note });
+  },
+=======
+  async addProjectNote(connection: ProviderConnection, note: Record<string, any>) {
+    return simulateAction(connection, 'crm.addProjectNote', { note });
+  },
+=======
+=======
+  async addProjectNote(connection: ProviderConnection, note: Record<string, any>) {
+    return simulateAction(connection, 'crm.addProjectNote', { note });
+  },
+=======
+=======
+  async addProjectNote(connection: ProviderConnection, note: Record<string, any>) {
+    return simulateAction(connection, 'crm.addProjectNote', { note });
+  },
+=======
+  async addProjectNote(connection: ProviderConnection, note: Record<string, any>) {
+    return simulateAction(connection, 'crm.addProjectNote', { note });
+  },
+=======
+  
+  async addProjectNote(connection: ProviderConnection, note: Record<string, any>) {
+    return simulateAction(connection, 'crm.addProjectNote', { note });
+  },
+  
+=======
+  async addProjectNote(connection: ProviderConnection, note: Record<string, any>) {
+    return simulateAction(connection, 'crm.addProjectNote', { note });
+  },
   async addEmailTouchpoint(connection: ProviderConnection, touch: Record<string, any>) {
     return simulateAction(connection, 'crm.addEmailTouchpoint', { touch });
+=======
+  try {
+    const { log } = await simulateAction(connection, 'sync_data', {
+      lastSync: connection.lastSync?.toISOString(),
+    });
+    logs.push(log);
+  } catch (error) {
+    logs.push({
+      id: Math.random().toString(36).substr(2, 9),
+      connectionId: connection.id,
+      action: 'sync_data',
+      status: 'error',
+      message: error instanceof Error ? error.message : 'Unknown error',
+      timestamp: new Date(),
+    });
   }
 
+=======
+=======
+=======
+
+=======
+  async updateStatus(connection: ProviderConnection, change: Record<string, any>) {
+=======
+  async updateStatus(connection: ProviderConnection, change: Record<string, any>) {
+=======
+  async updateStatus(connection: ProviderConnection, change: Record<string, any>) {
+=======
+
+  async updateStatus(connection: ProviderConnection, change: Record<string, any>) {
+=======
+  async updateStatus(connection: ProviderConnection, change: Record<string, any>) {
+=======
+  async updateStatus(connection: ProviderConnection, change: Record<string, any>) {
+=======
+  async updateStatus(connection: ProviderConnection, change: Record<string, any>) {
+=======
+  
+  async updateStatus(connection: ProviderConnection, change: Record<string, any>) {
+=======
   async updateStatus(connection: ProviderConnection, change: Record<string, any>) {
     return simulateAction(connection, 'ats.updateStatus', { change });
   }
 };
+=======
+  return logs;
+}

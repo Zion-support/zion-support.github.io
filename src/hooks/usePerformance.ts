@@ -1,20 +1,5 @@
 import { useEffect } from 'react';
-
-interface PerformanceEntry {
-  duration: number;
-  name?: string;
-  startTime?: number;
-  entryType?: string;
-}
-
-// Mock analytics object for tracking
-const analytics = {
-  track: (event: string, category: string, action: string, label?: string, value?: number) => {
-    if (process.env.NODE_ENV === 'development') {
-      console.log('Analytics Track:', { event, category, action, label, value });
-    }
-  }
-};
+import analytics from '../utils/analytics';
 
 const usePerformance = () => {
   useEffect(() => {
@@ -23,24 +8,16 @@ const usePerformance = () => {
     }
 
     const observer = new PerformanceObserver((list) => {
-      list.getEntries().forEach((entry: PerformanceEntry) => {
-        if (entry.duration > 50) {
-          analytics.track(
-            'long_task',
-            'performance',
-            'detected',
-            entry.name,
-            entry.duration
-          );
-        }
+      list.getEntries().forEach((entry) => {
+        analytics.track(
+          'long_task',
+          'performance',
+          'detected',
+          undefined,
+          entry.duration
+        );
       });
     });
-
-    try {
-      observer.observe({ entryTypes: ['measure', 'navigation'] });
-    } catch (error) {
-      console.error('Performance observer error:', error);
-    }
 
     return () => {
       if (observer && typeof observer.disconnect === 'function') {

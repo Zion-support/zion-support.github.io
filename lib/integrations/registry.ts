@@ -1,4 +1,22 @@
+=======
 import type { IntegrationProviderMeta } from './types';
+
+export const PROVIDERS: IntegrationProviderMeta[] = [
+=======
+import { IntegrationProviderMeta } from './types';
+
+export const PROVIDERS: IntegrationProviderMeta[] = [
+=======
+import type { IntegrationProviderMeta } from './types';
+
+export const PROVIDERS: IntegrationProviderMeta[] = [
+=======
+import { IntegrationProviderMeta } from './types';
+import type { IntegrationProviderMeta } from './types';
+export const PROVIDERS: IntegrationProviderMeta[] = [
+=======
+import type { IntegrationProviderMeta } from './types';
+
 export const PROVIDERS: IntegrationProviderMeta[] = [
   { id: 'salesforce', name: 'Salesforce', category: 'crm', description: 'Enterprise CRM' },
   { id: 'hubspot', name: 'HubSpot', category: 'crm', description: 'Marketing & Sales CRM' },
@@ -7,6 +25,43 @@ export const PROVIDERS: IntegrationProviderMeta[] = [
   { id: 'greenhouse', name: 'Greenhouse', category: 'ats', description: 'ATS & recruiting' },
   { id: 'lever', name: 'Lever', category: 'ats', description: 'ATS & CRM' },
   { id: 'workable', name: 'Workable', category: 'ats', description: 'Recruiting software' },
+=======
+=======
+=======
+import type { IntegrationProviderMeta } from './types';
+
+export const PROVIDERS: IntegrationProviderMeta[] = [
+=======
+import type { IntegrationProviderMeta } from './types';
+
+export const PROVIDERS: IntegrationProviderMeta[] = [
+=======
+import { IntegrationProviderMeta } from './types';
+
+export const PROVIDERS: IntegrationProviderMeta[] = [
+=======
+import { IntegrationProviderMeta } from './types';
+
+export const PROVIDERS: IntegrationProviderMeta[] = [
+=======
+import type { IntegrationProviderMeta } from './types';
+
+export const PROVIDERS: IntegrationProviderMeta[] = [
+=======
+  { id: 'bamboohr', name: 'BambooHR', category: 'ats', description: 'HRIS & ATS' },
+=======
+import type { IntegrationProviderMeta } from './types';
+
+export const PROVIDERS: IntegrationProviderMeta[] = [
+=======
+=======
+import { IntegrationProviderMeta } from './types';
+
+export const PROVIDERS: IntegrationProviderMeta[] = [
+=======
+import type { IntegrationProviderMeta } from './types';
+
+export const PROVIDERS: IntegrationProviderMeta[] = [
   {
     id: 'salesforce',
     name: 'Salesforce',
@@ -53,6 +108,46 @@ export const PROVIDERS: IntegrationProviderMeta[] = [
     id: 'bamboohr',
     name: 'BambooHR',
     category: 'ats',
+=======
+  { id: 'bamboohr', name: 'BambooHR', category: 'ats', description: 'HRIS & ATS' }
+];
+
+=======
+  { id: 'bamboohr', name: 'BambooHR', category: 'ats', description: 'HRIS & ATS' }
+];
+
+=======
+
+=======
+
+=======
+
+=======
+
+=======
+  { id: 'bamboohr', name: 'BambooHR', category: 'ats', description: 'HRIS & ATS' }
+];
+
+=======
+
+=======
+  { id: 'bamboohr', name: 'BambooHR', category: 'ats', description: 'HRIS & ATS' }
+];
+
+=======
+  { id: 'bamboohr', name: 'BambooHR', category: 'ats', description: 'HRIS & ATS' }
+];
+
+=======
+
 export function getProviderById(id: string): IntegrationProviderMeta | undefined {
+=======
+    description: 'HRIS & ATS',
+  },
+];
+
+export function getProviderById(
+  id: string
+): IntegrationProviderMeta | undefined {
   return PROVIDERS.find(p => p.id === id);
 }
