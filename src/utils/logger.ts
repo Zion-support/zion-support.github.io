@@ -140,7 +140,7 @@ export class Logger {
         }
         break;
       case LogLevel.INFO:
-        console.info(message, entry.data ?? '');
+        if (process.env.NODE_ENV === 'development') { console.info(message, entry.data ?? ''); }
         break;
       case LogLevel.WARN:
         console.warn(message, entry.data ?? '');

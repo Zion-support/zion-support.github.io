@@ -1,9 +1,8 @@
 'use client';
 
-import React, { Suspense, lazy, useCallback } from 'react';
+import React, { Suspense, lazy, useCallback, useState } from 'react';
 import Link from 'next/link';
 import SEOOptimizer from './components/SEOOptimizer';
-import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 
 // Lazy load components for better performance
 const ContentShowcase = lazy(() => import('./components/ContentShowcase'));
@@ -24,6 +23,8 @@ const LoadingFallback: React.FC<{ height?: string }> = ({
 );
 
 const HomePage: React.FC = () => {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
   // Analytics tracking for phone clicks
   const handlePhoneClick = useCallback(() => {
     if (
@@ -53,6 +54,10 @@ const HomePage: React.FC = () => {
     }
   }, []);
 
+  const toggleMobileMenu = useCallback(() => {
+    setIsMobileMenuOpen((prev) => !prev);
+  }, []);
+
   return (
     <>
       <SEOOptimizer
@@ -71,8 +76,7 @@ const HomePage: React.FC = () => {
           'enterprise software',
         ]}
       />
-      <AccessibilityEnhancer>
-        <div className='min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100'>
+      <div className='min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100'>
           <header
             className='bg-white shadow-sm sticky top-0 z-50'
             role='banner'
@@ -127,9 +131,10 @@ const HomePage: React.FC = () => {
                 </nav>
                 <div className='md:hidden'>
                   <button
+                    onClick={toggleMobileMenu}
                     className='text-gray-700 hover:text-indigo-600 transition-colors focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 rounded p-2'
-                    aria-label='Open mobile menu'
-                    aria-expanded='false'
+                    aria-label={isMobileMenuOpen ? 'Close mobile menu' : 'Open mobile menu'}
+                    aria-expanded={isMobileMenuOpen}
                   >
                     <svg
                       className='w-6 h-6'
@@ -149,6 +154,49 @@ const HomePage: React.FC = () => {
                 </div>
               </div>
             </div>
+
+            {/* Mobile Menu */}
+            {isMobileMenuOpen && (
+              <div className='md:hidden bg-white border-t border-gray-200 px-4 py-4'>
+                <nav className='flex flex-col space-y-4' role='navigation' aria-label='Mobile navigation'>
+                  <Link
+                    href='/'
+                    className='text-gray-700 hover:text-indigo-600 transition-colors font-medium py-2'
+                    onClick={toggleMobileMenu}
+                  >
+                    Home
+                  </Link>
+                  <Link
+                    href='/services'
+                    className='text-gray-700 hover:text-indigo-600 transition-colors font-medium py-2'
+                    onClick={toggleMobileMenu}
+                  >
+                    Services
+                  </Link>
+                  <Link
+                    href='/blog'
+                    className='text-gray-700 hover:text-indigo-600 transition-colors font-medium py-2'
+                    onClick={toggleMobileMenu}
+                  >
+                    Blog
+                  </Link>
+                  <Link
+                    href='/case-studies'
+                    className='text-gray-700 hover:text-indigo-600 transition-colors font-medium py-2'
+                    onClick={toggleMobileMenu}
+                  >
+                    Case Studies
+                  </Link>
+                  <Link
+                    href='/contact'
+                    className='text-gray-700 hover:text-indigo-600 transition-colors font-medium py-2'
+                    onClick={toggleMobileMenu}
+                  >
+                    Contact
+                  </Link>
+                </nav>
+              </div>
+            )}
           </header>
 
           <main role='main'>
@@ -584,7 +632,6 @@ const HomePage: React.FC = () => {
             </div>
           </footer>
         </div>
-      </AccessibilityEnhancer>
     </>
   );
 };

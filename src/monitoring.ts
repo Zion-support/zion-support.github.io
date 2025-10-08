@@ -1,6 +1,8 @@
 // Performance monitoring setup
 import { analytics } from '../app/utils/analytics';
 import { ErrorHandler } from '../app/utils/errorHandler';
+import { performanceOptimizer } from '../app/utils/performanceOptimizer';
+import { logger } from '../src/utils/logger';
 
 // Create error handler instance
 const errorHandler = new ErrorHandler();
@@ -26,19 +28,59 @@ function initializeMonitoring(): void {
     // Track errors globally
     window.addEventListener('error', (event) => {
       const error = event.error || new Error(event.message);
-      errorHandler.handleError(error, undefined, {
-        filename: event.filename,
-        lineno: event.lineno,
-        colno: event.colno,
+      errorHandler.handleError(error, {
+        componentStack: `${event.filename}:${event.lineno}:${event.colno}`,
+      }, {
+        errorId: `global_error_${Date.now()}`,
       });
     });
 
     // Track unhandled promise rejections
     window.addEventListener('unhandledrejection', (event) => {
       const error = new Error(`Unhandled Promise Rejection: ${event.reason}`);
-      errorHandler.handleError(error, undefined, {
-        reason: event.reason,
+      errorHandler.handleError(error, {
+        componentStack: String(event.reason),
+      }, {
+        errorId: `unhandled_rejection_${Date.now()}`,
       });
+    });
+
+    // Initialize performance optimizer
+    performanceOptimizer.optimizeImages();
+
+    // Monitor long tasks using PerformanceObserver
+    if (typeof PerformanceObserver !== 'undefined') {
+      try {
+        const observer = new PerformanceObserver((list) => {
+          const entries = list.getEntries();
+          entries.forEach((entry: PerformanceEntry) => {
+            analytics.track({
+              event: 'long_task',
+              category: 'performance',
+              label: 'detected',
+              value: entry.duration,
+            });
+          });
+        });
+        observer.observe({ entryTypes: ['longtask'] });
+      } catch {
+        // PerformanceObserver may not support 'longtask' in some environments
+      }
+    }
+
+    // Get performance metrics
+    const score = performanceOptimizer.getPerformanceScore();
+    const metrics = performanceOptimizer.getMetrics();
+    
+    // Log performance data for monitoring
+    logger.info('Performance metrics:', { score, metrics });
+    
+    // Track performance metrics
+    analytics.track({
+      event: 'performance_metrics',
+      category: 'performance',
+      label: 'measured',
+      value: score
     });
   } catch (error) {
     // eslint-disable-next-line no-console
@@ -49,4 +91,4 @@ function initializeMonitoring(): void {
 // Initialize monitoring on load
 initializeMonitoring();
 
-export { analytics, errorHandler, initializeMonitoring };
+export { analytics, errorHandler, initializeMonitoring, ErrorHandler, performanceOptimizer };

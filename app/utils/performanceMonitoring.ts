@@ -156,20 +156,18 @@ export function logPerformanceMetrics(): void {
 
   /* eslint-disable no-console */
   console.group('📊 Performance Report');
-  console.log('Score:', `${report.score}/100`);
-  console.log('Metrics:', report.metrics);
-  console.log('Ratings:', report.ratings);
+  if (process.env.NODE_ENV === 'development') { console.log('Score:', `${report.score}/100`); }
+  if (process.env.NODE_ENV === 'development') { console.log('Metrics:', report.metrics); }
+  if (process.env.NODE_ENV === 'development') { console.log('Ratings:', report.ratings); }
   
   if (report.recommendations.length > 0) {
     console.group('💡 Recommendations');
     report.recommendations.forEach((rec, i) => {
-      console.log(`${i + 1}.`, rec);
+      if (process.env.NODE_ENV === 'development') { console.log(`${i + 1}.`, rec); }
     });
     console.groupEnd();
+    /* eslint-enable no-console */
   }
-  
-  console.groupEnd();
-  /* eslint-enable no-console */
 }
 
 /**

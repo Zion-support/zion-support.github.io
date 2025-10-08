@@ -89,6 +89,21 @@ const UltimateBusinessIntelligence2025Banner: React.FC = () => {
             </div>
           </div>
         </div>
+
+        {/* Stats Section */}
+        <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8">
+          {[
+            { value: '500+', label: 'Enterprise Clients' },
+            { value: '30,000%', label: 'Average ROI' },
+            { value: '99.9%', label: 'Success Rate' },
+            { value: '5M+', label: 'Data Points Processed' },
+          ].map((stat, index) => (
+            <div key={index} className="text-center">
+              <div className="text-3xl font-bold text-cyan-400 mb-2">{stat.value}</div>
+              <div className="text-gray-300">{stat.label}</div>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );

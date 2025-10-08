@@ -78,7 +78,7 @@ const API: React.FC = () => {
                 RESTful APIs
               </h3>
               <p className='text-gray-600'>
-                Clean, intuitive REST endpoints following industry best
+                Clean, intuitive RESTful endpoints following industry best
                 practices for easy integration.
               </p>
             </div>

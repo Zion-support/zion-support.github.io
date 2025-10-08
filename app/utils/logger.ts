@@ -108,10 +108,10 @@ class Logger {
 
       switch (level) {
         case LogLevel.DEBUG:
-          console.debug(formattedMessage);
+          if (process.env.NODE_ENV === 'development') { console.debug(formattedMessage); }
           break;
         case LogLevel.INFO:
-          console.info(formattedMessage);
+          if (process.env.NODE_ENV === 'development') { console.info(formattedMessage); }
           break;
         case LogLevel.WARN:
           console.warn(formattedMessage);
@@ -221,7 +221,7 @@ class Logger {
    */
   styled(message: string, style: string): void {
     if (isDevelopment()) {
-      console.log(`%c${message}`, style);
+      if (process.env.NODE_ENV === 'development') { console.log(`%c${message}`, style); }
     }
   }
 }

@@ -252,30 +252,20 @@ export class ConfigManager {
    * Deep merge two config objects
    */
   private mergeConfig(base: AppConfig, override: Partial<AppConfig>): AppConfig {
-    const result: AppConfig = { ...base };
+    const result = { ...base } as AppConfig;
 
-    // Handle each property type safely
-    if (override.environment !== undefined) {
-      result.environment = override.environment;
-    }
-    if (override.api !== undefined) {
-      result.api = { ...base.api, ...override.api };
-    }
-    if (override.features !== undefined) {
-      result.features = { ...base.features, ...override.features };
-    }
-    if (override.performance !== undefined) {
-      result.performance = { ...base.performance, ...override.performance };
-    }
-    if (override.security !== undefined) {
-      result.security = { ...base.security, ...override.security };
-    }
-    if (override.ui !== undefined) {
-      result.ui = { ...base.ui, ...override.ui };
-    }
-    if (override.logging !== undefined) {
-      result.logging = { ...base.logging, ...override.logging };
-    }
+    (Object.keys(override) as Array<keyof AppConfig>).forEach(<K extends keyof AppConfig>(key: K) => {
+      const value = override[key];
+      if (value !== undefined) {
+        const baseValue = result[key];
+        if (typeof value === 'object' && !Array.isArray(value) && value !== null &&
+            typeof baseValue === 'object' && !Array.isArray(baseValue) && baseValue !== null) {
+          result[key] = Object.assign({}, baseValue, value) as typeof baseValue;
+        } else {
+          result[key] = value as typeof baseValue;
+        }
+      }
+    });
 
     return result;
   }
@@ -312,19 +302,64 @@ export class ConfigManager {
     nestedKeyOrValue: NK | AppConfig[K],
     value?: AppConfig[K][NK]
   ): void {
-    if (value !== undefined && typeof nestedKeyOrValue !== 'object') {
-      // Handle nested property update
+    if (value !== undefined && typeof nestedKeyOrValue === 'string') {
       const currentValue = this.config[key];
       if (typeof currentValue === 'object' && !Array.isArray(currentValue) && currentValue !== null) {
-        (this.config[key] as Record<string, unknown>) = {
-          ...(currentValue as Record<string, unknown>),
-          [nestedKeyOrValue as string]: value,
-        };
+        this.config[key] = Object.assign({}, currentValue, { [nestedKeyOrValue]: value }) as AppConfig[K];
+      } else {
+        // If current value is not an object, create a new object by merging with default
+        const defaultValue = this.getDefaultForKey(key);
+        this.config[key] = Object.assign({}, defaultValue, { [nestedKeyOrValue]: value }) as AppConfig[K];
       }
     } else {
-      // Handle direct property update
       this.config[key] = nestedKeyOrValue as AppConfig[K];
     }
+  }
+
+  /**
+   * Get default value for a config key
+   */
+  private getDefaultForKey<K extends keyof AppConfig>(key: K): AppConfig[K] {
+    const defaultValues: AppConfig = {
+      environment: 'development',
+      api: {
+        baseURL: '',
+        timeout: 30000,
+        retryAttempts: 3,
+        enableCaching: true,
+      },
+      features: {
+        enableAnalytics: false,
+        enableErrorReporting: true,
+        enablePerformanceMonitoring: false,
+        enableAccessibility: true,
+        enableSEO: true,
+        enablePWA: false,
+      },
+      performance: {
+        enableCodeSplitting: true,
+        enableLazyLoading: true,
+        enableImageOptimization: true,
+        enableCaching: true,
+      },
+      security: {
+        enableCSP: true,
+        enableCORS: false,
+        enableRateLimiting: true,
+        maxRequestsPerMinute: 100,
+      },
+      ui: {
+        theme: 'light',
+        language: 'en',
+        timezone: 'UTC',
+      },
+      logging: {
+        level: 'info',
+        enableConsole: true,
+        enableNetwork: false,
+      },
+    };
+    return defaultValues[key];
   }
 
   /**

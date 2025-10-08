@@ -65,6 +65,8 @@
     "app/**/*",
     "components/**/*",
     "src/**/*",
+    "types/**/*",
+    "vite-env.d.ts",
     ".next/types/**/*.ts"
   ],
   "exclude": [
@@ -95,7 +97,6 @@
     "data_backup/**",
     "dao/**",
     "deployments/**",
-    "disabled-api/**",
     "e2e/**",
     "factories/**",
     "hooks/**",

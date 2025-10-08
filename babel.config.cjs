@@ -1,4 +1,4 @@
-export default {
+module.exports = {
   presets: [
     ['@babel/preset-env', { targets: { node: 'current' } }],
     ['@babel/preset-react', { runtime: 'automatic' }],
@@ -7,5 +7,17 @@ export default {
   plugins: [
     ['@babel/plugin-proposal-decorators', { decoratorsBeforeExport: true }],
     '@babel/plugin-transform-class-properties',
+    ['babel-plugin-transform-import-meta', { 
+      module: 'ES6',
+    }],
   ],
+  env: {
+    test: {
+      plugins: [
+        ['babel-plugin-transform-import-meta', {
+          module: 'ES6',
+        }],
+      ],
+    },
+  },
 };
