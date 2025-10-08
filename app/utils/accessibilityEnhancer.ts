@@ -678,3 +678,16 @@ class AccessibilityEnhancer {
     
     return `
 Accessibility Report:
+- Focusable Elements: ${metrics.focusableElements}
+- Images without Alt: ${metrics.imagesWithoutAlt}
+- Links without Text: ${metrics.linksWithoutText}
+- Headings without Content: ${metrics.headingsWithoutContent}
+- Color Contrast Issues: ${metrics.colorContrastIssues}
+- Keyboard Navigation Score: ${metrics.keyboardNavigationScore}%
+- Screen Reader Score: ${metrics.screenReaderScore}%
+- Overall Accessibility Score: ${metrics.overallScore}%
+`;
+  }
+}
+
+export default AccessibilityEnhancer;
