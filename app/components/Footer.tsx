@@ -68,6 +68,7 @@ const Footer: React.FC = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4">Services</h4>
             <ul className="space-y-2 text-gray-300">
+<<<<<<< HEAD
               <li>
                 <Link to="/services" className="hover:text-white transition-colors">
                   All Services
@@ -118,6 +119,17 @@ const Footer: React.FC = () => {
                   Cybersecurity
                 </Link>
               </li>
+=======
+              <li><Link to="/ai-services" className="hover:text-white transition-colors">AI Services</Link></li>
+              <li><Link to="/micro-saas" className="hover:text-white transition-colors">Micro SAAS Solutions</Link></li>
+              <li><Link to="/it-services" className="hover:text-white transition-colors">IT Services</Link></li>
+              <li><Link to="/quantum-computing" className="hover:text-white transition-colors">Quantum Computing</Link></li>
+              <li><Link to="/autonomous-systems" className="hover:text-white transition-colors">Autonomous Systems</Link></li>
+              <li><Link to="/business-intelligence" className="hover:text-white transition-colors">Business Intelligence</Link></li>
+              <li><Link to="/blockchain-web3" className="hover:text-white transition-colors">Blockchain & Web3</Link></li>
+              <li><Link to="/iot-edge-computing" className="hover:text-white transition-colors">IoT & Edge Computing</Link></li>
+              <li><Link to="/cybersecurity" className="hover:text-white transition-colors">Cybersecurity</Link></li>
+>>>>>>> cursor/website-audit-and-update-with-deployment-a7af
             </ul>
           </div>
 
@@ -125,7 +137,11 @@ const Footer: React.FC = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4">Contact</h4>
             <div className="space-y-2 text-gray-300">
+<<<<<<< HEAD
               <p>Email: contact@ziontechgroup.com</p>
+=======
+              <p>Email: kleber@ziontechgroup.com</p>
+>>>>>>> cursor/website-audit-and-update-with-deployment-a7af
               <p>Phone: +1 (302) 600-9898</p>
               <p>Website: ziontechgroup.com</p>
               <div className="flex space-x-4 mt-4">

@@ -31,6 +31,7 @@ import AdvancedPerformanceMonitor from './components/AdvancedPerformanceMonitor'
 // );origin/cursor/fix-errors-and-merge-to-main-6395
 
 // Lazy load pages for better performance
+<<<<<<< HEAD
 const _HomePage = lazy(() => import('./page'));
 const _AboutPage = lazy(() => import('./about/page'));
 const _ServicesPage = lazy(() => import('./services/page'));
@@ -59,6 +60,27 @@ const GuidesPage = lazy(() => import('./guides/page'));
 const SitemapPage = lazy(() => import('./sitemap/page'));
 const NotFoundPage = lazy(() => import('./not-found'));
 const OfflinePage = lazy(() => import('./offline/page'));
+=======
+const HomePage = lazy(() => import('./page'));
+const AboutPage = lazy(() => import('./about/page'));
+const ServicesPage = lazy(() => import('./services/page'));
+const ContactPage = lazy(() => import('./contact/page'));
+const TeamPage = lazy(() => import('./team/page'));
+const PrivacyPage = lazy(() => import('./privacy/page'));
+const TermsPage = lazy(() => import('./terms/page'));
+const EnterprisePage = lazy(() => import('./enterprise/page'));
+const ServicesAdvertisingPage = lazy(() => import('./services-advertising/page'));
+const CaseStudiesPage = lazy(() => import('./case-studies/page'));
+const MicroSAASPage = lazy(() => import('./micro-saas/page'));
+const AIServicesPage = lazy(() => import('./ai-services/page'));
+const ITServicesPage = lazy(() => import('./it-services/page'));
+const BusinessIntelligencePage = lazy(() => import('./business-intelligence/page'));
+const QuantumComputingPage = lazy(() => import('./quantum-computing/page'));
+const AutonomousSystemsPage = lazy(() => import('./autonomous-systems/page'));
+const BlockchainWeb3Page = lazy(() => import('./blockchain-web3/page'));
+const IoTEdgeComputingPage = lazy(() => import('./iot-edge-computing/page'));
+const CybersecurityPage = lazy(() => import('./cybersecurity/page'));
+>>>>>>> cursor/website-audit-and-update-with-deployment-a7af
 
 // Utils
 import { lazyLoadImages, preloadCriticalResources, collectPerformanceMetrics, performanceOptimizer } from './utils/performanceOptimizer';
@@ -251,6 +273,7 @@ const App: React.FC = () => {
                         <Route path="/enterprise" element={<EnterprisePage />} />
                         <Route path="/services-advertising" element={<ServicesAdvertisingPage />} />
                         <Route path="/case-studies" element={<CaseStudiesPage />} />
+<<<<<<< HEAD
                         
                         {/* Service Pages */}
                         <Route path="/ai-services" element={<AiServicesPage />} />
@@ -269,6 +292,17 @@ const App: React.FC = () => {
                         <Route path="/sitemap" element={<SitemapPage />} />
                         <Route path="/offline" element={<OfflinePage />} />
                         <Route path="*" element={<NotFoundPage />} />
+=======
+                        <Route path="/micro-saas" element={<MicroSAASPage />} />
+                        <Route path="/ai-services" element={<AIServicesPage />} />
+                        <Route path="/it-services" element={<ITServicesPage />} />
+                        <Route path="/business-intelligence" element={<BusinessIntelligencePage />} />
+                        <Route path="/quantum-computing" element={<QuantumComputingPage />} />
+                        <Route path="/autonomous-systems" element={<AutonomousSystemsPage />} />
+                        <Route path="/blockchain-web3" element={<BlockchainWeb3Page />} />
+                        <Route path="/iot-edge-computing" element={<IoTEdgeComputingPage />} />
+                        <Route path="/cybersecurity" element={<CybersecurityPage />} />
+>>>>>>> cursor/website-audit-and-update-with-deployment-a7af
                       </Routes>
                     </Suspense>
                   </main>
