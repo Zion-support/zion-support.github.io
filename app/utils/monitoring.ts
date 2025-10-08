@@ -93,7 +93,7 @@ class MonitoringService {
           });
         });
         fcpObserver.observe({ entryTypes: ['paint'] });
-      } catch (error) {
+      } catch {
         console.error('Error setting up performance observers:', error);
       }
     }
@@ -110,11 +110,7 @@ class MonitoringService {
           }
         });
         longTaskObserver.observe({ entryTypes: ['longtask'] });
-<<<<<<< HEAD
       } catch {
-=======
-      } catch (_error) {
->>>>>>> ed7467ed40e8856a41888367f5ba34d233491f61
         // Long task API might not be available
       }
     }
@@ -135,8 +131,8 @@ class MonitoringService {
           });
         });
         resourceObserver.observe({ entryTypes: ['resource'] });
-      } catch (_error) {
-        console.error('Error monitoring resources:', _error);
+      } catch (error) {
+        console.error('Error monitoring resources:', error);
       }
     }
   }
