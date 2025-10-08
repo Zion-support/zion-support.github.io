@@ -38,6 +38,7 @@ export const usePerformanceOptimization = () => {
           processingStart: number;
           processingEnd: number;
         };
+<<<<<<< HEAD
         metrics.firstInputDelay = fidEntry.processingStart - fidEntry.startTime;
       }
     });
@@ -54,14 +55,30 @@ export const usePerformanceOptimization = () => {
 
     clsObserver.observe({ entryTypes: ['layout-shift'] });
 
+    // Measure LCP
+    const lcpObserver = new PerformanceObserver(list => {
+      const entries = list.getEntries();
+      const lastEntry = entries[entries.length - 1] as PerformanceEntry & { startTime: number };
+      metrics.largestContentfulPaint = lastEntry.startTime;
+    });
+
+    lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
     return metrics;
   }, []);
 
   const optimizeImages = useCallback(() => {
     if (typeof window === 'undefined') return;
 
-    const images = document.querySelectorAll('img[data-src]');
+    const images = document.querySelectorAll('img');
     images.forEach(img => {
+      // Handle lazy loading
+      if (!img.loading) {
+        img.loading = 'lazy';
+      }
+      if (!img.decoding) {
+        img.decoding = 'async';
+      }
+      // Handle data-src lazy loading
       const src = img.getAttribute('data-src');
       if (src) {
         img.setAttribute('src', src);
@@ -78,12 +95,12 @@ export const usePerformanceOptimization = () => {
       '/css/critical.css',
     ];
 
-    criticalResources.forEach(resource => {
+    criticalResources.forEach(href => {
       const link = document.createElement('link');
       link.rel = 'preload';
-      link.href = resource;
-      link.as = resource.endsWith('.woff2') ? 'font' : 'style';
-      if (resource.endsWith('.woff2')) {
+      link.href = href;
+      link.as = href.endsWith('.css') ? 'style' : 'font';
+      if (href.endsWith('.woff2')) {
         link.crossOrigin = 'anonymous';
       }
       document.head.appendChild(link);
@@ -91,8 +108,9 @@ export const usePerformanceOptimization = () => {
   }, []);
 
   useEffect(() => {
+    optimizeImages();
     preloadCriticalResources();
-  }, [preloadCriticalResources]);
+  }, [optimizeImages, preloadCriticalResources]);
 
   return {
     measurePerformance,
