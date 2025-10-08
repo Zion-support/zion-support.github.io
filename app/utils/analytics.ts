@@ -51,7 +51,7 @@ class AnalyticsService {
 
       // Send to Google Analytics if available
       if (this.hasGtag()) {
-        window.gtag('event', event.action, {
+        (window as any).gtag('event', event.action, {
           event_category: event.category,
           event_label: event.label,
           value: event.value,
@@ -74,7 +74,7 @@ class AnalyticsService {
   trackPageView(path: string, title?: string): void {
     try {
       if (this.hasGtag()) {
-        window.gtag('config', this.getGtagId(), {
+        (window as any).gtag('config', this.getGtagId(), {
           page_path: path,
           page_title: title,
         });
@@ -90,7 +90,7 @@ class AnalyticsService {
   identifyUser(user: AnalyticsUser): void {
     try {
       if (this.hasGtag() && user.id) {
-        window.gtag('set', 'user_properties', {
+        (window as any).gtag('set', 'user_properties', {
           user_id: user.id,
           ...user.properties,
         });
@@ -126,7 +126,7 @@ class AnalyticsService {
   ): void {
     try {
       if (this.hasGtag()) {
-        window.gtag('event', 'timing_complete', {
+        (window as any).gtag('event', 'timing_complete', {
           name: variable,
           value: Math.round(value),
           event_category: category,
@@ -136,6 +136,13 @@ class AnalyticsService {
     } catch (error) {
       console.error('Failed to track timing:', error);
     }
+  }
+
+  /**
+   * Track performance metrics
+   */
+  trackPerformance(metric: string, value: number, metadata?: Record<string, unknown>): void {
+    this.trackTiming('performance', metric, value, metadata?.label as string);
   }
 
   /**

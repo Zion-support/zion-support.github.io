@@ -132,6 +132,29 @@ class Logger {
   }
 
   /**
+   * Log a performance metric
+   */
+  perf(metric: string, value: number, context?: string, metadata?: Record<string, unknown>): void {
+    this.log(LogLevel.DEBUG, `Performance: ${metric} = ${value}ms`, context, { ...metadata, metric, value });
+  }
+
+  /**
+   * Group related log messages
+   */
+  group(label: string, callback: () => void, context?: string): void {
+    if (this.config.enableConsole) {
+      console.group(label);
+    }
+    try {
+      callback();
+    } finally {
+      if (this.config.enableConsole) {
+        console.groupEnd();
+      }
+    }
+  }
+
+  /**
    * Create a child logger with a specific context
    */
   child(context: string): ContextLogger {
