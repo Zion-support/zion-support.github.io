@@ -335,3 +335,140 @@ class PerformanceMonitoringService {
 
 export const performanceMonitoring = PerformanceMonitoringService.getInstance();
 export default PerformanceMonitoringService;
+
+// Export convenience enums and functions
+export enum MetricUnit {
+  Milliseconds = 'ms',
+  Bytes = 'bytes',
+  Count = 'count',
+  Percentage = 'percentage',
+}
+
+// Simple metrics structure for testing
+interface MetricData {
+  values: number[];
+  count: number;
+  average: number;
+  min: number;
+  max: number;
+  unit: string;
+  rating?: 'good' | 'needs-improvement' | 'poor';
+}
+
+const simpleMetrics = new Map<string, MetricData>();
+
+export const recordMetric = (name: string, value: number, unit: MetricUnit = MetricUnit.Milliseconds) => {
+  // Record in our simple metrics store for testing
+  const existing = simpleMetrics.get(name);
+  if (existing) {
+    existing.values.push(value);
+    existing.count++;
+    existing.average = existing.values.reduce((a, b) => a + b, 0) / existing.count;
+    existing.min = Math.min(existing.min, value);
+    existing.max = Math.max(existing.max, value);
+  } else {
+    simpleMetrics.set(name, {
+      values: [value],
+      count: 1,
+      average: value,
+      min: value,
+      max: value,
+      unit,
+      rating: getRating(name, value),
+    });
+  }
+  
+  // Also record in the main performance monitoring service
+  performanceMonitoring.recordCustomMetric(name, value, unit);
+};
+
+function getRating(name: string, value: number): 'good' | 'needs-improvement' | 'poor' {
+  const thresholds: Record<string, { good: number; poor: number }> = {
+    'FCP': { good: 1800, poor: 3000 },
+    'LCP': { good: 2500, poor: 4000 },
+    'FID': { good: 100, poor: 300 },
+    'CLS': { good: 0.1, poor: 0.25 },
+    'TTFB': { good: 800, poor: 1800 },
+    'INP': { good: 200, poor: 500 },
+  };
+
+  const threshold = thresholds[name];
+  if (!threshold) return 'good';
+
+  if (value <= threshold.good) return 'good';
+  if (value <= threshold.poor) return 'needs-improvement';
+  return 'poor';
+}
+
+export const getMetrics = (): Record<string, MetricData> => {
+  const result: Record<string, MetricData> = {};
+  simpleMetrics.forEach((value, key) => {
+    result[key] = { ...value };
+  });
+  return result;
+};
+
+export const clearMetrics = () => {
+  simpleMetrics.clear();
+  performanceMonitoring.clearMetrics();
+};
+
+export const measureFunction = <T>(name: string, fn: () => T): T => {
+  const start = performance.now();
+  const result = fn();
+  const duration = performance.now() - start;
+  recordMetric(name, duration, MetricUnit.Milliseconds);
+  return result;
+};
+
+export const measureAsyncFunction = async <T>(name: string, fn: () => Promise<T>): Promise<T> => {
+  const start = performance.now();
+  const result = await fn();
+  const duration = performance.now() - start;
+  recordMetric(name, duration, MetricUnit.Milliseconds);
+  return result;
+};
+
+export const getPerformanceScore = (): number => {
+  const metrics = getMetrics();
+  const webVitalNames = ['FCP', 'LCP', 'FID', 'CLS', 'TTFB'];
+  const webVitals = webVitalNames
+    .map(name => metrics[name])
+    .filter(Boolean);
+  
+  if (webVitals.length === 0) return 0;
+  
+  const scores = webVitals.map(metric => {
+    switch (metric.rating) {
+      case 'good': return 100;
+      case 'needs-improvement': return 50;
+      case 'poor': return 0;
+      default: return 0;
+    }
+  });
+  
+  return Math.round(scores.reduce((a, b) => a + b, 0) / scores.length);
+};
+
+export const getRecommendations = (): string[] => {
+  const metrics = getMetrics();
+  const recommendations: string[] = [];
+  
+  if (metrics.FCP && metrics.FCP.rating !== 'good') {
+    recommendations.push('Improve FCP by optimizing critical CSS and reducing render-blocking resources');
+  }
+  if (metrics.LCP && metrics.LCP.rating !== 'good') {
+    recommendations.push('Improve LCP by optimizing largest images and server response time');
+  }
+  if (metrics.FID && metrics.FID.rating !== 'good') {
+    recommendations.push('Improve FID by reducing JavaScript execution time');
+  }
+  if (metrics.CLS && metrics.CLS.rating !== 'good') {
+    recommendations.push('Improve CLS by reserving space for dynamic content and avoiding layout shifts');
+  }
+  if (metrics.TTFB && metrics.TTFB.rating !== 'good') {
+    recommendations.push('Improve TTFB by optimizing server response time and using CDN');
+  }
+  
+  return recommendations;
+};
