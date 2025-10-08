@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useState, useCallback } from 'react';
 
 // Loading fallback component
@@ -46,14 +48,26 @@ const HomePage: React.FC = () => {
   }, []);
 
   return (
-    <div className='min-h-screen'>
-      <h1 className='text-4xl font-bold text-center py-12'>
-        Welcome to Zion Tech Group
-      </h1>
-      <p className='text-center text-gray-600'>
-        Advanced AI and IT Solutions
-      </p>
-    </div>
+    <>
+      <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-white to-purple-50">
+        <div className="container mx-auto px-4 py-16">
+          <h1 className="text-5xl font-bold text-gray-900 mb-6">
+            Zion Tech Group
+          </h1>
+          <p className="text-xl text-gray-600 mb-8">
+            Advanced AI and IT Solutions Provider
+          </p>
+          <div className="space-y-4">
+            <p className="text-lg text-gray-700">
+              Leading provider of enterprise AI solutions, quantum computing, and autonomous systems.
+            </p>
+            <p className="text-lg text-gray-700">
+              Transform your business with our cutting-edge technology.
+            </p>
+          </div>
+        </div>
+      </div>
+    </>
   );
 };
 

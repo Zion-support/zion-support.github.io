@@ -1,22 +1,31 @@
 import { useEffect } from 'react';
-import { monitorLongTasks } from '../utils/performanceOptimizer';
-import { analytics } from '../utils/analytics';
+import { performanceOptimizer, monitorLongTasks } from '../utils/performanceOptimizer';
 
 /**
- * Hook for monitoring performance metrics
+ * Custom hook for performance monitoring
  */
-const usePerformance = (): void => {
+const usePerformance = () => {
   useEffect(() => {
+    // Initialize performance monitoring
+    if (typeof window === 'undefined') return;
+
     // Monitor long tasks
     const observer = monitorLongTasks(entries => {
       entries.forEach(entry => {
-        analytics.track(
-          'long_task',
-          'performance',
-          'detected',
-          undefined,
-          entry.duration
-        );
+        console.warn('Long task detected:', entry.duration, 'ms');
+        
+        // Track in analytics if available
+        if (typeof window !== 'undefined' && 
+            (window as unknown as { analytics?: { track: (name: string, category: string, action: string, label?: string, value?: number) => void } }).analytics) {
+          const analytics = (window as unknown as { analytics: { track: (name: string, category: string, action: string, label?: string, value?: number) => void } }).analytics;
+          analytics.track(
+            'long_task',
+            'performance',
+            'detected',
+            undefined,
+            entry.duration
+          );
+        }
       });
     });
 
