@@ -5,6 +5,7 @@ import AnalyticsProvider from './components/AnalyticsProvider';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import PWAInstaller from './components/PWAInstaller';
 import { GlobalErrorBoundary } from './components/GlobalErrorBoundary';
+import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
 
 export default function RootLayout({
   children,
@@ -124,7 +125,7 @@ export default function RootLayout({
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         {/* Primary meta tags */}
-        <meta name="description" content="Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology." />
+        <meta name="description" content="Transform your business with Zion Tech Group's cutting-edge AI solutions, quantum computing, and autonomous systems. $50M+ in client savings, 95% automation, 300% ROI. Call (302) 464-0950 for free consultation." />
         <meta name="keywords" content="AI solutions, quantum computing, autonomous systems, digital transformation, enterprise AI, machine learning, automation, cloud services, business intelligence" />
         <meta name="author" content="Zion Tech Group" />
         <meta name="robots" content="index, follow" />
@@ -159,7 +160,7 @@ export default function RootLayout({
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://ziontechgroup.com" />
         <meta property="og:title" content="Zion Tech Group - Advanced AI and IT Solutions" />
-        <meta property="og:description" content="Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services." />
+        <meta property="og:description" content="Transform your business with Zion Tech Group's cutting-edge AI solutions, quantum computing, and autonomous systems. $50M+ in client savings, 95% automation, 300% ROI." />
         <meta property="og:image" content="https://ziontechgroup.com/og-image.jpg" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
@@ -169,7 +170,7 @@ export default function RootLayout({
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:url" content="https://ziontechgroup.com" />
         <meta name="twitter:title" content="Zion Tech Group - Advanced AI and IT Solutions" />
-        <meta name="twitter:description" content="Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services." />
+        <meta name="twitter:description" content="Transform your business with Zion Tech Group's cutting-edge AI solutions, quantum computing, and autonomous systems. $50M+ in client savings, 95% automation, 300% ROI." />
         <meta name="twitter:image" content="https://ziontechgroup.com/og-image.jpg" />
         <meta name="twitter:site" content="@ziontechgroup" />
         <meta name="twitter:creator" content="@ziontechgroup" />
@@ -179,16 +180,18 @@ export default function RootLayout({
         />
       </head>
       <body className='antialiased'>
-        <GlobalErrorBoundary>
-          <AnalyticsProvider>
-            <AccessibilityEnhancer>
-              <PerformanceMonitor />
-              <PerformanceOptimizer />
-              <PWAInstaller />
-              {children}
-            </AccessibilityEnhancer>
-          </AnalyticsProvider>
-        </GlobalErrorBoundary>
+        <EnhancedErrorBoundary>
+          <GlobalErrorBoundary>
+            <AnalyticsProvider>
+              <AccessibilityEnhancer>
+                <PerformanceMonitor />
+                <PerformanceOptimizer />
+                <PWAInstaller />
+                {children}
+              </AccessibilityEnhancer>
+            </AnalyticsProvider>
+          </GlobalErrorBoundary>
+        </EnhancedErrorBoundary>
       </body>
     </html>
   );

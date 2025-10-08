@@ -7,7 +7,7 @@
 const logger = {
   info: (message: string, context?: string) => ,
   performance: (message: string, data: Record<string, unknown>, context?: string) => ,
-  error: (message: string, error: Error) => console.error('[ERROR]', message, error),
+  error: (message: string, error: Error) => ,
 };
 
 interface PerformanceMetrics {

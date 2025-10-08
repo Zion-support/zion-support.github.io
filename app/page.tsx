@@ -9,12 +9,19 @@ const DynamicContentShowcase = lazy(() => import('./components/DynamicContentSho
 const ContentStatistics = lazy(() => import('./components/ContentStatistics'));
 const ContentNewsletterSignup = lazy(() => import('./components/ContentNewsletterSignup'));
 
+// Preload critical components
+if (typeof window !== 'undefined') {
+  import('./components/ContentPromotionBanner');
+  import('./components/ContentCarousel');
+}
+
 // Loading skeleton component
 const ServiceCardSkeleton: React.FC = memo(() => (
-  <div className="bg-white rounded-lg shadow-lg p-6 animate-pulse" role="status" aria-label="Loading service card">
-    <div className="h-8 bg-gray-200 rounded mb-4 w-3/4"></div>
-    <div className="h-4 bg-gray-200 rounded mb-2"></div>
-    <div className="h-4 bg-gray-200 rounded w-5/6"></div>
+  <div className="cyber-card hologram-card p-6 animate-pulse" role="status" aria-label="Loading service card">
+    <div className="h-12 bg-slate-700 rounded mb-4 w-16 mx-auto"></div>
+    <div className="h-6 bg-slate-700 rounded mb-4 w-3/4 mx-auto"></div>
+    <div className="h-4 bg-slate-700 rounded mb-2 w-full"></div>
+    <div className="h-4 bg-slate-700 rounded w-5/6"></div>
   </div>
 ));
 

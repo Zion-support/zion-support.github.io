@@ -51,6 +51,8 @@ export default defineConfig({
       maxParallelFileOps: 2,
       treeshake: {
         moduleSideEffects: false,
+        propertyReadSideEffects: false,
+        unknownGlobalSideEffects: false,
       },
       external: id => {
         // Externalize Next.js modules to prevent build errors
@@ -63,22 +65,23 @@ export default defineConfig({
         manualChunks: id => {
           // Core React libraries
           if (id.includes('node_modules/react') || id.includes('node_modules/react-dom')) {
-            return 'vendor';
+            return 'react-vendor';
           }
           // Router library
           if (id.includes('node_modules/react-router-dom')) {
-            return 'router';
+            return 'router-vendor';
           }
           // UI libraries
           if (
             id.includes('node_modules/framer-motion') ||
-            id.includes('node_modules/lucide-react')
+            id.includes('node_modules/lucide-react') ||
+            id.includes('node_modules/@heroicons/react')
           ) {
-            return 'ui';
+            return 'ui-vendor';
           }
           // Utilities and web vitals
-          if (id.includes('node_modules/web-vitals')) {
-            return 'page';
+          if (id.includes('node_modules/web-vitals') || id.includes('node_modules/clsx') || id.includes('node_modules/tailwind-merge')) {
+            return 'utils-vendor';
           }
           // Split other node_modules into separate chunks
           if (id.includes('node_modules')) {

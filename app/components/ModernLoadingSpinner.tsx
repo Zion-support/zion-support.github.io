@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 interface ModernLoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg' | 'xl';
   variant?: 'dots' | 'pulse' | 'spinner' | 'skeleton';

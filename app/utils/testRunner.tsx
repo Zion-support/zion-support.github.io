@@ -415,9 +415,7 @@ export class TestRunner {
         assertions,
       });
 
-      console.error(`❌ ${testName} (${Date.now() - startTime}ms)`);
-       
-      console.error(error);
+      - startTime}ms)`);
 
       if (this.config.bail) {
         throw error;
@@ -435,8 +433,7 @@ export class TestRunner {
     try {
       await hook();
     } catch (error) {
-       
-      console.error(`❌ ${hookName} hook failed:`, error);
+
       throw error;
     }
   }

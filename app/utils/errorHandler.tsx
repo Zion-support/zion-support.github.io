@@ -256,7 +256,7 @@ export class ErrorHandler {
       switch (error.severity) {
         case ErrorSeverity.CRITICAL:
         case ErrorSeverity.HIGH:
-          console.error(logMessage, error);
+          
           break;
         case ErrorSeverity.MEDIUM:
           break;
@@ -287,7 +287,7 @@ export class ErrorHandler {
         body: JSON.stringify(error),
       });
     } catch (err) {
-      console.error('Failed to log error to network:', err);
+      
     }
   }
 
@@ -307,7 +307,7 @@ export class ErrorHandler {
         }),
       });
     } catch (err) {
-      console.error('Failed to report error:', err);
+      
     }
   }
 
@@ -412,7 +412,7 @@ export class ErrorHandler {
       if (retryItem.retryCount < this.config.maxRetries) {
         this.scheduleRetry(retryItem.error);
       } else {
-        console.error('Max retries exceeded for error:', retryItem.error);
+        
       }
     }
   }
