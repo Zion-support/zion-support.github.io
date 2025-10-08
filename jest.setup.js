@@ -39,6 +39,29 @@ jest.mock('./app/hooks/usePerformanceMonitoring.ts', () => ({
 
 
 // Mock React Router (this is a Vite project, not Next.js)
+const mockRouterContext = {
+  basename: '',
+  location: { pathname: '/', search: '', hash: '', state: null },
+  navigationType: 'POP',
+  navigator: {
+    createHref: jest.fn(),
+    go: jest.fn(),
+    push: jest.fn(),
+    replace: jest.fn(),
+  },
+  static: false,
+};
+
+// Mock React Router context provider
+const MockRouterProvider = ({ children }) => {
+  const React = require('react');
+  const { createContext } = React;
+  
+  const RouterContext = createContext(mockRouterContext);
+  
+  return React.createElement(RouterContext.Provider, { value: mockRouterContext }, children);
+};
+
 jest.mock('react-router-dom', () => ({
   ...jest.requireActual('react-router-dom'),
 
@@ -50,9 +73,20 @@ jest.mock('react-router-dom', () => ({
     state: null,
   }),
   useParams: () => ({}),
-  BrowserRouter: ({ children }) => children,
-  MemoryRouter: ({ children }) => children,
-  Router: ({ children }) => children,
+  BrowserRouter: MockRouterProvider,
+  MemoryRouter: MockRouterProvider,
+  RouterProvider: ({ router }) => null,
+  useRouterContext: () => mockRouterContext,
+}));
+
+// Mock React Router context
+jest.mock('react-router', () => ({
+  ...jest.requireActual('react-router'),
+  useLocation: () => mockRouterContext.location,
+  useNavigate: () => mockRouterContext.navigator.push,
+  useParams: () => ({}),
+  useSearchParams: () => [new URLSearchParams(), jest.fn()],
+  useRouterContext: () => mockRouterContext,
 }));
 
 // Mock window.matchMedia
@@ -82,41 +116,9 @@ global.IntersectionObserver = class IntersectionObserver {
 };
 
 // Mock TextEncoder and TextDecoder
-global.TextEncoder = class TextEncoder {
-  encode(input) {
-    return new Uint8Array(Buffer.from(input, 'utf8'));
-  }
-};
-
-global.TextDecoder = class TextDecoder {
-  decode(input) {
-    return Buffer.from(input).toString('utf8');
-  }
-};
-
-// Mock React Router context
-const mockRouterContext = {
-  basename: '',
-  location: { pathname: '/', search: '', hash: '', state: null },
-  navigationType: 'POP',
-  navigator: {
-    createHref: jest.fn(),
-    go: jest.fn(),
-    push: jest.fn(),
-    replace: jest.fn(),
-  },
-  static: false,
-};
-
-// Mock React Router context provider
-jest.mock('react-router', () => ({
-  ...jest.requireActual('react-router'),
-  useLocation: () => mockRouterContext.location,
-  useNavigate: () => mockRouterContext.navigator.push,
-  useParams: () => ({}),
-  useSearchParams: () => [new URLSearchParams(), jest.fn()],
-  useRouterContext: () => mockRouterContext,
-}));
+const { TextEncoder, TextDecoder } = require('util');
+global.TextEncoder = TextEncoder;
+global.TextDecoder = TextDecoder;
 
 // Suppress console errors in tests
 const originalError = console.error;

@@ -1,6 +1,6 @@
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import { HelmetProvider } from 'react-helmet-async';
-import { MemoryRouter } from 'react-router-dom';
+import { MemoryRouter, createMemoryRouter, RouterProvider } from 'react-router-dom';
 import AdvancedErrorBoundary from '../app/components/AdvancedErrorBoundary';
 import AdvancedSEOOptimizer from '../app/components/AdvancedSEOOptimizer';
 import AdvancedPerformanceMonitor from '../app/components/AdvancedPerformanceMonitor';
@@ -15,7 +15,7 @@ const ThrowError = ({ shouldThrow }: { shouldThrow: boolean }) => {
   return <div>No error</div>;
 };
 
-// Test wrapper component
+// Test wrapper component with proper Router context
 const TestWrapper = ({ children }: { children: React.ReactNode }) => (
   <MemoryRouter>
     <HelmetProvider>
@@ -65,9 +65,11 @@ describe('AdvancedErrorBoundary', () => {
       .mockImplementation(() => {});
 
     render(
-      <AdvancedErrorBoundary onError={onError}>
-        <ThrowError shouldThrow={true} />
-      </AdvancedErrorBoundary>
+      <TestWrapper>
+        <AdvancedErrorBoundary onError={onError}>
+          <ThrowError shouldThrow={true} />
+        </AdvancedErrorBoundary>
+      </TestWrapper>
     );
 
     expect(onError).toHaveBeenCalled();
@@ -83,9 +85,11 @@ describe('AdvancedErrorBoundary', () => {
     const TestComponent = () => <ThrowError shouldThrow={shouldThrow} />;
 
     const { rerender } = render(
-      <AdvancedErrorBoundary enableRetry={true}>
-        <TestComponent />
-      </AdvancedErrorBoundary>
+      <TestWrapper>
+        <AdvancedErrorBoundary enableRetry={true}>
+          <TestComponent />
+        </AdvancedErrorBoundary>
+      </TestWrapper>
     );
 
     const retryButton = screen.getByText('Try Again (3 attempts left)');
