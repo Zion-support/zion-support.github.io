@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, Zap, Shield, Clock, TrendingUp } from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
 
 const AICloudInfrastructurePage: React.FC = () => {
   const cloudServices = [
