@@ -242,6 +242,20 @@ class Logger {
   }
 
   /**
+   * Log lifecycle events
+   */
+  lifecycle(message: string, component: string): void {
+    this.info(`[${component}] ${message}`, { component, type: 'lifecycle' });
+  }
+
+  /**
+   * Log performance metrics with detailed context
+   */
+  performance(message: string, metrics: Record<string, unknown>, component: string): void {
+    this.info(`[${component}] ${message}`, { component, type: 'performance', ...metrics });
+  }
+
+  /**
    * Group related logs (development only)
    */
   group(label: string, fn: () => void): void {
