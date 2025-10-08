@@ -143,18 +143,13 @@ class AnalyticsService {
    */
   trackPerformance(metric: string, value: number, metadata?: Record<string, unknown>): void {
     try {
-      if (this.hasGtag()) {
-        (window as any).gtag('event', 'performance_metric', {
-          metric_name: metric,
-          metric_value: Math.round(value),
-          ...metadata,
-        });
-      }
-
-      // Log in development
-      if (process.env['NODE_ENV'] === 'development') {
-        console.log('Performance Metric:', { metric, value, metadata });
-      }
+      this.trackEvent({
+        action: 'performance',
+        category: 'web_vitals',
+        label: metric,
+        value: Math.round(value),
+        metadata,
+      });
     } catch (error) {
       console.error('Failed to track performance:', error);
     }
