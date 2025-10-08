@@ -127,7 +127,7 @@ class PerformanceMonitoringService {
 
     this.webVitals[name] = metric;
 
-    logger.info(`Web Vital: ${name}`, undefined, { value, rating });
+    logger.info(`Web Vital: ${name}`, 'PerformanceMonitoring', { value, rating });
 
     // Send to analytics
     this.sendToAnalytics(metric);
@@ -172,7 +172,7 @@ class PerformanceMonitoringService {
       this.customMetrics.shift();
     }
 
-    logger.debug(`Custom Metric: ${name}`, undefined, { value, unit });
+    logger.debug(`Custom Metric: ${name}`, 'PerformanceMonitoring', { value, unit });
   }
 
   /**

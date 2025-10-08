@@ -20,11 +20,25 @@ export function mockPerformanceAPI() {
   }
 
   if (!window.performance.mark) {
-    window.performance.mark = () => {};
+    window.performance.mark = ((name: string) => ({
+      name,
+      entryType: 'mark' as const,
+      startTime: Date.now(),
+      duration: 0,
+      toJSON: () => ({}),
+      detail: undefined,
+    })) as any;
   }
 
   if (!window.performance.measure) {
-    window.performance.measure = () => {};
+    window.performance.measure = ((name: string) => ({
+      name,
+      entryType: 'measure' as const,
+      startTime: Date.now(),
+      duration: 0,
+      toJSON: () => ({}),
+      detail: undefined,
+    })) as any;
   }
 }
 
@@ -112,7 +126,7 @@ export async function waitFor(
 export function createMockFn<T extends (...args: any[]) => any>(
   implementation?: T
 ): jest.Mock<ReturnType<T>, Parameters<T>> {
-  return jest.fn(implementation);
+  return jest.fn(implementation) as jest.Mock<ReturnType<T>, Parameters<T>>;
 }
 
 /**

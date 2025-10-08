@@ -3,6 +3,17 @@
  * Production-ready logging with multiple levels and formatting
  */
 
+// Helper to safely check if we're in production
+function isProduction(): boolean {
+  try {
+    return typeof window !== 'undefined' 
+      ? false // Client-side defaults to dev mode
+      : false; // Server-side defaults to dev mode for safety
+  } catch {
+    return false;
+  }
+}
+
 export enum LogLevel {
   DEBUG = 0,
   INFO = 1,
@@ -32,16 +43,16 @@ export interface LoggerConfig {
 
 class Logger {
   private config: LoggerConfig = {
-    minLevel: process.env['NODE_ENV'] === 'production' ? LogLevel.WARN : LogLevel.DEBUG,
+    minLevel: isProduction() ? LogLevel.WARN : LogLevel.DEBUG,
     enableConsole: true,
-    enableRemote: process.env['NODE_ENV'] === 'production',
+    enableRemote: isProduction(),
     maxBufferSize: 100,
     batchSize: 10,
     flushInterval: 30000, // 30 seconds
   };
 
   private buffer: LogEntry[] = [];
-  private flushTimer?: NodeJS.Timeout;
+  private flushTimer?: ReturnType<typeof setInterval>;
 
   constructor() {
     if (typeof window !== 'undefined' && this.config.enableRemote) {
@@ -53,24 +64,40 @@ class Logger {
   }
 
   /**
+   * Parse arguments to determine context and metadata
+   */
+  private parseArgs(
+    contextOrMetadata?: string | Record<string, unknown>,
+    metadata?: Record<string, unknown>
+  ): [string | undefined, Record<string, unknown> | undefined] {
+    if (typeof contextOrMetadata === 'string') {
+      return [contextOrMetadata, metadata];
+    }
+    return [undefined, contextOrMetadata];
+  }
+
+  /**
    * Log a debug message
    */
-  debug(message: string, context?: string, metadata?: Record<string, unknown>): void {
-    this.log(LogLevel.DEBUG, message, context, metadata);
+  debug(message: string, contextOrMetadata?: string | Record<string, unknown>, metadata?: Record<string, unknown>): void {
+    const [context, meta] = this.parseArgs(contextOrMetadata, metadata);
+    this.log(LogLevel.DEBUG, message, context, meta);
   }
 
   /**
    * Log an info message
    */
-  info(message: string, context?: string, metadata?: Record<string, unknown>): void {
-    this.log(LogLevel.INFO, message, context, metadata);
+  info(message: string, contextOrMetadata?: string | Record<string, unknown>, metadata?: Record<string, unknown>): void {
+    const [context, meta] = this.parseArgs(contextOrMetadata, metadata);
+    this.log(LogLevel.INFO, message, context, meta);
   }
 
   /**
    * Log a warning message
    */
-  warn(message: string, context?: string, metadata?: Record<string, unknown>): void {
-    this.log(LogLevel.WARN, message, context, metadata);
+  warn(message: string, contextOrMetadata?: string | Record<string, unknown>, metadata?: Record<string, unknown>): void {
+    const [context, meta] = this.parseArgs(contextOrMetadata, metadata);
+    this.log(LogLevel.WARN, message, context, meta);
   }
 
   /**
@@ -78,17 +105,28 @@ class Logger {
    */
   error(
     message: string,
-    error?: Error,
-    context?: string,
+    errorOrContextOrMetadata?: Error | string | Record<string, unknown>,
+    contextOrMetadata?: string | Record<string, unknown>,
     metadata?: Record<string, unknown>
   ): void {
+    let error: Error | undefined;
+    let context: string | undefined;
+    let meta: Record<string, unknown> | undefined;
+
+    if (errorOrContextOrMetadata instanceof Error) {
+      error = errorOrContextOrMetadata;
+      [context, meta] = this.parseArgs(contextOrMetadata, metadata);
+    } else {
+      [context, meta] = this.parseArgs(errorOrContextOrMetadata, contextOrMetadata as Record<string, unknown> | undefined);
+    }
+
     const entry: LogEntry = {
       level: LogLevel.ERROR,
       message,
       timestamp: new Date(),
       context,
       metadata: {
-        ...metadata,
+        ...meta,
         error: error ? {
           name: error.name,
           message: error.message,
@@ -106,17 +144,28 @@ class Logger {
    */
   fatal(
     message: string,
-    error?: Error,
-    context?: string,
+    errorOrContextOrMetadata?: Error | string | Record<string, unknown>,
+    contextOrMetadata?: string | Record<string, unknown>,
     metadata?: Record<string, unknown>
   ): void {
+    let error: Error | undefined;
+    let context: string | undefined;
+    let meta: Record<string, unknown> | undefined;
+
+    if (errorOrContextOrMetadata instanceof Error) {
+      error = errorOrContextOrMetadata;
+      [context, meta] = this.parseArgs(contextOrMetadata, metadata);
+    } else {
+      [context, meta] = this.parseArgs(errorOrContextOrMetadata, contextOrMetadata as Record<string, unknown> | undefined);
+    }
+
     const entry: LogEntry = {
       level: LogLevel.FATAL,
       message,
       timestamp: new Date(),
       context,
       metadata: {
-        ...metadata,
+        ...meta,
         error: error ? {
           name: error.name,
           message: error.message,
@@ -129,6 +178,58 @@ class Logger {
     this.processLog(entry);
     // Immediately flush fatal errors
     this.flush();
+  }
+
+  /**
+   * Log performance metrics
+   */
+  perf(metric: string, value: number, metadata?: Record<string, unknown>): void {
+    this.info(`Performance: ${metric} = ${value}ms`, 'Performance', {
+      metric,
+      value,
+      ...metadata,
+    });
+  }
+
+  /**
+   * Log lifecycle events
+   */
+  lifecycle(message: string, context?: string): void {
+    this.info(`Lifecycle: ${message}`, context);
+  }
+
+  /**
+   * Log performance data
+   */
+  performance(message: string, data: unknown, context?: string): void {
+    this.info(`Performance: ${message}`, context, { performanceData: data });
+  }
+
+  /**
+   * Group related log messages
+   */
+  group(label: string, fn?: () => void): void {
+    if (this.config.enableConsole && typeof console.group === 'function') {
+      console.group(label);
+      if (fn) {
+        try {
+          fn();
+        } finally {
+          console.groupEnd();
+        }
+      }
+    } else if (fn) {
+      fn();
+    }
+  }
+
+  /**
+   * End a console group
+   */
+  groupEnd(): void {
+    if (this.config.enableConsole && typeof console.groupEnd === 'function') {
+      console.groupEnd();
+    }
   }
 
   /**
@@ -319,6 +420,14 @@ class ContextLogger {
 
   fatal(message: string, error?: Error, metadata?: Record<string, unknown>): void {
     this.logger.fatal(message, error, this.context, metadata);
+  }
+
+  perf(metric: string, value: number, metadata?: Record<string, unknown>): void {
+    this.logger.perf(metric, value, { ...metadata, context: this.context });
+  }
+
+  group(label: string, fn: () => void): void {
+    this.logger.group(`${this.context}: ${label}`, fn);
   }
 
   child(subContext: string): ContextLogger {

@@ -147,6 +147,7 @@ class ErrorTrackingService {
     logger.error(
       `[${metadata.severity.toUpperCase()}] ${error.message}`,
       error,
+      'ErrorTracking',
       {
         error_id: errorId,
         category: metadata.category,

@@ -30,8 +30,8 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
 
   useEffect(() => {
     const reportWebVitals = (metric: { name: string; value: number }) => {
-      // Log to console in development
-      if (process.env['NODE_ENV'] === 'development') {
+      // Log to console in development (only on client side)
+      if (typeof window !== 'undefined' && enableConsoleLogging) {
         console.log('Web Vital:', metric.name, metric.value);
       }
     };
@@ -84,8 +84,8 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     return () => clearInterval(interval);
   }, [onMetricsUpdate, enableConsoleLogging, updateInterval, metrics.renderTime, metrics.loadTime, metrics.memoryUsage]);
 
-  // Only show in development
-  if (process.env['NODE_ENV'] !== 'development') {
+  // Only show when explicitly enabled via props
+  if (!enableConsoleLogging) {
     return null;
   }
 

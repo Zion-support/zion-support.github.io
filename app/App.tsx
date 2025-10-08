@@ -16,27 +16,14 @@ import LoadingSpinner from './components/LoadingSpinner';
 // Lazy load pages
 const HomePage = lazy(() => import('./page').catch(() => ({ default: () => <div>Error loading page</div> })));
 
-// Performance monitoring
-const performanceOptimizer = {
-  init: () => {},
-  getMetrics: () => ({ lcp: 0, fid: 0, cls: 0 })
-};
-
-const logger = {
-  lifecycle: (message: string, component: string) => console.log(`[${component}] ${message}`),
-  info: (message: string, data?: any) => console.log(message, data),
-  error: (message: string, error: Error, data?: any) => console.error(message, error, data),
-  performance: (message: string, metrics: any, component: string) => console.log(`[${component}] ${message}`, metrics)
-};
-
-const lazyLoadImages = () => {};
-const preloadCriticalResources = () => {};
-const collectPerformanceMetrics = () => ({ lcp: 0, fid: 0, cls: 0 });
+// Import proper utilities
+import { performanceOptimizer, lazyLoadImages, preloadCriticalResources, collectPerformanceMetrics } from './utils/performanceOptimizer';
+import { logger } from './utils/logger';
 
 const App: React.FC = () => {
   useEffect(() => {
     // Initialize global error handling
-    logger.lifecycle('initialized', 'App');
+    logger.info('App initialized', 'App');
 
     // Initialize performance monitoring
     lazyLoadImages();
@@ -48,23 +35,19 @@ const App: React.FC = () => {
       const pageLoadMetrics = collectPerformanceMetrics();
       const metrics = performanceOptimizer.getMetrics();
       if (pageLoadMetrics) {
-        // eslint-disable-next-line no-console
-        console.log('Performance metrics collected:', pageLoadMetrics);
+        logger.info('Performance metrics collected', 'App', { metrics: pageLoadMetrics });
       }
       if (metrics) {
-        // eslint-disable-next-line no-console
-        console.log('Performance metrics:', metrics);
+        logger.info('Core Web Vitals metrics', 'App', { metrics });
       }
     }
     
-    logger.lifecycle('Performance monitoring initialized', 'App');
-    logger.info('🚀 Zion Tech Group App initialized with comprehensive monitoring', { component: 'App' });
+    logger.info('Performance monitoring initialized', 'App');
+    logger.info('🚀 Zion Tech Group App initialized with comprehensive monitoring');
   }, []);
 
   const handleError = useCallback((error: Error, errorInfo: any) => {
-    logger.error('Application Error', error, { component: 'ErrorBoundary' });
-    // eslint-disable-next-line no-console
-    console.error('Error info:', errorInfo);
+    logger.error('Application Error', error, { errorInfo, component: 'ErrorBoundary' });
   }, []);
 
   return (
