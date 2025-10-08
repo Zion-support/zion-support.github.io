@@ -115,8 +115,8 @@ class Logger {
    */
   error(
     message: string,
-    errorOrContextOrMetadata?: Error | string | Record<string, unknown>
-    contextOrMetadata?: string | Record<string, unknown>
+    errorOrContextOrMetadata?: Error | string | Record<string, unknown>,
+    contextOrMetadata?: string | Record<string, unknown>,
     _metadata?: Record<string, unknown>
   ): void {
     let error: Error | undefined
@@ -130,18 +130,18 @@ class Logger {
       [context, meta] = this.parseArgs(errorOrContextOrMetadata, contextOrMetadata as Record<string, unknown> | undefined)
     }
     const entry: LogEntry = {
-      level: LogLevel.ERROR
-      message
-      timestamp: new Date()
-      context
+      level: LogLevel.ERROR,
+      message,
+      timestamp: new Date(),
+      context,
       metadata: {
-        ...meta
+        ...meta,
         error: error ? {
-          name: error.name
-          message: error.message
+          name: error.name,
+          message: error.message,
           stack: error.stack
         } : undefined
-      }
+      },
       stack: error?.stack
     }
     this.processLog(entry)
@@ -151,8 +151,8 @@ class Logger {
    */
   fatal(
     message: string,
-    errorOrContextOrMetadata?: Error | string | Record<string, unknown>
-    contextOrMetadata?: string | Record<string, unknown>
+    errorOrContextOrMetadata?: Error | string | Record<string, unknown>,
+    contextOrMetadata?: string | Record<string, unknown>,
     _metadata?: Record<string, unknown>
   ): void {
     let error: Error | undefined
@@ -166,18 +166,18 @@ class Logger {
       [context, meta] = this.parseArgs(errorOrContextOrMetadata, contextOrMetadata as Record<string, unknown> | undefined)
     }
     const entry: LogEntry = {
-      level: LogLevel.FATAL
-      message
-      timestamp: new Date()
-      context
+      level: LogLevel.FATAL,
+      message,
+      timestamp: new Date(),
+      context,
       metadata: {
-        ...meta
+        ...meta,
         error: error ? {
-          name: error.name
-          message: error.message
+          name: error.name,
+          message: error.message,
           stack: error.stack
         } : undefined
-      }
+      },
       stack: error?.stack
     }
     this.processLog(entry)
@@ -189,8 +189,8 @@ class Logger {
    */
   perf(metric: string, value: number, metadata?: Record<string, unknown>): void {
     this.info(`Performance: ${metric} = ${value}ms`, 'Performance', {
-      metric
-      value
+      metric,
+      value,
       ...metadata
     })
   }
@@ -250,8 +250,8 @@ class Logger {
     try {
       if (this.config.remoteEndpoint) {
         await fetch(this.config.remoteEndpoint, {
-          method: 'POST'
-          headers: { 'Content-Type': 'application/json' }
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ logs })
         })
       }
@@ -279,14 +279,14 @@ class Logger {
   private log(
     level: LogLevel,
     message: string,
-    context?: string
+    context?: string,
     metadata?: Record<string, unknown>
   ): void {
     const entry: LogEntry = {
-      level
-      message
-      timestamp: new Date()
-      context
+      level,
+      message,
+      timestamp: new Date(),
+      context,
       metadata
     }
     this.processLog(entry)
@@ -398,6 +398,7 @@ class ContextLogger {
   }
   fatal(message: string, error?: Error, metadata?: Record<string, unknown>): void {
     this.logger.fatal(message, error, this.context, metadata)
+  }
   debug(message: string, _metadata?: Record<string, unknown>): void {
     this.logger.debug(message, this.context, _metadata)
   }
@@ -450,22 +451,16 @@ export const warn = (message: string, context?: string, _metadata?: Record<strin
 
 export const error = (
   message: string,
-  err?: Error
-  context?: string
+  err?: Error,
+  context?: string,
   _metadata?: Record<string, unknown>
 ) => logger.error(message, err, context, _metadata)
 
-  metadata?: Record<string, unknown>
-) => logger.error(message, err, context, metadata)
-
 export const fatal = (
   message: string,
-  err?: Error
-  context?: string
+  err?: Error,
+  context?: string,
   _metadata?: Record<string, unknown>
 ) => logger.fatal(message, err, context, _metadata)
-
-  metadata?: Record<string, unknown>
-) => logger.fatal(message, err, context, metadata)
 
 export default logger
