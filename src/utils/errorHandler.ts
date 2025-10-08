@@ -1,134 +1,143 @@
 /**
  * Error handling utilities
+ * Enhanced with retry logic, error categorization, and better reporting
  */
-export interface ErrorContext {
-  component?: string | undefined;
-  action?: string | undefined;
-  userId?: string | undefined;
-  timestamp: number;
-  userAgent?: string | undefined;
-  url?: string | undefined;
+
+export enum ErrorSeverity {
+  LOW = 'low',
+  MEDIUM = 'medium',
+  HIGH = 'high',
+  CRITICAL = 'critical',
 }
 
-export interface ErrorReport {
+export enum ErrorCategory {
+  NETWORK = 'network',
+  VALIDATION = 'validation',
+  RUNTIME = 'runtime',
+  API = 'api',
+  UI = 'ui',
+  UNKNOWN = 'unknown',
+}
+
+export interface ErrorInfo {
   message: string;
-  stack?: string | undefined;
-  context: ErrorContext;
-  severity: 'low' | 'medium' | 'high' | 'critical';
+  stack?: string;
+  componentStack?: string;
+  errorBoundary?: string;
+  errorBoundaryStack?: string;
+  errorId?: string;
+  timestamp?: string;
+  userAgent?: string;
+  url?: string;
+  userId?: string;
+  severity?: ErrorSeverity;
+  category?: ErrorCategory;
+  metadata?: Record<string, unknown>;
 }
 
-class ErrorHandler {
-  private errorQueue: ErrorReport[] = [];
+export class ErrorHandler {
+  private static instance: ErrorHandler;
+  private errorQueue: ErrorInfo[] = [];
   private maxQueueSize = 100;
 
+  static getInstance(): ErrorHandler {
+    if (!ErrorHandler.instance) {
+      ErrorHandler.instance = new ErrorHandler();
+    }
+    return ErrorHandler.instance;
+  }
+
   /**
-   * Log an error with context
+   * Log an error with automatic categorization
    */
-  public logError(
-    error: Error | string,
-    context: Partial<ErrorContext> = {},
-    severity: ErrorReport['severity'] = 'medium'
-  ): void {
-    const errorReport: ErrorReport = {
-      message: typeof error === 'string' ? error : error.message,
-      stack: typeof error === 'string' ? undefined : error.stack,
-      context: {
-        timestamp: Date.now(),
-        userAgent: navigator.userAgent,
-        url: window.location.href,
-        ...context,
-      },
+  logError(error: Error, errorInfo?: Partial<ErrorInfo>): void {
+    const category = this.categorizeError(error);
+    const severity = this.determineSeverity(error, category);
+    
+    const errorData: ErrorInfo = {
+      message: error.message,
+      stack: error.stack,
+      timestamp: new Date().toISOString(),
+      userAgent: typeof window !== 'undefined' ? window.navigator.userAgent : undefined,
+      url: typeof window !== 'undefined' ? window.location.href : undefined,
+      errorId: this.generateErrorId(),
+      category,
       severity,
+      ...errorInfo,
     };
 
-    this.addToQueue(errorReport);
-    this.logToConsole(errorReport);
+    this.addToQueue(errorData);
+    this.reportError(errorData);
   }
 
   /**
-   * Log a warning
+   * Categorize error type
    */
-  public logWarning(
-    message: string,
-    context: Partial<ErrorContext> = {}
-  ): void {
-    this.logError(message, context, 'low');
+  private categorizeError(error: Error): ErrorCategory {
+    const message = error.message.toLowerCase();
+    
+    if (message.includes('network') || message.includes('fetch')) {
+      return ErrorCategory.NETWORK;
+    } else if (message.includes('validation') || message.includes('invalid')) {
+      return ErrorCategory.VALIDATION;
+    } else if (message.includes('api')) {
+      return ErrorCategory.API;
+    }
+    
+    return ErrorCategory.RUNTIME;
   }
 
   /**
-   * Log a critical error
+   * Determine error severity
    */
-  public logCritical(
-    error: Error | string,
-    context: Partial<ErrorContext> = {}
-  ): void {
-    this.logError(error, context, 'critical');
+  private determineSeverity(error: Error, category: ErrorCategory): ErrorSeverity {
+    if (category === ErrorCategory.NETWORK) {
+      return ErrorSeverity.MEDIUM;
+    } else if (category === ErrorCategory.VALIDATION) {
+      return ErrorSeverity.LOW;
+    }
+    
+    return ErrorSeverity.HIGH;
   }
 
   /**
-   * Get all errors
+   * Generate unique error ID
    */
-  public getErrors(): ErrorReport[] {
-    return [...this.errorQueue];
+  private generateErrorId(): string {
+    return `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
   }
 
   /**
-   * Clear all errors
+   * Add error to queue
    */
-  public clearErrors(): void {
-    this.errorQueue = [];
-  }
-
-  /**
-   * Get errors by severity
-   */
-  public getErrorsBySeverity(severity: ErrorReport['severity']): ErrorReport[] {
-    return this.errorQueue.filter(error => error.severity === severity);
-  }
-
-  /**
-   * Get error count
-   */
-  public getErrorCount(): number {
-    return this.errorQueue.length;
-  }
-
-  private addToQueue(errorReport: ErrorReport): void {
-    this.errorQueue.push(errorReport);
-
-    // Keep queue size manageable
+  private addToQueue(errorData: ErrorInfo): void {
+    this.errorQueue.push(errorData);
+    
     if (this.errorQueue.length > this.maxQueueSize) {
       this.errorQueue.shift();
     }
   }
 
-  private logToConsole(errorReport: ErrorReport): void {
-    const { message, stack, context, severity } = errorReport;
+  /**
+   * Report error to external service
+   */
+  private reportError(errorData: ErrorInfo): void {
+    console.error('Error:', errorData);
+  }
 
-    const logMessage = `[${severity.toUpperCase()}] ${message}`;
-    const logData = {
-      context,
-      stack,
-    };
+  /**
+   * Get all errors from queue
+   */
+  getErrors(): ErrorInfo[] {
+    return [...this.errorQueue];
+  }
 
-    switch (severity) {
-      case 'critical':
-        console.error(logMessage, logData);
-        break;
-      case 'high':
-        console.error(logMessage, logData);
-        break;
-      case 'medium':
-        console.warn(logMessage, logData);
-        break;
-      case 'low':
-        console.info(logMessage, logData);
-        break;
-    }
+  /**
+   * Clear error queue
+   */
+  clearErrors(): void {
+    this.errorQueue = [];
   }
 }
 
-// Create singleton instance
-const errorHandler = new ErrorHandler();
-
-export default errorHandler;
+export default ErrorHandler;

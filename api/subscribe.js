@@ -19,21 +19,21 @@ async function handler(req, res) {
     return;
   }
 
-  try {
-    if (!isValidEmail(email)) {
-      res.statusCode = 400;
-      res.json({ error: 'Invalid email' });
-      return;
-    }
+  if (!isValidEmail(email)) {
+    res.statusCode = 400;
+    res.json({ error: 'Invalid email' });
+    return;
+  }
 
+  try {
     const file = path.join(
       process.cwd(),
       'data',
       'newsletter-subscriptions.json'
     );
-
+    
     let existing = [];
-
+    
     try {
       existing = JSON.parse(fs.readFileSync(file, 'utf8'));
       if (!Array.isArray(existing)) existing = [];

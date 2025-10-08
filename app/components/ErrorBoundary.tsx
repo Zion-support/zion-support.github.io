@@ -29,17 +29,13 @@ class ErrorBoundary extends Component<Props, State> {
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    // Log error to console in development
-    if (process.env['NODE_ENV'] === 'development') {
-      // eslint-disable-next-line no-console
+    if (process.env.NODE_ENV === 'development') {
       console.error('ErrorBoundary caught an error:', error, errorInfo);
     }
 
-    // Report error to monitoring service in production
-    if (process.env['NODE_ENV'] === 'production') {
-      // Send to error tracking service
+    if (process.env.NODE_ENV === 'production') {
       if (typeof window !== 'undefined' && 'gtag' in window) {
-        (window as unknown as { gtag: (command: string, eventName: string, parameters: Record<string, unknown>) => void }).gtag('event', 'exception', {
+        (window as any).gtag('event', 'exception', {
           description: error.message,
           fatal: false
         });
@@ -64,11 +60,11 @@ class ErrorBoundary extends Component<Props, State> {
       }
 
       return (
-        <div className="min-h-screen flex items-center justify-center bg-gray-50 p-4">
-          <div className="max-w-md w-full">
-            <div className="bg-white rounded-lg shadow-lg p-8 text-center">
-              <div className="mb-6">
-                <FileWarning className="w-16 h-16 text-red-600 mx-auto" />
+        <div className="min-h-screen bg-gradient-to-br from-red-50 to-orange-50 flex items-center justify-center p-4">
+          <div className="max-w-md w-full bg-white rounded-xl shadow-xl p-8">
+            <div className="text-center">
+              <div className="flex justify-center mb-4">
+                <FileWarning className="h-16 w-16 text-red-500" />
               </div>
               <h1 className="text-2xl font-bold text-gray-900 mb-2">
                 Oops! Something went wrong
@@ -85,7 +81,7 @@ class ErrorBoundary extends Component<Props, State> {
                 </button>
                 <Link
                   href="/"
-                  className="block w-full border-2 border-red-600 text-red-600 hover:bg-red-50 font-semibold py-3 px-6 rounded-lg transition-colors"
+                  className="block w-full border-2 border-red-600 text-red-600 hover:bg-red-50 font-semibold py-3 px-6 rounded-lg transition-colors text-center"
                 >
                   Go to Homepage
                 </Link>
