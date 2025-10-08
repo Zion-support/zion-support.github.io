@@ -46,7 +46,7 @@ const App: React.FC = () => {
     }
     
     logger.lifecycle('performance monitoring initialized', 'App');
-    logger.info('🚀 Zion Tech Group App initialized with comprehensive monitoring', 'App');
+    logger.info('🚀 Zion Tech Group App initialized with comprehensive monitoring', { component: 'App' });
   }, []);
 
   return (
@@ -64,11 +64,10 @@ const App: React.FC = () => {
             description="Leading provider of enterprise AI solutions, quantum computing, and autonomous systems. Transform your business with our cutting-edge technology."
           >
             <AdvancedSEOOptimizer
-              config={{
+              seoData={{
                 title: 'Zion Tech Group - Advanced AI and IT Solutions',
                 description: 'Leading provider of enterprise AI solutions, quantum computing, and autonomous systems. Transform your business with our cutting-edge technology.',
                 keywords: ['AI solutions', 'enterprise AI', 'quantum computing', 'autonomous systems', 'digital transformation', 'automation', 'cloud services', 'AI consulting', 'business intelligence', 'machine learning'],
-                url: 'https://ziontechgroup.com',
                 canonicalUrl: 'https://ziontechgroup.com'
               }}
               enableStructuredData={true}
