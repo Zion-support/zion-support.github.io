@@ -22,7 +22,7 @@ const ContactPage = lazy(() => import('./contact/page'));
 const EnterprisePage = lazy(() => import('./enterprise/page'));
 
 // Styles
-import '../src/index.css';
+import './globals.css';
 
 const App: React.FC = () => {
   useEffect(() => {
