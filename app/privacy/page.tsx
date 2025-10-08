@@ -1,4 +1,13 @@
 import React from 'react';
+// import { Metadata } from 'next'; // Removed for Vite
+
+const metadata = {
+  title: 'Privacy Policy - Zion Tech Group',
+  description:
+    'Privacy policy and data protection information for Zion Tech Group services and website.',
+};
+
+export { metadata };
 
 const PrivacyPage: React.FC = () => {
   return (

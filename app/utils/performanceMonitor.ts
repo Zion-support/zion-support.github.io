@@ -46,16 +46,21 @@ class PerformanceMonitor {
         });
 
         // Largest Contentful Paint
-        this.observeEntry('largest-contentful-paint', (entries) => {
+        this.observeEntry('largest-contentful-paint', entries => {
+          const lastEntry = entries[entries.length - 1];
           if (lastEntry) {
-            this.recordMetric('LCP', lastEntry.renderTime || lastEntry.loadTime || lastEntry.startTime);
+            this.recordMetric(
+              'LCP',
+              (lastEntry as any).renderTime || (lastEntry as any).loadTime || lastEntry.startTime
+            );
           }
         });
 
         // First Input Delay
-        this.observeEntry('first-input', (entries) => {
-          if (firstInput && firstInput.processingStart !== undefined) {
-            const fid = firstInput.processingStart - firstInput.startTime;
+        this.observeEntry('first-input', entries => {
+          const firstInput = entries[0];
+          if (firstInput && (firstInput as any).processingStart !== undefined) {
+            const fid = (firstInput as any).processingStart - firstInput.startTime;
             this.recordMetric('FID', fid);
           }
         });
@@ -63,7 +68,7 @@ class PerformanceMonitor {
         // Cumulative Layout Shift
         this.observeEntry('layout-shift', (entries) => {
           let clsValue = 0;
-          entries.forEach((entry: PerformanceEntry) => {
+          entries.forEach((entry: LayoutShift) => {
             if (!entry.hadRecentInput) {
               clsValue += entry.value;
             }

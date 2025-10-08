@@ -60,7 +60,7 @@ class MonitoringService {
         // First Input Delay
         const fidObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
-          entries.forEach((entry: PerformanceEntry) => {
+          entries.forEach((entry: PerformanceEventTiming) => {
             this.metrics.fid = entry.processingStart - entry.startTime;
             this.reportMetric('fid', this.metrics.fid);
           });
@@ -71,7 +71,7 @@ class MonitoringService {
         let clsValue = 0;
         const clsObserver = new PerformanceObserver(list => {
           const entries = list.getEntries();
-          entries.forEach((entry: PerformanceEntry) => {
+          entries.forEach((entry: LayoutShift) => {
             if (!entry.hadRecentInput) {
               clsValue += entry.value;
               this.metrics.cls = clsValue;
@@ -82,17 +82,16 @@ class MonitoringService {
         clsObserver.observe({ entryTypes: ['layout-shift'] })
 
         // First Contentful Paint
-        const fcpObserver = new PerformanceObserver((list) => {
-          const entries = list.getEntries()
-          entries.forEach((entry) => {
-            this.metrics.fcp = entry.startTime
-            this.reportMetric('fcp', entry.startTime)
-          })
-        })
-        fcpObserver.observe({ entryTypes: ['paint'] })
-
+        const fcpObserver = new PerformanceObserver(list => {
+          const entries = list.getEntries();
+          entries.forEach(entry => {
+            this.metrics.fcp = entry.startTime;
+            this.reportMetric('fcp', entry.startTime);
+          });
+        });
+        fcpObserver.observe({ entryTypes: ['paint'] });
       } catch (error) {
-        console.error('Error setting up performance observers:', error)
+        console.error('Error setting up performance observers:', error);
       }
     }
   }
@@ -108,7 +107,7 @@ class MonitoringService {
           }
         });
         longTaskObserver.observe({ entryTypes: ['longtask'] });
-      } catch (_error) {
+      } catch {
         // Long task API might not be available
       }
     }
@@ -118,20 +117,19 @@ class MonitoringService {
       try {
         const resourceObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
-          entries.forEach((entry: unknown) => {
-            const resourceEntry = entry as PerformanceResourceTiming;
-            if (resourceEntry.duration > 1000) {
+          entries.forEach((entry: PerformanceResourceTiming) => {
+            if (entry.duration > 1000) {
               console.warn('Slow resource detected:', {
                 name: resourceEntry.name,
                 duration: resourceEntry.duration,
                 type: resourceEntry.initiatorType,
               });
             }
-          })
-        })
-        resourceObserver.observe({ entryTypes: ['resource'] })
-      } catch (error) {
-        console.error('Error monitoring resources:', error)
+          });
+        });
+        resourceObserver.observe({ entryTypes: ['resource'] });
+      } catch {
+        console.error('Error monitoring resources');
       }
     }
   }
