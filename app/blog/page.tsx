@@ -163,41 +163,58 @@ export default function BlogPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50">
-      <div className="container mx-auto px-4 py-8">
-        {/* Header */}
-        <header className="text-center mb-12">
-          <h1 className="text-5xl font-bold text-gray-900 mb-4">AI & Technology Blog</h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Latest insights on AI, enterprise automation, and digital transformation from our expert team
-          </p>
-        </header>
+    <>
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-4 py-8">
+          {/* Header */}
+          <header className="text-center mb-12">
+            <h1 className="text-5xl font-bold text-gray-900 mb-4">AI & Technology Blog</h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Latest insights on AI, enterprise automation, and digital transformation from our expert team
+            </p>
+          </header>
 
-        {/* Category Filter */}
-        <div className="flex flex-wrap justify-center gap-2 mb-12">
-          {categories.map((category) => (
-            <button
-              key={category}
-              onClick={() => setSelectedCategory(category)}
-              className={`px-6 py-2 rounded-full font-medium transition-colors ${
-                selectedCategory === category
-                  ? 'bg-indigo-600 text-white'
-                  : 'bg-white text-gray-600 hover:bg-gray-100'
-              }`}
-            >
-              {category === 'all' ? 'All Articles' : category}
-            </button>
-          ))}
-        </div>
+          {/* Category Filter */}
+          <div className="flex flex-wrap justify-center gap-2 mb-12">
+            {categories.map((category) => (
+              <button
+                key={category}
+                onClick={() => setSelectedCategory(category)}
+                className={`px-6 py-2 rounded-full font-medium transition-colors ${
+                  selectedCategory === category
+                    ? 'bg-indigo-600 text-white'
+                    : 'bg-white text-gray-600 hover:bg-gray-100'
+                }`}
+              >
+                {category === 'all' ? 'All Articles' : category}
+              </button>
+            ))}
+          </div>
 
-        {/* Featured Posts */}
-        {selectedCategory === 'all' && (
-          <section className="mb-16">
+          {/* Featured Posts */}
+          {selectedCategory === 'all' && (
+            <section className="mb-16">
+              <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+                🌟 Featured Articles
+              </h2>
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                {featuredPosts.map((post) => (
+                  <ContentPreviewCard
+                    key={post.id}
+                    {...post}
+                  />
+                ))}
+              </div>
+            </section>
+          )}
+
+          {/* All Posts */}
+          <section>
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
-              🌟 Featured Articles
+              {selectedCategory === 'all' ? 'All Articles' : `${selectedCategory} Articles`}
             </h2>
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-              {featuredPosts.map((post) => (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {filteredPosts.map((post) => (
                 <ContentPreviewCard
                   key={post.id}
                   {...post}
@@ -205,39 +222,24 @@ export default function BlogPage() {
               ))}
             </div>
           </section>
-        )}
 
-        {/* All Posts */}
-        <section>
-          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
-            {selectedCategory === 'all' ? 'All Articles' : `${selectedCategory} Articles`}
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredPosts.map((post) => (
-              <ContentPreviewCard
-                key={post.id}
-                {...post}
-              />
-            ))}
-          </div>
-        </section>
-
-        {/* Newsletter CTA */}
-        <div className="mt-16 text-center">
-          <div className="bg-gradient-to-r from-indigo-50 to-purple-50 rounded-2xl p-8">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">
-              Never Miss an Update
-            </h3>
-            <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-              Subscribe to our newsletter and get the latest AI insights, enterprise transformation guides, 
-              and breakthrough content delivered directly to your inbox.
-            </p>
-            <Link
-              to="/"
-              className="inline-block bg-indigo-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-colors"
-            >
-              Subscribe to Newsletter
-            </Link>
+          {/* Newsletter CTA */}
+          <div className="mt-16 text-center">
+            <div className="bg-gradient-to-r from-indigo-50 to-purple-50 rounded-2xl p-8">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                Never Miss an Update
+              </h3>
+              <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
+                Subscribe to our newsletter and get the latest AI insights, enterprise transformation guides, 
+                and breakthrough content delivered directly to your inbox.
+              </p>
+              <Link
+                to="/"
+                className="inline-block bg-indigo-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-colors"
+              >
+                Subscribe to Newsletter
+              </Link>
+            </div>
           </div>
         </div>
       </div>

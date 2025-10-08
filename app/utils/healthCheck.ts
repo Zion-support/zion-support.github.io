@@ -218,10 +218,10 @@ class HealthCheckService {
    */
   private checkBrowserAPIs(): HealthCheck {
     const requiredAPIs = [
-      'fetch'
-      'localStorage'
-      'sessionStorage'
-      'console'
+      'fetch',
+      'localStorage',
+      'sessionStorage',
+      'console',
       'navigator'
     ]
 
@@ -235,15 +235,15 @@ class HealthCheckService {
 
     if (missingAPIs.length > 0) {
       return {
-        name: 'browser-apis'
-        status: 'warn'
-        message: `Missing browser APIs: ${missingAPIs.join(', ')}`
+        name: 'browser-apis',
+        status: 'warn',
+        message: `Missing browser APIs: ${missingAPIs.join(', ')}`,
         details: { missingAPIs }
       }
     }
     return {
-      name: 'browser-apis'
-      status: 'pass'
+      name: 'browser-apis',
+      status: 'pass',
       message: 'All required browser APIs available'
     }
   }
@@ -262,8 +262,8 @@ class HealthCheckService {
 
       if (retrieved !== testValue) {
         return {
-          name: 'storage'
-          status: 'fail'
+          name: 'storage',
+          status: 'fail',
           message: 'LocalStorage not working correctly'
         }
       }
@@ -274,8 +274,8 @@ class HealthCheckService {
         localStorage.removeItem('_size_test');
       } catch {
         return {
-          name: 'storage'
-          status: 'warn'
+          name: 'storage',
+          status: 'warn',
           message: 'LocalStorage space limited'
         }
       }
@@ -286,8 +286,8 @@ class HealthCheckService {
       };
     } catch {
       return {
-        name: 'storage'
-        status: 'fail'
+        name: 'storage',
+        status: 'fail',
         message: 'LocalStorage not available'
       }
     }
