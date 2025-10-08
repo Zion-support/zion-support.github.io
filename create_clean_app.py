@@ -1,4 +1,6 @@
-import React, { memo, useMemo } from 'react';
+#!/usr/bin/env python3
+
+app_content = """import React, { memo, useMemo } from 'react';
 import { HelmetProvider, Helmet } from 'react-helmet-async';
 
 // Memoized components for better performance
@@ -133,3 +135,8 @@ export default function App() {
     </ErrorBoundary>
   );
 }
+"""
+
+with open('App.tsx', 'w') as f:
+    f.write(app_content)
+print('Created clean App.tsx')
