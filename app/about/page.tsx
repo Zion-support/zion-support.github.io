@@ -211,10 +211,13 @@ const AboutPage: React.FC = () => {
       </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     </div>
 =======
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-77f8
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-fd0a
     </>
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-32a9
   );
