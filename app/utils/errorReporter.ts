@@ -97,14 +97,14 @@ export class ErrorReporter {
   private logToConsole(report: ErrorReport): void {
     const style = this.getConsoleStyle(report.severity);
     console.group(`%c[${report.severity.toUpperCase()}] Error Report`, style);
-    if (process.env.NODE_ENV === 'development') { if (import.meta.env.DEV) { console.log('Message:', report.message); } }
-    if (process.env.NODE_ENV === 'development') { if (import.meta.env.DEV) { console.log('Timestamp:', report.timestamp); } }
-    if (process.env.NODE_ENV === 'development') { if (import.meta.env.DEV) { console.log('URL:', report.url); } }
+    if (process.env.NODE_ENV === 'development') { if (import.meta.env.DEV) { logger.info('Message:', report.message); } }
+    if (process.env.NODE_ENV === 'development') { if (import.meta.env.DEV) { logger.info('Timestamp:', report.timestamp); } }
+    if (process.env.NODE_ENV === 'development') { if (import.meta.env.DEV) { logger.info('URL:', report.url); } }
     if (report.stack) {
-      if (process.env.NODE_ENV === 'development') { if (import.meta.env.DEV) { console.log('Stack:', report.stack); } }
+      if (process.env.NODE_ENV === 'development') { if (import.meta.env.DEV) { logger.info('Stack:', report.stack); } }
     }
     if (report.context) {
-      if (process.env.NODE_ENV === 'development') { if (import.meta.env.DEV) { console.log('Context:', report.context); } }
+      if (process.env.NODE_ENV === 'development') { if (import.meta.env.DEV) { logger.info('Context:', report.context); } }
     }
     console.groupEnd();
   }
@@ -139,7 +139,7 @@ export class ErrorReporter {
     } catch (error) {
       // Silently fail to avoid infinite loop
       if (this.config.enableConsoleLogging) {
-        console.warn('Failed to send error to remote endpoint:', error);
+        logger.warn('Failed to send error to remote endpoint:', error);
       }
     }
   }

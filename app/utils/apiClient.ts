@@ -293,12 +293,12 @@ export const apiClient = new ApiClient();
 // Add default request interceptor for logging
 if (envConfig.isDevelopment()) {
   apiClient.addRequestInterceptor((config) => {
-    if (process.env.NODE_ENV === 'development') { if (import.meta.env.DEV) { console.log(`[API] ${config.method} request:`, config); } }
+    if (process.env.NODE_ENV === 'development') { if (import.meta.env.DEV) { logger.info(`[API] ${config.method} request:`, config); } }
     return config;
   });
 
   apiClient.addResponseInterceptor((response) => {
-    if (process.env.NODE_ENV === 'development') { if (import.meta.env.DEV) { console.log(`[API] Response (${response.status}):`, response.data); } }
+    if (process.env.NODE_ENV === 'development') { if (import.meta.env.DEV) { logger.info(`[API] Response (${response.status}):`, response.data); } }
     return response;
   });
 }
