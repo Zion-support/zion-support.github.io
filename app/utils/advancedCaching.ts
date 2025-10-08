@@ -235,7 +235,7 @@ class AdvancedCache<T = unknown> {
   }
 
   // Utility method for async operations with caching
-  public async getOrFetch<R>(
+  public async getOrFetch<R extends T>(
     key: string,
     fetcher: () => Promise<R>,
     ttl?: number

@@ -2,7 +2,7 @@
  * Enhanced API Client with retry logic, caching, and error handling
  */
 
-import { getCache, setCache, CacheOptions } from './cacheManager';
+import { cacheManager, CacheOptions as CacheMgrOptions } from './cacheManager';
 import { logError, logCritical } from './errorLogger';
 
 export interface ApiClientConfig {
@@ -11,12 +11,12 @@ export interface ApiClientConfig {
   retries?: number;
   retryDelay?: number;
   headers?: Record<string, string>;
-  cache?: CacheOptions;
+  cacheOptions?: CacheMgrOptions;
 }
 
 export interface RequestConfig extends RequestInit {
   url: string;
-  cache?: CacheOptions;
+  cacheOptions?: CacheMgrOptions;
   retries?: number;
   timeout?: number;
   skipCache?: boolean;
@@ -41,7 +41,7 @@ export class ApiError extends Error {
 }
 
 class ApiClient {
-  private config: Required<Omit<ApiClientConfig, 'cache' | 'baseURL'>> & { baseURL: string; cache?: CacheOptions };
+  private config: Required<Omit<ApiClientConfig, 'cacheOptions' | 'baseURL'>> & { baseURL: string; cacheOptions?: CacheMgrOptions };
   private abortControllers: Map<string, AbortController> = new Map();
 
   constructor(config: ApiClientConfig = {}) {
@@ -53,7 +53,7 @@ class ApiClient {
       headers: config.headers || {
         'Content-Type': 'application/json',
       },
-      cache: config.cache,
+      cacheOptions: config.cacheOptions,
     };
   }
 
@@ -153,8 +153,8 @@ class ApiClient {
 
     // Check cache for GET requests
     if (method === 'GET' && !skipCache) {
-      const cached = await getCache<T>(cacheKey, cacheConfig?.strategy);
-      if (cached !== null) {
+      const cached = cacheManager.get<T>(cacheKey);
+      if (cached !== undefined) {
         return {
           data: cached,
           status: 200,
@@ -209,10 +209,10 @@ class ApiClient {
 
         // Cache successful GET requests
         if (method === 'GET' && !skipCache) {
-          await setCache(
+          cacheManager.set(
             cacheKey,
             data,
-            cacheConfig || this.config.cache
+            cacheConfig || this.config.cacheOptions || {}
           );
         }
 
@@ -337,9 +337,8 @@ const apiClient = new ApiClient({
   timeout: 30000,
   retries: 3,
   retryDelay: 1000,
-  cache: {
+  cacheOptions: {
     ttl: 5 * 60 * 1000, // 5 minutes
-    strategy: 'memory',
   },
 });
 
