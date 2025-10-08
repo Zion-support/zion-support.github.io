@@ -136,15 +136,14 @@ export class Logger {
     switch (entry.level) {
       case LogLevel.DEBUG:
         if (process.env['NODE_ENV'] === 'development') {
-//           if (process.env.DEV) { console.debug(message, entry.data ?? ''); }
+//           if (process.env.DEV) { }
         }
         break;
       case LogLevel.INFO:
-//         if (process.env['NODE_ENV'] === 'development') { if (process.env.DEV) { console.info(message, entry.data ?? ''); } }
+//         if (process.env['NODE_ENV'] === 'development') { if (process.env.DEV) { } }
         break;
       case LogLevel.WARN:
-//         console.warn(message, entry.data ?? '');
-        break;
+//         break;
       case LogLevel.ERROR:
       case LogLevel.FATAL:
 //         console.error(message, entry.data ?? '', entry.stack ?? '');

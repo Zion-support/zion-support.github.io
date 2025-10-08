@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { memo } from 'react';
 import { Link } from 'react-router-dom';
 import { Phone, Mail, MapPin, Clock, Award, Shield, Zap, ArrowRight } from 'lucide-react';
 
+<<<<<<< HEAD
 const Footer: React.FC = () => {
   const aiServices = [
     { name: 'AI Services', url: '/ai-services' },
@@ -47,6 +48,9 @@ const Footer: React.FC = () => {
     { name: 'Sitemap', url: '/sitemap' },
   ];
 
+=======
+const Footer: React.FC = memo(() => {
+>>>>>>> cursor/fix-errors-and-merge-to-main-ef5d
   return (
     <footer className="bg-gray-900 text-white">
       {/* Main Footer Content */}
@@ -238,6 +242,7 @@ const Footer: React.FC = () => {
                   Twitter
                 </a>
               </div>
+<<<<<<< HEAD
 =======
             <div className="space-y-3">
               <div className="flex items-center">
@@ -259,10 +264,36 @@ const Footer: React.FC = () => {
               <div className="flex items-center">
                 <Clock className="w-5 h-5 mr-3 text-cyan-400" />
                 <span className="text-gray-300">24/7 Support Available</span>
+=======
+              
+              {/* Contact Info */}
+              <div className="space-y-3 mt-6">
+                <div className="flex items-center">
+                  <Phone className="w-5 h-5 mr-3 text-blue-400" />
+                  <a href="tel:+13024640950" className="text-gray-300 hover:text-white transition-colors">
+                    +1 302 464 0950
+                  </a>
+                </div>
+                <div className="flex items-center">
+                  <Mail className="w-5 h-5 mr-3 text-blue-400" />
+                  <a href="mailto:kleber@ziontechgroup.com" className="text-gray-300 hover:text-white transition-colors">
+                    kleber@ziontechgroup.com
+                  </a>
+                </div>
+                <div className="flex items-center">
+                  <MapPin className="w-5 h-5 mr-3 text-blue-400" />
+                  <span className="text-gray-300">364 E Main St STE 1008, Middletown DE 19709</span>
+                </div>
+                <div className="flex items-center">
+                  <Clock className="w-5 h-5 mr-3 text-blue-400" />
+                  <span className="text-gray-300">24/7 Support Available</span>
+                </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-ef5d
               </div>
             </div>
           </div>
 
+<<<<<<< HEAD
           {/* AI Services */}
           <div>
             <h4 className="text-lg font-semibold mb-6 text-cyan-400">AI Services</h4>
@@ -372,6 +403,43 @@ const Footer: React.FC = () => {
               <div className="text-4xl font-bold text-orange-400 mb-2">24/7</div>
               <div className="text-gray-300">Support Available</div>
 >>>>>>> cursor/website-audit-and-update-with-deployment-73aa
+=======
+            {/* Resources */}
+            <div>
+              <h4 className="text-lg font-semibold mb-4">Resources</h4>
+              <ul className="space-y-2">
+                <li>
+                  <Link to="/blog" className="text-gray-300 hover:text-white transition-colors">
+                    Blog & Insights
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/guides" className="text-gray-300 hover:text-white transition-colors">
+                    Technical Guides
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/privacy" className="text-gray-300 hover:text-white transition-colors">
+                    Privacy Policy
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/terms" className="text-gray-300 hover:text-white transition-colors">
+                    Terms of Service
+                  </Link>
+                </li>
+                <li>
+                  <a href="https://github.com/ziontechgroup" className="text-gray-300 hover:text-white transition-colors">
+                    GitHub
+                  </a>
+                </li>
+                <li>
+                  <a href="https://docs.ziontechgroup.com" className="text-gray-300 hover:text-white transition-colors">
+                    Documentation
+                  </a>
+                </li>
+              </ul>
+>>>>>>> cursor/fix-errors-and-merge-to-main-ef5d
             </div>
           </div>
         </div>
@@ -433,6 +501,8 @@ const Footer: React.FC = () => {
       </div>
     </footer>
   );
-};
+});
+
+Footer.displayName = 'Footer';
 
 export default Footer;

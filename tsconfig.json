@@ -149,6 +149,7 @@
     "lint-target/**",
     "marketing-index.ts",
     "middleware.security.ts",
+    "middleware.ts",
     "netlify/**",
     "pages_disabled/**",
     "src.disabled/**",
