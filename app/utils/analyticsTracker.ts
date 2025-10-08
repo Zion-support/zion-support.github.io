@@ -24,17 +24,6 @@ interface ErrorReport {
   severity: 'low' | 'medium' | 'high' | 'critical';
 }
 
-declare global {
-  interface Window {
-    gtag?: (
-      command: string,
-      action: string,
-      parameters: Record<string, unknown>
-    ) => void;
-    dataLayer?: unknown[];
-  }
-}
-
 class AnalyticsTracker {
   private isInitialized = false;
   private queue: Array<() => void> = [];
