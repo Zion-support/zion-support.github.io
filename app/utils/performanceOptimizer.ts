@@ -3,12 +3,31 @@
  * Provides tools for monitoring and optimizing application performance
  */
 
+// Simple logger utility
+const logger = {
+  info: (message: string, context?: string) => {
+    if (process.env.NODE_ENV === 'development') {
+      console.log(`[INFO${context ? ` - ${context}` : ''}]: ${message}`);
+    }
+  },
+  performance: (message: string, data?: Record<string, unknown>, context?: string) => {
+    if (process.env.NODE_ENV === 'development') {
+      console.log(`[PERFORMANCE${context ? ` - ${context}` : ''}]: ${message}`, data);
+    }
+  }
+};
+
 interface PerformanceMetrics {
   loadTime: number;
   renderTime: number;
   memoryUsage: number;
   bundleSize: number;
   cacheHitRate: number;
+  fcp?: number;
+  lcp?: number;
+  fid?: number;
+  cls?: number;
+  fmp?: number;
 }
 
 interface OptimizationConfig {
@@ -18,6 +37,9 @@ interface OptimizationConfig {
   enableCaching: boolean;
   enableCompression: boolean;
 }
+
+// Export as PerformanceConfig for compatibility
+export type PerformanceConfig = OptimizationConfig;
 
 class PerformanceOptimizer {
   private metrics: PerformanceMetrics = {
@@ -35,6 +57,9 @@ class PerformanceOptimizer {
     enableCaching: true,
     enableCompression: true,
   };
+
+  private observers: IntersectionObserver[] = [];
+  private isMonitoring: boolean = false;
 
   constructor(config?: Partial<OptimizationConfig>) {
     this.config = { ...this.config, ...config };
@@ -219,7 +244,23 @@ class PerformanceOptimizer {
    */
   generateReport(): string {
     const score = this.getPerformanceScore();
-    return `Performance Score: ${score}`;
+    const metrics = this.getMetrics();
+
+    return `
+Performance Report - Zion Tech Group Website
+==========================================
+Performance Score: ${score}/100
+Load Time: ${metrics.loadTime.toFixed(2)}ms
+Render Time: ${metrics.renderTime.toFixed(2)}ms
+Memory Usage: ${(metrics.memoryUsage / 1024 / 1024).toFixed(2)}MB
+Bundle Size: ${metrics.bundleSize}KB
+Cache Hit Rate: ${metrics.cacheHitRate}%
+
+Recommendations:
+${score < 80 ? '- Consider optimizing images and enabling compression' : ''}
+${metrics.loadTime > 2000 ? '- Implement lazy loading for better initial load time' : ''}
+${metrics.memoryUsage > 30 * 1024 * 1024 ? '- Review memory usage and optimize components' : ''}
+    `.trim();
   }
 
   /**
@@ -278,7 +319,11 @@ class PerformanceOptimizer {
     if (!navigation) return null;
 
     return {
-      ttfb: navigation.responseStart - navigation.requestStart,
+      loadTime: navigation.loadEventEnd - navigation.fetchStart,
+      renderTime: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
+      memoryUsage: this.metrics.memoryUsage,
+      bundleSize: this.metrics.bundleSize,
+      cacheHitRate: this.metrics.cacheHitRate,
       fcp: this.metrics.fcp || 0,
       lcp: this.metrics.lcp || 0,
       fid: this.metrics.fid || 0,
@@ -308,27 +353,6 @@ class PerformanceOptimizer {
   }
 
   /**
-   * Cleanup observers and resources
-    const metrics = this.getMetrics();
-
-    return `
-Performance Report - Zion Tech Group Website
-==========================================
-Performance Score: ${score}/100
-Load Time: ${metrics.loadTime.toFixed(2)}ms
-Render Time: ${metrics.renderTime.toFixed(2)}ms
-Memory Usage: ${(metrics.memoryUsage / 1024 / 1024).toFixed(2)}MB
-Bundle Size: ${metrics.bundleSize}KB
-Cache Hit Rate: ${metrics.cacheHitRate}%
-
-Recommendations:
-${score < 80 ? '- Consider optimizing images and enabling compression' : ''}
-${metrics.loadTime > 2000 ? '- Implement lazy loading for better initial load time' : ''}
-${metrics.memoryUsage > 30 * 1024 * 1024 ? '- Review memory usage and optimize components' : ''}
-    `.trim();
-  }
-
-  /**
    * Optimize the entire application
    */
   optimize(): void {
@@ -336,11 +360,13 @@ ${metrics.memoryUsage > 30 * 1024 * 1024 ? '- Review memory usage and optimize c
     this.enableCodeSplitting();
     this.enableCaching();
     
-    if (process.env.NODE_ENV === 'development') { 
-      console.log('Performance optimization completed'); 
-      console.log(this.generateReport()); 
-    }
+    if (process.env.NODE_ENV === 'development') { console.log('Performance optimization completed'); }
+    if (process.env.NODE_ENV === 'development') { console.log(this.generateReport()); }
   }
+
+  /**
+   * Cleanup observers and resources
+   */
   public cleanup(): void {
     this.observers.forEach(observer => observer.disconnect());
     this.observers = [];
@@ -351,4 +377,4 @@ ${metrics.memoryUsage > 30 * 1024 * 1024 ? '- Review memory usage and optimize c
 // Export singleton instance
 export const performanceOptimizer = new PerformanceOptimizer();
 export default PerformanceOptimizer;
-export { PerformanceOptimizer, type PerformanceMetrics, type PerformanceConfig };
+export { PerformanceOptimizer, type PerformanceMetrics };
