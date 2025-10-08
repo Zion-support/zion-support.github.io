@@ -72,14 +72,14 @@ class PerformanceMonitor {
     fn: () => Promise<T>,
     tags?: Record<string, string>
   ): Promise<T> {
-//     const start = performance.now();
+    const start = performance.now();
     try {
-//       const result = await fn();
-//       const duration = performance.now() - start;
+      const result = await fn();
+      const duration = performance.now() - start;
       this.trackMetric(name, duration, 'ms', tags);
       return result;
     } catch (error) {
-//       const duration = performance.now() - start;
+      const duration = performance.now() - start;
       this.trackMetric(`${name}_error`, duration, 'ms', { ...tags, error: 'true' });
       throw error;
     }
