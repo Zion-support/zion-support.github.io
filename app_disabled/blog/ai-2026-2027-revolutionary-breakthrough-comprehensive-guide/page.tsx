@@ -1,5 +1,4 @@
 // @ts-nocheck
-import React from 'react';
 import Link from 'next/link';
 export const metadata = {
   title: "AI 2026-2027 Revolutionary Breakthrough: The Ultimate Comprehensive Guide | Zion Tech Group",

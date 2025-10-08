@@ -77,15 +77,19 @@ class ErrorLogger {
       `%c[${entry.severity.toUpperCase()}] ${entry.message}`,
       styles[entry.severity]
     );
-    if (process.env.NODE_ENV === 'development') { console.log('Timestamp:', entry.timestamp); }
+    // eslint-disable-next-line no-console
+    console.log('Timestamp:', entry.timestamp);
     if (entry.error) {
-      if (process.env.NODE_ENV === 'development') { console.error('Error:', entry.error); }
+      // eslint-disable-next-line no-console
+    console.error('Error:', entry.error);
     }
     if (entry.context) {
-      if (process.env.NODE_ENV === 'development') { console.log('Context:', entry.context); }
+      // eslint-disable-next-line no-console
+    console.log('Context:', entry.context);
     }
     if (entry.stackTrace) {
-      if (process.env.NODE_ENV === 'development') { console.log('Stack Trace:', entry.stackTrace); }
+      // eslint-disable-next-line no-console
+    console.log('Stack Trace:', entry.stackTrace);
     }
     console.groupEnd();
   }
@@ -118,7 +122,8 @@ class ErrorLogger {
       });
     } catch (error) {
       // Silently fail to avoid infinite loop
-      if (process.env.NODE_ENV === 'development') { console.error('Failed to send error to external service:', error); }
+      // eslint-disable-next-line no-console
+    console.error('Failed to send error to external service:', error);
     }
   }
 

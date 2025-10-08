@@ -117,7 +117,7 @@ export function mockPerformanceAPI(): void {
 /**
  * Create mock fetch response
  */
-export function mockFetch(data: any, ok: boolean = true, status: number = 200): void {
+export function mockFetch(data: unknown, ok: boolean = true, status: number = 200): void {
   global.fetch = jest.fn(() =>
     Promise.resolve({
       ok,

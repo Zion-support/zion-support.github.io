@@ -37,7 +37,7 @@ export default async function handler(
     const translated = completion.choices?.[0]?.message?.content?.trim() || '';
 
     return res.status(200).json({ translated });
-  } catch (error: any) {
+  } catch (error: unknown) {
     console.error('Translation error:', error);
     return res.status(500).json({ error: 'Translation failed' });
   }

@@ -48,7 +48,8 @@ class OptimizedErrorBoundary extends Component<
     // Log error to console in development
     if (process.env['NODE_ENV'] === 'development') {
        
-      console.error('Error caught by boundary:', error, errorInfo);
+      // eslint-disable-next-line no-console
+    console.error('Error caught by boundary:', error, errorInfo);
     }
 
     // Call custom error handler if provided

@@ -103,12 +103,12 @@ if (fs.existsSync(seoOptimizerPath)) {
     keywords: string[];
     canonicalUrl: string;
     ogImage: string;
-    structuredData?: any;
+    structuredData?: unknown;
   };
   enableStructuredData?: boolean;
   enableAnalytics?: boolean;
   enablePerformanceTracking?: boolean;
-  seoData?: any;
+  seoData?: unknown;
   enableOpenGraph?: boolean;
   enableTwitterCards?: boolean;
   enableSchemaMarkup?: boolean;
@@ -130,12 +130,11 @@ if (fs.existsSync(analyticsTrackerPath)) {
     content = content.replace(/declare global \{[^}]*\}/g, '');
     
     // Add proper imports and declarations at the top
-    content = `import React from 'react';
-
+    content = `
 declare global {
   interface Window {
-    dataLayer: any[];
-    gtag: (...args: any[]) => void;
+    dataLayer: unknown[];
+    gtag: (...args: unknown[]) => void;
   }
 }
 
@@ -184,7 +183,7 @@ if (fs.existsSync(performancePath)) {
     // Add proper declaration at the top
     content = `declare global {
   interface Window {
-    gtag: (...args: any[]) => void;
+    gtag: (...args: unknown[]) => void;
   }
 }
 

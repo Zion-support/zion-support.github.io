@@ -16,16 +16,16 @@ const Button: React.FC<{
 
 // Simple logger replacement
 const logger = {
-  error: (message: string, error?: any, meta?: any) => {
+  error: (message: string, error?: unknown, meta?: unknown) => {
     console.error(message, error, meta);
   },
-  warn: (message: string, error?: any, meta?: any) => {
+  warn: (message: string, error?: unknown, meta?: unknown) => {
     console.warn(message, error, meta);
   },
-  info: (message: string, meta?: any) => {
+  info: (message: string, meta?: unknown) => {
     console.info(message, meta);
   },
-  debug: (message: string, meta?: any) => {
+  debug: (message: string, meta?: unknown) => {
     console.debug(message, meta);
   },
 };

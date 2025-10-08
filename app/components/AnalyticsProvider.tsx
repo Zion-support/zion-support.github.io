@@ -1,4 +1,4 @@
-// // 'use client'; // Removed for Vite compatibility // Removed for Vite compatibility
+'use client';
 
 import React, { createContext, useContext, useEffect, useState } from 'react';
 import { logger } from '../utils/logger';
@@ -130,7 +130,8 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
 
     if (enableDebug) {
        
-      console.error('Analytics Error:', error, context);
+      // eslint-disable-next-line no-console
+    console.error('Analytics Error:', error, context);
     }
 
     if ((window as unknown as { gtag: (...args: unknown[]) => void }).gtag) {

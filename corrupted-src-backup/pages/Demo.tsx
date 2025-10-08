@@ -20,43 +20,14 @@ const Demo: React.FC = () => {
     phone: '',
     message: '',
   });
-
-  const handleInputChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
       [name]: value,
     }));
   };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
     // Handle form submission
     console.log('Form submitted:', formData);
   };
-
-  const features = [
-    {
-      icon: <Calendar className='w-6 h-6' />,
-      title: 'Schedule Demo',
-      description: 'Book a personalized demo with our AI experts.',
-    },
-    {
-      icon: <Play className='w-6 h-6' />,
-      title: 'Live Demo',
-      description:
-        'See our AI solutions in action with real-time demonstrations.',
-    },
-    {
-      icon: <CheckCircle className='w-6 h-6' />,
-      title: 'Custom Solutions',
-      description:
-        'Get tailored AI solutions for your specific business needs.',
-    },
-  ];
-
   return (
     <div className='min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100'>
       <div className='container mx-auto px-4 py-16'>

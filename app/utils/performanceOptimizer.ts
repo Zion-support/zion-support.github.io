@@ -7,7 +7,7 @@ interface PerformanceMetrics {
   fcp?: number;
   ttfb?: number;
   memory?: number;
-  navigation?: any;
+  navigation?: unknown;
 }
 
 interface PerformanceOptimizerConfig {
@@ -95,7 +95,8 @@ class PerformanceOptimizer {
       this.observeTTFB();
       this.observeMemory();
     } catch (error) {
-      console.warn('Performance monitoring initialization failed:', error);
+      // eslint-disable-next-line no-console
+    console.warn('Performance monitoring initialization failed:', error);
     }
   }
 
@@ -117,7 +118,7 @@ class PerformanceOptimizer {
     try {
       const observer = new PerformanceObserver((list) => {
         const entries = list.getEntries();
-        entries.forEach((entry: any) => {
+        entries.forEach((entry: unknown) => {
           this.metrics.fid = entry.processingStart - entry.startTime;
         });
       });
@@ -133,7 +134,7 @@ class PerformanceOptimizer {
       let clsValue = 0;
       const observer = new PerformanceObserver((list) => {
         const entries = list.getEntries();
-        entries.forEach((entry: any) => {
+        entries.forEach((entry: unknown) => {
           if (!entry.hadRecentInput) {
             clsValue += entry.value;
           }
@@ -168,7 +169,7 @@ class PerformanceOptimizer {
     try {
       const observer = new PerformanceObserver((list) => {
         const entries = list.getEntries();
-        entries.forEach((entry: any) => {
+        entries.forEach((entry: unknown) => {
           if (entry.responseStart > 0) {
             this.metrics.ttfb = entry.responseStart - entry.requestStart;
           }
@@ -245,10 +246,12 @@ class PerformanceOptimizer {
     window.addEventListener('load', () => {
       navigator.serviceWorker.register('/sw.js')
         .then((registration) => {
-          console.log('SW registered: ', registration);
+          // eslint-disable-next-line no-console
+    console.log('SW registered: ', registration);
         })
         .catch((registrationError) => {
-          console.log('SW registration failed: ', registrationError);
+          // eslint-disable-next-line no-console
+    console.log('SW registration failed: ', registrationError);
         });
     });
   }

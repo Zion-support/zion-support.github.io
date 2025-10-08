@@ -294,7 +294,7 @@ interface LayoutShift extends PerformanceEntry {
 /**
  * Measure function execution time
  */
-export function measureExecutionTime<T extends (...args: any[]) => any>(
+export function measureExecutionTime<T extends (...args: unknown[]) => any>(
   fn: T,
   label?: string
 ): T {
@@ -312,7 +312,7 @@ export function measureExecutionTime<T extends (...args: any[]) => any>(
 /**
  * Debounce function
  */
-export function debounce<T extends (...args: any[]) => any>(
+export function debounce<T extends (...args: unknown[]) => any>(
   fn: T,
   delay: number
 ): (...args: Parameters<T>) => void {
@@ -332,7 +332,7 @@ export function debounce<T extends (...args: any[]) => any>(
 /**
  * Throttle function
  */
-export function throttle<T extends (...args: any[]) => any>(
+export function throttle<T extends (...args: unknown[]) => any>(
   fn: T,
   delay: number
 ): (...args: Parameters<T>) => void {

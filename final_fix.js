@@ -95,7 +95,7 @@ if (fs.existsSync(analyticsTrackerPath)) {
     
     // Fix dataLayer type to match existing declarations
     content = content.replace(
-        /dataLayer: any\[\];/,
+        /dataLayer: unknown\[\];/,
         'dataLayer: unknown[];'
     );
     
@@ -131,7 +131,7 @@ if (fs.existsSync(systemMonitorPath)) {
     // Fix the exportData variable declaration issue
     content = content.replace(
         /const exportData = \{/g,
-        'const exportData: any = {'
+        'const exportData: unknown = {'
     );
     
     fs.writeFileSync(systemMonitorPath, content);

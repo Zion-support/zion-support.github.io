@@ -35,7 +35,8 @@ class AnalyticsService {
       this.processQueue();
       this.isInitialized = true;
     } catch (error) {
-      if (process.env.NODE_ENV === 'development') { console.error('Analytics initialization failed:', error); }
+      // eslint-disable-next-line no-console
+    console.error('Analytics initialization failed:', error);
     }
   }
 
@@ -61,10 +62,12 @@ class AnalyticsService {
 
       // Log in development
       if (process.env['NODE_ENV'] === 'development') {
-        if (process.env.NODE_ENV === 'development') { console.log('Analytics Event:', event); }
+        // eslint-disable-next-line no-console
+    console.log('Analytics Event:', event);
       }
     } catch (error) {
-      if (process.env.NODE_ENV === 'development') { console.error('Failed to track event:', error); }
+      // eslint-disable-next-line no-console
+    console.error('Failed to track event:', error);
     }
   }
 
@@ -80,7 +83,8 @@ class AnalyticsService {
         });
       }
     } catch (error) {
-      if (process.env.NODE_ENV === 'development') { console.error('Failed to track page view:', error); }
+      // eslint-disable-next-line no-console
+    console.error('Failed to track page view:', error);
     }
   }
 
@@ -96,7 +100,8 @@ class AnalyticsService {
         });
       }
     } catch (error) {
-      if (process.env.NODE_ENV === 'development') { console.error('Failed to identify user:', error); }
+      // eslint-disable-next-line no-console
+    console.error('Failed to identify user:', error);
     }
   }
 
@@ -134,7 +139,8 @@ class AnalyticsService {
         });
       }
     } catch (error) {
-      if (process.env.NODE_ENV === 'development') { console.error('Failed to track timing:', error); }
+      // eslint-disable-next-line no-console
+    console.error('Failed to track timing:', error);
     }
   }
 
@@ -151,7 +157,8 @@ class AnalyticsService {
         metadata,
       });
     } catch (error) {
-      if (process.env.NODE_ENV === 'development') { console.error('Failed to track performance:', error); }
+      // eslint-disable-next-line no-console
+    console.error('Failed to track performance:', error);
     }
   }
 

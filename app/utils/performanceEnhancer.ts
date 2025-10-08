@@ -50,7 +50,8 @@ export class PerformanceMonitor {
     this.metrics.set(`${componentName}_render`, renderTime);
     
     if (process.env['NODE_ENV'] === 'development') {
-      if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { console.log(`[Performance] ${componentName} rendered in ${renderTime.toFixed(2)}ms`); } }
+      if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { // eslint-disable-next-line no-console
+    console.log(`[Performance] ${componentName} rendered in ${renderTime.toFixed(2)}ms`); } }
     }
   }
 
@@ -83,7 +84,8 @@ export class PerformanceMonitor {
     const observer = new PerformanceObserver((list) => {
       list.getEntries().forEach((entry) => {
         if (entry.duration > 50) { // Tasks longer than 50ms
-          console.warn(`[Performance] Long task detected: ${entry.duration.toFixed(2)}ms`);
+          // eslint-disable-next-line no-console
+    console.warn(`[Performance] Long task detected: ${entry.duration.toFixed(2)}ms`);
         }
       });
     });
@@ -214,7 +216,8 @@ export const optimizeScrollPerformance = () => {
   const trackLCP = () => {
     const observer = new PerformanceObserver((list) => {
       for (const entry of list.getEntries()) {
-        if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { console.log('[Web Vitals] LCP:', entry.startTime); } }
+        if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { // eslint-disable-next-line no-console
+    console.log('[Web Vitals] LCP:', entry.startTime); } }
       }
     });
 
@@ -232,7 +235,8 @@ export const optimizeScrollPerformance = () => {
       for (const entry of list.getEntries()) {
         const fidEntry = entry as FirstInputEntry;
         const fid = fidEntry.processingStart - entry.startTime;
-        if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { console.log('[Web Vitals] FID:', fid); } }
+        if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { // eslint-disable-next-line no-console
+    console.log('[Web Vitals] FID:', fid); } }
       }
     });
 
@@ -308,6 +312,7 @@ export const initializePerformanceEnhancements = () => {
   const metrics = collectPerformanceMetrics();
   if (metrics && process.env['NODE_ENV'] === 'development') {
      
-    if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { console.log('Performance metrics:', metrics); } }
+    if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { // eslint-disable-next-line no-console
+    console.log('Performance metrics:', metrics); } }
   }
 };

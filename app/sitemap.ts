@@ -1,6 +1,11 @@
-// Removed MetadataRoute from Next.js;
+interface SitemapEntry {
+  url: string;
+  lastModified: Date;
+  changeFrequency: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';
+  priority: number;
+}
 
-export default function sitemap() {
+export default function sitemap(): SitemapEntry[] {
   const baseUrl = 'https://ziontechgroup.com';
 
   return [

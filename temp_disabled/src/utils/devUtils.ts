@@ -2,17 +2,17 @@
  * Development Utilities
  * Tools and helpers for development and debugging
  */
-export const devLog = (message: string, data?: any) => {
+export const devLog = (message: string, data?: unknown) => {
   if (process.env['NODE_ENV'] === 'development') {
     //DEV: ${message}
   }
 };
-export const devError = (message: string, error?: any) => {
+export const devError = (message: string, error?: unknown) => {
   if (process.env['NODE_ENV'] === 'development') {
     //DEV ERROR: ${message}
   }
 };
-export const devWarn = (message: string, data?: any) => {
+export const devWarn = (message: string, data?: unknown) => {
   if (process.env['NODE_ENV'] === 'development') {
     //DEV WARN: ${message}
   }

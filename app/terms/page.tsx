@@ -1,5 +1,4 @@
 import React from 'react';
-// Metadata will be handled by React Helmet in individual components
 
 const TermsPage: React.FC = () => {
   return (

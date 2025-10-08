@@ -1,4 +1,4 @@
-import React, { useEffect, useCallback } from 'react';
+import React, { useEffect, useCallback, useRef } from 'react';
 import { Helmet } from 'react-helmet-async';
 
 interface SEOData {
@@ -38,7 +38,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
   enableTwitterCards = true,
   enableSchemaMarkup = true,
 }) => {
-  // const _structuredDataRef = useRef<HTMLScriptElement | null>(null);
+  const structuredDataRef = useRef<HTMLScriptElement | null>(null);
   const generateStructuredData = useCallback(() => {
     if (!enableStructuredData || !seoData.structuredData) return null;
 
@@ -161,17 +161,6 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
       canonicalLink.setAttribute('href', seoData.canonicalUrl);
     }
   }, [seoData]);
-
-  // Track performance metrics
-  useEffect(() => {
-    if (perfData && typeof window !== 'undefined' && 'gtag' in window) {
-      (window as unknown as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag('_event', 'page_load_performance', {
-        event_category: 'Performance',
-        event_label: 'Page Load',
-        value: Math.round(perfData.loadEventEnd - perfData.fetchStart),
-      });
-    }
-  }, []);
 
   return (
     <Helmet>

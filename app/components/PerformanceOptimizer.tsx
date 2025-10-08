@@ -1,4 +1,4 @@
-// // 'use client'; // Removed for Vite compatibility // Removed for Vite compatibility
+'use client';
 
 import React, { useEffect, useCallback } from 'react';
 
@@ -64,7 +64,8 @@ const PerformanceOptimizerComponent: React.FC<PerformanceOptimizerProps> = ({
         list.getEntries().forEach(entry => {
           if (entry.entryType === 'navigation') {
              
-            if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { console.log('Navigation timing:', entry); } }
+            if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { // eslint-disable-next-line no-console
+    console.log('Navigation timing:', entry); } }
           }
         });
       });

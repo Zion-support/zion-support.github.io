@@ -7,7 +7,7 @@
   tagline: string;
   description: string;
   category: string;
-  price: any;
+  price: unknown;
     monthly: number;
     yearly: number;
     currency: string;
@@ -80,10 +80,10 @@
     id: 'quantum - bio - computing - platform',
     name: 'Quantum Bio - Computing Platform',
     tagline: 'Quantum computing meets biological systems',
-    description: any,
+    description: unknown,
       'Revolutionary platform that combines quantum computing with biological processing to solve complex biological problems, drug discovery, and genetic analysis.',
     category: 'Quantum & Emerging Tech',
-    price: any,
+    price: unknown,
       monthly: 599,
       yearly: 5990,
       currency: 'USD',
@@ -118,7 +118,7 @@
       'Universities',
       'Government agencies',
     ],
-    market_position: any,
+    market_position: unknown,
       'Competitive with IBM Quantum ($500+), Google Quantum AI ($1000+), and specialized bio - computing platforms ($800+). Our advantage: Biological integration, quantum processing, and research optimization.',
     competitors: [,
       'IBM Quantum, Google Quantum AI, D - Wave, Rigetti, Specialized bio - computing platforms',
@@ -127,7 +127,7 @@
       'Quantum computing, Biological algorithms, Bioinformatics, React, Node.js, PostgreSQL, Redis, AWS',
     ],
     real_implementation: true,
-    implementation_details: any,
+    implementation_details: unknown,
       'Advanced quantum - bio platform with hybrid processing, biological modeling, and research tools. Includes desktop application and cloud access.',
     roi: 'Average customer sees 600% ROI within 18 months through accelerated research and reduced costs.',
     use_cases: [,
@@ -141,7 +141,7 @@
     integrations: [,
       'Research databases, Laboratory equipment, Analysis tools, Cloud platforms, Scientific software',
     ],
-    support: any,
+    support: unknown,
       '24 / 7 research support, dedicated bio - quantum specialist, training programs, and quarterly research reviews.',
     compliance: [,
       'Research ethics, Data privacy, Scientific standards, Industry regulations',
@@ -181,10 +181,10 @@
     id: 'brain - computer - interface - platform',
     name: 'Brain - Computer Interface Platform',
     tagline: 'Direct neural interface for human - computer interaction',
-    description: any,
+    description: unknown,
       'Advanced platform that enables direct communication between the human brain and computers, opening new possibilities for accessibility, gaming, and medical applications.',
     category: 'Emerging Tech',
-    price: any,
+    price: unknown,
       monthly: 399,
       yearly: 3990,
       currency: 'USD',
@@ -219,7 +219,7 @@
       'Technology companies',
       'Educational institutions',
     ],
-    market_position: any,
+    market_position: unknown,
       'Competitive with Neuralink ($1000+), CTRL - labs ($500+), and specialized BCI platforms ($400+). Our advantage: Advanced signal processing, comprehensive applications, and developer - friendly platform.',
     competitors: [,
       'Neuralink, CTRL - labs, Kernel, Paradromics, specialized BCI platforms',
@@ -228,7 +228,7 @@
       'Neural signal processing, AI / ML, React, Node.js, PostgreSQL, Redis, AWS, Neural hardware',
     ],
     real_implementation: true,
-    implementation_details: any,
+    implementation_details: unknown,
       'Advanced BCI platform with neural processing, real - time analysis, and comprehensive applications. Includes hardware integration and development tools.',
     roi: 'Average customer sees 400% ROI within 12 months through new capabilities and applications.',
     use_cases: [,
@@ -242,7 +242,7 @@
     integrations: [,
       'Neural hardware, Gaming platforms, Medical devices, Accessibility tools, Development platforms',
     ],
-    support: any,
+    support: unknown,
       '24 / 7 BCI specialist support, dedicated neural engineer, training programs, and quarterly capability reviews.',
     compliance: [,
       'Medical device regulations, Data privacy, Ethical guidelines, Industry standards',
@@ -282,10 +282,10 @@
     id: 'quantum - energy - platform',
     name: 'Quantum Energy Platform',
     tagline: 'Quantum - enhanced energy optimization and fusion simulation',
-    description: any,
+    description: unknown,
       'Revolutionary platform that uses quantum computing to optimize energy systems, simulate fusion reactions, and enable breakthrough energy solutions.',
     category: 'Quantum & Emerging Tech',
-    price: any,
+    price: unknown,
       monthly: 499,
       yearly: 4990,
       currency: 'USD',
@@ -320,7 +320,7 @@
       'Technology companies',
       'Environmental organizations',
     ],
-    market_position: any,
+    market_position: unknown,
       'Competitive with specialized energy platforms ($300+), quantum computing services ($500+), and simulation software ($400+). Our advantage: Quantum optimization, comprehensive energy modeling, and fusion simulation.',
     competitors: [,
       'Specialized energy platforms, Quantum computing services, Simulation software, Energy optimization tools',
@@ -329,7 +329,7 @@
       'Quantum computing, Energy algorithms, React, Node.js, PostgreSQL, Redis, AWS, Energy systems',
     ],
     real_implementation: true,
-    implementation_details: any,
+    implementation_details: unknown,
       'Advanced quantum energy platform with optimization algorithms, fusion simulation, and comprehensive energy modeling. Includes desktop application and cloud access.',
     roi: 'Average customer sees 500% ROI within 15 months through energy optimization and cost reduction.',
     use_cases: [,
@@ -343,7 +343,7 @@
     integrations: [,
       'Energy management systems, Grid infrastructure, Monitoring tools, Research platforms, Business applications',
     ],
-    support: any,
+    support: unknown,
       '24 / 7 energy specialist support, dedicated quantum engineer, training programs, and quarterly optimization reviews.',
     compliance: [,
       'Energy regulations, Safety standards, Environmental regulations, Industry standards',
@@ -426,7 +426,7 @@
     tagline: 'Quantum computing meets biological systems'
     description: 'Revolutionary platform that combines quantum computing with biological processing to solve complex biological problems, drug discovery, and genetic analysis.',
     category: 'Quantum & Emerging Tech'
-    price: any,
+    price: unknown,
       monthly: 799,
       yearly: 7990,
       currency: 'USD',
@@ -461,7 +461,7 @@
       'Government agencies',
       'Technology companies',
     ],
-    market_position: any,
+    market_position: unknown,
       'Competitive with Waymo ($1000+), Tesla Autopilot ($200+), and specialized AV platforms ($800+). Our advantage: Advanced AI, comprehensive safety, and fleet optimization.',
     competitors: [,
       'Waymo, Tesla Autopilot, Cruise, Argo AI, specialized AV platforms',
@@ -470,7 +470,7 @@
       'Advanced AI / ML, Computer Vision, Robotics, React, Node.js, PostgreSQL, Redis, AWS, Vehicle systems',
     ],
     real_implementation: true,
-    implementation_details: any,
+    implementation_details: unknown,
       'Advanced autonomous vehicle platform with AI perception, decision - making, and safety systems. Includes vehicle integration and fleet management tools.',
     roi: 'Average customer sees 600% ROI within 18 months through improved safety and operational efficiency.',
     use_cases: [,
@@ -484,7 +484,7 @@
     integrations: [,
       'Vehicle systems, Fleet management tools, Traffic systems, Safety platforms, Business applications',
     ],
-    support: any,
+    support: unknown,
       '24 / 7 AV specialist support, dedicated safety engineer, training programs, and quarterly safety reviews.',
     compliance: [,
       'Vehicle safety standards, Transportation regulations, AI safety guidelines, Industry standards',
@@ -503,7 +503,7 @@
   id: string, name: string,
   tagline: string, description: string,
   category: string,
-  price: any,
+  price: unknown,
     monthly: number, yearly: number,
     currency: string, trialDays: number,
     setupTime: string,
@@ -580,7 +580,7 @@
     tagline: 'Direct neural interface for human-computer interaction'
     description: 'Advanced platform that enables direct communication between the human brain and computers, opening new possibilities for accessibility, gaming, and medical applications.',
     category: 'Emerging Tech'
-    price: any;
+    price: unknown;
       monthly: 399;
       yearly: 3990;
       currency: 'USD'
@@ -626,7 +626,7 @@
     tagline: 'Quantum-enhanced energy optimization and fusion simulation'
     description: 'Revolutionary platform that uses quantum computing to optimize energy systems, simulate fusion reactions, and enable breakthrough energy solutions.',
     category: 'Quantum & Emerging Tech'
-    price: any;
+    price: unknown;
       monthly: 499;
       yearly: 4990;
       currency: 'USD'
@@ -672,7 +672,7 @@
     tagline: 'Advanced AI for self-driving vehicles and transportation'
     description: 'Comprehensive AI platform that powers autonomous vehicles with advanced perception, decision-making, and safety systems for the future of transportation.',
     category: 'Emerging Tech'
-    price: any;
+    price: unknown;
       monthly: 799;
       yearly: 7990;
       currency: 'USD'

@@ -78,7 +78,7 @@ export default async function handler(
 
     const text = completion.choices?.[0]?.message?.content ?? '';
     return res.status(200).json({ text });
-  } catch (err: any) {
+  } catch (err: unknown) {
     console.error('Operator error:', err);
     return res.status(500).json({ error: 'Internal Server Error' });
   }

@@ -17,7 +17,8 @@ export const errorHandler = (error: AppError | Error) => {
   const isDevelopment = process.env.NODE_ENV === 'development';
   const appError = error instanceof AppError ? error : new AppError(error.message);
   
-  console.error({
+  // eslint-disable-next-line no-console
+    console.error({
     message: appError.message,
     stack: isDevelopment ? appError.stack : undefined,
     timestamp: new Date().toISOString(),
@@ -30,6 +31,6 @@ export const errorHandler = (error: AppError | Error) => {
   };
 };
 
-export const asyncHandler = (fn: Function) => (_req: unknown, _res: unknown, next: unknown) => {
+export const asyncHandler = (fn: Function) => (req: unknown, res: unknown, next: unknown) => {
   Promise.resolve(fn(req, res, next)).catch(next);
 };

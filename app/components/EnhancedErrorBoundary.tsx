@@ -4,7 +4,7 @@ import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
-  onError?: (_error: Error, _errorInfo: ErrorInfo) => void;
+  onError?: (error: Error, errorInfo: ErrorInfo) => void;
   enableErrorReporting?: boolean;
   enableRetry?: boolean;
   showErrorDetails?: boolean;
@@ -13,8 +13,8 @@ interface Props {
 
 interface State {
   hasError: boolean;
-  _error?: Error;
-  _errorInfo?: ErrorInfo;
+  error?: Error;
+  errorInfo?: ErrorInfo;
   errorId?: string;
   retryCount: number;
 }
@@ -30,42 +30,46 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     };
   }
 
-  static getDerivedStateFromError(_error: Error): Partial<State> {
+  static getDerivedStateFromError(error: Error): Partial<State> {
     return { 
       hasError: true, 
-      _error,
+      error,
       errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
     };
   }
 
-  componentDidCatch(_error: Error, _errorInfo: ErrorInfo) {
-    this.setState({ _errorInfo });
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+    this.setState({ errorInfo });
     
-    // Call custom _error handler
+    // Call custom error handler
     if (this.props.onError) {
-      this.props.onError(_error, _errorInfo);
+      this.props.onError(error, errorInfo);
     }
 
-    // Enhanced _error reporting
+    // Enhanced error reporting
     if (this.props.enableErrorReporting) {
-      this.reportError(_error, _errorInfo);
+      this.reportError(error, errorInfo);
     }
 
     // Log to console in development
-    if (process.env.NODE_ENV === 'development') { console.group('🚨 Error Boundary Caught Error');
-      if (process.env.NODE_ENV === 'development') { console.error('Error:', _error); }
-      if (process.env.NODE_ENV === 'development') { console.error('Error Info:', _errorInfo); }
-      if (process.env.NODE_ENV === 'development') { console.error('Component Stack:', _errorInfo.componentStack); }
+    if (process.env.NODE_ENV === 'development') {
+      console.group('🚨 Error Boundary Caught Error');
+      // eslint-disable-next-line no-console
+    console.error('Error:', error);
+      // eslint-disable-next-line no-console
+    console.error('Error Info:', errorInfo);
+      // eslint-disable-next-line no-console
+    console.error('Component Stack:', errorInfo.componentStack);
       console.groupEnd();
     }
   }
 
-  private reportError = (_error: Error, _errorInfo: ErrorInfo) => {
+  private reportError = (error: Error, errorInfo: ErrorInfo) => {
     const errorReport = {
       errorId: this.state.errorId,
-      message: _error.message,
-      stack: _error.stack,
-      componentStack: _errorInfo.componentStack,
+      message: error.message,
+      stack: error.stack,
+      componentStack: errorInfo.componentStack,
       timestamp: new Date().toISOString(),
       userAgent: navigator.userAgent,
       url: window.location.href,
@@ -74,13 +78,13 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       sessionId: this.getSessionId(),
     };
 
-    // Send to _error reporting service
+    // Send to error reporting service
     this.sendErrorReport(errorReport);
 
     // Send to analytics if available
-    if (typeof window !== 'undefined' && (window as unknown as { gtag?: Function }).gtag) {
-      ((window as unknown as { gtag: Function }).gtag)('_event', 'exception', {
-        description: _error.message,
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('event', 'exception', {
+        description: error.message,
         fatal: false,
         custom_map: {
           error_id: this.state.errorId,
@@ -92,18 +96,20 @@ class EnhancedErrorBoundary extends Component<Props, State> {
 
   private sendErrorReport = async (errorReport: unknown) => {
     try {
-      // In a real app, you would send this to your _error reporting service
+      // In a real app, you would send this to your error reporting service
       // For now, we'll just log it
-      if (process.env.NODE_ENV === 'development') { console.log('Error Report:', errorReport); }
+      // eslint-disable-next-line no-console
+    console.log('Error Report:', errorReport);
       
-      // Example: Send to _error reporting service
+      // Example: Send to error reporting service
       // await fetch('/api/errors', {
       //   method: 'POST',
       //   headers: { 'Content-Type': 'application/json' },
       //   body: JSON.stringify(errorReport)
       // });
     } catch (reportingError) {
-      if (process.env.NODE_ENV === 'development') { console.warn('Failed to send _error report:', reportingError); }
+      // eslint-disable-next-line no-console
+    console.warn('Failed to send error report:', reportingError);
     }
   };
 
@@ -125,8 +131,8 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     if (this.state.retryCount < this.maxRetries) {
       this.setState(prevState => ({
         hasError: false,
-        _error: undefined,
-        _errorInfo: undefined,
+        error: undefined,
+        errorInfo: undefined,
         retryCount: prevState.retryCount + 1
       }));
     } else {
@@ -146,9 +152,9 @@ class EnhancedErrorBoundary extends Component<Props, State> {
   private copyErrorDetails = () => {
     const errorDetails = {
       errorId: this.state.errorId,
-      message: this.state._error?.message,
-      stack: this.state._error?.stack,
-      componentStack: this.state._errorInfo?.componentStack,
+      message: this.state.error?.message,
+      stack: this.state.error?.stack,
+      componentStack: this.state.errorInfo?.componentStack,
       timestamp: new Date().toISOString(),
       url: window.location.href,
     };
@@ -156,7 +162,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     navigator.clipboard.writeText(JSON.stringify(errorDetails, null, 2))
       .then(() => {
         // Show success message
-        const button = document.getElementById('copy-_error-details');
+        const button = document.getElementById('copy-error-details');
         if (button) {
           const originalText = button.textContent;
           button.textContent = 'Copied!';
@@ -166,7 +172,8 @@ class EnhancedErrorBoundary extends Component<Props, State> {
         }
       })
       .catch(() => {
-        if (process.env.NODE_ENV === 'development') { console.warn('Failed to copy _error details'); }
+        // eslint-disable-next-line no-console
+    console.warn('Failed to copy error details');
       });
   };
 
@@ -176,7 +183,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
         return this.props.fallback;
       }
 
-      const { retryCount, _error, errorId} = this.state;
+      const { retryCount, error, errorInfo, errorId } = this.state;
       const canRetry = retryCount < this.maxRetries;
 
       return (
@@ -202,7 +209,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
               </div>
 
               {/* Error Details (if enabled) */}
-              {this.props.showErrorDetails && _error && (
+              {this.props.showErrorDetails && error && (
                 <div className="mb-6 p-4 bg-gray-50 rounded-lg">
                   <h3 className="text-sm font-semibold text-gray-700 mb-2 flex items-center">
                     <AlertTriangle className="w-4 h-4 mr-2" />
@@ -210,13 +217,13 @@ class EnhancedErrorBoundary extends Component<Props, State> {
                   </h3>
                   <div className="text-xs text-gray-600 font-mono">
                     <div className="mb-1">
-                      <strong>Message:</strong> {_error.message}
+                      <strong>Message:</strong> {error.message}
                     </div>
-                    {_error.stack && (
+                    {error.stack && (
                       <div className="mb-1">
                         <strong>Stack:</strong>
                         <pre className="whitespace-pre-wrap mt-1 text-xs">
-                          {_error.stack.split('\n').slice(0, 5).join('\n')}
+                          {error.stack.split('\n').slice(0, 5).join('\n')}
                         </pre>
                       </div>
                     )}
@@ -255,7 +262,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
 
                   {this.props.showErrorDetails && (
                     <button
-                      id="copy-_error-details"
+                      id="copy-error-details"
                       onClick={this.copyErrorDetails}
                       className="border-2 border-gray-300 text-gray-600 hover:bg-gray-50 font-semibold py-3 px-6 rounded-lg transition-colors flex items-center justify-center"
                     >

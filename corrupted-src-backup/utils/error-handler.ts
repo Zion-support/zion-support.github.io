@@ -11,8 +11,8 @@ interface ErrorContext {
   sessionId: string;
   stackTrace?: string;
   componentStack?: string;
-  props?: any;
-  state?: any;
+  props?: unknown;
+  state?: unknown;
 }
 
 interface ErrorReport {
@@ -153,8 +153,8 @@ class ErrorHandler {
     url?: string;
     status?: number;
     componentStack?: string;
-    props?: any;
-    state?: any;
+    props?: unknown;
+    state?: unknown;
   }): void {
     const errorId = this.generateErrorId(errorData);
     const now = new Date().toISOString();
@@ -213,14 +213,14 @@ class ErrorHandler {
     }
   }
 
-  private generateErrorId(errorData: any): string {
+  private generateErrorId(errorData: unknown): string {
     const key = `${errorData.type}_${errorData.message}_${errorData.filename || ''}_${errorData.lineno || ''}`;
     return btoa(key)
       .replace(/[^a-zA-Z0-9]/g, '')
       .substr(0, 16);
   }
 
-  private determineSeverity(errorData: any): ErrorReport['severity'] {
+  private determineSeverity(errorData: unknown): ErrorReport['severity'] {
     // Critical: Network errors, unhandled rejections
     if (errorData.type === 'network' || errorData.type === 'promise') {
       return 'critical';

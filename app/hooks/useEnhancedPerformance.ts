@@ -1,10 +1,10 @@
 /**
  * Enhanced Performance Hook
- * Combines performance monitoring, _error tracking, and analytics
+ * Combines performance monitoring, error tracking, and analytics
  */
 
 import { useEffect, useCallback, useRef } from 'react';
-// import { performanceOptimizer } from '../utils/performanceOptimizer';
+import { performanceOptimizer } from '../utils/performanceOptimizer';
 import { errorTracker } from '../utils/enhancedErrorTracking';
 import { analytics } from '../utils/enhancedAnalytics';
 
@@ -19,7 +19,11 @@ export function useEnhancedPerformance(
   options: UseEnhancedPerformanceOptions = {}
 ) {
   const {
-    component = 'Unknown', trackErrors = true, trackPerformance = true, trackAnalytics = true, } = options;
+    component = 'Unknown',
+    trackErrors = true,
+    trackPerformance = true,
+    trackAnalytics = true,
+  } = options;
 
   const mountTimeRef = useRef<number>(0);
   const renderCountRef = useRef<number>(0);
@@ -61,9 +65,10 @@ export function useEnhancedPerformance(
 
     if (trackPerformance && renderCountRef.current > 10) {
       // Many re-renders detected
-      if (process.env.NODE_ENV === 'development') { if (process.env.NODE_ENV === 'development') { console.warn(
+      // eslint-disable-next-line no-console
+    console.warn(
         `Component ${component} has re-rendered ${renderCountRef.current} times`
-      ); } }
+      );
       analytics.trackCustomEvent(
         'Performance',
         'High Render Count',
@@ -74,9 +79,9 @@ export function useEnhancedPerformance(
   });
 
   const trackError = useCallback(
-    (_error: Error, context?: Record<string, unknown>) => {
+    (error: Error, context?: Record<string, unknown>) => {
       if (trackErrors) {
-        errorTracker.trackError(_error, {
+        errorTracker.trackError(error, {
           component,
           ...context,
         });
@@ -86,9 +91,9 @@ export function useEnhancedPerformance(
   );
 
   const trackUserAction = useCallback(
-    (action: string, _metadata?: Record<string, unknown>) => {
+    (action: string, metadata?: Record<string, unknown>) => {
       if (trackAnalytics) {
-        analytics.trackCustomEvent('User Action', action, component, undefined, _metadata);
+        analytics.trackCustomEvent('User Action', action, component, undefined, metadata);
       }
     },
     [component, trackAnalytics]
@@ -96,7 +101,7 @@ export function useEnhancedPerformance(
 
   const measureOperation = useCallback(
     (operationName: string) => {
-      // const _markName = `${component}-${operationName}`;
+      const markName = `${component}-${operationName}`;
       const startTime = performance.now();
 
       return {

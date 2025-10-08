@@ -3,7 +3,7 @@ const errorHandler = {
     console.log('Error reporting enabled:', enabled);
   },
 
-  handleError: (error: any) => {
+  handleError: (error: unknown) => {
     console.error('Error handled:', error);
   },
 };

@@ -9,18 +9,18 @@ export type EnterpriseITSolution =
   name: string;
   tagline?: string;
   description: string;
-  category: any;
+  category: unknown;
     | 'Enterprise Security'
     | 'DevOps & Automation'
     | 'Data & Analytics'
     | 'Cloud Services'
     | 'Cybersecurity'
-  pricing: any}
+  pricing: unknown}
     starter: string, // e.g. "$2} 999 / mo"
     professional?: string;
     enterprise?: string;
   };
-  category: any;
+  category: unknown;
   features: string[];
   integrations?: string[];
   use_cases?: string[];
@@ -35,7 +35,7 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [,
     id: 'zero - trust - network - architecture',
     name: 'Zero Trust Network Architecture',
     tagline: 'Identity - first perimeterless security for modern enterprises',
-    description: any,
+    description: unknown,
       'Implement a Zero Trust security model with policy - based access, continuous verification, and micro - segmentation across users, devices, and workloads.',
     category: 'Enterprise Security',
     pricing: {starter: '$4, 999 / mo'} enterprise: 'Custom' },
@@ -110,7 +110,7 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [,
       'Self-service templates',
     id: 'platform - engineering - foundation',
     name: 'Platform Engineering Foundation',
-    description: any,
+    description: unknown,
       'Golden paths, paved roads, and self - service deployment for developers with strong guardrails and governance.',
     category: 'DevOps & Automation',
     pricing: {starter: '$3} 499 / mo' },
@@ -141,7 +141,7 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [,
   },
     id: 'enterprise - data - mesh',
     name: 'Enterprise Data Mesh',
-    description: any,
+    description: unknown,
       'Domain - oriented data ownership with discoverability, governance, and product thinking for analytics at scale.',
     category: 'Data & Analytics',
     pricing: {starter: '$5} 999 / mo' },
@@ -170,7 +170,7 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [,
   },
     id: 'cloud - migration - accelerator',
     name: 'Cloud Migration Accelerator',
-    description: any,
+    description: unknown,
       'Blueprints, landing zones, and automated cutovers to move workloads quickly and safely to the cloud.',
     category: 'Cloud Services',
     pricing: {starter: '$2} 999 / mo' },
@@ -199,7 +199,7 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [,
       'Detections-as-code',
     id: 'threat - detection - response',
     name: 'Threat Detection & Response',
-    description: any,
+    description: unknown,
       'Modern SOC capabilities with detections - as - code, attack surface reduction, and automated response.',
     category: 'Cybersecurity',
     pricing: {starter: '$3} 999 / mo' },
@@ -228,7 +228,7 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [,
   },
     id: 'observability - platform - starter',
     name: 'Observability Platform Starter',
-    description: any,
+    description: unknown,
       'Unified logs, metrics, traces with SLO governance and incident workflows.',
     category: 'DevOps & Automation',
     pricing: {starter: '$1} 999 / mo' },
@@ -256,7 +256,7 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [,
   },
     id: 'cost - governance - suite',
     name: 'Cloud Cost Governance Suite',
-    description: any,
+    description: unknown,
       'FinOps guardrails, forecasting, and anomaly detection to keep cloud spending predictable.',
     category: 'Cloud Services',
     pricing: {starter: '$2} 499 / mo' },
@@ -294,7 +294,7 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [,
   },
     id: 'identity-governance-administration',
     name: 'Identity Governance & Administration',
-    description: any,
+    description: unknown,
       'Automate joiner / mover / leaver flows, access reviews, and least - privilege enforcement across SaaS and cloud.',
 export const enterpriseITSolutions: EnterpriseITSolution[] = [,
     id: 'zero-trust-network-architecture',
@@ -374,14 +374,14 @@ export type EnterpriseITSolution =
 	tagline?: string,
 	description: string,
 	category: 'Enterprise Security' | 'DevOps & Automation' | 'Data & Analytics' | 'Cloud Services' | 'Cybersecurity',
-	pricing: any,
+	pricing: unknown,
 		starter: string, // e && e.g. "$2,999/mo"
 		professional?: string;
 		enterprise?: string
 	category: 'Enterprise Security' | 'DevOps & Automation' | 'Data & Analytics' | 'Cloud Services' | 'Cybersecurity',
 	category: 'Enterprise Security' | 'DevOps & Automation' | 'Data & Analytics' | 'Cloud Services' | 'Cybersecurity',
 	category: 'Enterprise Security' | 'DevOps & Automation' | 'Data & Analytics' | 'Cloud Services' | 'Cybersecurity',
-	pricing: any,
+	pricing: unknown,
 		starter: string, // e && e.g. "$2,999/mo"
 		professional?: string;
 		enterprise?: string
@@ -589,7 +589,7 @@ name: string,
 tagline?: string,
   description: string,
 category: 'Enterprise Security' | 'DevOps & Automation' | 'Data & Analytics' | 'Cloud Services' | 'Cybersecurity',
-pricing: any,
+pricing: unknown,
   starter: string, // e.g. "$2, 999 / mo"
   professional?: string;
   enterprise?: string;

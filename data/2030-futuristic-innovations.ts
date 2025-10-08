@@ -107,7 +107,7 @@ export interface FuturisticInnovation2030 {id: string, name: string,
   useCases: string[], roi: string,
   competitors: string[], marketSize: string,
   growthRate: string, variant: ServiceVariant,
-  contactInfo: any,
+  contactInfo: unknown,
     mobile: string, email: string,
     address: string,
     website: string}
@@ -157,7 +157,7 @@ export const futuristicInnovations2030: FuturisticInnovation2030[] = [,
     marketSize: '$15B market',
     growthRate: '300% annual growth',
     variant: 'ai-futuristic',
-    contactInfo: any,
+    contactInfo: unknown,
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -207,7 +207,7 @@ export const futuristicInnovations2030: FuturisticInnovation2030[] = [,
     marketSize: '$3.5B market',
     growthRate: '150% annual growth',
     variant: 'ai-futuristic',
-    contactInfo: any,
+    contactInfo: unknown,
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
       website: 'https://ziontechgroup.com'
@@ -241,7 +241,7 @@ export const futuristicInnovations2030: FuturisticInnovation2030[] = [,
     competitors: ['ID Quantique, Toshiba Quantum, Quantum Xchange'];
     marketSize: '$8B market', growthRate: '250% annual growth'
     variant: 'quantum-futuristic'
-    contactInfo: any,
+    contactInfo: unknown,
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
       website: 'https://ziontechgroup.com'
@@ -272,7 +272,7 @@ export const futuristicInnovations2030: FuturisticInnovation2030[] = [,
     roi: 'Average customer sees 600% ROI within 18 months through revolutionary computing capabilities.', competitors: ['No direct competitors in DNA computing'],
     marketSize: '$12B market', growthRate: '400% annual growth'
     variant: 'biotech-futuristic'
-    contactInfo: any,
+    contactInfo: unknown,
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
       website: 'https://ziontechgroup.com'
@@ -304,7 +304,7 @@ export const futuristicInnovations2030: FuturisticInnovation2030[] = [,
     competitors: ['Planetary Resources, Deep Space Industries, AstroForge'];
     marketSize: '$25B market', growthRate: '500% annual growth'
     variant: 'space-futuristic'
-    contactInfo: any,
+    contactInfo: unknown,
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
       website: 'https://ziontechgroup.com'
@@ -335,7 +335,7 @@ export const futuristicInnovations2030: FuturisticInnovation2030[] = [,
     competitors: ['Unity, Unreal Engine, Roblox, Decentraland'];
     marketSize: '$8B market', growthRate: '200% annual growth'
     variant: 'metaverse-futuristic'
-    contactInfo: any,
+    contactInfo: unknown,
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
       website: 'https://ziontechgroup.com'
@@ -366,7 +366,7 @@ export const futuristicInnovations2030: FuturisticInnovation2030[] = [,
     competitors: ['GitLab, Jenkins, CircleCI, GitHub Actions'];
     marketSize: '$6B market', growthRate: '180% annual growth'
     variant: 'it-futuristic'
-    contactInfo: any,
+    contactInfo: unknown,
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
       website: 'https://ziontechgroup.com'
@@ -414,7 +414,7 @@ export const futuristicInnovations2030: FuturisticInnovation2030[] = [,
     marketSize: '$5B market',
     growthRate: '160% annual growth',
     variant: 'security-futuristic',
-    contactInfo: any,
+    contactInfo: unknown,
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -447,7 +447,7 @@ export const futuristicInnovations2030: FuturisticInnovation2030[] = [,
     competitors: ['Palo Alto Networks, Cisco, Fortinet, Zscaler'];
     marketSize: '$5B market', growthRate: '160% annual growth'
     variant: 'security-futuristic'
-    contactInfo: any,
+    contactInfo: unknown,
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
       website: 'https://ziontechgroup.com'
@@ -517,7 +517,7 @@ export const futuristicInnovations2030: FuturisticInnovation2030[] = [;
 ;
     marketSize: '$5B market', growthRate: '160% annual growth'
     variant: 'security-futuristic'
-    contactInfo: any,
+    contactInfo: unknown,
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
       website: 'https://ziontechgroup.com'

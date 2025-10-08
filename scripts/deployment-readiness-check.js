@@ -229,7 +229,6 @@ function setupChecks(checker) {
       }
       
       // Check dist size
-      const stats = fs.statSync('dist');
       return {
         success: true,
         message: 'Build successful'

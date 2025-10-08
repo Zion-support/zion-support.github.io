@@ -25,7 +25,7 @@
   market_size: string;
   growth_rate: string;
   variant: ServiceVariant;
-  contact_info: any;
+  contact_info: unknown;
     mobile: string;
     email: string;
     address: string;
@@ -65,7 +65,7 @@ const contact =
         'Hardware integration',
         'Custom algorithms',
       ],
-      market_advantage: any,
+      market_advantage: unknown,
         'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities',
     },
   ];    description: 'Advanced neuromorphic computing platform that mimics the human brain's neural structure, enabling energy - efficient AI processing and cognitive computing applications.'

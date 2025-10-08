@@ -4,6 +4,15 @@
  */
 
 import { useState, useCallback, ChangeEvent } from 'react';
+import {
+  ValidationRule,
+  validateField,
+  validateForm,
+  isFormValid,
+  getFormErrors,
+  ValidationResult
+} from '../utils/formValidation';
+
 export interface UseFormConfig<T extends Record<string, unknown>> {
   initialValues: T;
   validationSchema?: Partial<Record<keyof T, ValidationRule[]>>;
@@ -73,7 +82,7 @@ export function useForm<T extends Record<string, unknown>>({
   // Handle input change
   const handleChange = useCallback(
     (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-      const { name, value, type} = e.target;
+      const { name, value, type } = e.target;
       const fieldName = name as keyof T;
       
       // Handle checkbox inputs
@@ -136,8 +145,9 @@ export function useForm<T extends Record<string, unknown>>({
 
       try {
         await onSubmit(values);
-      } catch (_error) {
-        if (process.env.NODE_ENV === 'development') { console.error('Form submission _error:', _error); }
+      } catch (error) {
+        // eslint-disable-next-line no-console
+    console.error('Form submission error:', error);
       } finally {
         setIsSubmitting(false);
       }
@@ -157,7 +167,7 @@ export function useForm<T extends Record<string, unknown>>({
     }
   }, [validateOnChange, touched, validateSingleField]);
 
-  // Set field _error programmatically
+  // Set field error programmatically
   const setFieldError = useCallback((field: keyof T, fieldErrors: string[]) => {
     setErrors(prev => ({
       ...prev,

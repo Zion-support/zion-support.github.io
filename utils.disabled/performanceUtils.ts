@@ -3,7 +3,7 @@
  */
 
 // Debounce function for performance optimization
-export const debounce = <T extends (...args: any[]) => any>(
+export const debounce = <T extends (...args: unknown[]) => any>(
   func: T,
   wait: number
 ): ((...args: Parameters<T>) => void) => {
@@ -21,7 +21,7 @@ export const debounce = <T extends (...args: any[]) => any>(
 };
 
 // Throttle function for performance optimization
-export const throttle = <T extends (...args: any[]) => any>(
+export const throttle = <T extends (...args: unknown[]) => any>(
   func: T,
   limit: number
 ): ((...args: Parameters<T>) => void) => {
@@ -93,7 +93,7 @@ export const optimizeScrollPerformance = (): void => {
 }
 
 // Memory usage utility
-export const getMemoryUsage = (): any => {
+export const getMemoryUsage = (): unknown => {
   if (typeof window === 'undefined' || !('memory' in performance)) {
     return null;
   }
@@ -102,7 +102,7 @@ export const getMemoryUsage = (): any => {
 };
 
 // Collect performance metrics
-export const collectPerformanceMetrics = (): any => {
+export const collectPerformanceMetrics = (): unknown => {
   if (typeof window === 'undefined') return null;
 
   const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
@@ -204,9 +204,6 @@ export const optimizeScrollPerformance = (): void => {
     // Scroll optimization logic here
     ticking = false;
   };
-  const requestTick = () => {
-    if (!ticking) {
-      requestAnimationFrame(updateScrollPosition);
       ticking = true;
     }
   };

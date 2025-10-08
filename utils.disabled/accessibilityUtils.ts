@@ -107,7 +107,6 @@ export const focusManagement = {
     );
     
     const currentIndex = Array.from(focusableElements).indexOf(currentElement);
-    const nextElement = focusableElements[currentIndex + 1] as HTMLElement;
   },
 
   // Move focus to previous focusable element
@@ -117,7 +116,6 @@ export const focusManagement = {
     );
     
     const currentIndex = Array.from(focusableElements).indexOf(currentElement);
-    const previousElement = focusableElements[currentIndex - 1] as HTMLElement;
   }
 };
 

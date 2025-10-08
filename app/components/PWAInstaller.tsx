@@ -30,7 +30,8 @@ const PWAInstaller: React.FC = () => {
       navigator.serviceWorker
         .register('/service-worker.js')
         .then((registration) => {
-          if (process.env.NODE_ENV === 'development') { console.log('Service Worker registered:', registration); }
+          // eslint-disable-next-line no-console
+    console.log('Service Worker registered:', registration);
 
           // Check for updates periodically
           setInterval(() => {
@@ -53,8 +54,9 @@ const PWAInstaller: React.FC = () => {
             }
           });
         })
-        .catch((_error) => {
-          if (process.env.NODE_ENV === 'development') { console.error('Service Worker registration failed:', _error); }
+        .catch((error) => {
+          // eslint-disable-next-line no-console
+    console.error('Service Worker registration failed:', error);
         });
 
       // Listen for controller change
@@ -63,7 +65,7 @@ const PWAInstaller: React.FC = () => {
       });
     }
 
-    // Listen for beforeinstallprompt _event
+    // Listen for beforeinstallprompt event
     const handleBeforeInstallPrompt = (e: Event) => {
       e.preventDefault();
       setDeferredPrompt(e as BeforeInstallPromptEvent);
@@ -79,7 +81,8 @@ const PWAInstaller: React.FC = () => {
 
     // Listen for successful installation
     window.addEventListener('appinstalled', () => {
-      if (process.env.NODE_ENV === 'development') { console.log('PWA installed successfully'); }
+      // eslint-disable-next-line no-console
+    console.log('PWA installed successfully');
       setIsInstalled(true);
       setShowPrompt(false);
       setDeferredPrompt(null);
@@ -102,9 +105,11 @@ const PWAInstaller: React.FC = () => {
     const choiceResult = await deferredPrompt.userChoice;
 
     if (choiceResult.outcome === 'accepted') {
-      if (process.env.NODE_ENV === 'development') { console.log('User accepted the install prompt'); }
+      // eslint-disable-next-line no-console
+    console.log('User accepted the install prompt');
     } else {
-      if (process.env.NODE_ENV === 'development') { console.log('User dismissed the install prompt'); }
+      // eslint-disable-next-line no-console
+    console.log('User dismissed the install prompt');
     }
 
     // Clear the deferred prompt

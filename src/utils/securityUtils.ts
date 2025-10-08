@@ -170,7 +170,7 @@ export class SecureStorage {
   /**
    * Set item in storage with encryption
    */
-  setItem(key: string, value: any): void {
+  setItem(key: string, value: unknown): void {
     try {
       const data = JSON.stringify(value);
       // In production, you'd want to encrypt this data

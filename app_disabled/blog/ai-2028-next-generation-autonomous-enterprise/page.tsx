@@ -1,4 +1,3 @@
-import React from 'react';
 import Link from 'next/link';
 export const metadata = {
   title: "AI 2028: Next-Generation Autonomous Enterprise Revolution | Zion Tech Group",

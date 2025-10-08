@@ -256,13 +256,16 @@ export class ErrorHandler {
       switch (error.severity) {
         case ErrorSeverity.CRITICAL:
         case ErrorSeverity.HIGH:
-          if (process.env.NODE_ENV === 'development') { console.error(logMessage, error); }
+          // eslint-disable-next-line no-console
+    console.error(logMessage, error);
           break;
         case ErrorSeverity.MEDIUM:
-          if (process.env.NODE_ENV === 'development') { console.warn(logMessage, error); }
+          // eslint-disable-next-line no-console
+    console.warn(logMessage, error);
           break;
         case ErrorSeverity.LOW:
-          if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { if (process.env.NODE_ENV === 'development') { console.info(logMessage, error); } } }
+          if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { // eslint-disable-next-line no-console
+    console.info(logMessage, error); } }
           break;
       }
     }
@@ -285,7 +288,8 @@ export class ErrorHandler {
         body: JSON.stringify(error),
       });
     } catch (err) {
-      if (process.env.NODE_ENV === 'development') { console.error('Failed to log error to network:', err); }
+      // eslint-disable-next-line no-console
+    console.error('Failed to log error to network:', err);
     }
   }
 
@@ -305,7 +309,8 @@ export class ErrorHandler {
         }),
       });
     } catch (err) {
-      if (process.env.NODE_ENV === 'development') { console.error('Failed to report error:', err); }
+      // eslint-disable-next-line no-console
+    console.error('Failed to report error:', err);
     }
   }
 
@@ -399,14 +404,16 @@ export class ErrorHandler {
       // Implement retry logic based on error type
       if (retryItem.error.type === ErrorType.NETWORK) {
         // Retry network request
-        if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { console.log(`Retrying network request (attempt ${retryItem.retryCount})`); } }
+        if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { // eslint-disable-next-line no-console
+    console.log(`Retrying network request (attempt ${retryItem.retryCount})`); } }
         // Add your retry logic here
       }
     } catch {
       if (retryItem.retryCount < this.config.maxRetries) {
         this.scheduleRetry(retryItem.error);
       } else {
-        if (process.env.NODE_ENV === 'development') { console.error('Max retries exceeded for error:', retryItem.error); }
+        // eslint-disable-next-line no-console
+    console.error('Max retries exceeded for error:', retryItem.error);
       }
     }
   }

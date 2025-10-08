@@ -25,7 +25,7 @@
   market_size: string;
   growth_rate: string;
   variant: ServiceVariant;
-  contact_info: any;
+  contact_info: unknown;
     mobile: string;
     email: string;
     address: string;
@@ -70,7 +70,7 @@ export interface AdvancedInnovativeService {id: string, name: string,
   useCases: string[], roi: string,
   competitors: string[], marketSize: string,
   growthRate: string, variant: ServiceVariant,
-  contactInfo: any,
+  contactInfo: unknown,
     mobile: string, email: string,
     address: string,
     website: string}
@@ -1977,7 +1977,7 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [;
       'Sustainability analytics',
       'Custom model development',
     ],
-    market_advantage: any,
+    market_advantage: unknown,
       'Most advanced AI climate prediction platform with research - grade accuracy',
   },
 ];      'AI climate modeling_environmental monitoring_weather forecasting_sustainability analytics_custom model development'

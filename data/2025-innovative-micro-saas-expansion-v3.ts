@@ -25,7 +25,7 @@
   market_size: string;
   growth_rate: string;
   variant: ServiceVariant;
-  contact_info: any;
+  contact_info: unknown;
     mobile: string;
     email: string;
     address: string;
@@ -60,7 +60,7 @@ export interface InnovativeMicroSaasService {id: string, name: string,
   useCases: string[], roi: string,
   competitors: string[], marketSize: string,
   growthRate: string, variant: ServiceVariant,
-  contactInfo: any,
+  contactInfo: unknown,
     mobile: string, email: string,
     address: string,
     website: string}

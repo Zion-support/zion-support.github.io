@@ -6,10 +6,8 @@ impo, r, t {
   Use, r, s,
   Z, a, p,
 } fr, o, m 'luci, d, e-rea, c, t';
-import React from 'react';
 
 impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
-import { Link } from 'react-router-dom';
 
 const AIMLOpsAutomatio, n = () => { 
   return (

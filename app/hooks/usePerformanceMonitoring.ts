@@ -1,4 +1,4 @@
-// // 'use client'; // Removed for Vite compatibility // Removed for Vite compatibility
+'use client';
 
 import { useEffect, useCallback } from 'react';
 import { useAnalytics } from '../components/AnalyticsProvider';
@@ -113,7 +113,8 @@ export const usePerformanceMonitoring = () => {
       };
     } catch (error) {
        
-      console.warn('Performance monitoring not supported:', error);
+      // eslint-disable-next-line no-console
+    console.warn('Performance monitoring not supported:', error);
       return () => {};
     }
   }, [reportMetric]);

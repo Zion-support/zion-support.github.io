@@ -20,7 +20,7 @@ async function fetchFromGitHub(): Promise<any[]> {
     
     const files = (await resp.json()) as Array<{name: string, download_url: string, type: string}>;
     const jsonFiles = files.filter((f) => f.type === 'file' && f.name.endsWith('.json'));
-    const results: any[] = [];
+    const results: unknown[] = [];
     
     for (const f of jsonFiles.slice(-50).reverse()) {
       try {

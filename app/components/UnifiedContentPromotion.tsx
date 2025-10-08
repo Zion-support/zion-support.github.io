@@ -43,7 +43,8 @@ const UnifiedContentPromotion: React.FC = () => {
               <p className="text-gray-600 mb-4">
                 {feature.description}
               </p>
-              <Link to={feature.link}
+              <Link 
+                to={feature.link}
                 className="text-blue-600 hover:text-blue-700 font-medium inline-flex items-center"
               >
                 Learn More →
@@ -54,6 +55,7 @@ const UnifiedContentPromotion: React.FC = () => {
       </div>
     </div>
   );
+
 };
 
 export default UnifiedContentPromotion;

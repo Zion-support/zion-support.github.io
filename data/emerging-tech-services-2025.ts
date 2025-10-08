@@ -8,7 +8,7 @@
   link: string;
   category: string;
   realImplementation: boolean;
-  contactInfo: any;
+  contactInfo: unknown;
     mobile: string;
     email: string;
 export interface EmergingTechService2025 {;
@@ -38,7 +38,7 @@ export interface EmergingTechService2025 {;
   description: string, features: string[],
   link: string, category: string,
   realImplementation: boolean,
-  contactInfo: any,
+  contactInfo: unknown,
     mobile: string, email: string,
     address: string,
   }
@@ -86,7 +86,7 @@ export const emergingTechServices2025: EmergingTechService2025[] = [,
     link: "/services/metaverse-platform",
     category: "Emerging Tech 2025",
     realImplementation: true,
-    contactInfo: any,
+    contactInfo: unknown,
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       mobile: '+1 302 464 0950',

@@ -3,7 +3,6 @@
 import https from 'https';
 
 // GitHub API configuration
-const GITHUB_API_BASE = 'https://api.github.com';
 const REPO_OWNER = 'Zion-Holdings';
 const REPO_NAME = 'zion.app';
 

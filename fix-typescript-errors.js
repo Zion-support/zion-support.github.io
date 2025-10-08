@@ -2,8 +2,6 @@ const fs = require('fs');
 
 // Fix ErrorBoundary.tsx
 console.log('Fixing ErrorBoundary.tsx...');
-let errorBoundary = fs.readFileSync('app/components/ErrorBoundary.tsx', 'utf8');
-
 // The issue is that line 112 has an extra closing div - need to check the JSX structure
 // Based on the error at line 112, column 9, it seems there's a mismatch in parentheses
 // Let's check if the return statement needs an extra closing brace

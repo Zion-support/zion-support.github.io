@@ -1,4 +1,4 @@
-import { Home, Menu, Settings, User, X } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import React, { useState } from 'react';
 import Link from 'next/link';
 

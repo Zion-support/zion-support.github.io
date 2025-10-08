@@ -264,7 +264,7 @@ class AdvancedPerformanceMonitor {
   /**
    * Update metric
    */
-  private updateMetric(metric: keyof PerformanceData, value: any): void {
+  private updateMetric(metric: keyof PerformanceData, value: unknown): void {
     const latestData = this.data[this.data.length - 1];
     if (latestData && Date.now() - latestData.timestamp < 1000) {
       // Update latest entry if it's recent

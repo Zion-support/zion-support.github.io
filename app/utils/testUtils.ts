@@ -211,14 +211,17 @@ export class ConsoleSpy {
   }
 
   private mock(): void {
+    // eslint-disable-next-line no-console
     console.log = (...args: unknown[]) => {
       this.logs.push(args.map(String).join(' '));
     };
 
+    // eslint-disable-next-line no-console
     console.error = (...args: unknown[]) => {
       this.errors.push(args.map(String).join(' '));
     };
 
+    // eslint-disable-next-line no-console
     console.warn = (...args: unknown[]) => {
       this.warnings.push(args.map(String).join(' '));
     };
@@ -237,8 +240,11 @@ export class ConsoleSpy {
   }
 
   restore(): void {
+    // eslint-disable-next-line no-console
     console.log = this.originalConsole.log;
+    // eslint-disable-next-line no-console
     console.error = this.originalConsole.error;
+    // eslint-disable-next-line no-console
     console.warn = this.originalConsole.warn;
   }
 

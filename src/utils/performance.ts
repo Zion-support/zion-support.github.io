@@ -8,7 +8,7 @@ export interface PerformanceMetrics {
   ttfb: number | null; // Time to First Byte
 }
 
-export const reportWebVitals = (metric: any) => {
+export const reportWebVitals = (metric: unknown) => {
   // Log to console in development
   if (process.env['NODE_ENV'] === 'development') {
     if (process.env.DEV) { console.log('[Web Vitals]', metric); }
