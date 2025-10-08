@@ -51,14 +51,6 @@ class Logger {
   getLogLevel(): LogLevel {
     return this.logLevel;
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-  error(message: string, error?: Error | any): void {
-    if (typeof console !== 'undefined') {
-      console.error(`[ERROR] ${message}`, error || '');
-=======
-=======
 
   /**
    * Log a debug message
@@ -81,7 +73,6 @@ class Logger {
     this.log(LogLevel.WARN, message, context, metadata);
   }
 
->>>>>>> cursor/fix-errors-and-merge-to-main-ea96
   /**
    * Log an error message
    */
@@ -222,10 +213,6 @@ class Logger {
       case LogLevel.FATAL:
         return 'color: #DC2626; font-weight: bold; background: #FEF2F2;';
       default:
-<<<<<<< HEAD
-        return 'UNKNOWN'
->>>>>>> cursor/fix-errors-and-merge-to-main-1f43
-=======
         return 'color: #6B7280; font-weight: normal;';
     }
   }
@@ -264,7 +251,6 @@ class Logger {
         return 'FATAL';
       default:
         return 'UNKNOWN';
->>>>>>> cursor/fix-errors-and-merge-to-main-ea96
     }
   }
 }
