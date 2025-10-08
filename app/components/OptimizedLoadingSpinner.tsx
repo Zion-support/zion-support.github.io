@@ -1,7 +1,7 @@
 import React, { memo, useMemo } from 'react';
 
 
-import { Link } from 'react-router-dom';interface OptimizedLoadingSpinnerProps {
+interface OptimizedLoadingSpinnerProps {
   size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
   variant?: 'dots' | 'pulse' | 'spinner' | 'skeleton' | 'bars';
   text?: string;

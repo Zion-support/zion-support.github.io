@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 
-import { Link } from 'react-router-dom';const InteractiveAIROICalculator: React.FC = () => {
+const InteractiveAIROICalculator: React.FC = () => {
   const [currentCost, setCurrentCost] = useState(100000);
   const [efficiencyGain, setEfficiencyGain] = useState(70);
   const [timeframe, setTimeframe] = useState(12);

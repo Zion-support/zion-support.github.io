@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
 
-import { Link } from 'react-router-dom';export type ToastType = 'success' | 'error' | 'warning' | 'info';
+export type ToastType = 'success' | 'error' | 'warning' | 'info';
 
 export interface ToastProps {
   message: string;

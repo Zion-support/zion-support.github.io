@@ -4,7 +4,6 @@
  */
 
 import { lazy } from 'react';
-import React from 'react';
 
 /**
  * Debounce function to limit execution rate

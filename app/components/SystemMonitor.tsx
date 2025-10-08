@@ -5,7 +5,7 @@
 
 import React, { useState, useEffect, useCallback } from 'react';
 
-import { Link } from 'react-router-dom';import { errorHandler } from '../utils/enhancedErrorHandler';
+import { errorHandler } from '../utils/enhancedErrorHandler';
 
 // Collect basic performance metrics
 const collectPerformanceMetrics = () => {

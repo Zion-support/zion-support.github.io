@@ -1,4 +1,3 @@
-import React from 'react';
 /**
  * Enhanced Analytics Tracker
  * Provides comprehensive tracking for user interactions, performance metrics, and errors
