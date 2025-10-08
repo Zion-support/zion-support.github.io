@@ -4,22 +4,36 @@ interface Props {
   children: ReactNode;
   fallback?: ReactNode;
   onError?: (error: Error, errorInfo: ErrorInfo) => void;
+  enableErrorReporting?: boolean;
 }
 
 interface State {
   hasError: boolean;
   error?: Error;
   errorInfo?: ErrorInfo;
+  errorId?: string;
+  retryCount: number;
 }
 
 class EnhancedErrorBoundary extends Component<Props, State> {
+  private maxRetries = 3;
+
   constructor(props: Props) {
     super(props);
-    this.state = { hasError: false };
+    this.state = { 
+      hasError: false, 
+      retryCount: 0,
+      errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
+    };
   }
 
   static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error };
+    return { 
+      hasError: true, 
+      error,
+      retryCount: 0,
+      errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
+    };
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
@@ -27,11 +41,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       error,
       errorInfo
     });
-
-    // Log error to console in development
-    if (process.env.NODE_ENV === 'development') {
-      console.error('Error caught by boundary:', error, errorInfo);
-    }
 
     // Call custom error handler if provided
     if (this.props.onError) {
@@ -112,7 +121,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
   };
 
   private getSessionId = (): string => {
-    let _sessionId = sessionStorage.getItem('sessionId');
+    let sessionId = sessionStorage.getItem('sessionId');
     if (!sessionId) {
       sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
       sessionStorage.setItem('sessionId', sessionId);
@@ -155,9 +164,9 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     navigator.clipboard.writeText(JSON.stringify(errorDetails, null, 2))
       .then(() => {
         // Show success message
-        const _button = document.getElementById('copy-error-details');
+        const button = document.getElementById('copy-error-details');
         if (button) {
-          const _originalText = button.textContent;
+          const originalText = button.textContent;
           button.textContent = 'Copied!';
           setTimeout(() => {
             button.textContent = originalText;
@@ -170,12 +179,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       });
   };
 
-  // In production, you might want to send this to an error reporting service
-  if (process.env.NODE_ENV === 'production') {
-    // Example: send to error reporting service
-    // errorReportingService.captureException(error, { extra: errorInfo });
-  }
-
   render() {
     if (this.state.hasError) {
       if (this.props.fallback) {
@@ -183,11 +186,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       }
 
       const { retryCount, error, errorId } = this.state;
-      const _canRetry = retryCount < this.maxRetries;
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-35e0
+      const canRetry = retryCount < this.maxRetries;
       return (
         <div className="min-h-screen flex items-center justify-center bg-gray-50">
           <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-8 text-center">

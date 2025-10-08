@@ -1,36 +1,5 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 
-<<<<<<< HEAD
-const AccessibilityEnhancer: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  useEffect(() => {
-    // Enhance keyboard navigation
-    const enhanceKeyboardNavigation = () => {
-      // Add focus indicators
-      const style = document.createElement('style');
-      style.textContent = `
-        *:focus {
-          outline: 2px solid #4f46e5 !important;
-          outline-offset: 2px !important;
-        }
-        
-        .skip-link {
-          position: absolute;
-          top: -40px;
-          left: 6px;
-          background: #4f46e5;
-          color: white;
-          padding: 8px;
-          text-decoration: none;
-          z-index: 1000;
-          border-radius: 4px;
-        }
-        
-        .skip-link:focus {
-          top: 6px;
-        }
-      `;
-      document.head.appendChild(style);
-=======
 interface AccessibilityEnhancerProps {
   children: React.ReactNode;
   enableSkipLinks?: boolean;
@@ -51,33 +20,36 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   const [isReducedMotion, setIsReducedMotion] = useState(false);
   const [isHighContrast, setIsHighContrast] = useState(false);
   const [fontSize, setFontSize] = useState(16);
->>>>>>> cursor/analyze-improve-and-deploy-application-1a78
 
-      // Add skip links
-      const skipLink = document.createElement('a');
-      skipLink.href = '#main-content';
-      skipLink.textContent = 'Skip to main content';
-      skipLink.className = 'skip-link';
-      document.body.insertBefore(skipLink, document.body.firstChild);
+  useEffect(() => {
+    // Check for reduced motion preference
+    const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+    const handleChange = (e: MediaQueryListEvent) => {
+      setIsReducedMotion(e.matches);
     };
-
-<<<<<<< HEAD
-    // Enhance ARIA labels and roles
-    const enhanceARIA = () => {
-      // Add ARIA labels to interactive elements
-      const buttons = document.querySelectorAll('button:not([aria-label]):not([aria-labelledby])');
-      buttons.forEach((button, index) => {
-        if (!button.getAttribute('aria-label')) {
-          button.setAttribute('aria-label', `Button ${index + 1}`);
-        }
-      });
-=======
+    
+    setIsReducedMotion(mediaQuery.matches);
     mediaQuery.addEventListener('change', handleChange);
 
     // Check for high contrast preference
     const highContrastQuery = window.matchMedia('(prefers-contrast: high)');
+    const handleContrastChange = (e: MediaQueryListEvent) => {
+      setIsHighContrast(e.matches);
+    };
+    
     setIsHighContrast(highContrastQuery.matches);
->>>>>>> cursor/analyze-improve-and-deploy-application-1a78
+    highContrastQuery.addEventListener('change', handleContrastChange);
+
+    // Check for font size preference
+    const computedStyle = getComputedStyle(document.documentElement);
+    const rootFontSize = parseFloat(computedStyle.fontSize);
+    setFontSize(rootFontSize);
+
+    return () => {
+      mediaQuery.removeEventListener('change', handleChange);
+      highContrastQuery.removeEventListener('change', handleContrastChange);
+    };
+  }, []);
 
       // Add ARIA labels to links
       const links = document.querySelectorAll('a:not([aria-label]):not([aria-labelledby])');

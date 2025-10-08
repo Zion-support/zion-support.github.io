@@ -5,8 +5,6 @@ import { ChevronDown, Phone, Mail, MapPin, Menu, X } from 'lucide-react';
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
-<<<<<<< HEAD
-=======
 
   const services = [
     { name: 'All Services', url: '/services' },
@@ -49,7 +47,6 @@ const Navigation: React.FC = () => {
     { name: 'Terms of Service', url: '/terms' },
     { name: 'Sitemap', url: '/sitemap' },
   ];
->>>>>>> cursor/website-audit-and-update-with-deployment-73aa
 
   return (
     <nav className="bg-slate-900/95 backdrop-blur-md shadow-lg sticky top-0 z-50 border-b border-cyan-500/20">
