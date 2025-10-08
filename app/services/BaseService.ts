@@ -106,7 +106,7 @@ export class BaseService {
         this.setInCache(cacheKey, data);
       }
 
-      return data;
+      return data as T;
     } catch (error) {
       logger.error('GET request failed', error as Error, {
         component: 'BaseService',
@@ -122,10 +122,10 @@ export class BaseService {
   protected async post<T, D = unknown>(endpoint: string, data?: D): Promise<T> {
     try {
       logger.debug(`POST request to ${endpoint}`, { component: 'BaseService' });
-      return await apiClient.post<T>(`${this.baseUrl}${endpoint}`, data, {
+      return (await apiClient.post<T>(`${this.baseUrl}${endpoint}`, data, {
         timeout: this.options.timeout,
         retries: this.options.retries,
-      });
+      })) as T;
     } catch (error) {
       logger.error('POST request failed', error as Error, {
         component: 'BaseService',
@@ -141,10 +141,10 @@ export class BaseService {
   protected async put<T, D = unknown>(endpoint: string, data?: D): Promise<T> {
     try {
       logger.debug(`PUT request to ${endpoint}`, { component: 'BaseService' });
-      return await apiClient.put<T>(`${this.baseUrl}${endpoint}`, data, {
+      return (await apiClient.put<T>(`${this.baseUrl}${endpoint}`, data, {
         timeout: this.options.timeout,
         retries: this.options.retries,
-      });
+      })) as T;
     } catch (error) {
       logger.error('PUT request failed', error as Error, {
         component: 'BaseService',
@@ -160,10 +160,10 @@ export class BaseService {
   protected async patch<T, D = unknown>(endpoint: string, data?: D): Promise<T> {
     try {
       logger.debug(`PATCH request to ${endpoint}`, { component: 'BaseService' });
-      return await apiClient.patch<T>(`${this.baseUrl}${endpoint}`, data, {
+      return (await apiClient.patch<T>(`${this.baseUrl}${endpoint}`, data, {
         timeout: this.options.timeout,
         retries: this.options.retries,
-      });
+      })) as T;
     } catch (error) {
       logger.error('PATCH request failed', error as Error, {
         component: 'BaseService',
@@ -179,10 +179,10 @@ export class BaseService {
   protected async delete<T>(endpoint: string): Promise<T> {
     try {
       logger.debug(`DELETE request to ${endpoint}`, { component: 'BaseService' });
-      return await apiClient.delete<T>(`${this.baseUrl}${endpoint}`, {
+      return (await apiClient.delete<T>(`${this.baseUrl}${endpoint}`, {
         timeout: this.options.timeout,
         retries: this.options.retries,
-      });
+      })) as T;
     } catch (error) {
       logger.error('DELETE request failed', error as Error, {
         component: 'BaseService',
