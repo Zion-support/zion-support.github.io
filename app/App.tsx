@@ -11,19 +11,44 @@ import AdvancedSEOOptimizer from './components/AdvancedSEOOptimizer';
 import SEOEnhancer from './components/SEOEnhancer';
 import LoadingSpinner from './components/LoadingSpinner';
 
-class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundaryState> {
-  constructor(props: ErrorBoundaryProps) {
-    super(props);
-    this.state = { hasError: false, error: null };
-  }
+// Utilities
+import { logger } from './utils/logger';
+import { performanceOptimizer, collectPerformanceMetrics } from './utils/performanceOptimizer';
 
-  static getDerivedStateFromError(error: Error): ErrorBoundaryState {
-    return { hasError: true, error };
-  }
+// Lazy load components for better performance
+const HomePage = lazy(() => import('./pages/Home'));
+const PerformanceDashboard = lazy(() => import('./components/PerformanceDashboard'));
+const AdvancedPerformanceMonitor = lazy(() => import('./components/AdvancedPerformanceMonitor'));
 
-  override componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
-    console.error('App Error Boundary caught an error:', error, errorInfo);
-  }
+// Helper functions
+const lazyLoadImages = () => {
+  if (typeof window === 'undefined') return;
+  const images = document.querySelectorAll('img[data-src]');
+  const imageObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const img = entry.target as HTMLImageElement;
+        const src = img.getAttribute('data-src');
+        if (src) {
+          img.src = src;
+          img.removeAttribute('data-src');
+          imageObserver.unobserve(img);
+        }
+      }
+    });
+  });
+  images.forEach((img) => imageObserver.observe(img));
+};
+
+const preloadCriticalResources = () => {
+  if (typeof window === 'undefined') return;
+  // Preload critical resources
+  const link = document.createElement('link');
+  link.rel = 'preload';
+  link.as = 'style';
+  link.href = '/styles/critical.css';
+  document.head.appendChild(link);
+};
 
 const App: React.FC = () => {
   useEffect(() => {
@@ -51,6 +76,7 @@ const App: React.FC = () => {
     
     logger.lifecycle('Performance monitoring initialized', 'App');
     logger.info('🚀 Zion Tech Group App initialized with comprehensive monitoring', { component: 'App' });
+
   }, []);
 
   const handleError = useCallback((error: Error, errorInfo: any) => {
@@ -72,11 +98,10 @@ const App: React.FC = () => {
             description="Leading provider of enterprise AI solutions, quantum computing, and autonomous systems. Transform your business with our cutting-edge technology."
           >
             <AdvancedSEOOptimizer
-              config={{
+              seoData={{
                 title: 'Zion Tech Group - Advanced AI and IT Solutions',
                 description: 'Leading provider of enterprise AI solutions, quantum computing, and autonomous systems. Transform your business with our cutting-edge technology.',
                 keywords: ['AI solutions', 'enterprise AI', 'quantum computing', 'autonomous systems', 'digital transformation', 'automation', 'cloud services', 'AI consulting', 'business intelligence', 'machine learning'],
-                url: 'https://ziontechgroup.com',
                 canonicalUrl: 'https://ziontechgroup.com'
               }}
               enableStructuredData={true}
@@ -112,17 +137,21 @@ const App: React.FC = () => {
                 </main>
 
                 {/* Performance Dashboard */}
-                <PerformanceDashboard />
+                <Suspense fallback={null}>
+                  <PerformanceDashboard />
+                </Suspense>
                 
                 {/* Advanced Performance Monitor */}
-                <AdvancedPerformanceMonitor
-                  enableRealTimeMonitoring={process.env['NODE_ENV'] === 'development'}
-                  onMetricsUpdate={(metrics) => {
-                    if (process.env['NODE_ENV'] === 'development') {
-                      logger.performance('Performance Metrics', metrics as unknown as Record<string, unknown>, 'PerformanceMonitor');
-                    }
-                  }}
-                />
+                <Suspense fallback={null}>
+                  <AdvancedPerformanceMonitor
+                    enableRealTimeMonitoring={process.env['NODE_ENV'] === 'development'}
+                    onMetricsUpdate={(metrics) => {
+                      if (process.env['NODE_ENV'] === 'development') {
+                        logger.performance('Performance Metrics', metrics as unknown as Record<string, unknown>, 'PerformanceMonitor');
+                      }
+                    }}
+                  />
+                </Suspense>
               </div>
             </Router>
           </SEOEnhancer>
