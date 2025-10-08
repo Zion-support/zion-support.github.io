@@ -1,0 +1,30 @@
+{
+  "timestamp": "2025-10-08T23:39:49.269Z",
+  "summary": {
+    "totalPages": 1,
+    "workingPages": 1,
+    "brokenLinks": 0,
+    "missingPages": 0,
+    "issues": [
+      {
+        "url": "https://ziontechgroup.com",
+        "issues": [
+          "Missing H1 heading"
+        ]
+      }
+    ]
+  },
+  "brokenLinks": [],
+  "validPages": [
+    "https://ziontechgroup.com"
+  ],
+  "issues": [
+    {
+      "url": "https://ziontechgroup.com",
+      "issues": [
+        "Missing H1 heading"
+      ]
+    }
+  ],
+  "allLinks": []
+}

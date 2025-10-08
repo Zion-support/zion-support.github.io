@@ -90,15 +90,15 @@ const ServicesPage: React.FC = () => {
       title: 'Blockchain & Web3',
       description: 'Decentralized applications, smart contracts, and Web3 solutions.',
       icon: '🔗',
-      link: '/blockchain',
-      features: ['Smart Contracts', 'DeFi Protocols', 'NFT Marketplaces', 'Web3 Applications'],cursor/add-new-services-and-deploy-updates-f159
+      link: '/blockchain-web3',
+      features: ['Smart Contracts', 'DeFi Protocols', 'NFT Marketplaces', 'Web3 Applications'],
       price: 'Starting at $8,000/project'
     },
     {
       title: 'IoT & Edge Computing',
       description: 'Connected devices, edge analytics, and industrial IoT solutions.',
       icon: '📱',
-      link: '/iot-edge',
+      link: '/iot-edge-computing',
       features: ['Device Management', 'Edge Analytics', 'Industrial IoT', 'Smart Cities'],
       price: 'Starting at $2,500/month'
     },

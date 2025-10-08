@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, Star, Atom, Cpu, Shield, Zap, Target, BarChart, Brain, Lock } from 'lucide-react';cursor/add-new-services-and-deploy-updates-f159
+import { CheckCircle, Star, Atom, Cpu, Shield, Zap, Target, BarChart, Brain, Lock } from 'lucide-react';
 
 const QuantumComputingPage: React.FC = () => {
   const quantumServices = [
@@ -10,7 +10,7 @@ const QuantumComputingPage: React.FC = () => {
       icon: '⚛️',
       price: 'Starting at $15,000/project',
       features: ['Custom quantum algorithms', 'Quantum circuit design', 'Optimization problems', 'Cryptographic protocols', 'Performance benchmarking'],
-      benefits: ['Solve complex problems exponentially faster', 'Break through classical computing limits', 'Enable new computational possibilities'],cursor/add-new-services-and-deploy-updates-f159
+      benefits: ['Solve complex problems exponentially faster', 'Break through classical computing limits', 'Enable new computational possibilities'],
       marketPrice: '$25,000-75,000/project',
       category: 'Algorithm Development',
       technologies: ['Qiskit', 'Cirq', 'PennyLane', 'Q#', 'Quantum Assembly']
