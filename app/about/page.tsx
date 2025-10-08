@@ -1,4 +1,17 @@
 import React from 'react';
+
+export default function AboutPage() {
+  return (
+    <>
+      <div className='bg-gradient-to-b from-gray-50 to-white min-h-screen'>
+        <div className='container mx-auto px-4 py-12'>
+          <div className='max-w-4xl mx-auto'>
+            <div className='mb-12 text-center'>
+              <h1 className='text-4xl font-bold text-gray-900 mb-4'>
+                About Zion Tech Group
+              </h1>
+              <p className='text-xl text-gray-600'>
+                Leading the future of AI and IT solutions
               </p>
             </div>
 
@@ -96,6 +109,4 @@ import React from 'react';
       </div>
     </>
   );
-};
-
-export default AboutPage;
+}
