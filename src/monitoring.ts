@@ -1,7 +1,7 @@
 // Performance monitoring setup
 import analytics from './utils/analytics';
 import ErrorHandler from './utils/errorHandler';
-import { performanceOptimizer } from '../app/utils/performanceOptimizer';
+import { performanceOptimizer } from '../app/utils/advancedPerformanceOptimizer';
 import { logger } from './utils/logger';
 
 // Initialize error handler

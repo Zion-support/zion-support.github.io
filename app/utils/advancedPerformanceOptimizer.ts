@@ -78,9 +78,7 @@ export class PerformanceOptimizer {
   /**
    * Implement debounce for performance
    */
-=======
   debounce<T extends (...args: unknown[]) => unknown>(
->>>>>>> cursor/fix-errors-and-merge-to-main-5c5e
     func: T,
     wait: number
   ): (...args: Parameters<T>) => void {
@@ -100,9 +98,7 @@ export class PerformanceOptimizer {
   /**
    * Implement throttle for performance
    */
-=======
   throttle<T extends (...args: unknown[]) => unknown>(
->>>>>>> cursor/fix-errors-and-merge-to-main-5c5e
     func: T,
     limit: number
   ): (...args: Parameters<T>) => void {
