@@ -1,5 +1,6 @@
 // Learn more: https://github.com/testing-library/jest-dom
 require('@testing-library/jest-dom');
+const _React = require('react');
 const { TextEncoder, TextDecoder } = require('util');
 
 // Polyfills for Node.js environment
@@ -45,7 +46,11 @@ jest.mock('./app/hooks/usePerformanceMonitoring.ts', () => ({
 // Mock React Router (this is a Vite project, not Next.js)
 jest.mock('react-router-dom', () => {
   const actual = jest.requireActual('react-router-dom');
+<<<<<<< HEAD
   const React = require('react');
+=======
+  const mockReact = require('react');
+>>>>>>> cursor/analyze-improve-and-deploy-application-144c
   return {
     ...actual,
     useNavigate: () => jest.fn(),
