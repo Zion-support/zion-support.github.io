@@ -109,14 +109,9 @@ class PerformanceOptimizer {
           this.metrics.fid = fidEntry.processingStart - fidEntry.startTime
 
       })
-<<<<<<< HEAD
-      observer.observe({ entryTypes: ['first-input'] });
-      this.observers.push(observer);
-=======
     })
     observer.observe({ entryTypes: ['first-input'] });
     this.observers.push(observer);
->>>>>>> cursor/fix-errors-and-merge-to-main-1bbf
     } catch {
       // Ignore if not supported
     }
