@@ -234,3 +234,24 @@ class PerformanceMonitor {
     
     return `
 Performance Report:
+- Overall Score: ${score}
+- FCP: ${metrics.fcp ? metrics.fcp.toFixed(2) : 'N/A'}ms
+- LCP: ${metrics.lcp ? metrics.lcp.toFixed(2) : 'N/A'}ms
+- FID: ${metrics.fid ? metrics.fid.toFixed(2) : 'N/A'}ms
+- CLS: ${metrics.cls ? metrics.cls.toFixed(3) : 'N/A'}
+- TTFB: ${metrics.ttfb ? metrics.ttfb.toFixed(2) : 'N/A'}ms
+    `;
+
+  }
+
+  cleanup(): void {
+    this.observers.forEach(observer => observer.disconnect());
+    this.observers = [];
+    this.isInitialized = false;
+  }
+}
+
+// Export singleton instance
+export const performanceMonitor = new PerformanceMonitor();
+export default performanceMonitor;
+

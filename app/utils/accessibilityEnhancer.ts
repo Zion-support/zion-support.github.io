@@ -678,3 +678,28 @@ class AccessibilityEnhancer {
     
     return `
 Accessibility Report:
+- Focusable Elements: ${metrics.focusableElements}
+- Images Without Alt: ${metrics.imagesWithoutAlt}
+- Links Without Text: ${metrics.linksWithoutText}
+- Headings Without Content: ${metrics.headingsWithoutContent}
+- Keyboard Navigation Score: ${metrics.keyboardNavigationScore}
+- Screen Reader Score: ${metrics.screenReaderScore}
+- Overall Score: ${metrics.overallScore}
+    `;
+
+  }
+
+  /**
+   * Cleanup
+   */
+  cleanup(): void {
+    this.observers.forEach(observer => observer.disconnect());
+    this.observers = [];
+    this.isInitialized = false;
+  }
+}
+
+// Export singleton instance
+export const accessibilityEnhancer = new AccessibilityEnhancer();
+export default accessibilityEnhancer;
+
