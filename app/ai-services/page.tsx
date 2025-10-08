@@ -135,6 +135,160 @@ const AIServicesPage: React.FC = () => {
       marketPrice: '$5,000-15,000/month',
       category: 'Quality Assurance',
       technologies: ['Selenium', 'Appium', 'TestNG', 'Custom AI Models', 'CI/CD Integration']
+    },
+    {
+      title: 'Quantum Machine Learning',
+      description: 'Next-generation quantum computing algorithms for solving complex optimization and machine learning problems.',
+      icon: '⚛️',
+      price: 'Starting at $15,000/month',
+      features: ['Quantum algorithms', 'Optimization problems', 'Quantum neural networks', 'Hybrid classical-quantum', 'Research collaboration'],
+      benefits: ['Solve impossible problems', 'Exponential speedup', 'Breakthrough innovations'],
+      marketPrice: '$25,000-50,000/month',
+      category: 'Quantum Computing',
+      technologies: ['Qiskit', 'Cirq', 'PennyLane', 'Quantum Hardware', 'Custom Algorithms']
+    },
+    {
+      title: 'Autonomous AI Agents',
+      description: 'Self-managing AI agents that can perform complex tasks, make decisions, and learn independently.',
+      icon: '🤖',
+      price: 'Starting at $8,000/month',
+      features: ['Autonomous decision making', 'Self-learning capabilities', 'Task automation', 'Multi-agent coordination', 'Continuous improvement'],
+      benefits: ['Reduce human intervention by 90%', 'Scale operations infinitely', 'Achieve 24/7 operations'],
+      marketPrice: '$12,000-30,000/month',
+      category: 'Autonomous Systems',
+      technologies: ['Reinforcement Learning', 'Multi-Agent Systems', 'LLMs', 'Custom Frameworks', 'Edge Computing']
+    },
+    {
+      title: 'AI-Powered Drug Discovery',
+      description: 'Accelerated pharmaceutical research using AI for molecular design and drug development.',
+      icon: '💊',
+      price: 'Starting at $20,000/month',
+      features: ['Molecular design', 'Drug-target interaction', 'Toxicity prediction', 'Clinical trial optimization', 'Patent analysis'],
+      benefits: ['Reduce discovery time by 70%', 'Lower development costs', 'Improve success rates'],
+      marketPrice: '$35,000-80,000/month',
+      category: 'Pharmaceutical AI',
+      technologies: ['DeepChem', 'RDKit', 'AlphaFold', 'Custom Models', 'High-Performance Computing']
+    },
+    {
+      title: 'AI-Powered Climate Modeling',
+      description: 'Advanced climate prediction and environmental impact analysis using machine learning.',
+      icon: '🌍',
+      price: 'Starting at $12,000/month',
+      features: ['Climate modeling', 'Weather prediction', 'Environmental impact', 'Carbon footprint analysis', 'Sustainability optimization'],
+      benefits: ['Improve prediction accuracy', 'Enable proactive planning', 'Support sustainability goals'],
+      marketPrice: '$20,000-45,000/month',
+      category: 'Environmental AI',
+      technologies: ['TensorFlow', 'PyTorch', 'Climate Data', 'Satellite Imagery', 'IoT Sensors']
+    },
+    {
+      title: 'AI-Powered Financial Trading',
+      description: 'Algorithmic trading systems with advanced market analysis and risk management.',
+      icon: '📈',
+      price: 'Starting at $10,000/month',
+      features: ['Algorithmic trading', 'Market analysis', 'Risk management', 'Portfolio optimization', 'Real-time execution'],
+      benefits: ['Maximize returns', 'Minimize risks', 'Operate 24/7'],
+      marketPrice: '$15,000-40,000/month',
+      category: 'FinTech AI',
+      technologies: ['QuantLib', 'Zipline', 'Backtrader', 'Custom Algorithms', 'High-Frequency Trading']
+    },
+    {
+      title: 'AI-Powered Space Exploration',
+      description: 'Autonomous systems for space missions, satellite operations, and planetary exploration.',
+      icon: '🚀',
+      price: 'Starting at $25,000/month',
+      features: ['Mission planning', 'Autonomous navigation', 'Data analysis', 'Resource optimization', 'Risk assessment'],
+      benefits: ['Enable autonomous missions', 'Reduce mission costs', 'Increase success rates'],
+      marketPrice: '$40,000-100,000/month',
+      category: 'Space Technology',
+      technologies: ['ROS', 'Gazebo', 'Custom Space AI', 'Satellite Data', 'Mission Control Systems']
+    },
+    {
+      title: 'AI-Powered Brain-Computer Interface',
+      description: 'Advanced neural interfaces for medical applications and human-AI interaction.',
+      icon: '🧠',
+      price: 'Starting at $18,000/month',
+      features: ['Neural signal processing', 'Brain pattern recognition', 'Motor control', 'Cognitive enhancement', 'Medical applications'],
+      benefits: ['Restore mobility', 'Enhance cognition', 'Enable new interfaces'],
+      marketPrice: '$30,000-70,000/month',
+      category: 'Neurotechnology',
+      technologies: ['Neural Networks', 'Signal Processing', 'Medical Devices', 'Custom Hardware', 'Clinical Trials']
+    },
+    {
+      title: 'AI-Powered Autonomous Vehicles',
+      description: 'Self-driving vehicle systems with advanced perception, planning, and control algorithms.',
+      icon: '🚗',
+      price: 'Starting at $15,000/month',
+      features: ['Computer vision', 'Path planning', 'Sensor fusion', 'Decision making', 'Safety systems'],
+      benefits: ['Improve safety', 'Reduce accidents', 'Enable autonomous transport'],
+      marketPrice: '$25,000-60,000/month',
+      category: 'Autonomous Vehicles',
+      technologies: ['OpenCV', 'ROS', 'TensorFlow', 'LiDAR', 'Radar Systems']
+    },
+    {
+      title: 'AI-Powered Robotics',
+      description: 'Intelligent robotic systems for manufacturing, healthcare, and service applications.',
+      icon: '🦾',
+      price: 'Starting at $12,000/month',
+      features: ['Motion planning', 'Object manipulation', 'Human-robot interaction', 'Learning from demonstration', 'Adaptive control'],
+      benefits: ['Increase productivity', 'Improve precision', 'Enable complex tasks'],
+      marketPrice: '$20,000-50,000/month',
+      category: 'Robotics',
+      technologies: ['ROS', 'MoveIt', 'Gazebo', 'Custom Controllers', 'Industrial Hardware']
+    },
+    {
+      title: 'AI-Powered Cybersecurity',
+      description: 'Advanced threat detection and response systems using machine learning and behavioral analysis.',
+      icon: '🛡️',
+      price: 'Starting at $8,000/month',
+      features: ['Threat hunting', 'Anomaly detection', 'Incident response', 'Vulnerability assessment', 'Security orchestration'],
+      benefits: ['Prevent 99% of attacks', 'Reduce response time', 'Ensure compliance'],
+      marketPrice: '$12,000-30,000/month',
+      category: 'Cybersecurity',
+      technologies: ['SIEM', 'EDR', 'SOAR', 'Custom ML Models', 'Threat Intelligence']
+    },
+    {
+      title: 'AI-Powered Healthcare Diagnostics',
+      description: 'Medical image analysis, disease prediction, and personalized treatment recommendations.',
+      icon: '🏥',
+      price: 'Starting at $10,000/month',
+      features: ['Medical imaging', 'Disease prediction', 'Drug interaction', 'Treatment optimization', 'Clinical decision support'],
+      benefits: ['Improve diagnosis accuracy', 'Reduce medical errors', 'Personalize treatments'],
+      marketPrice: '$18,000-45,000/month',
+      category: 'Healthcare AI',
+      technologies: ['DICOM', 'Medical Imaging', 'Clinical Data', 'Custom Models', 'HIPAA Compliance']
+    },
+    {
+      title: 'AI-Powered Energy Grid Optimization',
+      description: 'Smart grid management and renewable energy optimization using AI algorithms.',
+      icon: '⚡',
+      price: 'Starting at $9,000/month',
+      features: ['Grid optimization', 'Demand forecasting', 'Renewable integration', 'Load balancing', 'Predictive maintenance'],
+      benefits: ['Improve grid efficiency', 'Reduce energy waste', 'Enable renewable integration'],
+      marketPrice: '$15,000-35,000/month',
+      category: 'Energy AI',
+      technologies: ['SCADA', 'IoT Sensors', 'Weather Data', 'Custom Algorithms', 'Grid Infrastructure']
+    },
+    {
+      title: 'AI-Powered Agricultural Intelligence',
+      description: 'Precision agriculture with crop monitoring, yield prediction, and automated farming systems.',
+      icon: '🌾',
+      price: 'Starting at $6,000/month',
+      features: ['Crop monitoring', 'Yield prediction', 'Pest detection', 'Irrigation optimization', 'Harvest planning'],
+      benefits: ['Increase crop yields', 'Reduce resource usage', 'Improve sustainability'],
+      marketPrice: '$10,000-25,000/month',
+      category: 'AgTech AI',
+      technologies: ['Satellite Imagery', 'IoT Sensors', 'Drones', 'Custom Models', 'Agricultural Data']
+    },
+    {
+      title: 'AI-Powered Smart Cities',
+      description: 'Urban planning and management systems for traffic, utilities, and public services.',
+      icon: '🏙️',
+      price: 'Starting at $20,000/month',
+      features: ['Traffic optimization', 'Utility management', 'Public safety', 'Resource allocation', 'Citizen services'],
+      benefits: ['Improve city efficiency', 'Reduce costs', 'Enhance quality of life'],
+      marketPrice: '$35,000-80,000/month',
+      category: 'Smart Cities',
+      technologies: ['IoT Networks', 'City Data', 'Traffic Systems', 'Custom AI', 'Urban Infrastructure']
     }
   ];
 
@@ -150,23 +304,29 @@ const AIServicesPage: React.FC = () => {
 
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-purple-50">
         {/* Hero Section */}
-        <section className="relative overflow-hidden bg-gradient-to-r from-purple-600 to-pink-700 text-white py-20">
+        <section className="relative overflow-hidden bg-gradient-to-r from-purple-600 to-pink-700 text-white py-16 md:py-24">
           <div className="absolute inset-0 bg-black opacity-20"></div>
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6 leading-tight">
                 Advanced AI Services
               </h1>
-              <p className="text-xl md:text-2xl mb-8 text-purple-100 max-w-3xl mx-auto">
-                Transform your business with cutting-edge artificial intelligence solutions
+              <p className="text-lg sm:text-xl md:text-2xl mb-6 md:mb-8 text-purple-100 max-w-4xl mx-auto leading-relaxed">
+                Transform your business with cutting-edge artificial intelligence solutions, quantum computing, and autonomous systems
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-colors">
-                  Start AI Journey
-                </button>
-                <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors">
-                  View AI Solutions
-                </button>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
+                <a 
+                  href="tel:+13024640950"
+                  className="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-colors text-center"
+                >
+                  📞 Start AI Journey
+                </a>
+                <a 
+                  href="mailto:kleber@ziontechgroup.com"
+                  className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors text-center"
+                >
+                  ✉️ Get Quote
+                </a>
               </div>
             </div>
           </div>
@@ -228,7 +388,7 @@ const AIServicesPage: React.FC = () => {
                   Advanced {category.toLowerCase()} services powered by state-of-the-art AI technology
                 </p>
               </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
                 {aiServices
                   .filter(service => service.category === category)
                   .map((service, index) => (

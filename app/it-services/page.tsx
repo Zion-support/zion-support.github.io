@@ -135,6 +135,171 @@ const ITServicesPage: React.FC = () => {
       marketPrice: '$3,000-6,000/month',
       category: 'Backup & Recovery',
       technologies: ['Veeam', 'Commvault', 'AWS Backup', 'Azure Backup', 'VMware']
+    },
+    {
+      title: 'Edge Computing Solutions',
+      description: 'Distributed computing infrastructure for real-time processing and reduced latency.',
+      icon: '🌐',
+      price: 'Starting at $3,500/month',
+      features: ['Edge server deployment', 'Real-time processing', 'Low-latency applications', 'IoT integration', 'Distributed analytics'],
+      benefits: ['Reduce latency by 80%', 'Improve performance', 'Enable real-time applications'],
+      marketPrice: '$5,000-12,000/month',
+      category: 'Edge Computing',
+      technologies: ['Kubernetes', 'Docker', 'Edge Hardware', '5G Networks', 'IoT Platforms']
+    },
+    {
+      title: 'Blockchain & Web3 Development',
+      description: 'Decentralized applications, smart contracts, and blockchain infrastructure solutions.',
+      icon: '⛓️',
+      price: 'Starting at $4,500/month',
+      features: ['Smart contract development', 'DApp creation', 'Blockchain integration', 'DeFi solutions', 'NFT platforms'],
+      benefits: ['Enable decentralization', 'Improve security', 'Create new business models'],
+      marketPrice: '$7,000-18,000/month',
+      category: 'Blockchain',
+      technologies: ['Ethereum', 'Solidity', 'Web3.js', 'IPFS', 'MetaMask']
+    },
+    {
+      title: '5G Network Implementation',
+      description: 'Next-generation wireless network deployment and optimization for high-speed connectivity.',
+      icon: '📡',
+      price: 'Starting at $8,000/month',
+      features: ['5G infrastructure', 'Network optimization', 'IoT connectivity', 'Edge computing', 'Performance monitoring'],
+      benefits: ['Enable ultra-fast speeds', 'Support massive IoT', 'Reduce latency'],
+      marketPrice: '$12,000-30,000/month',
+      category: '5G Technology',
+      technologies: ['5G Core', 'RAN', 'Network Slicing', 'MEC', 'IoT Platforms']
+    },
+    {
+      title: 'Quantum Computing Services',
+      description: 'Quantum computing infrastructure and algorithm development for complex problem solving.',
+      icon: '⚛️',
+      price: 'Starting at $15,000/month',
+      features: ['Quantum algorithm development', 'Quantum hardware access', 'Hybrid computing', 'Research collaboration', 'Optimization problems'],
+      benefits: ['Solve impossible problems', 'Exponential speedup', 'Breakthrough innovations'],
+      marketPrice: '$25,000-60,000/month',
+      category: 'Quantum Computing',
+      technologies: ['IBM Qiskit', 'Google Cirq', 'Quantum Hardware', 'Custom Algorithms', 'HPC Integration']
+    },
+    {
+      title: 'AR/VR Development',
+      description: 'Augmented and virtual reality applications for training, marketing, and immersive experiences.',
+      icon: '🥽',
+      price: 'Starting at $5,000/month',
+      features: ['AR/VR app development', '3D modeling', 'Interactive experiences', 'Hardware integration', 'Performance optimization'],
+      benefits: ['Enhance user engagement', 'Create immersive experiences', 'Improve training effectiveness'],
+      marketPrice: '$8,000-20,000/month',
+      category: 'AR/VR',
+      technologies: ['Unity', 'Unreal Engine', 'ARCore', 'ARKit', 'WebXR']
+    },
+    {
+      title: 'IoT Platform Development',
+      description: 'Internet of Things infrastructure and applications for connected devices and smart systems.',
+      icon: '🌐',
+      price: 'Starting at $3,000/month',
+      features: ['IoT platform design', 'Device connectivity', 'Data collection', 'Real-time analytics', 'Device management'],
+      benefits: ['Enable smart operations', 'Improve efficiency', 'Create new revenue streams'],
+      marketPrice: '$5,000-15,000/month',
+      category: 'IoT',
+      technologies: ['AWS IoT', 'Azure IoT', 'MQTT', 'LoRaWAN', 'Edge Computing']
+    },
+    {
+      title: 'Microservices Architecture',
+      description: 'Scalable microservices design and implementation for modern application development.',
+      icon: '🔧',
+      price: 'Starting at $4,000/month',
+      features: ['Service decomposition', 'API gateway setup', 'Container orchestration', 'Service mesh', 'Monitoring'],
+      benefits: ['Improve scalability', 'Enable rapid development', 'Reduce deployment risks'],
+      marketPrice: '$6,000-18,000/month',
+      category: 'Microservices',
+      technologies: ['Kubernetes', 'Docker', 'Istio', 'Consul', 'Prometheus']
+    },
+    {
+      title: 'Serverless Computing',
+      description: 'Event-driven serverless architecture for cost-effective and scalable applications.',
+      icon: '⚡',
+      price: 'Starting at $2,500/month',
+      features: ['Function development', 'Event handling', 'Auto-scaling', 'Cost optimization', 'Monitoring'],
+      benefits: ['Reduce infrastructure costs', 'Enable auto-scaling', 'Simplify deployment'],
+      marketPrice: '$4,000-10,000/month',
+      category: 'Serverless',
+      technologies: ['AWS Lambda', 'Azure Functions', 'Google Cloud Functions', 'Serverless Framework', 'EventBridge']
+    },
+    {
+      title: 'Data Lake & Data Warehouse',
+      description: 'Modern data architecture for big data analytics and business intelligence.',
+      icon: '🏗️',
+      price: 'Starting at $5,500/month',
+      features: ['Data lake design', 'ETL/ELT pipelines', 'Data governance', 'Security implementation', 'Analytics platform'],
+      benefits: ['Enable data-driven decisions', 'Improve data quality', 'Reduce storage costs'],
+      marketPrice: '$8,000-25,000/month',
+      category: 'Data Architecture',
+      technologies: ['Apache Spark', 'Hadoop', 'Snowflake', 'Databricks', 'Apache Airflow']
+    },
+    {
+      title: 'AI/ML Infrastructure',
+      description: 'Machine learning platform and infrastructure for AI model development and deployment.',
+      icon: '🤖',
+      price: 'Starting at $6,000/month',
+      features: ['ML platform setup', 'Model training infrastructure', 'Model deployment', 'Monitoring', 'Auto-scaling'],
+      benefits: ['Accelerate AI development', 'Improve model performance', 'Reduce operational overhead'],
+      marketPrice: '$10,000-30,000/month',
+      category: 'ML Infrastructure',
+      technologies: ['Kubernetes', 'TensorFlow', 'PyTorch', 'MLflow', 'Kubeflow']
+    },
+    {
+      title: 'Zero Trust Security Architecture',
+      description: 'Comprehensive zero trust security model implementation for modern enterprise environments.',
+      icon: '🔐',
+      price: 'Starting at $7,500/month',
+      features: ['Identity verification', 'Network segmentation', 'Device trust', 'Data protection', 'Continuous monitoring'],
+      benefits: ['Improve security posture', 'Reduce attack surface', 'Enable secure remote work'],
+      marketPrice: '$12,000-35,000/month',
+      category: 'Zero Trust',
+      technologies: ['Okta', 'Cisco', 'Palo Alto', 'Microsoft', 'Custom Solutions']
+    },
+    {
+      title: 'Green IT Solutions',
+      description: 'Sustainable technology solutions for reducing environmental impact and energy consumption.',
+      icon: '🌱',
+      price: 'Starting at $2,000/month',
+      features: ['Energy optimization', 'Carbon footprint tracking', 'Sustainable hardware', 'Green cloud migration', 'E-waste management'],
+      benefits: ['Reduce environmental impact', 'Lower energy costs', 'Improve sustainability'],
+      marketPrice: '$3,500-8,000/month',
+      category: 'Green IT',
+      technologies: ['Energy Monitoring', 'Cloud Optimization', 'Sustainable Hardware', 'Carbon Tracking', 'Green Data Centers']
+    },
+    {
+      title: 'Digital Twin Technology',
+      description: 'Digital replicas of physical assets for simulation, monitoring, and optimization.',
+      icon: '👥',
+      price: 'Starting at $8,500/month',
+      features: ['3D modeling', 'Real-time simulation', 'Predictive analytics', 'IoT integration', 'Visualization'],
+      benefits: ['Improve asset performance', 'Enable predictive maintenance', 'Optimize operations'],
+      marketPrice: '$15,000-40,000/month',
+      category: 'Digital Twin',
+      technologies: ['Unity', 'Unreal Engine', 'IoT Platforms', 'Simulation Software', 'Cloud Computing']
+    },
+    {
+      title: 'Hyperautomation Solutions',
+      description: 'End-to-end business process automation using AI, RPA, and intelligent automation.',
+      icon: '⚙️',
+      price: 'Starting at $6,500/month',
+      features: ['Process discovery', 'RPA implementation', 'AI integration', 'Workflow automation', 'Performance monitoring'],
+      benefits: ['Maximize automation ROI', 'Improve process efficiency', 'Reduce operational costs'],
+      marketPrice: '$10,000-30,000/month',
+      category: 'Hyperautomation',
+      technologies: ['UiPath', 'Automation Anywhere', 'AI/ML', 'Process Mining', 'Workflow Engines']
+    },
+    {
+      title: 'Cloud-Native Development',
+      description: 'Modern application development using cloud-native technologies and practices.',
+      icon: '☁️',
+      price: 'Starting at $4,500/month',
+      features: ['Containerization', 'Kubernetes deployment', 'CI/CD pipelines', 'Service mesh', 'Observability'],
+      benefits: ['Improve scalability', 'Enable rapid deployment', 'Reduce operational overhead'],
+      marketPrice: '$7,000-20,000/month',
+      category: 'Cloud Native',
+      technologies: ['Kubernetes', 'Docker', 'Istio', 'Prometheus', 'Grafana']
     }
   ];
 
@@ -150,23 +315,29 @@ const ITServicesPage: React.FC = () => {
 
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
         {/* Hero Section */}
-        <section className="relative overflow-hidden bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-20">
+        <section className="relative overflow-hidden bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-16 md:py-24">
           <div className="absolute inset-0 bg-black opacity-20"></div>
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6 leading-tight">
                 Professional IT Services
               </h1>
-              <p className="text-xl md:text-2xl mb-8 text-blue-100 max-w-3xl mx-auto">
+              <p className="text-lg sm:text-xl md:text-2xl mb-6 md:mb-8 text-blue-100 max-w-4xl mx-auto leading-relaxed">
                 Comprehensive technology solutions to power your business growth and digital transformation
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors">
-                  Get Free Assessment
-                </button>
-                <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
-                  View Our Portfolio
-                </button>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
+                <a 
+                  href="tel:+13024640950"
+                  className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors text-center"
+                >
+                  📞 Get Free Assessment
+                </a>
+                <a 
+                  href="mailto:kleber@ziontechgroup.com"
+                  className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors text-center"
+                >
+                  ✉️ View Portfolio
+                </a>
               </div>
             </div>
           </div>
@@ -228,7 +399,7 @@ const ITServicesPage: React.FC = () => {
                   Professional {category.toLowerCase()} solutions tailored to your business needs
                 </p>
               </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
                 {itServices
                   .filter(service => service.category === category)
                   .map((service, index) => (
