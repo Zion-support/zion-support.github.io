@@ -83,7 +83,6 @@ class PerformanceOptimizer {
   }
 
   private initMonitoring() {
-<<<<<<< HEAD
     if (typeof window === 'undefined' || !('PerformanceObserver' in window)) return;
 
     try {
@@ -111,15 +110,6 @@ class PerformanceOptimizer {
     } catch {
       // Ignore if not supported
     }
-=======
-    if (typeof window === 'undefined') return;
-    
-    this.observeFID();
-    this.observeCLS();
-    this.observeFCP();
-    this.observeTTFB();
-    this.observeMemory();
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b269
   }
 
   private observeFID() {

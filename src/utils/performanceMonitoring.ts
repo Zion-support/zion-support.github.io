@@ -10,6 +10,11 @@ export interface PerformanceMetric {
   timestamp: number;
 }
 
+interface LayoutShift extends PerformanceEntry {
+  value: number;
+  hadRecentInput: boolean;
+}
+
 export interface WebVitals {
   CLS?: PerformanceMetric;  // Cumulative Layout Shift
   FID?: PerformanceMetric;  // First Input Delay
@@ -218,14 +223,9 @@ class PerformanceMonitor {
       // Observe First Input Delay (FID)
       const fidObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
-<<<<<<< HEAD
         entries.forEach((entry: unknown) => {
           const fidEntry = entry as PerformanceEventTiming;
           const metric = this.createMetric('FID', fidEntry.processingStart - fidEntry.startTime);
-=======
-        entries.forEach((entry: any) => {
-          const metric = this.createMetric('FID', entry.processingStart - entry.startTime);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b269
           this.webVitals.FID = metric;
           this.notifyCallbacks(metric);
         });
@@ -237,16 +237,10 @@ class PerformanceMonitor {
       let clsValue = 0;
       const clsObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
-<<<<<<< HEAD
         entries.forEach((entry: unknown) => {
           const clsEntry = entry as LayoutShift;
           if (!clsEntry.hadRecentInput) {
             clsValue += clsEntry.value;
-=======
-        entries.forEach((entry: any) => {
-          if (!entry.hadRecentInput) {
-            clsValue += entry.value;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b269
           }
         });
         const metric = this.createMetric('CLS', clsValue);
@@ -307,14 +301,9 @@ class PerformanceMonitor {
     try {
       const resourceObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
-<<<<<<< HEAD
         entries.forEach((entry: unknown) => {
           const resourceEntry = entry as PerformanceResourceTiming;
           if (resourceEntry.initiatorType) {
-=======
-        entries.forEach((entry: any) => {
-          if (entry.initiatorType) {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b269
             this.trackMetric(
               `resource_${resourceEntry.initiatorType}`,
               resourceEntry.duration,
