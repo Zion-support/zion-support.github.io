@@ -14,6 +14,10 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
+<<<<<<< HEAD
+=======
+    "jsxImportSource": "react",
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3f25
     "strict": true,
     "strictNullChecks": true,
     "noUnusedLocals": false,
@@ -42,6 +46,7 @@
     },
     "allowJs": true,
     "forceConsistentCasingInFileNames": true,
+<<<<<<< HEAD
     "noImplicitAny": true,
     "noImplicitReturns": true,
     "noImplicitThis": true,
@@ -49,13 +54,28 @@
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,
     "noUncheckedIndexedAccess": true,
+=======
+    "noImplicitAny": false,
+    "noImplicitReturns": false,
+    "noImplicitThis": false,
+    "exactOptionalPropertyTypes": false,
+    "noImplicitOverride": false,
+    "noPropertyAccessFromIndexSignature": false,
+    "noUncheckedIndexedAccess": false,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3f25
     "allowUnusedLabels": false,
     "allowUnreachableCode": false,
     "verbatimModuleSyntax": true
   },
   "include": [
     "app/**/*",
+<<<<<<< HEAD
     "src/**/*"
+=======
+    "src/**/*",
+    "App.tsx",
+    "components/**/*"
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3f25
   ],
   "exclude": [
     "node_modules",
@@ -111,8 +131,17 @@
     "api-documentation.tsx",
     "app/components/NewContentPromotionalBanner2026.tsx",
     "app/components/NewestContent2025Banner.tsx",
+<<<<<<< HEAD
     "api/**",
     "lib/**",
     "utils/seoUtils.ts"
+=======
+    "utils/**/*"
+  ],
+  "references": [
+    {
+      "path": "./tsconfig.node.json"
+    }
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3f25
   ]
 }

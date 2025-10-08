@@ -1,11 +1,6 @@
 /**
  * Comprehensive optimization utilities that integrate accessibility, performance, and SEO
  */
-import {
-=======
-  ariaUtils
-} from './accessibilityUtils';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8
 =======
   focusManagement,
   ariaUtils,
@@ -78,212 +73,80 @@ export interface OptimizationConfig {
   seoAudit
 } from './seoUtils';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a0d
+=======
+
+import { debounce, throttle, measurePerformance } from './performanceUtils';
+import { setMetaTags, setOpenGraphTags, calculateSEOScore } from './seoUtils';
+import { ErrorHandler } from './errorHandling';
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3f25:utils/comprehensiveOptimizer.ts
 // Comprehensive optimization interface
-export interface OptimizationConfig {
-  accessibility: {
-    autoFix: boolean;
-    announceChanges: boolean;
-    respectMotionPreferences: boolean;
+interface OptimizationConfig {
+  performance?: {
+    enableDebouncing?: boolean;
+    enableThrottling?: boolean;
+    enableLazyLoading?: boolean;
   };
-  performance: {
-    enableLazyLoading: boolean;
-    preloadCritical: boolean;
-    optimizeScroll: boolean;
-    monitorMemory: boolean;
+  seo?: {
+    enableMetaTags?: boolean;
+    enableStructuredData?: boolean;
+    enableSitemap?: boolean;
   };
-  seo: {
-    autoOptimize: boolean;
-    generateStructuredData: boolean;
-    optimizeMetaTags: boolean;
 =======
-    enableContrastChecking: boolean;
-    enableScreenReaderSupport: boolean;
-    enableFormAccessibility: boolean;
-    enableMotionReduction: boolean;
-    enableHighContrast: boolean;
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
+  accessibility?: {
+    enableFocusManagement?: boolean;
+    enableAriaLabels?: boolean;
+    enableKeyboardNavigation?: boolean;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3f25:utils/comprehensiveOptimizer.ts
   };
-  performance: {
-    enableMemoryMonitoring: boolean;
-    enablePerformanceMetrics: boolean;
-    enableLazyLoading: boolean;
-    enablePreloading: boolean;
-    enableScrollOptimization: boolean;
-    enableDebouncing: boolean;
-    enableThrottling: boolean;
-  };
-  seo: {
-    enableMetaTags: boolean;
-    enableOpenGraph: boolean;
-    enableTwitterCards: boolean;
-    enableStructuredData: boolean;
-    enableCanonicalUrl: boolean;
-    enableSeoAudit: boolean;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3fed
-  };
-  enableAccessibility: boolean;
-  enablePerformance: boolean;
-  enableSEO: boolean;
-  enableLazyLoading: boolean;
-  enablePreloading: boolean;
-  enableAnalytics: boolean;
-  performanceThresholds: {
-    maxLoadTime: number;
-    maxMemoryUsage: number;
-    maxBundleSize: number;
-  };
-  accessibilityLevel: 'AA' | 'AAA';
-  seoLevel: 'basic' | 'advanced';
 }
 
-  accessibility: {
-    enableFocusManagement: true,
-    enableAriaUtils: true,
-    enableKeyboardNavigation: true,
-  },
-  performance: {
-    enableMemoryMonitoring: true,
-    enablePerformanceMetrics: true,
-    enableLazyLoading: true,
-    enablePreloading: true,
-    enableScrollOptimization: true,
   },
   seo: {
     enableMetaTags: true,
-    enableOpenGraph: true,
-    enableTwitterCards: true,
     enableStructuredData: true,
-    enableCanonicalUrl: true,
-  },
-};
-
-/**
- */
-export class ComprehensiveOptimizer {
-  private config: OptimizationConfig;
-  private isInitialized = false;
-
-  }
-
-  /**
-   * Initialize all optimization features
-   */
-  public async initialize(): Promise<void> {
-    if (this.isInitialized) return;
-
 =======
-// Default configuration
-export const defaultConfig: OptimizationConfig = {
+    enableSitemap: true,
+  },
   accessibility: {
-    autoFix: true,
-    announceChanges: true,
-    respectMotionPreferences: true
+    enableFocusManagement: true,
+    enableAriaLabels: true,
+    enableKeyboardNavigation: true,
   },
-  performance: {
-    enableLazyLoading: true,
-    preloadCritical: true,
-    optimizeScroll: true,
-    monitorMemory: true
-  },
-  seo: {
-    autoOptimize: true,
-    generateStructuredData: true,
-    optimizeMetaTags: true
-  }
-=======
-// Default configuration
-export const defaultConfig: OptimizationConfig = {
-  accessibility: {
-    autoFix: true,
-    announceChanges: true,
-    respectMotionPreferences: true
-  },
-  performance: {
-    enableLazyLoading: true,
-    preloadCritical: true,
-    optimizeScroll: true,
-    monitorMemory: true
-  },
-  seo: {
-    autoOptimize: true,
-    generateStructuredData: true,
-    optimizeMetaTags: true
-  }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3f25:utils/comprehensiveOptimizer.ts
 };
 
 // Comprehensive optimization class
 export class ComprehensiveOptimizer {
   private config: OptimizationConfig;
-  private isInitialized = false;
-  private performanceObserver: PerformanceObserver | null = null;
-  private memoryInterval: NodeJS.Timeout | null = null;
+  private performanceMetrics: Map<string, number> = new Map();
+  private seoScore: number = 0;
 
-  constructor(config: Partial<OptimizationConfig> = {}) {
+  constructor(config: OptimizationConfig = {}) {
     this.config = { ...defaultConfig, ...config };
+    this.initializeOptimizations();
   }
 
-  // Initialize all optimizations
-  public async initialize(): Promise<void> {
-    if (this.isInitialized) return;
-=======
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
 =======
     
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a0d
-    try {
-      // Initialize accessibility features
-      if (this.config.accessibility.enableFocusManagement) {
-        initAccessibility();
-      }
-
-      // Initialize performance monitoring
-      if (this.config.performance.enablePerformanceMetrics) {
-        performanceMonitor.start();
-      }
-
-      // Initialize lazy loading
-      if (this.config.performance.enableLazyLoading) {
-        lazyLoadImages();
-      }
-      
-      // Initialize accessibility optimizations
-      if (this.config.accessibility.respectMotionPreferences) {
-        this.applyMotionPreferences();
-      }
-      
-      // Initialize SEO optimizations
-      if (this.config.seo.autoOptimize) {
-        this.optimizeSEO();
-      }
-      
-    } catch (error) {
-      console.error('Failed to initialize comprehensive optimizer:', error);
-    }
-  }
-
-      // Start monitoring
-      this.startMonitoring();
-      this.isInitialized = true;
-      console.log('🚀 Comprehensive Optimizer initialized successfully');
-    } catch (error) {
-      console.error('❌ Failed to initialize Comprehensive Optimizer:', error);
-    }
-  }
-
-  // Apply motion preferences
-  private applyMotionPreferences(): void {
-    if (motionUtils.prefersReducedMotion()) {
-      const style = document.createElement('style');
-      style.textContent = `
-        *, *::before, *::after {
-          animation-duration: 0.01ms !important;
 =======
-          animation-iteration-count: 1 !important;
-          transition-duration: 0.01ms !important;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a0d
+  private initializeOptimizations(): void {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3f25:utils/comprehensiveOptimizer.ts
+    try {
+      if (this.config.performance?.enableDebouncing) {
+        this.setupDebouncing();
+      }
+
+      if (this.config.performance?.enableThrottling) {
+        this.setupThrottling();
+      }
+
+    } catch (error) {
+      ErrorHandler.handle(error as Error, 'ComprehensiveOptimizer initialization');
+    }
+  }
+
         }
       });
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a4f
@@ -382,476 +245,204 @@ export class ComprehensiveOptimizer {
     // Set Twitter Card tags
     setTwitterCardTags({
       card: 'summary_large_image',
-    };
-  }
-}
-
-/**
- * Default optimization configuration
- */
-export const DEFAULT_OPTIMIZATION_CONFIG: OptimizationConfig = {
-  enableAccessibility: true,
-  enablePerformance: true,
-  enableSEO: true,
-  enableLazyLoading: true,
-  enablePreloading: true,
-  enableAnalytics: true,
-  performanceThresholds: {
-    maxLoadTime: 3000,
-    maxMemoryUsage: 50,
-    maxBundleSize: 500
-  },
-  accessibilityLevel: 'AA',
-  seoLevel: 'advanced'
-};
-/**
- * Comprehensive optimizer class
- */
-export class ComprehensiveOptimizer {
-  private config: OptimizationConfig;
-  private performanceMetrics: any[] = [];
-  private accessibilityIssues: any[] = [];
-  private seoIssues: any[] = [];
-  constructor(config: OptimizationConfig = DEFAULT_OPTIMIZATION_CONFIG) {
-    this.config = config;
-  }
-  /**
-   * Initialize comprehensive optimization
-   */
-  async initialize(): Promise<void> {
-    if (typeof window === 'undefined') return;
-    try {
-      // Initialize performance monitoring
-      if (this.config.enablePerformance) {
-        await this.initializePerformanceOptimization();
-      }
-      // Initialize accessibility testing
-      if (this.config.enableAccessibility) {
-        await this.initializeAccessibilityOptimization();
-      }
-      // Initialize SEO optimization
-      if (this.config.enableSEO) {
-        await this.initializeSEOOptimization();
-      }
-      console.log('Comprehensive optimization initialized successfully');
-    } catch (error) {
-      console.error('Error initializing comprehensive optimization:', error);
 =======
-      site: '@ZionTechGroup',
-      creator: '@ZionTechGroup',
-      title: pageTitle,
-      description: metaDescription
+  private setupDebouncing(): void {
+    // Setup global debouncing for common events
+    const debouncedResize = debounce(() => {
+      this.handleResize();
+    }, 250);
+
+    const debouncedScroll = debounce(() => {
+      this.handleScroll();
+    }, 100);
+
+    window.addEventListener('resize', debouncedResize);
+    window.addEventListener('scroll', debouncedScroll);
+  }
+
+  private setupThrottling(): void {
+    // Setup throttling for high-frequency events
+    const throttledMouseMove = throttle((event: MouseEvent) => {
+      this.handleMouseMove(event);
+    }, 16); // ~60fps
+
+    document.addEventListener('mousemove', throttledMouseMove);
+  }
+
+  private setupLazyLoading(): void {
+    // Setup intersection observer for lazy loading
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const element = entry.target as HTMLElement;
+          this.loadElement(element);
+          observer.unobserve(element);
+        }
+      });
     });
-    
-    // Generate structured data
-    if (this.config.seo.generateStructuredData) {
-      const structuredData = schemaGenerators.organization({
-        name: 'Zion Tech Group',
-        url: currentUrl,
-        description: metaDescription
-      });
-      setStructuredData(structuredData);
-    }
+
+    // Observe all elements with data-lazy attribute
+    document.querySelectorAll('[data-lazy]').forEach((element) => {
+      observer.observe(element);
+    });
   }
 
-  // Start comprehensive monitoring
-  private startMonitoring(): void {
-    // Performance monitoring
-    if (this.config.performance.monitorMemory) {
-      this.memoryInterval = setInterval(() => {
-        const memory = getMemoryUsage();
-        if (memory && memory.percentage > 80) {
-          console.warn('⚠️ High memory usage detected:', memory);
-          this.handleHighMemoryUsage(memory);
-        }
-      }, 5000);
-    }
-    
-    // Performance observer for Core Web Vitals
-    if ('PerformanceObserver' in window) {
-      this.performanceObserver = new PerformanceObserver(list => {
-        for (const entry of list.getEntries()) {
-          this.handlePerformanceEntry(entry);
-        }
-      });
-      this.performanceObserver.observe({
-        entryTypes: [
-          'navigation',
-          'resource',
-          'paint',
-          'largest-contentful-paint',
-          'first-input',
-          'layout-shift'
-        ]
-      });
-    }
-  }
-
-  // Handle performance entries
-  private handlePerformanceEntry(entry: PerformanceEntry): void {
-    const entryType = entry.entryType;
-    switch (entryType) {
-      case 'largest-contentful-paint':
-        if (entry.startTime > 2500) {
-          console.warn('⚠️ Slow LCP detected:', entry.startTime);
-        }
-        break;
-      case 'first-input':
-        if (entry.startTime > 100) {
-          console.warn('⚠️ Slow FID detected:', entry.startTime);
-        }
-        break;
-      case 'layout-shift':
-        if ((entry as any).value > 0.1) {
-          console.warn('⚠️ High CLS detected:', (entry as any).value);
-        }
-        break;
-    }
-  }
-
-  // Handle high memory usage
-  private handleHighMemoryUsage(memory: {
-    used: number;
-    total: number;
-    percentage: number;
-  }): void {
-    // Trigger garbage collection if available
-    if ('gc' in window && typeof (window as any).gc === 'function') {
-      (window as any).gc();
-    }
-    
-    // Announce to screen readers if enabled
-    if (this.config.accessibility.announceChanges) {
-      ariaUtils.announce(`High memory usage detected: ${memory.percentage}%`, 'polite');
-    }
-  }
-
-  // Run comprehensive audit
-  public runComprehensiveAudit(): {
-    accessibility: ReturnType<typeof accessibilityTesting.generateReport>;
-    performance: ReturnType<typeof collectPerformanceMetrics>;
-    seo: {
-      title: ReturnType<typeof seoAudit.checkTitle>;
-      description: ReturnType<typeof seoAudit.checkDescription>;
-      headings: ReturnType<typeof seoAudit.checkHeadings>;
-      images: ReturnType<typeof seoAudit.checkImages>;
-      links: ReturnType<typeof seoAudit.checkLinks>;
+  private setupSEOMetaTags(): void {
+    // Set default meta tags if not already present
+    const defaultMetaTags = {
+      'viewport': 'width=device-width, initial-scale=1.0',
+      'robots': 'index, follow',
+      'author': 'Zion Tech Group',
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3f25:utils/comprehensiveOptimizer.ts
     };
-    overallScore: number;
-  } {
-    const accessibilityReport = accessibilityTesting.generateReport();
-    const performanceMetrics = collectPerformanceMetrics();
-    const seoAuditResult = {
-      title: seoAudit.checkTitle(),
-      description: seoAudit.checkDescription(),
-      headings: seoAudit.checkHeadings(),
-      images: seoAudit.checkImages(),
-      links: seoAudit.checkLinks()
-    };
-    
-    // Calculate overall score
-    const accessibilityScore = accessibilityReport.score;
-    const performanceScore = this.calculatePerformanceScore(performanceMetrics);
-    const seoScore = this.calculateSEOScore(seoAuditResult);
-    const overallScore = Math.round(
-      (accessibilityScore + performanceScore + seoScore) / 3
+
+    setMetaTags(defaultMetaTags);
+  }
+
+  private setupFocusManagement(): void {
+    // Setup focus management for accessibility
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Tab') {
+        this.handleTabNavigation(event);
+      }
+    });
+  }
+
+  private handleResize(): void {
+    this.performanceMetrics.set('lastResize', Date.now());
+    // Additional resize handling logic
+  }
+
+  private handleScroll(): void {
+    this.performanceMetrics.set('lastScroll', Date.now());
+    // Additional scroll handling logic
+  }
+
+  private handleMouseMove(event: MouseEvent): void {
+    // Throttled mouse move handling
+    this.performanceMetrics.set('lastMouseMove', Date.now());
+  }
+
+  private loadElement(element: HTMLElement): void {
+    const src = element.getAttribute('data-src');
+    if (src && element.tagName === 'IMG') {
+      (element as HTMLImageElement)['src'] = src;
+      element.removeAttribute('data-src');
+    }
+  }
+
+  private handleTabNavigation(event: KeyboardEvent): void {
+    // Focus management for keyboard navigation
+    const focusableElements = document.querySelectorAll(
+      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
     );
     
+    const firstElement = focusableElements[0] as HTMLElement;
+    const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
+
+    if (event.shiftKey && document.activeElement === firstElement) {
+      event.preventDefault();
+      lastElement.focus();
+    } else if (!event.shiftKey && document.activeElement === lastElement) {
+      event.preventDefault();
+      firstElement.focus();
+    }
+  }
+    });
+  }
+
+  // Public methods
+  public getPerformanceMetrics(): Map<string, number> {
+    return new Map(this.performanceMetrics);
+  }
+
+  public getSEOScore(): number {
+    return this.seoScore;
+  }
+
+  public optimizeElement(element: HTMLElement): void {
+    try {
+      // Add lazy loading if not already present
+      if (!element.hasAttribute('data-lazy') && element.tagName === 'IMG') {
+        element.setAttribute('data-lazy', 'true');
+      }
+
+      // Add ARIA labels if missing
+      if (!element.hasAttribute('aria-label') && !element.textContent?.trim()) {
+        element.setAttribute('aria-label', 'Interactive element');
+      }
+
+      // Optimize images
+      if (element.tagName === 'IMG') {
+        this.optimizeImage(element as HTMLImageElement);
+      }
+    } catch (error) {
+      ErrorHandler.handle(error as Error, 'element optimization');
+    }
+  }
+
+  private optimizeImage(img: HTMLImageElement): void {
+    // Add loading attribute for native lazy loading
+    if (!img.hasAttribute('loading')) {
+      img.setAttribute('loading', 'lazy');
+    }
+
+    // Add alt text if missing
+    if (!img.alt) {
+      img.alt = 'Image';
+    }
+  }
+
+  public generateReport(): object {
     return {
-      accessibility: accessibilityReport,
-      performance: performanceMetrics,
-      seo: seoAuditResult,
-      overallScore
-    };
-  }
-
-  // Calculate performance score
-  private calculatePerformanceScore(metrics: Record<string, number>): number {
-    let score = 100;
-    
-    // Deduct points for poor metrics
-    if (metrics.pageLoadTime > 3000) score -= 20;
-    if (metrics.memoryPercentage > 80) score -= 20;
-    if (metrics.resourceCount > 100) score -= 10;
-    if (metrics.totalResourceSize > 5000000) score -= 10; // 5MB
-    
-    return Math.max(0, score);
-  }
-
-  // Calculate SEO score
-  private calculateSEOScore(seoAudit: any): number {
-    let score = 0;
-    if (seoAudit.title.hasTitle && seoAudit.title.isValid) score += 20;
-    if (seoAudit.description.hasDescription && seoAudit.description.isValid)
-      score += 20;
-    if (seoAudit.headings.hasH1 && seoAudit.headings.h1Count === 1) score += 20;
-    if (seoAudit.images.imagesWithoutAlt === 0) score += 20;
-    if (seoAudit.links.internalLinks > seoAudit.links.externalLinks)
-      score += 20;
-    return score;
-  }
-
-  // Auto-fix accessibility issues
-  public autoFixAccessibility(): void {
-    const report = accessibilityTesting.generateReport();
-    // Fix missing alt text
-    const images = document.querySelectorAll('img');
-    images.forEach(img => {
-      if (!img.alt) {
-        img.alt = img.getAttribute('data-alt') || 'Image';
-        img.setAttribute('aria-label', img.alt);
-      }
-    });
-    
-    // Fix missing form labels
-    const inputs = document.querySelectorAll('input, select, textarea');
-    inputs.forEach(input => {
-      if (!input.id) {
-        input.id = ariaUtils.generateId('input');
-      }
-      const label = document.querySelector(`label[for="${input.id}"]`);
-      if (!label && !input.getAttribute('aria-label')) {
-        input.setAttribute('aria-label',
-          input.getAttribute('placeholder') || 'Input field'
-        );
-      }
-    });
-    
-    // Announce fixes
-    if (this.config.accessibility.announceChanges) {
-      ariaUtils.announce('Accessibility issues have been automatically fixed', 'polite');
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
-    }
-  }
-  /**
-   * Update configuration
-   */
-=======
-      title: document.title,
-      description: 'Zion Tech Group - Advanced AI and IT Solutions',
-      url: window.location.href,
-      type: 'website'
-    });
-  }
-
-  // Start memory monitoring
-  private startMemoryMonitoring(): void {
-    if (typeof window === 'undefined') return;
-    
-    this.memoryInterval = setInterval(() => {
-      const memoryUsage = getMemoryUsage();
-      if (memoryUsage && memoryUsage.usedJSHeapSize > 100 * 1024 * 1024) { // 100MB
-        console.warn('High memory usage detected:', memoryUsage);
-      }
-    }, 30000); // Check every 30 seconds
-  }
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
-
-  // Cleanup
-  public destroy(): void {
-    if (this.performanceObserver) {
-      this.performanceObserver.disconnect();
-    }
-    if (this.memoryInterval) {
-      clearInterval(this.memoryInterval);
-    }
-=======
-    const { accessibility } = this.config;
-
-    if (accessibility.enableFocusManagement) {
-      // Initialize focus management
-      document.addEventListener('DOMContentLoaded', () => {
-        const mainElement = document.querySelector('main');
-        if (mainElement) {
-          focusManagement.skipToMain();
-        }
-      });
-    }
-
-    if (accessibility.enableMotionReduction) {
-      // Apply motion reduction preferences
-      document.addEventListener('DOMContentLoaded', () => {
-        const elements = document.querySelectorAll('[data-animate]');
-        elements.forEach(element => {
-          animationUtils.applyReducedMotion(element as HTMLElement);
-        });
-      });
-    }
-
-    if (accessibility.enableHighContrast) {
-      // Apply high contrast preferences
-      document.addEventListener('DOMContentLoaded', () => {
-        const elements = document.querySelectorAll('[data-contrast]');
-        elements.forEach(element => {
-          highContrastUtils.applyHighContrast(element as HTMLElement);
-        });
-      });
-    }
-  }
-
-  /**
-   * Initialize performance optimizations
-   */
-  private async initializePerformance(): Promise<void> {
-    const { performance } = this.config;
-
-    if (performance.enableMemoryMonitoring) {
-      // Start memory monitoring
-      setInterval(() => {
-        const memory = getMemoryUsage();
-        if (memory) {
-          console.log('Memory usage:', memory);
-        }
-      }, 30000); // Check every 30 seconds
-    }
-
-    if (performance.enablePerformanceMetrics) {
-      // Start performance monitoring
-      performanceMonitor.start();
-    }
-
-    if (performance.enableLazyLoading) {
-      // Initialize lazy loading
-      lazyLoadImages();
-    }
-
-    if (performance.enablePreloading) {
-      // Preload critical resources
-      preloadCriticalResources();
-    }
-
-    if (performance.enableScrollOptimization) {
-      // Optimize scroll performance
-      optimizeScrollPerformance();
-    }
-  }
-
-  /**
-   * Initialize SEO optimizations
-   */
-  private async initializeSEO(): Promise<void> {
-    const { seo } = this.config;
-
-    if (seo.enableMetaTags) {
-      // Set basic meta tags
-      setViewport();
-      setLanguage('en');
-    }
-
-    if (seo.enableSeoAudit) {
-      // Run SEO audit
-      try {
-        const auditResults = await seoAudit();
-        console.log('SEO Audit Results:', auditResults);
-      } catch (error) {
-        console.error('SEO audit failed:', error);
-      }
-    }
-  }
-
-  /**
-   * Optimize a specific element
-   */
-  optimizeElement(element: HTMLElement, options: Partial<OptimizationConfig> = {}): void {
-    const config = { ...this.config, ...options };
-
-    // Apply accessibility optimizations
-    if (config.accessibility.enableAriaUtils) {
-      // Generate unique ID if needed
-      if (!element.id) {
-        element.id = ariaUtils.generateId();
-      }
-    }
-
-    if (config.accessibility.enableContrastChecking) {
-      // Check contrast ratios
-      const computedStyle = window.getComputedStyle(element);
-      const backgroundColor = computedStyle.backgroundColor;
-      const color = computedStyle.color;
-      
-      if (backgroundColor && color) {
-        const ratio = contrastUtils.getContrastRatio(backgroundColor, color);
-        if (ratio < 4.5) {
-          console.warn('Low contrast ratio detected:', ratio);
-        }
-      }
-    }
-
-    // Apply performance optimizations
-    if (config.performance.enableDebouncing) {
-      // Add debounced event listeners
-      const debouncedHandler = debounce((event: Event) => {
-        // Handle event
-      }, 100);
-      
-      element.addEventListener('input', debouncedHandler);
-    }
-  }
-
-  /**
-   * Get optimization status
-   */
-  getStatus(): {
-    initialized: boolean;
-    config: OptimizationConfig;
-    performance: any;
-    accessibility: any;
-    seo: any;
-  } {
-    return {
-      initialized: this.isInitialized,
-      config: this.config,
-      performance: {
-        memoryUsage: getMemoryUsage(),
-        metrics: collectPerformanceMetrics(),
+      performance: Object.fromEntries(this.performanceMetrics),
+      seo: {
+        score: this.seoScore,
+        recommendations: this.getSEORecommendations(),
       },
       accessibility: {
-        focusManagement: focusManagement,
-        ariaUtils: ariaUtils,
-        keyboardUtils: keyboardUtils,
+        focusableElements: document.querySelectorAll(
+          'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+        ).length,
       },
-      seo: {
-        metaTags: document.querySelectorAll('meta').length,
-        structuredData: document.querySelectorAll('script[type="application/ld+json"]').length,
-      },
+      timestamp: new Date().toISOString(),
     };
   }
 
-  /**
-   * Update configuration
-   */
-  updateConfig(newConfig: Partial<OptimizationConfig>): void {
-    this.config = { ...this.config, ...newConfig };
+  private getSEORecommendations(): string[] {
+    const recommendations = [];
+    
+    if (this.seoScore < 80) {
+      recommendations.push('SEO score is below optimal level');
+    }
+    
+    if (!document.querySelector('h1')) {
+      recommendations.push('Missing H1 tag');
+    }
+    
+    const images = document.querySelectorAll('img');
+    const imagesWithoutAlt = Array.from(images).filter(img => !img.alt);
+    if (imagesWithoutAlt.length > 0) {
+      recommendations.push(`${imagesWithoutAlt.length} images missing alt text`);
+    }
+    
+    return recommendations;
   }
 
-  /**
-   * Reset to default configuration
-   */
-  reset(): void {
-    this.config = { ...defaultConfig };
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3fed
-    this.isInitialized = false;
+  public destroy(): void {
+    // Cleanup event listeners and observers
+    this.performanceMetrics.clear();
   }
 }
 
-=======
-// Global optimizer instance
-export const optimizer = new ComprehensiveOptimizer();
 
-// Auto-initialize if in browser
-if (typeof window !== 'undefined') {
-  document.addEventListener('DOMContentLoaded', () => {
-    optimizer.initialize().catch(console.error);
+export const optimizePage = (config?: OptimizationConfig): void => {
+  const optimizer = createOptimizer(config);
+  
+  // Optimize all elements on the page
+  document.querySelectorAll('*').forEach((element) => {
+    optimizer.optimizeElement(element as HTMLElement);
   });
-}
-
-export default {
-  ComprehensiveOptimizer,
-  optimizer,
-  defaultConfig,
-};
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3fed
 =======
   optimizeImages
 } from './seoUtils';
@@ -975,21 +566,8 @@ export const initializeOptimization = async (): Promise<ComprehensiveOptimizer> 
 // Get global optimizer instance
 export const getOptimizer = (): ComprehensiveOptimizer | null => {
   return globalOptimizer;
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3f25:utils/comprehensiveOptimizer.ts
 };
 
-// Run comprehensive audit
-export const runComprehensiveAudit = () => {
-  return globalOptimizer?.runComprehensiveAudit();
-};
-
-// Auto-fix accessibility
-export const autoFixAccessibility = () => {
-  globalOptimizer?.autoFixAccessibility();
-};
-
-// Cleanup optimizer
-export const cleanupOptimizer = () => {
-  globalOptimizer?.destroy();
-  globalOptimizer = null;
-};
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
+export default ComprehensiveOptimizer;

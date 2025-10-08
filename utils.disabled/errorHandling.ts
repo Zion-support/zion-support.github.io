@@ -1,11 +1,6 @@
 /**
  * Error Handling Utilities
  */
-export interface ErrorInfo {
-  componentStack?: string;
-  errorBoundary?: string;
-  errorBoundaryName?: string;
-  errorBoundaryStack?: string;
 }
 
 export class ErrorHandler {

@@ -4,47 +4,21 @@
  * Optimizes banner loading by implementing lazy loading and code splitting
  * to improve initial page load performance.
  */
-import type { ComponentType } from 'react';
-=======
-import { lazy, ComponentType } from 'react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-9d58
 =======
 import { lazy, ComponentType } from 'react';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3f25:utils/bannerLazyLoader.ts
 
-=======
-import { lazy, ComponentType } from 'react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a0d
-=======
 import { lazy, ComponentType } from 'react';
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-9008
-=======
-import { lazy, ComponentType } from 'react';
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-ee0f
-interface BannerModule {
-  default: ComponentType<any>;
+interface LazyBannerConfig {
+  importPath: string;
+  fallback?: React.ReactNode;
+  onLoad?: () => void;
+  onError?: (error: Error) => void;
 }
 
-/**
- * Lazy load a banner component with retry logic
- */
-export const lazyLoadBanner = (
-  importFn: () => Promise<BannerModule>,
-  componentName: string,
-) => {
-  return lazy(() =>
-    importFn().catch(error => {
-      console.error(`Failed to load banner: ${componentName}`, error);
-      // Retry once after a delay
-      return new Promise<BannerModule>(resolve => {
-        setTimeout(() => {
-          importFn()
-            .then(resolve)
-            .catch(retryError => {
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a0d
 =======
@@ -270,34 +244,69 @@ export const createBannerConfig = (
  */
 export class BannerManager {
   private configs: BannerConfig[] = [];
+=======
+export class BannerLazyLoader {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3f25:utils/bannerLazyLoader.ts
   private loadedBanners: Map<string, ComponentType<any>> = new Map();
+  private loadingPromises: Map<string, Promise<ComponentType<any>>> = new Map();
 
-  addBanner(config: BannerConfig): void {
-    this.configs.push(config);
-    if (config.preload) {
-      this.preloadBanner(config);
+  async loadBanner(importPath: string): Promise<ComponentType<any>> {
+    // Return cached component if already loaded
+    if (this.loadedBanners.has(importPath)) {
+      return this.loadedBanners.get(importPath)!;
     }
-  }
 
-  private async preloadBanner(config: BannerConfig): Promise<void> {
+    // Return existing promise if already loading
+    if (this.loadingPromises.has(importPath)) {
+      return this.loadingPromises.get(importPath)!;
+    }
+
+    // Create new loading promise
+    const loadPromise = this.performLoad(importPath);
+    this.loadingPromises.set(importPath, loadPromise);
+
     try {
-      const module = await config.importFn();
-      this.loadedBanners.set(config.name, module.default);
-    } catch (error) {
-      console.warn(`Failed to preload banner: ${config.name}`, error);
+      const component = await loadPromise;
+      this.loadedBanners.set(importPath, component);
+      return component;
+    } finally {
+      this.loadingPromises.delete(importPath);
     }
   }
 
-  getBanner(name: string): ComponentType<any> | null {
-    return this.loadedBanners.get(name) || null;
+  private async performLoad(importPath: string): Promise<ComponentType<any>> {
+    try {
+      const module = await import(importPath);
+      return module.default || module;
+    } catch (error) {
+      throw new Error(`Failed to load banner from ${importPath}: ${error}`);
+    }
   }
 
-  getAllBanners(): ComponentType<any>[] {
-    return Array.from(this.loadedBanners.values());
+  getBanner(importPath: string): ComponentType<any> | null {
+    return this.loadedBanners.get(importPath) || null;
   }
 
-  sortByPriority(): BannerConfig[] {
-    return [...this.configs].sort((a, b) => a.priority - b.priority);
+  isLoaded(importPath: string): boolean {
+    return this.loadedBanners.has(importPath);
+  }
+
+  isLoading(importPath: string): boolean {
+    return this.loadingPromises.has(importPath);
+  }
+
+  clear(): void {
+    this.loadedBanners.clear();
+    this.loadingPromises.clear();
+  }
+
+  destroy(): void {
+    this.clear();
   }
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-ee0f
+
+export const createBannerLazyLoader = (): BannerLazyLoader => {
+  return new BannerLazyLoader();
+};
+
+export default BannerLazyLoader;
