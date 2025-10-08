@@ -325,10 +325,6 @@ export type AppTypes = {
   AnalyticsEvent: AnalyticsEvent;
   BlogPost: BlogPost;
   SEOMetadata: SEOMetadata;
-<<<<<<< HEAD
-  FormState: FormState<Record<string, unknown>>;
-=======
->>>>>>> 729f4dc1f33e (Fix: Add ErrorSeverity enum and resolve type conflicts)
   Route: Route;
   Theme: Theme;
 };
