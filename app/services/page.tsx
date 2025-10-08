@@ -5,18 +5,6 @@ import { ArrowRight, Star, CheckCircle } from 'lucide-react';
 const ServicesPage: React.FC = () => {
   const serviceCategories = [
     {
-<<<<<<< HEAD
-      title: 'AI Solutions',
-      description:
-        'Advanced artificial intelligence solutions for enterprise automation and optimization.',
-      icon: '🤖',
-      features: [
-        'Machine Learning',
-        'Natural Language Processing',
-        'Computer Vision',
-        'Predictive Analytics',
-      ],
-=======
       title: 'Micro SAAS Solutions',
       description: 'Affordable, powerful AI-driven tools for modern businesses. Start from $79/month.',
       icon: '💻',
@@ -40,48 +28,54 @@ const ServicesPage: React.FC = () => {
       link: '/it-services',
       features: ['Cloud Infrastructure', 'Cybersecurity', 'DevOps & CI/CD', 'Database Administration'],
       price: 'Starting at $1,200/month'
->>>>>>> cursor/expand-services-advertise-and-build-project-f575
     },
     {
       title: 'Quantum Computing',
       description: 'Next-generation quantum computing capabilities for complex problem solving.',
       icon: '⚛️',
-<<<<<<< HEAD
-      features: ['Quantum Algorithms', 'Quantum Security', 'Optimization', 'Simulation'],
-=======
       link: '/quantum-computing',
       features: ['Quantum Algorithms', 'Quantum Security', 'Optimization', 'Simulation'],
       price: 'Custom Pricing'
->>>>>>> cursor/expand-services-advertise-and-build-project-f575
     },
     {
       title: 'Autonomous Systems',
       description: 'Self-managing and self-optimizing systems for enterprise operations.',
       icon: '🔄',
-<<<<<<< HEAD
-      features: [
-        'Self-Healing Infrastructure',
-        'Automated Operations',
-        'Intelligent Monitoring',
-        'Adaptive Learning',
-      ],
-=======
       link: '/autonomous-systems',
       features: ['Self-Healing Infrastructure', 'Automated Operations', 'Intelligent Monitoring', 'Adaptive Learning'],
       price: 'Starting at $2,500/month'
->>>>>>> cursor/expand-services-advertise-and-build-project-f575
     },
     {
       title: 'Business Intelligence',
       description: 'Data-driven insights and analytics for strategic decision making.',
       icon: '📊',
-<<<<<<< HEAD
-      features: ['Real-time Analytics', 'Data Visualization', 'Reporting', 'Dashboard Creation'],
-    },
-=======
       link: '/business-intelligence',
       features: ['Real-time Analytics', 'Data Visualization', 'Reporting', 'Dashboard Creation'],
       price: 'Starting at $1,800/month'
+    },
+    {
+      title: 'Blockchain & Web3',
+      description: 'Decentralized applications, smart contracts, and Web3 solutions.',
+      icon: '⛓️',
+      link: '/blockchain-web3',
+      features: ['Smart Contracts', 'DeFi Protocols', 'NFTs', 'DAOs'],
+      price: 'Starting at $8,000/project'
+    },
+    {
+      title: 'IoT & Edge Computing',
+      description: 'Connected devices and edge computing solutions for smart environments.',
+      icon: '📡',
+      link: '/iot-edge-computing',
+      features: ['Sensor Networks', 'Edge Processing', 'Smart Cities', 'Industrial IoT'],
+      price: 'Starting at $3,500/month'
+    },
+    {
+      title: 'Cybersecurity',
+      description: 'Advanced security solutions including threat detection and compliance.',
+      icon: '🛡️',
+      link: '/cybersecurity',
+      features: ['Threat Detection', 'Zero Trust', 'Penetration Testing', 'SOC Services'],
+      price: 'Starting at $2,500/month'
     }
   ];
 
