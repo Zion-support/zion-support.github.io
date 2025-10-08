@@ -312,7 +312,7 @@ export const initializePerformanceEnhancements = () => {
   // Collect performance metrics
   const metrics = collectPerformanceMetrics();
   if (metrics && process.env['NODE_ENV'] === 'development') {
-    // eslint-disable-next-line no-console
+     
     console.log('Performance metrics:', metrics);
   }
 };
