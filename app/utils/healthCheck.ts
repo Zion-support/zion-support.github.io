@@ -90,12 +90,6 @@ class HealthCheckService {
           name,
           duration
         })
-
-<<<<<<< HEAD
-=======
-      } catch {
-        logger.error(`Health check "${name}" failed`, error as Error)
->>>>>>> cursor/fix-errors-and-merge-to-main-a0f3
       } catch (error) {
         logger.error(`Health check "${name}" failed`, error as Error)
 
@@ -119,9 +113,9 @@ class HealthCheckService {
       status = 'healthy'
     }
     const healthStatus: HealthStatus = {
-      status
+      status,
       timestamp: now,
-      uptime: now - this.startTime
+      uptime: now - this.startTime,
       checks
     }
     // Cache the result
@@ -148,8 +142,8 @@ class HealthCheckService {
   private checkMemory(): HealthCheck {
     if (typeof performance === 'undefined' || !('memory' in performance)) {
       return {
-        name: 'memory'
-        status: 'pass'
+        name: 'memory',
+        status: 'pass',
         message: 'Memory API not available'
       }
     }
@@ -167,21 +161,20 @@ class HealthCheckService {
         message = `High memory usage: ${usedPercent.toFixed(1)}%`
       }
       return {
-        name: 'memory'
-        status
-        message
+        name: 'memory',
+        status,
+        message,
         details: {
-          used: memory.usedJSHeapSize
-          total: memory.totalJSHeapSize
-          limit: memory.jsHeapSizeLimit
+          used: memory.usedJSHeapSize,
+          total: memory.totalJSHeapSize,
+          limit: memory.jsHeapSizeLimit,
           usedPercent
         }
       }
-    } catch {
     } catch (error) {
       return {
-        name: 'memory'
-        status: 'warn'
+        name: 'memory',
+        status: 'warn',
         message: 'Could not check memory usage'
       }
     }
@@ -205,19 +198,18 @@ class HealthCheckService {
         message = `Critical performance issues: ${poor} poor metrics`
       }
       return {
-        name: 'performance'
-        status
-        message
+        name: 'performance',
+        status,
+        message,
         details: {
-          metrics: report.metrics
+          metrics: report.metrics,
           summary: report.summary
         }
       }
-    } catch {
     } catch (error) {
       return {
-        name: 'performance'
-        status: 'warn'
+        name: 'performance',
+        status: 'warn',
         message: 'Could not check performance'
       }
     }
@@ -227,10 +219,10 @@ class HealthCheckService {
    */
   private checkBrowserAPIs(): HealthCheck {
     const requiredAPIs = [
-      'fetch'
-      'localStorage'
-      'sessionStorage'
-      'console'
+      'fetch',
+      'localStorage',
+      'sessionStorage',
+      'console',
       'navigator'
     ]
 
@@ -244,15 +236,15 @@ class HealthCheckService {
 
     if (missingAPIs.length > 0) {
       return {
-        name: 'browser-apis'
-        status: 'warn'
-        message: `Missing browser APIs: ${missingAPIs.join(', ')}`
+        name: 'browser-apis',
+        status: 'warn',
+        message: `Missing browser APIs: ${missingAPIs.join(', ')}`,
         details: { missingAPIs }
       }
     }
     return {
-      name: 'browser-apis'
-      status: 'pass'
+      name: 'browser-apis',
+      status: 'pass',
       message: 'All required browser APIs available'
     }
   }
@@ -271,8 +263,8 @@ class HealthCheckService {
 
       if (retrieved !== testValue) {
         return {
-          name: 'storage'
-          status: 'fail'
+          name: 'storage',
+          status: 'fail',
           message: 'LocalStorage not working correctly'
         }
       }
@@ -282,24 +274,22 @@ class HealthCheckService {
         localStorage.setItem('_size_test', testData)
         localStorage.removeItem('_size_test')
 
-      } catch {
       } catch (error) {
         return {
-          name: 'storage'
-          status: 'warn'
+          name: 'storage',
+          status: 'warn',
           message: 'LocalStorage space limited'
         }
       }
       return {
-        name: 'storage'
-        status: 'pass'
+        name: 'storage',
+        status: 'pass',
         message: 'Storage working correctly'
       }
-    } catch {
     } catch (error) {
       return {
-        name: 'storage'
-        status: 'fail'
+        name: 'storage',
+        status: 'fail',
         message: 'LocalStorage not available'
       }
     }
