@@ -23,6 +23,7 @@ interface PerformanceMetrics {
   cls?: number;
   fmp?: number;
   ttfb?: number;
+  memory?: number;
 }
 
 interface OptimizationConfig {
@@ -132,15 +133,12 @@ class PerformanceOptimizer {
           const clsEntry = entry as PerformanceEntry & { hadRecentInput?: boolean; value: number }
           if (!clsEntry.hadRecentInput) {
             clsValue += clsEntry.value
-
           }
         })
         this.metrics.cls = clsValue
       })
       observer.observe({ entryTypes: ['layout-shift'] })
       this.observers.push(observer)
-    } catch {
-    } catch {
     } catch {
       // Ignore if not supported
     }
@@ -158,8 +156,6 @@ class PerformanceOptimizer {
       observer.observe({ entryTypes: ['paint'] })
       this.observers.push(observer)
     } catch {
-    } catch {
-    } catch {
       // Ignore if not supported
     }
   }
@@ -171,29 +167,25 @@ class PerformanceOptimizer {
           const navEntry = entry as PerformanceEntry & { responseStart: number; requestStart: number }
           if (navEntry.responseStart > 0) {
             this.metrics.ttfb = navEntry.responseStart - navEntry.requestStart
-
           }
         })
       })
       observer.observe({ entryTypes: ['navigation'] })
       this.observers.push(observer)
     } catch {
-    } catch {
-    } catch {
       // Ignore if not supported
     }
   }
   private observeMemory() {
-    if ('memory' in performance) {
+    if (typeof window !== 'undefined' && 'memory' in performance) {
       const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; jsHeapSizeLimit: number } }).memory
       if (memory) {
         this.metrics.memory = memory.usedJSHeapSize / memory.jsHeapSizeLimit
       }
     }
   }
-  lazyLoadImages() {
-    if (typeof window === 'undefined') return
 
+<<<<<<< HEAD
     const images = document.querySelectorAll('img[data-src]')
 =======
 =======
@@ -208,6 +200,13 @@ class PerformanceOptimizer {
 >>>>>>> cursor/fix-errors-and-merge-to-main-eab2
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-6ad8
+=======
+  /**
+   * Measure render time using PerformanceObserver
+   */
+  private measureRenderTime(): void {
+    if (typeof window === 'undefined') return;
+>>>>>>> cursor/fix-errors-and-merge-to-main-b1a4
     
     // Check if PerformanceObserver exists (may not be available in test environments)
     if (typeof PerformanceObserver === 'undefined') return;
@@ -223,6 +222,7 @@ class PerformanceOptimizer {
       });
 
       observer.observe({ entryTypes: ['measure'] });
+      this.observers.push(observer);
     } catch (error) {
       // PerformanceObserver may not support 'measure' entryType in some environments
     }
@@ -444,7 +444,11 @@ class PerformanceOptimizer {
   /**
    * Cleanup observers and resources
    */
+<<<<<<< HEAD
   public cleanup(): void {
+=======
+  cleanup(): void {
+>>>>>>> cursor/fix-errors-and-merge-to-main-b1a4
     this.observers.forEach(observer => observer.disconnect());
     this.observers = [];
     this.isMonitoring = false;
@@ -484,7 +488,7 @@ ${metrics.memoryUsage > 30 * 1024 * 1024 ? '- Review memory usage and optimize c
     
     if (process.env.NODE_ENV === 'development') { 
       console.log('Performance optimization completed'); 
-      console.log(this.generateReport()); 
+      console.log(this.generateComprehensiveReport()); 
     }
   }
 }

@@ -13,17 +13,28 @@ export * from './hooks';
 // Export security and validation separately to avoid conflicts
 export { 
 <<<<<<< HEAD
+<<<<<<< HEAD
   sanitizeHtml as sanitizeInput, 
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-6ad8
   escapeHtml, 
   isValidEmail as isValidEmailFromSecurity,
   isValidUrl as isValidUrlFromSecurity,
+=======
+  sanitizeInput, 
+  isValidEmail as isValidEmailFromSecurity,
+  isValidUrl as isValidUrlFromSecurity
+} from './validation';
+
+export { 
+  escapeHtml,
+>>>>>>> cursor/fix-errors-and-merge-to-main-b1a4
   isValidPhone
 } from './security';
 
 export { 
   validateEmail as validateForm, 
+<<<<<<< HEAD
 <<<<<<< HEAD
   validateRequired as validateField,
   isValidEmail,
@@ -35,6 +46,11 @@ export {
   isValidUrl,
   sanitizeInput
 >>>>>>> cursor/fix-errors-and-merge-to-main-6ad8
+=======
+  validateRequired as validateField,
+  isValidEmail,
+  isValidUrl
+>>>>>>> cursor/fix-errors-and-merge-to-main-b1a4
 } from './validation';
 
 // Default exports
