@@ -36,15 +36,15 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
 
     // Measure First Contentful Paint (FCP)
     const _fcpEntries = performance.getEntriesByName('first-contentful-paint') || [];
-    const _fcp = fcpEntries.length > 0 ? fcpEntries[0].startTime : null;
+    const _fcp = _fcpEntries.length > 0 ? _fcpEntries[0].startTime : null;
 
     // Measure Largest Contentful Paint (LCP)
     if ('PerformanceObserver' in window) {
       try {
         const lcpObserver = new PerformanceObserver(list => {
           const _entries = list.getEntries();
-          const _lastEntry = entries[entries.length - 1];
-          setMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }));
+          const _lastEntry = _entries[_entries.length - 1];
+          setMetrics(prev => ({ ...prev, lcp: _lastEntry.startTime }));
         });
         lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
         observers.push(lcpObserver);
@@ -77,7 +77,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         observers.push(fidObserver);
       } catch (error) {
         // eslint-disable-next-line no-console
-        console.warn('FID observer not supported:', error);origin/cursor/fix-errors-and-merge-to-main-6395
+        console.warn('FID observer not supported:', error);
       }
     }
 
@@ -105,16 +105,16 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         observers.push(clsObserver);
       } catch (error) {
         // eslint-disable-next-line no-console
-        console.warn('CLS observer not supported:', error);origin/cursor/fix-errors-and-merge-to-main-6395
+        console.warn('CLS observer not supported:', error);
       }
     }
 
     // Measure Time to First Byte (TTFB)
     try {
       const _navigationEntries = performance.getEntriesByType?.('navigation') || [];
-      const _navigationEntry = navigationEntries[0] as PerformanceNavigationTiming;
-      const ttfb = navigationEntry
-        ? navigationEntry.responseStart - navigationEntry.requestStart
+      const _navigationEntry = _navigationEntries[0] as PerformanceNavigationTiming;
+      const ttfb = _navigationEntry
+        ? _navigationEntry.responseStart - _navigationEntry.requestStart
         : null;
 
       // Measure Memory Usage
@@ -124,13 +124,13 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
 
       setMetrics(prev => ({
         ...prev,
-        fcp,
+        fcp: _fcp,
         ttfb,
         memory,
       }));
     } catch (error) {
       // eslint-disable-next-line no-console
-      console.warn('Performance measurement failed:', error);origin/cursor/fix-errors-and-merge-to-main-6395
+      console.warn('Performance measurement failed:', error);
     }
 
     // Cleanup observers
@@ -140,7 +140,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
           observer.disconnect();
         } catch (error) {
           // eslint-disable-next-line no-console
-          console.warn('Error disconnecting observer:', error);origin/cursor/fix-errors-and-merge-to-main-6395
+          console.warn('Error disconnecting observer:', error);
         }
       });
     };
@@ -150,7 +150,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     if (typeof window === 'undefined' || !('performance' in window)) return;
 
     const _resources = performance.getEntriesByType('resource');
-    const slowResources = resources.filter(
+    const slowResources = _resources.filter(
       (resource: PerformanceResourceTiming) => resource.duration > 1000
     );
 
@@ -219,7 +219,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     }, 5000);
 
     return () => {
-      if (cleanup) cleanup();
+      if (_cleanup) _cleanup();
       clearInterval(interval);
     };
   }, [
@@ -293,13 +293,13 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
               : 'N/A'}
           </div>
         </div>
-        {recommendations.length > 0 && (
+        {_recommendations.length > 0 && (
           <div className='mt-2'>
             <h4 className='font-semibold text-xs text-red-600'>
               Recommendations:
             </h4>
             <ul className='text-xs text-red-600'>
-              {recommendations.map((rec, index) => (
+              {_recommendations.map((rec, index) => (
                 <li key={index}>• {rec}</li>
               ))}
             </ul>
