@@ -124,19 +124,13 @@ class AnalyticsService {
   }
 
   /**
+  /**
    * Track performance metrics
    */
-  trackPerformance(metric: string, value: number, metadata?: Record<string, unknown>): void {
-    this.trackEvent({
-      action: 'performance_metric',
-      category: 'Performance',
-      label: metric,
-      value: Math.round(value),
-      metadata,
-    });
+  trackPerformance(metric: string, value: number): void {
+    this.trackTiming('Performance', metric, value);
   }
 
-  /**
    * Track timing events (for performance monitoring)
    */
   trackTiming(
@@ -224,6 +218,8 @@ export const trackEvent = (event: AnalyticsEvent) => analytics.trackEvent(event)
 export const trackPageView = (path: string, title?: string) =>
   analytics.trackPageView(path, title);
 export const trackError = (error: Error, metadata?: Record<string, unknown>) =>
+export const trackPerformance = (metric: string, value: number) =>
+  analytics.trackPerformance(metric, value);
   analytics.trackError(error, metadata);
 export const trackPerformance = (metric: string, value: number, metadata?: Record<string, unknown>) =>
   analytics.trackPerformance(metric, value, metadata);

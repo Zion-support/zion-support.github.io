@@ -53,24 +53,40 @@ class Logger {
   }
 
   /**
+   * Parse arguments to determine context and metadata
+   */
+  private parseArgs(
+    contextOrMetadata?: string | Record<string, unknown>,
+    metadata?: Record<string, unknown>
+  ): [string | undefined, Record<string, unknown> | undefined] {
+    if (typeof contextOrMetadata === 'string') {
+      return [contextOrMetadata, metadata];
+    }
+    return [undefined, contextOrMetadata];
+  }
+
+  /**
    * Log a debug message
    */
-  debug(message: string, context?: string, metadata?: Record<string, unknown>): void {
-    this.log(LogLevel.DEBUG, message, context, metadata);
+  debug(message: string, contextOrMetadata?: string | Record<string, unknown>, metadata?: Record<string, unknown>): void {
+    const [context, meta] = this.parseArgs(contextOrMetadata, metadata);
+    this.log(LogLevel.DEBUG, message, context, meta);
   }
 
   /**
    * Log an info message
    */
-  info(message: string, context?: string, metadata?: Record<string, unknown>): void {
-    this.log(LogLevel.INFO, message, context, metadata);
+  info(message: string, contextOrMetadata?: string | Record<string, unknown>, metadata?: Record<string, unknown>): void {
+    const [context, meta] = this.parseArgs(contextOrMetadata, metadata);
+    this.log(LogLevel.INFO, message, context, meta);
   }
 
   /**
    * Log a warning message
    */
-  warn(message: string, context?: string, metadata?: Record<string, unknown>): void {
-    this.log(LogLevel.WARN, message, context, metadata);
+  warn(message: string, contextOrMetadata?: string | Record<string, unknown>, metadata?: Record<string, unknown>): void {
+    const [context, meta] = this.parseArgs(contextOrMetadata, metadata);
+    this.log(LogLevel.WARN, message, context, meta);
   }
 
   /**
@@ -78,17 +94,28 @@ class Logger {
    */
   error(
     message: string,
-    error?: Error,
-    context?: string,
+    errorOrContextOrMetadata?: Error | string | Record<string, unknown>,
+    contextOrMetadata?: string | Record<string, unknown>,
     metadata?: Record<string, unknown>
   ): void {
+    let error: Error | undefined;
+    let context: string | undefined;
+    let meta: Record<string, unknown> | undefined;
+
+    if (errorOrContextOrMetadata instanceof Error) {
+      error = errorOrContextOrMetadata;
+      [context, meta] = this.parseArgs(contextOrMetadata, metadata);
+    } else {
+      [context, meta] = this.parseArgs(errorOrContextOrMetadata, contextOrMetadata as Record<string, unknown> | undefined);
+    }
+
     const entry: LogEntry = {
       level: LogLevel.ERROR,
       message,
       timestamp: new Date(),
       context,
       metadata: {
-        ...metadata,
+        ...meta,
         error: error ? {
           name: error.name,
           message: error.message,
@@ -106,17 +133,28 @@ class Logger {
    */
   fatal(
     message: string,
-    error?: Error,
-    context?: string,
+    errorOrContextOrMetadata?: Error | string | Record<string, unknown>,
+    contextOrMetadata?: string | Record<string, unknown>,
     metadata?: Record<string, unknown>
   ): void {
+    let error: Error | undefined;
+    let context: string | undefined;
+    let meta: Record<string, unknown> | undefined;
+
+    if (errorOrContextOrMetadata instanceof Error) {
+      error = errorOrContextOrMetadata;
+      [context, meta] = this.parseArgs(contextOrMetadata, metadata);
+    } else {
+      [context, meta] = this.parseArgs(errorOrContextOrMetadata, contextOrMetadata as Record<string, unknown> | undefined);
+    }
+
     const entry: LogEntry = {
       level: LogLevel.FATAL,
       message,
       timestamp: new Date(),
       context,
       metadata: {
-        ...metadata,
+        ...meta,
         error: error ? {
           name: error.name,
           message: error.message,
@@ -378,7 +416,11 @@ class ContextLogger {
   }
 
   perf(metric: string, value: number, metadata?: Record<string, unknown>): void {
-    this.logger.perf(metric, value, metadata);
+    this.logger.perf(metric, value, { ...metadata, context: this.context });
+  }
+
+  group(label: string, fn: () => void): void {
+    this.logger.group(`${this.context}: ${label}`, fn);
   }
 
   child(subContext: string): ContextLogger {

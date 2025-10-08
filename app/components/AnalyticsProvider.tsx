@@ -112,7 +112,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
     if (!isInitialized || typeof window === 'undefined') return;
 
     if (enableDebug) {
-      logger.perf(metric, value);
+      logger.debug('Performance Metric', 'AnalyticsProvider', { metric, value });
     }
 
     if ((window as unknown as { gtag: (...args: unknown[]) => void }).gtag) {
