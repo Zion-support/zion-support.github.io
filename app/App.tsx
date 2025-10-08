@@ -1,110 +1,134 @@
-import React, { Suspense, lazy, useEffect, useCallback } from 'react';
-
-import { HelmetProvider } from 'react-helmet-async';
+import React, { useEffect, lazy, Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
 
 // Components
+import ErrorBoundary from './components/ErrorBoundary';
+import SEOOptimizer from './components/SEOOptimizer';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
-import AdvancedErrorBoundary from './components/AdvancedErrorBoundary';
-import AdvancedSEOOptimizer from './components/AdvancedSEOOptimizer';
-import AdvancedPerformanceMonitor from './components/AdvancedPerformanceMonitor';
-import SEOEnhancer from './components/SEOEnhancer';
-import PerformanceDashboard from './components/PerformanceDashboard';
+import Navigation from './components/Navigation';
+import Footer from './components/Footer';
 import LoadingSpinner from './components/LoadingSpinner';
 
-// Lazy load pages
-const HomePage = lazy(() =>
-  import('./page').catch(() => ({ default: () => <div>Error loading page</div> }))
-);
-
-// Import proper utilities
-import {
-  performanceOptimizer,
-  lazyLoadImages,
-  preloadCriticalResources,
-  collectPerformanceMetrics,
-} from './utils/performanceOptimizer';
+// Advanced utilities
+import { performanceOptimizer } from './utils/performanceOptimizer';
+import { performanceMonitoring } from './utils/performanceMonitoring';
+import { errorTracking, ErrorCategory, ErrorSeverity } from './utils/errorTracking';
 import { logger } from './utils/logger';
+
+// Lazy load pages for better performance
+const HomePage = lazy(() => import('./page'));
+const ContactPage = lazy(() => import('./contact/page'));
+const EnterprisePage = lazy(() => import('./enterprise/page'));
+
+// Styles
+import './globals.css';
 
 const App: React.FC = () => {
   useEffect(() => {
-    // Initialize global error handling
-    logger.info('App initialized', 'App');
+    // Mark app initialization start
+    performanceMonitoring.mark('app-init-start');
 
-    // Initialize performance monitoring
-    lazyLoadImages();
-    preloadCriticalResources();
-    performanceOptimizer.init();
-
-    // Initialize Web Vitals monitoring
-    if (typeof window !== 'undefined' && 'performance' in window) {
-      const pageLoadMetrics = collectPerformanceMetrics();
-      const metrics = performanceOptimizer.getMetrics();
-      if (pageLoadMetrics) {
-        logger.info('Performance metrics collected', 'App', { metrics: pageLoadMetrics });
+    // Initialize global error handling with advanced tracking
+    const handleGlobalError = (event: ErrorEvent) => {
+      errorTracking.trackError(event.error || new Error(event.message), {
+        category: ErrorCategory.Runtime,
+        severity: ErrorSeverity.High,
+        context: {
+          filename: event.filename,
+          lineno: event.lineno,
+          colno: event.colno,
+        },
+      });
+      
+      // Prevent default error handling to avoid console clutter in production
+      if (import.meta.env.PROD) {
+        event.preventDefault();
       }
-      if (metrics) {
-        logger.info('Core Web Vitals metrics', 'App', { metrics });
+    };
+
+    const handleUnhandledRejection = (event: PromiseRejectionEvent) => {
+      errorTracking.trackError(
+        new Error(`Unhandled Promise Rejection: ${event.reason}`),
+        {
+          category: ErrorCategory.Runtime,
+          severity: ErrorSeverity.Critical,
+          context: { reason: event.reason },
+        }
+      );
+      
+      // Prevent default handling in production
+      if (import.meta.env.PROD) {
+        event.preventDefault();
+      }
+    };
+
+    window.addEventListener('error', handleGlobalError);
+    window.addEventListener('unhandledrejection', handleUnhandledRejection);
+
+    // Register Service Worker for offline support
+    if ('serviceWorker' in navigator && import.meta.env.PROD) {
+      navigator.serviceWorker
+        .register('/sw.js')
+        .then((registration) => {
+          logger.info('Service Worker registered', { scope: registration.scope });
+        })
+        .catch((error: Error) => {
+          logger.error('Service Worker registration failed', error);
+        });
+    }
+
+    // Initialize performance monitoring and Web Vitals
+    if (typeof window !== 'undefined' && 'performance' in window) {
+      performanceOptimizer.optimizeImages();
+      
+      // Record initial metrics
+      performanceMonitoring.recordCustomMetric('app-mount', performance.now(), 'ms');
+      
+      // Log performance summary in development
+      if (import.meta.env.DEV) {
+        const summary = performanceMonitoring.getSummary();
+        logger.info('Performance Summary', {
+          score: summary.score,
+          vitals: summary.webVitals,
+          recommendations: summary.recommendations,
+        });
       }
     }
 
-    logger.info('Performance monitoring initialized', 'App');
-    logger.info('🚀 Zion Tech Group App initialized with comprehensive monitoring');
-  }, []);
+    // Mark app initialization end
+    performanceMonitoring.mark('app-init-end');
+    performanceMonitoring.measure('app-init-duration', 'app-init-start', 'app-init-end');
 
-  const handleError = useCallback((error: Error, errorInfo: React.ErrorInfo) => {
-    logger.error('Application Error', error, { errorInfo, component: 'ErrorBoundary' });
+    // Cleanup
+    return () => {
+      window.removeEventListener('error', handleGlobalError);
+      window.removeEventListener('unhandledrejection', handleUnhandledRejection);
+    };
   }, []);
 
   return (
     <HelmetProvider>
-      <AdvancedErrorBoundary enableErrorReporting={true} enableRetry={true} onError={handleError}>
+      <ErrorBoundary>
+        <SEOOptimizer />
         <AccessibilityEnhancer>
-          <SEOEnhancer
-            title="Zion Tech Group - Advanced AI and IT Solutions"
-            description="Leading provider of enterprise AI solutions, quantum computing, and autonomous systems. Transform your business with our cutting-edge technology."
-          >
-            <AdvancedSEOOptimizer
-              seoData={{
-                title: 'Zion Tech Group - Advanced AI and IT Solutions',
-                description:
-                  'Leading provider of enterprise AI solutions, quantum computing, and autonomous systems. Transform your business with our cutting-edge technology.',
-                keywords: [
-                  'AI solutions',
-                  'enterprise AI',
-                  'quantum computing',
-                  'autonomous systems',
-                  'digital transformation',
-                  'automation',
-                  'cloud services',
-                  'AI consulting',
-                  'business intelligence',
-                  'machine learning',
-                ],
-                canonicalUrl: 'https://ziontechgroup.com',
-              }}
-              enableStructuredData={true}
-              enableOpenGraph={true}
-              enableTwitterCards={true}
-              enableSchemaMarkup={true}
-            />
-            <Router>
-              <div className="App">
-                <main id="main-content">
-                  <Suspense fallback={<LoadingSpinner />}>
-                    <Routes>
-                      <Route path="/" element={<HomePage />} />
-                      {/* Add more routes as needed */}
-                    </Routes>
-                  </Suspense>
-                </main>
-                <AdvancedPerformanceMonitor />
-                <PerformanceDashboard />
-              </div>
-            </Router>
-          </SEOEnhancer>
+          <Router>
+            <div className="App">
+              <Navigation />
+              
+              <Suspense fallback={<LoadingSpinner />}>
+                <Routes>
+                  <Route path="/" element={<HomePage />} />
+                  <Route path="/contact" element={<ContactPage />} />
+                  <Route path="/enterprise" element={<EnterprisePage />} />
+                </Routes>
+              </Suspense>
+              
+              <Footer />
+            </div>
+          </Router>
         </AccessibilityEnhancer>
-      </AdvancedErrorBoundary>
+      </ErrorBoundary>
     </HelmetProvider>
   );
 };
