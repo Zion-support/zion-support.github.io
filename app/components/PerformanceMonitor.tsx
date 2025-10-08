@@ -8,7 +8,6 @@ interface LayoutShift extends PerformanceEntry {
   hadRecentInput: boolean;
   value: number;
 }
-import React, { useEffect, useState } from 'react';
 
 interface PerformanceMetrics {
   loadTime: number;

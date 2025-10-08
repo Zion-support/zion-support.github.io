@@ -3,7 +3,7 @@
  * Provides helpers for testing React components, hooks, and utilities
  */
 
-import { ReactElement } from 'react';
+import React, { ReactElement } from 'react';
 import { render, RenderOptions, RenderResult } from '@testing-library/react';
 import { HelmetProvider } from 'react-helmet-async';
 
@@ -15,7 +15,7 @@ export function renderWithProviders(
   options?: Omit<RenderOptions, 'wrapper'>
 ): RenderResult {
   function AllProviders({ children }: { children: React.ReactNode }) {
-    return <HelmetProvider>{children}</HelmetProvider>;
+    return React.createElement(HelmetProvider, null, children);
   }
 
   return render(ui, { wrapper: AllProviders, ...options });
