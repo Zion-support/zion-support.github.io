@@ -183,10 +183,10 @@ class SEOOptimizer {
       '@context': 'https://schema.org',
       '@type': 'WebSite',
       name: this.config.siteName,
-      url: this.config.siteUrl
+      url: this.config.siteUrl,
       potentialAction: {
-        '@type': 'SearchAction'
-        target: `${this.config.siteUrl}/search?q={search_term_string}`
+        '@type': 'SearchAction',
+        target: `${this.config.siteUrl}/search?q={search_term_string}`,
         'query-input': 'required name=search_term_string'
       }
     }

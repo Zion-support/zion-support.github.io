@@ -118,8 +118,9 @@ class AnalyticsService {
   ): void {
     try {
       if (this.hasGtag()) {
+        gtag('event', 'custom_metric', {
           name: variable,
-          value: Math.round(value)
+          value: Math.round(value),
           event_category: category,
           event_label: label,
         })
