@@ -1,42 +1,8 @@
 const { withSentry } = require('./withSentry.cjs');
+const { isValidEmail } = require('./emailUtils.cjs');
 const fs = require('fs');
 const path = require('path');
-=======
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-8344
-=======
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3fed
-=======
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-1f83
-=======
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-9d58
-=======
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
-=======
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a0d
-=======
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-d12c
-=======
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-efe9
-=======
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-9008
-=======
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-6abd
-=======
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-ee0f
-=======
-
->>>>>>> origin/main
 async function handler(req, res) {
   if (req.method !== 'POST') {
     res.statusCode = 405;
@@ -44,236 +10,73 @@ async function handler(req, res) {
     res.end('Method Not Allowed');
     return;
   }
-=======
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-8344
-=======
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3fed
-=======
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-1f83
-=======
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-9d58
-=======
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
-=======
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a0d
-=======
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-d12c
-=======
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-efe9
-=======
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-9008
-=======
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-6abd
-=======
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-ee0f
-=======
-
->>>>>>> origin/main
   const {
     name,
     email,
-    phone: _phone,
-    company: _company,
-    location,
-    details: _details,
+    company,
+    phone,
+    message,
+    requestType = 'consultation',
   } = req.body || {};
-=======
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-8344
-=======
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3fed
-=======
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-1f83
-=======
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-9d58
-=======
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
-=======
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a0d
-=======
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-d12c
-=======
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-efe9
-=======
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-9008
-=======
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-6abd
-=======
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-ee0f
-=======
-
->>>>>>> origin/main
-  if (!name || !email || !location) {
+  if (!name || !email) {
     res.statusCode = 400;
-    res.json({ error: 'Missing required fields' });
+    res.json({ error: 'Name and email are required' });
     return;
   }
 
-  const file = path.join(process.cwd(), 'data', 'onsite-requests.json');
-  let existing = [];
-=======
-  
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e3b
-=======
-  
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-895b
-=======
-  
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-4854
-=======
-  
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b781
-=======
-=======
->>>>>>> origin/main
+  if (!isValidEmail(email)) {
+    res.statusCode = 400;
+    res.json({ error: 'Invalid email address' });
+    return;
+  }
 
   try {
-    existing = JSON.parse(fs.readFileSync(file, 'utf8'));
-    if (!Array.isArray(existing)) existing = [];
-  } catch {
-    // File doesn't exist or is invalid, use empty array
+    // Mock onsite request - in production, this would integrate with a CRM
+    const request = {
+      id: `req_${Date.now()}`,
+      name,
+      email,
+      company: company || '',
+      phone: phone || '',
+      message: message || '',
+      requestType,
+      status: 'pending',
+      createdAt: new Date().toISOString(),
+    };
+
+    // Log to file (mock implementation)
+    const requestsDir = path.join(process.cwd(), '.data');
+    const requestsFile = path.join(requestsDir, 'onsite-requests.json');
+
+    // Ensure directory exists
+    if (!fs.existsSync(requestsDir)) {
+      fs.mkdirSync(requestsDir, { recursive: true });
+    }
+
+    // Read existing requests
+    let requests = [];
+    if (fs.existsSync(requestsFile)) {
+      const data = fs.readFileSync(requestsFile, 'utf8');
+      requests = JSON.parse(data);
+    }
+
+    // Add new request
+    requests.push(request);
+    fs.writeFileSync(requestsFile, JSON.stringify(requests, null, 2));
+
+    res.statusCode = 200;
+    res.json({
+      success: true,
+      message: 'Request received successfully',
+      request: { id: request.id, status: request.status },
+    });
+  } catch (error) {
+    console.error('Onsite request error:', error);
+    res.statusCode = 500;
+    res.json({ error: 'Failed to process request' });
   }
-=======
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-8344
-=======
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3fed
-=======
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-1f83
-=======
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-9d58
-=======
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
-=======
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a0d
-=======
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-d12c
-=======
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-efe9
-=======
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-9008
-=======
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-6abd
-=======
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-ee0f
-=======
-
->>>>>>> origin/main
-  existing.push({
-    name,
-    email,
-    phone: _phone,
-    company: _company,
-    location,
-    details: _details,
-    createdAt: new Date().toISOString(),
-  });
-=======
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-8344
-=======
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3fed
-=======
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-1f83
-=======
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-9d58
-=======
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
-=======
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a0d
-=======
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-d12c
-=======
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-efe9
-=======
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-9008
-=======
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-6abd
-=======
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-ee0f
-=======
-
->>>>>>> origin/main
-  fs.writeFileSync(file, JSON.stringify(existing, null, 2));
-  res.statusCode = 200;
-  res.json({ success: true });
 }
-=======
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-8344
-=======
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3fed
-=======
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-1f83
-=======
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-9d58
-=======
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
-=======
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a0d
-=======
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-d12c
-=======
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-efe9
-=======
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-9008
-=======
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-6abd
-=======
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-ee0f
-module.exports = withSentry(handler);
-=======
 
 module.exports = withSentry(handler);
->>>>>>> origin/main

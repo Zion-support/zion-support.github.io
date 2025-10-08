@@ -1,4 +1,23 @@
 import React from 'react';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'About Us - Zion Tech Group',
+  description: 'Learn more about Zion Tech Group - Leading provider of enterprise AI solutions, quantum computing, and autonomous systems.',
+};
+
+export default function AboutPage() {
+  return (
+    <>
+      <div className='min-h-screen bg-gray-50'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12'>
+          <div className='text-center mb-12'>
+            <h1 className='text-4xl font-bold text-gray-900 mb-4'>
+              About Zion Tech Group
+            </h1>
+            <div className='text-xl text-gray-600 max-w-3xl mx-auto'>
+              <p>
+                We are dedicated to transforming businesses through cutting-edge AI and IT solutions.
               </p>
             </div>
 
@@ -96,6 +115,4 @@ import React from 'react';
       </div>
     </>
   );
-};
-
-export default AboutPage;
+}
