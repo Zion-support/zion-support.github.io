@@ -4,6 +4,7 @@
  */
 
 import React, { Component, ErrorInfo, ReactNode } from 'react';
+
 import monitoring from '../utils/monitoring';
 
 interface Props {
@@ -66,8 +67,8 @@ class ImprovedErrorBoundary extends Component<Props, State> {
     }
 
     // Send to external error tracking (if available)
-    if (typeof window !== 'undefined' && (window as unknown as { Sentry: { captureException: (error: Error, context: Record<string, unknown>) => void } }).Sentry) {
-      (window as unknown as { Sentry: { captureException: (error: Error, context: Record<string, unknown>) => void } }).Sentry.captureException(error, {
+    if (typeof window !== 'undefined' && 'Sentry' in window) {
+      (window as { Sentry: { captureException: (error: Error, context: Record<string, unknown>) => void } }).Sentry.captureException(error, {
         contexts: {
           react: {
             componentStack: errorInfo.componentStack,

@@ -99,11 +99,11 @@ class HealthCheckService {
           duration,
         });
       } catch {
-logger._error(`Health check "${name}" failed`, _error as Error);
+        logger.error(`Health check "${name}" failed`);
         checks.push({
           name,
           status: 'fail',
-          message: error instanceof Error ? error.message : 'Unknown error',
+          message: 'Health check failed',
         });
       }
     }
@@ -162,6 +162,7 @@ logger._error(`Health check "${name}" failed`, _error as Error);
     }
 
     try {
+      const memory = (performance as { memory: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
       const usedPercent = (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100;
 
       let status: 'pass' | 'warn' | 'fail' = 'pass';
@@ -186,7 +187,7 @@ logger._error(`Health check "${name}" failed`, _error as Error);
           usedPercent,
         },
       };
-      return {
+    } catch {      return {
         name: 'memory',
         status: 'warn',
         message: 'Could not check memory usage',
@@ -223,7 +224,7 @@ logger._error(`Health check "${name}" failed`, _error as Error);
           summary: report.summary,
         },
       };
-      return {
+    } catch {      return {
         name: 'performance',
         status: 'warn',
         message: 'Could not check performance',
@@ -293,7 +294,7 @@ logger._error(`Health check "${name}" failed`, _error as Error);
       try {
         localStorage.setItem('_size_test', testData);
         localStorage.removeItem('_size_test');
-        return {
+      } catch {        return {
           name: 'storage',
           status: 'warn',
           message: 'LocalStorage space limited',
@@ -305,7 +306,7 @@ logger._error(`Health check "${name}" failed`, _error as Error);
         status: 'pass',
         message: 'Storage working correctly',
       };
-      return {
+    } catch {      return {
         name: 'storage',
         status: 'fail',
         message: 'LocalStorage not available',

@@ -19,6 +19,7 @@ export interface PerformanceThresholds {
   needsImprovement: number;
 }
 
+// Extended types for specific performance entry types
 // These interfaces are defined for future use but not currently used
 // interface _PerformancePaintTiming extends PerformanceEntry {
 //   name: 'first-paint' | 'first-contentful-paint';
@@ -39,8 +40,6 @@ export interface PerformanceThresholds {
 //   cancelable: boolean;
 //   target: EventTarget | null;
 // }
-// Performance entry types are handled inline where needed
-
 class PerformanceMonitor {
   private metrics: Map<string, PerformanceMetric> = new Map();
   private observers: PerformanceObserver[] = [];
@@ -81,6 +80,7 @@ class PerformanceMonitor {
 
         // Largest Contentful Paint
         this.observeEntry('largest-contentful-paint', (entries) => {
+          const lastEntry = entries[entries.length - 1] as { renderTime?: number; loadTime?: number; startTime: number };
           if (lastEntry) {
             this.recordMetric('LCP', lastEntry.renderTime || lastEntry.loadTime || lastEntry.startTime);
           }
@@ -88,6 +88,7 @@ class PerformanceMonitor {
 
         // First Input Delay
         this.observeEntry('first-input', (entries) => {
+          const firstInput = entries[0] as { processingStart: number; startTime: number };
           if (firstInput && firstInput.processingStart !== undefined) {
             const fid = firstInput.processingStart - firstInput.startTime;
             this.recordMetric('FID', fid);

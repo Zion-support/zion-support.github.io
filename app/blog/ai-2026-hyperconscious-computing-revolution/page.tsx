@@ -3,9 +3,9 @@ import { Star } from 'lucide-react';
 // import { Metadata } from 'next'; // Removed for Vite
 
 // export const metadata: Metadata = { // Removed for Vite
-//  title: "AI 2026 Hyperconscious Computing Revolution: Next-Gen Intelligence",
-//  description: "Experience the hyperconscious computing revolution of AI 2026, featuring next-generation intelligence, advanced cognitive computing, and revolutionary AI consciousness.",
-//  keywords: 'AI 2026, hyperconscious computing, next-gen intelligence, cognitive computing, AI consciousness, computing revolution'
+// title: "AI 2026 Hyperconscious Computing Revolution: Next-Gen Intelligence",
+//   description: "Experience the hyperconscious computing revolution of AI 2026, featuring next-generation intelligence, advanced cognitive computing, and revolutionary AI consciousness.",
+//   keywords: 'AI 2026, hyperconscious computing, next-gen intelligence, cognitive computing, AI consciousness, computing revolution'
 // };
 
 export default function AI2026HyperconsciousComputingRevolution() {

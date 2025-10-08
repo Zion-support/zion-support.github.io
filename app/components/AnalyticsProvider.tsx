@@ -1,6 +1,5 @@
 import React, { createContext, useContext, useEffect, useState } from 'react';
 
-// import { Link } from 'react-router-dom'; // Not used in this component
 import { logger } from '../utils/logger';
 
 interface AnalyticsEvent {

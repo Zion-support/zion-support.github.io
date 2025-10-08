@@ -78,7 +78,7 @@ export class PerformanceOptimizer {
   /**
    * Implement debounce for performance
    */
-    func: T,
+  debounce<T extends (...args: unknown[]) => unknown>(    func: T,
     wait: number
   ): (...args: Parameters<T>) => void {
     let timeout: NodeJS.Timeout | null = null;
@@ -97,7 +97,7 @@ export class PerformanceOptimizer {
   /**
    * Implement throttle for performance
    */
-    func: T,
+  throttle<T extends (...args: unknown[]) => unknown>(    func: T,
     limit: number
   ): (...args: Parameters<T>) => void {
     let inThrottle: boolean = false;
@@ -116,7 +116,7 @@ export class PerformanceOptimizer {
   /**
    * Memoize function results
    */
-    func: T
+  memoize<T extends (...args: unknown[]) => unknown>(    func: T
   ): (...args: Parameters<T>) => ReturnType<T> {
     const cache = new Map<string, ReturnType<T>>();
     

@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg';
   color?: 'indigo' | 'blue' | 'green' | 'purple';
@@ -27,11 +28,7 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   };
 
   return (
-    <div
-      className={`flex flex-col items-center justify-center ${className}`}
-      role="status"
-      aria-live="polite"
-    >
+    <div className={`flex flex-col items-center justify-center ${className}`} role="status" aria-live="polite">
       <div
         className={`${sizeClasses[size]} ${colorClasses[color]} animate-spin rounded-full border-4 border-t-transparent border-current`}
         aria-hidden="true"
