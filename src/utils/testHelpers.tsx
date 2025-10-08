@@ -14,9 +14,9 @@ export function renderWithProviders(
   ui: ReactElement,
   options?: Omit<RenderOptions, 'wrapper'>
 ): RenderResult {
-  function AllProviders({ children }: { children: React.ReactNode }) {
-    return React.createElement(HelmetProvider, null, children);
-  }
+  const AllProviders = ({ children }: { children: React.ReactNode }) => {
+    return <HelmetProvider>{children}</HelmetProvider>;
+  };
 
   return render(ui, { wrapper: AllProviders, ...options });
 }

@@ -23,8 +23,8 @@ const UltimateBusinessIntelligence2025Banner = () => {
     },
     {
       id: 'fortune-500-success-story',
-      title: 'Fortune 500 Ultimate Business Intelligence 30,000% ROI Success Story',
-      description: 'Discover how a Fortune 500 company achieved unprecedented returns through AI-powered business intelligence transformation.',
+      title: 'Fortune 500 Ultimate Business Intelligence Success Story',
+      description: 'How a $15.2B manufacturing giant achieved 30,000% ROI with AI-powered business intelligence transformation.',
       url: '/case-studies/fortune-500-ultimate-business-intelligence-30000-roi-success-story',
       type: 'Case Study',
       metrics: {
@@ -33,7 +33,7 @@ const UltimateBusinessIntelligence2025Banner = () => {
         timeline: '18 months',
         accuracy: '99.9%'
       },
-      tags: ['Fortune 500', 'Case Study', 'ROI', 'Success Story', '2025']
+      tags: ['Fortune 500', 'Case Study', '30,000% ROI', 'Success Story', 'Manufacturing']
     },
     {
       id: 'enterprise-automation-2025',
@@ -58,6 +58,8 @@ const UltimateBusinessIntelligence2025Banner = () => {
 
     return () => clearInterval(timer);
   }, [content.length]);
+
+  const currentContent = content[currentSlide];
 
   const currentContent = content[currentSlide];
 

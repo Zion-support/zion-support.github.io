@@ -145,6 +145,9 @@ const NewestContent2025Banner = () => {
             <a
               href="tel:+13024640950"
               className="flex items-center gap-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl"
+=======
+              className="group relative bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:-translate-y-2"
+>>>>>>> origin/merge-cursor/fix-errors-and-merge-to-main-2158
             >
               <span className="text-xl">📞</span>
               <span>Call +1 302 464 0950</span>
@@ -156,7 +159,7 @@ const NewestContent2025Banner = () => {
               <span>Get Started Today</span>
               <span>→</span>
             </Link>
-          </div>
+          ))}
         </div>
       </div>
     </section>
