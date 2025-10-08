@@ -232,8 +232,19 @@ class PerformanceMonitor {
     const score = this.getScore();
     const metrics = this.getMetrics();
     
-    return `
-
+    
+    return `Performance Report:
+Score: ${score}/100
+Metrics:
+- FCP: ${metrics.fcp ? metrics.fcp.toFixed(2) + 'ms' : 'N/A'}
+- LCP: ${metrics.lcp ? metrics.lcp.toFixed(2) + 'ms' : 'N/A'}
+- FID: ${metrics.fid ? metrics.fid.toFixed(2) + 'ms' : 'N/A'}
+- CLS: ${metrics.cls ? metrics.cls.toFixed(3) : 'N/A'}
+- TTFB: ${metrics.ttfb ? metrics.ttfb.toFixed(2) + 'ms' : 'N/A'}
+- INP: ${metrics.inp ? metrics.inp.toFixed(2) + 'ms' : 'N/A'}
+`;
+  }
+}
 
 export const performanceMonitor = new PerformanceMonitor();
 export default PerformanceMonitor;

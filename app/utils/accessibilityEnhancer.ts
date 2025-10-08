@@ -671,12 +671,24 @@ class AccessibilityEnhancer {
 
   /**
    * Get accessibility report
+  /**
+   * Get accessibility report
    */
   getReport(): string {
     const metrics = this.getMetrics();
     
-    return `
-
+    return `Accessibility Report:
+- Violations: ${metrics.violations}
+- Warnings: ${metrics.warnings}
+- Passes: ${metrics.passes}
+- Tab Index Issues: ${metrics.tabIndexIssues}
+- Missing Alt Text: ${metrics.missingAltText}
+- Missing Labels: ${metrics.missingLabels}
+- Low Contrast: ${metrics.lowContrast}
+- Keyboard Traps: ${metrics.keyboardTraps}
+`;
+  }
+}
 
 export const accessibilityEnhancer = new AccessibilityEnhancer();
 export default AccessibilityEnhancer;
