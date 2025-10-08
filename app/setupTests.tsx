@@ -26,8 +26,6 @@ global.IntersectionObserver = class IntersectionObserver {
   observe() {}
   unobserve() {}
   takeRecords() { return []; }
-} as any;
-//Mock ResizeObserver
 global.ResizeObserver = class ResizeObserver {
   constructor() {}
   disconnect() {}

@@ -41,25 +41,6 @@ export class BannerPrioritizer {
     this.startRefreshCycle();
   }
 
-  public addBanner(banner: BannerMetadata): void {
-    this.banners.set(banner.id, banner);
-    this.updatePriorityQueue();
-  }
-
-  public removeBanner(id: string): void {
-    this.banners.delete(id);
-    this.priorityQueue = this.priorityQueue.filter(banner => banner.id !== id);
-  }
-
-  public getTopBanners(count: number = this.maxBanners): BannerMetadata[] {
-    return this.priorityQueue
-      .slice(0, count)
-      .map(priority => this.banners.get(priority.id))
-      .filter((banner): banner is BannerMetadata => banner !== undefined);
-  }
-
-  public recordImpression(id: string): void {
-    const banner = this.banners.get(id);
     if (banner) {
       banner.impressionCount++;
       banner.lastShown = new Date();
@@ -67,16 +48,6 @@ export class BannerPrioritizer {
     }
   }
 
-  public recordClick(id: string): void {
-    const banner = this.banners.get(id);
-    if (banner) {
-      banner.clickCount++;
-      banner.conversionRate = banner.clickCount / banner.impressionCount;
-      this.updatePriorityQueue();
-    }
-  }
-
-  private updatePriorityQueue(): void {
     const banners = Array.from(this.banners.values());
     
     // Calculate priority scores
@@ -162,15 +133,3 @@ export class BannerPrioritizer {
   }
 }
 
-// Utility functions
-export const createBannerPrioritizer = (maxBanners?: number): BannerPrioritizer => {
-  return new BannerPrioritizer(maxBanners);
-};
-
-export const prioritizeBanners = (banners: BannerMetadata[], maxCount: number = 5): BannerMetadata[] => {
-  const prioritizer = createBannerPrioritizer(maxCount);
-  banners.forEach(banner => prioritizer.addBanner(banner));
-  return prioritizer.getTopBanners(maxCount);
-};
-
-export default BannerPrioritizer;

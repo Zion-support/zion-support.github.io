@@ -16,7 +16,6 @@ export function initializePerformanceMonitoring(): void {
         analytics.track('long_task', 'performance', 'detected', undefined, entry.duration);
       });
     });
-    observer.observe({ entryTypes: ['longtask'] });
   }
 }
 

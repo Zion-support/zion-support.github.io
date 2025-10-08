@@ -68,8 +68,6 @@ class Analytics {
       category,
       action: action || undefined,
       label: label || undefined,
-      value: value || undefined,
-      properties: properties || undefined,
       timestamp: Date.now(),
     };
     this.events.push(event);
