@@ -228,28 +228,32 @@ class PerformanceOptimizer {
   }
 
   startMark(markName: string): void {
-    if (typeof window !== 'undefined' && 'performance' in window) {
-      performance.mark(`${markName}-start`);
+    if (typeof window === 'undefined' || !window.performance) return;
+    try {
+      window.performance.mark(markName);
+    } catch (error) {
+      console.warn(`Failed to create performance mark: ${markName}`, error);
     }
   }
 
   endMark(markName: string): number | null {
-    if (typeof window !== 'undefined' && 'performance' in window) {
-      try {
-        performance.mark(`${markName}-end`);
-        performance.measure(markName, `${markName}-start`, `${markName}-end`);
-        const measures = performance.getEntriesByName(markName, 'measure');
-        if (measures.length > 0) {
-          const duration = measures[measures.length - 1].duration;
-          // Clean up marks and measures
-          performance.clearMarks(`${markName}-start`);
-          performance.clearMarks(`${markName}-end`);
-          performance.clearMeasures(markName);
-          return duration;
-        }
-      } catch (error) {
-        console.warn('Failed to measure performance:', error);
+    if (typeof window === 'undefined' || !window.performance) return null;
+    try {
+      const endMarkName = `${markName}-end`;
+      window.performance.mark(endMarkName);
+      window.performance.measure(markName, markName, endMarkName);
+      
+      const measures = window.performance.getEntriesByName(markName, 'measure');
+      if (measures.length > 0) {
+        const duration = measures[measures.length - 1].duration;
+        // Clean up marks and measures
+        window.performance.clearMarks(markName);
+        window.performance.clearMarks(endMarkName);
+        window.performance.clearMeasures(markName);
+        return duration;
       }
+    } catch (error) {
+      console.warn(`Failed to measure performance mark: ${markName}`, error);
     }
     return null;
   }
@@ -257,45 +261,6 @@ class PerformanceOptimizer {
   cleanup() {
     this.observers.forEach(observer => observer.disconnect());
     this.observers = [];
-  }
-
-  /**
-   * Start a performance mark
-   */
-  startMark(markName: string): void {
-    if (typeof window === 'undefined' || !window.performance || !window.performance.mark) return;
-    try {
-      performance.mark(markName);
-    } catch (error) {
-      console.warn(`Failed to start mark ${markName}:`, error);
-    }
-  }
-
-  /**
-   * End a performance mark and return duration
-   */
-  endMark(markName: string): number | null {
-    if (typeof window === 'undefined' || !window.performance || !window.performance.mark) return null;
-    try {
-      const endMarkName = `${markName}-end`;
-      performance.mark(endMarkName);
-      performance.measure(markName, markName, endMarkName);
-      
-      const measures = performance.getEntriesByName(markName, 'measure');
-      if (measures.length > 0) {
-        const duration = measures[0].duration;
-        
-        // Clean up marks and measures
-        performance.clearMarks(markName);
-        performance.clearMarks(endMarkName);
-        performance.clearMeasures(markName);
-        
-        return duration;
-      }
-    } catch (error) {
-      console.warn(`Failed to end mark ${markName}:`, error);
-    }
-    return null;
   }
 }
 

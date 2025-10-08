@@ -5,7 +5,6 @@ interface SEOConfig {
   title: string;
   description: string;
   keywords: string[];
-  url: string;
   canonicalUrl: string;
   ogTitle?: string;
   ogDescription?: string;
@@ -25,7 +24,25 @@ interface SEOConfig {
 }
 
 interface AdvancedSEOOptimizerProps {
-  config: SEOConfig;
+  title: string;
+  description: string;
+  keywords: string[];
+  canonicalUrl: string;
+  ogTitle?: string;
+  ogDescription?: string;
+  ogImage?: string;
+  ogType?: string;
+  twitterCard?: string;
+  twitterTitle?: string;
+  twitterDescription?: string;
+  twitterImage?: string;
+  structuredData?: Record<string, unknown>;
+  robots?: string;
+  author?: string;
+  publishedTime?: string;
+  modifiedTime?: string;
+  section?: string;
+  tags?: string[];
   enableStructuredData?: boolean;
   enableOpenGraph?: boolean;
   enableTwitterCards?: boolean;
@@ -33,12 +50,51 @@ interface AdvancedSEOOptimizerProps {
 }
 
 const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
-  config,
+  title,
+  description,
+  keywords,
+  canonicalUrl,
+  ogTitle,
+  ogDescription,
+  ogImage,
+  ogType = 'website',
+  twitterCard = 'summary_large_image',
+  twitterTitle,
+  twitterDescription,
+  twitterImage,
+  structuredData,
+  robots = 'index, follow',
+  author,
+  publishedTime,
+  modifiedTime,
+  section,
+  tags,
   enableStructuredData = true,
   enableOpenGraph = true,
   enableTwitterCards = true,
   enableSchemaMarkup = true,
 }) => {
+  const config: SEOConfig = {
+    title,
+    description,
+    keywords,
+    canonicalUrl,
+    ogTitle,
+    ogDescription,
+    ogImage,
+    ogType,
+    twitterCard,
+    twitterTitle,
+    twitterDescription,
+    twitterImage,
+    structuredData,
+    robots,
+    author,
+    publishedTime,
+    modifiedTime,
+    section,
+    tags,
+  };
   const structuredDataRef = useRef<HTMLScriptElement | null>(null);
 
   const generateStructuredData = useCallback(() => {
@@ -179,9 +235,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
       title: config.title,
       description: config.description,
       keywords: config.keywords,
-      url: config.canonicalUrl,
       canonicalUrl: config.canonicalUrl,
-      keywords: config.keywords,
     });
 
     // Cleanup on unmount
