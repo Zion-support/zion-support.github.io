@@ -302,13 +302,14 @@ export function detectMemoryLeaks(
   componentFactory: () => ReactElement,
   iterations: number = 100
 ): boolean {
-  const initialMemory = (performance as any).memory?.usedJSHeapSize || 0;
+//   const initialMemory = (performance as any).memory?.usedJSHeapSize || 0;
 
   for (let i = 0; i < iterations; i++) {
     const { unmount } = renderWithProviders(componentFactory());
     unmount();
   }
 
+  const initialMemory = (performance as any).memory?.usedJSHeapSize || 0;
   const finalMemory = (performance as any).memory?.usedJSHeapSize || 0;
   const memoryIncrease = finalMemory - initialMemory;
 
