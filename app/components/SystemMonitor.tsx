@@ -7,6 +7,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 
 import { errorHandler } from '../utils/enhancedErrorHandler';
 
+<<<<<<< HEAD
 // Collect basic performance metrics
 const _collectPerformanceMetrics = () => {
   if (typeof window === 'undefined' || !window.performance) return null;
@@ -22,6 +23,8 @@ const _collectPerformanceMetrics = () => {
 };
 // Suppress unused variable warning
 void _collectPerformanceMetrics;
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-283b
 
 // Helper functions
 const calculatePerformanceScore = (loadTime: number, firstContentfulPaint: number) => {

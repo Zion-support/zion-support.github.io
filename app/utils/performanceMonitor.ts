@@ -102,7 +102,11 @@ class PerformanceMonitor {
         // Cumulative Layout Shift
         this.observeEntry('layout-shift', entries => {
           let clsValue = 0;
+<<<<<<< HEAD
           entries.forEach((entry: LayoutShift) => {
+=======
+          entries.forEach((entry: PerformanceEntry) => {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-283b
             if (!entry.hadRecentInput) {
               clsValue += entry.value;
             }

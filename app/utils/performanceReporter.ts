@@ -71,8 +71,12 @@ class PerformanceReporter {
         const lastEntry = entries[entries.length - 1];
 
         if (lastEntry && 'renderTime' in lastEntry) {
+<<<<<<< HEAD
           const value = (lastEntry as PerformanceEntry & { renderTime?: number; loadTime?: number }).renderTime || 
                        (lastEntry as PerformanceEntry & { renderTime?: number; loadTime?: number }).loadTime || 0;
+=======
+          const value = (lastEntry as PerformanceEntry).renderTime || (lastEntry as PerformanceEntry).loadTime || 0;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-283b
           this.addMetric('LCP', value, this.getRating('lcp', value));
         }
       });
@@ -84,7 +88,11 @@ class PerformanceReporter {
         const entries = entryList.getEntries();
         entries.forEach(entry => {
           if ('processingStart' in entry && 'startTime' in entry) {
+<<<<<<< HEAD
             const value = (entry as PerformanceEventTiming).processingStart - (entry as PerformanceEventTiming).startTime;
+=======
+            const value = (entry as PerformanceEntry).processingStart - (entry as PerformanceEntry).startTime;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-283b
             this.addMetric('FID', value, this.getRating('fid', value));
           }
         });
@@ -96,8 +104,13 @@ class PerformanceReporter {
       let clsValue = 0;
       const clsObserver = new PerformanceObserver(entryList => {
         entryList.getEntries().forEach(entry => {
+<<<<<<< HEAD
           if (!(entry as LayoutShift).hadRecentInput) {
             clsValue += (entry as LayoutShift).value;
+=======
+          if (!(entry as PerformanceEntry).hadRecentInput) {
+            clsValue += (entry as PerformanceEntry).value;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-283b
           }
         });
         this.addMetric('CLS', clsValue, this.getRating('cls', clsValue));

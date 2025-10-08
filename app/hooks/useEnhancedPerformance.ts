@@ -95,9 +95,13 @@ export function useEnhancedPerformance(options: UseEnhancedPerformanceOptions = 
 
   const measureOperation = useCallback(
     (operationName: string) => {
+<<<<<<< HEAD
       const _markName = `${component}-${operationName}`;
       // Suppress unused variable warning
       void _markName;
+=======
+      // const _markName = `${component}-${operationName}`;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-283b
       const startTime = performance.now();
 
       return {
