@@ -1,154 +1,134 @@
 /**
  * Error handling utilities
- * Enhanced with retry logic, error categorization, and better reporting
  */
-
-export enum ErrorSeverity {
-  LOW = 'low',
-  MEDIUM = 'medium',
-  HIGH = 'high',
-  CRITICAL = 'critical',
+export interface ErrorContext {
+  component?: string | undefined;
+  action?: string | undefined;
+  userId?: string | undefined;
+  timestamp: number;
+  userAgent?: string | undefined;
+  url?: string | undefined;
 }
 
-export enum ErrorCategory {
-  NETWORK = 'network',
-  VALIDATION = 'validation',
-  RUNTIME = 'runtime',
-  API = 'api',
-  UI = 'ui',
-  UNKNOWN = 'unknown',
-}
-
-export interface ErrorInfo {
+export interface ErrorReport {
   message: string;
-  stack?: string;
-  componentStack?: string;
-  errorBoundary?: string;
-  errorBoundaryStack?: string;
-  errorId?: string;
-  timestamp?: string;
-  userAgent?: string;
-  url?: string;
-  userId?: string;
-  severity?: ErrorSeverity;
-  category?: ErrorCategory;
-  metadata?: Record<string, unknown>;
+  stack?: string | undefined;
+  context: ErrorContext;
+  severity: 'low' | 'medium' | 'high' | 'critical';
 }
 
-export class ErrorHandler {
-  private static instance: ErrorHandler;
-  private errorQueue: ErrorInfo[] = [];
+class ErrorHandler {
+  private errorQueue: ErrorReport[] = [];
   private maxQueueSize = 100;
 
-  static getInstance(): ErrorHandler {
-    if (!ErrorHandler.instance) {
-      ErrorHandler.instance = new ErrorHandler();
-    }
-    return ErrorHandler.instance;
-  }
-
   /**
-   * Log an error with automatic categorization
+   * Log an error with context
    */
-  logError(error: Error, errorInfo?: Partial<ErrorInfo>): void {
-    const category = this.categorizeError(error);
-    const severity = this.determineSeverity(error, category);
-    
-    const errorData: ErrorInfo = {
-      message: error.message,
-      stack: error.stack,
-      timestamp: new Date().toISOString(),
-      userAgent: typeof window !== 'undefined' ? window.navigator.userAgent : undefined,
-      url: typeof window !== 'undefined' ? window.location.href : undefined,
-      errorId: this.generateErrorId(),
-      category,
+  public logError(
+    error: Error | string,
+    context: Partial<ErrorContext> = {},
+    severity: ErrorReport['severity'] = 'medium'
+  ): void {
+    const errorReport: ErrorReport = {
+      message: typeof error === 'string' ? error : error.message,
+      stack: typeof error === 'string' ? undefined : error.stack,
+      context: {
+        timestamp: Date.now(),
+        userAgent: navigator.userAgent,
+        url: window.location.href,
+        ...context,
+      },
       severity,
-      ...errorInfo,
     };
 
-    // Add to queue
-    this.errorQueue.push(errorData);
-    if (this.errorQueue.length > this.maxQueueSize) {
-      this.errorQueue.shift();
-    }
-
-    // Send to error reporting service
-    this.reportError(errorData);
+    this.addToQueue(errorReport);
+    this.logToConsole(errorReport);
   }
 
   /**
-   * Categorize error by type
+   * Log a warning
    */
-  private categorizeError(error: Error): ErrorCategory {
-    const message = error.message.toLowerCase();
-    
-    if (message.includes('network') || message.includes('fetch')) {
-      return ErrorCategory.NETWORK;
-    }
-    if (message.includes('validation') || message.includes('invalid')) {
-      return ErrorCategory.VALIDATION;
-    }
-    if (message.includes('api') || message.includes('request')) {
-      return ErrorCategory.API;
-    }
-    if (error.name === 'TypeError' || error.name === 'ReferenceError') {
-      return ErrorCategory.RUNTIME;
-    }
-    
-    return ErrorCategory.UNKNOWN;
+  public logWarning(
+    message: string,
+    context: Partial<ErrorContext> = {}
+  ): void {
+    this.logError(message, context, 'low');
   }
 
   /**
-   * Determine error severity
+   * Log a critical error
    */
-  private determineSeverity(error: Error, category: ErrorCategory): ErrorSeverity {
-    if (category === ErrorCategory.NETWORK) {
-      return ErrorSeverity.MEDIUM;
-    }
-    if (category === ErrorCategory.VALIDATION) {
-      return ErrorSeverity.LOW;
-    }
-    if (category === ErrorCategory.RUNTIME) {
-      return ErrorSeverity.HIGH;
-    }
-    
-    return ErrorSeverity.MEDIUM;
+  public logCritical(
+    error: Error | string,
+    context: Partial<ErrorContext> = {}
+  ): void {
+    this.logError(error, context, 'critical');
   }
 
   /**
-   * Generate unique error ID
+   * Get all errors
    */
-  private generateErrorId(): string {
-    return `err_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-  }
-
-  /**
-   * Report error to external service
-   */
-  private reportError(errorData: ErrorInfo): void {
-    // In production, send to error tracking service
-    if (process.env['NODE_ENV'] === 'production') {
-      // Send to Sentry, LogRocket, etc.
-      console.error('Error reported:', errorData);
-    } else {
-      console.error('Error (dev):', errorData);
-    }
-  }
-
-  /**
-   * Get error queue
-   */
-  getErrorQueue(): ErrorInfo[] {
+  public getErrors(): ErrorReport[] {
     return [...this.errorQueue];
   }
 
   /**
-   * Clear error queue
+   * Clear all errors
    */
-  clearErrorQueue(): void {
+  public clearErrors(): void {
     this.errorQueue = [];
+  }
+
+  /**
+   * Get errors by severity
+   */
+  public getErrorsBySeverity(severity: ErrorReport['severity']): ErrorReport[] {
+    return this.errorQueue.filter(error => error.severity === severity);
+  }
+
+  /**
+   * Get error count
+   */
+  public getErrorCount(): number {
+    return this.errorQueue.length;
+  }
+
+  private addToQueue(errorReport: ErrorReport): void {
+    this.errorQueue.push(errorReport);
+
+    // Keep queue size manageable
+    if (this.errorQueue.length > this.maxQueueSize) {
+      this.errorQueue.shift();
+    }
+  }
+
+  private logToConsole(errorReport: ErrorReport): void {
+    const { message, stack, context, severity } = errorReport;
+
+    const logMessage = `[${severity.toUpperCase()}] ${message}`;
+    const logData = {
+      context,
+      stack,
+    };
+
+    switch (severity) {
+      case 'critical':
+        console.error(logMessage, logData);
+        break;
+      case 'high':
+        console.error(logMessage, logData);
+        break;
+      case 'medium':
+        console.warn(logMessage, logData);
+        break;
+      case 'low':
+        console.info(logMessage, logData);
+        break;
+    }
   }
 }
 
-export const errorHandler = ErrorHandler.getInstance();
+// Create singleton instance
+const errorHandler = new ErrorHandler();
+
 export default errorHandler;
