@@ -11,19 +11,37 @@ import AdvancedSEOOptimizer from './components/AdvancedSEOOptimizer';
 import SEOEnhancer from './components/SEOEnhancer';
 import LoadingSpinner from './components/LoadingSpinner';
 
-class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundaryState> {
-  constructor(props: ErrorBoundaryProps) {
-    super(props);
-    this.state = { hasError: false, error: null };
-  }
+// Lazy load pages
+const HomePage = lazy(() => import('./page'));
 
-  static getDerivedStateFromError(error: Error): ErrorBoundaryState {
-    return { hasError: true, error };
-  }
+// Lazy load other components
+const PerformanceDashboard = lazy(() => import('./components/PerformanceDashboard'));
+const AdvancedPerformanceMonitor = lazy(() => import('./components/AdvancedPerformanceMonitor'));
 
-  override componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
-    console.error('App Error Boundary caught an error:', error, errorInfo);
-  }
+// Stub implementations for missing utilities
+const logger = {
+  lifecycle: (msg: string, component: string) => console.log(`[${component}] ${msg}`),
+  info: (msg: string, data?: any) => console.log(msg, data),
+  error: (msg: string, error: Error, data?: any) => console.error(msg, error, data),
+  performance: (msg: string, data?: any, component?: string) => console.log(`[${component || 'Performance'}] ${msg}`, data)
+};
+
+const lazyLoadImages = () => {
+  // Implementation stub
+};
+
+const preloadCriticalResources = () => {
+  // Implementation stub
+};
+
+const performanceOptimizer = {
+  init: () => {
+    // Implementation stub
+  },
+  getMetrics: () => null
+};
+
+const collectPerformanceMetrics = () => null;
 
 const App: React.FC = () => {
   useEffect(() => {
