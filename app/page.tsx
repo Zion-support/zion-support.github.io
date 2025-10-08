@@ -98,53 +98,6 @@ const HomePage: React.FC = () => {
 
         {/* Services Section */}
         <section className="mb-16" aria-labelledby="services-heading">
-<<<<<<< HEAD
-          <h2 id="services-heading" className="text-3xl font-bold text-gray-900 mb-8 text-center">
-            Our Services
-          </h2>
-          <div className="grid md:grid-cols-3 gap-8 mb-12">
-            <Suspense fallback={<ServiceCardSkeleton />}>
-              <article className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
-                <div className="text-4xl mb-4">🤖</div>
-                <h3 className="text-2xl font-semibold text-gray-900 mb-4">AI Services</h3>
-                <p className="text-gray-600 mb-4">
-                  Advanced artificial intelligence solutions including ML, NLP, and computer vision.
-                </p>
-                <div className="text-lg font-semibold text-blue-600">Starting at $1,500/month</div>
-              </article>
-            </Suspense>
-
-            <Suspense fallback={<ServiceCardSkeleton />}>
-              <article className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
-                <div className="text-4xl mb-4">⚛️</div>
-                <h3 className="text-2xl font-semibold text-gray-900 mb-4">Quantum Computing</h3>
-                <p className="text-gray-600 mb-4">
-                  Next-generation quantum computing capabilities for complex problem solving.
-                </p>
-                <div className="text-lg font-semibold text-purple-600">Custom Pricing</div>
-              </article>
-            </Suspense>
-
-            <Suspense fallback={<ServiceCardSkeleton />}>
-              <article className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
-                <div className="text-4xl mb-4">🔄</div>
-                <h3 className="text-2xl font-semibold text-gray-900 mb-4">Autonomous Systems</h3>
-                <p className="text-gray-600 mb-4">
-                  Self-managing and self-optimizing systems for enterprise operations.
-                </p>
-                <div className="text-lg font-semibold text-green-600">Starting at $2,500/month</div>
-              </article>
-            </Suspense>
-          </div>
-          
-          <div className="text-center">
-            <a 
-              href="/services"
-              className="inline-block bg-indigo-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-4 focus:ring-indigo-300"
-            >
-              View All Services
-            </a>
-=======
           <h2 id="services-heading" className="text-3xl font-bold text-center text-gray-900 mb-12">
             Our Core Services
           </h2>
@@ -193,7 +146,15 @@ const HomePage: React.FC = () => {
                 <li>• 24/7 Monitoring</li>
               </ul>
             </article>
->>>>>>> cursor/analyze-improve-and-deploy-application-2baa
+          </div>
+          
+          <div className="text-center mt-8">
+            <a 
+              href="/services"
+              className="inline-block bg-indigo-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-4 focus:ring-indigo-300"
+            >
+              View All Services
+            </a>
           </div>
         </section>
 
@@ -214,16 +175,6 @@ const HomePage: React.FC = () => {
           <h2 id="cta-heading" className="text-4xl font-bold text-gray-900 mb-6">
             Ready to Transform Your Business?
           </h2>
-<<<<<<< HEAD
-          <a
-            href="tel:+13024640950"
-            onClick={handlePhoneClick}
-            className="inline-block bg-indigo-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-4 focus:ring-indigo-300"
-            aria-label="Call us at (302) 464-0950"
-          >
-            Contact Us: (302) 464-0950
-          </a>
-=======
           <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
             Join hundreds of companies already using our AI solutions to drive growth and efficiency.
           </p>
@@ -258,7 +209,6 @@ const HomePage: React.FC = () => {
             <p>✓ Custom solution design</p>
             <p>✓ 24/7 support available</p>
           </div>
->>>>>>> cursor/analyze-improve-and-deploy-application-2baa
         </section>
       </main>
     </div>
