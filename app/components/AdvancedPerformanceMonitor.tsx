@@ -152,11 +152,11 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
 
     if (slowResources.length > 0) {
       // Slow resources detected - could be logged to monitoring service
-      const _slowResourceData = slowResources.map((r: PerformanceResourceTiming) => ({
-        name: r.name,
-        duration: r.duration,
-        size: r.transferSize,
-      }));
+      // const _slowResourceData = slowResources.map((r: PerformanceResourceTiming) => ({
+      //   name: r.name,
+      //   duration: r.duration,
+      //   size: r.transferSize,
+      // }));
       // Could send to monitoring service here
     }
   }, []);

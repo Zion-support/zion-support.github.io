@@ -29,13 +29,12 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   const [performanceScore, setPerformanceScore] = useState(100);
 
   useEffect(() => {
-    const reportWebVitals = (metric: { name: string; value: number }) => {
-      // Log to console in development (only on client side)
-      if (typeof window !== 'undefined' && enableConsoleLogging) {
-        // eslint-disable-next-line no-console
-    console.log('Web Vital:', metric.name, metric.value);
-      }
-    };
+    // const reportWebVitals = (metric: { name: string; value: number }) => {
+    //   // Log to console in development (only on client side)
+    //   if (typeof window !== 'undefined' && enableConsoleLogging) {
+    //     console.log('Web Vital:', metric.name, metric.value);
+    //   }
+    // };
 
     // Monitor Core Web Vitals
     const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming | undefined;
@@ -65,9 +64,9 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       if (enableConsoleLogging) {
         if (typeof console !== 'undefined') {
           console.group('Performance Metrics');
-          // eslint-disable-next-line no-console
+           
     console.debug('Metrics', { metrics: currentMetrics });
-          // eslint-disable-next-line no-console
+           
     console.debug('Score', { score });
           console.groupEnd();
         }
