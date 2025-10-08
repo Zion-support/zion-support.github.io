@@ -2,6 +2,54 @@
  * Error handling utilities
  * Enhanced with retry logic, error categorization, and better reporting
  */
+
+export enum ErrorCategory {
+  NETWORK = 'network',
+  API = 'api',
+  VALIDATION = 'validation',
+  RUNTIME = 'runtime',
+  UI = 'ui',
+  UNKNOWN = 'unknown',
+}
+
+export enum ErrorSeverity {
+  LOW = 'low',
+  MEDIUM = 'medium',
+  HIGH = 'high',
+  CRITICAL = 'critical',
+}
+
+export interface ErrorInfo {
+  id: string;
+  message: string;
+  stack?: string;
+  category: ErrorCategory;
+  severity: ErrorSeverity;
+  timestamp: number;
+  context?: Record<string, any>;
+}
+
+class ErrorHandler {
+  private errorQueue: ErrorInfo[] = [];
+  private maxQueueSize: number = 50;
+
+  /**
+   * Handle error with categorization and severity determination
+   */
+  handleError(error: Error, context?: Record<string, any>): void {
+    const category = this.categorizeError(error);
+    const severity = this.determineSeverity(error, category);
+    
+    const errorData: ErrorInfo = {
+      id: this.generateErrorId(),
+      message: error.message,
+      stack: error.stack,
+      category,
+      severity,
+      timestamp: Date.now(),
+      context,
+    };
+
     this.errorQueue.push(errorData);
     if (this.errorQueue.length > this.maxQueueSize) {
       this.errorQueue.shift();
