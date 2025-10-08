@@ -1,5 +1,5 @@
 import React, { useState, useCallback, memo } from 'react';
-import Image from 'next/image';
+// Image component replaced with regular img tag;
 
 interface OptimizedImageProps {
   src: string;
@@ -54,12 +54,10 @@ const OptimizedImage: React.FC<OptimizedImageProps> = memo(({
           <span className="text-sm">Failed to load image</span>
         </div>
       ) : (
-        <Image
-          src={src}
+        <img           src={src}
           alt={alt}
           width={width || 200}
           height={height || 200}
-          priority={priority}
           onLoad={handleLoad}
           onError={handleError}
           className={`transition-opacity duration-300 ${

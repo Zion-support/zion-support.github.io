@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 const UltimateBusinessIntelligence2025Banner: React.FC = () => {
   return (
@@ -30,7 +30,7 @@ const UltimateBusinessIntelligence2025Banner: React.FC = () => {
 
           <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
             <Link 
-              href="/services"
+              to="/services"
               className="inline-flex items-center px-10 py-5 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-bold text-lg rounded-xl hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-2xl"
             >
               Get Started Today
@@ -39,7 +39,7 @@ const UltimateBusinessIntelligence2025Banner: React.FC = () => {
               </svg>
             </Link>
             <Link 
-              href="/contact"
+              to="/contact"
               className="inline-flex items-center px-10 py-5 border-2 border-indigo-400 text-indigo-300 font-bold text-lg rounded-xl hover:bg-indigo-400/10 transition-all duration-300"
             >
               Schedule Consultation

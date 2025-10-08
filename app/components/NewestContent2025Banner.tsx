@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 const NewestContent2025Banner: React.FC = () => {
   return (
@@ -41,7 +41,7 @@ const NewestContent2025Banner: React.FC = () => {
               and drive unprecedented efficiency gains.
             </p>
             <Link 
-              href="/blog/ai-edge-computing-real-time-intelligence-2025"
+              to="/blog/ai-edge-computing-real-time-intelligence-2025"
               className="text-cyan-400 hover:text-cyan-300 font-semibold transition-colors inline-flex items-center gap-2"
             >
               Learn More →
@@ -58,7 +58,7 @@ const NewestContent2025Banner: React.FC = () => {
               and complex problem-solving capabilities.
             </p>
             <Link 
-              href="/blog/quantum-enhanced-neural-networks-2025"
+              to="/blog/quantum-enhanced-neural-networks-2025"
               className="text-purple-400 hover:text-purple-300 font-semibold transition-colors inline-flex items-center gap-2"
             >
               Explore →
@@ -75,7 +75,7 @@ const NewestContent2025Banner: React.FC = () => {
               your most critical business data and operations.
             </p>
             <Link 
-              href="/blog/quantum-secure-ai-infrastructure-2025"
+              to="/blog/quantum-secure-ai-infrastructure-2025"
               className="text-blue-400 hover:text-blue-300 font-semibold transition-colors inline-flex items-center gap-2"
             >
               Discover →
@@ -93,13 +93,13 @@ const NewestContent2025Banner: React.FC = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
-              href="/services/ai-services"
+              to="/services/ai-services"
               className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 text-center"
             >
               Explore AI Services
             </Link>
             <Link 
-              href="/contact"
+              to="/contact"
               className="px-8 py-4 border border-slate-600 text-white font-semibold rounded-lg hover:bg-slate-800/50 transition-all duration-300 text-center"
             >
               Schedule Consultation
