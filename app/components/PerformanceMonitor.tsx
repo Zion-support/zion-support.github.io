@@ -1,27 +1,25 @@
 'use client';
 
 import React, { useEffect, useState, memo } from 'react';
+import { logger } from '@/utils/logger';
 
 interface LayoutShift extends PerformanceEntry {
   hadRecentInput: boolean;
   value: number;
 }
 
-const PerformanceMonitor: React.FC = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({});
-
-  useEffect(() => {
-    // Web Vitals monitoring
-    const reportWebVitals = (metric: any) => {
-      // Send to analytics service
-      if (typeof window !== 'undefined' && (window as { gtag?: Function }).gtag) {
-        (window as unknown as { gtag: Function }).gtag('event', 'web_vitals', {
-          event_category: 'Performance',
-          event_label: metric.name,
-          value: Math.round(metric.value),
-          non_interaction: true,
-        });
-      }
+interface PerformanceMetrics {
+  loadTime: number;
+  renderTime: number;
+  memoryUsage: number;
+  bundleSize: number;
+  cacheHitRate: number;
+  lcp?: number;
+  fid?: number;
+  cls?: number;
+  fcp?: number;
+  ttfb?: number;
+}
 
 interface PerformanceMonitorProps {
   enableRealTimeMonitoring?: boolean;
@@ -49,6 +47,18 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
 
   useEffect(() => {
     if (!enableRealTimeMonitoring) return;
+
+    const reportWebVitals = (metric: any) => {
+      // Send to analytics service
+      if (typeof window !== 'undefined' && (window as { gtag?: Function }).gtag) {
+        (window as unknown as { gtag: Function }).gtag('event', 'web_vitals', {
+          event_category: 'Performance',
+          event_label: metric.name,
+          value: Math.round(metric.value),
+          non_interaction: true,
+        });
+      }
+    };
 
     const getMetrics = (): PerformanceMetrics => {
       const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming | undefined;

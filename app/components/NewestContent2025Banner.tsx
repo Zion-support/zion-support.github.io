@@ -62,7 +62,7 @@ const NewestContent2025Banner = () => {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <Link 
-              href="/blog"
+              to="/blog"
               className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
             >
               Explore Latest Articles
@@ -71,7 +71,7 @@ const NewestContent2025Banner = () => {
               </svg>
             </Link>
             <Link 
-              href="/services"
+              to="/services"
               className="inline-flex items-center px-8 py-4 border-2 border-blue-400 text-blue-300 font-semibold rounded-lg hover:bg-blue-400/10 transition-all duration-300"
             >
               View Our Services

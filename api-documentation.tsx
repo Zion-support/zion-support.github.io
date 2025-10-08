@@ -181,20 +181,6 @@ const APIDocumentation: React.FC = () => {
             </Link>
           </div>
         </div>
-      body: 'Content body'
-    }, {
-      headers: {
-        'Authorization': \`Bearer \${apiKey}\`
-      }
-    })
-    console.log(response.data)
-  } catch (error) {
-    console.error('Error:', error)
-  }
-}`}
-            </pre>
-          </div>
-        </div>
         
         <div className="mt-8 text-center">
           <Link
