@@ -34,15 +34,6 @@ const collectPerformanceMetrics = () => {
   return {};
 };
 
-interface ErrorBoundaryProps {
-  children: React.ReactNode;
-}
-
-interface ErrorBoundaryState {
-  hasError: boolean;
-  error: Error | null;
-}
-
 const App: React.FC = () => {
   useEffect(() => {
     // Initialize global error handling
