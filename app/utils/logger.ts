@@ -92,9 +92,6 @@ class Logger {
   warn(message: string, contextOrMetadata?: string | Record<string, unknown>, _metadata?: Record<string, unknown>): void {
     const [context, meta] = this.parseArgs(contextOrMetadata, _metadata)
 
-  warn(message: string, contextOrMetadata?: string | Record<string, unknown>, metadata?: Record<string, unknown>): void {
-    const [context, meta] = this.parseArgs(contextOrMetadata, metadata)
-
     this.log(LogLevel.WARN, message, context, meta)
   }
   /**
@@ -163,12 +160,7 @@ class Logger {
           message: error.message,
           stack: error.stack
         } : undefined
-<<<<<<< HEAD
-      },
-      stack: error?.stack
-=======
       }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-31c3
     }
     this.processLog(entry)
     // Immediately flush fatal errors
