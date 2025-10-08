@@ -11,19 +11,46 @@ import AdvancedSEOOptimizer from './components/AdvancedSEOOptimizer';
 import SEOEnhancer from './components/SEOEnhancer';
 import LoadingSpinner from './components/LoadingSpinner';
 
-// Placeholder component for Home Page
-const HomePage = () => <div>Home Page</div>;
-const PerformanceDashboard = () => null;
-const AdvancedPerformanceMonitor = () => null;
+// Lazy load pages
+const HomePage = lazy(() => import('./pages/HomePage'));
+const PerformanceDashboard = lazy(() => import('./components/PerformanceDashboard'));
+const AdvancedPerformanceMonitor = lazy(() => import('./components/AdvancedPerformanceMonitor'));
+
+// Utils
+import { logger } from './utils/logger';
+import { performanceOptimizer, lazyLoadImages, preloadCriticalResources, collectPerformanceMetrics } from './utils/performanceOptimizer';
 
 const App: React.FC = () => {
   useEffect(() => {
     // Initialize global error handling
-    console.log('App initialized');
+    logger.lifecycle('initialized', 'App');
+
+    // Initialize performance monitoring
+    lazyLoadImages();
+    preloadCriticalResources();
+    performanceOptimizer.init();
+    
+    // Initialize Web Vitals monitoring
+    if (typeof window !== 'undefined' && 'performance' in window) {
+      const pageLoadMetrics = collectPerformanceMetrics();
+      const metrics = performanceOptimizer.getMetrics();
+      if (pageLoadMetrics) {
+        // eslint-disable-next-line no-console
+        console.log('Performance metrics collected:', pageLoadMetrics);
+      }
+      if (metrics) {
+        // eslint-disable-next-line no-console
+        console.log('Performance metrics:', metrics);
+      }
+    }
+    
+    logger.lifecycle('Performance monitoring initialized', 'App');
+    logger.info('🚀 Zion Tech Group App initialized with comprehensive monitoring', { component: 'App' });
   }, []);
 
   const handleError = useCallback((error: Error, errorInfo: any) => {
-    console.error('Application Error:', error);
+    logger.error('Application Error', error, { component: 'ErrorBoundary' });
+    // eslint-disable-next-line no-console
     console.error('Error info:', errorInfo);
   }, []);
 
@@ -77,6 +104,19 @@ const App: React.FC = () => {
                     </Routes>
                   </Suspense>
                 </main>
+
+                {/* Performance Dashboard */}
+                <PerformanceDashboard />
+                
+                {/* Advanced Performance Monitor */}
+                <AdvancedPerformanceMonitor
+                  enableRealTimeMonitoring={process.env['NODE_ENV'] === 'development'}
+                  onMetricsUpdate={(metrics) => {
+                    if (process.env['NODE_ENV'] === 'development') {
+                      logger.performance('Performance Metrics', metrics as unknown as Record<string, unknown>, 'PerformanceMonitor');
+                    }
+                  }}
+                />
               </div>
             </Router>
           </SEOEnhancer>

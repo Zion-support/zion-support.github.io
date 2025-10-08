@@ -4,24 +4,36 @@ import SEOOptimizer from './components/SEOOptimizer';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 
-// Placeholder components
-const EmptyComponent: React.FC = () => null;
+// Fallback component for optional imports
+const FallbackBanner = () => <div className="hidden" />;
 
-// Lazy load heavy components - these may not exist, so make them optional  
-const UnifiedBanner = dynamic(() => import('./components/NewestContent2025Banner').catch(() => ({ default: EmptyComponent })), {
-  loading: () => <div className="animate-pulse bg-gray-200 h-32 rounded-lg"></div>,
-  ssr: false
-});
+// Lazy load heavy components - these may not exist, so provide fallbacks
+const UnifiedBanner = dynamic(
+  () => import('./components/NewestContent2025Banner')
+    .catch(() => ({ default: FallbackBanner })),
+  {
+    loading: () => <div className="animate-pulse bg-gray-200 h-32 rounded-lg"></div>,
+    ssr: false
+  }
+);
 
-const ContentPromotion = dynamic(() => import('./components/UltimateBusinessIntelligence2025Banner').catch(() => ({ default: EmptyComponent })), {
-  loading: () => <div className="animate-pulse bg-gray-200 h-64 rounded-lg"></div>,
-  ssr: false
-});
+const ContentPromotion = dynamic(
+  () => import('./components/UltimateBusinessIntelligence2025Banner')
+    .catch(() => ({ default: FallbackBanner })),
+  {
+    loading: () => <div className="animate-pulse bg-gray-200 h-64 rounded-lg"></div>,
+    ssr: false
+  }
+);
 
-const ContentShowcase = dynamic(() => import('./components/UltimateBusinessIntelligenceShowcase2025').catch(() => ({ default: EmptyComponent })), {
-  loading: () => <div className="animate-pulse bg-gray-200 h-48 rounded-lg"></div>,
-  ssr: false
-});
+const ContentShowcase = dynamic(
+  () => import('./components/UltimateBusinessIntelligenceShowcase2025')
+    .catch(() => ({ default: FallbackBanner })),
+  {
+    loading: () => <div className="animate-pulse bg-gray-200 h-48 rounded-lg"></div>,
+    ssr: false
+  }
+);
 
 export const metadata = {
   title: 'Zion Tech Group — AI Enterprise Transformation & IT Services | 300% ROI Guaranteed',

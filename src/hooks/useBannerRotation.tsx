@@ -5,21 +5,17 @@
 
 import React, { useState, useEffect, useCallback, useMemo } from 'react';
 
-// @ts-ignore - Banner configurations may not have TypeScript definitions
-import bannerConfigurationsModule from '../data/bannerConfigurations';
+// Types
+type RotationStrategy = 'balanced' | 'priority' | 'random';
 
-// Extract exports with fallbacks
-const {
-  BannerConfig = {} as any,
-  RotationStrategy = 'sequential' as any,
-  selectBannersForDisplay = (() => []) as any,
-  selectBalancedBanners = (() => []) as any,
-  trackImpression = (() => {}) as any,
-  trackClick = (() => {}) as any,
-  loadBannerStats = (() => ({})) as any,
-  getRefreshInterval = (() => 5000) as any,
-  getRotationStrategy = (() => 'sequential') as any
-} = bannerConfigurationsModule || {};
+interface BannerConfig {
+  id: string;
+  title: string;
+  description?: string;
+  imageUrl?: string;
+  link?: string;
+  priority?: number;
+}
 
 interface UseBannerRotationOptions {
   strategy?: RotationStrategy;
@@ -38,6 +34,23 @@ interface BannerRotationState {
     ctr: number;
   };
 }
+
+// Stub implementations
+const selectBannersForDisplay = async (strategy: RotationStrategy, maxBanners: number): Promise<BannerConfig[]> => {
+  return [];
+};
+
+const trackImpression = (bannerId: string) => {
+  // Stub
+};
+
+const trackClick = (bannerId: string) => {
+  // Stub
+};
+
+const loadBannerStats = async () => {
+  return { impressions: 0, clicks: 0, ctr: 0 };
+};
 
 export const useBannerRotation = (options: UseBannerRotationOptions = {}) => {
   const {
