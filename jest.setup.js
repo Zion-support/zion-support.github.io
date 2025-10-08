@@ -56,7 +56,22 @@ jest.mock('react-router-dom', () => ({
   }),
   useParams: () => ({}),
   BrowserRouter: ({ children }) => children,
-  MemoryRouter: ({ children }) => children,
+  MemoryRouter: ({ children, initialEntries, initialIndex }) => {
+    const React = require('react');
+    const { createMemoryRouter, RouterProvider } = require('react-router-dom');
+    
+    const router = createMemoryRouter([
+      {
+        path: '/',
+        element: children,
+      }
+    ], {
+      initialEntries: initialEntries || ['/'],
+      initialIndex: initialIndex || 0,
+    });
+    
+    return React.createElement(RouterProvider, { router });
+  },
   RouterProvider: ({ router }) => null,
   Link: ({ children, to, ...props }) => <a href={to} {...props}>{children}</a>,
   NavLink: ({ children, to, ...props }) => <a href={to} {...props}>{children}</a>,
