@@ -154,7 +154,7 @@ export function reportWebVitals(
   if ('PerformanceObserver' in window) {
     const fidObserver = new PerformanceObserver((entryList) => {
       const firstInput = entryList.getEntries()[0] as any;
-//       const fid = firstInput.processingStart - firstInput.startTime;
+      const fid = firstInput.processingStart - firstInput.startTime;
 
       const metric: WebVitalsMetric = {
         name: 'FID',
