@@ -4,21 +4,28 @@ interface Props {
   children: ReactNode;
   fallback?: ReactNode;
   onError?: (error: Error, errorInfo: ErrorInfo) => void;
+  enableErrorReporting?: boolean;
 }
 
 interface State {
   hasError: boolean;
   error?: Error;
   errorInfo?: ErrorInfo;
+  errorId?: string;
+  retryCount: number;
 }
 
 class EnhancedErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
-    this.state = { hasError: false };
+    this.state = { 
+      hasError: false, 
+      retryCount: 0,
+      errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
+    };
   }
 
-  static getDerivedStateFromError(error: Error): State {
+  static getDerivedStateFromError(error: Error): Partial<State> {
     return { hasError: true, error };
   }
 
@@ -41,20 +48,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     // Enhanced error reporting
     if (this.props.enableErrorReporting) {
       this.reportError(error, errorInfo);
-    }
-
-    // Log to console in development
-    if (process.env.NODE_ENV === 'development') {
-      // eslint-disable-next-line no-console
-      console.group('🚨 Error Boundary Caught Error');
-      // eslint-disable-next-line no-console
-      console.error('Error:', error);
-      // eslint-disable-next-line no-console
-      console.error('Error Info:', errorInfo);
-      // eslint-disable-next-line no-console
-      console.error('Component Stack:', errorInfo.componentStack);
-      // eslint-disable-next-line no-console
-      console.groupEnd();
     }
   }
 
@@ -112,13 +105,15 @@ class EnhancedErrorBoundary extends Component<Props, State> {
   };
 
   private getSessionId = (): string => {
-    let _sessionId = sessionStorage.getItem('sessionId');
+    let sessionId = sessionStorage.getItem('sessionId');
     if (!sessionId) {
       sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
       sessionStorage.setItem('sessionId', sessionId);
     }
     return sessionId;
   };
+
+  private maxRetries = 3;
 
   private handleRetry = () => {
     if (this.state.retryCount < this.maxRetries) {
@@ -155,9 +150,9 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     navigator.clipboard.writeText(JSON.stringify(errorDetails, null, 2))
       .then(() => {
         // Show success message
-        const _button = document.getElementById('copy-error-details');
+        const button = document.getElementById('copy-error-details');
         if (button) {
-          const _originalText = button.textContent;
+          const originalText = button.textContent;
           button.textContent = 'Copied!';
           setTimeout(() => {
             button.textContent = originalText;
@@ -170,11 +165,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       });
   };
 
-  // In production, you might want to send this to an error reporting service
-  if (process.env.NODE_ENV === 'production') {
-    // Example: send to error reporting service
-    // errorReportingService.captureException(error, { extra: errorInfo });
-  }
 
   render() {
     if (this.state.hasError) {
@@ -183,8 +173,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       }
 
       const { retryCount, error, errorId } = this.state;
-      const _canRetry = retryCount < this.maxRetries;
-
+      const canRetry = retryCount < this.maxRetries;
       return (
         <div className="min-h-screen flex items-center justify-center bg-gray-50">
           <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-8 text-center">

@@ -1,6 +1,5 @@
 import React, { useEffect, useState, useCallback } from 'react';
 
-
 interface PerformanceMetrics {
   fcp: number | null;
   lcp: number | null;
@@ -68,7 +67,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
               const fidEntry = entry as PerformanceEventTiming;
               setMetrics(prev => ({
                 ...prev,
-                fid: _fidEntry.processingStart - _fidEntry.startTime,
+                fid: fidEntry.processingStart - fidEntry.startTime,
               }));
             }
           });
@@ -124,7 +123,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
 
       setMetrics(prev => ({
         ...prev,
-        fcp: _fcp,
+        fcp,
         ttfb,
         memory,
       }));
@@ -155,16 +154,11 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     );
 
     if (slowResources.length > 0) {
-       
-      // eslint-disable-next-line no-console
-      console.warn(
-        'Slow resources detected:',
-        slowResources.map((r: PerformanceResourceTiming) => ({
-          name: r.name,
-          duration: r.duration,
-          size: r.transferSize,
-        }))
-      );
+      console.log('Slow resources detected:', slowResources.map(r => ({
+        name: r.name,
+        duration: r.duration,
+        size: r.transferSize,
+      })));
     }
   }, []);
 
@@ -219,7 +213,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     }, 5000);
 
     return () => {
-      if (_cleanup) _cleanup();
+      if (cleanup) cleanup();
       clearInterval(interval);
     };
   }, [
@@ -272,7 +266,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     return recommendations;
   }, [metrics]);
 
-  const _recommendations = getPerformanceRecommendations();
+  const recommendations = getPerformanceRecommendations();
 
   if (process.env['NODE_ENV'] === 'development') {
     return (
@@ -293,13 +287,13 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
               : 'N/A'}
           </div>
         </div>
-        {_recommendations.length > 0 && (
+        {recommendations.length > 0 && (
           <div className='mt-2'>
             <h4 className='font-semibold text-xs text-red-600'>
               Recommendations:
             </h4>
             <ul className='text-xs text-red-600'>
-              {_recommendations.map((rec, index) => (
+              {recommendations.map((rec, index) => (
                 <li key={index}>• {rec}</li>
               ))}
             </ul>
