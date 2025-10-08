@@ -170,15 +170,6 @@ class Logger {
   }
 
   /**
-   * End a console group
-   */
-  groupEnd(): void {
-    if (typeof console !== 'undefined' && console.groupEnd) {
-      console.groupEnd();
-    }
-  }
-
-  /**
    * Create a child logger with a specific context
    */
   child(context: string): ContextLogger {
@@ -230,7 +221,7 @@ class Logger {
    * Log a performance metric
    */
   perf(metric: string, value: number, metadata?: Record<string, unknown>): void {
-    this.info(`Performance: ${metric} = ${value}ms`, metadata);
+    this.log(LogLevel.INFO, `[PERF] ${metric}: ${value.toFixed(2)}ms`, undefined, metadata);
   }
 
   /**
@@ -352,33 +343,6 @@ class Logger {
   }
 
   /**
-   * Log a performance metric
-   */
-  perf(metric: string, value: number, metadata?: Record<string, unknown>): void {
-    this.log(LogLevel.DEBUG, `Performance: ${metric}`, 'Performance', {
-      ...metadata,
-      metric,
-      value,
-    });
-  }
-
-  /**
-   * Group related log messages
-   */
-  group(label: string, fn: () => void): void {
-    if (this.config.enableConsole) {
-      console.group(label);
-      try {
-        fn();
-      } finally {
-        console.groupEnd();
-      }
-    } else {
-      fn();
-    }
-  }
-
-  /**
    * Get human-readable log level name
    */
   private getLevelName(level: LogLevel): string {
@@ -395,38 +359,6 @@ class Logger {
         return 'FATAL';
       default:
         return 'UNKNOWN';
-    }
-  }
-
-  /**
-   * Log a performance metric
-   */
-  perf(metric: string, value: number, metadata?: Record<string, unknown>): void {
-    this.log(LogLevel.INFO, `[PERF] ${metric}: ${value.toFixed(2)}ms`, undefined, metadata);
-  }
-
-  /**
-   * Start a console group
-   */
-  group(label: string, fn: () => void): void {
-    if (typeof console.group === 'function') {
-      console.group(label);
-    }
-    try {
-      fn();
-    } finally {
-      if (typeof console.groupEnd === 'function') {
-        console.groupEnd();
-      }
-    }
-  }
-
-  /**
-   * End a console group
-   */
-  groupEnd(): void {
-    if (typeof console.groupEnd === 'function') {
-      console.groupEnd();
     }
   }
 }
