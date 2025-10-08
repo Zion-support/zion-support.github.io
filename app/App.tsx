@@ -66,7 +66,7 @@ const _IoTEdgeComputingPage = lazy(() => import('./iot-edge-computing/page'));
 // Additional Pages
 const _BlogPage = lazy(() => import('./blog-index'));
 const _GuidesPage = lazy(() => import('./guides/page'));
-const _SitemapPage = lazy(() => import('./sitemap-page'));
+const _SitemapPage = lazy(() => import('./sitemap/page'));
 
 // Utils
 import { lazyLoadImages, preloadCriticalResources, collectPerformanceMetrics, performanceOptimizer } from './utils/performanceOptimizer';
