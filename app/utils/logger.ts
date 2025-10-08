@@ -81,26 +81,10 @@ class Logger {
   /**
    * Log an info message
    */
-  info(message: string, contextOrMetadata?: string | Record<string, unknown>, _metadata?: Record<string, unknown>): void {
-    const [context, meta] = this.parseArgs(contextOrMetadata, _metadata)
-
-    this.log(LogLevel.DEBUG, message, context, meta)
-  }
-  /**
-   * Log an info message
-   */
   info(message: string, contextOrMetadata?: string | Record<string, unknown>, metadata?: Record<string, unknown>): void {
     const [context, meta] = this.parseArgs(contextOrMetadata, metadata)
 
     this.log(LogLevel.INFO, message, context, meta)
-  }
-  /**
-   * Log a warning message
-   */
-  warn(message: string, contextOrMetadata?: string | Record<string, unknown>, _metadata?: Record<string, unknown>): void {
-    const [context, meta] = this.parseArgs(contextOrMetadata, _metadata)
-
-    this.log(LogLevel.WARN, message, context, meta)
   }
   /**
    * Log a warning message
@@ -392,26 +376,6 @@ class ContextLogger {
   }
   warn(message: string, metadata?: Record<string, unknown>): void {
     this.logger.warn(message, this.context, metadata)
-  }
-  error(message: string, error?: Error, metadata?: Record<string, unknown>): void {
-    this.logger.error(message, error, this.context, metadata)
-  }
-  fatal(message: string, error?: Error, metadata?: Record<string, unknown>): void {
-    this.logger.fatal(message, error, this.context, metadata)
-  debug(message: string, _metadata?: Record<string, unknown>): void {
-    this.logger.debug(message, this.context, _metadata)
-  }
-  info(message: string, _metadata?: Record<string, unknown>): void {
-    this.logger.info(message, this.context, _metadata)
-  }
-  warn(message: string, _metadata?: Record<string, unknown>): void {
-    this.logger.warn(message, this.context, _metadata)
-  }
-  error(message: string, error?: Error, _metadata?: Record<string, unknown>): void {
-    this.logger.error(message, error, this.context, _metadata)
-  }
-  fatal(message: string, error?: Error, _metadata?: Record<string, unknown>): void {
-    this.logger.fatal(message, error, this.context, _metadata)
   }
   perf(metric: string, value: number, _metadata?: Record<string, unknown>): void {
     this.logger.perf(metric, value, { ..._metadata, context: this.context })
