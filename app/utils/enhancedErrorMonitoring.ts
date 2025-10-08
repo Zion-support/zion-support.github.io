@@ -252,10 +252,10 @@ class EnhancedErrorMonitoring {
   private async sendErrorReport(errorReport: ErrorReport): Promise<void> {
     try {
       await fetch('/api/errors', {
-        method: 'POST'
+        method: 'POST',
         headers: {
           'Content-Type': 'application/json'
-        }
+        },
         body: JSON.stringify(errorReport)
       })
     } catch (error) {
@@ -318,9 +318,9 @@ class EnhancedErrorMonitoring {
     }, {} as Record<string, number>)
 
     return {
-      total: this.errorQueue.length
-      bySeverity
-      byCategory
+      total: this.errorQueue.length,
+      bySeverity,
+      byCategory,
       recent: recent.slice(0, 10)
     }
   }

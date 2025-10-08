@@ -1,7 +1,7 @@
 import { useEffect, useCallback } from 'react';
 
 export const usePerformanceMonitoring = () => {
-  const reportWebVitals = useCallback((metric: Record<string, unknown>) => {
+  const reportWebVitals = useCallback((metric: any) => {
     const body = JSON.stringify(metric);
     const url = '/api/analytics';
 
