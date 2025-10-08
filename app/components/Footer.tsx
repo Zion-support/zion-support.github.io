@@ -4,12 +4,12 @@ import { Phone, Mail, MapPin, Clock, Award, Shield, Zap } from 'lucide-react';
 
 const Footer: React.FC = memo(() => {
   return (
-    <footer className="bg-gray-900 text-white py-12">
+    <footer className="bg-slate-900 text-white py-12 border-t border-cyan-500/20">
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-4 gap-8">
           {/* Company Info */}
           <div>
-            <h3 className="text-2xl font-bold mb-4">Zion Tech Group</h3>
+            <h3 className="text-2xl font-bold mb-4 text-cyan-400">Zion Tech Group</h3>
             <p className="text-gray-300 mb-4">
               Leading provider of enterprise AI solutions, quantum computing, and autonomous
               systems.
@@ -23,7 +23,7 @@ const Footer: React.FC = memo(() => {
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
+            <h4 className="text-lg font-semibold mb-4 text-cyan-400">Quick Links</h4>
             <ul className="space-y-2">
               <li>
                 <Link to="/" className="text-gray-300 hover:text-white transition-colors">
@@ -65,7 +65,7 @@ const Footer: React.FC = memo(() => {
 
           {/* Services */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Services</h4>
+            <h4 className="text-lg font-semibold mb-4 text-cyan-400">Services</h4>
             <ul className="space-y-2 text-gray-300">
               <li>
                 <Link to="/services" className="hover:text-white transition-colors">
@@ -152,7 +152,7 @@ const Footer: React.FC = memo(() => {
 
           {/* Contact */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Contact</h4>
+            <h4 className="text-lg font-semibold mb-4 text-cyan-400">Contact</h4>
             <div className="space-y-2 text-gray-300">
               <p>Email: kleber@ziontechgroup.com</p>
               <p>Phone: +1 (302) 464-0950</p>
@@ -193,7 +193,7 @@ const Footer: React.FC = memo(() => {
 
             {/* Resources */}
             <div>
-              <h4 className="text-lg font-semibold mb-4">Resources</h4>
+              <h4 className="text-lg font-semibold mb-4 text-cyan-400">Resources</h4>
               <ul className="space-y-2">
                 <li>
                   <Link to="/blog" className="text-gray-300 hover:text-white transition-colors">
@@ -232,7 +232,7 @@ const Footer: React.FC = memo(() => {
       </div>
 
       {/* Bottom Footer */}
-      <div className="border-t border-gray-700 py-8">
+      <div className="border-t border-cyan-500/20 py-8">
         <div className="container mx-auto px-4">
           <div className="flex flex-col lg:flex-row justify-between items-center">
             <div className="flex flex-col lg:flex-row items-center space-y-4 lg:space-y-0 lg:space-x-8 mb-4 lg:mb-0">
