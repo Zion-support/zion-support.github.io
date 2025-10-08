@@ -80,7 +80,7 @@ export class Logger {
    * Log error message
    */
   public error(message: string, error?: Error | unknown): void {
-//     const stack = error instanceof Error ? error.stack : undefined;
+    const stack = error instanceof Error ? error.stack : undefined;
     this.log(LogLevel.ERROR, message, error, stack);
   }
 
@@ -88,7 +88,7 @@ export class Logger {
    * Log fatal message
    */
   public fatal(message: string, error?: Error | unknown): void {
-//     const stack = error instanceof Error ? error.stack : undefined;
+    const stack = error instanceof Error ? error.stack : undefined;
     this.log(LogLevel.FATAL, message, error, stack);
   }
 
