@@ -1,11 +1,15 @@
 import { useEffect } from 'react';
-import analytics from '../utils/analytics';
+import { monitorLongTasks } from '../utils/performanceOptimizer';
+import { analytics } from '../utils/analytics';
 
-const usePerformance = () => {
+/**
+ * Hook for monitoring performance metrics
+ */
+const usePerformance = (): void => {
   useEffect(() => {
     // Monitor long tasks
-    const observer = new PerformanceObserver((list) => {
-      list.getEntries().forEach((entry) => {
+    const observer = monitorLongTasks(entries => {
+      entries.forEach(entry => {
         analytics.track(
           'long_task',
           'performance',

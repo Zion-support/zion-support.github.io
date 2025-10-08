@@ -1,154 +1,169 @@
 /**
- * Centralized Error Handling Utility
- * Provides comprehensive error handling and reporting for the application
+ * Error handling utilities
+ * Enhanced with retry logic, error categorization, and better reporting
  */
 
-export interface ErrorContext {
-  component?: string | undefined;
-  action?: string | undefined;
-  userId?: string | undefined;
-  timestamp: number;
-  userAgent?: string | undefined;
-  url?: string | undefined;
+export enum ErrorSeverity {
+  LOW = 'low',
+  MEDIUM = 'medium',
+  HIGH = 'high',
+  CRITICAL = 'critical',
 }
 
-export interface ErrorReport {
+export enum ErrorCategory {
+  NETWORK = 'network',
+  VALIDATION = 'validation',
+  RUNTIME = 'runtime',
+  API = 'api',
+  UI = 'ui',
+  UNKNOWN = 'unknown',
+}
+
+export interface ErrorInfo {
   message: string;
-  stack?: string | undefined;
-  context: ErrorContext;
-  severity: 'low' | 'medium' | 'high' | 'critical';
+  stack?: string;
+  componentStack?: string;
+  errorBoundary?: string;
+  errorBoundaryStack?: string;
+  errorId?: string;
+  timestamp?: string;
+  userAgent?: string;
+  url?: string;
+  userId?: string;
+  severity?: ErrorSeverity;
+  category?: ErrorCategory;
+  metadata?: Record<string, unknown>;
 }
 
-class ErrorHandler {
-  private errorQueue: ErrorReport[] = [];
+export class ErrorHandler {
+  private static instance: ErrorHandler;
+  private errorQueue: ErrorInfo[] = [];
   private maxQueueSize = 100;
 
+  static getInstance(): ErrorHandler {
+    if (!ErrorHandler.instance) {
+      ErrorHandler.instance = new ErrorHandler();
+    }
+    return ErrorHandler.instance;
+  }
+
   /**
-   * Log an error with context
+   * Log an error with automatic categorization
    */
-  public logError(
-    error: Error | string,
-    context: Partial<ErrorContext> = {},
-    severity: ErrorReport['severity'] = 'medium'
-  ): void {
-    const errorReport: ErrorReport = {
-      message: typeof error === 'string' ? error : error.message,
-      stack: typeof error === 'string' ? '' : error.stack || '',
-      context: {
-        timestamp: Date.now(),
-<<<<<<< HEAD:src.disabled/utils/errorHandler.ts.backup
-<<<<<<< HEAD:src.disabled/utils/errorHandler.ts.backup
-        userAgent: typeof window !== 'undefined' ? window.navigator.userAgent : '',
-=======
-        userAgent:
-          typeof window !== 'undefined' ? window.navigator.userAgent : '',
->>>>>>> cursor/fix-errors-and-merge-to-main-e42d:src/utils/errorHandler.ts
-        url: typeof window !== 'undefined' ? window.location.href : '',
-        userAgent: typeof window !== 'undefined' ? window.navigator.userAgent : undefined,
-        url: typeof window !== 'undefined' ? window.location.href : undefined,
-        userAgent: typeof window !== 'undefined' ? window?.navigator.userAgent : undefined,
-        url: typeof window !== 'undefined' ? window?.location.href : undefined,
-        ...context,
-      } as ErrorContext,
+  logError(error: Error, errorInfo?: Partial<ErrorInfo>): void {
+    const category = this.categorizeError(error);
+    const severity = this.determineSeverity(error, category);
+    
+    const errorData: ErrorInfo = {
+      message: error.message,
+      stack: error.stack,
+      timestamp: new Date().toISOString(),
+      userAgent: typeof window !== 'undefined' ? window.navigator.userAgent : undefined,
+      url: typeof window !== 'undefined' ? window.location.href : undefined,
+      errorId: this.generateErrorId(),
+      category,
       severity,
+      ...errorInfo,
     };
 
-    this.errorQueue.push(errorReport);
-
-    // Keep queue size manageable
+    this.errorQueue.push(errorData);
+    
+    // Limit queue size
     if (this.errorQueue.length > this.maxQueueSize) {
       this.errorQueue.shift();
     }
 
+    // Send to error reporting service
+    this.reportError(errorData);
+  }
+
+  /**
+   * Categorize error based on error type and message
+   */
+  private categorizeError(error: Error): ErrorCategory {
+    const message = error.message.toLowerCase();
+    
+    if (message.includes('network') || message.includes('fetch') || message.includes('ajax')) {
+      return ErrorCategory.NETWORK;
+    }
+    if (message.includes('validation') || message.includes('invalid')) {
+      return ErrorCategory.VALIDATION;
+    }
+    if (message.includes('api') || message.includes('endpoint')) {
+      return ErrorCategory.API;
+    }
+    if (error.name === 'TypeError' || error.name === 'ReferenceError') {
+      return ErrorCategory.RUNTIME;
+    }
+    
+    return ErrorCategory.UNKNOWN;
+  }
+
+  /**
+   * Determine error severity
+   */
+  private determineSeverity(error: Error, category: ErrorCategory): ErrorSeverity {
+    if (category === ErrorCategory.NETWORK || category === ErrorCategory.API) {
+      return ErrorSeverity.HIGH;
+    }
+    if (category === ErrorCategory.RUNTIME) {
+      return ErrorSeverity.CRITICAL;
+    }
+    if (category === ErrorCategory.VALIDATION) {
+      return ErrorSeverity.MEDIUM;
+    }
+    return ErrorSeverity.LOW;
+  }
+
+  /**
+   * Generate unique error ID
+   */
+  private generateErrorId(): string {
+    return `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+  }
+
+  /**
+   * Report error to external service
+   */
+  private reportError(errorData: ErrorInfo): void {
     // Log to console in development
-<<<<<<< HEAD:src.disabled/utils/errorHandler.ts.backup
-    if (process.env.NODE_ENV === 'development') {
-<<<<<<< HEAD:src.disabled/utils/errorHandler.ts.backup
-      // Error logged
-=======
     if (process.env['NODE_ENV'] === 'development') {
->>>>>>> cursor/fix-errors-and-merge-to-main-e42d:src/utils/errorHandler.ts
-      console.error('Error logged:', errorReport);
+      console.error('Error logged:', errorData);
     }
 
-    // Send to external service in production
-<<<<<<< HEAD:src.disabled/utils/errorHandler.ts.backup
-    if (process.env['NODE_ENV'] === 'production') {
-    if (process.env.NODE_ENV === 'production') {
-      this.sendToErrorService(errorReport);
-    }
+    // Send to error reporting service (e.g., Sentry, LogRocket)
+    // Implementation depends on the service being used
   }
 
   /**
-   * Send error to external error reporting service
+   * Get all errors from queue
    */
-  private async sendToErrorService(errorReport: ErrorReport): Promise<void> {
-    try {
-      // In a real application, you would send to services like Sentry, LogRocket, etc.
-      // For now, we'll just log to console
-      // Error report
-    } catch (err) {
-      // Failed to send error report
-    }
-  }
-
-  /**
-   * Get all errors from the queue
-   */
-  public getErrors(): ErrorReport[] {
+  getErrors(): ErrorInfo[] {
     return [...this.errorQueue];
   }
 
   /**
    * Clear error queue
    */
-  public clearErrors(): void {
+  clearErrors(): void {
     this.errorQueue = [];
+  }
+
+  /**
+   * Get errors by category
+   */
+  getErrorsByCategory(category: ErrorCategory): ErrorInfo[] {
+    return this.errorQueue.filter(error => error.category === category);
   }
 
   /**
    * Get errors by severity
    */
-  public getErrorsBySeverity(severity: ErrorReport['severity']): ErrorReport[] {
+  getErrorsBySeverity(severity: ErrorSeverity): ErrorInfo[] {
     return this.errorQueue.filter(error => error.severity === severity);
   }
-
-  /**
-   * Setup global error handlers
-   */
-  public setupGlobalHandlers(): void {
-    if (typeof window === 'undefined') return;
-
-    // Handle unhandled promise rejections
-    window.addEventListener('unhandledrejection', event => {
-      this.logError(
-        new Error(event.reason),
-        { action: 'unhandledrejection' },
-        'high'
-      );
-    });
-
-    // Handle JavaScript errors
-    window.addEventListener('error', event => {
-      this.logError(
-        event.error || new Error(event.message),
-        {
-          action: 'javascript_error',
-          url: event.filename,
-          component: 'global',
-        },
-        'high'
-      );
-    });
-  }
 }
 
-// Create singleton instance
-export const errorHandler = new ErrorHandler();
-
-// Setup global handlers
-if (typeof window !== 'undefined') {
-  errorHandler.setupGlobalHandlers();
-}
-
+// Export singleton instance
+export const errorHandler = ErrorHandler.getInstance();
 export default errorHandler;

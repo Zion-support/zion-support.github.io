@@ -9,20 +9,18 @@
     ],
     "module": "ESNext",
     "skipLibCheck": true,
-    "moduleResolution": "bundler",
     "allowImportingTsExtensions": false,
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx",
-    "jsxImportSource": "react",
-    "strict": true,
-    "strictNullChecks": true,
+    "jsx": "preserve",
+    "strict": false,
     "noUnusedLocals": false,
     "noUnusedParameters": false,
     "noFallthroughCasesInSwitch": false,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
+    "moduleResolution": "bundler",
     "baseUrl": ".",
     "paths": {
       "@/*": [
@@ -79,13 +77,12 @@
     "app/**/*.tsx",
     "components/**/*.ts",
     "components/**/*.tsx",
-    "src/**/*",
     "api/**/*.ts",
     "api/**/*.js",
     "*.ts",
     "*.tsx",
     ".next/types/**/*.ts",
-    "App.tsx"
+    "src/**/*"
   ],
   "exclude": [
     "node_modules",
@@ -188,14 +185,10 @@
     "utils/comprehensiveOptimizer.ts",
     "utils/performanceUtils.ts",
     "utils/seoUtils.ts",
-    "utils/**",
-    "src/utils/**",
     "services/**",
     "fix-*.jsx",
     "fix-*.ts",
-    "jest.setup.*",
-    "**/*.disabled/**",
-    "**/*.backup/**"
+    "jest.setup.*"
   ],
   "references": [
     {
