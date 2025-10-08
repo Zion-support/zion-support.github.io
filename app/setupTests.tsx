@@ -32,9 +32,55 @@ Object.defineProperty(window, 'matchMedia', {
   })),
 });
 
-// Mock requestAnimationFrame
-global.requestAnimationFrame = jest.fn(cb => setTimeout(cb, 0));
-global.cancelAnimationFrame = jest.fn(id => clearTimeout(id));
+// Mock IntersectionObserver
+global.IntersectionObserver = class MockIntersectionObserver {
+  root: Element | Document | null = null;
+  rootMargin: string = '';
+  thresholds: ReadonlyArray<number> = [];
+
+  constructor(
+    public callback: IntersectionObserverCallback,
+    options?: IntersectionObserverInit
+  ) {
+    if (options) {
+      this.root = options.root || null;
+      this.rootMargin = options.rootMargin || '0px';
+      this.thresholds = options.threshold
+        ? Array.isArray(options.threshold)
+          ? options.threshold
+          : [options.threshold]
+        : [0];
+    }
+  }
+
+  observe() {}
+  unobserve() {}
+  disconnect() {}
+  takeRecords() {
+    return [];
+  }
+};
+
+// Mock ResizeObserver
+global.ResizeObserver = class MockResizeObserver {
+  constructor(public callback: ResizeObserverCallback) {}
+  observe() {}
+  unobserve() {}
+  disconnect() {}
+};
+
+// Mock performance API
+Object.defineProperty(window, 'performance', {
+  writable: true,
+  value: {
+    now: jest.fn(() => Date.now()),
+    getEntriesByType: jest.fn(() => []),
+    mark: jest.fn(),
+    measure: jest.fn(),
+    clearMarks: jest.fn(),
+    clearMeasures: jest.fn(),
+  },
+});
 
 // Mock localStorage
 const localStorageMock = {
@@ -58,12 +104,14 @@ Object.defineProperty(window, 'sessionStorage', {
   value: sessionStorageMock,
 });
 
-// Mock fetch
-global.fetch = jest.fn();
+// Mock TextEncoder and TextDecoder for Node.js environment
+if (typeof TextEncoder === 'undefined') {
+  global.TextEncoder = require('util').TextEncoder;
+  global.TextDecoder = require('util').TextDecoder;
+}
 
-// Mock console methods for cleaner test output
-const originalConsoleWarn = console.warn;
-const originalConsoleInfo = console.info;
+// Mock URL for Node.js environment
+global.URL = URL;
 
 // Mock PerformanceObserver
 global.PerformanceObserver = class MockPerformanceObserver {
@@ -78,14 +126,6 @@ global.PerformanceObserver = class MockPerformanceObserver {
 };
 
 // Suppress JSDOM navigation warnings
-const originalConsoleError = console.error;
-console.error = (...args) => {
-  if (args[0] && args[0].type === 'not implemented' && args[0].message?.includes('navigation')) {
-    return; // Suppress JSDOM navigation warnings
-  }
-  originalConsoleError.apply(console, args);
-};
-
 // Mock window.location
 delete (window as unknown as Record<string, unknown>).location;
 (window as unknown as Record<string, unknown>).location = {
@@ -101,12 +141,4 @@ delete (window as unknown as Record<string, unknown>).location;
   reload: jest.fn(),
   assign: jest.fn(),
   replace: jest.fn(),
-};
-
-console.info = (...args) => {
-  const message = args[0]?.toString?.() || '';
-  if (message.includes('ReactDOM.render is no longer supported')) {
-    return;
-  }
-  originalConsoleInfo(...args);
 };
