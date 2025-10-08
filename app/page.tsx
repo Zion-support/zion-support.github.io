@@ -49,7 +49,8 @@ const HomePage: React.FC = () => {
       {/* Skip to main content for accessibility */}
       <a
         href="#main-content"
-        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-indigo-600 text-white px-4 py-2 rounded-md z-50"
+        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-indigo-600 text-white px-4 py-2 rounded-md z-50 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-slate-900"
+        aria-label="Skip to main content"
       >
         Skip to main content
       </a>
@@ -231,25 +232,6 @@ const HomePage: React.FC = () => {
                 </div>
               </article>
             </Suspense>
-<<<<<<< HEAD
-
-            <Suspense fallback={<ServiceCardSkeleton />}>
-              <article className="bg-white rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
-                <div className="text-5xl mb-6 text-center">🔄</div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">Autonomous Systems</h3>
-                <p className="text-gray-600 mb-6 text-center leading-relaxed">
-                  Self-managing and self-optimizing systems for enterprise operations and infrastructure.
-                </p>
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-green-600 mb-2">Starting at $2,500/month</div>
-                  <a href="/autonomous-systems" className="text-green-600 hover:text-green-700 font-medium">
-                    Learn More →
-                  </a>
-                </div>
-              </article>
-            </Suspense>
-=======
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-1ed2
           </div>
 
           {/* Additional Services Grid */}
