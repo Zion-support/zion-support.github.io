@@ -50,7 +50,7 @@ class PerformanceMonitor {
       const observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           if (entry.name === name) {
-            (this.metrics as any)[metricKey] = entry.startTime;
+            (this.metrics[metricKey] as number) = entry.startTime;
             this.logMetric(metricKey as string, entry.startTime);
           }
         }
@@ -236,13 +236,16 @@ class PerformanceMonitor {
     const metrics = this.getMetrics();
     
     return `
-      Performance Report (Score: ${score}/100):
-      - First Contentful Paint: ${metrics.fcp?.toFixed(2)}ms
-      - Largest Contentful Paint: ${metrics.lcp?.toFixed(2)}ms
-      - First Input Delay: ${metrics.fid?.toFixed(2)}ms
-      - Cumulative Layout Shift: ${metrics.cls?.toFixed(4)}
-      - Time to Interactive: ${metrics.tti?.toFixed(2)}ms
-      - Total Blocking Time: ${metrics.tbt?.toFixed(2)}ms
+Performance Report
+==================
+Performance Score: ${score}/100
+
+Core Web Vitals:
+- First Contentful Paint (FCP): ${metrics.fcp ? metrics.fcp.toFixed(2) : "N/A"}ms
+- Largest Contentful Paint (LCP): ${metrics.lcp ? metrics.lcp.toFixed(2) : "N/A"}ms
+- First Input Delay (FID): ${metrics.fid ? metrics.fid.toFixed(2) : "N/A"}ms
+- Cumulative Layout Shift (CLS): ${metrics.cls ? metrics.cls.toFixed(4) : "N/A"}
+- Time to First Byte (TTFB): ${metrics.ttfb ? metrics.ttfb.toFixed(2) : "N/A"}ms
     `;
   }
 }
