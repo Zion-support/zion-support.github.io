@@ -17,18 +17,13 @@ const ThrowError = ({ shouldThrow }: { shouldThrow: boolean }) => {
 
 describe('AdvancedErrorBoundary', () => {
   it('renders children when there is no error', () => {
-    const router = createMemoryRouter([
-      {
-        path: '/',
-        element: (
-          <AdvancedErrorBoundary>
-            <div>Test content</div>
-          </AdvancedErrorBoundary>
-        ),
-      },
-    ]);
-
-    render(<RouterProvider router={router} />);
+    render(
+      <MemoryRouter>
+        <AdvancedErrorBoundary>
+          <div>Test content</div>
+        </AdvancedErrorBoundary>
+      </MemoryRouter>
+    );
 
     expect(screen.getByText('Test content')).toBeInTheDocument();
   });
@@ -38,18 +33,13 @@ describe('AdvancedErrorBoundary', () => {
       .spyOn(console, 'error')
       .mockImplementation(() => {});
 
-    const router = createMemoryRouter([
-      {
-        path: '/',
-        element: (
-          <AdvancedErrorBoundary enableRetry={true}>
-            <ThrowError shouldThrow={true} />
-          </AdvancedErrorBoundary>
-        ),
-      },
-    ]);
-
-    render(<RouterProvider router={router} />);
+    render(
+      <MemoryRouter>
+        <AdvancedErrorBoundary enableRetry={true}>
+          <ThrowError shouldThrow={true} />
+        </AdvancedErrorBoundary>
+      </MemoryRouter>
+    );
 
     expect(screen.getByText('Oops! Something went wrong')).toBeInTheDocument();
     expect(screen.getByText(/Try Again/)).toBeInTheDocument();
