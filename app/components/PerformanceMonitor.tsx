@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useEffect, useState, memo } from 'react';
+import React, { useEffect } from 'react';
 
 interface PerformanceMetrics {
   fcp?: number;
@@ -118,4 +119,4 @@ const PerformanceMonitor: React.FC = () => {
   );
 };
 
-export default memo(PerformanceMonitor);export default PerformanceMonitor;
+export default memo(PerformanceMonitor);

@@ -98,9 +98,177 @@ class PerformanceOptimizer {
       entries.forEach((entry: any) => {
         if (!entry.hadRecentInput) {
           clsValue += entry.value;
+          this.metrics.cls = clsValue;
+        }
+      });
+    });
+    observer.observe({ entryTypes: ['layout-shift'] });
+    this.observers.push(observer);
+  }
+
+  /**
+   * Setup performance observers for Core Web Vitals
+   */
+  private async setupPerformanceObservers(): Promise<void> {
+    if (typeof window === 'undefined' || !('PerformanceObserver' in window)) return;
+
+    // First Contentful Paint (FCP)
+    try {
+      const fcpObserver = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        const fcpEntry = entries.find(entry => entry.name === 'first-contentful-paint');
+        if (fcpEntry) {
+          this.metrics.fcp = fcpEntry.startTime;
+        }
+      });
+      fcpObserver.observe({ entryTypes: ['paint'] });
+      this.observers.push(fcpObserver);
+    } catch (error) {
+      console.warn('FCP observer setup failed:', error);
+    }
+
+    // Largest Contentful Paint (LCP)
+    try {
+      const lcpObserver = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        const lastEntry = entries[entries.length - 1];
+        if (lastEntry) {
+          this.metrics.lcp = lastEntry.startTime;
+        }
+      });
+      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
+      this.observers.push(lcpObserver);
+    } catch (error) {
+      console.warn('LCP observer setup failed:', error);
+    }
+
+    // First Input Delay (FID)
+    try {
+      const fidObserver = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+      entries.forEach((entry: PerformanceEventTiming) => {
+        if (entry.processingStart && entry.startTime) {
+          this.metrics.fid = entry.processingStart - entry.startTime;
+        }
+      });
+      });
+      fidObserver.observe({ entryTypes: ['first-input'] });
+      this.observers.push(fidObserver);
+    } catch (error) {
+      console.warn('FID observer setup failed:', error);
+    }
+
+    // Cumulative Layout Shift (CLS)
+    try {
+      let clsValue = 0;
+      const clsObserver = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+      entries.forEach((entry: any) => {
+        if (!entry.hadRecentInput) {
+          clsValue += entry.value;
         }
       });
       this.metrics.cls = clsValue;
+        this.metrics.cls = clsValue;
+      });
+      clsObserver.observe({ entryTypes: ['layout-shift'] });
+      this.observers.push(clsObserver);
+    } catch (error) {
+      console.warn('CLS observer setup failed:', error);
+    }
+
+    // Time to First Byte (TTFB)
+    try {
+      const navigationObserver = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        entries.forEach((entry: PerformanceNavigationTiming) => {
+          this.metrics.ttfb = entry.responseStart - entry.requestStart;
+        });
+      });
+      navigationObserver.observe({ entryTypes: ['navigation'] });
+      this.observers.push(navigationObserver);
+    } catch (error) {
+      console.warn('TTFB observer setup failed:', error);
+    }
+  }
+
+  /**
+   * Start performance monitoring
+   */
+  private startMonitoring(): void {
+    if (this.isMonitoring) return;
+    this.isMonitoring = true;
+
+    // Monitor memory usage
+    if (this.config.enableMonitoring) {
+      setInterval(() => {
+        this.checkMemoryUsage();
+      }, 5000);
+    }
+  }
+
+  /**
+   * Apply performance optimizations
+   */
+  private applyOptimizations(): void {
+    if (typeof window === 'undefined') return;
+
+    // Lazy load images
+    lazyLoadImages();
+
+    // Preload critical resources
+    preloadCriticalResources();
+
+    // Optimize scroll performance
+    optimizeScrollPerformance();
+
+    // Optimize animations
+    this.optimizeAnimations();
+
+    // Optimize images
+    this.optimizeImages();
+  }
+
+  /**
+   * Optimize animations for better performance
+   */
+  private optimizeAnimations(): void {
+    if (typeof document === 'undefined') return;
+
+    const style = document.createElement('style');
+    style.textContent = `
+      * {
+        will-change: auto;
+      }
+      
+      .animate {
+        will-change: transform, opacity;
+      }
+      
+      .animate:hover {
+        will-change: auto;
+      }
+    `;
+    document.head.appendChild(style);
+  }
+
+  /**
+   * Optimize images for better loading
+   */
+  private optimizeImages(): void {
+    if (typeof document === 'undefined') return;
+
+    const images = document.querySelectorAll('img');
+    images.forEach((img) => {
+      // Add loading="lazy" for images below the fold
+      if (!img.hasAttribute('loading')) {
+        img.setAttribute('loading', 'lazy');
+      }
+
+      // Add decoding="async" for better performance
+      if (!img.hasAttribute('decoding')) {
+        img.setAttribute('decoding', 'async');
+      }
     });
     observer.observe({ entryTypes: ['layout-shift'] });
     this.observers.push(observer);
@@ -151,7 +319,7 @@ class PerformanceOptimizer {
             const img = entry.target as HTMLImageElement;
             const src = img.getAttribute('data-src');
             if (src) {
-              img.src = src;
+              img['src'] = src;
               img.removeAttribute('data-src');
               imageObserver.unobserve(img);
             }
@@ -165,7 +333,7 @@ class PerformanceOptimizer {
       images.forEach((img) => {
         const src = img.getAttribute('data-src');
         if (src) {
-          (img as HTMLImageElement).src = src;
+          (img as HTMLImageElement)['src'] = src;
           img.removeAttribute('data-src');
         }
       });
@@ -225,40 +393,6 @@ class PerformanceOptimizer {
       response: navigation.responseEnd - navigation.responseStart,
       processing: navigation.domComplete - navigation.responseEnd
     };
-  }
-
-  startMark(markName: string): void {
-    if (typeof window === 'undefined' || !performance.mark) return;
-    try {
-      performance.mark(markName);
-    } catch (error) {
-      console.warn(`Failed to create performance mark: ${markName}`, error);
-    }
-  }
-
-  endMark(markName: string): number | undefined {
-    if (typeof window === 'undefined' || !performance.mark || !performance.measure) return undefined;
-    try {
-      const endMarkName = `${markName}-end`;
-      performance.mark(endMarkName);
-      const measureName = `${markName}-measure`;
-      performance.measure(measureName, markName, endMarkName);
-      
-      const measures = performance.getEntriesByName(measureName);
-      if (measures.length > 0) {
-        const duration = measures[0].duration;
-        
-        // Clean up marks and measures
-        performance.clearMarks(markName);
-        performance.clearMarks(endMarkName);
-        performance.clearMeasures(measureName);
-        
-        return duration;
-      }
-    } catch (error) {
-      console.warn(`Failed to measure performance mark: ${markName}`, error);
-    }
-    return undefined;
   }
 
   cleanup() {
