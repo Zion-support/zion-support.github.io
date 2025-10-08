@@ -234,12 +234,12 @@ class PerformanceMonitor {
     
     return `
 Performance Report:
-- Score: ${score}/100
-- FCP: ${metrics.fcp?.toFixed(2)}ms
-- LCP: ${metrics.lcp?.toFixed(2)}ms
-- FID: ${metrics.fid?.toFixed(2)}ms
-- CLS: ${metrics.cls?.toFixed(3)}
-- TTFB: ${metrics.ttfb?.toFixed(2)}ms
-    `;
+Score: ${score}
+- First Contentful Paint: ${metrics.fcp}ms
+- Largest Contentful Paint: ${metrics.lcp}ms
+- Time to Interactive: ${metrics.tti}ms
+`;
   }
 }
+
+export default new PerformanceMonitorUtil();

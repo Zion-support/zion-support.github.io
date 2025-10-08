@@ -1,23 +1,23 @@
 'use client';
 
-import React, { Suspense, lazy, useEffect } from 'react';
+import React, { Suspense, lazy, useEffect, useCallback } from 'react';
 import { HelmetProvider } from 'react-helmet-async';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 // Components
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
-import PerformanceDashboard from './components/PerformanceDashboard';
-import AdvancedPerformanceMonitor from './components/AdvancedPerformanceMonitor';
 import AdvancedErrorBoundary from './components/AdvancedErrorBoundary';
-import SEOEnhancer from './components/SEOEnhancer';
 import AdvancedSEOOptimizer from './components/AdvancedSEOOptimizer';
+import AdvancedPerformanceMonitor from './components/AdvancedPerformanceMonitor';
+import SEOEnhancer from './components/SEOEnhancer';
+import PerformanceDashboard from './components/PerformanceDashboard';
 import LoadingSpinner from './components/LoadingSpinner';
 
 // Lazy load pages for better performance
 const HomePage = lazy(() => import('./page'));
 
 // Utils
-import { lazyLoadImages, preloadCriticalResources, collectPerformanceMetrics, performanceOptimizer } from './utils/performanceOptimizer';
+import { preloadCriticalResources, performanceOptimizer } from './utils/performanceOptimizer';
 import { logger } from './utils/logger';
 
 // Styles
@@ -29,24 +29,25 @@ const App: React.FC = () => {
     logger.lifecycle('initialized', 'App');
 
     // Initialize performance monitoring
-    lazyLoadImages();
-    preloadCriticalResources();
     performanceOptimizer.init();
     
     // Initialize Web Vitals monitoring
     if (typeof window !== 'undefined' && 'performance' in window) {
-      const pageLoadMetrics = collectPerformanceMetrics();
       const metrics = performanceOptimizer.getMetrics();
-      if (pageLoadMetrics) {
-        console.log('Performance metrics collected:', pageLoadMetrics);
-      }
       if (metrics) {
         console.log('Performance metrics:', metrics);
       }
     }
+
+    // Preload critical resources
+    preloadCriticalResources();
     
     logger.lifecycle('performance monitoring initialized', 'App');
     logger.info('🚀 Zion Tech Group App initialized with comprehensive monitoring', 'App');
+  }, []);
+
+  const handleError = useCallback((error: Error, errorInfo: any) => {
+    logger.error('Application Error', 'ErrorBoundary', { error: error.message, errorInfo });
   }, []);
 
   return (
@@ -54,9 +55,7 @@ const App: React.FC = () => {
       <AdvancedErrorBoundary
         enableErrorReporting={true}
         enableRetry={true}
-        onError={(error, errorInfo) => {
-          logger.error('Application Error', 'ErrorBoundary', { error: error.message, errorInfo });
-        }}
+        onError={handleError}
       >
         <AccessibilityEnhancer>
           <SEOEnhancer
@@ -93,6 +92,24 @@ const App: React.FC = () => {
             />
             <Router>
               <div className="App">
+                {/* Skip to main content link for accessibility */}
+                <a
+                  href="#main-content"
+                  className="skip-link sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    const main =
+                      document.querySelector('main') ||
+                      document.querySelector('#main-content');
+                    if (main) {
+                      (main as HTMLElement).focus();
+                      main.scrollIntoView({ behavior: 'smooth' });
+                    }
+                  }}
+                >
+                  Skip to main content
+                </a>
+
                 <main id="main-content">
                   <Suspense fallback={<LoadingSpinner />}>
                     <Routes>
