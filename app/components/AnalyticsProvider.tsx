@@ -130,7 +130,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
 
     if (enableDebug) {
        
-      // eslint-disable-next-line no-console
+       
     console.error('Analytics Error:', error, context);
     }
 
