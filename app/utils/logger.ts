@@ -108,7 +108,7 @@ class Logger {
     message: string,
     errorOrContextOrMetadata?: Error | string | Record<string, unknown>,
     contextOrMetadata?: string | Record<string, unknown>,
-    metadata?: Record<string, unknown>
+    _metadata?: Record<string, unknown>
   ): void {
     let error: Error | undefined;
     let context: string | undefined;
@@ -116,7 +116,7 @@ class Logger {
 
     if (errorOrContextOrMetadata instanceof Error) {
       error = errorOrContextOrMetadata;
-      [context, meta] = this.parseArgs(contextOrMetadata, metadata);
+      [context, meta] = this.parseArgs(contextOrMetadata, _metadata);
     } else {
       [context, meta] = this.parseArgs(errorOrContextOrMetadata, contextOrMetadata as Record<string, unknown> | undefined);
     }
@@ -147,7 +147,7 @@ class Logger {
     message: string,
     errorOrContextOrMetadata?: Error | string | Record<string, unknown>,
     contextOrMetadata?: string | Record<string, unknown>,
-    metadata?: Record<string, unknown>
+    _metadata?: Record<string, unknown>
   ): void {
     let error: Error | undefined;
     let context: string | undefined;
@@ -155,7 +155,7 @@ class Logger {
 
     if (errorOrContextOrMetadata instanceof Error) {
       error = errorOrContextOrMetadata;
-      [context, meta] = this.parseArgs(contextOrMetadata, metadata);
+      [context, meta] = this.parseArgs(contextOrMetadata, _metadata);
     } else {
       [context, meta] = this.parseArgs(errorOrContextOrMetadata, contextOrMetadata as Record<string, unknown> | undefined);
     }
@@ -423,15 +423,15 @@ class ContextLogger {
     this.logger.fatal(message, error, this.context, metadata);
   }
 
-  perf(metric: string, value: number, metadata?: Record<string, unknown>): void {
-    this.logger.perf(metric, value, { ...metadata, context: this.context });
+  perf(metric: string, value: number, _metadata?: Record<string, unknown>): void {
+    this.logger.perf(metric, value, { ..._metadata, context: this.context });
   }
 
-  lifecycle(message: string, metadata?: Record<string, unknown>): void {
+  lifecycle(message: string, _metadata?: Record<string, unknown>): void {
     this.logger.lifecycle(message, this.context);
   }
 
-  performance(message: string, data: unknown, metadata?: Record<string, unknown>): void {
+  performance(message: string, data: unknown, _metadata?: Record<string, unknown>): void {
     this.logger.performance(message, data, this.context);
   }
 

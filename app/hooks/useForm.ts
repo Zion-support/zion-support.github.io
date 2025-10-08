@@ -145,14 +145,14 @@ export function useForm<T extends Record<string, unknown>>({
       setIsSubmitting(true);
 
       try {
-        await onSubmit(values);
+        await _onSubmit(values);
       } catch (error) {
         console.error('Form submission error:', error);
       } finally {
         setIsSubmitting(false);
       }
     },
-    [values, validateAllFields, onSubmit]
+    [values, validateAllFields, _onSubmit]
   );
 
   // Set field value programmatically

@@ -5,7 +5,6 @@
 
 import React from 'react';
 import { useEffect, useCallback, useRef } from 'react';
-import { performanceOptimizer } from '../utils/performanceOptimizer';
 import { errorTracker } from '../utils/enhancedErrorTracking';
 import { analytics } from '../utils/enhancedAnalytics';
 

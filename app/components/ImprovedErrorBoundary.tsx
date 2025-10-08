@@ -4,8 +4,7 @@
  */
 
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-
-import { Link } from 'react-router-dom';import monitoring from '../utils/monitoring';
+import monitoring from '../utils/monitoring';
 
 interface Props {
   children: ReactNode;

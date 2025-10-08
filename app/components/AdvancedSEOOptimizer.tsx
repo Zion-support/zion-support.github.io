@@ -1,6 +1,5 @@
 import React, { useEffect, useCallback, useRef } from 'react';
-
-import { Link } from 'react-router-dom';import { Helmet } from 'react-helmet-async';
+import { Helmet } from 'react-helmet-async';
 
 interface SEOData {
   title: string;
