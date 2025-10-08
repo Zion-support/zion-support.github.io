@@ -162,34 +162,6 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     }
   }, [seoData]);
 
-<<<<<<< HEAD
-
-  const _trackPageView = (config: SEOData) => {
-    if (typeof window !== 'undefined' && 'gtag' in window) {
-      (window as unknown as { gtag: (command: string, targetId: string, config: Record<string, unknown>) => void }).gtag('config', 'GA_MEASUREMENT_ID', {
-        page_title: config.title,
-        page_location: config.canonicalUrl,
-      });
-    }
-  };
-
-  const _trackPerformanceMetrics = () => {
-    if (typeof window !== 'undefined' && 'performance' in window) {
-      window.addEventListener('load', () => {
-        const perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-        if (perfData && typeof window !== 'undefined' && 'gtag' in window) {
-          (window as unknown as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag('event', 'page_load_performance', {
-            event_category: 'Performance',
-            event_label: 'Page Load',
-            value: Math.round(perfData.loadEventEnd - perfData.fetchStart),
-          });
-        }
-      });
-    }
-  };
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-f58f
-
   return (
     <Helmet>
       {/* Basic Meta Tags */}
