@@ -28,12 +28,12 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   const [performanceScore, setPerformanceScore] = useState(100);
 
   useEffect(() => {
-    const _reportWebVitals = (_metric: { name: string; value: number }) => {
-      // Log to console in development (only on client side)
-      if (typeof window !== 'undefined' && enableConsoleLogging) {
-        logger.info('Web Vital captured', { name: _metric.name, value: _metric.value });
-      }
-    };
+    // const _reportWebVitals = (_metric: { name: string; value: number }) => {
+    //   // Log to console in development (only on client side)
+    //   if (typeof window !== 'undefined' && enableConsoleLogging) {
+    //     logger.info('Web Vital captured', { name: _metric.name, value: _metric.value });
+    //   }
+    // };
 
     // Monitor Core Web Vitals
     const navigation = performance.getEntriesByType('navigation')[0] as
