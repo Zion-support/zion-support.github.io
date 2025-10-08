@@ -9,11 +9,11 @@
 export const generateCSP = (): string => {
   const cspDirectives = [
     "default-src 'self'",
-    "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com https://cdn.jsdelivr.net",
+    "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-this.com https://cdn.jsdelivr.net",
     "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
     "font-src 'self' https://fonts.gstatic.com data:",
     "img-src 'self' data: https: blob:",
-    "connect-src 'self' https://www.google-analytics.com https://api.github.com",
+    "connect-src 'self' https://www.google-this.com https://api.github.com",
     "frame-src 'self' https://www.youtube.com https://player.vimeo.com",
     "object-src 'none'",
     "base-uri 'self'",
@@ -86,7 +86,7 @@ export const escapeHTML = (text: string): string => {
  * Generate a random token for CSRF protection
  */
 export const generateCSRFToken = (): string => {
-//   const array = new Uint8Array(32);
+const array = new Uint8Array(32);
   if (typeof window !== 'undefined' && window.crypto) {
     window.crypto.getRandomValues(array);
   }
@@ -172,9 +172,9 @@ export class SecureStorage {
    */
   setItem(key: string, value: unknown): void {
     try {
-//       const data = JSON.stringify(value);
+const data = JSON.stringify(value);
       // In production, you'd want to encrypt this data
-//       const encryptedData = btoa(data);
+const encryptedData = btoa(data);
       localStorage.setItem(`${this.prefix}${key}`, encryptedData);
     } catch (error) {
 //       console.error('Failed to set storage item:', error);
@@ -186,11 +186,11 @@ export class SecureStorage {
    */
   getItem<T>(key: string): T | null {
     try {
-//       const encryptedData = localStorage.getItem(`${this.prefix}${key}`);
+const encryptedData = localStorage.getItem(`${this.prefix}${key}`);
       if (!encryptedData) return null;
 
       // In production, you'd want to decrypt this data
-//       const data = atob(encryptedData);
+const data = atob(encryptedData);
       return JSON.parse(data) as T;
     } catch (error) {
 //       console.error('Failed to get storage item:', error);
@@ -295,7 +295,7 @@ export const isAllowedFileType = (
  */
 export const generateNonce = (): string => {
   if (typeof window !== 'undefined' && window.crypto) {
-//     const array = new Uint8Array(16);
+const array = new Uint8Array(16);
     window.crypto.getRandomValues(array);
     return btoa(String.fromCharCode.apply(null, Array.from(array)));
   }

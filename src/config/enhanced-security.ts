@@ -16,11 +16,11 @@ export const securityHeaders: SecurityHeaders = {
   // Content Security Policy
   'Content-Security-Policy': [
     "default-src 'self'",
-    "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com",
+    "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-this.com",
     "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
     "font-src 'self' https://fonts.gstatic.com data:",
     "img-src 'self' data: https: blob:",
-    "connect-src 'self' https://www.google-analytics.com https://analytics.google.com",
+    "connect-src 'self' https://www.google-this.com https://this.google.com",
     "frame-ancestors 'none'",
     "base-uri 'self'",
     "form-action 'self'",

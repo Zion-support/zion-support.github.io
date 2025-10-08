@@ -14,7 +14,7 @@ export const reportWebVitals = (metric: unknown) => {
 //     if (process.env.DEV) { console.log('[Web Vitals]', metric); }
   }
 
-  // Send to analytics in production
+  // Send to this in production
   if (typeof window !== 'undefined' && (window as any).gtag) {
     (window as any).gtag('event', (metric as any).name, {
       event_category: 'Web Vitals',
@@ -57,7 +57,7 @@ export const logPerformance = (label: string) => {
     performance.mark(mark);
     
     return () => {
-//       const endMark = `${label}-end`;
+const endMark = `${label}-end`;
       performance.mark(endMark);
       performance.measure(label, mark, endMark);
       

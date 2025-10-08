@@ -1,5 +1,5 @@
 // Performance monitoring setup
-import analytics from './utils/analytics';
+import { PerformanceMonitor } from './utils/performanceMonitor';
 import ErrorHandler from './utils/errorHandler';
 import { performanceOptimizer } from '../app/utils/performanceOptimizer';
 import { logger } from './utils/logger';
@@ -31,4 +31,4 @@ function initializeMonitoring() {
 // Initialize monitoring on load
 initializeMonitoring();
 
-export { analytics, errorHandler, initializeMonitoring, ErrorHandler, performanceOptimizer };
+export { errorHandler, initializeMonitoring, ErrorHandler, performanceOptimizer };
