@@ -31,7 +31,7 @@ async function handler(req, res) {
       'data',
       'newsletter-subscriptions.json'
     );
-
+    
     let existing = [];
 
     try {
@@ -43,9 +43,9 @@ async function handler(req, res) {
 
     existing.push({
       email,
-      name,
+      name: name || '',
       source,
-      subscribedAt: new Date().toISOString(),
+      subscribedAt: new Date().toISOString()
     });
 
     fs.writeFileSync(file, JSON.stringify(existing, null, 2));

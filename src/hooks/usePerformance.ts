@@ -7,8 +7,8 @@ export const usePerformance = () => {
       return;
     }
 
-    const observer = new PerformanceObserver(list => {
-      list.getEntries().forEach(entry => {
+    const observer = new PerformanceObserver((list) => {
+      list.getEntries().forEach((entry) => {
         analytics.track(
           'long_task',
           'performance',

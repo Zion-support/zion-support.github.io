@@ -101,11 +101,19 @@ export function useEnhancedPerformance(
   const measureOperation = useCallback(
     (operationName: string) => {
       const markName = `${component}-${operationName}`;
+<<<<<<< HEAD
       const startTime = performance.now();
 
       return {
         end: () => {
           const duration = performance.now() - startTime;
+=======
+      // Performance marking - startMark not available
+
+      return {
+        end: () => {
+          const duration = 0; // Performance marking - endMark not available
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-fd0a
           if (duration && trackPerformance) {
             analytics.trackPerformance(
               `${component}-${operationName}`,
@@ -119,13 +127,3 @@ export function useEnhancedPerformance(
     },
     [component, trackPerformance]
   );
-
-  return {
-    trackError,
-    trackUserAction,
-    measureOperation,
-    renderCount: renderCountRef.current,
-  };
-}
-
-export default useEnhancedPerformance;

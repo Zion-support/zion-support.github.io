@@ -23,9 +23,9 @@ export default function NotFound() {
     },
     {
       title: 'About Us',
-      description: 'Learn about Zion Tech Group and our mission',
+      description: 'Learn more about Zion Tech Group',
       href: '/about',
-      icon: '🏢'
+      icon: '👥'
     },
     {
       title: 'Case Studies',
@@ -54,6 +54,7 @@ export default function NotFound() {
 
         {/* Error Message */}
         <div className="mb-12">
+<<<<<<< HEAD
           <h2 className="text-4xl font-bold text-white mb-4">
             Page Not Found
           </h2>
