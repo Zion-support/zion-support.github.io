@@ -289,6 +289,117 @@ const ITServicesPage: React.FC = () => {
       marketPrice: '$2,500-6,000/month',
       category: 'Asset Management',
       technologies: ['ServiceNow', 'Lansweeper', 'Asset Panda', 'Flexera', 'Microsoft Intune']
+    },
+    // Additional Comprehensive IT Services
+    {
+      title: 'AI Infrastructure Setup',
+      description: 'Complete AI/ML infrastructure deployment with GPU clusters, model serving, and MLOps pipelines.',
+      icon: '🤖',
+      price: 'Starting at $4,500/month',
+      features: ['GPU cluster setup', 'MLOps pipelines', 'Model serving', 'Data preprocessing', 'Model monitoring'],
+      benefits: ['Accelerate AI development', 'Scale ML operations', 'Reduce infrastructure costs'],
+      marketPrice: '$7,000-15,000/month',
+      category: 'AI Infrastructure',
+      technologies: ['Kubernetes', 'TensorFlow', 'PyTorch', 'Kubeflow', 'MLflow']
+    },
+    {
+      title: 'Blockchain Development',
+      description: 'Smart contract development, DeFi protocols, and blockchain infrastructure setup.',
+      icon: '⛓️',
+      price: 'Starting at $5,000/month',
+      features: ['Smart contracts', 'DeFi protocols', 'NFT marketplaces', 'Blockchain infrastructure', 'Security auditing'],
+      benefits: ['Enable decentralized solutions', 'Reduce transaction costs', 'Improve transparency'],
+      marketPrice: '$8,000-20,000/month',
+      category: 'Blockchain',
+      technologies: ['Ethereum', 'Solidity', 'Web3.js', 'IPFS', 'Hardhat']
+    },
+    {
+      title: 'IoT Solutions Development',
+      description: 'End-to-end IoT solutions including device management, data collection, and analytics.',
+      icon: '🌐',
+      price: 'Starting at $3,200/month',
+      features: ['Device management', 'Data collection', 'Real-time analytics', 'Edge computing', 'Security protocols'],
+      benefits: ['Enable smart operations', 'Improve efficiency', 'Reduce manual monitoring'],
+      marketPrice: '$5,000-12,000/month',
+      category: 'IoT',
+      technologies: ['MQTT', 'CoAP', 'LoRaWAN', 'Azure IoT', 'AWS IoT']
+    },
+    {
+      title: 'Quantum Computing Services',
+      description: 'Quantum algorithm development, quantum simulation, and quantum-ready infrastructure.',
+      icon: '⚛️',
+      price: 'Starting at $8,000/month',
+      features: ['Quantum algorithms', 'Quantum simulation', 'Quantum optimization', 'Quantum security', 'Hybrid computing'],
+      benefits: ['Solve complex problems', 'Future-proof technology', 'Competitive advantage'],
+      marketPrice: '$12,000-30,000/month',
+      category: 'Quantum Computing',
+      technologies: ['Qiskit', 'Cirq', 'PennyLane', 'IBM Quantum', 'Google Quantum']
+    },
+    {
+      title: 'Edge Computing Solutions',
+      description: 'Distributed computing infrastructure for real-time processing and reduced latency.',
+      icon: '⚡',
+      price: 'Starting at $2,800/month',
+      features: ['Edge deployment', 'Real-time processing', 'Data synchronization', 'Offline capabilities', 'Edge security'],
+      benefits: ['Reduce latency by 80%', 'Improve reliability', 'Enable offline operations'],
+      marketPrice: '$4,500-10,000/month',
+      category: 'Edge Computing',
+      technologies: ['K3s', 'Docker', 'EdgeX Foundry', 'Apache Kafka', 'Redis']
+    },
+    {
+      title: 'Digital Transformation Consulting',
+      description: 'Strategic technology consulting for digital transformation and modernization initiatives.',
+      icon: '🔄',
+      price: 'Starting at $3,500/month',
+      features: ['Technology assessment', 'Digital strategy', 'Change management', 'Process optimization', 'Training programs'],
+      benefits: ['Modernize operations', 'Improve efficiency', 'Stay competitive'],
+      marketPrice: '$5,500-15,000/month',
+      category: 'Consulting',
+      technologies: ['Agile', 'DevOps', 'Cloud', 'AI/ML', 'Data Analytics']
+    },
+    {
+      title: 'Performance Optimization',
+      description: 'System performance tuning, optimization, and capacity planning for maximum efficiency.',
+      icon: '⚡',
+      price: 'Starting at $1,800/month',
+      features: ['Performance analysis', 'System tuning', 'Capacity planning', 'Load testing', 'Optimization recommendations'],
+      benefits: ['Improve system performance', 'Reduce costs', 'Enhance user experience'],
+      marketPrice: '$3,000-7,000/month',
+      category: 'Performance',
+      technologies: ['APM Tools', 'Load Testing', 'Profiling', 'Monitoring', 'Tuning']
+    },
+    {
+      title: 'Remote Work Solutions',
+      description: 'Complete remote work infrastructure including VPN, collaboration tools, and security.',
+      icon: '🏠',
+      price: 'Starting at $1,500/month',
+      features: ['VPN setup', 'Collaboration tools', 'Remote desktop', 'Security policies', 'User training'],
+      benefits: ['Enable remote work', 'Improve productivity', 'Ensure security'],
+      marketPrice: '$2,500-6,000/month',
+      category: 'Remote Work',
+      technologies: ['VPN', 'Teams', 'Slack', 'Zoom', 'Citrix']
+    },
+    {
+      title: 'IT Training & Certification',
+      description: 'Comprehensive IT training programs and certification preparation for your team.',
+      icon: '🎓',
+      price: 'Starting at $800/month',
+      features: ['Technical training', 'Certification prep', 'Hands-on labs', 'Progress tracking', 'Custom curricula'],
+      benefits: ['Improve team skills', 'Increase productivity', 'Reduce support costs'],
+      marketPrice: '$1,500-4,000/month',
+      category: 'Training',
+      technologies: ['Online Learning', 'Labs', 'Certifications', 'Hands-on Training', 'Progress Tracking']
+    },
+    {
+      title: 'Green IT Solutions',
+      description: 'Sustainable IT practices, energy-efficient infrastructure, and carbon footprint reduction.',
+      icon: '🌱',
+      price: 'Starting at $2,000/month',
+      features: ['Energy efficiency', 'Carbon tracking', 'Sustainable practices', 'Green procurement', 'Waste reduction'],
+      benefits: ['Reduce environmental impact', 'Lower energy costs', 'Improve sustainability'],
+      marketPrice: '$3,500-8,000/month',
+      category: 'Sustainability',
+      technologies: ['Energy Monitoring', 'Green Computing', 'Virtualization', 'Cloud Optimization', 'Renewable Energy']
     }
   ];
 

@@ -2,8 +2,7 @@ import React, { memo } from 'react';
 import { Link } from 'react-router-dom';
 import { Phone, Mail, MapPin, Clock, Award, Shield, Zap, ArrowRight } from 'lucide-react';
 
-<<<<<<< HEAD
-const Footer: React.FC = () => {
+const Footer: React.FC = memo(() => {
   const aiServices = [
     { name: 'AI Services', url: '/ai-services' },
     { name: 'AI Marketing', url: '/ai-marketing' },
@@ -47,10 +46,6 @@ const Footer: React.FC = () => {
     { name: 'Terms of Service', url: '/terms' },
     { name: 'Sitemap', url: '/sitemap' },
   ];
-
-=======
-const Footer: React.FC = memo(() => {
->>>>>>> cursor/fix-errors-and-merge-to-main-ef5d
   return (
     <footer className="bg-gray-900 text-white">
       {/* Main Footer Content */}

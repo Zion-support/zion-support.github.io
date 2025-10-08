@@ -53,7 +53,7 @@ const HomePage: React.FC = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid matrix-bg floating-particles">
       {/* Navigation */}
       <Navigation />
       
@@ -71,7 +71,7 @@ const HomePage: React.FC = () => {
       <main id="main-content" className="container mx-auto px-4 py-16" role="main">
         {/* Hero Section */}
         <section
-          className={`text-center mb-16 transition-all duration-1000 ${
+          className={`text-center mb-16 transition-all duration-1000 cyber-scan ${
             isLoaded && isVisible 
               ? 'opacity-100 translate-y-0' 
               : 'opacity-0 translate-y-8'
@@ -80,11 +80,11 @@ const HomePage: React.FC = () => {
         >
           <h1 
             id="hero-heading" 
-            className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 neon-text"
+            className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 neon-text energy-pulse"
           >
             Zion Tech Group
           </h1>
-          <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium" role="doc-subtitle">
+          <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium neon-glow-purple" role="doc-subtitle">
             Advanced AI and IT Solutions
           </p>
           <p className="text-lg md:text-xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
@@ -94,19 +94,19 @@ const HomePage: React.FC = () => {
           
           {/* Key Benefits */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto mb-12">
-            <div className="cyber-card hologram-card">
-              <div className="text-3xl mb-3">🚀</div>
-              <h3 className="font-bold text-white mb-3 text-lg">AI-Powered Solutions</h3>
+            <div className="cyber-panel hologram-card particle-float">
+              <div className="text-3xl mb-3 energy-pulse">🚀</div>
+              <h3 className="font-bold text-white mb-3 text-lg neon-glow-cyan">AI-Powered Solutions</h3>
               <p className="text-sm text-gray-300 leading-relaxed">Transform your business with cutting-edge artificial intelligence, machine learning, and automation technologies</p>
             </div>
-            <div className="cyber-card hologram-card">
-              <div className="text-3xl mb-3">⚡</div>
-              <h3 className="font-bold text-white mb-3 text-lg">Proven Results</h3>
+            <div className="cyber-panel hologram-card particle-float">
+              <div className="text-3xl mb-3 energy-pulse">⚡</div>
+              <h3 className="font-bold text-white mb-3 text-lg neon-glow-purple">Proven Results</h3>
               <p className="text-sm text-gray-300 leading-relaxed">Delivering $50M+ annual savings, 95% process automation, and 300% ROI for enterprise clients</p>
             </div>
-            <div className="cyber-card hologram-card">
-              <div className="text-3xl mb-3">🔒</div>
-              <h3 className="font-bold text-white mb-3 text-lg">Enterprise Security</h3>
+            <div className="cyber-panel hologram-card particle-float">
+              <div className="text-3xl mb-3 energy-pulse">🔒</div>
+              <h3 className="font-bold text-white mb-3 text-lg neon-glow-green">Enterprise Security</h3>
               <p className="text-sm text-gray-300 leading-relaxed">Bank-level security and compliance for your critical data and infrastructure</p>
             </div>
           </div>
@@ -116,14 +116,14 @@ const HomePage: React.FC = () => {
             <a
               href="tel:+13024640950"
               onClick={handlePhoneClick}
-              className="cyber-button"
+              className="cyber-button energy-pulse cyber-border-animated"
               aria-label="Call us at (302) 464-0950"
             >
               📞 Call Now: (302) 464-0950
             </a>
             <a
               href="/contact"
-              className="cyber-button"
+              className="cyber-button energy-pulse cyber-border-animated"
               style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}
             >
               Get Free Consultation
@@ -132,8 +132,8 @@ const HomePage: React.FC = () => {
         </section>
 
         {/* Services Section */}
-        <section className="mb-16" aria-labelledby="services-heading">
-          <h2 id="services-heading" className="text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text">
+        <section className="mb-16 cyber-scan" aria-labelledby="services-heading">
+          <h2 id="services-heading" className="text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text energy-pulse">
             Our Services
           </h2>
           <p className="text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto">
@@ -141,15 +141,15 @@ const HomePage: React.FC = () => {
           </p>
           <div className="grid md:grid-cols-3 gap-8 mb-12">
             <Suspense fallback={<ServiceCardSkeleton />}>
-              <article className="cyber-card hologram-card">
-                <div className="text-5xl mb-6 text-center">🤖</div>
-                <h3 className="text-2xl font-bold text-white mb-4 text-center">AI Services</h3>
+              <article className="cyber-panel hologram-card particle-float">
+                <div className="text-5xl mb-6 text-center energy-pulse">🤖</div>
+                <h3 className="text-2xl font-bold text-white mb-4 text-center neon-glow-cyan">AI Services</h3>
                 <p className="text-gray-300 mb-6 text-center leading-relaxed">
                   Advanced artificial intelligence solutions including machine learning, natural language processing, and computer vision.
                 </p>
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-cyan-400 mb-2">Starting at $1,500/month</div>
-                  <a href="/ai-services" className="text-cyan-400 hover:text-cyan-300 font-medium">
+                  <div className="text-2xl font-bold text-cyan-400 mb-2 neon-glow-cyan">Starting at $1,500/month</div>
+                  <a href="/ai-services" className="text-cyan-400 hover:text-cyan-300 font-medium energy-pulse">
                     Learn More →
                   </a>
                 </div>
@@ -157,15 +157,15 @@ const HomePage: React.FC = () => {
             </Suspense>
 
             <Suspense fallback={<ServiceCardSkeleton />}>
-              <article className="cyber-card hologram-card">
-                <div className="text-5xl mb-6 text-center">📢</div>
-                <h3 className="text-2xl font-bold text-white mb-4 text-center">AI Marketing</h3>
+              <article className="cyber-panel hologram-card particle-float">
+                <div className="text-5xl mb-6 text-center energy-pulse">📢</div>
+                <h3 className="text-2xl font-bold text-white mb-4 text-center neon-glow-pink">AI Marketing</h3>
                 <p className="text-gray-300 mb-6 text-center leading-relaxed">
                   Revolutionary AI-powered marketing automation, ad optimization, and content generation.
                 </p>
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-pink-400 mb-2">Starting at $199/month</div>
-                  <a href="/ai-marketing" className="text-pink-400 hover:text-pink-300 font-medium">
+                  <div className="text-2xl font-bold text-pink-400 mb-2 neon-glow-pink">Starting at $199/month</div>
+                  <a href="/ai-marketing" className="text-pink-400 hover:text-pink-300 font-medium energy-pulse">
                     Learn More →
                   </a>
                 </div>
@@ -173,15 +173,15 @@ const HomePage: React.FC = () => {
             </Suspense>
 
             <Suspense fallback={<ServiceCardSkeleton />}>
-              <article className="cyber-card hologram-card">
-                <div className="text-5xl mb-6 text-center">⚙️</div>
-                <h3 className="text-2xl font-bold text-white mb-4 text-center">AI Automation</h3>
+              <article className="cyber-panel hologram-card particle-float">
+                <div className="text-5xl mb-6 text-center energy-pulse">⚙️</div>
+                <h3 className="text-2xl font-bold text-white mb-4 text-center neon-glow-purple">AI Automation</h3>
                 <p className="text-gray-300 mb-6 text-center leading-relaxed">
                   Intelligent automation of business processes with decision-making capabilities and exception handling.
                 </p>
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-blue-400 mb-2">Starting at $399/month</div>
-                  <a href="/ai-automation" className="text-blue-400 hover:text-blue-300 font-medium">
+                  <div className="text-2xl font-bold text-blue-400 mb-2 neon-glow-purple">Starting at $399/month</div>
+                  <a href="/ai-automation" className="text-blue-400 hover:text-blue-300 font-medium energy-pulse">
                     Learn More →
                   </a>
                 </div>
