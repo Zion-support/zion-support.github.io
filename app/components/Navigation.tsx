@@ -32,22 +32,48 @@ const Navigation: React.FC = () => {
                 <ChevronDown className="w-4 h-4 ml-1" />
               </button>
               {servicesOpen && (
-                <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg border py-2 z-50">
-                  <Link to="/services" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                <div className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-lg border py-2 z-50">
+                  <Link to="/services" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 font-semibold border-b border-gray-100">
                     All Services
                   </Link>
-                  <Link to="/micro-saas" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
-                    Micro SAAS Solutions
-                  </Link>
-                  <Link to="/ai-services" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
-                    AI Services
-                  </Link>
-                  <Link to="/it-services" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
-                    IT Services
-                  </Link>
-                  <Link to="/services-advertising" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
-                    Advertising Services
-                  </Link>
+                  
+                  <div className="px-4 py-2">
+                    <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">Core Services</div>
+                    <Link to="/ai-services" className="block px-2 py-1 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                      AI Services
+                    </Link>
+                    <Link to="/it-services" className="block px-2 py-1 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                      IT Services
+                    </Link>
+                    <Link to="/micro-saas" className="block px-2 py-1 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                      Micro SAAS Solutions
+                    </Link>
+                    <Link to="/services-advertising" className="block px-2 py-1 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                      Advertising Services
+                    </Link>
+                  </div>
+                  
+                  <div className="px-4 py-2">
+                    <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">Advanced Technologies</div>
+                    <Link to="/quantum-computing" className="block px-2 py-1 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                      Quantum Computing
+                    </Link>
+                    <Link to="/autonomous-systems" className="block px-2 py-1 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                      Autonomous Systems
+                    </Link>
+                    <Link to="/blockchain-web3" className="block px-2 py-1 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                      Blockchain & Web3
+                    </Link>
+                    <Link to="/business-intelligence" className="block px-2 py-1 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                      Business Intelligence
+                    </Link>
+                    <Link to="/cybersecurity" className="block px-2 py-1 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                      Cybersecurity
+                    </Link>
+                    <Link to="/iot-edge-computing" className="block px-2 py-1 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                      IoT & Edge Computing
+                    </Link>
+                  </div>
                 </div>
               )}
             </div>
@@ -94,21 +120,47 @@ const Navigation: React.FC = () => {
               <div className="space-y-2">
                 <div className="text-gray-700 font-semibold">Services</div>
                 <div className="ml-4 space-y-2">
-                  <Link to="/services" className="block text-gray-600 hover:text-blue-600 transition-colors">
+                  <Link to="/services" className="block text-gray-600 hover:text-blue-600 transition-colors font-medium">
                     All Services
                   </Link>
-                  <Link to="/micro-saas" className="block text-gray-600 hover:text-blue-600 transition-colors">
-                    Micro SAAS Solutions
-                  </Link>
-                  <Link to="/ai-services" className="block text-gray-600 hover:text-blue-600 transition-colors">
-                    AI Services
-                  </Link>
-                  <Link to="/it-services" className="block text-gray-600 hover:text-blue-600 transition-colors">
-                    IT Services
-                  </Link>
-                  <Link to="/services-advertising" className="block text-gray-600 hover:text-blue-600 transition-colors">
-                    Advertising Services
-                  </Link>
+                  
+                  <div className="ml-2 space-y-1">
+                    <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide">Core Services</div>
+                    <Link to="/ai-services" className="block text-gray-600 hover:text-blue-600 transition-colors">
+                      AI Services
+                    </Link>
+                    <Link to="/it-services" className="block text-gray-600 hover:text-blue-600 transition-colors">
+                      IT Services
+                    </Link>
+                    <Link to="/micro-saas" className="block text-gray-600 hover:text-blue-600 transition-colors">
+                      Micro SAAS Solutions
+                    </Link>
+                    <Link to="/services-advertising" className="block text-gray-600 hover:text-blue-600 transition-colors">
+                      Advertising Services
+                    </Link>
+                  </div>
+                  
+                  <div className="ml-2 space-y-1">
+                    <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide">Advanced Technologies</div>
+                    <Link to="/quantum-computing" className="block text-gray-600 hover:text-blue-600 transition-colors">
+                      Quantum Computing
+                    </Link>
+                    <Link to="/autonomous-systems" className="block text-gray-600 hover:text-blue-600 transition-colors">
+                      Autonomous Systems
+                    </Link>
+                    <Link to="/blockchain-web3" className="block text-gray-600 hover:text-blue-600 transition-colors">
+                      Blockchain & Web3
+                    </Link>
+                    <Link to="/business-intelligence" className="block text-gray-600 hover:text-blue-600 transition-colors">
+                      Business Intelligence
+                    </Link>
+                    <Link to="/cybersecurity" className="block text-gray-600 hover:text-blue-600 transition-colors">
+                      Cybersecurity
+                    </Link>
+                    <Link to="/iot-edge-computing" className="block text-gray-600 hover:text-blue-600 transition-colors">
+                      IoT & Edge Computing
+                    </Link>
+                  </div>
                 </div>
               </div>
               <Link to="/case-studies" className="text-gray-700 hover:text-blue-600 transition-colors">

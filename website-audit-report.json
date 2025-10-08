@@ -1,0 +1,128 @@
+{
+  "timestamp": "2025-10-08T22:39:38.380Z",
+  "baseUrl": "https://ziontechgroup.com",
+  "summary": {
+    "totalPages": 10,
+    "validLinks": 13,
+    "brokenLinks": 6,
+    "allLinksFound": 12
+  },
+  "brokenLinks": [
+    {
+      "url": "https://fonts.googleapis.com/",
+      "status": 404,
+      "statusText": "Not Found",
+      "depth": 2,
+      "external": true
+    },
+    {
+      "url": "https://fonts.gstatic.com/",
+      "status": 404,
+      "statusText": "Not Found",
+      "depth": 2,
+      "external": true
+    },
+    {
+      "url": "https://fonts.googleapis.com/",
+      "status": 404,
+      "statusText": "Not Found",
+      "depth": 3,
+      "external": true
+    },
+    {
+      "url": "https://fonts.gstatic.com/",
+      "status": 404,
+      "statusText": "Not Found",
+      "depth": 3,
+      "external": true
+    },
+    {
+      "url": "https://fonts.googleapis.com/",
+      "status": 404,
+      "statusText": "Not Found",
+      "depth": 1,
+      "external": true
+    },
+    {
+      "url": "https://fonts.gstatic.com/",
+      "status": 404,
+      "statusText": "Not Found",
+      "depth": 1,
+      "external": true
+    }
+  ],
+  "validLinks": [
+    {
+      "url": "https://ziontechgroup.com",
+      "status": 200,
+      "depth": 0
+    },
+    {
+      "url": "https://ziontechgroup.com/favicon.svg",
+      "status": 200,
+      "depth": 1
+    },
+    {
+      "url": "https://ziontechgroup.com/",
+      "status": 200,
+      "depth": 1
+    },
+    {
+      "url": "https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap",
+      "status": 200,
+      "depth": 2,
+      "external": true
+    },
+    {
+      "url": "https://ziontechgroup.com/logo192.png",
+      "status": 200,
+      "depth": 2
+    },
+    {
+      "url": "https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap",
+      "status": 200,
+      "depth": 3,
+      "external": true
+    },
+    {
+      "url": "https://ziontechgroup.com/manifest.json",
+      "status": 200,
+      "depth": 3
+    },
+    {
+      "url": "https://ziontechgroup.com/js/react-vendor-ClxMxoJB.js",
+      "status": 200,
+      "depth": 3
+    },
+    {
+      "url": "https://ziontechgroup.com/js/router-vendor-BYHOfCvf.js",
+      "status": 200,
+      "depth": 3
+    },
+    {
+      "url": "https://ziontechgroup.com/js/ui-vendor-BZl2CecO.js",
+      "status": 200,
+      "depth": 3
+    },
+    {
+      "url": "https://ziontechgroup.com/js/utils-vendor-CrFdsnXa.js",
+      "status": 200,
+      "depth": 3
+    },
+    {
+      "url": "https://ziontechgroup.com/css/main-C3rjQXSa.css",
+      "status": 200,
+      "depth": 3
+    },
+    {
+      "url": "https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap",
+      "status": 200,
+      "depth": 1,
+      "external": true
+    }
+  ],
+  "missingPages": [],
+  "recommendations": [
+    "Fix broken links found in the audit"
+  ]
+}
