@@ -12,6 +12,13 @@ export enum ErrorCategory {
   UNKNOWN = 'unknown',
 }
 
+export enum ErrorSeverity {
+  LOW = 'LOW',
+  MEDIUM = 'MEDIUM',
+  HIGH = 'HIGH',
+  CRITICAL = 'CRITICAL',
+}
+
 export interface ErrorInfo {
   id: string;
   message: string;
