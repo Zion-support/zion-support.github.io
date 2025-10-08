@@ -119,7 +119,7 @@ const Navigation: React.FC = () => {
                 </button>
                 {servicesOpen && (
                   <div className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-xl border py-4 z-50">
-                    <div className="grid grid-cols-2 gap-4 px-4">
+                    <div className="grid grid-cols-3 gap-4 px-4">
                       <div>
                         <h3 className="font-semibold text-gray-900 mb-2">Core Services</h3>
                         <Link to="/services" className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
@@ -133,6 +133,27 @@ const Navigation: React.FC = () => {
                         </Link>
                         <Link to="/it-services" className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
                           IT Services
+                        </Link>
+                      </div>
+                      <div>
+                        <h3 className="font-semibold text-gray-900 mb-2">AI Solutions</h3>
+                        <Link to="/ai-data-analytics" className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
+                          AI Data Analytics
+                        </Link>
+                        <Link to="/ai-cybersecurity" className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
+                          AI Cybersecurity
+                        </Link>
+                        <Link to="/ai-workflow-automation" className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
+                          AI Workflow Automation
+                        </Link>
+                        <Link to="/ai-cloud-infrastructure" className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
+                          AI Cloud Infrastructure
+                        </Link>
+                        <Link to="/ai-ecommerce-solutions" className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
+                          AI E-commerce Solutions
+                        </Link>
+                        <Link to="/ai-mobile-app-development" className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
+                          AI Mobile App Development
                         </Link>
                       </div>
                       <div>
@@ -211,6 +232,24 @@ const Navigation: React.FC = () => {
                     </Link>
                     <Link to="/it-services" className="block text-gray-600 hover:text-blue-600 transition-colors">
                       IT Services
+                    </Link>
+                    <Link to="/ai-data-analytics" className="block text-gray-600 hover:text-blue-600 transition-colors">
+                      AI Data Analytics
+                    </Link>
+                    <Link to="/ai-cybersecurity" className="block text-gray-600 hover:text-blue-600 transition-colors">
+                      AI Cybersecurity
+                    </Link>
+                    <Link to="/ai-workflow-automation" className="block text-gray-600 hover:text-blue-600 transition-colors">
+                      AI Workflow Automation
+                    </Link>
+                    <Link to="/ai-cloud-infrastructure" className="block text-gray-600 hover:text-blue-600 transition-colors">
+                      AI Cloud Infrastructure
+                    </Link>
+                    <Link to="/ai-ecommerce-solutions" className="block text-gray-600 hover:text-blue-600 transition-colors">
+                      AI E-commerce Solutions
+                    </Link>
+                    <Link to="/ai-mobile-app-development" className="block text-gray-600 hover:text-blue-600 transition-colors">
+                      AI Mobile App Development
                     </Link>
                     <Link to="/quantum-computing" className="block text-gray-600 hover:text-blue-600 transition-colors">
                       Quantum Computing

@@ -78,6 +78,36 @@ const Footer: React.FC = () => {
                 </Link>
               </li>
               <li>
+                <Link to="/ai-data-analytics" className="hover:text-white transition-colors">
+                  AI Data Analytics
+                </Link>
+              </li>
+              <li>
+                <Link to="/ai-cybersecurity" className="hover:text-white transition-colors">
+                  AI Cybersecurity
+                </Link>
+              </li>
+              <li>
+                <Link to="/ai-workflow-automation" className="hover:text-white transition-colors">
+                  AI Workflow Automation
+                </Link>
+              </li>
+              <li>
+                <Link to="/ai-cloud-infrastructure" className="hover:text-white transition-colors">
+                  AI Cloud Infrastructure
+                </Link>
+              </li>
+              <li>
+                <Link to="/ai-ecommerce-solutions" className="hover:text-white transition-colors">
+                  AI E-commerce Solutions
+                </Link>
+              </li>
+              <li>
+                <Link to="/ai-mobile-app-development" className="hover:text-white transition-colors">
+                  AI Mobile App Development
+                </Link>
+              </li>
+              <li>
                 <Link to="/it-services" className="hover:text-white transition-colors">
                   IT Services
                 </Link>
