@@ -236,8 +236,6 @@ const HomePage: React.FC = () => {
                 </div>
               </article>
             </Suspense>
-<<<<<<< HEAD
-=======
 
             <Suspense fallback={<ServiceCardSkeleton />}>
               <article className="bg-white rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
@@ -254,56 +252,7 @@ const HomePage: React.FC = () => {
                 </div>
               </article>
             </Suspense>
->>>>>>> cursor/analyze-improve-and-deploy-application-144c
           </div>
-          
-          <div className="grid md:grid-cols-3 gap-8">
-            <article className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 focus-within:ring-4 focus-within:ring-indigo-300">
-              <div className="text-4xl mb-4">🤖</div>
-              <h3 className="text-2xl font-semibold text-gray-900 mb-4">AI Solutions</h3>
-              <p className="text-gray-600 mb-4">
-                Harness the power of artificial intelligence to drive innovation and efficiency in
-                your organization.
-              </p>
-              <ul className="text-sm text-gray-500 space-y-1">
-                <li>• Machine Learning Models</li>
-                <li>• Natural Language Processing</li>
-                <li>• Computer Vision</li>
-                <li>• Predictive Analytics</li>
-              </ul>
-            </article>
-
-            <article className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 focus-within:ring-4 focus-within:ring-indigo-300">
-              <div className="text-4xl mb-4">🔄</div>
-              <h3 className="text-2xl font-semibold text-gray-900 mb-4">Digital Transformation</h3>
-              <p className="text-gray-600 mb-4">
-                Transform your business processes with cutting-edge technology and expert
-                consultation.
-              </p>
-              <ul className="text-sm text-gray-500 space-y-1">
-                <li>• Process Automation</li>
-                <li>• Legacy System Modernization</li>
-                <li>• Workflow Optimization</li>
-                <li>• Change Management</li>
-              </ul>
-            </article>
-
-            <article className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 focus-within:ring-4 focus-within:ring-indigo-300">
-              <div className="text-4xl mb-4">☁️</div>
-              <h3 className="text-2xl font-semibold text-gray-900 mb-4">Cloud Services</h3>
-              <p className="text-gray-600 mb-4">
-                Scale your infrastructure with secure, reliable, and efficient cloud solutions.
-              </p>
-              <ul className="text-sm text-gray-500 space-y-1">
-                <li>• Cloud Migration</li>
-                <li>• Infrastructure as Code</li>
-                <li>• DevOps & CI/CD</li>
-                <li>• 24/7 Monitoring</li>
-              </ul>
-            </article>
-          </div>
-<<<<<<< HEAD
-=======
           
           <div className="text-center mt-8">
             <a 
@@ -313,7 +262,6 @@ const HomePage: React.FC = () => {
               View All Services
             </a>
           </div>
->>>>>>> cursor/analyze-improve-and-deploy-application-144c
         </section>
 
         {/* Content Carousel */}

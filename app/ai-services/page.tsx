@@ -1,6 +1,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Star, Brain, Zap, Target, BarChart, MessageSquare, Eye, Cpu, Sparkles } from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 
 const AIServicesPage: React.FC = () => {
   const aiServices = [
@@ -270,6 +272,7 @@ const AIServicesPage: React.FC = () => {
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-purple-50">
+        <Navigation />
         {/* Hero Section */}
         <section className="relative overflow-hidden bg-gradient-to-r from-purple-600 to-pink-700 text-white py-20">
           <div className="absolute inset-0 bg-black opacity-20"></div>
@@ -338,7 +341,7 @@ const AIServicesPage: React.FC = () => {
         </section>
 
         {/* Services by Category */}
-        {categories.map(category => (
+        {_categories.map(category => (
           <section key={category} className="py-16 bg-gray-50">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="text-center mb-12">
@@ -487,6 +490,7 @@ const AIServicesPage: React.FC = () => {
             </div>
           </div>
         </section>
+        <Footer />
       </div>
     </>
   );

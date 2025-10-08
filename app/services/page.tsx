@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Star, CheckCircle } from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 
 const ServicesPage: React.FC = () => {
   const serviceCategories = [
@@ -91,14 +93,14 @@ const ServicesPage: React.FC = () => {
       description: 'Decentralized applications, smart contracts, and Web3 solutions.',
       icon: '🔗',
       link: '/blockchain',
-      features: ['Smart Contracts', 'DeFi Protocols', 'NFT Marketplaces', 'Web3 Applications'],cursor/add-new-services-and-deploy-updates-f159
+      features: ['Smart Contracts', 'DeFi Protocols', 'NFT Marketplaces', 'Web3 Applications'],
       price: 'Starting at $8,000/project'
     },
     {
       title: 'IoT & Edge Computing',
       description: 'Connected devices, edge analytics, and industrial IoT solutions.',
       icon: '📱',
-      link: '/iot-edge',
+      link: '/iot-edge-computing',
       features: ['Device Management', 'Edge Analytics', 'Industrial IoT', 'Smart Cities'],
       price: 'Starting at $2,500/month'
     },
@@ -115,7 +117,7 @@ const ServicesPage: React.FC = () => {
       description: 'Advanced security services including threat detection and compliance.',
       icon: '🛡️',
       link: '/cybersecurity',
-      features: ['Threat Detection', 'Penetration Testing', 'Zero Trust Security', 'SOC Services'],cursor/add-new-services-and-deploy-updates-f159
+      features: ['Threat Detection', 'Penetration Testing', 'Zero Trust Security', 'SOC Services'],
       price: 'Starting at $2,500/month'
     }
   ];
@@ -166,6 +168,7 @@ const ServicesPage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+      <Navigation />
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-20">
         <div className="absolute inset-0 bg-black opacity-20"></div>
@@ -297,6 +300,7 @@ const ServicesPage: React.FC = () => {
           </div>
         </div>
       </section>
+      <Footer />
     </div>
   );
 };
