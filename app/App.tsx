@@ -35,6 +35,10 @@ const TermsPage = lazy(() => import('./terms/page'));
 const EnterprisePage = lazy(() => import('./enterprise/page'));
 const ServicesAdvertisingPage = lazy(() => import('./services-advertising/page'));
 const CaseStudiesPage = lazy(() => import('./case-studies/page'));
+const BlogPage = lazy(() => import('./blog/page'));
+const QuantumComputingPage = lazy(() => import('./quantum-computing/page'));
+const AutonomousSystemsPage = lazy(() => import('./autonomous-systems/page'));
+const BusinessIntelligencePage = lazy(() => import('./business-intelligence/page'));
 
 // Utils
 import { lazyLoadImages, preloadCriticalResources, collectPerformanceMetrics, performanceOptimizer } from './utils/performanceOptimizer';
@@ -161,9 +165,13 @@ const App: React.FC = () => {
                       <Route path="/enterprise" element={<EnterprisePage />} />
                       <Route path="/services-advertising" element={<ServicesAdvertisingPage />} />
                       <Route path="/case-studies" element={<CaseStudiesPage />} />
+                      <Route path="/blog" element={<BlogPage />} />
                       <Route path="/ai-services" element={<lazy(() => import('./ai-services/page')) />} />
                       <Route path="/it-services" element={<lazy(() => import('./it-services/page')) />} />
                       <Route path="/micro-saas" element={<lazy(() => import('./micro-saas/page')) />} />
+                      <Route path="/quantum-computing" element={<QuantumComputingPage />} />
+                      <Route path="/autonomous-systems" element={<AutonomousSystemsPage />} />
+                      <Route path="/business-intelligence" element={<BusinessIntelligencePage />} />
                     </Routes>
                   </Suspense>
                 </main>

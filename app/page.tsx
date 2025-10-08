@@ -124,12 +124,12 @@ const HomePage: React.FC = () => {
             Ready to Get Started?
           </h2>
           <a
-            href="tel:+13026009898"
+            href="tel:+13024640950"
             onClick={handlePhoneClick}
             className="inline-block bg-indigo-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-4 focus:ring-indigo-300"
-            aria-label="Call us at (302) 600-9898"
+            aria-label="Call us at (302) 464-0950"
           >
-            Contact Us: (302) 600-9898
+            Contact Us: (302) 464-0950
           </a>
         </section>
       </main>
