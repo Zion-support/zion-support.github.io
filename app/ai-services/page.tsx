@@ -135,6 +135,160 @@ const AIServicesPage: React.FC = () => {
       marketPrice: '$5,000-15,000/month',
       category: 'Quality Assurance',
       technologies: ['Selenium', 'Appium', 'TestNG', 'Custom AI Models', 'CI/CD Integration']
+    },
+    {
+      title: 'Quantum Machine Learning',
+      description: 'Advanced quantum machine learning algorithms for solving complex optimization problems.',
+      icon: '⚛️',
+      price: 'Starting at $8,000/month',
+      features: ['Quantum neural networks', 'Optimization algorithms', 'Quantum feature maps', 'Hybrid classical-quantum models', 'Quantum advantage analysis'],
+      benefits: ['Solve intractable problems', 'Exponential speedup potential', 'Breakthrough optimization results'],
+      marketPrice: '$15,000-50,000/month',
+      category: 'Quantum AI',
+      technologies: ['Qiskit', 'Cirq', 'PennyLane', 'TensorFlow Quantum', 'Quantum Hardware']
+    },
+    {
+      title: 'Autonomous AI Agents',
+      description: 'Self-managing AI agents that can make decisions and take actions independently.',
+      icon: '🤖',
+      price: 'Starting at $5,500/month',
+      features: ['Autonomous decision making', 'Goal-oriented behavior', 'Learning and adaptation', 'Multi-agent coordination', 'Human-AI collaboration'],
+      benefits: ['Reduce human intervention', 'Improve operational efficiency', 'Enable 24/7 autonomous operations'],
+      marketPrice: '$10,000-30,000/month',
+      category: 'Autonomous AI',
+      technologies: ['Reinforcement Learning', 'Multi-Agent Systems', 'LLMs', 'Computer Vision', 'NLP']
+    },
+    {
+      title: 'AI-Powered Drug Discovery',
+      description: 'Machine learning models for pharmaceutical drug discovery and molecular design.',
+      icon: '💊',
+      price: 'Starting at $12,000/month',
+      features: ['Molecular property prediction', 'Drug-target interaction', 'ADMET prediction', 'Synthetic pathway design', 'Clinical trial optimization'],
+      benefits: ['Accelerate drug development', 'Reduce R&D costs', 'Improve success rates'],
+      marketPrice: '$25,000-100,000/month',
+      category: 'Pharmaceutical AI',
+      technologies: ['DeepChem', 'RDKit', 'PyTorch', 'TensorFlow', 'Molecular Dynamics']
+    },
+    {
+      title: 'AI-Powered Climate Modeling',
+      description: 'Advanced climate prediction and environmental impact analysis using AI.',
+      icon: '🌍',
+      price: 'Starting at $6,000/month',
+      features: ['Climate prediction models', 'Weather forecasting', 'Environmental impact analysis', 'Carbon footprint tracking', 'Sustainability optimization'],
+      benefits: ['Improve climate predictions', 'Enable better planning', 'Support sustainability goals'],
+      marketPrice: '$12,000-40,000/month',
+      category: 'Climate AI',
+      technologies: ['TensorFlow', 'PyTorch', 'Climate Data', 'Satellite Imagery', 'IoT Sensors']
+    },
+    {
+      title: 'AI-Powered Space Exploration',
+      description: 'Machine learning solutions for space mission planning and satellite data analysis.',
+      icon: '🚀',
+      price: 'Starting at $7,500/month',
+      features: ['Mission planning optimization', 'Satellite data analysis', 'Space debris tracking', 'Planetary exploration', 'Astronomical data processing'],
+      benefits: ['Optimize space missions', 'Improve data analysis', 'Reduce mission costs'],
+      marketPrice: '$15,000-60,000/month',
+      category: 'Space AI',
+      technologies: ['Python', 'TensorFlow', 'Satellite Data', 'Orbital Mechanics', 'Computer Vision']
+    },
+    {
+      title: 'AI-Powered Brain-Computer Interface',
+      description: 'Advanced neural interface technology for direct brain-computer communication.',
+      icon: '🧠',
+      price: 'Starting at $10,000/month',
+      features: ['Neural signal processing', 'Brain pattern recognition', 'Motor control interfaces', 'Cognitive enhancement', 'Medical applications'],
+      benefits: ['Enable direct brain control', 'Assist disabled individuals', 'Enhance human capabilities'],
+      marketPrice: '$20,000-100,000/month',
+      category: 'Neurotechnology',
+      technologies: ['EEG Analysis', 'Machine Learning', 'Signal Processing', 'Neuroscience', 'Medical Devices']
+    },
+    {
+      title: 'AI-Powered Materials Science',
+      description: 'Machine learning for materials discovery, design, and property prediction.',
+      icon: '🔬',
+      price: 'Starting at $4,500/month',
+      features: ['Materials property prediction', 'Crystal structure analysis', 'Composition optimization', 'Synthesis pathway design', 'Performance modeling'],
+      benefits: ['Accelerate materials discovery', 'Reduce experimental costs', 'Enable novel materials'],
+      marketPrice: '$8,000-25,000/month',
+      category: 'Materials AI',
+      technologies: ['Python', 'TensorFlow', 'Materials Databases', 'DFT Calculations', 'High-Throughput Screening']
+    },
+    {
+      title: 'AI-Powered Financial Risk Modeling',
+      description: 'Advanced risk assessment and financial modeling using machine learning.',
+      icon: '💰',
+      price: 'Starting at $5,000/month',
+      features: ['Credit risk assessment', 'Market risk modeling', 'Operational risk analysis', 'Stress testing', 'Regulatory compliance'],
+      benefits: ['Improve risk management', 'Reduce financial losses', 'Ensure regulatory compliance'],
+      marketPrice: '$10,000-40,000/month',
+      category: 'FinTech AI',
+      technologies: ['Python', 'R', 'TensorFlow', 'Financial Data', 'Risk Models']
+    },
+    {
+      title: 'AI-Powered Cybersecurity Intelligence',
+      description: 'Advanced threat intelligence and automated security response systems.',
+      icon: '🛡️',
+      price: 'Starting at $4,000/month',
+      features: ['Threat hunting', 'Malware analysis', 'Network security', 'Incident response', 'Security orchestration'],
+      benefits: ['Prevent advanced threats', 'Reduce response time', 'Improve security posture'],
+      marketPrice: '$8,000-30,000/month',
+      category: 'Cybersecurity AI',
+      technologies: ['Machine Learning', 'SIEM', 'EDR', 'Network Analysis', 'Threat Intelligence']
+    },
+    {
+      title: 'AI-Powered Personalized Medicine',
+      description: 'Precision medicine solutions using AI for personalized treatment recommendations.',
+      icon: '🧬',
+      price: 'Starting at $6,500/month',
+      features: ['Genomic analysis', 'Treatment optimization', 'Drug response prediction', 'Disease progression modeling', 'Clinical decision support'],
+      benefits: ['Improve treatment outcomes', 'Reduce adverse effects', 'Enable precision medicine'],
+      marketPrice: '$15,000-50,000/month',
+      category: 'Precision Medicine',
+      technologies: ['Genomics', 'Machine Learning', 'Clinical Data', 'Biomarkers', 'Drug Databases']
+    },
+    {
+      title: 'AI-Powered Smart Manufacturing',
+      description: 'Intelligent manufacturing systems with predictive maintenance and quality control.',
+      icon: '🏭',
+      price: 'Starting at $3,500/month',
+      features: ['Predictive maintenance', 'Quality control', 'Production optimization', 'Supply chain integration', 'Energy efficiency'],
+      benefits: ['Reduce downtime', 'Improve quality', 'Optimize production'],
+      marketPrice: '$7,000-25,000/month',
+      category: 'Industrial AI',
+      technologies: ['IoT', 'Computer Vision', 'Machine Learning', 'PLC Integration', 'SCADA Systems']
+    },
+    {
+      title: 'AI-Powered Autonomous Drones',
+      description: 'Intelligent drone systems for surveillance, delivery, and inspection applications.',
+      icon: '🚁',
+      price: 'Starting at $4,500/month',
+      features: ['Autonomous navigation', 'Object detection', 'Mission planning', 'Fleet management', 'Real-time analytics'],
+      benefits: ['Enable autonomous operations', 'Improve safety', 'Reduce operational costs'],
+      marketPrice: '$8,000-30,000/month',
+      category: 'Autonomous Systems',
+      technologies: ['Computer Vision', 'SLAM', 'Path Planning', 'Drone SDKs', 'Edge Computing']
+    },
+    {
+      title: 'AI-Powered Language Translation',
+      description: 'Advanced real-time translation and language processing for global communication.',
+      icon: '🌐',
+      price: 'Starting at $2,500/month',
+      features: ['Real-time translation', 'Document translation', 'Voice translation', 'Cultural adaptation', 'Multi-language support'],
+      benefits: ['Break language barriers', 'Enable global communication', 'Improve accessibility'],
+      marketPrice: '$5,000-20,000/month',
+      category: 'Language AI',
+      technologies: ['Transformer Models', 'Neural Machine Translation', 'Speech Recognition', 'NLP', 'Multilingual Models']
+    },
+    {
+      title: 'AI-Powered Content Moderation',
+      description: 'Automated content moderation and safety systems for online platforms.',
+      icon: '🛡️',
+      price: 'Starting at $2,000/month',
+      features: ['Content classification', 'Hate speech detection', 'Image moderation', 'Video analysis', 'Real-time filtering'],
+      benefits: ['Improve platform safety', 'Reduce manual moderation', 'Ensure compliance'],
+      marketPrice: '$4,000-15,000/month',
+      category: 'Content AI',
+      technologies: ['Computer Vision', 'NLP', 'Machine Learning', 'Content Analysis', 'Safety APIs']
     }
   ];
 

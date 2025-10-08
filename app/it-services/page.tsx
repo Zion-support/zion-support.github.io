@@ -135,6 +135,193 @@ const ITServicesPage: React.FC = () => {
       marketPrice: '$3,000-6,000/month',
       category: 'Backup & Recovery',
       technologies: ['Veeam', 'Commvault', 'AWS Backup', 'Azure Backup', 'VMware']
+    },
+    {
+      title: 'Blockchain Infrastructure',
+      description: 'Enterprise blockchain solutions, smart contract development, and decentralized application deployment.',
+      icon: '⛓️',
+      price: 'Starting at $4,500/month',
+      features: ['Blockchain deployment', 'Smart contract development', 'DApp development', 'Node management', 'Security auditing'],
+      benefits: ['Enable decentralized solutions', 'Improve transparency', 'Reduce intermediaries'],
+      marketPrice: '$8,000-25,000/month',
+      category: 'Blockchain',
+      technologies: ['Ethereum', 'Hyperledger', 'Solidity', 'Web3', 'IPFS']
+    },
+    {
+      title: 'IoT Platform Management',
+      description: 'Comprehensive IoT infrastructure management and device connectivity solutions.',
+      icon: '🌐',
+      price: 'Starting at $3,200/month',
+      features: ['Device management', 'Data collection', 'Real-time monitoring', 'Edge computing', 'Security management'],
+      benefits: ['Enable IoT deployments', 'Improve operational efficiency', 'Reduce manual monitoring'],
+      marketPrice: '$5,500-18,000/month',
+      category: 'IoT',
+      technologies: ['AWS IoT', 'Azure IoT', 'MQTT', 'CoAP', 'Edge Computing']
+    },
+    {
+      title: 'Edge Computing Infrastructure',
+      description: 'Distributed computing infrastructure for low-latency applications and edge data processing.',
+      icon: '⚡',
+      price: 'Starting at $3,800/month',
+      features: ['Edge node deployment', 'Data processing', 'Content delivery', 'Load balancing', 'Monitoring'],
+      benefits: ['Reduce latency', 'Improve performance', 'Enable real-time applications'],
+      marketPrice: '$6,500-20,000/month',
+      category: 'Edge Computing',
+      technologies: ['Kubernetes', 'Docker', 'CDN', 'Edge Servers', '5G Networks']
+    },
+    {
+      title: 'Quantum Computing Infrastructure',
+      description: 'Quantum computing platform setup and quantum algorithm development services.',
+      icon: '⚛️',
+      price: 'Starting at $8,000/month',
+      features: ['Quantum hardware setup', 'Algorithm development', 'Quantum simulation', 'Hybrid systems', 'Research support'],
+      benefits: ['Enable quantum computing', 'Solve complex problems', 'Gain competitive advantage'],
+      marketPrice: '$15,000-50,000/month',
+      category: 'Quantum Computing',
+      technologies: ['IBM Qiskit', 'Google Cirq', 'Rigetti', 'IonQ', 'Quantum Simulators']
+    },
+    {
+      title: '5G Network Implementation',
+      description: '5G network infrastructure deployment and optimization for enterprise applications.',
+      icon: '📡',
+      price: 'Starting at $5,500/month',
+      features: ['5G network design', 'Infrastructure deployment', 'Performance optimization', 'Security implementation', 'Integration services'],
+      benefits: ['Enable high-speed connectivity', 'Support IoT applications', 'Improve mobile experience'],
+      marketPrice: '$10,000-40,000/month',
+      category: '5G Networks',
+      technologies: ['5G Core', 'RAN', 'Network Slicing', 'MEC', 'NFV']
+    },
+    {
+      title: 'Microservices Architecture',
+      description: 'Modern microservices architecture design and implementation for scalable applications.',
+      icon: '🔧',
+      price: 'Starting at $3,500/month',
+      features: ['Architecture design', 'Service decomposition', 'API gateway setup', 'Service mesh', 'Monitoring'],
+      benefits: ['Improve scalability', 'Enable rapid development', 'Reduce deployment risks'],
+      marketPrice: '$6,000-20,000/month',
+      category: 'Microservices',
+      technologies: ['Kubernetes', 'Docker', 'Istio', 'API Gateway', 'Service Mesh']
+    },
+    {
+      title: 'Serverless Computing Platform',
+      description: 'Serverless architecture implementation and management for event-driven applications.',
+      icon: '☁️',
+      price: 'Starting at $2,800/month',
+      features: ['Function deployment', 'Event handling', 'Auto-scaling', 'Cost optimization', 'Monitoring'],
+      benefits: ['Reduce infrastructure costs', 'Improve scalability', 'Simplify deployment'],
+      marketPrice: '$4,500-15,000/month',
+      category: 'Serverless',
+      technologies: ['AWS Lambda', 'Azure Functions', 'Google Cloud Functions', 'Serverless Framework']
+    },
+    {
+      title: 'Data Lake Architecture',
+      description: 'Enterprise data lake design and implementation for big data analytics and storage.',
+      icon: '🏞️',
+      price: 'Starting at $4,200/month',
+      features: ['Data lake design', 'Data ingestion', 'Storage optimization', 'Security implementation', 'Analytics setup'],
+      benefits: ['Centralize data storage', 'Enable advanced analytics', 'Improve data governance'],
+      marketPrice: '$7,000-25,000/month',
+      category: 'Data Architecture',
+      technologies: ['AWS S3', 'Azure Data Lake', 'Hadoop', 'Spark', 'Delta Lake']
+    },
+    {
+      title: 'AI Infrastructure Setup',
+      description: 'AI/ML infrastructure deployment and management for machine learning workloads.',
+      icon: '🤖',
+      price: 'Starting at $4,800/month',
+      features: ['GPU cluster setup', 'ML pipeline deployment', 'Model serving', 'Data preprocessing', 'Monitoring'],
+      benefits: ['Enable AI/ML workloads', 'Improve model performance', 'Reduce training time'],
+      marketPrice: '$8,000-30,000/month',
+      category: 'AI Infrastructure',
+      technologies: ['NVIDIA GPUs', 'Kubernetes', 'TensorFlow', 'PyTorch', 'MLflow']
+    },
+    {
+      title: 'Hybrid Cloud Management',
+      description: 'Multi-cloud and hybrid cloud infrastructure management and optimization.',
+      icon: '☁️',
+      price: 'Starting at $3,600/month',
+      features: ['Multi-cloud strategy', 'Cost optimization', 'Security management', 'Migration services', 'Monitoring'],
+      benefits: ['Optimize cloud costs', 'Improve reliability', 'Enable vendor flexibility'],
+      marketPrice: '$6,500-22,000/month',
+      category: 'Cloud Management',
+      technologies: ['AWS', 'Azure', 'Google Cloud', 'Terraform', 'CloudFormation']
+    },
+    {
+      title: 'Zero Trust Security Architecture',
+      description: 'Zero trust security model implementation for enterprise network protection.',
+      icon: '🔒',
+      price: 'Starting at $4,000/month',
+      features: ['Identity verification', 'Network segmentation', 'Access control', 'Threat detection', 'Compliance'],
+      benefits: ['Improve security posture', 'Reduce attack surface', 'Ensure compliance'],
+      marketPrice: '$7,500-25,000/month',
+      category: 'Security Architecture',
+      technologies: ['Zero Trust', 'Identity Management', 'Network Security', 'SIEM', 'EDR']
+    },
+    {
+      title: 'High-Performance Computing (HPC)',
+      description: 'High-performance computing cluster setup and management for scientific and engineering workloads.',
+      icon: '💻',
+      price: 'Starting at $6,000/month',
+      features: ['HPC cluster design', 'Job scheduling', 'Performance optimization', 'Storage management', 'Monitoring'],
+      benefits: ['Accelerate computations', 'Enable complex simulations', 'Improve research efficiency'],
+      marketPrice: '$12,000-50,000/month',
+      category: 'HPC',
+      technologies: ['Slurm', 'OpenMPI', 'CUDA', 'InfiniBand', 'Parallel File Systems']
+    },
+    {
+      title: 'Content Delivery Network (CDN)',
+      description: 'Global CDN implementation and optimization for improved content delivery performance.',
+      icon: '🌍',
+      price: 'Starting at $1,500/month',
+      features: ['CDN setup', 'Content optimization', 'Caching strategy', 'Performance monitoring', 'Security'],
+      benefits: ['Improve load times', 'Reduce bandwidth costs', 'Enhance user experience'],
+      marketPrice: '$2,500-10,000/month',
+      category: 'CDN',
+      technologies: ['CloudFlare', 'AWS CloudFront', 'Azure CDN', 'Akamai', 'Fastly']
+    },
+    {
+      title: 'Database Performance Optimization',
+      description: 'Database performance tuning and optimization for improved application performance.',
+      icon: '🗄️',
+      price: 'Starting at $2,200/month',
+      features: ['Performance analysis', 'Query optimization', 'Index tuning', 'Capacity planning', 'Monitoring'],
+      benefits: ['Improve query performance', 'Reduce response times', 'Optimize resource usage'],
+      marketPrice: '$4,000-15,000/month',
+      category: 'Database Optimization',
+      technologies: ['PostgreSQL', 'MySQL', 'MongoDB', 'Redis', 'Elasticsearch']
+    },
+    {
+      title: 'API Gateway Management',
+      description: 'Enterprise API gateway setup and management for secure and scalable API operations.',
+      icon: '🚪',
+      price: 'Starting at $2,500/month',
+      features: ['API gateway setup', 'Rate limiting', 'Authentication', 'Monitoring', 'Documentation'],
+      benefits: ['Centralize API management', 'Improve security', 'Enable API monetization'],
+      marketPrice: '$4,500-18,000/month',
+      category: 'API Management',
+      technologies: ['Kong', 'AWS API Gateway', 'Azure API Management', 'Apigee', 'Zuul']
+    },
+    {
+      title: 'Container Orchestration',
+      description: 'Kubernetes and container orchestration platform setup and management.',
+      icon: '🐳',
+      price: 'Starting at $3,200/month',
+      features: ['Kubernetes setup', 'Container management', 'Auto-scaling', 'Service mesh', 'Monitoring'],
+      benefits: ['Improve scalability', 'Simplify deployment', 'Enable microservices'],
+      marketPrice: '$5,500-20,000/month',
+      category: 'Containerization',
+      technologies: ['Kubernetes', 'Docker', 'Helm', 'Istio', 'Prometheus']
+    },
+    {
+      title: 'Real-time Data Streaming',
+      description: 'Real-time data streaming platform setup and management for live data processing.',
+      icon: '📊',
+      price: 'Starting at $2,800/month',
+      features: ['Stream processing', 'Data pipelines', 'Real-time analytics', 'Event handling', 'Monitoring'],
+      benefits: ['Enable real-time insights', 'Improve decision making', 'Support live applications'],
+      marketPrice: '$5,000-18,000/month',
+      category: 'Streaming',
+      technologies: ['Apache Kafka', 'Apache Flink', 'Apache Storm', 'AWS Kinesis', 'Azure Stream Analytics']
     }
   ];
 
