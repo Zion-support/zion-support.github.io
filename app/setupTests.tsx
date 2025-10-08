@@ -94,7 +94,6 @@ global.PerformanceObserver = class MockPerformanceObserver {
 };
 
 // Suppress JSDOM navigation warnings
-const originalConsoleError = console.error;
 console.error = (...args) => {
   if (args[0] && args[0].type === 'not implemented' && args[0].message?.includes('navigation')) {
     return; // Suppress JSDOM navigation warnings

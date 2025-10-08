@@ -13,6 +13,9 @@ import AdvancedSEOOptimizer from './components/AdvancedSEOOptimizer';
 import AdvancedPerformanceMonitor from './components/AdvancedPerformanceMonitor';
 import SEOEnhancer from './components/SEOEnhancer';
 import PerformanceDashboard from './components/PerformanceDashboard';
+import ContentShowcase from './components/ContentShowcase';
+import InteractiveContentShowcase2026 from './components/InteractiveContentShowcase2026';
+import InteractiveAIROICalculator from './components/InteractiveAIROICalculator';
 import LoadingSpinner from './components/LoadingSpinner';
 
 // Lazy load pages for better performance
@@ -124,5 +127,15 @@ const App: React.FC = () => {
     </HelmetProvider>
   );
 };
+
+export default App;
+// Loading fallback component
+const LoadingFallback: React.FC<{ height?: string }> = ({
+  height = 'h-32',
+}) => (
+  <div className={`flex items-center justify-center ${height} w-full`}>
+    <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-indigo-600"></div>
+  </div>
+);
 
 export default App;
