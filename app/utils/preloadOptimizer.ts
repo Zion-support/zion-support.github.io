@@ -40,10 +40,10 @@ export const preloadRoute = (route: string) => {
 
   // Preload route-specific resources
   const routeResources = {
-    '/blog': ['/api/blog/posts', '/images/blog-hero.jpg']
-    '/services': ['/api/services', '/images/services-hero.jpg']
+    '/blog': ['/api/blog/posts', '/images/blog-hero.jpg'],
+    '/services': ['/api/services', '/images/services-hero.jpg'],
     '/contact': ['/api/contact', '/images/contact-hero.jpg']
-  }
+  };
   const resources = routeResources[route as keyof typeof routeResources]
   if (resources) {
     resources.forEach(resource => {

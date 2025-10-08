@@ -102,15 +102,14 @@ class MonitoringService {
         const longTaskObserver = new PerformanceObserver((list) => {
           for (const entry of list.getEntries()) {
             console.warn('Long task detected:', {
-              duration: entry.duration
-              startTime: entry.startTime
-            })
-          }
-        })
-        longTaskObserver.observe({ entryTypes: ['longtask'] })
+            duration: entry.duration,
+            startTime: entry.startTime
+          });
+        }
+      });
+      longTaskObserver.observe({ entryTypes: ['longtask'] });
 
-      } catch {
-      } catch (error) {
+    } catch (error) {
         // Long task API might not be available
       }
     }
@@ -123,10 +122,10 @@ class MonitoringService {
           entries.forEach((entry: any) => {
             if (entry.duration > 1000) {
               console.warn('Slow resource detected:', {
-                name: entry.name
-                duration: entry.duration
+                name: entry.name,
+                duration: entry.duration,
                 type: entry.initiatorType
-              })
+              });
             }
           })
         })

@@ -94,10 +94,8 @@ class PerformanceOptimizer {
         const lastEntry = entries[entries.length - 1]
         this.metrics.lcp = lastEntry.startTime
       })
-      observer.observe({ entryTypes: ['largest-contentful-paint'] })
-      this.observers.push(observer)
-    } catch {
-    } catch {
+      observer.observe({ entryTypes: ['largest-contentful-paint'] });
+      this.observers.push(observer);
     } catch {
       // Ignore if not supported
     }
@@ -112,10 +110,8 @@ class PerformanceOptimizer {
 
         })
       })
-      observer.observe({ entryTypes: ['first-input'] })
-      this.observers.push(observer)
-    } catch {
-    } catch {
+      observer.observe({ entryTypes: ['first-input'] });
+      this.observers.push(observer);
     } catch {
       // Ignore if not supported
     }
