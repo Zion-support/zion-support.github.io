@@ -17,50 +17,60 @@ const Navigation: React.FC = () => {
 
           {/* Desktop Menu */}
           <div className="hidden md:flex space-x-8">
-            <Link to="/" className="text-gray-700 hover:text-blue-600 transition-colors">
+            <Link to="/" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
               Home
             </Link>
-            <Link to="/about" className="text-gray-700 hover:text-blue-600 transition-colors">
+            <Link to="/about" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
               About
             </Link>
             <div className="relative">
               <button
                 onClick={() => setServicesOpen(!servicesOpen)}
-                className="text-gray-700 hover:text-blue-600 transition-colors flex items-center"
+                className="text-gray-700 hover:text-blue-600 transition-colors flex items-center font-medium"
               >
                 Services
                 <ChevronDown className="w-4 h-4 ml-1" />
               </button>
               {servicesOpen && (
-                <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg border py-2 z-50">
-                  <Link to="/services" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
-                    All Services
-                  </Link>
-                  <Link to="/micro-saas" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
-                    Micro SAAS Solutions
-                  </Link>
-                  <Link to="/ai-services" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
-                    AI Services
-                  </Link>
-                  <Link to="/it-services" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
-                    IT Services
-                  </Link>
-                  <Link to="/services-advertising" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
-                    Advertising Services
-                  </Link>
+                <div className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-xl border py-4 z-50">
+                  <div className="grid grid-cols-2 gap-4 px-4">
+                    <div>
+                      <h3 className="text-sm font-semibold text-gray-900 mb-2">AI & Machine Learning</h3>
+                      <Link to="/ai-services" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
+                        AI Services
+                      </Link>
+                      <Link to="/micro-saas" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
+                        Micro SAAS Solutions
+                      </Link>
+                    </div>
+                    <div>
+                      <h3 className="text-sm font-semibold text-gray-900 mb-2">IT & Technology</h3>
+                      <Link to="/it-services" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
+                        IT Services
+                      </Link>
+                      <Link to="/services-advertising" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
+                        Advertising Services
+                      </Link>
+                    </div>
+                  </div>
+                  <div className="border-t mt-4 pt-4 px-4">
+                    <Link to="/services" className="block px-3 py-2 text-sm font-medium text-blue-600 hover:bg-blue-50 rounded">
+                      View All Services →
+                    </Link>
+                  </div>
                 </div>
               )}
             </div>
-            <Link to="/case-studies" className="text-gray-700 hover:text-blue-600 transition-colors">
+            <Link to="/case-studies" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
               Case Studies
             </Link>
-            <Link to="/enterprise" className="text-gray-700 hover:text-blue-600 transition-colors">
+            <Link to="/enterprise" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
               Enterprise
             </Link>
-            <Link to="/team" className="text-gray-700 hover:text-blue-600 transition-colors">
+            <Link to="/team" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
               Team
             </Link>
-            <Link to="/contact" className="text-gray-700 hover:text-blue-600 transition-colors">
+            <Link to="/contact" className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors font-medium">
               Contact
             </Link>
           </div>
@@ -85,43 +95,45 @@ const Navigation: React.FC = () => {
         {isOpen && (
           <div className="md:hidden py-4 border-t">
             <div className="flex flex-col space-y-4">
-              <Link to="/" className="text-gray-700 hover:text-blue-600 transition-colors">
+              <Link to="/" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
                 Home
               </Link>
-              <Link to="/about" className="text-gray-700 hover:text-blue-600 transition-colors">
+              <Link to="/about" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
                 About
               </Link>
               <div className="space-y-2">
                 <div className="text-gray-700 font-semibold">Services</div>
                 <div className="ml-4 space-y-2">
-                  <Link to="/services" className="block text-gray-600 hover:text-blue-600 transition-colors">
-                    All Services
-                  </Link>
-                  <Link to="/micro-saas" className="block text-gray-600 hover:text-blue-600 transition-colors">
-                    Micro SAAS Solutions
-                  </Link>
-                  <Link to="/ai-services" className="block text-gray-600 hover:text-blue-600 transition-colors">
+                  <div className="text-sm font-medium text-gray-500 mb-1">AI & Machine Learning</div>
+                  <Link to="/ai-services" className="block text-gray-600 hover:text-blue-600 transition-colors ml-2">
                     AI Services
                   </Link>
-                  <Link to="/it-services" className="block text-gray-600 hover:text-blue-600 transition-colors">
+                  <Link to="/micro-saas" className="block text-gray-600 hover:text-blue-600 transition-colors ml-2">
+                    Micro SAAS Solutions
+                  </Link>
+                  <div className="text-sm font-medium text-gray-500 mb-1 mt-3">IT & Technology</div>
+                  <Link to="/it-services" className="block text-gray-600 hover:text-blue-600 transition-colors ml-2">
                     IT Services
                   </Link>
-                  <Link to="/services-advertising" className="block text-gray-600 hover:text-blue-600 transition-colors">
+                  <Link to="/services-advertising" className="block text-gray-600 hover:text-blue-600 transition-colors ml-2">
                     Advertising Services
+                  </Link>
+                  <Link to="/services" className="block text-blue-600 hover:text-blue-700 transition-colors font-medium mt-3">
+                    View All Services →
                   </Link>
                 </div>
               </div>
-              <Link to="/case-studies" className="text-gray-700 hover:text-blue-600 transition-colors">
+              <Link to="/case-studies" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
                 Case Studies
               </Link>
-              <Link to="/enterprise" className="text-gray-700 hover:text-blue-600 transition-colors">
+              <Link to="/enterprise" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
                 Enterprise
               </Link>
-              <Link to="/team" className="text-gray-700 hover:text-blue-600 transition-colors">
+              <Link to="/team" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
                 Team
               </Link>
-              <Link to="/contact" className="text-gray-700 hover:text-blue-600 transition-colors">
-                Contact
+              <Link to="/contact" className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors font-medium text-center">
+                Contact Us
               </Link>
             </div>
           </div>
