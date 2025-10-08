@@ -118,7 +118,7 @@ const App: React.FC = () => {
                   enableRealTimeMonitoring={process.env.NODE_ENV === 'development'}
                   onMetricsUpdate={(metrics) => {
                     if (process.env.NODE_ENV === 'development') {
-                      logger.info('Performance Metrics', { component: 'PerformanceMonitor', metrics: metrics as unknown as Record<string, unknown> });
+                      logger.debug('Performance Metrics', { component: 'PerformanceMonitor', metrics });
                     }
                   }}
                 />

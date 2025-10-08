@@ -101,42 +101,42 @@ export function useEnhancedPerformance(
   const measureOperation = useCallback(
     (operationName: string) => {
       const markName = `${component}-${operationName}`;
-      const startMarkName = `${markName}-start`;
-      const endMarkName = `${markName}-end`;
+      const startMark = `${markName}-start`;
+      const endMark = `${markName}-end`;
       
       // Use native Performance API
-      if (typeof performance !== 'undefined' && performance.mark) {
-        performance.mark(startMarkName);
+      if (typeof window !== 'undefined' && window.performance) {
+        performance.mark(startMark);
       }
 
       return {
         end: () => {
-          let duration: number | undefined;
-          
-          if (typeof performance !== 'undefined' && performance.mark && performance.measure) {
+          if (typeof window !== 'undefined' && window.performance) {
+            performance.mark(endMark);
             try {
-              performance.mark(endMarkName);
-              const measure = performance.measure(markName, startMarkName, endMarkName);
-              duration = measure.duration;
+              const measure = performance.measure(markName, startMark, endMark);
+              const duration = measure.duration;
               
-              // Clean up marks
-              performance.clearMarks(startMarkName);
-              performance.clearMarks(endMarkName);
-              performance.clearMeasures(markName);
-              
-              if (duration && trackPerformance) {
+              if (trackPerformance) {
                 analytics.trackPerformance(
                   `${component}-${operationName}`,
                   duration,
                   duration > 1000 ? 'slow' : 'fast'
                 );
               }
+              
+              // Clean up marks
+              performance.clearMarks(startMark);
+              performance.clearMarks(endMark);
+              performance.clearMeasures(markName);
+              
+              return duration;
             } catch (error) {
-              console.warn('Performance measurement failed:', error);
+              console.warn('Failed to measure performance:', error);
+              return 0;
             }
           }
-          
-          return duration;
+          return 0;
         },
       };
     },
