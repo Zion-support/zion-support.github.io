@@ -98,7 +98,7 @@ const App: React.FC = () => {
         enableErrorReporting={true}
         enableRetry={true}
         onError={(error, errorInfo) => {
-          logger.error(new Error(error.message), { component: 'ErrorBoundary', errorInfo });
+          logger.error(error.message, { error, errorInfo });
         }}
       >
         <AccessibilityEnhancer>

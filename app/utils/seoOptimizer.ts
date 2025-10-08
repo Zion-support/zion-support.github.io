@@ -45,7 +45,7 @@ class SEOOptimizer {
   init(): void {
     this.setupStructuredData();
     this.setupCanonicalUrls();
-    this.setupMetaTags();
+    // Meta tags are set individually
     this.setupPerformanceMonitoring();
   }
 
@@ -154,8 +154,6 @@ class SEOOptimizer {
     const directives = [];
     
     if (!this.currentPageData.noindex) {
-      directives.push('index');
-    } else {
       directives.push('noindex');
     }
     

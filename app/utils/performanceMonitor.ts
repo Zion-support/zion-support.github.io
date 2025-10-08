@@ -48,7 +48,7 @@ class PerformanceMonitor {
       const observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           if (entry.name === name) {
-            this.metrics[metricKey] = entry.startTime;
+            (this.metrics as any)[metricKey] = entry.startTime;
             this.logMetric(metricKey as string, entry.startTime);
           }
         }
@@ -196,7 +196,6 @@ class PerformanceMonitor {
     // FCP scoring (0-100)
     if (this.metrics.fcp) {
       if (this.metrics.fcp <= 1800) scores.push(100);
-      else if (this.metrics.fcp <= 3000) scores.push(75);
       else if (this.metrics.fcp <= 4000) scores.push(50);
       else scores.push(25);
     }

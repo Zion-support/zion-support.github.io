@@ -13,8 +13,8 @@ import {
   trackClick,
   loadBannerStats,
   getRefreshInterval,
-  getRotationStrategy
-} from '../data/bannerConfigurations';
+} from '../data/bannerConfigurations'; // TODO: Module needs to be created
+// } from '../data/bannerConfigurations'; // Module not found
 
 interface UseBannerRotationOptions {
   strategy?: RotationStrategy;

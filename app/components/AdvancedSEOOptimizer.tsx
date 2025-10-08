@@ -178,7 +178,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     trackPageView({
       title: config.title,
       description: config.description,
-      url: config.canonicalUrl,
+      
       keywords: config.keywords,
       canonicalUrl: config.canonicalUrl,
     });

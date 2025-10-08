@@ -805,6 +805,7 @@ export class TestRunner {
           result = { passed: false, error: 'Unknown test type' };
       }
 
+    const results: any[] = [];
       results.push({ ...result, name: test.name, type: test.type });
     }
 
@@ -893,7 +894,6 @@ export const useTestRunner = () => {
 export const testUtils = {
   // Create mock data
   createMockData: (type: string, count: number = 10) => {
-    const mockData = [];
     for (let i = 0; i < count; i++) {
       mockData.push({
         id: i + 1,
