@@ -5,7 +5,6 @@ import Link from 'next/link';
 
 const UltimateBusinessIntelligence2025Banner = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [isVisible, setIsVisible] = useState(true);
 
   const content = [
     {
@@ -23,18 +22,18 @@ const UltimateBusinessIntelligence2025Banner = () => {
       tags: ['AI', 'Business Intelligence', 'Enterprise', 'ROI', '2025']
     },
     {
-      id: 'fortune-500-case-study',
-      title: 'Fortune 500 Ultimate Business Intelligence Success',
-      description: 'Real-world case study: How a Fortune 500 company achieved 30,000% ROI through AI-powered business intelligence transformation.',
+      id: 'fortune-500-success-story',
+      title: 'Fortune 500 Ultimate Business Intelligence 30,000% ROI Success Story',
+      description: 'Discover how a Fortune 500 company achieved unprecedented returns through AI-powered business intelligence transformation.',
       url: '/case-studies/fortune-500-ultimate-business-intelligence-30000-roi-success-story',
       type: 'Case Study',
       metrics: {
         roi: '30,000%',
         savings: '$750M',
-        efficiency: '400%',
-        timeline: '18 months'
+        timeline: '18 months',
+        accuracy: '99.9%'
       },
-      tags: ['Case Study', 'Fortune 500', 'ROI', '2025']
+      tags: ['Fortune 500', 'Case Study', 'ROI', 'Success Story', '2025']
     },
     {
       id: 'enterprise-automation-2025',
@@ -46,7 +45,7 @@ const UltimateBusinessIntelligence2025Banner = () => {
         automation: '95%',
         productivity: '300%',
         efficiency: '400%',
-        cost: '80% reduction'
+        cost: '80% ↓'
       },
       tags: ['Automation', 'Enterprise', 'Productivity', 'Efficiency', '2025']
     }
@@ -59,12 +58,6 @@ const UltimateBusinessIntelligence2025Banner = () => {
 
     return () => clearInterval(timer);
   }, [content.length]);
-
-  const handleClose = () => {
-    setIsVisible(false);
-  };
-
-  if (!isVisible) return null;
 
   const currentContent = content[currentSlide];
 
@@ -91,7 +84,7 @@ const UltimateBusinessIntelligence2025Banner = () => {
             <span className="text-cyan-400 font-bold text-xl">
               BREAKING: ULTIMATE BUSINESS INTELLIGENCE REVOLUTION 2025
             </span>
-            <span className='text-2xl'>⚡</span>
+            <span className="text-2xl">⚡</span>
           </div>
           <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-6">
             {currentContent.title}
@@ -119,7 +112,7 @@ const UltimateBusinessIntelligence2025Banner = () => {
             {/* Metrics Grid */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8">
               {Object.entries(currentContent.metrics).map(([key, value]) => (
-                <div key={key} className="text-center bg-white/5 rounded-xl p-4">
+                <div key={key} className="text-center">
                   <div className="text-3xl font-bold text-cyan-400 mb-2">{value}</div>
                   <div className="text-sm text-gray-300 capitalize">
                     {key.replace(/([A-Z])/g, ' $1').trim()}
@@ -133,7 +126,7 @@ const UltimateBusinessIntelligence2025Banner = () => {
               {currentContent.tags.map((tag) => (
                 <span
                   key={tag}
-                  className="bg-white/10 text-white px-3 py-1 rounded-full text-sm border border-white/20"
+                  className="px-3 py-1 bg-white/10 text-gray-300 text-sm rounded-full border border-white/20"
                 >
                   {tag}
                 </span>
