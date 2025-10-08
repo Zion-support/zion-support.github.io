@@ -15,6 +15,7 @@ export {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   sanitizeHtml as sanitizeInput, 
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-6ad8
@@ -27,6 +28,9 @@ export {
   sanitizeHtml as sanitizeInput, 
   escapeHtml, 
 >>>>>>> cursor/fix-errors-and-merge-to-main-5f6c
+=======
+  escapeHtml, 
+>>>>>>> cursor/fix-errors-and-merge-to-main-fa65
   isValidEmail as isValidEmailFromSecurity,
   isValidUrl as isValidUrlFromSecurity
 } from './validation';
@@ -39,6 +43,7 @@ export {
 
 export { 
   validateEmail as validateForm, 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -62,6 +67,11 @@ export {
 >>>>>>> cursor/fix-errors-and-merge-to-main-b1a4
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-5f6c
+=======
+  validatePhone as validateField,
+  isValidEmail,
+  isValidUrl
+>>>>>>> cursor/fix-errors-and-merge-to-main-fa65
 } from './validation';
 
 // Default exports

@@ -78,6 +78,13 @@ class PerformanceOptimizer {
   }
 
   /**
+   * Public init method for external initialization
+   */
+  public init(): void {
+    this.initializePerformanceMonitoring();
+  }
+
+  /**
    * Measure page load time
    */
   private measureLoadTime(): void {
@@ -95,6 +102,31 @@ class PerformanceOptimizer {
   }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+  /**
+   * Measure render time
+   */
+  private measureRenderTime(): void {
+    if (typeof window === 'undefined' || !window.performance) return;
+
+    try {
+      const observer = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        entries.forEach((entry) => {
+          if (entry.entryType === 'measure') {
+            this.metrics.renderTime = entry.duration;
+          }
+        });
+      });
+      observer.observe({ entryTypes: ['measure'] });
+      this.observers.push(observer);
+    } catch (error) {
+      console.warn('Performance Observer not supported:', error);
+    }
+  }
+>>>>>>> cursor/fix-errors-and-merge-to-main-fa65
   private observeLCP() {
     try {
       const observer = new PerformanceObserver((list) => {
@@ -185,6 +217,7 @@ class PerformanceOptimizer {
     }
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
     const images = document.querySelectorAll('img[data-src]')
@@ -233,6 +266,8 @@ class PerformanceOptimizer {
       // PerformanceObserver may not support 'measure' entryType in some environments
     }
   }
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-fa65
 
   /**
    * Measure memory usage
