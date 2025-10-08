@@ -1,4 +1,3 @@
-// @ts-nocheck
 /**
  * Enhanced Performance Hook
  * Combines performance monitoring, error tracking, and analytics
@@ -102,11 +101,20 @@ export function useEnhancedPerformance(
   const measureOperation = useCallback(
     (operationName: string) => {
       const markName = `${component}-${operationName}`;
-      performance.mark(markName);
+      if (typeof performance !== "undefined") performance.mark(`start-${markName}`);
 
       return {
         end: () => {
-          performance.measure(markName, markName); const duration = performance.getEntriesByName(markName, "measure")[0]?.duration || 0;
+          let duration = 0;
+          if (typeof performance !== "undefined") {
+            performance.mark(`end-${markName}`);
+            try {
+              const measure = performance.measure(markName, `start-${markName}`, `end-${markName}`);
+              duration = measure.duration;
+            } catch (e) {
+              // Ignore measurement errors
+            }
+          }
           if (duration && trackPerformance) {
             analytics.trackPerformance(
               `${component}-${operationName}`,
