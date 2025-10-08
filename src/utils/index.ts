@@ -53,9 +53,12 @@ export {
 // Export errorHandler module items individually
 export {
   ErrorSeverity,
-  ErrorCategory,
-  type ErrorInfo,
+  ErrorType,
+  type AppError,
   ErrorHandler,
+  type ErrorHandlerConfig,
+  ErrorBoundary,
+  useErrorHandler,
 } from './errorHandler';
 export { default as errorHandler } from './errorHandler';
 
