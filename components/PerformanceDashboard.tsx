@@ -23,22 +23,13 @@ const PerformanceDashboard: React.FC = () => {
       )[0] as PerformanceNavigationTiming;
       const _loadTime = navigation ? navigation.loadEventEnd - navigation.loadEventStart : 0;
 
-<<<<<<< HEAD
-      const _memory = (performance as Performance & { memory?: { usedJSHeapSize: number } }).memory;
-      const _memoryUsage = _memory ? _memory.usedJSHeapSize / 1024 / 1024 : 0;
-=======
       const memory = (performance as Performance & { memory?: { usedJSHeapSize: number } }).memory;
       const memoryUsage = memory ? memory.usedJSHeapSize / 1024 / 1024 : 0;
->>>>>>> cursor/fix-errors-and-merge-to-main-ef5d
 
       setMetrics(prev => ({
         ...prev,
         loadTime: _loadTime,
-<<<<<<< HEAD
-        memoryUsage: _memoryUsage,
-=======
         memoryUsage,
->>>>>>> cursor/fix-errors-and-merge-to-main-ef5d
       }));
     };
 
