@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, Star, BarChart, TrendingUp, Target, Eye, Database, Zap, Brain, PieChart, LineChart, Activity } from 'lucide-react';cursor/add-new-services-and-deploy-updates-f159
+import { CheckCircle, Star, BarChart, TrendingUp, Target, Eye, Database, Zap, Brain, PieChart, LineChart, Activity } from 'lucide-react';
 
 const BusinessIntelligencePage: React.FC = () => {
   const biServices = [
@@ -11,7 +11,7 @@ const BusinessIntelligencePage: React.FC = () => {
       price: 'Starting at $2,800/month',
       features: ['Real-time data streaming', 'Interactive dashboards', 'Custom visualizations', 'Mobile responsive', 'Automated alerts'],
       benefits: ['Make faster decisions', 'Identify trends immediately', 'Improve operational efficiency'],
-      marketPrice: '$4,500-12,000/month',cursor/add-new-services-and-deploy-updates-f159
+      marketPrice: '$4,500-12,000/month',
       category: 'Analytics',
       technologies: ['Tableau', 'Power BI', 'Looker', 'Apache Superset', 'Custom Dashboards']
     },

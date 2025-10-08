@@ -138,11 +138,7 @@ const CybersecurityPage: React.FC = () => {
     }
   ];
 
-<<<<<<< HEAD
-  const categories = [...new Set(securityServices.map(service => service.category))];cursor/add-new-services-and-deploy-updates-f159
-=======
   const _categories = [...new Set(securityServices.map(service => service.category))];
->>>>>>> origin/main
 
   return (
     <>
