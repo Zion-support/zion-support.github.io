@@ -110,7 +110,7 @@ export function preloadComponent<T extends ComponentType<any>>(
  */
 export function lazyWithPreload<T extends ComponentType<any>>(
   importFunc: () => Promise<{ default: T }>,
-  preloadOptions: PreloadOptions = {}
+  _preloadOptions: PreloadOptions = {}
 ): LazyExoticComponent<T> & { preload: () => Promise<void> } {
   const lazyComponent = lazy(importFunc);
   let preloadPromise: Promise<void> | null = null;

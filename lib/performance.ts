@@ -366,7 +366,7 @@ export function getConnectionType(): string {
   }
 
   const connection = (navigator as NavigatorWithConnection).connection;
-  return connection.effectiveType || connection.type || 'unknown';
+  return connection?.effectiveType || connection?.type || 'unknown';
 }
 
 const performanceUtils = {
