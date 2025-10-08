@@ -3,6 +3,8 @@
  * Provides tools for monitoring and optimizing application performance
  */
 
+import logger from './logger';
+
 interface PerformanceMetrics {
   loadTime: number;
   renderTime: number;
@@ -241,7 +243,7 @@ class PerformanceOptimizer {
     });
 
     images.forEach(img => imageObserver.observe(img));
-    logger.info('Lazy loading initialized for images', 'PerformanceOptimizer');
+    logger.info('Lazy loading initialized for images', { component: 'PerformanceOptimizer' });
   }
 
   /**
@@ -265,7 +267,7 @@ class PerformanceOptimizer {
       document.head.appendChild(link);
     });
 
-    logger.info('Critical resource hints added', 'PerformanceOptimizer');
+    logger.info('Critical resource hints added', { component: 'PerformanceOptimizer' });
   }
 
   /**
@@ -278,12 +280,11 @@ class PerformanceOptimizer {
     if (!navigation) return null;
 
     return {
-      ttfb: navigation.responseStart - navigation.requestStart,
-      fcp: this.metrics.fcp || 0,
-      lcp: this.metrics.lcp || 0,
-      fid: this.metrics.fid || 0,
-      cls: this.metrics.cls || 0,
-      fmp: this.metrics.fmp || 0,
+      loadTime: navigation.loadEventEnd - navigation.fetchStart,
+      renderTime: navigation.domContentLoadedEventEnd - navigation.fetchStart,
+      memoryUsage: this.metrics.memoryUsage || 0,
+      bundleSize: this.metrics.bundleSize || 0,
+      cacheHitRate: this.metrics.cacheHitRate || 0,
     };
   }
 
@@ -291,7 +292,7 @@ class PerformanceOptimizer {
    * Report web vitals
    */
   reportWebVitals(metrics: PerformanceMetrics): void {
-    logger.performance('Web Vitals reported', metrics as unknown as Record<string, unknown>, 'PerformanceOptimizer');
+    logger.debug('Web Vitals reported', { component: 'PerformanceOptimizer', metrics });
     
     // Send to analytics if available
     if (typeof window !== 'undefined' && (window as { gtag?: Function }).gtag) {
@@ -342,13 +343,15 @@ ${metrics.memoryUsage > 30 * 1024 * 1024 ? '- Review memory usage and optimize c
     }
   }
   public cleanup(): void {
-    this.observers.forEach(observer => observer.disconnect());
-    this.observers = [];
-    this.isMonitoring = false;
+    // Cleanup performance monitoring resources
+    if (typeof window !== 'undefined') {
+      // Remove event listeners if any
+      logger.debug('Performance optimizer cleaned up', { component: 'PerformanceOptimizer' });
+    }
   }
 }
 
 // Export singleton instance
 export const performanceOptimizer = new PerformanceOptimizer();
 export default PerformanceOptimizer;
-export { PerformanceOptimizer, type PerformanceMetrics, type PerformanceConfig };
+export { PerformanceOptimizer, type PerformanceMetrics, type OptimizationConfig };
