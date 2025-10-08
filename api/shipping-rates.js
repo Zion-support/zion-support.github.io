@@ -1,3 +1,32 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+export default async function handler(req, res) {
+=======
+const { withSentry } = require('./withSentry.cjs');
+
+async function handler(req, res) {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3d1d
+=======
+const { withSentry } = require('./withSentry.cjs');
+
+async function handler(req, res) {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-4606
 =======
 const { withSentry } = require('./withSentry.cjs');
 
@@ -52,17 +81,36 @@ export default async function handler(req, res) {
 =======
 export default async function handler(req, res) {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-ee0f
-=======
-const { withSentry } = require('./withSentry.cjs');
-
-async function handler(req, res) {
->>>>>>> origin/main
   if (req.method !== 'POST') {
     res.statusCode = 405;
     res.setHeader('Allow', 'POST');
     res.end('Method Not Allowed');
     return;
   }
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3d1d
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-4606
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e3b
@@ -75,24 +123,134 @@ async function handler(req, res) {
   try {
     const { fromAddress, toAddress, parcel } = req.body || {};
     const apiKey = process.env.EASYPOST_API_KEY;
+<<<<<<< HEAD
 =======
+    
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-4854
 =======
->>>>>>> origin/main
 
   try {
     const { fromAddress, toAddress, parcel } = req.body || {};
     const apiKey = process.env.EASYPOST_API_KEY;
+<<<<<<< HEAD
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd65
+>>>>>>> b0d6dda8406c2e54af3529a18b3e8c5f6ab37739
+    
+>>>>>>> 40f0d19ecc0819e0cd100e68e36dd415011c7be9
+=======
+    
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0a8c
+=======
 
-    if (!apiKey) {
-      res.statusCode = 500;
-      res.json({ error: 'EasyPost API key not configured' });
-      return;
-    }
+  try {
+    const { fromAddress, toAddress, parcel } = req.body || {};
+    const apiKey = process.env.EASYPOST_API_KEY;
+    
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8
+=======
 
+  try {
+    const { fromAddress, toAddress, parcel } = req.body || {};
+    const apiKey = process.env.EASYPOST_API_KEY;
+    
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-8344
+=======
+
+  try {
+    const { fromAddress, toAddress, parcel } = req.body || {};
+    const apiKey = process.env.EASYPOST_API_KEY;
+    
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3fed
+=======
+
+  try {
+    const { fromAddress, toAddress, parcel } = req.body || {};
+    const apiKey = process.env.EASYPOST_API_KEY;
+    
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-1f83
+=======
+
+  try {
+    const { fromAddress, toAddress, parcel } = req.body || {};
+    const apiKey = process.env.EASYPOST_API_KEY;
+    
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-9d58
+=======
+
+  try {
+    const { fromAddress, toAddress, parcel } = req.body || {};
+    const apiKey = process.env.EASYPOST_API_KEY;
+    
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
+=======
+
+  try {
+    const { fromAddress, toAddress, parcel } = req.body || {};
+    const apiKey = process.env.EASYPOST_API_KEY;
+    
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a0d
+=======
+
+  try {
+    const { fromAddress, toAddress, parcel } = req.body || {};
+    const apiKey = process.env.EASYPOST_API_KEY;
+    
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-d12c
+=======
+
+  try {
+    const { fromAddress, toAddress, parcel } = req.body || {};
+    const apiKey = process.env.EASYPOST_API_KEY;
+    
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-efe9
+=======
+
+  try {
+    const { fromAddress, toAddress, parcel } = req.body || {};
+    const apiKey = process.env.EASYPOST_API_KEY;
+    
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-9008
+=======
+
+  try {
+    const { fromAddress, toAddress, parcel } = req.body || {};
+    const apiKey = process.env.EASYPOST_API_KEY;
+    
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6abd
+=======
+
+  try {
+    const { fromAddress, toAddress, parcel } = req.body || {};
+    const apiKey = process.env.EASYPOST_API_KEY;
+    
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-ee0f
+>>>>>>> ad3f5667eee57a9969ff433042f2200dd6375572
     const response = await fetch('https://api.easypost.com/v2/shipments', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> ad3f5667eee57a9969ff433042f2200dd6375572
+        'Authorization': `Bearer ${apiKey}`,
+=======
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-8344
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-3fed
 =======
@@ -109,21 +267,94 @@ async function handler(req, res) {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-6abd
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-ee0f
-=======
->>>>>>> origin/main
         Authorization: `Bearer ${apiKey}`,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0a8c
+=======
+        'Authorization': `Bearer ${apiKey}`,
+<<<<<<< HEAD
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd65
+        Authorization: `Bearer ${apiKey}`,
+>>>>>>> 40f0d19ecc0819e0cd100e68e36dd415011c7be9
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-1f83
+=======
+        'Authorization': `Bearer ${apiKey}`,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a0d
+>>>>>>> ad3f5667eee57a9969ff433042f2200dd6375572
       },
       body: JSON.stringify({
         shipment: {
           to_address: toAddress,
           from_address: fromAddress,
-          parcel,
-        },
+          parcel
+        }
       }),
     });
 
     const data = await response.json();
+<<<<<<< HEAD
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd65
+>>>>>>> b0d6dda8406c2e54af3529a18b3e8c5f6ab37739
+    
+>>>>>>> 40f0d19ecc0819e0cd100e68e36dd415011c7be9
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-4854
+=======
 
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0a8c
+=======
+    
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8
+=======
+    
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-8344
+=======
+    
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3fed
+=======
+    
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-1f83
+=======
+    
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-9d58
+=======
+    
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
+=======
+    
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a0d
+=======
+    
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-d12c
+=======
+    
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-efe9
+=======
+    
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-9008
+=======
+    
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6abd
+=======
+    
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-ee0f
+>>>>>>> ad3f5667eee57a9969ff433042f2200dd6375572
     if (!response.ok) {
       res.statusCode = 500;
       res.json({ error: data.error || 'Failed to fetch rates' });
@@ -137,6 +368,32 @@ async function handler(req, res) {
     res.statusCode = 500;
     res.json({ error: err.message });
   }
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+}
+
+module.exports = withSentry(handler);
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3d1d
+=======
+
+module.exports = withSentry(handler);
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-4606
 =======
 }
 
@@ -190,8 +447,3 @@ module.exports = withSentry(handler);
 =======
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-ee0f
-=======
-}
-
-module.exports = withSentry(handler);
->>>>>>> origin/main

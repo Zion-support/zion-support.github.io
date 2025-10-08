@@ -1,3 +1,10 @@
+import { useEffect } from 'react';
+import * as analytics from '../utils/analytics';
+
+export const usePerformance = () => {
+  useEffect(() => {
+    const observer = new PerformanceObserver((list) => {
+      list.getEntries().forEach((entry) => {
         analytics.track(
           'long_task',
           'performance',
@@ -17,4 +24,3 @@
 };
 
 export default usePerformance;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-88f7
