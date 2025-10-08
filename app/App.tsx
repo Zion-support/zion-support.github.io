@@ -98,7 +98,7 @@ const App: React.FC = () => {
         enableErrorReporting={true}
         enableRetry={true}
         onError={(error, errorInfo) => {
-          logger.error('Application Error', error, { component: 'ErrorBoundary', errorInfo });
+          logger.error('Application Error', error, { component: 'ErrorBoundary' });
         }}
       >
         <AccessibilityEnhancer>
@@ -153,7 +153,7 @@ const App: React.FC = () => {
                   enableRealTimeMonitoring={process.env['NODE_ENV'] === 'development'}
                   onMetricsUpdate={(metrics) => {
                     if (process.env['NODE_ENV'] === 'development') {
-                      logger.info('Performance Metrics', { component: 'PerformanceMonitor', metrics });
+                      logger.info('Performance Metrics', metrics as unknown as Record<string, unknown>, 'PerformanceMonitor');
                     }
                   }}
                 />

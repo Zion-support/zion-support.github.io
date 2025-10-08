@@ -1,11 +1,15 @@
 import React, { useState, useEffect } from 'react';
 
 interface PerformanceMetrics {
-  loadTime: number;
-  renderTime: number;
-  memoryUsage: number;
-  fps: number;
+  fcp?: number;
+  lcp?: number;
+  fid?: number;
+  cls?: number;
+  ttfb?: number;
+  [key: string]: number | undefined;
 }
+
+
 
 
 const PerformanceDashboard: React.FC = () => {

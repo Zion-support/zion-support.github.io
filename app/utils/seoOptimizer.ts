@@ -45,7 +45,7 @@ class SEOOptimizer {
   init(): void {
     this.setupStructuredData();
     this.setupCanonicalUrls();
-    this.setMetaTags();
+    this.updateMetaTags();
     this.setupPerformanceMonitoring();
   }
 
