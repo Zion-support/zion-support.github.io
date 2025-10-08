@@ -79,16 +79,25 @@ class PerformanceMonitor {
 
         // Largest Contentful Paint
         this.observeEntry('largest-contentful-paint', (entries) => {
+<<<<<<< HEAD
           const lastEntry = entries[entries.length - 1] as LargestContentfulPaint | undefined;
+=======
+          const lastEntry = entries[entries.length - 1] as any;
+>>>>>>> main
           if (lastEntry) {
-            this.recordMetric('LCP', lastEntry.renderTime || lastEntry.loadTime);
+            this.recordMetric('LCP', lastEntry.renderTime || lastEntry.loadTime || lastEntry.startTime);
           }
         });
 
         // First Input Delay
         this.observeEntry('first-input', (entries) => {
+<<<<<<< HEAD
           const firstInput = entries[0] as PerformanceEventTiming | undefined;
           if (firstInput) {
+=======
+          const firstInput = entries[0] as any;
+          if (firstInput && firstInput.processingStart) {
+>>>>>>> main
             const fid = firstInput.processingStart - firstInput.startTime;
             this.recordMetric('FID', fid);
           }
