@@ -64,7 +64,7 @@ class MonitoringService {
         const fidObserver = new PerformanceObserver(list => {
           const entries = list.getEntries();
           entries.forEach((entry: PerformanceEntry) => {
-            this.metrics.fid = (entry as PerformanceEntry & { processingStart: number }).processingStart - entry.startTime;
+            this.metrics.fid = entry.processingStart - entry.startTime;
             this.reportMetric('fid', this.metrics.fid);
           });
         });
@@ -75,8 +75,8 @@ class MonitoringService {
         const clsObserver = new PerformanceObserver(list => {
           const entries = list.getEntries();
           entries.forEach((entry: PerformanceEntry) => {
-            if (!(entry as PerformanceEntry & { hadRecentInput: boolean }).hadRecentInput) {
-              clsValue += (entry as PerformanceEntry & { value: number }).value;
+            if (!entry.hadRecentInput) {
+              clsValue += entry.value;
               this.metrics.cls = clsValue;
               this.reportMetric('cls', clsValue);
             }
@@ -110,7 +110,7 @@ class MonitoringService {
           }
         });
         longTaskObserver.observe({ entryTypes: ['longtask'] });
-      } catch {
+      } catch (_error) {
         // Long task API might not be available
       }
     }
@@ -120,19 +120,28 @@ class MonitoringService {
       try {
         const resourceObserver = new PerformanceObserver(list => {
           const entries = list.getEntries();
+<<<<<<< HEAD
+          entries.forEach((entry: PerformanceResourceTiming) => {
+=======
           entries.forEach((entry: PerformanceEntry) => {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-283b
             if (entry.duration > 1000) {
               console.warn('Slow resource detected:', {
                 name: entry.name,
                 duration: entry.duration,
-                type: (entry as PerformanceEntry & { initiatorType: string }).initiatorType,
+                type: entry.initiatorType,
               });
             }
           });
         });
         resourceObserver.observe({ entryTypes: ['resource'] });
+<<<<<<< HEAD
+      } catch (_error) {
+        console.error('Error monitoring resources:', _error);
+=======
       } catch {
-        console.error('Error monitoring resources');
+        console.error('Error monitoring resources:', error);
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-283b
       }
     }
   }
