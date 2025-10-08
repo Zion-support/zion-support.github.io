@@ -1,8 +1,13 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ChevronDown, Phone, Mail, MapPin } from 'lucide-react';
+import FuturisticNavigation from './FuturisticNavigation';
 
 const Navigation: React.FC = () => {
+  return <FuturisticNavigation />;
+};
+
+const OldNavigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
   const [aiServicesOpen, setAiServicesOpen] = useState(false);

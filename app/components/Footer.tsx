@@ -1,8 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Phone, Mail, MapPin, Clock, Award, Shield, Zap } from 'lucide-react';
+import FuturisticFooter from './FuturisticFooter';
 
 const Footer: React.FC = () => {
+  return <FuturisticFooter />;
+};
+
+const OldFooter: React.FC = () => {
   return (
     <footer className="bg-gray-900 text-white py-12">
       <div className="container mx-auto px-4">
