@@ -124,10 +124,10 @@ const UltimateBusinessIntelligence2025Banner = () => {
             </Link>
           </div>
 
-          {/* Key Benefits Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300">
-              <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center mb-6 mx-auto">
+        {/* Key Benefits Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300">
+            <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center mb-6 mx-auto">
                 <svg
                   className="w-8 h-8 text-white"
                   fill="none"
@@ -187,8 +187,9 @@ const UltimateBusinessIntelligence2025Banner = () => {
               </a>
             </div>
           </div>
+        </div>
 
-          {/* Slide Indicators */}
+        {/* Slide Indicators */}
           <div className="flex justify-center mt-8 space-x-2">
             {content.map((_, index) => (
               <button
