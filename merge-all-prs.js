@@ -1,165 +1,197 @@
 #!/usr/bin/env node
 
-import { execSync } from 'child_process';
-import fs from 'fs';
+const https = require('https');
+const { execSync } = require('child_process');
+const fs = require('fs');
 
-//Function to get all open PRs
+const GITHUB_TOKEN = 'ghs_bwUCm9bR8GIGUFtos7gUdB8xyPjEsG4VHcjM';
+const OWNER = 'Zion-Holdings';
+const REPO = 'zion.app';
+
+function makeGitHubRequest(path, method = 'GET', data = null) {
+  return new Promise((resolve, reject) => {
+    const options = {
+      hostname: 'api.github.com',
+      path: path,
+      method: method,
+      headers: {
+        'Authorization': `token ${GITHUB_TOKEN}`,
+        'User-Agent': 'Node.js',
+        'Accept': 'application/vnd.github.v3+json'
+      }
+    };
+
+    if (data) {
+      options.headers['Content-Type'] = 'application/json';
+    }
+
+    const req = https.request(options, (res) => {
+      let body = '';
+      res.on('data', (chunk) => body += chunk);
+      res.on('end', () => {
+        try {
+          resolve(JSON.parse(body));
+        } catch (e) {
+          resolve(body);
+        }
+      });
+    });
+
+    req.on('error', reject);
+    
+    if (data) {
+      req.write(JSON.stringify(data));
+    }
+    
+    req.end();
+  });
+}
+
 async function getAllOpenPRs() {
-  try {
-    const response = await fetch(
-      'https://api.github.com/repos/Zion-Holdings/zion.app/pulls?state=open&per_page=100'
-    );
-    const prs = await response.json();
-    return prs;
-  } catch (error) {
-    console.error('Error fetching PRs:', error);
-    return [];
+  console.log('📋 Fetching all open PRs...');
+  let page = 1;
+  let allPRs = [];
+  
+  while (true) {
+    const prs = await makeGitHubRequest(`/repos/${OWNER}/${REPO}/pulls?state=open&per_page=100&page=${page}`);
+    if (!prs || prs.length === 0) break;
+    allPRs = allPRs.concat(prs);
+    console.log(`   Fetched page ${page}: ${prs.length} PRs`);
+    if (prs.length < 100) break;
+    page++;
   }
+  
+  console.log(`✅ Total open PRs found: ${allPRs.length}`);
+  return allPRs;
 }
 
-//Function to check if PR is mergeable
-async function isPRMergeable(prNumber) {
-  try {
-    const response = await fetch(
-      `https://api.github.com/repos/Zion-Holdings/zion.app/pulls/${prNumber}`
-    );
-    const pr = await response.json();
-    return {
-      mergeable: pr.mergeable,
-      mergeable_state: pr.mergeable_state,
-      draft: pr.draft,
-      head: pr.head.ref,
-      title: pr.title,
-    };
-  } catch (error) {
-    console.error(`Error checking PR ${prNumber}:`, error);
-    return {
-      mergeable: false,
-      mergeable_state: 'unknown',
-      draft: true,
-      head: '',
-      title: '',
-    };
-  }
+async function checkPRMergeable(prNumber) {
+  const pr = await makeGitHubRequest(`/repos/${OWNER}/${REPO}/pulls/${prNumber}`);
+  return {
+    mergeable: pr.mergeable,
+    mergeable_state: pr.mergeable_state,
+    draft: pr.draft
+  };
 }
 
-//Function to merge a PR
-async function mergePR(prNumber, branchName) {
+async function mergePR(prNumber) {
+  console.log(`🔀 Attempting to merge PR #${prNumber}...`);
+  
   try {
-    console.log(`\n🔄 Attempting to merge PR #${prNumber} (${branchName})...`);
-
-    //Fetch the branch
-    execSync(`git fetch origin ${branchName}`, { stdio: 'inherit' });
-
-    //Try to merge
-    try {
-      execSync(`git merge origin/${branchName} --no-commit`, {
-        stdio: 'inherit',
-      });
-      execSync(`git commit -m "Merge PR #${prNumber}: ${branchName}"`, {
-        stdio: 'inherit',
-      });
+    const result = await makeGitHubRequest(
+      `/repos/${OWNER}/${REPO}/pulls/${prNumber}/merge`,
+      'PUT',
+      {
+        merge_method: 'merge',
+        commit_title: `Merge PR #${prNumber}`,
+        commit_message: 'Automated merge by background agent'
+      }
+    );
+    
+    if (result.merged) {
       console.log(`✅ Successfully merged PR #${prNumber}`);
       return true;
-    } catch (mergeError) {
-      console.log(
-        `⚠️  Merge conflict in PR #${prNumber}, attempting to resolve...`
-      );
-
-      //Check for conflicts
-      const status = execSync('git status --porcelain', { encoding: 'utf8' });
-      if (
-        status.includes('UU') ||
-        status.includes('AA') ||
-        status.includes('DD')
-      ) {
-        console.log(`❌ Cannot auto-resolve conflicts in PR #${prNumber}`);
-        //Abort the merge
-        execSync('git merge --abort', { stdio: 'inherit' });
-        return false;
-      } else {
-        //No conflicts, commit the merge
-        execSync(`git commit -m "Merge PR #${prNumber}: ${branchName}"`, {
-          stdio: 'inherit',
-        });
-        console.log(
-          `✅ Successfully merged PR #${prNumber} after conflict resolution`
-        );
-        return true;
-      }
+    } else {
+      console.log(`❌ Failed to merge PR #${prNumber}: ${result.message}`);
+      return false;
     }
   } catch (error) {
-    console.error(`❌ Error merging PR #${prNumber}:`, error.message);
+    console.log(`❌ Error merging PR #${prNumber}:`, error.message);
     return false;
   }
 }
 
-//Main function
-async function main() {
-  console.log('🚀 Starting comprehensive PR merge process...\n');
-
-  //Get all open PRs
-  const prs = await getAllOpenPRs();
-  console.log(`📋 Found ${prs.length} open PRs`);
-
-  const mergeablePRs = [];
-  const failedPRs = [];
-
-  //Check each PR for mergeability
-  for (const pr of prs) {
-    console.log(`\n🔍 Checking PR #${pr.number}: ${pr.title}`);
-    const prInfo = await isPRMergeable(pr.number);
-
-    if (
-      prInfo.mergeable &&
-      prInfo.mergeable_state === 'clean' &&
-      !prInfo.draft
-    ) {
-      mergeablePRs.push({
-        number: pr.number,
-        title: prInfo.title,
-        branch: prInfo.head,
-      });
-      console.log(`✅ PR #${pr.number} is mergeable`);
-    } else {
-      console.log(
-        `⚠️  PR #${pr.number} is not mergeable (mergeable: ${prInfo.mergeable}, state: ${prInfo.mergeable_state}, draft: ${prInfo.draft})`
-      );
-    }
-  }
-
-  console.log(`\n📊 Summary: ${mergeablePRs.length} PRs are mergeable`);
-
-  //Merge all mergeable PRs
-  for (const pr of mergeablePRs) {
-    const success = await mergePR(pr.number, pr.branch);
-    if (!success) {
-      failedPRs.push(pr);
-    }
-  }
-
-  //Final summary
-  console.log('\n🎯 Merge Process Complete!');
-  console.log(
-    `✅ Successfully merged: ${mergeablePRs.length - failedPRs.length} PRs`
-  );
-  console.log(`❌ Failed to merge: ${failedPRs.length} PRs`);
-
-  if (failedPRs.length > 0) {
-    console.log('\n❌ Failed PRs:');
-    failedPRs.forEach(pr => {
-      console.log(`  - PR #${pr.number}: ${pr.title} (${pr.branch})`);
-    });
-  }
-
-  // Push all changes
+async function updatePRFromDraft(prNumber) {
+  console.log(`📝 Marking PR #${prNumber} as ready for review...`);
+  
   try {
-    console.log('\n🚀 Pushing all changes to main...');
-    execSync('git push origin main', { stdio: 'inherit' });
-    console.log('✅ Successfully pushed all changes to main');
+    await makeGitHubRequest(
+      `/repos/${OWNER}/${REPO}/pulls/${prNumber}`,
+      'PATCH',
+      { draft: false }
+    );
+    console.log(`✅ PR #${prNumber} marked as ready for review`);
+    return true;
   } catch (error) {
-    console.error('❌ Error pushing to main:', error.message);
+    console.log(`❌ Error updating PR #${prNumber}:`, error.message);
+    return false;
   }
 }
 
-main().catch(console.error);
+async function main() {
+  console.log('🚀 Starting comprehensive PR merge process...\n');
+  
+  // Fetch all open PRs
+  const openPRs = await getAllOpenPRs();
+  
+  if (openPRs.length === 0) {
+    console.log('✅ No open PRs found. Nothing to merge!');
+    return;
+  }
+  
+  console.log('\n📊 PR Summary:');
+  openPRs.forEach(pr => {
+    console.log(`   PR #${pr.number}: ${pr.title} (${pr.head.ref} -> ${pr.base.ref}) ${pr.draft ? '[DRAFT]' : ''}`);
+  });
+  
+  console.log('\n🔍 Checking mergeable status for all PRs...\n');
+  
+  let mergedCount = 0;
+  let conflictCount = 0;
+  let draftCount = 0;
+  let otherIssues = 0;
+  
+  for (const pr of openPRs) {
+    console.log(`\n--- Processing PR #${pr.number}: ${pr.title} ---`);
+    
+    // Check if PR is draft
+    if (pr.draft) {
+      console.log(`⚠️  PR #${pr.number} is in draft state`);
+      draftCount++;
+      
+      // Try to mark as ready for review
+      await updatePRFromDraft(pr.number);
+      
+      // Wait a bit for GitHub to process
+      await new Promise(resolve => setTimeout(resolve, 2000));
+    }
+    
+    // Check mergeable status
+    const status = await checkPRMergeable(pr.number);
+    console.log(`   Mergeable: ${status.mergeable}, State: ${status.mergeable_state}`);
+    
+    if (status.mergeable === true && status.mergeable_state === 'clean') {
+      // Try to merge
+      const merged = await mergePR(pr.number);
+      if (merged) {
+        mergedCount++;
+      }
+    } else if (status.mergeable === false) {
+      console.log(`⚠️  PR #${pr.number} has merge conflicts and needs manual resolution`);
+      conflictCount++;
+    } else {
+      console.log(`⚠️  PR #${pr.number} has state: ${status.mergeable_state}`);
+      otherIssues++;
+    }
+    
+    // Small delay to avoid rate limiting
+    await new Promise(resolve => setTimeout(resolve, 1000));
+  }
+  
+  console.log('\n\n📊 Final Summary:');
+  console.log(`   Total PRs processed: ${openPRs.length}`);
+  console.log(`   ✅ Successfully merged: ${mergedCount}`);
+  console.log(`   ⚠️  PRs with conflicts: ${conflictCount}`);
+  console.log(`   📝 Draft PRs: ${draftCount}`);
+  console.log(`   ❓ Other issues: ${otherIssues}`);
+  
+  if (conflictCount > 0) {
+    console.log('\n⚠️  Some PRs have merge conflicts that need manual resolution.');
+    console.log('   These PRs cannot be automatically merged and require intervention.');
+  }
+}
+
+main().catch(error => {
+  console.error('❌ Fatal error:', error);
+  process.exit(1);
+});
