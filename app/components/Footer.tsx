@@ -66,88 +66,95 @@ const Footer: React.FC = memo(() => {
           {/* Services */}
           <div>
             <h4 className="text-lg font-semibold mb-4">Services</h4>
-            <ul className="space-y-2 text-gray-300">
-              <li>
-                <Link to="/services" className="hover:text-white transition-colors">
-                  All Services
-                </Link>
-              </li>
-              <li>
-                <Link to="/ai-services" className="hover:text-white transition-colors">
-                  AI Services
-                </Link>
-              </li>
-              <li>
-                <Link to="/ai-data-analytics" className="hover:text-white transition-colors">
-                  AI Data Analytics
-                </Link>
-              </li>
-              <li>
-                <Link to="/ai-cybersecurity" className="hover:text-white transition-colors">
-                  AI Cybersecurity
-                </Link>
-              </li>
-              <li>
-                <Link to="/ai-workflow-automation" className="hover:text-white transition-colors">
-                  AI Workflow Automation
-                </Link>
-              </li>
-              <li>
-                <Link to="/ai-cloud-infrastructure" className="hover:text-white transition-colors">
-                  AI Cloud Infrastructure
-                </Link>
-              </li>
-              <li>
-                <Link to="/ai-ecommerce-solutions" className="hover:text-white transition-colors">
-                  AI E-commerce Solutions
-                </Link>
-              </li>
-              <li>
-                <Link to="/ai-mobile-app-development" className="hover:text-white transition-colors">
-                  AI Mobile App Development
-                </Link>
-              </li>
-              <li>
-                <Link to="/it-services" className="hover:text-white transition-colors">
-                  IT Services
-                </Link>
-              </li>
-              <li>
-                <Link to="/micro-saas" className="hover:text-white transition-colors">
-                  Micro SAAS
-                </Link>
-              </li>
-              <li>
-                <Link to="/quantum-computing" className="hover:text-white transition-colors">
-                  Quantum Computing
-                </Link>
-              </li>
-              <li>
-                <Link to="/autonomous-systems" className="hover:text-white transition-colors">
-                  Autonomous Systems
-                </Link>
-              </li>
-              <li>
-                <Link to="/business-intelligence" className="hover:text-white transition-colors">
-                  Business Intelligence
-                </Link>
-              </li>
-              <li>
-                <Link to="/blockchain-web3" className="hover:text-white transition-colors">
-                  Blockchain & Web3
-                </Link>
-              </li>
-              <li>
-                <Link to="/iot-edge-computing" className="hover:text-white transition-colors">
-                  IoT & Edge Computing
-                </Link>
-              </li>
-              <li>
-                <Link to="/cybersecurity" className="hover:text-white transition-colors">
-                  Cybersecurity
-                </Link>
-              </li>
-            </ul>
+            <div className="space-y-4">
+              <div>
+                <h5 className="text-cyan-400 font-medium mb-2">Core Services</h5>
+                <ul className="space-y-1 text-gray-300">
+                  <li>
+                    <Link to="/services" className="hover:text-white transition-colors">
+                      All Services
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/ai-services" className="hover:text-white transition-colors">
+                      AI Services
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/it-services" className="hover:text-white transition-colors">
+                      IT Services
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/micro-saas" className="hover:text-white transition-colors">
+                      Micro SAAS
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+              
+              <div>
+                <h5 className="text-cyan-400 font-medium mb-2">AI Solutions</h5>
+                <ul className="space-y-1 text-gray-300">
+                  <li>
+                    <Link to="/ai-marketing" className="hover:text-white transition-colors">
+                      AI Marketing
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/ai-automation" className="hover:text-white transition-colors">
+                      AI Automation
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/ai-healthcare" className="hover:text-white transition-colors">
+                      AI Healthcare
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/ai-fintech" className="hover:text-white transition-colors">
+                      AI Fintech
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/ai-data-analytics" className="hover:text-white transition-colors">
+                      AI Data Analytics
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/ai-cybersecurity" className="hover:text-white transition-colors">
+                      AI Cybersecurity
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+              
+              <div>
+                <h5 className="text-cyan-400 font-medium mb-2">Specialized</h5>
+                <ul className="space-y-1 text-gray-300">
+                  <li>
+                    <Link to="/quantum-computing" className="hover:text-white transition-colors">
+                      Quantum Computing
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/autonomous-systems" className="hover:text-white transition-colors">
+                      Autonomous Systems
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/blockchain-web3" className="hover:text-white transition-colors">
+                      Blockchain & Web3
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/cybersecurity" className="hover:text-white transition-colors">
+                      Cybersecurity
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
 
           {/* Contact */}
