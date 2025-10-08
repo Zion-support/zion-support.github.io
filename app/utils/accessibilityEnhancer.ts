@@ -678,3 +678,12 @@ class AccessibilityEnhancer {
     
     return `
 Accessibility Report:
+- Violations: ${this.metrics.violations}
+- Issues Fixed: ${this.metrics.issuesFixed}
+- Total Checks: ${this.metrics.totalChecks}
+- Pass Rate: ${((this.metrics.totalChecks - this.metrics.violations) / this.metrics.totalChecks * 100).toFixed(2)}%
+    `;
+  }
+}
+
+export default new AccessibilityEnhancer();
