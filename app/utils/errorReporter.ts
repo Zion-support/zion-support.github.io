@@ -3,6 +3,8 @@
  * Provides comprehensive error tracking, logging, and reporting capabilities
  */
 
+import { logger } from './logger';
+
 export interface ErrorReport {
   message: string;
   stack?: string;
@@ -97,14 +99,14 @@ export class ErrorReporter {
   private logToConsole(report: ErrorReport): void {
     const style = this.getConsoleStyle(report.severity);
     console.group(`%c[${report.severity.toUpperCase()}] Error Report`, style);
-    if (process.env.NODE_ENV === 'development') { if (import.meta.env.DEV) { console.info('Message:', report.message); } }
-    if (process.env.NODE_ENV === 'development') { if (import.meta.env.DEV) { console.info('Timestamp:', report.timestamp); } }
-    if (process.env.NODE_ENV === 'development') { if (import.meta.env.DEV) { console.info('URL:', report.url); } }
+    if (process.env.NODE_ENV === 'development') { console.log('Message:', report.message); }
+    if (process.env.NODE_ENV === 'development') { console.log('Timestamp:', report.timestamp); }
+    if (process.env.NODE_ENV === 'development') { console.log('URL:', report.url); }
     if (report.stack) {
-      if (process.env.NODE_ENV === 'development') { if (import.meta.env.DEV) { console.info('Stack:', report.stack); } }
+      if (process.env.NODE_ENV === 'development') { console.log('Stack:', report.stack); }
     }
     if (report.context) {
-      if (process.env.NODE_ENV === 'development') { if (import.meta.env.DEV) { console.info('Context:', report.context); } }
+      if (process.env.NODE_ENV === 'development') { console.log('Context:', report.context); }
     }
     console.groupEnd();
   }
@@ -139,7 +141,7 @@ export class ErrorReporter {
     } catch (error) {
       // Silently fail to avoid infinite loop
       if (this.config.enableConsoleLogging) {
-        console.warn('Failed to send error to remote endpoint:', error);
+        logger.warn('Failed to send error to remote endpoint:', error);
       }
     }
   }
