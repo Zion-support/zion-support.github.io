@@ -1,6 +1,5 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-
-import { Link } from 'react-router-dom';import { logger } from '../utils/logger';
+import { logger } from '../utils/logger';
 
 interface ErrorBoundaryState {
   hasError: boolean;
@@ -269,11 +268,12 @@ class AdvancedErrorBoundary extends Component<
                 <p className='text-xs text-gray-500'>
                   If this problem persists, please contact our support team
                   at&nbsp;
-                  <Link to='mailto:kleber@ziontechgroup.com'
+                  <a 
+                    href='mailto:kleber@ziontechgroup.com'
                     className='text-indigo-600 hover:text-indigo-500'
                   >
                     kleber@ziontechgroup.com
-                  </Link>
+                  </a>
                 </p>
               </div>
             </div>
