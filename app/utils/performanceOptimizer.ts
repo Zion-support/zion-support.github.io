@@ -331,13 +331,9 @@ ${metrics.memoryUsage > 30 * 1024 * 1024 ? '- Review memory usage and optimize c
    * Report web vitals
    */
   reportWebVitals(metrics: PerformanceMetrics): void {
-<<<<<<< HEAD
     if (process.env.NODE_ENV === 'development') {
       console.log('Web Vitals reported:', metrics);
     }
-=======
-    logger.info('Web Vitals reported', { component: 'PerformanceOptimizer', metrics });
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f8ea
     
     // Send to analytics if available
     if (typeof window !== 'undefined' && (window as { gtag?: Function }).gtag) {
