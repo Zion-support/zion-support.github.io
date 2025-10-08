@@ -1,5 +1,4 @@
 import { useEffect } from 'react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-32a9
 import analytics from '../utils/analytics';
 
 export const usePerformance = () => {
@@ -19,7 +18,6 @@ export const usePerformance = () => {
         );
       });
     });
-=======
 import { analytics } from '../utils/analytics';
 
 export const usePerformance = () => {

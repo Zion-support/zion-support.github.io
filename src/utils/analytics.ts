@@ -135,7 +135,5 @@ class Analytics {
 }
 
 const analytics = new Analytics();
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-17a6
-=======
 export { analytics };
 export default analytics;
