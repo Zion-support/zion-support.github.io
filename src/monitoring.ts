@@ -28,20 +28,18 @@ function initializeMonitoring(): void {
     // Track errors globally
     window.addEventListener('error', (event) => {
       const error = event.error || new Error(event.message);
-      errorHandler.handleError(error, {
-        componentStack: `${event.filename}:${event.lineno}:${event.colno}`,
-      }, {
+      errorHandler.logError(error, {
         errorId: `global_error_${Date.now()}`,
+        componentStack: `${event.filename}:${event.lineno}:${event.colno}`,
       });
     });
 
     // Track unhandled promise rejections
     window.addEventListener('unhandledrejection', (event) => {
       const error = new Error(`Unhandled Promise Rejection: ${event.reason}`);
-      errorHandler.handleError(error, {
-        componentStack: String(event.reason),
-      }, {
+      errorHandler.logError(error, {
         errorId: `unhandled_rejection_${Date.now()}`,
+        componentStack: String(event.reason),
       });
     });
 
