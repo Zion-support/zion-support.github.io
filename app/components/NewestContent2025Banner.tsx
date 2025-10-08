@@ -1,14 +1,45 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
+import { ArrowRight, Sparkles } from 'lucide-react';
 
-const NewestContent2025Banner: React.FC = () => {
+const NewestContent2025Banner = () => {
+  const featuredArticles = [
+    {
+      id: 1,
+      title: 'Edge Computing Revolution',
+      description: 'Discover how edge computing is transforming enterprise AI deployment',
+      slug: 'edge-computing-revolution',
+      icon: '💻',
+    },
+    {
+      id: 2,
+      title: 'Neural Networks Breakthrough',
+      description: 'Latest advances in neural network architectures and applications',
+      slug: 'neural-networks-breakthrough',
+      icon: '🧠',
+    },
+    {
+      id: 3,
+      title: 'Quantum Security',
+      description: 'Next-generation security powered by quantum computing',
+      slug: 'quantum-security',
+      icon: '🔐',
+    },
+  ];
+
   return (
-    <div className="relative overflow-hidden bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 py-20">
+    <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">
       {/* Animated Background Effects */}
-      <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10"></div>
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
+      <div className="absolute inset-0 opacity-20">
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500 rounded-full blur-3xl animate-pulse"></div>
+        <div
+          className="absolute top-3/4 right-1/4 w-96 h-96 bg-purple-500 rounded-full blur-3xl animate-pulse"
+          style={{ animationDelay: '2s' }}
+        ></div>
+        <div
+          className="absolute bottom-1/4 left-1/3 w-96 h-96 bg-blue-500 rounded-full blur-3xl animate-pulse"
+          style={{ animationDelay: '1s' }}
+        ></div>
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
@@ -29,129 +60,59 @@ const NewestContent2025Banner: React.FC = () => {
             and autonomous systems that are transforming enterprise operations worldwide.
           </p>
 
-          {/* Featured Content Cards */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
-            {/* Card 1: AI Edge Computing */}
-            <div className="group relative bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-lg rounded-2xl p-6 border border-gray-700/50 hover:border-blue-500/50 transition-all duration-300 hover:-translate-y-2">
-              <div className="mb-4">
-                <span className="inline-block px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/30 to-blue-500/30 text-cyan-200 text-sm font-bold border border-cyan-400/50">
-                  Edge AI & Real-Time
-                </span>
-              </div>
-              <h3 className='text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors'>
-                AI Edge Computing Real-Time Intelligence 2025
-              </h3>
-              <p className="text-gray-300 mb-6 leading-relaxed">
-                Deploy intelligence at the source with low latency. Achieve 95% bandwidth reduction, 
-                87% cost savings, and enhanced privacy compliance at enterprise scale.
-              </p>
-              <div className="grid grid-cols-3 gap-4 mb-6">
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-blue-400">&lt;10ms</div>
-                  <div className="text-gray-400 text-sm">Latency</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-purple-400">95%</div>
-                  <div className="text-gray-400 text-sm">Bandwidth</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-cyan-400">87%</div>
-                  <div className="text-gray-400 text-sm">Cost Save</div>
-                </div>
-              </div>
-              <Link
-                href="/blog/ai-edge-computing"
-                className="inline-flex items-center text-blue-400 hover:text-blue-300 font-semibold"
-              >
-                Learn More →
-              </Link>
-            </div>
-
-            {/* Card 2: Quantum Security */}
-            <div className="group relative bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-lg rounded-2xl p-6 border border-gray-700/50 hover:border-purple-500/50 transition-all duration-300 hover:-translate-y-2">
-              <div className="mb-4">
-                <span className="inline-block px-4 py-2 rounded-full bg-gradient-to-r from-purple-500/30 to-pink-500/30 text-purple-200 text-sm font-bold border border-purple-400/50">
-                  Quantum Security
-                </span>
-              </div>
-              <h3 className='text-2xl font-bold text-white mb-4 group-hover:text-purple-400 transition-colors'>
-                Post-Quantum Cryptography Solutions
-              </h3>
-              <p className="text-gray-300 mb-6 leading-relaxed">
-                Future-proof your infrastructure with quantum-resistant encryption. 
-                Protect against quantum threats while maintaining performance.
-              </p>
-              <div className="grid grid-cols-3 gap-4 mb-6">
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-purple-400">100%</div>
-                  <div className="text-gray-400 text-sm">Protected</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-pink-400">Zero</div>
-                  <div className="text-gray-400 text-sm">Downtime</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-purple-400">Fast</div>
-                  <div className="text-gray-400 text-sm">Deploy</div>
-                </div>
-              </div>
-              <Link
-                href="/blog/quantum-security"
-                className="inline-flex items-center text-purple-400 hover:text-purple-300 font-semibold"
-              >
-                Learn More →
-              </Link>
-            </div>
-
-            {/* Card 3: Autonomous Operations */}
-            <div className="group relative bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-lg rounded-2xl p-6 border border-gray-700/50 hover:border-green-500/50 transition-all duration-300 hover:-translate-y-2">
-              <div className="mb-4">
-                <span className="inline-block px-4 py-2 rounded-full bg-gradient-to-r from-green-500/30 to-emerald-500/30 text-green-200 text-sm font-bold border border-green-400/50">
-                  Autonomous AI
-                </span>
-              </div>
-              <h3 className='text-2xl font-bold text-white mb-4 group-hover:text-green-400 transition-colors'>
-                Self-Optimizing Enterprise Systems
-              </h3>
-              <p className="text-gray-300 mb-6 leading-relaxed">
-                Enable continuous improvement with autonomous AI agents. 
-                Reduce operational overhead by 70% while increasing efficiency.
-              </p>
-              <div className="grid grid-cols-3 gap-4 mb-6">
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-green-400">70%</div>
-                  <div className="text-gray-400 text-sm">Less Ops</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-emerald-400">24/7</div>
-                  <div className="text-gray-400 text-sm">Monitor</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-green-400">Auto</div>
-                  <div className="text-gray-400 text-sm">Optimize</div>
-                </div>
-              </div>
-              <Link
-                href="/blog/autonomous-operations"
-                className="inline-flex items-center text-green-400 hover:text-green-300 font-semibold"
-              >
-                Learn More →
-              </Link>
-            </div>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+            <Link 
+              to="/blog"
+              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
+            >
+              Explore Latest Articles
+              <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </Link>
+            <Link 
+              to="/services"
+              className="inline-flex items-center px-8 py-4 border-2 border-blue-400 text-blue-300 font-semibold rounded-lg hover:bg-blue-400/10 transition-all duration-300"
+            >
+              View Our Services
+            </Link>
           </div>
 
-          {/* Call to Action */}
-          <div className="mt-12">
-            <Link
-              href="/blog"
-              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-bold rounded-xl hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl"
-            >
-              Explore All Content →
-            </Link>
+          {/* Featured Content Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16">
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
+              <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg flex items-center justify-center mb-4">
+                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-2">AI Innovation</h3>
+              <p className="text-gray-300 text-sm">Latest breakthroughs in artificial intelligence and machine learning technologies.</p>
+            </div>
+
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
+              <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mb-4">
+                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-2">Quantum Computing</h3>
+              <p className="text-gray-300 text-sm">Revolutionary quantum computing solutions for enterprise applications.</p>
+            </div>
+
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
+              <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center mb-4">
+                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-2">Autonomous Systems</h3>
+              <p className="text-gray-300 text-sm">Self-managing systems that optimize operations automatically.</p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

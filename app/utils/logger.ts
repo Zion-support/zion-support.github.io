@@ -206,19 +206,17 @@ class Logger {
   }
 
   /**
-   * Log lifecycle events
+   * Log performance metrics with context
    */
-  lifecycle(message: string, context?: string | LogContext): void {
-    const ctx = typeof context === 'string' ? { component: context } : context;
-    this.info(`Lifecycle: ${message}`, ctx);
+  performance(message: string, metrics: Record<string, unknown>, component?: string): void {
+    this.info(message, { ...metrics, component });
   }
 
   /**
-   * Log performance data
+   * Log lifecycle events
    */
-  performance(message: string, data: Record<string, unknown>, context?: string | LogContext): void {
-    const ctx = typeof context === 'string' ? { component: context, ...data } : { ...context, ...data };
-    this.info(`Performance: ${message}`, ctx);
+  lifecycle(message: string, component?: string): void {
+    this.debug(`Lifecycle: ${message}`, { component, lifecycle: true });
   }
 
   /**
@@ -239,23 +237,6 @@ class Logger {
     if (isDevelopment()) {
       if (process.env.NODE_ENV === 'development') { if (import.meta.env.DEV) { console.log(`%c${message}`, style); } }
     }
-  }
-
-  /**
-   * Log lifecycle events
-   */
-  lifecycle(event: string, context?: string | LogContext): void {
-    const logContext = typeof context === 'string' 
-      ? { component: context } 
-      : context;
-    this.info(`Lifecycle: ${event}`, logContext);
-  }
-
-  /**
-   * Log performance metrics
-   */
-  performance(message: string, context?: LogContext): void {
-    this.debug(message, { ...context, type: 'performance' });
   }
 }
 
