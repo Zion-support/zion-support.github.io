@@ -6,28 +6,35 @@ const ServicesPage: React.FC = () => {
   const serviceCategories = [
     {
       title: 'Micro SAAS Solutions',
-      description: 'Affordable, powerful AI-driven tools for modern businesses. Start from $79/month.',
+      description: 'Affordable, powerful AI-driven tools for modern businesses. Start from $29/month with 50% savings.',
       icon: '💻',
       link: '/micro-saas',
-      features: ['12+ Ready-to-use Tools', 'AI-Powered Automation', 'Instant Setup', '24/7 Support'],
-      price: 'Starting at $79/month',
+      features: ['20+ Ready-to-use Tools', 'AI-Powered Automation', '5-minute Setup', '24/7 Support', '30-day Money-back Guarantee'],
+      price: 'Starting at $29/month',
+      originalPrice: '$79/month',
+      savings: 'Save up to 60%',
       popular: true
     },
     {
       title: 'AI Services',
-      description: 'Advanced artificial intelligence solutions including ML, NLP, and computer vision.',
+      description: 'Advanced artificial intelligence solutions including ML, NLP, and computer vision. 20+ AI services available.',
       icon: '🤖',
       link: '/ai-services',
-      features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics'],
-      price: 'Starting at $1,500/month'
+      features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics', 'AI Consulting'],
+      price: 'Starting at $2,500/month',
+      originalPrice: '$5,000/month',
+      savings: 'Save up to 50%',
+      popular: true
     },
     {
       title: 'AI Marketing Solutions',
       description: 'Revolutionary AI-powered marketing automation, ad optimization, and content generation.',
       icon: '📢',
       link: '/ai-marketing',
-      features: ['Ad Optimization', 'Content Generation', 'Social Media AI', 'Email Marketing AI'],
+      features: ['Ad Optimization', 'Content Generation', 'Social Media AI', 'Email Marketing AI', 'ROI Tracking'],
       price: 'Starting at $199/month',
+      originalPrice: '$400/month',
+      savings: 'Save 50%',
       popular: true
     },
     {
@@ -35,8 +42,10 @@ const ServicesPage: React.FC = () => {
       description: 'Intelligent automation of business processes with decision-making capabilities.',
       icon: '⚙️',
       link: '/ai-automation',
-      features: ['Workflow Automation', 'Process Intelligence', 'Decision Automation', 'Exception Handling'],
-      price: 'Starting at $399/month'
+      features: ['Workflow Automation', 'Process Intelligence', 'Decision Automation', 'Exception Handling', 'Performance Analytics'],
+      price: 'Starting at $399/month',
+      originalPrice: '$800/month',
+      savings: 'Save 50%'
     },
     {
       title: 'AI Healthcare Solutions',
@@ -56,11 +65,14 @@ const ServicesPage: React.FC = () => {
     },
     {
       title: 'IT Services',
-      description: 'Comprehensive IT solutions including cloud, security, DevOps, and infrastructure.',
+      description: 'Comprehensive IT solutions including cloud, security, DevOps, and infrastructure. 20+ IT services available.',
       icon: '⚙️',
       link: '/it-services',
-      features: ['Cloud Infrastructure', 'Cybersecurity', 'DevOps & CI/CD', 'Database Administration'],
-      price: 'Starting at $1,200/month'
+      features: ['Cloud Infrastructure', 'Cybersecurity', 'DevOps & CI/CD', 'Database Administration', '24/7 Support'],
+      price: 'Starting at $1,500/month',
+      originalPrice: '$2,500/month',
+      savings: 'Save 40%',
+      popular: true
     },
     {
       title: 'Quantum Computing',
@@ -263,7 +275,15 @@ const ServicesPage: React.FC = () => {
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">{service.title}</h3>
                 <p className="text-gray-600 mb-4">{service.description}</p>
                 <div className="mb-4">
-                  <span className="text-2xl font-bold text-blue-600">{service.price}</span>
+                  <div className="flex items-center space-x-2">
+                    <span className="text-2xl font-bold text-blue-600">{service.price}</span>
+                    {service.originalPrice && (
+                      <span className="text-lg text-gray-500 line-through">{service.originalPrice}</span>
+                    )}
+                  </div>
+                  {service.savings && (
+                    <div className="text-sm text-green-600 font-semibold">{service.savings}</div>
+                  )}
                 </div>
                 <ul className="space-y-2 mb-6">
                   {service.features.map((feature, featureIndex) => (

@@ -264,69 +264,44 @@ const Footer: React.FC = memo(() => {
               <div className="flex items-center">
                 <Clock className="w-5 h-5 mr-3 text-cyan-400" />
                 <span className="text-gray-300">24/7 Support Available</span>
-=======
-              
-              {/* Contact Info */}
-              <div className="space-y-3 mt-6">
-                <div className="flex items-center">
-                  <Phone className="w-5 h-5 mr-3 text-blue-400" />
-                  <a href="tel:+13024640950" className="text-gray-300 hover:text-white transition-colors">
-                    +1 302 464 0950
-                  </a>
-                </div>
-                <div className="flex items-center">
-                  <Mail className="w-5 h-5 mr-3 text-blue-400" />
-                  <a href="mailto:kleber@ziontechgroup.com" className="text-gray-300 hover:text-white transition-colors">
-                    kleber@ziontechgroup.com
-                  </a>
-                </div>
-                <div className="flex items-center">
-                  <MapPin className="w-5 h-5 mr-3 text-blue-400" />
-                  <span className="text-gray-300">364 E Main St STE 1008, Middletown DE 19709</span>
-                </div>
-                <div className="flex items-center">
-                  <Clock className="w-5 h-5 mr-3 text-blue-400" />
-                  <span className="text-gray-300">24/7 Support Available</span>
-                </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-ef5d
               </div>
             </div>
           </div>
 
-<<<<<<< HEAD
-          {/* AI Services */}
+          {/* Services */}
           <div>
-            <h4 className="text-lg font-semibold mb-6 text-cyan-400">AI Services</h4>
+            <h4 className="text-lg font-semibold mb-6 text-cyan-400">Services</h4>
             <ul className="space-y-3">
-              {aiServices.map((service, index) => (
-                <li key={index}>
-                  <Link 
-                    to={service.url} 
-                    className="text-gray-300 hover:text-white transition-colors flex items-center group"
-                  >
-                    <ArrowRight className="w-4 h-4 mr-2 text-cyan-400 group-hover:translate-x-1 transition-transform" />
-                    {service.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* IT Services */}
-          <div>
-            <h4 className="text-lg font-semibold mb-6 text-cyan-400">IT Services</h4>
-            <ul className="space-y-3">
-              {itServices.map((service, index) => (
-                <li key={index}>
-                  <Link 
-                    to={service.url} 
-                    className="text-gray-300 hover:text-white transition-colors flex items-center group"
-                  >
-                    <ArrowRight className="w-4 h-4 mr-2 text-cyan-400 group-hover:translate-x-1 transition-transform" />
-                    {service.name}
-                  </Link>
-                </li>
-              ))}
+              <li>
+                <Link to="/micro-saas" className="text-gray-300 hover:text-white transition-colors flex items-center group">
+                  <ArrowRight className="w-4 h-4 mr-2 text-cyan-400 group-hover:translate-x-1 transition-transform" />
+                  Micro SAAS Solutions
+                </Link>
+              </li>
+              <li>
+                <Link to="/ai-services" className="text-gray-300 hover:text-white transition-colors flex items-center group">
+                  <ArrowRight className="w-4 h-4 mr-2 text-cyan-400 group-hover:translate-x-1 transition-transform" />
+                  AI Services
+                </Link>
+              </li>
+              <li>
+                <Link to="/it-services" className="text-gray-300 hover:text-white transition-colors flex items-center group">
+                  <ArrowRight className="w-4 h-4 mr-2 text-cyan-400 group-hover:translate-x-1 transition-transform" />
+                  IT Services
+                </Link>
+              </li>
+              <li>
+                <Link to="/ai-marketing" className="text-gray-300 hover:text-white transition-colors flex items-center group">
+                  <ArrowRight className="w-4 h-4 mr-2 text-cyan-400 group-hover:translate-x-1 transition-transform" />
+                  AI Marketing
+                </Link>
+              </li>
+              <li>
+                <Link to="/ai-automation" className="text-gray-300 hover:text-white transition-colors flex items-center group">
+                  <ArrowRight className="w-4 h-4 mr-2 text-cyan-400 group-hover:translate-x-1 transition-transform" />
+                  AI Automation
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -334,17 +309,30 @@ const Footer: React.FC = memo(() => {
           <div>
             <h4 className="text-lg font-semibold mb-6 text-cyan-400">Technologies</h4>
             <ul className="space-y-3">
-              {technologies.map((tech, index) => (
-                <li key={index}>
-                  <Link 
-                    to={tech.url} 
-                    className="text-gray-300 hover:text-white transition-colors flex items-center group"
-                  >
-                    <ArrowRight className="w-4 h-4 mr-2 text-cyan-400 group-hover:translate-x-1 transition-transform" />
-                    {tech.name}
-                  </Link>
-                </li>
-              ))}
+              <li>
+                <Link to="/quantum-computing" className="text-gray-300 hover:text-white transition-colors flex items-center group">
+                  <ArrowRight className="w-4 h-4 mr-2 text-cyan-400 group-hover:translate-x-1 transition-transform" />
+                  Quantum Computing
+                </Link>
+              </li>
+              <li>
+                <Link to="/autonomous-systems" className="text-gray-300 hover:text-white transition-colors flex items-center group">
+                  <ArrowRight className="w-4 h-4 mr-2 text-cyan-400 group-hover:translate-x-1 transition-transform" />
+                  Autonomous Systems
+                </Link>
+              </li>
+              <li>
+                <Link to="/blockchain-web3" className="text-gray-300 hover:text-white transition-colors flex items-center group">
+                  <ArrowRight className="w-4 h-4 mr-2 text-cyan-400 group-hover:translate-x-1 transition-transform" />
+                  Blockchain & Web3
+                </Link>
+              </li>
+              <li>
+                <Link to="/iot-edge-computing" className="text-gray-300 hover:text-white transition-colors flex items-center group">
+                  <ArrowRight className="w-4 h-4 mr-2 text-cyan-400 group-hover:translate-x-1 transition-transform" />
+                  IoT & Edge Computing
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -352,32 +340,58 @@ const Footer: React.FC = memo(() => {
           <div>
             <h4 className="text-lg font-semibold mb-6 text-cyan-400">Company</h4>
             <ul className="space-y-3 mb-8">
-              {company.map((item, index) => (
-                <li key={index}>
-                  <Link 
-                    to={item.url} 
-                    className="text-gray-300 hover:text-white transition-colors flex items-center group"
-                  >
-                    <ArrowRight className="w-4 h-4 mr-2 text-cyan-400 group-hover:translate-x-1 transition-transform" />
-                    {item.name}
-                  </Link>
-                </li>
-              ))}
+              <li>
+                <Link to="/about" className="text-gray-300 hover:text-white transition-colors flex items-center group">
+                  <ArrowRight className="w-4 h-4 mr-2 text-cyan-400 group-hover:translate-x-1 transition-transform" />
+                  About Us
+                </Link>
+              </li>
+              <li>
+                <Link to="/team" className="text-gray-300 hover:text-white transition-colors flex items-center group">
+                  <ArrowRight className="w-4 h-4 mr-2 text-cyan-400 group-hover:translate-x-1 transition-transform" />
+                  Our Team
+                </Link>
+              </li>
+              <li>
+                <Link to="/case-studies" className="text-gray-300 hover:text-white transition-colors flex items-center group">
+                  <ArrowRight className="w-4 h-4 mr-2 text-cyan-400 group-hover:translate-x-1 transition-transform" />
+                  Case Studies
+                </Link>
+              </li>
+              <li>
+                <Link to="/enterprise" className="text-gray-300 hover:text-white transition-colors flex items-center group">
+                  <ArrowRight className="w-4 h-4 mr-2 text-cyan-400 group-hover:translate-x-1 transition-transform" />
+                  Enterprise Solutions
+                </Link>
+              </li>
             </ul>
             
             <h4 className="text-lg font-semibold mb-6 text-cyan-400">Resources</h4>
             <ul className="space-y-3">
-              {resources.map((resource, index) => (
-                <li key={index}>
-                  <Link 
-                    to={resource.url} 
-                    className="text-gray-300 hover:text-white transition-colors flex items-center group"
-                  >
-                    <ArrowRight className="w-4 h-4 mr-2 text-cyan-400 group-hover:translate-x-1 transition-transform" />
-                    {resource.name}
-                  </Link>
-                </li>
-              ))}
+              <li>
+                <Link to="/blog" className="text-gray-300 hover:text-white transition-colors flex items-center group">
+                  <ArrowRight className="w-4 h-4 mr-2 text-cyan-400 group-hover:translate-x-1 transition-transform" />
+                  Blog & Insights
+                </Link>
+              </li>
+              <li>
+                <Link to="/guides" className="text-gray-300 hover:text-white transition-colors flex items-center group">
+                  <ArrowRight className="w-4 h-4 mr-2 text-cyan-400 group-hover:translate-x-1 transition-transform" />
+                  Technical Guides
+                </Link>
+              </li>
+              <li>
+                <Link to="/privacy" className="text-gray-300 hover:text-white transition-colors flex items-center group">
+                  <ArrowRight className="w-4 h-4 mr-2 text-cyan-400 group-hover:translate-x-1 transition-transform" />
+                  Privacy Policy
+                </Link>
+              </li>
+              <li>
+                <Link to="/terms" className="text-gray-300 hover:text-white transition-colors flex items-center group">
+                  <ArrowRight className="w-4 h-4 mr-2 text-cyan-400 group-hover:translate-x-1 transition-transform" />
+                  Terms of Service
+                </Link>
+              </li>
             </ul>
           </div>
         </div>
@@ -402,44 +416,10 @@ const Footer: React.FC = memo(() => {
             <div className="cyber-card">
               <div className="text-4xl font-bold text-orange-400 mb-2">24/7</div>
               <div className="text-gray-300">Support Available</div>
->>>>>>> cursor/website-audit-and-update-with-deployment-73aa
-=======
-            {/* Resources */}
-            <div>
-              <h4 className="text-lg font-semibold mb-4">Resources</h4>
-              <ul className="space-y-2">
-                <li>
-                  <Link to="/blog" className="text-gray-300 hover:text-white transition-colors">
-                    Blog & Insights
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/guides" className="text-gray-300 hover:text-white transition-colors">
-                    Technical Guides
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/privacy" className="text-gray-300 hover:text-white transition-colors">
-                    Privacy Policy
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/terms" className="text-gray-300 hover:text-white transition-colors">
-                    Terms of Service
-                  </Link>
-                </li>
-                <li>
-                  <a href="https://github.com/ziontechgroup" className="text-gray-300 hover:text-white transition-colors">
-                    GitHub
-                  </a>
-                </li>
-                <li>
-                  <a href="https://docs.ziontechgroup.com" className="text-gray-300 hover:text-white transition-colors">
-                    Documentation
-                  </a>
-                </li>
-              </ul>
->>>>>>> cursor/fix-errors-and-merge-to-main-ef5d
+            </div>
+          </div>
+        </div>
+      </div>
             </div>
           </div>
         </div>
