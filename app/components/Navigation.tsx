@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-('use client');
+import { ChevronDown } from 'lucide-react';
 
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [servicesOpen, setServicesOpen] = useState(false);
 
   return (
     <nav className="bg-white shadow-lg sticky top-0 z-50">
@@ -25,8 +26,17 @@ const Navigation: React.FC = () => {
             <Link to="/services" className="text-gray-700 hover:text-blue-600 transition-colors">
               Services
             </Link>
+            <Link to="/services-advertising" className="text-gray-700 hover:text-blue-600 transition-colors">
+              AI Advertising
+            </Link>
+            <Link to="/case-studies" className="text-gray-700 hover:text-blue-600 transition-colors">
+              Case Studies
+            </Link>
             <Link to="/enterprise" className="text-gray-700 hover:text-blue-600 transition-colors">
               Enterprise
+            </Link>
+            <Link to="/team" className="text-gray-700 hover:text-blue-600 transition-colors">
+              Team
             </Link>
             <Link to="/contact" className="text-gray-700 hover:text-blue-600 transition-colors">
               Contact
@@ -59,14 +69,37 @@ const Navigation: React.FC = () => {
               <Link to="/about" className="text-gray-700 hover:text-blue-600 transition-colors">
                 About
               </Link>
-              <Link to="/services" className="text-gray-700 hover:text-blue-600 transition-colors">
-                Services
+              <div className="space-y-2">
+                <div className="text-gray-700 font-semibold">Services</div>
+                <div className="ml-4 space-y-2">
+                  <Link to="/services" className="block text-gray-600 hover:text-blue-600 transition-colors">
+                    All Services
+                  </Link>
+                  <Link to="/micro-saas" className="block text-gray-600 hover:text-blue-600 transition-colors">
+                    Micro SAAS Solutions
+                  </Link>
+                  <Link to="/ai-services" className="block text-gray-600 hover:text-blue-600 transition-colors">
+                    AI Services
+                  </Link>
+                  <Link to="/it-services" className="block text-gray-600 hover:text-blue-600 transition-colors">
+                    IT Services
+                  </Link>
+                  <Link to="/services-advertising" className="block text-gray-600 hover:text-blue-600 transition-colors">
+                    Advertising Services
+                  </Link>
+                </div>
+              </div>
+              <Link to="/services-advertising" className="text-gray-700 hover:text-blue-600 transition-colors">
+                AI Advertising
               </Link>
-              <Link
-                to="/enterprise"
-                className="text-gray-700 hover:text-blue-600 transition-colors"
-              >
+              <Link to="/case-studies" className="text-gray-700 hover:text-blue-600 transition-colors">
+                Case Studies
+              </Link>
+              <Link to="/enterprise" className="text-gray-700 hover:text-blue-600 transition-colors">
                 Enterprise
+              </Link>
+              <Link to="/team" className="text-gray-700 hover:text-blue-600 transition-colors">
+                Team
               </Link>
               <Link to="/contact" className="text-gray-700 hover:text-blue-600 transition-colors">
                 Contact
