@@ -1,7 +1,7 @@
 import React, { Component, ErrorInfo, ReactNode, memo } from 'react';
 
 
-import { Link } from 'react-router-dom';interface OptimizedErrorBoundaryProps {
+interface OptimizedErrorBoundaryProps {
   children: ReactNode;
   fallback?: ReactNode;
   onError?: (error: Error, errorInfo: ErrorInfo) => void;
@@ -48,7 +48,7 @@ class OptimizedErrorBoundary extends Component<
 
     // Log error to console in development
     if (process.env['NODE_ENV'] === 'development') {
-      // eslint-disable-next-line no-console
+       
       console.error('Error caught by boundary:', error, errorInfo);
     }
 

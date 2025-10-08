@@ -5,11 +5,6 @@
 
 import { lazy } from 'react';
 import React from 'react';
-<<<<<<< HEAD
-=======
-// import { logger } from './logger';
->>>>>>> cursor/fix-errors-and-merge-to-main-4e61
-
 
 import { Link } from 'react-router-dom';/**
  * Debounce function to limit execution rate

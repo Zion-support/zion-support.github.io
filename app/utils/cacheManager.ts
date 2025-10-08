@@ -3,7 +3,6 @@
  * Provides in-memory and localStorage caching with TTL support
  */
 
-import React from 'react';
 import { logger } from './logger';
 import { performanceMonitoring } from './performanceMonitoring';
 

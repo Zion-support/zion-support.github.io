@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-import { Link } from 'react-router-dom';interface ServiceCardProps {
+interface ServiceCardProps {
   title: string;
   description: string;
   icon?: React.ReactNode;

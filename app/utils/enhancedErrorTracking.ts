@@ -1,4 +1,3 @@
-import React from 'react';
 /**
  * Enhanced Error Tracking Utility
  * Provides comprehensive error tracking with detailed context

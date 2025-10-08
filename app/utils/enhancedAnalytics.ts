@@ -1,4 +1,3 @@
-import React from 'react';
 /**
  * Enhanced Analytics Utility
  * Provides comprehensive analytics tracking with event batching and offline support

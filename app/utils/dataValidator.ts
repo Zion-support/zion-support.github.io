@@ -3,7 +3,6 @@
  * Provides comprehensive data validation with type safety
  */
 
-import React from 'react';
 import { errorTracking, ErrorCategory, ErrorSeverity } from './errorTracking';
 
 export interface ValidationRule<T = unknown> {
