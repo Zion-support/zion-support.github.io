@@ -45,7 +45,6 @@ class SEOOptimizer {
   init(): void {
     this.setupStructuredData();
     this.setupCanonicalUrls();
-    // this.setupMetaTags();
     this.setupPerformanceMonitoring();
   }
 
@@ -91,6 +90,7 @@ class SEOOptimizer {
    */
   private updateMetaTags(): void {
     if (!this.currentPageData) return;
+    if (typeof document === 'undefined') return;
 
     const title = this.generateTitle();
     const description = this.generateDescription();
@@ -131,29 +131,11 @@ class SEOOptimizer {
   }
 
   /**
-   * Initialize meta tags
-  private initializeMetaTags(): void {
-    
-    this.setMetaTag('description', this.currentPageData?.description || 'Advanced AI and IT Solutions');
-    this.setMetaTag('author', 'Zion Tech Group');
-    this.setMetaTag('og:type', 'website', 'property');
-    this.setMetaTag('og:description', this.currentPageData?.description || 'Advanced AI and IT Solutions', 'property');
-    this.setMetaTag('twitter:card', 'summary_large_image');
-    this.setMetaTag('twitter:description', this.currentPageData?.description || 'Advanced AI and IT Solutions');
-
-   */
-    if (typeof document === 'undefined') return;
-    // Set default meta tags
-    this.setMetaTag('keywords', (this.currentPageData?.keywords || []).join(', ') || 'AI, IT Solutions, Technology');
-    // Open Graph tags
-    this.setMetaTag('og:title', this.currentPageData?.title || 'Zion Tech Group', 'property');
-    // Twitter Card tags
-    this.setMetaTag('twitter:title', this.currentPageData?.title || 'Zion Tech Group');
-  }
-  /**
    * Set meta tag
    */
   private setMetaTag(name: string, content: string, attribute: string = 'name'): void {
+    if (typeof document === 'undefined') return;
+
     let meta = document.querySelector(`meta[${attribute}="${name}"]`);
     
     if (!meta) {
@@ -218,7 +200,7 @@ class SEOOptimizer {
       '@type': this.currentPageData.type === 'article' ? 'Article' : 'WebPage',
       headline: this.generateTitle(),
       description: this.generateDescription(),
-      url: this.currentPageData.url || window.location.href,
+      url: this.currentPageData.url || (typeof window !== 'undefined' ? window.location.href : ''),
       image: this.currentPageData.image || this.config.defaultImage,
       publisher: {
         '@type': 'Organization',
@@ -248,6 +230,8 @@ class SEOOptimizer {
    * Add structured data to page
    */
   private addStructuredData(data: any): void {
+    if (typeof document === 'undefined') return;
+    
     const script = document.createElement('script');
     script.type = 'application/ld+json';
     script.textContent = JSON.stringify(data);
@@ -258,6 +242,8 @@ class SEOOptimizer {
    * Setup canonical URLs
    */
   private setupCanonicalUrls(): void {
+    if (typeof document === 'undefined') return;
+    
     const canonical = document.createElement('link');
     canonical.rel = 'canonical';
     canonical.href = window.location.href;
@@ -269,30 +255,34 @@ class SEOOptimizer {
    */
   private setupPerformanceMonitoring(): void {
     // Monitor Core Web Vitals for SEO impact
-    if (typeof window !== 'undefined' && 'performance' in window) {
-      // Monitor LCP (Largest Contentful Paint)
-      new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        const lastEntry = entries[entries.length - 1];
-        
-        if (lastEntry.startTime > 4000) { // Poor LCP
-          this.trackSEOMetric('poor_lcp', lastEntry.startTime);
-        }
-      }).observe({ entryTypes: ['largest-contentful-paint'] });
-
-      // Monitor CLS (Cumulative Layout Shift)
-      let clsValue = 0;
-      new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
-          if (!(entry as any).hadRecentInput) {
-            clsValue += (entry as any).value;
+    if (typeof window !== 'undefined' && 'performance' in window && 'PerformanceObserver' in window) {
+      try {
+        // Monitor LCP (Largest Contentful Paint)
+        new PerformanceObserver((list) => {
+          const entries = list.getEntries();
+          const lastEntry = entries[entries.length - 1];
+          
+          if (lastEntry.startTime > 4000) { // Poor LCP
+            this.trackSEOMetric('poor_lcp', lastEntry.startTime);
           }
-        }
-        
-        if (clsValue > 0.25) { // Poor CLS
-          this.trackSEOMetric('poor_cls', clsValue);
-        }
-      }).observe({ entryTypes: ['layout-shift'] });
+        }).observe({ entryTypes: ['largest-contentful-paint'] });
+
+        // Monitor CLS (Cumulative Layout Shift)
+        let clsValue = 0;
+        new PerformanceObserver((list) => {
+          for (const entry of list.getEntries()) {
+            if (!(entry as any).hadRecentInput) {
+              clsValue += (entry as any).value;
+            }
+          }
+          
+          if (clsValue > 0.25) { // Poor CLS
+            this.trackSEOMetric('poor_cls', clsValue);
+          }
+        }).observe({ entryTypes: ['layout-shift'] });
+      } catch (error) {
+        console.warn('Performance monitoring not fully supported:', error);
+      }
     }
   }
 
@@ -346,6 +336,8 @@ Disallow: /static/`;
    */
   checkSEOIssues(): string[] {
     const issues: string[] = [];
+    
+    if (typeof document === 'undefined') return issues;
     
     // Check title length
     const title = document.title;
@@ -408,4 +400,4 @@ const defaultConfig: SEOConfig = {
 };
 
 export const seoOptimizer = new SEOOptimizer(defaultConfig);
-export default seoOptimizer;
+export default SEOOptimizer;
