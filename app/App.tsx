@@ -1,6 +1,6 @@
 'use client';
 
-import React, { Suspense, lazy, useEffect, useCallback } from 'react';
+import React, { Suspense, lazy, useEffect } from 'react';
 import { HelmetProvider } from 'react-helmet-async';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
@@ -49,16 +49,14 @@ const App: React.FC = () => {
     logger.info('🚀 Zion Tech Group App initialized with comprehensive monitoring', 'App');
   }, []);
 
-  const handleError = useCallback((error: Error, errorInfo: any) => {
-    logger.error('Application Error', 'ErrorBoundary', { error: error.message, errorInfo });
-  }, []);
-
   return (
     <HelmetProvider>
       <AdvancedErrorBoundary
         enableErrorReporting={true}
         enableRetry={true}
-        onError={handleError}
+        onError={(error, errorInfo) => {
+          logger.error('Application Error', error, { component: 'ErrorBoundary', errorInfo });
+        }}
       >
         <AccessibilityEnhancer>
           <SEOEnhancer
