@@ -7,12 +7,6 @@ const UltimateBusinessIntelligence2025Banner = () => {
 
   const content = [
     {
-      id: 'ultimate-business-intelligence-2025',
-      title: 'Ultimate Business Intelligence Revolution 2025',
-      description: 'Transform your enterprise with AI-powered business intelligence achieving 30,000% ROI, 70% cost reduction, and 90% efficiency gains.',
-      url: '/blog/ultimate-business-intelligence-2025',
-  const content = [
-    {
       id: 'ultimate-business-intelligence-revolution',
       title: 'AI 2025: The Ultimate Business Intelligence Revolution',
       description: 'Transform your enterprise with next-generation AI-powered business intelligence that delivers unprecedented insights and competitive advantage.',
@@ -32,8 +26,6 @@ const UltimateBusinessIntelligence2025Banner = () => {
       description: 'Experience the future of data visualization with our cutting-edge AI dashboard featuring real-time analytics and predictive insights.',
       url: '/services/ai-dashboard',
       type: 'Service',
-      url: '/case-studies/fortune-500-ultimate-business-intelligence-30000-roi-success-story',
-      type: 'Case Study',
       metrics: {
         users: '1M+',
         uptime: '99.9%',
@@ -55,10 +47,10 @@ const UltimateBusinessIntelligence2025Banner = () => {
         cost: '80% reduction'
       },
       tags: ['Automation', 'Enterprise', 'Productivity', 'Efficiency', '2025']
-      readingTime: '60 min read',
-      featured: true
     }
   ];
+
+  const currentContent = content[currentSlide];
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -75,14 +67,6 @@ const UltimateBusinessIntelligence2025Banner = () => {
   if (!isVisible) return null;
 
   return (
-    <div className="relative bg-gradient-to-r from-blue-900 via-purple-900 to-indigo-900 text-white overflow-hidden">
-      <div className="absolute inset-0 bg-black/20"></div>
-      <div className="relative z-10 p-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="flex items-center justify-between">
-            <div className="flex-1">
-              <div className="flex items-center gap-3 mb-2">
-                <span className="bg-blue-500/20 text-blue-300 px-3 py-1 rounded-full text-sm font-semibold">
     <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">
       {/* Animated Background Effects */}
       <div className="absolute inset-0">
@@ -129,75 +113,36 @@ const UltimateBusinessIntelligence2025Banner = () => {
                 </span>
               </div>
               
-              <h2 className="text-2xl font-bold mb-2">
-                {currentContent.title}
-              </h2>
-              
-              <p className="text-gray-200 mb-4 max-w-2xl">
-                {currentContent.description}
-              </p>
-              
-              <div className="flex flex-wrap gap-4 mb-4">
-                {Object.entries(currentContent.metrics).map(([key, value]) => (
-                  <div key={key} className="text-center">
-                    <div className="text-2xl font-bold text-cyan-400">{value}</div>
-                    <div className="text-xs text-gray-300 capitalize">
-                      {key.replace(/([A-Z])/g, ' $1').trim()}
-                    </div>
-                  </div>
-                ))}
-              </div>
-              
-              <div className="flex flex-wrap gap-2 mb-4">
-                {currentContent.tags.map((tag) => (
-                  <span
-                    key={tag}
-                    className="bg-white/10 text-white px-2 py-1 rounded text-xs"
-                  >
-                    {tag}
-                  </span>
-                ))}
-              </div>
-              
-              <div className="flex items-center gap-4">
-                <Link
-                  href={currentContent.url}
-                  className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-2 px-6 rounded-lg transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg"
-                >
-                  Learn More
-                </Link>
-                <button
-                  onClick={() => setCurrentSlide((prev) => (prev + 1) % content.length)}
-                  className="text-gray-300 hover:text-white transition-colors"
-                >
-                  Next →
-                </button>
-              </div>
+              <button
+                onClick={handleClose}
+                className="text-gray-300 hover:text-white transition-colors text-3xl"
+                aria-label="Close banner"
+              >
+                ×
+              </button>
             </div>
-            
-            <div className="flex items-center gap-2 ml-8">
-              {content.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => setCurrentSlide(index)}
-                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                    index === currentSlide
-                      ? 'bg-cyan-400 scale-125'
-                      : 'bg-white/30 hover:bg-white/50'
-                  }`}
-                />
+
+            {/* Metrics Grid */}
+            <div className="flex flex-wrap gap-6 mb-8">
+              {Object.entries(currentContent.metrics).map(([key, value]) => (
+                <div key={key} className="text-center">
+                  <div className="text-3xl font-bold text-cyan-400">{value}</div>
+                  <div className="text-sm text-gray-300 capitalize">
+                    {key.replace(/([A-Z])/g, ' $1').trim()}
+                  </div>
+                </div>
               ))}
             </div>
             
-            <button
-              onClick={handleClose}
-              className="ml-4 text-gray-300 hover:text-white transition-colors"
-              aria-label="Close banner"
-            >
-              ×
-            </button>
-          </div>
-                </div>
+            {/* Tags */}
+            <div className="flex flex-wrap gap-2 mb-8">
+              {currentContent.tags.map((tag) => (
+                <span
+                  key={tag}
+                  className="bg-white/10 text-white px-3 py-1 rounded-full text-sm"
+                >
+                  {tag}
+                </span>
               ))}
             </div>
 
@@ -251,7 +196,7 @@ const UltimateBusinessIntelligence2025Banner = () => {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
