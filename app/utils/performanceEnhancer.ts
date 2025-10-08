@@ -312,11 +312,6 @@ export const initializePerformanceEnhancements = () => {
   // Collect performance metrics
   const metrics = collectPerformanceMetrics();
   if (metrics && process.env['NODE_ENV'] === 'development') {
-     
-<<<<<<< HEAD
-    if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { console.log('Performance metrics:', metrics); } }
-=======
     console.log('Performance metrics:', metrics);
->>>>>>> cursor/fix-errors-and-merge-to-main-4826
   }
 };
