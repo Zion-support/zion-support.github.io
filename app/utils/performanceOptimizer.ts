@@ -78,8 +78,6 @@ class PerformanceOptimizer {
         // Ignore measure errors
       }
     }
-    
-    return duration;
   }
 
   private initMonitoring() {
@@ -233,6 +231,26 @@ class PerformanceOptimizer {
         }
       });
     }
+  }
+
+  /**
+   * Optimize scroll performance
+   */
+  optimizeScroll(): void {
+    if (typeof window === 'undefined') return;
+    
+    let ticking = false;
+    const handleScroll = () => {
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          // Scroll optimization logic here
+          ticking = false;
+        });
+        ticking = true;
+      }
+    };
+    
+    window.addEventListener('scroll', handleScroll, { passive: true });
   }
 
   preloadCriticalResources() {
