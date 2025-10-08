@@ -249,7 +249,7 @@ export function testComponentContainsText(
 ): void {
   it(description || `contains text: ${text}`, () => {
     const { getByText } = renderWithProviders(component);
-    expect(getByText(text)).toBeInTheDocument();
+    expect(getByText(text)).toBeTruthy();
   });
 }
 
@@ -264,7 +264,7 @@ export function testComponentAccessibility(
 ): void {
   it(description || `has accessible ${role}: ${name}`, () => {
     const { getByRole } = renderWithProviders(component);
-    expect(getByRole(role, { name })).toBeInTheDocument();
+    expect(getByRole(role, { name })).toBeTruthy();
   });
 }
 
