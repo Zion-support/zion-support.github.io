@@ -289,6 +289,172 @@ const ITServicesPage: React.FC = () => {
       marketPrice: '$2,500-6,000/month',
       category: 'Asset Management',
       technologies: ['ServiceNow', 'Lansweeper', 'Asset Panda', 'Flexera', 'Microsoft Intune']
+    },
+    // NEW COMPREHENSIVE IT SERVICES
+    {
+      title: 'Enterprise Cloud Migration',
+      description: 'Complete cloud migration strategy and execution for AWS, Azure, and Google Cloud platforms.',
+      icon: '☁️',
+      price: 'Starting at $15,000/project',
+      features: ['Migration strategy', 'Cloud architecture design', 'Data migration', 'Application modernization', 'Cost optimization'],
+      benefits: ['Reduce infrastructure costs by 40%', 'Improve scalability', 'Enhance security'],
+      marketPrice: '$25,000-100,000/project',
+      category: 'Cloud Migration',
+      technologies: ['AWS', 'Azure', 'Google Cloud', 'Terraform', 'Docker']
+    },
+    {
+      title: 'Advanced Cybersecurity Operations',
+      description: 'Comprehensive security operations center (SOC) services with 24/7 monitoring and incident response.',
+      icon: '🛡️',
+      price: 'Starting at $8,000/month',
+      features: ['24/7 SOC monitoring', 'Threat hunting', 'Incident response', 'Vulnerability management', 'Security awareness training'],
+      benefits: ['Prevent 99.9% of cyber attacks', 'Reduce response time by 80%', 'Ensure compliance'],
+      marketPrice: '$15,000-50,000/month',
+      category: 'Cybersecurity',
+      technologies: ['SIEM', 'EDR', 'SOAR', 'Threat Intelligence', 'Zero Trust']
+    },
+    {
+      title: 'Enterprise DevOps Transformation',
+      description: 'Complete DevOps implementation with CI/CD pipelines, infrastructure as code, and automation.',
+      icon: '🔄',
+      price: 'Starting at $12,000/month',
+      features: ['CI/CD pipeline setup', 'Infrastructure automation', 'Monitoring & alerting', 'Security integration', 'Team training'],
+      benefits: ['Deploy 10x faster', 'Reduce deployment errors by 90%', 'Improve team productivity'],
+      marketPrice: '$20,000-60,000/month',
+      category: 'DevOps',
+      technologies: ['Jenkins', 'GitLab CI', 'Terraform', 'Ansible', 'Kubernetes']
+    },
+    {
+      title: 'Advanced Database Solutions',
+      description: 'Enterprise database design, optimization, and management for SQL and NoSQL databases.',
+      icon: '🗄️',
+      price: 'Starting at $5,000/month',
+      features: ['Database architecture', 'Performance tuning', 'High availability setup', 'Backup & recovery', 'Security hardening'],
+      benefits: ['Improve performance by 60%', 'Ensure 99.99% uptime', 'Reduce costs'],
+      marketPrice: '$10,000-30,000/month',
+      category: 'Database Services',
+      technologies: ['PostgreSQL', 'MySQL', 'MongoDB', 'Redis', 'Elasticsearch']
+    },
+    {
+      title: 'Enterprise Network Infrastructure',
+      description: 'Complete network design, implementation, and management for enterprise environments.',
+      icon: '🌐',
+      price: 'Starting at $6,000/month',
+      features: ['Network design', 'Security implementation', 'Performance optimization', 'Monitoring setup', 'Disaster recovery'],
+      benefits: ['Improve network performance', 'Enhance security', 'Reduce downtime'],
+      marketPrice: '$12,000-40,000/month',
+      category: 'Network Services',
+      technologies: ['Cisco', 'Juniper', 'Fortinet', 'SD-WAN', 'Zero Trust']
+    },
+    {
+      title: 'IT Service Management (ITSM)',
+      description: 'Complete ITSM implementation with service desk, change management, and incident management.',
+      icon: '🎯',
+      price: 'Starting at $4,000/month',
+      features: ['Service desk setup', 'Change management', 'Incident management', 'Problem management', 'Service catalog'],
+      benefits: ['Improve service quality', 'Reduce resolution time', 'Enhance user satisfaction'],
+      marketPrice: '$8,000-25,000/month',
+      category: 'ITSM',
+      technologies: ['ServiceNow', 'Jira Service Management', 'Cherwell', 'BMC Remedy', 'Microsoft System Center']
+    },
+    {
+      title: 'Enterprise Backup & Disaster Recovery',
+      description: 'Comprehensive backup and disaster recovery solutions with automated testing and monitoring.',
+      icon: '💾',
+      price: 'Starting at $3,500/month',
+      features: ['Automated backups', 'Disaster recovery planning', 'Testing & validation', 'Cloud backup', 'Recovery automation'],
+      benefits: ['Ensure data protection', 'Minimize downtime', 'Meet compliance requirements'],
+      marketPrice: '$7,000-20,000/month',
+      category: 'Backup & Recovery',
+      technologies: ['Veeam', 'Commvault', 'AWS Backup', 'Azure Backup', 'Zerto']
+    },
+    {
+      title: 'Enterprise Identity & Access Management',
+      description: 'Complete IAM solution with single sign-on, multi-factor authentication, and privileged access management.',
+      icon: '🔐',
+      price: 'Starting at $5,500/month',
+      features: ['Single sign-on', 'Multi-factor authentication', 'Privileged access management', 'Identity governance', 'Compliance reporting'],
+      benefits: ['Enhance security', 'Improve user experience', 'Ensure compliance'],
+      marketPrice: '$10,000-35,000/month',
+      category: 'Identity Management',
+      technologies: ['Okta', 'Azure AD', 'Ping Identity', 'CyberArk', 'SailPoint']
+    },
+    {
+      title: 'Enterprise Monitoring & Observability',
+      description: 'Comprehensive monitoring solution with APM, infrastructure monitoring, and log management.',
+      icon: '📊',
+      price: 'Starting at $4,500/month',
+      features: ['Application performance monitoring', 'Infrastructure monitoring', 'Log management', 'Alerting', 'Dashboards'],
+      benefits: ['Improve system reliability', 'Reduce downtime', 'Optimize performance'],
+      marketPrice: '$8,000-25,000/month',
+      category: 'Monitoring',
+      technologies: ['Datadog', 'New Relic', 'Splunk', 'Prometheus', 'Grafana']
+    },
+    {
+      title: 'Enterprise Data Analytics Platform',
+      description: 'Complete data analytics solution with data warehousing, ETL, and business intelligence.',
+      icon: '📈',
+      price: 'Starting at $7,000/month',
+      features: ['Data warehousing', 'ETL processes', 'Business intelligence', 'Data visualization', 'Machine learning integration'],
+      benefits: ['Enable data-driven decisions', 'Improve business insights', 'Optimize operations'],
+      marketPrice: '$15,000-50,000/month',
+      category: 'Data Analytics',
+      technologies: ['Snowflake', 'AWS Redshift', 'Azure Synapse', 'Tableau', 'Power BI']
+    },
+    {
+      title: 'Enterprise API Management',
+      description: 'Complete API management solution with gateway, security, and developer portal.',
+      icon: '🔌',
+      price: 'Starting at $3,000/month',
+      features: ['API gateway', 'Rate limiting', 'Security policies', 'Developer portal', 'Analytics'],
+      benefits: ['Improve API security', 'Enhance developer experience', 'Optimize performance'],
+      marketPrice: '$6,000-20,000/month',
+      category: 'API Management',
+      technologies: ['Kong', 'AWS API Gateway', 'Azure API Management', 'MuleSoft', 'Apigee']
+    },
+    {
+      title: 'Enterprise Mobile Device Management',
+      description: 'Complete MDM solution with device provisioning, security policies, and application management.',
+      icon: '📱',
+      price: 'Starting at $2,500/month',
+      features: ['Device provisioning', 'Security policies', 'Application management', 'Compliance monitoring', 'Remote wipe'],
+      benefits: ['Enhance mobile security', 'Improve device management', 'Ensure compliance'],
+      marketPrice: '$5,000-15,000/month',
+      category: 'Mobile Management',
+      technologies: ['Microsoft Intune', 'VMware Workspace ONE', 'MobileIron', 'Citrix', 'Jamf']
+    },
+    {
+      title: 'Enterprise Content Management',
+      description: 'Complete ECM solution with document management, workflow automation, and collaboration tools.',
+      icon: '📄',
+      price: 'Starting at $4,000/month',
+      features: ['Document management', 'Workflow automation', 'Collaboration tools', 'Version control', 'Search & retrieval'],
+      benefits: ['Improve productivity', 'Enhance collaboration', 'Ensure compliance'],
+      marketPrice: '$8,000-25,000/month',
+      category: 'Content Management',
+      technologies: ['SharePoint', 'Box', 'Dropbox Business', 'Documentum', 'Alfresco']
+    },
+    {
+      title: 'Enterprise Integration Services',
+      description: 'Complete integration solution with ETL, API integration, and data synchronization.',
+      icon: '🔗',
+      price: 'Starting at $6,500/month',
+      features: ['ETL processes', 'API integration', 'Data synchronization', 'Real-time processing', 'Error handling'],
+      benefits: ['Improve data flow', 'Reduce manual processes', 'Enhance system connectivity'],
+      marketPrice: '$12,000-40,000/month',
+      category: 'Integration Services',
+      technologies: ['MuleSoft', 'Talend', 'Informatica', 'Apache Kafka', 'Zapier']
+    },
+    {
+      title: 'Enterprise Compliance & Governance',
+      description: 'Complete compliance solution with audit trails, policy management, and regulatory reporting.',
+      icon: '📋',
+      price: 'Starting at $5,000/month',
+      features: ['Audit trails', 'Policy management', 'Regulatory reporting', 'Risk assessment', 'Compliance monitoring'],
+      benefits: ['Ensure compliance', 'Reduce audit costs', 'Minimize regulatory risks'],
+      marketPrice: '$10,000-30,000/month',
+      category: 'Compliance',
+      technologies: ['GRC Platforms', 'Audit Management', 'Policy Management', 'Risk Assessment', 'Compliance Reporting']
     }
   ];
 
