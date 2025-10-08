@@ -267,7 +267,7 @@ export default function MegaTransformationSuccessBanner() {
               href="/case-studies"
               className="bg-white text-green-900 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors shadow-lg flex items-center"
             >
-              View All Case Studies
+              View All Case Studies <Link className="w-5 h-5 ml-2" />
             </Link>
             <Link
               href="/contact"

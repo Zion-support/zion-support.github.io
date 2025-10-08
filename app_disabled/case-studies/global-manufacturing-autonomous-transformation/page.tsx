@@ -670,14 +670,14 @@ export default function GlobalManufacturingCaseStudy() {
               methodologies.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <ArrowRight 
+              <Link 
                 href="/contact"
                 className="inline-flex items-center px-8 py-4 bg-white text-blue-600 font-bold rounded-xl hover:bg-gray-100 transition-colors"
               >
                 Schedule Consultation
                 <ArrowLeft className="w-5 h-5 ml-2 rotate-180" />
               </Link>
-              <ArrowRight 
+              <Link 
                 href="/blog/ai-powered-autonomous-business-processes-2026"
                 className="inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-sm text-white font-semibold rounded-xl border border-white/30 hover:bg-white/20 transition-colors"
               >

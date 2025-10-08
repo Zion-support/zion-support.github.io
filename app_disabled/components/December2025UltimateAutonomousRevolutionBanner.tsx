@@ -152,6 +152,7 @@ export default function December2025UltimateAutonomousRevolutionBanner() {
             >
               <Brain className='w-5 h-5' />
               Discover the Revolution
+              <Link className="w-5 h-5" />
             </Link>
             
             <Link 

@@ -51,6 +51,7 @@ export default function NewContent2026RevolutionaryBanner() {
             >
               <Brain className="w-5 h-5" />
               Synthetic Consciousness
+              <Link className="w-4 h-4" />
             </Link>
             <Link
               href="/blog/ai-2026-quantum-neural-superintelligence"
@@ -58,6 +59,7 @@ export default function NewContent2026RevolutionaryBanner() {
             >
               <Zap className="w-5 h-5" />
               Quantum Superintelligence
+              <Link className="w-4 h-4" />
             </Link>
             <Link
               href="/case-studies/ai-2026-synthetic-consciousness-10-billion-success"
@@ -65,6 +67,7 @@ export default function NewContent2026RevolutionaryBanner() {
             >
               <TrendingUp className="w-5 h-5" />
               $10B Success Story
+              <Link className="w-4 h-4" />
             </Link>
             <Link
               href="/case-studies/ai-2026-quantum-neural-superintelligence-25-billion-success"
@@ -72,6 +75,7 @@ export default function NewContent2026RevolutionaryBanner() {
             >
               <Star className="w-5 h-5" />
               $25B Success Story
+              <Link className="w-4 h-4" />
             </Link>
           </div>
         </div>

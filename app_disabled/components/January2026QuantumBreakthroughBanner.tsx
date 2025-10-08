@@ -40,7 +40,7 @@ export default function January2026QuantumBreakthroughBanner() {
             </p>
             <div className="flex items-center justify-between">
               <span className="text-2xl font-bold text-green-300">$47M ROI</span>
-              <ArrowRight 
+              <Link 
                 href="/blog/ai-2026-quantum-neural-superintelligence-ultimate-breakthrough"
                 className="flex items-center gap-2 text-yellow-300 hover:text-yellow-200 transition-colors"
               >
@@ -60,7 +60,7 @@ export default function January2026QuantumBreakthroughBanner() {
             </p>
             <div className="flex items-center justify-between">
               <span className="text-2xl font-bold text-green-300">370% ROI</span>
-              <ArrowRight 
+              <Link 
                 href="/blog/ai-2026-synthetic-consciousness-enterprise-breakthrough"
                 className="flex items-center gap-2 text-yellow-300 hover:text-yellow-200 transition-colors"
               >
@@ -80,7 +80,7 @@ export default function January2026QuantumBreakthroughBanner() {
             </p>
             <div className="flex items-center justify-between">
               <span className="text-2xl font-bold text-green-300">96.3% Efficiency</span>
-              <ArrowRight 
+              <Link 
                 href="/case-studies/quantum-ai-manufacturing-success-2026"
                 className="flex items-center gap-2 text-yellow-300 hover:text-yellow-200 transition-colors"
               >
