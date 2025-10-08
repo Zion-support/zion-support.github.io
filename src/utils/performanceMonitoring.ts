@@ -232,16 +232,10 @@ class PerformanceMonitor {
       let clsValue = 0;
       const clsObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
-<<<<<<< HEAD
-        entries.forEach((entry: any) => {
-          if (!entry.hadRecentInput) {
-            clsValue += entry.value;
-=======
         entries.forEach((entry: unknown) => {
           const clsEntry = entry as any;
           if (!clsEntry.hadRecentInput) {
             clsValue += clsEntry.value;
->>>>>>> cursor/fix-errors-and-merge-to-main-c40a
           }
         });
         const metric = this.createMetric('CLS', clsValue);
@@ -302,14 +296,9 @@ class PerformanceMonitor {
     try {
       const resourceObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
-<<<<<<< HEAD
-        entries.forEach((entry: any) => {
-          if (entry.initiatorType) {
-=======
         entries.forEach((entry: unknown) => {
           const resourceEntry = entry as PerformanceResourceTiming;
           if (resourceEntry.initiatorType) {
->>>>>>> cursor/fix-errors-and-merge-to-main-c40a
             this.trackMetric(
               `resource_${resourceEntry.initiatorType}`,
               resourceEntry.duration,
