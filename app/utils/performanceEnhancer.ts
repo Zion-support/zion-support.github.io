@@ -3,6 +3,7 @@
  * Advanced performance optimization tools for the application
  */
 
+import React from 'react';
 import { useEffect, useRef } from 'react';
 
 // Debounce function for performance optimization
@@ -48,13 +49,9 @@ export class PerformanceMonitor {
   // Track component render time
   trackRender(componentName: string, renderTime: number) {
     this.metrics.set(`${componentName}_render`, renderTime);
-
+    
     if (process.env['NODE_ENV'] === 'development') {
-      if (process.env['NODE_ENV'] === 'development') {
-        if (import.meta.env.DEV) {
-          console.log(`[Performance] ${componentName} rendered in ${renderTime.toFixed(2)}ms`);
-        }
-      }
+      if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { console.log(`[Performance] ${componentName} rendered in ${renderTime.toFixed(2)}ms`); } }
     }
   }
 
@@ -84,10 +81,9 @@ export class PerformanceMonitor {
       return;
     }
 
-    const observer = new PerformanceObserver(list => {
-      list.getEntries().forEach(entry => {
-        if (entry.duration > 50) {
-          // Tasks longer than 50ms
+    const observer = new PerformanceObserver((list) => {
+      list.getEntries().forEach((entry) => {
+        if (entry.duration > 50) { // Tasks longer than 50ms
           console.warn(`[Performance] Long task detected: ${entry.duration.toFixed(2)}ms`);
         }
       });
@@ -111,7 +107,7 @@ export const usePerformanceMonitor = (componentName: string) => {
 
   useEffect(() => {
     renderStartTime.current = performance.now();
-
+    
     return () => {
       const renderTime = performance.now() - renderStartTime.current;
       monitor.trackRender(componentName, renderTime);
@@ -125,7 +121,7 @@ export const usePerformanceMonitor = (componentName: string) => {
       fn();
       const duration = performance.now() - start;
       monitor.trackRender(`${componentName}_function`, duration);
-    },
+    }
   };
 };
 
@@ -134,8 +130,8 @@ export const lazyLoadImages = () => {
   if (typeof window === 'undefined') return;
 
   const images = document.querySelectorAll('img[data-src]');
-  const imageObserver = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
+  const imageObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
       if (entry.isIntersecting) {
         const img = entry.target as HTMLImageElement;
         img['src'] = img.dataset['src'] || '';
@@ -145,16 +141,19 @@ export const lazyLoadImages = () => {
     });
   });
 
-  images.forEach(img => imageObserver.observe(img));
+  images.forEach((img) => imageObserver.observe(img));
 };
 
 // Preload critical resources
 export const preloadCriticalResources = () => {
   if (typeof window === 'undefined') return;
 
-  const criticalResources = ['/fonts/inter-var.woff2', '/css/critical.css'];
+  const criticalResources = [
+    '/fonts/inter-var.woff2',
+    '/css/critical.css',
+  ];
 
-  criticalResources.forEach(resource => {
+  criticalResources.forEach((resource) => {
     const link = document.createElement('link');
     link.rel = 'preload';
     link.href = resource;
@@ -195,7 +194,7 @@ export const optimizeScrollPerformance = () => {
       value: number;
     }
 
-    const observer = new PerformanceObserver(list => {
+    const observer = new PerformanceObserver((list) => {
       for (const entry of list.getEntries()) {
         const layoutEntry = entry as LayoutShiftEntry;
         if (!layoutEntry.hadRecentInput) {
@@ -214,13 +213,9 @@ export const optimizeScrollPerformance = () => {
   };
 
   const trackLCP = () => {
-    const observer = new PerformanceObserver(list => {
+    const observer = new PerformanceObserver((list) => {
       for (const entry of list.getEntries()) {
-        if (process.env['NODE_ENV'] === 'development') {
-          if (import.meta.env.DEV) {
-            console.log('[Web Vitals] LCP:', entry.startTime);
-          }
-        }
+        if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { console.log('[Web Vitals] LCP:', entry.startTime); } }
       }
     });
 
@@ -233,16 +228,12 @@ export const optimizeScrollPerformance = () => {
     interface FirstInputEntry extends PerformanceEntry {
       processingStart: number;
     }
-
-    const observer = new PerformanceObserver(list => {
+    
+    const observer = new PerformanceObserver((list) => {
       for (const entry of list.getEntries()) {
         const fidEntry = entry as FirstInputEntry;
         const fid = fidEntry.processingStart - entry.startTime;
-        if (process.env['NODE_ENV'] === 'development') {
-          if (import.meta.env.DEV) {
-            console.log('[Web Vitals] FID:', fid);
-          }
-        }
+        if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { console.log('[Web Vitals] FID:', fid); } }
       }
     });
 
@@ -271,11 +262,7 @@ export const getMemoryUsage = () => {
     return null;
   }
 
-  const memory = (
-    performance as unknown as {
-      memory: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number };
-    }
-  ).memory;
+  const memory = (performance as unknown as { memory: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
   return {
     used: memory.usedJSHeapSize,
     total: memory.totalJSHeapSize,
@@ -298,9 +285,8 @@ export const collectPerformanceMetrics = () => {
       totalTime: navigation.loadEventEnd - navigation.fetchStart,
     },
     paint: {
-      firstPaint: paint.find(entry => entry.name === 'first-paint')?.startTime || 0,
-      firstContentfulPaint:
-        paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0,
+      firstPaint: paint.find((entry) => entry.name === 'first-paint')?.startTime || 0,
+      firstContentfulPaint: paint.find((entry) => entry.name === 'first-contentful-paint')?.startTime || 0,
     },
     memory: getMemoryUsage(),
   };
@@ -322,10 +308,7 @@ export const initializePerformanceEnhancements = () => {
   // Collect performance metrics
   const metrics = collectPerformanceMetrics();
   if (metrics && process.env['NODE_ENV'] === 'development') {
-    if (process.env['NODE_ENV'] === 'development') {
-      if (import.meta.env.DEV) {
-        console.log('Performance metrics:', metrics);
-      }
-    }
+     
+    if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { console.log('Performance metrics:', metrics); } }
   }
 };

@@ -1,10 +1,13 @@
 import React, { useEffect, useCallback } from 'react';
 
-interface PerformanceOptimizerProps {
+
+import { Link } from 'react-router-dom';interface PerformanceOptimizerProps {
   children: React.ReactNode;
 }
 
-const PerformanceOptimizerComponent: React.FC<PerformanceOptimizerProps> = ({ children }) => {
+const PerformanceOptimizerComponent: React.FC<PerformanceOptimizerProps> = ({
+  children,
+}) => {
   // Preload critical resources
   useEffect(() => {
     const preloadCriticalResources = () => {
@@ -17,7 +20,11 @@ const PerformanceOptimizerComponent: React.FC<PerformanceOptimizerProps> = ({ ch
       document.head.appendChild(fontLink);
 
       // Preload critical images
-      const criticalImages = ['/images/hero-bg.jpg', '/images/logo.png', '/images/og-image.jpg'];
+      const criticalImages = [
+        '/images/hero-bg.jpg',
+        '/images/logo.png',
+        '/images/og-image.jpg',
+      ];
 
       criticalImages.forEach(src => {
         const img = new Image();
@@ -55,11 +62,8 @@ const PerformanceOptimizerComponent: React.FC<PerformanceOptimizerProps> = ({ ch
       const observer = new PerformanceObserver(list => {
         list.getEntries().forEach(entry => {
           if (entry.entryType === 'navigation') {
-            if (process.env['NODE_ENV'] === 'development') {
-              if (import.meta.env.DEV) {
-                console.log('Navigation timing:', entry);
-              }
-            }
+             
+            if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { console.log('Navigation timing:', entry); } }
           }
         });
       });

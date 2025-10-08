@@ -2,23 +2,22 @@
  * Jest setup file for testing environment
  */
 
+import React from 'react';
 import '@testing-library/jest-dom';
 
 // Polyfill for TextEncoder/TextDecoder
 import { TextEncoder, TextDecoder } from 'util';
 global.TextEncoder = TextEncoder;
-global.TextDecoder = TextDecoder as typeof globalThis.TextDecoder;
+global.TextDecoder = TextDecoder as any;
 
 // Suppress jsdom navigation warnings
-
+ 
 const originalConsoleError = console.error;
-
+ 
 console.error = (...args) => {
   const message = args[0]?.toString?.() || args[0]?.message || '';
-  if (
-    message.includes('Not implemented: navigation') ||
-    message.includes('navigation (except hash changes)')
-  ) {
+  if (message.includes('Not implemented: navigation') || 
+      message.includes('navigation (except hash changes)')) {
     return;
   }
   originalConsoleError(...args);
@@ -90,14 +89,8 @@ console.info = (...args) => {
 
 // Mock PerformanceObserver
 global.PerformanceObserver = class MockPerformanceObserver {
-  static readonly supportedEntryTypes: readonly string[] = [
-    'navigation',
-    'paint',
-    'largest-contentful-paint',
-    'first-input',
-    'layout-shift',
-  ];
-
+  static readonly supportedEntryTypes: readonly string[] = ['navigation', 'paint', 'largest-contentful-paint', 'first-input', 'layout-shift'];
+  
   constructor(public callback: PerformanceObserverCallback) {}
   observe() {}
   disconnect() {}

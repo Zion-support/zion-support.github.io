@@ -17,7 +17,9 @@ interface AnalyticsContextType {
   trackError: (error: Error, context?: string) => void;
 }
 
-const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
+const AnalyticsContext = createContext<AnalyticsContextType | undefined>(
+  undefined
+);
 
 export const useAnalytics = () => {
   const context = useContext(AnalyticsContext);
@@ -51,8 +53,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
 
     script.onload = () => {
       // Initialize gtag
-      (window as unknown as { dataLayer: unknown[] }).dataLayer =
-        (window as unknown as { dataLayer: unknown[] }).dataLayer || [];
+      (window as unknown as { dataLayer: unknown[] }).dataLayer = (window as unknown as { dataLayer: unknown[] }).dataLayer || [];
       function gtag(...args: unknown[]) {
         (window as unknown as { dataLayer: unknown[] }).dataLayer.push(args);
       }
@@ -99,14 +100,10 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
     }
 
     if ((window as unknown as { gtag: (...args: unknown[]) => void }).gtag) {
-      (window as unknown as { gtag: (...args: unknown[]) => void }).gtag(
-        'config',
-        googleAnalyticsId,
-        {
-          page_title: document.title,
-          page_location: page,
-        }
-      );
+      (window as unknown as { gtag: (...args: unknown[]) => void }).gtag('config', googleAnalyticsId, {
+        page_title: document.title,
+        page_location: page,
+      });
     }
   };
 
@@ -131,6 +128,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
     if (!isInitialized || typeof window === 'undefined') return;
 
     if (enableDebug) {
+       
       console.error('Analytics Error:', error, context);
     }
 
@@ -152,7 +150,11 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
     trackError,
   };
 
-  return <AnalyticsContext.Provider value={value}>{children}</AnalyticsContext.Provider>;
+  return (
+    <AnalyticsContext.Provider value={value}>
+      {children}
+    </AnalyticsContext.Provider>
+  );
 };
 
 export default AnalyticsProvider;
