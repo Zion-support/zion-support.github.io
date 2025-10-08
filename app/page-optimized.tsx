@@ -1,7 +1,6 @@
 import React from 'react';
 import dynamic from 'next/dynamic';
 import SEOOptimizer from './components/SEOOptimizer';
-import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import PerformanceMonitor from './components/PerformanceMonitor';
 
 // Lazy load heavy components - these may not exist, so make them optional
@@ -69,11 +68,10 @@ export default function OptimizedHomePage() {
   return (
     <div className="min-h-screen bg-white">
       <SEOOptimizer />
-      <AccessibilityEnhancer />
       <PerformanceMonitor />
       
       {/* Unified Banner System */}
-      <UnifiedBanner configurations={bannerConfigurations} />
+      <UnifiedBanner />
       
       {/* Main Content */}
       <main className="relative">
@@ -111,25 +109,11 @@ export default function OptimizedHomePage() {
           </div>
         </section>
 
-        {/* ROI Calculator Section */}
-        <LazyWrapper>
-          <InteractiveAIROICalculator />
-        </LazyWrapper>
-
         {/* Content Showcase */}
-        <LazyWrapper>
-          <ContentShowcase />
-        </LazyWrapper>
+        <ContentShowcase />
 
-        {/* Interactive Content Showcase 2026 */}
-        <LazyWrapper>
-          <InteractiveContentShowcase2026 />
-        </LazyWrapper>
-
-        {/* Unified Content Promotion */}
-        <LazyWrapper>
-          <UnifiedContentPromotion />
-        </LazyWrapper>
+        {/* Content Promotion */}
+        <ContentPromotion />
       </main>
     </div>
   );
