@@ -101,7 +101,7 @@ const UltimateBusinessIntelligence2025Banner = () => {
           </p>
         </div>
 
-          <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
+        <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
             <Link
               to="/services"
               className="inline-flex items-center px-10 py-5 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-bold text-lg rounded-xl hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-2xl"
@@ -143,7 +143,10 @@ const UltimateBusinessIntelligence2025Banner = () => {
                 </svg>
               </div>
             </div>
+          </div>
 
+          {/* Content Showcase */}
+          <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/20 mb-16">
             {/* Metrics Grid */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8">
               {Object.entries(currentContent.metrics).map(([key, value]) => (
