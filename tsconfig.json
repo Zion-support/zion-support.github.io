@@ -85,6 +85,8 @@
     "components/**/*.tsx",
     "api/**/*.ts",
     "api/**/*.js",
+    "src/**/*",
+    "App.tsx",
     "*.ts",
     "*.tsx",
     ".next/types/**/*.ts"
