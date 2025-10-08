@@ -1,15 +1,6 @@
-
-// Lazy load pages for better performance
-const HomePage = lazy(() => import('./page'));
-
-
-// Styles
-import '../index.css';
-=======
 'use client';
 
-import React, { Suspense, lazy, useCallback, useEffect } from 'react';
-import Link from 'next/link';
+import React, { Suspense, lazy, useEffect } from 'react';
 import { HelmetProvider } from 'react-helmet-async';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
@@ -22,7 +13,7 @@ import SEOEnhancer from './components/SEOEnhancer';
 import AdvancedSEOOptimizer from './components/AdvancedSEOOptimizer';
 import LoadingSpinner from './components/LoadingSpinner';
 
-// Lazy load components for better performance
+// Lazy load components
 const ContentShowcase = lazy(() => import('./components/ContentShowcase'));
 const InteractiveContentShowcase2026 = lazy(
   () => import('./components/InteractiveContentShowcase2026')
@@ -30,6 +21,7 @@ const InteractiveContentShowcase2026 = lazy(
 const InteractiveAIROICalculator = lazy(
   () => import('./components/InteractiveAIROICalculator')
 );
+const HomePage = lazy(() => import('./page'));
 
 // Utils
 import { lazyLoadImages, preloadCriticalResources, collectPerformanceMetrics, performanceOptimizer } from './utils/performanceOptimizer';
@@ -37,15 +29,9 @@ import { logger } from './utils/logger';
 
 // Styles
 import './globals.css';
->>>>>>> origin/main
 
 const App: React.FC = () => {
   useEffect(() => {
-    // Initialize global error handling
-    }
-=======
-    logger.lifecycle('initialized', 'App');
-
     // Initialize performance monitoring
     lazyLoadImages();
     preloadCriticalResources();
@@ -64,31 +50,37 @@ const App: React.FC = () => {
     }
     
     logger.lifecycle('performance monitoring initialized', 'App');
-    logger.info('🚀 Zion Tech Group App initialized with comprehensive monitoring', 'App');
->>>>>>> origin/main
+    logger.info('🚀 Zion Tech Group App initialized', 'App');
   }, []);
 
   return (
     <HelmetProvider>
-      </ErrorBoundary>
-=======
       <AdvancedErrorBoundary
         enableErrorReporting={true}
         enableRetry={true}
         onError={(error, errorInfo) => {
-          logger.error('Application Error', 'ErrorBoundary', { error: error.message, errorInfo });
+          logger.error('Application Error', 'ErrorBoundary', { 
+            error: error.message, 
+            errorInfo 
+          });
         }}
       >
         <AccessibilityEnhancer>
           <SEOEnhancer
             title="Zion Tech Group - Advanced AI and IT Solutions"
-            description="Leading provider of enterprise AI solutions, quantum computing, and autonomous systems. Transform your business with our cutting-edge technology."
+            description="Leading provider of enterprise AI solutions, quantum computing, and autonomous systems."
           >
             <AdvancedSEOOptimizer
               seoData={{
                 title: 'Zion Tech Group - Advanced AI and IT Solutions',
-                description: 'Leading provider of enterprise AI solutions, quantum computing, and autonomous systems. Transform your business with our cutting-edge technology.',
-                keywords: ['AI solutions', 'enterprise AI', 'quantum computing', 'autonomous systems', 'digital transformation', 'automation', 'cloud services', 'AI consulting', 'business intelligence', 'machine learning'],
+                description: 'Leading provider of enterprise AI solutions, quantum computing, and autonomous systems.',
+                keywords: [
+                  'AI solutions',
+                  'enterprise AI',
+                  'quantum computing',
+                  'autonomous systems',
+                  'digital transformation'
+                ],
                 canonicalUrl: 'https://ziontechgroup.com',
                 ogImage: 'https://ziontechgroup.com/og-image.jpg',
                 structuredData: {
@@ -97,14 +89,7 @@ const App: React.FC = () => {
                   description: 'Advanced AI and IT Solutions Provider',
                   foundingDate: '2020',
                   numberOfEmployees: '50-100',
-                  industry: 'Technology',
-                  services: [
-                    'AI Solutions',
-                    'Digital Transformation',
-                    'Cloud Services',
-                    'Automation',
-                    'Business Intelligence'
-                  ]
+                  industry: 'Technology'
                 }
               }}
               enableStructuredData={true}
@@ -118,15 +103,10 @@ const App: React.FC = () => {
                   <Suspense fallback={<LoadingSpinner />}>
                     <Routes>
                       <Route path="/" element={<HomePage />} />
-                      {/* Add more routes as needed */}
                     </Routes>
                   </Suspense>
                 </main>
-
-                {/* Performance Dashboard */}
                 <PerformanceDashboard />
-                
-                {/* Advanced Performance Monitor */}
                 <AdvancedPerformanceMonitor
                   enableRealTimeMonitoring={process.env['NODE_ENV'] === 'development'}
                   onMetricsUpdate={(metrics) => {
@@ -140,8 +120,8 @@ const App: React.FC = () => {
           </SEOEnhancer>
         </AccessibilityEnhancer>
       </AdvancedErrorBoundary>
->>>>>>> origin/main
     </HelmetProvider>
   );
 };
 
+export default App;
