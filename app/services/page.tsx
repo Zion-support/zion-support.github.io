@@ -115,8 +115,34 @@ const ServicesPage: React.FC = () => {
       description: 'Advanced security services including threat detection and compliance.',
       icon: '🛡️',
       link: '/cybersecurity',
-      features: ['Threat Detection', 'Penetration Testing', 'Zero Trust Security', 'SOC Services'],cursor/add-new-services-and-deploy-updates-f159
+      features: ['Threat Detection', 'Penetration Testing', 'Zero Trust Security', 'SOC Services'],
       price: 'Starting at $2,500/month'
+    },
+    {
+      title: 'AI Space Technology',
+      description: 'Revolutionary AI-powered space technology solutions for satellite management, space missions, and interplanetary exploration.',
+      icon: '🚀',
+      link: '/ai-space-technology',
+      features: ['Satellite Management', 'Space Mission Planning', 'Asteroid Defense', 'Mars Colonization'],
+      price: 'Starting at $1,999/month',
+      popular: true
+    },
+    {
+      title: 'AI Metaverse Business Platform',
+      description: 'Complete metaverse business solutions with virtual offices, NFT marketplaces, and immersive experiences.',
+      icon: '🌐',
+      link: '/ai-metaverse-business',
+      features: ['Virtual Offices', 'NFT Marketplaces', 'Virtual Events', 'Immersive Experiences'],
+      price: 'Starting at $299/month',
+      popular: true
+    },
+    {
+      title: 'AI Quantum Computing',
+      description: 'Revolutionary AI-powered quantum computing solutions for machine learning, cryptography, and optimization.',
+      icon: '⚛️',
+      link: '/ai-quantum-computing',
+      features: ['Quantum ML', 'Quantum Cryptography', 'Quantum Optimization', 'Quantum Simulation'],
+      price: 'Starting at $1,999/month'
     }
   ];
 

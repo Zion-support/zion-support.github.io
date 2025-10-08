@@ -8,23 +8,23 @@ const ITServicesPage: React.FC = () => {
       title: 'Cloud Infrastructure Management',
       description: 'Complete cloud migration, optimization, and management services for AWS, Azure, and Google Cloud.',
       icon: '☁️',
-      price: 'Starting at $2,500/month',
-      features: ['Cloud migration strategy', 'Cost optimization', 'Security hardening', '24/7 monitoring', 'Disaster recovery'],
-      benefits: ['Reduce cloud costs by 30%', 'Improve performance by 40%', 'Ensure 99.9% uptime'],
-      marketPrice: '$4,000-8,000/month',
+      price: 'Starting at $1,200/month',
+      features: ['Cloud migration strategy', 'Cost optimization', 'Security hardening', '24/7 monitoring', 'Disaster recovery', 'Auto-scaling', 'Load balancing', 'Multi-cloud management'],
+      benefits: ['Reduce cloud costs by 30%', 'Improve performance by 40%', 'Ensure 99.9% uptime', 'Scale automatically', 'Reduce management overhead by 70%'],
+      marketPrice: '$2,500-6,000/month',
       category: 'Cloud Services',
-      technologies: ['AWS', 'Azure', 'Google Cloud', 'Kubernetes', 'Docker']
+      technologies: ['AWS', 'Azure', 'Google Cloud', 'Kubernetes', 'Docker', 'Terraform', 'Ansible', 'Prometheus']
     },
     {
       title: 'Cybersecurity Solutions',
       description: 'Comprehensive security services including threat detection, vulnerability assessment, and incident response.',
       icon: '🔒',
-      price: 'Starting at $3,000/month',
-      features: ['Security audits', 'Penetration testing', 'Threat monitoring', 'Incident response', 'Compliance management'],
-      benefits: ['Prevent 99% of cyber attacks', 'Reduce security costs by 50%', 'Ensure compliance'],
-      marketPrice: '$5,000-12,000/month',
+      price: 'Starting at $1,500/month',
+      features: ['Security audits', 'Penetration testing', 'Threat monitoring', 'Incident response', 'Compliance management', 'Zero Trust architecture', 'Security awareness training', 'Vulnerability management'],
+      benefits: ['Prevent 99% of cyber attacks', 'Reduce security costs by 50%', 'Ensure compliance', 'Improve security posture', 'Reduce breach risk by 95%'],
+      marketPrice: '$3,000-8,000/month',
       category: 'Security',
-      technologies: ['SIEM', 'EDR', 'Firewall', 'VPN', 'Zero Trust']
+      technologies: ['SIEM', 'EDR', 'Firewall', 'VPN', 'Zero Trust', 'CrowdStrike', 'Splunk', 'Qualys']
     },
     {
       title: 'DevOps & CI/CD Implementation',

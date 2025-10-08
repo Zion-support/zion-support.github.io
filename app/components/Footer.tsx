@@ -117,6 +117,21 @@ const Footer: React.FC = () => {
                   Cybersecurity
                 </Link>
               </li>
+              <li>
+                <Link to="/ai-space-technology" className="hover:text-white transition-colors">
+                  AI Space Technology
+                </Link>
+              </li>
+              <li>
+                <Link to="/ai-metaverse-business" className="hover:text-white transition-colors">
+                  AI Metaverse Business
+                </Link>
+              </li>
+              <li>
+                <Link to="/ai-quantum-computing" className="hover:text-white transition-colors">
+                  AI Quantum Computing
+                </Link>
+              </li>
             </ul>
           </div>
 

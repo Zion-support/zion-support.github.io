@@ -230,14 +230,14 @@ const HomePage: React.FC = () => {
 
             <Suspense fallback={<ServiceCardSkeleton />}>
               <article className="bg-white rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
-                <div className="text-5xl mb-6 text-center">⚛️</div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">Quantum Computing</h3>
+                <div className="text-5xl mb-6 text-center">🚀</div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">AI Space Technology</h3>
                 <p className="text-gray-600 mb-6 text-center leading-relaxed">
-                  Next-generation quantum computing capabilities for complex problem solving and optimization.
+                  Revolutionary AI-powered space technology solutions for satellite management and interplanetary exploration.
                 </p>
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-purple-600 mb-2">Custom Pricing</div>
-                  <a href="/quantum-computing" className="text-purple-600 hover:text-purple-700 font-medium">
+                  <div className="text-2xl font-bold text-blue-600 mb-2">Starting at $1,999/month</div>
+                  <a href="/ai-space-technology" className="text-blue-600 hover:text-blue-700 font-medium">
                     Learn More →
                   </a>
                 </div>
@@ -247,47 +247,63 @@ const HomePage: React.FC = () => {
           
           <div className="grid md:grid-cols-3 gap-8">
             <article className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 focus-within:ring-4 focus-within:ring-indigo-300">
-              <div className="text-4xl mb-4">🤖</div>
-              <h3 className="text-2xl font-semibold text-gray-900 mb-4">AI Solutions</h3>
+              <div className="text-4xl mb-4">🌐</div>
+              <h3 className="text-2xl font-semibold text-gray-900 mb-4">AI Metaverse Business</h3>
               <p className="text-gray-600 mb-4">
-                Harness the power of artificial intelligence to drive innovation and efficiency in
-                your organization.
+                Complete metaverse business solutions with virtual offices, NFT marketplaces, and immersive experiences.
               </p>
               <ul className="text-sm text-gray-500 space-y-1">
-                <li>• Machine Learning Models</li>
-                <li>• Natural Language Processing</li>
-                <li>• Computer Vision</li>
-                <li>• Predictive Analytics</li>
+                <li>• Virtual Offices</li>
+                <li>• NFT Marketplaces</li>
+                <li>• Virtual Events</li>
+                <li>• Immersive Experiences</li>
               </ul>
+              <div className="mt-4">
+                <div className="text-lg font-bold text-purple-600 mb-2">Starting at $299/month</div>
+                <a href="/ai-metaverse-business" className="text-purple-600 hover:text-purple-700 font-medium">
+                  Learn More →
+                </a>
+              </div>
             </article>
 
             <article className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 focus-within:ring-4 focus-within:ring-indigo-300">
-              <div className="text-4xl mb-4">🔄</div>
-              <h3 className="text-2xl font-semibold text-gray-900 mb-4">Digital Transformation</h3>
+              <div className="text-4xl mb-4">⚛️</div>
+              <h3 className="text-2xl font-semibold text-gray-900 mb-4">AI Quantum Computing</h3>
               <p className="text-gray-600 mb-4">
-                Transform your business processes with cutting-edge technology and expert
-                consultation.
+                Revolutionary AI-powered quantum computing solutions for machine learning, cryptography, and optimization.
               </p>
               <ul className="text-sm text-gray-500 space-y-1">
-                <li>• Process Automation</li>
-                <li>• Legacy System Modernization</li>
-                <li>• Workflow Optimization</li>
-                <li>• Change Management</li>
+                <li>• Quantum ML</li>
+                <li>• Quantum Cryptography</li>
+                <li>• Quantum Optimization</li>
+                <li>• Quantum Simulation</li>
               </ul>
+              <div className="mt-4">
+                <div className="text-lg font-bold text-cyan-600 mb-2">Starting at $1,999/month</div>
+                <a href="/ai-quantum-computing" className="text-cyan-600 hover:text-cyan-700 font-medium">
+                  Learn More →
+                </a>
+              </div>
             </article>
 
             <article className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 focus-within:ring-4 focus-within:ring-indigo-300">
-              <div className="text-4xl mb-4">☁️</div>
-              <h3 className="text-2xl font-semibold text-gray-900 mb-4">Cloud Services</h3>
+              <div className="text-4xl mb-4">🚀</div>
+              <h3 className="text-2xl font-semibold text-gray-900 mb-4">AI Space Technology</h3>
               <p className="text-gray-600 mb-4">
-                Scale your infrastructure with secure, reliable, and efficient cloud solutions.
+                Revolutionary AI-powered space technology solutions for satellite management and interplanetary exploration.
               </p>
               <ul className="text-sm text-gray-500 space-y-1">
-                <li>• Cloud Migration</li>
-                <li>• Infrastructure as Code</li>
-                <li>• DevOps & CI/CD</li>
-                <li>• 24/7 Monitoring</li>
+                <li>• Satellite Management</li>
+                <li>• Space Mission Planning</li>
+                <li>• Asteroid Defense</li>
+                <li>• Mars Colonization</li>
               </ul>
+              <div className="mt-4">
+                <div className="text-lg font-bold text-blue-600 mb-2">Starting at $1,999/month</div>
+                <a href="/ai-space-technology" className="text-blue-600 hover:text-blue-700 font-medium">
+                  Learn More →
+                </a>
+              </div>
             </article>
           </div>
         </section>

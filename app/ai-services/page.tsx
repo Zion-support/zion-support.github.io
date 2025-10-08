@@ -8,45 +8,45 @@ const AIServicesPage: React.FC = () => {
       title: 'Machine Learning Model Development',
       description: 'Custom ML models for predictive analytics, classification, and regression tasks tailored to your business needs.',
       icon: '🧠',
-      price: 'Starting at $5,000/project',
-      features: ['Custom model development', 'Data preprocessing', 'Model training & validation', 'Performance optimization', 'Deployment & monitoring'],
-      benefits: ['Improve prediction accuracy by 40%', 'Automate decision making', 'Reduce manual analysis time'],
-      marketPrice: '$8,000-25,000/project',
+      price: 'Starting at $1,500/month',
+      features: ['Custom model development', 'Data preprocessing', 'Model training & validation', 'Performance optimization', 'Deployment & monitoring', 'Real-time inference', 'Model versioning', 'A/B testing'],
+      benefits: ['Improve prediction accuracy by 40%', 'Automate decision making', 'Reduce manual analysis time by 80%', 'Increase revenue by 25%', 'Reduce operational costs by 30%'],
+      marketPrice: '$3,000-8,000/month',
       category: 'Machine Learning',
-      technologies: ['Python', 'TensorFlow', 'PyTorch', 'Scikit-learn', 'Pandas']
+      technologies: ['Python', 'TensorFlow', 'PyTorch', 'Scikit-learn', 'Pandas', 'MLflow', 'Kubeflow', 'Docker']
     },
     {
       title: 'Natural Language Processing',
       description: 'Advanced NLP solutions for text analysis, sentiment analysis, chatbots, and language understanding.',
       icon: '💬',
-      price: 'Starting at $3,500/project',
-      features: ['Text classification', 'Sentiment analysis', 'Named entity recognition', 'Language translation', 'Chatbot development'],
-      benefits: ['Process text data 100x faster', 'Improve customer service', 'Extract insights from documents'],
-      marketPrice: '$6,000-18,000/project',
+      price: 'Starting at $1,200/month',
+      features: ['Text classification', 'Sentiment analysis', 'Named entity recognition', 'Language translation', 'Chatbot development', 'Document summarization', 'Question answering', 'Text generation'],
+      benefits: ['Process text data 100x faster', 'Improve customer service by 60%', 'Extract insights from documents', 'Reduce content creation time by 70%', 'Increase customer satisfaction by 40%'],
+      marketPrice: '$2,500-6,000/month',
       category: 'NLP',
-      technologies: ['BERT', 'GPT', 'spaCy', 'NLTK', 'Transformers']
+      technologies: ['BERT', 'GPT', 'spaCy', 'NLTK', 'Transformers', 'Hugging Face', 'OpenAI API', 'LangChain']
     },
     {
       title: 'Computer Vision Solutions',
       description: 'Image and video analysis, object detection, facial recognition, and visual content understanding.',
       icon: '👁️',
-      price: 'Starting at $4,500/project',
-      features: ['Object detection', 'Image classification', 'Facial recognition', 'Video analysis', 'OCR & document scanning'],
-      benefits: ['Automate visual inspections', 'Improve security systems', 'Enhance user experience'],
-      marketPrice: '$7,500-20,000/project',
+      price: 'Starting at $1,800/month',
+      features: ['Object detection', 'Image classification', 'Facial recognition', 'Video analysis', 'OCR & document scanning', 'Medical imaging', 'Quality inspection', 'Real-time processing'],
+      benefits: ['Automate visual inspections by 90%', 'Improve security systems', 'Enhance user experience', 'Reduce inspection costs by 70%', 'Increase accuracy by 95%'],
+      marketPrice: '$3,500-10,000/month',
       category: 'Computer Vision',
-      technologies: ['OpenCV', 'YOLO', 'ResNet', 'EfficientNet', 'TensorFlow Lite']
+      technologies: ['OpenCV', 'YOLO', 'ResNet', 'EfficientNet', 'TensorFlow Lite', 'PyTorch', 'ONNX', 'TensorRT']
     },
     {
       title: 'AI-Powered Chatbots & Virtual Assistants',
       description: 'Intelligent conversational AI that understands context and provides human-like interactions.',
       icon: '🤖',
-      price: 'Starting at $2,500/month',
-      features: ['Context-aware conversations', 'Multi-language support', 'Integration with CRM', 'Analytics & reporting', 'Voice capabilities'],
-      benefits: ['Reduce support costs by 60%', 'Provide 24/7 customer service', 'Improve response time'],
-      marketPrice: '$4,000-12,000/month',
+      price: 'Starting at $399/month',
+      features: ['Context-aware conversations', 'Multi-language support', 'Integration with CRM', 'Analytics & reporting', 'Voice capabilities', 'Emotion recognition', 'Knowledge base integration', 'Escalation to humans'],
+      benefits: ['Reduce support costs by 60%', 'Provide 24/7 customer service', 'Improve response time by 80%', 'Increase customer satisfaction by 45%', 'Handle 10x more inquiries'],
+      marketPrice: '$800-2,500/month',
       category: 'Conversational AI',
-      technologies: ['Dialogflow', 'Rasa', 'Microsoft Bot Framework', 'Amazon Lex', 'OpenAI GPT']
+      technologies: ['Dialogflow', 'Rasa', 'Microsoft Bot Framework', 'Amazon Lex', 'OpenAI GPT', 'LangChain', 'Pinecone', 'Vector databases']
     },
     {
       title: 'Predictive Analytics & Forecasting',
