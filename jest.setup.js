@@ -1,9 +1,9 @@
 // Learn more: https://github.com/testing-library/jest-dom
 import '@testing-library/jest-dom';
+import React from 'react';
 
-// Polyfill TextEncoder and TextDecoder for Node.js environment
+// Polyfill TextEncoder for Node.js environment
 import { TextEncoder, TextDecoder } from 'util';
-
 global.TextEncoder = TextEncoder;
 global.TextDecoder = TextDecoder;
 
@@ -56,13 +56,9 @@ jest.mock('react-router-dom', () => ({
     state: null,
   }),
   useParams: () => ({}),
-  BrowserRouter: ({ children }) => children,
-  MemoryRouter: ({ children }) => children,
-<<<<<<< HEAD
-  Router: ({ children }) => children,
-=======
-  RouterProvider: ({ router }) => null,
->>>>>>> origin/main
+  Link: ({ children, to, ...props }) => React.createElement('a', { href: to, ...props }, children),
+  BrowserRouter: ({ children }) => React.createElement('div', { 'data-testid': 'browser-router' }, children),
+  MemoryRouter: ({ children }) => React.createElement('div', { 'data-testid': 'memory-router' }, children),
 }));
 
 // Mock window.matchMedia
@@ -90,11 +86,6 @@ global.IntersectionObserver = class IntersectionObserver {
   }
   unobserve() {}
 };
-
-// Mock TextEncoder and TextDecoder
-const { TextEncoder, TextDecoder } = require('util');
-global.TextEncoder = TextEncoder;
-global.TextDecoder = TextDecoder;
 
 // Suppress console errors in tests
 const originalError = console.error;
