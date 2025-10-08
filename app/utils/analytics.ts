@@ -139,6 +139,13 @@ class AnalyticsService {
   }
 
   /**
+   * Track performance metrics
+   */
+  trackPerformance(metric: string, value: number): void {
+    this.trackTiming('Performance', metric, value);
+  }
+
+  /**
    * Check if gtag is available
    */
   private hasGtag(): boolean {
