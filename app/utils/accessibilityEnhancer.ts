@@ -675,18 +675,6 @@ class AccessibilityEnhancer {
   getReport(): string {
     const metrics = this.getMetrics();
     return `
-<<<<<<< HEAD
-Accessibility Report
-===================
-Focusable Elements: ${metrics.focusableElements}
-Images Without Alt: ${metrics.imagesWithoutAlt}
-Links Without Text: ${metrics.linksWithoutText}
-Headings Without Content: ${metrics.headingsWithoutContent}
-Color Contrast Issues: ${metrics.colorContrastIssues}
-Keyboard Navigation Score: ${metrics.keyboardNavigationScore}
-Screen Reader Score: ${metrics.screenReaderScore}
-Overall Score: ${metrics.overallScore}/100
-=======
       Accessibility Report:
       - Focusable Elements: ${metrics.focusableElements}
       - Images Without Alt: ${metrics.imagesWithoutAlt}
@@ -695,9 +683,7 @@ Overall Score: ${metrics.overallScore}/100
       - Color Contrast Issues: ${metrics.colorContrastIssues}
       - Keyboard Navigation Score: ${metrics.keyboardNavigationScore}%
       - Screen Reader Score: ${metrics.screenReaderScore}%
-      - Overall Score: ${metrics.overallScore}%
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-fd0a
-    `;
+      - Overall Score: ${metrics.overallScore}%    `;
   }
 }
 
