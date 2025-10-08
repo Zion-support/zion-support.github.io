@@ -1,57 +1,68 @@
-import { MetadataRoute } from 'next';
-;
-export default function sitemap(): MetadataRoute.Sitemap {;
+
+<<<<<<< HEAD
+// Sitemap for Vite + React Router
+export default function sitemap() {
+=======
+interface SitemapEntry {
+  url: string;
+  lastModified: Date;
+  changeFrequency: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';
+  priority: number;
+}
+
+export default function sitemap(): SitemapEntry[] {
+
+>>>>>>> main
   const baseUrl = 'https://ziontechgroup.com';
-;
-  return [;
-    {;
-      url: baseUrl,;
-      lastModified: new Date(),;
-      changeFrequency: 'weekly',;
-      : 1,;
-    },;
-    {;
-      url: `${baseUrl}/about`,;
-      lastModified: new Date(),;
-      changeFrequency: 'monthly',;
-      : 0.8,;
-    },;
-    {;
-      url: `${baseUrl}/services`,;
-      lastModified: new Date(),;
-      changeFrequency: 'weekly',;
-      : 0.9,;
-    },;
-    {;
-      url: `${baseUrl}/contact`,;
-      lastModified: new Date(),;
-      changeFrequency: 'monthly',;
-      : 0.7,;
-    },;
-    {;
-      url: `${baseUrl}/enterprise`,;
-      lastModified: new Date(),;
-      changeFrequency: 'weekly',;
-      : 0.8,;
-    },;
-    {;
-      url: `${baseUrl}/blog`,;
-      lastModified: new Date(),;
-      changeFrequency: 'daily',;
-      : 0.6,;
-    },;
-    {;
-      url: `${baseUrl}/privacy`,;
-      lastModified: new Date(),;
-      changeFrequency: 'yearly',;
-      : 0.3,;
-    },;
-    {;
-      url: `${baseUrl}/terms`,;
-      lastModified: new Date(),;
-      changeFrequency: 'yearly',;
-      : 0.3,;
-    },;
+
+  return [
+    {
+      url: baseUrl,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 1,
+    },
+    {
+      url: `${baseUrl}/about`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/services`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/contact`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/enterprise`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/blog`,
+      lastModified: new Date(),
+      changeFrequency: 'daily',
+      priority: 0.6,
+    },
+    {
+      url: `${baseUrl}/privacy`,
+      lastModified: new Date(),
+      changeFrequency: 'yearly',
+      priority: 0.3,
+    },
+    {
+      url: `${baseUrl}/terms`,
+      lastModified: new Date(),
+      changeFrequency: 'yearly',
+      priority: 0.3,
+    },
   ];
 }
-;

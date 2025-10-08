@@ -1,120 +1,121 @@
 import React, { useEffect, useState } from 'react';
-;
-export type ToastType = 'success' | 'error' | 'warning' | 'info';
-;
-export interface ToastProps {;
+
+
+import { Link } from 'react-router-dom';export type ToastType = 'success' | 'error' | 'warning' | 'info';
+
+export interface ToastProps {
   message: string;
   type?: ToastType;
   duration?: number;
   onClose?: () => void;
   show: boolean;
 }
-;
-const Toast: React.FC<ToastProps> = ({;
-  message,;
-  type = 'success',;
-  duration = 3000,;
-  onClose,;
-  show;
-}) => {;
+
+const Toast: React.FC<ToastProps> = ({
+  message,
+  type = 'success',
+  duration = 3000,
+  onClose,
+  show
+}) => {
   const [isVisible, setIsVisible] = useState(show);
-;
-  useEffect(() => {;
+
+  useEffect(() => {
     setIsVisible(show);
-;
-    if (show && duration > 0) {;
-      const timer = setTimeout(() => {;
+    
+    if (show && duration > 0) {
+      const timer = setTimeout(() => {
         setIsVisible(false);
-        if (onClose) {;
+        if (onClose) {
           onClose();
         }
       }, duration);
-;
+
       return () => clearTimeout(timer);
     }
-;
+    
     return undefined;
   }, [show, duration, onClose]);
-;
+
   if (!isVisible) return null;
-;
-  const getToastStyles = () => {;
-    switch (type) {;
-      case 'success':;
+
+  const getToastStyles = () => {
+    switch (type) {
+      case 'success':
         return 'bg-green-600 text-white';
-      case 'error':;
+      case 'error':
         return 'bg-red-600 text-white';
-      case 'warning':;
+      case 'warning':
         return 'bg-yellow-500 text-white';
-      case 'info':;
+      case 'info':
         return 'bg-blue-600 text-white';
-      default:;
+      default:
         return 'bg-gray-800 text-white';
     }
   };
-;
-  const getIcon = () => {;
-    switch (type) {;
-      case 'success':;
+
+  const getIcon = () => {
+    switch (type) {
+      case 'success':
         return '✓';
-      case 'error':;
+      case 'error':
         return '✕';
-      case 'warning':;
+      case 'warning':
         return '⚠';
-      case 'info':;
+      case 'info':
         return 'ℹ';
-      default:;
+      default:
         return '';
     }
   };
-;
-  return (;
-    <div;
+
+  return (
+    <div
       className={`fixed top-4 right-4 px-6 py-3 rounded-lg shadow-lg z-50 flex items-center gap-2 animate-fade-in ${getToastStyles()}`}
-      role="alert";
-      aria-live="polite";
-    >;
-      <span className="text-xl font-bold">{getIcon()}</span>;
-      <span>{message}</span>;
-      <button;
-        onClick={() => {;
+      role="alert"
+      aria-live="polite"
+    >
+      <span className="text-xl font-bold">{getIcon()}</span>
+      <span>{message}</span>
+      <button
+        onClick={() => {
           setIsVisible(false);
           if (onClose) onClose();
         }}
-        className="ml-4 hover:opacity-80 transition-opacity";
-        aria-label="Close notification";
-      >;
-        ✕;
-      </button>;
-    </div>;
+        className="ml-4 hover:opacity-80 transition-opacity"
+        aria-label="Close notification"
+      >
+        ✕
+      </button>
+    </div>
   );
 };
-;
+
 export default Toast;
-;
-// Toast Hook for easy usage;
-export const useToast = () => {;
-  const [toast, setToast] = useState<{;
+
+// Toast Hook for easy usage
+export const useToast = () => {
+  const [toast, setToast] = useState<{
     show: boolean;
     message: string;
     type: ToastType;
-  }>({;
-    show: false,;
-    message: '',;
-    type: 'success';
+  }>({
+    show: false,
+    message: '',
+    type: 'success'
   });
-;
-  const showToast = (message: string, type: ToastType = 'success') => {;
+
+  const showToast = (message: string, type: ToastType = 'success') => {
     setToast({ show: true, message, type });
   };
-;
-  const hideToast = () => {;
+
+  const hideToast = () => {
     setToast(prev => ({ ...prev, show: false }));
   };
-;
-  return {;
-    toast,;
-    showToast,;
-    hideToast;
+
+  return {
+    toast,
+    showToast,
+    hideToast
   };
 };
