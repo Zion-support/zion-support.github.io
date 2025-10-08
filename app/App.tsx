@@ -11,15 +11,58 @@ import AdvancedSEOOptimizer from './components/AdvancedSEOOptimizer';
 import SEOEnhancer from './components/SEOEnhancer';
 import LoadingSpinner from './components/LoadingSpinner';
 
-// Import logger and performance utilities
+// Utils
 import { logger } from './utils/logger';
-import { lazyLoadImages, preloadCriticalResources, collectPerformanceMetrics } from './utils/performanceMonitoring';
 import { performanceOptimizer } from './utils/performanceOptimizer';
 
-// Lazy load components
-const HomePage = lazy(() => import('./page'));
-const PerformanceDashboard = lazy(() => import('./components/PerformanceDashboard'));
-const AdvancedPerformanceMonitor = lazy(() => import('./components/AdvancedPerformanceMonitor'));
+// Lazy-loaded components
+const HomePage = lazy(() => import('./pages/Home').catch(() => ({ default: () => <div>Home Page</div> })));
+const PerformanceDashboard = lazy(() => import('./components/PerformanceDashboard').catch(() => ({ default: () => null })));
+const AdvancedPerformanceMonitor = lazy(() => import('./components/AdvancedPerformanceMonitor').catch(() => ({ default: () => null })));
+
+// Helper functions
+const lazyLoadImages = () => {
+  if (typeof window !== 'undefined' && 'IntersectionObserver' in window) {
+    const images = document.querySelectorAll('img[data-src]');
+    const imageObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const img = entry.target as HTMLImageElement;
+          img.src = img.dataset.src || '';
+          imageObserver.unobserve(img);
+        }
+      });
+    });
+    images.forEach((img) => imageObserver.observe(img));
+  }
+};
+
+const preloadCriticalResources = () => {
+  if (typeof window !== 'undefined') {
+    const links = document.querySelectorAll('link[rel="preload"]');
+    links.forEach((link) => {
+      const href = link.getAttribute('href');
+      if (href) {
+        const prefetchLink = document.createElement('link');
+        prefetchLink.rel = 'prefetch';
+        prefetchLink.href = href;
+        document.head.appendChild(prefetchLink);
+      }
+    });
+  }
+};
+
+const collectPerformanceMetrics = () => {
+  if (typeof window !== 'undefined' && 'performance' in window) {
+    const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+    return {
+      loadTime: navigation?.loadEventEnd || 0,
+      domContentLoaded: navigation?.domContentLoadedEventEnd || 0,
+      firstPaint: 0,
+    };
+  }
+  return null;
+};
 
 const App: React.FC = () => {
   useEffect(() => {
@@ -68,11 +111,10 @@ const App: React.FC = () => {
             description="Leading provider of enterprise AI solutions, quantum computing, and autonomous systems. Transform your business with our cutting-edge technology."
           >
             <AdvancedSEOOptimizer
-              config={{
+              seoData={{
                 title: 'Zion Tech Group - Advanced AI and IT Solutions',
                 description: 'Leading provider of enterprise AI solutions, quantum computing, and autonomous systems. Transform your business with our cutting-edge technology.',
                 keywords: ['AI solutions', 'enterprise AI', 'quantum computing', 'autonomous systems', 'digital transformation', 'automation', 'cloud services', 'AI consulting', 'business intelligence', 'machine learning'],
-                url: 'https://ziontechgroup.com',
                 canonicalUrl: 'https://ziontechgroup.com'
               }}
               enableStructuredData={true}

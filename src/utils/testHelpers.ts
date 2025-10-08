@@ -135,8 +135,8 @@ export function mockFetch(data: any, ok: boolean = true, status: number = 200): 
       arrayBuffer: () => Promise.resolve(new ArrayBuffer(0)),
       blob: () => Promise.resolve(new Blob()),
       formData: () => Promise.resolve(new FormData()),
-      bytes: () => Promise.resolve(new Uint8Array(0)),
-    } as Response)
+      bytes: () => Promise.resolve(new Uint8Array()),
+    } as unknown as Response)
   ) as jest.Mock;
 }
 
