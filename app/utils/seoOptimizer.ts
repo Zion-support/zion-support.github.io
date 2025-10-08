@@ -298,11 +298,7 @@ class SEOOptimizer {
   /**
    * Generate sitemap data
    */
-<<<<<<< HEAD
   generateSitemapData(): Array<{ url: string; lastmod: string; changefreq: string; priority: number }> {
-=======
-  generateSitemapData(): Record<string, unknown>[] {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-283b
     // This would typically come from your CMS or routing system
     return [
       {

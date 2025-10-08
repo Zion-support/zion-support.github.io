@@ -63,11 +63,7 @@ class MonitoringService {
         // First Input Delay
         const fidObserver = new PerformanceObserver(list => {
           const entries = list.getEntries();
-<<<<<<< HEAD
-          entries.forEach((entry: PerformanceEventTiming) => {
-=======
           entries.forEach((entry: PerformanceEntry) => {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-283b
             this.metrics.fid = entry.processingStart - entry.startTime;
             this.reportMetric('fid', this.metrics.fid);
           });
@@ -78,11 +74,7 @@ class MonitoringService {
         let clsValue = 0;
         const clsObserver = new PerformanceObserver(list => {
           const entries = list.getEntries();
-<<<<<<< HEAD
-          entries.forEach((entry: LayoutShift) => {
-=======
           entries.forEach((entry: PerformanceEntry) => {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-283b
             if (!entry.hadRecentInput) {
               clsValue += entry.value;
               this.metrics.cls = clsValue;
