@@ -11,19 +11,15 @@ import AdvancedSEOOptimizer from './components/AdvancedSEOOptimizer';
 import SEOEnhancer from './components/SEOEnhancer';
 import LoadingSpinner from './components/LoadingSpinner';
 
-class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundaryState> {
-  constructor(props: ErrorBoundaryProps) {
-    super(props);
-    this.state = { hasError: false, error: null };
-  }
+// Import logger and performance utilities
+import { logger } from './utils/logger';
+import { lazyLoadImages, preloadCriticalResources, collectPerformanceMetrics } from './utils/performanceMonitoring';
+import { performanceOptimizer } from './utils/performanceOptimizer';
 
-  static getDerivedStateFromError(error: Error): ErrorBoundaryState {
-    return { hasError: true, error };
-  }
-
-  override componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
-    console.error('App Error Boundary caught an error:', error, errorInfo);
-  }
+// Lazy load components
+const HomePage = lazy(() => import('./page'));
+const PerformanceDashboard = lazy(() => import('./components/PerformanceDashboard'));
+const AdvancedPerformanceMonitor = lazy(() => import('./components/AdvancedPerformanceMonitor'));
 
 const App: React.FC = () => {
   useEffect(() => {
