@@ -32,6 +32,7 @@ import { logger } from './utils/logger';
 
 // Styles
 import './globals.css';
+import '../index.css';
 
 const App: React.FC = () => {
   useEffect(() => {
