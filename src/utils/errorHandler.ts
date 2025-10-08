@@ -13,10 +13,10 @@ export enum ErrorCategory {
 }
 
 export enum ErrorSeverity {
-  LOW = 'LOW',
-  MEDIUM = 'MEDIUM',
-  HIGH = 'HIGH',
-  CRITICAL = 'CRITICAL',
+  LOW = 'low',
+  MEDIUM = 'medium',
+  HIGH = 'high',
+  CRITICAL = 'critical',
 }
 
 export interface ErrorInfo {
@@ -66,8 +66,6 @@ class ErrorHandler {
     }
 
     this.reportError(errorData);
-    
-    return errorData;
   }
 
   private categorizeError(error: Error): ErrorCategory {
@@ -128,7 +126,7 @@ class ErrorHandler {
     const now = new Date();
     const oneHourAgo = new Date(now.getTime() - 60 * 60 * 1000);
     const recent = this.errorQueue.filter(
-      error => new Date(error.timestamp) > oneHourAgo
+      error => error.timestamp ? new Date(error.timestamp) > oneHourAgo : false
     ).length;
 
     return {
