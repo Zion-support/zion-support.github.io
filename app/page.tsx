@@ -1,7 +1,9 @@
-import React, { useCallback, useState, useEffect, Suspense } from 'react';
+import React, { useCallback, useState, useEffect, Suspense, lazy } from 'react';
+import ServiceCard from './components/ServiceCard';
+import { PhoneIcon, CpuChipIcon, CloudIcon, SparklesIcon } from '@heroicons/react/24/outline';
 
 // Dynamically import heavy components for better performance
-// const _ServiceCard = lazy(() => import('./components/ServiceCard'));
+const InteractiveAIROICalculator = lazy(() => import('./components/InteractiveAIROICalculator'));
 
 // Loading skeleton component
 const ServiceCardSkeleton: React.FC = () => (
@@ -74,33 +76,41 @@ const HomePage: React.FC = () => {
             Our Services
           </h2>
 
-          <Suspense fallback={<ServiceCardSkeleton />}>
-            <article className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
-              <h3 className="text-2xl font-semibold text-gray-900 mb-4">AI Solutions</h3>
-              <p className="text-gray-600">
-                Harness the power of artificial intelligence to drive innovation and efficiency in
-                your organization.
-              </p>
-            </article>
-          </Suspense>
+          <ServiceCard
+            title="AI Solutions"
+            description="Harness the power of artificial intelligence to drive innovation and efficiency in your organization. From machine learning models to natural language processing, we deliver cutting-edge AI solutions."
+            icon={<CpuChipIcon className="w-8 h-8" />}
+          />
 
-          <Suspense fallback={<ServiceCardSkeleton />}>
-            <article className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
-              <h3 className="text-2xl font-semibold text-gray-900 mb-4">Digital Transformation</h3>
-              <p className="text-gray-600">
-                Transform your business processes with cutting-edge technology and expert
-                consultation.
-              </p>
-            </article>
-          </Suspense>
+          <ServiceCard
+            title="Digital Transformation"
+            description="Transform your business processes with cutting-edge technology and expert consultation. We help modernize your operations and improve efficiency across all departments."
+            icon={<SparklesIcon className="w-8 h-8" />}
+          />
 
-          <Suspense fallback={<ServiceCardSkeleton />}>
-            <article className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
-              <h3 className="text-2xl font-semibold text-gray-900 mb-4">Cloud Services</h3>
-              <p className="text-gray-600">
-                Scale your infrastructure with secure, reliable, and efficient cloud solutions.
-              </p>
-            </article>
+          <ServiceCard
+            title="Cloud Services"
+            description="Scale your infrastructure with secure, reliable, and efficient cloud solutions. From migration to optimization, we ensure your cloud strategy delivers maximum value."
+            icon={<CloudIcon className="w-8 h-8" />}
+          />
+        </section>
+
+        {/* Interactive ROI Calculator Section */}
+        <section className="bg-gray-50 rounded-2xl p-8 mb-16" aria-labelledby="roi-calculator-heading">
+          <h2 id="roi-calculator-heading" className="text-3xl font-bold text-gray-900 mb-6 text-center">
+            Calculate Your AI Investment ROI
+          </h2>
+          <p className="text-lg text-gray-600 mb-8 text-center max-w-2xl mx-auto">
+            See how our AI solutions can transform your business efficiency and drive measurable results.
+          </p>
+          <Suspense fallback={
+            <div className="bg-white rounded-lg p-8 animate-pulse">
+              <div className="h-4 bg-gray-200 rounded mb-4 w-1/2 mx-auto"></div>
+              <div className="h-8 bg-gray-200 rounded mb-4"></div>
+              <div className="h-4 bg-gray-200 rounded w-3/4 mx-auto"></div>
+            </div>
+          }>
+            <InteractiveAIROICalculator />
           </Suspense>
         </section>
 
@@ -109,14 +119,27 @@ const HomePage: React.FC = () => {
           <h2 id="cta-heading" className="text-3xl font-bold text-gray-900 mb-6">
             Ready to Get Started?
           </h2>
-          <a
-            href="tel:+13026009898"
-            onClick={handlePhoneClick}
-            className="inline-block bg-indigo-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-4 focus:ring-indigo-300"
-            aria-label="Call us at (302) 600-9898"
-          >
-            Contact Us: (302) 600-9898
-          </a>
+          <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
+            Join hundreds of companies already transforming their business with our AI solutions.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <a
+              href="tel:+13026009898"
+              onClick={handlePhoneClick}
+              className="inline-flex items-center gap-2 bg-indigo-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-4 focus:ring-indigo-300"
+              aria-label="Call us at (302) 600-9898"
+            >
+              <PhoneIcon className="w-5 h-5" />
+              Contact Us: (302) 600-9898
+            </a>
+            <a
+              href="mailto:info@ziontechgroup.com"
+              className="inline-flex items-center gap-2 bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold border-2 border-indigo-600 hover:bg-indigo-50 transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-4 focus:ring-indigo-300"
+              aria-label="Email us at info@ziontechgroup.com"
+            >
+              Email Us
+            </a>
+          </div>
         </section>
       </main>
     </div>
