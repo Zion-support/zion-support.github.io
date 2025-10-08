@@ -1,9 +1,38 @@
 import React from 'react';
 
-export const LoadingSpinner: React.FC = () => {
+interface LoadingSpinnerProps {
+  size?: 'sm' | 'md' | 'lg';
+  color?: 'indigo' | 'blue' | 'green' | 'purple';
+  text?: string;
+  className?: string;
+}
+
+const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
+  size = 'md',
+  color = 'indigo',
+  text,
+  className = '',
+}) => {
+  const sizeClasses = {
+    sm: 'w-4 h-4',
+    md: 'w-8 h-8',
+    lg: 'w-12 h-12',
+  };
+
+  const colorClasses = {
+    indigo: 'text-indigo-600',
+    blue: 'text-blue-600',
+    green: 'text-green-600',
+    purple: 'text-purple-600',
+  };
+
   return (
-    <div className="flex items-center justify-center min-h-screen">
-      <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-blue-600"></div>
+    <div className={`flex flex-col items-center justify-center ${className}`} role="status" aria-live="polite">
+      <div
+        className={`animate-spin rounded-full border-4 border-gray-200 border-t-${color}-600 ${sizeClasses[size]}`}
+        aria-hidden="true"
+      />
+      {text && <p className="mt-3 text-sm text-gray-600">{text}</p>}
     </div>
   );
 };
