@@ -1,4 +1,3 @@
-import React from 'react'
 /**
  * Advanced Performance Optimizer
  * Generated: 2025-10-08T02:06:22.084Z
@@ -37,9 +36,9 @@ export class PerformanceOptimizer {
         this.recordMetric(name, performance.now() - start)
         return result
       }
-    } catch (error) {
+    } catch (_error) {
       this.recordMetric(name, performance.now() - start)
-      throw error
+      throw _error
     }
   }
   /**

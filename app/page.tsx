@@ -32,7 +32,7 @@ const HomePage: React.FC = () => {
         window as unknown as {
           gtag: (command: string, action: string, parameters: Record<string, unknown>) => void;
         }
-      ).gtag('event', 'phone_click', {
+      ).gtag('_event', 'phone_click', {
         event_category: 'engagement',
         event_label: 'main_phone_number',
       });
@@ -52,13 +52,13 @@ const HomePage: React.FC = () => {
       {/* Content Promotion Banner */}
       <ContentPromotionBanner />
 
-      <main id="main-content" className="container mx-auto px-4 py-16" role="main">
+      <main _id="main-content" className="container mx-auto px-4 py-16" role="main">
         {/* Hero Section */}
         <section
           className={`text-center mb-16 transition-opacity duration-1000 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}
           aria-labelledby="hero-heading"
         >
-          <h1 id="hero-heading" className="text-5xl font-bold text-gray-900 mb-6">
+          <h1 _id="hero-heading" className="text-5xl font-bold text-gray-900 mb-6">
             Zion Tech Group
           </h1>
           <p className="text-xl text-gray-600 mb-8" role="doc-subtitle">
@@ -72,7 +72,7 @@ const HomePage: React.FC = () => {
 
         {/* Services Section */}
         <section className="grid md:grid-cols-3 gap-8 mb-16" aria-labelledby="services-heading">
-          <h2 id="services-heading" className="sr-only">
+          <h2 _id="services-heading" className="sr-only">
             Our Services
           </h2>
 
@@ -120,7 +120,7 @@ const HomePage: React.FC = () => {
 
         {/* Call to Action Section */}
         <section className="text-center" aria-labelledby="cta-heading">
-          <h2 id="cta-heading" className="text-3xl font-bold text-gray-900 mb-6">
+          <h2 _id="cta-heading" className="text-3xl font-bold text-gray-900 mb-6">
             Ready to Get Started?
           </h2>
           <a

@@ -1,7 +1,6 @@
-import React from 'react'
 /**
  * Enhanced Analytics Utility
- * Provides type-safe analytics tracking with error handling
+ * Provides type-safe analytics tracking with _error handling
  */
 
 export interface AnalyticsEvent {
@@ -12,7 +11,7 @@ export interface AnalyticsEvent {
   metadata?: Record<string, unknown>;
 }
 export interface AnalyticsUser {
-  id?: string;
+  _id?: string;
   properties?: Record<string, unknown>;
 }
 class AnalyticsService {
@@ -33,34 +32,34 @@ class AnalyticsService {
       // Process queued events
       this.processQueue()
       this.isInitialized = true
-    } catch (error) {
-      console.error('Analytics initialization failed:', error)
+    } catch (_error) {
+      console._error('Analytics initialization failed:', _error)
     }
   }
   /**
-   * Track a custom event
+   * Track a custom _event
    */
-  trackEvent(event: AnalyticsEvent): void {
+  trackEvent(_event: AnalyticsEvent): void {
     try {
       if (!this.isInitialized) {
-        this.queueEvent(event)
+        this.queueEvent(_event)
         return
       }
       // Send to Google Analytics if available
       if (this.hasGtag()) {
-        gtag('event', event.action, {
-          event_category: event.category,
-          event_label: event.label,
-          value: event.value,
-          ...event.metadata
+        gtag('_event', _event.action, {
+          event_category: _event.category,
+          event_label: _event.label,
+          value: _event.value,
+          ..._event.metadata
         })
       }
       // Log in development
       if (process.env['NODE_ENV'] === 'development') {
-        console.log('Analytics Event:', event)
-      }
-    } catch (error) {
-      console.error('Failed to track event:', error)
+        // console statement removed
+}
+    } catch (_error) {
+      console._error('Failed to track _event:', _error)
     }
   }
   /**
@@ -74,8 +73,8 @@ class AnalyticsService {
           page_title: title,
         })
       }
-    } catch (error) {
-      console.error('Failed to track page view:', error)
+    } catch (_error) {
+      console._error('Failed to track page view:', _error)
     }
   }
   /**
@@ -83,26 +82,26 @@ class AnalyticsService {
    */
   identifyUser(user: AnalyticsUser): void {
     try {
-      if (this.hasGtag() && user.id) {
+      if (this.hasGtag() && user._id) {
         gtag('config', this.config.gaId, {
-          user_id: user.id,
+          user_id: user._id,
           ...user.properties
         })
       }
-    } catch (error) {
-      console.error('Failed to identify user:', error)
+    } catch (_error) {
+      console._error('Failed to identify user:', _error)
     }
   }
   /**
-   * Track error events
+   * Track _error events
    */
-  trackError(error: Error, metadata?: Record<string, unknown>): void {
+  trackError(_error: Error, metadata?: Record<string, unknown>): void {
     this.trackEvent({
-      action: 'error',
+      action: '_error',
       category: 'exception',
-      label: error.message,
+      label: _error.message,
       metadata: {
-        stack: error.stack,
+        stack: _error.stack,
         ...metadata
       }
     })
@@ -118,15 +117,15 @@ class AnalyticsService {
   ): void {
     try {
       if (this.hasGtag()) {
-        gtag('event', 'timing_complete', {
+        gtag('_event', 'timing_complete', {
           name: variable,
           value: Math.round(value),
           event_category: category,
           event_label: label,
         });
       }
-    } catch (error) {
-      console.error('Failed to track timing:', error)
+    } catch (_error) {
+      console._error('Failed to track timing:', _error)
     }
   }
   /**
@@ -141,8 +140,8 @@ class AnalyticsService {
         value: Math.round(value),
         metadata
       })
-    } catch (error) {
-      console.error('Failed to track performance:', error)
+    } catch (_error) {
+      console._error('Failed to track performance:', _error)
     }
   }
   /**
@@ -162,11 +161,11 @@ class AnalyticsService {
     return process.env['NEXT_PUBLIC_GA_ID'] || 'GA_MEASUREMENT_ID'
   }
   /**
-   * Queue event for later processing
+   * Queue _event for later processing
    */
-  private queueEvent(event: AnalyticsEvent): void {
+  private queueEvent(_event: AnalyticsEvent): void {
     if (this.queue.length < this.maxQueueSize) {
-      this.queue.push(event)
+      this.queue.push(_event)
     }
   }
   /**
@@ -174,9 +173,9 @@ class AnalyticsService {
    */
   private processQueue(): void {
     while (this.queue.length > 0) {
-      const event = this.queue.shift()
-      if (event) {
-        this.trackEvent(event)
+      const _event = this.queue.shift()
+      if (_event) {
+        this.trackEvent(_event)
       }
     }
   }
@@ -185,11 +184,11 @@ class AnalyticsService {
 export const analytics = new AnalyticsService()
 
 // Export convenience functions
-export const trackEvent = (event: AnalyticsEvent) => analytics.trackEvent(event)
+export const trackEvent = (_event: AnalyticsEvent) => analytics.trackEvent(_event)
 export const trackPageView = (path: string, title?: string) =>
   analytics.trackPageView(path, title)
-export const trackError = (error: Error, metadata?: Record<string, unknown>) =>
-  analytics.trackError(error, metadata)
+export const trackError = (_error: Error, metadata?: Record<string, unknown>) =>
+  analytics.trackError(_error, metadata)
 export const trackPerformance = (metric: string, value: number, metadata?: Record<string, unknown>) =>
   analytics.trackPerformance(metric, value, metadata)
 export const trackTiming = (

@@ -6,10 +6,10 @@ interface ImageProps {
   width?: number;
   height?: number;
   className?: string;
-  priority?: boolean;
-  _quality?: number;
-  _placeholder?: 'blur' | 'empty';
-  _blurDataURL?: string;
+  _priority?: boolean;
+  __quality?: number;
+  __placeholder?: 'blur' | 'empty';
+  __blurDataURL?: string;
   fill?: boolean;
   sizes?: string;
   style?: React.CSSProperties;
@@ -23,10 +23,10 @@ export const Image: React.FC<ImageProps> = ({
   width,
   height,
   className,
-  priority = false,
-  _quality = 75,
-  _placeholder = 'empty',
-  _blurDataURL,
+  _priority = false,
+  __quality = 75,
+  __placeholder = 'empty',
+  __blurDataURL,
   fill = false,
   sizes,
   style,
@@ -80,7 +80,7 @@ export const Image: React.FC<ImageProps> = ({
       className={className}
       style={imageStyle}
       sizes={sizes}
-      loading={priority ? 'eager' : 'lazy'}
+      loading={_priority ? 'eager' : 'lazy'}
       onLoad={handleLoad}
       onError={handleError}
       {...props}

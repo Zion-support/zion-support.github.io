@@ -201,14 +201,12 @@ class MonitoringService {
   }
   public measureMemory(): void {
     if ('memory' in performance && performanceConfig.monitoring.enableMemoryMonitoring) {
-      const memory = (performance as { memory: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory
-
       const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory
 
  
       console.log('[Memory]', {
-        used: `${Math.round(memory.usedJSHeapSize / 1048576)}MB`
-        total: `${Math.round(memory.totalJSHeapSize / 1048576)}MB`
+        used: `${Math.round(memory.usedJSHeapSize / 1048576)}MB`,
+        total: `${Math.round(memory.totalJSHeapSize / 1048576)}MB`,
         limit: `${Math.round(memory.jsHeapSizeLimit / 1048576)}MB`
       })
     }

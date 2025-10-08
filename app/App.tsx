@@ -16,12 +16,12 @@ import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 
 // Lazy load components for better performance
-const ContentShowcase = lazy(() => import('./components/ContentShowcase'));
-const InteractiveContentShowcase2026 = lazy(
-  () => import('./components/InteractiveContentShowcase2026')
+const _ContentShowcase = lazy(() => import('./components/_ContentShowcase'));
+const _InteractiveContentShowcase2026 = lazy(
+  () => import('./components/_InteractiveContentShowcase2026')
 );
-const InteractiveAIROICalculator = lazy(
-  () => import('./components/InteractiveAIROICalculator')
+const _InteractiveAIROICalculator = lazy(
+  () => import('./components/_InteractiveAIROICalculator')
 );
 
 // Lazy load pages for better performance
@@ -51,7 +51,7 @@ import './globals.css';
 
 const App: React.FC = () => {
   useEffect(() => {
-    // Initialize global error handling
+    // Initialize global _error handling
     logger.info('initialized', { component: 'App' });
 
     // Initialize performance monitoring
@@ -70,27 +70,27 @@ const App: React.FC = () => {
     if (typeof window !== 'undefined' && 'performance' in window) {
       const pageLoadMetrics = collectPerformanceMetrics();
       const metrics = performanceOptimizer.getMetrics();
-      const performanceMetrics = performanceMonitor.getMetrics();
+      const _performanceMetrics = performanceMonitor.getMetrics();
       
       if (pageLoadMetrics) {
-        console.log('Performance metrics collected:', pageLoadMetrics);
-      }
+        // console statement removed
+}
       if (metrics) {
-        console.log('Performance metrics:', metrics);
-      }
-      if (performanceMetrics) {
-        console.log('Core Web Vitals:', performanceMetrics);
-      }
+        // console statement removed
+}
+      if (_performanceMetrics) {
+        // console statement removed
+}
     }
     
     // Log performance and accessibility metrics periodically
     const metricsInterval = setInterval(() => {
-      const performanceMetrics = performanceMonitor.getMetrics();
+      const _performanceMetrics = performanceMonitor.getMetrics();
       const accessibilityMetrics = accessibilityEnhancer.getMetrics();
       
       if (process.env.NODE_ENV === 'development') {
-        console.log('Performance Score:', performanceMonitor.getScore());
-        console.log('Accessibility Score:', accessibilityMetrics.overallScore);
+        // console statement removed
+        // console statement removed
       }
     }, 30000);
     
@@ -111,8 +111,8 @@ const App: React.FC = () => {
       <AdvancedErrorBoundary
         enableErrorReporting={true}
         enableRetry={true}
-        onError={(error, errorInfo) => {
-          logger.error(error.message, { error, errorInfo });
+        onError={(_error, errorInfo) => {
+          logger._error(_error.message, { _error, errorInfo });
         }}
       >
         <AccessibilityEnhancer>
@@ -151,7 +151,7 @@ const App: React.FC = () => {
             <Router>
               <div className="App">
                 <Navigation />
-                <main id="main-content">
+                <main _id="main-content">
                   <Suspense fallback={<LoadingSpinner />}>
                     <Routes>
                       <Route path="/" element={<HomePage />} />

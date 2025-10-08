@@ -1,8 +1,6 @@
 'use client';
 
 import React, { useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
-
 const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   children,
   title = "Zion Tech Group - Advanced AI and IT Solutions",

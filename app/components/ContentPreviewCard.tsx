@@ -1,8 +1,5 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-
 interface ContentPreviewCardProps {
-  id: string;
+  _id: string;
   title: string;
   description: string;
   category: string;
@@ -19,7 +16,7 @@ interface ContentPreviewCardProps {
 }
 
 const ContentPreviewCard: React.FC<ContentPreviewCardProps> = ({
-  id,
+  _id,
   title,
   description,
   category,

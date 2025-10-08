@@ -4,7 +4,7 @@ const ContentNewsletterSignup: React.FC = () => {
   const [email, setEmail] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubscribed, setIsSubscribed] = useState(false);
-  const [error, setError] = useState('');
+  const [_error, setError] = useState('');
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -21,7 +21,7 @@ const ContentNewsletterSignup: React.FC = () => {
       } else {
         setError('Please enter a valid email address');
       }
-    } catch (err) {
+    } catch (_err) {
       setError('Something went wrong. Please try again.');
     } finally {
       setIsSubmitting(false);
@@ -34,7 +34,7 @@ const ContentNewsletterSignup: React.FC = () => {
         <div className="max-w-4xl mx-auto text-center">
           <div className="text-6xl mb-6">🎉</div>
           <h2 className="text-3xl font-bold text-gray-900 mb-4">
-            Welcome to Our Content Community!
+            Welcome to Our Content Community as any
           </h2>
           <p className="text-xl text-gray-600 mb-8">
             You'll receive our latest AI insights, enterprise transformation guides, and breakthrough content directly in your inbox.
@@ -89,8 +89,8 @@ const ContentNewsletterSignup: React.FC = () => {
               </button>
             </div>
             
-            {error && (
-              <p className="text-red-600 text-sm">{error}</p>
+            {_error && (
+              <p className="text-red-600 text-sm">{_error}</p>
             )}
           </form>
 

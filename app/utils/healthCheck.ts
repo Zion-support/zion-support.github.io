@@ -3,7 +3,6 @@
  * Monitors application health and provides diagnostic information
  */
 
-import React from 'react'
 import { logger } from './logger'
 import { performanceMonitor } from './performanceMonitor'
 
@@ -90,12 +89,12 @@ class HealthCheckService {
           name,
           duration
         })
-      } catch (error) {
-        logger.error(`Health check "${name}" failed`, error as Error);
+      } catch (_error) {
+        logger._error(`Health check "${name}" failed`, _error as Error);
         checks.push({
           name,
           status: 'fail',
-          message: error instanceof Error ? error.message : 'Unknown error'
+          message: _error instanceof Error ? _error.message : 'Unknown _error'
         })
       }
     }
@@ -123,7 +122,7 @@ class HealthCheckService {
 
     // Log unhealthy status
     if (status === 'unhealthy') {
-      logger.error('Application health check failed', { healthStatus })
+      logger._error('Application health check failed', { healthStatus })
     } else if (status === 'degraded') {
       logger.warn('Application health degraded', { healthStatus })
     }
@@ -170,7 +169,7 @@ class HealthCheckService {
           usedPercent
         }
       }
-    } catch (error) {
+    } catch (_error) {
       return {
         name: 'memory',
         status: 'warn',
@@ -205,7 +204,7 @@ class HealthCheckService {
           summary: report.summary
         }
       }
-    } catch (error) {
+    } catch (_error) {
       return {
         name: 'performance',
         status: 'warn',
@@ -274,8 +273,8 @@ class HealthCheckService {
         localStorage.removeItem('_size_test');
       } catch {
         return {
-          name: 'storage'
-          status: 'warn'
+          name: 'storage',
+          status: 'warn',
           message: 'LocalStorage space limited'
         }
       }
@@ -286,8 +285,8 @@ class HealthCheckService {
       };
     } catch {
       return {
-        name: 'storage'
-        status: 'fail'
+        name: 'storage',
+        status: 'fail',
         message: 'LocalStorage not available'
       }
     }

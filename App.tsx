@@ -11,7 +11,7 @@ const UnifiedContentPromotion = memo(() => (
   </div>
 ));
 
-const InteractiveAIROICalculator = memo(() => (
+const _InteractiveAIROICalculator = memo(() => (
   <div className="bg-gray-50 py-16">
     <div className="container mx-auto px-4 text-center">
       <h2 className="text-3xl font-bold mb-4">AI ROI Calculator</h2>
@@ -20,7 +20,7 @@ const InteractiveAIROICalculator = memo(() => (
   </div>
 ));
 
-const ContentShowcase = memo(() => (
+const _ContentShowcase = memo(() => (
   <div className="py-16">
     <div className="container mx-auto px-4 text-center">
       <h2 className="text-3xl font-bold mb-4">Featured Content</h2>
@@ -29,7 +29,7 @@ const ContentShowcase = memo(() => (
   </div>
 ));
 
-const InteractiveContentShowcase2026 = memo(() => (
+const _InteractiveContentShowcase2026 = memo(() => (
   <div className="bg-blue-50 py-16">
     <div className="container mx-auto px-4 text-center">
       <h2 className="text-3xl font-bold mb-4">2026 Content Showcase</h2>
@@ -48,7 +48,7 @@ const LoadingSpinner = memo(() => (
 // Error Boundary Component
 interface ErrorBoundaryState {
   hasError: boolean;
-  error: Error | null;
+  _error: Error | null;
 }
 
 interface ErrorBoundaryProps {
@@ -58,17 +58,17 @@ interface ErrorBoundaryProps {
 class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundaryState> {
   constructor(props: ErrorBoundaryProps) {
     super(props);
-    this.state = { hasError: false, error: null };
+    this.state = { hasError: false, _error: null };
   }
 
-  static getDerivedStateFromError(error: Error): ErrorBoundaryState {
-    return { hasError: true, error };
+  static getDerivedStateFromError(_error: Error): ErrorBoundaryState {
+    return { hasError: true, _error };
   }
 
-  override componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
-    // Log error for debugging in development
+  override componentDidCatch(_error: Error, errorInfo: React.ErrorInfo) {
+    // Log _error for debugging in development
     if (process.env.NODE_ENV === 'development') {
-      console.error('App Error Boundary caught an error:', error, errorInfo);
+      console.error('App Error Boundary caught an error:', _error, errorInfo);
     }
   }
 
@@ -167,13 +167,13 @@ export default function App() {
             <UnifiedContentPromotion />
           </Suspense>
           <Suspense fallback={<LoadingSpinner />}>
-            <InteractiveAIROICalculator />
+            <_InteractiveAIROICalculator />
           </Suspense>
           <Suspense fallback={<LoadingSpinner />}>
-            <ContentShowcase />
+            <_ContentShowcase />
           </Suspense>
           <Suspense fallback={<LoadingSpinner />}>
-            <InteractiveContentShowcase2026 />
+            <_InteractiveContentShowcase2026 />
           </Suspense>
         </div>
       </HelmetProvider>

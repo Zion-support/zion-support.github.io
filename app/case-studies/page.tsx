@@ -1,12 +1,8 @@
-import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowLeft, TrendingUp, Users, DollarSign, Target, CheckCircle } from 'lucide-react';
-
 const CaseStudiesPage: React.FC = () => {
   const caseStudies = [
     {
-      id: 1,
+      _id: 1,
       title: 'E-commerce Platform Transformation',
       company: 'TechRetail Inc.',
       industry: 'E-commerce',
@@ -22,7 +18,7 @@ const CaseStudiesPage: React.FC = () => {
       description: 'Transformed a struggling e-commerce platform using AI-driven personalization and dynamic pricing strategies.'
     },
     {
-      id: 2,
+      _id: 2,
       title: 'Financial Services Automation',
       company: 'FinTech Solutions',
       industry: 'Financial Services',
@@ -38,7 +34,7 @@ const CaseStudiesPage: React.FC = () => {
       description: 'Automated complex financial processes using advanced AI algorithms for document processing and risk assessment.'
     },
     {
-      id: 3,
+      _id: 3,
       title: 'Healthcare Data Analytics',
       company: 'MedTech Innovations',
       industry: 'Healthcare',
@@ -54,7 +50,7 @@ const CaseStudiesPage: React.FC = () => {
       description: 'Revolutionized healthcare data management with AI-driven analytics and predictive treatment models.'
     },
     {
-      id: 4,
+      _id: 4,
       title: 'Manufacturing Optimization',
       company: 'AutoParts Manufacturing',
       industry: 'Manufacturing',
@@ -112,7 +108,7 @@ const CaseStudiesPage: React.FC = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               {caseStudies.map((study) => (
-                <div key={study.id} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-200">
+                <div key={study._id} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-200">
                   <div className="p-8">
                     <div className="flex items-center mb-4">
                       <div className="text-4xl mr-4">{study.image}</div>

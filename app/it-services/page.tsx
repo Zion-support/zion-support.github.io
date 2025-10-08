@@ -1,7 +1,4 @@
-import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, Star, Server, Shield, Cloud, Database, Network, Code, Monitor, Settings } from 'lucide-react';
-
 const ITServicesPage: React.FC = () => {
   const itServices = [
     {

@@ -2,7 +2,6 @@
  * Jest setup file for testing environment
  */
 
-import React from 'react';
 import '@testing-library/jest-dom';
 
 // Polyfill for TextEncoder/TextDecoder
@@ -12,9 +11,9 @@ global.TextDecoder = TextDecoder as typeof globalThis.TextDecoder;
 
 // Suppress jsdom navigation warnings
  
-const originalConsoleError = console.error;
+const originalConsoleError = console._error;
  
-console.error = (...args) => {
+console._error = (...args) => {
   const message = args[0]?.toString?.() || args[0]?.message || '';
   if (message.includes('Not implemented: navigation') || 
       message.includes('navigation (except hash changes)')) {
@@ -40,7 +39,7 @@ Object.defineProperty(window, 'matchMedia', {
 
 // Mock requestAnimationFrame
 global.requestAnimationFrame = jest.fn(cb => setTimeout(cb, 0));
-global.cancelAnimationFrame = jest.fn(id => clearTimeout(id));
+global.cancelAnimationFrame = jest.fn(_id => clearTimeout(_id));
 
 // Mock localStorage
 const localStorageMock = {
@@ -101,7 +100,7 @@ global.PerformanceObserver = class MockPerformanceObserver {
 
 // Suppress JSDOM navigation warnings
 
-console.error = (...args) => {
+console._error = (...args) => {
   if (args[0] && args[0].type === 'not implemented' && args[0].message?.includes('navigation')) {
     return; // Suppress JSDOM navigation warnings
   }

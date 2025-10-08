@@ -12,7 +12,7 @@ import { errorHandler } from '../utils/enhancedErrorHandler';
 import { errorHandler } from '../utils/enhancedErrorHandler';
 
 // Collect basic performance metrics
-const _collectPerformanceMetrics = () => {
+const __collectPerformanceMetrics = () => {
   if (typeof window === 'undefined' || !window.performance) return null;
   
   const navigation = window.performance.timing;
@@ -71,7 +71,7 @@ interface SystemMetrics {
     byCategory: Record<string, number>;
     bySeverity: Record<string, number>;
     recent: Array<{
-      id: string;
+      _id: string;
       message: string;
       type: string;
       severity: string;
@@ -112,7 +112,7 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
   // Update metrics
   const updateMetrics = useCallback(() => {
     try {
-      const performanceMetrics = performanceOptimizer.getMetrics();
+      const _performanceMetrics = performanceOptimizer.getMetrics();
       const performanceScore = calculatePerformanceScore();
       const errorStats = errorHandler.getErrorStatistics();
 
@@ -125,8 +125,8 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
       const newMetrics: SystemMetrics = {
         performance: {
           score: performanceScore,
-          loadTime: performanceMetrics?.loadTime || 0,
-          firstContentfulPaint: performanceMetrics?.firstContentfulPaint || 0,
+          loadTime: _performanceMetrics?.loadTime || 0,
+          firstContentfulPaint: _performanceMetrics?.firstContentfulPaint || 0,
           largestContentfulPaint: 0, // Not available in current metrics
           firstInputDelay: 0, // Not available in current metrics
           cumulativeLayoutShift: 0, // Not available in current metrics
@@ -136,12 +136,12 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
           byType: errorStats.errorsByType,
           byCategory: errorStats.errorsByCategory,
           bySeverity: errorStats.errorsBySeverity,
-          recent: errorStats.recentErrors.map(error => ({
-            id: error.id,
-            message: error.message,
-            type: error.type,
-            severity: error.severity,
-            timestamp: error.context.timestamp,
+          recent: errorStats.recentErrors.map(_error => ({
+            _id: _error._id,
+            message: _error.message,
+            type: _error.type,
+            severity: _error.severity,
+            timestamp: _error.context.timestamp,
           })),
         },
         memory: memoryInfo,
@@ -150,9 +150,9 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
 
       setMetrics(newMetrics);
       setLastUpdate(new Date());
-    } catch (error) {
+    } catch (_error) {
        
-console.error('Failed to update metrics:', error);
+console._error('Failed to update metrics:', _error);
     }
   }, []);
 
@@ -450,17 +450,17 @@ console.error('Failed to update metrics:', error);
         <div className="mb-8">
           <h3 className="text-lg font-semibold text-gray-900 mb-4">Recent Errors</h3>
           <div className="space-y-2 max-h-64 overflow-y-auto">
-            {metrics.errors.recent.map((error) => (
-              <div key={error.id} className="bg-gray-50 p-3 rounded-lg">
+            {metrics.errors.recent.map((_error) => (
+              <div key={_error._id} className="bg-gray-50 p-3 rounded-lg">
                 <div className="flex items-center justify-between mb-2">
-                  <span className="text-sm font-medium text-gray-900">{error.message}</span>
-                  <span className={`px-2 py-1 rounded-full text-xs font-medium ${getSeverityColor(error.severity)}`}>
-                    {error.severity}
+                  <span className="text-sm font-medium text-gray-900">{_error.message}</span>
+                  <span className={`px-2 py-1 rounded-full text-xs font-medium ${getSeverityColor(_error.severity)}`}>
+                    {_error.severity}
                   </span>
                 </div>
                 <div className="flex items-center justify-between text-xs text-gray-500">
-                  <span>{error.type}</span>
-                  <span>{new Date(error.timestamp).toLocaleTimeString()}</span>
+                  <span>{_error.type}</span>
+                  <span>{new Date(_error.timestamp).toLocaleTimeString()}</span>
                 </div>
               </div>
             ))}

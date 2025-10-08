@@ -1,10 +1,9 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { Link } from 'react-router-dom';
 import { logger } from '../utils/logger';
 
 interface ErrorBoundaryState {
   hasError: boolean;
-  error: Error | null;
+  _error: Error | null;
   errorInfo: ErrorInfo | null;
   errorId: string | null;
 }
@@ -12,14 +11,14 @@ interface ErrorBoundaryState {
 interface ErrorBoundaryProps {
   children: ReactNode;
   fallback?: ReactNode;
-  onError?: (error: Error, errorInfo: ErrorInfo) => void;
+  onError?: (_error: Error, errorInfo: ErrorInfo) => void;
   enableErrorReporting?: boolean;
   enableRetry?: boolean;
 }
 
 interface ErrorReport {
   errorId: string | null;
-  error: Error;
+  _error: Error;
   errorInfo: ErrorInfo;
   message: string;
   stack: string | undefined;
@@ -42,53 +41,53 @@ class AdvancedErrorBoundary extends Component<
     super(props);
     this.state = {
       hasError: false,
-      error: null,
+      _error: null,
       errorInfo: null,
       errorId: null,
     };
   }
 
-  static getDerivedStateFromError(error: Error): Partial<ErrorBoundaryState> {
+  static getDerivedStateFromError(_error: Error): Partial<ErrorBoundaryState> {
     return {
       hasError: true,
-      error,
+      _error,
       errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
     };
   }
 
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+  componentDidCatch(_error: Error, errorInfo: ErrorInfo) {
     this.setState({
-      error,
+      _error,
       errorInfo,
     });
 
-    // Log error to console in development
+    // Log _error to console in development
     if (process.env.NODE_ENV === 'development') {
-      logger.error(
-        'Error Boundary caught an error',
-        error,
+      logger._error(
+        'Error Boundary caught an _error',
+        _error,
         { context: 'ErrorBoundary', errorInfo }
       );
     }
 
-    // Call custom error handler
+    // Call custom _error handler
     if (this.props.onError) {
-      this.props.onError(error, errorInfo);
+      this.props.onError(_error, errorInfo);
     }
 
-    // Report error to external service
+    // Report _error to external service
     if (this.props.enableErrorReporting) {
-      this.reportError(error, errorInfo);
+      this.reportError(_error, errorInfo);
     }
   }
 
-  private reportError = (error: Error, errorInfo: ErrorInfo) => {
+  private reportError = (_error: Error, errorInfo: ErrorInfo) => {
     const errorReport: ErrorReport = {
       errorId: this.state.errorId || this.generateErrorId(),
-      error,
+      _error,
       errorInfo,
-      message: error.message,
-      stack: error.stack,
+      message: _error.message,
+      stack: _error.stack,
       componentStack: errorInfo.componentStack,
       timestamp: new Date().toISOString(),
       userAgent: navigator.userAgent,
@@ -97,7 +96,7 @@ class AdvancedErrorBoundary extends Component<
       sessionId: this.getSessionId(),
     };
 
-    // Send to error reporting service
+    // Send to _error reporting service
     this.sendErrorReport(errorReport);
   };
 
@@ -130,7 +129,7 @@ class AdvancedErrorBoundary extends Component<
 
   private sendErrorReport = async (errorReport: ErrorReport) => {
     try {
-      // Send to your error reporting service
+      // Send to your _error reporting service
       await fetch('/api/errors', {
         method: 'POST',
         headers: {
@@ -139,8 +138,8 @@ class AdvancedErrorBoundary extends Component<
         body: JSON.stringify(errorReport),
       });
     } catch (reportError) {
-      logger.error(
-        'Failed to send error report',
+      logger._error(
+        'Failed to send _error report',
         reportError as Error,
         { context: 'ErrorReporting' }
       );
@@ -152,7 +151,7 @@ class AdvancedErrorBoundary extends Component<
       this.retryCount++;
       this.setState({
         hasError: false,
-        error: null,
+        _error: null,
         errorInfo: null,
         errorId: null,
       });
@@ -174,7 +173,7 @@ class AdvancedErrorBoundary extends Component<
         return this.props.fallback;
       }
 
-      // Default error UI
+      // Default _error UI
       return (
         <div className='min-h-screen bg-gray-50 flex flex-col justify-center py-12 sm:px-6 lg:px-8'>
           <div className='sm:mx-auto sm:w-full sm:max-w-md'>
@@ -196,7 +195,7 @@ class AdvancedErrorBoundary extends Component<
                   </svg>
                 </div>
                 <h2 className='mt-6 text-3xl font-extrabold text-gray-900'>
-                  Oops! Something went wrong
+                  Oops as any Something went wrong
                 </h2>
                 <p className='mt-2 text-sm text-gray-600'>
                   We&apos;re sorry, but something unexpected happened. Our team
@@ -214,14 +213,14 @@ class AdvancedErrorBoundary extends Component<
                       <strong>Error ID:</strong> {this.state.errorId}
                     </p>
                     <p>
-                      <strong>Message:</strong> {this.state.error?.message}
+                      <strong>Message:</strong> {this.state._error?.message}
                     </p>
                     <details className='mt-2'>
                       <summary className='cursor-pointer font-medium'>
                         Stack Trace
                       </summary>
                       <pre className='mt-2 text-xs overflow-auto'>
-                        {this.state.error?.stack}
+                        {this.state._error?.stack}
                       </pre>
                     </details>
                     <details className='mt-2'>
