@@ -25,8 +25,8 @@ const calculatePerformanceScore = () => {
   if (metrics.loadTime > 5000) score -= 30;
   
   // Deduct points for slow paint times
-  if (metrics.firstContentfulPaint > 2000) score -= 15;
-  if (metrics.firstContentfulPaint > 3000) score -= 25;
+  if (metrics.firstContentfulPaint && metrics.firstContentfulPaint > 2000) score -= 15;
+  if (metrics.firstContentfulPaint && metrics.firstContentfulPaint > 3000) score -= 25;
   
   return Math.max(0, score);
 };
