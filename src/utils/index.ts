@@ -12,20 +12,17 @@ export * from './hooks';
 
 // Export security and validation separately to avoid conflicts
 export { 
-  sanitizeInput, 
+  sanitizeHtml as sanitizeInput, 
   escapeHtml, 
-  validatePassword, 
-  generateSecureToken,
   isValidEmail as isValidEmailFromSecurity,
   isValidUrl as isValidUrlFromSecurity
 } from './security';
 
 export { 
-  validateForm, 
-  validateField,
+  validateEmail,
+  validatePhone,
   isValidEmail,
-  isValidUrl,
-  isValidPhone 
+  isValidUrl
 } from './validation';
 
 // Default exports
@@ -37,4 +34,4 @@ export { default as cacheUtils } from './cache';
 export { default as logger } from './logger';
 export { default as apiUtils } from './api';
 export { default as hooksUtils } from './hooks';
-export { ErrorHandler } from './errorHandler';
+export { default as ErrorHandler } from './errorHandler';

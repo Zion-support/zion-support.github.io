@@ -202,7 +202,12 @@ export const getHomepageSchemas = () => [
  */
 export const renderStructuredData = (schemas: unknown[]) => {
   return schemas.map((schema, _index) => (
-=======
-    JSON.stringify(schema)
+    <script
+      key={_index}
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{
+        __html: JSON.stringify(schema)
+      }}
+    />
   ));
 };
