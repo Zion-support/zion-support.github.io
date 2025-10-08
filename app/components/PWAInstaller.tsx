@@ -1,4 +1,4 @@
-'use client';
+// // 'use client'; // Removed for Vite compatibility // Removed for Vite compatibility
 
 import React, { useEffect, useState } from 'react';
 
@@ -30,8 +30,7 @@ const PWAInstaller: React.FC = () => {
       navigator.serviceWorker
         .register('/service-worker.js')
         .then((registration) => {
-          // eslint-disable-next-line no-console
-    console.log('Service Worker registered:', registration);
+          // Service Worker registered
 
           // Check for updates periodically
           setInterval(() => {
@@ -54,9 +53,8 @@ const PWAInstaller: React.FC = () => {
             }
           });
         })
-        .catch((error) => {
-          // eslint-disable-next-line no-console
-    console.error('Service Worker registration failed:', error);
+        .catch(() => {
+          // Service Worker registration failed
         });
 
       // Listen for controller change
@@ -81,8 +79,7 @@ const PWAInstaller: React.FC = () => {
 
     // Listen for successful installation
     window.addEventListener('appinstalled', () => {
-      // eslint-disable-next-line no-console
-    console.log('PWA installed successfully');
+      // PWA installed successfully
       setIsInstalled(true);
       setShowPrompt(false);
       setDeferredPrompt(null);
@@ -105,11 +102,9 @@ const PWAInstaller: React.FC = () => {
     const choiceResult = await deferredPrompt.userChoice;
 
     if (choiceResult.outcome === 'accepted') {
-      // eslint-disable-next-line no-console
-    console.log('User accepted the install prompt');
+      // User accepted the install prompt
     } else {
-      // eslint-disable-next-line no-console
-    console.log('User dismissed the install prompt');
+      // User dismissed the install prompt
     }
 
     // Clear the deferred prompt

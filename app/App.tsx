@@ -46,7 +46,7 @@ const App: React.FC = () => {
     logger.info('🚀 Zion Tech Group App initialized with comprehensive monitoring');
   }, []);
 
-  const handleError = useCallback((error: Error, errorInfo: unknown) => {
+  const handleError = useCallback((error: Error, errorInfo: React.ErrorInfo) => {
     logger.error('Application Error', error, { errorInfo, component: 'ErrorBoundary' });
   }, []);
 
