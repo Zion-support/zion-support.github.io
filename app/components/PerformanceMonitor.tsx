@@ -30,6 +30,51 @@ const PerformanceMonitor: React.FC = () => {
     };
 
     // Monitor Core Web Vitals
+      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming | undefined;
+        memory?: {
+          totalJSHeapSize: number;
+        };
+      
+        loadTime: navigation?.loadEventEnd ?? 0,
+        memoryUsage: memory?.usedJSHeapSize ?? 0,
+        cacheHitRate: 0,
+    };
+    const getPerformanceScore = (): number => {
+      let score = 100;
+      if (metrics.renderTime > 1500) score -= 15;
+      return Math.max(0, score);
+    const updateMetrics = () => {
+      const score = getPerformanceScore();
+      setPerformanceScore(score);
+      if (enableConsoleLogging) {
+        logger.debug('Metrics', { metrics: currentMetrics });
+        console.groupEnd();
+
+    updateMetrics();
+    const interval = setInterval(updateMetrics, updateInterval);
+    const getMetrics = (): PerformanceMetrics => {
+      const memory = (performance as Performance & {
+          usedJSHeapSize: number;
+          jsHeapSizeLimit: number;
+      }).memory;
+      return {
+        renderTime: navigation?.domContentLoadedEventEnd ?? 0,
+        bundleSize: 0,
+      };
+
+      const metrics = getMetrics();
+      if (metrics.loadTime > 3000) score -= 20;
+      if (metrics.memoryUsage > 50000000) score -= 15;
+
+      const currentMetrics = getMetrics();
+      setMetrics(currentMetrics);
+
+        console.group('Performance Metrics');
+        logger.debug('Score', { score });
+      }
+    // Initial update
+    // Set up interval for real-time monitoring
+    // Set up performance observer for more detailed monitoring
     if (typeof window !== 'undefined' && 'PerformanceObserver' in window) {
       try {
         // LCP - Largest Contentful Paint
