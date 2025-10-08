@@ -396,4 +396,6 @@ const AI2026ImplementationRoadmap: React.FC = () => {
     </div>
     </>
   );
-}
+};
+
+export default AI2026ImplementationRoadmap;

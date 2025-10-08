@@ -157,4 +157,6 @@ const AIAutonomousBusinessSystems2026: React.FC = () => {
     </div>
     </>
   );
-}
+};
+
+export default AIAutonomousBusinessSystems2026;

@@ -98,7 +98,7 @@ class HealthCheckService {
           duration,
         });
       } catch (_error) {
-logger._error(`Health check "${name}" failed`, _error as Error);
+        logger.error(`Health check "${name}" failed`, _error as Error);
         checks.push({
           name,
           status: 'fail',
@@ -133,7 +133,7 @@ logger._error(`Health check "${name}" failed`, _error as Error);
 
     // Log unhealthy status
     if (status === 'unhealthy') {
-      logger._error('Application health check failed', { healthStatus });
+      logger.error('Application health check failed', { healthStatus });
     } else if (status === 'degraded') {
       logger.warn('Application health degraded', { healthStatus });
     }

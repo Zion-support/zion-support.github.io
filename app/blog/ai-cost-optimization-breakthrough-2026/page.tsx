@@ -158,4 +158,6 @@ const AICostOptimizationBreakthrough2026: React.FC = () => {
     </div>
     </>
   );
-}
+};
+
+export default AICostOptimizationBreakthrough2026;

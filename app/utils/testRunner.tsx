@@ -791,7 +791,7 @@ export class TestRunner {
     assertions?: (result: RenderResult) => void;
     userInteractions?: (result: RenderResult) => Promise<void>;
   }>): Promise<{ passed: boolean; results: Array<{ name: string; type: string; passed: boolean; error?: string }> }> {
-    const results: unknown[] = [];
+    const results: Array<{ name: string; type: string; passed: boolean; error?: string }> = [];
 
     for (const test of tests) {
       let result;
@@ -827,7 +827,7 @@ export class TestRunner {
       results.push({ ...result, name: test.name, type: test.type });
     }
 
-    const passed = results.every(result => result.passed);
+    const passed = results.every((result: any) => result.passed);
 
     return { passed, results };
   }

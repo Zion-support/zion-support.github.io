@@ -98,8 +98,9 @@ class PerformanceMonitor {
         this.observeEntry('layout-shift', (entries) => {
           let clsValue = 0;
           entries.forEach((entry: unknown) => {
-            if (!entry.hadRecentInput) {
-              clsValue += entry.value;
+            const layoutShiftEntry = entry as any;
+            if (!layoutShiftEntry.hadRecentInput) {
+              clsValue += layoutShiftEntry.value;
             }
           });
           if (clsValue > 0) {

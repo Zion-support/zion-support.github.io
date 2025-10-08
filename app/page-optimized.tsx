@@ -86,4 +86,6 @@ const OptimizedHomePage: React.FC = () => {
     </AccessibilityEnhancer>
     </>
   );
-}
+};
+
+export default OptimizedHomePage;

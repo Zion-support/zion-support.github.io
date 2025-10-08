@@ -16,6 +16,7 @@ export default [
       "next-env.d.ts",
       "**/zion-website_disabled/**",
       "_app_disabled/**",
+      "app_disabled/**",
       "_conflicted_disabled/**",
       "_pages_api_disabled/**",
       "_pages_disabled/**",
