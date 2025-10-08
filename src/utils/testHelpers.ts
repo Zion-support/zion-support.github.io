@@ -30,10 +30,10 @@ export async function waitForCondition(
   timeout: number = 5000,
   interval: number = 100
 ): Promise<void> {
-//   const startTime = Date.now();
+  const startTime = Date.now();
 
   while (Date.now() - startTime < timeout) {
-//     const result = await condition();
+    const result = await condition();
     if (result) return;
     await new Promise((resolve) => setTimeout(resolve, interval));
   }
