@@ -15,6 +15,7 @@ function initializeMonitoring() {
 <<<<<<< HEAD
       // Monitor web vitals
 <<<<<<< HEAD
+<<<<<<< HEAD
       // performanceOptimizer.init(); // Method may not exist
 =======
       performanceOptimizer.optimize();
@@ -23,6 +24,9 @@ function initializeMonitoring() {
       // Monitor web vitals - performanceOptimizer doesn't have init method
       performanceOptimizer.optimize();
 >>>>>>> cursor/fix-errors-and-merge-to-main-b1a4
+=======
+      performanceOptimizer.optimize();
+>>>>>>> cursor/fix-errors-and-merge-to-main-5f6c
       
       // Set up error tracking
       // errorHandler.init(); // Method does not exist

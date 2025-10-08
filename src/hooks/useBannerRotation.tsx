@@ -57,14 +57,18 @@ export const useBannerRotation = (options: UseBannerRotationOptions = {}) => {
     try {
       setState(prev => ({ ...prev, isLoading: true, error: null }));
       
-      const banners = await selectBannersForDisplay(strategy, maxBanners);
-      const stats = enableTracking ? await loadBannerStats() : { impressions: 0, clicks: 0, ctr: 0 };
+      const banners = selectBannersForDisplay();
+      const stats = enableTracking ? loadBannerStats() : { impressions: 0, clicks: 0, ctr: 0 };
       
       setState(prev => ({
         ...prev,
         currentBanners: banners,
         isLoading: false,
-        stats
+        stats: {
+          impressions: stats.impressions || 0,
+          clicks: stats.clicks || 0,
+          ctr: stats.ctr || 0
+        }
       }));
     } catch (error) {
       setState(prev => ({
@@ -77,7 +81,7 @@ export const useBannerRotation = (options: UseBannerRotationOptions = {}) => {
 
   const handleBannerImpression = useCallback((bannerId: string) => {
     if (enableTracking) {
-      trackImpression(bannerId);
+      trackImpression();
       setState(prev => ({
         ...prev,
         stats: {
@@ -90,7 +94,7 @@ export const useBannerRotation = (options: UseBannerRotationOptions = {}) => {
 
   const handleBannerClick = useCallback((bannerId: string) => {
     if (enableTracking) {
-      trackClick(bannerId);
+      trackClick();
       setState(prev => ({
         ...prev,
         stats: {

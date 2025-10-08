@@ -180,10 +180,11 @@ class PerformanceOptimizer {
     if (typeof window !== 'undefined' && 'memory' in performance) {
       const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; jsHeapSizeLimit: number } }).memory
       if (memory) {
-        this.metrics.memory = memory.usedJSHeapSize / memory.jsHeapSizeLimit
+        this.metrics.memoryUsage = memory.usedJSHeapSize
       }
     }
   }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
     const images = document.querySelectorAll('img[data-src]')
@@ -208,6 +209,11 @@ class PerformanceOptimizer {
     if (typeof window === 'undefined') return;
 >>>>>>> cursor/fix-errors-and-merge-to-main-b1a4
     
+=======
+  private measureRenderTime(): void {
+    if (typeof window === 'undefined') return
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-5f6c
     // Check if PerformanceObserver exists (may not be available in test environments)
     if (typeof PerformanceObserver === 'undefined') return;
 
@@ -442,6 +448,7 @@ class PerformanceOptimizer {
   }
 
   /**
+<<<<<<< HEAD
    * Cleanup observers and resources
    */
 <<<<<<< HEAD
@@ -455,6 +462,8 @@ class PerformanceOptimizer {
   }
 
   /**
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-5f6c
    * Generate comprehensive performance report
    */
   generateComprehensiveReport(): string {

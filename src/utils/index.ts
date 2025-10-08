@@ -14,6 +14,7 @@ export * from './hooks';
 export { 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   sanitizeHtml as sanitizeInput, 
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-6ad8
@@ -22,6 +23,10 @@ export {
   isValidUrl as isValidUrlFromSecurity,
 =======
   sanitizeInput, 
+=======
+  sanitizeHtml as sanitizeInput, 
+  escapeHtml, 
+>>>>>>> cursor/fix-errors-and-merge-to-main-5f6c
   isValidEmail as isValidEmailFromSecurity,
   isValidUrl as isValidUrlFromSecurity
 } from './validation';
@@ -36,10 +41,14 @@ export {
   validateEmail as validateForm, 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-5f6c
   validateRequired as validateField,
   isValidEmail,
   isValidUrl,
   validatePhone as isValidPhone 
+<<<<<<< HEAD
 =======
   validateEmail as validateField,
   isValidEmail,
@@ -51,6 +60,8 @@ export {
   isValidEmail,
   isValidUrl
 >>>>>>> cursor/fix-errors-and-merge-to-main-b1a4
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-5f6c
 } from './validation';
 
 // Default exports
