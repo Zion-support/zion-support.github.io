@@ -1,7 +1,6 @@
 'use client';
 
 import React, { useEffect, useState, memo } from 'react';
-import { logger } from '@/utils/logger';
 
 interface LayoutShift extends PerformanceEntry {
   hadRecentInput: boolean;
@@ -18,6 +17,7 @@ interface PerformanceMetrics {
 
 const PerformanceMonitor: React.FC = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({});
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     if (typeof window === 'undefined') return;
@@ -30,146 +30,87 @@ const PerformanceMonitor: React.FC = () => {
     };
 
     // Monitor Core Web Vitals
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming | undefined;
-        memory?: {
-          totalJSHeapSize: number;
-        };
-      
-        loadTime: navigation?.loadEventEnd ?? 0,
-        memoryUsage: memory?.usedJSHeapSize ?? 0,
-        cacheHitRate: 0,
-    };
-    const getPerformanceScore = (): number => {
-      let score = 100;
-      if (metrics.renderTime > 1500) score -= 15;
-      return Math.max(0, score);
-    const updateMetrics = () => {
-      const score = getPerformanceScore();
-      setPerformanceScore(score);
-      if (enableConsoleLogging) {
-        if (typeof console !== 'undefined') { console.group('Performance Metrics');
-          logger.debug('Metrics', { metrics: currentMetrics });
-          logger.debug('Score', { score });
-          console.groupEnd();
-        }
-      }
-    };
+    const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming | undefined;
+    
+    if (navigation) {
+      const paintEntries = performance.getEntriesByType('paint');
+      const fcp = paintEntries.find(entry => entry.name === 'first-contentful-paint');
+      const lcpEntries = performance.getEntriesByType('largest-contentful-paint');
+      const lcp = lcpEntries[lcpEntries.length - 1];
 
-    updateMetrics();
-    const interval = setInterval(updateMetrics, updateInterval);
-    const getMetrics = (): PerformanceMetrics => {
-      const memory = (performance as Performance & {
-          usedJSHeapSize: number;
-          jsHeapSizeLimit: number;
-      }).memory;
-      return {
-        renderTime: navigation?.domContentLoadedEventEnd ?? 0,
-        bundleSize: 0,
+      const newMetrics: PerformanceMetrics = {
+        fcp: fcp ? fcp.startTime : undefined,
+        lcp: lcp ? lcp.startTime : undefined,
+        ttfb: navigation.responseStart - navigation.requestStart,
       };
 
-      const metrics = getMetrics();
-      if (metrics.loadTime > 3000) score -= 20;
-      if (metrics.memoryUsage > 50000000) score -= 15;
-
-      const currentMetrics = getMetrics();
-      setMetrics(currentMetrics);
-
-        console.group('Performance Metrics');
-        logger.debug('Score', { score });
-      }
-    // Initial update
-    // Set up interval for real-time monitoring
-    // Set up performance observer for more detailed monitoring
-    if (typeof window !== 'undefined' && 'PerformanceObserver' in window) {
-      try {
-        // LCP - Largest Contentful Paint
-        new PerformanceObserver((list) => {
-          const entries = list.getEntries();
-          const lastEntry = entries[entries.length - 1];
-          reportWebVitals({
-            name: 'LCP',
-            value: lastEntry.startTime,
-          });
-          setMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }));
-        }).observe({ entryTypes: ['largest-contentful-paint'] });
-
-        // FID - First Input Delay
-        new PerformanceObserver((list) => {
-          const entries = list.getEntries();
-          entries.forEach((entry: PerformanceEntry & { processingStart?: number }) => {
-            if (entry.processingStart) {
-              const fid = entry.processingStart - entry.startTime;
-              reportWebVitals({
-                name: 'FID',
-                value: fid,
-              });
-              setMetrics(prev => ({ ...prev, fid }));
-            }
-          });
-        }).observe({ entryTypes: ['first-input'] });
-
-        // CLS - Cumulative Layout Shift
-        let clsValue = 0;
-        new PerformanceObserver((list) => {
-          const entries = list.getEntries();
-          entries.forEach((entry: PerformanceEntry & { hadRecentInput?: boolean; value?: number }) => {
-            if (!entry.hadRecentInput && entry.value) {
-              clsValue += entry.value;
-              reportWebVitals({
-                name: 'CLS',
-                value: clsValue,
-              });
-              setMetrics(prev => ({ ...prev, cls: clsValue }));
-            }
-          });
-        }).observe({ entryTypes: ['layout-shift'] });
-
-        // FCP - First Contentful Paint
-        new PerformanceObserver((list) => {
-          const entries = list.getEntries();
-          entries.forEach((entry) => {
-            reportWebVitals({
-              name: 'FCP',
-              value: entry.startTime,
-            });
-            setMetrics(prev => ({ ...prev, fcp: entry.startTime }));
-          });
-        }).observe({ entryTypes: ['paint'] });
-
-        // TTFB - Time to First Byte
-        new PerformanceObserver((list) => {
-          const entries = list.getEntries();
-          entries.forEach((entry: PerformanceEntry & { responseStart?: number; requestStart?: number }) => {
-            if (entry.responseStart && entry.requestStart && entry.responseStart > 0) {
-              const ttfb = entry.responseStart - entry.requestStart;
-              reportWebVitals({
-                name: 'TTFB',
-                value: ttfb,
-              });
-              setMetrics(prev => ({ ...prev, ttfb }));
-            }
-          });
-        }).observe({ entryTypes: ['navigation'] });
-      } catch (error) {
-        console.warn('Performance monitoring not supported:', error);
-      }
+      setMetrics(newMetrics);
+      
+      // Report metrics
+      if (newMetrics.fcp) reportWebVitals({ name: 'FCP', value: newMetrics.fcp });
+      if (newMetrics.lcp) reportWebVitals({ name: 'LCP', value: newMetrics.lcp });
+      if (newMetrics.ttfb) reportWebVitals({ name: 'TTFB', value: newMetrics.ttfb });
     }
+
+    // Observe Cumulative Layout Shift
+    const observer = new PerformanceObserver((list) => {
+      for (const entry of list.getEntries()) {
+        const layoutShift = entry as LayoutShift;
+        if (!layoutShift.hadRecentInput) {
+          setMetrics(prev => ({
+            ...prev,
+            cls: (prev.cls || 0) + layoutShift.value
+          }));
+        }
+      }
+    });
+
+    try {
+      observer.observe({ type: 'layout-shift', buffered: true });
+    } catch (e) {
+      // Layout shift observation not supported
+    }
+
+    return () => {
+      observer.disconnect();
+    };
   }, []);
 
-  // Don't render anything in production
-  if (process.env['NODE_ENV'] !== 'development') {
-    return null;
-  }
+  // Toggle visibility with keyboard shortcut (Ctrl+Shift+P)
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.ctrlKey && e.shiftKey && e.key === 'P') {
+        setIsVisible(prev => !prev);
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, []);
+
+  if (!isVisible) return null;
 
   return (
-    <div className="fixed bottom-4 right-4 bg-black bg-opacity-75 text-white p-4 rounded-lg text-xs font-mono z-50">
-      <div className="mb-2 font-bold">Performance Metrics</div>
-      {Object.entries(metrics).map(([key, value]) => (
-        <div key={key} className="flex justify-between gap-4">
-          <span>{key.toUpperCase()}:</span>
-          <span className="text-green-400">{value ? `${Math.round(value)}ms` : 'N/A'}</span>
+    <div className="fixed bottom-4 right-4 bg-black bg-opacity-90 text-white p-4 rounded-lg text-sm font-mono z-50 max-w-md">
+      <div className="flex items-center justify-between mb-2">
+        <h3 className="font-bold">Performance Metrics</h3>
+        <button 
+          onClick={() => setIsVisible(false)}
+          className="text-gray-400 hover:text-white ml-4"
+        >
+          ×
+        </button>
+      </div>
+      <div className="space-y-1">
+        {metrics.fcp && <div>FCP: {metrics.fcp.toFixed(2)}ms</div>}
+        {metrics.lcp && <div>LCP: {metrics.lcp.toFixed(2)}ms</div>}
+        {metrics.fid && <div>FID: {metrics.fid.toFixed(2)}ms</div>}
+        {metrics.cls && <div>CLS: {metrics.cls.toFixed(3)}</div>}
+        {metrics.ttfb && <div>TTFB: {metrics.ttfb.toFixed(2)}ms</div>}
+        <div className="text-xs text-gray-400 mt-2 pt-2 border-t border-gray-700">
+          Press Ctrl+Shift+P to toggle
         </div>
-      ))}
+      </div>
     </div>
   );
 };
