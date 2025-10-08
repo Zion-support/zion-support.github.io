@@ -3,7 +3,8 @@ import PerformanceMonitor from './components/PerformanceMonitor';
 import AnalyticsProvider from './components/AnalyticsProvider';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import PWAInstaller from './components/PWAInstaller';
-import { GlobalErrorBoundary } from './components/GlobalErrorBoundary';
+import ServiceWorker from './components/ServiceWorker';
+import ErrorBoundary from './components/ErrorBoundary';
 
 export default function RootLayout({
   children,
@@ -64,15 +65,16 @@ export default function RootLayout({
         />
       </head>
       <body className='antialiased'>
-        <GlobalErrorBoundary>
+        <ErrorBoundary>
           <AnalyticsProvider>
             <AccessibilityEnhancer>
               <PerformanceMonitor />
               <PWAInstaller />
+              <ServiceWorker />
               {children}
             </AccessibilityEnhancer>
           </AnalyticsProvider>
-        </GlobalErrorBoundary>
+        </ErrorBoundary>
       </body>
     </html>
   );

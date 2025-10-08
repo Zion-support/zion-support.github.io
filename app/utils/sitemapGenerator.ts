@@ -1,56 +1,54 @@
-/**
- * Sitemap Generation Utility
- * Generates XML sitemaps for better SEO and search engine crawling
- * @module sitemapGenerator
- */
-
-export interface SitemapURL {
-  loc: string;
+interface SitemapUrl {
+  url: string;
   lastmod?: string;
   changefreq?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';
   priority?: number;
 }
 
-export interface SitemapOptions {
-  hostname: string;
-  urls: SitemapURL[];
+interface SitemapConfig {
+  baseUrl: string;
+  urls: SitemapUrl[];
 }
 
-/**
- * Generate XML sitemap
- * @param options - Sitemap configuration
- * @returns Complete XML sitemap string
- */
-export function generateSitemap(options: SitemapOptions): string {
-  const { hostname, urls } = options;
-
-  const urlEntries = urls
-    .map(url => {
-      const loc = url.loc.startsWith('http') ? url.loc : `${hostname}${url.loc}`;
-      return `  <url>
-    <loc>${loc}</loc>
-    ${url.lastmod ? `<lastmod>${url.lastmod}</lastmod>` : ''}
-    ${url.changefreq ? `<changefreq>${url.changefreq}</changefreq>` : ''}
-    ${url.priority !== undefined ? `<priority>${url.priority.toFixed(1)}</priority>` : ''}
+export const generateSitemap = (config: SitemapConfig): string => {
+  const { baseUrl, urls } = config;
+  
+  const sitemapUrls = urls.map(({ url, lastmod, changefreq, priority }) => {
+    const fullUrl = url.startsWith('http') ? url : `${baseUrl}${url}`;
+    const lastmodDate = lastmod || new Date().toISOString().split('T')[0];
+    
+    return `  <url>
+    <loc>${fullUrl}</loc>
+    <lastmod>${lastmodDate}</lastmod>
+    <changefreq>${changefreq || 'weekly'}</changefreq>
+    <priority>${priority || 0.5}</priority>
   </url>`;
-    })
-    .join('\n');
+  }).join('\n');
 
   return `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${urlEntries}
+${sitemapUrls}
 </urlset>`;
-}
+};
 
-/**
- * Generate robots.txt content
- * @param hostname - Base hostname
- * @param sitemapPath - Path to sitemap
- * @returns robots.txt content
- */
-export function generateRobotsTxt(hostname: string, sitemapPath = '/sitemap.xml'): string {
-  return `User-agent: *
-Disallow:
-
-Sitemap: ${hostname}${sitemapPath}`;
-}
+export const defaultSitemapConfig: SitemapConfig = {
+  baseUrl: 'https://ziontechgroup.com',
+  urls: [
+    { url: '/', priority: 1.0, changefreq: 'daily' },
+    { url: '/about', priority: 0.8, changefreq: 'monthly' },
+    { url: '/services', priority: 0.9, changefreq: 'weekly' },
+    { url: '/ai-services', priority: 0.9, changefreq: 'weekly' },
+    { url: '/it-services', priority: 0.9, changefreq: 'weekly' },
+    { url: '/enterprise', priority: 0.8, changefreq: 'monthly' },
+    { url: '/contact', priority: 0.7, changefreq: 'monthly' },
+    { url: '/blog', priority: 0.8, changefreq: 'daily' },
+    { url: '/privacy', priority: 0.3, changefreq: 'yearly' },
+    { url: '/terms', priority: 0.3, changefreq: 'yearly' },
+    // Blog posts
+    { url: '/blog/ai-enterprise-transformation-2025', priority: 0.8, changefreq: 'monthly' },
+    { url: '/blog/ai-2025-2026-mega-trends-breakthrough', priority: 0.8, changefreq: 'monthly' },
+    { url: '/blog/ai-2026-autonomous-enterprise-architecture', priority: 0.8, changefreq: 'monthly' },
+    { url: '/blog/ai-2026-autonomous-agent-factories', priority: 0.8, changefreq: 'monthly' },
+    { url: '/blog/ai-cost-optimization-breakthrough-2026', priority: 0.8, changefreq: 'monthly' },
+  ],
+};

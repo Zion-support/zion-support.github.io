@@ -1,6 +1,14 @@
 import React, { useCallback, useState, useEffect, Suspense, lazy } from 'react';
+import SEOHead from './components/SEOHead';
+import LoadingSpinner from './components/LoadingSpinner';
+import { preloadCriticalResources, optimizeImages } from './utils/performanceOptimizer';
 
 // Dynamically import heavy components for better performance
+const ContentPromotionBanner = lazy(() => import('./components/ContentPromotionBanner'));
+const ContentCarousel = lazy(() => import('./components/ContentCarousel'));
+const DynamicContentShowcase = lazy(() => import('./components/DynamicContentShowcase'));
+const ContentStatistics = lazy(() => import('./components/ContentStatistics'));
+const ContentNewsletterSignup = lazy(() => import('./components/ContentNewsletterSignup'));
 
 // Loading skeleton component
 const ServiceCardSkeleton: React.FC = () => (
@@ -16,6 +24,8 @@ const HomePage: React.FC = () => {
 
   useEffect(() => {
     setIsLoaded(true);
+    preloadCriticalResources();
+    optimizeImages();
   }, []);
 
   // Analytics tracking for phone clicks
@@ -40,17 +50,26 @@ const HomePage: React.FC = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-white to-purple-50">
-      {/* Skip to main content for accessibility */}
-      <a
-        href="#main-content"
-        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-indigo-600 text-white px-4 py-2 rounded-md z-50"
-      >
-        Skip to main content
-      </a>
+    <>
+      <SEOHead
+        title="Zion Tech Group - Advanced AI and IT Solutions"
+        description="Leading provider of enterprise AI solutions, quantum computing, and autonomous systems. Transform your business with our cutting-edge technology."
+        keywords="AI solutions, enterprise AI, quantum computing, autonomous systems, digital transformation, IT consulting"
+        url="https://ziontechgroup.com"
+      />
+      <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-white to-purple-50">
+        {/* Skip to main content for accessibility */}
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-indigo-600 text-white px-4 py-2 rounded-md z-50"
+        >
+          Skip to main content
+        </a>
 
       {/* Content Promotion Banner */}
-      <ContentPromotionBanner />
+      <Suspense fallback={<LoadingSpinner text="Loading content..." />}>
+        <ContentPromotionBanner />
+      </Suspense>
 
       <main id="main-content" className="container mx-auto px-4 py-16" role="main">
         {/* Hero Section */}
@@ -107,16 +126,24 @@ const HomePage: React.FC = () => {
         </section>
 
         {/* Content Carousel */}
-        <ContentCarousel />
+        <Suspense fallback={<LoadingSpinner text="Loading featured content..." />}>
+          <ContentCarousel />
+        </Suspense>
 
         {/* Dynamic Content Showcase */}
-        <DynamicContentShowcase />
+        <Suspense fallback={<LoadingSpinner text="Loading content showcase..." />}>
+          <DynamicContentShowcase />
+        </Suspense>
 
         {/* Content Statistics */}
-        <ContentStatistics />
+        <Suspense fallback={<LoadingSpinner text="Loading statistics..." />}>
+          <ContentStatistics />
+        </Suspense>
 
         {/* Newsletter Signup */}
-        <ContentNewsletterSignup />
+        <Suspense fallback={<LoadingSpinner text="Loading newsletter..." />}>
+          <ContentNewsletterSignup />
+        </Suspense>
 
         {/* Call to Action Section */}
         <section className="text-center" aria-labelledby="cta-heading">
@@ -133,7 +160,8 @@ const HomePage: React.FC = () => {
           </a>
         </section>
       </main>
-    </div>
+      </div>
+    </>
   );
 };
 
