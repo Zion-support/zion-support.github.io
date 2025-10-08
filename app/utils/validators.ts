@@ -98,7 +98,7 @@ export function isStrongPassword(password: string): boolean {
   const hasUpperCase = /[A-Z]/.test(password);
   const hasLowerCase = /[a-z]/.test(password);
   const hasNumber = /[0-9]/.test(password);
-
+  
   return hasMinLength && hasUpperCase && hasLowerCase && hasNumber;
 }
 
@@ -107,13 +107,13 @@ export function isStrongPassword(password: string): boolean {
  */
 export function getPasswordStrength(password: string): number {
   let score = 0;
-
+  
   if (password.length >= 8) score++;
   if (password.length >= 12) score++;
   if (/[A-Z]/.test(password) && /[a-z]/.test(password)) score++;
   if (/[0-9]/.test(password)) score++;
   if (/[^a-zA-Z0-9]/.test(password)) score++;
-
+  
   return Math.min(score, 4);
 }
 
@@ -122,28 +122,28 @@ export function getPasswordStrength(password: string): number {
  */
 export function isValidCreditCard(cardNumber: string): boolean {
   const cleaned = cardNumber.replace(/\s/g, '');
-
+  
   if (!/^\d{13,19}$/.test(cleaned)) {
     return false;
   }
-
+  
   let sum = 0;
   let isEven = false;
-
+  
   for (let i = cleaned.length - 1; i >= 0; i--) {
     let digit = parseInt(cleaned.charAt(i), 10);
-
+    
     if (isEven) {
       digit *= 2;
       if (digit > 9) {
         digit -= 9;
       }
     }
-
+    
     sum += digit;
     isEven = !isEven;
   }
-
+  
   return sum % 10 === 0;
 }
 
@@ -171,16 +171,16 @@ export function validateObject<T extends Record<string, unknown>>(
   schema: Record<keyof T, (value: unknown) => boolean>
 ): ValidationResult {
   const errors: string[] = [];
-
+  
   for (const key in schema) {
     const validator = schema[key];
     const value = obj[key];
-
+    
     if (!validator(value)) {
       errors.push(`Invalid value for field: ${String(key)}`);
     }
   }
-
+  
   return {
     isValid: errors.length === 0,
     errors,
@@ -198,24 +198,26 @@ export interface FormField {
   }>;
 }
 
-export function validateForm(fields: Record<string, FormField>): Record<string, string[]> {
+export function validateForm(
+  fields: Record<string, FormField>
+): Record<string, string[]> {
   const errors: Record<string, string[]> = {};
-
+  
   for (const fieldName in fields) {
     const field = fields[fieldName];
     const fieldErrors: string[] = [];
-
+    
     for (const validator of field.validators) {
       if (!validator.validate(field.value)) {
         fieldErrors.push(validator.message);
       }
     }
-
+    
     if (fieldErrors.length > 0) {
       errors[fieldName] = fieldErrors;
     }
   }
-
+  
   return errors;
 }
 
@@ -243,9 +245,7 @@ export const validators = {
     validate: (value: string) => maxLength(value, max),
     message,
   }),
-  password: (
-    message = 'Password must be at least 8 characters with uppercase, lowercase, and number'
-  ) => ({
+  password: (message = 'Password must be at least 8 characters with uppercase, lowercase, and number') => ({
     validate: isStrongPassword,
     message,
   }),
