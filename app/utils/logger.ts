@@ -303,13 +303,10 @@ class Logger {
 
     switch (entry.level) {
       case LogLevel.DEBUG:
-        console.debug(message, entry.metadata)
         break
       case LogLevel.INFO:
-        console.info(message, entry.metadata)
         break
       case LogLevel.WARN:
-        console.warn(message, entry.metadata)
         break
       case LogLevel.ERROR:
       case LogLevel.FATAL:

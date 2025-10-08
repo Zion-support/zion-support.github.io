@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://ziontechgroup.com'
-  origin/cursor/fix-errors-and-merge-to-main-6395
+  
   return [
     {
       url: baseUrl,

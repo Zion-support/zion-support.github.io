@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { memo } from 'react';
 import { Link } from 'react-router-dom';
 import { Phone, Mail, MapPin, Clock, Award, Shield, Zap } from 'lucide-react';
 
-const Footer: React.FC = () => {
+const Footer: React.FC = memo(() => {
   return (
     <footer className="bg-gray-900 text-white py-12">
       <div className="container mx-auto px-4">
@@ -78,6 +78,36 @@ const Footer: React.FC = () => {
                 </Link>
               </li>
               <li>
+                <Link to="/ai-data-analytics" className="hover:text-white transition-colors">
+                  AI Data Analytics
+                </Link>
+              </li>
+              <li>
+                <Link to="/ai-cybersecurity" className="hover:text-white transition-colors">
+                  AI Cybersecurity
+                </Link>
+              </li>
+              <li>
+                <Link to="/ai-workflow-automation" className="hover:text-white transition-colors">
+                  AI Workflow Automation
+                </Link>
+              </li>
+              <li>
+                <Link to="/ai-cloud-infrastructure" className="hover:text-white transition-colors">
+                  AI Cloud Infrastructure
+                </Link>
+              </li>
+              <li>
+                <Link to="/ai-ecommerce-solutions" className="hover:text-white transition-colors">
+                  AI E-commerce Solutions
+                </Link>
+              </li>
+              <li>
+                <Link to="/ai-mobile-app-development" className="hover:text-white transition-colors">
+                  AI Mobile App Development
+                </Link>
+              </li>
+              <li>
                 <Link to="/it-services" className="hover:text-white transition-colors">
                   IT Services
                 </Link>
@@ -124,8 +154,8 @@ const Footer: React.FC = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4">Contact</h4>
             <div className="space-y-2 text-gray-300">
-              <p>Email: contact@ziontechgroup.com</p>
-              <p>Phone: +1 (302) 600-9898</p>
+              <p>Email: kleber@ziontechgroup.com</p>
+              <p>Phone: +1 (302) 464-0950</p>
               <p>Website: ziontechgroup.com</p>
               <div className="flex space-x-4 mt-4">
                 <a href="https://linkedin.com/company/ziontechgroup" className="text-gray-300 hover:text-white transition-colors">
@@ -133,15 +163,11 @@ const Footer: React.FC = () => {
                 </a>
                 <a href="https://twitter.com/ziontechgroup" className="text-gray-300 hover:text-white transition-colors">
                   Twitter
-                </a>origin/main
+                </a>
               </div>
-              <p className="text-gray-300 mb-6 max-w-md">
-                Leading provider of enterprise AI solutions, quantum computing, autonomous systems, 
-                and comprehensive IT services. Transforming businesses through cutting-edge technology.
-              </p>
               
               {/* Contact Info */}
-              <div className="space-y-3">
+              <div className="space-y-3 mt-6">
                 <div className="flex items-center">
                   <Phone className="w-5 h-5 mr-3 text-blue-400" />
                   <a href="tel:+13024640950" className="text-gray-300 hover:text-white transition-colors">
@@ -165,97 +191,10 @@ const Footer: React.FC = () => {
               </div>
             </div>
 
-            {/* Services */}
-            <div>
-              <h4 className="text-lg font-semibold mb-6">Our Services</h4>
-              <ul className="space-y-3">
-                <li>
-                  <Link to="/micro-saas" className="text-gray-300 hover:text-white transition-colors flex items-center">
-                    <Zap className="w-4 h-4 mr-2 text-blue-400" />
-                    Micro SAAS Solutions
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/ai-services" className="text-gray-300 hover:text-white transition-colors flex items-center">
-                    <Award className="w-4 h-4 mr-2 text-blue-400" />
-                    AI Services
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/it-services" className="text-gray-300 hover:text-white transition-colors flex items-center">
-                    <Shield className="w-4 h-4 mr-2 text-blue-400" />
-                    IT Services
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/quantum-computing" className="text-gray-300 hover:text-white transition-colors">
-                    Quantum Computing
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/autonomous-systems" className="text-gray-300 hover:text-white transition-colors">
-                    Autonomous Systems
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/blockchain-web3" className="text-gray-300 hover:text-white transition-colors">
-                    Blockchain & Web3
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/cybersecurity" className="text-gray-300 hover:text-white transition-colors">
-                    Cybersecurity
-                  </Link>
-                </li>
-              </ul>
-            </div>
-
-            {/* Quick Links */}
-            <div>
-              <h4 className="text-lg font-semibold mb-6">Quick Links</h4>
-              <ul className="space-y-3">
-                <li>
-                  <Link to="/" className="text-gray-300 hover:text-white transition-colors">
-                    Home
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/about" className="text-gray-300 hover:text-white transition-colors">
-                    About Us
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/services" className="text-gray-300 hover:text-white transition-colors">
-                    All Services
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/case-studies" className="text-gray-300 hover:text-white transition-colors">
-                    Case Studies
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/enterprise" className="text-gray-300 hover:text-white transition-colors">
-                    Enterprise Solutions
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/team" className="text-gray-300 hover:text-white transition-colors">
-                    Our Team
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/contact" className="text-gray-300 hover:text-white transition-colors">
-                    Contact Us
-                  </Link>
-                </li>
-              </ul>
-            </div>
-
             {/* Resources */}
             <div>
-              <h4 className="text-lg font-semibold mb-6">Resources</h4>
-              <ul className="space-y-3">
+              <h4 className="text-lg font-semibold mb-4">Resources</h4>
+              <ul className="space-y-2">
                 <li>
                   <Link to="/blog" className="text-gray-300 hover:text-white transition-colors">
                     Blog & Insights
@@ -348,6 +287,8 @@ const Footer: React.FC = () => {
       </div>
     </footer>
   );
-};
+});
+
+Footer.displayName = 'Footer';
 
 export default Footer;

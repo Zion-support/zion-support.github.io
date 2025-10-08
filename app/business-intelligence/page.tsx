@@ -17,7 +17,7 @@ const BusinessIntelligencePage: React.FC = () => {
     },
     {
       title: 'Predictive Analytics & Forecasting',
-      description: 'Advanced forecasting models for sales, demand, inventory, and business trend prediction.',cursor/add-new-services-and-deploy-updates-f159
+      description: 'Advanced forecasting models for sales, demand, inventory, and business trend prediction.',
       icon: '🔮',
       price: 'Starting at $3,500/month',
       features: ['Time series forecasting', 'Demand prediction', 'Sales forecasting', 'Risk assessment', 'Scenario modeling'],

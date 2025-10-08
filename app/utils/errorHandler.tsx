@@ -259,13 +259,11 @@ export class ErrorHandler {
           console.error(logMessage, error);
           break;
         case ErrorSeverity.MEDIUM:
-          console.warn(logMessage, error);
           break;
         case ErrorSeverity.LOW:
           if (process.env['NODE_ENV'] === 'development') {
             if (import.meta.env.DEV) {
-              console.info(logMessage, error);
-            }
+              }
           }
           break;
       }
@@ -405,7 +403,7 @@ export class ErrorHandler {
         // Retry network request
         if (process.env['NODE_ENV'] === 'development') {
           if (import.meta.env.DEV) {
-            console.log(`Retrying network request (attempt ${retryItem.retryCount})`);
+            `);
           }
         }
         // Add your retry logic here
