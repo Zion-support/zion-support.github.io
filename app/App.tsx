@@ -73,8 +73,8 @@ const App: React.FC = () => {
         .then((registration) => {
           logger.info('Service Worker registered', { scope: registration.scope });
         })
-        .catch((error) => {
-          logger.error('Service Worker registration failed', { error });
+        .catch((error: Error) => {
+          logger.error('Service Worker registration failed', error);
         });
     }
 

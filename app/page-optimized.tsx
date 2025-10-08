@@ -4,18 +4,8 @@ import SEOOptimizer from './components/SEOOptimizer';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 
-// Lazy load heavy components - these may not exist, so make them optional
-const UnifiedBanner = dynamic(() => import('./components/NewestContent2025Banner').catch(() => ({ default: () => null })), {
-  loading: () => <div className="animate-pulse bg-gray-200 h-32 rounded-lg"></div>,
-  ssr: false
-});
-
-const ContentPromotion = dynamic(() => import('./components/UltimateBusinessIntelligence2025Banner').catch(() => ({ default: () => null })), {
-  loading: () => <div className="animate-pulse bg-gray-200 h-64 rounded-lg"></div>,
-  ssr: false
-});
-
-const ContentShowcase = dynamic(() => import('./components/UltimateBusinessIntelligenceShowcase2025').catch(() => ({ default: () => null })), {
+// Lazy load heavy components with fallback to existing components
+const ContentShowcaseComponent = dynamic(() => import('./components/ContentShowcase').catch(() => ({ default: () => null })), {
   loading: () => <div className="animate-pulse bg-gray-200 h-48 rounded-lg"></div>,
   ssr: false
 });
@@ -72,8 +62,8 @@ export default function OptimizedHomePage() {
         <SEOOptimizer />
         <PerformanceMonitor />
         
-        {/* Unified Banner System */}
-        <UnifiedBanner />
+        {/* Content Showcase */}
+        <ContentShowcaseComponent />
         
         {/* Main Content */}
         <main className="relative">
@@ -112,10 +102,7 @@ export default function OptimizedHomePage() {
           </section>
 
           {/* Content Showcase */}
-          <ContentShowcase />
-          
-          {/* Content Promotion */}
-          <ContentPromotion />
+          <ContentShowcaseComponent />
         </main>
       </div>
     </AccessibilityEnhancer>
