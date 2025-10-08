@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 
 <<<<<<< HEAD:app/App.tsx.disabled
+<<<<<<< HEAD:app/App.tsx.disabled
 //Components
 import ErrorBoundary from './components/ErrorBoundary';
 import SEOOptimizer from './components/SEOOptimizer';
@@ -12,15 +13,29 @@ import SEOOptimizer from './components/SEOOptimizer';
 import ErrorBoundary from '../src/components/ErrorBoundary';
 import SEOOptimizer from '../src/components/SEOOptimizer';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-4b0f:app/App.tsx
+=======
+// Components
+import ErrorBoundary from '../src/components/ErrorBoundary';
+import SEOOptimizer from '../src/components/SEOOptimizer';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-a885:app/App.tsx
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import PerformanceDashboard from './components/PerformanceDashboard';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 import LoadingSpinner from './components/LoadingSpinner';
+<<<<<<< HEAD:app/App.tsx.disabled
 =======
 import { LoadingSpinner } from './components/LoadingComponents';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import PerformanceDashboard from './components/PerformanceDashboard';
+=======
+
+// Utils
+import { performanceOptimizer } from '../src/utils/performanceOptimizer';
+
+// Styles
+import '../src/index.css';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-a885:app/App.tsx
 
 // Lazy load pages for better performance
 const HomePage = React.lazy(() => import('./page'));
