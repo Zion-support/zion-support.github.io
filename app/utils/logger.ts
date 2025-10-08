@@ -36,14 +36,6 @@ class Logger {
       console.warn(`[WARN] ${message}`, data || '');
     }
   }
-
-<<<<<<< HEAD
-  error(message: string, error?: Error | any): void {
-    if (typeof console !== 'undefined') {
-      console.error(`[ERROR] ${message}`, error || '');
-=======
-    this.log(LogLevel.WARN, message, context, meta)
-  }
   /**
    * Log an error message
    */
@@ -307,7 +299,6 @@ class Logger {
         return 'FATAL'
       default:
         return 'UNKNOWN'
->>>>>>> cursor/fix-errors-and-merge-to-main-ef5d
     }
   }
 }
