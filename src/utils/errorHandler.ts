@@ -2,7 +2,6 @@
  * Error handling utilities
  * Enhanced with retry logic, error categorization, and better reporting
  */
-}
 
 export enum ErrorCategory {
   NETWORK = 'network',
