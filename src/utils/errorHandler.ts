@@ -50,7 +50,7 @@ export class ErrorHandler {
   /**
    * Log an error with automatic categorization
    */
-  logError(error: Error, errorInfo?: Partial<ErrorInfo>): void {
+  logError(error: Error, errorInfo?: Partial<ErrorInfo>): ErrorInfo {
     const category = this.categorizeError(error);
     const severity = this.determineSeverity(error, category);
     
@@ -133,7 +133,7 @@ export class ErrorHandler {
     const now = new Date();
     const oneHourAgo = new Date(now.getTime() - 60 * 60 * 1000);
     const recent = this.errorQueue.filter(
-      error => new Date(error.timestamp) > oneHourAgo
+      error => error.timestamp && new Date(error.timestamp) > oneHourAgo
     ).length;
 
     return {
