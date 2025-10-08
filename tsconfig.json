@@ -91,7 +91,6 @@
     "out",
     "dist",
     "_app_disabled/**/*",
-    "app_disabled/**",
     "_conflicted_disabled/**/*",
     "_pages_api_disabled/**/*",
     "_pages_disabled/**/*",
@@ -190,5 +189,10 @@
     "fix-*.jsx",
     "fix-*.ts",
     "jest.setup.*"
+  ],
+  "references": [
+    {
+      "path": "./tsconfig.node.json"
+    }
   ]
 }

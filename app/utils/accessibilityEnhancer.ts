@@ -153,8 +153,8 @@ class AccessibilityEnhancer {
     if (!currentElement) return;
 
     // Handle radio button groups
-    if ('type' in currentElement && (currentElement as HTMLInputElement).type === 'radio') {
-      this.handleRadioGroupNavigation(event, currentElement as HTMLInputElement);
+    if (currentElement instanceof HTMLInputElement && currentElement.type === 'radio') {
+      this.handleRadioGroupNavigation(event, currentElement);
     }
     
     // Handle menu navigation
@@ -678,15 +678,10 @@ class AccessibilityEnhancer {
     
     return `
 Accessibility Report:
-Total Issues: ${metrics.totalIssues}
-- Critical: ${metrics.criticalIssues}
-- Keyboard Navigation Issues: ${metrics.keyboardNavigationIssues}
-- Screen Reader Issues: ${metrics.screenReaderIssues}
-- Color Contrast Issues: ${metrics.colorContrastIssues}
-- ARIA Issues: ${metrics.ariaIssues}
-- Focus Management Issues: ${metrics.focusManagementIssues}
-`;
+- Skip Links: ${metrics.skipLinks}
+- Focus Indicators: ${metrics.focusIndicators}
+- ARIA Labels: ${metrics.ariaLabels}
+- Keyboard Navigation: ${metrics.keyboardNavigation}
+    `;
   }
 }
-
-export const accessibilityEnhancer = new AccessibilityEnhancerService();

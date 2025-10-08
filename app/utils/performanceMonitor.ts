@@ -43,13 +43,13 @@ class PerformanceMonitor {
     this.observeCLS();
   }
 
-  private observePaint(name: string, metricKey: 'fcp' | 'lcp' | 'fid' | 'cls' | 'ttfb' | 'fmp'): void {
+  private observePaint(name: string, metricKey: keyof PerformanceMetrics): void {
     try {
       const observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           if (entry.name === name) {
-            this.metrics[metricKey] = entry.startTime;
-            this.logMetric(metricKey, entry.startTime);
+            (this.metrics as any)[metricKey] = entry.startTime;
+            this.logMetric(metricKey as string, entry.startTime);
           }
         }
       });
@@ -234,16 +234,12 @@ class PerformanceMonitor {
     
     return `
 Performance Report:
-Overall Score: ${score}/100
-
-Core Web Vitals:
-- FCP (First Contentful Paint): ${metrics.fcp ? `${metrics.fcp.toFixed(2)}ms` : 'N/A'}
-- LCP (Largest Contentful Paint): ${metrics.lcp ? `${metrics.lcp.toFixed(2)}ms` : 'N/A'}
-- FID (First Input Delay): ${metrics.fid ? `${metrics.fid.toFixed(2)}ms` : 'N/A'}
-- CLS (Cumulative Layout Shift): ${metrics.cls ? metrics.cls.toFixed(3) : 'N/A'}
-- TTFB (Time to First Byte): ${metrics.ttfb ? `${metrics.ttfb.toFixed(2)}ms` : 'N/A'}
-`;
+- Score: ${score}/100
+- FCP: ${metrics.fcp?.toFixed(2)}ms
+- LCP: ${metrics.lcp?.toFixed(2)}ms
+- FID: ${metrics.fid?.toFixed(2)}ms
+- CLS: ${metrics.cls?.toFixed(3)}
+- TTFB: ${metrics.ttfb?.toFixed(2)}ms
+    `;
   }
 }
-
-export const performanceMonitor = new PerformanceMonitor();
