@@ -136,7 +136,7 @@ export class Logger {
     switch (entry.level) {
       case LogLevel.DEBUG:
         if (process.env.NODE_ENV === 'development') {
-          if (process.env.NODE_ENV === 'development') { console.debug(message, entry.data ?? ''); }
+          console.debug(message, entry.data ?? '');
         }
         break;
       case LogLevel.INFO:
