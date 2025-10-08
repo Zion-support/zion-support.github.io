@@ -3,7 +3,7 @@
  * Provides tools for monitoring and optimizing application performance
  */
 
-import { logger } from './logger';
+// import { logger } from './logger';
 
 interface PerformanceMetrics {
   loadTime: number;
@@ -323,7 +323,6 @@ ${metrics.memoryUsage > 30 * 1024 * 1024 ? '- Review memory usage and optimize c
       cls: this.metrics.cls || 0,
       fmp: this.metrics.fmp || 0,
     };
-  }
   }
 
   /**
