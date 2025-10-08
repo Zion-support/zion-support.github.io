@@ -14,68 +14,72 @@ export const PerformanceMonitor: React.FC = () => {
 
   useEffect(() => {
     const measurePerformance = () => {
-      if (typeof window === 'undefined' || !window.performance) {
-        return;
-      }
+      if (typeof window === 'undefined' || !window.performance) return;
 
-      const navigation = window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-      const paintEntries = window.performance.getEntriesByType('paint');
+      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      const paintEntries = performance.getEntriesByType('paint');
+      
       const fcp = paintEntries.find(entry => entry.name === 'first-contentful-paint');
-      const lcp = window.performance.getEntriesByType('largest-contentful-paint')[0] as PerformanceEntry;
+      const lcp = performance.getEntriesByType('largest-contentful-paint')[0] as PerformanceEntry;
       
       const metrics: PerformanceMetrics = {
-        loadTime: navigation.loadEventEnd - navigation.loadEventStart,
+        loadTime: navigation?.loadEventEnd ? navigation.loadEventEnd - navigation.loadEventStart : 0,
         firstContentfulPaint: fcp ? fcp.startTime : 0,
         largestContentfulPaint: lcp ? lcp.startTime : 0,
-        cumulativeLayoutShift: 0,
-        firstInputDelay: 0,
+        cumulativeLayoutShift: 0, // Would need to be measured with observer
+        firstInputDelay: 0, // Would need to be measured with observer
       };
 
       setMetrics(metrics);
     };
 
     // Measure after page load
-    if (document.readyState === 'complete') {
-      measurePerformance();
-    } else {
-      window.addEventListener('load', measurePerformance);
+    if (typeof document !== 'undefined') {
+      if (document.readyState === 'complete') {
+        measurePerformance();
+      } else {
+        window.addEventListener('load', measurePerformance);
+        return () => window.removeEventListener('load', measurePerformance);
+      }
     }
+    return undefined;
+  }, []);
 
-    // Toggle visibility with keyboard shortcut (Ctrl+Shift+P)
-    const handleKeyPress = (e: KeyboardEvent) => {
+  // Toggle visibility with keyboard shortcut (Ctrl+Shift+P)
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
       if (e.ctrlKey && e.shiftKey && e.key === 'P') {
         setIsVisible(prev => !prev);
       }
     };
 
-    window.addEventListener('keydown', handleKeyPress);
-
-    return () => {
-      window.removeEventListener('keydown', handleKeyPress);
-      window.removeEventListener('load', measurePerformance);
-    };
+    if (typeof window !== 'undefined') {
+      window.addEventListener('keydown', handleKeyDown);
+      return () => window.removeEventListener('keydown', handleKeyDown);
+    }
   }, []);
 
-  if (!isVisible || !metrics) {
-    return null;
-  }
+  if (!isVisible || !metrics) return null;
 
   return (
-    <div className="fixed bottom-4 right-4 bg-white rounded-lg shadow-lg p-4 z-50 max-w-sm">
-      <h3 className="text-lg font-bold mb-2">Performance Metrics</h3>
-      <div className="space-y-1 text-sm">
+    <div className="fixed bottom-4 right-4 bg-black bg-opacity-90 text-white p-4 rounded-lg text-sm font-mono z-50">
+      <div className="flex items-center justify-between mb-2">
+        <h3 className="font-bold">Performance Metrics</h3>
+        <button 
+          onClick={() => setIsVisible(false)}
+          className="text-gray-400 hover:text-white"
+        >
+          ×
+        </button>
+      </div>
+      <div className="space-y-1">
         <div>Load Time: {metrics.loadTime.toFixed(2)}ms</div>
         <div>FCP: {metrics.firstContentfulPaint.toFixed(2)}ms</div>
         <div>LCP: {metrics.largestContentfulPaint.toFixed(2)}ms</div>
-        <div>CLS: {metrics.cumulativeLayoutShift.toFixed(3)}</div>
-        <div>FID: {metrics.firstInputDelay.toFixed(2)}ms</div>
+        <div className="text-xs text-gray-400 mt-2">
+          Press Ctrl+Shift+P to toggle
+        </div>
       </div>
-      <button
-        onClick={() => setIsVisible(false)}
-        className="mt-2 text-xs text-gray-500 hover:text-gray-700"
-      >
-        Close (Ctrl+Shift+P)
-      </button>
     </div>
   );
 };

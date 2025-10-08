@@ -1,5 +1,4 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { ArrowLeft, Home, Search, BookOpen, Users, Phone } from 'lucide-react';
 
 export default function NotFound() {
@@ -17,10 +16,10 @@ export default function NotFound() {
       icon: '📚'
     },
     {
-      title: 'Enterprise Solutions',
-      description: 'Fortune 500 AI transformation solutions',
-      href: '/enterprise',
-      icon: '🏢'
+      title: 'About Us',
+      description: 'Learn more about Zion Tech Group',
+      href: '/about',
+      icon: '👥'
     },
     {
       title: 'Case Studies',
@@ -37,8 +36,8 @@ export default function NotFound() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 flex items-center justify-center px-4 py-12">
+      <div className="max-w-4xl mx-auto text-center">
         {/* Error Code */}
         <div className="mb-8">
           <h1 className="text-9xl font-bold text-gray-300 mb-4">
@@ -49,73 +48,76 @@ export default function NotFound() {
 
         {/* Error Message */}
         <div className="mb-12">
-          <h2 className="text-4xl font-bold text-white mb-6">
-            Oops! Page Not Found
+          <h2 className="text-3xl font-bold text-white mb-4">
+            Page Not Found
           </h2>
-          <p className="text-xl text-gray-300 leading-relaxed">
-            The page you're looking for doesn't exist or has been moved. 
-            Don't worry, let's get you back on track!
+          <p className="text-xl text-gray-300 mb-6">
+            The page you&apos;re looking for doesn&apos;t exist or has been moved. 
+            Don&apos;t worry, let&apos;s get you back on track!
           </p>
         </div>
 
-        {/* Popular Pages */}
+        {/* Navigation Options */}
         <div className="mb-12">
-          <h3 className="text-2xl font-bold text-white mb-8">Popular Pages</h3>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {popularPages.map((page, index) => (
-              <Link
-                key={index}
-                to={page.href}
-                className="group bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 hover:bg-white/20 transition-all duration-300 transform hover:-translate-y-2"
-              >
-                <div className="text-4xl mb-4">{page.icon}</div>
-                <h4 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">
-                  {page.title}
-                </h4>
-                <p className="text-gray-300 group-hover:text-gray-200 transition-colors">
-                  {page.description}
-                </p>
-              </Link>
-            ))}
+          <div className="flex flex-wrap gap-4 justify-center mb-6">
+            <Link
+              href="/"
+              className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300"
+            >
+              <Home className="w-4 h-4 mr-2" />
+              Back to Home
+            </Link>
+            <button
+              onClick={() => window.history.back()}
+              className="inline-flex items-center px-6 py-3 bg-white/20 text-white border border-white/30 rounded-lg hover:bg-white/30 transition-all duration-300"
+            >
+              <ArrowLeft className="w-4 h-4 mr-2" />
+              Go Back
+            </button>
           </div>
-        </div>
 
-        {/* Action Buttons */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <Link
-            to="/"
-            className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-xl hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
-          >
-            <Home className="w-5 h-5 mr-2" />
-            Go Home
-          </Link>
-          <Link
-            to="/contact"
-            className="inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-sm border border-white/20 text-white font-semibold rounded-xl hover:bg-white/20 transition-all duration-300 transform hover:scale-105"
-          >
-            <Phone className="w-5 h-5 mr-2" />
-            Contact Support
-          </Link>
+          <div className="text-left">
+            <h3 className="text-2xl font-bold text-white mb-6 text-center">
+              Popular Pages
+            </h3>
+            <div className="grid md:grid-cols-2 gap-4">
+              {popularPages.map((page, index) => (
+                <Link
+                  key={index}
+                  href={page.href}
+                  className="flex items-start gap-4 p-4 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl hover:bg-white/20 transition-all duration-300"
+                >
+                  <span className="text-3xl">{page.icon}</span>
+                  <div>
+                    <h4 className="text-lg font-semibold text-white mb-1">
+                      {page.title}
+                    </h4>
+                    <p className="text-sm text-gray-300">{page.description}</p>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </div>
         </div>
 
         {/* Search Suggestion */}
         <div className="mt-12 bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8">
           <h3 className="text-xl font-bold text-white mb-4">
-            Can't find what you're looking for?
+            Can&apos;t find what you&apos;re looking for?
           </h3>
           <p className="text-gray-300 mb-6">
             Try searching for what you need or contact our support team.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <Link
-              to="/search"
+              href="/"
               className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300"
             >
               <Search className="w-4 h-4 mr-2" />
               Search Our Site
             </Link>
             <Link
-              to="/contact"
+              href="/contact"
               className="inline-flex items-center px-6 py-3 bg-white/20 text-white border border-white/30 rounded-lg hover:bg-white/30 transition-all duration-300"
             >
               <Phone className="w-4 h-4 mr-2" />

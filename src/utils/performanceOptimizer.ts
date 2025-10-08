@@ -150,6 +150,13 @@ export const measurePageLoad = (): WebVitalsMetrics | null => {
 };
 
 /**
+ * Collect performance metrics
+ */
+export const collectPerformanceMetrics = (): WebVitalsMetrics | null => {
+  return measurePageLoad();
+};
+
+/**
  * Report Web Vitals to analytics
  */
 export const reportWebVitals = (metrics: WebVitalsMetrics): void => {
@@ -265,6 +272,10 @@ class PerformanceOptimizer {
     return duration;
   }
 
+  public init(): void {
+    this.initialize();
+  }
+
   public lazyLoadImages(): void {
     lazyLoadImages();
   }
@@ -300,6 +311,8 @@ class PerformanceOptimizer {
   }
 
   public initialize(): void {
+    if (typeof window === 'undefined') return;
+    
     this.measurePerformance('lazyLoadImages', () => this.lazyLoadImages());
     this.measurePerformance('preloadCriticalResources', () =>
       this.preloadCriticalResources()
@@ -325,10 +338,7 @@ const performanceUtils = {
   debounce,
   throttle,
   performanceOptimizer,
+  collectPerformanceMetrics,
 };
 
 export default performanceUtils;
-
-// Additional exports
-export const collectPerformanceMetrics = measurePageLoad;
-export const init = () => performanceOptimizer.initialize();
