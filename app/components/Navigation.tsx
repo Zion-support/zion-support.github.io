@@ -9,96 +9,78 @@ const Navigation: React.FC = () => {
   const [itServicesOpen, setItServicesOpen] = useState(false);
 
   return (
-    <nav className="bg-white shadow-lg sticky top-0 z-50">
+    <nav className="bg-gray-900 bg-opacity-95 backdrop-blur-md shadow-lg sticky top-0 z-50 glow-border">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
-          <Link to="/" className="text-2xl font-bold text-blue-600">
+          <Link to="/" className="text-2xl font-bold text-cyan-300 holographic">
             Zion Tech Group
           </Link>
 
           {/* Desktop Menu */}
           <div className="hidden md:flex space-x-8">
-            <Link to="/" className="text-gray-700 hover:text-blue-600 transition-colors">
+            <Link to="/" className="text-gray-300 hover:text-cyan-300 transition-colors neon-glow">
               Home
             </Link>
-            <Link to="/about" className="text-gray-700 hover:text-blue-600 transition-colors">
+            <Link to="/about" className="text-gray-300 hover:text-cyan-300 transition-colors neon-glow">
               About
             </Link>
             <div className="relative">
               <button
                 onClick={() => setServicesOpen(!servicesOpen)}
-                className="text-gray-700 hover:text-blue-600 transition-colors flex items-center"
+                className="text-gray-300 hover:text-cyan-300 transition-colors flex items-center neon-glow"
               >
                 Services
                 <ChevronDown className="w-4 h-4 ml-1" />
               </button>
               {servicesOpen && (
-                <div className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-lg border py-2 z-50">
+                <div className="absolute top-full left-0 mt-2 w-80 bg-gray-900 rounded-lg shadow-lg glow-border py-2 z-50">
                   <div className="grid grid-cols-2 gap-2 p-2">
-                    <Link to="/services" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
+                    <Link to="/services" className="block px-4 py-2 text-gray-300 hover:bg-cyan-900 hover:text-cyan-300 rounded neon-glow">
                       All Services
                     </Link>
-                    <Link to="/micro-saas" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
+                    <Link to="/micro-saas" className="block px-4 py-2 text-gray-300 hover:bg-cyan-900 hover:text-cyan-300 rounded neon-glow">
                       Micro SAAS
                     </Link>
-                    <Link to="/ai-services" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
+                    <Link to="/ai-services" className="block px-4 py-2 text-gray-300 hover:bg-cyan-900 hover:text-cyan-300 rounded neon-glow">
                       AI Services
                     </Link>
-                    <Link to="/it-services" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
+                    <Link to="/it-services" className="block px-4 py-2 text-gray-300 hover:bg-cyan-900 hover:text-cyan-300 rounded neon-glow">
                       IT Services
                     </Link>
-                    <Link to="/quantum-computing" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
+                    <Link to="/quantum-computing" className="block px-4 py-2 text-gray-300 hover:bg-cyan-900 hover:text-cyan-300 rounded neon-glow">
                       Quantum Computing
                     </Link>
-                    <Link to="/autonomous-systems" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
+                    <Link to="/autonomous-systems" className="block px-4 py-2 text-gray-300 hover:bg-cyan-900 hover:text-cyan-300 rounded neon-glow">
                       Autonomous Systems
                     </Link>
-                    <Link to="/business-intelligence" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
+                    <Link to="/business-intelligence" className="block px-4 py-2 text-gray-300 hover:bg-cyan-900 hover:text-cyan-300 rounded neon-glow">
                       Business Intelligence
                     </Link>
-                    <Link to="/blockchain-web3" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
+                    <Link to="/blockchain-web3" className="block px-4 py-2 text-gray-300 hover:bg-cyan-900 hover:text-cyan-300 rounded neon-glow">
                       Blockchain & Web3
                     </Link>
-                    <Link to="/iot-edge-computing" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
+                    <Link to="/iot-edge-computing" className="block px-4 py-2 text-gray-300 hover:bg-cyan-900 hover:text-cyan-300 rounded neon-glow">
                       IoT & Edge Computing
                     </Link>
-                    <Link to="/cybersecurity" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
+                    <Link to="/cybersecurity" className="block px-4 py-2 text-gray-300 hover:bg-cyan-900 hover:text-cyan-300 rounded neon-glow">
                       Cybersecurity
                     </Link>
-                    <Link to="/services-advertising" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
+                    <Link to="/services-advertising" className="block px-4 py-2 text-gray-300 hover:bg-cyan-900 hover:text-cyan-300 rounded neon-glow">
                       Advertising Services
                     </Link>
                   </div>
                 </div>
-              )}origin/main
+              )}
             </div>
           </div>
         </div>
-      </div>
+      </nav>
+    </>
+  );
+};
 
-      {/* Main Navigation */}
-      <nav className="bg-white shadow-lg sticky top-0 z-50">
-        <div className="container mx-auto px-4">
-          <div className="flex justify-between items-center py-4">
-            {/* Logo */}
-            <Link to="/" className="text-2xl font-bold text-blue-600 flex items-center">
-              <span className="text-3xl mr-2">⚡</span>
-              Zion Tech Group
-            </Link>
-
-            {/* Desktop Menu */}
-            <div className="hidden lg:flex space-x-8">
-              <Link to="/" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
-                Home
-              </Link>
-              <Link to="/about" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
-                About
-              </Link>
-              
-              {/* Services Dropdown */}
-              <div className="relative">
-                <button
+export default Navigation;
                   onClick={() => setServicesOpen(!servicesOpen)}
                   className="text-gray-700 hover:text-blue-600 transition-colors flex items-center font-medium"
                 >
