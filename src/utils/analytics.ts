@@ -85,10 +85,6 @@ class Analytics {
     });
   }
 
-  trackInteraction(element: string, action: string, category: string = 'user_interaction'): void {
-    this.track('interaction', category, action, element);
-  }
-
   /**
    * Track user interaction
    */
@@ -105,10 +101,6 @@ class Analytics {
    */
   trackPerformance(metric: string, value: number, unit: string = 'ms'): void {
     this.track('performance', 'metrics', metric, unit, value);
-  }
-
-  trackBusinessEvent(event: string, value?: number, properties?: Record<string, unknown>): void {
-    this.track(event, 'business', 'event', undefined, value, properties);
   }
 
   /**
@@ -167,6 +159,5 @@ class Analytics {
 }
 
 const analytics = new Analytics();
-
 export { analytics };
 export default analytics;

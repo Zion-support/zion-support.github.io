@@ -46,7 +46,8 @@ const ContactPage: React.FC = () => {
                   364 E Main St STE 1008<br />
                   Middletown, DE 19709<br />
                   United States
-                </p>              </div>
+                </p>
+              </div>
             </div>
           </div>
 
@@ -92,7 +93,8 @@ const ContactPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </div>  );
+    </div>
+  );
 };
 
 export default ContactPage;

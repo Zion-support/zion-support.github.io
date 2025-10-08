@@ -236,16 +236,13 @@ class PerformanceMonitor {
     const metrics = this.getMetrics();
     
     return `
-Performance Report
-==================
-Performance Score: ${score}/100
-
-Core Web Vitals:
-- LCP: ${metrics.lcp ? metrics.lcp.toFixed(0) : "N/A"}ms
-- FID: ${metrics.fid ? metrics.fid.toFixed(0) : "N/A"}ms
-- CLS: ${metrics.cls ? metrics.cls.toFixed(3) : "N/A"}
-- FCP: ${metrics.fcp ? metrics.fcp.toFixed(0) : "N/A"}ms
-- TTFB: ${metrics.ttfb ? metrics.ttfb.toFixed(0) : "N/A"}ms
+      Performance Report (Score: ${score}/100):
+      - First Contentful Paint: ${metrics.fcp?.toFixed(2)}ms
+      - Largest Contentful Paint: ${metrics.lcp?.toFixed(2)}ms
+      - First Input Delay: ${metrics.fid?.toFixed(2)}ms
+      - Cumulative Layout Shift: ${metrics.cls?.toFixed(4)}
+      - Time to Interactive: ${metrics.tti?.toFixed(2)}ms
+      - Total Blocking Time: ${metrics.tbt?.toFixed(2)}ms
     `;
   }
 }
