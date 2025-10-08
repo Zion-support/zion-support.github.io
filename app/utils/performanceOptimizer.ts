@@ -178,7 +178,7 @@ class PerformanceOptimizer {
 
     // This would typically be handled by the bundler (Vite/Webpack)
     // Here we can add runtime optimizations
-    if (process.env.NODE_ENV === 'development') { console.log('Code splitting enabled for better performance'); }
+    if (process.env.NODE_ENV === 'development') { if (import.meta.env.DEV) { console.log('Code splitting enabled for better performance'); } }
   }
 
   /**
@@ -192,10 +192,10 @@ class PerformanceOptimizer {
     // Register service worker for caching
     navigator.serviceWorker.register('/sw.js')
       .then((registration) => {
-        if (process.env.NODE_ENV === 'development') { console.log('Service Worker registered:', registration); }
+        if (process.env.NODE_ENV === 'development') { if (import.meta.env.DEV) { console.log('Service Worker registered:', registration); } }
       })
       .catch((error) => {
-        if (process.env.NODE_ENV === 'development') { console.log('Service Worker registration failed:', error); }
+        if (process.env.NODE_ENV === 'development') { if (import.meta.env.DEV) { console.log('Service Worker registration failed:', error); } }
       });
   }
 
@@ -271,7 +271,7 @@ ${metrics.memoryUsage > 30 * 1024 * 1024 ? '- Review memory usage and optimize c
 
     images.forEach(img => imageObserver.observe(img));
     if (process.env.NODE_ENV === 'development') {
-      console.log('Lazy loading initialized for images');
+      if (import.meta.env.DEV) { console.log('Lazy loading initialized for images'); }
     }
   }
 
@@ -297,7 +297,7 @@ ${metrics.memoryUsage > 30 * 1024 * 1024 ? '- Review memory usage and optimize c
     });
 
     if (process.env.NODE_ENV === 'development') {
-      console.log('Critical resource hints added');
+      if (import.meta.env.DEV) { console.log('Critical resource hints added'); }
     }
   }
 
@@ -330,7 +330,7 @@ ${metrics.memoryUsage > 30 * 1024 * 1024 ? '- Review memory usage and optimize c
    */
   reportWebVitals(metrics: PerformanceMetrics): void {
     if (process.env.NODE_ENV === 'development') {
-      console.log('Web Vitals reported:', metrics);
+      if (import.meta.env.DEV) { console.log('Web Vitals reported:', metrics); }
     }
     
     // Send to analytics if available
@@ -356,8 +356,8 @@ ${metrics.memoryUsage > 30 * 1024 * 1024 ? '- Review memory usage and optimize c
     this.enableCaching();
     
     if (process.env.NODE_ENV === 'development') {
-      console.log('Performance optimization completed');
-      console.log(this.generateReport());
+      if (import.meta.env.DEV) { console.log('Performance optimization completed'); }
+      if (import.meta.env.DEV) { console.log(this.generateReport()); }
     }
   }
 
