@@ -1,10 +1,5 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-import { CheckCircle, Star, Atom, Cpu, Shield, Zap, Target, BarChart, Brain, Lock } from 'lucide-react';
-=======
-import { CheckCircle, Star, Atom, Zap, Shield, Cpu, Brain, Target, BarChart, Lock } from 'lucide-react';
->>>>>>> cursor/add-new-services-and-deploy-updates-f159
 
 const QuantumComputingPage: React.FC = () => {
   const quantumServices = [
@@ -13,203 +8,12 @@ const QuantumComputingPage: React.FC = () => {
       description: 'Custom quantum algorithms for optimization, cryptography, and machine learning applications.',
       icon: '⚛️',
       price: 'Starting at $15,000/project',
-<<<<<<< HEAD
-      features: ['Custom quantum algorithms', 'Quantum circuit design', 'Optimization problems', 'Cryptographic protocols', 'Performance benchmarking'],
-      benefits: ['Solve complex problems exponentially faster', 'Break through classical computing limits', 'Enable new computational possibilities'],
-=======
-      features: ['Custom algorithm design', 'Quantum circuit optimization', 'Error correction', 'Performance benchmarking', 'Documentation'],
-      benefits: ['Solve complex problems exponentially faster', 'Achieve quantum advantage', 'Future-proof your technology'],
->>>>>>> cursor/add-new-services-and-deploy-updates-f159
       marketPrice: '$25,000-75,000/project',
       category: 'Algorithm Development',
       technologies: ['Qiskit', 'Cirq', 'PennyLane', 'Q#', 'Quantum Assembly']
     },
     {
       title: 'Quantum Cryptography Solutions',
-<<<<<<< HEAD
-      description: 'Unbreakable encryption using quantum key distribution and quantum-resistant algorithms.',
-      icon: '🔐',
-      price: 'Starting at $12,000/project',
-      features: ['Quantum key distribution', 'Post-quantum cryptography', 'Quantum random number generation', 'Secure communication protocols', 'Quantum-resistant encryption'],
-      benefits: ['Unbreakable security', 'Future-proof against quantum attacks', 'Ensure data protection for decades'],
-      marketPrice: '$20,000-50,000/project',
-      category: 'Quantum Security',
-      technologies: ['BB84 Protocol', 'E91 Protocol', 'NIST PQC Standards', 'Quantum Random Generators']
-    },
-    {
-      title: 'Quantum Machine Learning',
-      description: 'Quantum-enhanced machine learning models for pattern recognition and optimization.',
-      icon: '🧠',
-      price: 'Starting at $18,000/project',
-      features: ['Quantum neural networks', 'Variational quantum algorithms', 'Quantum feature maps', 'Quantum support vector machines', 'Hybrid classical-quantum models'],
-      benefits: ['Exponential speedup for ML tasks', 'Handle exponentially large feature spaces', 'Discover new patterns in data'],
-      marketPrice: '$30,000-80,000/project',
-      category: 'Quantum ML',
-      technologies: ['TensorFlow Quantum', 'PennyLane', 'Qiskit Machine Learning', 'Variational Quantum Eigensolver']
-    },
-    {
-      title: 'Quantum Optimization Services',
-      description: 'Quantum annealing and variational algorithms for complex optimization problems.',
-      icon: '🎯',
-      price: 'Starting at $10,000/project',
-      features: ['Traveling salesman problems', 'Portfolio optimization', 'Supply chain optimization', 'Resource allocation', 'Scheduling optimization'],
-      benefits: ['Find optimal solutions faster', 'Handle NP-hard problems', 'Reduce operational costs significantly'],
-      marketPrice: '$15,000-40,000/project',
-      category: 'Optimization',
-      technologies: ['D-Wave Systems', 'IBM Quantum', 'Rigetti Computing', 'Quantum Annealing']
-    },
-    {
-      title: 'Quantum Simulation Services',
-      description: 'Quantum simulation of molecular systems, materials, and chemical reactions.',
-      icon: '🧪',
-      price: 'Starting at $20,000/project',
-      features: ['Molecular dynamics simulation', 'Chemical reaction modeling', 'Material property prediction', 'Drug discovery simulation', 'Catalyst optimization'],
-      benefits: ['Accelerate drug discovery', 'Design new materials', 'Reduce R&D costs and time'],
-      marketPrice: '$35,000-100,000/project',
-      category: 'Quantum Simulation',
-      technologies: ['VQE', 'QAOA', 'Quantum Chemistry Libraries', 'Molecular Quantum Gates']
-    },
-    {
-      title: 'Quantum Cloud Computing',
-      description: 'Access to quantum computers through cloud platforms with managed services.',
-      icon: '☁️',
-      price: 'Starting at $2,500/month',
-      features: ['Quantum cloud access', 'Managed quantum infrastructure', 'Quantum job scheduling', 'Performance monitoring', 'Expert support'],
-      benefits: ['Access cutting-edge quantum hardware', 'No upfront infrastructure costs', 'Scale quantum resources as needed'],
-      marketPrice: '$4,000-10,000/month',
-      category: 'Quantum Cloud',
-      technologies: ['IBM Quantum Network', 'AWS Braket', 'Azure Quantum', 'Google Quantum AI']
-    },
-    {
-      title: 'Quantum Error Correction',
-      description: 'Implementation of quantum error correction codes for reliable quantum computing.',
-      icon: '🔧',
-      price: 'Starting at $25,000/project',
-      features: ['Surface code implementation', 'Fault-tolerant quantum gates', 'Error syndrome detection', 'Logical qubit encoding', 'Quantum error mitigation'],
-      benefits: ['Enable fault-tolerant quantum computing', 'Reduce quantum errors', 'Build reliable quantum systems'],
-      marketPrice: '$40,000-120,000/project',
-      category: 'Error Correction',
-      technologies: ['Surface Codes', 'Stabilizer Codes', 'Topological Codes', 'Quantum Error Mitigation']
-    },
-    {
-      title: 'Quantum Communication Networks',
-      description: 'Quantum communication infrastructure for secure data transmission and quantum internet.',
-      icon: '🌐',
-      price: 'Starting at $30,000/project',
-      features: ['Quantum network design', 'Quantum repeaters', 'Entanglement distribution', 'Quantum teleportation', 'Quantum internet protocols'],
-      benefits: ['Enable quantum internet', 'Ultra-secure communication', 'Quantum distributed computing'],
-      marketPrice: '$50,000-150,000/project',
-      category: 'Quantum Networks',
-      technologies: ['Quantum Repeaters', 'Entanglement Swapping', 'Quantum Teleportation', 'Quantum Internet Protocols']
-    },
-    {
-      title: 'Quantum Sensing Solutions',
-      description: 'Ultra-precise quantum sensors for navigation, imaging, and measurement applications.',
-      icon: '📡',
-      price: 'Starting at $15,000/project',
-      features: ['Quantum magnetometers', 'Quantum gravimeters', 'Quantum clocks', 'Quantum imaging', 'Precision measurement'],
-      benefits: ['Ultra-precise measurements', 'Revolutionary sensing capabilities', 'Enable new applications'],
-      marketPrice: '$25,000-60,000/project',
-      category: 'Quantum Sensing',
-      technologies: ['NV Centers', 'Cold Atoms', 'Quantum Interferometry', 'Quantum Metrology']
-    },
-    {
-      title: 'Quantum Consulting & Strategy',
-      description: 'Strategic quantum computing consulting and technology roadmap development.',
-      icon: '💡',
-      price: 'Starting at $500/hour',
-      features: ['Quantum strategy development', 'Technology assessment', 'Use case identification', 'ROI analysis', 'Implementation planning'],
-      benefits: ['Navigate quantum landscape', 'Make informed technology decisions', 'Maximize quantum investment'],
-      marketPrice: '$800-1,500/hour',
-      category: 'Consulting',
-      technologies: ['Strategic Planning', 'Technology Assessment', 'Risk Analysis', 'ROI Modeling']
-=======
-      description: 'Unbreakable encryption using quantum key distribution and post-quantum cryptography.',
-      icon: '🔐',
-      price: 'Starting at $12,000/project',
-      features: ['Quantum key distribution', 'Post-quantum cryptography', 'Quantum random number generation', 'Security auditing', 'Implementation'],
-      benefits: ['Unbreakable encryption', 'Future-proof security', 'Compliance with quantum-safe standards'],
-      marketPrice: '$20,000-50,000/project',
-      category: 'Cryptography',
-      technologies: ['BB84 Protocol', 'E91 Protocol', 'NIST Standards', 'Lattice-based Crypto', 'Code-based Crypto']
-    },
-    {
-      title: 'Quantum Machine Learning',
-      description: 'Quantum-enhanced machine learning algorithms for pattern recognition and optimization.',
-      icon: '🧠',
-      price: 'Starting at $18,000/project',
-      features: ['Quantum neural networks', 'Variational algorithms', 'Quantum feature maps', 'Hybrid classical-quantum models', 'Training optimization'],
-      benefits: ['Exponential speedup for ML tasks', 'Better pattern recognition', 'Reduced computational complexity'],
-      marketPrice: '$30,000-80,000/project',
-      category: 'Machine Learning',
-      technologies: ['TensorFlow Quantum', 'PennyLane', 'Qiskit ML', 'Variational Circuits', 'Quantum Kernels']
-    },
-    {
-      title: 'Quantum Optimization Services',
-      description: 'Quantum optimization for logistics, finance, and resource allocation problems.',
-      icon: '🎯',
-      price: 'Starting at $10,000/project',
-      features: ['Portfolio optimization', 'Supply chain optimization', 'Scheduling problems', 'Resource allocation', 'Constraint satisfaction'],
-      benefits: ['Find optimal solutions faster', 'Handle complex constraints', 'Improve operational efficiency'],
-      marketPrice: '$18,000-45,000/project',
-      category: 'Optimization',
-      technologies: ['QAOA', 'VQE', 'Quantum Annealing', 'D-Wave', 'IBM Qiskit']
-    },
-    {
-      title: 'Quantum Simulation Services',
-      description: 'Quantum simulation for materials science, chemistry, and physics research.',
-      icon: '🔬',
-      price: 'Starting at $20,000/project',
-      features: ['Molecular simulation', 'Material property prediction', 'Chemical reaction modeling', 'Drug discovery', 'Quantum chemistry'],
-      benefits: ['Accurate molecular modeling', 'Faster drug discovery', 'New material development'],
-      marketPrice: '$35,000-100,000/project',
-      category: 'Simulation',
-      technologies: ['VQE', 'QPE', 'Quantum Chemistry', 'Materials Science', 'Pharmaceutical Research']
-    },
-    {
-      title: 'Quantum Cloud Access',
-      description: 'Access to quantum computing hardware through cloud platforms with expert support.',
-      icon: '☁️',
-      price: 'Starting at $2,500/month',
-      features: ['Hardware access', 'Expert consultation', 'Algorithm optimization', 'Performance monitoring', 'Technical support'],
-      benefits: ['Access cutting-edge hardware', 'No upfront investment', 'Scalable quantum resources'],
-      marketPrice: '$4,000-10,000/month',
-      category: 'Cloud Access',
-      technologies: ['IBM Quantum', 'Google Quantum AI', 'Amazon Braket', 'Microsoft Azure Quantum', 'IonQ']
-    },
-    {
-      title: 'Quantum Security Auditing',
-      description: 'Comprehensive security assessment for quantum-resistant systems and protocols.',
-      icon: '🛡️',
-      price: 'Starting at $8,000/audit',
-      features: ['Vulnerability assessment', 'Quantum threat analysis', 'Migration planning', 'Compliance checking', 'Security recommendations'],
-      benefits: ['Identify quantum vulnerabilities', 'Ensure future security', 'Meet compliance requirements'],
-      marketPrice: '$15,000-30,000/audit',
-      category: 'Security',
-      technologies: ['NIST Guidelines', 'FIPS Standards', 'Quantum Threat Models', 'Risk Assessment', 'Compliance Frameworks']
-    },
-    {
-      title: 'Quantum Education & Training',
-      description: 'Comprehensive quantum computing education for teams and organizations.',
-      icon: '🎓',
-      price: 'Starting at $5,000/course',
-      features: ['Quantum fundamentals', 'Programming workshops', 'Algorithm development', 'Hardware understanding', 'Certification'],
-      benefits: ['Build quantum expertise', 'Accelerate adoption', 'Reduce learning curve'],
-      marketPrice: '$8,000-20,000/course',
-      category: 'Education',
-      technologies: ['Quantum Theory', 'Programming Languages', 'Hardware Platforms', 'Algorithm Design', 'Best Practices']
-    },
-    {
-      title: 'Quantum Consulting & Strategy',
-      description: 'Strategic guidance for quantum computing adoption and implementation.',
-      icon: '💡',
-      price: 'Starting at $500/hour',
-      features: ['Technology assessment', 'ROI analysis', 'Implementation roadmap', 'Vendor evaluation', 'Risk management'],
-      benefits: ['Make informed decisions', 'Optimize quantum investments', 'Minimize implementation risks'],
-      marketPrice: '$800-1,500/hour',
-      category: 'Consulting',
-      technologies: ['Strategic Planning', 'Technology Assessment', 'Risk Analysis', 'ROI Modeling', 'Vendor Management']
->>>>>>> cursor/add-new-services-and-deploy-updates-f159
     }
   ];
 
@@ -219,48 +23,12 @@ const QuantumComputingPage: React.FC = () => {
     <>
       <Helmet>
         <title>Quantum Computing Services - Zion Tech Group</title>
-<<<<<<< HEAD
-        <meta name="description" content="Advanced quantum computing services including algorithm development, cryptography, optimization, and quantum machine learning solutions." />
-        <meta name="keywords" content="quantum computing, quantum algorithms, quantum cryptography, quantum machine learning, quantum optimization" />
-      </Helmet>
-
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-purple-50">
-        {/* Hero Section */}
-        <section className="relative overflow-hidden bg-gradient-to-r from-purple-600 to-indigo-700 text-white py-20">
-=======
-        <meta name="description" content="Advanced quantum computing services including algorithm development, cryptography, machine learning, and optimization solutions." />
-        <meta name="keywords" content="quantum computing, quantum algorithms, quantum cryptography, quantum machine learning, quantum optimization" />
-      </Helmet>
-
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-indigo-50">
-        {/* Hero Section */}
-        <section className="relative overflow-hidden bg-gradient-to-r from-indigo-600 to-purple-700 text-white py-20">
->>>>>>> cursor/add-new-services-and-deploy-updates-f159
           <div className="absolute inset-0 bg-black opacity-20"></div>
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
                 Quantum Computing Services
               </h1>
-<<<<<<< HEAD
-              <p className="text-xl md:text-2xl mb-8 text-purple-100 max-w-3xl mx-auto">
-                Harness the power of quantum mechanics to solve the world's most complex computational problems
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-colors">
-                  Explore Quantum Solutions
-                </button>
-                <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors">
-=======
-              <p className="text-xl md:text-2xl mb-8 text-indigo-100 max-w-3xl mx-auto">
-                Harness the power of quantum computing for exponential computational advantages
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-indigo-50 transition-colors">
-                  Explore Quantum Solutions
-                </button>
-                <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors">
->>>>>>> cursor/add-new-services-and-deploy-updates-f159
                   Schedule Consultation
                 </button>
               </div>
@@ -273,74 +41,15 @@ const QuantumComputingPage: React.FC = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-<<<<<<< HEAD
-                Why Choose Our Quantum Services?
-              </h2>
-              <p className="text-xl text-gray-600">
-                Leading quantum computing expertise with proven results in cutting-edge applications
-=======
-                Why Choose Our Quantum Computing Services?
-              </h2>
-              <p className="text-xl text-gray-600">
-                Leading quantum computing expertise with proven track record in enterprise applications
->>>>>>> cursor/add-new-services-and-deploy-updates-f159
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               <div className="text-center">
-<<<<<<< HEAD
-                <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Atom className="w-8 h-8 text-purple-600" />
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Quantum Experts</h3>
-                <p className="text-gray-600">PhD-level quantum physicists and computer scientists</p>
-              </div>
-              <div className="text-center">
-                <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Cpu className="w-8 h-8 text-blue-600" />
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Cutting-Edge Hardware</h3>
-                <p className="text-gray-600">Access to latest quantum computers and simulators</p>
-=======
-                <div className="bg-indigo-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Atom className="w-8 h-8 text-indigo-600" />
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Quantum Experts</h3>
-                <p className="text-gray-600">PhD-level quantum physicists and algorithm specialists</p>
-              </div>
-              <div className="text-center">
-                <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Zap className="w-8 h-8 text-purple-600" />
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Exponential Speedup</h3>
-                <p className="text-gray-600">Solve complex problems exponentially faster than classical computers</p>
->>>>>>> cursor/add-new-services-and-deploy-updates-f159
               </div>
               <div className="text-center">
                 <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Shield className="w-8 h-8 text-green-600" />
                 </div>
-<<<<<<< HEAD
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Proven Results</h3>
-                <p className="text-gray-600">Successful quantum implementations across industries</p>
-              </div>
-              <div className="text-center">
-                <div className="bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Zap className="w-8 h-8 text-orange-600" />
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Exponential Speedup</h3>
-                <p className="text-gray-600">Solve problems exponentially faster than classical computers</p>
-=======
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Future-Proof Security</h3>
-                <p className="text-gray-600">Quantum-resistant cryptography and unbreakable encryption</p>
-              </div>
-              <div className="text-center">
-                <div className="bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Target className="w-8 h-8 text-orange-600" />
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Proven Results</h3>
-                <p className="text-gray-600">Successful quantum implementations across multiple industries</p>
->>>>>>> cursor/add-new-services-and-deploy-updates-f159
               </div>
             </div>
           </div>
@@ -355,11 +64,6 @@ const QuantumComputingPage: React.FC = () => {
                   {category} Services
                 </h2>
                 <p className="text-xl text-gray-600">
-<<<<<<< HEAD
-                  Advanced {category.toLowerCase()} solutions powered by quantum computing
-=======
-                  Advanced {category.toLowerCase()} solutions powered by cutting-edge quantum technology
->>>>>>> cursor/add-new-services-and-deploy-updates-f159
                 </p>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -373,11 +77,6 @@ const QuantumComputingPage: React.FC = () => {
                       
                       <div className="mb-4">
                         <div className="flex items-center justify-between mb-2">
-<<<<<<< HEAD
-                          <span className="text-2xl font-bold text-purple-600">{service.price}</span>
-=======
-                          <span className="text-2xl font-bold text-indigo-600">{service.price}</span>
->>>>>>> cursor/add-new-services-and-deploy-updates-f159
                           <span className="text-sm text-gray-500">Market: {service.marketPrice}</span>
                         </div>
                         <div className="text-sm text-green-600 font-semibold">
@@ -401,11 +100,6 @@ const QuantumComputingPage: React.FC = () => {
                         <h4 className="font-semibold text-gray-900 mb-2">Technologies:</h4>
                         <div className="flex flex-wrap gap-2">
                           {service.technologies.map((tech, techIndex) => (
-<<<<<<< HEAD
-                            <span key={techIndex} className="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded">
-=======
-                            <span key={techIndex} className="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">
->>>>>>> cursor/add-new-services-and-deploy-updates-f159
                               {tech}
                             </span>
                           ))}
@@ -424,11 +118,6 @@ const QuantumComputingPage: React.FC = () => {
                         </ul>
                       </div>
 
-<<<<<<< HEAD
-                      <button className="w-full bg-purple-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-purple-700 transition-colors">
-=======
-                      <button className="w-full bg-indigo-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-indigo-700 transition-colors">
->>>>>>> cursor/add-new-services-and-deploy-updates-f159
                         Get Quantum Consultation
                       </button>
                     </div>
@@ -443,131 +132,26 @@ const QuantumComputingPage: React.FC = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-<<<<<<< HEAD
-                Our Quantum Capabilities
-              </h2>
-              <p className="text-xl text-gray-600">
-                Cutting-edge quantum technologies and methodologies we use to solve complex problems
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <div className="text-center p-6 bg-gradient-to-br from-purple-50 to-indigo-100 rounded-lg">
-                <Atom className="w-12 h-12 text-purple-600 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Quantum Algorithms</h3>
-                <p className="text-gray-600">Custom quantum algorithms for optimization, search, and simulation</p>
-              </div>
-              <div className="text-center p-6 bg-gradient-to-br from-blue-50 to-cyan-100 rounded-lg">
-                <Lock className="w-12 h-12 text-blue-600 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Quantum Cryptography</h3>
-                <p className="text-gray-600">Unbreakable encryption and secure communication protocols</p>
-              </div>
-              <div className="text-center p-6 bg-gradient-to-br from-green-50 to-emerald-100 rounded-lg">
-                <Brain className="w-12 h-12 text-green-600 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Quantum Machine Learning</h3>
-                <p className="text-gray-600">Quantum-enhanced ML for pattern recognition and optimization</p>
-              </div>
-              <div className="text-center p-6 bg-gradient-to-br from-orange-50 to-amber-100 rounded-lg">
-                <Target className="w-12 h-12 text-orange-600 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Quantum Optimization</h3>
-                <p className="text-gray-600">Solve complex optimization problems with quantum annealing</p>
-              </div>
-              <div className="text-center p-6 bg-gradient-to-br from-pink-50 to-rose-100 rounded-lg">
-                <BarChart className="w-12 h-12 text-pink-600 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Quantum Simulation</h3>
-                <p className="text-gray-600">Simulate quantum systems for materials and drug discovery</p>
-              </div>
-              <div className="text-center p-6 bg-gradient-to-br from-indigo-50 to-blue-100 rounded-lg">
-                <Cpu className="w-12 h-12 text-indigo-600 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Quantum Hardware</h3>
-                <p className="text-gray-600">Access to leading quantum computers and simulators</p>
-=======
-                Our Quantum Computing Capabilities
-              </h2>
-              <p className="text-xl text-gray-600">
-                Cutting-edge quantum technologies and methodologies for solving complex business problems
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <div className="text-center p-6 bg-gradient-to-br from-indigo-50 to-purple-100 rounded-lg">
-                <Atom className="w-12 h-12 text-indigo-600 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Quantum Algorithms</h3>
-                <p className="text-gray-600">Custom quantum algorithms for optimization, search, and simulation</p>
-              </div>
-              <div className="text-center p-6 bg-gradient-to-br from-purple-50 to-pink-100 rounded-lg">
-                <Lock className="w-12 h-12 text-purple-600 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Quantum Cryptography</h3>
-                <p className="text-gray-600">Unbreakable encryption and quantum key distribution</p>
-              </div>
-              <div className="text-center p-6 bg-gradient-to-br from-blue-50 to-cyan-100 rounded-lg">
-                <Brain className="w-12 h-12 text-blue-600 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Quantum Machine Learning</h3>
-                <p className="text-gray-600">Quantum-enhanced ML algorithms and neural networks</p>
-              </div>
-              <div className="text-center p-6 bg-gradient-to-br from-green-50 to-emerald-100 rounded-lg">
-                <Target className="w-12 h-12 text-green-600 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Quantum Optimization</h3>
-                <p className="text-gray-600">Solving complex optimization problems with quantum advantage</p>
-              </div>
-              <div className="text-center p-6 bg-gradient-to-br from-orange-50 to-amber-100 rounded-lg">
-                <Cpu className="w-12 h-12 text-orange-600 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Quantum Simulation</h3>
-                <p className="text-gray-600">Molecular and material simulation for research and development</p>
-              </div>
-              <div className="text-center p-6 bg-gradient-to-br from-pink-50 to-rose-100 rounded-lg">
-                <BarChart className="w-12 h-12 text-pink-600 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Quantum Analytics</h3>
-                <p className="text-gray-600">Advanced quantum data analysis and pattern recognition</p>
->>>>>>> cursor/add-new-services-and-deploy-updates-f159
               </div>
             </div>
           </div>
         </section>
 
         {/* Contact Section */}
-<<<<<<< HEAD
-        <section className="py-16 bg-gradient-to-r from-purple-600 to-indigo-600 text-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Ready to Explore Quantum Computing?
-            </h2>
-            <p className="text-xl mb-8 text-purple-100">
-=======
-        <section className="py-16 bg-gradient-to-r from-indigo-600 to-purple-600 text-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Ready to Enter the Quantum Era?
-            </h2>
-            <p className="text-xl mb-8 text-indigo-100">
->>>>>>> cursor/add-new-services-and-deploy-updates-f159
               Contact our quantum computing experts for a free consultation and custom quantum strategy
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
                 href="tel:+13024640950"
-<<<<<<< HEAD
-                className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-colors inline-flex items-center"
-=======
-                className="bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-indigo-50 transition-colors inline-flex items-center"
->>>>>>> cursor/add-new-services-and-deploy-updates-f159
               >
                 📞 +1 302 464 0950
               </a>
               <a 
                 href="mailto:kleber@ziontechgroup.com"
-<<<<<<< HEAD
-                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
-=======
-                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors"
->>>>>>> cursor/add-new-services-and-deploy-updates-f159
               >
                 ✉️ kleber@ziontechgroup.com
               </a>
             </div>
-<<<<<<< HEAD
-            <div className="mt-8 text-sm text-purple-200">
-=======
-            <div className="mt-8 text-sm text-indigo-200">
->>>>>>> cursor/add-new-services-and-deploy-updates-f159
               <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
             </div>
           </div>

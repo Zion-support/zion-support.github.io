@@ -1,6 +1,5 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
 import { CheckCircle, Star, Shield, Lock, Eye, AlertTriangle, Target, BarChart, Brain, Settings, Globe, Database } from 'lucide-react';
 
 const CybersecurityPage: React.FC = () => {
@@ -50,89 +49,23 @@ const CybersecurityPage: React.FC = () => {
       technologies: ['SIEM', 'SOAR', 'Threat Intelligence', 'Analytics', 'Incident Management']
     },
     {
-      title: 'Cloud Security Solutions',
-      description: 'Comprehensive cloud security for AWS, Azure, and Google Cloud with compliance monitoring.',
+      title: 'Cloud Security & Compliance',
+      description: 'Comprehensive cloud security solutions with compliance monitoring and data protection.',
       icon: '☁️',
-      price: 'Starting at $3,200/month',
-      features: ['Cloud security posture', 'Identity & access management', 'Data encryption', 'Compliance monitoring', 'Threat detection'],
-      benefits: ['Secure cloud environments', 'Ensure compliance', 'Prevent data breaches'],
-      marketPrice: '$6,000-20,000/month',
+      price: 'Starting at $5,500/month',
+      features: ['Cloud security assessment', 'Compliance monitoring', 'Data encryption', 'Access controls', 'Security policies'],
+      benefits: ['Secure cloud environments', 'Meet compliance requirements', 'Protect sensitive data'],
+      marketPrice: '$10,000-30,000/month',
       category: 'Cloud Security',
-      technologies: ['CSPM', 'CWPP', 'CASB', 'Cloud IAM', 'Encryption']
-    },
-    {
-      title: 'Data Protection & Privacy',
-      description: 'Comprehensive data protection solutions including encryption, DLP, and privacy compliance.',
-      icon: '🔒',
-      price: 'Starting at $2,800/month',
-      features: ['Data encryption', 'Data loss prevention', 'Privacy compliance', 'Data classification', 'Access controls'],
-      benefits: ['Protect sensitive data', 'Ensure privacy compliance', 'Prevent data leaks'],
-      marketPrice: '$5,000-18,000/month',
-      category: 'Data Protection',
-      technologies: ['DLP', 'Encryption', 'GDPR Tools', 'Data Classification', 'Privacy Management']
-    },
-    {
-      title: 'Network Security & Firewall Management',
-      description: 'Advanced network security with next-generation firewalls and intrusion prevention systems.',
-      icon: '🌐',
-      price: 'Starting at $2,500/month',
-      features: ['Next-gen firewalls', 'Intrusion prevention', 'Network segmentation', 'VPN management', 'Traffic analysis'],
-      benefits: ['Block malicious traffic', 'Prevent network attacks', 'Improve network performance'],
-      marketPrice: '$4,500-15,000/month',
-      category: 'Network Security',
-      technologies: ['NGFW', 'IPS', 'VPN', 'SD-WAN', 'Network Monitoring']
-    },
-    {
-      title: 'Email Security & Phishing Protection',
-      description: 'Advanced email security solutions to prevent phishing, malware, and email-based attacks.',
-      icon: '📧',
-      price: 'Starting at $1,800/month',
-      features: ['Phishing protection', 'Malware scanning', 'Email encryption', 'Spam filtering', 'User training'],
-      benefits: ['Prevent email attacks', 'Reduce phishing success', 'Protect sensitive communications'],
-      marketPrice: '$3,500-12,000/month',
-      category: 'Email Security',
-      technologies: ['Email Gateways', 'Sandboxing', 'AI Detection', 'User Training', 'Encryption']
-    },
-    {
-      title: 'Mobile Security Solutions',
-      description: 'Comprehensive mobile device security with MDM, app security, and threat protection.',
-      icon: '📱',
-      price: 'Starting at $2,200/month',
-      features: ['Mobile device management', 'App security', 'Threat protection', 'Compliance monitoring', 'Remote wipe'],
-      benefits: ['Secure mobile devices', 'Prevent mobile threats', 'Ensure compliance'],
-      marketPrice: '$4,000-15,000/month',
-      category: 'Mobile Security',
-      technologies: ['MDM', 'EMM', 'App Security', 'Threat Detection', 'Compliance Tools']
-    },
-    {
-      title: 'Compliance & Risk Management',
-      description: 'Comprehensive compliance management for GDPR, HIPAA, SOX, and other regulatory requirements.',
-      icon: '📋',
-      price: 'Starting at $3,500/month',
-      features: ['Compliance assessment', 'Risk management', 'Policy development', 'Audit support', 'Training programs'],
-      benefits: ['Ensure compliance', 'Reduce regulatory risks', 'Avoid penalties'],
-      marketPrice: '$6,500-25,000/month',
-      category: 'Compliance',
-      technologies: ['GRC Platforms', 'Risk Assessment', 'Compliance Tools', 'Audit Management']
-    },
-    {
-      title: 'Security Awareness Training',
-      description: 'Comprehensive security awareness training programs to educate employees about cyber threats.',
-      icon: '🎓',
-      price: 'Starting at $1,500/month',
-      features: ['Interactive training modules', 'Phishing simulations', 'Security assessments', 'Progress tracking', 'Custom content'],
-      benefits: ['Reduce human error', 'Improve security culture', 'Prevent social engineering'],
-      marketPrice: '$2,500-8,000/month',
-      category: 'Security Training',
-      technologies: ['LMS', 'Phishing Simulators', 'Interactive Content', 'Assessment Tools']
+      technologies: ['AWS Security', 'Azure Security', 'GCP Security', 'CSPM', 'CASB']
     },
     {
       title: 'Incident Response & Forensics',
-      description: 'Rapid incident response and digital forensics services for security breaches and investigations.',
+      description: 'Rapid incident response and digital forensics to minimize damage and recover from security breaches.',
       icon: '🚨',
-      price: 'Starting at $5,000/incident',
-      features: ['Rapid response', 'Digital forensics', 'Evidence collection', 'Incident analysis', 'Recovery planning'],
-      benefits: ['Minimize breach impact', 'Preserve evidence', 'Accelerate recovery'],
+      price: 'Starting at $7,500/incident',
+      features: ['Incident containment', 'Digital forensics', 'Evidence collection', 'Recovery planning', 'Post-incident analysis'],
+      benefits: ['Minimize breach impact', 'Preserve evidence', 'Prevent future incidents'],
       marketPrice: '$10,000-50,000/incident',
       category: 'Incident Response',
       technologies: ['Forensic Tools', 'Incident Management', 'Evidence Collection', 'Recovery Tools']
@@ -140,159 +73,13 @@ const CybersecurityPage: React.FC = () => {
   ];
 
   const categories = [...new Set(securityServices.map(service => service.category))];
-=======
-import { CheckCircle, Star, Shield, Zap, Lock, Cpu, Brain, Target, BarChart, Settings, Eye } from 'lucide-react';
-
-const CybersecurityPage: React.FC = () => {
-  const cyberServices = [
-    {
-      title: 'Advanced Threat Detection',
-      description: 'AI-powered threat detection and response systems with real-time monitoring.',
-      icon: '🛡️',
-      price: 'Starting at $4,500/month',
-      features: ['AI threat detection', 'Real-time monitoring', 'Behavioral analysis', 'Incident response', 'Threat hunting'],
-      benefits: ['Detect threats 10x faster', 'Reduce false positives by 80%', 'Prevent 99% of attacks'],
-      marketPrice: '$7,000-20,000/month',
-      category: 'Threat Detection',
-      technologies: ['SIEM', 'SOAR', 'EDR', 'XDR', 'Machine Learning']
-    },
-    {
-      title: 'Penetration Testing & Vulnerability Assessment',
-      description: 'Comprehensive security testing to identify and remediate vulnerabilities.',
-      icon: '🔍',
-      price: 'Starting at $3,000/assessment',
-      features: ['Network penetration testing', 'Web application testing', 'Social engineering', 'Physical security', 'Compliance testing'],
-      benefits: ['Identify security gaps', 'Meet compliance requirements', 'Improve security posture'],
-      marketPrice: '$5,000-15,000/assessment',
-      category: 'Security Testing',
-      technologies: ['Nmap', 'Burp Suite', 'Metasploit', 'OWASP ZAP', 'Custom Tools']
-    },
-    {
-      title: 'Zero Trust Security Architecture',
-      description: 'Implement zero trust security model with identity and access management.',
-      icon: '🔐',
-      price: 'Starting at $6,000/month',
-      features: ['Identity verification', 'Access controls', 'Network segmentation', 'Device trust', 'Continuous monitoring'],
-      benefits: ['Eliminate trust assumptions', 'Reduce attack surface', 'Improve compliance'],
-      marketPrice: '$10,000-25,000/month',
-      category: 'Zero Trust',
-      technologies: ['Okta', 'Azure AD', 'Cisco ISE', 'Palo Alto', 'Custom Solutions']
-    },
-    {
-      title: 'Security Operations Center (SOC)',
-      description: '24/7 security monitoring and incident response with expert analysts.',
-      icon: '🏢',
-      price: 'Starting at $8,000/month',
-      features: ['24/7 monitoring', 'Incident response', 'Threat intelligence', 'Security analytics', 'Compliance reporting'],
-      benefits: ['Round-the-clock protection', 'Faster incident response', 'Reduced security risks'],
-      marketPrice: '$15,000-40,000/month',
-      category: 'SOC Services',
-      technologies: ['SIEM', 'SOAR', 'Threat Intelligence', 'Incident Response', 'Analytics']
-    },
-    {
-      title: 'Cloud Security Solutions',
-      description: 'Comprehensive security for cloud environments including AWS, Azure, and GCP.',
-      icon: '☁️',
-      price: 'Starting at $3,500/month',
-      features: ['Cloud security posture', 'Identity management', 'Data protection', 'Compliance monitoring', 'Threat detection'],
-      benefits: ['Secure cloud migration', 'Meet compliance requirements', 'Reduce cloud risks'],
-      marketPrice: '$6,000-18,000/month',
-      category: 'Cloud Security',
-      technologies: ['AWS Security', 'Azure Security', 'GCP Security', 'CSPM', 'CWPP']
-    },
-    {
-      title: 'Data Protection & Privacy',
-      description: 'Comprehensive data protection solutions with encryption and privacy controls.',
-      icon: '🔒',
-      price: 'Starting at $2,800/month',
-      features: ['Data encryption', 'Privacy controls', 'Data loss prevention', 'Backup security', 'Compliance management'],
-      benefits: ['Protect sensitive data', 'Meet privacy regulations', 'Prevent data breaches'],
-      marketPrice: '$4,500-12,000/month',
-      category: 'Data Protection',
-      technologies: ['Encryption', 'DLP', 'Backup Solutions', 'Privacy Tools', 'Compliance Frameworks']
-    },
-    {
-      title: 'Network Security Solutions',
-      description: 'Advanced network security with firewalls, intrusion detection, and monitoring.',
-      icon: '🌐',
-      price: 'Starting at $2,500/month',
-      features: ['Next-gen firewalls', 'Intrusion detection', 'Network monitoring', 'VPN solutions', 'Traffic analysis'],
-      benefits: ['Protect network perimeter', 'Monitor network traffic', 'Prevent unauthorized access'],
-      marketPrice: '$4,000-10,000/month',
-      category: 'Network Security',
-      technologies: ['Palo Alto', 'Cisco', 'Fortinet', 'Check Point', 'Custom Solutions']
-    },
-    {
-      title: 'Endpoint Security & EDR',
-      description: 'Advanced endpoint protection with detection and response capabilities.',
-      icon: '💻',
-      price: 'Starting at $3,200/month',
-      features: ['Endpoint protection', 'Behavioral analysis', 'Threat hunting', 'Incident response', 'Device management'],
-      benefits: ['Protect all endpoints', 'Detect advanced threats', 'Respond to incidents quickly'],
-      marketPrice: '$5,000-15,000/month',
-      category: 'Endpoint Security',
-      technologies: ['CrowdStrike', 'SentinelOne', 'Carbon Black', 'Microsoft Defender', 'Custom EDR']
-    },
-    {
-      title: 'Security Awareness Training',
-      description: 'Comprehensive security training programs for employees and executives.',
-      icon: '🎓',
-      price: 'Starting at $1,500/month',
-      features: ['Phishing simulation', 'Security training', 'Compliance training', 'Executive briefings', 'Metrics & reporting'],
-      benefits: ['Reduce human error', 'Improve security culture', 'Meet compliance requirements'],
-      marketPrice: '$2,500-6,000/month',
-      category: 'Training',
-      technologies: ['Phishing Simulation', 'E-Learning', 'Gamification', 'Compliance Training', 'Analytics']
-    },
-    {
-      title: 'Incident Response & Forensics',
-      description: 'Rapid incident response and digital forensics for security breaches.',
-      icon: '🚨',
-      price: 'Starting at $5,000/incident',
-      features: ['Rapid response', 'Digital forensics', 'Evidence collection', 'Recovery planning', 'Lessons learned'],
-      benefits: ['Minimize breach impact', 'Preserve evidence', 'Improve future security'],
-      marketPrice: '$8,000-25,000/incident',
-      category: 'Incident Response',
-      technologies: ['Forensic Tools', 'Evidence Collection', 'Recovery Tools', 'Analysis Software', 'Reporting']
-    },
-    {
-      title: 'Compliance & Risk Management',
-      description: 'Comprehensive compliance management and risk assessment services.',
-      icon: '📋',
-      price: 'Starting at $4,000/month',
-      features: ['Compliance assessment', 'Risk analysis', 'Policy development', 'Audit support', 'Remediation planning'],
-      benefits: ['Meet regulatory requirements', 'Reduce compliance risks', 'Improve governance'],
-      marketPrice: '$6,500-18,000/month',
-      category: 'Compliance',
-      technologies: ['GRC Platforms', 'Risk Assessment', 'Compliance Tools', 'Audit Software', 'Policy Management']
-    },
-    {
-      title: 'Security Consulting & Strategy',
-      description: 'Strategic security consulting and roadmap development for organizations.',
-      icon: '💡',
-      price: 'Starting at $400/hour',
-      features: ['Security assessment', 'Strategy development', 'Technology selection', 'Implementation planning', 'ROI analysis'],
-      benefits: ['Develop security strategy', 'Optimize security investments', 'Align security with business'],
-      marketPrice: '$600-1,500/hour',
-      category: 'Consulting',
-      technologies: ['Strategic Planning', 'Risk Assessment', 'Technology Evaluation', 'ROI Analysis', 'Best Practices']
-    }
-  ];
-
-  const categories = [...new Set(cyberServices.map(service => service.category))];
->>>>>>> cursor/add-new-services-and-deploy-updates-f159
 
   return (
     <>
       <Helmet>
         <title>Cybersecurity Services - Zion Tech Group</title>
-<<<<<<< HEAD
-        <meta name="description" content="Comprehensive cybersecurity solutions including threat detection, zero trust, compliance, and incident response services." />
-        <meta name="keywords" content="cybersecurity, threat detection, zero trust, penetration testing, SOC, compliance, data protection" />
-=======
-        <meta name="description" content="Advanced cybersecurity services including threat detection, penetration testing, zero trust security, and comprehensive security solutions." />
-        <meta name="keywords" content="cybersecurity services, threat detection, penetration testing, zero trust, security consulting, SOC services" />
->>>>>>> cursor/add-new-services-and-deploy-updates-f159
+        <meta name="description" content="Advanced cybersecurity services including threat detection, zero trust architecture, penetration testing, and 24/7 SOC monitoring." />
+        <meta name="keywords" content="cybersecurity, threat detection, zero trust, penetration testing, SOC, incident response" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-red-50">
@@ -305,11 +92,7 @@ const CybersecurityPage: React.FC = () => {
                 Cybersecurity Services
               </h1>
               <p className="text-xl md:text-2xl mb-8 text-red-100 max-w-3xl mx-auto">
-<<<<<<< HEAD
-                Protect your business with advanced cybersecurity solutions and expert threat protection
-=======
-                Protect your business with advanced cybersecurity solutions and expert security services
->>>>>>> cursor/add-new-services-and-deploy-updates-f159
+                Protect your business with advanced cybersecurity solutions and 24/7 threat monitoring
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-white text-red-600 px-8 py-3 rounded-lg font-semibold hover:bg-red-50 transition-colors">
@@ -323,19 +106,15 @@ const CybersecurityPage: React.FC = () => {
           </div>
         </section>
 
-        {/* Key Benefits */}
+        {/* Why Choose Section */}
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Why Choose Our Cybersecurity Services?
+                Why Choose Our Cybersecurity Solutions?
               </h2>
               <p className="text-xl text-gray-600">
-<<<<<<< HEAD
-                Expert cybersecurity solutions that protect your business from evolving threats
-=======
-                Expert security professionals delivering comprehensive protection against evolving cyber threats
->>>>>>> cursor/add-new-services-and-deploy-updates-f159
+                Expert cybersecurity professionals with proven track record of protecting businesses from cyber threats
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -343,7 +122,6 @@ const CybersecurityPage: React.FC = () => {
                 <div className="bg-red-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Shield className="w-8 h-8 text-red-600" />
                 </div>
-<<<<<<< HEAD
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Advanced Protection</h3>
                 <p className="text-gray-600">Cutting-edge security technologies and AI-powered threat detection</p>
               </div>
@@ -352,107 +130,74 @@ const CybersecurityPage: React.FC = () => {
                   <Eye className="w-8 h-8 text-blue-600" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">24/7 Monitoring</h3>
-                <p className="text-gray-600">Round-the-clock security monitoring and incident response</p>
-=======
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Security Experts</h3>
-                <p className="text-gray-600">Certified security professionals with advanced threat intelligence</p>
-              </div>
-              <div className="text-center">
-                <div className="bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Zap className="w-8 h-8 text-orange-600" />
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Rapid Response</h3>
-                <p className="text-gray-600">24/7 monitoring and rapid incident response capabilities</p>
->>>>>>> cursor/add-new-services-and-deploy-updates-f159
+                <p className="text-gray-600">Round-the-clock security monitoring and rapid incident response</p>
               </div>
               <div className="text-center">
                 <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Lock className="w-8 h-8 text-green-600" />
                 </div>
-<<<<<<< HEAD
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Compliance Ready</h3>
-                <p className="text-gray-600">Ensure compliance with GDPR, HIPAA, SOX, and other regulations</p>
+                <p className="text-gray-600">Meet industry standards and regulatory compliance requirements</p>
               </div>
               <div className="text-center">
                 <div className="bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <AlertTriangle className="w-8 h-8 text-orange-600" />
+                  <Target className="w-8 h-8 text-orange-600" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Rapid Response</h3>
-                <p className="text-gray-600">Quick incident response and recovery to minimize business impact</p>
-=======
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Proven Protection</h3>
-                <p className="text-gray-600">Prevent 99% of cyber attacks with our advanced security solutions</p>
-              </div>
-              <div className="text-center">
-                <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Target className="w-8 h-8 text-blue-600" />
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Compliance Ready</h3>
-                <p className="text-gray-600">Meet all regulatory requirements and industry standards</p>
->>>>>>> cursor/add-new-services-and-deploy-updates-f159
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Proven Results</h3>
+                <p className="text-gray-600">99% threat prevention rate with rapid response times</p>
               </div>
             </div>
           </div>
         </section>
 
         {/* Services by Category */}
-        {categories.map(category => (
-          <section key={category} className="py-16 bg-gray-50">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-              <div className="text-center mb-12">
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-<<<<<<< HEAD
-                  {category} Services
-                </h2>
-                <p className="text-xl text-gray-600">
-                  Specialized {category.toLowerCase()} solutions for comprehensive security
-                </p>
-              </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {securityServices
-=======
-                  {category} Solutions
-                </h2>
-                <p className="text-xl text-gray-600">
-                  Specialized {category.toLowerCase()} services for comprehensive security protection
-                </p>
-              </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {cyberServices
->>>>>>> cursor/add-new-services-and-deploy-updates-f159
-                  .filter(service => service.category === category)
-                  .map((service, index) => (
+        {categories.map((category) => {
+          const categoryServices = securityServices.filter(service => service.category === category);
+          return (
+            <section key={category} className="py-16 bg-gray-50">
+              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="text-center mb-12">
+                  <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                    {category} Services
+                  </h2>
+                  <p className="text-xl text-gray-600">
+                    Specialized {category.toLowerCase()} solutions for comprehensive security protection
+                  </p>
+                </div>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                  {categoryServices.map((service, index) => (
                     <div key={index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
                       <div className="text-4xl mb-4">{service.icon}</div>
-                      <h3 className="text-xl font-semibold text-gray-900 mb-3">{service.title}</h3>
+                      <h3 className="text-xl font-semibold text-gray-900 mb-2">{service.title}</h3>
                       <p className="text-gray-600 mb-4">{service.description}</p>
-                      
                       <div className="mb-4">
                         <div className="flex items-center justify-between mb-2">
                           <span className="text-2xl font-bold text-red-600">{service.price}</span>
                           <span className="text-sm text-gray-500">Market: {service.marketPrice}</span>
                         </div>
-                        <div className="text-sm text-green-600 font-semibold">
-<<<<<<< HEAD
-                          Save up to 50% vs market rates
-=======
-                          Save up to 35% vs market rates
->>>>>>> cursor/add-new-services-and-deploy-updates-f159
-                        </div>
                       </div>
-
                       <div className="mb-4">
                         <h4 className="font-semibold text-gray-900 mb-2">Key Features:</h4>
-                        <ul className="space-y-1">
-                          {service.features.map((feature, featureIndex) => (
-                            <li key={featureIndex} className="flex items-center text-sm text-gray-600">
+                        <ul className="text-sm text-gray-600 space-y-1">
+                          {service.features.map((feature, idx) => (
+                            <li key={idx} className="flex items-center">
                               <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
                               {feature}
                             </li>
                           ))}
                         </ul>
                       </div>
-
+                      <div className="mb-4">
+                        <h4 className="font-semibold text-gray-900 mb-2">Benefits:</h4>
+                        <ul className="text-sm text-gray-600 space-y-1">
+                          {service.benefits.map((benefit, idx) => (
+                            <li key={idx} className="flex items-center">
+                              <Star className="w-4 h-4 text-yellow-500 mr-2 flex-shrink-0" />
+                              {benefit}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
                       <div className="mb-4">
                         <h4 className="font-semibold text-gray-900 mb-2">Technologies:</h4>
                         <div className="flex flex-wrap gap-2">
@@ -463,116 +208,70 @@ const CybersecurityPage: React.FC = () => {
                           ))}
                         </div>
                       </div>
-
-                      <div className="mb-6">
-<<<<<<< HEAD
-                        <h4 className="font-semibold text-gray-900 mb-2">Business Benefits:</h4>
-=======
-                        <h4 className="font-semibold text-gray-900 mb-2">Security Benefits:</h4>
->>>>>>> cursor/add-new-services-and-deploy-updates-f159
-                        <ul className="space-y-1">
-                          {service.benefits.map((benefit, benefitIndex) => (
-                            <li key={benefitIndex} className="flex items-center text-sm text-gray-600">
-                              <Star className="w-4 h-4 text-yellow-500 mr-2 flex-shrink-0" />
-                              {benefit}
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-
                       <button className="w-full bg-red-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-red-700 transition-colors">
-                        Get Security Consultation
+                        Get Security Quote
                       </button>
                     </div>
                   ))}
+                </div>
               </div>
-            </div>
-          </section>
-        ))}
+            </section>
+          );
+        })}
 
-<<<<<<< HEAD
-        {/* Security Capabilities Showcase */}
-=======
-        {/* Cybersecurity Capabilities Showcase */}
->>>>>>> cursor/add-new-services-and-deploy-updates-f159
+        {/* Capabilities Section */}
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-<<<<<<< HEAD
-                Our Security Capabilities
-              </h2>
-              <p className="text-xl text-gray-600">
-                Comprehensive cybersecurity technologies and methodologies
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <div className="text-center p-6 bg-gradient-to-br from-red-50 to-pink-100 rounded-lg">
-=======
                 Our Cybersecurity Capabilities
               </h2>
               <p className="text-xl text-gray-600">
-                Comprehensive security solutions covering all aspects of cyber protection
+                Comprehensive security expertise across all major platforms and threat vectors
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <div className="text-center p-6 bg-gradient-to-br from-red-50 to-orange-100 rounded-lg">
->>>>>>> cursor/add-new-services-and-deploy-updates-f159
-                <Shield className="w-12 h-12 text-red-600 mx-auto mb-4" />
+              <div className="text-center">
+                <div className="bg-red-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Shield className="w-8 h-8 text-red-600" />
+                </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Threat Detection</h3>
-                <p className="text-gray-600">AI-powered threat detection and response systems</p>
+                <p className="text-gray-600">AI-powered threat detection and behavioral analysis</p>
               </div>
-<<<<<<< HEAD
-              <div className="text-center p-6 bg-gradient-to-br from-blue-50 to-cyan-100 rounded-lg">
-                <Lock className="w-12 h-12 text-blue-600 mx-auto mb-4" />
+              <div className="text-center">
+                <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Lock className="w-8 h-8 text-blue-600" />
+                </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Zero Trust</h3>
-                <p className="text-gray-600">Comprehensive zero trust security architecture</p>
+                <p className="text-gray-600">Identity verification and micro-segmentation architecture</p>
               </div>
-              <div className="text-center p-6 bg-gradient-to-br from-green-50 to-emerald-100 rounded-lg">
-                <Eye className="w-12 h-12 text-green-600 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">SOC Services</h3>
-                <p className="text-gray-600">24/7 security operations center monitoring</p>
-              </div>
-              <div className="text-center p-6 bg-gradient-to-br from-purple-50 to-violet-100 rounded-lg">
-                <Database className="w-12 h-12 text-purple-600 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Data Protection</h3>
-                <p className="text-gray-600">Comprehensive data protection and privacy solutions</p>
-              </div>
-              <div className="text-center p-6 bg-gradient-to-br from-orange-50 to-amber-100 rounded-lg">
-                <Globe className="w-12 h-12 text-orange-600 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Cloud Security</h3>
-                <p className="text-gray-600">Advanced cloud security and compliance solutions</p>
-              </div>
-              <div className="text-center p-6 bg-gradient-to-br from-indigo-50 to-blue-100 rounded-lg">
-                <AlertTriangle className="w-12 h-12 text-indigo-600 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Incident Response</h3>
-                <p className="text-gray-600">Rapid incident response and digital forensics</p>
-=======
-              <div className="text-center p-6 bg-gradient-to-br from-orange-50 to-amber-100 rounded-lg">
-                <Eye className="w-12 h-12 text-orange-600 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Security Testing</h3>
-                <p className="text-gray-600">Penetration testing and vulnerability assessments</p>
-              </div>
-              <div className="text-center p-6 bg-gradient-to-br from-green-50 to-emerald-100 rounded-lg">
-                <Lock className="w-12 h-12 text-green-600 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Zero Trust</h3>
-                <p className="text-gray-600">Zero trust security architecture implementation</p>
-              </div>
-              <div className="text-center p-6 bg-gradient-to-br from-blue-50 to-cyan-100 rounded-lg">
-                <Settings className="w-12 h-12 text-blue-600 mx-auto mb-4" />
+              <div className="text-center">
+                <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Eye className="w-8 h-8 text-green-600" />
+                </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">SOC Services</h3>
                 <p className="text-gray-600">24/7 security monitoring and incident response</p>
               </div>
-              <div className="text-center p-6 bg-gradient-to-br from-purple-50 to-violet-100 rounded-lg">
-                <Cpu className="w-12 h-12 text-purple-600 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Cloud Security</h3>
-                <p className="text-gray-600">Comprehensive cloud security solutions</p>
+              <div className="text-center">
+                <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <AlertTriangle className="w-8 h-8 text-purple-600" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Incident Response</h3>
+                <p className="text-gray-600">Rapid response and digital forensics capabilities</p>
               </div>
-              <div className="text-center p-6 bg-gradient-to-br from-pink-50 to-rose-100 rounded-lg">
-                <BarChart className="w-12 h-12 text-pink-600 mx-auto mb-4" />
+              <div className="text-center">
+                <div className="bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Globe className="w-8 h-8 text-orange-600" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Cloud Security</h3>
+                <p className="text-gray-600">Comprehensive cloud security and compliance solutions</p>
+              </div>
+              <div className="text-center">
+                <div className="bg-indigo-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Database className="w-8 h-8 text-indigo-600" />
+                </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Compliance</h3>
-                <p className="text-gray-600">Compliance management and risk assessment</p>
->>>>>>> cursor/add-new-services-and-deploy-updates-f159
+                <p className="text-gray-600">Meet industry standards and regulatory requirements</p>
               </div>
             </div>
           </div>
