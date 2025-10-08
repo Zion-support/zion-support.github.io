@@ -210,19 +210,19 @@ class Logger {
   }
 
   /**
-   * Create a child logger with a specific context
-   */
-  child(context: string): ContextLogger {
-    return new ContextLogger(this, context);
-  }
-
-  /**
    * End a console group
    */
   groupEnd(): void {
     if (this.config.enableConsole && typeof console.groupEnd === 'function') {
       console.groupEnd();
     }
+  }
+
+  /**
+   * Create a child logger with a specific context
+   */
+  child(context: string): ContextLogger {
+    return new ContextLogger(this, context);
   }
 
   /**
