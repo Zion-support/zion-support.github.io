@@ -70,13 +70,9 @@ export class ErrorHandler {
       this.errorQueue.shift();
     }
 
-    // Send to error reporting service
     this.reportError(errorData);
   }
 
-  /**
-   * Categorize error based on message and stack
-   */
   private categorizeError(error: Error): ErrorCategory {
     const message = error.message.toLowerCase();
     const stack = error.stack?.toLowerCase() || '';
@@ -99,9 +95,6 @@ export class ErrorHandler {
     return ErrorCategory.UNKNOWN;
   }
 
-  /**
-   * Determine error severity
-   */
   private determineSeverity(error: Error, category: ErrorCategory): ErrorSeverity {
     if (category === ErrorCategory.NETWORK) {
       return ErrorSeverity.MEDIUM;
@@ -118,31 +111,18 @@ export class ErrorHandler {
     return ErrorSeverity.MEDIUM;
   }
 
-  /**
-   * Generate unique error ID
-   */
   private generateErrorId(): string {
     return `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
   }
 
-  /**
-   * Report error to external service
-   */
   private reportError(errorData: ErrorInfo): void {
-    // Implementation for reporting to external service
     console.error('Error reported:', errorData);
   }
 
-  /**
-   * Get all errors
-   */
   getErrors(): ErrorInfo[] {
     return [...this.errorQueue];
   }
 
-  /**
-   * Clear error queue
-   */
   clearErrors(): void {
     this.errorQueue = [];
   }
