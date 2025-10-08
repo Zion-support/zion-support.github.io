@@ -75,7 +75,7 @@ class PerformanceOptimizer {
     if ('measure' in performance && 'mark' in performance) {
       try {
         performance.measure(`${markName}-duration`, markName);
-      } catch (_error) {
+      } catch {
         // Ignore measure errors
       }
     }
@@ -109,7 +109,7 @@ class PerformanceOptimizer {
       });
       observer.observe({ entryTypes: ['largest-contentful-paint'] });
       this.observers.push(observer);
-    } catch (_error) {
+    } catch {
       // Ignore if not supported
     }
   }
@@ -118,13 +118,14 @@ class PerformanceOptimizer {
     try {
       const observer = new PerformanceObserver((list) => {
         const entries = list.getEntries();
-        entries.forEach((entry: any) => {
-          this.metrics.fid = entry.processingStart - entry.startTime;
+        entries.forEach((entry: PerformanceEntry) => {
+          const fidEntry = entry as PerformanceEntry & { processingStart: number };
+          this.metrics.fid = fidEntry.processingStart - fidEntry.startTime;
         });
       });
       observer.observe({ entryTypes: ['first-input'] });
       this.observers.push(observer);
-    } catch (_error) {
+    } catch {
       // Ignore if not supported
     }
   }
@@ -134,16 +135,17 @@ class PerformanceOptimizer {
       let clsValue = 0;
       const observer = new PerformanceObserver((list) => {
         const entries = list.getEntries();
-        entries.forEach((entry: any) => {
-          if (!entry.hadRecentInput) {
-            clsValue += entry.value;
+        entries.forEach((entry: PerformanceEntry) => {
+          const clsEntry = entry as PerformanceEntry & { hadRecentInput?: boolean; value: number };
+          if (!clsEntry.hadRecentInput) {
+            clsValue += clsEntry.value;
           }
         });
         this.metrics.cls = clsValue;
       });
       observer.observe({ entryTypes: ['layout-shift'] });
       this.observers.push(observer);
-    } catch (_error) {
+    } catch {
       // Ignore if not supported
     }
   }
@@ -160,7 +162,7 @@ class PerformanceOptimizer {
       });
       observer.observe({ entryTypes: ['paint'] });
       this.observers.push(observer);
-    } catch (_error) {
+    } catch {
       // Ignore if not supported
     }
   }
@@ -169,23 +171,26 @@ class PerformanceOptimizer {
     try {
       const observer = new PerformanceObserver((list) => {
         const entries = list.getEntries();
-        entries.forEach((entry: any) => {
-          if (entry.responseStart > 0) {
-            this.metrics.ttfb = entry.responseStart - entry.requestStart;
+        entries.forEach((entry: PerformanceEntry) => {
+          const navEntry = entry as PerformanceEntry & { responseStart: number; requestStart: number };
+          if (navEntry.responseStart > 0) {
+            this.metrics.ttfb = navEntry.responseStart - navEntry.requestStart;
           }
         });
       });
       observer.observe({ entryTypes: ['navigation'] });
       this.observers.push(observer);
-    } catch (_error) {
+    } catch {
       // Ignore if not supported
     }
   }
 
   private observeMemory() {
     if ('memory' in performance) {
-      const memory = (performance as any).memory;
-      this.metrics.memory = memory.usedJSHeapSize / memory.jsHeapSizeLimit;
+      const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
+      if (memory) {
+        this.metrics.memory = memory.usedJSHeapSize / memory.jsHeapSizeLimit;
+      }
     }
   }
 
@@ -263,13 +268,13 @@ class PerformanceOptimizer {
   getNavigationMetrics() {
     if (typeof window === 'undefined') return null;
 
-    const navigation = performance.getEntriesByType('navigation')[0] as any;
+    const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
     if (!navigation) return null;
 
     return {
       domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
       loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
-      domInteractive: navigation.domInteractive - navigation.navigationStart,
+      domInteractive: navigation.domInteractive - navigation.fetchStart,
       redirect: navigation.redirectEnd - navigation.redirectStart,
       dns: navigation.domainLookupEnd - navigation.domainLookupStart,
       tcp: navigation.connectEnd - navigation.connectStart,

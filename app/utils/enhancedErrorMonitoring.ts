@@ -11,7 +11,7 @@ interface ErrorContext {
   timestamp: string;
   component?: string;
   action?: string;
-  metadata?: Record<string, any>;
+  metadata?: Record<string, unknown>;
   filename?: string;
   lineno?: number;
   colno?: number;
@@ -86,8 +86,8 @@ class EnhancedErrorMonitoring {
     // Resource loading errors
     window.addEventListener('error', (event) => {
       if (event.target !== window) {
-        this.handleError(new Error(`Resource loading error: ${(event.target as any)['src'] || (event.target as any).href}`), {
-          resource: (event.target as any)['src'] || (event.target as any).href,
+        this.handleError(new Error(`Resource loading error: ${(event.target as HTMLImageElement | HTMLScriptElement | HTMLLinkElement)['src'] || (event.target as HTMLLinkElement).href}`), {
+          resource: (event.target as HTMLImageElement | HTMLScriptElement | HTMLLinkElement)['src'] || (event.target as HTMLLinkElement).href,
           category: 'resource'
         });
       }
@@ -153,7 +153,7 @@ class EnhancedErrorMonitoring {
       new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           if (entry.entryType === 'memory') {
-            const memory = entry as any;
+            const memory = entry as PerformanceEntry & { usedJSHeapSize: number };
             if (memory.usedJSHeapSize > 100 * 1024 * 1024) { // 100MB
               this.handleError(new Error(`High memory usage detected: ${memory.usedJSHeapSize / 1024 / 1024}MB`), {
                 memoryUsage: memory.usedJSHeapSize,

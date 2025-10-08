@@ -4,6 +4,7 @@
  */
 
 import React, { ReactElement } from 'react';
+import '@testing-library/jest-dom';
 
 /**
  * Mock performance API for testing
@@ -126,7 +127,7 @@ export async function waitFor(
 export function createMockFn<T extends (...args: unknown[]) => any>(
   implementation?: T
 ): jest.Mock<ReturnType<T>, Parameters<T>> {
-  return jest.fn(implementation) as jest.Mock<ReturnType<T>, Parameters<T>>;
+  return jest.fn(implementation) as unknown as jest.Mock<ReturnType<T>, Parameters<T>>;
 }
 
 /**

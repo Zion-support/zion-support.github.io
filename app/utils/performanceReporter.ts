@@ -77,7 +77,7 @@ class PerformanceReporter {
         const lastEntry = entries[entries.length - 1];
         
         if (lastEntry && 'renderTime' in lastEntry) {
-          const value = (lastEntry as any).renderTime || (lastEntry as any).loadTime;
+          const value = (lastEntry as PerformanceEntry & { renderTime?: number; loadTime?: number }).renderTime || (lastEntry as PerformanceEntry & { renderTime?: number; loadTime?: number }).loadTime;
           this.addMetric('LCP', value, this.getRating('lcp', value));
         }
       });
@@ -89,7 +89,7 @@ class PerformanceReporter {
         const entries = entryList.getEntries();
         entries.forEach((entry) => {
           if ('processingStart' in entry && 'startTime' in entry) {
-            const value = (entry as any).processingStart - entry.startTime;
+            const value = (entry as PerformanceEntry & { processingStart: number }).processingStart - entry.startTime;
             this.addMetric('FID', value, this.getRating('fid', value));
           }
         });
@@ -101,8 +101,8 @@ class PerformanceReporter {
       let clsValue = 0;
       const clsObserver = new PerformanceObserver((entryList) => {
         entryList.getEntries().forEach((entry) => {
-          if ('value' in entry && !(entry as any).hadRecentInput) {
-            clsValue += (entry as any).value;
+          if ('value' in entry && !(entry as PerformanceEntry & { hadRecentInput?: boolean }).hadRecentInput) {
+            clsValue += (entry as PerformanceEntry & { value: number }).value;
           }
         });
         this.addMetric('CLS', clsValue, this.getRating('cls', clsValue));
@@ -244,7 +244,7 @@ class PerformanceReporter {
     }
 
     // Google Analytics
-    const gtag = (window as any).gtag;
+    const gtag = (window as unknown as { gtag: Function }).gtag;
     if (typeof gtag === 'function') {
       gtag('event', metric.name, {
         event_category: 'Web Vitals',

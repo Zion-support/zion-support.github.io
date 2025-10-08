@@ -74,7 +74,7 @@ class MonitoringService {
         // Cumulative Layout Shift
         let clsValue = 0;
         const clsObserver = new PerformanceObserver((list) => {
-          for (const entry of list.getEntries() as any[]) {
+          for (const entry of list.getEntries() as PerformanceEntry[]) {
             if (!entry.hadRecentInput) {
               clsValue += entry.value;
               this.metrics.cls = clsValue;
@@ -114,7 +114,7 @@ class MonitoringService {
           }
         });
         longTaskObserver.observe({ entryTypes: ['longtask'] });
-      } catch (_error) {
+      } catch {
         // Long task API might not be available
       }
     }
@@ -186,8 +186,8 @@ class MonitoringService {
     }
 
     // Send to analytics (if configured)
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('event', name, {
+    if (typeof window !== 'undefined' && (window as unknown as { gtag: Function }).gtag) {
+      (window as unknown as { gtag: Function }).gtag('event', name, {
         value: Math.round(name === 'cls' ? value * 1000 : value),
         event_category: 'Web Vitals',
         non_interaction: true,
@@ -207,8 +207,8 @@ class MonitoringService {
     console.error('[Error]', error);
 
     // Send to error tracking service (if configured)
-    if (typeof window !== 'undefined' && (window as any).Sentry) {
-      (window as any).Sentry.captureException(new Error(error.message));
+    if (typeof window !== 'undefined' && (window as unknown as { Sentry: { captureException: Function } }).Sentry) {
+      (window as unknown as { Sentry: { captureException: Function } }).Sentry.captureException(new Error(error.message));
     }
   }
 
@@ -226,7 +226,7 @@ class MonitoringService {
 
   public measureMemory(): void {
     if ('memory' in performance && performanceConfig.monitoring.enableMemoryMonitoring) {
-      const memory = (performance as any).memory;
+      const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
  
     console.log('[Memory]', {
         used: `${Math.round(memory.usedJSHeapSize / 1048576)}MB`,
