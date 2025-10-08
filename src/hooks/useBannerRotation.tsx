@@ -25,28 +25,28 @@ interface BannerRotationState {
 }
 
 // Helper functions defined inline
-const selectBannersForDisplay = (banners: unknown[], maxBanners: number, strategy: RotationStrategy) => {
-  const enabled = banners.filter((b: unknown) => b.enabled !== false);
-  const sorted = enabled.sort((a: unknown, b: unknown) => (b.priority || 0) - (a.priority || 0));
+const selectBannersForDisplay = (banners: BannerConfig[], maxBanners: number, strategy: RotationStrategy) => {
+  const enabled = banners.filter((b: BannerConfig) => b.enabled !== false);
+  const sorted = enabled.sort((a: BannerConfig, b: BannerConfig) => (b.priority || 0) - (a.priority || 0));
   return sorted.slice(0, maxBanners);
 };
 
-const selectBalancedBanners = (banners: unknown[], maxBanners: number) => {
+const selectBalancedBanners = (banners: BannerConfig[], maxBanners: number) => {
   return selectBannersForDisplay(banners, maxBanners, 'balanced');
 };
 
 const trackImpression = (bannerId: string) => {
   if (typeof window !== 'undefined') {
-//     const key = `banner_impression_${bannerId}`;
-//     const current = parseInt(localStorage.getItem(key) || '0');
+    const key = `banner_impression_${bannerId}`;
+    const current = parseInt(localStorage.getItem(key) || '0');
     localStorage.setItem(key, String(current + 1));
   }
 };
 
 const trackClick = (bannerId: string) => {
   if (typeof window !== 'undefined') {
-//     const key = `banner_click_${bannerId}`;
-//     const current = parseInt(localStorage.getItem(key) || '0');
+    const key = `banner_click_${bannerId}`;
+    const current = parseInt(localStorage.getItem(key) || '0');
     localStorage.setItem(key, String(current + 1));
   }
 };
@@ -62,7 +62,7 @@ const loadBannerStats = () => {
 // const getRefreshInterval = () => 30000;
 // const getRotationStrategy = (): RotationStrategy => 'balanced';
 
-export const useBannerRotation = (_options: UseBannerRotationOptions = {}) => {
+export const useBannerRotation = (options: UseBannerRotationOptions = {}) => {
   const {
     strategy = 'balanced',
     maxBanners = 3,
@@ -84,14 +84,14 @@ export const useBannerRotation = (_options: UseBannerRotationOptions = {}) => {
   // Load initial banners
   useEffect(() => {
     try {
-//       const configs = Array.isArray(bannerConfigurations) ? bannerConfigurations : [];
+      const configs = Array.isArray(bannerConfigurations) ? bannerConfigurations : [];
       const selected = strategy === 'balanced' 
         ? selectBalancedBanners(configs, maxBanners)
         : selectBannersForDisplay(configs, maxBanners, strategy);
       
       setState(prev => ({
         ...prev,
-        currentBanners: selected,
+        currentBanners: selected as BannerConfig[],
         isLoading: false
       }));
     } catch (error) {
