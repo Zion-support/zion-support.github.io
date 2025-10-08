@@ -8,11 +8,7 @@ import '@testing-library/jest-dom';
 // Polyfill for TextEncoder/TextDecoder
 import { TextEncoder, TextDecoder } from 'util';
 global.TextEncoder = TextEncoder;
-<<<<<<< HEAD
-global.TextDecoder = TextDecoder as unknown as typeof globalThis.TextDecoder;
-=======
 global.TextDecoder = TextDecoder as typeof globalThis.TextDecoder;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b3e6
 
 // Suppress jsdom navigation warnings
  

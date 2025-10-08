@@ -1,9 +1,5 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-<<<<<<< HEAD
-=======
-
 import { Link } from 'react-router-dom';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-c95a
 import { logger } from '../utils/logger';
 
 interface ErrorBoundaryState {
