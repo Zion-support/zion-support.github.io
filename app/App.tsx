@@ -10,84 +10,32 @@ import AdvancedErrorBoundary from './components/AdvancedErrorBoundary';
 import AdvancedSEOOptimizer from './components/AdvancedSEOOptimizer';
 import SEOEnhancer from './components/SEOEnhancer';
 import LoadingSpinner from './components/LoadingSpinner';
+import PerformanceDashboard from './components/PerformanceDashboard';
+import AdvancedPerformanceMonitor from './components/AdvancedPerformanceMonitor';
 
-// Lazy load components
-const HomePage = lazy(() => import('./pages/HomePage'));
-const PerformanceDashboard = lazy(() => import('./components/PerformanceDashboard').catch(() => ({ default: () => null })));
-const AdvancedPerformanceMonitor = lazy(() => import('./components/AdvancedPerformanceMonitor').catch(() => ({ default: () => null })));
-
-// Utilities (with safe fallbacks)
-const logger = {
-  lifecycle: (message: string, component: string) => console.log(`[${component}] ${message}`),
-  info: (message: string, data?: any) => console.log(message, data),
-  error: (message: string, error: Error, data?: any) => console.error(message, error, data),
-  performance: (message: string, data: any, component: string) => console.log(`[${component}] ${message}`, data),
-  debug: (message: string, data?: any) => console.debug(message, data),
-};
-
-const performanceOptimizer = {
-  init: () => console.log('Performance optimizer initialized'),
-  getMetrics: () => ({}),
-};
-
-const lazyLoadImages = () => {
-  // Lazy load images implementation
-  if (typeof window !== 'undefined') {
-    const images = document.querySelectorAll('img[data-src]');
-    images.forEach((img) => {
-      if (img instanceof HTMLImageElement && img.dataset.src) {
-        img.src = img.dataset.src;
-      }
-    });
-  }
-};
-
-const preloadCriticalResources = () => {
-  // Preload critical resources implementation
-  console.log('Preloading critical resources');
-};
-
-const collectPerformanceMetrics = () => {
-  if (typeof window !== 'undefined' && 'performance' in window) {
-    return {
-      loadTime: performance.now(),
-      timing: performance.timing,
-    };
-  }
-  return null;
+// Simple HomePage component
+const HomePage = () => {
+  return (
+    <div className="min-h-screen bg-gray-50">
+      <h1 className="text-4xl font-bold text-center py-20">Zion Tech Group</h1>
+      <p className="text-xl text-center">Advanced AI and IT Solutions</p>
+    </div>
+  );
 };
 
 const App: React.FC = () => {
   useEffect(() => {
-    // Initialize global error handling
-    logger.lifecycle('initialized', 'App');
-
-    // Initialize performance monitoring
-    lazyLoadImages();
-    preloadCriticalResources();
-    performanceOptimizer.init();
-    
     // Initialize Web Vitals monitoring
     if (typeof window !== 'undefined' && 'performance' in window) {
-      const pageLoadMetrics = collectPerformanceMetrics();
-      const metrics = performanceOptimizer.getMetrics();
-      if (pageLoadMetrics) {
-        // eslint-disable-next-line no-console
-        console.log('Performance metrics collected:', pageLoadMetrics);
-      }
-      if (metrics) {
-        // eslint-disable-next-line no-console
-        console.log('Performance metrics:', metrics);
+      if (process.env['NODE_ENV'] === 'development') {
+        console.log('🚀 Zion Tech Group App initialized');
       }
     }
-    
-    logger.lifecycle('Performance monitoring initialized', 'App');
-    logger.info('🚀 Zion Tech Group App initialized with comprehensive monitoring', { component: 'App' });
-
   }, []);
 
   const handleError = useCallback((error: Error, errorInfo: any) => {
-    logger.error('Application Error', error, { component: 'ErrorBoundary' });
+    // eslint-disable-next-line no-console
+    console.error('Application Error:', error);
     // eslint-disable-next-line no-console
     console.error('Error info:', errorInfo);
   }, []);
@@ -144,21 +92,17 @@ const App: React.FC = () => {
                 </main>
 
                 {/* Performance Dashboard */}
-                <Suspense fallback={null}>
-                  <PerformanceDashboard />
-                </Suspense>
+                <PerformanceDashboard />
                 
                 {/* Advanced Performance Monitor */}
-                <Suspense fallback={null}>
-                  <AdvancedPerformanceMonitor
-                    enableRealTimeMonitoring={process.env['NODE_ENV'] === 'development'}
-                    onMetricsUpdate={(metrics) => {
-                      if (process.env['NODE_ENV'] === 'development') {
-                        logger.performance('Performance Metrics', metrics as unknown as Record<string, unknown>, 'PerformanceMonitor');
-                      }
-                    }}
-                  />
-                </Suspense>
+                <AdvancedPerformanceMonitor
+                  enableRealTimeMonitoring={process.env['NODE_ENV'] === 'development'}
+                  onMetricsUpdate={(metrics) => {
+                    if (process.env['NODE_ENV'] === 'development') {
+                      logger.performance('Performance Metrics', metrics as unknown as Record<string, unknown>, 'PerformanceMonitor');
+                    }
+                  }}
+                />
               </div>
             </Router>
           </SEOEnhancer>
