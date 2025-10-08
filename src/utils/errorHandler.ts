@@ -41,6 +41,7 @@ class ErrorHandler {
   }
 
   public static getInstance(): ErrorHandler {
+    if (!ErrorHandler.instance) {
       ErrorHandler.instance = new ErrorHandler();
     }
     return ErrorHandler.instance;

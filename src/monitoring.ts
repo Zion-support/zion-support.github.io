@@ -1,11 +1,11 @@
 // Performance monitoring setup
 import analytics from './utils/analytics';
-import { ErrorHandler } from './utils/errorHandler';
+import ErrorHandler from './utils/errorHandler';
 import { performanceOptimizer } from '../app/utils/performanceOptimizer';
 import { logger } from './utils/logger';
 
 // Initialize error handler
-const errorHandler = new ErrorHandler();
+const errorHandler = ErrorHandler.getInstance();
 
 // Initialize monitoring on load
 function initializeMonitoring() {
