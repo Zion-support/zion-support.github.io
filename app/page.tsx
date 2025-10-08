@@ -1,6 +1,19 @@
 'use client';
 
-import React, { useState, useCallback } from 'react';
+import React, { Suspense, lazy, useState, useCallback } from 'react';
+import Link from 'next/link';
+
+// Lazy load heavy components
+const UnifiedContentPromotion = lazy(
+  () => import('./components/UnifiedContentPromotion'),
+);
+const InteractiveAIROICalculator = lazy(
+  () => import('./components/InteractiveAIROICalculator'),
+);
+const ContentShowcase = lazy(() => import('./components/ContentShowcase'));
+const InteractiveContentShowcase2026 = lazy(
+  () => import('./components/InteractiveContentShowcase2026'),
+);
 
 // Loading fallback component
 const LoadingFallback: React.FC<{ height?: string }> = ({
@@ -47,92 +60,102 @@ const HomePage: React.FC = () => {
     setIsMobileMenuOpen((prev) => !prev);
   }, []);
 
+  const structuredData = {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'Zion Tech Group',
+    description:
+      'Leading provider of AI-powered enterprise solutions and digital transformation services',
+    url: 'https://ziontechgroup.com',
+    logo: 'https://ziontechgroup.com/logo.png',
+    contactPoint: {
+      '@type': 'ContactPoint',
+      telephone: '+1-302-464-0950',
+      contactType: 'customer service',
+      email: 'kleber@ziontechgroup.com',
+    },
+    address: {
+      '@type': 'PostalAddress',
+      addressCountry: 'US',
+      addressLocality: 'Wilmington',
+      addressRegion: 'DE',
+    },
+    sameAs: [
+      'https://linkedin.com/company/ziontechgroup',
+      'https://twitter.com/ziontechgroup',
+    ],
+    offers: {
+      '@type': 'Offer',
+      description: 'AI Enterprise Transformation Services',
+      price: '300% ROI Guaranteed',
+      priceCurrency: 'USD',
+    },
+  };
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800">
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
+      
       {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
+      <section className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center">
+        <div className="container mx-auto px-4">
           <div className="text-center">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-gray-900 dark:text-white mb-6">
-              Welcome to <span className="text-indigo-600 dark:text-indigo-400">Zion Tech Group</span>
+            <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+              Welcome to Zion Tech Group
             </h1>
-            <p className="text-xl sm:text-2xl text-gray-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto">
-              Leading provider of enterprise AI solutions, quantum computing, and autonomous systems.
-              Transform your business with our cutting-edge technology.
+            <p className="text-xl md:text-2xl text-gray-700 mb-12 max-w-3xl mx-auto">
+              Pioneering the future with advanced AI and IT solutions that transform businesses and drive innovation
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="#contact"
-                className="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:text-lg md:px-10"
+              <Link
+                href="/contact"
+                className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-lg text-lg transition-colors duration-300"
               >
-                Get Started
-              </a>
-              <a
-                href="tel:+1234567890"
-                onClick={handlePhoneClick}
-                className="inline-flex items-center justify-center px-8 py-3 border border-gray-300 dark:border-gray-600 text-base font-medium rounded-md text-gray-700 dark:text-gray-200 bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 md:text-lg md:px-10"
+                Get Started Today
+              </Link>
+              <Link
+                href="/services"
+                className="border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white font-bold py-4 px-8 rounded-lg text-lg transition-colors duration-300"
               >
-                Contact Us
-              </a>
+                View Services
+              </Link>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Services Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-800">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl sm:text-4xl font-bold text-center text-gray-900 dark:text-white mb-12">
-            Our Services
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="p-6 bg-gray-50 dark:bg-gray-700 rounded-lg shadow-md">
-              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
-                AI Solutions
-              </h3>
-              <p className="text-gray-600 dark:text-gray-300">
-                Advanced artificial intelligence and machine learning solutions for enterprise automation.
-              </p>
-            </div>
-            <div className="p-6 bg-gray-50 dark:bg-gray-700 rounded-lg shadow-md">
-              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
-                Cloud Services
-              </h3>
-              <p className="text-gray-600 dark:text-gray-300">
-                Scalable cloud infrastructure and deployment solutions for modern applications.
-              </p>
-            </div>
-            <div className="p-6 bg-gray-50 dark:bg-gray-700 rounded-lg shadow-md">
-              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
-                Automation
-              </h3>
-              <p className="text-gray-600 dark:text-gray-300">
-                Business process automation and workflow optimization for increased efficiency.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* Main Content */}
+      <main className="container mx-auto px-4 py-16">
+        {/* Unified Content Promotion */}
+        <Suspense fallback={<LoadingFallback height="h-32" />}>
+          <UnifiedContentPromotion />
+        </Suspense>
 
-      {/* Contact Section */}
-      <section id="contact" className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-6">
-            Ready to Transform Your Business?
-          </h2>
-          <p className="text-xl text-gray-600 dark:text-gray-300 mb-8">
-            Let's discuss how we can help you achieve your goals with our cutting-edge technology solutions.
-          </p>
-          <a
-            href="tel:+1234567890"
-            onClick={handlePhoneClick}
-            className="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:text-lg md:px-10"
-          >
-            Call Us Now
-          </a>
-        </div>
-      </section>
-    </div>
+        {/* Interactive AI ROI Calculator */}
+        <section className="my-16">
+          <Suspense fallback={<LoadingFallback height="h-96" />}>
+            <InteractiveAIROICalculator />
+          </Suspense>
+        </section>
+
+        {/* Content Showcase */}
+        <section className="my-16">
+          <Suspense fallback={<LoadingFallback height="h-64" />}>
+            <ContentShowcase />
+          </Suspense>
+        </section>
+
+        {/* Interactive Content Showcase 2026 */}
+        <section className="my-16">
+          <Suspense fallback={<LoadingFallback height="h-96" />}>
+            <InteractiveContentShowcase2026 />
+          </Suspense>
+        </section>
+      </main>
+    </>
   );
 };
 
