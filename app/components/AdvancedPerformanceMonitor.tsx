@@ -36,15 +36,15 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
 
     // Measure First Contentful Paint (FCP)
     const _fcpEntries = performance.getEntriesByName('first-contentful-paint') || [];
-    const _fcp = fcpEntries.length > 0 ? fcpEntries[0].startTime : null;
+    const _fcp = _fcpEntries.length > 0 ? _fcpEntries[0].startTime : null;
 
     // Measure Largest Contentful Paint (LCP)
     if ('PerformanceObserver' in window) {
       try {
         const lcpObserver = new PerformanceObserver(list => {
           const _entries = list.getEntries();
-          const _lastEntry = entries[entries.length - 1];
-          setMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }));
+          const _lastEntry = _entries[_entries.length - 1];
+          setMetrics(prev => ({ ...prev, lcp: _lastEntry.startTime }));
         });
         lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
         observers.push(lcpObserver);
@@ -59,7 +59,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       try {
         const fidObserver = new PerformanceObserver(list => {
           const _entries = list.getEntries();
-          entries.forEach(entry => {
+          _entries.forEach(entry => {
             if (
               entry.entryType === 'first-input' &&
               'processingStart' in entry &&
@@ -87,7 +87,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         let _clsValue = 0;
         const clsObserver = new PerformanceObserver(list => {
           const _entries = list.getEntries();
-          entries.forEach(entry => {
+          _entries.forEach(entry => {
             if (
               entry.entryType === 'layout-shift' &&
               'hadRecentInput' in entry &&
@@ -112,9 +112,9 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     // Measure Time to First Byte (TTFB)
     try {
       const _navigationEntries = performance.getEntriesByType?.('navigation') || [];
-      const _navigationEntry = navigationEntries[0] as PerformanceNavigationTiming;
-      const ttfb = navigationEntry
-        ? navigationEntry.responseStart - navigationEntry.requestStart
+      const _navigationEntry = _navigationEntries[0] as PerformanceNavigationTiming;
+      const ttfb = _navigationEntry
+        ? _navigationEntry.responseStart - _navigationEntry.requestStart
         : null;
 
       // Measure Memory Usage
@@ -124,13 +124,13 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
 
       setMetrics(prev => ({
         ...prev,
-        fcp,
+        fcp: _fcp,
         ttfb,
         memory,
       }));
     } catch (error) {
       // eslint-disable-next-line no-console
-      console.warn('Performance measurement failed:', error);origin/cursor/fix-errors-and-merge-to-main-6395
+      console.warn('Performance measurement failed:', error);
     }
 
     // Cleanup observers
