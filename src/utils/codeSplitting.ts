@@ -50,7 +50,11 @@ export function lazyWithRetry<T extends ComponentType<any>>(
   importFunc: () => Promise<{ default: T }>,
   options: LoadingOptions = {}
 ): LazyExoticComponent<T> {
-  const { retries = 3, retryDelay = 1000, timeout = 10000 } = options;
+  const {
+    retries = 3,
+    retryDelay = 1000,
+    timeout = 10000,
+  } = options;
 
   return lazy(() => {
     return new Promise<{ default: T }>((resolve, reject) => {
@@ -61,7 +65,7 @@ export function lazyWithRetry<T extends ComponentType<any>>(
 
       const attemptLoad = async () => {
         try {
-          const result = await importFunc();
+const result = await importFunc();
           clearTimeout(timeoutId);
           resolve(result);
         } catch (error) {
@@ -69,7 +73,11 @@ export function lazyWithRetry<T extends ComponentType<any>>(
 
           if (attempts >= retries) {
             clearTimeout(timeoutId);
-            reject(new Error(`Failed to load component after ${attempts} attempts: ${error}`));
+            reject(
+              new Error(
+                `Failed to load component after ${attempts} attempts: ${error}`
+              )
+            );
             return;
           }
 
@@ -104,7 +112,7 @@ export function lazyWithPreload<T extends ComponentType<any>>(
   importFunc: () => Promise<{ default: T }>,
   preloadOptions: PreloadOptions = {}
 ): LazyExoticComponent<T> & { preload: () => Promise<void> } {
-  const lazyComponent = lazy(importFunc);
+const lazyComponent = lazy(importFunc);
   let preloadPromise: Promise<void> | null = null;
 
   const preload = () => {
@@ -131,7 +139,7 @@ export interface RouteConfig {
 }
 
 export function createRouteSplitting(routes: RouteConfig[]) {
-  const lazyRoutes = routes.map(route => ({
+  const lazyRoutes = routes.map((route) => ({
     ...route,
     Component: lazyWithPreload(route.component, {
       priority: route.priority || 'medium',
@@ -143,8 +151,8 @@ export function createRouteSplitting(routes: RouteConfig[]) {
    */
   const preloadRoutes = (priority: 'high' | 'medium' | 'low' = 'high') => {
     lazyRoutes
-      .filter(route => route.preload && route.priority === priority)
-      .forEach(route => {
+      .filter((route) => route.preload && route.priority === priority)
+      .forEach((route) => {
         if (route.Component.preload) {
           route.Component.preload();
         }
@@ -155,7 +163,7 @@ export function createRouteSplitting(routes: RouteConfig[]) {
    * Preload route by path
    */
   const preloadRoute = (path: string) => {
-    const route = lazyRoutes.find(r => r.path === path);
+    const route = lazyRoutes.find((r) => r.path === path);
     if (route && route.Component.preload) {
       route.Component.preload();
     }
@@ -214,7 +222,10 @@ export class ChunkLoadMonitor {
     const chunk = this.chunks.get(chunkName);
     if (!chunk) return null;
 
-    const loadTime = chunk.endTime && chunk.startTime ? chunk.endTime - chunk.startTime : undefined;
+    const loadTime =
+      chunk.endTime && chunk.startTime
+        ? chunk.endTime - chunk.startTime
+        : undefined;
 
     return {
       chunkName,
@@ -228,10 +239,9 @@ export class ChunkLoadMonitor {
   static getAllMetrics() {
     const metrics: unknown[] = [];
     for (const [chunkName] of this.chunks) {
-      const m = this.getMetrics(chunkName);
-      if (m) metrics.push(m);
+      const m = this.getMetrics(chunkName); if (m) metrics.push(m);
     }
-    return metrics.filter(m => m !== null);
+    return metrics.filter((m) => m !== null);
   }
 
   static clearMetrics(): void {
@@ -249,7 +259,11 @@ export class IntelligentPreloader {
   /**
    * Preload on hover with delay
    */
-  onHover(element: HTMLElement, preloadFn: () => void, delay: number = 200): () => void {
+  onHover(
+    element: HTMLElement,
+    preloadFn: () => void,
+    delay: number = 200
+  ): () => void {
     const handleMouseEnter = () => {
       this.hoverTimeout = setTimeout(preloadFn, delay);
     };
@@ -277,14 +291,18 @@ export class IntelligentPreloader {
   /**
    * Preload on viewport visibility
    */
-  onVisible(element: HTMLElement, preloadFn: () => void, threshold: number = 0.5): () => void {
+  onVisible(
+    element: HTMLElement,
+    preloadFn: () => void,
+    threshold: number = 0.5
+  ): () => void {
     if (!('IntersectionObserver' in window)) {
       return () => {};
     }
 
     const observer = new IntersectionObserver(
-      entries => {
-        entries.forEach(entry => {
+      (entries) => {
+        entries.forEach((entry) => {
           if (entry.isIntersecting) {
             preloadFn();
             observer.disconnect();
@@ -305,10 +323,10 @@ export class IntelligentPreloader {
    */
   onIdle(preloadFn: () => void, timeout: number = 2000): () => void {
     if ('requestIdleCallback' in window) {
-      const id = requestIdleCallback(preloadFn, { timeout });
+const id = requestIdleCallback(preloadFn, { timeout });
       return () => cancelIdleCallback(id);
     } else {
-      const id = setTimeout(preloadFn, timeout);
+const id = setTimeout(preloadFn, timeout);
       return () => clearTimeout(id);
     }
   }
@@ -321,7 +339,10 @@ export class IntelligentPreloader {
       const connection = (navigator as any).connection;
 
       // Only preload on fast connections
-      if (connection.effectiveType === '4g' || connection.effectiveType === '3g') {
+      if (
+        connection.effectiveType === '4g' ||
+        connection.effectiveType === '3g'
+      ) {
         // Check if user has data saver enabled
         if (!connection.saveData) {
           preloadFn();
@@ -370,7 +391,7 @@ export function analyzeBundleSize(): {
   const chunks: Array<{ name: string; size: number }> = [];
   let totalSize = 0;
 
-  scripts.forEach(script => {
+  scripts.forEach((script) => {
     const src = script.getAttribute('src');
     if (src) {
       // This is a rough estimate - in production, you'd track actual sizes

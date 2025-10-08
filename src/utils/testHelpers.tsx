@@ -29,12 +29,12 @@ export async function waitForCondition(
   timeout: number = 5000,
   interval: number = 100
 ): Promise<void> {
-  const startTime = Date.now();
+const startTime = Date.now();
 
   while (Date.now() - startTime < timeout) {
-    const result = await condition();
+const result = await condition();
     if (result) return;
-    await new Promise(resolve => setTimeout(resolve, interval));
+    await new Promise((resolve) => setTimeout(resolve, interval));
   }
 
   throw new Error(`Condition not met within ${timeout}ms`);
@@ -46,7 +46,7 @@ export async function waitForCondition(
 export function mockMatchMedia(matches: boolean = true): void {
   Object.defineProperty(window, 'matchMedia', {
     writable: true,
-    value: jest.fn().mockImplementation(query => ({
+    value: jest.fn().mockImplementation((query) => ({
       matches,
       media: query,
       onchange: null,
@@ -187,7 +187,10 @@ export function createTestFactory<T>(template: T): (overrides?: Partial<T>) => T
 /**
  * Generate array of test data
  */
-export function generateTestData<T>(factory: (index: number) => T, count: number): T[] {
+export function generateTestData<T>(
+  factory: (index: number) => T,
+  count: number
+): T[] {
   return Array.from({ length: count }, (_, i) => factory(i));
 }
 
@@ -197,13 +200,13 @@ export function generateTestData<T>(factory: (index: number) => T, count: number
 export function suppressConsole(methods: Array<'error' | 'warn' | 'log'> = ['error']): () => void {
   const originalMethods: Record<string, any> = {};
 
-  methods.forEach(method => {
+  methods.forEach((method) => {
     originalMethods[method] = console[method];
     console[method] = jest.fn();
   });
 
   return () => {
-    methods.forEach(method => {
+    methods.forEach((method) => {
       console[method] = originalMethods[method];
     });
   };
@@ -213,20 +216,23 @@ export function suppressConsole(methods: Array<'error' | 'warn' | 'log'> = ['err
  * Create delayed promise for testing async behavior
  */
 export function delay(ms: number): Promise<void> {
-  return new Promise(resolve => setTimeout(resolve, ms));
+  return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
 /**
  * Flush all pending promises
  */
 export async function flushPromises(): Promise<void> {
-  await new Promise(resolve => setImmediate(resolve));
+  await new Promise((resolve) => setImmediate(resolve));
 }
 
 /**
  * Test if component renders without crashing
  */
-export function testComponentRenders(component: ReactElement, description?: string): void {
+export function testComponentRenders(
+  component: ReactElement,
+  description?: string
+): void {
   it(description || 'renders without crashing', () => {
     const { container } = renderWithProviders(component);
     expect(container).toBeTruthy();
@@ -265,7 +271,10 @@ export function testComponentAccessibility(
 /**
  * Snapshot testing helper
  */
-export function testComponentSnapshot(component: ReactElement, description?: string): void {
+export function testComponentSnapshot(
+  component: ReactElement,
+  description?: string
+): void {
   it(description || 'matches snapshot', () => {
     const { container } = renderWithProviders(component);
     expect(container.firstChild).toMatchSnapshot();
@@ -275,10 +284,12 @@ export function testComponentSnapshot(component: ReactElement, description?: str
 /**
  * Performance testing helper
  */
-export async function measureRenderTime(component: ReactElement): Promise<number> {
-  const startTime = performance.now();
+export async function measureRenderTime(
+  component: ReactElement
+): Promise<number> {
+const startTime = performance.now();
   const { unmount } = renderWithProviders(component);
-  const endTime = performance.now();
+const endTime = performance.now();
   unmount();
   return endTime - startTime;
 }
@@ -290,15 +301,15 @@ export function detectMemoryLeaks(
   componentFactory: () => ReactElement,
   iterations: number = 100
 ): boolean {
-  const initialMemory = (performance as any).memory?.usedJSHeapSize || 0;
+const initialMemory = (performance as any).memory?.usedJSHeapSize || 0;
 
   for (let i = 0; i < iterations; i++) {
     const { unmount } = renderWithProviders(componentFactory());
     unmount();
   }
 
-  const finalMemory = (performance as any).memory?.usedJSHeapSize || 0;
-  const memoryIncrease = finalMemory - initialMemory;
+const finalMemory = (performance as any).memory?.usedJSHeapSize || 0;
+const memoryIncrease = finalMemory - initialMemory;
 
   // If memory increased by more than 10MB, likely a leak
   return memoryIncrease > 10 * 1024 * 1024;

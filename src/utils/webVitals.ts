@@ -33,7 +33,10 @@ const THRESHOLDS = {
 /**
  * Calculate metric rating based on value
  */
-function getRating(metricName: WebVitalsMetric['name'], value: number): WebVitalsMetric['rating'] {
+function getRating(
+  metricName: WebVitalsMetric['name'],
+  value: number
+): WebVitalsMetric['rating'] {
   const threshold = THRESHOLDS[metricName];
   if (value <= threshold.good) return 'good';
   if (value <= threshold.poor) return 'needs-improvement';
@@ -50,7 +53,10 @@ function generateUniqueId(): string {
 /**
  * Send metric to analytics endpoint
  */
-async function sendToAnalytics(metric: WebVitalsMetric, endpoint?: string): Promise<void> {
+async function sendToAnalytics(
+  metric: WebVitalsMetric,
+  endpoint?: string
+): Promise<void> {
   if (!endpoint) return;
 
   try {
@@ -70,11 +76,11 @@ async function sendToAnalytics(metric: WebVitalsMetric, endpoint?: string): Prom
         body,
         headers: { 'Content-Type': 'application/json' },
         keepalive: true,
-        //       }).catch(console.error);
+//       }).catch(console.error);
       });
     }
   } catch {
-    //     console.error('Failed to send metric to analytics:', error);
+//     console.error('Failed to send metric to analytics:', error);
   }
 }
 
@@ -94,7 +100,7 @@ export function reportWebVitals(
     let clsValue = 0;
     let clsEntries: PerformanceEntry[] = [];
 
-    const clsObserver = new PerformanceObserver(entryList => {
+    const clsObserver = new PerformanceObserver((entryList) => {
       for (const entry of entryList.getEntries()) {
         // Only count layout shifts without recent user input
         if (!(entry as any).hadRecentInput) {
@@ -113,7 +119,7 @@ export function reportWebVitals(
 
             onPerfEntry(metric);
             if (analyticsEndpoint) sendToAnalytics(metric, analyticsEndpoint);
-            //             if (debug) if (process.env['NODE_ENV'] === 'development') { if (process.env.DEV) { console.log('CLS:', metric); } }
+if(debug) if (process.env['NODE_ENV'] === 'development') { if (process.env.DEV) { console.log('CLS:', metric); } }
           }
         }
       }
@@ -122,7 +128,7 @@ export function reportWebVitals(
     try {
       clsObserver.observe({ type: 'layout-shift', buffered: true });
     } catch (e) {
-      //       if (debug) console.warn('CLS observation not supported:', e);
+if(debug) console.warn('CLS observation not supported:', e);
     }
 
     // Report final CLS on page hide
@@ -139,16 +145,16 @@ export function reportWebVitals(
 
         onPerfEntry(metric);
         if (analyticsEndpoint) sendToAnalytics(metric, analyticsEndpoint);
-        //         if (debug) if (process.env['NODE_ENV'] === 'development') { if (process.env.DEV) { console.log('Final CLS:', metric); } }
+if(debug) if (process.env['NODE_ENV'] === 'development') { if (process.env.DEV) { console.log('Final CLS:', metric); } }
       }
     });
   }
 
   // First Input Delay (FID)
   if ('PerformanceObserver' in window) {
-    const fidObserver = new PerformanceObserver(entryList => {
+    const fidObserver = new PerformanceObserver((entryList) => {
       const firstInput = entryList.getEntries()[0] as any;
-      const fid = firstInput.processingStart - firstInput.startTime;
+const fid = firstInput.processingStart - firstInput.startTime;
 
       const metric: WebVitalsMetric = {
         name: 'FID',
@@ -161,7 +167,7 @@ export function reportWebVitals(
 
       onPerfEntry(metric);
       if (analyticsEndpoint) sendToAnalytics(metric, analyticsEndpoint);
-      //       if (debug) if (process.env['NODE_ENV'] === 'development') { if (process.env.DEV) { console.log('FID:', metric); } }
+if(debug) if (process.env['NODE_ENV'] === 'development') { if (process.env.DEV) { console.log('FID:', metric); } }
 
       fidObserver.disconnect();
     });
@@ -169,7 +175,7 @@ export function reportWebVitals(
     try {
       fidObserver.observe({ type: 'first-input', buffered: true });
     } catch (e) {
-      //       if (debug) console.warn('FID observation not supported:', e);
+if(debug) console.warn('FID observation not supported:', e);
     }
   }
 
@@ -177,7 +183,7 @@ export function reportWebVitals(
   if ('PerformanceObserver' in window) {
     let lcpValue = 0;
 
-    const lcpObserver = new PerformanceObserver(entryList => {
+    const lcpObserver = new PerformanceObserver((entryList) => {
       const entries = entryList.getEntries();
       const lastEntry = entries[entries.length - 1];
       lcpValue = lastEntry.startTime;
@@ -194,14 +200,14 @@ export function reportWebVitals(
 
         onPerfEntry(metric);
         if (analyticsEndpoint) sendToAnalytics(metric, analyticsEndpoint);
-        //         if (debug) if (process.env['NODE_ENV'] === 'development') { if (process.env.DEV) { console.log('LCP:', metric); } }
+if(debug) if (process.env['NODE_ENV'] === 'development') { if (process.env.DEV) { console.log('LCP:', metric); } }
       }
     });
 
     try {
       lcpObserver.observe({ type: 'largest-contentful-paint', buffered: true });
     } catch (e) {
-      //       if (debug) console.warn('LCP observation not supported:', e);
+if(debug) console.warn('LCP observation not supported:', e);
     }
 
     // Report final LCP on page hide
@@ -215,7 +221,7 @@ export function reportWebVitals(
 
   // First Contentful Paint (FCP)
   if ('PerformanceObserver' in window) {
-    const fcpObserver = new PerformanceObserver(entryList => {
+    const fcpObserver = new PerformanceObserver((entryList) => {
       for (const entry of entryList.getEntries()) {
         if (entry.name === 'first-contentful-paint') {
           const metric: WebVitalsMetric = {
@@ -229,7 +235,7 @@ export function reportWebVitals(
 
           onPerfEntry(metric);
           if (analyticsEndpoint) sendToAnalytics(metric, analyticsEndpoint);
-          //           if (debug) if (process.env['NODE_ENV'] === 'development') { if (process.env.DEV) { console.log('FCP:', metric); } }
+if(debug) if (process.env['NODE_ENV'] === 'development') { if (process.env.DEV) { console.log('FCP:', metric); } }
 
           fcpObserver.disconnect();
         }
@@ -239,16 +245,18 @@ export function reportWebVitals(
     try {
       fcpObserver.observe({ type: 'paint', buffered: true });
     } catch (e) {
-      //       if (debug) console.warn('FCP observation not supported:', e);
+if(debug) console.warn('FCP observation not supported:', e);
     }
   }
 
   // Time to First Byte (TTFB)
   if ('performance' in window && 'navigation' in performance) {
-    const navEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+    const navEntry = performance.getEntriesByType(
+      'navigation'
+    )[0] as PerformanceNavigationTiming;
 
     if (navEntry) {
-      const ttfb = navEntry.responseStart - navEntry.requestStart;
+const ttfb = navEntry.responseStart - navEntry.requestStart;
 
       const metric: WebVitalsMetric = {
         name: 'TTFB',
@@ -261,7 +269,7 @@ export function reportWebVitals(
 
       onPerfEntry(metric);
       if (analyticsEndpoint) sendToAnalytics(metric, analyticsEndpoint);
-      //       if (debug) if (process.env['NODE_ENV'] === 'development') { if (process.env.DEV) { console.log('TTFB:', metric); } }
+if(debug) if (process.env['NODE_ENV'] === 'development') { if (process.env.DEV) { console.log('TTFB:', metric); } }
     }
   }
 }
@@ -275,7 +283,7 @@ export function monitorLongTasks(
   if (!('PerformanceObserver' in window)) return null;
 
   try {
-    const observer = new PerformanceObserver(list => {
+    const observer = new PerformanceObserver((list) => {
       for (const entry of list.getEntries()) {
         // Tasks longer than 50ms are considered "long tasks"
         if (entry.duration > 50) {
@@ -287,7 +295,7 @@ export function monitorLongTasks(
     observer.observe({ entryTypes: ['longtask'] });
     return observer;
   } catch (e) {
-    //     console.warn('Long task monitoring not supported:', e);
+//     console.warn('Long task monitoring not supported:', e);
     return null;
   }
 }
@@ -300,7 +308,9 @@ export function getPerformanceSnapshot(): Record<string, number> {
     return {};
   }
 
-  const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+  const navigation = performance.getEntriesByType(
+    'navigation'
+  )[0] as PerformanceNavigationTiming;
 
   if (!navigation) return {};
 

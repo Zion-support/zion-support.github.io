@@ -98,11 +98,11 @@ export const generatePageTitle = (
   pageTitle: string,
   separator: string = '|'
 ): string => {
-  const siteName = 'Zion Tech Group';
+const siteName = 'Zion Tech Group';
   return `${pageTitle} ${separator} ${siteName}`;
 };
 
 export const generateCanonicalUrl = (path: string): string => {
-  const baseUrl = 'https://ziontechgroup.com';
+const baseUrl = 'https://ziontechgroup.com';
   return `${baseUrl}${path}`;
 };

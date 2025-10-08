@@ -2,42 +2,37 @@
 
 import fs from 'fs';
 import path from 'path';
-import { fileURLToPath } from 'url';
+import { glob } from 'glob';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+// Pattern to match commented-out variable declarations
+const patterns = [
+  // Match commented-out const/let/var declarations
+  { regex: /\/\/\s*(const|let|var)\s+(\w+)\s*=/g, replacement: '$1 $2 =' },
+  // Match commented-out variable assignments
+  { regex: /\/\/\s*(\w+)\s*=/g, replacement: '$1 =' },
+  // Match commented-out variable references
+  { regex: /\/\/\s*(\w+)\s*[;,)]/g, replacement: '$1' },
+  // Match commented-out object property assignments
+  { regex: /\/\/\s*(\w+):\s*(\w+)/g, replacement: '$1: $2' },
+  // Match commented-out function calls
+  { regex: /\/\/\s*(\w+)\s*\(/g, replacement: '$1(' },
+];
 
-// Function to fix commented variable declarations
-function fixCommentedVariables(content) {
-  // Fix patterns like "//     const variableName = ..." to "const variableName = ..."
-  content = content.replace(/^(\s*)\/\/\s*(const|let|var)\s+(\w+)/gm, '$1$2 $3');
-
-  // Fix patterns like "//     const variableName" to "const variableName"
-  content = content.replace(/^(\s*)\/\/\s*(const|let|var)\s+(\w+)(\s*[=;])/gm, '$1$2 $3$4');
-
-  return content;
-}
-
-// Function to fix specific patterns
-function fixSpecificPatterns(content) {
-  // Fix analytics.ts specific issues
-  content = content.replace(/analytics\./g, 'this.');
-
-  // Fix common variable name issues
-  content = content.replace(/\b(analytics)\b(?!\s*[=:])/g, 'this');
-
-  return content;
-}
-
-// Function to process a file
-function processFile(filePath) {
+function fixFile(filePath) {
   try {
-    const content = fs.readFileSync(filePath, 'utf8');
-    let fixedContent = fixCommentedVariables(content);
-    fixedContent = fixSpecificPatterns(fixedContent);
+    let content = fs.readFileSync(filePath, 'utf8');
+    let modified = false;
 
-    if (content !== fixedContent) {
-      fs.writeFileSync(filePath, fixedContent);
+    patterns.forEach(pattern => {
+      const newContent = content.replace(pattern.regex, pattern.replacement);
+      if (newContent !== content) {
+        content = newContent;
+        modified = true;
+      }
+    });
+
+    if (modified) {
+      fs.writeFileSync(filePath, content, 'utf8');
       console.log(`Fixed: ${filePath}`);
       return true;
     }
@@ -48,36 +43,22 @@ function processFile(filePath) {
   }
 }
 
-// Function to recursively find TypeScript files
-function findTsFiles(dir) {
-  const files = [];
-  const items = fs.readdirSync(dir);
-
-  for (const item of items) {
-    const fullPath = path.join(dir, item);
-    const stat = fs.statSync(fullPath);
-
-    if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
-      files.push(...findTsFiles(fullPath));
-    } else if (item.endsWith('.ts') || item.endsWith('.tsx')) {
-      files.push(fullPath);
+async function main() {
+  const srcDir = path.join(process.cwd(), 'src');
+  const files = await glob('**/*.{ts,tsx}', { cwd: srcDir });
+  
+  let fixedCount = 0;
+  
+  files.forEach(file => {
+    const fullPath = path.join(srcDir, file);
+    if (fixFile(fullPath)) {
+      fixedCount++;
     }
-  }
+  });
 
-  return files;
+  console.log(`\nFixed ${fixedCount} files`);
 }
 
-// Main execution
-const srcDir = path.join(__dirname, 'src');
-const tsFiles = findTsFiles(srcDir);
+main().catch(console.error);
 
-console.log(`Found ${tsFiles.length} TypeScript files to process...`);
-
-let fixedCount = 0;
-for (const file of tsFiles) {
-  if (processFile(file)) {
-    fixedCount++;
-  }
-}
-
-console.log(`Fixed ${fixedCount} files`);
+export { fixFile, patterns };

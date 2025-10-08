@@ -33,8 +33,8 @@ class ErrorHandler {
   private maxQueueSize = 100;
 
   handleError(error: Error, context?: Record<string, unknown>): void {
-    const category = this.categorizeError(error);
-    const severity = this.determineSeverity(error, category);
+const category = this.categorizeError(error);
+const severity = this.determineSeverity(error, category);
     
     const errorData: ErrorInfo = {
       id: this.generateErrorId(),
@@ -96,7 +96,7 @@ class ErrorHandler {
   }
 
   private reportError(errorData: ErrorInfo): void {
-    console.error('Error reported:', errorData);
+//     console.error('Error reported:', errorData);
   }
 
   getErrors(): ErrorInfo[] {

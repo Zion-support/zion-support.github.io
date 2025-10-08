@@ -41,9 +41,7 @@ export class Logger {
   private maxLogs = 1000;
 
   private constructor(options: LoggerOptions = {}) {
-    this.minLevel =
-      options.minLevel ??
-      (process.env['NODE_ENV'] === 'production' ? LogLevel.INFO : LogLevel.DEBUG);
+    this.minLevel = options.minLevel ?? (process.env['NODE_ENV'] === 'production' ? LogLevel.INFO : LogLevel.DEBUG);
     this.enableConsole = options.enableConsole ?? true;
     this.enableRemote = options.enableRemote ?? false;
     this.remoteEndpoint = options.remoteEndpoint;
@@ -82,7 +80,7 @@ export class Logger {
    * Log error message
    */
   public error(message: string, error?: Error | unknown): void {
-    const stack = error instanceof Error ? error.stack : undefined;
+const stack = error instanceof Error ? error.stack : undefined;
     this.log(LogLevel.ERROR, message, error, stack);
   }
 
@@ -90,7 +88,7 @@ export class Logger {
    * Log fatal message
    */
   public fatal(message: string, error?: Error | unknown): void {
-    const stack = error instanceof Error ? error.stack : undefined;
+const stack = error instanceof Error ? error.stack : undefined;
     this.log(LogLevel.FATAL, message, error, stack);
   }
 
@@ -132,24 +130,24 @@ export class Logger {
    * Output to console
    */
   private logToConsole(entry: LogEntry): void {
-    //     const prefix = `[${LogLevel[entry.level]}] ${entry.timestamp.toISOString()}`;
-    //     const message = entry.context ? `${prefix} [${entry.context}] ${entry.message}` : `${prefix} ${entry.message}`;
+const prefix = `[${LogLevel[entry.level]}] ${entry.timestamp.toISOString()}`;
+const message = entry.context ? `${prefix} [${entry.context}] ${entry.message}` : `${prefix} ${entry.message}`;
 
     switch (entry.level) {
       case LogLevel.DEBUG:
         if (process.env['NODE_ENV'] === 'development') {
-          //           if (process.env.DEV) { console.debug(message, entry.data ?? ''); }
+if(process.env.DEV) { console.debug(message, entry.data ?? ''); }
         }
         break;
       case LogLevel.INFO:
-        //         if (process.env['NODE_ENV'] === 'development') { if (process.env.DEV) { console.info(message, entry.data ?? ''); } }
+if(process.env['NODE_ENV'] === 'development') { if (process.env.DEV) { console.info(message, entry.data ?? ''); } }
         break;
       case LogLevel.WARN:
-        //         console.warn(message, entry.data ?? '');
+//         console.warn(message, entry.data ?? '');
         break;
       case LogLevel.ERROR:
       case LogLevel.FATAL:
-        //         console.error(message, entry.data ?? '', entry.stack ?? '');
+//         console.error(message, entry.data ?? '', entry.stack ?? '');
         break;
     }
   }
@@ -173,7 +171,7 @@ export class Logger {
     } catch (error) {
       // Silent fail to prevent logging loops
       if (process.env['NODE_ENV'] === 'development') {
-        //         console.error('Failed to send log to remote:', error);
+//         console.error('Failed to send log to remote:', error);
       }
     }
   }

@@ -32,14 +32,14 @@ export class PerformanceMonitor {
     // Observe long tasks
     if ('PerformanceObserver' in window) {
       try {
-        const longTaskObserver = new PerformanceObserver(list => {
+        const longTaskObserver = new PerformanceObserver((list) => {
           for (const entry of list.getEntries()) {
             this.recordMetric('long-task', entry.duration);
           }
         });
         longTaskObserver.observe({ entryTypes: ['longtask'] });
       } catch (e) {
-        //         console.warn('Long task observer not supported');
+//         console.warn('Long task observer not supported');
       }
     }
   }
@@ -48,7 +48,7 @@ export class PerformanceMonitor {
    * Record a performance metric
    */
   recordMetric(name: string, value: number): void {
-    const rating = this.getRating(name, value);
+const rating = this.getRating(name, value);
     const metric: PerformanceMetric = {
       name,
       value,
@@ -74,11 +74,11 @@ export class PerformanceMonitor {
    */
   private getRating(name: string, value: number): 'good' | 'needs-improvement' | 'poor' {
     const thresholds: Record<string, { good: number; poor: number }> = {
-      FCP: { good: 1800, poor: 3000 },
-      LCP: { good: 2500, poor: 4000 },
-      FID: { good: 100, poor: 300 },
-      CLS: { good: 0.1, poor: 0.25 },
-      TTFB: { good: 800, poor: 1800 },
+      'FCP': { good: 1800, poor: 3000 },
+      'LCP': { good: 2500, poor: 4000 },
+      'FID': { good: 100, poor: 300 },
+      'CLS': { good: 0.1, poor: 0.25 },
+      'TTFB': { good: 800, poor: 1800 },
       'long-task': { good: 50, poor: 100 },
     };
 
@@ -98,7 +98,7 @@ export class PerformanceMonitor {
     }
 
     const allMetrics: PerformanceMetric[] = [];
-    this.metrics.forEach(metrics => {
+    this.metrics.forEach((metrics) => {
       allMetrics.push(...metrics);
     });
     return allMetrics;
@@ -111,7 +111,7 @@ export class PerformanceMonitor {
     const metrics = this.metrics.get(name) || [];
     if (metrics.length === 0) return 0;
 
-    const sum = metrics.reduce((acc, metric) => acc + metric.value, 0);
+const sum = metrics.reduce((acc, metric) => acc + metric.value, 0);
     return sum / metrics.length;
   }
 
@@ -122,8 +122,8 @@ export class PerformanceMonitor {
     const summary: Record<string, { average: number; count: number; rating: string }> = {};
 
     this.metrics.forEach((metrics, name) => {
-      const average = this.getAverage(name);
-      const rating = this.getRating(name, average);
+const average = this.getAverage(name);
+const rating = this.getRating(name, average);
       summary[name] = {
         average,
         count: metrics.length,
@@ -145,14 +145,14 @@ export class PerformanceMonitor {
    * Measure execution time of a function
    */
   async measureAsync<T>(name: string, fn: () => Promise<T>): Promise<T> {
-    const start = performance.now();
+const start = performance.now();
     try {
-      const result = await fn();
-      const duration = performance.now() - start;
+const result = await fn();
+const duration = performance.now() - start;
       this.recordMetric(name, duration);
       return result;
     } catch (error) {
-      const duration = performance.now() - start;
+const duration = performance.now() - start;
       this.recordMetric(`${name}-error`, duration);
       throw error;
     }
@@ -162,14 +162,14 @@ export class PerformanceMonitor {
    * Measure execution time of a synchronous function
    */
   measure<T>(name: string, fn: () => T): T {
-    const start = performance.now();
+const start = performance.now();
     try {
-      const result = fn();
-      const duration = performance.now() - start;
+const result = fn();
+const duration = performance.now() - start;
       this.recordMetric(name, duration);
       return result;
     } catch (error) {
-      const duration = performance.now() - start;
+const duration = performance.now() - start;
       this.recordMetric(`${name}-error`, duration);
       throw error;
     }

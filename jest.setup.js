@@ -7,23 +7,6 @@ import { TextEncoder, TextDecoder } from 'util';
 global.TextEncoder = TextEncoder;
 global.TextDecoder = TextDecoder;
 
-// Mock React Router
-jest.mock('react-router-dom', () => ({
-  useNavigate: () => jest.fn(),
-  useLocation: () => ({
-    pathname: '/',
-    search: '',
-    hash: '',
-    state: null,
-  }),
-  useParams: () => ({}),
-  BrowserRouter: ({ children }) => children,
-  MemoryRouter: ({ children }) => children,
-  Router: ({ children }) => children,
-  Link: ({ children, ...props }) => <a {...props}>{children}</a>,
-  NavLink: ({ children, ...props }) => <a {...props}>{children}</a>,
-}));
-
 // Mock files that use import.meta.env
 jest.mock('./app/utils/logger.ts', () => ({
   logger: {
@@ -61,6 +44,26 @@ jest.mock('./app/hooks/usePerformanceMonitoring.ts', () => ({
 }));
 
 
+// Mock React Router (this is a Vite project, not Next.js)
+jest.mock('react-router-dom', () => ({
+  ...jest.requireActual('react-router-dom'),
+
+  useNavigate: () => jest.fn(),
+  useLocation: () => ({
+    pathname: '/',
+    search: '',
+    hash: '',
+    state: null,
+  }),
+  useParams: () => ({}),
+  BrowserRouter: ({ children }) => children,
+  MemoryRouter: ({ children }) => children,
+<<<<<<< HEAD
+  Router: ({ children }) => children,
+=======
+  RouterProvider: ({ router }) => null,
+>>>>>>> origin/main
+}));
 
 // Mock window.matchMedia
 Object.defineProperty(window, 'matchMedia', {
@@ -87,6 +90,11 @@ global.IntersectionObserver = class IntersectionObserver {
   }
   unobserve() {}
 };
+
+// Mock TextEncoder and TextDecoder
+const { TextEncoder, TextDecoder } = require('util');
+global.TextEncoder = TextEncoder;
+global.TextDecoder = TextDecoder;
 
 // Suppress console errors in tests
 const originalError = console.error;

@@ -41,8 +41,8 @@ class ErrorTracker {
     severity: ErrorSeverity = ErrorSeverity.MEDIUM,
     context: ErrorContext = {}
   ): void {
-    const errorMessage = typeof error === 'string' ? error : error.message;
-    const errorStack = typeof error === 'string' ? undefined : error.stack;
+const errorMessage = typeof error === 'string' ? error : error.message;
+const errorStack = typeof error === 'string' ? undefined : error.stack;
 
     const trackedError: TrackedError = {
       message: errorMessage,
@@ -142,7 +142,7 @@ class ErrorTracker {
     const content = stack ? `${message}:${stack.split('\n')[0]}` : message;
     let hash = 0;
     for (let i = 0; i < content.length; i++) {
-      const char = content.charCodeAt(i);
+const char = content.charCodeAt(i);
       hash = (hash << 5) - hash + char;
       hash = hash & hash;
     }
@@ -153,18 +153,18 @@ class ErrorTracker {
    * Log error to console with appropriate level
    */
   private logError(error: TrackedError): void {
-    const logMessage = `[${error.severity.toUpperCase()}] ${error.message}`;
+const logMessage = `[${error.severity.toUpperCase()}] ${error.message}`;
     
     switch (error.severity) {
       case ErrorSeverity.CRITICAL:
       case ErrorSeverity.HIGH:
-        console.error(logMessage, error);
+//         console.error(logMessage, error);
         break;
       case ErrorSeverity.MEDIUM:
-        console.warn(logMessage, error);
+//         console.warn(logMessage, error);
         break;
       case ErrorSeverity.LOW:
-        console.info(logMessage, error);
+//         console.info(logMessage, error);
         break;
     }
   }

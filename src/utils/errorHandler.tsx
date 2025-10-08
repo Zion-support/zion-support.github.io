@@ -251,18 +251,18 @@ export class ErrorHandler {
   // Log error
   private logError(error: AppError) {
     if (this.config.enableConsoleLogging) {
-      const logMessage = `[${error.severity}] ${error.type}: ${error.message}`;
-
+const logMessage = `[${error.severity}] ${error.type}: ${error.message}`;
+      
       switch (error.severity) {
         case ErrorSeverity.CRITICAL:
         case ErrorSeverity.HIGH:
-          //           console.error(logMessage, error);
+//           console.error(logMessage, error);
           break;
         case ErrorSeverity.MEDIUM:
-          //           console.warn(logMessage, error);
+//           console.warn(logMessage, error);
           break;
         case ErrorSeverity.LOW:
-          //           if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { console.info(logMessage, error); } }
+if(process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { console.info(logMessage, error); } }
           break;
       }
     }
@@ -285,7 +285,7 @@ export class ErrorHandler {
         body: JSON.stringify(error),
       });
     } catch (err) {
-      //       console.error('Failed to log error to network:', err);
+//       console.error('Failed to log error to network:', err);
     }
   }
 
@@ -305,7 +305,7 @@ export class ErrorHandler {
         }),
       });
     } catch (err) {
-      //       console.error('Failed to report error:', err);
+//       console.error('Failed to report error:', err);
     }
   }
 
@@ -399,14 +399,14 @@ export class ErrorHandler {
       // Implement retry logic based on error type
       if (retryItem.error.type === ErrorType.NETWORK) {
         // Retry network request
-        //         if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { console.log(`Retrying network request (attempt ${retryItem.retryCount})`); } }
+if(process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { console.log(`Retrying network request (attempt ${retryItem.retryCount})`); } }
         // Add your retry logic here
       }
     } catch {
       if (retryItem.retryCount < this.config.maxRetries) {
         this.scheduleRetry(retryItem.error);
       } else {
-        //         console.error('Max retries exceeded for error:', retryItem.error);
+//         console.error('Max retries exceeded for error:', retryItem.error);
       }
     }
   }
@@ -454,25 +454,19 @@ export class ErrorHandler {
 
   // Get error statistics
   getErrorStatistics() {
-    const total = this.errors.length;
-    const byType = this.errors.reduce(
-      (acc, error) => {
-        acc[error.type] = (acc[error.type] || 0) + 1;
-        return acc;
-      },
-      {} as Record<ErrorType, number>
-    );
+const total = this.errors.length;
+    const byType = this.errors.reduce((acc, error) => {
+      acc[error.type] = (acc[error.type] || 0) + 1;
+      return acc;
+    }, {} as Record<ErrorType, number>);
 
-    const bySeverity = this.errors.reduce(
-      (acc, error) => {
-        acc[error.severity] = (acc[error.severity] || 0) + 1;
-        return acc;
-      },
-      {} as Record<ErrorSeverity, number>
-    );
+    const bySeverity = this.errors.reduce((acc, error) => {
+      acc[error.severity] = (acc[error.severity] || 0) + 1;
+      return acc;
+    }, {} as Record<ErrorSeverity, number>);
 
-    const resolved = this.errors.filter(error => error.resolved).length;
-    const unresolved = total - resolved;
+const resolved = this.errors.filter(error => error.resolved).length;
+const unresolved = total - resolved;
 
     return {
       total,
@@ -489,16 +483,17 @@ export class ErrorHandler {
   init(): void {
     if (typeof window !== 'undefined') {
       // Set up global error handler
-      window.addEventListener('error', event => {
+      window.addEventListener('error', (event) => {
         this.handleError(event.error || new Error(event.message));
       });
 
       // Set up unhandled promise rejection handler
-      window.addEventListener('unhandledrejection', event => {
+      window.addEventListener('unhandledrejection', (event) => {
         this.handleError(new Error(event.reason));
       });
     }
   }
+
 }
 
 // React error boundary component
@@ -526,26 +521,24 @@ export class ErrorBoundary extends React.Component<
 
   render() {
     if (this.state.hasError) {
-      return (
-        this.props.fallback || (
-          <div style={{ padding: '20px', textAlign: 'center' }}>
-            <h2>Something went wrong</h2>
-            <p>We're sorry, but something unexpected happened.</p>
-            <button
-              onClick={() => this.setState({ hasError: false, error: undefined })}
-              style={{
-                padding: '10px 20px',
-                backgroundColor: '#007bff',
-                color: 'white',
-                border: 'none',
-                borderRadius: '4px',
-                cursor: 'pointer',
-              }}
-            >
-              Try again
-            </button>
-          </div>
-        )
+      return this.props.fallback || (
+        <div style={{ padding: '20px', textAlign: 'center' }}>
+          <h2>Something went wrong</h2>
+          <p>We're sorry, but something unexpected happened.</p>
+          <button
+            onClick={() => this.setState({ hasError: false, error: undefined })}
+            style={{
+              padding: '10px 20px',
+              backgroundColor: '#007bff',
+              color: 'white',
+              border: 'none',
+              borderRadius: '4px',
+              cursor: 'pointer',
+            }}
+          >
+            Try again
+          </button>
+        </div>
       );
     }
 
@@ -557,26 +550,17 @@ export class ErrorBoundary extends React.Component<
 export const useErrorHandler = () => {
   const errorHandler = ErrorHandler.getInstance();
 
-  const handleError = useCallback(
-    (error: Error, context?: Record<string, unknown>) => {
-      return errorHandler.handleError(error, undefined, context);
-    },
-    [errorHandler]
-  );
+  const handleError = useCallback((error: Error, context?: Record<string, unknown>) => {
+    return errorHandler.handleError(error, undefined, context);
+  }, [errorHandler]);
 
-  const handleNetworkError = useCallback(
-    (error: Error, url: string, status?: number) => {
-      return errorHandler.handleNetworkError(error, url, status);
-    },
-    [errorHandler]
-  );
+  const handleNetworkError = useCallback((error: Error, url: string, status?: number) => {
+    return errorHandler.handleNetworkError(error, url, status);
+  }, [errorHandler]);
 
-  const handleValidationError = useCallback(
-    (field: string, message: string, value?: unknown) => {
-      return errorHandler.handleValidationError(field, message, value);
-    },
-    [errorHandler]
-  );
+  const handleValidationError = useCallback((field: string, message: string, value?: unknown) => {
+    return errorHandler.handleValidationError(field, message, value);
+  }, [errorHandler]);
 
   return {
     handleError,
