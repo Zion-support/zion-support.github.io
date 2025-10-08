@@ -466,6 +466,10 @@ class PerformanceOptimizer {
       fid: this.metrics.fid || 0,
       cls: this.metrics.cls || 0,
       fmp: this.metrics.fmp || 0,
+    };
+  }
+
+  /**
    * Generate performance report
    */
   public generateReport(): object {
@@ -545,5 +549,4 @@ class PerformanceOptimizer {
 export const performanceOptimizer = new PerformanceOptimizer();
 
 // Export class for custom instances
-export { PerformanceOptimizer, type PerformanceMetrics, type PerformanceConfig };
 export { PerformanceOptimizer, type PerformanceMetrics, type PerformanceConfig };

@@ -34,7 +34,6 @@ import { lazyLoadImages, preloadCriticalResources, collectPerformanceMetrics, pe
 import { logger } from './utils/logger';
 
 // Lazy load pages for better performance
-const HomePage = lazy(() => import('./page'));
 
 // Styles
 import '../index.css';
@@ -45,7 +44,7 @@ const App: React.FC = () => {
     console.log('App initialized');
 
     // Initialize performance monitoring
-    performanceOptimizer.init();
+    performanceOptimizer.initialize();
     
     // Initialize Web Vitals monitoring
     if (typeof window !== 'undefined' && 'performance' in window) {

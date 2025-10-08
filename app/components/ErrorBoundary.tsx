@@ -1,4 +1,5 @@
 import { Component, ErrorInfo, ReactNode } from 'react';
+import Link from 'next/link';
 import { FileWarning } from 'lucide-react';
 
 interface Props {
@@ -9,6 +10,7 @@ interface Props {
 interface State {
   hasError: boolean;
   error?: Error;
+  errorInfo?: React.ErrorInfo;
 }
 
 class ErrorBoundary extends Component<Props, State> {
