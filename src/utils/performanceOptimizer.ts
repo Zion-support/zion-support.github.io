@@ -328,3 +328,7 @@ const performanceUtils = {
 };
 
 export default performanceUtils;
+
+// Additional exports
+export const collectPerformanceMetrics = measurePageLoad;
+export const init = () => performanceOptimizer.initialize();

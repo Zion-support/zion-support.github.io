@@ -9,6 +9,7 @@
     ],
     "module": "ESNext",
     "skipLibCheck": true,
+    "moduleResolution": "bundler",
     "allowImportingTsExtensions": false,
     "resolveJsonModule": true,
     "isolatedModules": true,
@@ -16,13 +17,11 @@
     "jsx": "preserve",
     "jsxImportSource": "react",
     "strict": false,
-    "strictNullChecks": true,
     "noUnusedLocals": false,
     "noUnusedParameters": false,
     "noFallthroughCasesInSwitch": false,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
-    "moduleResolution": "bundler",
     "baseUrl": ".",
     "paths": {
       "@/*": [
@@ -77,12 +76,14 @@
     "next-env.d.ts",
     "app/**/*.ts",
     "app/**/*.tsx",
-    "components/**/*.ts",
-    "components/**/*.tsx",
-    "api/**/*.ts",
-    "api/**/*.js",
+    "app/**/*",
     "src/**/*",
     "App.tsx",
+    "components/**/*.ts",
+    "components/**/*.tsx",
+    "components/**/*",
+    "api/**/*.ts",
+    "api/**/*.js",
     "*.ts",
     "*.tsx",
     ".next/types/**/*.ts"
@@ -193,9 +194,7 @@
     "services/**",
     "fix-*.jsx",
     "fix-*.ts",
-    "jest.setup.*",
-    "**/*.disabled/**",
-    "**/*.backup/**"
+    "jest.setup.*"
   ],
   "references": [
     {

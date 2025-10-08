@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
-import analytics from '../utils/analytics';
+import { analytics } from '../utils/analytics';
 
-const usePerformance = () => {
+export const usePerformance = () => {
   useEffect(() => {
     if (typeof window === 'undefined' || !('PerformanceObserver' in window)) {
       return;
@@ -18,6 +18,12 @@ const usePerformance = () => {
         );
       });
     });
+
+    try {
+      observer.observe({ entryTypes: ['longtask'] });
+    } catch (error) {
+      console.error('Failed to observe performance:', error);
+    }
 
     return () => {
       if (observer && typeof observer.disconnect === 'function') {

@@ -4,30 +4,47 @@ import { ErrorHandler } from './utils/errorHandler';
 import { performanceOptimizer } from '../app/utils/performanceOptimizer';
 import { logger } from './utils/logger';
 
-// Initialize error handler
-const errorHandler = new ErrorHandler();
+// Create error handler instance
+const errorHandler = ErrorHandler.getInstance();
 
-// Initialize monitoring system
-function initializeMonitoring() {
+// Initialize monitoring systems
+export const initializeMonitoring = (): void => {
+  if (typeof window === 'undefined') {
+    return;
+  }
+
+  // Initialize performance monitoring
   try {
-    // Set up error tracking
-    errorHandler.initialize();
-    
-    // Start performance monitoring
-    if (typeof window !== 'undefined' && window.performance) {
-      performanceOptimizer.initialize();
-    }
-    
-    // Initialize analytics
-    analytics.initialize();
-    
-    logger.info('Monitoring initialized successfully');
+    performanceOptimizer.initialize();
+    logger.info('Performance monitoring initialized', 'monitoring');
   } catch (error) {
-    logger.error('Failed to initialize monitoring:', error);
+    console.error('Failed to initialize performance monitoring:', error);
+  }
+
+  // Setup global error handlers
+  window.addEventListener('error', (event) => {
+    errorHandler.logError(new Error(event.message), {
+      stack: event.error?.stack,
+      url: event.filename,
+    });
+  });
+
+  window.addEventListener('unhandledrejection', (event) => {
+    errorHandler.logError(new Error(event.reason), {
+      message: 'Unhandled Promise Rejection',
+    });
+  });
+
+  logger.info('Monitoring systems initialized', 'monitoring');
+};
+
+// Initialize monitoring on load
+if (typeof window !== 'undefined') {
+  if (document.readyState === 'complete') {
+    initializeMonitoring();
+  } else {
+    window.addEventListener('load', initializeMonitoring);
   }
 }
 
-// Initialize monitoring on load
-initializeMonitoring();
-
-export { analytics, errorHandler, initializeMonitoring, ErrorHandler, performanceOptimizer };
+export { analytics, errorHandler, ErrorHandler, performanceOptimizer };

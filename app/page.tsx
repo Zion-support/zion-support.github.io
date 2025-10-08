@@ -5,7 +5,7 @@ const LoadingFallback: React.FC<{ height?: string }> = ({
   height = 'h-32',
 }) => (
   <div className={`flex items-center justify-center ${height} w-full`}>
-    <div className='animate-spin rounded-full h-8 w-8 border-b-2 border-indigo-600'></div>
+    <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-indigo-600"></div>
   </div>
 );
 
@@ -46,30 +46,34 @@ const HomePage: React.FC = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gray-50">
-      <div className="container mx-auto px-4 py-8">
-        <h1 className="text-4xl font-bold text-gray-900 mb-4">
-          Welcome to Zion Tech Group
-        </h1>
-        <p className="text-xl text-gray-600 mb-8">
-          Leading provider of AI-powered enterprise solutions and digital transformation services
-        </p>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="bg-white p-6 rounded-lg shadow-md">
-            <h2 className="text-2xl font-semibold mb-3">AI Solutions</h2>
-            <p className="text-gray-600">Transform your enterprise with cutting-edge AI technology</p>
-          </div>
-          <div className="bg-white p-6 rounded-lg shadow-md">
-            <h2 className="text-2xl font-semibold mb-3">Digital Transformation</h2>
-            <p className="text-gray-600">Modernize your business processes and infrastructure</p>
-          </div>
-          <div className="bg-white p-6 rounded-lg shadow-md">
-            <h2 className="text-2xl font-semibold mb-3">IT Services</h2>
-            <p className="text-gray-600">Comprehensive IT solutions for modern businesses</p>
+    <>
+      <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center">
+            <h1 className="text-5xl font-bold text-gray-900 mb-6">
+              Welcome to Zion Tech Group
+            </h1>
+            <p className="text-xl text-gray-600 mb-8">
+              Advanced AI and IT Solutions for Your Business
+            </p>
+            <div className="flex justify-center gap-4">
+              <a
+                href="/contact"
+                className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg transition-colors"
+              >
+                Get Started
+              </a>
+              <a
+                href="/about"
+                className="bg-white hover:bg-gray-50 text-blue-600 font-bold py-3 px-8 rounded-lg border-2 border-blue-600 transition-colors"
+              >
+                Learn More
+              </a>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

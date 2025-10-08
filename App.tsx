@@ -1,4 +1,4 @@
-import React, { memo, useMemo, Suspense } from 'react';
+import React, { memo, useMemo } from 'react';
 import { HelmetProvider, Helmet } from 'react-helmet-async';
 
 // Memoized components for better performance
@@ -160,19 +160,11 @@ export default function App() {
           <meta property="og:url" content="https://ziontechgroup.com" />
           <meta name="twitter:card" content="summary_large_image" />
           <meta name="twitter:title" content="Zion Tech Group - AI & IT Solutions" />
-          <meta name="twitter:description" content="Transform your enterprise with AI-powered solutions achieving 300% ROI, 70% cost reduction, and 90% efficiency gains" />
+          <meta name="="twitter:description" content="Transform your enterprise with AI-powered solutions achieving 300% ROI, 70% cost reduction, and 90% efficiency gains" />
           <script type="application/ld+json">
             {JSON.stringify(structuredData)}
           </script>
         </Helmet>
-        <Suspense fallback={<LoadingSpinner />}>
-          <div className="min-h-screen">
-            <UnifiedContentPromotion />
-            <InteractiveAIROICalculator />
-            <ContentShowcase />
-            <InteractiveContentShowcase2026 />
-          </div>
-        </Suspense>
       </HelmetProvider>
     </ErrorBoundary>
   );
