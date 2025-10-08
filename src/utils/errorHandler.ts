@@ -46,7 +46,7 @@ class ErrorHandler {
   /**
    * Handle an error with categorization and reporting
    */
-  handleError(error: Error, context?: Record<string, unknown>): void {
+  handleError(error: Error, context?: Record<string, unknown>): ErrorInfo {
     const category = this.categorizeError(error);
     const severity = this.determineSeverity(error, category);
 
@@ -138,3 +138,5 @@ class ErrorHandler {
   }
 }
 
+// Export singleton instance as default
+export default ErrorHandler.getInstance();
