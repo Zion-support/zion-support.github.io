@@ -34,6 +34,7 @@ export const PerformanceMonitor: React.FC = () => {
     } else {
       window.addEventListener('load', measurePerformance);
     }
+    return undefined;
   }, []);
 
   // Toggle visibility with keyboard shortcut (Ctrl+Shift+P)

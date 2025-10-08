@@ -4,6 +4,7 @@ import { HelmetProvider } from 'react-helmet-async';
 
 <<<<<<< HEAD:app/App.tsx.disabled
 <<<<<<< HEAD:app/App.tsx.disabled
+<<<<<<< HEAD:app/App.tsx.disabled
 //Components
 import ErrorBoundary from './components/ErrorBoundary';
 import SEOOptimizer from './components/SEOOptimizer';
@@ -19,6 +20,12 @@ import ErrorBoundary from '../src/components/ErrorBoundary';
 import SEOOptimizer from '../src/components/SEOOptimizer';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-a885:app/App.tsx
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
+=======
+// Components
+import ErrorBoundary from '../src/components/ErrorBoundary';
+import SEOOptimizer from '../src/components/SEOOptimizer';
+import AccessibilityEnhancer from '../src/components/AccessibilityEnhancer';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-a949:app/App.tsx
 import PerformanceDashboard from './components/PerformanceDashboard';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
