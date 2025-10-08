@@ -13,20 +13,6 @@ import SEOEnhancer from './components/SEOEnhancer';
 import PerformanceDashboard from './components/PerformanceDashboard';
 import LoadingSpinner from './components/LoadingSpinner';
 
-class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundaryState> {
-  constructor(props: ErrorBoundaryProps) {
-    super(props);
-    this.state = { hasError: false, error: null };
-  }
-
-  static getDerivedStateFromError(error: Error): ErrorBoundaryState {
-    return { hasError: true, error };
-  }
-
-  override componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
-    console.error('App Error Boundary caught an error:', error, errorInfo);
-  }
-
 const App: React.FC = () => {
   useEffect(() => {
     // Initialize global error handling
