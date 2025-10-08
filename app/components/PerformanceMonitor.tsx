@@ -27,7 +27,11 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   const [performanceScore, setPerformanceScore] = useState(100);
 
   useEffect(() => {
+<<<<<<< HEAD
     const reportWebVitals = (metric: { name: string; value: number }) => {
+=======
+    const _reportWebVitals = (metric: { name: string; value: number }) => {
+>>>>>>> cursor/fix-errors-and-merge-to-main-4e61
       // Log to console in development (only on client side)
       if (typeof window !== 'undefined' && enableConsoleLogging) {
         console.log('Web Vital:', metric.name, metric.value);

@@ -5,6 +5,10 @@
 
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import monitoring from '../utils/monitoring';
+>>>>>>> cursor/fix-errors-and-merge-to-main-4e61
+=======
+import monitoring from '../utils/monitoring';
+>>>>>>> 1684f58a157a4496bdf1f11291796d45799723dd
 
 interface Props {
   children: ReactNode;
