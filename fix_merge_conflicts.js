@@ -4,8 +4,8 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
-// const __filename = fileURLToPath(import.meta.url);
-// const __dirname = path.dirname(__filename);
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 // Function to fix merge conflicts in a file
 function fixMergeConflicts(filePath) {
@@ -17,7 +17,7 @@ function fixMergeConflicts(filePath) {
       return false; // No conflicts to fix
     }
     
-//     console.log(`Fixing merge conflicts in: ${filePath}`);
+    console.log(`Fixing merge conflicts in: ${filePath}`);
     
     // Split content into lines
     const lines = content.split('\n');
@@ -60,23 +60,23 @@ function fixMergeConflicts(filePath) {
     }
     
     // Write the fixed content back
-//     const fixedContent = fixedLines.join('\n');
+    const fixedContent = fixedLines.join('\n');
     fs.writeFileSync(filePath, fixedContent, 'utf8');
     return true;
   } catch (error) {
-//     console.error(`Error fixing ${filePath}:`, error.message);
+    console.error(`Error fixing ${filePath}:`, error.message);
     return false;
   }
 }
 
 // Function to recursively find and fix merge conflicts
-function fixAllMergeConflicts(_dir) {
+function fixAllMergeConflicts(dir) {
   try {
     const files = fs.readdirSync(dir);
     let fixedCount = 0;
     
     for (const file of files) {
-//       const filePath = path.join(dir, file);
+      const filePath = path.join(dir, file);
       
       try {
         const stat = fs.statSync(filePath);
@@ -94,20 +94,20 @@ function fixAllMergeConflicts(_dir) {
         }
       } catch (error) {
         // Skip files that can't be accessed
-//         console.log(`Skipping ${filePath}: ${error.message}`);
+        console.log(`Skipping ${filePath}: ${error.message}`);
         continue;
       }
     }
     
     return fixedCount;
   } catch (error) {
-//     console.log(`Skipping directory ${dir}: ${error.message}`);
+    console.log(`Skipping directory ${dir}: ${error.message}`);
     return 0;
   }
 }
 
 // Main execution
-// const workspaceDir = process.cwd();
-// console.log('Starting merge conflict resolution...');
-// const fixedCount = fixAllMergeConflicts(workspaceDir);
-// console.log(`Fixed merge conflicts in ${fixedCount} files.`);
+const workspaceDir = process.cwd();
+console.log('Starting merge conflict resolution...');
+const fixedCount = fixAllMergeConflicts(workspaceDir);
+console.log(`Fixed merge conflicts in ${fixedCount} files.`);
