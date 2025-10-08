@@ -12,13 +12,6 @@ export enum ErrorCategory {
   UNKNOWN = 'unknown',
 }
 
-export enum ErrorSeverity {
-  LOW = 'low',
-  MEDIUM = 'medium',
-  HIGH = 'high',
-  CRITICAL = 'critical',
-}
-
 export interface ErrorInfo {
   id: string;
   message: string;
@@ -138,5 +131,5 @@ class ErrorHandler {
   }
 }
 
-// Export singleton instance as default
+// Export default instance
 export default ErrorHandler.getInstance();
