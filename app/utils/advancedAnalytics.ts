@@ -14,7 +14,7 @@ interface UserEvent {
   sessionId: string;
   userId?: string;
   url: string;
-  metadata?: Record<string, any>;
+  metadata?: Record<string, unknown>;
 }
 
 interface UserSession {
