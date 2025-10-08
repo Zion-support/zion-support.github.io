@@ -264,7 +264,7 @@ class SEOOptimizer {
       let clsValue = 0
       new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
-          }
+          // Process layout shift entries
         }
         if (clsValue > 0.25) { // Poor CLS
           this.trackSEOMetric('poor_cls', clsValue)
