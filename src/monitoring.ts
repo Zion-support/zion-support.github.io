@@ -13,6 +13,10 @@ function initializeMonitoring() {
     // Set up performance monitoring
     if (typeof window !== 'undefined') {
       // Monitor web vitals
+<<<<<<< HEAD
+=======
+      performanceOptimizer.optimize();
+>>>>>>> cursor/fix-errors-and-merge-to-main-e6a3
       
       // Set up error tracking
       // errorHandler.init(); // Method does not exist

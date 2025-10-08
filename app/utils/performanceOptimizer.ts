@@ -23,6 +23,7 @@ interface PerformanceMetrics {
   cls?: number;
   fmp?: number;
   ttfb?: number;
+  memory?: number;
 }
 
 interface OptimizationConfig {
@@ -77,6 +78,13 @@ class PerformanceOptimizer {
   }
 
   /**
+   * Public init method for external initialization
+   */
+  public init(): void {
+    this.initializePerformanceMonitoring();
+  }
+
+  /**
    * Measure page load time
    */
   private measureLoadTime(): void {
@@ -98,9 +106,12 @@ class PerformanceOptimizer {
    */
   private measureRenderTime(): void {
     if (typeof window === 'undefined' || !window.performance) return;
+<<<<<<< HEAD
     
     // Check if PerformanceObserver exists (may not be available in test environments)
     if (typeof PerformanceObserver === 'undefined') return;
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-e6a3
 
     try {
       const observer = new PerformanceObserver((list) => {
@@ -111,10 +122,107 @@ class PerformanceOptimizer {
           }
         });
       });
+<<<<<<< HEAD
 
       observer.observe({ entryTypes: ['measure'] });
     } catch (error) {
       // PerformanceObserver may not support 'measure' entryType in some environments
+=======
+      observer.observe({ entryTypes: ['measure'] });
+      this.observers.push(observer);
+    } catch (error) {
+      console.warn('Performance Observer not supported:', error);
+    }
+  }
+
+  private observeLCP() {
+    try {
+      const observer = new PerformanceObserver((list) => {
+        const entries = list.getEntries()
+        const lastEntry = entries[entries.length - 1]
+        this.metrics.lcp = lastEntry.startTime
+      })
+      observer.observe({ entryTypes: ['largest-contentful-paint'] })
+      this.observers.push(observer)
+    } catch {
+      // Ignore if not supported
+    }
+  }
+  private observeFID() {
+    try {
+      const observer = new PerformanceObserver((list) => {
+        const entries = list.getEntries()
+        entries.forEach((entry: PerformanceEntry) => {
+          const fidEntry = entry as PerformanceEntry & { processingStart: number }
+          this.metrics.fid = fidEntry.processingStart - fidEntry.startTime
+
+        })
+      })
+      observer.observe({ entryTypes: ['first-input'] })
+      this.observers.push(observer)
+    } catch {
+      // Ignore if not supported
+    }
+  }
+  private observeCLS() {
+    try {
+      let clsValue = 0
+      const observer = new PerformanceObserver((list) => {
+        const entries = list.getEntries()
+        entries.forEach((entry: PerformanceEntry) => {
+          const clsEntry = entry as PerformanceEntry & { hadRecentInput?: boolean; value: number }
+          if (!clsEntry.hadRecentInput) {
+            clsValue += clsEntry.value
+          }
+        })
+        this.metrics.cls = clsValue
+      })
+      observer.observe({ entryTypes: ['layout-shift'] })
+      this.observers.push(observer)
+    } catch {
+      // Ignore if not supported
+    }
+  }
+  private observeFCP() {
+    try {
+      const observer = new PerformanceObserver((list) => {
+        const entries = list.getEntries()
+        entries.forEach((entry) => {
+          if (entry.name === 'first-contentful-paint') {
+            this.metrics.fcp = entry.startTime
+          }
+        })
+      })
+      observer.observe({ entryTypes: ['paint'] })
+      this.observers.push(observer)
+    } catch {
+      // Ignore if not supported
+    }
+  }
+  private observeTTFB() {
+    try {
+      const observer = new PerformanceObserver((list) => {
+        const entries = list.getEntries()
+        entries.forEach((entry: PerformanceEntry) => {
+          const navEntry = entry as PerformanceEntry & { responseStart: number; requestStart: number }
+          if (navEntry.responseStart > 0) {
+            this.metrics.ttfb = navEntry.responseStart - navEntry.requestStart
+          }
+        })
+      })
+      observer.observe({ entryTypes: ['navigation'] })
+      this.observers.push(observer)
+    } catch {
+      // Ignore if not supported
+    }
+  }
+  private observeMemory() {
+    if (typeof window !== 'undefined' && 'memory' in performance) {
+      const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; jsHeapSizeLimit: number } }).memory
+      if (memory) {
+        this.metrics.memoryUsage = memory.usedJSHeapSize
+      }
+>>>>>>> cursor/fix-errors-and-merge-to-main-e6a3
     }
   }
 
@@ -373,7 +481,7 @@ ${metrics.memoryUsage > 30 * 1024 * 1024 ? '- Review memory usage and optimize c
     
     if (process.env.NODE_ENV === 'development') { 
       console.log('Performance optimization completed'); 
-      console.log(this.generateReport()); 
+      console.log(this.generateComprehensiveReport()); 
     }
   }
 }
