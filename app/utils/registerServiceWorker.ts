@@ -22,19 +22,17 @@ export async function registerServiceWorker(
   }
 
   // Only register in production or if explicitly enabled
-=======
   const isLocalhost = Boolean(
     window.location.hostname === 'localhost' ||
       window.location.hostname === '[::1]' ||
       window.location.hostname.match(/^127(?:\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$/)
   );
-=======
   
   // Use isLocalhost for conditional logic if needed
   if (isLocalhost) {
     console.log('[SW] Running on localhost - service worker registration may be limited');
   }
-=======
+  
   try {
     // Wait for page to load
     await new Promise<void>((resolve) => {

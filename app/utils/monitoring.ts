@@ -176,9 +176,9 @@ class MonitoringService {
     if (typeof gtag === 'function') {
       gtag('event', name, {
         value: Math.round(name === 'cls' ? value * 1000 : value),
-        event_category: 'Web Vitals'
+        event_category: 'Web Vitals',
         non_interaction: true,
-      })
+      });
     }
   }
   public logError(error: ErrorReport): void {

@@ -317,11 +317,11 @@ class EnhancedErrorMonitoring {
     }, {} as Record<string, number>)
 
     return {
-      total: this.errorQueue.length
-      bySeverity
-      byCategory
+      total: this.errorQueue.length,
+      bySeverity,
+      byCategory,
       recent: recent.slice(0, 10)
-    }
+    };
   }
   /**
    * Clear resolved errors

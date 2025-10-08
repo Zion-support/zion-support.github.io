@@ -2,9 +2,25 @@
 
 import React, { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 
-<<<<<<< HEAD
-const SEOOptimizer: React.FC = () => {
+interface SEOOptimizerProps {
+  children?: React.ReactNode;
+  title?: string;
+  description?: string;
+  keywords?: string;
+  canonicalUrl?: string;
+  structuredData?: any;
+}
+
+const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
+  children,
+  title = "Zion Tech Group - Advanced AI and IT Solutions",
+  description = "Leading provider of AI-powered enterprise solutions, automation, and digital transformation services.",
+  keywords = "AI, artificial intelligence, enterprise solutions, automation, digital transformation",
+  canonicalUrl,
+  structuredData
+}) => {
   const pathname = useLocation().pathname;
 
   useEffect(() => {
@@ -19,16 +35,6 @@ const SEOOptimizer: React.FC = () => {
     document.title = titles[pathname || '/'] || 'Zion Tech Group';
   }, [pathname]);
 
-  return null;
-=======
-const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
-  children,
-  title = "Zion Tech Group - Advanced AI and IT Solutions",
-  description = "Leading provider of AI-powered enterprise solutions, automation, and digital transformation services.",
-  keywords = "AI, artificial intelligence, enterprise solutions, automation, digital transformation",
-  canonicalUrl,
-  structuredData
-}) => {
   const defaultStructuredData = {
     "@context": "https://schema.org",
     "@type": "Organization",
@@ -91,7 +97,6 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
       {children}
     </>
   );
->>>>>>> cursor/website-audit-and-content-update-7e9e
 };
 
 export default SEOOptimizer;
