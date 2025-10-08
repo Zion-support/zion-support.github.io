@@ -2,7 +2,6 @@ import type { Metadata } from 'next';
 import './globals.css';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import AnalyticsProvider from './components/AnalyticsProvider';
-import ErrorBoundary from './components/ErrorBoundary';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import PWAInstaller from './components/PWAInstaller';
 
@@ -130,13 +129,11 @@ export default function RootLayout({
       </head>
       <body className='antialiased'>
         <AnalyticsProvider>
-          <ErrorBoundary>
-            <AccessibilityEnhancer>
-              <PerformanceMonitor />
-              <PWAInstaller />
-              {children}
-            </AccessibilityEnhancer>
-          </ErrorBoundary>
+          <AccessibilityEnhancer>
+            <PerformanceMonitor />
+            <PWAInstaller />
+            {children}
+          </AccessibilityEnhancer>
         </AnalyticsProvider>
       </body>
     </html>
