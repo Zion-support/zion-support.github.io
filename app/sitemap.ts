@@ -1,18 +1,4 @@
 
-<<<<<<< HEAD
-// Sitemap for Vite + React Router
-export default function sitemap() {
-=======
-interface SitemapEntry {
-  url: string;
-  lastModified: Date;
-  changeFrequency: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';
-  priority: number;
-}
-
-export default function sitemap(): SitemapEntry[] {
-
->>>>>>> main
   const baseUrl = 'https://ziontechgroup.com';
 
   return [
