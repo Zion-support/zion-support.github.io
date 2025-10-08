@@ -130,7 +130,8 @@ export const errorHandlingMiddleware: Middleware = async (context, next) => {
     };
 
     logger.error('Request error handled', error as Error, 'ErrorHandlingMiddleware', {
-      ...standardError });
+      ...standardError,
+    });
 
     throw standardError;
   }

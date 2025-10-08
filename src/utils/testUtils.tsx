@@ -20,23 +20,11 @@ export function mockPerformanceAPI() {
   }
 
   if (!window.performance.mark) {
-    window.performance.mark = (markName: string) => ({
-      name: markName,
-      entryType: 'mark',
-      startTime: performance.now(),
-      duration: 0,
-      toJSON: () => ({}),
-    } as PerformanceMark);
+    window.performance.mark = (() => ({} as PerformanceMark)) as any;
   }
 
   if (!window.performance.measure) {
-    window.performance.measure = (measureName: string) => ({
-      name: measureName,
-      entryType: 'measure',
-      startTime: 0,
-      duration: 0,
-      toJSON: () => ({}),
-    } as PerformanceMeasure);
+    window.performance.measure = (() => ({} as PerformanceMeasure)) as any;
   }
 }
 

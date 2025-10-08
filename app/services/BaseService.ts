@@ -109,7 +109,8 @@ export class BaseService {
       return data as T;
     } catch (error) {
       logger.error('GET request failed', error as Error, 'BaseService', {
-        endpoint });
+        endpoint,
+      });
       throw error;
     }
   }
@@ -126,7 +127,8 @@ export class BaseService {
       })) as T;
     } catch (error) {
       logger.error('POST request failed', error as Error, 'BaseService', {
-        endpoint });
+        endpoint,
+      });
       throw error;
     }
   }
@@ -143,7 +145,8 @@ export class BaseService {
       })) as T;
     } catch (error) {
       logger.error('PUT request failed', error as Error, 'BaseService', {
-        endpoint });
+        endpoint,
+      });
       throw error;
     }
   }
@@ -160,7 +163,8 @@ export class BaseService {
       })) as T;
     } catch (error) {
       logger.error('PATCH request failed', error as Error, 'BaseService', {
-        endpoint });
+        endpoint,
+      });
       throw error;
     }
   }
@@ -177,7 +181,8 @@ export class BaseService {
       })) as T;
     } catch (error) {
       logger.error('DELETE request failed', error as Error, 'BaseService', {
-        endpoint });
+        endpoint,
+      });
       throw error;
     }
   }
@@ -186,10 +191,7 @@ export class BaseService {
    * Handle service error
    */
   protected handleError(error: Error, context?: Record<string, unknown>): never {
-    logger.error('Service error', error, undefined, {
-      component: this.constructor.name,
-      ...context,
-    });
+    logger.error('Service error', error, this.constructor.name, context);
     throw error;
   }
 }
