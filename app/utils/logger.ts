@@ -3,6 +3,17 @@
  * Production-ready logging with multiple levels and formatting
  */
 
+// Helper to safely check if we're in production
+function isProduction(): boolean {
+  try {
+    return typeof window !== 'undefined' 
+      ? false // Client-side defaults to dev mode
+      : false; // Server-side defaults to dev mode for safety
+  } catch {
+    return false;
+  }
+}
+
 export enum LogLevel {
   DEBUG = 0,
   INFO = 1,
@@ -32,16 +43,16 @@ export interface LoggerConfig {
 
 class Logger {
   private config: LoggerConfig = {
-    minLevel: process.env['NODE_ENV'] === 'production' ? LogLevel.WARN : LogLevel.DEBUG,
+    minLevel: isProduction() ? LogLevel.WARN : LogLevel.DEBUG,
     enableConsole: true,
-    enableRemote: process.env['NODE_ENV'] === 'production',
+    enableRemote: isProduction(),
     maxBufferSize: 100,
     batchSize: 10,
     flushInterval: 30000, // 30 seconds
   };
 
   private buffer: LogEntry[] = [];
-  private flushTimer?: NodeJS.Timeout;
+  private flushTimer?: ReturnType<typeof setInterval>;
 
   constructor() {
     if (typeof window !== 'undefined' && this.config.enableRemote) {
@@ -170,15 +181,6 @@ class Logger {
   }
 
   /**
-   * End a console group
-   */
-  groupEnd(): void {
-    if (typeof console !== 'undefined' && console.groupEnd) {
-      console.groupEnd();
-    }
-  }
-
-  /**
    * Create a child logger with a specific context
    */
   child(context: string): ContextLogger {
@@ -230,20 +232,22 @@ class Logger {
    * Log a performance metric
    */
   perf(metric: string, value: number, metadata?: Record<string, unknown>): void {
-    this.info(`Performance: ${metric} = ${value}ms`, metadata);
+    this.log(LogLevel.INFO, `[PERF] ${metric}: ${value.toFixed(2)}ms`, undefined, metadata);
   }
 
   /**
    * Start a console group
    */
   group(label: string, fn: () => void): void {
-    if (this.config.enableConsole && typeof console.group === 'function') {
+    if (typeof console.group === 'function') {
       console.group(label);
     }
     try {
       fn();
     } finally {
-      this.groupEnd();
+      if (typeof console.groupEnd === 'function') {
+        console.groupEnd();
+      }
     }
   }
 
@@ -251,7 +255,7 @@ class Logger {
    * End a console group
    */
   groupEnd(): void {
-    if (this.config.enableConsole && typeof console.groupEnd === 'function') {
+    if (typeof console.groupEnd === 'function') {
       console.groupEnd();
     }
   }
@@ -352,33 +356,6 @@ class Logger {
   }
 
   /**
-   * Log a performance metric
-   */
-  perf(metric: string, value: number, metadata?: Record<string, unknown>): void {
-    this.log(LogLevel.DEBUG, `Performance: ${metric}`, 'Performance', {
-      ...metadata,
-      metric,
-      value,
-    });
-  }
-
-  /**
-   * Group related log messages
-   */
-  group(label: string, fn: () => void): void {
-    if (this.config.enableConsole) {
-      console.group(label);
-      try {
-        fn();
-      } finally {
-        console.groupEnd();
-      }
-    } else {
-      fn();
-    }
-  }
-
-  /**
    * Get human-readable log level name
    */
   private getLevelName(level: LogLevel): string {
@@ -395,38 +372,6 @@ class Logger {
         return 'FATAL';
       default:
         return 'UNKNOWN';
-    }
-  }
-
-  /**
-   * Log a performance metric
-   */
-  perf(metric: string, value: number, metadata?: Record<string, unknown>): void {
-    this.log(LogLevel.INFO, `[PERF] ${metric}: ${value.toFixed(2)}ms`, undefined, metadata);
-  }
-
-  /**
-   * Start a console group
-   */
-  group(label: string, fn: () => void): void {
-    if (typeof console.group === 'function') {
-      console.group(label);
-    }
-    try {
-      fn();
-    } finally {
-      if (typeof console.groupEnd === 'function') {
-        console.groupEnd();
-      }
-    }
-  }
-
-  /**
-   * End a console group
-   */
-  groupEnd(): void {
-    if (typeof console.groupEnd === 'function') {
-      console.groupEnd();
     }
   }
 }
