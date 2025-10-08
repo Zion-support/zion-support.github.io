@@ -2,59 +2,40 @@
 import re
 import sys
 
-def fix_merge_conflicts(filepath):
-    """Fix merge conflicts by keeping the origin/main version"""
+def resolve_merge_conflicts(file_path):
+    """Resolve merge conflicts by keeping HEAD version"""
     try:
-        with open(filepath, 'r', encoding='utf-8') as f:
+        with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
         
         # Pattern to match merge conflict blocks
-        # We'll keep the section after =======  and before >>>>>>> origin/main
+        # We'll keep the HEAD version (first option)
+        pattern = r'<<<<<<< HEAD\n(.*?)\n=======\n.*?\n>>>>>>> [^\n]+\n?'
         
-        # Remove simple conflict markers first
-        lines = content.split('\n')
-        cleaned_lines = []
-        in_conflict = False
-        in_ours = False
-        in_theirs = False
+        # Replace with HEAD version
+        resolved = re.sub(pattern, r'\1\n', content, flags=re.DOTALL)
         
-        for line in lines:
-            if line.startswith('<<<<<<<'):
-                in_conflict = True
-                in_ours = True
-                continue
-            elif line.startswith('======='):
-                in_ours = False
-                in_theirs = True
-                continue
-            elif line.startswith('>>>>>>>'):
-                in_conflict = False
-                in_theirs = False
-                continue
-            
-            # Keep the theirs (origin/main) version
-            if not in_conflict:
-                cleaned_lines.append(line)
-            elif in_theirs:
-                cleaned_lines.append(line)
+        # Also handle nested conflicts
+        pattern2 = r'<<<<<<< HEAD\n(.*?)\n=======\n.*?\n>>>>>>> [^\n]+\n?>>>>>>> [^\n]+\n?'
+        resolved = re.sub(pattern2, r'\1\n', resolved, flags=re.DOTALL)
         
-        result = '\n'.join(cleaned_lines)
+        with open(file_path, 'w', encoding='utf-8') as f:
+            f.write(resolved)
         
-        # Write back
-        with open(filepath, 'w', encoding='utf-8') as f:
-            f.write(result)
-        
-        print(f"Fixed: {filepath}")
+        print(f"Fixed {file_path}")
         return True
     except Exception as e:
-        print(f"Error fixing {filepath}: {e}")
+        print(f"Error fixing {file_path}: {e}")
         return False
 
-if __name__ == '__main__':
-    files = [
-        '/workspace/api/subscribe.js',
-        '/workspace/api/wallet.js',
-    ]
-    
-    for f in files:
-        fix_merge_conflicts(f)
+# Files to fix
+files = [
+    'app/App.tsx',
+    'app/components/AccessibilityEnhancer.tsx',
+    'app/components/ErrorBoundary.tsx',
+    'app/enterprise/page.tsx',
+    'app/setupTests.tsx'
+]
+
+for file in files:
+    resolve_merge_conflicts(file)

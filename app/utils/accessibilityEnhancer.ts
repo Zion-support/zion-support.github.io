@@ -678,3 +678,10 @@ class AccessibilityEnhancer {
     
     return `
 Accessibility Report:
+- Skip Links: ${metrics.skipLinks}
+- Focus Indicators: ${metrics.focusIndicators}
+- ARIA Labels: ${metrics.ariaLabels}
+- Keyboard Navigation: ${metrics.keyboardNavigation}
+    `;
+  }
+}

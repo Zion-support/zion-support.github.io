@@ -90,30 +90,6 @@
     ".next",
     "out",
     "dist",
-<<<<<<< HEAD
-    "_app_disabled/**",
-    "app_disabled/**",
-    "_conflicted_disabled/**",
-    "_pages_api_disabled/**",
-    "_pages_disabled/**",
-    "admin-api-disabled/**",
-    "api-disabled/**",
-    "api.disabled/**",
-    "api.disabled.temp/**",
-    "api-backup/**",
-    "apps.backup/**",
-    "automation_backup/**",
-    "ai-optimization-backups/**",
-    "automation_logs/**",
-    "all-automations-reports/**",
-    "accessibility-reports/**",
-    "corrupted-files-backup/**",
-    "corrupted_backup/**",
-    "corrupted_files_backup_2/**",
-    "components_backup/**",
-    "data_backup/**",
-    "lib_backup/**",
-=======
     "_app_disabled/**/*",
     "_conflicted_disabled/**/*",
     "_pages_api_disabled/**/*",
@@ -135,7 +111,6 @@
     "components_backup/**/*",
     "data_backup/**/*",
     "lib_backup/**/*",
->>>>>>> 49f746e8c3195449347ee8bebb6ca5b0ab732544
     "automation/**",
     "app/blog/**",
     "_app_disabled/blog/**",
@@ -214,14 +189,10 @@
     "fix-*.jsx",
     "fix-*.ts",
     "jest.setup.*"
-<<<<<<< HEAD
   ],
   "references": [
     {
       "path": "./tsconfig.node.json"
     }
-=======
->>>>>>> 02b5aeb280239cc5b972bae46c8dc15c38a3f84a
->>>>>>> 49f746e8c3195449347ee8bebb6ca5b0ab732544
   ]
 }
