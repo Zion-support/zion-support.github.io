@@ -128,12 +128,12 @@ export async function performHealthCheck(): Promise<HealthStatus> {
     },
   };
 
-  logger.group('Health Check Results', () => {
-    logger.info(`Status: ${status.status}`);
-    logger.info(`Checks: ${JSON.stringify(status.checks)}`);
-    logger.info(`Metrics: ${JSON.stringify(status.metrics)}`);
-    logger.perf('Health check duration', performance.now() - startTime);
-  });
+  logger.group('Health Check Results');
+  logger.info(`Status: ${status.status}`);
+  logger.info(`Checks: ${JSON.stringify(status.checks)}`);
+  logger.info(`Metrics: ${JSON.stringify(status.metrics)}`);
+  logger.perf(`Health check duration: ${performance.now() - startTime}ms`);
+  logger.groupEnd();
 
   return status;
 }
