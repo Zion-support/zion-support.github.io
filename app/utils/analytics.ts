@@ -52,6 +52,7 @@ class AnalyticsService {
 
       // Send to Google Analytics if available
       if (this.hasGtag()) {
+        (window as any).gtag('event', event.action, {
           event_category: event.category,
           event_label: event.label,
           value: event.value,
@@ -74,6 +75,7 @@ class AnalyticsService {
   trackPageView(path: string, title?: string): void {
     try {
       if (this.hasGtag()) {
+        (window as any).gtag('config', 'GA_MEASUREMENT_ID', {
           page_path: path,
           page_title: title,
         });
@@ -89,6 +91,7 @@ class AnalyticsService {
   identifyUser(user: AnalyticsUser): void {
     try {
       if (this.hasGtag() && user.id) {
+        (window as any).gtag('config', 'GA_MEASUREMENT_ID', {
           user_id: user.id,
           ...user.properties,
         });
@@ -124,6 +127,7 @@ class AnalyticsService {
   ): void {
     try {
       if (this.hasGtag()) {
+        (window as any).gtag('event', 'timing_complete', {
           name: variable,
           value: Math.round(value),
           event_category: category,
