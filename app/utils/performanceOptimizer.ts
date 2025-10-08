@@ -74,49 +74,9 @@ class PerformanceOptimizer {
     if ('measure' in performance && 'mark' in performance) {
       try {
         performance.measure(`${markName}-duration`, markName);
-<<<<<<< HEAD
-      } catch (error) {
-=======
       } catch {
->>>>>>> cursor/fix-errors-and-merge-to-main-fbf5
         // Ignore measure errors
       }
-    }
-    
-    return duration;
-  }
-
-  private initMonitoring() {
-    if (typeof window === 'undefined' || !('PerformanceObserver' in window)) return;
-
-    try {
-      // Monitor Core Web Vitals
-      this.observeLCP();
-      this.observeFID();
-      this.observeCLS();
-      this.observeFCP();
-      this.observeTTFB();
-      this.observeMemory();
-    } catch (error) {
-      console.warn('Performance monitoring initialization failed:', error);
-    }
-  }
-
-  private observeLCP() {
-    try {
-      const observer = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        const lastEntry = entries[entries.length - 1];
-        this.metrics.lcp = lastEntry.startTime;
-      });
-      observer.observe({ entryTypes: ['largest-contentful-paint'] });
-      this.observers.push(observer);
-<<<<<<< HEAD
-    } catch (error) {
-=======
-    } catch {
->>>>>>> cursor/fix-errors-and-merge-to-main-fbf5
-      // Ignore if not supported
     }
   }
 
@@ -132,11 +92,7 @@ class PerformanceOptimizer {
       });
       observer.observe({ entryTypes: ['first-input'] });
       this.observers.push(observer);
-<<<<<<< HEAD
-    } catch (error) {
-=======
     } catch {
->>>>>>> cursor/fix-errors-and-merge-to-main-fbf5
       // Ignore if not supported
     }
   }
@@ -158,11 +114,7 @@ class PerformanceOptimizer {
       });
       observer.observe({ entryTypes: ['layout-shift'] });
       this.observers.push(observer);
-<<<<<<< HEAD
-    } catch (error) {
-=======
     } catch {
->>>>>>> cursor/fix-errors-and-merge-to-main-fbf5
       // Ignore if not supported
     }
   }
@@ -179,11 +131,7 @@ class PerformanceOptimizer {
       });
       observer.observe({ entryTypes: ['paint'] });
       this.observers.push(observer);
-<<<<<<< HEAD
-    } catch (error) {
-=======
     } catch {
->>>>>>> cursor/fix-errors-and-merge-to-main-fbf5
       // Ignore if not supported
     }
   }
@@ -203,11 +151,7 @@ class PerformanceOptimizer {
       });
       observer.observe({ entryTypes: ['navigation'] });
       this.observers.push(observer);
-<<<<<<< HEAD
-    } catch (error) {
-=======
     } catch {
->>>>>>> cursor/fix-errors-and-merge-to-main-fbf5
       // Ignore if not supported
     }
   }

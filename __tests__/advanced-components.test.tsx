@@ -1,5 +1,6 @@
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import { HelmetProvider } from 'react-helmet-async';
+import { MemoryRouter } from 'react-router-dom';
 import AdvancedErrorBoundary from '../app/components/AdvancedErrorBoundary';
 import AdvancedSEOOptimizer from '../app/components/AdvancedSEOOptimizer';
 import AdvancedPerformanceMonitor from '../app/components/AdvancedPerformanceMonitor';
@@ -31,9 +32,11 @@ describe('AdvancedErrorBoundary', () => {
       .mockImplementation(() => {});
 
     render(
-      <AdvancedErrorBoundary enableRetry={true}>
-        <ThrowError shouldThrow={true} />
-      </AdvancedErrorBoundary>
+      <MemoryRouter>
+        <AdvancedErrorBoundary enableRetry={true}>
+          <ThrowError shouldThrow={true} />
+        </AdvancedErrorBoundary>
+      </MemoryRouter>
     );
 
     expect(screen.getByText('Oops! Something went wrong')).toBeInTheDocument();
@@ -51,9 +54,11 @@ describe('AdvancedErrorBoundary', () => {
       .mockImplementation(() => {});
 
     render(
-      <AdvancedErrorBoundary onError={onError}>
-        <ThrowError shouldThrow={true} />
-      </AdvancedErrorBoundary>
+      <MemoryRouter>
+        <AdvancedErrorBoundary onError={onError}>
+          <ThrowError shouldThrow={true} />
+        </AdvancedErrorBoundary>
+      </MemoryRouter>
     );
 
     expect(onError).toHaveBeenCalled();
@@ -69,9 +74,11 @@ describe('AdvancedErrorBoundary', () => {
     const TestComponent = () => <ThrowError shouldThrow={shouldThrow} />;
 
     const { rerender } = render(
-      <AdvancedErrorBoundary enableRetry={true}>
-        <TestComponent />
-      </AdvancedErrorBoundary>
+      <MemoryRouter>
+        <AdvancedErrorBoundary enableRetry={true}>
+          <TestComponent />
+        </AdvancedErrorBoundary>
+      </MemoryRouter>
     );
 
     const retryButton = screen.getByText('Try Again (3 attempts left)');

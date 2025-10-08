@@ -1,5 +1,10 @@
 // Learn more: https://github.com/testing-library/jest-dom
 import '@testing-library/jest-dom';
+import { TextEncoder, TextDecoder } from 'util';
+
+// Polyfill TextEncoder and TextDecoder for Jest environment
+global.TextEncoder = TextEncoder;
+global.TextDecoder = TextDecoder;
 
 // Mock files that use import.meta.env
 jest.mock('./app/utils/logger.ts', () => ({
@@ -50,8 +55,10 @@ jest.mock('react-router-dom', () => ({
     state: null,
   }),
   useParams: () => ({}),
-
-
+  BrowserRouter: ({ children }) => children,
+  MemoryRouter: ({ children }) => children,
+  Router: ({ children }) => children,
+  Link: ({ children, to, ...props }) => <a href={to} {...props}>{children}</a>,
 }));
 
 // Mock window.matchMedia
