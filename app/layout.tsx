@@ -1,9 +1,11 @@
 import './globals.css';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
+import PerformanceMetrics from './components/PerformanceMetrics';
 import AnalyticsProvider from './components/AnalyticsProvider';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import PWAInstaller from './components/PWAInstaller';
+import SEOOptimizer from './components/SEOOptimizer';
 import { GlobalErrorBoundary } from './components/GlobalErrorBoundary';
 
 export default function RootLayout({
@@ -123,12 +125,16 @@ export default function RootLayout({
       <head>
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        {/* Primary meta tags */}
-        <meta name="description" content="Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology." />
-        <meta name="keywords" content="AI solutions, quantum computing, autonomous systems, digital transformation, enterprise AI, machine learning, automation, cloud services, business intelligence" />
-        <meta name="author" content="Zion Tech Group" />
-        <meta name="robots" content="index, follow" />
-        <meta name="googlebot" content="index, follow" />
+        
+        {/* SEO Optimizer will handle most meta tags */}
+        <SEOOptimizer 
+          title="Zion Tech Group - Advanced AI and IT Solutions"
+          description="Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology."
+          keywords="AI solutions, quantum computing, autonomous systems, digital transformation, enterprise AI, machine learning, automation, cloud services, business intelligence"
+          canonicalUrl="https://ziontechgroup.com"
+          ogImage="https://ziontechgroup.com/og-image.jpg"
+          structuredData={structuredData}
+        />
         
         {/* Favicons */}
         <link rel='icon' href='/favicon.ico' />
@@ -136,47 +142,6 @@ export default function RootLayout({
         <link rel='icon' type='image/png' sizes='32x32' href='/favicon-32x32.png' />
         <link rel='icon' type='image/png' sizes='16x16' href='/favicon-16x16.png' />
         <link rel='manifest' href='/site.webmanifest' />
-        <meta name='theme-color' content='#4f46e5' />
-        {/* Enhanced SEO meta tags */}
-        <meta name='publisher' content='Zion Tech Group' />
-        <meta name='copyright' content='Zion Tech Group' />
-        <meta name='language' content='en' />
-        <meta name='revisit-after' content='3 days' />
-        <meta name='distribution' content='global' />
-        <meta name='rating' content='general' />
-        <meta name='format-detection' content='telephone=yes' />
-        <meta name='mobile-web-app-capable' content='yes' />
-        <meta name='apple-mobile-web-app-capable' content='yes' />
-        <meta name='apple-mobile-web-app-status-bar-style' content='default' />
-        <meta name='apple-mobile-web-app-title' content='Zion Tech Group' />
-        <meta name='application-name' content='Zion Tech Group' />
-        <meta name='msapplication-TileColor' content='#4f46e5' />
-        <meta name='msapplication-config' content='/browserconfig.xml' />
-        <link rel='canonical' href='https://ziontechgroup.com' />
-        <link rel='alternate' hrefLang='en' href='https://ziontechgroup.com' />
-        
-        {/* Open Graph / Facebook */}
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ziontechgroup.com" />
-        <meta property="og:title" content="Zion Tech Group - Advanced AI and IT Solutions" />
-        <meta property="og:description" content="Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services." />
-        <meta property="og:image" content="https://ziontechgroup.com/og-image.jpg" />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
-        <meta property="og:site_name" content="Zion Tech Group" />
-        
-        {/* Twitter */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:url" content="https://ziontechgroup.com" />
-        <meta name="twitter:title" content="Zion Tech Group - Advanced AI and IT Solutions" />
-        <meta name="twitter:description" content="Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services." />
-        <meta name="twitter:image" content="https://ziontechgroup.com/og-image.jpg" />
-        <meta name="twitter:site" content="@ziontechgroup" />
-        <meta name="twitter:creator" content="@ziontechgroup" />
-        <script
-          type='application/ld+json'
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-        />
       </head>
       <body className='antialiased'>
         <GlobalErrorBoundary>
@@ -184,6 +149,7 @@ export default function RootLayout({
             <AccessibilityEnhancer>
               <PerformanceMonitor />
               <PerformanceOptimizer />
+              <PerformanceMetrics />
               <PWAInstaller />
               {children}
             </AccessibilityEnhancer>
