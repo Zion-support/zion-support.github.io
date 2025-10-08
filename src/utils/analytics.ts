@@ -82,6 +82,7 @@ class Analytics {
     };
 
     this.events.push(event);
+    this.sendEvent(event);
   }
 
   /**
@@ -97,22 +98,40 @@ class Analytics {
   /**
    * Track user interaction
    */
-  trackInteraction(element: string, action: string, category: string = 'user_interaction'): void {
+  trackInteraction(
+    element: string,
+    action: string,
+    category: string = 'user_interaction'
+  ): void {
     this.track('interaction', category, action, element);
   }
 
   /**
    * Track performance metrics
    */
-  trackPerformance(metric: string, value: number, unit: string = 'ms'): void {
+  trackPerformance(metric: string, value: number, unit: string): void {
     this.track('performance', 'metrics', metric, unit, value);
   }
 
   /**
    * Track business events
    */
-  trackBusinessEvent(event: string, value?: number, properties?: Record<string, unknown>): void {
+  trackBusinessEvent(
+    event: string,
+    value?: number,
+    properties?: Record<string, unknown>
+  ): void {
     this.track(event, 'business', 'event', undefined, value, properties);
+  }
+
+  /**
+   * Send event to analytics service
+   */
+  private sendEvent(event: AnalyticsEvent): void {
+    if (typeof window !== 'undefined' && process.env.NODE_ENV === 'production') {
+      // Send to analytics service
+      console.log('Analytics event:', event);
+    }
   }
 
   /**

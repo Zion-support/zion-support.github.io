@@ -66,24 +66,28 @@ export class ErrorHandler {
       ...errorInfo,
     };
 
-    this.addToQueue(errorData);
+    this.errorQueue.push(errorData);
+    if (this.errorQueue.length > this.maxQueueSize) {
+      this.errorQueue.shift();
+    }
+
+    // Send to error reporting service
     this.reportError(errorData);
   }
 
   /**
-   * Categorize error type
+   * Categorize error based on error type and message
    */
   private categorizeError(error: Error): ErrorCategory {
-    const message = error.message.toLowerCase();
-    
-    if (message.includes('network') || message.includes('fetch')) {
+    if (error.message.includes('fetch') || error.message.includes('network')) {
       return ErrorCategory.NETWORK;
-    } else if (message.includes('validation') || message.includes('invalid')) {
+    }
+    if (error.message.includes('validation')) {
       return ErrorCategory.VALIDATION;
-    } else if (message.includes('api')) {
+    }
+    if (error.message.includes('API')) {
       return ErrorCategory.API;
     }
-    
     return ErrorCategory.RUNTIME;
   }
 
@@ -91,13 +95,13 @@ export class ErrorHandler {
    * Determine error severity
    */
   private determineSeverity(error: Error, category: ErrorCategory): ErrorSeverity {
-    if (category === ErrorCategory.NETWORK) {
-      return ErrorSeverity.MEDIUM;
-    } else if (category === ErrorCategory.VALIDATION) {
-      return ErrorSeverity.LOW;
+    if (category === ErrorCategory.NETWORK || category === ErrorCategory.API) {
+      return ErrorSeverity.HIGH;
     }
-    
-    return ErrorSeverity.HIGH;
+    if (category === ErrorCategory.VALIDATION) {
+      return ErrorSeverity.MEDIUM;
+    }
+    return ErrorSeverity.LOW;
   }
 
   /**
@@ -108,25 +112,16 @@ export class ErrorHandler {
   }
 
   /**
-   * Add error to queue
+   * Report error to monitoring service
    */
-  private addToQueue(errorData: ErrorInfo): void {
-    this.errorQueue.push(errorData);
-    
-    if (this.errorQueue.length > this.maxQueueSize) {
-      this.errorQueue.shift();
+  private reportError(errorData: ErrorInfo): void {
+    if (typeof window !== 'undefined' && process.env.NODE_ENV === 'production') {
+      console.error('Error reported:', errorData);
     }
   }
 
   /**
-   * Report error to external service
-   */
-  private reportError(errorData: ErrorInfo): void {
-    console.error('Error:', errorData);
-  }
-
-  /**
-   * Get all errors from queue
+   * Get all errors
    */
   getErrors(): ErrorInfo[] {
     return [...this.errorQueue];
@@ -140,4 +135,5 @@ export class ErrorHandler {
   }
 }
 
-export default ErrorHandler;
+export const errorHandler = ErrorHandler.getInstance();
+export default errorHandler;
