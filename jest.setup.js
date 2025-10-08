@@ -86,10 +86,7 @@ global.IntersectionObserver = class IntersectionObserver {
   unobserve() {}
 };
 
-// Mock TextEncoder and TextDecoder
-const { TextEncoder, TextDecoder } = require('util');
-global.TextEncoder = TextEncoder;
-global.TextDecoder = TextDecoder;
+// TextEncoder and TextDecoder are already set up above with ES6 imports
 
 // Suppress console errors in tests
 const originalError = console.error;
