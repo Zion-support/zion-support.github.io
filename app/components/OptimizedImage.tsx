@@ -13,6 +13,7 @@ interface OptimizedImageProps {
   onError?: () => void;
 }
 
+<<<<<<< HEAD
 const OptimizedImage: React.FC<OptimizedImageProps> = memo(({
   src,
   alt,
@@ -26,6 +27,22 @@ const OptimizedImage: React.FC<OptimizedImageProps> = memo(({
 }) => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [hasError, setHasError] = useState(false);
+=======
+const OptimizedImage: React.FC<OptimizedImageProps> = memo(
+  ({
+    src,
+    alt,
+    width,
+    height,
+    className = '',
+    priority = false,
+    placeholder: _placeholder = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaZWlnaHQ9IjEwMCUiIGZpbGw9IiNmM2Y0ZjYiLz48L3N2Zz4=',
+    onLoad,
+    onError,
+  }) => {
+    const [isLoaded, setIsLoaded] = useState(false);
+    const [hasError, setHasError] = useState(false);
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-845f
 
   const handleLoad = useCallback(() => {
     setIsLoaded(true);
