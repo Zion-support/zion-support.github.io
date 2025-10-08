@@ -7,6 +7,7 @@ interface SEOConfig {
   keywords: string[];
   url: string;
   canonicalUrl: string;
+  url?: string;
   ogTitle?: string;
   ogDescription?: string;
   ogImage?: string;
