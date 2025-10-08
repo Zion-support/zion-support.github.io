@@ -1,3 +1,8 @@
+/**
+ * Enhanced Error Boundary
+ * Generated: 2025-10-08T02:06:22.084Z
+ */
+
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import Link from 'next/link';
 import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
@@ -27,9 +32,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       hasError: false, 
       retryCount: 0 
     };
-    
-    this.sessionId = this.generateSessionId();
-    this.errorReportingEndpoint = process.env.NEXT_PUBLIC_ERROR_REPORTING_ENDPOINT || '/api/error-report';
   }
 
   static getDerivedStateFromError(error: Error): Partial<State> {
@@ -79,7 +81,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
 
   render(): ReactNode {
     if (this.state.hasError) {
-      // Custom fallback UI
       if (this.props.fallback) {
         return this.props.fallback;
       }

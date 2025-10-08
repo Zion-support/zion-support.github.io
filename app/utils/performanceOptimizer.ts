@@ -34,8 +34,6 @@ interface PerformanceOptimizerConfig {
   enableMonitoring: boolean;
 }
 
-type PerformanceConfig = OptimizationConfig;
-
 class PerformanceOptimizer {
   private config: PerformanceOptimizerConfig;
   private metrics: PerformanceMetrics = {};

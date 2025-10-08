@@ -6,19 +6,19 @@
 import { logger } from './logger';
 
 export enum ErrorSeverity {
-  LOW = 'low',
-  MEDIUM = 'medium',
-  HIGH = 'high',
-  CRITICAL = 'critical',
+  Low = 'low',
+  Medium = 'medium',
+  High = 'high',
+  Critical = 'critical',
 }
 
 export enum ErrorCategory {
-  NETWORK = 'network',
-  VALIDATION = 'validation',
-  AUTHORIZATION = 'authorization',
-  RUNTIME = 'runtime',
-  CONFIGURATION = 'configuration',
-  EXTERNAL_SERVICE = 'external_service',
+  Network = 'network',
+  Validation = 'validation',
+  Authorization = 'authorization',
+  Runtime = 'runtime',
+  Configuration = 'configuration',
+  ExternalService = 'external_service',
 }
 
 export interface ErrorMetadata {
@@ -71,8 +71,8 @@ class ErrorTrackingService {
       this.trackError(
         event.error || new Error(event.message),
         {
-          category: ErrorCategory.RUNTIME,
-          severity: ErrorSeverity.HIGH,
+          category: ErrorCategory.Runtime,
+          severity: ErrorSeverity.High,
           context: {
             filename: event.filename,
             lineno: event.lineno,
@@ -87,8 +87,8 @@ class ErrorTrackingService {
       this.trackError(
         new Error(`Unhandled Promise Rejection: ${event.reason}`),
         {
-          category: ErrorCategory.RUNTIME,
-          severity: ErrorSeverity.CRITICAL,
+          category: ErrorCategory.Runtime,
+          severity: ErrorSeverity.Critical,
           context: { reason: event.reason },
         }
       );
@@ -144,14 +144,18 @@ class ErrorTrackingService {
     }
 
     // Log the error
-    logger.error(`[${metadata.severity.toUpperCase()}] ${error.message}`, {
-      errorId,
-      category: metadata.category,
-      context: metadata.context,
-    });
+    logger.error(
+      `[${metadata.severity.toUpperCase()}] ${error.message}`,
+      error,
+      {
+        error_id: errorId,
+        category: metadata.category,
+        ...metadata.context,
+      }
+    );
 
     // Send to external service if critical
-    if (metadata.severity === ErrorSeverity.CRITICAL) {
+    if (metadata.severity === ErrorSeverity.Critical) {
       this.reportToExternalService(errorId);
     }
 
@@ -194,7 +198,7 @@ class ErrorTrackingService {
       try {
         listener(error);
       } catch (listenerError) {
-        logger.error('Error in error listener', listenerError);
+        logger.error('Error in error listener', listenerError as Error);
       }
     });
   }
@@ -215,7 +219,7 @@ class ErrorTrackingService {
         });
       }
     } catch (reportError) {
-      logger.error('Failed to report error to external service', reportError);
+      logger.error('Failed to report error to external service', reportError as Error);
     }
   }
 
@@ -293,3 +297,38 @@ class ErrorTrackingService {
 
 export const errorTracking = ErrorTrackingService.getInstance();
 export default ErrorTrackingService;
+
+// Export convenience functions for easier testing and usage
+export const trackError = (
+  error: Error,
+  options?: Partial<Omit<ErrorMetadata, 'timestamp'>>
+) => {
+  const category = options?.category || ErrorCategory.Runtime;
+  const severity = options?.severity || ErrorSeverity.Medium;
+  
+  return errorTracking.trackError(error, {
+    ...options,
+    category,
+    severity,
+  });
+};
+
+export const getErrorStatistics = () => {
+  const stats = errorTracking.getStatistics();
+  const errors = errorTracking.getErrors().map(error => ({
+    ...error,
+    context: error.metadata.context,
+  }));
+  return {
+    total: stats.total,
+    byCategory: stats.byCategory,
+    bySeverity: stats.bySeverity,
+    errors,
+  };
+};
+
+export const clearErrorHistory = () => errorTracking.clearErrors();
+export const addErrorListener = (listener: (error: TrackedError) => void) => 
+  errorTracking.addListener(listener);
+export const removeErrorListener = (listener: (error: TrackedError) => void) => 
+  errorTracking.removeListener(listener);

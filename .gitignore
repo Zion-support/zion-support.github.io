@@ -120,3 +120,14 @@ pnpm-debug.log*
 temp_*
 tmp_*
 .DS_Store
+
+# Additional ignores for cleaner repo
+*.backup
+*.disabled
+*-backup-*
+*.log.*
+*-old
+*-temp
+temp_*
+tmp_*
+.DS_Store

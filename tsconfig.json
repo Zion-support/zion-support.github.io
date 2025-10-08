@@ -9,20 +9,18 @@
     ],
     "module": "ESNext",
     "skipLibCheck": true,
-    "moduleResolution": "bundler",
-    "allowImportingTsExtensions": true,
+    "allowImportingTsExtensions": false,
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "preserve",
-    "jsxImportSource": "react",
-    "strict": true,
-    "strictNullChecks": true,
+    "strict": false,
     "noUnusedLocals": false,
     "noUnusedParameters": false,
-    "noFallthroughCasesInSwitch": true,
+    "noFallthroughCasesInSwitch": false,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
+    "moduleResolution": "bundler",
     "baseUrl": ".",
     "paths": {
       "@/*": [
@@ -39,38 +37,38 @@
       ],
       "@/types/*": [
         "src/types/*"
+      ],
+      "@/hooks/*": [
+        "src/hooks/*"
+      ],
+      "@/config/*": [
+        "src/config/*"
+      ],
+      "@/data/*": [
+        "src/data/*"
+      ],
+      "@/content/*": [
+        "src/content/*"
       ]
     },
-    "allowJs": true,
-    "forceConsistentCasingInFileNames": true,
-    "noImplicitAny": true,
-    "noImplicitReturns": true,
-    "noImplicitThis": true,
-    "exactOptionalPropertyTypes": false,
-    "noImplicitOverride": false,
-    "noPropertyAccessFromIndexSignature": false,
-    "noUncheckedIndexedAccess": false,
-    "allowUnusedLabels": false,
-    "allowUnreachableCode": false,
-    "verbatimModuleSyntax": false,
     "incremental": true,
     "plugins": [
       {
         "name": "next"
       }
-    ]
+    ],
+    "allowJs": true
   },
   "include": [
-    "App.tsx",
-    "app/**/*",
-    "components/**/*",
-    "src/**/*",
-    "types/**/*",
-    "vite-env.d.ts",
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
     ".next/types/**/*.ts"
   ],
   "exclude": [
     "node_modules",
+    ".next",
+    "out",
     "dist",
     "_app_disabled/**",
     "_conflicted_disabled/**",

@@ -1,454 +1,572 @@
-# Code Improvements Documentation
+# Codebase Improvements Documentation
 
 ## Overview
-This document outlines the comprehensive improvements made to the Zion Tech Group codebase. These enhancements focus on security, performance, type safety, code quality, and developer experience.
-
-## New Utility Modules
-
-### 1. Security Utilities (`src/utils/security.ts`)
-
-A comprehensive security module providing essential security features:
-
-#### Features:
-- **XSS Protection**: `sanitizeHtml()` and `escapeHtml()` functions to prevent cross-site scripting attacks
-- **URL Validation**: `isValidUrl()` and `isInternalUrl()` for secure URL handling
-- **Email/Phone Validation**: Built-in validators for common input types
-- **Rate Limiting**: `RateLimiter` class for preventing abuse
-- **CSRF Protection**: `CSRFProtection` class for cross-site request forgery prevention
-- **Secure Storage**: `SecureStorage` wrapper for encrypted localStorage operations
-- **CSP Generation**: `generateCSP()` for Content Security Policy headers
-
-#### Usage Example:
-```typescript
-import { sanitizeHtml, isValidEmail, RateLimiter, CSRFProtection } from '@/utils/security';
-
-// Sanitize user input
-const clean = sanitizeHtml(userInput);
-
-// Validate email
-if (isValidEmail(email)) {
-  // Process email
-}
-
-// Rate limiting
-const limiter = new RateLimiter(100, 60000); // 100 requests per minute
-if (limiter.isAllowed(userId)) {
-  // Process request
-}
-
-// CSRF protection
-const token = CSRFProtection.generateToken();
-// Include token in form
-if (CSRFProtection.validateToken(submittedToken)) {
-  // Process form
-}
-```
-
-### 2. Validation Utilities (`src/utils/validation.ts`)
-
-Type-safe validation and type guards for runtime type checking:
-
-#### Features:
-- **Type Guards**: `isDefined()`, `isString()`, `isNumber()`, `isBoolean()`, `isObject()`, `isArray()`, `isFunction()`
-- **Validation Functions**: Email, URL, date, JSON, hex color, UUID validators
-- **Safe Operations**: `safeParse()`, `safeArrayAccess()`, `safeGet()` for error-free operations
-- **Range Checks**: `isValidLength()`, `isInRange()` for boundary validation
-- **Required Fields**: `validateRequiredFields()` for object validation
-
-#### Usage Example:
-```typescript
-import { isDefined, isValidEmail, validateRequiredFields, safeParse } from '@/utils/validation';
-
-// Type guard
-if (isDefined(value)) {
-  // TypeScript knows value is not null/undefined
-}
-
-// Validate object
-const result = validateRequiredFields(user, ['name', 'email', 'age']);
-if (!result.valid) {
-  console.log('Missing fields:', result.missing);
-}
-
-// Safe JSON parse
-const data = safeParse<UserData>(jsonString, defaultUserData);
-```
-
-### 3. Cache Utilities (`src/utils/cache.ts`)
-
-Advanced caching with TTL and LRU eviction strategies:
-
-#### Features:
-- **Memory Cache**: `MemoryCache` class with TTL and LRU eviction
-- **Persistent Cache**: `PersistentCache` using localStorage
-- **Memoization**: `memoize()` and `memoizeAsync()` for function result caching
-- **Cache Statistics**: Built-in performance monitoring
-- **Automatic Cleanup**: Expired entry removal
-
-#### Usage Example:
-```typescript
-import { MemoryCache, memoize, memoizeAsync } from '@/utils/cache';
-
-// Create cache
-const cache = new MemoryCache<User>({ 
-  ttl: 5 * 60 * 1000, // 5 minutes
-  maxSize: 100 
-});
-
-// Use cache
-cache.set('user:1', userData);
-const user = cache.get('user:1');
-
-// Memoize expensive function
-const expensiveFunction = memoize((x: number) => {
-  // Complex calculation
-  return result;
-}, { ttl: 60000 });
-
-// Memoize async function
-const fetchUser = memoizeAsync(async (id: string) => {
-  const response = await fetch(`/api/users/${id}`);
-  return response.json();
-});
-```
-
-### 4. Logger Utility (`src/utils/logger.ts`)
-
-Professional logging system with multiple levels and outputs:
-
-#### Features:
-- **Log Levels**: DEBUG, INFO, WARN, ERROR, FATAL
-- **Multiple Outputs**: Console, remote logging service
-- **Context Support**: Hierarchical logging with context
-- **Log History**: Store recent logs in memory
-- **Export Capability**: Export logs as JSON
-- **Environment Aware**: Different behaviors for dev/prod
-
-#### Usage Example:
-```typescript
-import { logger, createLogger, LogLevel } from '@/utils/logger';
-
-// Basic logging
-logger.info('Application started');
-logger.error('Database connection failed', error);
-
-// Create contextual logger
-const dbLogger = createLogger('database');
-dbLogger.debug('Query executed', { query, duration });
-
-// Configure logger
-logger.setMinLevel(LogLevel.WARN);
-
-// Get logs
-const recentLogs = logger.getLogs(50);
-```
-
-### 5. API Client Utilities (`src/utils/api.ts`)
-
-Robust API client with retry logic and interceptors:
-
-#### Features:
-- **Automatic Retries**: Configurable retry logic with exponential backoff
-- **Timeout Support**: Request timeout handling
-- **Interceptors**: Request/response transformation
-- **Type Safety**: Generic type support for responses
-- **Error Handling**: Comprehensive error management
-- **Authentication**: Built-in auth token management
-
-#### Usage Example:
-```typescript
-import { ApiClient, fetchWithRetry } from '@/utils/api';
-
-// Create API client
-const api = new ApiClient('https://api.example.com');
-
-// Set auth token
-api.setAuthToken('your-token-here');
-
-// Add interceptor
-api.addRequestInterceptor((url, options) => {
-  // Add custom headers
-  return {
-    ...options,
-    headers: {
-      ...options.headers,
-      'X-Custom-Header': 'value',
-    },
-  };
-});
-
-// Make requests
-const response = await api.get<User[]>('/users');
-if (response.data) {
-  // Process users
-}
-
-// POST with retry
-const result = await api.post('/users', userData, {
-  retries: 3,
-  retryDelay: 1000,
-});
-
-// Direct fetch with retry
-const data = await fetchWithRetry<Data>('/api/endpoint', {
-  method: 'POST',
-  body: JSON.stringify(payload),
-  retries: 3,
-  timeout: 5000,
-});
-```
-
-### 6. Custom React Hooks (`src/utils/hooks.ts`)
-
-Reusable hooks for common patterns:
-
-#### Available Hooks:
-- `useLocalStorage` - Sync state with localStorage
-- `useDebounce` - Debounce values
-- `useThrottle` - Throttle callbacks
-- `usePrevious` - Access previous value
-- `useIntersectionObserver` - Intersection observer integration
-- `useMediaQuery` - Responsive design helper
-- `useWindowSize` - Window dimensions tracking
-- `useClickOutside` - Detect clicks outside element
-- `useAsync` - Async operation state management
-- `useScrollPosition` - Track scroll position
-- `useOnlineStatus` - Network status detection
-- `useCopyToClipboard` - Clipboard operations
-- `useIdle` - User idle detection
-- `useToggle` - Boolean state toggle
-- `useInterval` - Declarative intervals
-- `useTimeout` - Declarative timeouts
-
-#### Usage Example:
-```typescript
-import { 
-  useLocalStorage, 
-  useDebounce, 
-  useMediaQuery,
-  useAsync 
-} from '@/utils/hooks';
-
-function MyComponent() {
-  // Persist state
-  const [theme, setTheme] = useLocalStorage('theme', 'dark');
-  
-  // Debounce search
-  const debouncedSearch = useDebounce(searchTerm, 500);
-  
-  // Responsive design
-  const isMobile = useMediaQuery('(max-width: 768px)');
-  
-  // Async operation
-  const { data, loading, error, execute } = useAsync(
-    async () => fetch('/api/data').then(r => r.json()),
-    false
-  );
-  
-  return (
-    // Component JSX
-  );
-}
-```
-
-## Improvements to Existing Code
-
-### 1. Error Handler Enhancement
-- Integrated with new logger utility
-- Removed direct console.error calls in production
-- Better structured error reporting
-
-### 2. TypeScript Configuration
-- Strict mode enabled
-- Proper path aliases configured
-- Comprehensive type checking
-
-### 3. Performance Optimization
-- Existing performance utilities maintained
-- Can be integrated with cache utilities for better performance
-
-## Best Practices Implemented
-
-### 1. Type Safety
-- No `any` types used
-- Comprehensive type guards
-- Generic type support throughout
-
-### 2. Security
-- Input sanitization
-- CSRF protection
-- Rate limiting
-- Secure storage
-
-### 3. Error Handling
-- Comprehensive error catching
-- Structured error logging
-- User-friendly error messages
-
-### 4. Performance
-- Caching strategies
-- Memoization
-- Lazy loading support
-- Debouncing/throttling
-
-### 5. Code Organization
-- Modular structure
-- Single responsibility principle
-- Comprehensive documentation
-- Centralized exports
-
-## Integration Guide
-
-### Step 1: Import Utilities
-```typescript
-// Import specific utilities
-import { logger, ApiClient, MemoryCache } from '@/utils';
-
-// Or import from specific modules
-import { useLocalStorage, useDebounce } from '@/utils/hooks';
-```
-
-### Step 2: Initialize Services
-```typescript
-// Initialize logger with custom config
-const appLogger = createLogger('app', {
-  minLevel: LogLevel.INFO,
-  enableRemote: true,
-  remoteEndpoint: '/api/logs',
-});
-
-// Create API client
-const apiClient = new ApiClient(process.env.API_URL);
-
-// Initialize cache
-const userCache = new MemoryCache<User>({
-  ttl: 10 * 60 * 1000,
-  maxSize: 200,
-});
-```
-
-### Step 3: Use in Components
-```typescript
-import React from 'react';
-import { useLocalStorage, useAsync } from '@/utils/hooks';
-import { logger } from '@/utils/logger';
-import { isValidEmail } from '@/utils/validation';
-
-export function MyComponent() {
-  const [email, setEmail] = useLocalStorage('email', '');
-  const { data, loading } = useAsync(() => fetchData());
-  
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    
-    if (!isValidEmail(email)) {
-      logger.warn('Invalid email submitted', { email });
-      return;
-    }
-    
-    logger.info('Form submitted', { email });
-    // Process form
-  };
-  
-  return (
-    // Component JSX
-  );
-}
-```
-
-## Testing Recommendations
-
-### Unit Tests
-```typescript
-import { isValidEmail, isDefined } from '@/utils/validation';
-
-describe('Validation Utils', () => {
-  test('validates email correctly', () => {
-    expect(isValidEmail('test@example.com')).toBe(true);
-    expect(isValidEmail('invalid')).toBe(false);
-  });
-  
-  test('checks if value is defined', () => {
-    expect(isDefined('value')).toBe(true);
-    expect(isDefined(null)).toBe(false);
-    expect(isDefined(undefined)).toBe(false);
-  });
-});
-```
-
-## Performance Considerations
-
-1. **Cache Wisely**: Use appropriate TTL values to balance freshness and performance
-2. **Memoize Expensive Operations**: Apply memoization to computationally expensive functions
-3. **Debounce User Input**: Prevent excessive API calls with debouncing
-4. **Monitor Logs**: Use log levels appropriately to avoid performance overhead
-
-## Security Checklist
-
-- [x] Input sanitization implemented
-- [x] CSRF protection available
-- [x] Rate limiting ready
-- [x] Secure storage wrapper
-- [x] URL validation
-- [x] XSS prevention
-
-## Future Enhancements
-
-1. **WebSocket Support**: Add WebSocket client utilities
-2. **IndexedDB Cache**: Implement IndexedDB caching for large datasets
-3. **Service Worker**: Add service worker utilities for offline support
-4. **Analytics Integration**: Enhanced analytics tracking
-5. **A/B Testing**: Add utilities for feature flags and A/B testing
-
-## Migration Guide
-
-### From Console Logging to Logger
-```typescript
-// Before
-console.log('User logged in', userId);
-console.error('Error occurred', error);
-
-// After
-import { logger } from '@/utils/logger';
-logger.info('User logged in', { userId });
-logger.error('Error occurred', error);
-```
-
-### From Direct Fetch to API Client
-```typescript
-// Before
-const response = await fetch('/api/users');
-const data = await response.json();
-
-// After
-import { ApiClient } from '@/utils/api';
-const api = new ApiClient('');
-const { data } = await api.get<User[]>('/api/users');
-```
-
-## Support and Maintenance
-
-For questions or issues with these utilities:
-1. Check the inline documentation
-2. Review usage examples in this document
-3. Check TypeScript types for available options
-4. Contact the development team
-
-## Changelog
-
-### 2025-10-07
-- Initial release of comprehensive utility modules
-- Added security utilities
-- Added validation utilities
-- Added cache utilities
-- Added logger utility
-- Added API client utilities
-- Added custom React hooks
-- Integrated logger with error handler
-- Created comprehensive documentation
+This document outlines the comprehensive improvements made to the Zion Tech Group application, focusing on security, performance, PWA capabilities, error handling, and developer experience.
+
+## Table of Contents
+1. [Security Enhancements](#security-enhancements)
+2. [Performance Optimizations](#performance-optimizations)
+3. [PWA Implementation](#pwa-implementation)
+4. [Error Handling & Logging](#error-handling--logging)
+5. [Caching Strategy](#caching-strategy)
+6. [API Client](#api-client)
+7. [Environment Management](#environment-management)
+8. [Usage Examples](#usage-examples)
 
 ---
 
-**Author**: Zion Tech Group Development Team  
-**Last Updated**: October 7, 2025  
-**Version**: 1.0.0
+## Security Enhancements
+
+### 1. Enhanced Middleware (`middleware.ts`)
+
+**Features:**
+- **Rate Limiting**: Prevents abuse by limiting requests to 100 per minute per IP
+- **Security Headers**: Implements comprehensive security headers
+- **CSP (Content Security Policy)**: Protects against XSS and injection attacks
+- **CORS Management**: Configurable cross-origin resource sharing
+- **Request Tracking**: Adds unique request IDs for debugging
+
+**Security Headers Implemented:**
+```typescript
+- Strict-Transport-Security (HSTS)
+- X-Frame-Options: DENY
+- X-Content-Type-Options: nosniff
+- X-XSS-Protection
+- Content-Security-Policy
+- Referrer-Policy
+- Permissions-Policy
+```
+
+**Usage:**
+The middleware runs automatically on all routes except static assets. No additional configuration needed.
+
+---
+
+## Performance Optimizations
+
+### 1. Performance Monitor (`app/utils/performanceMonitor.ts`)
+
+**Features:**
+- **Web Vitals Tracking**: Monitors LCP, FID, CLS, FCP, TTFB, INP
+- **Custom Metrics**: Track application-specific performance metrics
+- **Navigation Timing**: Captures detailed page load metrics
+- **Analytics Integration**: Sends metrics to Google Analytics
+
+**Usage:**
+```typescript
+import { trackMetric, markTiming, measureTiming } from '@/utils/performanceMonitor';
+
+// Track custom metric
+trackMetric('api-response-time', 250);
+
+// Measure timing between two points
+markTiming('data-fetch-start');
+// ... fetch data
+markTiming('data-fetch-end');
+measureTiming('data-fetch-duration', 'data-fetch-start', 'data-fetch-end');
+
+// Get performance report
+import { getPerformanceReport } from '@/utils/performanceMonitor';
+const report = getPerformanceReport();
+console.log(report);
+```
+
+### 2. Cache Manager (`app/utils/cacheManager.ts`)
+
+**Features:**
+- **Multiple Storage Strategies**: Memory, localStorage, sessionStorage
+- **TTL Management**: Automatic cache expiration
+- **LRU Eviction**: Removes least recently used items when cache is full
+- **Stale-While-Revalidate**: Returns cached data while fetching fresh data
+- **Cache Statistics**: Monitor cache performance
+
+**Usage:**
+```typescript
+import { setCache, getCache, prefetchData, getCacheWithRevalidate } from '@/utils/cacheManager';
+
+// Simple caching
+await setCache('user-data', userData, { ttl: 300000 }); // 5 minutes
+const cached = await getCache('user-data');
+
+// Prefetch with fallback
+const data = await prefetchData('api-data', async () => {
+  const response = await fetch('/api/data');
+  return response.json();
+}, { ttl: 600000, strategy: 'localStorage' });
+
+// Stale-while-revalidate
+const freshData = await getCacheWithRevalidate('user-profile', fetchUserProfile, {
+  ttl: 300000,
+  strategy: 'memory'
+});
+```
+
+---
+
+## PWA Implementation
+
+### 1. Service Worker (`public/service-worker.js`)
+
+**Features:**
+- **Offline Support**: Application works offline with cached resources
+- **Multiple Caching Strategies**: Cache-first, network-first, stale-while-revalidate
+- **Background Sync**: Queue actions when offline
+- **Push Notifications**: Support for push notification handling
+- **Auto-update**: Automatically updates when new version is available
+
+**Caching Strategies:**
+- Static assets: Cache-first (long-term caching)
+- API calls: Network-first (fresh data preferred)
+- Images/fonts: Cache-first (performance optimization)
+
+### 2. PWA Installer Component (`app/components/PWAInstaller.tsx`)
+
+**Features:**
+- **Install Prompt**: User-friendly prompt to install the app
+- **Auto-registration**: Automatically registers service worker
+- **Update Detection**: Notifies users of new versions
+- **Dismissible**: Users can dismiss the prompt temporarily
+
+**Usage:**
+The component is automatically included in the layout and will show when:
+- App is not already installed
+- Browser supports PWA installation
+- User hasn't dismissed it in current session
+
+### 3. Offline Page (`app/offline/page.tsx`)
+
+**Features:**
+- User-friendly offline experience
+- Helpful troubleshooting tips
+- Easy navigation back to cached content
+
+---
+
+## Error Handling & Logging
+
+### Error Logger (`app/utils/errorLogger.ts`)
+
+**Features:**
+- **Multiple Severity Levels**: Low, Medium, High, Critical
+- **Contextual Logging**: Attach custom context to errors
+- **External Service Integration**: Send critical errors to monitoring services
+- **Stack Trace Capture**: Full stack trace preservation
+- **Development Logging**: Enhanced console output in development
+
+**Usage:**
+```typescript
+import { logError, logCritical, logWarning, logInfo } from '@/utils/errorLogger';
+
+// Log different severity levels
+logInfo('User logged in', { userId: 123 });
+logWarning('API rate limit approaching', { remaining: 10 });
+logError('Failed to fetch user data', error, { userId: 123 });
+logCritical('Database connection failed', error);
+
+// Get recent logs
+import errorLogger from '@/utils/errorLogger';
+const recentLogs = errorLogger.getRecentLogs(20);
+const criticalLogs = errorLogger.getLogsBySeverity(ErrorSeverity.CRITICAL);
+```
+
+---
+
+## Caching Strategy
+
+### Implementation Details
+
+**Memory Cache:**
+- Fast access for frequently used data
+- LRU eviction when limit reached
+- Best for: Session data, temporary calculations
+
+**localStorage Cache:**
+- Persistent across sessions
+- 5-10MB typical limit
+- Best for: User preferences, API responses
+
+**sessionStorage Cache:**
+- Cleared when tab closes
+- Similar capacity to localStorage
+- Best for: Temporary session data
+
+**TTL Management:**
+- Automatic expiration based on timestamp
+- Configurable per cache entry
+- Background cleanup of expired entries
+
+---
+
+## API Client
+
+### Enhanced API Client (`app/utils/apiClient.ts`)
+
+**Features:**
+- **Automatic Retry**: Configurable retry logic with exponential backoff
+- **Request Timeout**: Prevent hanging requests
+- **Error Handling**: Structured error responses
+- **Request Cancellation**: Cancel pending requests
+- **Integration with Cache Manager**: Automatic caching of GET requests
+- **Token Management**: Easy authentication token handling
+
+**Usage:**
+```typescript
+import { apiClient } from '@/utils/apiClient';
+
+// GET request with caching
+const data = await apiClient.get('/api/users', {
+  cache: { ttl: 300000, strategy: 'localStorage' }
+});
+
+// POST request
+const result = await apiClient.post('/api/users', {
+  name: 'John Doe',
+  email: 'john@example.com'
+});
+
+// With authentication
+apiClient.setAuthToken('your-jwt-token');
+const userData = await apiClient.get('/api/me');
+
+// Cancel request
+apiClient.cancel('/api/long-running-task', 'GET');
+
+// Custom configuration
+import ApiClient from '@/utils/apiClient';
+const customClient = new ApiClient({
+  baseURL: 'https://api.example.com',
+  timeout: 15000,
+  retries: 5,
+  headers: {
+    'X-Custom-Header': 'value'
+  }
+});
+```
+
+---
+
+## Environment Management
+
+### Environment Validator (`app/utils/envValidator.ts`)
+
+**Features:**
+- **Type-safe Configuration**: TypeScript interfaces for env variables
+- **Validation on Startup**: Validates environment on app initialization
+- **URL Validation**: Ensures URLs are properly formatted
+- **Feature Flags**: Easy feature toggle management
+- **Development Warnings**: Helpful warnings for missing optional variables
+
+**Usage:**
+```typescript
+import { getEnvConfig, isFeatureEnabled, validateEnv } from '@/utils/envValidator';
+
+// Get validated config
+const config = getEnvConfig();
+console.log(config.NEXT_PUBLIC_API_URL);
+
+// Check feature flags
+if (isFeatureEnabled('analytics')) {
+  // Initialize analytics
+}
+
+// Get validation results
+const validation = validateEnv();
+if (!validation.isValid) {
+  console.error('Configuration errors:', validation.errors);
+}
+```
+
+**Required Environment Variables:**
+```bash
+NODE_ENV=production
+NEXT_PUBLIC_APP_URL=https://yourdomain.com
+NEXT_PUBLIC_API_URL=https://api.yourdomain.com
+```
+
+**Optional Environment Variables:**
+```bash
+NEXT_PUBLIC_ENABLE_ANALYTICS=true
+NEXT_PUBLIC_ENABLE_ERROR_REPORTING=true
+NEXT_PUBLIC_ENABLE_PWA=true
+NEXT_PUBLIC_GOOGLE_ANALYTICS_ID=G-XXXXXXXXXX
+NEXT_PUBLIC_SENTRY_DSN=https://xxx@sentry.io/xxx
+NEXT_PUBLIC_ERROR_LOG_ENDPOINT=https://logging.yourdomain.com
+ALLOWED_ORIGIN=https://yourdomain.com
+```
+
+---
+
+## Usage Examples
+
+### Complete Example: API Call with Caching and Error Handling
+
+```typescript
+import { apiClient } from '@/utils/apiClient';
+import { logError } from '@/utils/errorLogger';
+import { trackMetric } from '@/utils/performanceMonitor';
+
+async function fetchUserData(userId: string) {
+  const startTime = performance.now();
+  
+  try {
+    const response = await apiClient.get(`/api/users/${userId}`, {
+      cache: {
+        ttl: 300000, // 5 minutes
+        strategy: 'localStorage'
+      },
+      timeout: 10000,
+      retries: 3
+    });
+    
+    const duration = performance.now() - startTime;
+    trackMetric('user-data-fetch', duration);
+    
+    return response.data;
+  } catch (error) {
+    logError('Failed to fetch user data', error as Error, {
+      userId,
+      timestamp: new Date().toISOString()
+    });
+    throw error;
+  }
+}
+```
+
+### Example: Performance Monitoring
+
+```typescript
+import { markTiming, measureTiming, sendMetricsToAnalytics } from '@/utils/performanceMonitor';
+
+function MyComponent() {
+  useEffect(() => {
+    markTiming('component-mount');
+    
+    // Heavy operation
+    performHeavyOperation();
+    
+    markTiming('component-ready');
+    measureTiming('component-init', 'component-mount', 'component-ready');
+    
+    // Send metrics to analytics
+    sendMetricsToAnalytics();
+  }, []);
+  
+  return <div>My Component</div>;
+}
+```
+
+---
+
+## Testing
+
+### Running Tests
+
+```bash
+# Run all tests
+npm test
+
+# Run tests with coverage
+npm run test:coverage
+
+# Run type checking
+npm run type-check
+
+# Run linting
+npm run lint
+
+# Run all checks
+npm run health-check
+```
+
+### Manual Testing Checklist
+
+- [ ] Service worker registers successfully
+- [ ] App works offline (after first visit)
+- [ ] PWA install prompt appears
+- [ ] Error logging captures errors correctly
+- [ ] Performance metrics are tracked
+- [ ] Cache strategies work as expected
+- [ ] API retry logic functions properly
+- [ ] Security headers are present (check browser DevTools)
+- [ ] Rate limiting prevents abuse
+
+---
+
+## Performance Metrics
+
+### Target Metrics
+
+- **LCP (Largest Contentful Paint)**: < 2.5s
+- **FID (First Input Delay)**: < 100ms
+- **CLS (Cumulative Layout Shift)**: < 0.1
+- **FCP (First Contentful Paint)**: < 1.8s
+- **TTFB (Time to First Byte)**: < 800ms
+
+### Monitoring
+
+Use the built-in performance monitor to track these metrics:
+
+```typescript
+import { getPerformanceReport } from '@/utils/performanceMonitor';
+
+// Get full report
+const report = getPerformanceReport();
+console.log('Performance Score:', report.summary.score);
+console.log('Web Vitals:', report.webVitals);
+```
+
+---
+
+## Security Best Practices
+
+1. **Never commit sensitive data** to version control
+2. **Use environment variables** for all configuration
+3. **Implement rate limiting** on all public endpoints
+4. **Validate all user input** on both client and server
+5. **Keep dependencies updated** regularly
+6. **Monitor error logs** for security issues
+7. **Use HTTPS** in production
+8. **Implement proper CORS** policies
+9. **Sanitize user-generated content**
+10. **Regular security audits**
+
+```bash
+# Run security audit
+npm audit
+
+# Fix vulnerabilities
+npm audit fix
+```
+
+---
+
+## Deployment
+
+### Pre-deployment Checklist
+
+- [ ] All tests passing
+- [ ] Type checking clean
+- [ ] Linting passes
+- [ ] Environment variables configured
+- [ ] Security headers tested
+- [ ] Performance metrics acceptable
+- [ ] PWA functionality tested
+- [ ] Error logging configured
+- [ ] Analytics integrated
+
+### Build and Deploy
+
+```bash
+# Build for production
+npm run build
+
+# Test production build locally
+npm run preview
+
+# Run comprehensive checks
+npm run health:check
+```
+
+---
+
+## Maintenance
+
+### Regular Tasks
+
+**Weekly:**
+- Review error logs for critical issues
+- Monitor performance metrics
+- Check cache hit rates
+
+**Monthly:**
+- Update dependencies
+- Review security advisories
+- Analyze performance trends
+- Clear old cache entries
+
+**Quarterly:**
+- Security audit
+- Performance optimization review
+- Documentation updates
+
+---
+
+## Support
+
+For issues or questions regarding these improvements:
+
+1. Check the documentation first
+2. Review error logs
+3. Test in development environment
+4. Contact the development team
+
+**Contact:**
+- Email: dev@ziontechgroup.com
+- Phone: +1 302 464 0950
+
+---
+
+## Changelog
+
+### Version 1.0.0 (Current)
+
+**Added:**
+- Enhanced security middleware with rate limiting
+- Comprehensive error logging system
+- Performance monitoring with Web Vitals
+- Advanced caching manager
+- PWA support with service worker
+- Enhanced API client with retry logic
+- Environment configuration validator
+- Offline page support
+- PWA installer component
+
+**Security:**
+- Implemented CSP headers
+- Added HSTS support
+- Enhanced CORS management
+- Request rate limiting
+
+**Performance:**
+- Optimized caching strategies
+- Lazy loading improvements
+- Code splitting enhancements
+- Image optimization
+
+---
+
+## Future Improvements
+
+### Planned Enhancements
+
+1. **Advanced Analytics**
+   - User behavior tracking
+   - Conversion funnels
+   - A/B testing framework
+
+2. **Enhanced Security**
+   - Two-factor authentication
+   - Biometric authentication support
+   - Advanced threat detection
+
+3. **Performance**
+   - Edge caching integration
+   - Image CDN optimization
+   - Advanced code splitting
+
+4. **Developer Experience**
+   - Storybook integration
+   - E2E testing setup
+   - Automated deployment pipeline
+
+---
+
+## License
+
+MIT License - See LICENSE file for details
+
+---
+
+**Last Updated:** October 8, 2025
+**Version:** 1.0.0
+**Author:** Zion Tech Group Development Team
