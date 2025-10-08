@@ -1,10 +1,15 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+<<<<<<< HEAD
 import { ChevronDown, Phone, Mail, MapPin, Menu, X } from 'lucide-react';
+=======
+import { ChevronDown, Menu, X } from 'lucide-react';
+>>>>>>> cursor/website-audit-and-update-with-deployment-a9cd
 
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -50,6 +55,8 @@ const Navigation: React.FC = () => {
     { name: 'Sitemap', url: '/sitemap' },
   ];
 >>>>>>> cursor/website-audit-and-update-with-deployment-73aa
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-a9cd
 
   return (
     <nav className="bg-slate-900/95 backdrop-blur-md shadow-lg sticky top-0 z-50 border-b border-cyan-500/20">
@@ -73,7 +80,11 @@ const Navigation: React.FC = () => {
           {/* Desktop Menu */}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
           <div className="hidden md:flex space-x-8">
+=======
+          <div className="hidden lg:flex space-x-8">
+>>>>>>> cursor/website-audit-and-update-with-deployment-a9cd
             <Link to="/" className="text-gray-300 hover:text-cyan-400 transition-colors">
               Home
             </Link>
@@ -87,17 +98,21 @@ const Navigation: React.FC = () => {
 >>>>>>> cursor/analyze-improve-and-deploy-application-1a78
               About
             </Link>
+<<<<<<< HEAD
 =======
           <div className="hidden lg:flex items-center space-x-8">
             <Link to="/" className="text-gray-300 hover:text-cyan-400 transition-colors font-medium">
               Home
             </Link>
 >>>>>>> cursor/website-audit-and-update-with-deployment-73aa
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-a9cd
             
             {/* Services Dropdown */}
             <div className="relative">
               <button
                 onClick={() => setServicesOpen(!servicesOpen)}
+<<<<<<< HEAD
 <<<<<<< HEAD
                 className="text-gray-700 hover:text-blue-600 transition-colors flex items-center font-medium"
                 aria-expanded={servicesOpen}
@@ -105,11 +120,15 @@ const Navigation: React.FC = () => {
 =======
                 className="text-gray-300 hover:text-cyan-400 transition-colors flex items-center font-medium"
 >>>>>>> cursor/website-audit-and-update-with-deployment-73aa
+=======
+                className="text-gray-300 hover:text-cyan-400 transition-colors flex items-center"
+>>>>>>> cursor/website-audit-and-update-with-deployment-a9cd
               >
                 Services
                 <ChevronDown className="w-4 h-4 ml-1" />
               </button>
               {servicesOpen && (
+<<<<<<< HEAD
 <<<<<<< HEAD
                 <div className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-xl border py-4 z-50">
                   <div className="grid grid-cols-2 gap-4 px-4">
@@ -121,15 +140,48 @@ const Navigation: React.FC = () => {
                       <Link to="/micro-saas" className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
                         Micro SAAS Solutions
                       </Link>
+=======
+                <div className="absolute top-full left-0 mt-2 w-96 bg-white rounded-lg shadow-xl border py-4 z-50">
+                  <div className="grid grid-cols-2 gap-4 px-4">
+                    <div>
+                      <h3 className="font-semibold text-gray-900 mb-3">Core Services</h3>
+                      <Link to="/services" className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
+                        All Services
+                      </Link>
+>>>>>>> cursor/website-audit-and-update-with-deployment-a9cd
                       <Link to="/ai-services" className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
                         AI Services
                       </Link>
                       <Link to="/it-services" className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
                         IT Services
                       </Link>
+<<<<<<< HEAD
                     </div>
                     <div>
                       <h3 className="font-semibold text-gray-900 mb-2">Specialized</h3>
+=======
+                      <Link to="/micro-saas" className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
+                        Micro SAAS
+                      </Link>
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-gray-900 mb-3">AI Solutions</h3>
+                      <Link to="/ai-marketing" className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
+                        AI Marketing
+                      </Link>
+                      <Link to="/ai-automation" className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
+                        AI Automation
+                      </Link>
+                      <Link to="/ai-healthcare" className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
+                        AI Healthcare
+                      </Link>
+                      <Link to="/ai-fintech" className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
+                        AI Fintech
+                      </Link>
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-gray-900 mb-3">Advanced Tech</h3>
+>>>>>>> cursor/website-audit-and-update-with-deployment-a9cd
                       <Link to="/quantum-computing" className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
                         Quantum Computing
                       </Link>
@@ -143,11 +195,27 @@ const Navigation: React.FC = () => {
                         Cybersecurity
                       </Link>
                     </div>
+<<<<<<< HEAD
+=======
+                    <div>
+                      <h3 className="font-semibold text-gray-900 mb-3">Business</h3>
+                      <Link to="/business-intelligence" className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
+                        Business Intelligence
+                      </Link>
+                      <Link to="/iot-edge-computing" className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
+                        IoT & Edge Computing
+                      </Link>
+                      <Link to="/services-advertising" className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
+                        Advertising Services
+                      </Link>
+                    </div>
+>>>>>>> cursor/website-audit-and-update-with-deployment-a9cd
                   </div>
                 </div>
               )}
             </div>
 
+<<<<<<< HEAD
             <Link to="/case-studies" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
               Case Studies
             </Link>
@@ -158,6 +226,18 @@ const Navigation: React.FC = () => {
               Team
             </Link>
             <Link to="/contact" className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors font-medium">
+=======
+            <Link to="/case-studies" className="text-gray-300 hover:text-cyan-400 transition-colors">
+              Case Studies
+            </Link>
+            <Link to="/enterprise" className="text-gray-300 hover:text-cyan-400 transition-colors">
+              Enterprise
+            </Link>
+            <Link to="/team" className="text-gray-300 hover:text-cyan-400 transition-colors">
+              Team
+            </Link>
+            <Link to="/contact" className="bg-cyan-500 text-white px-6 py-2 rounded-lg hover:bg-cyan-600 transition-colors">
+>>>>>>> cursor/website-audit-and-update-with-deployment-a9cd
               Contact
             </Link>
           </div>
@@ -165,6 +245,7 @@ const Navigation: React.FC = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
+<<<<<<< HEAD
             className="lg:hidden text-gray-700 hover:text-blue-600"
             aria-expanded={isOpen}
             aria-label="Toggle mobile menu"
@@ -177,20 +258,32 @@ const Navigation: React.FC = () => {
                 d="M4 6h16M4 12h16M4 18h16"
               />
             </svg>
+=======
+            className="lg:hidden text-gray-300 hover:text-cyan-400"
+          >
+            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+>>>>>>> cursor/website-audit-and-update-with-deployment-a9cd
           </button>
         </div>
 
         {/* Mobile Menu */}
         {isOpen && (
+<<<<<<< HEAD
           <div className="lg:hidden py-4 border-t">
             <div className="flex flex-col space-y-4">
               <Link to="/" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
+=======
+          <div className="lg:hidden py-4 border-t border-cyan-500/20">
+            <div className="flex flex-col space-y-4">
+              <Link to="/" className="text-gray-300 hover:text-cyan-400 transition-colors">
+>>>>>>> cursor/website-audit-and-update-with-deployment-a9cd
                 Home
               </Link>
-              <Link to="/about" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
+              <Link to="/about" className="text-gray-300 hover:text-cyan-400 transition-colors">
                 About
               </Link>
               
+<<<<<<< HEAD
 <<<<<<< HEAD
               {/* Services Dropdown */}
               <div className="relative">
@@ -275,19 +368,79 @@ const Navigation: React.FC = () => {
               </div>
               
               <Link to="/case-studies" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
+=======
+              {/* Services Section */}
+              <div className="space-y-2">
+                <div className="text-gray-300 font-semibold text-lg">Services</div>
+                <div className="ml-4 space-y-2">
+                  <Link to="/services" className="block text-gray-400 hover:text-cyan-400 transition-colors">
+                    All Services
+                  </Link>
+                  <Link to="/ai-services" className="block text-gray-400 hover:text-cyan-400 transition-colors">
+                    AI Services
+                  </Link>
+                  <Link to="/ai-marketing" className="block text-gray-400 hover:text-cyan-400 transition-colors">
+                    AI Marketing
+                  </Link>
+                  <Link to="/ai-automation" className="block text-gray-400 hover:text-cyan-400 transition-colors">
+                    AI Automation
+                  </Link>
+                  <Link to="/ai-healthcare" className="block text-gray-400 hover:text-cyan-400 transition-colors">
+                    AI Healthcare
+                  </Link>
+                  <Link to="/ai-fintech" className="block text-gray-400 hover:text-cyan-400 transition-colors">
+                    AI Fintech
+                  </Link>
+                  <Link to="/it-services" className="block text-gray-400 hover:text-cyan-400 transition-colors">
+                    IT Services
+                  </Link>
+                  <Link to="/micro-saas" className="block text-gray-400 hover:text-cyan-400 transition-colors">
+                    Micro SAAS
+                  </Link>
+                  <Link to="/quantum-computing" className="block text-gray-400 hover:text-cyan-400 transition-colors">
+                    Quantum Computing
+                  </Link>
+                  <Link to="/autonomous-systems" className="block text-gray-400 hover:text-cyan-400 transition-colors">
+                    Autonomous Systems
+                  </Link>
+                  <Link to="/blockchain-web3" className="block text-gray-400 hover:text-cyan-400 transition-colors">
+                    Blockchain & Web3
+                  </Link>
+                  <Link to="/cybersecurity" className="block text-gray-400 hover:text-cyan-400 transition-colors">
+                    Cybersecurity
+                  </Link>
+                  <Link to="/business-intelligence" className="block text-gray-400 hover:text-cyan-400 transition-colors">
+                    Business Intelligence
+                  </Link>
+                  <Link to="/iot-edge-computing" className="block text-gray-400 hover:text-cyan-400 transition-colors">
+                    IoT & Edge Computing
+                  </Link>
+                  <Link to="/services-advertising" className="block text-gray-400 hover:text-cyan-400 transition-colors">
+                    Advertising Services
+                  </Link>
+                </div>
+              </div>
+              
+              <Link to="/case-studies" className="text-gray-300 hover:text-cyan-400 transition-colors">
+>>>>>>> cursor/website-audit-and-update-with-deployment-a9cd
                 Case Studies
               </Link>
-              <Link to="/enterprise" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
+              <Link to="/enterprise" className="text-gray-300 hover:text-cyan-400 transition-colors">
                 Enterprise
               </Link>
-              <Link to="/team" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
+              <Link to="/team" className="text-gray-300 hover:text-cyan-400 transition-colors">
                 Team
               </Link>
+<<<<<<< HEAD
               <Link to="/contact" className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors font-medium text-center">
+=======
+              <Link to="/contact" className="bg-cyan-500 text-white px-6 py-2 rounded-lg hover:bg-cyan-600 transition-colors text-center">
+>>>>>>> cursor/website-audit-and-update-with-deployment-a9cd
                 Contact Us
               </Link>
             </div>
           </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
           {/* Mobile Menu */}
@@ -505,6 +658,11 @@ const Navigation: React.FC = () => {
       </div>
     </nav>
 >>>>>>> cursor/website-audit-and-update-with-deployment-73aa
+=======
+        )}
+      </div>
+    </nav>
+>>>>>>> cursor/website-audit-and-update-with-deployment-a9cd
   );
 };
 
