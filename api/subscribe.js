@@ -11,15 +11,15 @@ async function handler(req, res) {
     return;
   }
 
+  const { email, name, source = 'website' } = req.body || {};
+
+  if (!email) {
+    res.statusCode = 400;
+    res.json({ error: 'Email is required' });
+    return;
+  }
+
   try {
-    const { email, name, source = 'website' } = req.body || {};
-
-    if (!email) {
-      res.statusCode = 400;
-      res.json({ error: 'Email is required' });
-      return;
-    }
-
     if (!isValidEmail(email)) {
       res.statusCode = 400;
       res.json({ error: 'Invalid email' });
