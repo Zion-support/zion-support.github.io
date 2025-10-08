@@ -37,16 +37,16 @@ const selectBalancedBanners = (banners: unknown[], maxBanners: number) => {
 
 const trackImpression = (bannerId: string) => {
   if (typeof window !== 'undefined') {
-//     const key = `banner_impression_${bannerId}`;
-//     const current = parseInt(localStorage.getItem(key) || '0');
+    const key = `banner_impression_${bannerId}`;
+    const current = parseInt(localStorage.getItem(key) || '0');
     localStorage.setItem(key, String(current + 1));
   }
 };
 
 const trackClick = (bannerId: string) => {
   if (typeof window !== 'undefined') {
-//     const key = `banner_click_${bannerId}`;
-//     const current = parseInt(localStorage.getItem(key) || '0');
+    const key = `banner_click_${bannerId}`;
+    const current = parseInt(localStorage.getItem(key) || '0');
     localStorage.setItem(key, String(current + 1));
   }
 };
