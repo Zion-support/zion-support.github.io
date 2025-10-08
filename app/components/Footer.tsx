@@ -40,8 +40,23 @@ const Footer: React.FC = () => {
                 </Link>
               </li>
               <li>
+                <Link to="/services-advertising" className="text-gray-300 hover:text-white transition-colors">
+                  AI Advertising
+                </Link>
+              </li>
+              <li>
+                <Link to="/case-studies" className="text-gray-300 hover:text-white transition-colors">
+                  Case Studies
+                </Link>
+              </li>
+              <li>
                 <Link to="/enterprise" className="text-gray-300 hover:text-white transition-colors">
                   Enterprise
+                </Link>
+              </li>
+              <li>
+                <Link to="/team" className="text-gray-300 hover:text-white transition-colors">
+                  Team
                 </Link>
               </li>
             </ul>
@@ -63,13 +78,21 @@ const Footer: React.FC = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4">Contact</h4>
             <div className="space-y-2 text-gray-300">
-              <p>Email: kleber@ziontechgroup.com</p>
+              <p>Email: contact@ziontechgroup.com</p>
               <p>Phone: +1 (302) 464-0950</p>
+              <p>Website: ziontechgroup.com</p>
               <div className="flex space-x-4 mt-4">
+<<<<<<< HEAD
                 <Link to="#" className="text-gray-300 hover:text-white transition-colors">
                   LinkedIn
                 </Link>
                 <Link to="#" className="text-gray-300 hover:text-white transition-colors">
+=======
+                <a href="https://linkedin.com/company/ziontechgroup" className="text-gray-300 hover:text-white transition-colors">
+                  LinkedIn
+                </a>
+                <a href="https://twitter.com/ziontechgroup" className="text-gray-300 hover:text-white transition-colors">
+>>>>>>> cursor/website-audit-and-content-update-7e9e
                   Twitter
                 </Link>
               </div>
@@ -77,8 +100,18 @@ const Footer: React.FC = () => {
           </div>
         </div>
 
-        <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-300">
-          <p>&copy; 2024 Zion Tech Group. All rights reserved.</p>
+        <div className="border-t border-gray-700 mt-8 pt-8">
+          <div className="flex flex-col md:flex-row justify-between items-center">
+            <p className="text-gray-300 mb-4 md:mb-0">&copy; 2024 Zion Tech Group. All rights reserved.</p>
+            <div className="flex space-x-6">
+              <Link to="/privacy" className="text-gray-300 hover:text-white transition-colors text-sm">
+                Privacy Policy
+              </Link>
+              <Link to="/terms" className="text-gray-300 hover:text-white transition-colors text-sm">
+                Terms of Service
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
     </footer>
