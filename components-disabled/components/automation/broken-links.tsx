@@ -1,1 +1,0 @@
-:backup-problematic-files/components/automation/broken-links.tsx <div className="text-left" > <h1 className="text-left" >Broken Links Report</h1> <p className="text-left" >External link status report is written to <code className="text-left" >data/reports/broken-links.json</code>.</p> <p className="text-left" >This runs twice daily and auto-PRs updates.</p> </div> ) } </div>)"

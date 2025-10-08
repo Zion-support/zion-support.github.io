@@ -1,1 +1,0 @@
-res.status(200).json({ meta: updated }) } catch (error: any) { res.status(500).json({ error: error?.message |'Failed to update status' }) } } '

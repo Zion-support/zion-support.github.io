@@ -1,1 +1,0 @@
-import React from 'react''' export function Card({children} className = ''' }) interface CardProps { // TODO: Implement } children: React.ReactNode; className?: string, export default function Card({children} className = }: CardProps) {return ( <div></div> </div>)`} '
