@@ -111,11 +111,59 @@ const ServicesPage: React.FC = () => {
       price: 'Starting at $2,500/month'
     },
     {
+      title: 'AI Data Analytics',
+      description: 'Advanced AI-powered analytics platform providing real-time insights and predictive modeling.',
+      icon: '📊',
+      link: '/ai-data-analytics',
+      features: ['Real-time Analytics', 'Predictive Modeling', 'Business Intelligence', 'Data Visualization'],
+      price: 'Starting at $1,299/month'
+    },
+    {
+      title: 'AI Cybersecurity',
+      description: 'AI-powered security solutions with threat detection, SOC services, and compliance management.',
+      icon: '🔒',
+      link: '/ai-cybersecurity',
+      features: ['AI Threat Detection', 'SOC Services', 'Vulnerability Assessment', 'Compliance Automation'],
+      price: 'Starting at $2,499/month'
+    },
+    {
+      title: 'AI Workflow Automation',
+      description: 'Intelligent automation platform that streamlines business processes with AI-powered workflows.',
+      icon: '🤖',
+      link: '/ai-workflow-automation',
+      features: ['Process Automation', 'RPA Solutions', 'Workflow Optimization', 'Exception Handling'],
+      price: 'Starting at $399/month'
+    },
+    {
+      title: 'AI Cloud Infrastructure',
+      description: 'AI-powered cloud services including migration, optimization, security, and monitoring.',
+      icon: '☁️',
+      link: '/ai-cloud-infrastructure',
+      features: ['Cloud Migration', 'Cost Optimization', 'DevOps Automation', 'Security Management'],
+      price: 'Starting at $2,999/month'
+    },
+    {
+      title: 'AI E-commerce Solutions',
+      description: 'Revolutionary AI-powered e-commerce platform with personalization, inventory management, and automated customer service.',
+      icon: '🛒',
+      link: '/ai-ecommerce-solutions',
+      features: ['AI Personalization', 'Inventory Management', 'Payment Processing', 'Marketing Automation'],
+      price: 'Starting at $1,999/month'
+    },
+    {
+      title: 'AI Mobile App Development',
+      description: 'Complete mobile app development with AI integration, machine learning capabilities, and intelligent features.',
+      icon: '📱',
+      link: '/ai-mobile-app-development',
+      features: ['Native Development', 'AI Integration', 'Cross-platform', 'Analytics'],
+      price: 'Starting at $4,999/project'
+    },
+    {
       title: 'Cybersecurity Solutions',
       description: 'Advanced security services including threat detection and compliance.',
       icon: '🛡️',
       link: '/cybersecurity',
-      features: ['Threat Detection', 'Penetration Testing', 'Zero Trust Security', 'SOC Services'],cursor/add-new-services-and-deploy-updates-f159
+      features: ['Threat Detection', 'Penetration Testing', 'Zero Trust Security', 'SOC Services'],
       price: 'Starting at $2,500/month'
     }
   ];
