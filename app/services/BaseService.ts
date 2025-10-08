@@ -53,7 +53,7 @@ export class BaseService {
     if (!this.options.cache) return null;
     
     if (this.isCacheValid(key)) {
-      logger.debug(`Cache hit for key: ${key}`, { component: 'BaseService' });
+      logger.debug(`Cache hit for key: ${key}`, 'BaseService', { component: 'BaseService' });
       return this.cache.get(key)?.data as T;
     }
 

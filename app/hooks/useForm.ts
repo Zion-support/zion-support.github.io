@@ -11,11 +11,7 @@ import {
   validateForm,
   isFormValid,
   getFormErrors,
-<<<<<<< HEAD
-  // _ValidationResult
-=======
   // ValidationResult as _ValidationResult,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b3e6
 } from '../utils/formValidation';
 
 export interface UseFormConfig<T extends Record<string, unknown>> {

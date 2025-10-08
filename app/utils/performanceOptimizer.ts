@@ -92,14 +92,6 @@ class PerformanceOptimizer {
       console.warn('Performance API not fully supported:', error);
     }
   }
-<<<<<<< HEAD
-
-  /**
-   * Measure render time
-   */
-  private measureRenderTime(): void {
-    if (typeof window === 'undefined' || !window.performance) return;
-=======
   private observeLCP() {
     try {
       const observer = new PerformanceObserver((list) => {
@@ -201,7 +193,6 @@ class PerformanceOptimizer {
     if (typeof window === 'undefined') return
 
     const images = document.querySelectorAll('img[data-src]')
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-ee9f
     
     // Check if PerformanceObserver exists (may not be available in test environments)
     if (typeof PerformanceObserver === 'undefined') return;
