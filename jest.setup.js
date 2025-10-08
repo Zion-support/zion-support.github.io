@@ -56,25 +56,30 @@ jest.mock('react-router-dom', () => ({
   }),
   useParams: () => ({}),
   BrowserRouter: ({ children }) => children,
-  MemoryRouter: ({ children, initialEntries, initialIndex }) => {
+  MemoryRouter: ({ children, basename = '/' }) => {
     const React = require('react');
-    const { createMemoryRouter, RouterProvider } = require('react-router-dom');
+    const { createContext } = React;
     
-    const router = createMemoryRouter([
-      {
-        path: '/',
-        element: children,
-      }
-    ], {
-      initialEntries: initialEntries || ['/'],
-      initialIndex: initialIndex || 0,
+    // Create a mock router context
+    const RouterContext = createContext({
+      basename,
+      location: { pathname: '/', search: '', hash: '', state: null },
+      navigator: {
+        createHref: jest.fn(),
+        go: jest.fn(),
+        push: jest.fn(),
+        replace: jest.fn(),
+      },
+      static: false,
     });
     
-    return React.createElement(RouterProvider, { router });
+    return React.createElement(RouterContext.Provider, { value: RouterContext._currentValue }, children);
   },
   RouterProvider: ({ router }) => null,
-  Link: ({ children, to, ...props }) => <a href={to} {...props}>{children}</a>,
-  NavLink: ({ children, to, ...props }) => <a href={to} {...props}>{children}</a>,
+  Link: ({ children, to, ...props }) => {
+    const React = require('react');
+    return React.createElement('a', { href: to, ...props }, children);
+  },
 }));
 
 // Mock window.matchMedia
