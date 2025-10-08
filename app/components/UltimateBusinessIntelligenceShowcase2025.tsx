@@ -3,18 +3,24 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 
+interface ContentItem {
+  id: string;
+  title: string;
+  description: string;
+  url: string;
+  type: string;
+  category: string;
+  metrics: Record<string, string>;
+  readingTime: string;
+  featured: boolean;
+  tags: string[];
+}
+
 const UltimateBusinessIntelligenceShowcase2025 = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
+  const [currentSlide, setCurrentSlide] = useState(0);
 
-  const content = [
-    {
-      id: 'ai-revolution-business-intelligence',
-      title: 'AI Revolution: Ultimate Business Intelligence 2025 - 30,000% ROI Breakthrough',
-      description: 'Discover how revolutionary AI-powered business intelligence is transforming enterprise decision-making and delivering unprecedented returns on investment.',
-      url: '/articles/ai-revolution-ultimate-business-intelligence-2025-30000-roi-breakthrough',
-      type: 'Article',
-      category: 'article',
-  const content = [
+  const content: ContentItem[] = [
     {
       id: 'ultimate-business-intelligence-revolution',
       title: 'AI 2025: The Ultimate Business Intelligence Revolution',
@@ -70,7 +76,7 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
 
   const categories = [
     { id: 'all', name: 'All Content' },
-    { id: 'article', name: 'Articles' },
+    { id: 'blog', name: 'Blog Posts' },
     { id: 'case-study', name: 'Case Studies' },
     { id: 'resource', name: 'Resources' }
   ];
@@ -79,13 +85,14 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
     ? content 
     : content.filter(item => item.category === selectedCategory);
 
+  const currentContent = content[currentSlide];
+
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % content.length);
     }, 5000);
     return () => clearInterval(interval);
   }, [content.length]);
-  const currentContent = content[currentSlide];
 
   return (
     <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">
@@ -125,8 +132,25 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
           </p>
         </div>
 
-        {/* Main Content Card */}
-        <div className="max-w-6xl mx-auto">
+        {/* Category Filter */}
+        <div className="flex flex-wrap justify-center gap-4 mb-12">
+          {categories.map((category) => (
+            <button
+              key={category.id}
+              onClick={() => setSelectedCategory(category.id)}
+              className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
+                selectedCategory === category.id
+                  ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-lg'
+                  : 'bg-white/10 text-gray-300 hover:bg-white/20'
+              }`}
+            >
+              {category.name}
+            </button>
+          ))}
+        </div>
+
+        {/* Featured Content Carousel */}
+        <div className="max-w-6xl mx-auto mb-16">
           <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-8 md:p-12 border border-white/20 shadow-2xl">
             {/* Content Type Badge */}
             <div className="flex items-center justify-between mb-8">
@@ -138,36 +162,24 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
               </div>
             </div>
 
-            {/* Live Demo Section */}
-            <div className="relative mb-8">
-              <div className="bg-gradient-to-br from-cyan-500/20 to-blue-600/20 rounded-2xl p-8 border border-cyan-400/30">
-                <div className="text-center">
-                  <div className="text-6xl mb-4">🚀</div>
-                  <h4 className="text-2xl font-bold text-white mb-4">Live Demo</h4>
-                  <p className="text-gray-300 mb-6">See our platform in action with real-time data processing and AI insights.</p>
-                  <div className="bg-black/50 rounded-lg p-4 font-mono text-sm text-green-400">
-                    <div>Processing: 1,247,892 events/sec</div>
-                    <div>Accuracy: 99.9%</div>
-                    <div>Response Time: 47ms</div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            {/* Title and Description */}
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              {currentContent.title}
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              {currentContent.description}
+            </p>
 
             {/* Stats Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-              <div className="text-center">
-                <div className="text-3xl font-bold text-cyan-400 mb-2">99.9%</div>
-                <div className="text-sm text-gray-300">Accuracy</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-cyan-400 mb-2">47ms</div>
-                <div className="text-sm text-gray-300">Response Time</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-cyan-400 mb-2">1.2M</div>
-                <div className="text-sm text-gray-300">Events/sec</div>
-              </div>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8">
+              {Object.entries(currentContent.metrics).map(([key, value]) => (
+                <div key={key} className="text-center bg-white/5 rounded-xl p-4 border border-white/10">
+                  <div className="text-3xl font-bold text-cyan-400 mb-2">{value}</div>
+                  <div className="text-sm text-gray-300 capitalize">
+                    {key.replace(/([A-Z])/g, ' $1').trim()}
+                  </div>
+                </div>
+              ))}
             </div>
 
             {/* Tags */}
@@ -177,7 +189,7 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
                   key={index}
                   className="px-3 py-1 bg-white/10 text-gray-300 text-sm rounded-full border border-white/20"
                 >
-                  {tag}
+                  #{tag}
                 </span>
               ))}
             </div>
@@ -209,7 +221,7 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
                 key={index}
                 onClick={() => setCurrentSlide(index)}
                 className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                  index === currentSlide ? 'bg-cyan-400' : 'bg-white/30'
+                  index === currentSlide ? 'bg-cyan-400 w-8' : 'bg-white/30'
                 }`}
                 aria-label={`Go to slide ${index + 1}`}
               />
@@ -222,7 +234,7 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
           {filteredContent.map((item) => (
             <div
               key={item.id}
-              className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 group"
+              className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:bg-white/15 hover:border-cyan-500/50 transition-all duration-300 group"
             >
               {/* Badge */}
               <div className="flex items-center gap-3 mb-4">
@@ -245,13 +257,13 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
 
               {/* Metrics */}
               <div className="grid grid-cols-2 gap-4 mb-6">
-                <div className="text-center">
+                <div className="text-center bg-white/5 rounded-lg p-3">
                   <div className="text-2xl font-bold text-cyan-400">
                     {item.metrics.roi}
                   </div>
                   <div className="text-gray-400 text-xs">ROI</div>
                 </div>
-                <div className="text-center">
+                <div className="text-center bg-white/5 rounded-lg p-3">
                   <div className="text-2xl font-bold text-green-400">
                     {item.metrics.timeline}
                   </div>
@@ -266,7 +278,7 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
                     key={index}
                     className="px-3 py-1 bg-white/10 text-gray-300 text-xs rounded-full"
                   >
-                    {tag}
+                    #{tag}
                   </span>
                 ))}
               </div>
@@ -274,10 +286,10 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
               {/* CTA */}
               <Link
                 href={item.url}
-                className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-700 hover:to-purple-700 transition-all duration-300 w-full justify-center"
+                className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-700 hover:to-purple-700 transition-all duration-300 w-full justify-center group-hover:shadow-lg"
               >
                 Read {item.readingTime}
-                <span className="text-lg">→</span>
+                <span className="text-lg group-hover:translate-x-1 transition-transform">→</span>
               </Link>
             </div>
           ))}
@@ -285,11 +297,11 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
 
         {/* Call to Action */}
         <div className="text-center">
-          <div className="bg-gradient-to-r from-cyan-600 to-purple-600 rounded-2xl p-8">
-            <h3 className="text-2xl font-bold text-white mb-4">
+          <div className="bg-gradient-to-r from-cyan-600 to-purple-600 rounded-2xl p-12">
+            <h3 className="text-3xl font-bold text-white mb-4">
               Ready to Transform Your Business?
             </h3>
-            <p className="text-cyan-100 mb-6">
+            <p className="text-xl text-cyan-100 mb-8">
               Join thousands of enterprises already using our AI-powered solutions
             </p>
             <Link

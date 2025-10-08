@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, Bot, Rocket, Shield, Target, TrendingUp, Zap, Sparkles } from 'lucide-react';
+import { ArrowRight, Shield, Target, TrendingUp, Zap, Sparkles } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const NewContentPromotionalBanner2026: React.FC = () => {
