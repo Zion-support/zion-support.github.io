@@ -5,8 +5,8 @@
 
 // Simple logger for performance optimizer
 const logger = {
-  info: (message: string, context?: string) => console.log(`[INFO${context ? ' - ' + context : ''}]`, message),
-  performance: (message: string, data: Record<string, unknown>, context?: string) => console.log(`[PERF${context ? ' - ' + context : ''}]`, message, data),
+  info: (message: string, context?: string) => console.log('[INFO]', message, context),
+  performance: (message: string, data: Record<string, unknown>, context?: string) => console.log('[PERF]', message, data, context),
   error: (message: string, error: Error) => console.error('[ERROR]', message, error),
 };
 
@@ -97,8 +97,7 @@ class PerformanceOptimizer {
         this.metrics.loadTime = navigation.loadEventEnd - navigation.loadEventStart;
       }
     } catch (error) {
-      console.warn('Performance API not fully supported:', error);
-    }
+      }
   }
 
   /**
@@ -123,8 +122,7 @@ class PerformanceOptimizer {
       this.observers.push(observer);
     } catch (error) {
       // PerformanceObserver may not support 'measure' entryType in some environments
-      console.warn('Performance Observer not supported:', error);
-    }
+      }
   }
 
   private observeLCP() {
@@ -287,7 +285,7 @@ class PerformanceOptimizer {
 
     // This would typically be handled by the bundler (Vite/Webpack)
     // Here we can add runtime optimizations
-    if (process.env.NODE_ENV === 'development') { console.log('Code splitting enabled for better performance'); }
+    if (process.env.NODE_ENV === 'development') { }
   }
 
   /**
@@ -301,10 +299,10 @@ class PerformanceOptimizer {
     // Register service worker for caching
     navigator.serviceWorker.register('/sw.js')
       .then((registration) => {
-        if (process.env.NODE_ENV === 'development') { console.log('Service Worker registered:', registration); }
+        if (process.env.NODE_ENV === 'development') { }
       })
       .catch((error) => {
-        if (process.env.NODE_ENV === 'development') { console.log('Service Worker registration failed:', error); }
+        if (process.env.NODE_ENV === 'development') { }
       });
   }
 
@@ -475,8 +473,7 @@ ${metrics.memoryUsage > 30 * 1024 * 1024 ? '- Review memory usage and optimize c
     this.enableCaching();
     
     if (process.env.NODE_ENV === 'development') { 
-      console.log('Performance optimization completed'); 
-      console.log(this.generateComprehensiveReport()); 
+      console.log('Performance optimization completed in development mode');
     }
   }
 }

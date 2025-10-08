@@ -39,7 +39,7 @@ export class PerformanceMonitor {
         });
         longTaskObserver.observe({ entryTypes: ['longtask'] });
       } catch (e) {
-//         console.warn('Long task observer not supported');
+        console.warn('Failed to initialize long task observer:', e);
       }
     }
   }

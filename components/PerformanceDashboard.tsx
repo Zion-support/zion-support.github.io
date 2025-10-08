@@ -23,21 +23,19 @@ const PerformanceDashboard: React.FC = () => {
       )[0] as PerformanceNavigationTiming;
       const _loadTime = navigation ? navigation.loadEventEnd - navigation.loadEventStart : 0;
 
-      const _memory = (performance as Performance & { memory?: { usedJSHeapSize: number } }).memory;
-      const _memoryUsage = _memory ? _memory.usedJSHeapSize / 1024 / 1024 : 0;
-
+      const memory = (performance as Performance & { memory?: { usedJSHeapSize: number } }).memory;
+      const memoryUsage = memory ? memory.usedJSHeapSize / 1024 / 1024 : 0;
       setMetrics(prev => ({
         ...prev,
         loadTime: _loadTime,
-        memoryUsage: _memoryUsage,
-      }));
+        memoryUsage,      }));
     };
 
     //Update metrics on load
     updateMetrics();
 
     //Update metrics periodically
-    const _interval = setInterval(updateMetrics, 1000);
+    const interval = setInterval(updateMetrics, 1000);
 
     return () => clearInterval(_interval);
   }, []);

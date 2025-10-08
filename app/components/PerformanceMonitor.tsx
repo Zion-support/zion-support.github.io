@@ -10,13 +10,28 @@ interface PerformanceMetrics {
 
 const PerformanceMonitor: React.FC = () => {
   useEffect(() => {
-    const metrics: PerformanceMetrics = {
-      lcp: null,
-      fid: null,
-      cls: null,
-      fcp: null,
-      ttfb: null
-    };
+
+    // const _reportWebVitals = (_metric: { name: string; value: number }) => {
+    //   // Log to console in development (only on client side)
+    //   if (typeof window !== 'undefined' && enableConsoleLogging) {
+    //     logger.info('Web Vital captured', { name: _metric.name, value: _metric.value });
+    //   }
+    // };
+
+    // Monitor Core Web Vitals
+    const navigation = performance.getEntriesByType('navigation')[0] as
+      | PerformanceNavigationTiming
+      | undefined;
+    const memory = (
+      performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number } }
+    ).memory;
+
+    const getPerformanceScore = (): number => {
+      let score = 100;
+      if (metrics.renderTime > 1500) score -= 15;
+      if (metrics.loadTime > 3000) score -= 20;
+      if (metrics.memoryUsage > 50) score -= 10;
+      return Math.max(0, score);    };
 
     // Measure Core Web Vitals
     const measureWebVitals = () => {
@@ -34,13 +49,7 @@ const PerformanceMonitor: React.FC = () => {
           console.warn('LCP observer not supported');
         }
 
-<<<<<<< HEAD
-        // FID - First Input Delay
-        const fidObserver = new PerformanceObserver((list) => {
-          list.getEntries().forEach((entry: any) => {
-            metrics.fid = entry.processingStart - entry.startTime;
-=======
-      setMetrics(currentMetrics);
+setMetrics(currentMetrics);
 
       const score = getPerformanceScore();
       setPerformanceScore(score);
@@ -49,9 +58,7 @@ const PerformanceMonitor: React.FC = () => {
         if (typeof console !== 'undefined') {
           logger.debug('Performance Metrics', {
             metrics: currentMetrics,
-            score,
->>>>>>> cursor/analyze-improve-and-deploy-application-1a78
-          });
+            score,          });
         });
         
         try {
@@ -156,11 +163,8 @@ const PerformanceMonitor: React.FC = () => {
 
     monitorResources();
 
-    return () => {
-      // Cleanup observers if needed
-    };
-  }, []);
-
+    // Set up interval for continuous monitoring
+    const interval = setInterval(updateMetrics, updateInterval);
   return null;
 };
 
