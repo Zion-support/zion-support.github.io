@@ -1,8 +1,9 @@
 import { useEffect } from 'react';
-import * as analytics from '../utils/analytics';
+import analytics from '../utils/analytics';
 
-export const usePerformance = () => {
+const usePerformance = () => {
   useEffect(() => {
+    // Monitor long tasks
     const observer = new PerformanceObserver((list) => {
       list.getEntries().forEach((entry) => {
         analytics.track(
