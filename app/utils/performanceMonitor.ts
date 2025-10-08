@@ -228,9 +228,21 @@ class PerformanceMonitor {
     return scores.length > 0 ? Math.round(scores.reduce((a, b) => a + b, 0) / scores.length) : 0;
   }
 
+
   generateReport(): string {
     const score = this.getScore();
     const metrics = this.getMetrics();
     
     return `
 Performance Report:
+Score: ${score}/100
+FCP: ${metrics.fcp}ms
+LCP: ${metrics.lcp}ms
+FID: ${metrics.fid}ms
+CLS: ${metrics.cls}
+TTFB: ${metrics.ttfb}ms
+`;
+  }
+}
+
+export default new PerformanceMonitor();

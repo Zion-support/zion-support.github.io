@@ -678,3 +678,13 @@ class AccessibilityEnhancer {
     
     return `
 Accessibility Report:
+
+Total Violations: ${metrics.violationsFixed}
+Focus Traps Detected: ${metrics.focusTraps}
+Missing Labels: ${metrics.missingLabels}
+Color Contrast Issues: ${metrics.colorContrastIssues}
+`;
+  }
+}
+
+export default new AccessibilityEnhancer();
