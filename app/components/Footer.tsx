@@ -1,150 +1,203 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Phone, Mail, MapPin, Clock, Award, Shield, Zap } from 'lucide-react';
+import { Phone, Mail, MapPin, Clock, Award, Shield, Zap, Brain, Cloud, Lock, Globe, Star, ArrowRight } from 'lucide-react';
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-gray-900 text-white py-12">
-      <div className="container mx-auto px-4">
-        <div className="grid md:grid-cols-4 gap-8">
+    <footer className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white py-16 cyber-grid relative overflow-hidden">
+      {/* Animated background elements */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute top-10 left-10 w-20 h-20 border border-cyan-400/30 rounded-full animate-pulse"></div>
+        <div className="absolute top-32 right-20 w-16 h-16 border border-purple-400/30 rounded-full animate-pulse delay-1000"></div>
+        <div className="absolute bottom-20 left-1/4 w-12 h-12 border border-pink-400/30 rounded-full animate-pulse delay-2000"></div>
+        <div className="absolute bottom-32 right-1/3 w-8 h-8 border border-green-400/30 rounded-full animate-pulse delay-500"></div>
+      </div>
+      
+      <div className="container mx-auto px-4 relative z-10">
+        <div className="grid lg:grid-cols-5 md:grid-cols-3 grid-cols-1 gap-8 mb-12">
           {/* Company Info */}
-          <div>
-            <h3 className="text-2xl font-bold mb-4">Zion Tech Group</h3>
-            <p className="text-gray-300 mb-4">
-              Leading provider of enterprise AI solutions, quantum computing, and autonomous
-              systems.
+          <div className="lg:col-span-2">
+            <div className="flex items-center mb-6">
+              <span className="text-4xl mr-3">⚡</span>
+              <h3 className="text-3xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+                Zion Tech Group
+              </h3>
+            </div>
+            <p className="text-gray-300 mb-6 leading-relaxed text-lg">
+              Leading provider of enterprise AI solutions, quantum computing, autonomous systems, 
+              and comprehensive IT services. Transforming businesses through cutting-edge technology.
             </p>
-            <div className="text-gray-300">
-              <p>364 E Main St STE 1008</p>
-              <p>Middletown, DE 19709</p>
-              <p>United States</p>
+            
+            {/* Contact Info */}
+            <div className="space-y-4">
+              <div className="flex items-center group">
+                <Phone className="w-5 h-5 mr-3 text-cyan-400 group-hover:text-cyan-300 transition-colors" />
+                <a href="tel:+13024640950" className="text-gray-300 hover:text-cyan-400 transition-colors font-medium">
+                  +1 302 464 0950
+                </a>
+              </div>
+              <div className="flex items-center group">
+                <Mail className="w-5 h-5 mr-3 text-purple-400 group-hover:text-purple-300 transition-colors" />
+                <a href="mailto:kleber@ziontechgroup.com" className="text-gray-300 hover:text-purple-400 transition-colors font-medium">
+                  kleber@ziontechgroup.com
+                </a>
+              </div>
+              <div className="flex items-center group">
+                <MapPin className="w-5 h-5 mr-3 text-pink-400 group-hover:text-pink-300 transition-colors" />
+                <span className="text-gray-300">364 E Main St STE 1008, Middletown DE 19709</span>
+              </div>
+              <div className="flex items-center group">
+                <Clock className="w-5 h-5 mr-3 text-green-400 group-hover:text-green-300 transition-colors" />
+                <span className="text-gray-300">24/7 Support Available</span>
+              </div>
             </div>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
-            <ul className="space-y-2">
+            <h4 className="text-xl font-bold mb-6 text-cyan-400 flex items-center">
+              <Zap className="w-5 h-5 mr-2" />
+              Quick Links
+            </h4>
+            <ul className="space-y-3">
               <li>
-                <Link to="/" className="text-gray-300 hover:text-white transition-colors">
+                <Link to="/" className="text-gray-300 hover:text-cyan-400 transition-colors flex items-center group">
+                  <ArrowRight className="w-4 h-4 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
                   Home
                 </Link>
               </li>
               <li>
-                <Link to="/about" className="text-gray-300 hover:text-white transition-colors">
+                <Link to="/about" className="text-gray-300 hover:text-cyan-400 transition-colors flex items-center group">
+                  <ArrowRight className="w-4 h-4 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
                   About
                 </Link>
               </li>
               <li>
-                <Link to="/services" className="text-gray-300 hover:text-white transition-colors">
+                <Link to="/services" className="text-gray-300 hover:text-cyan-400 transition-colors flex items-center group">
+                  <ArrowRight className="w-4 h-4 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
                   Services
                 </Link>
               </li>
               <li>
-                <Link to="/services-advertising" className="text-gray-300 hover:text-white transition-colors">
-                  AI Advertising
+                <Link to="/micro-saas" className="text-gray-300 hover:text-cyan-400 transition-colors flex items-center group">
+                  <ArrowRight className="w-4 h-4 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
+                  Micro SAAS
                 </Link>
               </li>
               <li>
-                <Link to="/case-studies" className="text-gray-300 hover:text-white transition-colors">
+                <Link to="/case-studies" className="text-gray-300 hover:text-cyan-400 transition-colors flex items-center group">
+                  <ArrowRight className="w-4 h-4 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
                   Case Studies
                 </Link>
               </li>
               <li>
-                <Link to="/enterprise" className="text-gray-300 hover:text-white transition-colors">
+                <Link to="/enterprise" className="text-gray-300 hover:text-cyan-400 transition-colors flex items-center group">
+                  <ArrowRight className="w-4 h-4 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
                   Enterprise
                 </Link>
               </li>
               <li>
-                <Link to="/team" className="text-gray-300 hover:text-white transition-colors">
+                <Link to="/team" className="text-gray-300 hover:text-cyan-400 transition-colors flex items-center group">
+                  <ArrowRight className="w-4 h-4 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
                   Team
                 </Link>
               </li>
             </ul>
           </div>
 
-          {/* Services */}
+          {/* AI Services */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Services</h4>
-            <ul className="space-y-2 text-gray-300">
+            <h4 className="text-xl font-bold mb-6 text-purple-400 flex items-center">
+              <Brain className="w-5 h-5 mr-2" />
+              AI Services
+            </h4>
+            <ul className="space-y-3">
               <li>
-                <Link to="/services" className="hover:text-white transition-colors">
-                  All Services
-                </Link>
-              </li>
-              <li>
-                <Link to="/ai-services" className="hover:text-white transition-colors">
+                <Link to="/ai-services" className="text-gray-300 hover:text-purple-400 transition-colors flex items-center group">
+                  <ArrowRight className="w-4 h-4 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
                   AI Services
                 </Link>
               </li>
               <li>
-                <Link to="/ai-data-analytics" className="hover:text-white transition-colors">
+                <Link to="/ai-data-analytics" className="text-gray-300 hover:text-purple-400 transition-colors flex items-center group">
+                  <ArrowRight className="w-4 h-4 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
                   AI Data Analytics
                 </Link>
               </li>
               <li>
-                <Link to="/ai-cybersecurity" className="hover:text-white transition-colors">
+                <Link to="/ai-cybersecurity" className="text-gray-300 hover:text-purple-400 transition-colors flex items-center group">
+                  <ArrowRight className="w-4 h-4 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
                   AI Cybersecurity
                 </Link>
               </li>
               <li>
-                <Link to="/ai-workflow-automation" className="hover:text-white transition-colors">
+                <Link to="/ai-workflow-automation" className="text-gray-300 hover:text-purple-400 transition-colors flex items-center group">
+                  <ArrowRight className="w-4 h-4 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
                   AI Workflow Automation
                 </Link>
               </li>
               <li>
-                <Link to="/ai-cloud-infrastructure" className="hover:text-white transition-colors">
+                <Link to="/ai-cloud-infrastructure" className="text-gray-300 hover:text-purple-400 transition-colors flex items-center group">
+                  <ArrowRight className="w-4 h-4 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
                   AI Cloud Infrastructure
                 </Link>
               </li>
               <li>
-                <Link to="/ai-ecommerce-solutions" className="hover:text-white transition-colors">
+                <Link to="/ai-ecommerce-solutions" className="text-gray-300 hover:text-purple-400 transition-colors flex items-center group">
+                  <ArrowRight className="w-4 h-4 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
                   AI E-commerce Solutions
                 </Link>
               </li>
               <li>
-                <Link to="/ai-mobile-app-development" className="hover:text-white transition-colors">
-                  AI Mobile App Development
+                <Link to="/ai-mobile-app-development" className="text-gray-300 hover:text-purple-400 transition-colors flex items-center group">
+                  <ArrowRight className="w-4 h-4 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
+                  AI Mobile Apps
                 </Link>
               </li>
+            </ul>
+          </div>
+
+          {/* Specialized Services */}
+          <div>
+            <h4 className="text-xl font-bold mb-6 text-green-400 flex items-center">
+              <Shield className="w-5 h-5 mr-2" />
+              Specialized
+            </h4>
+            <ul className="space-y-3">
               <li>
-                <Link to="/it-services" className="hover:text-white transition-colors">
-                  IT Services
-                </Link>
-              </li>
-              <li>
-                <Link to="/micro-saas" className="hover:text-white transition-colors">
-                  Micro SAAS
-                </Link>
-              </li>
-              <li>
-                <Link to="/quantum-computing" className="hover:text-white transition-colors">
+                <Link to="/quantum-computing" className="text-gray-300 hover:text-green-400 transition-colors flex items-center group">
+                  <ArrowRight className="w-4 h-4 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
                   Quantum Computing
                 </Link>
               </li>
               <li>
-                <Link to="/autonomous-systems" className="hover:text-white transition-colors">
+                <Link to="/autonomous-systems" className="text-gray-300 hover:text-green-400 transition-colors flex items-center group">
+                  <ArrowRight className="w-4 h-4 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
                   Autonomous Systems
                 </Link>
               </li>
               <li>
-                <Link to="/business-intelligence" className="hover:text-white transition-colors">
-                  Business Intelligence
-                </Link>
-              </li>
-              <li>
-                <Link to="/blockchain-web3" className="hover:text-white transition-colors">
+                <Link to="/blockchain-web3" className="text-gray-300 hover:text-green-400 transition-colors flex items-center group">
+                  <ArrowRight className="w-4 h-4 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
                   Blockchain & Web3
                 </Link>
               </li>
               <li>
-                <Link to="/iot-edge-computing" className="hover:text-white transition-colors">
+                <Link to="/cybersecurity" className="text-gray-300 hover:text-green-400 transition-colors flex items-center group">
+                  <ArrowRight className="w-4 h-4 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
+                  Cybersecurity
+                </Link>
+              </li>
+              <li>
+                <Link to="/iot-edge-computing" className="text-gray-300 hover:text-green-400 transition-colors flex items-center group">
+                  <ArrowRight className="w-4 h-4 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
                   IoT & Edge Computing
                 </Link>
               </li>
               <li>
-                <Link to="/cybersecurity" className="hover:text-white transition-colors">
-                  Cybersecurity
+                <Link to="/business-intelligence" className="text-gray-300 hover:text-green-400 transition-colors flex items-center group">
+                  <ArrowRight className="w-4 h-4 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
+                  Business Intelligence
                 </Link>
               </li>
             </ul>
