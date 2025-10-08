@@ -65,14 +65,6 @@ global.fetch = jest.fn();
 const originalConsoleWarn = console.warn;
 const originalConsoleInfo = console.info;
 
-<<<<<<< HEAD
-console.warn = (...args) => {
-  const message = args[0]?.toString?.() || '';
-  if (message.includes('Warning: ReactDOM.render is no longer supported')) {
-    return;
-  }
-  originalConsoleWarn(...args);
-=======
 // Mock PerformanceObserver
 global.PerformanceObserver = class MockPerformanceObserver {
   static readonly supportedEntryTypes: readonly string[] = ['navigation', 'paint', 'largest-contentful-paint', 'first-input', 'layout-shift'];
@@ -83,15 +75,6 @@ global.PerformanceObserver = class MockPerformanceObserver {
   takeRecords() {
     return [];
   }
-};
-
-// Suppress JSDOM navigation warnings
-const originalConsoleError = console.error;
-console.error = (...args) => {
-  if (args[0] && args[0].type === 'not implemented' && args[0].message?.includes('navigation')) {
-    return; // Suppress JSDOM navigation warnings
-  }
-  originalConsoleError.apply(console, args);
 };
 
 // Mock window.location
@@ -109,8 +92,14 @@ delete (window as unknown as Record<string, unknown>).location;
   reload: jest.fn(),
   assign: jest.fn(),
   replace: jest.fn(),
->>>>>>> main
->>>>>>> 49f746e8c3195449347ee8bebb6ca5b0ab732544
+};
+
+console.warn = (...args) => {
+  const message = args[0]?.toString?.() || '';
+  if (message.includes('Warning: ReactDOM.render is no longer supported')) {
+    return;
+  }
+  originalConsoleWarn(...args);
 };
 
 console.info = (...args) => {

@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import {
   Github,
   Linkedin,
@@ -8,7 +6,6 @@ import {
   Phone,
   Twitter,
 } from 'lucide-react';
->>>>>>> 49f746e8c3195449347ee8bebb6ca5b0ab732544
 import React from 'react';
 import { Link } from 'react-router-dom';
 
@@ -61,11 +58,7 @@ const EnhancedFooter: React.FC = () => {
                 href='https://linkedin.com/company/ziontechgroup'
                 className='text-gray-400 hover:text-white transition-colors'
               >
-<<<<<<< HEAD
-                <span className='text-lg'>💼</span>
-=======
-                <Linkedin className='w-5 h-5' />
->>>>>>> 49f746e8c3195449347ee8bebb6ca5b0ab732544
+                <Linkedin className="w-5 h-5" />
               </a>
               <a
                 href='https://twitter.com/ziontechgroup'
@@ -77,11 +70,7 @@ const EnhancedFooter: React.FC = () => {
                 href='https://github.com/ziontechgroup'
                 className='text-gray-400 hover:text-white transition-colors'
               >
-<<<<<<< HEAD
-                <span className='text-lg'>🐙</span>
-=======
-                <Github className='w-5 h-5' />
->>>>>>> 49f746e8c3195449347ee8bebb6ca5b0ab732544
+                <Linkedin className="w-5 h-5" />
               </a>
             </div>
           </div>
