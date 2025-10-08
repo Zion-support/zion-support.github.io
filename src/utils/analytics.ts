@@ -75,39 +75,60 @@ class Analytics {
     this.events.push(event);
   }
 
-  trackPageView(page: string, title?: string): void {
-    this.track('page_view', 'navigation', 'view', page, undefined, {
-      page_title: title || (typeof document !== 'undefined' ? document.title : ''),
-      page_url: typeof window !== 'undefined' ? window.location.href : page,
-    });
+  /**
+   * Track user interaction
+   */
+  trackInteraction(
+    element: string,
+    action: string,
+    category: string = 'user_interaction'
+  ): void {
+    this.track('interaction', category, action, element);
   }
 
-  trackPerformance(metric: string, value: number, unit: string = 'ms'): void {
+  /**
+   * Track performance metrics
+   */  trackPerformance(metric: string, value: number, unit: string = 'ms'): void {
     this.track('performance', 'metrics', metric, unit, value);
   }
 
-  getEvents(): AnalyticsEvent[] {
+  /**
+   * Track business events
+   */
+  trackBusiness(
+    event: string,
+    value?: number,
+    properties?: Record<string, unknown>
+  ): void {
+    this.track(event, 'business', 'event', undefined, value, properties);
+  }
+
+  /**
+   * Send event to analytics service
+   */
+  private async sendToAnalytics(event: AnalyticsEvent): Promise<void> {
+    // Implementation for sending to analytics service
+    console.log('Analytics event:', event);
+  }
+
+  /**
+   * Get all events
+   */  getEvents(): AnalyticsEvent[] {
     return [...this.events];
   }
 
-  getEventsByCategory(category: string): AnalyticsEvent[] {
-    return this.events.filter(event => event.category === category);
-  }
-
-  clearEvents(): void {
+  /**
+   * Clear all events
+   */  clearEvents(): void {
     this.events = [];
   }
 
-  getUserProperties(): UserProperties {
-    return { ...this.userProperties };
-  }
-
-  updateUserProperties(properties: Partial<UserProperties>): void {
+  /**
+   * Update user properties
+   */  updateUserProperties(properties: Partial<UserProperties>): void {
     this.userProperties = { ...this.userProperties, ...properties };
   }
 }
 
 const analytics = new Analytics();
-
-export { analytics };
-export default analytics;
+export { analytics };export default analytics;

@@ -4,91 +4,68 @@
  */
 
 export enum ErrorCategory {
-  NETWORK = 'network',
-  VALIDATION = 'validation',
-  RUNTIME = 'runtime',
-  API = 'api',
-  UI = 'ui',
-  UNKNOWN = 'unknown',
+  NETWORK = 'NETWORK',
+  VALIDATION = 'VALIDATION',
+  API = 'API',
+  UI = 'UI',
+  RUNTIME = 'RUNTIME',
+  UNKNOWN = 'UNKNOWN',
 }
 
 export enum ErrorSeverity {
-  LOW = 'low',
-  MEDIUM = 'medium',
-  HIGH = 'high',
-  CRITICAL = 'critical',
+  LOW = 'LOW',
+  MEDIUM = 'MEDIUM',
+  HIGH = 'HIGH',
+  CRITICAL = 'CRITICAL',
 }
 
 export interface ErrorInfo {
+  id: string;
+  timestamp: number;
   message: string;
   stack?: string;
-  componentStack?: string;
-  errorBoundary?: string;
-  errorBoundaryStack?: string;
-  errorId?: string;
-  timestamp?: string;
-  userAgent?: string;
-  url?: string;
-  userId?: string;
-  severity?: ErrorSeverity;
-  category?: ErrorCategory;
-  metadata?: Record<string, unknown>;
+  category: ErrorCategory;
+  severity: ErrorSeverity;
+  context?: Record<string, unknown>;
 }
 
-export class ErrorHandler {
-  private static instance: ErrorHandler;
+class ErrorHandler {
   private errorQueue: ErrorInfo[] = [];
-  private maxQueueSize = 100;
-
-  static getInstance(): ErrorHandler {
-    if (!ErrorHandler.instance) {
-      ErrorHandler.instance = new ErrorHandler();
-    }
-    return ErrorHandler.instance;
-  }
+  private readonly maxQueueSize = 100;
 
   /**
-   * Log an error with automatic categorization
+   * Track an error
    */
-  logError(error: Error, errorInfo?: Partial<ErrorInfo>): void {
+  trackError(error: Error, context?: Record<string, unknown>): void {
     const category = this.categorizeError(error);
     const severity = this.determineSeverity(error, category);
     
     const errorData: ErrorInfo = {
+      id: this.generateErrorId(),
+      timestamp: Date.now(),
       message: error.message,
       stack: error.stack,
-      timestamp: new Date().toISOString(),
-      userAgent: typeof window !== 'undefined' ? window.navigator.userAgent : undefined,
-      url: typeof window !== 'undefined' ? window.location.href : undefined,
-      errorId: this.generateErrorId(),
       category,
       severity,
-      ...errorInfo,
+      context,
     };
 
-    // Add to queue
     this.errorQueue.push(errorData);
     if (this.errorQueue.length > this.maxQueueSize) {
       this.errorQueue.shift();
     }
-
-    // Log to console in development
-    if (process.env['NODE_ENV'] === 'development') {
-      console.error('Error logged:', errorData);
-    }
-
     // Send to error reporting service
     this.reportError(errorData);
   }
 
   /**
-   * Categorize error based on message and stack trace
+   * Categorize error based on message and stack
    */
   private categorizeError(error: Error): ErrorCategory {
     const message = error.message.toLowerCase();
     const stack = error.stack?.toLowerCase() || '';
 
-    if (message.includes('network') || message.includes('fetch') || message.includes('timeout')) {
+    if (message.includes('network') || message.includes('fetch') || message.includes('xhr')) {
       return ErrorCategory.NETWORK;
     }
     if (message.includes('validation') || message.includes('invalid')) {
@@ -110,26 +87,18 @@ export class ErrorHandler {
    * Determine error severity
    */
   private determineSeverity(error: Error, category: ErrorCategory): ErrorSeverity {
-    // Network errors are usually recoverable
     if (category === ErrorCategory.NETWORK) {
       return ErrorSeverity.MEDIUM;
     }
-    
-    // Validation errors are low severity
     if (category === ErrorCategory.VALIDATION) {
       return ErrorSeverity.LOW;
     }
-    
-    // API and runtime errors are high severity
-    if (category === ErrorCategory.API || category === ErrorCategory.RUNTIME) {
+    if (category === ErrorCategory.RUNTIME) {
       return ErrorSeverity.HIGH;
     }
-    
-    // UI errors depend on the context
-    if (category === ErrorCategory.UI) {
+    if (category === ErrorCategory.API) {
       return ErrorSeverity.MEDIUM;
     }
-    
     return ErrorSeverity.MEDIUM;
   }
 
@@ -137,22 +106,19 @@ export class ErrorHandler {
    * Generate unique error ID
    */
   private generateErrorId(): string {
-    return `err_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+    return `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
   }
 
   /**
    * Report error to external service
    */
   private reportError(errorData: ErrorInfo): void {
-    // In production, send to error tracking service
-    // For now, just log to console
-    if (typeof window !== 'undefined' && (window as any).errorTracker) {
-      (window as any).errorTracker.report(errorData);
-    }
+    // Implementation for reporting to external service
+    console.error('Error reported:', errorData);
   }
 
   /**
-   * Get all logged errors
+   * Get all errors
    */
   getErrors(): ErrorInfo[] {
     return [...this.errorQueue];
@@ -164,21 +130,8 @@ export class ErrorHandler {
   clearErrors(): void {
     this.errorQueue = [];
   }
-
-  /**
-   * Get errors by category
-   */
-  getErrorsByCategory(category: ErrorCategory): ErrorInfo[] {
-    return this.errorQueue.filter(error => error.category === category);
-  }
-
-  /**
-   * Get errors by severity
-   */
-  getErrorsBySeverity(severity: ErrorSeverity): ErrorInfo[] {
-    return this.errorQueue.filter(error => error.severity === severity);
-  }
 }
 
-const errorHandler = ErrorHandler.getInstance();
-export default errorHandler;
+export const errorHandler = new ErrorHandler();
+export { ErrorHandler };
+export default ErrorHandler;
