@@ -7,8 +7,6 @@
   "include": [
     "src/**/*.ts",
     "src/**/*.tsx",
-    "app/**/*.ts",
-    "app/**/*.tsx",
     "types/**/*.d.ts"
   ],
   "exclude": [
@@ -32,7 +30,6 @@
     "**/NewestContent2025Banner.tsx",
     "**/contact/page.tsx",
     "**/ErrorBoundary.tsx",
-    "app/**/*.tsx",
-    "app/**/*.ts"
+    "app/**/*"
   ]
 }

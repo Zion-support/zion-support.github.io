@@ -1,13 +1,9 @@
 // Learn more: https://github.com/testing-library/jest-dom
-import '@testing-library/jest-dom';
-
-// Polyfill for TextEncoder/TextDecoder
-import { TextEncoder, TextDecoder } from 'util';
-global.TextEncoder = TextEncoder;
-global.TextDecoder = TextDecoder;
+require('@testing-library/jest-dom');
+const React = require('react');
 
 // Mock files that use import.meta.env
-jest.mock('./app/utils/logger.ts', () => ({
+jest.mock('./src/utils/logger.ts', () => ({
   logger: {
     debug: jest.fn(),
     info: jest.fn(),
@@ -17,51 +13,38 @@ jest.mock('./app/utils/logger.ts', () => ({
   },
 }));
 
-jest.mock('./app/utils/analytics.ts', () => ({
+jest.mock('./src/utils/analytics.ts', () => ({
   trackEvent: jest.fn(),
   trackPageView: jest.fn(),
   initAnalytics: jest.fn(),
 }));
 
-jest.mock('./app/utils/errorReporter.ts', () => ({
+jest.mock('./src/utils/errorTracking.ts', () => ({
   reportError: jest.fn(),
   initErrorReporting: jest.fn(),
 }));
 
-jest.mock('./app/hooks/usePerformanceOptimization.ts', () => ({
-  usePerformanceOptimization: jest.fn(() => ({
+jest.mock('./src/hooks/usePerformance.ts', () => ({
+  usePerformance: jest.fn(() => ({
     metrics: {},
     optimize: jest.fn(),
   })),
 }));
 
-jest.mock('./app/hooks/usePerformanceMonitoring.ts', () => ({
-  usePerformanceMonitoring: jest.fn(() => ({
-    metrics: {},
-    report: {},
-  })),
+// Mock React Router
+jest.mock('react-router-dom', () => ({
+  ...jest.requireActual('react-router-dom'),
+  useNavigate: () => jest.fn(),
+  useLocation: () => ({
+    pathname: '/',
+    search: '',
+    hash: '',
+    state: null,
+  }),
+  useParams: () => ({}),
+  Link: ({ children, to, ...props }) => React.createElement('a', { href: to, ...props }, children),
+  NavLink: ({ children, to, ...props }) => React.createElement('a', { href: to, ...props }, children),
 }));
-
-
-// Mock React Router (this is a Vite project, not Next.js)
-jest.mock('react-router-dom', () => {
-  const actual = jest.requireActual('react-router-dom');
-  return {
-    ...actual,
-    useNavigate: () => jest.fn(),
-    useLocation: () => ({
-      pathname: '/',
-      search: '',
-      hash: '',
-      state: null,
-    }),
-    useParams: () => ({}),
-    // Keep the actual router components for proper context
-    BrowserRouter: actual.BrowserRouter,
-    MemoryRouter: actual.MemoryRouter,
-    RouterProvider: ({ router }) => null,
-  };
-});
 
 // Mock window.matchMedia
 Object.defineProperty(window, 'matchMedia', {
@@ -88,8 +71,6 @@ global.IntersectionObserver = class IntersectionObserver {
   }
   unobserve() {}
 };
-
-// TextEncoder and TextDecoder are already imported and set above
 
 // Suppress console errors in tests
 const originalError = console.error;
