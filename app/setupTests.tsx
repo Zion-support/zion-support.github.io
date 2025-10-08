@@ -14,9 +14,6 @@ console.error = (...args) => {
       message.includes('navigation (except hash changes)')) {
     return;
   }
-  if (args[0] && args[0].type === 'not implemented' && args[0].message?.includes('navigation')) {
-    return; // Suppress JSDOM navigation warnings
-  }
   originalConsoleError(...args);
 };
 
@@ -82,4 +79,33 @@ console.info = (...args) => {
     return;
   }
   originalConsoleInfo(...args);
+};
+
+// Mock PerformanceObserver
+global.PerformanceObserver = class MockPerformanceObserver {
+  static readonly supportedEntryTypes: readonly string[] = ['navigation', 'paint', 'largest-contentful-paint', 'first-input', 'layout-shift'];
+  
+  constructor(public callback: PerformanceObserverCallback) {}
+  observe() {}
+  disconnect() {}
+  takeRecords() {
+    return [];
+  }
+};
+
+// Mock window.location
+delete (window as unknown as Record<string, unknown>).location;
+(window as unknown as Record<string, unknown>).location = {
+  href: 'http://localhost:3000',
+  origin: 'http://localhost:3000',
+  protocol: 'http:',
+  host: 'localhost:3000',
+  hostname: 'localhost',
+  port: '3000',
+  pathname: '/',
+  search: '',
+  hash: '',
+  reload: jest.fn(),
+  assign: jest.fn(),
+  replace: jest.fn(),
 };

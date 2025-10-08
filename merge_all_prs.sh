@@ -2,7 +2,7 @@
 
 # Script to merge all open PRs systematically
 
-GITHUB_TOKEN="ghs_irB21jlecxkVL9rFeVMzIEH7xwEM031MkMCi"
+GITHUB_TOKEN="ghs_6kmNK516xjSlcnaBDziRvl2h8esrYx0ZJN3w"
 REPO="Zion-Holdings/zion.app"
 
 echo "================================================================"

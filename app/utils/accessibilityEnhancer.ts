@@ -1,4 +1,3 @@
-// @ts-nocheck
 /**
  * Advanced Accessibility Enhancement Utility
  * Provides comprehensive accessibility improvements and monitoring
@@ -153,7 +152,7 @@ class AccessibilityEnhancer {
     if (!currentElement) return;
 
     // Handle radio button groups
-    if ('type' in currentElement && (currentElement as HTMLInputElement).type === 'radio') {
+    if ((currentElement as HTMLInputElement).type === 'radio') {
       this.handleRadioGroupNavigation(event, currentElement as HTMLInputElement);
     }
     
@@ -675,16 +674,32 @@ class AccessibilityEnhancer {
    */
   getReport(): string {
     const metrics = this.getMetrics();
-    
     return `
-Accessibility Report:
-
-Total Violations: ${metrics.violationsFixed}
-Focus Traps Detected: ${metrics.focusTraps}
-Missing Labels: ${metrics.missingLabels}
+<<<<<<< HEAD
+Accessibility Report
+===================
+Focusable Elements: ${metrics.focusableElements}
+Images Without Alt: ${metrics.imagesWithoutAlt}
+Links Without Text: ${metrics.linksWithoutText}
+Headings Without Content: ${metrics.headingsWithoutContent}
 Color Contrast Issues: ${metrics.colorContrastIssues}
-`;
+Keyboard Navigation Score: ${metrics.keyboardNavigationScore}
+Screen Reader Score: ${metrics.screenReaderScore}
+Overall Score: ${metrics.overallScore}/100
+=======
+      Accessibility Report:
+      - Focusable Elements: ${metrics.focusableElements}
+      - Images Without Alt: ${metrics.imagesWithoutAlt}
+      - Links Without Text: ${metrics.linksWithoutText}
+      - Headings Without Content: ${metrics.headingsWithoutContent}
+      - Color Contrast Issues: ${metrics.colorContrastIssues}
+      - Keyboard Navigation Score: ${metrics.keyboardNavigationScore}%
+      - Screen Reader Score: ${metrics.screenReaderScore}%
+      - Overall Score: ${metrics.overallScore}%
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-fd0a
+    `;
   }
 }
 
-export default new AccessibilityEnhancer();
+export const accessibilityEnhancer = new AccessibilityEnhancer();
+export default AccessibilityEnhancer;

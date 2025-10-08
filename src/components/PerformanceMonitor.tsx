@@ -14,11 +14,16 @@ export const PerformanceMonitor: React.FC = () => {
 
   useEffect(() => {
     const measurePerformance = () => {
+<<<<<<< HEAD
       if (typeof window === 'undefined' || !window.performance) return;
 
       const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
       const paintEntries = performance.getEntriesByType('paint');
       
+=======
+      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      const paintEntries = performance.getEntriesByType('paint');
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-17a6
       const fcp = paintEntries.find(entry => entry.name === 'first-contentful-paint');
       const lcp = performance.getEntriesByType('largest-contentful-paint')[0] as PerformanceEntry;
       
@@ -39,7 +44,10 @@ export const PerformanceMonitor: React.FC = () => {
     } else {
       window.addEventListener('load', measurePerformance);
     }
+<<<<<<< HEAD
     
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-17a6
     return () => {
       window.removeEventListener('load', measurePerformance);
     };
