@@ -2,21 +2,10 @@
  * Jest setup file for testing environment
  */
 
+>>>>>>> main
+=======
+>>>>>>> ad3f5667eee57a9969ff433042f2200dd6375572
 import '@testing-library/jest-dom';
-
-// Suppress jsdom navigation warnings
-// eslint-disable-next-line no-console
-const originalConsoleError = console.error;
-// eslint-disable-next-line no-console
-console.error = (...args) => {
-  const message = args[0]?.toString?.() || args[0]?.message || '';
-  if (message.includes('Not implemented: navigation') || 
-      message.includes('navigation (except hash changes)')) {
-    return;
-  }
-  originalConsoleError(...args);
-};
-
 // Mock window.matchMedia
 Object.defineProperty(window, 'matchMedia', {
   writable: true,
@@ -31,112 +20,118 @@ Object.defineProperty(window, 'matchMedia', {
     dispatchEvent: jest.fn(),
   })),
 });
-
 // Mock IntersectionObserver
 global.IntersectionObserver = class IntersectionObserver {
+global.IntersectionObserver = class MockIntersectionObserver {
+>>>>>>> ad3f5667eee57a9969ff433042f2200dd6375572
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
   root: Element | null = null;
   rootMargin: string = '0px';
   thresholds: ReadonlyArray<number> = [0];
-  
   constructor() {}
-  observe() {
-    return null;
-  }
-  disconnect() {
-    return null;
-  }
-  unobserve() {
-    return null;
-  }
-  takeRecords() {
-    return [];
-  }
-} as any;
+  disconnect() {}
+  observe() {}
+  unobserve() {}
+  takeRecords() { return []; }
+};
 
 // Mock ResizeObserver
 global.ResizeObserver = class ResizeObserver {
   constructor() {}
+  disconnect() {}
   observe() {}
   unobserve() {}
+};
+  takeRecords() { return []; }
+} as any;
+  rootMargin: string = '';
+  thresholds: ReadonlyArray<number> = Object.freeze([]);
+  
+  constructor() {}
+  disconnect(): void {}
+  observe(): void {}
+  unobserve(): void {}
+  takeRecords(): IntersectionObserverEntry[] { return []; }
+} as unknown as typeof IntersectionObserver;
+
+=======
+  takeRecords() { return []; }
+} as unknown as typeof IntersectionObserver;
+>>>>>>> ad3f5667eee57a9969ff433042f2200dd6375572
+// Mock ResizeObserver
+global.ResizeObserver = class ResizeObserver {
+  constructor() {}
   disconnect() {}
+  observe() {}
+  unobserve() {}
 };
 
-// Mock window.location
-delete (window as unknown as Record<string, unknown>).location;
-(window as unknown as Record<string, unknown>).location = {
-  href: 'http://localhost:3000',
-  origin: 'http://localhost:3000',
-  protocol: 'http:',
-  host: 'localhost:3000',
-  hostname: 'localhost',
-  port: '3000',
-  pathname: '/',
-  search: '',
-  hash: '',
-  reload: jest.fn(),
-  assign: jest.fn(),
-  replace: jest.fn(),
+// Mock ResizeObserver
+global.ResizeObserver = class ResizeObserver {
+  constructor() {}
+  disconnect() {}
+  observe() {}
+  unobserve() {}
 };
-
+>>>>>>> ad3f5667eee57a9969ff433042f2200dd6375572
+// Mock scrollTo
+Object.defineProperty(window, 'scrollTo', {
+  value: jest.fn(),
+  writable: true
+});
+// Mock console methods to reduce noise in tests
+const originalError = console.error;
+const originalWarn = console.warn;
+beforeAll(() => {
+  console.error = (...args: unknown[]) => {
+    if (
+      typeof args[0] === 'string' &&
+      args[0].includes('Warning: ReactDOM.render is no longer supported')
+    ) {
+      return;
+    }
+    originalError.call(console, ...args);
+  };
+  console.warn = (...args: unknown[]) => {
+    if (
+      typeof args[0] === 'string' &&
+      (args[0].includes('componentWillReceiveProps') ||
+       args[0].includes('componentWillMount'))
+    ) {
+      return;
+    }
+    originalWarn.call(console, ...args);
+  };
+});
+afterAll(() => {
+  console.error = originalError;
+  console.warn = originalWarn;
+});
 // Mock performance API
 Object.defineProperty(window, 'performance', {
   writable: true,
   value: {
     now: jest.fn(() => Date.now()),
+    getEntriesByType: jest.fn(() => []),
     mark: jest.fn(),
     measure: jest.fn(),
-    getEntriesByType: jest.fn(() => []),
-    getEntriesByName: jest.fn(() => []),
-    clearMarks: jest.fn(),
-    clearMeasures: jest.fn(),
   },
 });
 
 // Mock requestAnimationFrame
-global.requestAnimationFrame = jest.fn(cb => setTimeout(cb, 0));
-global.cancelAnimationFrame = jest.fn(id => clearTimeout(id));
-
-// Mock localStorage
-const localStorageMock = {
-  getItem: jest.fn(),
-  setItem: jest.fn(),
-  removeItem: jest.fn(),
-  clear: jest.fn(),
-};
-Object.defineProperty(window, 'localStorage', {
-  value: localStorageMock,
-});
-
-// Mock sessionStorage
-const sessionStorageMock = {
-  getItem: jest.fn(),
-  setItem: jest.fn(),
-  removeItem: jest.fn(),
-  clear: jest.fn(),
-};
-Object.defineProperty(window, 'sessionStorage', {
-  value: sessionStorageMock,
-});
-
-// Mock fetch
-global.fetch = jest.fn();
-
-// Mock console methods for cleaner test output
-const originalConsoleWarn = console.warn;
-const originalConsoleInfo = console.info;
-
-console.warn = (...args) => {
-  const message = args[0]?.toString?.() || '';
-  if (message.includes('Warning: ReactDOM.render is no longer supported')) {
-    return;
-  }
-  originalConsoleWarn(...args);
+global.requestAnimationFrame = (callback: FrameRequestCallback) => {
+  return setTimeout(callback, 0);
 };
 
-console.info = (...args) => {
-  const message = args[0]?.toString?.() || '';
-  if (message.includes('ReactDOM.render is no longer supported')) {
-    return;
-  }
-  originalConsoleInfo(...args);
+global.cancelAnimationFrame = (id: number) => {
+  clearTimeout(id);
 };
+  disconnect(): void {}
+  observe(): void {}
+  unobserve(): void {}
+} as unknown as typeof ResizeObserver;
+>>>>>>> main
+=======
+>>>>>>> ad3f5667eee57a9969ff433042f2200dd6375572
