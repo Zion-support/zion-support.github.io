@@ -162,37 +162,6 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     }
   }, [seoData]);
 
-  // const _addMetaTag = (name: string, content: string, attribute: string = 'name') => {
-  //   const metaTag = document.createElement('meta');
-  //   metaTag.setAttribute(attribute, name);
-  //   metaTag.content = content;
-  //   document.head.appendChild(metaTag);
-  // };
-
-  // const _updateCanonicalUrl = (url: string) => {
-  //   let canonicalLink = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
-  //   
-  //   if (canonicalLink) {
-  //     canonicalLink.href = url;
-  //   } else {
-  //     canonicalLink = document.createElement('link');
-  //     canonicalLink.rel = 'canonical';
-  //     canonicalLink.href = url;
-  //     document.head.appendChild(canonicalLink);
-  //   }
-  // };
-
-  // const _addStructuredData = (data: Record<string, unknown>) => {
-  //   // Remove existing structured data
-  //   // if (structuredDataRef.current) {
-  //   //   structuredDataRef.current.remove();
-  //   // }
-  //   
-  //   const script = document.createElement('script');
-  //   script.type = 'application/ld+json';
-  //   script.textContent = JSON.stringify(data);
-  //   document.head.appendChild(script);
-  // };
 
   const _trackPageView = (config: SEOData) => {
     if (typeof window !== 'undefined' && 'gtag' in window) {

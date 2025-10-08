@@ -35,16 +35,27 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     const observers: PerformanceObserver[] = [];
 
     // Measure First Contentful Paint (FCP)
+<<<<<<< HEAD
     const _fcpEntries = performance.getEntriesByName('first-contentful-paint') || [];
     const _fcp = _fcpEntries.length > 0 ? _fcpEntries[0].startTime : null;
+=======
+    const fcpEntries = performance.getEntriesByName('first-contentful-paint') || [];
+    const fcp = fcpEntries.length > 0 ? fcpEntries[0].startTime : null;
+>>>>>>> cursor/website-audit-and-update-with-deployment-73aa
 
     // Measure Largest Contentful Paint (LCP)
     if ('PerformanceObserver' in window) {
       try {
         const lcpObserver = new PerformanceObserver(list => {
+<<<<<<< HEAD
           const _entries = list.getEntries();
           const _lastEntry = _entries[_entries.length - 1];
           setMetrics(prev => ({ ...prev, lcp: _lastEntry.startTime }));
+=======
+          const entries = list.getEntries();
+          const lastEntry = entries[entries.length - 1];
+          setMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }));
+>>>>>>> cursor/website-audit-and-update-with-deployment-73aa
         });
         lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
         observers.push(lcpObserver);
@@ -58,14 +69,14 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     if ('PerformanceObserver' in window) {
       try {
         const fidObserver = new PerformanceObserver(list => {
-          const _entries = list.getEntries();
+          const entries = list.getEntries();
           entries.forEach(entry => {
             if (
               entry.entryType === 'first-input' &&
               'processingStart' in entry &&
               'startTime' in entry
             ) {
-              const _fidEntry = entry as PerformanceEventTiming;
+              const fidEntry = entry as PerformanceEventTiming;
               setMetrics(prev => ({
                 ...prev,
                 fid: _fidEntry.processingStart - _fidEntry.startTime,
@@ -84,18 +95,24 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     // Measure Cumulative Layout Shift (CLS)
     if ('PerformanceObserver' in window) {
       try {
-        let _clsValue = 0;
+        let clsValue = 0;
         const clsObserver = new PerformanceObserver(list => {
-          const _entries = list.getEntries();
+          const entries = list.getEntries();
           entries.forEach(entry => {
             if (
               entry.entryType === 'layout-shift' &&
               'hadRecentInput' in entry &&
               'value' in entry
             ) {
+<<<<<<< HEAD
               const _clsEntry = entry as LayoutShift;
               if (!_clsEntry.hadRecentInput) {
                 clsValue += _clsEntry.value;
+=======
+              const clsEntry = entry as LayoutShift;
+              if (!clsEntry.hadRecentInput) {
+                clsValue += clsEntry.value;
+>>>>>>> cursor/website-audit-and-update-with-deployment-73aa
                 setMetrics(prev => ({ ...prev, cls: clsValue }));
               }
             }
@@ -111,10 +128,17 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
 
     // Measure Time to First Byte (TTFB)
     try {
+<<<<<<< HEAD
       const _navigationEntries = performance.getEntriesByType?.('navigation') || [];
       const _navigationEntry = _navigationEntries[0] as PerformanceNavigationTiming;
       const ttfb = _navigationEntry
         ? _navigationEntry.responseStart - _navigationEntry.requestStart
+=======
+      const navigationEntries = performance.getEntriesByType?.('navigation') || [];
+      const navigationEntry = navigationEntries[0] as PerformanceNavigationTiming;
+      const ttfb = navigationEntry
+        ? navigationEntry.responseStart - navigationEntry.requestStart
+>>>>>>> cursor/website-audit-and-update-with-deployment-73aa
         : null;
 
       // Measure Memory Usage
@@ -149,8 +173,13 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   const measureResourceTiming = useCallback(() => {
     if (typeof window === 'undefined' || !('performance' in window)) return;
 
+<<<<<<< HEAD
     const _resources = performance.getEntriesByType('resource');
     const slowResources = _resources.filter(
+=======
+    const resources = performance.getEntriesByType('resource');
+    const slowResources = resources.filter(
+>>>>>>> cursor/website-audit-and-update-with-deployment-73aa
       (resource: PerformanceResourceTiming) => resource.duration > 1000
     );
 
@@ -209,7 +238,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   useEffect(() => {
     if (!enableRealTimeMonitoring) return;
 
-    const _cleanup = measureWebVitals();
+    const cleanup = measureWebVitals();
     measureResourceTiming();
     measureCoreWebVitals();
 
