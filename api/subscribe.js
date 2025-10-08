@@ -3,18 +3,6 @@ const { isValidEmail } = require('./emailUtils.cjs');
 const fs = require('fs');
 const path = require('path');
 
-
-
-
-
-
-
-
-
-
-
-
-
 async function handler(req, res) {
   if (req.method !== 'POST') {
     res.statusCode = 405;
@@ -32,83 +20,11 @@ async function handler(req, res) {
   }
 
   try {
-    const { email } = req.body || {};
-    
-
-  try {
-    const { email } = req.body || {};
-    
-
-  try {
-    const { email } = req.body || {};
-
-  try {
-    const { email } = req.body || {};
-    
-
-  try {
-    const { email } = req.body || {};
-    
-
-  try {
-    const { email } = req.body || {};
-    
-
-  try {
-    const { email } = req.body || {};
-    
-
-  try {
-    const { email } = req.body || {};
-
-  try {
-    const { email } = req.body || {};
-    
-
-  try {
-    const { email } = req.body || {};
-    
-
-  try {
-    const { email } = req.body || {};
-    
-
-  try {
-    const { email } = req.body || {};
-
-  try {
-    const { email } = req.body || {};
-    
-
-  try {
-    const { email } = req.body || {};
-
-  try {
-    const { email, name, source = 'website' } = req.body || {};
-
-    if (!email) {
-      res.statusCode = 400;
-      res.json({ error: 'Email is required' });
-      return;
-    }
-
     if (!isValidEmail(email)) {
       res.statusCode = 400;
       res.json({ error: 'Invalid email' });
       return;
     }
-
-
-
-
-
-
-
-
-
-
-
-
 
     const file = path.join(
       process.cwd(),
@@ -116,27 +32,6 @@ async function handler(req, res) {
       'newsletter-subscriptions.json'
     );
     
-    let existing = [];
-    
-    let existing = [];
-    
-    let existing = [];
-    
-    let existing = [];
-    
-    let existing = [];
-    
-    
-    let existing = [];
-    
-    let existing = [];
-    
-    let existing = [];
-    
-    
-    let existing = [];
-    
-
     let existing = [];
 
     try {
@@ -146,19 +41,10 @@ async function handler(req, res) {
       // File doesn't exist or is invalid, use empty array
     }
 
-
-
-
-
-
-
-
-
-
-
-
     existing.push({
       email,
+      name: name || '',
+      source,
       subscribedAt: new Date().toISOString()
     });
 
