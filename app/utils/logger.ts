@@ -397,6 +397,38 @@ class Logger {
         return 'UNKNOWN';
     }
   }
+
+  /**
+   * Log a performance metric
+   */
+  perf(metric: string, value: number, metadata?: Record<string, unknown>): void {
+    this.log(LogLevel.INFO, `[PERF] ${metric}: ${value.toFixed(2)}ms`, undefined, metadata);
+  }
+
+  /**
+   * Start a console group
+   */
+  group(label: string, fn: () => void): void {
+    if (typeof console.group === 'function') {
+      console.group(label);
+    }
+    try {
+      fn();
+    } finally {
+      if (typeof console.groupEnd === 'function') {
+        console.groupEnd();
+      }
+    }
+  }
+
+  /**
+   * End a console group
+   */
+  groupEnd(): void {
+    if (typeof console.groupEnd === 'function') {
+      console.groupEnd();
+    }
+  }
 }
 
 /**
