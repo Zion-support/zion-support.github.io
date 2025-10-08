@@ -138,14 +138,14 @@ const CybersecurityPage: React.FC = () => {
     }
   ];
 
-  const _categories = [...new Set(securityServices.map(service => service.category))];
+  const categories = [...new Set(securityServices.map(service => service.category))];
 
   return (
     <>
       <Helmet>
         <title>Cybersecurity Services - Zion Tech Group</title>
         <meta name="description" content="Advanced cybersecurity services including threat detection, penetration testing, zero trust security, and comprehensive security solutions." />
-        <meta name="keywords" content="cybersecurity services, threat detection, penetration testing, zero trust, security consulting, SOC services" />cursor/add-new-services-and-deploy-updates-f159
+        <meta name="keywords" content="cybersecurity services, threat detection, penetration testing, zero trust, security consulting, SOC services" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-red-50">
@@ -158,7 +158,7 @@ const CybersecurityPage: React.FC = () => {
                 Cybersecurity Services
               </h1>
               <p className="text-xl md:text-2xl mb-8 text-red-100 max-w-3xl mx-auto">
-                Protect your business with advanced cybersecurity solutions and expert threat protectioncursor/add-new-services-and-deploy-updates-f159
+                Protect your business with advanced cybersecurity solutions and expert threat protection
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-white text-red-600 px-8 py-3 rounded-lg font-semibold hover:bg-red-50 transition-colors">
@@ -180,7 +180,7 @@ const CybersecurityPage: React.FC = () => {
                 Why Choose Our Cybersecurity Services?
               </h2>
               <p className="text-xl text-gray-600">
-                Expert security professionals delivering comprehensive protection against evolving cyber threatscursor/add-new-services-and-deploy-updates-f159
+                Expert security professionals delivering comprehensive protection against evolving cyber threats
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -196,7 +196,7 @@ const CybersecurityPage: React.FC = () => {
                   <Eye className="w-8 h-8 text-blue-600" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">24/7 Monitoring</h3>
-                <p className="text-gray-600">Round-the-clock security monitoring and incident response</p>cursor/add-new-services-and-deploy-updates-f159
+                <p className="text-gray-600">Round-the-clock security monitoring and incident response</p>
               </div>
               <div className="text-center">
                 <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -210,7 +210,7 @@ const CybersecurityPage: React.FC = () => {
                   <AlertTriangle className="w-8 h-8 text-orange-600" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Rapid Response</h3>
-                <p className="text-gray-600">Quick incident response and recovery to minimize business impact</p>cursor/add-new-services-and-deploy-updates-f159
+                <p className="text-gray-600">Quick incident response and recovery to minimize business impact</p>
               </div>
             </div>
           </div>
@@ -229,7 +229,7 @@ const CybersecurityPage: React.FC = () => {
                 </p>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {cyberServicescursor/add-new-services-and-deploy-updates-f159
+                {securityServices
                   .filter(service => service.category === category)
                   .map((service, index) => (
                     <div key={index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
@@ -243,7 +243,7 @@ const CybersecurityPage: React.FC = () => {
                           <span className="text-sm text-gray-500">Market: {service.marketPrice}</span>
                         </div>
                         <div className="text-sm text-green-600 font-semibold">
-                          Save up to 50% vs market ratescursor/add-new-services-and-deploy-updates-f159
+                          Save up to 50% vs market rates
                         </div>
                       </div>
 
@@ -271,7 +271,7 @@ const CybersecurityPage: React.FC = () => {
                       </div>
 
                       <div className="mb-6">
-                        <h4 className="font-semibold text-gray-900 mb-2">Business Benefits:</h4>cursor/add-new-services-and-deploy-updates-f159
+                        <h4 className="font-semibold text-gray-900 mb-2">Business Benefits:</h4>
                         <ul className="space-y-1">
                           {service.benefits.map((benefit, benefitIndex) => (
                             <li key={benefitIndex} className="flex items-center text-sm text-gray-600">
@@ -292,7 +292,7 @@ const CybersecurityPage: React.FC = () => {
           </section>
         ))}
 
-        {/* Cybersecurity Capabilities Showcase */}cursor/add-new-services-and-deploy-updates-f159
+        {/* Cybersecurity Capabilities Showcase */}
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
@@ -304,7 +304,7 @@ const CybersecurityPage: React.FC = () => {
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <div className="text-center p-6 bg-gradient-to-br from-red-50 to-orange-100 rounded-lg">cursor/add-new-services-and-deploy-updates-f159
+              <div className="text-center p-6 bg-gradient-to-br from-red-50 to-orange-100 rounded-lg">
                 <Shield className="w-12 h-12 text-red-600 mx-auto mb-4" />
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Threat Detection</h3>
                 <p className="text-gray-600">AI-powered threat detection and response systems</p>
@@ -332,7 +332,7 @@ const CybersecurityPage: React.FC = () => {
               <div className="text-center p-6 bg-gradient-to-br from-indigo-50 to-blue-100 rounded-lg">
                 <AlertTriangle className="w-12 h-12 text-indigo-600 mx-auto mb-4" />
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Incident Response</h3>
-                <p className="text-gray-600">Rapid incident response and digital forensics</p>cursor/add-new-services-and-deploy-updates-f159
+                <p className="text-gray-600">Rapid incident response and digital forensics</p>
               </div>
             </div>
           </div>

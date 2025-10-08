@@ -138,7 +138,7 @@ const AutonomousSystemsPage: React.FC = () => {
     }
   ];
 
-  const _categories = [...new Set(autonomousServices.map(service => service.category))];
+  const categories = [...new Set(autonomousServices.map(service => service.category))];
 
   return (
     <>
