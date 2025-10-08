@@ -23,6 +23,7 @@ interface PerformanceMetrics {
   cls?: number;
   fmp?: number;
   ttfb?: number;
+  memory?: number;
 }
 
 interface OptimizationConfig {
@@ -94,10 +95,10 @@ class PerformanceOptimizer {
   }
 
   /**
-   * Measure render time
+   * Measure render time using PerformanceObserver
    */
   private measureRenderTime(): void {
-    if (typeof window === 'undefined' || !window.performance) return;
+    if (typeof window === 'undefined') return;
     
     // Check if PerformanceObserver exists (may not be available in test environments)
     if (typeof PerformanceObserver === 'undefined') return;
@@ -113,6 +114,7 @@ class PerformanceOptimizer {
       });
 
       observer.observe({ entryTypes: ['measure'] });
+      this.observers.push(observer);
     } catch (error) {
       // PerformanceObserver may not support 'measure' entryType in some environments
     }
@@ -373,7 +375,7 @@ ${metrics.memoryUsage > 30 * 1024 * 1024 ? '- Review memory usage and optimize c
     
     if (process.env.NODE_ENV === 'development') { 
       console.log('Performance optimization completed'); 
-      console.log(this.generateReport()); 
+      console.log(this.generateComprehensiveReport()); 
     }
   }
 }
