@@ -4,18 +4,14 @@
  */
 
 import React, { useState, useEffect, useCallback, useMemo } from 'react';
-import {
-  BannerConfig,
-  RotationStrategy,
-  selectBannersForDisplay,
-  selectBalancedBanners,
-  trackImpression,
-  trackClick,
-  loadBannerStats,
-  getRefreshInterval,
-  getRotationStrategy
-// @ts-ignore
-} from '../data/bannerConfigurations'; // @ts-ignore
+import bannerConfigurations from '../data/bannerConfigurations';
+
+type RotationStrategy = 'random' | 'sequential' | 'weighted' | 'balanced';
+
+interface BannerConfig {
+  id: string;
+  [key: string]: unknown;
+}
 
 interface UseBannerRotationOptions {
   strategy?: RotationStrategy;

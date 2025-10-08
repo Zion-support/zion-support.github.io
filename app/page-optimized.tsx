@@ -5,17 +5,14 @@ import PerformanceMonitor from './components/PerformanceMonitor';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 
 // Lazy load heavy components - these may not exist, so make them optional
-const UnifiedBanner = dynamic(() => import('./components/NewestContent2025Banner.tsx.disabled').catch(() => ({ default: () => null })), {
-  loading: () => <div className="animate-pulse bg-gray-200 h-32 rounded-lg"></div>,
-  ssr: false
-});
+const UnifiedBanner = () => null;
 
-const ContentPromotion = dynamic(() => import('./components/UltimateBusinessIntelligence2025Banner').catch(() => ({ default: () => null })), {
+const ContentPromotion = dynamic(() => import('./components/UltimateBusinessIntelligence2025Banner'), {
   loading: () => <div className="animate-pulse bg-gray-200 h-64 rounded-lg"></div>,
   ssr: false
 });
 
-const ContentShowcase = dynamic(() => import('./components/UltimateBusinessIntelligenceShowcase2025').catch(() => ({ default: () => null })), {
+const ContentShowcase = dynamic(() => import('./components/UltimateBusinessIntelligenceShowcase2025'), {
   loading: () => <div className="animate-pulse bg-gray-200 h-48 rounded-lg"></div>,
   ssr: false
 });
@@ -120,3 +117,4 @@ export default function OptimizedHomePage() {
       </div>
     </AccessibilityEnhancer>
   );
+}

@@ -24,7 +24,7 @@ import './globals.css';
 const App: React.FC = () => {
   useEffect(() => {
     // Initialize global error handling
-    logger.lifecycle('initialized', 'App');
+    logger.lifecycle('initialized', { component: 'App' });
 
     // Initialize performance monitoring
     lazyLoadImages();
@@ -43,12 +43,12 @@ const App: React.FC = () => {
       }
     }
     
-    logger.lifecycle('performance monitoring initialized', 'App');
-    logger.info('🚀 Zion Tech Group App initialized with comprehensive monitoring', 'App');
+    logger.lifecycle('performance monitoring initialized', { component: 'App' });
+    logger.info('🚀 Zion Tech Group App initialized with comprehensive monitoring', { component: 'App' });
   }, []);
 
   const handleError = useCallback((error: Error, errorInfo: any) => {
-    logger.error('Application Error', 'ErrorBoundary', { error: error.message, errorInfo });
+    logger.error('Application Error', error, { component: 'ErrorBoundary', errorInfo });
   }, []);
 
   return (
@@ -66,11 +66,10 @@ const App: React.FC = () => {
             description="Leading provider of enterprise AI solutions, quantum computing, and autonomous systems. Transform your business with our cutting-edge technology."
           >
             <AdvancedSEOOptimizer
-              config={{
+              seoData={{
                 title: 'Zion Tech Group - Advanced AI and IT Solutions',
                 description: 'Leading provider of enterprise AI solutions, quantum computing, and autonomous systems. Transform your business with our cutting-edge technology.',
                 keywords: ['AI solutions', 'enterprise AI', 'quantum computing', 'autonomous systems', 'digital transformation', 'automation', 'cloud services', 'AI consulting', 'business intelligence', 'machine learning'],
-                url: 'https://ziontechgroup.com',
                 canonicalUrl: 'https://ziontechgroup.com'
               }}
               enableStructuredData={true}
@@ -88,19 +87,6 @@ const App: React.FC = () => {
                     </Routes>
                   </Suspense>
                 </main>
-
-                {/* Performance Dashboard */}
-                <PerformanceDashboard />
-                
-                {/* Advanced Performance Monitor */}
-                <AdvancedPerformanceMonitor
-                  enableRealTimeMonitoring={process.env['NODE_ENV'] === 'development'}
-                  onMetricsUpdate={(metrics) => {
-                    if (process.env['NODE_ENV'] === 'development') {
-                      logger.performance('Performance Metrics', metrics as unknown as Record<string, unknown>, 'PerformanceMonitor');
-                    }
-                  }}
-                />
               </div>
             </Router>
           </SEOEnhancer>
