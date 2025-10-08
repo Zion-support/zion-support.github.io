@@ -2,26 +2,18 @@
 
 import React, { useEffect, useState, memo } from 'react';
 
-interface LayoutShift extends PerformanceEntry {
-  hadRecentInput: boolean;
-  value: number;
+interface PerformanceMetrics {
+  loadTime?: number;
+  renderTime?: number;
+  memoryUsage?: number;
+  bundleSize?: number;
+  cacheHitRate?: number;
+  lcp?: number;
+  fid?: number;
+  cls?: number;
+  fcp?: number;
+  ttfb?: number;
 }
-
-const PerformanceMonitor: React.FC = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({});
-
-  useEffect(() => {
-    // Web Vitals monitoring
-    const reportWebVitals = (metric: any) => {
-      // Send to analytics service
-      if (typeof window !== 'undefined' && (window as { gtag?: Function }).gtag) {
-        (window as unknown as { gtag: Function }).gtag('event', 'web_vitals', {
-          event_category: 'Performance',
-          event_label: metric.name,
-          value: Math.round(metric.value),
-          non_interaction: true,
-        });
-      }
 
 interface PerformanceMonitorProps {
   enableRealTimeMonitoring?: boolean;
@@ -45,10 +37,22 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   });
 
   const [performanceScore, setPerformanceScore] = useState<number>(0);
-  const [isVisible, setIsVisible] = useState<boolean>(false);
 
   useEffect(() => {
     if (!enableRealTimeMonitoring) return;
+
+    // Web Vitals monitoring
+    const reportWebVitals = (metric: any) => {
+      // Send to analytics service
+      if (typeof window !== 'undefined' && (window as { gtag?: Function }).gtag) {
+        (window as unknown as { gtag: Function }).gtag('event', 'web_vitals', {
+          event_category: 'Performance',
+          event_label: metric.name,
+          value: Math.round(metric.value),
+          non_interaction: true,
+        });
+      }
+    };
 
     const getMetrics = (): PerformanceMetrics => {
       const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming | undefined;
@@ -73,9 +77,9 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       const metrics = getMetrics();
       let score = 100;
       
-      if (metrics.loadTime > 3000) score -= 20;
-      if (metrics.renderTime > 1500) score -= 15;
-      if (metrics.memoryUsage > 50000000) score -= 15;
+      if (metrics.loadTime && metrics.loadTime > 3000) score -= 20;
+      if (metrics.renderTime && metrics.renderTime > 1500) score -= 15;
+      if (metrics.memoryUsage && metrics.memoryUsage > 50000000) score -= 15;
       
       return Math.max(0, score);
     };
@@ -88,10 +92,10 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       setPerformanceScore(score);
 
       if (enableConsoleLogging) {
-        logger.group('Performance Metrics', () => {
-          logger.debug('Metrics', { metrics: currentMetrics });
-          logger.debug('Score', { score });
-        });
+        console.group('Performance Metrics');
+        console.log('Metrics', currentMetrics);
+        console.log('Score', score);
+        console.groupEnd();
       }
     };
 
@@ -108,11 +112,13 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         new PerformanceObserver((list) => {
           const entries = list.getEntries();
           const lastEntry = entries[entries.length - 1];
-          reportWebVitals({
-            name: 'LCP',
-            value: lastEntry.startTime,
-          });
-          setMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }));
+          if (lastEntry) {
+            reportWebVitals({
+              name: 'LCP',
+              value: lastEntry.startTime,
+            });
+            setMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }));
+          }
         }).observe({ entryTypes: ['largest-contentful-paint'] });
 
         // FID - First Input Delay
@@ -175,16 +181,20 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         console.warn('Performance monitoring not supported:', error);
       }
     }
-  }, []);
+
+    return () => {
+      clearInterval(interval);
+    };
+  }, [enableRealTimeMonitoring, enableConsoleLogging, updateInterval]);
 
   // Don't render anything in production
-  if (process.env.NODE_ENV !== 'development') {
+  if (process.env.NODE_ENV !== 'development' && !enableVisualIndicator) {
     return null;
   }
 
   return (
     <div className="fixed bottom-4 right-4 bg-black bg-opacity-75 text-white p-4 rounded-lg text-xs font-mono z-50">
-      <div className="mb-2 font-bold">Performance Metrics</div>
+      <div className="mb-2 font-bold">Performance Metrics (Score: {performanceScore})</div>
       {Object.entries(metrics).map(([key, value]) => (
         <div key={key} className="flex justify-between gap-4">
           <span>{key.toUpperCase()}:</span>
