@@ -5,11 +5,8 @@ import PerformanceMonitor from './components/PerformanceMonitor';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 
 // Lazy load heavy components - these may not exist, so make them optional
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 const UnifiedBanner = dynamic(
-  () => import('./components/NewestContent2025Banner').catch(() => Promise.resolve({ default: () => null })), 
+  () => import('./components/NewestContent2025Banner').catch(() => Promise.resolve({ default: () => null })),
   {
     loading: () => <div className="animate-pulse bg-gray-200 h-32 rounded-lg"></div>,
     ssr: false
@@ -17,52 +14,20 @@ const UnifiedBanner = dynamic(
 );
 
 const ContentPromotion = dynamic(
-  () => import('./components/UltimateBusinessIntelligence2025Banner').catch(() => Promise.resolve({ default: () => null })), 
+  () => import('./components/UltimateBusinessIntelligence2025Banner').catch(() => Promise.resolve({ default: () => null })),
   {
     loading: () => <div className="animate-pulse bg-gray-200 h-64 rounded-lg"></div>,
     ssr: false
   }
 );
-=======
-const UnifiedBanner = dynamic(() => import('./components/NewestContent2025Banner').catch(() => import('./components/EmptyComponent')), {
-=======
-const UnifiedBanner = dynamic(() => Promise.resolve({ default: () => null }), {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-32a9
-=======
-const UnifiedBanner = dynamic(() => import('./components/NewestContent2025Banner').catch(() => ({ default: () => null as any })), {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-fd0a
-  loading: () => <div className="animate-pulse bg-gray-200 h-32 rounded-lg"></div>,
-  ssr: false
-});
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-const ContentPromotion = dynamic(() => import('./components/UltimateBusinessIntelligence2025Banner').catch(() => import('./components/EmptyComponent')), {
-=======
-const ContentPromotion = dynamic(() => import('./components/UltimateBusinessIntelligence2025Banner').catch(() => Promise.resolve({ default: () => null })), {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-32a9
-=======
-const ContentPromotion = dynamic(() => import('./components/UltimateBusinessIntelligence2025Banner').catch(() => ({ default: () => null as any })), {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-fd0a
-  loading: () => <div className="animate-pulse bg-gray-200 h-64 rounded-lg"></div>,
-  ssr: false
-});
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-4560
-
-<<<<<<< HEAD
 const ContentShowcase = dynamic(
-  () => import('./components/UltimateBusinessIntelligenceShowcase2025').catch(() => Promise.resolve({ default: () => null })), 
+  () => import('./components/UltimateBusinessIntelligenceShowcase2025').catch(() => Promise.resolve({ default: () => null })),
   {
     loading: () => <div className="animate-pulse bg-gray-200 h-48 rounded-lg"></div>,
     ssr: false
   }
 );
-=======
-const ContentShowcase = dynamic(() => import('./components/UltimateBusinessIntelligenceShowcase2025').catch(() => ({ default: () => null as any })), {
-  loading: () => <div className="animate-pulse bg-gray-200 h-48 rounded-lg"></div>,
-  ssr: false
-});
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-fd0a
 
 export const metadata = {
   title: 'Zion Tech Group — AI Enterprise Transformation & IT Services | 300% ROI Guaranteed',
@@ -133,8 +98,8 @@ export default function OptimizedHomePage() {
                   </span>
                 </h1>
                 <p className="text-xl md:text-2xl mb-8 text-blue-100 max-w-4xl mx-auto">
-                  Transform your enterprise with AI-powered solutions that deliver 300% ROI, 
-                  70% cost reduction, and 90% efficiency gains. Expert AI consulting, 
+                  Transform your enterprise with AI-powered solutions that deliver 300% ROI,
+                  70% cost reduction, and 90% efficiency gains. Expert AI consulting,
                   autonomous systems, and digital transformation services.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
