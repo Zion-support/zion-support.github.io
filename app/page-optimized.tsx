@@ -25,7 +25,7 @@ export default function OptimizedHomePage() {
     <main className="min-h-screen">
       <SEOOptimizer />
       <PerformanceMonitor />
-      <AccessibilityEnhancer />
+      <AccessibilityEnhancer><div /></AccessibilityEnhancer>
       
       <UnifiedBanner />
       <ContentPromotion />
