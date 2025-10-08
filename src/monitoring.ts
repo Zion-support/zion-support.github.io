@@ -18,8 +18,8 @@ function initializeMonitoring() {
       // Set up error tracking
       // errorHandler.init(); // Method may not exist
       
-      // Analytics is already initialized via constructor
-      // No need to call init() as the Analytics class doesn't have this method
+      // Initialize analytics
+      if ('init' in analytics && typeof analytics.init === 'function') { analytics.init(); }
       
       logger.info('Monitoring initialized successfully');
     }

@@ -10,9 +10,7 @@ interface PerformanceMetrics {
   cls?: number; // Cumulative Layout Shift
   ttfb?: number; // Time to First Byte
   fmp?: number; // First Meaningful Paint
-  tti?: number; // Time to Interactive
-  tbt?: number; // Total Blocking Time
-  customMetrics?: Record<string, number>;
+  customMetrics: Record<string, number>;
 }
 
 class PerformanceMonitor {
@@ -169,7 +167,6 @@ class PerformanceMonitor {
   }
 
   addCustomMetric(name: string, value: number): void {
-    if (!this.metrics.customMetrics) this.metrics.customMetrics = {};
     this.metrics.customMetrics[name] = value;
     this.logMetric(name, value);
   }
@@ -235,18 +232,7 @@ class PerformanceMonitor {
     const score = this.getScore();
     const metrics = this.getMetrics();
     
-    return `
-Performance Report
-==================
-Performance Score: ${score}/100
-
-Core Web Vitals:
-- LCP: ${metrics.lcp ? metrics.lcp.toFixed(0) : "N/A"}ms
-- FID: ${metrics.fid ? metrics.fid.toFixed(0) : "N/A"}ms
-- CLS: ${metrics.cls ? metrics.cls.toFixed(3) : "N/A"}
-- FCP: ${metrics.fcp ? metrics.fcp.toFixed(0) : "N/A"}ms
-- TTFB: ${metrics.ttfb ? metrics.ttfb.toFixed(0) : "N/A"}ms
-    `;
+    return `Performance Report\nScore: ${score}\nMetrics: ${JSON.stringify(metrics)}`;
   }
 }
 
