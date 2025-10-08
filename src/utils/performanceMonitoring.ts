@@ -258,9 +258,9 @@ class PerformanceMonitor {
       const clsObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
         entries.forEach((entry: unknown) => {
-          const clsEntry = entry as LayoutShift;
+          const clsEntry = entry as PerformanceEntry & { hadRecentInput?: boolean; value?: number };
           if (!clsEntry.hadRecentInput) {
-            clsValue += clsEntry.value;
+            clsValue += clsEntry.value || 0;
           }
         });
         const metric = this.createMetric('CLS', clsValue);
