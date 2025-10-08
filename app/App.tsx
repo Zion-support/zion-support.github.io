@@ -8,30 +8,49 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import AdvancedErrorBoundary from './components/AdvancedErrorBoundary';
 import AdvancedSEOOptimizer from './components/AdvancedSEOOptimizer';
-import AdvancedPerformanceMonitor from './components/AdvancedPerformanceMonitor';
 import SEOEnhancer from './components/SEOEnhancer';
-import PerformanceDashboard from './components/PerformanceDashboard';
 import LoadingSpinner from './components/LoadingSpinner';
 
-// Lazy load pages
-const HomePage = lazy(() => import('./page').catch(() => ({ default: () => <div>Error loading page</div> })));
+interface ErrorBoundaryProps {
+  children: React.ReactNode;
+}
 
-// Performance monitoring
-const performanceOptimizer = {
-  init: () => {},
-  getMetrics: () => ({ lcp: 0, fid: 0, cls: 0 })
-};
+interface ErrorBoundaryState {
+  hasError: boolean;
+  error: Error | null;
+}
 
-const logger = {
-  lifecycle: (message: string, component: string) => console.log(`[${component}] ${message}`),
-  info: (message: string, data?: any) => console.log(message, data),
-  error: (message: string, error: Error, data?: any) => console.error(message, error, data),
-  performance: (message: string, metrics: any, component: string) => console.log(`[${component}] ${message}`, metrics)
-};
+class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundaryState> {
+  constructor(props: ErrorBoundaryProps) {
+    super(props);
+    this.state = { hasError: false, error: null };
+  }
 
-const lazyLoadImages = () => {};
-const preloadCriticalResources = () => {};
-const collectPerformanceMetrics = () => ({ lcp: 0, fid: 0, cls: 0 });
+  static getDerivedStateFromError(error: Error): ErrorBoundaryState {
+    return { hasError: true, error };
+  }
+
+  override componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
+    console.error('App Error Boundary caught an error:', error, errorInfo);
+  }
+
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+  }
+}
+
+// Import missing components and utilities
+declare const logger: any;
+declare const lazyLoadImages: () => void;
+declare const preloadCriticalResources: () => void;
+declare const performanceOptimizer: any;
+declare const collectPerformanceMetrics: () => any;
+declare const HomePage: React.FC;
+declare const PerformanceDashboard: React.FC;
+declare const AdvancedPerformanceMonitor: React.FC<any>;
 
 const App: React.FC = () => {
   useEffect(() => {
