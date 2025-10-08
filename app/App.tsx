@@ -115,16 +115,20 @@ const App: React.FC = () => {
       }
     }
     
-    // Log performance and accessibility metrics periodically
+    // Log performance and accessibility metrics periodically - optimized
     const metricsInterval = setInterval(() => {
-      const performanceMetrics = performanceMonitor.getMetrics();
-      const accessibilityMetrics = accessibilityEnhancer.getMetrics();
-      
       if (process.env.NODE_ENV === 'development') {
-        // eslint-disable-next-line no-console
-        console.log('Performance Score:', performanceMonitor.getScore());
-        // eslint-disable-next-line no-console
-        console.log('Accessibility Score:', accessibilityMetrics.overallScore);
+        const performanceMetrics = performanceMonitor.getMetrics();
+        const accessibilityMetrics = accessibilityEnhancer.getMetrics();
+        
+        if (performanceMetrics) {
+          // eslint-disable-next-line no-console
+          console.log('Performance Score:', performanceMonitor.getScore());
+        }
+        if (accessibilityMetrics) {
+          // eslint-disable-next-line no-console
+          console.log('Accessibility Score:', accessibilityMetrics.overallScore);
+        }
       }
     }, 30000);
     
