@@ -21,7 +21,7 @@ interface State {
  * Global Error Boundary with improved error handling and recovery
  */
 export class GlobalErrorBoundary extends Component<Props, State> {
-  private resetTimeout: NodeJS.Timeout | null = null;
+  private resetTimeout: ReturnType<typeof setTimeout> | null = null;
 
   constructor(props: Props) {
     super(props);
@@ -120,7 +120,8 @@ export class GlobalErrorBoundary extends Component<Props, State> {
               </p>
             </div>
 
-            {process.env.NODE_ENV === 'development' && this.state.error && (
+            {/* Show error details in development/debugging mode */}
+            {this.state.error && (
               <div className="mb-6 p-4 bg-red-500/10 border border-red-500/20 rounded-lg">
                 <h3 className="text-lg font-semibold text-red-400 mb-2">Error Details:</h3>
                 <p className="text-sm text-gray-300 font-mono mb-2">
