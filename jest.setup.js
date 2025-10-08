@@ -58,7 +58,11 @@ jest.mock('react-router-dom', () => ({
   useParams: () => ({}),
   BrowserRouter: ({ children }) => children,
   MemoryRouter: ({ children }) => children,
+<<<<<<< HEAD
   Router: ({ children }) => children,
+=======
+  RouterProvider: ({ router }) => null,
+>>>>>>> origin/main
 }));
 
 // Mock window.matchMedia
@@ -86,6 +90,11 @@ global.IntersectionObserver = class IntersectionObserver {
   }
   unobserve() {}
 };
+
+// Mock TextEncoder and TextDecoder
+const { TextEncoder, TextDecoder } = require('util');
+global.TextEncoder = TextEncoder;
+global.TextDecoder = TextDecoder;
 
 // Suppress console errors in tests
 const originalError = console.error;
