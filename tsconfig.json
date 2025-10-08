@@ -184,10 +184,5 @@
     "fix-*.jsx",
     "fix-*.ts",
     "jest.setup.*"
-  ],
-  "references": [
-    {
-      "path": "./tsconfig.node.json"
-    }
   ]
 }

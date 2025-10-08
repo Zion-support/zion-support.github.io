@@ -117,12 +117,6 @@ const App: React.FC = () => {
     
     // Log performance and accessibility metrics periodically - optimized
     const metricsInterval = setInterval(() => {
-<<<<<<< HEAD
-=======
-      // const _performanceMetrics = performanceMonitor.getMetrics();
-      const accessibilityMetrics = accessibilityEnhancer.getMetrics();
-      
->>>>>>> cursor/fix-errors-and-merge-to-main-1f43
       if (process.env.NODE_ENV === 'development') {
         const performanceMetrics = performanceMonitor.getMetrics();
         const accessibilityMetrics = accessibilityEnhancer.getMetrics();

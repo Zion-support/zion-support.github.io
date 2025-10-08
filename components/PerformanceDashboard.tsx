@@ -37,7 +37,7 @@ const PerformanceDashboard: React.FC = () => {
     //Update metrics periodically
     const interval = setInterval(updateMetrics, 1000);
 
-    return () => clearInterval(_interval);
+    return () => clearInterval(interval);
   }, []);
 
   //Only show in development
