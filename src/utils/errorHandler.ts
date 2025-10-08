@@ -2,6 +2,58 @@
  * Error handling utilities
  * Enhanced with retry logic, error categorization, and better reporting
  */
+
+export enum ErrorCategory {
+  NETWORK = 'NETWORK',
+  VALIDATION = 'VALIDATION',
+  API = 'API',
+  UI = 'UI',
+  RUNTIME = 'RUNTIME',
+  UNKNOWN = 'UNKNOWN',
+}
+
+export enum ErrorSeverity {
+  LOW = 'LOW',
+  MEDIUM = 'MEDIUM',
+  HIGH = 'HIGH',
+  CRITICAL = 'CRITICAL',
+}
+
+export interface ErrorInfo {
+  id: string;
+  message: string;
+  stack?: string;
+  category: ErrorCategory;
+  severity: ErrorSeverity;
+  timestamp: number;
+  url?: string;
+  userAgent?: string;
+  additionalData?: Record<string, unknown>;
+}
+
+class ErrorHandler {
+  private errorQueue: ErrorInfo[] = [];
+  private maxQueueSize: number = 50;
+
+  /**
+   * Handle error with categorization and severity detection
+   */
+  handleError(error: Error, additionalData?: Record<string, unknown>): void {
+    const category = this.categorizeError(error);
+    const severity = this.determineSeverity(error, category);
+
+    const errorData: ErrorInfo = {
+      id: this.generateErrorId(),
+      message: error.message,
+      stack: error.stack,
+      category,
+      severity,
+      timestamp: Date.now(),
+      url: typeof window !== 'undefined' ? window.location.href : undefined,
+      userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : undefined,
+      additionalData,
+    };
+
     this.errorQueue.push(errorData);
     if (this.errorQueue.length > this.maxQueueSize) {
       this.errorQueue.shift();
@@ -68,6 +120,11 @@
   private reportError(errorData: ErrorInfo): void {
     // Implementation for reporting to external service
     console.error('Error reported:', errorData);
+
+    // Send to external service (e.g., Sentry, LogRocket, etc.)
+    if (typeof window !== 'undefined' && (window as any).errorReporter) {
+      (window as any).errorReporter.report(errorData);
+    }
   }
 
   /**
