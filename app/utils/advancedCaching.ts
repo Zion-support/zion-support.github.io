@@ -246,7 +246,7 @@ class AdvancedCache<T = unknown> {
     }
 
     const value = await fetcher();
-    this.set(key, value as unknown as T, ttl);
+    this.set(key, value, ttl);
     return value;
   }
 }
