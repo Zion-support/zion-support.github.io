@@ -189,8 +189,6 @@ class MonitoringService {
     console.error('[Error]', error)
 
     // Send to error tracking service (if configured)
-
-    }
   }
   public getMetrics(): PerformanceMetrics {
     return { ...this.metrics }

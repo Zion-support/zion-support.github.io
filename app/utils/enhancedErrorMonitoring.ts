@@ -100,11 +100,9 @@ class EnhancedErrorMonitoring {
    */
   private setupNetworkErrorMonitoring(): void {
     const originalFetch = window.fetch
-    const self = this
-
     window.fetch = async function(...args) {
       try {
-        const response = await originalFetch.apply(this, args)
+        const response = await originalFetch.apply(self, args)
         
         if (!response.ok) {
           self.handleError(new Error(`HTTP ${response.status}: ${response.statusText}`), {
@@ -317,9 +315,9 @@ class EnhancedErrorMonitoring {
     }, {} as Record<string, number>)
 
     return {
-      total: this.errorQueue.length
-      bySeverity
-      byCategory
+      total: this.errorQueue.length,
+      bySeverity,
+      byCategory,
       recent: recent.slice(0, 10)
     }
   }
