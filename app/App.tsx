@@ -119,7 +119,6 @@ const App: React.FC = () => {
           logger.error(error.message, { error, errorInfo });
         }}
       >
-<<<<<<< HEAD
         <PerformanceOptimizer>
           <AccessibilityEnhancer>
             <SEOEnhancer
@@ -174,9 +173,7 @@ const App: React.FC = () => {
                     </Suspense>
                   </main>
                   <Footer />
-                </div>
-              </Router>
-
+                  
                   {/* Performance Dashboard */}
                   <PerformanceDashboard />
                   
