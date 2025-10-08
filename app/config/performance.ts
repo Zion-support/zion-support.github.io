@@ -83,7 +83,6 @@ export const performanceConfig = {
   },
 };
 
-<<<<<<< HEAD
 export type PerformanceConfig = typeof performanceConfig;
 
 export default performanceConfig;

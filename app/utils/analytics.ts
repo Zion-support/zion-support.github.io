@@ -124,7 +124,7 @@ class AnalyticsService {
         });
       }
     } catch (error) {
-      console.error('Failed to track timing:', error)
+      console.error('Failed to track timing:', error);
     }
   }
   /**
@@ -140,7 +140,7 @@ class AnalyticsService {
         metadata,
       });
     } catch (error) {
-      console.error('Failed to track performance:', error)
+      console.error('Failed to track performance:', error);
     }
   }
   /**

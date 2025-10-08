@@ -86,7 +86,9 @@ class EnhancedErrorMonitoring {
       event => {
         if (event.target !== window) {
           this.handleError(new Error(`Resource loading error: ${event.target}`), {
-            resource: (event.target as HTMLImageElement | HTMLLinkElement).src || (event.target as HTMLImageElement | HTMLLinkElement).href,
+            resource:
+              (event.target as HTMLImageElement | HTMLLinkElement).src ||
+              (event.target as HTMLImageElement | HTMLLinkElement).href,
             category: 'resource',
           });
         }

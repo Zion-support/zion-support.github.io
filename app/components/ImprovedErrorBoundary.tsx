@@ -66,8 +66,19 @@ class ImprovedErrorBoundary extends Component<Props, State> {
     }
 
     // Send to external error tracking (if available)
-    if (typeof window !== 'undefined' && (window as unknown as { Sentry?: { captureException: (error: Error, context: unknown) => void } }).Sentry) {
-      (window as unknown as { Sentry: { captureException: (error: Error, context: unknown) => void } }).Sentry.captureException(error, {
+    if (
+      typeof window !== 'undefined' &&
+      (
+        window as unknown as {
+          Sentry?: { captureException: (error: Error, context: unknown) => void };
+        }
+      ).Sentry
+    ) {
+      (
+        window as unknown as {
+          Sentry: { captureException: (error: Error, context: unknown) => void };
+        }
+      ).Sentry.captureException(error, {
         contexts: {
           react: {
             componentStack: errorInfo.componentStack,

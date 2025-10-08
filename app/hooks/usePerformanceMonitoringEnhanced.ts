@@ -1,16 +1,19 @@
 import { useEffect, useCallback } from 'react';
 
 export const usePerformanceMonitoring = () => {
-  const reportWebVitals = useCallback((metric: { name: string; value: number; delta: number; id: string }) => {
-    const body = JSON.stringify(metric);
-    const url = '/api/analytics';
+  const reportWebVitals = useCallback(
+    (metric: { name: string; value: number; delta: number; id: string }) => {
+      const body = JSON.stringify(metric);
+      const url = '/api/analytics';
 
-    if (navigator.sendBeacon) {
-      navigator.sendBeacon(url, body);
-    } else {
-      fetch(url, { body, method: 'POST', keepalive: true }).catch(console.error);
-    }
-  }, []);
+      if (navigator.sendBeacon) {
+        navigator.sendBeacon(url, body);
+      } else {
+        fetch(url, { body, method: 'POST', keepalive: true }).catch(console.error);
+      }
+    },
+    []
+  );
 
   useEffect(() => {
     if (typeof window !== 'undefined' && 'performance' in window) {

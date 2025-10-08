@@ -14,18 +14,13 @@ export const usePerformanceOptimization = () => {
       return null;
     }
 
-    const navigation = performance.getEntriesByType(
-      'navigation'
-    )[0] as PerformanceNavigationTiming;
+    const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
     const paintEntries = performance.getEntriesByType('paint');
 
     const metrics: PerformanceMetrics = {
-      loadTime: navigation
-        ? navigation.loadEventEnd - navigation.loadEventStart
-        : 0,
+      loadTime: navigation ? navigation.loadEventEnd - navigation.loadEventStart : 0,
       firstContentfulPaint:
-        paintEntries.find(entry => entry.name === 'first-contentful-paint')
-          ?.startTime || 0,
+        paintEntries.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0,
       largestContentfulPaint: 0,
       cumulativeLayoutShift: 0,
       firstInputDelay: 0,
@@ -63,8 +58,7 @@ export const usePerformanceOptimization = () => {
         const fidEntry = entry as PerformanceEntry & {
           processingStart?: number;
         };
-        metrics.firstInputDelay =
-          (fidEntry.processingStart || 0) - entry.startTime;
+        metrics.firstInputDelay = (fidEntry.processingStart || 0) - entry.startTime;
       }
     });
 
@@ -126,11 +120,11 @@ export const usePerformanceOptimization = () => {
         if (process.env['NODE_ENV'] === 'production') {
           // Track metrics in production
         }
-         
-        if (process.env['NODE_ENV'] === 'development') { 
-          if (import.meta.env.DEV) { 
-            console.log('Performance Metrics:', metrics); 
-          } 
+
+        if (process.env['NODE_ENV'] === 'development') {
+          if (import.meta.env.DEV) {
+            console.log('Performance Metrics:', metrics);
+          }
         }
       }
     }, 1000);
