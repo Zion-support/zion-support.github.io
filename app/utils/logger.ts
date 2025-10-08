@@ -331,6 +331,42 @@ class Logger {
         return 'UNKNOWN';
     }
   }
+
+  /**
+   * Log performance metrics
+   */
+  perf(metric: string, value: number, metadata?: Record<string, unknown>): void {
+    this.log(LogLevel.INFO, `Performance: ${metric} = ${value}ms`, undefined, {
+      metric,
+      value,
+      ...metadata,
+    });
+  }
+
+  /**
+   * Group logs together
+   */
+  group(label: string, fn: () => void): void {
+    if (this.config.enableConsole && typeof console.group === 'function') {
+      console.group(label);
+    }
+    try {
+      fn();
+    } finally {
+      if (this.config.enableConsole && typeof console.groupEnd === 'function') {
+        console.groupEnd();
+      }
+    }
+  }
+
+  /**
+   * End a log group
+   */
+  groupEnd(): void {
+    if (this.config.enableConsole && typeof console.groupEnd === 'function') {
+      console.groupEnd();
+    }
+  }
 }
 
 /**
