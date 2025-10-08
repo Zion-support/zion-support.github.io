@@ -162,6 +162,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     }
   }, [seoData]);
 
+<<<<<<< HEAD
 
   const _trackPageView = (config: SEOData) => {
     if (typeof window !== 'undefined' && 'gtag' in window) {
@@ -186,6 +187,8 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
       });
     }
   };
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-f58f
 
   return (
     <Helmet>

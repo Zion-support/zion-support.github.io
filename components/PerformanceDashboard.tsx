@@ -21,10 +21,10 @@ const PerformanceDashboard: React.FC = () => {
       const navigation = performance.getEntriesByType(
         'navigation'
       )[0] as PerformanceNavigationTiming;
-      const _loadTime = navigation ? navigation.loadEventEnd - navigation.loadEventStart : 0;
+      const loadTime = navigation ? navigation.loadEventEnd - navigation.loadEventStart : 0;
 
-      const _memory = (performance as Performance & { memory?: { usedJSHeapSize: number } }).memory;
-      const _memoryUsage = memory ? memory.usedJSHeapSize / 1024 / 1024 : 0;
+      const memory = (performance as Performance & { memory?: { usedJSHeapSize: number } }).memory;
+      const memoryUsage = memory ? memory.usedJSHeapSize / 1024 / 1024 : 0;
 
       setMetrics(prev => ({
         ...prev,
@@ -37,7 +37,7 @@ const PerformanceDashboard: React.FC = () => {
     updateMetrics();
 
     //Update metrics periodically
-    const _interval = setInterval(updateMetrics, 1000);
+    const interval = setInterval(updateMetrics, 1000);
 
     return () => clearInterval(interval);
   }, []);
