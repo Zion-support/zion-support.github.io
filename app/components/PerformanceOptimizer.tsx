@@ -1,19 +1,3 @@
-<<<<<<< HEAD
-import React, { useEffect, useState } from 'react';
-
-interface PerformanceMetrics {
-  loadTime: number;
-  firstContentfulPaint: number;
-  largestContentfulPaint: number;
-  cumulativeLayoutShift: number;
-  firstInputDelay: number;
-}
-
-<<<<<<< HEAD
-const PerformanceOptimizer: React.FC = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
-  const [isOptimized, setIsOptimized] = useState(false);
-=======
 const PerformanceOptimizerComponent: React.FC<PerformanceOptimizerProps> = ({
   children,
 }) => {
@@ -27,7 +11,6 @@ const PerformanceOptimizerComponent: React.FC<PerformanceOptimizerProps> = ({
         'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap';
       fontLink.as = 'style';
       document.head.appendChild(fontLink);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-6395
 
   useEffect(() => {
     // Performance monitoring
@@ -65,7 +48,6 @@ const PerformanceOptimizerComponent: React.FC<PerformanceOptimizerProps> = ({
       window.addEventListener('load', measurePerformance);
     }
 
-=======
 import React, { useEffect } from 'react';
 
 const PerformanceOptimizer: React.FC = () => {
@@ -75,25 +57,14 @@ const PerformanceOptimizer: React.FC = () => {
     const preloadCriticalResources = () => {
       const criticalImages = [
         '/og-image.jpg',
-<<<<<<< HEAD
-        '/logo.png'
-=======
         '/logo.png',
         '/favicon.ico'
 >>>>>>> cursor/analyze-improve-and-deploy-application-3d67
       ];
 
       criticalImages.forEach(src => {
-<<<<<<< HEAD
-        const link = document.createElement('link');
-        link.rel = 'preload';
-        link.as = 'image';
-        link.href = src;
-        document.head.appendChild(link);
-=======
         const _img = new Image();
         img['src'] = src;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-6395
       });
     };
 
@@ -132,21 +103,6 @@ const PerformanceOptimizer: React.FC = () => {
 
     // Initialize optimizations
     preloadCriticalResources();
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-    // Optimize images
-    const optimizeImages = () => {
-      const images = document.querySelectorAll('img');
-      images.forEach(img => {
-        if (!img.loading) {
-          img.loading = 'lazy';
-        }
-        if (!img.decoding) {
-          img.decoding = 'async';
-        }
-      });
-=======
   // Optimize scroll performance
   const handleScroll = useCallback(() => {
     // Throttle scroll events for better performance
@@ -155,7 +111,6 @@ const PerformanceOptimizer: React.FC = () => {
     const updateScrollPosition = () => {
       // Add scroll-based optimizations here
       ticking = false;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-6395
     };
 
     optimizeImages();
@@ -175,16 +130,6 @@ const PerformanceOptimizer: React.FC = () => {
         { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossOrigin: 'anonymous' }
       ];
 
-<<<<<<< HEAD
-      hints.forEach(hint => {
-        const link = document.createElement('link');
-        link.rel = hint.rel;
-        link.href = hint.href;
-        if (hint.crossOrigin) {
-          link.crossOrigin = hint.crossOrigin;
-        }
-        document.head.appendChild(link);
-=======
   // Add performance monitoring
   useEffect(() => {
     if ('performance' in window) {
@@ -195,7 +140,6 @@ const PerformanceOptimizer: React.FC = () => {
             if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { } }
           }
         });
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-6395
       });
     };
 
@@ -203,7 +147,6 @@ const PerformanceOptimizer: React.FC = () => {
   }, []);
 
   // Don't render anything visible
-=======
     optimizeImages();
     setupIntersectionObserver();
 

@@ -50,7 +50,7 @@ describe('AdvancedErrorBoundary', () => {
   });
 
   it('calls onError callback when error occurs', () => {
-    const _onError = jest.fn();
+    const onError = jest.fn();
     const consoleSpy = jest
       .spyOn(console, 'error')
       .mockImplementation(() => {});
@@ -72,8 +72,8 @@ describe('AdvancedErrorBoundary', () => {
       .spyOn(console, 'error')
       .mockImplementation(() => {});
 
-    let _shouldThrow = true;
-    const _TestComponent = () => <ThrowError shouldThrow={shouldThrow} />;
+    let shouldThrow = true;
+    const TestComponent = () => <ThrowError shouldThrow={shouldThrow} />;
 
     const { rerender } = render(
       <MemoryRouter>
@@ -83,7 +83,7 @@ describe('AdvancedErrorBoundary', () => {
       </MemoryRouter>
     );
 
-    const _retryButton = screen.getByText('Try Again (3 attempts left)');
+    const retryButton = screen.getByText('Try Again (3 attempts left)');
     
     // Change shouldThrow before clicking retry
     shouldThrow = false;
