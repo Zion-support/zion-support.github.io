@@ -5,45 +5,23 @@
 
 import React, { useState, useEffect, useCallback, useMemo } from 'react';
 
-// Define types locally since the module doesn't export them correctly
-type RotationStrategy = 'sequential' | 'random' | 'weighted' | 'balanced';
-
-interface BannerConfig {
+// Types
+export interface BannerConfig {
   id: string;
-  component: React.ComponentType<any>;
-  weight?: number;
-  displayCount?: number;
-  clickCount?: number;
+  name: string;
+  priority: number;
 }
 
-// Stub implementations for banner functions
-const selectBannersForDisplay = async (strategy: RotationStrategy, maxBanners: number): Promise<BannerConfig[]> => {
-  return [];
-};
+export type RotationStrategy = 'balanced' | 'priority' | 'random';
 
-const selectBalancedBanners = (banners: BannerConfig[], maxBanners: number): BannerConfig[] => {
-  return [];
-};
-
-const trackImpression = (bannerId: string): void => {
-  // Stub implementation
-};
-
-const trackClick = (bannerId: string): void => {
-  // Stub implementation
-};
-
-const loadBannerStats = async (): Promise<{ impressions: number; clicks: number; ctr: number }> => {
-  return { impressions: 0, clicks: 0, ctr: 0 };
-};
-
-const getRefreshInterval = (): number => {
-  return 30000;
-};
-
-const getRotationStrategy = (): RotationStrategy => {
-  return 'balanced';
-};
+// Placeholder functions for banner operations
+const selectBannersForDisplay = async (strategy: RotationStrategy, max: number): Promise<BannerConfig[]> => [];
+const selectBalancedBanners = async (max: number): Promise<BannerConfig[]> => [];
+const trackImpression = (id: string) => {};
+const trackClick = (id: string) => {};
+const loadBannerStats = async () => ({ impressions: 0, clicks: 0, ctr: 0 });
+const getRefreshInterval = () => 30000;
+const getRotationStrategy = (): RotationStrategy => 'balanced';
 
 interface UseBannerRotationOptions {
   strategy?: RotationStrategy;
@@ -86,16 +64,14 @@ export const useBannerRotation = (options: UseBannerRotationOptions = {}) => {
     try {
       setState(prev => ({ ...prev, isLoading: true, error: null }));
       
-      // Import bannerConfigurations
-      const { default: bannerConfigs } = await import('../data/bannerConfigurations');
-      const banners = selectBannersForDisplay(bannerConfigs, maxBanners);
-      const stats = enableTracking ? loadBannerStats() : { impressions: 0, clicks: 0, ctr: 0 };
+      const banners = await selectBannersForDisplay(strategy, maxBanners);
+      const stats = enableTracking ? await loadBannerStats() : { impressions: 0, clicks: 0, ctr: 0 };
       
-      setState((prev) => ({
+      setState(prev => ({
         ...prev,
         currentBanners: banners,
         isLoading: false,
-        stats: stats
+        stats
       }));
     } catch (error) {
       setState(prev => ({

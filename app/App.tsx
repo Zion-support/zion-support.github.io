@@ -10,59 +10,17 @@ import AdvancedErrorBoundary from './components/AdvancedErrorBoundary';
 import AdvancedSEOOptimizer from './components/AdvancedSEOOptimizer';
 import SEOEnhancer from './components/SEOEnhancer';
 import LoadingSpinner from './components/LoadingSpinner';
+import HomePage from './page';
+import PerformanceMonitor from './components/PerformanceMonitor';
 
 // Utils
 import { logger } from './utils/logger';
-import { performanceOptimizer } from './utils/performanceOptimizer';
-
-// Lazy-loaded components
-const HomePage = lazy(() => import('./pages/Home').catch(() => ({ default: () => <div>Home Page</div> })));
-const PerformanceDashboard = lazy(() => import('./components/PerformanceDashboard').catch(() => ({ default: () => null })));
-const AdvancedPerformanceMonitor = lazy(() => import('./components/AdvancedPerformanceMonitor').catch(() => ({ default: () => null })));
-
-// Helper functions
-const lazyLoadImages = () => {
-  if (typeof window !== 'undefined' && 'IntersectionObserver' in window) {
-    const images = document.querySelectorAll('img[data-src]');
-    const imageObserver = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          const img = entry.target as HTMLImageElement;
-          img.src = img.dataset.src || '';
-          imageObserver.unobserve(img);
-        }
-      });
-    });
-    images.forEach((img) => imageObserver.observe(img));
-  }
-};
-
-const preloadCriticalResources = () => {
-  if (typeof window !== 'undefined') {
-    const links = document.querySelectorAll('link[rel="preload"]');
-    links.forEach((link) => {
-      const href = link.getAttribute('href');
-      if (href) {
-        const prefetchLink = document.createElement('link');
-        prefetchLink.rel = 'prefetch';
-        prefetchLink.href = href;
-        document.head.appendChild(prefetchLink);
-      }
-    });
-  }
-};
-
-const collectPerformanceMetrics = () => {
-  if (typeof window !== 'undefined' && 'performance' in window) {
-    const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-    return {
-      loadTime: navigation?.loadEventEnd || 0,
-      domContentLoaded: navigation?.domContentLoadedEventEnd || 0,
-      firstPaint: 0,
-    };
-  }
-  return null;
-};
+import { 
+  performanceOptimizer, 
+  lazyLoadImages, 
+  preloadCriticalResources, 
+  collectPerformanceMetrics 
+} from './utils/performanceOptimizer';
 
 const App: React.FC = () => {
   useEffect(() => {
@@ -112,10 +70,10 @@ const App: React.FC = () => {
           >
             <AdvancedSEOOptimizer
               seoData={{
-                title: 'Zion Tech Group - Advanced AI and IT Solutions',
-                description: 'Leading provider of enterprise AI solutions, quantum computing, and autonomous systems. Transform your business with our cutting-edge technology.',
+                title: "Zion Tech Group - Advanced AI and IT Solutions",
+                description: "Leading provider of enterprise AI solutions, quantum computing, and autonomous systems. Transform your business with our cutting-edge technology.",
                 keywords: ['AI solutions', 'enterprise AI', 'quantum computing', 'autonomous systems', 'digital transformation', 'automation', 'cloud services', 'AI consulting', 'business intelligence', 'machine learning'],
-                canonicalUrl: 'https://ziontechgroup.com'
+                canonicalUrl: "https://ziontechgroup.com"
               }}
               enableStructuredData={true}
               enableOpenGraph={true}
@@ -149,18 +107,8 @@ const App: React.FC = () => {
                   </Suspense>
                 </main>
 
-                {/* Performance Dashboard */}
-                <PerformanceDashboard />
-                
-                {/* Advanced Performance Monitor */}
-                <AdvancedPerformanceMonitor
-                  enableRealTimeMonitoring={process.env['NODE_ENV'] === 'development'}
-                  onMetricsUpdate={(metrics) => {
-                    if (process.env['NODE_ENV'] === 'development') {
-                      logger.performance('Performance Metrics', metrics as unknown as Record<string, unknown>, 'PerformanceMonitor');
-                    }
-                  }}
-                />
+                {/* Performance Monitor */}
+                <PerformanceMonitor />
               </div>
             </Router>
           </SEOEnhancer>

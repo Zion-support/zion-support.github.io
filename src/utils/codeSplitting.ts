@@ -218,7 +218,7 @@ export class ChunkLoadMonitor {
     }
   }
 
-  static getMetrics(chunkName: string): { chunkName: string; loadTime: number | undefined; size: number | undefined; error: Error | undefined; cached: boolean } | null {
+  static getMetrics(chunkName: string) {
     const chunk = this.chunks.get(chunkName);
     if (!chunk) return null;
 
@@ -236,12 +236,24 @@ export class ChunkLoadMonitor {
     };
   }
 
-  static getAllMetrics(): Array<{ chunkName: string; loadTime: number | undefined; size: number | undefined; error: Error | undefined; cached: boolean }> {
-    const metrics: Array<{ chunkName: string; loadTime: number | undefined; size: number | undefined; error: Error | undefined; cached: boolean }> = [];
+  static getAllMetrics(): Array<{
+    chunkName: string;
+    loadTime?: number;
+    size?: number;
+    error?: Error;
+    cached: boolean;
+  }> {
+    const metrics: Array<{
+      chunkName: string;
+      loadTime?: number;
+      size?: number;
+      error?: Error;
+      cached: boolean;
+    }> = [];
     for (const [chunkName] of this.chunks) {
       const m = this.getMetrics(chunkName); if (m) metrics.push(m);
     }
-    return metrics.filter((m): m is { chunkName: string; loadTime: number | undefined; size: number | undefined; error: Error | undefined; cached: boolean } => m !== null);
+    return metrics.filter((m) => m !== null);
   }
 
   static clearMetrics(): void {
