@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { ChevronDown, Phone, Mail, MapPin, Menu, X } from 'lucide-react';
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -9,6 +10,13 @@ const Navigation: React.FC = () => {
 =======
 =======
 import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap } from 'lucide-react';
+=======
+import { ChevronDown, Menu, X } from 'lucide-react';
+
+const Navigation: React.FC = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [servicesOpen, setServicesOpen] = useState(false);
+>>>>>>> cursor/fix-errors-and-merge-to-main-ea96
 
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -89,7 +97,10 @@ const Navigation: React.FC = () => {
       ]
     }
   ];
+<<<<<<< HEAD
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-1ed2
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-ea96
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -101,8 +112,11 @@ const Navigation: React.FC = () => {
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-deb0
           <Link to="/" className="text-2xl font-bold text-blue-600 flex items-center">
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-ea96
           <Link to="/" className="text-2xl font-bold text-cyan-400 neon-text flex items-center">
             <span className="text-3xl mr-2">⚡</span>
             Zion Tech Group
@@ -122,6 +136,7 @@ const Navigation: React.FC = () => {
           </Link>
           {/* Desktop Menu */}
 <<<<<<< HEAD
+<<<<<<< HEAD
           <div className="hidden lg:flex space-x-8">
             <Link to="/" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
               Home
@@ -129,6 +144,8 @@ const Navigation: React.FC = () => {
 <<<<<<< HEAD
             <Link to="/about" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">              About
             </Link>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-ea96
           <div className="hidden lg:flex items-center space-x-8">
             <Link to="/" className="text-gray-300 hover:text-cyan-400 transition-colors font-medium">
               Home
@@ -165,7 +182,14 @@ const Navigation: React.FC = () => {
               <button
                 onClick={() => setServicesOpen(!servicesOpen)}
 <<<<<<< HEAD
+<<<<<<< HEAD
                 className="text-gray-300 hover:text-cyan-400 transition-colors flex items-center font-medium"              >
+=======
+                className="text-gray-300 hover:text-cyan-400 transition-colors flex items-center font-medium"
+                aria-expanded={servicesOpen}
+                aria-haspopup="true"
+              >
+>>>>>>> cursor/fix-errors-and-merge-to-main-ea96
                 Services
                 <ChevronDown className="w-4 h-4 ml-1" />
 =======
@@ -180,6 +204,9 @@ const Navigation: React.FC = () => {
               
               {servicesOpen && (
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-ea96
                 <div className="absolute top-full left-0 mt-2 w-96 bg-white rounded-lg shadow-xl border py-4 z-50">
                   <div className="grid grid-cols-2 gap-4 px-4">
                     <div>
@@ -191,7 +218,12 @@ const Navigation: React.FC = () => {
                           className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded transition-colors"
                           onClick={() => setServicesOpen(false)}
                         >
+<<<<<<< HEAD
                           {service.name}                        </Link>
+=======
+                          {service.name}
+                        </Link>
+>>>>>>> cursor/fix-errors-and-merge-to-main-ea96
                       ))}
                     </div>
                     <div>
@@ -207,6 +239,7 @@ const Navigation: React.FC = () => {
                         </Link>
                       ))}
                     </div>
+<<<<<<< HEAD
 =======
                 <div className="absolute top-full left-0 mt-2 w-96 bg-white rounded-xl shadow-2xl border border-gray-200 py-6 z-50">
                   <div className="grid grid-cols-2 gap-6 px-6">
@@ -375,6 +408,9 @@ const Navigation: React.FC = () => {
             </div>
           </div>
 <<<<<<< HEAD
+=======
+                  </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-ea96
                 </div>
               )}
             </div>
@@ -399,7 +435,12 @@ const Navigation: React.FC = () => {
                       >
                         {tech.name}
                       </Link>
+<<<<<<< HEAD
                     ))}                  </div>
+=======
+                    ))}
+                  </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-ea96
                 </div>
               )}
             </div>
@@ -420,12 +461,18 @@ const Navigation: React.FC = () => {
           <button
             onClick={() => setIsOpen(!isOpen)}
             className="lg:hidden text-gray-300 hover:text-cyan-400 transition-colors"
+            aria-expanded={isOpen}
+            aria-label="Toggle mobile menu"
           >
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
+<<<<<<< HEAD
         )}
       </div>
+=======
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-ea96
         {/* Mobile Menu */}
         {isOpen && (
           <div className="lg:hidden py-4 border-t border-gray-700">
@@ -515,6 +562,7 @@ const Navigation: React.FC = () => {
         )}
       </div>
     </nav>
+<<<<<<< HEAD
   );
 };
 =======
@@ -661,6 +709,8 @@ const Navigation: React.FC = () => {
         />
       )}
     </nav>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-ea96
   );
 };
 
