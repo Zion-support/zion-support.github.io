@@ -13,7 +13,11 @@ function initializeMonitoring() {
     // Set up performance monitoring
     if (typeof window !== 'undefined') {
       // Monitor web vitals
+<<<<<<< HEAD
       // performanceOptimizer.init(); // Method may not exist
+=======
+      performanceOptimizer.optimize();
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ad8
       
       // Set up error tracking
       // errorHandler.init(); // Method does not exist

@@ -93,6 +93,7 @@ class PerformanceOptimizer {
     }
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
   private observeLCP() {
     try {
       const observer = new PerformanceObserver((list) => {
@@ -195,13 +196,18 @@ class PerformanceOptimizer {
 
     const images = document.querySelectorAll('img[data-src]')
 =======
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ad8
 
   /**
    * Measure render time
    */
   private measureRenderTime(): void {
     if (typeof window === 'undefined' || !window.performance) return;
+<<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-eab2
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ad8
     
     // Check if PerformanceObserver exists (may not be available in test environments)
     if (typeof PerformanceObserver === 'undefined') return;

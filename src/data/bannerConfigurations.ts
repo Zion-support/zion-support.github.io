@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 // Stub file to satisfy import
 export interface BannerConfig {
   id: string;
@@ -15,6 +16,8 @@ export const loadBannerStats = () => ({});
 export const getRefreshInterval = () => 5000;
 export const getRotationStrategy = (): RotationStrategy => 'balanced';
 =======
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ad8
 export interface BannerConfig {
   id: string;
   title: string;
@@ -72,4 +75,7 @@ export const getRotationStrategy = (): RotationStrategy => {
 };
 
 export default bannerConfigurations;
+<<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-eab2
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ad8
