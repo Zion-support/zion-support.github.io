@@ -215,6 +215,13 @@ class Logger {
   }
 
   /**
+   * Create a child logger with a specific context
+   */
+  child(context: string): ContextLogger {
+    return new ContextLogger(this, context);
+  }
+
+  /**
    * Flush buffered logs to remote endpoint
    */
   async flush(): Promise<void> {
