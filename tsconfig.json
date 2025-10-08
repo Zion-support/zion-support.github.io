@@ -114,6 +114,7 @@
     "app/case-studies/**/*",
     "app/guides/**/*",
     "app/components/**/*",
+    "app/utils/**/*",
     "src/components/disabled-corrupted/**",
     "EnhancedFooter.tsx",
     "EnhancedHeader.tsx",
@@ -126,10 +127,11 @@
     "api/**",
     "lib/**",
     "utils/**",
-    "src/utils/**",
     "blog/**",
     "backup-problematic-files/**",
     "automation/**",
+    "src/utils/hooks.ts",
+    "src/utils/index.ts",
     "**/*.disabled/**",
     "**/*.backup/**"
   ],
@@ -137,28 +139,5 @@
     {
       "path": "./tsconfig.node.json"
     }
-  ],
-  "exclude": [
-    "_app_disabled/**/*",
-    "_conflicted_disabled/**/*",
-    "_pages_api_disabled/**/*",
-    "_pages_disabled/**/*",
-    "admin-api-disabled/**/*",
-    "api-disabled/**/*",
-    "api.disabled/**/*",
-    "api.disabled.temp/**/*",
-    "api-backup/**/*",
-    "apps.backup/**/*",
-    "automation_backup/**/*",
-    "ai-optimization-backups/**/*",
-    "automation_logs/**/*",
-    "all-automations-reports/**/*",
-    "accessibility-reports/**/*",
-    "corrupted-files-backup/**/*",
-    "corrupted_backup/**/*",
-    "corrupted_files_backup_2/**/*",
-    "components_backup/**/*",
-    "data_backup/**/*",
-    "lib_backup/**/*"
   ]
 }

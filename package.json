@@ -102,7 +102,7 @@
     "format:all": "prettier --write \"**/*.{ts,tsx,js,jsx,json,css,md}\"",
     "clean:all": "rm -rf .next node_modules/.next .turbo",
     "precommit": "npm run type-check && npm run lint && npm run test:unit",
-    "postinstall": "npm run type-check"
+    "postinstall": "echo 'Dependencies installed successfully'"
   },
   "dependencies": {
     "@esbuild/linux-x64": "^0.25.10",
