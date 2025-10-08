@@ -45,7 +45,7 @@ class SEOOptimizer {
   init(): void {
     this.setupStructuredData();
     this.setupCanonicalUrls();
-    this.initializeMetaTags();
+    this.updateMetaTags();
     this.setupPerformanceMonitoring();
   }
 
@@ -173,7 +173,7 @@ class SEOOptimizer {
   private getRobotsContent(): string {
     if (!this.currentPageData) return 'index, follow';
     
-    const directives = [];
+    const directives: string[] = [];
     
     if (!this.currentPageData.noindex) {
       directives.push('index');
