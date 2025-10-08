@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, Star, Shield, Lock, Eye, AlertTriangle, Target, BarChart, Brain, Settings, Globe, Database } from 'lucide-react';
+import { CheckCircle, Star, Shield, Lock, Eye, AlertTriangle, Database } from 'lucide-react';
 
 const CybersecurityPage: React.FC = () => {
   const securityServices = [
@@ -138,7 +138,7 @@ const CybersecurityPage: React.FC = () => {
     }
   ];
 
-  const _categories = [...new Set(securityServices.map(service => service.category))];
+  const categories = [...new Set(securityServices.map(service => service.category))];
 
   return (
     <>

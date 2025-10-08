@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, Star, Brain, Zap, Target, BarChart, MessageSquare, Eye, Cpu, Sparkles, Shield, Globe, Users, TrendingUp } from 'lucide-react';
+import { CheckCircle, Star, Brain, Zap, Target, BarChart, MessageSquare, Eye, Cpu, Sparkles } from 'lucide-react';
 
 const AIServicesPage: React.FC = () => {
   const aiServices = [
@@ -331,11 +331,7 @@ const AIServicesPage: React.FC = () => {
     }
   ];
 
-<<<<<<< HEAD
   const categories = [...new Set(aiServices.map(service => service.category))];
-=======
-  // const _categories = [...new Set(aiServices.map(service => service.category))];
->>>>>>> cursor/fix-errors-and-merge-to-main-1f43
 
   return (
     <>
