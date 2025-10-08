@@ -22,14 +22,11 @@ export async function registerServiceWorker(
   }
 
   // Only register in production or if explicitly enabled
-=======
   const _isLocalhost = Boolean(
     window.location.hostname === 'localhost' ||
       window.location.hostname === '[::1]' ||
       window.location.hostname.match(/^127(?:\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$/)
   );
-
->>>>>>> cursor/fix-errors-and-merge-to-main-add2
   try {
     // Wait for page to load
     await new Promise<void>((resolve) => {
@@ -40,7 +37,6 @@ export async function registerServiceWorker(
       }
     });
 
-<<<<<<< HEAD
     // eslint-disable-next-line no-console
     console.log('[SW] Registering service worker...');
 

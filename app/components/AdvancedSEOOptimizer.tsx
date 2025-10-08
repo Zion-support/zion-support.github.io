@@ -162,64 +162,6 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     }
   }, [seoData]);
 
-  // const addMetaTag = (name: string, content: string, attribute: string = 'name') => {
-  //   const metaTag = document.createElement('meta');
-  //   metaTag.setAttribute(attribute, name);
-  //   metaTag.content = content;
-  //   document.head.appendChild(metaTag);
-  // };
-
-  // const updateCanonicalUrl = (url: string) => {
-  //   let canonicalLink = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
-  //   
-  //   if (canonicalLink) {
-  //     canonicalLink.href = url;
-  //   } else {
-  //     canonicalLink = document.createElement('link');
-  //     canonicalLink.rel = 'canonical';
-  //     canonicalLink.href = url;
-  //     document.head.appendChild(canonicalLink);
-  //   }
-  // };
-
-  // const addStructuredData = (data: Record<string, unknown>) => {
-  //   // Remove existing structured data
-  //   if (_structuredDataRef.current) {
-  //     _structuredDataRef.current.remove();
-  //   }
-
-  //   // Add new structured data
-  //   const script = document.createElement('script');
-  //   script.type = 'application/ld+json';
-  //   script.textContent = JSON.stringify(data);
-  //   script.id = 'structured-data';
-  //   document.head.appendChild(script);
-  //   _structuredDataRef.current = script;
-  // };
-
-  // const trackPageView = (config: SEOData) => {
-  //   if (typeof window !== 'undefined' && 'gtag' in window) {
-  //     (window as unknown as { gtag: (command: string, targetId: string, config: Record<string, unknown>) => void }).gtag('config', 'GA_MEASUREMENT_ID', {
-  //       page_title: config.title,
-  //       page_location: config.canonicalUrl,
-  //     });
-  //   }
-  // };
-
-  // const trackPerformanceMetrics = () => {
-  //   if (typeof window !== 'undefined' && 'performance' in window) {
-  //     window.addEventListener('load', () => {
-  //       const perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-  //       if (perfData && typeof window !== 'undefined' && 'gtag' in window) {
-  //         (window as unknown as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag('event', 'page_load_performance', {
-  //           event_category: 'Performance',
-  //           event_label: 'Page Load',
-  //           value: Math.round(perfData.loadEventEnd - perfData.fetchStart),
-  //         });
-  //       }
-  //     });
-  //   }
-  // };
   return (
     <Helmet>
       {/* Basic Meta Tags */}
