@@ -1,4 +1,5 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
+
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
@@ -6,6 +7,7 @@ interface Props {
   enableErrorReporting?: boolean;
   maxRetries?: number;
 }
+
 interface State {
   hasError: boolean;
   error?: Error;
@@ -13,6 +15,7 @@ interface State {
   errorId?: string;
   retryCount: number;
 }
+
 class EnhancedErrorBoundary extends Component<Props, State> {
   private maxRetries: number;
 
@@ -25,6 +28,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     };
     this.maxRetries = props.maxRetries || 3;
   }
+
   static getDerivedStateFromError(error: Error): State {
     return { 
       hasError: true, 
@@ -33,27 +37,23 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       retryCount: 0
     };
   }
+
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
       error,
       errorInfo
     });
-<<<<<<< HEAD
-    // Log error to console in development
-    if (process.env.NODE_ENV === 'development') {
-      console.error('Error caught by boundary:', error, errorInfo);
-    }
-=======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-ea96
     // Call custom error handler if provided
     if (this.props.onError) {
       this.props.onError(error, errorInfo);
     }
+
     // Enhanced error reporting
     if (this.props.enableErrorReporting) {
       this.reportError(error, errorInfo);
     }
+
     // Log to console in development
     if (process.env.NODE_ENV === 'development') {
       // eslint-disable-next-line no-console
@@ -68,6 +68,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       console.groupEnd();
     }
   }
+
   private reportError = (error: Error, errorInfo: ErrorInfo) => {
     const errorReport = {
       errorId: this.state.errorId,
@@ -81,8 +82,10 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       userId: this.getUserId(),
       sessionId: this.getSessionId(),
     };
+
     // Send to error reporting service
     this.sendErrorReport(errorReport);
+
     // Send to analytics if available
     if (typeof window !== 'undefined' && (window as unknown as { gtag: unknown }).gtag) {
       (window as unknown as { gtag: (command: string, event: string, data: Record<string, unknown>) => void }).gtag('event', 'exception', {
@@ -95,17 +98,14 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       });
     }
   };
+
   private sendErrorReport = async (errorReport: Record<string, unknown>) => {
     try {
       // In a real app, you would send this to your error reporting service
       // For now, we'll just log it
       // eslint-disable-next-line no-console
-<<<<<<< HEAD
-      origin/cursor/fix-errors-and-merge-to-main-6395      // Example: Send to error reporting service
-=======
       console.log('Error Report:', errorReport);
       // Example: Send to error reporting service
->>>>>>> cursor/fix-errors-and-merge-to-main-ea96
       // await fetch('/api/errors', {
       //   method: 'POST',
       //   headers: { 'Content-Type': 'application/json' },
@@ -116,10 +116,12 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       console.warn('Failed to send error report:', reportingError);
     }
   };
+
   private getUserId = (): string | null => {
     // Get user ID from localStorage, cookies, or context
     return localStorage.getItem('userId') || null;
   };
+
   private getSessionId = (): string => {
     let sessionId = sessionStorage.getItem('sessionId');
     if (!sessionId) {
@@ -128,6 +130,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     }
     return sessionId;
   };
+
   private handleRetry = () => {
     if (this.state.retryCount < this.maxRetries) {
       this.setState(prevState => ({
@@ -141,12 +144,15 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       window.location.reload();
     }
   };
+
   private handleReload = () => {
     window.location.reload();
   };
+
   private handleGoHome = () => {
     window.location.href = '/';
   };
+
   private copyErrorDetails = () => {
     const errorDetails = {
       errorId: this.state.errorId,
@@ -156,6 +162,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       timestamp: new Date().toISOString(),
       url: window.location.href,
     };
+
     navigator.clipboard.writeText(JSON.stringify(errorDetails, null, 2))
       .then(() => {
         // Show success message
@@ -173,33 +180,16 @@ class EnhancedErrorBoundary extends Component<Props, State> {
         console.warn('Failed to copy error details');
       });
   };
-<<<<<<< HEAD
-<<<<<<< HEAD
-  // In production, you might want to send this to an error reporting service
-  if (process.env.NODE_ENV === 'production') {
-    // Example: send to error reporting service
-    // errorReportingService.captureException(error, { extra: errorInfo });
-  }
-=======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-deb0
-=======
-
->>>>>>> cursor/fix-errors-and-merge-to-main-ea96
   render() {
     if (this.state.hasError) {
       if (this.props.fallback) {
         return this.props.fallback;
       }
+
       const { retryCount, error, errorId } = this.state;
-<<<<<<< HEAD
-      const _canRetry = retryCount < this.maxRetries;
-<<<<<<< HEAD
-=======
-=======
       const canRetry = retryCount < this.maxRetries;
 
->>>>>>> cursor/fix-errors-and-merge-to-main-ea96
       return (
         <div className="min-h-screen flex items-center justify-center bg-gray-50">
           <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-8 text-center">
@@ -260,4 +250,3 @@ class EnhancedErrorBoundary extends Component<Props, State> {
 }
 
 export default EnhancedErrorBoundary;
->>>>>>> cursor/fix-errors-and-merge-to-main-deb0
