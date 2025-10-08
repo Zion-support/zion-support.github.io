@@ -298,7 +298,7 @@ class SEOOptimizer {
   /**
    * Generate sitemap data
    */
-  generateSitemapData(): Record<string, unknown>[] {
+  generateSitemapData(): Array<{ url: string; lastmod: string; changefreq: string; priority: number }> {
     // This would typically come from your CMS or routing system
     return [
       {
