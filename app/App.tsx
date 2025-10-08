@@ -6,23 +6,12 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 // Components
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
-<<<<<<< HEAD
-import PerformanceDashboard from './components/PerformanceDashboard';
-import AdvancedPerformanceMonitor from './components/AdvancedPerformanceMonitor';
 import AdvancedErrorBoundary from './components/AdvancedErrorBoundary';
-import SEOEnhancer from './components/SEOEnhancer';
 import AdvancedSEOOptimizer from './components/AdvancedSEOOptimizer';
+import AdvancedPerformanceMonitor from './components/AdvancedPerformanceMonitor';
+import SEOEnhancer from './components/SEOEnhancer';
+import PerformanceDashboard from './components/PerformanceDashboard';
 import LoadingSpinner from './components/LoadingSpinner';
-=======
-import AdvancedErrorBoundary from './components/AdvancedErrorBoundary';
-import AdvancedSEOOptimizer from './components/AdvancedSEOOptimizer';
-import AdvancedPerformanceMonitor from './components/AdvancedPerformanceMonitor';
-import SEOEnhancer from './components/SEOEnhancer';
-import PerformanceDashboard from './components/PerformanceDashboard';
-import ContentShowcase from './components/ContentShowcase';
-import InteractiveContentShowcase2026 from './components/InteractiveContentShowcase2026';
-import InteractiveAIROICalculator from './components/InteractiveAIROICalculator';
->>>>>>> 49f746e8c3195449347ee8bebb6ca5b0ab732544
 
 // Lazy load pages for better performance
 const HomePage = lazy(() => import('./page'));
@@ -37,13 +26,11 @@ import './globals.css';
 const App: React.FC = () => {
   useEffect(() => {
     // Initialize global error handling
-<<<<<<< HEAD
     logger.lifecycle('initialized', 'App');
 
     // Initialize performance monitoring
     lazyLoadImages();
     preloadCriticalResources();
-=======
     console.log('App initialized');
 
     // Initialize performance monitoring
@@ -52,7 +39,6 @@ const App: React.FC = () => {
     
     // Initialize Web Vitals monitoring
     if (typeof window !== 'undefined' && 'performance' in window) {
-<<<<<<< HEAD
       const pageLoadMetrics = collectPerformanceMetrics();
       const metrics = performanceOptimizer.getMetrics();
       if (pageLoadMetrics) {
@@ -65,7 +51,6 @@ const App: React.FC = () => {
     
     logger.lifecycle('performance monitoring initialized', 'App');
     logger.info('🚀 Zion Tech Group App initialized with comprehensive monitoring', 'App');
-=======
       const metrics = performanceOptimizer.getMetrics();
       if (metrics) {
         // eslint-disable-next-line no-console
@@ -89,7 +74,6 @@ const App: React.FC = () => {
 
   return (
     <HelmetProvider>
-<<<<<<< HEAD
       <AdvancedErrorBoundary
         enableErrorReporting={true}
         enableRetry={true}
@@ -158,7 +142,6 @@ const App: React.FC = () => {
           </SEOEnhancer>
         </AccessibilityEnhancer>
       </AdvancedErrorBoundary>
-=======
       <ErrorBoundary>
         <div>
           <SEOOptimizer />
@@ -202,9 +185,7 @@ const App: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
 export default App;
-=======
 // Loading fallback component
 const LoadingFallback: React.FC<{ height?: string }> = ({
   height = 'h-32',

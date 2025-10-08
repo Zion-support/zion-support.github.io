@@ -64,7 +64,6 @@ class ErrorBoundary extends Component<Props, State> {
       }
 
       return (
-<<<<<<< HEAD
         <div className="min-h-screen flex items-center justify-center bg-gray-50">
           <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-8 text-center">
             <div className="mb-6">
@@ -98,7 +97,6 @@ class ErrorBoundary extends Component<Props, State> {
                   <div className="mt-2 p-4 bg-gray-100 rounded text-xs">
                     <div className="mb-2">
                       <strong>Error:</strong> {this.state.error.message}
-=======
         <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-red-50 to-orange-50">
           <div className="max-w-md w-full mx-4">
             <div className="bg-white rounded-2xl shadow-xl p-8 text-center">

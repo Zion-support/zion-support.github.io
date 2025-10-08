@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import {
   Github,
   Linkedin,
@@ -61,9 +59,7 @@ const EnhancedFooter: React.FC = () => {
                 href='https://linkedin.com/company/ziontechgroup'
                 className='text-gray-400 hover:text-white transition-colors'
               >
-<<<<<<< HEAD
                 <span className='text-lg'>💼</span>
-=======
                 <Linkedin className='w-5 h-5' />
 >>>>>>> 49f746e8c3195449347ee8bebb6ca5b0ab732544
               </a>
@@ -77,9 +73,7 @@ const EnhancedFooter: React.FC = () => {
                 href='https://github.com/ziontechgroup'
                 className='text-gray-400 hover:text-white transition-colors'
               >
-<<<<<<< HEAD
                 <span className='text-lg'>🐙</span>
-=======
                 <Github className='w-5 h-5' />
 >>>>>>> 49f746e8c3195449347ee8bebb6ca5b0ab732544
               </a>

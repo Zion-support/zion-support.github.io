@@ -58,7 +58,6 @@ class PerformanceOptimizer {
     if (typeof window === 'undefined' || !('PerformanceObserver' in window)) return;
 
     try {
-<<<<<<< HEAD
       // Monitor Core Web Vitals
       this.observeLCP();
       this.observeFID();
@@ -96,7 +95,6 @@ class PerformanceOptimizer {
     let clsValue = 0;
     const observer = new PerformanceObserver((list) => {
       const entries = list.getEntries();
-=======
       if (this.config.enableMonitoring) {
         await this.setupPerformanceObservers();
         this.startMonitoring();
@@ -173,9 +171,7 @@ class PerformanceOptimizer {
           clsValue += entry.value;
         }
       });
-<<<<<<< HEAD
       this.metrics.cls = clsValue;
-=======
         this.metrics.cls = clsValue;
       });
       clsObserver.observe({ entryTypes: ['layout-shift'] });
