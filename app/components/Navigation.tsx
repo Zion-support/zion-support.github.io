@@ -37,7 +37,7 @@ const Navigation: React.FC = () => {
                 <ChevronDown className="w-4 h-4 ml-1" />
               </button>
               {servicesOpen && (
-                <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg border py-2 z-50">
+                <div className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-lg border py-2 z-50">
                   <Link to="/services" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
                     All Services
                   </Link>
@@ -49,6 +49,15 @@ const Navigation: React.FC = () => {
                   </Link>
                   <Link to="/it-services" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
                     IT Services
+                  </Link>
+                  <Link to="/quantum-computing" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                    Quantum Computing
+                  </Link>
+                  <Link to="/autonomous-systems" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                    Autonomous Systems
+                  </Link>
+                  <Link to="/business-intelligence" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                    Business Intelligence
                   </Link>
                   <Link to="/services-advertising" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
                     Advertising Services
@@ -128,6 +137,15 @@ const Navigation: React.FC = () => {
                   </Link>
                   <Link to="/it-services" className="block text-gray-600 hover:text-blue-600 transition-colors">
                     IT Services
+                  </Link>
+                  <Link to="/quantum-computing" className="block text-gray-600 hover:text-blue-600 transition-colors">
+                    Quantum Computing
+                  </Link>
+                  <Link to="/autonomous-systems" className="block text-gray-600 hover:text-blue-600 transition-colors">
+                    Autonomous Systems
+                  </Link>
+                  <Link to="/business-intelligence" className="block text-gray-600 hover:text-blue-600 transition-colors">
+                    Business Intelligence
                   </Link>
                   <Link to="/services-advertising" className="block text-gray-600 hover:text-blue-600 transition-colors">
                     Advertising Services

@@ -69,39 +69,89 @@ const HomePage: React.FC = () => {
         </section>
 
         {/* Services Section */}
-        <section className="grid md:grid-cols-3 gap-8 mb-16" aria-labelledby="services-heading">
-          <h2 id="services-heading" className="sr-only">
+        <section className="mb-16" aria-labelledby="services-heading">
+          <h2 id="services-heading" className="text-3xl font-bold text-gray-900 mb-8 text-center">
             Our Services
           </h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <Suspense fallback={<ServiceCardSkeleton />}>
+              <article className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
+                <div className="text-4xl mb-4">💻</div>
+                <h3 className="text-2xl font-semibold text-gray-900 mb-4">Micro SAAS Solutions</h3>
+                <p className="text-gray-600 mb-4">
+                  Affordable, powerful AI-driven tools for modern businesses. 24+ ready-to-use solutions starting at $69/month.
+                </p>
+                <a href="/micro-saas" className="text-blue-600 hover:text-blue-800 font-semibold">
+                  Learn More →
+                </a>
+              </article>
+            </Suspense>
 
-          <Suspense fallback={<ServiceCardSkeleton />}>
-            <article className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
-              <h3 className="text-2xl font-semibold text-gray-900 mb-4">AI Solutions</h3>
-              <p className="text-gray-600">
-                Harness the power of artificial intelligence to drive innovation and efficiency in
-                your organization.
-              </p>
-            </article>
-          </Suspense>
+            <Suspense fallback={<ServiceCardSkeleton />}>
+              <article className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
+                <div className="text-4xl mb-4">🤖</div>
+                <h3 className="text-2xl font-semibold text-gray-900 mb-4">AI Services</h3>
+                <p className="text-gray-600 mb-4">
+                  Advanced artificial intelligence solutions including ML, NLP, computer vision, and predictive analytics.
+                </p>
+                <a href="/ai-services" className="text-blue-600 hover:text-blue-800 font-semibold">
+                  Learn More →
+                </a>
+              </article>
+            </Suspense>
 
-          <Suspense fallback={<ServiceCardSkeleton />}>
-            <article className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
-              <h3 className="text-2xl font-semibold text-gray-900 mb-4">Digital Transformation</h3>
-              <p className="text-gray-600">
-                Transform your business processes with cutting-edge technology and expert
-                consultation.
-              </p>
-            </article>
-          </Suspense>
+            <Suspense fallback={<ServiceCardSkeleton />}>
+              <article className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
+                <div className="text-4xl mb-4">⚙️</div>
+                <h3 className="text-2xl font-semibold text-gray-900 mb-4">IT Services</h3>
+                <p className="text-gray-600 mb-4">
+                  Comprehensive IT solutions including cloud infrastructure, cybersecurity, DevOps, and database administration.
+                </p>
+                <a href="/it-services" className="text-blue-600 hover:text-blue-800 font-semibold">
+                  Learn More →
+                </a>
+              </article>
+            </Suspense>
 
-          <Suspense fallback={<ServiceCardSkeleton />}>
-            <article className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
-              <h3 className="text-2xl font-semibold text-gray-900 mb-4">Cloud Services</h3>
-              <p className="text-gray-600">
-                Scale your infrastructure with secure, reliable, and efficient cloud solutions.
-              </p>
-            </article>
-          </Suspense>
+            <Suspense fallback={<ServiceCardSkeleton />}>
+              <article className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
+                <div className="text-4xl mb-4">⚛️</div>
+                <h3 className="text-2xl font-semibold text-gray-900 mb-4">Quantum Computing</h3>
+                <p className="text-gray-600 mb-4">
+                  Next-generation quantum computing capabilities for complex problem solving and optimization.
+                </p>
+                <a href="/quantum-computing" className="text-blue-600 hover:text-blue-800 font-semibold">
+                  Learn More →
+                </a>
+              </article>
+            </Suspense>
+
+            <Suspense fallback={<ServiceCardSkeleton />}>
+              <article className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
+                <div className="text-4xl mb-4">🔄</div>
+                <h3 className="text-2xl font-semibold text-gray-900 mb-4">Autonomous Systems</h3>
+                <p className="text-gray-600 mb-4">
+                  Self-managing and self-optimizing systems for enterprise operations and infrastructure.
+                </p>
+                <a href="/autonomous-systems" className="text-blue-600 hover:text-blue-800 font-semibold">
+                  Learn More →
+                </a>
+              </article>
+            </Suspense>
+
+            <Suspense fallback={<ServiceCardSkeleton />}>
+              <article className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
+                <div className="text-4xl mb-4">📊</div>
+                <h3 className="text-2xl font-semibold text-gray-900 mb-4">Business Intelligence</h3>
+                <p className="text-gray-600 mb-4">
+                  Data-driven insights and analytics for strategic decision making and business optimization.
+                </p>
+                <a href="/business-intelligence" className="text-blue-600 hover:text-blue-800 font-semibold">
+                  Learn More →
+                </a>
+              </article>
+            </Suspense>
+          </div>
         </section>
 
         {/* Call to Action Section */}
@@ -110,12 +160,12 @@ const HomePage: React.FC = () => {
             Ready to Get Started?
           </h2>
           <a
-            href="tel:+13026009898"
+            href="tel:+13024640950"
             onClick={handlePhoneClick}
             className="inline-block bg-indigo-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-4 focus:ring-indigo-300"
-            aria-label="Call us at (302) 600-9898"
+            aria-label="Call us at (302) 464-0950"
           >
-            Contact Us: (302) 600-9898
+            Contact Us: (302) 464-0950
           </a>
         </section>
       </main>

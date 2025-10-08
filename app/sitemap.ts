@@ -1,12 +1,13 @@
+import { MetadataRoute } from 'next'
 
-export default function sitemap() {
-  const baseUrl = 'https://ziontechgroup.com';
-
+export default function sitemap(): MetadataRoute.Sitemap {
+  const baseUrl = 'https://ziontechgroup.com'
+  
   return [
     {
       url: baseUrl,
       lastModified: new Date(),
-      changeFrequency: 'weekly',
+      changeFrequency: 'daily',
       priority: 1,
     },
     {
@@ -22,22 +23,58 @@ export default function sitemap() {
       priority: 0.9,
     },
     {
-      url: `${baseUrl}/contact`,
+      url: `${baseUrl}/micro-saas`,
       lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.7,
+      changeFrequency: 'weekly',
+      priority: 0.9,
     },
     {
-      url: `${baseUrl}/enterprise`,
+      url: `${baseUrl}/ai-services`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/it-services`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/quantum-computing`,
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/blog`,
+      url: `${baseUrl}/autonomous-systems`,
       lastModified: new Date(),
-      changeFrequency: 'daily',
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/business-intelligence`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/enterprise`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/team`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
       priority: 0.6,
+    },
+    {
+      url: `${baseUrl}/contact`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
     },
     {
       url: `${baseUrl}/privacy`,
@@ -51,5 +88,5 @@ export default function sitemap() {
       changeFrequency: 'yearly',
       priority: 0.3,
     },
-  ];
+  ]
 }
