@@ -234,15 +234,14 @@ class PerformanceMonitor {
     
     return `
 Performance Report:
-- Performance Score: ${score}%
-- First Contentful Paint: ${metrics.fcp}ms
-- Largest Contentful Paint: ${metrics.lcp}ms
-- First Input Delay: ${metrics.fid}ms
-- Cumulative Layout Shift: ${metrics.cls}
-- Time to First Byte: ${metrics.ttfb}ms
-- Total Blocking Time: ${metrics.tbt}ms
-`;
+Score: ${score}/100
+- FCP: ${metrics.fcp ? `${metrics.fcp}ms` : 'N/A'}
+- LCP: ${metrics.lcp ? `${metrics.lcp}ms` : 'N/A'}
+- FID: ${metrics.fid ? `${metrics.fid}ms` : 'N/A'}
+- CLS: ${metrics.cls !== undefined ? metrics.cls.toFixed(3) : 'N/A'}
+- TTFB: ${metrics.ttfb ? `${metrics.ttfb}ms` : 'N/A'}
+    `.trim();
   }
 }
 
-export default PerformanceMonitor;
+export const performanceMonitor = new PerformanceMonitor();

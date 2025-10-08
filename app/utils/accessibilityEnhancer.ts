@@ -678,16 +678,16 @@ class AccessibilityEnhancer {
     
     return `
 Accessibility Report:
-- Focusable Elements: ${metrics.focusableElements}
-- Images without Alt: ${metrics.imagesWithoutAlt}
-- Links without Text: ${metrics.linksWithoutText}
-- Headings without Content: ${metrics.headingsWithoutContent}
-- Color Contrast Issues: ${metrics.colorContrastIssues}
-- Keyboard Navigation Score: ${metrics.keyboardNavigationScore}%
-- Screen Reader Score: ${metrics.screenReaderScore}%
-- Overall Accessibility Score: ${metrics.overallScore}%
-`;
+- Focus Management: ${metrics.focusManagement ? 'Enabled' : 'Disabled'}
+- Keyboard Navigation: ${metrics.keyboardNavigation ? 'Enabled' : 'Disabled'}
+- Screen Reader Support: ${metrics.screenReaderSupport ? 'Enabled' : 'Disabled'}
+- High Contrast: ${metrics.highContrast ? 'Enabled' : 'Disabled'}
+- Reduced Motion: ${metrics.reducedMotion ? 'Enabled' : 'Disabled'}
+- Color Contrast: ${metrics.colorContrast ? 'Enabled' : 'Disabled'}
+- ARIA Labels: ${metrics.ariaLabels ? 'Enabled' : 'Disabled'}
+- Skip Links: ${metrics.skipLinks ? 'Enabled' : 'Disabled'}
+    `.trim();
   }
 }
 
-export default AccessibilityEnhancer;
+export const accessibilityEnhancer = new AccessibilityEnhancer();
