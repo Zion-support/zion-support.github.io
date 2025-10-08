@@ -8,11 +8,7 @@
     "allowImportingTsExtensions": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
-<<<<<<< HEAD
-    "composite": true,
-=======
     "noEmit": false,
->>>>>>> cursor/fix-errors-and-merge-to-main-ef5d
     "jsx": "preserve",
     "strict": true,
     "noUnusedLocals": true,
