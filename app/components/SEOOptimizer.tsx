@@ -1,4 +1,3 @@
-'use client';
 
 import React, { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
@@ -20,6 +19,7 @@ const SEOOptimizer: React.FC = () => {
   }, [pathname]);
 
   return null;
+
 };
 
 export default SEOOptimizer;

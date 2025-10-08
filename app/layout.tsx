@@ -1,4 +1,8 @@
 import React from 'react';
+<<<<<<< HEAD
+=======
+import { Helmet } from 'react-helmet-async';
+>>>>>>> cursor/fix-errors-and-merge-to-main-dd0b
 import './globals.css';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import AnalyticsProvider from './components/AnalyticsProvider';
@@ -6,13 +10,19 @@ import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import PWAInstaller from './components/PWAInstaller';
 import { GlobalErrorBoundary } from './components/GlobalErrorBoundary';
 
+<<<<<<< HEAD
 // Metadata will be handled by React Helmet in individual components
 
 export default function RootLayout({
   children,
 }: {
+=======
+interface RootLayoutProps {
+>>>>>>> cursor/fix-errors-and-merge-to-main-dd0b
   children: React.ReactNode;
-}) {
+}
+
+const RootLayout: React.FC<RootLayoutProps> = ({ children }) => {
   const structuredData = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
@@ -39,35 +49,66 @@ export default function RootLayout({
   };
 
   return (
-    <html lang='en'>
-      <head>
-        <link rel='icon' href='/favicon.ico' />
-        <link
-          rel='apple-touch-icon'
-          sizes='180x180'
-          href='/apple-touch-icon.png'
+    <>
+      <Helmet>
+        <title>Zion Tech Group - AI & IT Solutions</title>
+        <meta
+          name="description"
+          content="Leading provider of AI-powered enterprise solutions, automation, and digital transformation services."
         />
-        <link
-          rel='icon'
-          type='image/png'
-          sizes='32x32'
-          href='/favicon-32x32.png'
+        <meta
+          name="keywords"
+          content="AI solutions, enterprise AI, digital transformation, automation, cloud services"
         />
-        <link
-          rel='icon'
-          type='image/png'
-          sizes='16x16'
-          href='/favicon-16x16.png'
+        <meta name="author" content="Zion Tech Group" />
+        <meta name="creator" content="Zion Tech Group" />
+        <meta name="publisher" content="Zion Tech Group" />
+        
+        {/* Open Graph */}
+        <meta property="og:title" content="Zion Tech Group - AI & IT Solutions" />
+        <meta
+          property="og:description"
+          content="Leading provider of AI-powered enterprise solutions, automation, and digital transformation services."
         />
-        <link rel='manifest' href='/site.webmanifest' />
-        <meta name='theme-color' content='#4f46e5' />
-        <meta name='viewport' content='width=device-width, initial-scale=1' />
-        <script
-          type='application/ld+json'
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        <meta property="og:url" content="https://ziontechgroup.com" />
+        <meta property="og:site_name" content="Zion Tech Group" />
+        <meta property="og:image" content="https://ziontechgroup.com/og-image.jpg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:alt" content="Zion Tech Group - AI & IT Solutions" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Zion Tech Group - AI & IT Solutions" />
+        <meta
+          name="twitter:description"
+          content="Leading provider of AI-powered enterprise solutions, automation, and digital transformation services."
         />
-      </head>
-      <body className='antialiased'>
+        <meta name="twitter:image" content="https://ziontechgroup.com/og-image.jpg" />
+        
+        {/* Robots */}
+        <meta name="robots" content="index, follow" />
+        <meta name="googlebot" content="index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1" />
+        
+        {/* Verification */}
+        <meta name="google-site-verification" content="your-google-verification-code" />
+        
+        {/* Icons */}
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+        <link rel="manifest" href="/site.webmanifest" />
+        <meta name="theme-color" content="#4f46e5" />
+        
+        {/* Structured Data */}
+        <script type="application/ld+json">
+          {JSON.stringify(structuredData)}
+        </script>
+      </Helmet>
+      <div className="antialiased">
         <GlobalErrorBoundary>
           <AnalyticsProvider>
             <AccessibilityEnhancer>
@@ -77,7 +118,9 @@ export default function RootLayout({
             </AccessibilityEnhancer>
           </AnalyticsProvider>
         </GlobalErrorBoundary>
-      </body>
-    </html>
+      </div>
+    </>
   );
-}
+};
+
+export default RootLayout;

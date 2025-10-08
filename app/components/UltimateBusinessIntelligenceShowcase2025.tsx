@@ -132,6 +132,7 @@ const UltimateBusinessIntelligenceShowcase2025: React.FC = () => {
       </div>
     </section>
   );
+
 };
 
 export default UltimateBusinessIntelligenceShowcase2025;
