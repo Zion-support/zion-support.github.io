@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Globe } from 'lucide-react';
+import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Phone, Mail, ExternalLink } from 'lucide-react';
 
 const MicroSAASPage: React.FC = () => {
   const microSAASServices = [
@@ -14,7 +14,10 @@ const MicroSAASPage: React.FC = () => {
       benefits: ['Reduce bugs by 70%', 'Improve code quality', 'Save 10+ hours/week on reviews'],
       marketPrice: '$150-300/month',
       category: 'Developer Tools',
-      technologies: ['GitHub Actions', 'SonarQube', 'ESLint', 'Prettier', 'Custom AI Models']
+      technologies: ['GitHub Actions', 'SonarQube', 'ESLint', 'Prettier', 'Custom AI Models'],
+      link: 'https://ziontechgroup.com/ai-code-review',
+      contact: 'kleber@ziontechgroup.com',
+      popular: true
     },
     {
       title: 'AI Document Intelligence',
