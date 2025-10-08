@@ -32,7 +32,7 @@ export default function RootLayout({
     ],
     contactPoint: {
       '@type': 'ContactPoint',
-      telephone: '+1-302-600-9898',
+      telephone: '+1-302-464-0950',
       contactType: 'Customer Service',
       areaServed: 'US',
       availableLanguage: 'en',
@@ -43,6 +43,10 @@ export default function RootLayout({
     ],
     address: {
       '@type': 'PostalAddress',
+      streetAddress: '364 E Main St STE 1008',
+      addressLocality: 'Middletown',
+      addressRegion: 'DE',
+      postalCode: '19709',
       addressCountry: 'US',
     },
     offers: [
