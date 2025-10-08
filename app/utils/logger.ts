@@ -125,8 +125,12 @@ class Logger {
           message: error.message,
           stack: error.stack
         } : undefined
+<<<<<<< HEAD
       },
       stack: error?.stack
+=======
+      }
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-31c3
     }
     this.processLog(entry)
   }
@@ -161,8 +165,12 @@ class Logger {
           message: error.message,
           stack: error.stack
         } : undefined
+<<<<<<< HEAD
       },
       stack: error?.stack
+=======
+      }
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-31c3
     }
     this.processLog(entry)
     // Immediately flush fatal errors
