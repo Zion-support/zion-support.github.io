@@ -78,8 +78,7 @@ export class PerformanceOptimizer {
   /**
    * Implement debounce for performance
    */
-  debounce<T extends (...args: unknown[]) => unknown>(
->>>>>>> cursor/fix-errors-and-merge-to-main-fbf5
+>>>>>>> 1684f58a157a4496bdf1f11291796d45799723dd
 =======
   debounce<T extends (...args: unknown[]) => unknown>(
 >>>>>>> cursor/fix-errors-and-merge-to-main-5c5e
@@ -105,8 +104,7 @@ export class PerformanceOptimizer {
   /**
    * Implement throttle for performance
    */
-  throttle<T extends (...args: unknown[]) => unknown>(
->>>>>>> cursor/fix-errors-and-merge-to-main-fbf5
+>>>>>>> 1684f58a157a4496bdf1f11291796d45799723dd
 =======
   throttle<T extends (...args: unknown[]) => unknown>(
 >>>>>>> cursor/fix-errors-and-merge-to-main-5c5e
@@ -132,8 +130,7 @@ export class PerformanceOptimizer {
   /**
    * Memoize function results
    */
-  memoize<T extends (...args: unknown[]) => unknown>(
->>>>>>> cursor/fix-errors-and-merge-to-main-fbf5
+>>>>>>> 1684f58a157a4496bdf1f11291796d45799723dd
 =======
   memoize<T extends (...args: unknown[]) => unknown>(
 >>>>>>> cursor/fix-errors-and-merge-to-main-5c5e

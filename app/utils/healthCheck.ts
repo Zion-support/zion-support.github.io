@@ -98,8 +98,9 @@ class HealthCheckService {
           name,
           duration,
         });
-=======
 >>>>>>> cursor/fix-errors-and-merge-to-main-5c5e
+=======
+>>>>>>> 1684f58a157a4496bdf1f11291796d45799723dd
       } catch {
 logger._error(`Health check "${name}" failed`, _error as Error);
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbf5
@@ -169,8 +170,7 @@ logger._error(`Health check "${name}" failed`, _error as Error);
     }
 
     try {
-      const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
->>>>>>> cursor/fix-errors-and-merge-to-main-5c5e
+>>>>>>> 1684f58a157a4496bdf1f11291796d45799723dd
       const usedPercent = (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100;
 
       let status: 'pass' | 'warn' | 'fail' = 'pass';
@@ -195,8 +195,7 @@ logger._error(`Health check "${name}" failed`, _error as Error);
           usedPercent,
         },
       };
-    } catch {
->>>>>>> cursor/fix-errors-and-merge-to-main-fbf5
+>>>>>>> 1684f58a157a4496bdf1f11291796d45799723dd
 =======
     } catch {
 >>>>>>> cursor/fix-errors-and-merge-to-main-5c5e
@@ -240,8 +239,7 @@ logger._error(`Health check "${name}" failed`, _error as Error);
           summary: report.summary,
         },
       };
-    } catch {
->>>>>>> cursor/fix-errors-and-merge-to-main-fbf5
+>>>>>>> 1684f58a157a4496bdf1f11291796d45799723dd
 =======
     } catch {
 >>>>>>> cursor/fix-errors-and-merge-to-main-5c5e
@@ -318,8 +316,7 @@ logger._error(`Health check "${name}" failed`, _error as Error);
       try {
         localStorage.setItem('_size_test', testData);
         localStorage.removeItem('_size_test');
-      } catch {
->>>>>>> cursor/fix-errors-and-merge-to-main-fbf5
+>>>>>>> 1684f58a157a4496bdf1f11291796d45799723dd
 =======
       } catch {
 >>>>>>> cursor/fix-errors-and-merge-to-main-5c5e
@@ -338,8 +335,7 @@ logger._error(`Health check "${name}" failed`, _error as Error);
         status: 'pass',
         message: 'Storage working correctly',
       };
-    } catch {
->>>>>>> cursor/fix-errors-and-merge-to-main-fbf5
+>>>>>>> 1684f58a157a4496bdf1f11291796d45799723dd
 =======
     } catch {
 >>>>>>> cursor/fix-errors-and-merge-to-main-5c5e

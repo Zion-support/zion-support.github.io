@@ -128,8 +128,7 @@ class SecurityEnhancer {
     
     // Override console methods to detect debugging
     ['log', 'warn', 'error', 'info'].forEach(method => {
-      (console as { [key: string]: (...args: unknown[]) => void })[method] = (...args: unknown[]) => {
->>>>>>> cursor/fix-errors-and-merge-to-main-fbf5
+>>>>>>> 1684f58a157a4496bdf1f11291796d45799723dd
 =======
       (console as Record<string, Function>)[method] = (...args: unknown[]) => {
 >>>>>>> cursor/fix-errors-and-merge-to-main-5c5e

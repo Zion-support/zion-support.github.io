@@ -1,4 +1,3 @@
-import React from 'react';
 /**
  * Enhanced Structured Data (JSON-LD) utilities for improved SEO
  */
@@ -201,13 +200,11 @@ export const getHomepageSchemas = () => [
 /**
  * Render structured data scripts
  */
-<<<<<<< HEAD
-export const renderStructuredData = (schemas: any[]) => {
-  return schemas.map((schema, index) => (
-=======
 export const renderStructuredData = (schemas: unknown[]) => {
   return schemas.map((schema, _index) => (
 >>>>>>> cursor/fix-errors-and-merge-to-main-4e61
+=======
+>>>>>>> 1684f58a157a4496bdf1f11291796d45799723dd
     JSON.stringify(schema)
   ));
 };

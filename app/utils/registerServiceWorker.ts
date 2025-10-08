@@ -22,21 +22,15 @@ export async function registerServiceWorker(
   }
 
   // Only register in production or if explicitly enabled
-  // Check if running on localhost (for development)
->>>>>>> cursor/fix-errors-and-merge-to-main-5c5e
-=======
 >>>>>>> 5a6fab5466218b5fd438f48f6649158efa56a5c3
+=======
+>>>>>>> 1684f58a157a4496bdf1f11291796d45799723dd
   const isLocalhost = Boolean(
     window.location.hostname === 'localhost' ||
       window.location.hostname === '[::1]' ||
       window.location.hostname.match(/^127(?:\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$/)
   );
-  // const isLocalhost = Boolean(
-  //   window.location.hostname === 'localhost' ||
-  //     window.location.hostname === '[::1]' ||
-  //     window.location.hostname.match(/^127(?:\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$/)
-  // );
->>>>>>> cursor/fix-errors-and-merge-to-main-fbf5
+>>>>>>> 1684f58a157a4496bdf1f11291796d45799723dd
 =======
   
   // Use isLocalhost for conditional logic if needed
