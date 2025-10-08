@@ -116,7 +116,7 @@ describe('AdvancedSEOOptimizer', () => {
   it('renders without crashing', () => {
     render(
       <HelmetProvider>
-        <AdvancedSEOOptimizer config={mockSEOData} />
+        <AdvancedSEOOptimizer seoData={mockSEOData} />
         <div>Test content</div>
       </HelmetProvider>
     );
@@ -127,7 +127,7 @@ describe('AdvancedSEOOptimizer', () => {
   it('sets document title', async () => {
     render(
       <HelmetProvider>
-        <AdvancedSEOOptimizer config={mockSEOData} />
+        <AdvancedSEOOptimizer seoData={mockSEOData} />
       </HelmetProvider>
     );
 
@@ -141,7 +141,7 @@ describe('AdvancedSEOOptimizer', () => {
     const { container } = render(
       <HelmetProvider context={helmetContext}>
         <AdvancedSEOOptimizer
-          config={mockSEOData}
+          seoData={mockSEOData}
           enableStructuredData={true}
         />
       </HelmetProvider>
@@ -158,7 +158,7 @@ describe('AdvancedSEOOptimizer', () => {
     const helmetContext = {};
     const { container } = render(
       <HelmetProvider context={helmetContext}>
-        <AdvancedSEOOptimizer config={mockSEOData} enableOpenGraph={true} />
+        <AdvancedSEOOptimizer seoData={mockSEOData} enableOpenGraph={true} />
       </HelmetProvider>
     );
 
@@ -173,7 +173,7 @@ describe('AdvancedSEOOptimizer', () => {
     const helmetContext = {};
     const { container } = render(
       <HelmetProvider context={helmetContext}>
-        <AdvancedSEOOptimizer config={mockSEOData} enableTwitterCards={true} />
+        <AdvancedSEOOptimizer seoData={mockSEOData} enableTwitterCards={true} />
       </HelmetProvider>
     );
 
