@@ -53,5 +53,3 @@ export const getRefreshInterval = () => {
 export const getRotationStrategy = (): RotationStrategy => {
   return 'sequential';
 };
-
-export default bannerConfigurations;
