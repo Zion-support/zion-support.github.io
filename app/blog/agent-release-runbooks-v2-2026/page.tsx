@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { ListChecks, Calendar, Clock, FileWarning, RefreshCw } from 'lucide-react';
+
 export const metadata = {
   title: 'Agent Release Runbooks v2 (2026)',
   description: 
@@ -20,7 +21,7 @@ export default function Page() {
       <header className='bg-gradient-to-br from-fuchsia-900 via-purple-900 to-slate-900 text-white py-20'>
         <div className='max-w-5xl mx-auto px-6'>
           <div className='inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 mb-6'>
-            <ListChecks />
+            <ListChecks  />
             <span className='text-sm font-semibold'>Agent Ops • 2026</span>
           </div>
           <h1 className='text-5xl md:text-6xl font-extrabold leading-tight mb-4'>
@@ -32,11 +33,11 @@ export default function Page() {
           </p>
           <div className='flex items-center gap-6 text-white/70 mt-8'>
             <div className='flex items-center gap-2'>
-              <Calendar />
+              <Calendar  />
               <span>Jan 30, 2026</span>
             </div>
             <div className='flex items-center gap-2'>
-              <Clock />
+              <Clock  />
               <span>18 min read</span>
             </div>
           </div>
@@ -91,7 +92,7 @@ export default function Page() {
           <div className='bg-gradient-to-r from-fuchsia-600 to-indigo-600 text-white rounded-2xl p-8 flex items-center justify-between gap-4'>
             <div>
               <h3 className='text-2xl font-bold flex items-center gap-2'>
-                <FileWarning /> Prevent Regressions
+                <FileWarning  /> Prevent Regressions
               </h3>
               <p className='text-white/90'>
                 We implement v2 runbooks in 4–6 weeks with audits and training.
@@ -100,7 +101,7 @@ export default function Page() {
             <Link to='/contact'
               className='bg-white text-fuchsia-700 px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2'
             >
-              Engage <RefreshCw />
+              Engage <RefreshCw  />
             </Link>
           </div>
         </div>

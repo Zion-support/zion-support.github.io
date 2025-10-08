@@ -1,6 +1,21 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
+
+const metadata = {
+  title: 'AI & Technology Blog | Zion Tech Group',
+  description:
+    'Latest insights on AI, enterprise automation, and digital transformation from Zion Tech Group experts.',
+  keywords:
+    'AI blog, enterprise technology, automation insights, digital transformation',
+  openGraph: {
+    title: 'AI & Technology Blog | Zion Tech Group',
+    description:
+      'Latest insights on AI, enterprise automation, and digital transformation from Zion Tech Group experts.',
+    type: 'website',
+    url: 'https://ziontechgroup.com/blog',
+  },
+};
+
 export default function BlogPage() {
   return (
     <div className='min-h-screen bg-gray-900 text-white'>

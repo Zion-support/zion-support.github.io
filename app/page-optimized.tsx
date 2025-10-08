@@ -1,19 +1,16 @@
 import React from 'react';
-import { lazy, Suspense } from 'react';
+import { lazy } from 'react';
 import SEOOptimizer from './components/SEOOptimizer';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
+
 // Fallback component
 const EmptyComponent = () => null;
 
 // Lazy load heavy components - these may not exist, so make them optional
-const UnifiedBanner = lazy(() => import('./components/NewestContent2025Banner').catch(() => ({ default: EmptyComponent })));
+const UnifiedBanner = lazy(() => import('./components/NewestContent2025Banner').catch(() => import('./components/EmptyComponent').catch(() => ({ default: EmptyComponent }))));
 
-const ContentPromotion = lazy(
-  () => import('./components/UltimateBusinessIntelligence2025Banner').catch(() => {
-    return { default: EmptyComponent } as any;
-  })
-);
+const ContentPromotion = lazy(() => import('./components/UltimateBusinessIntelligence2025Banner').catch(() => ({ default: EmptyComponent })));
 
 const ContentShowcase = lazy(() => import('./components/UltimateBusinessIntelligenceShowcase2025').catch(() => ({ default: EmptyComponent })));
 
@@ -66,11 +63,11 @@ export default function OptimizedHomePage() {
   return (
     <AccessibilityEnhancer>
       <div className="min-h-screen bg-white">
-        <SEOOptimizer />
-        <PerformanceMonitor />
+        <SEOOptimizer  />
+        <PerformanceMonitor  />
         
         {/* Unified Banner System */}
-        <UnifiedBanner />
+        <UnifiedBanner  />
         
         {/* Main Content */}
         <main className="relative">
@@ -109,10 +106,10 @@ export default function OptimizedHomePage() {
           </section>
 
           {/* Content Showcase */}
-          <ContentShowcase />
+          <ContentShowcase  />
           
           {/* Content Promotion */}
-          <ContentPromotion />
+          <ContentPromotion  />
         </main>
       </div>
     </AccessibilityEnhancer>

@@ -1,6 +1,12 @@
 import React from 'react';
 import { Star } from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
+
+const metadata = {
+  title: "AI 2026 Hyperconscious Computing Revolution: Next-Gen Intelligence",
+  description: "Experience the hyperconscious computing revolution of AI 2026, featuring next-generation intelligence, advanced cognitive computing, and revolutionary AI consciousness.",
+  keywords: 'AI 2026, hyperconscious computing, next-gen intelligence, cognitive computing, AI consciousness, computing revolution'
+};
+
 export default function AI2026HyperconsciousComputingRevolution() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -14,7 +20,7 @@ export default function AI2026HyperconsciousComputingRevolution() {
             Next-Generation Intelligence with Advanced Cognitive Computing
           </p>
           <div className="flex items-center justify-center gap-2 text-yellow-400">
-            <Star className="w-6 h-6 fill-current" />
+            <Star className="w-6 h-6 fill-current"  />
             <span className="text-lg font-semibold">Hyperconscious Computing</span>
           </div>
         </div>
@@ -25,19 +31,19 @@ export default function AI2026HyperconsciousComputingRevolution() {
             <h2 className="text-3xl font-bold text-white mb-6">Revolutionary Features</h2>
             <ul className="space-y-4 text-gray-300">
               <li className="flex items-center gap-3">
-                <Star className="w-5 h-5 text-cyan-400" />
+                <Star className="w-5 h-5 text-cyan-400"  />
                 Next-Gen Intelligence
               </li>
               <li className="flex items-center gap-3">
-                <Star className="w-5 h-5 text-cyan-400" />
+                <Star className="w-5 h-5 text-cyan-400"  />
                 Advanced Cognitive Computing
               </li>
               <li className="flex items-center gap-3">
-                <Star className="w-5 h-5 text-cyan-400" />
+                <Star className="w-5 h-5 text-cyan-400"  />
                 AI Consciousness
               </li>
               <li className="flex items-center gap-3">
-                <Star className="w-5 h-5 text-cyan-400" />
+                <Star className="w-5 h-5 text-cyan-400"  />
                 Hyperconscious Technology
               </li>
             </ul>
@@ -47,19 +53,19 @@ export default function AI2026HyperconsciousComputingRevolution() {
             <h2 className="text-3xl font-bold text-white mb-6">Benefits</h2>
             <ul className="space-y-4 text-gray-300">
               <li className="flex items-center gap-3">
-                <Star className="w-5 h-5 text-green-400" />
+                <Star className="w-5 h-5 text-green-400"  />
                 Revolutionary Intelligence
               </li>
               <li className="flex items-center gap-3">
-                <Star className="w-5 h-5 text-green-400" />
+                <Star className="w-5 h-5 text-green-400"  />
                 Advanced Computing Power
               </li>
               <li className="flex items-center gap-3">
-                <Star className="w-5 h-5 text-green-400" />
+                <Star className="w-5 h-5 text-green-400"  />
                 Cognitive Enhancement
               </li>
               <li className="flex items-center gap-3">
-                <Star className="w-5 h-5 text-green-400" />
+                <Star className="w-5 h-5 text-green-400"  />
                 Next-Gen Technology
               </li>
             </ul>

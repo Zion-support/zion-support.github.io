@@ -31,7 +31,7 @@ const InteractiveAIROICalculator: React.FC = () => {
                   value={currentCost}
                   onChange={e => setCurrentCost(Number(e.target.value))}
                   className='w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent'
-                />
+                 />
               </div>
               <div>
                 <label className='block text-sm font-medium text-gray-700 mb-2'>
@@ -44,7 +44,7 @@ const InteractiveAIROICalculator: React.FC = () => {
                   value={efficiencyGain}
                   onChange={e => setEfficiencyGain(Number(e.target.value))}
                   className='w-full'
-                />
+                 />
                 <div className='text-center text-sm text-gray-600'>
                   {efficiencyGain}%
                 </div>

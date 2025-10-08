@@ -1,4 +1,7 @@
+
+
 import React, { useEffect, useRef, useState, useCallback } from 'react';
+
 interface AccessibilityConfig {
   enableKeyboardNavigation: boolean;
   enableScreenReaderSupport: boolean;
@@ -143,7 +146,7 @@ const AccessibilityEnhancer = React.forwardRef<AccessibilityEnhancerRef, Accessi
           className="sr-only"
           aria-live="polite"
           aria-atomic="true"
-        />
+         />
       )}
     </div>
   );

@@ -692,7 +692,7 @@ export class TestRunner {
             result => `
             <testcase name="${result.name}" time="${result.duration / 1000}">
                 ${result.status === 'failed' ? `<failure message="${result.error?.message}">${result.error?.stack}</failure>` : ''}
-                ${result.status === 'skipped' ? '<skipped/>' : ''}
+                ${result.status === 'skipped' ? '<skipped />' : ''}
             </testcase>
         `
           )

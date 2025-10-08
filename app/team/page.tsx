@@ -1,5 +1,5 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+
 const metadata = {
   title: 'Our Team - Zion Tech Group',
   description:
@@ -37,7 +37,7 @@ const TeamPage: React.FC = () => {
   ];
 
   return (
-    <>
+    <div>
       <div className='min-h-screen bg-slate-50 py-16'>
         <div className='container mx-auto px-4'>
           <div className='max-w-6xl mx-auto'>
@@ -85,7 +85,7 @@ const TeamPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

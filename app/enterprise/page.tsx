@@ -1,9 +1,14 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
+
+const metadata = {
+  title: 'Enterprise Solutions - Zion Tech Group',
+  description: 'Comprehensive AI and IT solutions for enterprise organizations. Transform your business with our advanced technology stack.',
+};
+
 const EnterprisePage: React.FC = () => {
   return (
-    <>
+    <div>
       <div className="min-h-screen bg-slate-50 py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
@@ -130,7 +135,7 @@ const EnterprisePage: React.FC = () => {
           </div>
         </div>
       </section>
-    </>
+    </div>
   );
 };
 

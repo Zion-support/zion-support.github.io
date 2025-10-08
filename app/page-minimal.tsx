@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Phone, CheckCircle, Star } from 'lucide-react';
+
 export const metadata = {
   title: 'Zion Tech Group - Advanced AI and IT Solutions',
   description: 'Leading provider of AI-powered enterprise solutions, automation, and digital transformation services.',
@@ -45,13 +46,13 @@ export default function HomePage() {
                 className="inline-flex items-center px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-blue-50 transition-colors font-semibold"
               >
                 Explore Our Services
-                <ArrowRight className="w-5 h-5 ml-2" />
+                <ArrowRight className="w-5 h-5 ml-2"  />
               </Link>
               <a
                 href="tel:+13024640950"
                 className="inline-flex items-center px-8 py-4 bg-transparent border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-semibold"
               >
-                <Phone className="w-5 h-5 mr-2" />
+                <Phone className="w-5 h-5 mr-2"  />
                 Call +1 302 464 0950
               </a>
             </div>
@@ -73,7 +74,7 @@ export default function HomePage() {
             <div className="grid md:grid-cols-3 gap-8">
               <div className="bg-white p-8 rounded-lg shadow-lg">
                 <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
-                  <CheckCircle className="w-6 h-6 text-blue-600" />
+                  <CheckCircle className="w-6 h-6 text-blue-600"  />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">
                   Proven Results
@@ -85,7 +86,7 @@ export default function HomePage() {
               
               <div className="bg-white p-8 rounded-lg shadow-lg">
                 <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-6">
-                  <Star className="w-6 h-6 text-green-600" />
+                  <Star className="w-6 h-6 text-green-600"  />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">
                   Expert Team
@@ -97,7 +98,7 @@ export default function HomePage() {
               
               <div className="bg-white p-8 rounded-lg shadow-lg">
                 <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
-                  <ArrowRight className="w-6 h-6 text-purple-600" />
+                  <ArrowRight className="w-6 h-6 text-purple-600"  />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">
                   Fast Implementation
@@ -124,13 +125,13 @@ export default function HomePage() {
                 className="inline-flex items-center px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-blue-50 transition-colors font-semibold"
               >
                 Get Started Today
-                <ArrowRight className="w-5 h-5 ml-2" />
+                <ArrowRight className="w-5 h-5 ml-2"  />
               </Link>
               <Link to="/case-studies"
                 className="inline-flex items-center px-8 py-4 bg-transparent border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-semibold"
               >
                 View Success Stories
-                <ArrowRight className="w-5 h-5 ml-2" />
+                <ArrowRight className="w-5 h-5 ml-2"  />
               </Link>
             </div>
           </div>

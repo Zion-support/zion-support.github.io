@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, Calendar, User, Clock, Tag, Target, CheckCircle, ArrowRight } from 'lucide-react';
+
 export const metadata = {
   title: 'AI 2026 Implementation Roadmap: Complete Guide to Enterprise AI Transformation',
   description: 'Master the art of AI implementation with our comprehensive 2026 roadmap. From strategy development to full-scale deployment, learn how to successfully transform your enterprise.',
@@ -16,7 +17,7 @@ export default function AI2026ImplementationRoadmap() {
           <Link to="/"
             className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors"
           >
-            <ArrowLeft className="w-4 h-4 mr-2" />
+            <ArrowLeft className="w-4 h-4 mr-2"  />
             Back to Home
           </Link>
         </div>
@@ -28,15 +29,15 @@ export default function AI2026ImplementationRoadmap() {
         <div className="mb-8">
           <div className="flex items-center space-x-6 text-sm text-gray-600 mb-4">
             <div className="flex items-center">
-              <Calendar className="w-4 h-4 mr-2" />
+              <Calendar className="w-4 h-4 mr-2"  />
               <span>January 22, 2026</span>
             </div>
             <div className="flex items-center">
-              <User className="w-4 h-4 mr-2" />
+              <User className="w-4 h-4 mr-2"  />
               <span>Zion Tech Group</span>
             </div>
             <div className="flex items-center">
-              <Clock className="w-4 h-4 mr-2" />
+              <Clock className="w-4 h-4 mr-2"  />
               <span>25 min read</span>
             </div>
           </div>
@@ -52,7 +53,7 @@ export default function AI2026ImplementationRoadmap() {
           <div className="flex flex-wrap gap-2">
             {['AI Implementation', 'Enterprise AI', 'Digital Transformation', 'AI Strategy', '2026 Roadmap'].map((tag) => (
               <span key={tag} className="inline-flex items-center px-3 py-1 rounded-full text-sm bg-blue-100 text-blue-800">
-                <Tag className="w-3 h-3 mr-1" />
+                <Tag className="w-3 h-3 mr-1"  />
                 {tag}
               </span>
             ))}
@@ -371,13 +372,13 @@ export default function AI2026ImplementationRoadmap() {
                 className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
               >
                 View Success Stories
-                <ArrowRight className="w-4 h-4 ml-2" />
+                <ArrowRight className="w-4 h-4 ml-2"  />
               </Link>
               <Link to="/tools/ai-roi-calculator"
                 className="inline-flex items-center px-6 py-3 bg-white text-blue-600 border border-blue-600 rounded-lg hover:bg-blue-50 transition-colors"
               >
                 Calculate Your ROI
-                <ArrowRight className="w-4 h-4 ml-2" />
+                <ArrowRight className="w-4 h-4 ml-2"  />
               </Link>
             </div>
           </div>

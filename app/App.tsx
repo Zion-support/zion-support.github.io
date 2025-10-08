@@ -1,6 +1,9 @@
+
+
 import React, { Suspense, lazy, useEffect, useCallback } from 'react';
 import { HelmetProvider } from 'react-helmet-async';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
 // Components
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import AdvancedErrorBoundary from './components/AdvancedErrorBoundary';
@@ -70,19 +73,19 @@ const App: React.FC = () => {
               enableOpenGraph={true}
               enableTwitterCards={true}
               enableSchemaMarkup={true}
-            />
+             />
             <Router>
               <div className="App">
                 <main id="main-content">
-                  <Suspense fallback={<LoadingSpinner />}>
+                  <Suspense fallback={<LoadingSpinner  />}>
                     <Routes>
-                      <Route path="/" element={<HomePage />} />
+                      <Route path="/" element={<HomePage  />}  />
                       {/* Add more routes as needed */}
                     </Routes>
                   </Suspense>
                 </main>
-                <AdvancedPerformanceMonitor />
-                <PerformanceDashboard />
+                <AdvancedPerformanceMonitor  />
+                <PerformanceDashboard  />
               </div>
             </Router>
           </SEOEnhancer>

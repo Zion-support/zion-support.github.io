@@ -1,5 +1,17 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+
+const metadata = {
+  title: "AI Trends 2026: Future Enterprise Transformation with Quantum Intelligence",
+  description: "Explore the top AI trends shaping enterprise transformation in 2026, from quantum intelligence and conscious computing to autonomous operations and neuromorphic architectures.",
+  keywords: 'AI trends 2026, enterprise transformation, quantum intelligence, conscious computing, autonomous operations',
+  openGraph: {
+    title: 'AI Trends 2026: Future Enterprise Transformation with Quantum Intelligence',
+    description: 'Explore the top AI trends shaping enterprise transformation in 2026, from quantum intelligence and conscious computing to autonomous operations and neuromorphic architectures.',
+    type: 'article',
+    authors: ['Zion Tech Group'],
+  }
+};
+
 export default function AITrends2026FutureEnterpriseTransformation() {
   return (
     <div className="min-h-screen bg-gray-50">

@@ -1,4 +1,7 @@
+
+
 import React, { useEffect, useCallback } from 'react';
+
 interface PerformanceOptimizerProps {
   children: React.ReactNode;
 }
@@ -60,8 +63,8 @@ const PerformanceOptimizerComponent: React.FC<PerformanceOptimizerProps> = ({
       const observer = new PerformanceObserver(list => {
         list.getEntries().forEach(entry => {
           if (entry.entryType === 'navigation') {
-             
-//             if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { console.log('Navigation timing:', entry); } }
+            // eslint-disable-next-line no-console
+            if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { console.log('Navigation timing:', entry); } }
           }
         });
       });
@@ -76,7 +79,7 @@ const PerformanceOptimizerComponent: React.FC<PerformanceOptimizerProps> = ({
     return undefined;
   }, []);
 
-  return <>{children}</>;
+  return <div>{children}</div>;
 };
 
 export default PerformanceOptimizerComponent;

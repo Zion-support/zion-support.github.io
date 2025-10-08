@@ -1,108 +1,94 @@
 #!/usr/bin/env node
 
 import fs from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
+import { glob } from 'glob';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
-// Function to fix remaining console statements
-function fixRemainingConsole(content) {
-  // Fix console statements that are not properly wrapped
-  content = content.replace(
-    /console\.(log|error|warn|info)\(/g,
-    (match, method) => {
-      return `if (process.env.NODE_ENV === 'development') console.${method}(`;
-    }
-  );
+// Patterns to replace
+const replacements = [
+  // Fix duplicate React imports
+  { from: /import React from 'react';\s*import React from 'react';/g, to: "import React from 'react';" },
+  { from: /import React from 'react';\s*\nimport React from 'react';/g, to: "import React from 'react';" },
   
-  // Add closing braces for console statements
-  content = content.replace(
-    /if \(process\.env\.NODE_ENV === 'development'\) console\.(log|error|warn|info)\([^)]*\);$/gm,
-    (match) => {
-      return match + ' }';
-    }
-  );
+  // Fix Metadata type issues
+  { from: /export const metadata: Metadata =/g, to: "const metadata = {" },
+  { from: /: Metadata =/g, to: " = {" },
   
-  return content;
-}
-
-// Function to fix unused variables by prefixing with underscore
-function fixUnusedVariables(content) {
-  // Fix unused function parameters
-  content = content.replace(
-    /(\w+)\s*:\s*any\s*,\s*(\w+)\s*:\s*any/g,
-    '_$1: any, _$2: any'
-  );
+  // Fix Link component props
+  { from: /<Link\s+href=/g, to: "<Link to=" },
   
-  // Fix unused variables in function parameters
-  content = content.replace(
-    /\((\w+)\s*:\s*any\s*,\s*(\w+)\s*:\s*any\)/g,
-    '(_$1: any, _$2: any)'
-  );
+  // Fix Image component - replace with regular img
+  { from: /import Image from 'react';/g, to: "" },
+  { from: /<Image\s+/g, to: "<img " },
+  { from: /\/>/g, to: " />" },
   
-  // Fix unused variables by prefixing with underscore
-  const unusedVars = [
-    'addMetaTag',
-    'updateCanonicalUrl', 
-    'addStructuredData',
-    'trackPageView',
-    'trackPerformanceMetrics',
-    'hasNav',
-    'event',
-    'ErrorType',
-    'jest'
-  ];
-  
-  unusedVars.forEach(varName => {
-    const regex = new RegExp(`\\b${varName}\\b`, 'g');
-    content = content.replace(regex, `_${varName}`);
-  });
-  
-  return content;
-}
-
-// Files that need fixing
-const filesToFix = [
-  'App.tsx',
-  'app/components/AdvancedPerformanceMonitor.tsx',
-  'app/components/AdvancedSEOOptimizer.tsx',
-  'app/components/OptimizedImage.tsx',
-  'app/guides/ai-2026-implementation-roadmap/page.tsx',
-  'app/guides/ai-2027-implementation-roadmap/page.tsx',
-  'app/hooks/usePerformanceMonitoringEnhanced.ts',
-  'app/setupTests.tsx',
-  'app/utils/__tests__/performanceMonitoring.test.ts',
-  'app/utils/accessibilityChecker.ts',
-  'app/utils/accessibilityEnhancer.ts',
-  'app/utils/apiInterceptor.ts',
-  'app/utils/advancedPerformanceOptimizer.ts',
-  'app/config/errorHandling.ts'
+  // Fix dynamic imports that weren't properly converted
+  { from: /dynamic\(\(\) => import\(['"]([^'"]+)['"]\)/g, to: "lazy(() => import('$1')" },
+  { from: /dynamic\(\(\) => import\(['"]([^'"]+)['"]\),\s*\{[^}]*\}/g, to: "lazy(() => import('$1').catch(() => ({ default: () => <div>Loading...</div> })))" },
 ];
 
-function fixFile(filePath) {
+// Function to process a file
+function processFile(filePath) {
   try {
-    const fullPath = path.join(__dirname, filePath);
-    if (!fs.existsSync(fullPath)) {
-      console.log(`File not found: ${filePath}`);
-      return;
+    let content = fs.readFileSync(filePath, 'utf8');
+    let modified = false;
+    
+    replacements.forEach(({ from, to }) => {
+      if (typeof from === 'string') {
+        if (content.includes(from)) {
+          content = content.replace(new RegExp(from.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'g'), to);
+          modified = true;
+        }
+      } else if (from instanceof RegExp) {
+        if (from.test(content)) {
+          content = content.replace(from, to);
+          modified = true;
+        }
+      }
+    });
+    
+    // Additional cleanup for Image components
+    if (content.includes('<Image')) {
+      // Replace Image component with img tag
+      content = content.replace(/<Image\s+([^>]*?)\s*\/>/g, (match, props) => {
+        // Extract props and convert to img attributes
+        const propMatches = props.match(/(\w+)=['"]([^'"]*)['"]/g);
+        if (propMatches) {
+          const imgProps = propMatches.map(prop => prop.replace(/src=/g, 'src=').replace(/alt=/g, 'alt=').replace(/width=/g, 'width=').replace(/height=/g, 'height=').replace(/className=/g, 'class=')).join(' ');
+          return `<img ${imgProps} />`;
+        }
+        return match;
+      });
+      modified = true;
     }
-
-    let content = fs.readFileSync(fullPath, 'utf8');
     
-    // Apply fixes
-    content = fixRemainingConsole(content);
-    content = fixUnusedVariables(content);
+    if (modified) {
+      fs.writeFileSync(filePath, content, 'utf8');
+      console.log(`Fixed: ${filePath}`);
+      return true;
+    }
     
-    fs.writeFileSync(fullPath, content);
-    console.log(`Fixed: ${filePath}`);
+    return false;
   } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
+    console.error(`Error processing ${filePath}:`, error.message);
+    return false;
   }
 }
 
-// Fix all files
-filesToFix.forEach(fixFile);
+// Main execution
+async function main() {
+  // Find all TypeScript/JavaScript files in app directory
+  const files = await glob('app/**/*.{ts,tsx,js,jsx}', { cwd: process.cwd() });
 
-console.log('Remaining issues fixed!');
+  console.log(`Found ${files.length} files to process...`);
+
+  let fixedCount = 0;
+  files.forEach(file => {
+    if (processFile(file)) {
+      fixedCount++;
+    }
+  });
+
+  console.log(`Fixed ${fixedCount} files`);
+}
+
+main().catch(console.error);

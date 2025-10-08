@@ -1,4 +1,7 @@
+
+
 import React, { useState, useEffect } from 'react';
+
 interface PerformanceMetrics {
   loadTime: number;
   renderTime: number;
@@ -29,7 +32,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     const reportWebVitals = (metric: { name: string; value: number }) => {
       // Log to console in development (only on client side)
       if (typeof window !== 'undefined' && enableConsoleLogging) {
-        if (process.env.NODE_ENV === 'development') console.log('Web Vital:', metric.name, metric.value); }
+        console.log('Web Vital:', metric.name, metric.value);
       }
     };
 

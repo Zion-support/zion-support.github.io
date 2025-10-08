@@ -1,5 +1,8 @@
+
+
 import React, { useEffect } from 'react';
-import { useNavigate, useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
+
 const SEOOptimizer: React.FC = () => {
   const pathname = useLocation().pathname;
 

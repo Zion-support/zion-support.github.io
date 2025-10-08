@@ -1,3 +1,5 @@
+
+
 /**
  * System Monitor Component
  * Real-time monitoring dashboard for performance, errors, and system health
@@ -148,7 +150,7 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
       setLastUpdate(new Date());
     } catch (error) {
        
-if (process.env.NODE_ENV === 'development') console.error('Failed to update metrics:', error); }
+console.error('Failed to update metrics:', error);
     }
   }, []);
 

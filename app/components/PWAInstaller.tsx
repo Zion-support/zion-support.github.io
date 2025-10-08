@@ -1,4 +1,7 @@
+
+
 import React, { useEffect, useState } from 'react';
+
 /**
  * PWA Installer Component
  * Handles service worker registration and install prompts
@@ -27,7 +30,8 @@ const PWAInstaller: React.FC = () => {
       navigator.serviceWorker
         .register('/service-worker.js')
         .then((registration) => {
-          if (process.env.NODE_ENV === 'development') console.log('Service Worker registered:', registration);
+          console.log('Service Worker registered:', registration);
+
           // Check for updates periodically
           setInterval(() => {
             registration.update();
@@ -50,7 +54,7 @@ const PWAInstaller: React.FC = () => {
           });
         })
         .catch((error) => {
-          if (process.env.NODE_ENV === 'development') console.error('Service Worker registration failed:', error);
+          console.error('Service Worker registration failed:', error);
         });
 
       // Listen for controller change
@@ -75,7 +79,7 @@ const PWAInstaller: React.FC = () => {
 
     // Listen for successful installation
     window.addEventListener('appinstalled', () => {
-      if (process.env.NODE_ENV === 'development') console.log('PWA installed successfully');
+      console.log('PWA installed successfully');
       setIsInstalled(true);
       setShowPrompt(false);
       setDeferredPrompt(null);
@@ -98,9 +102,9 @@ const PWAInstaller: React.FC = () => {
     const choiceResult = await deferredPrompt.userChoice;
 
     if (choiceResult.outcome === 'accepted') {
-      if (process.env.NODE_ENV === 'development') console.log('User accepted the install prompt'); }
+      console.log('User accepted the install prompt');
     } else {
-      if (process.env.NODE_ENV === 'development') console.log('User dismissed the install prompt'); }
+      console.log('User dismissed the install prompt');
     }
 
     // Clear the deferred prompt
@@ -142,7 +146,7 @@ const PWAInstaller: React.FC = () => {
                   strokeLinejoin='round'
                   strokeWidth={2}
                   d='M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z'
-                />
+                 />
               </svg>
             </div>
           </div>
@@ -185,7 +189,7 @@ const PWAInstaller: React.FC = () => {
                 strokeLinejoin='round'
                 strokeWidth={2}
                 d='M6 18L18 6M6 6l12 12'
-              />
+               />
             </svg>
           </button>
         </div>

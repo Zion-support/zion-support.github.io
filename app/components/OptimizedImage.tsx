@@ -1,4 +1,5 @@
 import React, { useState, useCallback, memo } from 'react';
+
 interface OptimizedImageProps {
   src: string;
   alt: string;
@@ -41,7 +42,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = memo(({
         <div 
           className="absolute inset-0 bg-gray-200 animate-pulse"
           style={{ width, height }}
-        />
+         />
       )}
       
       {hasError ? (
@@ -56,6 +57,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = memo(({
           alt={alt}
           width={width || 200}
           height={height || 200}
+          
           onLoad={handleLoad}
           onError={handleError}
           className={`transition-opacity duration-300 ${
@@ -65,7 +67,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = memo(({
             width: width ? `${width}px` : 'auto',
             height: height ? `${height}px` : 'auto'
           }}
-        />
+         />
       )}
     </div>
   );

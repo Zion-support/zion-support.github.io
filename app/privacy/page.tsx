@@ -1,5 +1,5 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+
 const metadata = {
   title: 'Privacy Policy - Zion Tech Group',
   description:
@@ -10,7 +10,7 @@ export { metadata };
 
 const PrivacyPage: React.FC = () => {
   return (
-    <>
+    <div>
       <div className='min-h-screen bg-slate-50 py-16'>
         <div className='container mx-auto px-4'>
           <div className='max-w-4xl mx-auto'>
@@ -93,9 +93,9 @@ const PrivacyPage: React.FC = () => {
                   <div className='mt-4 p-4 bg-gray-50 rounded-lg'>
                     <p className='text-gray-600'>
                       <strong>Email:</strong> privacy@ziontechgroup.com
-                      <br />
+                      <br  />
                       <strong>Phone:</strong> +1 (555) 123-4567
-                      <br />
+                      <br  />
                       <strong>Address:</strong> 123 Tech Street, San Francisco,
                       CA 94105
                     </p>
@@ -106,7 +106,7 @@ const PrivacyPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

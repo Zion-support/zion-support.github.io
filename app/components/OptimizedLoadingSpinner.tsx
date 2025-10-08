@@ -62,7 +62,7 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(
                   key={i}
                   className={`w-2 h-2 rounded-full animate-bounce ${colorClasses[color].split(' ')[1]}`}
                   style={{ animationDelay: `${i * 0.1}s` }}
-                />
+                 />
               ))}
             </div>
           );
@@ -73,7 +73,7 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(
               className={`${baseClasses} rounded-full animate-pulse`}
               role='status'
               aria-label='Loading'
-            />
+             />
           );
 
         case 'skeleton':
@@ -81,15 +81,15 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(
             <div className='space-y-2' role='status' aria-label='Loading'>
               <div
                 className={`h-4 bg-gray-200 rounded animate-pulse ${sizeClasses[size]}`}
-              />
+               />
               <div
                 className={`h-4 bg-gray-200 rounded animate-pulse ${sizeClasses[size]}`}
                 style={{ width: '75%' }}
-              />
+               />
               <div
                 className={`h-4 bg-gray-200 rounded animate-pulse ${sizeClasses[size]}`}
                 style={{ width: '50%' }}
-              />
+               />
             </div>
           );
 
@@ -104,7 +104,7 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(
                     height: `${12 + i * 4}px`,
                     animationDelay: `${i * 0.1}s`,
                   }}
-                />
+                 />
               ))}
             </div>
           );
@@ -116,7 +116,7 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(
               className={`${baseClasses} rounded-full border-2 border-t-transparent animate-spin`}
               role='status'
               aria-label='Loading'
-            />
+             />
           );
       }
     }, [size, variant, color, sizeClasses, colorClasses]);

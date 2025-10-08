@@ -163,7 +163,7 @@ export class AccessibilityChecker {
           message: `Image ${index + 1} is missing alt text`,
           element: `img[src="${img['src']}"]`,
           fix: 'Add descriptive alt text to the image',
-          codeExample: '<img src="..." alt="Description of image" />',
+          codeExample: '<img src="..." alt="Description of image"  />',
         });
       }
 
@@ -177,7 +177,7 @@ export class AccessibilityChecker {
           message: `Image ${index + 1} has empty alt without role="presentation"`,
           element: `img[src="${img['src']}"]`,
           fix: 'Add role="presentation" to decorative images',
-          codeExample: '<img src="..." alt="" role="presentation" />',
+          codeExample: '<img src="..." alt="" role="presentation"  />',
         });
       }
     });
@@ -363,7 +363,7 @@ export class AccessibilityChecker {
           message: `Form control ${index + 1} (${input.tagName.toLowerCase()}) has no label`,
           element: `${input.tagName.toLowerCase()}[name="${input.getAttribute('name')}"]`,
           fix: 'Associate a label with the form control',
-          codeExample: '<label for="email">Email:</label><input id="email" name="email" />',
+          codeExample: '<label for="email">Email:</label><input id="email" name="email"  />',
         });
       }
     });

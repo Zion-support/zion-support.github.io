@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+
 const UnifiedContentPromotion: React.FC = () => {
   const features = [
     {
@@ -53,7 +54,6 @@ const UnifiedContentPromotion: React.FC = () => {
       </div>
     </div>
   );
-
 };
 
 export default UnifiedContentPromotion;

@@ -1,5 +1,8 @@
+
+
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -62,7 +65,7 @@ const Navigation: React.FC = () => {
                 strokeLinejoin='round'
                 strokeWidth={2}
                 d='M4 6h16M4 12h16M4 18h16'
-              />
+               />
             </svg>
           </button>
         </div>

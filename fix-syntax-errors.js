@@ -1,75 +1,71 @@
 #!/usr/bin/env node
 
 import fs from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
+import { glob } from 'glob';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
-// Function to fix console statement syntax errors
-function fixConsoleSyntax(content) {
-  // Fix console statements with extra closing braces
-  content = content.replace(
-    /if \(process\.env\.NODE_ENV === 'development'\) console\.(log|error|warn|info)\([^)]*\); \}/g,
-    (match) => {
-      return match.replace(/; \}$/, '; }');
-    }
-  );
-  
-  // Fix console statements missing closing braces
-  content = content.replace(
-    /if \(process\.env\.NODE_ENV === 'development'\) console\.(log|error|warn|info)\([^)]*\);$/gm,
-    (match) => {
-      return match + ' }';
-    }
-  );
-  
-  // Fix typeof issues
-  content = content.replace(
-    /typeof\s+process\.env\.NODE_ENV/g,
-    'typeof process.env.NODE_ENV'
-  );
-  
-  return content;
-}
-
-// Files that need syntax fixes
-const filesToFix = [
-  'app/components/EnhancedErrorBoundary.tsx',
-  'app/components/ImprovedErrorBoundary.tsx',
-  'app/components/PWAInstaller.tsx',
-  'app/components/PerformanceMonitor.tsx',
-  'app/components/SystemMonitor.tsx',
-  'app/hooks/useEnhancedPerformance.ts',
-  'app/hooks/useForm.ts',
-  'app/utils/advancedAnalytics.ts',
-  'app/utils/advancedCaching.ts',
-  'app/utils/analytics.ts',
-  'app/utils/analyticsTracker.ts'
-];
-
-function fixFile(filePath) {
+// Function to process a file
+function processFile(filePath) {
   try {
-    const fullPath = path.join(__dirname, filePath);
-    if (!fs.existsSync(fullPath)) {
-      console.log(`File not found: ${filePath}`);
-      return;
+    let content = fs.readFileSync(filePath, 'utf8');
+    let modified = false;
+    
+    // Fix malformed object declarations
+    if (content.includes('const metadata = { {')) {
+      content = content.replace(/const metadata = \{\s*\{/g, 'const metadata = {');
+      modified = true;
     }
-
-    let content = fs.readFileSync(fullPath, 'utf8');
     
-    // Apply fixes
-    content = fixConsoleSyntax(content);
+    // Fix other common syntax issues
+    if (content.includes('export const metadata: Metadata = {')) {
+      content = content.replace(/export const metadata: Metadata = \{/g, 'const metadata = {');
+      modified = true;
+    }
     
-    fs.writeFileSync(fullPath, content);
-    console.log(`Fixed: ${filePath}`);
+    // Fix malformed JSX fragments
+    if (content.includes('<>') && !content.includes('</>')) {
+      content = content.replace(/<>/g, '<div>');
+      content = content.replace(/<\/>/g, '</div>');
+      modified = true;
+    }
+    
+    // Fix missing closing braces in metadata objects
+    const metadataMatch = content.match(/const metadata = \{[\s\S]*?\n\};/);
+    if (metadataMatch) {
+      const metadataContent = metadataMatch[0];
+      if (!metadataContent.includes('};')) {
+        content = content.replace(metadataContent, metadataContent + '};');
+        modified = true;
+      }
+    }
+    
+    if (modified) {
+      fs.writeFileSync(filePath, content, 'utf8');
+      console.log(`Fixed: ${filePath}`);
+      return true;
+    }
+    
+    return false;
   } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
+    console.error(`Error processing ${filePath}:`, error.message);
+    return false;
   }
 }
 
-// Fix all files
-filesToFix.forEach(fixFile);
+// Main execution
+async function main() {
+  // Find all TypeScript/JavaScript files in app directory
+  const files = await glob('app/**/*.{ts,tsx,js,jsx}', { cwd: process.cwd() });
 
-console.log('Syntax errors fixed!');
+  console.log(`Found ${files.length} files to process...`);
+
+  let fixedCount = 0;
+  files.forEach(file => {
+    if (processFile(file)) {
+      fixedCount++;
+    }
+  });
+
+  console.log(`Fixed ${fixedCount} files`);
+}
+
+main().catch(console.error);

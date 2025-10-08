@@ -1,5 +1,17 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+
+const metadata = {
+  title: "AI 2026: Consensus Intelligence Breakthrough",
+  description: "Revolutionary AI system enabling unanimous decisions through quantum-accelerated consensus protocols.",
+  authors: [{ name: 'Zion Tech Group' }],
+  openGraph: {
+    title: 'AI 2026: Consensus Intelligence Breakthrough',
+    description: 'Revolutionary AI system enabling unanimous decisions through quantum-accelerated consensus protocols.',
+    type: 'article',
+    authors: ['Zion Tech Group']
+  }
+};
+
 export default function ConsensusIntelligencePage() {
   return (
     <div className="min-h-screen bg-gray-50">

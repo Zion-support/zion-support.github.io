@@ -114,11 +114,11 @@ export const validationRules = {
    */
   strongPassword: (message = 'Password must be at least 8 characters with uppercase, lowercase, number, and special character'): ValidationRule<string> => ({
     validate: (value: string) => {
-//       const hasUpperCase = /[A-Z]/.test(value);
-//       const hasLowerCase = /[a-z]/.test(value);
-//       const hasNumber = /[0-9]/.test(value);
-//       const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>]/.test(value);
-//       const hasMinLength = value.length >= 8;
+      const hasUpperCase = /[A-Z]/.test(value);
+      const hasLowerCase = /[a-z]/.test(value);
+      const hasNumber = /[0-9]/.test(value);
+      const hasSpecialChar = /[!@#$%^&*(),.?":{}|<div>]/.test(value);
+      const hasMinLength = value.length >= 8;
       return hasUpperCase && hasLowerCase && hasNumber && hasSpecialChar && hasMinLength;
     },
     message
@@ -137,7 +137,7 @@ export const validationRules = {
    */
   fileSize: (maxSizeInMB: number, message?: string): ValidationRule<File> => ({
     validate: (file: File) => {
-//       const maxSizeInBytes = maxSizeInMB * 1024 * 1024;
+      const maxSizeInBytes = maxSizeInMB * 1024 * 1024;
       return file.size <= maxSizeInBytes;
     },
     message: message || `File size must not exceed ${maxSizeInMB}MB`
@@ -181,7 +181,7 @@ export function validateForm<T extends Record<string, unknown>>(
 
   for (const fieldName in validationSchema) {
     const value = formData[fieldName];
-//     const rules = validationSchema[fieldName];
+    const rules = validationSchema[fieldName];
     results[fieldName] = validateField(value, rules);
   }
 
@@ -221,7 +221,7 @@ export function getFormErrors<T extends Record<string, unknown>>(
 export function sanitizeInput(input: string): string {
   return input
     .trim()
-    .replace(/[<>]/g, '') // Remove potential HTML tags
+    .replace(/[<div>]/g, '') // Remove potential HTML tags
     .replace(/[^\w\s@.-]/gi, ''); // Keep only alphanumeric, spaces, @, ., -
 }
 
