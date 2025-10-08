@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import analytics from '../utils/analytics';
+import { analytics } from '../utils/analytics';
 
 export const usePerformance = () => {
   useEffect(() => {
@@ -7,8 +7,8 @@ export const usePerformance = () => {
       return;
     }
 
-    const observer = new PerformanceObserver(list => {
-      list.getEntries().forEach(entry => {
+    const observer = new PerformanceObserver((list) => {
+      list.getEntries().forEach((entry) => {
         analytics.track(
           'long_task',
           'performance',
@@ -18,31 +18,18 @@ export const usePerformance = () => {
         );
       });
     });
-import { analytics } from '../utils/analytics';
 
-export const usePerformance = () => {
-  useEffect(() => {
-    if ('PerformanceObserver' in window) {
-      const observer = new PerformanceObserver((list) => {
-        list.getEntries().forEach((entry) => {
-          analytics.track(
-            'long_task',
-            'performance',
-            'detected',
-            undefined,
-            entry.duration
-          );
-        });
-      });
-
+    try {
       observer.observe({ entryTypes: ['longtask'] });
-
-      return () => {
-        if (observer && typeof observer.disconnect === 'function') {
-          observer.disconnect();
-        }
-      };
+    } catch (error) {
+      console.warn('Failed to observe long tasks:', error);
     }
+
+    return () => {
+      if (observer && typeof observer.disconnect === 'function') {
+        observer.disconnect();
+      }
+    };
   }, []);
 };
 

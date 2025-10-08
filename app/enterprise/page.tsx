@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -7,39 +8,6 @@ export const metadata: Metadata = {
 };
 
 const EnterprisePage: React.FC = () => {
-  const features = [
-    {
-      title: 'Autonomous Systems',
-      description: 'Self-managing enterprise operations with AI-powered automation',
-      icon: '🤖'
-    },
-    {
-      title: 'Quantum Computing',
-      description: 'Next-generation computing power for complex business problems',
-      icon: '⚛️'
-    },
-    {
-      title: 'Enterprise AI',
-      description: 'Custom AI solutions tailored to your business needs',
-      icon: '🧠'
-    },
-    {
-      title: 'Cloud Infrastructure',
-      description: 'Scalable and secure cloud architecture',
-      icon: '☁️'
-    },
-    {
-      title: 'Data Analytics',
-      description: 'Advanced analytics and business intelligence',
-      icon: '📊'
-    },
-    {
-      title: 'Cybersecurity',
-      description: 'Enterprise-grade security solutions',
-      icon: '🔒'
-    },
-  ];
-
   return (
     <>
       <div className='min-h-screen bg-slate-50 py-16'>
@@ -53,9 +21,9 @@ const EnterprisePage: React.FC = () => {
                 Advanced AI and IT solutions designed for large organizations
               </p>
             </div>
-            <p className="text-lg text-gray-400 mb-12 max-w-3xl mx-auto">
+            <p className="text-lg text-gray-700 mb-12 max-w-3xl mx-auto">
               Transform your enterprise with our proven AI solutions. Achieve
-              $100M+ cost savings, 500% productivity gains, and 99.9% system
+              significant cost savings, productivity gains, and high system
               uptime with enterprise-grade security and compliance.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -70,7 +38,7 @@ const EnterprisePage: React.FC = () => {
               </Link>
               <Link
                 href="#solutions"
-                className="group flex items-center gap-3 bg-white/10 hover:bg-white/20 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 border border-white/30"
+                className="group flex items-center gap-3 bg-gray-100 hover:bg-gray-200 text-gray-900 font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-300"
               >
                 <span>View Solutions</span>
                 <span className="group-hover:translate-x-1 transition-transform">
@@ -111,6 +79,21 @@ const EnterprisePage: React.FC = () => {
                 description: 'Next-generation security with quantum encryption',
                 icon: '🔒'
               },
+              {
+                title: 'Cloud Infrastructure',
+                description: 'Scalable and secure cloud architecture',
+                icon: '☁️'
+              },
+              {
+                title: 'Data Analytics',
+                description: 'Advanced analytics and business intelligence',
+                icon: '📈'
+              },
+              {
+                title: 'Enterprise AI',
+                description: 'Custom AI solutions tailored to your business needs',
+                icon: '🧠'
+              },
             ].map((solution, index) => (
               <div
                 key={index}
@@ -120,28 +103,30 @@ const EnterprisePage: React.FC = () => {
                 <h3 className="text-2xl font-bold text-white mb-4">
                   {solution.title}
                 </h3>
-                <p className='text-gray-600'>
-                  {feature.description}
+                <p className='text-gray-300'>
+                  {solution.description}
                 </p>
               </div>
             ))}
           </div>
+        </div>
+      </section>
 
       {/* CTA Section */}
-      <section className="py-24">
+      <section className="py-24 bg-slate-50">
         <div className="container mx-auto px-4">
-          <div className="text-center bg-white/5 backdrop-blur-lg rounded-3xl p-12 border border-white/20">
+          <div className="text-center bg-gradient-to-r from-blue-600 to-purple-600 rounded-3xl p-12 border border-blue-500/30">
             <h3 className="text-4xl font-bold text-white mb-6">
               Ready to Transform Your Enterprise?
             </h3>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Join 500+ Fortune 500 companies achieving unprecedented
+            <p className="text-xl text-gray-100 mb-8 max-w-3xl mx-auto">
+              Join hundreds of organizations achieving unprecedented
               transformation with our enterprise AI solutions.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
               <Link
                 href="tel:+13024640950"
-                className="group flex items-center gap-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl"
+                className="group flex items-center gap-3 bg-white hover:bg-gray-100 text-blue-600 font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl"
               >
                 <span className="text-xl">📞</span>
                 <span>Call Now</span>
@@ -154,9 +139,11 @@ const EnterprisePage: React.FC = () => {
                 <span>Get Enterprise Consultation</span>
               </Link>
             </div>
-          </section>
+          </div>
         </div>
-      </div>
+      </section>
     </>
   );
-}
+};
+
+export default EnterprisePage;

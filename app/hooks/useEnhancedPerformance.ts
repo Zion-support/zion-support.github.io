@@ -118,11 +118,6 @@ export function useEnhancedPerformance(
               // Ignore measurement errors
             }
           }
-      // Performance marking - startMark not available
-
-      return {
-        end: () => {
-          const duration = 0; // Performance marking - endMark not available
           if (duration && trackPerformance) {
             analytics.trackPerformance(
               `${component}-${operationName}`,
@@ -136,3 +131,13 @@ export function useEnhancedPerformance(
     },
     [component, trackPerformance]
   );
+
+  return {
+    trackError,
+    trackUserAction,
+    measureOperation,
+    renderCount: renderCountRef.current,
+  };
+}
+
+export default useEnhancedPerformance;
