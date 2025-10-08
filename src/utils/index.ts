@@ -56,8 +56,8 @@ export {
   ErrorCategory,
   type ErrorInfo,
   ErrorHandler,
-  errorHandler,
 } from './errorHandler';
+export { default as errorHandler } from './errorHandler';
 
 // Default exports
 export { default as analytics } from './analytics';

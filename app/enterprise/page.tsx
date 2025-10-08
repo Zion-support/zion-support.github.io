@@ -1,6 +1,6 @@
 import React from 'react';
-import { Metadata } from 'next';
 import Link from 'next/link';
+import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Enterprise Solutions - Zion Tech Group',
@@ -21,7 +21,7 @@ const EnterprisePage: React.FC = () => {
                 Advanced AI and IT solutions designed for large organizations
               </p>
             </div>
-            <p className="text-lg text-gray-600 mb-12 max-w-3xl mx-auto'>
+            <p className="text-lg text-gray-600 mb-12 max-w-3xl mx-auto">
               Transform your enterprise with our proven AI solutions. Achieve
               $100M+ cost savings, 500% productivity gains, and 99.9% system
               uptime with enterprise-grade security and compliance.
@@ -38,7 +38,7 @@ const EnterprisePage: React.FC = () => {
               </Link>
               <Link
                 href="#solutions"
-                className="group flex items-center gap-3 bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 border border-blue-700"
+                className="group flex items-center gap-3 bg-slate-600 hover:bg-slate-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 border border-slate-500"
               >
                 <span>View Solutions</span>
                 <span className="group-hover:translate-x-1 transition-transform">
@@ -80,9 +80,9 @@ const EnterprisePage: React.FC = () => {
                 icon: '🔒'
               },
               {
-                title: 'Quantum Computing',
-                description: 'Next-generation computing power for complex business problems',
-                icon: '⚛️'
+                title: 'Cloud Infrastructure',
+                description: 'Scalable and secure cloud architecture',
+                icon: '☁️'
               },
               {
                 title: 'Enterprise AI',
@@ -90,9 +90,9 @@ const EnterprisePage: React.FC = () => {
                 icon: '🧠'
               },
               {
-                title: 'Cloud Infrastructure',
-                description: 'Scalable and secure cloud architecture',
-                icon: '☁️'
+                title: 'Data Analytics',
+                description: 'Advanced analytics and business intelligence',
+                icon: '📈'
               },
             ].map((solution, index) => (
               <div
@@ -109,33 +109,35 @@ const EnterprisePage: React.FC = () => {
               </div>
             ))}
           </div>
+        </div>
+      </section>
 
-          {/* CTA Section */}
-          <div className="mt-24">
-            <div className="text-center bg-white/5 backdrop-blur-lg rounded-3xl p-12 border border-white/20">
-              <h3 className="text-4xl font-bold text-white mb-6">
-                Ready to Transform Your Enterprise?
-              </h3>
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Join 500+ Fortune 500 companies achieving unprecedented
-                transformation with our enterprise AI solutions.
-              </p>
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-                <Link
-                  href="tel:+13024640950"
-                  className="group flex items-center gap-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl"
-                >
-                  <span className="text-xl">📞</span>
-                  <span>Call Now</span>
-                </Link>
-                <Link
-                  href="/contact"
-                  className="group flex items-center gap-3 bg-white/10 hover:bg-white/20 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 border border-white/30"
-                >
-                  <span className="text-xl">📧</span>
-                  <span>Get Enterprise Consultation</span>
-                </Link>
-              </div>
+      {/* CTA Section */}
+      <section className="py-24 bg-slate-50">
+        <div className="container mx-auto px-4">
+          <div className="text-center bg-gradient-to-r from-blue-600 to-purple-600 rounded-3xl p-12 border border-blue-500/20">
+            <h3 className="text-4xl font-bold text-white mb-6">
+              Ready to Transform Your Enterprise?
+            </h3>
+            <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto">
+              Join 500+ Fortune 500 companies achieving unprecedented
+              transformation with our enterprise AI solutions.
+            </p>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
+              <Link
+                href="tel:+13024640950"
+                className="group flex items-center gap-3 bg-white text-blue-600 hover:bg-gray-100 font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl"
+              >
+                <span className="text-xl">📞</span>
+                <span>Call Now</span>
+              </Link>
+              <Link
+                href="/contact"
+                className="group flex items-center gap-3 bg-white/10 hover:bg-white/20 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 border border-white/30"
+              >
+                <span className="text-xl">📧</span>
+                <span>Get Enterprise Consultation</span>
+              </Link>
             </div>
           </div>
         </div>
