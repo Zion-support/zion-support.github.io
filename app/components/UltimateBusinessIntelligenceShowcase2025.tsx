@@ -4,16 +4,9 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 
 const UltimateBusinessIntelligenceShowcase2025 = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
   const [selectedCategory, setSelectedCategory] = useState('all');
 
-  const content = [
-    {
-      id: 'ai-revolution-business-intelligence',
-      title: 'AI Revolution: Ultimate Business Intelligence 2025 - 30,000% ROI Breakthrough',
-      description: 'Discover how revolutionary AI-powered business intelligence is transforming enterprise decision-making and delivering unprecedented returns on investment.',
-      url: '/articles/ai-revolution-ultimate-business-intelligence-2025-30000-roi-breakthrough',
-      type: 'Article',
-      category: 'article',
   const content = [
     {
       id: 'ultimate-business-intelligence-revolution',
@@ -70,7 +63,7 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
 
   const categories = [
     { id: 'all', name: 'All Content' },
-    { id: 'article', name: 'Articles' },
+    { id: 'blog', name: 'Blog Posts' },
     { id: 'case-study', name: 'Case Studies' },
     { id: 'resource', name: 'Resources' }
   ];
@@ -85,6 +78,7 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
     }, 5000);
     return () => clearInterval(interval);
   }, [content.length]);
+
   const currentContent = content[currentSlide];
 
   return (
@@ -125,8 +119,25 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
           </p>
         </div>
 
+        {/* Category Filter */}
+        <div className="flex justify-center gap-4 mb-12">
+          {categories.map((category) => (
+            <button
+              key={category.id}
+              onClick={() => setSelectedCategory(category.id)}
+              className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
+                selectedCategory === category.id
+                  ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white'
+                  : 'bg-white/10 text-gray-300 hover:bg-white/20'
+              }`}
+            >
+              {category.name}
+            </button>
+          ))}
+        </div>
+
         {/* Main Content Card */}
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-6xl mx-auto mb-16">
           <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-8 md:p-12 border border-white/20 shadow-2xl">
             {/* Content Type Badge */}
             <div className="flex items-center justify-between mb-8">
@@ -138,36 +149,24 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
               </div>
             </div>
 
-            {/* Live Demo Section */}
-            <div className="relative mb-8">
-              <div className="bg-gradient-to-br from-cyan-500/20 to-blue-600/20 rounded-2xl p-8 border border-cyan-400/30">
-                <div className="text-center">
-                  <div className="text-6xl mb-4">🚀</div>
-                  <h4 className="text-2xl font-bold text-white mb-4">Live Demo</h4>
-                  <p className="text-gray-300 mb-6">See our platform in action with real-time data processing and AI insights.</p>
-                  <div className="bg-black/50 rounded-lg p-4 font-mono text-sm text-green-400">
-                    <div>Processing: 1,247,892 events/sec</div>
-                    <div>Accuracy: 99.9%</div>
-                    <div>Response Time: 47ms</div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            {/* Title and Description */}
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              {currentContent.title}
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              {currentContent.description}
+            </p>
 
             {/* Stats Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-              <div className="text-center">
-                <div className="text-3xl font-bold text-cyan-400 mb-2">99.9%</div>
-                <div className="text-sm text-gray-300">Accuracy</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-cyan-400 mb-2">47ms</div>
-                <div className="text-sm text-gray-300">Response Time</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-cyan-400 mb-2">1.2M</div>
-                <div className="text-sm text-gray-300">Events/sec</div>
-              </div>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8">
+              {Object.entries(currentContent.metrics).map(([key, value]) => (
+                <div key={key} className="text-center">
+                  <div className="text-3xl font-bold text-cyan-400 mb-2">{value}</div>
+                  <div className="text-sm text-gray-300 capitalize">
+                    {key.replace(/([A-Z])/g, ' $1').trim()}
+                  </div>
+                </div>
+              ))}
             </div>
 
             {/* Tags */}

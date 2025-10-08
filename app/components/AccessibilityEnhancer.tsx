@@ -266,12 +266,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       liveRegion.textContent = message;
     }
   };
-
-  // Expose utility functions
-  React.useImperativeHandle(ref, () => ({
-    announceToScreenReader,
-    setFontSize: (size: number) => setFontSize(size),
-  }), []);
   // Helper functions
   const addSkipLinks = useCallback(() => {
     const skipLinksContainer = document.createElement('div');
