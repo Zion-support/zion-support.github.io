@@ -103,7 +103,7 @@ global.IntersectionObserver = class IntersectionObserver {
   unobserve() {}
 };
 
-// TextEncoder and TextDecoder are already set above
+// TextEncoder and TextDecoder are already imported and set above
 
 // Suppress console errors in tests
 const originalError = console.error;
