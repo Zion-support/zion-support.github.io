@@ -47,7 +47,7 @@ export const isArray = <T = unknown>(value: unknown): value is T[] => {
 /**
  * Check if value is a function
  */
-// eslint-disable-next-line @typescript-eslint/no-unsafe-function-type
+ 
 export const isFunction = (value: unknown): value is Function => {
   return typeof value === 'function';
 };

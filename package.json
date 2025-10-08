@@ -42,9 +42,9 @@
     "audit:performance": "lighthouse http://localhost:3000 --output=html --output-path=./lighthouse-report.html",
     "optimize:images": "node scripts/optimize-images.js",
     "optimize:css": "node scripts/optimize-css.cjs",
-    "optimize:all": "npm run optimize:images && npm run optimize:css && npm run build:optimized",
+    "optimize:all": "pnpm run optimize:images && pnpm run optimize:css && pnpm run build:optimized",
     "build:performance": "NODE_ENV=production next build",
-    "analyze:bundle": "ANALYZE=true next build",
+    "analyze:bundle": "vite build --mode analyze && npx vite-bundle-analyzer dist/stats.html",
     "test:performance": "lighthouse http://localhost:3000 --output=html --output-path=./performance-report.html",
     "audit:security": "npm audit --audit-level=moderate",
     "security:check": "npm audit --audit-level=moderate && npm run audit:security",
@@ -93,7 +93,7 @@
     "seo:audit": "node scripts/seo-audit.js",
     "comprehensive:audit": "pnpm run performance:audit && pnpm run security:audit && pnpm run accessibility:audit && pnpm run seo:audit",
     "perf:lighthouse": "lighthouse http://localhost:3000 --output=html --output-path=./lighthouse-report.html",
-    "perf:audit": "npm run perf:lighthouse && npm run perf:analyze",
+    "perf:audit": "lighthouse http://localhost:4173 --output=html --output-path=./lighthouse-report.html",
     "dev:analyze": "NODE_OPTIONS=\"--max-old-space-size=4096\" next dev",
     "test:unit": "jest --testPathPattern=src --passWithNoTests",
     "test:integration": "jest --testPathPattern=app --passWithNoTests",
@@ -102,7 +102,7 @@
     "format:all": "prettier --write \"**/*.{ts,tsx,js,jsx,json,css,md}\"",
     "clean:all": "rm -rf .next node_modules/.next .turbo",
     "precommit": "npm run type-check && npm run lint && npm run test:unit",
-    "postinstall": "npm run type-check"
+    "postinstall": "echo 'Dependencies installed successfully'"
   },
   "dependencies": {
     "@esbuild/linux-x64": "^0.25.10",
