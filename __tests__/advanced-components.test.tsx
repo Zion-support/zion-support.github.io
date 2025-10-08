@@ -15,6 +15,11 @@ const ThrowError = ({ shouldThrow }: { shouldThrow: boolean }) => {
   return <div>No error</div>;
 };
 
+// Helper function to render with MemoryRouter
+const renderWithRouter = (component: React.ReactElement) => {
+  return render(<MemoryRouter>{component}</MemoryRouter>);
+};
+
 describe('AdvancedErrorBoundary', () => {
   it('renders children when there is no error', () => {
     render(
