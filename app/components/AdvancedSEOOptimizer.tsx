@@ -143,7 +143,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     if (typeof document !== 'undefined') {
       document.title = seoData.title;
       
-      let _metaDescription = document.querySelector('meta[name="description"]');
+      let metaDescription = document.querySelector('meta[name="description"]');
       if (!metaDescription) {
         metaDescription = document.createElement('meta');
         metaDescription.setAttribute('name', 'description');
@@ -152,7 +152,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
       metaDescription.setAttribute('content', seoData.description);
 
       // Update canonical URL
-      let _canonicalLink = document.querySelector('link[rel="canonical"]');
+      let canonicalLink = document.querySelector('link[rel="canonical"]');
       if (!canonicalLink) {
         canonicalLink = document.createElement('link');
         canonicalLink.setAttribute('rel', 'canonical');
@@ -180,7 +180,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
   //     canonicalLink.href = url;
   //     document.head.appendChild(canonicalLink);
   //   }
-  // };origin/cursor/fix-errors-and-merge-to-main-6395
+  // };
 
   // const _addStructuredData = (data: Record<string, unknown>) => {
   //   // Remove existing structured data
@@ -194,13 +194,14 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
   //   document.head.appendChild(script);
   // };
 
+  const _addStructuredData = (data: Record<string, unknown>) => {
     // Add new structured data
-    const _script = document.createElement('script');
+    const script = document.createElement('script');
     script.type = 'application/ld+json';
     script.textContent = JSON.stringify(data);
     script.id = 'structured-data';
     document.head.appendChild(script);
-    structuredDataRef.current = script;
+    _structuredDataRef.current = script;
   };
 
   const _trackPageView = (config: SEOData) => {
@@ -216,16 +217,16 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     if (typeof window !== 'undefined' && 'performance' in window) {
       window.addEventListener('load', () => {
         const _perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-        if (perfData && typeof window !== 'undefined' && 'gtag' in window) {
+        if (_perfData && typeof window !== 'undefined' && 'gtag' in window) {
           (window as unknown as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag('event', 'page_load_performance', {
             event_category: 'Performance',
             event_label: 'Page Load',
-            value: Math.round(perfData.loadEventEnd - perfData.fetchStart),
+            value: Math.round(_perfData.loadEventEnd - _perfData.fetchStart),
           });
         }
       });
     }
-  };origin/cursor/fix-errors-and-merge-to-main-6395
+  };
 
   return (
     <Helmet>
@@ -271,21 +272,21 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
       <meta name="theme-color" content="#4F46E5" />
 
       {/* Structured Data */}
-      {enableSchemaMarkup && structuredData && (
+      {enableSchemaMarkup && _structuredData && (
         <script type="application/ld+json">
-          {JSON.stringify(structuredData)}
+          {JSON.stringify(_structuredData)}
         </script>
       )}
 
-      {enableSchemaMarkup && breadcrumbData && (
+      {enableSchemaMarkup && _breadcrumbData && (
         <script type="application/ld+json">
-          {JSON.stringify(breadcrumbData)}
+          {JSON.stringify(_breadcrumbData)}
         </script>
       )}
 
-      {enableSchemaMarkup && faqData && (
+      {enableSchemaMarkup && _faqData && (
         <script type="application/ld+json">
-          {JSON.stringify(faqData)}
+          {JSON.stringify(_faqData)}
         </script>
       )}
 
