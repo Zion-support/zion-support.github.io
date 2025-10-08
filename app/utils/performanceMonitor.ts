@@ -234,3 +234,16 @@ class PerformanceMonitor {
     
     return `
 Performance Report:
+Overall Score: ${score}/100
+
+Core Web Vitals:
+- FCP (First Contentful Paint): ${metrics.fcp ? `${metrics.fcp.toFixed(2)}ms` : 'N/A'}
+- LCP (Largest Contentful Paint): ${metrics.lcp ? `${metrics.lcp.toFixed(2)}ms` : 'N/A'}
+- FID (First Input Delay): ${metrics.fid ? `${metrics.fid.toFixed(2)}ms` : 'N/A'}
+- CLS (Cumulative Layout Shift): ${metrics.cls ? metrics.cls.toFixed(3) : 'N/A'}
+- TTFB (Time to First Byte): ${metrics.ttfb ? `${metrics.ttfb.toFixed(2)}ms` : 'N/A'}
+`;
+  }
+}
+
+export const performanceMonitor = new PerformanceMonitor();
