@@ -28,14 +28,7 @@ interface SEOConfig {
   description: string;
   url: string;
   canonicalUrl: string;
-}
-
-interface AdvancedSEOOptimizerProps {
-  seoData: SEOData;
-  enableStructuredData?: boolean;
-  enableOpenGraph?: boolean;
-  enableTwitterCards?: boolean;
-  enableSchemaMarkup?: boolean;
+  keywords: string[];
 }
 
 interface AdvancedSEOOptimizerProps {
@@ -43,6 +36,7 @@ interface AdvancedSEOOptimizerProps {
   enableStructuredData?: boolean;
   enableOpenGraph?: boolean;
   enableTwitterCards?: boolean;
+  enableSchemaMarkup?: boolean;
 }
 
 const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
@@ -50,11 +44,12 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
   enableStructuredData = true,
   enableOpenGraph = true,
   enableTwitterCards = true,
+  enableSchemaMarkup = true,
 }) => {
   const structuredDataRef = useRef<HTMLScriptElement | null>(null);
 
   const generateStructuredData = useCallback(() => {
-    if (!enableStructuredData || !seoData.structuredData) return null;
+    if (!enableStructuredData) return null;
 
     // Update meta description
     const metaDescription = document.querySelector('meta[name="description"]');
@@ -123,9 +118,24 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     // Add new canonical link
     const canonicalLink = document.createElement('link');
     canonicalLink.rel = 'canonical';
-    canonicalLink.href = seoData.canonicalUrl;
+    canonicalLink.href = config.canonicalUrl;
     document.head.appendChild(canonicalLink);
-  }, [seoData.canonicalUrl]);
+  }, [config.canonicalUrl]);
+
+  const addStructuredData = (data: Record<string, unknown>) => {
+    // Remove existing structured data
+    if (structuredDataRef.current) {
+      structuredDataRef.current.remove();
+    }
+
+    // Add new structured data
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.textContent = JSON.stringify(data);
+    script.id = 'structured-data';
+    document.head.appendChild(script);
+    structuredDataRef.current = script;
+  };
 
   const generateAdditionalMetaTags = () => {
     return (
@@ -173,10 +183,10 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
 
     // Track page view
     trackPageView({
-      title: seoData.title,
-      description: seoData.description,
-      url: seoData.canonicalUrl,
-      canonicalUrl: seoData.canonicalUrl,
+      title: config.title,
+      description: config.description,
+      url: config.canonicalUrl,
+      canonicalUrl: config.canonicalUrl,
     });
 
     // Cleanup on unmount
@@ -185,7 +195,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
         structuredDataRef.current.remove();
       }
     };
-  }, [seoData, addCanonicalLink, generateStructuredData, generateBreadcrumbStructuredData]);
+  }, [config, addCanonicalLink, generateStructuredData, generateBreadcrumbStructuredData]);
 
   return (
     <Helmet>
@@ -197,11 +207,11 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
       {/* Open Graph Tags */}
       {enableOpenGraph && (
         <>
-          <meta property="og:title" content={seoData.ogTitle || seoData.title} />
-          <meta property="og:description" content={seoData.ogDescription || seoData.description} />
-          <meta property="og:image" content={seoData.ogImage || 'https://ziontechgroup.com/og-image.jpg'} />
-          <meta property="og:url" content={seoData.canonicalUrl} />
-          <meta property="og:type" content={seoData.ogType || 'website'} />
+          <meta property="og:title" content={config.title} />
+          <meta property="og:description" content={config.description} />
+          <meta property="og:image" content="https://ziontechgroup.com/og-image.jpg" />
+          <meta property="og:url" content={config.canonicalUrl} />
+          <meta property="og:type" content="website" />
           <meta property="og:site_name" content="Zion Tech Group" />
         </>
       )}
@@ -209,22 +219,16 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
       {/* Twitter Card Tags */}
       {enableTwitterCards && (
         <>
-          <meta name="twitter:card" content={seoData.twitterCard || 'summary_large_image'} />
-          <meta name="twitter:title" content={seoData.twitterTitle || seoData.title} />
-          <meta name="twitter:description" content={seoData.twitterDescription || seoData.description} />
-          <meta name="twitter:image" content={seoData.twitterImage || 'https://ziontechgroup.com/twitter-image.jpg'} />
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:title" content={config.title} />
+          <meta name="twitter:description" content={config.description} />
+          <meta name="twitter:image" content="https://ziontechgroup.com/twitter-image.jpg" />
         </>
       )}
 
       {/* Additional Meta Tags */}
-      {seoData.robots && <meta name="robots" content={seoData.robots} />}
-      {seoData.author && <meta name="author" content={seoData.author} />}
-      {seoData.publishedTime && <meta property="article:published_time" content={seoData.publishedTime} />}
-      {seoData.modifiedTime && <meta property="article:modified_time" content={seoData.modifiedTime} />}
-      {seoData.section && <meta property="article:section" content={seoData.section} />}
-      {seoData.tags && seoData.tags.map((tag, index) => (
-        <meta key={index} property="article:tag" content={tag} />
-      ))}
+      <meta name="robots" content="index, follow" />
+      <meta name="author" content="Zion Tech Group" />
 
       {/* Preconnect to external domains */}
       <link rel="preconnect" href="https://fonts.googleapis.com" />

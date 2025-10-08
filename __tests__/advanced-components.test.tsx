@@ -124,13 +124,15 @@ describe('AdvancedSEOOptimizer', () => {
     expect(screen.getByText('Test content')).toBeInTheDocument();
   });
 
-  it('sets document title', () => {
+  it('sets document title', async () => {
     render(
       <HelmetProvider>
         <AdvancedSEOOptimizer config={mockSEOData} />
       </HelmetProvider>
     );
 
+    // Wait for helmet to update the document title
+    await new Promise(resolve => setTimeout(resolve, 100));
     expect(document.title).toBe('Test Title');
   });
 
