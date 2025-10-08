@@ -90,6 +90,10 @@ const HomePage: React.FC = () => {
           <p className="text-lg md:text-xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
             Leading provider of enterprise AI solutions, quantum computing, and autonomous systems.
             Transform your business with our cutting-edge technology and achieve unprecedented growth.
+            <br /><br />
+            <span className="text-cyan-400 font-semibold">✓ 500+ Enterprise Clients</span> • 
+            <span className="text-green-400 font-semibold"> $2.5B+ Cost Savings Delivered</span> • 
+            <span className="text-purple-400 font-semibold"> 99.9% Uptime Guarantee</span>
           </p>
           
           {/* Key Benefits */}
@@ -149,6 +153,8 @@ const HomePage: React.FC = () => {
                 </p>
                 <div className="text-center">
                   <div className="text-2xl font-bold text-cyan-400 mb-2">Starting at $1,500/month</div>
+                  <div className="text-sm text-gray-400 mb-2">Market: $2,500-5,000/month</div>
+                  <div className="text-sm text-green-400 font-semibold mb-3">Save up to 40% vs market rates</div>
                   <a href="/ai-services" className="text-cyan-400 hover:text-cyan-300 font-medium">
                     Learn More →
                   </a>
@@ -165,6 +171,8 @@ const HomePage: React.FC = () => {
                 </p>
                 <div className="text-center">
                   <div className="text-2xl font-bold text-pink-400 mb-2">Starting at $199/month</div>
+                  <div className="text-sm text-gray-400 mb-2">Market: $350-700/month</div>
+                  <div className="text-sm text-green-400 font-semibold mb-3">Save up to 43% vs market rates</div>
                   <a href="/ai-marketing" className="text-pink-400 hover:text-pink-300 font-medium">
                     Learn More →
                   </a>
@@ -181,6 +189,8 @@ const HomePage: React.FC = () => {
                 </p>
                 <div className="text-center">
                   <div className="text-2xl font-bold text-blue-400 mb-2">Starting at $399/month</div>
+                  <div className="text-sm text-gray-400 mb-2">Market: $600-1,200/month</div>
+                  <div className="text-sm text-green-400 font-semibold mb-3">Save up to 50% vs market rates</div>
                   <a href="/ai-automation" className="text-blue-400 hover:text-blue-300 font-medium">
                     Learn More →
                   </a>
@@ -199,6 +209,8 @@ const HomePage: React.FC = () => {
                 </p>
                 <div className="text-center">
                   <div className="text-2xl font-bold text-green-400 mb-2">Starting at $1,999/month</div>
+                  <div className="text-sm text-gray-400 mb-2">Market: $3,500-7,000/month</div>
+                  <div className="text-sm text-green-400 font-semibold mb-3">Save up to 43% vs market rates</div>
                   <a href="/ai-healthcare" className="text-green-400 hover:text-green-300 font-medium">
                     Learn More →
                   </a>
@@ -215,6 +227,8 @@ const HomePage: React.FC = () => {
                 </p>
                 <div className="text-center">
                   <div className="text-2xl font-bold text-indigo-400 mb-2">Starting at $1,499/month</div>
+                  <div className="text-sm text-gray-400 mb-2">Market: $2,500-5,000/month</div>
+                  <div className="text-sm text-green-400 font-semibold mb-3">Save up to 40% vs market rates</div>
                   <a href="/ai-fintech" className="text-indigo-400 hover:text-indigo-300 font-medium">
                     Learn More →
                   </a>
@@ -231,6 +245,8 @@ const HomePage: React.FC = () => {
                 </p>
                 <div className="text-center">
                   <div className="text-2xl font-bold text-purple-400 mb-2">Custom Pricing</div>
+                  <div className="text-sm text-gray-400 mb-2">Market: $15,000-50,000/month</div>
+                  <div className="text-sm text-green-400 font-semibold mb-3">Contact for competitive pricing</div>
                   <a href="/quantum-computing" className="text-purple-400 hover:text-purple-300 font-medium">
                     Learn More →
                   </a>
@@ -247,6 +263,8 @@ const HomePage: React.FC = () => {
                 </p>
                 <div className="text-center">
                   <div className="text-2xl font-bold text-green-600 mb-2">Starting at $2,500/month</div>
+                  <div className="text-sm text-gray-500 mb-2">Market: $4,000-8,000/month</div>
+                  <div className="text-sm text-green-600 font-semibold mb-3">Save up to 37% vs market rates</div>
                   <a href="/autonomous-systems" className="text-green-600 hover:text-green-700 font-medium">
                     Learn More →
                   </a>
@@ -418,6 +436,19 @@ const HomePage: React.FC = () => {
             <p>✓ Free initial consultation</p>
             <p>✓ Custom solution design</p>
             <p>✓ 24/7 support available</p>
+            <p>✓ 30-day money-back guarantee</p>
+            <p>✓ No long-term contracts required</p>
+          </div>
+          
+          <div className="mt-6 text-center">
+            <p className="text-sm text-gray-400 mb-2">Ready to get started? Contact us today!</p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center text-sm">
+              <span className="text-cyan-400">📞 +1 302 464 0950</span>
+              <span className="text-gray-500">•</span>
+              <span className="text-cyan-400">✉️ kleber@ziontechgroup.com</span>
+              <span className="text-gray-500">•</span>
+              <span className="text-cyan-400">📍 364 E Main St STE 1008, Middletown DE 19709</span>
+            </div>
           </div>
         </section>
       </main>
