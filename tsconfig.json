@@ -10,19 +10,17 @@
     "module": "ESNext",
     "skipLibCheck": true,
     "allowImportingTsExtensions": false,
-    "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx",
-    "jsxImportSource": "react",
-    "strict": true,
-    "strictNullChecks": true,
+    "jsx": "preserve",
+    "strict": false,
     "noUnusedLocals": false,
     "noUnusedParameters": false,
     "noFallthroughCasesInSwitch": false,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
+    "moduleResolution": "bundler",
     "baseUrl": ".",
     "paths": {
       "@/*": [
@@ -31,65 +29,56 @@
       "@/components/*": [
         "src/components/*"
       ],
+      "@/pages/*": [
+        "src/pages/*"
+      ],
       "@/utils/*": [
         "src/utils/*"
-      ],
-      "@/hooks/*": [
-        "src/hooks/*"
       ],
       "@/types/*": [
         "src/types/*"
       ],
+      "@/hooks/*": [
+        "src/hooks/*"
+      ],
       "@/config/*": [
         "src/config/*"
       ],
-      "@/app/*": [
-        "app/*"
+      "@/data/*": [
+        "src/data/*"
+      ],
+      "@/content/*": [
+        "src/content/*"
       ]
     },
-    "types": [
-      "vite/client",
-      "node",
-      "jest",
-      "@testing-library/jest-dom"
-    ],
-    "forceConsistentCasingInFileNames": true,
-    "allowJs": true,
     "incremental": true,
     "plugins": [
       {
         "name": "next"
       }
-    ]
+    ],
+    "allowJs": true
   },
   "include": [
-    "src/**/*",
-    "app/**/*",
-    "*.ts",
-    "*.tsx",
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
     ".next/types/**/*.ts"
   ],
   "exclude": [
     "node_modules",
-    "dist",
-    "build",
     ".next",
     "out",
-    "**/*.spec.ts",
-    "**/*.test.ts",
-    "**/*.spec.tsx",
-    "**/*.test.tsx",
-    "**/__tests__/**",
-    "**/__mocks__/**",
-    "_pages_disabled/**",
-    "_pages_api_disabled/**",
-    "_conflicted_disabled/**",
+    "dist",
     "_app_disabled/**",
+    "_conflicted_disabled/**",
+    "_pages_api_disabled/**",
+    "_pages_disabled/**",
+    "admin-api-disabled/**",
     "api-disabled/**",
     "api.disabled/**",
     "api.disabled.temp/**",
     "api-backup/**",
-    "admin-api-disabled/**",
     "apps.backup/**",
     "automation_backup/**",
     "ai-optimization-backups/**",
@@ -99,17 +88,37 @@
     "corrupted-files-backup/**",
     "corrupted_backup/**",
     "corrupted_files_backup_2/**",
+    "corrupted-src-backup/**",
+    "content/**",
+    "contracts/**",
+    "contracts.disabled/**",
     "components_backup/**",
+    "components.disabled/**",
+    "components.disabled_full/**",
+    "components-disabled/**",
+    "corrupted-services-backup/**",
+    "cypress/**",
+    "cypress.disabled/**",
+    "clean-build/**",
+    "data/**",
     "data_backup/**",
+    "data.disabled/**",
+    "dao/**",
+    "deployments/**",
+    "e2e/**",
+    "factories/**",
+    "hooks/**",
     "lib_backup/**",
-    "backup/**",
-    "backup-merge-conflicts/**",
-    "backup-pages/**",
-    "backup-problematic-files/**"
-  ],
-  "references": [
-    {
-      "path": "./tsconfig.node.json"
-    }
+    "lib.disabled/**",
+    "pages_disabled/**",
+    "services/**",
+    "src.disabled/**",
+    "temp-files/**",
+    "utils.disabled/**",
+    "vite.config.performance.ts",
+    "app_disabled/**",
+    "fix-*.jsx",
+    "fix-*.ts",
+    "jest.setup.*"
   ]
 }

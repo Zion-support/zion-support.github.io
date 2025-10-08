@@ -14,6 +14,10 @@ interface PerformanceMetrics {
   ttfb?: number;
 }
 
+interface PerformanceMetrics {
+  [key: string]: number | undefined;
+}
+
 const PerformanceMonitor: React.FC = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({});
 
