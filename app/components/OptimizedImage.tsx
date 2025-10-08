@@ -1,5 +1,5 @@
 import React, { useState, useCallback, memo } from 'react';
-import { Link } from 'react-router-dom';
+// Image component replaced with regular img tag;
 
 interface OptimizedImageProps {
   src: string;
@@ -54,8 +54,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = memo(({
           <span className="text-sm">Failed to load image</span>
         </div>
       ) : (
-        <img
-          src={src}
+        <img           src={src}
           alt={alt}
           width={width || 200}
           height={height || 200}
@@ -68,7 +67,6 @@ const OptimizedImage: React.FC<OptimizedImageProps> = memo(({
             width: width ? `${width}px` : 'auto',
             height: height ? `${height}px` : 'auto'
           }}
-          loading={priority ? 'eager' : 'lazy'}
         />
       )}
     </div>

@@ -4,8 +4,7 @@ import { ArrowRight, Phone, CheckCircle, Star } from 'lucide-react';
 
 export const metadata = {
   title: 'Zion Tech Group - Advanced AI and IT Solutions',
-  description:
-    'Leading provider of AI-powered enterprise solutions, automation, and digital transformation services.',
+  description: 'Leading provider of AI-powered enterprise solutions, automation, and digital transformation services.',
 };
 
 export default function HomePage() {
@@ -21,18 +20,10 @@ export default function HomePage() {
               </Link>
             </div>
             <nav className="hidden md:flex space-x-8">
-              <Link to="/" className="text-gray-900 hover:text-blue-600">
-                Home
-              </Link>
-              <Link to="/services" className="text-gray-900 hover:text-blue-600">
-                Services
-              </Link>
-              <Link to="/blog" className="text-gray-900 hover:text-blue-600">
-                Blog
-              </Link>
-              <Link to="/case-studies" className="text-gray-900 hover:text-blue-600">
-                Case Studies
-              </Link>
+              <Link to="/" className="text-gray-900 hover:text-blue-600">Home</Link>
+              <Link to="/services" className="text-gray-900 hover:text-blue-600">Services</Link>
+              <Link to="/blog" className="text-gray-900 hover:text-blue-600">Blog</Link>
+              <Link to="/case-studies" className="text-gray-900 hover:text-blue-600">Case Studies</Link>
             </nav>
           </div>
         </div>
@@ -47,19 +38,18 @@ export default function HomePage() {
               <span className="block text-blue-200">AI-Powered Solutions</span>
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-blue-100">
-              Zion Tech Group delivers cutting-edge AI micro SaaS services, cloud automation, and
-              enterprise IT solutions that drive growth, efficiency, and innovation.
+              Zion Tech Group delivers cutting-edge AI micro SaaS services, cloud automation, 
+              and enterprise IT solutions that drive growth, efficiency, and innovation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                href="/services"
+                to="/services"
                 className="inline-flex items-center px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-blue-50 transition-colors font-semibold"
               >
                 Explore Our Services
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
-              <a
-                href="tel:+13024640950"
+              <a href="tel:+13024640950"
                 className="inline-flex items-center px-8 py-4 bg-transparent border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-semibold"
               >
                 <Phone className="w-5 h-5 mr-2" />
@@ -80,38 +70,41 @@ export default function HomePage() {
                 We deliver measurable results through innovative AI solutions
               </p>
             </div>
-
+            
             <div className="grid md:grid-cols-3 gap-8">
               <div className="bg-white p-8 rounded-lg shadow-lg">
                 <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
                   <CheckCircle className="w-6 h-6 text-blue-600" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">Proven Results</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                  Proven Results
+                </h3>
                 <p className="text-gray-600">
-                  Our AI solutions have delivered 300% ROI and 70% cost reduction for enterprise
-                  clients.
+                  Our AI solutions have delivered 300% ROI and 70% cost reduction for enterprise clients.
                 </p>
               </div>
-
+              
               <div className="bg-white p-8 rounded-lg shadow-lg">
                 <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-6">
                   <Star className="w-6 h-6 text-green-600" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">Expert Team</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                  Expert Team
+                </h3>
                 <p className="text-gray-600">
-                  Our team of AI experts and engineers brings decades of experience in enterprise
-                  transformation.
+                  Our team of AI experts and engineers brings decades of experience in enterprise transformation.
                 </p>
               </div>
-
+              
               <div className="bg-white p-8 rounded-lg shadow-lg">
                 <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
                   <ArrowRight className="w-6 h-6 text-purple-600" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">Fast Implementation</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                  Fast Implementation
+                </h3>
                 <p className="text-gray-600">
-                  Get your AI solutions up and running quickly with our streamlined implementation
-                  process.
+                  Get your AI solutions up and running quickly with our streamlined implementation process.
                 </p>
               </div>
             </div>
@@ -129,14 +122,14 @@ export default function HomePage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                href="/contact"
+                to="/contact"
                 className="inline-flex items-center px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-blue-50 transition-colors font-semibold"
               >
                 Get Started Today
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
               <Link
-                href="/case-studies"
+                to="/case-studies"
                 className="inline-flex items-center px-8 py-4 bg-transparent border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-semibold"
               >
                 View Success Stories
@@ -156,31 +149,19 @@ export default function HomePage() {
               Advanced AI and IT Solutions for Enterprise Transformation
             </p>
             <div className="flex justify-center space-x-6">
-              <Link to="/services" className="text-gray-400 hover:text-white">
-                Services
-              </Link>
-              <Link to="/about" className="text-gray-400 hover:text-white">
-                About
-              </Link>
-              <Link to="/contact" className="text-gray-400 hover:text-white">
-                Contact
-              </Link>
-              <Link to="/privacy" className="text-gray-400 hover:text-white">
-                Privacy
-              </Link>
+              <Link to="/services" className="text-gray-400 hover:text-white">Services</Link>
+              <Link to="/about" className="text-gray-400 hover:text-white">About</Link>
+              <Link to="/contact" className="text-gray-400 hover:text-white">Contact</Link>
+              <Link to="/privacy" className="text-gray-400 hover:text-white">Privacy</Link>
             </div>
             <div className="mt-8 pt-8 border-t border-gray-800">
-              <p className="text-gray-400 text-sm">© 2026 Zion Tech Group. All rights reserved.</p>
+              <p className="text-gray-400 text-sm">
+                © 2026 Zion Tech Group. All rights reserved.
+              </p>
             </div>
           </div>
         </div>
       </footer>
     </div>
   );
-<<<<<<< HEAD
 }
-=======
-};
-
-export default HomePage;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3228

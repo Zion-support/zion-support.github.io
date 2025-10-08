@@ -1,4 +1,3 @@
-import React from 'react';
 import './globals.css';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import AnalyticsProvider from './components/AnalyticsProvider';
@@ -6,7 +5,11 @@ import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import PWAInstaller from './components/PWAInstaller';
 import { GlobalErrorBoundary } from './components/GlobalErrorBoundary';
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   const structuredData = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
@@ -22,7 +25,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       areaServed: 'US',
       availableLanguage: 'en',
     },
-    sameAs: ['https://twitter.com/ziontechgroup', 'https://linkedin.com/company/ziontechgroup'],
+    sameAs: [
+      'https://twitter.com/ziontechgroup',
+      'https://linkedin.com/company/ziontechgroup',
+    ],
     address: {
       '@type': 'PostalAddress',
       addressCountry: 'US',
@@ -30,21 +36,35 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   };
 
   return (
-    <html lang="en">
+    <html lang='en'>
       <head>
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-        <link rel="manifest" href="/site.webmanifest" />
-        <meta name="theme-color" content="#4f46e5" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel='icon' href='/favicon.ico' />
+        <link
+          rel='apple-touch-icon'
+          sizes='180x180'
+          href='/apple-touch-icon.png'
+        />
+        <link
+          rel='icon'
+          type='image/png'
+          sizes='32x32'
+          href='/favicon-32x32.png'
+        />
+        <link
+          rel='icon'
+          type='image/png'
+          sizes='16x16'
+          href='/favicon-16x16.png'
+        />
+        <link rel='manifest' href='/site.webmanifest' />
+        <meta name='theme-color' content='#4f46e5' />
+        <meta name='viewport' content='width=device-width, initial-scale=1' />
         <script
-          type="application/ld+json"
+          type='application/ld+json'
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
       </head>
-      <body className="antialiased">
+      <body className='antialiased'>
         <GlobalErrorBoundary>
           <AnalyticsProvider>
             <AccessibilityEnhancer>
