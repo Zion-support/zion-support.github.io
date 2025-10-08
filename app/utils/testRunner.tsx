@@ -893,7 +893,7 @@ export const useTestRunner = () => {
 export const testUtils = {
   // Create mock data
   createMockData: (type: string, count: number = 10) => {
-    const mockData = [];
+    const mockData: any[] = [];
     for (let i = 0; i < count; i++) {
       mockData.push({
         id: i + 1,
