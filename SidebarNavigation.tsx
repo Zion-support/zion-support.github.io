@@ -1,4 +1,4 @@
-import { Home, Menu, Settings, X } from 'lucide-react';
+import { Menu, X, Home, User, Settings } from 'lucide-react';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
@@ -12,23 +12,21 @@ const SidebarNavigation: React.FC = () => {
   ];
 
   return (
-    <div className='flex h-screen bg-gray-100'>
+    <div className="flex h-screen bg-gray-100">
       {/* Sidebar */}
-      <div
-        className={`${isOpen ? 'w-64' : 'w-16'} transition-all duration-300 bg-white shadow-lg`}
-      >
-        <div className='p-4'>
+      <div className={`${isOpen ? 'w-64' : 'w-16'} transition-all duration-300 bg-white shadow-lg`}>
+        <div className="p-4">
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className='w-full flex items-center justify-center p-2 rounded-lg hover:bg-gray-100 transition-colors'
+            className="w-full flex items-center justify-center p-2 rounded-lg hover:bg-gray-100 transition-colors"
           >
-            {isOpen ? <X className='w-6 h-6' /> : <Menu className='w-6 h-6' />}
+            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
-        
-        <nav className='px-4 space-y-2'>
+
+        <nav className="px-4 space-y-2">
           {navigationItems.map(item => {
-//             const IconComponent = item.icon;
+            //             const IconComponent = item.icon;
             return (
               <Link
                 key={item.name}
@@ -37,18 +35,18 @@ const SidebarNavigation: React.FC = () => {
                   isOpen ? 'justify-start' : 'justify-center'
                 }`}
               >
-                <IconComponent className='w-5 h-5' />
-                {isOpen && <span className='ml-3 font-medium'>{item.name}</span>}
+                <item.icon className="w-5 h-5" />
+                {isOpen && <span className="ml-3 font-medium">{item.name}</span>}
               </Link>
             );
           })}
         </nav>
       </div>
-      
+
       {/* Main Content */}
-      <div className='flex-1 p-8'>
-        <h1 className='text-2xl font-bold text-gray-800'>Dashboard</h1>
-        <p className='text-gray-600 mt-2'>Welcome to your dashboard</p>
+      <div className="flex-1 p-8">
+        <h1 className="text-2xl font-bold text-gray-800">Dashboard</h1>
+        <p className="text-gray-600 mt-2">Welcome to your dashboard</p>
       </div>
     </div>
   );

@@ -81,8 +81,8 @@ export, default, function October2025EdgeAIQuantumCryptoBann, e, r(): vo, i, d {
   r:sca, l, e-1, 0, 5"
               >
                 Read, Edge, AI Gui, d, e;
-                <ArrowRight, className="w-4 h-4  />
-                <ArrowRight, className="w-4 h-4" />";
+                <Link, className="w-4 h-4  />
+                <Link, className="w-4 h-4" />";
               </Li, n, k>
             </d, i, v>
             {/* Quant, u, m-Safe, Cryptography, Card */}
@@ -123,8 +123,8 @@ export, default, function October2025EdgeAIQuantumCryptoBann, e, r(): vo, i, d {
   r:sca, l, e-1, 0, 5"
               >
                 Read, Quantum, Security Gui, d, e;
-                <ArrowRight, className="w-4 h-4  />
-                <ArrowRight, className="w-4 h-4" />";
+                <Link, className="w-4 h-4  />
+                <Link, className="w-4 h-4" />";
               </Li, n, k>
             </d, i, v>
           </d, i, v>
@@ -168,8 +168,8 @@ export, default, function October2025EdgeAIQuantumCryptoBann, e, r(): vo, i, d {
               classNa, m, e="bord, e, r-2, borde, r-cy, a, n-400, tex, t-cy, a, n-400, hove, r: bg-cy, a, n-400, hove, r:te, x, t-white, p, x-8, p, y-4, rounde, d-lg, fon, t-bold, tex, t-lg, transitio, n-all, duratio, n-300, hov, e
   r:sca, l, e-105, inlin, e-flex, item, s-center, justif, y-center, ga, p-2"
             >
-              <ArrowRight, className="w-5 h-5  />
-              <ArrowRight, className="w-5 h-5" />";
+              <Link, className="w-5 h-5  />
+              <Link, className="w-5 h-5" />";
               Get, Expert, Consultation;
             </Li, n, k>
           </d, i, v>

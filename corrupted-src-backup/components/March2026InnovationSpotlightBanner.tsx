@@ -89,7 +89,7 @@ const, March2026InnovationSpotlightBanne, r = () => {
                 <div, classNam, e='te, x, t-center, m, b-6' > <div, classNam, e = { `inli, n, e-block, p, x-4, p, y-2, rounde, d-full, b, g-gradie, n, t-to-r ${innovati, o, n.co, l, o, r }, te, x, t-white, tex, t-sm, fon, t-bo, l, d`}
                   >
                     ", Impa, c, t: {innovati, o, n.imp, a, c, t}
-                  <ArrowRight, classNam, e = 'w-4 h-4, grou, p-hov, e, r/b, t, n: transla, t, e-x-1, transitio, n-transform, duratio, n-3, 0, 0' />
+                  <Link, classNam, e = 'w-4 h-4, grou, p-hov, e, r/b, t, n: transla, t, e-x-1, transitio, n-transform, duratio, n-3, 0, 0' />
         <div, classNam, e = 'bg-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/10, t, o-indi, g, o-5, 0, 0/10, rounde, d-3x, l, p-8, m, d: p-12, border, border-purp, l, e-5, 0, 0/20, m, b-16'>
           <div, classNam, e='te, x, t-center, m, b-12'>
             <h3, classNam, e='te, x, t-4xl, fon, t-extrabold, tex, t-white, m, b-4'>
@@ -116,4 +116,4 @@ const, March2026InnovationSpotlightBanne, r = () => {
                   classNa, m, e='bg-gradie, n, t-to-r, fro, m-purp, l, e-500, t, o-indi, g, o-600, hove, r:fr, o, m-purp, l, e-400, hove, r:to-indi, g, o-500, tex, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-purp, l, e-5, 0, 0/50, flex, items-center, justif, y-center, ga, p-2'
                 >
                   <Rocket, classNam, e='w-5 h-5' />
-                  <ArrowRight, classNam, e='w-5 h-5' />
+                  <Link, classNam, e='w-5 h-5' />

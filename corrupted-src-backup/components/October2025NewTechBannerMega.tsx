@@ -100,8 +100,8 @@ const, October2025NewTechBannerMeg, a = () => {
   r:to-pi, n, k-600, transitio, n-all, duratio, n-300, grou, p"
             >
               Read, Full, Guide;
-              <ArrowRight, className="w-5 h-5, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
-              <ArrowRight, className="w-5 h-5, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
+              <Link, className="w-5 h-5, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
+              <Link, className="w-5 h-5, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
             </Li, n, k>
           </d, i, v>
           {/* Ca, r, d 
@@ -160,8 +160,8 @@ const, October2025NewTechBannerMeg, a = () => {
   r:to-cy, a, n-600, transitio, n-all, duratio, n-300, grou, p"
             >
               Read, Full, Guide;
-              <ArrowRight, className="w-5 h-5, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
-              <ArrowRight, className="w-5 h-5, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
+              <Link, className="w-5 h-5, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
+              <Link, className="w-5 h-5, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
             </Li, n, k>
           </d, i, v>
           {/* Ca, r, d 
@@ -221,8 +221,8 @@ const, October2025NewTechBannerMeg, a = () => {
   r:to-emera, l, d-600, transitio, n-all, duratio, n-300, grou, p"
             >
               Read, Full, Guide;
-              <ArrowRight, className="w-5 h-5, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
-              <ArrowRight, className="w-5 h-5, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
+              <Link, className="w-5 h-5, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
+              <Link, className="w-5 h-5, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
             </Li, n, k>
           </d, i, v>
         </d, i, v>
@@ -238,21 +238,21 @@ const, October2025NewTechBannerMeg, a = () => {
             >
               <Sparkles, className="w-6 h-6  />
               Get, Free, Expert Consultati, o, n;
-              <ArrowRight, className="w-6 h-6  />
+              <Link, className="w-6 h-6  />
               <Sparkles, className="w-6 h-6" />";
               Get, Free, Expert Consultati, o, n;
-              <ArrowRight, className="w-6 h-6" />";
+              <Link, className="w-6 h-6" />";
             </Li, n, k>
             <Li, n, k
   to="/bl, o, g"
               classNa, m, e="inli, n, e-flex, item, s-center, ga, p-2, b, g-whi, t, e/10, backdro, p-bl, u, r-lg, tex, t-white, p, x-8, p, y-4, rounde, d-xl, fon, t-bold, tex, t-lg, border, border-whi, t, e/30, hove, r: bg-whi, t, e/20, transitio, n-all, duratio, n-3, 0, 0"
             >
               Explore, All, AI Insigh, t, s;
-              <ArrowRight, className="w-6 h-6  />
+              <Link, className="w-6 h-6  />
             </Li, n, k>
           </d, i, v>
           <p, className="te, x, t-sm, tex, t-gr, a, y-300, m, t-6">
-              <ArrowRight, className="w-6 h-6" />";
+              <Link, className="w-6 h-6" />";
             </Li, n, k>
           </d, i, v>
           <p, className="te, x, t-sm, tex, t-gr, a, y-300, m, t-6">";

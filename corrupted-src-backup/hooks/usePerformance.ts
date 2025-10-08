@@ -32,15 +32,15 @@ export const usePerformance = (options: UsePerformanceOptions) => {
     slowRenderThreshold = 16, // 60fps threshold
   } = options;
 
-  const mountTimeRef = useRef<number>(0);
-  const renderStartTimeRef = useRef<number>(0);
+  const _mountTimeRef = useRef<number>(0);
+  const _renderStartTimeRef = useRef<number>(0);
 
   // Track component mount time
   useEffect(() => {
     mountTimeRef.current = performance.now();
 
     return () => {
-//       const mountDuration = performance.now() - mountTimeRef.current;
+      //       const mountDuration = performance.now() - mountTimeRef.current;
       analytics.trackPerformance(`${componentName}_mount_time`, mountDuration);
     };
   }, [componentName]);
@@ -53,8 +53,8 @@ export const usePerformance = (options: UsePerformanceOptions) => {
 
     // Use requestAnimationFrame to measure actual render time
     requestAnimationFrame(() => {
-//       const renderTime = performance.now() - renderStartTimeRef.current;
-//       const isSlowRender = renderTime > slowRenderThreshold;
+      //       const renderTime = performance.now() - renderStartTimeRef.current;
+      //       const isSlowRender = renderTime > slowRenderThreshold;
 
       const metrics: PerformanceMetrics = {
         renderTime,
@@ -64,7 +64,7 @@ export const usePerformance = (options: UsePerformanceOptions) => {
 
       // Track memory usage if available
       if (trackMemoryUsage && 'memory' in performance) {
-        const memory = (performance as any).memory;
+        const _memory = (performance as any).memory;
         metrics.memoryUsage = memory.usedJSHeapSize;
       }
 
@@ -72,13 +72,7 @@ export const usePerformance = (options: UsePerformanceOptions) => {
       analytics.trackPerformance(`${componentName}_render_time`, renderTime);
 
       if (isSlowRender) {
-        analytics.track(
-          'slow_render',
-          'performance',
-          'warning',
-          componentName,
-          renderTime
-        );
+        analytics.track('slow_render', 'performance', 'warning', componentName, renderTime);
       }
     });
   }, [componentName, trackRenderTime, slowRenderThreshold, trackMemoryUsage]);
@@ -108,12 +102,10 @@ export const usePageLoadPerformance = () => {
         if (navigation) {
           const metrics = {
             domContentLoaded:
-              navigation.domContentLoadedEventEnd -
-              navigation.domContentLoadedEventStart,
+              navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
             loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
             firstByte: navigation.responseStart - navigation.requestStart,
-            domInteractive:
-              navigation.domInteractive - navigation.navigationStart,
+            domInteractive: navigation.domInteractive - navigation.navigationStart,
             totalLoadTime: navigation.loadEventEnd - navigation.navigationStart,
           };
 
@@ -153,7 +145,7 @@ export const useResourcePerformance = () => {
     const observer = new PerformanceObserver(list => {
       list.getEntries().forEach(entry => {
         if (entry.entryType === 'resource') {
-          const resourceEntry = entry as PerformanceResourceTiming;
+          const _resourceEntry = entry as PerformanceResourceTiming;
           analytics.trackPerformance(
             `resource_${resourceEntry.name.split('.').pop()}`,
             resourceEntry.duration,
@@ -176,13 +168,7 @@ export const useLongTaskMonitoring = () => {
   useEffect(() => {
     const observer = performanceOptimizer.monitorLongTasks(entries => {
       entries.forEach(entry => {
-        analytics.track(
-          'long_task',
-          'performance',
-          'detected',
-          undefined,
-          entry.duration
-        );
+        analytics.track('long_task', 'performance', 'detected', undefined, entry.duration);
       });
     });
 

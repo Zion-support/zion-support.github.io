@@ -28,17 +28,14 @@ export default async function handler(req, res) {
     };
 
     // In a real application, you would save this to a database
-//     console.log('Quote submission:', quote);
-
-    res.statusCode = 200;
+    //     res.statusCode = 200;
     res.json({
       success: true,
       message: 'Quote submitted successfully',
       quote,
     });
   } catch (error) {
-//     console.error('Quote submission error:', error);
-    res.statusCode = 500;
+    //     res.statusCode = 500;
     res.json({ error: error.message || 'Quote submission failed' });
   }
 }

@@ -1,6 +1,6 @@
 import React from 'react';
-import Link from 'next/link';
-import { ArrowRight, Clock } from 'lucide-react';
+// import Link from 'next/link';
+// import { ArrowRight, Clock } from 'lucide-react';
 
 export default function GenerativeDesignSystemsBlueprintPage() {
   return (
@@ -10,8 +10,6 @@ export default function GenerativeDesignSystemsBlueprintPage() {
           <div>
             <div>
               <span>🎨 GENERATIVE DESIGN SYSTEMS</span>
-<<<<<<< HEAD
-=======
             </div>
           </div>
         </div>
@@ -19,4 +17,3 @@ export default function GenerativeDesignSystemsBlueprintPage() {
     </div>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-a0f3

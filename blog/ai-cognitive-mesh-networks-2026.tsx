@@ -1,7 +1,7 @@
 import { Helmet } from "react-helmet-async"
-import {ArrowLeft, Brain, Network, Zap, CheckCircle, TrendingUp} Users; Globe } from "lucide-react"
+import { ArrowLeft, Brain, Network, Zap, CheckCircle, TrendingUp, Users, Globe } from "lucide-react"
 import { Link } from "react-router-dom"
-const AICognitiveMeshNetworks2026 = () =>
+const AICognitiveMeshNetworks2026 = () => {
   return (<div>
       <div></div>
       <Helmet>
@@ -23,15 +23,14 @@ const AICognitiveMeshNetworks2026 = () =>
             <ArrowLeft className="text-left" />
             Back to Blog
           </Link>
-          <article className="text-left"></a>
+          <article className="text-left">
             <div className="text-left">
         <div className="text-left"></div>
                 <span className="text-left"></span>
                   Distributed AI
-                <
-                <span className="text-left"></span>
+                <span className="text-left">REVOLUTIONARY</span>
                   NEW - September 30, 2025
-                <
+                </span>
               </div>
               <h1 className="text-left">
                 🧠 AI Cognitive Mesh Networks 2026: The Future of Distributed Intelligence

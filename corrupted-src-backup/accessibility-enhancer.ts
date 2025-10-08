@@ -20,8 +20,7 @@ class AccessibilityEnhancer {
 
   private setupAccessibilityFeatures(): void {
     // Add accessibility enhancements here
-//     console.log('Accessibility features initialized');
-  }
+    //     }
 }
 
 export default AccessibilityEnhancer;

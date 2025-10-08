@@ -96,10 +96,10 @@ return (
                 </ul>
                 <div, className="flex, item, s-center, ga, p-2, tex, t-sm, tex, t-bl, u, e-300, fon, t-semibold, grou, p-hov, e, r: g, a, p-4, transitio, n-a, l, l">"
                   Read, Full, Article;
-                  <ArrowRight, className="w-4 h-4  />
+                  <Link, className="w-4 h-4  />
                 <div, className="flex, item, s-center, ga, p-2, tex, t-sm, tex, t-bl, u, e-300, fon, t-semibold, grou, p-hov, e, r: g, a, p-4, transitio, n-a, l, l">";
                   Read, Full, Article;
-                  <ArrowRight, className="w-4 h-4" />";
+                  <Link, className="w-4 h-4" />";
                 </d, i, v>
               </Li, n, k>
             );
@@ -120,8 +120,8 @@ return (
               classNa, m, e="inli, n, e-flex, item, s-center, ga, p-2, b, g-white, tex, t-bl, u, e-900, p, x-8, p, y-4, rounde, d-lg, fon, t-bold, hove, r: bg-bl, u, e-50, transitio, n-colo, r, s"
             >
               Schedule, Free, Consultation;
-              <ArrowRight, className="w-5 h-5  />
-              <ArrowRight, className="w-5 h-5" />";
+              <Link, className="w-5 h-5  />
+              <Link, className="w-5 h-5" />";
             </Li, n, k>
             <Li, n, k
   to="/bl, o, g"

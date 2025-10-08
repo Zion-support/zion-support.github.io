@@ -1,6 +1,6 @@
 import React from 'react';
-import Link from 'next/link';
-import { ArrowRight, Clock } from 'lucide-react';
+// import Link from 'next/link';
+// import { ArrowRight, Clock } from 'lucide-react';
 
 export default function MultiAgentOpsControlTowerBlueprintPage() {
   return (
@@ -10,8 +10,6 @@ export default function MultiAgentOpsControlTowerBlueprintPage() {
           <div>
             <div>
               <span>🛰️ MULTI-AGENT OPS CONTROL</span>
-<<<<<<< HEAD
-=======
             </div>
           </div>
         </div>
@@ -19,4 +17,3 @@ export default function MultiAgentOpsControlTowerBlueprintPage() {
     </div>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-a0f3

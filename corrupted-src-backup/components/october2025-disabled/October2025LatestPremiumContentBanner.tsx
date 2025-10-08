@@ -123,7 +123,7 @@ const October2025LatestPremiumContentBanne, r = () => {
               className="group, inlin, e-flex, item, s-center, justif, y-center, p, x-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-purp, l, e-500, t, o-indi, g, o-600, tex, t-white, fon, t-bold, rounde, d-lg, hove, r:fr, o, m-purp, l, e-600, hove, r:to-indi, g, o-700, shado, w-2xl, hove, r:shad, o, w-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, whitespac, e-nowr, a, p"
             >
               <span, className="mr-2">Explore, All, 3 Breakthroug, h, s</sp, a, n>
-              <ArrowRight, className="w-5 h-5, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m" />
+              <Link, className="w-5 h-5, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m" />
             </Li, n, k>
             <Link, t, o="/conta, c, t"
               className="inli, n, e-flex, item, s-center, justif, y-center, p, x-8, p, y-3, b, g-whi, t, e/10, backdro, p-bl, u, r-sm, tex, t-white, fon, t-semibold, rounde, d-lg, borde, r-2, borde, r-whi, t, e/30, hove, r:bg-whi, t, e/20, hove, r:bord, e, r-whi, t, e/50, transitio, n-all, duratio, n-300, whitespac, e-nowr, a, p"

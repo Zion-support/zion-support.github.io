@@ -54,6 +54,11 @@
       ]
     },
     "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
     "allowJs": true,
     "forceConsistentCasingInFileNames": true,
     "noImplicitAny": false,
@@ -66,7 +71,7 @@
     "allowUnusedLabels": false,
     "allowUnreachableCode": false,
     "verbatimModuleSyntax": false,
-    "tsBuildInfoFile": ".tsbuildinfo"
+    "tsBuildInfoFile": ".next/cache/tsconfig.tsbuildinfo"
   },
   "include": [
     "src/**/*",
@@ -82,7 +87,6 @@
     ".next",
     "out",
     "dist",
-    "app/**/*",
     "_app_disabled/**/*",
     "app_disabled/**",
     "_conflicted_disabled/**/*",
@@ -145,6 +149,7 @@
     "lint-target/**",
     "marketing-index.ts",
     "middleware.security.ts",
+    "middleware.ts",
     "netlify/**",
     "pages_disabled/**",
     "src.disabled/**",
@@ -157,11 +162,7 @@
     "src/pages/blog-disabled/**",
     "hooks/**",
     "middleware/**",
-    "app/page-optimized.tsx",
-    "app/services/**/*",
-    "app/case-studies/**/*",
-    "app/guides/**/*",
-    "app/components/**/*",
+    "app/**/*",
     "src/components/disabled-corrupted/**",
     "EnhancedFooter.tsx",
     "EnhancedHeader.tsx",

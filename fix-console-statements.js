@@ -12,27 +12,27 @@ function fixConsoleStatements(content) {
   // Fix console statements that are already wrapped in if conditions
   content = content.replace(
     /if \(process\.env\.NODE_ENV === 'development'\) console\.(log|error|warn|info)\([^)]*\); \}/g,
-    (match) => {
+    match => {
       return match.replace(/; \}$/, '; }');
     }
   );
-  
+
   // Fix console statements that are missing closing brace
   content = content.replace(
     /if \(process\.env\.NODE_ENV === 'development'\) console\.(log|error|warn|info)\([^)]*\);$/gm,
-    (match) => {
+    match => {
       return match + ' }';
     }
   );
-  
+
   // Fix console statements that have extra closing brace
   content = content.replace(
     /if \(process\.env\.NODE_ENV === 'development'\) console\.(log|error|warn|info)\([^)]*\); \}\s*$/gm,
-    (match) => {
+    match => {
       return match.replace(/; \}\s*$/, '; }');
     }
   );
-  
+
   return content;
 }
 
@@ -49,30 +49,28 @@ const filesToFix = [
   'app/utils/advancedAnalytics.ts',
   'app/utils/advancedCaching.ts',
   'app/utils/analytics.ts',
-  'app/utils/analyticsTracker.ts'
+  'app/utils/analyticsTracker.ts',
 ];
 
 function fixFile(filePath) {
   try {
-    const fullPath = path.join(__dirname, filePath);
+    const _fullPath = path.join(__dirname, filePath);
     if (!fs.existsSync(fullPath)) {
-      console.log(`File not found: ${filePath}`);
+
       return;
     }
 
-    let content = fs.readFileSync(fullPath, 'utf8');
-    
+    let _content = fs.readFileSync(fullPath, 'utf8');
+
     // Apply fixes
     content = fixConsoleStatements(content);
-    
+
     fs.writeFileSync(fullPath, content);
-    console.log(`Fixed: ${filePath}`);
+
   } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
+
   }
 }
 
 // Fix all files
 filesToFix.forEach(fixFile);
-
-console.log('Console statement syntax errors fixed!');

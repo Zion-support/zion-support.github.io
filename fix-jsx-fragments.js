@@ -16,74 +16,80 @@ const filesToFix = [
   '/workspace/app/page-optimized.tsx',
   '/workspace/app/privacy/page.tsx',
   '/workspace/app/team/page.tsx',
-  '/workspace/app/terms/page.tsx'
+  '/workspace/app/terms/page.tsx',
 ];
 
-// console.log(`Fixing ${filesToFix.length} files`);
-
-// Function to process a single file
+// // Function to process a single file
 function processFile(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    let modified = false;
-    
+    let _content = fs.readFileSync(filePath, 'utf8');
+    let _modified = false;
+
     // Remove extra empty lines
     content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
-    
+
     // Fix JSX fragment issues - ensure proper opening and closing
     if (content.includes('<>') && !content.includes('</>')) {
       // Find the last closing div or main tag and add </> before it
-      const lines = content.split('\n');
-      let lastClosingTagIndex = -1;
-      
+      const _lines = content.split('\n');
+      let _lastClosingTagIndex = -1;
+
       for (let i = lines.length - 1; i >= 0; i--) {
-        if (lines[i].trim().startsWith('</') && !lines[i].includes('</>') && !lines[i].includes('</Helmet>')) {
+        if (
+          lines[i].trim().startsWith('</') &&
+          !lines[i].includes('</>') &&
+          !lines[i].includes('</Helmet>')
+        ) {
           lastClosingTagIndex = i;
           break;
         }
       }
-      
+
       if (lastClosingTagIndex !== -1) {
         lines.splice(lastClosingTagIndex + 1, 0, '    </>');
         content = lines.join('\n');
         modified = true;
       }
     }
-    
+
     // Fix function declarations
-    content = content.replace(/export default function (\w+)\(\) \{/, 'const $1: React.FC = () => {');
-    
+    content = content.replace(
+      /export default function (\w+)\(\) \{/,
+      'const $1: React.FC = () => {'
+    );
+
     // Add proper export at the end
     if (!content.includes('export default') && content.includes('const ')) {
-//       const componentName = content.match(/const (\w+): React\.FC/)?.[1];
+      //       const componentName = content.match(/const (\w+): React\.FC/)?.[1];
       if (componentName) {
         content = content.replace(/^\s*}\s*$/, `  );\n};\n\nexport default ${componentName};`);
         modified = true;
       }
     }
-    
+
     // Fix any remaining syntax issues
-    content = content.replace(/\{\s*title:\s*['"`][^'"`]*['"`]\s*,\s*description:\s*['"`][^'"`]*['"`]\s*,\s*type:\s*['"`][^'"`]*['"`]\s*,\s*url:\s*['"`][^'"`]*['"`]\s*\}/g, '');
-    
+    content = content.replace(
+      /\{\s*title:\s*['"`][^'"`]*['"`]\s*,\s*description:\s*['"`][^'"`]*['"`]\s*,\s*type:\s*['"`][^'"`]*['"`]\s*,\s*url:\s*['"`][^'"`]*['"`]\s*\}/g,
+      ''
+    );
+
     if (modified) {
       fs.writeFileSync(filePath, content);
-//       console.log(`✓ Fixed: ${filePath}`);
-      return true;
+      //       return true;
     }
-    
+
     return false;
   } catch (error) {
-//     console.error(`Error processing ${filePath}:`, error.message);
-    return false;
+    //     return false;
   }
 }
 
 // Process all files
-let fixedCount = 0;
+let _fixedCount = 0;
 filesToFix.forEach(file => {
   if (processFile(file)) {
     fixedCount++;
   }
 });
 
-// console.log(`\nFixed ${fixedCount} out of ${filesToFix.length} files`);
+// 

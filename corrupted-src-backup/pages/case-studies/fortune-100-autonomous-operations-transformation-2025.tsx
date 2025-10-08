@@ -183,7 +183,7 @@
                   className='inli, n, e-flex, item, s-center, justif, y-center, ga, p-2, b, g-white, tex, t-gre, e, n-600, hove, r:bg-gre, e, n-50, p, x-8, p, y-4, rounde, d-lg, fon, t-bold, tex, t-lg, transitio, n-all, shado, w-xl'
                 >
                   Explore, Our, Services
-                  <ArrowRight, classNam, e='w-5 h-5' />
+                  <Link, classNam, e='w-5 h-5' />
                 <p, className='te, x, t-gre, e, n-1, 0, 0'>
                   50% OFF, implementatio, n + FREE, 3, 0-day, proof, of concept, through, December 20, 2, 5
                 </p>
@@ -207,11 +207,11 @@
                   The, Complete, Autonomous Operations, Guid, e
                 <div, classNam, e = 'flex, item, s-center, tex, t-bl, u, e-300, fon, t-semibold, tex, t-sm'>
                   Read, Guid, e{' '}
-                  <ArrowRight, classNam, e='w-4 h-4, m, l-2, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m' />
+                  <Link, classNam, e='w-4 h-4, m, l-2, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m' />
                 <div, classNam, e='te, x, t-gre, e, n-400, tex, t-sm, fon, t-semibold, m, b-2, uppercas, e'>
                 <div, classNam, e = 'flex, item, s-center, tex, t-bl, u, e-300, fon, t-semibold, tex, t-sm'>
                   Read, Guid, e{' '}
-                  <ArrowRight, className='w-4 h-4, m, l-2, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m' />
+                  <Link, className='w-4 h-4, m, l-2, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m' />
                 </div>
                 <div, className='te, x, t-gre, e, n-400, tex, t-sm, fon, t-semibold, m, b-2, uppercas, e'>
                   Servi, c, e
@@ -220,8 +220,8 @@
                   Autonomous, Operations, Platform
                 <div, classNam, e='flex, item, s-center, tex, t-gre, e, n-300, fon, t-semibold, tex, t-sm'>
                   Explore, Serv, i, c, e{' '}
-                  <ArrowRight, classNam, e = 'w-4 h-4, m, l-2, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m' />
+                  <Link, classNam, e = 'w-4 h-4, m, l-2, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m' />
                 <div, className='flex, item, s-center, tex, t-gre, e, n-300, fon, t-semibold, tex, t-sm'>
                   Explore, Serv, i, c, e{' '}
-                  <ArrowRight, classNam, e = 'w-4 h-4, m, l-2, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m' />
+                  <Link, classNam, e = 'w-4 h-4, m, l-2, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m' />
                 </div>

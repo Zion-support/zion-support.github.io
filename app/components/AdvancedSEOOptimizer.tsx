@@ -38,7 +38,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
   enableTwitterCards = true,
   enableSchemaMarkup = true,
 }) => {
-  const structuredDataRef = useRef<HTMLScriptElement | null>(null);
+  const _structuredDataRef = useRef<HTMLScriptElement | null>(null);
   const generateStructuredData = useCallback(() => {
     if (!enableStructuredData || !seoData.structuredData) return null;
 
@@ -134,9 +134,9 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     return faqData;
   }, [enableSchemaMarkup]);
 
-  const structuredData = generateStructuredData();
-  const breadcrumbData = generateBreadcrumbStructuredData();
-  const faqData = generateFAQStructuredData();
+  const _structuredData = generateStructuredData();
+  const _breadcrumbData = generateBreadcrumbStructuredData();
+  const _faqData = generateFAQStructuredData();
 
   useEffect(() => {
     // Update page title and meta description for better SEO
@@ -162,40 +162,39 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     }
   }, [seoData]);
 
-  const _addMetaTag = (name: string, content: string, attribute: string = 'name') => {
-    const metaTag = document.createElement('meta');
-    metaTag.setAttribute(attribute, name);
-    metaTag.content = content;
-    document.head.appendChild(metaTag);
-  };
+  // const _addMetaTag = (name: string, content: string, attribute: string = 'name') => {
+  //   const metaTag = document.createElement('meta');
+  //   metaTag.setAttribute(attribute, name);
+  //   metaTag.content = content;
+  //   document.head.appendChild(metaTag);
+  // };
 
-  const _updateCanonicalUrl = (url: string) => {
-    let canonicalLink = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
-    
-    if (canonicalLink) {
-      canonicalLink.href = url;
-    } else {
-      canonicalLink = document.createElement('link');
-      canonicalLink.rel = 'canonical';
-      canonicalLink.href = url;
-      document.head.appendChild(canonicalLink);
-    }
-  };
+  // const _updateCanonicalUrl = (url: string) => {
+  //   let canonicalLink = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
+  //   
+  //   if (canonicalLink) {
+  //     canonicalLink.href = url;
+  //   } else {
+  //     canonicalLink = document.createElement('link');
+  //     canonicalLink.rel = 'canonical';
+  //     canonicalLink.href = url;
+  //     document.head.appendChild(canonicalLink);
+  //   }
+  // };
 
-  const _addStructuredData = (data: Record<string, unknown>) => {
-    // Remove existing structured data
-    if (structuredDataRef.current) {
-      structuredDataRef.current.remove();
-    }
-
-    // Add new structured data
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
-    script.textContent = JSON.stringify(data);
-    script.id = 'structured-data';
-    document.head.appendChild(script);
-    structuredDataRef.current = script;
-  };
+  // const _addStructuredData = (data: Record<string, unknown>) => {
+  //   // Remove existing structured data
+  //   if (structuredDataRef.current) {
+  //     structuredDataRef.current.remove();
+  //   }
+  //   
+  //   const script = document.createElement('script');
+  //   script.type = 'application/ld+json';
+  //   script.textContent = JSON.stringify(data);
+  //   script.id = 'structured-data';
+  //   document.head.appendChild(script);
+  //   structuredDataRef.current = script;
+  // };
 
   const _trackPageView = (config: SEOData) => {
     if (typeof window !== 'undefined' && 'gtag' in window) {
@@ -233,11 +232,6 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
       {enableOpenGraph && (
         <>
           <meta property="og:title" content={seoData.title} />
-          <meta property="og:description" content={seoData.description} />
-          <meta property="og:url" content={seoData.canonicalUrl} />
-          <meta property="og:type" content="website" />
-          <meta property="og:image" content={seoData.ogImage} />
-          <meta property="og:image:width" content="1200" />
           <meta property="og:image:height" content="630" />
           <meta property="og:site_name" content="Zion Tech Group" />
           <meta property="og:locale" content="en_US" />
@@ -270,21 +264,21 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
       <meta name="theme-color" content="#4F46E5" />
 
       {/* Structured Data */}
-      {enableSchemaMarkup && structuredData && (
+      {enableSchemaMarkup && _structuredData && (
         <script type="application/ld+json">
-          {JSON.stringify(structuredData)}
+          {JSON.stringify(_structuredData)}
         </script>
       )}
 
-      {enableSchemaMarkup && breadcrumbData && (
+      {enableSchemaMarkup && _breadcrumbData && (
         <script type="application/ld+json">
-          {JSON.stringify(breadcrumbData)}
+          {JSON.stringify(_breadcrumbData)}
         </script>
       )}
 
-      {enableSchemaMarkup && faqData && (
+      {enableSchemaMarkup && _faqData && (
         <script type="application/ld+json">
-          {JSON.stringify(faqData)}
+          {JSON.stringify(_faqData)}
         </script>
       )}
 

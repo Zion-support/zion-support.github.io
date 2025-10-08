@@ -1,9 +1,9 @@
 /**
  * Enhanced Logging Utility
- * 
+ *
  * Provides comprehensive logging capabilities with multiple levels,
  * structured logging, and remote logging support.
- * 
+ *
  * @module enhancedLogger
  * @author Zion Tech Group
  * @version 1.0.0
@@ -83,10 +83,10 @@ const defaultConfig: LoggerConfig = {
 
 /**
  * Enhanced Logger class
- * 
+ *
  * Provides comprehensive logging functionality with multiple levels,
  * remote logging support, and performance tracking.
- * 
+ *
  * @example
  * ```typescript
  * const logger = EnhancedLogger.getInstance();
@@ -106,7 +106,7 @@ export class EnhancedLogger {
 
   /**
    * Get singleton instance of EnhancedLogger
-   * 
+   *
    * @param config - Optional configuration override
    * @returns EnhancedLogger instance
    */
@@ -122,7 +122,7 @@ export class EnhancedLogger {
 
   /**
    * Reset singleton instance (mainly for testing)
-   * 
+   *
    * @internal
    */
   public static resetInstance(): void {
@@ -131,7 +131,7 @@ export class EnhancedLogger {
 
   /**
    * Log a debug message
-   * 
+   *
    * @param message - The log message
    * @param data - Optional data to include
    * @param source - Optional source identifier
@@ -146,7 +146,7 @@ export class EnhancedLogger {
 
   /**
    * Log an info message
-   * 
+   *
    * @param message - The log message
    * @param data - Optional data to include
    * @param source - Optional source identifier
@@ -161,7 +161,7 @@ export class EnhancedLogger {
 
   /**
    * Log a warning message
-   * 
+   *
    * @param message - The log message
    * @param data - Optional data to include
    * @param source - Optional source identifier
@@ -176,7 +176,7 @@ export class EnhancedLogger {
 
   /**
    * Log an error message
-   * 
+   *
    * @param message - The log message
    * @param data - Optional data to include
    * @param error - Optional Error object for stack trace
@@ -209,7 +209,7 @@ export class EnhancedLogger {
 
   /**
    * Log a fatal error message
-   * 
+   *
    * @param message - The log message
    * @param data - Optional data to include
    * @param error - Optional Error object for stack trace
@@ -234,7 +234,7 @@ export class EnhancedLogger {
 
   /**
    * Start a performance measurement
-   * 
+   *
    * @param markName - Unique name for the performance mark
    * @example
    * ```typescript
@@ -250,7 +250,7 @@ export class EnhancedLogger {
 
   /**
    * End a performance measurement and log the duration
-   * 
+   *
    * @param markName - Name of the performance mark to end
    * @param data - Optional additional data to include
    * @returns Duration in milliseconds, or undefined if mark not found
@@ -267,17 +267,21 @@ export class EnhancedLogger {
     const duration = performance.now() - startTime;
     this.performanceMarks.delete(markName);
 
-    this.info(`Performance: ${markName}`, {
-      duration: `${duration.toFixed(2)}ms`,
-      ...data,
-    }, 'PerformanceMonitor');
+    this.info(
+      `Performance: ${markName}`,
+      {
+        duration: `${duration.toFixed(2)}ms`,
+        ...data,
+      },
+      'PerformanceMonitor'
+    );
 
     return duration;
   }
 
   /**
    * Core logging method
-   * 
+   *
    * @private
    * @param level - Log level
    * @param message - Log message
@@ -329,7 +333,7 @@ export class EnhancedLogger {
 
   /**
    * Check if running in development mode
-   * 
+   *
    * @private
    * @returns true if in development mode
    */
@@ -339,7 +343,7 @@ export class EnhancedLogger {
 
   /**
    * Output log to console
-   * 
+   *
    * @private
    * @param entry - Log entry to output
    */
@@ -360,10 +364,13 @@ export class EnhancedLogger {
 
       switch (entry.level) {
         case LogLevel.DEBUG:
-          if (this.isDevelopment()) { logger.debug(message, structuredLog); }
+          if (this.isDevelopment()) {
+            logger.debug(message, structuredLog);
+          }
           break;
         case LogLevel.INFO:
-          if (this.isDevelopment()) { console.info(message, structuredLog); }
+          if (this.isDevelopment()) {
+            }
           break;
         case LogLevel.WARN:
           logger.warn(message, structuredLog);
@@ -380,10 +387,13 @@ export class EnhancedLogger {
       // Simple console output
       switch (entry.level) {
         case LogLevel.DEBUG:
-          if (this.isDevelopment()) { logger.debug(message, entry.data); }
+          if (this.isDevelopment()) {
+            logger.debug(message, entry.data);
+          }
           break;
         case LogLevel.INFO:
-          if (this.isDevelopment()) { console.info(message, entry.data); }
+          if (this.isDevelopment()) {
+            }
           break;
         case LogLevel.WARN:
           logger.warn(message, entry.data);
@@ -398,7 +408,7 @@ export class EnhancedLogger {
 
   /**
    * Send log to remote endpoint
-   * 
+   *
    * @private
    * @param entry - Log entry to send
    */
@@ -418,15 +428,15 @@ export class EnhancedLogger {
       });
     } catch (error) {
       // Fallback to console if remote logging fails
-      logger.error('Failed to send log to remote endpoint:', { 
-        error: error instanceof Error ? error.message : String(error) 
+      logger.error('Failed to send log to remote endpoint:', {
+        error: error instanceof Error ? error.message : String(error),
       });
     }
   }
 
   /**
    * Generate unique log ID
-   * 
+   *
    * @private
    * @returns Unique log identifier
    */
@@ -436,7 +446,7 @@ export class EnhancedLogger {
 
   /**
    * Get user ID from session/storage
-   * 
+   *
    * @private
    * @returns User ID or undefined
    */
@@ -451,7 +461,7 @@ export class EnhancedLogger {
 
   /**
    * Get or create session ID
-   * 
+   *
    * @private
    * @returns Session ID
    */
@@ -471,7 +481,7 @@ export class EnhancedLogger {
 
   /**
    * Get all logs
-   * 
+   *
    * @param level - Optional level filter
    * @returns Array of log entries
    */
@@ -484,7 +494,7 @@ export class EnhancedLogger {
 
   /**
    * Get logs by source
-   * 
+   *
    * @param source - Source identifier
    * @returns Array of log entries from the specified source
    */
@@ -494,7 +504,7 @@ export class EnhancedLogger {
 
   /**
    * Get log statistics
-   * 
+   *
    * @returns Object containing log statistics
    */
   public getStatistics(): {
@@ -530,7 +540,7 @@ export class EnhancedLogger {
 
   /**
    * Update logger configuration
-   * 
+   *
    * @param config - Partial configuration to merge
    */
   public configure(config: Partial<LoggerConfig>): void {
@@ -539,7 +549,7 @@ export class EnhancedLogger {
 
   /**
    * Export logs as JSON
-   * 
+   *
    * @returns JSON string of all logs
    */
   public exportLogs(): string {

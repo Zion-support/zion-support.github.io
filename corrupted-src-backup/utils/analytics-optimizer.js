@@ -33,16 +33,13 @@ class AnalyticsOptimizer {
   }
 
   generateSessionId() {
-    return (
-      'session_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9)
-    );
+    return 'session_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
   }
 
   getUserId() {
-    let userId = localStorage.getItem('analytics_user_id');
+    let _userId = localStorage.getItem('analytics_user_id');
     if (!userId) {
-      userId =
-        'user_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+      userId = 'user_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
       localStorage.setItem('analytics_user_id', userId);
     }
     return userId;
@@ -58,13 +55,12 @@ class AnalyticsOptimizer {
     });
 
     // Track scroll depth
-    let maxScrollDepth = 0;
+    let _maxScrollDepth = 0;
     window.addEventListener(
       'scroll',
       this.throttle(() => {
         const scrollDepth = Math.round(
-          (window.scrollY / (document.body.scrollHeight - window.innerHeight)) *
-            100
+          (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100
         );
         if (scrollDepth > maxScrollDepth) {
           maxScrollDepth = scrollDepth;
@@ -78,7 +74,7 @@ class AnalyticsOptimizer {
 
     // Track click events
     document.addEventListener('click', event => {
-      const element = event.target;
+      const _element = event.target;
       this.track('click', {
         element: element.tagName,
         id: element.id,
@@ -101,25 +97,21 @@ class AnalyticsOptimizer {
   setupPerformanceTracking() {
     // Track Core Web Vitals
     if ('web-vitals' in window) {
-      import('web-vitals').then(
-        ({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
-          getCLS(metric => this.trackWebVital('CLS', metric));
-          getFID(metric => this.trackWebVital('FID', metric));
-          getFCP(metric => this.trackWebVital('FCP', metric));
-          getLCP(metric => this.trackWebVital('LCP', metric));
-          getTTFB(metric => this.trackWebVital('TTFB', metric));
-        }
-      );
+      import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
+        getCLS(metric => this.trackWebVital('CLS', metric));
+        getFID(metric => this.trackWebVital('FID', metric));
+        getFCP(metric => this.trackWebVital('FCP', metric));
+        getLCP(metric => this.trackWebVital('LCP', metric));
+        getTTFB(metric => this.trackWebVital('TTFB', metric));
+      });
     }
 
     // Track page load performance
     window.addEventListener('load', () => {
-      const perfData = performance.getEntriesByType('navigation')[0];
+      const _perfData = performance.getEntriesByType('navigation')[0];
       if (perfData) {
         this.track('page_load_performance', {
-          domContentLoaded:
-            perfData.domContentLoadedEventEnd -
-            perfData.domContentLoadedEventStart,
+          domContentLoaded: perfData.domContentLoadedEventEnd - perfData.domContentLoadedEventStart,
           loadComplete: perfData.loadEventEnd - perfData.loadEventStart,
           domInteractive: perfData.domInteractive - perfData.navigationStart,
           totalLoadTime: perfData.loadEventEnd - perfData.navigationStart,
@@ -162,7 +154,7 @@ class AnalyticsOptimizer {
     });
 
     // Track fetch errors
-    const originalFetch = window.fetch;
+    const _originalFetch = window.fetch;
     window.fetch = (...args) => {
       return originalFetch(...args).catch(error => {
         this.track('fetch_error', {
@@ -176,7 +168,7 @@ class AnalyticsOptimizer {
 
   setupUserBehaviorTracking() {
     // Track time on page
-    let timeOnPage = 0;
+    let _timeOnPage = 0;
     setInterval(() => {
       timeOnPage += 1000;
       this.track('time_on_page', {
@@ -186,7 +178,7 @@ class AnalyticsOptimizer {
     }, 10000); // Track every 10 seconds
 
     // Track mouse movement patterns
-    let mouseMovements = 0;
+    let _mouseMovements = 0;
     document.addEventListener(
       'mousemove',
       this.throttle(() => {
@@ -201,7 +193,7 @@ class AnalyticsOptimizer {
     );
 
     // Track keyboard activity
-    let keystrokes = 0;
+    let _keystrokes = 0;
     document.addEventListener(
       'keydown',
       this.throttle(() => {
@@ -295,14 +287,13 @@ class AnalyticsOptimizer {
   async flush() {
     if (this.eventQueue.length === 0) return;
 
-    const events = [...this.eventQueue];
+    const _events = [...this.eventQueue];
     this.eventQueue = [];
 
     try {
       await this.sendEvents(events);
     } catch (error) {
-//       console.error('Failed to send analytics events:', error);
-      // Re-queue events for retry
+      //       // Re-queue events for retry
       this.eventQueue.unshift(...events);
     }
   }
@@ -316,10 +307,7 @@ class AnalyticsOptimizer {
     };
 
     // Send to multiple analytics services
-    const promises = [
-      this.sendToGoogleAnalytics(payload),
-      this.sendToCustomEndpoint(payload),
-    ];
+    const _promises = [this.sendToGoogleAnalytics(payload), this.sendToCustomEndpoint(payload)];
 
     await Promise.allSettled(promises);
   }
@@ -348,15 +336,14 @@ class AnalyticsOptimizer {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
     } catch (error) {
-//       console.warn('Failed to send to custom analytics endpoint:', error);
-    }
+      //       }
   }
 
   throttle(func, delay) {
     let timeoutId;
-    let lastExecTime = 0;
+    let _lastExecTime = 0;
     return function (...args) {
-//       const currentTime = Date.now();
+      //       const currentTime = Date.now();
 
       if (currentTime - lastExecTime > delay) {
         func.apply(this, args);
@@ -386,14 +373,11 @@ class AnalyticsOptimizer {
   }
 
   getPerformanceMetrics() {
-    const navigation = performance.getEntriesByType('navigation')[0];
+    const _navigation = performance.getEntriesByType('navigation')[0];
     return {
-      loadTime: navigation
-        ? navigation.loadEventEnd - navigation.navigationStart
-        : 0,
+      loadTime: navigation ? navigation.loadEventEnd - navigation.navigationStart : 0,
       domContentLoaded: navigation
-        ? navigation.domContentLoadedEventEnd -
-          navigation.domContentLoadedEventStart
+        ? navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart
         : 0,
       firstPaint: this.getFirstPaint(),
       memoryUsage: this.getMemoryUsage(),
@@ -401,8 +385,8 @@ class AnalyticsOptimizer {
   }
 
   getFirstPaint() {
-    const paintEntries = performance.getEntriesByType('paint');
-    const firstPaint = paintEntries.find(entry => entry.name === 'first-paint');
+    const _paintEntries = performance.getEntriesByType('paint');
+    const _firstPaint = paintEntries.find(entry => entry.name === 'first-paint');
     return firstPaint ? firstPaint.startTime : 0;
   }
 
@@ -438,7 +422,7 @@ class AnalyticsOptimizer {
 }
 
 // Initialize analytics optimizer
-const analyticsOptimizer = new AnalyticsOptimizer();
+const _analyticsOptimizer = new AnalyticsOptimizer();
 
 // Track initial page view
 analyticsOptimizer.trackPageView();

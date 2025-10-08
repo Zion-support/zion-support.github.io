@@ -51,7 +51,7 @@ class AccessibilityEnhancer {
     if (!this.config.enableFocusManagement) return;
 
     // Add focus indicators
-    const style = document.createElement('style');
+    const _style = document.createElement('style');
     style.textContent = `
       *:focus {
         outline: 2px solid #0066cc;
@@ -79,7 +79,7 @@ class AccessibilityEnhancer {
     if (!this.config.enableScreenReaderSupport) return;
 
     // Add skip links
-    const skipLink = document.createElement('a');
+    const _skipLink = document.createElement('a');
     skipLink.href = '#main-content';
     skipLink.textContent = 'Skip to main content';
     skipLink.className = 'skip-link';
@@ -108,7 +108,7 @@ class AccessibilityEnhancer {
   private setupHighContrast(): void {
     if (!this.config.enableHighContrast) return;
 
-    const style = document.createElement('style');
+    const _style = document.createElement('style');
     style.textContent = `
       @media (prefers-contrast: high) {
         * {
@@ -123,7 +123,7 @@ class AccessibilityEnhancer {
   private setupReducedMotion(): void {
     if (!this.config.enableReducedMotion) return;
 
-    const style = document.createElement('style');
+    const _style = document.createElement('style');
     style.textContent = `
       @media (prefers-reduced-motion: reduce) {
         * {
@@ -137,10 +137,8 @@ class AccessibilityEnhancer {
   }
 
   private handleTabNavigation(event: KeyboardEvent): void {
-    const focusableElements = this.getFocusableElements();
-    const currentIndex = focusableElements.indexOf(
-      document.activeElement as HTMLElement
-    );
+    const _focusableElements = this.getFocusableElements();
+    const _currentIndex = focusableElements.indexOf(document.activeElement as HTMLElement);
 
     if (event.shiftKey) {
       // Shift + Tab: move backwards
@@ -194,17 +192,17 @@ class AccessibilityEnhancer {
   }
 
   private getImagesWithAltText(): HTMLImageElement[] {
-//     const images = document.querySelectorAll('img');
+    //     const images = document.querySelectorAll('img');
     return Array.from(images).filter(img => img.alt && img.alt.trim() !== '');
   }
 
   private getHeadingStructureScore(): number {
-    const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
-    let score = 100;
-    let previousLevel = 0;
+    const _headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
+    let _score = 100;
+    let _previousLevel = 0;
 
     headings.forEach(heading => {
-//       const level = parseInt(heading.tagName.charAt(1));
+      //       const level = parseInt(heading.tagName.charAt(1));
       if (level > previousLevel + 1) {
         score -= 20; // Penalty for skipped heading levels
       }
@@ -219,14 +217,8 @@ class AccessibilityEnhancer {
   }
 
   public getOverallScore(): number {
-    const totalScore = this.metrics.reduce(
-      (sum, metric) => sum + metric.value,
-      0
-    );
-    const maxScore = this.metrics.reduce(
-      (sum, metric) => sum + metric.threshold,
-      0
-    );
+    const _totalScore = this.metrics.reduce((sum, metric) => sum + metric.value, 0);
+    const _maxScore = this.metrics.reduce((sum, metric) => sum + metric.threshold, 0);
     return Math.round((totalScore / maxScore) * 100);
   }
 

@@ -1,5 +1,5 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import { logger } from '../utils/logger';
 
 interface ErrorBoundaryState {
@@ -64,12 +64,11 @@ class AdvancedErrorBoundary extends Component<
 
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
-      logger.error(
-        'Error Boundary caught an error',
-        error,
-        'ErrorBoundary',
-        { component: 'ErrorBoundary', errorInfo }
-      );
+      logger.error('Error Boundary caught an error', { 
+        context: 'ErrorBoundary', 
+        error: error.message,
+        errorInfo 
+      });
     }
 
     // Call custom error handler
@@ -140,12 +139,10 @@ class AdvancedErrorBoundary extends Component<
         body: JSON.stringify(errorReport),
       });
     } catch (reportError) {
-      logger.error(
-        'Failed to send error report',
-        reportError instanceof Error ? reportError : new Error(String(reportError)),
-        'ErrorReporting',
-        { component: 'ErrorReporting' }
-      );
+      logger.error('Failed to send error report', { 
+        context: 'ErrorReporting',
+        error: reportError 
+      });
     }
   };
 
@@ -269,11 +266,12 @@ class AdvancedErrorBoundary extends Component<
                 <p className='text-xs text-gray-500'>
                   If this problem persists, please contact our support team
                   at&nbsp;
-                  <Link to='mailto:kleber@ziontechgroup.com'
+                  <a
+                    href='mailto:kleber@ziontechgroup.com'
                     className='text-indigo-600 hover:text-indigo-500'
                   >
                     kleber@ziontechgroup.com
-                  </Link>
+                  </a>
                 </p>
               </div>
             </div>

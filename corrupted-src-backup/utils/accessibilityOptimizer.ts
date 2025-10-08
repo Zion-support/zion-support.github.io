@@ -58,13 +58,11 @@ class AccessibilityOptimizer {
   }
 
   private optimizeARIALabels(): void {
-    const elements = document.querySelectorAll(
-      'button, input, select, textarea, a, img'
-    );
+    const _elements = document.querySelectorAll('button, input, select, textarea, a, img');
 
     elements.forEach(element => {
       const improvements: string[] = [];
-      let score = 0;
+      let _score = 0;
 
       if (
         element.tagName === 'BUTTON' &&
@@ -109,7 +107,7 @@ class AccessibilityOptimizer {
 
     focusableElements.forEach(element => {
       const improvements: string[] = [];
-      let score = 0;
+      let _score = 0;
 
       if (
         !element.getAttribute('tabindex') &&
@@ -135,12 +133,12 @@ class AccessibilityOptimizer {
   }
 
   private optimizeColorContrast(): void {
-    const elements = document.querySelectorAll('*');
+    const _elements = document.querySelectorAll('*');
 
     elements.forEach(element => {
-      const styles = window.getComputedStyle(element);
+      const _styles = window.getComputedStyle(element);
       const improvements: string[] = [];
-      let score = 0;
+      let _score = 0;
 
       if (styles.color && styles.backgroundColor) {
         // This is a simplified check - in practice, you'd use a library to calculate contrast ratios
@@ -169,13 +167,13 @@ class AccessibilityOptimizer {
 
     focusableElements.forEach(element => {
       const improvements: string[] = [];
-      let score = 0;
+      let _score = 0;
 
       if (
         !element.getAttribute('aria-describedby') &&
         element.getAttribute('aria-invalid') === 'true'
       ) {
-//         const errorId = `error-${Math.random().toString(36).substr(2, 9)}`;
+        //         const errorId = `error-${Math.random().toString(36).substr(2, 9)}`;
         element.setAttribute('aria-describedby', errorId);
         improvements.push('Added aria-describedby for error state');
         score += 15;
@@ -192,11 +190,11 @@ class AccessibilityOptimizer {
   }
 
   private optimizeScreenReaderSupport(): void {
-    const elements = document.querySelectorAll('*');
+    const _elements = document.querySelectorAll('*');
 
     elements.forEach(element => {
       const improvements: string[] = [];
-      let score = 0;
+      let _score = 0;
 
       if (element.tagName === 'IMG' && !element.getAttribute('alt')) {
         element.setAttribute('alt', '');
@@ -226,10 +224,7 @@ class AccessibilityOptimizer {
   }
 
   public getOverallScore(): number {
-    const totalScore = this.results.reduce(
-      (sum, result) => sum + result.score,
-      0
-    );
+    const _totalScore = this.results.reduce((sum, result) => sum + result.score, 0);
     const maxPossibleScore = this.results.length * 100; // Assuming max score per element is 100
     return Math.round((totalScore / maxPossibleScore) * 100);
   }

@@ -7,15 +7,15 @@ const __dirname = path.dirname(__filename);
 
 function processFile(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    let modified = false;
+    let _content = fs.readFileSync(filePath, 'utf8');
+    let _modified = false;
 
     // Fix keywords type issues - convert string to array
     const replacements = [
       {
         pattern: /keywords:\s*'([^']+)',/g,
-        replacement: "keywords: ['$1'],"
-      }
+        replacement: "keywords: ['$1'],",
+      },
     ];
 
     replacements.forEach(({ pattern, replacement }) => {
@@ -27,23 +27,23 @@ function processFile(filePath) {
 
     if (modified) {
       fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed keywords: ${filePath}`);
+
       return true;
     }
     return false;
   } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
+
     return false;
   }
 }
 
 function processDirectory(dirPath) {
-  const items = fs.readdirSync(dirPath);
-  let totalFixed = 0;
+  const _items = fs.readdirSync(dirPath);
+  let _totalFixed = 0;
 
   items.forEach(item => {
-    const fullPath = path.join(dirPath, item);
-    const stat = fs.statSync(fullPath);
+    const _fullPath = path.join(dirPath, item);
+    const _stat = fs.statSync(fullPath);
 
     if (stat.isDirectory()) {
       totalFixed += processDirectory(fullPath);
@@ -58,7 +58,6 @@ function processDirectory(dirPath) {
 }
 
 // Process the app directory
-const appDir = path.join(__dirname, 'app');
-console.log('Fixing keywords type issues...');
-const fixedCount = processDirectory(appDir);
-console.log(`Fixed ${fixedCount} files`);
+const _appDir = path.join(__dirname, 'app');
+
+const _fixedCount = processDirectory(appDir);

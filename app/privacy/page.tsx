@@ -1,7 +1,7 @@
 import React from 'react';
 // import { Metadata } from 'next'; // Removed for Vite
 
-const metadata: Metadata = {
+const metadata = {
   title: 'Privacy Policy - Zion Tech Group',
   description:
     'Privacy policy and data protection information for Zion Tech Group services and website.',
@@ -95,10 +95,9 @@ const PrivacyPage: React.FC = () => {
                     <p className='text-gray-600'>
                       <strong>Email:</strong> privacy@ziontechgroup.com
                       <br />
-                      <strong>Phone:</strong> +1 (555) 123-4567
+                      <strong>Phone:</strong> +1 (302) 600-9898
                       <br />
-                      <strong>Address:</strong> 123 Tech Street, San Francisco,
-                      CA 94105
+                      <strong>Address:</strong> 364 E Main St STE 1008, Middletown, DE 19709
                     </p>
                   </div>
                 </section>

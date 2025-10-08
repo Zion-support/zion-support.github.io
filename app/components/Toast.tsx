@@ -16,13 +16,13 @@ const Toast: React.FC<ToastProps> = ({
   type = 'success',
   duration = 3000,
   onClose,
-  show
+  show,
 }) => {
   const [isVisible, setIsVisible] = useState(show);
 
   useEffect(() => {
     setIsVisible(show);
-    
+
     if (show && duration > 0) {
       const timer = setTimeout(() => {
         setIsVisible(false);
@@ -33,7 +33,7 @@ const Toast: React.FC<ToastProps> = ({
 
       return () => clearTimeout(timer);
     }
-    
+
     return undefined;
   }, [show, duration, onClose]);
 
@@ -102,7 +102,7 @@ export const useToast = () => {
   }>({
     show: false,
     message: '',
-    type: 'success'
+    type: 'success',
   });
 
   const showToast = (message: string, type: ToastType = 'success') => {
@@ -116,6 +116,6 @@ export const useToast = () => {
   return {
     toast,
     showToast,
-    hideToast
+    hideToast,
   };
 };

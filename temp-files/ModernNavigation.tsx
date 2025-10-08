@@ -8,7 +8,7 @@ interface ModernNavigationProps {
 
 const ModernNavigation: React.FC<ModernNavigationProps> = ({ className = '' }) => {
   const [isOpen, setIsOpen] = useState(false);
-  
+
   const navigationItems = [
     { name: 'Home', href: '/' },
     { name: 'Services', href: '/services' },
@@ -23,7 +23,7 @@ const ModernNavigation: React.FC<ModernNavigationProps> = ({ className = '' }) =
           <Link href="/" className="text-xl font-bold text-blue-600">
             Zion Tech Group
           </Link>
-          
+
           {/* Desktop Navigation */}
           <div className="hidden md:flex space-x-8">
             {navigationItems.map(item => (
@@ -36,16 +36,13 @@ const ModernNavigation: React.FC<ModernNavigationProps> = ({ className = '' }) =
               </Link>
             ))}
           </div>
-          
+
           {/* Mobile Menu Button */}
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden text-gray-700"
-          >
+          <button onClick={() => setIsOpen(!isOpen)} className="md:hidden text-gray-700">
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
-        
+
         {/* Mobile Navigation */}
         {isOpen && (
           <div className="md:hidden py-4 border-t">

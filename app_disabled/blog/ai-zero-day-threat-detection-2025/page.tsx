@@ -1,18 +1,19 @@
-import Link from 'next/link';
+// import Link from 'next/link';
 
 export const metadata = {
-  title: "AI-Powered Zero-Day Threat Detection: The Future of Cybersecurity in 2025",
-  description: "Discover how AI-powered zero-day threat detection systems are revolutionizing cybersecurity with 99.7% faster threat neutralization.",
-  type: "article",
-  url: "https://ziontechgroup.com/blog/ai-zero-day-threat-detection-2025",
+  title: 'AI-Powered Zero-Day Threat Detection: The Future of Cybersecurity in 2025',
+  description:
+    'Discover how AI-powered zero-day threat detection systems are revolutionizing cybersecurity with 99.7% faster threat neutralization.',
+  type: 'article',
+  url: 'https://ziontechgroup.com/blog/ai-zero-day-threat-detection-2025',
   images: [
     {
       url: '/og/ai-zero-day-threat-detection-2025.jpg',
       width: 1200,
       height: 630,
-      alt: 'AI-Powered Zero-Day Threat Detection 2025'
-    }
-  ]
+      alt: 'AI-Powered Zero-Day Threat Detection 2025',
+    },
+  ],
 };
 
 export default function AIZeroDayThreatDetection2025Page() {

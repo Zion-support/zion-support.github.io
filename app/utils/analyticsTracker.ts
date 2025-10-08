@@ -35,9 +35,9 @@ class AnalyticsTracker {
     if (typeof window === 'undefined') return;
 
     this.isInitialized = true;
-    
+
     // Process queued events
-    this.queue.forEach((fn) => fn());
+    this.queue.forEach(fn => fn());
     this.queue = [];
 
     // Track initial page view
@@ -62,8 +62,7 @@ class AnalyticsTracker {
 
       // Also log to console in development
       if (process.env.NODE_ENV === 'development') {
-        console.log('[Analytics Event]', event);
-      }
+        }
     };
 
     if (this.isInitialized) {
@@ -89,8 +88,7 @@ class AnalyticsTracker {
       }
 
       if (process.env.NODE_ENV === 'development') {
-        console.log('[Analytics Page View]', path);
-      }
+        }
     };
 
     if (this.isInitialized) {
@@ -117,8 +115,7 @@ class AnalyticsTracker {
       }
 
       if (process.env.NODE_ENV === 'development') {
-        console.log('[Analytics Performance]', metrics);
-      }
+        }
     };
 
     if (this.isInitialized) {
@@ -171,8 +168,7 @@ class AnalyticsTracker {
       }
 
       if (process.env.NODE_ENV === 'development') {
-        console.log('[Analytics Timing]', { category, variable, value, label });
-      }
+        }
     };
 
     if (this.isInitialized) {
@@ -198,8 +194,7 @@ class AnalyticsTracker {
       }
 
       if (process.env.NODE_ENV === 'development') {
-        console.log('[Analytics Conversion]', { conversionId, value });
-      }
+        }
     };
 
     if (this.isInitialized) {

@@ -3,45 +3,37 @@ import { HelmetProvider, Helmet } from 'react-helmet-async';
 
 // Memoized components for better performance
 const UnifiedContentPromotion = memo(() => (
-  <div className='bg-gradient-to-r from-blue-600 to-purple-700 text-white py-16'>
-    <div className='container mx-auto px-4 text-center'>
-      <h2 className='text-3xl font-bold mb-4'>Latest AI Innovations</h2>
-      <p className='text-xl'>
-        Discover cutting-edge AI solutions for your business
-      </p>
+  <div className="bg-gradient-to-r from-blue-600 to-purple-700 text-white py-16">
+    <div className="container mx-auto px-4 text-center">
+      <h2 className="text-3xl font-bold mb-4">Latest AI Innovations</h2>
+      <p className="text-xl">Discover cutting-edge AI solutions for your business</p>
     </div>
   </div>
 ));
 
 const InteractiveAIROICalculator = memo(() => (
-  <div className='bg-gray-50 py-16'>
-    <div className='container mx-auto px-4 text-center'>
-      <h2 className='text-3xl font-bold mb-4'>AI ROI Calculator</h2>
-      <p className='text-xl text-gray-600'>
-        Calculate your potential AI investment returns
-      </p>
+  <div className="bg-gray-50 py-16">
+    <div className="container mx-auto px-4 text-center">
+      <h2 className="text-3xl font-bold mb-4">AI ROI Calculator</h2>
+      <p className="text-xl text-gray-600">Calculate your potential AI investment returns</p>
     </div>
   </div>
 ));
 
 const ContentShowcase = memo(() => (
-  <div className='py-16'>
-    <div className='container mx-auto px-4 text-center'>
-      <h2 className='text-3xl font-bold mb-4'>Featured Content</h2>
-      <p className='text-xl text-gray-600'>
-        Explore our latest insights and case studies
-      </p>
+  <div className="py-16">
+    <div className="container mx-auto px-4 text-center">
+      <h2 className="text-3xl font-bold mb-4">Featured Content</h2>
+      <p className="text-xl text-gray-600">Explore our latest insights and case studies</p>
     </div>
   </div>
 ));
 
 const InteractiveContentShowcase2026 = memo(() => (
-  <div className='bg-blue-50 py-16'>
-    <div className='container mx-auto px-4 text-center'>
-      <h2 className='text-3xl font-bold mb-4'>2026 Content Showcase</h2>
-      <p className='text-xl text-gray-600'>
-        Latest trends and innovations for 2026
-      </p>
+  <div className="bg-blue-50 py-16">
+    <div className="container mx-auto px-4 text-center">
+      <h2 className="text-3xl font-bold mb-4">2026 Content Showcase</h2>
+      <p className="text-xl text-gray-600">Latest trends and innovations for 2026</p>
     </div>
   </div>
 ));
@@ -76,6 +68,7 @@ class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundarySta
   override componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
     // Log error for debugging in development
     if (process.env.NODE_ENV === 'development') {
+      // eslint-disable-next-line no-console
       console.error('App Error Boundary caught an error:', error, errorInfo);
     }
   }
@@ -85,9 +78,7 @@ class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundarySta
       return (
         <div className="min-h-screen flex items-center justify-center bg-gray-50">
           <div className="text-center p-8">
-            <h1 className="text-2xl font-bold text-gray-900 mb-4">
-              Something went wrong
-            </h1>
+            <h1 className="text-2xl font-bold text-gray-900 mb-4">Something went wrong</h1>
             <p className="text-gray-600 mb-4">
               We're working to fix this issue. Please try refreshing the page.
             </p>
@@ -130,10 +121,7 @@ export default function App() {
         postalCode: '19709',
         addressCountry: 'US',
       },
-      sameAs: [
-        'https://linkedin.com/company/zion-tech-group',
-        'https://twitter.com/ziontechgroup',
-      ],
+      sameAs: ['https://linkedin.com/company/zion-tech-group', 'https://twitter.com/ziontechgroup'],
       offers: {
         '@type': 'Offer',
         name: 'AI Enterprise Transformation Services',
@@ -156,17 +144,24 @@ export default function App() {
             name="description"
             content="Leading provider of AI-powered enterprise solutions and digital transformation services. Achieve 300% ROI with our cutting-edge AI technology."
           />
-          <meta name="keywords" content="AI, artificial intelligence, enterprise solutions, digital transformation, IT services" />
+          <meta
+            name="keywords"
+            content="AI, artificial intelligence, enterprise solutions, digital transformation, IT services"
+          />
           <meta property="og:title" content="Zion Tech Group - AI & IT Solutions" />
-          <meta property="og:description" content="Transform your enterprise with AI-powered solutions achieving 300% ROI, 70% cost reduction, and 90% efficiency gains" />
+          <meta
+            property="og:description"
+            content="Transform your enterprise with AI-powered solutions achieving 300% ROI, 70% cost reduction, and 90% efficiency gains"
+          />
           <meta property="og:type" content="website" />
           <meta property="og:url" content="https://ziontechgroup.com" />
           <meta name="twitter:card" content="summary_large_image" />
           <meta name="twitter:title" content="Zion Tech Group - AI & IT Solutions" />
-          <meta name="twitter:description" content="Transform your enterprise with AI-powered solutions achieving 300% ROI, 70% cost reduction, and 90% efficiency gains" />
-          <script type="application/ld+json">
-            {JSON.stringify(structuredData)}
-          </script>
+          <meta
+            name="twitter:description"
+            content="Transform your enterprise with AI-powered solutions achieving 300% ROI, 70% cost reduction, and 90% efficiency gains"
+          />
+          <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
         </Helmet>
         <div className="min-h-screen bg-white">
           <Suspense fallback={<LoadingSpinner />}>

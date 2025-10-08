@@ -1,29 +1,26 @@
-
-// Jest configuration for Vite project
 module.exports = {
-
-  setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
+  preset: 'ts-jest',
   testEnvironment: 'jest-environment-jsdom',
+  setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/src/$1',
-    '^@/app/(.*)$': '<rootDir>/app/$1',
-    '^@/components/(.*)$': '<rootDir>/app/components/$1',
+    '^@/components/(.*)$': '<rootDir>/src/components/$1',
     '^@/utils/(.*)$': '<rootDir>/src/utils/$1',
+    '^@/hooks/(.*)$': '<rootDir>/src/hooks/$1',
+    '^@/types/(.*)$': '<rootDir>/src/types/$1',
+    '^@/config/(.*)$': '<rootDir>/src/config/$1',
+    '^@/data/(.*)$': '<rootDir>/src/data/$1',
+    '^@/content/(.*)$': '<rootDir>/src/content/$1',
     '\\.(css|less|scss|sass)$': 'identity-obj-proxy',
-  },
-  transform: {
-    '^.+\\.(js|jsx|ts|tsx)$': ['babel-jest', { configFile: './babel.config.js' }],
   },
   testMatch: [
     '**/__tests__/**/*.[jt]s?(x)',
     '**/?(*.)+(spec|test).[jt]s?(x)',
   ],
   collectCoverageFrom: [
-    'app/**/*.{js,jsx,ts,tsx}',
     'src/**/*.{js,jsx,ts,tsx}',
     '!**/*.d.ts',
     '!**/node_modules/**',
-    '!**/.next/**',
     '!**/coverage/**',
     '!**/dist/**',
   ],
@@ -37,8 +34,6 @@ module.exports = {
   },
   testPathIgnorePatterns: [
     '<rootDir>/node_modules/',
-    '<rootDir>/.next/',
-    '<rootDir>/out/',
     '<rootDir>/dist/',
     '<rootDir>/backup/',
     '<rootDir>/backup-problematic-files/',
@@ -57,10 +52,25 @@ module.exports = {
     '<rootDir>/components_backup/',
     '<rootDir>/data_backup/',
     '<rootDir>/lib_backup/',
+    '<rootDir>/app/',
   ],
   transformIgnorePatterns: [
-    '/node_modules/(?!(lucide-react|@heroicons/react)/)',
+    '/node_modules/(?!(lucide-react|@heroicons/react|framer-motion)/)',
   ],
+  extensionsToTreatAsEsm: ['.ts', '.tsx'],
+  transform: {
+    '^.+\\.(ts|tsx)$': ['ts-jest', {
+      useESM: true,
+      tsconfig: {
+        jsx: 'react-jsx',
+      },
+    }],
+    '^.+\\.(js|jsx)$': ['babel-jest', {
+      presets: [
+        ['@babel/preset-env', { targets: { node: 'current' } }],
+        ['@babel/preset-react', { runtime: 'automatic' }],
+        '@babel/preset-typescript',
+      ],
+    }],
+  },
 };
-
-

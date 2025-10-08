@@ -1,119 +1,265 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 
 interface PerformanceMetrics {
   loadTime: number;
-  renderTime: number;
-  memoryUsage: number;
+  firstContentfulPaint: number;
+  largestContentfulPaint: number;
+  firstInputDelay: number;
+  cumulativeLayoutShift: number;
+  memoryUsage?: number;
   fps: number;
 }
 
 interface PerformanceMonitorProps {
+  enabled?: boolean;
   onMetricsUpdate?: (metrics: PerformanceMetrics) => void;
-  enableConsoleLogging?: boolean;
-  updateInterval?: number;
+  threshold?: {
+    loadTime: number;
+    firstContentfulPaint: number;
+    largestContentfulPaint: number;
+    firstInputDelay: number;
+    cumulativeLayoutShift: number;
+  };
 }
 
 const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
+  enabled = true,
   onMetricsUpdate,
-  enableConsoleLogging = false,
-  updateInterval = 1000
+  threshold = {
+    loadTime: 3000,
+    firstContentfulPaint: 1500,
+    largestContentfulPaint: 2500,
+    firstInputDelay: 100,
+    cumulativeLayoutShift: 0.1,
+  },
 }) => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     loadTime: 0,
-    renderTime: 0,
+    firstContentfulPaint: 0,
+    largestContentfulPaint: 0,
+    firstInputDelay: 0,
+    cumulativeLayoutShift: 0,
     memoryUsage: 0,
     fps: 0,
   });
-  const [performanceScore, setPerformanceScore] = useState(100);
+
+  const [isVisible, setIsVisible] = useState(false);
+  const [alerts, setAlerts] = useState<string[]>([]);
+
+  const collectPerformanceMetrics = useCallback(() => {
+    if (!enabled || typeof window === 'undefined') return;
+
+    const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+    const paintEntries = performance.getEntriesByType('paint');
+    
+    const loadTime = navigation ? navigation.loadEventEnd - navigation.loadEventStart : 0;
+    const firstContentfulPaint = paintEntries.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0;
+    const largestContentfulPaint = performance.getEntriesByType('largest-contentful-paint')[0]?.startTime || 0;
+    
+    // Get FID (First Input Delay) - this would need to be measured during actual user interaction
+    const firstInputDelay = 0; // Placeholder - would need to be measured during user interaction
+    
+    // Get CLS (Cumulative Layout Shift) - this would need to be measured over time
+    const cumulativeLayoutShift = 0; // Placeholder - would need to be measured over time
+    
+    // Get memory usage if available
+    const memoryUsage = (performance as any).memory?.usedJSHeapSize || 0;
+    
+    // Calculate FPS (simplified)
+    let fps = 0;
+    let lastTime = performance.now();
+    let frameCount = 0;
+    
+    const measureFPS = () => {
+      const currentTime = performance.now();
+      frameCount++;
+      
+      if (currentTime - lastTime >= 1000) {
+        fps = Math.round((frameCount * 1000) / (currentTime - lastTime));
+        frameCount = 0;
+        lastTime = currentTime;
+      }
+      
+      if (enabled) {
+        requestAnimationFrame(measureFPS);
+      }
+    };
+    
+    measureFPS();
+
+    const newMetrics: PerformanceMetrics = {
+      loadTime,
+      firstContentfulPaint,
+      largestContentfulPaint,
+      firstInputDelay,
+      cumulativeLayoutShift,
+      memoryUsage,
+      fps,
+    };
+
+    setMetrics(newMetrics);
+    
+    if (onMetricsUpdate) {
+      onMetricsUpdate(newMetrics);
+    }
+
+    // Check for performance issues
+    const newAlerts: string[] = [];
+    if (loadTime > threshold.loadTime) {
+      newAlerts.push(`Load time ${loadTime.toFixed(0)}ms exceeds threshold ${threshold.loadTime}ms`);
+    }
+    if (firstContentfulPaint > threshold.firstContentfulPaint) {
+      newAlerts.push(`FCP ${firstContentfulPaint.toFixed(0)}ms exceeds threshold ${threshold.firstContentfulPaint}ms`);
+    }
+    if (largestContentfulPaint > threshold.largestContentfulPaint) {
+      newAlerts.push(`LCP ${largestContentfulPaint.toFixed(0)}ms exceeds threshold ${threshold.largestContentfulPaint}ms`);
+    }
+    if (firstInputDelay > threshold.firstInputDelay) {
+      newAlerts.push(`FID ${firstInputDelay.toFixed(0)}ms exceeds threshold ${threshold.firstInputDelay}ms`);
+    }
+    if (cumulativeLayoutShift > threshold.cumulativeLayoutShift) {
+      newAlerts.push(`CLS ${cumulativeLayoutShift.toFixed(3)} exceeds threshold ${threshold.cumulativeLayoutShift}`);
+    }
+
+    setAlerts(newAlerts);
+  }, [enabled, onMetricsUpdate, threshold]);
 
   useEffect(() => {
-    const reportWebVitals = (metric: { name: string; value: number }) => {
-      // Log to console in development (only on client side)
-      if (typeof window !== 'undefined' && enableConsoleLogging) {
-        console.log('Web Vital:', metric.name, metric.value);
-      }
-    };
+    if (!enabled) return;
 
-    // Monitor Core Web Vitals
-    const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming | undefined;
-    const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number } }).memory;
+    // Initial metrics collection
+    const timer = setTimeout(collectPerformanceMetrics, 1000);
+
+    // Set up periodic updates
+    const interval = setInterval(collectPerformanceMetrics, 5000);
+
+    return () => {
+      clearTimeout(timer);
+      clearInterval(interval);
+    };
+  }, [enabled, collectPerformanceMetrics]);
+
+  const formatBytes = (bytes: number) => {
+    if (bytes === 0) return '0 Bytes';
+    const k = 1024;
+    const sizes = ['Bytes', 'KB', 'MB', 'GB'];
+    const i = Math.floor(Math.log(bytes) / Math.log(k));
+    return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
+  };
+
+  const getPerformanceScore = () => {
+    let score = 100;
     
-    const getPerformanceScore = (): number => {
-      let score = 100;
-      if (metrics.renderTime > 1500) score -= 15;
-      if (metrics.loadTime > 3000) score -= 20;
-      if (metrics.memoryUsage > 50) score -= 10;
-      return Math.max(0, score);
-    };
+    if (metrics.loadTime > threshold.loadTime) score -= 20;
+    if (metrics.firstContentfulPaint > threshold.firstContentfulPaint) score -= 20;
+    if (metrics.largestContentfulPaint > threshold.largestContentfulPaint) score -= 20;
+    if (metrics.firstInputDelay > threshold.firstInputDelay) score -= 20;
+    if (metrics.cumulativeLayoutShift > threshold.cumulativeLayoutShift) score -= 20;
     
-    const updateMetrics = () => {
-      const currentMetrics = {
-        loadTime: navigation?.loadEventEnd ?? 0,
-        memoryUsage: memory?.usedJSHeapSize ? memory.usedJSHeapSize / 1024 / 1024 : 0,
-        renderTime: performance.now(),
-        fps: 60, // Placeholder - would need actual FPS calculation
-      };
-      
-      setMetrics(currentMetrics);
-      
-      const score = getPerformanceScore();
-      setPerformanceScore(score);
-      
-      if (enableConsoleLogging) {
-        if (typeof console !== 'undefined') {
-          console.group('Performance Metrics');
-          console.debug('Metrics', { metrics: currentMetrics });
-          console.debug('Score', { score });
-          console.groupEnd();
-        }
-      }
-      
-      if (onMetricsUpdate) {
-        onMetricsUpdate(currentMetrics);
-      }
-    };
+    return Math.max(0, score);
+  };
 
-    // Initial update
-    updateMetrics();
+  if (!enabled) return null;
 
-    // Set up interval for continuous monitoring
-    const interval = setInterval(updateMetrics, updateInterval);
-
-    return () => clearInterval(interval);
-  }, [onMetricsUpdate, enableConsoleLogging, updateInterval, metrics.renderTime, metrics.loadTime, metrics.memoryUsage]);
-
-  // Only show when explicitly enabled via props
-  if (!enableConsoleLogging) {
-    return null;
-  }
+  const performanceScore = getPerformanceScore();
 
   return (
-    <div className="fixed bottom-4 right-4 z-50 bg-white border border-gray-200 rounded-lg shadow-lg p-4 min-w-64">
-      <h3 className="text-sm font-semibold text-gray-900 mb-3">
-        Performance Monitor
-      </h3>
-      <div className="space-y-2 text-xs">
-        <div className="flex justify-between">
-          <span className="text-gray-600">Load Time:</span>
-          <span className="font-mono">{metrics.loadTime.toFixed(2)}ms</span>
+    <div className="fixed bottom-4 right-4 z-50">
+      {/* Toggle Button */}
+      <button
+        onClick={() => setIsVisible(!isVisible)}
+        className="bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full shadow-lg transition-colors"
+        title="Performance Monitor"
+      >
+        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+        </svg>
+      </button>
+
+      {/* Performance Panel */}
+      {isVisible && (
+        <div className="absolute bottom-16 right-0 w-80 bg-white rounded-lg shadow-xl border p-4">
+          <div className="flex items-center justify-between mb-4">
+            <h3 className="text-lg font-semibold text-gray-900">Performance Monitor</h3>
+            <button
+              onClick={() => setIsVisible(false)}
+              className="text-gray-400 hover:text-gray-600"
+            >
+              <X className="w-5 h-5" />
+            </button>
+          </div>
+
+          {/* Performance Score */}
+          <div className="mb-4">
+            <div className="flex items-center justify-between mb-2">
+              <span className="text-sm font-medium text-gray-700">Performance Score</span>
+              <span className={`text-lg font-bold ${
+                performanceScore >= 80 ? 'text-green-600' :
+                performanceScore >= 60 ? 'text-yellow-600' : 'text-red-600'
+              }`}>
+                {performanceScore}
+              </span>
+            </div>
+            <div className="w-full bg-gray-200 rounded-full h-2">
+              <div
+                className={`h-2 rounded-full ${
+                  performanceScore >= 80 ? 'bg-green-500' :
+                  performanceScore >= 60 ? 'bg-yellow-500' : 'bg-red-500'
+                }`}
+                style={{ width: `${performanceScore}%` }}
+              />
+            </div>
+          </div>
+
+          {/* Metrics */}
+          <div className="space-y-2 text-sm">
+            <div className="flex justify-between">
+              <span className="text-gray-600">Load Time:</span>
+              <span className={metrics.loadTime > threshold.loadTime ? 'text-red-600' : 'text-green-600'}>
+                {metrics.loadTime.toFixed(0)}ms
+              </span>
+            </div>
+            <div className="flex justify-between">
+              <span className="text-gray-600">FCP:</span>
+              <span className={metrics.firstContentfulPaint > threshold.firstContentfulPaint ? 'text-red-600' : 'text-green-600'}>
+                {metrics.firstContentfulPaint.toFixed(0)}ms
+              </span>
+            </div>
+            <div className="flex justify-between">
+              <span className="text-gray-600">LCP:</span>
+              <span className={metrics.largestContentfulPaint > threshold.largestContentfulPaint ? 'text-red-600' : 'text-green-600'}>
+                {metrics.largestContentfulPaint.toFixed(0)}ms
+              </span>
+            </div>
+            <div className="flex justify-between">
+              <span className="text-gray-600">FPS:</span>
+              <span className={metrics.fps < 30 ? 'text-red-600' : 'text-green-600'}>
+                {metrics.fps}
+              </span>
+            </div>
+            {metrics.memoryUsage && (
+              <div className="flex justify-between">
+                <span className="text-gray-600">Memory:</span>
+                <span className="text-blue-600">
+                  {formatBytes(metrics.memoryUsage)}
+                </span>
+              </div>
+            )}
+          </div>
+
+          {/* Alerts */}
+          {alerts.length > 0 && (
+            <div className="mt-4 p-3 bg-red-50 border border-red-200 rounded-md">
+              <h4 className="text-sm font-medium text-red-800 mb-2">Performance Issues:</h4>
+              <ul className="text-xs text-red-700 space-y-1">
+                {alerts.map((alert, index) => (
+                  <li key={index}>• {alert}</li>
+                ))}
+              </ul>
+            </div>
+          )}
         </div>
-        <div className="flex justify-between">
-          <span className="text-gray-600">Memory:</span>
-          <span className="font-mono">
-            {metrics.memoryUsage.toFixed(2)}MB
-          </span>
-        </div>
-        <div className="flex justify-between">
-          <span className="text-gray-600">FPS:</span>
-          <span className="font-mono">{metrics.fps.toFixed(1)}</span>
-        </div>
-        <div className="flex justify-between">
-          <span className="text-gray-600">Score:</span>
-          <span className={`font-mono ${performanceScore > 80 ? 'text-green-600' : performanceScore > 60 ? 'text-yellow-600' : 'text-red-600'}`}>
-            {performanceScore}
-          </span>
-        </div>
-      </div>
+      )}
     </div>
   );
 };

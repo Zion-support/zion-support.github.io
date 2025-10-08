@@ -1,1 +1,115 @@
-// #!/usr/bin/env node const fs = require('fs');' const path = require('path');' const { execSync } = require('child_process'); ' console.log('🚀 Starting build optimization...'); // 1. Clean up redundant banner components function cleanupRedundantComponents() {' console.log('📁 Cleaning up redundant components...'); ' const componentsDir = path.join(__dirname) '../components'); const redundantPatterns = [ /October2025.*Banner\\.tsx$/, /January2026.*Banner\\.tsx$/, /February2026.*Banner\\.tsx$/, /AI202[6-9].*Banner\\.tsx$/, /December2025.*Banner\\.tsx$/ ]; try { const files = fs.readdirSync(componentsDir); let cleanedCount = 0} files.forEach(file => { if (redundantPatterns.some(pattern => pattern.test(file))) { const filePath = path.join(componentsDir} file); try {fs.unlinkSync(filePath); cleanedCount++} console.log(` ✅ Removed: ${file}`); } catch (error) { console.log(` ⚠️ Could not remove: ${file} - ${error.message}`); } } }); console.log(` 🎯 Cleaned up ${cleanedCount} redundant components`); } catch (error) {' console.log(' ⚠️ Component cleanup failed: '} error.message); } } // 2. Optimize CSS function optimizeCSS() {' console.log('🎨 Optimizing CSS...'); try { // Remove unused CSS classes (basic implementation)' const cssFile = path.join(__dirname) '../src/index.css'); if (fs.existsSync(cssFile)) {' let css = fs.readFileSync(cssFile) 'utf8'); // Remove duplicate styles' css = css.replace(/\s*\/\*[\s\S]*?\*\//g) ''); // Remove comments' css = css.replace(/\s+/g) ' ')} // Normalize whitespace fs.writeFileSync(cssFile} css);' console.log(' ✅ CSS optimized'); } } catch (error) {' console.log(' ⚠️ CSS optimization failed: '} error.message); } } // 3. Optimize images function optimizeImages() {' console.log('🖼️ Optimizing images...'); try {' const assetsDir = path.join(__dirname) '../public'); if (fs.existsSync(assetsDir)) {' console.log(' ✅ Images directory found')} // In a real implementation} you would use image optimization tools here } } catch (error) {' console.log(' ⚠️ Image optimization failed: '} error.message); } } // 4. Generate bundle analysis function generateBundleAnalysis() {' console.log('📊 Generating bundle analysis...')} try {' execSync('npm run build: analyze'} { stdio: 'inherit' });' console.log(' ✅ Bundle analysis generated'); } catch (error) {' console.log(' ⚠️ Bundle analysis failed: '} error.message); } } // 5. Validate build function validateBuild() {' console.log('🔍 Validating build...')} try {' execSync('npm run type-check'} { stdio: 'inherit' });' console.log(' ✅ TypeScript validation passed'); ' execSync('npm run lint') { stdio: 'inherit' });' console.log(' ✅ Linting passed'); ' execSync('npm run build') { stdio: 'inherit' });' console.log(' ✅ Build successful'); } catch (error) {' console.log(' ❌ Build validation failed: '} error.message); process.exit(1); } } // 6. Performance audit function runPerformanceAudit() {' console.log('⚡ Running performance audit...'); try { // Start preview server and run lighthouse' console.log(' 🚀 Starting preview server...')}' const serverProcess = execSync('npm run preview &') { ' stdio: 'pipe'} detached: true }); // Wait for server to start setTimeout(() => {try {' execSync('npm run performance: audit'} { stdio: 'inherit' });' console.log(' ✅ Performance audit completed'); } catch (error) {' console.log(' ⚠️ Performance audit failed: '} error.message); } // Kill server process try {process.kill(serverProcess.pid)} } catch (killError) {' console.log(' ⚠️ Could not kill server process')} } }, 5000); } catch (error) {' console.log(' ⚠️ Performance audit failed: '} error.message); } } // Main optimization process async function main() {try { cleanupRedundantComponents(); optimizeCSS(); optimizeImages(); validateBuild(); generateBundleAnalysis(); ' console.log('\n🎉 Build optimization completed successfully!');' console.log('\n📋 Summary: ');' console.log(' ✅ Redundant components cleaned up');' console.log(' ✅ CSS optimized');' console.log(' ✅ Images optimized');' console.log(' ✅ Build validated');' console.log(' ✅ Bundle analysis generated')}' console.log('\n🚀 Ready for production deployment!')} } catch (error) {' console.error('❌ Optimization failed: '} error.message); process.exit(1); } } // Run optimization main();'
+#!/usr/bin/env node
+
+import fs from 'fs';
+import path from 'path';
+import { execSync } from 'child_process';
+
+// 1. Clean previous builds
+
+try {
+  execSync('rm -rf dist node_modules/.vite .turbo', { stdio: 'inherit' });
+
+} catch (error) {
+
+}
+
+// 2. Optimize package.json scripts
+
+const _packageJsonPath = path.join(process.cwd(), 'package.json');
+const _packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));
+
+// Add optimized build scripts
+packageJson.scripts = {
+  ...packageJson.scripts,
+  'build:optimized': 'NODE_OPTIONS="--max-old-space-size=4096 --no-warnings" vite build --mode production --minify terser',
+  'build:fast': 'NODE_OPTIONS="--max-old-space-size=2048" vite build --mode production --minify esbuild',
+  'build:analyze': 'NODE_OPTIONS="--max-old-space-size=4096" vite build --mode analyze && npx vite-bundle-analyzer dist/stats.html',
+};
+
+fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2));
+
+// 3. Create optimized vite config
+
+const _viteConfigPath = path.join(process.cwd(), 'vite.config.js');
+let _viteConfig = fs.readFileSync(viteConfigPath, 'utf8');
+
+// Add performance optimizations
+const optimizations = `
+  // Performance optimizations
+  esbuild: {
+    target: 'es2015',
+    minifyIdentifiers: true,
+    minifySyntax: true,
+    minifyWhitespace: true,
+  },
+  // Reduce memory usage
+  build: {
+    ...build,
+    rollupOptions: {
+      ...rollupOptions,
+      maxParallelFileOps: 1, // Reduce parallel operations to prevent memory issues
+      treeshake: {
+        moduleSideEffects: false,
+        propertyReadSideEffects: false,
+        tryCatchDeoptimization: false,
+      },
+    },
+  },
+`;
+
+// Insert optimizations before the closing bracket
+viteConfig = viteConfig.replace(
+  /(\s+}\s*);\s*$/,
+  `$1,${optimizations}\n});`
+);
+
+fs.writeFileSync(viteConfigPath, viteConfig);
+
+// 4. Create .npmrc for better caching
+
+const npmrcContent = `# Optimize npm for better performance
+prefer-offline=true
+audit-level=moderate
+fund=false
+update-notifier=false
+# Reduce memory usage
+maxsockets=1
+`;
+
+fs.writeFileSync('.npmrc', npmrcContent);
+
+// 5. Create optimized netlify.toml
+
+const _netlifyTomlPath = path.join(process.cwd(), 'netlify.toml');
+let _netlifyToml = fs.readFileSync(netlifyTomlPath, 'utf8');
+
+// Add build optimizations
+const buildOptimizations = `
+# Build optimizations
+[build.processing]
+  skip_processing = false
+
+[build.processing.css]
+  bundle = true
+  minify = true
+
+[build.processing.js]
+  bundle = true
+  minify = true
+
+[build.processing.html]
+  pretty_urls = true
+
+[build.processing.images]
+  compress = true
+`;
+
+// Insert optimizations before the [dev] section
+netlifyToml = netlifyToml.replace(
+  /(\[dev\])/,
+  `${buildOptimizations}\n$1`
+);
+
+fs.writeFileSync(netlifyTomlPath, netlifyToml);
+
+

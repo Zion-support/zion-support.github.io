@@ -25,18 +25,21 @@ export interface A11yWarning {
 
 class AccessibilityService {
   // Check color contrast ratio
-  public checkColorContrast(foreground: string, background: string): {
+  public checkColorContrast(
+    foreground: string,
+    background: string
+  ): {
     ratio: number;
     passes: { normal: boolean; large: boolean };
   } {
     const rgb1 = this.hexToRgb(foreground);
     const rgb2 = this.hexToRgb(background);
-    
+
     const l1 = this.getLuminance(rgb1);
     const l2 = this.getLuminance(rgb2);
-    
+
     const ratio = l1 > l2 ? (l1 + 0.05) / (l2 + 0.05) : (l2 + 0.05) / (l1 + 0.05);
-    
+
     return {
       ratio: Math.round(ratio * 100) / 100,
       passes: {
@@ -58,7 +61,7 @@ class AccessibilityService {
   }
 
   private getLuminance(rgb: { r: number; g: number; b: number }): number {
-    const [r, g, b] = [rgb.r, rgb.g, rgb.b].map((val) => {
+    const [r, g, b] = [rgb.r, rgb.g, rgb.b].map(val => {
       const v = val / 255;
       return v <= 0.03928 ? v / 12.92 : Math.pow((v + 0.055) / 1.055, 2.4);
     });
@@ -71,7 +74,7 @@ class AccessibilityService {
     const warnings: A11yWarning[] = [];
 
     // Check for missing alt text on images
-    document.querySelectorAll('img').forEach((img) => {
+    document.querySelectorAll('img').forEach(img => {
       if (!img.hasAttribute('alt')) {
         errors.push({
           type: 'missing-alt',
@@ -90,11 +93,12 @@ class AccessibilityService {
     });
 
     // Check for missing form labels
-    document.querySelectorAll('input, select, textarea').forEach((input) => {
-      const hasLabel = input.hasAttribute('aria-label') || 
-                       input.hasAttribute('aria-labelledby') ||
-                       document.querySelector(`label[for="${input.id}"]`);
-      
+    document.querySelectorAll('input, select, textarea').forEach(input => {
+      const hasLabel =
+        input.hasAttribute('aria-label') ||
+        input.hasAttribute('aria-labelledby') ||
+        document.querySelector(`label[for="${input.id}"]`);
+
       if (!hasLabel) {
         errors.push({
           type: 'missing-label',
@@ -108,7 +112,7 @@ class AccessibilityService {
     // Check for proper heading hierarchy
     const headings = Array.from(document.querySelectorAll('h1, h2, h3, h4, h5, h6'));
     let prevLevel = 0;
-    headings.forEach((heading) => {
+    headings.forEach(heading => {
       const level = parseInt(heading.tagName[1]);
       if (level > prevLevel + 1) {
         warnings.push({
@@ -144,10 +148,10 @@ class AccessibilityService {
     }
 
     // Check for sufficient link text
-    document.querySelectorAll('a').forEach((link) => {
+    document.querySelectorAll('a').forEach(link => {
       const text = link.textContent?.trim() || '';
       const ariaLabel = link.getAttribute('aria-label');
-      
+
       if (!text && !ariaLabel) {
         errors.push({
           type: 'empty-link',
@@ -166,7 +170,7 @@ class AccessibilityService {
     });
 
     // Check for touch target size
-    document.querySelectorAll('button, a, input, select').forEach((element) => {
+    document.querySelectorAll('button, a, input, select').forEach(element => {
       const rect = element.getBoundingClientRect();
       if (rect.width < 44 || rect.height < 44) {
         warnings.push({
@@ -191,7 +195,7 @@ class AccessibilityService {
   // Add keyboard navigation helpers
   public enhanceKeyboardNavigation(): void {
     // Add focus visible class for keyboard navigation
-    document.addEventListener('keydown', (e) => {
+    document.addEventListener('keydown', e => {
       if (e.key === 'Tab') {
         document.body.classList.add('keyboard-nav');
       }
@@ -202,7 +206,7 @@ class AccessibilityService {
     });
 
     // Add keyboard shortcuts
-    document.addEventListener('keydown', (e) => {
+    document.addEventListener('keydown', e => {
       // Alt + H: Go to main heading
       if (e.altKey && e.key === 'h') {
         const mainHeading = document.querySelector('h1');
@@ -288,7 +292,7 @@ class AccessibilityService {
   // Check if element is visible to screen readers
   public isAccessible(element: HTMLElement): boolean {
     const style = window.getComputedStyle(element);
-    
+
     return !(
       style.display === 'none' ||
       style.visibility === 'hidden' ||

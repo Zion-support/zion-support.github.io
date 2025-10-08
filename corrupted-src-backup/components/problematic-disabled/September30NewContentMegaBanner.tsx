@@ -91,7 +91,7 @@ const September30NewContentMegaBanner = () => {
             <p, className="te, x, t-sm, tex, t-yell, o, w-200, m, b-4">2, 0, 0+ groundbreaking, insight, s</p>
             <div, className="flex, item, s-center, ga, p-2, tex, t-yell, o, w-400, fon, t-semibo, l, d">
               Explore, No, w
-              <ArrowRight, className="w-5 h-5, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m" />
+              <Link, className="w-5 h-5, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m" />
             </div>
           </Li, n, k>
         </div>
@@ -126,7 +126,7 @@ const September30NewContentMegaBanner = () => {
           >
             <Brain, className="w-6 h-6, grou, p-hov, e, r:rota, t, e-12, transitio, n-transfo, r, m" />
             Explore, All, Breakthroughs
-            <ArrowRight, className="w-5 h-5, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m" />
+            <Link, className="w-5 h-5, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m" />
           </Li, n, k>
           <Link, t, o="/conta, c, t"
             className="bord, e, r-2, borde, r-cy, a, n-400, hove, r:bg-cy, a, n-400, hove, r:te, x, t-gr, a, y-900, tex, t-white, p, x-8, p, y-4, rounde, d-xl, fon, t-bold, tex, t-lg, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, inlin, e-flex, item, s-center, ga, p-3"

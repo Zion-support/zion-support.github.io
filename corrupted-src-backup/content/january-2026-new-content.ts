@@ -5,8 +5,7 @@ export const january2026NewContent = {
   featuredArticles: [
     {
       id: 'ai-2026-january-autonomous-enterprise-mesh',
-      title:
-        '🚀 Autonomous Enterprise Mesh 2026: Self-Organizing Business Intelligence',
+      title: '🚀 Autonomous Enterprise Mesh 2026: Self-Organizing Business Intelligence',
       description:
         'Revolutionary self-organizing AI mesh networks achieving 99.7% operational efficiency with zero human intervention',
       link: '/blog/ai-2026-january-autonomous-enterprise-mesh',
@@ -21,8 +20,7 @@ export const january2026NewContent = {
     },
     {
       id: 'ai-2026-january-quantum-edge-computing',
-      title:
-        '⚡ Quantum Edge Computing 2026: Sub-Millisecond Processing Revolution',
+      title: '⚡ Quantum Edge Computing 2026: Sub-Millisecond Processing Revolution',
       description:
         'Breakthrough quantum-edge convergence delivering 200-250x speed improvements with ultra-low latency processing',
       link: '/blog/ai-2026-january-quantum-edge-computing',
@@ -37,8 +35,7 @@ export const january2026NewContent = {
     },
     {
       id: 'ai-2026-january-synthetic-consciousness',
-      title:
-        '🧠 Synthetic Consciousness AI 2026: The Dawn of True Artificial Awareness',
+      title: '🧠 Synthetic Consciousness AI 2026: The Dawn of True Artificial Awareness',
       description:
         'Revolutionary AI achieving genuine consciousness, emotional intelligence, and creative autonomy with $500B enterprise value',
       link: '/blog/ai-2026-january-synthetic-consciousness',

@@ -1,195 +1,118 @@
 import React, { useEffect, useState } from 'react';
 
-/**
- * PWA Installer Component
- * Handles service worker registration and install prompts
- */
-
 interface BeforeInstallPromptEvent extends Event {
-  prompt: () => Promise<void>;
+  prompt(): Promise<void>;
   userChoice: Promise<{ outcome: 'accepted' | 'dismissed' }>;
 }
 
 const PWAInstaller: React.FC = () => {
   const [deferredPrompt, setDeferredPrompt] = useState<BeforeInstallPromptEvent | null>(null);
-  const [isInstallable, setIsInstallable] = useState(false);
-  const [isInstalled, setIsInstalled] = useState(false);
-  const [showPrompt, setShowPrompt] = useState(false);
+  const [showInstallButton, setShowInstallButton] = useState(false);
 
   useEffect(() => {
-    // Check if already installed
-    if (window.matchMedia('(display-mode: standalone)').matches) {
-      setIsInstalled(true);
-      return;
-    }
-
-    // Register service worker
-    if ('serviceWorker' in navigator && process.env['NODE_ENV'] === 'production') {
-      navigator.serviceWorker
-        .register('/service-worker.js')
-        .then((registration) => {
-          console.log('Service Worker registered:', registration);
-
-          // Check for updates periodically
-          setInterval(() => {
-            registration.update();
-          }, 60 * 60 * 1000); // Check every hour
-
-          // Listen for updates
-          registration.addEventListener('updatefound', () => {
-            const newWorker = registration.installing;
-            if (newWorker) {
-              newWorker.addEventListener('statechange', () => {
-                if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
-                  // New service worker available
-                  if (confirm('New version available! Reload to update?')) {
-                    newWorker.postMessage({ type: 'SKIP_WAITING' });
-                    window.location.reload();
-                  }
-                }
-              });
-            }
-          });
-        })
-        .catch((error) => {
-          console.error('Service Worker registration failed:', error);
-        });
-
-      // Listen for controller change
-      navigator.serviceWorker.addEventListener('controllerchange', () => {
-        window.location.reload();
-      });
-    }
-
-    // Listen for beforeinstallprompt event
+    // Listen for the beforeinstallprompt event
     const handleBeforeInstallPrompt = (e: Event) => {
       e.preventDefault();
       setDeferredPrompt(e as BeforeInstallPromptEvent);
-      setIsInstallable(true);
+      setShowInstallButton(true);
+    };
+
+    // Listen for the appinstalled event
+    const handleAppInstalled = () => {
+      setShowInstallButton(false);
+      setDeferredPrompt(null);
       
-      // Show prompt after a delay
-      setTimeout(() => {
-        setShowPrompt(true);
-      }, 3000);
+      // Track installation in analytics
+      if (typeof window !== 'undefined' && (window as any).gtag) {
+        (window as any).gtag('event', 'pwa_install', {
+          event_category: 'engagement',
+          event_label: 'app_installed'
+        });
+      }
     };
 
     window.addEventListener('beforeinstallprompt', handleBeforeInstallPrompt);
+    window.addEventListener('appinstalled', handleAppInstalled);
 
-    // Listen for successful installation
-    window.addEventListener('appinstalled', () => {
-      console.log('PWA installed successfully');
-      setIsInstalled(true);
-      setShowPrompt(false);
-      setDeferredPrompt(null);
-    });
+    // Check if app is already installed
+    if (window.matchMedia('(display-mode: standalone)').matches) {
+      setShowInstallButton(false);
+    }
 
     return () => {
       window.removeEventListener('beforeinstallprompt', handleBeforeInstallPrompt);
+      window.removeEventListener('appinstalled', handleAppInstalled);
     };
   }, []);
 
   const handleInstallClick = async () => {
-    if (!deferredPrompt) {
-      return;
+    if (!deferredPrompt) return;
+
+    try {
+      await deferredPrompt.prompt();
+      const { outcome } = await deferredPrompt.userChoice;
+      
+      if (outcome === 'accepted') {
+        // Track successful prompt acceptance
+        if (typeof window !== 'undefined' && (window as any).gtag) {
+          (window as any).gtag('event', 'pwa_install_prompt', {
+            event_category: 'engagement',
+            event_label: 'prompt_accepted'
+          });
+        }
+      }
+      
+      setDeferredPrompt(null);
+      setShowInstallButton(false);
+    } catch (error) {
+      console.error('Error installing PWA:', error);
     }
-
-    // Show the install prompt
-    await deferredPrompt.prompt();
-
-    // Wait for the user's response
-    const choiceResult = await deferredPrompt.userChoice;
-
-    if (choiceResult.outcome === 'accepted') {
-      console.log('User accepted the install prompt');
-    } else {
-      console.log('User dismissed the install prompt');
-    }
-
-    // Clear the deferred prompt
-    setDeferredPrompt(null);
-    setShowPrompt(false);
   };
 
-  const handleDismiss = () => {
-    setShowPrompt(false);
-    
-    // Don't show again for this session
-    sessionStorage.setItem('pwa-prompt-dismissed', 'true');
-  };
-
-  // Don't show if already installed or dismissed
-  if (isInstalled || !isInstallable || !showPrompt) {
-    return null;
-  }
-
-  // Check if dismissed in this session
-  if (typeof window !== 'undefined' && sessionStorage.getItem('pwa-prompt-dismissed')) {
-    return null;
-  }
+  if (!showInstallButton) return null;
 
   return (
-    <div className='fixed bottom-4 left-4 right-4 md:left-auto md:right-4 md:max-w-md z-50 animate-slide-up'>
-      <div className='bg-white rounded-lg shadow-2xl p-6 border border-gray-200'>
-        <div className='flex items-start'>
-          <div className='flex-shrink-0'>
-            <div className='w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center'>
-              <svg
-                className='w-6 h-6 text-indigo-600'
-                fill='none'
-                stroke='currentColor'
-                viewBox='0 0 24 24'
-              >
-                <path
-                  strokeLinecap='round'
-                  strokeLinejoin='round'
-                  strokeWidth={2}
-                  d='M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z'
-                />
-              </svg>
-            </div>
+    <div className="fixed bottom-4 right-4 z-50">
+      <div className="bg-white rounded-lg shadow-lg border border-gray-200 p-4 max-w-sm">
+        <div className="flex items-start">
+          <div className="flex-shrink-0">
+            <svg className="h-6 w-6 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+            </svg>
           </div>
-          <div className='ml-4 flex-1'>
-            <h3 className='text-lg font-semibold text-gray-900'>
-              Install Zion Tech App
+          <div className="ml-3 flex-1">
+            <h3 className="text-sm font-medium text-gray-900">
+              Install App
             </h3>
-            <p className='mt-1 text-sm text-gray-600'>
-              Get quick access and offline support. Install our app for a better
-              experience!
+            <p className="mt-1 text-sm text-gray-500">
+              Install this app on your device for a better experience.
             </p>
-            <div className='mt-4 flex space-x-3'>
+            <div className="mt-3 flex space-x-2">
               <button
                 onClick={handleInstallClick}
-                className='px-4 py-2 bg-indigo-600 text-white text-sm font-medium rounded-lg hover:bg-indigo-700 transition-colors focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2'
+                className="inline-flex items-center px-3 py-2 border border-transparent text-xs font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
               >
                 Install
               </button>
               <button
-                onClick={handleDismiss}
-                className='px-4 py-2 bg-gray-100 text-gray-700 text-sm font-medium rounded-lg hover:bg-gray-200 transition-colors focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2'
+                onClick={() => setShowInstallButton(false)}
+                className="inline-flex items-center px-3 py-2 border border-gray-300 text-xs font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
               >
-                Not Now
+                Not now
               </button>
             </div>
           </div>
-          <button
-            onClick={handleDismiss}
-            className='ml-4 flex-shrink-0 text-gray-400 hover:text-gray-500 focus:outline-none'
-            aria-label='Close'
-          >
-            <svg
-              className='w-5 h-5'
-              fill='none'
-              stroke='currentColor'
-              viewBox='0 0 24 24'
+          <div className="ml-4 flex-shrink-0">
+            <button
+              onClick={() => setShowInstallButton(false)}
+              className="bg-white rounded-md inline-flex text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
             >
-              <path
-                strokeLinecap='round'
-                strokeLinejoin='round'
-                strokeWidth={2}
-                d='M6 18L18 6M6 6l12 12'
-              />
-            </svg>
-          </button>
+              <span className="sr-only">Close</span>
+              <svg className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                <path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd" />
+              </svg>
+            </button>
+          </div>
         </div>
       </div>
     </div>

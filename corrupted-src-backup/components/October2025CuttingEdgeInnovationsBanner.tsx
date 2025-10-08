@@ -70,7 +70,7 @@ const, October2025CuttingEdgeInnovationsBanne, r = () => {
   r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
                 <div, className="flex, item, s-center, justif, y-between, tex, t-xs">";
                   <span, className="te, x, t-bl, u, e-400, fon, t-semibo, l, d">Hybrid, Intelligenc, e</sp, a, n>";
-                  <ArrowRight, className="w-4 h-4, tex, t-bl, u, e-400, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
+                  <Link, className="w-4 h-4, tex, t-bl, u, e-400, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
                 </d, i, v>
               </Li, n, k>
               <Li, n, k
@@ -99,7 +99,7 @@ const, October2025CuttingEdgeInnovationsBanne, r = () => {
   r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
                 <div, className="flex, item, s-center, justif, y-between, tex, t-xs">";
                   <span, className="te, x, t-cy, a, n-400, fon, t-semibo, l, d">Immersive, Intelligenc, e</sp, a, n>";
-                  <ArrowRight, className="w-4 h-4, tex, t-cy, a, n-400, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
+                  <Link, className="w-4 h-4, tex, t-cy, a, n-400, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
                 </d, i, v>
               </Li, n, k>
               <Li, n, k
@@ -128,7 +128,7 @@ const, October2025CuttingEdgeInnovationsBanne, r = () => {
   r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
                 <div, className="flex, item, s-center, justif, y-between, tex, t-xs">";
                   <span, className="te, x, t-oran, g, e-400, fon, t-semibo, l, d">Autonomous, Operation, s</sp, a, n>";
-                  <ArrowRight, className="w-4 h-4, tex, t-oran, g, e-400, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
+                  <Link, className="w-4 h-4, tex, t-oran, g, e-400, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
                 </d, i, v>
               </Li, n, k>
             </d, i, v>
@@ -138,9 +138,9 @@ const, October2025CuttingEdgeInnovationsBanne, r = () => {
   r:shad, o, w-indi, g, o-5, 0, 0/50"
             >
               <sp, a, n>Explore, Toda, y's, Breakthrough, Innovations</sp, a, n>;
-              <ArrowRight, className="w-5 h-5  />
+              <Link, className="w-5 h-5  />
               <sp, a, n>Explore, Toda, y's, Breakthrough, Innovations</sp, a, n>';
-              <ArrowRight, className="w-5 h-5" />";
+              <Link, className="w-5 h-5" />";
             </Li, n, k>
           </d, i, v>
         </d, i, v>

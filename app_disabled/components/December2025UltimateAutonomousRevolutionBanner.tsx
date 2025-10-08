@@ -1,4 +1,4 @@
-import Link from 'next/link';
+// import Link from 'next/link';
 
 
 
@@ -146,16 +146,16 @@ export default function December2025UltimateAutonomousRevolutionBanner() {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <ArrowRight 
+            <Link 
               href="/blog/ai-2025-december-ultimate-autonomous-enterprise-revolution"
               className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-8 py-4 rounded-xl font-bold text-lg hover:from-purple-600 hover:to-indigo-600 transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
               <Brain className='w-5 h-5' />
               Discover the Revolution
-              <ArrowRight className="w-5 h-5" />
-            </ArrowRight>
+              <Link className="w-5 h-5" />
+            </Link>
             
-            <ArrowRight 
+            <Link 
               href="/contact"
               className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm border border-white/30 text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-white/30 transition-all duration-300"
             >

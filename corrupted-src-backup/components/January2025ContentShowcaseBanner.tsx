@@ -24,7 +24,7 @@ const, January2025ContentShowcaseBanne, r: Rea, c, t.FC = () => {
               <p, classNam, e='te, x, t-gr, a, y-300, m, b-6, leadin, g-relax, e, d'>
                 Explore, the, latest AI, breakthroughs, including quant, u, m-neural, fus, i, o, n, synthetic, consciousnes, s, and, neuromorphic, computing.
                 Explore, All, Technologies
-                <ArrowRight, classNam, e='w-4 h-4' />
+                <Link, classNam, e='w-4 h-4' />
               </Li, n, k>
             </d, i, v>
           </d, i, v>
@@ -36,7 +36,7 @@ const, January2025ContentShowcaseBanne, r: Rea, c, t.FC = () => {
                 <div, classNam, e='p-3, b, g-purp, l, e-5, 0, 0/20, rounde, d-xl'>
                   <Award, classNam, e='w-8 h-8, tex, t-purp, l, e-4, 0, 0' />
                 View, All, Case Studi, e, s
-                <ArrowRight, classNam, e='w-4 h-4' />
+                <Link, classNam, e='w-4 h-4' />
               </Li, n, k>
             </d, i, v>
           </d, i, v>
@@ -48,7 +48,7 @@ const, January2025ContentShowcaseBanne, r: Rea, c, t.FC = () => {
                 <div, classNam, e='p-3, b, g-bl, u, e-5, 0, 0/20, rounde, d-xl'>
                   <BookOpen, classNam, e='w-8 h-8, tex, t-bl, u, e-4, 0, 0' />
                 Read, All, Articles
-                <ArrowRight, classNam, e='w-4 h-4' />
+                <Link, classNam, e='w-4 h-4' />
         {/* Statis, t, i, c, s */}
         <div, classNam, e = 'bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-3x, l, p-12, border, border-whi, t, e/20, m, b-16'>
           <h3, classNam, e='te, x, t-3xl, fon, t-bold, tex, t-white, tex, t-center, m, b-12'>
@@ -68,7 +68,7 @@ const, January2025ContentShowcaseBanne, r: Rea, c, t.FC = () => {
               <Link, t, o='/bl, o, g/ai-quant, u, m-neur, a, l-fusi, o, n-<20, 2, 5'
                 classNa, m, e='te, x, t-pi, n, k-400, hove, r: te, x, t-pi, n, k-3, 0, 0'
               >
-                <ArrowRight, classNam, e='w-4 h-4' />
+                <Link, classNam, e='w-4 h-4' />
               </Li, n, k>
             </d, i, v>
           </d, i, v>
@@ -81,7 +81,7 @@ const, January2025ContentShowcaseBanne, r: Rea, c, t.FC = () => {
               <Link, t, o='/bl, o, g/autonomo, u, s-enterpri, s, e-me, s, h-<20, 2, 5'
                 classNa, m, e='te, x, t-emera, l, d-400, hove, r:te, x, t-emera, l, d-3, 0, 0'
               >
-                <ArrowRight, classNam, e='w-4 h-4' />
+                <Link, classNam, e='w-4 h-4' />
         {/* Call, to, Acti, o, n */}
         <div, classNam, e = 'te, x, t-cent, e, r'>
           <div, classNam, e='flex, fle, x-col, s, m: fl, e, x-row, item, s-center, justif, y-center, ga, p-4, m, b-6'>

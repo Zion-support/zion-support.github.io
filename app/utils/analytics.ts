@@ -57,8 +57,7 @@ class AnalyticsService {
       }
       // Log in development
       if (process.env['NODE_ENV'] === 'development') {
-        console.log('Analytics Event:', event)
-      }
+        }
     } catch (error) {
       console.error('Failed to track event:', error)
     }
@@ -69,7 +68,7 @@ class AnalyticsService {
   trackPageView(path: string, title?: string): void {
     try {
       if (this.hasGtag()) {
-        gtag('config', this.config.trackingId, {
+        gtag('config', this.config.gaId, {
           page_path: path,
           page_title: title,
         })
@@ -84,7 +83,7 @@ class AnalyticsService {
   identifyUser(user: AnalyticsUser): void {
     try {
       if (this.hasGtag() && user.id) {
-        gtag('config', this.config.trackingId, {
+        gtag('config', this.config.gaId, {
           user_id: user.id,
           ...user.properties
         })
@@ -98,11 +97,11 @@ class AnalyticsService {
    */
   trackError(error: Error, metadata?: Record<string, unknown>): void {
     this.trackEvent({
-      action: 'error'
-      category: 'exception'
-      label: error.message
+      action: 'error',
+      category: 'exception',
+      label: error.message,
       metadata: {
-        stack: error.stack
+        stack: error.stack,
         ...metadata
       }
     })
@@ -118,11 +117,12 @@ class AnalyticsService {
   ): void {
     try {
       if (this.hasGtag()) {
+        gtag('event', 'timing_complete', {
           name: variable,
-          value: Math.round(value)
+          value: Math.round(value),
           event_category: category,
           event_label: label,
-        })
+        });
       }
     } catch (error) {
       console.error('Failed to track timing:', error)
@@ -134,10 +134,10 @@ class AnalyticsService {
   trackPerformance(metric: string, value: number, metadata?: Record<string, unknown>): void {
     try {
       this.trackEvent({
-        action: 'performance'
-        category: 'web_vitals'
+        action: 'performance',
+        category: 'web_vitals',
         label: metric,
-        value: Math.round(value)
+        value: Math.round(value),
         metadata
       })
     } catch (error) {

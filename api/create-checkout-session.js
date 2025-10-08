@@ -31,8 +31,7 @@ async function handler(req, res) {
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ success: true, session: sessionData }));
   } catch {
-//     console.error('Checkout session creation error:', error);
-    res.statusCode = 500;
+    //     res.statusCode = 500;
     res.end('Internal Server Error');
   }
 }

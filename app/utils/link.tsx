@@ -10,21 +10,21 @@ interface LinkProps {
   'aria-label'?: string;
 }
 
-export const Link: React.FC<LinkProps> = ({ 
-  href, 
-  children, 
-  className, 
-  target, 
-  rel, 
+export const Link: React.FC<LinkProps> = ({
+  href,
+  children,
+  className,
+  target,
+  rel,
   onClick,
   'aria-label': ariaLabel,
-  ...props 
+  ...props
 }) => {
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     if (onClick) {
       onClick();
     }
-    
+
     // Handle internal navigation
     if (href.startsWith('/') && !href.startsWith('//')) {
       e.preventDefault();

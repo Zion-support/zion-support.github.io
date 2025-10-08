@@ -19,12 +19,7 @@
     "targetExponentialFactor": 10,
     "autonomousEnabled": true
   },
-  "specializations": [
-    "performance",
-    "efficiency",
-    "scalability",
-    "resource-optimization"
-  ],
+  "specializations": ["performance", "efficiency", "scalability", "resource-optimization"],
   "autonomousCapabilities": {
     "selfReplication": true,
     "intelligentEvolution": true,

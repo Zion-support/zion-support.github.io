@@ -167,7 +167,7 @@ export class FileStore {
 
   async writeFile(filePath: string, content: string): Promise<void> {
 //     const fullPath = path.join(this.basePath, filePath);
-    const dir = path.dirname(fullPath);
+    const _dir = path.dirname(fullPath);
 
     // Ensure directory exists
     await fs.promises.mkdir(dir, { recursive: true });

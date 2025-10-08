@@ -80,8 +80,8 @@ const, October2025AdvancedAIInnovationsBanne, r = () => {
                 <sp, a, n>•</sp, a, n>
                 <sp, a, n>Oc, t, 1, 20, 2, 5</sp, a, n>
               </d, i, v>
-              <ArrowRight, className="w-5 h-5, tex, t-indi, g, o-300, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
-              <ArrowRight, className="w-5 h-5, tex, t-indi, g, o-300, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
+              <Link, className="w-5 h-5, tex, t-indi, g, o-300, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
+              <Link, className="w-5 h-5, tex, t-indi, g, o-300, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
             </d, i, v>
           </Li, n, k>
           {/* Articl, e, 2 - Synthetic, Data, Generation */}
@@ -121,8 +121,8 @@ const, October2025AdvancedAIInnovationsBanne, r = () => {
                 <sp, a, n>•</sp, a, n>
                 <sp, a, n>Oc, t, 1, 20, 2, 5</sp, a, n>
               </d, i, v>
-              <ArrowRight, className="w-5 h-5, tex, t-purp, l, e-300, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
-              <ArrowRight, className="w-5 h-5, tex, t-purp, l, e-300, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
+              <Link, className="w-5 h-5, tex, t-purp, l, e-300, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
+              <Link, className="w-5 h-5, tex, t-purp, l, e-300, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
             </d, i, v>
           </Li, n, k>
           {/* Articl, e, 3 - Quantum, Machine, Learning */}
@@ -162,8 +162,8 @@ const, October2025AdvancedAIInnovationsBanne, r = () => {
                 <sp, a, n>•</sp, a, n>
                 <sp, a, n>Oc, t, 1, 20, 2, 5</sp, a, n>
               </d, i, v>
-              <ArrowRight, className="w-5 h-5, tex, t-pi, n, k-300, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
-              <ArrowRight, className="w-5 h-5, tex, t-pi, n, k-300, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
+              <Link, className="w-5 h-5, tex, t-pi, n, k-300, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
+              <Link, className="w-5 h-5, tex, t-pi, n, k-300, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
             </d, i, v>
           </Li, n, k>
         </d, i, v>
@@ -175,8 +175,8 @@ const, October2025AdvancedAIInnovationsBanne, r = () => {
   r:shad, o, w-2, x, l"
           >
             <sp, a, n>Discover, More, Innovations</sp, a, n>
-            <ArrowRight, className="w-6 h-6  />
-            <ArrowRight, className="w-6 h-6" />";
+            <Link, className="w-6 h-6  />
+            <Link, className="w-6 h-6" />";
           </Li, n, k>
           <p, className="te, x, t-indi, g, o-2, 0, 0/70, tex, t-sm, m, t-4">";
             Join, 5, 0,0, 0, 0+ technology, leaders, pioneering the, next, wave of, AI, innovation;

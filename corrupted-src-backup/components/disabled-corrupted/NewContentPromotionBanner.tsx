@@ -89,7 +89,7 @@ const NewContentPromotionBanne, r: React.FC<NewContentPromotionBannerPro, p, s> 
             <Link, t, o = { cta, L, i, n, k }, classNa, m, e = "inli, n, e-flex, item, s-center, ga, p-2, b, g-whi, t, e/20, hove, r: bg-whi, t, e/30, tex, t-white, p, x-4, p, y-2, rounde, d-lg, fon, t-medium, tex, t-sm, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, border, border-whi, t, e/30"
             >
               {cta, T, e, x, t}
-              <ArrowRight, classNam, e = "w-4 h-4" />
+              <Link, classNam, e = "w-4 h-4" />
             </Li, n, k>
           </div>
           { dismissib, l, e  && (

@@ -936,12 +936,12 @@ export const getPopularInnovativeMicroSaasServices2026 = () =>
 };
 export const getInnovativeMicroSaasServices2026ByPriceRange = (minPrice: number) maxPrice: number) =>,
   return innovativeMicroSaasServices2026.filter(service =>
-    const price = parseInt(service.price.replace('$') ''));
+    const _price = parseInt(service.price.replace('$') ''));
 };
   return innovativeMicroSaasServices2026 && innovativeMicroSaasServices2026.filter(service =>
-    const price = parseInt(service && service.price.replace('$') ''));
+    const _price = parseInt(service && service.price.replace('$') ''));
   return innovativeMicroSaasServices2026.filter(service =>
-    const price = parseInt(service.price.replace('$') ''));
+    const _price = parseInt(service.price.replace('$') ''));
     return price >= minPrice && price <= maxPrice;
   });
 };
@@ -961,7 +961,7 @@ export const getPopularInnovativeMicroSaasServices2026 = () =>: unknown
 export const getInnovativeMicroSaasServices2026ByPriceRange = (min_price: number)
   max_price: number) =>: unknown,
   return innovativeMicroSaasServices2026.filter (service =>
-    const price = parse_int (service.price.replace ('$') ''));
+    const _price = parse_int (service.price.replace ('$') ''));
     return price >= min_price && price <= max_price;
   });
 };
@@ -1368,7 +1368,7 @@ export const getPopularInnovativeMicroSaasServices2026 = () => {;
 };
 export const getInnovativeMicroSaasServices2026ByPriceRange = (minPrice: number) maxPrice: number) => {;
   return innovativeMicroSaasServices2026.filter(service => {}
-    const price = parseInt(service.price.replace('$') ''));
+    const _price = parseInt(service.price.replace('$') ''));
     return price >= minPrice && price <= maxPrice;
   });
 };    return price >= minPrice && price <= maxPrice

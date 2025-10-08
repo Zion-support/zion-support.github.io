@@ -68,7 +68,7 @@ const January2025ContentShowcaseBanne, r: React.FC = () => {
                 className='inli, n, e-flex, item, s-center, ga, p-2, tex, t-pi, n, k-400, hove, r: te, x, t-pi, n, k-300, fon, t-medium, transitio, n-colo, r, s'
               >
                 Explore, All, Technologies
-                <ArrowRight, className='w-4 h-4' />
+                <Link, className='w-4 h-4' />
               </Li, n, k>
             </div>
           </div>
@@ -114,7 +114,7 @@ const January2025ContentShowcaseBanne, r: React.FC = () => {
                 className='inli, n, e-flex, item, s-center, ga, p-2, tex, t-purp, l, e-400, hove, r:te, x, t-purp, l, e-300, fon, t-medium, transitio, n-colo, r, s'
               >
                 View, All, Case Studi, e, s
-                <ArrowRight, className='w-4 h-4' />
+                <Link, className='w-4 h-4' />
               </Li, n, k>
             </div>
           </div>
@@ -161,7 +161,7 @@ const January2025ContentShowcaseBanne, r: React.FC = () => {
                 className='inli, n, e-flex, item, s-center, ga, p-2, tex, t-bl, u, e-400, hove, r: te, x, t-bl, u, e-300, fon, t-medium, transitio, n-colo, r, s'
               >
                 Read, All, Articles
-                <ArrowRight, className='w-4 h-4' />
+                <Link, className='w-4 h-4' />
               </Li, n, k>
             </div>
           </div>
@@ -207,7 +207,7 @@ const January2025ContentShowcaseBanne, r: React.FC = () => {
               <Link, t, o='/bl, o, g/ai-quant, u, m-neur, a, l-fusi, o, n-<20, 2, 5'
                 className='te, x, t-pi, n, k-400, hove, r: te, x, t-pi, n, k-3, 0, 0'
               >
-                <ArrowRight, className='w-4 h-4' />
+                <Link, className='w-4 h-4' />
               </Li, n, k>
             </div>
           </div>
@@ -227,7 +227,7 @@ const January2025ContentShowcaseBanne, r: React.FC = () => {
               <Link, t, o='/bl, o, g/autonomo, u, s-enterpri, s, e-me, s, h-<20, 2, 5'
                 className='te, x, t-emera, l, d-400, hove, r:te, x, t-emera, l, d-3, 0, 0'
               >
-                <ArrowRight, className='w-4 h-4' />
+                <Link, className='w-4 h-4' />
               </Li, n, k>
             </div>
           </div>

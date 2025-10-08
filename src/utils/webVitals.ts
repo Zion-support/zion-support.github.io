@@ -76,11 +76,10 @@ async function sendToAnalytics(
         body,
         headers: { 'Content-Type': 'application/json' },
         keepalive: true,
-//       }).catch(console.error);
-      });
+      }).catch(console.error);
     }
-  } catch {
-//     console.error('Failed to send metric to analytics:', error);
+  } catch (error) {
+    console.error('Failed to send metric to analytics:', error);
   }
 }
 
@@ -119,7 +118,9 @@ export function reportWebVitals(
 
             onPerfEntry(metric);
             if (analyticsEndpoint) sendToAnalytics(metric, analyticsEndpoint);
-//             if (debug) if (process.env['NODE_ENV'] === 'development') { if (process.env.DEV) { console.log('CLS:', metric); } }
+            if (debug && process.env['NODE_ENV'] === 'development') {
+              console.log('CLS metric:', metric);
+            }
           }
         }
       }
@@ -128,7 +129,7 @@ export function reportWebVitals(
     try {
       clsObserver.observe({ type: 'layout-shift', buffered: true });
     } catch (e) {
-//       if (debug) console.warn('CLS observation not supported:', e);
+      if (debug) console.warn('Failed to observe layout-shift:', e);
     }
 
     // Report final CLS on page hide
@@ -145,7 +146,9 @@ export function reportWebVitals(
 
         onPerfEntry(metric);
         if (analyticsEndpoint) sendToAnalytics(metric, analyticsEndpoint);
-//         if (debug) if (process.env['NODE_ENV'] === 'development') { if (process.env.DEV) { console.log('Final CLS:', metric); } }
+        if (debug && process.env['NODE_ENV'] === 'development') {
+          console.log('CLS final metric:', metric);
+        }
       }
     });
   }
@@ -167,7 +170,9 @@ export function reportWebVitals(
 
       onPerfEntry(metric);
       if (analyticsEndpoint) sendToAnalytics(metric, analyticsEndpoint);
-//       if (debug) if (process.env['NODE_ENV'] === 'development') { if (process.env.DEV) { console.log('FID:', metric); } }
+      if (debug && process.env['NODE_ENV'] === 'development') {
+        console.log('FID metric:', metric);
+      }
 
       fidObserver.disconnect();
     });
@@ -175,7 +180,7 @@ export function reportWebVitals(
     try {
       fidObserver.observe({ type: 'first-input', buffered: true });
     } catch (e) {
-//       if (debug) console.warn('FID observation not supported:', e);
+      if (debug) console.warn('Failed to observe first-input:', e);
     }
   }
 
@@ -200,14 +205,16 @@ export function reportWebVitals(
 
         onPerfEntry(metric);
         if (analyticsEndpoint) sendToAnalytics(metric, analyticsEndpoint);
-//         if (debug) if (process.env['NODE_ENV'] === 'development') { if (process.env.DEV) { console.log('LCP:', metric); } }
+        if (debug && process.env['NODE_ENV'] === 'development') {
+          console.log('LCP metric:', metric);
+        }
       }
     });
 
     try {
       lcpObserver.observe({ type: 'largest-contentful-paint', buffered: true });
     } catch (e) {
-//       if (debug) console.warn('LCP observation not supported:', e);
+      if (debug) console.warn('Failed to observe largest-contentful-paint:', e);
     }
 
     // Report final LCP on page hide
@@ -235,7 +242,9 @@ export function reportWebVitals(
 
           onPerfEntry(metric);
           if (analyticsEndpoint) sendToAnalytics(metric, analyticsEndpoint);
-//           if (debug) if (process.env['NODE_ENV'] === 'development') { if (process.env.DEV) { console.log('FCP:', metric); } }
+          if (debug && process.env['NODE_ENV'] === 'development') {
+            console.log('FCP metric:', metric);
+          }
 
           fcpObserver.disconnect();
         }
@@ -245,7 +254,7 @@ export function reportWebVitals(
     try {
       fcpObserver.observe({ type: 'paint', buffered: true });
     } catch (e) {
-//       if (debug) console.warn('FCP observation not supported:', e);
+      if (debug) console.warn('Failed to observe paint:', e);
     }
   }
 
@@ -269,7 +278,9 @@ export function reportWebVitals(
 
       onPerfEntry(metric);
       if (analyticsEndpoint) sendToAnalytics(metric, analyticsEndpoint);
-//       if (debug) if (process.env['NODE_ENV'] === 'development') { if (process.env.DEV) { console.log('TTFB:', metric); } }
+      if (debug && process.env['NODE_ENV'] === 'development') {
+        console.log('TTFB metric:', metric);
+      }
     }
   }
 }
@@ -295,7 +306,7 @@ export function monitorLongTasks(
     observer.observe({ entryTypes: ['longtask'] });
     return observer;
   } catch (e) {
-//     console.warn('Long task monitoring not supported:', e);
+    console.warn('Failed to create long task observer:', e);
     return null;
   }
 }

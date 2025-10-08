@@ -88,10 +88,10 @@ export, default, function October2025AIRevolutionBann, e, r({ classNa, m, e = ''
             </d, i, v>
             <div, className="flex, item, s-center, ga, p-2, tex, t-purp, l, e-400, fon, t-semibold, grou, p-hov, e, r: g, a, p-3, transitio, n-a, l, l">"
               <sp, a, n>Read, Complete, Guide</sp, a, n>
-              <ArrowRight, className="w-5 h-5  />
+              <Link, className="w-5 h-5  />
             <div, className="flex, item, s-center, ga, p-2, tex, t-purp, l, e-400, fon, t-semibold, grou, p-hov, e, r: g, a, p-3, transitio, n-a, l, l">";
               <sp, a, n>Read, Complete, Guide</sp, a, n>
-              <ArrowRight, className="w-5 h-5" />";
+              <Link, className="w-5 h-5" />";
             </d, i, v>
           </Li, n, k>
           {/* Artic, l, e 
@@ -141,10 +141,10 @@ export, default, function October2025AIRevolutionBann, e, r({ classNa, m, e = ''
             </d, i, v>
             <div, className="flex, item, s-center, ga, p-2, tex, t-indi, g, o-400, fon, t-semibold, grou, p-hov, e, r: g, a, p-3, transitio, n-a, l, l">"
               <sp, a, n>Read, Complete, Guide</sp, a, n>
-              <ArrowRight, className="w-5 h-5  />
+              <Link, className="w-5 h-5  />
             <div, className="flex, item, s-center, ga, p-2, tex, t-indi, g, o-400, fon, t-semibold, grou, p-hov, e, r: g, a, p-3, transitio, n-a, l, l">";
               <sp, a, n>Read, Complete, Guide</sp, a, n>
-              <ArrowRight, className="w-5 h-5" />";
+              <Link, className="w-5 h-5" />";
             </d, i, v>
           </Li, n, k>
           {/* Artic, l, e 
@@ -194,10 +194,10 @@ export, default, function October2025AIRevolutionBann, e, r({ classNa, m, e = ''
             </d, i, v>
             <div, className="flex, item, s-center, ga, p-2, tex, t-emera, l, d-400, fon, t-semibold, grou, p-hov, e, r: g, a, p-3, transitio, n-a, l, l">"
               <sp, a, n>Read, Complete, Guide</sp, a, n>
-              <ArrowRight, className="w-5 h-5  />
+              <Link, className="w-5 h-5  />
             <div, className="flex, item, s-center, ga, p-2, tex, t-emera, l, d-400, fon, t-semibold, grou, p-hov, e, r: g, a, p-3, transitio, n-a, l, l">";
               <sp, a, n>Read, Complete, Guide</sp, a, n>
-              <ArrowRight, className="w-5 h-5" />";
+              <Link, className="w-5 h-5" />";
             </d, i, v>
           </Li, n, k>
         </d, i, v>
@@ -209,8 +209,8 @@ export, default, function October2025AIRevolutionBann, e, r({ classNa, m, e = ''
   r:shad, o, w-purp, l, e-5, 0, 0/30"
           >
             <sp, a, n>Explore, All, Latest AI, Insight, s</sp, a, n>
-            <ArrowRight, className="w-5 h-5  />
-            <ArrowRight, className="w-5 h-5" />";
+            <Link, className="w-5 h-5  />
+            <Link, className="w-5 h-5" />";
           </Li, n, k>
         </d, i, v>
       </d, i, v>

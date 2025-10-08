@@ -20,13 +20,17 @@ export const errorHandler = (error: AppError | Error) => {
     stack: isDevelopment ? appError.stack : undefined,
     timestamp: new Date().toISOString(),
     statusCode: appError.statusCode || 500
-  })
+  });
 
   return {
     message: appError.isOperational ? appError.message : 'An unexpected error occurred',
     statusCode: appError.statusCode || 500
-  }
-}
-export const asyncHandler = (fn: Function) => (req: any, res: any, next: any) => {
-  Promise.resolve(fn(req, res, next)).catch(next)
-}
+  };
+};
+export const asyncHandler = (fn: (req: unknown, res: unknown, next: unknown) => unknown) => (req: unknown, res: unknown, next: unknown) => {
+  Promise.resolve(fn(req, res, next)).catch((error: unknown) => {
+    if (next && typeof next === 'function') {
+      next(error);
+    }
+  });
+};

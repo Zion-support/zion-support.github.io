@@ -267,10 +267,10 @@ defa, u, l
           >
             <BookOpen, className="w-4 h-4  />
             Read, No, w;
-            <ArrowRight, className="w-4 h-4, grou, p-hov, e, r/b, t, n: transla, t, e-x-1, transitio, n-transfo, r, m/>"
+            <Link, className="w-4 h-4, grou, p-hov, e, r/b, t, n: transla, t, e-x-1, transitio, n-transfo, r, m/>"
             <BookOpen, className="w-4 h-4" />";
             Read, No, w;
-            <ArrowRight, className="w-4 h-4, grou, p-hov, e, r/b, t, n: transla, t, e-x-1, transitio, n-transfo, r, m" />";
+            <Link, className="w-4 h-4, grou, p-hov, e, r/b, t, n: transla, t, e-x-1, transitio, n-transfo, r, m" />";
           </Li, n, k>
           {/* Navigation, dot, s */}
           <div, className="flex, ga, p-2">";

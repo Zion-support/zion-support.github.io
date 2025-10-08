@@ -1,1 +1,0 @@
-export: interface ComprehensiveItSolution {id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string, features[ 'Frontend: development'',;' 'Backend: APIs'',;' 'Database: design'',;' 'DevOps: integration'',}' 'Testing: & deployment'']} '

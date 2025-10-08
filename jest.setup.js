@@ -1,13 +1,14 @@
 // Learn more: https://github.com/testing-library/jest-dom
-import '@testing-library/jest-dom';
+require('@testing-library/jest-dom');
+const React = require('react');
+const { TextEncoder, TextDecoder } = require('util');
 
-// Polyfill for TextEncoder/TextDecoder
-import { TextEncoder, TextDecoder } from 'util';
+// Polyfills for Node.js environment
 global.TextEncoder = TextEncoder;
 global.TextDecoder = TextDecoder;
 
 // Mock files that use import.meta.env
-jest.mock('./app/utils/logger.ts', () => ({
+jest.mock('./src/utils/logger.ts', () => ({
   logger: {
     debug: jest.fn(),
     info: jest.fn(),
@@ -17,19 +18,19 @@ jest.mock('./app/utils/logger.ts', () => ({
   },
 }));
 
-jest.mock('./app/utils/analytics.ts', () => ({
+jest.mock('./src/utils/analytics.ts', () => ({
   trackEvent: jest.fn(),
   trackPageView: jest.fn(),
   initAnalytics: jest.fn(),
 }));
 
-jest.mock('./app/utils/errorReporter.ts', () => ({
+jest.mock('./src/utils/errorTracking.ts', () => ({
   reportError: jest.fn(),
   initErrorReporting: jest.fn(),
 }));
 
-jest.mock('./app/hooks/usePerformanceOptimization.ts', () => ({
-  usePerformanceOptimization: jest.fn(() => ({
+jest.mock('./src/hooks/usePerformance.ts', () => ({
+  usePerformance: jest.fn(() => ({
     metrics: {},
     optimize: jest.fn(),
   })),
@@ -42,13 +43,10 @@ jest.mock('./app/hooks/usePerformanceMonitoring.ts', () => ({
   })),
 }));
 
-
 // Mock React Router (this is a Vite project, not Next.js)
 jest.mock('react-router-dom', () => {
   const actual = jest.requireActual('react-router-dom');
-  const { createContext } = require('react');
-  const RouterContext = createContext({ basename: '/' });
-  
+  const React = require('react');
   return {
     ...actual,
     useNavigate: () => jest.fn(),
@@ -59,16 +57,26 @@ jest.mock('react-router-dom', () => {
       state: null,
     }),
     useParams: () => ({}),
-    BrowserRouter: ({ children }) => (
-      <RouterContext.Provider value={{ basename: '/' }}>
-        {children}
-      </RouterContext.Provider>
-    ),
-    MemoryRouter: ({ children }) => (
-      <RouterContext.Provider value={{ basename: '/' }}>
-        {children}
-      </RouterContext.Provider>
-    ),
+    Link: ({ children, to, ...props }) => {
+      return React.createElement('a', { href: to, ...props }, children);
+    },
+    NavLink: ({ children, to, ...props }) => {
+      return React.createElement('a', { href: to, ...props }, children);
+    },
+    BrowserRouter: ({ children }) => children,
+    MemoryRouter: ({ children }) => {
+      const { createMemoryRouter, RouterProvider } = actual;
+      const router = createMemoryRouter([
+        {
+          path: '/',
+          element: children,
+        },
+      ], {
+        initialEntries: ['/'],
+        initialIndex: 0,
+      });
+      return React.createElement(RouterProvider, { router });
+    },
     RouterProvider: ({ router }) => null,
   };
 });
@@ -98,8 +106,6 @@ global.IntersectionObserver = class IntersectionObserver {
   }
   unobserve() {}
 };
-
-// TextEncoder and TextDecoder are already imported and set above
 
 // Suppress console errors in tests
 const originalError = console.error;

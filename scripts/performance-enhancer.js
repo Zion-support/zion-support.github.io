@@ -24,9 +24,7 @@ class PerformanceEnhancer {
   }
 
   async enhance() {
-//     console.log('🚀 Starting Advanced Performance Enhancement...\n');
-
-    try {
+//     try {
       await this.analyzeBundle();
       await this.optimizeImages();
       await this.optimizeCSS();
@@ -35,33 +33,29 @@ class PerformanceEnhancer {
       await this.optimizeBuild();
       await this.generateReport();
 
-//       console.log('✅ Performance enhancement completed successfully!');
-//       console.log(`📊 Report saved to: ${path.join(process.cwd(), 'performance-enhancement-report.json')}`);
+//       //       console.log(`📊 Report saved to: ${path.join(process.cwd(), 'performance-enhancement-report.json')}`);
     } catch (error) {
-//       console.error('❌ Performance enhancement failed:', error.message);
-      process.exit(1);
+//       process.exit(1);
     }
   }
 
   async analyzeBundle() {
-//     console.log('📦 Analyzing bundle size...');
-    
-    try {
+//     try {
       // Build with analysis
       execSync('npm run build:analyze', { stdio: 'pipe' });
       
 //       const distPath = path.join(process.cwd(), 'dist');
 //       const files = await fs.readdir(distPath);
       
-      let totalSize = 0;
-      const fileSizes = {};
+      let _totalSize = 0;
+      const _fileSizes = {};
       
       for (const file of files) {
 //         const filePath = path.join(distPath, file);
-        const stats = await fs.stat(filePath);
+        const _stats = await fs.stat(filePath);
         
         if (stats.isFile()) {
-          const size = stats.size;
+          const _size = stats.size;
           totalSize += size;
           fileSizes[file] = size;
         }
@@ -83,14 +77,11 @@ class PerformanceEnhancer {
       
 //       console.log(`✅ Bundle analysis completed. Total size: ${(totalSize / 1024).toFixed(2)} KB`);
     } catch (error) {
-//       console.log('⚠️  Bundle analysis skipped:', error.message);
-    }
+//       }
   }
 
   async optimizeImages() {
-//     console.log('🖼️  Optimizing images...');
-    
-    try {
+//     try {
 //       const publicPath = path.join(process.cwd(), 'public');
 //       const imagesPath = path.join(publicPath, 'images');
       
@@ -98,17 +89,16 @@ class PerformanceEnhancer {
       try {
         await fs.access(imagesPath);
       } catch {
-//         console.log('⚠️  No images directory found, skipping image optimization');
-        return;
+//         return;
       }
       
-      const images = await fs.readdir(imagesPath);
-      let optimizedCount = 0;
+      const _images = await fs.readdir(imagesPath);
+      let _optimizedCount = 0;
       
       for (const image of images) {
         if (image.match(/\.(jpg|jpeg|png|gif)$/i)) {
 //           const imagePath = path.join(imagesPath, image);
-          const stats = await fs.stat(imagePath);
+          const _stats = await fs.stat(imagePath);
           
           // Check if image is large (>100KB)
           if (stats.size > 100 * 1024) {
@@ -125,16 +115,12 @@ class PerformanceEnhancer {
         details: `Processed ${optimizedCount} images`
       });
       
-//       console.log(`✅ Image optimization completed. Processed ${optimizedCount} images`);
-    } catch (error) {
-//       console.log('⚠️  Image optimization skipped:', error.message);
-    }
+//       } catch (error) {
+//       }
   }
 
   async optimizeCSS() {
-//     console.log('🎨 Optimizing CSS...');
-    
-    try {
+//     try {
       // Generate critical CSS
       const criticalCSS = `
 /* Critical CSS for above-the-fold content */
@@ -159,16 +145,12 @@ class PerformanceEnhancer {
         details: 'Critical CSS generated'
       });
       
-//       console.log('✅ CSS optimization completed');
-    } catch (error) {
-//       console.log('⚠️  CSS optimization skipped:', error.message);
-    }
+//       } catch (error) {
+//       }
   }
 
   async optimizeJavaScript() {
-//     console.log('⚡ Optimizing JavaScript...');
-    
-    try {
+//     try {
       // Generate performance monitoring script
       const performanceScript = `
 // Performance monitoring script
@@ -180,30 +162,27 @@ class PerformanceEnhancer {
     if ('PerformanceObserver' in window) {
       // LCP
       new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        const lastEntry = entries[entries.length - 1];
-//         console.log('LCP:', lastEntry.startTime);
-      }).observe({ entryTypes: ['largest-contentful-paint'] });
+        const _entries = list.getEntries();
+        const _lastEntry = entries[entries.length - 1];
+//         }).observe({ entryTypes: ['largest-contentful-paint'] });
       
       // FID
       new PerformanceObserver((list) => {
-        const entries = list.getEntries();
+        const _entries = list.getEntries();
         entries.forEach((entry) => {
-//           console.log('FID:', entry.processingStart - entry.startTime);
-        });
+//           });
       }).observe({ entryTypes: ['first-input'] });
       
       // CLS
-      let clsValue = 0;
+      let _clsValue = 0;
       new PerformanceObserver((list) => {
-        const entries = list.getEntries();
+        const _entries = list.getEntries();
         entries.forEach((entry) => {
           if (!entry.hadRecentInput) {
             clsValue += entry.value;
           }
         });
-//         console.log('CLS:', clsValue);
-      }).observe({ entryTypes: ['layout-shift'] });
+//         }).observe({ entryTypes: ['layout-shift'] });
     }
   }
   
@@ -225,16 +204,12 @@ class PerformanceEnhancer {
         details: 'Performance monitoring script generated'
       });
       
-//       console.log('✅ JavaScript optimization completed');
-    } catch (error) {
-//       console.log('⚠️  JavaScript optimization skipped:', error.message);
-    }
+//       } catch (error) {
+//       }
   }
 
   async generateServiceWorker() {
-//     console.log('🔧 Generating service worker...');
-    
-    try {
+//     try {
       const serviceWorkerScript = `
 // Service Worker for caching and offline support
 // const CACHE_NAME = 'zion-app-v1';
@@ -286,16 +261,12 @@ self.addEventListener('activate', (event) => {
         details: 'Service worker generated for offline support'
       });
       
-//       console.log('✅ Service worker generated');
-    } catch (error) {
-//       console.log('⚠️  Service worker generation skipped:', error.message);
-    }
+//       } catch (error) {
+//       }
   }
 
   async optimizeBuild() {
-//     console.log('🏗️  Optimizing build configuration...');
-    
-    try {
+//     try {
       // Check if vite.config.js exists
 //       const viteConfigPath = path.join(process.cwd(), 'vite.config.js');
       
@@ -303,7 +274,7 @@ self.addEventListener('activate', (event) => {
         await fs.access(viteConfigPath);
         
         // Read current config
-        const configContent = await fs.readFile(viteConfigPath, 'utf8');
+        const _configContent = await fs.readFile(viteConfigPath, 'utf8');
         
         // Add optimization plugins if not present
         if (!configContent.includes('rollup-plugin-visualizer')) {
@@ -315,8 +286,7 @@ self.addEventListener('activate', (event) => {
         }
         
       } catch {
-//         console.log('⚠️  No vite.config.js found');
-      }
+//         }
       
       this.report.optimizations.push({
         type: 'build-optimization',
@@ -324,16 +294,12 @@ self.addEventListener('activate', (event) => {
         details: 'Build configuration analyzed'
       });
       
-//       console.log('✅ Build optimization completed');
-    } catch (error) {
-//       console.log('⚠️  Build optimization skipped:', error.message);
-    }
+//       } catch (error) {
+//       }
   }
 
   async generateReport() {
-//     console.log('📊 Generating performance report...');
-    
-//     const reportPath = path.join(process.cwd(), 'performance-enhancement-report.json');
+//     //     const reportPath = path.join(process.cwd(), 'performance-enhancement-report.json');
     await fs.writeFile(reportPath, JSON.stringify(this.report, null, 2));
     
     // Generate markdown report
@@ -341,8 +307,7 @@ self.addEventListener('activate', (event) => {
 //     const markdownPath = path.join(process.cwd(), 'performance-enhancement-report.md');
     await fs.writeFile(markdownPath, markdownReport);
     
-//     console.log('✅ Performance report generated');
-  }
+//     }
 
   generateMarkdownReport() {
     return `# Performance Enhancement Report
@@ -381,7 +346,7 @@ ${this.report.recommendations.map(rec => `- ${rec}`).join('\n')}
 }
 
 // Run the enhancer
-const enhancer = new PerformanceEnhancer();
+const _enhancer = new PerformanceEnhancer();
 // enhancer.enhance().catch(console.error);
 
 export default PerformanceEnhancer;

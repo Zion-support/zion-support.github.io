@@ -14,18 +14,16 @@ export interface UseEnhancedPerformanceOptions {
   trackAnalytics?: boolean;
 }
 
-export function useEnhancedPerformance(
-  options: UseEnhancedPerformanceOptions = {}
-) {
+export function useEnhancedPerformance(_options: UseEnhancedPerformanceOptions = {}) {
   const {
     component = 'Unknown',
     trackErrors = true,
     trackPerformance = true,
     trackAnalytics = true,
-  } = options;
+  } = _options;
 
-  const mountTimeRef = useRef<number>(0);
-  const renderCountRef = useRef<number>(0);
+  const _mountTimeRef = useRef<number>(0);
+  const _renderCountRef = useRef<number>(0);
 
   useEffect(() => {
     mountTimeRef.current = performance.now();
@@ -39,7 +37,7 @@ export function useEnhancedPerformance(
     return () => {
       // Track component unmount duration
       if (trackPerformance) {
-        const duration = performance.now() - mountTimeRef.current;
+        const _duration = performance.now() - mountTimeRef.current;
         if (duration > 5000) {
           // Long-lived component
           analytics.trackCustomEvent(
@@ -64,9 +62,7 @@ export function useEnhancedPerformance(
 
     if (trackPerformance && renderCountRef.current > 10) {
       // Many re-renders detected
-      console.warn(
-        `Component ${component} has re-rendered ${renderCountRef.current} times`
-      );
+
       analytics.trackCustomEvent(
         'Performance',
         'High Render Count',
@@ -100,11 +96,11 @@ export function useEnhancedPerformance(
   const measureOperation = useCallback(
     (operationName: string) => {
       const _markName = `${component}-${operationName}`;
-      const startTime = performance.now();
+      const _startTime = performance.now();
 
       return {
         end: () => {
-          const duration = performance.now() - startTime;
+          const _duration = performance.now() - startTime;
           
           if (trackPerformance) {
             analytics.trackPerformance(

@@ -23,8 +23,8 @@ export const useErrorMonitoring = () => {
   useEffect(() => {
     // Global error handler
     const handleError = (event: unknown) => {
-      const errorEvent = event as { message: string; error?: Error };
-      const error = new Error(errorEvent.message);
+      const _errorEvent = event as { message: string; error?: Error };
+      const _error = new Error(errorEvent.message);
       error.stack = errorEvent.error?.stack;
 
       reportError(error, 'global_error');
@@ -32,7 +32,7 @@ export const useErrorMonitoring = () => {
 
     // Unhandled promise rejection handler
     const handleUnhandledRejection = (event: unknown) => {
-      const rejectionEvent = event as { reason: unknown };
+      const _rejectionEvent = event as { reason: unknown };
       const error =
         rejectionEvent.reason instanceof Error
           ? rejectionEvent.reason
@@ -42,15 +42,10 @@ export const useErrorMonitoring = () => {
     };
 
     // React error boundary handler (if available)
-    const handleReactError = (
-      error: Error,
-      errorInfo: unknown
-    ) => {
-      const componentStack = (errorInfo as { componentStack?: string })?.componentStack || 'unknown';
-      reportError(
-        error,
-        `react_error_boundary: ${componentStack}`
-      );
+    const handleReactError = (error: Error, errorInfo: unknown) => {
+      const componentStack =
+        (errorInfo as { componentStack?: string })?.componentStack || 'unknown';
+      reportError(error, `react_error_boundary: ${componentStack}`);
     };
 
     // Add event listeners
@@ -60,22 +55,15 @@ export const useErrorMonitoring = () => {
     // Expose React error handler globally for error boundaries
     (
       window as Window & {
-        __REACT_ERROR_HANDLER__?: (
-          error: Error,
-          errorInfo: unknown
-        ) => void;
+        __REACT_ERROR_HANDLER__?: (error: Error, errorInfo: unknown) => void;
       }
     ).__REACT_ERROR_HANDLER__ = handleReactError;
 
     // Cleanup
     return () => {
       window.removeEventListener('error', handleError);
-      window.removeEventListener(
-        'unhandledrejection',
-        handleUnhandledRejection
-      );
-      delete (window as Window & { __REACT_ERROR_HANDLER__?: unknown })
-        .__REACT_ERROR_HANDLER__;
+      window.removeEventListener('unhandledrejection', handleUnhandledRejection);
+      delete (window as Window & { __REACT_ERROR_HANDLER__?: unknown }).__REACT_ERROR_HANDLER__;
     };
   }, [reportError]);
 

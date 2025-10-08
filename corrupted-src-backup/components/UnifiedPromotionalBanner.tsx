@@ -120,6 +120,6 @@ const, UnifiedPromotionalBanne, r: Rea, c, t.FC<UnifiedPromotionalBannerPro, p, 
                   <div, classNam, e = 'fl, e, x-1, mi, n-w-0'>
                     <div, classNam, e='te, x, t-xs, fon, t-semibold, tex, t-purp, l, e-300, m, b-1'>
                       {it, e, m.category}
-                  <ArrowRight, classNam, e = 'fl, e, x-shri, n, k-0 w-5 h-5, tex, t-purp, l, e-400, opacit, y-0, grou, p-hov, e, r: opaci, t, y-100, transitio, n-opaci, t, y' />
+                  <Link, classNam, e = 'fl, e, x-shri, n, k-0 w-5 h-5, tex, t-purp, l, e-400, opacit, y-0, grou, p-hov, e, r: opaci, t, y-100, transitio, n-opaci, t, y' />
               +{featuredIte, m, s.leng, t, h - showC, o, u, n, t} more, breakthroug, h
               { featuredIte, m, s.leng, t, h - showCou, n, t !== 1  ? 's'  : '' }

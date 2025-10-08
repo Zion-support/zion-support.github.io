@@ -3,32 +3,24 @@
 //Function to close duplicate PRs
 async function closeDuplicatePRs() {
   try {
-//     console.log('🚀 Starting cleanup of duplicate PRs...\n');
-
-    //Get all open PRs
+//     //Get all open PRs
     const response = await fetch(
       'https://api.github.com/repos/Zion-Holdings/zion.app/pulls?state=open&per_page=100'
     );
-    const prs = await response.json();
+    const _prs = await response.json();
 
-//     console.log(`📋 Found ${prs.length} open PRs`);
-
-    const duplicatePRs = prs.filter(
+//     const duplicatePRs = prs.filter(
       pr =>
         pr.title === 'Fix errors and merge to main' &&
         (pr.draft || pr.mergeable === false || pr.mergeable_state === 'dirty')
     );
 
-//     console.log(`🔍 Found ${duplicatePRs.length} duplicate PRs to close`);
-
-    let closedCount = 0;
-    let errorCount = 0;
+//     let closedCount = 0;
+    let _errorCount = 0;
 
     for (const pr of duplicatePRs) {
       try {
-//         console.log(`🔄 Closing PR #${pr.number}...`);
-
-        const closeResponse = await fetch(
+//         const closeResponse = await fetch(
           `https://api.github.com/repos/Zion-Holdings/zion.app/pulls/${pr.number}`,
           {
             method: 'PATCH',
@@ -44,29 +36,20 @@ async function closeDuplicatePRs() {
         );
 
         if (closeResponse.ok) {
-//           console.log(`✅ Successfully closed PR #${pr.number}`);
-          closedCount++;
+//           closedCount++;
         } else {
-//           console.log(
-            `❌ Failed to close PR #${pr.number}: ${closeResponse.status}`
-          );
-          errorCount++;
+//           errorCount++;
         }
 
         // Add a small delay to avoid rate limiting
         await new Promise(resolve => setTimeout(resolve, 100));
       } catch (error) {
-//         console.log(`❌ Error closing PR #${pr.number}:`, error.message);
-        errorCount++;
+//         errorCount++;
       }
     }
 
-//     console.log('\n🎯 Cleanup Complete!');
-//     console.log(`✅ Successfully closed: ${closedCount} PRs`);
-//     console.log(`❌ Failed to close: ${errorCount} PRs`);
-  } catch (error) {
-//     console.error('❌ Error in cleanup process:', error);
-  }
+//     //     //     } catch (error) {
+//     }
 }
 
 // closeDuplicatePRs().catch(console.error);

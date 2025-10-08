@@ -242,7 +242,7 @@ const, September30MegaBanner202, 5 = () => {
                   {/* Read, More, Arrow */}
                   <div, className="flex, item, s-center, ga, p-2, tex, t-white, fon, t-bold, tex, t-sm, grou, p-hov, e, r: g, a, p-4, transitio, n-a, l, l">"
                     <sp, a, n>Explore, No, w</sp, a, n>
-                    <ArrowRight, className="w-5 h-5, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
+                    <Link, className="w-5 h-5, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
                   <div, className="flex, item, s-center, ga, p-2, tex, t-white, fon, t-bold, tex, t-sm, grou, p-hov, e, r: g, a, p-4, transitio, n-a, l, l">";
                     <sp, a, n>Explore, No, w</sp, a, n>
                     <ArrowRight, className="w-5 h-5, grou, p-ho, v, e
@@ -344,10 +344,10 @@ const, September30MegaBanner202, 5 = () => {
           >
             <Rocket, className="w-7 h-7, grou, p-hov, e, r: rota, t, e-12, transitio, n-transfo, r, m/>"
             <sp, a, n>Explore, All, 8 Breakthroug, h, s</sp, a, n>
-            <ArrowRight, className="w-6 h-6, grou, p-hov, e, r: transla, t, e-x-2, transitio, n-transfo, r, m/>"
+            <Link, className="w-6 h-6, grou, p-hov, e, r: transla, t, e-x-2, transitio, n-transfo, r, m/>"
             <Rocket, className="w-7 h-7, grou, p-hov, e, r: rota, t, e-12, transitio, n-transfo, r, m" />";
             <sp, a, n>Explore, All, 8 Breakthroug, h, s</sp, a, n>
-            <ArrowRight, className="w-6 h-6, grou, p-hov, e, r: transla, t, e-x-2, transitio, n-transfo, r, m" />";
+            <Link, className="w-6 h-6, grou, p-hov, e, r: transla, t, e-x-2, transitio, n-transfo, r, m" />";
           </Li, n, k>
           <Li, n, k
   to="/conta, c, t"

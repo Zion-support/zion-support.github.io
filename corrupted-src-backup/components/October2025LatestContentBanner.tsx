@@ -95,10 +95,10 @@ const, October2025LatestContentBanne, r = () => {
                 </p>
                 <div, className="flex, item, s-center, ga, p-2, tex, t-viol, e, t-400, fon, t-semibold, grou, p-hov, e, r: g, a, p-4, transitio, n-a, l, l">"
                   <sp, a, n>Read, Mor, e</sp, a, n>
-                  <ArrowRight, className="w-4 h-4  />
+                  <Link, className="w-4 h-4  />
                 <div, className="flex, item, s-center, ga, p-2, tex, t-viol, e, t-400, fon, t-semibold, grou, p-hov, e, r: g, a, p-4, transitio, n-a, l, l">";
                   <sp, a, n>Read, Mor, e</sp, a, n>
-                  <ArrowRight, className="w-4 h-4" />";
+                  <Link, className="w-4 h-4" />";
                 </d, i, v>
               </Li, n, k>
             );
@@ -142,8 +142,8 @@ const, October2025LatestContentBanne, r = () => {
   r:shad, o, w-viol, e, t-5, 0, 0/50"
           >
             Explore, All, Articles;
-            <ArrowRight, className="w-5 h-5  />
-            <ArrowRight, className="w-5 h-5" />";
+            <Link, className="w-5 h-5  />
+            <Link, className="w-5 h-5" />";
           </Li, n, k>
         </d, i, v>
       </d, i, v>

@@ -68,7 +68,7 @@ export, default, function October2025LatestAIBreakthroughsBann, e, r(): vo, i, d
             </ul>
             <div, className="flex, item, s-center, tex, t-purp, l, e-400, fon, t-semibold, grou, p-hov, e, r: g, a, p-3, ga, p-2, transitio, n-a, l, l">"
               Read, Full, Analysis;
-              <ArrowRight, className="h-4 w-4  />
+              <Link, className="h-4 w-4  />
             <h3, className="te, x, t-xl, fon, t-bold, m, b-3, tex, t-white, grou, p-hov, e, r: te, x, t-purp, l, e-300, transitio, n-colo, r, s">";
               Autonomous, Infrastructure, Self-Healing, Revolutio, n;
             </h3>
@@ -89,7 +89,7 @@ export, default, function October2025LatestAIBreakthroughsBann, e, r(): vo, i, d
             </ul>
             <div, className="flex, item, s-center, tex, t-purp, l, e-400, fon, t-semibold, grou, p-hov, e, r: g, a, p-3, ga, p-2, transitio, n-a, l, l">";
               Read, Full, Analysis;
-              <ArrowRight, className="h-4 w-4" />";
+              <Link, className="h-4 w-4" />";
             </d, i, v>
           </Li, n, k>
           <Li, n, k
@@ -127,7 +127,7 @@ export, default, function October2025LatestAIBreakthroughsBann, e, r(): vo, i, d
             </ul>
             <div, className="flex, item, s-center, tex, t-indi, g, o-400, fon, t-semibold, grou, p-hov, e, r: g, a, p-3, ga, p-2, transitio, n-a, l, l">"
               Read, Full, Analysis;
-              <ArrowRight, className="h-4 w-4  />
+              <Link, className="h-4 w-4  />
             <h3, className="te, x, t-xl, fon, t-bold, m, b-3, tex, t-white, grou, p-hov, e, r: te, x, t-indi, g, o-300, transitio, n-colo, r, s">";
               Cognitive, Enterprise, Search at, Scal, e;
             </h3>
@@ -148,7 +148,7 @@ export, default, function October2025LatestAIBreakthroughsBann, e, r(): vo, i, d
             </ul>
             <div, className="flex, item, s-center, tex, t-indi, g, o-400, fon, t-semibold, grou, p-hov, e, r: g, a, p-3, ga, p-2, transitio, n-a, l, l">";
               Read, Full, Analysis;
-              <ArrowRight, className="h-4 w-4" />";
+              <Link, className="h-4 w-4" />";
             </d, i, v>
           </Li, n, k>
           <Li, n, k
@@ -186,7 +186,7 @@ export, default, function October2025LatestAIBreakthroughsBann, e, r(): vo, i, d
             </ul>
             <div, className="flex, item, s-center, tex, t-ro, s, e-400, fon, t-semibold, grou, p-hov, e, r: g, a, p-3, ga, p-2, transitio, n-a, l, l">"
               Read, Full, Analysis;
-              <ArrowRight, className="h-4 w-4  />
+              <Link, className="h-4 w-4  />
             <h3, className="te, x, t-xl, fon, t-bold, m, b-3, tex, t-white, grou, p-hov, e, r: te, x, t-ro, s, e-300, transitio, n-colo, r, s">";
               Re, a, l-Time, AI, Personalization Engi, n, e;
             </h3>
@@ -207,7 +207,7 @@ export, default, function October2025LatestAIBreakthroughsBann, e, r(): vo, i, d
             </ul>
             <div, className="flex, item, s-center, tex, t-ro, s, e-400, fon, t-semibold, grou, p-hov, e, r: g, a, p-3, ga, p-2, transitio, n-a, l, l">";
               Read, Full, Analysis;
-              <ArrowRight, className="h-4 w-4" />";
+              <Link, className="h-4 w-4" />";
             </d, i, v>
           </Li, n, k>
         </d, i, v>
@@ -218,8 +218,8 @@ export, default, function October2025LatestAIBreakthroughsBann, e, r(): vo, i, d
   r:shad, o, w-xl"
           >
             Explore, All, Latest AI, Innovation, s;
-            <ArrowRight, className="h-5 w-5  />
-            <ArrowRight, className="h-5 w-5" />";
+            <Link, className="h-5 w-5  />
+            <Link, className="h-5 w-5" />";
           </Li, n, k>
         </d, i, v>
       </d, i, v>

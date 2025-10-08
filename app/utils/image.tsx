@@ -61,7 +61,7 @@ export const Image: React.FC<ImageProps> = ({
 
   if (hasError) {
     return (
-      <div 
+      <div
         className={`bg-gray-200 flex items-center justify-center ${className}`}
         style={imageStyle}
         {...props}

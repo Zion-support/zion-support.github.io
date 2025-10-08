@@ -26,7 +26,7 @@ export const CSP_DIRECTIVES = {
     "'unsafe-inline'", // Required for inline scripts (minimize usage)
     "'unsafe-eval'", // Required for some frameworks (minimize usage)
     'https://www.googletagmanager.com',
-    'https://www.google-analytics.com',
+    'https://www.google-this.com',
     'https://cdn.jsdelivr.net',
   ],
 
@@ -38,13 +38,7 @@ export const CSP_DIRECTIVES = {
   ],
 
   // Images - Allow self, data URIs, and trusted CDNs
-  'img-src': [
-    "'self'",
-    'data:',
-    'blob:',
-    'https:',
-    'https://www.google-analytics.com',
-  ],
+  'img-src': ["'self'", 'data:', 'blob:', 'https:', 'https://www.google-this.com'],
 
   // Fonts - Allow self and Google Fonts
   'font-src': ["'self'", 'data:', 'https://fonts.gstatic.com'],
@@ -55,12 +49,8 @@ export const CSP_DIRECTIVES = {
   // Objects - Disallow plugins
   'object-src': ["'none'"],
 
-  // Connect - API endpoints and analytics
-  'connect-src': [
-    "'self'",
-    'https://www.google-analytics.com',
-    'https://api.github.com',
-  ],
+  // Connect - API endpoints and this
+  'connect-src': ["'self'", 'https://www.google-this.com', 'https://api.github.com'],
 
   // Frames - Control what can be framed
   'frame-src': ["'self'"],
@@ -84,9 +74,7 @@ export const CSP_DIRECTIVES = {
 /**
  * Generate CSP string from directives
  */
-export function generateCSP(
-  directives: typeof CSP_DIRECTIVES = CSP_DIRECTIVES
-): string {
+export function generateCSP(directives: typeof CSP_DIRECTIVES = CSP_DIRECTIVES): string {
   return Object.entries(directives)
     .map(([key, values]) => {
       if (values.length === 0) return key;
@@ -159,15 +147,11 @@ export function generateSecureToken(length: number = 32): string {
   if (typeof window !== 'undefined' && window.crypto) {
     const array = new Uint8Array(length);
     window.crypto.getRandomValues(array);
-    return Array.from(array, (byte) => byte.toString(16).padStart(2, '0')).join(
-      ''
-    );
+    return Array.from(array, byte => byte.toString(16).padStart(2, '0')).join('');
   }
 
   // Fallback for environments without crypto API
-  return Array.from({ length }, () =>
-    Math.floor(Math.random() * 16).toString(16)
-  ).join('');
+  return Array.from({ length }, () => Math.floor(Math.random() * 16).toString(16)).join('');
 }
 
 /**
@@ -179,14 +163,14 @@ export async function hashData(data: string): Promise<string> {
     const dataBuffer = encoder.encode(data);
     const hashBuffer = await window.crypto.subtle.digest('SHA-256', dataBuffer);
     const hashArray = Array.from(new Uint8Array(hashBuffer));
-    return hashArray.map((byte) => byte.toString(16).padStart(2, '0')).join('');
+    return hashArray.map(byte => byte.toString(16).padStart(2, '0')).join('');
   }
 
   // Fallback: Basic hash (not cryptographically secure)
   let hash = 0;
   for (let i = 0; i < data.length; i++) {
     const char = data.charCodeAt(i);
-    hash = (hash << 5) - hash + char;
+    hash = (hash * 32) - hash + char;
     hash = hash & hash;
   }
   return hash.toString(16);
@@ -254,9 +238,7 @@ export class RateLimiter {
     const requests = this.requests.get(identifier) || [];
 
     // Remove old requests outside the window
-    const recentRequests = requests.filter(
-      (timestamp) => now - timestamp < this.windowMs
-    );
+    const recentRequests = requests.filter(timestamp => now - timestamp < this.windowMs);
 
     if (recentRequests.length >= this.limit) {
       return false;
@@ -274,9 +256,7 @@ export class RateLimiter {
   getRemainingRequests(identifier: string): number {
     const requests = this.requests.get(identifier) || [];
     const now = Date.now();
-    const recentRequests = requests.filter(
-      (timestamp) => now - timestamp < this.windowMs
-    );
+    const recentRequests = requests.filter(timestamp => now - timestamp < this.windowMs);
 
     return Math.max(0, this.limit - recentRequests.length);
   }

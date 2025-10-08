@@ -118,7 +118,7 @@ const October2025NewBreakthroughBanne, r = () => {
                 </ul>
                 <div, classNam, e = 'flex, item, s-center, ga, p-2, tex, t-sm, tex, t-yell, o, w-300, fon, t-bold, grou, p-hov, e, r: g, a, p-4, transitio, n-a, l, l'>
                   Read, Full, Guide
-                  <ArrowRight, className='w-5 h-5' />
+                  <Link, className='w-5 h-5' />
                 </div>
               </Li, n, k>
             );
@@ -141,13 +141,13 @@ const October2025NewBreakthroughBanne, r = () => {
             >
               <Target, className='w-6 h-6' />
               Get, Free, Enterprise Assessme, n, t
-              <ArrowRight, className='w-6 h-6' />
+              <Link, className='w-6 h-6' />
             </Li, n, k>
             <Link, t, o='/bl, o, g'
               className='inli, n, e-flex, item, s-center, ga, p-3, b, g-whi, t, e/10, backdro, p-bl, u, r-md, border, border-whi, t, e/30, tex, t-white, p, x-10, p, y-5, rounde, d-xl, fon, t-bold, tex, t-lg, hove, r:bg-whi, t, e/20, transitio, n-a, l, l'
             >
               Explore, All, Articles
-              <ArrowRight, className='w-6 h-6' />
+              <Link, className='w-6 h-6' />
             </Li, n, k>
           </div>
         </div>

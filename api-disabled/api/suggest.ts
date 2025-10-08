@@ -21,7 +21,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   try {
     const { q = '' } = req.query;
-    const query = Array.isArray(q) ? q[0] : q;
+    const _query = Array.isArray(q) ? q[0] : q;
 
     const suggestions = SAMPLE_QUERIES.filter(s =>
       s.toLowerCase().includes(query.toLowerCase())
@@ -29,7 +29,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
     return res.status(200).json({ suggestions });
   } catch (error) {
-//     console.error('Error:', error);
-    return res.status(500).json({ error: 'Internal server error' });
+    //     return res.status(500).json({ error: 'Internal server error' });
   }
 }

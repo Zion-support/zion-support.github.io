@@ -1,45 +1,26 @@
-# Robots.txt for Zion Tech Group
-# Updated: 2025-10-08
-
 User-agent: *
 Allow: /
-Disallow: /api/
-Disallow: /admin/
-Disallow: /_next/
-Disallow: /private/
 
-# Crawl-delay for polite crawling
+Sitemap: https://ziontechgroup.com/sitemap.xml
+
+# Crawl-delay for respectful crawling
 Crawl-delay: 1
 
-# Popular search engines
-User-agent: Googlebot
-Allow: /
-Disallow: /api/
+# Disallow admin and private areas
 Disallow: /admin/
 Disallow: /private/
-
-User-agent: Bingbot
-Allow: /
 Disallow: /api/
-Disallow: /admin/
-Disallow: /private/
+Disallow: /_next/
+Disallow: /static/
 
-User-agent: Slurp
+# Allow important pages
 Allow: /
-Disallow: /api/
-Disallow: /admin/
-Disallow: /private/
-
-# Block bad bots
-User-agent: MJ12bot
-Disallow: /
-
-User-agent: AhrefsBot
-Crawl-delay: 10
-
-User-agent: SemrushBot
-Crawl-delay: 10
-
-# Sitemap location
-Sitemap: https://zion.app/sitemap.xml
-Sitemap: https://www.zion.app/sitemap.xml
+Allow: /about
+Allow: /services
+Allow: /contact
+Allow: /ai-services
+Allow: /ai-marketing
+Allow: /ai-automation
+Allow: /quantum-computing
+Allow: /autonomous-systems
+Allow: /blog

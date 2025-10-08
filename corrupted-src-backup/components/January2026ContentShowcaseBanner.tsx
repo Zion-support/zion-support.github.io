@@ -242,8 +242,8 @@ const, January2026ContentShowcaseBanne, r: Rea, c, t.FC = () => {
   r:-transla, t, e-y-1`}`;`
                 >
                   <sp, a, n>Read, Full, Article</sp, a, n>
-                  <ArrowRight, className="w-4 h-4, grou, p-hov, e, r/b, t, n: transla, t, e-x-1, transitio, n-transform, duratio, n-3, 0, 0/>"
-                  <ArrowRight, className="w-4 h-4, grou, p-hov, e, r/b, t, n: transla, t, e-x-1, transitio, n-transform, duratio, n-3, 0, 0" />";
+                  <Link, className="w-4 h-4, grou, p-hov, e, r/b, t, n: transla, t, e-x-1, transitio, n-transform, duratio, n-3, 0, 0/>"
+                  <Link, className="w-4 h-4, grou, p-hov, e, r/b, t, n: transla, t, e-x-1, transitio, n-transform, duratio, n-3, 0, 0" />";
                 </a>
               </d, i, v>
             </d, i, v>

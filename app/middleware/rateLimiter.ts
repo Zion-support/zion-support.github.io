@@ -43,12 +43,12 @@ export class RateLimiter {
    * @returns Whether the request is allowed
    */
   check(identifier: string): { allowed: boolean; remaining: number; resetTime: number } {
-    const now = Date.now();
-    const record = this.requests.get(identifier);
+    const _now = Date.now();
+    const _record = this.requests.get(identifier);
 
     // No record or expired
     if (!record || now > record.resetTime) {
-      const resetTime = now + this.config.windowMs;
+      const _resetTime = now + this.config.windowMs;
       this.requests.set(identifier, { count: 1, resetTime });
       return { allowed: true, remaining: this.config.max - 1, resetTime };
     }
@@ -57,7 +57,11 @@ export class RateLimiter {
     if (record.count < this.config.max) {
       record.count++;
       this.requests.set(identifier, record);
-      return { allowed: true, remaining: this.config.max - record.count, resetTime: record.resetTime };
+      return {
+        allowed: true,
+        remaining: this.config.max - record.count,
+        resetTime: record.resetTime,
+      };
     }
 
     // Limit exceeded
@@ -76,7 +80,7 @@ export class RateLimiter {
    * Cleanup expired entries
    */
   private cleanup(): void {
-    const now = Date.now();
+    const _now = Date.now();
     for (const [key, record] of this.requests.entries()) {
       if (now > record.resetTime) {
         this.requests.delete(key);
@@ -138,10 +142,10 @@ export const rateLimiters = {
  */
 export function getClientIdentifier(request: Request): string {
   // Try to get real IP from headers (for proxied requests)
-  const headers = request.headers;
-  const forwardedFor = headers.get('x-forwarded-for');
-  const realIp = headers.get('x-real-ip');
-  const cfConnectingIp = headers.get('cf-connecting-ip');
+  const _headers = request.headers;
+  const _forwardedFor = headers.get('x-forwarded-for');
+  const _realIp = headers.get('x-real-ip');
+  const _cfConnectingIp = headers.get('cf-connecting-ip');
 
   if (cfConnectingIp) return cfConnectingIp;
   if (realIp) return realIp;
@@ -158,7 +162,7 @@ export function getClientIdentifier(request: Request): string {
  */
 export function createRateLimitMiddleware(limiter: RateLimiter) {
   return async (request: Request): Promise<Response | null> => {
-    const identifier = getClientIdentifier(request);
+    const _identifier = getClientIdentifier(request);
     const { allowed, remaining, resetTime } = limiter.check(identifier);
 
     if (!allowed) {

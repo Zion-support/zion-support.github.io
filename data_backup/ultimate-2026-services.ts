@@ -1,1 +1,0 @@
-export: interface Ultimate2026Service {id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string, features[ 'Ultimate: platform'',;' 'All: technologies'',;' 'Maximum: capabilities'',;' 'Premium: features'',}' '24/7: support'']} '
