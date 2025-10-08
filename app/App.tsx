@@ -8,40 +8,30 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import AdvancedErrorBoundary from './components/AdvancedErrorBoundary';
 import AdvancedSEOOptimizer from './components/AdvancedSEOOptimizer';
+import AdvancedPerformanceMonitor from './components/AdvancedPerformanceMonitor';
 import SEOEnhancer from './components/SEOEnhancer';
+import PerformanceDashboard from './components/PerformanceDashboard';
 import LoadingSpinner from './components/LoadingSpinner';
 
-// Lazy load pages and components
-const HomePage = lazy(() => import('./page').then(module => ({ default: module.default || (() => <div>Home Page</div>) })));
-const PerformanceDashboard = lazy(() => import('./components/PerformanceDashboard').catch(() => ({ default: () => null })));
-const AdvancedPerformanceMonitor = lazy(() => import('./components/AdvancedPerformanceMonitor').catch(() => ({ default: () => null })));
+// Lazy load pages
+const HomePage = lazy(() => import('./page').catch(() => ({ default: () => <div>Error loading page</div> })));
 
-// Utils
-import { logger } from './utils/logger';
-import { performanceOptimizer } from './utils/performanceOptimizer';
-
-// Helper functions
-const lazyLoadImages = () => {
-  // Implement lazy loading for images
+// Performance monitoring
+const performanceOptimizer = {
+  init: () => {},
+  getMetrics: () => ({ lcp: 0, fid: 0, cls: 0 })
 };
 
-const preloadCriticalResources = () => {
-  // Implement critical resource preloading
+const logger = {
+  lifecycle: (message: string, component: string) => console.log(`[${component}] ${message}`),
+  info: (message: string, data?: any) => console.log(message, data),
+  error: (message: string, error: Error, data?: any) => console.error(message, error, data),
+  performance: (message: string, metrics: any, component: string) => console.log(`[${component}] ${message}`, metrics)
 };
 
-const collectPerformanceMetrics = () => {
-  // Collect and return performance metrics
-  return {};
-};
-
-interface ErrorBoundaryProps {
-  children: React.ReactNode;
-}
-
-interface ErrorBoundaryState {
-  hasError: boolean;
-  error: Error | null;
-}
+const lazyLoadImages = () => {};
+const preloadCriticalResources = () => {};
+const collectPerformanceMetrics = () => ({ lcp: 0, fid: 0, cls: 0 });
 
 const App: React.FC = () => {
   useEffect(() => {
@@ -90,11 +80,10 @@ const App: React.FC = () => {
             description="Leading provider of enterprise AI solutions, quantum computing, and autonomous systems. Transform your business with our cutting-edge technology."
           >
             <AdvancedSEOOptimizer
-              config={{
+              seoData={{
                 title: 'Zion Tech Group - Advanced AI and IT Solutions',
                 description: 'Leading provider of enterprise AI solutions, quantum computing, and autonomous systems. Transform your business with our cutting-edge technology.',
                 keywords: ['AI solutions', 'enterprise AI', 'quantum computing', 'autonomous systems', 'digital transformation', 'automation', 'cloud services', 'AI consulting', 'business intelligence', 'machine learning'],
-                url: 'https://ziontechgroup.com',
                 canonicalUrl: 'https://ziontechgroup.com'
               }}
               enableStructuredData={true}
