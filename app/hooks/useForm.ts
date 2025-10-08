@@ -4,14 +4,14 @@
  */
 
 import { useState, useCallback, ChangeEvent } from 'react';
-import { logger } from '../utils/logger';
+// import { logger } from '../utils/logger';
 import {
   ValidationRule,
   validateField,
   validateForm,
   isFormValid,
   getFormErrors,
-  _ValidationResult
+  // _ValidationResult
 } from '../utils/formValidation';
 
 export interface UseFormConfig<T extends Record<string, unknown>> {
@@ -147,7 +147,7 @@ export function useForm<T extends Record<string, unknown>>({
       try {
         await onSubmit(values);
       } catch (error) {
-// eslint-disable-next-line no-console
+ 
     console.error('Form submission error:', error);
       } finally {
         setIsSubmitting(false);
