@@ -53,7 +53,7 @@ export class BaseService {
     if (!this.options.cache) return null;
     
     if (this.isCacheValid(key)) {
-      logger.debug(`Cache hit for key: ${key}`, { component: 'BaseService' });
+      logger.debug(`Cache hit for key: ${key}`, 'BaseService');
       return this.cache.get(key)?.data as T;
     }
 
@@ -96,7 +96,7 @@ export class BaseService {
     }
 
     try {
-      logger.debug(`GET request to ${endpoint}`, { component: 'BaseService' });
+      logger.debug(`GET request to ${endpoint}`, 'BaseService');
       const data = await apiClient.get<T>(`${this.baseUrl}${endpoint}`, {
         timeout: this.options.timeout,
         retries: this.options.retries,
