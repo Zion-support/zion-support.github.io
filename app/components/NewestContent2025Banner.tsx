@@ -3,10 +3,10 @@ import Link from 'next/link';
 
 const NewestContent2025Banner: React.FC = () => {
   return (
-    <section className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 overflow-hidden">
+    <section className="relative bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900 overflow-hidden">
       {/* Animated Background Effects */}
       <div className="absolute inset-0 opacity-30">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-blue-500 via-transparent to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 animate-pulse"></div>
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
@@ -37,9 +37,14 @@ const NewestContent2025Banner: React.FC = () => {
             <div className="relative z-10">
               <div className="flex items-center justify-between mb-6">
                 <div className="text-4xl">⚡</div>
-                <span className="px-3 py-1 bg-gradient-to-r from-red-500 to-orange-500 text-white text-xs font-bold rounded-full">
-                  🔥 HOT
-                </span>
+                <div className="flex gap-2">
+                  <span className="px-3 py-1 bg-gradient-to-r from-red-500 to-orange-500 text-white text-xs font-bold rounded-full">
+                    �� HOT
+                  </span>
+                  <span className="px-3 py-1 bg-gradient-to-r from-green-500 to-emerald-500 text-white text-xs font-bold rounded-full">
+                    NEW TODAY
+                  </span>
+                </div>
               </div>
 
               <div className="mb-4">
@@ -94,9 +99,11 @@ const NewestContent2025Banner: React.FC = () => {
             <div className="relative z-10">
               <div className="flex items-center justify-between mb-6">
                 <div className="text-4xl">🧠</div>
-                <span className="px-3 py-1 bg-gradient-to-r from-purple-500 to-fuchsia-600 text-white text-xs font-bold rounded-full">
-                  BREAKTHROUGH
-                </span>
+                <div className="flex gap-2">
+                  <span className="px-3 py-1 bg-gradient-to-r from-purple-500 to-fuchsia-600 text-white text-xs font-bold rounded-full">
+                    BREAKTHROUGH
+                  </span>
+                </div>
               </div>
 
               <div className="mb-4">
@@ -131,7 +138,7 @@ const NewestContent2025Banner: React.FC = () => {
 
               <div className="flex items-center justify-between text-sm text-gray-400 mb-6">
                 <span>⏱️ 28 min read</span>
-                <span>�� Sep 30, 2025</span>
+                <span>📅 Sep 30, 2025</span>
               </div>
 
               <Link 
@@ -151,9 +158,11 @@ const NewestContent2025Banner: React.FC = () => {
             <div className="relative z-10">
               <div className="flex items-center justify-between mb-6">
                 <div className="text-4xl">🔒</div>
-                <span className="px-3 py-1 bg-gradient-to-r from-emerald-500 to-teal-600 text-white text-xs font-bold rounded-full">
-                  SECURITY
-                </span>
+                <div className="flex gap-2">
+                  <span className="px-3 py-1 bg-gradient-to-r from-emerald-500 to-teal-600 text-white text-xs font-bold rounded-full">
+                    SECURITY
+                  </span>
+                </div>
               </div>
 
               <div className="mb-4">

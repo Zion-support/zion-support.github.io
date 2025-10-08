@@ -37,35 +37,7 @@ const ContactPage: React.FC = () => {
                     United States
                   </p>
                 </div>
-                <div>
-                  <h3 className='text-lg font-semibold text-gray-900 mb-2'>
-                    Phone
-                  </h3>
-                  <p className='text-gray-600'>
-                    <a href="tel:+1-302-464-0950" className="text-blue-600 hover:text-blue-800">
-                      +1-302-464-0950
-                    </a>
-                  </p>
-                </div>
-                <div>
-                  <h3 className='text-lg font-semibold text-gray-900 mb-2'>
-                    Email
-                  </h3>
-                  <p className='text-gray-600'>
-                    <a href="mailto:kleber@ziontechgroup.com" className="text-blue-600 hover:text-blue-800">
-                      kleber@ziontechgroup.com
-                    </a>
-                  </p>
-                </div>
               </div>
-            </div>
-            <div className='bg-white rounded-lg shadow-lg p-8'>
-              <h2 className='text-2xl font-bold text-gray-900 mb-6'>
-                Send Us a Message
-              </h2>
-              <p className='text-gray-600'>
-                Contact us directly via phone or email to discuss your project needs.
-              </p>
             </div>
           </div>
         </div>
