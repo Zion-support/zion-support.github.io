@@ -38,7 +38,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
   enableTwitterCards = true,
   enableSchemaMarkup = true,
 }) => {
-  const _structuredDataRef = useRef<HTMLScriptElement | null>(null);
+  const structuredDataRef = useRef<HTMLScriptElement | null>(null);
   const generateStructuredData = useCallback(() => {
     if (!enableStructuredData || !seoData.structuredData) return null;
 
@@ -134,16 +134,16 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     return faqData;
   }, [enableSchemaMarkup]);
 
-  const _structuredData = generateStructuredData();
-  const _breadcrumbData = generateBreadcrumbStructuredData();
-  const _faqData = generateFAQStructuredData();
+  const structuredData = generateStructuredData();
+  const breadcrumbData = generateBreadcrumbStructuredData();
+  const faqData = generateFAQStructuredData();
 
   useEffect(() => {
     // Update page title and meta description for better SEO
     if (typeof document !== 'undefined') {
       document.title = seoData.title;
       
-      let _metaDescription = document.querySelector('meta[name="description"]');
+      let metaDescription = document.querySelector('meta[name="description"]');
       if (!metaDescription) {
         metaDescription = document.createElement('meta');
         metaDescription.setAttribute('name', 'description');
@@ -152,7 +152,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
       metaDescription.setAttribute('content', seoData.description);
 
       // Update canonical URL
-      let _canonicalLink = document.querySelector('link[rel="canonical"]');
+      let canonicalLink = document.querySelector('link[rel="canonical"]');
       if (!canonicalLink) {
         canonicalLink = document.createElement('link');
         canonicalLink.setAttribute('rel', 'canonical');
@@ -180,7 +180,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
   //     canonicalLink.href = url;
   //     document.head.appendChild(canonicalLink);
   //   }
-  // };origin/cursor/fix-errors-and-merge-to-main-6395
+  // };
 
   // const _addStructuredData = (data: Record<string, unknown>) => {
   //   // Remove existing structured data
@@ -203,7 +203,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     structuredDataRef.current = script;
   };
 
-  const _trackPageView = (config: SEOData) => {
+  const trackPageView = (config: SEOData) => {
     if (typeof window !== 'undefined' && 'gtag' in window) {
       (window as unknown as { gtag: (command: string, targetId: string, config: Record<string, unknown>) => void }).gtag('config', 'GA_MEASUREMENT_ID', {
         page_title: config.title,
@@ -212,10 +212,10 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     }
   };
 
-  const _trackPerformanceMetrics = () => {
+  const trackPerformanceMetrics = () => {
     if (typeof window !== 'undefined' && 'performance' in window) {
       window.addEventListener('load', () => {
-        const _perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+        const perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
         if (perfData && typeof window !== 'undefined' && 'gtag' in window) {
           (window as unknown as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag('event', 'page_load_performance', {
             event_category: 'Performance',
@@ -225,7 +225,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
         }
       });
     }
-  };origin/cursor/fix-errors-and-merge-to-main-6395
+  };
 
   return (
     <Helmet>
