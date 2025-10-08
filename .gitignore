@@ -36,6 +36,16 @@ Thumbs.db
 .Trashes
 ehthumbs.db
 
+# Backup and temporary files
+*.backup
+*.backup.*
+*.disabled
+*.tmp
+*.temp
+*~
+*.bak
+*.old
+
 # Logs
 logs
 *.log
