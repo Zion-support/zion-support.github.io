@@ -86,7 +86,9 @@
     "precommit": "npm run type-check && npm run lint && npm run test:unit",
     "postinstall": "echo 'Dependencies installed successfully'",
     "deploy:check": "node scripts/deployment-readiness-check.js",
-    "predeploy": "pnpm run deploy:check"
+    "predeploy": "pnpm run deploy:check",
+    "audit:all-comprehensive": "pnpm run type-check && pnpm run lint && pnpm run test && pnpm run build",
+    "check:performance": "pnpm run build && du -sh dist"
   },
   "dependencies": {
     "@esbuild/linux-x64": "^0.25.10",

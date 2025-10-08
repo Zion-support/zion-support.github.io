@@ -1,0 +1,23 @@
+{
+  "budgets": [
+    {
+      "resourceType": "script",
+      "budget": 300
+    },
+    {
+      "resourceType": "total",
+      "budget": 500
+    },
+    {
+      "resourceType": "image",
+      "budget": 200
+    }
+  ],
+  "metrics": {
+    "firstContentfulPaint": 2000,
+    "largestContentfulPaint": 2500,
+    "timeToInteractive": 3500,
+    "totalBlockingTime": 300,
+    "cumulativeLayoutShift": 0.1
+  }
+}
