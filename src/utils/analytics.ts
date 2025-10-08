@@ -76,6 +76,16 @@ class Analytics {
   }
 
   /**
+   * Track page view
+   */
+  trackPageView(page: string, title?: string): void {
+    this.track('page_view', 'navigation', 'view', page, undefined, {
+      page_title: title || (typeof document !== 'undefined' ? document.title : ''),
+      page_url: typeof window !== 'undefined' ? window.location.href : page,
+    });
+  }
+
+  /**
    * Track user interaction
    */
   trackInteraction(
@@ -120,10 +130,24 @@ class Analytics {
   }
 
   /**
+   * Get events by category
+   */
+  getEventsByCategory(category: string): AnalyticsEvent[] {
+    return this.events.filter(event => event.category === category);
+  }
+
+  /**
    * Clear all events
    */
   clearEvents(): void {
     this.events = [];
+  }
+
+  /**
+   * Get user properties
+   */
+  getUserProperties(): UserProperties {
+    return { ...this.userProperties };
   }
 
   /**
@@ -135,5 +159,6 @@ class Analytics {
 }
 
 const analytics = new Analytics();
+
 export { analytics };
 export default analytics;
