@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const Page: React.FC = () => {
+const AITrustScorecardsPage: React.FC = () => {
   return (
 
     <>
@@ -86,4 +86,6 @@ const Page: React.FC = () => {
     </main>
     </>
   );
-}
+};
+
+export default AITrustScorecardsPage;

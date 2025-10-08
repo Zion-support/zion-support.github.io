@@ -24,7 +24,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = memo(({
   onLoad,
   onError
 }) => {
-  const [isLoaded, setIsLoaded] = useState(false);
+  const [_isLoaded, setIsLoaded] = useState(false);
   const [hasError, setHasError] = useState(false);
 
   const handleLoad = useCallback(() => {
