@@ -1,31 +1,24 @@
-import React, { Suspense } from 'react';
+import React from 'react';
 import dynamic from 'next/dynamic';
 import SEOOptimizer from './components/SEOOptimizer';
-import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import PerformanceMonitor from './components/PerformanceMonitor';
+import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 
-// Lazy load heavy components
-const InteractiveAIROICalculator = dynamic(() => import('./components/InteractiveAIROICalculator'), {
-  loading: () => <div className="animate-pulse bg-gray-200 h-64 rounded-lg"></div>,
-  ssr: false
-});
-
-const InteractiveContentShowcase2026 = dynamic(() => import('./components/InteractiveContentShowcase2026'), {
-  loading: () => <div className="animate-pulse bg-gray-200 h-48 rounded-lg"></div>,
-  ssr: false
-});
-
-const UnifiedContentPromotion = dynamic(() => import('./components/UnifiedContentPromotion'), {
+// Lazy load heavy components - these may not exist, so make them optional
+const UnifiedBanner = dynamic(() => import('./components/NewestContent2025Banner').catch(() => ({ default: () => null })), {
   loading: () => <div className="animate-pulse bg-gray-200 h-32 rounded-lg"></div>,
   ssr: false
 });
 
-// Lazy wrapper component
-const LazyWrapper: React.FC<{ children: React.ReactNode }> = ({ children }) => (
-  <Suspense fallback={<div className="animate-pulse bg-gray-200 h-48 rounded-lg"></div>}>
-    {children}
-  </Suspense>
-);
+const ContentPromotion = dynamic(() => import('./components/UltimateBusinessIntelligence2025Banner').catch(() => ({ default: () => null })), {
+  loading: () => <div className="animate-pulse bg-gray-200 h-64 rounded-lg"></div>,
+  ssr: false
+});
+
+const ContentShowcase = dynamic(() => import('./components/UltimateBusinessIntelligenceShowcase2025').catch(() => ({ default: () => null })), {
+  loading: () => <div className="animate-pulse bg-gray-200 h-48 rounded-lg"></div>,
+  ssr: false
+});
 
 export const metadata = {
   title: 'Zion Tech Group — AI Enterprise Transformation & IT Services | 300% ROI Guaranteed',
@@ -79,6 +72,9 @@ export default function OptimizedHomePage() {
         <SEOOptimizer />
         <PerformanceMonitor />
         
+        {/* Unified Banner System */}
+        <UnifiedBanner />
+        
         {/* Main Content */}
         <main className="relative">
           {/* Hero Section */}
@@ -115,20 +111,11 @@ export default function OptimizedHomePage() {
             </div>
           </section>
 
-          {/* ROI Calculator Section */}
-          <LazyWrapper>
-            <InteractiveAIROICalculator />
-          </LazyWrapper>
-
-          {/* Interactive Content Showcase 2026 */}
-          <LazyWrapper>
-            <InteractiveContentShowcase2026 />
-          </LazyWrapper>
-
-          {/* Unified Content Promotion */}
-          <LazyWrapper>
-            <UnifiedContentPromotion />
-          </LazyWrapper>
+          {/* Content Showcase */}
+          <ContentShowcase />
+          
+          {/* Content Promotion */}
+          <ContentPromotion />
         </main>
       </div>
     </AccessibilityEnhancer>

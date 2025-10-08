@@ -141,7 +141,7 @@ class AdvancedErrorBoundary extends Component<
       logger.error(
         'Failed to send error report',
         reportError as Error,
-        { component: 'ErrorReporting', stack: (reportError as Error).stack }
+        { component: 'ErrorReporting' }
       );
     }
   };
