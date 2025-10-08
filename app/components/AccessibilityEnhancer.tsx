@@ -28,11 +28,10 @@ const AccessibilityEnhancer = React.forwardRef<AccessibilityEnhancerRef, Accessi
   children
 }, ref) => {
   const [isHighContrast, setIsHighContrast] = useState(false);
-  const [isReducedMotion, setIsReducedMotion] = useState(false);
   const [fontSize, setFontSize] = useState(16);
-  const [focusVisible, setFocusVisible] = useState(false);
-  // const skipLinkRef = useRef<HTMLAnchorElement>(null); // Unused ref
-  // const mainContentRef = useRef<HTMLElement>(null); // Unused ref
+  const [isReducedMotion, setIsReducedMotion] = useState(false);
+  const [isKeyboardNavigation, setIsKeyboardNavigation] = useState(false);
+  const announcementRef = useRef<HTMLDivElement>(null);
 
   const defaultConfig: AccessibilityConfig = {
     enableKeyboardNavigation: true,
