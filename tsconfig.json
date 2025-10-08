@@ -96,6 +96,7 @@
     ".next",
     "out",
     "dist",
+    "vite.config.ts",
     "_app_disabled/**",
     "app_disabled/**",
     "_conflicted_disabled/**",
