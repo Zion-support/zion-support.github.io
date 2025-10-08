@@ -22,7 +22,15 @@ export default defineConfig({
     cssCodeSplit: true,
     assetsInlineLimit: 4096,
     reportCompressedSize: true,
+    // Optimize build performance
+    emptyOutDir: true,
+    copyPublicDir: true,
+    // Reduce memory usage during build
     rollupOptions: {
+      maxParallelFileOps: 2,
+      treeshake: {
+        moduleSideEffects: false,
+      },
       external: id => {
         // Externalize Next.js modules to prevent build errors
         if (id.includes('next/') || id.includes('next')) {
