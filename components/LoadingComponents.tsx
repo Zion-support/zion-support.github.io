@@ -6,7 +6,6 @@ interface LoadingSpinnerProps {
   className?: string;
   color?: 'blue' | 'gray' | 'white';
   text?: string;
->>>>>>> origin/main
 }
 
 export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({

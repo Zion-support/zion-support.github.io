@@ -7,7 +7,6 @@ const NewestContent2025Banner: React.FC = () => {
       </div>
 
 =======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3927
 =======
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="text-center">
@@ -25,12 +24,10 @@ const NewestContent2025Banner: React.FC = () => {
           <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
             Discover the latest innovations in artificial intelligence, quantum computing, 
             and autonomous systems that are transforming enterprise operations worldwide.
->>>>>>> origin/main
           </p>
 
 =======
                   <span className="inline-block px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/30 to-blue-500/30 text-cyan-200 text-sm font-bold border border-cyan-400/50">
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3927
                     Edge AI & Real-Time
                   </span>
                 </div>
@@ -44,7 +41,6 @@ const NewestContent2025Banner: React.FC = () => {
                   AI Edge Computing Real-Time Intelligence 2025
                 </h3>
                 {/* Excerpt */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3927
                 <p className="text-gray-300 mb-6 leading-relaxed">
                   Deploy intelligence at the source with &lt;10ms latency. Achieve 95% bandwidth reduction, 
                   87% cost savings, and enhanced privacy compliance at enterprise scale.
@@ -54,7 +50,6 @@ const NewestContent2025Banner: React.FC = () => {
                 <div className="grid grid-cols-3 gap-4 mb-6">
                   <div className="text-center">
 =======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-e42d
 =======
                     <div className="text-2xl font-bold text-blue-400">&lt;10ms</div>
                     <div className="text-gray-400 text-sm">Latency</div>
@@ -88,13 +83,11 @@ const NewestContent2025Banner: React.FC = () => {
                       87%
                     </div>
                     <div className='text-gray-400 text-sm'>Cost ↓</div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3927
                   </div>
                 </div>
                 {/* Meta Info */}
                 <div className='flex items-center justify-between text-sm text-gray-400 mb-6'>
 =======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3927
                   <span>⏱️ 35 min read</span>
                   <span>📅 Sep 30, 2025</span>
                 </div>
@@ -155,7 +148,6 @@ const NewestContent2025Banner: React.FC = () => {
                 <div className="text-center">
                   <div className="text-2xl font-bold text-yellow-400">87%</div>
                   <div className="text-sm text-gray-300">Cost ↓</div>
->>>>>>> origin/fix-merge-conflicts-final
                 </div>
                 <div className='flex items-center justify-center gap-2 text-cyan-400 font-semibold group-hover:text-white transition-colors'>
                   <span>Read Full Article</span>
@@ -164,7 +156,6 @@ const NewestContent2025Banner: React.FC = () => {
                   </span>
                 </div>
                 </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3927
               </div>
 
               {/* Meta Info */}
@@ -207,7 +198,6 @@ const NewestContent2025Banner: React.FC = () => {
                   Neural Networks
                 </span>
               </div>
->>>>>>> origin/fix-merge-conflicts-final
 
               <h3 className="text-xl font-bold text-white mb-4 group-hover:text-purple-400 transition-colors">
                 Quantum-Enhanced Neural Networks 2025
@@ -218,7 +208,6 @@ const NewestContent2025Banner: React.FC = () => {
                 </div>
 
 =======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-e42d
 =======
                 <div className="flex items-center justify-center gap-2 text-purple-400 font-semibold group-hover:text-purple-300 transition-colors">
                   <span>Read Full Article</span>
@@ -228,7 +217,6 @@ const NewestContent2025Banner: React.FC = () => {
                   <span className='group-hover:translate-x-1 transition-transform'>
                     →
                   </span>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3927
 =======
               <p className="text-gray-300 mb-6 leading-relaxed">
                 Revolutionary quantum-classical hybrid neural networks delivering 1000x faster training, 
@@ -247,7 +235,6 @@ const NewestContent2025Banner: React.FC = () => {
                 <div className="text-center">
                   <div className="text-2xl font-bold text-yellow-400">50%</div>
                   <div className="text-sm text-gray-300">Energy ↓</div>
->>>>>>> origin/fix-merge-conflicts-final
                 </div>
               </div>
 
@@ -289,7 +276,6 @@ const NewestContent2025Banner: React.FC = () => {
                   Quantum Security
                 </span>
               </div>
->>>>>>> origin/fix-merge-conflicts-final
 
               <h3 className="text-xl font-bold text-white mb-4 group-hover:text-emerald-400 transition-colors">
                 Quantum-Secure AI Infrastructure 2025
@@ -300,7 +286,6 @@ const NewestContent2025Banner: React.FC = () => {
                 </div>
 
 =======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-e42d
 =======
                 <div className="flex items-center justify-center gap-2 text-red-400 font-semibold group-hover:text-red-300 transition-colors">
                   <span>Read Full Article</span>
@@ -310,7 +295,6 @@ const NewestContent2025Banner: React.FC = () => {
                   <span className='group-hover:translate-x-1 transition-transform'>
                     →
                   </span>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3927
 =======
               <p className="text-gray-300 mb-6 leading-relaxed">
                 Next-generation quantum-resistant security protocols protecting AI systems against 
@@ -329,7 +313,6 @@ const NewestContent2025Banner: React.FC = () => {
                 <div className="text-center">
                   <div className="text-2xl font-bold text-yellow-400">Zero</div>
                   <div className="text-sm text-gray-300">Trust</div>
->>>>>>> origin/fix-merge-conflicts-final
                 </div>
               </div>
 
@@ -337,7 +320,6 @@ const NewestContent2025Banner: React.FC = () => {
               className="flex items-center gap-3 border-2 border-white/30 hover:border-white/60 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1"
             >
               <span className="text-2xl">📧</span>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3927
               <span>Get Expert Consultation</span>
             </a>
 =======
@@ -357,7 +339,6 @@ const NewestContent2025Banner: React.FC = () => {
             >
               View Our Services
             </Link>
->>>>>>> origin/main
           </div>
 
           {[
@@ -375,7 +356,6 @@ const NewestContent2025Banner: React.FC = () => {
                 {stat.value}
               </div>
               <div className='text-gray-300'>{stat.label}</div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3927
 =======
               <div className="flex items-center justify-between text-sm text-gray-400 mb-6">
                 <span>⏱️ 42 min read</span>
@@ -416,7 +396,6 @@ const NewestContent2025Banner: React.FC = () => {
               >
                 Schedule Consultation
               </Link>
->>>>>>> origin/fix-merge-conflicts-final
 =======
           {/* Featured Content Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16">
@@ -448,7 +427,6 @@ const NewestContent2025Banner: React.FC = () => {
               </div>
               <h3 className="text-xl font-semibold text-white mb-2">Autonomous Systems</h3>
               <p className="text-gray-300 text-sm">Self-managing systems that optimize operations automatically.</p>
->>>>>>> origin/main
             </div>
           </div>
         </div>

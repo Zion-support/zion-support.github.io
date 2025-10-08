@@ -37,7 +37,6 @@ import { logger } from './utils/logger';
 
 // Styles
 import './globals.css';
->>>>>>> origin/main
 
 const App: React.FC = () => {
   useEffect(() => {
@@ -65,7 +64,6 @@ const App: React.FC = () => {
     
     logger.lifecycle('performance monitoring initialized', 'App');
     logger.info('🚀 Zion Tech Group App initialized with comprehensive monitoring', 'App');
->>>>>>> origin/main
   }, []);
 
   return (
@@ -140,7 +138,6 @@ const App: React.FC = () => {
           </SEOEnhancer>
         </AccessibilityEnhancer>
       </AdvancedErrorBoundary>
->>>>>>> origin/main
     </HelmetProvider>
   );
 };

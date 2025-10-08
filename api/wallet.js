@@ -1,67 +1,43 @@
 =======
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8
 =======
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-8344
 =======
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3fed
 =======
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-1f83
 =======
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-9d58
 =======
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
 =======
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a0d
 =======
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-d12c
 =======
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-efe9
 =======
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-9008
 =======
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-6abd
 =======
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-ee0f
 async function handler(req, res) {
   if (req.method !== 'GET') {
     res.statusCode = 405;
     res.setHeader('Allow', 'GET');
 =======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8
 =======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-8344
 =======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3fed
 =======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-1f83
 =======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-9d58
 =======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
 =======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a0d
 =======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-d12c
 =======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-efe9
 =======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-9008
 =======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-6abd
 =======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-ee0f
     res.end('Method Not Allowed');
     return;
   }
@@ -70,57 +46,46 @@ async function handler(req, res) {
     // Wallet functionality would go here
 =======
     // Wallet functionality implementation would go here
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8
 =======
     // Wallet functionality would go here
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-8344
     res.statusCode = 200;
     res.json({ message: 'Wallet endpoint' });
 =======
     // Wallet functionality implementation
     res.statusCode = 200;
     res.json({ message: 'Wallet endpoint' });
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3fed
 =======
     // Wallet functionality implementation
     res.statusCode = 200;
     res.json({ message: 'Wallet endpoint' });
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-1f83
 =======
     // Wallet functionality implementation would go here
     res.statusCode = 200;
     res.json({ message: 'Wallet endpoint' });
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-9d58
 =======
     // Wallet functionality would go here
     res.statusCode = 200;
     res.json({ message: 'Wallet endpoint' });
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
 =======
     // Wallet functionality implementation
     res.statusCode = 200;
     res.json({ message: 'Wallet endpoint' });
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a0d
 =======
     // Wallet functionality would go here
     res.statusCode = 200;
     res.json({ message: 'Wallet endpoint' });
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-d12c
 =======
     // Wallet functionality implementation
     res.statusCode = 200;
     res.json({ message: 'Wallet endpoint' });
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-efe9
 =======
     // Wallet functionality would go here
     res.statusCode = 200;
     res.json({ message: 'Wallet endpoint' });
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-9008
 =======
     // Wallet functionality implementation
     res.statusCode = 200;
     res.json({ message: 'Wallet endpoint' });
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-ee0f
   } catch (err) {
     console.error('Wallet API error:', err);
     res.statusCode = 500;
@@ -129,11 +94,8 @@ async function handler(req, res) {
 }
 
 =======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-895b
 =======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b781
 =======
->>>>>>> origin/main
 const { withSentry } = require('./withSentry.cjs');
 
 async function handler(req, res) {
@@ -141,11 +103,8 @@ async function handler(req, res) {
     res.statusCode = 405;
     res.setHeader('Allow', 'POST');
 =======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-895b
 =======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b781
 =======
->>>>>>> origin/main
     res.end('Method Not Allowed');
     return;
   }
@@ -217,52 +176,34 @@ module.exports = withSentry(handler);
 }
 
 =======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e3b
 =======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-895b
 =======
 module.exports = withErrorLogging(handler);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-4854
 =======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b781
 =======
 module.exports = withErrorLogging(handler);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0a8c
 =======
 module.exports = withErrorLogging(handler);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8
 =======
 module.exports = withErrorLogging(handler);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-8344
 =======
 module.exports = withErrorLogging(handler);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3fed
 =======
 module.exports = withErrorLogging(handler);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-1f83
 =======
 module.exports = withErrorLogging(handler);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-9d58
 =======
 module.exports = withErrorLogging(handler);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
 =======
 module.exports = withErrorLogging(handler);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a0d
 =======
 module.exports = withErrorLogging(handler);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-d12c
 =======
 module.exports = withErrorLogging(handler);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-efe9
 =======
 module.exports = withErrorLogging(handler);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-9008
 =======
 module.exports = withErrorLogging(handler);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-6abd
 =======
 module.exports = withErrorLogging(handler);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-ee0f
 =======
->>>>>>> origin/main
