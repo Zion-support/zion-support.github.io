@@ -483,7 +483,127 @@ const MicroSAASPage: React.FC = () => {
       benefits: ['Improve code maintainability', 'Reduce technical debt', 'Enhance team productivity'],
       marketPrice: '$150-300/month',
       category: 'Developer Tools',
-      technologies: ['SonarQube', 'CodeClimate', 'GitHub Actions', 'Custom AI Models', 'React']
+      technologies: ['SonarQube', 'CodeClimate', 'GitHub Actions', 'Custom AI Models', 'React'],
+      popular: false,
+      savings: '$732/year'
+    },
+    // New Innovative Micro SAAS Services
+    {
+      title: 'AI-Powered Meeting Assistant',
+      description: 'Intelligent meeting transcription, action item extraction, and follow-up automation.',
+      icon: '🎤',
+      price: '$79/month',
+      features: ['Real-time transcription', 'Action item extraction', 'Meeting summaries', 'Calendar integration', 'Team collaboration'],
+      benefits: ['Save 5+ hours/week', 'Never miss action items', 'Improve meeting productivity'],
+      marketPrice: '$120-250/month',
+      category: 'Productivity',
+      technologies: ['OpenAI Whisper', 'NLP', 'Calendar APIs', 'React', 'Node.js'],
+      popular: true,
+      savings: '$612/year'
+    },
+    {
+      title: 'Smart Expense Tracker AI',
+      description: 'Automated expense categorization, receipt scanning, and financial reporting.',
+      icon: '💳',
+      price: '$49/month',
+      features: ['Receipt scanning', 'Auto-categorization', 'Expense reports', 'Tax preparation', 'Multi-currency support'],
+      benefits: ['Save 8+ hours/month', 'Reduce errors by 90%', 'Simplify tax filing'],
+      marketPrice: '$80-150/month',
+      category: 'Finance',
+      technologies: ['OCR', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
+      popular: false,
+      savings: '$372/year'
+    },
+    {
+      title: 'AI Social Media Scheduler',
+      description: 'Intelligent content scheduling with optimal timing and engagement prediction.',
+      icon: '📅',
+      price: '$99/month',
+      features: ['Optimal timing prediction', 'Content suggestions', 'Multi-platform posting', 'Analytics dashboard', 'Team collaboration'],
+      benefits: ['Increase engagement by 40%', 'Save 10+ hours/week', 'Grow followers faster'],
+      marketPrice: '$150-300/month',
+      category: 'Social Media',
+      technologies: ['Social Media APIs', 'Machine Learning', 'React', 'Node.js', 'MongoDB'],
+      popular: true,
+      savings: '$612/year'
+    },
+    {
+      title: 'AI Customer Feedback Analyzer',
+      description: 'Automated sentiment analysis and insights from customer feedback across all channels.',
+      icon: '😊',
+      price: '$129/month',
+      features: ['Multi-channel monitoring', 'Sentiment analysis', 'Trend identification', 'Custom dashboards', 'Alert system'],
+      benefits: ['Improve customer satisfaction', 'Catch issues early', 'Make data-driven decisions'],
+      marketPrice: '$200-400/month',
+      category: 'Customer Intelligence',
+      technologies: ['NLP', 'Machine Learning', 'APIs', 'React', 'PostgreSQL'],
+      popular: false,
+      savings: '$852/year'
+    },
+    {
+      title: 'AI Website Performance Optimizer',
+      description: 'Automated website optimization with performance monitoring and improvement suggestions.',
+      icon: '⚡',
+      price: '$99/month',
+      features: ['Performance monitoring', 'Automated optimization', 'Core Web Vitals tracking', 'SEO analysis', 'Speed recommendations'],
+      benefits: ['Improve page speed by 50%', 'Boost SEO rankings', 'Enhance user experience'],
+      marketPrice: '$150-300/month',
+      category: 'Web Optimization',
+      technologies: ['Lighthouse', 'PageSpeed Insights', 'React', 'Node.js', 'Custom AI Models'],
+      popular: true,
+      savings: '$612/year'
+    },
+    {
+      title: 'AI Automated Testing Platform',
+      description: 'Intelligent test automation with self-healing tests and smart test generation.',
+      icon: '🧪',
+      price: '$179/month',
+      features: ['Self-healing tests', 'Smart test generation', 'Cross-browser testing', 'Mobile testing', 'Performance testing'],
+      benefits: ['Reduce testing time by 70%', 'Improve test coverage', 'Catch bugs earlier'],
+      marketPrice: '$250-500/month',
+      category: 'Quality Assurance',
+      technologies: ['Selenium', 'Playwright', 'Jest', 'Cypress', 'Custom AI Models'],
+      popular: false,
+      savings: '$852/year'
+    },
+    {
+      title: 'AI Business Intelligence Suite',
+      description: 'Advanced analytics with predictive insights and automated report generation.',
+      icon: '📈',
+      price: '$299/month',
+      features: ['Predictive analytics', 'Automated insights', 'Custom dashboards', 'Data visualization', 'Report automation'],
+      benefits: ['Make data-driven decisions', 'Discover hidden patterns', 'Automate reporting'],
+      marketPrice: '$400-800/month',
+      category: 'Business Intelligence',
+      technologies: ['Tableau', 'Power BI', 'Python', 'Machine Learning', 'PostgreSQL'],
+      popular: true,
+      savings: '$1,212/year'
+    },
+    {
+      title: 'AI Workflow Automation Engine',
+      description: 'Intelligent process automation with decision-making capabilities and exception handling.',
+      icon: '⚙️',
+      price: '$199/month',
+      features: ['Process automation', 'Decision automation', 'Exception handling', 'Integration management', 'Workflow optimization'],
+      benefits: ['Reduce process time by 70%', 'Eliminate human errors', 'Improve efficiency'],
+      marketPrice: '$300-600/month',
+      category: 'Process Automation',
+      technologies: ['Zapier', 'Microsoft Power Automate', 'Custom AI Models', 'Node.js', 'PostgreSQL'],
+      popular: false,
+      savings: '$1,212/year'
+    },
+    {
+      title: 'AI Content Moderation System',
+      description: 'Automated content moderation with AI-powered detection of inappropriate content.',
+      icon: '🛡️',
+      price: '$149/month',
+      features: ['Content scanning', 'Automated moderation', 'Custom rules', 'Multi-language support', 'Real-time alerts'],
+      benefits: ['Reduce moderation costs by 80%', 'Improve response time', 'Scale content review'],
+      marketPrice: '$250-500/month',
+      category: 'Content Management',
+      technologies: ['Computer Vision', 'NLP', 'Machine Learning', 'React', 'Node.js'],
+      popular: false,
+      savings: '$1,212/year'
     },
     {
       title: 'AI Database Optimization Tool',
@@ -1641,23 +1761,37 @@ const MicroSAASPage: React.FC = () => {
         <meta name="keywords" content="micro saas, business automation, AI tools, software as a service, business intelligence" />
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
+        {/* Futuristic Background Effects */}
+        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-pink-500/20 animate-pulse"></div>
+        <div className="absolute top-0 left-0 w-full h-full">
+          <div className="absolute top-20 left-10 w-72 h-72 bg-cyan-500/10 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute top-40 right-20 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+          <div className="absolute bottom-20 left-1/3 w-80 h-80 bg-pink-500/10 rounded-full blur-3xl animate-pulse delay-2000"></div>
+        </div>
+        
         {/* Hero Section */}
-        <section className="relative overflow-hidden bg-gradient-to-r from-indigo-600 to-purple-700 text-white py-20">
-          <div className="absolute inset-0 bg-black opacity-20"></div>
+        <section className="relative overflow-hidden bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white py-20 backdrop-blur-sm">
+          <div className="absolute inset-0 bg-black opacity-30"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-500/20"></div>
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center">
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+            <div className="text-center relative z-10">
+              <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full mb-6 animate-pulse">
+                <Sparkles className="w-10 h-10 text-white" />
+              </div>
+              <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent animate-pulse">
                 Micro SAAS Solutions
               </h1>
-              <p className="text-xl md:text-2xl mb-8 text-indigo-100 max-w-3xl mx-auto">
+              <p className="text-xl md:text-2xl mb-8 text-cyan-100 max-w-3xl mx-auto leading-relaxed">
                 Powerful, affordable AI-driven tools that transform your business operations
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-indigo-50 transition-colors">
+                <button className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 flex items-center">
+                  <Rocket className="w-5 h-5 mr-2" />
                   Start Free Trial
                 </button>
-                <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors">
+                <button className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 transform hover:scale-105 backdrop-blur-sm flex items-center">
+                  <Target className="w-5 h-5 mr-2" />
                   View Pricing
                 </button>
               </div>
@@ -1666,13 +1800,13 @@ const MicroSAASPage: React.FC = () => {
         </section>
 
         {/* Key Benefits */}
-        <section className="py-16 bg-white">
+        <section className="py-16 bg-slate-800/50 backdrop-blur-sm">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-cyan-100 mb-4">
                 Why Choose Our Micro SAAS Solutions?
               </h2>
-              <p className="text-xl text-gray-600">
+              <p className="text-xl text-gray-300">
                 Affordable, powerful, and easy-to-use tools that deliver real business value
               </p>
             </div>
@@ -1725,27 +1859,44 @@ const MicroSAASPage: React.FC = () => {
                 {microSAASServices
                   .filter(service => service.category === category)
                   .map((service, index) => (
-                    <div key={index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
-                      <div className="text-4xl mb-4">{service.icon}</div>
-                      <h3 className="text-xl font-semibold text-gray-900 mb-3">{service.title}</h3>
-                      <p className="text-gray-600 mb-4">{service.description}</p>
-                      
-                      <div className="mb-4">
-                        <div className="flex items-center justify-between mb-2">
-                          <span className="text-2xl font-bold text-blue-600">{service.price}</span>
-                          <span className="text-sm text-gray-500">Market: {service.marketPrice}</span>
+                    <div 
+                      key={index} 
+                      className={`relative bg-gradient-to-br from-slate-800/90 to-slate-900/90 backdrop-blur-sm rounded-xl shadow-2xl p-6 hover:shadow-cyan-500/25 transition-all duration-300 transform hover:scale-105 border border-cyan-500/20 hover:border-cyan-400/40 ${
+                        hoveredCard === index ? 'ring-2 ring-cyan-400/50' : ''
+                      }`}
+                      onMouseEnter={() => setHoveredCard(index)}
+                      onMouseLeave={() => setHoveredCard(null)}
+                    >
+                      {service.popular && (
+                        <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                          <span className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-4 py-1 rounded-full text-sm font-semibold flex items-center">
+                            <Star className="w-4 h-4 mr-1" />
+                            Most Popular
+                          </span>
                         </div>
-                        <div className="text-sm text-green-600 font-semibold">
+                      )}
+                      <div className="text-4xl mb-4 text-center">{service.icon}</div>
+                      <h3 className="text-xl font-semibold text-cyan-100 mb-3 text-center">{service.title}</h3>
+                      <p className="text-gray-300 mb-4 text-center leading-relaxed">{service.description}</p>
+                      
+                      <div className="mb-4 text-center">
+                        <div className="flex items-center justify-center mb-2">
+                          <span className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">{service.price}</span>
+                        </div>
+                        <div className="text-sm text-cyan-400 font-semibold mb-1">
+                          Market: {service.marketPrice}
+                        </div>
+                        <div className="text-sm text-green-400 font-semibold">
                           Save up to 50% vs market rates
                         </div>
                       </div>
 
                       <div className="mb-4">
-                        <h4 className="font-semibold text-gray-900 mb-2">Key Features:</h4>
-                        <ul className="space-y-1">
-                          {service.features.map((feature, featureIndex) => (
-                            <li key={featureIndex} className="flex items-center text-sm text-gray-600">
-                              <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                        <h4 className="font-semibold text-cyan-200 mb-3 text-center">Key Features:</h4>
+                        <ul className="space-y-2">
+                          {service.features.slice(0, 3).map((feature, featureIndex) => (
+                            <li key={featureIndex} className="flex items-center text-sm text-gray-300">
+                              <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
                               {feature}
                             </li>
                           ))}
@@ -1753,18 +1904,19 @@ const MicroSAASPage: React.FC = () => {
                       </div>
 
                       <div className="mb-6">
-                        <h4 className="font-semibold text-gray-900 mb-2">Business Benefits:</h4>
-                        <ul className="space-y-1">
-                          {service.benefits.map((benefit, benefitIndex) => (
-                            <li key={benefitIndex} className="flex items-center text-sm text-gray-600">
-                              <Star className="w-4 h-4 text-yellow-500 mr-2 flex-shrink-0" />
+                        <h4 className="font-semibold text-cyan-200 mb-3 text-center">Business Benefits:</h4>
+                        <ul className="space-y-2">
+                          {service.benefits.slice(0, 2).map((benefit, benefitIndex) => (
+                            <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
+                              <Star className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
                               {benefit}
                             </li>
                           ))}
                         </ul>
                       </div>
 
-                      <button className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+                      <button className="w-full bg-gradient-to-r from-cyan-500 to-purple-500 text-white py-3 px-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 flex items-center justify-center">
+                        <ArrowRight className="w-4 h-4 mr-2" />
                         Start Free Trial
                       </button>
                     </div>
