@@ -339,7 +339,6 @@ const apiClient = new ApiClient({
   retryDelay: 1000,
   cache: {
     ttl: 5 * 60 * 1000, // 5 minutes
-    strategy: 'memory',
   },
 });
 
