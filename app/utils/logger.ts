@@ -51,228 +51,182 @@ class Logger {
   getLogLevel(): LogLevel {
     return this.logLevel;
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-f285
-
-  error(message: string, error?: Error | any): void {
-    if (typeof console !== 'undefined') {
-      console.error(`[ERROR] ${message}`, error || '');
-<<<<<<< HEAD
-=======
-=======
 
   /**
-   * Log a debug message
+   * Log an error message
    */
-  debug(message: string, context?: LogContext, metadata?: Record<string, unknown>): void {
-    this.log(LogLevel.DEBUG, message, context, metadata);
-  }
+  error(message: string, error?: Error | any, context?: LogContext): void {
+    if (this.logLevel <= LogLevel.ERROR) {
+      const logData: LogMetadata = {
+        timestamp: new Date().toISOString(),
+        level: LogLevel.ERROR,
+        message,
+        context,
+        error: error instanceof Error ? error : undefined,
+      };
 
-  /**
-   * Log an info message
-   */
-  info(message: string, context?: LogContext, metadata?: Record<string, unknown>): void {
-    this.log(LogLevel.INFO, message, context, metadata);
+      if (this.isDevelopment) {
+        console.error(`[ERROR] ${message}`, error, context);
+      } else {
+        // In production, you might want to send to a logging service
+        console.error(JSON.stringify(logData));
+      }
+    }
   }
 
   /**
    * Log a warning message
    */
-  warn(message: string, context?: LogContext, metadata?: Record<string, unknown>): void {
-    this.log(LogLevel.WARN, message, context, metadata);
+  warn(message: string, context?: LogContext): void {
+    if (this.logLevel <= LogLevel.WARN) {
+      const logData: LogMetadata = {
+        timestamp: new Date().toISOString(),
+        level: LogLevel.WARN,
+        message,
+        context,
+      };
+
+      if (this.isDevelopment) {
+        console.warn(`[WARN] ${message}`, context);
+      } else {
+        console.warn(JSON.stringify(logData));
+      }
+    }
   }
 
->>>>>>> cursor/fix-errors-and-merge-to-main-ea96
   /**
-   * Log an error message
+   * Log an info message
    */
-  error(
-    message: string,
-    errorOrContextOrMetadata?: Error | string | Record<string, unknown>,
-    contextOrMetadata?: string | Record<string, unknown>,
-    metadata?: Record<string, unknown>
-  ): void {
-    let error: Error | undefined;
-    let context: LogContext | undefined;
-    let meta: Record<string, unknown> | undefined;
+  info(message: string, context?: LogContext): void {
+    if (this.logLevel <= LogLevel.INFO) {
+      const logData: LogMetadata = {
+        timestamp: new Date().toISOString(),
+        level: LogLevel.INFO,
+        message,
+        context,
+      };
 
-    // Handle different parameter combinations
-    if (errorOrContextOrMetadata instanceof Error) {
-      error = errorOrContextOrMetadata;
-      context = contextOrMetadata as LogContext;
-      meta = metadata;
-    } else if (typeof errorOrContextOrMetadata === 'string') {
-      context = { component: errorOrContextOrMetadata };
-      meta = contextOrMetadata as Record<string, unknown>;
-    } else if (typeof errorOrContextOrMetadata === 'object') {
-      context = errorOrContextOrMetadata as LogContext;
-      meta = contextOrMetadata as Record<string, unknown>;
+      if (this.isDevelopment) {
+        console.info(`[INFO] ${message}`, context);
+      } else {
+        console.info(JSON.stringify(logData));
+      }
     }
+  }
 
-    this.log(LogLevel.ERROR, message, context, { ...meta, error });
+  /**
+   * Log a debug message
+   */
+  debug(message: string, context?: LogContext): void {
+    if (this.logLevel <= LogLevel.DEBUG) {
+      const logData: LogMetadata = {
+        timestamp: new Date().toISOString(),
+        level: LogLevel.DEBUG,
+        message,
+        context,
+      };
+
+      if (this.isDevelopment) {
+        console.debug(`[DEBUG] ${message}`, context);
+      }
+    }
   }
 
   /**
    * Log a fatal error message
    */
-  fatal(message: string, context?: LogContext, metadata?: Record<string, unknown>): void {
-    this.log(LogLevel.FATAL, message, context, metadata);
+  fatal(message: string, error?: Error, context?: LogContext): void {
+    if (this.logLevel <= LogLevel.FATAL) {
+      const logData: LogMetadata = {
+        timestamp: new Date().toISOString(),
+        level: LogLevel.FATAL,
+        message,
+        context,
+        error,
+      };
+
+      console.error(`[FATAL] ${message}`, error, context);
+      
+      // In production, you might want to send to a critical error service
+      if (!this.isDevelopment) {
+        console.error(JSON.stringify(logData));
+      }
+    }
   }
 
   /**
-   * Core logging method
+   * Log performance metrics
    */
-  private log(
-    level: LogLevel,
-    message: string,
-    context?: LogContext,
-    metadata?: Record<string, unknown>
-  ): void {
-    // Check if we should log this level
-    if (level < this.logLevel) {
-      return;
-    }
-
-    const logEntry: LogMetadata = {
+  performance(operation: string, duration: number, context?: LogContext): void {
+    const logData: LogMetadata = {
       timestamp: new Date().toISOString(),
-      level,
-      message,
-      context,
-      ...metadata,
+      level: LogLevel.INFO,
+      message: `Performance: ${operation} took ${duration}ms`,
+      context: {
+        ...context,
+        operation,
+        duration,
+        type: 'performance',
+      },
     };
 
-    // Format the log entry
-    const formattedMessage = this.formatLogEntry(logEntry);
-
-    // Output to console in development
-    if (this.isDevelopment && typeof console !== 'undefined') {
-      this.outputToConsole(level, formattedMessage, logEntry);
-    }
-
-    // In production, you might want to send to a logging service
-    if (!this.isDevelopment) {
-      this.sendToLoggingService(logEntry);
+    if (this.isDevelopment) {
+      console.info(`[PERF] ${operation} took ${duration}ms`, context);
+    } else {
+      console.info(JSON.stringify(logData));
     }
   }
 
   /**
-   * Format a log entry for output
+   * Log user actions
    */
-  private formatLogEntry(entry: LogMetadata): string {
-    const levelStr = this.getLevelString(entry.level || LogLevel.INFO);
-    const timestamp = entry.timestamp || new Date().toISOString();
-    const contextStr = entry.context ? ` [${this.formatContext(entry.context)}]` : '';
-    const metadataStr = entry.metadata ? ` ${JSON.stringify(entry.metadata)}` : '';
+  userAction(action: string, context?: LogContext): void {
+    const logData: LogMetadata = {
+      timestamp: new Date().toISOString(),
+      level: LogLevel.INFO,
+      message: `User Action: ${action}`,
+      context: {
+        ...context,
+        action,
+        type: 'user_action',
+      },
+    };
 
-    return `[${timestamp}] ${levelStr}${contextStr}: ${entry.message}${metadataStr}`;
-  }
-
-  /**
-   * Format context object for display
-   */
-  private formatContext(context: LogContext): string {
-    const parts: string[] = [];
-    
-    if (context.component) parts.push(`component:${context.component}`);
-    if (context.action) parts.push(`action:${context.action}`);
-    if (context.userId) parts.push(`user:${context.userId}`);
-    if (context.sessionId) parts.push(`session:${context.sessionId}`);
-    if (context.requestId) parts.push(`request:${context.requestId}`);
-
-    return parts.join(', ');
-  }
-
-  /**
-   * Output to console with appropriate styling
-   */
-  private outputToConsole(level: LogLevel, message: string, entry: LogMetadata): void {
-    if (typeof console === 'undefined') return;
-
-    const styles = this.getConsoleStyles(level);
-    
-    switch (level) {
-      case LogLevel.DEBUG:
-        console.debug(`%c${message}`, styles, entry);
-        break;
-      case LogLevel.INFO:
-        console.info(`%c${message}`, styles, entry);
-        break;
-      case LogLevel.WARN:
-        console.warn(`%c${message}`, styles, entry);
-        break;
-      case LogLevel.ERROR:
-      case LogLevel.FATAL:
-        console.error(`%c${message}`, styles, entry);
-        break;
+    if (this.isDevelopment) {
+      console.info(`[USER] ${action}`, context);
+    } else {
+      console.info(JSON.stringify(logData));
     }
   }
 
   /**
-   * Get console styles for different log levels
+   * Log API calls
    */
-  private getConsoleStyles(level: LogLevel): string {
-    switch (level) {
-      case LogLevel.DEBUG:
-        return 'color: #6B7280; font-weight: normal;';
-      case LogLevel.INFO:
-        return 'color: #3B82F6; font-weight: normal;';
-      case LogLevel.WARN:
-        return 'color: #F59E0B; font-weight: bold;';
-      case LogLevel.ERROR:
-        return 'color: #EF4444; font-weight: bold;';
-      case LogLevel.FATAL:
-        return 'color: #DC2626; font-weight: bold; background: #FEF2F2;';
-      default:
-<<<<<<< HEAD
-        return 'UNKNOWN'
->>>>>>> cursor/fix-errors-and-merge-to-main-1f43
-=======
-        return 'color: #6B7280; font-weight: normal;';
-    }
-  }
+  apiCall(method: string, url: string, status: number, duration?: number, context?: LogContext): void {
+    const logData: LogMetadata = {
+      timestamp: new Date().toISOString(),
+      level: LogLevel.INFO,
+      message: `API Call: ${method} ${url} - ${status}`,
+      context: {
+        ...context,
+        method,
+        url,
+        status,
+        duration,
+        type: 'api_call',
+      },
+    };
 
-  /**
-   * Send log entry to external logging service
-   */
-  private sendToLoggingService(entry: LogMetadata): void {
-    // In a real application, you would send this to your logging service
-    // For example: Sentry, LogRocket, DataDog, etc.
-    
-    // Example implementation:
-    // fetch('/api/logs', {
-    //   method: 'POST',
-    //   headers: { 'Content-Type': 'application/json' },
-    //   body: JSON.stringify(entry)
-    // }).catch(err => {
-    //   console.error('Failed to send log to service:', err);
-    // });
-  }
-
-  /**
-   * Get string representation of log level
-   */
-  private getLevelString(level: LogLevel): string {
-    switch (level) {
-      case LogLevel.DEBUG:
-        return 'DEBUG';
-      case LogLevel.INFO:
-        return 'INFO';
-      case LogLevel.WARN:
-        return 'WARN';
-      case LogLevel.ERROR:
-        return 'ERROR';
-      case LogLevel.FATAL:
-        return 'FATAL';
-      default:
-        return 'UNKNOWN';
->>>>>>> cursor/fix-errors-and-merge-to-main-ea96
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-f285
+    if (this.isDevelopment) {
+      console.info(`[API] ${method} ${url} - ${status}${duration ? ` (${duration}ms)` : ''}`, context);
+    } else {
+      console.info(JSON.stringify(logData));
     }
   }
 }
 
+// Create and export a singleton instance
 export const logger = new Logger();
+
+// Export the class for testing
+export { Logger };
