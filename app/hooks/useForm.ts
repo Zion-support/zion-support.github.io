@@ -10,7 +10,8 @@ import {
   validateField,
   validateForm,
   isFormValid,
-  getFormErrors
+  getFormErrors,
+  ValidationResult as _ValidationResult
 } from '../utils/formValidation';
 
 export interface UseFormConfig<T extends Record<string, unknown>> {

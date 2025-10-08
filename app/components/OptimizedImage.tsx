@@ -8,7 +8,7 @@ interface OptimizedImageProps {
   height?: number;
   className?: string;
   priority?: boolean;
-  placeholder?: string;
+  _placeholder?: string;
   onLoad?: () => void;
   onError?: () => void;
 }

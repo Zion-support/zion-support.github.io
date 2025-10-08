@@ -1,14 +1,14 @@
-import { useEffect, useCallback } from 'react'
+import { useEffect, useCallback } from 'react';
 
 export const usePerformanceMonitoring = () => {
-  const reportWebVitals = useCallback((metric: any) => {
-    const body = JSON.stringify(metric)
-    const url = '/api/analytics'
+  const reportWebVitals = useCallback((metric: Record<string, unknown>) => {
+    const body = JSON.stringify(metric);
+    const url = '/api/analytics';
 
     if (navigator.sendBeacon) {
-      navigator.sendBeacon(url, body)
+      navigator.sendBeacon(url, body);
     } else {
-      fetch(url, { body, method: 'POST', keepalive: true }).catch(console.error)
+      fetch(url, { body, method: 'POST', keepalive: true }).catch(console.error);
     }
   }, []);
 
@@ -32,4 +32,4 @@ export const usePerformanceMonitoring = () => {
   }, [reportWebVitals]);
 
   return { reportWebVitals };
-}
+};
