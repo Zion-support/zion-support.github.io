@@ -63,11 +63,7 @@ class MonitoringService {
         // First Input Delay
         const fidObserver = new PerformanceObserver(list => {
           const entries = list.getEntries();
-<<<<<<< HEAD
           entries.forEach((entry: PerformanceEventTiming) => {
-=======
-          entries.forEach((entry: PerformanceEntry) => {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-283b
             this.metrics.fid = entry.processingStart - entry.startTime;
             this.reportMetric('fid', this.metrics.fid);
           });
@@ -78,11 +74,7 @@ class MonitoringService {
         let clsValue = 0;
         const clsObserver = new PerformanceObserver(list => {
           const entries = list.getEntries();
-<<<<<<< HEAD
           entries.forEach((entry: LayoutShift) => {
-=======
-          entries.forEach((entry: PerformanceEntry) => {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-283b
             if (!entry.hadRecentInput) {
               clsValue += entry.value;
               this.metrics.cls = clsValue;
@@ -101,7 +93,7 @@ class MonitoringService {
           });
         });
         fcpObserver.observe({ entryTypes: ['paint'] });
-      } catch {
+      } catch (error) {
         console.error('Error setting up performance observers:', error);
       }
     }
@@ -118,15 +110,7 @@ class MonitoringService {
           }
         });
         longTaskObserver.observe({ entryTypes: ['longtask'] });
-<<<<<<< HEAD
-<<<<<<< HEAD
       } catch {
-=======
-      } catch (_error) {
->>>>>>> ed7467ed40e8856a41888367f5ba34d233491f61
-=======
-      } catch {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-283b
         // Long task API might not be available
       }
     }
@@ -136,11 +120,7 @@ class MonitoringService {
       try {
         const resourceObserver = new PerformanceObserver(list => {
           const entries = list.getEntries();
-<<<<<<< HEAD
           entries.forEach((entry: PerformanceResourceTiming) => {
-=======
-          entries.forEach((entry: PerformanceEntry) => {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-283b
             if (entry.duration > 1000) {
               console.warn('Slow resource detected:', {
                 name: entry.name,
@@ -151,13 +131,8 @@ class MonitoringService {
           });
         });
         resourceObserver.observe({ entryTypes: ['resource'] });
-<<<<<<< HEAD
-      } catch (_error) {
-        console.error('Error monitoring resources:', _error);
-=======
       } catch {
-        console.error('Error monitoring resources:', error);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-283b
+        console.error('Error monitoring resources');
       }
     }
   }

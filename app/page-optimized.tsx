@@ -9,37 +9,22 @@ import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 const EmptyComponent = () => null;
 
 // Lazy load heavy components - these may not exist, so make them optional
-const UnifiedBanner = lazy(
-  () =>
-    import('./components/NewestContent2025Banner').catch(() =>
-      import('./components/EmptyComponent').catch(() => ({ default: EmptyComponent }))
-    ),
-  {
-    loading: () => <div className="animate-pulse bg-gray-200 h-32 rounded-lg"></div>,
-    ssr: false,
-  }
+const UnifiedBanner = lazy(() =>
+  import('./components/NewestContent2025Banner').catch(() =>
+    import('./components/EmptyComponent').catch(() => ({ default: EmptyComponent }))
+  )
 );
 
-const ContentPromotion = lazy(
-  () =>
-    import('./components/UltimateBusinessIntelligence2025Banner').catch(() => {
-      return { default: EmptyComponent } as { default: React.ComponentType };
-    }),
-  {
-    loading: () => <div className="animate-pulse bg-gray-200 h-64 rounded-lg"></div>,
-    ssr: false,
-  }
+const ContentPromotion = lazy(() =>
+  import('./components/UltimateBusinessIntelligence2025Banner').catch(() => {
+    return { default: EmptyComponent } as { default: React.ComponentType };
+  })
 );
 
-const ContentShowcase = lazy(
-  () =>
-    import('./components/UltimateBusinessIntelligenceShowcase2025').catch(() => ({
-      default: EmptyComponent,
-    })),
-  {
-    loading: () => <div className="animate-pulse bg-gray-200 h-48 rounded-lg"></div>,
-    ssr: false,
-  }
+const ContentShowcase = lazy(() =>
+  import('./components/UltimateBusinessIntelligenceShowcase2025').catch(() => ({
+    default: EmptyComponent,
+  }))
 );
 
 export const metadata = {

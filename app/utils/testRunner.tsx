@@ -815,11 +815,7 @@ export class TestRunner {
     passed: boolean;
     results: Array<{ name: string; type: string; passed: boolean; error?: string }>;
   }> {
-<<<<<<< HEAD
     const results: Array<{ name: string; type: string; passed: boolean; error?: string }> = [];
-=======
-    const results: unknown[] = [];
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-283b
 
     for (const test of tests) {
       let result;
@@ -935,11 +931,7 @@ export const useTestRunner = () => {
 export const testUtils = {
   // Create mock data
   createMockData: (type: string, count: number = 10) => {
-<<<<<<< HEAD
     const mockData: Array<{ id: number; name: string; description: string; [key: string]: unknown }> = [];
-=======
-    const mockData: unknown[] = [];
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-283b
     for (let i = 0; i < count; i++) {
       mockData.push({
         id: i + 1,

@@ -38,7 +38,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
   enableTwitterCards = true,
   enableSchemaMarkup = true,
 }) => {
-  // const structuredDataRef = useRef<HTMLScriptElement | null>(null);
+  const structuredDataRef = useRef<HTMLScriptElement | null>(null);
   const generateStructuredData = useCallback(() => {
     if (!enableStructuredData || !seoData.structuredData) return null;
 
@@ -162,7 +162,6 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     }
   }, [seoData]);
 
-<<<<<<< HEAD
   const _addMetaTag = (name: string, content: string, attribute: string = 'name') => {
     const metaTag = document.createElement('meta');
     metaTag.setAttribute(attribute, name);
@@ -231,8 +230,6 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
       });
     }
   };
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-283b
 
   // Suppress unused variable warnings
   void _addMetaTag;

@@ -82,19 +82,21 @@ class PerformanceMonitor {
         });
 
         // Largest Contentful Paint
-        this.observeEntry('largest-contentful-paint', _entries => {
+        this.observeEntry('largest-contentful-paint', entries => {
+          const lastEntry = entries[entries.length - 1];
           if (lastEntry) {
             this.recordMetric(
               'LCP',
-              lastEntry.renderTime || lastEntry.loadTime || lastEntry.startTime
+              (lastEntry as any).renderTime || (lastEntry as any).loadTime || lastEntry.startTime
             );
           }
         });
 
         // First Input Delay
-        this.observeEntry('first-input', _entries => {
-          if (firstInput && firstInput.processingStart !== undefined) {
-            const fid = firstInput.processingStart - firstInput.startTime;
+        this.observeEntry('first-input', entries => {
+          const firstInput = entries[0];
+          if (firstInput && (firstInput as any).processingStart !== undefined) {
+            const fid = (firstInput as any).processingStart - firstInput.startTime;
             this.recordMetric('FID', fid);
           }
         });
@@ -102,11 +104,7 @@ class PerformanceMonitor {
         // Cumulative Layout Shift
         this.observeEntry('layout-shift', entries => {
           let clsValue = 0;
-<<<<<<< HEAD
           entries.forEach((entry: LayoutShift) => {
-=======
-          entries.forEach((entry: PerformanceEntry) => {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-283b
             if (!entry.hadRecentInput) {
               clsValue += entry.value;
             }

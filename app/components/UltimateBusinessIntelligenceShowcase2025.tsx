@@ -197,7 +197,7 @@ const UltimateBusinessIntelligenceShowcase2025: React.FC = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <Link
-                href="/contact"
+                to="/contact"
                 className="inline-flex items-center px-12 py-6 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-bold text-xl rounded-2xl hover:from-blue-700 hover:to-indigo-700 transition-all duration-300 transform hover:scale-105 shadow-2xl"
               >
                 Start Your Transformation
@@ -211,7 +211,7 @@ const UltimateBusinessIntelligenceShowcase2025: React.FC = () => {
                 </svg>
               </Link>
               <Link
-                href="/services"
+                to="/services"
                 className="inline-flex items-center px-12 py-6 border-2 border-blue-400 text-blue-300 font-bold text-xl rounded-2xl hover:bg-blue-400/10 transition-all duration-300"
               >
                 Learn More
