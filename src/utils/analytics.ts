@@ -134,7 +134,13 @@ class Analytics {
 
   /**
    * Get user properties
+   */
+  getUserProperties() {
     return { ...this.userProperties };
+  }
+
+  /**
+   * Update user properties
   }
 
   /**

@@ -1,4 +1,3 @@
-=======
 /**
  * Performance optimization utilities
  */
@@ -329,4 +328,3 @@ const performanceUtils = {
 };
 
 export default performanceUtils;
->>>>>>> origin/main
