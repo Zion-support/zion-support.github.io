@@ -30,10 +30,10 @@ export async function waitForCondition(
   timeout: number = 5000,
   interval: number = 100
 ): Promise<void> {
-//   const startTime = Date.now();
+  const startTime = Date.now();
 
   while (Date.now() - startTime < timeout) {
-//     const result = await condition();
+    const result = await condition();
     if (result) return;
     await new Promise((resolve) => setTimeout(resolve, interval));
   }
@@ -288,9 +288,9 @@ export function testComponentSnapshot(
 export async function measureRenderTime(
   component: ReactElement
 ): Promise<number> {
-//   const startTime = performance.now();
+  const startTime = performance.now();
   const { unmount } = renderWithProviders(component);
-//   const endTime = performance.now();
+  const endTime = performance.now();
   unmount();
   return endTime - startTime;
 }
@@ -309,8 +309,9 @@ export function detectMemoryLeaks(
     unmount();
   }
 
-//   const finalMemory = (performance as any).memory?.usedJSHeapSize || 0;
-//   const memoryIncrease = finalMemory - initialMemory;
+  const initialMemory = (performance as any).memory?.usedJSHeapSize || 0;
+  const finalMemory = (performance as any).memory?.usedJSHeapSize || 0;
+  const memoryIncrease = finalMemory - initialMemory;
 
   // If memory increased by more than 10MB, likely a leak
   return memoryIncrease > 10 * 1024 * 1024;
