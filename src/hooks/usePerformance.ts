@@ -1,14 +1,15 @@
 import { useEffect } from 'react';
+import { performanceOptimizer } from '../utils/performanceOptimizer';
 import { analytics } from '../utils/analytics';
 
-export const usePerformance = () => {
+/**
+ * Custom hook for performance monitoring
+ */
+const usePerformance = () => {
   useEffect(() => {
-    if (typeof window === 'undefined' || !('PerformanceObserver' in window)) {
-      return;
-    }
-
-    const observer = new PerformanceObserver(list => {
-      list.getEntries().forEach(entry => {
+    // Monitor long tasks
+    const observer = performanceOptimizer.monitorLongTasks(entries => {
+      entries.forEach(entry => {
         analytics.track(
           'long_task',
           'performance',
