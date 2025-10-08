@@ -150,7 +150,7 @@ export class AccessibilityChecker {
   private checkImages(element: Element): void {
     const images = element.querySelectorAll('img');
     
-    images.forEach((__img, __index) => {
+    images.forEach((img, index) => {
       const alt = img.getAttribute('alt');
       const role = img.getAttribute('role');
 
@@ -197,7 +197,7 @@ export class AccessibilityChecker {
 
     let previousLevel = 0;
 
-    headings.forEach((__heading, __index) => {
+    headings.forEach((heading, index) => {
       const level = parseInt(heading.tagName.charAt(1));
 
       // Check for skipped heading levels
@@ -254,7 +254,7 @@ export class AccessibilityChecker {
   private checkLinks(element: Element): void {
     const links = element.querySelectorAll('a');
 
-    links.forEach((__link, __index) => {
+    links.forEach((link, index) => {
       const text = link.textContent?.trim();
       const ariaLabel = link.getAttribute('aria-label');
       const ariaLabelledBy = link.getAttribute('aria-labelledby');
@@ -314,7 +314,7 @@ export class AccessibilityChecker {
   private checkButtons(element: Element): void {
     const buttons = element.querySelectorAll('button');
 
-    buttons.forEach((__button, __index) => {
+    buttons.forEach((button, index) => {
       const text = button.textContent?.trim();
       const ariaLabel = button.getAttribute('aria-label');
       const ariaLabelledBy = button.getAttribute('aria-labelledby');
@@ -344,7 +344,7 @@ export class AccessibilityChecker {
   private checkForms(element: Element): void {
     const inputs = element.querySelectorAll('input, select, textarea');
 
-    inputs.forEach((__input, __index) => {
+    inputs.forEach((input, index) => {
       const id = input.getAttribute('id');
       const ariaLabel = input.getAttribute('aria-label');
       const ariaLabelledBy = input.getAttribute('aria-labelledby');
@@ -381,7 +381,7 @@ export class AccessibilityChecker {
     // computing actual rendered colors which is complex
     const elementsWithColor = element.querySelectorAll('[style*="color"]');
 
-    elementsWithColor.forEach((__el) => {
+    elementsWithColor.forEach((el) => {
       const style = el.getAttribute('style');
       if (style?.includes('color:') && !style.includes('background')) {
         this.addIssue({
@@ -407,7 +407,7 @@ export class AccessibilityChecker {
     // Check for interactive elements with tabindex="-1"
     const interactiveElements = element.querySelectorAll('a, button, input, select, textarea');
 
-    interactiveElements.forEach((__el) => {
+    interactiveElements.forEach((el) => {
       const tabindex = el.getAttribute('tabindex');
       if (tabindex === '-1') {
         this.addIssue({
@@ -426,7 +426,7 @@ export class AccessibilityChecker {
     // Check for divs/spans with onclick but no keyboard handler
     const clickableNonInteractive = element.querySelectorAll('[onclick]:not(a):not(button)');
 
-    clickableNonInteractive.forEach((__el) => {
+    clickableNonInteractive.forEach((el) => {
       const role = el.getAttribute('role');
       const tabindex = el.getAttribute('tabindex');
       const onKeyDown = el.getAttribute('onkeydown');
@@ -455,7 +455,7 @@ export class AccessibilityChecker {
   private checkARIA(element: Element): void {
     const elementsWithAria = element.querySelectorAll('[role], [aria-label], [aria-labelledby], [aria-describedby]');
 
-    elementsWithAria.forEach((__el) => {
+    elementsWithAria.forEach((el) => {
       const role = el.getAttribute('role');
 
       // Check for invalid ARIA roles
@@ -504,7 +504,8 @@ export class AccessibilityChecker {
    */
   private checkLandmarks(element: Element): void {
     const hasMain = element.querySelector('main, [role="main"]');
-    // const _hasNav = element.querySelector('nav, [role="navigation"]');
+    const _hasNav = element.querySelector('nav, [role="navigation"]');
+
     if (!hasMain) {
       this.addIssue({
         type: 'missing-main-landmark',
@@ -557,7 +558,7 @@ export class AccessibilityChecker {
       [A11ySeverity.CRITICAL]: 15,
     };
 
-    const totalPenalty = this.issues.reduce((__sum, __issue) => {
+    const totalPenalty = this.issues.reduce((sum, issue) => {
       return sum + severityWeights[issue.severity];
     }, 0);
 
@@ -606,7 +607,7 @@ export class AccessibilityChecker {
       const issues = this.getIssuesBySeverity(severity);
       if (issues.length > 0) {
         report += `${severity} (${issues.length}):\n`;
-        issues.forEach((__issue, __index) => {
+        issues.forEach((issue, index) => {
           report += `  ${index + 1}. ${issue.message}\n`;
           if (issue.fix) {
             report += `     Fix: ${issue.fix}\n`;
