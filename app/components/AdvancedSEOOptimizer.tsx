@@ -23,6 +23,14 @@ interface SEOConfig {
   tags?: string[];
 }
 
+interface SEOConfig {
+  title: string;
+  description: string;
+  url: string;
+  canonicalUrl: string;
+  keywords: string[];
+}
+
 interface AdvancedSEOOptimizerProps {
   config: SEOConfig;
   enableStructuredData?: boolean;
@@ -178,6 +186,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
       title: config.title,
       description: config.description,
       keywords: config.keywords,
+      url: config.canonicalUrl,
       canonicalUrl: config.canonicalUrl,
     });
 
