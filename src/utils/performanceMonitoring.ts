@@ -126,7 +126,7 @@ class PerformanceMonitor {
         return duration;
       }
     } catch (error) {
-//       console.warn('Failed to measure performance:', error);
+      console.warn('Failed to measure performance:', error);
     }
     return null;
   }
@@ -308,7 +308,7 @@ class PerformanceMonitor {
       resourceObserver.observe({ entryTypes: ['resource'] });
       this.observers.push(resourceObserver);
     } catch (error) {
-//       console.warn('Failed to observe resource timing:', error);
+      console.warn('Failed to observe resource timing:', error);
     }
   }
 

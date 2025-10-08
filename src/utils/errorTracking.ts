@@ -65,11 +65,11 @@ class ErrorTracker {
     }
 
     // Notify callbacks
-    this.errorCallbacks.forEach(callback => {
+    this.errorCallbacks.forEach((callback) => {
       try {
         callback(trackedError);
       } catch (e) {
-        //         console.error('Error in error callback:', e);
+//         console.error('Error in error callback:', e);
       }
     });
 
@@ -88,7 +88,7 @@ class ErrorTracker {
   onError(callback: (error: TrackedError) => void): () => void {
     this.errorCallbacks.push(callback);
     return () => {
-      this.errorCallbacks = this.errorCallbacks.filter(cb => cb !== callback);
+      this.errorCallbacks = this.errorCallbacks.filter((cb) => cb !== callback);
     };
   }
 
@@ -97,7 +97,7 @@ class ErrorTracker {
    */
   getErrors(severity?: ErrorSeverity): TrackedError[] {
     if (severity) {
-      return this.errors.filter(error => error.severity === severity);
+      return this.errors.filter((error) => error.severity === severity);
     }
     return [...this.errors];
   }
@@ -124,7 +124,7 @@ class ErrorTracker {
       [ErrorSeverity.CRITICAL]: 0,
     };
 
-    this.errors.forEach(error => {
+    this.errors.forEach((error) => {
       bySeverity[error.severity]++;
     });
 
@@ -154,7 +154,7 @@ class ErrorTracker {
    */
   private logError(error: TrackedError): void {
     const logMessage = `[${error.severity.toUpperCase()}] ${error.message}`;
-
+    
     switch (error.severity) {
       case ErrorSeverity.CRITICAL:
       case ErrorSeverity.HIGH:
@@ -198,7 +198,7 @@ class ErrorTracker {
     if (typeof window === 'undefined') return;
 
     // Handle unhandled promise rejections
-    window.addEventListener('unhandledrejection', event => {
+    window.addEventListener('unhandledrejection', (event) => {
       this.trackError(
         new Error(`Unhandled Promise Rejection: ${event.reason}`),
         ErrorSeverity.HIGH,
@@ -207,15 +207,19 @@ class ErrorTracker {
     });
 
     // Handle global errors
-    window.addEventListener('error', event => {
-      this.trackError(event.error || new Error(event.message), ErrorSeverity.HIGH, {
-        action: 'global_error',
-        metadata: {
-          filename: event.filename,
-          lineno: event.lineno,
-          colno: event.colno,
-        },
-      });
+    window.addEventListener('error', (event) => {
+      this.trackError(
+        event.error || new Error(event.message),
+        ErrorSeverity.HIGH,
+        {
+          action: 'global_error',
+          metadata: {
+            filename: event.filename,
+            lineno: event.lineno,
+            colno: event.colno,
+          },
+        }
+      );
     });
   }
 }
