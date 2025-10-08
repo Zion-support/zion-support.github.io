@@ -1,4 +1,5 @@
-import Link from 'next/link';
+// import Link from 'next/link';
+
 export const metadata = {
   title: "AI 2028: Next-Generation Autonomous Enterprise Revolution | Zion Tech Group",
   description: "Discover the revolutionary AI 2028 breakthrough that enables 99.9% autonomous enterprise operations with quantum-enhanced neural networks and meta-cognitive reasoning.",

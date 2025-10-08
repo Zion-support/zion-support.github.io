@@ -1,4 +1,4 @@
-import Link from 'next/link';
+// import Link from 'next/link';
 
 export const metadata = {
   title: 'Sustainable AI: Green Computing Solutions for Enterprise 2025',

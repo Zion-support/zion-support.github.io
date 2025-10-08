@@ -16,12 +16,14 @@ const _collectPerformanceMetrics = () => {
 //   const navigation = window.performance.timing;
 //   const paint = window.performance.getEntriesByType('paint');
 
-//   return {
-//     loadTime: navigation.loadEventEnd - navigation.navigationStart,
-//     firstContentfulPaint:
-//       paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0,
-//   };
-// };
+  return {
+    loadTime: navigation.loadEventEnd - navigation.navigationStart,
+    firstContentfulPaint:
+      paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0,
+  };
+};
+// Suppress unused variable warning
+void _collectPerformanceMetrics;
 
 // Helper functions
 const calculatePerformanceScore = () => {

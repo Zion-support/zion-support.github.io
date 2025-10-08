@@ -63,10 +63,9 @@ class PerformanceMonitor {
         // Cumulative Layout Shift
         this.observeEntry('layout-shift', (entries) => {
           let clsValue = 0;
-          entries.forEach((entry: unknown) => {
-            const layoutShiftEntry = entry as any;
-            if (!layoutShiftEntry.hadRecentInput) {
-              clsValue += layoutShiftEntry.value;
+          entries.forEach((entry: PerformanceEntry) => {
+            if (!entry.hadRecentInput) {
+              clsValue += entry.value;
             }
           });
           if (clsValue > 0) {
