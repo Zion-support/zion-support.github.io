@@ -128,11 +128,7 @@ class SecurityEnhancer {
     
     // Override console methods to detect debugging
     ['log', 'warn', 'error', 'info'].forEach(method => {
-<<<<<<< HEAD
-      (console as any)[method] = (...args: any[]) => {
-=======
       (console as { [key: string]: (...args: unknown[]) => void })[method] = (...args: unknown[]) => {
->>>>>>> cursor/fix-errors-and-merge-to-main-fbf5
         this.metrics.suspiciousActivity++;
         originalConsole[method](...args);
       };
