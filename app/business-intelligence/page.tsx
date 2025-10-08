@@ -17,7 +17,7 @@ const BusinessIntelligencePage: React.FC = () => {
     },
     {
       title: 'Predictive Analytics & Forecasting',
-      description: 'Advanced forecasting models for sales, demand, inventory, and business trend prediction.',cursor/add-new-services-and-deploy-updates-f159
+      description: 'Advanced forecasting models for sales, demand, inventory, and business trend prediction.',
       icon: '🔮',
       price: 'Starting at $3,500/month',
       features: ['Time series forecasting', 'Demand prediction', 'Sales forecasting', 'Risk assessment', 'Scenario modeling'],
@@ -134,7 +134,7 @@ const BusinessIntelligencePage: React.FC = () => {
       benefits: ['Align BI with business goals', 'Maximize BI investment', 'Ensure successful adoption'],
       marketPrice: '$500-1,200/hour',
       category: 'BI Consulting',
-      technologies: ['Strategic Planning', 'Technology Assessment', 'Change Management', 'Training Programs']cursor/add-new-services-and-deploy-updates-f159
+      technologies: ['Strategic Planning', 'Technology Assessment', 'Change Management', 'Training Programs']
     }
   ];
 
