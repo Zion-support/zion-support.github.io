@@ -15,12 +15,6 @@ function initializeMonitoring() {
       // Monitor web vitals
       performanceOptimizer.init();
       
-      // Set up error tracking
-      
-      
-      // Initialize analytics
-      
-      
       logger.info('Monitoring initialized successfully');
     }
   } catch (error) {
