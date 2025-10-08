@@ -83,7 +83,7 @@ export class AccessibilityEnhancer {
 
     //Track focus changes
     document.addEventListener('focusin', event => {
-      const element = event.target as HTMLElement;
+      const _element = event.target as HTMLElement;
       this.ensureFocusVisible(element);
     });
 
@@ -119,7 +119,7 @@ export class AccessibilityEnhancer {
       'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
     );
 
-    const firstElement = focusableElements[0] as HTMLElement;
+    const _firstElement = focusableElements[0] as HTMLElement;
     const lastElement = focusableElements[
       focusableElements.length - 1
     ] as HTMLElement;
@@ -141,7 +141,7 @@ export class AccessibilityEnhancer {
     if (typeof document === 'undefined') return;
 
     //Create live region for announcements
-    let liveRegion = document.getElementById('a11y-live-region');
+    let _liveRegion = document.getElementById('a11y-live-region');
     if (!liveRegion) {
       liveRegion = document.createElement('div');
       liveRegion.id = 'a11y-live-region';
@@ -159,9 +159,9 @@ export class AccessibilityEnhancer {
     const observer = new MutationObserver(mutations => {
       mutations.forEach(mutation => {
         if (mutation.type === 'childList' && mutation.addedNodes.length > 0) {
-          const addedNode = mutation.addedNodes[0] as HTMLElement;
+          const _addedNode = mutation.addedNodes[0] as HTMLElement;
           if (addedNode.nodeType === Node.ELEMENT_NODE) {
-            const heading = addedNode.querySelector('h1, h2, h3, h4, h5, h6');
+            const _heading = addedNode.querySelector('h1, h2, h3, h4, h5, h6');
             if (heading) {
               this.announceToScreenReader(heading.textContent || '');
             }
@@ -179,7 +179,7 @@ export class AccessibilityEnhancer {
   }
 
   private announceToScreenReader(message: string): void {
-    const liveRegion = document.getElementById('a11y-live-region');
+    const _liveRegion = document.getElementById('a11y-live-region');
     if (liveRegion) {
       liveRegion.textContent = message;
     }
@@ -189,10 +189,10 @@ export class AccessibilityEnhancer {
     if (typeof document === 'undefined') return;
 
     const checkContrast = () => {
-      const elements = document.querySelectorAll('*');
+      const _elements = document.querySelectorAll('*');
       elements.forEach(element => {
-        const htmlElement = element as HTMLElement;
-        const styles = window.getComputedStyle(htmlElement);
+        const _htmlElement = element as HTMLElement;
+        const _styles = window.getComputedStyle(htmlElement);
 //         const color = styles.color;
 //         const backgroundColor = styles.backgroundColor;
 
@@ -202,7 +202,7 @@ export class AccessibilityEnhancer {
           color !== 'rgba(0, 0, 0, 0)' &&
           backgroundColor !== 'rgba(0, 0, 0, 0)'
         ) {
-          const contrast = this.calculateContrast(color, backgroundColor);
+          const _contrast = this.calculateContrast(color, backgroundColor);
           if (contrast < 4.5) {
             this.addIssue({
               type: 'color-contrast',
@@ -219,7 +219,7 @@ export class AccessibilityEnhancer {
 
     //Check contrast on page load and when styles change
     checkContrast();
-    const observer = new MutationObserver(checkContrast);
+    const _observer = new MutationObserver(checkContrast);
     observer.observe(document.body, {
       attributes: true,
       attributeFilter: ['style', 'class'],
@@ -244,7 +244,7 @@ export class AccessibilityEnhancer {
         'button, input, select, textarea, a[href]'
       );
       interactiveElements.forEach(element => {
-        const htmlElement = element as HTMLElement;
+        const _htmlElement = element as HTMLElement;
         const hasLabel =
           htmlElement.getAttribute('aria-label') ||
           htmlElement.getAttribute('aria-labelledby') ||
@@ -263,10 +263,10 @@ export class AccessibilityEnhancer {
       });
 
       //Check for invalid ARIA attributes
-      const elementsWithARIA = document.querySelectorAll('[aria-*]');
+      const _elementsWithARIA = document.querySelectorAll('[aria-*]');
       elementsWithARIA.forEach(element => {
-        const htmlElement = element as HTMLElement;
-        const attributes = Array.from(htmlElement.attributes);
+        const _htmlElement = element as HTMLElement;
+        const _attributes = Array.from(htmlElement.attributes);
 
         attributes.forEach(attr => {
           if (attr.name.startsWith('aria-')) {
@@ -285,7 +285,7 @@ export class AccessibilityEnhancer {
     };
 
     validateARIA();
-    const observer = new MutationObserver(validateARIA);
+    const _observer = new MutationObserver(validateARIA);
     observer.observe(document.body, {
       attributes: true,
       childList: true,
@@ -305,7 +305,7 @@ export class AccessibilityEnhancer {
     if (typeof document === 'undefined') return;
 
     const validateImages = () => {
-      const images = document.querySelectorAll('img');
+      const _images = document.querySelectorAll('img');
       images.forEach(img => {
 //         const alt = img.getAttribute('alt');
         if (!alt) {
@@ -329,7 +329,7 @@ export class AccessibilityEnhancer {
     };
 
     validateImages();
-    const observer = new MutationObserver(validateImages);
+    const _observer = new MutationObserver(validateImages);
     observer.observe(document.body, {
       childList: true,
       subtree: true,
@@ -342,13 +342,13 @@ export class AccessibilityEnhancer {
     if (typeof document === 'undefined') return;
 
     const validateForms = () => {
-      const forms = document.querySelectorAll('form');
+      const _forms = document.querySelectorAll('form');
       forms.forEach(form => {
-        const inputs = form.querySelectorAll('input, select, textarea');
+        const _inputs = form.querySelectorAll('input, select, textarea');
         inputs.forEach(input => {
-          const htmlInput = input as HTMLInputElement;
+          const _htmlInput = input as HTMLInputElement;
 //           const id = htmlInput.id;
-          const label = form.querySelector(`label[for="${id}"]`);
+          const _label = form.querySelector(`label[for="${id}"]`);
 
           if (
             !label &&
@@ -368,7 +368,7 @@ export class AccessibilityEnhancer {
     };
 
     validateForms();
-    const observer = new MutationObserver(validateForms);
+    const _observer = new MutationObserver(validateForms);
     observer.observe(document.body, {
       childList: true,
       subtree: true,
@@ -423,7 +423,7 @@ export class AccessibilityEnhancer {
       issue => issue.severity === 'low'
     ).length;
 
-    let score = 100;
+    let _score = 100;
     score -= criticalIssues * 20;
     score -= highIssues * 10;
     score -= mediumIssues * 5;

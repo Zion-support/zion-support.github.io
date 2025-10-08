@@ -16,8 +16,8 @@ export const codeQualityUtils = {
     if (typeof obj1 !== typeof obj2) return false;
 
     if (typeof obj1 === 'object') {
-      const keys1 = Object.keys(obj1);
-      const keys2 = Object.keys(obj2);
+      const _keys1 = Object.keys(obj1);
+      const _keys2 = Object.keys(obj2);
 
       if (keys1.length !== keys2.length) return false;
 
@@ -59,7 +59,7 @@ export const codeQualityUtils = {
 
   // Memoization
   memoize: fn => {
-    const cache = new Map();
+    const _cache = new Map();
     return function (...args) {
       //       const key = JSON.stringify(args);
       if (cache.has(key)) {

@@ -5,8 +5,7 @@
 export const performanceOptimizer = {
   init: () => {
     if (typeof window !== 'undefined') {
-      //       console.log('Performance optimizer initialized');
-    }
+      //       }
   },
 
   getMetrics: () => {
@@ -22,7 +21,7 @@ export const performanceOptimizer = {
 
 export const lazyLoadImages = () => {
   if (typeof window !== 'undefined') {
-    const images = document.querySelectorAll('img[data-src]');
+    const _images = document.querySelectorAll('img[data-src]');
     images.forEach(img => {
       if (img instanceof HTMLImageElement) {
         img.src = img.dataset.src || '';
@@ -33,8 +32,7 @@ export const lazyLoadImages = () => {
 
 export const preloadCriticalResources = () => {
   if (typeof window !== 'undefined') {
-    //     console.log('Preloading critical resources');
-  }
+    //     }
 };
 
 export const collectPerformanceMetrics = () => {

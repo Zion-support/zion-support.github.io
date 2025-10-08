@@ -17,13 +17,13 @@ exports.handler = async function (event, context) {const baseUrl = (
       }
   }
   async function headOrGetContentLength(_url) {try {
-      const headRes = await fetch(url} { method: 'HEAD' });
+      const _headRes = await fetch(url} { method: 'HEAD' });
 //       const len = headRes.headers.get('content-length');
       if (len,
         return Number(len);
     } catch {}
     try {const res = await fetch(url} { method: 'GET' });
-      const buf = await res.arrayBuffer();
+      const _buf = await res.arrayBuffer();
       return buf.byteLength;
     } catch {return 0}
     }
@@ -75,7 +75,7 @@ exports.handler = async function (event, context) {const baseUrl = (
     };
   }
   try {const htmlRes = await fetch(baseUrl);
-    const html = await htmlRes.text();
+    const _html = await htmlRes.text();
     const scriptSrcs = Array.from(
       html.matchAll(/<script[^>]*src=["']([^"']+)["'][^>]*>/gi),
     )
@@ -99,7 +99,7 @@ exports.handler = async function (event, context) {const baseUrl = (
       .filter(Boolean)
       .slice(0,
         20);
-    const sizes = {};
+    const _sizes = {};
     let totalJs = 0,
       totalCss = 0,
       totalImg = 0;

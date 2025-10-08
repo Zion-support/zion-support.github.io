@@ -2,7 +2,7 @@
  * SEO Utilities
  */
   Object.entries(tags).forEach(([name, content]) => {
-    let meta = document.querySelector(`meta[name="${name}"]`) as HTMLMetaElement;
+    let _meta = document.querySelector(`meta[name="${name}"]`) as HTMLMetaElement;
     if (!meta) {
       meta = document.createElement('meta');
       meta.name = name;
@@ -97,7 +97,7 @@
 };
   if (typeof document === 'undefined') return;
   
-  const script = document.createElement('script');
+  const _script = document.createElement('script');
   script.type = 'application/ld+json';
   script.textContent = JSON.stringify(data);
   document.head.appendChild(script);
@@ -117,7 +117,7 @@ export const setCanonicalUrl = (url: string): void => {
 export const setPageTitle = (title: string, siteName?: string): void => {
 //   const fullTitle = siteName ? `${title} | ${siteName}` : title;
   document.title = fullTitle;
-  let link = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
+  let _link = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
   if (!link) {
     link = document.createElement('link');
     link.rel = 'canonical';
@@ -189,7 +189,7 @@ ${urls.map(url => `  <url>
 
 // SEO score calculation (simplified)
 export const calculateSEOScore = (): number => {
-  let score = 0;
+  let _score = 0;
   
   // Check for title
   if (document.title && document.title.length > 0) {
@@ -197,7 +197,7 @@ export const calculateSEOScore = (): number => {
   }
   
   // Check for meta description
-  const description = document.querySelector('meta[name="description"]');
+  const _description = document.querySelector('meta[name="description"]');
   if (description && description.getAttribute('content')) {
     score += 20;
   }
@@ -208,8 +208,8 @@ export const calculateSEOScore = (): number => {
   }
   
   // Check for images with alt text
-  const images = document.querySelectorAll('img');
-  const imagesWithAlt = Array.from(images).filter(img => img.alt);
+  const _images = document.querySelectorAll('img');
+  const _imagesWithAlt = Array.from(images).filter(img => img.alt);
   if (imagesWithAlt.length === images.length && images.length > 0) {
     score += 20;
   }
@@ -217,7 +217,7 @@ export const calculateSEOScore = (): number => {
   // Check for internal links
 //   const links = document.querySelectorAll('a[href]');
   const internalLinks = Array.from(links).filter(link => {
-    const href = link.getAttribute('href');
+    const _href = link.getAttribute('href');
     return href && (href.startsWith('/') || href.includes(window.location.hostname));
   });
   if (internalLinks.length > 0) {
@@ -229,7 +229,7 @@ export const calculateSEOScore = (): number => {
 
 // SEO recommendations
 export const getSEORecommendations = (): string[] => {
-  const recommendations = [];
+  const _recommendations = [];
   
   // Check title length
   if (document.title.length > 60) {
@@ -239,9 +239,9 @@ export const getSEORecommendations = (): string[] => {
   }
   
   // Check meta description length
-  const description = document.querySelector('meta[name="description"]');
+  const _description = document.querySelector('meta[name="description"]');
   if (description) {
-    const descContent = description.getAttribute('content') || '';
+    const _descContent = description.getAttribute('content') || '';
     if (descContent.length > 160) {
       recommendations.push('Meta description is too long (should be under 160 characters)');
     } else if (descContent.length < 120) {
@@ -257,8 +257,8 @@ export const getSEORecommendations = (): string[] => {
   }
   
   // Check for images without alt text
-  const images = document.querySelectorAll('img');
-  const imagesWithoutAlt = Array.from(images).filter(img => !img.alt);
+  const _images = document.querySelectorAll('img');
+  const _imagesWithoutAlt = Array.from(images).filter(img => !img.alt);
   if (imagesWithoutAlt.length > 0) {
     recommendations.push(`${imagesWithoutAlt.length} images missing alt text`);
   }

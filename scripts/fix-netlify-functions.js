@@ -33,16 +33,16 @@ function fixNetlifyFunction(content) {
 
   // Add proper error handling if missing
   if (!fixed.includes('try {') && !fixed.includes('catch')) {
-    const handlerMatch = fixed.match(/exports\.handler = async function[^{]*{([^}]*)}/);
+    const _handlerMatch = fixed.match(/exports\.handler = async function[^{]*{([^}]*)}/);
     if (handlerMatch) {
-      const body = handlerMatch[1].trim();
+      const _body = handlerMatch[1].trim();
       fixed = fixed.replace(
         /exports\.handler = async function[^{]*{[^}]*}/,
         `exports.handler = async function (event, context) {
   try {
     ${body}
   } catch (error) {
-    console.error('Function error:', error);
+
     return {
       statusCode: 500,
       body: JSON.stringify({
@@ -63,21 +63,19 @@ function fixNetlifyFunction(content) {
 
 // Main function to process all Netlify functions
 async function main() {
-  const functionsDir = 'netlify/functions';
-  const pattern = path.join(functionsDir, '*.js');
-  
-  console.log('🔧 Fixing Netlify functions...');
-  
+  const _functionsDir = 'netlify/functions';
+  const _pattern = path.join(functionsDir, '*.js');
+
   const files = (await readdir(functionsDir))
     .filter(file => file.endsWith('.js'))
     .map(file => path.join(functionsDir, file));
-  let fixedCount = 0;
-  let errorCount = 0;
+  let _fixedCount = 0;
+  let _errorCount = 0;
   
   files.forEach(filePath => {
     try {
-      const content = fs.readFileSync(filePath, 'utf8');
-      const fixed = fixNetlifyFunction(content);
+      const _content = fs.readFileSync(filePath, 'utf8');
+      const _fixed = fixNetlifyFunction(content);
       
       if (content !== fixed) {
         fs.writeFileSync(filePath, fixed, 'utf8');
@@ -87,16 +85,14 @@ async function main() {
         console.log(`⏭️  Skipped: ${path.basename(filePath)} (no changes needed)`);
       }
     } catch (error) {
-      console.error(`❌ Error fixing ${filePath}:`, error.message);
+
       errorCount++;
     }
   });
-  
-  console.log(`\n📊 Summary:`);
-  console.log(`   Fixed: ${fixedCount} files`);
-  console.log(`   Errors: ${errorCount} files`);
-  console.log(`   Total: ${files.length} files processed`);
-  
+
+
+
+
   if (errorCount > 0) {
     process.exit(1);
   }

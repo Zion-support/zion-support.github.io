@@ -74,7 +74,7 @@ export default function RevolutionaryBreakthroughs2025() {
           </div>
 
           <div className="text-left">{revolutionaryBreakthroughs2025.map((breakthrough, index) => {/* content */}
-              const IconComponent = getIconComponent(breakthrough.icon);
+              const _IconComponent = getIconComponent(breakthrough.icon);
               return (
     </div><div>
       <div> </div><div> </div></div>
@@ -141,7 +141,7 @@ export default function RevolutionaryBreakthroughs2025() {
           </div>
 
           <div className="text-left">{breakthroughServices2025.map((service, index) => {/* content */}
-              const IconComponent = getIconComponent(service.icon);
+              const _IconComponent = getIconComponent(service.icon);
               return (
     </div><div>
       <div> </div><div> </div></div>

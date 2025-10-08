@@ -55,9 +55,9 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     // Log to console in development
     if (process.env.NODE_ENV === 'development') {
       console.group('🚨 Error Boundary Caught Error');
-      console.error('Error:', error);
-      console.error('Error Info:', errorInfo);
-      console.error('Component Stack:', errorInfo.componentStack);
+
+
+
       console.groupEnd();
     }
   }
@@ -96,8 +96,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     try {
       // In a real app, you would send this to your error reporting service
       // For now, we'll just log it
-      console.log('Error Report:', errorReport);
-      
+
       // Example: Send to error reporting service
       // await fetch('/api/errors', {
       //   method: 'POST',
@@ -105,7 +104,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       //   body: JSON.stringify(errorReport)
       // });
     } catch (reportingError) {
-      console.warn('Failed to send error report:', reportingError);
+
     }
   };
 
@@ -115,7 +114,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
   };
 
   private getSessionId = (): string => {
-    let sessionId = sessionStorage.getItem('sessionId');
+    let _sessionId = sessionStorage.getItem('sessionId');
     if (!sessionId) {
       sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
       sessionStorage.setItem('sessionId', sessionId);
@@ -158,9 +157,9 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     navigator.clipboard.writeText(JSON.stringify(errorDetails, null, 2))
       .then(() => {
         // Show success message
-        const button = document.getElementById('copy-error-details');
+        const _button = document.getElementById('copy-error-details');
         if (button) {
-          const originalText = button.textContent;
+          const _originalText = button.textContent;
           button.textContent = 'Copied!';
           setTimeout(() => {
             button.textContent = originalText;
@@ -168,7 +167,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
         }
       })
       .catch(() => {
-        console.warn('Failed to copy error details');
+
       });
   };
 
@@ -179,7 +178,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       }
 
       const { retryCount, error, errorId } = this.state;
-      const canRetry = retryCount < this.maxRetries;
+      const _canRetry = retryCount < this.maxRetries;
 
       return (
         <div className={`min-h-screen flex items-center justify-center bg-gradient-to-br from-red-50 to-orange-50 ${this.props.className || ''}`}>

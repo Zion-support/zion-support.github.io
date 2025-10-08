@@ -6,7 +6,7 @@ import { glob } from 'glob';
 
 //Function to fix JSX syntax errors
 function fixJSXSyntax(content) {
-  let fixed = content;
+  let _fixed = content;
 
   //Fix function declarations with malformed comments
   fixed = fixed.replace(
@@ -40,25 +40,23 @@ function fixJSXSyntax(content) {
 function processFile(filePath) {
   try {
     //     const content = fs.readFileSync(filePath, 'utf8');
-    const fixed = fixJSXSyntax(content);
+    const _fixed = fixJSXSyntax(content);
 
     if (content !== fixed) {
       fs.writeFileSync(filePath, fixed, 'utf8');
-      //       console.log(`Fixed: ${filePath}`);
-      return true;
+      //       return true;
     }
     return false;
   } catch (error) {
-    //     console.error(`Error processing ${filePath}:`, error.message);
-    return false;
+    //     return false;
   }
 }
 
 //Main function
 async function main() {
-  const patterns = ['src/**/*.tsx', 'src/**/*.ts', 'app/**/*.tsx', 'app/**/*.ts'];
+  const _patterns = ['src/**/*.tsx', 'src/**/*.ts', 'app/**/*.tsx', 'app/**/*.ts'];
 
-  let totalFixed = 0;
+  let _totalFixed = 0;
 
   for (const pattern of patterns) {
     const files = await glob(pattern, {
@@ -92,8 +90,7 @@ async function main() {
     }
   }
 
-  //   console.log(`\nTotal files fixed: ${totalFixed}`);
-}
+  //   }
 
 if (import.meta.url === `file://${process.argv[1]}`) {
   //   main().catch(console.error);

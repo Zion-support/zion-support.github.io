@@ -2,9 +2,7 @@
 
 import fs from 'fs';
 
-// console.log('🔧 Fixing duplicate ErrorBoundary in App.tsx...');
-
-let content = fs.readFileSync('App.tsx', 'utf8');
+// let content = fs.readFileSync('App.tsx', 'utf8');
 
 // Remove the second ErrorBoundary class and its interfaces
 content = content.replace(
@@ -14,4 +12,4 @@ content = content.replace(
 
 fs.writeFileSync('App.tsx', content);
 
-// console.log('✅ Fixed duplicate ErrorBoundary in App.tsx');
+// 

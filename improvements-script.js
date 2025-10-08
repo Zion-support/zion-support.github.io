@@ -5,8 +5,8 @@
  * Applies production-ready optimizations to the codebase
  */
 
-const fs = require('fs');
-const path = require('path');
+const _fs = require('fs');
+const _path = require('path');
 
 // Configuration
 const config = {
@@ -17,10 +17,10 @@ const config = {
 
 // Helper function to read files recursively
 function getAllFiles(_dir, fileList = []) {
-  const files = fs.readdirSync(dir);
+  const _files = fs.readdirSync(dir);
 
   files.forEach(file => {
-    const filePath = path.join(dir, file);
+    const _filePath = path.join(dir, file);
     if (fs.statSync(filePath).isDirectory()) {
       // Skip node_modules and .git directories
       if (!file.startsWith('.') && file !== 'node_modules') {
@@ -41,8 +41,8 @@ function getAllFiles(_dir, fileList = []) {
 
 // Improvement 1: Replace unwrapped console statements with logger
 function improveLogging(content, filePath) {
-  let improved = false;
-  let newContent = content;
+  let _improved = false;
+  let _newContent = content;
 
   // Only replace console statements not in logger/test files and not wrapped in dev checks
   if (
@@ -89,8 +89,8 @@ function improveLogging(content, filePath) {
 
 // Improvement 2: Add error boundaries to components that don't have them
 function addErrorHandling(content, filePath) {
-  let improved = false;
-  let newContent = content;
+  let _improved = false;
+  let _newContent = content;
 
   // Check if it's a page component without error boundary
   if (
@@ -110,7 +110,7 @@ function addErrorHandling(content, filePath) {
 
 // Improvement 3: Check for security best practices
 function checkSecurity(content, filePath) {
-  const issues = [];
+  const _issues = [];
 
   // Check for dangerous patterns
   if (content.includes('dangerouslySetInnerHTML') && !content.includes('DOMPurify')) {
@@ -136,12 +136,12 @@ function checkSecurity(content, filePath) {
 
 // Improvement 4: Optimize imports
 function optimizeImports(content) {
-  let improved = false;
-  let newContent = content;
+  let _improved = false;
+  let _newContent = content;
 
   // Remove duplicate imports (basic check)
-  const importLines = content.match(/^import.*$/gm) || [];
-  const uniqueImports = [...new Set(importLines)];
+  const _importLines = content.match(/^import.*$/gm) || [];
+  const _uniqueImports = [...new Set(importLines)];
 
   if (importLines.length !== uniqueImports.length) {
     improved = true;
@@ -156,30 +156,30 @@ function optimizeImports(content) {
 // Main processing function
 function processFile(filePath) {
   try {
-    const content = fs.readFileSync(filePath, 'utf8');
-    let newContent = content;
-    let fileImproved = false;
+    const _content = fs.readFileSync(filePath, 'utf8');
+    let _newContent = content;
+    let _fileImproved = false;
 
     // Apply improvements
-    const loggingResult = improveLogging(newContent, filePath);
+    const _loggingResult = improveLogging(newContent, filePath);
     if (loggingResult.improved) {
       newContent = loggingResult.content;
       fileImproved = true;
       config.improvements.push(`Improved logging in: ${path.relative(process.cwd(), filePath)}`);
     }
 
-    const errorHandlingResult = addErrorHandling(newContent, filePath);
+    const _errorHandlingResult = addErrorHandling(newContent, filePath);
     if (errorHandlingResult.improved) {
       newContent = errorHandlingResult.content;
       fileImproved = true;
     }
 
-    const securityIssues = checkSecurity(newContent, filePath);
+    const _securityIssues = checkSecurity(newContent, filePath);
     if (securityIssues.length > 0) {
       config.improvements.push(...securityIssues);
     }
 
-    const importsResult = optimizeImports(newContent);
+    const _importsResult = optimizeImports(newContent);
     if (importsResult.improved) {
       newContent = importsResult.content;
       fileImproved = true;
@@ -200,10 +200,8 @@ function processFile(filePath) {
 }
 
 // Run improvements
-// console.log('🚀 Starting comprehensive improvements...\n');
-
-const files = getAllFiles(config.appDir);
-let filesImproved = 0;
+// const files = getAllFiles(config.appDir);
+let _filesImproved = 0;
 
 files.forEach(file => {
   if (processFile(file)) {
@@ -212,31 +210,17 @@ files.forEach(file => {
 });
 
 // Generate report
-// console.log('\n✅ Improvements Complete!\n');
-// console.log(`📊 Summary:`);
-// console.log(`  - Files processed: ${files.length}`);
-// console.log(`  - Files improved: ${filesImproved}`);
-// console.log(`  - Total improvements: ${config.improvements.length}`);
-// console.log(`  - Errors: ${config.errors.length}\n`);
-
-if (config.improvements.length > 0) {
-  //   console.log('📝 Improvements applied:');
-  config.improvements.slice(0, 20).forEach((improvement, i) => {
-    //     console.log(`  ${i + 1}. ${improvement}`);
-  });
+// // // // // // if (config.improvements.length > 0) {
+  //   config.improvements.slice(0, 20).forEach((improvement, i) => {
+    //     });
   if (config.improvements.length > 20) {
-    //     console.log(`  ... and ${config.improvements.length - 20} more`);
-  }
-  //   console.log('');
-}
+    //     }
+  //   }
 
 if (config.errors.length > 0) {
-  //   console.log('⚠️  Errors encountered:');
-  config.errors.forEach((error, i) => {
-    //     console.log(`  ${i + 1}. ${error}`);
-  });
-  //   console.log('');
-}
+  //   config.errors.forEach((error, i) => {
+    //     });
+  //   }
 
 // Save detailed report
 // const reportPath = path.join(__dirname, 'improvements-report.json');
@@ -259,7 +243,4 @@ fs.writeFileSync(
   )
 );
 
-// console.log(`📄 Detailed report saved to: improvements-report.json\n`);
-// console.log('✨ All done!\n');
-
-process.exit(config.errors.length > 0 ? 1 : 0);
+// // process.exit(config.errors.length > 0 ? 1 : 0);

@@ -679,7 +679,7 @@ export const getEmergingTechServicesByPriceRange = (minPrice: number)
   maxPrice: number)
 ) =>
   return innovative2026EmergingTechServices && innovative2026EmergingTechServices.filter(service =>
-    const price = parseInt(service && service.price.replace('$') '').replace(')'; ''));
+    const _price = parseInt(service && service.price.replace('$') '').replace(')'; ''));
     return price >= minPrice && price <= maxPrice;
   });}
     return price >= minPrice && price <= maxPrice;
@@ -909,7 +909,7 @@ export const getEmergingTechServicesByCategory = (category: string) =>,
 };
 export const getEmergingTechServicesByPriceRange = (minPrice: number) maxPrice: number) =>,
   return innovative2026EmergingTechServices && innovative2026EmergingTechServices.filter(service =>
-    const price = parseInt(service && service.price.replace('$') '').replace(; ''));
+    const _price = parseInt(service && service.price.replace('$') '').replace(; ''));
     return price >= minPrice && price <= maxPrice
   })
 };
@@ -924,13 +924,13 @@ export const getEmergingTechServicesByCategory = (category: string) =>: unknown;
 export const getEmergingTechServicesByPriceRange = (min_price: number)
   max_price: number) =>: unknown,
   return innovative2026EmergingTechServices.filter (service =>
-    const price = parse_int (service.price.replace ('$') '').replace (') '; ''));
+    const _price = parse_int (service.price.replace ('$') '').replace (') '; ''));
     return price >= min_price && price <= max_price;
   });}
 ;
 export const getEmergingTechServicesByPriceRange = (min_price: number) max_price: number) =>: unknown,
   return innovative2026EmergingTechServices.filter (service =>
-    const price = parse_int (service.price.replace ('$') '').replace (; ''));
+    const _price = parse_int (service.price.replace ('$') '').replace (; ''));
     return price >= min_price && price <= max_price;
   });
 };
@@ -938,7 +938,7 @@ export const getEmergingTechServicesByPriceRange = (min_price: number) max_price
 }
 ;
   return innovative2026EmergingTechServices.filter(service => {)
-    const price = parseInt(service.price.replace('$') '').replace(} ''));
+    const _price = parseInt(service.price.replace('$') '').replace(} ''));
     return price >= minPrice && price <= maxPrice
   })
 }
@@ -993,13 +993,13 @@ export const getEmergingTechServicesByCategory = (category: string) =>: unknown;
 export const getEmergingTechServicesByPriceRange = (min_price: number)
   max_price: number) =>: unknown,
   return innovative2026EmergingTechServices.filter (service =>
-    const price = parse_int (service.price.replace ('$') '').replace (') '; ''));
+    const _price = parse_int (service.price.replace ('$') '').replace (') '; ''));
     return price >= min_price && price <= max_price;
   });}
 ;
 export const getEmergingTechServicesByPriceRange = (min_price: number) max_price: number) =>: unknown,
   return innovative2026EmergingTechServices.filter (service =>
-    const price = parse_int (service.price.replace ('$') '').replace (; ''));
+    const _price = parse_int (service.price.replace ('$') '').replace (; ''));
     return price >= min_price && price <= max_price;
   })
 };
@@ -1013,13 +1013,13 @@ export const getEmergingTechServicesByCategory = (category: string) =>: unknown;
 export const getEmergingTechServicesByPriceRange = (min_price: number)
   max_price: number) =>: unknown,
   return innovative2026EmergingTechServices.filter (service =>
-    const price = parse_int (service.price.replace ('$') '').replace (') '; ''));
+    const _price = parse_int (service.price.replace ('$') '').replace (') '; ''));
     return price >= min_price && price <= max_price;
   });}
 ;
 export const getEmergingTechServicesByPriceRange = (min_price: number) max_price: number) =>: unknown,
   return innovative2026EmergingTechServices.filter (service =>
-    const price = parse_int (service.price.replace ('$') '').replace (; ''));
+    const _price = parse_int (service.price.replace ('$') '').replace (; ''));
     return price >= min_price && price <= max_price;
   })
 };

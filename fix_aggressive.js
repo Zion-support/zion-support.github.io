@@ -9,7 +9,7 @@ import { fileURLToPath } from 'url';
 
 //Function to aggressively fix corrupted syntax
 function fixCorruptedSyntax(text) {
-  let fixed = text;
+  let _fixed = text;
 
   //Fix import statements that got completely corrupted
   fixed = fixed.replace(
@@ -20,7 +20,6 @@ function fixCorruptedSyntax(text) {
         .replace(/,\s*,/g, ',')
         .replace(/\s*,\s*/g, ', ')
         .trim();
-      return `import React, { ${cleanImports} } from 'react';`;
     }
   );
 
@@ -32,7 +31,6 @@ function fixCorruptedSyntax(text) {
         .replace(/,\s*,/g, ',')
         .replace(/\s*,\s*/g, ', ')
         .trim();
-      return `import { ${cleanImports} } from '${module}';`;
     }
   );
 
@@ -194,26 +192,24 @@ function processFile(filePath) {
 
     if (content !== fixedContent) {
       fs.writeFileSync(filePath, fixedContent, 'utf8');
-      //       console.log(`Fixed: ${filePath}`);
-      return true;
+      //       return true;
     }
     return false;
   } catch (error) {
-    //     console.error(`Error processing ${filePath}:`, error.message);
-    return false;
+    //     return false;
   }
 }
 
 //Function to recursively find and process files
 function processDirectory(dirPath) {
-  let processedCount = 0;
+  let _processedCount = 0;
 
   try {
     //     const items = fs.readdirSync(dirPath);
 
     for (const item of items) {
       //       const fullPath = path.join(dirPath, item);
-      const stat = fs.statSync(fullPath);
+      const _stat = fs.statSync(fullPath);
 
       if (stat.isDirectory()) {
         //Skip node_modules and other common directories
@@ -232,14 +228,12 @@ function processDirectory(dirPath) {
       }
     }
   } catch (error) {
-    //     console.error(`Error processing directory ${dirPath}:`, error.message);
-  }
+    //     }
 
   return processedCount;
 }
 
 //Main execution
-// console.log('Starting aggressive fix of corrupted syntax...');
-let processedCount = processDirectory('./src');
+// let processedCount = processDirectory('./src');
 processedCount += processDirectory('./utils');
-// console.log(`Fixed ${processedCount} files.`);
+// 

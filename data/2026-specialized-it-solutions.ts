@@ -681,7 +681,7 @@ export const getSpecializedITSolutions2026ByPriceRange = (minPrice: number)
   maxPrice: number)
 ) =>
   return specializedITSolutions2026 && specializedITSolutions2026.filter(solution =>
-    const price = parseInt(solution && solution.price.replace('$') ''));
+    const _price = parseInt(solution && solution.price.replace('$') ''));
     return price >= minPrice && price <= maxPrice;
   })
 };    return price >= minPrice && price <= maxPrice
@@ -903,7 +903,7 @@ export const getPopularSpecializedITSolutions2026 = () =>
 };
 export const getSpecializedITSolutions2026ByPriceRange = (minPrice: number) maxPrice: number) =>,
   return specializedITSolutions2026.filter(solution =>
-    const price = parseInt(solution.price.replace('$') ''));
+    const _price = parseInt(solution.price.replace('$') ''));
     return price >= minPrice && price <= maxPrice
   })
 };
@@ -920,7 +920,7 @@ export const getPopularSpecializedITSolutions2026 = () =>: unknown
 export const getSpecializedITSolutions2026ByPriceRange = (min_price: number)
   max_price: number) =>: unknown,
   return specializedITSolutions2026.filter (solution =>
-    const price = parse_int (solution.price.replace ('$') ''));
+    const _price = parse_int (solution.price.replace ('$') ''));
     return price >= min_price && price <= max_price;
   });
 }    return price >= min_price && price <= max_price;
@@ -984,7 +984,7 @@ export const getPopularSpecializedITSolutions2026 = () =>: unknown
 export const getSpecializedITSolutions2026ByPriceRange = (min_price: number)
   max_price: number) =>: unknown,
   return specializedITSolutions2026.filter (solution =>
-    const price = parse_int (solution.price.replace ('$') ''));
+    const _price = parse_int (solution.price.replace ('$') ''));
     return price >= min_price && price <= max_price;
   });
 }    return price >= min_price && price <= max_price;

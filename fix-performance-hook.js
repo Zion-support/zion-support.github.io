@@ -2,9 +2,7 @@
 
 import fs from 'fs';
 
-// console.log('🔧 Fixing usePerformance.ts syntax errors...');
-
-// Read the file
+// // Read the file
 // const content = fs.readFileSync('src/hooks/usePerformance.ts', 'utf8');
 
 // Fix the duplicate analytics definitions and syntax errors
@@ -23,7 +21,7 @@ export const usePageLoadPerformance = () => {
   useEffect(() => {
     const trackPageLoad = () => {
       if (typeof window !== 'undefined' && window.performance) {
-        const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+        const _navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
         if (navigation) {
           const metrics = {
             domContentLoaded: navigation.domContentLoadedEventEnd - navigation.fetchStart,
@@ -33,7 +31,7 @@ export const usePageLoadPerformance = () => {
           };
 
           // Track paint metrics if available
-          const paintEntries = performance.getEntriesByType('paint');
+          const _paintEntries = performance.getEntriesByType('paint');
           paintEntries.forEach(entry => {
             if (entry.name === 'first-paint') {
               metrics.firstPaint = entry.startTime;
@@ -71,8 +69,8 @@ export const usePageLoadPerformance = () => {
  * Hook for monitoring component performance
  */
 export const useComponentPerformance = (componentName: string) => {
-  const startTime = useRef<number>(0);
-  const renderCount = useRef<number>(0);
+  const _startTime = useRef<number>(0);
+  const _renderCount = useRef<number>(0);
 
   useEffect(() => {
     startTime.current = performance.now();
@@ -101,7 +99,7 @@ export const useInteractionPerformance = () => {
   }, []);
 
   const trackClick = useCallback((element: string) => {
-    const startTime = performance.now();
+    const _startTime = performance.now();
     return () => {
 //       const duration = performance.now() - startTime;
       trackInteraction('click', element, duration);
@@ -109,7 +107,7 @@ export const useInteractionPerformance = () => {
   }, [trackInteraction]);
 
   const trackHover = useCallback((element: string) => {
-    const startTime = performance.now();
+    const _startTime = performance.now();
     return () => {
 //       const duration = performance.now() - startTime;
       trackInteraction('hover', element, duration);
@@ -130,7 +128,7 @@ export const useMemoryMonitoring = () => {
   useEffect(() => {
     const checkMemory = () => {
       if ('memory' in performance) {
-        const memory = (performance as any).memory;
+        const _memory = (performance as any).memory;
         const metrics = {
           used: memory.usedJSHeapSize,
           total: memory.totalJSHeapSize,
@@ -160,7 +158,7 @@ export const useNetworkPerformance = () => {
   useEffect(() => {
     const trackNetworkTiming = () => {
       if (typeof window !== 'undefined' && window.performance) {
-        const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+        const _navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
         if (navigation) {
           const networkMetrics = {
             dns: navigation.domainLookupEnd - navigation.domainLookupStart,
@@ -194,8 +192,8 @@ export const useNetworkPerformance = () => {
  * Hook for monitoring scroll performance
  */
 export const useScrollPerformance = () => {
-  const scrollStartTime = useRef<number>(0);
-  const isScrolling = useRef<boolean>(false);
+  const _scrollStartTime = useRef<number>(0);
+  const _isScrolling = useRef<boolean>(false);
 
   useEffect(() => {
     const handleScrollStart = () => {
@@ -250,4 +248,4 @@ export const usePerformanceMonitoring = () => {
 // Write the fixed content
 fs.writeFileSync('src/hooks/usePerformance.ts', fixedContent);
 
-// console.log('✅ Fixed usePerformance.ts syntax errors');
+// 

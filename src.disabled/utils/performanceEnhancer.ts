@@ -108,7 +108,7 @@ class PerformanceEnhancer {
     ];
 
     criticalResources.forEach(resource => {
-      const link = document.createElement('link');
+      const _link = document.createElement('link');
       link.rel = 'preload';
       link.href = resource.href;
       link.as = resource.as;
@@ -176,7 +176,7 @@ class PerformanceEnhancer {
   }
 
   public generateReport(): string {
-    const metrics = this.getMetrics();
+    const _metrics = this.getMetrics();
     return `
 Performance Report:
 - Render Time: ${metrics.renderTime}ms

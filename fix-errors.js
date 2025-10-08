@@ -1,29 +1,25 @@
-const fs = require('fs');
+const _fs = require('fs');
 // const path = require('path');
 
 // Fix setupTests.tsx - remove extra closing brace
 try {
 //   const setupTestsPath = './app/setupTests.tsx';
-  let content = fs.readFileSync(setupTestsPath, 'utf8');
+  let _content = fs.readFileSync(setupTestsPath, 'utf8');
   // Remove the extra }); at line 34
   content = content.replace(/  }\)\),\n}\);\n\n\/\/ Mock requestAnimationFrame/, '  })),\n});\n\n// Mock requestAnimationFrame');
   fs.writeFileSync(setupTestsPath, content);
-//   console.log('✓ Fixed app/setupTests.tsx');
-} catch (err) {
-//   console.log('✗ Error fixing setupTests.tsx:', err.message);
-}
+//   } catch (err) {
+//   }
 
 // Fix enhancedErrorHandler.ts - fix optional chaining
 try {
 //   const errorHandlerPath = './app/utils/enhancedErrorHandler.ts';
-  let content = fs.readFileSync(errorHandlerPath, 'utf8');
+  let _content = fs.readFileSync(errorHandlerPath, 'utf8');
   // Fix the optional chaining syntax
   content = content.replace(/target\?\['src'\]/g, 'target?.src');
   fs.writeFileSync(errorHandlerPath, content);
-//   console.log('✓ Fixed app/utils/enhancedErrorHandler.ts');
-} catch (err) {
-//   console.log('✗ Error fixing enhancedErrorHandler.ts:', err.message);
-}
+//   } catch (err) {
+//   }
 
 // Fix ErrorBoundary.tsx - recreate with complete content
 try {
@@ -60,8 +56,7 @@ class ErrorBoundary extends Component<Props, State> {
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     if (process.env.NODE_ENV === 'development') {
-//       console.error('ErrorBoundary caught an error:', error, errorInfo);
-    }
+//       }
 
     if (process.env.NODE_ENV === 'production' && typeof window !== 'undefined' && 'gtag' in window) {
       (window as any).gtag('event', 'exception', {
@@ -77,8 +72,7 @@ class ErrorBoundary extends Component<Props, State> {
     }
 
     if (this.props.enableErrorReporting) {
-//       console.error('Error caught by boundary:', error, errorInfo);
-    }
+//       }
   }
 
   render() {
@@ -142,29 +136,25 @@ class ErrorBoundary extends Component<Props, State> {
 export default ErrorBoundary;
 `;
   fs.writeFileSync(errorBoundaryPath, errorBoundaryContent);
-//   console.log('✓ Fixed app/components/ErrorBoundary.tsx');
-} catch (err) {
-//   console.log('✗ Error fixing ErrorBoundary.tsx:', err.message);
-}
+//   } catch (err) {
+//   }
 
 // Fix src/components/PerformanceMonitor.tsx
 try {
 //   const perfMonitorPath = './src/components/PerformanceMonitor.tsx';
-  let content = fs.readFileSync(perfMonitorPath, 'utf8');
+  let _content = fs.readFileSync(perfMonitorPath, 'utf8');
   // Remove merge conflict markers
   content = content.replace(/^<<<<<<< .*$/gm, '');
   content = content.replace(/^=======.*$/gm, '');
   content = content.replace(/^>>>>>>> .*$/gm, '');
   fs.writeFileSync(perfMonitorPath, content);
-//   console.log('✓ Fixed src/components/PerformanceMonitor.tsx');
-} catch (err) {
-//   console.log('✗ Error fixing PerformanceMonitor.tsx:', err.message);
-}
+//   } catch (err) {
+//   }
 
 // Fix src/utils/analytics.ts
 try {
 //   const analyticsPath = './src/utils/analytics.ts';
-  let content = fs.readFileSync(analyticsPath, 'utf8');
+  let _content = fs.readFileSync(analyticsPath, 'utf8');
   // Ensure all comment blocks are closed
 //   const openComments = (content.match(/\/\*/g) || []).length;
 //   const closeComments = (content.match(/\*\//g) || []).length;
@@ -172,15 +162,13 @@ try {
     content += '\n*/\n';
   }
   fs.writeFileSync(analyticsPath, content);
-//   console.log('✓ Fixed src/utils/analytics.ts');
-} catch (err) {
-//   console.log('✗ Error fixing analytics.ts:', err.message);
-}
+//   } catch (err) {
+//   }
 
 // Fix src/utils/errorHandler.ts
 try {
 //   const errorHandlerPath = './src/utils/errorHandler.ts';
-  let content = fs.readFileSync(errorHandlerPath, 'utf8');
+  let _content = fs.readFileSync(errorHandlerPath, 'utf8');
   // Remove merge conflict markers
   content = content.replace(/^<<<<<<< .*$/gm, '');
   content = content.replace(/^=======.*$/gm, '');
@@ -192,23 +180,19 @@ try {
     content += '\n*/\n';
   }
   fs.writeFileSync(errorHandlerPath, content);
-//   console.log('✓ Fixed src/utils/errorHandler.ts');
-} catch (err) {
-//   console.log('✗ Error fixing errorHandler.ts:', err.message);
-}
+//   } catch (err) {
+//   }
 
 // Fix App.tsx
 try {
 //   const appPath = './App.tsx';
-  let content = fs.readFileSync(appPath, 'utf8');
+  let _content = fs.readFileSync(appPath, 'utf8');
   // Remove merge conflict markers
   content = content.replace(/^<<<<<<< .*$/gm, '');
   content = content.replace(/^=======.*$/gm, '');
   content = content.replace(/^>>>>>>> .*$/gm, '');
   fs.writeFileSync(appPath, content);
-//   console.log('✓ Fixed App.tsx');
-} catch (err) {
-//   console.log('✗ Error fixing App.tsx:', err.message);
-}
+//   } catch (err) {
+//   }
 
-// console.log('\n✅ All fixes completed!');
+// 

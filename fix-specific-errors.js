@@ -6,8 +6,8 @@ import { glob } from 'glob';
 // Function to process a file
 function processFile(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    let modified = false;
+    let _content = fs.readFileSync(filePath, 'utf8');
+    let _modified = false;
 
     // Fix malformed closing tags
     if (content.includes('</div>}')) {
@@ -36,10 +36,10 @@ function processFile(filePath) {
     // Fix malformed object properties
     if (content.includes('const config = {')) {
       // Look for lines that might be missing colons
-      const lines = content.split('\n');
-      let newLines = [];
+      const _lines = content.split('\n');
+      let _newLines = [];
       for (let i = 0; i < lines.length; i++) {
-        let line = lines[i];
+        let _line = lines[i];
         // Fix lines that look like property assignments but are missing colons
         if (line.match(/^\s*[a-zA-Z_][a-zA-Z0-9_]*\s+[a-zA-Z_][a-zA-Z0-9_]*\s*$/)) {
           line = line.replace(
@@ -57,13 +57,13 @@ function processFile(filePath) {
 
     if (modified) {
       fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed: ${filePath}`);
+
       return true;
     }
 
     return false;
   } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
+
     return false;
   }
 }
@@ -71,18 +71,15 @@ function processFile(filePath) {
 // Main execution
 async function main() {
   // Find all TypeScript/JavaScript files in app directory
-  const files = await glob('app/**/*.{ts,tsx,js,jsx}', { cwd: process.cwd() });
+  const _files = await glob('app/**/*.{ts,tsx,js,jsx}', { cwd: process.cwd() });
 
-  console.log(`Found ${files.length} files to process...`);
-
-  let fixedCount = 0;
+  let _fixedCount = 0;
   files.forEach(file => {
     if (processFile(file)) {
       fixedCount++;
     }
   });
 
-  console.log(`Fixed ${fixedCount} files`);
 }
 
 main().catch(console.error);

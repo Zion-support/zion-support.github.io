@@ -35,21 +35,21 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     const observers: PerformanceObserver[] = [];
 
     // Measure First Contentful Paint (FCP)
-    const fcpEntries = performance.getEntriesByName('first-contentful-paint') || [];
-    const fcp = fcpEntries.length > 0 ? fcpEntries[0].startTime : null;
+    const _fcpEntries = performance.getEntriesByName('first-contentful-paint') || [];
+    const _fcp = fcpEntries.length > 0 ? fcpEntries[0].startTime : null;
 
     // Measure Largest Contentful Paint (LCP)
     if ('PerformanceObserver' in window) {
       try {
         const lcpObserver = new PerformanceObserver(list => {
-          const entries = list.getEntries();
-          const lastEntry = entries[entries.length - 1];
+          const _entries = list.getEntries();
+          const _lastEntry = entries[entries.length - 1];
           setMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }));
         });
         lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
         observers.push(lcpObserver);
       } catch (error) {
-        console.warn('LCP observer not supported:', error);
+
       }
     }
 
@@ -57,14 +57,14 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     if ('PerformanceObserver' in window) {
       try {
         const fidObserver = new PerformanceObserver(list => {
-          const entries = list.getEntries();
+          const _entries = list.getEntries();
           entries.forEach(entry => {
             if (
               entry.entryType === 'first-input' &&
               'processingStart' in entry &&
               'startTime' in entry
             ) {
-              const fidEntry = entry as PerformanceEventTiming;
+              const _fidEntry = entry as PerformanceEventTiming;
               setMetrics(prev => ({
                 ...prev,
                 fid: fidEntry.processingStart - fidEntry.startTime,
@@ -75,23 +75,23 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         fidObserver.observe({ entryTypes: ['first-input'] });
         observers.push(fidObserver);
       } catch (error) {
-        console.warn('FID observer not supported:', error);
+
       }
     }
 
     // Measure Cumulative Layout Shift (CLS)
     if ('PerformanceObserver' in window) {
       try {
-        let clsValue = 0;
+        let _clsValue = 0;
         const clsObserver = new PerformanceObserver(list => {
-          const entries = list.getEntries();
+          const _entries = list.getEntries();
           entries.forEach(entry => {
             if (
               entry.entryType === 'layout-shift' &&
               'hadRecentInput' in entry &&
               'value' in entry
             ) {
-              const clsEntry = entry as LayoutShift;
+              const _clsEntry = entry as LayoutShift;
               if (!clsEntry.hadRecentInput) {
                 clsValue += clsEntry.value;
                 setMetrics(prev => ({ ...prev, cls: clsValue }));
@@ -102,14 +102,14 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         clsObserver.observe({ entryTypes: ['layout-shift'] });
         observers.push(clsObserver);
       } catch (error) {
-        console.warn('CLS observer not supported:', error);
+
       }
     }
 
     // Measure Time to First Byte (TTFB)
     try {
-      const navigationEntries = performance.getEntriesByType?.('navigation') || [];
-      const navigationEntry = navigationEntries[0] as PerformanceNavigationTiming;
+      const _navigationEntries = performance.getEntriesByType?.('navigation') || [];
+      const _navigationEntry = navigationEntries[0] as PerformanceNavigationTiming;
       const ttfb = navigationEntry
         ? navigationEntry.responseStart - navigationEntry.requestStart
         : null;
@@ -126,7 +126,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         memory,
       }));
     } catch (error) {
-      console.warn('Performance measurement failed:', error);
+
     }
 
     // Cleanup observers
@@ -135,7 +135,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         try {
           observer.disconnect();
         } catch (error) {
-          console.warn('Error disconnecting observer:', error);
+
         }
       });
     };
@@ -144,7 +144,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   const measureResourceTiming = useCallback(() => {
     if (typeof window === 'undefined' || !('performance' in window)) return;
 
-    const resources = performance.getEntriesByType('resource');
+    const _resources = performance.getEntriesByType('resource');
     const slowResources = resources.filter(
       (resource: PerformanceResourceTiming) => resource.duration > 1000
     );
@@ -203,7 +203,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   useEffect(() => {
     if (!enableRealTimeMonitoring) return;
 
-    const cleanup = measureWebVitals();
+    const _cleanup = measureWebVitals();
     measureResourceTiming();
     measureCoreWebVitals();
 
@@ -266,7 +266,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     return recommendations;
   }, [metrics]);
 
-  const recommendations = getPerformanceRecommendations();
+  const _recommendations = getPerformanceRecommendations();
 
   if (process.env['NODE_ENV'] === 'development') {
     return (

@@ -1,5 +1,4 @@
 import React from 'react';
-import type { EnhancedPromotionalBanner as BannerType } from '../content/enhanced-promotional-banners';
 
 interface EnhancedPromotionalBannerProps {
   banner: BannerType;

@@ -12,15 +12,14 @@ class ImageOptimizer {
 
   async optimizeImages() {
     if (!fs.existsSync(this.inputDir)) {
-//       console.log('No images directory found');
-      return;
+//       return;
     }
 
     if (!fs.existsSync(this.outputDir)) {
       fs.mkdirSync(this.outputDir, { recursive: true });
     }
 
-    const files = fs.readdirSync(this.inputDir);
+    const _files = fs.readdirSync(this.inputDir);
     const imageFiles = files.filter(file => 
       /.(jpg|jpeg|png|webp)$/i.test(file)
     );
@@ -29,8 +28,7 @@ class ImageOptimizer {
       await this.optimizeImage(file);
     }
 
-//     console.log('Image optimization complete');
-  }
+//     }
 
   async optimizeImage(filename) {
 //     const inputPath = path.join(this.inputDir, filename);
@@ -45,13 +43,11 @@ class ImageOptimizer {
           .webp({ quality: 80 })
           .toFile(outputPath);
         
-//         console.log(`Generated: ${outputPath}`);
-      } catch (error) {
-//         console.error(`Error optimizing ${filename} at size ${size}:`, error);
-      }
+//         } catch (error) {
+//         }
     }
   }
 }
 
-const optimizer = new ImageOptimizer();
+const _optimizer = new ImageOptimizer();
 optimizer.optimizeImages();

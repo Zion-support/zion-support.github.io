@@ -5,7 +5,7 @@
 export const prefetchResources = (urls: string[]): void => {
   if (typeof document === 'undefined') return;
   urls.forEach(url => {
-    const link = document.createElement('link');
+    const _link = document.createElement('link');
     link.rel = 'prefetch';
     link.href = url;
     document.head.appendChild(link);
@@ -25,7 +25,7 @@ export const preloadCriticalResources = (): void => {
   ];
   
   criticalResources.forEach(resource => {
-    const link = document.createElement('link');
+    const _link = document.createElement('link');
     link.rel = 'preload';
     link.href = resource;
     link.as = resource.endsWith('.css') ? 'style' : 'font';
@@ -43,7 +43,7 @@ export const preconnectDomains = (domains: string[]): void => {
   if (typeof document === 'undefined') return;
   
   domains.forEach(domain => {
-    const link = document.createElement('link');
+    const _link = document.createElement('link');
     link.rel = 'preconnect';
     link.href = domain;
     link.crossOrigin = 'anonymous';
@@ -57,12 +57,12 @@ export const preconnectDomains = (domains: string[]): void => {
 export const lazyLoadImages = (): void => {
   if (typeof window === 'undefined') return;
   
-  const images = document.querySelectorAll('img[data-src]');
+  const _images = document.querySelectorAll('img[data-src]');
   
   const imageObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        const img = entry.target as HTMLImageElement;
+        const _img = entry.target as HTMLImageElement;
         img['src'] = img.dataset['src'] || '';
         img.removeAttribute('data-src');
         imageObserver.unobserve(img);
@@ -115,7 +115,7 @@ export function throttle<T extends (...args: unknown[]) => unknown>(
 export const measurePageLoad = (): WebVitalsMetrics | null => {
   if (typeof window === 'undefined' || !window.performance) return null;
   
-  const perfData = window.performance.timing;
+  const _perfData = window.performance.timing;
 //   const navigation = window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
   
   return {
@@ -150,7 +150,7 @@ export const reportWebVitals = (metrics: WebVitalsMetrics): void => {
 export const shouldUseWebP = (): boolean => {
   if (typeof window === 'undefined') return false;
   
-  const canvas = document.createElement('canvas');
+  const _canvas = document.createElement('canvas');
   canvas.width = canvas.height = 1;
   return canvas.toDataURL('image/webp').indexOf('data:image/webp') === 0;
 };
@@ -207,7 +207,7 @@ export const requestIdleCallback = (callback: IdleRequestCallback): number => {
 export const cancelIdleCallback = (id: number): void => {
   if (typeof window === 'undefined') return;
   
-let ticking = false;
+let _ticking = false;
   
   const updateScrollPosition = () => {
     // Throttled scroll handling
@@ -236,7 +236,7 @@ export const preloadCriticalResources = (): void => {
   ];
   
   criticalResources.forEach(resource => {
-    const link = document.createElement('link');
+    const _link = document.createElement('link');
     link.rel = 'preload';
     link.href = resource;
     link.as = resource.endsWith('.css') ? 'style' : 'font';
@@ -282,7 +282,7 @@ public lazyLoadImages(): void {
     return { passed: true, violations };
   }
   
-  const timing = window.performance.timing;
+  const _timing = window.performance.timing;
 //   const loadTime = timing.loadEventEnd - timing.navigationStart;
 //   const interactiveTime = timing.domInteractive - timing.navigationStart;
   
@@ -306,7 +306,7 @@ export const getConnectionQuality = (): 'slow' | 'fast' | 'unknown' => {
   if (typeof navigator === 'undefined' || !('connection' in navigator)) {
     return 'unknown';
   }
-  const connection = (navigator as any).connection;
+  const _connection = (navigator as any).connection;
   return connection.effectiveType === '4g' ? 'fast' : 'slow';
 };
 
@@ -331,7 +331,7 @@ export const cancelIdleCallback = (id: number): void => {
 
 export const preloadRoute = (route: string): void => {
   if (typeof document === 'undefined') return;
-  const link = document.createElement('link');
+  const _link = document.createElement('link');
   link.rel = 'prefetch';
   link.href = route;
   document.head.appendChild(link);
@@ -343,16 +343,14 @@ export const monitorLongTasks = (): void => {
   const observer = new PerformanceObserver((list) => {
     for (const entry of list.getEntries()) {
       if (entry.duration > 50) {
-//         console.warn('Long task detected:', entry);
-      }
+//         }
     }
   });
   
   try {
     observer.observe({ entryTypes: ['longtask'] });
   } catch (error) {
-//     console.warn('Long task monitoring not supported:', error);
-  }
+//     }
 };
 
 export const cacheStaticAssets = (): void => {

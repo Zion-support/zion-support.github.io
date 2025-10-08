@@ -3,7 +3,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const EnhancedFooter: React.FC = () => {
-  const currentYear = new Date().getFullYear();
+  const _currentYear = new Date().getFullYear();
 
   const services = [
     { name: 'AI Solutions', href: '/services/ai' },

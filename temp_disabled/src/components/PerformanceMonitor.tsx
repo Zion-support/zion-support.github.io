@@ -11,16 +11,14 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ children }) => 
       const observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           if (process.env['NODE_ENV'] === 'development') {
-//             console.log('Performance entry:', entry);
-          }
+//             }
         }
       });
 
       try {
         observer.observe({ entryTypes: ['measure', 'navigation', 'paint'] });
       } catch (error) {
-//         console.warn('Performance Observer not supported:', error);
-      }
+//         }
 
       return () => {
         observer.disconnect();

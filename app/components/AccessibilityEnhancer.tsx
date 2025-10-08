@@ -22,8 +22,8 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   useEffect(() => {
     // Announce route changes to screen readers
     const announceRouteChange = () => {
-      const title = document.title;
-      const announcement = document.createElement('div');
+      const _title = document.title;
+      const _announcement = document.createElement('div');
       announcement.setAttribute('role', 'status');
       announcement.setAttribute('aria-live', 'polite');
       announcement.setAttribute('aria-atomic', 'true');
@@ -45,7 +45,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       });
     });
 
-    const titleElement = document.querySelector('title');
+    const _titleElement = document.querySelector('title');
     if (titleElement) {
       observer.observe(titleElement.parentNode as Node, {
         childList: true,
@@ -64,7 +64,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       // Skip to main content with Alt + M
       if (e.altKey && e.key === 'm') {
         e.preventDefault();
-        const main = document.querySelector('main');
+        const _main = document.querySelector('main');
         if (main) {
           (main as HTMLElement).focus();
           (main as HTMLElement).scrollIntoView({ behavior: 'smooth' });
@@ -74,7 +74,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       // Skip to navigation with Alt + N
       if (e.altKey && e.key === 'n') {
         e.preventDefault();
-        const nav = document.querySelector('nav');
+        const _nav = document.querySelector('nav');
         if (nav) {
           (nav as HTMLElement).focus();
           (nav as HTMLElement).scrollIntoView({ behavior: 'smooth' });
@@ -83,9 +83,9 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
 
       // Close modals/dropdowns with Escape
       if (e.key === 'Escape') {
-        const modals = document.querySelectorAll('[role="dialog"][aria-modal="true"]');
+        const _modals = document.querySelectorAll('[role="dialog"][aria-modal="true"]');
         modals.forEach((modal) => {
-          const closeButton = modal.querySelector('[aria-label*="close" i], [aria-label*="dismiss" i]');
+          const _closeButton = modal.querySelector('[aria-label*="close" i], [aria-label*="dismiss" i]');
           if (closeButton) {
             (closeButton as HTMLElement).click();
           }
@@ -116,7 +116,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     if (!enableFocusIndicators) return;
 
     // Add custom focus styles
-    const style = document.createElement('style');
+    const _style = document.createElement('style');
     style.textContent = `
       .keyboard-navigation *:focus {
         outline: 3px solid #3B82F6 !important;

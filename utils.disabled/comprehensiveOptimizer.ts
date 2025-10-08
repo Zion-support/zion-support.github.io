@@ -208,10 +208,9 @@ export class ComprehensiveOptimizer {
     // Performance monitoring
     if (this.config.performance.monitorMemory) {
       this.memoryInterval = setInterval(() => {
-        const memory = getMemoryUsage();
+        const _memory = getMemoryUsage();
         if (memory && memory.percentage > 80) {
-//           console.warn('⚠️ High memory usage detected:', memory);
-          this.handleHighMemoryUsage(memory);
+//           this.handleHighMemoryUsage(memory);
         }
       }, 5000);
     }
@@ -242,13 +241,11 @@ export class ComprehensiveOptimizer {
     switch (entryType) {
       case 'largest-contentful-paint':
         if (entry.startTime > 2500) {
-//           console.warn('⚠️ Slow LCP detected:', entry.startTime);
-        }
+//           }
         break;
       case 'first-input':
         if (entry.startTime > 100) {
-//           console.warn('⚠️ Slow FID detected:', entry.startTime);
-        }
+//           }
         break;
       case 'layout-shift':
         if ((entry as any).value > 0.1) {
@@ -288,7 +285,7 @@ export class ComprehensiveOptimizer {
     };
     overallScore: number;
   } {
-    const accessibilityReport = accessibilityTesting.generateReport();
+    const _accessibilityReport = accessibilityTesting.generateReport();
 //     const performanceMetrics = collectPerformanceMetrics();
     const seoAuditResult = {
       title: seoAudit.checkTitle(),
@@ -316,7 +313,7 @@ export class ComprehensiveOptimizer {
 
   // Calculate performance score
   private calculatePerformanceScore(metrics: Record<string, number>): number {
-    let score = 100;
+    let _score = 100;
     
     // Deduct points for poor metrics
     if (metrics.pageLoadTime > 3000) score -= 20;
@@ -329,7 +326,7 @@ export class ComprehensiveOptimizer {
 
   // Calculate SEO score
   private calculateSEOScore(seoAudit: unknown): number {
-    let score = 0;
+    let _score = 0;
     if (seoAudit.title.hasTitle && seoAudit.title.isValid) score += 20;
     if (seoAudit.description.hasDescription && seoAudit.description.isValid)
       score += 20;
@@ -344,7 +341,7 @@ export class ComprehensiveOptimizer {
   public autoFixAccessibility(): void {
 //     const report = accessibilityTesting.generateReport();
     // Fix missing alt text
-    const images = document.querySelectorAll('img');
+    const _images = document.querySelectorAll('img');
     images.forEach(img => {
       if (!img.alt) {
         img.alt = img.getAttribute('data-alt') || 'Image';
@@ -353,12 +350,12 @@ export class ComprehensiveOptimizer {
     });
     
     // Fix missing form labels
-    const inputs = document.querySelectorAll('input, select, textarea');
+    const _inputs = document.querySelectorAll('input, select, textarea');
     inputs.forEach(input => {
       if (!input.id) {
         input.id = ariaUtils.generateId('input');
       }
-      const label = document.querySelector(`label[for="${input.id}"]`);
+      const _label = document.querySelector(`label[for="${input.id}"]`);
       if (!label && !input.getAttribute('aria-label')) {
         input.setAttribute('aria-label',
           input.getAttribute('placeholder') || 'Input field'
@@ -379,10 +376,9 @@ export class ComprehensiveOptimizer {
     if (typeof window === 'undefined') return;
     
     this.memoryInterval = setInterval(() => {
-      const memoryUsage = getMemoryUsage();
+      const _memoryUsage = getMemoryUsage();
       if (memoryUsage && memoryUsage.usedJSHeapSize > 100 * 1024 * 1024) { // 100MB
-//         console.warn('High memory usage detected:', memoryUsage);
-      }
+//         }
     }, 30000); // Check every 30 seconds
   }
 
@@ -409,7 +405,7 @@ export class ComprehensiveOptimizer {
     if (accessibility.enableMotionReduction) {
       // Apply motion reduction preferences
       document.addEventListener('DOMContentLoaded', () => {
-        const elements = document.querySelectorAll('[data-animate]');
+        const _elements = document.querySelectorAll('[data-animate]');
         elements.forEach(element => {
           animationUtils.applyReducedMotion(element as HTMLElement);
         });
@@ -419,7 +415,7 @@ export class ComprehensiveOptimizer {
     if (accessibility.enableHighContrast) {
       // Apply high contrast preferences
       document.addEventListener('DOMContentLoaded', () => {
-        const elements = document.querySelectorAll('[data-contrast]');
+        const _elements = document.querySelectorAll('[data-contrast]');
         elements.forEach(element => {
           highContrastUtils.applyHighContrast(element as HTMLElement);
         });
@@ -436,10 +432,9 @@ export class ComprehensiveOptimizer {
     if (performance.enableMemoryMonitoring) {
       // Start memory monitoring
       setInterval(() => {
-        const memory = getMemoryUsage();
+        const _memory = getMemoryUsage();
         if (memory) {
-//           console.log('Memory usage:', memory);
-        }
+//           }
       }, 30000); // Check every 30 seconds
     }
 
@@ -480,10 +475,8 @@ export class ComprehensiveOptimizer {
       // Run SEO audit
       try {
 //         const auditResults = await seoAudit();
-//         console.log('SEO Audit Results:', auditResults);
-      } catch (error) {
-//         console.error('SEO audit failed:', error);
-      }
+//         } catch (error) {
+//         }
     }
   }
 
@@ -491,7 +484,7 @@ export class ComprehensiveOptimizer {
    * Optimize a specific element
    */
   optimizeElement(element: HTMLElement, options: Partial<OptimizationConfig> = {}): void {
-    const config = { ...this.config, ...options };
+    const _config = { ...this.config, ...options };
 
     // Apply accessibility optimizations
     if (config.accessibility.enableAriaUtils) {
@@ -503,15 +496,14 @@ export class ComprehensiveOptimizer {
 
     if (config.accessibility.enableContrastChecking) {
       // Check contrast ratios
-      const computedStyle = window.getComputedStyle(element);
+      const _computedStyle = window.getComputedStyle(element);
 //       const backgroundColor = computedStyle.backgroundColor;
 //       const color = computedStyle.color;
       
       if (backgroundColor && color) {
 //         const ratio = contrastUtils.getContrastRatio(backgroundColor, color);
         if (ratio < 4.5) {
-//           console.warn('Low contrast ratio detected:', ratio);
-        }
+//           }
       }
     }
 

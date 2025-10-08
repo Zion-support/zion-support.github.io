@@ -115,7 +115,7 @@ export class BannerObserver {
  * Banner loader with intersection observer
  */
 export const useBannerLoading = (componentName: string) => {
-  const manager = new BannerLoadingManager();
+  const _manager = new BannerLoadingManager();
   return {
     isLoading: manager.isLoading(componentName),
     isLoaded: manager.isLoaded(componentName),

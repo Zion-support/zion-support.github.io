@@ -80,10 +80,8 @@ function App() {
     // Initialize basic optimizations
     const initializeOptimizations = () => {
       try {
-//         console.log('App initialized successfully');
-      } catch (error) {
-//         console.error('Failed to initialize app:', error);
-      }
+//         } catch (error) {
+//         }
     };
 
     // Initialize optimizations after component mount
@@ -134,8 +132,7 @@ class ErrorBoundary extends React.Component<
   }
 
   override componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
-//     console.error('Error caught by boundary:', error, errorInfo);
-  }
+//     }
 
   override render() {
     if (this.state.hasError) {

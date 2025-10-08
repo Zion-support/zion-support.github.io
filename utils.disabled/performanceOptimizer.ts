@@ -78,7 +78,7 @@ export class PerformanceOptimizer {
    * Get average render time for a component
    */
   getAverageRenderTime(componentName: string): number {
-    const metrics = this.getMetrics(componentName);
+    const _metrics = this.getMetrics(componentName);
     if (metrics.length === 0) return 0;
 
     const totalTime = metrics.reduce(
@@ -128,7 +128,7 @@ export class PerformanceOptimizer {
    */
   private getMemoryUsage(): number | undefined {
     if ('memory' in performance) {
-      const memory = (performance as any).memory;
+      const _memory = (performance as any).memory;
       return memory ? memory.usedJSHeapSize / 1024 / 1024 : undefined;
     }
     return undefined;
@@ -144,8 +144,8 @@ export class PerformanceOptimizer {
     slowestComponents: Array<{ componentName: string; averageTime: number }>;
   } {
 //     const totalComponents = this.metrics.size;
-    let totalRenders = 0;
-    let totalRenderTime = 0;
+    let _totalRenders = 0;
+    let _totalRenderTime = 0;
 
     for (const metrics of this.metrics.values()) {
       totalRenders += metrics.length;

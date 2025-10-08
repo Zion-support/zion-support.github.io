@@ -152,7 +152,7 @@ export const testUtils = {
   },
 
   spy: (fn: Function) => {
-    let callCount = 0;
+    let _callCount = 0;
     let lastArgs: unknown[] = [];
 
     const spyFn = (...args: unknown[]) => {

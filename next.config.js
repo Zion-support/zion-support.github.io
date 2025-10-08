@@ -55,7 +55,7 @@ const nextConfig = {
               );
             },
             name(module) {
-              const hash = crypto.createHash('sha1');
+              const _hash = crypto.createHash('sha1');
               hash.update(module.identifier());
               return hash.digest('hex').substring(0, 8);
             },

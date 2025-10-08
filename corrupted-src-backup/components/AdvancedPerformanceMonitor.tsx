@@ -18,7 +18,7 @@ export const AdvancedPerformanceMonitor: React.FC = () => {
     if (process.env['NODE_ENV'] !== 'development') return;
 
     const observer = new PerformanceObserver(list => {
-      const entries = list.getEntries();
+      const _entries = list.getEntries();
       entries.forEach(entry => {
         if (entry.entryType === 'largest-contentful-paint') {
           setMetrics(prev => ({ ...prev, lcp: entry.startTime }));

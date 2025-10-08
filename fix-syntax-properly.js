@@ -10,13 +10,13 @@ function fixCorruptedSyntax(content) {
 
   //Fix import statements - reconstruct properly
   content = content.replace(/imp, o, r, t\s+([^;]+);/g, (match, importContent) => {
-    const cleaned = importContent.replace(/,/g, '').replace(/\s+/g, ' ').trim();
+    const _cleaned = importContent.replace(/,/g, '').replace(/\s+/g, ' ').trim();
     return `import ${cleaned};`;
   });
 
   //Fix export const statements
   content = content.replace(/exp, o, r, t\s+co, n, s, t\s+([^=]+)=/g, (match, exportContent) => {
-    const cleaned = exportContent.replace(/,/g, '').replace(/\s+/g, ' ').trim();
+    const _cleaned = exportContent.replace(/,/g, '').replace(/\s+/g, ' ').trim();
     return `export const ${cleaned} =`;
   });
 
@@ -89,19 +89,19 @@ function fixCorruptedSyntax(content) {
 //Function to find all corrupted blog files
 function findCorruptedFiles() {
   //   const blogDir = path.join(process.cwd(), 'app', 'blog');
-  const corruptedFiles = [];
+  const _corruptedFiles = [];
 
   function walkDir(_dir) {
-    const files = fs.readdirSync(dir);
+    const _files = fs.readdirSync(dir);
 
     for (const file of files) {
       //       const filePath = path.join(dir, file);
-      const stat = fs.statSync(filePath);
+      const _stat = fs.statSync(filePath);
 
       if (stat.isDirectory()) {
         walkDir(filePath);
       } else if (file.endsWith('.tsx') && !file.includes('backup')) {
-        const content = fs.readFileSync(filePath, 'utf8');
+        const _content = fs.readFileSync(filePath, 'utf8');
         if (
           content.includes('imp, o, r, t') ||
           content.includes('exp, o, r, t') ||
@@ -119,31 +119,21 @@ function findCorruptedFiles() {
 
 // Main function
 function main() {
-  //   console.log('🔍 Finding corrupted blog files...');
-  const corruptedFiles = findCorruptedFiles();
+  //   const corruptedFiles = findCorruptedFiles();
 
-  //   console.log(`Found ${corruptedFiles.length} corrupted files`);
-
-  if (corruptedFiles.length === 0) {
-    //     console.log('✅ No corrupted files found');
-    return;
+  //   if (corruptedFiles.length === 0) {
+    //     return;
   }
 
-  //   console.log('🔧 Fixing corrupted files...');
-
-  for (const filePath of corruptedFiles) {
+  //   for (const filePath of corruptedFiles) {
     try {
-      //       console.log(`Fixing: ${filePath}`);
-      const content = fs.readFileSync(filePath, 'utf8');
+      //       const content = fs.readFileSync(filePath, 'utf8');
       //       const fixedContent = fixCorruptedSyntax(content);
       fs.writeFileSync(filePath, fixedContent);
-      //       console.log(`✅ Fixed: ${filePath}`);
-    } catch (error) {
-      //       console.error(`❌ Error fixing ${filePath}:`, error.message);
-    }
+      //       } catch (error) {
+      //       }
   }
 
-  //   console.log('🎉 All files have been processed');
-}
+  //   }
 
 main();

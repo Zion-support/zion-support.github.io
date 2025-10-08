@@ -1382,7 +1382,7 @@ const MicroSAASPage: React.FC = () => {
     }
   ];
 
-  const categories = [...new Set(microSAASServices.map(service => service.category))];
+  const _categories = [...new Set(microSAASServices.map(service => service.category))];
 
   return (
     <>

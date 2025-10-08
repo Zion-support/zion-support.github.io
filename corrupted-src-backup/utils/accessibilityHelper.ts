@@ -80,7 +80,7 @@ export const ariaHelpers = {
  * Screen reader announcements
  */
 export const announceToScreenReader = (message: string): void => {
-  const announcement = document.createElement('div');
+  const _announcement = document.createElement('div');
   announcement.setAttribute('aria-live', 'polite');
   announcement.setAttribute('aria-atomic', 'true');
   announcement.className = 'sr-only';
@@ -106,7 +106,7 @@ export const keyboardNavigation = {
       items[nextIndex]?.focus();
     } else if (event.key === 'ArrowUp' || event.key === 'ArrowLeft') {
       event.preventDefault();
-      const prevIndex = currentIndex === 0 ? items.length - 1 : currentIndex - 1;
+      const _prevIndex = currentIndex === 0 ? items.length - 1 : currentIndex - 1;
       items[prevIndex]?.focus();
     }
   },

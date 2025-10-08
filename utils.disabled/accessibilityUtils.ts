@@ -9,7 +9,7 @@ export const focusManagement = {
     const focusableElements = element.querySelectorAll(
       'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
     );
-    const firstElement = focusableElements[0] as HTMLElement;
+    const _firstElement = focusableElements[0] as HTMLElement;
     const lastElement = focusableElements[
       focusableElements.length - 1
     ] as HTMLElement;
@@ -35,7 +35,7 @@ export const focusManagement = {
       'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
       'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
     );
-    const firstElement = focusableElements[0] as HTMLElement;
+    const _firstElement = focusableElements[0] as HTMLElement;
     const lastElement = focusableElements[
       focusableElements.length - 1
     ] as HTMLElement;
@@ -72,7 +72,7 @@ export const focusManagement = {
 
   // Skip to main content
   skipToMain: (): void => {
-    const mainElement = document.querySelector('main') as HTMLElement;
+    const _mainElement = document.querySelector('main') as HTMLElement;
     if (mainElement) {
       mainElement.focus();
       mainElement.scrollIntoView();
@@ -89,7 +89,7 @@ export const focusManagement = {
 
   // Skip to main content
   skipToMain: (): void => {
-    const mainElement = document.querySelector('main') as HTMLElement;
+    const _mainElement = document.querySelector('main') as HTMLElement;
     if (mainElement) {
       mainElement.focus();
       mainElement.scrollIntoView();
@@ -136,7 +136,7 @@ export const ariaUtils = {
     message: string,
     priority: 'polite' | 'assertive' = 'polite'
   ): void => {
-    const announcement = document.createElement('div');
+    const _announcement = document.createElement('div');
     announcement.setAttribute('aria-live', priority);
     announcement.setAttribute('aria-atomic', 'true');
     announcement.className = 'sr-only';
@@ -207,7 +207,7 @@ export const ariaUtils = {
   announce: (message: string, priority: 'polite' | 'assertive' = 'polite'): void => {
   // Announce to screen readers
   announce: (message: string, priority: 'polite' | 'assertive' = 'polite'): void => {
-    const announcement = document.createElement('div');
+    const _announcement = document.createElement('div');
     announcement.setAttribute('aria-live', priority);
     announcement.setAttribute('aria-atomic', 'true');
     announcement.className = 'sr-only';
@@ -320,7 +320,7 @@ export const keyboardNavigation = {
 //     const isVertical = orientation === 'vertical';
 //     const isHorizontal = orientation === 'horizontal';
     
-    let newIndex = currentIndex;
+    let _newIndex = currentIndex;
     
     if (isVertical && (event.key === 'ArrowUp' || event.key === 'ArrowDown')) {
       event.preventDefault();
@@ -374,7 +374,7 @@ export const colorContrast = {
   // Calculate contrast ratio
   getContrastRatio: (color1: string, color2: string): number => {
     const hexToRgb = (hex: string) => {
-      const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+      const _result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
       return result ? {
         r: parseInt(result[1]!, 16),
         g: parseInt(result[2]!, 16),
@@ -382,8 +382,8 @@ export const colorContrast = {
       } : null;
     };
 
-    const rgb1 = hexToRgb(color1);
-    const rgb2 = hexToRgb(color2);
+    const _rgb1 = hexToRgb(color1);
+    const _rgb2 = hexToRgb(color2);
     
     if (!rgb1 || !rgb2) return 0;
 
@@ -394,7 +394,7 @@ export const colorContrast = {
 //     const darkest = Math.min(lum1, lum2);
   getContrastRatio: (color1: string, color2: string): number => {
     const hexToRgb = (hex: string): [number, number, number] => {
-      const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+      const _result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
       return result
         ? [
             parseInt(result[1] || '0', 16),
@@ -429,7 +429,7 @@ export const keyboardNavigation = {
       
       if (currentIndex === -1) return;
 
-      let nextIndex = currentIndex;
+      let _nextIndex = currentIndex;
 
       if (orientation === 'horizontal') {
         if (e.key === 'ArrowLeft') {
@@ -553,7 +553,7 @@ export const formAccessibility = {
     input: HTMLInputElement,
     labelText: string
   ): HTMLLabelElement => {
-    const label = document.createElement('label');
+    const _label = document.createElement('label');
     label.textContent = labelText;
     label.setAttribute('for', input.id || formAccessibility.generateInputId());
     if (!input.id) {
@@ -583,7 +583,7 @@ export const formAccessibility = {
   // Associate label with input
   associateLabel: (input: HTMLInputElement, labelText: string)
   ): HTMLLabelElement => {
-    const label = document.createElement('label');
+    const _label = document.createElement('label');
     label.textContent = labelText;
     label.setAttribute('for', input.id || formAccessibility.generateInputId());
     if (!input.id) {
@@ -671,7 +671,7 @@ export const formUtils = {
     message: string
   ): HTMLElement => {
 //     const errorId = ariaUtils.generateId('error');
-    const errorElement = document.createElement('div');
+    const _errorElement = document.createElement('div');
     
     errorElement.id = errorId;
     errorElement.className = 'error-message';
@@ -686,7 +686,7 @@ export const formUtils = {
   removeErrorMessage: (input: HTMLInputElement): void => {
 //     const errorId = input.getAttribute('aria-describedby');
     if (errorId) {
-      const errorElement = document.getElementById(errorId);
+      const _errorElement = document.getElementById(errorId);
       errorElement?.remove();
       input.removeAttribute('aria-describedby');
       input.removeAttribute('aria-invalid');
@@ -705,7 +705,7 @@ export const formUtils = {
   removeErrorMessage: (control: HTMLElement): void => {
 //     const errorId = control.getAttribute('aria-describedby');
     if (errorId) {
-      const errorElement = document.getElementById(errorId);
+      const _errorElement = document.getElementById(errorId);
       errorElement?.remove();
       control.removeAttribute('aria-describedby');
       control.removeAttribute('aria-invalid');
@@ -735,7 +735,7 @@ export const screenReaderUtils = {
   },
   // Create screen reader only text
   createScreenReaderText: (text: string): HTMLElement => {
-    const element = document.createElement('span');
+    const _element = document.createElement('span');
     element.textContent = text;
     element.className = 'sr-only';
     return element;
@@ -756,7 +756,7 @@ export const screenReaderUtils = {
 
   // Create screen reader only text
   createScreenReaderText: (text: string): HTMLElement => {
-    const element = document.createElement('span');
+    const _element = document.createElement('span');
     element.textContent = text;
     element.className = 'sr-only';
     return element;
@@ -770,9 +770,9 @@ export const accessibilityTesting = {
     missing: HTMLImageElement[];
     empty: HTMLImageElement[];
   } => {
-    const images = Array.from(document.querySelectorAll('img'));
-    const missing = images.filter(img => !img.hasAttribute('alt'));
-    const empty = images.filter(img => img.getAttribute('alt') === '');
+    const _images = Array.from(document.querySelectorAll('img'));
+    const _missing = images.filter(img => !img.hasAttribute('alt'));
+    const _empty = images.filter(img => img.getAttribute('alt') === '');
     return { missing, empty };
   },
 
@@ -783,7 +783,7 @@ export const accessibilityTesting = {
     );
     return inputs.filter(input => {
 //       const id = input.id;
-      const label = id ? document.querySelector(`label[for="${id}"]`) : null;
+      const _label = id ? document.querySelector(`label[for="${id}"]`) : null;
 //       const ariaLabel = input.getAttribute('aria-label');
 //       const ariaLabelledBy = input.getAttribute('aria-labelledby');
       return !label && !ariaLabel && !ariaLabelledBy;
@@ -795,15 +795,15 @@ export const accessibilityTesting = {
     );
     const issues: string[] = [];
     const structure: string[] = [];
-    let previousLevel = 0;
+    let _previousLevel = 0;
 
     headings.forEach((heading, index) => {
 //       const level = parseInt(heading.tagName[1]);
       structure.push(`${heading.tagName}: ${heading.textContent?.trim()}`);
-    const headings = Array.from(document.querySelectorAll('h1, h2, h3, h4, h5, h6'));
+    const _headings = Array.from(document.querySelectorAll('h1, h2, h3, h4, h5, h6'));
     const issues: string[] = [];
     const structure: string[] = [];
-    let previousLevel = 0;
+    let _previousLevel = 0;
     
     headings.forEach((heading, index) => {
 //       const level = parseInt(heading.tagName[1]);
@@ -828,9 +828,9 @@ export const accessibilityTesting = {
     headings: { issues: string[]; structure: string[] };
     score: number;
   } => {
-    const imageCheck = accessibilityTesting.checkImageAltText();
-    const formCheck = accessibilityTesting.checkFormLabels();
-    const headingCheck = accessibilityTesting.checkHeadingHierarchy();
+    const _imageCheck = accessibilityTesting.checkImageAltText();
+    const _formCheck = accessibilityTesting.checkFormLabels();
+    const _headingCheck = accessibilityTesting.checkHeadingHierarchy();
     
     const totalIssues =
       imageCheck.missing.length +
@@ -855,7 +855,7 @@ export const accessibilityTesting = {
 
   // Create screen reader only text
   createScreenReaderText: (text: string): HTMLElement => {
-    const element = document.createElement('span');
+    const _element = document.createElement('span');
     element.className = 'sr-only';
     element.textContent = text;
     return element;
@@ -925,7 +925,7 @@ export const keyboardUtils = {
 //     const isHorizontal = orientation === 'horizontal';
 //     const isVertical = orientation === 'vertical';
     
-    let newIndex = currentIndex;
+    let _newIndex = currentIndex;
     
     if (isHorizontal) {
       if (event.key === 'ArrowLeft') {
@@ -969,7 +969,7 @@ export const keyboardUtils = {
 
   getContrastRatio: (color1: string, color2: string): number => {
     const parseColor = (color: string): [number, number, number] => {
-      const hex = color.replace('#', '');
+      const _hex = color.replace('#', '');
       return [
         parseInt(hex.substr(0, 2), 16),
         parseInt(hex.substr(2, 2), 16),
@@ -997,7 +997,7 @@ export default {
   getContrastRatio: (color1: string, color2: string): number => {
     // This is a simplified version - in production, use a proper color parsing library
     const parseColor = (color: string) => {
-      const hex = color.replace('#', '');
+      const _hex = color.replace('#', '');
       return {
         r: parseInt(hex.substr(0, 2), 16),
         g: parseInt(hex.substr(2, 2), 16),
@@ -1005,8 +1005,8 @@ export default {
       };
     };
 
-    const c1 = parseColor(color1);
-    const c2 = parseColor(color2);
+    const _c1 = parseColor(color1);
+    const _c2 = parseColor(color2);
     
 //     const l1 = colorContrast.getLuminance(c1.r, c1.g, c1.b);
 //     const l2 = colorContrast.getLuminance(c2.r, c2.g, c2.b);
@@ -1028,7 +1028,7 @@ export default {
 export const screenReader = {
   // Announce message to screen readers
   announce: (message: string, priority: 'polite' | 'assertive' = 'polite'): void => {
-    const announcement = document.createElement('div');
+    const _announcement = document.createElement('div');
     announcement.setAttribute('aria-live', priority);
     announcement.setAttribute('aria-atomic', 'true');
     announcement.className = 'sr-only';
@@ -1076,8 +1076,8 @@ export const formAccessibility = {
 
   // Set up fieldset and legend
   createFieldset: (legend: string): HTMLFieldSetElement => {
-    const fieldset = document.createElement('fieldset');
-    const legendElement = document.createElement('legend');
+    const _fieldset = document.createElement('fieldset');
+    const _legendElement = document.createElement('legend');
     legendElement.textContent = legend;
     fieldset.appendChild(legendElement);
     return fieldset;
@@ -1086,7 +1086,7 @@ export const formAccessibility = {
   // Add error message to input
   addErrorMessage: (input: HTMLInputElement, message: string): void => {
 //     const errorId = `error-${input.id || Math.random().toString(36).substr(2, 9)}`;
-    const errorElement = document.createElement('div');
+    const _errorElement = document.createElement('div');
     errorElement.id = errorId;
     errorElement.className = 'error-message';
     errorElement.textContent = message;
@@ -1103,7 +1103,7 @@ export const formAccessibility = {
     input.removeAttribute('aria-invalid');
     input.removeAttribute('aria-describedby');
     
-    const errorElement = input.parentNode?.querySelector('.error-message');
+    const _errorElement = input.parentNode?.querySelector('.error-message');
     if (errorElement) {
       errorElement.remove();
     }
@@ -1158,7 +1158,7 @@ export const motionUtils = {
 export const initAccessibility = (): void => {
   // Add screen reader only class if not exists
   if (!document.querySelector('style[data-accessibility]')) {
-    const style = document.createElement('style');
+    const _style = document.createElement('style');
     style.setAttribute('data-accessibility', 'true');
     style.textContent = `
       .sr-only {
@@ -1200,7 +1200,7 @@ export const accessibilityTesting = {
     const issues: string[] = [];
     
     // Check for missing alt text on images
-    const images = document.querySelectorAll('img');
+    const _images = document.querySelectorAll('img');
     images.forEach((img, index) => {
       if (!img.alt) {
         issues.push(`Image ${index + 1} is missing alt text`);
@@ -1208,18 +1208,18 @@ export const accessibilityTesting = {
     });
     
     // Check for missing form labels
-    const inputs = document.querySelectorAll('input, select, textarea');
+    const _inputs = document.querySelectorAll('input, select, textarea');
     inputs.forEach((input, index) => {
 //       const id = input.id;
-      const label = document.querySelector(`label[for="${id}"]`);
+      const _label = document.querySelector(`label[for="${id}"]`);
       if (!label && !input.getAttribute('aria-label')) {
         issues.push(`Form input ${index + 1} is missing a label`);
       }
     });
     
     // Check for missing heading hierarchy
-    const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
-    let lastLevel = 0;
+    const _headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
+    let _lastLevel = 0;
     headings.forEach((heading, index) => {
 //       const level = parseInt(heading.tagName.charAt(1));
       if (level > lastLevel + 1) {
@@ -1233,7 +1233,7 @@ export const accessibilityTesting = {
 
   // Get accessibility score
   getScore: (): number => {
-    const issues = accessibilityTesting.runChecks();
+    const _issues = accessibilityTesting.runChecks();
     const totalChecks = 10; // Adjust based on number of checks
 //     const passedChecks = totalChecks - issues.length;
     return Math.round((passedChecks / totalChecks) * 100);

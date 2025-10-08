@@ -18,8 +18,7 @@ interface LazyBannerConfig {
               );
               // Return a fallback component
               resolve({ default: () => null });
-//               console.error(`Retry failed for banner: ${componentName}`, retryError);
-              // Return a fallback component
+//               // Return a fallback component
               resolve({
                 default: () => React.createElement('div', null, 'Banner temporarily unavailable')
               } as BannerModule);
@@ -64,8 +63,7 @@ export class BannerObserver {
       // Fallback for browsers without requestIdleCallback
       setTimeout(() => {
         importFn().catch(error => {
-//           console.warn('Banner preload failed:', error);
-        });
+//           });
       }, 100);
     }
   }
@@ -97,8 +95,7 @@ export const trackBannerPerformance = (
 ) => {
   if (typeof window !== 'undefined' && 'performance' in window) {
     // Send to analytics
-//     console.log(`Banner Performance [${bannerName}]:`, metrics);
-    // You can integrate with your analytics service here
+//     // You can integrate with your analytics service here
     // Example: gtag('event', 'banner_performance', {...metrics, banner: bannerName });
   }
 };
@@ -159,7 +156,7 @@ export const loadBannersByPriority = (
   }>
 ): void => {
   const sortedBanners = banners.sort((a, b) => {
-    const priorityOrder = { high: 0, medium: 1, low: 2 };
+    const _priorityOrder = { high: 0, medium: 1, low: 2 };
     return priorityOrder[a.priority] - priorityOrder[b.priority];
   });
 
@@ -209,11 +206,10 @@ export class BannerManager {
 
   private async preloadBanner(config: BannerConfig): Promise<void> {
     try {
-      const module = await config.importFn();
+      const _module = await config.importFn();
       this.loadedBanners.set(config.name, module.default);
     } catch (error) {
-//       console.warn(`Failed to preload banner: ${config.name}`, error);
-    }
+//       }
   }
 
   getBanner(name: string): ComponentType<any> | null {

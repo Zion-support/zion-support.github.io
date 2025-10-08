@@ -7,8 +7,7 @@ import { useEffect, useCallback, useRef } from 'react';
 // Mock analytics object for performance tracking
 const analytics = {
   trackPerformance: (name: string, value: number, unit: string = 'ms') => {
-//     console.log(`Performance: ${name} = ${value}${unit}`);
-  },
+//     },
   track: (
     event: string,
     category: string,
@@ -16,11 +15,7 @@ const analytics = {
     label?: string,
     value?: number
   ) => {
-//     console.log(`Analytics: ${event} - ${category} - ${action}`, {
-      label,
-      value,
-    });
-  },
+//     },
 };
 
 interface PerformanceMetrics {
@@ -63,15 +58,15 @@ export function usePerformance(
     interactionTime: 0,
   });
 
-  const renderStartTime = useRef<number>(0);
-  const mountStartTime = useRef<number>(0);
+  const _renderStartTime = useRef<number>(0);
+  const _mountStartTime = useRef<number>(0);
 
   // Track component mount time
   useEffect(() => {
     mountStartTime.current = performance.now();
 
     return () => {
-      const mountTime = performance.now() - mountStartTime.current;
+      const _mountTime = performance.now() - mountStartTime.current;
       metricsRef.current.componentMountTime = mountTime;
 
       if (logToConsole) {
@@ -87,7 +82,7 @@ export function usePerformance(
   // Track memory usage
   useEffect(() => {
     if (trackMemoryUsage && 'memory' in performance) {
-      const memory = (performance as any).memory;
+      const _memory = (performance as any).memory;
       if (memory) {
         metricsRef.current.memoryUsage = memory.usedJSHeapSize / 1024 / 1024; // MB
 
@@ -112,7 +107,7 @@ export function usePerformance(
 
       // Use requestAnimationFrame to measure actual render time
       requestAnimationFrame(() => {
-        const renderTime = performance.now() - renderStartTime.current;
+        const _renderTime = performance.now() - renderStartTime.current;
         metricsRef.current.renderTime = renderTime;
 
         if (logToConsole) {
@@ -129,7 +124,7 @@ export function usePerformance(
   const trackInteraction = useCallback(
     (action: string) => {
       if (trackInteractions) {
-        const interactionTime = performance.now();
+        const _interactionTime = performance.now();
         metricsRef.current.interactionTime = interactionTime;
 
         if (logToConsole) {
@@ -171,7 +166,7 @@ export function usePagePerformance(pageName: string) {
 
     // Track page load metrics
     const trackPageLoad = () => {
-      const loadTime = performance.now() - startTime;
+      const _loadTime = performance.now() - startTime;
 
       analytics.trackPerformance(`${pageName}_load`, loadTime);
       analytics.track('page_load', pageName, 'loaded', undefined, loadTime);

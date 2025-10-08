@@ -35,19 +35,19 @@ const specificFixes = {
 
 function processFile(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    let modified = false;
+    let _content = fs.readFileSync(filePath, 'utf8');
+    let _modified = false;
 
     // Apply specific fixes
-    const relativePath = path.relative(path.join(__dirname, 'app'), filePath);
+    const _relativePath = path.relative(path.join(__dirname, 'app'), filePath);
     if (specificFixes[relativePath]) {
-      const fix = specificFixes[relativePath];
+      const _fix = specificFixes[relativePath];
       if (fix.keywords) {
         const keywordArray = fix.keywords
           .split(', ')
           .map(k => `'${k}'`)
           .join(', ');
-        const pattern = /keywords:\s*'[^']+',/g;
+        const _pattern = /keywords:\s*'[^']+',/g;
         if (pattern.test(content)) {
           content = content.replace(pattern, `keywords: [${keywordArray}],`);
           modified = true;
@@ -82,23 +82,23 @@ function processFile(filePath) {
 
     if (modified) {
       fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed: ${filePath}`);
+
       return true;
     }
     return false;
   } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
+
     return false;
   }
 }
 
 function processDirectory(dirPath) {
-  const items = fs.readdirSync(dirPath);
-  let totalFixed = 0;
+  const _items = fs.readdirSync(dirPath);
+  let _totalFixed = 0;
 
   items.forEach(item => {
-    const fullPath = path.join(dirPath, item);
-    const stat = fs.statSync(fullPath);
+    const _fullPath = path.join(dirPath, item);
+    const _stat = fs.statSync(fullPath);
 
     if (stat.isDirectory()) {
       totalFixed += processDirectory(fullPath);
@@ -113,7 +113,6 @@ function processDirectory(dirPath) {
 }
 
 // Process the app directory
-const appDir = path.join(__dirname, 'app');
-console.log('Fixing final comprehensive issues...');
-const fixedCount = processDirectory(appDir);
-console.log(`Fixed ${fixedCount} files`);
+const _appDir = path.join(__dirname, 'app');
+
+const _fixedCount = processDirectory(appDir);

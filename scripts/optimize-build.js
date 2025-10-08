@@ -4,21 +4,19 @@ import fs from 'fs';
 import path from 'path';
 import { execSync } from 'child_process';
 
-console.log('🚀 Starting build optimization...');
-
 // 1. Clean previous builds
-console.log('🧹 Cleaning previous builds...');
+
 try {
   execSync('rm -rf dist node_modules/.vite .turbo', { stdio: 'inherit' });
-  console.log('✅ Clean completed');
+
 } catch (error) {
-  console.log('⚠️  Clean warning:', error.message);
+
 }
 
 // 2. Optimize package.json scripts
-console.log('📦 Optimizing package.json...');
-const packageJsonPath = path.join(process.cwd(), 'package.json');
-const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));
+
+const _packageJsonPath = path.join(process.cwd(), 'package.json');
+const _packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));
 
 // Add optimized build scripts
 packageJson.scripts = {
@@ -29,12 +27,11 @@ packageJson.scripts = {
 };
 
 fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2));
-console.log('✅ Package.json optimized');
 
 // 3. Create optimized vite config
-console.log('⚙️  Creating optimized Vite config...');
-const viteConfigPath = path.join(process.cwd(), 'vite.config.js');
-let viteConfig = fs.readFileSync(viteConfigPath, 'utf8');
+
+const _viteConfigPath = path.join(process.cwd(), 'vite.config.js');
+let _viteConfig = fs.readFileSync(viteConfigPath, 'utf8');
 
 // Add performance optimizations
 const optimizations = `
@@ -67,10 +64,9 @@ viteConfig = viteConfig.replace(
 );
 
 fs.writeFileSync(viteConfigPath, viteConfig);
-console.log('✅ Vite config optimized');
 
 // 4. Create .npmrc for better caching
-console.log('📁 Creating .npmrc for better caching...');
+
 const npmrcContent = `# Optimize npm for better performance
 prefer-offline=true
 audit-level=moderate
@@ -81,12 +77,11 @@ maxsockets=1
 `;
 
 fs.writeFileSync('.npmrc', npmrcContent);
-console.log('✅ .npmrc created');
 
 // 5. Create optimized netlify.toml
-console.log('🌐 Optimizing Netlify configuration...');
-const netlifyTomlPath = path.join(process.cwd(), 'netlify.toml');
-let netlifyToml = fs.readFileSync(netlifyTomlPath, 'utf8');
+
+const _netlifyTomlPath = path.join(process.cwd(), 'netlify.toml');
+let _netlifyToml = fs.readFileSync(netlifyTomlPath, 'utf8');
 
 // Add build optimizations
 const buildOptimizations = `
@@ -116,8 +111,5 @@ netlifyToml = netlifyToml.replace(
 );
 
 fs.writeFileSync(netlifyTomlPath, netlifyToml);
-console.log('✅ Netlify configuration optimized');
 
-console.log('🎉 Build optimization complete!');
-console.log('💡 Use "npm run build:optimized" for production builds');
-console.log('💡 Use "npm run build:fast" for faster development builds');
+

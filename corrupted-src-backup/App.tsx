@@ -15,12 +15,9 @@ import './index.css';
 function App() {
   useEffect(() => {
     // Initialize basic optimizations
-    //     console.log('App initialized successfully');
-
-    // Cleanup on unmount
+    //     // Cleanup on unmount
     return () => {
-      //       console.log('App cleanup');
-    };
+      //       };
   }, []);
 
   return (
@@ -60,8 +57,7 @@ class ErrorBoundary extends React.Component<
   }
 
   componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
-    //     console.error('Error caught by boundary:', error, errorInfo);
-  }
+    //     }
 
   render() {
     if (this.state.hasError) {

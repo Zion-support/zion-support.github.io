@@ -3,8 +3,8 @@ export const analyticsUtils = {
   // Performance monitoring
   measurePerformance: () => {
     if (typeof window !== 'undefined' && 'performance' in window) {
-      const navigation = performance.getEntriesByType('navigation')[0];
-      const paint = performance.getEntriesByType('paint');
+      const _navigation = performance.getEntriesByType('navigation')[0];
+      const _paint = performance.getEntriesByType('paint');
 
       const metrics = {
         domContentLoaded:
@@ -32,9 +32,7 @@ export const analyticsUtils = {
     };
 
     // Send to analytics service
-    //     console.error('Error tracked:', errorData);
-
-    // You can integrate with services like Sentry, LogRocket, etc.
+    //     // You can integrate with services like Sentry, LogRocket, etc.
     return errorData;
   },
 
@@ -50,8 +48,7 @@ export const analyticsUtils = {
       metadata,
     };
 
-    //     console.log('User interaction tracked:', interactionData);
-    return interactionData;
+    //     return interactionData;
   },
 
   // Core Web Vitals

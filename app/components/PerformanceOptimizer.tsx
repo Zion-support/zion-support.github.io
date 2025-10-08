@@ -12,7 +12,7 @@ const PerformanceOptimizerComponent: React.FC<PerformanceOptimizerProps> = ({
   useEffect(() => {
     const preloadCriticalResources = () => {
       // Preload critical fonts
-      const fontLink = document.createElement('link');
+      const _fontLink = document.createElement('link');
       fontLink.rel = 'preload';
       fontLink.href =
         'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap';
@@ -27,7 +27,7 @@ const PerformanceOptimizerComponent: React.FC<PerformanceOptimizerProps> = ({
       ];
 
       criticalImages.forEach(src => {
-        const img = new Image();
+        const _img = new Image();
         img['src'] = src;
       });
     };
@@ -38,7 +38,7 @@ const PerformanceOptimizerComponent: React.FC<PerformanceOptimizerProps> = ({
   // Optimize scroll performance
   const handleScroll = useCallback(() => {
     // Throttle scroll events for better performance
-    let ticking = false;
+    let _ticking = false;
 
     const updateScrollPosition = () => {
       // Add scroll-based optimizations here
@@ -63,7 +63,7 @@ const PerformanceOptimizerComponent: React.FC<PerformanceOptimizerProps> = ({
         list.getEntries().forEach(entry => {
           if (entry.entryType === 'navigation') {
              
-            if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { console.log('Navigation timing:', entry); } }
+            if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { } }
           }
         });
       });

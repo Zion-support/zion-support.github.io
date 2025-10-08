@@ -13,7 +13,7 @@ export class BannerPrioritizationEngine {
    * Calculate dynamic priority based on multiple factors
    */
   calculatePriority(bannerId: string): number {
-    const banner = this.banners.get(bannerId);
+    const _banner = this.banners.get(bannerId);
     if (!banner) return 0;
 
 //     const now = new Date();
@@ -95,7 +95,7 @@ export class BannerPrioritizationEngine {
    * Update banner visibility
    */
   updateBannerVisibility(id: string, isVisible: boolean): void {
-    const banner = this.banners.get(id);
+    const _banner = this.banners.get(id);
     if (banner) {
       banner.isVisible = isVisible;
       this.banners.set(id, banner);

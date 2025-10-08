@@ -132,7 +132,7 @@ export const contentOptimization = {/* content */}
 
   // Generate meta description
   generateMetaDescription: (content: string, maxLength: number = 160): string => {/* content */}
-    const cleanContent = content.replace(/<[^>]*>/g, '').trim();
+    const _cleanContent = content.replace(/<[^>]*>/g, '').trim();
     if (cleanContent.length <= maxLength) return cleanContent;
     
     return cleanContent.substring(0, maxLength - 3) + '...';
@@ -155,7 +155,7 @@ export const performanceSEO = {/* content */}
     ];
 
     criticalResources.forEach(resource => {/* content */}
-      const link = document.createElement('link');
+      const _link = document.createElement('link');
       link.rel = 'preload';
       link.href = resource.href;
       link.as = resource.as;
@@ -304,7 +304,7 @@ export const initializeSEO = () => {/* content */}
   if (typeof document !== 'undefined') {/* content */}
 //     const viewport = document.querySelector('meta[name="viewport"]');
     if (!viewport) {/* content */}
-      const meta = document.createElement('meta');
+      const _meta = document.createElement('meta');
       meta.name = 'viewport';
       meta.content = 'width=device-width, initial-scale=1.0';
       document.head.appendChild(meta);

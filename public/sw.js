@@ -21,13 +21,10 @@ const CACHE_STRATEGIES = {
 
 // Install event - cache static assets
 self.addEventListener('install', (event) => {
-//   console.log('[Service Worker] Installing...');
-  
-  event.waitUntil(
+//   event.waitUntil(
     caches.open(CACHE_NAME)
       .then((cache) => {
-//         console.log('[Service Worker] Caching static assets');
-        return cache.addAll(STATIC_ASSETS);
+//         return cache.addAll(STATIC_ASSETS);
       })
       .then(() => self.skipWaiting())
   );
@@ -35,17 +32,14 @@ self.addEventListener('install', (event) => {
 
 // Activate event - clean up old caches
 self.addEventListener('activate', (event) => {
-//   console.log('[Service Worker] Activating...');
-  
-  event.waitUntil(
+//   event.waitUntil(
     caches.keys()
       .then((cacheNames) => {
         return Promise.all(
           cacheNames
             .filter((name) => name !== CACHE_NAME)
             .map((name) => {
-//               console.log('[Service Worker] Deleting old cache:', name);
-              return caches.delete(name);
+//               return caches.delete(name);
             })
         );
       })
@@ -56,7 +50,7 @@ self.addEventListener('activate', (event) => {
 // Fetch event - serve from cache or network
 self.addEventListener('fetch', (event) => {
   const { request } = event;
-  const url = new URL(request.url);
+  const _url = new URL(request.url);
 
   // Skip cross-origin requests
   if (url.origin !== location.origin) {
@@ -64,7 +58,7 @@ self.addEventListener('fetch', (event) => {
   }
 
   // Determine caching strategy based on request
-  let strategy = CACHE_STRATEGIES.NETWORK_FIRST;
+  let _strategy = CACHE_STRATEGIES.NETWORK_FIRST;
 
   if (request.destination === 'image') {
     strategy = CACHE_STRATEGIES.CACHE_FIRST;
@@ -77,7 +71,7 @@ self.addEventListener('fetch', (event) => {
 
 // Handle fetch with different strategies
 async function handleFetch(_request, strategy) {
-  const cache = await caches.open(CACHE_NAME);
+  const _cache = await caches.open(CACHE_NAME);
 
   switch (strategy) {
     case CACHE_STRATEGIES.CACHE_FIRST:
@@ -103,7 +97,7 @@ async function cacheFirst(_request, cache) {
   }
 
   try {
-    const response = await fetch(request);
+    const _response = await fetch(request);
     
     if (response.ok) {
       cache.put(request, response.clone());
@@ -111,15 +105,14 @@ async function cacheFirst(_request, cache) {
     
     return response;
   } catch (error) {
-//     console.error('[Service Worker] Fetch failed:', error);
-    return new Response('Offline', { status: 503 });
+//     return new Response('Offline', { status: 503 });
   }
 }
 
 // Network-first strategy
 async function networkFirst(_request, cache) {
   try {
-    const response = await fetch(request);
+    const _response = await fetch(request);
     
     if (response.ok) {
       cache.put(request, response.clone());
@@ -186,8 +179,7 @@ self.addEventListener('sync', (event) => {
 
 async function syncData() {
   // Implement background sync logic here
-//   console.log('[Service Worker] Syncing data...');
-}
+//   }
 
 // Push notification support
 self.addEventListener('push', (event) => {
@@ -212,4 +204,4 @@ self.addEventListener('notificationclick', (event) => {
   );
 });
 
-// console.log('[Service Worker] Loaded successfully');
+// 

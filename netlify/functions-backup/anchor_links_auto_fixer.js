@@ -1,6 +1,5 @@
 exports.handler = async function (event, context) {try {
-//     console.log('🤖 anchor_links_auto_fixer function triggered');
-    // Basic implementation - replace with actual logic
+//     // Basic implementation - replace with actual logic
     const timestamp = new Date().toISOString()}
     return {
       statusCode: 200,

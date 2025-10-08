@@ -35,7 +35,7 @@ const EnhancedSEO: React.FC<SEOProps> = ({
   nofollow = false,
   canonical,
 }) => {
-  const location = useLocation();
+  const _location = useLocation();
   //   const currentUrl = url || `${window.location.origin}${location.pathname}`;
   //   const canonicalUrl = canonical || currentUrl;
   //   const currentTime = new Date().toISOString();

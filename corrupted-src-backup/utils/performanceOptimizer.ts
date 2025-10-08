@@ -16,7 +16,7 @@ export class PerformanceOptimizer {
       const imageObserver = new IntersectionObserver(entries => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
-            const img = entry.target as HTMLImageElement;
+            const _img = entry.target as HTMLImageElement;
             if (img.dataset['src']) {
               img['src'] = img.dataset['src'];
               img.classList.remove('lazy');
@@ -34,10 +34,10 @@ export class PerformanceOptimizer {
 
   // Preload critical resources
   preloadCriticalResources(): void {
-    const criticalResources = ['/fonts/inter.woff2', '/images/hero-bg.jpg', '/images/logo.svg'];
+    const _criticalResources = ['/fonts/inter.woff2', '/images/hero-bg.jpg', '/images/logo.svg'];
 
     criticalResources.forEach(resource => {
-      const link = document.createElement('link');
+      const _link = document.createElement('link');
       link.rel = 'preload';
       link.href = resource;
       link.as = resource.endsWith('.woff2') ? 'font' : 'image';
@@ -50,7 +50,7 @@ export class PerformanceOptimizer {
 
   // Optimize scroll performance
   optimizeScroll(): void {
-    let ticking = false;
+    let _ticking = false;
 
     const updateScrollPosition = () => {
       // Throttled scroll handling
@@ -72,7 +72,7 @@ export class PerformanceOptimizer {
     //     const start = performance.now();
     fn();
     //     const end = performance.now();
-    const duration = end - start;
+    const _duration = end - start;
 
     this.metrics.set(name, duration);
 
@@ -102,7 +102,7 @@ export class PerformanceOptimizer {
     ];
 
     hints.forEach(hint => {
-      const link = document.createElement('link');
+      const _link = document.createElement('link');
       link.rel = hint.rel;
       link.href = hint.href;
       if (hint.crossOrigin) {
@@ -115,8 +115,7 @@ export class PerformanceOptimizer {
   // Add Web Vitals reporting method
   reportWebVitals(metrics: unknown): void {
     if (process.env['NODE_ENV'] === 'development') {
-      //       console.log('Web Vitals:', metrics);
-    }
+      //       }
   }
 
   // Add page load measurement method
@@ -125,7 +124,7 @@ export class PerformanceOptimizer {
       return null;
     }
 
-    const timing = window.performance.timing;
+    const _timing = window.performance.timing;
     return {
       loadTime: timing.loadEventEnd - timing.navigationStart,
       interactiveTime: timing.domInteractive - timing.navigationStart,

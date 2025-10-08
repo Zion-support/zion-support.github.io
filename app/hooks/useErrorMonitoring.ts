@@ -23,8 +23,8 @@ export const useErrorMonitoring = () => {
   useEffect(() => {
     // Global error handler
     const handleError = (event: unknown) => {
-      const errorEvent = event as { message: string; error?: Error };
-      const error = new Error(errorEvent.message);
+      const _errorEvent = event as { message: string; error?: Error };
+      const _error = new Error(errorEvent.message);
       error.stack = errorEvent.error?.stack;
 
       reportError(error, 'global_error');
@@ -32,7 +32,7 @@ export const useErrorMonitoring = () => {
 
     // Unhandled promise rejection handler
     const handleUnhandledRejection = (event: unknown) => {
-      const rejectionEvent = event as { reason: unknown };
+      const _rejectionEvent = event as { reason: unknown };
       const error =
         rejectionEvent.reason instanceof Error
           ? rejectionEvent.reason

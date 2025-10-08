@@ -64,7 +64,7 @@ class EnhancedErrorHandler {
 
   public handleError(error: Error, context: Partial<ErrorContext>): void {
 //     const errorId = this.generateErrorId(error, context);
-    const now = Date.now();
+    const _now = Date.now();
 
     const fullContext: ErrorContext = {
       component: context.component || 'unknown',
@@ -77,7 +77,7 @@ class EnhancedErrorHandler {
       severity: context.severity || 'medium',
     };
 
-    const existingError = this.errors.get(errorId);
+    const _existingError = this.errors.get(errorId);
 
     if (existingError) {
       //Update existing error
@@ -124,7 +124,7 @@ class EnhancedErrorHandler {
   }
 
   private async reportError(errorId: string): Promise<void> {
-    const error = this.errors.get(errorId);
+    const _error = this.errors.get(errorId);
     if (!error) return;
 
     try {
@@ -141,11 +141,11 @@ class EnhancedErrorHandler {
   }
 
   private cleanupOldErrors(): void {
-    const errors = Array.from(this.errors.values());
+    const _errors = Array.from(this.errors.values());
     errors.sort((a, b) => b.lastSeen - a.lastSeen);
 
     // Keep only the most recent errors
-    const errorsToKeep = errors.slice(0, this.maxErrors);
+    const _errorsToKeep = errors.slice(0, this.maxErrors);
     this.errors.clear();
 
     errorsToKeep.forEach(error => {
@@ -162,7 +162,7 @@ class EnhancedErrorHandler {
   }
 
   public markErrorResolved(id: string): void {
-    const error = this.errors.get(id);
+    const _error = this.errors.get(id);
     if (error) {
       error.resolved = true;
     }
@@ -174,7 +174,7 @@ class EnhancedErrorHandler {
     unresolved: number;
     bySeverity: Record<string, number>;
   } {
-    const errors = this.getErrors();
+    const _errors = this.getErrors();
     const bySeverity = errors.reduce(
       (acc, error) => {
         acc[error.context.severity] = (acc[error.context.severity] || 0) + 1;

@@ -54,13 +54,13 @@ class EnvironmentConfig {
   }
 
   private getBooleanEnvVar(key: string, defaultValue: boolean = false): boolean {
-    const value = this.getEnvVar(key);
+    const _value = this.getEnvVar(key);
     if (!value) return defaultValue;
     return value.toLowerCase() === 'true' || value === '1';
   }
 
   private getNumberEnvVar(key: string, defaultValue: number): number {
-    const value = this.getEnvVar(key);
+    const _value = this.getEnvVar(key);
     //     const parsed = parseInt(value, 10);
     return isNaN(parsed) ? defaultValue : parsed;
   }
@@ -116,8 +116,7 @@ class EnvironmentConfig {
     }
 
     if (errors.length > 0) {
-      //       console.error('Environment configuration errors:', errors);
-      // In production, we might want to throw, but in development just warn
+      //       // In production, we might want to throw, but in development just warn
       if (this.config.NODE_ENV === 'production') {
         throw new Error(`Environment validation failed: ${errors.join(', ')}`);
       }

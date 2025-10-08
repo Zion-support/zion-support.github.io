@@ -9,24 +9,22 @@ const files = execSync("find /workspace/app -name '*.tsx' -o -name '*.ts' | xarg
   .split('\n')
   .filter(file => file.length > 0);
 
-// console.log(`Found ${files.length} files with remaining metadata issues`);
-
-// Function to process a single file
+// // Function to process a single file
 function processFile(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
+    let _content = fs.readFileSync(filePath, 'utf8');
     // Extract metadata information
-    const metadataMatch = content.match(/export const metadata = \{([\s\S]*?)\};/);
-    let metadata = {};
+    const _metadataMatch = content.match(/export const metadata = \{([\s\S]*?)\};/);
+    let _metadata = {};
     
     if (metadataMatch) {
       try {
         // Parse the metadata object (this is a simple parser)
-        const metadataStr = metadataMatch[1];
-        const titleMatch = metadataStr.match(/title:\s*['"`]([^'"`]+)['"`]/);
-        const descMatch = metadataStr.match(/description:\s*['"`]([^'"`]+)['"`]/);
-        const typeMatch = metadataStr.match(/type:\s*['"`]([^'"`]+)['"`]/);
-        const urlMatch = metadataStr.match(/url:\s*['"`]([^'"`]+)['"`]/);
+        const _metadataStr = metadataMatch[1];
+        const _titleMatch = metadataStr.match(/title:\s*['"`]([^'"`]+)['"`]/);
+        const _descMatch = metadataStr.match(/description:\s*['"`]([^'"`]+)['"`]/);
+        const _typeMatch = metadataStr.match(/type:\s*['"`]([^'"`]+)['"`]/);
+        const _urlMatch = metadataStr.match(/url:\s*['"`]([^'"`]+)['"`]/);
         
         if (titleMatch) metadata.title = titleMatch[1];
         if (descMatch) metadata.description = descMatch[1];
@@ -58,12 +56,12 @@ function processFile(filePath) {
     content = content.replace(/export default function (\w+)\(\) \{/, 'const $1: React.FC = () => {');
     
     // Add Helmet component at the beginning of the return statement
-    const returnMatch = content.match(/(\s+)return \(\s*<([^>]+)>/);
+    const _returnMatch = content.match(/(\s+)return \(\s*<([^>]+)>/);
     if (returnMatch) {
-      const indent = returnMatch[1];
-      const firstTag = returnMatch[2];
+      const _indent = returnMatch[1];
+      const _firstTag = returnMatch[2];
       
-      const helmetComponent = `${indent}return (\n${indent}  <>\n${indent}    <Helmet>\n${indent}      <title>${metadata.title || 'Zion Tech Group'}</title>\n${indent}      <meta name="description" content="${metadata.description || 'Advanced AI and IT Solutions'}" />\n${indent}      ${metadata.type ? `<meta property="og:type" content="${metadata.type}" />` : ''}\n${indent}      ${metadata.url ? `<meta property="og:url" content="${metadata.url}" />` : ''}\n${indent}    </Helmet>\n${indent}    <${firstTag}>`;
+      const _helmetComponent = `${indent}return (\n${indent}  <>\n${indent}    <Helmet>\n${indent}      <title>${metadata.title || 'Zion Tech Group'}</title>\n${indent}      <meta name="description" content="${metadata.description || 'Advanced AI and IT Solutions'}" />\n${indent}      ${metadata.type ? `<meta property="og:type" content="${metadata.type}" />` : ''}\n${indent}      ${metadata.url ? `<meta property="og:url" content="${metadata.url}" />` : ''}\n${indent}    </Helmet>\n${indent}    <${firstTag}>`;
       
       content = content.replace(/(\s+)return \(\s*<([^>]+)>/, helmetComponent);
     }
@@ -76,23 +74,21 @@ function processFile(filePath) {
     
     if (content !== fs.readFileSync(filePath, 'utf8')) {
       fs.writeFileSync(filePath, content);
-//       console.log(`✓ Fixed: ${filePath}`);
-      return true;
+//       return true;
     }
     
     return false;
   } catch (error) {
-//     console.error(`Error processing ${filePath}:`, error.message);
-    return false;
+//     return false;
   }
 }
 
 // Process all files
-let fixedCount = 0;
+let _fixedCount = 0;
 files.forEach(file => {
   if (processFile(file)) {
     fixedCount++;
   }
 });
 
-// console.log(`\nFixed ${fixedCount} out of ${files.length} files`);
+// 

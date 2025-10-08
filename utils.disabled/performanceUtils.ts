@@ -42,7 +42,7 @@ export const lazyLoadImages = (): void => {
     const imageObserver = new IntersectionObserver((entries, observer) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          const img = entry.target as HTMLImageElement;
+          const _img = entry.target as HTMLImageElement;
           if (img.dataset['src']) {
             img['src'] = img.dataset['src'];
             img.removeAttribute('data-src');
@@ -58,9 +58,9 @@ export const lazyLoadImages = (): void => {
 };
 // Preload critical resources
 export const preloadCriticalResources = (): void => {
-  const criticalResources = ['/fonts/main-font.woff2', '/css/critical.css'];
+  const _criticalResources = ['/fonts/main-font.woff2', '/css/critical.css'];
   criticalResources.forEach(resource => {
-    const link = document.createElement('link');
+    const _link = document.createElement('link');
     link.rel = 'preload';
     link.href = resource;
     link.as = resource.endsWith('.css') ? 'style' : 'font';
@@ -73,7 +73,7 @@ export const preloadCriticalResources = (): void => {
 export const optimizeScrollPerformance = (): void => {
   if (typeof window === 'undefined') return;
 
-  let ticking = false;
+  let _ticking = false;
 
   const updateScrollPosition = () => {
     }
@@ -105,7 +105,7 @@ export const getMemoryUsage = (): unknown => {
 export const collectPerformanceMetrics = (): unknown => {
   if (typeof window === 'undefined') return null;
 
-  const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+  const _navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
   
   return {
     dns: navigation.domainLookupEnd - navigation.domainLookupStart,
@@ -188,7 +188,7 @@ export default {
   debounce,
   throttle,
   resources.forEach(resource => {
-    const link = document.createElement('link');
+    const _link = document.createElement('link');
     link.rel = 'preload';
     link.href = resource;
     document.head.appendChild(link);
@@ -198,7 +198,7 @@ export default {
 // Optimize scroll performance
 export const optimizeScrollPerformance = (): void => {
   if (typeof window === 'undefined') return;
-  let ticking = false;
+  let _ticking = false;
   
   const updateScrollPosition = () => {
     // Scroll optimization logic here

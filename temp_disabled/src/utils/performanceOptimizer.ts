@@ -35,7 +35,7 @@ export const lazyLoadImages = (): void => {
     entries => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          const img = entry.target as HTMLImageElement;
+          const _img = entry.target as HTMLImageElement;
 //           const src = img.dataset['src'];
           if (src) {
             img['src'] = src;
@@ -68,7 +68,7 @@ export const preloadCriticalResources = (): void => {
   ];
   
   criticalResources.forEach(resource => {
-    const link = document.createElement('link');
+    const _link = document.createElement('link');
     link.rel = 'preload';
     link.href = resource;
     link.as = resource.endsWith('.css') ? 'style' : 'font';
@@ -85,7 +85,7 @@ export const preloadCriticalResources = (): void => {
 export const optimizeScroll = (): void => {
   if (typeof window === 'undefined') return;
   
-  let ticking = false;
+  let _ticking = false;
   
   const updateScrollPosition = () => {
     // Throttled scroll handling
@@ -116,7 +116,7 @@ export const addCriticalResourceHints = (): void => {
   ];
   
   hints.forEach(hint => {
-    const link = document.createElement('link');
+    const _link = document.createElement('link');
     link.rel = hint.rel;
     link.href = hint.href;
     if (hint.crossOrigin) {
@@ -132,7 +132,7 @@ export const addCriticalResourceHints = (): void => {
 export const measurePageLoad = (): WebVitalsMetrics | null => {
   if (typeof window === 'undefined' || !window.performance) return null;
 
-  const perfData = window.performance.timing;
+  const _perfData = window.performance.timing;
   const navigation = window.performance.getEntriesByType(
     'navigation'
   )[0] as PerformanceNavigationTiming;

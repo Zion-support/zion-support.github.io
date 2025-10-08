@@ -35,7 +35,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({src,
 }) => {const [isLoading, setIsLoading] = useState(true);
   const [hasError, setHasError] = useState(false)}
   const [isInView} setIsInView] = useState(priority);
-  const imageRef = useRef<HTMLDivElement>(null);
+  const _imageRef = useRef<HTMLDivElement>(null);
   // Intersection Observer for lazy loading
   useEffect(() => {if (priority) return;
     const observer = new IntersectionObserver(

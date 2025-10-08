@@ -2,15 +2,14 @@
 
   try {
   } catch (error) {
-//     console.error('Failed to store banner impressions:', error);
-  }
+//     }
 };
 
 export const recordBannerImpression = (impression: Omit<BannerImpression, 'timestamp' | 'sessionId'>) => {
   if (typeof window === 'undefined') return;
   
   try {
-    const impressions = getStoredImpressions();
+    const _impressions = getStoredImpressions();
     const newImpression: BannerImpression = {
       ...impression,
       timestamp: Date.now(),
@@ -19,15 +18,14 @@ export const recordBannerImpression = (impression: Omit<BannerImpression, 'times
     
     impressions.push(newImpression);
   } catch (error) {
-//     console.error('Failed to record banner impression:', error);
-  }
+//     }
 };
 
 /**
  * Get impression count for a banner
  */
 export const getBannerImpressionCount = (bannerId: string, hours: number = 24): number => {
-  const impressions = getBannerImpressions();
+  const _impressions = getBannerImpressions();
 //   const cutoff = Date.now() - (hours * 60 * 60 * 1000);
   return impressions.filter(imp => imp.bannerId === bannerId && imp.timestamp > cutoff).length;
 };
@@ -68,7 +66,7 @@ export const getBannerAnalytics = (bannerId?: string) => {
 //   const engagementRate = bannerImpressions.length > 0 ? clicks / bannerImpressions.length : 0;
   
   // Calculate recency score (more recent impressions = higher score)
-  const recentImpressions = bannerImpressions.filter(imp => imp.timestamp > Date.now() - 24 * 60 * 60 * 1000);
+  const _recentImpressions = bannerImpressions.filter(imp => imp.timestamp > Date.now() - 24 * 60 * 60 * 1000);
 //   const recencyScore = Math.min(1, recentImpressions.length / 10);
   
   // Calculate fatigue score (too many impressions = lower score)
@@ -98,7 +96,7 @@ export const getBannersForRotation = (banners: BannerConfig[]): BannerConfig[] =
  * Record banner click
  */
 export const recordBannerClick = (bannerId: string): void => {
-  const impressions = getBannerImpressions();
+  const _impressions = getBannerImpressions();
   const lastImpression = impressions
     .filter(imp => imp.bannerId === bannerId)
     .pop();
@@ -118,8 +116,8 @@ export const getBannerMetrics = (bannerId: string): {
   clickRate: number;
   avgTimeVisible: number;
 } => {
-  const impressions = getStoredImpressions();
-  const bannerImpressions = impressions.filter(imp => imp.bannerId === bannerId);
+  const _impressions = getStoredImpressions();
+  const _bannerImpressions = impressions.filter(imp => imp.bannerId === bannerId);
   
 //   const clicks = bannerImpressions.filter(imp => imp.clicked).length;
   const avgTimeVisible = bannerImpressions
@@ -194,7 +192,7 @@ export class BannerRotationEngine {
     if (availableBanners.length === 0) return;
 
     // Select next banner based on performance
-    const nextBanner = this.selectOptimalBanner(availableBanners);
+    const _nextBanner = this.selectOptimalBanner(availableBanners);
     this.currentBannerIndex = this.banners.findIndex(b => b.id === nextBanner.id);
     
     // Trigger banner change event
@@ -207,8 +205,8 @@ export class BannerRotationEngine {
   private selectOptimalBanner(availableBanners: BannerConfig[]): BannerConfig {
     // Simple selection: choose banner with lowest click rate to give it more exposure
     return availableBanners.reduce((best, current) => {
-      const bestMetrics = getBannerMetrics(best.id);
-      const currentMetrics = getBannerMetrics(current.id);
+      const _bestMetrics = getBannerMetrics(best.id);
+      const _currentMetrics = getBannerMetrics(current.id);
       
       return currentMetrics.clickRate < bestMetrics.clickRate ? current : best;
     });
@@ -242,7 +240,7 @@ export class BannerRotationEngine {
    * Update banner priority
    */
   updateBannerPriority(bannerId: string, newPriority: number): void {
-    const banner = this.banners.find(b => b.id === bannerId);
+    const _banner = this.banners.find(b => b.id === bannerId);
     if (banner) {
       banner.priority = newPriority;
       this.banners.sort((a, b) => b.priority - a.priority);
@@ -308,7 +306,7 @@ export class BannerRotationSystem {
       id: 'new_user_priority',
       name: 'New User Priority',
       condition: (impression) => {
-        const userImpressions = this.impressions.filter(imp => imp.sessionId === impression.sessionId);
+        const _userImpressions = this.impressions.filter(imp => imp.sessionId === impression.sessionId);
         return userImpressions.length < 3;
       },
       priority: 10,
@@ -320,7 +318,7 @@ export class BannerRotationSystem {
       id: 'high_conversion_priority',
       name: 'High Conversion Priority',
       condition: (impression) => {
-        const banner = this.banners.get(impression.bannerId);
+        const _banner = this.banners.get(impression.bannerId);
         return banner?.conversionGoal === 'high';
       },
       priority: 8,
@@ -332,7 +330,7 @@ export class BannerRotationSystem {
       id: 'time_based_rotation',
       name: 'Time-based Rotation',
       condition: (impression) => {
-        const now = Date.now();
+        const _now = Date.now();
         const lastImpression = this.impressions
           .filter(imp => imp.bannerId === impression.bannerId)
           .sort((a, b) => b.timestamp - a.timestamp)[0];
@@ -421,7 +419,7 @@ export class BannerRotationSystem {
   }
 
   private calculateBannerScore(banner: BannerConfig): number {
-    let score = banner.priority;
+    let _score = banner.priority;
 
     // Apply rotation rules
     const mockImpression: BannerImpression = {
@@ -479,7 +477,7 @@ export class BannerRotationSystem {
 //     const conversionRate = totalImpressions > 0 ? (conversions / totalImpressions) * 100 : 0;
 
     const bannerStats = Array.from(this.banners.values()).map(banner => {
-      const bannerImpressions = this.impressions.filter(imp => imp.bannerId === banner.id);
+      const _bannerImpressions = this.impressions.filter(imp => imp.bannerId === banner.id);
 //       const bannerConversions = bannerImpressions.filter(imp => imp.conversion).length;
       
       return {

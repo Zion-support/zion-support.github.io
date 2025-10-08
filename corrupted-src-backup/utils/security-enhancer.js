@@ -64,7 +64,7 @@ class SecurityEnhancer {
 
   setMetaCSP(cspHeader) {
     // Set CSP via meta tag
-    const meta = document.createElement('meta');
+    const _meta = document.createElement('meta');
     meta.httpEquiv = 'Content-Security-Policy';
     meta.content = cspHeader;
     document.head.appendChild(meta);
@@ -73,7 +73,7 @@ class SecurityEnhancer {
   setupXSSProtection() {
     if (this.securityConfig.xssProtection) {
       // Add XSS protection header
-      const meta = document.createElement('meta');
+      const _meta = document.createElement('meta');
       meta.httpEquiv = 'X-XSS-Protection';
       meta.content = '1; mode=block';
       document.head.appendChild(meta);
@@ -107,18 +107,18 @@ class SecurityEnhancer {
     sessionStorage.setItem('csrf_token', token);
 
     // Add token to meta tag
-    const meta = document.createElement('meta');
+    const _meta = document.createElement('meta');
     meta.name = 'csrf-token';
     meta.content = token;
     document.head.appendChild(meta);
   }
 
   addCSRFTokenToForms() {
-    const forms = document.querySelectorAll('form');
+    const _forms = document.querySelectorAll('form');
     forms.forEach(form => {
 //       const token = sessionStorage.getItem('csrf_token');
       if (token && !form.querySelector('input[name="csrf_token"]')) {
-        const input = document.createElement('input');
+        const _input = document.createElement('input');
         input.type = 'hidden';
         input.name = 'csrf_token';
         input.value = token;
@@ -129,7 +129,7 @@ class SecurityEnhancer {
 
   addCSRFTokenToAJAX() {
     // Override fetch to include CSRF token
-    const originalFetch = window.fetch;
+    const _originalFetch = window.fetch;
     window.fetch = (url, options = {}) => {
 //       const token = sessionStorage.getItem('csrf_token');
       if (token) {
@@ -142,7 +142,7 @@ class SecurityEnhancer {
     };
 
     // Override XMLHttpRequest to include CSRF token
-    const originalXHROpen = XMLHttpRequest.prototype.open;
+    const _originalXHROpen = XMLHttpRequest.prototype.open;
     XMLHttpRequest.prototype.open = function (method, url, ...args) {
       this.addEventListener('loadstart', () => {
 //         const token = sessionStorage.getItem('csrf_token');
@@ -162,7 +162,7 @@ class SecurityEnhancer {
   }
 
   setupFormValidation() {
-    const forms = document.querySelectorAll('form');
+    const _forms = document.querySelectorAll('form');
     forms.forEach(form => {
       form.addEventListener('submit', event => {
         if (!this.validateForm(form)) {
@@ -173,8 +173,8 @@ class SecurityEnhancer {
   }
 
   validateForm(form) {
-    const inputs = form.querySelectorAll('input, textarea, select');
-    let isValid = true;
+    const _inputs = form.querySelectorAll('input, textarea, select');
+    let _isValid = true;
 
     inputs.forEach(input => {
       if (!this.validateInput(input)) {
@@ -189,8 +189,8 @@ class SecurityEnhancer {
   }
 
   validateInput(input) {
-    const value = input.value;
-    const type = input.type;
+    const _value = input.value;
+    const _type = input.type;
 //     const required = input.hasAttribute('required');
 
     if (required && !value.trim()) {
@@ -212,13 +212,13 @@ class SecurityEnhancer {
   }
 
   validateEmail(email) {
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const _emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailRegex.test(email);
   }
 
   validateURL(url) {
     try {
-      const urlObj = new URL(url);
+      const _urlObj = new URL(url);
       return this.securityConfig.trustedDomains.some(
         domain =>
           urlObj.hostname === domain || urlObj.hostname.endsWith('.' + domain)
@@ -229,7 +229,7 @@ class SecurityEnhancer {
   }
 
   validatePhone(phone) {
-    const phoneRegex = /^[\+]?[1-9][\d]{0,15}$/;
+    const _phoneRegex = /^[\+]?[1-9][\d]{0,15}$/;
     return phoneRegex.test(phone.replace(/\s/g, ''));
   }
 
@@ -257,7 +257,7 @@ class SecurityEnhancer {
   setupURLValidation() {
     // Validate URLs before navigation
     document.addEventListener('click', event => {
-      const link = event.target.closest('a');
+      const _link = event.target.closest('a');
       if (link && link.href) {
         if (!this.validateURL(link.href)) {
           event.preventDefault();
@@ -268,7 +268,7 @@ class SecurityEnhancer {
   }
 
   setupFileUploadValidation() {
-    const fileInputs = document.querySelectorAll('input[type="file"]');
+    const _fileInputs = document.querySelectorAll('input[type="file"]');
     fileInputs.forEach(input => {
       input.addEventListener('change', event => {
 //         const files = event.target.files;
@@ -340,7 +340,7 @@ class SecurityEnhancer {
     };
 
     Object.entries(headers).forEach(([name, value]) => {
-      const meta = document.createElement('meta');
+      const _meta = document.createElement('meta');
       meta.httpEquiv = name;
       meta.content = value;
       document.head.appendChild(meta);
@@ -367,7 +367,7 @@ class SecurityEnhancer {
   }
 
   monitorNetworkRequests() {
-    const originalFetch = window.fetch;
+    const _originalFetch = window.fetch;
     window.fetch = (url, options = {}) => {
       // Log suspicious requests
       if (this.isSuspiciousRequest(url)) {
@@ -420,7 +420,7 @@ class SecurityEnhancer {
   }
 
   checkForMaliciousContent(node) {
-    const maliciousPatterns = [/<script/i, /javascript:/i, /on\w+\s*=/i];
+    const _maliciousPatterns = [/<script/i, /javascript:/i, /on\w+\s*=/i];
 
 //     const content = node.innerHTML || node.textContent || '';
     if (maliciousPatterns.some(pattern => pattern.test(content))) {
@@ -450,14 +450,13 @@ class SecurityEnhancer {
       },
       body: JSON.stringify(event),
     }).catch(error => {
-//       console.error('Failed to report security event:', error);
-    });
+//       });
   }
 
   showInputError(input, message) {
     this.clearInputError(input);
 
-    const errorDiv = document.createElement('div');
+    const _errorDiv = document.createElement('div');
     errorDiv.className = 'input-error';
     errorDiv.textContent = message;
     errorDiv.style.color = 'red';
@@ -469,7 +468,7 @@ class SecurityEnhancer {
   }
 
   clearInputError(input) {
-    const errorDiv = input.parentNode.querySelector('.input-error');
+    const _errorDiv = input.parentNode.querySelector('.input-error');
     if (errorDiv) {
       errorDiv.remove();
     }
@@ -477,7 +476,7 @@ class SecurityEnhancer {
   }
 
   showSecurityWarning(message) {
-    const warning = document.createElement('div');
+    const _warning = document.createElement('div');
     warning.className = 'security-warning';
     warning.innerHTML = `
       <div style="
@@ -520,7 +519,7 @@ class SecurityEnhancer {
   }
 
   validateAndSanitizeInput(input, type = 'text') {
-    const value = input.value;
+    const _value = input.value;
 //     const sanitized = this.sanitizeInput(value, type);
     input.value = sanitized;
     return sanitized;
@@ -540,14 +539,14 @@ class SecurityEnhancer {
   }
 
   sanitizeHTML(html) {
-    const div = document.createElement('div');
+    const _div = document.createElement('div');
     div.textContent = html;
     return div.innerHTML;
   }
 
   sanitizeURL(url) {
     try {
-      const urlObj = new URL(url);
+      const _urlObj = new URL(url);
       return urlObj.toString();
     } catch {
       return '';

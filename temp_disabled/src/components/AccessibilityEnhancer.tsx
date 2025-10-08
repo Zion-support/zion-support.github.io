@@ -18,7 +18,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     fontSize: 'small' | 'normal' | 'large',
     reducedMotion: boolean
   ) => {
-    const root = document.documentElement;
+    const _root = document.documentElement;
 
     // Apply high contrast
     if (highContrast) {
@@ -40,7 +40,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   };
 
   const toggleHighContrast = () => {
-    const newValue = !isHighContrast;
+    const _newValue = !isHighContrast;
     setIsHighContrast(newValue);
     localStorage.setItem('highContrast', newValue.toString());
     applyAccessibilityStyles(newValue, fontSize, reducedMotion);
@@ -79,7 +79,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     const addSkipLinks = () => {
 //       const skipLinks = document.querySelector('.skip-links');
       if (!skipLinks) {
-        const skipLinksContainer = document.createElement('div');
+        const _skipLinksContainer = document.createElement('div');
         skipLinksContainer.className = 'skip-links';
         skipLinksContainer.innerHTML = `
           <a href="#main-content" class="skip-link sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50">
@@ -98,24 +98,24 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
 
     // Add ARIA landmarks
     const addAriaLandmarks = () => {
-      const main = document.querySelector('main');
+      const _main = document.querySelector('main');
       if (main && !main.getAttribute('role')) {
         main.setAttribute('role', 'main');
         main.setAttribute('aria-label', 'Main content');
       }
 
-      const nav = document.querySelector('nav');
+      const _nav = document.querySelector('nav');
       if (nav && !nav.getAttribute('role')) {
         nav.setAttribute('role', 'navigation');
         nav.setAttribute('aria-label', 'Main navigation');
       }
 
-      const header = document.querySelector('header');
+      const _header = document.querySelector('header');
       if (header && !header.getAttribute('role')) {
         header.setAttribute('role', 'banner');
       }
 
-      const footer = document.querySelector('footer');
+      const _footer = document.querySelector('footer');
       if (footer && !footer.getAttribute('role')) {
         footer.setAttribute('role', 'contentinfo');
       }
@@ -124,7 +124,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     // Enhance focus management
     const enhanceFocusManagement = () => {
       // Add focus indicators for keyboard navigation
-      const style = document.createElement('style');
+      const _style = document.createElement('style');
       style.textContent = `
         .focus-visible:focus {
           outline: 2px solid #3b82f6;
@@ -193,7 +193,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
         // Skip to navigation with Alt + N
         if (e.altKey && e.key === 'n') {
           e.preventDefault();
-          const nav = document.querySelector('nav');
+          const _nav = document.querySelector('nav');
           if (nav) {
             nav.focus();
             nav.scrollIntoView({ behavior: 'smooth' });
@@ -210,7 +210,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
 
     // Add live region for announcements
     const addLiveRegion = () => {
-      const liveRegion = document.createElement('div');
+      const _liveRegion = document.createElement('div');
       liveRegion.setAttribute('aria-live', 'polite');
       liveRegion.setAttribute('aria-atomic', 'true');
       liveRegion.className = 'sr-only';
@@ -222,7 +222,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
 
     // Announce page changes
     const announcePageChange = () => {
-      const liveRegion = document.getElementById('live-region');
+      const _liveRegion = document.getElementById('live-region');
       if (liveRegion) {
         liveRegion.textContent = 'Page content has loaded';
       }
