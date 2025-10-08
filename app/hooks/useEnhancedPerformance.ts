@@ -101,39 +101,12 @@ export function useEnhancedPerformance(
   const measureOperation = useCallback(
     (operationName: string) => {
       const markName = `${component}-${operationName}`;
-      const startMarkName = `${markName}-start`;
-      const endMarkName = `${markName}-end`;
-      
-      // Start performance mark
-      if (typeof performance !== 'undefined' && performance.mark) {
-        performance.mark(startMarkName);
-      }
+      const startTime = performance.now();
 
       return {
         end: () => {
-          let duration: number | undefined;
-          
-          // End performance mark and measure
-          if (typeof performance !== 'undefined' && performance.mark && performance.measure) {
-            try {
-              performance.mark(endMarkName);
-              performance.measure(markName, startMarkName, endMarkName);
-              
-              const measure = performance.getEntriesByName(markName)[0];
-              if (measure) {
-                duration = measure.duration;
-              }
-              
-              // Clean up marks
-              performance.clearMarks(startMarkName);
-              performance.clearMarks(endMarkName);
-              performance.clearMeasures(markName);
-            } catch (error) {
-              console.warn('Failed to measure performance:', error);
-            }
-          }
-          
-          if (duration && trackPerformance) {
+          const duration = performance.now() - startTime;
+          if (trackPerformance) {
             analytics.trackPerformance(
               `${component}-${operationName}`,
               duration,
