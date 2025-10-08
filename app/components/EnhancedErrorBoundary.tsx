@@ -1,5 +1,5 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { AlertTriangle, RefreshCw, Home, Bug } from 'lucide-react';
+import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
 
 interface Props {
   children: ReactNode;
@@ -206,7 +206,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
               {this.props.showErrorDetails && error && (
                 <div className="mb-6 p-4 bg-gray-50 rounded-lg">
                   <h3 className="text-sm font-semibold text-gray-700 mb-2 flex items-center">
-                    <Bug className="w-4 h-4 mr-2" />
+                    <AlertTriangle className="w-4 h-4 mr-2" />
                     Error Details
                   </h3>
                   <div className="text-xs text-gray-600 font-mono">
@@ -260,7 +260,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
                       onClick={this.copyErrorDetails}
                       className="border-2 border-gray-300 text-gray-600 hover:bg-gray-50 font-semibold py-3 px-6 rounded-lg transition-colors flex items-center justify-center"
                     >
-                      <Bug className="w-4 h-4 mr-2" />
+                      <AlertTriangle className="w-4 h-4 mr-2" />
                       Copy Details
                     </button>
                   )}

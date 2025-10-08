@@ -22,6 +22,7 @@ class PerformanceOptimizer {
   private config: PerformanceOptimizerConfig;
   private metrics: PerformanceMetrics = {};
   private observers: PerformanceObserver[] = [];
+  private marks: Map<string, number> = new Map();
 
   constructor(config: Partial<PerformanceOptimizerConfig> = {}) {
     this.config = {
@@ -54,6 +55,34 @@ class PerformanceOptimizer {
     }
   }
 
+  startMark(markName: string): void {
+    if (typeof window === 'undefined') return;
+    const timestamp = performance.now();
+    this.marks.set(markName, timestamp);
+    if ('mark' in performance) {
+      performance.mark(markName);
+    }
+  }
+
+  endMark(markName: string): number {
+    if (typeof window === 'undefined') return 0;
+    const startTime = this.marks.get(markName);
+    if (!startTime) return 0;
+    
+    const duration = performance.now() - startTime;
+    this.marks.delete(markName);
+    
+    if ('measure' in performance && 'mark' in performance) {
+      try {
+        performance.measure(`${markName}-duration`, markName);
+      } catch (error) {
+        // Ignore measure errors
+      }
+    }
+    
+    return duration;
+  }
+
   private initMonitoring() {
     if (typeof window === 'undefined' || !('PerformanceObserver' in window)) return;
 
@@ -71,65 +100,85 @@ class PerformanceOptimizer {
   }
 
   private observeLCP() {
-    const observer = new PerformanceObserver((list) => {
-      const entries = list.getEntries();
-      const lastEntry = entries[entries.length - 1];
-      this.metrics.lcp = lastEntry.startTime;
-    });
-    observer.observe({ entryTypes: ['largest-contentful-paint'] });
-    this.observers.push(observer);
+    try {
+      const observer = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        const lastEntry = entries[entries.length - 1];
+        this.metrics.lcp = lastEntry.startTime;
+      });
+      observer.observe({ entryTypes: ['largest-contentful-paint'] });
+      this.observers.push(observer);
+    } catch (error) {
+      // Ignore if not supported
+    }
   }
 
   private observeFID() {
-    const observer = new PerformanceObserver((list) => {
-      const entries = list.getEntries();
-      entries.forEach((entry: any) => {
-        this.metrics.fid = entry.processingStart - entry.startTime;
+    try {
+      const observer = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        entries.forEach((entry: any) => {
+          this.metrics.fid = entry.processingStart - entry.startTime;
+        });
       });
-    });
-    observer.observe({ entryTypes: ['first-input'] });
-    this.observers.push(observer);
+      observer.observe({ entryTypes: ['first-input'] });
+      this.observers.push(observer);
+    } catch (error) {
+      // Ignore if not supported
+    }
   }
 
   private observeCLS() {
-    let clsValue = 0;
-    const observer = new PerformanceObserver((list) => {
-      const entries = list.getEntries();
-      entries.forEach((entry: any) => {
-        if (!entry.hadRecentInput) {
-          clsValue += entry.value;
-        }
+    try {
+      let clsValue = 0;
+      const observer = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        entries.forEach((entry: any) => {
+          if (!entry.hadRecentInput) {
+            clsValue += entry.value;
+          }
+        });
+        this.metrics.cls = clsValue;
       });
-      this.metrics.cls = clsValue;
-    });
-    observer.observe({ entryTypes: ['layout-shift'] });
-    this.observers.push(observer);
+      observer.observe({ entryTypes: ['layout-shift'] });
+      this.observers.push(observer);
+    } catch (error) {
+      // Ignore if not supported
+    }
   }
 
   private observeFCP() {
-    const observer = new PerformanceObserver((list) => {
-      const entries = list.getEntries();
-      entries.forEach((entry) => {
-        if (entry.name === 'first-contentful-paint') {
-          this.metrics.fcp = entry.startTime;
-        }
+    try {
+      const observer = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        entries.forEach((entry) => {
+          if (entry.name === 'first-contentful-paint') {
+            this.metrics.fcp = entry.startTime;
+          }
+        });
       });
-    });
-    observer.observe({ entryTypes: ['paint'] });
-    this.observers.push(observer);
+      observer.observe({ entryTypes: ['paint'] });
+      this.observers.push(observer);
+    } catch (error) {
+      // Ignore if not supported
+    }
   }
 
   private observeTTFB() {
-    const observer = new PerformanceObserver((list) => {
-      const entries = list.getEntries();
-      entries.forEach((entry: any) => {
-        if (entry.responseStart > 0) {
-          this.metrics.ttfb = entry.responseStart - entry.requestStart;
-        }
+    try {
+      const observer = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        entries.forEach((entry: any) => {
+          if (entry.responseStart > 0) {
+            this.metrics.ttfb = entry.responseStart - entry.requestStart;
+          }
+        });
       });
-    });
-    observer.observe({ entryTypes: ['navigation'] });
-    this.observers.push(observer);
+      observer.observe({ entryTypes: ['navigation'] });
+      this.observers.push(observer);
+    } catch (error) {
+      // Ignore if not supported
+    }
   }
 
   private observeMemory() {
@@ -151,7 +200,7 @@ class PerformanceOptimizer {
             const img = entry.target as HTMLImageElement;
             const src = img.getAttribute('data-src');
             if (src) {
-              img['src'] = src;
+              img.src = src;
               img.removeAttribute('data-src');
               imageObserver.unobserve(img);
             }
@@ -165,7 +214,7 @@ class PerformanceOptimizer {
       images.forEach((img) => {
         const src = img.getAttribute('data-src');
         if (src) {
-          (img as HTMLImageElement)['src'] = src;
+          (img as HTMLImageElement).src = src;
           img.removeAttribute('data-src');
         }
       });
@@ -230,6 +279,7 @@ class PerformanceOptimizer {
   cleanup() {
     this.observers.forEach(observer => observer.disconnect());
     this.observers = [];
+    this.marks.clear();
   }
 }
 
@@ -242,4 +292,3 @@ export const preloadCriticalResources = () => performanceOptimizer.preloadCritic
 export const collectPerformanceMetrics = () => performanceOptimizer.getNavigationMetrics();
 
 export { performanceOptimizer };
-export default performanceOptimizer;
