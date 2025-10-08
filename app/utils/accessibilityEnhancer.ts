@@ -678,3 +678,12 @@ class AccessibilityEnhancer {
     
     return `
 Accessibility Report:
+- Focus Indicators Fixed: ${metrics.focusIndicatorsFixed}
+- ARIA Labels Added: ${metrics.ariaLabelsAdded}
+- Color Contrast Issues Fixed: ${metrics.colorContrastFixed}
+- Keyboard Navigation Issues Fixed: ${metrics.keyboardNavFixed}
+`;
+  }
+}
+
+export default new AccessibilityEnhancer();

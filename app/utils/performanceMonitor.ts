@@ -234,3 +234,14 @@ class PerformanceMonitor {
     
     return `
 Performance Report:
+- Overall Score: ${score}/100
+- FCP: ${metrics.fcp?.toFixed(2)}s
+- LCP: ${metrics.lcp?.toFixed(2)}s
+- FID: ${metrics.fid?.toFixed(2)}ms
+- CLS: ${metrics.cls?.toFixed(3)}
+- TTFB: ${metrics.ttfb?.toFixed(2)}ms
+`;
+  }
+}
+
+export default new PerformanceMonitor();

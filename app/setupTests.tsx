@@ -65,51 +65,12 @@ global.fetch = jest.fn();
 const originalConsoleWarn = console.warn;
 const originalConsoleInfo = console.info;
 
-<<<<<<< HEAD
 console.warn = (...args) => {
   const message = args[0]?.toString?.() || '';
   if (message.includes('Warning: ReactDOM.render is no longer supported')) {
     return;
   }
   originalConsoleWarn(...args);
-=======
-// Mock PerformanceObserver
-global.PerformanceObserver = class MockPerformanceObserver {
-  static readonly supportedEntryTypes: readonly string[] = ['navigation', 'paint', 'largest-contentful-paint', 'first-input', 'layout-shift'];
-  
-  constructor(public callback: PerformanceObserverCallback) {}
-  observe() {}
-  disconnect() {}
-  takeRecords() {
-    return [];
-  }
-};
-
-// Suppress JSDOM navigation warnings
-const originalConsoleError = console.error;
-console.error = (...args) => {
-  if (args[0] && args[0].type === 'not implemented' && args[0].message?.includes('navigation')) {
-    return; // Suppress JSDOM navigation warnings
-  }
-  originalConsoleError.apply(console, args);
-};
-
-// Mock window.location
-delete (window as unknown as Record<string, unknown>).location;
-(window as unknown as Record<string, unknown>).location = {
-  href: 'http://localhost:3000',
-  origin: 'http://localhost:3000',
-  protocol: 'http:',
-  host: 'localhost:3000',
-  hostname: 'localhost',
-  port: '3000',
-  pathname: '/',
-  search: '',
-  hash: '',
-  reload: jest.fn(),
-  assign: jest.fn(),
-  replace: jest.fn(),
->>>>>>> main
 >>>>>>> 49f746e8c3195449347ee8bebb6ca5b0ab732544
 };
 
