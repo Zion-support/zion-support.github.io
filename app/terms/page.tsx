@@ -1,11 +1,4 @@
 import React from 'react';
-const metadata: Metadata = {
-  title: 'Terms of Service - Zion Tech Group',
-  description:
-    'Terms of service and usage agreement for Zion Tech Group services and website.',
-};
-
-export { metadata };
 
 const TermsPage: React.FC = () => {
   return (

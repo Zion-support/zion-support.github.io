@@ -1,12 +1,4 @@
 import React from 'react';
-// Metadata removed - use React Helmet instead],
-  openGraph: {
-    title: 'AI 2026: Consensus Intelligence Breakthrough',
-    description: 'Revolutionary AI system enabling unanimous decisions through quantum-accelerated consensus protocols.',
-    type: 'article',
-    authors: ['Zion Tech Group']
-  }
-};
 
 export default function ConsensusIntelligencePage() {
   return (

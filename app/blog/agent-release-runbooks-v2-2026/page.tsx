@@ -99,7 +99,7 @@ export default function Page() {
               </p>
             </div>
             <Link
-              href='/contact'
+              to='/contact'
               className='bg-white text-fuchsia-700 px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2'
             >
               Engage <RefreshCw />

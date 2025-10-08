@@ -1,11 +1,4 @@
 import React from 'react';
-// Metadata removed - use React Helmet instead,
-  twitter: {
-    card: "summary_large_image",
-    title: "AI 2026 Autonomous Business Intelligence Breakthrough",
-    description: "Revolutionary autonomous BI systems delivering 300% ROI improvements and automated decision-making."
-  }
-};
 
 export default function AutonomousBusinessIntelligenceBreakthrough() {
   return (

@@ -1,11 +1,4 @@
-// Metadata removed - use React Helmet instead,
-  twitter: {
-    card: 'summary_large_image',
-    title: 'January 2025 Cutting-Edge AI Trends: Revolutionary Breakthrough Technologies',
-    description: 'Latest cutting-edge AI trends revolutionizing enterprise operations with neural consciousness, quantum optimization, and autonomous intelligence.',
-    images: ['/og/january-2025-cutting-edge-trends.jpg']
-  }
-};
+
 
 export default function January2025CuttingEdgeTrendsBreakthrough() {
   return (

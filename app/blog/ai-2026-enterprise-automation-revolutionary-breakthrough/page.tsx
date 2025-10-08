@@ -1,12 +1,4 @@
 import React from 'react';
-// Metadata removed - use React Helmet instead],
-  openGraph: {
-    title: 'AI 2026: Revolutionary Enterprise Automation Breakthrough',
-    description: 'The most comprehensive guide to AI automation breakthroughs transforming enterprises in 2026.',
-    type: 'article',
-    authors: ['Zion Tech Group']
-  }
-};
 
 export default function AI2026EnterpriseAutomationRevolutionaryBreakthrough() {
   return (

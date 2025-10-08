@@ -1,11 +1,4 @@
-// Metadata removed - use React Helmet instead,
-  twitter: {
-    card: 'summary_large_image',
-    title: 'January 2025 Advanced AI Revolution: Next-Generation Enterprise Transformation',
-    description: 'Revolutionary AI breakthroughs with $2.8B proven ROI, 99.9% operational autonomy, and zero downtime.',
-    images: ['/og/january-2025-ai-revolution.jpg']
-  }
-};
+
 
 export default function January2025AdvancedAIRevolution() {
   return (

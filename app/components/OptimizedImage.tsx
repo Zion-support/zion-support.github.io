@@ -55,7 +55,6 @@ const OptimizedImage: React.FC<OptimizedImageProps> = memo(({
         </div>
       ) : (
         <img src={src} alt={alt} loading="lazy"
-          priority={priority}
           onLoad={handleLoad}
           onError={handleError}
           className={`transition-opacity duration-300 ${

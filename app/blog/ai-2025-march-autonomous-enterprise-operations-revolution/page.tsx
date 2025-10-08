@@ -1,12 +1,4 @@
 import React from 'react';
-// Metadata removed - use React Helmet instead,
-  twitter: {
-    card: 'summary_large_image',
-    title: 'March 2025: Autonomous Enterprise Operations Revolution',
-    description: 'AI agents now manage complex business operations with unprecedented efficiency, delivering $35 billion in operational savings.',
-    images: ['/og/march-2025-autonomous-operations.jpg']
-  }
-};
 
 export default function March2025AutonomousEnterpriseOperationsRevolution() {
   return (

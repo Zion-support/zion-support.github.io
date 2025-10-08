@@ -1,7 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-// Metadata removed - use React Helmet instead,
-};
 
 export default function BlogPage() {
   return (
@@ -23,7 +21,7 @@ export default function BlogPage() {
               breakthroughs in AI and enterprise technology.
             </p>
             <Link
-              href='/'
+              to='/'
               className='inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded-lg transition-colors'
             >
               Back to Home

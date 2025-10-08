@@ -1,14 +1,4 @@
 import React from 'react';
-// Metadata removed - use React Helmet instead,
-    ],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'AI Enterprise Transformation Ultimate Guide 2025: $2B+ ROI Strategies',
-    description: 'Complete guide to AI enterprise transformation achieving $2B+ ROI. Learn autonomous operations, quantum AI, and multi-agent orchestration strategies.',
-    images: ['https://ziontechgroup.com/images/ai-enterprise-transformation-2025.jpg'],
-  },
-};
 
 export default function AIEnterpriseTransformationUltimateGuide2025() {
   return (

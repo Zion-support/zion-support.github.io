@@ -1,6 +1,4 @@
 import React from 'react';
-// Metadata removed - use React Helmet instead
-};
 
 export default function AITrends2026FutureEnterpriseTransformation() {
   return (

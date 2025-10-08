@@ -5,58 +5,6 @@ import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import PWAInstaller from './components/PWAInstaller';
 import { GlobalErrorBoundary } from './components/GlobalErrorBoundary';
 
-// Metadata removed - use React Helmet instead],
-  creator: 'Zion Tech Group',
-  publisher: 'Zion Tech Group',
-  formatDetection: {
-    email: false,
-    address: false,
-    telephone: false,
-  },
-  metadataBase: new URL('https://ziontechgroup.com'),
-  alternates: {
-    canonical: '/',
-  },
-  openGraph: {
-    title: 'Zion Tech Group - AI & IT Solutions',
-    description:
-      'Leading provider of AI-powered enterprise solutions, automation, and digital transformation services.',
-    url: 'https://ziontechgroup.com',
-    siteName: 'Zion Tech Group',
-    images: [
-      {
-        url: 'https://ziontechgroup.com/og-image.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Zion Tech Group - AI & IT Solutions',
-      },
-    ],
-    locale: 'en_US',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Zion Tech Group - AI & IT Solutions',
-    description:
-      'Leading provider of AI-powered enterprise solutions, automation, and digital transformation services.',
-    images: ['https://ziontechgroup.com/og-image.jpg'],
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
-  verification: {
-    google: 'your-google-verification-code',
-  },
-};
-
 export default function RootLayout({
   children,
 }: {
@@ -68,8 +16,7 @@ export default function RootLayout({
     name: 'Zion Tech Group',
     url: 'https://ziontechgroup.com',
     logo: 'https://ziontechgroup.com/logo.png',
-    description:
-      'Leading provider of AI-powered enterprise solutions, automation, and digital transformation services.',
+    description: 'Leading provider of AI-powered enterprise solutions, automation, and digital transformation services.',
     contactPoint: {
       '@type': 'ContactPoint',
       telephone: '+1-302-464-0950',
