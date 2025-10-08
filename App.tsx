@@ -165,14 +165,14 @@ export default function App() {
             {JSON.stringify(structuredData)}
           </script>
         </Helmet>
-        <Suspense fallback={<LoadingSpinner />}>
-          <div>
+        <div>
+          <Suspense fallback={<LoadingSpinner />}>
             <UnifiedContentPromotion />
             <InteractiveAIROICalculator />
             <ContentShowcase />
             <InteractiveContentShowcase2026 />
-          </div>
-        </Suspense>
+          </Suspense>
+        </div>
       </HelmetProvider>
     </ErrorBoundary>
   );
