@@ -36,7 +36,7 @@ export default function RootLayout({
 >>>>>>> cursor/fix-errors-and-merge-to-main-a8ed
     contactPoint: {
       '@type': 'ContactPoint',
-      telephone: '+1-302-600-9898',
+      telephone: '+1-302-464-0950',
       contactType: 'Customer Service',
       areaServed: 'US',
       availableLanguage: 'en',
@@ -123,8 +123,8 @@ export default function RootLayout({
       <head>
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="description" content="Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology." />
-        <meta name="keywords" content="AI solutions, quantum computing, autonomous systems, digital transformation, enterprise AI, machine learning, automation, cloud services, business intelligence" />
+        <meta name="description" content="Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology. Call (302) 464-0950." />
+        <meta name="keywords" content="AI solutions, quantum computing, autonomous systems, digital transformation, enterprise AI, machine learning, automation, cloud services, business intelligence, micro SAAS, IT services, Zion Tech Group" />
         <meta name="author" content="Zion Tech Group" />
         <meta name="robots" content="index, follow" />
         <meta name="googlebot" content="index, follow" />

@@ -289,6 +289,117 @@ const ITServicesPage: React.FC = () => {
       marketPrice: '$2,500-6,000/month',
       category: 'Asset Management',
       technologies: ['ServiceNow', 'Lansweeper', 'Asset Panda', 'Flexera', 'Microsoft Intune']
+    },
+    // Additional Comprehensive IT Services
+    {
+      title: 'Enterprise Application Integration',
+      description: 'Seamless integration of enterprise applications, APIs, and data systems for unified operations.',
+      icon: '🔗',
+      price: 'Starting at $4,000/month',
+      features: ['API development', 'Data integration', 'System migration', 'Real-time synchronization', 'Error handling'],
+      benefits: ['Improve data flow by 80%', 'Reduce integration costs by 50%', 'Enhance system reliability'],
+      marketPrice: '$6,000-15,000/month',
+      category: 'Integration',
+      technologies: ['MuleSoft', 'Zapier', 'Apache Kafka', 'REST APIs', 'GraphQL']
+    },
+    {
+      title: 'Advanced Network Security',
+      description: 'Comprehensive network security solutions including firewalls, VPNs, and intrusion detection.',
+      icon: '🔐',
+      price: 'Starting at $3,500/month',
+      features: ['Firewall management', 'VPN setup', 'Intrusion detection', 'Network monitoring', 'Security auditing'],
+      benefits: ['Prevent 99% of network attacks', 'Ensure compliance', 'Reduce security incidents'],
+      marketPrice: '$5,000-12,000/month',
+      category: 'Network Security',
+      technologies: ['Cisco', 'Fortinet', 'Palo Alto', 'Check Point', 'Sophos']
+    },
+    {
+      title: 'IT Service Management (ITSM)',
+      description: 'Complete ITSM solution with ticketing, change management, and service catalog.',
+      icon: '🎫',
+      price: 'Starting at $2,000/month',
+      features: ['Service desk', 'Incident management', 'Change management', 'Asset tracking', 'Knowledge base'],
+      benefits: ['Improve service delivery by 60%', 'Reduce resolution time by 40%', 'Enhance user satisfaction'],
+      marketPrice: '$3,500-8,000/month',
+      category: 'Service Management',
+      technologies: ['ServiceNow', 'Jira Service Management', 'Freshservice', 'Zendesk', 'ManageEngine']
+    },
+    {
+      title: 'Data Center Modernization',
+      description: 'Complete data center transformation including hardware upgrades, virtualization, and optimization.',
+      icon: '🏢',
+      price: 'Starting at $8,000/month',
+      features: ['Hardware assessment', 'Virtualization strategy', 'Migration planning', 'Performance optimization', 'Disaster recovery'],
+      benefits: ['Improve performance by 50%', 'Reduce costs by 30%', 'Enhance reliability'],
+      marketPrice: '$12,000-25,000/month',
+      category: 'Data Center',
+      technologies: ['VMware', 'Hyper-V', 'Docker', 'Kubernetes', 'OpenStack']
+    },
+    {
+      title: 'Mobile Device Management (MDM)',
+      description: 'Comprehensive mobile device management and security for enterprise mobile fleets.',
+      icon: '📱',
+      price: 'Starting at $1,500/month',
+      features: ['Device enrollment', 'Policy management', 'App distribution', 'Security controls', 'Remote management'],
+      benefits: ['Secure mobile devices', 'Reduce management overhead', 'Ensure compliance'],
+      marketPrice: '$2,500-6,000/month',
+      category: 'Mobile Management',
+      technologies: ['Microsoft Intune', 'VMware Workspace ONE', 'MobileIron', 'Citrix', 'Jamf']
+    },
+    {
+      title: 'IT Compliance & Governance',
+      description: 'Comprehensive compliance management for SOX, GDPR, HIPAA, and other regulatory requirements.',
+      icon: '📋',
+      price: 'Starting at $3,000/month',
+      features: ['Compliance assessment', 'Policy development', 'Audit preparation', 'Risk management', 'Training programs'],
+      benefits: ['Ensure regulatory compliance', 'Reduce audit costs', 'Minimize compliance risks'],
+      marketPrice: '$5,000-12,000/month',
+      category: 'Compliance',
+      technologies: ['GRC Tools', 'Risk Management', 'Audit Software', 'Policy Management', 'Training Platforms']
+    },
+    {
+      title: 'Advanced Backup & Recovery',
+      description: 'Comprehensive backup and disaster recovery solutions with automated testing and monitoring.',
+      icon: '💾',
+      price: 'Starting at $2,500/month',
+      features: ['Automated backups', 'Disaster recovery', 'Data replication', 'Recovery testing', 'Monitoring & alerting'],
+      benefits: ['Ensure data protection', 'Minimize downtime', 'Meet RTO/RPO requirements'],
+      marketPrice: '$4,000-10,000/month',
+      category: 'Backup & Recovery',
+      technologies: ['Veeam', 'Commvault', 'Rubrik', 'Cohesity', 'AWS Backup']
+    },
+    {
+      title: 'IT Performance Monitoring',
+      description: 'Advanced monitoring and analytics for IT infrastructure performance and user experience.',
+      icon: '📊',
+      price: 'Starting at $2,000/month',
+      features: ['Infrastructure monitoring', 'Application performance', 'User experience tracking', 'Capacity planning', 'Alerting'],
+      benefits: ['Prevent outages', 'Optimize performance', 'Improve user experience'],
+      marketPrice: '$3,500-8,000/month',
+      category: 'Monitoring',
+      technologies: ['Datadog', 'New Relic', 'AppDynamics', 'Splunk', 'Prometheus']
+    },
+    {
+      title: 'IT Training & Support',
+      description: 'Comprehensive IT training programs and ongoing support for end users and IT staff.',
+      icon: '🎓',
+      price: 'Starting at $1,200/month',
+      features: ['User training', 'IT staff development', 'Documentation', 'Help desk support', 'Knowledge transfer'],
+      benefits: ['Improve user productivity', 'Reduce support tickets', 'Enhance IT skills'],
+      marketPrice: '$2,000-5,000/month',
+      category: 'Training & Support',
+      technologies: ['Learning Management Systems', 'Video Training', 'Documentation Tools', 'Support Ticketing', 'Knowledge Base']
+    },
+    {
+      title: 'IT Cost Optimization',
+      description: 'Comprehensive IT cost analysis and optimization strategies to reduce expenses and improve ROI.',
+      icon: '💰',
+      price: 'Starting at $2,500/month',
+      features: ['Cost analysis', 'License optimization', 'Vendor management', 'Budget planning', 'ROI tracking'],
+      benefits: ['Reduce IT costs by 25%', 'Optimize spending', 'Improve ROI'],
+      marketPrice: '$4,000-10,000/month',
+      category: 'Cost Optimization',
+      technologies: ['Cost Management Tools', 'License Management', 'Vendor Management', 'Financial Analytics', 'ROI Calculators']
     }
   ];
 

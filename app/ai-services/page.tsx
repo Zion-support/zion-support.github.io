@@ -256,6 +256,117 @@ const AIServicesPage: React.FC = () => {
       marketPrice: '$30,000-90,000/month',
       category: 'Space AI',
       technologies: ['Astropy', 'TensorFlow', 'PyTorch', 'OpenCV', 'Space Data APIs']
+    },
+    // Additional Advanced AI Services
+    {
+      title: 'AI-Powered Drug Discovery Platform',
+      description: 'Advanced AI system for pharmaceutical research, drug design, and molecular analysis.',
+      icon: '💊',
+      price: 'Starting at $15,000/month',
+      features: ['Molecular design', 'Drug-target interaction prediction', 'Toxicity assessment', 'Clinical trial optimization', 'Patent analysis'],
+      benefits: ['Accelerate drug discovery by 50%', 'Reduce R&D costs by 40%', 'Improve success rates'],
+      marketPrice: '$25,000-60,000/month',
+      category: 'Pharmaceutical AI',
+      technologies: ['DeepChem', 'RDKit', 'PyTorch', 'AlphaFold', 'Custom ML Models']
+    },
+    {
+      title: 'Autonomous Vehicle AI System',
+      description: 'Complete AI solution for autonomous vehicles including perception, planning, and control.',
+      icon: '🚗',
+      price: 'Starting at $20,000/month',
+      features: ['Computer vision', 'Sensor fusion', 'Path planning', 'Decision making', 'Safety systems'],
+      benefits: ['Enable autonomous driving', 'Improve safety standards', 'Reduce accidents'],
+      marketPrice: '$35,000-80,000/month',
+      category: 'Autonomous Vehicles',
+      technologies: ['TensorFlow', 'PyTorch', 'ROS', 'OpenCV', 'Custom AI Models']
+    },
+    {
+      title: 'AI-Powered Financial Trading System',
+      description: 'Advanced algorithmic trading with machine learning for market prediction and risk management.',
+      icon: '📈',
+      price: 'Starting at $12,000/month',
+      features: ['Market prediction', 'Risk assessment', 'Portfolio optimization', 'High-frequency trading', 'Regulatory compliance'],
+      benefits: ['Increase trading profits by 30%', 'Reduce risk exposure', 'Automate trading strategies'],
+      marketPrice: '$20,000-50,000/month',
+      category: 'FinTech AI',
+      technologies: ['Python', 'TensorFlow', 'QuantLib', 'Pandas', 'Custom ML Models']
+    },
+    {
+      title: 'AI Climate Change Modeling',
+      description: 'Advanced climate modeling and environmental impact prediction using machine learning.',
+      icon: '🌍',
+      price: 'Starting at $8,000/month',
+      features: ['Climate modeling', 'Weather prediction', 'Environmental impact analysis', 'Carbon footprint tracking', 'Sustainability optimization'],
+      benefits: ['Improve climate predictions', 'Optimize environmental strategies', 'Support sustainability goals'],
+      marketPrice: '$15,000-35,000/month',
+      category: 'Environmental AI',
+      technologies: ['TensorFlow', 'PyTorch', 'Climate Data APIs', 'Python', 'Custom ML Models']
+    },
+    {
+      title: 'AI-Powered Cybersecurity Suite',
+      description: 'Advanced threat detection, malware analysis, and security automation using AI.',
+      icon: '🛡️',
+      price: 'Starting at $6,000/month',
+      features: ['Threat detection', 'Malware analysis', 'Anomaly detection', 'Incident response', 'Security automation'],
+      benefits: ['Prevent 99% of cyber attacks', 'Reduce response time by 80%', 'Automate security operations'],
+      marketPrice: '$10,000-25,000/month',
+      category: 'Cybersecurity AI',
+      technologies: ['TensorFlow', 'PyTorch', 'SIEM', 'EDR', 'Custom AI Models']
+    },
+    {
+      title: 'AI-Powered Manufacturing Optimization',
+      description: 'Complete AI solution for manufacturing process optimization, quality control, and predictive maintenance.',
+      icon: '🏭',
+      price: 'Starting at $10,000/month',
+      features: ['Process optimization', 'Quality control', 'Predictive maintenance', 'Supply chain optimization', 'Energy efficiency'],
+      benefits: ['Increase production efficiency by 25%', 'Reduce defects by 90%', 'Lower operational costs'],
+      marketPrice: '$18,000-40,000/month',
+      category: 'Industrial AI',
+      technologies: ['TensorFlow', 'PyTorch', 'IoT', 'Computer Vision', 'Custom ML Models']
+    },
+    {
+      title: 'AI-Powered Content Creation Suite',
+      description: 'Advanced AI system for automated content generation, video production, and creative design.',
+      icon: '🎨',
+      price: 'Starting at $3,000/month',
+      features: ['Text generation', 'Image creation', 'Video production', 'Audio synthesis', 'Creative design'],
+      benefits: ['Create content 10x faster', 'Reduce production costs by 60%', 'Maintain consistent quality'],
+      marketPrice: '$5,000-15,000/month',
+      category: 'Creative AI',
+      technologies: ['GPT-4', 'DALL-E', 'Stable Diffusion', 'Python', 'Custom AI Models']
+    },
+    {
+      title: 'AI-Powered Personal Assistant Platform',
+      description: 'Advanced personal AI assistant with natural language understanding and task automation.',
+      icon: '🤖',
+      price: 'Starting at $2,500/month',
+      features: ['Natural language processing', 'Task automation', 'Calendar management', 'Email processing', 'Voice interaction'],
+      benefits: ['Increase productivity by 40%', 'Automate routine tasks', 'Improve work-life balance'],
+      marketPrice: '$4,000-10,000/month',
+      category: 'Personal AI',
+      technologies: ['OpenAI GPT', 'Whisper', 'React', 'Node.js', 'Custom AI Models']
+    },
+    {
+      title: 'AI-Powered Research Assistant',
+      description: 'Advanced AI system for scientific research, data analysis, and hypothesis generation.',
+      icon: '🔬',
+      price: 'Starting at $7,000/month',
+      features: ['Literature review', 'Data analysis', 'Hypothesis generation', 'Experiment design', 'Result interpretation'],
+      benefits: ['Accelerate research by 50%', 'Improve research quality', 'Generate new insights'],
+      marketPrice: '$12,000-30,000/month',
+      category: 'Research AI',
+      technologies: ['Python', 'TensorFlow', 'PyTorch', 'Jupyter', 'Custom ML Models']
+    },
+    {
+      title: 'AI-Powered Customer Experience Platform',
+      description: 'Complete AI solution for customer experience optimization, personalization, and engagement.',
+      icon: '😊',
+      price: 'Starting at $4,000/month',
+      features: ['Customer journey mapping', 'Personalization engine', 'Sentiment analysis', 'Recommendation system', 'Engagement optimization'],
+      benefits: ['Increase customer satisfaction by 35%', 'Boost conversion rates by 50%', 'Reduce churn by 40%'],
+      marketPrice: '$7,000-18,000/month',
+      category: 'Customer Experience AI',
+      technologies: ['TensorFlow', 'PyTorch', 'React', 'Node.js', 'Custom AI Models']
     }
   ];
 

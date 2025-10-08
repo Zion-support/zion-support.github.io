@@ -1520,6 +1520,117 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$400-800/month',
       category: 'Customer Intelligence',
       technologies: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
+    },
+    // New Innovative Services
+    {
+      title: 'AI-Powered Legal Document Analyzer',
+      description: 'Automated legal document review, contract analysis, and compliance checking using advanced NLP.',
+      icon: '⚖️',
+      price: '$199/month',
+      features: ['Contract analysis', 'Risk assessment', 'Compliance checking', 'Document comparison', 'Legal research automation'],
+      benefits: ['Reduce legal review time by 80%', 'Identify risks early', 'Ensure compliance'],
+      marketPrice: '$350-700/month',
+      category: 'Legal Tech',
+      technologies: ['NLP', 'BERT', 'Legal AI Models', 'Python', 'React']
+    },
+    {
+      title: 'Smart Energy Management System',
+      description: 'AI-driven energy optimization for buildings and industrial facilities with real-time monitoring.',
+      icon: '⚡',
+      price: '$179/month',
+      features: ['Energy consumption analysis', 'Predictive optimization', 'Cost reduction strategies', 'Carbon footprint tracking', 'Real-time monitoring'],
+      benefits: ['Reduce energy costs by 25%', 'Lower carbon footprint', 'Improve efficiency'],
+      marketPrice: '$300-600/month',
+      category: 'Sustainability',
+      technologies: ['IoT Sensors', 'Machine Learning', 'Python', 'React', 'Custom AI Models']
+    },
+    {
+      title: 'AI Medical Image Analysis Platform',
+      description: 'Advanced medical image processing for radiology, pathology, and diagnostic assistance.',
+      icon: '🏥',
+      price: '$399/month',
+      features: ['X-ray analysis', 'MRI/CT scan processing', 'Pathology image analysis', 'Diagnostic assistance', 'Report generation'],
+      benefits: ['Improve diagnostic accuracy', 'Reduce analysis time', 'Support medical professionals'],
+      marketPrice: '$600-1200/month',
+      category: 'Healthcare',
+      technologies: ['Computer Vision', 'Deep Learning', 'Medical AI Models', 'Python', 'DICOM']
+    },
+    {
+      title: 'Intelligent Supply Chain Optimizer',
+      description: 'AI-powered supply chain management with demand forecasting and logistics optimization.',
+      icon: '🚚',
+      price: '$249/month',
+      features: ['Demand forecasting', 'Route optimization', 'Inventory management', 'Supplier risk assessment', 'Cost optimization'],
+      benefits: ['Reduce supply chain costs by 30%', 'Improve delivery times', 'Minimize risks'],
+      marketPrice: '$400-800/month',
+      category: 'Supply Chain',
+      technologies: ['Machine Learning', 'Optimization Algorithms', 'Python', 'React', 'Custom AI Models']
+    },
+    {
+      title: 'AI-Powered Real Estate Analyzer',
+      description: 'Property valuation, market analysis, and investment opportunity identification using ML.',
+      icon: '🏠',
+      price: '$149/month',
+      features: ['Property valuation', 'Market trend analysis', 'Investment scoring', 'Rental yield prediction', 'Risk assessment'],
+      benefits: ['Make informed investment decisions', 'Identify profitable opportunities', 'Reduce investment risks'],
+      marketPrice: '$250-500/month',
+      category: 'Real Estate',
+      technologies: ['Machine Learning', 'Geospatial Analysis', 'Python', 'React', 'Custom AI Models']
+    },
+    {
+      title: 'Smart Agriculture Monitoring System',
+      description: 'IoT and AI-powered crop monitoring, disease detection, and yield optimization for farmers.',
+      icon: '🌾',
+      price: '$199/month',
+      features: ['Crop health monitoring', 'Disease detection', 'Yield prediction', 'Weather analysis', 'Irrigation optimization'],
+      benefits: ['Increase crop yields by 20%', 'Reduce water usage', 'Prevent crop diseases'],
+      marketPrice: '$350-700/month',
+      category: 'Agriculture',
+      technologies: ['IoT', 'Computer Vision', 'Machine Learning', 'Python', 'React']
+    },
+    {
+      title: 'AI-Powered Learning Management System',
+      description: 'Personalized learning platform with adaptive content and progress tracking for education.',
+      icon: '🎓',
+      price: '$129/month',
+      features: ['Personalized learning paths', 'Progress tracking', 'Adaptive assessments', 'Content recommendation', 'Analytics dashboard'],
+      benefits: ['Improve learning outcomes', 'Personalize education', 'Track student progress'],
+      marketPrice: '$200-400/month',
+      category: 'Education',
+      technologies: ['Machine Learning', 'React', 'Node.js', 'MongoDB', 'Custom AI Models']
+    },
+    {
+      title: 'Intelligent Fleet Management AI',
+      description: 'AI-driven fleet optimization with route planning, fuel efficiency, and maintenance scheduling.',
+      icon: '🚛',
+      price: '$179/month',
+      features: ['Route optimization', 'Fuel efficiency tracking', 'Driver behavior analysis', 'Maintenance scheduling', 'Cost optimization'],
+      benefits: ['Reduce fuel costs by 20%', 'Improve delivery efficiency', 'Extend vehicle life'],
+      marketPrice: '$300-600/month',
+      category: 'Fleet Management',
+      technologies: ['GPS Tracking', 'Machine Learning', 'Python', 'React', 'Custom AI Models']
+    },
+    {
+      title: 'AI-Powered Quality Control System',
+      description: 'Automated quality inspection and defect detection for manufacturing and production lines.',
+      icon: '🔍',
+      price: '$299/month',
+      features: ['Defect detection', 'Quality scoring', 'Process optimization', 'Real-time alerts', 'Analytics dashboard'],
+      benefits: ['Reduce defects by 90%', 'Improve product quality', 'Lower inspection costs'],
+      marketPrice: '$500-1000/month',
+      category: 'Manufacturing',
+      technologies: ['Computer Vision', 'Deep Learning', 'Python', 'React', 'Custom AI Models']
+    },
+    {
+      title: 'Smart Waste Management Optimizer',
+      description: 'AI-powered waste collection optimization and recycling efficiency for municipalities.',
+      icon: '♻️',
+      price: '$159/month',
+      features: ['Collection route optimization', 'Waste composition analysis', 'Recycling efficiency', 'Cost optimization', 'Environmental impact tracking'],
+      benefits: ['Reduce collection costs by 30%', 'Increase recycling rates', 'Improve environmental impact'],
+      marketPrice: '$250-500/month',
+      category: 'Environmental',
+      technologies: ['IoT Sensors', 'Machine Learning', 'Python', 'React', 'Custom AI Models']
     }
   ];
 
