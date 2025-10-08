@@ -73,6 +73,11 @@ const Footer: React.FC = () => {
                 </Link>
               </li>
               <li>
+                <Link to="/micro-saas" className="hover:text-white transition-colors">
+                  Micro SAAS Solutions
+                </Link>
+              </li>
+              <li>
                 <Link to="/ai-services" className="hover:text-white transition-colors">
                   AI Services
                 </Link>
@@ -83,8 +88,13 @@ const Footer: React.FC = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/micro-saas" className="hover:text-white transition-colors">
-                  Micro SAAS
+                <Link to="/business-intelligence" className="hover:text-white transition-colors">
+                  Business Intelligence
+                </Link>
+              </li>
+              <li>
+                <Link to="/cybersecurity" className="hover:text-white transition-colors">
+                  Cybersecurity
                 </Link>
               </li>
               <li>
@@ -98,11 +108,6 @@ const Footer: React.FC = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/business-intelligence" className="hover:text-white transition-colors">
-                  Business Intelligence
-                </Link>
-              </li>
-              <li>
                 <Link to="/blockchain-web3" className="hover:text-white transition-colors">
                   Blockchain & Web3
                 </Link>
@@ -113,8 +118,8 @@ const Footer: React.FC = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/cybersecurity" className="hover:text-white transition-colors">
-                  Cybersecurity
+                <Link to="/robotics" className="hover:text-white transition-colors">
+                  Robotics & Automation
                 </Link>
               </li>
             </ul>
@@ -133,7 +138,7 @@ const Footer: React.FC = () => {
                 </a>
                 <a href="https://twitter.com/ziontechgroup" className="text-gray-300 hover:text-white transition-colors">
                   Twitter
-                </a>origin/main
+                </a>
               </div>
               <p className="text-gray-300 mb-6 max-w-md">
                 Leading provider of enterprise AI solutions, quantum computing, autonomous systems, 

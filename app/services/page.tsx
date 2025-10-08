@@ -6,11 +6,11 @@ const ServicesPage: React.FC = () => {
   const serviceCategories = [
     {
       title: 'Micro SAAS Solutions',
-      description: 'Affordable, powerful AI-driven tools for modern businesses. Start from $79/month.',
+      description: 'Affordable, powerful AI-driven tools for modern businesses. 20+ ready-to-use solutions.',
       icon: '💻',
       link: '/micro-saas',
-      features: ['12+ Ready-to-use Tools', 'AI-Powered Automation', 'Instant Setup', '24/7 Support'],
-      price: 'Starting at $79/month',
+      features: ['20+ Ready-to-use Tools', 'AI-Powered Automation', 'Instant Setup', '24/7 Support'],
+      price: 'Starting at $49/month',
       popular: true
     },
     {
@@ -63,6 +63,22 @@ const ServicesPage: React.FC = () => {
       price: 'Starting at $1,200/month'
     },
     {
+      title: 'Business Intelligence',
+      description: 'Data-driven insights and analytics for strategic decision making.',
+      icon: '📊',
+      link: '/business-intelligence',
+      features: ['Real-time Analytics', 'Data Visualization', 'Predictive Analytics', 'Dashboard Creation'],
+      price: 'Starting at $1,800/month'
+    },
+    {
+      title: 'Cybersecurity Solutions',
+      description: 'Advanced security services including threat detection and compliance.',
+      icon: '🛡️',
+      link: '/cybersecurity',
+      features: ['Threat Detection', 'Penetration Testing', 'Zero Trust Security', 'SOC Services'],
+      price: 'Starting at $2,500/month'
+    },
+    {
       title: 'Quantum Computing',
       description: 'Next-generation quantum computing capabilities for complex problem solving.',
       icon: '⚛️',
@@ -79,26 +95,18 @@ const ServicesPage: React.FC = () => {
       price: 'Starting at $2,500/month'
     },
     {
-      title: 'Business Intelligence',
-      description: 'Data-driven insights and analytics for strategic decision making.',
-      icon: '📊',
-      link: '/business-intelligence',
-      features: ['Real-time Analytics', 'Data Visualization', 'Reporting', 'Dashboard Creation'],
-      price: 'Starting at $1,800/month'
-    },
-    {
       title: 'Blockchain & Web3',
       description: 'Decentralized applications, smart contracts, and Web3 solutions.',
       icon: '🔗',
-      link: '/blockchain',
-      features: ['Smart Contracts', 'DeFi Protocols', 'NFT Marketplaces', 'Web3 Applications'],cursor/add-new-services-and-deploy-updates-f159
+      link: '/blockchain-web3',
+      features: ['Smart Contracts', 'DeFi Protocols', 'NFT Marketplaces', 'Web3 Applications'],
       price: 'Starting at $8,000/project'
     },
     {
       title: 'IoT & Edge Computing',
       description: 'Connected devices, edge analytics, and industrial IoT solutions.',
       icon: '📱',
-      link: '/iot-edge',
+      link: '/iot-edge-computing',
       features: ['Device Management', 'Edge Analytics', 'Industrial IoT', 'Smart Cities'],
       price: 'Starting at $2,500/month'
     },
@@ -108,14 +116,6 @@ const ServicesPage: React.FC = () => {
       icon: '🤖',
       link: '/robotics',
       features: ['RPA Solutions', 'Industrial Robots', 'Service Robots', 'AI-Powered Automation'],
-      price: 'Starting at $2,500/month'
-    },
-    {
-      title: 'Cybersecurity Solutions',
-      description: 'Advanced security services including threat detection and compliance.',
-      icon: '🛡️',
-      link: '/cybersecurity',
-      features: ['Threat Detection', 'Penetration Testing', 'Zero Trust Security', 'SOC Services'],cursor/add-new-services-and-deploy-updates-f159
       price: 'Starting at $2,500/month'
     }
   ];

@@ -292,7 +292,7 @@ const ITServicesPage: React.FC = () => {
     }
   ];
 
-  const _categories = [...new Set(itServices.map(service => service.category))];
+  const categories = [...new Set(itServices.map(service => service.category))];
 
   return (
     <>

@@ -83,7 +83,7 @@ const Navigation: React.FC = () => {
                     </Link>
                   </div>
                 </div>
-              )}origin/main
+              )}
             </div>
           </div>
         </div>
@@ -118,8 +118,8 @@ const Navigation: React.FC = () => {
                   <ChevronDown className="w-4 h-4 ml-1" />
                 </button>
                 {servicesOpen && (
-                  <div className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-xl border py-4 z-50">
-                    <div className="grid grid-cols-2 gap-4 px-4">
+                  <div className="absolute top-full left-0 mt-2 w-96 bg-white rounded-lg shadow-xl border py-4 z-50">
+                    <div className="grid grid-cols-3 gap-4 px-4">
                       <div>
                         <h3 className="font-semibold text-gray-900 mb-2">Core Services</h3>
                         <Link to="/services" className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
@@ -133,6 +133,9 @@ const Navigation: React.FC = () => {
                         </Link>
                         <Link to="/it-services" className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
                           IT Services
+                        </Link>
+                        <Link to="/business-intelligence" className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
+                          Business Intelligence
                         </Link>
                       </div>
                       <div>
@@ -149,11 +152,29 @@ const Navigation: React.FC = () => {
                         <Link to="/cybersecurity" className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
                           Cybersecurity
                         </Link>
+                        <Link to="/iot-edge-computing" className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
+                          IoT & Edge Computing
+                        </Link>
+                      </div>
+                      <div>
+                        <h3 className="font-semibold text-gray-900 mb-2">Advanced</h3>
+                        <Link to="/robotics" className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
+                          Robotics & Automation
+                        </Link>
+                        <Link to="/enterprise" className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
+                          Enterprise Solutions
+                        </Link>
+                        <Link to="/case-studies" className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
+                          Case Studies
+                        </Link>
+                        <Link to="/team" className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
+                          Our Team
+                        </Link>
                       </div>
                     </div>
                   </div>
-                )}origin/main
-              </div>
+                )}
+            </div>
 
               <Link to="/case-studies" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
                 Case Studies
@@ -212,6 +233,9 @@ const Navigation: React.FC = () => {
                     <Link to="/it-services" className="block text-gray-600 hover:text-blue-600 transition-colors">
                       IT Services
                     </Link>
+                    <Link to="/business-intelligence" className="block text-gray-600 hover:text-blue-600 transition-colors">
+                      Business Intelligence
+                    </Link>
                     <Link to="/quantum-computing" className="block text-gray-600 hover:text-blue-600 transition-colors">
                       Quantum Computing
                     </Link>
@@ -223,6 +247,12 @@ const Navigation: React.FC = () => {
                     </Link>
                     <Link to="/cybersecurity" className="block text-gray-600 hover:text-blue-600 transition-colors">
                       Cybersecurity
+                    </Link>
+                    <Link to="/iot-edge-computing" className="block text-gray-600 hover:text-blue-600 transition-colors">
+                      IoT & Edge Computing
+                    </Link>
+                    <Link to="/robotics" className="block text-gray-600 hover:text-blue-600 transition-colors">
+                      Robotics & Automation
                     </Link>
                   </div>
                 </div>
