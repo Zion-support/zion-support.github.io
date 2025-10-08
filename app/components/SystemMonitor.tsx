@@ -1,21 +1,17 @@
+'use client';
+
 /**
  * System Monitor Component
  * Real-time monitoring dashboard for performance, errors, and system health
  */
 
 import React, { useState, useEffect, useCallback } from 'react';
-
+import { performanceOptimizer } from '../utils/performanceOptimizer';
 import { errorHandler } from '../utils/enhancedErrorHandler';
 
-<<<<<<< HEAD
-// Collect basic performance metrics (currently unused but available for future use)
-// const _collectPerformanceMetrics = () => {
-//   if (typeof window === 'undefined' || !window.performance) return null;
-=======
 // Collect basic performance metrics
 const _collectPerformanceMetrics = () => {
   if (typeof window === 'undefined' || !window.performance) return null;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b3e6
 
 //   const navigation = window.performance.timing;
 //   const paint = window.performance.getEntriesByType('paint');
@@ -28,17 +24,20 @@ const _collectPerformanceMetrics = () => {
 // };
 
 // Helper functions
-const calculatePerformanceScore = (loadTime: number, firstContentfulPaint: number) => {
+const calculatePerformanceScore = () => {
+  const metrics = performanceOptimizer.getMetrics();
+  if (!metrics) return 0;
+  
   let score = 100;
-
+  
   // Deduct points for slow load times
-  if (loadTime > 3000) score -= 20;
-  if (loadTime > 5000) score -= 30;
-
+  if (metrics.loadTime > 3000) score -= 20;
+  if (metrics.loadTime > 5000) score -= 30;
+  
   // Deduct points for slow paint times
-  if (firstContentfulPaint > 2000) score -= 15;
-  if (firstContentfulPaint > 3000) score -= 25;
-
+  if (metrics.firstContentfulPaint && metrics.firstContentfulPaint > 2000) score -= 15;
+  if (metrics.firstContentfulPaint && metrics.firstContentfulPaint > 3000) score -= 25;
+  
   return Math.max(0, score);
 };
 
@@ -112,6 +111,8 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
   // Update metrics
   const updateMetrics = useCallback(() => {
     try {
+      const performanceMetrics = performanceOptimizer.getMetrics();
+      const performanceScore = calculatePerformanceScore();
       const errorStats = errorHandler.getErrorStatistics();
 
       // Get memory info
@@ -120,21 +121,11 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
       // Get network info
       const networkInfo = getNetworkInfo();
 
-      // Calculate performance metrics
-      const navigation = performance.getEntriesByType('navigation')[0] as
-        | PerformanceNavigationTiming
-        | undefined;
-      const loadTime = navigation ? navigation.loadEventEnd - navigation.fetchStart : 0;
-      const firstContentfulPaint =
-        performance.getEntriesByType('paint').find(e => e.name === 'first-contentful-paint')
-          ?.startTime || 0;
-      const performanceScore = calculatePerformanceScore(loadTime, firstContentfulPaint);
-
       const newMetrics: SystemMetrics = {
         performance: {
           score: performanceScore,
-          loadTime: loadTime,
-          firstContentfulPaint: firstContentfulPaint,
+          loadTime: performanceMetrics?.loadTime || 0,
+          firstContentfulPaint: performanceMetrics?.firstContentfulPaint || 0,
           largestContentfulPaint: 0, // Not available in current metrics
           firstInputDelay: 0, // Not available in current metrics
           cumulativeLayoutShift: 0, // Not available in current metrics
@@ -159,7 +150,8 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
       setMetrics(newMetrics);
       setLastUpdate(new Date());
     } catch (error) {
-      console.error('Failed to update metrics:', error);
+       
+console.error('Failed to update metrics:', error);
     }
   }, []);
 
@@ -190,11 +182,7 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
   // Get memory information
   const getMemoryInfo = () => {
     if ('memory' in performance) {
-      const memory = (
-        performance as Performance & {
-          memory: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number };
-        }
-      ).memory;
+      const memory = (performance as Performance & { memory: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
       const used = memory.usedJSHeapSize / 1024 / 1024; // MB
       const total = memory.totalJSHeapSize / 1024 / 1024; // MB
       const limit = memory.jsHeapSizeLimit / 1024 / 1024; // MB
@@ -233,6 +221,7 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
 
     const exportData = {
       metrics,
+      performanceData: performanceOptimizer.getMetrics(),
       errorData: errorHandler.exportErrorData(),
       timestamp: new Date().toISOString(),
     };
@@ -260,16 +249,11 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
   // Get severity color
   const getSeverityColor = (severity: string) => {
     switch (severity) {
-      case 'critical':
-        return 'text-red-600 bg-red-100';
-      case 'high':
-        return 'text-red-500 bg-red-50';
-      case 'medium':
-        return 'text-yellow-600 bg-yellow-100';
-      case 'low':
-        return 'text-green-600 bg-green-100';
-      default:
-        return 'text-gray-600 bg-gray-100';
+      case 'critical': return 'text-red-600 bg-red-100';
+      case 'high': return 'text-red-500 bg-red-50';
+      case 'medium': return 'text-yellow-600 bg-yellow-100';
+      case 'low': return 'text-green-600 bg-green-100';
+      default: return 'text-gray-600 bg-gray-100';
     }
   };
 
@@ -290,10 +274,10 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
         <h2 className="text-2xl font-bold text-gray-900">System Monitor</h2>
         <div className="flex items-center space-x-4">
           <div className="flex items-center space-x-2">
-            <div
-              className={`w-3 h-3 rounded-full ${isMonitoring ? 'bg-green-500' : 'bg-red-500'}`}
-            ></div>
-            <span className="text-sm text-gray-600">{isMonitoring ? 'Monitoring' : 'Stopped'}</span>
+            <div className={`w-3 h-3 rounded-full ${isMonitoring ? 'bg-green-500' : 'bg-red-500'}`}></div>
+            <span className="text-sm text-gray-600">
+              {isMonitoring ? 'Monitoring' : 'Stopped'}
+            </span>
           </div>
           {enableExport && (
             <button
@@ -319,9 +303,7 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
           <div className="bg-gray-50 p-4 rounded-lg">
             <div className="flex items-center justify-between">
               <span className="text-sm font-medium text-gray-600">Performance Score</span>
-              <span
-                className={`text-2xl font-bold ${getPerformanceScoreColor(metrics.performance.score)}`}
-              >
+              <span className={`text-2xl font-bold ${getPerformanceScoreColor(metrics.performance.score)}`}>
                 {metrics.performance.score}
               </span>
             </div>
@@ -376,7 +358,9 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
           <div className="bg-gray-50 p-4 rounded-lg">
             <div className="flex items-center justify-between">
               <span className="text-sm font-medium text-gray-600">Total Errors</span>
-              <span className="text-2xl font-bold text-red-600">{metrics.errors.total}</span>
+              <span className="text-2xl font-bold text-red-600">
+                {metrics.errors.total}
+              </span>
             </div>
           </div>
           <div className="bg-gray-50 p-4 rounded-lg">
@@ -428,11 +412,8 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
               <div className="w-full bg-gray-200 rounded-full h-2">
                 <div
                   className={`h-2 rounded-full ${
-                    metrics.memory.percentage > 80
-                      ? 'bg-red-500'
-                      : metrics.memory.percentage > 60
-                        ? 'bg-yellow-500'
-                        : 'bg-green-500'
+                    metrics.memory.percentage > 80 ? 'bg-red-500' :
+                    metrics.memory.percentage > 60 ? 'bg-yellow-500' : 'bg-green-500'
                   }`}
                   style={{ width: `${Math.min(metrics.memory.percentage, 100)}%` }}
                 ></div>
@@ -468,13 +449,11 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
         <div className="mb-8">
           <h3 className="text-lg font-semibold text-gray-900 mb-4">Recent Errors</h3>
           <div className="space-y-2 max-h-64 overflow-y-auto">
-            {metrics.errors.recent.map(error => (
+            {metrics.errors.recent.map((error) => (
               <div key={error.id} className="bg-gray-50 p-3 rounded-lg">
                 <div className="flex items-center justify-between mb-2">
                   <span className="text-sm font-medium text-gray-900">{error.message}</span>
-                  <span
-                    className={`px-2 py-1 rounded-full text-xs font-medium ${getSeverityColor(error.severity)}`}
-                  >
+                  <span className={`px-2 py-1 rounded-full text-xs font-medium ${getSeverityColor(error.severity)}`}>
                     {error.severity}
                   </span>
                 </div>

@@ -1,6 +1,11 @@
 // Learn more: https://github.com/testing-library/jest-dom
 require('@testing-library/jest-dom');
 const React = require('react');
+const { TextEncoder, TextDecoder } = require('util');
+
+// Polyfills for Node.js environment
+global.TextEncoder = TextEncoder;
+global.TextDecoder = TextDecoder;
 
 // Mock files that use import.meta.env
 jest.mock('./src/utils/logger.ts', () => ({
@@ -66,8 +71,14 @@ jest.mock('react-router-dom', () => {
       return <RouterProvider router={router} />;
     },
     RouterProvider: ({ router }) => null,
-    Link: ({ children, to, ...props }) => React.createElement('a', { href: to, ...props }, children),
-    NavLink: ({ children, to, ...props }) => React.createElement('a', { href: to, ...props }, children),
+    Link: ({ children, to, ...props }) => {
+      const React = require('react');
+      return React.createElement('a', { href: to, ...props }, children);
+    },
+    NavLink: ({ children, to, ...props }) => {
+      const React = require('react');
+      return React.createElement('a', { href: to, ...props }, children);
+    },
   };
 });
 

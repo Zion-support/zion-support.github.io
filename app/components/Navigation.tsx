@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { ChevronDown } from 'lucide-react';
 
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [servicesOpen, setServicesOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -15,9 +17,18 @@ const Navigation: React.FC = () => {
   const navItems = [
     { to: '/', label: 'Home' },
     { to: '/about', label: 'About' },
-    { to: '/services', label: 'Services' },
     { to: '/enterprise', label: 'Enterprise' },
+    { to: '/team', label: 'Team' },
     { to: '/contact', label: 'Contact' },
+  ];
+
+  const serviceItems = [
+    { to: '/services', label: 'All Services' },
+    { to: '/micro-saas', label: 'Micro SAAS Solutions' },
+    { to: '/ai-services', label: 'AI Services' },
+    { to: '/it-services', label: 'IT Services' },
+    { to: '/services-advertising', label: 'Advertising Services' },
+    { to: '/case-studies', label: 'Case Studies' },
   ];
 
   return (
@@ -45,6 +56,34 @@ const Navigation: React.FC = () => {
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-indigo-600 transition-all duration-300 group-hover:w-full"></span>
               </Link>
             ))}
+            
+            {/* Services Dropdown */}
+            <div className="relative">
+              <button
+                onClick={() => setServicesOpen(!servicesOpen)}
+                className="text-gray-700 hover:text-indigo-600 transition-colors duration-300 font-medium flex items-center relative group"
+                aria-expanded={servicesOpen}
+                aria-haspopup="true"
+              >
+                Services
+                <ChevronDown className={`w-4 h-4 ml-1 transition-transform duration-300 ${servicesOpen ? 'rotate-180' : ''}`} />
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-indigo-600 transition-all duration-300 group-hover:w-full"></span>
+              </button>
+              {servicesOpen && (
+                <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg border py-2 z-50">
+                  {serviceItems.map((item) => (
+                    <Link
+                      key={item.to}
+                      to={item.to}
+                      className="block px-4 py-2 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition-colors duration-300"
+                      onClick={() => setServicesOpen(false)}
+                    >
+                      {item.label}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
           </div>
 
           {/* Mobile Menu Button */}
@@ -95,6 +134,24 @@ const Navigation: React.FC = () => {
                   {item.label}
                 </Link>
               ))}
+              
+              {/* Services Section */}
+              <div className="space-y-2">
+                <div className="text-gray-700 font-semibold px-4 py-2">Services</div>
+                <div className="ml-4 space-y-2">
+                  {serviceItems.map((item) => (
+                    <Link
+                      key={item.to}
+                      to={item.to}
+                      onClick={closeMenu}
+                      className="block text-gray-600 hover:text-indigo-600 hover:bg-gray-50 transition-colors duration-300 py-2 px-4 rounded-md"
+                      role="menuitem"
+                    >
+                      {item.label}
+                    </Link>
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
         )}
