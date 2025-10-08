@@ -4,8 +4,10 @@ import { Phone, Mail, MapPin, Clock, Award, Shield, Zap } from 'lucide-react';
 
 const Footer: React.FC = memo(() => {
   return (
-    <footer className="bg-gray-900 text-white py-12">
-      <div className="container mx-auto px-4">
+    <footer className="bg-gradient-to-br from-slate-900 via-gray-900 to-slate-900 text-white py-12 relative">
+      {/* Futuristic background effect */}
+      <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-pink-500/5"></div>
+      <div className="container mx-auto px-4 relative z-10">
         <div className="grid md:grid-cols-4 gap-8">
           {/* Company Info */}
           <div>
@@ -75,6 +77,31 @@ const Footer: React.FC = memo(() => {
               <li>
                 <Link to="/ai-services" className="hover:text-white transition-colors">
                   AI Services
+                </Link>
+              </li>
+              <li>
+                <Link to="/ai-customer-service" className="hover:text-white transition-colors">
+                  AI Customer Service
+                </Link>
+              </li>
+              <li>
+                <Link to="/ai-content-generation" className="hover:text-white transition-colors">
+                  AI Content Generation
+                </Link>
+              </li>
+              <li>
+                <Link to="/ai-sales-automation" className="hover:text-white transition-colors">
+                  AI Sales Automation
+                </Link>
+              </li>
+              <li>
+                <Link to="/ai-data-visualization" className="hover:text-white transition-colors">
+                  AI Data Visualization
+                </Link>
+              </li>
+              <li>
+                <Link to="/ai-email-marketing" className="hover:text-white transition-colors">
+                  AI Email Marketing
                 </Link>
               </li>
               <li>

@@ -1,6 +1,7 @@
 import React, { useCallback, useState, useEffect, Suspense, lazy, memo } from 'react';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
+import FuturisticBackground from './components/FuturisticBackground';
 
 // Dynamically import heavy components for better performance
 const ContentPromotionBanner = lazy(() => import('./components/ContentPromotionBanner'));
@@ -53,7 +54,10 @@ const HomePage: React.FC = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid relative">
+      {/* Futuristic Background */}
+      <FuturisticBackground />
+      
       {/* Navigation */}
       <Navigation />
       
@@ -68,7 +72,7 @@ const HomePage: React.FC = () => {
       {/* Content Promotion Banner */}
       <ContentPromotionBanner />
 
-      <main id="main-content" className="container mx-auto px-4 py-16" role="main">
+      <main id="main-content" className="container mx-auto px-4 py-16 relative z-10" role="main">
         {/* Hero Section */}
         <section
           className={`text-center mb-16 transition-all duration-1000 ${
@@ -182,6 +186,108 @@ const HomePage: React.FC = () => {
                 <div className="text-center">
                   <div className="text-2xl font-bold text-blue-400 mb-2">Starting at $399/month</div>
                   <a href="/ai-automation" className="text-blue-400 hover:text-blue-300 font-medium">
+                    Learn More →
+                  </a>
+                </div>
+              </article>
+            </Suspense>
+          </div>
+
+          {/* New AI Services Row */}
+          <div className="grid md:grid-cols-3 gap-8 mb-12">
+            <Suspense fallback={<ServiceCardSkeleton />}>
+              <article className="cyber-card hologram-card">
+                <div className="text-5xl mb-6 text-center">💬</div>
+                <h3 className="text-2xl font-bold text-white mb-4 text-center">AI Customer Service</h3>
+                <p className="text-gray-300 mb-6 text-center leading-relaxed">
+                  Transform customer experience with intelligent AI chatbots, voice assistants, and predictive analytics.
+                </p>
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-green-400 mb-2">Starting at $299/month</div>
+                  <a href="/ai-customer-service" className="text-green-400 hover:text-green-300 font-medium">
+                    Learn More →
+                  </a>
+                </div>
+              </article>
+            </Suspense>
+
+            <Suspense fallback={<ServiceCardSkeleton />}>
+              <article className="cyber-card hologram-card">
+                <div className="text-5xl mb-6 text-center">✍️</div>
+                <h3 className="text-2xl font-bold text-white mb-4 text-center">AI Content Generation</h3>
+                <p className="text-gray-300 mb-6 text-center leading-relaxed">
+                  Create high-quality, SEO-optimized content at scale with advanced AI writing tools and templates.
+                </p>
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-orange-400 mb-2">Starting at $49/month</div>
+                  <a href="/ai-content-generation" className="text-orange-400 hover:text-orange-300 font-medium">
+                    Learn More →
+                  </a>
+                </div>
+              </article>
+            </Suspense>
+
+            <Suspense fallback={<ServiceCardSkeleton />}>
+              <article className="cyber-card hologram-card">
+                <div className="text-5xl mb-6 text-center">🎯</div>
+                <h3 className="text-2xl font-bold text-white mb-4 text-center">AI Sales Automation</h3>
+                <p className="text-gray-300 mb-6 text-center leading-relaxed">
+                  Automate your sales process with AI-powered lead scoring, email sequences, and conversation intelligence.
+                </p>
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-indigo-400 mb-2">Starting at $199/month</div>
+                  <a href="/ai-sales-automation" className="text-indigo-400 hover:text-indigo-300 font-medium">
+                    Learn More →
+                  </a>
+                </div>
+              </article>
+            </Suspense>
+          </div>
+
+          {/* Additional AI Services Row */}
+          <div className="grid md:grid-cols-3 gap-8 mb-12">
+            <Suspense fallback={<ServiceCardSkeleton />}>
+              <article className="cyber-card hologram-card">
+                <div className="text-5xl mb-6 text-center">📊</div>
+                <h3 className="text-2xl font-bold text-white mb-4 text-center">AI Data Visualization</h3>
+                <p className="text-gray-300 mb-6 text-center leading-relaxed">
+                  Transform data into actionable insights with AI-generated interactive dashboards and visualizations.
+                </p>
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-purple-400 mb-2">Starting at $99/month</div>
+                  <a href="/ai-data-visualization" className="text-purple-400 hover:text-purple-300 font-medium">
+                    Learn More →
+                  </a>
+                </div>
+              </article>
+            </Suspense>
+
+            <Suspense fallback={<ServiceCardSkeleton />}>
+              <article className="cyber-card hologram-card">
+                <div className="text-5xl mb-6 text-center">📧</div>
+                <h3 className="text-2xl font-bold text-white mb-4 text-center">AI Email Marketing</h3>
+                <p className="text-gray-300 mb-6 text-center leading-relaxed">
+                  Supercharge email campaigns with AI-generated content, smart segmentation, and send time optimization.
+                </p>
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-teal-400 mb-2">Starting at $79/month</div>
+                  <a href="/ai-email-marketing" className="text-teal-400 hover:text-teal-300 font-medium">
+                    Learn More →
+                  </a>
+                </div>
+              </article>
+            </Suspense>
+
+            <Suspense fallback={<ServiceCardSkeleton />}>
+              <article className="cyber-card hologram-card">
+                <div className="text-5xl mb-6 text-center">🏥</div>
+                <h3 className="text-2xl font-bold text-white mb-4 text-center">AI Healthcare</h3>
+                <p className="text-gray-300 mb-6 text-center leading-relaxed">
+                  Cutting-edge AI solutions for medical imaging, drug discovery, and personalized medicine.
+                </p>
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-green-400 mb-2">Starting at $1,999/month</div>
+                  <a href="/ai-healthcare" className="text-green-400 hover:text-green-300 font-medium">
                     Learn More →
                   </a>
                 </div>

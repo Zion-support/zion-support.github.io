@@ -9,11 +9,14 @@ const Navigation: React.FC = () => {
   const [itServicesOpen, setItServicesOpen] = useState(false);
 
   return (
-    <nav className="bg-slate-900/90 backdrop-blur-md shadow-lg sticky top-0 z-50 border-b border-cyan-500/20">
-      <div className="container mx-auto px-4">
+    <nav className="bg-slate-900/95 backdrop-blur-md shadow-lg sticky top-0 z-50 border-b border-cyan-500/30 relative">
+      {/* Animated border effect */}
+      <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-pink-500/20 opacity-50"></div>
+      <div className="container mx-auto px-4 relative z-10">
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
-          <Link to="/" className="text-2xl font-bold text-cyan-400 neon-text">
+          <Link to="/" className="text-2xl font-bold text-cyan-400 neon-text hover:text-cyan-300 transition-colors">
+            <span className="text-3xl mr-2">⚡</span>
             Zion Tech Group
           </Link>
 
@@ -130,6 +133,21 @@ const Navigation: React.FC = () => {
                         </Link>
                         <Link to="/ai-services" className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
                           AI Services
+                        </Link>
+                        <Link to="/ai-customer-service" className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
+                          AI Customer Service
+                        </Link>
+                        <Link to="/ai-content-generation" className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
+                          AI Content Generation
+                        </Link>
+                        <Link to="/ai-sales-automation" className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
+                          AI Sales Automation
+                        </Link>
+                        <Link to="/ai-data-visualization" className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
+                          AI Data Visualization
+                        </Link>
+                        <Link to="/ai-email-marketing" className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
+                          AI Email Marketing
                         </Link>
                         <Link to="/it-services" className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
                           IT Services

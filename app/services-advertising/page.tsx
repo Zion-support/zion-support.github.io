@@ -1,357 +1,306 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { ArrowLeft, ArrowRight, Target, TrendingUp, Users, Zap, CheckCircle, Star } from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import FuturisticBackground from '../components/FuturisticBackground';
 
-
-export default function ServicesAdvertisingPage() {
+const ServicesAdvertisingPage: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
-      {/* Header */}
-      <header className="bg-white shadow-sm border-b">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-          <Link to="/" className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors duration-200">
-            <ArrowLeft className="w-4 h-4 mr-2" />
-            Back to Home
-          </Link>
-        </div>
-      </header>
-
-      {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-r from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
-        <div className="absolute inset-0 bg-black opacity-20"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-600 text-sm font-semibold mb-6">
-              <Target className="w-4 h-4 mr-2" />
-              AI-Powered Advertising Solutions
-            </div>
-            
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              AI Advertising Services
-            </h1>
-            
-            <p className="text-xl md:text-2xl mb-8 text-gray-200 max-w-3xl mx-auto">
-              Revolutionize Your Marketing with 300% ROI Guaranteed
-            </p>
-            
-            <p className="text-lg mb-8 text-gray-300 max-w-4xl mx-auto">
-              Transform your advertising campaigns with our breakthrough AI technology. Achieve 95% targeting accuracy, 
-              60% cost reduction, and 300% ROI with intelligent automation and predictive analytics. Our proven 
-              methodology has helped 500+ businesses increase their advertising effectiveness while reducing costs.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                to="/contact"
-                className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200 inline-flex items-center"
-              >
-                Start Free Consultation
-                <ArrowRight className="w-4 h-4 ml-2" />
-              </Link>
-              <Link 
-                to="#services"
-                className="border-2 border-white text-white hover:bg-white hover:text-blue-900 font-semibold py-3 px-8 rounded-lg transition-colors duration-200"
-              >
-                View Our Services
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Key Metrics */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Proven Advertising Results
-            </h2>
-            <p className="text-xl text-gray-600">
-              Our AI-powered advertising delivers measurable business impact
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="text-4xl font-bold text-blue-600 mb-2">300%</div>
-              <div className="text-gray-600">Average ROI</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-green-600 mb-2">95%</div>
-              <div className="text-gray-600">Targeting Accuracy</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-purple-600 mb-2">60%</div>
-              <div className="text-gray-600">Cost Reduction</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-orange-600 mb-2">24/7</div>
-              <div className="text-gray-600">Campaign Optimization</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Services Section */}
-      <section id="services" className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              AI Advertising Solutions
-            </h2>
-            <p className="text-xl text-gray-600">
-              Comprehensive AI-powered advertising services for maximum impact
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-200">
-              <div className="text-blue-600 text-4xl mb-4">🎯</div>
-              <h3 className="text-xl font-semibold mb-3">AI-Powered Targeting</h3>
-              <p className="text-gray-600 mb-4">
-                Advanced machine learning algorithms that identify and target your ideal customers with 95% accuracy.
-              </p>
-              <ul className="text-sm text-gray-600 space-y-1">
-                <li>• Behavioral analysis</li>
-                <li>• Predictive modeling</li>
-                <li>• Real-time optimization</li>
-                <li>• Lookalike audience creation</li>
-                <li>• Cross-platform targeting</li>
-              </ul>
-              <div className="mt-4 text-sm text-green-600 font-semibold">
-                Market Price: $2,000-5,000/month | Our Price: $1,200/month
-              </div>
-            </div>
-            <div className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-200">
-              <div className="text-green-600 text-4xl mb-4">📊</div>
-              <h3 className="text-xl font-semibold mb-3">Campaign Optimization</h3>
-              <p className="text-gray-600 mb-4">
-                Continuous AI-driven optimization that maximizes performance and minimizes costs across all channels.
-              </p>
-              <ul className="text-sm text-gray-600 space-y-1">
-                <li>• A/B testing automation</li>
-                <li>• Budget allocation</li>
-                <li>• Performance monitoring</li>
-                <li>• Bid optimization</li>
-                <li>• Landing page optimization</li>
-              </ul>
-              <div className="mt-4 text-sm text-green-600 font-semibold">
-                Market Price: $3,000-7,000/month | Our Price: $1,800/month
-              </div>
-            </div>
-            <div className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-200">
-              <div className="text-purple-600 text-4xl mb-4">🤖</div>
-              <h3 className="text-xl font-semibold mb-3">Creative Generation</h3>
-              <p className="text-gray-600 mb-4">
-                AI-generated ad creatives that adapt to audience preferences and platform requirements in real-time.
-              </p>
-              <ul className="text-sm text-gray-600 space-y-1">
-                <li>• Dynamic creative optimization</li>
-                <li>• Personalization at scale</li>
-                <li>• Multi-platform adaptation</li>
-                <li>• Video ad generation</li>
-                <li>• Brand consistency maintenance</li>
-              </ul>
-              <div className="mt-4 text-sm text-green-600 font-semibold">
-                Market Price: $2,500-6,000/month | Our Price: $1,500/month
-              </div>
-            </div>
-            <div className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-200">
-              <div className="text-orange-600 text-4xl mb-4">📱</div>
-              <h3 className="text-xl font-semibold mb-3">Social Media Advertising</h3>
-              <p className="text-gray-600 mb-4">
-                Comprehensive social media advertising management across all major platforms with AI optimization.
-              </p>
-              <ul className="text-sm text-gray-600 space-y-1">
-                <li>• Facebook & Instagram ads</li>
-                <li>• LinkedIn advertising</li>
-                <li>• TikTok & Snapchat ads</li>
-                <li>• Twitter advertising</li>
-                <li>• Cross-platform analytics</li>
-              </ul>
-              <div className="mt-4 text-sm text-green-600 font-semibold">
-                Market Price: $2,000-5,000/month | Our Price: $1,200/month
-              </div>
-            </div>
-            <div className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-200">
-              <div className="text-red-600 text-4xl mb-4">🔍</div>
-              <h3 className="text-xl font-semibold mb-3">Search Engine Marketing</h3>
-              <p className="text-gray-600 mb-4">
-                AI-powered Google Ads and Bing advertising with intelligent keyword optimization and bid management.
-              </p>
-              <ul className="text-sm text-gray-600 space-y-1">
-                <li>• Google Ads management</li>
-                <li>• Bing advertising</li>
-                <li>• Keyword research & optimization</li>
-                <li>• Ad copy generation</li>
-                <li>• Performance tracking</li>
-              </ul>
-              <div className="mt-4 text-sm text-green-600 font-semibold">
-                Market Price: $1,500-4,000/month | Our Price: $900/month
-              </div>
-            </div>
-            <div className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-200">
-              <div className="text-indigo-600 text-4xl mb-4">📈</div>
-              <h3 className="text-xl font-semibold mb-3">Analytics & Reporting</h3>
-              <p className="text-gray-600 mb-4">
-                Advanced analytics and reporting with AI insights and automated performance recommendations.
-              </p>
-              <ul className="text-sm text-gray-600 space-y-1">
-                <li>• Real-time dashboards</li>
-                <li>• AI-powered insights</li>
-                <li>• Automated reporting</li>
-                <li>• ROI optimization</li>
-                <li>• Competitive analysis</li>
-              </ul>
-              <div className="mt-4 text-sm text-green-600 font-semibold">
-                Market Price: $1,000-3,000/month | Our Price: $600/month
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Pricing Section */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Transparent Pricing
-            </h2>
-            <p className="text-xl text-gray-600">
-              Choose the plan that fits your advertising needs
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white border-2 border-gray-200 rounded-lg p-8 hover:border-blue-500 transition-colors duration-200">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Starter</h3>
-              <div className="text-4xl font-bold text-blue-600 mb-2">$1,200<span className="text-lg text-gray-500">/month</span></div>
-              <div className="text-sm text-green-600 font-semibold mb-6">Save 40% vs market rates</div>
-              <ul className="space-y-3 mb-8">
-                <li className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                  <span>Up to $10K ad spend</span>
-                </li>
-                <li className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                  <span>AI targeting optimization</span>
-                </li>
-                <li className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                  <span>Basic reporting & analytics</span>
-                </li>
-                <li className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                  <span>Email support</span>
-                </li>
-                <li className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                  <span>2 platforms included</span>
-                </li>
-              </ul>
-              <button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200">
-                Get Started
-              </button>
-            </div>
-            <div className="bg-blue-600 text-white rounded-lg p-8 relative">
-              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                <span className="bg-yellow-400 text-yellow-900 px-4 py-1 rounded-full text-sm font-semibold">Most Popular</span>
-              </div>
-              <h3 className="text-2xl font-bold mb-4">Professional</h3>
-              <div className="text-4xl font-bold mb-2">$2,500<span className="text-lg text-blue-200">/month</span></div>
-              <div className="text-sm text-green-300 font-semibold mb-6">Save 50% vs market rates</div>
-              <ul className="space-y-3 mb-8">
-                <li className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-green-300 mr-3" />
-                  <span>Up to $50K ad spend</span>
-                </li>
-                <li className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-green-300 mr-3" />
-                  <span>Advanced AI optimization</span>
-                </li>
-                <li className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-green-300 mr-3" />
-                  <span>Creative generation</span>
-                </li>
-                <li className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-green-300 mr-3" />
-                  <span>Priority support</span>
-                </li>
-                <li className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-green-300 mr-3" />
-                  <span>Custom reporting</span>
-                </li>
-                <li className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-green-300 mr-3" />
-                  <span>All platforms included</span>
-                </li>
-              </ul>
-              <button className="w-full bg-white text-blue-600 hover:bg-gray-100 font-semibold py-3 px-6 rounded-lg transition-colors duration-200">
-                Get Started
-              </button>
-            </div>
-            <div className="bg-white border-2 border-gray-200 rounded-lg p-8 hover:border-blue-500 transition-colors duration-200">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Enterprise</h3>
-              <div className="text-4xl font-bold text-blue-600 mb-2">$5,000<span className="text-lg text-gray-500">/month</span></div>
-              <div className="text-sm text-green-600 font-semibold mb-6">Save 60% vs market rates</div>
-              <ul className="space-y-3 mb-8">
-                <li className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                  <span>Unlimited ad spend</span>
-                </li>
-                <li className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                  <span>Full AI suite</span>
-                </li>
-                <li className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                  <span>Dedicated account manager</span>
-                </li>
-                <li className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                  <span>24/7 support</span>
-                </li>
-                <li className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                  <span>Custom integrations</span>
-                </li>
-                <li className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                  <span>White-label options</span>
-                </li>
-              </ul>
-              <button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200">
-                Contact Sales
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Ready to Transform Your Advertising?
-          </h2>
-          <p className="text-xl mb-8 text-blue-100">
-            Get a free AI advertising assessment and discover how we can boost your ROI by 300%
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid relative">
+      <FuturisticBackground />
+      <Navigation />
+      
+      <main className="container mx-auto px-4 py-16 relative z-10">
+        {/* Hero Section */}
+        <section className="text-center mb-16">
+          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 neon-text">
+            Complete AI & IT Solutions Portfolio
+          </h1>
+          <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium">
+            Transform Your Business with Our Comprehensive Suite of Services
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              to="/contact"
-              className="bg-white text-blue-600 hover:bg-gray-100 font-semibold py-3 px-8 rounded-lg transition-colors duration-200 inline-flex items-center"
-            >
-              Get Free Assessment
-              <ArrowRight className="w-4 h-4 ml-2" />
-            </Link>
-            <Link 
-              to="/case-studies"
-              className="border-2 border-white text-white hover:bg-white hover:text-blue-600 font-semibold py-3 px-8 rounded-lg transition-colors duration-200"
-            >
-              View Success Stories
-            </Link>
+          <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
+            From micro SAAS applications to enterprise AI solutions, we provide everything you need 
+            to modernize your business and stay ahead of the competition.
+          </p>
+        </section>
+
+        {/* AI Services Section */}
+        <section className="mb-16">
+          <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">
+            AI Services & Solutions
+          </h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="cyber-card hologram-card">
+              <div className="text-4xl mb-4">🤖</div>
+              <h3 className="text-xl font-bold text-white mb-4">AI Services</h3>
+              <p className="text-gray-300 mb-4">Advanced artificial intelligence solutions including machine learning, NLP, and computer vision.</p>
+              <div className="text-2xl font-bold text-cyan-400 mb-2">Starting at $1,500/month</div>
+              <a href="/ai-services" className="text-cyan-400 hover:text-cyan-300 font-medium">Learn More →</a>
+            </div>
+
+            <div className="cyber-card hologram-card">
+              <div className="text-4xl mb-4">💬</div>
+              <h3 className="text-xl font-bold text-white mb-4">AI Customer Service</h3>
+              <p className="text-gray-300 mb-4">Transform customer experience with intelligent AI chatbots and voice assistants.</p>
+              <div className="text-2xl font-bold text-green-400 mb-2">Starting at $299/month</div>
+              <a href="/ai-customer-service" className="text-green-400 hover:text-green-300 font-medium">Learn More →</a>
+            </div>
+
+            <div className="cyber-card hologram-card">
+              <div className="text-4xl mb-4">✍️</div>
+              <h3 className="text-xl font-bold text-white mb-4">AI Content Generation</h3>
+              <p className="text-gray-300 mb-4">Create high-quality, SEO-optimized content at scale with AI writing tools.</p>
+              <div className="text-2xl font-bold text-orange-400 mb-2">Starting at $49/month</div>
+              <a href="/ai-content-generation" className="text-orange-400 hover:text-orange-300 font-medium">Learn More →</a>
+            </div>
+
+            <div className="cyber-card hologram-card">
+              <div className="text-4xl mb-4">🎯</div>
+              <h3 className="text-xl font-bold text-white mb-4">AI Sales Automation</h3>
+              <p className="text-gray-300 mb-4">Automate your sales process with AI-powered lead scoring and email sequences.</p>
+              <div className="text-2xl font-bold text-indigo-400 mb-2">Starting at $199/month</div>
+              <a href="/ai-sales-automation" className="text-indigo-400 hover:text-indigo-300 font-medium">Learn More →</a>
+            </div>
+
+            <div className="cyber-card hologram-card">
+              <div className="text-4xl mb-4">📊</div>
+              <h3 className="text-xl font-bold text-white mb-4">AI Data Visualization</h3>
+              <p className="text-gray-300 mb-4">Transform data into actionable insights with AI-generated dashboards.</p>
+              <div className="text-2xl font-bold text-purple-400 mb-2">Starting at $99/month</div>
+              <a href="/ai-data-visualization" className="text-purple-400 hover:text-purple-300 font-medium">Learn More →</a>
+            </div>
+
+            <div className="cyber-card hologram-card">
+              <div className="text-4xl mb-4">📧</div>
+              <h3 className="text-xl font-bold text-white mb-4">AI Email Marketing</h3>
+              <p className="text-gray-300 mb-4">Supercharge email campaigns with AI-generated content and optimization.</p>
+              <div className="text-2xl font-bold text-teal-400 mb-2">Starting at $79/month</div>
+              <a href="/ai-email-marketing" className="text-teal-400 hover:text-teal-300 font-medium">Learn More →</a>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+
+        {/* Micro SAAS Section */}
+        <section className="mb-16">
+          <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">
+            Micro SAAS Solutions
+          </h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="cyber-card hologram-card">
+              <div className="text-4xl mb-4">⚡</div>
+              <h3 className="text-xl font-bold text-white mb-4">Productivity Tools</h3>
+              <p className="text-gray-300 mb-4">Streamline your workflow with intelligent productivity applications.</p>
+              <div className="text-lg font-bold text-cyan-400">Starting at $9/month</div>
+            </div>
+
+            <div className="cyber-card hologram-card">
+              <div className="text-4xl mb-4">📈</div>
+              <h3 className="text-xl font-bold text-white mb-4">Marketing Tools</h3>
+              <p className="text-gray-300 mb-4">Boost your marketing efforts with specialized AI-powered tools.</p>
+              <div className="text-lg font-bold text-pink-400">Starting at $19/month</div>
+            </div>
+
+            <div className="cyber-card hologram-card">
+              <div className="text-4xl mb-4">🛍️</div>
+              <h3 className="text-xl font-bold text-white mb-4">E-commerce Tools</h3>
+              <p className="text-gray-300 mb-4">Optimize your online store with intelligent e-commerce solutions.</p>
+              <div className="text-lg font-bold text-green-400">Starting at $29/month</div>
+            </div>
+
+            <div className="cyber-card hologram-card">
+              <div className="text-4xl mb-4">👥</div>
+              <h3 className="text-xl font-bold text-white mb-4">HR & Team Management</h3>
+              <p className="text-gray-300 mb-4">Manage your team effectively with smart HR applications.</p>
+              <div className="text-lg font-bold text-blue-400">Starting at $39/month</div>
+            </div>
+          </div>
+        </section>
+
+        {/* IT Services Section */}
+        <section className="mb-16">
+          <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">
+            IT Services & Infrastructure
+          </h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="cyber-card hologram-card">
+              <div className="text-4xl mb-4">☁️</div>
+              <h3 className="text-xl font-bold text-white mb-4">Cloud Services</h3>
+              <p className="text-gray-300 mb-4">Scale your infrastructure with secure, reliable cloud solutions.</p>
+              <div className="text-2xl font-bold text-blue-400 mb-2">Starting at $299/month</div>
+              <a href="/it-services" className="text-blue-400 hover:text-blue-300 font-medium">Learn More →</a>
+            </div>
+
+            <div className="cyber-card hologram-card">
+              <div className="text-4xl mb-4">🔒</div>
+              <h3 className="text-xl font-bold text-white mb-4">Cybersecurity</h3>
+              <p className="text-gray-300 mb-4">Protect your business with advanced security solutions and monitoring.</p>
+              <div className="text-2xl font-bold text-red-400 mb-2">Starting at $199/month</div>
+              <a href="/cybersecurity" className="text-red-400 hover:text-red-300 font-medium">Learn More →</a>
+            </div>
+
+            <div className="cyber-card hologram-card">
+              <div className="text-4xl mb-4">⚛️</div>
+              <h3 className="text-xl font-bold text-white mb-4">Quantum Computing</h3>
+              <p className="text-gray-300 mb-4">Next-generation quantum computing capabilities for complex problem solving.</p>
+              <div className="text-2xl font-bold text-purple-400 mb-2">Custom Pricing</div>
+              <a href="/quantum-computing" className="text-purple-400 hover:text-purple-300 font-medium">Learn More →</a>
+            </div>
+          </div>
+        </section>
+
+        {/* Specialized Solutions */}
+        <section className="mb-16">
+          <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">
+            Specialized Solutions
+          </h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="cyber-card hologram-card">
+              <div className="text-4xl mb-4">🏥</div>
+              <h3 className="text-xl font-bold text-white mb-4">AI Healthcare</h3>
+              <p className="text-gray-300 mb-4">Cutting-edge AI solutions for medical imaging and drug discovery.</p>
+              <div className="text-2xl font-bold text-green-400 mb-2">Starting at $1,999/month</div>
+              <a href="/ai-healthcare" className="text-green-400 hover:text-green-300 font-medium">Learn More →</a>
+            </div>
+
+            <div className="cyber-card hologram-card">
+              <div className="text-4xl mb-4">💰</div>
+              <h3 className="text-xl font-bold text-white mb-4">AI Fintech</h3>
+              <p className="text-gray-300 mb-4">Revolutionary AI-powered financial services and trading solutions.</p>
+              <div className="text-2xl font-bold text-indigo-400 mb-2">Starting at $1,499/month</div>
+              <a href="/ai-fintech" className="text-indigo-400 hover:text-indigo-300 font-medium">Learn More →</a>
+            </div>
+
+            <div className="cyber-card hologram-card">
+              <div className="text-4xl mb-4">🔄</div>
+              <h3 className="text-xl font-bold text-white mb-4">Autonomous Systems</h3>
+              <p className="text-gray-300 mb-4">Self-managing and self-optimizing systems for enterprise operations.</p>
+              <div className="text-2xl font-bold text-yellow-400 mb-2">Starting at $2,500/month</div>
+              <a href="/autonomous-systems" className="text-yellow-400 hover:text-yellow-300 font-medium">Learn More →</a>
+            </div>
+          </div>
+        </section>
+
+        {/* Pricing Comparison */}
+        <section className="mb-16">
+          <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">
+            Choose Your Solution
+          </h2>
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="cyber-card hologram-card">
+              <h3 className="text-2xl font-bold text-white mb-4">Starter Package</h3>
+              <div className="text-4xl font-bold text-cyan-400 mb-6">$99/month</div>
+              <ul className="text-gray-300 space-y-3 mb-8">
+                <li>✓ 1 Micro SAAS app</li>
+                <li>✓ Basic AI features</li>
+                <li>✓ Email support</li>
+                <li>✓ Standard integrations</li>
+                <li>✓ 5GB storage</li>
+              </ul>
+              <a href="/contact" className="cyber-button w-full text-center block">
+                Get Started
+              </a>
+            </div>
+
+            <div className="cyber-card hologram-card border-2 border-cyan-400">
+              <div className="text-center mb-4">
+                <span className="bg-cyan-400 text-black px-3 py-1 rounded-full text-sm font-bold">MOST POPULAR</span>
+              </div>
+              <h3 className="text-2xl font-bold text-white mb-4">Professional Package</h3>
+              <div className="text-4xl font-bold text-cyan-400 mb-6">$299/month</div>
+              <ul className="text-gray-300 space-y-3 mb-8">
+                <li>✓ Up to 3 Micro SAAS apps</li>
+                <li>✓ Advanced AI features</li>
+                <li>✓ Priority support</li>
+                <li>✓ Custom integrations</li>
+                <li>✓ 25GB storage</li>
+                <li>✓ API access</li>
+                <li>✓ Analytics dashboard</li>
+              </ul>
+              <a href="/contact" className="cyber-button w-full text-center block">
+                Get Started
+              </a>
+            </div>
+
+            <div className="cyber-card hologram-card">
+              <h3 className="text-2xl font-bold text-white mb-4">Enterprise Package</h3>
+              <div className="text-4xl font-bold text-cyan-400 mb-6">$999/month</div>
+              <ul className="text-gray-300 space-y-3 mb-8">
+                <li>✓ Unlimited Micro SAAS apps</li>
+                <li>✓ Full AI suite</li>
+                <li>✓ 24/7 dedicated support</li>
+                <li>✓ White-label options</li>
+                <li>✓ Unlimited storage</li>
+                <li>✓ Custom development</li>
+                <li>✓ On-premise deployment</li>
+              </ul>
+              <a href="/contact" className="cyber-button w-full text-center block">
+                Contact Sales
+              </a>
+            </div>
+          </div>
+        </section>
+
+        {/* Why Choose Us */}
+        <section className="mb-16">
+          <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">
+            Why Choose Zion Tech Group?
+          </h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="text-center">
+              <div className="text-4xl font-bold text-cyan-400 mb-2">500+</div>
+              <div className="text-gray-300">Enterprise Clients</div>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl font-bold text-green-400 mb-2">$2.5B+</div>
+              <div className="text-gray-300">Cost Savings Delivered</div>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl font-bold text-purple-400 mb-2">99.9%</div>
+              <div className="text-gray-300">Uptime Guarantee</div>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl font-bold text-orange-400 mb-2">24/7</div>
+              <div className="text-gray-300">Support Available</div>
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="text-center bg-gradient-to-r from-slate-800 to-purple-900 rounded-2xl p-12 cyber-card">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">
+            Ready to Transform Your Business?
+          </h2>
+          <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
+            Join thousands of businesses already using our solutions to drive growth and innovation.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <a
+              href="tel:+13024640950"
+              className="cyber-button"
+            >
+              📞 Call Now: (302) 464-0950
+            </a>
+            <a
+              href="/contact"
+              className="cyber-button"
+              style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}
+            >
+              Get Free Consultation
+            </a>
+          </div>
+          
+          <div className="mt-8 text-sm text-gray-400">
+            <p>✓ Free initial consultation</p>
+            <p>✓ Custom solution design</p>
+            <p>✓ 24/7 support available</p>
+            <p>✓ No long-term contracts required</p>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
     </div>
   );
-}
+};
+
+export default ServicesAdvertisingPage;
