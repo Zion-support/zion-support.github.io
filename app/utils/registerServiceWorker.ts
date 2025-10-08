@@ -37,7 +37,7 @@ export async function registerServiceWorker(
       }
     });
 
-    // eslint-disable-next-line no-console
+     
     console.log('[SW] Registering service worker...');
 
     const registration = await navigator.serviceWorker.register('/service-worker.js', {

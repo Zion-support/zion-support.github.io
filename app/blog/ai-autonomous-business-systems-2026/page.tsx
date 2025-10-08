@@ -2,7 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 
-const AIAutonomousBusinessSystems2026: React.FC = () => {
+const _AIAutonomousBusinessSystems2026: React.FC = () => {
   return (
 
     <>
