@@ -678,3 +678,12 @@ class AccessibilityEnhancer {
     
     return `
 Accessibility Report:
+- Total Issues: ${metrics.totalIssues}
+- Critical Issues: ${metrics.criticalIssues}
+- Warnings: ${metrics.warnings}
+- Violations Fixed: ${metrics.violationsFixed}
+    `;
+  }
+}
+
+export default new AccessibilityEnhancer();
