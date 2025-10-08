@@ -5,9 +5,6 @@ import PerformanceMonitor from './components/PerformanceMonitor';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 
 // Lazy load heavy components - these may not exist, so make them optional
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 const UnifiedBanner = dynamic(
   () => import('./components/NewestContent2025Banner').catch(() => Promise.resolve({ default: () => null })), 
   {
@@ -23,33 +20,7 @@ const ContentPromotion = dynamic(
     ssr: false
   }
 );
-=======
-const UnifiedBanner = dynamic(() => import('./components/NewestContent2025Banner').catch(() => import('./components/EmptyComponent')), {
-=======
-const UnifiedBanner = dynamic(() => Promise.resolve({ default: () => null }), {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-32a9
-=======
-const UnifiedBanner = dynamic(() => import('./components/NewestContent2025Banner').catch(() => ({ default: () => null as any })), {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-fd0a
-  loading: () => <div className="animate-pulse bg-gray-200 h-32 rounded-lg"></div>,
-  ssr: false
-});
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-const ContentPromotion = dynamic(() => import('./components/UltimateBusinessIntelligence2025Banner').catch(() => import('./components/EmptyComponent')), {
-=======
-const ContentPromotion = dynamic(() => import('./components/UltimateBusinessIntelligence2025Banner').catch(() => Promise.resolve({ default: () => null })), {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-32a9
-=======
-const ContentPromotion = dynamic(() => import('./components/UltimateBusinessIntelligence2025Banner').catch(() => ({ default: () => null as any })), {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-fd0a
-  loading: () => <div className="animate-pulse bg-gray-200 h-64 rounded-lg"></div>,
-  ssr: false
-});
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-4560
-
-<<<<<<< HEAD
 const ContentShowcase = dynamic(
   () => import('./components/UltimateBusinessIntelligenceShowcase2025').catch(() => Promise.resolve({ default: () => null })), 
   {
@@ -57,12 +28,6 @@ const ContentShowcase = dynamic(
     ssr: false
   }
 );
-=======
-const ContentShowcase = dynamic(() => import('./components/UltimateBusinessIntelligenceShowcase2025').catch(() => ({ default: () => null as any })), {
-  loading: () => <div className="animate-pulse bg-gray-200 h-48 rounded-lg"></div>,
-  ssr: false
-});
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-fd0a
 
 export const metadata = {
   title: 'Zion Tech Group — AI Enterprise Transformation & IT Services | 300% ROI Guaranteed',
@@ -104,8 +69,8 @@ export const metadata = {
   },
   verification: {
     google: 'your-google-verification-code',
-    yandex: 'your-yandex-verification-code',
-    yahoo: 'your-yahoo-verification-code',
+    yandex: 'yandex-verification-code',
+    yahoo: 'yahoo-verification-code',
   },
 };
 
