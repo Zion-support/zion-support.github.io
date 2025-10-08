@@ -1,84 +1,124 @@
-import React, { useEffect, useCallback } from 'react';
+import React, { useEffect, useState } from 'react';
 
-
-interface PerformanceOptimizerProps {
-  children: React.ReactNode;
+interface PerformanceMetrics {
+  loadTime: number;
+  firstContentfulPaint: number;
+  largestContentfulPaint: number;
+  cumulativeLayoutShift: number;
+  firstInputDelay: number;
+  timeToInteractive: number;
 }
 
-const PerformanceOptimizerComponent: React.FC<PerformanceOptimizerProps> = ({
-  children,
-}) => {
-  // Preload critical resources
+const PerformanceOptimizer: React.FC = () => {
+  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
+  const [isVisible, setIsVisible] = useState(false);
+
   useEffect(() => {
-    const preloadCriticalResources = () => {
-      // Preload critical fonts
-      const fontLink = document.createElement('link');
-      fontLink.rel = 'preload';
-      fontLink.href =
-        'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap';
-      fontLink.as = 'style';
-      document.head.appendChild(fontLink);
+    // Only show in development
+    if (process.env.NODE_ENV !== 'development') return;
 
-      // Preload critical images
-      const criticalImages = [
-        '/images/hero-bg.jpg',
-        '/images/logo.png',
-        '/images/og-image.jpg',
-      ];
+    const measurePerformance = () => {
+      if ('performance' in window) {
+        const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+        const paintEntries = performance.getEntriesByType('paint');
+        
+        const fcp = paintEntries.find(entry => entry.name === 'first-contentful-paint');
+        const lcp = performance.getEntriesByType('largest-contentful-paint')[0];
+        
+        const newMetrics: PerformanceMetrics = {
+          loadTime: navigation.loadEventEnd - navigation.loadEventStart,
+          firstContentfulPaint: fcp ? fcp.startTime : 0,
+          largestContentfulPaint: lcp ? lcp.startTime : 0,
+          cumulativeLayoutShift: 0, // Would need to be measured with web-vitals library
+          firstInputDelay: 0, // Would need to be measured with web-vitals library
+          timeToInteractive: navigation.domContentLoadedEventEnd - navigation.navigationStart,
+        };
 
-      criticalImages.forEach(src => {
-        const img = new Image();
-        img['src'] = src;
-      });
+        setMetrics(newMetrics);
+        setIsVisible(true);
+      }
     };
 
-    preloadCriticalResources();
-  }, []);
+    // Measure after page load
+    if (document.readyState === 'complete') {
+      measurePerformance();
+    } else {
+      window.addEventListener('load', measurePerformance);
+    }
 
-  // Optimize scroll performance
-  const handleScroll = useCallback(() => {
-    // Throttle scroll events for better performance
-    let ticking = false;
-
-    const updateScrollPosition = () => {
-      // Add scroll-based optimizations here
-      ticking = false;
+    return () => {
+      window.removeEventListener('load', measurePerformance);
     };
-
-    if (!ticking) {
-      requestAnimationFrame(updateScrollPosition);
-      ticking = true;
-    }
   }, []);
 
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, [handleScroll]);
+  if (!isVisible || !metrics) return null;
 
-  // Add performance monitoring
-  useEffect(() => {
-    if ('performance' in window) {
-      const observer = new PerformanceObserver(list => {
-        list.getEntries().forEach(entry => {
-          if (entry.entryType === 'navigation') {
-             
-            if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { console.log('Navigation timing:', entry); } }
-          }
-        });
-      });
+  const getScore = (value: number, threshold: number): 'good' | 'needs-improvement' | 'poor' => {
+    if (value <= threshold) return 'good';
+    if (value <= threshold * 1.5) return 'needs-improvement';
+    return 'poor';
+  };
 
-      observer.observe({
-        entryTypes: ['navigation', 'paint', 'largest-contentful-paint'],
-      });
+  const fcpScore = getScore(metrics.firstContentfulPaint, 1800);
+  const lcpScore = getScore(metrics.largestContentfulPaint, 2500);
+  const ttiScore = getScore(metrics.timeToInteractive, 3800);
 
-      return () => observer.disconnect();
-    }
-
-    return undefined;
-  }, []);
-
-  return <>{children}</>;
+  return (
+    <div className="fixed bottom-4 right-4 bg-white rounded-lg shadow-lg p-4 max-w-sm z-50 border">
+      <div className="flex items-center justify-between mb-2">
+        <h3 className="text-sm font-semibold text-gray-900">Performance Metrics</h3>
+        <button
+          onClick={() => setIsVisible(false)}
+          className="text-gray-400 hover:text-gray-600"
+        >
+          ×
+        </button>
+      </div>
+      
+      <div className="space-y-2 text-xs">
+        <div className="flex justify-between">
+          <span>FCP:</span>
+          <span className={`font-mono ${
+            fcpScore === 'good' ? 'text-green-600' : 
+            fcpScore === 'needs-improvement' ? 'text-yellow-600' : 'text-red-600'
+          }`}>
+            {metrics.firstContentfulPaint.toFixed(0)}ms
+          </span>
+        </div>
+        
+        <div className="flex justify-between">
+          <span>LCP:</span>
+          <span className={`font-mono ${
+            lcpScore === 'good' ? 'text-green-600' : 
+            lcpScore === 'needs-improvement' ? 'text-yellow-600' : 'text-red-600'
+          }`}>
+            {metrics.largestContentfulPaint.toFixed(0)}ms
+          </span>
+        </div>
+        
+        <div className="flex justify-between">
+          <span>TTI:</span>
+          <span className={`font-mono ${
+            ttiScore === 'good' ? 'text-green-600' : 
+            ttiScore === 'needs-improvement' ? 'text-yellow-600' : 'text-red-600'
+          }`}>
+            {metrics.timeToInteractive.toFixed(0)}ms
+          </span>
+        </div>
+        
+        <div className="flex justify-between">
+          <span>Load Time:</span>
+          <span className="font-mono text-gray-600">
+            {metrics.loadTime.toFixed(0)}ms
+          </span>
+        </div>
+      </div>
+      
+      <div className="mt-2 text-xs text-gray-500">
+        <p>Green: Good | Yellow: Needs Improvement | Red: Poor</p>
+      </div>
+    </div>
+  );
 };
 
-export default PerformanceOptimizerComponent;
+export default PerformanceOptimizer;

@@ -1,56 +1,62 @@
-/**
- * Sitemap Generation Utility
- * Generates XML sitemaps for better SEO and search engine crawling
- * @module sitemapGenerator
- */
-
-export interface SitemapURL {
-  loc: string;
+export interface SitemapEntry {
+  url: string;
   lastmod?: string;
   changefreq?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';
   priority?: number;
 }
 
-export interface SitemapOptions {
-  hostname: string;
-  urls: SitemapURL[];
-}
+export const generateSitemap = (entries: SitemapEntry[]): string => {
+  const baseUrl = 'https://ziontechgroup.com';
+  const currentDate = new Date().toISOString().split('T')[0];
+  
+  const defaultEntries: SitemapEntry[] = [
+    { url: '/', priority: 1.0, changefreq: 'weekly' },
+    { url: '/about', priority: 0.8, changefreq: 'monthly' },
+    { url: '/services', priority: 0.9, changefreq: 'weekly' },
+    { url: '/ai-services', priority: 0.9, changefreq: 'weekly' },
+    { url: '/it-services', priority: 0.9, changefreq: 'weekly' },
+    { url: '/micro-saas', priority: 0.8, changefreq: 'weekly' },
+    { url: '/services-advertising', priority: 0.7, changefreq: 'monthly' },
+    { url: '/case-studies', priority: 0.8, changefreq: 'monthly' },
+    { url: '/enterprise', priority: 0.8, changefreq: 'monthly' },
+    { url: '/team', priority: 0.6, changefreq: 'monthly' },
+    { url: '/contact', priority: 0.7, changefreq: 'monthly' },
+    { url: '/privacy', priority: 0.3, changefreq: 'yearly' },
+    { url: '/terms', priority: 0.3, changefreq: 'yearly' },
+  ];
 
-/**
- * Generate XML sitemap
- * @param options - Sitemap configuration
- * @returns Complete XML sitemap string
- */
-export function generateSitemap(options: SitemapOptions): string {
-  const { hostname, urls } = options;
+  const allEntries = [...defaultEntries, ...entries];
+  
+  let sitemap = '<?xml version="1.0" encoding="UTF-8"?>\n';
+  sitemap += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n';
+  
+  allEntries.forEach(entry => {
+    sitemap += '  <url>\n';
+    sitemap += `    <loc>${baseUrl}${entry.url}</loc>\n`;
+    sitemap += `    <lastmod>${entry.lastmod || currentDate}</lastmod>\n`;
+    sitemap += `    <changefreq>${entry.changefreq || 'monthly'}</changefreq>\n`;
+    sitemap += `    <priority>${entry.priority || 0.5}</priority>\n`;
+    sitemap += '  </url>\n';
+  });
+  
+  sitemap += '</urlset>';
+  
+  return sitemap;
+};
 
-  const urlEntries = urls
-    .map(url => {
-      const loc = url.loc.startsWith('http') ? url.loc : `${hostname}${url.loc}`;
-      return `  <url>
-    <loc>${loc}</loc>
-    ${url.lastmod ? `<lastmod>${url.lastmod}</lastmod>` : ''}
-    ${url.changefreq ? `<changefreq>${url.changefreq}</changefreq>` : ''}
-    ${url.priority !== undefined ? `<priority>${url.priority.toFixed(1)}</priority>` : ''}
-  </url>`;
-    })
-    .join('\n');
-
-  return `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${urlEntries}
-</urlset>`;
-}
-
-/**
- * Generate robots.txt content
- * @param hostname - Base hostname
- * @param sitemapPath - Path to sitemap
- * @returns robots.txt content
- */
-export function generateRobotsTxt(hostname: string, sitemapPath = '/sitemap.xml'): string {
+export const generateRobotsTxt = (): string => {
   return `User-agent: *
-Disallow:
+Allow: /
 
-Sitemap: ${hostname}${sitemapPath}`;
-}
+Sitemap: https://ziontechgroup.com/sitemap.xml
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1
+
+# Disallow admin and private areas
+Disallow: /admin/
+Disallow: /api/
+Disallow: /_next/
+Disallow: /private/
+`;
+};

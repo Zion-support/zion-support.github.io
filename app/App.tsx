@@ -9,11 +9,13 @@ import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import PerformanceDashboard from './components/PerformanceDashboard';
 import AdvancedPerformanceMonitor from './components/AdvancedPerformanceMonitor';
 import AdvancedErrorBoundary from './components/AdvancedErrorBoundary';
+import ErrorBoundary from './components/ErrorBoundary';
 import SEOEnhancer from './components/SEOEnhancer';
 import AdvancedSEOOptimizer from './components/AdvancedSEOOptimizer';
 import LoadingSpinner from './components/LoadingSpinner';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
+import PerformanceOptimizer from './components/PerformanceOptimizer';
 
 // Lazy load components for better performance
 const ContentShowcase = lazy(() => import('./components/ContentShowcase'));
@@ -35,6 +37,10 @@ const TermsPage = lazy(() => import('./terms/page'));
 const EnterprisePage = lazy(() => import('./enterprise/page'));
 const ServicesAdvertisingPage = lazy(() => import('./services-advertising/page'));
 const CaseStudiesPage = lazy(() => import('./case-studies/page'));
+const AIServicesPage = lazy(() => import('./ai-services/page'));
+const ITServicesPage = lazy(() => import('./it-services/page'));
+const MicroSaasPage = lazy(() => import('./micro-saas/page'));
+const NotFoundPage = lazy(() => import('./NotFoundPage'));
 
 // Utils
 import { lazyLoadImages, preloadCriticalResources, collectPerformanceMetrics, performanceOptimizer } from './utils/performanceOptimizer';
@@ -149,26 +155,41 @@ const App: React.FC = () => {
               <div className="App">
                 <Navigation />
                 <main id="main-content">
-                  <Suspense fallback={<LoadingSpinner />}>
-                    <Routes>
-                      <Route path="/" element={<HomePage />} />
-                      <Route path="/about" element={<AboutPage />} />
-                      <Route path="/services" element={<ServicesPage />} />
-                      <Route path="/contact" element={<ContactPage />} />
-                      <Route path="/team" element={<TeamPage />} />
-                      <Route path="/privacy" element={<PrivacyPage />} />
-                      <Route path="/terms" element={<TermsPage />} />
-                      <Route path="/enterprise" element={<EnterprisePage />} />
-                      <Route path="/services-advertising" element={<ServicesAdvertisingPage />} />
-                      <Route path="/case-studies" element={<CaseStudiesPage />} />
-<<<<<<< HEAD
-                      <Route path="/ai-services" element={<lazy(() => import('./ai-services/page')) />} />
-                      <Route path="/it-services" element={<lazy(() => import('./it-services/page')) />} />
-                      <Route path="/micro-saas" element={<lazy(() => import('./micro-saas/page')) />} />
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-913d
-                    </Routes>
-                  </Suspense>
+                  <ErrorBoundary
+                    fallback={
+                      <div className="min-h-screen flex items-center justify-center">
+                        <div className="text-center">
+                          <h2 className="text-2xl font-bold text-gray-900 mb-4">Page Not Available</h2>
+                          <p className="text-gray-600 mb-6">The page you're looking for is temporarily unavailable.</p>
+                          <button
+                            onClick={() => window.location.href = '/'}
+                            className="bg-indigo-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-indigo-700 transition-colors"
+                          >
+                            Go Home
+                          </button>
+                        </div>
+                      </div>
+                    }
+                  >
+                    <Suspense fallback={<LoadingSpinner fullScreen text="Loading page..." />}>
+                      <Routes>
+                        <Route path="/" element={<HomePage />} />
+                        <Route path="/about" element={<AboutPage />} />
+                        <Route path="/services" element={<ServicesPage />} />
+                        <Route path="/contact" element={<ContactPage />} />
+                        <Route path="/team" element={<TeamPage />} />
+                        <Route path="/privacy" element={<PrivacyPage />} />
+                        <Route path="/terms" element={<TermsPage />} />
+                        <Route path="/enterprise" element={<EnterprisePage />} />
+                        <Route path="/services-advertising" element={<ServicesAdvertisingPage />} />
+                        <Route path="/case-studies" element={<CaseStudiesPage />} />
+                        <Route path="/ai-services" element={<AIServicesPage />} />
+                        <Route path="/it-services" element={<ITServicesPage />} />
+                        <Route path="/micro-saas" element={<MicroSaasPage />} />
+                        <Route path="*" element={<NotFoundPage />} />
+                      </Routes>
+                    </Suspense>
+                  </ErrorBoundary>
                 </main>
                 <Footer />
 
@@ -184,6 +205,9 @@ const App: React.FC = () => {
                     }
                   }}
                 />
+                
+                {/* Performance Optimizer (Development Only) */}
+                {process.env.NODE_ENV === 'development' && <PerformanceOptimizer />}
               </div>
             </Router>
           </SEOEnhancer>
