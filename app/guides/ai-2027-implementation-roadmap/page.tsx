@@ -1,19 +1,33 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+<<<<<<< HEAD
 import {
   ArrowLeft,
   // Calendar,
   User,
   Clock,
   Tag,
+=======
+<<<<<<< HEAD
+import { ArrowLeft, Calendar, User, Clock, Tag, Target, CheckCircle, ArrowRight, Zap, TrendingUp, Brain, Cpu } from 'lucide-react';
+=======
+import {
+  ArrowLeft,
+  Clock,
+>>>>>>> 3679cb18cfb2d1b86026384bd31939354fc4e576
   Target,
   CheckCircle,
   ArrowRight,
   Zap,
   TrendingUp,
   Brain,
+<<<<<<< HEAD
   Cpu,
 } from 'lucide-react';
+=======
+} from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-bdc9
+>>>>>>> 3679cb18cfb2d1b86026384bd31939354fc4e576
 
 export const metadata = {
   title: 'AI 2027 Implementation Roadmap - Complete Guide to Advanced Neural Superintelligence',
@@ -37,7 +51,11 @@ export default function AI2027ImplementationRoadmap() {
       {/* Header */}
       <header className="bg-gradient-to-r from-purple-900 to-blue-900 text-white">
         <div className="max-w-6xl mx-auto px-4 py-12">
+<<<<<<< HEAD
           <Link
+=======
+          <Link 
+>>>>>>> 3679cb18cfb2d1b86026384bd31939354fc4e576
             to="/"
             className="inline-flex items-center text-blue-200 hover:text-white transition-colors mb-8"
           >
@@ -358,14 +376,22 @@ export default function AI2027ImplementationRoadmap() {
             roadmap today.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
+<<<<<<< HEAD
             <Link
+=======
+            <Link 
+>>>>>>> 3679cb18cfb2d1b86026384bd31939354fc4e576
               to="/contact"
               className="inline-flex items-center px-8 py-4 bg-white text-purple-900 rounded-lg hover:bg-blue-50 transition-colors font-semibold"
             >
               Get Your Roadmap
               <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
+<<<<<<< HEAD
             <Link
+=======
+            <Link 
+>>>>>>> 3679cb18cfb2d1b86026384bd31939354fc4e576
               to="/case-studies"
               className="inline-flex items-center px-8 py-4 bg-transparent border-2 border-white text-white rounded-lg hover:bg-white hover:text-purple-900 transition-colors font-semibold"
             >
