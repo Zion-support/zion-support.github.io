@@ -46,11 +46,7 @@ const App: React.FC = () => {
     logger.info('🚀 Zion Tech Group App initialized with comprehensive monitoring');
   }, []);
 
-<<<<<<< HEAD
-  const handleError = useCallback((error: Error, errorInfo: unknown) => {
-=======
   const handleError = useCallback((error: Error, errorInfo: React.ErrorInfo) => {
->>>>>>> cursor/fix-errors-and-merge-to-main-3338
     logger.error('Application Error', error, { errorInfo, component: 'ErrorBoundary' });
   }, []);
 
