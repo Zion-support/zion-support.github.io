@@ -66,7 +66,7 @@ class AdvancedErrorBoundary extends Component<
       logger.error(
         'Error Boundary caught an error',
         error,
-        { component: 'ErrorBoundary', errorInfo }
+        { component: 'ErrorBoundary', error: error.message, errorInfo }
       );
     }
 
@@ -141,7 +141,7 @@ class AdvancedErrorBoundary extends Component<
       logger.error(
         'Failed to send error report',
         reportError as Error,
-        { component: 'ErrorReporting' }
+        { component: 'ErrorReporting', reportError: (reportError as Error).message }
       );
     }
   };

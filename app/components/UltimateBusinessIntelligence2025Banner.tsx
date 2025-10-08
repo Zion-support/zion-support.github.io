@@ -21,18 +21,18 @@ const UltimateBusinessIntelligence2025Banner = () => {
       tags: ['AI', 'Business Intelligence', 'Enterprise', 'ROI', '2025']
     },
     {
-      id: 'fortune-500-success-story',
-      title: 'Fortune 500 Ultimate Business Intelligence Success Story',
-      description: 'How a $15.2B manufacturing giant achieved 30,000% ROI with AI-powered business intelligence transformation.',
-      url: '/case-studies/fortune-500-ultimate-business-intelligence-30000-roi-success-story',
-      type: 'Case Study',
+      id: 'ai-dashboard-2025',
+      title: 'Revolutionary AI Dashboard 2025',
+      description: 'Experience the future of data visualization with our cutting-edge AI dashboard featuring real-time analytics and predictive insights.',
+      url: '/services/ai-dashboard',
+      type: 'Service',
       metrics: {
-        roi: '30,000%',
-        savings: '$750M',
-        timeline: '18 months',
-        accuracy: '99.9%'
+        users: '1M+',
+        uptime: '99.9%',
+        response: '<100ms',
+        insights: 'Real-time'
       },
-      tags: ['Fortune 500', 'Case Study', '30,000% ROI', 'Success Story', 'Manufacturing']
+      tags: ['Dashboard', 'Analytics', 'Real-time', 'AI', '2025']
     },
     {
       id: 'enterprise-automation-2025',
@@ -112,26 +112,34 @@ const UltimateBusinessIntelligence2025Banner = () => {
                   NEW 2025
                 </span>
               </div>
+              
+              <button
+                onClick={handleClose}
+                className="text-gray-300 hover:text-white transition-colors text-2xl"
+                aria-label="Close banner"
+              >
+                ×
+              </button>
             </div>
 
-            {/* Metrics Grid */}
+            {/* Key Metrics */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8">
               {Object.entries(currentContent.metrics).map(([key, value]) => (
                 <div key={key} className="text-center">
-                  <div className="text-3xl font-bold text-cyan-400 mb-2">{value}</div>
-                  <div className="text-sm text-gray-300 capitalize">
+                  <div className="text-2xl font-bold text-cyan-400">{value}</div>
+                  <div className="text-xs text-gray-300 capitalize">
                     {key.replace(/([A-Z])/g, ' $1').trim()}
                   </div>
                 </div>
               ))}
             </div>
-
+            
             {/* Tags */}
             <div className="flex flex-wrap gap-2 mb-8">
               {currentContent.tags.map((tag) => (
                 <span
                   key={tag}
-                  className="bg-white/10 text-white px-3 py-1 rounded-full text-sm"
+                  className="bg-white/10 text-white px-3 py-1 rounded-full text-xs font-medium"
                 >
                   {tag}
                 </span>

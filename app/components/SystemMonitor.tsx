@@ -20,6 +20,10 @@ const calculatePerformanceScore = () => {
   if (metrics.loadTime > 3000) score -= 20;
   if (metrics.loadTime > 5000) score -= 30;
   
+  // Deduct points for slow paint times
+  if (metrics.firstContentfulPaint > 2000) score -= 15;
+  if (metrics.firstContentfulPaint > 3000) score -= 25;
+  
   return Math.max(0, score);
 };
 
@@ -103,11 +107,15 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
       // Get network info
       const networkInfo = getNetworkInfo();
 
+      // Calculate performance score
+      const performanceMetrics = performanceOptimizer.getMetrics();
+      const performanceScore = calculatePerformanceScore();
+
       const newMetrics: SystemMetrics = {
         performance: {
           score: performanceScore,
           loadTime: performanceMetrics?.loadTime || 0,
-          firstContentfulPaint: 0,
+          firstContentfulPaint: performanceMetrics?.firstContentfulPaint || 0,
           largestContentfulPaint: 0, // Not available in current metrics
           firstInputDelay: 0, // Not available in current metrics
           cumulativeLayoutShift: 0, // Not available in current metrics
@@ -203,7 +211,7 @@ console.error('Failed to update metrics:', error);
 
     const exportData = {
       metrics,
-      performanceData: collectPerformanceMetrics(),
+      performanceData: performanceOptimizer.getMetrics(),
       errorData: errorHandler.exportErrorData(),
       timestamp: new Date().toISOString(),
     };
