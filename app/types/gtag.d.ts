@@ -12,10 +12,10 @@ interface GtagEvent {
 type GtagCommand = 'config' | 'set' | 'event' | 'js';
 
 interface Window {
-  gtag: (
+  gtag?: (
     command: GtagCommand,
     targetId: string | Date,
     config?: GtagEvent
   ) => void;
-  dataLayer: unknown[];
+  dataLayer?: unknown[];
 }
