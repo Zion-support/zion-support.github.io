@@ -84,7 +84,8 @@ class PerformanceMonitor {
 
     // Log in development
     if (process.env['NODE_ENV'] === 'development') {
-//       }
+      console.log('Performance monitoring initialized');
+    }
   }
 
   /**
@@ -265,7 +266,8 @@ class PerformanceMonitor {
       clsObserver.observe({ entryTypes: ['layout-shift'] });
       this.observers.push(clsObserver);
     } catch (error) {
-//       }
+      console.warn('Failed to observe CLS:', error);
+    }
   }
 
   /**

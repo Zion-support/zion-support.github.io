@@ -76,11 +76,10 @@ async function sendToAnalytics(
         body,
         headers: { 'Content-Type': 'application/json' },
         keepalive: true,
-//       }).catch(console.error);
-      });
+      }).catch(console.error);
     }
-  } catch {
-//     console.error('Failed to send metric to analytics:', error);
+  } catch (error) {
+    console.error('Failed to send metric to analytics:', error);
   }
 }
 
@@ -119,7 +118,9 @@ export function reportWebVitals(
 
             onPerfEntry(metric);
             if (analyticsEndpoint) sendToAnalytics(metric, analyticsEndpoint);
-//             if (debug) if (process.env['NODE_ENV'] === 'development') { if (process.env.DEV) { } }
+            if (debug && process.env['NODE_ENV'] === 'development') {
+              console.log('CLS metric:', metric);
+            }
           }
         }
       }
@@ -128,7 +129,8 @@ export function reportWebVitals(
     try {
       clsObserver.observe({ type: 'layout-shift', buffered: true });
     } catch (e) {
-//       if (debug) }
+      if (debug) console.warn('Failed to observe CLS:', e);
+    }
 
     // Report final CLS on page hide
     addEventListener('visibilitychange', () => {
@@ -144,7 +146,9 @@ export function reportWebVitals(
 
         onPerfEntry(metric);
         if (analyticsEndpoint) sendToAnalytics(metric, analyticsEndpoint);
-//         if (debug) if (process.env['NODE_ENV'] === 'development') { if (process.env.DEV) { } }
+        if (debug && process.env['NODE_ENV'] === 'development') {
+          console.log('Final CLS metric:', metric);
+        }
       }
     });
   }
@@ -166,7 +170,9 @@ export function reportWebVitals(
 
       onPerfEntry(metric);
       if (analyticsEndpoint) sendToAnalytics(metric, analyticsEndpoint);
-      if (debug) if (process.env['NODE_ENV'] === 'development') { if (process.env.DEV) { } }
+      if (debug && process.env['NODE_ENV'] === 'development') {
+        console.log('FID metric:', metric);
+      }
 
       fidObserver.disconnect();
     });
@@ -174,7 +180,8 @@ export function reportWebVitals(
     try {
       fidObserver.observe({ type: 'first-input', buffered: true });
     } catch (e) {
-//       if (debug) }
+      if (debug) console.warn('Failed to observe FID:', e);
+    }
   }
 
   // Largest Contentful Paint (LCP)
@@ -198,14 +205,17 @@ export function reportWebVitals(
 
         onPerfEntry(metric);
         if (analyticsEndpoint) sendToAnalytics(metric, analyticsEndpoint);
-//         if (debug) if (process.env['NODE_ENV'] === 'development') { if (process.env.DEV) { } }
+        if (debug && process.env['NODE_ENV'] === 'development') {
+          console.log('LCP metric:', metric);
+        }
       }
     });
 
     try {
       lcpObserver.observe({ type: 'largest-contentful-paint', buffered: true });
     } catch (e) {
-//       if (debug) }
+      if (debug) console.warn('Failed to observe LCP:', e);
+    }
 
     // Report final LCP on page hide
     addEventListener('visibilitychange', () => {
@@ -232,7 +242,9 @@ export function reportWebVitals(
 
           onPerfEntry(metric);
           if (analyticsEndpoint) sendToAnalytics(metric, analyticsEndpoint);
-//           if (debug) if (process.env['NODE_ENV'] === 'development') { if (process.env.DEV) { } }
+          if (debug && process.env['NODE_ENV'] === 'development') {
+            console.log('FCP metric:', metric);
+          }
 
           fcpObserver.disconnect();
         }
@@ -242,7 +254,8 @@ export function reportWebVitals(
     try {
       fcpObserver.observe({ type: 'paint', buffered: true });
     } catch (e) {
-//       if (debug) }
+      if (debug) console.warn('Failed to observe FCP:', e);
+    }
   }
 
   // Time to First Byte (TTFB)
@@ -265,7 +278,9 @@ export function reportWebVitals(
 
       onPerfEntry(metric);
       if (analyticsEndpoint) sendToAnalytics(metric, analyticsEndpoint);
-//       if (debug) if (process.env['NODE_ENV'] === 'development') { if (process.env.DEV) { } }
+      if (debug && process.env['NODE_ENV'] === 'development') {
+        console.log('TTFB metric:', metric);
+      }
     }
   }
 }
@@ -291,7 +306,8 @@ export function monitorLongTasks(
     observer.observe({ entryTypes: ['longtask'] });
     return observer;
   } catch (e) {
-//     return null;
+    console.warn('Failed to observe long tasks:', e);
+    return null;
   }
 }
 
