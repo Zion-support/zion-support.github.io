@@ -3,6 +3,20 @@
  * Tracks Web Vitals, custom metrics, and provides performance insights
  */
 
+// Import web vitals types
+interface LayoutShift extends PerformanceEntry {
+  value: number;
+  hadRecentInput: boolean;
+  lastInputTime: number;
+  sources: LayoutShiftAttribution[];
+}
+
+interface LayoutShiftAttribution {
+  node?: Node;
+  previousRect: DOMRectReadOnly;
+  currentRect: DOMRectReadOnly;
+}
+
 export interface PerformanceMetric {
   name: string;
   value: number;
@@ -25,6 +39,11 @@ export interface CustomMetric {
   unit: string;
   timestamp: number;
   tags?: Record<string, string>;
+}
+
+interface LayoutShift extends PerformanceEntry {
+  value: number;
+  hadRecentInput: boolean;
 }
 
 class PerformanceMonitor {
