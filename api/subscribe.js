@@ -19,19 +19,14 @@ async function handler(req, res) {
     return;
   }
 
+  if (!isValidEmail(email)) {
+    res.statusCode = 400;
+    res.json({ error: 'Invalid email address' });
+    return;
+  }
+
   try {
-    if (!isValidEmail(email)) {
-      res.statusCode = 400;
-      res.json({ error: 'Invalid email' });
-      return;
-    }
-
-    const file = path.join(
-      process.cwd(),
-      'data',
-      'newsletter-subscriptions.json'
-    );
-
+    const file = path.join(process.cwd(), 'data', 'subscribers.json');
     let existing = [];
 
     try {
@@ -41,20 +36,29 @@ async function handler(req, res) {
       // File doesn't exist or is invalid, use empty array
     }
 
+    // Check if email already exists
+    if (existing.some((sub) => sub.email === email)) {
+      res.statusCode = 200;
+      res.json({ success: true, message: 'Already subscribed' });
+      return;
+    }
+
     existing.push({
       email,
       name,
       source,
-      subscribedAt: new Date().toISOString(),
+      timestamp: new Date().toISOString(),
     });
 
+    fs.mkdirSync(path.dirname(file), { recursive: true });
     fs.writeFileSync(file, JSON.stringify(existing, null, 2));
+
     res.statusCode = 200;
-    res.json({ success: true });
-  } catch (err) {
-    console.error('Subscribe API error:', err);
+    res.json({ success: true, message: 'Successfully subscribed' });
+  } catch (error) {
+    console.error('Subscription error:', error);
     res.statusCode = 500;
-    res.json({ error: err.message || 'Subscription failed' });
+    res.json({ error: 'Failed to subscribe' });
   }
 }
 

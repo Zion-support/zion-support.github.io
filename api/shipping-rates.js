@@ -28,7 +28,7 @@ async function handler(req, res) {
         shipment: {
           to_address: toAddress,
           from_address: fromAddress,
-          parcel,
+          parcel: parcel,
         },
       }),
     });
@@ -36,17 +36,17 @@ async function handler(req, res) {
     const data = await response.json();
 
     if (!response.ok) {
-      res.statusCode = 500;
-      res.json({ error: data.error || 'Failed to fetch rates' });
+      res.statusCode = response.status;
+      res.json({ error: data.error || 'Failed to get shipping rates' });
       return;
     }
 
     res.statusCode = 200;
-    res.json({ rates: data.rates });
-  } catch (err) {
-    console.error('EasyPost error:', err);
+    res.json(data);
+  } catch (error) {
+    console.error('Shipping rates error:', error);
     res.statusCode = 500;
-    res.json({ error: err.message });
+    res.json({ error: 'Failed to get shipping rates' });
   }
 }
 
