@@ -8,7 +8,7 @@ export const usePerformanceMonitoring = () => {
     if (navigator.sendBeacon) {
       navigator.sendBeacon(url, body);
     } else {
-      fetch(url, { body, method: 'POST', keepalive: true }).catch(// eslint-disable-next-line no-console
+      fetch(url, { body, method: 'POST', keepalive: true }).catch( 
     console.error);
     }
   }, []);

@@ -1,4 +1,5 @@
 import Link from 'next/link';
+
 export default function GenerativeDesignSystemsBlueprintPage() {
   return (
     <div>
@@ -7,4 +8,10 @@ export default function GenerativeDesignSystemsBlueprintPage() {
           <div>
             <div>
               <span>🎨 GENERATIVE DESIGN SYSTEMS</span>
-import Link from 'next/link';
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}
