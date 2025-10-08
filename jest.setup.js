@@ -56,12 +56,7 @@ jest.mock('react-router-dom', () => ({
   }),
   useParams: () => ({}),
   BrowserRouter: ({ children }) => children,
-  MemoryRouter: ({ children, basename = '/' }) => {
-    const React = require('react');
-    const { createContext } = React;
-    const RouterContext = createContext({ basename });
-    return React.createElement(RouterContext.Provider, { value: { basename } }, children);
-  },
+  MemoryRouter: ({ children }) => children,
   RouterProvider: ({ router }) => null,
 }));
 
@@ -91,7 +86,7 @@ global.IntersectionObserver = class IntersectionObserver {
   unobserve() {}
 };
 
-// TextEncoder and TextDecoder are already set above
+// TextEncoder and TextDecoder already set above
 
 // Suppress console errors in tests
 const originalError = console.error;
