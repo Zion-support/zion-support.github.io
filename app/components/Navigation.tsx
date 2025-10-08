@@ -19,10 +19,10 @@ const Navigation: React.FC = () => {
 
           {/* Desktop Menu */}
           <div className="hidden md:flex space-x-8">
-            <Link to="/" className="text-gray-700 hover:text-blue-600 transition-colors">
+            <Link to="/" className="text-gray-300 hover:text-cyan-400 transition-colors">
               Home
             </Link>
-            <Link to="/about" className="text-gray-700 hover:text-blue-600 transition-colors">
+            <Link to="/about" className="text-gray-300 hover:text-cyan-400 transition-colors">
               About
             </Link>
             <div className="relative">
