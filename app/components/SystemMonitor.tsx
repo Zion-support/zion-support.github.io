@@ -6,12 +6,12 @@
  */
 
 import React, { useState, useEffect, useCallback } from 'react';
-import { collectPerformanceMetrics } from '../utils/performanceOptimizer';
+import { performanceOptimizer } from '../utils/performanceOptimizer';
 import { errorHandler } from '../utils/enhancedErrorHandler';
 
 // Helper functions
 const calculatePerformanceScore = () => {
-  const metrics = collectPerformanceMetrics();
+  const metrics = performanceOptimizer.getMetrics();
   if (!metrics) return 0;
   
   let score = 100;
@@ -19,10 +19,6 @@ const calculatePerformanceScore = () => {
   // Deduct points for slow load times
   if (metrics.loadTime > 3000) score -= 20;
   if (metrics.loadTime > 5000) score -= 30;
-  
-  // Deduct points for slow paint times
-  if (metrics.firstContentfulPaint > 2000) score -= 15;
-  if (metrics.firstContentfulPaint > 3000) score -= 25;
   
   return Math.max(0, score);
 };
@@ -97,7 +93,7 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
   // Update metrics
   const updateMetrics = useCallback(() => {
     try {
-      const performanceMetrics = collectPerformanceMetrics();
+      const performanceMetrics = performanceOptimizer.getMetrics();
       const performanceScore = calculatePerformanceScore();
       const errorStats = errorHandler.getErrorStatistics();
 
@@ -107,15 +103,11 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
       // Get network info
       const networkInfo = getNetworkInfo();
 
-      // Calculate performance score
-      const performanceMetrics = collectPerformanceMetrics();
-      const performanceScore = calculatePerformanceScore();
-
       const newMetrics: SystemMetrics = {
         performance: {
           score: performanceScore,
-          loadTime: performanceMetrics?.loadTime || loadTime,
-          firstContentfulPaint: performanceMetrics?.firstContentfulPaint || 0,
+          loadTime: performanceMetrics?.loadTime || 0,
+          firstContentfulPaint: 0,
           largestContentfulPaint: 0, // Not available in current metrics
           firstInputDelay: 0, // Not available in current metrics
           cumulativeLayoutShift: 0, // Not available in current metrics

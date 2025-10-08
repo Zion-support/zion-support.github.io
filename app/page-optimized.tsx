@@ -1,27 +1,28 @@
 import React from 'react';
 import dynamic from 'next/dynamic';
-import { UnifiedBanner, bannerConfigurations } from './components/UnifiedBannerSystem';
-import { LazyWrapper } from './components/LazyLoader';
-import { SEOOptimizer } from './components/SEOOptimizer';
-import { AccessibilityEnhancer } from './components/AccessibilityEnhancer';
-import { PerformanceMonitor } from './components/PerformanceMonitor';
+// import { UnifiedBanner, bannerConfigurations } from './components/UnifiedBannerSystem';
+// import { LazyWrapper } from './components/LazyLoader';
+import SEOOptimizer from './components/SEOOptimizer';
+import AccessibilityEnhancer from './components/AccessibilityEnhancer';
+import PerformanceMonitor from './components/PerformanceMonitor';
 
 // Lazy load heavy components
-const UnifiedContentPromotion = dynamic(() => import('../components/UnifiedContentPromotion'), {
-  loading: () => <div className="animate-pulse bg-gray-200 h-32 rounded-lg"></div>
+const UnifiedContentPromotion = dynamic(() => import('./components/UnifiedContentPromotion'), {
+  loading: () => <div className="animate-pulse bg-gray-200 h-32 rounded-lg"></div>,
+  ssr: false
 });
 
-const InteractiveAIROICalculator = dynamic(() => import('../components/InteractiveAIROICalculator'), {
-  loading: () => <div className="animate-pulse bg-gray-200 h-64 rounded-lg"></div>
-});
+// const InteractiveAIROICalculator = dynamic(() => import('./components/InteractiveAIROICalculator'), {
+//   loading: () => <div className="animate-pulse bg-gray-200 h-64 rounded-lg"></div>
+// });
 
-const ContentShowcase = dynamic(() => import('../components/ContentShowcase'), {
-  loading: () => <div className="animate-pulse bg-gray-200 h-48 rounded-lg"></div>
-});
+// const ContentShowcase = dynamic(() => import('./components/ContentShowcase'), {
+//   loading: () => <div className="animate-pulse bg-gray-200 h-48 rounded-lg"></div>
+// });
 
-const InteractiveContentShowcase2026 = dynamic(() => import('../components/InteractiveContentShowcase2026'), {
-  loading: () => <div className="animate-pulse bg-gray-200 h-48 rounded-lg"></div>
-});
+// const InteractiveContentShowcase2026 = dynamic(() => import('./components/InteractiveContentShowcase2026'), {
+//   loading: () => <div className="animate-pulse bg-gray-200 h-48 rounded-lg"></div>
+// });
 
 export const metadata = {
   title: 'Zion Tech Group — AI Enterprise Transformation & IT Services | 300% ROI Guaranteed',
@@ -72,11 +73,12 @@ export default function OptimizedHomePage() {
   return (
     <div className="min-h-screen bg-white">
       <SEOOptimizer />
-      <AccessibilityEnhancer />
-      <PerformanceMonitor />
+      <AccessibilityEnhancer>
+        <PerformanceMonitor />
+      </AccessibilityEnhancer>
       
-      {/* Unified Banner System */}
-      <UnifiedBanner configurations={bannerConfigurations} />
+      {/* Unified Banner System - Commented out due to missing components */}
+      {/* <UnifiedBanner configurations={bannerConfigurations} /> */}
       
       {/* Main Content */}
       <main className="relative">
@@ -114,25 +116,23 @@ export default function OptimizedHomePage() {
           </div>
         </section>
 
-        {/* ROI Calculator Section */}
-        <LazyWrapper>
+        {/* ROI Calculator Section - Commented out due to missing components */}
+        {/* <LazyWrapper>
           <InteractiveAIROICalculator />
-        </LazyWrapper>
+        </LazyWrapper> */}
 
-        {/* Content Showcase */}
-        <LazyWrapper>
+        {/* Content Showcase - Commented out due to missing components */}
+        {/* <LazyWrapper>
           <ContentShowcase />
-        </LazyWrapper>
+        </LazyWrapper> */}
 
-        {/* Interactive Content Showcase 2026 */}
-        <LazyWrapper>
+        {/* Interactive Content Showcase 2026 - Commented out due to missing components */}
+        {/* <LazyWrapper>
           <InteractiveContentShowcase2026 />
-        </LazyWrapper>
+        </LazyWrapper> */}
 
         {/* Unified Content Promotion */}
-        <LazyWrapper>
-          <UnifiedContentPromotion />
-        </LazyWrapper>
+        <UnifiedContentPromotion />
       </main>
     </div>
   );
