@@ -772,7 +772,7 @@ export class TestRunner {
     assertions?: (result: RenderResult) => void;
     userInteractions?: (result: RenderResult) => Promise<void>;
   }>): Promise<{ passed: boolean; results: Array<{ name: string; type: string; passed: boolean; error?: string }> }> {
-    const results = [];
+    const results: Array<{ name: string; type: string; passed: boolean; error?: string }> = [];
 
     for (const test of tests) {
       let result;
@@ -893,7 +893,7 @@ export const useTestRunner = () => {
 export const testUtils = {
   // Create mock data
   createMockData: (type: string, count: number = 10) => {
-    const mockData = [];
+    const mockData: Array<{ id: number; name: string; description: string; createdAt: string; updatedAt: string }> = [];
     for (let i = 0; i < count; i++) {
       mockData.push({
         id: i + 1,
