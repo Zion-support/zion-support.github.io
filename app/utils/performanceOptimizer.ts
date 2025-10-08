@@ -3,12 +3,28 @@
  * Provides tools for monitoring and optimizing application performance
  */
 
+import logger from './logger';
+
 interface PerformanceMetrics {
   loadTime: number;
   renderTime: number;
   memoryUsage: number;
   bundleSize: number;
   cacheHitRate: number;
+  ttfb?: number;
+  fcp?: number;
+  lcp?: number;
+  fid?: number;
+  cls?: number;
+  fmp?: number;
+}
+
+export interface PerformanceConfig {
+  enableLazyLoading?: boolean;
+  enableCodeSplitting?: boolean;
+  enableImageOptimization?: boolean;
+  enableCaching?: boolean;
+  enableCompression?: boolean;
 }
 
 interface OptimizationConfig {
@@ -35,6 +51,9 @@ class PerformanceOptimizer {
     enableCaching: true,
     enableCompression: true,
   };
+
+  private observers: PerformanceObserver[] = [];
+  private isMonitoring = false;
 
   constructor(config?: Partial<OptimizationConfig>) {
     this.config = { ...this.config, ...config };
@@ -241,7 +260,7 @@ class PerformanceOptimizer {
     });
 
     images.forEach(img => imageObserver.observe(img));
-    logger.info('Lazy loading initialized for images', 'PerformanceOptimizer');
+    logger.info('Lazy loading initialized for images', { component: 'PerformanceOptimizer' });
   }
 
   /**
@@ -265,7 +284,7 @@ class PerformanceOptimizer {
       document.head.appendChild(link);
     });
 
-    logger.info('Critical resource hints added', 'PerformanceOptimizer');
+    logger.info('Critical resource hints added', { component: 'PerformanceOptimizer' });
   }
 
   /**
@@ -278,6 +297,11 @@ class PerformanceOptimizer {
     if (!navigation) return null;
 
     return {
+      loadTime: navigation.loadEventEnd - navigation.fetchStart,
+      renderTime: navigation.domContentLoadedEventEnd - navigation.fetchStart,
+      memoryUsage: (performance as Performance & { memory?: { usedJSHeapSize: number } }).memory?.usedJSHeapSize || 0,
+      bundleSize: this.metrics.bundleSize || 0,
+      cacheHitRate: this.metrics.cacheHitRate || 0,
       ttfb: navigation.responseStart - navigation.requestStart,
       fcp: this.metrics.fcp || 0,
       lcp: this.metrics.lcp || 0,
@@ -291,7 +315,7 @@ class PerformanceOptimizer {
    * Report web vitals
    */
   reportWebVitals(metrics: PerformanceMetrics): void {
-    logger.performance('Web Vitals reported', metrics as unknown as Record<string, unknown>, 'PerformanceOptimizer');
+    logger.info('Web Vitals reported', { component: 'PerformanceOptimizer', metrics: metrics as unknown as Record<string, unknown> });
     
     // Send to analytics if available
     if (typeof window !== 'undefined' && (window as { gtag?: Function }).gtag) {
@@ -351,4 +375,4 @@ ${metrics.memoryUsage > 30 * 1024 * 1024 ? '- Review memory usage and optimize c
 // Export singleton instance
 export const performanceOptimizer = new PerformanceOptimizer();
 export default PerformanceOptimizer;
-export { PerformanceOptimizer, type PerformanceMetrics, type PerformanceConfig };
+export { PerformanceOptimizer, type PerformanceMetrics };
