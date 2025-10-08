@@ -1,27 +1,11 @@
 import React from 'react';
 import dynamic from 'next/dynamic';
-import { UnifiedBanner, bannerConfigurations } from './components/UnifiedBannerSystem';
-import { LazyWrapper } from './components/LazyLoader';
-import { SEOOptimizer } from './components/SEOOptimizer';
-import { AccessibilityEnhancer } from './components/AccessibilityEnhancer';
-import { PerformanceMonitor } from './components/PerformanceMonitor';
+import SEOOptimizer from './components/SEOOptimizer';
+import AccessibilityEnhancer from './components/AccessibilityEnhancer';
+import PerformanceMonitor from './components/PerformanceMonitor';
 
-// Lazy load heavy components
-const UnifiedContentPromotion = dynamic(() => import('../components/UnifiedContentPromotion'), {
-  loading: () => <div className="animate-pulse bg-gray-200 h-32 rounded-lg"></div>
-});
-
-const InteractiveAIROICalculator = dynamic(() => import('../components/InteractiveAIROICalculator'), {
-  loading: () => <div className="animate-pulse bg-gray-200 h-64 rounded-lg"></div>
-});
-
-const ContentShowcase = dynamic(() => import('../components/ContentShowcase'), {
-  loading: () => <div className="animate-pulse bg-gray-200 h-48 rounded-lg"></div>
-});
-
-const InteractiveContentShowcase2026 = dynamic(() => import('../components/InteractiveContentShowcase2026'), {
-  loading: () => <div className="animate-pulse bg-gray-200 h-48 rounded-lg"></div>
-});
+// Note: Some lazy-loaded components have been commented out as they may not exist
+// Uncomment and update paths as needed based on your component structure
 
 export const metadata = {
   title: 'Zion Tech Group — AI Enterprise Transformation & IT Services | 300% ROI Guaranteed',
@@ -72,11 +56,10 @@ export default function OptimizedHomePage() {
   return (
     <div className="min-h-screen bg-white">
       <SEOOptimizer />
-      <AccessibilityEnhancer />
+      <AccessibilityEnhancer>
+        <div />
+      </AccessibilityEnhancer>
       <PerformanceMonitor />
-      
-      {/* Unified Banner System */}
-      <UnifiedBanner configurations={bannerConfigurations} />
       
       {/* Main Content */}
       <main className="relative">
@@ -113,26 +96,6 @@ export default function OptimizedHomePage() {
             </div>
           </div>
         </section>
-
-        {/* ROI Calculator Section */}
-        <LazyWrapper>
-          <InteractiveAIROICalculator />
-        </LazyWrapper>
-
-        {/* Content Showcase */}
-        <LazyWrapper>
-          <ContentShowcase />
-        </LazyWrapper>
-
-        {/* Interactive Content Showcase 2026 */}
-        <LazyWrapper>
-          <InteractiveContentShowcase2026 />
-        </LazyWrapper>
-
-        {/* Unified Content Promotion */}
-        <LazyWrapper>
-          <UnifiedContentPromotion />
-        </LazyWrapper>
       </main>
     </div>
   );

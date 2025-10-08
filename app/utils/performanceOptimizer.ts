@@ -3,12 +3,26 @@
  * Provides tools for monitoring and optimizing application performance
  */
 
+// Simple logger for performance optimizer
+const logger = {
+  info: (message: string, context?: string) => console.log(`[INFO${context ? ' - ' + context : ''}]`, message),
+  performance: (message: string, data: Record<string, unknown>, context?: string) => console.log(`[PERF${context ? ' - ' + context : ''}]`, message, data),
+  error: (message: string, error: Error) => console.error('[ERROR]', message, error),
+};
+
 interface PerformanceMetrics {
   loadTime: number;
   renderTime: number;
   memoryUsage: number;
   bundleSize: number;
   cacheHitRate: number;
+  firstContentfulPaint?: number;
+  fcp?: number;
+  lcp?: number;
+  fid?: number;
+  cls?: number;
+  fmp?: number;
+  ttfb?: number;
 }
 
 interface OptimizationConfig {
@@ -18,6 +32,8 @@ interface OptimizationConfig {
   enableCaching: boolean;
   enableCompression: boolean;
 }
+
+interface PerformanceConfig extends OptimizationConfig {}
 
 class PerformanceOptimizer {
   private metrics: PerformanceMetrics = {
@@ -35,6 +51,9 @@ class PerformanceOptimizer {
     enableCaching: true,
     enableCompression: true,
   };
+
+  private observers: PerformanceObserver[] = [];
+  private isMonitoring: boolean = false;
 
   constructor(config?: Partial<OptimizationConfig>) {
     this.config = { ...this.config, ...config };
@@ -278,6 +297,11 @@ class PerformanceOptimizer {
     if (!navigation) return null;
 
     return {
+      loadTime: this.metrics.loadTime,
+      renderTime: this.metrics.renderTime,
+      memoryUsage: this.metrics.memoryUsage,
+      bundleSize: this.metrics.bundleSize,
+      cacheHitRate: this.metrics.cacheHitRate,
       ttfb: navigation.responseStart - navigation.requestStart,
       fcp: this.metrics.fcp || 0,
       lcp: this.metrics.lcp || 0,
