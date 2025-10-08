@@ -7,21 +7,18 @@ interface LayoutShift extends PerformanceEntry {
   value: number;
 }
 
-const PerformanceMonitor: React.FC = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({});
-
-  useEffect(() => {
-    // Web Vitals monitoring
-    const reportWebVitals = (metric: any) => {
-      // Send to analytics service
-      if (typeof window !== 'undefined' && (window as { gtag?: Function }).gtag) {
-        (window as unknown as { gtag: Function }).gtag('event', 'web_vitals', {
-          event_category: 'Performance',
-          event_label: metric.name,
-          value: Math.round(metric.value),
-          non_interaction: true,
-        });
-      }
+interface PerformanceMetrics {
+  loadTime?: number;
+  renderTime?: number;
+  memoryUsage?: number;
+  bundleSize?: number;
+  cacheHitRate?: number;
+  lcp?: number;
+  fid?: number;
+  cls?: number;
+  fcp?: number;
+  ttfb?: number;
+}
 
 interface PerformanceMonitorProps {
   enableRealTimeMonitoring?: boolean;
@@ -29,6 +26,31 @@ interface PerformanceMonitorProps {
   enableVisualIndicator?: boolean;
   updateInterval?: number;
 }
+
+// Simple logger for console output
+const logger = {
+  group: (label: string, fn: () => void) => {
+    console.group(label);
+    fn();
+    console.groupEnd();
+  },
+  debug: (label: string, data: any) => {
+    console.debug(label, data);
+  }
+};
+
+// Web Vitals reporting function
+const reportWebVitals = (metric: any) => {
+  // Send to analytics service
+  if (typeof window !== 'undefined' && (window as { gtag?: Function }).gtag) {
+    (window as unknown as { gtag: Function }).gtag('event', 'web_vitals', {
+      event_category: 'Performance',
+      event_label: metric.name,
+      value: Math.round(metric.value),
+      non_interaction: true,
+    });
+  }
+};
 
 const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   enableRealTimeMonitoring = true,
@@ -175,7 +197,11 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         console.warn('Performance monitoring not supported:', error);
       }
     }
-  }, []);
+
+    return () => {
+      clearInterval(interval);
+    };
+  }, [enableRealTimeMonitoring, enableConsoleLogging, updateInterval]);
 
   // Don't render anything in production
   if (process.env.NODE_ENV !== 'development') {
