@@ -2,6 +2,11 @@
 require('@testing-library/jest-dom');
 const React = require('react');
 
+// Polyfill for TextEncoder and TextDecoder
+const { TextEncoder, TextDecoder } = require('util');
+global.TextEncoder = TextEncoder;
+global.TextDecoder = TextDecoder;
+
 // Mock files that use import.meta.env
 jest.mock('./src/utils/logger.ts', () => ({
   logger: {
@@ -31,22 +36,6 @@ jest.mock('./src/hooks/usePerformance.ts', () => ({
   })),
 }));
 
-<<<<<<< HEAD
-// Mock React Router
-jest.mock('react-router-dom', () => ({
-  ...jest.requireActual('react-router-dom'),
-  useNavigate: () => jest.fn(),
-  useLocation: () => ({
-    pathname: '/',
-    search: '',
-    hash: '',
-    state: null,
-  }),
-  useParams: () => ({}),
-  Link: ({ children, to, ...props }) => React.createElement('a', { href: to, ...props }, children),
-  NavLink: ({ children, to, ...props }) => React.createElement('a', { href: to, ...props }, children),
-}));
-=======
 jest.mock('./app/hooks/usePerformanceMonitoring.ts', () => ({
   usePerformanceMonitoring: jest.fn(() => ({
     metrics: {},
@@ -54,10 +43,10 @@ jest.mock('./app/hooks/usePerformanceMonitoring.ts', () => ({
   })),
 }));
 
-
 // Mock React Router (this is a Vite project, not Next.js)
 jest.mock('react-router-dom', () => {
   const actual = jest.requireActual('react-router-dom');
+  const mockReact = require('react');
   return {
     ...actual,
     useNavigate: () => jest.fn(),
@@ -80,12 +69,13 @@ jest.mock('react-router-dom', () => {
         initialEntries: ['/'],
         initialIndex: 0,
       });
-      return <RouterProvider router={router} />;
+      return mockReact.createElement(RouterProvider, { router });
     },
     RouterProvider: ({ router }) => null,
+    Link: ({ children, to, ...props }) => mockReact.createElement('a', { href: to, ...props }, children),
+    NavLink: ({ children, to, ...props }) => mockReact.createElement('a', { href: to, ...props }, children),
   };
 });
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-c95a
 
 // Mock window.matchMedia
 Object.defineProperty(window, 'matchMedia', {
@@ -113,11 +103,7 @@ global.IntersectionObserver = class IntersectionObserver {
   unobserve() {}
 };
 
-<<<<<<< HEAD
-=======
 // TextEncoder and TextDecoder are already declared above
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-c95a
 // Suppress console errors in tests
 const originalError = console.error;
 beforeAll(() => {
