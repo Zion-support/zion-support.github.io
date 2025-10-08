@@ -427,11 +427,11 @@ class ContextLogger {
   }
 
   lifecycle(message: string, metadata?: Record<string, unknown>): void {
-    this.logger.lifecycle(message, this.context, metadata);
+    this.logger.lifecycle(message, this.context);
   }
 
   performance(message: string, data: unknown, metadata?: Record<string, unknown>): void {
-    this.logger.performance(message, data, this.context, metadata);
+    this.logger.performance(message, data, this.context);
   }
 
   group(label: string, fn: () => void): void {
