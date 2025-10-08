@@ -15,6 +15,7 @@ import AdvancedPerformanceMonitor from './components/AdvancedPerformanceMonitor'
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 // Lazy load pages for better performance
 const HomePage = lazy(() => import('./page'));
 
@@ -32,6 +33,8 @@ const HomePage = lazy(() => import('./pages/Home').catch(() => ({ default: () =>
 const HomePage = lazy(() => import('./page'));
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-16e0
 
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-7463
 const App: React.FC = () => {
   useEffect(() => {
     // Initialize global error handling
