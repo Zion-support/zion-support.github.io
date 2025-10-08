@@ -13,10 +13,147 @@ const Footer: React.FC = memo(() => {  return (
               <span className="text-3xl mr-2">⚡</span>
               <h3 className="text-2xl font-bold text-cyan-400">Zion Tech Group</h3>
             </div>
+<<<<<<< HEAD
             <p className="text-gray-300 mb-6 leading-relaxed">
               Leading provider of enterprise AI solutions, quantum computing, and autonomous systems. 
               Transform your business with cutting-edge technology.
             </p>
+=======
+          </div>
+
+          {/* Quick Links */}
+          <div>
+            <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
+            <ul className="space-y-2">
+              <li>
+                <Link to="/" className="text-gray-300 hover:text-white transition-colors">
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link to="/about" className="text-gray-300 hover:text-white transition-colors">
+                  About
+                </Link>
+              </li>
+              <li>
+                <Link to="/services" className="text-gray-300 hover:text-white transition-colors">
+                  Services
+                </Link>
+              </li>
+              <li>
+                <Link to="/services-advertising" className="text-gray-300 hover:text-white transition-colors">
+                  AI Advertising
+                </Link>
+              </li>
+              <li>
+                <Link to="/case-studies" className="text-gray-300 hover:text-white transition-colors">
+                  Case Studies
+                </Link>
+              </li>
+              <li>
+                <Link to="/enterprise" className="text-gray-300 hover:text-white transition-colors">
+                  Enterprise
+                </Link>
+              </li>
+              <li>
+                <Link to="/team" className="text-gray-300 hover:text-white transition-colors">
+                  Team
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Services */}
+          <div>
+            <h4 className="text-lg font-semibold mb-4">Services</h4>
+            <ul className="space-y-2 text-gray-300">
+              <li>
+                <Link to="/services" className="hover:text-white transition-colors">
+                  All Services
+                </Link>
+              </li>
+              <li>
+                <Link to="/ai-services" className="hover:text-white transition-colors">
+                  AI Services
+                </Link>
+              </li>
+              <li>
+                <Link to="/ai-data-analytics" className="hover:text-white transition-colors">
+                  AI Data Analytics
+                </Link>
+              </li>
+              <li>
+                <Link to="/ai-cybersecurity" className="hover:text-white transition-colors">
+                  AI Cybersecurity
+                </Link>
+              </li>
+              <li>
+                <Link to="/ai-workflow-automation" className="hover:text-white transition-colors">
+                  AI Workflow Automation
+                </Link>
+              </li>
+              <li>
+                <Link to="/ai-cloud-infrastructure" className="hover:text-white transition-colors">
+                  AI Cloud Infrastructure
+                </Link>
+              </li>
+              <li>
+                <Link to="/ai-ecommerce-solutions" className="hover:text-white transition-colors">
+                  AI E-commerce Solutions
+                </Link>
+              </li>
+              <li>
+                <Link to="/ai-mobile-app-development" className="hover:text-white transition-colors">
+                  AI Mobile App Development
+                </Link>
+              </li>
+              <li>
+                <Link to="/it-services" className="hover:text-white transition-colors">
+                  IT Services
+                </Link>
+              </li>
+              <li>
+                <Link to="/micro-saas" className="hover:text-white transition-colors">
+                  Micro SAAS
+                </Link>
+              </li>
+              <li>
+                <Link to="/quantum-computing" className="hover:text-white transition-colors">
+                  Quantum Computing
+                </Link>
+              </li>
+              <li>
+                <Link to="/autonomous-systems" className="hover:text-white transition-colors">
+                  Autonomous Systems
+                </Link>
+              </li>
+              <li>
+                <Link to="/business-intelligence" className="hover:text-white transition-colors">
+                  Business Intelligence
+                </Link>
+              </li>
+              <li>
+                <Link to="/blockchain-web3" className="hover:text-white transition-colors">
+                  Blockchain & Web3
+                </Link>
+              </li>
+              <li>
+                <Link to="/iot-edge-computing" className="hover:text-white transition-colors">
+                  IoT & Edge Computing
+                </Link>
+              </li>
+              <li>
+                <Link to="/cybersecurity" className="hover:text-white transition-colors">
+                  Cybersecurity
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Contact */}
+          <div>
+            <h4 className="text-lg font-semibold mb-4">Contact</h4>
+>>>>>>> cursor/fix-errors-and-merge-to-main-deb0
             <div className="space-y-3">
               <div className="flex items-center">
                 <Phone className="w-5 h-5 mr-3 text-blue-400" />
@@ -37,7 +174,12 @@ const Footer: React.FC = memo(() => {  return (
               <div className="flex items-center">
                 <Clock className="w-5 h-5 mr-3 text-blue-400" />
                 <span className="text-gray-300">24/7 Support Available</span>
+<<<<<<< HEAD
               </div>              <div className="flex space-x-4 mt-4">
+=======
+              </div>
+              <div className="flex space-x-4 mt-4">
+>>>>>>> cursor/fix-errors-and-merge-to-main-deb0
                 <a href="https://linkedin.com/company/ziontechgroup" className="text-gray-300 hover:text-white transition-colors">
                   LinkedIn
                 </a>

@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 
 interface AccessibilityEnhancerProps {
   children: React.ReactNode;
@@ -20,6 +20,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   const [isReducedMotion, setIsReducedMotion] = useState(false);
   const [isHighContrast, setIsHighContrast] = useState(false);
   const [fontSize, setFontSize] = useState(16);
+<<<<<<< HEAD
       // Add skip links
       const skipLink = document.createElement('a');
       skipLink.href = '#main-content';
@@ -28,10 +29,22 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       document.body.insertBefore(skipLink, document.body.firstChild);
     };
 
+=======
+
+  useEffect(() => {
+    // Check for reduced motion preference
+    const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+    const handleChange = (e: MediaQueryListEvent) => {
+      setIsReducedMotion(e.matches);
+    };
+    
+    setIsReducedMotion(mediaQuery.matches);
+>>>>>>> cursor/fix-errors-and-merge-to-main-deb0
     mediaQuery.addEventListener('change', handleChange);
 
     // Check for high contrast preference
     const highContrastQuery = window.matchMedia('(prefers-contrast: high)');
+<<<<<<< HEAD
     setIsHighContrast(highContrastQuery.matches);
       // Add ARIA labels to links
       const links = document.querySelectorAll('a:not([aria-label]):not([aria-labelledby])');
@@ -54,8 +67,16 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
           heading.id = `heading-${index}`;
         }
       });
+=======
+    const handleContrastChange = (e: MediaQueryListEvent) => {
+      setIsHighContrast(e.matches);
+>>>>>>> cursor/fix-errors-and-merge-to-main-deb0
     };
+    
+    setIsHighContrast(highContrastQuery.matches);
+    highContrastQuery.addEventListener('change', handleContrastChange);
 
+<<<<<<< HEAD
     // Enhance color contrast
     const enhanceColorContrast = () => {
       // Add high contrast mode support
@@ -69,6 +90,8 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
         }
       };
 
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-deb0
     // Check for font size preference
     const computedStyle = getComputedStyle(document.documentElement);
     const rootFontSize = parseFloat(computedStyle.fontSize);
@@ -76,6 +99,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
 
     return () => {
       mediaQuery.removeEventListener('change', handleChange);
+<<<<<<< HEAD
       highContrastQuery.removeEventListener('change', handleContrastChange);    };
 
     // Enhance screen reader support
@@ -107,8 +131,25 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
           (nav as HTMLElement).focus();
           (nav as HTMLElement).scrollIntoView({ behavior: 'smooth' });
         }
-      }
+=======
+      highContrastQuery.removeEventListener('change', handleContrastChange);
+    };
+  }, []);
 
+  // Enhanced keyboard navigation
+  const handleKeyDown = (e: KeyboardEvent) => {
+    // Skip to main content with Alt + M
+    if (e.altKey && e.key === 'm') {
+      e.preventDefault();
+      const main = document.querySelector('main');
+      if (main) {
+        (main as HTMLElement).focus();
+        (main as HTMLElement).scrollIntoView({ behavior: 'smooth' });
+>>>>>>> cursor/fix-errors-and-merge-to-main-deb0
+      }
+    }
+
+<<<<<<< HEAD
       // Close modals/dropdowns with Escape
       if (e.key === 'Escape') {
         const modals = document.querySelectorAll('[role="dialog"][aria-modal="true"]');
@@ -118,16 +159,44 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
             (closeButton as HTMLElement).click();          }
         });
       };
+=======
+    // Skip to navigation with Alt + N
+    if (e.altKey && e.key === 'n') {
+      e.preventDefault();
+      const nav = document.querySelector('nav');
+      if (nav) {
+        (nav as HTMLElement).focus();
+        (nav as HTMLElement).scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+>>>>>>> cursor/fix-errors-and-merge-to-main-deb0
 
-      // Apply focus trap to modals
-      const modals = document.querySelectorAll('[role="dialog"]');
-      modals.forEach(modal => trapFocus(modal as HTMLElement));
-    };
+    // Close modals/dropdowns with Escape
+    if (e.key === 'Escape') {
+      const modals = document.querySelectorAll('[role="dialog"][aria-modal="true"]');
+      modals.forEach((modal) => {
+        const closeButton = modal.querySelector('[aria-label*="close" i], [aria-label*="dismiss" i]');
+        if (closeButton) {
+          (closeButton as HTMLElement).click();
+        }
+      });
+    }
+  };
 
+<<<<<<< HEAD
     // Remove keyboard navigation class on mouse use
     const handleMouseDown = () => {
       document.body.classList.remove('keyboard-navigation');
     };
+=======
+  // Remove keyboard navigation class on mouse use
+  const handleMouseDown = () => {
+    document.body.classList.remove('keyboard-navigation');
+  };
+
+  useEffect(() => {
+    if (!enableKeyboardNav) return;
+>>>>>>> cursor/fix-errors-and-merge-to-main-deb0
 
     document.addEventListener('keydown', handleKeyDown);
     document.addEventListener('mousedown', handleMouseDown);
@@ -136,7 +205,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       document.removeEventListener('keydown', handleKeyDown);
       document.removeEventListener('mousedown', handleMouseDown);
     };
-  }, []);
+  }, [enableKeyboardNav]);
 
   // Focus management
   const handleFocusIn = useCallback((event: FocusEvent) => {
@@ -261,7 +330,12 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       if (announcement.parentNode) {
         announcement.parentNode.removeChild(announcement);
       }
+<<<<<<< HEAD
     }, 1000);  }, []);
+=======
+    }, 1000);
+  }, []);
+>>>>>>> cursor/fix-errors-and-merge-to-main-deb0
 
   return <>{children}</>;
 };

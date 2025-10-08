@@ -4,6 +4,15 @@ import { ChevronDown, Phone, Mail, MapPin, Menu, X } from 'lucide-react';
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
+<<<<<<< HEAD
+=======
+
+  return (
+    <nav className="bg-slate-900/90 backdrop-blur-md shadow-lg sticky top-0 z-50 border-b border-cyan-500/20">
+      <div className="container mx-auto px-4">
+        <div className="flex justify-between items-center py-4">
+          {/* Logo */}
+>>>>>>> cursor/fix-errors-and-merge-to-main-deb0
           <Link to="/" className="text-2xl font-bold text-blue-600 flex items-center">
           <Link to="/" className="text-2xl font-bold text-cyan-400 neon-text flex items-center">
             <span className="text-3xl mr-2">⚡</span>
@@ -14,11 +23,16 @@ const Navigation: React.FC = () => {
             <Link to="/" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
               Home
             </Link>
+<<<<<<< HEAD
             <Link to="/about" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">              About
             </Link>
           <div className="hidden lg:flex items-center space-x-8">
             <Link to="/" className="text-gray-300 hover:text-cyan-400 transition-colors font-medium">
               Home
+=======
+            <Link to="/about" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
+              About
+>>>>>>> cursor/fix-errors-and-merge-to-main-deb0
             </Link>
             {/* Services Dropdown */}
             <div className="relative">
@@ -57,6 +71,56 @@ const Navigation: React.FC = () => {
                       ))}
                     </div>
                   </div>
+<<<<<<< HEAD
+=======
+                </div>
+              )}
+            </div>
+
+            <Link to="/case-studies" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
+              Case Studies
+            </Link>
+            <Link to="/enterprise" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
+              Enterprise
+            </Link>
+            <Link to="/team" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
+              Team
+            </Link>
+            <Link to="/contact" className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors font-medium">
+              Contact
+            </Link>
+          </div>
+
+          {/* Mobile Menu Button */}
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className="lg:hidden text-gray-700 hover:text-blue-600"
+            aria-expanded={isOpen}
+            aria-label="Toggle mobile menu"
+          >
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          </button>
+        </div>
+
+        {/* Mobile Menu */}
+        {isOpen && (
+          <div className="lg:hidden py-4 border-t">
+            <div className="flex flex-col space-y-4">
+              <Link to="/" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
+                Home
+              </Link>
+              <Link to="/about" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
+                About
+              </Link>
+              
+>>>>>>> cursor/fix-errors-and-merge-to-main-deb0
               {/* Services Section */}
               <div className="space-y-2">
                 <div className="text-gray-700 font-semibold text-lg">Services</div>
@@ -85,7 +149,13 @@ const Navigation: React.FC = () => {
                   <Link to="/cybersecurity" className="block text-gray-600 hover:text-blue-600 transition-colors">
                     Cybersecurity
                   </Link>
+<<<<<<< HEAD
                 </div>              </div>
+=======
+                </div>
+              </div>
+              
+>>>>>>> cursor/fix-errors-and-merge-to-main-deb0
               <Link to="/case-studies" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
                 Case Studies
               </Link>
@@ -100,6 +170,7 @@ const Navigation: React.FC = () => {
               </Link>
             </div>
           </div>
+<<<<<<< HEAD
                 </div>
               )}
             </div>
@@ -235,6 +306,8 @@ const Navigation: React.FC = () => {
               </Link>
             </div>
           </div>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-deb0
         )}
       </div>
     </nav>

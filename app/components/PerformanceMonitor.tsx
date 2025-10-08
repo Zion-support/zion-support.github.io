@@ -10,6 +10,7 @@ interface PerformanceMetrics {
 
 const PerformanceMonitor: React.FC = () => {
   useEffect(() => {
+<<<<<<< HEAD
     // const _reportWebVitals = (_metric: { name: string; value: number }) => {
     //   // Log to console in development (only on client side)
     //   if (typeof window !== 'undefined' && enableConsoleLogging) {
@@ -31,6 +32,15 @@ const PerformanceMonitor: React.FC = () => {
       if (metrics.loadTime > 3000) score -= 20;
       if (metrics.memoryUsage > 50) score -= 10;
       return Math.max(0, score);    };
+=======
+    const metrics: PerformanceMetrics = {
+      lcp: null,
+      fid: null,
+      cls: null,
+      fcp: null,
+      ttfb: null
+    };
+>>>>>>> cursor/fix-errors-and-merge-to-main-deb0
 
     // Measure Core Web Vitals
     const measureWebVitals = () => {
@@ -48,6 +58,7 @@ const PerformanceMonitor: React.FC = () => {
           console.warn('LCP observer not supported');
         }
 
+<<<<<<< HEAD
       setMetrics(currentMetrics);
 
       const score = getPerformanceScore();
@@ -58,6 +69,13 @@ const PerformanceMonitor: React.FC = () => {
           logger.debug('Performance Metrics', {
             metrics: currentMetrics,
             score,          });
+=======
+        // FID - First Input Delay
+        const fidObserver = new PerformanceObserver((list) => {
+          list.getEntries().forEach((entry: any) => {
+            metrics.fid = entry.processingStart - entry.startTime;
+          });
+>>>>>>> cursor/fix-errors-and-merge-to-main-deb0
         });
         
         try {
@@ -162,8 +180,16 @@ const PerformanceMonitor: React.FC = () => {
 
     monitorResources();
 
+<<<<<<< HEAD
     // Set up interval for continuous monitoring
     const interval = setInterval(updateMetrics, updateInterval);
+=======
+    return () => {
+      // Cleanup observers if needed
+    };
+  }, []);
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-deb0
   return null;
 };
 
