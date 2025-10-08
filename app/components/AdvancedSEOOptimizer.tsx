@@ -161,11 +161,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
       canonicalLink.setAttribute('href', seoData.canonicalUrl);
     }
   }, [seoData]);
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> e4fe97c96940 (Fix merge conflicts and resolve build errors)
   return (
     <Helmet>
       {/* Basic Meta Tags */}

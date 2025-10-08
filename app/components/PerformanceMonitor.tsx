@@ -32,7 +32,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     const reportWebVitals = (metric: { name: string; value: number }) => {
       // Log to console in development (only on client side)
       if (typeof window !== 'undefined' && enableConsoleLogging) {
-        // eslint-disable-next-line no-console
+         
     console.log('Web Vital:', metric.name, metric.value);
       }
     };
@@ -65,9 +65,9 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       if (enableConsoleLogging) {
         if (typeof console !== 'undefined') {
           console.group('Performance Metrics');
-          // eslint-disable-next-line no-console
+           
     console.debug('Metrics', { metrics: currentMetrics });
-          // eslint-disable-next-line no-console
+           
     console.debug('Score', { score });
           console.groupEnd();
         }
