@@ -3,6 +3,8 @@
  * Provides tools for monitoring and optimizing application performance
  */
 
+import { logger } from './logger';
+
 interface PerformanceMetrics {
   loadTime: number;
   renderTime: number;
@@ -24,6 +26,8 @@ interface OptimizationConfig {
   enableCaching: boolean;
   enableCompression: boolean;
 }
+
+type PerformanceConfig = OptimizationConfig;
 
 class PerformanceOptimizer {
   private metrics: PerformanceMetrics = {
@@ -292,6 +296,7 @@ ${metrics.memoryUsage > 30 * 1024 * 1024 ? '- Review memory usage and optimize c
       document.head.appendChild(link);
     });
 
+<<<<<<< HEAD
     if (process.env.NODE_ENV === 'development') {
       console.log('Critical resource hints added');
     }
@@ -307,6 +312,11 @@ ${metrics.memoryUsage > 30 * 1024 * 1024 ? '- Review memory usage and optimize c
     if (!navigation) return null;
 
     return {
+      loadTime: this.metrics.loadTime,
+      renderTime: this.metrics.renderTime,
+      memoryUsage: this.metrics.memoryUsage,
+      bundleSize: this.metrics.bundleSize,
+      cacheHitRate: this.metrics.cacheHitRate,
       ttfb: navigation.responseStart - navigation.requestStart,
       fcp: this.metrics.fcp || 0,
       lcp: this.metrics.lcp || 0,
@@ -321,9 +331,13 @@ ${metrics.memoryUsage > 30 * 1024 * 1024 ? '- Review memory usage and optimize c
    * Report web vitals
    */
   reportWebVitals(metrics: PerformanceMetrics): void {
+<<<<<<< HEAD
     if (process.env.NODE_ENV === 'development') {
       console.log('Web Vitals reported:', metrics);
     }
+=======
+    logger.info('Web Vitals reported', { component: 'PerformanceOptimizer', metrics });
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-f8ea
     
     // Send to analytics if available
     if (typeof window !== 'undefined' && (window as { gtag?: Function }).gtag) {
