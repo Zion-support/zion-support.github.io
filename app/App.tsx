@@ -38,6 +38,31 @@ const _EnterprisePage = lazy(() => import('./enterprise/page'));
 const _ServicesAdvertisingPage = lazy(() => import('./services-advertising/page'));
 const _CaseStudiesPage = lazy(() => import('./case-studies/page'));
 
+// AI Services
+const _AIServicesPage = lazy(() => import('./ai-services/page'));
+const _AIMarketingPage = lazy(() => import('./ai-marketing/page'));
+const _AIAutomationPage = lazy(() => import('./ai-automation/page'));
+const _AIHealthcarePage = lazy(() => import('./ai-healthcare/page'));
+const _AIFintechPage = lazy(() => import('./ai-fintech/page'));
+
+// IT Services
+const _ITServicesPage = lazy(() => import('./it-services/page'));
+const _MicroSAASPage = lazy(() => import('./micro-saas/page'));
+
+// Specialized Services
+const _QuantumComputingPage = lazy(() => import('./quantum-computing/page'));
+const _AutonomousSystemsPage = lazy(() => import('./autonomous-systems/page'));
+const _BusinessIntelligencePage = lazy(() => import('./business-intelligence/page'));
+const _BlockchainWeb3Page = lazy(() => import('./blockchain-web3/page'));
+const _CybersecurityPage = lazy(() => import('./cybersecurity/page'));
+const _IoTEdgeComputingPage = lazy(() => import('./iot-edge-computing/page'));
+
+// Additional Pages
+const _BlogPage = lazy(() => import('./blog-index'));
+const _GuidesPage = lazy(() => import('./guides/page'));
+const _SitemapPage = lazy(() => import('./sitemap'));
+const _NotFoundPage = lazy(() => import('./not-found'));
+
 // Utils
 import { lazyLoadImages, preloadCriticalResources, collectPerformanceMetrics, performanceOptimizer } from './utils/performanceOptimizer';
 import { logger } from './utils/logger';
@@ -170,6 +195,31 @@ const App: React.FC = () => {
                         <Route path="/enterprise" element={<_EnterprisePage />} />
                         <Route path="/services-advertising" element={<_ServicesAdvertisingPage />} />
                         <Route path="/case-studies" element={<_CaseStudiesPage />} />
+                        
+                        {/* AI Services */}
+                        <Route path="/ai-services" element={<_AIServicesPage />} />
+                        <Route path="/ai-marketing" element={<_AIMarketingPage />} />
+                        <Route path="/ai-automation" element={<_AIAutomationPage />} />
+                        <Route path="/ai-healthcare" element={<_AIHealthcarePage />} />
+                        <Route path="/ai-fintech" element={<_AIFintechPage />} />
+                        
+                        {/* IT Services */}
+                        <Route path="/it-services" element={<_ITServicesPage />} />
+                        <Route path="/micro-saas" element={<_MicroSAASPage />} />
+                        
+                        {/* Specialized Services */}
+                        <Route path="/quantum-computing" element={<_QuantumComputingPage />} />
+                        <Route path="/autonomous-systems" element={<_AutonomousSystemsPage />} />
+                        <Route path="/business-intelligence" element={<_BusinessIntelligencePage />} />
+                        <Route path="/blockchain-web3" element={<_BlockchainWeb3Page />} />
+                        <Route path="/cybersecurity" element={<_CybersecurityPage />} />
+                        <Route path="/iot-edge-computing" element={<_IoTEdgeComputingPage />} />
+                        
+                        {/* Additional Pages */}
+                        <Route path="/blog" element={<_BlogPage />} />
+                        <Route path="/guides" element={<_GuidesPage />} />
+                        <Route path="/sitemap" element={<_SitemapPage />} />
+                        <Route path="*" element={<_NotFoundPage />} />
                       </Routes>
                     </Suspense>
                   </main>
