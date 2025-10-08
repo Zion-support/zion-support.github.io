@@ -178,6 +178,22 @@ class Logger {
   }
 
   /**
+   * Lifecycle event logging
+   */
+  lifecycle(message: string, context?: string | LogContext): void {
+    const ctx = typeof context === 'string' ? { component: context } : context;
+    this.info(message, ctx);
+  }
+
+  /**
+   * Performance logging
+   */
+  performance(message: string, metrics: Record<string, unknown>, context?: string | LogContext): void {
+    const ctx = typeof context === 'string' ? { component: context, ...metrics } : { ...context, ...metrics };
+    this.info(message, ctx);
+  }
+
+  /**
    * Get recent logs
    */
   getRecentLogs(count: number = 100): LogEntry[] {
