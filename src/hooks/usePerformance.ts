@@ -1,33 +1,19 @@
-import { useEffect } from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-32a9
-import analytics from '../utils/analytics';
-
-export const usePerformance = () => {
-  useEffect(() => {
-    if (typeof window === 'undefined' || !('PerformanceObserver' in window)) {
-      return;
-    }
-
-    const observer = new PerformanceObserver(list => {
-      list.getEntries().forEach(entry => {
-        analytics.track(
-          'long_task',
-          'performance',
-          'detected',
-          undefined,
-          entry.duration
-        );
-      });
-    });
-=======
+import { useEffect, useState } from 'react';
 import { analytics } from '../utils/analytics';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-17a6
+
+interface PerformanceMetrics {
+  lcp?: number;
+  fid?: number;
+  cls?: number;
+}
 
 export const usePerformance = () => {
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({});
+
   useEffect(() => {
+    if (typeof window === 'undefined') return;
+
+    // Track long tasks
     if ('PerformanceObserver' in window) {
       const observer = new PerformanceObserver((list) => {
         list.getEntries().forEach((entry) => {
@@ -50,6 +36,8 @@ export const usePerformance = () => {
       };
     }
   }, []);
+
+  return metrics;
 };
 
 export default usePerformance;
