@@ -59,8 +59,8 @@ const EnterprisePage: React.FC = () => {
               Why Choose Zion Tech Group?
             </h2>
             <p className='text-gray-600 mb-4'>
-              We deliver enterprise-grade solutions that help Fortune 500 companies and rapidly growing businesses 
-              achieve their digital transformation goals. Our team of experts combines deep technical expertise 
+              We deliver enterprise-grade solutions that help Fortune 500 companies and rapidly growing businesses
+              achieve their digital transformation goals. Our team of experts combines deep technical expertise
               with industry knowledge to deliver solutions that drive measurable business outcomes.
             </p>
           </div>
