@@ -4,8 +4,7 @@ export const octoberCuttingEdgeInnovations = [
     slug: 'ai-2025-october-quantum-security-networks-enterprise',
     title: 'AI-Powered Quantum Security Networks',
     category: 'Quantum Security',
-    description:
-      'Master quantum-resistant security with AI-powered threat detection, post-quantum cryptography, and zero-trust networks. 99.999% uptime with <100ms threat detection.',
+    description: 'Master quantum-resistant security with AI-powered threat detection, post-quantum cryptography, and zero-trust networks. 99.999% uptime with <100ms threat detection.',
     icon: '🔐',
     gradient: 'from-blue-600 to-purple-600',
     metrics: {
@@ -27,8 +26,7 @@ export const octoberCuttingEdgeInnovations = [
     slug: 'ai-2025-october-neuromorphic-computing-edge',
     title: 'Neuromorphic Computing at the Edge',
     category: 'Edge Computing',
-    description:
-      'Revolutionary brain-inspired computing delivering 1000x energy efficiency with spiking neural networks and event-driven processing.',
+    description: 'Revolutionary brain-inspired computing delivering 1000x energy efficiency with spiking neural networks and event-driven processing.',
     icon: '🧠',
     gradient: 'from-green-600 to-teal-600',
     metrics: {
@@ -44,11 +42,11 @@ export const octoberCuttingEdgeInnovations = [
       'Real-time edge AI for autonomous systems',
       'Proven in BMW autonomous driving and NASA rovers',
     ],
-  },
+  }
 ];
 
 export const getFeaturedInnovations = () => {
-  return octoberCuttingEdgeInnovations.filter(innovation => (innovation as any).featured);
+  return octoberCuttingEdgeInnovations.slice(0, 3);
 };
 
 export const getInnovationsByCategory = (category: string) => {
