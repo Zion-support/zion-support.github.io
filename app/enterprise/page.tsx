@@ -1,7 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
 import { Metadata } from 'next';
-import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Enterprise Solutions - Zion Tech Group',
@@ -96,10 +95,10 @@ const EnterprisePage: React.FC = () => {
                   Schedule a Consultation
                 </Link>
                 <Link
-                  href='/case-studies'
+                  href='/services'
                   className='inline-block px-8 py-3 bg-white/10 backdrop-blur-sm text-white border border-white/20 rounded-lg hover:bg-white/20 transition-colors font-medium'
                 >
-                  View Case Studies
+                  View All Services
                 </Link>
               </div>
             </div>
