@@ -4,19 +4,8 @@ html {
 }
 
 body {
-  font-family:
-    'Inter',
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    'Roboto',
-    'Oxygen',
-    'Ubuntu',
-    'Cantarell',
-    'Fira Sans',
-    'Droid Sans',
-    'Helvetica Neue',
-    sans-serif;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -152,6 +141,9 @@ body {
   .no-print {
     display: none !important;
   }
+<<<<<<< HEAD
+}
+=======
   
   body {
     font-size: 12pt;
@@ -162,3 +154,4 @@ body {
     page-break-after: avoid;
   }
 }
+>>>>>>> origin/main

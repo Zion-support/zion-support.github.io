@@ -1,3 +1,5 @@
+'use client';
+
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import Link from 'next/link';
 import { FileWarning } from 'lucide-react';
@@ -27,6 +29,23 @@ class ErrorBoundary extends Component<Props, State> {
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+    // Log error to console in development
+    if (process.env.NODE_ENV === 'development') {
+      // eslint-disable-next-line no-console
+      console.error('ErrorBoundary caught an error:', error, errorInfo);
+    }
+
+    // Report error to monitoring service in production
+    if (process.env.NODE_ENV === 'production') {
+      // Send to error tracking service
+      if (typeof window !== 'undefined' && 'gtag' in window) {
+        (window as unknown as { gtag: (command: string, eventName: string, parameters: Record<string, unknown>) => void }).gtag('event', 'exception', {
+          description: error.message,
+          fatal: false
+        });
+      }
+    }
+    
     this.setState({ errorInfo });
     
     if (this.props.onError) {

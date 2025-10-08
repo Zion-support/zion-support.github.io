@@ -4,6 +4,19 @@
 
 import '@testing-library/jest-dom';
 
+// Suppress jsdom navigation warnings
+// eslint-disable-next-line no-console
+const originalConsoleError = console.error;
+// eslint-disable-next-line no-console
+console.error = (...args) => {
+  const message = args[0]?.toString?.() || args[0]?.message || '';
+  if (message.includes('Not implemented: navigation') || 
+      message.includes('navigation (except hash changes)')) {
+    return;
+  }
+  originalConsoleError(...args);
+};
+
 // Mock window.matchMedia
 Object.defineProperty(window, 'matchMedia', {
   writable: true,
@@ -105,8 +118,18 @@ Object.defineProperty(window, 'sessionStorage', {
   value: sessionStorageMock,
 });
 
+<<<<<<< HEAD
+// Mock TextEncoder and TextDecoder for Node.js environment
+if (typeof TextEncoder === 'undefined') {
+  // eslint-disable-next-line @typescript-eslint/no-require-imports
+  global.TextEncoder = require('util').TextEncoder;
+  // eslint-disable-next-line @typescript-eslint/no-require-imports
+  global.TextDecoder = require('util').TextDecoder;
+}
+=======
 // Mock fetch
 global.fetch = jest.fn();
+>>>>>>> origin/main
 
 // Mock console methods for cleaner test output
 const originalConsoleWarn = console.warn;
