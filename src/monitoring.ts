@@ -13,7 +13,7 @@ function initializeMonitoring() {
     // Set up performance monitoring
     if (typeof window !== 'undefined') {
       // Monitor web vitals
-      // performanceOptimizer.init(); // Method may not exist
+      // performanceOptimizer is already initialized as singleton
       
       // Set up error tracking
       // errorHandler.init(); // Method may not exist

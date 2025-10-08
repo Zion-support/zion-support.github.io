@@ -62,13 +62,13 @@ const loadBannerStats = () => {
 // const getRefreshInterval = () => 30000;
 // const getRotationStrategy = (): RotationStrategy => 'balanced';
 
-export const useBannerRotation = (options: UseBannerRotationOptions = {}) => {
+export const useBannerRotation = (_options: UseBannerRotationOptions = {}) => {
   const {
     strategy = 'balanced',
     maxBanners = 3,
     refreshInterval = 30000,
     enableTracking = true
-  } = options;
+  } = _options;
 
   const [state, setState] = useState<BannerRotationState>({
     currentBanners: [],
@@ -91,7 +91,7 @@ export const useBannerRotation = (options: UseBannerRotationOptions = {}) => {
       
       setState(prev => ({
         ...prev,
-        currentBanners: selected,
+        currentBanners: selected as BannerConfig[],
         isLoading: false
       }));
     } catch (error) {

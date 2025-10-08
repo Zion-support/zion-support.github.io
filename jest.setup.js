@@ -1,11 +1,6 @@
 // Learn more: https://github.com/testing-library/jest-dom
 import '@testing-library/jest-dom';
 
-// Polyfill for TextEncoder/TextDecoder
-import { TextEncoder, TextDecoder } from 'util';
-global.TextEncoder = TextEncoder;
-global.TextDecoder = TextDecoder;
-
 // Mock files that use import.meta.env
 jest.mock('./app/utils/logger.ts', () => ({
   logger: {
@@ -44,6 +39,29 @@ jest.mock('./app/hooks/usePerformanceMonitoring.ts', () => ({
 
 
 // Mock React Router (this is a Vite project, not Next.js)
+const mockRouterContext = {
+  basename: '',
+  location: { pathname: '/', search: '', hash: '', state: null },
+  navigationType: 'POP',
+  navigator: {
+    createHref: jest.fn(),
+    go: jest.fn(),
+    push: jest.fn(),
+    replace: jest.fn(),
+  },
+  static: false,
+};
+
+// Mock React Router context provider
+const MockRouterProvider = ({ children }) => {
+  const React = require('react');
+  const { createContext } = React;
+  
+  const RouterContext = createContext(mockRouterContext);
+  
+  return React.createElement(RouterContext.Provider, { value: mockRouterContext }, children);
+};
+
 jest.mock('react-router-dom', () => ({
   ...jest.requireActual('react-router-dom'),
 
@@ -55,14 +73,20 @@ jest.mock('react-router-dom', () => ({
     state: null,
   }),
   useParams: () => ({}),
-  BrowserRouter: ({ children }) => children,
-  MemoryRouter: ({ children }) => children,
+  BrowserRouter: MockRouterProvider,
+  MemoryRouter: MockRouterProvider,
   RouterProvider: ({ router }) => null,
-  Link: ({ children, to, ...props }) => (
-    <a href={to} {...props}>
-      {children}
-    </a>
-  ),
+  useRouterContext: () => mockRouterContext,
+}));
+
+// Mock React Router context
+jest.mock('react-router', () => ({
+  ...jest.requireActual('react-router'),
+  useLocation: () => mockRouterContext.location,
+  useNavigate: () => mockRouterContext.navigator.push,
+  useParams: () => ({}),
+  useSearchParams: () => [new URLSearchParams(), jest.fn()],
+  useRouterContext: () => mockRouterContext,
 }));
 
 // Mock window.matchMedia
@@ -91,7 +115,10 @@ global.IntersectionObserver = class IntersectionObserver {
   unobserve() {}
 };
 
-// TextEncoder and TextDecoder are already set up above
+// Mock TextEncoder and TextDecoder
+const { TextEncoder, TextDecoder } = require('util');
+global.TextEncoder = TextEncoder;
+global.TextDecoder = TextDecoder;
 
 // Suppress console errors in tests
 const originalError = console.error;
