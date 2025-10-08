@@ -113,8 +113,6 @@ class PerformanceOptimizer {
       observer.observe({ entryTypes: ['first-input'] })
       this.observers.push(observer)
     } catch {
-    } catch {
-    } catch {
       // Ignore if not supported
     }
   }

@@ -122,8 +122,8 @@ class MonitoringService {
           entries.forEach((entry: any) => {
             if (entry.duration > 1000) {
               console.warn('Slow resource detected:', {
-                name: entry.name
-                duration: entry.duration
+                name: entry.name,
+                duration: entry.duration,
                 type: entry.initiatorType
               })
             }
