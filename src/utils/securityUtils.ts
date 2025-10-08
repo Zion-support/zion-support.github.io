@@ -90,7 +90,7 @@ export const generateCSRFToken = (): string => {
   if (typeof window !== 'undefined' && window.crypto) {
     window.crypto.getRandomValues(array);
   }
-  return Array.from(array, (byte) => byte.toString(16).padStart(2, '0')).join('');
+  return Array.from(array, (byte: number) => byte.toString(16).padStart(2, '0')).join('');
 };
 
 /**

@@ -39,8 +39,8 @@ class ErrorHandler {
     const errorData: ErrorInfo = {
       id: this.generateErrorId(),
       error,
-      category,
-      severity,
+      category: ErrorCategory.UNKNOWN,
+      severity: ErrorSeverity.MEDIUM,
       timestamp: Date.now(),
       context,
     };

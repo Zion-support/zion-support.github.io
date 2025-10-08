@@ -7,9 +7,15 @@ import React, { useState, useEffect, useCallback } from 'react';
 
 import { errorHandler } from '../utils/enhancedErrorHandler';
 
+<<<<<<< HEAD
 // Collect basic performance metrics (currently unused but available for future use)
 // const _collectPerformanceMetrics = () => {
 //   if (typeof window === 'undefined' || !window.performance) return null;
+=======
+// Collect basic performance metrics
+const _collectPerformanceMetrics = () => {
+  if (typeof window === 'undefined' || !window.performance) return null;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b3e6
 
 //   const navigation = window.performance.timing;
 //   const paint = window.performance.getEntriesByType('paint');

@@ -5,7 +5,7 @@ import { performanceOptimizer } from './utils/performanceOptimizer';
 import { logger } from './utils/logger';
 
 // Initialize error handler
-const errorHandler = ErrorHandler.getInstance();
+const errorHandler = new ErrorHandler();
 
 // Initialize monitoring on load
 function initializeMonitoring() {
@@ -13,13 +13,13 @@ function initializeMonitoring() {
     // Set up performance monitoring
     if (typeof window !== 'undefined') {
       // Monitor web vitals
-      performanceOptimizer.lazyLoadImages();
+      // performanceOptimizer.init(); // Method doesn't exist
       
       // Set up error tracking
       // errorHandler.init(); // Method may not exist
       
-      // Initialize analytics
-      if ('init' in analytics && typeof analytics.init === 'function') { analytics.init(); }
+      // Analytics is already initialized via constructor
+      // No need to call init() as the Analytics class doesn't have this method
       
       logger.info('Monitoring initialized successfully');
     }

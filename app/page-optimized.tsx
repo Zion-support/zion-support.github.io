@@ -10,10 +10,23 @@ const UnifiedBanner = dynamic(() => import('./components/NewestContent2025Banner
   ssr: false
 });
 
+<<<<<<< HEAD
 const ContentPromotion = dynamic(() => import('./components/UltimateBusinessIntelligence2025Banner').catch(() => ({ default: () => null as any })), {
   loading: () => <div className="animate-pulse bg-gray-200 h-64 rounded-lg"></div>,
   ssr: false
 });
+=======
+const ContentPromotion = lazy(
+  () =>
+    import('./components/UltimateBusinessIntelligence2025Banner').catch(() => {
+      return { default: EmptyComponent } as { default: React.ComponentType };
+    }),
+  {
+    loading: () => <div className="animate-pulse bg-gray-200 h-64 rounded-lg"></div>,
+    ssr: false,
+  }
+);
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b3e6
 
 const ContentShowcase = dynamic(() => import('./components/UltimateBusinessIntelligenceShowcase2025').catch(() => ({ default: () => null as any })), {
   loading: () => <div className="animate-pulse bg-gray-200 h-48 rounded-lg"></div>,
