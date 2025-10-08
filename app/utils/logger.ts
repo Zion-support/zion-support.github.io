@@ -55,34 +55,25 @@ class Logger {
   /**
    * Log a debug message
    */
-  debug(message: string, metadataOrContext?: string | Record<string, unknown>, metadata?: Record<string, unknown>): void {
-    if (typeof metadataOrContext === 'string') {
-      this.log(LogLevel.DEBUG, message, metadataOrContext, metadata);
-    } else {
-      this.log(LogLevel.DEBUG, message, undefined, metadataOrContext);
-    }
+  debug(message: string, contextOrMetadata?: string | Record<string, unknown>, metadata?: Record<string, unknown>): void {
+    const [context, meta] = this.parseContextAndMetadata(contextOrMetadata, metadata);
+    this.log(LogLevel.DEBUG, message, context, meta);
   }
 
   /**
    * Log an info message
    */
-  info(message: string, metadataOrContext?: string | Record<string, unknown>, metadata?: Record<string, unknown>): void {
-    if (typeof metadataOrContext === 'string') {
-      this.log(LogLevel.INFO, message, metadataOrContext, metadata);
-    } else {
-      this.log(LogLevel.INFO, message, undefined, metadataOrContext);
-    }
+  info(message: string, contextOrMetadata?: string | Record<string, unknown>, metadata?: Record<string, unknown>): void {
+    const [context, meta] = this.parseContextAndMetadata(contextOrMetadata, metadata);
+    this.log(LogLevel.INFO, message, context, meta);
   }
 
   /**
    * Log a warning message
    */
-  warn(message: string, metadataOrContext?: string | Record<string, unknown>, metadata?: Record<string, unknown>): void {
-    if (typeof metadataOrContext === 'string') {
-      this.log(LogLevel.WARN, message, metadataOrContext, metadata);
-    } else {
-      this.log(LogLevel.WARN, message, undefined, metadataOrContext);
-    }
+  warn(message: string, contextOrMetadata?: string | Record<string, unknown>, metadata?: Record<string, unknown>): void {
+    const [context, meta] = this.parseContextAndMetadata(contextOrMetadata, metadata);
+    this.log(LogLevel.WARN, message, context, meta);
   }
 
   /**
@@ -90,7 +81,7 @@ class Logger {
    */
   error(
     message: string,
-    errorOrMetadata?: Error | Record<string, unknown>,
+    errorOrContextOrMetadata?: Error | string | Record<string, unknown>,
     contextOrMetadata?: string | Record<string, unknown>,
     metadata?: Record<string, unknown>
   ): void {
@@ -98,17 +89,13 @@ class Logger {
     let context: string | undefined;
     let meta: Record<string, unknown> | undefined;
 
-    // Handle different parameter combinations
-    if (errorOrMetadata instanceof Error) {
-      error = errorOrMetadata;
-      if (typeof contextOrMetadata === 'string') {
-        context = contextOrMetadata;
-        meta = metadata;
-      } else {
-        meta = contextOrMetadata;
-      }
+    // Parse parameters based on types
+    if (errorOrContextOrMetadata instanceof Error) {
+      error = errorOrContextOrMetadata;
+      [context, meta] = this.parseContextAndMetadata(contextOrMetadata, metadata);
     } else {
-      meta = errorOrMetadata;
+      error = undefined;
+      [context, meta] = this.parseContextAndMetadata(errorOrContextOrMetadata, contextOrMetadata as Record<string, unknown> | undefined);
     }
 
     const entry: LogEntry = {
@@ -161,32 +148,23 @@ class Logger {
   }
 
   /**
-   * Log a performance metric
+   * Log performance metric
    */
   perf(metric: string, value: number, metadata?: Record<string, unknown>): void {
-    this.log(LogLevel.DEBUG, `Performance: ${metric} = ${value}ms`, undefined, {
-      ...metadata,
-      metric,
-      value,
-    });
+    this.debug(`Performance: ${metric}`, { value, ...metadata });
   }
 
   /**
-   * Group related log messages
+   * Log a group of related messages
    */
   group(label: string, callback: () => void): void {
     if (typeof console.group === 'function') {
       console.group(label);
-      try {
-        callback();
-      } finally {
-        console.groupEnd();
-      }
-    } else {
-      // Fallback for environments without console.group
-      this.info(`=== ${label} ===`);
       callback();
-      this.info(`=== End ${label} ===`);
+      console.groupEnd();
+    } else {
+      this.debug(`Group: ${label}`);
+      callback();
     }
   }
 
@@ -236,6 +214,21 @@ class Logger {
     if (this.config.enableRemote) {
       this.startFlushTimer();
     }
+  }
+
+  /**
+   * Parse context and metadata parameters
+   */
+  private parseContextAndMetadata(
+    contextOrMetadata?: string | Record<string, unknown>,
+    metadata?: Record<string, unknown>
+  ): [string | undefined, Record<string, unknown> | undefined] {
+    if (typeof contextOrMetadata === 'string') {
+      return [contextOrMetadata, metadata];
+    } else if (typeof contextOrMetadata === 'object') {
+      return [undefined, contextOrMetadata];
+    }
+    return [undefined, undefined];
   }
 
   /**
