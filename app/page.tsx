@@ -9,6 +9,12 @@ const DynamicContentShowcase = lazy(() => import('./components/DynamicContentSho
 const ContentStatistics = lazy(() => import('./components/ContentStatistics'));
 const ContentNewsletterSignup = lazy(() => import('./components/ContentNewsletterSignup'));
 
+// Preload critical components
+if (typeof window !== 'undefined') {
+  import('./components/ContentPromotionBanner');
+  import('./components/ContentCarousel');
+}
+
 // Loading skeleton component
 const ServiceCardSkeleton: React.FC = memo(() => (
   <div className="bg-white rounded-lg shadow-lg p-6 animate-pulse" role="status" aria-label="Loading service card">
@@ -25,10 +31,15 @@ const HomePage: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    setIsLoaded(true);
-    // Trigger visibility animation
-    const timer = setTimeout(() => setIsVisible(true), 100);
-    return () => clearTimeout(timer);
+    // Use requestAnimationFrame for better performance
+    const rafId = requestAnimationFrame(() => {
+      setIsLoaded(true);
+      // Trigger visibility animation
+      const timer = setTimeout(() => setIsVisible(true), 100);
+      return () => clearTimeout(timer);
+    });
+    
+    return () => cancelAnimationFrame(rafId);
   }, []);
 
   // Analytics tracking for phone clicks

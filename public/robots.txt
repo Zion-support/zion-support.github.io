@@ -4,9 +4,9 @@ Allow: /
 # Sitemap
 Sitemap: https://ziontechgroup.com/sitemap.xml
 
-# Crawl-delay
+# Crawl-delay for respectful crawling
 Crawl-delay: 1
-cursor/analyze-improve-and-deploy-application-3d67
+
 # Disallow admin and private areas
 Disallow: /admin/
 Disallow: /api/
@@ -14,9 +14,7 @@ Disallow: /_next/
 Disallow: /private/
 
 # Allow important pages
-Allow: /
-Allow: /about
-Allow: /services
-Allow: /contact
-Allow: /blog
-Allow: /enterprisecursor/analyze-improve-and-deploy-application-3d67
+Allow: /services/
+Allow: /ai-services/
+Allow: /blog/
+Allow: /case-studies/
