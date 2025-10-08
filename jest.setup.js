@@ -37,7 +37,7 @@ jest.mock('./app/hooks/usePerformanceMonitoring.ts', () => ({
   })),
 }));
 
-// Mock React Router (this is a Vite project, not Next.js)
+// Mock React Router
 jest.mock('react-router-dom', () => ({
   ...jest.requireActual('react-router-dom'),
   useNavigate: () => jest.fn(),
@@ -48,6 +48,9 @@ jest.mock('react-router-dom', () => ({
     state: null,
   }),
   useParams: () => ({}),
+  Link: ({ children, to, ...props }) => {
+    return <a href={to} {...props}>{children}</a>;
+  },
 }));
 
 // Mock window.matchMedia

@@ -1,6 +1,21 @@
 import React from 'react';
-<<<<<<< HEAD
-import { Link } from 'react-router-dom';
+// import { Metadata } from "next" // Removed for Vite compatibility;
+
+export const metadata = {
+  title: 'AI 2026 Autonomous Business Intelligence Breakthrough',
+  description: 'Revolutionary autonomous BI systems delivering 300% ROI improvements and automated decision-making.',
+  keywords: 'AI 2026, autonomous business intelligence, BI automation, enterprise AI, data analytics, business intelligence',
+  openGraph: {
+    authors: ['Zion Tech Group'],
+    siteName: 'Zion Tech Group',
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "AI 2026 Autonomous Business Intelligence Breakthrough",
+    description: "Revolutionary autonomous BI systems delivering 300% ROI improvements and automated decision-making."
+  }
+};
+
 export default function AutonomousBusinessIntelligenceBreakthrough() {
   return (
     <div className="min-h-screen bg-gray-50">
@@ -105,9 +120,3 @@ export default function AutonomousBusinessIntelligenceBreakthrough() {
     </div>
   );
 }
-=======
-import { Helmet } from 'react-helmet-async';
-
-
-// Metadata moved to Helmet component
->>>>>>> cursor/fix-errors-and-merge-to-main-dd0b

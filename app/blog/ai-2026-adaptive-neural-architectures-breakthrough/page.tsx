@@ -1,6 +1,12 @@
 import React from 'react';
-<<<<<<< HEAD
-import { Link } from 'react-router-dom';
+// import { Metadata } from "next" // Removed for Vite compatibility;
+
+export const metadata = {
+  title: "AI 2026: Adaptive Neural Architectures - The Future of Enterprise AI | Zion Tech Group",
+  description: "Revolutionary adaptive neural architectures that self-evolve and optimize in real-time, delivering 1000x performance improvements and $25B+ enterprise value.",
+  keywords: 'adaptive neural networks, AI 2026, neural architecture, enterprise AI, machine learning, business transformation'
+};
+
 export default function AdaptiveNeuralArchitecturesPage() {
   return (
     <div className="min-h-screen bg-gray-50">
@@ -140,9 +146,3 @@ export default function AdaptiveNeuralArchitecturesPage() {
     </div>
   );
 }
-=======
-import { Helmet } from 'react-helmet-async';
-
-
-// Metadata moved to Helmet component
->>>>>>> cursor/fix-errors-and-merge-to-main-dd0b

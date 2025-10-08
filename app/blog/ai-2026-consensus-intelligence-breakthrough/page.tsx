@@ -1,6 +1,18 @@
 import React from 'react';
-<<<<<<< HEAD
-import { Link } from 'react-router-dom';
+// import { Metadata } from "next" // Removed for Vite compatibility;
+
+export const metadata = {
+  title: "AI 2026: Consensus Intelligence Breakthrough",
+  description: "Revolutionary AI system enabling unanimous decisions through quantum-accelerated consensus protocols.",
+  authors: [{ name: 'Zion Tech Group' }],
+  openGraph: {
+    title: 'AI 2026: Consensus Intelligence Breakthrough',
+    description: 'Revolutionary AI system enabling unanimous decisions through quantum-accelerated consensus protocols.',
+    type: 'article',
+    authors: ['Zion Tech Group']
+  }
+};
+
 export default function ConsensusIntelligencePage() {
   return (
     <div className="min-h-screen bg-gray-50">
@@ -105,9 +117,3 @@ export default function ConsensusIntelligencePage() {
     </div>
   );
 }
-=======
-import { Helmet } from 'react-helmet-async';
-
-
-// Metadata moved to Helmet component
->>>>>>> cursor/fix-errors-and-merge-to-main-dd0b

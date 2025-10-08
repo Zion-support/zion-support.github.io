@@ -1,4 +1,5 @@
-// Jest configuration for Vite project
+// Jest configuration for Vite + React project
+
 module.exports = {
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
   testEnvironment: 'jest-environment-jsdom',
@@ -10,7 +11,13 @@ module.exports = {
     '\\.(css|less|scss|sass)$': 'identity-obj-proxy',
   },
   transform: {
-    '^.+\\.(js|jsx|ts|tsx)$': ['babel-jest', { configFile: './babel.config.js' }],
+    '^.+\\.(ts|tsx|js|jsx)$': ['babel-jest', {
+      presets: [
+        ['@babel/preset-env', { targets: { node: 'current' } }],
+        ['@babel/preset-react', { runtime: 'automatic' }],
+        '@babel/preset-typescript',
+      ],
+    }],
   },
   testMatch: [
     '**/__tests__/**/*.[jt]s?(x)',
@@ -21,7 +28,6 @@ module.exports = {
     'src/**/*.{js,jsx,ts,tsx}',
     '!**/*.d.ts',
     '!**/node_modules/**',
-    '!**/.next/**',
     '!**/coverage/**',
     '!**/dist/**',
   ],
@@ -35,7 +41,6 @@ module.exports = {
   },
   testPathIgnorePatterns: [
     '<rootDir>/node_modules/',
-    '<rootDir>/.next/',
     '<rootDir>/out/',
     '<rootDir>/dist/',
     '<rootDir>/backup/',

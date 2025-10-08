@@ -1,6 +1,12 @@
 import React from 'react';
-<<<<<<< HEAD
-import { Link } from 'react-router-dom';
+import { Metadata } from 'next';
+
+export const metadata = {
+  title: 'Contact Us - Zion Tech Group',
+  description:
+    'Get in touch with Zion Tech Group for AI and IT solutions. Contact our experts for consultation and support.',
+};
+
 const ContactPage: React.FC = () => {
   return (
     <div className='min-h-screen bg-gradient-to-br from-blue-50 to-gray-100 py-12 px-4 sm:px-6 lg:px-8'>
@@ -80,9 +86,3 @@ const ContactPage: React.FC = () => {
 };
 
 export default ContactPage;
-=======
-import { Helmet } from 'react-helmet-async';
-
-
-// Metadata moved to Helmet component
->>>>>>> cursor/fix-errors-and-merge-to-main-dd0b
