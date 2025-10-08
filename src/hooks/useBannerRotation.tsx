@@ -3,23 +3,8 @@
  * Manages banner display tracking and rotation logic
  */
 
-import React, { useState, useEffect, useCallback, useMemo } from 'react';
-<<<<<<< HEAD
-import bannerConfigurations from '../data/bannerConfigurations';
-
-// Define types inline since they're not exported
-type RotationStrategy = 'sequential' | 'random' | 'weighted' | 'balanced';
-
-interface BannerConfig {
-  id: string;
-  component: string;
-  priority: number;
-  weight?: number;
-  enabled: boolean;
-}
-=======
-import bannerConfigurations from "../data/bannerConfigurations"; // @ts-ignore
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-32a9
+import React, { useState, useEffect, useCallback } from 'react';
+import bannerConfigurations, { BannerConfig, RotationStrategy } from '../data/bannerConfigurations';
 
 interface UseBannerRotationOptions {
   strategy?: RotationStrategy;
