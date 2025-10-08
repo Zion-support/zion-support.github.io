@@ -160,7 +160,7 @@ class ErrorTrackingService {
     let hash = 0;
     for (let i = 0; i < message.length; i++) {
       const char = message.charCodeAt(i);
-      hash = (hash << 5) - hash + char;
+      hash = (hash * 32) - hash + char;
       hash = hash & hash; // Convert to 32bit integer
     }
     return `err_${Math.abs(hash).toString(36)}`;

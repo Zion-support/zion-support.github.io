@@ -170,7 +170,7 @@ export async function hashData(data: string): Promise<string> {
   let hash = 0;
   for (let i = 0; i < data.length; i++) {
     const char = data.charCodeAt(i);
-    hash = (hash << 5) - hash + char;
+    hash = (hash * 32) - hash + char;
     hash = hash & hash;
   }
   return hash.toString(16);
