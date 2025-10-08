@@ -3,10 +3,18 @@
  * Provides intelligent caching strategies for API responses and data
  */
 
+export enum CacheStorage {
+  Memory = 'memory',
+  LocalStorage = 'localStorage',
+  SessionStorage = 'sessionStorage',
+}
+
 export interface CacheOptions {
   ttl?: number; // Time to live in milliseconds
   refreshInterval?: number; // Auto-refresh interval
   strategy?: 'memory' | 'localStorage' | 'sessionStorage';
+  storage?: CacheStorage;
+  defaultTTL?: number;
   compress?: boolean;
 }
 
@@ -18,152 +26,160 @@ export interface CacheEntry<T> {
   lastAccessed: number;
 }
 
-class CacheManager {
+export class CacheManager {
+  private storage: CacheStorage;
+  private defaultTTL: number;
   private memoryCache: Map<string, CacheEntry<unknown>> = new Map();
   private readonly DEFAULT_TTL = 5 * 60 * 1000; // 5 minutes
   private readonly MAX_MEMORY_ENTRIES = 100;
+  private hits = 0;
+  private misses = 0;
 
-  /**
-   * Set cache entry
-   */
-  async set<T>(
-    key: string,
-    data: T,
-    options: CacheOptions = {}
-  ): Promise<void> {
-    const {
-      ttl = this.DEFAULT_TTL,
-      strategy = 'memory',
-      compress = false,
-    } = options;
-
-    const entry: CacheEntry<T> = {
-      data,
-      timestamp: Date.now(),
-      expiresAt: Date.now() + ttl,
-      accessCount: 0,
-      lastAccessed: Date.now(),
-    };
-
-    switch (strategy) {
-      case 'memory':
-        this.setMemoryCache(key, entry);
-        break;
-      case 'localStorage':
-        await this.setStorageCache(key, entry, 'localStorage', compress);
-        break;
-      case 'sessionStorage':
-        await this.setStorageCache(key, entry, 'sessionStorage', compress);
-        break;
-    }
+  constructor(options?: CacheOptions) {
+    this.storage = options?.storage || CacheStorage.Memory;
+    this.defaultTTL = options?.defaultTTL || this.DEFAULT_TTL;
   }
 
   /**
-   * Get cache entry
+   * Set cache entry (synchronous version for simple cases)
    */
-  async get<T>(
-    key: string,
-    strategy: 'memory' | 'localStorage' | 'sessionStorage' = 'memory'
-  ): Promise<T | null> {
-    let entry: CacheEntry<T> | null = null;
+  set<T>(key: string, data: T, options?: CacheOptions): void {
+    const ttl = options?.ttl || this.defaultTTL;
+    const entry: CacheEntry<T> = {
+      data,
+      timestamp: Date.now(),
+      expiresAt: ttl === Infinity ? Infinity : Date.now() + ttl,
+      accessCount: 0,
+      lastAccessed: Date.now(),
+    };
+    this.setMemoryCache(key, entry);
+  }
 
-    switch (strategy) {
-      case 'memory':
-        entry = this.getMemoryCache<T>(key);
-        break;
-      case 'localStorage':
-        entry = await this.getStorageCache<T>(key, 'localStorage');
-        break;
-      case 'sessionStorage':
-        entry = await this.getStorageCache<T>(key, 'sessionStorage');
-        break;
-    }
-
+  /**
+   * Get cache entry (synchronous version)
+   */
+  get<T>(key: string): T | undefined {
+    const entry = this.getMemoryCache<T>(key);
     if (!entry) {
-      return null;
+      this.misses++;
+      return undefined;
     }
 
     // Check if expired
     if (Date.now() > entry.expiresAt) {
-      await this.delete(key, strategy);
-      return null;
+      this.memoryCache.delete(key);
+      this.misses++;
+      return undefined;
     }
 
     // Update access stats
     entry.accessCount++;
     entry.lastAccessed = Date.now();
-
-    // Update cache with new access stats
-    await this.set(key, entry.data, { strategy });
+    this.hits++;
 
     return entry.data;
   }
 
   /**
-   * Delete cache entry
+   * Check if key exists
    */
-  async delete(
-    key: string,
-    strategy: 'memory' | 'localStorage' | 'sessionStorage' = 'memory'
-  ): Promise<void> {
-    switch (strategy) {
-      case 'memory':
-        this.memoryCache.delete(key);
-        break;
-      case 'localStorage':
-        if (typeof window !== 'undefined') {
-          window.localStorage.removeItem(this.getCacheKey(key));
-        }
-        break;
-      case 'sessionStorage':
-        if (typeof window !== 'undefined') {
-          window.sessionStorage.removeItem(this.getCacheKey(key));
-        }
-        break;
-    }
+  has(key: string): boolean {
+    return this.memoryCache.has(key) && this.get(key) !== undefined;
   }
 
   /**
-   * Clear all caches
+   * Delete a cache entry
    */
-  async clearAll(): Promise<void> {
+  delete(key: string): void {
+    this.memoryCache.delete(key);
+  }
+
+  /**
+   * Clear all cache entries
+   */
+  clear(): void {
     this.memoryCache.clear();
-    
-    if (typeof window !== 'undefined') {
-      // Clear only our cache entries
-      const prefix = this.getCacheKey('');
-      
-      // Clear localStorage
-      Object.keys(window.localStorage)
-        .filter(key => key.startsWith(prefix))
-        .forEach(key => window.localStorage.removeItem(key));
-      
-      // Clear sessionStorage
-      Object.keys(window.sessionStorage)
-        .filter(key => key.startsWith(prefix))
-        .forEach(key => window.sessionStorage.removeItem(key));
-    }
-
-    const start = performance.now();
-    const value = await fn();
-    const duration = performance.now() - start;
-
-    performanceMonitoring.recordCustomMetric(`cache_compute_${key}`, duration, 'ms');
-
-    this.set(key, value, options);
-    return value;
+    this.hits = 0;
+    this.misses = 0;
   }
 
   /**
-   * Memoize a function with caching
+   * Get or set with function (supports both sync and async)
    */
+  getOrSet<T>(key: string, fn: () => T, options?: CacheOptions): T;
+  getOrSet<T>(key: string, fn: () => Promise<T>, options?: CacheOptions): Promise<T>;
+  getOrSet<T>(key: string, fn: () => T | Promise<T>, options?: CacheOptions): T | Promise<T> {
+    const cached = this.get<T>(key);
+    if (cached !== undefined) {
+      return cached;
+    }
+
+    const result = fn();
+    
+    if (result instanceof Promise) {
+      return result.then(value => {
+        this.set(key, value, options);
+        return value;
+      });
+    } else {
+      this.set(key, result, options);
+      return result;
+    }
+  }
+
+  /**
+   * Get cache statistics
+   */
+  getStatistics(): {
+    hits: number;
+    misses: number;
+    hitRate: number;
+    entries: number;
+    entryCount: number;
+    totalSize: number;
+  } {
+    const total = this.hits + this.misses;
+    const hitRate = total === 0 ? 0 : this.hits / total;
+    
+    let totalSize = 0;
+    this.memoryCache.forEach(entry => {
+      totalSize += JSON.stringify(entry.data).length;
+    });
+
+    return {
+      hits: this.hits,
+      misses: this.misses,
+      hitRate,
+      entries: this.memoryCache.size,
+      entryCount: this.memoryCache.size,
+      totalSize,
+    };
+  }
+
+
+  /**
+   * Memoize a synchronous function with caching
+   */
+  memoize<TArgs extends unknown[], TResult>(
+    fn: (...args: TArgs) => TResult,
+    options?: CacheOptions & { keyGenerator?: (...args: TArgs) => string }
+  ): (...args: TArgs) => TResult;
+  
+  /**
+   * Memoize an asynchronous function with caching
+   */
+  memoize<TArgs extends unknown[], TResult>(
+    fn: (...args: TArgs) => Promise<TResult>,
+    options?: CacheOptions & { keyGenerator?: (...args: TArgs) => string }
+  ): (...args: TArgs) => Promise<TResult>;
+
   memoize<TArgs extends unknown[], TResult>(
     fn: (...args: TArgs) => TResult | Promise<TResult>,
     options: CacheOptions & { keyGenerator?: (...args: TArgs) => string } = {}
-  ): (...args: TArgs) => Promise<TResult> {
+  ): (...args: TArgs) => TResult | Promise<TResult> {
     const { keyGenerator, ...cacheOptions } = options;
 
-    return async (...args: TArgs): Promise<TResult> => {
+    return (...args: TArgs): TResult | Promise<TResult> => {
       const key = keyGenerator
         ? keyGenerator(...args)
         : `memoize_${fn.name}_${JSON.stringify(args)}`;

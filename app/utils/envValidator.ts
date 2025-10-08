@@ -204,6 +204,19 @@ if (typeof process !== 'undefined' && process.env.NODE_ENV === 'development') {
 // Export utilities
 export const getEnvConfig = () => envValidator.getConfig();
 export const isFeatureEnabled = (feature: string) => envValidator.isFeatureEnabled(feature);
-export const validateEnv = () => validationResult;
+export const validateEnv = () => envValidator.validate();
+
+// Environment helper functions
+export const isDevelopment = () => {
+  return process.env.NODE_ENV === 'development';
+};
+
+export const isProduction = () => {
+  return process.env.NODE_ENV === 'production';
+};
+
+export const isTest = () => {
+  return process.env.NODE_ENV === 'test';
+};
 
 export default envValidator;
