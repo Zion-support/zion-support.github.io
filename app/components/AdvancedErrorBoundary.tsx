@@ -1,8 +1,5 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-<<<<<<< HEAD
 import { Link } from 'react-router-dom';
-=======
->>>>>>> origin/main
 import { logger } from '../utils/logger';
 
 interface ErrorBoundaryState {

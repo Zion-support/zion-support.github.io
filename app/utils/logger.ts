@@ -89,15 +89,9 @@ class Logger {
   /**
    * Log a warning message
    */
-<<<<<<< HEAD
   warn(message: string, contextOrMetadata?: string | Record<string, unknown>, _metadata?: Record<string, unknown>): void {
-    const [context, meta] = this.parseArgs(contextOrMetadata, _metadata)
-=======
-  warn(message: string, contextOrMetadata?: string | Record<string, unknown>, metadata?: Record<string, unknown>): void {
-    const [context, meta] = this.parseArgs(contextOrMetadata, metadata)
-
->>>>>>> origin/main
-    this.log(LogLevel.WARN, message, context, meta)
+    const [context, meta] = this.parseArgs(contextOrMetadata, _metadata);
+    this.log(LogLevel.WARN, message, context, meta);
   }
   /**
    * Log an error message
@@ -127,11 +121,7 @@ class Logger {
         ...meta,
         error: error ? {
           name: error.name,
-<<<<<<< HEAD
           message: error.message,
-=======
-          message: error.message
->>>>>>> origin/main
           stack: error.stack
         } : undefined
       },
