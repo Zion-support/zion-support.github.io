@@ -1,5 +1,4 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-
 import { logger } from '../utils/logger';
 
 interface ErrorBoundaryState {
@@ -67,8 +66,7 @@ class AdvancedErrorBoundary extends Component<
       logger.error(
         'Error Boundary caught an error',
         error,
-        'ErrorBoundary',
-        { component: 'ErrorBoundary', errorInfo }
+        { component: 'ErrorBoundary', errorInfo, stack: error.stack }
       );
     }
 
@@ -142,8 +140,7 @@ class AdvancedErrorBoundary extends Component<
     } catch (reportError) {
       logger.error(
         'Failed to send error report',
-        reportError instanceof Error ? reportError : new Error(String(reportError)),
-        'ErrorReporting',
+        reportError as Error,
         { component: 'ErrorReporting' }
       );
     }
@@ -269,7 +266,8 @@ class AdvancedErrorBoundary extends Component<
                 <p className='text-xs text-gray-500'>
                   If this problem persists, please contact our support team
                   at&nbsp;
-                  <a href='mailto:kleber@ziontechgroup.com'
+                  <a
+                    href='mailto:kleber@ziontechgroup.com'
                     className='text-indigo-600 hover:text-indigo-500'
                   >
                     kleber@ziontechgroup.com

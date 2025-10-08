@@ -1,24 +1,7 @@
 import React from 'react';
-import dynamic from 'next/dynamic';
 import SEOOptimizer from './components/SEOOptimizer';
-import PerformanceMonitor from './components/PerformanceMonitor';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
-
-// Lazy load heavy components - these may not exist, so make them optional
-const UnifiedBanner = dynamic(() => import('./components/NewestContent2025Banner').catch(() => ({ default: () => null as any })), {
-  loading: () => <div className="animate-pulse bg-gray-200 h-32 rounded-lg"></div>,
-  ssr: false
-});
-
-const ContentPromotion = dynamic(() => import('./components/UltimateBusinessIntelligence2025Banner').catch(() => import('./components/EmptyComponent')), {
-  loading: () => <div className="animate-pulse bg-gray-200 h-64 rounded-lg"></div>,
-  ssr: false
-});
-
-const ContentShowcase = dynamic(() => import('./components/UltimateBusinessIntelligenceShowcase2025').catch(() => ({ default: () => null as any })), {
-  loading: () => <div className="animate-pulse bg-gray-200 h-48 rounded-lg"></div>,
-  ssr: false
-});
+import PerformanceMonitor from './components/PerformanceMonitor';
 
 export const metadata = {
   title: 'Zion Tech Group — AI Enterprise Transformation & IT Services | 300% ROI Guaranteed',
@@ -47,33 +30,15 @@ export const metadata = {
   robots: {
     index: true,
     follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
-  alternates: {
-    canonical: 'https://ziontechgroup.com',
-  },
-  verification: {
-    google: 'your-google-verification-code',
-    yandex: 'your-yandex-verification-code',
-    yahoo: 'your-yahoo-verification-code',
   },
 };
 
 export default function OptimizedHomePage() {
   return (
-    <AccessibilityEnhancer>
-      <div className="min-h-screen bg-white">
-        <SEOOptimizer />
+    <div className="min-h-screen bg-white">
+      <SEOOptimizer />
+      <AccessibilityEnhancer>
         <PerformanceMonitor />
-        
-        {/* Unified Banner System */}
-        <UnifiedBanner />
         
         {/* Main Content */}
         <main className="relative">
@@ -111,13 +76,65 @@ export default function OptimizedHomePage() {
             </div>
           </section>
 
-          {/* Content Showcase */}
-          <ContentShowcase />
-          
-          {/* Content Promotion */}
-          <ContentPromotion />
+          {/* Features Section */}
+          <section className="py-20 bg-gray-50">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="text-center mb-16">
+                <h2 className="text-4xl font-bold text-gray-900 mb-4">
+                  Transform Your Enterprise with AI
+                </h2>
+                <p className="text-xl text-gray-600">
+                  Proven solutions delivering measurable results
+                </p>
+              </div>
+
+              <div className="grid md:grid-cols-3 gap-8">
+                <div className="bg-white p-8 rounded-lg shadow-md">
+                  <div className="text-4xl mb-4">🚀</div>
+                  <h3 className="text-2xl font-bold mb-4">300% ROI</h3>
+                  <p className="text-gray-600">
+                    Achieve unprecedented returns on investment through AI-powered automation and optimization.
+                  </p>
+                </div>
+
+                <div className="bg-white p-8 rounded-lg shadow-md">
+                  <div className="text-4xl mb-4">💰</div>
+                  <h3 className="text-2xl font-bold mb-4">70% Cost Reduction</h3>
+                  <p className="text-gray-600">
+                    Dramatically reduce operational costs through intelligent process automation.
+                  </p>
+                </div>
+
+                <div className="bg-white p-8 rounded-lg shadow-md">
+                  <div className="text-4xl mb-4">⚡</div>
+                  <h3 className="text-2xl font-bold mb-4">90% Efficiency Gains</h3>
+                  <p className="text-gray-600">
+                    Supercharge your operations with AI-driven workflows and decision-making.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* CTA Section */}
+          <section className="py-20 bg-blue-900 text-white">
+            <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+              <h2 className="text-4xl font-bold mb-6">
+                Ready to Transform Your Enterprise?
+              </h2>
+              <p className="text-xl mb-8">
+                Join hundreds of companies already experiencing the power of AI transformation.
+              </p>
+              <a
+                href="/contact"
+                className="inline-flex items-center px-8 py-4 bg-white text-blue-900 rounded-lg hover:bg-gray-100 transition-colors font-semibold text-lg"
+              >
+                Schedule Your Free Consultation
+              </a>
+            </div>
+          </section>
         </main>
-      </div>
-    </AccessibilityEnhancer>
+      </AccessibilityEnhancer>
+    </div>
   );
 }
