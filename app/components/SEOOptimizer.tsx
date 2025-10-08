@@ -2,8 +2,6 @@
 
 import React, { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
-
-<<<<<<< HEAD
 const SEOOptimizer: React.FC = () => {
   const pathname = useLocation().pathname;
 

@@ -83,19 +83,12 @@ const Footer: React.FC = () => {
               <p>Phone: +1 (302) 464-0950</p>
               <p>Website: ziontechgroup.com</p>
               <div className="flex space-x-4 mt-4">
-<<<<<<< HEAD
-                <Link to="#" className="text-gray-300 hover:text-white transition-colors">
-                  LinkedIn
-                </Link>
-                <Link to="#" className="text-gray-300 hover:text-white transition-colors">
-=======
                 <a href="https://linkedin.com/company/ziontechgroup" className="text-gray-300 hover:text-white transition-colors">
                   LinkedIn
                 </a>
                 <a href="https://twitter.com/ziontechgroup" className="text-gray-300 hover:text-white transition-colors">
->>>>>>> cursor/website-audit-and-content-update-7e9e
                   Twitter
-                </Link>
+                </a>
               </div>
             </div>
           </div>

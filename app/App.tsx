@@ -7,12 +7,13 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 // Components
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import PerformanceDashboard from './components/PerformanceDashboard';
-<<<<<<< HEAD
 import AdvancedPerformanceMonitor from './components/AdvancedPerformanceMonitor';
 import AdvancedErrorBoundary from './components/AdvancedErrorBoundary';
 import SEOEnhancer from './components/SEOEnhancer';
 import AdvancedSEOOptimizer from './components/AdvancedSEOOptimizer';
 import LoadingSpinner from './components/LoadingSpinner';
+import Navigation from './components/Navigation';
+import Footer from './components/Footer';
 
 // Lazy load components for better performance
 const ContentShowcase = lazy(() => import('./components/ContentShowcase'));
@@ -22,10 +23,6 @@ const InteractiveContentShowcase2026 = lazy(
 const InteractiveAIROICalculator = lazy(
   () => import('./components/InteractiveAIROICalculator')
 );
-=======
-import Navigation from './components/Navigation';
-import Footer from './components/Footer';
->>>>>>> cursor/website-audit-and-content-update-7e9e
 
 // Lazy load pages for better performance
 const HomePage = lazy(() => import('./page'));
@@ -38,6 +35,12 @@ const TermsPage = lazy(() => import('./terms/page'));
 const EnterprisePage = lazy(() => import('./enterprise/page'));
 const ServicesAdvertisingPage = lazy(() => import('./services-advertising/page'));
 const CaseStudiesPage = lazy(() => import('./case-studies/page'));
+const MicroSAASPage = lazy(() => import('./micro-saas/page'));
+const AIServicesPage = lazy(() => import('./ai-services/page'));
+const ITServicesPage = lazy(() => import('./it-services/page'));
+const QuantumComputingPage = lazy(() => import('./quantum-computing/page'));
+const AutonomousSystemsPage = lazy(() => import('./autonomous-systems/page'));
+const BusinessIntelligencePage = lazy(() => import('./business-intelligence/page'));
 
 // Utils
 import { lazyLoadImages, preloadCriticalResources, collectPerformanceMetrics, performanceOptimizer } from './utils/performanceOptimizer';
@@ -108,7 +111,6 @@ const App: React.FC = () => {
 
   return (
     <HelmetProvider>
-<<<<<<< HEAD
       <AdvancedErrorBoundary
         enableErrorReporting={true}
         enableRetry={true}
@@ -151,43 +153,30 @@ const App: React.FC = () => {
             />
             <Router>
               <div className="App">
+                <Navigation />
                 <main id="main-content">
                   <Suspense fallback={<LoadingSpinner />}>
                     <Routes>
                       <Route path="/" element={<HomePage />} />
-                      {/* Add more routes as needed */}
+                      <Route path="/about" element={<AboutPage />} />
+                      <Route path="/services" element={<ServicesPage />} />
+                      <Route path="/micro-saas" element={<MicroSAASPage />} />
+                      <Route path="/ai-services" element={<AIServicesPage />} />
+                      <Route path="/it-services" element={<ITServicesPage />} />
+                      <Route path="/quantum-computing" element={<QuantumComputingPage />} />
+                      <Route path="/autonomous-systems" element={<AutonomousSystemsPage />} />
+                      <Route path="/business-intelligence" element={<BusinessIntelligencePage />} />
+                      <Route path="/contact" element={<ContactPage />} />
+                      <Route path="/team" element={<TeamPage />} />
+                      <Route path="/privacy" element={<PrivacyPage />} />
+                      <Route path="/terms" element={<TermsPage />} />
+                      <Route path="/enterprise" element={<EnterprisePage />} />
+                      <Route path="/services-advertising" element={<ServicesAdvertisingPage />} />
+                      <Route path="/case-studies" element={<CaseStudiesPage />} />
                     </Routes>
                   </Suspense>
                 </main>
-=======
-      <EnhancedErrorBoundary>
-        <PerformanceOptimizer>
-          <AccessibilityEnhancer>
-            <SEOEnhancer
-              title="Zion Tech Group - Advanced AI and IT Solutions"
-              description="Leading provider of enterprise AI solutions, quantum computing, and autonomous systems. Transform your business with our cutting-edge technology."
-            >
-              <Router>
-                <div className='App'>
-                  <Navigation />
-                  <main id='main-content'>
-                    <Suspense fallback={<LoadingSpinner />}>
-                      <Routes>
-                        <Route path='/' element={<HomePage />} />
-                        <Route path='/about' element={<AboutPage />} />
-                        <Route path='/services' element={<ServicesPage />} />
-                        <Route path='/contact' element={<ContactPage />} />
-                        <Route path='/team' element={<TeamPage />} />
-                        <Route path='/privacy' element={<PrivacyPage />} />
-                        <Route path='/terms' element={<TermsPage />} />
-                        <Route path='/enterprise' element={<EnterprisePage />} />
-                        <Route path='/services-advertising' element={<ServicesAdvertisingPage />} />
-                        <Route path='/case-studies' element={<CaseStudiesPage />} />
-                      </Routes>
-                    </Suspense>
-                  </main>
-                  <Footer />
->>>>>>> cursor/website-audit-and-content-update-7e9e
+                <Footer />
 
                 {/* Performance Dashboard */}
                 <PerformanceDashboard />
