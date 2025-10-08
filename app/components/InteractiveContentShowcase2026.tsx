@@ -1,4 +1,6 @@
 
+import React, { useState } from 'react';
+
 const InteractiveContentShowcase2026: React.FC = () => {
   const [activeTab, setActiveTab] = useState(0);
 
@@ -62,9 +64,16 @@ const InteractiveContentShowcase2026: React.FC = () => {
               <h3 className='text-2xl font-bold text-gray-900 mb-4'>
                 {tabs[activeTab].title}
               </h3>
+              <p className='text-lg text-gray-600'>
+                {tabs[activeTab].content}
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
   );
 };
+
+export default InteractiveContentShowcase2026;
 
