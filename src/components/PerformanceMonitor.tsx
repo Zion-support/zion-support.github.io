@@ -1,75 +1,121 @@
-import React, { useEffect, useState } from 'react';
+'use client';
+
+import React, { useEffect, useState, memo } from 'react';
 
 interface PerformanceMetrics {
-  loadTime: number;
-  firstContentfulPaint: number;
-  largestContentfulPaint: number;
-  cumulativeLayoutShift: number;
-  firstInputDelay: number;
+  fcp?: number;
+  lcp?: number;
+  fid?: number;
+  cls?: number;
+  ttfb?: number;
 }
 
-export const PerformanceMonitor: React.FC = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
-  const [isVisible, setIsVisible] = useState(false);
+const PerformanceMonitor: React.FC = () => {
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({});
 
   useEffect(() => {
-      
-      const fcp = paintEntries.find(entry => entry.name === 'first-contentful-paint');
-      const lcp = performance.getEntriesByType('largest-contentful-paint')[0] as PerformanceEntry;
-      
-      const metrics: PerformanceMetrics = {
-        loadTime: navigation.loadEventEnd - navigation.loadEventStart,
-        firstContentfulPaint: fcp ? fcp.startTime : 0,
-        largestContentfulPaint: lcp ? lcp.startTime : 0,
-        cumulativeLayoutShift: 0, // Would need to be measured with observer
-        firstInputDelay: 0, // Would need to be measured with observer
-      };
+    if (typeof window === 'undefined') return;
 
-      setMetrics(metrics);
-    };
-
-    // Measure after page load
-    if (document.readyState === 'complete') {
-      measurePerformance();
-    } else {
-      window.addEventListener('load', measurePerformance);
-    }
-    return undefined;
-  }, []);
-
-  // Toggle visibility with keyboard shortcut (Ctrl+Shift+P)
-  useEffect(() => {
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.ctrlKey && e.shiftKey && e.key === 'P') {
-        setIsVisible(prev => !prev);
+    const reportWebVitals = (metric: { name: string; value: number }) => {
+      // Log to console in development
+      if (process.env['NODE_ENV'] === 'development') {
+        console.log('Web Vital:', metric.name, metric.value);
       }
     };
 
-    window.addEventListener('keydown', handleKeyDown);
-    return () => window.removeEventListener('keydown', handleKeyDown);
+    // Monitor Core Web Vitals
+    if (typeof window !== 'undefined' && 'PerformanceObserver' in window) {
+      try {
+        // LCP - Largest Contentful Paint
+        new PerformanceObserver((list) => {
+          const entries = list.getEntries();
+          const lastEntry = entries[entries.length - 1];
+          reportWebVitals({
+            name: 'LCP',
+            value: lastEntry.startTime,
+          });
+          setMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }));
+        }).observe({ entryTypes: ['largest-contentful-paint'] });
+
+        // FID - First Input Delay
+        new PerformanceObserver((list) => {
+          const entries = list.getEntries();
+          entries.forEach((entry: PerformanceEntry & { processingStart?: number }) => {
+            if (entry.processingStart) {
+              const fid = entry.processingStart - entry.startTime;
+              reportWebVitals({
+                name: 'FID',
+                value: fid,
+              });
+              setMetrics(prev => ({ ...prev, fid }));
+            }
+          });
+        }).observe({ entryTypes: ['first-input'] });
+
+        // CLS - Cumulative Layout Shift
+        let clsValue = 0;
+        new PerformanceObserver((list) => {
+          const entries = list.getEntries();
+          entries.forEach((entry: PerformanceEntry & { hadRecentInput?: boolean; value?: number }) => {
+            if (!entry.hadRecentInput && entry.value) {
+              clsValue += entry.value;
+              reportWebVitals({
+                name: 'CLS',
+                value: clsValue,
+              });
+              setMetrics(prev => ({ ...prev, cls: clsValue }));
+            }
+          });
+        }).observe({ entryTypes: ['layout-shift'] });
+
+        // FCP - First Contentful Paint
+        new PerformanceObserver((list) => {
+          const entries = list.getEntries();
+          entries.forEach((entry) => {
+            reportWebVitals({
+              name: 'FCP',
+              value: entry.startTime,
+            });
+            setMetrics(prev => ({ ...prev, fcp: entry.startTime }));
+          });
+        }).observe({ entryTypes: ['paint'] });
+
+        // TTFB - Time to First Byte
+        new PerformanceObserver((list) => {
+          const entries = list.getEntries();
+          entries.forEach((entry: PerformanceEntry & { responseStart?: number; requestStart?: number }) => {
+            if (entry.responseStart && entry.requestStart && entry.responseStart > 0) {
+              const ttfb = entry.responseStart - entry.requestStart;
+              reportWebVitals({
+                name: 'TTFB',
+                value: ttfb,
+              });
+              setMetrics(prev => ({ ...prev, ttfb }));
+            }
+          });
+        }).observe({ entryTypes: ['navigation'] });
+      } catch (error) {
+        console.warn('Performance monitoring not supported:', error);
+      }
+    }
   }, []);
 
-  if (!isVisible || !metrics) return null;
+  // Don't render anything in production
+  if (process.env['NODE_ENV'] !== 'development') {
+    return null;
+  }
 
   return (
-    <div className="fixed bottom-4 right-4 bg-black bg-opacity-90 text-white p-4 rounded-lg text-sm font-mono z-50">
-      <div className="flex items-center justify-between mb-2">
-        <h3 className="font-bold">Performance Metrics</h3>
-        <button 
-          onClick={() => setIsVisible(false)}
-          className="text-gray-400 hover:text-white"
-        >
-          ×
-        </button>
-      </div>
-      <div className="space-y-1">
-        <div>Load Time: {metrics.loadTime.toFixed(2)}ms</div>
-        <div>FCP: {metrics.firstContentfulPaint.toFixed(2)}ms</div>
-        <div>LCP: {metrics.largestContentfulPaint.toFixed(2)}ms</div>
-        <div className="text-xs text-gray-400 mt-2">
-          Press Ctrl+Shift+P to toggle
+    <div className="fixed bottom-4 right-4 bg-black bg-opacity-75 text-white p-4 rounded-lg text-xs font-mono z-50">
+      <div className="mb-2 font-bold">Performance Metrics</div>
+      {Object.entries(metrics).map(([key, value]) => (
+        <div key={key} className="flex justify-between gap-4">
+          <span>{key.toUpperCase()}:</span>
+          <span className="text-green-400">{value ? `${Math.round(value)}ms` : 'N/A'}</span>
         </div>
-      </div>
+      ))}
     </div>
   );
 };
+
+export default memo(PerformanceMonitor);
