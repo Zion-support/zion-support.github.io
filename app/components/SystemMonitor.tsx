@@ -8,6 +8,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { performanceOptimizer } from '../utils/performanceOptimizer';
 import { errorHandler } from '../utils/enhancedErrorHandler';
+import logger from '../utils/logger';
 
 // Helper functions
 const calculatePerformanceScore = () => {
@@ -136,8 +137,9 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
       setMetrics(newMetrics);
       setLastUpdate(new Date());
     } catch (error) {
-       
-console.error('Failed to update metrics:', error);
+      logger.error('Failed to update metrics', error as Error, {
+        component: 'SystemMonitor'
+      });
     }
   }, []);
 

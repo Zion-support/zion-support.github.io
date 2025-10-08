@@ -1,230 +1,112 @@
 /**
- * Advanced Error Tracking and Reporting System
+ * Enhanced Error Tracking System
+ * Provides comprehensive error monitoring with context and severity levels
  */
 
+export enum ErrorSeverity {
+  LOW = 'low',
+  MEDIUM = 'medium',
+  HIGH = 'high',
+  CRITICAL = 'critical',
+}
+
 export interface ErrorContext {
-  component?: string;
-  action?: string;
   userId?: string;
   sessionId?: string;
+  page?: string;
+  action?: string;
+  timestamp?: number;
+  userAgent?: string;
   metadata?: Record<string, any>;
 }
 
-export interface ErrorReport {
-  id: string;
+export interface TrackedError {
   message: string;
   stack?: string;
+  severity: ErrorSeverity;
   context: ErrorContext;
-  timestamp: number;
-  url: string;
-  userAgent: string;
-  severity: 'low' | 'medium' | 'high' | 'critical';
-  recovered: boolean;
-}
-
-export interface ErrorTrackingConfig {
-  enabled: boolean;
-  sampleRate: number; // 0-1, percentage of errors to report
-  ignoreErrors?: RegExp[];
-  beforeSend?: (report: ErrorReport) => ErrorReport | null;
-  endpoint?: string;
+  fingerprint: string;
 }
 
 class ErrorTracker {
-  private static instance: ErrorTracker;
-  private config: ErrorTrackingConfig;
-  private errorQueue: ErrorReport[] = [];
-  private readonly MAX_QUEUE_SIZE = 50;
-  private sessionId: string;
-
-  private constructor(config: ErrorTrackingConfig) {
-    this.config = config;
-    this.sessionId = this.generateSessionId();
-    this.setupGlobalErrorHandlers();
-  }
-
-  static getInstance(config?: ErrorTrackingConfig): ErrorTracker {
-    if (!ErrorTracker.instance && config) {
-      ErrorTracker.instance = new ErrorTracker(config);
-    }
-    return ErrorTracker.instance;
-  }
-
-  private generateSessionId(): string {
-    return `session-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
-  }
-
-  private generateErrorId(): string {
-    return `error-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
-  }
-
-  private setupGlobalErrorHandlers(): void {
-    if (typeof window === 'undefined') return;
-
-    // Handle uncaught errors
-    window.addEventListener('error', (event) => {
-      this.captureError(event.error || new Error(event.message), {
-        action: 'global-error',
-        metadata: {
-          filename: event.filename,
-          lineno: event.lineno,
-          colno: event.colno,
-        },
-      });
-    });
-
-    // Handle unhandled promise rejections
-    window.addEventListener('unhandledrejection', (event) => {
-      const error =
-        event.reason instanceof Error
-          ? event.reason
-          : new Error(String(event.reason));
-
-      this.captureError(error, {
-        action: 'unhandled-rejection',
-      });
-    });
-  }
+  private errors: TrackedError[] = [];
+  private maxErrors: number = 100;
+  private errorCallbacks: Array<(error: TrackedError) => void> = [];
 
   /**
-   * Determine error severity based on error characteristics
+   * Track an error with context and severity
    */
-  private determineSeverity(error: Error, context: ErrorContext): ErrorReport['severity'] {
-    // Critical errors that should never happen
-    if (
-      error.message.includes('undefined is not a function') ||
-      error.message.includes('Cannot read property')
-    ) {
-      return 'critical';
-    }
+  trackError(
+    error: Error | string,
+    severity: ErrorSeverity = ErrorSeverity.MEDIUM,
+    context: ErrorContext = {}
+  ): void {
+    const errorMessage = typeof error === 'string' ? error : error.message;
+    const errorStack = typeof error === 'string' ? undefined : error.stack;
 
-    // High severity for component errors
-    if (context.component) {
-      return 'high';
-    }
-
-    // Network errors are medium severity
-    if (
-      error.message.includes('fetch') ||
-      error.message.includes('network')
-    ) {
-      return 'medium';
-    }
-
-    return 'low';
-  }
-
-  /**
-   * Check if error should be ignored
-   */
-  private shouldIgnoreError(error: Error): boolean {
-    if (!this.config.ignoreErrors) return false;
-
-    return this.config.ignoreErrors.some((pattern) =>
-      pattern.test(error.message)
-    );
-  }
-
-  /**
-   * Check if error should be sampled (based on sample rate)
-   */
-  private shouldSampleError(): boolean {
-    return Math.random() < this.config.sampleRate;
-  }
-
-  /**
-   * Capture and report an error
-   */
-  captureError(
-    error: Error,
-    context: ErrorContext = {},
-    recovered: boolean = false
-  ): ErrorReport | null {
-    if (!this.config.enabled) return null;
-    if (this.shouldIgnoreError(error)) return null;
-    if (!this.shouldSampleError()) return null;
-
-    const report: ErrorReport = {
-      id: this.generateErrorId(),
-      message: error.message,
-      stack: error.stack,
+    const trackedError: TrackedError = {
+      message: errorMessage,
+      stack: errorStack,
+      severity,
       context: {
         ...context,
-        sessionId: this.sessionId,
+        timestamp: Date.now(),
+        userAgent: typeof window !== 'undefined' ? window.navigator.userAgent : undefined,
+        page: typeof window !== 'undefined' ? window.location.pathname : undefined,
       },
-      timestamp: Date.now(),
-      url: typeof window !== 'undefined' ? window.location.href : '',
-      userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : '',
-      severity: this.determineSeverity(error, context),
-      recovered,
+      fingerprint: this.generateFingerprint(errorMessage, errorStack),
     };
 
-    // Allow modification or filtering via beforeSend hook
-    const processedReport = this.config.beforeSend
-      ? this.config.beforeSend(report)
-      : report;
+    this.errors.push(trackedError);
 
-    if (!processedReport) return null;
-
-    // Add to queue
-    this.errorQueue.push(processedReport);
-
-    // Maintain queue size
-    if (this.errorQueue.length > this.MAX_QUEUE_SIZE) {
-      this.errorQueue.shift();
+    // Keep only the last N errors
+    if (this.errors.length > this.maxErrors) {
+      this.errors.shift();
     }
 
-    // Send to endpoint if configured
-    if (this.config.endpoint) {
-      this.sendToEndpoint(processedReport);
-    }
-
-    // Log in development
-    if (process.env.NODE_ENV === 'development') {
-      console.error('[Error Tracker]', processedReport);
-    }
-
-    return processedReport;
-  }
-
-  /**
-   * Send error report to endpoint
-   */
-  private async sendToEndpoint(report: ErrorReport): Promise<void> {
-    if (!this.config.endpoint) return;
-
-    try {
-      const response = await fetch(this.config.endpoint, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(report),
-        // Use keepalive to ensure delivery even if page is closing
-        keepalive: true,
-      });
-
-      if (!response.ok) {
-        console.warn('Failed to send error report:', response.statusText);
+    // Notify callbacks
+    this.errorCallbacks.forEach((callback) => {
+      try {
+        callback(trackedError);
+      } catch (e) {
+        console.error('Error in error callback:', e);
       }
-    } catch (error) {
-      // Don't throw errors when reporting errors
-      console.warn('Error sending error report:', error);
+    });
+
+    // Log to console based on severity
+    this.logError(trackedError);
+
+    // Send to external service if critical
+    if (severity === ErrorSeverity.CRITICAL) {
+      this.reportCriticalError(trackedError);
     }
   }
 
   /**
-   * Get all captured errors
+   * Register a callback for error notifications
    */
-  getErrors(): ErrorReport[] {
-    return [...this.errorQueue];
+  onError(callback: (error: TrackedError) => void): () => void {
+    this.errorCallbacks.push(callback);
+    return () => {
+      this.errorCallbacks = this.errorCallbacks.filter((cb) => cb !== callback);
+    };
   }
 
   /**
-   * Clear error queue
+   * Get all tracked errors
+   */
+  getErrors(severity?: ErrorSeverity): TrackedError[] {
+    if (severity) {
+      return this.errors.filter((error) => error.severity === severity);
+    }
+    return [...this.errors];
+  }
+
+  /**
+   * Clear all tracked errors
    */
   clearErrors(): void {
-    this.errorQueue = [];
+    this.errors = [];
   }
 
   /**
@@ -232,120 +114,122 @@ class ErrorTracker {
    */
   getStatistics(): {
     total: number;
-    bySeverity: Record<string, number>;
-    recovered: number;
-    unrecovered: number;
+    bySeverity: Record<ErrorSeverity, number>;
+    recentErrors: TrackedError[];
   } {
-    const stats = {
-      total: this.errorQueue.length,
-      bySeverity: {
-        low: 0,
-        medium: 0,
-        high: 0,
-        critical: 0,
-      },
-      recovered: 0,
-      unrecovered: 0,
+    const bySeverity = {
+      [ErrorSeverity.LOW]: 0,
+      [ErrorSeverity.MEDIUM]: 0,
+      [ErrorSeverity.HIGH]: 0,
+      [ErrorSeverity.CRITICAL]: 0,
     };
 
-    this.errorQueue.forEach((error) => {
-      stats.bySeverity[error.severity]++;
-      if (error.recovered) {
-        stats.recovered++;
-      } else {
-        stats.unrecovered++;
-      }
+    this.errors.forEach((error) => {
+      bySeverity[error.severity]++;
     });
 
-    return stats;
+    return {
+      total: this.errors.length,
+      bySeverity,
+      recentErrors: this.errors.slice(-10),
+    };
   }
 
   /**
-   * Update configuration
+   * Generate a unique fingerprint for error deduplication
    */
-  updateConfig(config: Partial<ErrorTrackingConfig>): void {
-    this.config = { ...this.config, ...config };
-  }
-}
-
-/**
- * Initialize error tracking
- */
-export function initErrorTracking(
-  config: ErrorTrackingConfig
-): ErrorTracker {
-  return ErrorTracker.getInstance(config);
-}
-
-/**
- * Capture an error manually
- */
-export function captureError(
-  error: Error,
-  context?: ErrorContext,
-  recovered?: boolean
-): void {
-  const tracker = ErrorTracker.getInstance();
-  if (tracker) {
-    tracker.captureError(error, context, recovered);
-  }
-}
-
-/**
- * Capture a message (create error from message)
- */
-export function captureMessage(
-  message: string,
-  context?: ErrorContext,
-  severity: ErrorReport['severity'] = 'low'
-): void {
-  const error = new Error(message);
-  const tracker = ErrorTracker.getInstance();
-  if (tracker) {
-    tracker.captureError(error, { ...context, metadata: { severity } });
-  }
-}
-
-/**
- * Get error statistics
- */
-export function getErrorStats(): ReturnType<ErrorTracker['getStatistics']> | null {
-  const tracker = ErrorTracker.getInstance();
-  return tracker ? tracker.getStatistics() : null;
-}
-
-/**
- * Wrap async function with error tracking
- */
-export function withErrorTracking<T extends (...args: any[]) => Promise<any>>(
-  fn: T,
-  context: ErrorContext
-): T {
-  return (async (...args: Parameters<T>) => {
-    try {
-      return await fn(...args);
-    } catch (error) {
-      captureError(error as Error, context);
-      throw error;
+  private generateFingerprint(message: string, stack?: string): string {
+    const content = stack ? `${message}:${stack.split('\n')[0]}` : message;
+    let hash = 0;
+    for (let i = 0; i < content.length; i++) {
+      const char = content.charCodeAt(i);
+      hash = (hash << 5) - hash + char;
+      hash = hash & hash;
     }
-  }) as T;
-}
+    return hash.toString(36);
+  }
 
-/**
- * Wrap sync function with error tracking
- */
-export function withErrorTrackingSync<T extends (...args: any[]) => any>(
-  fn: T,
-  context: ErrorContext
-): T {
-  return ((...args: Parameters<T>) => {
-    try {
-      return fn(...args);
-    } catch (error) {
-      captureError(error as Error, context);
-      throw error;
+  /**
+   * Log error to console with appropriate level
+   */
+  private logError(error: TrackedError): void {
+    const logMessage = `[${error.severity.toUpperCase()}] ${error.message}`;
+    
+    switch (error.severity) {
+      case ErrorSeverity.CRITICAL:
+      case ErrorSeverity.HIGH:
+        console.error(logMessage, error);
+        break;
+      case ErrorSeverity.MEDIUM:
+        console.warn(logMessage, error);
+        break;
+      case ErrorSeverity.LOW:
+        console.info(logMessage, error);
+        break;
     }
-  }) as T;
+  }
+
+  /**
+   * Report critical errors to external service
+   */
+  private reportCriticalError(error: TrackedError): void {
+    // In production, this would send to error tracking service
+    // e.g., Sentry, Rollbar, LogRocket, etc.
+    if (typeof window !== 'undefined' && process.env.NODE_ENV === 'production') {
+      // Example: Send to error tracking API
+      try {
+        fetch('/api/errors', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(error),
+        }).catch(() => {
+          // Fail silently to avoid error loops
+        });
+      } catch (e) {
+        // Fail silently
+      }
+    }
+  }
+
+  /**
+   * Set up global error handlers
+   */
+  setupGlobalHandlers(): void {
+    if (typeof window === 'undefined') return;
+
+    // Handle unhandled promise rejections
+    window.addEventListener('unhandledrejection', (event) => {
+      this.trackError(
+        new Error(`Unhandled Promise Rejection: ${event.reason}`),
+        ErrorSeverity.HIGH,
+        { action: 'unhandledrejection' }
+      );
+    });
+
+    // Handle global errors
+    window.addEventListener('error', (event) => {
+      this.trackError(
+        event.error || new Error(event.message),
+        ErrorSeverity.HIGH,
+        {
+          action: 'global_error',
+          metadata: {
+            filename: event.filename,
+            lineno: event.lineno,
+            colno: event.colno,
+          },
+        }
+      );
+    });
+  }
 }
 
-export default ErrorTracker;
+// Export singleton instance
+export const errorTracker = new ErrorTracker();
+
+// Initialize global handlers
+if (typeof window !== 'undefined') {
+  errorTracker.setupGlobalHandlers();
+}
+
+export default errorTracker;

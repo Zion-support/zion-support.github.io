@@ -4,6 +4,7 @@ import PerformanceMonitor from './components/PerformanceMonitor';
 import AnalyticsProvider from './components/AnalyticsProvider';
 import ErrorBoundary from './components/ErrorBoundary';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
+import PWAInstaller from './components/PWAInstaller';
 
 export const metadata: Metadata = {
   title: 'Zion Tech Group - AI & IT Solutions',
@@ -132,6 +133,7 @@ export default function RootLayout({
           <ErrorBoundary>
             <AccessibilityEnhancer>
               <PerformanceMonitor />
+              <PWAInstaller />
               {children}
             </AccessibilityEnhancer>
           </ErrorBoundary>

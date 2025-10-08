@@ -297,3 +297,34 @@ class ErrorTrackingService {
 
 export const errorTracking = ErrorTrackingService.getInstance();
 export default ErrorTrackingService;
+
+// Export convenience functions for easier testing and usage
+export const trackError = (
+  error: Error,
+  options?: Partial<Omit<ErrorMetadata, 'timestamp'>>
+) => {
+  const category = options?.category || ErrorCategory.RUNTIME;
+  const severity = options?.severity || ErrorSeverity.MEDIUM;
+  
+  return errorTracking.trackError(error, {
+    ...options,
+    category,
+    severity,
+  });
+};
+
+export const getErrorStatistics = () => {
+  const stats = errorTracking.getStatistics();
+  return {
+    total: stats.total,
+    byCategory: stats.byCategory,
+    bySeverity: stats.bySeverity,
+    errors: errorTracking.getErrors(),
+  };
+};
+
+export const clearErrorHistory = () => errorTracking.clearErrors();
+export const addErrorListener = (listener: (error: TrackedError) => void) => 
+  errorTracking.addListener(listener);
+export const removeErrorListener = (listener: (error: TrackedError) => void) => 
+  errorTracking.removeListener(listener);
