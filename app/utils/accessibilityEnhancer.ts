@@ -152,8 +152,8 @@ class AccessibilityEnhancer {
     if (!currentElement) return;
 
     // Handle radio button groups
-    if (currentElement.type === 'radio') {
-      this.handleRadioGroupNavigation(event, currentElement);
+    if ((currentElement as HTMLInputElement).type === 'radio') {
+      this.handleRadioGroupNavigation(event, currentElement as HTMLInputElement);
     }
     
     // Handle menu navigation

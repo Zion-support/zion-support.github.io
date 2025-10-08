@@ -98,7 +98,7 @@ const App: React.FC = () => {
         enableErrorReporting={true}
         enableRetry={true}
         onError={(error, errorInfo) => {
-          logger.error(new Error('Application Error'));
+          logger.error('Application Error: ' + error.message);
         }}
       >
         <AccessibilityEnhancer>
@@ -111,6 +111,7 @@ const App: React.FC = () => {
                 title: 'Zion Tech Group - Advanced AI and IT Solutions',
                 description: 'Leading provider of enterprise AI solutions, quantum computing, and autonomous systems. Transform your business with our cutting-edge technology.',
                 keywords: ['AI solutions', 'enterprise AI', 'quantum computing', 'autonomous systems', 'digital transformation', 'automation', 'cloud services', 'AI consulting', 'business intelligence', 'machine learning'],
+                url: 'https://ziontechgroup.com',
                 canonicalUrl: 'https://ziontechgroup.com',
                 ogImage: 'https://ziontechgroup.com/og-image.jpg',
                 structuredData: {
