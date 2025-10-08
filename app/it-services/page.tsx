@@ -135,6 +135,127 @@ const ITServicesPage: React.FC = () => {
       marketPrice: '$3,000-6,000/month',
       category: 'Backup & Recovery',
       technologies: ['Veeam', 'Commvault', 'AWS Backup', 'Azure Backup', 'VMware']
+    },
+    {
+      title: 'Blockchain & Cryptocurrency Solutions',
+      description: 'Blockchain development, smart contracts, and cryptocurrency integration services.',
+      icon: '⛓️',
+      price: 'Starting at $5,000/month',
+      features: ['Smart contract development', 'Blockchain integration', 'Cryptocurrency wallets', 'DeFi solutions', 'NFT platforms'],
+      benefits: ['Enable secure transactions', 'Reduce intermediaries', 'Increase transparency'],
+      marketPrice: '$8,000-20,000/month',
+      category: 'Blockchain',
+      technologies: ['Ethereum', 'Solidity', 'Web3', 'IPFS', 'MetaMask']
+    },
+    {
+      title: 'IoT & Edge Computing',
+      description: 'Internet of Things solutions and edge computing infrastructure for connected devices.',
+      icon: '🌐',
+      price: 'Starting at $3,500/month',
+      features: ['IoT device management', 'Edge computing setup', 'Sensor integration', 'Data processing', 'Real-time analytics'],
+      benefits: ['Enable smart operations', 'Reduce latency', 'Improve efficiency'],
+      marketPrice: '$6,000-15,000/month',
+      category: 'IoT Solutions',
+      technologies: ['AWS IoT', 'Azure IoT', 'MQTT', 'Kubernetes', 'Docker']
+    },
+    {
+      title: 'Quantum Computing Services',
+      description: 'Quantum computing solutions and quantum algorithm development for complex problem solving.',
+      icon: '⚛️',
+      price: 'Starting at $10,000/month',
+      features: ['Quantum algorithm development', 'Quantum simulation', 'Optimization problems', 'Cryptography', 'Research collaboration'],
+      benefits: ['Solve complex problems', 'Exponential speedup', 'Future-proof solutions'],
+      marketPrice: '$20,000-50,000/month',
+      category: 'Quantum Computing',
+      technologies: ['Qiskit', 'Cirq', 'PennyLane', 'Quantum Hardware', 'Quantum Simulators']
+    },
+    {
+      title: '5G Network Solutions',
+      description: '5G network implementation, optimization, and application development services.',
+      icon: '📡',
+      price: 'Starting at $8,000/month',
+      features: ['5G network design', 'Network optimization', 'Application development', 'Performance monitoring', 'Security implementation'],
+      benefits: ['Ultra-fast connectivity', 'Low latency', 'Massive device support'],
+      marketPrice: '$15,000-40,000/month',
+      category: '5G Technology',
+      technologies: ['5G Core', 'Network Slicing', 'Edge Computing', 'SDN/NFV', 'OpenRAN']
+    },
+    {
+      title: 'Augmented Reality (AR) Solutions',
+      description: 'AR application development and immersive technology solutions for business and consumer markets.',
+      icon: '🥽',
+      price: 'Starting at $4,500/month',
+      features: ['AR app development', '3D modeling', 'Markerless tracking', 'Cloud integration', 'Cross-platform support'],
+      benefits: ['Enhance user experience', 'Improve training', 'Increase engagement'],
+      marketPrice: '$8,000-25,000/month',
+      category: 'AR/VR',
+      technologies: ['Unity', 'Unreal Engine', 'ARKit', 'ARCore', 'WebXR']
+    },
+    {
+      title: 'Virtual Reality (VR) Solutions',
+      description: 'VR application development and immersive virtual environments for training and entertainment.',
+      icon: '🥽',
+      price: 'Starting at $5,500/month',
+      features: ['VR app development', '3D environments', 'Haptic feedback', 'Multi-user support', 'Performance optimization'],
+      benefits: ['Immersive experiences', 'Remote collaboration', 'Enhanced training'],
+      marketPrice: '$10,000-30,000/month',
+      category: 'AR/VR',
+      technologies: ['Unity', 'Unreal Engine', 'Oculus SDK', 'SteamVR', 'WebXR']
+    },
+    {
+      title: 'Machine Learning Operations (MLOps)',
+      description: 'End-to-end ML pipeline management, model deployment, and monitoring services.',
+      icon: '🤖',
+      price: 'Starting at $4,000/month',
+      features: ['ML pipeline setup', 'Model deployment', 'Performance monitoring', 'A/B testing', 'Model versioning'],
+      benefits: ['Streamline ML workflows', 'Improve model performance', 'Reduce deployment time'],
+      marketPrice: '$7,000-20,000/month',
+      category: 'MLOps',
+      technologies: ['Kubeflow', 'MLflow', 'Docker', 'Kubernetes', 'TensorFlow Serving']
+    },
+    {
+      title: 'Data Engineering & ETL',
+      description: 'Data pipeline development, ETL processes, and data warehouse solutions.',
+      icon: '📊',
+      price: 'Starting at $3,200/month',
+      features: ['Data pipeline design', 'ETL development', 'Data warehousing', 'Data quality', 'Real-time processing'],
+      benefits: ['Improve data quality', 'Enable real-time analytics', 'Reduce processing time'],
+      marketPrice: '$5,500-15,000/month',
+      category: 'Data Engineering',
+      technologies: ['Apache Airflow', 'Apache Spark', 'Snowflake', 'BigQuery', 'Kafka']
+    },
+    {
+      title: 'Microservices Architecture',
+      description: 'Microservices design, implementation, and management for scalable applications.',
+      icon: '🔧',
+      price: 'Starting at $4,500/month',
+      features: ['Service design', 'API development', 'Service mesh', 'Load balancing', 'Monitoring'],
+      benefits: ['Improve scalability', 'Enable independent deployment', 'Reduce complexity'],
+      marketPrice: '$8,000-25,000/month',
+      category: 'Architecture',
+      technologies: ['Docker', 'Kubernetes', 'Istio', 'Consul', 'Prometheus']
+    },
+    {
+      title: 'Serverless Computing',
+      description: 'Serverless architecture design and implementation for cost-effective, scalable applications.',
+      icon: '☁️',
+      price: 'Starting at $2,800/month',
+      features: ['Function development', 'Event-driven architecture', 'Auto-scaling', 'Cost optimization', 'Monitoring'],
+      benefits: ['Reduce costs', 'Improve scalability', 'Simplify operations'],
+      marketPrice: '$5,000-15,000/month',
+      category: 'Serverless',
+      technologies: ['AWS Lambda', 'Azure Functions', 'Google Cloud Functions', 'Serverless Framework', 'Terraform']
+    },
+    {
+      title: 'GraphQL API Development',
+      description: 'GraphQL API design, implementation, and optimization for modern applications.',
+      icon: '🔗',
+      price: 'Starting at $2,500/month',
+      features: ['Schema design', 'Resolver development', 'Performance optimization', 'Caching', 'Documentation'],
+      benefits: ['Improve API efficiency', 'Reduce over-fetching', 'Better developer experience'],
+      marketPrice: '$4,500-12,000/month',
+      category: 'API Development',
+      technologies: ['Apollo Server', 'GraphQL', 'Prisma', 'Hasura', 'Federation']
     }
   ];
 

@@ -14,7 +14,6 @@ interface PerformanceMetrics {
   loadTime: number;
   renderTime: number;
   memoryUsage: number;
-  memory?: number;
   bundleSize: number;
   cacheHitRate: number;
   firstContentfulPaint?: number;
@@ -24,7 +23,6 @@ interface PerformanceMetrics {
   cls?: number;
   fmp?: number;
   ttfb?: number;
-  memory?: number;
 }
 
 interface OptimizationConfig {
@@ -208,6 +206,51 @@ class PerformanceOptimizer {
     this.observers.forEach(observer => observer.disconnect());
     this.observers = [];
     this.isMonitoring = false;
+  }
+
+  private measureMemoryUsage(): void {
+    if ('memory' in performance) {
+      const memory = (performance as any).memory;
+      this.metrics.memoryUsage = memory.usedJSHeapSize;
+    }
+  }
+
+  public getPerformanceScore(): number {
+    const loadTime = this.metrics.loadTime;
+    const renderTime = this.metrics.renderTime;
+    const memoryUsage = this.metrics.memoryUsage;
+    
+    let score = 100;
+    
+    if (loadTime > 3000) score -= 20;
+    else if (loadTime > 2000) score -= 10;
+    
+    if (renderTime > 1000) score -= 20;
+    else if (renderTime > 500) score -= 10;
+    
+    if (memoryUsage > 50 * 1024 * 1024) score -= 20;
+    else if (memoryUsage > 30 * 1024 * 1024) score -= 10;
+    
+    return Math.max(0, score);
+  }
+
+  public getMetrics(): PerformanceMetrics {
+    return { ...this.metrics };
+  }
+
+  private optimizeImages(): void {
+    // Image optimization logic would go here
+    logger.info('Optimizing images...');
+  }
+
+  private enableCodeSplitting(): void {
+    // Code splitting logic would go here
+    logger.info('Enabling code splitting...');
+  }
+
+  private enableCaching(): void {
+    // Caching logic would go here
+    logger.info('Enabling caching...');
   }
 
   /**

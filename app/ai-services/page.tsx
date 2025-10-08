@@ -135,6 +135,105 @@ const AIServicesPage: React.FC = () => {
       marketPrice: '$5,000-15,000/month',
       category: 'Quality Assurance',
       technologies: ['Selenium', 'Appium', 'TestNG', 'Custom AI Models', 'CI/CD Integration']
+    },
+    {
+      title: 'AI-Powered Autonomous Vehicles',
+      description: 'Advanced AI systems for autonomous vehicle navigation, object detection, and decision making.',
+      icon: '🚗',
+      price: 'Starting at $15,000/month',
+      features: ['Computer vision', 'Sensor fusion', 'Path planning', 'Obstacle avoidance', 'Real-time decision making'],
+      benefits: ['Improve safety by 90%', 'Reduce accidents by 95%', 'Optimize traffic flow'],
+      marketPrice: '$25,000-50,000/month',
+      category: 'Autonomous Systems',
+      technologies: ['TensorFlow', 'PyTorch', 'ROS', 'OpenCV', 'Lidar Processing']
+    },
+    {
+      title: 'AI-Powered Drug Discovery',
+      description: 'Machine learning models for pharmaceutical research, drug design, and molecular analysis.',
+      icon: '💊',
+      price: 'Starting at $20,000/month',
+      features: ['Molecular modeling', 'Drug-target interaction', 'Toxicity prediction', 'Clinical trial optimization', 'Biomarker discovery'],
+      benefits: ['Reduce drug development time by 50%', 'Improve success rates by 40%', 'Lower research costs'],
+      marketPrice: '$35,000-75,000/month',
+      category: 'Healthcare AI',
+      technologies: ['DeepChem', 'RDKit', 'PyTorch', 'Molecular Dynamics', 'Bioinformatics']
+    },
+    {
+      title: 'AI-Powered Climate Modeling',
+      description: 'Advanced climate prediction and environmental monitoring using AI and satellite data.',
+      icon: '🌍',
+      price: 'Starting at $12,000/month',
+      features: ['Weather prediction', 'Climate modeling', 'Environmental monitoring', 'Disaster prediction', 'Carbon footprint analysis'],
+      benefits: ['Improve prediction accuracy by 60%', 'Enable proactive climate action', 'Reduce environmental risks'],
+      marketPrice: '$20,000-40,000/month',
+      category: 'Environmental AI',
+      technologies: ['TensorFlow', 'PyTorch', 'Satellite Data', 'Climate APIs', 'Geospatial Analysis']
+    },
+    {
+      title: 'AI-Powered Smart Cities',
+      description: 'Intelligent urban planning and management systems for sustainable smart cities.',
+      icon: '🏙️',
+      price: 'Starting at $18,000/month',
+      features: ['Traffic optimization', 'Energy management', 'Waste management', 'Public safety', 'Resource allocation'],
+      benefits: ['Reduce energy consumption by 30%', 'Improve traffic flow by 40%', 'Enhance citizen satisfaction'],
+      marketPrice: '$30,000-60,000/month',
+      category: 'Smart Cities',
+      technologies: ['IoT Sensors', 'Edge Computing', '5G Networks', 'Blockchain', 'Digital Twins']
+    },
+    {
+      title: 'AI-Powered Financial Trading',
+      description: 'Algorithmic trading systems with AI-driven market analysis and automated decision making.',
+      icon: '📈',
+      price: 'Starting at $25,000/month',
+      features: ['Market analysis', 'Risk assessment', 'Portfolio optimization', 'High-frequency trading', 'Sentiment analysis'],
+      benefits: ['Increase trading profits by 35%', 'Reduce risk exposure', 'Enable 24/7 trading'],
+      marketPrice: '$40,000-100,000/month',
+      category: 'FinTech AI',
+      technologies: ['QuantLib', 'Zipline', 'Backtrader', 'Machine Learning', 'Real-time Data']
+    },
+    {
+      title: 'AI-Powered Space Exploration',
+      description: 'AI systems for satellite operations, space mission planning, and astronomical data analysis.',
+      icon: '🚀',
+      price: 'Starting at $30,000/month',
+      features: ['Satellite control', 'Mission planning', 'Data analysis', 'Anomaly detection', 'Resource optimization'],
+      benefits: ['Improve mission success rates', 'Reduce operational costs', 'Enable autonomous operations'],
+      marketPrice: '$50,000-150,000/month',
+      category: 'Space Technology',
+      technologies: ['Space APIs', 'Satellite Data', 'Orbital Mechanics', 'Machine Learning', 'Remote Sensing']
+    },
+    {
+      title: 'AI-Powered Agriculture',
+      description: 'Precision agriculture solutions using AI for crop monitoring, yield prediction, and resource optimization.',
+      icon: '🌾',
+      price: 'Starting at $8,000/month',
+      features: ['Crop monitoring', 'Yield prediction', 'Pest detection', 'Irrigation optimization', 'Soil analysis'],
+      benefits: ['Increase crop yields by 25%', 'Reduce water usage by 30%', 'Minimize pesticide use'],
+      marketPrice: '$15,000-35,000/month',
+      category: 'AgTech AI',
+      technologies: ['Computer Vision', 'IoT Sensors', 'Drone Data', 'Satellite Imagery', 'Machine Learning']
+    },
+    {
+      title: 'AI-Powered Energy Management',
+      description: 'Smart energy systems for grid optimization, renewable energy integration, and consumption prediction.',
+      icon: '⚡',
+      price: 'Starting at $10,000/month',
+      features: ['Grid optimization', 'Demand forecasting', 'Renewable integration', 'Energy storage', 'Load balancing'],
+      benefits: ['Reduce energy costs by 20%', 'Improve grid stability', 'Increase renewable adoption'],
+      marketPrice: '$18,000-40,000/month',
+      category: 'Energy AI',
+      technologies: ['Smart Grid', 'IoT Sensors', 'Machine Learning', 'Energy APIs', 'Predictive Analytics']
+    },
+    {
+      title: 'AI-Powered Manufacturing',
+      description: 'Smart manufacturing solutions with predictive maintenance, quality control, and process optimization.',
+      icon: '🏭',
+      price: 'Starting at $15,000/month',
+      features: ['Predictive maintenance', 'Quality control', 'Process optimization', 'Supply chain management', 'Worker safety'],
+      benefits: ['Reduce downtime by 50%', 'Improve product quality', 'Increase production efficiency'],
+      marketPrice: '$25,000-60,000/month',
+      category: 'Industrial AI',
+      technologies: ['IoT Sensors', 'Computer Vision', 'Robotics', 'Edge Computing', 'Digital Twins']
     }
   ];
 

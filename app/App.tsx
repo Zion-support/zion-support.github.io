@@ -13,6 +13,9 @@ import Footer from './components/Footer';
 const HomePage = lazy(() => import('./page'));
 const AboutPage = lazy(() => import('./about/page'));
 const ServicesPage = lazy(() => import('./services/page'));
+const MicroSAASPage = lazy(() => import('./micro-saas/page'));
+const AIServicesPage = lazy(() => import('./ai-services/page'));
+const ITServicesPage = lazy(() => import('./it-services/page'));
 const ContactPage = lazy(() => import('./contact/page'));
 const TeamPage = lazy(() => import('./team/page'));
 const PrivacyPage = lazy(() => import('./privacy/page'));
@@ -106,6 +109,9 @@ const App: React.FC = () => {
                         <Route path='/' element={<HomePage />} />
                         <Route path='/about' element={<AboutPage />} />
                         <Route path='/services' element={<ServicesPage />} />
+                        <Route path='/micro-saas' element={<MicroSAASPage />} />
+                        <Route path='/ai-services' element={<AIServicesPage />} />
+                        <Route path='/it-services' element={<ITServicesPage />} />
                         <Route path='/contact' element={<ContactPage />} />
                         <Route path='/team' element={<TeamPage />} />
                         <Route path='/privacy' element={<PrivacyPage />} />

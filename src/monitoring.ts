@@ -1,15 +1,15 @@
 // Performance monitoring setup
 import analytics from './utils/analytics';
 import errorHandler from './utils/errorHandler';
-import { performanceOptimizer } from './utils/performanceOptimizer';
-import { logger } from './utils/logger';
+import { performanceOptimizer } from '../app/utils/performanceOptimizer';
+import { logger } from '../app/utils/logger';
 
 // Initialize monitoring on load
 function initializeMonitoring() {
   try {
     // Set up performance monitoring
     if (typeof window !== 'undefined') {
-      // Monitor web vitals - performanceOptimizer doesn't have init method
+      // Monitor web vitals
       performanceOptimizer.optimize();
       
       // Set up error tracking
@@ -21,7 +21,7 @@ function initializeMonitoring() {
       logger.info('Monitoring initialized successfully');
     }
   } catch (error) {
-    logger.error('Failed to initialize monitoring:', error);
+      console.error('Failed to initialize monitoring:', error);
   }
 }
 
