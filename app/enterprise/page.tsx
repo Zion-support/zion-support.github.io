@@ -1,10 +1,14 @@
 import React from 'react';
-<<<<<<< HEAD
+import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 
 const EnterprisePage: React.FC = () => {
   return (
     <>
+      <Helmet>
+        <title>Enterprise Solutions - Zion Tech Group</title>
+        <meta name="description" content="Advanced AI and IT solutions designed for large organizations. Transform your enterprise with our proven AI solutions." />
+      </Helmet>
       <div className="min-h-screen bg-slate-50 py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
@@ -140,10 +144,3 @@ const EnterprisePage: React.FC = () => {
 };
 
 export default EnterprisePage;
-=======
-import { Helmet } from 'react-helmet-async';
-
-import { Link } from 'react-router-dom';
-
-// Metadata moved to Helmet component
->>>>>>> cursor/fix-errors-and-merge-to-main-dd0b
