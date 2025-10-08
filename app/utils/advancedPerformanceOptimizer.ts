@@ -5,8 +5,8 @@ import React from 'react'
  */
 
 export class PerformanceOptimizer {
-  private static instance: PerformanceOptimizer,
-  private metrics: Map<string, number[]>
+  private static instance: PerformanceOptimizer;
+  private metrics: Map<string, number[]>;
 
   private constructor() {
     this.metrics = new Map()
@@ -74,8 +74,6 @@ export class PerformanceOptimizer {
 
   debounce<T extends (...args: unknown[]) => unknown>(
 
-  debounce<T extends (...args: unknown[]) => unknown>(
-
     func: T,
     wait: number,
   ): (...args: Parameters<T>) => void {
@@ -93,8 +91,6 @@ export class PerformanceOptimizer {
   /**
    * Implement throttle for performance
    */
-
-  throttle<T extends (...args: unknown[]) => unknown>(
 
   throttle<T extends (...args: unknown[]) => unknown>(
 

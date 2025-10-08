@@ -26,8 +26,8 @@ class EnvValidator {
     this.validateOptionalVars()
 
     return {
-      isValid: this.errors.length === 0
-      errors: this.errors
+      isValid: this.errors.length === 0,
+      errors: this.errors,
       warnings: this.warnings
     }
   }
@@ -48,9 +48,9 @@ class EnvValidator {
       )
     }
     return {
-      NODE_ENV: this.getNodeEnv()
-      NEXT_PUBLIC_API_URL: process.env['NEXT_PUBLIC_API_URL']
-      NEXT_PUBLIC_GA_ID: process.env['NEXT_PUBLIC_GA_ID']
+      NODE_ENV: this.getNodeEnv(),
+      NEXT_PUBLIC_API_URL: process.env['NEXT_PUBLIC_API_URL'],
+      NEXT_PUBLIC_GA_ID: process.env['NEXT_PUBLIC_GA_ID'],
       NEXT_PUBLIC_SITE_URL: process.env['NEXT_PUBLIC_SITE_URL']
     }
   }

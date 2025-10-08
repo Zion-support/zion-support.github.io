@@ -93,7 +93,7 @@ class PerformanceReporter {
       let clsValue = 0
       const clsObserver = new PerformanceObserver((entryList) => {
         entryList.getEntries().forEach((entry) => {
-          }
+          // Process CLS entries
         })
         this.addMetric('CLS', clsValue, this.getRating('cls', clsValue))
       })
@@ -162,8 +162,8 @@ class PerformanceReporter {
 
         slowResources.forEach((resource) => {
           logger.warn('Slow resource detected', {
-            name: resource.name
-            duration: resource.duration
+            name: resource.name,
+            duration: resource.duration,
             type: resource.initiatorType
           })
         })

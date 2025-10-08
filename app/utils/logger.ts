@@ -15,10 +15,10 @@ function isProduction(): boolean {
   }
 }
 export enum LogLevel {
-  DEBUG = 0
-  INFO = 1
-  WARN = 2
-  ERROR = 3
+  DEBUG = 0,
+  INFO = 1,
+  WARN = 2,
+  ERROR = 3,
   FATAL = 4
 }
 export interface LogEntry {
@@ -40,9 +40,9 @@ export interface LoggerConfig {
 }
 class Logger {
   private config: LoggerConfig = {
-    minLevel: isProduction() ? LogLevel.WARN : LogLevel.DEBUG
+    minLevel: isProduction() ? LogLevel.WARN : LogLevel.DEBUG,
     enableConsole: true,
-    enableRemote: isProduction()
+    enableRemote: isProduction(),
     maxBufferSize: 100,
     batchSize: 10,
     flushInterval: 30000, // 30 seconds

@@ -31,8 +31,8 @@ interface PageSEOData {
   nofollow?: boolean
 }
 class SEOOptimizer {
-  private config: SEOConfig,
-  private currentPageData: PageSEOData | null = null
+  private config: SEOConfig;
+  private currentPageData: PageSEOData | null = null;
 
   constructor(config: SEOConfig) {
     this.config = config
@@ -180,9 +180,9 @@ class SEOOptimizer {
    */
   private setupStructuredData(): void {
     const structuredData = {
-      '@context': 'https://schema.org'
-      '@type': 'WebSite'
-      name: this.config.siteName
+      '@context': 'https://schema.org',
+      '@type': 'WebSite',
+      name: this.config.siteName,
       url: this.config.siteUrl
       potentialAction: {
         '@type': 'SearchAction'

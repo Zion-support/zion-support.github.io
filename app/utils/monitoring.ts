@@ -77,7 +77,7 @@ class MonitoringService {
             }
           }
         })
-        clsObserver.observe({ entryTypes: ['layout-shift'] })
+        clsObserver.observe({ entryTypes: ['layout-shift'] });
 
         // First Contentful Paint
         const fcpObserver = new PerformanceObserver((list) => {

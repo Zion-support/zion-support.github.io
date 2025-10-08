@@ -20,9 +20,9 @@ interface SecurityMetrics {
   lastScanTime: number,
 }
 class SecurityEnhancer {
-  private config: SecurityConfig,
-  private metrics: SecurityMetrics,
-  private eventListeners: Array<() => void> = []
+  private config: SecurityConfig;
+  private metrics: SecurityMetrics;
+  private eventListeners: Array<() => void> = [];
 
   constructor(config: Partial<SecurityConfig> = {}) {
     this.config = {
@@ -31,8 +31,8 @@ class SecurityEnhancer {
       enableXSSProtection: true,
       enableCSRFProtection: true,
       enableContentSecurityPolicy: true,
-      allowedOrigins: ['https://zion.app', 'https://www.zion.app']
-      trustedDomains: ['zion.app', 'www.zion.app']
+      allowedOrigins: ['https://zion.app', 'https://www.zion.app'],
+      trustedDomains: ['zion.app', 'www.zion.app'],
       ...config
     }
     this.metrics = {

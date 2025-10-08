@@ -16,10 +16,10 @@ interface PerformanceOptimizerConfig {
   enableMonitoring: boolean,
 }
 class PerformanceOptimizer {
-  private config: PerformanceOptimizerConfig,
-  private metrics: PerformanceMetrics = {}
-  private observers: PerformanceObserver[] = []
-  private marks: Map<string, number> = new Map()
+  private config: PerformanceOptimizerConfig;
+  private metrics: PerformanceMetrics = {};
+  private observers: PerformanceObserver[] = [];
+  private marks: Map<string, number> = new Map();
 
   constructor(config: Partial<PerformanceOptimizerConfig> = {}) {
     this.config = {
@@ -66,8 +66,6 @@ class PerformanceOptimizer {
     if ('measure' in performance && 'mark' in performance) {
       try {
         performance.measure(`${markName}-duration`, markName)
-      } catch {
-      } catch {
       } catch {
         // Ignore measure errors
       }

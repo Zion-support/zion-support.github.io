@@ -86,14 +86,13 @@ class HealthCheckService {
         const duration = performance.now() - startTime
         
         checks.push({
-          ...check
-          name
+          ...check,
+          name,
           duration
         })
 
       } catch {
-logger._error(`Health check "${name}" failed`, _error as Error)
-
+        logger.error(`Health check "${name}" failed`, error as Error)
       } catch (error) {
         logger.error(`Health check "${name}" failed`, error as Error)
 

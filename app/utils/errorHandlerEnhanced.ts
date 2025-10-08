@@ -1,8 +1,8 @@
 // Enhanced Error Handler
 export class AppError extends Error {
-  statusCode: number,
-  isOperational: boolean,
-  timestamp: string,
+  statusCode: number;
+  isOperational: boolean;
+  timestamp: string;
   constructor(message: string, statusCode = 500, isOperational = true) {
     super(message)
     this.statusCode = statusCode
@@ -16,9 +16,9 @@ export const errorHandler = (error: AppError | Error) => {
   const appError = error instanceof AppError ? error : new AppError(error.message)
 
   console.error({
-    message: appError.message
-    stack: isDevelopment ? appError.stack : undefined
-    timestamp: new Date().toISOString()
+    message: appError.message,
+    stack: isDevelopment ? appError.stack : undefined,
+    timestamp: new Date().toISOString(),
     statusCode: appError.statusCode || 500
   })
 

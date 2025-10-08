@@ -7,7 +7,7 @@ export const preloadCriticalResources = () => {
 
   // Preload critical fonts
   const fontPreloads = [
-    'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap'
+    'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap',
     'https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap'
   ]
 
@@ -22,8 +22,8 @@ export const preloadCriticalResources = () => {
 
   // Preload critical images
   const criticalImages = [
-    '/images/hero-bg.jpg'
-    '/images/logo.png'
+    '/images/hero-bg.jpg',
+    '/images/logo.png',
     '/images/favicon.ico'
   ]
 

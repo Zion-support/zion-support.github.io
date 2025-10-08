@@ -38,10 +38,10 @@ interface ErrorReport {
   lastSeen: string,
 }
 class EnhancedErrorMonitoring {
-  private static instance: EnhancedErrorMonitoring,
-  private errorQueue: ErrorReport[] = []
-  private maxQueueSize = 1000
-  private sessionId: string,
+  private static instance: EnhancedErrorMonitoring;
+  private errorQueue: ErrorReport[] = [];
+  private maxQueueSize = 1000;
+  private sessionId: string;
   private userId?: string
   private isOnline = true
 
@@ -65,9 +65,9 @@ class EnhancedErrorMonitoring {
     // JavaScript errors
     window.addEventListener('error', (event) => {
       this.handleError(event.error || new Error(event.message), {
-        filename: event.filename
-        lineno: event.lineno
-        colno: event.colno
+        filename: event.filename,
+        lineno: event.lineno,
+        colno: event.colno,
         category: 'javascript'
       })
     })
