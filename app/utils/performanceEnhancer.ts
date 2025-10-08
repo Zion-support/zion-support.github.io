@@ -311,7 +311,11 @@ export const initializePerformanceEnhancements = () => {
 
   // Collect performance metrics
   const metrics = collectPerformanceMetrics();
+<<<<<<< HEAD
   if (metrics && process.env['NODE_ENV'] === 'development') {
+=======
+  if (metrics && (process.env['NODE_ENV'] === 'development' || import.meta.env.DEV)) {
+>>>>>>> cursor/fix-errors-and-merge-to-main-d277
     console.log('Performance metrics:', metrics);
   }
 };

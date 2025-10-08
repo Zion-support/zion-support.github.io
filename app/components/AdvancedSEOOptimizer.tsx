@@ -184,6 +184,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
 
   const _addStructuredData = (data: Record<string, unknown>) => {
     // Remove existing structured data
+<<<<<<< HEAD
     // if (structuredDataRef.current) {
     //   structuredDataRef.current.remove();
     // }
@@ -193,6 +194,18 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     script.textContent = JSON.stringify(data);
     document.head.appendChild(script);
   };
+=======
+    if (structuredDataRef.current) {
+      structuredDataRef.current.remove();
+    }
+  };
+
+  // const _addStructuredData = (data: Record<string, unknown>) => {
+  //   // Remove existing structured data
+  //   if (structuredDataRef.current) {
+  //     structuredDataRef.current.remove();
+  //   }
+>>>>>>> cursor/fix-errors-and-merge-to-main-d277
 
   const _trackPageView = (config: SEOData) => {
     if (typeof window !== 'undefined' && 'gtag' in window) {
