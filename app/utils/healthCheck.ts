@@ -30,7 +30,7 @@ async function checkApiHealth(): Promise<boolean> {
     // Simple health check - can be expanded to actual API endpoint
     return true;
   } catch (error) {
-    logger.error('API health check failed', error instanceof Error ? error : undefined, { source: 'healthCheck' });
+    logger.error('API health check failed', 'healthCheck', error instanceof Error ? error.message : String(error));
     return false;
   }
 }
@@ -128,12 +128,12 @@ export async function performHealthCheck(): Promise<HealthStatus> {
     },
   };
 
-  logger.group('Health Check Results', () => {
-    logger.info('Status: ' + status.status);
-    logger.info('Checks: ' + JSON.stringify(status.checks));
-    logger.info('Metrics: ' + JSON.stringify(status.metrics));
-    logger.perf('Health check duration', performance.now() - startTime);
+  logger.info('Health Check Results', 'healthCheck', {
+    status: status.status,
+    checks: status.checks,
+    metrics: status.metrics,
   });
+  logger.performance('Health check duration', 'healthCheck', { duration: performance.now() - startTime });
 
   return status;
 }
@@ -142,23 +142,22 @@ export async function performHealthCheck(): Promise<HealthStatus> {
  * Start periodic health checks
  */
 export function startHealthMonitoring(intervalMs: number = 60000): () => void {
-  logger.info('Starting health monitoring...', { source: 'healthCheck' });
+  logger.info('Starting health monitoring...', 'healthCheck');
 
   const intervalId = setInterval(async () => {
     const health = await performHealthCheck();
     
     if (health.status !== 'healthy') {
-      logger.warn('Application health degraded', { 
-        source: 'healthCheck',
+      logger.warn('Application health degraded', 'healthCheck', { 
         status: health.status,
-        checks: JSON.stringify(health.checks),
-        metrics: JSON.stringify(health.metrics)
+        checks: health.checks,
+        metrics: health.metrics
       });
     }
   }, intervalMs);
 
   return () => {
-    logger.info('Stopping health monitoring', { source: 'healthCheck' });
+    logger.info('Stopping health monitoring', 'healthCheck');
     clearInterval(intervalId);
   };
 }
