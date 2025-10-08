@@ -1,6 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Star, Brain, Zap, Target, BarChart, MessageSquare, Eye, Cpu, Sparkles } from 'lucide-react';
+import '../futuristic-design.css';
 
 const AIServicesPage: React.FC = () => {
   const aiServices = [
@@ -256,6 +257,293 @@ const AIServicesPage: React.FC = () => {
       marketPrice: '$30,000-90,000/month',
       category: 'Space AI',
       technologies: ['Astropy', 'TensorFlow', 'PyTorch', 'OpenCV', 'Space Data APIs']
+    },
+    // Additional Real AI Services
+    {
+      title: 'AI-Powered Email Security',
+      description: 'Advanced email threat protection using machine learning to detect phishing, malware, and spam.',
+      icon: '🛡️',
+      price: 'Starting at $2,500/month',
+      features: ['Phishing detection', 'Malware scanning', 'Spam filtering', 'Email encryption', 'Threat intelligence'],
+      benefits: ['Block 99.9% of threats', 'Reduce security incidents by 95%', 'Comply with regulations'],
+      marketPrice: '$4,000-8,000/month',
+      category: 'Cybersecurity AI',
+      technologies: ['Machine Learning', 'Python', 'TensorFlow', 'SMTP', 'Custom AI Models']
+    },
+    {
+      title: 'AI-Powered Document Processing',
+      description: 'Intelligent document analysis, extraction, and processing for business automation.',
+      icon: '📄',
+      price: 'Starting at $1,800/month',
+      features: ['OCR processing', 'Data extraction', 'Document classification', 'Workflow automation', 'Multi-format support'],
+      benefits: ['Process documents 10x faster', 'Eliminate manual data entry', '99.5% accuracy rate'],
+      marketPrice: '$3,000-6,000/month',
+      category: 'Document AI',
+      technologies: ['Tesseract', 'AWS Textract', 'Azure Form Recognizer', 'Custom ML Models']
+    },
+    {
+      title: 'AI-Powered Customer Service',
+      description: 'Intelligent customer support with natural language processing and automated responses.',
+      icon: '💬',
+      price: 'Starting at $2,200/month',
+      features: ['Natural language processing', 'Automated responses', 'Sentiment analysis', 'Multi-language support', 'CRM integration'],
+      benefits: ['Reduce support costs by 60%', 'Provide 24/7 support', 'Improve response time'],
+      marketPrice: '$3,500-7,000/month',
+      category: 'Customer Service AI',
+      technologies: ['Dialogflow', 'Rasa', 'OpenAI GPT', 'Node.js', 'MongoDB']
+    },
+    {
+      title: 'AI-Powered Email Marketing',
+      description: 'Intelligent email campaigns with personalization, A/B testing, and optimal send times.',
+      icon: '📧',
+      price: 'Starting at $1,500/month',
+      features: ['Smart segmentation', 'A/B testing automation', 'Send time optimization', 'Content personalization', 'Performance analytics'],
+      benefits: ['Increase open rates by 35%', 'Boost conversion by 50%', 'Save 15 hours/week'],
+      marketPrice: '$2,500-5,000/month',
+      category: 'Marketing AI',
+      technologies: ['SendGrid', 'Mailchimp API', 'Machine Learning', 'React', 'Node.js']
+    },
+    {
+      title: 'AI-Powered Inventory Management',
+      description: 'Predictive inventory management with demand forecasting and automated reordering.',
+      icon: '📦',
+      price: 'Starting at $2,800/month',
+      features: ['Demand forecasting', 'Automated reordering', 'Stock optimization', 'Supplier management', 'Cost analysis'],
+      benefits: ['Reduce stockouts by 60%', 'Lower inventory costs by 25%', 'Improve cash flow'],
+      marketPrice: '$4,500-9,000/month',
+      category: 'Supply Chain AI',
+      technologies: ['Python', 'TensorFlow', 'PostgreSQL', 'Redis', 'Custom ML Models']
+    },
+    {
+      title: 'AI-Powered HR Recruitment',
+      description: 'Intelligent resume screening, candidate matching, and interview scheduling automation.',
+      icon: '👥',
+      price: 'Starting at $2,000/month',
+      features: ['Resume parsing', 'Candidate scoring', 'Interview scheduling', 'Onboarding automation', 'Performance tracking'],
+      benefits: ['Reduce hiring time by 50%', 'Improve candidate quality', 'Streamline HR processes'],
+      marketPrice: '$3,500-7,000/month',
+      category: 'HR AI',
+      technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL']
+    },
+    {
+      title: 'AI-Powered Social Media Management',
+      description: 'Automated social media content creation, scheduling, and engagement optimization.',
+      icon: '📱',
+      price: 'Starting at $1,200/month',
+      features: ['Content generation', 'Optimal posting times', 'Hashtag optimization', 'Engagement tracking', 'Multi-platform management'],
+      benefits: ['Increase engagement by 45%', 'Save 20 hours/week', 'Grow followers organically'],
+      marketPrice: '$2,000-4,000/month',
+      category: 'Social Media AI',
+      technologies: ['Twitter API', 'Instagram API', 'OpenAI GPT', 'React', 'Node.js']
+    },
+    {
+      title: 'AI-Powered Financial Planning',
+      description: 'Personalized financial planning, investment recommendations, and budget optimization.',
+      icon: '💰',
+      price: 'Starting at $1,800/month',
+      features: ['Portfolio analysis', 'Risk assessment', 'Goal tracking', 'Tax optimization', 'Retirement planning'],
+      benefits: ['Optimize investment returns', 'Reduce financial stress', 'Achieve goals faster'],
+      marketPrice: '$3,000-6,000/month',
+      category: 'Finance AI',
+      technologies: ['Python', 'Pandas', 'NumPy', 'React', 'PostgreSQL']
+    },
+    {
+      title: 'AI-Powered Project Management',
+      description: 'AI-driven project planning, resource allocation, and deadline optimization.',
+      icon: '📋',
+      price: 'Starting at $2,500/month',
+      features: ['Task automation', 'Resource optimization', 'Risk prediction', 'Progress tracking', 'Team collaboration'],
+      benefits: ['Complete projects 30% faster', 'Reduce project costs', 'Improve team productivity'],
+      marketPrice: '$4,000-8,000/month',
+      category: 'Project Management AI',
+      technologies: ['React', 'Node.js', 'MongoDB', 'Machine Learning', 'Custom AI Models']
+    },
+    {
+      title: 'AI-Powered Content Generation',
+      description: 'High-quality content creation for blogs, social media, and marketing materials.',
+      icon: '✍️',
+      price: 'Starting at $1,500/month',
+      features: ['Blog post generation', 'Social media content', 'Email templates', 'SEO optimization', 'Brand voice consistency'],
+      benefits: ['Create content 5x faster', 'Improve SEO rankings', 'Maintain consistent quality'],
+      marketPrice: '$2,500-5,000/month',
+      category: 'Content AI',
+      technologies: ['OpenAI GPT', 'Claude', 'React', 'Node.js', 'Custom Fine-tuned Models']
+    },
+    {
+      title: 'AI-Powered Lead Scoring',
+      description: 'Intelligent lead qualification and scoring to maximize conversion rates.',
+      icon: '🎯',
+      price: 'Starting at $2,200/month',
+      features: ['Behavioral analysis', 'Lead scoring', 'Conversion prediction', 'CRM integration', 'Follow-up automation'],
+      benefits: ['Increase conversion by 40%', 'Focus on high-value leads', 'Reduce sales cycle time'],
+      marketPrice: '$3,500-7,000/month',
+      category: 'Sales AI',
+      technologies: ['Machine Learning', 'Python', 'Salesforce API', 'HubSpot API', 'Custom AI Models']
+    },
+    {
+      title: 'AI-Powered Security Monitoring',
+      description: 'Automated threat detection, vulnerability scanning, and security incident response.',
+      icon: '🔒',
+      price: 'Starting at $3,500/month',
+      features: ['Threat detection', 'Vulnerability scanning', 'Incident response', 'Compliance monitoring', 'Security reporting'],
+      benefits: ['Prevent 95% of security breaches', 'Reduce response time by 80%', 'Ensure compliance'],
+      marketPrice: '$6,000-12,000/month',
+      category: 'Cybersecurity AI',
+      technologies: ['SIEM', 'EDR', 'Machine Learning', 'Python', 'Custom AI Models']
+    },
+    {
+      title: 'AI-Powered Code Review',
+      description: 'Automated code analysis, bug detection, and security vulnerability scanning.',
+      icon: '💻',
+      price: 'Starting at $2,800/month',
+      features: ['Automated code review', 'Bug detection', 'Security scanning', 'Performance analysis', 'Best practices suggestions'],
+      benefits: ['Reduce bugs by 60%', 'Improve code quality', 'Accelerate development cycles'],
+      marketPrice: '$4,500-9,000/month',
+      category: 'Development AI',
+      technologies: ['GitHub Actions', 'SonarQube', 'ESLint', 'Prettier', 'Custom AI Models']
+    },
+    {
+      title: 'AI-Powered Smart Contracts',
+      description: 'AI-powered smart contract analysis and security auditing for blockchain projects.',
+      icon: '⛓️',
+      price: 'Starting at $4,500/month',
+      features: ['Smart contract analysis', 'Vulnerability detection', 'Gas optimization', 'Compliance checking', 'Audit reports'],
+      benefits: ['Prevent costly exploits', 'Ensure contract security', 'Optimize gas usage'],
+      marketPrice: '$7,500-15,000/month',
+      category: 'Blockchain AI',
+      technologies: ['Ethereum', 'Solidity', 'Web3.js', 'IPFS', 'Custom AI Models']
+    },
+    {
+      title: 'AI-Powered Voice Assistant',
+      description: 'Create custom voice assistants and chatbots for customer service and internal operations.',
+      icon: '🎤',
+      price: 'Starting at $2,200/month',
+      features: ['Voice recognition', 'Natural language processing', 'Multi-language support', 'Integration APIs', 'Analytics dashboard'],
+      benefits: ['Improve customer service', 'Reduce support costs', '24/7 availability'],
+      marketPrice: '$3,500-7,000/month',
+      category: 'Voice AI',
+      technologies: ['Speech Recognition', 'NLP', 'React', 'Node.js', 'Custom AI Models']
+    },
+    {
+      title: 'AI-Powered Predictive Maintenance',
+      description: 'Machine learning-powered equipment monitoring and predictive maintenance scheduling.',
+      icon: '🔧',
+      price: 'Starting at $3,200/month',
+      features: ['Equipment monitoring', 'Failure prediction', 'Maintenance scheduling', 'Cost optimization', 'Alert system'],
+      benefits: ['Reduce downtime by 70%', 'Lower maintenance costs', 'Extend equipment life'],
+      marketPrice: '$5,500-12,000/month',
+      category: 'Manufacturing AI',
+      technologies: ['IoT Sensors', 'Machine Learning', 'Python', 'React', 'Custom AI Models']
+    },
+    {
+      title: 'AI-Powered SEO Optimization',
+      description: 'Automated SEO analysis, keyword optimization, and content improvement suggestions.',
+      icon: '🔍',
+      price: 'Starting at $1,500/month',
+      features: ['SEO analysis', 'Keyword research', 'Content optimization', 'Competitor analysis', 'Rank tracking'],
+      benefits: ['Increase organic traffic by 150%', 'Improve search rankings', 'Save 20 hours/week'],
+      marketPrice: '$2,500-5,000/month',
+      category: 'Marketing AI',
+      technologies: ['SEO APIs', 'Machine Learning', 'React', 'Node.js', 'Custom AI Models']
+    },
+    {
+      title: 'AI-Powered Energy Management',
+      description: 'AI-driven energy consumption optimization and cost reduction for businesses.',
+      icon: '⚡',
+      price: 'Starting at $2,800/month',
+      features: ['Energy monitoring', 'Consumption optimization', 'Cost analysis', 'Renewable integration', 'Carbon tracking'],
+      benefits: ['Reduce energy costs by 30%', 'Lower carbon footprint', 'Improve sustainability'],
+      marketPrice: '$4,500-9,000/month',
+      category: 'Energy AI',
+      technologies: ['IoT Sensors', 'Machine Learning', 'Python', 'React', 'Custom AI Models']
+    },
+    {
+      title: 'AI-Powered Legal Document Analysis',
+      description: 'Automated legal document review, contract analysis, and compliance checking.',
+      icon: '⚖️',
+      price: 'Starting at $4,000/month',
+      features: ['Document analysis', 'Contract review', 'Compliance checking', 'Risk assessment', 'Legal research'],
+      benefits: ['Reduce legal costs by 50%', 'Faster document processing', 'Improved accuracy'],
+      marketPrice: '$6,500-15,000/month',
+      category: 'Legal AI',
+      technologies: ['NLP', 'Machine Learning', 'Python', 'React', 'Custom AI Models']
+    },
+    {
+      title: 'AI-Powered Supply Chain Optimization',
+      description: 'AI-powered supply chain visibility, demand forecasting, and logistics optimization.',
+      icon: '🚚',
+      price: 'Starting at $4,500/month',
+      features: ['Supply chain visibility', 'Demand forecasting', 'Route optimization', 'Inventory management', 'Risk assessment'],
+      benefits: ['Reduce logistics costs by 25%', 'Improve delivery times', 'Minimize supply disruptions'],
+      marketPrice: '$7,500-18,000/month',
+      category: 'Supply Chain AI',
+      technologies: ['Apache Spark', 'TensorFlow', 'PyTorch', 'OR-Tools', 'Gurobi']
+    },
+    {
+      title: 'AI-Powered Learning Management',
+      description: 'Personalized learning paths, automated assessments, and skill gap analysis.',
+      icon: '🎓',
+      price: 'Starting at $2,200/month',
+      features: ['Personalized learning', 'Automated assessments', 'Skill tracking', 'Progress analytics', 'Content recommendations'],
+      benefits: ['Improve learning outcomes', 'Reduce training costs', 'Track skill development'],
+      marketPrice: '$3,500-7,000/month',
+      category: 'Education AI',
+      technologies: ['Machine Learning', 'React', 'Node.js', 'MongoDB', 'Custom AI Models']
+    },
+    {
+      title: 'AI-Powered Property Management',
+      description: 'AI-driven property management with tenant screening, maintenance scheduling, and rent optimization.',
+      icon: '🏢',
+      price: 'Starting at $2,800/month',
+      features: ['Tenant screening', 'Maintenance scheduling', 'Rent optimization', 'Lease management', 'Financial reporting'],
+      benefits: ['Increase rental income by 15%', 'Reduce vacancy rates', 'Streamline operations'],
+      marketPrice: '$4,500-9,000/month',
+      category: 'Real Estate AI',
+      technologies: ['Machine Learning', 'Python', 'React', 'PostgreSQL', 'Custom AI Models']
+    },
+    {
+      title: 'AI-Powered Quality Assurance',
+      description: 'Automated quality testing, defect detection, and process optimization for manufacturing.',
+      icon: '✅',
+      price: 'Starting at $3,200/month',
+      features: ['Quality testing', 'Defect detection', 'Process optimization', 'Compliance monitoring', 'Quality reporting'],
+      benefits: ['Improve product quality', 'Reduce defects by 80%', 'Ensure compliance'],
+      marketPrice: '$5,500-12,000/month',
+      category: 'Manufacturing AI',
+      technologies: ['Computer Vision', 'Machine Learning', 'Python', 'React', 'Custom AI Models']
+    },
+    {
+      title: 'AI-Powered Fleet Management',
+      description: 'AI-powered fleet tracking, route optimization, and predictive maintenance for vehicles.',
+      icon: '🚛',
+      price: 'Starting at $2,500/month',
+      features: ['Fleet tracking', 'Route optimization', 'Driver behavior analysis', 'Fuel optimization', 'Maintenance scheduling'],
+      benefits: ['Reduce fuel costs by 20%', 'Improve driver safety', 'Optimize routes'],
+      marketPrice: '$4,000-8,000/month',
+      category: 'Transportation AI',
+      technologies: ['IoT Sensors', 'Machine Learning', 'Python', 'React', 'Custom AI Models']
+    },
+    {
+      title: 'AI-Powered Compliance Monitoring',
+      description: 'Automated compliance monitoring, regulatory updates, and risk assessment for various industries.',
+      icon: '📋',
+      price: 'Starting at $3,500/month',
+      features: ['Compliance monitoring', 'Regulatory updates', 'Risk assessment', 'Audit preparation', 'Reporting'],
+      benefits: ['Ensure compliance', 'Reduce audit costs', 'Minimize regulatory risks'],
+      marketPrice: '$6,000-12,000/month',
+      category: 'Compliance AI',
+      technologies: ['NLP', 'Machine Learning', 'Python', 'React', 'Custom AI Models']
+    },
+    {
+      title: 'AI-Powered Waste Management',
+      description: 'AI-driven waste optimization, recycling tracking, and sustainability reporting.',
+      icon: '♻️',
+      price: 'Starting at $2,200/month',
+      features: ['Waste tracking', 'Recycling optimization', 'Sustainability reporting', 'Cost analysis', 'Compliance monitoring'],
+      benefits: ['Reduce waste by 40%', 'Improve recycling rates', 'Lower disposal costs'],
+      marketPrice: '$3,500-7,000/month',
+      category: 'Sustainability AI',
+      technologies: ['IoT Sensors', 'Machine Learning', 'Python', 'React', 'Custom AI Models']
     }
   ];
 
@@ -269,23 +557,24 @@ const AIServicesPage: React.FC = () => {
         <meta name="keywords" content="AI services, machine learning, artificial intelligence, NLP, computer vision, automation, AI consulting" />
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-purple-50">
+      <div className="min-h-screen futuristic-bg cyber-grid">
         {/* Hero Section */}
         <section className="relative overflow-hidden bg-gradient-to-r from-purple-600 to-pink-700 text-white py-20">
           <div className="absolute inset-0 bg-black opacity-20"></div>
+          <div className="absolute inset-0 matrix-rain"></div>
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+              <h1 className="text-4xl md:text-6xl font-bold mb-6 neon-text glitch" data-text="Advanced AI Services">
                 Advanced AI Services
               </h1>
-              <p className="text-xl md:text-2xl mb-8 text-purple-100 max-w-3xl mx-auto">
+              <p className="text-xl md:text-2xl mb-8 text-purple-100 max-w-3xl mx-auto holographic">
                 Transform your business with cutting-edge artificial intelligence solutions
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-colors">
+                <button className="neon-button">
                   Start AI Journey
                 </button>
-                <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors">
+                <button className="neon-button neon-text-purple">
                   View AI Solutions
                 </button>
               </div>
@@ -294,44 +583,45 @@ const AIServicesPage: React.FC = () => {
         </section>
 
         {/* Key Benefits */}
-        <section className="py-16 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section className="py-16 bg-gray-900 relative overflow-hidden">
+          <div className="absolute inset-0 matrix-rain"></div>
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 neon-text">
                 Why Choose Our AI Services?
               </h2>
-              <p className="text-xl text-gray-600">
+              <p className="text-xl text-gray-300 holographic">
                 Cutting-edge AI solutions delivered by PhD-level experts with proven industry experience
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              <div className="text-center">
-                <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Brain className="w-8 h-8 text-purple-600" />
+              <div className="text-center futuristic-card p-6">
+                <div className="bg-purple-900 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Brain className="w-8 h-8 text-purple-300" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">AI Experts</h3>
-                <p className="text-gray-600">PhD-level data scientists and AI researchers</p>
+                <h3 className="text-xl font-semibold text-white mb-2 neon-text">AI Experts</h3>
+                <p className="text-gray-300">PhD-level data scientists and AI researchers</p>
               </div>
-              <div className="text-center">
-                <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Zap className="w-8 h-8 text-green-600" />
+              <div className="text-center futuristic-card p-6">
+                <div className="bg-green-900 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Zap className="w-8 h-8 text-green-300" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Rapid Deployment</h3>
-                <p className="text-gray-600">Deploy AI solutions in weeks, not months</p>
+                <h3 className="text-xl font-semibold text-white mb-2 neon-text-pink">Rapid Deployment</h3>
+                <p className="text-gray-300">Deploy AI solutions in weeks, not months</p>
               </div>
-              <div className="text-center">
-                <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Target className="w-8 h-8 text-blue-600" />
+              <div className="text-center futuristic-card p-6">
+                <div className="bg-blue-900 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Target className="w-8 h-8 text-blue-300" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Custom Solutions</h3>
-                <p className="text-gray-600">Tailored AI models for your specific use case</p>
+                <h3 className="text-xl font-semibold text-white mb-2 neon-text-purple">Custom Solutions</h3>
+                <p className="text-gray-300">Tailored AI models for your specific use case</p>
               </div>
-              <div className="text-center">
-                <div className="bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <BarChart className="w-8 h-8 text-orange-600" />
+              <div className="text-center futuristic-card p-6">
+                <div className="bg-orange-900 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <BarChart className="w-8 h-8 text-orange-300" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Proven ROI</h3>
-                <p className="text-gray-600">Average 400% ROI within 12 months</p>
+                <h3 className="text-xl font-semibold text-white mb-2 neon-text">Proven ROI</h3>
+                <p className="text-gray-300">Average 400% ROI within 12 months</p>
               </div>
             </div>
           </div>
@@ -353,27 +643,27 @@ const AIServicesPage: React.FC = () => {
                 {aiServices
                   .filter(service => service.category === category)
                   .map((service, index) => (
-                    <div key={index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
-                      <div className="text-4xl mb-4">{service.icon}</div>
-                      <h3 className="text-xl font-semibold text-gray-900 mb-3">{service.title}</h3>
-                      <p className="text-gray-600 mb-4">{service.description}</p>
+                    <div key={index} className="futuristic-card p-6 floating-element">
+                      <div className="text-4xl mb-4 floating-element">{service.icon}</div>
+                      <h3 className="text-xl font-semibold text-white mb-3 neon-text">{service.title}</h3>
+                      <p className="text-gray-300 mb-4">{service.description}</p>
                       
                       <div className="mb-4">
                         <div className="flex items-center justify-between mb-2">
-                          <span className="text-2xl font-bold text-purple-600">{service.price}</span>
-                          <span className="text-sm text-gray-500">Market: {service.marketPrice}</span>
+                          <span className="text-2xl font-bold neon-text-pink">{service.price}</span>
+                          <span className="text-sm text-gray-400">Market: {service.marketPrice}</span>
                         </div>
-                        <div className="text-sm text-green-600 font-semibold">
+                        <div className="text-sm text-green-400 font-semibold">
                           Save up to 50% vs market rates
                         </div>
                       </div>
 
                       <div className="mb-4">
-                        <h4 className="font-semibold text-gray-900 mb-2">Key Features:</h4>
+                        <h4 className="font-semibold text-white mb-2">Key Features:</h4>
                         <ul className="space-y-1">
                           {service.features.map((feature, featureIndex) => (
-                            <li key={featureIndex} className="flex items-center text-sm text-gray-600">
-                              <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                            <li key={featureIndex} className="flex items-center text-sm text-gray-300">
+                              <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                               {feature}
                             </li>
                           ))}
@@ -381,10 +671,10 @@ const AIServicesPage: React.FC = () => {
                       </div>
 
                       <div className="mb-4">
-                        <h4 className="font-semibold text-gray-900 mb-2">Technologies:</h4>
+                        <h4 className="font-semibold text-white mb-2">Technologies:</h4>
                         <div className="flex flex-wrap gap-2">
                           {service.technologies.map((tech, techIndex) => (
-                            <span key={techIndex} className="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded">
+                            <span key={techIndex} className="bg-purple-900 text-purple-300 text-xs px-2 py-1 rounded border border-purple-600">
                               {tech}
                             </span>
                           ))}
@@ -392,18 +682,18 @@ const AIServicesPage: React.FC = () => {
                       </div>
 
                       <div className="mb-6">
-                        <h4 className="font-semibold text-gray-900 mb-2">Business Benefits:</h4>
+                        <h4 className="font-semibold text-white mb-2">Business Benefits:</h4>
                         <ul className="space-y-1">
                           {service.benefits.map((benefit, benefitIndex) => (
-                            <li key={benefitIndex} className="flex items-center text-sm text-gray-600">
-                              <Star className="w-4 h-4 text-yellow-500 mr-2 flex-shrink-0" />
+                            <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
+                              <Star className="w-4 h-4 text-yellow-400 mr-2 flex-shrink-0" />
                               {benefit}
                             </li>
                           ))}
                         </ul>
                       </div>
 
-                      <button className="w-full bg-purple-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-purple-700 transition-colors">
+                      <button className="w-full neon-button">
                         Get AI Consultation
                       </button>
                     </div>
@@ -460,24 +750,25 @@ const AIServicesPage: React.FC = () => {
         </section>
 
         {/* Contact Section */}
-        <section className="py-16 bg-gradient-to-r from-purple-600 to-pink-600 text-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+        <section className="py-16 bg-gradient-to-r from-purple-600 to-pink-600 text-white relative overflow-hidden">
+          <div className="absolute inset-0 matrix-rain"></div>
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 neon-text glitch" data-text="Ready to Harness the Power of AI?">
               Ready to Harness the Power of AI?
             </h2>
-            <p className="text-xl mb-8 text-purple-100">
+            <p className="text-xl mb-8 text-purple-100 holographic">
               Contact our AI experts for a free consultation and custom AI strategy development
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
                 href="tel:+13024640950"
-                className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-colors inline-flex items-center"
+                className="neon-button"
               >
                 📞 +1 302 464 0950
               </a>
               <a 
                 href="mailto:kleber@ziontechgroup.com"
-                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
+                className="neon-button neon-text-purple"
               >
                 ✉️ kleber@ziontechgroup.com
               </a>

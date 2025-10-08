@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ChevronDown, Phone, Mail, MapPin } from 'lucide-react';
+import '../futuristic-design.css';
 
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,24 +12,25 @@ const Navigation: React.FC = () => {
   return (
     <>
       {/* Top Contact Bar */}
-      <div className="bg-blue-600 text-white py-2 text-sm">
-        <div className="container mx-auto px-4">
+      <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-2 text-sm relative overflow-hidden">
+        <div className="absolute inset-0 matrix-rain"></div>
+        <div className="relative container mx-auto px-4">
           <div className="flex flex-col sm:flex-row justify-between items-center">
             <div className="flex flex-col sm:flex-row items-center space-y-1 sm:space-y-0 sm:space-x-6">
               <div className="flex items-center">
                 <Phone className="w-4 h-4 mr-2" />
-                <a href="tel:+13024640950" className="hover:text-blue-200">+1 302 464 0950</a>
+                <a href="tel:+13024640950" className="hover:neon-text transition-colors">+1 302 464 0950</a>
               </div>
               <div className="flex items-center">
                 <Mail className="w-4 h-4 mr-2" />
-                <a href="mailto:kleber@ziontechgroup.com" className="hover:text-blue-200">kleber@ziontechgroup.com</a>
+                <a href="mailto:kleber@ziontechgroup.com" className="hover:neon-text transition-colors">kleber@ziontechgroup.com</a>
               </div>
               <div className="flex items-center">
                 <MapPin className="w-4 h-4 mr-2" />
                 <span>Middletown, DE 19709</span>
               </div>
             </div>
-            <div className="text-xs">
+            <div className="text-xs neon-text">
               <span>🚀 Leading AI & IT Solutions Provider</span>
             </div>
           </div>
@@ -36,21 +38,22 @@ const Navigation: React.FC = () => {
       </div>
 
       {/* Main Navigation */}
-      <nav className="bg-white shadow-lg sticky top-0 z-50">
-        <div className="container mx-auto px-4">
+      <nav className="bg-gray-900 shadow-lg sticky top-0 z-50 relative overflow-hidden">
+        <div className="absolute inset-0 cyber-grid"></div>
+        <div className="relative container mx-auto px-4">
           <div className="flex justify-between items-center py-4">
             {/* Logo */}
-            <Link to="/" className="text-2xl font-bold text-blue-600 flex items-center">
-              <span className="text-3xl mr-2">⚡</span>
+            <Link to="/" className="text-2xl font-bold text-white flex items-center neon-text">
+              <span className="text-3xl mr-2 floating-element">⚡</span>
               Zion Tech Group
             </Link>
 
             {/* Desktop Menu */}
             <div className="hidden lg:flex space-x-8">
-              <Link to="/" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
+              <Link to="/" className="text-gray-300 hover:neon-text transition-colors font-medium">
                 Home
               </Link>
-              <Link to="/about" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
+              <Link to="/about" className="text-gray-300 hover:neon-text transition-colors font-medium">
                 About
               </Link>
               
@@ -58,41 +61,41 @@ const Navigation: React.FC = () => {
               <div className="relative">
                 <button
                   onClick={() => setServicesOpen(!servicesOpen)}
-                  className="text-gray-700 hover:text-blue-600 transition-colors flex items-center font-medium"
+                  className="text-gray-300 hover:neon-text transition-colors flex items-center font-medium"
                 >
                   Services
                   <ChevronDown className="w-4 h-4 ml-1" />
                 </button>
                 {servicesOpen && (
-                  <div className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-xl border py-4 z-50">
+                  <div className="absolute top-full left-0 mt-2 w-80 futuristic-card py-4 z-50">
                     <div className="grid grid-cols-2 gap-4 px-4">
                       <div>
-                        <h3 className="font-semibold text-gray-900 mb-2">Core Services</h3>
-                        <Link to="/services" className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
+                        <h3 className="font-semibold text-white mb-2 neon-text">Core Services</h3>
+                        <Link to="/services" className="block px-3 py-2 text-gray-300 hover:neon-text rounded">
                           All Services
                         </Link>
-                        <Link to="/micro-saas" className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
+                        <Link to="/micro-saas" className="block px-3 py-2 text-gray-300 hover:neon-text rounded">
                           Micro SAAS Solutions
                         </Link>
-                        <Link to="/ai-services" className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
+                        <Link to="/ai-services" className="block px-3 py-2 text-gray-300 hover:neon-text rounded">
                           AI Services
                         </Link>
-                        <Link to="/it-services" className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
+                        <Link to="/it-services" className="block px-3 py-2 text-gray-300 hover:neon-text rounded">
                           IT Services
                         </Link>
                       </div>
                       <div>
-                        <h3 className="font-semibold text-gray-900 mb-2">Specialized</h3>
-                        <Link to="/quantum-computing" className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
+                        <h3 className="font-semibold text-white mb-2 neon-text-purple">Specialized</h3>
+                        <Link to="/quantum-computing" className="block px-3 py-2 text-gray-300 hover:neon-text rounded">
                           Quantum Computing
                         </Link>
-                        <Link to="/autonomous-systems" className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
+                        <Link to="/autonomous-systems" className="block px-3 py-2 text-gray-300 hover:neon-text rounded">
                           Autonomous Systems
                         </Link>
-                        <Link to="/blockchain-web3" className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
+                        <Link to="/blockchain-web3" className="block px-3 py-2 text-gray-300 hover:neon-text rounded">
                           Blockchain & Web3
                         </Link>
-                        <Link to="/cybersecurity" className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
+                        <Link to="/cybersecurity" className="block px-3 py-2 text-gray-300 hover:neon-text rounded">
                           Cybersecurity
                         </Link>
                       </div>
@@ -101,16 +104,16 @@ const Navigation: React.FC = () => {
                 )}
               </div>
 
-              <Link to="/case-studies" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
+              <Link to="/case-studies" className="text-gray-300 hover:neon-text transition-colors font-medium">
                 Case Studies
               </Link>
-              <Link to="/enterprise" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
+              <Link to="/enterprise" className="text-gray-300 hover:neon-text transition-colors font-medium">
                 Enterprise
               </Link>
-              <Link to="/team" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
+              <Link to="/team" className="text-gray-300 hover:neon-text transition-colors font-medium">
                 Team
               </Link>
-              <Link to="/contact" className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors font-medium">
+              <Link to="/contact" className="neon-button">
                 Contact
               </Link>
             </div>
@@ -118,7 +121,7 @@ const Navigation: React.FC = () => {
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="lg:hidden text-gray-700 hover:text-blue-600"
+              className="lg:hidden text-gray-300 hover:neon-text"
             >
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path
@@ -133,56 +136,56 @@ const Navigation: React.FC = () => {
 
           {/* Mobile Menu */}
           {isOpen && (
-            <div className="lg:hidden py-4 border-t">
+            <div className="lg:hidden py-4 border-t border-gray-700">
               <div className="flex flex-col space-y-4">
-                <Link to="/" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
+                <Link to="/" className="text-gray-300 hover:neon-text transition-colors font-medium">
                   Home
                 </Link>
-                <Link to="/about" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
+                <Link to="/about" className="text-gray-300 hover:neon-text transition-colors font-medium">
                   About
                 </Link>
                 
                 {/* Services Section */}
                 <div className="space-y-2">
-                  <div className="text-gray-700 font-semibold text-lg">Services</div>
+                  <div className="text-white font-semibold text-lg neon-text">Services</div>
                   <div className="ml-4 space-y-2">
-                    <Link to="/services" className="block text-gray-600 hover:text-blue-600 transition-colors">
+                    <Link to="/services" className="block text-gray-300 hover:neon-text transition-colors">
                       All Services
                     </Link>
-                    <Link to="/micro-saas" className="block text-gray-600 hover:text-blue-600 transition-colors">
+                    <Link to="/micro-saas" className="block text-gray-300 hover:neon-text transition-colors">
                       Micro SAAS Solutions
                     </Link>
-                    <Link to="/ai-services" className="block text-gray-600 hover:text-blue-600 transition-colors">
+                    <Link to="/ai-services" className="block text-gray-300 hover:neon-text transition-colors">
                       AI Services
                     </Link>
-                    <Link to="/it-services" className="block text-gray-600 hover:text-blue-600 transition-colors">
+                    <Link to="/it-services" className="block text-gray-300 hover:neon-text transition-colors">
                       IT Services
                     </Link>
-                    <Link to="/quantum-computing" className="block text-gray-600 hover:text-blue-600 transition-colors">
+                    <Link to="/quantum-computing" className="block text-gray-300 hover:neon-text transition-colors">
                       Quantum Computing
                     </Link>
-                    <Link to="/autonomous-systems" className="block text-gray-600 hover:text-blue-600 transition-colors">
+                    <Link to="/autonomous-systems" className="block text-gray-300 hover:neon-text transition-colors">
                       Autonomous Systems
                     </Link>
-                    <Link to="/blockchain-web3" className="block text-gray-600 hover:text-blue-600 transition-colors">
+                    <Link to="/blockchain-web3" className="block text-gray-300 hover:neon-text transition-colors">
                       Blockchain & Web3
                     </Link>
-                    <Link to="/cybersecurity" className="block text-gray-600 hover:text-blue-600 transition-colors">
+                    <Link to="/cybersecurity" className="block text-gray-300 hover:neon-text transition-colors">
                       Cybersecurity
                     </Link>
                   </div>
                 </div>
                 
-                <Link to="/case-studies" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
+                <Link to="/case-studies" className="text-gray-300 hover:neon-text transition-colors font-medium">
                   Case Studies
                 </Link>
-                <Link to="/enterprise" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
+                <Link to="/enterprise" className="text-gray-300 hover:neon-text transition-colors font-medium">
                   Enterprise
                 </Link>
-                <Link to="/team" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
+                <Link to="/team" className="text-gray-300 hover:neon-text transition-colors font-medium">
                   Team
                 </Link>
-                <Link to="/contact" className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors font-medium text-center">
+                <Link to="/contact" className="neon-button text-center">
                   Contact Us
                 </Link>
               </div>

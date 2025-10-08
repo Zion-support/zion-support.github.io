@@ -1,6 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Globe } from 'lucide-react';
+import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain, Cpu, Database, Cloud, Lock, BarChart, MessageSquare, Eye, Target, Sparkles } from 'lucide-react';
+import '../futuristic-design.css';
 
 const MicroSAASPage: React.FC = () => {
   const microSAASServices = [
@@ -1520,6 +1521,216 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$400-800/month',
       category: 'Customer Intelligence',
       technologies: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
+    },
+    // Additional Real Micro SAAS Services
+    {
+      title: 'AI-Powered Email Security',
+      description: 'Advanced email threat protection with AI-powered phishing detection and malware scanning.',
+      icon: '🛡️',
+      price: '$79/month',
+      features: ['Phishing detection', 'Malware scanning', 'Spam filtering', 'Email encryption', 'Threat intelligence'],
+      benefits: ['Block 99.9% of threats', 'Reduce security incidents by 95%', 'Comply with regulations'],
+      marketPrice: '$120-250/month',
+      category: 'Cybersecurity',
+      technologies: ['Machine Learning', 'Python', 'TensorFlow', 'SMTP', 'Custom AI Models']
+    },
+    {
+      title: 'Smart Invoice Processing',
+      description: 'Automated invoice processing with OCR, data extraction, and payment automation.',
+      icon: '📄',
+      price: '$199/month',
+      features: ['OCR processing', 'Data extraction', 'Payment automation', 'Approval workflows', 'Integration APIs'],
+      benefits: ['Process invoices 10x faster', 'Reduce errors by 95%', 'Save 20 hours/week'],
+      marketPrice: '$300-600/month',
+      category: 'Finance',
+      technologies: ['Tesseract', 'Python', 'React', 'PostgreSQL', 'Payment APIs']
+    },
+    {
+      title: 'AI Customer Feedback Analyzer',
+      description: 'Intelligent analysis of customer feedback with sentiment analysis and actionable insights.',
+      icon: '💬',
+      price: '$129/month',
+      features: ['Sentiment analysis', 'Topic modeling', 'Trend analysis', 'Alert system', 'Dashboard'],
+      benefits: ['Improve customer satisfaction', 'Identify issues early', 'Make data-driven decisions'],
+      marketPrice: '$200-400/month',
+      category: 'Customer Service',
+      technologies: ['NLP', 'Python', 'React', 'MongoDB', 'Custom AI Models']
+    },
+    {
+      title: 'Smart Meeting Scheduler',
+      description: 'AI-powered meeting scheduling with calendar optimization and conflict resolution.',
+      icon: '📅',
+      price: '$89/month',
+      features: ['Calendar integration', 'Smart scheduling', 'Conflict resolution', 'Time zone handling', 'Meeting analytics'],
+      benefits: ['Save 5 hours/week', 'Reduce scheduling conflicts', 'Optimize meeting times'],
+      marketPrice: '$150-300/month',
+      category: 'Productivity',
+      technologies: ['Calendar APIs', 'Machine Learning', 'React', 'Node.js', 'Custom AI Models']
+    },
+    {
+      title: 'AI-Powered Password Manager',
+      description: 'Secure password management with AI-powered security recommendations and breach monitoring.',
+      icon: '🔐',
+      price: '$49/month',
+      features: ['Password generation', 'Security scoring', 'Breach monitoring', 'Multi-device sync', 'Team sharing'],
+      benefits: ['Enhance security', 'Reduce password reuse', 'Prevent breaches'],
+      marketPrice: '$80-150/month',
+      category: 'Security',
+      technologies: ['Encryption', 'React', 'Node.js', 'MongoDB', 'Security APIs']
+    },
+    {
+      title: 'Smart Expense Tracker',
+      description: 'AI-powered expense tracking with receipt scanning and budget optimization.',
+      icon: '💰',
+      price: '$69/month',
+      features: ['Receipt scanning', 'Expense categorization', 'Budget tracking', 'Tax preparation', 'Reporting'],
+      benefits: ['Track expenses automatically', 'Optimize spending', 'Simplify tax filing'],
+      marketPrice: '$100-200/month',
+      category: 'Finance',
+      technologies: ['OCR', 'Machine Learning', 'React', 'PostgreSQL', 'Tax APIs']
+    },
+    {
+      title: 'AI Social Media Scheduler',
+      description: 'Intelligent social media content scheduling with optimal timing and engagement prediction.',
+      icon: '📱',
+      price: '$99/month',
+      features: ['Content scheduling', 'Optimal timing', 'Engagement prediction', 'Multi-platform', 'Analytics'],
+      benefits: ['Increase engagement by 40%', 'Save 15 hours/week', 'Grow followers faster'],
+      marketPrice: '$150-300/month',
+      category: 'Social Media',
+      technologies: ['Social APIs', 'Machine Learning', 'React', 'Node.js', 'Custom AI Models']
+    },
+    {
+      title: 'Smart Inventory Tracker',
+      description: 'AI-powered inventory management with demand forecasting and automated reordering.',
+      icon: '📦',
+      price: '$179/month',
+      features: ['Inventory tracking', 'Demand forecasting', 'Automated reordering', 'Supplier management', 'Analytics'],
+      benefits: ['Reduce stockouts by 60%', 'Lower inventory costs', 'Improve cash flow'],
+      marketPrice: '$250-500/month',
+      category: 'Inventory',
+      technologies: ['Machine Learning', 'Python', 'React', 'PostgreSQL', 'Supplier APIs']
+    },
+    {
+      title: 'AI-Powered Time Tracker',
+      description: 'Intelligent time tracking with automatic task detection and productivity insights.',
+      icon: '⏱️',
+      price: '$59/month',
+      features: ['Automatic tracking', 'Task detection', 'Productivity insights', 'Team analytics', 'Integration'],
+      benefits: ['Track time automatically', 'Improve productivity', 'Optimize workflows'],
+      marketPrice: '$100-200/month',
+      category: 'Productivity',
+      technologies: ['Machine Learning', 'React', 'Node.js', 'MongoDB', 'Custom AI Models']
+    },
+    {
+      title: 'Smart Website Monitor',
+      description: 'AI-powered website monitoring with uptime tracking and performance optimization.',
+      icon: '🌐',
+      price: '$79/month',
+      features: ['Uptime monitoring', 'Performance tracking', 'Alert system', 'Analytics', 'Mobile monitoring'],
+      benefits: ['Ensure 99.9% uptime', 'Improve performance', 'Reduce downtime'],
+      marketPrice: '$120-250/month',
+      category: 'Monitoring',
+      technologies: ['Monitoring APIs', 'React', 'Node.js', 'PostgreSQL', 'Custom AI Models']
+    },
+    {
+      title: 'AI-Powered Lead Generator',
+      description: 'Intelligent lead generation with automated prospecting and qualification.',
+      icon: '🎯',
+      price: '$199/month',
+      features: ['Lead discovery', 'Contact enrichment', 'Qualification scoring', 'CRM integration', 'Analytics'],
+      benefits: ['Generate 3x more leads', 'Improve lead quality', 'Automate prospecting'],
+      marketPrice: '$300-600/month',
+      category: 'Sales',
+      technologies: ['Web Scraping', 'Machine Learning', 'React', 'PostgreSQL', 'CRM APIs']
+    },
+    {
+      title: 'Smart Document Signer',
+      description: 'AI-powered document signing with e-signature automation and compliance tracking.',
+      icon: '✍️',
+      price: '$149/month',
+      features: ['E-signature automation', 'Document templates', 'Compliance tracking', 'Audit trail', 'Integration'],
+      benefits: ['Sign documents 5x faster', 'Ensure compliance', 'Reduce paperwork'],
+      marketPrice: '$200-400/month',
+      category: 'Document Management',
+      technologies: ['E-signature APIs', 'React', 'Node.js', 'PostgreSQL', 'Compliance Tools']
+    },
+    {
+      title: 'AI-Powered Backup Manager',
+      description: 'Intelligent backup management with automated scheduling and disaster recovery.',
+      icon: '💾',
+      price: '$89/month',
+      features: ['Automated backups', 'Disaster recovery', 'Version control', 'Cloud storage', 'Monitoring'],
+      benefits: ['Protect critical data', 'Automate backups', 'Ensure business continuity'],
+      marketPrice: '$150-300/month',
+      category: 'Data Management',
+      technologies: ['Cloud Storage', 'React', 'Node.js', 'MongoDB', 'Backup APIs']
+    },
+    {
+      title: 'Smart Team Collaboration',
+      description: 'AI-powered team collaboration with intelligent task assignment and progress tracking.',
+      icon: '👥',
+      price: '$129/month',
+      features: ['Task assignment', 'Progress tracking', 'Team analytics', 'Communication tools', 'Integration'],
+      benefits: ['Improve team efficiency', 'Track progress', 'Enhance collaboration'],
+      marketPrice: '$200-400/month',
+      category: 'Team Management',
+      technologies: ['Machine Learning', 'React', 'Node.js', 'MongoDB', 'Custom AI Models']
+    },
+    {
+      title: 'AI-Powered Code Generator',
+      description: 'Intelligent code generation with automated testing and documentation.',
+      icon: '💻',
+      price: '$299/month',
+      features: ['Code generation', 'Automated testing', 'Documentation', 'Code review', 'Integration'],
+      benefits: ['Generate code 10x faster', 'Improve code quality', 'Reduce development time'],
+      marketPrice: '$500-1000/month',
+      category: 'Development',
+      technologies: ['AI Code Models', 'React', 'Node.js', 'GitHub', 'Custom AI Models']
+    },
+    {
+      title: 'Smart Data Visualizer',
+      description: 'AI-powered data visualization with interactive charts and automated insights.',
+      icon: '📊',
+      price: '$159/month',
+      features: ['Interactive charts', 'Automated insights', 'Custom dashboards', 'Data integration', 'Export options'],
+      benefits: ['Visualize data easily', 'Discover insights', 'Make better decisions'],
+      marketPrice: '$250-500/month',
+      category: 'Analytics',
+      technologies: ['D3.js', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
+    },
+    {
+      title: 'AI-Powered Form Builder',
+      description: 'Intelligent form creation with conditional logic and automated validation.',
+      icon: '📝',
+      price: '$99/month',
+      features: ['Drag-and-drop builder', 'Conditional logic', 'Automated validation', 'Analytics', 'Integration'],
+      benefits: ['Create forms 5x faster', 'Improve data quality', 'Automate workflows'],
+      marketPrice: '$150-300/month',
+      category: 'Form Management',
+      technologies: ['React', 'Node.js', 'MongoDB', 'Validation APIs', 'Custom AI Models']
+    },
+    {
+      title: 'Smart API Gateway',
+      description: 'AI-powered API management with intelligent routing and security monitoring.',
+      icon: '🔌',
+      price: '$199/month',
+      features: ['API routing', 'Security monitoring', 'Rate limiting', 'Analytics', 'Documentation'],
+      benefits: ['Secure APIs', 'Monitor usage', 'Improve performance'],
+      marketPrice: '$300-600/month',
+      category: 'API Management',
+      technologies: ['Kong', 'React', 'Node.js', 'PostgreSQL', 'Security APIs']
+    },
+    {
+      title: 'AI-Powered Test Generator',
+      description: 'Intelligent test case generation with automated testing and coverage analysis.',
+      icon: '🧪',
+      price: '$179/month',
+      features: ['Test generation', 'Automated testing', 'Coverage analysis', 'CI/CD integration', 'Reporting'],
+      benefits: ['Generate tests automatically', 'Improve coverage', 'Reduce testing time'],
+      marketPrice: '$250-500/month',
+      category: 'Testing',
+      technologies: ['Testing Frameworks', 'Machine Learning', 'React', 'Node.js', 'Custom AI Models']
     }
   ];
 
@@ -1533,23 +1744,24 @@ const MicroSAASPage: React.FC = () => {
         <meta name="keywords" content="micro saas, business automation, AI tools, software as a service, business intelligence" />
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+      <div className="min-h-screen futuristic-bg cyber-grid">
         {/* Hero Section */}
         <section className="relative overflow-hidden bg-gradient-to-r from-indigo-600 to-purple-700 text-white py-20">
           <div className="absolute inset-0 bg-black opacity-20"></div>
+          <div className="absolute inset-0 matrix-rain"></div>
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+              <h1 className="text-4xl md:text-6xl font-bold mb-6 neon-text glitch" data-text="Micro SAAS Solutions">
                 Micro SAAS Solutions
               </h1>
-              <p className="text-xl md:text-2xl mb-8 text-indigo-100 max-w-3xl mx-auto">
+              <p className="text-xl md:text-2xl mb-8 text-indigo-100 max-w-3xl mx-auto holographic">
                 Powerful, affordable AI-driven tools that transform your business operations
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-indigo-50 transition-colors">
+                <button className="neon-button">
                   Start Free Trial
                 </button>
-                <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors">
+                <button className="neon-button neon-text-purple">
                   View Pricing
                 </button>
               </div>
@@ -1617,46 +1829,57 @@ const MicroSAASPage: React.FC = () => {
                 {microSAASServices
                   .filter(service => service.category === category)
                   .map((service, index) => (
-                    <div key={index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
-                      <div className="text-4xl mb-4">{service.icon}</div>
-                      <h3 className="text-xl font-semibold text-gray-900 mb-3">{service.title}</h3>
-                      <p className="text-gray-600 mb-4">{service.description}</p>
+                    <div key={index} className="futuristic-card p-6 floating-element">
+                      <div className="text-4xl mb-4 floating-element">{service.icon}</div>
+                      <h3 className="text-xl font-semibold text-white mb-3 neon-text">{service.title}</h3>
+                      <p className="text-gray-300 mb-4">{service.description}</p>
                       
                       <div className="mb-4">
                         <div className="flex items-center justify-between mb-2">
-                          <span className="text-2xl font-bold text-blue-600">{service.price}</span>
-                          <span className="text-sm text-gray-500">Market: {service.marketPrice}</span>
+                          <span className="text-2xl font-bold neon-text-pink">{service.price}</span>
+                          <span className="text-sm text-gray-400">Market: {service.marketPrice}</span>
                         </div>
-                        <div className="text-sm text-green-600 font-semibold">
+                        <div className="text-sm text-green-400 font-semibold">
                           Save up to 50% vs market rates
                         </div>
                       </div>
 
                       <div className="mb-4">
-                        <h4 className="font-semibold text-gray-900 mb-2">Key Features:</h4>
+                        <h4 className="font-semibold text-white mb-2">Key Features:</h4>
                         <ul className="space-y-1">
                           {service.features.map((feature, featureIndex) => (
-                            <li key={featureIndex} className="flex items-center text-sm text-gray-600">
-                              <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                            <li key={featureIndex} className="flex items-center text-sm text-gray-300">
+                              <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                               {feature}
                             </li>
                           ))}
                         </ul>
                       </div>
 
+                      <div className="mb-4">
+                        <h4 className="font-semibold text-white mb-2">Technologies:</h4>
+                        <div className="flex flex-wrap gap-2">
+                          {service.technologies.map((tech, techIndex) => (
+                            <span key={techIndex} className="bg-purple-900 text-purple-300 text-xs px-2 py-1 rounded border border-purple-600">
+                              {tech}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+
                       <div className="mb-6">
-                        <h4 className="font-semibold text-gray-900 mb-2">Business Benefits:</h4>
+                        <h4 className="font-semibold text-white mb-2">Business Benefits:</h4>
                         <ul className="space-y-1">
                           {service.benefits.map((benefit, benefitIndex) => (
-                            <li key={benefitIndex} className="flex items-center text-sm text-gray-600">
-                              <Star className="w-4 h-4 text-yellow-500 mr-2 flex-shrink-0" />
+                            <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
+                              <Star className="w-4 h-4 text-yellow-400 mr-2 flex-shrink-0" />
                               {benefit}
                             </li>
                           ))}
                         </ul>
                       </div>
 
-                      <button className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+                      <button className="w-full neon-button">
                         Start Free Trial
                       </button>
                     </div>
@@ -1667,24 +1890,25 @@ const MicroSAASPage: React.FC = () => {
         ))}
 
         {/* Contact Section */}
-        <section className="py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+        <section className="py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white relative overflow-hidden">
+          <div className="absolute inset-0 matrix-rain"></div>
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 neon-text glitch" data-text="Ready to Transform Your Business?">
               Ready to Transform Your Business?
             </h2>
-            <p className="text-xl mb-8 text-blue-100">
+            <p className="text-xl mb-8 text-blue-100 holographic">
               Contact us today for a free consultation and custom solution recommendations
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
                 href="tel:+13024640950"
-                className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors inline-flex items-center"
+                className="neon-button"
               >
                 📞 +1 302 464 0950
               </a>
               <a 
                 href="mailto:kleber@ziontechgroup.com"
-                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
+                className="neon-button neon-text-purple"
               >
                 ✉️ kleber@ziontechgroup.com
               </a>

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Star, Server, Shield, Cloud, Database, Network, Code, Monitor, Settings } from 'lucide-react';
+import '../futuristic-design.css';
 
 const ITServicesPage: React.FC = () => {
   const itServices = [
@@ -289,6 +290,348 @@ const ITServicesPage: React.FC = () => {
       marketPrice: '$2,500-6,000/month',
       category: 'Asset Management',
       technologies: ['ServiceNow', 'Lansweeper', 'Asset Panda', 'Flexera', 'Microsoft Intune']
+    },
+    // Additional Real IT Services
+    {
+      title: 'AI-Powered IT Support',
+      description: 'Intelligent IT support with automated ticket resolution and predictive maintenance.',
+      icon: '🤖',
+      price: 'Starting at $2,200/month',
+      features: ['Automated ticket resolution', 'Predictive maintenance', 'Knowledge base management', 'User self-service', 'Analytics dashboard'],
+      benefits: ['Reduce support tickets by 60%', 'Improve resolution time', 'Enhance user satisfaction'],
+      marketPrice: '$3,500-7,000/month',
+      category: 'AI Support',
+      technologies: ['Machine Learning', 'NLP', 'React', 'Node.js', 'Custom AI Models']
+    },
+    {
+      title: 'Smart Network Monitoring',
+      description: 'AI-powered network monitoring with predictive analytics and automated troubleshooting.',
+      icon: '📡',
+      price: 'Starting at $2,800/month',
+      features: ['Real-time monitoring', 'Predictive analytics', 'Automated troubleshooting', 'Performance optimization', 'Alert management'],
+      benefits: ['Prevent network outages', 'Optimize performance', 'Reduce downtime'],
+      marketPrice: '$4,500-9,000/month',
+      category: 'Network AI',
+      technologies: ['SNMP', 'Machine Learning', 'Python', 'React', 'Custom AI Models']
+    },
+    {
+      title: 'Intelligent Data Backup',
+      description: 'AI-driven backup solutions with intelligent scheduling and disaster recovery.',
+      icon: '💾',
+      price: 'Starting at $1,800/month',
+      features: ['Intelligent scheduling', 'Data deduplication', 'Disaster recovery', 'Compliance monitoring', 'Cost optimization'],
+      benefits: ['Reduce backup costs by 40%', 'Improve recovery time', 'Ensure data protection'],
+      marketPrice: '$3,000-6,000/month',
+      category: 'Data Management',
+      technologies: ['Veeam', 'Commvault', 'AWS Backup', 'Machine Learning', 'Custom AI Models']
+    },
+    {
+      title: 'Smart Email Security',
+      description: 'Advanced email security with AI-powered threat detection and spam filtering.',
+      icon: '🛡️',
+      price: 'Starting at $2,500/month',
+      features: ['AI threat detection', 'Spam filtering', 'Phishing protection', 'Email encryption', 'Compliance monitoring'],
+      benefits: ['Block 99.9% of threats', 'Reduce security incidents', 'Ensure compliance'],
+      marketPrice: '$4,000-8,000/month',
+      category: 'Email Security',
+      technologies: ['Machine Learning', 'Python', 'TensorFlow', 'SMTP', 'Custom AI Models']
+    },
+    {
+      title: 'Intelligent Password Management',
+      description: 'AI-powered password management with security recommendations and breach monitoring.',
+      icon: '🔐',
+      price: 'Starting at $1,200/month',
+      features: ['Password generation', 'Security scoring', 'Breach monitoring', 'Multi-device sync', 'Team sharing'],
+      benefits: ['Enhance security', 'Reduce password reuse', 'Prevent breaches'],
+      marketPrice: '$2,000-4,000/month',
+      category: 'Security',
+      technologies: ['Encryption', 'Machine Learning', 'React', 'Node.js', 'Security APIs']
+    },
+    {
+      title: 'Smart Software Licensing',
+      description: 'AI-powered software license management with optimization and compliance monitoring.',
+      icon: '📄',
+      price: 'Starting at $1,800/month',
+      features: ['License optimization', 'Compliance monitoring', 'Cost analysis', 'Renewal management', 'Usage tracking'],
+      benefits: ['Reduce licensing costs by 30%', 'Ensure compliance', 'Optimize usage'],
+      marketPrice: '$3,000-6,000/month',
+      category: 'License Management',
+      technologies: ['Flexera', 'Snow Software', 'Machine Learning', 'React', 'Custom AI Models']
+    },
+    {
+      title: 'Intelligent Help Desk',
+      description: 'AI-powered help desk with automated ticket routing and resolution suggestions.',
+      icon: '🎧',
+      price: 'Starting at $2,000/month',
+      features: ['Automated routing', 'Resolution suggestions', 'Knowledge base', 'User self-service', 'Analytics'],
+      benefits: ['Improve response time', 'Reduce resolution time', 'Enhance user experience'],
+      marketPrice: '$3,500-7,000/month',
+      category: 'Help Desk',
+      technologies: ['ServiceNow', 'Machine Learning', 'NLP', 'React', 'Custom AI Models']
+    },
+    {
+      title: 'Smart Infrastructure Monitoring',
+      description: 'AI-powered infrastructure monitoring with predictive analytics and automated remediation.',
+      icon: '📊',
+      price: 'Starting at $3,200/month',
+      features: ['Predictive analytics', 'Automated remediation', 'Performance optimization', 'Capacity planning', 'Alert management'],
+      benefits: ['Prevent outages', 'Optimize performance', 'Reduce costs'],
+      marketPrice: '$5,500-12,000/month',
+      category: 'Infrastructure AI',
+      technologies: ['Prometheus', 'Grafana', 'Machine Learning', 'Python', 'Custom AI Models']
+    },
+    {
+      title: 'Intelligent Patch Management',
+      description: 'AI-driven patch management with automated testing and deployment.',
+      icon: '🔧',
+      price: 'Starting at $2,200/month',
+      features: ['Automated testing', 'Risk assessment', 'Deployment scheduling', 'Rollback capabilities', 'Compliance tracking'],
+      benefits: ['Reduce patch time by 70%', 'Minimize security risks', 'Ensure compliance'],
+      marketPrice: '$3,500-7,000/month',
+      category: 'Patch Management',
+      technologies: ['WSUS', 'SCCM', 'Machine Learning', 'Python', 'Custom AI Models']
+    },
+    {
+      title: 'Smart User Provisioning',
+      description: 'AI-powered user provisioning with automated access management and compliance.',
+      icon: '👥',
+      price: 'Starting at $2,500/month',
+      features: ['Automated provisioning', 'Access management', 'Compliance monitoring', 'Role optimization', 'Audit trails'],
+      benefits: ['Reduce provisioning time', 'Improve security', 'Ensure compliance'],
+      marketPrice: '$4,000-8,000/month',
+      category: 'User Management',
+      technologies: ['Active Directory', 'Okta', 'Machine Learning', 'React', 'Custom AI Models']
+    },
+    {
+      title: 'Intelligent Capacity Planning',
+      description: 'AI-powered capacity planning with predictive analytics and cost optimization.',
+      icon: '📈',
+      price: 'Starting at $2,800/month',
+      features: ['Predictive analytics', 'Cost optimization', 'Resource planning', 'Performance forecasting', 'Recommendations'],
+      benefits: ['Optimize resource usage', 'Reduce costs by 25%', 'Improve planning accuracy'],
+      marketPrice: '$4,500-9,000/month',
+      category: 'Capacity Planning',
+      technologies: ['Machine Learning', 'Python', 'React', 'PostgreSQL', 'Custom AI Models']
+    },
+    {
+      title: 'Smart Incident Response',
+      description: 'AI-powered incident response with automated detection and resolution.',
+      icon: '🚨',
+      price: 'Starting at $3,500/month',
+      features: ['Automated detection', 'Incident classification', 'Resolution suggestions', 'Escalation management', 'Post-incident analysis'],
+      benefits: ['Reduce MTTR by 60%', 'Improve incident handling', 'Minimize business impact'],
+      marketPrice: '$6,000-12,000/month',
+      category: 'Incident Response',
+      technologies: ['SIEM', 'Machine Learning', 'Python', 'React', 'Custom AI Models']
+    },
+    {
+      title: 'Intelligent Change Management',
+      description: 'AI-driven change management with risk assessment and automated approval workflows.',
+      icon: '🔄',
+      price: 'Starting at $2,200/month',
+      features: ['Risk assessment', 'Automated workflows', 'Impact analysis', 'Approval management', 'Rollback planning'],
+      benefits: ['Reduce change failures', 'Improve approval process', 'Minimize risks'],
+      marketPrice: '$3,500-7,000/month',
+      category: 'Change Management',
+      technologies: ['ServiceNow', 'Machine Learning', 'React', 'Node.js', 'Custom AI Models']
+    },
+    {
+      title: 'Smart Performance Optimization',
+      description: 'AI-powered performance optimization with automated tuning and recommendations.',
+      icon: '⚡',
+      price: 'Starting at $2,800/month',
+      features: ['Automated tuning', 'Performance monitoring', 'Optimization recommendations', 'Bottleneck detection', 'Capacity planning'],
+      benefits: ['Improve performance by 40%', 'Reduce bottlenecks', 'Optimize resources'],
+      marketPrice: '$4,500-9,000/month',
+      category: 'Performance Optimization',
+      technologies: ['APM Tools', 'Machine Learning', 'Python', 'React', 'Custom AI Models']
+    },
+    {
+      title: 'Intelligent Compliance Monitoring',
+      description: 'AI-powered compliance monitoring with automated reporting and risk assessment.',
+      icon: '📋',
+      price: 'Starting at $3,200/month',
+      features: ['Automated monitoring', 'Risk assessment', 'Compliance reporting', 'Audit preparation', 'Policy management'],
+      benefits: ['Ensure compliance', 'Reduce audit costs', 'Minimize risks'],
+      marketPrice: '$5,500-12,000/month',
+      category: 'Compliance',
+      technologies: ['GRC Tools', 'Machine Learning', 'Python', 'React', 'Custom AI Models']
+    },
+    {
+      title: 'Smart Cost Optimization',
+      description: 'AI-powered cost optimization with automated recommendations and budget management.',
+      icon: '💰',
+      price: 'Starting at $2,500/month',
+      features: ['Cost analysis', 'Optimization recommendations', 'Budget forecasting', 'Waste detection', 'ROI tracking'],
+      benefits: ['Reduce costs by 30%', 'Optimize spending', 'Improve ROI'],
+      marketPrice: '$4,000-8,000/month',
+      category: 'Cost Optimization',
+      technologies: ['Cloud Cost Tools', 'Machine Learning', 'Python', 'React', 'Custom AI Models']
+    },
+    {
+      title: 'Intelligent Security Analytics',
+      description: 'AI-powered security analytics with threat detection and behavioral analysis.',
+      icon: '🔍',
+      price: 'Starting at $4,000/month',
+      features: ['Threat detection', 'Behavioral analysis', 'Anomaly detection', 'Risk scoring', 'Incident correlation'],
+      benefits: ['Detect threats early', 'Improve security posture', 'Reduce false positives'],
+      marketPrice: '$6,500-15,000/month',
+      category: 'Security Analytics',
+      technologies: ['SIEM', 'Machine Learning', 'Python', 'React', 'Custom AI Models']
+    },
+    {
+      title: 'Smart Workflow Automation',
+      description: 'AI-powered workflow automation with intelligent process optimization.',
+      icon: '⚙️',
+      price: 'Starting at $2,800/month',
+      features: ['Process automation', 'Workflow optimization', 'Exception handling', 'Integration management', 'Performance monitoring'],
+      benefits: ['Reduce process time by 70%', 'Eliminate errors', 'Improve efficiency'],
+      marketPrice: '$4,500-9,000/month',
+      category: 'Workflow Automation',
+      technologies: ['RPA Tools', 'Machine Learning', 'Python', 'React', 'Custom AI Models']
+    },
+    {
+      title: 'Intelligent Knowledge Management',
+      description: 'AI-powered knowledge management with automated content curation and search.',
+      icon: '📚',
+      price: 'Starting at $2,200/month',
+      features: ['Content curation', 'Intelligent search', 'Knowledge extraction', 'Recommendation engine', 'Analytics'],
+      benefits: ['Improve knowledge sharing', 'Reduce search time', 'Enhance collaboration'],
+      marketPrice: '$3,500-7,000/month',
+      category: 'Knowledge Management',
+      technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'Custom AI Models']
+    },
+    {
+      title: 'Smart Vendor Management',
+      description: 'AI-powered vendor management with performance monitoring and risk assessment.',
+      icon: '🏢',
+      price: 'Starting at $2,500/month',
+      features: ['Performance monitoring', 'Risk assessment', 'Contract management', 'Cost analysis', 'Relationship tracking'],
+      benefits: ['Optimize vendor relationships', 'Reduce risks', 'Improve performance'],
+      marketPrice: '$4,000-8,000/month',
+      category: 'Vendor Management',
+      technologies: ['Machine Learning', 'Python', 'React', 'PostgreSQL', 'Custom AI Models']
+    },
+    {
+      title: 'Intelligent Service Level Management',
+      description: 'AI-powered SLA monitoring with predictive analytics and automated reporting.',
+      icon: '📊',
+      price: 'Starting at $2,800/month',
+      features: ['SLA monitoring', 'Predictive analytics', 'Automated reporting', 'Performance tracking', 'Improvement recommendations'],
+      benefits: ['Improve SLA compliance', 'Predict issues', 'Optimize performance'],
+      marketPrice: '$4,500-9,000/month',
+      category: 'SLA Management',
+      technologies: ['Monitoring Tools', 'Machine Learning', 'Python', 'React', 'Custom AI Models']
+    },
+    {
+      title: 'Smart Disaster Recovery',
+      description: 'AI-powered disaster recovery with automated testing and optimization.',
+      icon: '🔄',
+      price: 'Starting at $3,500/month',
+      features: ['Automated testing', 'Recovery optimization', 'Risk assessment', 'Compliance monitoring', 'Cost optimization'],
+      benefits: ['Improve recovery time', 'Reduce costs', 'Ensure compliance'],
+      marketPrice: '$6,000-12,000/month',
+      category: 'Disaster Recovery',
+      technologies: ['DR Tools', 'Machine Learning', 'Python', 'React', 'Custom AI Models']
+    },
+    {
+      title: 'Intelligent Endpoint Security',
+      description: 'AI-powered endpoint security with behavioral analysis and threat prevention.',
+      icon: '💻',
+      price: 'Starting at $2,200/month',
+      features: ['Behavioral analysis', 'Threat prevention', 'Device management', 'Compliance monitoring', 'Incident response'],
+      benefits: ['Prevent threats', 'Improve security', 'Ensure compliance'],
+      marketPrice: '$3,500-7,000/month',
+      category: 'Endpoint Security',
+      technologies: ['EDR', 'Machine Learning', 'Python', 'React', 'Custom AI Models']
+    },
+    {
+      title: 'Smart Data Governance',
+      description: 'AI-powered data governance with automated classification and compliance monitoring.',
+      icon: '📊',
+      price: 'Starting at $3,200/month',
+      features: ['Data classification', 'Compliance monitoring', 'Data lineage', 'Quality management', 'Privacy protection'],
+      benefits: ['Ensure data quality', 'Maintain compliance', 'Protect privacy'],
+      marketPrice: '$5,500-12,000/month',
+      category: 'Data Governance',
+      technologies: ['Data Tools', 'Machine Learning', 'Python', 'React', 'Custom AI Models']
+    },
+    {
+      title: 'Intelligent Application Performance',
+      description: 'AI-powered application performance monitoring with automated optimization.',
+      icon: '🚀',
+      price: 'Starting at $2,800/month',
+      features: ['Performance monitoring', 'Automated optimization', 'Bottleneck detection', 'Capacity planning', 'User experience tracking'],
+      benefits: ['Improve performance', 'Reduce bottlenecks', 'Enhance user experience'],
+      marketPrice: '$4,500-9,000/month',
+      category: 'Application Performance',
+      technologies: ['APM Tools', 'Machine Learning', 'Python', 'React', 'Custom AI Models']
+    },
+    {
+      title: 'Smart Cloud Cost Management',
+      description: 'AI-powered cloud cost management with automated optimization and budgeting.',
+      icon: '☁️',
+      price: 'Starting at $2,500/month',
+      features: ['Cost optimization', 'Budget management', 'Resource right-sizing', 'Waste detection', 'Forecasting'],
+      benefits: ['Reduce cloud costs by 35%', 'Optimize spending', 'Improve budgeting'],
+      marketPrice: '$4,000-8,000/month',
+      category: 'Cloud Cost Management',
+      technologies: ['Cloud Cost Tools', 'Machine Learning', 'Python', 'React', 'Custom AI Models']
+    },
+    {
+      title: 'Intelligent Network Security',
+      description: 'AI-powered network security with automated threat detection and response.',
+      icon: '🛡️',
+      price: 'Starting at $3,500/month',
+      features: ['Threat detection', 'Automated response', 'Network monitoring', 'Intrusion prevention', 'Compliance monitoring'],
+      benefits: ['Prevent network attacks', 'Improve security', 'Ensure compliance'],
+      marketPrice: '$6,000-12,000/month',
+      category: 'Network Security',
+      technologies: ['NGFW', 'Machine Learning', 'Python', 'React', 'Custom AI Models']
+    },
+    {
+      title: 'Smart IT Service Management',
+      description: 'AI-powered ITSM with automated workflows and intelligent routing.',
+      icon: '🎯',
+      price: 'Starting at $3,200/month',
+      features: ['Automated workflows', 'Intelligent routing', 'Service optimization', 'Performance monitoring', 'User experience tracking'],
+      benefits: ['Improve service delivery', 'Reduce costs', 'Enhance user experience'],
+      marketPrice: '$5,500-12,000/month',
+      category: 'ITSM',
+      technologies: ['ServiceNow', 'Machine Learning', 'Python', 'React', 'Custom AI Models']
+    },
+    {
+      title: 'Intelligent Mobile Device Management',
+      description: 'AI-powered MDM with automated policy enforcement and security monitoring.',
+      icon: '📱',
+      price: 'Starting at $2,200/month',
+      features: ['Policy automation', 'Security monitoring', 'Device compliance', 'App management', 'Threat detection'],
+      benefits: ['Improve mobile security', 'Ensure compliance', 'Reduce management overhead'],
+      marketPrice: '$3,500-7,000/month',
+      category: 'Mobile Management',
+      technologies: ['MDM Tools', 'Machine Learning', 'Python', 'React', 'Custom AI Models']
+    },
+    {
+      title: 'Smart IT Asset Discovery',
+      description: 'AI-powered asset discovery with automated inventory and compliance tracking.',
+      icon: '🔍',
+      price: 'Starting at $1,800/month',
+      features: ['Automated discovery', 'Inventory management', 'Compliance tracking', 'Cost analysis', 'Lifecycle management'],
+      benefits: ['Improve asset visibility', 'Ensure compliance', 'Optimize costs'],
+      marketPrice: '$3,000-6,000/month',
+      category: 'Asset Discovery',
+      technologies: ['Discovery Tools', 'Machine Learning', 'Python', 'React', 'Custom AI Models']
+    },
+    {
+      title: 'Intelligent IT Operations',
+      description: 'AI-powered IT operations with automated monitoring and intelligent alerting.',
+      icon: '⚙️',
+      price: 'Starting at $4,000/month',
+      features: ['Automated monitoring', 'Intelligent alerting', 'Incident prevention', 'Performance optimization', 'Capacity planning'],
+      benefits: ['Prevent outages', 'Improve performance', 'Reduce operational costs'],
+      marketPrice: '$6,500-15,000/month',
+      category: 'IT Operations',
+      technologies: ['AIOps Tools', 'Machine Learning', 'Python', 'React', 'Custom AI Models']
     }
   ];
 
@@ -302,23 +645,24 @@ const ITServicesPage: React.FC = () => {
         <meta name="keywords" content="IT services, cloud computing, cybersecurity, DevOps, infrastructure, technology consulting" />
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+      <div className="min-h-screen futuristic-bg cyber-grid">
         {/* Hero Section */}
         <section className="relative overflow-hidden bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-20">
           <div className="absolute inset-0 bg-black opacity-20"></div>
+          <div className="absolute inset-0 matrix-rain"></div>
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+              <h1 className="text-4xl md:text-6xl font-bold mb-6 neon-text glitch" data-text="Professional IT Services">
                 Professional IT Services
               </h1>
-              <p className="text-xl md:text-2xl mb-8 text-blue-100 max-w-3xl mx-auto">
+              <p className="text-xl md:text-2xl mb-8 text-blue-100 max-w-3xl mx-auto holographic">
                 Comprehensive technology solutions to power your business growth and digital transformation
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors">
+                <button className="neon-button">
                   Get Free Assessment
                 </button>
-                <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
+                <button className="neon-button neon-text-purple">
                   View Our Portfolio
                 </button>
               </div>
@@ -327,44 +671,45 @@ const ITServicesPage: React.FC = () => {
         </section>
 
         {/* Key Benefits */}
-        <section className="py-16 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section className="py-16 bg-gray-900 relative overflow-hidden">
+          <div className="absolute inset-0 matrix-rain"></div>
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 neon-text">
                 Why Choose Our IT Services?
               </h2>
-              <p className="text-xl text-gray-600">
+              <p className="text-xl text-gray-300 holographic">
                 Expert solutions delivered by certified professionals with proven track records
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              <div className="text-center">
-                <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Server className="w-8 h-8 text-blue-600" />
+              <div className="text-center futuristic-card p-6">
+                <div className="bg-blue-900 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Server className="w-8 h-8 text-blue-300" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Certified Experts</h3>
-                <p className="text-gray-600">AWS, Microsoft, Cisco, and other industry certifications</p>
+                <h3 className="text-xl font-semibold text-white mb-2 neon-text">Certified Experts</h3>
+                <p className="text-gray-300">AWS, Microsoft, Cisco, and other industry certifications</p>
               </div>
-              <div className="text-center">
-                <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Shield className="w-8 h-8 text-green-600" />
+              <div className="text-center futuristic-card p-6">
+                <div className="bg-green-900 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Shield className="w-8 h-8 text-green-300" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Enterprise Security</h3>
-                <p className="text-gray-600">Bank-level security with compliance and monitoring</p>
+                <h3 className="text-xl font-semibold text-white mb-2 neon-text-pink">Enterprise Security</h3>
+                <p className="text-gray-300">Bank-level security with compliance and monitoring</p>
               </div>
-              <div className="text-center">
-                <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Cloud className="w-8 h-8 text-purple-600" />
+              <div className="text-center futuristic-card p-6">
+                <div className="bg-purple-900 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Cloud className="w-8 h-8 text-purple-300" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Cloud-First Approach</h3>
-                <p className="text-gray-600">Modern, scalable solutions built for the cloud</p>
+                <h3 className="text-xl font-semibold text-white mb-2 neon-text-purple">Cloud-First Approach</h3>
+                <p className="text-gray-300">Modern, scalable solutions built for the cloud</p>
               </div>
-              <div className="text-center">
-                <div className="bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Settings className="w-8 h-8 text-orange-600" />
+              <div className="text-center futuristic-card p-6">
+                <div className="bg-orange-900 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Settings className="w-8 h-8 text-orange-300" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">24/7 Support</h3>
-                <p className="text-gray-600">Round-the-clock monitoring and support services</p>
+                <h3 className="text-xl font-semibold text-white mb-2 neon-text">24/7 Support</h3>
+                <p className="text-gray-300">Round-the-clock monitoring and support services</p>
               </div>
             </div>
           </div>
@@ -386,27 +731,27 @@ const ITServicesPage: React.FC = () => {
                 {itServices
                   .filter(service => service.category === category)
                   .map((service, index) => (
-                    <div key={index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
-                      <div className="text-4xl mb-4">{service.icon}</div>
-                      <h3 className="text-xl font-semibold text-gray-900 mb-3">{service.title}</h3>
-                      <p className="text-gray-600 mb-4">{service.description}</p>
+                    <div key={index} className="futuristic-card p-6 floating-element">
+                      <div className="text-4xl mb-4 floating-element">{service.icon}</div>
+                      <h3 className="text-xl font-semibold text-white mb-3 neon-text">{service.title}</h3>
+                      <p className="text-gray-300 mb-4">{service.description}</p>
                       
                       <div className="mb-4">
                         <div className="flex items-center justify-between mb-2">
-                          <span className="text-2xl font-bold text-blue-600">{service.price}</span>
-                          <span className="text-sm text-gray-500">Market: {service.marketPrice}</span>
+                          <span className="text-2xl font-bold neon-text-pink">{service.price}</span>
+                          <span className="text-sm text-gray-400">Market: {service.marketPrice}</span>
                         </div>
-                        <div className="text-sm text-green-600 font-semibold">
+                        <div className="text-sm text-green-400 font-semibold">
                           Save up to 40% vs market rates
                         </div>
                       </div>
 
                       <div className="mb-4">
-                        <h4 className="font-semibold text-gray-900 mb-2">Key Features:</h4>
+                        <h4 className="font-semibold text-white mb-2">Key Features:</h4>
                         <ul className="space-y-1">
                           {service.features.map((feature, featureIndex) => (
-                            <li key={featureIndex} className="flex items-center text-sm text-gray-600">
-                              <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                            <li key={featureIndex} className="flex items-center text-sm text-gray-300">
+                              <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                               {feature}
                             </li>
                           ))}
@@ -414,10 +759,10 @@ const ITServicesPage: React.FC = () => {
                       </div>
 
                       <div className="mb-4">
-                        <h4 className="font-semibold text-gray-900 mb-2">Technologies:</h4>
+                        <h4 className="font-semibold text-white mb-2">Technologies:</h4>
                         <div className="flex flex-wrap gap-2">
                           {service.technologies.map((tech, techIndex) => (
-                            <span key={techIndex} className="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">
+                            <span key={techIndex} className="bg-blue-900 text-blue-300 text-xs px-2 py-1 rounded border border-blue-600">
                               {tech}
                             </span>
                           ))}
@@ -425,18 +770,18 @@ const ITServicesPage: React.FC = () => {
                       </div>
 
                       <div className="mb-6">
-                        <h4 className="font-semibold text-gray-900 mb-2">Business Benefits:</h4>
+                        <h4 className="font-semibold text-white mb-2">Business Benefits:</h4>
                         <ul className="space-y-1">
                           {service.benefits.map((benefit, benefitIndex) => (
-                            <li key={benefitIndex} className="flex items-center text-sm text-gray-600">
-                              <Star className="w-4 h-4 text-yellow-500 mr-2 flex-shrink-0" />
+                            <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
+                              <Star className="w-4 h-4 text-yellow-400 mr-2 flex-shrink-0" />
                               {benefit}
                             </li>
                           ))}
                         </ul>
                       </div>
 
-                      <button className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+                      <button className="w-full neon-button">
                         Get Quote
                       </button>
                     </div>
@@ -447,24 +792,25 @@ const ITServicesPage: React.FC = () => {
         ))}
 
         {/* Contact Section */}
-        <section className="py-16 bg-gradient-to-r from-blue-600 to-indigo-600 text-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+        <section className="py-16 bg-gradient-to-r from-blue-600 to-indigo-600 text-white relative overflow-hidden">
+          <div className="absolute inset-0 matrix-rain"></div>
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 neon-text glitch" data-text="Ready to Transform Your IT Infrastructure?">
               Ready to Transform Your IT Infrastructure?
             </h2>
-            <p className="text-xl mb-8 text-blue-100">
+            <p className="text-xl mb-8 text-blue-100 holographic">
               Contact our certified IT experts for a free consultation and custom solution design
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
                 href="tel:+13024640950"
-                className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors inline-flex items-center"
+                className="neon-button"
               >
                 📞 +1 302 464 0950
               </a>
               <a 
                 href="mailto:kleber@ziontechgroup.com"
-                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
+                className="neon-button neon-text-purple"
               >
                 ✉️ kleber@ziontechgroup.com
               </a>
