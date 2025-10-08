@@ -17,12 +17,6 @@ export default function RootLayout({
     name: 'Zion Tech Group',
     url: 'https://ziontechgroup.com',
     logo: 'https://ziontechgroup.com/logo.png',
-<<<<<<< HEAD
-    description: 'Leading provider of AI-powered enterprise solutions, automation, and digital transformation services. Specializing in AI implementation, enterprise architecture, and cost optimization strategies.',
-    foundingDate: '2020',
-    numberOfEmployees: '50-100',
-    industry: 'Technology',
-=======
     description: 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.',
     foundingDate: '2020',
     numberOfEmployees: '50-100',
@@ -36,7 +30,6 @@ export default function RootLayout({
       'Automation',
       'Business Intelligence'
     ],
->>>>>>> cursor/analyze-improve-and-deploy-application-3d67
     contactPoint: {
       '@type': 'ContactPoint',
       telephone: '+1-302-600-9898',

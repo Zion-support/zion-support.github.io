@@ -85,16 +85,18 @@ const HomePage: React.FC = () => {
           }`}
           aria-labelledby="hero-heading"
         >
-<<<<<<< HEAD
-          <h1 id="hero-heading" className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
+          <h1 
+            id="hero-heading" 
+            className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent"
+          >
             Zion Tech Group
           </h1>
-          <p className="text-xl md:text-2xl text-gray-600 mb-8" role="doc-subtitle">
-            Advanced AI & Technology Solutions
+          <p className="text-xl md:text-2xl text-gray-600 mb-8 font-medium" role="doc-subtitle">
+            Advanced AI and IT Solutions
           </p>
           <p className="text-lg md:text-xl text-gray-700 max-w-4xl mx-auto mb-8 leading-relaxed">
-            Leading provider of enterprise AI solutions, digital transformation, and cutting-edge technology services. 
-            Transform your business with our proven strategies delivering $50M+ annual savings and 95% process automation.
+            Leading provider of enterprise AI solutions, quantum computing, and autonomous systems.
+            Transform your business with our cutting-edge technology and achieve unprecedented growth.
           </p>
           
           {/* Key Benefits */}
@@ -114,20 +116,7 @@ const HomePage: React.FC = () => {
               <h3 className="font-bold text-gray-900 mb-3 text-lg">Enterprise Security</h3>
               <p className="text-sm text-gray-600 leading-relaxed">Bank-level security and compliance for your critical data and infrastructure</p>
             </div>
-=======
-          <h1 
-            id="hero-heading" 
-            className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent"
-          >
-            Zion Tech Group
-          </h1>
-          <p className="text-xl md:text-2xl text-gray-600 mb-8 font-medium" role="doc-subtitle">
-            Advanced AI and IT Solutions
-          </p>
-          <p className="text-lg md:text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed">
-            Leading provider of enterprise AI solutions, quantum computing, and autonomous systems.
-            Transform your business with our cutting-edge technology and achieve unprecedented growth.
-          </p>
+          </div>
           
           {/* CTA Buttons */}
           <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -145,17 +134,11 @@ const HomePage: React.FC = () => {
             >
               Get Free Consultation
             </a>
->>>>>>> cursor/analyze-improve-and-deploy-application-3d67
           </div>
         </section>
 
         {/* Services Section */}
         <section className="mb-16" aria-labelledby="services-heading">
-<<<<<<< HEAD
-          <h2 id="services-heading" className="text-3xl font-bold text-center text-gray-900 mb-12">
-            Our Core Services
-          </h2>
-=======
           <h2 id="services-heading" className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 text-center">
             Our Services
           </h2>
@@ -211,7 +194,6 @@ const HomePage: React.FC = () => {
               </article>
             </Suspense>
           </div>
->>>>>>> cursor/analyze-improve-and-deploy-application-3d67
           
           <div className="grid md:grid-cols-3 gap-8">
             <article className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 focus-within:ring-4 focus-within:ring-indigo-300">
@@ -331,45 +313,6 @@ const HomePage: React.FC = () => {
 
         {/* Call to Action Section */}
         <section className="text-center bg-gradient-to-r from-indigo-50 to-purple-50 rounded-2xl p-12" aria-labelledby="cta-heading">
-<<<<<<< HEAD
-          <h2 id="cta-heading" className="text-4xl font-bold text-gray-900 mb-6">
-            Ready to Transform Your Business?
-          </h2>
-          <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-            Join hundreds of companies already using our AI solutions to drive growth and efficiency.
-          </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <a
-              href="tel:+13026009898"
-              onClick={handlePhoneClick}
-              className="inline-flex items-center bg-indigo-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-indigo-700 transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-4 focus:ring-indigo-300 shadow-lg"
-              aria-label="Call us at (302) 600-9898"
-            >
-              <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-              </svg>
-              Call: (302) 600-9898
-            </a>
-            
-            <a
-              href="/contact"
-              className="inline-flex items-center bg-white text-indigo-600 px-8 py-4 rounded-lg font-semibold border-2 border-indigo-600 hover:bg-indigo-50 transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-4 focus:ring-indigo-300 shadow-lg"
-              aria-label="Contact us via form"
-            >
-              <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-              </svg>
-              Get Free Consultation
-            </a>
-          </div>
-          
-          <div className="mt-8 text-sm text-gray-500">
-            <p>✓ Free initial consultation</p>
-            <p>✓ Custom solution design</p>
-            <p>✓ 24/7 support available</p>
-          </div>
-=======
           <h2 id="cta-heading" className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
             Ready to Transform Your Business?
           </h2>
@@ -392,7 +335,12 @@ const HomePage: React.FC = () => {
               Get Free Consultation
             </a>
           </div>
->>>>>>> cursor/analyze-improve-and-deploy-application-3d67
+          
+          <div className="mt-8 text-sm text-gray-500">
+            <p>✓ Free initial consultation</p>
+            <p>✓ Custom solution design</p>
+            <p>✓ 24/7 support available</p>
+          </div>
         </section>
       </main>
       
