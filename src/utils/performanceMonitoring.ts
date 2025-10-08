@@ -3,20 +3,6 @@
  * Tracks Web Vitals, custom metrics, and provides performance insights
  */
 
-// Import web vitals types
-interface LayoutShift extends PerformanceEntry {
-  value: number;
-  hadRecentInput: boolean;
-  lastInputTime: number;
-  sources: LayoutShiftAttribution[];
-}
-
-interface LayoutShiftAttribution {
-  node?: Node;
-  previousRect: DOMRectReadOnly;
-  currentRect: DOMRectReadOnly;
-}
-
 export interface PerformanceMetric {
   name: string;
   value: number;
@@ -25,12 +11,12 @@ export interface PerformanceMetric {
 }
 
 export interface WebVitals {
-  CLS?: PerformanceMetric; // Cumulative Layout Shift
-  FID?: PerformanceMetric; // First Input Delay
-  FCP?: PerformanceMetric; // First Contentful Paint
-  LCP?: PerformanceMetric; // Largest Contentful Paint
+  CLS?: PerformanceMetric;  // Cumulative Layout Shift
+  FID?: PerformanceMetric;  // First Input Delay
+  FCP?: PerformanceMetric;  // First Contentful Paint
+  LCP?: PerformanceMetric;  // Largest Contentful Paint
   TTFB?: PerformanceMetric; // Time to First Byte
-  INP?: PerformanceMetric; // Interaction to Next Paint
+  INP?: PerformanceMetric;  // Interaction to Next Paint
 }
 
 export interface CustomMetric {
@@ -39,11 +25,6 @@ export interface CustomMetric {
   unit: string;
   timestamp: number;
   tags?: Record<string, string>;
-}
-
-interface LayoutShift extends PerformanceEntry {
-  value: number;
-  hadRecentInput: boolean;
 }
 
 class PerformanceMonitor {
@@ -66,12 +47,7 @@ class PerformanceMonitor {
   /**
    * Track a custom performance metric
    */
-  trackMetric(
-    name: string,
-    value: number,
-    unit: string = 'ms',
-    tags?: Record<string, string>
-  ): void {
+  trackMetric(name: string, value: number, unit: string = 'ms', tags?: Record<string, string>): void {
     const metric: CustomMetric = {
       name,
       value,
@@ -84,7 +60,7 @@ class PerformanceMonitor {
 
     // Log in development
     if (process.env['NODE_ENV'] === 'development') {
-      //       console.log(`[Performance] ${name}: ${value}${unit}`, tags);
+//       console.log(`[Performance] ${name}: ${value}${unit}`, tags);
     }
   }
 
@@ -150,7 +126,7 @@ class PerformanceMonitor {
         return duration;
       }
     } catch (error) {
-      console.warn('Failed to measure performance:', error);
+//       console.warn('Failed to measure performance:', error);
     }
     return null;
   }
@@ -160,7 +136,7 @@ class PerformanceMonitor {
    */
   getMetrics(name?: string): CustomMetric[] {
     if (name) {
-      return this.metrics.filter(m => m.name === name);
+      return this.metrics.filter((m) => m.name === name);
     }
     return [...this.metrics];
   }
@@ -178,7 +154,7 @@ class PerformanceMonitor {
   onMetric(callback: (metric: PerformanceMetric) => void): () => void {
     this.callbacks.push(callback);
     return () => {
-      this.callbacks = this.callbacks.filter(cb => cb !== callback);
+      this.callbacks = this.callbacks.filter((cb) => cb !== callback);
     };
   }
 
@@ -193,16 +169,13 @@ class PerformanceMonitor {
     const averagesByName: Record<string, number> = {};
 
     // Group metrics by name and calculate averages
-    const metricsByName = this.metrics.reduce(
-      (acc, metric) => {
-        if (!acc[metric.name]) {
-          acc[metric.name] = [];
-        }
-        acc[metric.name].push(metric.value);
-        return acc;
-      },
-      {} as Record<string, number[]>
-    );
+    const metricsByName = this.metrics.reduce((acc, metric) => {
+      if (!acc[metric.name]) {
+        acc[metric.name] = [];
+      }
+      acc[metric.name].push(metric.value);
+      return acc;
+    }, {} as Record<string, number[]>);
 
     Object.entries(metricsByName).forEach(([name, values]) => {
       averagesByName[name] = values.reduce((sum, val) => sum + val, 0) / values.length;
@@ -230,7 +203,7 @@ class PerformanceMonitor {
 
     try {
       // Observe Largest Contentful Paint (LCP)
-      const lcpObserver = new PerformanceObserver(list => {
+      const lcpObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
         const lastEntry = entries[entries.length - 1] as any;
         if (lastEntry) {
@@ -243,11 +216,10 @@ class PerformanceMonitor {
       this.observers.push(lcpObserver);
 
       // Observe First Input Delay (FID)
-      const fidObserver = new PerformanceObserver(list => {
+      const fidObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
-        entries.forEach((entry: unknown) => {
-          const fidEntry = entry as PerformanceEventTiming;
-          const metric = this.createMetric('FID', fidEntry.processingStart - fidEntry.startTime);
+        entries.forEach((entry: any) => {
+          const metric = this.createMetric('FID', entry.processingStart - entry.startTime);
           this.webVitals.FID = metric;
           this.notifyCallbacks(metric);
         });
@@ -257,12 +229,11 @@ class PerformanceMonitor {
 
       // Observe Cumulative Layout Shift (CLS)
       let clsValue = 0;
-      const clsObserver = new PerformanceObserver(list => {
+      const clsObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
-        entries.forEach((entry: unknown) => {
-          const clsEntry = entry as LayoutShift;
-          if (!clsEntry.hadRecentInput) {
-            clsValue += clsEntry.value;
+        entries.forEach((entry: any) => {
+          if (!entry.hadRecentInput) {
+            clsValue += entry.value;
           }
         });
         const metric = this.createMetric('CLS', clsValue);
@@ -272,7 +243,7 @@ class PerformanceMonitor {
       clsObserver.observe({ entryTypes: ['layout-shift'] });
       this.observers.push(clsObserver);
     } catch (error) {
-      console.warn('Failed to observe Web Vitals:', error);
+//       console.warn('Failed to observe Web Vitals:', error);
     }
   }
 
@@ -283,12 +254,10 @@ class PerformanceMonitor {
     if (typeof window === 'undefined' || !performance.getEntriesByType) return;
 
     window.addEventListener('load', () => {
-      const navigationEntries = performance.getEntriesByType(
-        'navigation'
-      ) as PerformanceNavigationTiming[];
+      const navigationEntries = performance.getEntriesByType('navigation') as PerformanceNavigationTiming[];
       if (navigationEntries.length > 0) {
         const nav = navigationEntries[0];
-
+        
         // Track various navigation metrics
         this.trackMetric('dns_lookup', nav.domainLookupEnd - nav.domainLookupStart);
         this.trackMetric('tcp_connection', nav.connectEnd - nav.connectStart);
@@ -306,7 +275,7 @@ class PerformanceMonitor {
 
         // FCP (First Contentful Paint)
         const paintEntries = performance.getEntriesByType('paint');
-        const fcpEntry = paintEntries.find(entry => entry.name === 'first-contentful-paint');
+        const fcpEntry = paintEntries.find((entry) => entry.name === 'first-contentful-paint');
         if (fcpEntry) {
           const fcpMetric = this.createMetric('FCP', fcpEntry.startTime);
           this.webVitals.FCP = fcpMetric;
@@ -323,16 +292,15 @@ class PerformanceMonitor {
     if (typeof window === 'undefined' || !('PerformanceObserver' in window)) return;
 
     try {
-      const resourceObserver = new PerformanceObserver(list => {
+      const resourceObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
-        entries.forEach((entry: unknown) => {
-          const resourceEntry = entry as PerformanceResourceTiming;
-          if (resourceEntry.initiatorType) {
+        entries.forEach((entry: any) => {
+          if (entry.initiatorType) {
             this.trackMetric(
-              `resource_${resourceEntry.initiatorType}`,
-              resourceEntry.duration,
+              `resource_${entry.initiatorType}`,
+              entry.duration,
               'ms',
-              { name: resourceEntry.name }
+              { name: entry.name }
             );
           }
         });
@@ -340,7 +308,7 @@ class PerformanceMonitor {
       resourceObserver.observe({ entryTypes: ['resource'] });
       this.observers.push(resourceObserver);
     } catch (error) {
-      console.warn('Failed to observe resource timing:', error);
+//       console.warn('Failed to observe resource timing:', error);
     }
   }
 
@@ -381,11 +349,11 @@ class PerformanceMonitor {
    * Notify all callbacks
    */
   private notifyCallbacks(metric: PerformanceMetric): void {
-    this.callbacks.forEach(callback => {
+    this.callbacks.forEach((callback) => {
       try {
         callback(metric);
       } catch (error) {
-        //         console.error('Error in performance callback:', error);
+//         console.error('Error in performance callback:', error);
       }
     });
   }
@@ -394,7 +362,7 @@ class PerformanceMonitor {
    * Clean up observers
    */
   cleanup(): void {
-    this.observers.forEach(observer => observer.disconnect());
+    this.observers.forEach((observer) => observer.disconnect());
     this.observers = [];
   }
 }

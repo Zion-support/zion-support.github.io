@@ -19,7 +19,7 @@ export const generateCSP = (): string => {
     "base-uri 'self'",
     "form-action 'self'",
     "frame-ancestors 'none'",
-    'upgrade-insecure-requests',
+    "upgrade-insecure-requests",
   ];
 
   return cspDirectives.join('; ');
@@ -79,7 +79,7 @@ export const escapeHTML = (text: string): string => {
     "'": '&#x27;',
     '/': '&#x2F;',
   };
-  return text.replace(/[&<>"'/]/g, char => map[char]);
+  return text.replace(/[&<>"'/]/g, (char) => map[char]);
 };
 
 /**
@@ -90,7 +90,7 @@ export const generateCSRFToken = (): string => {
   if (typeof window !== 'undefined' && window.crypto) {
     window.crypto.getRandomValues(array);
   }
-  return Array.from(array, (byte: number) => byte.toString(16).padStart(2, '0')).join('');
+  return Array.from(array, (byte: any) => byte.toString(16).padStart(2, '0')).join('');
 };
 
 /**
@@ -128,7 +128,7 @@ export class RateLimiter {
     const requests = this.requests.get(key) || [];
 
     // Remove old requests outside the window
-    const validRequests = requests.filter(timestamp => now - timestamp < this.window);
+    const validRequests = requests.filter((timestamp) => now - timestamp < this.window);
 
     if (validRequests.length >= this.limit) {
       return false;
@@ -152,7 +152,7 @@ export class RateLimiter {
   getRemaining(key: string): number {
     const now = Date.now();
     const requests = this.requests.get(key) || [];
-    const validRequests = requests.filter(timestamp => now - timestamp < this.window);
+    const validRequests = requests.filter((timestamp) => now - timestamp < this.window);
     return Math.max(0, this.limit - validRequests.length);
   }
 }
@@ -177,7 +177,7 @@ export class SecureStorage {
       const encryptedData = btoa(data);
       localStorage.setItem(`${this.prefix}${key}`, encryptedData);
     } catch (error) {
-      console.error('Failed to set storage item:', error);
+//       console.error('Failed to set storage item:', error);
     }
   }
 
@@ -193,7 +193,7 @@ export class SecureStorage {
       const data = atob(encryptedData);
       return JSON.parse(data) as T;
     } catch (error) {
-      console.error('Failed to get storage item:', error);
+//       console.error('Failed to get storage item:', error);
       return null;
     }
   }
@@ -210,7 +210,7 @@ export class SecureStorage {
    */
   clear(): void {
     const keys = Object.keys(localStorage);
-    keys.forEach(key => {
+    keys.forEach((key) => {
       if (key.startsWith(this.prefix)) {
         localStorage.removeItem(key);
       }
@@ -282,7 +282,10 @@ export const sanitizeFileName = (fileName: string): string => {
 /**
  * Check if file type is allowed
  */
-export const isAllowedFileType = (fileName: string, allowedExtensions: string[]): boolean => {
+export const isAllowedFileType = (
+  fileName: string,
+  allowedExtensions: string[]
+): boolean => {
   const ext = fileName.split('.').pop()?.toLowerCase();
   return ext ? allowedExtensions.includes(ext) : false;
 };

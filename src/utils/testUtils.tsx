@@ -112,6 +112,7 @@ export async function waitFor(
   interval = 50
 ): Promise<void> {
   const startTime = Date.now();
+
   while (!condition()) {
     if (Date.now() - startTime > timeout) {
       throw new Error('Timeout waiting for condition');
@@ -193,9 +194,7 @@ export function delay(ms: number): Promise<void> {
  */
 export const random = {
   string: (length = 10): string => {
-    return Math.random()
-      .toString(36)
-      .substring(2, 2 + length);
+    return Math.random().toString(36).substring(2, 2 + length);
   },
 
   number: (min = 0, max = 100): number => {
@@ -246,7 +245,9 @@ export async function assertThrows(
       }
     } else {
       if (!expectedError.test(message)) {
-        throw new Error(`Expected error message to match ${expectedError}, but got "${message}"`);
+        throw new Error(
+          `Expected error message to match ${expectedError}, but got "${message}"`
+        );
       }
     }
   }

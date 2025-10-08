@@ -35,7 +35,7 @@ class ErrorHandler {
   handleError(error: Error, context?: Record<string, unknown>): void {
     const category = this.categorizeError(error);
     const severity = this.determineSeverity(error, category);
-
+    
     const errorData: ErrorInfo = {
       id: this.generateErrorId(),
       error,
@@ -96,7 +96,7 @@ class ErrorHandler {
   }
 
   private reportError(errorData: ErrorInfo): void {
-    console.error('Error reported:', errorData);
+//     console.error('Error reported:', errorData);
   }
 
   getErrors(): ErrorInfo[] {
