@@ -14,8 +14,6 @@ const logger = {
   }
 };
 
-import { logger } from './logger';
-
 interface PerformanceMetrics {
   lcp?: number;
   fid?: number;

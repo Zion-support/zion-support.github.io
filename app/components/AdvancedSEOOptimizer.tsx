@@ -90,46 +90,6 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     }
   }, [config]);
 
-  const generateStructuredData = () => {
-    if (!enableStructuredData) return null;
-
-    const structuredData = {
-      '@context': 'https://schema.org',
-      '@type': 'Organization',
-      name: 'Zion Tech Group',
-      description: config.description,
-      url: config.canonicalUrl,
-      logo: config.ogImage,
-      sameAs: [
-        'https://twitter.com/ziontechgroup',
-        'https://linkedin.com/company/ziontechgroup',
-        'https://github.com/ziontechgroup',
-      ],
-      contactPoint: {
-        '@type': 'ContactPoint',
-        telephone: '+1-555-0123',
-        contactType: 'customer service',
-        areaServed: 'US',
-        availableLanguage: 'English',
-      },
-      address: {
-        '@type': 'PostalAddress',
-        streetAddress: '123 Tech Street',
-        addressLocality: 'San Francisco',
-        addressRegion: 'CA',
-        postalCode: '94105',
-        addressCountry: 'US',
-      },
-      offers: {
-        '@type': 'Offer',
-        description: 'AI and IT Solutions',
-        category: 'Technology Services',
-      },
-    };
-
-    return baseStructuredData;
-  }, [seoData, enableStructuredData]);
-
   const generateBreadcrumbStructuredData = useCallback(() => {
     if (!enableSchemaMarkup) return null;
 
@@ -146,12 +106,12 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
         {
           '@type': 'ListItem',
           position: 2,
-          name: seoData.title,
-          item: seoData.canonicalUrl,
+          name: config.title,
+          item: config.canonicalUrl,
         },
       ],
     };
-  }, [seoData, enableSchemaMarkup]);
+  }, [config, enableSchemaMarkup]);
 
   const addCanonicalLink = useCallback(() => {
     // Remove existing canonical link
