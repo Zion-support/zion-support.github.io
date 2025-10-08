@@ -1,212 +1,171 @@
 /**
  * Security Headers Configuration
- * Provides comprehensive security headers for the application
+ * Implements best practices for web application security
  */
 
 export interface SecurityHeadersConfig {
-  contentSecurityPolicy?: string;
-  strictTransportSecurity?: string;
-  xFrameOptions?: string;
-  xContentTypeOptions?: string;
-  referrerPolicy?: string;
-  permissionsPolicy?: string;
-  xXSSProtection?: string;
+  enableCSP?: boolean;
+  enableHSTS?: boolean;
+  enableXFrameOptions?: boolean;
+  enableContentTypeOptions?: boolean;
+  enableReferrerPolicy?: boolean;
+  enablePermissionsPolicy?: boolean;
 }
 
-export const DEFAULT_SECURITY_HEADERS: SecurityHeadersConfig = {
-  // Content Security Policy
-  contentSecurityPolicy: [
+/**
+ * Content Security Policy (CSP) configuration
+ */
+export const getCSPHeader = () => {
+  const cspDirectives = [
     "default-src 'self'",
-    "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.jsdelivr.net https://unpkg.com",
+    "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.google-analytics.com https://www.googletagmanager.com https://cdn.jsdelivr.net",
     "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
-    "font-src 'self' https://fonts.gstatic.com",
-    "img-src 'self' data: https: blob:",
-    "connect-src 'self' https://api.ziontech.com",
-    "frame-ancestors 'none'",
+    "img-src 'self' data: https: http:",
+    "font-src 'self' data: https://fonts.gstatic.com",
+    "connect-src 'self' https://api.github.com https://www.google-analytics.com",
+    "frame-ancestors 'self'",
     "base-uri 'self'",
     "form-action 'self'",
-  ].join('; '),
-
-  // HTTP Strict Transport Security (HSTS)
-  strictTransportSecurity: 'max-age=31536000; includeSubDomains; preload',
-
-  // Prevent clickjacking
-  xFrameOptions: 'DENY',
-
-  // Prevent MIME type sniffing
-  xContentTypeOptions: 'nosniff',
-
-  // Referrer Policy
-  referrerPolicy: 'strict-origin-when-cross-origin',
-
-  // Permissions Policy (formerly Feature Policy)
-  permissionsPolicy: [
-    'accelerometer=()',
-    'camera=()',
-    'geolocation=()',
-    'gyroscope=()',
-    'magnetometer=()',
-    'microphone=()',
-    'payment=()',
-    'usb=()',
-  ].join(', '),
-
-  // XSS Protection (legacy, but still useful for older browsers)
-  xXSSProtection: '1; mode=block',
+    "frame-src 'self' https://www.youtube.com",
+    "object-src 'none'",
+    "upgrade-insecure-requests",
+  ];
+  
+  return cspDirectives.join('; ');
 };
 
-export class SecurityHeadersManager {
-  private static instance: SecurityHeadersManager;
-  private config: SecurityHeadersConfig;
+/**
+ * Get all security headers as an object
+ */
+export const getSecurityHeaders = (config: SecurityHeadersConfig = {}): Record<string, string> => {
+  const {
+    enableCSP = true,
+    enableHSTS = true,
+    enableXFrameOptions = true,
+    enableContentTypeOptions = true,
+    enableReferrerPolicy = true,
+    enablePermissionsPolicy = true,
+  } = config;
 
-  private constructor(config: SecurityHeadersConfig = DEFAULT_SECURITY_HEADERS) {
-    this.config = config;
+  const headers: Record<string, string> = {};
+
+  // Content Security Policy
+  if (enableCSP) {
+    headers['Content-Security-Policy'] = getCSPHeader();
   }
 
-  static getInstance(config?: SecurityHeadersConfig): SecurityHeadersManager {
-    if (!SecurityHeadersManager.instance) {
-      SecurityHeadersManager.instance = new SecurityHeadersManager(config);
-    }
-    return SecurityHeadersManager.instance;
+  // HTTP Strict Transport Security (HSTS)
+  if (enableHSTS) {
+    headers['Strict-Transport-Security'] = 'max-age=31536000; includeSubDomains; preload';
   }
 
-  /**
-   * Get all security headers as a record
-   */
-  getHeaders(): Record<string, string> {
-    const headers: Record<string, string> = {};
-
-    if (this.config.contentSecurityPolicy) {
-      headers['Content-Security-Policy'] = this.config.contentSecurityPolicy;
-    }
-
-    if (this.config.strictTransportSecurity) {
-      headers['Strict-Transport-Security'] = this.config.strictTransportSecurity;
-    }
-
-    if (this.config.xFrameOptions) {
-      headers['X-Frame-Options'] = this.config.xFrameOptions;
-    }
-
-    if (this.config.xContentTypeOptions) {
-      headers['X-Content-Type-Options'] = this.config.xContentTypeOptions;
-    }
-
-    if (this.config.referrerPolicy) {
-      headers['Referrer-Policy'] = this.config.referrerPolicy;
-    }
-
-    if (this.config.permissionsPolicy) {
-      headers['Permissions-Policy'] = this.config.permissionsPolicy;
-    }
-
-    if (this.config.xXSSProtection) {
-      headers['X-XSS-Protection'] = this.config.xXSSProtection;
-    }
-
-    return headers;
+  // X-Frame-Options (prevents clickjacking)
+  if (enableXFrameOptions) {
+    headers['X-Frame-Options'] = 'SAMEORIGIN';
   }
 
-  /**
-   * Get headers as meta tags for client-side rendering
-   */
-  getMetaTags(): string[] {
-    const metaTags: string[] = [];
-
-    if (this.config.contentSecurityPolicy) {
-      metaTags.push(
-        `<meta http-equiv="Content-Security-Policy" content="${this.config.contentSecurityPolicy}">`
-      );
-    }
-
-    if (this.config.referrerPolicy) {
-      metaTags.push(`<meta name="referrer" content="${this.config.referrerPolicy}">`);
-    }
-
-    return metaTags;
+  // X-Content-Type-Options (prevents MIME sniffing)
+  if (enableContentTypeOptions) {
+    headers['X-Content-Type-Options'] = 'nosniff';
   }
 
-  /**
-   * Update a specific header
-   */
-  updateHeader(key: keyof SecurityHeadersConfig, value: string): void {
-    this.config[key] = value;
+  // Referrer-Policy
+  if (enableReferrerPolicy) {
+    headers['Referrer-Policy'] = 'strict-origin-when-cross-origin';
   }
 
-  /**
-   * Update multiple headers
-   */
-  updateHeaders(headers: Partial<SecurityHeadersConfig>): void {
-    this.config = { ...this.config, ...headers };
+  // Permissions-Policy (formerly Feature-Policy)
+  if (enablePermissionsPolicy) {
+    const permissions = [
+      'camera=()',
+      'microphone=()',
+      'geolocation=()',
+      'interest-cohort=()',
+      'payment=()',
+      'usb=()',
+    ];
+    headers['Permissions-Policy'] = permissions.join(', ');
   }
 
-  /**
-   * Get current configuration
-   */
-  getConfig(): SecurityHeadersConfig {
-    return { ...this.config };
-  }
+  // Additional security headers
+  headers['X-DNS-Prefetch-Control'] = 'on';
+  headers['X-Download-Options'] = 'noopen';
+  headers['X-Permitted-Cross-Domain-Policies'] = 'none';
+  headers['X-XSS-Protection'] = '1; mode=block';
 
-  /**
-   * Validate security headers configuration
-   */
-  validate(): { valid: boolean; errors: string[]; warnings: string[] } {
-    const errors: string[] = [];
-    const warnings: string[] = [];
+  return headers;
+};
 
-    // Validate CSP
-    if (!this.config.contentSecurityPolicy) {
-      warnings.push('Content-Security-Policy is not set');
-    } else if (this.config.contentSecurityPolicy.includes("'unsafe-eval'")) {
-      warnings.push("CSP contains 'unsafe-eval' which may pose security risks");
-    }
+/**
+ * Apply security headers to a Response object
+ */
+export const applySecurityHeaders = (response: Response, config?: SecurityHeadersConfig): Response => {
+  const headers = getSecurityHeaders(config);
+  
+  Object.entries(headers).forEach(([key, value]) => {
+    response.headers.set(key, value);
+  });
+  
+  return response;
+};
 
-    // Validate HSTS
-    if (!this.config.strictTransportSecurity) {
-      warnings.push('Strict-Transport-Security is not set');
-    } else if (!this.config.strictTransportSecurity.includes('max-age=')) {
-      errors.push('Strict-Transport-Security must include max-age directive');
-    }
+/**
+ * Get security headers as middleware format
+ */
+export const getSecurityHeadersMiddleware = (config?: SecurityHeadersConfig) => {
+  const headers = getSecurityHeaders(config);
+  
+  return Object.entries(headers).map(([key, value]) => ({
+    key,
+    value,
+  }));
+};
 
-    // Validate X-Frame-Options
-    if (!this.config.xFrameOptions) {
-      warnings.push('X-Frame-Options is not set, application may be vulnerable to clickjacking');
-    }
+/**
+ * CORS configuration for API endpoints
+ */
+export const getCORSHeaders = (origin: string = '*') => ({
+  'Access-Control-Allow-Origin': origin,
+  'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
+  'Access-Control-Allow-Headers': 'Content-Type, Authorization',
+  'Access-Control-Max-Age': '86400',
+});
 
-    // Validate X-Content-Type-Options
-    if (!this.config.xContentTypeOptions) {
-      warnings.push('X-Content-Type-Options is not set, MIME type sniffing may occur');
-    }
-
-    return {
-      valid: errors.length === 0,
-      errors,
-      warnings,
-    };
-  }
-
-  /**
-   * Generate Next.js security headers configuration
-   */
-  getNextJsConfig(): Array<{ key: string; value: string }> {
-    const headers = this.getHeaders();
-    return Object.entries(headers).map(([key, value]) => ({
-      key,
-      value,
-    }));
-  }
-
-  /**
-   * Apply headers to a Response object
-   */
-  applyToResponse(response: Response): Response {
-    const headers = this.getHeaders();
-    Object.entries(headers).forEach(([key, value]) => {
-      response.headers.set(key, value);
-    });
-    return response;
-  }
+/**
+ * Rate limiting configuration
+ */
+export interface RateLimitConfig {
+  windowMs?: number;
+  maxRequests?: number;
 }
 
-export const securityHeaders = SecurityHeadersManager.getInstance();
-export default SecurityHeadersManager;
+export const getRateLimitConfig = (config: RateLimitConfig = {}) => ({
+  windowMs: config.windowMs || 15 * 60 * 1000, // 15 minutes
+  maxRequests: config.maxRequests || 100,
+});
+
+/**
+ * Security utilities for input validation
+ */
+export const sanitizeInput = (input: string): string => {
+  // Remove potentially dangerous characters
+  return input
+    .replace(/[<>]/g, '')
+    .replace(/javascript:/gi, '')
+    .replace(/on\w+=/gi, '')
+    .trim();
+};
+
+export const isValidEmail = (email: string): boolean => {
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return emailRegex.test(email);
+};
+
+export const isValidURL = (url: string): boolean => {
+  try {
+    new URL(url);
+    return true;
+  } catch {
+    return false;
+  }
+};

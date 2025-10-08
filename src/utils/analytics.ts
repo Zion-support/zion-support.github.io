@@ -108,14 +108,14 @@ class Analytics {
   /**
    * Track performance metrics
    */
-  trackPerformance(metric: string, value: number, unit: string = 'ms'): void {
+  trackPerformance(metric: string, value: number, unit: string): void {
     this.track('performance', 'metrics', metric, unit, value);
   }
 
   /**
    * Track business events
    */
-  trackBusiness(
+  trackBusinessEvent(
     event: string,
     value?: number,
     properties?: Record<string, unknown>
@@ -124,17 +124,9 @@ class Analytics {
   }
 
   /**
-   * Send event to analytics service
-   */
-  private async sendToAnalytics(event: AnalyticsEvent): Promise<void> {
-    // Implementation for sending to analytics service
-    console.log('Analytics event:', event);
-  }
-
-  /**
    * Get all events
    */
-  getEvents(): AnalyticsEvent[] {
+  getAllEvents(): AnalyticsEvent[] {
     return [...this.events];
   }
 
@@ -168,4 +160,5 @@ class Analytics {
 }
 
 const analytics = new Analytics();
+
 export default analytics;

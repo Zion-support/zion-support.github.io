@@ -1,7 +1,7 @@
 # Pull Request
 
 ## Description
-Brief description of the changes made in this PR.
+<!-- Provide a clear and concise description of your changes -->
 
 ## Type of Change
 - [ ] Bug fix (non-breaking change which fixes an issue)
@@ -11,6 +11,9 @@ Brief description of the changes made in this PR.
 - [ ] Refactoring (no functional changes)
 - [ ] Performance improvement
 - [ ] Security fix
+
+## Related Issue
+<!-- Link to the issue this PR addresses: Fixes #(issue number) -->
 
 ## Testing
 - [ ] I have tested this change locally
@@ -29,7 +32,7 @@ Brief description of the changes made in this PR.
 - [ ] Any dependent changes have been merged and published
 
 ## Screenshots (if applicable)
-Add screenshots to help explain your changes.
+<!-- Add screenshots to help explain your changes -->
 
 ## Additional Notes
-Any additional information that reviewers should know about this PR.
+<!-- Any additional information that reviewers should know -->

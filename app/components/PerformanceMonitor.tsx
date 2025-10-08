@@ -1,29 +1,117 @@
 'use client';
 
 import React, { useEffect, useState, memo } from 'react';
+import { logger } from '@/utils/logger';
+
+interface LayoutShift extends PerformanceEntry {
+  hadRecentInput: boolean;
+  value: number;
+}
 
 interface PerformanceMetrics {
-  fcp?: number;
+  loadTime: number;
+  renderTime: number;
+  memoryUsage: number;
+  bundleSize: number;
+  cacheHitRate: number;
   lcp?: number;
   fid?: number;
   cls?: number;
+  fcp?: number;
   ttfb?: number;
 }
 
-const PerformanceMonitor: React.FC = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({});
+interface PerformanceMonitorProps {
+  enableRealTimeMonitoring?: boolean;
+  enableConsoleLogging?: boolean;
+  enableVisualIndicator?: boolean;
+  updateInterval?: number;
+}
+
+const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
+  enableRealTimeMonitoring = true,
+  enableConsoleLogging = false,
+  enableVisualIndicator = false,
+  updateInterval = 5000,
+}) => {
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+    loadTime: 0,
+    renderTime: 0,
+    memoryUsage: 0,
+    bundleSize: 0,
+    cacheHitRate: 0,
+  });
+
+  const [performanceScore, setPerformanceScore] = useState<number>(0);
+  const [isVisible, setIsVisible] = useState<boolean>(false);
 
   useEffect(() => {
-    if (typeof window === 'undefined') return;
+    if (!enableRealTimeMonitoring) return;
 
-    const reportWebVitals = (metric: { name: string; value: number }) => {
-      // Log to console in development
-      if (process.env['NODE_ENV'] === 'development') {
-        console.log('Web Vital:', metric.name, metric.value);
+    const reportWebVitals = (metric: any) => {
+      // Send to analytics service
+      if (typeof window !== 'undefined' && (window as { gtag?: Function }).gtag) {
+        (window as unknown as { gtag: Function }).gtag('event', 'web_vitals', {
+          event_category: 'Performance',
+          event_label: metric.name,
+          value: Math.round(metric.value),
+          non_interaction: true,
+        });
       }
     };
 
-    // Monitor Core Web Vitals
+    const getMetrics = (): PerformanceMetrics => {
+      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming | undefined;
+      const memory = (performance as Performance & {
+        memory?: {
+          usedJSHeapSize: number;
+          totalJSHeapSize: number;
+          jsHeapSizeLimit: number;
+        };
+      }).memory;
+      
+      return {
+        loadTime: navigation?.loadEventEnd ?? 0,
+        renderTime: navigation?.domContentLoadedEventEnd ?? 0,
+        memoryUsage: memory?.usedJSHeapSize ?? 0,
+        bundleSize: 0,
+        cacheHitRate: 0,
+      };
+    };
+
+    const getPerformanceScore = (): number => {
+      const metrics = getMetrics();
+      let score = 100;
+      
+      if (metrics.loadTime > 3000) score -= 20;
+      if (metrics.renderTime > 1500) score -= 15;
+      if (metrics.memoryUsage > 50000000) score -= 15;
+      
+      return Math.max(0, score);
+    };
+
+    const updateMetrics = () => {
+      const currentMetrics = getMetrics();
+      const score = getPerformanceScore();
+      
+      setMetrics(currentMetrics);
+      setPerformanceScore(score);
+
+      if (enableConsoleLogging) {
+        logger.group('Performance Metrics', () => {
+          logger.debug('Metrics', { metrics: currentMetrics });
+          logger.debug('Score', { score });
+        });
+      }
+    };
+
+    // Initial update
+    updateMetrics();
+
+    // Set up interval for real-time monitoring
+    const interval = setInterval(updateMetrics, updateInterval);
+
+    // Set up performance observer for more detailed monitoring
     if (typeof window !== 'undefined' && 'PerformanceObserver' in window) {
       try {
         // LCP - Largest Contentful Paint
@@ -40,15 +128,13 @@ const PerformanceMonitor: React.FC = () => {
         // FID - First Input Delay
         new PerformanceObserver((list) => {
           const entries = list.getEntries();
-          entries.forEach((entry: PerformanceEntry & { processingStart?: number }) => {
-            if (entry.processingStart) {
-              const fid = entry.processingStart - entry.startTime;
-              reportWebVitals({
-                name: 'FID',
-                value: fid,
-              });
-              setMetrics(prev => ({ ...prev, fid }));
-            }
+          entries.forEach((entry: any) => {
+            const fid = entry.processingStart - entry.startTime;
+            reportWebVitals({
+              name: 'FID',
+              value: fid,
+            });
+            setMetrics(prev => ({ ...prev, fid }));
           });
         }).observe({ entryTypes: ['first-input'] });
 
@@ -56,16 +142,16 @@ const PerformanceMonitor: React.FC = () => {
         let clsValue = 0;
         new PerformanceObserver((list) => {
           const entries = list.getEntries();
-          entries.forEach((entry: PerformanceEntry & { hadRecentInput?: boolean; value?: number }) => {
-            if (!entry.hadRecentInput && entry.value) {
+          entries.forEach((entry: any) => {
+            if (!entry.hadRecentInput) {
               clsValue += entry.value;
-              reportWebVitals({
-                name: 'CLS',
-                value: clsValue,
-              });
-              setMetrics(prev => ({ ...prev, cls: clsValue }));
             }
           });
+          reportWebVitals({
+            name: 'CLS',
+            value: clsValue,
+          });
+          setMetrics(prev => ({ ...prev, cls: clsValue }));
         }).observe({ entryTypes: ['layout-shift'] });
 
         // FCP - First Contentful Paint
@@ -83,8 +169,8 @@ const PerformanceMonitor: React.FC = () => {
         // TTFB - Time to First Byte
         new PerformanceObserver((list) => {
           const entries = list.getEntries();
-          entries.forEach((entry: PerformanceEntry & { responseStart?: number; requestStart?: number }) => {
-            if (entry.responseStart && entry.requestStart && entry.responseStart > 0) {
+          entries.forEach((entry: any) => {
+            if (entry.responseStart > 0) {
               const ttfb = entry.responseStart - entry.requestStart;
               reportWebVitals({
                 name: 'TTFB',
@@ -94,6 +180,7 @@ const PerformanceMonitor: React.FC = () => {
             }
           });
         }).observe({ entryTypes: ['navigation'] });
+
       } catch (error) {
         console.warn('Performance monitoring not supported:', error);
       }
@@ -101,7 +188,7 @@ const PerformanceMonitor: React.FC = () => {
   }, []);
 
   // Don't render anything in production
-  if (process.env['NODE_ENV'] !== 'development') {
+  if (process.env.NODE_ENV !== 'development') {
     return null;
   }
 

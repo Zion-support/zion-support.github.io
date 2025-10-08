@@ -476,6 +476,24 @@ export class ErrorHandler {
       bySeverity,
     };
   }
+
+  /**
+   * Initialize error handler
+   */
+  init(): void {
+    if (typeof window !== 'undefined') {
+      // Set up global error handler
+      window.addEventListener('error', (event) => {
+        this.handleError(event.error || new Error(event.message));
+      });
+
+      // Set up unhandled promise rejection handler
+      window.addEventListener('unhandledrejection', (event) => {
+        this.handleError(new Error(event.reason));
+      });
+    }
+  }
+
 }
 
 // React error boundary component

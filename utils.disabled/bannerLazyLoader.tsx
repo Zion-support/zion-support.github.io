@@ -7,8 +7,6 @@
 /**
  * Get banner priority based on content date and value
  */
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3f25:utils/bannerLazyLoader.tsx
 
 import React, { lazy, ComponentType, Suspense, useState, useEffect } from 'react';
 
@@ -21,18 +19,6 @@ interface LazyBannerProps {
   rootMargin?: string;
 }
 
-=======
-                retryError
-              );
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a4f
-=======
-                default: () => (
-                  <div className="banner-fallback">
-                    <p>Banner temporarily unavailable</p>
-                  </div>
-                )
-              });
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a05b:utils/bannerLazyLoader.tsx
             });
         }, 1000);
       });
@@ -55,8 +41,6 @@ export const preloadBanner = (importFn: () => Promise<BannerModule>): void => {
 /**
  * Get banner priority based on content date and value
  */
-=======
->>>>>>> origin/main
 export const getBannerPriority = (bannerName: string): number => {
   // October 2025 content gets highest priority
   if (bannerName.includes('October2025')) {
@@ -119,10 +103,6 @@ export class BannerObserver {
     }
   }
     }
-=======
-  observe(element: Element): void {
-    this.observer?.observe(element);
->>>>>>> origin/main
   }
   disconnect(): void {
     this.observer?.disconnect();
@@ -156,5 +136,3 @@ export default {
 :utils/bannerLazyLoader.ts
 };
 };
-=======
->>>>>>> origin/main

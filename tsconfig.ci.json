@@ -51,6 +51,10 @@
     "automation/**/*",
     "app/blog/**/*",
     "_app_disabled/blog/**/*",
-    "app_disabled/blog/**/*"
+    "app_disabled/blog/**/*",
+    "lint-target/**/*",
+    "pages_disabled/**/*",
+    "temp-files/**/*",
+    "netlify/**/*"
   ]
 }

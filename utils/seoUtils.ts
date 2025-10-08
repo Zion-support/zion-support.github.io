@@ -1,74 +1,38 @@
 /**
- * SEO utilities for optimizing search engine visibility
+ * SEO utility functions
  */
 
-// Meta tags management
-export const setMetaTags = (tags: Record<string, string>): void => {
-  Object.entries(tags).forEach(([name, content]) => {
-    if (!meta) {
-      meta = document.createElement('meta');
-      meta.name = name;
-      document.head.appendChild(meta);
-    }
-    meta.content = content;
-  });
+export interface SEOConfig {
+  title: string;
+  description: string;
+  keywords?: string[];
+  ogImage?: string;
+  canonicalUrl?: string;
+}
+
+export const generateMetaTags = (config: SEOConfig): string => {
+  const { title, description, keywords, ogImage, canonicalUrl } = config;
+  
+  let tags = `<title>${title}</title>`;
+  tags += `<meta name="description" content="${description}" />`;
+  
+  if (keywords && keywords.length > 0) {
+    tags += `<meta name="keywords" content="${keywords.join(', ')}" />`;
+  }
+  
+  if (ogImage) {
+    tags += `<meta property="og:image" content="${ogImage}" />`;
+  }
+  
+  if (canonicalUrl) {
+    tags += `<link rel="canonical" href="${canonicalUrl}" />`;
+  }
+  
+  return tags;
 };
 
-// Open Graph tags
-export const setOpenGraphTags = (ogData: {
-  title?: string;
-  description?: string;
-  image?: string;
-  url?: string;
-  type?: string;
-  siteName?: string;
-}): void => {
-  const ogTags = {
-    'og:title': ogData.title,
-    'og:description': ogData.description,
-    'og:image': ogData.image,
-    'og:url': ogData.url,
-    'og:type': ogData.type || 'website',
-    'og:site_name': ogData.siteName,
-  };
-
-  Object.entries(ogTags).forEach(([property, content]) => {
-    if (content) {
-      if (!meta) {
-        meta = document.createElement('meta');
-        meta.setAttribute('property', property);
-        document.head.appendChild(meta);
-      }
-      meta.content = content;
-    }
-  });
+export const updatePageTitle = (title: string) => {
+  if (typeof window !== 'undefined') {
+    document.title = title;
+  }
 };
-
-// Twitter Card tags
-export const setTwitterCardTags = (twitterData: {
-  card?: string;
-  title?: string;
-  description?: string;
-  image?: string;
-  };
-
-  Object.entries(twitterTags).forEach(([name, content]) => {
-    if (content) {
-      if (!meta) {
-        meta = document.createElement('meta');
-        meta.name = name;
-        document.head.appendChild(meta);
-      }
-      meta.content = content;
-    }
-  });
-};
-
-// Structured data
-export const setStructuredData = (data: Record<string, unknown>): void => {
-  const script = document.createElement('script');
-  script.type = 'application/ld+json';
-  script.textContent = JSON.stringify(data);
-  document.head.appendChild(script);
-};
-

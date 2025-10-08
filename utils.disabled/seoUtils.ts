@@ -1,22 +1,6 @@
 /**
  * SEO Utilities
  */
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a0d
-=======
-
-// Meta tags management
-export const setMetaTags = (tags: Record<string, string>): void => {
-=======
-
-// Meta tags management
-export const setMetaTags = (tags: Record<string, string>): void => {
-  if (typeof document === 'undefined') return;
-  
-
-// Meta tags management
-export const setMetaTags = (tags: Record<string, string>): void => {
->>>>>>> origin/main
   Object.entries(tags).forEach(([name, content]) => {
     let meta = document.querySelector(`meta[name="${name}"]`) as HTMLMetaElement;
     if (!meta) {
@@ -47,8 +31,6 @@ export const setMetaTags = (tags: Record<string, string>): void => {
   
   Object.entries(ogTags).forEach(([property, content]) => {
 }): void => {
-=======
->>>>>>> origin/main
   if (typeof document === 'undefined') return;
 
   const ogTags = [
@@ -90,8 +72,6 @@ export const setMetaTags = (tags: Record<string, string>): void => {
   
   Object.entries(twitterTags).forEach(([name, content]) => {
 }): void => {
-=======
->>>>>>> origin/main
   if (typeof document === 'undefined') return;
 
   const twitterTags = [
@@ -115,41 +95,8 @@ export const setMetaTags = (tags: Record<string, string>): void => {
     }
   });
 };
-=======
-
-// Structured data
-export const setStructuredData = (data: any): void => {
-=======
-
-// Structured data management
-export const setStructuredData = (data: object): void => {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3f25:utils/seoUtils.ts
   if (typeof document === 'undefined') return;
   
-=======
-
-// Structured data
-export const setStructuredData = (data: Record<string, unknown>): void => {
-// Structured data (JSON-LD)
-export const setStructuredData = (data: any): void => {
-  // Remove existing structured data
-  const existingScript = document.querySelector(
-    'script[type="application/ld+json"]'
-  );
-  if (existingScript) {
-    existingScript.remove();
-  }
-  
-  // Add new structured data
-
-// Structured data
-export const setStructuredData = (data: any): void => {
-
-// Structured data
-export const setStructuredData = (data: any): void => {
-  if (typeof document === 'undefined') return;
-
->>>>>>> origin/main
   const script = document.createElement('script');
   script.type = 'application/ld+json';
   script.textContent = JSON.stringify(data);
@@ -170,19 +117,6 @@ export const setCanonicalUrl = (url: string): void => {
 export const setPageTitle = (title: string, siteName?: string): void => {
   const fullTitle = siteName ? `${title} | ${siteName}` : title;
   document.title = fullTitle;
-=======
-
-// Page title
-export const setPageTitle = (title: string): void => {
-=======
-};
-
-// Canonical URL management
-export const setCanonicalUrl = (url: string): void => {
-  if (typeof document === 'undefined') return;
-  
-=======
->>>>>>> origin/main
   let link = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
   if (!link) {
     link = document.createElement('link');
@@ -198,13 +132,6 @@ export const setTitle = (title: string): void => {
   document.title = title;
 };
 
-=======
-  document.title = title;
-};
-
-// Description management
-export const setDescription = (description: string): void => {
->>>>>>> origin/main
   setMetaTags({ description });
 };
 
@@ -246,8 +173,6 @@ export const seoAudit = async (): Promise<{
   results.score = (score / (Object.keys(results).length - 1)) * 100;
 
   return results;
-=======
->>>>>>> origin/main
 // Generate sitemap
 export const generateSitemap = (urls: string[]): string => {
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
