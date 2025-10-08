@@ -1,6 +1,11 @@
 // Learn more: https://github.com/testing-library/jest-dom
 import '@testing-library/jest-dom';
 
+// Polyfill for TextEncoder/TextDecoder
+import { TextEncoder, TextDecoder } from 'util';
+global.TextEncoder = TextEncoder;
+global.TextDecoder = TextDecoder;
+
 // Mock files that use import.meta.env
 jest.mock('./app/utils/logger.ts', () => ({
   logger: {
@@ -37,9 +42,11 @@ jest.mock('./app/hooks/usePerformanceMonitoring.ts', () => ({
   })),
 }));
 
-// Mock React Router
+
+// Mock React Router (this is a Vite project, not Next.js)
 jest.mock('react-router-dom', () => ({
   ...jest.requireActual('react-router-dom'),
+
   useNavigate: () => jest.fn(),
   useLocation: () => ({
     pathname: '/',
@@ -48,16 +55,9 @@ jest.mock('react-router-dom', () => ({
     state: null,
   }),
   useParams: () => ({}),
-  Link: ({ children, to, ...props }) => (
-    <a href={to} {...props}>
-      {children}
-    </a>
-  ),
-  NavLink: ({ children, to, ...props }) => (
-    <a href={to} {...props}>
-      {children}
-    </a>
-  ),
+  BrowserRouter: ({ children }) => children,
+  MemoryRouter: ({ children }) => children,
+  RouterProvider: ({ router }) => null,
 }));
 
 // Mock window.matchMedia
@@ -85,6 +85,8 @@ global.IntersectionObserver = class IntersectionObserver {
   }
   unobserve() {}
 };
+
+// TextEncoder and TextDecoder are already set up above with ES6 imports
 
 // Suppress console errors in tests
 const originalError = console.error;
