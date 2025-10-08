@@ -101,11 +101,20 @@ export function useEnhancedPerformance(
   const measureOperation = useCallback(
     (operationName: string) => {
       const markName = `${component}-${operationName}`;
-      performanceOptimizer.startMark(markName);
+      if (typeof performance !== "undefined") performance.mark(`start-${markName}`);
 
       return {
         end: () => {
-          const duration = performanceOptimizer.endMark(markName);
+          let duration = 0;
+          if (typeof performance !== "undefined") {
+            performance.mark(`end-${markName}`);
+            try {
+              const measure = performance.measure(markName, `start-${markName}`, `end-${markName}`);
+              duration = measure.duration;
+            } catch (e) {
+              // Ignore measurement errors
+            }
+          }
           if (duration && trackPerformance) {
             analytics.trackPerformance(
               `${component}-${operationName}`,
