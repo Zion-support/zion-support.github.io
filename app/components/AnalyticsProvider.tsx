@@ -1,161 +1,97 @@
-import React, { createContext, useContext, useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 
-import { logger } from '../utils/logger';
-
-interface AnalyticsEvent {
-  event: string;
-  category: string;
-  action: string;
-  label?: string;
-  value?: number;
-}
-
-interface AnalyticsContextType {
-  trackEvent: (event: AnalyticsEvent) => void;
-  trackPageView: (page: string) => void;
-  trackPerformance: (metric: string, value: number) => void;
-  trackError: (error: Error, context?: string) => void;
-}
-
-const AnalyticsContext = createContext<AnalyticsContextType | undefined>(
-  undefined
-);
-
-export const useAnalytics = () => {
-  const context = useContext(AnalyticsContext);
-  if (!context) {
-    throw new Error('useAnalytics must be used within an AnalyticsProvider');
-  }
-  return context;
-};
-
-interface AnalyticsProviderProps {
-  children: React.ReactNode;
-  googleAnalyticsId?: string;
-  enableDebug?: boolean;
-}
-
-export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
-  children,
-  googleAnalyticsId = process.env.NEXT_PUBLIC_GA_ID,
-  enableDebug = process.env['NODE_ENV'] === 'development',
-}) => {
-  const [isInitialized, setIsInitialized] = useState(false);
-
+const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   useEffect(() => {
-    if (typeof window === 'undefined' || !googleAnalyticsId) return;
-
     // Initialize Google Analytics
-    const script = document.createElement('script');
-    script.async = true;
-    script['src'] = `https://www.googletagmanager.com/gtag/js?id=${googleAnalyticsId}`;
-    document.head.appendChild(script);
+    const initGoogleAnalytics = () => {
+      if (typeof window !== 'undefined' && process.env.NODE_ENV === 'production') {
+        // Google Analytics 4
+        const script = document.createElement('script');
+        script.async = true;
+        script.src = 'https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID';
+        document.head.appendChild(script);
 
-    script.onload = () => {
-      // Initialize gtag
-      (window as unknown as { dataLayer: unknown[] }).dataLayer = (window as unknown as { dataLayer: unknown[] }).dataLayer || [];
-      function gtag(...args: unknown[]) {
-        (window as unknown as { dataLayer: unknown[] }).dataLayer.push(args);
-      }
-      (window as unknown as { gtag: typeof gtag }).gtag = gtag;
-
-      gtag('js', new Date());
-      gtag('config', googleAnalyticsId, {
-        page_title: document.title,
-        page_location: window.location.href,
-      });
-
-      setIsInitialized(true);
-    };
-
-    return () => {
-      // Cleanup
-      if (script.parentNode) {
-        script.parentNode.removeChild(script);
+        window.dataLayer = window.dataLayer || [];
+        function gtag(...args: any[]) {
+          window.dataLayer.push(args);
+        }
+        window.gtag = gtag;
+        gtag('js', new Date());
+        gtag('config', 'GA_MEASUREMENT_ID', {
+          page_title: document.title,
+          page_location: window.location.href,
+        });
       }
     };
-  }, [googleAnalyticsId]);
 
-  const trackEvent = (event: AnalyticsEvent) => {
-    if (!isInitialized || typeof window === 'undefined') return;
+    // Initialize custom analytics
+    const initCustomAnalytics = () => {
+      if (typeof window !== 'undefined') {
+        // Track page views
+        const trackPageView = () => {
+          if (window.gtag) {
+            window.gtag('event', 'page_view', {
+              page_title: document.title,
+              page_location: window.location.href,
+              page_path: window.location.pathname,
+            });
+          }
+        };
 
-    if (enableDebug) {
-      logger.debug('Analytics Event', 'Analytics', { event: JSON.stringify(event) });
-    }
+        // Track performance metrics
+        const trackPerformance = () => {
+          if ('performance' in window) {
+            window.addEventListener('load', () => {
+              setTimeout(() => {
+                const perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+                if (perfData && window.gtag) {
+                  window.gtag('event', 'timing_complete', {
+                    name: 'load',
+                    value: Math.round(perfData.loadEventEnd - perfData.loadEventStart),
+                  });
+                }
+              }, 0);
+            });
+          }
+        };
 
-    if ((window as unknown as { gtag: (...args: unknown[]) => void }).gtag) {
-      (window as unknown as { gtag: (...args: unknown[]) => void }).gtag('event', event.action, {
-        event_category: event.category,
-        event_label: event.label,
-        value: event.value,
-      });
-    }
-  };
+        // Track user interactions
+        const trackInteractions = () => {
+          // Track clicks on important elements
+          document.addEventListener('click', (e) => {
+            const target = e.target as HTMLElement;
+            const link = target.closest('a');
+            const button = target.closest('button');
+            
+            if (link && window.gtag) {
+              window.gtag('event', 'click', {
+                event_category: 'link',
+                event_label: link.href,
+                value: 1,
+              });
+            }
+            
+            if (button && window.gtag) {
+              window.gtag('event', 'click', {
+                event_category: 'button',
+                event_label: button.textContent || 'button',
+                value: 1,
+              });
+            }
+          });
+        };
 
-  const trackPageView = (page: string) => {
-    if (!isInitialized || typeof window === 'undefined') return;
+        trackPageView();
+        trackPerformance();
+        trackInteractions();
+      }
+    };
 
-    if (enableDebug) {
-      logger.debug('Page View', 'Analytics', { page });
-    }
+    initGoogleAnalytics();
+    initCustomAnalytics();
+  }, []);
 
-    if ((window as unknown as { gtag: (...args: unknown[]) => void }).gtag) {
-      (window as unknown as { gtag: (...args: unknown[]) => void }).gtag('config', googleAnalyticsId, {
-        page_title: document.title,
-        page_location: page,
-      });
-    }
-  };
-
-  const trackPerformance = (metric: string, value: number) => {
-    if (!isInitialized || typeof window === 'undefined') return;
-
-    if (enableDebug) {
-      logger.perf(metric, value);
-    }
-
-    if ((window as unknown as { gtag: (...args: unknown[]) => void }).gtag) {
-      (window as unknown as { gtag: (...args: unknown[]) => void }).gtag('event', 'web_vitals', {
-        event_category: 'Performance',
-        event_label: metric,
-        value: Math.round(value),
-        non_interaction: true,
-      });
-    }
-  };
-
-  const trackError = (error: Error, context?: string) => {
-    if (!isInitialized || typeof window === 'undefined') return;
-
-    if (enableDebug) {
-       
-      // eslint-disable-next-line no-console
-      console.error('Analytics Error:', error, context);
-    }
-
-    if ((window as unknown as { gtag: (...args: unknown[]) => void }).gtag) {
-      (window as unknown as { gtag: (...args: unknown[]) => void }).gtag('event', 'exception', {
-        description: error.message,
-        fatal: false,
-        custom_map: {
-          context: context || 'unknown',
-        },
-      });
-    }
-  };
-
-  const value: AnalyticsContextType = {
-    trackEvent,
-    trackPageView,
-    trackPerformance,
-    trackError,
-  };
-
-  return (
-    <AnalyticsContext.Provider value={value}>
-      {children}
-    </AnalyticsContext.Provider>
-  );
+  return <>{children}</>;
 };
 
 export default AnalyticsProvider;

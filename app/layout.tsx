@@ -3,6 +3,7 @@ import PerformanceMonitor from './components/PerformanceMonitor';
 import AnalyticsProvider from './components/AnalyticsProvider';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import PWAInstaller from './components/PWAInstaller';
+import PerformanceOptimizer from './components/PerformanceOptimizer';
 import { GlobalErrorBoundary } from './components/GlobalErrorBoundary';
 
 export default function RootLayout({
@@ -86,6 +87,22 @@ export default function RootLayout({
         <meta name='msapplication-config' content='/browserconfig.xml' />
         <link rel='canonical' href='https://ziontechgroup.com' />
         <link rel='alternate' hrefLang='en' href='https://ziontechgroup.com' />
+        
+        {/* Performance hints */}
+        <link rel='dns-prefetch' href='//fonts.googleapis.com' />
+        <link rel='dns-prefetch' href='//fonts.gstatic.com' />
+        <link rel='preconnect' href='https://fonts.googleapis.com' />
+        <link rel='preconnect' href='https://fonts.gstatic.com' crossOrigin='anonymous' />
+        
+        {/* Critical CSS inline */}
+        <style dangerouslySetInnerHTML={{
+          __html: `
+            body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+            .animate-fade-in { animation: fadeIn 0.6s ease-in-out; }
+            @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+          `
+        }} />
+        
         <script
           type='application/ld+json'
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
@@ -96,6 +113,7 @@ export default function RootLayout({
           <AnalyticsProvider>
             <AccessibilityEnhancer>
               <PerformanceMonitor />
+              <PerformanceOptimizer />
               <PWAInstaller />
               {children}
             </AccessibilityEnhancer>
