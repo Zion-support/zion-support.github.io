@@ -92,6 +92,7 @@ class PerformanceOptimizer {
       console.warn('Performance API not fully supported:', error);
     }
   }
+<<<<<<< HEAD
   private observeLCP() {
     try {
       const observer = new PerformanceObserver((list) => {
@@ -193,6 +194,14 @@ class PerformanceOptimizer {
     if (typeof window === 'undefined') return
 
     const images = document.querySelectorAll('img[data-src]')
+=======
+
+  /**
+   * Measure render time
+   */
+  private measureRenderTime(): void {
+    if (typeof window === 'undefined' || !window.performance) return;
+>>>>>>> cursor/fix-errors-and-merge-to-main-eab2
     
     // Check if PerformanceObserver exists (may not be available in test environments)
     if (typeof PerformanceObserver === 'undefined') return;
@@ -428,6 +437,18 @@ class PerformanceOptimizer {
 
   /**
    * Cleanup observers and resources
+   */
+  public cleanup(): void {
+    this.observers.forEach(observer => observer.disconnect());
+    this.observers = [];
+    this.isMonitoring = false;
+  }
+
+  /**
+   * Generate comprehensive performance report
+   */
+  generateComprehensiveReport(): string {
+    const score = this.getPerformanceScore();
     const metrics = this.getMetrics();
 
     return `
@@ -459,11 +480,6 @@ ${metrics.memoryUsage > 30 * 1024 * 1024 ? '- Review memory usage and optimize c
       console.log('Performance optimization completed'); 
       console.log(this.generateReport()); 
     }
-  }
-  public cleanup(): void {
-    this.observers.forEach(observer => observer.disconnect());
-    this.observers = [];
-    this.isMonitoring = false;
   }
 }
 
