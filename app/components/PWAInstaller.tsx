@@ -53,8 +53,8 @@ const PWAInstaller: React.FC = () => {
             }
           });
         })
-        .catch((error) => {
-          console.error('Service Worker registration failed:', error);
+        .catch(() => {
+          // Service Worker registration failed
         });
 
       // Listen for controller change
