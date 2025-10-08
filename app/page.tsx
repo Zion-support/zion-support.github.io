@@ -60,7 +60,7 @@ const HomePage: React.FC = () => {
       {/* Skip to main content for accessibility */}
       <a
         href="#main-content"
-        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-indigo-600 text-white px-4 py-2 rounded-md z-50"
+        className="sr-only focus:not-sr-only focus:absolute focus:top-20 focus:left-4 bg-indigo-600 text-white px-4 py-2 rounded-md z-50"
       >
         Skip to main content
       </a>
@@ -68,7 +68,7 @@ const HomePage: React.FC = () => {
       {/* Content Promotion Banner */}
       <ContentPromotionBanner />
 
-      <main id="main-content" className="container mx-auto px-4 py-16" role="main">
+      <main id="main-content" className="container mx-auto px-4 pt-24 pb-16" role="main">
         {/* Hero Section */}
         <section
           className={`text-center mb-16 transition-all duration-1000 ${
@@ -237,25 +237,6 @@ const HomePage: React.FC = () => {
                 </div>
               </article>
             </Suspense>
-<<<<<<< HEAD
-=======
-
-            <Suspense fallback={<ServiceCardSkeleton />}>
-              <article className="bg-white rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
-                <div className="text-5xl mb-6 text-center">🔄</div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">Autonomous Systems</h3>
-                <p className="text-gray-600 mb-6 text-center leading-relaxed">
-                  Self-managing and self-optimizing systems for enterprise operations and infrastructure.
-                </p>
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-green-600 mb-2">Starting at $2,500/month</div>
-                  <a href="/autonomous-systems" className="text-green-600 hover:text-green-700 font-medium">
-                    Learn More →
-                  </a>
-                </div>
-              </article>
-            </Suspense>
->>>>>>> cursor/analyze-improve-and-deploy-application-144c
           </div>
           
           <div className="grid md:grid-cols-3 gap-8">
@@ -303,18 +284,15 @@ const HomePage: React.FC = () => {
               </ul>
             </article>
           </div>
-<<<<<<< HEAD
-=======
           
           <div className="text-center mt-8">
             <a 
               href="/services"
-              className="inline-block bg-indigo-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-4 focus:ring-indigo-300"
+              className="cyber-button"
             >
               View All Services
             </a>
           </div>
->>>>>>> cursor/analyze-improve-and-deploy-application-144c
         </section>
 
         {/* Content Carousel */}
