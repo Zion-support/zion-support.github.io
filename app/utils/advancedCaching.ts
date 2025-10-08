@@ -242,7 +242,7 @@ class AdvancedCache<T = unknown> {
   ): Promise<R> {
     const cached = this.get(key);
     if (cached !== null) {
-      return cached as R;
+      return cached as unknown as R;
     }
 
     const value = await fetcher();
