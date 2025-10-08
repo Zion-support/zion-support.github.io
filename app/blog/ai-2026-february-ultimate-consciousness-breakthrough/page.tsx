@@ -1,13 +1,6 @@
 import React from 'react';
 import { Star } from 'lucide-react';
-import { Metadata } from 'next';
-
-export const metadata: Metadata = {
-  title: "AI 2026 February Ultimate Consciousness Breakthrough: Mind-Expanding Technology",
-  description: "Discover the ultimate consciousness breakthrough of AI 2026 February, featuring mind-expanding technology, advanced cognitive systems, and revolutionary AI consciousness.",
-  keywords: 'AI 2026, consciousness breakthrough, mind-expanding technology, cognitive systems, AI consciousness'
-};
-
+import { Link } from 'react-router-dom';
 export default function AI2026FebruaryUltimateConsciousnessBreakthrough() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">

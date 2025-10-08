@@ -1,28 +1,13 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
-import { Metadata } from 'next';
-
-export const metadata: Metadata = {
-  title: "AI-Powered Autonomous Business Processes: The 2026 Revolution",
-  description: "Discover how AI-powered autonomous business processes are revolutionizing enterprise operations in 2026, delivering unprecedented efficiency and strategic insights.",
-  keywords: 'autonomous business processes, AI automation, enterprise transformation, business process optimization, AI agents',
-  openGraph: {
-    title: 'AI-Powered Autonomous Business Processes: The 2026 Revolution',
-    description: 'Discover how AI-powered autonomous business processes are revolutionizing enterprise operations in 2026, delivering unprecedented efficiency and strategic insights.',
-    type: 'article',
-    publishedTime: '2026-01-15T00:00:00Z',
-    authors: ['Zion Tech Group']
-  }
-};
-
 export default function AutonomousBusinessProcessesBlog() {
   return (
     <div className="min-h-screen bg-gray-50">
       <div className="max-w-4xl mx-auto px-4 py-8">
         <div className="bg-white rounded-lg shadow-lg p-8">
           <div className="mb-6">
-            <Link href="/blog" className="text-indigo-600 hover:text-indigo-700 flex items-center mb-4">
+            <Link to="/blog" className="text-indigo-600 hover:text-indigo-700 flex items-center mb-4">
               <ArrowLeft className="w-4 h-4 mr-2" />
               Back to Blog
             </Link>
