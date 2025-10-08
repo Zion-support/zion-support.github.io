@@ -123,7 +123,7 @@ class AnalyticsService {
           value: Math.round(value),
           event_category: category,
           event_label: label,
-        })
+        });
       }
     } catch (error) {
       console.error('Failed to track timing:', error)

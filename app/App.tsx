@@ -1,4 +1,4 @@
-'use client';
+import React, { Suspense, lazy, useEffect, useCallback } from 'react';
 
 import React, { Suspense, lazy, useEffect } from 'react';
 import { HelmetProvider } from 'react-helmet-async';
