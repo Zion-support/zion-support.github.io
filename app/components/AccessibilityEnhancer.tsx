@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect, useRef, useState, useCallback } from 'react';
+import React, { useEffect, useState } from 'react';
 
 interface AccessibilityConfig {
   enableKeyboardNavigation: boolean;
@@ -28,10 +28,11 @@ const AccessibilityEnhancer = React.forwardRef<AccessibilityEnhancerRef, Accessi
   children
 }, ref) => {
   const [isHighContrast, setIsHighContrast] = useState(false);
-  const [fontSize, setFontSize] = useState(16);
   const [isReducedMotion, setIsReducedMotion] = useState(false);
-  const [isKeyboardNavigation, setIsKeyboardNavigation] = useState(false);
-  const announcementRef = useRef<HTMLDivElement>(null);
+  const [fontSize, setFontSize] = useState(16);
+  const [focusVisible, setFocusVisible] = useState(false);
+  // const skipLinkRef = useRef<HTMLAnchorElement>(null); // Unused ref
+  // const mainContentRef = useRef<HTMLElement>(null); // Unused ref
 
   const defaultConfig: AccessibilityConfig = {
     enableKeyboardNavigation: true,

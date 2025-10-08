@@ -678,14 +678,12 @@ class AccessibilityEnhancer {
     
     return `
 Accessibility Report:
-- A11y Issues: ${metrics.a11yIssues}
-- Focusable Elements: ${metrics.focusableElements}
-- Images with Alt: ${metrics.imagesWithAlt}
-- Forms with Labels: ${metrics.formsWithLabels}
-- ARIA Landmarks: ${metrics.ariaLandmarks}
-- Heading Structure: ${metrics.headingStructure ? 'Valid' : 'Invalid'}
+- Violations: ${this.metrics.violations}
+- Issues Fixed: ${this.metrics.issuesFixed}
+- Total Checks: ${this.metrics.totalChecks}
+- Pass Rate: ${((this.metrics.totalChecks - this.metrics.violations) / this.metrics.totalChecks * 100).toFixed(2)}%
     `;
   }
 }
 
-export const accessibilityEnhancer = new AccessibilityEnhancer();
+export default new AccessibilityEnhancer();
