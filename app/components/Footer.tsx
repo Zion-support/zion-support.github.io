@@ -4,6 +4,7 @@ import { Phone, Mail, MapPin, Clock, Award, Shield, Zap } from 'lucide-react';
 
 const Footer: React.FC = () => {
   return (
+<<<<<<< HEAD
     <footer className="bg-gray-900 text-white py-12">
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-4 gap-8">
@@ -134,6 +135,18 @@ const Footer: React.FC = () => {
                 <a href="https://twitter.com/ziontechgroup" className="text-gray-300 hover:text-white transition-colors">
                   Twitter
                 </a>origin/main
+=======
+    <footer className="bg-gray-900 text-white">
+      {/* Main Footer Content */}
+      <div className="py-16">
+        <div className="container mx-auto px-4">
+          <div className="grid lg:grid-cols-6 md:grid-cols-3 gap-8">
+            {/* Company Info */}
+            <div className="lg:col-span-2">
+              <div className="flex items-center mb-4">
+                <span className="text-3xl mr-2">⚡</span>
+                <h3 className="text-2xl font-bold">Zion Tech Group</h3>
+>>>>>>> cursor/website-audit-and-update-with-deployment-28d8
               </div>
               <p className="text-gray-300 mb-6 max-w-md">
                 Leading provider of enterprise AI solutions, quantum computing, autonomous systems, 
@@ -144,8 +157,8 @@ const Footer: React.FC = () => {
               <div className="space-y-3">
                 <div className="flex items-center">
                   <Phone className="w-5 h-5 mr-3 text-blue-400" />
-                  <a href="tel:+13024640950" className="text-gray-300 hover:text-white transition-colors">
-                    +1 302 464 0950
+                  <a href="tel:+13026009898" className="text-gray-300 hover:text-white transition-colors">
+                    +1 302 600 9898
                   </a>
                 </div>
                 <div className="flex items-center">
@@ -170,9 +183,9 @@ const Footer: React.FC = () => {
               <h4 className="text-lg font-semibold mb-6">Our Services</h4>
               <ul className="space-y-3">
                 <li>
-                  <Link to="/micro-saas" className="text-gray-300 hover:text-white transition-colors flex items-center">
+                  <Link to="/services" className="text-gray-300 hover:text-white transition-colors flex items-center">
                     <Zap className="w-4 h-4 mr-2 text-blue-400" />
-                    Micro SAAS Solutions
+                    All Services
                   </Link>
                 </li>
                 <li>
@@ -185,6 +198,11 @@ const Footer: React.FC = () => {
                   <Link to="/it-services" className="text-gray-300 hover:text-white transition-colors flex items-center">
                     <Shield className="w-4 h-4 mr-2 text-blue-400" />
                     IT Services
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/micro-saas" className="text-gray-300 hover:text-white transition-colors">
+                    Micro SAAS Solutions
                   </Link>
                 </li>
                 <li>
@@ -266,6 +284,28 @@ const Footer: React.FC = () => {
                     Technical Guides
                   </Link>
                 </li>
+                <li>
+                  <Link to="/case-studies" className="text-gray-300 hover:text-white transition-colors">
+                    Case Studies
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/enterprise" className="text-gray-300 hover:text-white transition-colors">
+                    Enterprise Solutions
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/sitemap" className="text-gray-300 hover:text-white transition-colors">
+                    Sitemap
+                  </Link>
+                </li>
+              </ul>
+            </div>
+
+            {/* Legal */}
+            <div>
+              <h4 className="text-lg font-semibold mb-6">Legal</h4>
+              <ul className="space-y-3">
                 <li>
                   <Link to="/privacy" className="text-gray-300 hover:text-white transition-colors">
                     Privacy Policy
