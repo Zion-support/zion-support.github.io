@@ -294,6 +294,10 @@ class PerformanceOptimizer {
     this.measurePerformance('optimizeScroll', () => this.optimizeScroll());
     this.measurePerformance('addCriticalResourceHints', () => this.addCriticalResourceHints());
   }
+
+  public init(): void {
+    this.initialize();
+  }
 }
 
 // Export singleton instance
