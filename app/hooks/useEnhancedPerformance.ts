@@ -4,7 +4,7 @@
  */
 
 import { useEffect, useCallback, useRef } from 'react';
-import { logger } from '../utils/logger';
+import { _logger} from '../utils/logger';
 import { _performanceOptimizer } from '../utils/_performanceOptimizer';
 import { errorTracker } from '../utils/enhancedErrorTracking';
 import { analytics } from '../utils/enhancedAnalytics';
@@ -94,7 +94,7 @@ export function useEnhancedPerformance(
   const trackUserAction = useCallback(
     (action: string, metadata?: Record<string, unknown>) => {
       if (trackAnalytics) {
-        analytics.trackCustomEvent('User Action', action, component, undefined, metadata);
+        analytics.trackCustomEvent('User Action', action, component, undefined, _metadata);
       }
     },
     [component, trackAnalytics]

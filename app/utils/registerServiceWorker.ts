@@ -29,7 +29,7 @@ export async function registerServiceWorker(
   );
   try {
     // Wait for page to load
-    await new Promise<void>((resolve) => {
+    await new Promise<void>((_resolve) => {
       if (document.readyState === 'complete') {
         resolve();
       } else {

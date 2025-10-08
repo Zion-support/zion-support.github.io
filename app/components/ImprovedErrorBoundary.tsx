@@ -4,7 +4,7 @@
  */
 
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { logger } from '../utils/logger';
+import { _logger} from '../utils/logger';
 import monitoring from '../utils/monitoring';
 
 interface Props {
@@ -56,7 +56,7 @@ class ImprovedErrorBoundary extends Component<Props, State> {
     }
 
     // Update state with error details
-    this.setState((prevState) => ({
+    this.setState((_prevState) => ({
       errorInfo,
       errorCount: prevState.errorCount + 1,
     }));
@@ -82,7 +82,7 @@ class ImprovedErrorBoundary extends Component<Props, State> {
     // Reset error state if resetKeys changed
     if (this.props.resetKeys && prevProps.resetKeys) {
       const resetKeysChanged = this.props.resetKeys.some(
-        (key, index) => key !== prevProps.resetKeys![index]
+        (_key, _index) => key !== prevProps.resetKeys![index]
       );
       
       if (resetKeysChanged && this.state.hasError) {

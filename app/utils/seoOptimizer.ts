@@ -273,7 +273,7 @@ class SEOOptimizer {
     // Monitor Core Web Vitals for SEO impact
     if (typeof window !== 'undefined' && 'performance' in window) {
       // Monitor LCP (Largest Contentful Paint)
-      new PerformanceObserver((list) => {
+      new PerformanceObserver((_list) => {
         const entries = list.getEntries();
         const lastEntry = entries[entries.length - 1];
         
@@ -284,7 +284,7 @@ class SEOOptimizer {
 
       // Monitor CLS (Cumulative Layout Shift)
       let clsValue = 0;
-      new PerformanceObserver((list) => {
+      new PerformanceObserver((_list) => {
         for (const entry of list.getEntries()) {
           if (!(entry as any).hadRecentInput) {
             clsValue += (entry as any).value;
@@ -369,7 +369,7 @@ Disallow: /static/`;
 
     // Check for images without alt text
     const images = document.querySelectorAll('img');
-    images.forEach((img, index) => {
+    images.forEach((_img, _index) => {
       if (!img.alt) {
         issues.push(`Image ${index + 1} is missing alt text`);
       }

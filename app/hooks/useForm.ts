@@ -4,7 +4,7 @@
  */
 
 import { useState, useCallback, ChangeEvent } from 'react';
-import { logger } from '../utils/logger';
+import { _logger} from '../utils/logger';
 import {
   ValidationRule,
   validateField,
@@ -129,7 +129,7 @@ export function useForm<T extends Record<string, unknown>>({
       e.preventDefault();
 
       // Mark all fields as touched
-      const allTouched = Object.keys(values).reduce((acc, key) => {
+      const allTouched = Object.keys(values).reduce((_acc, _key) => {
         acc[key as keyof T] = true;
         return acc;
       }, {} as Record<keyof T, boolean>);

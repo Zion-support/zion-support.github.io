@@ -3,7 +3,7 @@
  * Tracks and reports performance metrics with Web Vitals support
  */
 
-import { logger } from './logger';
+import { _logger} from './logger';
 import { analytics } from './analytics';
 
 export interface PerformanceMetric {
@@ -69,8 +69,8 @@ class PerformanceMonitor {
       // Observe paint metrics
       if ('PerformanceObserver' in window) {
         // First Contentful Paint
-        this.observeEntry('paint', (entries) => {
-          entries.forEach((entry) => {
+        this.observeEntry('paint', (_entries) => {
+          entries.forEach((_entry) => {
             if (entry.name === 'first-contentful-paint') {
               this.recordMetric('FCP', entry.startTime);
             }
@@ -78,7 +78,7 @@ class PerformanceMonitor {
         });
 
         // Largest Contentful Paint
-        this.observeEntry('largest-contentful-paint', (entries) => {
+        this.observeEntry('largest-contentful-paint', (_entries) => {
           const lastEntry = entries[entries.length - 1] as any;
           if (lastEntry) {
             this.recordMetric('LCP', lastEntry.renderTime || lastEntry.loadTime || lastEntry.startTime);
@@ -86,7 +86,7 @@ class PerformanceMonitor {
         });
 
         // First Input Delay
-        this.observeEntry('first-input', (entries) => {
+        this.observeEntry('first-input', (_entries) => {
           const firstInput = entries[0] as any;
           if (firstInput && firstInput.processingStart !== undefined) {
             const fid = firstInput.processingStart - firstInput.startTime;
@@ -95,7 +95,7 @@ class PerformanceMonitor {
         });
 
         // Cumulative Layout Shift
-        this.observeEntry('layout-shift', (entries) => {
+        this.observeEntry('layout-shift', (_entries) => {
           let clsValue = 0;
           entries.forEach((entry: unknown) => {
             if (!entry.hadRecentInput) {
@@ -120,7 +120,7 @@ class PerformanceMonitor {
     callback: (entries: PerformanceEntry[]) => void
   ): void {
     try {
-      const observer = new PerformanceObserver((list) => {
+      const observer = new PerformanceObserver((_list) => {
         callback(list.getEntries());
       });
       observer.observe({ type, buffered: true });
@@ -173,8 +173,8 @@ class PerformanceMonitor {
   private setupResourceTiming(): void {
     if ('PerformanceObserver' in window) {
       try {
-        const observer = new PerformanceObserver((list) => {
-          list.getEntries().forEach((entry) => {
+        const observer = new PerformanceObserver((_list) => {
+          list.getEntries().forEach((_entry) => {
             if (entry.entryType === 'resource') {
               const resourceEntry = entry as PerformanceResourceTiming;
               this.trackResourceLoad(resourceEntry);
@@ -210,7 +210,7 @@ class PerformanceMonitor {
         category: 'performance',
         label: type,
         value: Math.round(duration),
-        metadata: {
+        _metadata: {
           url: entry.name,
           size: entry.transferSize,
         },
@@ -375,7 +375,7 @@ class PerformanceMonitor {
     const metricsObj: Record<string, PerformanceMetric> = {};
     const summary = { good: 0, needsImprovement: 0, poor: 0 };
 
-    this.metrics.forEach((metric, name) => {
+    this.metrics.forEach((_metric, _name) => {
       metricsObj[name] = metric;
       summary[metric.rating === 'needs-improvement' ? 'needsImprovement' : metric.rating]++;
     });
@@ -402,7 +402,7 @@ class PerformanceMonitor {
    * Disconnect all observers
    */
   disconnect(): void {
-    this.observers.forEach((observer) => {
+    this.observers.forEach((_observer) => {
       try {
         observer.disconnect();
       } catch (error) {

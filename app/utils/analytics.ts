@@ -56,7 +56,7 @@ class AnalyticsService {
           event_category: event.category,
           event_label: event.label,
           value: event.value,
-          ...event.metadata,
+          ...event._metadata,
         });
       }
 
@@ -113,9 +113,9 @@ class AnalyticsService {
       action: 'error',
       category: 'exception',
       label: error.message,
-      metadata: {
+      _metadata: {
         stack: error.stack,
-        ...metadata,
+        ..._metadata,
       },
     });
   }
@@ -154,7 +154,7 @@ class AnalyticsService {
         category: 'web_vitals',
         label: metric,
         value: Math.round(value),
-        metadata,
+        _metadata,
       });
     } catch (error) {
  
@@ -210,9 +210,9 @@ export const trackEvent = (event: AnalyticsEvent) => analytics.trackEvent(event)
 export const trackPageView = (path: string, title?: string) =>
   analytics.trackPageView(path, title);
 export const trackError = (error: Error, metadata?: Record<string, unknown>) =>
-  analytics.trackError(error, metadata);
+  analytics.trackError(error, _metadata);
 export const trackPerformance = (metric: string, value: number, metadata?: Record<string, unknown>) =>
-  analytics.trackPerformance(metric, value, metadata);
+  analytics.trackPerformance(metric, value, _metadata);
 export const trackTiming = (
   category: string,
   variable: string,

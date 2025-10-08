@@ -1,6 +1,5 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
 import { ArrowLeft, Calendar, User, Clock, Tag, ArrowRight } from 'lucide-react';
 
 const AI2026ImplementationRoadmap: React.FC = () => {
@@ -58,7 +57,7 @@ const AI2026ImplementationRoadmap: React.FC = () => {
           </p>
           
           <div className="flex flex-wrap gap-2">
-            {['AI Implementation', 'Enterprise AI', 'Digital Transformation', 'AI Strategy', '2026 Roadmap'].map((tag) => (
+            {['AI Implementation', 'Enterprise AI', 'Digital Transformation', 'AI Strategy', '2026 Roadmap'].map((_tag) => (
               <span key={tag} className="inline-flex items-center px-3 py-1 rounded-full text-sm bg-blue-100 text-blue-800">
                 <Tag className="w-3 h-3 mr-1" />
                 {tag}
