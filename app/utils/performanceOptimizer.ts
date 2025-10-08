@@ -3,12 +3,20 @@
  * Provides tools for monitoring and optimizing application performance
  */
 
+import { logger } from './logger';
+
 interface PerformanceMetrics {
   loadTime: number;
   renderTime: number;
   memoryUsage: number;
   bundleSize: number;
   cacheHitRate: number;
+  ttfb?: number;
+  fcp?: number;
+  lcp?: number;
+  fid?: number;
+  cls?: number;
+  fmp?: number;
 }
 
 interface OptimizationConfig {
@@ -18,6 +26,8 @@ interface OptimizationConfig {
   enableCaching: boolean;
   enableCompression: boolean;
 }
+
+type PerformanceConfig = OptimizationConfig;
 
 class PerformanceOptimizer {
   private metrics: PerformanceMetrics = {
@@ -35,6 +45,9 @@ class PerformanceOptimizer {
     enableCaching: true,
     enableCompression: true,
   };
+
+  private observers: PerformanceObserver[] = [];
+  private isMonitoring: boolean = false;
 
   constructor(config?: Partial<OptimizationConfig>) {
     this.config = { ...this.config, ...config };
@@ -241,7 +254,7 @@ class PerformanceOptimizer {
     });
 
     images.forEach(img => imageObserver.observe(img));
-    logger.info('Lazy loading initialized for images', 'PerformanceOptimizer');
+    logger.info('Lazy loading initialized for images', { component: 'PerformanceOptimizer' });
   }
 
   /**
@@ -265,7 +278,7 @@ class PerformanceOptimizer {
       document.head.appendChild(link);
     });
 
-    logger.info('Critical resource hints added', 'PerformanceOptimizer');
+    logger.info('Critical resource hints added', { component: 'PerformanceOptimizer' });
   }
 
   /**
@@ -278,6 +291,11 @@ class PerformanceOptimizer {
     if (!navigation) return null;
 
     return {
+      loadTime: this.metrics.loadTime,
+      renderTime: this.metrics.renderTime,
+      memoryUsage: this.metrics.memoryUsage,
+      bundleSize: this.metrics.bundleSize,
+      cacheHitRate: this.metrics.cacheHitRate,
       ttfb: navigation.responseStart - navigation.requestStart,
       fcp: this.metrics.fcp || 0,
       lcp: this.metrics.lcp || 0,
@@ -291,7 +309,7 @@ class PerformanceOptimizer {
    * Report web vitals
    */
   reportWebVitals(metrics: PerformanceMetrics): void {
-    logger.performance('Web Vitals reported', metrics as unknown as Record<string, unknown>, 'PerformanceOptimizer');
+    logger.info('Web Vitals reported', { component: 'PerformanceOptimizer', metrics });
     
     // Send to analytics if available
     if (typeof window !== 'undefined' && (window as { gtag?: Function }).gtag) {
