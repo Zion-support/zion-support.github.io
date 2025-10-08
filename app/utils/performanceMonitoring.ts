@@ -3,7 +3,7 @@
  * Tracks Core Web Vitals and custom performance metrics
  */
 
-import { logger } from './logger';
+import { logger } from '../utils/logger';
 
 export interface PerformanceMetric {
   name: string;
