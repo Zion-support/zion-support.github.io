@@ -10,3 +10,10 @@ export default function GenerativeDesignSystemsBlueprintPage() {
           <div>
             <div>
               <span>🎨 GENERATIVE DESIGN SYSTEMS</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}
