@@ -1,4 +1,4 @@
-import React, { useEffect, useCallback, useRef } from 'react';
+import React, { useEffect, useCallback } from 'react';
 import { Helmet } from 'react-helmet-async';
 
 interface SEOData {
@@ -162,11 +162,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     }
   }, [seoData]);
 
-<<<<<<< HEAD
   // Helper functions for SEO optimization (currently unused but available for future use)
-=======
-  // SEO utility functions (available for future use)
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b3e6
   // const _addMetaTag = (name: string, content: string, attribute: string = 'name') => {
   //   const metaTag = document.createElement('meta');
   //   metaTag.setAttribute(attribute, name);
@@ -176,7 +172,6 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
 
   // const _updateCanonicalUrl = (url: string) => {
   //   let canonicalLink = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
-<<<<<<< HEAD
 
   //   if (canonicalLink) {
   //     canonicalLink.href = url;
@@ -232,67 +227,17 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
   //           event_label: 'Page Load',
   //           value: Math.round(perfData.loadEventEnd - perfData.fetchStart),
   //         });
-=======
-  //   if (canonicalLink) {
-  //     canonicalLink.href = url;
-  //   } else {
-  //     canonicalLink = document.createElement('link');
-  //     canonicalLink.rel = 'canonical';
-  //     canonicalLink.href = url;
-  //     document.head.appendChild(canonicalLink);
-  //   }
-  // };
-
-  // const _addStructuredData = (data: Record<string, unknown>) => {
-  //   // Remove existing structured data
-  //   if (structuredDataRef.current) {
-  //     structuredDataRef.current.remove();
-  //   }
-  //   // Add new structured data
-  //   const script = document.createElement('script');
-  //   script.type = 'application/ld+json';
-  //   script.textContent = JSON.stringify(data);
-  //   script.id = 'structured-data';
-  //   document.head.appendChild(script);
-  //   structuredDataRef.current = script;
-  // };
-
-  // const _trackPageView = (config: SEOData) => {
-  //   if (typeof window !== 'undefined' && 'gtag' in window) {
-  //     (window as unknown as { gtag: (command: string, targetId: string, config: Record<string, unknown>) => void })
-  //       .gtag('config', 'GA_MEASUREMENT_ID', {
-  //         page_title: config.title,
-  //         page_location: config.canonicalUrl,
-  //       });
-  //   }
-  // };
-
-  // const _trackPerformanceMetrics = () => {
-  //   if (typeof window !== 'undefined' && 'performance' in window) {
-  //     window.addEventListener('load', () => {
-  //       const perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-  //       if (perfData && typeof window !== 'undefined' && 'gtag' in window) {
-  //         (window as unknown as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void })
-  //           .gtag('event', 'page_load_performance', {
-  //             event_category: 'Performance',
-  //             event_label: 'Page Load',
-  //             value: Math.round(perfData.loadEventEnd - perfData.fetchStart),
-  //           });
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b3e6
   //       }
   //     });
   //   }
   // };
-<<<<<<< HEAD
 
-  // Suppress unused variable warnings
-  void _addMetaTag;
-  void _updateCanonicalUrl;
-  void _addStructuredData;
-  void _trackPageView;
-  void _trackPerformanceMetrics;
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b3e6
+  // Suppress unused variable warnings - these are commented out helper functions
+  // void _addMetaTag;
+  // void _updateCanonicalUrl;
+  // void _addStructuredData;
+  // void _trackPageView;
+  // void _trackPerformanceMetrics;
 
   return (
     <Helmet>
