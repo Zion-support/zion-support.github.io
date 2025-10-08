@@ -17,6 +17,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   enableKeyboardNav = true,
   enableFocusIndicators = true,
 }) => {
+<<<<<<< HEAD
   const [isReducedMotion, setIsReducedMotion] = useState(false);
   const [isHighContrast, setIsHighContrast] = useState(false);
   const [fontSize, setFontSize] = useState(16);
@@ -33,10 +34,16 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
 =======
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-1f43
+=======
+  const [, setIsReducedMotion] = useState(false);
+  const [, setIsHighContrast] = useState(false);
+  const [, setFontSize] = useState(16);
+>>>>>>> cursor/fix-errors-and-merge-to-main-ea96
 
   useEffect(() => {
     // Check for reduced motion preference
     const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+<<<<<<< HEAD
 <<<<<<< HEAD
     const handleChange = (e: MediaQueryListEvent) => {
       setIsReducedMotion(e.matches);
@@ -48,10 +55,15 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     const handleChange = (e: MediaQueryListEvent) => setIsReducedMotion(e.matches);
     setIsReducedMotion(mediaQuery.matches);
 >>>>>>> cursor/fix-errors-and-merge-to-main-1f43
+=======
+    const handleChange = (e: MediaQueryListEvent) => setIsReducedMotion(e.matches);
+    setIsReducedMotion(mediaQuery.matches);
+>>>>>>> cursor/fix-errors-and-merge-to-main-ea96
     mediaQuery.addEventListener('change', handleChange);
 
     // Check for high contrast preference
     const highContrastQuery = window.matchMedia('(prefers-contrast: high)');
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     setIsHighContrast(highContrastQuery.matches);
@@ -107,6 +119,12 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     highContrastQuery.addEventListener('change', handleContrastChange);
 
 >>>>>>> cursor/fix-errors-and-merge-to-main-1f43
+=======
+    const handleContrastChange = (e: MediaQueryListEvent) => setIsHighContrast(e.matches);
+    setIsHighContrast(highContrastQuery.matches);
+    highContrastQuery.addEventListener('change', handleContrastChange);
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-ea96
     // Check for font size preference
     const computedStyle = getComputedStyle(document.documentElement);
     const rootFontSize = parseFloat(computedStyle.fontSize);
@@ -114,6 +132,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
 
     return () => {
       mediaQuery.removeEventListener('change', handleChange);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       highContrastQuery.removeEventListener('change', handleContrastChange);    };
@@ -178,6 +197,54 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
 =======
 =======
       highContrastQuery.removeEventListener('change', handleContrastChange);
+=======
+      highContrastQuery.removeEventListener('change', handleContrastChange);
+    };
+  }, []);
+
+  // Enhanced keyboard navigation
+  const handleKeyDown = useCallback((e: KeyboardEvent) => {
+    // Skip to main content with Alt + M
+    if (e.altKey && e.key === 'm') {
+      e.preventDefault();
+      const main = document.querySelector('main');
+      if (main) {
+        (main as HTMLElement).focus();
+        (main as HTMLElement).scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+
+    // Skip to navigation with Alt + N
+    if (e.altKey && e.key === 'n') {
+      e.preventDefault();
+      const nav = document.querySelector('nav');
+      if (nav) {
+        (nav as HTMLElement).focus();
+        (nav as HTMLElement).scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+
+    // Close modals/dropdowns with Escape
+    if (e.key === 'Escape') {
+      const modals = document.querySelectorAll('[role="dialog"][aria-modal="true"]');
+      modals.forEach((modal) => {
+        const closeButton = modal.querySelector('[aria-label*="close" i], [aria-label*="dismiss" i]');
+        if (closeButton) {
+          (closeButton as HTMLElement).click();
+        }
+      });
+    }
+  }, []);
+
+  useEffect(() => {
+    if (!enableKeyboardNav) return;
+
+    // Add keyboard navigation class on key use
+    const handleKeyDownEvent = (e: KeyboardEvent) => {
+      if (e.key === 'Tab') {
+        document.body.classList.add('keyboard-navigation');
+      }
+>>>>>>> cursor/fix-errors-and-merge-to-main-ea96
     };
   }, []);
 
@@ -222,11 +289,14 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   useEffect(() => {
     if (!enableKeyboardNav) return;
 
 >>>>>>> cursor/fix-errors-and-merge-to-main-1f43
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-ea96
     // Remove keyboard navigation class on mouse use
     const handleMouseDown = () => {
       document.body.classList.remove('keyboard-navigation');
@@ -241,14 +311,20 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     if (!enableKeyboardNav) return;
 >>>>>>> cursor/fix-errors-and-merge-to-main-deb0
 
+    document.addEventListener('keydown', handleKeyDownEvent);
     document.addEventListener('keydown', handleKeyDown);
     document.addEventListener('mousedown', handleMouseDown);
     
     return () => {
+      document.removeEventListener('keydown', handleKeyDownEvent);
       document.removeEventListener('keydown', handleKeyDown);
       document.removeEventListener('mousedown', handleMouseDown);
     };
+<<<<<<< HEAD
   }, [enableKeyboardNav]);
+=======
+  }, [handleKeyDown, enableKeyboardNav]);
+>>>>>>> cursor/fix-errors-and-merge-to-main-ea96
 
   // Focus management
   const handleFocusIn = useCallback((event: FocusEvent) => {
@@ -359,6 +435,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     };
   }, [handleFocusIn, handleFocusOut, enableFocusIndicators]);
 
+<<<<<<< HEAD
   // Screen reader announcements
   const announceToScreenReader = useCallback((message: string) => {
     const announcement = document.createElement('div');
@@ -379,6 +456,8 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     }, 1000);
   }, []);
 >>>>>>> cursor/fix-errors-and-merge-to-main-deb0
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-ea96
 
   return <>{children}</>;
 };
