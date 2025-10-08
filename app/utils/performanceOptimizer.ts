@@ -126,7 +126,10 @@ class PerformanceOptimizer {
     const fidObserver = new PerformanceObserver((list) => {
       const entries = list.getEntries();
       entries.forEach((entry) => {
-        console.log('FID:', entry.processingStart - entry.startTime);
+        const fidEntry = entry as any;
+        if (fidEntry.processingStart) {
+          console.log('FID:', fidEntry.processingStart - entry.startTime);
+        }
       });
     });
     fidObserver.observe({ entryTypes: ['first-input'] });
@@ -247,6 +250,53 @@ Performance Report:
 - Bundle Size: ${metrics.bundleSize}KB
 - Cache Hit Rate: ${(metrics.cacheHitRate * 100).toFixed(2)}%
     `.trim();
+  }
+
+  public optimize(): void {
+    // Run all optimization strategies
+    this.optimizeImages();
+    this.enableCaching();
+    this.enableCompression();
+  }
+
+  public startMark(name: string): void {
+    if (typeof window !== 'undefined' && performance.mark) {
+      performance.mark(`${name}-start`);
+    }
+  }
+
+  public endMark(name: string): number | undefined {
+    if (typeof window !== 'undefined' && performance.mark && performance.measure) {
+      performance.mark(`${name}-end`);
+      try {
+        const measure = performance.measure(name, `${name}-start`, `${name}-end`);
+        return measure.duration;
+      } catch {
+        return undefined;
+      }
+    }
+    return undefined;
+  }
+
+  public getPerformanceScore(): number {
+    const metrics = this.getMetrics();
+    // Calculate a score based on metrics (0-100)
+    let score = 100;
+    
+    // Deduct points for poor metrics
+    if (metrics.loadTime > 3000) score -= 20;
+    else if (metrics.loadTime > 2000) score -= 10;
+    
+    if (metrics.renderTime > 1000) score -= 15;
+    else if (metrics.renderTime > 500) score -= 7;
+    
+    if (metrics.memoryUsage > 0.8) score -= 20;
+    else if (metrics.memoryUsage > 0.6) score -= 10;
+    
+    if (metrics.cacheHitRate < 0.6) score -= 15;
+    else if (metrics.cacheHitRate < 0.8) score -= 7;
+    
+    return Math.max(0, score);
   }
 
   public cleanup(): void {
