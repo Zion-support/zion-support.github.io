@@ -5,6 +5,7 @@ import Link from 'next/link';
 
 const UltimateBusinessIntelligenceShowcase2025 = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [selectedCategory, setSelectedCategory] = useState('all');
 
   const content = [
     {
@@ -60,6 +61,17 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
     }
   ];
 
+  const categories = [
+    { id: 'all', name: 'All Content' },
+    { id: 'blog', name: 'Blog Posts' },
+    { id: 'case-study', name: 'Case Studies' },
+    { id: 'resource', name: 'Resources' }
+  ];
+
+  const filteredContent = selectedCategory === 'all' 
+    ? content 
+    : content.filter(item => item.category === selectedCategory);
+
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % content.length);
@@ -107,6 +119,23 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
           </p>
         </div>
 
+        {/* Category Filter */}
+        <div className="flex justify-center gap-4 mb-12">
+          {categories.map((category) => (
+            <button
+              key={category.id}
+              onClick={() => setSelectedCategory(category.id)}
+              className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
+                selectedCategory === category.id
+                  ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white'
+                  : 'bg-white/10 text-gray-300 hover:bg-white/20'
+              }`}
+            >
+              {category.name}
+            </button>
+          ))}
+        </div>
+
         {/* Main Content Card */}
         <div className="max-w-6xl mx-auto mb-16">
           <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-8 md:p-12 border border-white/20 shadow-2xl">
@@ -120,12 +149,10 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
               </div>
             </div>
 
-            {/* Title */}
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            {/* Title and Description */}
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               {currentContent.title}
             </h2>
-
-            {/* Description */}
             <p className="text-xl text-gray-300 mb-8">
               {currentContent.description}
             </p>
@@ -191,7 +218,7 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
 
         {/* Content Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16 mb-16">
-          {content.map((item) => (
+          {filteredContent.map((item) => (
             <div
               key={item.id}
               className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 group"

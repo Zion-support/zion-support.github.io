@@ -6,19 +6,23 @@
  */
 
 import React, { useState, useEffect, useCallback } from 'react';
+import { performanceOptimizer } from '../utils/performanceOptimizer';
 import { errorHandler } from '../utils/enhancedErrorHandler';
 
 // Helper functions
-const calculatePerformanceScore = (loadTime: number, firstContentfulPaint: number) => {
+const calculatePerformanceScore = () => {
+  const metrics = performanceOptimizer.getMetrics();
+  if (!metrics) return 0;
+  
   let score = 100;
   
   // Deduct points for slow load times
-  if (loadTime > 3000) score -= 20;
-  if (loadTime > 5000) score -= 30;
+  if (metrics.loadTime > 3000) score -= 20;
+  if (metrics.loadTime > 5000) score -= 30;
   
   // Deduct points for slow paint times
-  if (firstContentfulPaint > 2000) score -= 15;
-  if (firstContentfulPaint > 3000) score -= 25;
+  if (metrics.firstContentfulPaint > 2000) score -= 15;
+  if (metrics.firstContentfulPaint > 3000) score -= 25;
   
   return Math.max(0, score);
 };
@@ -93,6 +97,8 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
   // Update metrics
   const updateMetrics = useCallback(() => {
     try {
+      const performanceMetrics = performanceOptimizer.getMetrics();
+      const performanceScore = calculatePerformanceScore();
       const errorStats = errorHandler.getErrorStatistics();
 
       // Get memory info
@@ -101,17 +107,11 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
       // Get network info
       const networkInfo = getNetworkInfo();
 
-      // Calculate performance metrics
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming | undefined;
-      const loadTime = navigation ? navigation.loadEventEnd - navigation.fetchStart : 0;
-      const firstContentfulPaint = performance.getEntriesByType('paint').find(e => e.name === 'first-contentful-paint')?.startTime || 0;
-      const performanceScore = calculatePerformanceScore(loadTime, firstContentfulPaint);
-
       const newMetrics: SystemMetrics = {
         performance: {
           score: performanceScore,
-          loadTime: loadTime,
-          firstContentfulPaint: firstContentfulPaint,
+          loadTime: performanceMetrics?.loadTime || 0,
+          firstContentfulPaint: performanceMetrics?.firstContentfulPaint || 0,
           largestContentfulPaint: 0, // Not available in current metrics
           firstInputDelay: 0, // Not available in current metrics
           cumulativeLayoutShift: 0, // Not available in current metrics
@@ -207,7 +207,7 @@ console.error('Failed to update metrics:', error);
 
     const exportData = {
       metrics,
-      performanceData: collectPerformanceMetrics(),
+      performanceData: performanceOptimizer.getMetrics(),
       errorData: errorHandler.exportErrorData(),
       timestamp: new Date().toISOString(),
     };

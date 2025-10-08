@@ -272,6 +272,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     _setFontSize(size);
     announceToScreenReader(`Font size changed to ${size} pixels`);
   };
+
   // Helper functions
   const addSkipLinks = useCallback(() => {
     const skipLinksContainer = document.createElement('div');

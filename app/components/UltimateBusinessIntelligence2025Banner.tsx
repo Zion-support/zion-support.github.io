@@ -22,16 +22,16 @@ const UltimateBusinessIntelligence2025Banner = () => {
       tags: ['AI', 'Business Intelligence', 'Enterprise', 'ROI', '2025']
     },
     {
-      id: 'fortune-500-success-story',
-      title: 'Fortune 500 Ultimate Business Intelligence Success Story',
+      id: 'fortune-500-business-intelligence',
+      title: 'Fortune 500 Ultimate Business Intelligence 30,000% ROI Success Story',
       description: 'How a $15.2B manufacturing giant achieved 30,000% ROI with AI-powered business intelligence transformation.',
       url: '/case-studies/fortune-500-ultimate-business-intelligence-30000-roi-success-story',
       type: 'Case Study',
       metrics: {
-        roi: '30,000%',
-        savings: '$750M',
-        timeline: '18 months',
-        accuracy: '99.9%'
+        users: '1M+',
+        uptime: '99.9%',
+        response: '<100ms',
+        insights: 'Real-time'
       },
       tags: ['Fortune 500', 'Case Study', '30,000% ROI', 'Success Story', 'Manufacturing']
     },
@@ -45,7 +45,7 @@ const UltimateBusinessIntelligence2025Banner = () => {
         automation: '95%',
         productivity: '300%',
         efficiency: '400%',
-        cost: '80% ↓'
+        cost: '80% reduction'
       },
       tags: ['Automation', 'Enterprise', 'Productivity', 'Efficiency', '2025']
     }
@@ -58,8 +58,6 @@ const UltimateBusinessIntelligence2025Banner = () => {
 
     return () => clearInterval(timer);
   }, [content.length]);
-
-  const currentContent = content[currentSlide];
 
   const currentContent = content[currentSlide];
 
@@ -115,8 +113,8 @@ const UltimateBusinessIntelligence2025Banner = () => {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8">
               {Object.entries(currentContent.metrics).map(([key, value]) => (
                 <div key={key} className="text-center">
-                  <div className="text-3xl font-bold text-cyan-400 mb-2">{value}</div>
-                  <div className="text-sm text-gray-300 capitalize">
+                  <div className="text-2xl font-bold text-cyan-400">{value}</div>
+                  <div className="text-xs text-gray-300 capitalize">
                     {key.replace(/([A-Z])/g, ' $1').trim()}
                   </div>
                 </div>
@@ -128,7 +126,7 @@ const UltimateBusinessIntelligence2025Banner = () => {
               {currentContent.tags.map((tag) => (
                 <span
                   key={tag}
-                  className="px-3 py-1 bg-white/10 text-gray-300 text-sm rounded-full border border-white/20"
+                  className="bg-white/10 text-white px-3 py-1 rounded-full text-xs"
                 >
                   {tag}
                 </span>
