@@ -192,6 +192,20 @@ class Logger {
   }
 
   /**
+   * Log lifecycle events
+   */
+  lifecycle(message: string, context?: string): void {
+    this.info(`Lifecycle: ${message}`, context);
+  }
+
+  /**
+   * Log performance data
+   */
+  performance(message: string, data: unknown, context?: string): void {
+    this.info(`Performance: ${message}`, context, { performanceData: data });
+  }
+
+  /**
    * Group related log messages
    */
   group(label: string, fn?: () => void): void {
@@ -210,19 +224,19 @@ class Logger {
   }
 
   /**
-   * Create a child logger with a specific context
-   */
-  child(context: string): ContextLogger {
-    return new ContextLogger(this, context);
-  }
-
-  /**
    * End a console group
    */
   groupEnd(): void {
     if (this.config.enableConsole && typeof console.groupEnd === 'function') {
       console.groupEnd();
     }
+  }
+
+  /**
+   * Create a child logger with a specific context
+   */
+  child(context: string): ContextLogger {
+    return new ContextLogger(this, context);
   }
 
   /**
