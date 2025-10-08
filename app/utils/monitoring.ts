@@ -149,9 +149,9 @@ class MonitoringService {
     // Unhandled promise rejection handler
     window.addEventListener('unhandledrejection', (event) => {
       this.logError({
-        message: `Unhandled Promise Rejection: ${event.reason}`
-        timestamp: Date.now()
-        userAgent: navigator.userAgent
+        message: `Unhandled Promise Rejection: ${event.reason}`,
+        timestamp: Date.now(),
+        userAgent: navigator.userAgent,
         url: window.location.href
       })
     })
@@ -166,17 +166,17 @@ class MonitoringService {
       const rating = value <= thresholds.good ? 'good' : value <= thresholds.needsImprovement ? 'needs-improvement' : 'poor'
       
       console.log(`[Performance] ${name}:`, {
-        value
-        rating
+        value,
+        rating,
         unit: name === 'cls' ? 'score' : 'ms'
       })
     }
     // Send to analytics (if configured)
 
-        value: Math.round(name === 'cls' ? value * 1000 : value)
-        event_category: 'Web Vitals'
-        non_interaction: true,
-      })
+        value: Math.round(name === 'cls' ? value * 1000 : value),
+        event_category: 'Web Vitals',
+        non_interaction: true
+      });
     }
   }
   public logError(error: ErrorReport): void {

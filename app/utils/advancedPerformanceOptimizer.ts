@@ -112,10 +112,6 @@ export class PerformanceOptimizer {
    */
 
   memoize<T extends (...args: unknown[]) => unknown>(
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/fix-errors-and-merge-to-main-c52d
     func: T,
   ): (...args: Parameters<T>) => ReturnType<T> {
     const cache = new Map<string, ReturnType<T>>()
