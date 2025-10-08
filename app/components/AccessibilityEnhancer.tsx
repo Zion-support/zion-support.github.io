@@ -34,7 +34,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
     highContrastQuery.addEventListener('change', handleContrastChange);
 
     // Check for font size preference
-    const fontSizeQuery = window.matchMedia('(min-width: 1px)');
     const computedStyle = getComputedStyle(document.documentElement);
     const rootFontSize = parseFloat(computedStyle.fontSize);
     setFontSize(rootFontSize);

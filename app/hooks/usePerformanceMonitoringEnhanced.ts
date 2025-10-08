@@ -1,7 +1,7 @@
 import { useEffect, useCallback } from 'react';
 
 export const usePerformanceMonitoring = () => {
-  const reportWebVitals = useCallback((metric: any) => {
+  const reportWebVitals = useCallback((metric: unknown) => {
     const body = JSON.stringify(metric);
     const url = '/api/analytics';
 
@@ -14,7 +14,7 @@ export const usePerformanceMonitoring = () => {
 
   useEffect(() => {
     if (typeof window !== 'undefined' && 'performance' in window) {
-      // Monitor Core Web Vitals
+      // Core Web Vitals
       const observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           reportWebVitals({

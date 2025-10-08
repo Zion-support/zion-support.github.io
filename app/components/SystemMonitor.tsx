@@ -1,28 +1,26 @@
 'use client';
 
 /**
- * System Monitor Component
- * Real-time monitoring dashboard for performance, errors, and system health
+ * System Component
+ * Real-time monitoring dashboard for performance, _errors, and system health
  */
 
 import React, { useState, useEffect, useCallback } from 'react';
 import { performanceOptimizer } from '../utils/performanceOptimizer';
-import { errorHandler } from '../utils/enhancedErrorHandler';
-
-import { errorHandler } from '../utils/enhancedErrorHandler';
+import { _errorHandler } from '../utils/enhancedErrorHandler';
 
 // Collect basic performance metrics
-const _collectPerformanceMetrics = () => {
-  if (typeof window === 'undefined' || !window.performance) return null;
-  
-  const navigation = window.performance.timing;
-  const paint = window.performance.getEntriesByType('paint');
-  
-  return {
-    loadTime: navigation.loadEventEnd - navigation.navigationStart,
-    firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0,
-  };
-};
+// const __collectPerformanceMetrics = () => {
+//   if (typeof window === 'undefined' || !window.performance) return null;
+//   
+//   const navigation = window.performance.timing;
+//   const paint = window.performance.getEntriesByType('paint');
+//   
+//   return {
+//     loadTime: navigation.loadEventEnd - navigation.navigationStart,
+//     firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0,
+//   };
+// };
 
 // Helper functions
 const calculatePerformanceScore = () => {
@@ -42,8 +40,8 @@ const calculatePerformanceScore = () => {
   return Math.max(0, score);
 };
 
-// Network connection interface
-interface NetworkConnection {
+// connection interface
+interface Connection {
   effectiveType?: string;
   downlink?: number;
   rtt?: number;
@@ -51,9 +49,9 @@ interface NetworkConnection {
 }
 
 interface NavigatorWithConnection extends Navigator {
-  connection?: NetworkConnection;
-  mozConnection?: NetworkConnection;
-  webkitConnection?: NetworkConnection;
+  connection?: Connection;
+  mozConnection?: Connection;
+  webkitConnection?: Connection;
 }
 
 interface SystemMetrics {
@@ -65,7 +63,7 @@ interface SystemMetrics {
     firstInputDelay: number;
     cumulativeLayoutShift: number;
   };
-  errors: {
+  _errors: {
     total: number;
     byType: Record<string, number>;
     byCategory: Record<string, number>;
@@ -114,7 +112,7 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
     try {
       const performanceMetrics = performanceOptimizer.getMetrics();
       const performanceScore = calculatePerformanceScore();
-      const errorStats = errorHandler.getErrorStatistics();
+      const _errorStats = _errorHandler.getErrorStatistics();
 
       // Get memory info
       const memoryInfo = getMemoryInfo();
@@ -131,17 +129,17 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
           firstInputDelay: 0, // Not available in current metrics
           cumulativeLayoutShift: 0, // Not available in current metrics
         },
-        errors: {
-          total: errorStats.totalErrors,
-          byType: errorStats.errorsByType,
-          byCategory: errorStats.errorsByCategory,
-          bySeverity: errorStats.errorsBySeverity,
-          recent: errorStats.recentErrors.map(error => ({
-            id: error.id,
-            message: error.message,
-            type: error.type,
-            severity: error.severity,
-            timestamp: error.context.timestamp,
+        _errors: {
+          total: _errorStats.totalErrors,
+          byType: _errorStats._errorsByType,
+          byCategory: _errorStats._errorsByCategory,
+          bySeverity: _errorStats._errorsBySeverity,
+          recent: _errorStats.recentErrors.map(_error => ({
+            id: _error.id,
+            message: _error.message,
+            type: _error.type,
+            severity: _error.severity,
+            timestamp: _error.context.timestamp,
           })),
         },
         memory: memoryInfo,
@@ -150,9 +148,8 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
 
       setMetrics(newMetrics);
       setLastUpdate(new Date());
-    } catch (error) {
+    } catch (_error) {
        
-console.error('Failed to update metrics:', error);
     }
   }, []);
 
@@ -223,7 +220,7 @@ console.error('Failed to update metrics:', error);
     const exportData = {
       metrics,
       performanceData: performanceOptimizer.getMetrics(),
-      errorData: errorHandler.exportErrorData(),
+      _errorData: _errorHandler.exportErrorData(),
       timestamp: new Date().toISOString(),
     };
 
@@ -272,12 +269,12 @@ console.error('Failed to update metrics:', error);
   return (
     <div className={`bg-white rounded-lg shadow-lg p-6 ${className}`}>
       <div className="flex items-center justify-between mb-6">
-        <h2 className="text-2xl font-bold text-gray-900">System Monitor</h2>
+        <h2 className="text-2xl font-bold text-gray-900">System </h2>
         <div className="flex items-center space-x-4">
           <div className="flex items-center space-x-2">
             <div className={`w-3 h-3 rounded-full ${isMonitoring ? 'bg-green-500' : 'bg-red-500'}`}></div>
             <span className="text-sm text-gray-600">
-              {isMonitoring ? 'Monitoring' : 'Stopped'}
+              {isMonitoring ? 'ing' : 'Stopped'}
             </span>
           </div>
           {enableExport && (
@@ -360,7 +357,7 @@ console.error('Failed to update metrics:', error);
             <div className="flex items-center justify-between">
               <span className="text-sm font-medium text-gray-600">Total Errors</span>
               <span className="text-2xl font-bold text-red-600">
-                {metrics.errors.total}
+                {metrics._errors.total}
               </span>
             </div>
           </div>
@@ -368,7 +365,7 @@ console.error('Failed to update metrics:', error);
             <div className="flex items-center justify-between">
               <span className="text-sm font-medium text-gray-600">Critical</span>
               <span className="text-lg font-semibold text-red-600">
-                {metrics.errors.bySeverity.critical || 0}
+                {metrics._errors.bySeverity.critical || 0}
               </span>
             </div>
           </div>
@@ -376,7 +373,7 @@ console.error('Failed to update metrics:', error);
             <div className="flex items-center justify-between">
               <span className="text-sm font-medium text-gray-600">High</span>
               <span className="text-lg font-semibold text-red-500">
-                {metrics.errors.bySeverity.high || 0}
+                {metrics._errors.bySeverity.high || 0}
               </span>
             </div>
           </div>
@@ -384,14 +381,14 @@ console.error('Failed to update metrics:', error);
             <div className="flex items-center justify-between">
               <span className="text-sm font-medium text-gray-600">Medium</span>
               <span className="text-lg font-semibold text-yellow-600">
-                {metrics.errors.bySeverity.medium || 0}
+                {metrics._errors.bySeverity.medium || 0}
               </span>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Memory and Network */}
+      {/* Memory and */}
       <div className="mb-8">
         <h3 className="text-lg font-semibold text-gray-900 mb-4">System Resources</h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -422,7 +419,7 @@ console.error('Failed to update metrics:', error);
             </div>
           </div>
           <div className="bg-gray-50 p-4 rounded-lg">
-            <h4 className="text-sm font-medium text-gray-600 mb-2">Network</h4>
+            <h4 className="text-sm font-medium text-gray-600 mb-2"></h4>
             <div className="space-y-2">
               <div className="flex justify-between text-sm">
                 <span>Connection</span>
@@ -446,21 +443,21 @@ console.error('Failed to update metrics:', error);
       </div>
 
       {/* Recent Errors */}
-      {showDetails && metrics.errors.recent.length > 0 && (
+      {showDetails && metrics._errors.recent.length > 0 && (
         <div className="mb-8">
           <h3 className="text-lg font-semibold text-gray-900 mb-4">Recent Errors</h3>
           <div className="space-y-2 max-h-64 overflow-y-auto">
-            {metrics.errors.recent.map((error) => (
-              <div key={error.id} className="bg-gray-50 p-3 rounded-lg">
+            {metrics._errors.recent.map((_error) => (
+              <div key={_error.id} className="bg-gray-50 p-3 rounded-lg">
                 <div className="flex items-center justify-between mb-2">
-                  <span className="text-sm font-medium text-gray-900">{error.message}</span>
-                  <span className={`px-2 py-1 rounded-full text-xs font-medium ${getSeverityColor(error.severity)}`}>
-                    {error.severity}
+                  <span className="text-sm font-medium text-gray-900">{_error.message}</span>
+                  <span className={`px-2 py-1 rounded-full text-xs font-medium ${getSeverityColor(_error.severity)}`}>
+                    {_error.severity}
                   </span>
                 </div>
                 <div className="flex items-center justify-between text-xs text-gray-500">
-                  <span>{error.type}</span>
-                  <span>{new Date(error.timestamp).toLocaleTimeString()}</span>
+                  <span>{_error.type}</span>
+                  <span>{new Date(_error.timestamp).toLocaleTimeString()}</span>
                 </div>
               </div>
             ))}
@@ -476,7 +473,7 @@ console.error('Failed to update metrics:', error);
             <div className="bg-gray-50 p-4 rounded-lg">
               <h4 className="text-sm font-medium text-gray-600 mb-2">By Type</h4>
               <div className="space-y-1">
-                {Object.entries(metrics.errors.byType).map(([type, count]) => (
+                {Object.entries(metrics._errors.byType).map(([type, count]) => (
                   <div key={type} className="flex justify-between text-sm">
                     <span className="capitalize">{type}</span>
                     <span>{count}</span>
@@ -487,7 +484,7 @@ console.error('Failed to update metrics:', error);
             <div className="bg-gray-50 p-4 rounded-lg">
               <h4 className="text-sm font-medium text-gray-600 mb-2">By Category</h4>
               <div className="space-y-1">
-                {Object.entries(metrics.errors.byCategory).map(([category, count]) => (
+                {Object.entries(metrics._errors.byCategory).map(([category, count]) => (
                   <div key={category} className="flex justify-between text-sm">
                     <span className="capitalize">{category}</span>
                     <span>{count}</span>

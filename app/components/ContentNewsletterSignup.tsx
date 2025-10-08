@@ -21,7 +21,7 @@ const ContentNewsletterSignup: React.FC = () => {
       } else {
         setError('Please enter a valid email address');
       }
-    } catch (_err) {
+    } catch {
       setError('Something went wrong. Please try again.');
     } finally {
       setIsSubmitting(false);
@@ -34,7 +34,7 @@ const ContentNewsletterSignup: React.FC = () => {
         <div className="max-w-4xl mx-auto text-center">
           <div className="text-6xl mb-6">🎉</div>
           <h2 className="text-3xl font-bold text-gray-900 mb-4">
-            Welcome to Our Content Community!
+            Welcome to Our Content Community
           </h2>
           <p className="text-xl text-gray-600 mb-8">
             You'll receive our latest AI insights, enterprise transformation guides, and breakthrough content directly in your inbox.

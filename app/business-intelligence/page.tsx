@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, Star, BarChart, TrendingUp, Target, Eye, Database, Zap, Brain, PieChart, LineChart, Activity } from 'lucide-react';
+import { CheckCircle, Star, TrendingUp, Eye, Activity } from 'lucide-react';
 
 const BusinessIntelligencePage: React.FC = () => {
   const biServices = [
@@ -186,7 +186,7 @@ const BusinessIntelligencePage: React.FC = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               <div className="text-center">
                 <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <BarChart className="w-8 h-8 text-blue-600" />
+                  <div className="w-8 h-8 text-blue-600" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Advanced Analytics</h3>
                 <p className="text-gray-600">Cutting-edge analytics with AI and machine learning</p>
@@ -200,14 +200,14 @@ const BusinessIntelligencePage: React.FC = () => {
               </div>
               <div className="text-center">
                 <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Brain className="w-8 h-8 text-purple-600" />
+                  <div className="w-8 h-8 text-purple-600" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">AI-Powered</h3>
                 <p className="text-gray-600">Intelligent insights with automated pattern recognition</p>
               </div>
               <div className="text-center">
                 <div className="bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Target className="w-8 h-8 text-orange-600" />
+                  <div className="w-8 h-8 text-orange-600" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Actionable Insights</h3>
                 <p className="text-gray-600">Clear, actionable recommendations for business growth</p>
@@ -231,8 +231,8 @@ const BusinessIntelligencePage: React.FC = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {biServices
                   .filter(service => service.category === category)
-                  .map((service, index) => (
-                    <div key={index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
+                  .map((service, _index) => (
+                    <div key={_index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
                       <div className="text-4xl mb-4">{service.icon}</div>
                       <h3 className="text-xl font-semibold text-gray-900 mb-3">{service.title}</h3>
                       <p className="text-gray-600 mb-4">{service.description}</p>
@@ -305,7 +305,7 @@ const BusinessIntelligencePage: React.FC = () => {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <div className="text-center p-6 bg-gradient-to-br from-blue-50 to-indigo-100 rounded-lg">
-                <BarChart className="w-12 h-12 text-blue-600 mx-auto mb-4" />
+                <div className="w-12 h-12 text-blue-600 mx-auto mb-4" />
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Data Visualization</h3>
                 <p className="text-gray-600">Interactive charts, dashboards, and custom visualizations</p>
               </div>
@@ -315,12 +315,12 @@ const BusinessIntelligencePage: React.FC = () => {
                 <p className="text-gray-600">Forecasting and predictive modeling for business planning</p>
               </div>
               <div className="text-center p-6 bg-gradient-to-br from-purple-50 to-violet-100 rounded-lg">
-                <Database className="w-12 h-12 text-purple-600 mx-auto mb-4" />
+                <div className="w-12 h-12 text-purple-600 mx-auto mb-4" />
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Data Engineering</h3>
                 <p className="text-gray-600">Data warehousing, ETL, and data pipeline development</p>
               </div>
               <div className="text-center p-6 bg-gradient-to-br from-orange-50 to-amber-100 rounded-lg">
-                <Brain className="w-12 h-12 text-orange-600 mx-auto mb-4" />
+                <div className="w-12 h-12 text-orange-600 mx-auto mb-4" />
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">AI-Powered Insights</h3>
                 <p className="text-gray-600">Machine learning and AI for automated insights</p>
               </div>
@@ -331,7 +331,7 @@ const BusinessIntelligencePage: React.FC = () => {
               </div>
               <div className="text-center p-6 bg-gradient-to-br from-indigo-50 to-blue-100 rounded-lg">
                 <Activity className="w-12 h-12 text-indigo-600 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Performance Monitoring</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Performance ing</h3>
                 <p className="text-gray-600">KPI tracking and operational performance analytics</p>
               </div>
             </div>

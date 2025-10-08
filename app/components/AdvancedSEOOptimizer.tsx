@@ -1,4 +1,4 @@
-import React, { useEffect, useCallback, useRef } from 'react';
+import React, { useEffect, useCallback } from 'react';
 import { Helmet } from 'react-helmet-async';
 
 interface SEOData {
@@ -38,7 +38,6 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
   enableTwitterCards = true,
   enableSchemaMarkup = true,
 }) => {
-  const structuredDataRef = useRef<HTMLScriptElement | null>(null);
   const generateStructuredData = useCallback(() => {
     if (!enableStructuredData || !seoData.structuredData) return null;
 
@@ -184,8 +183,8 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
 
   // const _addStructuredData = (data: Record<string, unknown>) => {
   //   // Remove existing structured data
-  //   // if (structuredDataRef.current) {
-  //   //   structuredDataRef.current.remove();
+  //   // if (// _structuredDataRef.current) {
+  //   //   // _structuredDataRef.current.remove();
   //   // }
   //   
   //   const script = document.createElement('script');
@@ -249,9 +248,9 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
       )}
 
       {/* Additional SEO Meta Tags */}
-      <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
-      <meta name="googlebot" content="index, follow" />
-      <meta name="bingbot" content="index, follow" />
+      <meta name="robots" content="_index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+      <meta name="googlebot" content="_index, follow" />
+      <meta name="bingbot" content="_index, follow" />
       <meta name="author" content="Zion Tech Group" />
       <meta name="publisher" content="Zion Tech Group" />
       <meta name="copyright" content="Zion Tech Group" />

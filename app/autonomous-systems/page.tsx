@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, Star, Bot, Cpu, Shield, Zap, Target, BarChart, Brain, Settings, RefreshCw, Eye } from 'lucide-react';
+import { CheckCircle, Star, Bot, Shield, RefreshCw, Eye } from 'lucide-react';
 
 const AutonomousSystemsPage: React.FC = () => {
   const autonomousServices = [
@@ -27,14 +27,14 @@ const AutonomousSystemsPage: React.FC = () => {
       technologies: ['UiPath', 'Automation Anywhere', 'Blue Prism', 'Custom AI', 'RPA Tools']
     },
     {
-      title: 'Intelligent Monitoring & Alerting',
+      title: 'Intelligent ing & Alerting',
       description: 'AI-powered monitoring systems that learn from patterns and provide intelligent alerts and recommendations.',
       icon: '👁️',
       price: 'Starting at $2,800/month',
       features: ['Anomaly detection', 'Predictive alerting', 'Root cause analysis', 'Performance optimization', 'Custom dashboards'],
       benefits: ['Prevent issues before they occur', 'Reduce false alerts by 80%', 'Improve system performance'],
       marketPrice: '$4,500-10,000/month',
-      category: 'Monitoring',
+      category: 'ing',
       technologies: ['ELK Stack', 'Splunk', 'Datadog', 'New Relic', 'Custom ML Models']
     },
     {
@@ -97,11 +97,11 @@ const AutonomousSystemsPage: React.FC = () => {
       description: 'Autonomous development systems that automatically write, test, and deploy code based on requirements.',
       icon: '💻',
       price: 'Starting at $5,500/month',
-      features: ['Code generation', 'Automated testing', 'Deployment automation', 'Bug fixing', 'Performance optimization'],
+      features: ['generation', 'Automated testing', 'Deployment automation', 'Bug fixing', 'Performance optimization'],
       benefits: ['Accelerate development by 60%', 'Reduce bugs by 70%', 'Improve code quality'],
       marketPrice: '$8,000-20,000/month',
       category: 'Development Automation',
-      technologies: ['GitHub Copilot', 'CodeT5', 'Automated Testing', 'CI/CD', 'Code Analysis Tools']
+      technologies: ['GitHub Copilot', 'T5', 'Automated Testing', 'CI/CD', 'Analysis Tools']
     },
     {
       title: 'Autonomous Financial Operations',
@@ -193,7 +193,7 @@ const AutonomousSystemsPage: React.FC = () => {
               </div>
               <div className="text-center">
                 <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Brain className="w-8 h-8 text-blue-600" />
+                  <div className="w-8 h-8 text-blue-600" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Self-Learning</h3>
                 <p className="text-gray-600">AI systems that continuously learn and improve performance</p>
@@ -207,7 +207,7 @@ const AutonomousSystemsPage: React.FC = () => {
               </div>
               <div className="text-center">
                 <div className="bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Zap className="w-8 h-8 text-orange-600" />
+                  <div className="w-8 h-8 text-orange-600" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Cost Effective</h3>
                 <p className="text-gray-600">Reduce operational costs by up to 70% through automation</p>
@@ -231,8 +231,8 @@ const AutonomousSystemsPage: React.FC = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {autonomousServices
                   .filter(service => service.category === category)
-                  .map((service, index) => (
-                    <div key={index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
+                  .map((service, _index) => (
+                    <div key={_index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
                       <div className="text-4xl mb-4">{service.icon}</div>
                       <h3 className="text-xl font-semibold text-gray-900 mb-3">{service.title}</h3>
                       <p className="text-gray-600 mb-4">{service.description}</p>
@@ -310,7 +310,7 @@ const AutonomousSystemsPage: React.FC = () => {
                 <p className="text-gray-600">Self-managing systems that operate without human intervention</p>
               </div>
               <div className="text-center p-6 bg-gradient-to-br from-blue-50 to-cyan-100 rounded-lg">
-                <Brain className="w-12 h-12 text-blue-600 mx-auto mb-4" />
+                <div className="w-12 h-12 text-blue-600 mx-auto mb-4" />
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Machine Learning</h3>
                 <p className="text-gray-600">AI systems that continuously learn and improve performance</p>
               </div>
@@ -320,13 +320,13 @@ const AutonomousSystemsPage: React.FC = () => {
                 <p className="text-gray-600">Systems that automatically detect and repair issues</p>
               </div>
               <div className="text-center p-6 bg-gradient-to-br from-orange-50 to-amber-100 rounded-lg">
-                <Settings className="w-12 h-12 text-orange-600 mx-auto mb-4" />
+                <div className="w-12 h-12 text-orange-600 mx-auto mb-4" />
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Self-Optimization</h3>
                 <p className="text-gray-600">Continuous optimization of performance and resource usage</p>
               </div>
               <div className="text-center p-6 bg-gradient-to-br from-pink-50 to-rose-100 rounded-lg">
                 <Eye className="w-12 h-12 text-pink-600 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Intelligent Monitoring</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Intelligent ing</h3>
                 <p className="text-gray-600">AI-powered monitoring with predictive capabilities</p>
               </div>
               <div className="text-center p-6 bg-gradient-to-br from-indigo-50 to-blue-100 rounded-lg">

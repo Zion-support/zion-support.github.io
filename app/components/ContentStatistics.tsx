@@ -170,7 +170,7 @@ const ContentStatistics: React.FC = () => {
           <div className="bg-gray-50 rounded-xl p-6">
             <h3 className="text-xl font-bold text-gray-900 mb-6">Content Categories</h3>
             <div className="space-y-4">
-              {stats.topCategories.map((category, index) => (
+              {stats.topCategories.map((category) => (
                 <div key={category.name} className="flex items-center justify-between">
                   <div className="flex items-center">
                     <div className="w-3 h-3 rounded-full bg-indigo-500 mr-3"></div>

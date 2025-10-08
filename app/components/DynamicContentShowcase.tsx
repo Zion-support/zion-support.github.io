@@ -152,22 +152,22 @@ const DynamicContentShowcase: React.FC = () => {
             🌟 Featured Content
           </h3>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {featuredPosts.map((post, index) => (
+            {featuredPosts.map((post, _index) => (
               <article
                 key={post.id}
                 className={`bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 ${
-                  index === 0 ? 'lg:col-span-2' : ''
+                  _index === 0 ? 'lg:col-span-2' : ''
                 }`}
               >
                 <div className="relative">
                   <div className={`h-48 bg-gradient-to-br ${
-                    index === 0 ? 'from-indigo-500 to-purple-600' :
-                    index === 1 ? 'from-green-500 to-blue-600' :
+                    _index === 0 ? 'from-indigo-500 to-purple-600' :
+                    _index === 1 ? 'from-green-500 to-blue-600' :
                     'from-purple-500 to-pink-600'
                   } flex items-center justify-center`}>
                     <div className="text-white text-center">
                       <div className="text-4xl mb-2">
-                        {index === 0 ? '🚀' : index === 1 ? '💰' : '🏗️'}
+                        {_index === 0 ? '🚀' : _index === 1 ? '💰' : '🏗️'}
                       </div>
                       <div className="text-sm font-medium opacity-90">{post.category}</div>
                     </div>
@@ -188,7 +188,7 @@ const DynamicContentShowcase: React.FC = () => {
                 
                 <div className="p-6">
                   <h4 className={`font-bold text-gray-900 mb-3 ${
-                    index === 0 ? 'text-2xl' : 'text-xl'
+                    _index === 0 ? 'text-2xl' : 'text-xl'
                   }`}>
                     {post.title}
                   </h4>
@@ -228,7 +228,7 @@ const DynamicContentShowcase: React.FC = () => {
             📚 Recent Articles
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {recentPosts.map((post, index) => (
+            {recentPosts.map((post, _index) => (
               <article
                 key={post.id}
                 className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300"
@@ -236,7 +236,7 @@ const DynamicContentShowcase: React.FC = () => {
                 <div className="h-32 bg-gradient-to-r from-blue-500 to-cyan-500 flex items-center justify-center">
                   <div className="text-white text-center">
                     <div className="text-2xl mb-1">
-                      {index === 0 ? '🤖' : index === 1 ? '🧠' : '💰'}
+                      {_index === 0 ? '🤖' : _index === 1 ? '🧠' : '💰'}
                     </div>
                     <div className="text-xs font-medium opacity-90">{post.category}</div>
                   </div>

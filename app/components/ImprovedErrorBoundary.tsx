@@ -62,8 +62,7 @@ class ImprovedErrorBoundary extends Component<Props, State> {
 
     // Log to console in development
     if (process.env['NODE_ENV'] === 'development') {
-      console.error('Error Boundary caught an error:', error, errorInfo);
-    }
+          }
 
     // Send to external error tracking (if available)
     if (typeof window !== 'undefined' && (window as unknown as { Sentry: unknown }).Sentry) {
@@ -81,7 +80,7 @@ class ImprovedErrorBoundary extends Component<Props, State> {
     // Reset error state if resetKeys changed
     if (this.props.resetKeys && prevProps.resetKeys) {
       const resetKeysChanged = this.props.resetKeys.some(
-        (key, index) => key !== prevProps.resetKeys![index]
+        (key, _index) => key !== prevProps.resetKeys[_index]
       );
       
       if (resetKeysChanged && this.state.hasError) {
@@ -118,7 +117,7 @@ class ImprovedErrorBoundary extends Component<Props, State> {
         <div className="error-boundary-container" style={styles.container}>
           <div style={styles.content}>
             <div style={styles.icon}>⚠️</div>
-            <h1 style={styles.title}>Oops! Something went wrong</h1>
+            <h1 style={styles.title}>Oops Something went wrong</h1>
             <p style={styles.message}>
               We're sorry for the inconvenience. The application encountered an unexpected error.
             </p>

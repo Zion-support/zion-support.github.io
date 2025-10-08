@@ -111,12 +111,11 @@ export const usePerformanceMonitoring = () => {
       };
     } catch (error) {
        
-      console.warn('Performance monitoring not supported:', error);
-      return () => {};
+            return () => {};
     }
   }, [reportMetric]);
 
-  // Monitor page load performance
+  // page load performance
   useEffect(() => {
     const handleLoad = () => {
       if (typeof window === 'undefined') return;

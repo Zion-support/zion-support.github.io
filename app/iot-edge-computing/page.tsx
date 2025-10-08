@@ -1,18 +1,18 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, Star, Wifi, Cpu, Shield, Zap, Target, BarChart, Brain, Settings, Globe, Database } from 'lucide-react';
+import { CheckCircle, Star, Wifi, Shield, } from 'lucide-react';
 
 const IoTEdgeComputingPage: React.FC = () => {
   const iotServices = [
     {
-      title: 'IoT Sensor Network Design',
+      title: 'IoT Sensor Design',
       description: 'Comprehensive IoT sensor networks with real-time data collection and edge processing capabilities.',
       icon: '📡',
       price: 'Starting at $5,000/project',
-      features: ['Sensor selection & placement', 'Network topology design', 'Data collection protocols', 'Edge processing setup', 'Real-time monitoring'],
+      features: ['Sensor selection & placement', 'topology design', 'Data collection protocols', 'Edge processing setup', 'Real-time monitoring'],
       benefits: ['Improve operational visibility', 'Reduce manual monitoring', 'Enable predictive maintenance'],
       marketPrice: '$8,000-25,000/project',
-      category: 'Sensor Networks',
+      category: 'Sensor s',
       technologies: ['LoRaWAN', 'NB-IoT', 'Zigbee', 'WiFi 6', '5G']
     },
     {
@@ -79,7 +79,7 @@ const IoTEdgeComputingPage: React.FC = () => {
       benefits: ['Reduce fuel costs by 15%', 'Improve driver safety', 'Optimize fleet operations'],
       marketPrice: '$12,000-40,000/month',
       category: 'Connected Vehicles',
-      technologies: ['OBD-II', 'GPS Tracking', 'Cellular Networks', 'CAN Bus', 'Telematics']
+      technologies: ['OBD-II', 'GPS Tracking', 'Cellular s', 'CAN Bus', 'Telematics']
     },
     {
       title: 'Smart Agriculture IoT',
@@ -104,14 +104,14 @@ const IoTEdgeComputingPage: React.FC = () => {
       technologies: ['Device Twins', 'OTA Updates', 'Device Registry', 'Configuration Management']
     },
     {
-      title: 'Environmental Monitoring',
+      title: 'Environmental ing',
       description: 'Comprehensive environmental monitoring solutions for air, water, and soil quality.',
       icon: '🌍',
       price: 'Starting at $3,500/month',
       features: ['Air quality sensors', 'Water quality monitoring', 'Noise level detection', 'Weather monitoring', 'Compliance reporting'],
       benefits: ['Ensure environmental compliance', 'Protect public health', 'Enable data-driven decisions'],
       marketPrice: '$6,500-20,000/month',
-      category: 'Environmental Monitoring',
+      category: 'Environmental ing',
       technologies: ['Environmental Sensors', 'Data Loggers', 'Compliance Systems', 'Reporting Tools']
     },
     {
@@ -193,7 +193,7 @@ const IoTEdgeComputingPage: React.FC = () => {
               </div>
               <div className="text-center">
                 <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Cpu className="w-8 h-8 text-blue-600" />
+                  <className="w-8 h-8 text-blue-600" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Edge Processing</h3>
                 <p className="text-gray-600">Real-time processing at the edge for instant decisions</p>
@@ -207,7 +207,7 @@ const IoTEdgeComputingPage: React.FC = () => {
               </div>
               <div className="text-center">
                 <div className="bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Zap className="w-8 h-8 text-orange-600" />
+                  <className="w-8 h-8 text-orange-600" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Scalable Solutions</h3>
                 <p className="text-gray-600">Solutions that grow with your business needs</p>
@@ -231,8 +231,8 @@ const IoTEdgeComputingPage: React.FC = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {iotServices
                   .filter(service => service.category === category)
-                  .map((service, index) => (
-                    <div key={index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
+                  .map((service, _index) => (
+                    <div key={_index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
                       <div className="text-4xl mb-4">{service.icon}</div>
                       <h3 className="text-xl font-semibold text-gray-900 mb-3">{service.title}</h3>
                       <p className="text-gray-600 mb-4">{service.description}</p>
@@ -306,11 +306,11 @@ const IoTEdgeComputingPage: React.FC = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <div className="text-center p-6 bg-gradient-to-br from-cyan-50 to-blue-100 rounded-lg">
                 <Wifi className="w-12 h-12 text-cyan-600 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Sensor Networks</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Sensor s</h3>
                 <p className="text-gray-600">Comprehensive sensor network design and deployment</p>
               </div>
               <div className="text-center p-6 bg-gradient-to-br from-blue-50 to-indigo-100 rounded-lg">
-                <Cpu className="w-12 h-12 text-blue-600 mx-auto mb-4" />
+                <className="w-12 h-12 text-blue-600 mx-auto mb-4" />
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Edge Computing</h3>
                 <p className="text-gray-600">Real-time processing and decision making at the edge</p>
               </div>
@@ -320,17 +320,17 @@ const IoTEdgeComputingPage: React.FC = () => {
                 <p className="text-gray-600">Comprehensive security for IoT devices and networks</p>
               </div>
               <div className="text-center p-6 bg-gradient-to-br from-purple-50 to-violet-100 rounded-lg">
-                <BarChart className="w-12 h-12 text-purple-600 mx-auto mb-4" />
+                <className="w-12 h-12 text-purple-600 mx-auto mb-4" />
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Data Analytics</h3>
                 <p className="text-gray-600">Real-time analytics and machine learning for IoT data</p>
               </div>
               <div className="text-center p-6 bg-gradient-to-br from-orange-50 to-amber-100 rounded-lg">
-                <Globe className="w-12 h-12 text-orange-600 mx-auto mb-4" />
+                <className="w-12 h-12 text-orange-600 mx-auto mb-4" />
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Smart Cities</h3>
                 <p className="text-gray-600">Comprehensive smart city infrastructure solutions</p>
               </div>
               <div className="text-center p-6 bg-gradient-to-br from-pink-50 to-rose-100 rounded-lg">
-                <Database className="w-12 h-12 text-pink-600 mx-auto mb-4" />
+                <className="w-12 h-12 text-pink-600 mx-auto mb-4" />
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Device Management</h3>
                 <p className="text-gray-600">Centralized management and monitoring of IoT devices</p>
               </div>

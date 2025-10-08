@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, Star, Shield, Lock, Eye, AlertTriangle, Target, BarChart, Brain, Settings, Globe, Database } from 'lucide-react';
+import { CheckCircle, Star, Shield, Eye, AlertTriangle, } from 'lucide-react';
 
 const CybersecurityPage: React.FC = () => {
   const securityServices = [
@@ -24,14 +24,14 @@ const CybersecurityPage: React.FC = () => {
       benefits: ['Eliminate lateral movement', 'Reduce attack surface', 'Ensure compliance'],
       marketPrice: '$12,000-40,000/month',
       category: 'Zero Trust',
-      technologies: ['Identity Management', 'Network Segmentation', 'Policy Engines', 'Access Controls']
+      technologies: ['Identity Management', 'Segmentation', 'Policy Engines', 'Access Controls']
     },
     {
       title: 'Penetration Testing & Vulnerability Assessment',
       description: 'Comprehensive security testing to identify vulnerabilities and assess security posture.',
       icon: '🔍',
       price: 'Starting at $3,500/assessment',
-      features: ['Network penetration testing', 'Web application testing', 'Social engineering', 'Physical security testing', 'Compliance testing'],
+      features: ['penetration testing', 'Web application testing', 'Social engineering', 'Physical security testing', 'Compliance testing'],
       benefits: ['Identify security gaps', 'Prevent data breaches', 'Ensure compliance'],
       marketPrice: '$6,000-20,000/assessment',
       category: 'Security Testing',
@@ -71,15 +71,15 @@ const CybersecurityPage: React.FC = () => {
       technologies: ['DLP', 'Encryption', 'GDPR Tools', 'Data Classification', 'Privacy Management']
     },
     {
-      title: 'Network Security & Firewall Management',
+      title: 'Security & Firewall Management',
       description: 'Advanced network security with next-generation firewalls and intrusion prevention systems.',
       icon: '🌐',
       price: 'Starting at $2,500/month',
-      features: ['Next-gen firewalls', 'Intrusion prevention', 'Network segmentation', 'VPN management', 'Traffic analysis'],
+      features: ['Next-gen firewalls', 'Intrusion prevention', 'segmentation', 'VPN management', 'Traffic analysis'],
       benefits: ['Block malicious traffic', 'Prevent network attacks', 'Improve network performance'],
       marketPrice: '$4,500-15,000/month',
-      category: 'Network Security',
-      technologies: ['NGFW', 'IPS', 'VPN', 'SD-WAN', 'Network Monitoring']
+      category: 'Security',
+      technologies: ['NGFW', 'IPS', 'VPN', 'SD-WAN', 'ing']
     },
     {
       title: 'Email Security & Phishing Protection',
@@ -195,12 +195,12 @@ const CybersecurityPage: React.FC = () => {
                 <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Eye className="w-8 h-8 text-blue-600" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">24/7 Monitoring</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">24/7 ing</h3>
                 <p className="text-gray-600">Round-the-clock security monitoring and incident response</p>
               </div>
               <div className="text-center">
                 <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Lock className="w-8 h-8 text-green-600" />
+                  <className="w-8 h-8 text-green-600" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Compliance Ready</h3>
                 <p className="text-gray-600">Ensure compliance with GDPR, HIPAA, SOX, and other regulations</p>
@@ -231,8 +231,8 @@ const CybersecurityPage: React.FC = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {securityServices
                   .filter(service => service.category === category)
-                  .map((service, index) => (
-                    <div key={index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
+                  .map((service, _index) => (
+                    <div key={_index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
                       <div className="text-4xl mb-4">{service.icon}</div>
                       <h3 className="text-xl font-semibold text-gray-900 mb-3">{service.title}</h3>
                       <p className="text-gray-600 mb-4">{service.description}</p>
@@ -310,7 +310,7 @@ const CybersecurityPage: React.FC = () => {
                 <p className="text-gray-600">AI-powered threat detection and response systems</p>
               </div>
               <div className="text-center p-6 bg-gradient-to-br from-blue-50 to-cyan-100 rounded-lg">
-                <Lock className="w-12 h-12 text-blue-600 mx-auto mb-4" />
+                <className="w-12 h-12 text-blue-600 mx-auto mb-4" />
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Zero Trust</h3>
                 <p className="text-gray-600">Comprehensive zero trust security architecture</p>
               </div>
@@ -320,12 +320,12 @@ const CybersecurityPage: React.FC = () => {
                 <p className="text-gray-600">24/7 security operations center monitoring</p>
               </div>
               <div className="text-center p-6 bg-gradient-to-br from-purple-50 to-violet-100 rounded-lg">
-                <Database className="w-12 h-12 text-purple-600 mx-auto mb-4" />
+                <className="w-12 h-12 text-purple-600 mx-auto mb-4" />
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Data Protection</h3>
                 <p className="text-gray-600">Comprehensive data protection and privacy solutions</p>
               </div>
               <div className="text-center p-6 bg-gradient-to-br from-orange-50 to-amber-100 rounded-lg">
-                <Globe className="w-12 h-12 text-orange-600 mx-auto mb-4" />
+                <className="w-12 h-12 text-orange-600 mx-auto mb-4" />
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Cloud Security</h3>
                 <p className="text-gray-600">Advanced cloud security and compliance solutions</p>
               </div>

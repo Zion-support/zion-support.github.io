@@ -98,7 +98,6 @@ const HomePage: React.FC = () => {
 
         {/* Services Section */}
         <section className="mb-16" aria-labelledby="services-heading">
-<<<<<<< HEAD
           <h2 id="services-heading" className="text-3xl font-bold text-gray-900 mb-8 text-center">
             Our Services
           </h2>

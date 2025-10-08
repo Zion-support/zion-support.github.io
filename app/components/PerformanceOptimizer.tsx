@@ -63,7 +63,9 @@ const PerformanceOptimizerComponent: React.FC<PerformanceOptimizerProps> = ({
         list.getEntries().forEach(entry => {
           if (entry.entryType === 'navigation') {
              
-            if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { console.log('Navigation timing:', entry); } }
+            if (process.env['NODE_ENV'] === 'development' || import.meta.env.DEV) {
+              // console.log('Navigation timing:', entry);
+            }
           }
         });
       });

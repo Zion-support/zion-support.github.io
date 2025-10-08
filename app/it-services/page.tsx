@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, Star, Server, Shield, Cloud, Database, Network, Code, Monitor, Settings } from 'lucide-react';
+import { CheckCircle, Star, Server, Shield, Cloud, } from 'lucide-react';
 
 const ITServicesPage: React.FC = () => {
   const itServices = [
@@ -31,32 +31,32 @@ const ITServicesPage: React.FC = () => {
       description: 'Automated deployment pipelines, infrastructure as code, and continuous integration services.',
       icon: '🔄',
       price: 'Starting at $2,000/month',
-      features: ['CI/CD pipeline setup', 'Infrastructure automation', 'Monitoring & alerting', 'Version control', 'Testing automation'],
+      features: ['CI/CD pipeline setup', 'Infrastructure automation', 'ing & alerting', 'Version control', 'Testing automation'],
       benefits: ['Deploy 10x faster', 'Reduce deployment errors by 90%', 'Improve team productivity'],
       marketPrice: '$3,500-7,000/month',
       category: 'DevOps',
       technologies: ['Jenkins', 'GitLab CI', 'Terraform', 'Ansible', 'Prometheus']
     },
     {
-      title: 'Database Administration',
-      description: 'Database design, optimization, backup, and maintenance for SQL and NoSQL databases.',
+      title: 'Administration',
+      description: 'design, optimization, backup, and maintenance for SQL and NoSQL databases.',
       icon: '🗄️',
       price: 'Starting at $1,500/month',
-      features: ['Database design', 'Performance tuning', 'Backup & recovery', 'Security hardening', 'Migration services'],
+      features: ['design', 'Performance tuning', 'Backup & recovery', 'Security hardening', 'Migration services'],
       benefits: ['Improve query performance by 60%', 'Ensure data integrity', 'Reduce downtime'],
       marketPrice: '$2,500-5,000/month',
-      category: 'Database',
+      category: '',
       technologies: ['PostgreSQL', 'MySQL', 'MongoDB', 'Redis', 'Elasticsearch']
     },
     {
-      title: 'Network Infrastructure',
-      description: 'Network design, implementation, and management for enterprise-grade connectivity.',
+      title: 'Infrastructure',
+      description: 'design, implementation, and management for enterprise-grade connectivity.',
       icon: '🌐',
       price: 'Starting at $2,200/month',
-      features: ['Network design', 'Router & switch config', 'VPN setup', 'Load balancing', 'Network monitoring'],
+      features: ['design', 'Router & switch config', 'VPN setup', 'Load balancing', 'monitoring'],
       benefits: ['Improve network performance', 'Reduce latency by 40%', 'Ensure reliability'],
       marketPrice: '$3,500-6,000/month',
-      category: 'Networking',
+      category: 'ing',
       technologies: ['Cisco', 'Juniper', 'Fortinet', 'SD-WAN', 'MPLS']
     },
     {
@@ -207,7 +207,7 @@ const ITServicesPage: React.FC = () => {
               </div>
               <div className="text-center">
                 <div className="bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Settings className="w-8 h-8 text-orange-600" />
+                  <className="w-8 h-8 text-orange-600" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">24/7 Support</h3>
                 <p className="text-gray-600">Round-the-clock monitoring and support services</p>
@@ -231,8 +231,8 @@ const ITServicesPage: React.FC = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {itServices
                   .filter(service => service.category === category)
-                  .map((service, index) => (
-                    <div key={index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
+                  .map((service, _index) => (
+                    <div key={_index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
                       <div className="text-4xl mb-4">{service.icon}</div>
                       <h3 className="text-xl font-semibold text-gray-900 mb-3">{service.title}</h3>
                       <p className="text-gray-600 mb-4">{service.description}</p>

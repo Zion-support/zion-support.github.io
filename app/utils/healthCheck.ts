@@ -274,8 +274,8 @@ class HealthCheckService {
         localStorage.removeItem('_size_test');
       } catch {
         return {
-          name: 'storage'
-          status: 'warn'
+          name: 'storage',
+          status: 'warn',
           message: 'LocalStorage space limited'
         }
       }

@@ -40,7 +40,7 @@ export interface UseFormReturn<T extends Record<string, unknown>> {
 }
 
 export function useForm<T extends Record<string, unknown>>({
-  initialValues, validationSchema = {}, onSubmit: _onSubmit, validateOnChange = true, validateOnBlur = true
+  initialValues, validationSchema = {}, onSubmit: __onSubmit, validateOnChange = true, validateOnBlur = true
 }: UseFormConfig<T>): UseFormReturn<T> {
   const [values, setValues] = useState<T>(initialValues);
   const [errors, setErrors] = useState<Record<keyof T, string[]>>({} as Record<keyof T, string[]>);
@@ -143,8 +143,7 @@ export function useForm<T extends Record<string, unknown>>({
       try {
         await onSubmit(values);
       } catch (error) {
-        console.error('Form submission error:', error);
-      } finally {
+              } finally {
         setIsSubmitting(false);
       }
     },

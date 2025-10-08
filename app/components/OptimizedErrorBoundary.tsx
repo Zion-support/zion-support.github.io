@@ -49,8 +49,7 @@ class OptimizedErrorBoundary extends Component<
     // Log error to console in development
     if (process.env['NODE_ENV'] === 'development') {
        
-      console.error('Error caught by boundary:', error, errorInfo);
-    }
+          }
 
     // Call custom error handler if provided
     if (this.props.onError) {
@@ -70,7 +69,7 @@ class OptimizedErrorBoundary extends Component<
     if (hasError && prevProps.resetKeys !== resetKeys) {
       if (resetKeys && prevProps.resetKeys) {
         const hasResetKeyChanged = resetKeys.some(
-          (key, index) => key !== prevProps.resetKeys?.[index]
+          (key, _index) => key !== prevProps.resetKeys?.[_index]
         );
 
         if (hasResetKeyChanged) {

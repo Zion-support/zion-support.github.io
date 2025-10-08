@@ -62,10 +62,7 @@ export function useEnhancedPerformance(_options: UseEnhancedPerformanceOptions =
 
     if (trackPerformance && renderCountRef.current > 10) {
       // Many re-renders detected
-      console.warn(
-        `Component ${component} has re-rendered ${renderCountRef.current} times`
-      );
-      analytics.trackCustomEvent(
+            analytics.trackCustomEvent(
         'Performance',
         'High Render Count',
         component,
@@ -97,7 +94,7 @@ export function useEnhancedPerformance(_options: UseEnhancedPerformanceOptions =
 
   const measureOperation = useCallback(
     (operationName: string) => {
-      const _markName = `${component}-${operationName}`;
+      const __markName = `${component}-${operationName}`;
       const startTime = performance.now();
 
       return {
