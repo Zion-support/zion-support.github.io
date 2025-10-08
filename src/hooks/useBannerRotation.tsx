@@ -68,7 +68,7 @@ export const useBannerRotation = (options: UseBannerRotationOptions = {}) => {
     maxBanners = 3,
     refreshInterval = 30000,
     enableTracking = true
-  } = _options;
+  } = options;
 
   const [state, setState] = useState<BannerRotationState>({
     currentBanners: [],
