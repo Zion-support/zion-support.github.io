@@ -19,29 +19,8 @@ export interface PerformanceThresholds {
   needsImprovement: number;
 }
 
-// Extended types for specific performance entry types
-<<<<<<< HEAD
-<<<<<<< HEAD
-interface PerformancePaintTiming extends PerformanceEntry {
-  name: 'first-paint' | 'first-contentful-paint';
-}
-
-interface LargestContentfulPaint extends PerformanceEntry {
-  renderTime: number;
-  loadTime: number;
-  size: number;
-  id: string;
-  url: string;
-  element: Element | null;
-}
-
-interface PerformanceEventTiming extends PerformanceEntry {
-  processingStart: number;
-  processingEnd: number;
-  cancelable: boolean;
-  target: EventTarget | null;
-}
 =======
+>>>>>>> 5a6fab5466218b5fd438f48f6649158efa56a5c3
 // These interfaces are defined for future use but not currently used
 // interface _PerformancePaintTiming extends PerformanceEntry {
 //   name: 'first-paint' | 'first-contentful-paint';
@@ -62,10 +41,10 @@ interface PerformanceEventTiming extends PerformanceEntry {
 //   cancelable: boolean;
 //   target: EventTarget | null;
 // }
->>>>>>> cursor/fix-errors-and-merge-to-main-fbf5
-=======
 // Performance entry types are handled inline where needed
 >>>>>>> cursor/fix-errors-and-merge-to-main-5c5e
+=======
+>>>>>>> 5a6fab5466218b5fd438f48f6649158efa56a5c3
 
 class PerformanceMonitor {
   private metrics: Map<string, PerformanceMetric> = new Map();
@@ -107,9 +86,6 @@ class PerformanceMonitor {
 
         // Largest Contentful Paint
         this.observeEntry('largest-contentful-paint', (entries) => {
-<<<<<<< HEAD
-          const lastEntry = entries[entries.length - 1] as { renderTime?: number; loadTime?: number; startTime: number };
-=======
           const lastEntry = entries[entries.length - 1] as PerformanceEntry;
 >>>>>>> cursor/fix-errors-and-merge-to-main-5c5e
           if (lastEntry) {
@@ -119,9 +95,6 @@ class PerformanceMonitor {
 
         // First Input Delay
         this.observeEntry('first-input', (entries) => {
-<<<<<<< HEAD
-          const firstInput = entries[0] as { processingStart: number; startTime: number };
-=======
           const firstInput = entries[0] as PerformanceEntry & { processingStart: number };
 >>>>>>> cursor/fix-errors-and-merge-to-main-5c5e
           if (firstInput && firstInput.processingStart !== undefined) {

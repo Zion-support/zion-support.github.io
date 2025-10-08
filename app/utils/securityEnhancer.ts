@@ -128,15 +128,14 @@ class SecurityEnhancer {
     
     // Override console methods to detect debugging
     ['log', 'warn', 'error', 'info'].forEach(method => {
-<<<<<<< HEAD
-<<<<<<< HEAD
-      (console as any)[method] = (...args: any[]) => {
-=======
       (console as { [key: string]: (...args: unknown[]) => void })[method] = (...args: unknown[]) => {
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbf5
 =======
       (console as Record<string, Function>)[method] = (...args: unknown[]) => {
 >>>>>>> cursor/fix-errors-and-merge-to-main-5c5e
+=======
+      (console as { [key: string]: (...args: unknown[]) => void })[method] = (...args: unknown[]) => {
+>>>>>>> 5a6fab5466218b5fd438f48f6649158efa56a5c3
         this.metrics.suspiciousActivity++;
         originalConsole[method](...args);
       };
