@@ -90,7 +90,9 @@ class EnhancedErrorHandler {
 
     this.isInitialized = true;
     // eslint-disable-next-line no-console
-    if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { console.log('🛡️ Enhanced Error Handler initialized'); } }
+    if (process.env['NODE_ENV'] === 'development') {
+      console.log('🛡️ Enhanced Error Handler initialized');
+    }
   }
 
   /**
