@@ -101,14 +101,6 @@ export function useEnhancedPerformance(
   const measureOperation = useCallback(
     (operationName: string) => {
       const markName = `${component}-${operationName}`;
-<<<<<<< HEAD
-<<<<<<< HEAD
-      const startTime = performance.now();
-
-      return {
-        end: () => {
-          const duration = performance.now() - startTime;
-=======
       if (typeof performance !== 'undefined' && performance.mark) {
         performance.mark(markName);
       }
@@ -126,14 +118,6 @@ export function useEnhancedPerformance(
               // Ignore measurement errors
             }
           }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-32a9
-=======
-      // Performance marking - startMark not available
-
-      return {
-        end: () => {
-          const duration = 0; // Performance marking - endMark not available
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-fd0a
           if (duration && trackPerformance) {
             analytics.trackPerformance(
               `${component}-${operationName}`,
@@ -147,3 +131,10 @@ export function useEnhancedPerformance(
     },
     [component, trackPerformance]
   );
+
+  return {
+    trackError,
+    trackUserAction,
+    measureOperation,
+  };
+}
