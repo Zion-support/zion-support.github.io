@@ -50,7 +50,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
         observers.push(lcpObserver);
       } catch (error) {
-        console.warn('LCP observer not supported:', error);
+        // LCP observer not supported in this browser
       }
     }
 
@@ -76,7 +76,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         fidObserver.observe({ entryTypes: ['first-input'] });
         observers.push(fidObserver);
       } catch (error) {
-        console.warn('FID observer not supported:', error);
+        // FID observer not supported in this browser
       }
     }
 
@@ -103,7 +103,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         clsObserver.observe({ entryTypes: ['layout-shift'] });
         observers.push(clsObserver);
       } catch (error) {
-        console.warn('CLS observer not supported:', error);
+        // CLS observer not supported in this browser
       }
     }
 
@@ -127,7 +127,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         memory,
       }));
     } catch (error) {
-      console.warn('Performance measurement failed:', error);
+      // Performance measurement failed
     }
 
     // Cleanup observers
@@ -136,7 +136,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         try {
           observer.disconnect();
         } catch (error) {
-          console.warn('Error disconnecting observer:', error);
+          // Error disconnecting observer
         }
       });
     };
@@ -151,15 +151,12 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     );
 
     if (slowResources.length > 0) {
-      // eslint-disable-next-line no-console
-      console.warn(
-        'Slow resources detected:',
-        slowResources.map((r: PerformanceResourceTiming) => ({
+      // Slow resources detected
+      const slowResourceData = slowResources.map((r: PerformanceResourceTiming) => ({
           name: r.name,
           duration: r.duration,
           size: r.transferSize,
-        }))
-      );
+        }));
     }
   }, []);
 
