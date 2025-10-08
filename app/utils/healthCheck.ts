@@ -3,7 +3,7 @@
  * Monitors application health and provides diagnostic information
  */
 
-import React from 'react';
+// import React from 'react';
 import { logger } from './logger';
 import { performanceMonitor } from './performanceMonitor';
 
@@ -168,7 +168,7 @@ class HealthCheckService {
           usedPercent,
         },
       };
-    } catch (error) {
+    } catch (_error) {
       return {
         name: 'memory',
         status: 'warn',
@@ -203,7 +203,7 @@ class HealthCheckService {
           summary: report.summary,
         },
       };
-    } catch (error) {
+    } catch (_error) {
       return {
         name: 'performance',
         status: 'warn',
@@ -264,7 +264,7 @@ class HealthCheckService {
       try {
         localStorage.setItem('_size_test', testData);
         localStorage.removeItem('_size_test');
-      } catch (error) {
+      } catch (_error) {
         return {
           name: 'storage',
           status: 'warn',
@@ -276,7 +276,7 @@ class HealthCheckService {
         status: 'pass',
         message: 'Storage working correctly',
       };
-    } catch (error) {
+    } catch (_error) {
       return {
         name: 'storage',
         status: 'fail',

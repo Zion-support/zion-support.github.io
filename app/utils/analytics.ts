@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 /**
  * Enhanced Analytics Utility
  * Provides type-safe analytics tracking with error handling
@@ -124,7 +124,7 @@ class AnalyticsService {
         });
       }
     } catch (error) {
-      console.error('Failed to track timing:', error)
+      console.error('Failed to track timing:', error);
     }
   }
   /**
@@ -140,7 +140,7 @@ class AnalyticsService {
         metadata,
       });
     } catch (error) {
-      console.error('Failed to track performance:', error)
+      console.error('Failed to track performance:', error);
     }
   }
   /**

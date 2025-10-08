@@ -81,7 +81,11 @@ class EnhancedErrorBoundary extends Component<Props, State> {
 
     // Send to analytics if available
     if (typeof window !== 'undefined' && (window as unknown as { gtag?: unknown }).gtag) {
-      (window as unknown as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag('event', 'exception', {
+      (
+        window as unknown as {
+          gtag: (command: string, action: string, parameters: Record<string, unknown>) => void;
+        }
+      ).gtag('event', 'exception', {
         description: error.message,
         fatal: false,
         custom_map: {
