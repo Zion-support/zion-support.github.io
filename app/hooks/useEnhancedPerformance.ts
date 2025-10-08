@@ -4,6 +4,8 @@
  */
 
 import { useEffect, useCallback, useRef } from 'react';
+// import { logger as _logger } from '../utils/logger';
+// import { _performanceOptimizer } from '../utils/_performanceOptimizer';
 import { errorTracker } from '../utils/enhancedErrorTracking';
 import { analytics } from '../utils/enhancedAnalytics';
 
@@ -20,7 +22,7 @@ export function useEnhancedPerformance(_options: UseEnhancedPerformanceOptions =
     trackErrors = true,
     trackPerformance = true,
     trackAnalytics = true,
-  } = options;
+  } = _options;
 
   const mountTimeRef = useRef<number>(0);
   const renderCountRef = useRef<number>(0);
