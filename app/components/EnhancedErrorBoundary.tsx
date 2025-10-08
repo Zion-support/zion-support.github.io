@@ -4,22 +4,38 @@ interface Props {
   children: ReactNode;
   fallback?: ReactNode;
   onError?: (error: Error, errorInfo: ErrorInfo) => void;
+  enableErrorReporting?: boolean;
+  maxRetries?: number;
 }
 
 interface State {
   hasError: boolean;
   error?: Error;
   errorInfo?: ErrorInfo;
+  errorId?: string;
+  retryCount: number;
 }
 
 class EnhancedErrorBoundary extends Component<Props, State> {
+  private maxRetries: number;
+
   constructor(props: Props) {
     super(props);
-    this.state = { hasError: false };
+    this.state = { 
+      hasError: false, 
+      retryCount: 0,
+      errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
+    };
+    this.maxRetries = props.maxRetries || 3;
   }
 
   static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error };
+    return { 
+      hasError: true, 
+      error,
+      errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
+      retryCount: 0
+    };
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
@@ -27,11 +43,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       error,
       errorInfo
     });
-
-    // Log error to console in development
-    if (process.env.NODE_ENV === 'development') {
-      console.error('Error caught by boundary:', error, errorInfo);
-    }
 
     // Call custom error handler if provided
     if (this.props.onError) {
@@ -93,11 +104,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       // In a real app, you would send this to your error reporting service
       // For now, we'll just log it
       // eslint-disable-next-line no-console
-<<<<<<< HEAD
       console.log('Error Report:', errorReport);
-=======
-      origin/cursor/fix-errors-and-merge-to-main-6395
->>>>>>> cursor/fix-errors-and-merge-to-main-ef5d
       // Example: Send to error reporting service
       // await fetch('/api/errors', {
       //   method: 'POST',
@@ -116,7 +123,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
   };
 
   private getSessionId = (): string => {
-    let _sessionId = sessionStorage.getItem('sessionId');
+    let sessionId = sessionStorage.getItem('sessionId');
     if (!sessionId) {
       sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
       sessionStorage.setItem('sessionId', sessionId);
@@ -159,9 +166,9 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     navigator.clipboard.writeText(JSON.stringify(errorDetails, null, 2))
       .then(() => {
         // Show success message
-        const _button = document.getElementById('copy-error-details');
+        const button = document.getElementById('copy-error-details');
         if (button) {
-          const _originalText = button.textContent;
+          const originalText = button.textContent;
           button.textContent = 'Copied!';
           setTimeout(() => {
             button.textContent = originalText;
@@ -170,14 +177,9 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       })
       .catch(() => {
         // eslint-disable-next-line no-console
-        });
+        console.warn('Failed to copy error details');
+      });
   };
-
-  // In production, you might want to send this to an error reporting service
-  if (process.env.NODE_ENV === 'production') {
-    // Example: send to error reporting service
-    // errorReportingService.captureException(error, { extra: errorInfo });
-  }
 
   render() {
     if (this.state.hasError) {
@@ -186,14 +188,8 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       }
 
       const { retryCount, error, errorId } = this.state;
-      const _canRetry = retryCount < this.maxRetries;
-<<<<<<< HEAD
+      const canRetry = retryCount < this.maxRetries;
 
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-35e0
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-ef5d
       return (
         <div className="min-h-screen flex items-center justify-center bg-gray-50">
           <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-8 text-center">
@@ -205,28 +201,43 @@ class EnhancedErrorBoundary extends Component<Props, State> {
               We're sorry, but something unexpected happened. Please try refreshing the page.
             </p>
             <div className="space-y-4">
+              {canRetry && (
+                <button
+                  onClick={this.handleRetry}
+                  className="w-full bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-colors"
+                >
+                  Try Again ({this.maxRetries - retryCount} attempts left)
+                </button>
+              )}
               <button
-                onClick={() => window.location.reload()}
+                onClick={this.handleReload}
                 className="w-full bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-colors"
               >
                 Refresh Page
               </button>
               <button
-                onClick={() => window.history.back()}
+                onClick={this.handleGoHome}
                 className="w-full bg-gray-200 text-gray-800 px-6 py-3 rounded-lg font-semibold hover:bg-gray-300 transition-colors"
               >
-                Go Back
+                Go Home
               </button>
             </div>
-            {process.env.NODE_ENV === 'development' && this.state.error && (
+            {process.env.NODE_ENV === 'development' && error && (
               <details className="mt-6 text-left">
                 <summary className="cursor-pointer text-sm text-gray-500">
                   Error Details (Development)
                 </summary>
                 <pre className="mt-2 text-xs text-red-600 bg-red-50 p-2 rounded overflow-auto">
-                  {this.state.error.toString()}
+                  {error.toString()}
                   {this.state.errorInfo?.componentStack}
                 </pre>
+                <button
+                  id="copy-error-details"
+                  onClick={this.copyErrorDetails}
+                  className="mt-2 text-xs bg-gray-200 text-gray-700 px-2 py-1 rounded hover:bg-gray-300"
+                >
+                  Copy Error Details
+                </button>
               </details>
             )}
           </div>
