@@ -233,11 +233,6 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
       {enableOpenGraph && (
         <>
           <meta property="og:title" content={seoData.title} />
-          <meta property="og:description" content={seoData.description} />
-          <meta property="og:url" content={seoData.canonicalUrl} />
-          <meta property="og:type" content="website" />
-          <meta property="og:image" content={seoData.ogImage} />
-          <meta property="og:image:width" content="1200" />
           <meta property="og:image:height" content="630" />
           <meta property="og:site_name" content="Zion Tech Group" />
           <meta property="og:locale" content="en_US" />
