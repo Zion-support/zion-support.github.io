@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 
 export default function BlogPage() {
   return (
@@ -27,7 +28,7 @@ export default function BlogPage() {
             >
               Back to Home
             </Link>
-          </div>
+          </header>
         </div>
       </div>
     </>

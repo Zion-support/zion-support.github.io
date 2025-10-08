@@ -1,79 +1,113 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-('use client');
-=======
-import { ChevronDown } from 'lucide-react';
->>>>>>> cursor/expand-services-advertise-and-build-project-f575
+import { ChevronDown, Menu, X } from 'lucide-react';
 
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 10);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const services = [
+    { name: 'All Services', href: '/services' },
+    { name: 'AI Services', href: '/ai-services' },
+    { name: 'IT Services', href: '/it-services' },
+    { name: 'Micro SAAS', href: '/micro-saas' },
+    { name: 'Advertising', href: '/services-advertising' },
+  ];
 
   return (
-    <nav className="bg-white shadow-lg sticky top-0 z-50">
+    <nav 
+      className={`sticky top-0 z-50 transition-all duration-300 ${
+        isScrolled 
+          ? 'bg-white/95 backdrop-blur-md shadow-lg' 
+          : 'bg-white shadow-sm'
+      }`}
+    >
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
-          <Link to="/" className="text-2xl font-bold text-blue-600">
+          <Link 
+            to="/" 
+            className="text-2xl font-bold text-indigo-600 hover:text-indigo-700 transition-colors"
+            aria-label="Zion Tech Group Home"
+          >
             Zion Tech Group
           </Link>
 
           {/* Desktop Menu */}
-          <div className="hidden md:flex space-x-8">
-            <Link to="/" className="text-gray-700 hover:text-blue-600 transition-colors">
+          <div className="hidden lg:flex items-center space-x-8">
+            <Link 
+              to="/" 
+              className="text-gray-700 hover:text-indigo-600 transition-colors font-medium"
+            >
               Home
             </Link>
-            <Link to="/about" className="text-gray-700 hover:text-blue-600 transition-colors">
+            <Link 
+              to="/about" 
+              className="text-gray-700 hover:text-indigo-600 transition-colors font-medium"
+            >
               About
             </Link>
-<<<<<<< HEAD
+            
+            {/* Services Dropdown */}
             <div className="relative">
               <button
                 onClick={() => setServicesOpen(!servicesOpen)}
-                className="text-gray-700 hover:text-blue-600 transition-colors flex items-center"
+                onBlur={() => setTimeout(() => setServicesOpen(false), 200)}
+                className="text-gray-700 hover:text-indigo-600 transition-colors flex items-center font-medium"
+                aria-expanded={servicesOpen}
+                aria-haspopup="true"
               >
                 Services
-                <ChevronDown className="w-4 h-4 ml-1" />
+                <ChevronDown className={`w-4 h-4 ml-1 transition-transform ${servicesOpen ? 'rotate-180' : ''}`} />
               </button>
               {servicesOpen && (
-                <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg border py-2 z-50">
-                  <Link to="/services" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
-                    All Services
-                  </Link>
-                  <Link to="/micro-saas" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
-                    Micro SAAS Solutions
-                  </Link>
-                  <Link to="/ai-services" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
-                    AI Services
-                  </Link>
-                  <Link to="/it-services" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
-                    IT Services
-                  </Link>
-                  <Link to="/services-advertising" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
-                    Advertising Services
-                  </Link>
+                <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-xl border border-gray-200 py-2 z-50">
+                  {services.map((service) => (
+                    <Link
+                      key={service.name}
+                      to={service.href}
+                      className="block px-4 py-2 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition-colors"
+                      onClick={() => setServicesOpen(false)}
+                    >
+                      {service.name}
+                    </Link>
+                  ))}
                 </div>
               )}
             </div>
-=======
-            <Link to="/services" className="text-gray-700 hover:text-blue-600 transition-colors">
-              Services
-            </Link>
-            <Link to="/services-advertising" className="text-gray-700 hover:text-blue-600 transition-colors">
-              AI Advertising
-            </Link>
-            <Link to="/case-studies" className="text-gray-700 hover:text-blue-600 transition-colors">
+
+            <Link 
+              to="/case-studies" 
+              className="text-gray-700 hover:text-indigo-600 transition-colors font-medium"
+            >
               Case Studies
             </Link>
->>>>>>> cursor/website-audit-and-content-update-7e9e
-            <Link to="/enterprise" className="text-gray-700 hover:text-blue-600 transition-colors">
+            <Link 
+              to="/enterprise" 
+              className="text-gray-700 hover:text-indigo-600 transition-colors font-medium"
+            >
               Enterprise
             </Link>
-            <Link to="/team" className="text-gray-700 hover:text-blue-600 transition-colors">
+            <Link 
+              to="/team" 
+              className="text-gray-700 hover:text-indigo-600 transition-colors font-medium"
+            >
               Team
             </Link>
-            <Link to="/contact" className="text-gray-700 hover:text-blue-600 transition-colors">
+            <Link 
+              to="/contact" 
+              className="bg-indigo-600 text-white px-6 py-2 rounded-lg hover:bg-indigo-700 transition-colors font-medium"
+            >
               Contact
             </Link>
           </div>
@@ -81,80 +115,83 @@ const Navigation: React.FC = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden text-gray-700 hover:text-blue-600"
+            className="lg:hidden text-gray-700 hover:text-indigo-600 transition-colors p-2"
+            aria-label="Toggle mobile menu"
+            aria-expanded={isOpen}
           >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M4 6h16M4 12h16M4 18h16"
-              />
-            </svg>
+            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
 
         {/* Mobile Menu */}
-        {isOpen && (
-          <div className="md:hidden py-4 border-t">
+        <div className={`lg:hidden transition-all duration-300 overflow-hidden ${
+          isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+        }`}>
+          <div className="py-4 border-t border-gray-200">
             <div className="flex flex-col space-y-4">
-              <Link to="/" className="text-gray-700 hover:text-blue-600 transition-colors">
+              <Link 
+                to="/" 
+                className="text-gray-700 hover:text-indigo-600 transition-colors font-medium"
+                onClick={() => setIsOpen(false)}
+              >
                 Home
               </Link>
-              <Link to="/about" className="text-gray-700 hover:text-blue-600 transition-colors">
+              <Link 
+                to="/about" 
+                className="text-gray-700 hover:text-indigo-600 transition-colors font-medium"
+                onClick={() => setIsOpen(false)}
+              >
                 About
               </Link>
-<<<<<<< HEAD
-              <Link to="/services" className="text-gray-700 hover:text-blue-600 transition-colors">
-                Services
-              </Link>
-<<<<<<< HEAD
-              <Link
-                to="/enterprise"
-                className="text-gray-700 hover:text-blue-600 transition-colors"
-              >
-=======
+              
+              {/* Mobile Services */}
               <div className="space-y-2">
                 <div className="text-gray-700 font-semibold">Services</div>
                 <div className="ml-4 space-y-2">
-                  <Link to="/services" className="block text-gray-600 hover:text-blue-600 transition-colors">
-                    All Services
-                  </Link>
-                  <Link to="/micro-saas" className="block text-gray-600 hover:text-blue-600 transition-colors">
-                    Micro SAAS Solutions
-                  </Link>
-                  <Link to="/ai-services" className="block text-gray-600 hover:text-blue-600 transition-colors">
-                    AI Services
-                  </Link>
-                  <Link to="/it-services" className="block text-gray-600 hover:text-blue-600 transition-colors">
-                    IT Services
-                  </Link>
-                  <Link to="/services-advertising" className="block text-gray-600 hover:text-blue-600 transition-colors">
-                    Advertising Services
-                  </Link>
+                  {services.map((service) => (
+                    <Link
+                      key={service.name}
+                      to={service.href}
+                      className="block text-gray-600 hover:text-indigo-600 transition-colors"
+                      onClick={() => setIsOpen(false)}
+                    >
+                      {service.name}
+                    </Link>
+                  ))}
                 </div>
               </div>
-=======
-              <Link to="/services-advertising" className="text-gray-700 hover:text-blue-600 transition-colors">
-                AI Advertising
-              </Link>
-              <Link to="/case-studies" className="text-gray-700 hover:text-blue-600 transition-colors">
+
+              <Link 
+                to="/case-studies" 
+                className="text-gray-700 hover:text-indigo-600 transition-colors font-medium"
+                onClick={() => setIsOpen(false)}
+              >
                 Case Studies
               </Link>
->>>>>>> cursor/website-audit-and-content-update-7e9e
-              <Link to="/enterprise" className="text-gray-700 hover:text-blue-600 transition-colors">
->>>>>>> cursor/expand-services-advertise-and-build-project-f575
+              <Link 
+                to="/enterprise" 
+                className="text-gray-700 hover:text-indigo-600 transition-colors font-medium"
+                onClick={() => setIsOpen(false)}
+              >
                 Enterprise
               </Link>
-              <Link to="/team" className="text-gray-700 hover:text-blue-600 transition-colors">
+              <Link 
+                to="/team" 
+                className="text-gray-700 hover:text-indigo-600 transition-colors font-medium"
+                onClick={() => setIsOpen(false)}
+              >
                 Team
               </Link>
-              <Link to="/contact" className="text-gray-700 hover:text-blue-600 transition-colors">
+              <Link 
+                to="/contact" 
+                className="bg-indigo-600 text-white px-6 py-2 rounded-lg hover:bg-indigo-700 transition-colors font-medium text-center"
+                onClick={() => setIsOpen(false)}
+              >
                 Contact
               </Link>
             </div>
           </div>
-        )}
+        </div>
       </div>
     </nav>
   );

@@ -1,5 +1,29 @@
-import React, { memo, useMemo, Suspense } from 'react';
+import React, { memo, useMemo, Suspense, lazy } from 'react';
 import { HelmetProvider, Helmet } from 'react-helmet-async';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import WebVitals from './app/components/WebVitals';
+import PerformanceMonitor from './app/components/PerformanceMonitor';
+import AnalyticsProvider from './app/components/AnalyticsProvider';
+import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
+import PWAInstaller from './app/components/PWAInstaller';
+import { GlobalErrorBoundary } from './app/components/GlobalErrorBoundary';
+import LoadingSpinner from './app/components/LoadingSpinner';
+
+// Lazy load pages for better performance
+const HomePage = lazy(() => import('./app/page'));
+const AboutPage = lazy(() => import('./app/about/page'));
+const ServicesPage = lazy(() => import('./app/services/page'));
+const AIServicesPage = lazy(() => import('./app/ai-services/page'));
+const ITServicesPage = lazy(() => import('./app/it-services/page'));
+const MicroSAASPage = lazy(() => import('./app/micro-saas/page'));
+const AdvertisingPage = lazy(() => import('./app/services-advertising/page'));
+const CaseStudiesPage = lazy(() => import('./app/case-studies/page'));
+const EnterprisePage = lazy(() => import('./app/enterprise/page'));
+const TeamPage = lazy(() => import('./app/team/page'));
+const ContactPage = lazy(() => import('./app/contact/page'));
+const BlogPage = lazy(() => import('./app/blog/page'));
+const PrivacyPage = lazy(() => import('./app/privacy/page'));
+const TermsPage = lazy(() => import('./app/terms/page'));
 
 // Memoized components for better performance
 const UnifiedContentPromotion = memo(() => (
@@ -37,64 +61,6 @@ const InteractiveContentShowcase2026 = memo(() => (
     </div>
   </div>
 ));
-
-// Loading component
-const LoadingSpinner = memo(() => (
-  <div className="animate-pulse bg-gray-200 h-32 rounded flex items-center justify-center">
-    <div className="text-gray-500">Loading...</div>
-  </div>
-));
-
-// Error Boundary Component
-interface ErrorBoundaryState {
-  hasError: boolean;
-  error: Error | null;
-}
-
-interface ErrorBoundaryProps {
-  children: React.ReactNode;
-}
-
-class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundaryState> {
-  constructor(props: ErrorBoundaryProps) {
-    super(props);
-    this.state = { hasError: false, error: null };
-  }
-
-  static getDerivedStateFromError(error: Error): ErrorBoundaryState {
-    return { hasError: true, error };
-  }
-
-  override componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
-    // Log error for debugging in development
-    if (process.env.NODE_ENV === 'development') {
-      console.error('App Error Boundary caught an error:', error, errorInfo);
-    }
-  }
-
-  override render() {
-    if (this.state.hasError) {
-      return (
-        <div className="min-h-screen flex items-center justify-center bg-gray-50">
-          <div className="text-center p-8">
-            <h1 className="text-2xl font-bold text-gray-900 mb-4">Something went wrong</h1>
-            <p className="text-gray-600 mb-4">
-              We're working to fix this issue. Please try refreshing the page.
-            </p>
-            <button
-              onClick={() => window.location.reload()}
-              className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors"
-            >
-              Refresh Page
-            </button>
-          </div>
-        </div>
-      );
-    }
-
-    return this.props.children;
-  }
-}
 
 export default function App() {
   const structuredData = useMemo(
@@ -135,7 +101,7 @@ export default function App() {
   );
 
   return (
-    <ErrorBoundary>
+    <GlobalErrorBoundary>
       <HelmetProvider>
         <Helmet>
           <title>Zion Tech Group - AI & IT Solutions</title>
@@ -162,21 +128,38 @@ export default function App() {
           />
           <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
         </Helmet>
-        <div className="min-h-screen bg-white">
-          <Suspense fallback={<LoadingSpinner />}>
-            <UnifiedContentPromotion />
-          </Suspense>
-          <Suspense fallback={<LoadingSpinner />}>
-            <InteractiveAIROICalculator />
-          </Suspense>
-          <Suspense fallback={<LoadingSpinner />}>
-            <ContentShowcase />
-          </Suspense>
-          <Suspense fallback={<LoadingSpinner />}>
-            <InteractiveContentShowcase2026 />
-          </Suspense>
-        </div>
+        
+        <Router>
+          <AnalyticsProvider>
+            <AccessibilityEnhancer>
+              <PerformanceMonitor enableConsoleLogging={process.env.NODE_ENV === 'development'} />
+              <WebVitals />
+              <PWAInstaller />
+              
+              <div className="min-h-screen bg-white">
+                <Suspense fallback={<LoadingSpinner fullScreen text="Loading..." />}>
+                  <Routes>
+                    <Route path="/" element={<HomePage />} />
+                    <Route path="/about" element={<AboutPage />} />
+                    <Route path="/services" element={<ServicesPage />} />
+                    <Route path="/ai-services" element={<AIServicesPage />} />
+                    <Route path="/it-services" element={<ITServicesPage />} />
+                    <Route path="/micro-saas" element={<MicroSAASPage />} />
+                    <Route path="/services-advertising" element={<AdvertisingPage />} />
+                    <Route path="/case-studies" element={<CaseStudiesPage />} />
+                    <Route path="/enterprise" element={<EnterprisePage />} />
+                    <Route path="/team" element={<TeamPage />} />
+                    <Route path="/contact" element={<ContactPage />} />
+                    <Route path="/blog" element={<BlogPage />} />
+                    <Route path="/privacy" element={<PrivacyPage />} />
+                    <Route path="/terms" element={<TermsPage />} />
+                  </Routes>
+                </Suspense>
+              </div>
+            </AccessibilityEnhancer>
+          </AnalyticsProvider>
+        </Router>
       </HelmetProvider>
-    </ErrorBoundary>
+    </GlobalErrorBoundary>
   );
 }
