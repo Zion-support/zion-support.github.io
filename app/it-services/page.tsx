@@ -289,6 +289,216 @@ const ITServicesPage: React.FC = () => {
       marketPrice: '$2,500-6,000/month',
       category: 'Asset Management',
       technologies: ['ServiceNow', 'Lansweeper', 'Asset Panda', 'Flexera', 'Microsoft Intune']
+    },
+    // New Comprehensive IT Services
+    {
+      title: 'AI-Powered IT Operations (AIOps)',
+      description: 'Intelligent IT operations using AI and machine learning to automate monitoring, incident management, and root cause analysis.',
+      icon: '🤖',
+      price: 'Starting at $4,500/month',
+      features: ['Intelligent monitoring', 'Automated incident response', 'Root cause analysis', 'Predictive maintenance', 'Performance optimization'],
+      benefits: ['Reduce MTTR by 70%', 'Prevent 80% of incidents', 'Improve system reliability'],
+      marketPrice: '$7,000-15,000/month',
+      category: 'AIOps',
+      technologies: ['Machine Learning', 'BigPanda', 'Moogsoft', 'Splunk', 'Elastic Stack']
+    },
+    {
+      title: 'Zero Trust Security Architecture',
+      description: 'Comprehensive zero trust implementation with identity verification, micro-segmentation, and continuous monitoring.',
+      icon: '🛡️',
+      price: 'Starting at $5,500/month',
+      features: ['Identity verification', 'Micro-segmentation', 'Continuous monitoring', 'Policy enforcement', 'Threat detection'],
+      benefits: ['Eliminate security perimeters', 'Reduce attack surface', 'Improve compliance'],
+      marketPrice: '$8,500-18,000/month',
+      category: 'Security',
+      technologies: ['Okta', 'Cisco', 'Palo Alto', 'Zscaler', 'Microsoft Azure AD']
+    },
+    {
+      title: 'Edge Computing Solutions',
+      description: 'Edge infrastructure deployment and management for IoT, real-time processing, and distributed applications.',
+      icon: '🌐',
+      price: 'Starting at $3,200/month',
+      features: ['Edge infrastructure', 'IoT connectivity', 'Real-time processing', 'Data synchronization', 'Remote management'],
+      benefits: ['Reduce latency by 90%', 'Improve performance', 'Enable real-time applications'],
+      marketPrice: '$5,000-12,000/month',
+      category: 'Edge Computing',
+      technologies: ['Kubernetes', 'Docker', 'MQTT', 'Apache Kafka', 'Edge AI']
+    },
+    {
+      title: 'Multi-Cloud Management Platform',
+      description: 'Unified management across multiple cloud providers with cost optimization and security governance.',
+      icon: '☁️',
+      price: 'Starting at $4,000/month',
+      features: ['Multi-cloud orchestration', 'Cost optimization', 'Security governance', 'Compliance monitoring', 'Unified dashboard'],
+      benefits: ['Avoid vendor lock-in', 'Optimize costs across clouds', 'Simplify management'],
+      marketPrice: '$6,500-14,000/month',
+      category: 'Cloud Services',
+      technologies: ['Terraform', 'Ansible', 'CloudHealth', 'DivvyCloud', 'CloudCheckr']
+    },
+    {
+      title: 'API Gateway & Management',
+      description: 'Comprehensive API management with security, monitoring, rate limiting, and developer portal.',
+      icon: '🔌',
+      price: 'Starting at $2,800/month',
+      features: ['API gateway setup', 'Security policies', 'Rate limiting', 'Analytics & monitoring', 'Developer portal'],
+      benefits: ['Secure API access', 'Improve performance', 'Enable API monetization'],
+      marketPrice: '$4,500-10,000/month',
+      category: 'API Management',
+      technologies: ['Kong', 'AWS API Gateway', 'Azure API Management', 'Apigee', 'MuleSoft']
+    },
+    {
+      title: 'Container Orchestration & Management',
+      description: 'Kubernetes deployment, management, and optimization for containerized applications at scale.',
+      icon: '📦',
+      price: 'Starting at $3,500/month',
+      features: ['Kubernetes deployment', 'Auto-scaling', 'Service mesh', 'Monitoring', 'Security hardening'],
+      benefits: ['Scale applications efficiently', 'Improve resource utilization', 'Simplify deployment'],
+      marketPrice: '$5,500-12,000/month',
+      category: 'Containerization',
+      technologies: ['Kubernetes', 'Docker', 'Istio', 'Helm', 'Prometheus']
+    },
+    {
+      title: 'Data Lake & Analytics Platform',
+      description: 'Enterprise data lake implementation with real-time analytics, data governance, and machine learning capabilities.',
+      icon: '🏞️',
+      price: 'Starting at $6,000/month',
+      features: ['Data lake architecture', 'Real-time analytics', 'Data governance', 'ML integration', 'Data catalog'],
+      benefits: ['Unify data sources', 'Enable advanced analytics', 'Improve data quality'],
+      marketPrice: '$10,000-25,000/month',
+      category: 'Data Analytics',
+      technologies: ['Apache Spark', 'Hadoop', 'Delta Lake', 'Apache Airflow', 'Tableau']
+    },
+    {
+      title: 'Disaster Recovery & Business Continuity',
+      description: 'Comprehensive disaster recovery planning and implementation with automated failover and testing.',
+      icon: '🔄',
+      price: 'Starting at $2,200/month',
+      features: ['DR planning', 'Automated failover', 'Regular testing', 'RTO/RPO optimization', 'Compliance reporting'],
+      benefits: ['Minimize downtime', 'Protect critical data', 'Ensure business continuity'],
+      marketPrice: '$3,500-8,000/month',
+      category: 'Disaster Recovery',
+      technologies: ['Veeam', 'Zerto', 'AWS DR', 'Azure Site Recovery', 'VMware SRM']
+    },
+    {
+      title: 'Network Performance Optimization',
+      description: 'Advanced network monitoring, optimization, and troubleshooting for improved performance and reliability.',
+      icon: '📡',
+      price: 'Starting at $2,500/month',
+      features: ['Network monitoring', 'Performance optimization', 'Traffic analysis', 'QoS management', 'Troubleshooting'],
+      benefits: ['Improve network performance', 'Reduce latency', 'Optimize bandwidth usage'],
+      marketPrice: '$4,000-9,000/month',
+      category: 'Networking',
+      technologies: ['SolarWinds', 'PRTG', 'Cisco ACI', 'Juniper', 'Aruba']
+    },
+    {
+      title: 'IT Service Management (ITSM)',
+      description: 'Complete ITSM implementation with service desk, change management, and ITIL best practices.',
+      icon: '🎫',
+      price: 'Starting at $3,000/month',
+      features: ['Service desk setup', 'Change management', 'Incident management', 'Asset management', 'Reporting'],
+      benefits: ['Improve service quality', 'Reduce costs', 'Ensure compliance'],
+      marketPrice: '$5,000-12,000/month',
+      category: 'ITSM',
+      technologies: ['ServiceNow', 'Jira Service Management', 'BMC Remedy', 'Cherwell', 'Freshservice']
+    },
+    {
+      title: 'Mobile Device Management (MDM)',
+      description: 'Comprehensive mobile device management with security policies, app management, and remote control.',
+      icon: '📱',
+      price: 'Starting at $1,800/month',
+      features: ['Device enrollment', 'Security policies', 'App management', 'Remote control', 'Compliance monitoring'],
+      benefits: ['Secure mobile devices', 'Enforce policies', 'Simplify management'],
+      marketPrice: '$3,000-7,000/month',
+      category: 'Mobile Management',
+      technologies: ['Microsoft Intune', 'VMware Workspace ONE', 'MobileIron', 'Citrix', 'Jamf']
+    },
+    {
+      title: 'Identity & Access Management (IAM)',
+      description: 'Comprehensive identity management with single sign-on, multi-factor authentication, and privileged access management.',
+      icon: '🔑',
+      price: 'Starting at $2,800/month',
+      features: ['Single sign-on', 'Multi-factor authentication', 'Privileged access management', 'Identity governance', 'Audit reporting'],
+      benefits: ['Improve security', 'Simplify access', 'Ensure compliance'],
+      marketPrice: '$4,500-10,000/month',
+      category: 'Identity Management',
+      technologies: ['Okta', 'Azure AD', 'Ping Identity', 'CyberArk', 'SailPoint']
+    },
+    {
+      title: 'IT Compliance & Governance',
+      description: 'Comprehensive compliance management with automated monitoring, reporting, and audit preparation.',
+      icon: '📋',
+      price: 'Starting at $3,500/month',
+      features: ['Compliance monitoring', 'Policy management', 'Audit preparation', 'Risk assessment', 'Reporting'],
+      benefits: ['Ensure compliance', 'Reduce audit costs', 'Minimize risks'],
+      marketPrice: '$5,500-12,000/month',
+      category: 'Compliance',
+      technologies: ['GRC Tools', 'Compliance Manager', 'AuditBoard', 'MetricStream', 'ServiceNow GRC']
+    },
+    {
+      title: 'IT Cost Optimization',
+      description: 'Comprehensive IT cost analysis and optimization to reduce expenses while maintaining performance.',
+      icon: '💰',
+      price: 'Starting at $2,000/month',
+      features: ['Cost analysis', 'License optimization', 'Resource right-sizing', 'Vendor management', 'ROI tracking'],
+      benefits: ['Reduce IT costs by 25%', 'Optimize spending', 'Improve ROI'],
+      marketPrice: '$3,500-8,000/month',
+      category: 'Cost Optimization',
+      technologies: ['CloudHealth', 'DivvyCloud', 'CloudCheckr', 'Flexera', 'Snow Software']
+    },
+    {
+      title: 'IT Training & Knowledge Transfer',
+      description: 'Comprehensive IT training programs for teams with hands-on workshops and certification support.',
+      icon: '🎓',
+      price: 'Starting at $1,500/month',
+      features: ['Custom training programs', 'Hands-on workshops', 'Certification support', 'Knowledge transfer', 'Documentation'],
+      benefits: ['Improve team skills', 'Reduce dependency', 'Increase productivity'],
+      marketPrice: '$2,500-6,000/month',
+      category: 'Training',
+      technologies: ['Learning Management Systems', 'Virtual Labs', 'Certification Programs', 'Documentation Tools', 'Video Training']
+    },
+    {
+      title: 'IT Vendor Management',
+      description: 'Comprehensive vendor management with contract optimization, performance monitoring, and relationship management.',
+      icon: '🤝',
+      price: 'Starting at $2,200/month',
+      features: ['Vendor evaluation', 'Contract optimization', 'Performance monitoring', 'Relationship management', 'Cost analysis'],
+      benefits: ['Optimize vendor relationships', 'Reduce costs', 'Improve service quality'],
+      marketPrice: '$3,500-8,000/month',
+      category: 'Vendor Management',
+      technologies: ['Vendor Management Tools', 'Contract Management', 'Performance Dashboards', 'Cost Analysis Tools', 'RFI/RFP Tools']
+    },
+    {
+      title: 'IT Innovation & Digital Transformation',
+      description: 'Strategic IT consulting and digital transformation services to modernize and optimize technology infrastructure.',
+      icon: '🚀',
+      price: 'Starting at $5,000/month',
+      features: ['Digital strategy', 'Technology assessment', 'Transformation planning', 'Implementation support', 'Change management'],
+      benefits: ['Modernize infrastructure', 'Improve efficiency', 'Enable innovation'],
+      marketPrice: '$8,000-20,000/month',
+      category: 'Digital Transformation',
+      technologies: ['Cloud Platforms', 'AI/ML', 'IoT', 'Blockchain', 'Modern Development']
+    },
+    {
+      title: 'IT Health Monitoring & Analytics',
+      description: 'Comprehensive IT health monitoring with predictive analytics, performance insights, and proactive recommendations.',
+      icon: '📊',
+      price: 'Starting at $2,800/month',
+      features: ['Health monitoring', 'Predictive analytics', 'Performance insights', 'Proactive recommendations', 'Custom dashboards'],
+      benefits: ['Prevent issues', 'Optimize performance', 'Improve reliability'],
+      marketPrice: '$4,500-10,000/month',
+      category: 'Monitoring',
+      technologies: ['Splunk', 'Datadog', 'New Relic', 'Dynatrace', 'AppDynamics']
+    },
+    {
+      title: 'IT Security Operations Center (SOC)',
+      description: '24/7 security monitoring and incident response with advanced threat detection and automated response.',
+      icon: '🛡️',
+      price: 'Starting at $8,000/month',
+      features: ['24/7 monitoring', 'Threat detection', 'Incident response', 'Forensic analysis', 'Compliance reporting'],
+      benefits: ['Detect threats early', 'Respond quickly', 'Ensure security'],
+      marketPrice: '$12,000-30,000/month',
+      category: 'Security Operations',
+      technologies: ['SIEM', 'SOAR', 'EDR', 'XDR', 'Threat Intelligence']
     }
   ];
 

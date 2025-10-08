@@ -256,6 +256,216 @@ const AIServicesPage: React.FC = () => {
       marketPrice: '$30,000-90,000/month',
       category: 'Space AI',
       technologies: ['Astropy', 'TensorFlow', 'PyTorch', 'OpenCV', 'Space Data APIs']
+    },
+    // New Innovative AI Services
+    {
+      title: 'AI-Powered Code Generation & Review',
+      description: 'Advanced AI that generates, reviews, and optimizes code with intelligent suggestions and automated testing.',
+      icon: '💻',
+      price: 'Starting at $1,500/month',
+      features: ['Automated code generation', 'Intelligent code review', 'Bug detection & fixing', 'Performance optimization', 'Security analysis'],
+      benefits: ['Reduce development time by 50%', 'Improve code quality', 'Minimize bugs and vulnerabilities'],
+      marketPrice: '$2,500-8,000/month',
+      category: 'AI Development',
+      technologies: ['OpenAI Codex', 'GitHub Copilot', 'SonarQube', 'ESLint', 'Custom AI Models']
+    },
+    {
+      title: 'AI-Powered Predictive Maintenance',
+      description: 'Intelligent maintenance prediction using IoT sensors and machine learning to prevent equipment failures.',
+      icon: '🔧',
+      price: 'Starting at $2,000/month',
+      features: ['Failure prediction', 'Maintenance scheduling', 'Equipment monitoring', 'Cost optimization', 'Alert systems'],
+      benefits: ['Reduce downtime by 70%', 'Lower maintenance costs', 'Extend equipment lifespan'],
+      marketPrice: '$3,500-10,000/month',
+      category: 'Industrial AI',
+      technologies: ['IoT Sensors', 'Time Series Analysis', 'TensorFlow', 'Apache Kafka', 'Edge Computing']
+    },
+    {
+      title: 'AI-Powered Fraud Detection System',
+      description: 'Advanced fraud detection using machine learning to identify suspicious activities in real-time.',
+      icon: '🛡️',
+      price: 'Starting at $3,000/month',
+      features: ['Real-time monitoring', 'Pattern recognition', 'Risk scoring', 'Alert management', 'False positive reduction'],
+      benefits: ['Reduce fraud losses by 80%', 'Improve detection accuracy', 'Minimize false positives'],
+      marketPrice: '$5,000-15,000/month',
+      category: 'Security AI',
+      technologies: ['Anomaly Detection', 'Deep Learning', 'Apache Spark', 'Redis', 'Real-time Processing']
+    },
+    {
+      title: 'AI-Powered Content Moderation',
+      description: 'Intelligent content moderation using computer vision and NLP to automatically filter inappropriate content.',
+      icon: '🚫',
+      price: 'Starting at $1,200/month',
+      features: ['Image & video analysis', 'Text content filtering', 'Hate speech detection', 'Spam prevention', 'Custom rule creation'],
+      benefits: ['Reduce moderation costs by 90%', 'Improve platform safety', 'Scale content review'],
+      marketPrice: '$2,000-6,000/month',
+      category: 'Content AI',
+      technologies: ['Computer Vision', 'NLP', 'OpenAI Moderation', 'Custom Models', 'Real-time Processing']
+    },
+    {
+      title: 'AI-Powered Supply Chain Optimization',
+      description: 'Intelligent supply chain management with demand forecasting, route optimization, and inventory management.',
+      icon: '📦',
+      price: 'Starting at $2,500/month',
+      features: ['Demand forecasting', 'Route optimization', 'Inventory management', 'Supplier analysis', 'Risk assessment'],
+      benefits: ['Reduce costs by 25%', 'Improve delivery times', 'Optimize inventory levels'],
+      marketPrice: '$4,000-12,000/month',
+      category: 'Supply Chain AI',
+      technologies: ['Optimization Algorithms', 'Time Series', 'Graph Analytics', 'Simulation', 'Machine Learning']
+    },
+    {
+      title: 'AI-Powered Personalization Engine',
+      description: 'Advanced personalization system that creates unique experiences for each user based on behavior analysis.',
+      icon: '🎯',
+      price: 'Starting at $1,800/month',
+      features: ['User behavior analysis', 'Content personalization', 'Recommendation engine', 'A/B testing', 'Real-time adaptation'],
+      benefits: ['Increase engagement by 40%', 'Improve conversion rates', 'Enhance user experience'],
+      marketPrice: '$3,000-9,000/month',
+      category: 'Personalization AI',
+      technologies: ['Collaborative Filtering', 'Deep Learning', 'Real-time Processing', 'A/B Testing', 'Analytics']
+    },
+    {
+      title: 'AI-Powered Voice Analytics',
+      description: 'Intelligent voice analysis for emotion detection, sentiment analysis, and speech optimization.',
+      icon: '🎤',
+      price: 'Starting at $1,500/month',
+      features: ['Emotion detection', 'Sentiment analysis', 'Speech recognition', 'Voice optimization', 'Call analytics'],
+      benefits: ['Improve customer satisfaction', 'Optimize call center performance', 'Gain voice insights'],
+      marketPrice: '$2,500-7,000/month',
+      category: 'Voice AI',
+      technologies: ['Speech Processing', 'Emotion AI', 'NLP', 'Audio Analysis', 'Real-time Processing']
+    },
+    {
+      title: 'AI-Powered Document Intelligence',
+      description: 'Advanced document processing with intelligent extraction, classification, and analysis capabilities.',
+      icon: '📄',
+      price: 'Starting at $1,200/month',
+      features: ['Document classification', 'Data extraction', 'OCR processing', 'Form recognition', 'Compliance checking'],
+      benefits: ['Process documents 100x faster', 'Reduce manual data entry', 'Improve accuracy'],
+      marketPrice: '$2,000-6,000/month',
+      category: 'Document AI',
+      technologies: ['OCR', 'NLP', 'Computer Vision', 'Document Processing', 'Machine Learning']
+    },
+    {
+      title: 'AI-Powered Energy Optimization',
+      description: 'Intelligent energy management system that optimizes consumption and reduces costs using AI algorithms.',
+      icon: '⚡',
+      price: 'Starting at $1,800/month',
+      features: ['Energy consumption analysis', 'Optimization algorithms', 'Predictive modeling', 'Cost reduction', 'Sustainability tracking'],
+      benefits: ['Reduce energy costs by 30%', 'Improve sustainability', 'Optimize consumption patterns'],
+      marketPrice: '$3,000-8,000/month',
+      category: 'Energy AI',
+      technologies: ['IoT Sensors', 'Time Series Analysis', 'Optimization', 'Machine Learning', 'Energy APIs']
+    },
+    {
+      title: 'AI-Powered Quality Assurance',
+      description: 'Intelligent quality control system that automatically detects defects and ensures product quality.',
+      icon: '✅',
+      price: 'Starting at $2,200/month',
+      features: ['Defect detection', 'Quality scoring', 'Process optimization', 'Predictive quality', 'Automated testing'],
+      benefits: ['Improve product quality', 'Reduce defects by 60%', 'Automate quality control'],
+      marketPrice: '$3,500-10,000/month',
+      category: 'Quality AI',
+      technologies: ['Computer Vision', 'Defect Detection', 'Process Monitoring', 'Machine Learning', 'Quality Metrics']
+    },
+    {
+      title: 'AI-Powered Customer Lifetime Value Prediction',
+      description: 'Advanced customer analytics that predicts lifetime value and identifies high-value prospects.',
+      icon: '💰',
+      price: 'Starting at $1,600/month',
+      features: ['CLV prediction', 'Customer segmentation', 'Churn prediction', 'Upselling opportunities', 'Retention strategies'],
+      benefits: ['Increase customer value by 35%', 'Improve retention rates', 'Optimize marketing spend'],
+      marketPrice: '$2,500-7,500/month',
+      category: 'Customer AI',
+      technologies: ['Predictive Analytics', 'Customer Segmentation', 'Machine Learning', 'CRM Integration', 'Marketing Automation']
+    },
+    {
+      title: 'AI-Powered Autonomous Testing',
+      description: 'Intelligent automated testing system that creates and executes tests without human intervention.',
+      icon: '🧪',
+      price: 'Starting at $1,400/month',
+      features: ['Test case generation', 'Automated execution', 'Bug detection', 'Performance testing', 'Regression testing'],
+      benefits: ['Reduce testing time by 80%', 'Improve test coverage', 'Detect bugs earlier'],
+      marketPrice: '$2,200-6,500/month',
+      category: 'Testing AI',
+      technologies: ['Test Automation', 'Machine Learning', 'Selenium', 'API Testing', 'Performance Testing']
+    },
+    {
+      title: 'AI-Powered Risk Assessment',
+      description: 'Intelligent risk analysis system that evaluates and predicts various types of business risks.',
+      icon: '⚠️',
+      price: 'Starting at $2,800/month',
+      features: ['Risk identification', 'Probability assessment', 'Impact analysis', 'Mitigation strategies', 'Monitoring alerts'],
+      benefits: ['Reduce risk exposure', 'Improve decision making', 'Prevent potential losses'],
+      marketPrice: '$4,500-12,000/month',
+      category: 'Risk AI',
+      technologies: ['Risk Modeling', 'Monte Carlo Simulation', 'Machine Learning', 'Statistical Analysis', 'Risk Metrics']
+    },
+    {
+      title: 'AI-Powered Recommendation Engine',
+      description: 'Advanced recommendation system that provides personalized suggestions for products, content, and services.',
+      icon: '💡',
+      price: 'Starting at $1,300/month',
+      features: ['Collaborative filtering', 'Content-based filtering', 'Hybrid approaches', 'Real-time recommendations', 'A/B testing'],
+      benefits: ['Increase sales by 25%', 'Improve user engagement', 'Personalize experiences'],
+      marketPrice: '$2,000-6,000/month',
+      category: 'Recommendation AI',
+      technologies: ['Collaborative Filtering', 'Matrix Factorization', 'Deep Learning', 'Real-time Processing', 'Analytics']
+    },
+    {
+      title: 'AI-Powered Sentiment Analysis Platform',
+      description: 'Comprehensive sentiment analysis system that monitors and analyzes emotions across multiple channels.',
+      icon: '😊',
+      price: 'Starting at $1,100/month',
+      features: ['Multi-channel monitoring', 'Real-time analysis', 'Emotion detection', 'Trend analysis', 'Alert system'],
+      benefits: ['Monitor brand sentiment', 'Improve customer satisfaction', 'Identify issues early'],
+      marketPrice: '$1,800-5,500/month',
+      category: 'Sentiment AI',
+      technologies: ['NLP', 'Sentiment Analysis', 'Social Media APIs', 'Real-time Processing', 'Analytics']
+    },
+    {
+      title: 'AI-Powered Process Mining',
+      description: 'Intelligent process analysis that discovers, monitors, and optimizes business processes using event data.',
+      icon: '🔄',
+      price: 'Starting at $2,400/month',
+      features: ['Process discovery', 'Conformance checking', 'Performance analysis', 'Bottleneck identification', 'Optimization suggestions'],
+      benefits: ['Improve process efficiency', 'Reduce bottlenecks', 'Optimize workflows'],
+      marketPrice: '$4,000-10,000/month',
+      category: 'Process AI',
+      technologies: ['Process Mining', 'Event Log Analysis', 'Graph Analytics', 'Machine Learning', 'Process Optimization']
+    },
+    {
+      title: 'AI-Powered Anomaly Detection',
+      description: 'Advanced anomaly detection system that identifies unusual patterns and behaviors in data streams.',
+      icon: '🔍',
+      price: 'Starting at $1,700/month',
+      features: ['Real-time monitoring', 'Pattern recognition', 'Alert generation', 'False positive reduction', 'Adaptive learning'],
+      benefits: ['Detect issues early', 'Improve security', 'Optimize operations'],
+      marketPrice: '$2,800-8,000/month',
+      category: 'Anomaly AI',
+      technologies: ['Isolation Forest', 'One-Class SVM', 'Autoencoders', 'Time Series Analysis', 'Real-time Processing']
+    },
+    {
+      title: 'AI-Powered Knowledge Graph',
+      description: 'Intelligent knowledge management system that creates and maintains interconnected knowledge networks.',
+      icon: '🕸️',
+      price: 'Starting at $2,100/month',
+      features: ['Knowledge extraction', 'Entity recognition', 'Relationship mapping', 'Query processing', 'Semantic search'],
+      benefits: ['Improve information discovery', 'Connect related concepts', 'Enhance search capabilities'],
+      marketPrice: '$3,500-9,000/month',
+      category: 'Knowledge AI',
+      technologies: ['Graph Databases', 'NLP', 'Entity Recognition', 'Semantic Web', 'Knowledge Extraction']
+    },
+    {
+      title: 'AI-Powered Time Series Forecasting',
+      description: 'Advanced time series analysis and forecasting for business metrics, sales, and operational data.',
+      icon: '📈',
+      price: 'Starting at $1,600/month',
+      features: ['Multi-variate forecasting', 'Seasonality detection', 'Trend analysis', 'Confidence intervals', 'Model selection'],
+      benefits: ['Improve planning accuracy', 'Optimize inventory', 'Reduce forecasting errors'],
+      marketPrice: '$2,500-7,000/month',
+      category: 'Forecasting AI',
+      technologies: ['ARIMA', 'LSTM', 'Prophet', 'Time Series Analysis', 'Statistical Modeling']
     }
   ];
 

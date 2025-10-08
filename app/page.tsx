@@ -134,10 +134,11 @@ const HomePage: React.FC = () => {
                 <div className="text-5xl mb-6 text-center">🤖</div>
                 <h3 className="text-2xl font-bold text-white mb-4 text-center">AI Services</h3>
                 <p className="text-gray-300 mb-6 text-center leading-relaxed">
-                  Advanced artificial intelligence solutions including machine learning, natural language processing, and computer vision.
+                  Advanced artificial intelligence solutions including machine learning, natural language processing, computer vision, and predictive analytics.
                 </p>
                 <div className="text-center">
                   <div className="text-2xl font-bold text-cyan-400 mb-2">Starting at $1,500/month</div>
+                  <div className="text-sm text-gray-400 mb-4">Market Price: $2,500-8,000/month</div>
                   <a href="/ai-services" className="text-cyan-400 hover:text-cyan-300 font-medium">
                     Learn More →
                   </a>
@@ -150,10 +151,11 @@ const HomePage: React.FC = () => {
                 <div className="text-5xl mb-6 text-center">📢</div>
                 <h3 className="text-2xl font-bold text-white mb-4 text-center">AI Marketing</h3>
                 <p className="text-gray-300 mb-6 text-center leading-relaxed">
-                  Revolutionary AI-powered marketing automation, ad optimization, and content generation.
+                  Revolutionary AI-powered marketing automation, ad optimization, content generation, and customer engagement.
                 </p>
                 <div className="text-center">
                   <div className="text-2xl font-bold text-pink-400 mb-2">Starting at $199/month</div>
+                  <div className="text-sm text-gray-400 mb-4">Market Price: $300-600/month</div>
                   <a href="/ai-marketing" className="text-pink-400 hover:text-pink-300 font-medium">
                     Learn More →
                   </a>
@@ -166,10 +168,11 @@ const HomePage: React.FC = () => {
                 <div className="text-5xl mb-6 text-center">⚙️</div>
                 <h3 className="text-2xl font-bold text-white mb-4 text-center">AI Automation</h3>
                 <p className="text-gray-300 mb-6 text-center leading-relaxed">
-                  Intelligent automation of business processes with decision-making capabilities and exception handling.
+                  Intelligent automation of business processes with decision-making capabilities, exception handling, and workflow optimization.
                 </p>
                 <div className="text-center">
                   <div className="text-2xl font-bold text-blue-400 mb-2">Starting at $399/month</div>
+                  <div className="text-sm text-gray-400 mb-4">Market Price: $600-1,200/month</div>
                   <a href="/ai-automation" className="text-blue-400 hover:text-blue-300 font-medium">
                     Learn More →
                   </a>
@@ -258,6 +261,10 @@ const HomePage: React.FC = () => {
                 <li>• Computer Vision</li>
                 <li>• Predictive Analytics</li>
               </ul>
+              <div className="mt-4 text-center">
+                <div className="text-lg font-bold text-cyan-400">Starting at $1,500/month</div>
+                <div className="text-xs text-gray-400">Market Price: $2,500-8,000/month</div>
+              </div>
             </article>
 
             <article className="cyber-card hologram-card">
@@ -273,6 +280,10 @@ const HomePage: React.FC = () => {
                 <li>• Workflow Optimization</li>
                 <li>• Change Management</li>
               </ul>
+              <div className="mt-4 text-center">
+                <div className="text-lg font-bold text-green-400">Starting at $2,500/month</div>
+                <div className="text-xs text-gray-400">Market Price: $4,000-10,000/month</div>
+              </div>
             </article>
 
             <article className="cyber-card hologram-card">
@@ -287,6 +298,41 @@ const HomePage: React.FC = () => {
                 <li>• DevOps & CI/CD</li>
                 <li>• 24/7 Monitoring</li>
               </ul>
+              <div className="mt-4 text-center">
+                <div className="text-lg font-bold text-blue-400">Starting at $2,500/month</div>
+                <div className="text-xs text-gray-400">Market Price: $4,000-8,000/month</div>
+              </div>
+            </article>
+          </div>
+          
+          {/* Additional Service Categories */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
+            <article className="cyber-card hologram-card text-center">
+              <div className="text-3xl mb-3">💼</div>
+              <h3 className="text-lg font-semibold text-white mb-2">Micro SAAS</h3>
+              <p className="text-sm text-gray-300 mb-3">Innovative micro software solutions</p>
+              <div className="text-sm font-bold text-purple-400">$19-299/month</div>
+            </article>
+            
+            <article className="cyber-card hologram-card text-center">
+              <div className="text-3xl mb-3">🔧</div>
+              <h3 className="text-lg font-semibold text-white mb-2">IT Services</h3>
+              <p className="text-sm text-gray-300 mb-3">Comprehensive IT solutions</p>
+              <div className="text-sm font-bold text-orange-400">$1,500-8,000/month</div>
+            </article>
+            
+            <article className="cyber-card hologram-card text-center">
+              <div className="text-3xl mb-3">⚛️</div>
+              <h3 className="text-lg font-semibold text-white mb-2">Quantum Computing</h3>
+              <p className="text-sm text-gray-300 mb-3">Next-gen quantum solutions</p>
+              <div className="text-sm font-bold text-indigo-400">Custom Pricing</div>
+            </article>
+            
+            <article className="cyber-card hologram-card text-center">
+              <div className="text-3xl mb-3">🔒</div>
+              <h3 className="text-lg font-semibold text-white mb-2">Cybersecurity</h3>
+              <p className="text-sm text-gray-300 mb-3">Advanced security solutions</p>
+              <div className="text-sm font-bold text-red-400">$3,000-12,000/month</div>
             </article>
           </div>
           
