@@ -1,4 +1,3 @@
-=======
 /**
  * Performance optimization utilities
  */
@@ -329,4 +328,7 @@ const performanceUtils = {
 };
 
 export default performanceUtils;
->>>>>>> origin/main
+
+// Additional exports
+export const collectPerformanceMetrics = measurePageLoad;
+export const init = () => performanceOptimizer.initialize();

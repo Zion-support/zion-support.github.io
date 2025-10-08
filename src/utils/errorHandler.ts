@@ -2,6 +2,12 @@
  * Error handling utilities
  * Enhanced with retry logic, error categorization, and better reporting
  */
+
+export enum ErrorSeverity {
+  LOW = 'low',
+  MEDIUM = 'medium',
+  HIGH = 'high',
+  CRITICAL = 'critical',
 }
 
 export enum ErrorCategory {
@@ -59,6 +65,11 @@ export class ErrorHandler {
       severity,
       ...errorInfo,
     };
+
+    // Add to queue
+    this.errorQueue.push(errorData);
+    if (this.errorQueue.length > this.maxQueueSize) {
+      this.errorQueue.shift();
     }
 
     // Send to error reporting service
@@ -66,12 +77,83 @@ export class ErrorHandler {
   }
 
   /**
+   * Categorize error type
+   */
+  private categorizeError(error: Error): ErrorCategory {
+    if (error.message.includes('fetch') || error.message.includes('network')) {
+      return ErrorCategory.NETWORK;
+    }
+    if (error.message.includes('validation')) {
+      return ErrorCategory.VALIDATION;
+    }
+    if (error.message.includes('API') || error.message.includes('api')) {
+      return ErrorCategory.API;
+    }
+    if (error.name === 'TypeError' || error.name === 'ReferenceError') {
+      return ErrorCategory.RUNTIME;
+    }
+    return ErrorCategory.UNKNOWN;
+  }
+
+  /**
+   * Determine error severity
+   */
+  private determineSeverity(error: Error, category: ErrorCategory): ErrorSeverity {
+    if (category === ErrorCategory.NETWORK) {
+      return ErrorSeverity.MEDIUM;
+    }
+    if (category === ErrorCategory.RUNTIME) {
+      return ErrorSeverity.HIGH;
+    }
+    if (category === ErrorCategory.VALIDATION) {
+      return ErrorSeverity.LOW;
+    }
+    return ErrorSeverity.MEDIUM;
+  }
+
+  /**
+   * Generate unique error ID
+   */
+  private generateErrorId(): string {
+    return `err_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+  }
+
+  /**
+   * Report error to monitoring service
+   */
+  private reportError(errorData: ErrorInfo): void {
+    // Log to console in development
+    if (process.env['NODE_ENV'] === 'development') {
+      console.error('Error reported:', errorData);
+    }
+
+    // Send to external error tracking service in production
+    if (typeof window !== 'undefined' && process.env['NODE_ENV'] === 'production') {
+      // Send to error tracking service (e.g., Sentry, Rollbar)
+      if ('gtag' in window) {
+        (window as unknown as { gtag: (command: string, eventName: string, params: Record<string, unknown>) => void }).gtag('event', 'exception', {
+          description: errorData.message,
+          fatal: errorData.severity === ErrorSeverity.CRITICAL,
+        });
+      }
     }
   }
 
   /**
+   * Get error queue
+   */
+  getErrorQueue(): ErrorInfo[] {
     return [...this.errorQueue];
   }
 
   /**
    * Clear error queue
+   */
+  clearErrorQueue(): void {
+    this.errorQueue = [];
+  }
+}
+
+// Export singleton instance
+export const errorHandler = ErrorHandler.getInstance();
+export default errorHandler;
