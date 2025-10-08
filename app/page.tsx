@@ -1,4 +1,6 @@
-);
+'use client';
+
+import React, { useState, useCallback } from 'react';
 
 // Loading fallback component
 const LoadingFallback: React.FC<{ height?: string }> = ({
