@@ -76,11 +76,10 @@ async function sendToAnalytics(
         body,
         headers: { 'Content-Type': 'application/json' },
         keepalive: true,
-//       }).catch(console.error);
-      });
+      }).catch(console.error);
     }
-  } catch {
-//     console.error('Failed to send metric to analytics:', error);
+  } catch (error) {
+    console.error('Failed to send metric to analytics:', error);
   }
 }
 
@@ -119,7 +118,7 @@ export function reportWebVitals(
 
             onPerfEntry(metric);
             if (analyticsEndpoint) sendToAnalytics(metric, analyticsEndpoint);
-//             if (debug) if (process.env['NODE_ENV'] === 'development') { if (process.env.DEV) { } }
+            if (debug) console.log('CLS metric:', metric);
           }
         }
       }
@@ -128,7 +127,8 @@ export function reportWebVitals(
     try {
       clsObserver.observe({ type: 'layout-shift', buffered: true });
     } catch (e) {
-//       if (debug) }
+      if (debug) console.error('CLS observer failed:', e);
+    }
 
     // Report final CLS on page hide
     addEventListener('visibilitychange', () => {
@@ -144,7 +144,7 @@ export function reportWebVitals(
 
         onPerfEntry(metric);
         if (analyticsEndpoint) sendToAnalytics(metric, analyticsEndpoint);
-//         if (debug) if (process.env['NODE_ENV'] === 'development') { if (process.env.DEV) { } }
+        if (debug) console.log('CLS final metric:', metric);
       }
     });
   }
@@ -166,7 +166,7 @@ export function reportWebVitals(
 
       onPerfEntry(metric);
       if (analyticsEndpoint) sendToAnalytics(metric, analyticsEndpoint);
-      if (debug) if (process.env['NODE_ENV'] === 'development') { if (process.env.DEV) { } }
+      if (debug) console.log('FID metric:', metric);
 
       fidObserver.disconnect();
     });
@@ -174,7 +174,8 @@ export function reportWebVitals(
     try {
       fidObserver.observe({ type: 'first-input', buffered: true });
     } catch (e) {
-//       if (debug) }
+      if (debug) console.error('FID observer failed:', e);
+    }
   }
 
   // Largest Contentful Paint (LCP)
@@ -198,14 +199,15 @@ export function reportWebVitals(
 
         onPerfEntry(metric);
         if (analyticsEndpoint) sendToAnalytics(metric, analyticsEndpoint);
-//         if (debug) if (process.env['NODE_ENV'] === 'development') { if (process.env.DEV) { } }
+        if (debug) console.log('CLS final metric:', metric);
       }
     });
 
     try {
       lcpObserver.observe({ type: 'largest-contentful-paint', buffered: true });
     } catch (e) {
-//       if (debug) }
+      if (debug) console.error('LCP observer failed:', e);
+    }
 
     // Report final LCP on page hide
     addEventListener('visibilitychange', () => {
@@ -232,7 +234,7 @@ export function reportWebVitals(
 
           onPerfEntry(metric);
           if (analyticsEndpoint) sendToAnalytics(metric, analyticsEndpoint);
-//           if (debug) if (process.env['NODE_ENV'] === 'development') { if (process.env.DEV) { } }
+          if (debug) console.log('FCP metric:', metric);
 
           fcpObserver.disconnect();
         }
@@ -242,7 +244,8 @@ export function reportWebVitals(
     try {
       fcpObserver.observe({ type: 'paint', buffered: true });
     } catch (e) {
-//       if (debug) }
+      if (debug) console.error('FCP observer failed:', e);
+    }
   }
 
   // Time to First Byte (TTFB)
@@ -265,7 +268,7 @@ export function reportWebVitals(
 
       onPerfEntry(metric);
       if (analyticsEndpoint) sendToAnalytics(metric, analyticsEndpoint);
-//       if (debug) if (process.env['NODE_ENV'] === 'development') { if (process.env.DEV) { } }
+      if (debug) console.log('TTFB metric:', metric);
     }
   }
 }
@@ -291,7 +294,8 @@ export function monitorLongTasks(
     observer.observe({ entryTypes: ['longtask'] });
     return observer;
   } catch (e) {
-//     return null;
+    console.error('Long task observer failed:', e);
+    return null;
   }
 }
 

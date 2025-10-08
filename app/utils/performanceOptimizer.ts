@@ -5,8 +5,8 @@
 
 // Simple logger for performance optimizer
 const logger = {
-  info: (message: string, context?: string) => ,
-  performance: (message: string, data: Record<string, unknown>, context?: string) => ,
+  info: (message: string, context?: string) => console.log('[INFO]', message, context),
+  performance: (message: string, data: Record<string, unknown>, context?: string) => console.log('[PERF]', message, data, context),
   error: (message: string, error: Error) => console.error('[ERROR]', message, error),
 };
 
@@ -473,7 +473,7 @@ ${metrics.memoryUsage > 30 * 1024 * 1024 ? '- Review memory usage and optimize c
     this.enableCaching();
     
     if (process.env.NODE_ENV === 'development') { 
-      ); 
+      console.log('Performance optimization completed');
     }
   }
 }

@@ -84,7 +84,8 @@ class PerformanceMonitor {
 
     // Log in development
     if (process.env['NODE_ENV'] === 'development') {
-//       }
+      console.log('Performance metric:', metric);
+    }
   }
 
   /**
@@ -149,7 +150,8 @@ class PerformanceMonitor {
         return duration;
       }
     } catch (error) {
-      }
+      console.error('Performance measurement failed:', error);
+    }
     return null;
   }
 
@@ -265,7 +267,8 @@ class PerformanceMonitor {
       clsObserver.observe({ entryTypes: ['layout-shift'] });
       this.observers.push(clsObserver);
     } catch (error) {
-//       }
+      console.error('Failed to observe Web Vitals:', error);
+    }
   }
 
   /**
@@ -329,7 +332,8 @@ class PerformanceMonitor {
       resourceObserver.observe({ entryTypes: ['resource'] });
       this.observers.push(resourceObserver);
     } catch (error) {
-      }
+      console.error('Failed to observe resource timing:', error);
+    }
   }
 
   /**
@@ -373,7 +377,7 @@ class PerformanceMonitor {
       try {
         callback(metric);
       } catch (error) {
-//         console.error('Error in performance callback:', error);
+        console.error('Error in performance callback:', error);
       }
     });
   }
