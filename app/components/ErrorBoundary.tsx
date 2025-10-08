@@ -53,7 +53,6 @@ class ErrorBoundary extends Component<Props, State> {
     }
 
     if (this.props.enableErrorReporting) {
-      // eslint-disable-next-line no-console
       console.error('Error caught by boundary:', error, errorInfo);
     }
   }
@@ -68,19 +67,19 @@ class ErrorBoundary extends Component<Props, State> {
         <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-red-50 to-orange-50">
           <div className="max-w-md w-full mx-4">
             <div className="bg-white rounded-2xl shadow-xl p-8 text-center">
-              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-red-100 mb-4">
-                <FileWarning className="w-8 h-8 text-red-600" />
+              <div className='inline-flex items-center justify-center w-16 h-16 rounded-full bg-red-100 mb-4'>
+                <FileWarning className='w-8 h-8 text-red-600' />
               </div>
-              <h1 className="text-2xl font-bold text-gray-900 mb-2">
+              <h1 className='text-2xl font-bold text-gray-900 mb-2'>
                 Oops! Something went wrong
               </h1>
-              <p className="text-gray-600 mb-6">
+              <p className='text-gray-600 mb-6'>
                 We&apos;re sorry for the inconvenience. Please try refreshing the page.
               </p>
-              <div className="space-y-3">
+              <div className='space-y-3'>
                 <button
                   onClick={() => window.location.reload()}
-                  className="w-full bg-red-600 hover:bg-red-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors"
+                  className='w-full bg-red-600 hover:bg-red-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors'
                 >
                   Refresh Page
                 </button>
@@ -92,13 +91,13 @@ class ErrorBoundary extends Component<Props, State> {
                 </Link>
               </div>
             </div>
-
-            {(process.env['NODE_ENV'] === 'development' || this.props.enableErrorReporting) && this.state.error && (
-              <details className="mt-4 bg-white rounded-lg shadow p-4">
+            
+            {process.env.NODE_ENV === 'development' && this.state.error && (
+              <details className="mt-4">
                 <summary className="text-sm font-medium text-gray-700 cursor-pointer">
-                  Error Details {process.env['NODE_ENV'] === 'development' ? '(Development)' : ''}
+                  Error Details (Development)
                 </summary>
-                <div className="mt-2 p-3 bg-gray-100 rounded text-xs font-mono text-gray-800 overflow-auto max-h-96">
+                <div className="mt-2 p-3 bg-gray-100 rounded text-xs font-mono text-gray-800 overflow-auto">
                   <div className="mb-2">
                     <strong>Error:</strong> {this.state.error.message}
                   </div>

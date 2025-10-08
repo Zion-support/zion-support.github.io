@@ -57,21 +57,21 @@ const EnhancedFooter: React.FC = () => {
               <a
                 href='https://linkedin.com/company/ziontechgroup'
                 className='text-gray-400 hover:text-white transition-colors'
-                aria-label="LinkedIn"
+                aria-label='LinkedIn'
               >
                 <Linkedin className='w-5 h-5' />
               </a>
               <a
                 href='https://twitter.com/ziontechgroup'
                 className='text-gray-400 hover:text-white transition-colors'
-                aria-label="Twitter"
+                aria-label='Twitter'
               >
                 <Twitter className='w-5 h-5' />
               </a>
               <a
                 href='https://github.com/ziontechgroup'
                 className='text-gray-400 hover:text-white transition-colors'
-                aria-label="GitHub"
+                aria-label='GitHub'
               >
                 <Github className='w-5 h-5' />
               </a>
@@ -123,21 +123,21 @@ const EnhancedFooter: React.FC = () => {
         <div className='border-t border-gray-700 mt-8 pt-8'>
           <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
             <div className='flex items-center space-x-3'>
-              <Mail className='text-blue-400 w-5 h-5' />
+              <Mail className='w-5 h-5 text-blue-400' />
               <div>
                 <p className='text-sm text-gray-400'>Email</p>
                 <p className='text-white'>info@ziontechgroup.com</p>
               </div>
             </div>
             <div className='flex items-center space-x-3'>
-              <Phone className='text-blue-400 w-5 h-5' />
+              <Phone className='w-5 h-5 text-blue-400' />
               <div>
                 <p className='text-sm text-gray-400'>Phone</p>
                 <p className='text-white'>+1 (555) 123-4567</p>
               </div>
             </div>
             <div className='flex items-center space-x-3'>
-              <MapPin className='text-blue-400 w-5 h-5' />
+              <MapPin className='w-5 h-5 text-blue-400' />
               <div>
                 <p className='text-sm text-gray-400'>Address</p>
                 <p className='text-white'>123 Tech Street, Innovation City</p>
