@@ -80,11 +80,7 @@ const ContentPromotionBanner: React.FC = () => {
     setIsVisible(false);
   };
 
-  if (!isVisible) return null;
-
-  const _banner = banners[currentBanner];
-
-  return (
+  if (!isVisible) return null;return (
     <div className="relative overflow-hidden">
       {/* Background with gradient */}
       <div className={`bg-gradient-to-r ${banner.backgroundColor} py-12 px-4`}>

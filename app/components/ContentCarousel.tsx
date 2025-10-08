@@ -118,11 +118,7 @@ const ContentCarousel: React.FC = () => {
       return (num / 1000).toFixed(1) + 'k';
     }
     return num.toString();
-  };
-
-  const _currentItem = contentItems[currentIndex];
-
-  return (
+  };return (
     <div className="bg-gray-50 py-16 px-4">
       <div className="max-w-7xl mx-auto">
         {/* Header */}

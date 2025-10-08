@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, Star, Link, Shield, Coins, Zap, Target, BarChart, Brain, Lock, Globe, Database } from 'lucide-react';
+
 
 const BlockchainWeb3Page: React.FC = () => {
   const blockchainServices = [
@@ -136,11 +136,7 @@ const BlockchainWeb3Page: React.FC = () => {
       category: 'Consulting',
       technologies: ['Strategic Planning', 'Technology Assessment', 'Regulatory Analysis', 'Risk Management']
     }
-  ];
-
-  const _categories = [...new Set(blockchainServices.map(service => service.category))];
-
-  return (
+  ];return (
     <>
       <Helmet>
         <title>Blockchain & Web3 Services - Zion Tech Group</title>

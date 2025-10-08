@@ -129,17 +129,9 @@ export default function BlogPage() {
     }, 500);
 
     return () => clearTimeout(timer);
-  }, []);
-
-  const _categories = ['all', ...Array.from(new Set(blogPosts.map(post => post.category)))];
-  const filteredPosts = selectedCategory === 'all' 
+  }, []);const filteredPosts = selectedCategory === 'all' 
     ? posts 
-    : posts.filter(post => post.category === selectedCategory);
-
-  const _featuredPosts = posts.filter(post => post.featured);
-  const _regularPosts = posts.filter(post => !post.featured);
-
-  if (loading) {
+    : posts.filter(post => post.category === selectedCategory);if (loading) {
     return (
       <div className="min-h-screen bg-gray-50">
         <div className="container mx-auto px-4 py-8">

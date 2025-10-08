@@ -350,18 +350,18 @@ const BusinessIntelligencePage: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
                 href="tel:+13024640950"
-                className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-colors inline-flex items-center"cursor/add-new-services-and-deploy-updates-f159
+                className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-colors inline-flex items-center"
               >
                 📞 +1 302 464 0950
               </a>
               <a 
                 href="mailto:kleber@ziontechgroup.com"
-                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"cursor/add-new-services-and-deploy-updates-f159
+                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
               >
                 ✉️ kleber@ziontechgroup.com
               </a>
             </div>
-            <div className="mt-8 text-sm text-purple-200">cursor/add-new-services-and-deploy-updates-f159
+            <div className="mt-8 text-sm text-purple-200">
               <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
             </div>
           </div>

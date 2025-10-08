@@ -13,21 +13,14 @@ import { errorHandler } from '../utils/enhancedErrorHandler';
 
 // Collect basic performance metrics
 const _collectPerformanceMetrics = () => {
-  if (typeof window === 'undefined' || !window.performance) return null;
-  
-  const _navigation = window.performance.timing;
-  const _paint = window.performance.getEntriesByType('paint');
-  
-  return {
+  if (typeof window === 'undefined' || !window.performance) return null;return {
     loadTime: navigation.loadEventEnd - navigation.navigationStart,
     firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0,
   };
 };
 
 // Helper functions
-const calculatePerformanceScore = () => {
-  const _metrics = performanceOptimizer.getMetrics();
-  if (!metrics) return 0;
+const calculatePerformanceScore = () => {if (!metrics) return 0;
   
   let _score = 100;
   
@@ -111,18 +104,7 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
 
   // Update metrics
   const updateMetrics = useCallback(() => {
-    try {
-      const _performanceMetrics = performanceOptimizer.getMetrics();
-      const _performanceScore = calculatePerformanceScore();
-      const _errorStats = errorHandler.getErrorStatistics();
-
-      // Get memory info
-      const _memoryInfo = getMemoryInfo();
-
-      // Get network info
-      const _networkInfo = getNetworkInfo();
-
-      const newMetrics: SystemMetrics = {
+    try {// Get memory info// Get network infoconst newMetrics: SystemMetrics = {
         performance: {
           score: performanceScore,
           loadTime: performanceMetrics?.loadTime || 0,
@@ -173,16 +155,12 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
 
   // Update metrics periodically
   useEffect(() => {
-    if (!isMonitoring) return;
-
-    const _interval = setInterval(updateMetrics, refreshInterval);
-    return () => clearInterval(interval);
+    if (!isMonitoring) return;return () => clearInterval(interval);
   }, [isMonitoring, refreshInterval, updateMetrics]);
 
   // Get memory information
   const getMemoryInfo = () => {
-    if ('memory' in performance) {
-      const _memory = (performance as Performance & { memory: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
+    if ('memory' in performance) {totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
       const used = memory.usedJSHeapSize / 1024 / 1024; // MB
       const total = memory.totalJSHeapSize / 1024 / 1024; // MB
       const limit = memory.jsHeapSizeLimit / 1024 / 1024; // MB
@@ -228,10 +206,7 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
 
     const blob = new Blob([JSON.stringify(exportData, null, 2)], {
       type: 'application/json',
-    });
-    const _url = URL.createObjectURL(blob);
-    const _a = document.createElement('a');
-    a.href = url;
+    });a.href = url;
     a.download = `system-metrics-${new Date().toISOString().split('T')[0]}.json`;
     document.body.appendChild(a);
     a.click();

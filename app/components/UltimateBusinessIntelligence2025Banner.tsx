@@ -64,11 +64,7 @@ const UltimateBusinessIntelligence2025Banner = () => {
     setIsVisible(false);
   };
 
-  if (!isVisible) return null;
-
-  const _currentContent = content[currentSlide];
-
-  return (
+  if (!isVisible) return null;return (
     <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">
       {/* Animated Background Effects */}
       <div className="absolute inset-0">

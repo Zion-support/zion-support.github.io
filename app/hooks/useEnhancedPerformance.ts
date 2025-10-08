@@ -20,10 +20,7 @@ export function useEnhancedPerformance(_options: UseEnhancedPerformanceOptions =
     trackErrors = true,
     trackPerformance = true,
     trackAnalytics = true,
-  } = _options;
-
-  const _mountTimeRef = useRef<number>(0);
-  const _renderCountRef = useRef<number>(0);
+  } = _options;const _renderCountRef = useRef<number>(0);
 
   useEffect(() => {
     mountTimeRef.current = performance.now();

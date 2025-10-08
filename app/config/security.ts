@@ -111,9 +111,7 @@ export function validateUrl(url: string): boolean {
 /**
  * Generate secure token
  */
-export function generateSecureToken(length: number = 32): string {
-  const _array = new Uint8Array(length);
-  if (typeof window !== 'undefined' && window.crypto) {
+export function generateSecureToken(length: number = 32): string {if (typeof window !== 'undefined' && window.crypto) {
     window.crypto.getRandomValues(array);
   } else {
     // Fallback for non-browser environments

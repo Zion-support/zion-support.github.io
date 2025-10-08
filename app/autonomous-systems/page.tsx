@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, Star, Bot, Cpu, Shield, Zap, Target, BarChart, Brain, Settings, RefreshCw, Eye } from 'lucide-react';
+
 
 const AutonomousSystemsPage: React.FC = () => {
   const autonomousServices = [
@@ -136,11 +136,7 @@ const AutonomousSystemsPage: React.FC = () => {
       category: 'Quality Assurance',
       technologies: ['Selenium', 'Appium', 'TestNG', 'Performance Tools', 'Security Scanners']
     }
-  ];
-
-  const _categories = [...new Set(autonomousServices.map(service => service.category))];
-
-  return (
+  ];return (
     <>
       <Helmet>
         <title>Autonomous Systems Services - Zion Tech Group</title>

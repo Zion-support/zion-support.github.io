@@ -18,7 +18,6 @@ import PerformanceOptimizer from './components/PerformanceOptimizer';
 import Analytics from './components/Analytics';
 
 // Lazy load components for better performance
-const _ContentShowcase = lazy(() => import('./components/ContentShowcase'));
 const InteractiveContentShowcase2026 = lazy(
   () => import('./components/InteractiveContentShowcase2026')
 );
@@ -68,10 +67,7 @@ const App: React.FC = () => {
     // Initialize Web Vitals monitoring
     if (typeof window !== 'undefined' && 'performance' in window) {
       const pageLoadMetrics = collectPerformanceMetrics();
-      const metrics = performanceOptimizer.getMetrics();
-      const performanceMetrics = performanceMonitor.getMetrics();
-      
-      if (pageLoadMetrics) {
+      const metrics = performanceOptimizer.getMetrics();if (pageLoadMetrics) {
         // eslint-disable-next-line no-console
         console.log('Performance metrics collected:', pageLoadMetrics);
       }
@@ -86,9 +82,7 @@ const App: React.FC = () => {
     }
     
     // Log performance and accessibility metrics periodically
-    const metricsInterval = setInterval(() => {
-      const performanceMetrics = performanceMonitor.getMetrics();
-      const accessibilityMetrics = accessibilityEnhancer.getMetrics();
+    const metricsInterval = setInterval(() => {const accessibilityMetrics = accessibilityEnhancer.getMetrics();
       
       if (process.env.NODE_ENV === 'development') {
         // eslint-disable-next-line no-console
