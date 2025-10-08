@@ -3,7 +3,7 @@
  * Comprehensive performance monitoring and reporting
  */
 
-import React from 'react';
+// import React from 'react';
 import { logger } from './logger';
 
 export interface PerformanceMetric {
@@ -71,7 +71,7 @@ class PerformanceReporter {
         const lastEntry = entries[entries.length - 1];
 
         if (lastEntry && 'renderTime' in lastEntry) {
-          const value = (lastEntry as any).renderTime || (lastEntry as any).loadTime || 0;
+          const value = (lastEntry as PerformanceEntry).renderTime || (lastEntry as PerformanceEntry).loadTime || 0;
           this.addMetric('LCP', value, this.getRating('lcp', value));
         }
       });
@@ -83,7 +83,7 @@ class PerformanceReporter {
         const entries = entryList.getEntries();
         entries.forEach(entry => {
           if ('processingStart' in entry && 'startTime' in entry) {
-            const value = (entry as any).processingStart - (entry as any).startTime;
+            const value = (entry as PerformanceEntry).processingStart - (entry as PerformanceEntry).startTime;
             this.addMetric('FID', value, this.getRating('fid', value));
           }
         });
@@ -95,8 +95,8 @@ class PerformanceReporter {
       let clsValue = 0;
       const clsObserver = new PerformanceObserver(entryList => {
         entryList.getEntries().forEach(entry => {
-          if (!(entry as any).hadRecentInput) {
-            clsValue += (entry as any).value;
+          if (!(entry as PerformanceEntry).hadRecentInput) {
+            clsValue += (entry as PerformanceEntry).value;
           }
         });
         this.addMetric('CLS', clsValue, this.getRating('cls', clsValue));

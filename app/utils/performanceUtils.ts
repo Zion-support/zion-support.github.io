@@ -3,7 +3,7 @@
  * Provides utilities for optimizing performance in React applications
  */
 
-import { lazy } from 'react';
+// import { lazy } from 'react';
 
 /**
  * Debounce function to limit execution rate
