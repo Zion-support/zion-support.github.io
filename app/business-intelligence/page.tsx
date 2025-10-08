@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, Star, BarChart, TrendingUp, Target, Eye, Database, Zap, Brain, PieChart, LineChart, Activity } from 'lucide-react';cursor/add-new-services-and-deploy-updates-f159
+import { CheckCircle, Star, BarChart, TrendingUp, Target, Database, Zap, Brain, PieChart } from 'lucide-react';
 
 const BusinessIntelligencePage: React.FC = () => {
   const biServices = [
@@ -11,13 +11,13 @@ const BusinessIntelligencePage: React.FC = () => {
       price: 'Starting at $2,800/month',
       features: ['Real-time data streaming', 'Interactive dashboards', 'Custom visualizations', 'Mobile responsive', 'Automated alerts'],
       benefits: ['Make faster decisions', 'Identify trends immediately', 'Improve operational efficiency'],
-      marketPrice: '$4,500-12,000/month',cursor/add-new-services-and-deploy-updates-f159
+      marketPrice: '$4,500-12,000/month',
       category: 'Analytics',
       technologies: ['Tableau', 'Power BI', 'Looker', 'Apache Superset', 'Custom Dashboards']
     },
     {
       title: 'Predictive Analytics & Forecasting',
-      description: 'Advanced forecasting models for sales, demand, inventory, and business trend prediction.',cursor/add-new-services-and-deploy-updates-f159
+      description: 'Advanced forecasting models for sales, demand, inventory, and business trend prediction.',
       icon: '🔮',
       price: 'Starting at $3,500/month',
       features: ['Time series forecasting', 'Demand prediction', 'Sales forecasting', 'Risk assessment', 'Scenario modeling'],
@@ -134,11 +134,11 @@ const BusinessIntelligencePage: React.FC = () => {
       benefits: ['Align BI with business goals', 'Maximize BI investment', 'Ensure successful adoption'],
       marketPrice: '$500-1,200/hour',
       category: 'BI Consulting',
-      technologies: ['Strategic Planning', 'Technology Assessment', 'Change Management', 'Training Programs']cursor/add-new-services-and-deploy-updates-f159
+      technologies: ['Strategic Planning', 'Technology Assessment', 'Change Management', 'Training Programs']
     }
   ];
 
-  const _categories = [...new Set(biServices.map(service => service.category))];
+  // const _categories = [...new Set(biServices.map(service => service.category))];
 
   return (
     <>
@@ -350,18 +350,18 @@ const BusinessIntelligencePage: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
                 href="tel:+13024640950"
-                className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-colors inline-flex items-center"cursor/add-new-services-and-deploy-updates-f159
+                className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-colors inline-flex items-center"
               >
                 📞 +1 302 464 0950
               </a>
               <a 
                 href="mailto:kleber@ziontechgroup.com"
-                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"cursor/add-new-services-and-deploy-updates-f159
+                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
               >
                 ✉️ kleber@ziontechgroup.com
               </a>
             </div>
-            <div className="mt-8 text-sm text-purple-200">cursor/add-new-services-and-deploy-updates-f159
+            <div className="mt-8 text-sm text-purple-200">
               <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
             </div>
           </div>

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, Star, Bot, Cpu, Shield, Zap, Target, BarChart, Brain, Settings, RefreshCw, Eye } from 'lucide-react';cursor/add-new-services-and-deploy-updates-f159
+import { CheckCircle, Star, Bot, Cpu, Shield, Zap, Target, BarChart, Brain, Settings, RefreshCw } from 'lucide-react';
 
 const AutonomousSystemsPage: React.FC = () => {
   const autonomousServices = [
@@ -56,7 +56,7 @@ const AutonomousSystemsPage: React.FC = () => {
       features: ['Auto-scaling', 'Cost optimization', 'Performance tuning', 'Resource allocation', 'Capacity planning'],
       benefits: ['Reduce cloud costs by 40%', 'Improve performance by 50%', 'Eliminate manual optimization'],
       marketPrice: '$4,000-8,000/month',
-      category: 'Cloud Automation',cursor/add-new-services-and-deploy-updates-f159
+      category: 'Cloud Automation',
       technologies: ['AWS Auto Scaling', 'Kubernetes HPA', 'Terraform', 'CloudFormation', 'Cost Optimization Tools']
     },
     {
@@ -134,11 +134,11 @@ const AutonomousSystemsPage: React.FC = () => {
       benefits: ['Reduce testing time by 75%', 'Improve test coverage', 'Catch bugs earlier'],
       marketPrice: '$5,000-12,000/month',
       category: 'Quality Assurance',
-      technologies: ['Selenium', 'Appium', 'TestNG', 'Performance Tools', 'Security Scanners']cursor/add-new-services-and-deploy-updates-f159
+      technologies: ['Selenium', 'Appium', 'TestNG', 'Performance Tools', 'Security Scanners']
     }
   ];
 
-  const _categories = [...new Set(autonomousServices.map(service => service.category))];
+  // const _categories = [...new Set(autonomousServices.map(service => service.category))];
 
   return (
     <>

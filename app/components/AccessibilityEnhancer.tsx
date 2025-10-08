@@ -2,6 +2,9 @@ import React, { useEffect, useCallback, useState } from 'react';
 
 interface AccessibilityEnhancerProps {
   children: React.ReactNode;
+  enableSkipLinks?: boolean;
+  enableKeyboardNav?: boolean;
+  enableFocusIndicators?: boolean;
 }
 
 /**
@@ -24,10 +27,15 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       announcement.setAttribute('aria-atomic', 'true');
       announcement.className = 'sr-only';
       announcement.textContent = `Navigated to ${title}`;
-      document.body.appendChild(announcement);origin/cursor/fix-errors-and-merge-to-main-6395
+      document.body.appendChild(announcement);
+      
+      setTimeout(() => {
+        document.body.removeChild(announcement);
+      }, 1000);
+    };
 
-  // Check for user preferences
-  useEffect(() => {
+    // Check for user preferences
+    useEffect(() => {
     if (typeof window === 'undefined') return;
 
     // Check for reduced motion preference
@@ -46,7 +54,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
         childList: true,
         subtree: true,
       });
-    }origin/cursor/fix-errors-and-merge-to-main-6395
+    }
 
     const handleContrastChange = (e: MediaQueryListEvent) => {
       setIsHighContrast(e.matches);
@@ -137,7 +145,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     if (!enableFocusIndicators) return;
 
     // Add custom focus styles
-    const _style = document.createElement('style');
+    const style = document.createElement('style');
     style.textContent = `
       .keyboard-navigation *:focus {
         outline: 3px solid #3B82F6 !important;
@@ -213,7 +221,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
         outline-offset: 2px;
       }
     `;
-    document.head.appendChild(style);origin/cursor/fix-errors-and-merge-to-main-6395
+    document.head.appendChild(style);
 
     return () => {
       document.removeEventListener('focusin', handleFocusIn);
