@@ -231,25 +231,6 @@ const HomePage: React.FC = () => {
                 </div>
               </article>
             </Suspense>
-<<<<<<< HEAD
-
-            <Suspense fallback={<ServiceCardSkeleton />}>
-              <article className="bg-white rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
-                <div className="text-5xl mb-6 text-center">🔄</div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">Autonomous Systems</h3>
-                <p className="text-gray-600 mb-6 text-center leading-relaxed">
-                  Self-managing and self-optimizing systems for enterprise operations and infrastructure.
-                </p>
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-green-600 mb-2">Starting at $2,500/month</div>
-                  <a href="/autonomous-systems" className="text-green-600 hover:text-green-700 font-medium">
-                    Learn More →
-                  </a>
-                </div>
-              </article>
-            </Suspense>
-=======
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-1ed2
           </div>
 
           {/* Additional Services Grid */}
@@ -367,14 +348,14 @@ const HomePage: React.FC = () => {
                   <div className="text-yellow-400 text-xl sm:text-2xl mb-4">★★★★★</div>
                   <p className="text-gray-300 mb-4 italic text-sm sm:text-base">"The digital transformation they implemented increased our efficiency by 300%. Highly recommend their services."</p>
                   <div className="font-semibold text-white text-sm sm:text-base">Michael Chen</div>
-                  <div className="text-xs sm:text-sm text-gray-400">VP Operations, Global Corp</div>
+                  <div className="text-xs sm:text-sm text-gray-400">CEO, Tech Startup</div>
                 </div>
                 
-                <div className="text-center sm:col-span-2 lg:col-span-1">
+                <div className="text-center">
                   <div className="text-yellow-400 text-xl sm:text-2xl mb-4">★★★★★</div>
-                  <p className="text-gray-300 mb-4 italic text-sm sm:text-base">"Outstanding cloud infrastructure and AI implementation. They exceeded all our expectations."</p>
+                  <p className="text-gray-300 mb-4 italic text-sm sm:text-base">"Their AI automation solutions saved us 40 hours per week. The ROI was evident within the first month."</p>
                   <div className="font-semibold text-white text-sm sm:text-base">Emily Rodriguez</div>
-                  <div className="text-xs sm:text-sm text-gray-400">Director of Technology, Tech Giant</div>
+                  <div className="text-xs sm:text-sm text-gray-400">Operations Director, Manufacturing</div>
                 </div>
               </div>
             </div>
@@ -385,41 +366,8 @@ const HomePage: React.FC = () => {
         <Suspense fallback={<div className="h-32 bg-gray-100 rounded-lg animate-pulse"></div>}>
           <ContentNewsletterSignup />
         </Suspense>
-
-        {/* Call to Action Section */}
-        <section className="text-center bg-gradient-to-r from-slate-800 to-purple-900 rounded-2xl p-8 sm:p-12 cyber-card" aria-labelledby="cta-heading">
-          <h2 id="cta-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 sm:mb-6 neon-text">
-            Ready to Transform Your Business?
-          </h2>
-          <p className="text-base sm:text-lg text-gray-300 mb-6 sm:mb-8 max-w-2xl mx-auto">
-            Join thousands of enterprises that have already transformed their operations with our AI solutions.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <a
-              href="tel:+13024640950"
-              onClick={handlePhoneClick}
-              className="cyber-button w-full sm:w-auto text-center"
-              aria-label="Call us at (302) 464-0950"
-            >
-              📞 Call Now: (302) 464-0950
-            </a>
-            <a
-              href="/contact"
-              className="cyber-button w-full sm:w-auto text-center"
-              style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}
-            >
-              Get Free Consultation
-            </a>
-          </div>
-          
-          <div className="mt-6 sm:mt-8 text-xs sm:text-sm text-gray-400 space-y-1">
-            <p>✓ Free initial consultation</p>
-            <p>✓ Custom solution design</p>
-            <p>✓ 24/7 support available</p>
-          </div>
-        </section>
       </main>
-      
+
       {/* Footer */}
       <Footer />
     </div>
