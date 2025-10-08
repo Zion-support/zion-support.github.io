@@ -14,7 +14,9 @@ const MicroSAASPage: React.FC = () => {
       benefits: ['Reduce bugs by 70%', 'Improve code quality', 'Save 10+ hours/week on reviews'],
       marketPrice: '$150-300/month',
       category: 'Developer Tools',
-      technologies: ['GitHub Actions', 'SonarQube', 'ESLint', 'Prettier', 'Custom AI Models']
+      technologies: ['GitHub Actions', 'SonarQube', 'ESLint', 'Prettier', 'Custom AI Models'],
+      link: 'https://ziontechgroup.com/ai-code-review',
+      demo: 'https://demo.ziontechgroup.com/code-review'
     },
     {
       title: 'AI Document Intelligence',
@@ -25,7 +27,9 @@ const MicroSAASPage: React.FC = () => {
       benefits: ['Process documents 10x faster', 'Eliminate manual data entry', '99.5% accuracy rate'],
       marketPrice: '$200-500/month',
       category: 'Document Processing',
-      technologies: ['Tesseract', 'AWS Textract', 'Azure Form Recognizer', 'Custom ML Models']
+      technologies: ['Tesseract', 'AWS Textract', 'Azure Form Recognizer', 'Custom ML Models'],
+      link: 'https://ziontechgroup.com/document-intelligence',
+      demo: 'https://demo.ziontechgroup.com/document-ai'
     },
     {
       title: 'AI-Powered Analytics Dashboard',
