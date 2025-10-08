@@ -101,17 +101,14 @@ const App: React.FC = () => {
       const metrics = performanceOptimizer.getMetrics();
       const performanceMetrics = performanceMonitor.getMetrics();
       
-      if (pageLoadMetrics) {
-        // eslint-disable-next-line no-console
-        console.log('Performance metrics collected:', pageLoadMetrics);
+      if (pageLoadMetrics && process.env.NODE_ENV === 'development') {
+        logger.debug('Performance metrics collected:', pageLoadMetrics);
       }
-      if (metrics) {
-        // eslint-disable-next-line no-console
-        console.log('Performance metrics:', metrics);
+      if (metrics && process.env.NODE_ENV === 'development') {
+        logger.debug('Performance metrics:', metrics);
       }
-      if (performanceMetrics) {
-        // eslint-disable-next-line no-console
-        console.log('Core Web Vitals:', performanceMetrics);
+      if (performanceMetrics && process.env.NODE_ENV === 'development') {
+        logger.debug('Core Web Vitals:', performanceMetrics);
       }
     }
     
@@ -121,10 +118,8 @@ const App: React.FC = () => {
       const accessibilityMetrics = accessibilityEnhancer.getMetrics();
       
       if (process.env.NODE_ENV === 'development') {
-        // eslint-disable-next-line no-console
-        console.log('Performance Score:', performanceMonitor.getScore());
-        // eslint-disable-next-line no-console
-        console.log('Accessibility Score:', accessibilityMetrics.overallScore);
+        logger.debug('Performance Score:', performanceMonitor.getScore());
+        logger.debug('Accessibility Score:', accessibilityMetrics.overallScore);
       }
     }, 30000);
     

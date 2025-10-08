@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { logger } from '../utils/logger';
 
 interface PerformanceMetrics {
   lcp: number | null;
@@ -10,36 +11,12 @@ interface PerformanceMetrics {
 
 const PerformanceMonitor: React.FC = () => {
   useEffect(() => {
-<<<<<<< HEAD
     const metrics: PerformanceMetrics = {
       lcp: null,
       fid: null,
       cls: null,
       fcp: null,
       ttfb: null
-=======
-    // const _reportWebVitals = (_metric: { name: string; value: number }) => {
-    //   // Log to console in development (only on client side)
-    //   if (typeof window !== 'undefined' && enableConsoleLogging) {
-    //     logger.info('Web Vital captured', { name: _metric.name, value: _metric.value });
-    //   }
-    // };
-
-    // Monitor Core Web Vitals
-    const navigation = performance.getEntriesByType('navigation')[0] as
-      | PerformanceNavigationTiming
-      | undefined;
-    const memory = (
-      performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number } }
-    ).memory;
-
-    const getPerformanceScore = (): number => {
-      let score = 100;
-      if (metrics.renderTime > 1500) score -= 15;
-      if (metrics.loadTime > 3000) score -= 20;
-      if (metrics.memoryUsage > 50) score -= 10;
-      return Math.max(0, score);
->>>>>>> cursor/analyze-improve-and-deploy-application-1a78
     };
 
     // Measure Core Web Vitals
@@ -55,33 +32,20 @@ const PerformanceMonitor: React.FC = () => {
         try {
           lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
         } catch (e) {
-          console.warn('LCP observer not supported');
+          logger.warn('LCP observer not supported');
         }
 
-<<<<<<< HEAD
         // FID - First Input Delay
         const fidObserver = new PerformanceObserver((list) => {
           list.getEntries().forEach((entry: any) => {
             metrics.fid = entry.processingStart - entry.startTime;
-=======
-      setMetrics(currentMetrics);
-
-      const score = getPerformanceScore();
-      setPerformanceScore(score);
-
-      if (enableConsoleLogging) {
-        if (typeof console !== 'undefined') {
-          logger.debug('Performance Metrics', {
-            metrics: currentMetrics,
-            score,
->>>>>>> cursor/analyze-improve-and-deploy-application-1a78
           });
         });
         
         try {
           fidObserver.observe({ entryTypes: ['first-input'] });
         } catch (e) {
-          console.warn('FID observer not supported');
+          logger.warn('FID observer not supported');
         }
 
         // CLS - Cumulative Layout Shift
@@ -98,7 +62,7 @@ const PerformanceMonitor: React.FC = () => {
         try {
           clsObserver.observe({ entryTypes: ['layout-shift'] });
         } catch (e) {
-          console.warn('CLS observer not supported');
+          logger.warn('CLS observer not supported');
         }
 
         // FCP - First Contentful Paint
@@ -113,7 +77,7 @@ const PerformanceMonitor: React.FC = () => {
         try {
           fcpObserver.observe({ entryTypes: ['paint'] });
         } catch (e) {
-          console.warn('FCP observer not supported');
+          logger.warn('FCP observer not supported');
         }
       }
 
@@ -151,8 +115,10 @@ const PerformanceMonitor: React.FC = () => {
             }
           }
 
-          // Log metrics for debugging
-          console.log('Performance Metrics:', metrics);
+          // Log metrics for debugging in development
+          if (process.env.NODE_ENV === 'development') {
+            logger.debug('Performance Metrics:', metrics);
+          }
         }, 2000);
       });
     };
@@ -165,7 +131,7 @@ const PerformanceMonitor: React.FC = () => {
         const resourceObserver = new PerformanceObserver((list) => {
           list.getEntries().forEach((entry) => {
             if (entry.duration > 1000) { // Log slow resources
-              console.warn('Slow resource:', entry.name, entry.duration + 'ms');
+              logger.warn('Slow resource:', entry.name, entry.duration + 'ms');
             }
           });
         });
@@ -173,22 +139,17 @@ const PerformanceMonitor: React.FC = () => {
         try {
           resourceObserver.observe({ entryTypes: ['resource'] });
         } catch (e) {
-          console.warn('Resource observer not supported');
+          logger.warn('Resource observer not supported');
         }
       }
     };
 
     monitorResources();
 
-<<<<<<< HEAD
     return () => {
       // Cleanup observers if needed
     };
   }, []);
-=======
-    // Set up interval for continuous monitoring
-    const interval = setInterval(updateMetrics, updateInterval);
->>>>>>> cursor/analyze-improve-and-deploy-application-1a78
 
   return null;
 };

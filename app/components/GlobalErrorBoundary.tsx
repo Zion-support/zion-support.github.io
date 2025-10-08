@@ -27,9 +27,10 @@ class GlobalErrorBoundary extends Component<Props, State> {
       errorInfo
     });
 
-    // Log error to console in development
+    // Log error to logger in development
     if (process.env.NODE_ENV === 'development') {
-      console.error('Error caught by boundary:', error, errorInfo);
+      const { logger } = require('../utils/logger');
+      logger.error('Error caught by boundary:', error, errorInfo);
     }
 
     // Log error to analytics in production
