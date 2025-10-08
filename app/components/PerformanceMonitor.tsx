@@ -3,7 +3,7 @@
 import React, { useEffect, useState, memo } from 'react';
 
 interface PerformanceMetrics {
-  fcp: number;
+  fcp?: number;
   lcp?: number;
   fid?: number;
   cls?: number;
@@ -16,10 +16,10 @@ const PerformanceMonitor: React.FC = () => {
   useEffect(() => {
     if (typeof window === 'undefined') return;
 
-    const reportWebVitals = (metric: any) => {
+    const reportWebVitals = (metric: { name: string; value: number }) => {
       // Log to console in development
       if (process.env.NODE_ENV === 'development') {
-        console.log('Web Vital:', metric);
+        console.log('Web Vital:', metric.name, metric.value);
       }
     };
 
@@ -40,13 +40,15 @@ const PerformanceMonitor: React.FC = () => {
         // FID - First Input Delay
         new PerformanceObserver((list) => {
           const entries = list.getEntries();
-          entries.forEach((entry: any) => {
-            const fid = entry.processingStart - entry.startTime;
-            reportWebVitals({
-              name: 'FID',
-              value: fid,
-            });
-            setMetrics(prev => ({ ...prev, fid }));
+          entries.forEach((entry: PerformanceEntry & { processingStart?: number }) => {
+            if (entry.processingStart) {
+              const fid = entry.processingStart - entry.startTime;
+              reportWebVitals({
+                name: 'FID',
+                value: fid,
+              });
+              setMetrics(prev => ({ ...prev, fid }));
+            }
           });
         }).observe({ entryTypes: ['first-input'] });
 
@@ -54,8 +56,8 @@ const PerformanceMonitor: React.FC = () => {
         let clsValue = 0;
         new PerformanceObserver((list) => {
           const entries = list.getEntries();
-          entries.forEach((entry: any) => {
-            if (!entry.hadRecentInput) {
+          entries.forEach((entry: PerformanceEntry & { hadRecentInput?: boolean; value?: number }) => {
+            if (!entry.hadRecentInput && entry.value) {
               clsValue += entry.value;
               reportWebVitals({
                 name: 'CLS',
@@ -64,100 +66,6 @@ const PerformanceMonitor: React.FC = () => {
               setMetrics(prev => ({ ...prev, cls: clsValue }));
             }
           });
-        }).observe({ entryTypes: ['layout-shift'] });
-
-        // FCP - First Contentful Paint
-        new PerformanceObserver((list) => {
-          const entries = list.getEntries();
-          entries.forEach((entry) => {
-            if (entry.name === 'first-contentful-paint') {
-              reportWebVitals({
-                name: 'FCP',
-                value: entry.startTime,
-              });
-              setMetrics(prev => ({ ...prev, fcp: entry.startTime }));
-            }
-          });
-        }).observe({ entryTypes: ['paint'] });
-
-        // TTFB - Time to First Byte
-        new PerformanceObserver((list) => {
-          const entries = list.getEntries();
-          entries.forEach((entry: any) => {
-            if (entry.entryType === 'navigation') {
-              const ttfb = entry.responseStart - entry.requestStart;
-              reportWebVitals({
-                name: 'TTFB',
-                value: ttfb,
-              });
-              setMetrics(prev => ({ ...prev, ttfb }));
-            }
-          });
-        }).observe({ entryTypes: ['navigation'] });
-
-      } catch (error) {
-        console.warn('Performance monitoring not supported:', error);
-      }
-    }
-  }, []);
-
-  if (process.env.NODE_ENV !== 'development') {
-    return null;
-  }
-
-  return (
-    <div className="fixed bottom-4 right-4 bg-black bg-opacity-75 text-white p-4 rounded-lg text-xs font-mono z-50">
-      <div className="font-bold mb-2">Performance Metrics</div>
-      {metrics.fcp && <div>FCP: {metrics.fcp.toFixed(2)}ms</div>}
-      {metrics.lcp && <div>LCP: {metrics.lcp.toFixed(2)}ms</div>}
-      {metrics.fid && <div>FID: {metrics.fid.toFixed(2)}ms</div>}
-      {metrics.cls && <div>CLS: {metrics.cls.toFixed(4)}</div>}
-      {metrics.ttfb && <div>TTFB: {metrics.ttfb.toFixed(2)}ms</div>}
-    </div>
-  );
-};
-
-    // Monitor Core Web Vitals
-    if (typeof window !== 'undefined' && 'PerformanceObserver' in window) {
-      try {
-        // LCP - Largest Contentful Paint
-        new PerformanceObserver((list) => {
-          const entries = list.getEntries();
-          const lastEntry = entries[entries.length - 1];
-          reportWebVitals({
-            name: 'LCP',
-            value: lastEntry.startTime,
-          });
-          setMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }));
-        }).observe({ entryTypes: ['largest-contentful-paint'] });
-
-        // FID - First Input Delay
-        new PerformanceObserver((list) => {
-          const entries = list.getEntries();
-          entries.forEach((entry: any) => {
-            const fid = entry.processingStart - entry.startTime;
-            reportWebVitals({
-              name: 'FID',
-              value: fid,
-            });
-            setMetrics(prev => ({ ...prev, fid }));
-          });
-        }).observe({ entryTypes: ['first-input'] });
-
-        // CLS - Cumulative Layout Shift
-        let clsValue = 0;
-        new PerformanceObserver((list) => {
-          const entries = list.getEntries();
-          entries.forEach((entry: any) => {
-            if (!entry.hadRecentInput) {
-              clsValue += entry.value;
-            }
-          });
-          reportWebVitals({
-            name: 'CLS',
-            value: clsValue,
-          });
-          setMetrics(prev => ({ ...prev, cls: clsValue }));
         }).observe({ entryTypes: ['layout-shift'] });
 
         // FCP - First Contentful Paint
@@ -175,8 +83,8 @@ const PerformanceMonitor: React.FC = () => {
         // TTFB - Time to First Byte
         new PerformanceObserver((list) => {
           const entries = list.getEntries();
-          entries.forEach((entry: any) => {
-            if (entry.responseStart > 0) {
+          entries.forEach((entry: PerformanceEntry & { responseStart?: number; requestStart?: number }) => {
+            if (entry.responseStart && entry.requestStart && entry.responseStart > 0) {
               const ttfb = entry.responseStart - entry.requestStart;
               reportWebVitals({
                 name: 'TTFB',
@@ -186,7 +94,6 @@ const PerformanceMonitor: React.FC = () => {
             }
           });
         }).observe({ entryTypes: ['navigation'] });
-
       } catch (error) {
         console.warn('Performance monitoring not supported:', error);
       }
