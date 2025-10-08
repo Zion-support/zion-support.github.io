@@ -4,7 +4,7 @@
  */
 
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-
+// import { logger as _logger } from '../utils/logger';
 import monitoring from '../utils/monitoring';
 
 interface Props {
@@ -63,12 +63,12 @@ class ImprovedErrorBoundary extends Component<Props, State> {
 
     // Log to console in development
     if (process.env['NODE_ENV'] === 'development') {
-      console.error('Error Boundary caught an error:', error, errorInfo);
+// Error logging disabled for production
     }
 
     // Send to external error tracking (if available)
-    if (typeof window !== 'undefined' && 'Sentry' in window) {
-      (window as { Sentry: { captureException: (error: Error, context: Record<string, unknown>) => void } }).Sentry.captureException(error, {
+    if (typeof window !== 'undefined' && (window as unknown as { Sentry: { captureException: (error: Error, context: Record<string, unknown>) => void } }).Sentry) {
+      (window as unknown as { Sentry: { captureException: (error: Error, context: Record<string, unknown>) => void } }).Sentry.captureException(error, {
         contexts: {
           react: {
             componentStack: errorInfo.componentStack,

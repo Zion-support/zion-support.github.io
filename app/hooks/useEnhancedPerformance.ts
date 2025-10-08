@@ -4,6 +4,8 @@
  */
 
 import { useEffect, useCallback, useRef } from 'react';
+// import { logger as _logger } from '../utils/logger';
+// import { _performanceOptimizer } from '../utils/_performanceOptimizer';
 import { errorTracker } from '../utils/enhancedErrorTracking';
 import { analytics } from '../utils/enhancedAnalytics';
 
@@ -14,13 +16,13 @@ export interface UseEnhancedPerformanceOptions {
   trackAnalytics?: boolean;
 }
 
-export function useEnhancedPerformance(options: UseEnhancedPerformanceOptions = {}) {
+export function useEnhancedPerformance(_options: UseEnhancedPerformanceOptions = {}) {
   const {
     component = 'Unknown',
     trackErrors = true,
     trackPerformance = true,
     trackAnalytics = true,
-  } = options;
+  } = _options;
 
   const mountTimeRef = useRef<number>(0);
   const renderCountRef = useRef<number>(0);
@@ -62,7 +64,9 @@ export function useEnhancedPerformance(options: UseEnhancedPerformanceOptions = 
 
     if (trackPerformance && renderCountRef.current > 10) {
       // Many re-renders detected
-      console.warn(`Component ${component} has re-rendered ${renderCountRef.current} times`);
+      console.warn(
+        `Component ${component} has re-rendered ${renderCountRef.current} times`
+      );
       analytics.trackCustomEvent(
         'Performance',
         'High Render Count',
@@ -95,12 +99,13 @@ export function useEnhancedPerformance(options: UseEnhancedPerformanceOptions = 
 
   const measureOperation = useCallback(
     (operationName: string) => {
+      // const _markName = `${component}-${operationName}`;
       const startTime = performance.now();
 
       return {
         end: () => {
           const duration = performance.now() - startTime;
-
+          
           if (trackPerformance) {
             analytics.trackPerformance(
               `${component}-${operationName}`,
@@ -108,7 +113,7 @@ export function useEnhancedPerformance(options: UseEnhancedPerformanceOptions = 
               duration > 1000 ? 'slow' : 'fast'
             );
           }
-
+          
           return duration;
         },
       };
