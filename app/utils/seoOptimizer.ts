@@ -142,6 +142,7 @@ class SEOOptimizer {
     this.setMetaTag('twitter:description', this.currentPageData?.description || 'Advanced AI and IT Solutions');
 
    */
+  private initializeMetaTags(): void {
     if (typeof document === 'undefined') return;
     // Set default meta tags
     this.setMetaTag('keywords', (this.currentPageData?.keywords || []).join(', ') || 'AI, IT Solutions, Technology');
@@ -150,6 +151,7 @@ class SEOOptimizer {
     // Twitter Card tags
     this.setMetaTag('twitter:title', this.currentPageData?.title || 'Zion Tech Group');
   }
+  
   /**
    * Set meta tag
    */

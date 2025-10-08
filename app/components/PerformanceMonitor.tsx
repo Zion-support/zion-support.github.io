@@ -1,140 +1,104 @@
-'use client';
-
-import React, { useEffect, useState, memo } from 'react';
-import { logger } from '@/utils/logger';
-
-interface LayoutShift extends PerformanceEntry {
-  hadRecentInput: boolean;
-  value: number;
-}
+import React, { useState, useEffect } from 'react';
 
 interface PerformanceMetrics {
-  fcp?: number;
-  lcp?: number;
-  fid?: number;
-  cls?: number;
-  ttfb?: number;
+  loadTime: number;
+  memoryUsage: number;
+  cacheHitRate: number;
+  renderTime: number;
+  bundleSize: number;
 }
 
-const PerformanceMonitor: React.FC = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({});
+interface PerformanceMonitorProps {
+  enableConsoleLogging?: boolean;
+  updateInterval?: number;
+}
+
+const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
+  enableConsoleLogging = false,
+  updateInterval = 5000
+}) => {
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+    loadTime: 0,
+    memoryUsage: 0,
+    cacheHitRate: 0,
+    renderTime: 0,
+    bundleSize: 0
+  });
+  const [performanceScore, setPerformanceScore] = useState<number>(100);
 
   useEffect(() => {
     if (typeof window === 'undefined') return;
 
-    const reportWebVitals = (metric: { name: string; value: number }) => {
-      // Log to console in development
-      if (process.env['NODE_ENV'] === 'development') {
-        console.log('Web Vital:', metric.name, metric.value);
-      }
-    };
-
-    // Monitor Core Web Vitals
+    const getPerformanceMetrics = (): PerformanceMetrics => {
       const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming | undefined;
-        memory?: {
-          totalJSHeapSize: number;
-        };
+      const memory = (performance as any).memory;
       
+      return {
         loadTime: navigation?.loadEventEnd ?? 0,
         memoryUsage: memory?.usedJSHeapSize ?? 0,
         cacheHitRate: 0,
+        renderTime: navigation?.domContentLoadedEventEnd ?? 0,
+        bundleSize: 0
+      };
     };
-    const getPerformanceScore = (): number => {
+
+    const getPerformanceScore = (metrics: PerformanceMetrics): number => {
       let score = 100;
       if (metrics.renderTime > 1500) score -= 15;
+      if (metrics.loadTime > 3000) score -= 20;
+      if (metrics.memoryUsage > 50000000) score -= 15;
       return Math.max(0, score);
+    };
+
     const updateMetrics = () => {
-      const score = getPerformanceScore();
+      const currentMetrics = getPerformanceMetrics();
+      const score = getPerformanceScore(currentMetrics);
+      
+      setMetrics(currentMetrics);
       setPerformanceScore(score);
+      
       if (enableConsoleLogging) {
-        if (typeof console !== 'undefined') { console.group('Performance Metrics');
-          logger.debug('Metrics', { metrics: currentMetrics });
-          logger.debug('Score', { score });
-          console.groupEnd();
-        }
+        console.group('Performance Metrics');
+        console.log('Metrics:', currentMetrics);
+        console.log('Score:', score);
+        console.groupEnd();
       }
     };
 
-    updateMetrics();
-    const interval = setInterval(updateMetrics, updateInterval);
-    const getMetrics = (): PerformanceMetrics => {
-      const memory = (performance as Performance & {
-          usedJSHeapSize: number;
-          jsHeapSizeLimit: number;
-      }).memory;
-      return {
-        renderTime: navigation?.domContentLoadedEventEnd ?? 0,
-        bundleSize: 0,
-      };
-
-      const metrics = getMetrics();
-      if (metrics.loadTime > 3000) score -= 20;
-      if (metrics.memoryUsage > 50000000) score -= 15;
-
-      const currentMetrics = getMetrics();
-      setMetrics(currentMetrics);
-
-        console.group('Performance Metrics');
-        logger.debug('Score', { score });
-      }
     // Initial update
+    updateMetrics();
+    
     // Set up interval for real-time monitoring
+    const interval = setInterval(updateMetrics, updateInterval);
+
     // Set up performance observer for more detailed monitoring
-    if (typeof window !== 'undefined' && 'PerformanceObserver' in window) {
+    if ('PerformanceObserver' in window) {
       try {
         // LCP - Largest Contentful Paint
         new PerformanceObserver((list) => {
           const entries = list.getEntries();
           const lastEntry = entries[entries.length - 1];
-          reportWebVitals({
-            name: 'LCP',
-            value: lastEntry.startTime,
-          });
-          setMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }));
+          console.log('LCP:', lastEntry.startTime);
         }).observe({ entryTypes: ['largest-contentful-paint'] });
 
         // FID - First Input Delay
         new PerformanceObserver((list) => {
           const entries = list.getEntries();
-          entries.forEach((entry: PerformanceEntry & { processingStart?: number }) => {
-            if (entry.processingStart) {
-              const fid = entry.processingStart - entry.startTime;
-              reportWebVitals({
-                name: 'FID',
-                value: fid,
-              });
-              setMetrics(prev => ({ ...prev, fid }));
-            }
+          entries.forEach((entry: any) => {
+            console.log('FID:', entry.processingStart - entry.startTime);
           });
         }).observe({ entryTypes: ['first-input'] });
 
         // CLS - Cumulative Layout Shift
         let clsValue = 0;
         new PerformanceObserver((list) => {
-          const entries = list.getEntries();
-          entries.forEach((entry: PerformanceEntry & { hadRecentInput?: boolean; value?: number }) => {
-            if (!entry.hadRecentInput && entry.value) {
-              clsValue += entry.value;
-              reportWebVitals({
-                name: 'CLS',
-                value: clsValue,
-              });
-              setMetrics(prev => ({ ...prev, cls: clsValue }));
+          for (const entry of list.getEntries()) {
+            if (!(entry as any).hadRecentInput) {
+              clsValue += (entry as any).value;
             }
-          });
+          }
+          console.log('CLS:', clsValue);
         }).observe({ entryTypes: ['layout-shift'] });
-
-        // FCP - First Contentful Paint
-        new PerformanceObserver((list) => {
-          const entries = list.getEntries();
-          entries.forEach((entry) => {
-            reportWebVitals({
-              name: 'FCP',
-              value: entry.startTime,
-            });
-            setMetrics(prev => ({ ...prev, fcp: entry.startTime }));
-          });
-        }).observe({ entryTypes: ['paint'] });
 
         // TTFB - Time to First Byte
         new PerformanceObserver((list) => {
@@ -142,11 +106,7 @@ const PerformanceMonitor: React.FC = () => {
           entries.forEach((entry: PerformanceEntry & { responseStart?: number; requestStart?: number }) => {
             if (entry.responseStart && entry.requestStart && entry.responseStart > 0) {
               const ttfb = entry.responseStart - entry.requestStart;
-              reportWebVitals({
-                name: 'TTFB',
-                value: ttfb,
-              });
-              setMetrics(prev => ({ ...prev, ttfb }));
+              console.log('TTFB:', ttfb);
             }
           });
         }).observe({ entryTypes: ['navigation'] });
@@ -154,24 +114,27 @@ const PerformanceMonitor: React.FC = () => {
         console.warn('Performance monitoring not supported:', error);
       }
     }
-  }, []);
+
+    return () => {
+      clearInterval(interval);
+    };
+  }, [enableConsoleLogging, updateInterval]);
 
   // Don't render anything in production
-  if (process.env['NODE_ENV'] !== 'development') {
+  if (process.env.NODE_ENV !== 'development') {
     return null;
   }
 
   return (
     <div className="fixed bottom-4 right-4 bg-black bg-opacity-75 text-white p-4 rounded-lg text-xs font-mono z-50">
-      <div className="mb-2 font-bold">Performance Metrics</div>
-      {Object.entries(metrics).map(([key, value]) => (
-        <div key={key} className="flex justify-between gap-4">
-          <span>{key.toUpperCase()}:</span>
-          <span className="text-green-400">{value ? `${Math.round(value)}ms` : 'N/A'}</span>
-        </div>
-      ))}
+      <div className="mb-2">
+        <strong>Performance Monitor</strong>
+      </div>
+      <div>Load Time: {metrics.loadTime.toFixed(2)}ms</div>
+      <div>Memory: {(metrics.memoryUsage / 1024 / 1024).toFixed(2)}MB</div>
+      <div>Score: {performanceScore}/100</div>
     </div>
   );
 };
 
-export default memo(PerformanceMonitor);
+export default PerformanceMonitor;
