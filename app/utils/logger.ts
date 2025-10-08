@@ -170,33 +170,6 @@ class Logger {
   }
 
   /**
-   * Log a performance metric
-   */
-  perf(metric: string, value: number, metadata?: Record<string, unknown>): void {
-    this.log(LogLevel.DEBUG, `Performance: ${metric}`, 'Performance', {
-      ...metadata,
-      metric,
-      value,
-    });
-  }
-
-  /**
-   * Group related log messages
-   */
-  group(label: string, fn: () => void): void {
-    if (this.config.enableConsole) {
-      console.group(label);
-      try {
-        fn();
-      } finally {
-        console.groupEnd();
-      }
-    } else {
-      fn();
-    }
-  }
-
-  /**
    * Create a child logger with a specific context
    */
   child(context: string): ContextLogger {
@@ -400,9 +373,13 @@ class ContextLogger {
   }
 
   group(label: string, fn: () => void): void {
-    this.logger.group(`${this.context}: ${label}`, fn);
+    this.logger.group(`${this.context}: ${label}`);
+    try {
+      fn();
+    } finally {
+      this.logger.groupEnd();
+    }
   }
-
   child(subContext: string): ContextLogger {
     return new ContextLogger(this.logger, `${this.context}:${subContext}`);
   }
