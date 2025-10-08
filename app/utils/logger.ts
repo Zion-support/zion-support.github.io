@@ -426,6 +426,14 @@ class ContextLogger {
     this.logger.perf(metric, value, { ...metadata, context: this.context });
   }
 
+  lifecycle(message: string, metadata?: Record<string, unknown>): void {
+    this.logger.lifecycle(message, this.context);
+  }
+
+  performance(message: string, data: unknown, metadata?: Record<string, unknown>): void {
+    this.logger.performance(message, data, this.context);
+  }
+
   group(label: string, fn: () => void): void {
     this.logger.group(`${this.context}: ${label}`, fn);
   }
