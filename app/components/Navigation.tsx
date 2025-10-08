@@ -71,14 +71,11 @@ const Navigation: React.FC = () => {
                     </Link>
                   </div>
                 </div>
-              )}origin/main
+              )}
             </div>
           </div>
         </div>
-      </div>
-
-      {/* Main Navigation */}
-      <nav className="bg-white shadow-lg sticky top-0 z-50">
+      </nav>
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-center py-4">
             {/* Logo */}
@@ -131,16 +128,19 @@ const Navigation: React.FC = () => {
                         <Link to="/autonomous-systems" className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
                           Autonomous Systems
                         </Link>
-                        <Link to="/blockchain-web3" className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
-                          Blockchain & Web3
-                        </Link>
-                        <Link to="/cybersecurity" className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
-                          Cybersecurity
-                        </Link>
+                    <Link to="/blockchain-web3" className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
+                      Blockchain & Web3
+                    </Link>
+                    <Link to="/iot-edge-computing" className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
+                      IoT & Edge Computing
+                    </Link>
+                    <Link to="/cybersecurity" className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
+                      Cybersecurity
+                    </Link>
                       </div>
                     </div>
-                  </div>
-                )}origin/main
+                </div>
+              )}
               </div>
 
               <Link to="/case-studies" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
@@ -209,6 +209,9 @@ const Navigation: React.FC = () => {
                     <Link to="/blockchain-web3" className="block text-gray-600 hover:text-blue-600 transition-colors">
                       Blockchain & Web3
                     </Link>
+                    <Link to="/iot-edge-computing" className="block text-gray-600 hover:text-blue-600 transition-colors">
+                      IoT & Edge Computing
+                    </Link>
                     <Link to="/cybersecurity" className="block text-gray-600 hover:text-blue-600 transition-colors">
                       Cybersecurity
                     </Link>
@@ -232,7 +235,6 @@ const Navigation: React.FC = () => {
           )}
         </div>
       </nav>
-    </>
   );
 };
 
