@@ -100,9 +100,10 @@ class EnhancedErrorMonitoring {
    */
   private setupNetworkErrorMonitoring(): void {
     const originalFetch = window.fetch
-    window.fetch = async function(...args) {
+
+    window.fetch = async (...args) => {
       try {
-        const response = await originalFetch.apply(self, args)
+        const response = await originalFetch.apply(window, args)
         
         if (!response.ok) {
           this.handleError(new Error(`HTTP ${response.status}: ${response.statusText}`), {

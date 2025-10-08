@@ -1,4 +1,4 @@
-import React, { useEffect, useCallback } from 'react';
+import React, { useEffect, useCallback, useRef } from 'react';
 import { Helmet } from 'react-helmet-async';
 
 interface SEOData {
@@ -38,7 +38,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
   enableTwitterCards = true,
   enableSchemaMarkup = true,
 }) => {
-  // const structuredDataRef = useRef<HTMLScriptElement | null>(null);
+  const structuredDataRef = useRef<HTMLScriptElement | null>(null);
   const generateStructuredData = useCallback(() => {
     if (!enableStructuredData || !seoData.structuredData) return null;
 
@@ -184,28 +184,18 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
 
   const _addStructuredData = (data: Record<string, unknown>) => {
     // Remove existing structured data
-<<<<<<< HEAD
-    // if (structuredDataRef.current) {
-    //   structuredDataRef.current.remove();
-    // }
-    
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
-    script.textContent = JSON.stringify(data);
-    document.head.appendChild(script);
-  };
-=======
     if (structuredDataRef.current) {
       structuredDataRef.current.remove();
     }
-  };
 
-  // const _addStructuredData = (data: Record<string, unknown>) => {
-  //   // Remove existing structured data
-  //   if (structuredDataRef.current) {
-  //     structuredDataRef.current.remove();
-  //   }
->>>>>>> cursor/fix-errors-and-merge-to-main-d277
+    // Add new structured data
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.textContent = JSON.stringify(data);
+    script.id = 'structured-data';
+    document.head.appendChild(script);
+    structuredDataRef.current = script;
+  };
 
   const _trackPageView = (config: SEOData) => {
     if (typeof window !== 'undefined' && 'gtag' in window) {
