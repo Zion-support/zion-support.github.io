@@ -221,7 +221,6 @@ console.error('Failed to update metrics:', error);
 
     const exportData = {
       metrics,
-      performanceData: performanceOptimizer.getMetrics(),
       errorData: errorHandler.exportErrorData(),
       timestamp: new Date().toISOString(),
     };
