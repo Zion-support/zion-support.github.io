@@ -53,7 +53,15 @@ const HomePage: React.FC = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-white to-purple-50">
+    <div className="min-h-screen matrix-bg">
+      {/* Futuristic Background Effects */}
+      <div className="fixed inset-0 pointer-events-none">
+        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-indigo-900/20 via-purple-900/20 to-cyan-900/20"></div>
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-pink-500/10 rounded-full blur-2xl animate-pulse delay-500"></div>
+      </div>
+      
       {/* Navigation */}
       <Navigation />
       
@@ -80,11 +88,11 @@ const HomePage: React.FC = () => {
         >
           <h1 
             id="hero-heading" 
-            className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent"
+            className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 cyber-text neon-text"
           >
             Zion Tech Group
           </h1>
-          <p className="text-xl md:text-2xl text-gray-600 mb-8 font-medium" role="doc-subtitle">
+          <p className="text-xl md:text-2xl text-cyan-300 mb-8 font-medium neon-text" role="doc-subtitle">
             Advanced AI and IT Solutions
           </p>
           <p className="text-lg md:text-xl text-gray-700 max-w-4xl mx-auto mb-8 leading-relaxed">
@@ -116,14 +124,14 @@ const HomePage: React.FC = () => {
             <a
               href="tel:+13024640950"
               onClick={handlePhoneClick}
-              className="inline-block bg-indigo-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-indigo-700 transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-4 focus:ring-indigo-300 shadow-lg"
+              className="neon-button neon-glow px-8 py-4 rounded-lg font-semibold transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-4 focus:ring-cyan-300"
               aria-label="Call us at (302) 464-0950"
             >
               📞 Call Now: (302) 464-0950
             </a>
             <a
               href="/contact"
-              className="inline-block bg-white text-indigo-600 px-8 py-4 rounded-lg font-semibold border-2 border-indigo-600 hover:bg-indigo-50 transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-4 focus:ring-indigo-300 shadow-lg"
+              className="neon-button neon-glow px-8 py-4 rounded-lg font-semibold transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-4 focus:ring-cyan-300"
             >
               Get Free Consultation
             </a>
@@ -140,15 +148,15 @@ const HomePage: React.FC = () => {
           </p>
           <div className="grid md:grid-cols-3 gap-8 mb-12">
             <Suspense fallback={<ServiceCardSkeleton />}>
-              <article className="bg-white rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
-                <div className="text-5xl mb-6 text-center">🤖</div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">AI Services</h3>
-                <p className="text-gray-600 mb-6 text-center leading-relaxed">
+              <article className="futuristic-card hologram-effect p-8 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                <div className="text-5xl mb-6 text-center neon-text">🤖</div>
+                <h3 className="text-2xl font-bold text-cyan-300 mb-4 text-center neon-text">AI Services</h3>
+                <p className="text-gray-300 mb-6 text-center leading-relaxed">
                   Advanced artificial intelligence solutions including machine learning, natural language processing, and computer vision.
                 </p>
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-blue-600 mb-2">Starting at $1,500/month</div>
-                  <a href="/ai-services" className="text-blue-600 hover:text-blue-700 font-medium">
+                  <div className="text-2xl font-bold text-cyan-400 mb-2 neon-text">Starting at $1,500/month</div>
+                  <a href="/ai-services" className="text-cyan-400 hover:text-cyan-300 font-medium neon-text">
                     Learn More →
                   </a>
                 </div>
@@ -156,15 +164,15 @@ const HomePage: React.FC = () => {
             </Suspense>
 
             <Suspense fallback={<ServiceCardSkeleton />}>
-              <article className="bg-white rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
-                <div className="text-5xl mb-6 text-center">📢</div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">AI Marketing</h3>
-                <p className="text-gray-600 mb-6 text-center leading-relaxed">
+              <article className="futuristic-card hologram-effect p-8 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                <div className="text-5xl mb-6 text-center neon-text">📢</div>
+                <h3 className="text-2xl font-bold text-pink-300 mb-4 text-center neon-text">AI Marketing</h3>
+                <p className="text-gray-300 mb-6 text-center leading-relaxed">
                   Revolutionary AI-powered marketing automation, ad optimization, and content generation.
                 </p>
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-pink-600 mb-2">Starting at $199/month</div>
-                  <a href="/ai-marketing" className="text-pink-600 hover:text-pink-700 font-medium">
+                  <div className="text-2xl font-bold text-pink-400 mb-2 neon-text">Starting at $199/month</div>
+                  <a href="/ai-marketing" className="text-pink-400 hover:text-pink-300 font-medium neon-text">
                     Learn More →
                   </a>
                 </div>
@@ -172,15 +180,15 @@ const HomePage: React.FC = () => {
             </Suspense>
 
             <Suspense fallback={<ServiceCardSkeleton />}>
-              <article className="bg-white rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
-                <div className="text-5xl mb-6 text-center">⚙️</div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">AI Automation</h3>
-                <p className="text-gray-600 mb-6 text-center leading-relaxed">
+              <article className="futuristic-card hologram-effect p-8 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                <div className="text-5xl mb-6 text-center neon-text">⚙️</div>
+                <h3 className="text-2xl font-bold text-blue-300 mb-4 text-center neon-text">AI Automation</h3>
+                <p className="text-gray-300 mb-6 text-center leading-relaxed">
                   Intelligent automation of business processes with decision-making capabilities and exception handling.
                 </p>
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-blue-600 mb-2">Starting at $399/month</div>
-                  <a href="/ai-automation" className="text-blue-600 hover:text-blue-700 font-medium">
+                  <div className="text-2xl font-bold text-blue-400 mb-2 neon-text">Starting at $399/month</div>
+                  <a href="/ai-automation" className="text-blue-400 hover:text-blue-300 font-medium neon-text">
                     Learn More →
                   </a>
                 </div>
@@ -190,15 +198,15 @@ const HomePage: React.FC = () => {
           
           <div className="grid md:grid-cols-3 gap-8 mb-12">
             <Suspense fallback={<ServiceCardSkeleton />}>
-              <article className="bg-white rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
-                <div className="text-5xl mb-6 text-center">🏥</div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">AI Healthcare</h3>
-                <p className="text-gray-600 mb-6 text-center leading-relaxed">
+              <article className="futuristic-card hologram-effect p-8 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                <div className="text-5xl mb-6 text-center neon-text">🏥</div>
+                <h3 className="text-2xl font-bold text-green-300 mb-4 text-center neon-text">AI Healthcare</h3>
+                <p className="text-gray-300 mb-6 text-center leading-relaxed">
                   Cutting-edge AI solutions for medical imaging, drug discovery, and personalized medicine.
                 </p>
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-green-600 mb-2">Starting at $1,999/month</div>
-                  <a href="/ai-healthcare" className="text-green-600 hover:text-green-700 font-medium">
+                  <div className="text-2xl font-bold text-green-400 mb-2 neon-text">Starting at $1,999/month</div>
+                  <a href="/ai-healthcare" className="text-green-400 hover:text-green-300 font-medium neon-text">
                     Learn More →
                   </a>
                 </div>
@@ -206,15 +214,15 @@ const HomePage: React.FC = () => {
             </Suspense>
 
             <Suspense fallback={<ServiceCardSkeleton />}>
-              <article className="bg-white rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
-                <div className="text-5xl mb-6 text-center">💰</div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">AI Fintech</h3>
-                <p className="text-gray-600 mb-6 text-center leading-relaxed">
+              <article className="futuristic-card hologram-effect p-8 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                <div className="text-5xl mb-6 text-center neon-text">💰</div>
+                <h3 className="text-2xl font-bold text-indigo-300 mb-4 text-center neon-text">AI Fintech</h3>
+                <p className="text-gray-300 mb-6 text-center leading-relaxed">
                   Revolutionary AI-powered financial services including trading, fraud detection, and risk management.
                 </p>
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-indigo-600 mb-2">Starting at $1,499/month</div>
-                  <a href="/ai-fintech" className="text-indigo-600 hover:text-indigo-700 font-medium">
+                  <div className="text-2xl font-bold text-indigo-400 mb-2 neon-text">Starting at $1,499/month</div>
+                  <a href="/ai-fintech" className="text-indigo-400 hover:text-indigo-300 font-medium neon-text">
                     Learn More →
                   </a>
                 </div>
@@ -222,15 +230,15 @@ const HomePage: React.FC = () => {
             </Suspense>
 
             <Suspense fallback={<ServiceCardSkeleton />}>
-              <article className="bg-white rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
-                <div className="text-5xl mb-6 text-center">⚛️</div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">Quantum Computing</h3>
-                <p className="text-gray-600 mb-6 text-center leading-relaxed">
+              <article className="futuristic-card hologram-effect p-8 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                <div className="text-5xl mb-6 text-center neon-text">⚛️</div>
+                <h3 className="text-2xl font-bold text-purple-300 mb-4 text-center neon-text">Quantum Computing</h3>
+                <p className="text-gray-300 mb-6 text-center leading-relaxed">
                   Next-generation quantum computing capabilities for complex problem solving and optimization.
                 </p>
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-purple-600 mb-2">Custom Pricing</div>
-                  <a href="/quantum-computing" className="text-purple-600 hover:text-purple-700 font-medium">
+                  <div className="text-2xl font-bold text-purple-400 mb-2 neon-text">Custom Pricing</div>
+                  <a href="/quantum-computing" className="text-purple-400 hover:text-purple-300 font-medium neon-text">
                     Learn More →
                   </a>
                 </div>

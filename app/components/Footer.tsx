@@ -4,18 +4,18 @@ import { Phone, Mail, MapPin, Clock, Award, Shield, Zap } from 'lucide-react';
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-gray-900 text-white py-12">
+    <footer className="bg-black/90 backdrop-blur-md text-white py-12 border-t border-cyan-500/30">
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-4 gap-8">
           {/* Company Info */}
           <div>
-            <h3 className="text-2xl font-bold mb-4">Zion Tech Group</h3>
+            <h3 className="text-2xl font-bold mb-4 cyber-text neon-text">⚡ Zion Tech Group</h3>
             <p className="text-gray-300 mb-4">
               Leading provider of enterprise AI solutions, quantum computing, and autonomous
-              systems.
+              systems. Transforming businesses with cutting-edge technology.
             </p>
             <div className="text-gray-300">
-              <p>364 E Main St STE 1008</p>
+              <p>📍 364 E Main St STE 1008</p>
               <p>Middletown, DE 19709</p>
               <p>United States</p>
             </div>
@@ -23,40 +23,50 @@ const Footer: React.FC = () => {
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
+            <h4 className="text-lg font-semibold mb-4 text-cyan-300 neon-text">Quick Links</h4>
             <ul className="space-y-2">
               <li>
-                <Link to="/" className="text-gray-300 hover:text-white transition-colors">
+                <Link to="/" className="text-gray-300 hover:text-cyan-300 transition-colors neon-text">
                   Home
                 </Link>
               </li>
               <li>
-                <Link to="/about" className="text-gray-300 hover:text-white transition-colors">
+                <Link to="/about" className="text-gray-300 hover:text-cyan-300 transition-colors neon-text">
                   About
                 </Link>
               </li>
               <li>
-                <Link to="/services" className="text-gray-300 hover:text-white transition-colors">
+                <Link to="/services" className="text-gray-300 hover:text-cyan-300 transition-colors neon-text">
                   Services
                 </Link>
               </li>
               <li>
-                <Link to="/services-advertising" className="text-gray-300 hover:text-white transition-colors">
-                  AI Advertising
+                <Link to="/micro-saas" className="text-gray-300 hover:text-cyan-300 transition-colors neon-text">
+                  Micro SAAS
                 </Link>
               </li>
               <li>
-                <Link to="/case-studies" className="text-gray-300 hover:text-white transition-colors">
+                <Link to="/ai-cybersecurity-monitor" className="text-gray-300 hover:text-cyan-300 transition-colors neon-text">
+                  AI Cybersecurity
+                </Link>
+              </li>
+              <li>
+                <Link to="/smart-contract-audit-ai" className="text-gray-300 hover:text-cyan-300 transition-colors neon-text">
+                  Smart Contract Audit
+                </Link>
+              </li>
+              <li>
+                <Link to="/case-studies" className="text-gray-300 hover:text-cyan-300 transition-colors neon-text">
                   Case Studies
                 </Link>
               </li>
               <li>
-                <Link to="/enterprise" className="text-gray-300 hover:text-white transition-colors">
+                <Link to="/enterprise" className="text-gray-300 hover:text-cyan-300 transition-colors neon-text">
                   Enterprise
                 </Link>
               </li>
               <li>
-                <Link to="/team" className="text-gray-300 hover:text-white transition-colors">
+                <Link to="/team" className="text-gray-300 hover:text-cyan-300 transition-colors neon-text">
                   Team
                 </Link>
               </li>

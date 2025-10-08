@@ -9,77 +9,83 @@ const Navigation: React.FC = () => {
   const [itServicesOpen, setItServicesOpen] = useState(false);
 
   return (
-    <nav className="bg-white shadow-lg sticky top-0 z-50">
+    <nav className="bg-black/80 backdrop-blur-md shadow-lg sticky top-0 z-50 border-b border-cyan-500/30">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
-          <Link to="/" className="text-2xl font-bold text-blue-600">
-            Zion Tech Group
+          <Link to="/" className="text-2xl font-bold cyber-text neon-text">
+            ⚡ Zion Tech Group
           </Link>
 
           {/* Desktop Menu */}
           <div className="hidden md:flex space-x-8">
-            <Link to="/" className="text-gray-700 hover:text-blue-600 transition-colors">
+            <Link to="/" className="text-cyan-300 hover:text-cyan-100 transition-colors neon-text">
               Home
             </Link>
-            <Link to="/about" className="text-gray-700 hover:text-blue-600 transition-colors">
+            <Link to="/about" className="text-cyan-300 hover:text-cyan-100 transition-colors neon-text">
               About
             </Link>
             <div className="relative">
               <button
                 onClick={() => setServicesOpen(!servicesOpen)}
-                className="text-gray-700 hover:text-blue-600 transition-colors flex items-center"
+                className="text-cyan-300 hover:text-cyan-100 transition-colors flex items-center neon-text"
               >
                 Services
                 <ChevronDown className="w-4 h-4 ml-1" />
               </button>
               {servicesOpen && (
-                <div className="absolute top-full left-0 mt-2 w-96 bg-white rounded-lg shadow-lg border py-2 z-50">
+                <div className="absolute top-full left-0 mt-2 w-96 bg-black/90 backdrop-blur-md rounded-lg shadow-lg border border-cyan-500/30 py-2 z-50">
                   <div className="grid grid-cols-2 gap-2 p-2">
-                    <Link to="/services" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
+                    <Link to="/services" className="block px-4 py-2 text-cyan-300 hover:bg-cyan-500/20 hover:text-cyan-100 rounded neon-text">
                       All Services
                     </Link>
-                    <Link to="/micro-saas" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
+                    <Link to="/micro-saas" className="block px-4 py-2 text-cyan-300 hover:bg-cyan-500/20 hover:text-cyan-100 rounded neon-text">
                       Micro SAAS
                     </Link>
-                    <Link to="/ai-services" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
+                    <Link to="/ai-services" className="block px-4 py-2 text-cyan-300 hover:bg-cyan-500/20 hover:text-cyan-100 rounded neon-text">
                       AI Services
                     </Link>
-                    <Link to="/ai-marketing" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
+                    <Link to="/ai-marketing" className="block px-4 py-2 text-cyan-300 hover:bg-cyan-500/20 hover:text-cyan-100 rounded neon-text">
                       AI Marketing
                     </Link>
-                    <Link to="/ai-automation" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
+                    <Link to="/ai-automation" className="block px-4 py-2 text-cyan-300 hover:bg-cyan-500/20 hover:text-cyan-100 rounded neon-text">
                       AI Automation
                     </Link>
-                    <Link to="/ai-healthcare" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
+                    <Link to="/ai-healthcare" className="block px-4 py-2 text-cyan-300 hover:bg-cyan-500/20 hover:text-cyan-100 rounded neon-text">
                       AI Healthcare
                     </Link>
-                    <Link to="/ai-fintech" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
+                    <Link to="/ai-fintech" className="block px-4 py-2 text-cyan-300 hover:bg-cyan-500/20 hover:text-cyan-100 rounded neon-text">
                       AI Fintech
                     </Link>
-                    <Link to="/it-services" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
+                    <Link to="/it-services" className="block px-4 py-2 text-cyan-300 hover:bg-cyan-500/20 hover:text-cyan-100 rounded neon-text">
                       IT Services
                     </Link>
-                    <Link to="/quantum-computing" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
+                    <Link to="/quantum-computing" className="block px-4 py-2 text-cyan-300 hover:bg-cyan-500/20 hover:text-cyan-100 rounded neon-text">
                       Quantum Computing
                     </Link>
-                    <Link to="/autonomous-systems" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
+                    <Link to="/autonomous-systems" className="block px-4 py-2 text-cyan-300 hover:bg-cyan-500/20 hover:text-cyan-100 rounded neon-text">
                       Autonomous Systems
                     </Link>
-                    <Link to="/business-intelligence" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
+                    <Link to="/business-intelligence" className="block px-4 py-2 text-cyan-300 hover:bg-cyan-500/20 hover:text-cyan-100 rounded neon-text">
                       Business Intelligence
                     </Link>
-                    <Link to="/blockchain-web3" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
+                    <Link to="/blockchain-web3" className="block px-4 py-2 text-cyan-300 hover:bg-cyan-500/20 hover:text-cyan-100 rounded neon-text">
                       Blockchain & Web3
                     </Link>
-                    <Link to="/iot-edge-computing" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
+                    <Link to="/iot-edge-computing" className="block px-4 py-2 text-cyan-300 hover:bg-cyan-500/20 hover:text-cyan-100 rounded neon-text">
                       IoT & Edge Computing
                     </Link>
-                    <Link to="/cybersecurity" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
+                    <Link to="/cybersecurity" className="block px-4 py-2 text-cyan-300 hover:bg-cyan-500/20 hover:text-cyan-100 rounded neon-text">
                       Cybersecurity
                     </Link>
-                    <Link to="/services-advertising" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
+                    <Link to="/services-advertising" className="block px-4 py-2 text-cyan-300 hover:bg-cyan-500/20 hover:text-cyan-100 rounded neon-text">
                       Advertising Services
+                    </Link>
+                    <Link to="/ai-cybersecurity-monitor" className="block px-4 py-2 text-cyan-300 hover:bg-cyan-500/20 hover:text-cyan-100 rounded neon-text">
+                      AI Cybersecurity Monitor
+                    </Link>
+                    <Link to="/smart-contract-audit-ai" className="block px-4 py-2 text-cyan-300 hover:bg-cyan-500/20 hover:text-cyan-100 rounded neon-text">
+                      Smart Contract Audit AI
                     </Link>
                   </div>
                 </div>
