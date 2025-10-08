@@ -148,23 +148,23 @@ const ITServicesPage: React.FC = () => {
         <meta name="keywords" content="IT services, cloud computing, cybersecurity, DevOps, infrastructure, technology consulting" />
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+      <div className="min-h-screen particles cyber-grid">
         {/* Hero Section */}
         <section className="relative overflow-hidden bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-20">
           <div className="absolute inset-0 bg-black opacity-20"></div>
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+              <h1 className="text-5xl md:text-7xl font-bold mb-6 gradient-text glitch" data-text="Professional IT Services">
                 Professional IT Services
               </h1>
-              <p className="text-xl md:text-2xl mb-8 text-blue-100 max-w-3xl mx-auto">
+              <p className="text-2xl md:text-3xl mb-8 text-cyan-300 max-w-4xl mx-auto neon-glow">
                 Comprehensive technology solutions to power your business growth and digital transformation
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors">
+                <button className="futuristic-btn text-lg px-8 py-4 neon-glow">
                   Get Free Assessment
                 </button>
-                <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
+                <button className="futuristic-card px-8 py-4 text-white border-2 border-cyan-400 hover:border-cyan-300 transition-all duration-300">
                   View Our Portfolio
                 </button>
               </div>
@@ -232,27 +232,27 @@ const ITServicesPage: React.FC = () => {
                 {itServices
                   .filter(service => service.category === category)
                   .map((service, index) => (
-                    <div key={index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
+                    <div key={index} className="futuristic-card p-6 holographic">
                       <div className="text-4xl mb-4">{service.icon}</div>
-                      <h3 className="text-xl font-semibold text-gray-900 mb-3">{service.title}</h3>
-                      <p className="text-gray-600 mb-4">{service.description}</p>
+                      <h3 className="text-xl font-semibold text-white mb-3 gradient-text">{service.title}</h3>
+                      <p className="text-gray-300 mb-4 leading-relaxed">{service.description}</p>
                       
                       <div className="mb-4">
                         <div className="flex items-center justify-between mb-2">
-                          <span className="text-2xl font-bold text-blue-600">{service.price}</span>
-                          <span className="text-sm text-gray-500">Market: {service.marketPrice}</span>
+                          <span className="text-2xl font-bold text-cyan-400">{service.price}</span>
+                          <span className="text-sm text-gray-400">Market: {service.marketPrice}</span>
                         </div>
-                        <div className="text-sm text-green-600 font-semibold">
+                        <div className="text-sm text-green-400 font-semibold">
                           Save up to 40% vs market rates
                         </div>
                       </div>
 
                       <div className="mb-4">
-                        <h4 className="font-semibold text-gray-900 mb-2">Key Features:</h4>
+                        <h4 className="font-semibold text-white mb-2">Key Features:</h4>
                         <ul className="space-y-1">
                           {service.features.map((feature, featureIndex) => (
-                            <li key={featureIndex} className="flex items-center text-sm text-gray-600">
-                              <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                            <li key={featureIndex} className="flex items-center text-sm text-gray-300">
+                              <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                               {feature}
                             </li>
                           ))}
@@ -260,10 +260,10 @@ const ITServicesPage: React.FC = () => {
                       </div>
 
                       <div className="mb-4">
-                        <h4 className="font-semibold text-gray-900 mb-2">Technologies:</h4>
+                        <h4 className="font-semibold text-white mb-2">Technologies:</h4>
                         <div className="flex flex-wrap gap-2">
                           {service.technologies.map((tech, techIndex) => (
-                            <span key={techIndex} className="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">
+                            <span key={techIndex} className="bg-blue-900/30 text-blue-300 text-xs px-2 py-1 rounded border border-blue-500/30">
                               {tech}
                             </span>
                           ))}
@@ -271,18 +271,18 @@ const ITServicesPage: React.FC = () => {
                       </div>
 
                       <div className="mb-6">
-                        <h4 className="font-semibold text-gray-900 mb-2">Business Benefits:</h4>
+                        <h4 className="font-semibold text-white mb-2">Business Benefits:</h4>
                         <ul className="space-y-1">
                           {service.benefits.map((benefit, benefitIndex) => (
-                            <li key={benefitIndex} className="flex items-center text-sm text-gray-600">
-                              <Star className="w-4 h-4 text-yellow-500 mr-2 flex-shrink-0" />
+                            <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
+                              <Star className="w-4 h-4 text-yellow-400 mr-2 flex-shrink-0" />
                               {benefit}
                             </li>
                           ))}
                         </ul>
                       </div>
 
-                      <button className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+                      <button className="w-full futuristic-btn py-2 px-4 text-sm">
                         Get Quote
                       </button>
                     </div>
