@@ -3,6 +3,8 @@
  */
 
 import { envConfig } from './envConfig';
+import { errorTracking, ErrorCategory, ErrorSeverity } from './errorTracking';
+import { performanceMonitoring } from './performanceMonitoring';
 
 export type HttpMethod = 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE';
 
@@ -108,11 +110,17 @@ class ApiClient {
     }
 
     for (let attempt = 0; attempt <= retries; attempt++) {
+      const requestStart = performance.now();
+      
       try {
         const controller = new AbortController();
         const timeoutId = setTimeout(() => controller.abort(), timeout);
 
         const url = endpoint.startsWith('http') ? endpoint : `${this.baseUrl}${endpoint}`;
+        
+        // Mark request start
+        const requestId = `api_${processedConfig.method}_${endpoint.replace(/\//g, '_')}`;
+        performanceMonitoring.mark(`${requestId}_start`);
         
         const response = await fetch(url, {
           method: processedConfig.method,
@@ -126,15 +134,35 @@ class ApiClient {
         });
 
         clearTimeout(timeoutId);
+        
+        // Mark request end and measure
+        performanceMonitoring.mark(`${requestId}_end`);
+        const duration = performance.now() - requestStart;
+        performanceMonitoring.recordCustomMetric(requestId, duration, 'ms');
 
         if (!response.ok) {
           const errorData = await response.json().catch(() => ({}));
-          throw new ApiError(
+          const apiError = new ApiError(
             errorData.message || `HTTP Error ${response.status}`,
             response.status,
             response.statusText,
             errorData
           );
+          
+          // Track API error
+          errorTracking.trackError(apiError, {
+            category: ErrorCategory.NETWORK,
+            severity: response.status >= 500 ? ErrorSeverity.HIGH : ErrorSeverity.MEDIUM,
+            context: {
+              endpoint,
+              method: processedConfig.method,
+              status: response.status,
+              attempt: attempt + 1,
+              duration,
+            },
+          });
+          
+          throw apiError;
         }
 
         const data = await response.json().catch(() => ({}));
@@ -155,6 +183,22 @@ class ApiClient {
 
       } catch (error) {
         lastError = error as Error;
+        const duration = performance.now() - requestStart;
+
+        // Track error if not already tracked (for network errors, timeouts, etc.)
+        if (!(error instanceof ApiError)) {
+          errorTracking.trackError(lastError, {
+            category: ErrorCategory.NETWORK,
+            severity: ErrorSeverity.HIGH,
+            context: {
+              endpoint,
+              method: processedConfig.method,
+              attempt: attempt + 1,
+              duration,
+              errorType: error.name,
+            },
+          });
+        }
 
         // Don't retry on client errors (4xx)
         if (error instanceof ApiError && error.status >= 400 && error.status < 500) {
