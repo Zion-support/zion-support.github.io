@@ -1,7 +1,5 @@
-
-// Jest configuration for Vite project
+// Jest configuration for Vite/React project
 module.exports = {
-
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
   testEnvironment: 'jest-environment-jsdom',
   moduleNameMapper: {
@@ -10,9 +8,10 @@ module.exports = {
     '^@/components/(.*)$': '<rootDir>/app/components/$1',
     '^@/utils/(.*)$': '<rootDir>/src/utils/$1',
     '\\.(css|less|scss|sass)$': 'identity-obj-proxy',
+    '\\.(jpg|jpeg|png|gif|svg|webp)$': '<rootDir>/__mocks__/fileMock.js',
   },
   transform: {
-    '^.+\\.(js|jsx|ts|tsx)$': ['babel-jest', { configFile: './babel.config.js' }],
+    '^.+\\.(ts|tsx|js|jsx)$': ['babel-jest', { configFile: './babel.config.js' }],
   },
   testMatch: [
     '**/__tests__/**/*.[jt]s?(x)',
@@ -23,7 +22,6 @@ module.exports = {
     'src/**/*.{js,jsx,ts,tsx}',
     '!**/*.d.ts',
     '!**/node_modules/**',
-    '!**/.next/**',
     '!**/coverage/**',
     '!**/dist/**',
   ],
@@ -37,7 +35,6 @@ module.exports = {
   },
   testPathIgnorePatterns: [
     '<rootDir>/node_modules/',
-    '<rootDir>/.next/',
     '<rootDir>/out/',
     '<rootDir>/dist/',
     '<rootDir>/backup/',
@@ -62,5 +59,3 @@ module.exports = {
     '/node_modules/(?!(lucide-react|@heroicons/react)/)',
   ],
 };
-
-

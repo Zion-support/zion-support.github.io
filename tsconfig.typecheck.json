@@ -4,13 +4,18 @@
     "noEmit": true,
     "skipLibCheck": true
   },
-  "include": ["src/**/*.ts", "src/**/*.tsx", "types/**/*.d.ts"],
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "app/**/*.ts",
+    "app/**/*.tsx",
+    "types/**/*.d.ts"
+  ],
   "exclude": [
     "node_modules",
     "dist",
     "build",
     "coverage",
-    "app/**/*",
     "**/*disabled*/**",
     "**/*backup*/**",
     "**/*corrupted*/**",
@@ -29,17 +34,21 @@
     "**/ErrorBoundary.tsx",
     "app/blog/**",
     "app/guides/**",
-    "app/enterprise/**",
-    "app/offline/**",
-    "app/not-found.tsx",
-    "app/layout.tsx",
-    "app/components/NewestContent2025Banner.tsx",
+    "app/services/**",
+    "app/components/OptimizedImage.tsx",
+    "app/components/SEOOptimizer.tsx",
     "app/components/UltimateBusinessIntelligence2025Banner.tsx",
     "app/components/UltimateBusinessIntelligenceShowcase2025.tsx",
     "app/components/UnifiedContentPromotion.tsx",
-    "app/privacy/**",
+    "app/enterprise/page.tsx",
+    "app/layout.tsx",
+    "app/not-found.tsx",
+    "app/offline/page.tsx",
+    "app/page-minimal.tsx",
+    "app/page-optimized.tsx",
+    "app/privacy/page.tsx",
     "app/sitemap.ts",
-    "app/team/**",
-    "app/terms/**"
+    "app/team/page.tsx",
+    "app/terms/page.tsx"
   ]
 }
