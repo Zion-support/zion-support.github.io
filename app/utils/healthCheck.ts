@@ -218,10 +218,10 @@ class HealthCheckService {
    */
   private checkBrowserAPIs(): HealthCheck {
     const requiredAPIs = [
-      'fetch'
-      'localStorage'
-      'sessionStorage'
-      'console'
+      'fetch',
+      'localStorage',
+      'sessionStorage',
+      'console',
       'navigator'
     ]
 
@@ -235,15 +235,15 @@ class HealthCheckService {
 
     if (missingAPIs.length > 0) {
       return {
-        name: 'browser-apis'
-        status: 'warn'
-        message: `Missing browser APIs: ${missingAPIs.join(', ')}`
+        name: 'browser-apis',
+        status: 'warn',
+        message: `Missing browser APIs: ${missingAPIs.join(', ')}`,
         details: { missingAPIs }
       }
     }
     return {
-      name: 'browser-apis'
-      status: 'pass'
+      name: 'browser-apis',
+      status: 'pass',
       message: 'All required browser APIs available'
     }
   }

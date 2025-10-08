@@ -101,6 +101,7 @@ const UltimateBusinessIntelligence2025Banner = () => {
           </p>
         </div>
 
+        <div className="main-content">
           <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
             <Link
               to="/services"
@@ -201,6 +202,7 @@ const UltimateBusinessIntelligence2025Banner = () => {
               />
             ))}
           </div>
+        </div>
         </div>
 
         {/* Stats Section */}
