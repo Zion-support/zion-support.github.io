@@ -340,11 +340,283 @@ const MicroSAASPage: React.FC = () => {
       description: 'Intelligent resume screening, candidate matching, interview scheduling, and onboarding automation.',
       icon: '👥',
       price: '$179/month',
-      features: ['Resume parsing', 'Candidate scoring', 'Interview scheduling', 'Onboarding automation', 'Performance tracking', 'Diversity analytics'],
-      benefits: ['Reduce hiring time by 50%', 'Improve candidate quality', 'Streamline HR processes', 'Ensure diversity'],
-      marketPrice: '$250-500/month',
-      category: 'Human Resources',
+      features: ['Resume parsing', 'Candidate matching', 'Interview scheduling', 'Onboarding automation', 'Skills assessment', 'Background checks'],
+      benefits: ['Reduce hiring time by 50%', 'Improve candidate quality', 'Save 30+ hours/week', 'Eliminate bias'],
+      marketPrice: '$300-600/month',
+      category: 'HR & Recruitment',
       technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+
+    // AI Customer Support & Chatbots
+    {
+      title: 'AI Customer Support Bot Pro',
+      description: 'Intelligent customer service automation with natural language processing, sentiment analysis, and human handoff.',
+      icon: '🤖',
+      price: '$199/month',
+      features: ['Natural language processing', 'Sentiment analysis', 'Human handoff', 'Multi-language support', 'Knowledge base integration', 'Analytics dashboard'],
+      benefits: ['Reduce support costs by 60%', 'Improve response time by 80%', 'Increase customer satisfaction', '24/7 availability'],
+      marketPrice: '$300-800/month',
+      category: 'Customer Support',
+      technologies: ['OpenAI GPT', 'NLP', 'React', 'Node.js', 'MongoDB'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI Live Chat Assistant',
+      description: 'Real-time customer support with intelligent responses, context awareness, and seamless human escalation.',
+      icon: '💬',
+      price: '$149/month',
+      features: ['Real-time responses', 'Context awareness', 'Human escalation', 'Multi-channel support', 'Custom branding', 'Performance analytics'],
+      benefits: ['Increase conversion by 25%', 'Reduce response time', 'Improve customer experience', 'Scale support team'],
+      marketPrice: '$200-500/month',
+      category: 'Customer Support',
+      technologies: ['WebSocket', 'NLP', 'React', 'Node.js', 'Redis'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+
+    // AI Project Management & Productivity
+    {
+      title: 'AI Project Manager Pro',
+      description: 'Intelligent project management with automated task assignment, deadline prediction, and resource optimization.',
+      icon: '📋',
+      price: '$179/month',
+      features: ['Task automation', 'Deadline prediction', 'Resource optimization', 'Risk assessment', 'Team collaboration', 'Progress tracking'],
+      benefits: ['Increase productivity by 40%', 'Reduce project delays', 'Optimize resource allocation', 'Improve team coordination'],
+      marketPrice: '$250-500/month',
+      category: 'Project Management',
+      technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Custom AI Models'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI Time Tracking & Analytics',
+      description: 'Smart time tracking with automatic categorization, productivity insights, and billable hour optimization.',
+      icon: '⏰',
+      price: '$79/month',
+      features: ['Automatic time tracking', 'Productivity insights', 'Billable hour optimization', 'Team analytics', 'Client reporting', 'Integration APIs'],
+      benefits: ['Increase billable hours by 20%', 'Improve time management', 'Reduce manual tracking', 'Better client transparency'],
+      marketPrice: '$120-250/month',
+      category: 'Productivity',
+      technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Time Tracking APIs'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI Meeting Assistant Pro',
+      description: 'Intelligent meeting management with transcription, action item extraction, and follow-up automation.',
+      icon: '🎯',
+      price: '$129/month',
+      features: ['Meeting transcription', 'Action item extraction', 'Follow-up automation', 'Meeting summaries', 'Calendar integration', 'Team collaboration'],
+      benefits: ['Save 5+ hours/week', 'Improve meeting efficiency', 'Never miss action items', 'Better meeting outcomes'],
+      marketPrice: '$200-400/month',
+      category: 'Productivity',
+      technologies: ['Speech Recognition', 'NLP', 'React', 'Node.js', 'Calendar APIs'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+
+    // AI Security & Compliance
+    {
+      title: 'AI Security Monitoring Suite',
+      description: 'Advanced threat detection with behavioral analysis, anomaly detection, and automated incident response.',
+      icon: '🔒',
+      price: '$299/month',
+      features: ['Threat detection', 'Behavioral analysis', 'Anomaly detection', 'Incident response', 'Compliance monitoring', 'Security reporting'],
+      benefits: ['Prevent 95% of security breaches', 'Reduce response time by 80%', 'Ensure compliance', 'Lower security costs'],
+      marketPrice: '$500-1200/month',
+      category: 'Security',
+      technologies: ['Machine Learning', 'Python', 'React', 'PostgreSQL', 'Security APIs'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI Password Manager Pro',
+      description: 'Intelligent password management with breach detection, security scoring, and automated password generation.',
+      icon: '🔐',
+      price: '$49/month',
+      features: ['Password generation', 'Breach detection', 'Security scoring', 'Auto-fill', 'Team sharing', 'Multi-device sync'],
+      benefits: ['Improve security posture', 'Reduce password reuse', 'Prevent breaches', 'Simplify password management'],
+      marketPrice: '$80-150/month',
+      category: 'Security',
+      technologies: ['Encryption', 'React', 'Node.js', 'PostgreSQL', 'Security APIs'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+
+    // AI Data Management & Processing
+    {
+      title: 'AI Data Cleaning & Validation',
+      description: 'Automated data cleaning with intelligent error detection, validation rules, and data quality scoring.',
+      icon: '🧹',
+      price: '$199/month',
+      features: ['Data cleaning', 'Error detection', 'Validation rules', 'Quality scoring', 'Data profiling', 'Automated fixes'],
+      benefits: ['Improve data quality by 90%', 'Reduce manual work by 70%', 'Prevent data errors', 'Save 20+ hours/week'],
+      marketPrice: '$300-600/month',
+      category: 'Data Management',
+      technologies: ['Python', 'Pandas', 'Machine Learning', 'React', 'PostgreSQL'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI Data Migration Assistant',
+      description: 'Intelligent data migration with mapping automation, validation, and rollback capabilities.',
+      icon: '🔄',
+      price: '$249/month',
+      features: ['Mapping automation', 'Data validation', 'Rollback capabilities', 'Progress tracking', 'Error handling', 'Custom transformations'],
+      benefits: ['Reduce migration time by 60%', 'Prevent data loss', 'Ensure data integrity', 'Lower migration costs'],
+      marketPrice: '$400-800/month',
+      category: 'Data Management',
+      technologies: ['ETL', 'Python', 'React', 'Node.js', 'Database APIs'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+
+    // AI Communication & Collaboration
+    {
+      title: 'AI Team Communication Hub',
+      description: 'Intelligent team communication with smart notifications, message prioritization, and collaboration insights.',
+      icon: '💼',
+      price: '$149/month',
+      features: ['Smart notifications', 'Message prioritization', 'Collaboration insights', 'Team analytics', 'Integration hub', 'Custom workflows'],
+      benefits: ['Improve team productivity by 30%', 'Reduce notification fatigue', 'Better collaboration', 'Streamline communication'],
+      marketPrice: '$200-400/month',
+      category: 'Communication',
+      technologies: ['NLP', 'React', 'Node.js', 'WebSocket', 'MongoDB'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI Video Conferencing Assistant',
+      description: 'Smart video conferencing with automatic transcription, meeting insights, and virtual background AI.',
+      icon: '📹',
+      price: '$199/month',
+      features: ['Auto transcription', 'Meeting insights', 'Virtual backgrounds', 'Noise cancellation', 'Screen sharing AI', 'Recording management'],
+      benefits: ['Improve meeting quality', 'Better accessibility', 'Enhanced collaboration', 'Professional appearance'],
+      marketPrice: '$300-600/month',
+      category: 'Communication',
+      technologies: ['WebRTC', 'Speech Recognition', 'Computer Vision', 'React', 'Node.js'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+
+    // AI IoT & Smart Devices
+    {
+      title: 'AI IoT Device Manager',
+      description: 'Intelligent IoT device management with predictive maintenance, energy optimization, and automated controls.',
+      icon: '🏠',
+      price: '$299/month',
+      features: ['Device management', 'Predictive maintenance', 'Energy optimization', 'Automated controls', 'Alert system', 'Analytics dashboard'],
+      benefits: ['Reduce maintenance costs by 40%', 'Optimize energy usage', 'Prevent device failures', 'Improve efficiency'],
+      marketPrice: '$500-1000/month',
+      category: 'IoT',
+      technologies: ['IoT Protocols', 'Machine Learning', 'React', 'Node.js', 'Time Series DB'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI Smart Home Controller',
+      description: 'Intelligent home automation with voice control, learning preferences, and energy management.',
+      icon: '🏡',
+      price: '$149/month',
+      features: ['Voice control', 'Learning preferences', 'Energy management', 'Scene automation', 'Security integration', 'Mobile app'],
+      benefits: ['Increase home efficiency', 'Reduce energy costs', 'Improve security', 'Enhanced comfort'],
+      marketPrice: '$200-400/month',
+      category: 'Smart Home',
+      technologies: ['Voice Recognition', 'IoT', 'React Native', 'Node.js', 'MQTT'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+
+    // AI Gaming & Entertainment
+    {
+      title: 'AI Game Analytics Platform',
+      description: 'Advanced gaming analytics with player behavior analysis, cheat detection, and performance optimization.',
+      icon: '🎮',
+      price: '$199/month',
+      features: ['Player analytics', 'Cheat detection', 'Performance optimization', 'A/B testing', 'Revenue analytics', 'Player segmentation'],
+      benefits: ['Increase player retention by 35%', 'Reduce cheating incidents', 'Optimize game performance', 'Maximize revenue'],
+      marketPrice: '$300-800/month',
+      category: 'Gaming',
+      technologies: ['Game Analytics', 'Machine Learning', 'React', 'Node.js', 'Redis'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI Content Moderation Suite',
+      description: 'Automated content moderation with image, text, and video analysis for safe online communities.',
+      icon: '🛡️',
+      price: '$249/month',
+      features: ['Image moderation', 'Text analysis', 'Video moderation', 'Real-time filtering', 'Custom rules', 'Moderation dashboard'],
+      benefits: ['Reduce moderation costs by 70%', 'Improve response time', 'Ensure community safety', 'Scale moderation'],
+      marketPrice: '$400-1000/month',
+      category: 'Content Moderation',
+      technologies: ['Computer Vision', 'NLP', 'React', 'Node.js', 'PostgreSQL'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+
+    // AI Agriculture & Environment
+    {
+      title: 'AI Crop Monitoring System',
+      description: 'Intelligent agricultural monitoring with crop health analysis, yield prediction, and pest detection.',
+      icon: '🌾',
+      price: '$199/month',
+      features: ['Crop health analysis', 'Yield prediction', 'Pest detection', 'Weather integration', 'Irrigation optimization', 'Farm analytics'],
+      benefits: ['Increase crop yield by 25%', 'Reduce water usage', 'Prevent crop diseases', 'Optimize farming practices'],
+      marketPrice: '$300-600/month',
+      category: 'Agriculture',
+      technologies: ['Computer Vision', 'IoT', 'React', 'Python', 'PostgreSQL'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI Environmental Monitoring',
+      description: 'Smart environmental tracking with air quality analysis, pollution detection, and sustainability insights.',
+      icon: '🌍',
+      price: '$149/month',
+      features: ['Air quality monitoring', 'Pollution detection', 'Sustainability insights', 'Alert system', 'Data visualization', 'Compliance reporting'],
+      benefits: ['Improve environmental awareness', 'Ensure compliance', 'Optimize resource usage', 'Better decision making'],
+      marketPrice: '$200-500/month',
+      category: 'Environmental',
+      technologies: ['IoT Sensors', 'Machine Learning', 'React', 'Node.js', 'Time Series DB'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+
+    // AI Transportation & Logistics
+    {
+      title: 'AI Fleet Management System',
+      description: 'Intelligent fleet optimization with route planning, fuel efficiency, and predictive maintenance.',
+      icon: '🚛',
+      price: '$299/month',
+      features: ['Route optimization', 'Fuel efficiency', 'Predictive maintenance', 'Driver analytics', 'Cost tracking', 'Compliance monitoring'],
+      benefits: ['Reduce fuel costs by 20%', 'Improve delivery times', 'Prevent breakdowns', 'Optimize fleet utilization'],
+      marketPrice: '$500-1200/month',
+      category: 'Transportation',
+      technologies: ['GPS Tracking', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI Supply Chain Optimizer',
+      description: 'Smart supply chain management with demand forecasting, inventory optimization, and risk assessment.',
+      icon: '📦',
+      price: '$399/month',
+      features: ['Demand forecasting', 'Inventory optimization', 'Risk assessment', 'Supplier management', 'Cost analysis', 'Performance tracking'],
+      benefits: ['Reduce inventory costs by 30%', 'Improve supply chain efficiency', 'Minimize risks', 'Better supplier relationships'],
+      marketPrice: '$600-1500/month',
+      category: 'Supply Chain',
+      technologies: ['Supply Chain Analytics', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+
+    // AI Energy & Utilities
+    {
+      title: 'AI Energy Management System',
+      description: 'Smart energy optimization with consumption analysis, renewable integration, and cost optimization.',
+      icon: '⚡',
+      price: '$199/month',
+      features: ['Consumption analysis', 'Renewable integration', 'Cost optimization', 'Demand response', 'Energy forecasting', 'Sustainability tracking'],
+      benefits: ['Reduce energy costs by 25%', 'Increase renewable usage', 'Optimize consumption', 'Improve sustainability'],
+      marketPrice: '$300-800/month',
+      category: 'Energy',
+      technologies: ['Energy Analytics', 'Machine Learning', 'React', 'Node.js', 'IoT'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI Smart Grid Controller',
+      description: 'Intelligent grid management with load balancing, fault detection, and automated responses.',
+      icon: '🔌',
+      price: '$499/month',
+      features: ['Load balancing', 'Fault detection', 'Automated responses', 'Grid optimization', 'Renewable integration', 'Real-time monitoring'],
+      benefits: ['Improve grid stability', 'Reduce outages', 'Optimize energy distribution', 'Integrate renewables'],
+      marketPrice: '$800-2000/month',
+      category: 'Utilities',
+      technologies: ['Grid Management', 'Machine Learning', 'React', 'Python', 'Real-time Systems'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
