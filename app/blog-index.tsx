@@ -31,7 +31,6 @@ const BlogPage: React.FC = () => {
               Latest insights on AI, enterprise automation, and digital
               transformation
             </p>
->>>>>>> 1684f58a157a4496bdf1f11291796d45799723dd
           </header>
 
           <div className='max-w-4xl mx-auto'>

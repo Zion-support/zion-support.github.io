@@ -1,4 +1,3 @@
-import React from 'react';
 /**
  * Security Enhancer
  * Provides comprehensive security utilities and monitoring
@@ -128,13 +127,7 @@ class SecurityEnhancer {
     
     // Override console methods to detect debugging
     ['log', 'warn', 'error', 'info'].forEach(method => {
->>>>>>> 1684f58a157a4496bdf1f11291796d45799723dd
-=======
-      (console as Record<string, Function>)[method] = (...args: unknown[]) => {
->>>>>>> cursor/fix-errors-and-merge-to-main-5c5e
-=======
       (console as { [key: string]: (...args: unknown[]) => void })[method] = (...args: unknown[]) => {
->>>>>>> 5a6fab5466218b5fd438f48f6649158efa56a5c3
         this.metrics.suspiciousActivity++;
         originalConsole[method](...args);
       };

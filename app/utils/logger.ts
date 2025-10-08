@@ -1,4 +1,3 @@
-import React from 'react';
 /**
  * Enhanced Logger Utility
  * Production-ready logging with multiple levels and formatting
@@ -80,39 +79,24 @@ class Logger {
   /**
    * Log a debug message
    */
-  debug(message: string, contextOrMetadata?: string | Record<string, unknown>, _metadata?: Record<string, unknown>): void {
-    const [context, meta] = this.parseArgs(contextOrMetadata, _metadata);
->>>>>>> cursor/fix-errors-and-merge-to-main-4e61
-=======
   debug(message: string, contextOrMetadata?: string | Record<string, unknown>, metadata?: Record<string, unknown>): void {
     const [context, meta] = this.parseArgs(contextOrMetadata, metadata);
->>>>>>> 1684f58a157a4496bdf1f11291796d45799723dd
     this.log(LogLevel.DEBUG, message, context, meta);
   }
 
   /**
    * Log an info message
    */
-  info(message: string, contextOrMetadata?: string | Record<string, unknown>, _metadata?: Record<string, unknown>): void {
-    const [context, meta] = this.parseArgs(contextOrMetadata, _metadata);
->>>>>>> cursor/fix-errors-and-merge-to-main-4e61
-=======
   info(message: string, contextOrMetadata?: string | Record<string, unknown>, metadata?: Record<string, unknown>): void {
     const [context, meta] = this.parseArgs(contextOrMetadata, metadata);
->>>>>>> 1684f58a157a4496bdf1f11291796d45799723dd
     this.log(LogLevel.INFO, message, context, meta);
   }
 
   /**
    * Log a warning message
    */
-  warn(message: string, contextOrMetadata?: string | Record<string, unknown>, _metadata?: Record<string, unknown>): void {
-    const [context, meta] = this.parseArgs(contextOrMetadata, _metadata);
->>>>>>> cursor/fix-errors-and-merge-to-main-4e61
-=======
   warn(message: string, contextOrMetadata?: string | Record<string, unknown>, metadata?: Record<string, unknown>): void {
     const [context, meta] = this.parseArgs(contextOrMetadata, metadata);
->>>>>>> 1684f58a157a4496bdf1f11291796d45799723dd
     this.log(LogLevel.WARN, message, context, meta);
   }
 
@@ -418,7 +402,6 @@ class Logger {
 class ContextLogger {
   constructor(private logger: Logger, private context: string) {}
 
->>>>>>> 1684f58a157a4496bdf1f11291796d45799723dd
   debug(message: string, metadata?: Record<string, unknown>): void {
     this.logger.debug(message, this.context, metadata);
   }
@@ -437,12 +420,6 @@ class ContextLogger {
 
   fatal(message: string, error?: Error, metadata?: Record<string, unknown>): void {
     this.logger.fatal(message, error, this.context, metadata);
-  debug(message: string, _metadata?: Record<string, unknown>): void {
-    this.logger.debug(message, this.context, _metadata);
-  }
-
-  info(message: string, _metadata?: Record<string, unknown>): void {
-    this.logger.info(message, this.context, _metadata);
   }
 
   warn(message: string, _metadata?: Record<string, unknown>): void {
@@ -455,9 +432,6 @@ class ContextLogger {
 
   fatal(message: string, error?: Error, _metadata?: Record<string, unknown>): void {
     this.logger.fatal(message, error, this.context, _metadata);
->>>>>>> cursor/fix-errors-and-merge-to-main-4e61
-=======
->>>>>>> 1684f58a157a4496bdf1f11291796d45799723dd
   }
 
   perf(metric: string, value: number, _metadata?: Record<string, unknown>): void {

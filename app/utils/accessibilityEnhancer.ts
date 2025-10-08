@@ -1,4 +1,3 @@
-import React from 'react';
 /**
  * Advanced Accessibility Enhancement Utility
  * Provides comprehensive accessibility improvements and monitoring

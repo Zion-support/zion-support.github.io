@@ -3,7 +3,6 @@
  * Monitors application health and provides diagnostic information
  */
 
-import React from 'react';
 import { logger } from './logger';
 import { performanceMonitor } from './performanceMonitor';
 
@@ -98,16 +97,8 @@ class HealthCheckService {
           name,
           duration,
         });
->>>>>>> cursor/fix-errors-and-merge-to-main-5c5e
-=======
->>>>>>> 1684f58a157a4496bdf1f11291796d45799723dd
-      } catch {
-logger._error(`Health check "${name}" failed`, _error as Error);
->>>>>>> cursor/fix-errors-and-merge-to-main-fbf5
-=======
       } catch (error) {
         logger.error(`Health check "${name}" failed`, error as Error);
->>>>>>> 5a6fab5466218b5fd438f48f6649158efa56a5c3
         checks.push({
           name,
           status: 'fail',
@@ -170,7 +161,6 @@ logger._error(`Health check "${name}" failed`, _error as Error);
     }
 
     try {
->>>>>>> 1684f58a157a4496bdf1f11291796d45799723dd
       const usedPercent = (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100;
 
       let status: 'pass' | 'warn' | 'fail' = 'pass';
@@ -195,13 +185,7 @@ logger._error(`Health check "${name}" failed`, _error as Error);
           usedPercent,
         },
       };
->>>>>>> 1684f58a157a4496bdf1f11291796d45799723dd
-=======
-    } catch {
->>>>>>> cursor/fix-errors-and-merge-to-main-5c5e
-=======
     } catch (error) {
->>>>>>> 5a6fab5466218b5fd438f48f6649158efa56a5c3
       return {
         name: 'memory',
         status: 'warn',
@@ -316,13 +300,7 @@ logger._error(`Health check "${name}" failed`, _error as Error);
       try {
         localStorage.setItem('_size_test', testData);
         localStorage.removeItem('_size_test');
->>>>>>> 1684f58a157a4496bdf1f11291796d45799723dd
-=======
-      } catch {
->>>>>>> cursor/fix-errors-and-merge-to-main-5c5e
-=======
       } catch (error) {
->>>>>>> 5a6fab5466218b5fd438f48f6649158efa56a5c3
         return {
           name: 'storage',
           status: 'warn',
@@ -335,13 +313,7 @@ logger._error(`Health check "${name}" failed`, _error as Error);
         status: 'pass',
         message: 'Storage working correctly',
       };
->>>>>>> 1684f58a157a4496bdf1f11291796d45799723dd
-=======
-    } catch {
->>>>>>> cursor/fix-errors-and-merge-to-main-5c5e
-=======
     } catch (error) {
->>>>>>> 5a6fab5466218b5fd438f48f6649158efa56a5c3
       return {
         name: 'storage',
         status: 'fail',

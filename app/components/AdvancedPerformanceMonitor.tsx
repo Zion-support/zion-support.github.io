@@ -150,7 +150,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     );
 
     if (slowResources.length > 0) {
-      // eslint-disable-next-line no-console
+       
       console.warn(
         'Slow resources detected:',
         slowResources.map((r: PerformanceResourceTiming) => ({

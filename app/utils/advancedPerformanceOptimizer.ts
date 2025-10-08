@@ -1,4 +1,3 @@
-import React from 'react';
 /**
  * Advanced Performance Optimizer
  * Generated: 2025-10-08T02:06:22.084Z
@@ -78,13 +77,7 @@ export class PerformanceOptimizer {
   /**
    * Implement debounce for performance
    */
->>>>>>> 1684f58a157a4496bdf1f11291796d45799723dd
-=======
   debounce<T extends (...args: unknown[]) => unknown>(
->>>>>>> cursor/fix-errors-and-merge-to-main-5c5e
-=======
-  debounce<T extends (...args: unknown[]) => unknown>(
->>>>>>> 5a6fab5466218b5fd438f48f6649158efa56a5c3
     func: T,
     wait: number
   ): (...args: Parameters<T>) => void {
