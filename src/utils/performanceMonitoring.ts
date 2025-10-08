@@ -19,6 +19,20 @@ export interface WebVitals {
   INP?: PerformanceMetric;  // Interaction to Next Paint
 }
 
+// Layout Shift API types
+interface LayoutShift extends PerformanceEntry {
+  value: number;
+  hadRecentInput: boolean;
+  lastInputTime: number;
+  sources: LayoutShiftAttribution[];
+}
+
+interface LayoutShiftAttribution {
+  node?: Node;
+  previousRect: DOMRectReadOnly;
+  currentRect: DOMRectReadOnly;
+}
+
 export interface CustomMetric {
   name: string;
   value: number;
