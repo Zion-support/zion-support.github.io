@@ -162,6 +162,7 @@
     "pages_disabled/**",
     "src.disabled/**",
     "utils.disabled/**",
+    "vite.config.ts",
     "vite.config.performance.ts",
     "dao/**",
     "deployments/**",
