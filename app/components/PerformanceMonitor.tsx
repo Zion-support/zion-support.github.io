@@ -1,7 +1,6 @@
 'use client';
 
 import React, { useEffect, useState, memo } from 'react';
-import React, { useEffect } from 'react';
 
 interface PerformanceMetrics {
   fcp?: number;

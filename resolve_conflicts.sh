@@ -1,47 +1,25 @@
 #!/bin/bash
 
-# Script to resolve merge conflicts by choosing the cleaner version
-# This removes conflict markers and keeps the cleaner formatting
+# Script to resolve merge conflicts by choosing the HEAD version for all conflicts
 
-echo "Resolving merge conflicts..."
-
-# List of files with conflicts
 files=(
-  "api/onsite-request.js"
-  "api/shipping-rates.js" 
-  "api/subscribe.js"
-  "lib/error-handler.ts"
-  "lib/integrations/connectors.ts"
-  "lib/integrations/fileStore.ts"
-  "lib/integrations/registry.ts"
-  "lib/integrations/types.ts"
-  "lib/performance.ts"
-  "lib/security.js"
-  "utils/accessibilityUtils.ts"
-  "utils/bannerLazyLoader.ts"
-  "utils/bannerPrioritization.ts"
-  "utils/bannerRegistry.ts"
-  "utils/bannerRotationSystem.ts"
-  "utils/comprehensiveOptimizer.ts"
+  "./EnhancedFooter.tsx"
+  "./app/App.tsx"
+  "./app/components/AccessibilityEnhancer.tsx"
+  "./app/components/ErrorBoundary.tsx"
+  "./app/setupTests.tsx"
+  "./app/utils/performanceOptimizer.ts"
 )
 
 for file in "${files[@]}"; do
   if [ -f "$file" ]; then
-    echo "Processing $file..."
-    
-    # Remove conflict markers and choose the cleaner version
-    # This removes lines with <<<<<<< HEAD, =======, and >>>>>>> main
-    # and keeps the content that's not just whitespace
-    sed -i '/^<<<<<<< HEAD$/,/^>>>>>>> main$/{
-      /^<<<<<<< HEAD$/d
-      /^=======$/d
-      /^>>>>>>> main$/d
-      /^[[:space:]]*$/d
-    }' "$file"
-    
-    # Clean up any remaining empty lines
-    sed -i '/^[[:space:]]*$/N;/^\n$/d' "$file"
+    echo "Resolving conflicts in $file..."
+    # Use sed to remove conflict markers and keep HEAD version
+    sed -i '/^<<<<<<< HEAD$/,/^=======$/{ /^<<<<<<< HEAD$/d; /^=======$/d; }; /^=======/,/^>>>>>>> /d' "$file"
+    echo "✓ Resolved $file"
+  else
+    echo "⚠ File not found: $file"
   fi
 done
 
-echo "Conflict resolution complete!"
+echo "✓ All conflicts resolved!"
