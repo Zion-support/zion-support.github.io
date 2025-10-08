@@ -23,7 +23,7 @@ import { logger } from './utils/logger';
 const App: React.FC = () => {
   useEffect(() => {
     // Initialize global error handling
-    logger.lifecycle('initialized', 'App');
+    logger.info('App initialized', 'App');
 
     // Initialize performance monitoring
     lazyLoadImages();
@@ -35,14 +35,14 @@ const App: React.FC = () => {
       const pageLoadMetrics = collectPerformanceMetrics();
       const metrics = performanceOptimizer.getMetrics();
       if (pageLoadMetrics) {
-        logger.performance('Performance metrics collected', pageLoadMetrics, 'App');
+        logger.info('Performance metrics collected', 'App', pageLoadMetrics as Record<string, unknown>);
       }
       if (metrics) {
-        logger.performance('Core Web Vitals metrics', metrics, 'App');
+        logger.info('Core Web Vitals metrics', 'App', { ...metrics } as Record<string, unknown>);
       }
     }
     
-    logger.lifecycle('Performance monitoring initialized', 'App');
+    logger.info('Performance monitoring initialized', 'App');
     logger.info('🚀 Zion Tech Group App initialized with comprehensive monitoring');
   }, []);
 
