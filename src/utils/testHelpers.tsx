@@ -41,9 +41,30 @@ export async function waitForCondition(
 }
 
 /**
+ * Setup performance mocks for testing
+ */
+export function setupPerformanceMocks(): void {
+  // Mock performance.now
+  Object.defineProperty(window, 'performance', {
+    writable: true,
+    value: {
+      now: jest.fn(() => Date.now()),
+      mark: jest.fn(),
+      measure: jest.fn(),
+      getEntriesByName: jest.fn(() => []),
+      getEntriesByType: jest.fn(() => []),
+      getEntries: jest.fn(() => []),
+      clearMarks: jest.fn(),
+      clearMeasures: jest.fn(),
+      clearResourceTimings: jest.fn(),
+    },
+  });
+}
+
+/**
  * Mock window.matchMedia for testing responsive components
  */
-export function mockMatchMedia(matches: boolean = true): void {
+export function mockMatchMedia(matches: boolean = false): void {
   Object.defineProperty(window, 'matchMedia', {
     writable: true,
     value: jest.fn().mockImplementation((query) => ({
@@ -64,12 +85,22 @@ export function mockMatchMedia(matches: boolean = true): void {
  */
 export function mockIntersectionObserver(): void {
   const mockIntersectionObserver = jest.fn();
+  const mockObserve = jest.fn();
+  const mockUnobserve = jest.fn();
+  const mockDisconnect = jest.fn();
+  
   mockIntersectionObserver.mockReturnValue({
-    observe: () => null,
-    unobserve: () => null,
-    disconnect: () => null,
+    observe: mockObserve,
+    unobserve: mockUnobserve,
+    disconnect: mockDisconnect,
   });
+  
   window.IntersectionObserver = mockIntersectionObserver as any;
+  
+  // Make the methods available for testing
+  (window.IntersectionObserver as any).mockObserve = mockObserve;
+  (window.IntersectionObserver as any).mockUnobserve = mockUnobserve;
+  (window.IntersectionObserver as any).mockDisconnect = mockDisconnect;
 }
 
 /**
@@ -77,12 +108,22 @@ export function mockIntersectionObserver(): void {
  */
 export function mockResizeObserver(): void {
   const mockResizeObserver = jest.fn();
+  const mockObserve = jest.fn();
+  const mockUnobserve = jest.fn();
+  const mockDisconnect = jest.fn();
+  
   mockResizeObserver.mockReturnValue({
-    observe: () => null,
-    unobserve: () => null,
-    disconnect: () => null,
+    observe: mockObserve,
+    unobserve: mockUnobserve,
+    disconnect: mockDisconnect,
   });
+  
   window.ResizeObserver = mockResizeObserver as any;
+  
+  // Make the methods available for testing
+  (window.ResizeObserver as any).mockObserve = mockObserve;
+  (window.ResizeObserver as any).mockUnobserve = mockUnobserve;
+  (window.ResizeObserver as any).mockDisconnect = mockDisconnect;
 }
 
 /**
@@ -124,6 +165,7 @@ export function mockFetch(data: any, ok: boolean = true, status: number = 200): 
       status,
       json: () => Promise.resolve(data),
       text: () => Promise.resolve(JSON.stringify(data)),
+      bytes: () => Promise.resolve(new Uint8Array(0)),
       headers: new Headers(),
       redirected: false,
       statusText: ok ? 'OK' : 'Error',
