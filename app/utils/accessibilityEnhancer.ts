@@ -678,14 +678,14 @@ class AccessibilityEnhancer {
     
     return `
 Accessibility Report:
-- Total Issues: ${metrics.violations}
-- Warnings: ${metrics.warnings}
-- WCAG Level: ${metrics.wcagLevel}
-- Keyboard Navigation: ${metrics.keyboardNavigation ? 'Enabled' : 'Disabled'}
-
-Last Checked: ${new Date(metrics.lastChecked).toLocaleString()}
+- A11y Issues: ${metrics.a11yIssues}
+- Focusable Elements: ${metrics.focusableElements}
+- Images with Alt: ${metrics.imagesWithAlt}
+- Forms with Labels: ${metrics.formsWithLabels}
+- ARIA Landmarks: ${metrics.ariaLandmarks}
+- Heading Structure: ${metrics.headingStructure ? 'Valid' : 'Invalid'}
     `;
   }
 }
 
-export default AccessibilityEnhancer;
+export const accessibilityEnhancer = new AccessibilityEnhancer();

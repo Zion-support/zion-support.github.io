@@ -234,15 +234,10 @@ class PerformanceMonitor {
     
     return `
 Performance Report:
-- Score: ${score}/100
-- Load Time: ${metrics.loadTime}ms
-- First Paint: ${metrics.firstPaint}ms
-- DOM Content Loaded: ${metrics.domContentLoaded}ms
-- Memory Usage: ${(metrics.memoryUsage / 1024 / 1024).toFixed(2)}MB
-
-Generated: ${new Date().toLocaleString()}
+Score: ${score}/100
+Metrics: ${JSON.stringify(metrics, null, 2)}
     `;
   }
 }
 
-export default PerformanceMonitor;
+export const performanceMonitor = new PerformanceMonitor();
