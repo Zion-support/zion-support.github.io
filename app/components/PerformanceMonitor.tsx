@@ -28,6 +28,17 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   const [performanceScore, setPerformanceScore] = useState(100);
 
   useEffect(() => {
+<<<<<<< HEAD
+    const _reportWebVitals = (_metric: { name: string; value: number }) => {
+      // Log to console in development (only on client side)
+      if (typeof window !== 'undefined' && enableConsoleLogging) {
+        logger.info('Web Vital captured', { name: _metric.name, value: _metric.value });
+      }
+    };
+    // Suppress unused variable warning
+    void _reportWebVitals;
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-283b
 
     // Monitor Core Web Vitals
     const navigation = performance.getEntriesByType('navigation')[0] as
