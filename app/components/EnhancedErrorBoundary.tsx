@@ -162,33 +162,20 @@ class EnhancedErrorBoundary extends Component<Props, State> {
         console.warn('Failed to copy error details');
       });
   };
-<<<<<<< HEAD
-<<<<<<< HEAD
+
   // In production, you might want to send this to an error reporting service
   if (process.env.NODE_ENV === 'production') {
     // Example: send to error reporting service
     // errorReportingService.captureException(error, { extra: errorInfo });
   }
-=======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-deb0
-=======
-
->>>>>>> cursor/fix-errors-and-merge-to-main-ea96
   render() {
     if (this.state.hasError) {
       if (this.props.fallback) {
         return this.props.fallback;
       }
       const { retryCount, error, errorId } = this.state;
-<<<<<<< HEAD
-      const _canRetry = retryCount < this.maxRetries;
-<<<<<<< HEAD
-=======
-=======
       const canRetry = retryCount < this.maxRetries;
-
->>>>>>> cursor/fix-errors-and-merge-to-main-ea96
       return (
         <div className="min-h-screen flex items-center justify-center bg-gray-50">
           <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-8 text-center">
