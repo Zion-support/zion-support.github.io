@@ -23,8 +23,8 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
     "@type": "Organization",
     "name": "Zion Tech Group",
     "description": description,
-    "url": "https://zion.app",
-    "logo": "https://zion.app/logo.png",
+    "url": "https://ziontechgroup.com",
+    "logo": "https://ziontechgroup.com/logo.png",
     "sameAs": [
       "https://twitter.com/ziontechgroup",
       "https://linkedin.com/company/zion-tech-group"
@@ -58,17 +58,17 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
         
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
-        <meta property="og:url" content={canonicalUrl || "https://zion.app"} />
+        <meta property="og:url" content={canonicalUrl || "https://ziontechgroup.com"} />
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
-        <meta property="og:image" content="https://zion.app/og-image.jpg" />
+        <meta property="og:image" content="https://ziontechgroup.com/og-image.jpg" />
         
         {/* Twitter */}
         <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content={canonicalUrl || "https://zion.app"} />
+        <meta property="twitter:url" content={canonicalUrl || "https://ziontechgroup.com"} />
         <meta property="twitter:title" content={title} />
         <meta property="twitter:description" content={description} />
-        <meta property="twitter:image" content="https://zion.app/twitter-image.jpg" />
+        <meta property="twitter:image" content="https://ziontechgroup.com/twitter-image.jpg" />
         
         {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
         
