@@ -101,7 +101,7 @@ delete (window as unknown as Record<string, unknown>).location;
   reload: jest.fn(),
   assign: jest.fn(),
   replace: jest.fn(),
-
+>>>>>>> 49f746e8c3195449347ee8bebb6ca5b0ab732544
 };
 
 console.info = (...args) => {

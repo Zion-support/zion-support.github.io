@@ -1,25 +1,23 @@
 #!/bin/bash
 
-# Script to resolve merge conflicts by choosing the HEAD version for all conflicts
+# Function to resolve conflicts in a file
+resolve_file_conflicts() {
+    local file="$1"
+    local temp_file="${file}.tmp"
+    
+    awk '
+    BEGIN { in_conflict = 0; skip = 0 }
+    /^<<<<<<</ { in_conflict = 1; skip = 1; next }
+    /^=======/ && in_conflict { skip = 0; next }
+    /^>>>>>>>/ && in_conflict { in_conflict = 0; skip = 0; next }
+    !skip { print }
+    ' "$file" > "$temp_file"
+    
+    mv "$temp_file" "$file"
+    echo "Resolved conflicts in $file"
+}
 
-files=(
-  "./EnhancedFooter.tsx"
-  "./app/App.tsx"
-  "./app/components/AccessibilityEnhancer.tsx"
-  "./app/components/ErrorBoundary.tsx"
-  "./app/setupTests.tsx"
-  "./app/utils/performanceOptimizer.ts"
-)
+# Resolve conflicts in App.tsx
+resolve_file_conflicts "/workspace/app/App.tsx"
 
-for file in "${files[@]}"; do
-  if [ -f "$file" ]; then
-    echo "Resolving conflicts in $file..."
-    # Use sed to remove conflict markers and keep HEAD version
-    sed -i '/^<<<<<<< HEAD$/,/^=======$/{ /^<<<<<<< HEAD$/d; /^=======$/d; }; /^=======/,/^>>>>>>> /d' "$file"
-    echo "✓ Resolved $file"
-  else
-    echo "⚠ File not found: $file"
-  fi
-done
-
-echo "✓ All conflicts resolved!"
+echo "All conflicts resolved!"

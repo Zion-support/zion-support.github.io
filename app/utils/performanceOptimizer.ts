@@ -54,47 +54,10 @@ class PerformanceOptimizer {
     }
   }
 
-  private initMonitoring() {
+  private async initMonitoring() {
     if (typeof window === 'undefined' || !('PerformanceObserver' in window)) return;
 
     try {
-      // Monitor Core Web Vitals
-      this.observeLCP();
-      this.observeFID();
-      this.observeCLS();
-      this.observeFCP();
-      this.observeTTFB();
-      this.observeMemory();
-    } catch (error) {
-      console.warn('Performance monitoring initialization failed:', error);
-    }
-  }
-
-  private observeLCP() {
-    const observer = new PerformanceObserver((list) => {
-      const entries = list.getEntries();
-      const lastEntry = entries[entries.length - 1];
-      this.metrics.lcp = lastEntry.startTime;
-    });
-    observer.observe({ entryTypes: ['largest-contentful-paint'] });
-    this.observers.push(observer);
-  }
-
-  private observeFID() {
-    const observer = new PerformanceObserver((list) => {
-      const entries = list.getEntries();
-      entries.forEach((entry: any) => {
-        this.metrics.fid = entry.processingStart - entry.startTime;
-      });
-    });
-    observer.observe({ entryTypes: ['first-input'] });
-    this.observers.push(observer);
-  }
-
-  private observeCLS() {
-    let clsValue = 0;
-    const observer = new PerformanceObserver((list) => {
-      const entries = list.getEntries();
       if (this.config.enableMonitoring) {
         await this.setupPerformanceObservers();
         this.startMonitoring();
@@ -165,13 +128,11 @@ class PerformanceOptimizer {
       let clsValue = 0;
       const clsObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
->>>>>>> 49f746e8c3195449347ee8bebb6ca5b0ab732544
       entries.forEach((entry: any) => {
         if (!entry.hadRecentInput) {
           clsValue += entry.value;
         }
       });
-      this.metrics.cls = clsValue;
         this.metrics.cls = clsValue;
       });
       clsObserver.observe({ entryTypes: ['layout-shift'] });
@@ -272,7 +233,6 @@ class PerformanceOptimizer {
       if (!img.hasAttribute('decoding')) {
         img.setAttribute('decoding', 'async');
       }
->>>>>>> 49f746e8c3195449347ee8bebb6ca5b0ab732544
     });
     observer.observe({ entryTypes: ['layout-shift'] });
     this.observers.push(observer);
