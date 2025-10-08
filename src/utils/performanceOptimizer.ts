@@ -1,4 +1,3 @@
-=======
 /**
  * Performance optimization utilities
  */
@@ -329,4 +328,13 @@ const performanceUtils = {
 };
 
 export default performanceUtils;
->>>>>>> origin/main
+
+// Collect performance metrics
+export const collectPerformanceMetrics = (): WebVitalsMetrics | null => {
+  return measurePageLoad();
+};
+
+// Initialize the performance optimizer
+export const init = (): void => {
+  performanceOptimizer.initialize();
+};
