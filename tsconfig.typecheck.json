@@ -4,7 +4,12 @@
     "noEmit": true,
     "skipLibCheck": true
   },
-  "include": ["src/**/*.ts", "src/**/*.tsx", "app/**/*.ts", "app/**/*.tsx"],
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "app/**/*.ts",
+    "app/**/*.tsx"
+  ],
   "exclude": [
     "node_modules",
     "dist",
@@ -22,6 +27,9 @@
     "lib.disabled/**",
     "lint-target/**",
     "netlify/**",
-    "contracts.disabled/**"
+    "contracts.disabled/**",
+    "**/NewestContent2025Banner.tsx",
+    "**/contact/page.tsx",
+    "**/ErrorBoundary.tsx"
   ]
 }

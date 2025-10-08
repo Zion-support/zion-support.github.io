@@ -678,3 +678,14 @@ class AccessibilityEnhancer {
     
     return `
 Accessibility Report:
+- Total Issues: ${metrics.violations}
+- Warnings: ${metrics.warnings}
+- WCAG Level: ${metrics.wcagLevel}
+- Keyboard Navigation: ${metrics.keyboardNavigation ? 'Enabled' : 'Disabled'}
+
+Last Checked: ${new Date(metrics.lastChecked).toLocaleString()}
+    `;
+  }
+}
+
+export default AccessibilityEnhancer;
