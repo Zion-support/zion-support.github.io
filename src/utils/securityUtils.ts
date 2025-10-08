@@ -86,7 +86,11 @@ export const escapeHTML = (text: string): string => {
  * Generate a random token for CSRF protection
  */
 export const generateCSRFToken = (): string => {
+<<<<<<< HEAD
   const array = new Uint8Array(32);
+=======
+const array = new Uint8Array(32);
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-a793
   if (typeof window !== 'undefined' && window.crypto) {
     window.crypto.getRandomValues(array);
   }
@@ -172,9 +176,15 @@ export class SecureStorage {
    */
   setItem(key: string, value: unknown): void {
     try {
+<<<<<<< HEAD
       const data = JSON.stringify(value);
       // In production, you'd want to encrypt this data
       const encryptedData = btoa(data);
+=======
+const data = JSON.stringify(value);
+      // In production, you'd want to encrypt this data
+const encryptedData = btoa(data);
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-a793
       localStorage.setItem(`${this.prefix}${key}`, encryptedData);
     } catch (error) {
       console.error('Failed to set storage item:', error);
@@ -186,11 +196,19 @@ export class SecureStorage {
    */
   getItem<T>(key: string): T | null {
     try {
+<<<<<<< HEAD
       const encryptedData = localStorage.getItem(`${this.prefix}${key}`);
       if (!encryptedData) return null;
 
       // In production, you'd want to decrypt this data
       const data = atob(encryptedData);
+=======
+const encryptedData = localStorage.getItem(`${this.prefix}${key}`);
+      if (!encryptedData) return null;
+
+      // In production, you'd want to decrypt this data
+const data = atob(encryptedData);
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-a793
       return JSON.parse(data) as T;
     } catch (error) {
       console.error('Failed to get storage item:', error);
@@ -295,7 +313,11 @@ export const isAllowedFileType = (
  */
 export const generateNonce = (): string => {
   if (typeof window !== 'undefined' && window.crypto) {
+<<<<<<< HEAD
     const array = new Uint8Array(16);
+=======
+const array = new Uint8Array(16);
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-a793
     window.crypto.getRandomValues(array);
     return btoa(String.fromCharCode.apply(null, Array.from(array)));
   }

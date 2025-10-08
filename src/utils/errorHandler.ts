@@ -33,8 +33,13 @@ class ErrorHandler {
   private maxQueueSize = 100;
 
   handleError(error: Error, context?: Record<string, unknown>): void {
+<<<<<<< HEAD
     const category = this.categorizeError(error);
     const severity = this.determineSeverity(error, category);
+=======
+const category = this.categorizeError(error);
+const severity = this.determineSeverity(error, category);
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-a793
     
     const errorData: ErrorInfo = {
       id: this.generateErrorId(),

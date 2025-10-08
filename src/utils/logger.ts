@@ -80,7 +80,11 @@ export class Logger {
    * Log error message
    */
   public error(message: string, error?: Error | unknown): void {
+<<<<<<< HEAD
     const stack = error instanceof Error ? error.stack : undefined;
+=======
+const stack = error instanceof Error ? error.stack : undefined;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-a793
     this.log(LogLevel.ERROR, message, error, stack);
   }
 
@@ -88,7 +92,11 @@ export class Logger {
    * Log fatal message
    */
   public fatal(message: string, error?: Error | unknown): void {
+<<<<<<< HEAD
     const stack = error instanceof Error ? error.stack : undefined;
+=======
+const stack = error instanceof Error ? error.stack : undefined;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-a793
     this.log(LogLevel.FATAL, message, error, stack);
   }
 
@@ -130,8 +138,8 @@ export class Logger {
    * Output to console
    */
   private logToConsole(entry: LogEntry): void {
-//     const prefix = `[${LogLevel[entry.level]}] ${entry.timestamp.toISOString()}`;
-//     const message = entry.context ? `${prefix} [${entry.context}] ${entry.message}` : `${prefix} ${entry.message}`;
+const prefix = `[${LogLevel[entry.level]}] ${entry.timestamp.toISOString()}`;
+const message = entry.context ? `${prefix} [${entry.context}] ${entry.message}` : `${prefix} ${entry.message}`;
 
     switch (entry.level) {
       case LogLevel.DEBUG:

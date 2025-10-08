@@ -160,7 +160,11 @@ export class CSRFProtection {
   }
   
   public static validateToken(token: string): boolean {
+<<<<<<< HEAD
     const storedToken = this.getToken();
+=======
+const storedToken = this.getToken();
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-a793
     return storedToken !== null && storedToken === token;
   }
   
@@ -190,13 +194,21 @@ export class SecureStorage {
   
   public static setItem(key: string, value: string): void {
     if (typeof localStorage === 'undefined') return;
+<<<<<<< HEAD
     const encrypted = this.encryptData(value);
+=======
+const encrypted = this.encryptData(value);
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-a793
     localStorage.setItem(key, encrypted);
   }
   
   public static getItem(key: string): string | null {
     if (typeof localStorage === 'undefined') return null;
+<<<<<<< HEAD
     const encrypted = localStorage.getItem(key);
+=======
+const encrypted = localStorage.getItem(key);
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-a793
     if (!encrypted) return null;
     return this.decryptData(encrypted);
   }

@@ -96,7 +96,11 @@ export async function waitFor(
   timeout = 5000,
   interval = 50
 ): Promise<void> {
+<<<<<<< HEAD
   const startTime = Date.now();
+=======
+const startTime = Date.now();
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-a793
 
   while (!condition()) {
     if (Date.now() - startTime > timeout) {

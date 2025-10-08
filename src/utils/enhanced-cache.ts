@@ -101,7 +101,11 @@ export class CacheManager<T = unknown> {
    * Delete a cache entry
    */
   delete(key: string): boolean {
+<<<<<<< HEAD
     const deleted = this.cache.delete(key);
+=======
+const deleted = this.cache.delete(key);
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-a793
     
     if (deleted && this.config.storage !== 'memory') {
       this.saveToStorage();
@@ -227,8 +231,13 @@ export class CacheManager<T = unknown> {
     if (typeof window === 'undefined') return;
     
     try {
+<<<<<<< HEAD
       const storage = this.getStorage();
       const data = storage?.getItem('cache');
+=======
+const storage = this.getStorage();
+const data = storage?.getItem('cache');
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-a793
       
       if (data) {
         const entries: [string, CacheEntry<T>][] = JSON.parse(data);
@@ -246,7 +255,11 @@ export class CacheManager<T = unknown> {
     if (typeof window === 'undefined') return;
     
     try {
+<<<<<<< HEAD
       const storage = this.getStorage();
+=======
+const storage = this.getStorage();
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-a793
       const entries = Array.from(this.cache.entries());
       storage?.setItem('cache', JSON.stringify(entries));
     } catch (error) {
@@ -261,7 +274,11 @@ export class CacheManager<T = unknown> {
     if (typeof window === 'undefined') return;
     
     try {
+<<<<<<< HEAD
       const storage = this.getStorage();
+=======
+const storage = this.getStorage();
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-a793
       storage?.removeItem('cache');
     } catch (error) {
       console.error('Failed to clear cache storage:', error);
@@ -298,13 +315,21 @@ export function memoize<T extends (...args: unknown[]) => unknown>(
   const cache = new CacheManager<ReturnType<T>>({ defaultTTL: ttl });
   
   return ((...args: unknown[]) => {
+<<<<<<< HEAD
     const key = JSON.stringify(args);
+=======
+const key = JSON.stringify(args);
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-a793
     
     if (cache.has(key)) {
       return cache.get(key);
     }
     
+<<<<<<< HEAD
     const result = fn(...args) as ReturnType<T>;
+=======
+const result = fn(...args) as ReturnType<T>;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-a793
     cache.set(key, result);
     
     return result;
@@ -326,7 +351,11 @@ export function cachedAsync<T>(
       return cache.get(key)!;
     }
     
+<<<<<<< HEAD
     const result = await fn();
+=======
+const result = await fn();
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-a793
     cache.set(key, result);
     
     return result;

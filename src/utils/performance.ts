@@ -57,7 +57,11 @@ export const logPerformance = (label: string) => {
     performance.mark(mark);
     
     return () => {
+<<<<<<< HEAD
       const endMark = `${label}-end`;
+=======
+const endMark = `${label}-end`;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-a793
       performance.mark(endMark);
       performance.measure(label, mark, endMark);
       

@@ -154,7 +154,11 @@ export function reportWebVitals(
   if ('PerformanceObserver' in window) {
     const fidObserver = new PerformanceObserver((entryList) => {
       const firstInput = entryList.getEntries()[0] as any;
+<<<<<<< HEAD
       const fid = firstInput.processingStart - firstInput.startTime;
+=======
+const fid = firstInput.processingStart - firstInput.startTime;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-a793
 
       const metric: WebVitalsMetric = {
         name: 'FID',
@@ -256,7 +260,11 @@ export function reportWebVitals(
     )[0] as PerformanceNavigationTiming;
 
     if (navEntry) {
+<<<<<<< HEAD
       const ttfb = navEntry.responseStart - navEntry.requestStart;
+=======
+const ttfb = navEntry.responseStart - navEntry.requestStart;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-a793
 
       const metric: WebVitalsMetric = {
         name: 'TTFB',

@@ -48,7 +48,11 @@ export class PerformanceMonitor {
    * Record a performance metric
    */
   recordMetric(name: string, value: number): void {
+<<<<<<< HEAD
     const rating = this.getRating(name, value);
+=======
+const rating = this.getRating(name, value);
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-a793
     const metric: PerformanceMetric = {
       name,
       value,
@@ -111,7 +115,11 @@ export class PerformanceMonitor {
     const metrics = this.metrics.get(name) || [];
     if (metrics.length === 0) return 0;
 
+<<<<<<< HEAD
     const sum = metrics.reduce((acc, metric) => acc + metric.value, 0);
+=======
+const sum = metrics.reduce((acc, metric) => acc + metric.value, 0);
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-a793
     return sum / metrics.length;
   }
 
@@ -122,8 +130,13 @@ export class PerformanceMonitor {
     const summary: Record<string, { average: number; count: number; rating: string }> = {};
 
     this.metrics.forEach((metrics, name) => {
+<<<<<<< HEAD
       const average = this.getAverage(name);
       const rating = this.getRating(name, average);
+=======
+const average = this.getAverage(name);
+const rating = this.getRating(name, average);
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-a793
       summary[name] = {
         average,
         count: metrics.length,
@@ -145,6 +158,7 @@ export class PerformanceMonitor {
    * Measure execution time of a function
    */
   async measureAsync<T>(name: string, fn: () => Promise<T>): Promise<T> {
+<<<<<<< HEAD
     const start = performance.now();
     try {
       const result = await fn();
@@ -153,6 +167,16 @@ export class PerformanceMonitor {
       return result;
     } catch (error) {
       const duration = performance.now() - start;
+=======
+const start = performance.now();
+    try {
+const result = await fn();
+const duration = performance.now() - start;
+      this.recordMetric(name, duration);
+      return result;
+    } catch (error) {
+const duration = performance.now() - start;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-a793
       this.recordMetric(`${name}-error`, duration);
       throw error;
     }
@@ -162,6 +186,7 @@ export class PerformanceMonitor {
    * Measure execution time of a synchronous function
    */
   measure<T>(name: string, fn: () => T): T {
+<<<<<<< HEAD
     const start = performance.now();
     try {
       const result = fn();
@@ -170,6 +195,16 @@ export class PerformanceMonitor {
       return result;
     } catch (error) {
       const duration = performance.now() - start;
+=======
+const start = performance.now();
+    try {
+const result = fn();
+const duration = performance.now() - start;
+      this.recordMetric(name, duration);
+      return result;
+    } catch (error) {
+const duration = performance.now() - start;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-a793
       this.recordMetric(`${name}-error`, duration);
       throw error;
     }
