@@ -35,7 +35,7 @@ const Navigation: React.FC = () => {
                 <ChevronDown className="w-4 h-4 ml-1" />
               </button>
               {servicesOpen && (
-                <div className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-lg border py-2 z-50">
+                <div className="absolute top-full left-0 mt-2 w-96 bg-white rounded-lg shadow-lg border py-2 z-50">
                   <div className="grid grid-cols-2 gap-2 p-2">
                     <Link to="/services" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
                       All Services
@@ -45,6 +45,18 @@ const Navigation: React.FC = () => {
                     </Link>
                     <Link to="/ai-services" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
                       AI Services
+                    </Link>
+                    <Link to="/ai-marketing" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
+                      AI Marketing
+                    </Link>
+                    <Link to="/ai-automation" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
+                      AI Automation
+                    </Link>
+                    <Link to="/ai-healthcare" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
+                      AI Healthcare
+                    </Link>
+                    <Link to="/ai-fintech" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
+                      AI Fintech
                     </Link>
                     <Link to="/it-services" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
                       IT Services

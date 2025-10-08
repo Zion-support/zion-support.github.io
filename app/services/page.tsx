@@ -22,6 +22,39 @@ const ServicesPage: React.FC = () => {
       price: 'Starting at $1,500/month'
     },
     {
+      title: 'AI Marketing Solutions',
+      description: 'Revolutionary AI-powered marketing automation, ad optimization, and content generation.',
+      icon: '📢',
+      link: '/ai-marketing',
+      features: ['Ad Optimization', 'Content Generation', 'Social Media AI', 'Email Marketing AI'],
+      price: 'Starting at $199/month',
+      popular: true
+    },
+    {
+      title: 'AI Business Automation',
+      description: 'Intelligent automation of business processes with decision-making capabilities.',
+      icon: '⚙️',
+      link: '/ai-automation',
+      features: ['Workflow Automation', 'Process Intelligence', 'Decision Automation', 'Exception Handling'],
+      price: 'Starting at $399/month'
+    },
+    {
+      title: 'AI Healthcare Solutions',
+      description: 'Cutting-edge AI solutions for medical imaging, drug discovery, and personalized medicine.',
+      icon: '🏥',
+      link: '/ai-healthcare',
+      features: ['Medical Imaging AI', 'Drug Discovery', 'Personalized Medicine', 'Clinical Decision Support'],
+      price: 'Starting at $1,999/month'
+    },
+    {
+      title: 'AI Fintech Solutions',
+      description: 'Revolutionary AI-powered financial services including trading, fraud detection, and risk management.',
+      icon: '💰',
+      link: '/ai-fintech',
+      features: ['Algorithmic Trading', 'Fraud Detection', 'Credit Scoring', 'Wealth Management'],
+      price: 'Starting at $1,499/month'
+    },
+    {
       title: 'IT Services',
       description: 'Comprehensive IT solutions including cloud, security, DevOps, and infrastructure.',
       icon: '⚙️',

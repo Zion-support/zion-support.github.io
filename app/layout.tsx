@@ -29,7 +29,11 @@ export default function RootLayout({
       'Cloud Services',
       'Automation',
       'Business Intelligence'
+<<<<<<< HEAD
+    ],
+=======
     ],cursor/analyze-improve-and-deploy-application-3d67
+>>>>>>> cursor/fix-errors-and-merge-to-main-a8ed
     contactPoint: {
       '@type': 'ContactPoint',
       telephone: '+1-302-600-9898',
