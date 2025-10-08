@@ -105,9 +105,10 @@ class MonitoringService {
               startTime: entry.startTime
             })
           }
-        });
-        longTaskObserver.observe({ entryTypes: ['longtask'] });
-      } catch {
+        })
+        longTaskObserver.observe({ entryTypes: ['longtask'] })
+
+      } catch (error) {
         // Long task API might not be available
       }
     }
@@ -122,8 +123,8 @@ class MonitoringService {
               console.warn('Slow resource detected:', {
                 name: entry.name,
                 duration: entry.duration,
-                type: (entry as PerformanceEntry & { initiatorType: string }).initiatorType,
-              });
+                type: entry.initiatorType
+              })
             }
           });
         });
@@ -175,7 +176,6 @@ class MonitoringService {
       gtag('event', name, {
         value: Math.round(name === 'cls' ? value * 1000 : value),
         event_category: 'Web Vitals'
-        non_interaction: true,
       })
     }
   }

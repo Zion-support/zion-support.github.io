@@ -89,7 +89,7 @@ class HealthCheckService {
           ...check,
           name,
           duration
-        });
+        })
       } catch (error) {
         logger.error(`Health check "${name}" failed`, error as Error);
         checks.push({
@@ -167,10 +167,10 @@ class HealthCheckService {
           used: memory.usedJSHeapSize,
           total: memory.totalJSHeapSize,
           limit: memory.jsHeapSizeLimit,
-          usedPercent,
-        },
-      };
-    } catch {
+          usedPercent
+        }
+      }
+    } catch (error) {
       return {
         name: 'memory',
         status: 'warn',
@@ -202,13 +202,13 @@ class HealthCheckService {
         message,
         details: {
           metrics: report.metrics,
-          summary: report.summary,
-        },
-      };
-    } catch {
+          summary: report.summary
+        }
+      }
+    } catch (error) {
       return {
         name: 'performance',
-        status: 'warn'
+        status: 'warn',
         message: 'Could not check performance'
       }
     }

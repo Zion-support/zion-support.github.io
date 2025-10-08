@@ -93,11 +93,11 @@ class PerformanceReporter {
       fidObserver.observe({ type: 'first-input', buffered: true })
 
       // Cumulative Layout Shift (CLS)
-      let clsValue = 0;
-      const clsObserver = new PerformanceObserver(entryList => {
-        entryList.getEntries().forEach(entry => {
-          if (!(entry as LayoutShift).hadRecentInput) {
-            clsValue += (entry as LayoutShift).value;
+      let clsValue = 0
+      const clsObserver = new PerformanceObserver((entryList) => {
+        entryList.getEntries().forEach((entry) => {
+          if (!(entry as any).hadRecentInput) {
+            clsValue += (entry as any).value;
           }
         })
         this.addMetric('CLS', clsValue, this.getRating('cls', clsValue))
@@ -232,7 +232,7 @@ class PerformanceReporter {
         event_category: 'Web Vitals',
         value: Math.round(metric.value),
         event_label: metric.rating,
-        non_interaction: true
+        non_interaction: true,
       })
     }
   }

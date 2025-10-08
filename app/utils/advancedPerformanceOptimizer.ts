@@ -114,7 +114,6 @@ export class PerformanceOptimizer {
    */
 
   memoize<T extends (...args: unknown[]) => unknown>(
-
     func: T,
   ): (...args: Parameters<T>) => ReturnType<T> {
     const cache = new Map<string, ReturnType<T>>()
