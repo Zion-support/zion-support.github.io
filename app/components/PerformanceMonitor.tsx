@@ -1,6 +1,12 @@
 'use client';
 
 import React, { useEffect, useState, memo } from 'react';
+import { logger } from '@/utils/logger';
+
+interface LayoutShift extends PerformanceEntry {
+  hadRecentInput: boolean;
+  value: number;
+}
 
 interface PerformanceMetrics {
   fcp?: number;
