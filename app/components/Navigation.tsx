@@ -10,87 +10,6 @@ const Navigation: React.FC = () => {
 
   return (
     <nav className="bg-white shadow-lg sticky top-0 z-50">
-      <div className="container mx-auto px-4">
-        <div className="flex justify-between items-center py-4">
-          {/* Logo */}
-          <Link to="/" className="text-2xl font-bold text-blue-600">
-            Zion Tech Group
-          </Link>
-
-          {/* Desktop Menu */}
-          <div className="hidden md:flex space-x-8">
-            <Link to="/" className="text-gray-700 hover:text-blue-600 transition-colors">
-              Home
-            </Link>
-            <Link to="/about" className="text-gray-700 hover:text-blue-600 transition-colors">
-              About
-            </Link>
-            <div className="relative">
-              <button
-                onClick={() => setServicesOpen(!servicesOpen)}
-                className="text-gray-700 hover:text-blue-600 transition-colors flex items-center"
-              >
-                Services
-                <ChevronDown className="w-4 h-4 ml-1" />
-              </button>
-              {servicesOpen && (
-                <div className="absolute top-full left-0 mt-2 w-96 bg-white rounded-lg shadow-lg border py-2 z-50">
-                  <div className="grid grid-cols-2 gap-2 p-2">
-                    <Link to="/services" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
-                      All Services
-                    </Link>
-                    <Link to="/micro-saas" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
-                      Micro SAAS
-                    </Link>
-                    <Link to="/ai-services" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
-                      AI Services
-                    </Link>
-                    <Link to="/ai-marketing" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
-                      AI Marketing
-                    </Link>
-                    <Link to="/ai-automation" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
-                      AI Automation
-                    </Link>
-                    <Link to="/ai-healthcare" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
-                      AI Healthcare
-                    </Link>
-                    <Link to="/ai-fintech" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
-                      AI Fintech
-                    </Link>
-                    <Link to="/it-services" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
-                      IT Services
-                    </Link>
-                    <Link to="/quantum-computing" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
-                      Quantum Computing
-                    </Link>
-                    <Link to="/autonomous-systems" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
-                      Autonomous Systems
-                    </Link>
-                    <Link to="/business-intelligence" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
-                      Business Intelligence
-                    </Link>
-                    <Link to="/blockchain-web3" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
-                      Blockchain & Web3
-                    </Link>
-                    <Link to="/iot-edge-computing" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
-                      IoT & Edge Computing
-                    </Link>
-                    <Link to="/cybersecurity" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
-                      Cybersecurity
-                    </Link>
-                    <Link to="/services-advertising" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
-                      Advertising Services
-                    </Link>
-                  </div>
-                </div>
-              )}origin/main
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Main Navigation */}
-      <nav className="bg-white shadow-lg sticky top-0 z-50">
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-center py-4">
             {/* Logo */}
@@ -118,8 +37,8 @@ const Navigation: React.FC = () => {
                   <ChevronDown className="w-4 h-4 ml-1" />
                 </button>
                 {servicesOpen && (
-                  <div className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-xl border py-4 z-50">
-                    <div className="grid grid-cols-2 gap-4 px-4">
+                  <div className="absolute top-full left-0 mt-2 w-96 bg-white rounded-lg shadow-xl border py-4 z-50">
+                    <div className="grid grid-cols-3 gap-4 px-4">
                       <div>
                         <h3 className="font-semibold text-gray-900 mb-2">Core Services</h3>
                         <Link to="/services" className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
@@ -136,7 +55,22 @@ const Navigation: React.FC = () => {
                         </Link>
                       </div>
                       <div>
-                        <h3 className="font-semibold text-gray-900 mb-2">Specialized</h3>
+                        <h3 className="font-semibold text-gray-900 mb-2">AI Specializations</h3>
+                        <Link to="/ai-marketing" className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
+                          AI Marketing
+                        </Link>
+                        <Link to="/ai-automation" className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
+                          AI Automation
+                        </Link>
+                        <Link to="/ai-healthcare" className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
+                          AI Healthcare
+                        </Link>
+                        <Link to="/ai-fintech" className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
+                          AI Fintech
+                        </Link>
+                      </div>
+                      <div>
+                        <h3 className="font-semibold text-gray-900 mb-2">Advanced Tech</h3>
                         <Link to="/quantum-computing" className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
                           Quantum Computing
                         </Link>
@@ -152,11 +86,14 @@ const Navigation: React.FC = () => {
                       </div>
                     </div>
                   </div>
-                )}origin/main
+                )}
               </div>
 
               <Link to="/case-studies" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
                 Case Studies
+              </Link>
+              <Link to="/blog" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
+                Blog
               </Link>
               <Link to="/enterprise" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
                 Enterprise
@@ -209,6 +146,18 @@ const Navigation: React.FC = () => {
                     <Link to="/ai-services" className="block text-gray-600 hover:text-blue-600 transition-colors">
                       AI Services
                     </Link>
+                    <Link to="/ai-marketing" className="block text-gray-600 hover:text-blue-600 transition-colors">
+                      AI Marketing
+                    </Link>
+                    <Link to="/ai-automation" className="block text-gray-600 hover:text-blue-600 transition-colors">
+                      AI Automation
+                    </Link>
+                    <Link to="/ai-healthcare" className="block text-gray-600 hover:text-blue-600 transition-colors">
+                      AI Healthcare
+                    </Link>
+                    <Link to="/ai-fintech" className="block text-gray-600 hover:text-blue-600 transition-colors">
+                      AI Fintech
+                    </Link>
                     <Link to="/it-services" className="block text-gray-600 hover:text-blue-600 transition-colors">
                       IT Services
                     </Link>
@@ -218,17 +167,29 @@ const Navigation: React.FC = () => {
                     <Link to="/autonomous-systems" className="block text-gray-600 hover:text-blue-600 transition-colors">
                       Autonomous Systems
                     </Link>
+                    <Link to="/business-intelligence" className="block text-gray-600 hover:text-blue-600 transition-colors">
+                      Business Intelligence
+                    </Link>
                     <Link to="/blockchain-web3" className="block text-gray-600 hover:text-blue-600 transition-colors">
                       Blockchain & Web3
                     </Link>
+                    <Link to="/iot-edge-computing" className="block text-gray-600 hover:text-blue-600 transition-colors">
+                      IoT & Edge Computing
+                    </Link>
                     <Link to="/cybersecurity" className="block text-gray-600 hover:text-blue-600 transition-colors">
                       Cybersecurity
+                    </Link>
+                    <Link to="/robotics" className="block text-gray-600 hover:text-blue-600 transition-colors">
+                      Robotics
                     </Link>
                   </div>
                 </div>
                 
                 <Link to="/case-studies" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
                   Case Studies
+                </Link>
+                <Link to="/blog" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
+                  Blog
                 </Link>
                 <Link to="/enterprise" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
                   Enterprise
@@ -244,7 +205,6 @@ const Navigation: React.FC = () => {
           )}
         </div>
       </nav>
-    </>
   );
 };
 

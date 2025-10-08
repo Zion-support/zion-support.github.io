@@ -38,6 +38,33 @@ const _EnterprisePage = lazy(() => import('./enterprise/page'));
 const _ServicesAdvertisingPage = lazy(() => import('./services-advertising/page'));
 const _CaseStudiesPage = lazy(() => import('./case-studies/page'));
 
+// AI Services Pages
+const _AiServicesPage = lazy(() => import('./ai-services/page'));
+const _AiMarketingPage = lazy(() => import('./ai-marketing/page'));
+const _AiAutomationPage = lazy(() => import('./ai-automation/page'));
+const _AiHealthcarePage = lazy(() => import('./ai-healthcare/page'));
+const _AiFintechPage = lazy(() => import('./ai-fintech/page'));
+
+// IT Services Pages
+const _ItServicesPage = lazy(() => import('./it-services/page'));
+const _MicroSaasPage = lazy(() => import('./micro-saas/page'));
+
+// Specialized Technology Pages
+const _QuantumComputingPage = lazy(() => import('./quantum-computing/page'));
+const _AutonomousSystemsPage = lazy(() => import('./autonomous-systems/page'));
+const _BusinessIntelligencePage = lazy(() => import('./business-intelligence/page'));
+const _BlockchainWeb3Page = lazy(() => import('./blockchain-web3/page'));
+const _BlockchainPage = lazy(() => import('./blockchain/page'));
+const _IotEdgeComputingPage = lazy(() => import('./iot-edge-computing/page'));
+const _IotEdgePage = lazy(() => import('./iot-edge/page'));
+const _CybersecurityPage = lazy(() => import('./cybersecurity/page'));
+const _RoboticsPage = lazy(() => import('./robotics/page'));
+
+// Blog and Guides Pages
+const _BlogPage = lazy(() => import('./blog/page'));
+const _OfflinePage = lazy(() => import('./offline/page'));
+const _SitemapPage = lazy(() => import('./sitemap/page'));
+
 // Utils
 import { lazyLoadImages, preloadCriticalResources, collectPerformanceMetrics, performanceOptimizer } from './utils/performanceOptimizer';
 import { logger } from './utils/logger';
@@ -160,6 +187,7 @@ const App: React.FC = () => {
                   <main id="main-content">
                     <Suspense fallback={<LoadingSpinner />}>
                       <Routes>
+                        {/* Main Pages */}
                         <Route path="/" element={<_HomePage />} />
                         <Route path="/about" element={<_AboutPage />} />
                         <Route path="/services" element={<_ServicesPage />} />
@@ -170,6 +198,37 @@ const App: React.FC = () => {
                         <Route path="/enterprise" element={<_EnterprisePage />} />
                         <Route path="/services-advertising" element={<_ServicesAdvertisingPage />} />
                         <Route path="/case-studies" element={<_CaseStudiesPage />} />
+                        <Route path="/offline" element={<_OfflinePage />} />
+                        
+                        {/* AI Services */}
+                        <Route path="/ai-services" element={<_AiServicesPage />} />
+                        <Route path="/ai-marketing" element={<_AiMarketingPage />} />
+                        <Route path="/ai-automation" element={<_AiAutomationPage />} />
+                        <Route path="/ai-healthcare" element={<_AiHealthcarePage />} />
+                        <Route path="/ai-fintech" element={<_AiFintechPage />} />
+                        
+                        {/* IT Services */}
+                        <Route path="/it-services" element={<_ItServicesPage />} />
+                        <Route path="/micro-saas" element={<_MicroSaasPage />} />
+                        
+                        {/* Specialized Technology */}
+                        <Route path="/quantum-computing" element={<_QuantumComputingPage />} />
+                        <Route path="/autonomous-systems" element={<_AutonomousSystemsPage />} />
+                        <Route path="/business-intelligence" element={<_BusinessIntelligencePage />} />
+                        <Route path="/blockchain-web3" element={<_BlockchainWeb3Page />} />
+                        <Route path="/blockchain" element={<_BlockchainPage />} />
+                        <Route path="/iot-edge-computing" element={<_IotEdgeComputingPage />} />
+                        <Route path="/iot-edge" element={<_IotEdgePage />} />
+                        <Route path="/cybersecurity" element={<_CybersecurityPage />} />
+                        <Route path="/robotics" element={<_RoboticsPage />} />
+                        
+                        {/* Blog and Content */}
+                        <Route path="/blog" element={<_BlogPage />} />
+                        <Route path="/blog/*" element={<_BlogPage />} />
+                        <Route path="/sitemap" element={<_SitemapPage />} />
+                        
+                        {/* Catch-all route for 404 */}
+                        <Route path="*" element={<_HomePage />} />
                       </Routes>
                     </Suspense>
                   </main>
