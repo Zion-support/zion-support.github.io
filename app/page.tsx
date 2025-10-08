@@ -1,4 +1,7 @@
-import React, { useCallback, useState, useEffect, Suspense, lazy } from 'react';
+'use client';
+
+import React, { useCallback, useState, useEffect, Suspense } from 'react';
+import { lazy } from 'react';
 
 // Dynamically import heavy components for better performance
 const ServiceCard = lazy(() => import('./components/ServiceCard'));

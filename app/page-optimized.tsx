@@ -1,4 +1,5 @@
-import React, { lazy, Suspense } from 'react';
+import React from 'react';
+import { lazy } from 'react';
 import SEOOptimizer from './components/SEOOptimizer';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
@@ -7,12 +8,58 @@ import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 const EmptyComponent = () => null;
 
 // Lazy load heavy components - these may not exist, so make them optional
-const UnifiedBanner = lazy(() => import('./components/NewestContent2025Banner').catch(() => ({ default: EmptyComponent })));
+const UnifiedBanner = lazy(() => import('./components/NewestContent2025Banner').catch(() => import('./components/EmptyComponent').catch(() => ({ default: EmptyComponent }))));
 
-const ContentPromotion = lazy(() => import('./components/UltimateBusinessIntelligence2025Banner').catch(() => ({ default: EmptyComponent })));
+const ContentPromotion = lazy(() => import('./components/UltimateBusinessIntelligence2025Banner').catch(() => {
+  return { default: EmptyComponent } as any;
+}));
 
 const ContentShowcase = lazy(() => import('./components/UltimateBusinessIntelligenceShowcase2025').catch(() => ({ default: EmptyComponent })));
 
+export const metadata = {
+  title: 'Zion Tech Group — AI Enterprise Transformation & IT Services | 300% ROI Guaranteed',
+  description: 'Transform your enterprise with AI-powered solutions. Achieve 300% ROI, 70% cost reduction, and 90% efficiency gains. Expert AI consulting, autonomous systems, and digital transformation services.',
+  keywords: 'AI enterprise transformation, AI consulting, autonomous AI systems, enterprise AI services, digital transformation, AI implementation, AI ROI calculator, manufacturing AI, AI automation, AI strategy',
+  openGraph: {
+    title: 'Zion Tech Group — AI Enterprise Transformation & IT Services',
+    description: 'Transform your enterprise with AI-powered solutions. Achieve 300% ROI, 70% cost reduction, and 90% efficiency gains.',
+    type: 'website',
+    url: 'https://ziontechgroup.com',
+    images: [
+      {
+        url: '/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Zion Tech Group AI Enterprise Transformation',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Zion Tech Group — AI Enterprise Transformation & IT Services',
+    description: 'Transform your enterprise with AI-powered solutions. Achieve 300% ROI, 70% cost reduction, and 90% efficiency gains.',
+    images: ['/og-image.jpg'],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  alternates: {
+    canonical: 'https://ziontechgroup.com',
+  },
+  verification: {
+    google: 'your-google-verification-code',
+    yandex: 'your-yandex-verification-code',
+    yahoo: 'your-yahoo-verification-code',
+  },
+};
 
 export default function OptimizedHomePage() {
   return (
@@ -22,9 +69,7 @@ export default function OptimizedHomePage() {
         <PerformanceMonitor />
         
         {/* Unified Banner System */}
-        <Suspense fallback={<div className="animate-pulse bg-gray-200 h-32 rounded-lg"></div>}>
-          <UnifiedBanner />
-        </Suspense>
+        <UnifiedBanner />
         
         {/* Main Content */}
         <main className="relative">
@@ -63,14 +108,10 @@ export default function OptimizedHomePage() {
           </section>
 
           {/* Content Showcase */}
-          <Suspense fallback={<div className="animate-pulse bg-gray-200 h-48 rounded-lg"></div>}>
-            <ContentShowcase />
-          </Suspense>
+          <ContentShowcase />
           
           {/* Content Promotion */}
-          <Suspense fallback={<div className="animate-pulse bg-gray-200 h-64 rounded-lg"></div>}>
-            <ContentPromotion />
-          </Suspense>
+          <ContentPromotion />
         </main>
       </div>
     </AccessibilityEnhancer>
