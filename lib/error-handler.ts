@@ -1,73 +1,36 @@
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 
-=======
 import { NextApiRequest, NextApiResponse } from 'next';
 
-=======
 import { NextApiRequest, NextApiResponse } from 'next';
 
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 
-=======
 import { NextApiRequest, NextApiResponse } from 'next';
 
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 
-=======
 import { NextApiRequest, NextApiResponse } from 'next';
 
-=======
-=======
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 export interface ApiError extends Error {
   statusCode?: number;
   isOperational?: boolean;
 }
-=======
-=======
-=======
-=======
-=======
-=======
-=======
-=======
-=======
-=======
-=======
 
 export class AppError extends Error implements ApiError {
   public statusCode: number;
   public isOperational: boolean;
 
-=======
-=======
-=======
-=======
-=======
-=======
-=======
-=======
-=======
-=======
-=======
-=======
   constructor(message: string, statusCode: number = 500) {
     super(message);
     this.statusCode = statusCode;
@@ -75,29 +38,17 @@ export class AppError extends Error implements ApiError {
     Error.captureStackTrace(this, this.constructor);
   }
 }
-=======
 
-=======
 
-=======
 
-=======
 
-=======
 
-=======
 
-=======
 
-=======
 
-=======
 
-=======
 
-=======
 
-=======
 
 export const errorHandler = (
   err: ApiError,
@@ -105,31 +56,18 @@ export const errorHandler = (
   res: NextApiResponse
 ) => {
   const { statusCode = 500, message } = err;
-=======
   
-=======
   
-=======
 
-=======
 
-=======
 
-=======
 
-=======
 
-=======
 
-=======
 
-=======
   
-=======
 
-=======
   
-=======
 
   // Log error for monitoring
   if (process.env['NODE_ENV'] === 'development') {
@@ -137,39 +75,21 @@ export const errorHandler = (
     console.error(`API Error [${statusCode}]: ${message}`, {
     url: req.url,
     method: req.method,
-=======
-=======
-=======
-=======
-=======
-=======
     timestamp: new Date().toISOString(),
     userAgent: req.headers['user-agent'],
     ip: req.headers['x-forwarded-for'] || req.connection.remoteAddress
   });
-=======
 
-=======
 
-=======
 
-=======
 
-=======
 
-=======
 
-=======
 
-=======
 
-=======
 
-=======
 
-=======
 
-=======
     timestamp: new Date().toISOString(),
     userAgent: req.headers['user-agent'],
     ip: req.headers['x-forwarded-for'] || req.connection.remoteAddress,
@@ -182,28 +102,19 @@ export const errorHandler = (
         process.env['NODE_ENV'] === 'production'
           ? 'Internal Server Error'
           : message,
-=======
-=======
-=======
       statusCode,
       timestamp: new Date().toISOString()
-=======
       statusCode,
       timestamp: new Date().toISOString()
-=======
       statusCode,
       timestamp: new Date().toISOString()
     },
-=======
-      statusCode,
-      timestamp: new Date().toISOString()
-=======
-    }
-=======
       statusCode,
       timestamp: new Date().toISOString()
     }
-=======
+      statusCode,
+      timestamp: new Date().toISOString()
+    }
       statusCode,
       timestamp: new Date().toISOString()
     }
@@ -212,19 +123,15 @@ export const errorHandler = (
 
 export const asyncHandler =
   (fn: Function) =>
-=======
   (req: NextApiRequest, res: NextApiResponse, next: Function) => {
     Promise.resolve(fn(req, res, next)).catch((error: Error) => next(error));
   };
-=======
   (req: NextApiRequest, res: NextApiResponse, next: Function) => {
     Promise.resolve(fn(req, res, next)).catch((error: Error) => next(error));
   };
-=======
   (req: NextApiRequest, res: NextApiResponse, next: Function) => {
     Promise.resolve(fn(req, res, next)).catch((error: Error) => next(error));
   };
-=======
     stack: err.stack
   });
 
@@ -240,7 +147,6 @@ export const asyncHandler =
 export const asyncHandler = (fn: Function) => {
   return (req: NextApiRequest, res: NextApiResponse) => {
     Promise.resolve(fn(req, res)).catch((err) => {
-=======
       statusCode,
       timestamp: new Date().toISOString(),
     },
@@ -254,51 +160,39 @@ export const asyncHandler = (fn: (req: NextApiRequest, res: NextApiResponse) => 
     });
   };
 };
-=======
   (req: NextApiRequest, res: NextApiResponse, next: Function) => {
     Promise.resolve(fn(req, res, next)).catch((error: Error) => next(error));
   };
-=======
   (req: NextApiRequest, res: NextApiResponse, next: Function) => {
     Promise.resolve(fn(req, res, next)).catch((error: Error) => next(error));
   };
-=======
   (req: NextApiRequest, res: NextApiResponse, next: Function) => {
     Promise.resolve(fn(req, res, next)).catch((error: Error) => next(error));
   };
-=======
   (req: NextApiRequest, res: NextApiResponse, next: Function) => {
     Promise.resolve(fn(req, res, next)).catch((error: Error) => next(error));
   };
-=======
   (req: NextApiRequest, res: NextApiResponse, next: Function) => {
     Promise.resolve(fn(req, res, next)).catch((error: Error) => next(error));
   };
-=======
   (req: NextApiRequest, res: NextApiResponse, next: Function) => {
     Promise.resolve(fn(req, res, next)).catch((error: Error) => next(error));
   };
-=======
-=======
 
 export const asyncHandler =
   (fn: Function) =>
   (req: NextApiRequest, res: NextApiResponse, next: Function) => {
     Promise.resolve(fn(req, res, next)).catch((error: Error) => next(error));
   };
-=======
 
 export const asyncHandler =
   (fn: Function) =>
   (req: NextApiRequest, res: NextApiResponse, next: Function) => {
     Promise.resolve(fn(req, res, next)).catch((error: Error) => next(error));
   };
-=======
   (req: NextApiRequest, res: NextApiResponse, next: Function) => {
     Promise.resolve(fn(req, res, next)).catch((error: Error) => next(error));
   };
-=======
   (req: NextApiRequest, res: NextApiResponse, next: Function) => {
     Promise.resolve(fn(req, res, next)).catch((error: Error) => next(error));
   };
-=======

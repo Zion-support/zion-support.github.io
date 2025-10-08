@@ -1,4 +1,4 @@
-import React, { memo, useMemo } from 'react';
+import React, { memo, useMemo, Suspense } from 'react';
 import { HelmetProvider, Helmet } from 'react-helmet-async';
 
 // Memoized components for better performance
@@ -43,13 +43,6 @@ const InteractiveContentShowcase2026 = memo(() => (
         Latest trends and innovations for 2026
       </p>
     </div>
-  </div>
-));
-
-// Loading component
-const LoadingSpinner = memo(() => (
-  <div className="animate-pulse bg-gray-200 h-32 rounded flex items-center justify-center">
-    <div className="text-gray-500">Loading...</div>
   </div>
 ));
 
@@ -102,6 +95,13 @@ class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundarySta
     return this.props.children;
   }
 }
+
+// Loading component
+const LoadingSpinner = memo(() => (
+  <div className="animate-pulse bg-gray-200 h-32 rounded flex items-center justify-center">
+    <div className="text-gray-500">Loading...</div>
+  </div>
+));
 
 export default function App() {
   const structuredData = useMemo(
@@ -160,7 +160,7 @@ export default function App() {
           <meta property="og:url" content="https://ziontechgroup.com" />
           <meta name="twitter:card" content="summary_large_image" />
           <meta name="twitter:title" content="Zion Tech Group - AI & IT Solutions" />
-          <meta name="="twitter:description" content="Transform your enterprise with AI-powered solutions achieving 300% ROI, 70% cost reduction, and 90% efficiency gains" />
+          <meta name="twitter:description" content="Transform your enterprise with AI-powered solutions achieving 300% ROI, 70% cost reduction, and 90% efficiency gains" />
           <script type="application/ld+json">
             {JSON.stringify(structuredData)}
           </script>

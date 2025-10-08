@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useState } from 'react';
 
 const InteractiveAIROICalculator: React.FC = () => {
@@ -74,29 +76,9 @@ const InteractiveAIROICalculator: React.FC = () => {
                 <div className='text-6xl font-bold text-blue-600 mb-4'>
                   {roi.toFixed(0)}%
                 </div>
-                <p className='text-lg text-gray-600 mb-6'>
-                  Expected Return on Investment
+                <p className='text-gray-600 text-lg'>
+                  Based on your current cost and expected efficiency gains
                 </p>
-                <div className='space-y-3 text-sm'>
-                  <div className='flex justify-between'>
-                    <span>Annual Savings:</span>
-                    <span className='font-semibold'>
-                      ${((currentCost * efficiencyGain) / 100).toLocaleString()}
-                    </span>
-                  </div>
-                  <div className='flex justify-between'>
-                    <span>Total Savings ({timeframe} months):</span>
-                    <span className='font-semibold'>
-                      ${((currentCost * efficiencyGain * timeframe) / 1200).toLocaleString()}
-                    </span>
-                  </div>
-                  <div className='flex justify-between'>
-                    <span>Net Profit:</span>
-                    <span className='font-semibold text-green-600'>
-                      ${(((currentCost * efficiencyGain * timeframe) / 1200) - currentCost).toLocaleString()}
-                    </span>
-                  </div>
-                </div>
               </div>
             </div>
           </div>

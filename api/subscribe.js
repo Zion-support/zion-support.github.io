@@ -19,19 +19,14 @@ async function handler(req, res) {
     return;
   }
 
+  if (!isValidEmail(email)) {
+    res.statusCode = 400;
+    res.json({ error: 'Invalid email format' });
+    return;
+  }
+
   try {
-    if (!isValidEmail(email)) {
-      res.statusCode = 400;
-      res.json({ error: 'Invalid email' });
-      return;
-    }
-
-    const file = path.join(
-      process.cwd(),
-      'data',
-      'newsletter-subscriptions.json'
-    );
-
+    const file = path.join(process.cwd(), 'data', 'subscribers.json');
     let existing = [];
 
     try {
@@ -41,12 +36,23 @@ async function handler(req, res) {
       // File doesn't exist or is invalid, use empty array
     }
 
+    if (existing.some(sub => sub.email === email)) {
+      res.statusCode = 409;
+      res.json({ error: 'Email already subscribed' });
+      return;
+    }
+
     existing.push({
       email,
       name,
       source,
       subscribedAt: new Date().toISOString(),
     });
+
+    const dataDir = path.dirname(file);
+    if (!fs.existsSync(dataDir)) {
+      fs.mkdirSync(dataDir, { recursive: true });
+    }
 
     fs.writeFileSync(file, JSON.stringify(existing, null, 2));
     res.statusCode = 200;
