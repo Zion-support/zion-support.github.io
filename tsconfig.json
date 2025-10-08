@@ -102,7 +102,6 @@
     "data_backup/**",
     "dao/**",
     "deployments/**",
-    "disabled-api/**",
     "e2e/**",
     "factories/**",
     "hooks/**",

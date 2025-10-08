@@ -13,10 +13,10 @@ const UltimateBusinessIntelligence2025Banner = () => {
       url: '/blog/ultimate-business-intelligence-2025',
       type: 'Blog Post',
       metrics: {
-        roi: '30,000%',
-        savings: '$750B+',
-        accuracy: '99.99%',
-        speed: '5,000% faster'
+        efficiency: '300%',
+        accuracy: '99.7%',
+        timeline: '6 months',
+        adoption: '95%'
       },
       tags: ['AI', 'Business Intelligence', 'Enterprise', 'ROI', '2025']
     },
