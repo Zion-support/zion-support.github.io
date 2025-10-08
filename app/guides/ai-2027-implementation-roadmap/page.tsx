@@ -1,12 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
 import {
   ArrowLeft,
-  _Calendar,
-  _User,
+  Calendar,
+  User,
   Clock,
-  _Tag,
+  Tag,
   Target,
   CheckCircle,
   ArrowRight,
