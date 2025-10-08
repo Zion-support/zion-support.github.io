@@ -8,7 +8,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { errorHandler } from '../utils/enhancedErrorHandler';
 
 // Collect basic performance metrics
-const _collectPerformanceMetrics = () => {
+  const collectPerformanceMetrics = () => {
   if (typeof window === 'undefined' || !window.performance) return null;
   
   const navigation = window.performance.timing;
