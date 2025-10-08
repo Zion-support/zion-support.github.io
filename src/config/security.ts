@@ -157,7 +157,7 @@ export function sanitizeURL(url: string): string {
  */
 export function generateSecureToken(length: number = 32): string {
   if (typeof window !== 'undefined' && window.crypto) {
-//     const array = new Uint8Array(length);
+    const array = new Uint8Array(length);
     window.crypto.getRandomValues(array);
     return Array.from(array, (byte) => byte.toString(16).padStart(2, '0')).join(
       ''
@@ -176,8 +176,8 @@ export function generateSecureToken(length: number = 32): string {
 export async function hashData(data: string): Promise<string> {
   if (typeof window !== 'undefined' && window.crypto && window.crypto.subtle) {
     const encoder = new TextEncoder();
-//     const dataBuffer = encoder.encode(data);
-//     const hashBuffer = await window.crypto.subtle.digest('SHA-256', dataBuffer);
+    const dataBuffer = encoder.encode(data);
+    const hashBuffer = await window.crypto.subtle.digest('SHA-256', dataBuffer);
     const hashArray = Array.from(new Uint8Array(hashBuffer));
     return hashArray.map((byte) => byte.toString(16).padStart(2, '0')).join('');
   }
@@ -185,7 +185,7 @@ export async function hashData(data: string): Promise<string> {
   // Fallback: Basic hash (not cryptographically secure)
   let hash = 0;
   for (let i = 0; i < data.length; i++) {
-//     const char = data.charCodeAt(i);
+    const char = data.charCodeAt(i);
     hash = (hash << 5) - hash + char;
     hash = hash & hash;
   }
@@ -306,7 +306,7 @@ export class CSRFTokenManager {
    * Generate and store CSRF token
    */
   static generateToken(): string {
-//     const token = generateSecureToken();
+    const token = generateSecureToken();
 
     if (typeof window !== 'undefined') {
       sessionStorage.setItem(this.TOKEN_KEY, token);
@@ -329,7 +329,7 @@ export class CSRFTokenManager {
    * Validate CSRF token
    */
   static validateToken(token: string): boolean {
-//     const storedToken = this.getToken();
+    const storedToken = this.getToken();
     return storedToken !== null && storedToken === token;
   }
 

@@ -48,7 +48,7 @@ export class PerformanceMonitor {
    * Record a performance metric
    */
   recordMetric(name: string, value: number): void {
-//     const rating = this.getRating(name, value);
+    const rating = this.getRating(name, value);
     const metric: PerformanceMetric = {
       name,
       value,
