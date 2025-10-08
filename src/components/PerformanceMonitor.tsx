@@ -13,9 +13,14 @@ export const PerformanceMonitor: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
+    const measurePerformance = () => {
+      if (typeof window === 'undefined' || !window.performance) return;
+
+      const navigation = window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      const paintEntries = window.performance.getEntriesByType('paint');
       
       const fcp = paintEntries.find(entry => entry.name === 'first-contentful-paint');
-      const lcp = performance.getEntriesByType('largest-contentful-paint')[0] as PerformanceEntry;
+      const lcp = window.performance.getEntriesByType('largest-contentful-paint')[0] as PerformanceEntry;
       
       const metrics: PerformanceMetrics = {
         loadTime: navigation.loadEventEnd - navigation.loadEventStart,
@@ -73,3 +78,5 @@ export const PerformanceMonitor: React.FC = () => {
     </div>
   );
 };
+
+export default PerformanceMonitor;

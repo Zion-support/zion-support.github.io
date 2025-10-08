@@ -1,4 +1,3 @@
-=======
 /**
  * Performance optimization utilities
  */
@@ -151,6 +150,13 @@ export const measurePageLoad = (): WebVitalsMetrics | null => {
 };
 
 /**
+ * Collect performance metrics
+ */
+export const collectPerformanceMetrics = (): WebVitalsMetrics | null => {
+  return measurePageLoad();
+};
+
+/**
  * Report Web Vitals to analytics
  */
 export const reportWebVitals = (metrics: WebVitalsMetrics): void => {
@@ -300,6 +306,10 @@ class PerformanceOptimizer {
     return Object.fromEntries(this.metrics);
   }
 
+  public init(): void {
+    this.initialize();
+  }
+
   public initialize(): void {
     this.measurePerformance('lazyLoadImages', () => this.lazyLoadImages());
     this.measurePerformance('preloadCriticalResources', () =>
@@ -329,4 +339,3 @@ const performanceUtils = {
 };
 
 export default performanceUtils;
->>>>>>> origin/main

@@ -1,15 +1,6 @@
-
-// Lazy load pages for better performance
-const HomePage = lazy(() => import('./page'));
-
-
-// Styles
-import '../index.css';
-=======
 'use client';
 
-import React, { Suspense, lazy, useCallback, useEffect } from 'react';
-import Link from 'next/link';
+import React, { Suspense, lazy, useEffect } from 'react';
 import { HelmetProvider } from 'react-helmet-async';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
@@ -22,28 +13,18 @@ import SEOEnhancer from './components/SEOEnhancer';
 import AdvancedSEOOptimizer from './components/AdvancedSEOOptimizer';
 import LoadingSpinner from './components/LoadingSpinner';
 
-// Lazy load components for better performance
-const ContentShowcase = lazy(() => import('./components/ContentShowcase'));
-const InteractiveContentShowcase2026 = lazy(
-  () => import('./components/InteractiveContentShowcase2026')
-);
-const InteractiveAIROICalculator = lazy(
-  () => import('./components/InteractiveAIROICalculator')
-);
+// Lazy load pages for better performance
+const HomePage = lazy(() => import('./page'));
 
 // Utils
-import { lazyLoadImages, preloadCriticalResources, collectPerformanceMetrics, performanceOptimizer } from './utils/performanceOptimizer';
-import { logger } from './utils/logger';
+import { lazyLoadImages, preloadCriticalResources, collectPerformanceMetrics, performanceOptimizer } from '../src/utils/performanceOptimizer';
+import { logger } from '../src/utils/logger';
 
 // Styles
 import './globals.css';
->>>>>>> origin/main
 
 const App: React.FC = () => {
   useEffect(() => {
-    // Initialize global error handling
-    }
-=======
     logger.lifecycle('initialized', 'App');
 
     // Initialize performance monitoring
@@ -65,13 +46,10 @@ const App: React.FC = () => {
     
     logger.lifecycle('performance monitoring initialized', 'App');
     logger.info('🚀 Zion Tech Group App initialized with comprehensive monitoring', 'App');
->>>>>>> origin/main
   }, []);
 
   return (
     <HelmetProvider>
-      </ErrorBoundary>
-=======
       <AdvancedErrorBoundary
         enableErrorReporting={true}
         enableRetry={true}
@@ -140,8 +118,8 @@ const App: React.FC = () => {
           </SEOEnhancer>
         </AccessibilityEnhancer>
       </AdvancedErrorBoundary>
->>>>>>> origin/main
     </HelmetProvider>
   );
 };
 
+export default App;
