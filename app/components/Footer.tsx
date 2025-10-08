@@ -2,7 +2,8 @@ import React, { memo } from 'react';
 import { Link } from 'react-router-dom';
 import { Phone, Mail, MapPin, Clock, Award, Shield, Zap, ArrowRight } from 'lucide-react';
 
-const Footer: React.FC = memo(() => {  return (
+const Footer: React.FC = memo(() => {
+  return (
     <footer className="bg-gray-900 text-white">
       {/* Main Footer Content */}
       <div className="container mx-auto px-4 py-16">
@@ -105,7 +106,8 @@ const Footer: React.FC = memo(() => {  return (
                     Documentation
                   </a>
                 </li>
-              </ul>            </div>
+              </ul>
+            </div>
           </div>
         </div>
       </div>

@@ -57,8 +57,9 @@ const PerformanceMonitor: React.FC = () => {
         if (typeof console !== 'undefined') {
           logger.debug('Performance Metrics', {
             metrics: currentMetrics,
-            score,          });
-        });
+            score,
+          });
+        }
         
         try {
           fidObserver.observe({ entryTypes: ['first-input'] });
@@ -164,6 +165,12 @@ const PerformanceMonitor: React.FC = () => {
 
     // Set up interval for continuous monitoring
     const interval = setInterval(updateMetrics, updateInterval);
+
+    return () => {
+      clearInterval(interval);
+    };
+  }, [updateInterval, enableConsoleLogging]);
+
   return null;
 };
 
