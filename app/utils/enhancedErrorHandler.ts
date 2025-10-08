@@ -138,9 +138,9 @@ class EnhancedErrorHandler {
           };
           this.handleError({
             type: 'resource',
-            message: `Failed to load resource: ${target?['src'] || target?.href}`,
+            message: `Failed to load resource: ${target?.src || target?.href}`,
             element: event.target?.constructor.name,
-            src: target?['src'] || target?.href,
+            src: target?.src || target?.href,
           });
         }
       },

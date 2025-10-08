@@ -2,6 +2,12 @@
  * Error handling utilities
  * Enhanced with retry logic, error categorization, and better reporting
  */
+
+export enum ErrorSeverity {
+  LOW = 'low',
+  MEDIUM = 'medium',
+  HIGH = 'high',
+  CRITICAL = 'critical',
 }
 
 export enum ErrorCategory {
@@ -59,6 +65,11 @@ export class ErrorHandler {
       severity,
       ...errorInfo,
     };
+
+    // Add to queue
+    this.errorQueue.push(errorData);
+    if (this.errorQueue.length > this.maxQueueSize) {
+      this.errorQueue.shift();
     }
 
     // Send to error reporting service
@@ -66,12 +77,78 @@ export class ErrorHandler {
   }
 
   /**
+   * Categorize error by type
+   */
+  private categorizeError(error: Error): ErrorCategory {
+    const message = error.message.toLowerCase();
+    
+    if (message.includes('network') || message.includes('fetch')) {
+      return ErrorCategory.NETWORK;
+    }
+    if (message.includes('validation') || message.includes('invalid')) {
+      return ErrorCategory.VALIDATION;
+    }
+    if (message.includes('api') || message.includes('request')) {
+      return ErrorCategory.API;
+    }
+    if (error.name === 'TypeError' || error.name === 'ReferenceError') {
+      return ErrorCategory.RUNTIME;
+    }
+    
+    return ErrorCategory.UNKNOWN;
+  }
+
+  /**
+   * Determine error severity
+   */
+  private determineSeverity(error: Error, category: ErrorCategory): ErrorSeverity {
+    if (category === ErrorCategory.NETWORK) {
+      return ErrorSeverity.MEDIUM;
+    }
+    if (category === ErrorCategory.VALIDATION) {
+      return ErrorSeverity.LOW;
+    }
+    if (category === ErrorCategory.RUNTIME) {
+      return ErrorSeverity.HIGH;
+    }
+    
+    return ErrorSeverity.MEDIUM;
+  }
+
+  /**
+   * Generate unique error ID
+   */
+  private generateErrorId(): string {
+    return `err_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+  }
+
+  /**
+   * Report error to external service
+   */
+  private reportError(errorData: ErrorInfo): void {
+    // In production, send to error tracking service
+    if (process.env['NODE_ENV'] === 'production') {
+      // Send to Sentry, LogRocket, etc.
+      console.error('Error reported:', errorData);
+    } else {
+      console.error('Error (dev):', errorData);
     }
   }
 
   /**
+   * Get error queue
+   */
+  getErrorQueue(): ErrorInfo[] {
     return [...this.errorQueue];
   }
 
   /**
    * Clear error queue
+   */
+  clearErrorQueue(): void {
+    this.errorQueue = [];
+  }
+}
+
+export const errorHandler = ErrorHandler.getInstance();
+export default errorHandler;

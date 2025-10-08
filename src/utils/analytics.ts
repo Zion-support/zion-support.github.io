@@ -1,63 +1,21 @@
 /**
- * Analytics and Tracking Utility
- * Provides comprehensive analytics tracking for the application
+ * Analytics utilities for tracking user interactions and events
  */
-export interface AnalyticsEvent {
+
+interface AnalyticsEvent {
   name: string;
   category: string;
-  action?: string;
+  action: string;
   label?: string;
   value?: number;
-  properties?: Record<string, unknown>;
-  timestamp: number;
-}
-
-export interface UserProperties {
-  userId?: string;
-  sessionId: string;
-  userAgent: string;
-  language: string;
-  timezone: string;
-  referrer?: string;
 }
 
 class Analytics {
-  private events: AnalyticsEvent[] = [];
-  private userProperties: UserProperties;
-  private sessionId: string;
+  private enabled: boolean;
+  private userProperties: Record<string, unknown> = {};
 
   constructor() {
-    this.sessionId = this.generateSessionId();
-    this.userProperties = this.initializeUserProperties();
-  }
-
-  /**
-   * Generate unique session ID
-   */
-  private generateSessionId(): string {
-    return `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-  }
-
-  /**
-   * Initialize user properties
-   */
-  private initializeUserProperties(): UserProperties {
-    if (typeof window === 'undefined') {
-      return {
-        sessionId: this.sessionId,
-        userAgent: 'server',
-        language: 'en',
-        timezone: 'UTC',
-      };
-    }
-
-    return {
-      sessionId: this.sessionId,
-      userAgent: window.navigator.userAgent,
-      language: window.navigator.language,
-      timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
-      referrer: document.referrer || undefined,
-    };
+    this.enabled = typeof window !== 'undefined' && process.env['NODE_ENV'] === 'production';
   }
 
   /**
@@ -66,77 +24,71 @@ class Analytics {
   track(
     name: string,
     category: string,
-    action?: string,
+    action: string,
     label?: string,
-    value?: number,
-    properties?: Record<string, unknown>
+    value?: number
   ): void {
+    if (!this.enabled) {
+      console.log('Analytics (dev):', { name, category, action, label, value });
+      return;
+    }
+
     const event: AnalyticsEvent = {
       name,
       category,
-      timestamp: Date.now(),
+      action,
+      label,
+      value,
     };
 
-    this.events.push(event);
+    // Send to analytics service
+    if (typeof window !== 'undefined' && 'gtag' in window) {
+      (window as unknown as { gtag: (command: string, eventName: string, parameters: Record<string, unknown>) => void }).gtag('event', name, {
+        event_category: category,
+        event_action: action,
+        event_label: label,
+        value: value,
+      });
     }
   }
 
   /**
    * Track page view
-    this.track('page_view', 'navigation', 'view', page, undefined, {
-      page_title: title || document.title,
-      page_url: typeof window !== 'undefined' ? window.location.href : page,
-    });
-  }
+   */
+  pageView(path: string): void {
+    if (!this.enabled) {
+      console.log('Analytics (dev): Page view:', path);
+      return;
+    }
 
-  /**
-   * Track user interaction
-    element: string,
-  action: string,
-    category: string = 'user_interaction'
-  ): void {
-    this.track('interaction', category, action, element);
-  }
-
-  /**
-   * Track performance metrics
-    this.track('performance', 'metrics', metric, unit, value);
-  }
-
-  /**
-   * Track business events
-    event: string,
-    value?: number,
-    properties?: Record<string, unknown>
-  ): void {
-    this.track(event, 'business', 'event', undefined, value, properties);
-  }
-
-  /**
-   * Send event to analytics service
+    if (typeof window !== 'undefined' && 'gtag' in window) {
+      (window as unknown as { gtag: (command: string, eventName: string, parameters: Record<string, unknown>) => void }).gtag('event', 'page_view', {
+        page_path: path,
+      });
     }
   }
 
   /**
-   * Get all events
-    return [...this.events];
-  }
-
-  /**
-   * Get events by category
-    return this.events.filter(event => event.category === category);
-  }
-
-  /**
-   * Clear all events
-    this.events = [];
+   * Set user properties
+   */
+  setUserProperties(properties: Record<string, unknown>): void {
+    this.userProperties = { ...this.userProperties, ...properties };
   }
 
   /**
    * Get user properties
+   */
+  getUserProperties(): Record<string, unknown> {
     return { ...this.userProperties };
   }
 
   /**
    * Update user properties
+   */
+  updateUserProperties(properties: Record<string, unknown>): void {
+    this.userProperties = { ...this.userProperties, ...properties };
+  }
+}
+
+export const analytics = new Analytics();
 export default analytics;
