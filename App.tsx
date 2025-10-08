@@ -1,4 +1,4 @@
-import React, { memo, useMemo } from 'react';
+import React, { memo, useMemo, useCallback, Suspense } from 'react';
 import { HelmetProvider, Helmet } from 'react-helmet-async';
 
 // Memoized components for better performance
@@ -43,6 +43,13 @@ const InteractiveContentShowcase2026 = memo(() => (
         Latest trends and innovations for 2026
       </p>
     </div>
+  </div>
+));
+
+// Loading component
+const LoadingSpinner = memo(() => (
+  <div className="animate-pulse bg-gray-200 h-32 rounded flex items-center justify-center">
+    <div className="text-gray-500">Loading...</div>
   </div>
 ));
 
@@ -91,16 +98,10 @@ class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundarySta
         </div>
       );
     }
+
     return this.props.children;
   }
 }
-
-// Loading component
-const LoadingSpinner = memo(() => (
-  <div className="animate-pulse bg-gray-200 h-32 rounded flex items-center justify-center">
-    <div className="text-gray-500">Loading...</div>
-  </div>
-));
 
 export default function App() {
   const structuredData = useMemo(
@@ -164,11 +165,13 @@ export default function App() {
             {JSON.stringify(structuredData)}
           </script>
         </Helmet>
-        <div>
-          <UnifiedContentPromotion />
-          <InteractiveAIROICalculator />
-          <ContentShowcase />
-          <InteractiveContentShowcase2026 />
+        <div className="min-h-screen bg-white">
+          <Suspense fallback={<LoadingSpinner />}>
+            <UnifiedContentPromotion />
+            <InteractiveAIROICalculator />
+            <ContentShowcase />
+            <InteractiveContentShowcase2026 />
+          </Suspense>
         </div>
       </HelmetProvider>
     </ErrorBoundary>
