@@ -154,14 +154,11 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     );
 
     if (slowResources.length > 0) {
-       
-      // eslint-disable-next-line no-console
-      => ({
-          name: r.name,
-          duration: r.duration,
-          size: r.transferSize,
-        }))
-      );
+      console.log('Slow resources detected:', slowResources.map(r => ({
+        name: r.name,
+        duration: r.duration,
+        size: r.transferSize,
+      })));
     }
   }, []);
 
