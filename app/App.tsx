@@ -6,11 +6,11 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 // Components
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
-import PerformanceDashboard from './components/PerformanceDashboard';
-import AdvancedPerformanceMonitor from './components/AdvancedPerformanceMonitor';
 import AdvancedErrorBoundary from './components/AdvancedErrorBoundary';
-import SEOEnhancer from './components/SEOEnhancer';
 import AdvancedSEOOptimizer from './components/AdvancedSEOOptimizer';
+import AdvancedPerformanceMonitor from './components/AdvancedPerformanceMonitor';
+import SEOEnhancer from './components/SEOEnhancer';
+import PerformanceDashboard from './components/PerformanceDashboard';
 import LoadingSpinner from './components/LoadingSpinner';
 
 class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundaryState> {
@@ -42,19 +42,23 @@ const App: React.FC = () => {
       const pageLoadMetrics = collectPerformanceMetrics();
       const metrics = performanceOptimizer.getMetrics();
       if (pageLoadMetrics) {
+        // eslint-disable-next-line no-console
         console.log('Performance metrics collected:', pageLoadMetrics);
       }
       if (metrics) {
+        // eslint-disable-next-line no-console
         console.log('Performance metrics:', metrics);
       }
     }
     
-    logger.lifecycle('performance monitoring initialized', 'App');
-    logger.info('🚀 Zion Tech Group App initialized with comprehensive monitoring', 'App');
+    logger.lifecycle('Performance monitoring initialized', 'App');
+    logger.info('🚀 Zion Tech Group App initialized with comprehensive monitoring', { component: 'App' });
   }, []);
 
   const handleError = useCallback((error: Error, errorInfo: any) => {
-    logger.error('Application Error', 'ErrorBoundary', { error: error.message, errorInfo });
+    logger.error('Application Error', error, { component: 'ErrorBoundary' });
+    // eslint-disable-next-line no-console
+    console.error('Error info:', errorInfo);
   }, []);
 
   return (
@@ -84,6 +88,22 @@ const App: React.FC = () => {
             />
             <Router>
               <div className="App">
+                {/* Skip to main content link for accessibility */}
+                <a
+                  href="#main-content"
+                  className="skip-link sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    const main = document.querySelector('main') || document.querySelector('#main-content');
+                    if (main) {
+                      (main as HTMLElement).focus();
+                      main.scrollIntoView({ behavior: 'smooth' });
+                    }
+                  }}
+                >
+                  Skip to main content
+                </a>
+
                 <main id="main-content">
                   <Suspense fallback={<LoadingSpinner />}>
                     <Routes>
