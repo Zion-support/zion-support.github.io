@@ -1,35 +1,18 @@
 #!/bin/bash
+# Remove merge conflict markers and keep the incoming changes
 
-echo "🔧 Resolving merge conflicts in all files..."
+cd /workspace
 
-# Find all files with merge conflicts
-files_with_conflicts=$(find src -name "*.tsx" -o -name "*.ts" -o -name "*.jsx" -o -name "*.js" | xargs grep -l "<<<<<<< HEAD" 2>/dev/null)
+# For app/App.tsx - resolve by accepting incoming (theirs)
+sed -i '/^<<<<<<< HEAD$/,/^=======$/d' app/App.tsx
+sed -i '/^>>>>>>> [a-f0-9]*$/d' app/App.tsx
 
-if [ -z "$files_with_conflicts" ]; then
-    echo "✅ No merge conflicts found!"
-    exit 0
-fi
-
-echo "Found conflicts in $(echo "$files_with_conflicts" | wc -l) files"
-
-# Process each file
-for file in $files_with_conflicts; do
-    echo "Processing: $file"
-    
-    # Use sed to resolve conflicts by keeping HEAD version and removing conflict markers
-    sed -i '/<<<<<<< HEAD/,/>>>>>>> / {
-        /<<<<<<< HEAD/d
-        /=======/,/>>>>>>> /d
-        />>>>>>> /d
-    }' "$file"
-    
-    # Clean up common syntax errors
-    sed -i 's/";,//g' "$file"
-    sed -i 's/";//g' "$file"
-    sed -i 's/,"//g' "$file"
-    sed -i 's/,,//g' "$file"
-    
-    echo "✅ Resolved conflicts in: $file"
+# For other files
+for file in app/components/AccessibilityEnhancer.tsx app/components/PerformanceMonitor.tsx app/setupTests.tsx app/utils/performanceOptimizer.ts tsconfig.json; do
+    if [ -f "$file" ]; then
+        sed -i '/^<<<<<<< HEAD$/,/^=======$/d' "$file"
+        sed -i '/^>>>>>>> /d' "$file"
+    fi
 done
 
-echo "🎉 All merge conflicts resolved!"
+echo "Merge conflicts resolved"

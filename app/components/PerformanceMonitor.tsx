@@ -1,10 +1,6 @@
 'use client';
 
-<<<<<<< HEAD
-import React, { useEffect, useState, memo } from 'react';
-=======
 import React, { useEffect } from 'react';
->>>>>>> 49f746e8c3195449347ee8bebb6ca5b0ab732544
 
 interface PerformanceMetrics {
   fcp?: number;
