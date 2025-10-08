@@ -102,25 +102,13 @@ class MonitoringService {
         const longTaskObserver = new PerformanceObserver((list) => {
           for (const entry of list.getEntries()) {
             console.warn('Long task detected:', {
-<<<<<<< HEAD
               duration: entry.duration,
               startTime: entry.startTime
             })
           }
         })
         longTaskObserver.observe({ entryTypes: ['longtask'] })
-
       } catch (error) {
-=======
-            duration: entry.duration,
-            startTime: entry.startTime
-          });
-        }
-      });
-      longTaskObserver.observe({ entryTypes: ['longtask'] });
-
-    } catch (error) {
->>>>>>> cursor/fix-errors-and-merge-to-main-c52d
         // Long task API might not be available
       }
     }
@@ -150,10 +138,10 @@ class MonitoringService {
     // Global error handler
     window.addEventListener('error', (event) => {
       this.logError({
-        message: event.message
-        stack: event.error?.stack
-        timestamp: Date.now()
-        userAgent: navigator.userAgent
+        message: event.message,
+        stack: event.error?.stack,
+        timestamp: Date.now(),
+        userAgent: navigator.userAgent,
         url: window.location.href
       })
     })

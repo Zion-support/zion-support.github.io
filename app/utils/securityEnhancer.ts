@@ -117,10 +117,10 @@ class SecurityEnhancer {
     ['log', 'warn', 'error', 'info'].forEach(method => {
       (console as Record<string, Function>)[method] = (...args: unknown[]) => {
       (console as { [key: string]: (...args: unknown[]) => void })[method] = (...args: unknown[]) => {
-        this.metrics.suspiciousActivity++
-        originalConsole[method](...args)
+        this.metrics.suspiciousActivity++;
+        originalConsole[method](...args);
       }
-    })
+    });
   }
   private monitorDOMManipulation(): void {
     const observer = new MutationObserver((mutations) => {

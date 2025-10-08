@@ -63,8 +63,12 @@ export const usePerformanceOptimization = () => {
         const fidEntry = entry as PerformanceEntry & {
           processingStart?: number;
         };
+<<<<<<< HEAD
         metrics.firstInputDelay =
           (fidEntry.processingStart || 0) - entry.startTime;
+=======
+        metrics.firstInputDelay = fidEntry.processingStart - fidEntry.startTime;
+>>>>>>> cursor/fix-errors-and-merge-to-main-17dd
       }
     });
 
