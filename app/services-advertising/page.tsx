@@ -36,7 +36,8 @@ export default function ServicesAdvertisingPage() {
             
             <p className="text-lg mb-8 text-gray-300 max-w-4xl mx-auto">
               Transform your advertising campaigns with our breakthrough AI technology. Achieve 95% targeting accuracy, 
-              60% cost reduction, and 300% ROI with intelligent automation and predictive analytics.
+              60% cost reduction, and 300% ROI with intelligent automation and predictive analytics. Our proven 
+              methodology has helped 500+ businesses increase their advertising effectiveness while reducing costs.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -112,7 +113,12 @@ export default function ServicesAdvertisingPage() {
                 <li>• Behavioral analysis</li>
                 <li>• Predictive modeling</li>
                 <li>• Real-time optimization</li>
+                <li>• Lookalike audience creation</li>
+                <li>• Cross-platform targeting</li>
               </ul>
+              <div className="mt-4 text-sm text-green-600 font-semibold">
+                Market Price: $2,000-5,000/month | Our Price: $1,200/month
+              </div>
             </div>
             <div className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-200">
               <div className="text-green-600 text-4xl mb-4">📊</div>
@@ -124,7 +130,12 @@ export default function ServicesAdvertisingPage() {
                 <li>• A/B testing automation</li>
                 <li>• Budget allocation</li>
                 <li>• Performance monitoring</li>
+                <li>• Bid optimization</li>
+                <li>• Landing page optimization</li>
               </ul>
+              <div className="mt-4 text-sm text-green-600 font-semibold">
+                Market Price: $3,000-7,000/month | Our Price: $1,800/month
+              </div>
             </div>
             <div className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-200">
               <div className="text-purple-600 text-4xl mb-4">🤖</div>
@@ -136,7 +147,63 @@ export default function ServicesAdvertisingPage() {
                 <li>• Dynamic creative optimization</li>
                 <li>• Personalization at scale</li>
                 <li>• Multi-platform adaptation</li>
+                <li>• Video ad generation</li>
+                <li>• Brand consistency maintenance</li>
               </ul>
+              <div className="mt-4 text-sm text-green-600 font-semibold">
+                Market Price: $2,500-6,000/month | Our Price: $1,500/month
+              </div>
+            </div>
+            <div className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-200">
+              <div className="text-orange-600 text-4xl mb-4">📱</div>
+              <h3 className="text-xl font-semibold mb-3">Social Media Advertising</h3>
+              <p className="text-gray-600 mb-4">
+                Comprehensive social media advertising management across all major platforms with AI optimization.
+              </p>
+              <ul className="text-sm text-gray-600 space-y-1">
+                <li>• Facebook & Instagram ads</li>
+                <li>• LinkedIn advertising</li>
+                <li>• TikTok & Snapchat ads</li>
+                <li>• Twitter advertising</li>
+                <li>• Cross-platform analytics</li>
+              </ul>
+              <div className="mt-4 text-sm text-green-600 font-semibold">
+                Market Price: $2,000-5,000/month | Our Price: $1,200/month
+              </div>
+            </div>
+            <div className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-200">
+              <div className="text-red-600 text-4xl mb-4">🔍</div>
+              <h3 className="text-xl font-semibold mb-3">Search Engine Marketing</h3>
+              <p className="text-gray-600 mb-4">
+                AI-powered Google Ads and Bing advertising with intelligent keyword optimization and bid management.
+              </p>
+              <ul className="text-sm text-gray-600 space-y-1">
+                <li>• Google Ads management</li>
+                <li>• Bing advertising</li>
+                <li>• Keyword research & optimization</li>
+                <li>• Ad copy generation</li>
+                <li>• Performance tracking</li>
+              </ul>
+              <div className="mt-4 text-sm text-green-600 font-semibold">
+                Market Price: $1,500-4,000/month | Our Price: $900/month
+              </div>
+            </div>
+            <div className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-200">
+              <div className="text-indigo-600 text-4xl mb-4">📈</div>
+              <h3 className="text-xl font-semibold mb-3">Analytics & Reporting</h3>
+              <p className="text-gray-600 mb-4">
+                Advanced analytics and reporting with AI insights and automated performance recommendations.
+              </p>
+              <ul className="text-sm text-gray-600 space-y-1">
+                <li>• Real-time dashboards</li>
+                <li>• AI-powered insights</li>
+                <li>• Automated reporting</li>
+                <li>• ROI optimization</li>
+                <li>• Competitive analysis</li>
+              </ul>
+              <div className="mt-4 text-sm text-green-600 font-semibold">
+                Market Price: $1,000-3,000/month | Our Price: $600/month
+              </div>
             </div>
           </div>
         </div>
@@ -156,7 +223,8 @@ export default function ServicesAdvertisingPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-white border-2 border-gray-200 rounded-lg p-8 hover:border-blue-500 transition-colors duration-200">
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Starter</h3>
-              <div className="text-4xl font-bold text-blue-600 mb-6">$2,500<span className="text-lg text-gray-500">/month</span></div>
+              <div className="text-4xl font-bold text-blue-600 mb-2">$1,200<span className="text-lg text-gray-500">/month</span></div>
+              <div className="text-sm text-green-600 font-semibold mb-6">Save 40% vs market rates</div>
               <ul className="space-y-3 mb-8">
                 <li className="flex items-center">
                   <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
@@ -168,11 +236,15 @@ export default function ServicesAdvertisingPage() {
                 </li>
                 <li className="flex items-center">
                   <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                  <span>Basic reporting</span>
+                  <span>Basic reporting & analytics</span>
                 </li>
                 <li className="flex items-center">
                   <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
                   <span>Email support</span>
+                </li>
+                <li className="flex items-center">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
+                  <span>2 platforms included</span>
                 </li>
               </ul>
               <button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200">
@@ -184,7 +256,8 @@ export default function ServicesAdvertisingPage() {
                 <span className="bg-yellow-400 text-yellow-900 px-4 py-1 rounded-full text-sm font-semibold">Most Popular</span>
               </div>
               <h3 className="text-2xl font-bold mb-4">Professional</h3>
-              <div className="text-4xl font-bold mb-6">$5,000<span className="text-lg text-blue-200">/month</span></div>
+              <div className="text-4xl font-bold mb-2">$2,500<span className="text-lg text-blue-200">/month</span></div>
+              <div className="text-sm text-green-300 font-semibold mb-6">Save 50% vs market rates</div>
               <ul className="space-y-3 mb-8">
                 <li className="flex items-center">
                   <CheckCircle className="w-5 h-5 text-green-300 mr-3" />
@@ -206,6 +279,10 @@ export default function ServicesAdvertisingPage() {
                   <CheckCircle className="w-5 h-5 text-green-300 mr-3" />
                   <span>Custom reporting</span>
                 </li>
+                <li className="flex items-center">
+                  <CheckCircle className="w-5 h-5 text-green-300 mr-3" />
+                  <span>All platforms included</span>
+                </li>
               </ul>
               <button className="w-full bg-white text-blue-600 hover:bg-gray-100 font-semibold py-3 px-6 rounded-lg transition-colors duration-200">
                 Get Started
@@ -213,7 +290,8 @@ export default function ServicesAdvertisingPage() {
             </div>
             <div className="bg-white border-2 border-gray-200 rounded-lg p-8 hover:border-blue-500 transition-colors duration-200">
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Enterprise</h3>
-              <div className="text-4xl font-bold text-blue-600 mb-6">Custom<span className="text-lg text-gray-500">/month</span></div>
+              <div className="text-4xl font-bold text-blue-600 mb-2">$5,000<span className="text-lg text-gray-500">/month</span></div>
+              <div className="text-sm text-green-600 font-semibold mb-6">Save 60% vs market rates</div>
               <ul className="space-y-3 mb-8">
                 <li className="flex items-center">
                   <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
@@ -234,6 +312,10 @@ export default function ServicesAdvertisingPage() {
                 <li className="flex items-center">
                   <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
                   <span>Custom integrations</span>
+                </li>
+                <li className="flex items-center">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
+                  <span>White-label options</span>
                 </li>
               </ul>
               <button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200">
