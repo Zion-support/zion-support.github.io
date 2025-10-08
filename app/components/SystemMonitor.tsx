@@ -8,6 +8,19 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { errorHandler } from '../utils/enhancedErrorHandler';
 
+// Collect basic performance metrics
+const collectPerformanceMetrics = () => {
+  if (typeof window === 'undefined' || !window.performance) return null;
+  
+  const navigation = window.performance.timing;
+  const paint = window.performance.getEntriesByType('paint');
+  
+  return {
+    loadTime: navigation.loadEventEnd - navigation.navigationStart,
+    firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0,
+  };
+};
+
 // Helper functions
 const calculatePerformanceScore = (loadTime: number, firstContentfulPaint: number) => {
   let score = 100;
