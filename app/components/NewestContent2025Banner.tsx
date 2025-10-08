@@ -3,7 +3,6 @@ import Link from 'next/link';
 
 const NewestContent2025Banner: React.FC = () => {
   return (
-    <>
     <section className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 overflow-hidden">
       {/* Animated Background Effects */}
       <div className="absolute inset-0 opacity-20">
@@ -132,7 +131,6 @@ const NewestContent2025Banner: React.FC = () => {
           </div>
         </div>
       </section>
-    </>
   );
 };
 
