@@ -37,4 +37,4 @@ export { default as cacheUtils } from './cache';
 export { default as logger } from './logger';
 export { default as apiUtils } from './api';
 export { default as hooksUtils } from './hooks';
-export { ErrorHandler } from './errorHandler';
+export { default as ErrorHandler } from './errorHandler';

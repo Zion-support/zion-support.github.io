@@ -14,6 +14,7 @@ interface PerformanceMetrics {
   loadTime: number;
   renderTime: number;
   memoryUsage: number;
+  memory?: number;
   bundleSize: number;
   cacheHitRate: number;
   firstContentfulPaint?: number;
@@ -138,8 +139,6 @@ class PerformanceOptimizer {
       observer.observe({ entryTypes: ['layout-shift'] })
       this.observers.push(observer)
     } catch {
-    } catch {
-    } catch {
       // Ignore if not supported
     }
   }
@@ -155,8 +154,6 @@ class PerformanceOptimizer {
       })
       observer.observe({ entryTypes: ['paint'] })
       this.observers.push(observer)
-    } catch {
-    } catch {
     } catch {
       // Ignore if not supported
     }
@@ -176,8 +173,6 @@ class PerformanceOptimizer {
       observer.observe({ entryTypes: ['navigation'] })
       this.observers.push(observer)
     } catch {
-    } catch {
-    } catch {
       // Ignore if not supported
     }
   }
@@ -189,11 +184,9 @@ class PerformanceOptimizer {
       }
     }
   }
-  lazyLoadImages() {
-    if (typeof window === 'undefined') return
+  private measureRenderTime(): void {
+    if (typeof window === 'undefined') return;
 
-    const images = document.querySelectorAll('img[data-src]')
-    
     // Check if PerformanceObserver exists (may not be available in test environments)
     if (typeof PerformanceObserver === 'undefined') return;
 
@@ -427,7 +420,10 @@ class PerformanceOptimizer {
   }
 
   /**
-   * Cleanup observers and resources
+   * Generate comprehensive performance report
+   */
+  generateComprehensiveReport(): string {
+    const score = this.getPerformanceScore();
     const metrics = this.getMetrics();
 
     return `

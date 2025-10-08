@@ -212,6 +212,18 @@ export class SecureStorage {
   }
 }
 
+// Additional exports for compatibility
+export const sanitizeInput = sanitizeHtml;
+export const validatePassword = (password: string) => {
+  if (!password || password.length < 8) return false;
+  return /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]/.test(password);
+};
+export const generateSecureToken = () => {
+  return Array.from(crypto.getRandomValues(new Uint8Array(32)))
+    .map(b => b.toString(16).padStart(2, '0'))
+    .join('');
+};
+
 export const securityUtils = {
   sanitizeHtml,
   isValidUrl,
@@ -223,6 +235,9 @@ export const securityUtils = {
   RateLimiter,
   CSRFProtection,
   SecureStorage,
+  sanitizeInput,
+  validatePassword,
+  generateSecureToken,
 };
 
 export default securityUtils;
