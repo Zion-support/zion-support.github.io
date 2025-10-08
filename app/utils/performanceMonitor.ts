@@ -228,6 +228,7 @@ class PerformanceMonitor {
     return scores.length > 0 ? Math.round(scores.reduce((a, b) => a + b, 0) / scores.length) : 0;
   }
 
+
   generateReport(): string {
     const score = this.getScore();
     const metrics = this.getMetrics();
@@ -235,13 +236,13 @@ class PerformanceMonitor {
     return `
 Performance Report:
 Score: ${score}/100
-- FCP: ${metrics.fcp ? `${metrics.fcp}ms` : 'N/A'}
-- LCP: ${metrics.lcp ? `${metrics.lcp}ms` : 'N/A'}
-- FID: ${metrics.fid ? `${metrics.fid}ms` : 'N/A'}
-- CLS: ${metrics.cls !== undefined ? metrics.cls.toFixed(3) : 'N/A'}
-- TTFB: ${metrics.ttfb ? `${metrics.ttfb}ms` : 'N/A'}
-    `.trim();
+FCP: ${metrics.fcp}ms
+LCP: ${metrics.lcp}ms
+FID: ${metrics.fid}ms
+CLS: ${metrics.cls}
+TTFB: ${metrics.ttfb}ms
+`;
   }
 }
 
-export const performanceMonitor = new PerformanceMonitor();
+export default new PerformanceMonitor();
