@@ -118,7 +118,7 @@ class AnalyticsService {
   ): void {
     try {
       if (this.hasGtag()) {
-        gtag('event', 'timing_complete', {
+        this.gtag('event', 'timing_complete', {
           name: variable,
           value: Math.round(value),
           event_category: category,

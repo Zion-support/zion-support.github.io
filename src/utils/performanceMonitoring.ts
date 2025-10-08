@@ -218,8 +218,14 @@ class PerformanceMonitor {
       // Observe First Input Delay (FID)
       const fidObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
+<<<<<<< HEAD
         entries.forEach((entry: any) => {
           const metric = this.createMetric('FID', entry.processingStart - entry.startTime);
+=======
+        entries.forEach((entry: unknown) => {
+          const fidEntry = entry as PerformanceEventTiming;
+          const metric = this.createMetric('FID', fidEntry.processingStart - fidEntry.startTime);
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-c95a
           this.webVitals.FID = metric;
           this.notifyCallbacks(metric);
         });
@@ -231,9 +237,16 @@ class PerformanceMonitor {
       let clsValue = 0;
       const clsObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
+<<<<<<< HEAD
         entries.forEach((entry: any) => {
           if (!entry.hadRecentInput) {
             clsValue += entry.value;
+=======
+        entries.forEach((entry: unknown) => {
+          const clsEntry = entry as any;
+          if (!clsEntry.hadRecentInput) {
+            clsValue += clsEntry.value;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-c95a
           }
         });
         const metric = this.createMetric('CLS', clsValue);
@@ -294,13 +307,19 @@ class PerformanceMonitor {
     try {
       const resourceObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
+<<<<<<< HEAD
         entries.forEach((entry: any) => {
           if (entry.initiatorType) {
+=======
+        entries.forEach((entry: unknown) => {
+          const resourceEntry = entry as PerformanceResourceTiming;
+          if (resourceEntry.initiatorType) {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-c95a
             this.trackMetric(
-              `resource_${entry.initiatorType}`,
-              entry.duration,
+              `resource_${resourceEntry.initiatorType}`,
+              resourceEntry.duration,
               'ms',
-              { name: entry.name }
+              { name: resourceEntry.name }
             );
           }
         });

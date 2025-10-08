@@ -31,6 +31,7 @@ jest.mock('./src/hooks/usePerformance.ts', () => ({
   })),
 }));
 
+<<<<<<< HEAD
 // Mock React Router
 jest.mock('react-router-dom', () => ({
   ...jest.requireActual('react-router-dom'),
@@ -45,6 +46,46 @@ jest.mock('react-router-dom', () => ({
   Link: ({ children, to, ...props }) => React.createElement('a', { href: to, ...props }, children),
   NavLink: ({ children, to, ...props }) => React.createElement('a', { href: to, ...props }, children),
 }));
+=======
+jest.mock('./app/hooks/usePerformanceMonitoring.ts', () => ({
+  usePerformanceMonitoring: jest.fn(() => ({
+    metrics: {},
+    report: {},
+  })),
+}));
+
+
+// Mock React Router (this is a Vite project, not Next.js)
+jest.mock('react-router-dom', () => {
+  const actual = jest.requireActual('react-router-dom');
+  return {
+    ...actual,
+    useNavigate: () => jest.fn(),
+    useLocation: () => ({
+      pathname: '/',
+      search: '',
+      hash: '',
+      state: null,
+    }),
+    useParams: () => ({}),
+    BrowserRouter: ({ children }) => children,
+    MemoryRouter: ({ children }) => {
+      const { createMemoryRouter, RouterProvider } = actual;
+      const router = createMemoryRouter([
+        {
+          path: '/',
+          element: children,
+        },
+      ], {
+        initialEntries: ['/'],
+        initialIndex: 0,
+      });
+      return <RouterProvider router={router} />;
+    },
+    RouterProvider: ({ router }) => null,
+  };
+});
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-c95a
 
 // Mock window.matchMedia
 Object.defineProperty(window, 'matchMedia', {
@@ -72,6 +113,11 @@ global.IntersectionObserver = class IntersectionObserver {
   unobserve() {}
 };
 
+<<<<<<< HEAD
+=======
+// TextEncoder and TextDecoder are already declared above
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-c95a
 // Suppress console errors in tests
 const originalError = console.error;
 beforeAll(() => {

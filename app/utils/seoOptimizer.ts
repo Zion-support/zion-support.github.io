@@ -199,15 +199,15 @@ class SEOOptimizer {
     if (!this.currentPageData) return
 
     const structuredData = {
-      '@context': 'https://schema.org'
-      '@type': this.currentPageData.type === 'article' ? 'Article' : 'WebPage'
-      headline: this.generateTitle()
-      description: this.generateDescription()
-      url: this.currentPageData.url || window.location.href
-      image: this.currentPageData.image || this.config.defaultImage
+      '@context': 'https://schema.org',
+      '@type': this.currentPageData.type === 'article' ? 'Article' : 'WebPage',
+      headline: this.generateTitle(),
+      description: this.generateDescription(),
+      url: this.currentPageData.url || window.location.href,
+      image: this.currentPageData.image || this.config.defaultImage,
       publisher: {
-        '@type': 'Organization'
-        name: this.config.siteName
+        '@type': 'Organization',
+        name: this.config.siteName,
         url: this.config.siteUrl
       }
     }
@@ -215,12 +215,12 @@ class SEOOptimizer {
     if (this.currentPageData.type === 'article') {
       Object.assign(structuredData, {
         author: {
-          '@type': 'Person'
+          '@type': 'Person',
           name: this.currentPageData.author || this.config.siteName
-        }
-        datePublished: this.currentPageData.publishedTime
-        dateModified: this.currentPageData.modifiedTime
-        articleSection: this.currentPageData.section
+        },
+        datePublished: this.currentPageData.publishedTime,
+        dateModified: this.currentPageData.modifiedTime,
+        articleSection: this.currentPageData.section,
         keywords: this.generateKeywords()
       })
     }
@@ -264,6 +264,8 @@ class SEOOptimizer {
       let clsValue = 0
       new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
+          if (!(entry as any).hadRecentInput) {
+            clsValue += (entry as any).value
           }
         }
         if (clsValue > 0.25) { // Poor CLS
@@ -276,8 +278,10 @@ class SEOOptimizer {
    * Track SEO-related metrics
    */
   private trackSEOMetric(metric: string, value: number): void {
+    if (typeof gtag === 'function') {
+      gtag('event', 'seo_metric', {
         metric_name: metric,
-        metric_value: Math.round(value)
+        metric_value: Math.round(value),
         event_category: 'seo'
       })
     }
@@ -289,9 +293,9 @@ class SEOOptimizer {
     // This would typically come from your CMS or routing system
     return [
       {
-        url: this.config.siteUrl
-        lastmod: new Date().toISOString()
-        changefreq: 'daily'
+        url: this.config.siteUrl,
+        lastmod: new Date().toISOString(),
+        changefreq: 'daily',
         priority: '1.0'
       }
     ]
@@ -363,13 +367,13 @@ Disallow: /static/`
 }
 // Default configuration
 const defaultConfig: SEOConfig = {
-  siteName: 'Zion Tech Group'
-  siteUrl: 'https://zion.app'
-  defaultTitle: 'Advanced AI and IT Solutions'
-  defaultDescription: 'Zion Tech Group provides cutting-edge AI and IT solutions for businesses. Transform your operations with our innovative technology and expert consulting services.'
-  defaultImage: 'https://zion.app/og-image.jpg'
-  twitterHandle: 'ZionTechGroup'
-  googleAnalyticsId: process.env.GOOGLE_ANALYTICS_ID
+  siteName: 'Zion Tech Group',
+  siteUrl: 'https://zion.app',
+  defaultTitle: 'Advanced AI and IT Solutions',
+  defaultDescription: 'Zion Tech Group provides cutting-edge AI and IT solutions for businesses. Transform your operations with our innovative technology and expert consulting services.',
+  defaultImage: 'https://zion.app/og-image.jpg',
+  twitterHandle: 'ZionTechGroup',
+  googleAnalyticsId: process.env.GOOGLE_ANALYTICS_ID,
   googleTagManagerId: process.env.GOOGLE_TAG_MANAGER_ID
 }
 export const seoOptimizer = new SEOOptimizer(defaultConfig)
