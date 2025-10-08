@@ -124,14 +124,15 @@ const NewestContent2025Banner: React.FC = () => {
               <p className="text-gray-300 text-sm">Latest breakthroughs in artificial intelligence and machine learning technologies.</p>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300">
-              <div className="text-4xl mb-4">🚀</div>
+              <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mb-4">
+                <span className="text-4xl">🚀</span>
+              </div>
               <h3 className="text-xl font-bold text-white mb-2">Autonomous Systems</h3>
               <p className="text-gray-300">Intelligent automation driving enterprise efficiency</p>
-            </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
