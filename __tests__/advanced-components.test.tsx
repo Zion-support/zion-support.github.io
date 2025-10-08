@@ -1,5 +1,6 @@
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import { HelmetProvider } from 'react-helmet-async';
+import { MemoryRouter } from 'react-router-dom';
 import AdvancedErrorBoundary from '../app/components/AdvancedErrorBoundary';
 import AdvancedSEOOptimizer from '../app/components/AdvancedSEOOptimizer';
 import AdvancedPerformanceMonitor from '../app/components/AdvancedPerformanceMonitor';
@@ -14,9 +15,20 @@ const ThrowError = ({ shouldThrow }: { shouldThrow: boolean }) => {
   return <div>No error</div>;
 };
 
+// Helper function to render with providers
+const renderWithProviders = (ui: React.ReactElement) => {
+  return render(
+    <MemoryRouter>
+      <HelmetProvider>
+        {ui}
+      </HelmetProvider>
+    </MemoryRouter>
+  );
+};
+
 describe('AdvancedErrorBoundary', () => {
   it('renders children when there is no error', () => {
-    render(
+    renderWithProviders(
       <AdvancedErrorBoundary>
         <div>Test content</div>
       </AdvancedErrorBoundary>
@@ -30,7 +42,7 @@ describe('AdvancedErrorBoundary', () => {
       .spyOn(console, 'error')
       .mockImplementation(() => {});
 
-    render(
+    renderWithProviders(
       <AdvancedErrorBoundary enableRetry={true}>
         <ThrowError shouldThrow={true} />
       </AdvancedErrorBoundary>
@@ -50,7 +62,7 @@ describe('AdvancedErrorBoundary', () => {
       .spyOn(console, 'error')
       .mockImplementation(() => {});
 
-    render(
+    renderWithProviders(
       <AdvancedErrorBoundary onError={onError}>
         <ThrowError shouldThrow={true} />
       </AdvancedErrorBoundary>
@@ -68,7 +80,7 @@ describe('AdvancedErrorBoundary', () => {
     let shouldThrow = true;
     const TestComponent = () => <ThrowError shouldThrow={shouldThrow} />;
 
-    const { rerender } = render(
+    const { rerender } = renderWithProviders(
       <AdvancedErrorBoundary enableRetry={true}>
         <TestComponent />
       </AdvancedErrorBoundary>
@@ -105,21 +117,16 @@ describe('AdvancedSEOOptimizer', () => {
   };
 
   it('renders without crashing', () => {
-    render(
-      <HelmetProvider>
-        <AdvancedSEOOptimizer seoData={mockSEOData} />
-        <div>Test content</div>
-      </HelmetProvider>
+    renderWithProviders(
+      <AdvancedSEOOptimizer seoData={mockSEOData} />
     );
 
     expect(screen.getByText('Test content')).toBeInTheDocument();
   });
 
   it('sets document title', async () => {
-    render(
-      <HelmetProvider>
-        <AdvancedSEOOptimizer seoData={mockSEOData} />
-      </HelmetProvider>
+    renderWithProviders(
+      <AdvancedSEOOptimizer seoData={mockSEOData} />
     );
 
     // Wait for helmet to update the document title
@@ -129,13 +136,11 @@ describe('AdvancedSEOOptimizer', () => {
 
   it('renders structured data when enabled', async () => {
     const helmetContext = {};
-    const { container } = render(
-      <HelmetProvider context={helmetContext}>
-        <AdvancedSEOOptimizer
-          seoData={mockSEOData}
-          enableStructuredData={true}
-        />
-      </HelmetProvider>
+    const { container } = renderWithProviders(
+      <AdvancedSEOOptimizer
+        seoData={mockSEOData}
+        enableStructuredData={true}
+      />
     );
 
     // In test environment, helmet may not render scripts in the DOM
@@ -147,10 +152,8 @@ describe('AdvancedSEOOptimizer', () => {
 
   it('renders Open Graph tags when enabled', async () => {
     const helmetContext = {};
-    const { container } = render(
-      <HelmetProvider context={helmetContext}>
-        <AdvancedSEOOptimizer seoData={mockSEOData} enableOpenGraph={true} />
-      </HelmetProvider>
+    const { container } = renderWithProviders(
+      <AdvancedSEOOptimizer seoData={mockSEOData} enableOpenGraph={true} />
     );
 
     // In test environment, helmet renders to document head, not container
@@ -162,10 +165,8 @@ describe('AdvancedSEOOptimizer', () => {
 
   it('renders Twitter Card tags when enabled', async () => {
     const helmetContext = {};
-    const { container } = render(
-      <HelmetProvider context={helmetContext}>
-        <AdvancedSEOOptimizer seoData={mockSEOData} enableTwitterCards={true} />
-      </HelmetProvider>
+    const { container } = renderWithProviders(
+      <AdvancedSEOOptimizer seoData={mockSEOData} enableTwitterCards={true} />
     );
 
     // In test environment, helmet renders to document head, not container
@@ -217,7 +218,7 @@ describe('AdvancedPerformanceMonitor', () => {
     const originalEnv = process.env['NODE_ENV'];
     Object.defineProperty(process.env, 'NODE_ENV', { value: 'production', writable: true });
 
-    const { container } = render(
+    const { container } = renderWithProviders(
       <AdvancedPerformanceMonitor enableRealTimeMonitoring={true} />
     );
 

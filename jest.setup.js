@@ -1,6 +1,12 @@
 // Learn more: https://github.com/testing-library/jest-dom
 import '@testing-library/jest-dom';
 
+// Polyfill TextEncoder and TextDecoder for Node.js environment
+import { TextEncoder, TextDecoder } from 'util';
+
+global.TextEncoder = TextEncoder;
+global.TextDecoder = TextDecoder;
+
 // Mock files that use import.meta.env
 jest.mock('./app/utils/logger.ts', () => ({
   logger: {
