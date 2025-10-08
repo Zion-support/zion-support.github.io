@@ -18,11 +18,7 @@ export const useLocalStorage = <T>(
     }
 
     try {
-<<<<<<< HEAD
       const item = window.localStorage.getItem(key);
-=======
-const item = window.localStorage.getItem(key);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a793
       return item ? (JSON.parse(item) as T) : initialValue;
     } catch (error) {
       console.warn(`Error reading localStorage key "${key}":`, error);
@@ -40,11 +36,7 @@ const item = window.localStorage.getItem(key);
       }
 
       try {
-<<<<<<< HEAD
         const newValue = value instanceof Function ? value(storedValue) : value;
-=======
-const newValue = value instanceof Function ? value(storedValue) : value;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a793
         window.localStorage.setItem(key, JSON.stringify(newValue));
         setStoredValue(newValue);
         window.dispatchEvent(new Event('local-storage'));
@@ -126,11 +118,7 @@ export const useIntersectionObserver = (
   const [entry, setEntry] = useState<IntersectionObserverEntry | null>(null);
 
   useEffect(() => {
-<<<<<<< HEAD
     const element = elementRef.current;
-=======
-const element = elementRef.current;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a793
     if (!element) return;
 
     const observer = new IntersectionObserver(
@@ -246,11 +234,7 @@ export const useAsync = <T, E = Error>(
     setError(null);
 
     try {
-<<<<<<< HEAD
       const response = await asyncFunction();
-=======
-const response = await asyncFunction();
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a793
       setData(response);
     } catch (err) {
       setError(err as E);
@@ -304,13 +288,8 @@ export const useOnlineStatus = (): boolean => {
   useEffect(() => {
     if (typeof window === 'undefined') return;
 
-<<<<<<< HEAD
     const handleOnline = () => setIsOnline(true);
     const handleOffline = () => setIsOnline(false);
-=======
-const handleOnline = () => setIsOnline(true);
-const handleOffline = () => setIsOnline(false);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a793
 
     window.addEventListener('online', handleOnline);
     window.addEventListener('offline', handleOffline);
@@ -413,11 +392,7 @@ export const useInterval = (callback: () => void, delay: number | null): void =>
   useEffect(() => {
     if (delay === null) return;
 
-<<<<<<< HEAD
     const id = setInterval(() => savedCallback.current(), delay);
-=======
-const id = setInterval(() => savedCallback.current(), delay);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a793
     return () => clearInterval(id);
   }, [delay]);
 };
@@ -435,11 +410,7 @@ export const useTimeout = (callback: () => void, delay: number | null): void => 
   useEffect(() => {
     if (delay === null) return;
 
-<<<<<<< HEAD
     const id = setTimeout(() => savedCallback.current(), delay);
-=======
-const id = setTimeout(() => savedCallback.current(), delay);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a793
     return () => clearTimeout(id);
   }, [delay]);
 };

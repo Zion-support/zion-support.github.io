@@ -11,7 +11,7 @@ export interface PerformanceMetrics {
 export const reportWebVitals = (metric: unknown) => {
   // Log to console in development
   if (process.env['NODE_ENV'] === 'development') {
-    if (process.env.DEV) { console.log('[Web Vitals]', metric); }
+//     if (process.env.DEV) { console.log('[Web Vitals]', metric); }
   }
 
   // Send to analytics in production
@@ -57,11 +57,7 @@ export const logPerformance = (label: string) => {
     performance.mark(mark);
     
     return () => {
-<<<<<<< HEAD
       const endMark = `${label}-end`;
-=======
-const endMark = `${label}-end`;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a793
       performance.mark(endMark);
       performance.measure(label, mark, endMark);
       

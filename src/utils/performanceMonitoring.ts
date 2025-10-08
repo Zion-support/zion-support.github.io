@@ -72,7 +72,6 @@ class PerformanceMonitor {
     fn: () => Promise<T>,
     tags?: Record<string, string>
   ): Promise<T> {
-<<<<<<< HEAD
     const start = performance.now();
     try {
       const result = await fn();
@@ -81,16 +80,6 @@ class PerformanceMonitor {
       return result;
     } catch (error) {
       const duration = performance.now() - start;
-=======
-const start = performance.now();
-    try {
-const result = await fn();
-const duration = performance.now() - start;
-      this.trackMetric(name, duration, 'ms', tags);
-      return result;
-    } catch (error) {
-const duration = performance.now() - start;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a793
       this.trackMetric(`${name}_error`, duration, 'ms', { ...tags, error: 'true' });
       throw error;
     }
@@ -100,7 +89,6 @@ const duration = performance.now() - start;
    * Measure execution time of a synchronous function
    */
   measure<T>(name: string, fn: () => T, tags?: Record<string, string>): T {
-<<<<<<< HEAD
     const start = performance.now();
     try {
       const result = fn();
@@ -109,16 +97,6 @@ const duration = performance.now() - start;
       return result;
     } catch (error) {
       const duration = performance.now() - start;
-=======
-const start = performance.now();
-    try {
-const result = fn();
-const duration = performance.now() - start;
-      this.trackMetric(name, duration, 'ms', tags);
-      return result;
-    } catch (error) {
-const duration = performance.now() - start;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a793
       this.trackMetric(`${name}_error`, duration, 'ms', { ...tags, error: 'true' });
       throw error;
     }
@@ -143,11 +121,7 @@ const duration = performance.now() - start;
       performance.measure(name, startMark, endMark);
       const entries = performance.getEntriesByName(name, 'measure');
       if (entries.length > 0) {
-<<<<<<< HEAD
         const duration = entries[entries.length - 1].duration;
-=======
-const duration = entries[entries.length - 1].duration;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a793
         this.trackMetric(name, duration, 'ms');
         return duration;
       }
@@ -244,13 +218,8 @@ const duration = entries[entries.length - 1].duration;
       // Observe First Input Delay (FID)
       const fidObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
-<<<<<<< HEAD
         entries.forEach((entry: unknown) => {
           const fidEntry = entry as PerformanceEventTiming;
-=======
-        entries.forEach((entry: PerformanceEntry) => {
-          const fidEntry = entry as PerformanceEntry & { processingStart: number };
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a793
           const metric = this.createMetric('FID', fidEntry.processingStart - fidEntry.startTime);
           this.webVitals.FID = metric;
           this.notifyCallbacks(metric);
@@ -263,13 +232,8 @@ const duration = entries[entries.length - 1].duration;
       let clsValue = 0;
       const clsObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
-<<<<<<< HEAD
         entries.forEach((entry: unknown) => {
-          const clsEntry = entry as any; // LayoutShift type not available in all environments
-=======
-        entries.forEach((entry: PerformanceEntry) => {
-          const clsEntry = entry as PerformanceEntry & { hadRecentInput?: boolean; value: number };
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a793
+          const clsEntry = entry as LayoutShift;
           if (!clsEntry.hadRecentInput) {
             clsValue += clsEntry.value;
           }
@@ -306,13 +270,8 @@ const duration = entries[entries.length - 1].duration;
         this.trackMetric('load_event', nav.loadEventEnd - nav.loadEventStart);
 
         // TTFB (Time to First Byte)
-<<<<<<< HEAD
         const ttfb = nav.responseStart - nav.requestStart;
         const ttfbMetric = this.createMetric('TTFB', ttfb);
-=======
-const ttfb = nav.responseStart - nav.requestStart;
-const ttfbMetric = this.createMetric('TTFB', ttfb);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a793
         this.webVitals.TTFB = ttfbMetric;
         this.notifyCallbacks(ttfbMetric);
 
@@ -320,11 +279,7 @@ const ttfbMetric = this.createMetric('TTFB', ttfb);
         const paintEntries = performance.getEntriesByType('paint');
         const fcpEntry = paintEntries.find((entry) => entry.name === 'first-contentful-paint');
         if (fcpEntry) {
-<<<<<<< HEAD
           const fcpMetric = this.createMetric('FCP', fcpEntry.startTime);
-=======
-const fcpMetric = this.createMetric('FCP', fcpEntry.startTime);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a793
           this.webVitals.FCP = fcpMetric;
           this.notifyCallbacks(fcpMetric);
         }
@@ -341,13 +296,8 @@ const fcpMetric = this.createMetric('FCP', fcpEntry.startTime);
     try {
       const resourceObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
-<<<<<<< HEAD
         entries.forEach((entry: unknown) => {
           const resourceEntry = entry as PerformanceResourceTiming;
-=======
-        entries.forEach((entry: PerformanceEntry) => {
-          const resourceEntry = entry as PerformanceEntry & { initiatorType?: string; name: string };
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a793
           if (resourceEntry.initiatorType) {
             this.trackMetric(
               `resource_${resourceEntry.initiatorType}`,

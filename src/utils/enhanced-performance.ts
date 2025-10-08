@@ -73,11 +73,7 @@ export class PerformanceMonitor {
       const fidObserver = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           const fidEntry = entry as PerformanceEventTiming;
-<<<<<<< HEAD
           const fid = fidEntry.processingStart - fidEntry.startTime;
-=======
-const fid = fidEntry.processingStart - fidEntry.startTime;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a793
           this.recordMetric('fid', fid);
         }
       });
@@ -142,11 +138,7 @@ const fid = fidEntry.processingStart - fidEntry.startTime;
     const values = this.metrics.get(name);
     if (!values || values.length === 0) return 0;
     
-<<<<<<< HEAD
     const sum = values.reduce((acc, val) => acc + val, 0);
-=======
-const sum = values.reduce((acc, val) => acc + val, 0);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a793
     return sum / values.length;
   }
   
@@ -202,11 +194,7 @@ const sum = values.reduce((acc, val) => acc + val, 0);
    * Get performance report
    */
   getReport(): PerformanceReport {
-<<<<<<< HEAD
     const webVitals = this.getWebVitals();
-=======
-const webVitals = this.getWebVitals();
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a793
     
     return {
       webVitals,
@@ -311,15 +299,9 @@ export function measureExecutionTime<T extends (...args: unknown[]) => any>(
   label?: string
 ): T {
   return ((...args: Parameters<T>): ReturnType<T> => {
-<<<<<<< HEAD
     const start = performance.now();
     const result = fn(...args);
     const end = performance.now();
-=======
-const start = performance.now();
-const result = fn(...args);
-const end = performance.now();
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a793
     
     console.log(`${label || fn.name} took ${(end - start).toFixed(2)}ms`);
     

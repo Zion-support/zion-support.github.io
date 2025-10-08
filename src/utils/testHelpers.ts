@@ -30,17 +30,10 @@ export async function waitForCondition(
   timeout: number = 5000,
   interval: number = 100
 ): Promise<void> {
-<<<<<<< HEAD
   const startTime = Date.now();
 
   while (Date.now() - startTime < timeout) {
     const result = await condition();
-=======
-const startTime = Date.now();
-
-  while (Date.now() - startTime < timeout) {
-const result = await condition();
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a793
     if (result) return;
     await new Promise((resolve) => setTimeout(resolve, interval));
   }
@@ -295,15 +288,9 @@ export function testComponentSnapshot(
 export async function measureRenderTime(
   component: ReactElement
 ): Promise<number> {
-<<<<<<< HEAD
   const startTime = performance.now();
   const { unmount } = renderWithProviders(component);
   const endTime = performance.now();
-=======
-const startTime = performance.now();
-  const { unmount } = renderWithProviders(component);
-const endTime = performance.now();
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a793
   unmount();
   return endTime - startTime;
 }
@@ -315,24 +302,15 @@ export function detectMemoryLeaks(
   componentFactory: () => ReactElement,
   iterations: number = 100
 ): boolean {
-<<<<<<< HEAD
   const initialMemory = (performance as any).memory?.usedJSHeapSize || 0;
-=======
-const initialMemory = (performance as any).memory?.usedJSHeapSize || 0;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a793
 
   for (let i = 0; i < iterations; i++) {
     const { unmount } = renderWithProviders(componentFactory());
     unmount();
   }
 
-<<<<<<< HEAD
   const finalMemory = (performance as any).memory?.usedJSHeapSize || 0;
   const memoryIncrease = finalMemory - initialMemory;
-=======
-const finalMemory = (performance as any).memory?.usedJSHeapSize || 0;
-const memoryIncrease = finalMemory - initialMemory;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a793
 
   // If memory increased by more than 10MB, likely a leak
   return memoryIncrease > 10 * 1024 * 1024;

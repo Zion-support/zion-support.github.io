@@ -37,13 +37,9 @@ export const lazyLoadImages = (): void => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           const img = entry.target as HTMLImageElement;
-<<<<<<< HEAD
           const src = img.dataset['src'];
-=======
-const src = img.dataset['src'];
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a793
           if (src) {
-            img.src = src;
+            img['src'] = src;
             img.removeAttribute('data-src');
             imageObserver.unobserve(img);
           }
@@ -261,17 +257,10 @@ class PerformanceOptimizer {
   }
 
   public measurePerformance(name: string, fn: () => void): number {
-<<<<<<< HEAD
     const start = performance.now();
     fn();
     const end = performance.now();
     const duration = end - start;
-=======
-const start = performance.now();
-    fn();
-const end = performance.now();
-const duration = end - start;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a793
     this.metrics.set(name, duration);
     return duration;
   }
