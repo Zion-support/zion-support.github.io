@@ -143,7 +143,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     if (typeof document !== 'undefined') {
       document.title = seoData.title;
       
-      let _metaDescription = document.querySelector('meta[name="description"]');
+      let metaDescription = document.querySelector('meta[name="description"]');
       if (!metaDescription) {
         metaDescription = document.createElement('meta');
         metaDescription.setAttribute('name', 'description');
@@ -152,7 +152,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
       metaDescription.setAttribute('content', seoData.description);
 
       // Update canonical URL
-      let _canonicalLink = document.querySelector('link[rel="canonical"]');
+      let canonicalLink = document.querySelector('link[rel="canonical"]');
       if (!canonicalLink) {
         canonicalLink = document.createElement('link');
         canonicalLink.setAttribute('rel', 'canonical');
@@ -225,7 +225,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
         }
       });
     }
-  };origin/cursor/fix-errors-and-merge-to-main-6395
+  };
 
   return (
     <Helmet>
@@ -271,21 +271,21 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
       <meta name="theme-color" content="#4F46E5" />
 
       {/* Structured Data */}
-      {enableSchemaMarkup && structuredData && (
+      {enableSchemaMarkup && _structuredData && (
         <script type="application/ld+json">
-          {JSON.stringify(structuredData)}
+          {JSON.stringify(_structuredData)}
         </script>
       )}
 
-      {enableSchemaMarkup && breadcrumbData && (
+      {enableSchemaMarkup && _breadcrumbData && (
         <script type="application/ld+json">
-          {JSON.stringify(breadcrumbData)}
+          {JSON.stringify(_breadcrumbData)}
         </script>
       )}
 
-      {enableSchemaMarkup && faqData && (
+      {enableSchemaMarkup && _faqData && (
         <script type="application/ld+json">
-          {JSON.stringify(faqData)}
+          {JSON.stringify(_faqData)}
         </script>
       )}
 
