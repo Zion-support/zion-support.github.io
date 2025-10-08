@@ -141,7 +141,7 @@ class ApiClient {
       url,
       method = 'GET',
       headers = {},
-      cache: cacheConfig,
+      cacheOptions: cacheConfig,
       skipCache = false,
       retries = this.config.retries,
       timeout = this.config.timeout,
@@ -212,7 +212,7 @@ class ApiClient {
           cacheManager.set(
             cacheKey,
             data,
-            cacheConfig || this.config.cacheOptions
+            cacheConfig || this.config.cacheOptions || {}
           );
         }
 
@@ -337,7 +337,7 @@ const apiClient = new ApiClient({
   timeout: 30000,
   retries: 3,
   retryDelay: 1000,
-  cache: {
+  cacheOptions: {
     ttl: 5 * 60 * 1000, // 5 minutes
   },
 });
