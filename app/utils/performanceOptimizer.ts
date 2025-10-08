@@ -227,6 +227,33 @@ class PerformanceOptimizer {
     };
   }
 
+  startMark(markName: string): void {
+    if (typeof window !== 'undefined' && 'performance' in window) {
+      performance.mark(`${markName}-start`);
+    }
+  }
+
+  endMark(markName: string): number | null {
+    if (typeof window !== 'undefined' && 'performance' in window) {
+      try {
+        performance.mark(`${markName}-end`);
+        performance.measure(markName, `${markName}-start`, `${markName}-end`);
+        const measures = performance.getEntriesByName(markName, 'measure');
+        if (measures.length > 0) {
+          const duration = measures[measures.length - 1].duration;
+          // Clean up marks and measures
+          performance.clearMarks(`${markName}-start`);
+          performance.clearMarks(`${markName}-end`);
+          performance.clearMeasures(markName);
+          return duration;
+        }
+      } catch (error) {
+        console.warn('Failed to measure performance:', error);
+      }
+    }
+    return null;
+  }
+
   cleanup() {
     this.observers.forEach(observer => observer.disconnect());
     this.observers = [];
