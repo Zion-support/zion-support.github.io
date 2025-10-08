@@ -1,11 +1,11 @@
 // Performance monitoring setup
 import analytics from './utils/analytics';
 import ErrorHandler from './utils/errorHandler';
-import { performanceOptimizer } from './utils/performanceOptimizer';
+import { performanceOptimizer } from '../app/utils/performanceOptimizer';
 import { logger } from './utils/logger';
 
 // Initialize error handler
-const errorHandler = new ErrorHandler();
+const errorHandler = ErrorHandler.getInstance();
 
 // Initialize monitoring on load
 function initializeMonitoring() {
@@ -13,13 +13,13 @@ function initializeMonitoring() {
     // Set up performance monitoring
     if (typeof window !== 'undefined') {
       // Monitor web vitals
-      performanceOptimizer.initialize();
+      performanceOptimizer.init();
       
       // Set up error tracking
       // errorHandler.init(); // Method may not exist
       
-      // Analytics is already initialized via constructor
-      // No need to call init() as the Analytics class doesn't have this method
+      // Initialize analytics
+      if ('init' in analytics && typeof analytics.init === 'function') { analytics.init(); }
       
       logger.info('Monitoring initialized successfully');
     }
@@ -31,4 +31,4 @@ function initializeMonitoring() {
 // Initialize monitoring on load
 initializeMonitoring();
 
-export { analytics, errorHandler, initializeMonitoring, ErrorHandler };
+export { analytics, errorHandler, initializeMonitoring, ErrorHandler, performanceOptimizer };
