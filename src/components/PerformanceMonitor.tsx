@@ -36,6 +36,7 @@ export const PerformanceMonitor: React.FC = () => {
     } else {
       window.addEventListener('load', measurePerformance);
     }
+    
     return () => {
       window.removeEventListener('load', measurePerformance);
     };
@@ -78,4 +79,3 @@ export const PerformanceMonitor: React.FC = () => {
   );
 };
 
-export default PerformanceMonitor;

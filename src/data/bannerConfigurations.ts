@@ -19,11 +19,6 @@ export const bannerConfigurations: BannerConfig[] = [
 
 export default bannerConfigurations;
 
-
-// Type definitions
-export type BannerConfig = typeof bannerConfigurations[number];
-export type RotationStrategy = 'sequential' | 'random' | 'weighted' | 'balanced';
-
 // Stub implementations for banner rotation functions
 export const selectBannersForDisplay = async (strategy: RotationStrategy = 'sequential', maxBanners: number = 3) => {
   return bannerConfigurations.slice(0, maxBanners);
@@ -54,7 +49,7 @@ export const loadBannerStats = async () => {
 };
 
 export const getRefreshInterval = () => {
-  return 30000; // 30 seconds default
+  return 30000;
 };
 
 export const getRotationStrategy = (): RotationStrategy => {

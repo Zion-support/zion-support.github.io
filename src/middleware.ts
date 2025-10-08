@@ -1,3 +1,12 @@
+// DISABLED: This is Next.js middleware and does not work with Vite
+// Security headers are configured in netlify.toml instead
+//
+// This file is kept for reference only. To use middleware in Vite:
+// 1. Security headers should be set via netlify.toml (already configured)
+// 2. Client-side redirects can be handled via React Router
+// 3. Server-side logic should use Netlify Functions or Edge Functions
+
+/*
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 
@@ -38,13 +47,9 @@ export function middleware(request: NextRequest) {
 
 export const config = {
   matcher: [
-    /*
-     * Match all request paths except for the ones starting with:
-     * - api (API routes)
-     * - _next/static (static files)
-     * - _next/image (image optimization files)
-     * - favicon.ico (favicon file)
-     */
     '/((?!api|_next/static|_next/image|favicon.ico).*)',
   ],
 };
+*/
+
+export {}; // Make this a module to avoid TS errors
