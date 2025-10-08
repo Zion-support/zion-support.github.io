@@ -29,11 +29,12 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   return (
     <div className={`flex flex-col items-center justify-center ${className}`} role="status" aria-live="polite">
       <div
-        className={`${sizeClasses[size]} ${colorClasses[color]} animate-spin rounded-full border-4 border-solid border-current border-r-transparent`}
-        aria-hidden="true"
+        className={`animate-spin rounded-full border-b-2 border-current ${sizeClasses[size]} ${colorClasses[color]}`}
+        aria-label="Loading"
       />
-      {text && <span className="mt-2 text-sm text-gray-600">{text}</span>}
-      <span className="sr-only">Loading...</span>
+      {text && (
+        <p className="mt-4 text-sm text-gray-600">{text}</p>
+      )}
     </div>
   );
 };

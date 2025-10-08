@@ -74,6 +74,9 @@ const InteractiveAIROICalculator: React.FC = () => {
                 <div className='text-6xl font-bold text-blue-600 mb-4'>
                   {roi.toFixed(0)}%
                 </div>
+                <p className='text-gray-600'>
+                  Expected return on investment over {timeframe} months
+                </p>
               </div>
             </div>
           </div>
@@ -84,4 +87,3 @@ const InteractiveAIROICalculator: React.FC = () => {
 };
 
 export default InteractiveAIROICalculator;
-

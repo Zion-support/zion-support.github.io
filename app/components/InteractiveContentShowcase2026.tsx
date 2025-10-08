@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 
 const InteractiveContentShowcase2026: React.FC = () => {
@@ -76,4 +75,3 @@ const InteractiveContentShowcase2026: React.FC = () => {
 };
 
 export default InteractiveContentShowcase2026;
-
