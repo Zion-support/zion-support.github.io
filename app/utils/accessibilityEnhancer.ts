@@ -677,4 +677,8 @@ class AccessibilityEnhancer {
     const metrics = this.getMetrics();
     
     return `
-Accessibility Report:
+Accessibility Report:`;
+  }
+}
+
+export const accessibilityEnhancer = AccessibilityEnhancer.getInstance();
