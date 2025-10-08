@@ -71,12 +71,7 @@ function initializeMonitoring(): void {
     logger.info('Performance metrics:', { score, metrics });
     
     // Track performance metrics
-    analytics.track({
-      event: 'performance_metrics',
-      category: 'performance',
-      label: 'measured',
-      value: score
-    });
+    analytics.track('performance_metrics', 'performance', 'measured', 'metrics', score);
   } catch (error) {
     // eslint-disable-next-line no-console
     console.error('Failed to initialize monitoring:', error);
