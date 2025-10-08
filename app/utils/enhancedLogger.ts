@@ -328,6 +328,16 @@ export class EnhancedLogger {
   }
 
   /**
+   * Check if running in development mode
+   * 
+   * @private
+   * @returns true if in development mode
+   */
+  private isDevelopment(): boolean {
+    return this.config.environment === 'development' || process.env.NODE_ENV === 'development';
+  }
+
+  /**
    * Output log to console
    * 
    * @private
@@ -350,10 +360,10 @@ export class EnhancedLogger {
 
       switch (entry.level) {
         case LogLevel.DEBUG:
-          if (import.meta.env.DEV) { console.debug(message, structuredLog); }
+          if (this.isDevelopment()) { console.debug(message, structuredLog); }
           break;
         case LogLevel.INFO:
-          if (import.meta.env.DEV) { console.info(message, structuredLog); }
+          if (this.isDevelopment()) { console.info(message, structuredLog); }
           break;
         case LogLevel.WARN:
           console.warn(message, structuredLog);
@@ -370,10 +380,10 @@ export class EnhancedLogger {
       // Simple console output
       switch (entry.level) {
         case LogLevel.DEBUG:
-          if (import.meta.env.DEV) { console.debug(message, entry.data); }
+          if (this.isDevelopment()) { console.debug(message, entry.data); }
           break;
         case LogLevel.INFO:
-          if (import.meta.env.DEV) { console.info(message, entry.data); }
+          if (this.isDevelopment()) { console.info(message, entry.data); }
           break;
         case LogLevel.WARN:
           console.warn(message, entry.data);
