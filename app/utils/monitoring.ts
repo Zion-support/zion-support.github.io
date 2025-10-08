@@ -139,12 +139,12 @@ class MonitoringService {
     // Global error handler
     window.addEventListener('error', (event) => {
       this.logError({
-        message: event.message
-        stack: event.error?.stack
-        timestamp: Date.now()
-        userAgent: navigator.userAgent
+        message: event.message,
+        stack: event.error?.stack,
+        timestamp: Date.now(),
+        userAgent: navigator.userAgent,
         url: window.location.href
-      })
+      });
     })
 
     // Unhandled promise rejection handler

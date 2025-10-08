@@ -172,13 +172,12 @@ class HealthCheckService {
           usedPercent
         }
       }
-    } catch {
     } catch (error) {
       return {
-        name: 'memory'
-        status: 'warn'
+        name: 'memory',
+        status: 'warn',
         message: 'Could not check memory usage'
-      }
+      };
     }
   }
   /**
