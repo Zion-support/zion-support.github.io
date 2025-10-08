@@ -24,7 +24,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
    
   type: _type = 'website'
 }) => {
-  const pathname = usePathname();
+//   const pathname = usePathname();
 
   useEffect(() => {
     // Track page view

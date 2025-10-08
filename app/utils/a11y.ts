@@ -1,3 +1,4 @@
+import React from 'react';
 /**
  * Accessibility (A11Y) Utilities
  * Provides helpers for improving web accessibility

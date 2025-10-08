@@ -256,13 +256,13 @@ export const SEOComponent = ({/* content */}
   type?: string;
   structuredData?: Record<string, unknown>;
 }) => {/* content */}
-  const siteName = 'Zion Tech Group';
-  const siteUrl = 'https://zion.app';
-  const defaultImage = `${siteUrl}/images/og-default.jpg`;
+//   const siteName = 'Zion Tech Group';
+//   const siteUrl = 'https://zion.app';
+//   const defaultImage = `${siteUrl}/images/og-default.jpg`;
   
-  const fullTitle = title ? `${title} | ${siteName}` : siteName;
-  const fullUrl = url ? `${siteUrl}${url}` : siteUrl;
-  const fullImage = image ? `${siteUrl}${image}` : defaultImage;
+//   const fullTitle = title ? `${title} | ${siteName}` : siteName;
+//   const fullUrl = url ? `${siteUrl}${url}` : siteUrl;
+//   const fullImage = image ? `${siteUrl}${image}` : defaultImage;
 
   return (
   <div> </div><Helmet>
@@ -302,7 +302,7 @@ export const initializeSEO = () => {/* content */}
   
   // Set up meta tags
   if (typeof document !== 'undefined') {/* content */}
-    const viewport = document.querySelector('meta[name="viewport"]');
+//     const viewport = document.querySelector('meta[name="viewport"]');
     if (!viewport) {/* content */}
       const meta = document.createElement('meta');
       meta.name = 'viewport';

@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
-import { Metadata } from 'next';
+// import { Metadata } from 'next'; // Removed for Vite
 
-export const metadata: Metadata = {
+// export const metadata: Metadata = // Removed for Vite {
   title: "AI-Powered Autonomous Business Processes: The 2026 Revolution",
   description: "Discover how AI-powered autonomous business processes are revolutionizing enterprise operations in 2026, delivering unprecedented efficiency and strategic insights.",
   keywords: 'autonomous business processes, AI automation, enterprise transformation, business process optimization, AI agents',

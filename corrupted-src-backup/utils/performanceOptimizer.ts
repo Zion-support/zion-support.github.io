@@ -73,15 +73,15 @@ export class PerformanceOptimizer {
 
   // Measure performance metrics
   measurePerformance(name: string, fn: () => void): void {
-    const start = performance.now();
+//     const start = performance.now();
     fn();
-    const end = performance.now();
+//     const end = performance.now();
     const duration = end - start;
 
     this.metrics.set(name, duration);
 
     if (process.env['NODE_ENV'] === 'development') {
-      console.log(`Performance: ${name} took ${duration.toFixed(2)}ms`);
+//       console.log(`Performance: ${name} took ${duration.toFixed(2)}ms`);
     }
   }
 
@@ -117,14 +117,14 @@ export class PerformanceOptimizer {
   }
 
   // Add Web Vitals reporting method
-  reportWebVitals(metrics: any): void {
+  reportWebVitals(metrics: unknown): void {
     if (process.env['NODE_ENV'] === 'development') {
-      console.log('Web Vitals:', metrics);
+//       console.log('Web Vitals:', metrics);
     }
   }
 
   // Add page load measurement method
-  measurePageLoad(): any {
+  measurePageLoad(): unknown {
     if (typeof window === 'undefined' || !window.performance) {
       return null;
     }

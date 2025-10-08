@@ -28,7 +28,7 @@ class ErrorBoundary extends Component<Props, State> {
   }
 
   override componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    console.error('ErrorBoundary caught an error:', error, errorInfo);
+//     console.error('ErrorBoundary caught an error:', error, errorInfo);
 
     // Call the onError callback if provided
     if (this.props.onError) {
@@ -37,7 +37,7 @@ class ErrorBoundary extends Component<Props, State> {
 
     // Report to error tracking service
     if (typeof window !== 'undefined' && 'console' in window) {
-      console.error('Error details:', {
+//       console.error('Error details:', {
         error: error.message,
         stack: error.stack,
         componentStack: errorInfo.componentStack,

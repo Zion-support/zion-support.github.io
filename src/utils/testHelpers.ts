@@ -6,6 +6,7 @@
 import React, { ReactElement } from 'react';
 import { render, RenderOptions, RenderResult } from '@testing-library/react';
 import { HelmetProvider } from 'react-helmet-async';
+import '@testing-library/jest-dom';
 
 /**
  * Custom render function with common providers
@@ -29,10 +30,10 @@ export async function waitForCondition(
   timeout: number = 5000,
   interval: number = 100
 ): Promise<void> {
-  const startTime = Date.now();
+//   const startTime = Date.now();
 
   while (Date.now() - startTime < timeout) {
-    const result = await condition();
+//     const result = await condition();
     if (result) return;
     await new Promise((resolve) => setTimeout(resolve, interval));
   }
@@ -117,7 +118,7 @@ export function mockPerformanceAPI(): void {
 /**
  * Create mock fetch response
  */
-export function mockFetch(data: any, ok: boolean = true, status: number = 200): void {
+export function mockFetch(data: unknown, ok: boolean = true, status: number = 200): void {
   global.fetch = jest.fn(() =>
     Promise.resolve({
       ok,
@@ -287,9 +288,9 @@ export function testComponentSnapshot(
 export async function measureRenderTime(
   component: ReactElement
 ): Promise<number> {
-  const startTime = performance.now();
+//   const startTime = performance.now();
   const { unmount } = renderWithProviders(component);
-  const endTime = performance.now();
+//   const endTime = performance.now();
   unmount();
   return endTime - startTime;
 }
@@ -301,15 +302,15 @@ export function detectMemoryLeaks(
   componentFactory: () => ReactElement,
   iterations: number = 100
 ): boolean {
-  const initialMemory = (performance as any).memory?.usedJSHeapSize || 0;
+//   const initialMemory = (performance as any).memory?.usedJSHeapSize || 0;
 
   for (let i = 0; i < iterations; i++) {
     const { unmount } = renderWithProviders(componentFactory());
     unmount();
   }
 
-  const finalMemory = (performance as any).memory?.usedJSHeapSize || 0;
-  const memoryIncrease = finalMemory - initialMemory;
+//   const finalMemory = (performance as any).memory?.usedJSHeapSize || 0;
+//   const memoryIncrease = finalMemory - initialMemory;
 
   // If memory increased by more than 10MB, likely a leak
   return memoryIncrease > 10 * 1024 * 1024;

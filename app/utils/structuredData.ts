@@ -1,3 +1,4 @@
+import React from 'react';
 /**
  * Enhanced Structured Data (JSON-LD) utilities for improved SEO
  */

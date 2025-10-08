@@ -173,7 +173,7 @@ const results = {
 };
 
 //Process branches in batches to avoid overwhelming the system
-const batchSize = 5;
+// const batchSize = 5;
 const batches = [];
 for (let i = 0; i < branches.length; i += batchSize) {
   batches.push(branches.slice(i, i + batchSize));

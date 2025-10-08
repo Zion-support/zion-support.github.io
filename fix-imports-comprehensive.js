@@ -39,12 +39,10 @@ const iconMappings = {
 const iconReplacements = {
   Tag: 'Hash',
   Globe: 'Globe2',
-  Rocket: 'Rocket',
-  Cpu: 'Cpu',
+  Rocket: 'Rocket': 'Cpu',
   Share2: 'Share',
   Bookmark: 'Bookmark',
-  Bot: 'Bot',
-  BookOpen: 'BookOpen',
+  Bot: 'Bot': 'BookOpen',
   Gauge: 'Gauge',
   ShieldCheck: 'ShieldCheck',
   Activity: 'Activity',
@@ -84,10 +82,10 @@ function fixImportsInFile(filePath) {
           /import\s+(\w+)\s+from\s+'lucide-react\/dist\/esm\/icons\/(\w+)';/
         );
         if (match) {
-          const iconName = match[1];
-          const brokenName = match[2];
-          const correctName = iconMappings[brokenName] || iconName;
-          const finalName = iconReplacements[correctName] || correctName;
+//           const iconName = match[1];
+//           const brokenName = match[2];
+//           const correctName = iconMappings[brokenName] || iconName;
+//           const finalName = iconReplacements[correctName] || correctName;
           lucideImports.push(finalName);
         }
         modified = true;
@@ -127,10 +125,10 @@ function fixImportsInFile(filePath) {
 
     if (modified) {
       fs.writeFileSync(filePath, content);
-      console.log(`Fixed imports in: ${filePath}`);
+//       console.log(`Fixed imports in: ${filePath}`);
     }
   } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
+//     console.error(`Error processing ${filePath}:`, error.message);
   }
 }
 
@@ -151,4 +149,4 @@ directories.forEach(dir => {
 // Process each file
 files.forEach(fixImportsInFile);
 
-console.log('Comprehensive import fixing completed!');
+// console.log('Comprehensive import fixing completed!');

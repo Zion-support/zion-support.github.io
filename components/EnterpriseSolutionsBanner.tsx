@@ -1,5 +1,4 @@
-//import React from 'react';
-
+//
 export default function EnterpriseSolutionsBanner() {
   return (
     <div className='bg-gradient-to-r from-blue-600 to-purple-600 text-white py-16'>

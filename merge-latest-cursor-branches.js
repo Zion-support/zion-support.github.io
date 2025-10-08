@@ -30,7 +30,7 @@ console.log(
 function safeGitCommand(command, description) {
   try {
     console.log(`📋 Executing: ${description}`);
-    const result = execSync(command, { encoding: 'utf8', stdio: 'pipe' });
+//     const result = execSync(command, { encoding: 'utf8', stdio: 'pipe' });
     console.log(`✅ ${description} - Success`);
     return { success: true, result };
   } catch (error) {

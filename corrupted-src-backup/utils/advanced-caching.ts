@@ -1,6 +1,6 @@
 const cacheSystem = {
   loadFromStorage: () => {
-    console.log('Cache loaded from storage');
+//     console.log('Cache loaded from storage');
   },
 };
 

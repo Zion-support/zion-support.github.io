@@ -55,7 +55,7 @@ export class AccessibilityAuditor {
     let previousLevel = 0;
 
     headings.forEach((heading, index) => {
-      const level = parseInt(heading.tagName.charAt(1));
+//       const level = parseInt(heading.tagName.charAt(1));
 
       if (level > previousLevel + 1) {
         this.addIssue(
@@ -146,8 +146,8 @@ export class AccessibilityAuditor {
       '[aria-label], [aria-labelledby]'
     );
     elementsWithAria.forEach((element, index) => {
-      const ariaLabel = element.getAttribute('aria-label');
-      const ariaLabelledBy = element.getAttribute('aria-labelledby');
+//       const ariaLabel = element.getAttribute('aria-label');
+//       const ariaLabelledBy = element.getAttribute('aria-labelledby');
 
       if (ariaLabel && ariaLabelledBy) {
         this.addIssue(

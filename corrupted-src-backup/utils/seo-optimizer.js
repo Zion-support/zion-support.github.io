@@ -103,8 +103,8 @@ class SEOOptimizer {
   }
 
   buildSitemapXML(pages) {
-    const baseUrl = this.seoConfig.siteUrl;
-    const lastmod = new Date().toISOString().split('T')[0];
+//     const baseUrl = this.seoConfig.siteUrl;
+//     const lastmod = new Date().toISOString().split('T')[0];
 
     let xml = '<?xml version="1.0" encoding="UTF-8"?>\n';
     xml += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n';
@@ -230,7 +230,7 @@ Disallow: /middleware/`;
   }
 
   addPageSchema() {
-    const currentPath = window.location.pathname;
+//     const currentPath = window.location.pathname;
     let schema = null;
 
     switch (currentPath) {
@@ -348,7 +348,7 @@ Disallow: /middleware/`;
   }
 
   generateAltText(src) {
-    const filename = src.split('/').pop().split('.')[0];
+//     const filename = src.split('/').pop().split('.')[0];
     return filename
       .replace(/[-_]/g, ' ')
       .replace(/\b\w/g, l => l.toUpperCase());
@@ -388,7 +388,7 @@ Disallow: /middleware/`;
   }
 
   getPageTitle() {
-    const currentPath = window.location.pathname;
+//     const currentPath = window.location.pathname;
     const titles = {
       '/': 'Zion Tech Group - Advanced AI and IT Solutions',
       '/about': 'About Us - Zion Tech Group',
@@ -403,7 +403,7 @@ Disallow: /middleware/`;
   }
 
   getPageDescription() {
-    const currentPath = window.location.pathname;
+//     const currentPath = window.location.pathname;
     const descriptions = {
       '/': 'Leading AI and IT solutions company providing cutting-edge technology consulting, machine learning, and software development services.',
       '/about':
@@ -423,7 +423,7 @@ Disallow: /middleware/`;
   }
 
   getPageImage() {
-    const currentPath = window.location.pathname;
+//     const currentPath = window.location.pathname;
     const images = {
       '/': '/images/og-home.jpg',
       '/about': '/images/og-about.jpg',
@@ -515,7 +515,7 @@ Disallow: /middleware/`;
 }
 
 // Initialize SEO optimizer
-const seoOptimizer = new SEOOptimizer();
+// const seoOptimizer = new SEOOptimizer();
 
 // Export for use in other modules
 export default seoOptimizer;

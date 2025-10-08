@@ -99,11 +99,11 @@ export const announceToScreenReader = (message: string): void => {
  */
 export const keyboardNavigation = {
   handleArrowKeys(event: KeyboardEvent, items: HTMLElement[]): void {
-    const currentIndex = items.indexOf(document.activeElement as HTMLElement);
+//     const currentIndex = items.indexOf(document.activeElement as HTMLElement);
 
     if (event.key === 'ArrowDown' || event.key === 'ArrowRight') {
       event.preventDefault();
-      const nextIndex = (currentIndex + 1) % items.length;
+//       const nextIndex = (currentIndex + 1) % items.length;
       items[nextIndex]?.focus();
     } else if (event.key === 'ArrowUp' || event.key === 'ArrowLeft') {
       event.preventDefault();

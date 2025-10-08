@@ -118,10 +118,10 @@ export const colorContrast = {
       c = c / 255;
       return c <= 0.03928 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4);
     });
-    const lum1 = colorContrast.getLuminance(...color1);
-    const lum2 = colorContrast.getLuminance(...color2);
-    const brightest = Math.max(lum1, lum2);
-    const darkest = Math.min(lum1, lum2);
+//     const lum1 = colorContrast.getLuminance(...color1);
+//     const lum2 = colorContrast.getLuminance(...color2);
+//     const brightest = Math.max(lum1, lum2);
+//     const darkest = Math.min(lum1, lum2);
     return (brightest + 0.05) / (darkest + 0.05);
   },
 
@@ -207,10 +207,10 @@ export const accessibilityTesting = {
   },
     );
     return inputs.filter(input => {
-      const id = input.id;
+//       const id = input.id;
       const label = id ? document.querySelector(`label[for="${id}"]`) : null;
-      const ariaLabel = input.getAttribute('aria-label');
-      const ariaLabelledBy = input.getAttribute('aria-labelledby');
+//       const ariaLabel = input.getAttribute('aria-label');
+//       const ariaLabelledBy = input.getAttribute('aria-labelledby');
       return !label && !ariaLabel && !ariaLabelledBy;
     }) as HTMLInputElement[];
   },
@@ -242,7 +242,7 @@ export const accessibilityTesting = {
       imageCheck.empty.length +
       formCheck.length +
       headingCheck.issues.length;
-    const score = Math.max(0, 100 - totalIssues * 10);
+//     const score = Math.max(0, 100 - totalIssues * 10);
     return {
       images: {
         missing: imageCheck.missing.length,

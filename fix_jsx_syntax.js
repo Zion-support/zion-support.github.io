@@ -8,7 +8,7 @@ async function main() {
   //Find all TSX files in src/components
   const files = await glob('src/components/**/*.tsx');
 
-  console.log(`Found ${files.length} TSX files to process...`);
+//   console.log(`Found ${files.length} TSX files to process...`);
 
   files.forEach(file => {
     try {
@@ -58,7 +58,7 @@ async function main() {
       }
 
       //5. Fix template literal syntax: ${> -> ${
-      const templateFix = content.replace(/\$\{>/g, '${');
+//       const templateFix = content.replace(/\$\{>/g, '${');
       if (templateFix !== content) {
         content = templateFix;
         modified = true;
@@ -75,7 +75,7 @@ async function main() {
       }
 
       //7. Fix unclosed br tags: <br> -> <br />
-      const brFix = content.replace(/<br>/g, '<br />');
+//       const brFix = content.replace(/<br>/g, '<br />');
       if (brFix !== content) {
         content = brFix;
         modified = true;
@@ -83,14 +83,14 @@ async function main() {
 
       if (modified) {
         fs.writeFileSync(file, content, 'utf8');
-        console.log(`Fixed: ${file}`);
+//         console.log(`Fixed: ${file}`);
       }
     } catch (error) {
-      console.error(`Error processing ${file}:`, error.message);
+//       console.error(`Error processing ${file}:`, error.message);
     }
   });
 
-  console.log('JSX syntax fixes completed!');
+//   console.log('JSX syntax fixes completed!');
 }
 
-main().catch(console.error);
+// main().catch(console.error);

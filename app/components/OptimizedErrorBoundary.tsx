@@ -1,6 +1,7 @@
 import React, { Component, ErrorInfo, ReactNode, memo } from 'react';
 
-interface OptimizedErrorBoundaryProps {
+
+import { Link } from 'react-router-dom';interface OptimizedErrorBoundaryProps {
   children: ReactNode;
   fallback?: ReactNode;
   onError?: (error: Error, errorInfo: ErrorInfo) => void;

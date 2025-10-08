@@ -3,6 +3,7 @@
  * Provides form state management and validation
  */
 
+import React from 'react';
 import { useState, useCallback, ChangeEvent } from 'react';
 import {
   ValidationRule,

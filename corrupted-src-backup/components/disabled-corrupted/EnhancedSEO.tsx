@@ -36,9 +36,9 @@ const EnhancedSEO: React.FC<SEOProps> = ({
   canonical,
 }) => {
   const location = useLocation();
-  const currentUrl = url || `${window.location.origin}${location.pathname}`;
-  const canonicalUrl = canonical || currentUrl;
-  const currentTime = new Date().toISOString();
+//   const currentUrl = url || `${window.location.origin}${location.pathname}`;
+//   const canonicalUrl = canonical || currentUrl;
+//   const currentTime = new Date().toISOString();
 
   // Generate structured data
   const structuredData = {

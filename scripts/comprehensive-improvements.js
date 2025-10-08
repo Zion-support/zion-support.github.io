@@ -10,16 +10,16 @@ import path from 'path';
 import { execSync } from 'child_process';
 import { fileURLToPath } from 'url';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+// const __filename = fileURLToPath(import.meta.url);
+// const __dirname = path.dirname(__filename);
 
-console.log('🚀 Starting comprehensive code improvements...\n');
+// console.log('🚀 Starting comprehensive code improvements...\n');
 
 // 1. Code Quality Improvements
-console.log('📝 Applying code quality improvements...');
+// console.log('📝 Applying code quality improvements...');
 
 // Update package.json with better scripts
-const packageJsonPath = path.join(__dirname, '..', 'package.json');
+// const packageJsonPath = path.join(__dirname, '..', 'package.json');
 const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));
 
 // Add new scripts for better development experience
@@ -38,12 +38,12 @@ packageJson.scripts = {
 };
 
 fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2));
-console.log('✅ Updated package.json with improved scripts');
+// console.log('✅ Updated package.json with improved scripts');
 
 // 2. Create TypeScript configuration improvements
-console.log('🔧 Improving TypeScript configuration...');
+// console.log('🔧 Improving TypeScript configuration...');
 
-const tsConfigPath = path.join(__dirname, '..', 'tsconfig.json');
+// const tsConfigPath = path.join(__dirname, '..', 'tsconfig.json');
 let tsConfig = {};
 
 if (fs.existsSync(tsConfigPath)) {
@@ -91,10 +91,10 @@ const improvedTsConfig = {
 };
 
 fs.writeFileSync(tsConfigPath, JSON.stringify(improvedTsConfig, null, 2));
-console.log('✅ Enhanced TypeScript configuration');
+// console.log('✅ Enhanced TypeScript configuration');
 
 // 3. Create ESLint configuration improvements
-console.log('🔍 Improving ESLint configuration...');
+// console.log('🔍 Improving ESLint configuration...');
 
 const eslintConfig = {
   extends: [
@@ -139,10 +139,10 @@ const eslintConfig = {
 };
 
 fs.writeFileSync(path.join(__dirname, '..', '.eslintrc.json'), JSON.stringify(eslintConfig, null, 2));
-console.log('✅ Enhanced ESLint configuration');
+// console.log('✅ Enhanced ESLint configuration');
 
 // 4. Create Prettier configuration
-console.log('💅 Setting up Prettier configuration...');
+// console.log('💅 Setting up Prettier configuration...');
 
 const prettierConfig = {
   semi: true,
@@ -165,12 +165,12 @@ const prettierConfig = {
 };
 
 fs.writeFileSync(path.join(__dirname, '..', '.prettierrc.json'), JSON.stringify(prettierConfig, null, 2));
-console.log('✅ Created Prettier configuration');
+// console.log('✅ Created Prettier configuration');
 
 // 5. Create Vite configuration improvements
-console.log('⚡ Improving Vite configuration...');
+// console.log('⚡ Improving Vite configuration...');
 
-const viteConfigPath = path.join(__dirname, '..', 'vite.config.ts');
+// const viteConfigPath = path.join(__dirname, '..', 'vite.config.ts');
 let viteConfig = '';
 
 if (fs.existsSync(viteConfigPath)) {
@@ -178,7 +178,7 @@ if (fs.existsSync(viteConfigPath)) {
 }
 
 // Enhanced Vite configuration
-const improvedViteConfig = `import { defineConfig } from 'vite';
+// const improvedViteConfig = `import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import { visualizer } from 'rollup-plugin-visualizer';
 
@@ -235,10 +235,10 @@ export default defineConfig({
 });`;
 
 fs.writeFileSync(viteConfigPath, improvedViteConfig);
-console.log('✅ Enhanced Vite configuration');
+// console.log('✅ Enhanced Vite configuration');
 
 // 6. Create performance monitoring setup
-console.log('📊 Setting up performance monitoring...');
+// console.log('📊 Setting up performance monitoring...');
 
 const performanceSetup = `// Performance monitoring setup
 import { analytics } from './src/utils/analytics';
@@ -261,7 +261,7 @@ if (typeof window !== 'undefined') {
   });
   
   // Track Web Vitals
-  const metrics = performanceOptimizer.measurePageLoad();
+//   const metrics = performanceOptimizer.measurePageLoad();
   if (metrics) {
     performanceOptimizer.reportWebVitals(metrics);
   }
@@ -270,49 +270,49 @@ if (typeof window !== 'undefined') {
 export { analytics, errorHandler, performanceOptimizer };`;
 
 fs.writeFileSync(path.join(__dirname, '..', 'src', 'monitoring.ts'), performanceSetup);
-console.log('✅ Created performance monitoring setup');
+// console.log('✅ Created performance monitoring setup');
 
 // 7. Create development utilities
-console.log('🛠️ Creating development utilities...');
+// console.log('🛠️ Creating development utilities...');
 
 const devUtils = `/**
  * Development Utilities
  * Tools and helpers for development and debugging
  */
 
-export const devLog = (message: string, data?: any) => {
+export const devLog = (message: string, data?: unknown) => {
   if (process.env['NODE_ENV'] === 'development') {
-    console.log(\`[DEV] \${message}\`, data || '');
+//     console.log(\`[DEV] \${message}\`, data || '');
   }
 };
 
-export const devError = (message: string, error?: any) => {
+export const devError = (message: string, error?: unknown) => {
   if (process.env['NODE_ENV'] === 'development') {
-    console.error(\`[DEV ERROR] \${message}\`, error || '');
+//     console.error(\`[DEV ERROR] \${message}\`, error || '');
   }
 };
 
-export const devWarn = (message: string, data?: any) => {
+export const devWarn = (message: string, data?: unknown) => {
   if (process.env['NODE_ENV'] === 'development') {
-    console.warn(\`[DEV WARN] \${message}\`, data || '');
+//     console.warn(\`[DEV WARN] \${message}\`, data || '');
   }
 };
 
 export const measurePerformance = (name: string, fn: () => void) => {
   if (process.env['NODE_ENV'] === 'development') {
-    const start = performance.now();
+//     const start = performance.now();
     fn();
-    const end = performance.now();
-    console.log(\`[PERF] \${name}: \${(end - start).toFixed(2)}ms\`);
+//     const end = performance.now();
+//     console.log(\`[PERF] \${name}: \${(end - start).toFixed(2)}ms\`);
   } else {
     fn();
   }
 };
 
 export const createDebugger = (componentName: string) => ({
-  log: (message: string, data?: any) => devLog(\`[\${componentName}] \${message}\`, data),
-  error: (message: string, error?: any) => devError(\`[\${componentName}] \${message}\`, error),
-  warn: (message: string, data?: any) => devWarn(\`[\${componentName}] \${message}\`, data),
+  log: (message: string, data?: unknown) => devLog(\`[\${componentName}] \${message}\`, data),
+  error: (message: string, error?: unknown) => devError(\`[\${componentName}] \${message}\`, error),
+  warn: (message: string, data?: unknown) => devWarn(\`[\${componentName}] \${message}\`, data),
   measure: (name: string, fn: () => void) => measurePerformance(\`[\${componentName}] \${name}\`, fn),
 });
 
@@ -325,40 +325,40 @@ export default {
 };`;
 
 fs.writeFileSync(path.join(__dirname, '..', 'src', 'utils', 'devUtils.ts'), devUtils);
-console.log('✅ Created development utilities');
+// console.log('✅ Created development utilities');
 
 // 8. Run final checks
-console.log('🔍 Running final checks...');
+// console.log('🔍 Running final checks...');
 
 try {
   // Type check
-  console.log('Running TypeScript check...');
+//   console.log('Running TypeScript check...');
   execSync('npm run type-check', { stdio: 'inherit' });
-  console.log('✅ TypeScript check passed');
+//   console.log('✅ TypeScript check passed');
 
   // Lint check
-  console.log('Running ESLint check...');
+//   console.log('Running ESLint check...');
   execSync('npm run lint', { stdio: 'inherit' });
-  console.log('✅ ESLint check passed');
+//   console.log('✅ ESLint check passed');
 
   // Build check
-  console.log('Running build check...');
+//   console.log('Running build check...');
   execSync('npm run build', { stdio: 'inherit' });
-  console.log('✅ Build check passed');
+//   console.log('✅ Build check passed');
 
 } catch (error) {
-  console.error('❌ Some checks failed:', error.message);
+//   console.error('❌ Some checks failed:', error.message);
   process.exit(1);
 }
 
-console.log('\n🎉 Comprehensive improvements completed successfully!');
-console.log('\n📋 Summary of improvements:');
-console.log('  ✅ Enhanced package.json scripts');
-console.log('  ✅ Improved TypeScript configuration');
-console.log('  ✅ Enhanced ESLint configuration');
-console.log('  ✅ Added Prettier configuration');
-console.log('  ✅ Improved Vite configuration');
-console.log('  ✅ Created performance monitoring setup');
-console.log('  ✅ Added development utilities');
-console.log('  ✅ All checks passed');
-console.log('\n🚀 Your codebase is now optimized and ready for production!');
+// console.log('\n🎉 Comprehensive improvements completed successfully!');
+// console.log('\n📋 Summary of improvements:');
+// console.log('  ✅ Enhanced package.json scripts');
+// console.log('  ✅ Improved TypeScript configuration');
+// console.log('  ✅ Enhanced ESLint configuration');
+// console.log('  ✅ Added Prettier configuration');
+// console.log('  ✅ Improved Vite configuration');
+// console.log('  ✅ Created performance monitoring setup');
+// console.log('  ✅ Added development utilities');
+// console.log('  ✅ All checks passed');
+// console.log('\n🚀 Your codebase is now optimized and ready for production!');

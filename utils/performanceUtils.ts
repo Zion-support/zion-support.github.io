@@ -4,10 +4,10 @@
 
 export const measurePerformance = (name: string, fn: () => void) => {
   if (typeof window !== 'undefined' && 'performance' in window) {
-    const start = performance.now();
+//     const start = performance.now();
     fn();
-    const end = performance.now();
-    console.log(`${name}: ${end - start}ms`);
+//     const end = performance.now();
+//     console.log(`${name}: ${end - start}ms`);
   } else {
     fn();
   }
@@ -15,7 +15,7 @@ export const measurePerformance = (name: string, fn: () => void) => {
 
 export const getPageLoadTime = (): number | null => {
   if (typeof window !== 'undefined' && 'performance' in window) {
-    const perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+//     const perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
     return perfData?.loadEventEnd - perfData?.fetchStart;
   }
   return null;

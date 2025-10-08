@@ -5,7 +5,8 @@
 
 import React, { ErrorInfo, useCallback } from 'react';
 
-// Error types
+
+import { Link } from 'react-router-dom';// Error types
 export enum ErrorType {
   RUNTIME = 'RUNTIME',
   NETWORK = 'NETWORK',

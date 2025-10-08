@@ -1,7 +1,7 @@
 import React from 'react';
-import { Metadata } from 'next';
+// import { Metadata } from 'next'; // Removed for Vite
 
-export const metadata: Metadata = {
+// export const metadata: Metadata = // Removed for Vite {
   title: "AI 2026 April Revolutionary Breakthrough: Meta-Cognitive Superintelligence Platform",
   description: "Revolutionary AI breakthrough featuring meta-cognitive superintelligence and quantum-neural consciousness fusion delivering unprecedented enterprise transformation.",
   authors: [{ name: 'Zion Tech Group' }],

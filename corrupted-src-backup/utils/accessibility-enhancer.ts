@@ -124,7 +124,7 @@ class AccessibilityEnhancer {
 
     e.preventDefault();
     const items = Array.from(menu.querySelectorAll('[role="menuitem"]'));
-    const currentIndex = items.indexOf(element);
+//     const currentIndex = items.indexOf(element);
     let nextIndex = currentIndex;
 
     switch (key) {
@@ -247,8 +247,8 @@ class AccessibilityEnhancer {
     const elements = document.querySelectorAll('*');
     elements.forEach(element => {
       const styles = window.getComputedStyle(element);
-      const color = styles.color;
-      const backgroundColor = styles.backgroundColor;
+//       const color = styles.color;
+//       const backgroundColor = styles.backgroundColor;
 
       if (color && backgroundColor && backgroundColor !== 'rgba(0, 0, 0, 0)') {
         const contrast = this.calculateContrast(color, backgroundColor);
@@ -385,7 +385,7 @@ class AccessibilityEnhancer {
    * Generate accessibility report
    */
   public generateReport(): AccessibilityReport {
-    const score = this.calculateScore();
+//     const score = this.calculateScore();
     const recommendations = this.generateRecommendations();
 
     return {
@@ -425,8 +425,8 @@ class AccessibilityEnhancer {
   private generateRecommendations(): string[] {
     const recommendations: string[] = [];
 
-    const errorCount = this.issues.filter(i => i.type === 'error').length;
-    const warningCount = this.issues.filter(i => i.type === 'warning').length;
+//     const errorCount = this.issues.filter(i => i.type === 'error').length;
+//     const warningCount = this.issues.filter(i => i.type === 'warning').length;
 
     if (errorCount > 0) {
       recommendations.push(`Fix ${errorCount} accessibility errors`);
@@ -457,7 +457,7 @@ class AccessibilityEnhancer {
   private findAssociatedLabel(
     input: HTMLInputElement
   ): HTMLLabelElement | null {
-    const id = input.id;
+//     const id = input.id;
     if (id) {
       return document.querySelector(`label[for="${id}"]`);
     }
@@ -470,15 +470,15 @@ class AccessibilityEnhancer {
 
   private generateAltText(img: HTMLImageElement): string {
     const src = img['src'];
-    const filename = src.split('/').pop()?.split('.')[0] || 'image';
+//     const filename = src.split('/').pop()?.split('.')[0] || 'image';
     return filename
       .replace(/[-_]/g, ' ')
       .replace(/\b\w/g, l => l.toUpperCase());
   }
 
   private generateFormLabel(input: HTMLInputElement): string {
-    const type = input.type;
-    const placeholder = input.placeholder;
+//     const type = input.type;
+//     const placeholder = input.placeholder;
 
     if (placeholder) return placeholder;
 
@@ -510,9 +510,9 @@ class AccessibilityEnhancer {
     // Add ARIA descriptions for complex elements
     const complexElements = document.querySelectorAll('[data-description]');
     complexElements.forEach(element => {
-      const description = element.getAttribute('data-description');
+//       const description = element.getAttribute('data-description');
       if (description) {
-        const descId = `desc-${Math.random().toString(36).substr(2, 9)}`;
+//         const descId = `desc-${Math.random().toString(36).substr(2, 9)}`;
         const descElement = document.createElement('div');
         descElement.id = descId;
         descElement.textContent = description;
@@ -541,13 +541,13 @@ class AccessibilityEnhancer {
   }
 
   private getElementDescription(element: HTMLElement): string {
-    const ariaLabel = element.getAttribute('aria-label');
+//     const ariaLabel = element.getAttribute('aria-label');
     if (ariaLabel) return ariaLabel;
 
-    const text = element.textContent?.trim();
+//     const text = element.textContent?.trim();
     if (text) return text;
 
-    const alt = element.getAttribute('alt');
+//     const alt = element.getAttribute('alt');
     if (alt) return alt;
 
     return element.tagName.toLowerCase();

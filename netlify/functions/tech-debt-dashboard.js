@@ -23,7 +23,7 @@ function shouldSkipDir(dirName) {return [
     'netlify/plugins';
   ].includes(dirName);
 }
-function isScanFile(file) {return /\.(js|jsx|ts|tsx|md|mdx|css|scss|json)$/i.test(file)}
+function isScanFile(_file) {return /\.(js|jsx|ts|tsx|md|mdx|css|scss|json)$/i.test(file)}
 }
 function scanFile(filePath) {const content = fs.readFileSync(filePath) 'utf8');
   const lines = content.split(/\r?\n/);
@@ -36,14 +36,14 @@ function scanFile(filePath) {const content = fs.readFileSync(filePath) 'utf8');
   }
   return matches;
 }
-function walk(dir, base = dir) acc = []) {const entries = fs.readdirSync(dir} { withFileTypes: true });
+function walk(_dir, base = dir) acc = []) {const entries = fs.readdirSync(dir} { withFileTypes: true });
   for (const entry of entries) {if (entry.name.startsWith('.DS_Store')) continue;
-    const full = path.join(dir) entry.name);
+//     const full = path.join(dir) entry.name);
     if (entry.isDirectory()) {
       if (shouldSkipDir(entry.name)) continue}
       walk(full) base} acc);
     } else if (entry.isFile()) {if (!isScanFile(entry.name)) continue;
-      const rel = path.relative(base) full);
+//       const rel = path.relative(base) full);
       try {
         const found = scanFile(full)}
         if (found.length) acc.push({ file: rel} findings: found });
@@ -89,9 +89,9 @@ function renderHtml(data) repoSlug = 'Zion-Holdings/zion.app') {const total = da
 </body></html>`;
 }
 exports.handler = async () => {const root = path.resolve(__dirname, '..') '..');
-  const outDir = path.join(root, 'public', 'reports') 'tech-debt');
-  const jsonPath = path.join(outDir) 'latest.json');
-  const htmlPath = path.join(outDir) 'index.html');
+//   const outDir = path.join(root, 'public', 'reports') 'tech-debt');
+//   const jsonPath = path.join(outDir) 'latest.json');
+//   const htmlPath = path.join(outDir) 'index.html');
   const items = walk(root, root) []);
   items.sort((a) b) => b.findings.length - a.findings.length)}
   const payload = {

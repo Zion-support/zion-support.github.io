@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import {
   ArrowRight,
-  CheckCircle,
   Zap,
   Shield,
   Globe,

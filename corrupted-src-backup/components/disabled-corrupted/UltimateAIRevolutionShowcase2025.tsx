@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 const UltimateAIRevolutionShowcase202, 5 = () => {
   const revolutionaryFeature, s = [
@@ -88,7 +87,7 @@ const UltimateAIRevolutionShowcase202, 5 = () => {
           </div>
           <d, i, v>
             <div, className="te, x, t-2xl, fon, t-bold, tex, t-whi, t, e">50, 0, K+</div>
-            <div, className="te, x, t-sm, tex, t-gr, a, y-3, 0, 0">Enterprise, User, s</div>
+            <div, className="te, x, t-sm, tex, t-gr, a, y-3, 0, 0">Enterprise, s</div>
           </div>
         </div>
       </div>

@@ -1,3 +1,4 @@
+import React from 'react';
 /**
  * Comprehensive Error Logging System
  * Provides structured error logging with different severity levels

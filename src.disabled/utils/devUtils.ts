@@ -5,101 +5,101 @@
 
 export const devLog = (message: string, data?: unknown) => {
   if (process.env['NODE_ENV'] === 'development') {
-    console.log(`[DEV] ${message}`, data || '');
+//     console.log(`[DEV] ${message}`, data || '');
   }
 };
 
 export const devError = (message: string, error?: unknown) => {
   if (process.env['NODE_ENV'] === 'development') {
-    console.error(`[DEV ERROR] ${message}`, error || '');
+//     console.error(`[DEV ERROR] ${message}`, error || '');
   }
 };
 
 export const devWarn = (message: string, data?: unknown) => {
   if (process.env['NODE_ENV'] === 'development') {
-    console.warn(`[DEV WARN] ${message}`, data || '');
+//     console.warn(`[DEV WARN] ${message}`, data || '');
   }
 };
 
 export const devInfo = (message: string, data?: unknown) => {
   if (process.env['NODE_ENV'] === 'development') {
-    console.info(`[DEV INFO] ${message}`, data || '');
+//     console.info(`[DEV INFO] ${message}`, data || '');
   }
 };
 
 export const devGroup = (label: string, collapsed: boolean = false) => {
   if (process.env['NODE_ENV'] === 'development') {
     if (collapsed) {
-      console.groupCollapsed(label);
+//       console.groupCollapsed(label);
     } else {
-      console.group(label);
+//       console.group(label);
     }
   }
 };
 
 export const devGroupEnd = () => {
   if (process.env['NODE_ENV'] === 'development') {
-    console.groupEnd();
+//     console.groupEnd();
   }
 };
 
 export const devTable = (data: unknown) => {
   if (process.env['NODE_ENV'] === 'development') {
-    console.table(data);
+//     console.table(data);
   }
 };
 
 export const devTime = (label: string) => {
   if (process.env['NODE_ENV'] === 'development') {
-    console.time(label);
+//     console.time(label);
   }
 };
 
 export const devTimeEnd = (label: string) => {
   if (process.env['NODE_ENV'] === 'development') {
-    console.timeEnd(label);
+//     console.timeEnd(label);
   }
 };
 
 export const devTrace = (message?: string) => {
   if (process.env['NODE_ENV'] === 'development') {
-    console.trace(message);
+//     console.trace(message);
   }
 };
 
 export const devAssert = (condition: boolean, message: string) => {
   if (process.env['NODE_ENV'] === 'development') {
-    console.assert(condition, message);
+//     console.assert(condition, message);
   }
 };
 
 export const devCount = (label: string) => {
   if (process.env['NODE_ENV'] === 'development') {
-    console.count(label);
+//     console.count(label);
   }
 };
 
 export const devCountReset = (label: string) => {
   if (process.env['NODE_ENV'] === 'development') {
-    console.countReset(label);
+//     console.countReset(label);
   }
 };
 
 export const devClear = () => {
   if (process.env['NODE_ENV'] === 'development') {
-    console.clear();
+//     console.clear();
   }
 };
 
 export const devDir = (obj: unknown) => {
   if (process.env['NODE_ENV'] === 'development') {
-    console.dir(obj);
+//     console.dir(obj);
   }
 };
 
 export const devDirxml = (node: Element) => {
   if (process.env['NODE_ENV'] === 'development') {
-    console.dirxml(node);
+//     console.dirxml(node);
   }
 };
 

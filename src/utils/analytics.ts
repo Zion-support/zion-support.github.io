@@ -109,7 +109,7 @@ class Analytics {
    */
   private async sendToAnalytics(event: AnalyticsEvent): Promise<void> {
     // Implementation for sending to analytics service
-    console.log('Analytics event:', event);
+//     console.log('Analytics event:', event);
   }
 
   /**
@@ -134,6 +134,6 @@ class Analytics {
   }
 }
 
-const analytics = new Analytics();
+// const analytics = new Analytics();
 export { analytics };
 export default analytics;

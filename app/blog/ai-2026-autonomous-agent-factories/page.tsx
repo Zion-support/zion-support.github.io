@@ -1,7 +1,7 @@
 import React from 'react';
-import { Metadata } from 'next';
+// import { Metadata } from 'next'; // Removed for Vite
 
-export const metadata: Metadata = {
+// export const metadata: Metadata = // Removed for Vite {
   title: "AI 2026: Autonomous Agent Factories - The Future of Enterprise Automation",
   description: "Revolutionary autonomous agent factories achieving 95% enterprise automation rates through self-replicating AI systems and advanced agent orchestration.",
   authors: [{ name: 'Zion Tech Group' }],

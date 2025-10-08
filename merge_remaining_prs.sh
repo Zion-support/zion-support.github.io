@@ -1,71 +1,59 @@
 #!/bin/bash
 
-TOKEN="ghs_iI0OzYYFiL6Tvp2m7AFAFAAtnbwrsz2D51F3"
-REPO="Zion-Holdings/zion.app"
+# Script to merge remaining open PRs
+set -e
 
-echo "===== Continuing PR Merge Process ====="
-echo ""
+echo "Starting remaining PR merge process..."
 
-# Update main branch first
-git pull origin main
+# Remaining PR branches to process
+REMAINING_BRANCHES=(
+    "cursor/fix-errors-and-merge-to-main-fa9f"
+    "cursor/fix-errors-and-merge-to-main-c540"
+    "cursor/fix-errors-and-merge-to-main-b96d"
+    "cursor/fix-errors-and-merge-to-main-c83a"
+    "cursor/fix-errors-and-merge-to-main-6e85"
+)
 
-# Get list of still-open PRs
-PR_NUMBERS=$(curl -s -H "Authorization: token $TOKEN" \
-  "https://api.github.com/repos/$REPO/pulls?state=open&per_page=100" | \
-  python3 -c "import sys, json; data = json.load(sys.stdin); print(' '.join(str(pr['number']) for pr in data))")
-
-echo "Remaining open PRs: $PR_NUMBERS"
-echo ""
-
-for PR_NUM in $PR_NUMBERS; do
-  echo "========================================"
-  echo "Processing PR #$PR_NUM..."
-  
-  # Get PR details
-  PR_DATA=$(curl -s -H "Authorization: token $TOKEN" \
-    "https://api.github.com/repos/$REPO/pulls/$PR_NUM")
-  
-  BRANCH=$(echo "$PR_DATA" | python3 -c "import sys, json; pr = json.load(sys.stdin); print(pr['head']['ref'])")
-  
-  echo "  Branch: $BRANCH"
-  
-  # Fetch the branch
-  git fetch origin "$BRANCH"
-  
-  # Try to merge
-  echo "  Attempting merge..."
-  git merge "origin/$BRANCH" --no-edit -X theirs
-  
-  if [ $? -eq 0 ]; then
-    echo "  ✓ Merge successful!"
+# Process each remaining PR branch
+for branch in "${REMAINING_BRANCHES[@]}"; do
+    echo "Processing branch: $branch"
     
-    # Push to main
-    git push origin main
-    
-    if [ $? -eq 0 ]; then
-      echo "  ✓ Pushed to main"
-      
-      # Close the PR
-      CLOSE_RESULT=$(curl -s -X PATCH -H "Authorization: token $TOKEN" \
-        -H "Content-Type: application/json" \
-        -d '{"state":"closed"}' \
-        "https://api.github.com/repos/$REPO/pulls/$PR_NUM")
-      
-      echo "  ✓ Closed PR #$PR_NUM"
+    # Check if branch exists
+    if git show-ref --verify --quiet refs/remotes/origin/$branch; then
+        echo "Merging $branch into main..."
+        
+        # Try to merge the branch
+        if git merge origin/$branch --no-ff -m "Merge $branch into main"; then
+            echo "Successfully merged $branch"
+        else
+            echo "Merge conflict detected in $branch, resolving..."
+            
+            # Check for conflict markers
+            if git status --porcelain | grep -q "^UU\|^AA\|^DD"; then
+                echo "Resolving conflicts in $branch..."
+                
+                # Auto-resolve conflicts by accepting incoming changes for most files
+                git status --porcelain | grep "^UU\|^AA\|^DD" | while read status file; do
+                    echo "Resolving conflict in $file"
+                    # For most cases, accept the incoming change (theirs)
+                    git checkout --theirs "$file" 2>/dev/null || true
+                    git add "$file" 2>/dev/null || true
+                done
+                
+                # Complete the merge
+                git commit --no-edit || git commit -m "Resolve merge conflicts in $branch"
+                echo "Resolved conflicts and merged $branch"
+            else
+                echo "No conflicts found, completing merge..."
+                git commit --no-edit || git commit -m "Merge $branch into main"
+            fi
+        fi
     else
-      echo "  ✗ Failed to push to main"
+        echo "Branch $branch not found, skipping..."
     fi
-  else
-    echo "  ✗ Merge failed, skipping..."
-    git merge --abort
-  fi
-  
-  echo ""
 done
 
-echo "===== Merge process completed ====="
-echo ""
-echo "Checking remaining open PRs..."
-curl -s -H "Authorization: token $TOKEN" \
-  "https://api.github.com/repos/$REPO/pulls?state=open&per_page=10" | \
-  python3 -c "import sys, json; data = json.load(sys.stdin); print(f\"Remaining open PRs: {len(data)}\"); [print(f\"  - PR #{pr['number']}: {pr['title']}\") for pr in data[:5]]"
+echo "All remaining PRs processed. Pushing changes to main..."
+git push origin main
+
+echo "Remaining PR merge process completed!"

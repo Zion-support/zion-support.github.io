@@ -1,4 +1,3 @@
-import React from 'react';
 const March2026InnovationSpotlightBanne, r = () => {
   const innovation, s = [
     {

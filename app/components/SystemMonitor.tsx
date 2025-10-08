@@ -1,12 +1,11 @@
-'use client';
-
 /**
  * System Monitor Component
  * Real-time monitoring dashboard for performance, errors, and system health
  */
 
 import React, { useState, useEffect, useCallback } from 'react';
-import { errorHandler } from '../utils/enhancedErrorHandler';
+
+import { Link } from 'react-router-dom';import { errorHandler } from '../utils/enhancedErrorHandler';
 
 // Collect basic performance metrics
 const collectPerformanceMetrics = () => {

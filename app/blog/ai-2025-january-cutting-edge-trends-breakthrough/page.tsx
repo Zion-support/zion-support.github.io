@@ -1,6 +1,7 @@
-import { Metadata } from 'next';
+import React from 'react';
+// import { Metadata } from 'next'; // Removed for Vite
 
-export const metadata: Metadata = {
+// export const metadata: Metadata = // Removed for Vite {
   title: 'January 2025 Cutting-Edge AI Trends: Revolutionary Breakthrough Technologies | Zion Tech Group',
   description: 'Explore the latest cutting-edge AI trends and breakthrough technologies transforming enterprise operations in January 2025. Neural consciousness, quantum optimization, and autonomous intelligence.',
   keywords: 'AI trends 2025, cutting-edge AI, breakthrough technologies, neural consciousness, quantum AI, autonomous intelligence, enterprise AI',

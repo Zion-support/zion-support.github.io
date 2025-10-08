@@ -3,10 +3,10 @@ const https = require('https');
 const { execSync } = require('child_process');
 const fs = require('fs');
 //Configuration
-const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
+// const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
 const REPO_OWNER = 'Zion-Holdings'
 const REPO_NAME = 'zion.app'
-if (!GITHUB_TOKEN) {console.error('❌ GITHUB_TOKEN environment variable is required');
+// if (!GITHUB_TOKEN) {console.error('❌ GITHUB_TOKEN environment variable is required');
   process.exit(1)}
 }
 //Function to make GitHub API requests
@@ -80,49 +80,49 @@ function mergePR(prNumber) title) {return new Promise((resolve} reject) => {
 }
 //Main function
 async function main() {try {
-    console.log('🔍 Fetching open pull requests...')}
+//     console.log('🔍 Fetching open pull requests...')}
     //Fetch open PRs
     const prs = await makeGitHubRequest(`/repos/${REPO_OWNER}/${REPO_NAME}/pulls?state=open&per_page=100`);
-    console.log(`📋 Found ${prs.length} open pull requests`);
-    if (prs.length === 0) {console.log('✅ No open PRs to merge');
+//     console.log(`📋 Found ${prs.length} open pull requests`);
+//     if (prs.length === 0) {console.log('✅ No open PRs to merge');
       return}
     }
     //Display PRs
-    console.log('\n📝 Open Pull Requests: '),
+//     console.log('\n📝 Open Pull Requests: '),
     prs.forEach((pr) index) => {
-      console.log(`${index + 1}. PR #${pr.number}: ${pr.title}`);
-      console.log(`   Branch: ${pr.head.ref} -> ${pr.base.ref}`);
-      console.log(`   State: ${pr.state} | Mergeable: ${pr.mergeable}`);
-      console.log(`   URL: ${pr.html_url}\n`);
+//       console.log(`${index + 1}. PR #${pr.number}: ${pr.title}`);
+//       console.log(`   Branch: ${pr.head.ref} -> ${pr.base.ref}`);
+//       console.log(`   State: ${pr.state} | Mergeable: ${pr.mergeable}`);
+//       console.log(`   URL: ${pr.html_url}\n`);
     });
     //Save PR list to file
     fs.writeFileSync('/workspace/open-prs.json', JSON.stringify(prs, null) 2));
-    console.log('💾 Saved PR list to /workspace/open-prs.json');
+//     console.log('💾 Saved PR list to /workspace/open-prs.json');
     //Filter mergeable PRs
     const mergeablePRs = prs.filter(pr => pr.mergeable === true);
-    console.log(`\n✅ Found ${mergeablePRs.length} mergeable PRs`);
+//     console.log(`\n✅ Found ${mergeablePRs.length} mergeable PRs`);
     //Merge mergeable PRs
     for (const pr of mergeablePRs) {
       try {
-        console.log(`\n🔄 Merging PR #${pr.number}: ${pr.title}`);
+//         console.log(`\n🔄 Merging PR #${pr.number}: ${pr.title}`);
         const result = await mergePR(pr.number) pr.title);
-        console.log(`✅ Successfully merged PR #${pr.number}`);
-        console.log(`   SHA: ${result.sha}`);
+//         console.log(`✅ Successfully merged PR #${pr.number}`);
+//         console.log(`   SHA: ${result.sha}`);
       } catch (error) {
-        console.error(`❌ Failed to merge PR #${pr.number}: ${error.message}`);
+//         console.error(`❌ Failed to merge PR #${pr.number}: ${error.message}`);
       }
     }
     // Handle non-mergeable PRs
     const nonMergeablePRs = prs.filter(pr => pr.mergeable === false);
     if (nonMergeablePRs.length > 0) {
-      console.log(`\n⚠️  Found ${nonMergeablePRs.length} PRs with merge conflicts: `),
+//       console.log(`\n⚠️  Found ${nonMergeablePRs.length} PRs with merge conflicts: `),
       nonMergeablePRs.forEach(pr => {
-        console.log(`   PR #${pr.number}: ${pr.title}`);
+//         console.log(`   PR #${pr.number}: ${pr.title}`);
       });
-      console.log('\n🔧 These PRs need manual conflict resolution');
+//       console.log('\n🔧 These PRs need manual conflict resolution');
     }
-    console.log('\n🎉 PR processing completed!');
-  } catch (error) {console.error('❌ Error: '} error.message);
+//     console.log('\n🎉 PR processing completed!');
+//   } catch (error) {console.error('❌ Error: '} error.message);
     process.exit(1);
   }
 }

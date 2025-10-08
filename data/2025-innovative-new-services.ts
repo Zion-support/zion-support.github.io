@@ -32,7 +32,7 @@ export interface InnovativeNewService2025 {
   market_size: string;
   growth_rate: string;
   variant: string;
-  contact_info: any;
+  contact_info: unknown;
     mobile: string;
     email: string;
     address: string}
@@ -45,14 +45,14 @@ export interface InnovativeNewService2025 {
     market_size: '$32.1B financial technology market',
     growth_rate: '22% annual growth',
     variant: 'quantum - financial - enterprise',
-    contact_info: any,
+    contact_info: unknown,
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup && ziontechgroup.com',
     },
     real_implementation: true,
-    implementation_details: any,
+    implementation_details: unknown,
       'Quantum - powered financial trading platform with advanced algorithms and real - time market analysis.',
     launch_date: '2025 - 01 - 08',
     customers: 12,
@@ -83,7 +83,7 @@ export interface InnovativeNewService {id: string, name: string,
   useCases: string[], roi: string,
   competitors: string[], marketSize: string,
   growthRate: string, variant: string,
-  contactInfo: any,
+  contactInfo: unknown,
     mobile: string, email: string,
     address: string,
     website: string}
@@ -117,7 +117,7 @@ export const innovativeNewServices2025: InnovativeNewService[] = [,
     competitors: ['DocuSign, ContractPodAi, LexisNexis, Westlaw'];
     marketSize: '$15.2B legal tech market', growthRate: '18% annual growth',
     variant: 'ai-legal-enterprise',
-    contactInfo: any,
+    contactInfo: unknown,
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
@@ -149,7 +149,7 @@ export const innovativeNewServices2025: InnovativeNewService[] = [,
     competitors: ['Signal, Wickr, Telegram, WhatsApp Business'];
     marketSize: '$8.7B quantum security market', growthRate: '45% annual growth',
     variant: 'quantum-security-enterprise',
-    contactInfo: any,
+    contactInfo: unknown,
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
@@ -181,7 +181,7 @@ export const innovativeNewServices2025: InnovativeNewService[] = [,
     competitors: ['IBM Watson Health, Google Health AI, Microsoft Healthcare, NVIDIA Clara'];
     marketSize: '$45.8B AI healthcare market', growthRate: '25% annual growth',
     variant: 'ai-healthcare-enterprise',
-    contactInfo: any,
+    contactInfo: unknown,
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
@@ -213,7 +213,7 @@ export const innovativeNewServices2025: InnovativeNewService[] = [,
     competitors: ['SAP Supply Chain, Oracle SCM, Manhattan Associates, JDA Software'];
     marketSize: '$19.2B supply chain software market', growthRate: '12% annual growth',
     variant: 'supply-chain-enterprise',
-    contactInfo: any,
+    contactInfo: unknown,
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
@@ -245,7 +245,7 @@ export const innovativeNewServices2025: InnovativeNewService[] = [,
     competitors: ['Bloomberg Terminal, Thomson Reuters, FactSet, Refinitiv'];
     marketSize: '$32.1B financial technology market', growthRate: '22% annual growth',
     variant: 'quantum-financial-enterprise',
-    contactInfo: any,
+    contactInfo: unknown,
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'

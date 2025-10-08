@@ -1,5 +1,5 @@
 import React from 'react';
-import { Brain, Atom, Bot, ArrowRight, Sparkles, TrendingUp, Star, Zap, Rocket, CheckCircle } from 'lucide-react';
+import { Brain, ArrowRight, Sparkles, TrendingUp, Star, CheckCircle } from 'lucide-react';
 import { revolutionaryBreakthroughs2025, breakthroughServices2025, latestCaseStudies2025 } from '../../../src/content/revolutionary-ai-breakthroughs-2025';
 
 export default function RevolutionaryBreakthroughs2025() {

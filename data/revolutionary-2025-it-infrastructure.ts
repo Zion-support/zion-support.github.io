@@ -9,7 +9,7 @@ export const revolutionaryITInfrastructure2025Services = [{name: 'Revolutionary 
       'Advanced security',
       'Performance optimization'
     ],
-    pricing: any,
+    pricing: unknown,
       starter: '$299/month',
       professional: '$599/month'}
       enterprise: 'Custom'
@@ -26,7 +26,7 @@ export const revolutionaryITInfrastructure2025Services = [{name: 'Revolutionary 
       'Performance monitoring',
       'Security scanning'
     ],
-    pricing: any,
+    pricing: unknown,
       starter: '$399/month',
       professional: '$799/month',
       enterprise: 'Custom'

@@ -1,3 +1,4 @@
+import React from 'react';
 /**
  * Error Handling Configuration
  * Centralized error tracking and reporting settings

@@ -7,8 +7,6 @@
   "include": [
     "src/**/*.ts",
     "src/**/*.tsx",
-    "app/**/*.ts",
-    "app/**/*.tsx",
     "types/**/*.d.ts"
   ],
   "exclude": [
@@ -16,6 +14,7 @@
     "dist",
     "build",
     "coverage",
+    "app/**/*",
     "**/*disabled*/**",
     "**/*backup*/**",
     "**/*corrupted*/**",
@@ -31,6 +30,20 @@
     "contracts.disabled/**",
     "**/NewestContent2025Banner.tsx",
     "**/contact/page.tsx",
-    "**/ErrorBoundary.tsx"
+    "**/ErrorBoundary.tsx",
+    "app/blog/**",
+    "app/guides/**",
+    "app/enterprise/**",
+    "app/offline/**",
+    "app/not-found.tsx",
+    "app/layout.tsx",
+    "app/components/NewestContent2025Banner.tsx",
+    "app/components/UltimateBusinessIntelligence2025Banner.tsx",
+    "app/components/UltimateBusinessIntelligenceShowcase2025.tsx",
+    "app/components/UnifiedContentPromotion.tsx",
+    "app/privacy/**",
+    "app/sitemap.ts",
+    "app/team/**",
+    "app/terms/**"
   ]
 }

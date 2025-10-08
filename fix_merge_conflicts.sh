@@ -1,19 +1,32 @@
 #!/bin/bash
 
-# Fix merge conflicts in app/setupTests.tsx
-echo "Fixing app/setupTests.tsx..."
-# Remove conflict markers and keep both versions merged
-sed -i '/^<<<<<<< HEAD$/,/^>>>>>>> 49f746e8c3195449347ee8bebb6ca5b0ab732544$/d' app/setupTests.tsx
+# Script to fix merge conflicts by choosing HEAD version and cleaning up markers
 
-# Fix merge conflicts in app/utils/performanceOptimizer.ts
-echo "Fixing app/utils/performanceOptimizer.ts..."
-sed -i '/^<<<<<<< HEAD$/,/^>>>>>>> 49f746e8c3195449347ee8bebb6ca5b0ab732544$/d' app/utils/performanceOptimizer.ts
+echo "Fixing merge conflicts in TypeScript/React files..."
 
-# Fix merge conflicts in App.tsx (root level)
-echo "Fixing App.tsx..."
-sed -i '/^<<<<<<< HEAD$/,/^>>>>>>> 49f746e8c3195449347ee8bebb6ca5b0ab732544$/d' App.tsx
+# Find all files with merge conflicts
+files=$(find /workspace -name "*.tsx" -exec grep -l "<<<<<<< HEAD" {} \;)
 
-# Fix syntax errors in api files
-echo "Checking API files..."
+for file in $files; do
+    echo "Processing: $file"
+    
+    # Create a temporary file
+    temp_file="${file}.tmp"
+    
+    # Process the file to resolve conflicts
+    awk '
+    /^<<<<<<< HEAD/ { in_head = 1; next }
+    /^=======/ { in_head = 0; in_other = 1; next }
+    /^>>>>>>> / { in_other = 0; next }
+    in_head { print; next }
+    in_other { next }
+    { print }
+    ' "$file" > "$temp_file"
+    
+    # Replace the original file
+    mv "$temp_file" "$file"
+    
+    echo "Fixed: $file"
+done
 
-echo "Done!"
+echo "Merge conflicts fixed!"

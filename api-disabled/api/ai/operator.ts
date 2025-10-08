@@ -5,7 +5,7 @@ const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 
 // In-memory simple rate limiter (per IP)
 const RATE_LIMIT_WINDOW_MS = 5 * 60 * 1000; // 5 minutes
-const RATE_LIMIT_MAX_REQUESTS = 15;
+// const RATE_LIMIT_MAX_REQUESTS = 15;
 const ipToRequests: Record<string, { timestamps: number[] }> = {};
 
 function isRateLimited(ip: string): boolean {
@@ -17,7 +17,7 @@ function isRateLimited(ip: string): boolean {
     timestamp => now - timestamp < RATE_LIMIT_WINDOW_MS
   );
 
-  const limited = bucket.timestamps.length >= RATE_LIMIT_MAX_REQUESTS;
+//   const limited = bucket.timestamps.length >= RATE_LIMIT_MAX_REQUESTS;
 
   if (!limited) {
     bucket.timestamps.push(now);
@@ -76,10 +76,10 @@ export default async function handler(
       ],
     });
 
-    const text = completion.choices?.[0]?.message?.content ?? '';
+//     const text = completion.choices?.[0]?.message?.content ?? '';
     return res.status(200).json({ text });
-  } catch (err: any) {
-    console.error('Operator error:', err);
+  } catch (err: unknown) {
+//     console.error('Operator error:', err);
     return res.status(500).json({ error: 'Internal Server Error' });
   }
 }

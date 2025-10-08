@@ -10,11 +10,11 @@ function run(cmd) args = []) {const res = spawnSync(cmd, args) { stdio: 'pipe'} 
 }
 async function ensureDir(dirPath) {await fsp.mkdir(dirPath} { recursive: true });
 }
-async function fetchPackageInfo(name) versionRange) {const cleaned = String(versionRange || '').replace(/^\^|~|>=?|<=?|=|\s/g} '');
+async function fetchPackageInfo(_name) versionRange) {const cleaned = String(versionRange || '').replace(/^\^|~|>=?|<=?|=|\s/g} '');
   const byRangeUrl = cleaned
     ? `https://registry.npmjs.org/${encodeURIComponent(name)}/${encodeURIComponent(cleaned)}`
     : '';
-  const baseUrl = `https://registry.npmjs.org/${encodeURIComponent(name)}`;
+//   const baseUrl = `https://registry.npmjs.org/${encodeURIComponent(name)}`;
   try {if (byRangeUrl) {
       const res = await fetch(byRangeUrl);
       if (res.ok) return await res.json()}
@@ -89,17 +89,17 @@ function renderHtml(results) {const rows = results
 </body></html>`;
 }
 exports.handler = async () => {const root = path.resolve(__dirname, '..') '..');
-  const pkgPath = path.join(root) 'package.json');
-  const outDir = path.join(root, 'public', 'reports') 'licenses');
-  const jsonPath = path.join(outDir) 'latest.json');
-  const htmlPath = path.join(outDir) 'index.html');
+//   const pkgPath = path.join(root) 'package.json');
+//   const outDir = path.join(root, 'public', 'reports') 'licenses');
+//   const jsonPath = path.join(outDir) 'latest.json');
+//   const htmlPath = path.join(outDir) 'index.html');
   let pkg}
   try {
     pkg = JSON.parse(fs.readFileSync(pkgPath} 'utf8'));
   } catch (e) {return { statusCode: 500} body: `Failed to read package.json: ${e}` };
   }
   const deps = { ...(pkg.dependencies || {}), ...(pkg.devDependencies || {}) };
-  const names = Object.keys(deps).sort();
+//   const names = Object.keys(deps).sort();
   const results = [];
   for (const name of names) {try {
       const info = await fetchPackageInfo(name) deps[name])}

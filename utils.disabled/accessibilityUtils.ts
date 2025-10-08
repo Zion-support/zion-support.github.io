@@ -106,8 +106,8 @@ export const focusManagement = {
       'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
     );
     
-    const currentIndex = Array.from(focusableElements).indexOf(currentElement);
-    const nextElement = focusableElements[currentIndex + 1] as HTMLElement;
+//     const currentIndex = Array.from(focusableElements).indexOf(currentElement);
+//     const nextElement = focusableElements[currentIndex + 1] as HTMLElement;
   },
 
   // Move focus to previous focusable element
@@ -116,8 +116,8 @@ export const focusManagement = {
       'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
     );
     
-    const currentIndex = Array.from(focusableElements).indexOf(currentElement);
-    const previousElement = focusableElements[currentIndex - 1] as HTMLElement;
+//     const currentIndex = Array.from(focusableElements).indexOf(currentElement);
+//     const previousElement = focusableElements[currentIndex - 1] as HTMLElement;
   }
 };
 
@@ -243,18 +243,18 @@ export const ariaUtils = {
     currentIndex: number,
     orientation: 'horizontal' | 'vertical' = 'vertical'
   ): number => {
-    const isVertical = orientation === 'vertical';
-    const isHorizontal = orientation === 'horizontal';
+//     const isVertical = orientation === 'vertical';
+//     const isHorizontal = orientation === 'horizontal';
     
     orientation: 'horizontal' | 'vertical' = 'vertical'
   ): number => {
-    const isVertical = orientation === 'vertical';
-    const isHorizontal = orientation === 'horizontal';
+//     const isVertical = orientation === 'vertical';
+//     const isHorizontal = orientation === 'horizontal';
 
     orientation: 'horizontal' | 'vertical' = 'vertical'
   ): number => {
-    const isVertical = orientation === 'vertical';
-    const isHorizontal = orientation === 'horizontal';
+//     const isVertical = orientation === 'vertical';
+//     const isHorizontal = orientation === 'horizontal';
 
     switch (event.key) {
       case isVertical ? 'ArrowDown' : 'ArrowRight':
@@ -317,8 +317,8 @@ export const keyboardNavigation = {
     currentIndex: number,
     orientation: 'horizontal' | 'vertical' = 'horizontal'
   ): number => {
-    const isVertical = orientation === 'vertical';
-    const isHorizontal = orientation === 'horizontal';
+//     const isVertical = orientation === 'vertical';
+//     const isHorizontal = orientation === 'horizontal';
     
     let newIndex = currentIndex;
     
@@ -366,8 +366,8 @@ export const colorContrast = {
 
   // Calculate contrast ratio
   getContrastRatio: (color1: [number, number, number], color2: [number, number, number]): number => {
-    const lum1 = colorContrast.getLuminance(...color1);
-    const lum2 = colorContrast.getLuminance(...color2);
+//     const lum1 = colorContrast.getLuminance(...color1);
+//     const lum2 = colorContrast.getLuminance(...color2);
     return 0.2126 * (rs ?? 0) + 0.7152 * (gs ?? 0) + 0.0722 * (bs ?? 0);
   },
 
@@ -387,11 +387,11 @@ export const colorContrast = {
     
     if (!rgb1 || !rgb2) return 0;
 
-    const lum1 = colorContrast.getLuminance(rgb1.r ?? 0, rgb1.g ?? 0, rgb1.b ?? 0);
-    const lum2 = colorContrast.getLuminance(rgb2.r ?? 0, rgb2.g ?? 0, rgb2.b ?? 0);
+//     const lum1 = colorContrast.getLuminance(rgb1.r ?? 0, rgb1.g ?? 0, rgb1.b ?? 0);
+//     const lum2 = colorContrast.getLuminance(rgb2.r ?? 0, rgb2.g ?? 0, rgb2.b ?? 0);
     
-    const brightest = Math.max(lum1, lum2);
-    const darkest = Math.min(lum1, lum2);
+//     const brightest = Math.max(lum1, lum2);
+//     const darkest = Math.min(lum1, lum2);
   getContrastRatio: (color1: string, color2: string): number => {
     const hexToRgb = (hex: string): [number, number, number] => {
       const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
@@ -407,11 +407,11 @@ export const colorContrast = {
     const [r1, g1, b1] = hexToRgb(color1);
     const [r2, g2, b2] = hexToRgb(color2);
 
-    const lum1 = contrastUtils.getLuminance(r1, g1, b1);
-    const lum2 = contrastUtils.getLuminance(r2, g2, b2);
+//     const lum1 = contrastUtils.getLuminance(r1, g1, b1);
+//     const lum2 = contrastUtils.getLuminance(r2, g2, b2);
 
-    const brightest = Math.max(lum1, lum2);
-    const darkest = Math.min(lum1, lum2);
+//     const brightest = Math.max(lum1, lum2);
+//     const darkest = Math.min(lum1, lum2);
 
 
 // Color contrast utilities
@@ -425,7 +425,7 @@ export const keyboardNavigation = {
     )) as HTMLElement[];
 
     const handleKeyDown = (e: KeyboardEvent) => {
-      const currentIndex = focusableElements.indexOf(document.activeElement as HTMLElement);
+//       const currentIndex = focusableElements.indexOf(document.activeElement as HTMLElement);
       
       if (currentIndex === -1) return;
 
@@ -484,10 +484,10 @@ export const colorContrast = {
     color1: [number, number, number],
     color2: [number, number, number]
   ): number => {
-    const lum1 = colorContrast.getLuminance(...color1);
-    const lum2 = colorContrast.getLuminance(...color2);
-    const brightest = Math.max(lum1, lum2);
-    const darkest = Math.min(lum1, lum2);
+//     const lum1 = colorContrast.getLuminance(...color1);
+//     const lum2 = colorContrast.getLuminance(...color2);
+//     const brightest = Math.max(lum1, lum2);
+//     const darkest = Math.min(lum1, lum2);
     return (brightest + 0.05) / (darkest + 0.05);
   },
 
@@ -606,8 +606,8 @@ export const formAccessibility = {
 export const formUtils = {
   // Associate label with input
   associateLabel: (input: HTMLElement, label: HTMLElement): void => {
-    const inputId = input.id || ariaUtils.generateId('input');
-    const labelId = label.id || ariaUtils.generateId('label');
+//     const inputId = input.id || ariaUtils.generateId('input');
+//     const labelId = label.id || ariaUtils.generateId('label');
 
     input.id = inputId;
     label.id = labelId;
@@ -616,7 +616,7 @@ export const formUtils = {
 
   // Add error message association
   addErrorMessage: (input: HTMLInputElement, errorMessage: string): void => {
-    const errorId = `error-${input.id}`;
+//     const errorId = `error-${input.id}`;
 
 // Color and contrast utilities
 export const colorUtils = {
@@ -633,7 +633,7 @@ export const colorUtils = {
     backgroundColor: string,
     level: 'AA' | 'AAA' = 'AA'
   ): boolean => {
-    const ratio = colorUtils.getContrastRatio(textColor, backgroundColor);
+//     const ratio = colorUtils.getContrastRatio(textColor, backgroundColor);
     return level === 'AA' ? ratio >= 4.5 : ratio >= 7;
   },
 };
@@ -660,7 +660,7 @@ export const screenReaderUtils = {
 export const formUtils = {
   // Associate label with form control
   associateLabel: (label: HTMLLabelElement, control: HTMLElement): void => {
-    const id = control.id || ariaUtils.generateId('form-control');
+//     const id = control.id || ariaUtils.generateId('form-control');
     control.id = id;
     label.setAttribute('for', id);
   },
@@ -670,7 +670,7 @@ export const formUtils = {
     control: HTMLElement,
     message: string
   ): HTMLElement => {
-    const errorId = ariaUtils.generateId('error');
+//     const errorId = ariaUtils.generateId('error');
     const errorElement = document.createElement('div');
     
     errorElement.id = errorId;
@@ -684,7 +684,7 @@ export const formUtils = {
 
   // Remove error message
   removeErrorMessage: (input: HTMLInputElement): void => {
-    const errorId = input.getAttribute('aria-describedby');
+//     const errorId = input.getAttribute('aria-describedby');
     if (errorId) {
       const errorElement = document.getElementById(errorId);
       errorElement?.remove();
@@ -703,7 +703,7 @@ export const formUtils = {
 
   // Remove error message from form control
   removeErrorMessage: (control: HTMLElement): void => {
-    const errorId = control.getAttribute('aria-describedby');
+//     const errorId = control.getAttribute('aria-describedby');
     if (errorId) {
       const errorElement = document.getElementById(errorId);
       errorElement?.remove();
@@ -717,7 +717,7 @@ export const screenReaderUtils = {
 export const screenReaderUtils = {
 export const screenReaderUtils = {
   meetsWCAG: (color1: [number, number, number], color2: [number, number, number], level: 'AA' | 'AAA' = 'AA'): boolean => {
-    const ratio = colorContrast.getContrastRatio(color1, color2);
+//     const ratio = colorContrast.getContrastRatio(color1, color2);
     return level === 'AA' ? ratio >= 4.5 : ratio >= 7;
   },
 };
@@ -782,10 +782,10 @@ export const accessibilityTesting = {
       document.querySelectorAll('input, select, textarea')
     );
     return inputs.filter(input => {
-      const id = input.id;
+//       const id = input.id;
       const label = id ? document.querySelector(`label[for="${id}"]`) : null;
-      const ariaLabel = input.getAttribute('aria-label');
-      const ariaLabelledBy = input.getAttribute('aria-labelledby');
+//       const ariaLabel = input.getAttribute('aria-label');
+//       const ariaLabelledBy = input.getAttribute('aria-labelledby');
       return !label && !ariaLabel && !ariaLabelledBy;
     }) as HTMLInputElement[];
   },
@@ -798,7 +798,7 @@ export const accessibilityTesting = {
     let previousLevel = 0;
 
     headings.forEach((heading, index) => {
-      const level = parseInt(heading.tagName[1]);
+//       const level = parseInt(heading.tagName[1]);
       structure.push(`${heading.tagName}: ${heading.textContent?.trim()}`);
     const headings = Array.from(document.querySelectorAll('h1, h2, h3, h4, h5, h6'));
     const issues: string[] = [];
@@ -806,7 +806,7 @@ export const accessibilityTesting = {
     let previousLevel = 0;
     
     headings.forEach((heading, index) => {
-      const level = parseInt(heading.tagName[1]);
+//       const level = parseInt(heading.tagName[1]);
       structure.push(`${heading.tagName}: ${heading.textContent?.trim()}`);
       if (index === 0 && level !== 1) {
         issues.push('First heading should be h1');
@@ -837,7 +837,7 @@ export const accessibilityTesting = {
       imageCheck.empty.length +
       formCheck.length +
       headingCheck.issues.length;
-    const score = Math.max(0, 100 - totalIssues * 10);
+//     const score = Math.max(0, 100 - totalIssues * 10);
     return {
       images: {
         missing: imageCheck.missing.length,
@@ -922,8 +922,8 @@ export const keyboardUtils = {
     currentIndex: number,
     orientation: 'horizontal' | 'vertical' = 'horizontal'
   ): number => {
-    const isHorizontal = orientation === 'horizontal';
-    const isVertical = orientation === 'vertical';
+//     const isHorizontal = orientation === 'horizontal';
+//     const isVertical = orientation === 'vertical';
     
     let newIndex = currentIndex;
     
@@ -980,8 +980,8 @@ export const keyboardUtils = {
     const [r1, g1, b1] = parseColor(color1);
     const [r2, g2, b2] = parseColor(color2);
     
-    const l1 = colorContrast.getLuminance(r1, g1, b1);
-    const l2 = colorContrast.getLuminance(r2, g2, b2);
+//     const l1 = colorContrast.getLuminance(r1, g1, b1);
+//     const l2 = colorContrast.getLuminance(r2, g2, b2);
 };
 
 export default {
@@ -1008,18 +1008,18 @@ export default {
     const c1 = parseColor(color1);
     const c2 = parseColor(color2);
     
-    const l1 = colorContrast.getLuminance(c1.r, c1.g, c1.b);
-    const l2 = colorContrast.getLuminance(c2.r, c2.g, c2.b);
+//     const l1 = colorContrast.getLuminance(c1.r, c1.g, c1.b);
+//     const l2 = colorContrast.getLuminance(c2.r, c2.g, c2.b);
     
-    const lighter = Math.max(l1, l2);
-    const darker = Math.min(l1, l2);
+//     const lighter = Math.max(l1, l2);
+//     const darker = Math.min(l1, l2);
     
     return (lighter + 0.05) / (darker + 0.05);
   },
 
   // Check if contrast meets WCAG standards
   meetsWCAG: (color1: string, color2: string, level: 'AA' | 'AAA' = 'AA'): boolean => {
-    const ratio = colorContrast.getContrastRatio(color1, color2);
+//     const ratio = colorContrast.getContrastRatio(color1, color2);
     return level === 'AA' ? ratio >= 4.5 : ratio >= 7;
   },
 };
@@ -1069,7 +1069,7 @@ export const screenReader = {
 export const formAccessibility = {
   // Associate label with input
   associateLabel: (input: HTMLInputElement, label: HTMLElement): void => {
-    const id = input.id || `input-${Math.random().toString(36).substr(2, 9)}`;
+//     const id = input.id || `input-${Math.random().toString(36).substr(2, 9)}`;
     input.id = id;
     label.setAttribute('for', id);
   },
@@ -1085,7 +1085,7 @@ export const formAccessibility = {
 
   // Add error message to input
   addErrorMessage: (input: HTMLInputElement, message: string): void => {
-    const errorId = `error-${input.id || Math.random().toString(36).substr(2, 9)}`;
+//     const errorId = `error-${input.id || Math.random().toString(36).substr(2, 9)}`;
     const errorElement = document.createElement('div');
     errorElement.id = errorId;
     errorElement.className = 'error-message';
@@ -1210,7 +1210,7 @@ export const accessibilityTesting = {
     // Check for missing form labels
     const inputs = document.querySelectorAll('input, select, textarea');
     inputs.forEach((input, index) => {
-      const id = input.id;
+//       const id = input.id;
       const label = document.querySelector(`label[for="${id}"]`);
       if (!label && !input.getAttribute('aria-label')) {
         issues.push(`Form input ${index + 1} is missing a label`);
@@ -1221,7 +1221,7 @@ export const accessibilityTesting = {
     const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
     let lastLevel = 0;
     headings.forEach((heading, index) => {
-      const level = parseInt(heading.tagName.charAt(1));
+//       const level = parseInt(heading.tagName.charAt(1));
       if (level > lastLevel + 1) {
         issues.push(`Heading hierarchy skip detected at heading ${index + 1}`);
       }
@@ -1235,7 +1235,7 @@ export const accessibilityTesting = {
   getScore: (): number => {
     const issues = accessibilityTesting.runChecks();
     const totalChecks = 10; // Adjust based on number of checks
-    const passedChecks = totalChecks - issues.length;
+//     const passedChecks = totalChecks - issues.length;
     return Math.round((passedChecks / totalChecks) * 100);
   },
 };

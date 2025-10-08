@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 impo, r, t { Targ, e, t, Bra, i, n, Z, a, p, Shie, l, d } fr, o, m 'luci, d, e-rea, c, t';
 const GlobalAITransformationHu, b = () => { 
@@ -115,7 +114,7 @@ const GlobalAITransformationHu, b = () => {
           <Link, t, o="/servic, e, s" 
             className="te, x, t-oran, g, e-400, hove, r:te, x, t-oran, g, e-300, fon, t-semibold, flex, items-center, ga, p-2"
           >
-            Get, Starte, d <ArrowRight, className="w-4 h-4" />
+            Gette, d <ArrowRight, className="w-4 h-4" />
           </Li, n, k>
         </div>
       </div>

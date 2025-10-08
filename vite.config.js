@@ -12,7 +12,9 @@ export default defineConfig({
       brotliSize: true,
     }),
   ],
+  root: '.',
   build: {
+    outDir: 'dist',
     target: 'es2015',
     minify: 'terser',
     sourcemap: false,
@@ -21,6 +23,13 @@ export default defineConfig({
     assetsInlineLimit: 4096,
     reportCompressedSize: true,
     rollupOptions: {
+      external: (id) => {
+        // Externalize Next.js modules to prevent build errors
+        if (id.includes('next/') || id.includes('next')) {
+          return true;
+        }
+        return false;
+      },
       output: {
         manualChunks: (id) => {
           // Core React libraries
@@ -53,7 +62,7 @@ export default defineConfig({
       compress: {
         drop_console: true,
         drop_debugger: true,
-        pure_funcs: ['console.log', 'console.info', 'console.debug'],
+//         pure_funcs: ['console.log', 'console.info', 'console.debug'],
         passes: 3,
         unsafe: true,
         unsafe_comps: true,

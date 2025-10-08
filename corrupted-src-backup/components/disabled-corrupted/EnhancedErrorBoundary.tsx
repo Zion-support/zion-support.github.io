@@ -40,7 +40,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
 
   override componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     // Log error details
-    console.error('EnhancedErrorBoundary caught an error:', error, errorInfo);
+//     console.error('EnhancedErrorBoundary caught an error:', error, errorInfo);
 
     this.setState({
       error,
@@ -76,7 +76,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify(errorReport),
-      }).catch(console.error);
+//       }).catch(console.error);
     }
 
     // Store in localStorage for debugging
@@ -91,7 +91,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       }
       localStorage.setItem('errorLogs', JSON.stringify(existingErrors));
     } catch (e) {
-      console.warn('Failed to store error in localStorage:', e);
+//       console.warn('Failed to store error in localStorage:', e);
     }
   };
 
@@ -122,9 +122,9 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     };
 
     // Create a mailto link with error details
-    const subject = `Bug Report - Error ID: ${this.state.errorId}`;
-    const body = `Error Details:\n\n${JSON.stringify(errorDetails, null, 2)}`;
-    const mailtoLink = `mailto:support@ziontechgroup.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+//     const subject = `Bug Report - Error ID: ${this.state.errorId}`;
+//     const body = `Error Details:\n\n${JSON.stringify(errorDetails, null, 2)}`;
+//     const mailtoLink = `mailto:support@ziontechgroup.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
     window.open(mailtoLink);
   };

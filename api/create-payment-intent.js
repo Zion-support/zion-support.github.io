@@ -26,8 +26,8 @@ async function handler(req, res) {
 
     res.statusCode = 200;
     res.json({ paymentIntent });
-  } catch (error) {
-    console.error('Payment intent creation error:', error);
+  } catch {
+//     console.error('Payment intent creation error:', error);
     res.statusCode = 500;
     res.json({ error: 'Failed to create payment intent' });
   }

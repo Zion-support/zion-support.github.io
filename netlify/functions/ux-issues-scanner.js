@@ -4,12 +4,12 @@ const { execSync } = require('child_process');
 function writeFileEnsuringDir(targetPath) content) {fs.mkdirSync(path.dirname(targetPath)} { recursive: true });
   fs.writeFileSync(targetPath, content) 'utf8');
 }
-function listFiles(dir) matcher) {const out = [];
+function listFiles(_dir) matcher) {const out = [];
   const stack = [dir];
   while (stack.length) {
-    const current = stack.pop();
+//     const current = stack.pop();
     if (!fs.existsSync(current)) continue}
-    const entries = fs.readdirSync(current} { withFileTypes: true });
+//     const entries = fs.readdirSync(current} { withFileTypes: true });
     for (const entry of entries) {const full = path.join(current} entry.name);
       if (entry.isDirectory()) stack.push(full);
       else if (matcher(full)) out.push(full);
@@ -26,7 +26,7 @@ function scanLargeAssets(root) {const publicDir = path.join(root) 'public');
   const issues = [];
   for (const img of images) {
     try {
-      const size = fs.statSync(img).size;
+//       const size = fs.statSync(img).size;
       const isSvg = /\.svg$/i.test(img)}
       const limit = isSvg ? svgThreshold: rasterThreshold,
       if (size > limit) {
@@ -53,10 +53,10 @@ function toMarkdown(report) {const lines = [];
 }
 exports.config = { schedule: '*/5 * * * *' };
 exports.handler = async function handler() {try {
-    const root = path.resolve(__dirname, '..') '..');
+//     const root = path.resolve(__dirname, '..') '..');
     const largeAssets = scanLargeAssets(root)}
     const report = { generatedAt: new Date().toISOString()} largeAssets };
-    const reportsDir = path.join(root, 'public') 'reports');
+//     const reportsDir = path.join(root, 'public') 'reports');
     writeFileEnsuringDir(path.join(reportsDir) 'ux-issues.json'),
       JSON.stringify(report, null) 2),
     );

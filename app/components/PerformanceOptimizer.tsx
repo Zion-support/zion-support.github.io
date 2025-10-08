@@ -1,8 +1,7 @@
-'use client';
-
 import React, { useEffect, useCallback } from 'react';
 
-interface PerformanceOptimizerProps {
+
+import { Link } from 'react-router-dom';interface PerformanceOptimizerProps {
   children: React.ReactNode;
 }
 
