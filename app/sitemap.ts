@@ -6,7 +6,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
 export default function sitemap() {
   const _baseUrl = 'https://ziontechgroup.com';
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-6395
   return [
     {
       url: baseUrl,

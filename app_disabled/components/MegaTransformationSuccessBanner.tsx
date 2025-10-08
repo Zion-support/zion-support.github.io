@@ -48,9 +48,7 @@ export default function MegaTransformationSuccessBanner() {
               href='/case-studies/fortune-500-autonomous-operations-transformation-2026'
               className='text-blue-300 hover:text-blue-200 transition-colors font-semibold flex items-center'
             >
-<<<<<<< HEAD
               Read Full Case Study <ArrowRight className="w-4 h-4 ml-1" />
-=======
               Read Full Case Study <Link className="w-4 h-4 ml-1" />
 >>>>>>> 1d68394de6252bd8b85f69f386dad01902598b0b
             </Link>
@@ -87,9 +85,7 @@ export default function MegaTransformationSuccessBanner() {
               href='/case-studies/ai-manufacturing-transformation-mega-success-2026'
               className='text-blue-300 hover:text-blue-200 transition-colors font-semibold flex items-center'
             >
-<<<<<<< HEAD
               Read Full Case Study <ArrowRight className="w-4 h-4 ml-1" />
-=======
               Read Full Case Study <Link className="w-4 h-4 ml-1" />
 >>>>>>> 1d68394de6252bd8b85f69f386dad01902598b0b
             </Link>
@@ -126,9 +122,7 @@ export default function MegaTransformationSuccessBanner() {
               href='/case-studies/healthcare-ai-diagnostic-system-2025'
               className='text-blue-300 hover:text-blue-200 transition-colors font-semibold flex items-center'
             >
-<<<<<<< HEAD
               Read Full Case Study <ArrowRight className="w-4 h-4 ml-1" />
-=======
               Read Full Case Study <Link className="w-4 h-4 ml-1" />
 >>>>>>> 1d68394de6252bd8b85f69f386dad01902598b0b
             </Link>
@@ -163,9 +157,7 @@ export default function MegaTransformationSuccessBanner() {
               href='/case-studies/ai-finance-automation-success-story'
               className='text-blue-300 hover:text-blue-200 transition-colors font-semibold flex items-center'
             >
-<<<<<<< HEAD
               Read Full Case Study <ArrowRight className="w-4 h-4 ml-1" />
-=======
               Read Full Case Study <Link className="w-4 h-4 ml-1" />
 >>>>>>> 1d68394de6252bd8b85f69f386dad01902598b0b
             </Link>
@@ -202,9 +194,7 @@ export default function MegaTransformationSuccessBanner() {
               href='/case-studies/ai-supply-chain-optimization-mega-success-2025'
               className='text-blue-300 hover:text-blue-200 transition-colors font-semibold flex items-center'
             >
-<<<<<<< HEAD
               Read Full Case Study <ArrowRight className="w-4 h-4 ml-1" />
-=======
               Read Full Case Study <Link className="w-4 h-4 ml-1" />
 >>>>>>> 1d68394de6252bd8b85f69f386dad01902598b0b
             </Link>
@@ -241,9 +231,7 @@ export default function MegaTransformationSuccessBanner() {
               href='/case-studies/global-logistics-ai-transformation-2026'
               className='text-blue-300 hover:text-blue-200 transition-colors font-semibold flex items-center'
             >
-<<<<<<< HEAD
               Read Full Case Study <ArrowRight className="w-4 h-4 ml-1" />
-=======
               Read Full Case Study <Link className="w-4 h-4 ml-1" />
 >>>>>>> 1d68394de6252bd8b85f69f386dad01902598b0b
             </Link>
@@ -291,9 +279,7 @@ export default function MegaTransformationSuccessBanner() {
               href="/case-studies"
               className="bg-white text-green-900 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors shadow-lg flex items-center"
             >
-<<<<<<< HEAD
               View All Case Studies <ArrowRight className="w-5 h-5 ml-2" />
-=======
               View All Case Studies <Link className="w-5 h-5 ml-2" />
 >>>>>>> 1d68394de6252bd8b85f69f386dad01902598b0b
             </Link>

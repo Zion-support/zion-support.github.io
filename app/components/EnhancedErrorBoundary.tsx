@@ -57,7 +57,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
 
 
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-6395
       console.groupEnd();
     }
   }
@@ -100,7 +99,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       console.log('Error Report:', errorReport);
       
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-6395
       // Example: Send to error reporting service
       // await fetch('/api/errors', {
       //   method: 'POST',
@@ -111,7 +109,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       // eslint-disable-next-line no-console
       console.warn('Failed to send error report:', reportingError);
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-6395
     }
   };
 
@@ -177,7 +174,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
         // eslint-disable-next-line no-console
         console.warn('Failed to copy error details');
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-6395
       });
   };
 
@@ -197,7 +193,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       const { retryCount, error, errorId } = this.state;
       const _canRetry = retryCount < this.maxRetries;
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-6395
       return (
         <div className="min-h-screen flex items-center justify-center bg-gray-50">
           <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-8 text-center">

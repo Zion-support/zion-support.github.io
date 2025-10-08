@@ -52,7 +52,6 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         // eslint-disable-next-line no-console
         console.warn('LCP observer not supported:', error);
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-6395
       }
     }
 
@@ -81,7 +80,6 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         // eslint-disable-next-line no-console
         console.warn('FID observer not supported:', error);
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-6395
       }
     }
 
@@ -111,7 +109,6 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         // eslint-disable-next-line no-console
         console.warn('CLS observer not supported:', error);
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-6395
       }
     }
 
@@ -138,7 +135,6 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       // eslint-disable-next-line no-console
       console.warn('Performance measurement failed:', error);
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-6395
     }
 
     // Cleanup observers
@@ -150,7 +146,6 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
           // eslint-disable-next-line no-console
           console.warn('Error disconnecting observer:', error);
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-6395
         }
       });
     };

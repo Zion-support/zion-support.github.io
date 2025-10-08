@@ -24,7 +24,6 @@ const PerformanceOptimizerComponent: React.FC<PerformanceOptimizerProps> = ({
         'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap';
       fontLink.as = 'style';
       document.head.appendChild(fontLink);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-6395
 
   useEffect(() => {
     // Performance monitoring
@@ -83,7 +82,6 @@ const PerformanceOptimizer: React.FC = () => {
         document.head.appendChild(link);
         const _img = new Image();
         img['src'] = src;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-6395
       });
     };
 
@@ -142,7 +140,6 @@ const PerformanceOptimizer: React.FC = () => {
     const updateScrollPosition = () => {
       // Add scroll-based optimizations here
       ticking = false;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-6395
     };
 
     optimizeImages();
@@ -180,7 +177,6 @@ const PerformanceOptimizer: React.FC = () => {
             if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { } }
           }
         });
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-6395
       });
     };
 

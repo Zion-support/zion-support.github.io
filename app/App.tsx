@@ -38,7 +38,6 @@ const InteractiveContentShowcase2026 = lazy(
 const InteractiveAIROICalculator = lazy(
   () => import('./components/InteractiveAIROICalculator')
 );
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-6395
 
 // Lazy load pages for better performance
 const _HomePage = lazy(() => import('./page'));
@@ -108,7 +107,6 @@ const App: React.FC = () => {
       }
       if (performanceMetrics) {
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-6395
       }
     }
     
@@ -118,7 +116,6 @@ const App: React.FC = () => {
       const accessibilityMetrics = accessibilityEnhancer.getMetrics();
       const _performanceMetrics = performanceMonitor.getMetrics();
       const _accessibilityMetrics = accessibilityEnhancer.getMetrics();
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-6395
       
       if (process.env.NODE_ENV === 'development') {
         // eslint-disable-next-line no-console
@@ -126,7 +123,6 @@ const App: React.FC = () => {
         // eslint-disable-next-line no-console
         console.log('Accessibility Score:', accessibilityMetrics.overallScore);
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-6395
       }
     }, 30000);
     

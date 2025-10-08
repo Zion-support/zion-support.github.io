@@ -29,7 +29,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       announcement.className = 'sr-only';
       announcement.textContent = `Navigated to ${title}`;
       document.body.appendChild(announcement);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-6395
 
   // Check for user preferences
   useEffect(() => {
@@ -55,7 +54,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
         subtree: true,
       });
     }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-6395
 
     const handleContrastChange = (e: MediaQueryListEvent) => {
       setIsHighContrast(e.matches);
@@ -159,7 +157,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     // Remove keyboard navigation class on mouse use
     const handleMouseDown = () => {
       document.body.classList.remove('keyboard-navigation');
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-6395
     };
 
     document.addEventListener('keydown', handleKeyDown);
@@ -264,7 +261,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       }
     `;
     document.head.appendChild(style);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-6395
 
     return () => {
       document.removeEventListener('focusin', handleFocusIn);
