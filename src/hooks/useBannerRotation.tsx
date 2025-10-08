@@ -4,8 +4,12 @@
  */
 
 import React, { useState, useEffect, useCallback, useMemo } from 'react';
+<<<<<<< HEAD
 import type { BannerConfig, RotationStrategy } from "../data/bannerConfigurations";
 import bannerConfigurations from "../data/bannerConfigurations"; // @ts-ignore
+=======
+import bannerConfigurations, { BannerConfig, RotationStrategy } from "../data/bannerConfigurations";
+>>>>>>> origin/main
 
 interface UseBannerRotationOptions {
   strategy?: RotationStrategy;
@@ -130,4 +134,3 @@ export const useBannerRotation = (options: UseBannerRotationOptions = {}) => {
   };
 };
 
-export default useBannerRotation;
