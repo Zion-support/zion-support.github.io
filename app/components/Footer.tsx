@@ -17,7 +17,8 @@ const Footer: React.FC = () => {
               </div>
               <p className="text-gray-300 mb-6 max-w-md">
                 Leading provider of enterprise AI solutions, quantum computing, autonomous systems, 
-                and comprehensive IT services. Transforming businesses through cutting-edge technology.
+                and comprehensive IT services. We deliver $50M+ in annual savings and 95% process automation 
+                for Fortune 500 companies worldwide.
               </p>
               
               {/* Contact Info */}
@@ -53,41 +54,71 @@ const Footer: React.FC = () => {
                   <Link to="/micro-saas" className="text-gray-300 hover:text-white transition-colors flex items-center">
                     <Zap className="w-4 h-4 mr-2 text-blue-400" />
                     Micro SAAS Solutions
+                    <span className="ml-2 text-xs bg-green-600 text-white px-2 py-1 rounded">Starting $29/mo</span>
                   </Link>
                 </li>
                 <li>
                   <Link to="/ai-services" className="text-gray-300 hover:text-white transition-colors flex items-center">
                     <Award className="w-4 h-4 mr-2 text-blue-400" />
                     AI Services
+                    <span className="ml-2 text-xs bg-green-600 text-white px-2 py-1 rounded">Starting $1,500/mo</span>
                   </Link>
                 </li>
                 <li>
                   <Link to="/it-services" className="text-gray-300 hover:text-white transition-colors flex items-center">
                     <Shield className="w-4 h-4 mr-2 text-blue-400" />
                     IT Services
+                    <span className="ml-2 text-xs bg-green-600 text-white px-2 py-1 rounded">Starting $1,200/mo</span>
                   </Link>
                 </li>
                 <li>
                   <Link to="/quantum-computing" className="text-gray-300 hover:text-white transition-colors">
                     Quantum Computing
+                    <span className="ml-2 text-xs bg-purple-600 text-white px-2 py-1 rounded">Custom Pricing</span>
                   </Link>
                 </li>
                 <li>
                   <Link to="/autonomous-systems" className="text-gray-300 hover:text-white transition-colors">
                     Autonomous Systems
+                    <span className="ml-2 text-xs bg-green-600 text-white px-2 py-1 rounded">Starting $2,500/mo</span>
                   </Link>
                 </li>
                 <li>
                   <Link to="/blockchain-web3" className="text-gray-300 hover:text-white transition-colors">
                     Blockchain & Web3
+                    <span className="ml-2 text-xs bg-orange-600 text-white px-2 py-1 rounded">Starting $6,000/mo</span>
                   </Link>
                 </li>
                 <li>
                   <Link to="/cybersecurity" className="text-gray-300 hover:text-white transition-colors">
                     Cybersecurity
+                    <span className="ml-2 text-xs bg-red-600 text-white px-2 py-1 rounded">Starting $3,000/mo</span>
                   </Link>
                 </li>
               </ul>
+              
+              {/* Key Benefits */}
+              <div className="mt-6 p-4 bg-gray-800 rounded-lg">
+                <h5 className="text-sm font-semibold text-white mb-3">Why Choose Us?</h5>
+                <ul className="space-y-2 text-xs text-gray-300">
+                  <li className="flex items-center">
+                    <span className="text-green-400 mr-2">✓</span>
+                    $50M+ Annual Savings Delivered
+                  </li>
+                  <li className="flex items-center">
+                    <span className="text-green-400 mr-2">✓</span>
+                    95% Process Automation
+                  </li>
+                  <li className="flex items-center">
+                    <span className="text-green-400 mr-2">✓</span>
+                    24/7 Expert Support
+                  </li>
+                  <li className="flex items-center">
+                    <span className="text-green-400 mr-2">✓</span>
+                    Fortune 500 Trusted
+                  </li>
+                </ul>
+              </div>
             </div>
 
             {/* Quick Links */}
@@ -168,6 +199,37 @@ const Footer: React.FC = () => {
                 </li>
               </ul>
             </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Call to Action Section */}
+      <div className="bg-gradient-to-r from-blue-600 to-purple-600 py-12">
+        <div className="container mx-auto px-4 text-center">
+          <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
+            Ready to Transform Your Business?
+          </h3>
+          <p className="text-blue-100 mb-8 max-w-2xl mx-auto">
+            Join 500+ enterprise clients who have saved $50M+ annually with our AI solutions. 
+            Get your free consultation today!
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <a
+              href="tel:+13024640950"
+              className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors inline-flex items-center"
+            >
+              📞 Call Now: (302) 464-0950
+            </a>
+            <a
+              href="mailto:kleber@ziontechgroup.com"
+              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
+            >
+              ✉️ Email Us
+            </a>
+          </div>
+          <div className="mt-6 text-sm text-blue-200">
+            <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
+            <p className="mt-1">🕒 Available 24/7 for Enterprise Support</p>
           </div>
         </div>
       </div>

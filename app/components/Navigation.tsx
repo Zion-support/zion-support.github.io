@@ -29,7 +29,7 @@ const Navigation: React.FC = () => {
               </div>
             </div>
             <div className="text-xs">
-              <span>🚀 Leading AI & IT Solutions Provider</span>
+              <span>🚀 $50M+ Annual Savings Delivered | 95% Process Automation | Fortune 500 Trusted</span>
             </div>
           </div>
         </div>
@@ -107,6 +107,9 @@ const Navigation: React.FC = () => {
               <Link to="/enterprise" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
                 Enterprise
               </Link>
+              <Link to="/blog" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
+                Blog
+              </Link>
               <Link to="/team" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
                 Team
               </Link>
@@ -178,6 +181,9 @@ const Navigation: React.FC = () => {
                 </Link>
                 <Link to="/enterprise" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
                   Enterprise
+                </Link>
+                <Link to="/blog" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
+                  Blog
                 </Link>
                 <Link to="/team" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
                   Team
