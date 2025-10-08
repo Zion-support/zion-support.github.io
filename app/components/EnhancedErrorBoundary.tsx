@@ -93,7 +93,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       // In a real app, you would send this to your error reporting service
       // For now, we'll just log it
       // eslint-disable-next-line no-console
-      console.log('Error Report:', errorReport);
       origin/cursor/fix-errors-and-merge-to-main-6395
       // Example: Send to error reporting service
       // await fetch('/api/errors', {
@@ -167,8 +166,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       })
       .catch(() => {
         // eslint-disable-next-line no-console
-        console.warn('Failed to copy error details');
-      });
+        });
   };
 
   // In production, you might want to send this to an error reporting service
@@ -184,12 +182,9 @@ class EnhancedErrorBoundary extends Component<Props, State> {
         return this.props.fallback;
       }
 
-<<<<<<< HEAD
-=======
       const { retryCount, error, errorId } = this.state;
       const _canRetry = retryCount < this.maxRetries;
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-6395
       return (
         <div className="min-h-screen flex items-center justify-center bg-gray-50">
           <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-8 text-center">

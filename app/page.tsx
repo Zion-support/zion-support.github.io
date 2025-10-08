@@ -237,8 +237,6 @@ const HomePage: React.FC = () => {
                 </div>
               </article>
             </Suspense>
-<<<<<<< HEAD
-=======
 
             <Suspense fallback={<ServiceCardSkeleton />}>
               <article className="bg-white rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
@@ -255,7 +253,6 @@ const HomePage: React.FC = () => {
                 </div>
               </article>
             </Suspense>
->>>>>>> cursor/analyze-improve-and-deploy-application-144c
           </div>
           
           <div className="grid md:grid-cols-3 gap-8">
@@ -303,8 +300,6 @@ const HomePage: React.FC = () => {
               </ul>
             </article>
           </div>
-<<<<<<< HEAD
-=======
           
           <div className="text-center mt-8">
             <a 
@@ -314,7 +309,6 @@ const HomePage: React.FC = () => {
               View All Services
             </a>
           </div>
->>>>>>> cursor/analyze-improve-and-deploy-application-144c
         </section>
 
         {/* Content Carousel */}
