@@ -20,11 +20,11 @@ export function mockPerformanceAPI() {
   }
 
   if (!window.performance.mark) {
-    window.performance.mark = () => ({} as PerformanceMark);
+    window.performance.mark = (() => ({} as PerformanceMark)) as any;
   }
 
   if (!window.performance.measure) {
-    window.performance.measure = () => ({} as PerformanceMeasure);
+    window.performance.measure = (() => ({} as PerformanceMeasure)) as any;
   }
 }
 

@@ -170,14 +170,18 @@ class Logger {
   }
 
   /**
-   * Performance logging
+   * Log a performance metric
    */
   perf(metric: string, value: number, metadata?: Record<string, unknown>): void {
-    this.log(LogLevel.DEBUG, `Performance: ${metric}`, undefined, { ...metadata, value, metric });
+    this.log(LogLevel.DEBUG, `Performance: ${metric}`, 'Performance', {
+      ...metadata,
+      metric,
+      value,
+    });
   }
 
   /**
-   * Group logging (for console grouping)
+   * Group related log messages
    */
   group(label: string, fn: () => void): void {
     if (this.config.enableConsole) {
