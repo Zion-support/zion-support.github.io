@@ -184,10 +184,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
 
       const { retryCount, error, errorId } = this.state;
       const _canRetry = retryCount < this.maxRetries;
-<<<<<<< HEAD
 
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-35e0
       return (
         <div className="min-h-screen flex items-center justify-center bg-gray-50">
           <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-8 text-center">

@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 
-<<<<<<< HEAD
 const AccessibilityEnhancer: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   useEffect(() => {
     // Enhance keyboard navigation
@@ -30,7 +29,8 @@ const AccessibilityEnhancer: React.FC<{ children: React.ReactNode }> = ({ childr
         }
       `;
       document.head.appendChild(style);
-=======
+    };
+
 interface AccessibilityEnhancerProps {
   children: React.ReactNode;
   enableSkipLinks?: boolean;
@@ -51,7 +51,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   const [isReducedMotion, setIsReducedMotion] = useState(false);
   const [isHighContrast, setIsHighContrast] = useState(false);
   const [fontSize, setFontSize] = useState(16);
->>>>>>> cursor/analyze-improve-and-deploy-application-1a78
 
       // Add skip links
       const skipLink = document.createElement('a');
@@ -61,7 +60,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       document.body.insertBefore(skipLink, document.body.firstChild);
     };
 
-<<<<<<< HEAD
     // Enhance ARIA labels and roles
     const enhanceARIA = () => {
       // Add ARIA labels to interactive elements
@@ -71,13 +69,12 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
           button.setAttribute('aria-label', `Button ${index + 1}`);
         }
       });
-=======
+
     mediaQuery.addEventListener('change', handleChange);
 
     // Check for high contrast preference
     const highContrastQuery = window.matchMedia('(prefers-contrast: high)');
     setIsHighContrast(highContrastQuery.matches);
->>>>>>> cursor/analyze-improve-and-deploy-application-1a78
 
       // Add ARIA labels to links
       const links = document.querySelectorAll('a:not([aria-label]):not([aria-labelledby])');
@@ -115,10 +112,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
         }
       };
 
-<<<<<<< HEAD
-      highContrastMedia.addEventListener('change', applyHighContrast);
-      applyHighContrast();
-=======
     // Check for font size preference
     const computedStyle = getComputedStyle(document.documentElement);
     const rootFontSize = parseFloat(computedStyle.fontSize);
@@ -127,7 +120,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     return () => {
       mediaQuery.removeEventListener('change', handleChange);
       highContrastQuery.removeEventListener('change', handleContrastChange);
->>>>>>> cursor/analyze-improve-and-deploy-application-1a78
     };
 
     // Enhance screen reader support
@@ -140,13 +132,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       liveRegion.id = 'live-region';
       document.body.appendChild(liveRegion);
 
-<<<<<<< HEAD
-      // Announce page changes
-      const announcePageChange = (message: string) => {
-        const liveRegion = document.getElementById('live-region');
-        if (liveRegion) {
-          liveRegion.textContent = message;
-=======
     // Enhanced keyboard navigation
     const handleKeyDown = (e: KeyboardEvent) => {
       // Skip to main content with Alt + M
@@ -156,11 +141,9 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
         if (main) {
           (main as HTMLElement).focus();
           (main as HTMLElement).scrollIntoView({ behavior: 'smooth' });
->>>>>>> cursor/analyze-improve-and-deploy-application-1a78
         }
       };
 
-<<<<<<< HEAD
       // Listen for route changes
       window.addEventListener('popstate', () => {
         announcePageChange('Page changed');
@@ -190,7 +173,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
                 e.preventDefault();
               }
             }
-=======
       // Skip to navigation with Alt + N
       if (e.altKey && e.key === 'n') {
         e.preventDefault();
@@ -208,7 +190,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
           const closeButton = modal.querySelector('[aria-label*="close" i], [aria-label*="dismiss" i]');
           if (closeButton) {
             (closeButton as HTMLElement).click();
->>>>>>> cursor/analyze-improve-and-deploy-application-1a78
           }
         });
       };
@@ -218,7 +199,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       modals.forEach(modal => trapFocus(modal as HTMLElement));
     };
 
-<<<<<<< HEAD
     // Initialize all enhancements
     enhanceKeyboardNavigation();
     enhanceARIA();
@@ -240,7 +220,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     return () => {
       observer.disconnect();
     };
-=======
+
     // Remove keyboard navigation class on mouse use
     const handleMouseDown = () => {
       document.body.classList.remove('keyboard-navigation');
@@ -379,7 +359,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
         announcement.parentNode.removeChild(announcement);
       }
     }, 1000);
->>>>>>> cursor/analyze-improve-and-deploy-application-1a78
   }, []);
 
   return <>{children}</>;
