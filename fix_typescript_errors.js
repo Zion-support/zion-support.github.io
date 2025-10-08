@@ -21,7 +21,7 @@ if (fs.existsSync(seoOptimizerPath)) {
     keywords: string[];
     canonicalUrl: string;
     ogImage: string;
-    structuredData?: any;
+    structuredData?: unknown;
   };
   enableStructuredData?: boolean;
   enableAnalytics?: boolean;
@@ -160,7 +160,7 @@ if (fs.existsSync(analyticsTrackerPath)) {
         /declare global \{/,
         `declare global {
   interface Window {
-    dataLayer: any[];
+    dataLayer: unknown[];
   }`
     );
     
@@ -198,7 +198,7 @@ if (fs.existsSync(performancePath)) {
         /declare global \{/,
         `declare global {
   interface Window {
-    gtag: (...args: any[]) => void;
+    gtag: (...args: unknown[]) => void;
   }`
     );
     

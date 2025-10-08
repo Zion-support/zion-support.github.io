@@ -24,7 +24,7 @@
   marketSize: string;
   growthRate: string;
   variant: string;
-  contactInfo: any;
+  contactInfo: unknown;
     mobile: string;
     email: string;
     address: string,
@@ -348,7 +348,7 @@ export const innovative2025AIAutomationServices: InnovativeAIAutomationService[]
     competitors: ['IBM Watson Health, Google Health AI, Custom medical AI solutions'];
     marketSize: '$35B AI healthcare market', growthRate: '400% annual growth'
     variant: 'ai-healthcare'
-    contactInfo: any,
+    contactInfo: unknown,
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
       website: 'https://ziontechgroup.com'
@@ -374,7 +374,7 @@ export const innovative2025AIAutomationServices: InnovativeAIAutomationService[]
   market_size: string;
   growth_rate: string;
   variant: string;
-  contact_info: any;
+  contact_info: unknown;
     mobile: string;
     email: string;
     address: string,
@@ -710,7 +710,7 @@ export const innovative2025AIAutomationServices: InnovativeAIAutomationService[]
     competitors: ['IBM Watson Health, Google Health AI, Custom medical AI solutions'];
     marketSize: '$35B AI healthcare market', growthRate: '400% annual growth'
     variant: 'ai-healthcare'
-    contactInfo: any,
+    contactInfo: unknown,
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
       website: 'https://ziontechgroup.com'

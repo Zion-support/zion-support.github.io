@@ -676,7 +676,6 @@ class AccessibilityEnhancer {
     const metrics = this.getMetrics();
     return `
 Accessibility Report
-===================
 Focusable Elements: ${metrics.focusableElements}
 Images Without Alt: ${metrics.imagesWithoutAlt}
 Links Without Text: ${metrics.linksWithoutText}

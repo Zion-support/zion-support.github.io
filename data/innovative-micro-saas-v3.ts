@@ -8,7 +8,7 @@
   link: string;
   category: string;
   realImplementation: boolean;
-  contactInfo: any;
+  contactInfo: unknown;
     mobile: string;
     email: string;
 export interface InnovativeMicroSaasV3 {;
@@ -38,7 +38,7 @@ export interface InnovativeMicroSaasV3 {;
   description: string, features: string[],
   link: string, category: string,
   realImplementation: boolean,
-  contactInfo: any,
+  contactInfo: unknown,
     mobile: string, email: string,
     address: string,
   }
@@ -86,7 +86,7 @@ export const innovativeMicroSaasServicesV3: InnovativeMicroSaasV3[] = [,
     link: "/services/ai-customer-support",
     category: "Customer Support",
     realImplementation: true,
-    contactInfo: any,
+    contactInfo: unknown,
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       mobile: '+1 302 464 0950',

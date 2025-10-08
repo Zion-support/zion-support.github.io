@@ -29,7 +29,6 @@ function processFile(filePath) {
     // Fix any remaining broken metadata lines
     const lines = content.split('\n');
     const filteredLines = [];
-    let skipUntilSemicolon = false;
     let skipUntilExport = false;
     
     for (let i = 0; i < lines.length; i++) {

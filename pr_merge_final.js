@@ -7,7 +7,6 @@ const GITHUB_TOKEN = 'ghs_tukMr3CyP2oHSXPRFscExJmUauEJUi4HAU1a'
 const REPO = 'Zion-Holdings/zion.app'
 async function mergePR(prNumber) {
   console.log(`\n🔄 Processing PR #${prNumber}...`);
-  const url = `https://api.github.com/repos/${REPO}/pulls/${prNumber}/merge`;
   const postData = JSON.stringify({merge_method: 'squash'}
     commit_title: `Merge PR #${prNumber}: Fix errors and merge to main`,
     commit_message: `Automated merge of PR #${prNumber}\n\n- Fixed linting errors\n- Resolved merge conflicts\n- Merged to main branch`)

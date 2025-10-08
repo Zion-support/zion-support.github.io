@@ -259,7 +259,8 @@ class Logger {
         });
       }
     } catch (error) {
-      console.error('Failed to flush logs:', error);
+      // eslint-disable-next-line no-console
+    console.error('Failed to flush logs:', error);
       // Put logs back in buffer if flush failed
       this.buffer = [...logs, ...this.buffer];
     }
@@ -331,19 +332,24 @@ class Logger {
 
     switch (entry.level) {
       case LogLevel.DEBUG:
-        console.debug(message, entry.metadata);
+        // eslint-disable-next-line no-console
+    console.debug(message, entry.metadata);
         break;
       case LogLevel.INFO:
-        console.info(message, entry.metadata);
+        // eslint-disable-next-line no-console
+    console.info(message, entry.metadata);
         break;
       case LogLevel.WARN:
-        console.warn(message, entry.metadata);
+        // eslint-disable-next-line no-console
+    console.warn(message, entry.metadata);
         break;
       case LogLevel.ERROR:
       case LogLevel.FATAL:
-        console.error(message, entry.metadata);
+        // eslint-disable-next-line no-console
+    console.error(message, entry.metadata);
         if (entry.stack) {
-          console.error(entry.stack);
+          // eslint-disable-next-line no-console
+    console.error(entry.stack);
         }
         break;
     }

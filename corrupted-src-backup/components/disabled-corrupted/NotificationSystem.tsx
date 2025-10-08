@@ -1,4 +1,3 @@
-import React from 'react';
 export type Notification = {
   id: string; messa, g, e: st, r, i, n, g;
 };

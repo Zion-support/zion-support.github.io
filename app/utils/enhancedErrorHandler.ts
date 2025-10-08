@@ -89,9 +89,10 @@ class EnhancedErrorHandler {
     this.setupErrorCleanup();
 
     this.isInitialized = true;
-    // eslint-disable-next-line no-console
+     
     if (process.env['NODE_ENV'] === 'development') {
-      console.log('🛡️ Enhanced Error Handler initialized');
+      // eslint-disable-next-line no-console
+    console.log('🛡️ Enhanced Error Handler initialized');
     }
   }
 
@@ -205,8 +206,9 @@ class EnhancedErrorHandler {
         });
         observer.observe({ type: 'longtask', buffered: true });
       } catch (error) {
+         
         // eslint-disable-next-line no-console
-        console.warn('Failed to setup performance error handler:', error);
+    console.warn('Failed to setup performance error handler:', error);
       }
     }
   }
@@ -509,21 +511,28 @@ class EnhancedErrorHandler {
     const emoji = this.getSeverityEmoji(errorReport.severity);
     // eslint-disable-next-line no-console
     console.group(`${emoji} Error Report: ${errorReport.id}`);
+     
     // eslint-disable-next-line no-console
     console.error('Message:', errorReport.message);
+     
     // eslint-disable-next-line no-console
     console.error('Type:', errorReport.type);
+     
     // eslint-disable-next-line no-console
     console.error('Severity:', errorReport.severity);
+     
     // eslint-disable-next-line no-console
     console.error('Category:', errorReport.category);
+     
     // eslint-disable-next-line no-console
     console.error('Context:', errorReport.context);
+     
     // eslint-disable-next-line no-console
     console.error('Metadata:', errorReport.metadata);
     if (errorReport.stack) {
+       
       // eslint-disable-next-line no-console
-      console.error('Stack:', errorReport.stack);
+    console.error('Stack:', errorReport.stack);
     }
     // eslint-disable-next-line no-console
     console.groupEnd();
@@ -563,8 +572,9 @@ class EnhancedErrorHandler {
         body: JSON.stringify(errorReport),
       });
     } catch (error) {
+       
       // eslint-disable-next-line no-console
-      console.warn('Failed to report error to remote service:', error);
+    console.warn('Failed to report error to remote service:', error);
     }
   }
 
@@ -573,6 +583,7 @@ class EnhancedErrorHandler {
    */
   private aggregateError(errorReport: ErrorReport): void {
     // This could be expanded to include more sophisticated aggregation
+     
     // eslint-disable-next-line no-console
     console.log(
       `📊 Error aggregated: ${errorReport.type} - ${errorReport.category}`
@@ -587,8 +598,9 @@ class EnhancedErrorHandler {
       errorReport.type === 'resource' ||
       errorReport.category === 'performance'
     ) {
+       
       // eslint-disable-next-line no-console
-      console.warn('⚠️ Performance impact detected from error');
+    console.warn('⚠️ Performance impact detected from error');
     }
   }
 
@@ -603,9 +615,10 @@ class EnhancedErrorHandler {
     );
 
     if (recentErrors.length > 5) {
-      // eslint-disable-next-line no-console
+       
       if (process.env['NODE_ENV'] === 'development') { 
-        console.log('🔄 Attempting error recovery...'); 
+        // eslint-disable-next-line no-console
+    console.log('🔄 Attempting error recovery...'); 
       }
       // Implement recovery strategies here
       this.clearErrorState();
@@ -621,9 +634,10 @@ class EnhancedErrorHandler {
     this.errorCategories.clear();
     this.errorRateLimit = 0;
 
-    // eslint-disable-next-line no-console
+     
     if (process.env['NODE_ENV'] === 'development') { 
-      console.log('🧹 Error state cleared'); 
+      // eslint-disable-next-line no-console
+    console.log('🧹 Error state cleared'); 
     }
   }
 
@@ -638,9 +652,10 @@ class EnhancedErrorHandler {
       error => new Date(error.context.timestamp) > cutoffDate
     );
 
-    // eslint-disable-next-line no-console
+     
     if (process.env['NODE_ENV'] === 'development') { 
-      console.log(`🧹 Cleaned up old errors, ${this.errors.length} remaining`); 
+      // eslint-disable-next-line no-console
+    console.log(`🧹 Cleaned up old errors, ${this.errors.length} remaining`); 
     }
   }
 

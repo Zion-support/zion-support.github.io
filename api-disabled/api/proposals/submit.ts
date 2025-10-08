@@ -11,7 +11,7 @@ async function submitByEmail(
   to: string,
   subject: string,
   text: string,
-  attachments: any[] = []
+  attachments: unknown[] = []
 ) {
   const host = process.env.EMAIL_HOST;
   const port = Number(process.env.EMAIL_PORT || 587);
@@ -97,7 +97,7 @@ Delegate Note: ${delegateNote || 'N/A'}`;
     }));
 
     return res.status(200).json({ meta: updated });
-  } catch (error: any) {
+  } catch (error: unknown) {
     return res
       .status(500)
       .json({ error: error?.message || 'Submission failed' });

@@ -117,14 +117,14 @@ export class PerformanceOptimizer {
   }
 
   // Add Web Vitals reporting method
-  reportWebVitals(metrics: any): void {
+  reportWebVitals(metrics: unknown): void {
     if (process.env['NODE_ENV'] === 'development') {
       console.log('Web Vitals:', metrics);
     }
   }
 
   // Add page load measurement method
-  measurePageLoad(): any {
+  measurePageLoad(): unknown {
     if (typeof window === 'undefined' || !window.performance) {
       return null;
     }

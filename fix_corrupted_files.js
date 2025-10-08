@@ -5,8 +5,6 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
 //Function to fix corrupted text by removing erroneous commas
 function fixCorruptedText(text) {
   //Pattern to match commas that are incorrectly placed in the middle of words

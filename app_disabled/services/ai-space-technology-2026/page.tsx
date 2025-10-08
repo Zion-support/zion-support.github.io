@@ -1,18 +1,4 @@
 // Using regular anchor tags instead of react-router-dom for simplicity
-
-
-const metadata = {
-  title: 'AI Space Technology 2026 Service | Autonomous Space Operations | Zion Tech Group',
-  description: 'Revolutionary AI space technology service. Achieve 99.9% autonomous operations, $2.3B cost savings, and 500% efficiency gains in Satellite management and space exploration.',
-  keywords: 'AI space technology service, autonomous satellites, space AI operations, Satellite intelligence, orbital management, space exploration AI',
-  openGraph: {
-    title: 'AI Space Technology 2026 Service | Zion Tech Group',
-  description: 'Revolutionary AI space technology achieving 99.9% autonomous operations and $2.3B cost savings.',
-  type: 'website',
-  url: 'https://ziontechgroup.com/services/ai-space-technology-2026'
-  }
-};
-
 export default function AISpaceTechnologyService() {
   return (
     <div className="max-w-6xl mx-auto px-4 py-8">

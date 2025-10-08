@@ -47,7 +47,8 @@ class EnvValidator {
     }
 
     if (validation.warnings.length > 0) {
-      console.warn(
+      // eslint-disable-next-line no-console
+    console.warn(
         `Environment warnings:\n${validation.warnings.join('\n')}`
       );
     }

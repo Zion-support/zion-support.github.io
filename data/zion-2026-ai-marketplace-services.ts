@@ -3,7 +3,7 @@ export type Zion2026AIMarketplaceService =
   name: string;
   description: string;
   category: 'AI Marketplace' | 'AI Integration' | 'AI Automation' | 'AI Analytics' | 'AI Development'
-  price: any;
+  price: unknown;
     monthly: number;
     yearly: number;
     enterprise: number;
@@ -17,7 +17,7 @@ export type Zion2026AIMarketplaceService =
   useCases: string[];
   integration: string[];
   support: string[];
-  contactInfo: any;
+  contactInfo: unknown;
     phone: string;
     email: string;
     website: string;
@@ -29,7 +29,7 @@ export const zion2026AIMarketplaceServices: Zion2026AIMarketplaceService[] = [,
     name: 'Zion AI Service Marketplace Platform',
     description: 'A comprehensive AI service marketplace that connects businesses with AI service providers, featuring automated matching, quality assurance, and seamless integration.',
     category: 'AI Marketplace',
-    price: any,
+    price: unknown,
       monthly: 299,
       yearly: 2999,
       enterprise: 9999,
@@ -84,7 +84,7 @@ export const zion2026AIMarketplaceServices: Zion2026AIMarketplaceService[] = [,
       'Custom development',
       'Ongoing maintenance'
     ],
-    contactInfo: any,
+    contactInfo: unknown,
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',
@@ -95,7 +95,7 @@ export const zion2026AIMarketplaceServices: Zion2026AIMarketplaceService[] = [,
     name: 'AI Service Integration Hub',
     description: 'A centralized platform for integrating multiple AI services into existing business workflows, providing seamless connectivity and unified management.',
     category: 'AI Integration',
-    price: any,
+    price: unknown,
       monthly: 199,
       yearly: 1999,
       enterprise: 7999,
@@ -150,7 +150,7 @@ export const zion2026AIMarketplaceServices: Zion2026AIMarketplaceService[] = [,
       'Training and documentation',
       'Ongoing support'
     ],
-    contactInfo: any,
+    contactInfo: unknown,
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',
@@ -161,7 +161,7 @@ export const zion2026AIMarketplaceServices: Zion2026AIMarketplaceService[] = [,
     name: 'AI Service Quality Assurance Platform',
     description: 'An automated platform for testing, validating, and ensuring the quality of AI services through comprehensive testing frameworks and continuous monitoring.',
     category: 'AI Automation',
-    price: any,
+    price: unknown,
       monthly: 149,
       yearly: 1499,
       enterprise: 5999,
@@ -216,7 +216,7 @@ export const zion2026AIMarketplaceServices: Zion2026AIMarketplaceService[] = [,
       'Compliance guidance',
       'Ongoing maintenance'
     ],
-    contactInfo: any,
+    contactInfo: unknown,
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',
@@ -227,7 +227,7 @@ export const zion2026AIMarketplaceServices: Zion2026AIMarketplaceService[] = [,
     name: 'AI Service Analytics Dashboard',
     description: 'A comprehensive analytics platform that provides insights into AI service performance, usage patterns, and business impact across the organization.',
     category: 'AI Analytics',
-    price: any,
+    price: unknown,
       monthly: 99,
       yearly: 999,
       enterprise: 3999,
@@ -282,7 +282,7 @@ export const zion2026AIMarketplaceServices: Zion2026AIMarketplaceService[] = [,
       'Training and documentation',
       'Ongoing support'
     ],
-    contactInfo: any,
+    contactInfo: unknown,
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',
@@ -293,7 +293,7 @@ export const zion2026AIMarketplaceServices: Zion2026AIMarketplaceService[] = [,
     name: 'AI Service Development Studio',
     description: 'A comprehensive development environment for creating, testing, and deploying custom AI services with pre-built templates and automated deployment pipelines.',
     category: 'AI Development',
-    price: any,
+    price: unknown,
       monthly: 399,
       yearly: 3999,
       enterprise: 14999,
@@ -348,7 +348,7 @@ export const zion2026AIMarketplaceServices: Zion2026AIMarketplaceService[] = [,
       'Training and certification',
       'Ongoing development support'
     ],
-    contactInfo: any,
+    contactInfo: unknown,
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',

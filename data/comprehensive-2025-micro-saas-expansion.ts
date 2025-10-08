@@ -358,7 +358,7 @@ export interface ComprehensiveMicroSaasService {id: string, name: string,
   useCases: string[], roi: string,
   competitors: string[], marketSize: string,
   growthRate: string, variant: ServiceVariant,
-  contactInfo: any,
+  contactInfo: unknown,
     mobile: string, email: string,
     address: string,
     website: string}

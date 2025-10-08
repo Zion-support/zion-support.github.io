@@ -1,4 +1,3 @@
-import React from 'react';
 export const metadata = {
   title: "AI Autonomous Enterprise Operations: Complete 2025 Implementation Guide",
 		description: "Proven frameworks for 95% automation rates and $2M+ annual savings through autonomous AI operations.",

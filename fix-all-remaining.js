@@ -15,8 +15,6 @@ console.log(`Found ${files.length} files with remaining metadata issues`);
 function processFile(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
-    let modified = false;
-    
     // Extract metadata information
     const metadataMatch = content.match(/export const metadata = \{([\s\S]*?)\};/);
     let metadata = {};

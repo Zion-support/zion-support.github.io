@@ -9,7 +9,7 @@ interface SEOHeadProps {
   ogImage?: string;
   ogType?: string;
   twitterCard?: string;
-  structuredData?: any;
+  structuredData?: unknown;
 }
 
 const SEOHead: React.FC<SEOHeadProps> = ({

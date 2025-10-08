@@ -13,11 +13,11 @@ export interface AdvancedAIAutomationService {id: string, name: string,
   useCases: string[], roi: string,
   competitors: string[], marketSize: string,
   growthRate: string, variant: string,
-  contactInfo: any,
+  contactInfo: unknown,
     mobile: string, email: string,
     address: string,
     website: string}
-  contactInfo: any}
+  contactInfo: unknown}
     },
     realImplementation: boolean, implementationDetails: string,
   launchDate: string, customers: number,
@@ -48,7 +48,7 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
     competitors: ['GitHub Copilot, Tabnine, Kite, IntelliCode'];
     marketSize: '$8.2B AI development tools market', growthRate: '25% annual growth',
     variant: 'ai-code-enterprise',
-    contactInfo: any,
+    contactInfo: unknown,
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'

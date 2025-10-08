@@ -76,7 +76,8 @@ class EnhancedErrorTracker {
 
     // Log to console in development
     if (process.env['NODE_ENV'] === 'development') {
-      console.error('Tracked Error:', trackedError);
+      // eslint-disable-next-line no-console
+    console.error('Tracked Error:', trackedError);
     }
 
     // Send to analytics if available

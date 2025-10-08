@@ -1,4 +1,3 @@
-import React from 'react';
 import Link from 'next/link';
 export const metadata = {
   title: "AI 2026 Mega Trends: The Next Frontier of Enterprise Transformation",

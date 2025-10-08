@@ -1,4 +1,3 @@
-import React from 'react';
 impo, r, t {
   ArrowLe, f, t,
   ArrowRig, h, t,

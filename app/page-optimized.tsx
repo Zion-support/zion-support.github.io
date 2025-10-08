@@ -1,9 +1,6 @@
 import React, { lazy, Suspense } from 'react';
-<<<<<<< HEAD
-=======
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
->>>>>>> cursor/fix-errors-and-merge-to-main-dd0b
 import SEOOptimizer from './components/SEOOptimizer';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
@@ -13,13 +10,9 @@ const EmptyComponent = () => null;
 
 // Lazy load heavy components - these may not exist, so make them optional
 const UnifiedBanner = lazy(() => import('./components/NewestContent2025Banner').catch(() => ({ default: EmptyComponent })));
-<<<<<<< HEAD
-const ContentPromotion = lazy(() => import('./components/UltimateBusinessIntelligence2025Banner').catch(() => ({ default: EmptyComponent })));
-=======
 
 const ContentPromotion = lazy(() => import('./components/UltimateBusinessIntelligence2025Banner').catch(() => ({ default: EmptyComponent })));
 
->>>>>>> cursor/fix-errors-and-merge-to-main-dd0b
 const ContentShowcase = lazy(() => import('./components/UltimateBusinessIntelligenceShowcase2025').catch(() => ({ default: EmptyComponent })));
 
 const OptimizedHomePage: React.FC = () => {

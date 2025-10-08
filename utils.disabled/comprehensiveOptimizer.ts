@@ -107,8 +107,8 @@ const defaultConfig: OptimizationConfig = {
 };
 export class ComprehensiveOptimizer {
   private config: OptimizationConfig;
-  private performanceMetrics: any[] = [];
-  private accessibilityReport: any = null;
+  private performanceMetrics: unknown[] = [];
+  private accessibilityReport: unknown = null;
   constructor(config: Partial<OptimizationConfig> = {}) {
     this.config = { ...defaultConfig, ...config };
   }
@@ -329,7 +329,7 @@ export class ComprehensiveOptimizer {
   }
 
   // Calculate SEO score
-  private calculateSEOScore(seoAudit: any): number {
+  private calculateSEOScore(seoAudit: unknown): number {
     let score = 0;
     if (seoAudit.title.hasTitle && seoAudit.title.isValid) score += 20;
     if (seoAudit.description.hasDescription && seoAudit.description.isValid)
@@ -343,7 +343,6 @@ export class ComprehensiveOptimizer {
 
   // Auto-fix accessibility issues
   public autoFixAccessibility(): void {
-    const report = accessibilityTesting.generateReport();
     // Fix missing alt text
     const images = document.querySelectorAll('img');
     images.forEach(img => {
@@ -533,9 +532,9 @@ export class ComprehensiveOptimizer {
   getStatus(): {
     initialized: boolean;
     config: OptimizationConfig;
-    performance: any;
-    accessibility: any;
-    seo: any;
+    performance: unknown;
+    accessibility: unknown;
+    seo: unknown;
   } {
     return {
       initialized: this.isInitialized,

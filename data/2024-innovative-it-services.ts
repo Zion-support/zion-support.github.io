@@ -26,7 +26,7 @@ export interface InnovativeITService2024 {id: string;
   marketSize: string;
   growthRate: string;
   variant: string;
-  contactInfo: any;
+  contactInfo: unknown;
     mobile: string;
     email: string;
     address: string}
@@ -75,7 +75,7 @@ export const innovativeITServices2024: InnovativeITService2024[] = [,
     marketSize: "$8.2B market",
     growthRate: "20.1% annual growth",
     variant: "ai-futuristic",
-    contactInfo: any,
+    contactInfo: unknown,
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709",

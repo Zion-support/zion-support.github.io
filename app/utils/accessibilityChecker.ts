@@ -84,7 +84,8 @@ export interface A11yCheckResult {
  * ```typescript
  * const checker = new AccessibilityChecker();
  * const result = checker.checkElement(document.getElementById('main'));
- * if (import.meta.env.DEV) { console.log(`Score: ${result.score}, Issues: ${result.issueCount}`); }
+ * if (import.meta.env.DEV) { // eslint-disable-next-line no-console
+    console.log(`Score: ${result.score}, Issues: ${result.issueCount}`); }
  * ```
  */
 export class AccessibilityChecker {
@@ -503,8 +504,6 @@ export class AccessibilityChecker {
    */
   private checkLandmarks(element: Element): void {
     const hasMain = element.querySelector('main, [role="main"]');
-    const hasNav = element.querySelector('nav, [role="navigation"]');
-
     if (!hasMain) {
       this.addIssue({
         type: 'missing-main-landmark',

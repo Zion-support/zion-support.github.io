@@ -31,7 +31,7 @@ export interface EnterpriseIt2026ServiceV2 {
   market_size: string;
   growth_rate: string;
   variant: ServiceVariant;
-  contact_info: any;
+  contact_info: unknown;
     mobile: string;
     email: string;
     address: string}
@@ -50,7 +50,7 @@ export interface EnterpriseIT2026ServiceV2 {id: string, name: string,
   useCases: string[], roi: string,
   competitors: string[], marketSize: string,
   growthRate: string, variant: ServiceVariant,
-  contactInfo: any,
+  contactInfo: unknown,
     mobile: string, email: string,
     address: string,
     website: string}
@@ -85,7 +85,7 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [,
     useCases: ['Network securityAccess controlThreat preventionComplianceRisk managementSecurity monitoring'], roi: 'Average customer sees 400% ROI through enhanced security and reduced breach risks.',
     competitors: ['Palo Alto NetworksCiscoFortinetCheck PointJuniper'], marketSize: '$67.8B market',
     growthRate: '220% annual growth', variant: 'security-futuristic',
-    contactInfo: any,
+    contactInfo: unknown,
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'

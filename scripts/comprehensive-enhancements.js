@@ -60,7 +60,7 @@ const EnhancedPerformanceMonitor: React.FC = () => {const [metrics, setMetrics] 
       timestamp: Date.now()
     };
   }, []);
-  const handleMetric = useCallback((metric: any) => {const enhancedMetrics = {
+  const handleMetric = useCallback((metric: unknown) => {const enhancedMetrics = {
       [metric.name]: metric.value}
       ...getEnhancedPerformanceInfo()
     };
@@ -218,7 +218,7 @@ interface EnhancedSEOProps {title?: string;
   ogImage?: string;
   ogType?: string;
   twitterCard?: string;
-  structuredData?: any;
+  structuredData?: unknown;
   robots?: string;
   language?: string;
   author?: string;

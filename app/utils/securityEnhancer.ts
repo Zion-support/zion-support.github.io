@@ -127,7 +127,7 @@ class SecurityEnhancer {
     
     // Override console methods to detect debugging
     ['log', 'warn', 'error', 'info'].forEach(method => {
-      (console as any)[method] = (...args: any[]) => {
+      (console as any)[method] = (...args: unknown[]) => {
         this.metrics.suspiciousActivity++;
         originalConsole[method](...args);
       };
@@ -143,7 +143,8 @@ class SecurityEnhancer {
               const element = node as Element;
               if (element.tagName === 'SCRIPT' && !element.getAttribute('src')) {
                 this.metrics.securityViolations++;
-                console.warn('Suspicious inline script detected');
+                // eslint-disable-next-line no-console
+    console.warn('Suspicious inline script detected');
               }
             }
           });

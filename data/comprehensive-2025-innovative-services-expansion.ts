@@ -25,7 +25,7 @@
   market_size: string;
   growth_rate: string;
   variant: ServiceVariant;
-  contact_info: any;
+  contact_info: unknown;
     mobile: string;
     email: string,
     address: string,

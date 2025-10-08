@@ -46,7 +46,7 @@ const AdvancedPerformanceMonitor: React.FC = () => {const [metrics, setMetrics] 
       devicePixelRatio: window.devicePixelRatio
     };
   }, []);
-  const handleMetric = useCallback((metric: any) => {setMetrics(prev => ({
+  const handleMetric = useCallback((metric: unknown) => {setMetrics(prev => ({
       ...prev)
       [metric.name]: metric.value}
       ...getPerformanceInfo()
@@ -150,7 +150,7 @@ interface AdvancedSEOProps {title?: string;
   ogImage?: string;
   ogType?: string;
   twitterCard?: string;
-  structuredData?: any;
+  structuredData?: unknown;
   robots?: string;
   language?: string;
   author?: string;

@@ -83,7 +83,7 @@ export interface AIAutonomousEcosystem2030 {id: string, name: string,
   useCases: string[], roi: string,
   competitors: string[], marketSize: string,
   growthRate: string, variant: ServiceVariant,
-  contactInfo: any,
+  contactInfo: unknown,
     mobile: string, email: string,
     address: string,
     website: string}
@@ -111,7 +111,7 @@ export const aiAutonomousEcosystem2030: AIAutonomousEcosystem2030[] = [,
     roi: 'Average customer sees 400% ROI within 12 months through improved efficiency and decision making.', competitors: ['No direct competitors in autonomous business management'],
     marketSize: '$20B market', growthRate: '350% annual growth'
     variant: 'ai-futuristic'
-    contactInfo: any,
+    contactInfo: unknown,
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
       website: 'https://ziontechgroup.com'
@@ -143,7 +143,7 @@ export const aiAutonomousEcosystem2030: AIAutonomousEcosystem2030[] = [,
     competitors: ['OpenAI, Midjourney, DALL-E, Stable Diffusion'];
     marketSize: '$7B market', growthRate: '200% annual growth'
     variant: 'ai-futuristic'
-    contactInfo: any,
+    contactInfo: unknown,
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
       website: 'https://ziontechgroup.com'
@@ -175,7 +175,7 @@ export const aiAutonomousEcosystem2030: AIAutonomousEcosystem2030[] = [,
     competitors: ['IBM Watson Health, Google Health, Microsoft Healthcare, Amazon Health'];
     marketSize: '$18B market', growthRate: '220% annual growth'
     variant: 'ai-futuristic'
-    contactInfo: any,
+    contactInfo: unknown,
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
       website: 'https://ziontechgroup.com'
@@ -206,7 +206,7 @@ export const aiAutonomousEcosystem2030: AIAutonomousEcosystem2030[] = [,
     competitors: ['Woebot, Wysa, Replika, Youper'];
     marketSize: '$6B market', growthRate: '180% annual growth'
     variant: 'ai-futuristic'
-    contactInfo: any,
+    contactInfo: unknown,
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
       website: 'https://ziontechgroup.com'
@@ -238,7 +238,7 @@ export const aiAutonomousEcosystem2030: AIAutonomousEcosystem2030[] = [,
     competitors: ['Coursera, Udemy, Khan Academy, Duolingo'];
     marketSize: '$10B market', growthRate: '160% annual growth'
     variant: 'ai-futuristic'
-    contactInfo: any,
+    contactInfo: unknown,
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
       website: 'https://ziontechgroup.com'
@@ -270,7 +270,7 @@ export const aiAutonomousEcosystem2030: AIAutonomousEcosystem2030[] = [,
     competitors: ['Renaissance Technologies, Two Sigma, Bridgewater Associates, AQR Capital'];
     marketSize: '$15B market', growthRate: '280% annual growth'
     variant: 'ai-futuristic'
-    contactInfo: any,
+    contactInfo: unknown,
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
       website: 'https://ziontechgroup.com'
@@ -336,7 +336,7 @@ export const aiAutonomousEcosystem2030: AIAutonomousEcosystem2030[] = [;
 ;
     marketSize: '$15B market', growthRate: '280% annual growth'
     variant: 'ai-futuristic'
-    contactInfo: any,
+    contactInfo: unknown,
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
       website: 'https://ziontechgroup.com'

@@ -1,8 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
 import { Helmet } from 'react-helmet-async';
->>>>>>> cursor/fix-errors-and-merge-to-main-dd0b
 import './globals.css';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import AnalyticsProvider from './components/AnalyticsProvider';
@@ -10,15 +7,7 @@ import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import PWAInstaller from './components/PWAInstaller';
 import { GlobalErrorBoundary } from './components/GlobalErrorBoundary';
 
-<<<<<<< HEAD
-// Metadata will be handled by React Helmet in individual components
-
-export default function RootLayout({
-  children,
-}: {
-=======
 interface RootLayoutProps {
->>>>>>> cursor/fix-errors-and-merge-to-main-dd0b
   children: React.ReactNode;
 }
 

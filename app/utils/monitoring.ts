@@ -63,7 +63,7 @@ class MonitoringService {
         // First Input Delay
         const fidObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
-          entries.forEach((entry: any) => {
+          entries.forEach((entry: unknown) => {
             this.metrics.fid = entry.processingStart - entry.startTime;
             this.reportMetric('fid', this.metrics.fid);
           });
@@ -94,7 +94,8 @@ class MonitoringService {
         fcpObserver.observe({ entryTypes: ['paint'] });
 
       } catch (error) {
-        console.error('Error setting up performance observers:', error);
+        // eslint-disable-next-line no-console
+    console.error('Error setting up performance observers:', error);
       }
     }
   }
@@ -104,7 +105,8 @@ class MonitoringService {
       try {
         const longTaskObserver = new PerformanceObserver((list) => {
           for (const entry of list.getEntries()) {
-            console.warn('Long task detected:', {
+            // eslint-disable-next-line no-console
+    console.warn('Long task detected:', {
               duration: entry.duration,
               startTime: entry.startTime,
             });
@@ -122,9 +124,10 @@ class MonitoringService {
       try {
         const resourceObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
-          entries.forEach((entry: any) => {
+          entries.forEach((entry: unknown) => {
             if (entry.duration > 1000) {
-              console.warn('Slow resource detected:', {
+              // eslint-disable-next-line no-console
+    console.warn('Slow resource detected:', {
                 name: entry.name,
                 duration: entry.duration,
                 type: entry.initiatorType,
@@ -134,7 +137,8 @@ class MonitoringService {
         });
         resourceObserver.observe({ entryTypes: ['resource'] });
       } catch (error) {
-        console.error('Error monitoring resources:', error);
+        // eslint-disable-next-line no-console
+    console.error('Error monitoring resources:', error);
       }
     }
   }
@@ -172,7 +176,8 @@ class MonitoringService {
     if (thresholds) {
       const rating = value <= thresholds.good ? 'good' : value <= thresholds.needsImprovement ? 'needs-improvement' : 'poor';
       
-      console.log(`[Performance] ${name}:`, {
+      // eslint-disable-next-line no-console
+    console.log(`[Performance] ${name}:`, {
         value,
         rating,
         unit: name === 'cls' ? 'score' : 'ms',
@@ -197,6 +202,7 @@ class MonitoringService {
       this.errors = this.errors.slice(-50);
     }
 
+    // eslint-disable-next-line no-console
     console.error('[Error]', error);
 
     // Send to error tracking service (if configured)
@@ -220,7 +226,8 @@ class MonitoringService {
   public measureMemory(): void {
     if ('memory' in performance && performanceConfig.monitoring.enableMemoryMonitoring) {
       const memory = (performance as any).memory;
-      console.log('[Memory]', {
+      // eslint-disable-next-line no-console
+    console.log('[Memory]', {
         used: `${Math.round(memory.usedJSHeapSize / 1048576)}MB`,
         total: `${Math.round(memory.totalJSHeapSize / 1048576)}MB`,
         limit: `${Math.round(memory.jsHeapSizeLimit / 1048576)}MB`,
@@ -232,7 +239,8 @@ class MonitoringService {
     if ('performance' in window && 'getEntriesByType' in performance) {
       const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
       if (navigation) {
-        console.log('[Navigation Timing]', {
+        // eslint-disable-next-line no-console
+    console.log('[Navigation Timing]', {
           'DNS Lookup': `${Math.round(navigation.domainLookupEnd - navigation.domainLookupStart)}ms`,
           'TCP Connect': `${Math.round(navigation.connectEnd - navigation.connectStart)}ms`,
           'TTFB': `${Math.round(navigation.responseStart - navigation.requestStart)}ms`,

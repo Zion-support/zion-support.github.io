@@ -1,4 +1,3 @@
-import React from 'react';
 
 export default function FeaturedContentBanner20, 2, 5() {
   const featuredConten, t = [

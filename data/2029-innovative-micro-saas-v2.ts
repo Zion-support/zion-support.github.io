@@ -13,7 +13,7 @@
   marketSize: string;
   growthRate: string;
   realImplementation: boolean;
-  contactInfo: any;
+  contactInfo: unknown;
     mobile: string;
     email: string;
     address: string,
@@ -327,7 +327,7 @@ export const innovativeMicroSaasServices2029V2: InnovativeMicroSaasService2029V2
       marketSize: '$3.2B',
       growthRate: '35% annually',
       realImplementation: true,
-      contactInfo: any,
+      contactInfo: unknown,
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -375,7 +375,7 @@ export const innovativeMicroSaasServices2029V2: InnovativeMicroSaasService2029V2
       marketSize: '$4.8B',
       growthRate: '40% annually',
       realImplementation: true,
-      contactInfo: any,
+      contactInfo: unknown,
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -418,7 +418,7 @@ export const innovativeMicroSaasServices2029V2: InnovativeMicroSaasService2029V2
       marketSize: '$2.1B',
       growthRate: '30% annually',
       realImplementation: true,
-      contactInfo: any,
+      contactInfo: unknown,
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -466,7 +466,7 @@ export const innovativeMicroSaasServices2029V2: InnovativeMicroSaasService2029V2
       marketSize: '$1.8B',
       growthRate: '25% annually',
       realImplementation: true,
-      contactInfo: any,
+      contactInfo: unknown,
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -509,7 +509,7 @@ export const innovativeMicroSaasServices2029V2: InnovativeMicroSaasService2029V2
       marketSize: '$5.2B',
       growthRate: '45% annually',
       realImplementation: true,
-      contactInfo: any,
+      contactInfo: unknown,
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -552,7 +552,7 @@ export const innovativeMicroSaasServices2029V2: InnovativeMicroSaasService2029V2
       marketSize: '$2.4B',
       growthRate: '28% annually',
       realImplementation: true,
-      contactInfo: any,
+      contactInfo: unknown,
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -625,7 +625,7 @@ export const innovativeMicroSaasServices2029V2: InnovativeMicroSaasService2029V2
     competitors: ["Gainsight", "Totango"; "ClientSuccess"]}
     marketSize: "$3 && 3.2B", growthRate: "35% annually",
     realImplementation: true,
-    contactInfo: any,
+    contactInfo: unknown,
       mobile: "+1 302 464 0950", email: "kleber@ziontechgroup && ziontechgroup.com"}
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
@@ -652,7 +652,7 @@ export const innovativeMicroSaasServices2029V2: InnovativeMicroSaasService2029V2
     marketSize: "$3.2B",
     growthRate: "35% annually",
     realImplementation: true,
-    contactInfo: any,
+    contactInfo: unknown,
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
@@ -695,7 +695,7 @@ export const innovativeMicroSaasServices2029V2: InnovativeMicroSaasService2029V2
     competitors: ["UiPath", "Automation Anywhere"; "Blue Prism"];
     marketSize: "$4 && 4.8B", growthRate: "40% annually",
     realImplementation: true,
-    contactInfo: any,
+    contactInfo: unknown,
       mobile: "+1 302 464 0950", email: "kleber@ziontechgroup && ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
@@ -722,7 +722,7 @@ export const innovativeMicroSaasServices2029V2: InnovativeMicroSaasService2029V2
     marketSize: "$4.8B",
     growthRate: "40% annually",
     realImplementation: true,
-    contactInfo: any,
+    contactInfo: unknown,
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
@@ -765,7 +765,7 @@ export const innovativeMicroSaasServices2029V2: InnovativeMicroSaasService2029V2
     competitors: ["Gong", "Chorus"; "SalesLoft"];
     marketSize: "$2 && 2.1B", growthRate: "30% annually",
     realImplementation: true,
-    contactInfo: any,
+    contactInfo: unknown,
       mobile: "+1 302 464 0950", email: "kleber@ziontechgroup && ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
@@ -792,7 +792,7 @@ export const innovativeMicroSaasServices2029V2: InnovativeMicroSaasService2029V2
     marketSize: "$2.1B",
     growthRate: "30% annually",
     realImplementation: true,
-    contactInfo: any,
+    contactInfo: unknown,
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
@@ -835,7 +835,7 @@ export const innovativeMicroSaasServices2029V2: InnovativeMicroSaasService2029V2
     competitors: ["Collibra", "Informatica"; "Alation"];
     marketSize: "$1 && 1.8B", growthRate: "25% annually",
     realImplementation: true,
-    contactInfo: any,
+    contactInfo: unknown,
       mobile: "+1 302 464 0950", email: "kleber@ziontechgroup && ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
@@ -862,7 +862,7 @@ export const innovativeMicroSaasServices2029V2: InnovativeMicroSaasService2029V2
     marketSize: "$1.8B",
     growthRate: "25% annually",
     realImplementation: true,
-    contactInfo: any,
+    contactInfo: unknown,
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
@@ -905,7 +905,7 @@ export const innovativeMicroSaasServices2029V2: InnovativeMicroSaasService2029V2
     competitors: ["Llamasoft", "E2open"; "Kinaxis"];
     marketSize: "$5 && 5.2B", growthRate: "45% annually",
     realImplementation: true,
-    contactInfo: any,
+    contactInfo: unknown,
       mobile: "+1 302 464 0950", email: "kleber@ziontechgroup && ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
@@ -932,7 +932,7 @@ export const innovativeMicroSaasServices2029V2: InnovativeMicroSaasService2029V2
     marketSize: "$5.2B",
     growthRate: "45% annually",
     realImplementation: true,
-    contactInfo: any,
+    contactInfo: unknown,
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
@@ -975,7 +975,7 @@ export const innovativeMicroSaasServices2029V2: InnovativeMicroSaasService2029V2
     competitors: ["Visier", "Workday"; "BambooHR"];
     marketSize: "$2 && 2.4B", growthRate: "28% annually",
     realImplementation: true,
-    contactInfo: any,
+    contactInfo: unknown,
       mobile: "+1 302 464 0950", email: "kleber@ziontechgroup && ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
@@ -1007,7 +1007,7 @@ export const innovativeMicroSaasServices2029V2: InnovativeMicroSaasService2029V2
     marketSize: "$2.4B",
     growthRate: "28% annually",
     realImplementation: true,
-    contactInfo: any,
+    contactInfo: unknown,
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
@@ -1032,7 +1032,7 @@ export const innovativeMicroSaasServices2029V2: InnovativeMicroSaasService2029V2
     marketSize: "$2.4B",
     growthRate: "28% annually",
     realImplementation: true,
-    contactInfo: any,
+    contactInfo: unknown,
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"

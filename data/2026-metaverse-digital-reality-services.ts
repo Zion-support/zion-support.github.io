@@ -9,7 +9,7 @@ export const metaverseDigitalRealityServices2026 = [{name: 'Metaverse Developmen
       'Virtual commerce integration',
       'Multi-platform deployment'
     ],
-    pricing: any,
+    pricing: unknown,
       starter: '$399/month',
       professional: '$799/month'}
       enterprise: 'Custom'
@@ -26,7 +26,7 @@ export const metaverseDigitalRealityServices2026 = [{name: 'Metaverse Developmen
       'Mixed reality integration',
       'Spatial computing solutions'
     ],
-    pricing: any,
+    pricing: unknown,
       starter: '$299/month',
       professional: '$599/month',
       enterprise: 'Custom'
