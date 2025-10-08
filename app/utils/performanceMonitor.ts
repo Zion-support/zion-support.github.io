@@ -234,12 +234,15 @@ class PerformanceMonitor {
     
     return `
 Performance Report:
-Score: ${score}
-- First Contentful Paint: ${metrics.fcp}ms
-- Largest Contentful Paint: ${metrics.lcp}ms
-- Time to Interactive: ${metrics.tti}ms
-`;
+- Score: ${score}/100
+- Load Time: ${metrics.loadTime}ms
+- First Paint: ${metrics.firstPaint}ms
+- DOM Content Loaded: ${metrics.domContentLoaded}ms
+- Memory Usage: ${(metrics.memoryUsage / 1024 / 1024).toFixed(2)}MB
+
+Generated: ${new Date().toLocaleString()}
+    `;
   }
 }
 
-export default new PerformanceMonitorUtil();
+export default PerformanceMonitor;
