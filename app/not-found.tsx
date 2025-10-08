@@ -7,116 +7,91 @@ export default function NotFound() {
       title: 'AI Services',
       description: 'Explore our comprehensive AI and IT solutions',
       href: '/services',
-      icon: '🤖',
+      icon: '🤖'
     },
     {
       title: 'Blog & Insights',
       description: 'Read about latest AI trends and innovations',
       href: '/blog',
-      icon: '📚',
+      icon: '📚'
     },
     {
       title: 'About Us',
-      description: 'Learn more about our company and mission',
+      description: 'Learn more about Zion Tech Group',
       href: '/about',
-      icon: '👥',
+      icon: '👥'
     },
     {
       title: 'Case Studies',
       description: 'See our success stories and client results',
       href: '/case-studies',
-      icon: '📊',
+      icon: '📊'
     },
     {
       title: 'Contact Us',
       description: 'Get in touch with our AI experts',
       href: '/contact',
-      icon: '📞',
+      icon: '📞'
     },
   ];
 
   return (
-    <div className='min-h-screen bg-gradient-to-br from-indigo-900 via-blue-900 to-purple-900 flex items-center justify-center px-4 py-12'>
-      <div className='max-w-5xl w-full text-center'>
-        {/* Error Code */}
-        <div className='mb-8'>
-          <h1 className='text-9xl font-bold text-gray-300 mb-4'>404</h1>
-          <div className='text-6xl mb-4'>🔍</div>
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 flex items-center justify-center px-4 py-16">
+      <div className="max-w-4xl w-full">
+        <div className="mb-8 text-center">
+          <h1 className="text-9xl font-bold text-gray-300 mb-4">
+            404
+          </h1>
+          <div className="text-6xl mb-4">🔍</div>
         </div>
 
-        {/* Error Message */}
-        <div className='mb-12'>
-          <h2 className='text-3xl font-bold text-white mb-4'>
+        <div className="text-center mb-12">
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">
             Page Not Found
           </h2>
-          <p className='text-xl text-gray-300 max-w-2xl mx-auto'>
-            The page you&apos;re looking for doesn&apos;t exist or has been
-            moved. Don&apos;t worry, let&apos;s get you back on track!
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            The page you are looking for does not exist or has been moved. 
+            Let us get you back on track!
           </p>
         </div>
 
-        {/* Action Buttons */}
-        <div className='flex flex-col sm:flex-row gap-4 justify-center mb-16'>
-          <Link
-            href='/'
-            className='inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 font-semibold'
-          >
-            <Home className='w-5 h-5 mr-2' />
-            Back to Home
-          </Link>
-          <Link
-            href='/services'
-            className='inline-flex items-center justify-center px-8 py-4 bg-white/10 text-white border border-white/30 rounded-lg hover:bg-white/20 transition-all duration-300 font-semibold'
-          >
-            <Search className='w-5 h-5 mr-2' />
-            Explore Services
-          </Link>
-        </div>
-
-        {/* Popular Pages */}
-        <div className='mb-12'>
-          <h3 className='text-2xl font-bold text-white mb-6'>
-            Popular Pages
-          </h3>
-          <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4'>
-            {popularPages.map((page, index) => (
-              <Link
-                key={index}
-                href={page.href}
-                className='bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6 hover:bg-white/20 transition-all duration-300 text-left group'
-              >
-                <div className='text-3xl mb-3'>{page.icon}</div>
-                <h4 className='text-lg font-semibold text-white mb-2 group-hover:text-cyan-300 transition-colors'>
-                  {page.title}
-                </h4>
-                <p className='text-sm text-gray-300'>{page.description}</p>
-              </Link>
-            ))}
-          </div>
-        </div>
-
-        {/* Search Suggestion */}
-        <div className='mt-12 bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8'>
-          <h3 className='text-xl font-bold text-white mb-4'>
-            Can&apos;t find what you&apos;re looking for?
-          </h3>
-          <p className='text-gray-300 mb-6'>
-            Try searching for what you need or contact our support team.
-          </p>
-          <div className='flex flex-col sm:flex-row gap-3 justify-center'>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-12">
+          {popularPages.map((page, index) => (
             <Link
-              href='/services'
-              className='inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300'
+              key={index}
+              href={page.href}
+              className="bg-white/80 backdrop-blur-sm border border-white/20 rounded-xl p-6 hover:bg-white hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1"
             >
-              <Search className='w-4 h-4 mr-2' />
-              Browse Our Services
+              <div className="text-3xl mb-3">{page.icon}</div>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                {page.title}
+              </h3>
+              <p className="text-sm text-gray-600">{page.description}</p>
+            </Link>
+          ))}
+        </div>
+
+        <div className="mt-12 bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 text-center">
+          <h3 className="text-xl font-bold text-gray-900 mb-4">
+            Cannot find what you are looking for?
+          </h3>
+          <p className="text-gray-600 mb-6">
+            Try searching or contact our support team for assistance.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              href="/"
+              className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hover:-translate-y-1 hover:shadow-xl"
+            >
+              <Home className="w-5 h-5" />
+              <span>Go Home</span>
             </Link>
             <Link
-              href='/contact'
-              className='inline-flex items-center justify-center px-6 py-3 bg-white/20 text-white border border-white/30 rounded-lg hover:bg-white/30 transition-all duration-300'
+              href="/contact"
+              className="inline-flex items-center justify-center gap-2 bg-white hover:bg-gray-50 text-gray-900 font-semibold py-3 px-6 rounded-lg border border-gray-300 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-xl"
             >
-              <Phone className='w-4 h-4 mr-2' />
-              Contact Support
+              <Phone className="w-5 h-5" />
+              <span>Contact Support</span>
             </Link>
           </div>
         </div>
