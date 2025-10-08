@@ -6,13 +6,12 @@ export const usePerformance = () => {
     if ('PerformanceObserver' in window) {
       const observer = new PerformanceObserver((list) => {
         list.getEntries().forEach((entry) => {
-          analytics.track(
-            'long_task',
-            'performance',
-            'detected',
-            undefined,
-            entry.duration
-          );
+          analytics.trackEvent({
+            name: 'long_task',
+            category: 'performance',
+            action: 'detected',
+            value: entry.duration,
+          });
         });
       });
 
