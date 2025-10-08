@@ -66,6 +66,8 @@ class ErrorHandler {
     }
 
     this.reportError(errorData);
+    
+    return errorData;
   }
 
   private categorizeError(error: Error): ErrorCategory {
