@@ -10,7 +10,9 @@ interface PerformanceMetrics {
   cls?: number; // Cumulative Layout Shift
   ttfb?: number; // Time to First Byte
   fmp?: number; // First Meaningful Paint
-  customMetrics: Record<string, number>;
+  tti?: number; // Time to Interactive
+  tbt?: number; // Total Blocking Time
+  customMetrics?: Record<string, number>;
 }
 
 class PerformanceMonitor {
@@ -48,7 +50,7 @@ class PerformanceMonitor {
       const observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           if (entry.name === name) {
-            this.metrics[metricKey] = entry.startTime;
+            (this.metrics as any)[metricKey] = entry.startTime;
             this.logMetric(metricKey as string, entry.startTime);
           }
         }
@@ -167,6 +169,7 @@ class PerformanceMonitor {
   }
 
   addCustomMetric(name: string, value: number): void {
+    if (!this.metrics.customMetrics) this.metrics.customMetrics = {};
     this.metrics.customMetrics[name] = value;
     this.logMetric(name, value);
   }
@@ -191,7 +194,7 @@ class PerformanceMonitor {
   }
 
   getScore(): number {
-    const scores = [];
+    const scores: number[] = [];
     
     // FCP scoring (0-100)
     if (this.metrics.fcp) {
@@ -233,7 +236,16 @@ class PerformanceMonitor {
     const metrics = this.getMetrics();
     
     return `
-
+      Performance Report (Score: ${score}/100):
+      - First Contentful Paint: ${metrics.fcp?.toFixed(2)}ms
+      - Largest Contentful Paint: ${metrics.lcp?.toFixed(2)}ms
+      - First Input Delay: ${metrics.fid?.toFixed(2)}ms
+      - Cumulative Layout Shift: ${metrics.cls?.toFixed(4)}
+      - Time to Interactive: ${metrics.tti?.toFixed(2)}ms
+      - Total Blocking Time: ${metrics.tbt?.toFixed(2)}ms
+    `;
+  }
+}
 
 export const performanceMonitor = new PerformanceMonitor();
 export default PerformanceMonitor;
