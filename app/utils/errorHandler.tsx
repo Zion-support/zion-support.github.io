@@ -4,7 +4,7 @@
  */
 
 import React, { ErrorInfo, useCallback } from 'react';
-import { _logger} from './logger';
+import { logger } from './logger';
 
 // Error types
 export enum ErrorType {
@@ -257,15 +257,15 @@ export class ErrorHandler {
       switch (error.severity) {
         case ErrorSeverity.CRITICAL:
         case ErrorSeverity.HIGH:
- 
+// eslint-disable-next-line no-console
     console.error(logMessage, error);
           break;
         case ErrorSeverity.MEDIUM:
-           
+          // eslint-disable-next-line no-console
     console.warn(logMessage, error);
           break;
         case ErrorSeverity.LOW:
-          if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) {  
+          if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { // eslint-disable-next-line no-console
     console.info(logMessage, error); } }
           break;
       }
@@ -289,7 +289,7 @@ export class ErrorHandler {
         body: JSON.stringify(error),
       });
     } catch (err) {
- 
+// eslint-disable-next-line no-console
     console.error('Failed to log error to network:', err);
     }
   }
@@ -310,7 +310,7 @@ export class ErrorHandler {
         }),
       });
     } catch (err) {
- 
+// eslint-disable-next-line no-console
     console.error('Failed to report error:', err);
     }
   }
@@ -405,7 +405,7 @@ export class ErrorHandler {
       // Implement retry logic based on error type
       if (retryItem.error.type === ErrorType.NETWORK) {
         // Retry network request
-if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) {  
+if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { // eslint-disable-next-line no-console
     console.log(`Retrying network request (attempt ${retryItem.retryCount})`); } }
         // Add your retry logic here
       }
@@ -413,7 +413,7 @@ if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) {
       if (retryItem.retryCount < this.config.maxRetries) {
         this.scheduleRetry(retryItem.error);
       } else {
- 
+// eslint-disable-next-line no-console
     console.error('Max retries exceeded for error:', retryItem.error);
       }
     }
@@ -463,12 +463,12 @@ if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) {
   // Get error statistics
   getErrorStatistics() {
     const total = this.errors.length;
-    const byType = this.errors.reduce((__acc, __error) => {
+    const byType = this.errors.reduce((acc, error) => {
       acc[error.type] = (acc[error.type] || 0) + 1;
       return acc;
     }, {} as Record<ErrorType, number>);
 
-    const bySeverity = this.errors.reduce((__acc, __error) => {
+    const bySeverity = this.errors.reduce((acc, error) => {
       acc[error.severity] = (acc[error.severity] || 0) + 1;
       return acc;
     }, {} as Record<ErrorSeverity, number>);
@@ -491,12 +491,12 @@ if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) {
   init(): void {
     if (typeof window !== 'undefined') {
       // Set up global error handler
-      window.addEventListener('error', (__event) => {
+      window.addEventListener('error', (event) => {
         this.handleError(event.error || new Error(event.message));
       });
 
       // Set up unhandled promise rejection handler
-      window.addEventListener('unhandledrejection', (__event) => {
+      window.addEventListener('unhandledrejection', (event) => {
         this.handleError(new Error(event.reason));
       });
     }

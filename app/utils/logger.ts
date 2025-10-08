@@ -80,7 +80,7 @@ class Logger {
    * Log a debug message
    */
   debug(message: string, contextOrMetadata?: string | Record<string, unknown>, metadata?: Record<string, unknown>): void {
-    const [context, meta] = this.parseArgs(contextOrMetadata, metadata);
+    const [context, meta] = this.parseArgs(contextOrMetadata, _metadata);
     this.log(LogLevel.DEBUG, message, context, meta);
   }
 
@@ -88,7 +88,7 @@ class Logger {
    * Log an info message
    */
   info(message: string, contextOrMetadata?: string | Record<string, unknown>, metadata?: Record<string, unknown>): void {
-    const [context, meta] = this.parseArgs(contextOrMetadata, metadata);
+    const [context, meta] = this.parseArgs(contextOrMetadata, _metadata);
     this.log(LogLevel.INFO, message, context, meta);
   }
 
@@ -96,7 +96,7 @@ class Logger {
    * Log a warning message
    */
   warn(message: string, contextOrMetadata?: string | Record<string, unknown>, metadata?: Record<string, unknown>): void {
-    const [context, meta] = this.parseArgs(contextOrMetadata, metadata);
+    const [context, meta] = this.parseArgs(contextOrMetadata, _metadata);
     this.log(LogLevel.WARN, message, context, meta);
   }
 
@@ -115,7 +115,7 @@ class Logger {
 
     if (errorOrContextOrMetadata instanceof Error) {
       error = errorOrContextOrMetadata;
-      [context, meta] = this.parseArgs(contextOrMetadata, metadata);
+      [context, meta] = this.parseArgs(contextOrMetadata, _metadata);
     } else {
       [context, meta] = this.parseArgs(errorOrContextOrMetadata, contextOrMetadata as Record<string, unknown> | undefined);
     }
@@ -154,7 +154,7 @@ class Logger {
 
     if (errorOrContextOrMetadata instanceof Error) {
       error = errorOrContextOrMetadata;
-      [context, meta] = this.parseArgs(contextOrMetadata, metadata);
+      [context, meta] = this.parseArgs(contextOrMetadata, _metadata);
     } else {
       [context, meta] = this.parseArgs(errorOrContextOrMetadata, contextOrMetadata as Record<string, unknown> | undefined);
     }
@@ -187,7 +187,7 @@ class Logger {
     this.info(`Performance: ${metric} = ${value}ms`, 'Performance', {
       metric,
       value,
-      ...__metadata,
+      ...metadata,
     });
   }
 
@@ -259,8 +259,8 @@ class Logger {
         });
       }
     } catch (error) {
-       
-      console.error('Failed to flush logs:', error);
+// eslint-disable-next-line no-console
+    console.error('Failed to flush logs:', error);
       // Put logs back in buffer if flush failed
       this.buffer = [...logs, ...this.buffer];
     }
@@ -295,7 +295,7 @@ class Logger {
       message,
       timestamp: new Date(),
       context,
-      __metadata,
+      metadata,
     };
 
     this.processLog(entry);
@@ -332,24 +332,24 @@ class Logger {
 
     switch (entry.level) {
       case LogLevel.DEBUG:
-         
-        console.debug(message, entry.metadata);
+// eslint-disable-next-line no-console
+    console.debug(message, entry.metadata);
         break;
       case LogLevel.INFO:
-         
-        console.info(message, entry.metadata);
+        // eslint-disable-next-line no-console
+    console.info(message, entry.metadata);
         break;
       case LogLevel.WARN:
-         
-        console.warn(message, entry.metadata);
+        // eslint-disable-next-line no-console
+    console.warn(message, entry.metadata);
         break;
       case LogLevel.ERROR:
       case LogLevel.FATAL:
-         
-        console.error(message, entry.metadata);
+        // eslint-disable-next-line no-console
+    console.error(message, entry.metadata);
         if (entry.stack) {
-           
-          console.error(entry.stack);
+          // eslint-disable-next-line no-console
+    console.error(entry.stack);
         }
         break;
     }
@@ -406,71 +406,70 @@ class Logger {
  * Context Logger - provides logging with a fixed context
  */
 class ContextLogger {
-  constructor(private _logger: Logger, private context: string) {}
+  constructor(private logger: Logger, private context: string) {}
 
   debug(message: string, metadata?: Record<string, unknown>): void {
-    this._logger.debug(message, this.context, metadata);
+    this.logger.debug(message, this.context, _metadata);
   }
 
   info(message: string, metadata?: Record<string, unknown>): void {
-    this._logger.info(message, this.context, metadata);
+    this.logger.info(message, this.context, _metadata);
   }
 
   warn(message: string, metadata?: Record<string, unknown>): void {
-    this._logger.warn(message, this.context, metadata);
+    this.logger.warn(message, this.context, _metadata);
   }
 
   error(message: string, error?: Error, metadata?: Record<string, unknown>): void {
-    this._logger.error(message, error, this.context, metadata);
+    this.logger.error(message, error, this.context, _metadata);
   }
 
   fatal(message: string, error?: Error, metadata?: Record<string, unknown>): void {
-    this._logger.fatal(message, error, this.context, metadata);
+    this.logger.fatal(message, error, this.context, _metadata);
   }
 
   perf(metric: string, value: number, metadata?: Record<string, unknown>): void {
-    this._logger.perf(metric, value, { ...metadata, context: this.context });
+    this.logger.perf(metric, value, { ...metadata, context: this.context });
   }
 
   lifecycle(message: string, metadata?: Record<string, unknown>): void {
-    this._logger.lifecycle(message, this.context);
+    this.logger.lifecycle(message, this.context);
   }
 
   performance(message: string, data: unknown, metadata?: Record<string, unknown>): void {
-    this._logger.performance(message, data, this.context);
+    this.logger.performance(message, data, this.context);
   }
 
   group(label: string, fn: () => void): void {
-    this._logger.group(`${this.context}: ${label}`, fn);
+    this.logger.group(`${this.context}: ${label}`, fn);
   }
 
   child(subContext: string): ContextLogger {
-    return new ContextLogger(this._logger, `${this.context}:${subContext}`);
+    return new ContextLogger(this.logger, `${this.context}:${subContext}`);
   }
 }
 
 // Export singleton instance
-export const _logger = new Logger();
-export const logger = _logger;
+export const logger = new Logger();
 
 // Export convenience functions
 export const debug = (message: string, context?: string, metadata?: Record<string, unknown>) =>
-  _logger.debug(message, context, metadata);
+  logger.debug(message, context, _metadata);
 export const info = (message: string, context?: string, metadata?: Record<string, unknown>) =>
-  _logger.info(message, context, metadata);
+  logger.info(message, context, _metadata);
 export const warn = (message: string, context?: string, metadata?: Record<string, unknown>) =>
-  logger.warn(message, context, metadata);
+  logger.warn(message, context, _metadata);
 export const error = (
   message: string,
   err?: Error,
   context?: string,
   metadata?: Record<string, unknown>
-) => logger.error(message, err, context, metadata);
+) => logger.error(message, err, context, _metadata);
 export const fatal = (
   message: string,
   err?: Error,
   context?: string,
   metadata?: Record<string, unknown>
-) => logger.fatal(message, err, context, metadata);
+) => logger.fatal(message, err, context, _metadata);
 
 export default logger;

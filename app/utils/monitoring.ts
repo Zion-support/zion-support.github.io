@@ -4,7 +4,7 @@
  */
 
 import { performanceConfig } from '../../performance.config';
-import { _logger} from './logger';
+import { logger } from './logger';
 
 export interface PerformanceMetrics {
   lcp?: number;
@@ -53,7 +53,7 @@ class MonitoringService {
     if ('PerformanceObserver' in window) {
       try {
         // Largest Contentful Paint
-        const lcpObserver = new PerformanceObserver((__list) => {
+        const lcpObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
           const lastEntry = entries[entries.length - 1] as PerformanceEntry & { renderTime?: number; loadTime?: number };
           this.metrics.lcp = lastEntry.renderTime || lastEntry.loadTime || 0;
@@ -62,7 +62,7 @@ class MonitoringService {
         lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
 
         // First Input Delay
-        const fidObserver = new PerformanceObserver((__list) => {
+        const fidObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
           entries.forEach((entry: unknown) => {
             this.metrics.fid = entry.processingStart - entry.startTime;
@@ -73,7 +73,7 @@ class MonitoringService {
 
         // Cumulative Layout Shift
         let clsValue = 0;
-        const clsObserver = new PerformanceObserver((__list) => {
+        const clsObserver = new PerformanceObserver((list) => {
           for (const entry of list.getEntries() as any[]) {
             if (!entry.hadRecentInput) {
               clsValue += entry.value;
@@ -85,9 +85,9 @@ class MonitoringService {
         clsObserver.observe({ entryTypes: ['layout-shift'] });
 
         // First Contentful Paint
-        const fcpObserver = new PerformanceObserver((__list) => {
+        const fcpObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
-          entries.forEach((__entry) => {
+          entries.forEach((entry) => {
             this.metrics.fcp = entry.startTime;
             this.reportMetric('fcp', entry.startTime);
           });
@@ -95,7 +95,7 @@ class MonitoringService {
         fcpObserver.observe({ entryTypes: ['paint'] });
 
 } catch (error) {
-         
+        // eslint-disable-next-line no-console
     console.error('Error setting up performance observers:', error);
       }
     }
@@ -104,9 +104,9 @@ class MonitoringService {
   private monitorLongTasks(): void {
     if ('PerformanceObserver' in window && performanceConfig.monitoring.enableLongTaskDetection) {
       try {
-        const longTaskObserver = new PerformanceObserver((__list) => {
+        const longTaskObserver = new PerformanceObserver((list) => {
           for (const entry of list.getEntries()) {
- 
+// eslint-disable-next-line no-console
     console.warn('Long task detected:', {
               duration: entry.duration,
               startTime: entry.startTime,
@@ -123,11 +123,11 @@ class MonitoringService {
   private monitorResourceTiming(): void {
     if ('PerformanceObserver' in window) {
       try {
-        const resourceObserver = new PerformanceObserver((__list) => {
+        const resourceObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
           entries.forEach((entry: unknown) => {
             if (entry.duration > 1000) {
- 
+// eslint-disable-next-line no-console
     console.warn('Slow resource detected:', {
                 name: entry.name,
                 duration: entry.duration,
@@ -138,7 +138,7 @@ class MonitoringService {
         });
         resourceObserver.observe({ entryTypes: ['resource'] });
 } catch (error) {
-         
+        // eslint-disable-next-line no-console
     console.error('Error monitoring resources:', error);
       }
     }
@@ -146,7 +146,7 @@ class MonitoringService {
 
   private setupErrorHandling(): void {
     // Global error handler
-    window.addEventListener('error', (__event) => {
+    window.addEventListener('error', (event) => {
       this.logError({
         message: event.message,
         stack: event.error?.stack,
@@ -157,7 +157,7 @@ class MonitoringService {
     });
 
     // Unhandled promise rejection handler
-    window.addEventListener('unhandledrejection', (__event) => {
+    window.addEventListener('unhandledrejection', (event) => {
       this.logError({
         message: `Unhandled Promise Rejection: ${event.reason}`,
         timestamp: Date.now(),
@@ -177,7 +177,7 @@ class MonitoringService {
     if (thresholds) {
       const rating = value <= thresholds.good ? 'good' : value <= thresholds.needsImprovement ? 'needs-improvement' : 'poor';
       
- 
+// eslint-disable-next-line no-console
     console.log(`[Performance] ${name}:`, {
         value,
         rating,
@@ -203,7 +203,7 @@ class MonitoringService {
       this.errors = this.errors.slice(-50);
     }
 
- 
+// eslint-disable-next-line no-console
     console.error('[Error]', error);
 
     // Send to error tracking service (if configured)
@@ -227,7 +227,7 @@ class MonitoringService {
   public measureMemory(): void {
     if ('memory' in performance && performanceConfig.monitoring.enableMemoryMonitoring) {
       const memory = (performance as any).memory;
- 
+// eslint-disable-next-line no-console
     console.log('[Memory]', {
         used: `${Math.round(memory.usedJSHeapSize / 1048576)}MB`,
         total: `${Math.round(memory.totalJSHeapSize / 1048576)}MB`,
@@ -240,7 +240,7 @@ class MonitoringService {
     if ('performance' in window && 'getEntriesByType' in performance) {
       const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
       if (navigation) {
- 
+// eslint-disable-next-line no-console
     console.log('[Navigation Timing]', {
           'DNS Lookup': `${Math.round(navigation.domainLookupEnd - navigation.domainLookupStart)}ms`,
           'TCP Connect': `${Math.round(navigation.connectEnd - navigation.connectStart)}ms`,

@@ -66,7 +66,7 @@ class EnhancedErrorMonitoring {
     if (typeof window === 'undefined') return;
 
     // JavaScript errors
-    window.addEventListener('error', (__event) => {
+    window.addEventListener('error', (event) => {
       this.handleError(event.error || new Error(event.message), {
         filename: event.filename,
         lineno: event.lineno,
@@ -76,7 +76,7 @@ class EnhancedErrorMonitoring {
     });
 
     // Unhandled promise rejections
-    window.addEventListener('unhandledrejection', (__event) => {
+    window.addEventListener('unhandledrejection', (event) => {
       this.handleError(new Error(`Unhandled Promise Rejection: ${event.reason}`), {
         reason: event.reason,
         category: 'promise'
@@ -84,7 +84,7 @@ class EnhancedErrorMonitoring {
     });
 
     // Resource loading errors
-    window.addEventListener('error', (__event) => {
+    window.addEventListener('error', (event) => {
       if (event.target !== window) {
         this.handleError(new Error(`Resource loading error: ${(event.target as any)['src'] || (event.target as any).href}`), {
           resource: (event.target as any)['src'] || (event.target as any).href,
@@ -137,7 +137,7 @@ class EnhancedErrorMonitoring {
   private setupPerformanceErrorMonitoring(): void {
     // Monitor long tasks
     if ('PerformanceObserver' in window) {
-      new PerformanceObserver((__list) => {
+      new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           if (entry.duration > 50) { // Tasks longer than 50ms
             this.handleError(new Error(`Long task detected: ${entry.duration}ms`), {
@@ -150,7 +150,7 @@ class EnhancedErrorMonitoring {
       }).observe({ entryTypes: ['longtask'] });
 
       // Monitor memory leaks
-      new PerformanceObserver((__list) => {
+      new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           if (entry.entryType === 'memory') {
             const memory = entry as any;
@@ -227,7 +227,7 @@ class EnhancedErrorMonitoring {
 
     // Log to console in development
     if (process.env['NODE_ENV'] === 'development') {
- 
+// eslint-disable-next-line no-console
     console.error('Error captured:', errorReport);
     }
   }
@@ -280,7 +280,7 @@ class EnhancedErrorMonitoring {
       });
     } catch (error) {
       // If sending fails, keep in queue for retry
- 
+// eslint-disable-next-line no-console
     console.warn('Failed to send error report:', error);
     }
   }
@@ -331,14 +331,14 @@ class EnhancedErrorMonitoring {
   } {
     const recent = this.errorQueue
       .filter(error => Date.now() - new Date(error.lastSeen).getTime() < 24 * 60 * 60 * 1000) // Last 24 hours
-      .sort((__a, __b) => new Date(b.lastSeen).getTime() - new Date(a.lastSeen).getTime());
+      .sort((a, b) => new Date(b.lastSeen).getTime() - new Date(a.lastSeen).getTime());
 
-    const bySeverity = this.errorQueue.reduce((__acc, __error) => {
+    const bySeverity = this.errorQueue.reduce((acc, error) => {
       acc[error.severity] = (acc[error.severity] || 0) + 1;
       return acc;
     }, {} as Record<string, number>);
 
-    const byCategory = this.errorQueue.reduce((__acc, __error) => {
+    const byCategory = this.errorQueue.reduce((acc, error) => {
       acc[error.category] = (acc[error.category] || 0) + 1;
       return acc;
     }, {} as Record<string, number>);

@@ -35,7 +35,7 @@ class AnalyticsService {
       this.processQueue();
       this.isInitialized = true;
     } catch (error) {
- 
+// eslint-disable-next-line no-console
     console.error('Analytics initialization failed:', error);
     }
   }
@@ -56,17 +56,17 @@ class AnalyticsService {
           event_category: event.category,
           event_label: event.label,
           value: event.value,
-          ...event.__metadata,
+          ...event.metadata,
         });
       }
 
       // Log in development
       if (process.env['NODE_ENV'] === 'development') {
- 
+// eslint-disable-next-line no-console
     console.log('Analytics Event:', event);
       }
     } catch (error) {
-       
+      // eslint-disable-next-line no-console
     console.error('Failed to track event:', error);
     }
   }
@@ -77,13 +77,13 @@ class AnalyticsService {
   trackPageView(path: string, title?: string): void {
     try {
       if (this.hasGtag()) {
-        (window as unknown as { gtag: (command: string, targetId: string, config: Record<string, unknown>) => void }).gtag('config', this.getGtagId(), {
+        (window as any).gtag('config', this.getGtagId(), {
           page_path: path,
           page_title: title,
         });
       }
     } catch (error) {
- 
+// eslint-disable-next-line no-console
     console.error('Failed to track page view:', error);
     }
   }
@@ -94,13 +94,13 @@ class AnalyticsService {
   identifyUser(user: AnalyticsUser): void {
     try {
       if (this.hasGtag() && user.id) {
-        (window as unknown as { gtag: (command: string, target: string, properties: Record<string, unknown>) => void }).gtag('set', 'user_properties', {
+        (window as any).gtag('set', 'user_properties', {
           user_id: user.id,
           ...user.properties,
         });
       }
     } catch (error) {
- 
+// eslint-disable-next-line no-console
     console.error('Failed to identify user:', error);
     }
   }
@@ -113,9 +113,9 @@ class AnalyticsService {
       action: 'error',
       category: 'exception',
       label: error.message,
-      __metadata: {
+      metadata: {
         stack: error.stack,
-        ...__metadata,
+        ...metadata,
       },
     });
   }
@@ -131,7 +131,7 @@ class AnalyticsService {
   ): void {
     try {
       if (this.hasGtag()) {
-        (window as unknown as { gtag: (command: string, action: string, params: Record<string, unknown>) => void }).gtag('event', 'timing_complete', {
+        (window as any).gtag('event', 'timing_complete', {
           name: variable,
           value: Math.round(value),
           event_category: category,
@@ -139,7 +139,7 @@ class AnalyticsService {
         });
       }
     } catch (error) {
- 
+// eslint-disable-next-line no-console
     console.error('Failed to track timing:', error);
     }
   }
@@ -154,10 +154,10 @@ class AnalyticsService {
         category: 'web_vitals',
         label: metric,
         value: Math.round(value),
-        __metadata,
+        metadata,
       });
     } catch (error) {
- 
+// eslint-disable-next-line no-console
     console.error('Failed to track performance:', error);
     }
   }
@@ -210,9 +210,9 @@ export const trackEvent = (event: AnalyticsEvent) => analytics.trackEvent(event)
 export const trackPageView = (path: string, title?: string) =>
   analytics.trackPageView(path, title);
 export const trackError = (error: Error, metadata?: Record<string, unknown>) =>
-  analytics.trackError(error, __metadata);
+  analytics.trackError(error, metadata);
 export const trackPerformance = (metric: string, value: number, metadata?: Record<string, unknown>) =>
-  analytics.trackPerformance(metric, value, __metadata);
+  analytics.trackPerformance(metric, value, metadata);
 export const trackTiming = (
   category: string,
   variable: string,

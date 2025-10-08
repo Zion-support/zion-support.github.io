@@ -92,7 +92,7 @@ export async function measureTime<T>(
   const result = await func();
   const duration = performance.now() - start;
   
-if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) {  
+if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { // eslint-disable-next-line no-console
     console.log(`[Performance] ${name}: ${duration.toFixed(2)}ms`); } }
   
   return { result, duration };

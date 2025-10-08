@@ -14,7 +14,7 @@ interface UserEvent {
   sessionId: string;
   userId?: string;
   url: string;
-  metadata?: Record<string, unknown>;
+  metadata?: Record<string, any>;
 }
 
 interface UserSession {
@@ -141,7 +141,7 @@ class AdvancedAnalytics {
       sessionId: this.currentSession.id,
       userId: this.getUserId(),
       url: url || window.location.href,
-      __metadata: {
+      metadata: {
         referrer: document.referrer,
         viewport: {
           width: window.innerWidth,
@@ -158,7 +158,7 @@ class AdvancedAnalytics {
    * Track clicks
    */
   private trackClicks(): void {
-    document.addEventListener('click', (__event) => {
+    document.addEventListener('click', (event) => {
       const target = event.target as HTMLElement;
       const element = this.getElementInfo(target);
       
@@ -172,7 +172,7 @@ class AdvancedAnalytics {
         sessionId: this.currentSession.id,
         userId: this.getUserId(),
         url: window.location.href,
-        __metadata: {
+        metadata: {
           element: element.tagName,
           id: element.id,
           className: element.className,
@@ -207,7 +207,7 @@ class AdvancedAnalytics {
           sessionId: this.currentSession.id,
           userId: this.getUserId(),
           url: window.location.href,
-          __metadata: {
+          metadata: {
             scrollY: window.scrollY,
             scrollPercentage: Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100)
           }
@@ -222,7 +222,7 @@ class AdvancedAnalytics {
    * Track form submissions
    */
   private trackFormSubmissions(): void {
-    document.addEventListener('submit', (__event) => {
+    document.addEventListener('submit', (event) => {
       const form = event.target as HTMLFormElement;
       const formData = new FormData(form);
       const formFields = Array.from(formData.keys());
@@ -237,7 +237,7 @@ class AdvancedAnalytics {
         sessionId: this.currentSession.id,
         userId: this.getUserId(),
         url: window.location.href,
-        __metadata: {
+        metadata: {
           formId: form.id,
           formClass: form.className,
           formAction: form.action,
@@ -254,7 +254,7 @@ class AdvancedAnalytics {
    * Track downloads
    */
   private trackDownloads(): void {
-    document.addEventListener('click', (__event) => {
+    document.addEventListener('click', (event) => {
       const target = event.target as HTMLElement;
       const link = target.closest('a');
       
@@ -269,7 +269,7 @@ class AdvancedAnalytics {
           sessionId: this.currentSession.id,
           userId: this.getUserId(),
           url: window.location.href,
-          __metadata: {
+          metadata: {
             downloadUrl: link.href,
             downloadText: link.textContent?.substring(0, 100)
           }
@@ -286,7 +286,7 @@ class AdvancedAnalytics {
   private trackPerformance(): void {
     if ('PerformanceObserver' in window) {
       // Track Core Web Vitals
-      new PerformanceObserver((__list) => {
+      new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           if (entry.entryType === 'paint') {
             const paintEvent: UserEvent = {
@@ -299,7 +299,7 @@ class AdvancedAnalytics {
               sessionId: this.currentSession.id,
               userId: this.getUserId(),
               url: window.location.href,
-              __metadata: {
+              metadata: {
                 metric: entry.name,
                 value: entry.startTime
               }
@@ -324,7 +324,7 @@ class AdvancedAnalytics {
           sessionId: this.currentSession.id,
           userId: this.getUserId(),
           url: window.location.href,
-          __metadata: {
+          metadata: {
             loadTime: navigation.loadEventEnd - navigation.loadEventStart,
             domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
             firstByte: navigation.responseStart - navigation.requestStart
@@ -401,7 +401,7 @@ class AdvancedAnalytics {
         body: JSON.stringify(event)
       });
     } catch (error) {
- 
+// eslint-disable-next-line no-console
     console.warn('Failed to send analytics event:', error);
     }
   }
@@ -545,18 +545,18 @@ class AdvancedAnalytics {
     const events = this.currentSession.events;
     const totalEvents = events.length;
 
-    const eventsByType = events.reduce((__acc, __event) => {
+    const eventsByType = events.reduce((acc, event) => {
       acc[event.type] = (acc[event.type] || 0) + 1;
       return acc;
     }, {} as Record<string, number>);
 
-    const eventsByCategory = events.reduce((__acc, __event) => {
+    const eventsByCategory = events.reduce((acc, event) => {
       acc[event.category] = (acc[event.category] || 0) + 1;
       return acc;
     }, {} as Record<string, number>);
 
     const pageViews = events.filter(e => e.type === 'page_view');
-    const topPages = pageViews.reduce((__acc, __event) => {
+    const topPages = pageViews.reduce((acc, event) => {
       const existing = acc.find(p => p.url === event.url);
       if (existing) {
         existing.views++;
@@ -564,7 +564,7 @@ class AdvancedAnalytics {
         acc.push({ url: event.url, views: 1 });
       }
       return acc;
-    }, [] as Array<{ url: string; views: number }>).sort((__a, __b) => b.views - a.views);
+    }, [] as Array<{ url: string; views: number }>).sort((a, b) => b.views - a.views);
 
     const conversions = events.filter(e => e.category === 'conversion').length;
     const conversionRate = totalEvents > 0 ? (conversions / totalEvents) * 100 : 0;
@@ -592,7 +592,7 @@ class AdvancedAnalytics {
         body: JSON.stringify(session)
       });
     } catch (error) {
- 
+// eslint-disable-next-line no-console
     console.warn('Failed to send session data:', error);
     }
   }

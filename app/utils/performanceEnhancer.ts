@@ -4,7 +4,7 @@
  */
 
 import { useEffect, useRef } from 'react';
-import { _logger} from './logger';
+import { logger } from './logger';
 
 // Debounce function for performance optimization
 export const debounce = <T extends (...args: unknown[]) => unknown>(
@@ -51,7 +51,7 @@ export class PerformanceMonitor {
     this.metrics.set(`${componentName}_render`, renderTime);
     
     if (process.env['NODE_ENV'] === 'development') {
-if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) {  
+if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { // eslint-disable-next-line no-console
     console.log(`[Performance] ${componentName} rendered in ${renderTime.toFixed(2)}ms`); } }
     }
   }
@@ -82,10 +82,10 @@ if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) {
       return;
     }
 
-    const observer = new PerformanceObserver((__list) => {
-      list.getEntries().forEach((__entry) => {
+    const observer = new PerformanceObserver((list) => {
+      list.getEntries().forEach((entry) => {
         if (entry.duration > 50) { // Tasks longer than 50ms
- 
+// eslint-disable-next-line no-console
     console.warn(`[Performance] Long task detected: ${entry.duration.toFixed(2)}ms`);
         }
       });
@@ -132,8 +132,8 @@ export const lazyLoadImages = () => {
   if (typeof window === 'undefined') return;
 
   const images = document.querySelectorAll('img[data-src]');
-  const imageObserver = new IntersectionObserver((__entries) => {
-    entries.forEach((__entry) => {
+  const imageObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
       if (entry.isIntersecting) {
         const img = entry.target as HTMLImageElement;
         img['src'] = img.dataset['src'] || '';
@@ -143,7 +143,7 @@ export const lazyLoadImages = () => {
     });
   });
 
-  images.forEach((__img) => imageObserver.observe(img));
+  images.forEach((img) => imageObserver.observe(img));
 };
 
 // Preload critical resources
@@ -155,7 +155,7 @@ export const preloadCriticalResources = () => {
     '/css/critical.css',
   ];
 
-  criticalResources.forEach((__resource) => {
+  criticalResources.forEach((resource) => {
     const link = document.createElement('link');
     link.rel = 'preload';
     link.href = resource;
@@ -196,7 +196,7 @@ export const optimizeScrollPerformance = () => {
       value: number;
     }
 
-    const observer = new PerformanceObserver((__list) => {
+    const observer = new PerformanceObserver((list) => {
       for (const entry of list.getEntries()) {
         const layoutEntry = entry as LayoutShiftEntry;
         if (!layoutEntry.hadRecentInput) {
@@ -215,9 +215,9 @@ export const optimizeScrollPerformance = () => {
   };
 
   const trackLCP = () => {
-    const observer = new PerformanceObserver((__list) => {
+    const observer = new PerformanceObserver((list) => {
       for (const entry of list.getEntries()) {
-if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) {  
+if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { // eslint-disable-next-line no-console
     console.log('[Web Vitals] LCP:', entry.startTime); } }
       }
     });
@@ -232,11 +232,11 @@ if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) {
       processingStart: number;
     }
     
-    const observer = new PerformanceObserver((__list) => {
+    const observer = new PerformanceObserver((list) => {
       for (const entry of list.getEntries()) {
         const fidEntry = entry as FirstInputEntry;
         const fid = fidEntry.processingStart - entry.startTime;
-if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) {  
+if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { // eslint-disable-next-line no-console
     console.log('[Web Vitals] FID:', fid); } }
       }
     });
@@ -289,8 +289,8 @@ export const collectPerformanceMetrics = () => {
       totalTime: navigation.loadEventEnd - navigation.fetchStart,
     },
     paint: {
-      firstPaint: paint.find((__entry) => entry.name === 'first-paint')?.startTime || 0,
-      firstContentfulPaint: paint.find((__entry) => entry.name === 'first-contentful-paint')?.startTime || 0,
+      firstPaint: paint.find((entry) => entry.name === 'first-paint')?.startTime || 0,
+      firstContentfulPaint: paint.find((entry) => entry.name === 'first-contentful-paint')?.startTime || 0,
     },
     memory: getMemoryUsage(),
   };
@@ -313,7 +313,7 @@ export const initializePerformanceEnhancements = () => {
   const metrics = collectPerformanceMetrics();
   if (metrics && process.env['NODE_ENV'] === 'development') {
      
-if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) {  
+if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { // eslint-disable-next-line no-console
     console.log('Performance metrics:', metrics); } }
   }
 };
