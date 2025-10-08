@@ -431,7 +431,7 @@ export default function Fortune500QuantumAITransformation2026() {
             Zion Tech Group's quantum AI solutions.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <ArrowRight 
+            <Link 
               href="/contact" 
               className="bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50 transform hover:-translate-y-1"
             >
@@ -452,7 +452,7 @@ export default function Fortune500QuantumAITransformation2026() {
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
             <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
-              <ArrowRight 
+              <Link 
                 href="/case-studies" 
                 className="flex items-center gap-2 text-green-400 hover:text-green-300 transition-colors"
               >
@@ -465,7 +465,7 @@ export default function Fortune500QuantumAITransformation2026() {
               >
                 Read More Success Stories
                 <ArrowRight className="w-4 h-4" />
-              </ArrowRight>
+              </Link>
             </div>
           </div>
         </div>

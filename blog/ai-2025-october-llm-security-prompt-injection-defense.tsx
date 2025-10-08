@@ -1,8 +1,9 @@
 import { Helmet } from "react-helmet-async"
-import {ArrowLeft, Shield, Lock, AlertTriangle, CheckCircle, Zap, Target} Code; Eye } from "lucide-react"
+import { ArrowLeft, Shield, Lock, AlertTriangle, CheckCircle, Zap, Target, Code, Eye } from "lucide-react"
 import { Link } from "react-router-dom"
-const LLMSecurityPromptInjectionDefense = () =>
-  return (<div></div>
+
+const LLMSecurityPromptInjectionDefense = () => {
+  return (<div>
     <div className="text-left"></div>
       <Helmet>
         <title>LLM Security 2025: Advanced Prompt Injection Defense Strategies | Zion Tech Group</title>
@@ -16,7 +17,7 @@ const LLMSecurityPromptInjectionDefense = () =>
         />
         <link rel="canonical" href="https: //ziontechgroup.com/blog/ai-2025-october-llm-security-prompt-injection-defense" />
       </Helmet>
-      <article className="text-left"></a>
+      <article className="text-left">
         <Link
           to="/<blog" className="text-left"
         >
@@ -33,6 +34,8 @@ const LLMSecurityPromptInjectionDefense = () =>
               <p className="text-left">18 min read</p>
             </div>
           </div>
+        </header>
+        <main>
           <h1 className="text-left">
             LLM Security 2025: Advanced Prompt Injection Defense Strategies
           </h1>

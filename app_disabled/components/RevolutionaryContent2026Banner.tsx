@@ -24,7 +24,7 @@ export default function RevolutionaryContent2026Banner() {
 
         <div className='grid md:grid-cols-3 gap-8 mb-12'>
           {/* Revolutionary Breakthrough Article */}
-          <ArrowRight href="/blog/ai-2026-revolutionary-breakthrough" className="group">
+          <Link href="/blog/ai-2026-revolutionary-breakthrough" className="group">
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 hover:scale-105">
               <div className="flex items-center gap-2 mb-4">
                 <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-semibold">
@@ -53,13 +53,13 @@ export default function RevolutionaryContent2026Banner() {
                     <div className='text-xs opacity-75'>Efficiency</div>
                   </div>
                 </div>
-                <ArrowRight className='w-5 h-5 group-hover:translate-x-1 transition-transform' />
+                <Link className='w-5 h-5 group-hover:translate-x-1 transition-transform' />
               </div>
             </div>
           </Link>
 
           {/* Cognitive Superintelligence Article */}
-          <ArrowRight href="/blog/ai-cognitive-superintelligence-2026" className="group">
+          <Link href="/blog/ai-cognitive-superintelligence-2026" className="group">
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 hover:scale-105">
               <div className="flex items-center gap-2 mb-4">
                 <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-semibold">
@@ -90,13 +90,13 @@ export default function RevolutionaryContent2026Banner() {
                     <div className='text-xs opacity-75'>ROI</div>
                   </div>
                 </div>
-                <ArrowRight className='w-5 h-5 group-hover:translate-x-1 transition-transform' />
+                <Link className='w-5 h-5 group-hover:translate-x-1 transition-transform' />
               </div>
             </div>
           </Link>
 
           {/* Mega Transformation Case Study */}
-          <ArrowRight href="/case-studies/ai-mega-transformation-success-2026" className="group">
+          <Link href="/case-studies/ai-mega-transformation-success-2026" className="group">
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 hover:scale-105">
               <div className="flex items-center gap-2 mb-4">
                 <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-semibold">
@@ -124,7 +124,7 @@ export default function RevolutionaryContent2026Banner() {
                     <div className='text-xs opacity-75'>Efficiency</div>
                   </div>
                 </div>
-                <ArrowRight className='w-5 h-5 group-hover:translate-x-1 transition-transform' />
+                <Link className='w-5 h-5 group-hover:translate-x-1 transition-transform' />
               </div>
             </div>
           </Link>
@@ -149,14 +149,14 @@ export default function RevolutionaryContent2026Banner() {
           </div>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <ArrowRight
+            <Link
               href="/blog"
               className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors inline-flex items-center justify-center"
             >
               Explore All Revolutionary Content
               <ArrowRight className="w-5 h-5 ml-2" />
-            </ArrowRight>
-            <ArrowRight
+            </Link>
+            <Link
               href="/services"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-purple-600 transition-colors inline-flex items-center justify-center"
             >

@@ -1,7 +1,7 @@
-import {ArrowLeft, Shield, Zap, CheckCircle} AlertTriangle; TrendingUp } from "lucide-react"
+import { ArrowLeft, Shield, Zap, CheckCircle, AlertTriangle, TrendingUp } from "lucide-react"
 import { Link } from "react-router-dom"
 import { Helmet } from "react-helmet-async"
-const AIAutonomousThreatResponse2025 = () =>
+const AIAutonomousThreatResponse2025 = () => {
   return (<div>
       <div></div>
       <Helmet>
@@ -29,10 +29,10 @@ const AIAutonomousThreatResponse2025 = () =>
             to="/<blog" className="text-left"
           >
             <ArrowLeft className="text-left" />
-            <span>Back to Blog<
+            <span>Back to Blog</span>
           </Link>
           {/* Article Header */}
-          <article className="text-left"></a>
+          <article className="text-left">
             <div className="text-left">
         <div className="text-left"></div>
                 <span className="text-left"></span>

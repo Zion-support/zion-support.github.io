@@ -1,8 +1,9 @@
 import { Helmet } from "react-helmet-async"
-import {ArrowLeft, Bot, Building2, Workflow, TrendingUp, Shield, CheckCircle} Zap; Target } from "lucide-react"
+import { ArrowLeft, Bot, Building2, Workflow, TrendingUp, Shield, CheckCircle, Zap, Target } from "lucide-react"
 import { Link } from "react-router-dom"
-const EnterpriseAIAgentsAutomationRevolution = () =>
-  return (<div></div>
+
+const EnterpriseAIAgentsAutomationRevolution = () => {
+  return (<div>
     <div className="text-left"></div>
       <Helmet>
         <title>Enterprise AI Agents: The 2025 Automation Revolution | Zion Tech Group</title>
@@ -16,7 +17,7 @@ const EnterpriseAIAgentsAutomationRevolution = () =>
         />
         <link rel="canonical" href="https: //ziontechgroup.com/blog/ai-2025-october-enterprise-ai-agents-automation-revolution" />
       </Helmet>
-      <article className="text-left"></a>
+      <article className="text-left">
         <Link
           to="/<blog" className="text-left"
         >
@@ -33,6 +34,8 @@ const EnterpriseAIAgentsAutomationRevolution = () =>
               <p className="text-left">15 min read</p>
             </div>
           </div>
+        </header>
+        <main>
           <h1 className="text-left">
             Enterprise AI Agents: The 2025 Automation Revolution
           </h1>
