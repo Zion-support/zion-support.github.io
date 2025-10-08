@@ -438,7 +438,7 @@ export const getPerformanceScore = (): number => {
   
   if (webVitals.length === 0) return 0;
   
-  const scores = webVitals.map(metric => {
+  const scores: number[] = webVitals.map(metric => {
     switch (metric.rating) {
       case 'good': return 100;
       case 'needs-improvement': return 50;
@@ -447,6 +447,7 @@ export const getPerformanceScore = (): number => {
     }
   });
   
+  if (scores.length === 0) return 0;
   return Math.round(scores.reduce((a, b) => a + b, 0) / scores.length);
 };
 

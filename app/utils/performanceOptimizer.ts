@@ -126,7 +126,10 @@ class PerformanceOptimizer {
     const fidObserver = new PerformanceObserver((list) => {
       const entries = list.getEntries();
       entries.forEach((entry) => {
-        console.log('FID:', entry.processingStart - entry.startTime);
+        const fidEntry = entry as PerformanceEntry & { processingStart?: number };
+        if (fidEntry.processingStart) {
+          console.log('FID:', fidEntry.processingStart - entry.startTime);
+        }
       });
     });
     fidObserver.observe({ entryTypes: ['first-input'] });
@@ -182,6 +185,84 @@ class PerformanceOptimizer {
 
   public getMetrics(): PerformanceMetrics {
     return { ...this.metrics };
+  }
+
+  /**
+   * Run all optimizations
+   */
+  public optimize(): void {
+    this.optimizeImages();
+    this.enableCaching();
+    this.enableCompression();
+  }
+
+  /**
+   * Start a performance mark
+   */
+  public startMark(markName: string): void {
+    if (typeof performance !== 'undefined') {
+      performance.mark(`${markName}-start`);
+    }
+  }
+
+  /**
+   * End a performance mark and return duration
+   */
+  public endMark(markName: string): number | null {
+    if (typeof performance === 'undefined') return null;
+    
+    try {
+      performance.mark(`${markName}-end`);
+      const measure = performance.measure(
+        markName,
+        `${markName}-start`,
+        `${markName}-end`
+      );
+      
+      // Clean up marks
+      performance.clearMarks(`${markName}-start`);
+      performance.clearMarks(`${markName}-end`);
+      performance.clearMeasures(markName);
+      
+      return measure.duration;
+    } catch {
+      return null;
+    }
+  }
+
+  /**
+   * Get overall performance score (0-100)
+   */
+  public getPerformanceScore(): number {
+    const metrics = this.getMetrics();
+    const scores: number[] = [];
+
+    // Load time score (0-100)
+    if (metrics.loadTime > 0) {
+      const loadScore = Math.max(0, 100 - (metrics.loadTime / 50)); // 5s = 0 score
+      scores.push(loadScore);
+    }
+
+    // Render time score
+    if (metrics.renderTime > 0) {
+      const renderScore = Math.max(0, 100 - (metrics.renderTime / 10)); // 1s = 0 score
+      scores.push(renderScore);
+    }
+
+    // Memory usage score (assuming 100MB is threshold)
+    if (metrics.memoryUsage > 0) {
+      const memoryScore = Math.max(0, 100 - (metrics.memoryUsage / 1000000)); // 100MB = 0 score
+      scores.push(memoryScore);
+    }
+
+    // Cache hit rate score
+    if (metrics.cacheHitRate >= 0) {
+      scores.push(metrics.cacheHitRate * 100);
+    }
+
+    // Return average score
+    if (scores.length === 0) return 50; // Default if no metrics
+    return Math.round(scores.reduce((a, b) => a + b, 0) / scores.length);
   }
 
   public optimizeImages(): void {
