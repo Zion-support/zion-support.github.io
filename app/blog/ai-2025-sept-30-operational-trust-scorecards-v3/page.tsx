@@ -1,7 +1,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const AITrustScorecardsPage: React.FC = () => {
+const Ai2025Sept30OperationalTrustScorecardsV3: React.FC = () => {
+
   return (
 
     <>
@@ -88,4 +89,4 @@ const AITrustScorecardsPage: React.FC = () => {
   );
 };
 
-export default AITrustScorecardsPage;
+export default Ai2025Sept30OperationalTrustScorecardsV3;

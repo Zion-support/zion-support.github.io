@@ -1,8 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
-import { Link } from 'react-router-dom';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0aa9
 export default function March2025AutonomousEnterpriseOperationsRevolution() {
   return (
     <div className="min-h-screen bg-gray-50">

@@ -1,11 +1,12 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import './globals.css';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import AnalyticsProvider from './components/AnalyticsProvider';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import PWAInstaller from './components/PWAInstaller';
 import { GlobalErrorBoundary } from './components/GlobalErrorBoundary';
+
+// Metadata will be handled by React Helmet in individual components
 
 interface RootLayoutProps {
   children: React.ReactNode;

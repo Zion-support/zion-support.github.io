@@ -49,11 +49,8 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         });
         lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
         observers.push(lcpObserver);
-      } catch (error) {
-        if (process.env.NODE_ENV === 'development') {
-          // eslint-disable-next-line no-console
-          console.warn('LCP observer not supported:', error);
-        }
+      } catch {
+        // LCP observer not supported in this browser
       }
     }
 
@@ -78,11 +75,8 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         });
         fidObserver.observe({ entryTypes: ['first-input'] });
         observers.push(fidObserver);
-      } catch (error) {
-        if (process.env.NODE_ENV === 'development') {
-          // eslint-disable-next-line no-console
-          console.warn('FID observer not supported:', error);
-        }
+      } catch {
+        // FID observer not supported in this browser
       }
     }
 
@@ -108,11 +102,8 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         });
         clsObserver.observe({ entryTypes: ['layout-shift'] });
         observers.push(clsObserver);
-      } catch (error) {
-        if (process.env.NODE_ENV === 'development') {
-          // eslint-disable-next-line no-console
-          console.warn('CLS observer not supported:', error);
-        }
+      } catch {
+        // CLS observer not supported in this browser
       }
     }
 
@@ -135,11 +126,8 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         ttfb,
         memory,
       }));
-    } catch (error) {
-      if (process.env.NODE_ENV === 'development') {
-        // eslint-disable-next-line no-console
-        console.warn('Performance measurement failed:', error);
-      }
+    } catch {
+      // Performance measurement failed
     }
 
     // Cleanup observers
@@ -147,11 +135,8 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       observers.forEach(observer => {
         try {
           observer.disconnect();
-        } catch (error) {
-          if (process.env.NODE_ENV === 'development') {
-            // eslint-disable-next-line no-console
-            console.warn('Error disconnecting observer:', error);
-          }
+        } catch {
+          // Error disconnecting observer
         }
       });
     };
@@ -166,15 +151,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     );
 
     if (slowResources.length > 0) {
-      // eslint-disable-next-line no-console
-      if (process.env.NODE_ENV === 'development') console.warn(
-        'Slow resources detected:',
-        slowResources.map((r: PerformanceResourceTiming) => ({
-          name: r.name,
-          duration: r.duration,
-          size: r.transferSize,
-        }))
-      );
+      // Slow resources detected - could be logged to monitoring service
     }
   }, []);
 

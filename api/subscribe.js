@@ -56,9 +56,4 @@ async function handler(req, res) {
   }
 }
 
-<<<<<<< HEAD
 module.exports = handler;
-=======
-module.exports = { handler };
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0aa9
