@@ -1,131 +1,259 @@
-import React, { useState, useEffect } from 'react';
-import { logger } from '../utils/logger';
+import { useEffect } from 'react';
 
-interface PerformanceMetrics {
-  loadTime: number;
-  renderTime: number;
-  memoryUsage: number;
-  fps: number;
-}
-
-interface PerformanceMonitorProps {
-  onMetricsUpdate?: (metrics: PerformanceMetrics) => void;
-  enableConsoleLogging?: boolean;
-  updateInterval?: number;
-}
-
-const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
-  onMetricsUpdate,
-  enableConsoleLogging = false,
-  updateInterval = 1000,
-}) => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    loadTime: 0,
-    renderTime: 0,
-    memoryUsage: 0,
-    fps: 0,
-  });
-  const [performanceScore, setPerformanceScore] = useState(100);
-
+const PerformanceMonitor: React.FC = () => {
   useEffect(() => {
-    // const _reportWebVitals = (_metric: { name: string; value: number }) => {
-    //   // Log to console in development (only on client side)
-    //   if (typeof window !== 'undefined' && enableConsoleLogging) {
-    //     logger.info('Web Vital captured', { name: _metric.name, value: _metric.value });
-    //   }
-    // };
-
-    // Monitor Core Web Vitals
-    const navigation = performance.getEntriesByType('navigation')[0] as
-      | PerformanceNavigationTiming
-      | undefined;
-    const memory = (
-      performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number } }
-    ).memory;
-
-    const getPerformanceScore = (): number => {
-      let _score = 100;
-      if (metrics.renderTime > 1500) score -= 15;
-      if (metrics.loadTime > 3000) score -= 20;
-      if (metrics.memoryUsage > 50) score -= 10;
-      return Math.max(0, score);
-    };
-
-    const updateMetrics = () => {
-      const currentMetrics = {
-        loadTime: navigation?.loadEventEnd ?? 0,
-        memoryUsage: memory?.usedJSHeapSize ? memory.usedJSHeapSize / 1024 / 1024 : 0,
-        renderTime: performance.now(),
-        fps: 60, // Placeholder - would need actual FPS calculation
+    // Web Vitals monitoring
+    const measureWebVitals = () => {
+      // Largest Contentful Paint (LCP)
+      const measureLCP = () => {
+        new PerformanceObserver((entryList) => {
+          const entries = entryList.getEntries();
+          const lastEntry = entries[entries.length - 1];
+          const lcp = lastEntry.startTime;
+          
+          if (typeof window !== 'undefined' && (window as any).gtag) {
+            (window as any).gtag('event', 'web_vitals', {
+              event_category: 'performance',
+              event_label: 'LCP',
+              value: Math.round(lcp),
+              custom_map: {
+                metric_name: 'LCP',
+                metric_value: Math.round(lcp)
+              }
+            });
+          }
+        }).observe({ entryTypes: ['largest-contentful-paint'] });
       };
 
-      setMetrics(currentMetrics);
+      // First Input Delay (FID)
+      const measureFID = () => {
+        new PerformanceObserver((entryList) => {
+          const entries = entryList.getEntries();
+          entries.forEach((entry) => {
+            const fid = entry.processingStart - entry.startTime;
+            
+            if (typeof window !== 'undefined' && (window as any).gtag) {
+              (window as any).gtag('event', 'web_vitals', {
+                event_category: 'performance',
+                event_label: 'FID',
+                value: Math.round(fid),
+                custom_map: {
+                  metric_name: 'FID',
+                  metric_value: Math.round(fid)
+                }
+              });
+            }
+          });
+        }).observe({ entryTypes: ['first-input'] });
+      };
 
-      const _score = getPerformanceScore();
-      setPerformanceScore(score);
+      // Cumulative Layout Shift (CLS)
+      const measureCLS = () => {
+        let clsValue = 0;
+        let clsEntries: PerformanceEntry[] = [];
 
-      if (enableConsoleLogging) {
-        if (typeof console !== 'undefined') {
-          logger.debug('Performance Metrics', {
-            metrics: currentMetrics,
-            score,
+        new PerformanceObserver((entryList) => {
+          const entries = entryList.getEntries();
+          entries.forEach((entry) => {
+            if (!(entry as any).hadRecentInput) {
+              clsEntries.push(entry);
+              clsValue += (entry as any).value;
+            }
+          });
+        }).observe({ entryTypes: ['layout-shift'] });
+
+        // Report CLS when page is hidden
+        const reportCLS = () => {
+          if (clsValue > 0) {
+            if (typeof window !== 'undefined' && (window as any).gtag) {
+              (window as any).gtag('event', 'web_vitals', {
+                event_category: 'performance',
+                event_label: 'CLS',
+                value: Math.round(clsValue * 1000),
+                custom_map: {
+                  metric_name: 'CLS',
+                  metric_value: Math.round(clsValue * 1000)
+                }
+              });
+            }
+          }
+        };
+
+        document.addEventListener('visibilitychange', () => {
+          if (document.visibilityState === 'hidden') {
+            reportCLS();
+          }
+        });
+      };
+
+      // First Contentful Paint (FCP)
+      const measureFCP = () => {
+        new PerformanceObserver((entryList) => {
+          const entries = entryList.getEntries();
+          const fcp = entries[0].startTime;
+          
+          if (typeof window !== 'undefined' && (window as any).gtag) {
+            (window as any).gtag('event', 'web_vitals', {
+              event_category: 'performance',
+              event_label: 'FCP',
+              value: Math.round(fcp),
+              custom_map: {
+                metric_name: 'FCP',
+                metric_value: Math.round(fcp)
+              }
+            });
+          }
+        }).observe({ entryTypes: ['paint'] });
+      };
+
+      // Time to First Byte (TTFB)
+      const measureTTFB = () => {
+        const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+        const ttfb = navigation.responseStart - navigation.requestStart;
+        
+        if (typeof window !== 'undefined' && (window as any).gtag) {
+          (window as any).gtag('event', 'web_vitals', {
+            event_category: 'performance',
+            event_label: 'TTFB',
+            value: Math.round(ttfb),
+            custom_map: {
+              metric_name: 'TTFB',
+              metric_value: Math.round(ttfb)
+            }
+          });
+        }
+      };
+
+      // Initialize all measurements
+      measureLCP();
+      measureFID();
+      measureCLS();
+      measureFCP();
+      measureTTFB();
+    };
+
+    // Resource loading monitoring
+    const monitorResourceLoading = () => {
+      const resourceObserver = new PerformanceObserver((list) => {
+        list.getEntries().forEach((entry) => {
+          const resource = entry as PerformanceResourceTiming;
+          
+          // Track slow resources
+          if (resource.duration > 1000) { // Resources taking more than 1 second
+            if (typeof window !== 'undefined' && (window as any).gtag) {
+              (window as any).gtag('event', 'slow_resource', {
+                event_category: 'performance',
+                event_label: resource.name,
+                value: Math.round(resource.duration),
+                custom_map: {
+                  resource_type: resource.initiatorType,
+                  resource_size: resource.transferSize || 0,
+                  resource_duration: Math.round(resource.duration)
+                }
+              });
+            }
+          }
+        });
+      });
+
+      resourceObserver.observe({ entryTypes: ['resource'] });
+    };
+
+    // Memory usage monitoring
+    const monitorMemoryUsage = () => {
+      if ('memory' in performance) {
+        const memory = (performance as any).memory;
+        
+        const logMemoryUsage = () => {
+          if (typeof window !== 'undefined' && (window as any).gtag) {
+            (window as any).gtag('event', 'memory_usage', {
+              event_category: 'performance',
+              event_label: 'memory_usage',
+              value: Math.round(memory.usedJSHeapSize / 1024 / 1024), // Convert to MB
+              custom_map: {
+                used_heap: Math.round(memory.usedJSHeapSize / 1024 / 1024),
+                total_heap: Math.round(memory.totalJSHeapSize / 1024 / 1024),
+                heap_limit: Math.round(memory.jsHeapSizeLimit / 1024 / 1024)
+              }
+            });
+          }
+        };
+
+        // Log memory usage every 30 seconds
+        setInterval(logMemoryUsage, 30000);
+      }
+    };
+
+    // Page load time monitoring
+    const monitorPageLoadTime = () => {
+      window.addEventListener('load', () => {
+        const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+        const loadTime = navigation.loadEventEnd - navigation.navigationStart;
+        
+        if (typeof window !== 'undefined' && (window as any).gtag) {
+          (window as any).gtag('event', 'page_load_time', {
+            event_category: 'performance',
+            event_label: 'page_load',
+            value: Math.round(loadTime),
+            custom_map: {
+              dom_content_loaded: Math.round(navigation.domContentLoadedEventEnd - navigation.navigationStart),
+              load_complete: Math.round(loadTime),
+              first_byte: Math.round(navigation.responseStart - navigation.navigationStart)
+            }
+          });
+        }
+      });
+    };
+
+    // Initialize all monitoring
+    measureWebVitals();
+    monitorResourceLoading();
+    monitorMemoryUsage();
+    monitorPageLoadTime();
+
+    // Performance budget monitoring
+    const checkPerformanceBudget = () => {
+      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      const loadTime = navigation.loadEventEnd - navigation.navigationStart;
+      
+      // Performance budgets
+      const budgets = {
+        lcp: 2500, // 2.5 seconds
+        fid: 100,  // 100ms
+        cls: 0.1,  // 0.1
+        fcp: 1800, // 1.8 seconds
+        ttfb: 600, // 600ms
+        loadTime: 3000 // 3 seconds
+      };
+
+      // Check if any budget is exceeded
+      const exceededBudgets = [];
+      
+      if (loadTime > budgets.loadTime) {
+        exceededBudgets.push('load_time');
+      }
+
+      if (exceededBudgets.length > 0) {
+        if (typeof window !== 'undefined' && (window as any).gtag) {
+          (window as any).gtag('event', 'performance_budget_exceeded', {
+            event_category: 'performance',
+            event_label: exceededBudgets.join(','),
+            value: Math.round(loadTime),
+            custom_map: {
+              exceeded_budgets: exceededBudgets.join(','),
+              load_time: Math.round(loadTime)
+            }
           });
         }
       }
-
-      if (onMetricsUpdate) {
-        onMetricsUpdate(currentMetrics);
-      }
     };
 
-    // Initial update
-    updateMetrics();
+    // Check performance budget after load
+    window.addEventListener('load', checkPerformanceBudget);
 
-    // Set up interval for continuous monitoring
-    const _interval = setInterval(updateMetrics, updateInterval);
+  }, []);
 
-    return () => clearInterval(interval);
-  }, [
-    onMetricsUpdate,
-    enableConsoleLogging,
-    updateInterval,
-    metrics.renderTime,
-    metrics.loadTime,
-    metrics.memoryUsage,
-  ]);
-
-  // Only show when explicitly enabled via props
-  if (!enableConsoleLogging) {
-    return null;
-  }
-
-  return (
-    <div className="fixed bottom-4 right-4 z-50 bg-white border border-gray-200 rounded-lg shadow-lg p-4 min-w-64">
-      <h3 className="text-sm font-semibold text-gray-900 mb-3">Performance Monitor</h3>
-      <div className="space-y-2 text-xs">
-        <div className="flex justify-between">
-          <span className="text-gray-600">Load Time:</span>
-          <span className="font-mono">{metrics.loadTime.toFixed(2)}ms</span>
-        </div>
-        <div className="flex justify-between">
-          <span className="text-gray-600">Memory:</span>
-          <span className="font-mono">{metrics.memoryUsage.toFixed(2)}MB</span>
-        </div>
-        <div className="flex justify-between">
-          <span className="text-gray-600">FPS:</span>
-          <span className="font-mono">{metrics.fps.toFixed(1)}</span>
-        </div>
-        <div className="flex justify-between">
-          <span className="text-gray-600">Score:</span>
-          <span
-            className={`font-mono ${performanceScore > 80 ? 'text-green-600' : performanceScore > 60 ? 'text-yellow-600' : 'text-red-600'}`}
-          >
-            {performanceScore}
-          </span>
-        </div>
-      </div>
-    </div>
-  );
+  return null;
 };
 
 export default PerformanceMonitor;

@@ -1,31 +1,84 @@
 User-agent: *
 Allow: /
 
-<<<<<<< HEAD
 # Sitemap
 Sitemap: https://ziontechgroup.com/sitemap.xml
 
-# Crawl-delay
+# Crawl-delay for respectful crawling
 Crawl-delay: 1
 
-=======
-Sitemap: https://ziontechgroup.com/sitemap.xml
-
->>>>>>> cursor/analyze-improve-and-deploy-application-3d67
 # Disallow admin and private areas
 Disallow: /admin/
 Disallow: /api/
 Disallow: /_next/
-<<<<<<< HEAD
 Disallow: /private/
+Disallow: /temp/
+Disallow: /backup/
 
 # Allow important pages
-Allow: /
-Allow: /about
-Allow: /services
+Allow: /ai-services
+Allow: /quantum-computing
+Allow: /autonomous-systems
+Allow: /cybersecurity
+Allow: /business-intelligence
 Allow: /contact
-Allow: /blog
-Allow: /enterprise
-=======
-Disallow: /private/
->>>>>>> cursor/analyze-improve-and-deploy-application-3d67
+Allow: /about
+Allow: /team
+Allow: /case-studies
+
+# Block common bot traps
+Disallow: /*.json$
+Disallow: /*?*
+Disallow: /*#*
+
+# Allow specific file types
+Allow: /*.css$
+Allow: /*.js$
+Allow: /*.png$
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.gif$
+Allow: /*.svg$
+Allow: /*.webp$
+Allow: /*.ico$
+
+# Block duplicate content
+Disallow: /page-minimal
+Disallow: /page-optimized
+Disallow: /offline
+
+# Social media crawlers
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+User-agent: WhatsApp
+Allow: /
+
+# Search engine specific rules
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Slurp
+Allow: /
+Crawl-delay: 2
+
+# Block problematic bots
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /

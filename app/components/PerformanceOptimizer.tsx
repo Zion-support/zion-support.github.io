@@ -1,219 +1,115 @@
-<<<<<<< HEAD
-import React, { useEffect, useState } from 'react';
-
-interface PerformanceMetrics {
-  loadTime: number;
-  firstContentfulPaint: number;
-  largestContentfulPaint: number;
-  cumulativeLayoutShift: number;
-  firstInputDelay: number;
-}
-
-<<<<<<< HEAD
-const PerformanceOptimizer: React.FC = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
-  const [isOptimized, setIsOptimized] = useState(false);
-=======
-const PerformanceOptimizerComponent: React.FC<PerformanceOptimizerProps> = ({
-  children,
-}) => {
-  // Preload critical resources
-  useEffect(() => {
-    const preloadCriticalResources = () => {
-      // Preload critical fonts
-      const _fontLink = document.createElement('link');
-      fontLink.rel = 'preload';
-      fontLink.href =
-        'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap';
-      fontLink.as = 'style';
-      document.head.appendChild(fontLink);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-6395
-
-  useEffect(() => {
-    // Performance monitoring
-    const measurePerformance = () => {
-      if ('performance' in window) {
-        const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-        const paintEntries = performance.getEntriesByType('paint');
-        
-        const fcp = paintEntries.find(entry => entry.name === 'first-contentful-paint');
-        const lcp = performance.getEntriesByType('largest-contentful-paint')[0];
-        
-        const metrics: PerformanceMetrics = {
-          loadTime: navigation.loadEventEnd - navigation.loadEventStart,
-          firstContentfulPaint: fcp ? fcp.startTime : 0,
-          largestContentfulPaint: lcp ? lcp.startTime : 0,
-          cumulativeLayoutShift: 0, // Would need to be measured with observer
-          firstInputDelay: 0 // Would need to be measured with observer
-        };
-        
-        setMetrics(metrics);
-        
-        // Check if performance is optimized
-        const isGoodPerformance = 
-          metrics.firstContentfulPaint < 1500 && 
-          metrics.largestContentfulPaint < 2500;
-        
-        setIsOptimized(isGoodPerformance);
-      }
-    };
-
-    // Measure after page load
-    if (document.readyState === 'complete') {
-      measurePerformance();
-    } else {
-      window.addEventListener('load', measurePerformance);
-    }
-
-=======
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 
 const PerformanceOptimizer: React.FC = () => {
   useEffect(() => {
->>>>>>> cursor/analyze-improve-and-deploy-application-3d67
     // Preload critical resources
     const preloadCriticalResources = () => {
-      const criticalImages = [
-        '/og-image.jpg',
-<<<<<<< HEAD
-        '/logo.png'
-=======
-        '/logo.png',
-        '/favicon.ico'
->>>>>>> cursor/analyze-improve-and-deploy-application-3d67
+      const criticalResources = [
+        '/fonts/inter-var.woff2',
+        '/images/hero-bg.webp',
+        '/images/logo.svg'
       ];
 
-      criticalImages.forEach(src => {
-<<<<<<< HEAD
+      criticalResources.forEach(resource => {
         const link = document.createElement('link');
         link.rel = 'preload';
-        link.as = 'image';
-        link.href = src;
+        link.href = resource;
+        link.as = resource.endsWith('.woff2') ? 'font' : 'image';
+        if (resource.endsWith('.woff2')) {
+          link.crossOrigin = 'anonymous';
+        }
         document.head.appendChild(link);
-=======
-        const _img = new Image();
-        img['src'] = src;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-6395
       });
     };
 
     // Optimize images
     const optimizeImages = () => {
-      const images = document.querySelectorAll('img');
-      images.forEach(img => {
-        // Add loading="lazy" to non-critical images
-        if (!img.hasAttribute('loading')) {
-          img.setAttribute('loading', 'lazy');
-        }
-        
-        // Add decoding="async" for better performance
-        if (!img.hasAttribute('decoding')) {
-          img.setAttribute('decoding', 'async');
-        }
+      const images = document.querySelectorAll('img[data-src]');
+      const imageObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const img = entry.target as HTMLImageElement;
+            img.src = img.dataset.src || '';
+            img.classList.remove('lazy');
+            imageObserver.unobserve(img);
+          }
+        });
       });
+
+      images.forEach(img => imageObserver.observe(img));
     };
 
-    // Intersection Observer for animations
-    const setupIntersectionObserver = () => {
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach(entry => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add('animate-fade-in');
-            }
-          });
-        },
-        { threshold: 0.1 }
-      );
+    // Prefetch next page resources
+    const prefetchNextPageResources = () => {
+      const links = document.querySelectorAll('a[href^="/"]');
+      const prefetchedUrls = new Set();
 
-      const elements = document.querySelectorAll('.animate-on-scroll');
-      elements.forEach(el => observer.observe(el));
+      links.forEach(link => {
+        link.addEventListener('mouseenter', () => {
+          const href = link.getAttribute('href');
+          if (href && !prefetchedUrls.has(href)) {
+            prefetchedUrls.add(href);
+            const prefetchLink = document.createElement('link');
+            prefetchLink.rel = 'prefetch';
+            prefetchLink.href = href;
+            document.head.appendChild(prefetchLink);
+          }
+        });
+      });
     };
 
     // Initialize optimizations
     preloadCriticalResources();
-<<<<<<< HEAD
+    optimizeImages();
+    prefetchNextPageResources();
 
-<<<<<<< HEAD
-    // Optimize images
-    const optimizeImages = () => {
-      const images = document.querySelectorAll('img');
-      images.forEach(img => {
-        if (!img.loading) {
-          img.loading = 'lazy';
-        }
-        if (!img.decoding) {
-          img.decoding = 'async';
-        }
-      });
-=======
-  // Optimize scroll performance
-  const handleScroll = useCallback(() => {
-    // Throttle scroll events for better performance
-    let _ticking = false;
+    // Service Worker registration for caching
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js')
+        .then(registration => {
+          console.log('SW registered: ', registration);
+        })
+        .catch(registrationError => {
+          console.log('SW registration failed: ', registrationError);
+        });
+    }
 
-    const updateScrollPosition = () => {
-      // Add scroll-based optimizations here
-      ticking = false;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-6395
+    // Performance monitoring
+    const measurePerformance = () => {
+      if ('performance' in window) {
+        const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+        const paint = performance.getEntriesByType('paint');
+        
+        const metrics = {
+          domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
+          loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
+          firstPaint: paint.find(entry => entry.name === 'first-paint')?.startTime || 0,
+          firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0,
+        };
+
+        // Send metrics to analytics
+        if (typeof window !== 'undefined' && (window as any).gtag) {
+          (window as any).gtag('event', 'performance_metrics', {
+            event_category: 'performance',
+            event_label: 'page_load',
+            value: Math.round(metrics.domContentLoaded),
+            custom_map: {
+              'first_paint': Math.round(metrics.firstPaint),
+              'first_contentful_paint': Math.round(metrics.firstContentfulPaint),
+            }
+          });
+        }
+      }
     };
 
-    optimizeImages();
+    // Measure performance after page load
+    window.addEventListener('load', measurePerformance);
 
     return () => {
       window.removeEventListener('load', measurePerformance);
     };
   }, []);
 
-  // Resource hints for better performance
-  useEffect(() => {
-    const addResourceHints = () => {
-      const hints = [
-        { rel: 'dns-prefetch', href: 'https://fonts.googleapis.com' },
-        { rel: 'dns-prefetch', href: 'https://fonts.gstatic.com' },
-        { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
-        { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossOrigin: 'anonymous' }
-      ];
-
-<<<<<<< HEAD
-      hints.forEach(hint => {
-        const link = document.createElement('link');
-        link.rel = hint.rel;
-        link.href = hint.href;
-        if (hint.crossOrigin) {
-          link.crossOrigin = hint.crossOrigin;
-        }
-        document.head.appendChild(link);
-=======
-  // Add performance monitoring
-  useEffect(() => {
-    if ('performance' in window) {
-      const observer = new PerformanceObserver(list => {
-        list.getEntries().forEach(entry => {
-          if (entry.entryType === 'navigation') {
-             
-            if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { } }
-          }
-        });
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-6395
-      });
-    };
-
-    addResourceHints();
-  }, []);
-
-  // Don't render anything visible
-=======
-    optimizeImages();
-    setupIntersectionObserver();
-
-    // Cleanup
-    return () => {
-      // Cleanup if needed
-    };
-  }, []);
-
->>>>>>> cursor/analyze-improve-and-deploy-application-3d67
   return null;
 };
 

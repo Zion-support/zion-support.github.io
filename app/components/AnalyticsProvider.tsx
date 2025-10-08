@@ -1,165 +1,207 @@
-import React, { createContext, useContext, useEffect, useState } from 'react';
-
-import { logger } from '../utils/logger';
-
-interface AnalyticsEvent {
-  event: string;
-  category: string;
-  action: string;
-  label?: string;
-  value?: number;
-}
+import { useEffect, createContext, useContext, ReactNode } from 'react';
 
 interface AnalyticsContextType {
-  trackEvent: (event: AnalyticsEvent) => void;
-  trackPageView: (page: string) => void;
-  trackPerformance: (metric: string, value: number) => void;
-  trackError: (error: Error, context?: string) => void;
+  trackEvent: (eventName: string, parameters?: Record<string, any>) => void;
+  trackPageView: (pageName: string, pagePath?: string) => void;
+  trackConversion: (conversionName: string, value?: number) => void;
 }
 
-const AnalyticsContext = createContext<AnalyticsContextType | undefined>(
-  undefined
-);
-
-export const useAnalytics = () => {
-  const _context = useContext(AnalyticsContext);
-  if (!context) {
-    throw new Error('useAnalytics must be used within an AnalyticsProvider');
-  }
-  return context;
-};
+const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
 
 interface AnalyticsProviderProps {
-  children: React.ReactNode;
-  googleAnalyticsId?: string;
-  enableDebug?: boolean;
+  children: ReactNode;
 }
 
-export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
-  children,
-  googleAnalyticsId = process.env.NEXT_PUBLIC_GA_ID,
-  enableDebug = process.env['NODE_ENV'] === 'development',
-}) => {
-  const [isInitialized, setIsInitialized] = useState(false);
-
+export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
   useEffect(() => {
-    if (typeof window === 'undefined' || !googleAnalyticsId) return;
-
     // Initialize Google Analytics
-    const _script = document.createElement('script');
-    script.async = true;
-    script['src'] = `https://www.googletagmanager.com/gtag/js?id=${googleAnalyticsId}`;
-    document.head.appendChild(script);
+    const initializeGoogleAnalytics = () => {
+      const GA_MEASUREMENT_ID = process.env.REACT_APP_GA_MEASUREMENT_ID || 'G-XXXXXXXXXX';
+      
+      // Load Google Analytics script
+      const script = document.createElement('script');
+      script.async = true;
+      script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`;
+      document.head.appendChild(script);
 
-    script.onload = () => {
       // Initialize gtag
-      (window as unknown as { dataLayer: unknown[] }).dataLayer = (window as unknown as { dataLayer: unknown[] }).dataLayer || [];
-      function gtag(...args: unknown[]) {
-        (window as unknown as { dataLayer: unknown[] }).dataLayer.push(args);
+      (window as any).dataLayer = (window as any).dataLayer || [];
+      function gtag(...args: any[]) {
+        (window as any).dataLayer.push(args);
       }
-      (window as unknown as { gtag: typeof gtag }).gtag = gtag;
+      (window as any).gtag = gtag;
 
       gtag('js', new Date());
-      gtag('config', googleAnalyticsId, {
+      gtag('config', GA_MEASUREMENT_ID, {
         page_title: document.title,
         page_location: window.location.href,
+        send_page_view: false // We'll handle this manually
       });
-
-      setIsInitialized(true);
     };
 
-    return () => {
-      // Cleanup
-      if (script.parentNode) {
-        script.parentNode.removeChild(script);
-      }
+    // Initialize Facebook Pixel
+    const initializeFacebookPixel = () => {
+      const FB_PIXEL_ID = process.env.REACT_APP_FB_PIXEL_ID;
+      if (!FB_PIXEL_ID) return;
+
+      !(function(f: any, b: any, e: any, v: any, n: any, t: any, s: any) {
+        if (f.fbq) return;
+        n = f.fbq = function() {
+          n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = '2.0';
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+
+      (window as any).fbq('init', FB_PIXEL_ID);
+      (window as any).fbq('track', 'PageView');
     };
-  }, [googleAnalyticsId]);
 
-  const trackEvent = (event: AnalyticsEvent) => {
-    if (!isInitialized || typeof window === 'undefined') return;
+    // Initialize LinkedIn Insight Tag
+    const initializeLinkedInInsight = () => {
+      const LINKEDIN_PARTNER_ID = process.env.REACT_APP_LINKEDIN_PARTNER_ID;
+      if (!LINKEDIN_PARTNER_ID) return;
 
-    if (enableDebug) {
-      logger.debug('Analytics Event', 'Analytics', { event: JSON.stringify(event) });
-    }
+      (window as any)._linkedin_partner_id = LINKEDIN_PARTNER_ID;
+      (window as any).window._linkedin_data_partner_ids = (window as any).window._linkedin_data_partner_ids || [];
+      (window as any).window._linkedin_data_partner_ids.push((window as any)._linkedin_partner_id);
 
-    if ((window as unknown as { gtag: (...args: unknown[]) => void }).gtag) {
-      (window as unknown as { gtag: (...args: unknown[]) => void }).gtag('event', event.action, {
-        event_category: event.category,
-        event_label: event.label,
-        value: event.value,
+      (function(l: any) {
+        if (!l) {
+          (window as any).intl = l;
+          const s = document.getElementsByTagName('script')[0];
+          const b = document.createElement('script');
+          b.type = 'text/javascript';
+          b.async = true;
+          b.src = 'https://snap.licdn.com/li.lms-analytics/insight.min.js';
+          s.parentNode.insertBefore(b, s);
+        }
+      })((window as any).intl);
+    };
+
+    // Initialize analytics
+    initializeGoogleAnalytics();
+    initializeFacebookPixel();
+    initializeLinkedInInsight();
+
+    // Track initial page view
+    trackPageView(document.title, window.location.pathname);
+
+  }, []);
+
+  const trackEvent = (eventName: string, parameters: Record<string, any> = {}) => {
+    // Google Analytics
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('event', eventName, {
+        event_category: parameters.category || 'engagement',
+        event_label: parameters.label || '',
+        value: parameters.value || 0,
+        ...parameters
       });
     }
-  };
 
-  const trackPageView = (page: string) => {
-    if (!isInitialized || typeof window === 'undefined') return;
-
-    if (enableDebug) {
-      logger.debug('Page View', 'Analytics', { page });
+    // Facebook Pixel
+    if (typeof window !== 'undefined' && (window as any).fbq) {
+      (window as any).fbq('track', eventName, parameters);
     }
 
-    if ((window as unknown as { gtag: (...args: unknown[]) => void }).gtag) {
-      (window as unknown as { gtag: (...args: unknown[]) => void }).gtag('config', googleAnalyticsId, {
-        page_title: document.title,
-        page_location: page,
+    // LinkedIn Insight
+    if (typeof window !== 'undefined' && (window as any).lintrk) {
+      (window as any).lintrk('track', { conversion_id: eventName });
+    }
+
+    // Custom analytics endpoint
+    fetch('/api/analytics', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        event: eventName,
+        parameters,
+        timestamp: new Date().toISOString(),
+        url: window.location.href,
+        userAgent: navigator.userAgent
+      })
+    }).catch(err => {
+      console.error('Failed to send analytics event:', err);
+    });
+  };
+
+  const trackPageView = (pageName: string, pagePath: string = window.location.pathname) => {
+    // Google Analytics
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('config', process.env.REACT_APP_GA_MEASUREMENT_ID || 'G-XXXXXXXXXX', {
+        page_title: pageName,
+        page_location: window.location.origin + pagePath,
+        send_page_view: true
       });
     }
-  };
 
-  const trackPerformance = (metric: string, value: number) => {
-    if (!isInitialized || typeof window === 'undefined') return;
-
-    if (enableDebug) {
-      logger.perf(metric, value);
+    // Facebook Pixel
+    if (typeof window !== 'undefined' && (window as any).fbq) {
+      (window as any).fbq('track', 'PageView');
     }
 
-    if ((window as unknown as { gtag: (...args: unknown[]) => void }).gtag) {
-      (window as unknown as { gtag: (...args: unknown[]) => void }).gtag('event', 'web_vitals', {
-        event_category: 'Performance',
-        event_label: metric,
-        value: Math.round(value),
-        non_interaction: true,
+    // Custom analytics
+    trackEvent('page_view', {
+      page_name: pageName,
+      page_path: pagePath,
+      page_title: document.title
+    });
+  };
+
+  const trackConversion = (conversionName: string, value: number = 0) => {
+    // Google Analytics
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('event', 'conversion', {
+        send_to: conversionName,
+        value: value,
+        currency: 'USD'
       });
     }
-  };
 
-  const trackError = (error: Error, context?: string) => {
-    if (!isInitialized || typeof window === 'undefined') return;
-
-    if (enableDebug) {
-<<<<<<< HEAD
-       
-      // eslint-disable-next-line no-console
-      console.error('Analytics Error:', error, context);
-=======
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-6395
-    }
-
-    if ((window as unknown as { gtag: (...args: unknown[]) => void }).gtag) {
-      (window as unknown as { gtag: (...args: unknown[]) => void }).gtag('event', 'exception', {
-        description: error.message,
-        fatal: false,
-        custom_map: {
-          context: context || 'unknown',
-        },
+    // Facebook Pixel
+    if (typeof window !== 'undefined' && (window as any).fbq) {
+      (window as any).fbq('track', 'Lead', {
+        value: value,
+        currency: 'USD'
       });
     }
+
+    // Custom analytics
+    trackEvent('conversion', {
+      conversion_name: conversionName,
+      conversion_value: value,
+      currency: 'USD'
+    });
   };
 
-  const value: AnalyticsContextType = {
+  const contextValue: AnalyticsContextType = {
     trackEvent,
     trackPageView,
-    trackPerformance,
-    trackError,
+    trackConversion
   };
 
   return (
-    <AnalyticsContext.Provider value={value}>
+    <AnalyticsContext.Provider value={contextValue}>
       {children}
     </AnalyticsContext.Provider>
   );
 };
 
-export default AnalyticsProvider;
+export const useAnalytics = (): AnalyticsContextType => {
+  const context = useContext(AnalyticsContext);
+  if (context === undefined) {
+    throw new Error('useAnalytics must be used within an AnalyticsProvider');
+  }
+  return context;
+};
