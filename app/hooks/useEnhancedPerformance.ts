@@ -106,7 +106,7 @@ export function useEnhancedPerformance(
       return {
         end: () => {
           const duration = performance.now() - startTime;
-          if (trackPerformance) {
+          if (duration && trackPerformance) {
             analytics.trackPerformance(
               `${component}-${operationName}`,
               duration,

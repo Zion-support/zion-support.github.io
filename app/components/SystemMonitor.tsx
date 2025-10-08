@@ -7,7 +7,6 @@
 
 import React, { useState, useEffect, useCallback } from 'react';
 import { errorHandler } from '../utils/enhancedErrorHandler';
-import { performanceOptimizer } from '../utils/performanceOptimizer';
 
 // Collect basic performance metrics
 const collectPerformanceMetrics = () => {
@@ -221,6 +220,7 @@ console.error('Failed to update metrics:', error);
 
     const exportData = {
       metrics,
+      performanceData: metrics,
       errorData: errorHandler.exportErrorData(),
       timestamp: new Date().toISOString(),
     };
