@@ -23,16 +23,26 @@ interface SEOConfig {
   tags?: string[];
 }
 
-interface SEOConfig {
+interface AdvancedSEOOptimizerProps {
   title: string;
   description: string;
-  url: string;
-  canonicalUrl: string;
   keywords: string[];
-}
-
-interface AdvancedSEOOptimizerProps {
-  config: SEOConfig;
+  canonicalUrl: string;
+  ogTitle?: string;
+  ogDescription?: string;
+  ogImage?: string;
+  ogType?: string;
+  twitterCard?: string;
+  twitterTitle?: string;
+  twitterDescription?: string;
+  twitterImage?: string;
+  structuredData?: Record<string, unknown>;
+  robots?: string;
+  author?: string;
+  publishedTime?: string;
+  modifiedTime?: string;
+  section?: string;
+  tags?: string[];
   enableStructuredData?: boolean;
   enableOpenGraph?: boolean;
   enableTwitterCards?: boolean;
@@ -40,12 +50,51 @@ interface AdvancedSEOOptimizerProps {
 }
 
 const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
-  config,
+  title,
+  description,
+  keywords,
+  canonicalUrl,
+  ogTitle,
+  ogDescription,
+  ogImage,
+  ogType = 'website',
+  twitterCard = 'summary_large_image',
+  twitterTitle,
+  twitterDescription,
+  twitterImage,
+  structuredData,
+  robots = 'index, follow',
+  author,
+  publishedTime,
+  modifiedTime,
+  section,
+  tags,
   enableStructuredData = true,
   enableOpenGraph = true,
   enableTwitterCards = true,
   enableSchemaMarkup = true,
 }) => {
+  const config: SEOConfig = {
+    title,
+    description,
+    keywords,
+    canonicalUrl,
+    ogTitle,
+    ogDescription,
+    ogImage,
+    ogType,
+    twitterCard,
+    twitterTitle,
+    twitterDescription,
+    twitterImage,
+    structuredData,
+    robots,
+    author,
+    publishedTime,
+    modifiedTime,
+    section,
+    tags,
+  };
   const structuredDataRef = useRef<HTMLScriptElement | null>(null);
 
   const generateStructuredData = useCallback(() => {
@@ -185,7 +234,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     trackPageView({
       title: config.title,
       description: config.description,
-      url: config.canonicalUrl,
+      keywords: config.keywords,
       canonicalUrl: config.canonicalUrl,
     });
 
