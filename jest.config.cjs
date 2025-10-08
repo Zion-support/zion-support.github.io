@@ -1,4 +1,4 @@
-// Jest configuration for Vite/React project
+// Jest configuration for Vite + React project
 module.exports = {
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
   testEnvironment: 'jest-environment-jsdom',
@@ -8,10 +8,6 @@ module.exports = {
     '^@/components/(.*)$': '<rootDir>/app/components/$1',
     '^@/utils/(.*)$': '<rootDir>/src/utils/$1',
     '\\.(css|less|scss|sass)$': 'identity-obj-proxy',
-    '\\.(jpg|jpeg|png|gif|svg|webp)$': '<rootDir>/__mocks__/fileMock.js',
-  },
-  transform: {
-    '^.+\\.(ts|tsx|js|jsx)$': ['babel-jest', { configFile: './babel.config.js' }],
   },
   testMatch: [
     '**/__tests__/**/*.[jt]s?(x)',
@@ -58,4 +54,15 @@ module.exports = {
   transformIgnorePatterns: [
     '/node_modules/(?!(lucide-react|@heroicons/react)/)',
   ],
+  transform: {
+    '^.+\\.(ts|tsx)$': ['ts-jest', {
+      useESM: true,
+      tsconfig: {
+        jsx: 'react-jsx'
+      }
+    }],
+    '^.+\\.(js|jsx)$': 'babel-jest',
+  },
+  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json'],
+  extensionsToTreatAsEsm: ['.ts', '.tsx'],
 };

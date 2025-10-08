@@ -37,34 +37,9 @@ jest.mock('./app/hooks/usePerformanceMonitoring.ts', () => ({
   })),
 }));
 
-
-// Mock React Router (this is a Vite project, not Next.js)
-const mockRouterContext = {
-  basename: '',
-  location: { pathname: '/', search: '', hash: '', state: null },
-  navigationType: 'POP',
-  navigator: {
-    createHref: jest.fn(),
-    go: jest.fn(),
-    push: jest.fn(),
-    replace: jest.fn(),
-  },
-  static: false,
-};
-
-// Mock React Router context provider
-const MockRouterProvider = ({ children }) => {
-  const React = require('react');
-  const { createContext } = React;
-  
-  const RouterContext = createContext(mockRouterContext);
-  
-  return React.createElement(RouterContext.Provider, { value: mockRouterContext }, children);
-};
-
+// Mock React Router
 jest.mock('react-router-dom', () => ({
   ...jest.requireActual('react-router-dom'),
-
   useNavigate: () => jest.fn(),
   useLocation: () => ({
     pathname: '/',
@@ -73,20 +48,16 @@ jest.mock('react-router-dom', () => ({
     state: null,
   }),
   useParams: () => ({}),
-  BrowserRouter: MockRouterProvider,
-  MemoryRouter: MockRouterProvider,
-  RouterProvider: ({ router }) => null,
-  useRouterContext: () => mockRouterContext,
-}));
-
-// Mock React Router context
-jest.mock('react-router', () => ({
-  ...jest.requireActual('react-router'),
-  useLocation: () => mockRouterContext.location,
-  useNavigate: () => mockRouterContext.navigator.push,
-  useParams: () => ({}),
-  useSearchParams: () => [new URLSearchParams(), jest.fn()],
-  useRouterContext: () => mockRouterContext,
+  Link: ({ children, to, ...props }) => (
+    <a href={to} {...props}>
+      {children}
+    </a>
+  ),
+  NavLink: ({ children, to, ...props }) => (
+    <a href={to} {...props}>
+      {children}
+    </a>
+  ),
 }));
 
 // Mock window.matchMedia
@@ -114,11 +85,6 @@ global.IntersectionObserver = class IntersectionObserver {
   }
   unobserve() {}
 };
-
-// Mock TextEncoder and TextDecoder
-const { TextEncoder, TextDecoder } = require('util');
-global.TextEncoder = TextEncoder;
-global.TextDecoder = TextDecoder;
 
 // Suppress console errors in tests
 const originalError = console.error;
