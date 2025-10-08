@@ -5,7 +5,10 @@
 
 import React from 'react';
 import { useEffect, useCallback, useRef } from 'react';
+<<<<<<< HEAD
 import { performanceOptimizer } from '../utils/performanceOptimizer';
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-4e61
 import { errorTracker } from '../utils/enhancedErrorTracking';
 import { analytics } from '../utils/enhancedAnalytics';
 

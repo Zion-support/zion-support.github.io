@@ -99,9 +99,12 @@ class HealthCheckService {
           duration,
         });
 <<<<<<< HEAD
+<<<<<<< HEAD
       } catch (error) {
         logger.error(`Health check "${name}" failed`, error as Error);
 =======
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-5c5e
       } catch {
 logger._error(`Health check "${name}" failed`, _error as Error);
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbf5
@@ -167,7 +170,11 @@ logger._error(`Health check "${name}" failed`, _error as Error);
     }
 
     try {
+<<<<<<< HEAD
       const memory = (performance as { memory: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
+=======
+      const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
+>>>>>>> cursor/fix-errors-and-merge-to-main-5c5e
       const usedPercent = (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100;
 
       let status: 'pass' | 'warn' | 'fail' = 'pass';
@@ -193,10 +200,14 @@ logger._error(`Health check "${name}" failed`, _error as Error);
         },
       };
 <<<<<<< HEAD
+<<<<<<< HEAD
     } catch (error) {
 =======
     } catch {
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbf5
+=======
+    } catch {
+>>>>>>> cursor/fix-errors-and-merge-to-main-5c5e
       return {
         name: 'memory',
         status: 'warn',
@@ -235,10 +246,14 @@ logger._error(`Health check "${name}" failed`, _error as Error);
         },
       };
 <<<<<<< HEAD
+<<<<<<< HEAD
     } catch (error) {
 =======
     } catch {
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbf5
+=======
+    } catch {
+>>>>>>> cursor/fix-errors-and-merge-to-main-5c5e
       return {
         name: 'performance',
         status: 'warn',
@@ -310,10 +325,14 @@ logger._error(`Health check "${name}" failed`, _error as Error);
         localStorage.setItem('_size_test', testData);
         localStorage.removeItem('_size_test');
 <<<<<<< HEAD
+<<<<<<< HEAD
       } catch (error) {
 =======
       } catch {
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbf5
+=======
+      } catch {
+>>>>>>> cursor/fix-errors-and-merge-to-main-5c5e
         return {
           name: 'storage',
           status: 'warn',
@@ -327,10 +346,14 @@ logger._error(`Health check "${name}" failed`, _error as Error);
         message: 'Storage working correctly',
       };
 <<<<<<< HEAD
+<<<<<<< HEAD
     } catch (error) {
 =======
     } catch {
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbf5
+=======
+    } catch {
+>>>>>>> cursor/fix-errors-and-merge-to-main-5c5e
       return {
         name: 'storage',
         status: 'fail',

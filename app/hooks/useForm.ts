@@ -11,7 +11,10 @@ import {
   validateForm,
   isFormValid,
   getFormErrors,
+<<<<<<< HEAD
   ValidationResult
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-4e61
 } from '../utils/formValidation';
 
 export interface UseFormConfig<T extends Record<string, unknown>> {
@@ -145,14 +148,14 @@ export function useForm<T extends Record<string, unknown>>({
       setIsSubmitting(true);
 
       try {
-        await onSubmit(values);
+        await _onSubmit(values);
       } catch (error) {
         console.error('Form submission error:', error);
       } finally {
         setIsSubmitting(false);
       }
     },
-    [values, validateAllFields, onSubmit]
+    [values, validateAllFields, _onSubmit]
   );
 
   // Set field value programmatically

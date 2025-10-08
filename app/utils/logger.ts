@@ -80,24 +80,39 @@ class Logger {
   /**
    * Log a debug message
    */
+<<<<<<< HEAD
   debug(message: string, contextOrMetadata?: string | Record<string, unknown>, metadata?: Record<string, unknown>): void {
     const [context, meta] = this.parseArgs(contextOrMetadata, metadata);
+=======
+  debug(message: string, contextOrMetadata?: string | Record<string, unknown>, _metadata?: Record<string, unknown>): void {
+    const [context, meta] = this.parseArgs(contextOrMetadata, _metadata);
+>>>>>>> cursor/fix-errors-and-merge-to-main-4e61
     this.log(LogLevel.DEBUG, message, context, meta);
   }
 
   /**
    * Log an info message
    */
+<<<<<<< HEAD
   info(message: string, contextOrMetadata?: string | Record<string, unknown>, metadata?: Record<string, unknown>): void {
     const [context, meta] = this.parseArgs(contextOrMetadata, metadata);
+=======
+  info(message: string, contextOrMetadata?: string | Record<string, unknown>, _metadata?: Record<string, unknown>): void {
+    const [context, meta] = this.parseArgs(contextOrMetadata, _metadata);
+>>>>>>> cursor/fix-errors-and-merge-to-main-4e61
     this.log(LogLevel.INFO, message, context, meta);
   }
 
   /**
    * Log a warning message
    */
+<<<<<<< HEAD
   warn(message: string, contextOrMetadata?: string | Record<string, unknown>, metadata?: Record<string, unknown>): void {
     const [context, meta] = this.parseArgs(contextOrMetadata, metadata);
+=======
+  warn(message: string, contextOrMetadata?: string | Record<string, unknown>, _metadata?: Record<string, unknown>): void {
+    const [context, meta] = this.parseArgs(contextOrMetadata, _metadata);
+>>>>>>> cursor/fix-errors-and-merge-to-main-4e61
     this.log(LogLevel.WARN, message, context, meta);
   }
 
@@ -108,7 +123,7 @@ class Logger {
     message: string,
     errorOrContextOrMetadata?: Error | string | Record<string, unknown>,
     contextOrMetadata?: string | Record<string, unknown>,
-    metadata?: Record<string, unknown>
+    _metadata?: Record<string, unknown>
   ): void {
     let error: Error | undefined;
     let context: string | undefined;
@@ -147,7 +162,7 @@ class Logger {
     message: string,
     errorOrContextOrMetadata?: Error | string | Record<string, unknown>,
     contextOrMetadata?: string | Record<string, unknown>,
-    metadata?: Record<string, unknown>
+    _metadata?: Record<string, unknown>
   ): void {
     let error: Error | undefined;
     let context: string | undefined;
@@ -403,6 +418,7 @@ class Logger {
 class ContextLogger {
   constructor(private logger: Logger, private context: string) {}
 
+<<<<<<< HEAD
   debug(message: string, metadata?: Record<string, unknown>): void {
     this.logger.debug(message, this.context, metadata);
   }
@@ -421,17 +437,37 @@ class ContextLogger {
 
   fatal(message: string, error?: Error, metadata?: Record<string, unknown>): void {
     this.logger.fatal(message, error, this.context, metadata);
+=======
+  debug(message: string, _metadata?: Record<string, unknown>): void {
+    this.logger.debug(message, this.context, _metadata);
   }
 
-  perf(metric: string, value: number, metadata?: Record<string, unknown>): void {
-    this.logger.perf(metric, value, { ...metadata, context: this.context });
+  info(message: string, _metadata?: Record<string, unknown>): void {
+    this.logger.info(message, this.context, _metadata);
   }
 
-  lifecycle(message: string, metadata?: Record<string, unknown>): void {
+  warn(message: string, _metadata?: Record<string, unknown>): void {
+    this.logger.warn(message, this.context, _metadata);
+  }
+
+  error(message: string, error?: Error, _metadata?: Record<string, unknown>): void {
+    this.logger.error(message, error, this.context, _metadata);
+  }
+
+  fatal(message: string, error?: Error, _metadata?: Record<string, unknown>): void {
+    this.logger.fatal(message, error, this.context, _metadata);
+>>>>>>> cursor/fix-errors-and-merge-to-main-4e61
+  }
+
+  perf(metric: string, value: number, _metadata?: Record<string, unknown>): void {
+    this.logger.perf(metric, value, { ..._metadata, context: this.context });
+  }
+
+  lifecycle(message: string, _metadata?: Record<string, unknown>): void {
     this.logger.lifecycle(message, this.context);
   }
 
-  performance(message: string, data: unknown, metadata?: Record<string, unknown>): void {
+  performance(message: string, data: unknown, _metadata?: Record<string, unknown>): void {
     this.logger.performance(message, data, this.context);
   }
 
@@ -448,23 +484,42 @@ class ContextLogger {
 export const logger = new Logger();
 
 // Export convenience functions
+<<<<<<< HEAD
 export const debug = (message: string, context?: string, metadata?: Record<string, unknown>) =>
   logger.debug(message, context, metadata);
 export const info = (message: string, context?: string, metadata?: Record<string, unknown>) =>
   logger.info(message, context, metadata);
 export const warn = (message: string, context?: string, metadata?: Record<string, unknown>) =>
   logger.warn(message, context, metadata);
+=======
+export const debug = (message: string, context?: string, _metadata?: Record<string, unknown>) =>
+  logger.debug(message, context, _metadata);
+export const info = (message: string, context?: string, _metadata?: Record<string, unknown>) =>
+  logger.info(message, context, _metadata);
+export const warn = (message: string, context?: string, _metadata?: Record<string, unknown>) =>
+  logger.warn(message, context, _metadata);
+>>>>>>> cursor/fix-errors-and-merge-to-main-4e61
 export const error = (
   message: string,
   err?: Error,
   context?: string,
+<<<<<<< HEAD
   metadata?: Record<string, unknown>
 ) => logger.error(message, err, context, metadata);
+=======
+  _metadata?: Record<string, unknown>
+) => logger.error(message, err, context, _metadata);
+>>>>>>> cursor/fix-errors-and-merge-to-main-4e61
 export const fatal = (
   message: string,
   err?: Error,
   context?: string,
+<<<<<<< HEAD
   metadata?: Record<string, unknown>
 ) => logger.fatal(message, err, context, metadata);
+=======
+  _metadata?: Record<string, unknown>
+) => logger.fatal(message, err, context, _metadata);
+>>>>>>> cursor/fix-errors-and-merge-to-main-4e61
 
 export default logger;

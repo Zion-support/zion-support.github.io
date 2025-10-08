@@ -74,7 +74,11 @@ class MonitoringService {
         // Cumulative Layout Shift
         let clsValue = 0;
         const clsObserver = new PerformanceObserver((list) => {
+<<<<<<< HEAD
           for (const entry of list.getEntries() as { hadRecentInput: boolean; value: number }[]) {
+=======
+          for (const entry of list.getEntries() as PerformanceEntry[]) {
+>>>>>>> cursor/fix-errors-and-merge-to-main-5c5e
             if (!entry.hadRecentInput) {
               clsValue += entry.value;
               this.metrics.cls = clsValue;
@@ -113,10 +117,14 @@ class MonitoringService {
         });
         longTaskObserver.observe({ entryTypes: ['longtask'] });
 <<<<<<< HEAD
+<<<<<<< HEAD
       } catch (error) {
 =======
       } catch {
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbf5
+=======
+      } catch {
+>>>>>>> cursor/fix-errors-and-merge-to-main-5c5e
         // Long task API might not be available
       }
     }
@@ -185,8 +193,13 @@ class MonitoringService {
     }
 
     // Send to analytics (if configured)
+<<<<<<< HEAD
     if (typeof window !== 'undefined' && (window as { gtag?: (command: string, action: string, params: Record<string, unknown>) => void }).gtag) {
       (window as { gtag: (command: string, action: string, params: Record<string, unknown>) => void }).gtag('event', name, {
+=======
+    if (typeof window !== 'undefined' && (window as unknown as { gtag: Function }).gtag) {
+      (window as unknown as { gtag: Function }).gtag('event', name, {
+>>>>>>> cursor/fix-errors-and-merge-to-main-5c5e
         value: Math.round(name === 'cls' ? value * 1000 : value),
         event_category: 'Web Vitals',
         non_interaction: true,
@@ -205,8 +218,13 @@ class MonitoringService {
     console.error('[Error]', error);
 
     // Send to error tracking service (if configured)
+<<<<<<< HEAD
     if (typeof window !== 'undefined' && (window as { Sentry?: { captureException: (error: Error) => void } }).Sentry) {
       (window as { Sentry: { captureException: (error: Error) => void } }).Sentry.captureException(new Error(error.message));
+=======
+    if (typeof window !== 'undefined' && (window as unknown as { Sentry: { captureException: Function } }).Sentry) {
+      (window as unknown as { Sentry: { captureException: Function } }).Sentry.captureException(new Error(error.message));
+>>>>>>> cursor/fix-errors-and-merge-to-main-5c5e
     }
   }
 
@@ -225,10 +243,14 @@ class MonitoringService {
   public measureMemory(): void {
     if ('memory' in performance && performanceConfig.monitoring.enableMemoryMonitoring) {
 <<<<<<< HEAD
+<<<<<<< HEAD
       const memory = (performance as any).memory;
       console.log('[Memory]', {
 =======
       const memory = (performance as { memory: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
+=======
+      const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
+>>>>>>> cursor/fix-errors-and-merge-to-main-5c5e
  
     console.log('[Memory]', {
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbf5
