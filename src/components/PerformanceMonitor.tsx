@@ -13,12 +13,17 @@ export const PerformanceMonitor: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
+    const measurePerformance = () => {
+      if (typeof window === 'undefined' || !window.performance) return;
+
+      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      const paintEntries = performance.getEntriesByType('paint');
       
       const fcp = paintEntries.find(entry => entry.name === 'first-contentful-paint');
       const lcp = performance.getEntriesByType('largest-contentful-paint')[0] as PerformanceEntry;
       
       const metrics: PerformanceMetrics = {
-        loadTime: navigation.loadEventEnd - navigation.loadEventStart,
+        loadTime: navigation?.loadEventEnd ? navigation.loadEventEnd - navigation.loadEventStart : 0,
         firstContentfulPaint: fcp ? fcp.startTime : 0,
         largestContentfulPaint: lcp ? lcp.startTime : 0,
         cumulativeLayoutShift: 0, // Would need to be measured with observer
@@ -29,10 +34,13 @@ export const PerformanceMonitor: React.FC = () => {
     };
 
     // Measure after page load
-    if (document.readyState === 'complete') {
-      measurePerformance();
-    } else {
-      window.addEventListener('load', measurePerformance);
+    if (typeof document !== 'undefined') {
+      if (document.readyState === 'complete') {
+        measurePerformance();
+      } else {
+        window.addEventListener('load', measurePerformance);
+        return () => window.removeEventListener('load', measurePerformance);
+      }
     }
     return undefined;
   }, []);
@@ -45,8 +53,10 @@ export const PerformanceMonitor: React.FC = () => {
       }
     };
 
-    window.addEventListener('keydown', handleKeyDown);
-    return () => window.removeEventListener('keydown', handleKeyDown);
+    if (typeof window !== 'undefined') {
+      window.addEventListener('keydown', handleKeyDown);
+      return () => window.removeEventListener('keydown', handleKeyDown);
+    }
   }, []);
 
   if (!isVisible || !metrics) return null;
@@ -73,3 +83,5 @@ export const PerformanceMonitor: React.FC = () => {
     </div>
   );
 };
+
+export default PerformanceMonitor;

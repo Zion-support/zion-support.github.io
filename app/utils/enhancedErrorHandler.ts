@@ -90,7 +90,9 @@ class EnhancedErrorHandler {
 
     this.isInitialized = true;
     // eslint-disable-next-line no-console
-    if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { console.log('🛡️ Enhanced Error Handler initialized'); } }
+    if (process.env['NODE_ENV'] === 'development') {
+      console.log('🛡️ Enhanced Error Handler initialized');
+    }
   }
 
   /**
@@ -602,7 +604,9 @@ class EnhancedErrorHandler {
 
     if (recentErrors.length > 5) {
       // eslint-disable-next-line no-console
-      if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { console.log('🔄 Attempting error recovery...'); } }
+      if (process.env['NODE_ENV'] === 'development') {
+        console.log('🔄 Attempting error recovery...');
+      }
       // Implement recovery strategies here
       this.clearErrorState();
     }
@@ -618,7 +622,9 @@ class EnhancedErrorHandler {
     this.errorRateLimit = 0;
 
     // eslint-disable-next-line no-console
-    if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { console.log('🧹 Error state cleared'); } }
+    if (process.env['NODE_ENV'] === 'development') {
+      console.log('🧹 Error state cleared');
+    }
   }
 
   /**

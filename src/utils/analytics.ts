@@ -74,25 +74,33 @@ class Analytics {
     const event: AnalyticsEvent = {
       name,
       category,
+      action,
+      label,
+      value,
+      properties,
       timestamp: Date.now(),
     };
 
     this.events.push(event);
-    }
+    this.sendEvent(event);
   }
 
   /**
    * Track page view
+   */
+  trackPageView(page: string, title?: string): void {
     this.track('page_view', 'navigation', 'view', page, undefined, {
-      page_title: title || document.title,
+      page_title: title || (typeof document !== 'undefined' ? document.title : ''),
       page_url: typeof window !== 'undefined' ? window.location.href : page,
     });
   }
 
   /**
    * Track user interaction
+   */
+  trackInteraction(
     element: string,
-  action: string,
+    action: string,
     category: string = 'user_interaction'
   ): void {
     this.track('interaction', category, action, element);
@@ -100,11 +108,15 @@ class Analytics {
 
   /**
    * Track performance metrics
+   */
+  trackPerformance(metric: string, value: number, unit: string = 'ms'): void {
     this.track('performance', 'metrics', metric, unit, value);
   }
 
   /**
    * Track business events
+   */
+  trackBusinessEvent(
     event: string,
     value?: number,
     properties?: Record<string, unknown>
@@ -114,29 +126,56 @@ class Analytics {
 
   /**
    * Send event to analytics service
+   */
+  private sendEvent(event: AnalyticsEvent): void {
+    // Send to analytics service (e.g., Google Analytics, Mixpanel, etc.)
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('event', event.name, {
+        event_category: event.category,
+        event_action: event.action,
+        event_label: event.label,
+        value: event.value,
+        ...event.properties,
+      });
     }
   }
 
   /**
    * Get all events
+   */
+  getEvents(): AnalyticsEvent[] {
     return [...this.events];
   }
 
   /**
    * Get events by category
+   */
+  getEventsByCategory(category: string): AnalyticsEvent[] {
     return this.events.filter(event => event.category === category);
   }
 
   /**
    * Clear all events
+   */
+  clearEvents(): void {
     this.events = [];
   }
 
   /**
    * Get user properties
+   */
+  getUserProperties(): UserProperties {
     return { ...this.userProperties };
   }
 
   /**
    * Update user properties
+   */
+  updateUserProperties(properties: Partial<UserProperties>): void {
+    this.userProperties = { ...this.userProperties, ...properties };
+  }
+}
+
+// Export singleton instance
+const analytics = new Analytics();
 export default analytics;
