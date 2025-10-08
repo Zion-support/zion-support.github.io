@@ -1,4 +1,6 @@
 import React, { useCallback, useState, useEffect, Suspense, lazy } from 'react';
+import Navigation from './components/Navigation';
+import Footer from './components/Footer';
 
 // Dynamically import heavy components for better performance
 
@@ -41,6 +43,9 @@ const HomePage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-white to-purple-50">
+      {/* Navigation */}
+      <Navigation />
+      
       {/* Skip to main content for accessibility */}
       <a
         href="#main-content"
@@ -147,6 +152,9 @@ const HomePage: React.FC = () => {
           </a>
         </section>
       </main>
+      
+      {/* Footer */}
+      <Footer />
     </div>
   );
 };
