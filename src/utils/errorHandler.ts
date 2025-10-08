@@ -138,5 +138,5 @@ class ErrorHandler {
   }
 }
 
-// Export default instance
+// Export singleton instance as default
 export default ErrorHandler.getInstance();
