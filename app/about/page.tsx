@@ -1,4 +1,24 @@
 import React from 'react';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'About Us - Zion Tech Group',
+  description:
+    'Learn about Zion Tech Group, a leading provider of AI and IT solutions. Our mission is to empower businesses through cutting-edge technology.',
+};
+
+const AboutPage: React.FC = () => {
+  return (
+    <>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-16">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-16">
+              <h1 className="text-4xl font-bold text-white mb-4">
+                About Zion Tech Group
+              </h1>
+              <p className="text-xl text-gray-300">
+                Transforming businesses through innovative AI and IT solutions
               </p>
             </div>
 
