@@ -94,10 +94,10 @@ export function isNumeric(value: string): boolean {
  * Requirements: at least 8 characters, 1 uppercase, 1 lowercase, 1 number
  */
 export function isStrongPassword(password: string): boolean {
-//   const hasMinLength = password.length >= 8;
-//   const hasUpperCase = /[A-Z]/.test(password);
-//   const hasLowerCase = /[a-z]/.test(password);
-//   const hasNumber = /[0-9]/.test(password);
+  const hasMinLength = password.length >= 8;
+  const hasUpperCase = /[A-Z]/.test(password);
+  const hasLowerCase = /[a-z]/.test(password);
+  const hasNumber = /[0-9]/.test(password);
   
   return hasMinLength && hasUpperCase && hasLowerCase && hasNumber;
 }

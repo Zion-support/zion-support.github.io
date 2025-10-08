@@ -57,7 +57,7 @@ class PerformanceOptimizer {
 
   startMark(markName: string): void {
     if (typeof window === 'undefined') return;
-//     const timestamp = performance.now();
+    const timestamp = performance.now();
     this.marks.set(markName, timestamp);
     if ('mark' in performance) {
       performance.mark(markName);
@@ -66,10 +66,10 @@ class PerformanceOptimizer {
 
   endMark(markName: string): number {
     if (typeof window === 'undefined') return 0;
-//     const startTime = this.marks.get(markName);
+    const startTime = this.marks.get(markName);
     if (!startTime) return 0;
     
-//     const duration = performance.now() - startTime;
+    const duration = performance.now() - startTime;
     this.marks.delete(markName);
     
     if ('measure' in performance && 'mark' in performance) {
@@ -117,7 +117,7 @@ class PerformanceOptimizer {
     try {
       const observer = new PerformanceObserver((list) => {
         const entries = list.getEntries();
-        entries.forEach((entry: unknown) => {
+        entries.forEach((entry: any) => {
           this.metrics.fid = entry.processingStart - entry.startTime;
         });
       });
@@ -133,7 +133,7 @@ class PerformanceOptimizer {
       let clsValue = 0;
       const observer = new PerformanceObserver((list) => {
         const entries = list.getEntries();
-        entries.forEach((entry: unknown) => {
+        entries.forEach((entry: any) => {
           if (!entry.hadRecentInput) {
             clsValue += entry.value;
           }
@@ -168,7 +168,7 @@ class PerformanceOptimizer {
     try {
       const observer = new PerformanceObserver((list) => {
         const entries = list.getEntries();
-        entries.forEach((entry: unknown) => {
+        entries.forEach((entry: any) => {
           if (entry.responseStart > 0) {
             this.metrics.ttfb = entry.responseStart - entry.requestStart;
           }
@@ -198,7 +198,7 @@ class PerformanceOptimizer {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             const img = entry.target as HTMLImageElement;
-//             const src = img.getAttribute('data-src');
+            const src = img.getAttribute('data-src');
             if (src) {
               img.src = src;
               img.removeAttribute('data-src');
@@ -212,7 +212,7 @@ class PerformanceOptimizer {
     } else {
       // Fallback for browsers without IntersectionObserver
       images.forEach((img) => {
-//         const src = img.getAttribute('data-src');
+        const src = img.getAttribute('data-src');
         if (src) {
           (img as HTMLImageElement).src = src;
           img.removeAttribute('data-src');

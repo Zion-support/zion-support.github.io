@@ -258,7 +258,7 @@ export class EnhancedLogger {
   public endPerformance(markName: string, data?: Record<string, unknown>): number | undefined {
     if (!this.config.enablePerformance) return undefined;
 
-//     const startTime = this.performanceMarks.get(markName);
+    const startTime = this.performanceMarks.get(markName);
     if (!startTime) {
       this.warn(`Performance mark "${markName}" not found`, undefined, 'EnhancedLogger');
       return undefined;
@@ -506,7 +506,7 @@ export class EnhancedLogger {
     const bySource: Record<string, number> = {};
 
     this.logs.forEach(log => {
-//       const levelName = LogLevel[log.level];
+      const levelName = LogLevel[log.level];
       byLevel[levelName] = (byLevel[levelName] || 0) + 1;
 
       if (log.source) {

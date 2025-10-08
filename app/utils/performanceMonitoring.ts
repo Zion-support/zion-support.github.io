@@ -414,24 +414,24 @@ export const clearMetrics = () => {
 };
 
 export const measureFunction = <T>(name: string, fn: () => T): T => {
-//   const start = performance.now();
+  const start = performance.now();
   const result = fn();
-//   const duration = performance.now() - start;
+  const duration = performance.now() - start;
   recordMetric(name, duration, MetricUnit.Milliseconds);
   return result;
 };
 
 export const measureAsyncFunction = async <T>(name: string, fn: () => Promise<T>): Promise<T> => {
-//   const start = performance.now();
+  const start = performance.now();
   const result = await fn();
-//   const duration = performance.now() - start;
+  const duration = performance.now() - start;
   recordMetric(name, duration, MetricUnit.Milliseconds);
   return result;
 };
 
 export const getPerformanceScore = (): number => {
   const metrics = getMetrics();
-//   const webVitalNames = ['FCP', 'LCP', 'FID', 'CLS', 'TTFB'];
+  const webVitalNames = ['FCP', 'LCP', 'FID', 'CLS', 'TTFB'];
   const webVitals = webVitalNames
     .map(name => metrics[name])
     .filter(Boolean);
@@ -447,7 +447,7 @@ export const getPerformanceScore = (): number => {
     }
   });
   
-//   const sum = scores.reduce((a: number, b: number) => a + b, 0);
+  const sum = scores.reduce((a: number, b: number) => a + b, 0);
   return Math.round(sum / scores.length);
 };
 
