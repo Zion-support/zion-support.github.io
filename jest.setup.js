@@ -70,7 +70,10 @@ jest.mock('react-router-dom', () => {
       });
       return <RouterProvider router={router} />;
     },
-    RouterProvider: ({ router }) => null,
+    RouterProvider: ({ router }) => {
+      const React = require('react');
+      return React.createElement('div', { 'data-testid': 'router-provider' }, router.routes[0]?.element || null);
+    },
     Link: ({ children, to, ...props }) => {
       const React = require('react');
       return React.createElement('a', { href: to, ...props }, children);
