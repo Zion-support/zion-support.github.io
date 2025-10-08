@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 'use client';
-
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-dd0b
 import React, { useCallback, useState, useEffect, Suspense, lazy } from 'react';
 
 // Dynamically import heavy components for better performance
