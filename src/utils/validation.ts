@@ -372,3 +372,182 @@ export async function validateAsync(
     };
   }
 }
+
+/**
+ * Type guard utilities
+ */
+export function isDefined<T>(value: T | undefined | null): value is T {
+  return value !== undefined && value !== null;
+}
+
+export function isString(value: unknown): value is string {
+  return typeof value === 'string';
+}
+
+export function isNumber(value: unknown): value is number {
+  return typeof value === 'number' && !isNaN(value);
+}
+
+export function isBoolean(value: unknown): value is boolean {
+  return typeof value === 'boolean';
+}
+
+export function isArray(value: unknown): value is unknown[] {
+  return Array.isArray(value);
+}
+
+export function isObject(value: unknown): value is Record<string, unknown> {
+  return typeof value === 'object' && value !== null && !Array.isArray(value);
+}
+
+export function isFunction(value: unknown): value is Function {
+  return typeof value === 'function';
+}
+
+export function isEmpty(value: unknown): boolean {
+  if (value === null || value === undefined) return true;
+  if (typeof value === 'string') return value.trim() === '';
+  if (Array.isArray(value)) return value.length === 0;
+  if (typeof value === 'object') return Object.keys(value as object).length === 0;
+  return false;
+}
+
+export function isEmptyObject(value: unknown): boolean {
+  return isObject(value) && Object.keys(value).length === 0;
+}
+
+export function isValidUrl(url: string): boolean {
+  const result = validateURL(url);
+  return result.isValid;
+}
+
+export function isValidEmail(email: string): boolean {
+  const result = validateEmail(email);
+  return result.isValid;
+}
+
+export function validateRequiredFields(
+  obj: Record<string, unknown>,
+  fields: string[]
+): ValidationResult {
+  for (const field of fields) {
+    if (!isDefined(obj[field]) || isEmpty(obj[field])) {
+      return { isValid: false, error: `Field '${field}' is required` };
+    }
+  }
+  return { isValid: true };
+}
+
+export function isError(value: unknown): value is Error {
+  return value instanceof Error;
+}
+
+export function isValidLength(value: string, min: number, max: number): boolean {
+  const result = validateLength(value, min, max);
+  return result.isValid;
+}
+
+export function isInRange(value: number, min: number, max: number): boolean {
+  const result = validateNumberRange(value, min, max);
+  return result.isValid;
+}
+
+export function safeParse<T = unknown>(jsonString: string, fallback?: T): T | null {
+  try {
+    return JSON.parse(jsonString) as T;
+  } catch {
+    return fallback !== undefined ? fallback : null;
+  }
+}
+
+export function assertNever(value: never): never {
+  throw new Error(`Unexpected value: ${JSON.stringify(value)}`);
+}
+
+export function safeArrayAccess<T>(array: T[], index: number, fallback?: T): T | undefined {
+  if (index >= 0 && index < array.length) {
+    return array[index];
+  }
+  return fallback;
+}
+
+export function safeGet<T extends Record<string, unknown>, K extends keyof T>(
+  obj: T,
+  key: K,
+  fallback?: T[K]
+): T[K] | undefined {
+  const value = obj[key];
+  return isDefined(value) ? value : fallback;
+}
+
+export function hasProperty<T extends Record<string, unknown>>(
+  obj: T,
+  key: string | number | symbol
+): key is keyof T {
+  return Object.prototype.hasOwnProperty.call(obj, key);
+}
+
+export function isValidDate(date: string): boolean {
+  const result = validateDate(date);
+  return result.isValid;
+}
+
+export function isValidJson(jsonString: string): boolean {
+  const result = validateJSON(jsonString);
+  return result.isValid;
+}
+
+export function isValidHexColor(color: string): boolean {
+  return /^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$/.test(color);
+}
+
+export function isValidUuid(uuid: string): boolean {
+  return /^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i.test(uuid);
+}
+
+// Default export for convenience
+export default {
+  // Validators
+  validateEmail,
+  validatePhone,
+  validateURL,
+  validateLength,
+  validateRequired,
+  validateNumberRange,
+  validatePassword,
+  validateDate,
+  validateCreditCard,
+  validateJSON,
+  validateComposite,
+  validateAsync,
+  validateRequiredFields,
+  
+  // Type guards
+  isDefined,
+  isString,
+  isNumber,
+  isBoolean,
+  isArray,
+  isObject,
+  isFunction,
+  isEmpty,
+  isEmptyObject,
+  isValidUrl,
+  isValidEmail,
+  isError,
+  isValidLength,
+  isInRange,
+  isValidDate,
+  isValidJson,
+  isValidHexColor,
+  isValidUuid,
+  
+  // Utilities
+  sanitizeHTML,
+  sanitizeInput,
+  safeParse,
+  assertNever,
+  safeArrayAccess,
+  safeGet,
+  hasProperty,
+};
