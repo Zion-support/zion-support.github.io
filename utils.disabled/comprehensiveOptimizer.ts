@@ -1,63 +1,6 @@
 /**
  * Comprehensive optimization utilities that integrate accessibility, performance, and SEO
  */
-
-import { debounce, throttle, measurePerformance } from './performanceUtils';
-import { setMetaTags, setOpenGraphTags, calculateSEOScore } from './seoUtils';
-import { ErrorHandler } from './errorHandling';
-
-// Comprehensive optimization interface
-interface OptimizationConfig {
-  performance?: {
-    enableDebouncing?: boolean;
-    enableThrottling?: boolean;
-    enableLazyLoading?: boolean;
-  };
-  seo?: {
-    enableMetaTags?: boolean;
-    enableStructuredData?: boolean;
-    enableSitemap?: boolean;
-  };
-  accessibility?: {
-    enableFocusManagement?: boolean;
-    enableAriaLabels?: boolean;
-    enableKeyboardNavigation?: boolean;
-  };
-}
-
-// Default configuration
-const defaultConfig: OptimizationConfig = {
-  performance: {
-    enableDebouncing: true,
-    enableThrottling: true,
-    enableLazyLoading: true,
-  },
-  seo: {
-    enableMetaTags: true,
-    enableStructuredData: true,
-    enableSitemap: true,
-  },
-  accessibility: {
-    enableFocusManagement: true,
-    enableAriaLabels: true,
-    enableKeyboardNavigation: true,
-  },
-  focusManagement,
-  ariaUtils,
-  keyboardNavigation,
-  colorContrast,
-  screenReader,
-  formAccessibility,
-  motionAccessibility,
-  initAccessibility,
-  accessibilityTesting,
-  motionUtils
-} from './accessibilityUtils';
-
-  ariaUtils
-} from './accessibilityUtils';
-  focusManagement,
-  ariaUtils,
   keyboardUtils,
   contrastUtils,
   screenReaderUtils,
@@ -66,13 +9,25 @@ const defaultConfig: OptimizationConfig = {
   highContrastUtils,
 } from './accessibilityUtils';
 
+=======
   ariaUtils
 } from './accessibilityUtils';
 
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-1f83
+=======
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a0d
+=======
+  ariaUtils
+} from './accessibilityUtils';
+
+>>>>>>> origin/main
   accessibilityTesting,
   ariaUtils,
   motionUtils
 } from './accessibilityUtils';
+=======
+>>>>>>> origin/main
 import {
   getMemoryUsage,
   collectPerformanceMetrics,
@@ -81,9 +36,12 @@ import {
   throttle,
   lazyLoadImages,
   preloadCriticalResources,
+=======
+=======
   optimizeScrollPerformance
 } from './performanceUtils';
 
+>>>>>>> origin/main
   optimizeScrollPerformance,
 } from './performanceUtils';
 
@@ -94,24 +52,14 @@ import {
 } from './performanceUtils';
   optimizeScrollPerformance
 } from './performanceUtils';
+=======
+>>>>>>> origin/main
 import {
   setMetaTags,
   setOpenGraphTags,
   setTwitterCardTags,
   setStructuredData,
   generateSitemap,
-  optimizeImages,
-  setCanonicalUrl,
-  setPageTitle,
-  setMetaDescription,
-  setKeywords,
-  setRobotsMeta,
-  setLanguage,
-  setViewport,
-  schemaGenerators,
-  seoAudit
-} from './seoUtils';
-
 /**
  * Comprehensive optimization configuration
  */
@@ -120,6 +68,14 @@ export interface OptimizationConfig {
     enableFocusManagement: boolean;
     enableAriaUtils: boolean;
     enableKeyboardNavigation: boolean;
+=======
+
+import { debounce, throttle, measurePerformance } from './performanceUtils';
+import { setMetaTags, setOpenGraphTags, calculateSEOScore } from './seoUtils';
+import { ErrorHandler } from './errorHandling';
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3f25:utils/comprehensiveOptimizer.ts
+=======
     enableColorContrast: boolean;
     enableScreenReader: boolean;
     enableFormAccessibility: boolean;
@@ -140,6 +96,7 @@ export interface OptimizationConfig {
     enableCanonicalUrl: boolean;
   seoAudit
 } from './seoUtils';
+>>>>>>> origin/main
 // Comprehensive optimization interface
 export interface OptimizationConfig {
   accessibility: {
@@ -153,6 +110,10 @@ export interface OptimizationConfig {
     optimizeScroll: boolean;
     monitorMemory: boolean;
   };
+  };
+}
+
+=======
   seo: {
     autoOptimize: boolean;
     generateStructuredData: boolean;
@@ -210,12 +171,14 @@ export interface OptimizationConfig {
     enableLazyLoading: true,
     enablePreloading: true,
     enableScrollOptimization: true,
+>>>>>>> origin/main
   },
   seo: {
     enableMetaTags: true,
     enableOpenGraph: true,
     enableTwitterCards: true,
     enableStructuredData: true,
+=======
     enableCanonicalUrl: true,
   },
 };
@@ -273,6 +236,7 @@ export const defaultConfig: OptimizationConfig = {
     generateStructuredData: true,
     optimizeMetaTags: true
   }
+>>>>>>> origin/main
 };
 
 // Comprehensive optimization class
@@ -286,7 +250,12 @@ export class ComprehensiveOptimizer {
     this.initializeOptimizations();
   }
 
+=======
   private initializeOptimizations(): void {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3f25:utils/comprehensiveOptimizer.ts
+=======
+  private initializeOptimizations(): void {
+>>>>>>> origin/main
     try {
       if (this.config.performance?.enableDebouncing) {
         this.setupDebouncing();
@@ -296,24 +265,13 @@ export class ComprehensiveOptimizer {
         this.setupThrottling();
       }
 
-      if (this.config.performance?.enableLazyLoading) {
-        this.setupLazyLoading();
-      }
-
-      if (this.config.seo?.enableMetaTags) {
-        this.setupSEOMetaTags();
-      }
-
-      if (this.config.accessibility?.enableFocusManagement) {
-        this.setupFocusManagement();
-      }
-
-      this.collectInitialMetrics();
     } catch (error) {
       ErrorHandler.handle(error as Error, 'ComprehensiveOptimizer initialization');
     }
   }
 
+=======
+=======
   private setupDebouncing(): void {
     // Setup global debouncing for common events
     const debouncedResize = debounce(() => {
@@ -393,7 +351,7 @@ export class ComprehensiveOptimizer {
   private loadElement(element: HTMLElement): void {
     const src = element.getAttribute('data-src');
     if (src && element.tagName === 'IMG') {
-      (element as HTMLImageElement).src = src;
+      (element as HTMLImageElement)['src'] = src;
       element.removeAttribute('data-src');
     }
   }
@@ -608,6 +566,7 @@ export default ComprehensiveOptimizer;
           transition-duration: 0.01ms !important;
         }
       });
+>>>>>>> origin/main
 const defaultConfig: OptimizationConfig = {
   enableAccessibility: true,
   enablePerformance: true,
@@ -647,16 +606,6 @@ export class ComprehensiveOptimizer {
    * Initialize accessibility optimizations
    */
   private async initializeAccessibility(): Promise<void> {
-    // Run accessibility audit
-    this.accessibilityReport = accessibilityTesting.generateReport();
-    // Apply motion preferences
-    if (motionUtils.prefersReducedMotion()) {
-      document.documentElement.style.setProperty('--animation-duration', '0s');
-      document.documentElement.style.setProperty('--transition-duration', '0s');
-    }
-    // Add skip links
-    this.addSkipLinks();
-  }
   /**
    * Initialize performance optimizations
    */
@@ -705,14 +654,12 @@ export class ComprehensiveOptimizer {
     
     // Set Open Graph tags
     setOpenGraphTags({
-      title: 'Zion Tech Group - Advanced AI and IT Solutions',
-      description: 'Leading provider of AI-powered IT solutions and enterprise services',
-      type: 'website'
     });
     
     // Set Twitter Card tags
     setTwitterCardTags({
       card: 'summary_large_image',
+=======
       title: 'Zion Tech Group - Advanced AI and IT Solutions',
       description: 'Leading provider of AI-powered IT solutions and enterprise services'
     });
@@ -823,38 +770,11 @@ export class ComprehensiveOptimizer {
       accessibility: this.accessibilityReport,
       performance: this.performanceMetrics,
       seo: true
+>>>>>>> origin/main
     };
   }
 }
 
-/**
- * Default optimization configuration
- */
-export const DEFAULT_OPTIMIZATION_CONFIG: OptimizationConfig = {
-  enableAccessibility: true,
-  enablePerformance: true,
-  enableSEO: true,
-  enableLazyLoading: true,
-  enablePreloading: true,
-  enableAnalytics: true,
-  performanceThresholds: {
-    maxLoadTime: 3000,
-    maxMemoryUsage: 50,
-    maxBundleSize: 500
-  },
-  accessibilityLevel: 'AA',
-  seoLevel: 'advanced'
-};
-/**
- * Comprehensive optimizer class
- */
-export class ComprehensiveOptimizer {
-  private config: OptimizationConfig;
-  private performanceMetrics: any[] = [];
-  private accessibilityIssues: any[] = [];
-  private seoIssues: any[] = [];
-  constructor(config: OptimizationConfig = DEFAULT_OPTIMIZATION_CONFIG) {
-    this.config = config;
   }
   /**
    * Initialize comprehensive optimization
@@ -866,31 +786,6 @@ export class ComprehensiveOptimizer {
       if (this.config.enablePerformance) {
         await this.initializePerformanceOptimization();
       }
-      // Initialize accessibility testing
-      if (this.config.enableAccessibility) {
-        await this.initializeAccessibilityOptimization();
-      }
-      // Initialize SEO optimization
-      if (this.config.enableSEO) {
-        await this.initializeSEOOptimization();
-      }
-      console.log('Comprehensive optimization initialized successfully');
-    } catch (error) {
-      console.error('Error initializing comprehensive optimization:', error);
-      site: '@ZionTechGroup',
-      creator: '@ZionTechGroup',
-      title: pageTitle,
-      description: metaDescription
-    });
-    
-    // Generate structured data
-    if (this.config.seo.generateStructuredData) {
-      const structuredData = schemaGenerators.organization({
-        name: 'Zion Tech Group',
-        url: currentUrl,
-        description: metaDescription
-      });
-      setStructuredData(structuredData);
     }
   }
 
@@ -1062,94 +957,6 @@ export class ComprehensiveOptimizer {
       ariaUtils.announce('Accessibility issues have been automatically fixed', 'polite');
     }
   }
-  /**
-   * Initialize performance optimization
-   */
-  private async initializePerformanceOptimization(): Promise<void> {
-    // Start performance monitoring
-    performanceMonitor.start();
-    // Enable lazy loading
-    if (this.config.enableLazyLoading) {
-      lazyLoadImages();
-    }
-    // Preload critical resources
-    if (this.config.enablePreloading) {
-      preloadCriticalResources();
-    }
-    // Optimize scroll performance
-    optimizeScrollPerformance();
-    // Collect initial performance metrics
-    this.performanceMetrics = await collectPerformanceMetrics();
-  }
-  /**
-   * Initialize accessibility optimization
-   */
-  private async initializeAccessibilityOptimization(): Promise<void> {
-    // Run accessibility tests
-    this.accessibilityIssues = await accessibilityTesting();
-    // Apply accessibility improvements
-    ariaUtils.announce('Accessibility optimization enabled');
-  }
-  /**
-   * Initialize SEO optimization
-   */
-  private async initializeSEOOptimization(): Promise<void> {
-    // Set basic SEO meta tags
-    setLanguage('en');
-    setViewport('width=device-width, initial-scale=1.0');
-    setRobotsMeta('index, follow');
-    // Run SEO audit
-    this.seoIssues = await seoAudit();
-  }
-  /**
-   * Get optimization report
-   */
-  getOptimizationReport(): {
-    performance: any;
-    accessibility: any;
-    seo: any;
-    recommendations: string[];
-  } {
-    const recommendations: string[] = [];
-    // Performance recommendations
-    if (this.performanceMetrics.length > 0) {
-      const avgLoadTime = this.performanceMetrics.reduce((sum, metric) => sum + metric.loadTime, 0) / this.performanceMetrics.length;
-      if (avgLoadTime > this.config.performanceThresholds.maxLoadTime) {
-        recommendations.push('Consider optimizing page load time');
-      }
-    }
-    // Accessibility recommendations
-    if (this.accessibilityIssues.length > 0) {
-      recommendations.push('Address accessibility issues found in audit');
-    }
-    // SEO recommendations
-    if (this.seoIssues.length > 0) {
-      recommendations.push('Address SEO issues found in audit');
-    }
-    return {
-      performance: {
-        metrics: this.performanceMetrics,
-        memoryUsage: getMemoryUsage()
-      },
-      accessibility: {
-        issues: this.accessibilityIssues,
-        level: this.config.accessibilityLevel
-      },
-      seo: {
-        issues: this.seoIssues,
-        level: this.config.seoLevel
-      },
-      recommendations
-    };
-  }
-
-  /**
-   * Update configuration
-   */
-      title: document.title,
-      description: 'Zion Tech Group - Advanced AI and IT Solutions',
-      url: window.location.href,
-      type: 'website'
     });
   }
 
@@ -1350,43 +1157,20 @@ export class ComprehensiveOptimizer {
   }
 }
 
-// Export default instance
-export const optimizer = new ComprehensiveOptimizer();
-// Global optimizer instance
-export const optimizer = new ComprehensiveOptimizer();
 
 // Auto-initialize if in browser
 if (typeof window !== 'undefined') {
   document.addEventListener('DOMContentLoaded', () => {
     optimizer.initialize().catch(console.error);
   });
-}
-
-export default {
-  ComprehensiveOptimizer,
-  optimizer,
-  defaultConfig,
-};
-  optimizeImages
-} from './seoUtils';
-
-/**
- * Comprehensive optimization class
- */
-export class ComprehensiveOptimizer {
-  private performanceMonitor: any;
-  private accessibilityTester: any;
 
   constructor() {
     this.performanceMonitor = new PerformanceMonitor();
     this.accessibilityTester = null; // Simplified for now
+=======
 // Global optimizer instance
 let globalOptimizer: ComprehensiveOptimizer | null = null;
 
-// Initialize global optimizer
-export const initializeOptimizer = (config?: Partial<OptimizationConfig>): Promise<void> => {
-  if (!globalOptimizer) {
-    globalOptimizer = new ComprehensiveOptimizer(config);
   }
 
   /**
@@ -1482,24 +1266,20 @@ export const initializeOptimization = async (): Promise<ComprehensiveOptimizer> 
   await optimizer.initialize();
   return optimizer;
 };
+=======
 
 // Get global optimizer instance
 export const getOptimizer = (): ComprehensiveOptimizer | null => {
   return globalOptimizer;
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3f25:utils/comprehensiveOptimizer.ts
 };
 
-// Run comprehensive audit
-export const runComprehensiveAudit = () => {
-  return globalOptimizer?.runComprehensiveAudit();
-};
-
-// Auto-fix accessibility
-export const autoFixAccessibility = () => {
-  globalOptimizer?.autoFixAccessibility();
-};
-
+export default ComprehensiveOptimizer;
+=======
 // Cleanup optimizer
 export const cleanupOptimizer = () => {
   globalOptimizer?.destroy();
   globalOptimizer = null;
 };
+>>>>>>> origin/main

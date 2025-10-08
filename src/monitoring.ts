@@ -1,42 +1,34 @@
 // Performance monitoring setup
 import { analytics } from './utils/analytics';
-import { errorHandler } from './utils/errorHandler';
-import { performanceOptimizer, measurePageLoad, reportWebVitals } from './utils/performanceOptimizer';
+import { ErrorHandler } from './utils/errorHandler';
+import { performanceOptimizer } from '../app/utils/performanceOptimizer';
+import { logger } from './utils/logger';
 
-// Initialize performance monitoring
-if (typeof window !== 'undefined') {
-  // Track page load
-  analytics.trackPageView(window.location.pathname);
+// Initialize error handler
+const errorHandler = new ErrorHandler();
 
-  // Initialize performance optimizer
-
-  // Monitor long tasks
-  performanceOptimizer.monitorLongTasks((entries: PerformanceEntry[]) => {
-    entries.forEach((entry: PerformanceEntry) => {
-      analytics.track(
-        'long_task',
-        'performance',
-        'detected',
-        undefined,
-        entry.duration
-      );
-    });
-  });
-
-  // Track Web Vitals
-  const metrics = measurePageLoad();
-  if (metrics) {
-    reportWebVitals(metrics);
-  }
-  
-  // Monitor long tasks (if available)
-  if ('monitorLongTasks' in performanceOptimizer) {
-    (performanceOptimizer as { monitorLongTasks: (callback: (entries: PerformanceEntryList) => void) => void }).monitorLongTasks((entries: PerformanceEntryList) => {
-      entries.forEach((entry: PerformanceEntry) => {
-        analytics.track('long_task', 'performance', 'detected', undefined, entry.duration);
-      });
-    });
+// Initialize monitoring on load
+function initializeMonitoring() {
+  try {
+    // Set up performance monitoring
+    if (typeof window !== 'undefined') {
+      // Monitor web vitals
+      performanceOptimizer.init();
+      
+      // Set up error tracking
+      errorHandler.init();
+      
+      // Initialize analytics
+      analytics.init();
+      
+      logger.info('Monitoring initialized successfully');
+    }
+  } catch (error) {
+    logger.error('Failed to initialize monitoring:', error);
   }
 }
 
-export { analytics, errorHandler, performanceOptimizer };
+// Initialize monitoring on load
+initializeMonitoring();
+
+export { analytics, errorHandler, initializeMonitoring, ErrorHandler, performanceOptimizer };

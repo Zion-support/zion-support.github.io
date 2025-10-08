@@ -47,7 +47,6 @@ class ErrorBoundary extends Component<Props, State> {
   }
 
   handleRetry = () => {
-    this.setState({ hasError: false } as State);
   };
 
   handleGoHome = () => {
@@ -77,9 +76,6 @@ class ErrorBoundary extends Component<Props, State> {
               We're sorry, but something unexpected happened. Please try again.
             </p>
 
-            {process.env.NODE_ENV === 'development' && this.state.error && (
-              <div className='mb-4 p-3 bg-red-50 border border-red-200 rounded text-left'>
-                <p className='text-sm text-red-800 font-mono'>
                   {this.state.error.message}
                 </p>
                 {this.state.errorId && (

@@ -1,7 +1,9 @@
 /**
- * Centralized logging utility for the application
- * Provides structured logging with different levels and environments
+ * Logger Utility
+ * Provides structured logging with different log levels and context
  */
+
+import { isDevelopment, isProduction } from '../config/appConfig';
 
 export enum LogLevel {
   DEBUG = 0,
@@ -10,124 +12,222 @@ export enum LogLevel {
   ERROR = 3,
 }
 
-interface LogEntry {
+export interface LogContext {
+  component?: string;
+  action?: string;
+  userId?: string;
+  sessionId?: string;
+  [key: string]: unknown;
+}
+
+export interface LogEntry {
+  timestamp: string;
   level: LogLevel;
   message: string;
-  timestamp: string;
-  context?: string;
-  data?: Record<string, unknown>;
+  context?: LogContext;
   error?: Error;
 }
 
 class Logger {
-  private currentLevel: LogLevel;
-  private isDevelopment: boolean;
+  private minLevel: LogLevel;
+  private logs: LogEntry[] = [];
+  private maxLogSize: number = 1000;
 
-  constructor() {
-    this.isDevelopment = process.env.NODE_ENV === 'development';
-    this.currentLevel = this.isDevelopment ? LogLevel.DEBUG : LogLevel.INFO;
+  constructor(minLevel: LogLevel = LogLevel.INFO) {
+    this.minLevel = minLevel;
   }
 
-  private shouldLog(level: LogLevel): boolean {
-    return level >= this.currentLevel;
+  /**
+   * Set minimum log level
+   */
+  setMinLevel(level: LogLevel): void {
+    this.minLevel = level;
   }
 
-  private formatMessage(entry: LogEntry): string {
-    const { level, message, timestamp, context, data, error } = entry;
-    const levelName = LogLevel[level];
-    const contextStr = context ? `[${context}]` : '';
-    const dataStr = data ? ` | Data: ${JSON.stringify(data)}` : '';
-    const errorStr = error ? ` | Error: ${error.message}` : '';
-    
-    return `${timestamp} ${levelName}${contextStr} ${message}${dataStr}${errorStr}`;
-  }
-
-  private log(level: LogLevel, message: string, context?: string, data?: Record<string, unknown>, error?: Error): void {
-    if (!this.shouldLog(level)) return;
-
-    const entry: LogEntry = {
+  /**
+   * Create a log entry
+   */
+  private createLogEntry(
+    level: LogLevel,
+    message: string,
+    context?: LogContext,
+    error?: Error
+  ): LogEntry {
+    return {
+      timestamp: new Date().toISOString(),
       level,
       message,
-      timestamp: new Date().toISOString(),
       context,
-      data,
       error,
     };
+  }
 
-    const formattedMessage = this.formatMessage(entry);
-
-    // Use appropriate console method based on level
-    switch (level) {
-      case LogLevel.DEBUG:
-        // eslint-disable-next-line no-console
-console.debug(formattedMessage);
-        break;
-      case LogLevel.INFO:
-        // eslint-disable-next-line no-console
-console.info(formattedMessage);
-        break;
-      case LogLevel.WARN:
-        // eslint-disable-next-line no-console
-console.warn(formattedMessage);
-        break;
-      case LogLevel.ERROR:
-        // eslint-disable-next-line no-console
-console.error(formattedMessage);
-        break;
-    }
-
-    // In production, also send to external logging service
-    if (!this.isDevelopment && level >= LogLevel.ERROR) {
-      this.sendToExternalLogger(entry);
+  /**
+   * Store log entry
+   */
+  private storeLog(entry: LogEntry): void {
+    this.logs.push(entry);
+    if (this.logs.length > this.maxLogSize) {
+      this.logs = this.logs.slice(-this.maxLogSize);
     }
   }
 
-  private async sendToExternalLogger(entry: LogEntry): Promise<void> {
-    try {
-      // Send to external logging service (e.g., Sentry, LogRocket, etc.)
-      if (typeof window !== 'undefined' && 'gtag' in window) {
-        (window as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag('event', 'error_logged', {
-          event_category: 'Error',
-          event_label: entry.message,
-          value: entry.level,
-        });
+  /**
+   * Format log message for console
+   */
+  private formatMessage(entry: LogEntry): string {
+    const levelName = LogLevel[entry.level];
+    let message = `[${entry.timestamp}] ${levelName}: ${entry.message}`;
+    
+    if (entry.context && Object.keys(entry.context).length > 0) {
+      message += ` | Context: ${JSON.stringify(entry.context)}`;
+    }
+    
+    return message;
+  }
+
+  /**
+   * Log a message with a specific level
+   */
+  private log(
+    level: LogLevel,
+    message: string,
+    context?: LogContext,
+    error?: Error
+  ): void {
+    if (level < this.minLevel) {
+      return;
+    }
+
+    const entry = this.createLogEntry(level, message, context, error);
+    this.storeLog(entry);
+
+    // Only output to console in development or for errors/warnings in production
+    if (isDevelopment() || level >= LogLevel.WARN) {
+      const formattedMessage = this.formatMessage(entry);
+
+      switch (level) {
+        case LogLevel.DEBUG:
+          if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { console.debug(formattedMessage); } }
+          break;
+        case LogLevel.INFO:
+          if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { console.info(formattedMessage); } }
+          break;
+        case LogLevel.WARN:
+          console.warn(formattedMessage);
+          if (error) console.warn(error);
+          break;
+        case LogLevel.ERROR:
+          console.error(formattedMessage);
+          if (error) console.error(error);
+          break;
       }
-    } catch (error) {
-      // Fallback to console if external logging fails
-      // eslint-disable-next-line no-console
-console.error('Failed to send log to external service:', error);
+    }
+
+    // Send errors to monitoring service in production
+    if (isProduction() && level === LogLevel.ERROR && error) {
+      this.sendToMonitoring(entry);
     }
   }
 
-  debug(message: string, context?: string, data?: Record<string, unknown>): void {
-    this.log(LogLevel.DEBUG, message, context, data);
+  /**
+   * Send error to monitoring service
+   */
+  private sendToMonitoring(entry: LogEntry): void {
+    // In production, this would send to a monitoring service like Sentry
+    // For now, we'll just store it
+    if (typeof window !== 'undefined' && (window as unknown as { errorMonitoring?: unknown }).errorMonitoring) {
+      try {
+        // Send to error monitoring service
+        const monitoring = (window as unknown as { errorMonitoring: { captureException: (error: Error, context?: LogContext) => void } }).errorMonitoring;
+        if (entry.error) {
+          monitoring.captureException(entry.error, entry.context);
+        }
+      } catch (e) {
+        console.error('Failed to send error to monitoring:', e);
+      }
+    }
   }
 
-  info(message: string, context?: string, data?: Record<string, unknown>): void {
-    this.log(LogLevel.INFO, message, context, data);
+  /**
+   * Debug level logging
+   */
+  debug(message: string, context?: LogContext): void {
+    this.log(LogLevel.DEBUG, message, context);
   }
 
-  warn(message: string, context?: string, data?: Record<string, unknown>): void {
-    this.log(LogLevel.WARN, message, context, data);
+  /**
+   * Info level logging
+   */
+  info(message: string, context?: LogContext): void {
+    this.log(LogLevel.INFO, message, context);
   }
 
-  error(message: string, context?: string, data?: Record<string, unknown>, error?: Error): void {
-    this.log(LogLevel.ERROR, message, context, data, error);
+  /**
+   * Warning level logging
+   */
+  warn(message: string, context?: LogContext, error?: Error): void {
+    this.log(LogLevel.WARN, message, context, error);
   }
 
-  // Performance logging
-  performance(message: string, metrics: Record<string, unknown>, context?: string): void {
-    this.log(LogLevel.INFO, message, context || 'Performance', metrics);
+  /**
+   * Error level logging
+   */
+  error(message: string, error?: Error, context?: LogContext): void {
+    this.log(LogLevel.ERROR, message, context, error);
   }
 
-  // Application lifecycle logging
-  lifecycle(event: string, context?: string, data?: Record<string, unknown>): void {
-    this.log(LogLevel.INFO, `App ${event}`, context || 'Lifecycle', data);
+  /**
+   * Get recent logs
+   */
+  getRecentLogs(count: number = 100): LogEntry[] {
+    return this.logs.slice(-count);
+  }
+
+  /**
+   * Clear all logs
+   */
+  clearLogs(): void {
+    this.logs = [];
+  }
+
+  /**
+   * Export logs as JSON
+   */
+  exportLogs(): string {
+    return JSON.stringify(this.logs, null, 2);
+  }
+
+  /**
+   * Log performance metrics (development only)
+   */
+  perf(label: string, value: number, unit = 'ms'): void {
+    this.debug(`${label}: ${value}${unit}`, { component: 'performance' });
+  }
+
+  /**
+   * Group related logs (development only)
+   */
+  group(label: string, fn: () => void): void {
+    if (isDevelopment()) {
+      console.group(label);
+      fn();
+      console.groupEnd();
+    }
+  }
+
+  /**
+   * Log with custom styling (development only)
+   */
+  styled(message: string, style: string): void {
+    if (isDevelopment()) {
+      if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { console.log(`%c${message}`, style); } }
+    }
   }
 }
 
-// Export singleton instance
-export const logger = new Logger();
+// Create and export singleton instance
+const logger = new Logger(isDevelopment() ? LogLevel.DEBUG : LogLevel.INFO);
 
-// Export individual methods for convenience
-export const { debug, info, warn, error, performance, lifecycle } = logger;
+export { logger };
+export default logger;

@@ -109,3 +109,25 @@ pnpm-debug.log*
 # IDE
 .vscode/
 .idea/
+
+# Additional ignores for cleaner repo
+*.backup
+*.disabled
+*-backup-*
+*.log.*
+*-old
+*-temp
+temp_*
+tmp_*
+.DS_Store
+
+# Additional ignores for cleaner repo
+*.backup
+*.disabled
+*-backup-*
+*.log.*
+*-old
+*-temp
+temp_*
+tmp_*
+.DS_Store

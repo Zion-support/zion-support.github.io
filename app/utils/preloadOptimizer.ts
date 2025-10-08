@@ -73,8 +73,8 @@ export const optimizeImages = () => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           const img = entry.target as HTMLImageElement;
-          if (img.dataset.src) {
-            img.src = img.dataset.src;
+          if (img.dataset['src']) {
+            img['src'] = img.dataset['src'];
             img.removeAttribute('data-src');
             imageObserver.unobserve(img);
           }
@@ -110,6 +110,6 @@ const loadAnalytics = () => {
   // Load Google Analytics after page load
   const gaScript = document.createElement('script');
   gaScript.async = true;
-  gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID';
+  gaScript['src'] = 'https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID';
   document.head.appendChild(gaScript);
 };

@@ -25,9 +25,6 @@ global.IntersectionObserver = class IntersectionObserver {
   observe() {}
   unobserve() {}
   takeRecords() { return []; }
-};
-} as typeof IntersectionObserver;
-} as typeof IntersectionObserver;
 
 // Mock ResizeObserver
 global.ResizeObserver = class ResizeObserver {

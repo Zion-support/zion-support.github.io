@@ -44,6 +44,10 @@ class Analytics {
     const event: AnalyticsEvent = {
       name,
       category,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-e42d
+>>>>>>> cursor/fix-errors-and-merge-to-main-cfd1:src.disabled/utils/analytics.ts
+=======
+>>>>>>> origin/main
       timestamp: Date.now(),
     };
 

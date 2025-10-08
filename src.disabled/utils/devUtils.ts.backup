@@ -2,6 +2,21 @@
  * Development Utilities
  * Tools and helpers for development and debugging
  */
+<<<<<<< HEAD:src/utils/devUtils.ts
+export const devLog = (message: string, data?: any) => {
+  if (process.env['NODE_ENV'] === 'development') {
+    //DEV: ${message}
+  }
+};
+export const devError = (message: string, error?: any) => {
+  if (process.env['NODE_ENV'] === 'development') {
+    //DEV ERROR: ${message}
+  }
+};
+export const devWarn = (message: string, data?: any) => {
+  if (process.env['NODE_ENV'] === 'development') {
+    //DEV WARN: ${message}
+=======
 
 export const devLog = (message: string, data?: any) => {
 <<<<<<< HEAD:src.disabled/utils/devUtils.ts.backup
@@ -38,6 +53,7 @@ export const devWarn = (message: string, data?: any) => {
   if (process.env['NODE_ENV'] === 'development') {
     console.warn(`[DEV WARN] ${message}`, data || '');
 >>>>>>> cursor/fix-errors-and-merge-to-main-e42d:src/utils/devUtils.ts
+>>>>>>> origin/main:src.disabled/utils/devUtils.ts.backup
   }
 };
 

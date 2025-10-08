@@ -1,5 +1,3 @@
-'use client';
-
 import React, { useState, useCallback, memo } from 'react';
 import Image from 'next/image';
 
@@ -22,7 +20,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = memo(({
   height,
   className = '',
   priority = false,
-  placeholder = 'blur',
+  placeholder = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaZWlnaHQ9IjEwMCUiIGZpbGw9IiNmM2Y0ZjYiLz48L3N2Zz4=',
   onLoad,
   onError
 }) => {

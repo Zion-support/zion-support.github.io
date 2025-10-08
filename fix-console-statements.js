@@ -13,10 +13,10 @@ function fixConsoleStatements(filePath) {
     // Replace console.log with a comment or remove
     const consoleRegex = /console\.(log|warn|error|info|debug)\([^)]*\);?\s*/g;
     const matches = content.match(consoleRegex);
-    
+
     if (matches) {
       // Replace with eslint-disable-next-line no-console comment
-      content = content.replace(consoleRegex, (match) => {
+      content = content.replace(consoleRegex, match => {
         const lines = match.split('\n');
         const firstLine = lines[0];
         const indent = firstLine.match(/^(\s*)/)[1];
@@ -43,13 +43,15 @@ async function main() {
     'app/**/*.{ts,tsx,js,jsx}',
     'components/**/*.{ts,tsx,js,jsx}',
     'lib/**/*.{ts,tsx,js,jsx}',
-    'src/**/*.{ts,tsx,js,jsx}'
+    'src/**/*.{ts,tsx,js,jsx}',
   ];
 
   let totalFixed = 0;
 
   for (const pattern of patterns) {
-    const files = await glob(pattern, { ignore: ['**/node_modules/**', '**/.*'] });
+    const files = await glob(pattern, {
+      ignore: ['**/node_modules/**', '**/.*'],
+    });
     files.forEach(file => {
       if (fixConsoleStatements(file)) {
         totalFixed++;

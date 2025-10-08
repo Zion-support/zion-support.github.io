@@ -469,7 +469,7 @@ class AccessibilityEnhancer {
   }
 
   private generateAltText(img: HTMLImageElement): string {
-    const src = img.src;
+    const src = img['src'];
     const filename = src.split('/').pop()?.split('.')[0] || 'image';
     return filename
       .replace(/[-_]/g, ' ')

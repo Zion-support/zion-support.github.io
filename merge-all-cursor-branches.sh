@@ -1,95 +1,105 @@
 #!/bin/bash
 
-# Script to merge all cursor branches into main
+# Script to merge all cursor/fix-errors-and-merge-to-main branches into main
+# This will attempt to merge each branch, resolving conflicts automatically when possible
+
 set -e
 
-echo "Starting systematic merge of all cursor branches..."
+# Colors for output
+GREEN='\033[0;32m'
+RED='\033[0;31m'
+YELLOW='\033[1;33m'
+NC='\033[0m' # No Color
 
-# Get list of all cursor branches
-CURSOR_BRANCHES=(
-    "cursor/fix-errors-and-merge-to-main-100d"
-    "cursor/fix-errors-and-merge-to-main-2f1b"
-    "cursor/fix-errors-and-merge-to-main-4800"
-    "cursor/fix-errors-and-merge-to-main-494d"
-    "cursor/fix-errors-and-merge-to-main-4c51"
-    "cursor/fix-errors-and-merge-to-main-5696"
-    "cursor/fix-errors-and-merge-to-main-6ee3"
-    "cursor/fix-errors-and-merge-to-main-7318"
-    "cursor/fix-errors-and-merge-to-main-7795"
-    "cursor/fix-errors-and-merge-to-main-8f2f"
-    "cursor/fix-errors-and-merge-to-main-90a6"
-    "cursor/fix-errors-and-merge-to-main-97a6"
-    "cursor/fix-errors-and-merge-to-main-9bdd"
-    "cursor/fix-errors-and-merge-to-main-9caa"
-    "cursor/fix-errors-and-merge-to-main-9f74"
-    "cursor/fix-errors-and-merge-to-main-9ff4"
-    "cursor/fix-errors-and-merge-to-main-b122"
-    "cursor/fix-errors-and-merge-to-main-b8f9"
-    "cursor/fix-errors-and-merge-to-main-cefe"
-    "cursor/fix-errors-and-merge-to-main-d0f7"
-    "cursor/fix-errors-and-merge-to-main-dc65"
-    "cursor/fix-errors-and-merge-to-main-f4fa"
-    "cursor/fix-errors-and-merge-to-main-fbf8"
-    "cursor/fix-errors-and-merge-to-main-fcbc"
-)
+echo -e "${GREEN}Starting merge process for all cursor branches${NC}"
 
-# Ensure we're on main branch
+# Ensure we're on main and have latest
 git checkout main
 git pull origin main
 
-# Track merged branches
-MERGED_BRANCHES=()
-FAILED_BRANCHES=()
+# Get all cursor branches
+branches=$(git branch -r | grep "cursor/fix-errors-and-merge-to-main-" | grep -v "cbb3" | sed 's/origin\///' | sort)
 
-echo "Merging cursor branches into main..."
+total=$(echo "$branches" | wc -l)
+current=0
+success=0
+failed=0
 
-for branch in "${CURSOR_BRANCHES[@]}"; do
-    echo "Processing branch: $branch"
+echo -e "${GREEN}Found $total branches to merge${NC}"
+
+# Create log file
+LOG_FILE="merge-cursor-branches-$(date +%Y%m%d-%H%M%S).log"
+echo "Merge process started at $(date)" > "$LOG_FILE"
+
+for branch in $branches; do
+    current=$((current + 1))
+    echo -e "\n${YELLOW}[$current/$total] Processing: $branch${NC}"
+    echo "Processing: $branch" >> "$LOG_FILE"
     
-    # Check if branch exists
-    if git show-ref --verify --quiet refs/remotes/origin/$branch; then
-        echo "  ✓ Branch exists, attempting merge..."
-        
-        # Try to merge the branch
-        if git merge origin/$branch --no-edit; then
-            echo "  ✅ Successfully merged $branch"
-            MERGED_BRANCHES+=("$branch")
-        else
-            echo "  ❌ Failed to merge $branch due to conflicts"
-            FAILED_BRANCHES+=("$branch")
-            
-            # Reset to clean state
-            git merge --abort 2>/dev/null || true
-        fi
+    # Fetch the branch
+    git fetch origin "$branch:$branch" 2>/dev/null || true
+    
+    # Try to merge
+    if git merge "$branch" --no-edit -m "Merge $branch into main" 2>&1 | tee -a "$LOG_FILE"; then
+        echo -e "${GREEN}✓ Successfully merged $branch${NC}"
+        echo "SUCCESS: $branch" >> "$LOG_FILE"
+        success=$((success + 1))
     else
-        echo "  ⚠️  Branch $branch does not exist, skipping..."
+        # Check if there are conflicts
+        if git diff --name-only --diff-filter=U | grep -q .; then
+            echo -e "${RED}✗ Conflicts detected in $branch, attempting auto-resolution${NC}"
+            
+            # Auto-resolve conflicts by taking our version (main)
+            git diff --name-only --diff-filter=U | while read file; do
+                echo "  Resolving conflict in: $file"
+                git checkout --ours "$file" 2>/dev/null || git checkout --theirs "$file" 2>/dev/null || true
+                git add "$file" 2>/dev/null || true
+            done
+            
+            # Try to complete the merge
+            if git commit --no-edit -m "Merge $branch into main (conflicts auto-resolved)" 2>&1 | tee -a "$LOG_FILE"; then
+                echo -e "${GREEN}✓ Merged $branch with auto-resolved conflicts${NC}"
+                echo "SUCCESS (auto-resolved): $branch" >> "$LOG_FILE"
+                success=$((success + 1))
+            else
+                echo -e "${RED}✗ Failed to merge $branch${NC}"
+                echo "FAILED: $branch" >> "$LOG_FILE"
+                git merge --abort 2>/dev/null || true
+                failed=$((failed + 1))
+            fi
+        else
+            echo -e "${RED}✗ Failed to merge $branch (no conflicts detected)${NC}"
+            echo "FAILED (no conflicts): $branch" >> "$LOG_FILE"
+            git merge --abort 2>/dev/null || true
+            failed=$((failed + 1))
+        fi
     fi
+    
+    # Clean up local branch
+    git branch -D "$branch" 2>/dev/null || true
 done
 
-echo ""
-echo "=== MERGE SUMMARY ==="
-echo "Successfully merged branches:"
-for branch in "${MERGED_BRANCHES[@]}"; do
-    echo "  ✅ $branch"
-done
+echo -e "\n${GREEN}========================================${NC}"
+echo -e "${GREEN}Merge Summary:${NC}"
+echo -e "${GREEN}  Total branches: $total${NC}"
+echo -e "${GREEN}  Successfully merged: $success${NC}"
+echo -e "${RED}  Failed: $failed${NC}"
+echo -e "${GREEN}========================================${NC}"
 
-echo ""
-echo "Failed to merge branches (conflicts):"
-for branch in "${FAILED_BRANCHES[@]}"; do
-    echo "  ❌ $branch"
-done
+echo "" >> "$LOG_FILE"
+echo "Merge process completed at $(date)" >> "$LOG_FILE"
+echo "Total: $total, Success: $success, Failed: $failed" >> "$LOG_FILE"
 
-echo ""
-echo "Total merged: ${#MERGED_BRANCHES[@]}"
-echo "Total failed: ${#FAILED_BRANCHES[@]}"
+echo -e "\n${GREEN}Log saved to: $LOG_FILE${NC}"
 
-# Push changes if any were merged
-if [ ${#MERGED_BRANCHES[@]} -gt 0 ]; then
-    echo ""
-    echo "Pushing merged changes to main..."
-    git push origin main
-    echo "✅ Changes pushed to main branch"
+# Push changes to origin/main
+echo -e "\n${YELLOW}Pushing changes to origin/main...${NC}"
+if git push origin main; then
+    echo -e "${GREEN}✓ Successfully pushed to origin/main${NC}"
+else
+    echo -e "${RED}✗ Failed to push to origin/main${NC}"
+    echo "Please review and push manually"
+    exit 1
 fi
 
-echo ""
-echo "Merge process completed!"
+echo -e "\n${GREEN}All done!${NC}"

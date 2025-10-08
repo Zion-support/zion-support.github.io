@@ -161,15 +161,6 @@ export const testUtils = {
       return fn(...args);
     };
 
-    // Add properties to the spy function
-    Object.assign(spyFn, {
-      callCount: () => callCount,
-      lastArgs: () => lastArgs,
-      reset: () => {
-        callCount = 0;
-        lastArgs = [];
-      },
-    });
 
     return spyFn as unknown as Function & {
       callCount: () => number;

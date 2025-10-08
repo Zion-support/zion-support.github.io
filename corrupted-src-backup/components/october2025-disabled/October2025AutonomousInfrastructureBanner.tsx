@@ -1,5 +1,3 @@
-import { Link } from 'react-router-dom';
-import { Bot, Target, DollarSign, Zap, TrendingUp, Activity, Cloud, Shield, CheckCircle, Cpu, ArrowRight, Clock } from 'lucide-react';
 
 const October2025AutonomousInfrastructureBanner = () => {
   return (

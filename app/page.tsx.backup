@@ -1,5 +1,8 @@
+<<<<<<< HEAD:app_disabled/page.tsx
+=======
 import { Suspense, lazy } from 'react';
 import Link from 'next/link';
+>>>>>>> origin/main:app/page.tsx.backup
 
 //Lazy load heavy components
 const UnifiedContentPromotion = lazy(

@@ -1,4 +1,6 @@
 import React from 'react';
+<<<<<<< HEAD:app_disabled/layout.tsx
+=======
 import Link from 'next/link';
 <<<<<<< HEAD:src/components/Layout.tsx
 
@@ -359,3 +361,4 @@ export default function Layout({ children }: LayoutProps): React.JSX.Element {
     </div>
   );
 }
+>>>>>>> origin/main:src.disabled/components/Layout.tsx.backup

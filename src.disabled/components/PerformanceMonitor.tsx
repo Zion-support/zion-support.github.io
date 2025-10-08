@@ -26,4 +26,3 @@ const PerformanceMonitor: React.FC = () => {
   return null;
 };
 
-export default PerformanceMonitor;

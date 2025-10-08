@@ -17,8 +17,8 @@ export class PerformanceOptimizer {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
             const img = entry.target as HTMLImageElement;
-            if (img.dataset.src) {
-              img.src = img.dataset.src;
+            if (img.dataset['src']) {
+              img['src'] = img.dataset['src'];
               img.classList.remove('lazy');
               imageObserver.unobserve(img);
             }

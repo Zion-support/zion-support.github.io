@@ -1,6 +1,4 @@
-'use client';
-
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useCallback, useRef } from 'react';
 import { Helmet } from 'react-helmet-async';
 
 interface SEOConfig {
@@ -25,126 +23,104 @@ interface SEOConfig {
   tags?: string[];
 }
 
+interface SEOConfig {
+  title: string;
+  description: string;
+  url: string;
+  canonicalUrl: string;
+  keywords: string[];
+}
+
 interface AdvancedSEOOptimizerProps {
   config: SEOConfig;
   enableStructuredData?: boolean;
-  enableAnalytics?: boolean;
-  enablePerformanceTracking?: boolean;
+  enableOpenGraph?: boolean;
+  enableTwitterCards?: boolean;
+  enableSchemaMarkup?: boolean;
 }
 
 const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
   config,
   enableStructuredData = true,
-  enableAnalytics = true,
-  enablePerformanceTracking = true,
+  enableOpenGraph = true,
+  enableTwitterCards = true,
+  enableSchemaMarkup = true,
 }) => {
   const structuredDataRef = useRef<HTMLScriptElement | null>(null);
 
-  useEffect(() => {
-    // Update document title
-    document.title = config.title;
+  const generateStructuredData = useCallback(() => {
+    if (!enableStructuredData) return null;
 
     // Update meta description
-    updateMetaTag('description', config.description);
-    updateMetaTag('keywords', config.keywords.join(', '));
-
-    // Update Open Graph tags
-    updateMetaTag('og:title', config.ogTitle || config.title, 'property');
-    updateMetaTag('og:description', config.ogDescription || config.description, 'property');
-    updateMetaTag('og:url', config.canonicalUrl, 'property');
-    updateMetaTag('og:type', config.ogType || 'website', 'property');
-    if (config.ogImage) {
-      updateMetaTag('og:image', config.ogImage, 'property');
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', config.description);
+    } else {
+      const meta = document.createElement('meta');
+      meta.name = 'description';
+      meta.content = config.description;
+      document.head.appendChild(meta);
     }
 
-    // Update Twitter Card tags
-    updateMetaTag('twitter:card', config.twitterCard || 'summary_large_image', 'name');
-    updateMetaTag('twitter:title', config.twitterTitle || config.title, 'name');
-    updateMetaTag('twitter:description', config.twitterDescription || config.description, 'name');
-    if (config.twitterImage) {
-      updateMetaTag('twitter:image', config.twitterImage, 'name');
-    }
-
-    // Update other meta tags
-    if (config.author) {
-      updateMetaTag('author', config.author);
-    }
-    if (config.robots) {
-      updateMetaTag('robots', config.robots);
-    }
-    if (config.publishedTime) {
-      updateMetaTag('article:published_time', config.publishedTime, 'property');
-    }
-    if (config.modifiedTime) {
-      updateMetaTag('article:modified_time', config.modifiedTime, 'property');
-    }
-    if (config.section) {
-      updateMetaTag('article:section', config.section, 'property');
-    }
-    if (config.tags && config.tags.length > 0) {
-      config.tags.forEach(tag => {
-        addMetaTag('article:tag', tag, 'property');
-      });
+    // Update keywords
+    const metaKeywords = document.querySelector('meta[name="keywords"]');
+    if (metaKeywords) {
+      metaKeywords.setAttribute('content', config.keywords.join(', '));
+    } else {
+      const meta = document.createElement('meta');
+      meta.name = 'keywords';
+      meta.content = config.keywords.join(', ');
+      document.head.appendChild(meta);
     }
 
     // Update canonical URL
-    updateCanonicalUrl(config.canonicalUrl);
-
-    // Add structured data
-    if (enableStructuredData && config.structuredData) {
-      addStructuredData(config.structuredData);
-    }
-
-    // Track page view
-    if (enableAnalytics) {
-      trackPageView(config);
-    }
-
-    // Performance tracking
-    if (enablePerformanceTracking) {
-      trackPerformanceMetrics();
-    }
-
-    // Cleanup function
-    return () => {
-      if (structuredDataRef.current) {
-        structuredDataRef.current.remove();
-      }
-    };
-  }, [config, enableStructuredData, enableAnalytics, enablePerformanceTracking]);
-
-  const updateMetaTag = (name: string, content: string, attribute: string = 'name') => {
-    let metaTag = document.querySelector(`meta[${attribute}="${name}"]`) as HTMLMetaElement;
-    
-    if (metaTag) {
-      metaTag.content = content;
-    } else {
-      metaTag = document.createElement('meta');
-      metaTag.setAttribute(attribute, name);
-      metaTag.content = content;
-      document.head.appendChild(metaTag);
-    }
-  };
-
-  const addMetaTag = (name: string, content: string, attribute: string = 'name') => {
-    const metaTag = document.createElement('meta');
-    metaTag.setAttribute(attribute, name);
-    metaTag.content = content;
-    document.head.appendChild(metaTag);
-  };
-
-  const updateCanonicalUrl = (url: string) => {
-    let canonicalLink = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
-    
+    const canonicalLink = document.querySelector('link[rel="canonical"]');
     if (canonicalLink) {
-      canonicalLink.href = url;
+      canonicalLink.setAttribute('href', config.canonicalUrl);
     } else {
-      canonicalLink = document.createElement('link');
-      canonicalLink.rel = 'canonical';
-      canonicalLink.href = url;
-      document.head.appendChild(canonicalLink);
+      const link = document.createElement('link');
+      link.rel = 'canonical';
+      link.href = config.canonicalUrl;
+      document.head.appendChild(link);
     }
-  };
+  }, [config]);
+
+  const generateBreadcrumbStructuredData = useCallback(() => {
+    if (!enableSchemaMarkup) return null;
+
+    return {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: 'Home',
+          item: 'https://ziontechgroup.com',
+        },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          name: config.title,
+          item: config.canonicalUrl,
+        },
+      ],
+    };
+  }, [config, enableSchemaMarkup]);
+
+  const addCanonicalLink = useCallback(() => {
+    // Remove existing canonical link
+    const existingCanonical = document.querySelector('link[rel="canonical"]');
+    if (existingCanonical) {
+      existingCanonical.remove();
+    }
+
+    // Add new canonical link
+    const canonicalLink = document.createElement('link');
+    canonicalLink.rel = 'canonical';
+    canonicalLink.href = config.canonicalUrl;
+    document.head.appendChild(canonicalLink);
+  }, [config.canonicalUrl]);
 
   const addStructuredData = (data: Record<string, unknown>) => {
     // Remove existing structured data
@@ -161,6 +137,25 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     structuredDataRef.current = script;
   };
 
+  const generateAdditionalMetaTags = () => {
+    return (
+      <>
+        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+        <meta name="googlebot" content="index, follow" />
+        <meta name="bingbot" content="index, follow" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#2563eb" />
+        <meta name="msapplication-TileColor" content="#2563eb" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+        <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <link rel="manifest" href="/manifest.json" />
+      </>
+    );
+  };
+
   const trackPageView = (config: SEOConfig) => {
     if (typeof window !== 'undefined' && 'gtag' in window) {
       (window as unknown as { gtag: (command: string, targetId: string, config: Record<string, unknown>) => void }).gtag('config', 'GA_MEASUREMENT_ID', {
@@ -170,20 +165,37 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     }
   };
 
-  const trackPerformanceMetrics = () => {
-    if (typeof window !== 'undefined' && 'performance' in window) {
-      window.addEventListener('load', () => {
-        const perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-        if (perfData && typeof window !== 'undefined' && 'gtag' in window) {
-          (window as unknown as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag('event', 'page_load_performance', {
-            event_category: 'Performance',
-            event_label: 'Page Load',
-            value: Math.round(perfData.loadEventEnd - perfData.fetchStart),
-          });
-        }
-      });
+  useEffect(() => {
+    // Add canonical link
+    addCanonicalLink();
+
+    // Add structured data
+    const structuredData = generateStructuredData();
+    if (structuredData) {
+      addStructuredData(structuredData);
     }
-  };
+
+    // Add breadcrumb structured data
+    const breadcrumbData = generateBreadcrumbStructuredData();
+    if (breadcrumbData) {
+      addStructuredData(breadcrumbData);
+    }
+
+    // Track page view
+    trackPageView({
+      title: config.title,
+      description: config.description,
+      url: config.canonicalUrl,
+      canonicalUrl: config.canonicalUrl,
+    });
+
+    // Cleanup on unmount
+    return () => {
+      if (structuredDataRef.current) {
+        structuredDataRef.current.remove();
+      }
+    };
+  }, [config, addCanonicalLink, generateStructuredData, generateBreadcrumbStructuredData]);
 
   return (
     <Helmet>
@@ -192,91 +204,37 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
       <meta name="keywords" content={config.keywords.join(', ')} />
       <link rel="canonical" href={config.canonicalUrl} />
       
-      {/* Open Graph */}
-      <meta property="og:title" content={config.ogTitle || config.title} />
-      <meta property="og:description" content={config.ogDescription || config.description} />
-      <meta property="og:url" content={config.canonicalUrl} />
-      <meta property="og:type" content={config.ogType || 'website'} />
-      {config.ogImage && <meta property="og:image" content={config.ogImage} />}
-      
-      {/* Twitter Card */}
-      <meta name="twitter:card" content={config.twitterCard || 'summary_large_image'} />
-      <meta name="twitter:title" content={config.twitterTitle || config.title} />
-      <meta name="twitter:description" content={config.twitterDescription || config.description} />
-      {config.twitterImage && <meta name="twitter:image" content={config.twitterImage} />}
-      
-      {/* Additional meta tags */}
-      {config.author && <meta name="author" content={config.author} />}
-      {config.robots && <meta name="robots" content={config.robots} />}
-      {config.publishedTime && <meta property="article:published_time" content={config.publishedTime} />}
-      {config.modifiedTime && <meta property="article:modified_time" content={config.modifiedTime} />}
-      {config.section && <meta property="article:section" content={config.section} />}
-      {config.tags && config.tags.map(tag => (
-        <meta key={tag} property="article:tag" content={tag} />
-      ))}
+      {/* Open Graph Tags */}
+      {enableOpenGraph && (
+        <>
+          <meta property="og:title" content={config.title} />
+          <meta property="og:description" content={config.description} />
+          <meta property="og:image" content="https://ziontechgroup.com/og-image.jpg" />
+          <meta property="og:url" content={config.canonicalUrl} />
+          <meta property="og:type" content="website" />
+          <meta property="og:site_name" content="Zion Tech Group" />
+        </>
+      )}
+
+      {/* Twitter Card Tags */}
+      {enableTwitterCards && (
+        <>
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:title" content={config.title} />
+          <meta name="twitter:description" content={config.description} />
+          <meta name="twitter:image" content="https://ziontechgroup.com/twitter-image.jpg" />
+        </>
+      )}
+
+      {/* Additional Meta Tags */}
+      <meta name="robots" content="index, follow" />
+      <meta name="author" content="Zion Tech Group" />
+
+      {/* Preconnect to external domains */}
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
     </Helmet>
   );
-};
-
-// Default SEO configuration for the homepage
-export const defaultSEOConfig: SEOConfig = {
-  title: 'Zion Tech Group - Advanced AI and IT Solutions',
-  description: 'Leading provider of AI-powered enterprise solutions, automation, and digital transformation services. Transform your business with cutting-edge AI micro SaaS services and cloud automation.',
-  keywords: [
-    'AI solutions',
-    'enterprise AI',
-    'digital transformation',
-    'automation',
-    'cloud services',
-    'AI consulting',
-    'business intelligence',
-    'machine learning',
-    'artificial intelligence',
-    'enterprise software',
-    'AI micro SaaS',
-    'cloud automation',
-    'AI governance',
-    'AI safety',
-    'autonomous systems',
-  ],
-  canonicalUrl: 'https://ziontechgroup.com',
-  ogTitle: 'Zion Tech Group - Advanced AI and IT Solutions',
-  ogDescription: 'Leading provider of AI-powered enterprise solutions, automation, and digital transformation services.',
-  ogImage: 'https://ziontechgroup.com/og-image.jpg',
-  ogType: 'website',
-  twitterCard: 'summary_large_image',
-  twitterTitle: 'Zion Tech Group - Advanced AI and IT Solutions',
-  twitterDescription: 'Leading provider of AI-powered enterprise solutions, automation, and digital transformation services.',
-  twitterImage: 'https://ziontechgroup.com/og-image.jpg',
-  robots: 'index,follow',
-  author: 'Zion Tech Group',
-  structuredData: {
-    '@context': 'https://schema.org',
-    '@type': 'Organization',
-    name: 'Zion Tech Group',
-    description: 'Leading provider of AI-powered enterprise solutions, automation, and digital transformation services.',
-    url: 'https://ziontechgroup.com',
-    logo: 'https://ziontechgroup.com/logo.png',
-    contactPoint: {
-      '@type': 'ContactPoint',
-      telephone: '+1-555-0123',
-      contactType: 'customer service',
-      email: 'support@ziontechgroup.com',
-    },
-    sameAs: [
-      'https://twitter.com/ziontechgroup',
-      'https://linkedin.com/company/ziontechgroup',
-      'https://github.com/ziontechgroup',
-    ],
-    address: {
-      '@type': 'PostalAddress',
-      streetAddress: '123 AI Innovation Drive',
-      addressLocality: 'San Francisco',
-      addressRegion: 'CA',
-      postalCode: '94105',
-      addressCountry: 'US',
-    },
-  },
 };
 
 export default AdvancedSEOOptimizer;

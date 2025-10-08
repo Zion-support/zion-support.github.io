@@ -7,6 +7,56 @@
 /**
  * Get banner priority based on content date and value
  */
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3f25:utils/bannerLazyLoader.tsx
+
+import React, { lazy, ComponentType, Suspense, useState, useEffect } from 'react';
+
+interface LazyBannerProps {
+  importPath: string;
+  fallback?: React.ReactNode;
+  onLoad?: () => void;
+  onError?: (error: Error) => void;
+  threshold?: number;
+  rootMargin?: string;
+}
+
+=======
+                retryError
+              );
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a4f
+=======
+                default: () => (
+                  <div className="banner-fallback">
+                    <p>Banner temporarily unavailable</p>
+                  </div>
+                )
+              });
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-a05b:utils/bannerLazyLoader.tsx
+            });
+        }, 1000);
+      });
+    })
+  );
+};
+
+/**
+ * Preload banner components for better performance
+ */
+export const preloadBanner = (importFn: () => Promise<BannerModule>): void => {
+  if (typeof window !== 'undefined') {
+    // Preload on idle
+    setTimeout(() => {
+      importFn().catch(() => {
+        // Silently fail for preload
+      });
+  }
+};
+/**
+ * Get banner priority based on content date and value
+ */
+=======
+>>>>>>> origin/main
 export const getBannerPriority = (bannerName: string): number => {
   // October 2025 content gets highest priority
   if (bannerName.includes('October2025')) {
@@ -68,34 +118,16 @@ export class BannerObserver {
       });
     }
   }
+    }
+=======
   observe(element: Element): void {
     this.observer?.observe(element);
+>>>>>>> origin/main
   }
   disconnect(): void {
     this.observer?.disconnect();
     this.loadedBanners.clear();
   }
-}
-/**
- * Banner loading state manager
- */
-export class BannerLoadingManager {
-  private loadingStates = new Map<string, boolean>();
-  private loadedComponents = new Set<string>();
-  isLoaded(componentName: string): boolean {
-    return this.loadedComponents.has(componentName);
-  }
-  isLoading(componentName: string): boolean {
-    return this.loadingStates.get(componentName) || false;
-  }
-  setLoading(componentName: string, loading: boolean): void {
-    this.loadingStates.set(componentName, loading);
-    if (!loading) {
-      this.loadedComponents.add(componentName);
-    }
-  }
-  getLoadingCount(): number {
-    return Array.from(this.loadingStates.values()).filter(Boolean).length;
   }
 }
 
@@ -124,3 +156,5 @@ export default {
 :utils/bannerLazyLoader.ts
 };
 };
+=======
+>>>>>>> origin/main

@@ -1,6 +1,7 @@
 'use client';
 
 import React, { createContext, useContext, useEffect, useState } from 'react';
+import { logger } from '../utils/logger';
 
 interface AnalyticsEvent {
   event: string;
@@ -17,22 +18,9 @@ interface AnalyticsContextType {
   trackError: (error: Error, context?: string) => void;
 }
 
-// Google Analytics types
-interface GtagDataLayer {
-  push: (args: unknown[]) => number;
-}
-
-interface GtagFunction {
-  (command: string, targetId: string, config?: Record<string, unknown>): void;
-  (command: string, eventName: string, parameters?: Record<string, unknown>): void;
-}
-
-interface WindowWithGtag extends Window {
-  dataLayer?: unknown[];
-  gtag?: GtagFunction;
-}
-
-const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
+const AnalyticsContext = createContext<AnalyticsContextType | undefined>(
+  undefined
+);
 
 export const useAnalytics = () => {
   const context = useContext(AnalyticsContext);
@@ -51,7 +39,7 @@ interface AnalyticsProviderProps {
 export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
   children,
   googleAnalyticsId = process.env.NEXT_PUBLIC_GA_ID,
-  enableDebug = process.env.NODE_ENV === 'development',
+  enableDebug = process.env['NODE_ENV'] === 'development',
 }) => {
   const [isInitialized, setIsInitialized] = useState(false);
 
@@ -61,17 +49,16 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
     // Initialize Google Analytics
     const script = document.createElement('script');
     script.async = true;
-    script.src = `https://www.googletagmanager.com/gtag/js?id=${googleAnalyticsId}`;
+    script['src'] = `https://www.googletagmanager.com/gtag/js?id=${googleAnalyticsId}`;
     document.head.appendChild(script);
 
     script.onload = () => {
       // Initialize gtag
-      const windowWithGtag = window as WindowWithGtag;
-      windowWithGtag.dataLayer = windowWithGtag.dataLayer || [];
+      (window as unknown as { dataLayer: unknown[] }).dataLayer = (window as unknown as { dataLayer: unknown[] }).dataLayer || [];
       function gtag(...args: unknown[]) {
-        (windowWithGtag.dataLayer as unknown[]).push(args);
+        (window as unknown as { dataLayer: unknown[] }).dataLayer.push(args);
       }
-      windowWithGtag.gtag = gtag;
+      (window as unknown as { gtag: typeof gtag }).gtag = gtag;
 
       gtag('js', new Date());
       gtag('config', googleAnalyticsId, {
@@ -94,13 +81,11 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
     if (!isInitialized || typeof window === 'undefined') return;
 
     if (enableDebug) {
-      // eslint-disable-next-line no-console
-      console.log('Analytics Event:', event);
+      logger.debug('Analytics Event', { event: JSON.stringify(event) });
     }
 
-    const windowWithGtag = window as WindowWithGtag;
-    if (windowWithGtag.gtag) {
-      windowWithGtag.gtag('event', event.action, {
+    if ((window as unknown as { gtag: (...args: unknown[]) => void }).gtag) {
+      (window as unknown as { gtag: (...args: unknown[]) => void }).gtag('event', event.action, {
         event_category: event.category,
         event_label: event.label,
         value: event.value,
@@ -112,13 +97,11 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
     if (!isInitialized || typeof window === 'undefined') return;
 
     if (enableDebug) {
-      // eslint-disable-next-line no-console
-      console.log('Page View:', page);
+      logger.debug('Page View', { page });
     }
 
-    const windowWithGtag = window as WindowWithGtag;
-    if (windowWithGtag.gtag) {
-      windowWithGtag.gtag('config', googleAnalyticsId, {
+    if ((window as unknown as { gtag: (...args: unknown[]) => void }).gtag) {
+      (window as unknown as { gtag: (...args: unknown[]) => void }).gtag('config', googleAnalyticsId, {
         page_title: document.title,
         page_location: page,
       });
@@ -129,13 +112,11 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
     if (!isInitialized || typeof window === 'undefined') return;
 
     if (enableDebug) {
-      // eslint-disable-next-line no-console
-      console.log('Performance Metric:', metric, value);
+      logger.perf(metric, value);
     }
 
-    const windowWithGtag = window as WindowWithGtag;
-    if (windowWithGtag.gtag) {
-      windowWithGtag.gtag('event', 'web_vitals', {
+    if ((window as unknown as { gtag: (...args: unknown[]) => void }).gtag) {
+      (window as unknown as { gtag: (...args: unknown[]) => void }).gtag('event', 'web_vitals', {
         event_category: 'Performance',
         event_label: metric,
         value: Math.round(value),
@@ -152,9 +133,8 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
       console.error('Analytics Error:', error, context);
     }
 
-    const windowWithGtag = window as WindowWithGtag;
-    if (windowWithGtag.gtag) {
-      windowWithGtag.gtag('event', 'exception', {
+    if ((window as unknown as { gtag: (...args: unknown[]) => void }).gtag) {
+      (window as unknown as { gtag: (...args: unknown[]) => void }).gtag('event', 'exception', {
         description: error.message,
         fatal: false,
         custom_map: {

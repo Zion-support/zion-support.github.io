@@ -84,17 +84,6 @@ class PerformanceEnhancer {
 
   private setupLazyLoading(): void {
     //Enhanced lazy loading with intersection observer
-    const imageObserver = new IntersectionObserver(
-      entries => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            const img = entry.target as HTMLImageElement;
-            const src = img.dataset['src'];
-            if (src) {
-              img.src = src;
-              img.removeAttribute('data-src');
-              imageObserver.unobserve(img);
-            }
           }
         });
       },

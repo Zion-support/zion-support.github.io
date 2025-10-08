@@ -6,23 +6,32 @@
  */
 
 import React, { useState, useEffect, useCallback } from 'react';
-import { collectPerformanceMetrics } from '../utils/performanceEnhancer';
 import { errorHandler } from '../utils/enhancedErrorHandler';
 
-// Helper functions
-const calculatePerformanceScore = () => {
-  const metrics = collectPerformanceMetrics();
-  if (!metrics) return 0;
+// Collect basic performance metrics
+const collectPerformanceMetrics = () => {
+  if (typeof window === 'undefined' || !window.performance) return null;
   
+  const navigation = window.performance.timing;
+  const paint = window.performance.getEntriesByType('paint');
+  
+  return {
+    loadTime: navigation.loadEventEnd - navigation.navigationStart,
+    firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0,
+  };
+};
+
+// Helper functions
+const calculatePerformanceScore = (loadTime: number, firstContentfulPaint: number) => {
   let score = 100;
   
   // Deduct points for slow load times
-  if (metrics.navigation.totalTime > 3000) score -= 20;
-  if (metrics.navigation.totalTime > 5000) score -= 30;
+  if (metrics.loadTime > 3000) score -= 20;
+  if (metrics.loadTime > 5000) score -= 30;
   
   // Deduct points for slow paint times
-  if (metrics.paint.firstContentfulPaint > 2000) score -= 15;
-  if (metrics.paint.firstContentfulPaint > 3000) score -= 25;
+  if (metrics.firstContentfulPaint > 2000) score -= 15;
+  if (metrics.firstContentfulPaint > 3000) score -= 25;
   
   return Math.max(0, score);
 };
@@ -97,8 +106,6 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
   // Update metrics
   const updateMetrics = useCallback(() => {
     try {
-      const performanceMetrics = collectPerformanceMetrics();
-      const performanceScore = calculatePerformanceScore();
       const errorStats = errorHandler.getErrorStatistics();
 
       // Get memory info
@@ -107,11 +114,17 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
       // Get network info
       const networkInfo = getNetworkInfo();
 
+      // Calculate performance metrics
+      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming | undefined;
+      const loadTime = navigation ? navigation.loadEventEnd - navigation.fetchStart : 0;
+      const firstContentfulPaint = performance.getEntriesByType('paint').find(e => e.name === 'first-contentful-paint')?.startTime || 0;
+      const performanceScore = calculatePerformanceScore(loadTime, firstContentfulPaint);
+
       const newMetrics: SystemMetrics = {
         performance: {
           score: performanceScore,
-          loadTime: performanceMetrics?.navigation?.totalTime || 0,
-          firstContentfulPaint: performanceMetrics?.paint?.firstContentfulPaint || 0,
+          loadTime: loadTime,
+          firstContentfulPaint: firstContentfulPaint,
           largestContentfulPaint: 0, // Not available in current metrics
           firstInputDelay: 0, // Not available in current metrics
           cumulativeLayoutShift: 0, // Not available in current metrics
@@ -136,7 +149,7 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
       setMetrics(newMetrics);
       setLastUpdate(new Date());
     } catch (error) {
-      // eslint-disable-next-line no-console
+       
 console.error('Failed to update metrics:', error);
     }
   }, []);
@@ -189,7 +202,7 @@ console.error('Failed to update metrics:', error);
         effectiveType: connection?.effectiveType || 'unknown',
         downlink: connection?.downlink || 0,
         rtt: connection?.rtt || 0,
-        saveData: connection.saveData || false,
+        saveData: connection?.saveData || false,
       };
     }
 
@@ -207,7 +220,7 @@ console.error('Failed to update metrics:', error);
 
     const exportData = {
       metrics,
-      performanceData: collectPerformanceMetrics(),
+      performanceData: performanceOptimizer.getMetrics(),
       errorData: errorHandler.exportErrorData(),
       timestamp: new Date().toISOString(),
     };
