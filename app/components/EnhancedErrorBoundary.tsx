@@ -63,7 +63,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
   }
 
   private reportError = (error: Error, errorInfo: ErrorInfo) => {
-    const errorReport = {
+    const _errorReport = {
       errorId: this.state.errorId,
       message: error.message,
       stack: error.stack,
@@ -77,7 +77,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     };
 
     // Send to error reporting service
-    this.sendErrorReport(errorReport);
+    this.sendErrorReport(_errorReport);
 
     // Send to analytics if available
     if (typeof window !== 'undefined' && (window as unknown as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag) {
@@ -92,7 +92,11 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     }
   };
 
+<<<<<<< HEAD
   private sendErrorReport = async (_errorReport: Record<string, unknown>) => {
+=======
+  private sendErrorReport = async (_errorReport: any) => {
+>>>>>>> cursor/fix-errors-and-merge-to-main-add2
     try {
       // In a real app, you would send this to your error reporting service
       // For now, we'll just log it
@@ -102,9 +106,13 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       // await fetch('/api/errors', {
       //   method: 'POST',
       //   headers: { 'Content-Type': 'application/json' },
-      //   body: JSON.stringify(errorReport)
+      //   body: JSON.stringify(_errorReport)
       // });
+<<<<<<< HEAD
     } catch {
+=======
+    } catch (_reportingError) {
+>>>>>>> cursor/fix-errors-and-merge-to-main-add2
       // Failed to send error report
     }
   };

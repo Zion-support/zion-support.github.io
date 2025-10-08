@@ -363,8 +363,12 @@ export class EnhancedLogger {
           if (this.isDevelopment()) { logger.debug(message, structuredLog); }
           break;
         case LogLevel.INFO:
+<<<<<<< HEAD
           if (this.isDevelopment()) { // eslint-disable-next-line no-console
     console.info(message, structuredLog); }
+=======
+          if (this.isDevelopment()) { logger.info(message, structuredLog); }
+>>>>>>> cursor/fix-errors-and-merge-to-main-add2
           break;
         case LogLevel.WARN:
           logger.warn(message, structuredLog);
@@ -384,8 +388,12 @@ export class EnhancedLogger {
           if (this.isDevelopment()) { logger.debug(message, entry.data); }
           break;
         case LogLevel.INFO:
+<<<<<<< HEAD
           if (this.isDevelopment()) { // eslint-disable-next-line no-console
     console.info(message, entry.data); }
+=======
+          if (this.isDevelopment()) { logger.info(message, entry.data); }
+>>>>>>> cursor/fix-errors-and-merge-to-main-add2
           break;
         case LogLevel.WARN:
           logger.warn(message, entry.data);

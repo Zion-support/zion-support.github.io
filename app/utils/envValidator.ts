@@ -47,8 +47,12 @@ class EnvValidator {
     }
 
     if (validation.warnings.length > 0) {
+<<<<<<< HEAD
       // eslint-disable-next-line no-console
     console.warn(
+=======
+      logger.warn(
+>>>>>>> cursor/fix-errors-and-merge-to-main-add2
         `Environment warnings:\n${validation.warnings.join('\n')}`
       );
     }

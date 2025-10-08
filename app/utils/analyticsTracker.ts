@@ -62,8 +62,12 @@ class AnalyticsTracker {
 
       // Also log to console in development
       if (process.env.NODE_ENV === 'development') {
+<<<<<<< HEAD
         // eslint-disable-next-line no-console
     console.log('[Analytics Event]', event);
+=======
+        logger.info('[Analytics Event]', event);
+>>>>>>> cursor/fix-errors-and-merge-to-main-add2
       }
     };
 
@@ -90,8 +94,12 @@ class AnalyticsTracker {
       }
 
       if (process.env.NODE_ENV === 'development') {
+<<<<<<< HEAD
         // eslint-disable-next-line no-console
     console.log('[Analytics Page View]', path);
+=======
+        logger.info('[Analytics Page View]', path);
+>>>>>>> cursor/fix-errors-and-merge-to-main-add2
       }
     };
 
@@ -119,8 +127,12 @@ class AnalyticsTracker {
       }
 
       if (process.env.NODE_ENV === 'development') {
+<<<<<<< HEAD
         // eslint-disable-next-line no-console
     console.log('[Analytics Performance]', metrics);
+=======
+        logger.info('[Analytics Performance]', metrics);
+>>>>>>> cursor/fix-errors-and-merge-to-main-add2
       }
     };
 
@@ -147,8 +159,12 @@ class AnalyticsTracker {
       }
 
       // Always log errors to console
+<<<<<<< HEAD
       // eslint-disable-next-line no-console
     console.error('[Analytics Error]', error);
+=======
+      logger.error('[Analytics Error]', error);
+>>>>>>> cursor/fix-errors-and-merge-to-main-add2
     };
 
     if (this.isInitialized) {
@@ -175,8 +191,12 @@ class AnalyticsTracker {
       }
 
       if (process.env.NODE_ENV === 'development') {
+<<<<<<< HEAD
         // eslint-disable-next-line no-console
     console.log('[Analytics Timing]', { category, variable, value, label });
+=======
+        logger.info('[Analytics Timing]', { category, variable, value, label });
+>>>>>>> cursor/fix-errors-and-merge-to-main-add2
       }
     };
 
@@ -203,8 +223,12 @@ class AnalyticsTracker {
       }
 
       if (process.env.NODE_ENV === 'development') {
+<<<<<<< HEAD
         // eslint-disable-next-line no-console
     console.log('[Analytics Conversion]', { conversionId, value });
+=======
+        logger.info('[Analytics Conversion]', { conversionId, value });
+>>>>>>> cursor/fix-errors-and-merge-to-main-add2
       }
     };
 

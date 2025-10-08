@@ -4,6 +4,7 @@
  */
 
 import React from 'react';
+import { logger } from './logger';
 
 /**
  * Debounce function to limit execution rate
@@ -91,8 +92,12 @@ export async function measureTime<T>(
   const result = await func();
   const duration = performance.now() - start;
   
+<<<<<<< HEAD
   if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { // eslint-disable-next-line no-console
     console.log(`[Performance] ${name}: ${duration.toFixed(2)}ms`); } }
+=======
+  if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { logger.info(`[Performance] ${name}: ${duration.toFixed(2)}ms`); } }
+>>>>>>> cursor/fix-errors-and-merge-to-main-add2
   
   return { result, duration };
 }

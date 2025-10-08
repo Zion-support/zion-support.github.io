@@ -91,8 +91,12 @@ class EnhancedErrorHandler {
     this.isInitialized = true;
      
     if (process.env['NODE_ENV'] === 'development') {
+<<<<<<< HEAD
       // eslint-disable-next-line no-console
     console.log('🛡️ Enhanced Error Handler initialized');
+=======
+      logger.info('🛡️ Enhanced Error Handler initialized');
+>>>>>>> cursor/fix-errors-and-merge-to-main-add2
     }
   }
 
@@ -207,8 +211,12 @@ class EnhancedErrorHandler {
         observer.observe({ type: 'longtask', buffered: true });
       } catch (error) {
          
+<<<<<<< HEAD
         // eslint-disable-next-line no-console
     console.warn('Failed to setup performance error handler:', error);
+=======
+        logger.warn('Failed to setup performance error handler:', error);
+>>>>>>> cursor/fix-errors-and-merge-to-main-add2
       }
     }
   }
@@ -512,6 +520,7 @@ class EnhancedErrorHandler {
     // eslint-disable-next-line no-console
     console.group(`${emoji} Error Report: ${errorReport.id}`);
      
+<<<<<<< HEAD
     // eslint-disable-next-line no-console
     console.error('Message:', errorReport.message);
      
@@ -533,6 +542,22 @@ class EnhancedErrorHandler {
        
       // eslint-disable-next-line no-console
     console.error('Stack:', errorReport.stack);
+=======
+    logger.error('Message:', errorReport.message);
+     
+    logger.error('Type:', errorReport.type);
+     
+    logger.error('Severity:', errorReport.severity);
+     
+    logger.error('Category:', errorReport.category);
+     
+    logger.error('Context:', errorReport.context);
+     
+    logger.error('Metadata:', errorReport.metadata);
+    if (errorReport.stack) {
+       
+      logger.error('Stack:', errorReport.stack);
+>>>>>>> cursor/fix-errors-and-merge-to-main-add2
     }
     // eslint-disable-next-line no-console
     console.groupEnd();
@@ -573,8 +598,12 @@ class EnhancedErrorHandler {
       });
     } catch (error) {
        
+<<<<<<< HEAD
       // eslint-disable-next-line no-console
     console.warn('Failed to report error to remote service:', error);
+=======
+      logger.warn('Failed to report error to remote service:', error);
+>>>>>>> cursor/fix-errors-and-merge-to-main-add2
     }
   }
 
@@ -584,8 +613,12 @@ class EnhancedErrorHandler {
   private aggregateError(errorReport: ErrorReport): void {
     // This could be expanded to include more sophisticated aggregation
      
+<<<<<<< HEAD
     // eslint-disable-next-line no-console
     console.log(
+=======
+    logger.info(
+>>>>>>> cursor/fix-errors-and-merge-to-main-add2
       `📊 Error aggregated: ${errorReport.type} - ${errorReport.category}`
     );
   }
@@ -599,8 +632,12 @@ class EnhancedErrorHandler {
       errorReport.category === 'performance'
     ) {
        
+<<<<<<< HEAD
       // eslint-disable-next-line no-console
     console.warn('⚠️ Performance impact detected from error');
+=======
+      logger.warn('⚠️ Performance impact detected from error');
+>>>>>>> cursor/fix-errors-and-merge-to-main-add2
     }
   }
 
@@ -617,8 +654,12 @@ class EnhancedErrorHandler {
     if (recentErrors.length > 5) {
        
       if (process.env['NODE_ENV'] === 'development') { 
+<<<<<<< HEAD
         // eslint-disable-next-line no-console
     console.log('🔄 Attempting error recovery...'); 
+=======
+        logger.info('🔄 Attempting error recovery...'); 
+>>>>>>> cursor/fix-errors-and-merge-to-main-add2
       }
       // Implement recovery strategies here
       this.clearErrorState();
@@ -636,8 +677,12 @@ class EnhancedErrorHandler {
 
      
     if (process.env['NODE_ENV'] === 'development') { 
+<<<<<<< HEAD
       // eslint-disable-next-line no-console
     console.log('🧹 Error state cleared'); 
+=======
+      logger.info('🧹 Error state cleared'); 
+>>>>>>> cursor/fix-errors-and-merge-to-main-add2
     }
   }
 
@@ -654,8 +699,12 @@ class EnhancedErrorHandler {
 
      
     if (process.env['NODE_ENV'] === 'development') { 
+<<<<<<< HEAD
       // eslint-disable-next-line no-console
     console.log(`🧹 Cleaned up old errors, ${this.errors.length} remaining`); 
+=======
+      logger.info(`🧹 Cleaned up old errors, ${this.errors.length} remaining`); 
+>>>>>>> cursor/fix-errors-and-merge-to-main-add2
     }
   }
 

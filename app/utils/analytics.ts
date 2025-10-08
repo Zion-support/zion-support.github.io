@@ -35,8 +35,12 @@ class AnalyticsService {
       this.processQueue();
       this.isInitialized = true;
     } catch (error) {
+<<<<<<< HEAD
       // eslint-disable-next-line no-console
     console.error('Analytics initialization failed:', error);
+=======
+      logger.error('Analytics initialization failed:', error);
+>>>>>>> cursor/fix-errors-and-merge-to-main-add2
     }
   }
 
@@ -62,12 +66,19 @@ class AnalyticsService {
 
       // Log in development
       if (process.env['NODE_ENV'] === 'development') {
+<<<<<<< HEAD
         // eslint-disable-next-line no-console
     console.log('Analytics Event:', event);
       }
     } catch (error) {
       // eslint-disable-next-line no-console
     console.error('Failed to track event:', error);
+=======
+        logger.info('Analytics Event:', event);
+      }
+    } catch (error) {
+      logger.error('Failed to track event:', error);
+>>>>>>> cursor/fix-errors-and-merge-to-main-add2
     }
   }
 
@@ -83,8 +94,12 @@ class AnalyticsService {
         });
       }
     } catch (error) {
+<<<<<<< HEAD
       // eslint-disable-next-line no-console
     console.error('Failed to track page view:', error);
+=======
+      logger.error('Failed to track page view:', error);
+>>>>>>> cursor/fix-errors-and-merge-to-main-add2
     }
   }
 
@@ -100,8 +115,12 @@ class AnalyticsService {
         });
       }
     } catch (error) {
+<<<<<<< HEAD
       // eslint-disable-next-line no-console
     console.error('Failed to identify user:', error);
+=======
+      logger.error('Failed to identify user:', error);
+>>>>>>> cursor/fix-errors-and-merge-to-main-add2
     }
   }
 
@@ -139,8 +158,12 @@ class AnalyticsService {
         });
       }
     } catch (error) {
+<<<<<<< HEAD
       // eslint-disable-next-line no-console
     console.error('Failed to track timing:', error);
+=======
+      logger.error('Failed to track timing:', error);
+>>>>>>> cursor/fix-errors-and-merge-to-main-add2
     }
   }
 
@@ -157,8 +180,12 @@ class AnalyticsService {
         metadata,
       });
     } catch (error) {
+<<<<<<< HEAD
       // eslint-disable-next-line no-console
     console.error('Failed to track performance:', error);
+=======
+      logger.error('Failed to track performance:', error);
+>>>>>>> cursor/fix-errors-and-merge-to-main-add2
     }
   }
 

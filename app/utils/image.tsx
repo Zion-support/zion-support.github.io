@@ -7,9 +7,9 @@ interface ImageProps {
   height?: number;
   className?: string;
   priority?: boolean;
-  quality?: number;
-  placeholder?: 'blur' | 'empty';
-  blurDataURL?: string;
+  _quality?: number;
+  _placeholder?: 'blur' | 'empty';
+  _blurDataURL?: string;
   fill?: boolean;
   sizes?: string;
   style?: React.CSSProperties;
@@ -24,9 +24,9 @@ export const Image: React.FC<ImageProps> = ({
   height,
   className,
   priority = false,
-  quality = 75,
-  placeholder = 'empty',
-  blurDataURL,
+  _quality = 75,
+  _placeholder = 'empty',
+  _blurDataURL,
   fill = false,
   sizes,
   style,
@@ -34,7 +34,7 @@ export const Image: React.FC<ImageProps> = ({
   onError,
   ...props
 }) => {
-  const [isLoaded, setIsLoaded] = useState(false);
+  const [_isLoaded, setIsLoaded] = useState(false);
   const [hasError, setHasError] = useState(false);
 
   const handleLoad = useCallback(() => {

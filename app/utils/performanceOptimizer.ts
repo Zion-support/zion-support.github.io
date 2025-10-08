@@ -75,7 +75,7 @@ class PerformanceOptimizer {
     if ('measure' in performance && 'mark' in performance) {
       try {
         performance.measure(`${markName}-duration`, markName);
-      } catch (error) {
+      } catch (_error) {
         // Ignore measure errors
       }
     }
@@ -94,9 +94,14 @@ class PerformanceOptimizer {
       this.observeFCP();
       this.observeTTFB();
       this.observeMemory();
+<<<<<<< HEAD
     } catch (error) {
       // eslint-disable-next-line no-console
     console.warn('Performance monitoring initialization failed:', error);
+=======
+    } catch (_error) {
+      logger.warn('Performance monitoring initialization failed:', error);
+>>>>>>> cursor/fix-errors-and-merge-to-main-add2
     }
   }
 
@@ -109,7 +114,7 @@ class PerformanceOptimizer {
       });
       observer.observe({ entryTypes: ['largest-contentful-paint'] });
       this.observers.push(observer);
-    } catch (error) {
+    } catch (_error) {
       // Ignore if not supported
     }
   }
@@ -124,7 +129,7 @@ class PerformanceOptimizer {
       });
       observer.observe({ entryTypes: ['first-input'] });
       this.observers.push(observer);
-    } catch (error) {
+    } catch (_error) {
       // Ignore if not supported
     }
   }
@@ -143,7 +148,7 @@ class PerformanceOptimizer {
       });
       observer.observe({ entryTypes: ['layout-shift'] });
       this.observers.push(observer);
-    } catch (error) {
+    } catch (_error) {
       // Ignore if not supported
     }
   }
@@ -160,7 +165,7 @@ class PerformanceOptimizer {
       });
       observer.observe({ entryTypes: ['paint'] });
       this.observers.push(observer);
-    } catch (error) {
+    } catch (_error) {
       // Ignore if not supported
     }
   }
@@ -177,7 +182,7 @@ class PerformanceOptimizer {
       });
       observer.observe({ entryTypes: ['navigation'] });
       this.observers.push(observer);
-    } catch (error) {
+    } catch (_error) {
       // Ignore if not supported
     }
   }
@@ -246,12 +251,19 @@ class PerformanceOptimizer {
     window.addEventListener('load', () => {
       navigator.serviceWorker.register('/sw.js')
         .then((registration) => {
+<<<<<<< HEAD
           // eslint-disable-next-line no-console
     console.log('SW registered: ', registration);
         })
         .catch((registrationError) => {
           // eslint-disable-next-line no-console
     console.log('SW registration failed: ', registrationError);
+=======
+          logger.info('SW registered: ', registration);
+        })
+        .catch((registrationError) => {
+          logger.info('SW registration failed: ', registrationError);
+>>>>>>> cursor/fix-errors-and-merge-to-main-add2
         });
     });
   }
