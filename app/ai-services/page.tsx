@@ -259,7 +259,7 @@ const AIServicesPage: React.FC = () => {
     }
   ];
 
-  const _categories = [...new Set(aiServices.map(service => service.category))];
+  // const categories = [...new Set(aiServices.map(service => service.category))];
 
   return (
     <>
