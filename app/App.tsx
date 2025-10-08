@@ -4,21 +4,26 @@ import React, { Suspense, lazy, useEffect, useCallback } from 'react';
 import { HelmetProvider } from 'react-helmet-async';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
+// Utils
+import { logger } from './utils/logger';
+import { 
+  performanceOptimizer, 
+  lazyLoadImages, 
+  preloadCriticalResources, 
+  collectPerformanceMetrics 
+} from './utils/performanceOptimizer';
+
 // Components
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import AdvancedErrorBoundary from './components/AdvancedErrorBoundary';
 import AdvancedSEOOptimizer from './components/AdvancedSEOOptimizer';
 import SEOEnhancer from './components/SEOEnhancer';
 import LoadingSpinner from './components/LoadingSpinner';
+import PerformanceDashboard from './components/PerformanceDashboard';
+import AdvancedPerformanceMonitor from './components/AdvancedPerformanceMonitor';
 
-// Lazy load pages
-const HomePage = lazy(() => import('./pages/HomePage'));
-const PerformanceDashboard = lazy(() => import('./components/PerformanceDashboard'));
-const AdvancedPerformanceMonitor = lazy(() => import('./components/AdvancedPerformanceMonitor'));
-
-// Utils
-import { logger } from './utils/logger';
-import { performanceOptimizer, lazyLoadImages, preloadCriticalResources, collectPerformanceMetrics } from './utils/performanceOptimizer';
+// Lazy load HomePage
+const HomePage = lazy(() => import('./page').then(module => ({ default: module.default })));
 
 const App: React.FC = () => {
   useEffect(() => {
