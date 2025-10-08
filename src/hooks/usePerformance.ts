@@ -11,13 +11,7 @@ export const usePerformance = () => {
 
     const observer = new PerformanceObserver((list) => {
       list.getEntries().forEach((entry) => {
-        performanceMonitor.track(
-          'long_task',
-          'performance',
-          'detected',
-          undefined,
-          entry.duration
-        );
+        performanceMonitor.recordMetric('long-task', entry.duration);
       });
     });
 
