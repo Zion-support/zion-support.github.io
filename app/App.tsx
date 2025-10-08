@@ -12,29 +12,14 @@ import SEOEnhancer from './components/SEOEnhancer';
 import LoadingSpinner from './components/LoadingSpinner';
 import PerformanceDashboard from './components/PerformanceDashboard';
 import AdvancedPerformanceMonitor from './components/AdvancedPerformanceMonitor';
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
-// Lazy load pages for better performance
-const HomePage = lazy(() => import('./page'));
 
 // Utils
-import { lazyLoadImages, preloadCriticalResources, collectPerformanceMetrics, performanceOptimizer } from './utils/performanceOptimizer';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-4560
 import { logger } from './utils/logger';
 import { lazyLoadImages, preloadCriticalResources, collectPerformanceMetrics, performanceOptimizer } from './utils/performanceOptimizer';
 
-<<<<<<< HEAD
-// Lazy load pages  
-const HomePage = lazy(() => import('./pages/Home').catch(() => ({ default: () => <div>Home Page</div> })));
-=======
-// Lazy load the HomePage
+// Lazy load pages for better performance
 const HomePage = lazy(() => import('./page'));
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-16e0
 
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-7463
 const App: React.FC = () => {
   useEffect(() => {
     // Initialize global error handling
@@ -51,28 +36,12 @@ const App: React.FC = () => {
       }
     }
     
-<<<<<<< HEAD
-    if (typeof console !== 'undefined') {
-      console.log('🚀 Zion Tech Group App initialized with comprehensive monitoring');
-    }
-
-  }, []);
-
-  const handleError = useCallback((error: Error, errorInfo: any) => {
-    console.error('Application Error:', error);
-    // eslint-disable-next-line no-console
-    console.error('Error info:', errorInfo);
-=======
     logger.lifecycle('performance monitoring initialized', 'App');
     logger.info('🚀 Zion Tech Group App initialized with comprehensive monitoring', { component: 'App' });
-<<<<<<< HEAD
   }, []);
 
   const handleError = useCallback((error: Error, errorInfo: any) => {
     logger.error('Application Error', error, { component: 'ErrorBoundary', errorInfo });
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-4560
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-32a9
   }, []);
 
   return (
@@ -92,16 +61,7 @@ const App: React.FC = () => {
                 title: 'Zion Tech Group - Advanced AI and IT Solutions',
                 description: 'Leading provider of enterprise AI solutions, quantum computing, and autonomous systems. Transform your business with our cutting-edge technology.',
                 keywords: ['AI solutions', 'enterprise AI', 'quantum computing', 'autonomous systems', 'digital transformation', 'automation', 'cloud services', 'AI consulting', 'business intelligence', 'machine learning'],
-<<<<<<< HEAD
-<<<<<<< HEAD
-                url: 'https://ziontechgroup.com',
-                canonicalUrl: 'https://ziontechgroup.com',
-                structuredData: {}
-=======
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-32a9
                 canonicalUrl: 'https://ziontechgroup.com'
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-16e0
               }}
               enableStructuredData={true}
               enableOpenGraph={true}
