@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
+
 export type ToastType = 'success' | 'error' | 'warning' | 'info';
 
 export interface ToastProps {

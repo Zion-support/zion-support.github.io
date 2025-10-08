@@ -9,19 +9,20 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { performanceOptimizer } from '../utils/performanceOptimizer';
 import { errorHandler } from '../utils/enhancedErrorHandler';
 
-// Collect basic performance metrics (currently unused but available for future use)
-// const _collectPerformanceMetrics = () => {
-//   if (typeof window === 'undefined' || !window.performance) return null;
+import { errorHandler } from '../utils/enhancedErrorHandler';
 
-//   const navigation = window.performance.timing;
-//   const paint = window.performance.getEntriesByType('paint');
-
-//   return {
-//     loadTime: navigation.loadEventEnd - navigation.navigationStart,
-//     firstContentfulPaint:
-//       paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0,
-//   };
-// };
+// Collect basic performance metrics
+const _collectPerformanceMetrics = () => {
+  if (typeof window === 'undefined' || !window.performance) return null;
+  
+  const navigation = window.performance.timing;
+  const paint = window.performance.getEntriesByType('paint');
+  
+  return {
+    loadTime: navigation.loadEventEnd - navigation.navigationStart,
+    firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0,
+  };
+};
 
 // Helper functions
 const calculatePerformanceScore = () => {
