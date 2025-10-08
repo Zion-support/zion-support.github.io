@@ -68,12 +68,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
   }
 
   private async reportError(error: Error, errorInfo: ErrorInfo): Promise<void> {
-  handleRetry = () => {
-    this.setState({
-      hasError: false,
-      error: null,
-      errorInfo: null,
-    });
     try {
       const errorReport = {
         error: {
@@ -85,8 +79,8 @@ class EnhancedErrorBoundary extends Component<Props, State> {
           componentStack: errorInfo.componentStack || '',
         },
         timestamp: new Date().toISOString(),
-        userAgent: navigator.userAgent,
-        url: window.location.href,
+        userAgent: typeof window !== 'undefined' ? navigator.userAgent : 'server',
+        url: typeof window !== 'undefined' ? window.location.href : '',
         sessionId: this.sessionId,
         retryCount: this.state.retryCount,
         userId: this.getUserId(),
@@ -130,7 +124,10 @@ class EnhancedErrorBoundary extends Component<Props, State> {
 
   private getUserId(): string | null {
     // This would typically come from your auth system
-    return localStorage.getItem('userId') || null;
+    if (typeof window !== 'undefined' && window.localStorage) {
+      return localStorage.getItem('userId') || null;
+    }
+    return null;
   }
 
   private handleRetry = (): void => {
