@@ -213,7 +213,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
         outline-offset: 2px;
       }
     `;
-    document.head.appendChild(style);origin/cursor/fix-errors-and-merge-to-main-6395
+    document.head.appendChild(style);
 
     return () => {
       document.removeEventListener('focusin', handleFocusIn);
