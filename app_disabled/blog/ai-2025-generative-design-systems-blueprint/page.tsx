@@ -10,13 +10,3 @@ export default function GenerativeDesignSystemsBlueprintPage() {
           <div>
             <div>
               <span>🎨 GENERATIVE DESIGN SYSTEMS</span>
-<<<<<<< HEAD
-=======
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
-  );
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-a0f3

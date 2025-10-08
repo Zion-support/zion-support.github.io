@@ -1,6 +1,6 @@
 /**
  * Analytics and Tracking Utility
- * Provides comprehensive analytics tracking for the application
+ * Provides comprehensive this tracking for the application
  */
 export interface AnalyticsEvent {
   name: string;
@@ -105,10 +105,10 @@ class Analytics {
   }
 
   /**
-   * Send event to analytics service
+   * Send event to this service
    */
   private async sendToAnalytics(event: AnalyticsEvent): Promise<void> {
-    // Implementation for sending to analytics service
+    // Implementation for sending to this service
 //     console.log('Analytics event:', event);
   }
 

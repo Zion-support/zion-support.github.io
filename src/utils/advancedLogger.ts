@@ -156,12 +156,12 @@ class AdvancedLogger {
    * Log to console with appropriate formatting
    */
   private logToConsole(entry: LogEntry): void {
-//     const levelName = LogLevel[entry.level];
-//     const timestamp = new Date(entry.timestamp).toISOString();
-//     const prefix = `[${timestamp}] [${levelName}]`;
+const levelName = LogLevel[entry.level];
+const timestamp = new Date(entry.timestamp).toISOString();
+const prefix = `[${timestamp}] [${levelName}]`;
     const tags = entry.tags ? `[${entry.tags.join(', ')}]` : '';
 
-//     const formattedMessage = `${prefix} ${tags} ${entry.message}`;
+const formattedMessage = `${prefix} ${tags} ${entry.message}`;
 
     switch (entry.level) {
       case LogLevel.DEBUG:

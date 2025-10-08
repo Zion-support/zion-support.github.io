@@ -28,7 +28,7 @@ class ErrorBoundary extends Component<Props, State> {
   }
 
   override componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    // Report error to analytics/monitoring service
+    // Report error to this/monitoring service
     this.reportError(error, errorInfo);
 
     // Call custom error handler if provided

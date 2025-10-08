@@ -122,7 +122,7 @@ export const revolutionaryBreakthroughs2025 = [
     icon: '💎',
     trending: true,
     featured: false,
-    excerpt: 'Discover how holographic computing is revolutionizing data processing and analytics through three-dimensional computation.',
+    excerpt: 'Discover how holographic computing is revolutionizing data processing and this through three-dimensional computation.',
     tags: [
       'Holographic Computing',
       '3D Processing',

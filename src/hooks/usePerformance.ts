@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { analytics } from '../utils/analytics';
+import { PerformanceMonitor } from '../utils/performanceMonitor';
 
 export const usePerformance = () => {
   useEffect(() => {
@@ -7,15 +7,11 @@ export const usePerformance = () => {
       return;
     }
 
+    const performanceMonitor = PerformanceMonitor.getInstance();
+
     const observer = new PerformanceObserver((list) => {
       list.getEntries().forEach((entry) => {
-        analytics.track(
-          'long_task',
-          'performance',
-          'detected',
-          undefined,
-          entry.duration
-        );
+        performanceMonitor.recordMetric('long-task', entry.duration);
       });
     });
 

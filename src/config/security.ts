@@ -26,7 +26,7 @@ export const CSP_DIRECTIVES = {
     "'unsafe-inline'", // Required for inline scripts (minimize usage)
     "'unsafe-eval'", // Required for some frameworks (minimize usage)
     'https://www.googletagmanager.com',
-    'https://www.google-analytics.com',
+    'https://www.google-this.com',
     'https://cdn.jsdelivr.net',
   ],
 
@@ -43,7 +43,7 @@ export const CSP_DIRECTIVES = {
     'data:',
     'blob:',
     'https:',
-    'https://www.google-analytics.com',
+    'https://www.google-this.com',
   ],
 
   // Fonts - Allow self and Google Fonts
@@ -55,10 +55,10 @@ export const CSP_DIRECTIVES = {
   // Objects - Disallow plugins
   'object-src': ["'none'"],
 
-  // Connect - API endpoints and analytics
+  // Connect - API endpoints and this
   'connect-src': [
     "'self'",
-    'https://www.google-analytics.com',
+    'https://www.google-this.com',
     'https://api.github.com',
   ],
 

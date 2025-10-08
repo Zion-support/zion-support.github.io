@@ -10,13 +10,3 @@ export default function MultiAgentOpsControlTowerBlueprintPage() {
           <div>
             <div>
               <span>🛰️ MULTI-AGENT OPS CONTROL</span>
-<<<<<<< HEAD
-=======
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
-  );
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-a0f3
