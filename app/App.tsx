@@ -11,19 +11,37 @@ import AdvancedSEOOptimizer from './components/AdvancedSEOOptimizer';
 import SEOEnhancer from './components/SEOEnhancer';
 import LoadingSpinner from './components/LoadingSpinner';
 
-class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundaryState> {
-  constructor(props: ErrorBoundaryProps) {
-    super(props);
-    this.state = { hasError: false, error: null };
-  }
+// Lazy load pages and components
+const HomePage = lazy(() => import('./page').then(module => ({ default: module.default || (() => <div>Home Page</div>) })));
+const PerformanceDashboard = lazy(() => import('./components/PerformanceDashboard').catch(() => ({ default: () => null })));
+const AdvancedPerformanceMonitor = lazy(() => import('./components/AdvancedPerformanceMonitor').catch(() => ({ default: () => null })));
 
-  static getDerivedStateFromError(error: Error): ErrorBoundaryState {
-    return { hasError: true, error };
-  }
+// Utils
+import { logger } from './utils/logger';
+import { performanceOptimizer } from './utils/performanceOptimizer';
 
-  override componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
-    console.error('App Error Boundary caught an error:', error, errorInfo);
-  }
+// Helper functions
+const lazyLoadImages = () => {
+  // Implement lazy loading for images
+};
+
+const preloadCriticalResources = () => {
+  // Implement critical resource preloading
+};
+
+const collectPerformanceMetrics = () => {
+  // Collect and return performance metrics
+  return {};
+};
+
+interface ErrorBoundaryProps {
+  children: React.ReactNode;
+}
+
+interface ErrorBoundaryState {
+  hasError: boolean;
+  error: Error | null;
+}
 
 const App: React.FC = () => {
   useEffect(() => {
