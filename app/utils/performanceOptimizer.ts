@@ -140,6 +140,7 @@ class PerformanceOptimizer {
       // Ignore if not supported
     }
   }
+  
   private observeFID() {
     try {
       const observer = new PerformanceObserver((list) => {
@@ -147,7 +148,6 @@ class PerformanceOptimizer {
         entries.forEach((entry: PerformanceEntry) => {
           const fidEntry = entry as PerformanceEntry & { processingStart: number }
           this.metrics.fid = fidEntry.processingStart - fidEntry.startTime
-
         })
       })
       observer.observe({ entryTypes: ['first-input'] })
@@ -156,6 +156,7 @@ class PerformanceOptimizer {
       // Ignore if not supported
     }
   }
+  
   private observeCLS() {
     try {
       let clsValue = 0
@@ -175,6 +176,7 @@ class PerformanceOptimizer {
       // Ignore if not supported
     }
   }
+  
   private observeFCP() {
     try {
       const observer = new PerformanceObserver((list) => {
@@ -191,6 +193,7 @@ class PerformanceOptimizer {
       // Ignore if not supported
     }
   }
+  
   private observeTTFB() {
     try {
       const observer = new PerformanceObserver((list) => {
@@ -208,6 +211,7 @@ class PerformanceOptimizer {
       // Ignore if not supported
     }
   }
+  
   private observeMemory() {
     if (typeof window !== 'undefined' && 'memory' in performance) {
       const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; jsHeapSizeLimit: number } }).memory
