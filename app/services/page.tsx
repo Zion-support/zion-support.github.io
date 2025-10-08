@@ -56,13 +56,20 @@ const ServicesPage: React.FC = () => {
     {
       title: 'Blockchain & Web3',
       description: 'Decentralized applications, smart contracts, and Web3 solutions.',
+<<<<<<< HEAD
       icon: '⛓️',
       link: '/blockchain-web3',
       features: ['Smart Contracts', 'DeFi Protocols', 'NFTs', 'DAOs'],
+=======
+      icon: '🔗',
+      link: '/blockchain',
+      features: ['Smart Contracts', 'DeFi Protocols', 'NFT Marketplaces', 'Web3 Applications'],
+>>>>>>> cursor/add-new-services-and-deploy-updates-f159
       price: 'Starting at $8,000/project'
     },
     {
       title: 'IoT & Edge Computing',
+<<<<<<< HEAD
       description: 'Connected devices and edge computing solutions for smart environments.',
       icon: '📡',
       link: '/iot-edge-computing',
@@ -75,6 +82,28 @@ const ServicesPage: React.FC = () => {
       icon: '🛡️',
       link: '/cybersecurity',
       features: ['Threat Detection', 'Zero Trust', 'Penetration Testing', 'SOC Services'],
+=======
+      description: 'Connected devices, edge analytics, and industrial IoT solutions.',
+      icon: '📱',
+      link: '/iot-edge',
+      features: ['Device Management', 'Edge Analytics', 'Industrial IoT', 'Smart Cities'],
+      price: 'Starting at $2,500/month'
+    },
+    {
+      title: 'Robotics & Automation',
+      description: 'Intelligent robots, RPA, and advanced automation solutions.',
+      icon: '🤖',
+      link: '/robotics',
+      features: ['RPA Solutions', 'Industrial Robots', 'Service Robots', 'AI-Powered Automation'],
+      price: 'Starting at $2,500/month'
+    },
+    {
+      title: 'Cybersecurity Solutions',
+      description: 'Advanced security services including threat detection and compliance.',
+      icon: '🛡️',
+      link: '/cybersecurity',
+      features: ['Threat Detection', 'Penetration Testing', 'Zero Trust Security', 'SOC Services'],
+>>>>>>> cursor/add-new-services-and-deploy-updates-f159
       price: 'Starting at $2,500/month'
     }
   ];
