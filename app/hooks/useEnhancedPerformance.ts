@@ -101,11 +101,11 @@ export function useEnhancedPerformance(
   const measureOperation = useCallback(
     (operationName: string) => {
       const markName = `${component}-${operationName}`;
-      const startTime = performance.now();
+      performance.mark(markName);
 
       return {
         end: () => {
-          const duration = performance.now() - startTime;
+          const duration = performance.measure(markName, markName).duration || 0;
           if (duration && trackPerformance) {
             analytics.trackPerformance(
               `${component}-${operationName}`,
@@ -120,9 +120,52 @@ export function useEnhancedPerformance(
     [component, trackPerformance]
   );
 
+  const withErrorBoundary = useCallback(
+    <T extends unknown[], R>(fn: (...args: T) => R) => {
+      return (...args: T): R | undefined => {
+        try {
+          return fn(...args);
+        } catch (error) {
+          trackError(error as Error, {
+            action: 'Function Call',
+            args: args.map(String),
+          });
+          return undefined;
+        }
+      };
+    },
+    [trackError]
+  );
+
+  const withPerformanceTracking = useCallback(
+    <T extends unknown[], R>(
+      operationName: string,
+      fn: (...args: T) => R
+    ) => {
+      return (...args: T): R => {
+        const measurement = measureOperation(operationName);
+        try {
+          const result = fn(...args);
+          measurement.end();
+          return result;
+        } catch (error) {
+          measurement.end();
+          throw error;
+        }
+      };
+    },
+    [measureOperation]
+  );
+
   return {
     trackError,
     trackUserAction,
     measureOperation,
+    withErrorBoundary,
+    withPerformanceTracking,
+    renderCount: renderCountRef.current,
+    component,
   };
 }
+
+export default useEnhancedPerformance;

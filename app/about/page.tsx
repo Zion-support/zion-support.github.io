@@ -71,10 +71,11 @@ const AboutPage: React.FC = () => {
                 </div>
                 <div>
                   <h3 className='text-lg font-semibold text-gray-900 mb-2'>
-                    Cloud Infrastructure
+                    Business Intelligence
                   </h3>
                   <p className='text-gray-600'>
-                    Scalable and secure cloud architecture solutions.
+                    Data-driven insights and analytics for strategic decision
+                    making.
                   </p>
                 </div>
               </div>

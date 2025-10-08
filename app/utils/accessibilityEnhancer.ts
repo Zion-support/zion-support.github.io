@@ -674,18 +674,8 @@ class AccessibilityEnhancer {
    */
   getReport(): string {
     const metrics = this.getMetrics();
-    return `
-Accessibility Report
-===================
-Focusable Elements: ${metrics.focusableElements}
-Images Without Alt: ${metrics.imagesWithoutAlt}
-Links Without Text: ${metrics.linksWithoutText}
-Headings Without Content: ${metrics.headingsWithoutContent}
-Color Contrast Issues: ${metrics.colorContrastIssues}
-Keyboard Navigation Score: ${metrics.keyboardNavigationScore}
-Screen Reader Score: ${metrics.screenReaderScore}
-Overall Score: ${metrics.overallScore}/100
-    `;
+    
+    return `Accessibility Report\nMetrics: ${JSON.stringify(metrics)}`;
   }
 }
 

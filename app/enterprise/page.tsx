@@ -88,18 +88,18 @@ const EnterprisePage: React.FC = () => {
                 Let&apos;s discuss how our solutions can help you achieve your business goals
               </p>
               <div className='flex flex-col sm:flex-row gap-4 justify-center'>
-                <a
+                <Link
                   href='/contact'
                   className='inline-block px-8 py-3 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-colors font-medium'
                 >
                   Schedule a Consultation
-                </a>
-                <a
-                  href='/case-studies'
+                </Link>
+                <Link
+                  href='/services'
                   className='inline-block px-8 py-3 bg-white/10 backdrop-blur-sm text-white border border-white/20 rounded-lg hover:bg-white/20 transition-colors font-medium'
                 >
-                  View Case Studies
-                </a>
+                  View All Services
+                </Link>
               </div>
             </div>
           </section>
