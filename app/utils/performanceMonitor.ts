@@ -234,3 +234,12 @@ class PerformanceMonitor {
     
     return `
 Performance Report:
+Score: ${score}
+- First Contentful Paint: ${metrics.fcp}ms
+- Largest Contentful Paint: ${metrics.lcp}ms
+- Time to Interactive: ${metrics.tti}ms
+`;
+  }
+}
+
+export default new PerformanceMonitorUtil();
