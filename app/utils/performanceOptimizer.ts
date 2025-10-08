@@ -98,7 +98,6 @@ class PerformanceOptimizer {
    * Measure render time using PerformanceObserver
    */
   private measureRenderTime(): void {
-    if (typeof window === 'undefined') return;
     
     // Check if PerformanceObserver exists (may not be available in test environments)
     if (typeof PerformanceObserver === 'undefined') return;
@@ -351,7 +350,6 @@ class PerformanceOptimizer {
 
     return `
 Performance Report - Zion Tech Group Website
-==========================================
 Performance Score: ${score}/100
 Load Time: ${metrics.loadTime.toFixed(2)}ms
 Render Time: ${metrics.renderTime.toFixed(2)}ms

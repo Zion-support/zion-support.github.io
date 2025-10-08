@@ -12,7 +12,6 @@ export * from './hooks';
 
 // Export security and validation separately to avoid conflicts
 export { 
-  sanitizeInput, 
   isValidEmail as isValidEmailFromSecurity,
   isValidUrl as isValidUrlFromSecurity
 } from './validation';
@@ -24,9 +23,6 @@ export {
 
 export { 
   validateEmail as validateForm, 
-  validateRequired as validateField,
-  isValidEmail,
-  isValidUrl
 } from './validation';
 
 // Default exports
