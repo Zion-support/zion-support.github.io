@@ -1,6 +1,6 @@
 import React from 'react';
-import { Metadata } from 'next';
 import Link from 'next/link';
+import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Enterprise Solutions - Zion Tech Group',
@@ -50,8 +50,7 @@ const EnterprisePage: React.FC = () => {
               Enterprise Solutions
             </h1>
             <p className='text-xl text-gray-600 max-w-3xl mx-auto'>
-              Transform your enterprise with cutting-edge AI and IT solutions designed for scale and performance.
-              Achieve $100M+ cost savings, 500% productivity gains, and 99.9% system uptime with enterprise-grade security and compliance.
+              Transform your enterprise with cutting-edge AI and IT solutions designed for scale and performance
             </p>
           </div>
 
@@ -86,8 +85,7 @@ const EnterprisePage: React.FC = () => {
                 Ready to Transform Your Enterprise?
               </h2>
               <p className='text-xl mb-8 opacity-90'>
-                Let&apos;s discuss how our solutions can help you achieve your business goals.
-                Join 500+ Fortune 500 companies achieving unprecedented transformation with our enterprise AI solutions.
+                Let&apos;s discuss how our solutions can help you achieve your business goals
               </p>
               <div className='flex flex-col sm:flex-row gap-4 justify-center'>
                 <Link
@@ -97,10 +95,10 @@ const EnterprisePage: React.FC = () => {
                   Schedule a Consultation
                 </Link>
                 <Link
-                  href='tel:+13024640950'
+                  href='/case-studies'
                   className='inline-block px-8 py-3 bg-white/10 backdrop-blur-sm text-white border border-white/20 rounded-lg hover:bg-white/20 transition-colors font-medium'
                 >
-                  📞 Call Now
+                  View Case Studies
                 </Link>
               </div>
             </div>
