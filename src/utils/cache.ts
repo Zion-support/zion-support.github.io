@@ -137,8 +137,8 @@ export class MemoryCache<T = unknown> {
       age: Date.now() - entry.timestamp,
     }));
 
-//     const totalHits = entries.reduce((sum, e) => sum + e.hits, 0);
-//     const totalAccesses = Math.max(totalHits, 1);
+const totalHits = entries.reduce((sum, e) => sum + e.hits, 0);
+const totalAccesses = Math.max(totalHits, 1);
 
     return {
       size: this.cache.size,
@@ -225,7 +225,7 @@ export class PersistentCache<T = unknown> {
     if (typeof localStorage === 'undefined') return undefined;
 
     try {
-//       const item = localStorage.getItem(this.prefix + key);
+const item = localStorage.getItem(this.prefix + key);
       if (!item) return undefined;
 
       const entry: CacheEntry<T> = JSON.parse(item);
@@ -286,13 +286,13 @@ export const memoize = <TArgs extends unknown[], TResult>(
 
   return (...args: TArgs): TResult => {
     const key = JSON.stringify(args);
-//     const cached = cache.get(key);
+const cached = cache.get(key);
 
     if (cached !== undefined) {
       return cached;
     }
 
-//     const result = fn(...args);
+const result = fn(...args);
     cache.set(key, result);
     return result;
   };
@@ -312,23 +312,23 @@ export const memoizeAsync = <TArgs extends unknown[], TResult>(
     const key = JSON.stringify(args);
     
     // Check cache
-//     const cached = cache.get(key);
+const cached = cache.get(key);
     if (cached !== undefined) {
       return cached;
     }
 
     // Check if already pending
-//     const pendingPromise = pending.get(key);
+const pendingPromise = pending.get(key);
     if (pendingPromise) {
       return pendingPromise;
     }
 
     // Execute and cache
-//     const promise = fn(...args);
+const promise = fn(...args);
     pending.set(key, promise);
 
     try {
-//       const result = await promise;
+const result = await promise;
       cache.set(key, result);
       pending.delete(key);
       return result;

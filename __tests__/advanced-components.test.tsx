@@ -1,5 +1,6 @@
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import { HelmetProvider } from 'react-helmet-async';
+import { MemoryRouter } from 'react-router-dom';
 import AdvancedErrorBoundary from '../app/components/AdvancedErrorBoundary';
 import AdvancedSEOOptimizer from '../app/components/AdvancedSEOOptimizer';
 import AdvancedPerformanceMonitor from '../app/components/AdvancedPerformanceMonitor';
@@ -17,9 +18,11 @@ const ThrowError = ({ shouldThrow }: { shouldThrow: boolean }) => {
 describe('AdvancedErrorBoundary', () => {
   it('renders children when there is no error', () => {
     render(
-      <AdvancedErrorBoundary>
-        <div>Test content</div>
-      </AdvancedErrorBoundary>
+      <MemoryRouter>
+        <AdvancedErrorBoundary>
+          <div>Test content</div>
+        </AdvancedErrorBoundary>
+      </MemoryRouter>
     );
 
     expect(screen.getByText('Test content')).toBeInTheDocument();

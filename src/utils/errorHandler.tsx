@@ -251,7 +251,7 @@ export class ErrorHandler {
   // Log error
   private logError(error: AppError) {
     if (this.config.enableConsoleLogging) {
-//       const logMessage = `[${error.severity}] ${error.type}: ${error.message}`;
+const logMessage = `[${error.severity}] ${error.type}: ${error.message}`;
       
       switch (error.severity) {
         case ErrorSeverity.CRITICAL:
@@ -262,7 +262,7 @@ export class ErrorHandler {
 //           console.warn(logMessage, error);
           break;
         case ErrorSeverity.LOW:
-//           if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { console.info(logMessage, error); } }
+if(process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { console.info(logMessage, error); } }
           break;
       }
     }
@@ -399,7 +399,7 @@ export class ErrorHandler {
       // Implement retry logic based on error type
       if (retryItem.error.type === ErrorType.NETWORK) {
         // Retry network request
-//         if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { console.log(`Retrying network request (attempt ${retryItem.retryCount})`); } }
+if(process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { console.log(`Retrying network request (attempt ${retryItem.retryCount})`); } }
         // Add your retry logic here
       }
     } catch {
@@ -454,7 +454,7 @@ export class ErrorHandler {
 
   // Get error statistics
   getErrorStatistics() {
-//     const total = this.errors.length;
+const total = this.errors.length;
     const byType = this.errors.reduce((acc, error) => {
       acc[error.type] = (acc[error.type] || 0) + 1;
       return acc;
@@ -465,8 +465,8 @@ export class ErrorHandler {
       return acc;
     }, {} as Record<ErrorSeverity, number>);
 
-//     const resolved = this.errors.filter(error => error.resolved).length;
-//     const unresolved = total - resolved;
+const resolved = this.errors.filter(error => error.resolved).length;
+const unresolved = total - resolved;
 
     return {
       total,
