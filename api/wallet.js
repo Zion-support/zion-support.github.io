@@ -25,10 +25,9 @@ async function handler(req, res) {
           return;
         }
 
-        // Mock payment intent creation
         const paymentIntent = {
           id: `pi_${Date.now()}`,
-          amount: Math.round(amount * 100), // Convert to cents
+          amount: Math.round(amount * 100),
           currency: currency.toLowerCase(),
           status: 'requires_payment_method',
           client_secret: `pi_${Date.now()}_secret_${Math.random().toString(36).substr(2, 9)}`,
@@ -40,7 +39,6 @@ async function handler(req, res) {
       }
 
       case 'get_balance': {
-        // Mock balance retrieval
         const balance = {
           available: 1000.0,
           pending: 0.0,

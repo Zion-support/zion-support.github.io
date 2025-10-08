@@ -41,14 +41,6 @@ async function handler(req, res) {
       // File doesn't exist or is invalid, use empty array
     }
 
-    // Check if email already exists
-    const existingSubscriber = existing.find((sub) => sub.email === email);
-    if (existingSubscriber) {
-      res.statusCode = 200;
-      res.json({ success: true, message: 'Already subscribed' });
-      return;
-    }
-
     existing.push({
       email,
       name,
@@ -56,20 +48,13 @@ async function handler(req, res) {
       subscribedAt: new Date().toISOString(),
     });
 
-    // Ensure data directory exists
-    const dataDir = path.dirname(file);
-    if (!fs.existsSync(dataDir)) {
-      fs.mkdirSync(dataDir, { recursive: true });
-    }
-
     fs.writeFileSync(file, JSON.stringify(existing, null, 2));
-
     res.statusCode = 200;
     res.json({ success: true });
   } catch (err) {
-    console.error('Subscribe error:', err);
+    console.error('Subscribe API error:', err);
     res.statusCode = 500;
-    res.json({ error: err.message || 'Subscribe failed' });
+    res.json({ error: err.message || 'Subscription failed' });
   }
 }
 
