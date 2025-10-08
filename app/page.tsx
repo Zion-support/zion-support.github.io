@@ -1,19 +1,8 @@
 'use client';
 
-import React, { useState, useCallback } from 'react';
-
-// Loading fallback component
-const LoadingFallback: React.FC<{ height?: string }> = ({
-  height = 'h-32',
-}) => (
-  <div className={`flex items-center justify-center ${height} w-full`}>
-    <div className='animate-spin rounded-full h-8 w-8 border-b-2 border-indigo-600'></div>
-  </div>
-);
+import React, { useCallback } from 'react';
 
 const HomePage: React.FC = () => {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
   // Analytics tracking for phone clicks
   const handlePhoneClick = useCallback(() => {
     if (
@@ -41,10 +30,6 @@ const HomePage: React.FC = () => {
         event_label: 'main_phone_number',
       });
     }
-  }, []);
-
-  const toggleMobileMenu = useCallback(() => {
-    setIsMobileMenuOpen((prev) => !prev);
   }, []);
 
   return (

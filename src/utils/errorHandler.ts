@@ -66,10 +66,7 @@ class ErrorHandler {
     }
 
     this.reportError(errorData);
-<<<<<<< HEAD
-=======
     
->>>>>>> 729f4dc1f33e (Fix: Add ErrorSeverity enum and resolve type conflicts)
     return errorData;
   }
 
@@ -141,5 +138,5 @@ class ErrorHandler {
   }
 }
 
-// Export default instance
+// Export singleton instance as default
 export default ErrorHandler.getInstance();
