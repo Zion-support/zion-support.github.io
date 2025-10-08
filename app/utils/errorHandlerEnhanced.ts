@@ -1,6 +1,10 @@
 // Enhanced Error Handler
 export class AppError extends Error {
-  constructor(message, statusCode = 500, isOperational = true) {
+  statusCode: number;
+  isOperational: boolean;
+  timestamp: string;
+
+  constructor(message: string, statusCode: number = 500, isOperational: boolean = true) {
     super(message);
     this.statusCode = statusCode;
     this.isOperational = isOperational;
@@ -9,22 +13,22 @@ export class AppError extends Error {
   }
 }
 
-export const errorHandler = (error) => {
+export const errorHandler = (error: AppError | Error) => {
   const isDevelopment = process.env.NODE_ENV === 'development';
   
   console.error({
     message: error.message,
     stack: isDevelopment ? error.stack : undefined,
     timestamp: new Date().toISOString(),
-    statusCode: error.statusCode || 500
+    statusCode: (error as AppError).statusCode || 500
   });
 
   return {
-    message: error.isOperational ? error.message : 'An unexpected error occurred',
-    statusCode: error.statusCode || 500
+    message: (error as AppError).isOperational ? error.message : 'An unexpected error occurred',
+    statusCode: (error as AppError).statusCode || 500
   };
 };
 
-export const asyncHandler = (fn) => (req, res, next) => {
+export const asyncHandler = (fn: Function) => (req: any, res: any, next: any) => {
   Promise.resolve(fn(req, res, next)).catch(next);
 };
