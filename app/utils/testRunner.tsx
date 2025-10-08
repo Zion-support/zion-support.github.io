@@ -4,7 +4,8 @@
  */
 
 import React, { ReactElement, useCallback } from 'react';
-import { render, RenderOptions, RenderResult } from '@testing-library/react';
+
+import { Link } from 'react-router-dom';import { render, RenderOptions, RenderResult } from '@testing-library/react';
 import { BrowserRouter } from 'react-router-dom';
 
 // Test result types

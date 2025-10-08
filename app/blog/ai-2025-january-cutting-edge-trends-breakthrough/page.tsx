@@ -1,6 +1,7 @@
-import { Metadata } from 'next';
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-export const metadata: Metadata = {
+export const metadata: any= {
   title: 'January 2025 Cutting-Edge AI Trends: Revolutionary Breakthrough Technologies | Zion Tech Group',
   description: 'Explore the latest cutting-edge AI trends and breakthrough technologies transforming enterprise operations in January 2025. Neural consciousness, quantum optimization, and autonomous intelligence.',
   keywords: 'AI trends 2025, cutting-edge AI, breakthrough technologies, neural consciousness, quantum AI, autonomous intelligence, enterprise AI',
@@ -144,16 +145,14 @@ export default function January2025CuttingEdgeTrendsBreakthrough() {
                 Join leading enterprises embracing cutting-edge AI technologies for revolutionary transformation
               </p>
               <div className="space-x-4">
-                <a 
-                  href="/contact"
+                <Link to="/contact"
                   className="inline-block bg-purple-600 text-white px-6 py-3 rounded-lg hover:bg-purple-700 transition-colors">
                   Get Breakthrough Assessment
-                </a>
-                <a 
-                  href="/services"
+                </Link>
+                <Link to="/services"
                   className="inline-block bg-white text-purple-600 px-6 py-3 rounded-lg border-2 border-purple-600 hover:bg-purple-50 transition-colors">
                   Explore AI Services
-                </a>
+                </Link>
               </div>
             </div>
           </div>

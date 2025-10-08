@@ -1,9 +1,11 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
-import { Metadata } from 'next';
 
-export const metadata: Metadata = {
+
+
+
+export const metadata: any= {
   title: "AI-Powered Autonomous Business Processes: The 2026 Revolution",
   description: "Discover how AI-powered autonomous business processes are revolutionizing enterprise operations in 2026, delivering unprecedented efficiency and strategic insights.",
   keywords: 'autonomous business processes, AI automation, enterprise transformation, business process optimization, AI agents',
@@ -22,7 +24,7 @@ export default function AutonomousBusinessProcessesBlog() {
       <div className="max-w-4xl mx-auto px-4 py-8">
         <div className="bg-white rounded-lg shadow-lg p-8">
           <div className="mb-6">
-            <Link href="/blog" className="text-indigo-600 hover:text-indigo-700 flex items-center mb-4">
+            <Link to="/blog" className="text-indigo-600 hover:text-indigo-700 flex items-center mb-4">
               <ArrowLeft className="w-4 h-4 mr-2" />
               Back to Blog
             </Link>
@@ -114,16 +116,14 @@ export default function AutonomousBusinessProcessesBlog() {
                 Join leading enterprises achieving autonomous operations with AI-powered business processes
               </p>
               <div className="space-x-4">
-                <a 
-                  href="/contact"
+                <Link to="/contact"
                   className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">
                   Get Autonomous Assessment
-                </a>
-                <a 
-                  href="/services"
+                </Link>
+                <Link to="/services"
                   className="inline-block bg-white text-blue-600 px-6 py-3 rounded-lg border-2 border-blue-600 hover:bg-blue-50 transition-colors">
                   Explore AI Services
-                </a>
+                </Link>
               </div>
             </div>
           </div>

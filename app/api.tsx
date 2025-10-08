@@ -1,6 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+
+
+
 const API: React.FC = () => {
   const apiEndpoints = [
     {
@@ -55,13 +58,13 @@ const API: React.FC = () => {
               Get API Key
               <span className='ml-2'>→</span>
             </Link>
-            <a
-              href='#endpoints'
+            <Link 
+              to='#endpoints'
               className='border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors inline-flex items-center'
             >
               View Endpoints
               <span className='ml-2'>⚛️</span>
-            </a>
+            </Link>
           </div>
         </div>
       </div>
@@ -182,13 +185,13 @@ const API: React.FC = () => {
                 Get API Key
                 <span className='ml-2'>→</span>
               </Link>
-              <a
-                href='https://docs?.ziontechgroup.com'
+              <Link 
+                to='https://docs.ziontechgroup.com'
                 className='border border-gray-300 text-gray-700 px-8 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-colors inline-flex items-center'
               >
                 View Full Docs
                 <span className='ml-2'>⚛️</span>
-              </a>
+              </Link>
             </div>
           </div>
         </div>

@@ -1,6 +1,7 @@
 import React from 'react';
 
-interface LoadingSpinnerProps {
+
+import { Link } from 'react-router-dom';interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg';
   color?: 'indigo' | 'blue' | 'green' | 'purple';
   text?: string;

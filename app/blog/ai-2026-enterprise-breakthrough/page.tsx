@@ -1,8 +1,7 @@
 import React from 'react';
-import { Star } from 'lucide-react';
-import { Metadata } from 'next';
 
-export const metadata: Metadata = {
+import { Link } from 'react-router-dom';import { Star } from 'lucide-react';
+export const metadata: any= {
   title: "AI 2026 Enterprise Breakthrough: Revolutionary Business Transformation",
   description: "Discover the groundbreaking AI 2026 enterprise breakthrough featuring autonomous operations, intelligent automation, and unprecedented business value creation.",
   keywords: 'AI 2026, enterprise breakthrough, business transformation, autonomous operations, intelligent automation'

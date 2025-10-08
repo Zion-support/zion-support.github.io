@@ -1,7 +1,6 @@
 import React from 'react';
-import { Metadata } from 'next';
 
-const metadata: Metadata = {
+import { Link } from 'react-router-dom';const metadata: any= {
   title: 'Privacy Policy - Zion Tech Group',
   description:
     'Privacy policy and data protection information for Zion Tech Group services and website.',

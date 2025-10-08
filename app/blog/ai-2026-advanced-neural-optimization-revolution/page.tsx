@@ -1,7 +1,6 @@
 import React from 'react';
-import { Metadata } from 'next';
 
-export const metadata: Metadata = {
+import { Link } from 'react-router-dom';export const metadata: any= {
   title: "AI 2026: Advanced Neural Optimization Revolution - 1000x Performance Breakthrough",
   description: "Discover the revolutionary neural optimization techniques delivering 1000x performance improvements in AI systems. Complete implementation guide with real-world case studies.",
   keywords: 'neural optimization, AI performance, machine learning, deep learning, neural networks, AI breakthrough 2026'
@@ -128,16 +127,14 @@ export default function BlogPost() {
                 Join leading enterprises achieving 1000x performance with advanced neural optimization
               </p>
               <div className="space-x-4">
-                <a 
-                  href="/contact"
+                <Link to="/contact"
                   className="inline-block bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition-colors">
                   Get Optimization Assessment
-                </a>
-                <a 
-                  href="/services"
+                </Link>
+                <Link to="/services"
                   className="inline-block bg-white text-green-600 px-6 py-3 rounded-lg border-2 border-green-600 hover:bg-green-50 transition-colors">
                   Explore AI Services
-                </a>
+                </Link>
               </div>
             </div>
           </div>

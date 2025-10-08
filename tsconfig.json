@@ -54,11 +54,6 @@
       ]
     },
     "incremental": true,
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ],
     "allowJs": true,
     "forceConsistentCasingInFileNames": true,
     "noImplicitAny": false,
@@ -71,10 +66,9 @@
     "allowUnusedLabels": false,
     "allowUnreachableCode": false,
     "verbatimModuleSyntax": false,
-    "tsBuildInfoFile": ".next/cache/tsconfig.tsbuildinfo"
+    "tsBuildInfoFile": ".tsbuildinfo"
   },
   "include": [
-    "next-env.d.ts",
     "app/**/*",
     "src/**/*",
     "App.tsx",
@@ -82,8 +76,7 @@
     "api/**/*.ts",
     "api/**/*.js",
     "*.ts",
-    "*.tsx",
-    ".next/types/**/*.ts"
+    "*.tsx"
   ],
   "exclude": [
     "node_modules",

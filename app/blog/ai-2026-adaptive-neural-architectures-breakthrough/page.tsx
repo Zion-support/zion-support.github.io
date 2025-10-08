@@ -1,7 +1,6 @@
 import React from 'react';
-import { Metadata } from 'next';
 
-export const metadata: Metadata = {
+import { Link } from 'react-router-dom';export const metadata: any= {
   title: "AI 2026: Adaptive Neural Architectures - The Future of Enterprise AI | Zion Tech Group",
   description: "Revolutionary adaptive neural architectures that self-evolve and optimize in real-time, delivering 1000x performance improvements and $25B+ enterprise value.",
   keywords: 'adaptive neural networks, AI 2026, neural architecture, enterprise AI, machine learning, business transformation'
@@ -128,16 +127,14 @@ export default function AdaptiveNeuralArchitecturesPage() {
                 Join leading enterprises achieving breakthrough performance with adaptive neural architectures
               </p>
               <div className="space-x-4">
-                <a 
-                  href="/contact"
+                <Link to="/contact"
                   className="inline-block bg-purple-600 text-white px-6 py-3 rounded-lg hover:bg-purple-700 transition-colors">
                   Get Neural Assessment
-                </a>
-                <a 
-                  href="/services"
+                </Link>
+                <Link to="/services"
                   className="inline-block bg-white text-purple-600 px-6 py-3 rounded-lg border-2 border-purple-600 hover:bg-purple-50 transition-colors">
                   Explore AI Services
-                </a>
+                </Link>
               </div>
             </div>
           </div>

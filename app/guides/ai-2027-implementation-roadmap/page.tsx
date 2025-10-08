@@ -1,19 +1,10 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { ArrowLeft, Calendar, User, Clock, Tag, Target, CheckCircle, ArrowRight, Zap, TrendingUp, Brain, Cpu } from 'lucide-react';
 
-export const metadata = {
-  title: 'AI 2027 Implementation Roadmap - Complete Guide to Advanced Neural Superintelligence',
-  description: 'Complete step-by-step roadmap for implementing AI 2027 Advanced Neural Superintelligence in your enterprise. Achieve 1,000,000x performance gains.',
-  keywords: 'AI 2027 implementation, neural superintelligence roadmap, enterprise AI transformation, advanced AI deployment',
-  authors: [{ name: 'Zion Tech Group AI Implementation Team' }],
-  openGraph: {
-    title: 'AI 2027 Implementation Roadmap - Complete Guide',
-    description: 'Complete step-by-step roadmap for implementing AI 2027 Advanced Neural Superintelligence in your enterprise.',
-    url: 'https://ziontechgroup.com/guides/ai-2027-implementation-roadmap',
-    type: 'article'
-  },
-};
+
+
+
 
 export default function AI2027ImplementationRoadmap() {
   return (
@@ -22,7 +13,7 @@ export default function AI2027ImplementationRoadmap() {
       <header className="bg-gradient-to-r from-purple-900 to-blue-900 text-white">
         <div className="max-w-6xl mx-auto px-4 py-12">
           <Link 
-            href="/"
+            to="/"
             className="inline-flex items-center text-blue-200 hover:text-white transition-colors mb-8"
           >
             <ArrowLeft className="w-4 h-4 mr-2" />
@@ -313,14 +304,14 @@ export default function AI2027ImplementationRoadmap() {
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link 
-              href="/contact"
+              to="/contact"
               className="inline-flex items-center px-8 py-4 bg-white text-purple-900 rounded-lg hover:bg-blue-50 transition-colors font-semibold"
             >
               Get Your Roadmap
               <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
             <Link 
-              href="/case-studies"
+              to="/case-studies"
               className="inline-flex items-center px-8 py-4 bg-transparent border-2 border-white text-white rounded-lg hover:bg-white hover:text-purple-900 transition-colors font-semibold"
             >
               View Success Stories

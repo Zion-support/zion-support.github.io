@@ -1,7 +1,6 @@
 import React from 'react';
-import { Metadata } from 'next';
 
-export const metadata: Metadata = {
+import { Link } from 'react-router-dom';export const metadata: any= {
   title: "AI Trends 2026: Future Enterprise Transformation with Quantum Intelligence",
   description: "Explore the top AI trends shaping enterprise transformation in 2026, from quantum intelligence and conscious computing to autonomous operations and neuromorphic architectures.",
   keywords: 'AI trends 2026, enterprise transformation, quantum intelligence, conscious computing, autonomous operations',
@@ -129,16 +128,14 @@ export default function AITrends2026FutureEnterpriseTransformation() {
                 Join leading enterprises preparing for the quantum intelligence revolution
               </p>
               <div className="space-x-4">
-                <a 
-                  href="/contact"
+                <Link to="/contact"
                   className="inline-block bg-purple-600 text-white px-6 py-3 rounded-lg hover:bg-purple-700 transition-colors">
                   Get 2026 AI Assessment
-                </a>
-                <a 
-                  href="/services"
+                </Link>
+                <Link to="/services"
                   className="inline-block bg-white text-purple-600 px-6 py-3 rounded-lg border-2 border-purple-600 hover:bg-purple-50 transition-colors">
                   Explore AI Services
-                </a>
+                </Link>
               </div>
             </div>
           </div>

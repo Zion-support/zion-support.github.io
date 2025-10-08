@@ -1,6 +1,7 @@
-import { Metadata } from 'next';
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-export const metadata: Metadata = {
+export const metadata: any= {
   title: 'January 2025 Advanced AI Revolution: Next-Generation Enterprise Transformation | Zion Tech Group',
   description: 'Discover the revolutionary AI breakthroughs transforming enterprise operations in January 2025. Advanced autonomous systems, quantum-enhanced intelligence, and $2.8B proven ROI.',
   keywords: 'AI revolution 2025, enterprise AI transformation, autonomous systems, quantum AI, machine learning, artificial intelligence, business automation',
@@ -127,16 +128,14 @@ export default function January2025AdvancedAIRevolution() {
                 Join leading enterprises achieving breakthrough results with advanced AI technologies
               </p>
               <div className="space-x-4">
-                <a 
-                  href="/contact"
+                <Link to="/contact"
                   className="inline-block bg-indigo-600 text-white px-6 py-3 rounded-lg hover:bg-indigo-700 transition-colors">
                   Get AI Assessment
-                </a>
-                <a 
-                  href="/services"
+                </Link>
+                <Link to="/services"
                   className="inline-block bg-white text-indigo-600 px-6 py-3 rounded-lg border-2 border-indigo-600 hover:bg-indigo-50 transition-colors">
                   Explore AI Services
-                </a>
+                </Link>
               </div>
             </div>
           </div>

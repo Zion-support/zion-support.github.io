@@ -1,12 +1,7 @@
 import React from 'react';
 
-export const metadata = {
-  title: 'AI 2025-2026 Mega Trends Breakthrough: Revolutionary Enterprise Transformation',
-  description: 'Discover the groundbreaking AI trends and breakthroughs that will revolutionize enterprise operations in 2025-2026.',
-  type: 'article',
-};
 
-export default function AIMegaTrends20252026() {
+import { Link } from 'react-router-dom';export default function AIMegaTrends20252026() {
   return (
     <div className="min-h-screen bg-gray-50">
       <div className="max-w-4xl mx-auto px-4 py-8">
@@ -93,16 +88,14 @@ export default function AIMegaTrends20252026() {
                 Join leading enterprises embracing the AI mega trends of 2025-2026
               </p>
               <div className="space-x-4">
-                <a 
-                  href="/contact"
+                <Link to="/contact"
                   className="inline-block bg-indigo-600 text-white px-6 py-3 rounded-lg hover:bg-indigo-700 transition-colors">
                   Get AI Assessment
-                </a>
-                <a 
-                  href="/services"
+                </Link>
+                <Link to="/services"
                   className="inline-block bg-white text-indigo-600 px-6 py-3 rounded-lg border-2 border-indigo-600 hover:bg-indigo-50 transition-colors">
                   Explore AI Services
-                </a>
+                </Link>
               </div>
             </div>
           </div>

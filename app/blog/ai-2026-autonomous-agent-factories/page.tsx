@@ -1,7 +1,6 @@
 import React from 'react';
-import { Metadata } from 'next';
 
-export const metadata: Metadata = {
+import { Link } from 'react-router-dom';export const metadata: any= {
   title: "AI 2026: Autonomous Agent Factories - The Future of Enterprise Automation",
   description: "Revolutionary autonomous agent factories achieving 95% enterprise automation rates through self-replicating AI systems and advanced agent orchestration.",
   authors: [{ name: 'Zion Tech Group' }],
@@ -111,16 +110,14 @@ export default function AI2026AutonomousAgentFactoriesPage() {
                 Join leading enterprises achieving autonomous agent factories for revolutionary automation
               </p>
               <div className="space-x-4">
-                <a 
-                  href="/contact"
+                <Link to="/contact"
                   className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">
                   Get Agent Factory Assessment
-                </a>
-                <a 
-                  href="/services"
+                </Link>
+                <Link to="/services"
                   className="inline-block bg-white text-blue-600 px-6 py-3 rounded-lg border-2 border-blue-600 hover:bg-blue-50 transition-colors">
                   Explore AI Services
-                </a>
+                </Link>
               </div>
             </div>
           </div>

@@ -1,7 +1,6 @@
 import React from 'react';
-import { Metadata } from 'next';
 
-export const metadata: Metadata = {
+import { Link } from 'react-router-dom';export const metadata: any= {
   title: "AI 2026: Consensus Intelligence Breakthrough",
   description: "Revolutionary AI system enabling unanimous decisions through quantum-accelerated consensus protocols.",
   authors: [{ name: 'Zion Tech Group' }],
@@ -99,16 +98,14 @@ export default function ConsensusIntelligencePage() {
                 Join leading enterprises achieving unanimous decisions with consensus intelligence
               </p>
               <div className="space-x-4">
-                <a 
-                  href="/contact"
+                <Link to="/contact"
                   className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">
                   Get Consensus Assessment
-                </a>
-                <a 
-                  href="/services"
+                </Link>
+                <Link to="/services"
                   className="inline-block bg-white text-blue-600 px-6 py-3 rounded-lg border-2 border-blue-600 hover:bg-blue-50 transition-colors">
                   Explore AI Services
-                </a>
+                </Link>
               </div>
             </div>
           </div>

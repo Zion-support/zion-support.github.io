@@ -1,5 +1,6 @@
 import React, { ReactNode } from 'react';
-import { Helmet } from 'react-helmet-async';
+
+import { Link } from 'react-router-dom';import { Helmet } from 'react-helmet-async';
 
 interface SEOEnhancerProps {
   children?: ReactNode;

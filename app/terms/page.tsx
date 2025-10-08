@@ -1,7 +1,6 @@
 import React from 'react';
-import { Metadata } from 'next';
 
-const metadata: Metadata = {
+import { Link } from 'react-router-dom';const metadata: any= {
   title: 'Terms of Service - Zion Tech Group',
   description:
     'Terms of service and usage agreement for Zion Tech Group services and website.',

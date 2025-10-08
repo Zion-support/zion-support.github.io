@@ -1,8 +1,7 @@
 import React from 'react';
-import { Star } from 'lucide-react';
-import { Metadata } from 'next';
 
-export const metadata: Metadata = {
+import { Link } from 'react-router-dom';import { Star } from 'lucide-react';
+export const metadata: any= {
   title: "AI 2026 Hyperconscious Computing Revolution: Next-Gen Intelligence",
   description: "Experience the hyperconscious computing revolution of AI 2026, featuring next-generation intelligence, advanced cognitive computing, and revolutionary AI consciousness.",
   keywords: 'AI 2026, hyperconscious computing, next-gen intelligence, cognitive computing, AI consciousness, computing revolution'

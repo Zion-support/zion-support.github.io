@@ -1,16 +1,7 @@
 import React from 'react';
 
-export const metadata = {
-	title: 'AI Innovation Labs: Product Development Revolution 2025 | Zion Tech Group',
-	description: 'Discover how AI Innovation Labs are revolutionizing product development with 10x faster time-to-market, 85% cost reduction, and breakthrough innovation acceleration.',
-	openGraph: {
-		title: 'AI Innovation Labs: Product Development Revolution 2025',
-		description: 'Revolutionary AI-powered product development achieving 10x faster time-to-market and 85% cost reduction.',
-		images: [{ url: '/og/ai-innovation-labs-2025.jpg' }]
-	}
-};
 
-export default function Page() {
+import { Link } from 'react-router-dom';export default function Page() {
   return (
     <div className="min-h-screen bg-gray-50">
       <div className="max-w-4xl mx-auto px-4 py-8">
@@ -128,16 +119,14 @@ export default function Page() {
                 Join leading companies transforming product development with AI-powered innovation
               </p>
               <div className="space-x-4">
-                <a 
-                  href="/contact"
+                <Link to="/contact"
                   className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">
                   Schedule Innovation Assessment
-                </a>
-                <a 
-                  href="/services"
+                </Link>
+                <Link to="/services"
                   className="inline-block bg-white text-blue-600 px-6 py-3 rounded-lg border-2 border-blue-600 hover:bg-blue-50 transition-colors">
                   Explore AI Services
-                </a>
+                </Link>
               </div>
             </div>
           </div>

@@ -1,7 +1,6 @@
 import React from 'react';
-import { Metadata } from 'next';
 
-export const metadata: Metadata = {
+import { Link } from 'react-router-dom';export const metadata: any= {
   title: "AI 2026: Revolutionary Enterprise Automation Breakthrough",
   description: "The most comprehensive guide to AI automation breakthroughs transforming enterprises in 2026.",
   authors: [{ name: 'Zion Tech Group' }],
@@ -98,16 +97,14 @@ export default function AI2026EnterpriseAutomationRevolutionaryBreakthrough() {
                 Join leading enterprises achieving revolutionary automation for unprecedented business transformation
               </p>
               <div className="space-x-4">
-                <a 
-                  href="/contact"
+                <Link to="/contact"
                   className="inline-block bg-indigo-600 text-white px-6 py-3 rounded-lg hover:bg-indigo-700 transition-colors">
                   Get Automation Assessment
-                </a>
-                <a 
-                  href="/services"
+                </Link>
+                <Link to="/services"
                   className="inline-block bg-white text-indigo-600 px-6 py-3 rounded-lg border-2 border-indigo-600 hover:bg-indigo-50 transition-colors">
                   Explore AI Services
-                </a>
+                </Link>
               </div>
             </div>
           </div>

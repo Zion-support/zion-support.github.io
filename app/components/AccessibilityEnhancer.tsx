@@ -2,7 +2,8 @@
 
 import React, { useEffect, useRef, useState, useCallback } from 'react';
 
-interface AccessibilityConfig {
+
+import { Link } from 'react-router-dom';interface AccessibilityConfig {
   enableKeyboardNavigation: boolean;
   enableScreenReaderSupport: boolean;
   enableHighContrast: boolean;
@@ -122,18 +123,16 @@ const AccessibilityEnhancer = React.forwardRef<AccessibilityEnhancerRef, Accessi
     <div className="accessibility-enhancer">
       {defaultConfig.enableSkipLinks && (
         <div className="skip-links">
-          <a 
-            href="#main-content" 
+          <Link to="#main-content" 
             className="skip-link sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50"
           >
             Skip to main content
-          </a>
-          <a 
-            href="#navigation" 
+          </Link>
+          <Link to="#navigation" 
             className="skip-link sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-32 bg-blue-600 text-white px-4 py-2 rounded z-50"
           >
             Skip to navigation
-          </a>
+          </Link>
         </div>
       )}
       

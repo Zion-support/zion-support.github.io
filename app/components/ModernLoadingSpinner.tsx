@@ -1,6 +1,7 @@
 import React from 'react';
 
-interface ModernLoadingSpinnerProps {
+
+import { Link } from 'react-router-dom';interface ModernLoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg' | 'xl';
   variant?: 'dots' | 'pulse' | 'spinner' | 'skeleton';
   text?: string;

@@ -1,8 +1,7 @@
 import React from 'react';
-import { Star } from 'lucide-react';
-import { Metadata } from 'next';
 
-export const metadata: Metadata = {
+import { Link } from 'react-router-dom';import { Star } from 'lucide-react';
+export const metadata: any= {
   title: "AI 2026 February Ultimate Consciousness Breakthrough: Mind-Expanding Technology",
   description: "Discover the ultimate consciousness breakthrough of AI 2026 February, featuring mind-expanding technology, advanced cognitive systems, and revolutionary AI consciousness.",
   keywords: 'AI 2026, consciousness breakthrough, mind-expanding technology, cognitive systems, AI consciousness'

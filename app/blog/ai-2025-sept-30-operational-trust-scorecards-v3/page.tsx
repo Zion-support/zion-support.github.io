@@ -1,12 +1,7 @@
 import React from 'react';
 
-export const metadata = {
-  
-  title: "Operational Trust Scorecards v3",
-  description: "Measure reliability, cost, safety, and value with live AI scorecards.",
-  type: 'article'};
 
-export default function Page() {
+import { Link } from 'react-router-dom';export default function Page() {
   return (
     <main className="min-h-screen bg-slate-950 text-white">
       <section className="py-16 border-b border-white/10">

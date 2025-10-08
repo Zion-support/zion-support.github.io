@@ -1,7 +1,6 @@
 import React from 'react';
-import { Metadata } from 'next';
 
-export const metadata: Metadata = {
+import { Link } from 'react-router-dom';export const metadata: any= {
   title: 'AI Enterprise Transformation Ultimate Guide 2025: $2B+ ROI Strategies | Zion Tech Group',
   description: 'Complete guide to AI enterprise transformation achieving $2B+ ROI. Learn autonomous operations, quantum AI, and multi-agent orchestration strategies from Fortune 500 success stories.',
   keywords: 'AI enterprise transformation, autonomous operations, quantum AI, multi-agent orchestration, enterprise AI ROI, Fortune 500 AI success, AI strategy, enterprise automation',
@@ -132,16 +131,14 @@ export default function AIEnterpriseTransformationUltimateGuide2025() {
                 Join Fortune 500 companies achieving breakthrough results through strategic AI transformation
               </p>
               <div className="space-x-4">
-                <a 
-                  href="/contact"
+                <Link to="/contact"
                   className="inline-block bg-indigo-600 text-white px-6 py-3 rounded-lg hover:bg-indigo-700 transition-colors">
                   Get Transformation Assessment
-                </a>
-                <a 
-                  href="/services"
+                </Link>
+                <Link to="/services"
                   className="inline-block bg-white text-indigo-600 px-6 py-3 rounded-lg border-2 border-indigo-600 hover:bg-indigo-50 transition-colors">
                   Explore AI Services
-                </a>
+                </Link>
               </div>
             </div>
           </div>

@@ -37,47 +37,23 @@ jest.mock('./app/hooks/usePerformanceMonitoring.ts', () => ({
   })),
 }));
 
-// Mock Next.js router
-jest.mock('next/router', () => ({
-  useRouter() {
-    return {
-      route: '/',
-      pathname: '/',
-      query: {},
-      asPath: '/',
-      push: jest.fn(),
-      replace: jest.fn(),
-      reload: jest.fn(),
-      back: jest.fn(),
-      prefetch: jest.fn(),
-      beforePopState: jest.fn(),
-      events: {
-        on: jest.fn(),
-        off: jest.fn(),
-        emit: jest.fn(),
-      },
-      isFallback: false,
-      isLocaleDomain: false,
-      isReady: true,
-      isPreview: false,
-    };
-  },
-}));
+// Mock TextEncoder/TextDecoder for Node.js environment
+const { TextEncoder, TextDecoder } = require('util');
+global.TextEncoder = TextEncoder;
+global.TextDecoder = TextDecoder;
 
-// Mock Next.js Link
-jest.mock('next/link', () => {
-  return ({ children, href }) => {
-    return <a href={href}>{children}</a>;
-  };
-});
-
-// Mock Next.js Image
-jest.mock('next/image', () => ({
-  __esModule: true,
-  default: (props) => {
-    // eslint-disable-next-line jsx-a11y/alt-text
-    return <img {...props} />;
-  },
+// Mock React Router
+jest.mock('react-router-dom', () => ({
+  useNavigate: () => jest.fn(),
+  useLocation: () => ({
+    pathname: '/',
+    search: '',
+    hash: '',
+    state: null,
+  }),
+  useParams: () => ({}),
+  Link: ({ children, to, ...props }) => <a href={to} {...props}>{children}</a>,
+  NavLink: ({ children, to, ...props }) => <a href={to} {...props}>{children}</a>,
 }));
 
 // Mock window.matchMedia

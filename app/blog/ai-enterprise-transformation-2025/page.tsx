@@ -1,16 +1,7 @@
 import React from 'react';
 
-export const metadata = {
-	title: 'AI Enterprise Transformation: $50M Annual Savings Blueprint | Zion Tech Group',
-	description: 'Discover how Fortune 500 companies achieve $50M annual savings, 95% process automation, and 300% ROI through comprehensive AI transformation strategies.',
-	openGraph: {
-		title: 'AI Enterprise Transformation: $50M Annual Savings Blueprint',
-		description: 'Proven strategies for $50M annual savings and 95% process automation through AI transformation.',
-		images: [{ url: '/og/ai-enterprise-transformation-2025.jpg' }]
-	}
-};
 
-export default function Page() {
+import { Link } from 'react-router-dom';export default function Page() {
   return (
     <div className="min-h-screen bg-gray-50">
       <div className="max-w-4xl mx-auto px-4 py-8">
@@ -108,16 +99,14 @@ export default function Page() {
                 Join Fortune 500 companies achieving breakthrough results through strategic AI transformation
               </p>
               <div className="space-x-4">
-                <a 
-                  href="/contact"
+                <Link to="/contact"
                   className="inline-block bg-indigo-600 text-white px-6 py-3 rounded-lg hover:bg-indigo-700 transition-colors">
                   Get Transformation Assessment
-                </a>
-                <a 
-                  href="/services"
+                </Link>
+                <Link to="/services"
                   className="inline-block bg-white text-indigo-600 px-6 py-3 rounded-lg border-2 border-indigo-600 hover:bg-indigo-50 transition-colors">
                   Explore AI Services
-                </a>
+                </Link>
               </div>
             </div>
           </div>

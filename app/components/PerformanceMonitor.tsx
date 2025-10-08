@@ -2,7 +2,8 @@
 
 import React, { useState, useEffect } from 'react';
 
-interface PerformanceMetrics {
+
+import { Link } from 'react-router-dom';interface PerformanceMetrics {
   loadTime: number;
   renderTime: number;
   memoryUsage: number;

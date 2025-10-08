@@ -1,7 +1,6 @@
 import React from 'react';
-import { Metadata } from 'next';
 
-export const metadata: Metadata = {
+import { Link } from 'react-router-dom';export const metadata: any= {
   title: "AI 2026 April Revolutionary Breakthrough: Meta-Cognitive Superintelligence Platform",
   description: "Revolutionary AI breakthrough featuring meta-cognitive superintelligence and quantum-neural consciousness fusion delivering unprecedented enterprise transformation.",
   authors: [{ name: 'Zion Tech Group' }],
@@ -98,16 +97,14 @@ export default function AI2026AprilRevolutionaryBreakthrough() {
                 Join leading enterprises embracing meta-cognitive superintelligence for revolutionary transformation
               </p>
               <div className="space-x-4">
-                <a 
-                  href="/contact"
+                <Link to="/contact"
                   className="inline-block bg-purple-600 text-white px-6 py-3 rounded-lg hover:bg-purple-700 transition-colors">
                   Get Meta-Cognitive Assessment
-                </a>
-                <a 
-                  href="/services"
+                </Link>
+                <Link to="/services"
                   className="inline-block bg-white text-purple-600 px-6 py-3 rounded-lg border-2 border-purple-600 hover:bg-purple-50 transition-colors">
                   Explore AI Services
-                </a>
+                </Link>
               </div>
             </div>
           </div>
