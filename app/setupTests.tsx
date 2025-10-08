@@ -5,9 +5,7 @@
 import '@testing-library/jest-dom';
 
 // Suppress jsdom navigation warnings
-// eslint-disable-next-line no-console
 const originalConsoleError = console.error;
-// eslint-disable-next-line no-console
 console.error = (...args) => {
   const message = args[0]?.toString?.() || args[0]?.message || '';
   if (message.includes('Not implemented: navigation') || 
@@ -24,8 +22,8 @@ Object.defineProperty(window, 'matchMedia', {
     matches: false,
     media: query,
     onchange: null,
-    addListener: jest.fn(), // deprecated
-    removeListener: jest.fn(), // deprecated
+    addListener: jest.fn(),
+    removeListener: jest.fn(),
     addEventListener: jest.fn(),
     removeEventListener: jest.fn(),
     dispatchEvent: jest.fn(),
@@ -71,26 +69,24 @@ console.warn = (...args) => {
     return;
   }
   originalConsoleWarn(...args);
+};
+
+console.info = (...args) => {
+  const message = args[0]?.toString?.() || '';
+  if (message.includes('ReactDOM.render is no longer supported')) {
+    return;
+  }
+  originalConsoleInfo(...args);
+};
+
 // Mock PerformanceObserver
 global.PerformanceObserver = class MockPerformanceObserver {
-  static readonly supportedEntryTypes: readonly string[] = ['navigation', 'paint', 'largest-contentful-paint', 'first-input', 'layout-shift'];
-  
+  static readonly supportedEntryTypes = ['navigation', 'paint', 'largest-contentful-paint', 'first-input', 'layout-shift'];
   constructor(public callback: PerformanceObserverCallback) {}
   observe() {}
   disconnect() {}
-  takeRecords() {
-    return [];
-  }
-};
-
-// Suppress JSDOM navigation warnings
-const originalConsoleError = console.error;
-console.error = (...args) => {
-  if (args[0] && args[0].type === 'not implemented' && args[0].message?.includes('navigation')) {
-    return; // Suppress JSDOM navigation warnings
-  }
-  originalConsoleError.apply(console, args);
-};
+  takeRecords() { return []; }
+} as unknown as typeof PerformanceObserver;
 
 // Mock window.location
 delete (window as unknown as Record<string, unknown>).location;
@@ -109,10 +105,24 @@ delete (window as unknown as Record<string, unknown>).location;
   replace: jest.fn(),
 };
 
-console.info = (...args) => {
-  const message = args[0]?.toString?.() || '';
-  if (message.includes('ReactDOM.render is no longer supported')) {
-    return;
-  }
-  originalConsoleInfo(...args);
-};
+// Mock IntersectionObserver
+global.IntersectionObserver = class IntersectionObserver {
+  constructor() {}
+  disconnect() {}
+  observe() {}
+  unobserve() {}
+  takeRecords() { return []; }
+  root = null;
+  rootMargin = '';
+  thresholds = [];
+} as unknown as typeof IntersectionObserver;
+
+// Mock ResizeObserver
+global.ResizeObserver = class ResizeObserver {
+  constructor() {}
+  disconnect() {}
+  observe() {}
+  unobserve() {}
+} as unknown as typeof ResizeObserver;
+
+export {};
