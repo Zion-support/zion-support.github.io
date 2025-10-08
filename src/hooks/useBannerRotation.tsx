@@ -4,18 +4,18 @@
  */
 
 import React, { useState, useEffect, useCallback, useMemo } from 'react';
-import {
-  BannerConfig,
-  RotationStrategy,
-  selectBannersForDisplay,
-  selectBalancedBanners,
-  trackImpression,
-  trackClick,
-  loadBannerStats,
-  getRefreshInterval,
-  getRotationStrategy
-// @ts-ignore
-} from '../data/bannerConfigurations'; // @ts-ignore
+
+// Types
+type RotationStrategy = 'balanced' | 'priority' | 'random';
+
+interface BannerConfig {
+  id: string;
+  title: string;
+  description?: string;
+  imageUrl?: string;
+  link?: string;
+  priority?: number;
+}
 
 interface UseBannerRotationOptions {
   strategy?: RotationStrategy;
@@ -34,6 +34,23 @@ interface BannerRotationState {
     ctr: number;
   };
 }
+
+// Stub implementations
+const selectBannersForDisplay = async (strategy: RotationStrategy, maxBanners: number): Promise<BannerConfig[]> => {
+  return [];
+};
+
+const trackImpression = (bannerId: string) => {
+  // Stub
+};
+
+const trackClick = (bannerId: string) => {
+  // Stub
+};
+
+const loadBannerStats = async () => {
+  return { impressions: 0, clicks: 0, ctr: 0 };
+};
 
 export const useBannerRotation = (options: UseBannerRotationOptions = {}) => {
   const {
