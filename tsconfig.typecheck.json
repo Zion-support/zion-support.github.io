@@ -31,6 +31,8 @@
     "contracts.disabled/**",
     "**/NewestContent2025Banner.tsx",
     "**/contact/page.tsx",
-    "**/ErrorBoundary.tsx"
+    "**/ErrorBoundary.tsx",
+    "app/**/*.tsx",
+    "app/**/*.ts"
   ]
 }
