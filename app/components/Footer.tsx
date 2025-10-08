@@ -4,10 +4,13 @@ import { Link } from 'react-router-dom';
 <<<<<<< HEAD
 import { Phone, Mail, MapPin, Clock, Award, Shield, Zap, ArrowRight } from 'lucide-react';
 
+<<<<<<< HEAD
 const Footer: React.FC = memo(() => {  return (
 =======
 import { ArrowRight } from 'lucide-react';
 
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-14d1
 const Footer: React.FC = memo(() => {
   const aiServices = [
     { name: 'AI Services', url: '/ai-services' },
@@ -70,6 +73,7 @@ const Footer: React.FC = memo(() => {
               Leading provider of enterprise AI solutions, quantum computing, and autonomous systems. 
               Transform your business with cutting-edge technology.
             </p>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
           </div>
@@ -416,6 +420,15 @@ const Footer: React.FC = () => {
             </div>
           </div>
 
+=======
+            <div className="text-gray-300">
+              <p>364 E Main St STE 1008</p>
+              <p>Middletown, DE 19709</p>
+              <p>United States</p>
+            </div>
+          </div>
+
+>>>>>>> cursor/website-audit-and-update-with-deployment-14d1
           {/* AI Services */}
           <div>
             <h4 className="text-lg font-semibold mb-6 text-cyan-400">AI Services</h4>
@@ -524,7 +537,10 @@ const Footer: React.FC = () => {
             <div className="cyber-card">
               <div className="text-4xl font-bold text-orange-400 mb-2">24/7</div>
               <div className="text-gray-300">Support Available</div>
+<<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-ea96
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-14d1
             </div>
           </div>
 
@@ -695,6 +711,10 @@ const Footer: React.FC = () => {
 <<<<<<< HEAD
 Footer.displayName = 'Footer';
 
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-1ed2
 export default Footer;
+=======
+export default Footer;
+>>>>>>> cursor/website-audit-and-update-with-deployment-14d1
