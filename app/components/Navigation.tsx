@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 <<<<<<< HEAD
 <<<<<<< HEAD
 import { ChevronDown, Phone, Mail, MapPin, Menu, X } from 'lucide-react';
+
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
@@ -132,6 +133,7 @@ const Navigation: React.FC = () => {
             </span>
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-1ed2
           </Link>
+
           {/* Desktop Menu */}
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -219,11 +221,11 @@ const Navigation: React.FC = () => {
                   <div className="grid grid-cols-2 gap-4 px-4">
                     <div>
                       <h3 className="font-semibold text-gray-900 mb-3">Core Services</h3>
-                      {services.slice(0, 8).map((service, index) => (
+                      {services.slice(0, 6).map((service) => (
                         <Link
-                          key={index}
-                          to={service.url}
-                          className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded transition-colors"
+                          key={service.name}
+                          to={service.href}
+                          className="block py-2 text-sm text-gray-700 hover:text-cyan-600 transition-colors"
                           onClick={() => setServicesOpen(false)}
                         >
 <<<<<<< HEAD
@@ -245,12 +247,12 @@ const Navigation: React.FC = () => {
                       ))}
                     </div>
                     <div>
-                      <h3 className="font-semibold text-gray-900 mb-3">Additional Services</h3>
-                      {services.slice(8).map((service, index) => (
+                      <h3 className="font-semibold text-gray-900 mb-3">Advanced Services</h3>
+                      {services.slice(6).map((service) => (
                         <Link
-                          key={index}
-                          to={service.url}
-                          className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded transition-colors"
+                          key={service.name}
+                          to={service.href}
+                          className="block py-2 text-sm text-gray-700 hover:text-cyan-600 transition-colors"
                           onClick={() => setServicesOpen(false)}
                         >
                           {service.name}
@@ -541,16 +543,20 @@ const Navigation: React.FC = () => {
             <Link to="/case-studies" className="text-gray-300 hover:text-cyan-400 transition-colors font-medium">
               Case Studies
             </Link>
-            <Link to="/enterprise" className="text-gray-300 hover:text-cyan-400 transition-colors font-medium">
-              Enterprise
-            </Link>
-            <Link to="/team" className="text-gray-300 hover:text-cyan-400 transition-colors font-medium">
-              Team
-            </Link>
-            <Link to="/contact" className="bg-cyan-600 text-white px-6 py-2 rounded-lg hover:bg-cyan-700 transition-colors font-medium">
+            <Link to="/contact" className="text-gray-300 hover:text-cyan-400 transition-colors font-medium">
               Contact
             </Link>
+            
+            {/* CTA Button */}
+            <Link
+              to="/contact"
+              className="bg-cyan-600 hover:bg-cyan-700 text-white px-6 py-2 rounded-lg font-medium transition-colors flex items-center"
+            >
+              Get Started
+              <ArrowRight className="w-4 h-4 ml-2" />
+            </Link>
           </div>
+
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
@@ -576,10 +582,10 @@ const Navigation: React.FC = () => {
         {/* Mobile Menu */}
         {isOpen && (
           <div className="lg:hidden py-4 border-t border-gray-700">
-            <div className="flex flex-col space-y-4">
-              <Link 
-                to="/" 
-                className="text-gray-300 hover:text-cyan-400 transition-colors font-medium"
+            <div className="space-y-4">
+              <Link
+                to="/"
+                className="block text-gray-300 hover:text-cyan-400 transition-colors font-medium"
                 onClick={() => setIsOpen(false)}
               >
                 Home
@@ -670,12 +676,62 @@ const Navigation: React.FC = () => {
                 className="bg-cyan-600 text-white px-6 py-2 rounded-lg hover:bg-cyan-700 transition-colors font-medium text-center mt-4"
                 onClick={() => setIsOpen(false)}
               >
-                Contact Us
+                About
+              </Link>
+              
+              {/* Mobile Services */}
+              <div>
+                <button
+                  onClick={() => setServicesOpen(!servicesOpen)}
+                  className="flex items-center text-gray-300 hover:text-cyan-400 transition-colors font-medium"
+                >
+                  Services
+                  <ChevronDown className="w-4 h-4 ml-1" />
+                </button>
+                {servicesOpen && (
+                  <div className="mt-2 ml-4 space-y-2">
+                    {services.map((service) => (
+                      <Link
+                        key={service.name}
+                        to={service.href}
+                        className="block text-sm text-gray-400 hover:text-cyan-400 transition-colors"
+                        onClick={() => {
+                          setIsOpen(false);
+                          setServicesOpen(false);
+                        }}
+                      >
+                        {service.name}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
+
+              <Link
+                to="/case-studies"
+                className="block text-gray-300 hover:text-cyan-400 transition-colors font-medium"
+                onClick={() => setIsOpen(false)}
+              >
+                Case Studies
+              </Link>
+              <Link
+                to="/contact"
+                className="block text-gray-300 hover:text-cyan-400 transition-colors font-medium"
+                onClick={() => setIsOpen(false)}
+              >
+                Contact
+              </Link>
+              
+              {/* Mobile CTA */}
+              <Link
+                to="/contact"
+                className="block bg-cyan-600 hover:bg-cyan-700 text-white px-6 py-3 rounded-lg font-medium transition-colors text-center mt-4"
+                onClick={() => setIsOpen(false)}
+              >
+                Get Started
               </Link>
             </div>
           </div>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-deb0
         )}
       </div>
     </nav>

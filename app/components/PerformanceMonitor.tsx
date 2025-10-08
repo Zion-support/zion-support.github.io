@@ -369,7 +369,7 @@ const PerformanceMonitor: React.FC = () => {
     return () => {
       clearInterval(interval);
     };
-  }, []);
+  }, [enabled, collectPerformanceMetrics]);
 
   return null; // This component doesn't render anything
 };

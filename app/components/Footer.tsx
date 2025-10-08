@@ -304,8 +304,7 @@ const Footer: React.FC = () => {
 <<<<<<< HEAD
           {/* Contact */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Contact</h4>
->>>>>>> cursor/fix-errors-and-merge-to-main-deb0
+            <h4 className="text-lg font-semibold mb-4">Contact Info</h4>
             <div className="space-y-3">
 =======
             
@@ -325,8 +324,8 @@ const Footer: React.FC = () => {
                 </a>
               </div>
               <div className="flex items-center">
-                <MapPin className="w-5 h-5 mr-3 text-blue-400" />
-                <span className="text-gray-300">364 E Main St STE 1008, Middletown DE 19709</span>
+                <Clock className="w-5 h-5 text-cyan-400 mr-3" />
+                <span className="text-gray-300">Mon-Fri 9AM-6PM PST</span>
               </div>
               <div className="flex items-center">
                 <Clock className="w-5 h-5 mr-3 text-blue-400" />
@@ -610,7 +609,6 @@ const Footer: React.FC = () => {
             </div>
           </div>
         </div>
-      </div>
 
       {/* Bottom Footer */}
       <div className="border-t border-gray-800 bg-gray-950">

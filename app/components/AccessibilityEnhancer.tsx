@@ -175,53 +175,67 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       .skip-link {
         position: absolute;
         top: -40px;
-        left: 0;
-        background: #3B82F6;
-        color: white;
-        padding: 8px 16px;
+        left: 6px;
+        background: #000;
+        color: #fff;
+        padding: 8px;
         text-decoration: none;
-        z-index: 100;
-        font-weight: 600;
-        border-radius: 0 0 4px 0;
-      }
+        z-index: 1000;
+        border-radius: 4px;
+        transition: top 0.3s;
+      `;
+      
+      skipLink.addEventListener('focus', () => {
+        skipLink.style.top = '6px';
+      });
+      
+      skipLink.addEventListener('blur', () => {
+        skipLink.style.top = '-40px';
+      });
+      
+      document.body.insertBefore(skipLink, document.body.firstChild);
+    }
 
-      .skip-link:focus {
-        top: 0;
-      }
-
-      /* High contrast mode support */
-      @media (prefers-contrast: high) {
-        * {
-          border-width: 2px !important;
+    if (enableKeyboardNav) {
+      // Add keyboard navigation enhancements
+      const handleKeyDown = (e: KeyboardEvent) => {
+        // Skip to main content with Alt + M
+        if (e.altKey && e.key === 'm') {
+          e.preventDefault();
+          const mainContent = document.getElementById('main-content');
+          if (mainContent) {
+            mainContent.focus();
+            mainContent.scrollIntoView({ behavior: 'smooth' });
+          }
         }
-      }
+      };
 
-      /* Reduced motion support */
-      @media (prefers-reduced-motion: reduce) {
-        *,
-        *::before,
-        *::after {
-          animation-duration: 0.01ms !important;
-          animation-iteration-count: 1 !important;
-          transition-duration: 0.01ms !important;
-          scroll-behavior: auto !important;
-        }
-      }
+      document.addEventListener('keydown', handleKeyDown);
+      return () => document.removeEventListener('keydown', handleKeyDown);
+    }
+  }, [enableSkipLinks, enableKeyboardNav]);
 
-      /* Focus visible polyfill */
-      *:focus:not(:focus-visible) {
-        outline: none;
-      }
+  useEffect(() => {
+    // Apply accessibility styles based on preferences
+    const root = document.documentElement;
+    
+    if (isReducedMotion) {
+      root.style.setProperty('--animation-duration', '0.01ms');
+      root.style.setProperty('--animation-iteration-count', '1');
+    } else {
+      root.style.removeProperty('--animation-duration');
+      root.style.removeProperty('--animation-iteration-count');
+    }
 
-      *:focus-visible {
-        outline: 3px solid #3B82F6;
-        outline-offset: 2px;
-      }
-    `;
-    document.head.appendChild(style);
+    if (isHighContrast) {
+      root.classList.add('high-contrast');
+    } else {
+      root.classList.remove('high-contrast');
+    }
 
-    document.addEventListener('focusin', handleFocusIn);
-    document.addEventListener('focusout', handleFocusOut);
+    // Apply font size scaling
+    root.style.setProperty('--base-font-size', `${fontSize}px`);
+  }, [isReducedMotion, isHighContrast, fontSize]);
 
     return () => {
       document.removeEventListener('focusin', handleFocusIn);
@@ -271,7 +285,65 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   }, []);
 >>>>>>> cursor/fix-errors-and-merge-to-main-bd1c
 
-  return <>{children}</>;
+  // Expose utility functions to children via context if needed
+  const accessibilityUtils = {
+    announceToScreenReader,
+    isReducedMotion,
+    isHighContrast,
+    fontSize,
+  };
+
+  return (
+    <div 
+      className="accessibility-enhanced"
+      style={{
+        '--reduced-motion': isReducedMotion ? 'reduce' : 'auto',
+        '--high-contrast': isHighContrast ? 'high' : 'normal',
+      } as React.CSSProperties}
+    >
+      {children}
+      <style>{`
+        .accessibility-enhanced {
+          --animation-duration: var(--reduced-motion) === 'reduce' ? '0.01ms' : 'normal';
+          --animation-iteration-count: var(--reduced-motion) === 'reduce' ? '1' : 'infinite';
+        }
+        
+        .high-contrast {
+          filter: contrast(150%) brightness(120%);
+        }
+        
+        .skip-link:focus {
+          top: 6px !important;
+        }
+        
+        .sr-only {
+          position: absolute;
+          width: 1px;
+          height: 1px;
+          padding: 0;
+          margin: -1px;
+          overflow: hidden;
+          clip: rect(0, 0, 0, 0);
+          white-space: nowrap;
+          border: 0;
+        }
+        
+        @media (prefers-reduced-motion: reduce) {
+          * {
+            animation-duration: 0.01ms !important;
+            animation-iteration-count: 1 !important;
+            transition-duration: 0.01ms !important;
+          }
+        }
+        
+        @media (prefers-contrast: high) {
+          .high-contrast {
+            filter: contrast(200%) brightness(150%);
+          }
+        }
+      `}</style>
+    </div>
+  );
 };
 
 export default AccessibilityEnhancer;
