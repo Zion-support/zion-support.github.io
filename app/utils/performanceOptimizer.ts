@@ -24,6 +24,7 @@ interface PerformanceMetrics {
   cls?: number;
   fmp?: number;
   ttfb?: number;
+  memory?: number;
 }
 
 interface OptimizationConfig {
@@ -93,107 +94,12 @@ class PerformanceOptimizer {
       console.warn('Performance monitoring initialization failed:', error)
     }
   }
-  private observeLCP() {
-    try {
-      const observer = new PerformanceObserver((list) => {
-        const entries = list.getEntries()
-        const lastEntry = entries[entries.length - 1]
-        this.metrics.lcp = lastEntry.startTime
-      })
-      observer.observe({ entryTypes: ['largest-contentful-paint'] })
-      this.observers.push(observer)
-    } catch {
-      // Ignore if not supported
-    }
-  }
-  private observeFID() {
-    try {
-      const observer = new PerformanceObserver((list) => {
-        const entries = list.getEntries()
-        entries.forEach((entry: PerformanceEntry) => {
-          const fidEntry = entry as PerformanceEntry & { processingStart: number }
-          this.metrics.fid = fidEntry.processingStart - fidEntry.startTime
-        })
-      })
-      observer.observe({ entryTypes: ['first-input'] })
-      this.observers.push(observer)
-    } catch {
-      // Ignore if not supported
-    }
-  }
-  private observeCLS() {
-    try {
-      let clsValue = 0
-      const observer = new PerformanceObserver((list) => {
-        const entries = list.getEntries()
-        entries.forEach((entry: PerformanceEntry) => {
-          const clsEntry = entry as PerformanceEntry & { hadRecentInput?: boolean; value: number }
-          if (!clsEntry.hadRecentInput) {
-            clsValue += clsEntry.value
-          }
-        })
-        this.metrics.cls = clsValue
-      })
-      observer.observe({ entryTypes: ['layout-shift'] })
-      this.observers.push(observer)
-    } catch {
-      // Ignore if not supported
-    }
-  }
-  private observeFCP() {
-    try {
-      const observer = new PerformanceObserver((list) => {
-        const entries = list.getEntries()
-        entries.forEach((entry) => {
-          if (entry.name === 'first-contentful-paint') {
-            this.metrics.fcp = entry.startTime
-          }
-        })
-      })
-      observer.observe({ entryTypes: ['paint'] })
-      this.observers.push(observer)
-    } catch {
-      // Ignore if not supported
-    }
-  }
-  private observeTTFB() {
-    try {
-      const observer = new PerformanceObserver((list) => {
-        const entries = list.getEntries()
-        entries.forEach((entry: PerformanceEntry) => {
-          const navEntry = entry as PerformanceEntry & { responseStart: number; requestStart: number }
-          if (navEntry.responseStart > 0) {
-            this.metrics.ttfb = navEntry.responseStart - navEntry.requestStart
-
-          }
-        })
-      })
-      observer.observe({ entryTypes: ['navigation'] })
-      this.observers.push(observer)
-    } catch {
-    } catch {
-    } catch {
-      // Ignore if not supported
-    }
-  }
-  private observeMemory() {
-    if ('memory' in performance) {
-      const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; jsHeapSizeLimit: number } }).memory
-      if (memory) {
-        this.metrics.memory = memory.usedJSHeapSize / memory.jsHeapSizeLimit
-      }
-    }
-  }
-  lazyLoadImages() {
-    if (typeof window === 'undefined') return
-
-    const images = document.querySelectorAll('img[data-src]')
 
   /**
-   * Measure render time
+   * Measure render time using PerformanceObserver
    */
   private measureRenderTime(): void {
-    if (typeof window === 'undefined' || !window.performance) return;
+    if (typeof window === 'undefined') return;
     
     // Check if PerformanceObserver exists (may not be available in test environments)
     if (typeof PerformanceObserver === 'undefined') return;
@@ -209,6 +115,7 @@ class PerformanceOptimizer {
       });
 
       observer.observe({ entryTypes: ['measure'] });
+      this.observers.push(observer);
     } catch (error) {
       // PerformanceObserver may not support 'measure' entryType in some environments
     }
@@ -297,72 +204,47 @@ class PerformanceOptimizer {
   /**
    * Observe Cumulative Layout Shift (CLS)
    */
-  private observeCLS(): void {
-    if (typeof window === 'undefined') return;
-    
-    try {
-      const observer = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
-          console.log('CLS:', entry);
-        }
-      });
-      observer.observe({ entryTypes: ['layout-shift'] });
-    } catch (error) {
-      console.error('Failed to observe CLS:', error);
-    }
+  cleanup(): void {
+    this.observers.forEach(observer => observer.disconnect());
+    this.observers = [];
+    this.isMonitoring = false;
   }
 
   /**
-   * Observe First Contentful Paint (FCP)
+   * Generate comprehensive performance report
    */
-  private observeFCP(): void {
-    if (typeof window === 'undefined') return;
-    
-    try {
-      const observer = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
-          console.log('FCP:', entry);
-        }
-      });
-      observer.observe({ entryTypes: ['paint'] });
-    } catch (error) {
-      console.error('Failed to observe FCP:', error);
-    }
+  generateComprehensiveReport(): string {
+    const score = this.getPerformanceScore();
+    const metrics = this.getMetrics();
+
+    return `
+Performance Report - Zion Tech Group Website
+==========================================
+Performance Score: ${score}/100
+Load Time: ${metrics.loadTime.toFixed(2)}ms
+Render Time: ${metrics.renderTime.toFixed(2)}ms
+Memory Usage: ${(metrics.memoryUsage / 1024 / 1024).toFixed(2)}MB
+Bundle Size: ${metrics.bundleSize}KB
+Cache Hit Rate: ${metrics.cacheHitRate}%
+
+Recommendations:
+${score < 80 ? '- Consider optimizing images and enabling compression' : ''}
+${metrics.loadTime > 2000 ? '- Implement lazy loading for better initial load time' : ''}
+${metrics.memoryUsage > 30 * 1024 * 1024 ? '- Review memory usage and optimize components' : ''}
+    `.trim();
   }
 
   /**
-   * Observe Time to First Byte (TTFB)
+   * Optimize the entire application
    */
-  private observeTTFB(): void {
-    if (typeof window === 'undefined') return;
+  optimize(): void {
+    this.optimizeImages();
+    this.enableCodeSplitting();
+    this.enableCaching();
     
-    try {
-      const observer = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
-          if (entry.entryType === 'navigation') {
-            console.log('TTFB:', entry);
-          }
-        }
-      });
-      observer.observe({ entryTypes: ['navigation'] });
-    } catch (error) {
-      console.error('Failed to observe TTFB:', error);
-    }
-  }
-
-  /**
-   * Observe memory usage
-   */
-  private observeMemory(): void {
-    if (typeof window === 'undefined') return;
-    
-    if ('memory' in performance) {
-      const memory = (performance as any).memory;
-      console.log('Memory usage:', {
-        used: memory.usedJSHeapSize,
-        total: memory.totalJSHeapSize,
-        limit: memory.jsHeapSizeLimit
-      });
+    if (process.env.NODE_ENV === 'development') { 
+      console.log('Performance optimization completed'); 
+      console.log(this.generateComprehensiveReport()); 
     }
   }
 }
