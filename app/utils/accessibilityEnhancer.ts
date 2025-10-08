@@ -677,18 +677,8 @@ class AccessibilityEnhancer {
     const metrics = this.getMetrics();
     
     return `
-Accessibility Report:
-
-- Focus Traps: ${metrics.focusTraps}
-- ARIA Issues: ${metrics.ariaIssues}
-- Keyboard Issues: ${metrics.keyboardIssues}
-- Color Contrast Issues: ${metrics.colorContrastIssues}
-- Alt Text Missing: ${metrics.altTextMissing}
-- Heading Structure Issues: ${metrics.headingStructureIssues}
-- Link Text Issues: ${metrics.linkTextIssues}
-- Form Label Issues: ${metrics.formLabelIssues}
-- Language Issues: ${metrics.languageIssues}
-- Semantic Issues: ${metrics.semanticIssues}
-    `;
+Accessibility Report:`;
   }
 }
+
+export const accessibilityEnhancer = AccessibilityEnhancer.getInstance();
