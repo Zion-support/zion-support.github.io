@@ -262,8 +262,8 @@ class HealthCheckService {
 
       if (retrieved !== testValue) {
         return {
-          name: 'storage'
-          status: 'fail'
+          name: 'storage',
+          status: 'fail',
           message: 'LocalStorage not working correctly'
         }
       }

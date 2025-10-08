@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { ArrowLeft, TrendingUp, Users, DollarSign, Target, CheckCircle } from 'lucide-react';
+import { ArrowLeft, TrendingUp, CheckCircle } from 'lucide-react';
 
 const CaseStudiesPage: React.FC = () => {
   const caseStudies = [

@@ -19,7 +19,6 @@ interface ContentPreviewCardProps {
 }
 
 const ContentPreviewCard: React.FC<ContentPreviewCardProps> = ({
-  id,
   title,
   description,
   category,
