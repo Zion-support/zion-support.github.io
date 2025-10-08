@@ -1,4 +1,3 @@
-import React from 'react';
 interface PerformanceMetrics {
   lcp?: number;
   fid?: number;
@@ -74,15 +73,7 @@ class PerformanceOptimizer {
     if ('measure' in performance && 'mark' in performance) {
       try {
         performance.measure(`${markName}-duration`, markName);
-<<<<<<< HEAD
-<<<<<<< HEAD
-      } catch (error) {
-=======
       } catch {
->>>>>>> cursor/fix-errors-and-merge-to-main-fbf5
-=======
-      } catch {
->>>>>>> cursor/fix-errors-and-merge-to-main-5c5e
         // Ignore measure errors
       }
     }
@@ -115,15 +106,7 @@ class PerformanceOptimizer {
       });
       observer.observe({ entryTypes: ['largest-contentful-paint'] });
       this.observers.push(observer);
-<<<<<<< HEAD
-<<<<<<< HEAD
-    } catch (error) {
-=======
     } catch {
->>>>>>> cursor/fix-errors-and-merge-to-main-fbf5
-=======
-    } catch {
->>>>>>> cursor/fix-errors-and-merge-to-main-5c5e
       // Ignore if not supported
     }
   }
@@ -132,29 +115,14 @@ class PerformanceOptimizer {
     try {
       const observer = new PerformanceObserver((list) => {
         const entries = list.getEntries();
-<<<<<<< HEAD
-        entries.forEach((entry) => {
-          if ('processingStart' in entry && 'startTime' in entry) {
-            this.metrics.fid = (entry as { processingStart: number; startTime: number }).processingStart - entry.startTime;
-          }
-=======
         entries.forEach((entry: PerformanceEntry) => {
           const fidEntry = entry as PerformanceEntry & { processingStart: number };
           this.metrics.fid = fidEntry.processingStart - fidEntry.startTime;
->>>>>>> cursor/fix-errors-and-merge-to-main-5c5e
         });
       });
       observer.observe({ entryTypes: ['first-input'] });
       this.observers.push(observer);
-<<<<<<< HEAD
-<<<<<<< HEAD
-    } catch (error) {
-=======
     } catch {
->>>>>>> cursor/fix-errors-and-merge-to-main-fbf5
-=======
-    } catch {
->>>>>>> cursor/fix-errors-and-merge-to-main-5c5e
       // Ignore if not supported
     }
   }
@@ -164,34 +132,17 @@ class PerformanceOptimizer {
       let clsValue = 0;
       const observer = new PerformanceObserver((list) => {
         const entries = list.getEntries();
-<<<<<<< HEAD
-        entries.forEach((entry) => {
-          if ('hadRecentInput' in entry && 'value' in entry) {
-            const clsEntry = entry as { hadRecentInput: boolean; value: number };
-            if (!clsEntry.hadRecentInput) {
-              clsValue += clsEntry.value;
-            }
-=======
         entries.forEach((entry: PerformanceEntry) => {
           const clsEntry = entry as PerformanceEntry & { hadRecentInput?: boolean; value: number };
           if (!clsEntry.hadRecentInput) {
             clsValue += clsEntry.value;
->>>>>>> cursor/fix-errors-and-merge-to-main-5c5e
           }
         });
         this.metrics.cls = clsValue;
       });
       observer.observe({ entryTypes: ['layout-shift'] });
       this.observers.push(observer);
-<<<<<<< HEAD
-<<<<<<< HEAD
-    } catch (error) {
-=======
     } catch {
->>>>>>> cursor/fix-errors-and-merge-to-main-fbf5
-=======
-    } catch {
->>>>>>> cursor/fix-errors-and-merge-to-main-5c5e
       // Ignore if not supported
     }
   }
@@ -208,15 +159,7 @@ class PerformanceOptimizer {
       });
       observer.observe({ entryTypes: ['paint'] });
       this.observers.push(observer);
-<<<<<<< HEAD
-<<<<<<< HEAD
-    } catch (error) {
-=======
     } catch {
->>>>>>> cursor/fix-errors-and-merge-to-main-fbf5
-=======
-    } catch {
->>>>>>> cursor/fix-errors-and-merge-to-main-5c5e
       // Ignore if not supported
     }
   }
@@ -225,48 +168,26 @@ class PerformanceOptimizer {
     try {
       const observer = new PerformanceObserver((list) => {
         const entries = list.getEntries();
-<<<<<<< HEAD
-        entries.forEach((entry) => {
-          if ('responseStart' in entry && 'requestStart' in entry) {
-            const navEntry = entry as { responseStart: number; requestStart: number };
-            if (navEntry.responseStart > 0) {
-              this.metrics.ttfb = navEntry.responseStart - navEntry.requestStart;
-            }
-=======
         entries.forEach((entry: PerformanceEntry) => {
           const navEntry = entry as PerformanceEntry & { responseStart: number; requestStart: number };
           if (navEntry.responseStart > 0) {
             this.metrics.ttfb = navEntry.responseStart - navEntry.requestStart;
->>>>>>> cursor/fix-errors-and-merge-to-main-5c5e
           }
         });
       });
       observer.observe({ entryTypes: ['navigation'] });
       this.observers.push(observer);
-<<<<<<< HEAD
-<<<<<<< HEAD
-    } catch (error) {
-=======
     } catch {
->>>>>>> cursor/fix-errors-and-merge-to-main-fbf5
-=======
-    } catch {
->>>>>>> cursor/fix-errors-and-merge-to-main-5c5e
       // Ignore if not supported
     }
   }
 
   private observeMemory() {
     if ('memory' in performance) {
-<<<<<<< HEAD
-      const memory = (performance as { memory: { usedJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
-      this.metrics.memory = memory.usedJSHeapSize / memory.jsHeapSizeLimit;
-=======
       const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
       if (memory) {
         this.metrics.memory = memory.usedJSHeapSize / memory.jsHeapSizeLimit;
       }
->>>>>>> cursor/fix-errors-and-merge-to-main-5c5e
     }
   }
 
