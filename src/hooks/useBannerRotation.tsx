@@ -91,7 +91,7 @@ export const useBannerRotation = (options: UseBannerRotationOptions = {}) => {
       
       setState(prev => ({
         ...prev,
-        currentBanners: selected,
+        currentBanners: selected as BannerConfig[],
         isLoading: false
       }));
     } catch (error) {
