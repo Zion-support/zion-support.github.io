@@ -101,8 +101,7 @@ class Analytics {
    */
   private async sendToAnalytics(event: AnalyticsEvent): Promise<void> {
     // Implementation for sending to this service
-    //     console.log('Analytics event:', event);
-  }
+    //     }
 
   /**
    * Get all events
