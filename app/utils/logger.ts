@@ -139,6 +139,35 @@ class Logger {
   }
 
   /**
+   * Log performance metrics
+   */
+  perf(metric: string, value: number, metadata?: Record<string, unknown>): void {
+    this.info(`Performance: ${metric} = ${value}ms`, 'Performance', {
+      metric,
+      value,
+      ...metadata,
+    });
+  }
+
+  /**
+   * Create a console group for organized logging
+   */
+  group(label: string): void {
+    if (this.config.enableConsole && typeof console.group === 'function') {
+      console.group(label);
+    }
+  }
+
+  /**
+   * End a console group
+   */
+  groupEnd(): void {
+    if (this.config.enableConsole && typeof console.groupEnd === 'function') {
+      console.groupEnd();
+    }
+  }
+
+  /**
    * Flush buffered logs to remote endpoint
    */
   async flush(): Promise<void> {
@@ -319,6 +348,10 @@ class ContextLogger {
 
   fatal(message: string, error?: Error, metadata?: Record<string, unknown>): void {
     this.logger.fatal(message, error, this.context, metadata);
+  }
+
+  perf(metric: string, value: number, metadata?: Record<string, unknown>): void {
+    this.logger.perf(metric, value, metadata);
   }
 
   child(subContext: string): ContextLogger {
