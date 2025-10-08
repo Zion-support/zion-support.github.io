@@ -110,11 +110,7 @@ class MonitoringService {
           }
         });
         longTaskObserver.observe({ entryTypes: ['longtask'] });
-<<<<<<< HEAD
-      } catch {
-=======
       } catch (_error) {
->>>>>>> ed7467ed40e8856a41888367f5ba34d233491f61
         // Long task API might not be available
       }
     }

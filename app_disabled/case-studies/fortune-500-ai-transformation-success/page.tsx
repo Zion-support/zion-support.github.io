@@ -18,7 +18,7 @@ export default function Fortune500AITransformationSuccess() {
       {/* Header */}
       <header className="border-b border-gray-200 bg-white sticky top-0 z-50">
         <div className="max-w-4xl mx-auto px-4 py-4">
-          <ArrowRight 
+          <Link 
             href="/" 
             className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium"
           >
@@ -523,7 +523,7 @@ export default function Fortune500AITransformationSuccess() {
               to achieve similar results for your organization.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <ArrowRight 
+              <Link 
                 href="/guides/ai-2026-implementation-roadmap"
                 className="bg-white text-orange-600 px-8 py-4 rounded-full font-bold hover:bg-gray-100 transition-colors"
               >
