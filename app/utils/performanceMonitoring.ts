@@ -447,7 +447,8 @@ export const getPerformanceScore = (): number => {
     }
   });
   
-  return Math.round(scores.reduce((a, b) => a + b, 0) / scores.length);
+  const sum = scores.reduce((a: number, b: number) => a + b, 0);
+  return Math.round(sum / scores.length);
 };
 
 export const getRecommendations = (): string[] => {
