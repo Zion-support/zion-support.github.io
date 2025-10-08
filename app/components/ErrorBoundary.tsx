@@ -64,10 +64,14 @@ class ErrorBoundary extends Component<Props, State> {
       }
 
       return (
-              </div>
-              <h1 className="text-2xl font-bold text-gray-900 mb-2">
-                Oops! Something went wrong
-              </h1>
+        <div className="min-h-screen flex items-center justify-center bg-gray-50 p-4">
+          <div className="max-w-md w-full bg-white rounded-lg shadow-xl p-8 text-center">
+            <div className="flex justify-center mb-4">
+              <FileWarning className="w-16 h-16 text-red-600" />
+            </div>
+            <h1 className="text-2xl font-bold text-gray-900 mb-2">
+              Oops! Something went wrong
+            </h1>
               <p className="text-gray-600 mb-6">
                 We&apos;re sorry for the inconvenience. Please try refreshing the page.
               </p>
