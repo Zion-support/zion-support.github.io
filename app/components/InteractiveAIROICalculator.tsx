@@ -1,5 +1,3 @@
-'use client';
-
 import React, { useState } from 'react';
 
 const InteractiveAIROICalculator: React.FC = () => {
@@ -76,9 +74,6 @@ const InteractiveAIROICalculator: React.FC = () => {
                 <div className='text-6xl font-bold text-blue-600 mb-4'>
                   {roi.toFixed(0)}%
                 </div>
-                <p className='text-gray-600 text-lg'>
-                  Based on your current cost and expected efficiency gains
-                </p>
               </div>
             </div>
           </div>
@@ -89,3 +84,4 @@ const InteractiveAIROICalculator: React.FC = () => {
 };
 
 export default InteractiveAIROICalculator;
+

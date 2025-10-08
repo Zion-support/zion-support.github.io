@@ -1,4 +1,3 @@
-'use client';
 
 import React, { useState } from 'react';
 
@@ -65,7 +64,7 @@ const InteractiveContentShowcase2026: React.FC = () => {
               <h3 className='text-2xl font-bold text-gray-900 mb-4'>
                 {tabs[activeTab].title}
               </h3>
-              <p className='text-gray-600 text-lg'>
+              <p className='text-lg text-gray-600'>
                 {tabs[activeTab].content}
               </p>
             </div>
@@ -77,3 +76,4 @@ const InteractiveContentShowcase2026: React.FC = () => {
 };
 
 export default InteractiveContentShowcase2026;
+
