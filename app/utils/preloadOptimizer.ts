@@ -22,8 +22,8 @@ export const preloadCriticalResources = () => {
 
   // Preload critical images
   const criticalImages = [
-    '/images/hero-bg.jpg'
-    '/images/logo.png'
+    '/images/hero-bg.jpg',
+    '/images/logo.png',
     '/images/favicon.ico'
   ]
 

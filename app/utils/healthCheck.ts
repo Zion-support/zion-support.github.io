@@ -91,6 +91,11 @@ class HealthCheckService {
           duration
         })
 
+<<<<<<< HEAD
+=======
+      } catch {
+        logger.error(`Health check "${name}" failed`, error as Error)
+>>>>>>> cursor/fix-errors-and-merge-to-main-a0f3
       } catch (error) {
         logger.error(`Health check "${name}" failed`, error as Error)
 
