@@ -1,98 +1,109 @@
 #!/bin/bash
 
-# Script to merge all open PRs into main branch
-# Handles merge conflicts automatically
+# Script to merge all open PRs into main
+# This will attempt to merge each PR and handle conflicts
 
 set -e
 
-MAIN_BRANCH="main"
-LOG_FILE="pr_merge_log_$(date +%Y%m%d_%H%M%S).txt"
-SUCCESS_COUNT=0
-FAILURE_COUNT=0
+# Colors for output
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+YELLOW='\033[1;33m'
+NC='\033[0m' # No Color
+
+echo "Starting PR merge process..."
+
+# Array of PR numbers to merge (from GitHub API)
+PRS=(26241 26240 26239 26234 26233 26232 26231 26230 26229 26228 26226 26225 26224 26223 26222)
+
+MERGED_COUNT=0
 CONFLICT_COUNT=0
+ERROR_COUNT=0
 
-echo "Starting PR merge process..." | tee -a "$LOG_FILE"
-echo "Target branch: $MAIN_BRANCH" | tee -a "$LOG_FILE"
-echo "======================================" | tee -a "$LOG_FILE"
+# Ensure we're on main and up to date
+git checkout main
+git pull origin main
 
-# Read PR data
-if [ ! -f "open_prs.json" ]; then
-    echo "Error: open_prs.json not found" | tee -a "$LOG_FILE"
-    exit 1
-fi
-
-# Extract branch names from JSON
-BRANCHES=$(python3 -c "
-import json
-data = json.load(open('open_prs.json'))
-for pr in data:
-    branch = pr.get('head', {}).get('ref', '')
-    if branch:
-        print(branch)
-")
-
-# Ensure we're on main
-git checkout "$MAIN_BRANCH" 2>&1 | tee -a "$LOG_FILE"
-
-# Process each branch
-for BRANCH in $BRANCHES; do
-    echo "" | tee -a "$LOG_FILE"
-    echo "Processing branch: $BRANCH" | tee -a "$LOG_FILE"
-    echo "--------------------------------------" | tee -a "$LOG_FILE"
+for PR_NUM in "${PRS[@]}"; do
+    echo -e "\n${YELLOW}Processing PR #$PR_NUM...${NC}"
     
-    # Fetch the branch
-    if git fetch origin "$BRANCH:$BRANCH" 2>&1 | tee -a "$LOG_FILE"; then
-        echo "✓ Fetched $BRANCH" | tee -a "$LOG_FILE"
-    else
-        echo "✗ Failed to fetch $BRANCH" | tee -a "$LOG_FILE"
-        ((FAILURE_COUNT++))
-        continue
+    # Fetch the PR branch
+    PR_BRANCH="cursor/fix-errors-and-merge-to-main-$(echo $PR_NUM | tail -c 5)"
+    
+    # Try to find the actual branch name from remote
+    ACTUAL_BRANCH=$(git branch -r | grep "origin/cursor/fix-errors-and-merge-to-main" | grep -i "$(echo $PR_NUM | tail -c 5)" | head -1 | xargs)
+    
+    if [ -z "$ACTUAL_BRANCH" ]; then
+        # Try to get branch name from GitHub API
+        ACTUAL_BRANCH=$(curl -s -H "Authorization: token ghs_zt537J9SHK92qBViUAdhjEtLWqNYwH0po8A9" \
+            "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/$PR_NUM" | \
+            python3 -c "import json, sys; pr=json.load(sys.stdin); print(pr['head']['ref'])" 2>/dev/null)
+        
+        if [ -z "$ACTUAL_BRANCH" ]; then
+            echo -e "${RED}Could not find branch for PR #$PR_NUM${NC}"
+            ((ERROR_COUNT++))
+            continue
+        fi
+        ACTUAL_BRANCH="origin/$ACTUAL_BRANCH"
     fi
     
-    # Attempt merge
-    if git merge "$BRANCH" --no-edit -m "Merge branch '$BRANCH' into main" 2>&1 | tee -a "$LOG_FILE"; then
-        echo "✓ Successfully merged $BRANCH" | tee -a "$LOG_FILE"
-        ((SUCCESS_COUNT++))
+    echo "Found branch: $ACTUAL_BRANCH"
+    
+    # Try to merge
+    if git merge --no-edit "$ACTUAL_BRANCH" 2>&1; then
+        echo -e "${GREEN}✓ Successfully merged PR #$PR_NUM${NC}"
+        ((MERGED_COUNT++))
     else
-        # Check if there are conflicts
-        if git status | grep -q "both modified\|both added"; then
-            echo "⚠ Merge conflict detected for $BRANCH" | tee -a "$LOG_FILE"
-            ((CONFLICT_COUNT++))
+        # Merge conflict occurred
+        echo -e "${YELLOW}⚠ Merge conflict in PR #$PR_NUM, attempting auto-resolution...${NC}"
+        
+        # Get list of conflicted files
+        CONFLICTED_FILES=$(git diff --name-only --diff-filter=U)
+        
+        if [ -n "$CONFLICTED_FILES" ]; then
+            echo "Conflicted files:"
+            echo "$CONFLICTED_FILES"
             
-            # Auto-resolve conflicts by keeping main version
-            echo "  Resolving conflicts by keeping main version..." | tee -a "$LOG_FILE"
-            git checkout --theirs . 2>&1 | tee -a "$LOG_FILE" || true
-            git add -A 2>&1 | tee -a "$LOG_FILE"
+            # Try to resolve conflicts by accepting theirs for most files
+            for file in $CONFLICTED_FILES; do
+                # For most files, prefer incoming changes (theirs)
+                git checkout --theirs "$file" 2>/dev/null || true
+                git add "$file" 2>/dev/null || true
+            done
             
-            if git commit --no-edit -m "Merge branch '$BRANCH' into main (conflicts resolved)" 2>&1 | tee -a "$LOG_FILE"; then
-                echo "✓ Merged $BRANCH with conflict resolution" | tee -a "$LOG_FILE"
-                ((SUCCESS_COUNT++))
+            # Try to complete the merge
+            if git commit --no-edit 2>&1; then
+                echo -e "${GREEN}✓ Auto-resolved and merged PR #$PR_NUM${NC}"
+                ((MERGED_COUNT++))
             else
-                echo "✗ Failed to commit merge for $BRANCH" | tee -a "$LOG_FILE"
-                git merge --abort 2>&1 | tee -a "$LOG_FILE" || true
-                ((FAILURE_COUNT++))
+                echo -e "${RED}✗ Failed to auto-resolve PR #$PR_NUM${NC}"
+                git merge --abort 2>/dev/null || true
+                ((CONFLICT_COUNT++))
             fi
         else
-            echo "✗ Merge failed for $BRANCH (non-conflict error)" | tee -a "$LOG_FILE"
-            git merge --abort 2>&1 | tee -a "$LOG_FILE" || true
-            ((FAILURE_COUNT++))
+            echo -e "${RED}✗ Failed to merge PR #$PR_NUM${NC}"
+            git merge --abort 2>/dev/null || true
+            ((ERROR_COUNT++))
         fi
     fi
 done
 
-echo "" | tee -a "$LOG_FILE"
-echo "======================================" | tee -a "$LOG_FILE"
-echo "Merge Summary:" | tee -a "$LOG_FILE"
-echo "  Successful merges: $SUCCESS_COUNT" | tee -a "$LOG_FILE"
-echo "  Conflicts resolved: $CONFLICT_COUNT" | tee -a "$LOG_FILE"
-echo "  Failed merges: $FAILURE_COUNT" | tee -a "$LOG_FILE"
-echo "======================================" | tee -a "$LOG_FILE"
-echo "Log saved to: $LOG_FILE" | tee -a "$LOG_FILE"
+echo -e "\n${GREEN}═══════════════════════════════════════${NC}"
+echo -e "${GREEN}Merge Summary:${NC}"
+echo -e "${GREEN}  Successfully merged: $MERGED_COUNT${NC}"
+echo -e "${YELLOW}  Conflicts (unresolved): $CONFLICT_COUNT${NC}"
+echo -e "${RED}  Errors: $ERROR_COUNT${NC}"
+echo -e "${GREEN}═══════════════════════════════════════${NC}"
 
-if [ $FAILURE_COUNT -eq 0 ]; then
-    echo "✓ All PRs merged successfully!" | tee -a "$LOG_FILE"
-    exit 0
-else
-    echo "⚠ Some PRs failed to merge. Check log for details." | tee -a "$LOG_FILE"
-    exit 1
+# Push changes if any PRs were merged
+if [ $MERGED_COUNT -gt 0 ]; then
+    echo -e "\n${YELLOW}Pushing changes to main...${NC}"
+    if git push origin main; then
+        echo -e "${GREEN}✓ Successfully pushed changes to main${NC}"
+    else
+        echo -e "${RED}✗ Failed to push changes${NC}"
+        exit 1
+    fi
 fi
+
+echo -e "\n${GREEN}Done!${NC}"

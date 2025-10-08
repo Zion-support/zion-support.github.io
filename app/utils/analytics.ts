@@ -161,7 +161,7 @@ class AnalyticsService {
   private hasGtag(): boolean {
     return (
       typeof window !== 'undefined' &&
-      typeof (window as any).gtag === 'function'
+      typeof window.gtag === 'function'
     );
   }
 
@@ -204,8 +204,8 @@ export const trackPageView = (path: string, title?: string) =>
   analytics.trackPageView(path, title);
 export const trackError = (error: Error, metadata?: Record<string, unknown>) =>
   analytics.trackError(error, metadata);
-export const trackPerformance = (metric: string, value: number) =>
-  analytics.trackPerformance(metric, value);
+export const trackPerformance = (metric: string, value: number, metadata?: Record<string, unknown>) =>
+  analytics.trackPerformance(metric, value, metadata);
 export const trackTiming = (
   category: string,
   variable: string,

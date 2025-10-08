@@ -17,7 +17,6 @@ export const bannerConfigurations: BannerConfig[] = [
   },
 ];
 
-export default bannerConfigurations;
 
 // Stub implementations for banner rotation functions
 export const selectBannersForDisplay = async (strategy: RotationStrategy = 'sequential', maxBanners: number = 3) => {
@@ -49,9 +48,11 @@ export const loadBannerStats = async () => {
 };
 
 export const getRefreshInterval = () => {
-  return 30000;
+  return 30000; // 30 seconds default
 };
 
 export const getRotationStrategy = (): RotationStrategy => {
   return 'sequential';
 };
+
+export default bannerConfigurations;

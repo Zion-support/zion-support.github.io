@@ -181,6 +181,44 @@ class Logger {
   }
 
   /**
+   * Log performance metrics
+   */
+  perf(metric: string, value: number, metadata?: Record<string, unknown>): void {
+    this.info(`Performance: ${metric} = ${value}ms`, 'Performance', {
+      metric,
+      value,
+      ...metadata,
+    });
+  }
+
+  /**
+   * Group related log messages
+   */
+  group(label: string, fn?: () => void): void {
+    if (this.config.enableConsole && typeof console.group === 'function') {
+      console.group(label);
+      if (fn) {
+        try {
+          fn();
+        } finally {
+          console.groupEnd();
+        }
+      }
+    } else if (fn) {
+      fn();
+    }
+  }
+
+  /**
+   * End a console group
+   */
+  groupEnd(): void {
+    if (this.config.enableConsole && typeof console.groupEnd === 'function') {
+      console.groupEnd();
+    }
+  }
+
+  /**
    * Create a child logger with a specific context
    */
   child(context: string): ContextLogger {
@@ -225,38 +263,6 @@ class Logger {
 
     if (this.config.enableRemote) {
       this.startFlushTimer();
-    }
-  }
-
-  /**
-   * Log a performance metric
-   */
-  perf(metric: string, value: number, metadata?: Record<string, unknown>): void {
-    this.log(LogLevel.INFO, `[PERF] ${metric}: ${value.toFixed(2)}ms`, undefined, metadata);
-  }
-
-  /**
-   * Start a console group
-   */
-  group(label: string, fn: () => void): void {
-    if (typeof console.group === 'function') {
-      console.group(label);
-    }
-    try {
-      fn();
-    } finally {
-      if (typeof console.groupEnd === 'function') {
-        console.groupEnd();
-      }
-    }
-  }
-
-  /**
-   * End a console group
-   */
-  groupEnd(): void {
-    if (typeof console.groupEnd === 'function') {
-      console.groupEnd();
     }
   }
 

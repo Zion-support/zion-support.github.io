@@ -20,11 +20,25 @@ export function mockPerformanceAPI() {
   }
 
   if (!window.performance.mark) {
-    window.performance.mark = (() => ({} as PerformanceMark)) as any;
+    window.performance.mark = ((name: string) => ({
+      name,
+      entryType: 'mark' as const,
+      startTime: Date.now(),
+      duration: 0,
+      toJSON: () => ({}),
+      detail: undefined,
+    })) as any;
   }
 
   if (!window.performance.measure) {
-    window.performance.measure = (() => ({} as PerformanceMeasure)) as any;
+    window.performance.measure = ((name: string) => ({
+      name,
+      entryType: 'measure' as const,
+      startTime: Date.now(),
+      duration: 0,
+      toJSON: () => ({}),
+      detail: undefined,
+    })) as any;
   }
 }
 
