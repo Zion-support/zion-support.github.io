@@ -73,7 +73,7 @@ export class PerformanceMonitor {
       const fidObserver = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           const fidEntry = entry as PerformanceEventTiming;
-//           const fid = fidEntry.processingStart - fidEntry.startTime;
+          const fid = fidEntry.processingStart - fidEntry.startTime;
           this.recordMetric('fid', fid);
         }
       });
@@ -138,7 +138,7 @@ export class PerformanceMonitor {
     const values = this.metrics.get(name);
     if (!values || values.length === 0) return 0;
     
-//     const sum = values.reduce((acc, val) => acc + val, 0);
+    const sum = values.reduce((acc, val) => acc + val, 0);
     return sum / values.length;
   }
   
@@ -194,7 +194,7 @@ export class PerformanceMonitor {
    * Get performance report
    */
   getReport(): PerformanceReport {
-//     const webVitals = this.getWebVitals();
+    const webVitals = this.getWebVitals();
     
     return {
       webVitals,
