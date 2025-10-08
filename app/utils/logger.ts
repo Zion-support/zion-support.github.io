@@ -173,25 +173,34 @@ class Logger {
    * Log a performance metric
    */
   perf(metric: string, value: number, metadata?: Record<string, unknown>): void {
-    this.info(`Performance: ${metric} = ${value}ms`, metadata);
+    this.log(LogLevel.DEBUG, `Performance: ${metric}`, 'Performance', {
+      ...metadata,
+      metric,
+      value,
+    });
   }
 
   /**
-   * Create a console group
+   * Group related log messages
    */
-  group(label: string, fn?: () => void): void {
-    if (this.config.enableConsole && typeof console.group === 'function') {
+  group(label: string, fn: () => void): void {
+    if (this.config.enableConsole) {
       console.group(label);
-      if (fn) {
-        try {
-          fn();
-        } finally {
-          console.groupEnd();
-        }
+      try {
+        fn();
+      } finally {
+        console.groupEnd();
       }
-    } else if (fn) {
+    } else {
       fn();
     }
+  }
+
+  /**
+   * Create a child logger with a specific context
+   */
+  child(context: string): ContextLogger {
+    return new ContextLogger(this, context);
   }
 
   /**
@@ -201,13 +210,6 @@ class Logger {
     if (this.config.enableConsole && typeof console.groupEnd === 'function') {
       console.groupEnd();
     }
-  }
-
-  /**
-   * Create a child logger with a specific context
-   */
-  child(context: string): ContextLogger {
-    return new ContextLogger(this, context);
   }
 
   /**
@@ -365,42 +367,6 @@ class Logger {
         return 'UNKNOWN';
     }
   }
-
-  /**
-   * Log performance metrics
-   */
-  perf(metric: string, value: number, metadata?: Record<string, unknown>): void {
-    this.log(LogLevel.INFO, `Performance: ${metric} = ${value}ms`, undefined, {
-      metric,
-      value,
-      ...metadata,
-    });
-  }
-
-  /**
-   * Group logs together
-   */
-  group(label: string, fn: () => void): void {
-    if (this.config.enableConsole && typeof console.group === 'function') {
-      console.group(label);
-    }
-    try {
-      fn();
-    } finally {
-      if (this.config.enableConsole && typeof console.groupEnd === 'function') {
-        console.groupEnd();
-      }
-    }
-  }
-
-  /**
-   * End a log group
-   */
-  groupEnd(): void {
-    if (this.config.enableConsole && typeof console.groupEnd === 'function') {
-      console.groupEnd();
-    }
-  }
 }
 
 /**
@@ -433,12 +399,8 @@ class ContextLogger {
     this.logger.perf(metric, value, { ...metadata, context: this.context });
   }
 
-  group(label: string): void {
-    this.logger.group(`${this.context}: ${label}`);
-  }
-
-  groupEnd(): void {
-    this.logger.groupEnd();
+  group(label: string, fn: () => void): void {
+    this.logger.group(`${this.context}: ${label}`, fn);
   }
 
   child(subContext: string): ContextLogger {
