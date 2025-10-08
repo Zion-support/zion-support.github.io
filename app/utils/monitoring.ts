@@ -178,6 +178,12 @@ class MonitoringService {
         event_category: 'Web Vitals',
         non_interaction: true,
       })
+    } else if (process.env.NODE_ENV === 'production') {
+      // Track in production analytics
+      console.log('Analytics:', {
+        value: Math.round(name === 'cls' ? value * 1000 : value),
+        event_category: 'Web Vitals'
+      });
     }
   }
   public logError(error: ErrorReport): void {
@@ -193,11 +199,7 @@ class MonitoringService {
     if (typeof gtag !== 'undefined') {
       gtag('event', 'exception', {
         description: error.message,
-<<<<<<< HEAD
-        fatal: false
-=======
         fatal: false,
->>>>>>> cursor/fix-errors-and-merge-to-main-1bbf
       })
     }
   }

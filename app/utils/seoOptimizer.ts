@@ -282,8 +282,16 @@ class SEOOptimizer {
         metric_value: Math.round(value),
         event_category: 'seo'
       })
+    } else {
+      // Track SEO metrics
+      console.log('SEO Metric:', {
+        metric_name: metric,
+        metric_value: Math.round(value),
+        event_category: 'seo'
+      });
     }
   }
+  
   /**
    * Generate sitemap data
    */
