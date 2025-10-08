@@ -1,6 +1,5 @@
 // Learn more: https://github.com/testing-library/jest-dom
 require('@testing-library/jest-dom');
-<<<<<<< HEAD
 =======
 const _React = require('react');
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-6395
@@ -50,10 +49,7 @@ jest.mock('./app/hooks/usePerformanceMonitoring.ts', () => ({
 jest.mock('react-router-dom', () => {
 <<<<<<< HEAD
   const actual = jest.requireActual('react-router-dom');
-  const mockReact = require('react');
-=======
-  const _actual = jest.requireActual('react-router-dom');
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-6395
+  const mockReact = require('react');origin/cursor/fix-errors-and-merge-to-main-6395
   return {
     ...actual,
     useNavigate: () => jest.fn(),

@@ -141,11 +141,7 @@ export default function AIFutureWorkforceBanner2026() {
                   className="inline-flex items-center text-white hover:text-yellow-200 transition-colors font-semibold"
                 >
                   Learn More About Workforce Transformation
-<<<<<<< HEAD
-                  <ArrowRight className="w-4 h-4 ml-2" />
-=======
-                  <Link className="w-4 h-4 ml-2" />
->>>>>>> 1d68394de6252bd8b85f69f386dad01902598b0b
+                  <ArrowRight className="w-4 h-4 ml-2" />1d68394de6252bd8b85f69f386dad01902598b0b
                 </Link>
               </div>
             </div>

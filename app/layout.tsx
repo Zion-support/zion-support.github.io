@@ -29,7 +29,11 @@ export default function RootLayout({
       'Cloud Services',
       'Automation',
       'Business Intelligence'
+<<<<<<< HEAD
     ],
+=======
+    ],cursor/analyze-improve-and-deploy-application-3d67
+>>>>>>> cursor/fix-errors-and-merge-to-main-a8ed
     contactPoint: {
       '@type': 'ContactPoint',
       telephone: '+1-302-600-9898',
@@ -45,7 +49,6 @@ export default function RootLayout({
       '@type': 'PostalAddress',
       addressCountry: 'US',
     },
-<<<<<<< HEAD
     offers: [
       {
         '@type': 'Offer',
@@ -111,14 +114,7 @@ export default function RootLayout({
             description: 'Cloud migration and infrastructure optimization services'
           }
         }
-      ]
-=======
-    offers: {
-      '@type': 'Offer',
-      category: 'AI and IT Services',
-      priceRange: '$1500-$5000+',
-      availability: 'https://schema.org/InStock'
->>>>>>> cursor/analyze-improve-and-deploy-application-3d67
+      ]cursor/analyze-improve-and-deploy-application-3d67
     }
   };
 
@@ -155,7 +151,6 @@ export default function RootLayout({
         <link rel='icon' type='image/png' sizes='16x16' href='/favicon-16x16.png' />
         <link rel='manifest' href='/site.webmanifest' />
         <meta name='theme-color' content='#4f46e5' />
-<<<<<<< HEAD
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <meta name='description' content='Zion Tech Group - Leading AI and technology solutions provider specializing in enterprise AI transformation, digital automation, cloud infrastructure, and cutting-edge technology services. Transform your business with our proven AI strategies.' />
         <meta name='keywords' content='AI solutions, enterprise AI transformation, digital automation, cloud services, AI consulting, machine learning, artificial intelligence, digital transformation, technology services, Zion Tech Group, AI implementation, enterprise architecture, cost optimization, autonomous systems' />
@@ -195,15 +190,7 @@ export default function RootLayout({
         <meta name='twitter:description' content='Transform your business with cutting-edge AI solutions and digital transformation services.' />
         <meta name='twitter:image' content='https://ziontechgroup.com/og-image.jpg' />
         <meta name='twitter:site' content='@ziontechgroup' />
-        <meta name='twitter:creator' content='@ziontechgroup' />
-=======
-        
-        {/* Preconnect to external domains */}
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        
-        {/* Structured Data */}
->>>>>>> cursor/analyze-improve-and-deploy-application-3d67
+        <meta name='twitter:creator' content='@ziontechgroup' />cursor/analyze-improve-and-deploy-application-3d67
         <script
           type='application/ld+json'
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
