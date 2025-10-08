@@ -67,17 +67,6 @@ export const metadata = {
 
 export default function OptimizedHomePage() {
   return (
-<<<<<<< HEAD
-    <main className="min-h-screen">
-      <SEOOptimizer />
-      <PerformanceMonitor />
-      <AccessibilityEnhancer>
-        <UnifiedBanner />
-        <ContentPromotion />
-        <ContentShowcase />
-      </AccessibilityEnhancer>
-    </main>
-=======
     <AccessibilityEnhancer>
       <div className="min-h-screen bg-white">
         <SEOOptimizer />
@@ -130,6 +119,5 @@ export default function OptimizedHomePage() {
         </main>
       </div>
     </AccessibilityEnhancer>
->>>>>>> origin/main
   );
 }
