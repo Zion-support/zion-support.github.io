@@ -135,6 +135,160 @@ const ITServicesPage: React.FC = () => {
       marketPrice: '$3,000-6,000/month',
       category: 'Backup & Recovery',
       technologies: ['Veeam', 'Commvault', 'AWS Backup', 'Azure Backup', 'VMware']
+    },
+    {
+      title: 'Enterprise Resource Planning (ERP)',
+      description: 'ERP system implementation, customization, and integration for business process optimization.',
+      icon: '📋',
+      price: 'Starting at $5,000/month',
+      features: ['ERP implementation', 'Custom modules', 'Data migration', 'User training', 'Ongoing support'],
+      benefits: ['Streamline operations', 'Improve efficiency', 'Centralize data management'],
+      marketPrice: '$8,000-20,000/month',
+      category: 'Enterprise Software',
+      technologies: ['SAP', 'Oracle', 'Microsoft Dynamics', 'NetSuite', 'Salesforce']
+    },
+    {
+      title: 'Customer Relationship Management (CRM)',
+      description: 'CRM system setup, customization, and integration to improve customer relationships and sales.',
+      icon: '👥',
+      price: 'Starting at $2,200/month',
+      features: ['CRM implementation', 'Custom workflows', 'Integration services', 'Data migration', 'User training'],
+      benefits: ['Increase sales by 30%', 'Improve customer satisfaction', 'Streamline processes'],
+      marketPrice: '$3,500-8,000/month',
+      category: 'Enterprise Software',
+      technologies: ['Salesforce', 'HubSpot', 'Pipedrive', 'Zoho', 'Microsoft Dynamics']
+    },
+    {
+      title: 'Enterprise Content Management',
+      description: 'Document management, workflow automation, and content collaboration solutions.',
+      icon: '📁',
+      price: 'Starting at $1,800/month',
+      features: ['Document management', 'Workflow automation', 'Version control', 'Search & retrieval', 'Compliance'],
+      benefits: ['Improve productivity', 'Ensure compliance', 'Reduce paper usage'],
+      marketPrice: '$3,000-7,000/month',
+      category: 'Content Management',
+      technologies: ['SharePoint', 'Confluence', 'Box', 'Dropbox Business', 'Google Workspace']
+    },
+    {
+      title: 'Identity & Access Management',
+      description: 'User authentication, authorization, and identity management solutions for enterprise security.',
+      icon: '🔐',
+      price: 'Starting at $2,500/month',
+      features: ['Single sign-on (SSO)', 'Multi-factor authentication', 'User provisioning', 'Access governance', 'Audit logging'],
+      benefits: ['Enhance security', 'Simplify user management', 'Ensure compliance'],
+      marketPrice: '$4,000-10,000/month',
+      category: 'Security',
+      technologies: ['Okta', 'Azure AD', 'Ping Identity', 'ForgeRock', 'Auth0']
+    },
+    {
+      title: 'Enterprise Monitoring & Observability',
+      description: 'Comprehensive monitoring solutions for applications, infrastructure, and business metrics.',
+      icon: '📊',
+      price: 'Starting at $2,000/month',
+      features: ['Application monitoring', 'Infrastructure monitoring', 'Log management', 'Alerting', 'Dashboards'],
+      benefits: ['Prevent outages', 'Improve performance', 'Reduce MTTR'],
+      marketPrice: '$3,500-8,000/month',
+      category: 'Monitoring',
+      technologies: ['Datadog', 'New Relic', 'Splunk', 'Elastic Stack', 'Prometheus']
+    },
+    {
+      title: 'Microservices Architecture',
+      description: 'Design and implementation of microservices architecture for scalable, maintainable applications.',
+      icon: '🔧',
+      price: 'Starting at $4,500/month',
+      features: ['Architecture design', 'Service decomposition', 'API gateway setup', 'Container orchestration', 'Service mesh'],
+      benefits: ['Improve scalability', 'Enable rapid development', 'Reduce coupling'],
+      marketPrice: '$7,500-18,000/month',
+      category: 'Architecture',
+      technologies: ['Kubernetes', 'Docker', 'Istio', 'Kong', 'Consul']
+    },
+    {
+      title: 'Data Engineering & ETL',
+      description: 'Data pipeline development, ETL processes, and data warehouse implementation.',
+      icon: '⚙️',
+      price: 'Starting at $3,200/month',
+      features: ['ETL pipeline design', 'Data warehousing', 'Real-time processing', 'Data quality', 'Monitoring'],
+      benefits: ['Improve data quality', 'Enable analytics', 'Reduce processing time'],
+      marketPrice: '$5,500-12,000/month',
+      category: 'Data Engineering',
+      technologies: ['Apache Airflow', 'Apache Spark', 'Kafka', 'Snowflake', 'dbt']
+    },
+    {
+      title: 'Blockchain & Web3 Development',
+      description: 'Blockchain application development, smart contracts, and Web3 integration services.',
+      icon: '⛓️',
+      price: 'Starting at $6,000/month',
+      features: ['Smart contract development', 'DApp development', 'Blockchain integration', 'Token development', 'DeFi protocols'],
+      benefits: ['Enable decentralization', 'Improve transparency', 'Reduce intermediaries'],
+      marketPrice: '$10,000-25,000/month',
+      category: 'Blockchain',
+      technologies: ['Ethereum', 'Solidity', 'Web3.js', 'IPFS', 'Polygon']
+    },
+    {
+      title: 'IoT & Edge Computing',
+      description: 'Internet of Things solutions, edge computing infrastructure, and sensor data processing.',
+      icon: '📡',
+      price: 'Starting at $4,000/month',
+      features: ['IoT device integration', 'Edge computing setup', 'Data processing', 'Real-time analytics', 'Device management'],
+      benefits: ['Enable automation', 'Improve efficiency', 'Reduce latency'],
+      marketPrice: '$7,000-18,000/month',
+      category: 'IoT',
+      technologies: ['AWS IoT', 'Azure IoT', 'MQTT', 'Kubernetes', 'TensorFlow Lite']
+    },
+    {
+      title: 'Quantum Computing Services',
+      description: 'Quantum algorithm development, quantum simulation, and quantum computing integration.',
+      icon: '⚛️',
+      price: 'Starting at $15,000/month',
+      features: ['Quantum algorithm design', 'Quantum simulation', 'Hardware integration', 'Optimization problems', 'Research support'],
+      benefits: ['Solve complex problems', 'Enable breakthroughs', 'Future-proof technology'],
+      marketPrice: '$25,000-75,000/month',
+      category: 'Quantum Computing',
+      technologies: ['Qiskit', 'Cirq', 'PennyLane', 'IBM Quantum', 'Google Quantum']
+    },
+    {
+      title: 'High-Performance Computing',
+      description: 'HPC cluster setup, parallel processing optimization, and scientific computing solutions.',
+      icon: '💻',
+      price: 'Starting at $8,000/month',
+      features: ['HPC cluster design', 'Parallel processing', 'GPU computing', 'Scientific computing', 'Performance optimization'],
+      benefits: ['Accelerate computations', 'Handle large datasets', 'Enable research'],
+      marketPrice: '$15,000-40,000/month',
+      category: 'HPC',
+      technologies: ['CUDA', 'OpenMP', 'MPI', 'Slurm', 'Docker']
+    },
+    {
+      title: 'Digital Transformation Consulting',
+      description: 'Strategic digital transformation planning, technology assessment, and change management.',
+      icon: '🚀',
+      price: 'Starting at $300/hour',
+      features: ['Digital strategy', 'Technology assessment', 'Change management', 'Process optimization', 'ROI analysis'],
+      benefits: ['Modernize operations', 'Improve competitiveness', 'Increase efficiency'],
+      marketPrice: '$500-1,000/hour',
+      category: 'Consulting',
+      technologies: ['Strategic Planning', 'Change Management', 'Process Optimization', 'ROI Analysis']
+    },
+    {
+      title: 'Compliance & Governance',
+      description: 'IT compliance management, governance frameworks, and regulatory adherence services.',
+      icon: '📜',
+      price: 'Starting at $2,800/month',
+      features: ['Compliance assessment', 'Policy development', 'Audit support', 'Risk management', 'Training'],
+      benefits: ['Ensure compliance', 'Reduce risks', 'Avoid penalties'],
+      marketPrice: '$4,500-12,000/month',
+      category: 'Compliance',
+      technologies: ['GRC Tools', 'Risk Management', 'Audit Software', 'Policy Management']
+    },
+    {
+      title: 'IT Asset Management',
+      description: 'Comprehensive IT asset lifecycle management, procurement, and optimization services.',
+      icon: '📦',
+      price: 'Starting at $1,500/month',
+      features: ['Asset tracking', 'Procurement management', 'License management', 'Depreciation tracking', 'Optimization'],
+      benefits: ['Reduce costs', 'Improve utilization', 'Ensure compliance'],
+      marketPrice: '$2,500-6,000/month',
+      category: 'Asset Management',
+      technologies: ['ServiceNow', 'Lansweeper', 'Asset Panda', 'Flexera', 'Microsoft Intune']
     }
   ];
 
