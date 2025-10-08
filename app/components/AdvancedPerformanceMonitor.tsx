@@ -49,7 +49,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         });
         lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
         observers.push(lcpObserver);
-      } catch (error) {
+      } catch {
         // LCP observer not supported
       }
     }
@@ -75,7 +75,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         });
         fidObserver.observe({ entryTypes: ['first-input'] });
         observers.push(fidObserver);
-      } catch (error) {
+      } catch {
         // FID observer not supported
       }
     }
@@ -102,7 +102,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         });
         clsObserver.observe({ entryTypes: ['layout-shift'] });
         observers.push(clsObserver);
-      } catch (error) {
+      } catch {
         // CLS observer not supported
       }
     }
@@ -126,7 +126,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         ttfb,
         memory,
       }));
-    } catch (error) {
+    } catch {
       // Performance measurement failed
     }
 
@@ -135,7 +135,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       observers.forEach(observer => {
         try {
           observer.disconnect();
-        } catch (error) {
+        } catch {
           // Error disconnecting observer
         }
       });
@@ -152,11 +152,6 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
 
     if (slowResources.length > 0) {
       // Slow resources detected - could be logged to monitoring service
-      const slowResourceData = slowResources.map((r: PerformanceResourceTiming) => ({
-        name: r.name,
-        duration: r.duration,
-        size: r.transferSize,
-      }));
       // Could send to monitoring service here
     }
   }, []);
