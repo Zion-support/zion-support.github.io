@@ -224,6 +224,20 @@ class Logger {
       if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { console.log(`%c${message}`, style); } }
     }
   }
+
+  /**
+   * Log lifecycle events
+   */
+  lifecycle(message: string, component: string): void {
+    this.info(message, { component });
+  }
+
+  /**
+   * Log performance metrics
+   */
+  performance(message: string, metrics: Record<string, unknown>, component: string): void {
+    this.info(message, { component, ...metrics });
+  }
 }
 
 // Create and export singleton instance
