@@ -1,5 +1,5 @@
 // Performance monitoring setup
-import { analytics } from './utils/analytics';
+import analytics from './utils/analytics';
 import { ErrorHandler } from './utils/errorHandler';
 import { performanceOptimizer } from '../app/utils/performanceOptimizer';
 import { logger } from './utils/logger';
@@ -14,12 +14,6 @@ function initializeMonitoring() {
     if (typeof window !== 'undefined') {
       // Monitor web vitals
       performanceOptimizer.init();
-      
-      // Set up error tracking
-      errorHandler.init();
-      
-      // Initialize analytics
-      analytics.init();
       
       logger.info('Monitoring initialized successfully');
     }

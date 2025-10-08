@@ -219,10 +219,19 @@ class Logger {
   /**
    * Log with custom styling (development only)
    */
-  styled(message: string, style: string): void {
-    if (isDevelopment()) {
-      if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { console.log(`%c${message}`, style); } }
-    }
+
+  /**
+   * Log lifecycle events
+   */
+  lifecycle(message: string, component: string): void {
+    this.info(message, { component, action: 'lifecycle' });
+  }
+
+  /**
+   * Log performance metrics with context
+   */
+  performance(label: string, metrics: Record<string, unknown>, component: string): void {
+    this.debug(`Performance: ${label}`, { component, metrics });
   }
 }
 
@@ -230,4 +239,3 @@ class Logger {
 const logger = new Logger(isDevelopment() ? LogLevel.DEBUG : LogLevel.INFO);
 
 export { logger };
-export default logger;
