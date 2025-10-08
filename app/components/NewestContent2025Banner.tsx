@@ -128,7 +128,6 @@ const NewestContent2025Banner: React.FC = () => {
             <h3 className="text-xl font-bold text-white mb-2">Autonomous Systems</h3>
             <p className="text-gray-300">Intelligent automation driving enterprise efficiency</p>
           </div>
-        </div>
       </div>
     </section>
   );

@@ -10,38 +10,49 @@ import AdvancedErrorBoundary from './components/AdvancedErrorBoundary';
 import AdvancedSEOOptimizer from './components/AdvancedSEOOptimizer';
 import SEOEnhancer from './components/SEOEnhancer';
 import LoadingSpinner from './components/LoadingSpinner';
-import PerformanceDashboard from './components/PerformanceDashboard';
-import AdvancedPerformanceMonitor from './components/AdvancedPerformanceMonitor';
 
-// Utils
+// Import logger and performance utilities
 import { logger } from './utils/logger';
-import { lazyLoadImages, preloadCriticalResources, collectPerformanceMetrics, performanceOptimizer } from './utils/performanceOptimizer';
+import { lazyLoadImages, preloadCriticalResources, collectPerformanceMetrics } from './utils/performanceMonitoring';
+import { performanceOptimizer } from './utils/performanceOptimizer';
 
-// Lazy load pages for better performance
+// Lazy load components
 const HomePage = lazy(() => import('./page'));
+const PerformanceDashboard = lazy(() => import('./components/PerformanceDashboard'));
+const AdvancedPerformanceMonitor = lazy(() => import('./components/AdvancedPerformanceMonitor'));
 
 const App: React.FC = () => {
   useEffect(() => {
     // Initialize global error handling
-    if (typeof console !== 'undefined') {
-      console.log('App initialized');
-    }
+    logger.lifecycle('initialized', 'App');
 
     // Initialize performance monitoring
+    lazyLoadImages();
+    preloadCriticalResources();
+    performanceOptimizer.init();
+    
+    // Initialize Web Vitals monitoring
     if (typeof window !== 'undefined' && 'performance' in window) {
-      const pageLoadMetrics = window.performance.timing;
+      const pageLoadMetrics = collectPerformanceMetrics();
+      const metrics = performanceOptimizer.getMetrics();
       if (pageLoadMetrics) {
         // eslint-disable-next-line no-console
         console.log('Performance metrics collected:', pageLoadMetrics);
       }
+      if (metrics) {
+        // eslint-disable-next-line no-console
+        console.log('Performance metrics:', metrics);
+      }
     }
     
-    logger.lifecycle('performance monitoring initialized', 'App');
+    logger.lifecycle('Performance monitoring initialized', 'App');
     logger.info('🚀 Zion Tech Group App initialized with comprehensive monitoring', { component: 'App' });
   }, []);
 
   const handleError = useCallback((error: Error, errorInfo: any) => {
-    logger.error('Application Error', error, { component: 'ErrorBoundary', errorInfo });
+    logger.error('Application Error', error, { component: 'ErrorBoundary' });
+    // eslint-disable-next-line no-console
+    console.error('Error info:', errorInfo);
   }, []);
 
   return (
@@ -57,10 +68,11 @@ const App: React.FC = () => {
             description="Leading provider of enterprise AI solutions, quantum computing, and autonomous systems. Transform your business with our cutting-edge technology."
           >
             <AdvancedSEOOptimizer
-              seoData={{
+              config={{
                 title: 'Zion Tech Group - Advanced AI and IT Solutions',
                 description: 'Leading provider of enterprise AI solutions, quantum computing, and autonomous systems. Transform your business with our cutting-edge technology.',
                 keywords: ['AI solutions', 'enterprise AI', 'quantum computing', 'autonomous systems', 'digital transformation', 'automation', 'cloud services', 'AI consulting', 'business intelligence', 'machine learning'],
+                url: 'https://ziontechgroup.com',
                 canonicalUrl: 'https://ziontechgroup.com'
               }}
               enableStructuredData={true}
@@ -103,7 +115,7 @@ const App: React.FC = () => {
                   enableRealTimeMonitoring={process.env['NODE_ENV'] === 'development'}
                   onMetricsUpdate={(metrics) => {
                     if (process.env['NODE_ENV'] === 'development') {
-                      console.log('Performance Metrics:', metrics);
+                      logger.performance('Performance Metrics', metrics as unknown as Record<string, unknown>, 'PerformanceMonitor');
                     }
                   }}
                 />

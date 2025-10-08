@@ -131,26 +131,6 @@ class SEOOptimizer {
   }
 
   /**
-   * Initialize meta tags
-   */
-  private initializeMetaTags(): void {
-    
-    this.setMetaTag('description', this.currentPageData?.description || 'Advanced AI and IT Solutions');
-    this.setMetaTag('author', 'Zion Tech Group');
-    this.setMetaTag('og:type', 'website', 'property');
-    this.setMetaTag('og:description', this.currentPageData?.description || 'Advanced AI and IT Solutions', 'property');
-    this.setMetaTag('twitter:card', 'summary_large_image');
-    this.setMetaTag('twitter:description', this.currentPageData?.description || 'Advanced AI and IT Solutions');
-
-    if (typeof document === 'undefined') return;
-    // Set default meta tags
-    this.setMetaTag('keywords', (this.currentPageData?.keywords || []).join(', ') || 'AI, IT Solutions, Technology');
-    // Open Graph tags
-    this.setMetaTag('og:title', this.currentPageData?.title || 'Zion Tech Group', 'property');
-    // Twitter Card tags
-    this.setMetaTag('twitter:title', this.currentPageData?.title || 'Zion Tech Group');
-  }
-  /**
    * Set meta tag
    */
   private setMetaTag(name: string, content: string, attribute: string = 'name'): void {
