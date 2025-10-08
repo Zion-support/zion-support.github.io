@@ -32,8 +32,8 @@ const App: React.FC = () => {
     // Initialize global error handling with advanced tracking
     const handleGlobalError = (event: ErrorEvent) => {
       errorTracking.trackError(event.error || new Error(event.message), {
-        category: ErrorCategory.RUNTIME,
-        severity: ErrorSeverity.HIGH,
+        category: ErrorCategory.Runtime,
+        severity: ErrorSeverity.High,
         context: {
           filename: event.filename,
           lineno: event.lineno,
@@ -46,8 +46,8 @@ const App: React.FC = () => {
       errorTracking.trackError(
         new Error(`Unhandled Promise Rejection: ${event.reason}`),
         {
-          category: ErrorCategory.RUNTIME,
-          severity: ErrorSeverity.CRITICAL,
+          category: ErrorCategory.Runtime,
+          severity: ErrorSeverity.Critical,
           context: { reason: event.reason },
         }
       );
