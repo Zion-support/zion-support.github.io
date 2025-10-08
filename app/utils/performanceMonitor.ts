@@ -1,345 +1,262 @@
 /**
  * Advanced Performance Monitoring Utility
- * Tracks various performance metrics and provides insights
+ * Tracks Core Web Vitals and custom metrics
  */
 
-export interface PerformanceMetric {
-  name: string;
-  value: number;
-  timestamp: number;
-  rating: 'good' | 'needs-improvement' | 'poor';
-}
-
-export interface WebVitalsMetrics {
-  CLS?: PerformanceMetric; // Cumulative Layout Shift
-  FID?: PerformanceMetric; // First Input Delay
-  FCP?: PerformanceMetric; // First Contentful Paint
-  LCP?: PerformanceMetric; // Largest Contentful Paint
-  TTFB?: PerformanceMetric; // Time to First Byte
-  INP?: PerformanceMetric; // Interaction to Next Paint
+interface PerformanceMetrics {
+  fcp?: number; // First Contentful Paint
+  lcp?: number; // Largest Contentful Paint
+  fid?: number; // First Input Delay
+  cls?: number; // Cumulative Layout Shift
+  ttfb?: number; // Time to First Byte
+  fmp?: number; // First Meaningful Paint
+  customMetrics: Record<string, number>;
 }
 
 class PerformanceMonitor {
-  private metrics: WebVitalsMetrics = {};
-  private customMetrics: Map<string, PerformanceMetric[]> = new Map();
-  private navigationTiming: PerformanceNavigationTiming | null = null;
+  private metrics: PerformanceMetrics = {
+    customMetrics: {}
+  };
+  private observers: PerformanceObserver[] = [];
+  private isInitialized = false;
 
-  constructor() {
-    if (typeof window !== 'undefined') {
-      this.initializeWebVitals();
-      this.captureNavigationTiming();
+  init(): void {
+    if (this.isInitialized || typeof window === 'undefined') return;
+    
+    this.isInitialized = true;
+    this.setupWebVitals();
+    this.setupCustomMetrics();
+    this.setupResourceTiming();
+  }
+
+  private setupWebVitals(): void {
+    // First Contentful Paint
+    this.observePaint('first-contentful-paint', 'fcp');
+    
+    // Largest Contentful Paint
+    this.observeLCP();
+    
+    // First Input Delay
+    this.observeFID();
+    
+    // Cumulative Layout Shift
+    this.observeCLS();
+  }
+
+  private observePaint(name: string, metricKey: keyof PerformanceMetrics): void {
+    try {
+      const observer = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          if (entry.name === name) {
+            this.metrics[metricKey] = entry.startTime;
+            this.logMetric(metricKey as string, entry.startTime);
+          }
+        }
+      });
+      
+      observer.observe({ entryTypes: ['paint'] });
+      this.observers.push(observer);
+    } catch (error) {
+      console.warn(`Failed to observe ${name}:`, error);
     }
   }
 
-  /**
-   * Initialize Web Vitals tracking
-   */
-  private initializeWebVitals(): void {
-    // Using the web-vitals library would be ideal, but here's a manual approach
-    if ('PerformanceObserver' in window) {
-      // Observe LCP
-      try {
-        const lcpObserver = new PerformanceObserver((list) => {
-          const entries = list.getEntries();
-          const lastEntry = entries[entries.length - 1] as PerformanceEntry & {
-            renderTime?: number;
-            loadTime?: number;
-          };
-          
-          const value = lastEntry.renderTime || lastEntry.loadTime || 0;
-          this.metrics.LCP = this.createMetric('LCP', value, this.getRatingForLCP(value));
-        });
-        lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
-      } catch (e) {
-        console.warn('LCP observation not supported');
-      }
-
-      // Observe FID
-      try {
-        const fidObserver = new PerformanceObserver((list) => {
-          const entries = list.getEntries();
-          entries.forEach((entry: PerformanceEntry & { processingStart?: number }) => {
-            const value = entry.processingStart ? entry.processingStart - entry.startTime : 0;
-            this.metrics.FID = this.createMetric('FID', value, this.getRatingForFID(value));
-          });
-        });
-        fidObserver.observe({ entryTypes: ['first-input'] });
-      } catch (e) {
-        console.warn('FID observation not supported');
-      }
-
-      // Observe CLS
-      try {
-        let clsValue = 0;
-        const clsObserver = new PerformanceObserver((list) => {
-          const entries = list.getEntries();
-          entries.forEach((entry: PerformanceEntry & { value?: number; hadRecentInput?: boolean }) => {
-            if (!entry.hadRecentInput) {
-              clsValue += entry.value || 0;
-              this.metrics.CLS = this.createMetric('CLS', clsValue, this.getRatingForCLS(clsValue));
-            }
-          });
-        });
-        clsObserver.observe({ entryTypes: ['layout-shift'] });
-      } catch (e) {
-        console.warn('CLS observation not supported');
-      }
-
-      // Observe FCP
-      try {
-        const fcpObserver = new PerformanceObserver((list) => {
-          const entries = list.getEntries();
-          entries.forEach((entry) => {
-            if (entry.name === 'first-contentful-paint') {
-              const value = entry.startTime;
-              this.metrics.FCP = this.createMetric('FCP', value, this.getRatingForFCP(value));
-            }
-          });
-        });
-        fcpObserver.observe({ entryTypes: ['paint'] });
-      } catch (e) {
-        console.warn('FCP observation not supported');
-      }
+  private observeLCP(): void {
+    try {
+      const observer = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        const lastEntry = entries[entries.length - 1];
+        this.metrics.lcp = lastEntry.startTime;
+        this.logMetric('lcp', lastEntry.startTime);
+      });
+      
+      observer.observe({ entryTypes: ['largest-contentful-paint'] });
+      this.observers.push(observer);
+    } catch (error) {
+      console.warn('Failed to observe LCP:', error);
     }
   }
 
-  /**
-   * Capture navigation timing
-   */
-  private captureNavigationTiming(): void {
-    if ('performance' in window && 'getEntriesByType' in window.performance) {
-      const [navigation] = window.performance.getEntriesByType('navigation') as PerformanceNavigationTiming[];
-      if (navigation) {
-        this.navigationTiming = navigation;
-        
-        // Calculate TTFB
-        const ttfb = navigation.responseStart - navigation.requestStart;
-        this.metrics.TTFB = this.createMetric('TTFB', ttfb, this.getRatingForTTFB(ttfb));
-      }
+  private observeFID(): void {
+    try {
+      const observer = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          this.metrics.fid = (entry as any).processingStart - entry.startTime;
+          this.logMetric('fid', this.metrics.fid);
+        }
+      });
+      
+      observer.observe({ entryTypes: ['first-input'] });
+      this.observers.push(observer);
+    } catch (error) {
+      console.warn('Failed to observe FID:', error);
     }
   }
 
-  /**
-   * Create a performance metric object
-   */
-  private createMetric(
-    name: string,
-    value: number,
-    rating: 'good' | 'needs-improvement' | 'poor'
-  ): PerformanceMetric {
-    return {
-      name,
-      value: Math.round(value * 100) / 100,
-      timestamp: Date.now(),
-      rating,
-    };
+  private observeCLS(): void {
+    try {
+      let clsValue = 0;
+      const observer = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          if (!(entry as any).hadRecentInput) {
+            clsValue += (entry as any).value;
+          }
+        }
+        this.metrics.cls = clsValue;
+        this.logMetric('cls', clsValue);
+      });
+      
+      observer.observe({ entryTypes: ['layout-shift'] });
+      this.observers.push(observer);
+    } catch (error) {
+      console.warn('Failed to observe CLS:', error);
+    }
   }
 
-  /**
-   * Rating thresholds based on Web Vitals recommendations
-   */
-  private getRatingForLCP(value: number): 'good' | 'needs-improvement' | 'poor' {
-    if (value <= 2500) return 'good';
-    if (value <= 4000) return 'needs-improvement';
-    return 'poor';
+  private setupCustomMetrics(): void {
+    // Time to First Byte
+    if (performance.timing) {
+      this.metrics.ttfb = performance.timing.responseStart - performance.timing.navigationStart;
+      this.logMetric('ttfb', this.metrics.ttfb);
+    }
+
+    // Page Load Time
+    if (performance.timing) {
+      const loadTime = performance.timing.loadEventEnd - performance.timing.navigationStart;
+      this.addCustomMetric('pageLoadTime', loadTime);
+    }
+
+    // DOM Content Loaded
+    if (performance.timing) {
+      const domContentLoaded = performance.timing.domContentLoadedEventEnd - performance.timing.navigationStart;
+      this.addCustomMetric('domContentLoaded', domContentLoaded);
+    }
   }
 
-  private getRatingForFID(value: number): 'good' | 'needs-improvement' | 'poor' {
-    if (value <= 100) return 'good';
-    if (value <= 300) return 'needs-improvement';
-    return 'poor';
+  private setupResourceTiming(): void {
+    try {
+      const observer = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          if (entry.entryType === 'resource') {
+            const resourceEntry = entry as PerformanceResourceTiming;
+            this.analyzeResource(resourceEntry);
+          }
+        }
+      });
+      
+      observer.observe({ entryTypes: ['resource'] });
+      this.observers.push(observer);
+    } catch (error) {
+      console.warn('Failed to observe resources:', error);
+    }
   }
 
-  private getRatingForCLS(value: number): 'good' | 'needs-improvement' | 'poor' {
-    if (value <= 0.1) return 'good';
-    if (value <= 0.25) return 'needs-improvement';
-    return 'poor';
-  }
-
-  private getRatingForFCP(value: number): 'good' | 'needs-improvement' | 'poor' {
-    if (value <= 1800) return 'good';
-    if (value <= 3000) return 'needs-improvement';
-    return 'poor';
-  }
-
-  private getRatingForTTFB(value: number): 'good' | 'needs-improvement' | 'poor' {
-    if (value <= 800) return 'good';
-    if (value <= 1800) return 'needs-improvement';
-    return 'poor';
-  }
-
-  /**
-   * Track custom metric
-   */
-  trackCustomMetric(name: string, value: number): void {
-    if (!this.customMetrics.has(name)) {
-      this.customMetrics.set(name, []);
+  private analyzeResource(entry: PerformanceResourceTiming): void {
+    const duration = entry.responseEnd - entry.startTime;
+    const size = entry.transferSize || 0;
+    
+    // Track slow resources
+    if (duration > 1000) {
+      this.addCustomMetric(`slowResource_${entry.name}`, duration);
     }
     
-    const metrics = this.customMetrics.get(name)!;
-    metrics.push({
-      name,
-      value,
-      timestamp: Date.now(),
-      rating: 'good', // Custom metrics don't have standard ratings
-    });
-
-    // Keep only last 100 entries per metric
-    if (metrics.length > 100) {
-      metrics.shift();
+    // Track large resources
+    if (size > 100000) { // 100KB
+      this.addCustomMetric(`largeResource_${entry.name}`, size);
     }
   }
 
-  /**
-   * Mark a custom timing point
-   */
-  mark(name: string): void {
-    if ('performance' in window && 'mark' in window.performance) {
-      window.performance.mark(name);
+  addCustomMetric(name: string, value: number): void {
+    this.metrics.customMetrics[name] = value;
+    this.logMetric(name, value);
+  }
+
+  private logMetric(name: string, value: number): void {
+    if (process.env.NODE_ENV === 'development') {
+      console.log(`[Performance] ${name}: ${value.toFixed(2)}ms`);
+    }
+    
+    // Send to analytics if available
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('event', 'performance_metric', {
+        metric_name: name,
+        metric_value: Math.round(value),
+        event_category: 'performance'
+      });
     }
   }
 
-  /**
-   * Measure time between two marks
-   */
-  measure(name: string, startMark: string, endMark: string): number | null {
-    if ('performance' in window && 'measure' in window.performance) {
-      try {
-        window.performance.measure(name, startMark, endMark);
-        const measures = window.performance.getEntriesByName(name, 'measure');
-        if (measures.length > 0) {
-          const value = measures[measures.length - 1].duration;
-          this.trackCustomMetric(name, value);
-          return value;
-        }
-      } catch (e) {
-        console.warn(`Failed to measure ${name}:`, e);
-      }
-    }
-    return null;
-  }
-
-  /**
-   * Get all metrics
-   */
-  getMetrics(): WebVitalsMetrics {
+  getMetrics(): PerformanceMetrics {
     return { ...this.metrics };
   }
 
-  /**
-   * Get custom metrics
-   */
-  getCustomMetrics(name?: string): PerformanceMetric[] {
-    if (name) {
-      return this.customMetrics.get(name) || [];
-    }
-    return Array.from(this.customMetrics.values()).flat();
-  }
-
-  /**
-   * Get navigation timing
-   */
-  getNavigationTiming(): PerformanceNavigationTiming | null {
-    return this.navigationTiming;
-  }
-
-  /**
-   * Get performance report
-   */
-  getReport(): {
-    webVitals: WebVitalsMetrics;
-    customMetrics: Record<string, PerformanceMetric[]>;
-    navigationTiming: PerformanceNavigationTiming | null;
-    summary: {
-      totalMetrics: number;
-      goodMetrics: number;
-      needsImprovementMetrics: number;
-      poorMetrics: number;
-      score: number;
-    };
-  } {
-    const allMetrics = Object.values(this.metrics);
-    const goodMetrics = allMetrics.filter((m) => m?.rating === 'good').length;
-    const needsImprovementMetrics = allMetrics.filter((m) => m?.rating === 'needs-improvement').length;
-    const poorMetrics = allMetrics.filter((m) => m?.rating === 'poor').length;
-    const totalMetrics = allMetrics.length;
+  getScore(): number {
+    const scores = [];
     
-    // Calculate score (0-100)
-    const score = totalMetrics > 0
-      ? Math.round((goodMetrics / totalMetrics) * 100)
-      : 0;
-
-    return {
-      webVitals: this.getMetrics(),
-      customMetrics: Object.fromEntries(this.customMetrics),
-      navigationTiming: this.navigationTiming,
-      summary: {
-        totalMetrics,
-        goodMetrics,
-        needsImprovementMetrics,
-        poorMetrics,
-        score,
-      },
-    };
-  }
-
-  /**
-   * Send metrics to analytics
-   */
-  sendToAnalytics(): void {
-    const report = this.getReport();
+    // FCP scoring (0-100)
+    if (this.metrics.fcp) {
+      if (this.metrics.fcp <= 1800) scores.push(100);
+      else if (this.metrics.fcp <= 3000) scores.push(75);
+      else if (this.metrics.fcp <= 4000) scores.push(50);
+      else scores.push(25);
+    }
     
-    // Send to Google Analytics (if available)
-    if (typeof window !== 'undefined' && (window as unknown as { gtag?: Function }).gtag) {
-      Object.entries(this.metrics).forEach(([name, metric]) => {
-        if (metric) {
-          (window as unknown as { gtag: Function }).gtag('event', 'web_vitals', {
-            event_category: 'Web Vitals',
-            event_label: name,
-            value: Math.round(metric.value),
-            metric_rating: metric.rating,
-            non_interaction: true,
-          });
-        }
-      });
+    // LCP scoring (0-100)
+    if (this.metrics.lcp) {
+      if (this.metrics.lcp <= 2500) scores.push(100);
+      else if (this.metrics.lcp <= 4000) scores.push(75);
+      else if (this.metrics.lcp <= 6000) scores.push(50);
+      else scores.push(25);
     }
-
-    // Log to console in development
-    if (process.env['NODE_ENV'] === 'development') {
-      console.group('📊 Performance Report');
-      console.table(report.summary);
-      console.log('Web Vitals:', report.webVitals);
-      console.log('Custom Metrics:', report.customMetrics);
-      console.groupEnd();
+    
+    // FID scoring (0-100)
+    if (this.metrics.fid) {
+      if (this.metrics.fid <= 100) scores.push(100);
+      else if (this.metrics.fid <= 300) scores.push(75);
+      else if (this.metrics.fid <= 500) scores.push(50);
+      else scores.push(25);
     }
+    
+    // CLS scoring (0-100)
+    if (this.metrics.cls) {
+      if (this.metrics.cls <= 0.1) scores.push(100);
+      else if (this.metrics.cls <= 0.25) scores.push(75);
+      else if (this.metrics.cls <= 0.4) scores.push(50);
+      else scores.push(25);
+    }
+    
+    return scores.length > 0 ? Math.round(scores.reduce((a, b) => a + b, 0) / scores.length) : 0;
   }
 
-  /**
-   * Clear all metrics
-   */
-  clearMetrics(): void {
-    this.metrics = {};
-    this.customMetrics.clear();
+  generateReport(): string {
+    const score = this.getScore();
+    const metrics = this.getMetrics();
+    
+    return `
+Performance Report:
+==================
+Overall Score: ${score}/100
+
+Core Web Vitals:
+- First Contentful Paint: ${metrics.fcp?.toFixed(2) || 'N/A'}ms
+- Largest Contentful Paint: ${metrics.lcp?.toFixed(2) || 'N/A'}ms
+- First Input Delay: ${metrics.fid?.toFixed(2) || 'N/A'}ms
+- Cumulative Layout Shift: ${metrics.cls?.toFixed(3) || 'N/A'}
+- Time to First Byte: ${metrics.ttfb?.toFixed(2) || 'N/A'}ms
+
+Custom Metrics:
+${Object.entries(metrics.customMetrics)
+  .map(([key, value]) => `- ${key}: ${value.toFixed(2)}ms`)
+  .join('\n')}
+    `.trim();
+  }
+
+  cleanup(): void {
+    this.observers.forEach(observer => observer.disconnect());
+    this.observers = [];
+    this.isInitialized = false;
   }
 }
 
-// Singleton instance
-const performanceMonitor = new PerformanceMonitor();
-
-// Export convenience functions
-export const trackMetric = (name: string, value: number) => 
-  performanceMonitor.trackCustomMetric(name, value);
-
-export const markTiming = (name: string) => 
-  performanceMonitor.mark(name);
-
-export const measureTiming = (name: string, start: string, end: string) => 
-  performanceMonitor.measure(name, start, end);
-
-export const getPerformanceReport = () => 
-  performanceMonitor.getReport();
-
-export const sendMetricsToAnalytics = () => 
-  performanceMonitor.sendToAnalytics();
-
+export const performanceMonitor = new PerformanceMonitor();
 export default performanceMonitor;
