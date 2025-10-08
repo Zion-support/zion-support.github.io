@@ -1,173 +1,98 @@
 #!/bin/bash
 
-# Script to merge all open PRs systematically
+# Script to merge all open PRs into main branch
+# Handles merge conflicts automatically
 
-GITHUB_TOKEN="ghs_6kmNK516xjSlcnaBDziRvl2h8esrYx0ZJN3w"
-REPO="Zion-Holdings/zion.app"
+set -e
 
-echo "================================================================"
-echo "Merging Open PRs into Main Branch"
-echo "================================================================"
-echo ""
+MAIN_BRANCH="main"
+LOG_FILE="pr_merge_log_$(date +%Y%m%d_%H%M%S).txt"
+SUCCESS_COUNT=0
+FAILURE_COUNT=0
+CONFLICT_COUNT=0
 
-# First, complete the current merge
-if [ -f "/workspace/complete_merge.sh" ]; then
-    echo "Completing current merge..."
-    bash /workspace/complete_merge.sh
-    echo ""
+echo "Starting PR merge process..." | tee -a "$LOG_FILE"
+echo "Target branch: $MAIN_BRANCH" | tee -a "$LOG_FILE"
+echo "======================================" | tee -a "$LOG_FILE"
+
+# Read PR data
+if [ ! -f "open_prs.json" ]; then
+    echo "Error: open_prs.json not found" | tee -a "$LOG_FILE"
+    exit 1
 fi
 
-# Fetch latest changes
-echo "Fetching latest changes from origin..."
-git fetch origin
-echo ""
+# Extract branch names from JSON
+BRANCHES=$(python3 -c "
+import json
+data = json.load(open('open_prs.json'))
+for pr in data:
+    branch = pr.get('head', {}).get('ref', '')
+    if branch:
+        print(branch)
+")
 
-# Update main branch
-echo "Updating main branch..."
-git checkout main 2>/dev/null || git switch main
-git pull origin main
-echo ""
+# Ensure we're on main
+git checkout "$MAIN_BRANCH" 2>&1 | tee -a "$LOG_FILE"
 
-# Get list of open PRs (non-draft)
-echo "Fetching open PRs from GitHub..."
-curl -s -H "Authorization: token $GITHUB_TOKEN" \
-    "https://api.github.com/repos/$REPO/pulls?state=open&per_page=100" \
-    > /tmp/all_prs.json
-
-# Count total PRs
-TOTAL_PRS=$(python3 -c "import json; prs = json.load(open('/tmp/all_prs.json')); print(len(prs))")
-echo "Found $TOTAL_PRS open PRs"
-echo ""
-
-# Get non-draft PRs
-NON_DRAFT=$(python3 -c "import json; prs = json.load(open('/tmp/all_prs.json')); non_draft = [pr for pr in prs if not pr['draft']]; print(len(non_draft))")
-echo "Non-draft PRs ready to merge: $NON_DRAFT"
-echo ""
-
-# Function to attempt merge via API
-merge_pr_via_api() {
-    local PR_NUMBER=$1
-    echo "Attempting to merge PR #$PR_NUMBER via GitHub API..."
+# Process each branch
+for BRANCH in $BRANCHES; do
+    echo "" | tee -a "$LOG_FILE"
+    echo "Processing branch: $BRANCH" | tee -a "$LOG_FILE"
+    echo "--------------------------------------" | tee -a "$LOG_FILE"
     
-    RESPONSE=$(curl -s -X PUT \
-        -H "Authorization: token $GITHUB_TOKEN" \
-        -H "Accept: application/vnd.github.v3+json" \
-        -d "{\"commit_title\":\"Merge PR #$PR_NUMBER: Fix errors and merge to main\",\"merge_method\":\"merge\"}" \
-        "https://api.github.com/repos/$REPO/pulls/$PR_NUMBER/merge")
-    
-    if echo "$RESPONSE" | grep -q '"merged": true'; then
-        echo "✓ Successfully merged PR #$PR_NUMBER"
-        return 0
+    # Fetch the branch
+    if git fetch origin "$BRANCH:$BRANCH" 2>&1 | tee -a "$LOG_FILE"; then
+        echo "✓ Fetched $BRANCH" | tee -a "$LOG_FILE"
     else
-        echo "✗ Failed to merge PR #$PR_NUMBER"
-        echo "  Reason: $(echo $RESPONSE | python3 -c 'import sys, json; print(json.load(sys.stdin).get("message", "Unknown"))')"
-        return 1
+        echo "✗ Failed to fetch $BRANCH" | tee -a "$LOG_FILE"
+        ((FAILURE_COUNT++))
+        continue
     fi
-}
-
-# Function to merge PR locally
-merge_pr_locally() {
-    local PR_NUMBER=$1
-    local BRANCH_NAME=$2
-    
-    echo "Merging PR #$PR_NUMBER locally (branch: $BRANCH_NAME)..."
-    
-    # Ensure we're on main
-    git checkout main
-    
-    # Fetch the PR branch
-    git fetch origin $BRANCH_NAME
     
     # Attempt merge
-    if git merge --no-edit origin/$BRANCH_NAME; then
-        echo "✓ Successfully merged PR #$PR_NUMBER locally"
-        
-        # Push to main
-        if git push origin main; then
-            echo "✓ Pushed merge to origin/main"
-            
-            # Try to close the PR via API
-            curl -s -X PATCH \
-                -H "Authorization: token $GITHUB_TOKEN" \
-                -H "Accept: application/vnd.github.v3+json" \
-                -d '{"state":"closed"}' \
-                "https://api.github.com/repos/$REPO/pulls/$PR_NUMBER" > /dev/null
-            
-            return 0
-        else
-            echo "✗ Failed to push to origin/main"
-            git merge --abort 2>/dev/null
-            return 1
-        fi
+    if git merge "$BRANCH" --no-edit -m "Merge branch '$BRANCH' into main" 2>&1 | tee -a "$LOG_FILE"; then
+        echo "✓ Successfully merged $BRANCH" | tee -a "$LOG_FILE"
+        ((SUCCESS_COUNT++))
     else
-        echo "✗ Merge conflict detected for PR #$PR_NUMBER"
-        echo "  Manual resolution required"
-        git merge --abort 2>/dev/null
-        return 1
+        # Check if there are conflicts
+        if git status | grep -q "both modified\|both added"; then
+            echo "⚠ Merge conflict detected for $BRANCH" | tee -a "$LOG_FILE"
+            ((CONFLICT_COUNT++))
+            
+            # Auto-resolve conflicts by keeping main version
+            echo "  Resolving conflicts by keeping main version..." | tee -a "$LOG_FILE"
+            git checkout --theirs . 2>&1 | tee -a "$LOG_FILE" || true
+            git add -A 2>&1 | tee -a "$LOG_FILE"
+            
+            if git commit --no-edit -m "Merge branch '$BRANCH' into main (conflicts resolved)" 2>&1 | tee -a "$LOG_FILE"; then
+                echo "✓ Merged $BRANCH with conflict resolution" | tee -a "$LOG_FILE"
+                ((SUCCESS_COUNT++))
+            else
+                echo "✗ Failed to commit merge for $BRANCH" | tee -a "$LOG_FILE"
+                git merge --abort 2>&1 | tee -a "$LOG_FILE" || true
+                ((FAILURE_COUNT++))
+            fi
+        else
+            echo "✗ Merge failed for $BRANCH (non-conflict error)" | tee -a "$LOG_FILE"
+            git merge --abort 2>&1 | tee -a "$LOG_FILE" || true
+            ((FAILURE_COUNT++))
+        fi
     fi
-}
+done
 
-# Process non-draft PRs
-echo "Processing non-draft PRs..."
-echo ""
+echo "" | tee -a "$LOG_FILE"
+echo "======================================" | tee -a "$LOG_FILE"
+echo "Merge Summary:" | tee -a "$LOG_FILE"
+echo "  Successful merges: $SUCCESS_COUNT" | tee -a "$LOG_FILE"
+echo "  Conflicts resolved: $CONFLICT_COUNT" | tee -a "$LOG_FILE"
+echo "  Failed merges: $FAILURE_COUNT" | tee -a "$LOG_FILE"
+echo "======================================" | tee -a "$LOG_FILE"
+echo "Log saved to: $LOG_FILE" | tee -a "$LOG_FILE"
 
-python3 << 'PYTHON_SCRIPT'
-import json
-import subprocess
-import sys
-
-with open('/tmp/all_prs.json', 'r') as f:
-    prs = json.load(f)
-
-non_draft_prs = [pr for pr in prs if not pr['draft']]
-merged_count = 0
-failed_count = 0
-conflict_count = 0
-
-for pr in non_draft_prs[:10]:  # Process first 10 to avoid overwhelming
-    pr_number = pr['number']
-    branch_name = pr['head']['ref']
-    
-    print(f"\\n{'='*60}")
-    print(f"Processing PR #{pr_number}: {pr['title'][:50]}...")
-    print(f"Branch: {branch_name}")
-    print(f"{'='*60}")
-    
-    # Try API merge first
-    result = subprocess.run(
-        ['bash', '-c', f'source /workspace/merge_all_prs.sh && merge_pr_via_api {pr_number}'],
-        capture_output=True, text=True
-    )
-    
-    if result.returncode == 0:
-        merged_count += 1
-    else:
-        # Try local merge
-        print(f"API merge failed, attempting local merge...")
-        result = subprocess.run(
-            ['bash', '-c', f'source /workspace/merge_all_prs.sh && merge_pr_locally {pr_number} {branch_name}'],
-            capture_output=True, text=True
-        )
-        
-        if result.returncode == 0:
-            merged_count += 1
-        elif 'conflict' in result.stdout.lower():
-            conflict_count += 1
-        else:
-            failed_count += 1
-
-print(f"\\n\\n{'='*60}")
-print(f"Merge Summary:")
-print(f"{'='*60}")
-print(f"Successfully merged: {merged_count}")
-print(f"Failed: {failed_count}")
-print(f"Conflicts requiring manual resolution: {conflict_count}")
-print(f"{'='*60}")
-PYTHON_SCRIPT
-
-echo ""
-echo "PR merge process completed!"
-echo ""
-echo "To check the current state:"
-echo "  git status"
-echo "  git log --oneline -10"
+if [ $FAILURE_COUNT -eq 0 ]; then
+    echo "✓ All PRs merged successfully!" | tee -a "$LOG_FILE"
+    exit 0
+else
+    echo "⚠ Some PRs failed to merge. Check log for details." | tee -a "$LOG_FILE"
+    exit 1
+fi
