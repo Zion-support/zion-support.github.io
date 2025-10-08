@@ -233,4 +233,6 @@ class PerformanceMonitor {
     const metrics = this.getMetrics();
     
     return `
-Performance Report:
+Performance Report:`
+}
+}
