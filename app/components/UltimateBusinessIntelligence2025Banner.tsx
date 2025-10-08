@@ -1,9 +1,10 @@
+'use client';
+
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 
 const UltimateBusinessIntelligence2025Banner = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [isVisible, setIsVisible] = useState(true);
 
   const content = [
     {
@@ -21,18 +22,18 @@ const UltimateBusinessIntelligence2025Banner = () => {
       tags: ['AI', 'Business Intelligence', 'Enterprise', 'ROI', '2025']
     },
     {
-      id: 'ai-dashboard-2025',
-      title: 'Revolutionary AI Dashboard 2025',
-      description: 'Experience the future of data visualization with our cutting-edge AI dashboard featuring real-time analytics and predictive insights.',
-      url: '/services/ai-dashboard',
-      type: 'Service',
+      id: 'fortune-500-success-story',
+      title: 'Fortune 500 Ultimate Business Intelligence 30,000% ROI Success Story',
+      description: 'Discover how a Fortune 500 company achieved unprecedented returns through AI-powered business intelligence transformation.',
+      url: '/case-studies/fortune-500-ultimate-business-intelligence-30000-roi-success-story',
+      type: 'Case Study',
       metrics: {
-        users: '1M+',
-        uptime: '99.9%',
-        response: '<100ms',
-        insights: 'Real-time'
+        roi: '30,000%',
+        savings: '$750M',
+        timeline: '18 months',
+        accuracy: '99.9%'
       },
-      tags: ['Dashboard', 'Analytics', 'Real-time', 'AI', '2025']
+      tags: ['Fortune 500', 'Case Study', 'ROI', 'Success Story', '2025']
     },
     {
       id: 'enterprise-automation-2025',
@@ -44,13 +45,11 @@ const UltimateBusinessIntelligence2025Banner = () => {
         automation: '95%',
         productivity: '300%',
         efficiency: '400%',
-        cost: '80% reduction'
+        cost: '80% ↓'
       },
       tags: ['Automation', 'Enterprise', 'Productivity', 'Efficiency', '2025']
     }
   ];
-
-  const currentContent = content[currentSlide];
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -60,11 +59,7 @@ const UltimateBusinessIntelligence2025Banner = () => {
     return () => clearInterval(timer);
   }, [content.length]);
 
-  const handleClose = () => {
-    setIsVisible(false);
-  };
-
-  if (!isVisible) return null;
+  const currentContent = content[currentSlide];
 
   return (
     <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">
@@ -89,7 +84,7 @@ const UltimateBusinessIntelligence2025Banner = () => {
             <span className="text-cyan-400 font-bold text-xl">
               BREAKING: ULTIMATE BUSINESS INTELLIGENCE REVOLUTION 2025
             </span>
-            <span className='text-2xl'>⚡</span>
+            <span className="text-2xl">⚡</span>
           </div>
           <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-6">
             {currentContent.title}
@@ -112,46 +107,32 @@ const UltimateBusinessIntelligence2025Banner = () => {
                   NEW 2025
                 </span>
               </div>
-              
-              <button
-                onClick={handleClose}
-                className="text-gray-300 hover:text-white transition-colors"
-                aria-label="Close banner"
-              >
-                ×
-              </button>
             </div>
 
-            <h2 className="text-2xl font-bold mb-2 text-white">
-              {currentContent.title}
-            </h2>
-            
-            <p className="text-gray-200 mb-4 max-w-2xl">
-              {currentContent.description}
-            </p>
-            
-            <div className="flex flex-wrap gap-4 mb-4">
+            {/* Metrics Grid */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8">
               {Object.entries(currentContent.metrics).map(([key, value]) => (
                 <div key={key} className="text-center">
-                  <div className="text-2xl font-bold text-cyan-400">{value}</div>
-                  <div className="text-xs text-gray-300 capitalize">
+                  <div className="text-3xl font-bold text-cyan-400 mb-2">{value}</div>
+                  <div className="text-sm text-gray-300 capitalize">
                     {key.replace(/([A-Z])/g, ' $1').trim()}
                   </div>
                 </div>
               ))}
             </div>
-            
-            <div className="flex flex-wrap gap-2 mb-4">
+
+            {/* Tags */}
+            <div className="flex flex-wrap gap-2 mb-8">
               {currentContent.tags.map((tag) => (
                 <span
                   key={tag}
-                  className="bg-white/10 text-white px-2 py-1 rounded text-xs"
+                  className="px-3 py-1 bg-white/10 text-gray-300 text-sm rounded-full border border-white/20"
                 >
                   {tag}
                 </span>
               ))}
             </div>
-            
+
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
               <Link

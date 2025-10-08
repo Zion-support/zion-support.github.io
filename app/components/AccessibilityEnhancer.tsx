@@ -25,7 +25,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   const [isHighContrast, setIsHighContrast] = useState(false);
   const [isReducedMotion, setIsReducedMotion] = useState(false);
   const [focusVisible, setFocusVisible] = useState(false);
-  const [fontSize, setFontSize] = useState(16);
+  const [fontSize, _setFontSize] = useState(16);
   const skipLinkRef = useRef<HTMLAnchorElement | null>(null);
 
   const defaultConfig: AccessibilityConfig = {
@@ -267,8 +267,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     }
   };
 
-  // Utility functions are available via callbacks
-  // Note: If imperative handle is needed, component signature should be updated with forwardRef
   // Helper functions
   const addSkipLinks = useCallback(() => {
     const skipLinksContainer = document.createElement('div');
