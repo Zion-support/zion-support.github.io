@@ -26,16 +26,6 @@ const PerformanceMonitor: React.FC = () => {
   const [, setPerformanceScore] = useState(0);
 
   useEffect(() => {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    // const _reportWebVitals = (_metric: { name: string; value: number }) => {
-    //   // Log to console in development (only on client side)
-    //   if (typeof window !== 'undefined' && enableConsoleLogging) {
-    //     logger.info('Web Vital captured', { name: _metric.name, value: _metric.value });
-    //   }
-    // };
-=======
     const updateMetrics = () => {
       const currentMetrics: PerformanceMetrics = {
         lcp: null,
@@ -47,7 +37,6 @@ const PerformanceMonitor: React.FC = () => {
         loadTime: 0,
         memoryUsage: 0,
       };
->>>>>>> cursor/fix-errors-and-merge-to-main-ea96
 
       // Monitor Core Web Vitals
       const navigation = performance.getEntriesByType('navigation')[0] as
@@ -75,31 +64,11 @@ const PerformanceMonitor: React.FC = () => {
 
     const getPerformanceScore = (currentMetrics: PerformanceMetrics): number => {
       let score = 100;
-<<<<<<< HEAD
-      if (metrics.renderTime > 1500) score -= 15;
-      if (metrics.loadTime > 3000) score -= 20;
-      if (metrics.memoryUsage > 50) score -= 10;
-      return Math.max(0, score);    };
-=======
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-012c
-    const metrics: PerformanceMetrics = {
-      lcp: null,
-      fid: null,
-      cls: null,
-      fcp: null,
-      ttfb: null
-<<<<<<< HEAD
-=======
       if (currentMetrics.renderTime > 1500) score -= 15;
       if (currentMetrics.loadTime > 3000) score -= 20;
       if (currentMetrics.memoryUsage > 50) score -= 10;
       return Math.max(0, score);
->>>>>>> cursor/fix-errors-and-merge-to-main-ea96
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-012c
     };
->>>>>>> cursor/fix-errors-and-merge-to-main-deb0
 
     // Measure Core Web Vitals
     const measureWebVitals = () => {
@@ -117,37 +86,11 @@ const PerformanceMonitor: React.FC = () => {
           // LCP observer not supported
         }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-      setMetrics(currentMetrics);
-
-      const score = getPerformanceScore();
-      setPerformanceScore(score);
-
-      if (enableConsoleLogging) {
-        if (typeof console !== 'undefined') {
-          logger.debug('Performance Metrics', {
-            metrics: currentMetrics,
-            score,          });
-=======
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-012c
-        // FID - First Input Delay
-        const fidObserver = new PerformanceObserver((list) => {
-          list.getEntries().forEach((entry: any) => {
-            metrics.fid = entry.processingStart - entry.startTime;
-<<<<<<< HEAD
-=======
         // FID - First Input Delay
         const fidObserver = new PerformanceObserver((list) => {
           list.getEntries().forEach((entry: PerformanceEntry & { processingStart: number; startTime: number }) => {
             setMetrics(prev => ({ ...prev, fid: entry.processingStart - entry.startTime }));
->>>>>>> cursor/fix-errors-and-merge-to-main-ea96
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-012c
           });
->>>>>>> cursor/fix-errors-and-merge-to-main-deb0
         });
         
         try {
@@ -244,32 +187,17 @@ const PerformanceMonitor: React.FC = () => {
 
     monitorResources();
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    // Set up interval for continuous monitoring
-    const interval = setInterval(updateMetrics, updateInterval);
-=======
-=======
     // Initial metrics update
     updateMetrics();
-=======
-    return () => {
-      // Cleanup observers if needed
-    };
-  }, []);
->>>>>>> cursor/fix-errors-and-merge-to-main-012c
 
     // Set up interval for continuous monitoring
     const interval = setInterval(updateMetrics, 5000);
 
->>>>>>> cursor/fix-errors-and-merge-to-main-ea96
     return () => {
       clearInterval(interval);
     };
   }, []);
 
->>>>>>> cursor/fix-errors-and-merge-to-main-deb0
   return null;
 };
 
