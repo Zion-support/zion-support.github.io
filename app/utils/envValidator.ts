@@ -26,8 +26,8 @@ class EnvValidator {
     this.validateOptionalVars()
 
     return {
-      isValid: this.errors.length === 0
-      errors: this.errors
+      isValid: this.errors.length === 0,
+      errors: this.errors,
       warnings: this.warnings
     }
   }

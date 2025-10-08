@@ -9,17 +9,17 @@ interface PerformanceMetrics {
   navigation?: any
 }
 interface PerformanceOptimizerConfig {
-  enableLazyLoading: boolean,
-  enablePreloading: boolean,
-  enableCompression: boolean,
-  enableCaching: boolean,
-  enableMonitoring: boolean,
+  enableLazyLoading: boolean;
+  enablePreloading: boolean;
+  enableCompression: boolean;
+  enableCaching: boolean;
+  enableMonitoring: boolean;
 }
 class PerformanceOptimizer {
-  private config: PerformanceOptimizerConfig,
-  private metrics: PerformanceMetrics = {}
-  private observers: PerformanceObserver[] = []
-  private marks: Map<string, number> = new Map()
+  private config: PerformanceOptimizerConfig;
+  private metrics: PerformanceMetrics = {};
+  private observers: PerformanceObserver[] = [];
+  private marks: Map<string, number> = new Map();
 
   constructor(config: Partial<PerformanceOptimizerConfig> = {}) {
     this.config = {

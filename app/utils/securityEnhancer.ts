@@ -5,24 +5,24 @@ import React from 'react'
  */
 
 interface SecurityConfig {
-  enableCSP: boolean,
-  enableHSTS: boolean,
-  enableXSSProtection: boolean,
-  enableCSRFProtection: boolean,
-  enableContentSecurityPolicy: boolean,
-  allowedOrigins: string[]
-  trustedDomains: string[]
+  enableCSP: boolean;
+  enableHSTS: boolean;
+  enableXSSProtection: boolean;
+  enableCSRFProtection: boolean;
+  enableContentSecurityPolicy: boolean;
+  allowedOrigins: string[];
+  trustedDomains: string[];
 }
 interface SecurityMetrics {
-  blockedRequests: number,
-  suspiciousActivity: number,
-  securityViolations: number,
-  lastScanTime: number,
+  blockedRequests: number;
+  suspiciousActivity: number;
+  securityViolations: number;
+  lastScanTime: number;
 }
 class SecurityEnhancer {
-  private config: SecurityConfig,
-  private metrics: SecurityMetrics,
-  private eventListeners: Array<() => void> = []
+  private config: SecurityConfig;
+  private metrics: SecurityMetrics;
+  private eventListeners: Array<() => void> = [];
 
   constructor(config: Partial<SecurityConfig> = {}) {
     this.config = {

@@ -8,17 +8,17 @@ import { logger } from './logger'
 import { performanceMonitor } from './performanceMonitor'
 
 export interface HealthStatus {
-  status: 'healthy' | 'degraded' | 'unhealthy'
-  timestamp: number,
-  uptime: number,
-  checks: HealthCheck[]
+  status: 'healthy' | 'degraded' | 'unhealthy';
+  timestamp: number;
+  uptime: number;
+  checks: HealthCheck[];
 }
 export interface HealthCheck {
-  name: string,
-  status: 'pass' | 'warn' | 'fail'
-  message?: string
-  details?: Record<string, unknown>
-  duration?: number
+  name: string;
+  status: 'pass' | 'warn' | 'fail';
+  message?: string;
+  details?: Record<string, unknown>;
+  duration?: number;
 }
 export type HealthCheckFunction = () => Promise<HealthCheck> | HealthCheck
 
@@ -86,20 +86,17 @@ class HealthCheckService {
         const duration = performance.now() - startTime
         
         checks.push({
-          ...check
-          name
+          ...check,
+          name,
           duration
         })
-
-      } catch {
-logger._error(`Health check "${name}" failed`, _error as Error)
 
       } catch (error) {
         logger.error(`Health check "${name}" failed`, error as Error)
 
         checks.push({
-          name
-          status: 'fail'
+          name,
+          status: 'fail',
           message: error instanceof Error ? error.message : 'Unknown error'
         })
       }
