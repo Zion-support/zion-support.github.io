@@ -60,7 +60,7 @@ class PerformanceMonitor {
         this.observeEntry('largest-contentful-paint', (entries) => {
           const lastEntry = entries[entries.length - 1] as any;
           if (lastEntry) {
-            this.recordMetric('LCP', lastEntry.renderTime || lastEntry.loadTime);
+            this.recordMetric('LCP', lastEntry.renderTime || lastEntry.loadTime || lastEntry.startTime);
           }
         });
 
