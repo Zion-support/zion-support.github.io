@@ -114,7 +114,7 @@ const, September30NewContentMegaBanne, r = () => {
             <p className="text-sm text-yellow-200 mb-4">200+ groundbreaking insights</p>
             <div className="flex items-center gap-2 text-yellow-400 font-semibold">
               Explore Now
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              <Link className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </div>
           </Link>
         </div>

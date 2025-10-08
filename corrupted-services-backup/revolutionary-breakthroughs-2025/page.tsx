@@ -1,5 +1,5 @@
 import React from 'react';
-import { Brain, Atom, Bot, ArrowRight, Sparkles, TrendingUp, Star, Zap, Rocket, CheckCircle } from 'lucide-react';
+import { Brain, ArrowRight, Sparkles, TrendingUp, Star, CheckCircle } from 'lucide-react';
 import { revolutionaryBreakthroughs2025, breakthroughServices2025, latestCaseStudies2025 } from '../../../src/content/revolutionary-ai-breakthroughs-2025';
 
 export default function RevolutionaryBreakthroughs2025() {
@@ -59,7 +59,7 @@ export default function RevolutionaryBreakthroughs2025() {
               <a 
                 href="/"
                 className="text-left"> </a><span>Get Implementation Guide</span>
-                <ArrowRight className="text-left" />
+                <Link className="text-left" />
               </a>
             </div>
         </div>
@@ -74,7 +74,7 @@ export default function RevolutionaryBreakthroughs2025() {
           </div>
 
           <div className="text-left">{revolutionaryBreakthroughs2025.map((breakthrough, index) => {/* content */}
-              const IconComponent = getIconComponent(breakthrough.icon);
+              const _IconComponent = getIconComponent(breakthrough.icon);
               return (
     </div><div>
       <div> </div><div> </div></div>
@@ -124,7 +124,7 @@ export default function RevolutionaryBreakthroughs2025() {
                     href={`/blog/${breakthrough.slug}`}
                     className="text-left"> </a><IconComponent className="text-left" />
                     <span>Explore Breakthrough</span>
-                    <ArrowRight className="text-left" />
+                    <Link className="text-left" />
                   </a>
                 </div>
               );
@@ -141,7 +141,7 @@ export default function RevolutionaryBreakthroughs2025() {
           </div>
 
           <div className="text-left">{breakthroughServices2025.map((service, index) => {/* content */}
-              const IconComponent = getIconComponent(service.icon);
+              const _IconComponent = getIconComponent(service.icon);
               return (
     </div><div>
       <div> </div><div> </div></div>
@@ -191,7 +191,7 @@ export default function RevolutionaryBreakthroughs2025() {
                     href="/contact"
                     className="text-left"> </a><IconComponent className="text-left" />
                     <span>Get Started</span>
-                    <ArrowRight className="text-left" />
+                    <Link className="text-left" />
                   </a>
                 </div>
               );
@@ -245,7 +245,7 @@ export default function RevolutionaryBreakthroughs2025() {
                 <a
                   href={`/case-studies/${caseStudy.slug}`}
                   className="text-left"> </a><span>View Full Case Study</span>
-                  <ArrowRight className="text-left" />
+                  <Link className="text-left" />
                 </a>
               </div>
             ))}
@@ -267,7 +267,7 @@ export default function RevolutionaryBreakthroughs2025() {
                   <a
                     href="/contact"
                     className="text-left"> </a><span>Schedule Consultation</span>
-                    <ArrowRight className="text-left" />
+                    <Link className="text-left" />
                   </a>
                 </div>
             </div>

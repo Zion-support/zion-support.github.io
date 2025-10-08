@@ -53,8 +53,7 @@ class AdvancedPerformanceMonitor {
     this.setupMemoryMonitoring();
     this.setupNetworkMonitoring();
 
-    console.log('Advanced Performance Monitor started');
-  }
+    //     }
 
   /**
    * Stop performance monitoring
@@ -65,8 +64,7 @@ class AdvancedPerformanceMonitor {
       this.observer.disconnect();
       this.observer = null;
     }
-    console.log('Advanced Performance Monitor stopped');
-  }
+    //     }
 
   /**
    * Get performance data
@@ -97,20 +95,13 @@ class AdvancedPerformanceMonitor {
       };
     }
 
-    const avgLoadTime =
-      this.data.reduce((sum, d) => sum + d.loadTime, 0) / this.data.length;
-    const avgFCP =
-      this.data.reduce((sum, d) => sum + d.firstContentfulPaint, 0) /
-      this.data.length;
+    const _avgLoadTime = this.data.reduce((sum, d) => sum + d.loadTime, 0) / this.data.length;
+    const _avgFCP = this.data.reduce((sum, d) => sum + d.firstContentfulPaint, 0) / this.data.length;
     const avgLCP =
-      this.data.reduce((sum, d) => sum + d.largestContentfulPaint, 0) /
-      this.data.length;
+      this.data.reduce((sum, d) => sum + d.largestContentfulPaint, 0) / this.data.length;
     const avgCLS =
-      this.data.reduce((sum, d) => sum + d.cumulativeLayoutShift, 0) /
-      this.data.length;
-    const avgFID =
-      this.data.reduce((sum, d) => sum + d.firstInputDelay, 0) /
-      this.data.length;
+      this.data.reduce((sum, d) => sum + d.cumulativeLayoutShift, 0) / this.data.length;
+    const _avgFID = this.data.reduce((sum, d) => sum + d.firstInputDelay, 0) / this.data.length;
 
     // Calculate performance score (0-100)
     const performanceScore = this.calculatePerformanceScore({
@@ -138,7 +129,7 @@ class AdvancedPerformanceMonitor {
     if (!('PerformanceObserver' in window)) return;
 
     this.observer = new PerformanceObserver(list => {
-      const entries = list.getEntries();
+      const _entries = list.getEntries();
       entries.forEach(entry => {
         this.handlePerformanceEntry(entry);
       });
@@ -146,16 +137,10 @@ class AdvancedPerformanceMonitor {
 
     try {
       this.observer.observe({
-        entryTypes: [
-          'navigation',
-          'paint',
-          'largest-contentful-paint',
-          'layout-shift',
-        ],
+        entryTypes: ['navigation', 'paint', 'largest-contentful-paint', 'layout-shift'],
       });
     } catch (error) {
-      console.warn('Performance Observer setup failed:', error);
-    }
+      //       }
   }
 
   /**
@@ -188,8 +173,7 @@ class AdvancedPerformanceMonitor {
         });
       })
       .catch(error => {
-        console.warn('Web Vitals import failed:', error);
-      });
+        //         });
   }
 
   /**
@@ -199,7 +183,7 @@ class AdvancedPerformanceMonitor {
     if (!('memory' in performance)) return;
 
     const checkMemory = () => {
-      const memory = (performance as any).memory;
+      const _memory = (performance as any).memory;
       if (memory) {
         this.updateMetric('memoryUsage', memory.usedJSHeapSize);
       }
@@ -216,7 +200,7 @@ class AdvancedPerformanceMonitor {
   private setupNetworkMonitoring(): void {
     if (!('connection' in navigator)) return;
 
-    const connection = (navigator as any).connection;
+    //     const connection = (navigator as any).connection;
     if (connection) {
       this.updateMetric('networkInfo', connection);
     }
@@ -233,13 +217,12 @@ class AdvancedPerformanceMonitor {
 
     switch (entry.entryType) {
       case 'navigation':
-        const navEntry = entry as PerformanceNavigationTiming;
+        const _navEntry = entry as PerformanceNavigationTiming;
         data.loadTime = navEntry.loadEventEnd - navEntry.loadEventStart;
-        data.timeToInteractive =
-          navEntry.domInteractive - navEntry.navigationStart;
+        data.timeToInteractive = navEntry.domInteractive - navEntry.navigationStart;
         break;
       case 'paint':
-        const paintEntry = entry as PerformancePaintTiming;
+        const _paintEntry = entry as PerformancePaintTiming;
         if (paintEntry.name === 'first-contentful-paint') {
           data.firstContentfulPaint = paintEntry.startTime;
         }
@@ -248,7 +231,7 @@ class AdvancedPerformanceMonitor {
         data.largestContentfulPaint = entry.startTime;
         break;
       case 'layout-shift':
-        const layoutShiftEntry = entry as any;
+        const _layoutShiftEntry = entry as any;
         if (!layoutShiftEntry.hadRecentInput) {
           data.cumulativeLayoutShift = layoutShiftEntry.value;
         }
@@ -264,8 +247,8 @@ class AdvancedPerformanceMonitor {
   /**
    * Update metric
    */
-  private updateMetric(metric: keyof PerformanceData, value: any): void {
-    const latestData = this.data[this.data.length - 1];
+  private updateMetric(metric: keyof PerformanceData, value: unknown): void {
+    const _latestData = this.data[this.data.length - 1];
     if (latestData && Date.now() - latestData.timestamp < 1000) {
       // Update latest entry if it's recent
       (latestData as any)[metric] = value;
@@ -309,9 +292,7 @@ class AdvancedPerformanceMonitor {
     const warnings: string[] = [];
 
     if (data.loadTime > this.thresholds.loadTime) {
-      warnings.push(
-        `Load time ${data.loadTime}ms exceeds threshold ${this.thresholds.loadTime}ms`
-      );
+      warnings.push(`Load time ${data.loadTime}ms exceeds threshold ${this.thresholds.loadTime}ms`);
     }
     if (data.firstContentfulPaint > this.thresholds.firstContentfulPaint) {
       warnings.push(
@@ -335,8 +316,7 @@ class AdvancedPerformanceMonitor {
     }
 
     if (warnings.length > 0) {
-      console.warn('Performance threshold exceeded:', warnings);
-    }
+      //       }
   }
 
   /**
@@ -349,7 +329,7 @@ class AdvancedPerformanceMonitor {
     cumulativeLayoutShift: number;
     firstInputDelay: number;
   }): number {
-    let score = 100;
+    let _score = 100;
 
     // Load time scoring (40% weight)
     if (metrics.loadTime > 3000) score -= 40;
@@ -402,5 +382,5 @@ class AdvancedPerformanceMonitor {
 }
 
 // Export singleton instance
-const performanceMonitor = new AdvancedPerformanceMonitor();
+// const performanceMonitor = new AdvancedPerformanceMonitor();
 export default performanceMonitor;

@@ -10,6 +10,11 @@ export interface PerformanceMetric {
   timestamp: number;
 }
 
+interface LayoutShift extends PerformanceEntry {
+  value: number;
+  hadRecentInput: boolean;
+}
+
 export interface WebVitals {
   CLS?: PerformanceMetric;  // Cumulative Layout Shift
   FID?: PerformanceMetric;  // First Input Delay
@@ -19,12 +24,31 @@ export interface WebVitals {
   INP?: PerformanceMetric;  // Interaction to Next Paint
 }
 
+// Layout Shift API types
+interface LayoutShift extends PerformanceEntry {
+  value: number;
+  hadRecentInput: boolean;
+  lastInputTime: number;
+  sources: LayoutShiftAttribution[];
+}
+
+interface LayoutShiftAttribution {
+  node?: Node;
+  previousRect: DOMRectReadOnly;
+  currentRect: DOMRectReadOnly;
+}
+
 export interface CustomMetric {
   name: string;
   value: number;
   unit: string;
   timestamp: number;
   tags?: Record<string, string>;
+}
+
+interface LayoutShift extends PerformanceEntry {
+  value: number;
+  hadRecentInput: boolean;
 }
 
 class PerformanceMonitor {
@@ -60,7 +84,7 @@ class PerformanceMonitor {
 
     // Log in development
     if (process.env['NODE_ENV'] === 'development') {
-      console.log(`[Performance] ${name}: ${value}${unit}`, tags);
+//       console.log(`[Performance] ${name}: ${value}${unit}`, tags);
     }
   }
 
@@ -243,7 +267,7 @@ class PerformanceMonitor {
       clsObserver.observe({ entryTypes: ['layout-shift'] });
       this.observers.push(clsObserver);
     } catch (error) {
-      console.warn('Failed to observe Web Vitals:', error);
+//       console.warn('Failed to observe Web Vitals:', error);
     }
   }
 
@@ -353,7 +377,7 @@ class PerformanceMonitor {
       try {
         callback(metric);
       } catch (error) {
-        console.error('Error in performance callback:', error);
+//         console.error('Error in performance callback:', error);
       }
     });
   }

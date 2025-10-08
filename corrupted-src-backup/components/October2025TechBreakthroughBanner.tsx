@@ -172,8 +172,8 @@ const, October2025TechBreakthroughBanne, r = () => {
   r:sca, l, e-1, 0, 5"
             >
               Read, Full, Analysis;
-              <ArrowRight, className="w-4 h-4, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
-              <ArrowRight, className="w-4 h-4, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
+              <Link, className="w-4 h-4, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
+              <Link, className="w-4 h-4, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
             </Li, n, k>
           </d, i, v>
           {/* Autonomous, Risk, Management */}
@@ -238,8 +238,8 @@ const, October2025TechBreakthroughBanne, r = () => {
   r:sca, l, e-1, 0, 5"
             >
               Explore, Platfor, m;
-              <ArrowRight, className="w-4 h-4, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
-              <ArrowRight, className="w-4 h-4, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
+              <Link, className="w-4 h-4, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
+              <Link, className="w-4 h-4, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
             </Li, n, k>
           </d, i, v>
           {/* AI-Powered, Digital, Twins */}
@@ -304,8 +304,8 @@ const, October2025TechBreakthroughBanne, r = () => {
   r:sca, l, e-1, 0, 5"
             >
               Discover, Technolog, y;
-              <ArrowRight, className="w-4 h-4, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
-              <ArrowRight, className="w-4 h-4, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
+              <Link, className="w-4 h-4, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
+              <Link, className="w-4 h-4, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
             </Li, n, k>
           </d, i, v>
         </d, i, v>
@@ -413,10 +413,10 @@ const, October2025TechBreakthroughBanne, r = () => {
             >
               <Sparkles, className="w-6 h-6  />
               Read, All, 3 Breakthrough, Article, s;
-              <ArrowRight, className="w-6 h-6  />
+              <Link, className="w-6 h-6  />
               <Sparkles, className="w-6 h-6" />";
               Read, All, 3 Breakthrough, Article, s;
-              <ArrowRight, className="w-6 h-6" />";
+              <Link, className="w-6 h-6" />";
             </Li, n, k>
             <Li, n, k
   to="/conta, c, t"
@@ -424,8 +424,8 @@ const, October2025TechBreakthroughBanne, r = () => {
   r:sca, l, e-105, tex, t-lg"
             >
               Get, Free, Assessment;
-              <ArrowRight, className="w-6 h-6  />
-              <ArrowRight, className="w-6 h-6" />";
+              <Link, className="w-6 h-6  />
+              <Link, className="w-6 h-6" />";
             </Li, n, k>
           </d, i, v>
           <p, className="te, x, t-cy, a, n-200, tex, t-sm, m, t-4">";

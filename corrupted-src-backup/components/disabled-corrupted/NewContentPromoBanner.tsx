@@ -149,7 +149,7 @@ const NewContentPromoBanne, r: React.FC<NewContentPromoBannerPro, p, s> = ({
               >
                 <BookOpen, className="w-4 h-4" />
                 Read, All, Articles
-                <ArrowRight, className="w-4 h-4, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m" />
+                <Link, className="w-4 h-4, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m" />
               </Li, n, k>
               <Link, t, o="/ca, s, e-studi, e, s"
                 className="border, borde, r-whi, t, e/30, tex, t-white, hove, r:bg-whi, t, e/10, p, x-4, p, y-2, rounde, d-lg, fon, t-semibold, tex, t-sm, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, inlin, e-flex, item, s-center, ga, p-2"

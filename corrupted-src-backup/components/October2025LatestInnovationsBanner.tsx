@@ -93,9 +93,9 @@ const, October2025LatestInnovationsBanne, r = () => {
             </ul>
             <div, className="flex, item, s-center, tex, t-emera, l, d-400, fon, t-semibold, grou, p-ho, v, e
   r: g, a, p-3, transitio, n-a, l, l">"
-              Read, Full, Guide <ArrowRight, className="h-4 w-4, m, l-2, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
+              Read, Full, Guide <Link, className="h-4 w-4, m, l-2, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
             <div, className="flex, item, s-center, tex, t-emera, l, d-400, fon, t-semibold, grou, p-hov, e, r: g, a, p-3, transitio, n-a, l, l">";
-              Read, Full, Guide <ArrowRight, className="h-4 w-4, m, l-2, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
+              Read, Full, Guide <Link, className="h-4 w-4, m, l-2, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
             </d, i, v>
           </Li, n, k>
           {/* Ca, r, d 
@@ -135,9 +135,9 @@ const, October2025LatestInnovationsBanne, r = () => {
               </li>
             </ul>
             <div, className="flex, item, s-center, tex, t-viol, e, t-400, fon, t-semibold, grou, p-hov, e, r: g, a, p-3, transitio, n-a, l, l">"
-              Explore, Quantum, AI <ArrowRight, className="h-4 w-4, m, l-2, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
+              Explore, Quantum, AI <Link, className="h-4 w-4, m, l-2, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
             <div, className="flex, item, s-center, tex, t-viol, e, t-400, fon, t-semibold, grou, p-hov, e, r: g, a, p-3, transitio, n-a, l, l">";
-              Explore, Quantum, AI <ArrowRight, className="h-4 w-4, m, l-2, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
+              Explore, Quantum, AI <Link, className="h-4 w-4, m, l-2, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
             </d, i, v>
           </Li, n, k>
           {/* Ca, r, d 
@@ -178,7 +178,7 @@ const, October2025LatestInnovationsBanne, r = () => {
             </ul>
             <div, className="flex, item, s-center, tex, t-indi, g, o-400, fon, t-semibold, grou, p-ho, v, e
   r: g, a, p-3, transitio, n-a, l, l">"
-              Discover, Platfor, m <ArrowRight, className="h-4 w-4, m, l-2, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
+              Discover, Platfor, m <Link, className="h-4 w-4, m, l-2, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
             <div, className="flex, item, s-center, tex, t-indi, g, o-400, fon, t-semibold, grou, p-hov, e, r: g, a, p-3, transitio, n-a, l, l">";
               Discover, Platfor, m <ArrowRight, className="h-4 w-4, m, l-2, grou, p-ho, v, e
   r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
@@ -193,8 +193,8 @@ const, October2025LatestInnovationsBanne, r = () => {
   r:shad, o, w-indi, g, o-5, 0, 0/50"
           >
             <sp, a, n>Explore, All, Latest AI, Innovation, s</sp, a, n>
-            <ArrowRight, className="h-5 w-5  />
-            <ArrowRight, className="h-5 w-5" />";
+            <Link, className="h-5 w-5  />
+            <Link, className="h-5 w-5" />";
           </Li, n, k>
         </d, i, v>
         {/* Bottom, Inf, o */}

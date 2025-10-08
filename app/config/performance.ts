@@ -2,7 +2,6 @@
  * Performance Configuration
  * Centralized performance monitoring and optimization settings
  */
-
 export const performanceConfig = {
   // Core Web Vitals thresholds
   metrics: {
@@ -27,7 +26,6 @@ export const performanceConfig = {
       needsImprovement: 1800,
     },
   },
-
   // Cache strategies
   cache: {
     static: {
@@ -43,17 +41,14 @@ export const performanceConfig = {
       staleWhileRevalidate: 30, // 30 seconds
     },
   },
-
   // Resource hints
   preload: [
     { href: '/fonts/inter-var.woff2', as: 'font', type: 'font/woff2', crossorigin: 'anonymous' },
   ],
-
   prefetch: [
     '/api/health',
     '/api/config',
   ],
-
   // Image optimization
   images: {
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
@@ -62,7 +57,6 @@ export const performanceConfig = {
     minimumCacheTTL: 60,
     dangerouslyAllowSVG: false,
   },
-
   // Bundle optimization
   bundle: {
     minChunkSize: 20000,
@@ -82,7 +76,6 @@ export const performanceConfig = {
       },
     },
   },
-
   // Performance monitoring
   monitoring: {
     enabled: true,

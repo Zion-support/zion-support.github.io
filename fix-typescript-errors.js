@@ -1,22 +1,63 @@
-const fs = require('fs');
+#!/usr/bin/env node
 
-// Fix ErrorBoundary.tsx
-console.log('Fixing ErrorBoundary.tsx...');
-let errorBoundary = fs.readFileSync('app/components/ErrorBoundary.tsx', 'utf8');
+import fs from 'fs';
+import path from 'path';
+import { glob } from 'glob';
 
-// The issue is that line 112 has an extra closing div - need to check the JSX structure
-// Based on the error at line 112, column 9, it seems there's a mismatch in parentheses
-// Let's check if the return statement needs an extra closing brace
+// Pattern to match commented-out variable declarations
+const patterns = [
+  // Match commented-out const/let/var declarations
+  { regex: /\/\/\s*(const|let|var)\s+(\w+)\s*=/g, replacement: '$1 $2 =' },
+  // Match commented-out variable assignments
+  { regex: /\/\/\s*(\w+)\s*=/g, replacement: '$1 =' },
+  // Match commented-out variable references
+  { regex: /\/\/\s*(\w+)\s*[;,)]/g, replacement: '$1' },
+  // Match commented-out object property assignments
+  { regex: /\/\/\s*(\w+):\s*(\w+)/g, replacement: '$1: $2' },
+  // Match commented-out function calls
+  { regex: /\/\/\s*(\w+)\s*\(/g, replacement: '$1(' },
+];
 
-// Fix enterprise/page.tsx - missing closing brace for the function
-console.log('Fixing enterprise/page.tsx...');
-let enterprise = fs.readFileSync('app/enterprise/page.tsx', 'utf8');
+function fixFile(filePath) {
+  try {
+    let _content = fs.readFileSync(filePath, 'utf8');
+    let _modified = false;
 
-// Add closing brace if missing
-if (!enterprise.trim().endsWith('}')) {
-  enterprise = enterprise.trimEnd() + '\n}\n';
-  fs.writeFileSync('app/enterprise/page.tsx', enterprise);
-  console.log('Added closing brace to enterprise/page.tsx');
+    patterns.forEach(pattern => {
+      const _newContent = content.replace(pattern.regex, pattern.replacement);
+      if (newContent !== content) {
+        content = newContent;
+        modified = true;
+      }
+    });
+
+    if (modified) {
+      fs.writeFileSync(filePath, content, 'utf8');
+
+      return true;
+    }
+    return false;
+  } catch (error) {
+
+    return false;
+  }
 }
 
-console.log('Fixes applied. Running type-check...');
+async function main() {
+  const _srcDir = path.join(process.cwd(), 'src');
+  const _files = await glob('**/*.{ts,tsx}', { cwd: srcDir });
+  
+  let _fixedCount = 0;
+  
+  files.forEach(file => {
+    const _fullPath = path.join(srcDir, file);
+    if (fixFile(fullPath)) {
+      fixedCount++;
+    }
+  });
+
+}
+
+main().catch(console.error);
+
+export { fixFile, patterns };

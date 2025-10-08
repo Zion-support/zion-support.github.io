@@ -37,7 +37,8 @@ const config: AppConfig = {
   app: {
     name: 'Zion Tech Group',
     version: '1.0.0',
-    environment: (process.env['NODE_ENV'] as 'development' | 'production' | 'test') || 'development',
+    environment:
+      (process.env['NODE_ENV'] as 'development' | 'production' | 'test') || 'development',
   },
   api: {
     baseUrl: process.env.NEXT_PUBLIC_API_URL || 'https://api.zion.app',
@@ -68,9 +69,9 @@ const config: AppConfig = {
  * @example getConfig('app.name') => 'Zion Tech Group'
  */
 export function getConfig<T = unknown>(keyPath: string): T {
-  const keys = keyPath.split('.');
+  const _keys = keyPath.split('.');
   let value: unknown = config;
-  
+
   for (const key of keys) {
     if (value && typeof value === 'object' && key in value) {
       value = (value as Record<string, unknown>)[key];
@@ -78,7 +79,7 @@ export function getConfig<T = unknown>(keyPath: string): T {
       throw new Error(`Configuration key "${keyPath}" not found`);
     }
   }
-  
+
   return value as T;
 }
 

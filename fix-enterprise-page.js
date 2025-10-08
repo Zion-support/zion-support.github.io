@@ -2,9 +2,7 @@
 
 import fs from 'fs';
 
-console.log('🔧 Fixing enterprise page JSX syntax errors...');
-
-const fixedContent = `import Link from 'next/link';
+// // const fixedContent = `import Link from 'next/link';
 
 export const metadata = {
   title: 'Enterprise Solutions - Zion Tech Group',
@@ -188,4 +186,4 @@ export default function EnterprisePage() {
 // Write the fixed content
 fs.writeFileSync('app/enterprise/page.tsx', fixedContent);
 
-console.log('✅ Fixed enterprise page JSX syntax errors');
+// 

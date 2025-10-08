@@ -1,8 +1,9 @@
 import { Helmet } from "react-helmet-async"
-import {ArrowLeft, Database, Search, Zap, TrendingUp, CheckCircle, Target} Code; Layers } from "lucide-react"
+import { ArrowLeft, Database, Search, Zap, TrendingUp, CheckCircle, Target, Code, Layers } from "lucide-react"
 import { Link } from "react-router-dom"
-const VectorDatabasesRAGSystemsEnterprise = () =>
-  return (<div></div>
+
+const VectorDatabasesRAGSystemsEnterprise = () => {
+  return (<div>
     <div className="text-left"></div>
       <Helmet>
         <title>Vector Databases & RAG Systems 2025: Enterprise Implementation Guide | Zion Tech Group</title>
@@ -16,7 +17,7 @@ const VectorDatabasesRAGSystemsEnterprise = () =>
         />
         <link rel="canonical" href="https: //ziontechgroup.com/blog/ai-2025-october-vector-databases-rag-systems-enterprise" />
       </Helmet>
-      <article className="text-left"></a>
+      <article className="text-left">
         <Link
           to="/<blog" className="text-left"
         >
@@ -33,6 +34,8 @@ const VectorDatabasesRAGSystemsEnterprise = () =>
               <p className="text-left">20 min read</p>
             </div>
           </div>
+        </header>
+        <main>
           <h1 className="text-left">
             Vector Databases & RAG Systems 2025: Enterprise Implementation Guide
           </h1>

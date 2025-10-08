@@ -3,18 +3,13 @@
 import { execSync } from 'child_process';
 import fs from 'fs';
 
-console.log('Starting comprehensive PR merge process...');
-
-//Function to safely execute git commands
+// //Function to safely execute git commands
 function safeGitCommand(command, description) {
   try {
-    console.log(`Executing: ${description}`);
-    const result = execSync(command, { encoding: 'utf8', stdio: 'pipe' });
-    console.log(`✓ ${description} - Success`);
-    return { success: true, result };
+    //     //     const result = execSync(command, { encoding: 'utf8', stdio: 'pipe' });
+    //     return { success: true, result };
   } catch (error) {
-    console.log(`⚠ ${description} - Warning: ${error.message}`);
-    return { success: false, error: error.message };
+    //     return { success: false, error: error.message };
   }
 }
 
@@ -30,23 +25,18 @@ const prBranches = [
   'cursor/fix-errors-and-merge-to-main-e6e1',
 ];
 
-console.log('\n--- Attempting to merge PR branches ---');
-
-let mergedCount = 0;
-let conflictCount = 0;
+// let mergedCount = 0;
+let _conflictCount = 0;
 
 for (const branch of prBranches) {
-  console.log(`\n--- Processing branch: ${branch} ---`);
-
-  //Check if branch exists
+  //   //Check if branch exists
   const branchCheck = safeGitCommand(
     `git show-ref --verify --quiet refs/remotes/origin/${branch}`,
     `Check if ${branch} exists`
   );
 
   if (!branchCheck.success) {
-    console.log(`⚠ Branch ${branch} not found, skipping...`);
-    continue;
+    //     continue;
   }
 
   //Try to merge the branch
@@ -57,36 +47,22 @@ for (const branch of prBranches) {
 
   if (mergeResult.success) {
     mergedCount++;
-    console.log(`✓ Successfully merged ${branch}`);
-  } else {
+    //     } else {
     conflictCount++;
-    console.log(`⚠ Merge conflict or error for ${branch}`);
-
-    //Try to abort the merge if there was a conflict
+    //     //Try to abort the merge if there was a conflict
     safeGitCommand('git merge --abort', `Abort merge for ${branch}`);
   }
 }
 
-console.log(`\n--- Merge Summary ---`);
-console.log(`✓ Successfully merged: ${mergedCount} branches`);
-console.log(`⚠ Conflicts/Errors: ${conflictCount} branches`);
-
-//Push changes if any were merged
+// // // //Push changes if any were merged
 if (mergedCount > 0) {
-  const pushResult = safeGitCommand(
-    'git push origin main',
-    'Push changes to main'
-  );
+  const _pushResult = safeGitCommand('git push origin main', 'Push changes to main');
   if (pushResult.success) {
-    console.log('✓ All changes pushed to main successfully');
-  } else {
-    console.log('⚠ Error pushing changes to main');
-  }
+    //     } else {
+    //     }
 }
 
-console.log('\n--- Comprehensive merge process completed ---');
-
-// Generate a summary report
+// // Generate a summary report
 const summary = {
   timestamp: new Date().toISOString(),
   mergedBranches: mergedCount,
@@ -96,4 +72,4 @@ const summary = {
 };
 
 fs.writeFileSync('merge-summary.json', JSON.stringify(summary, null, 2));
-console.log('✓ Merge summary saved to merge-summary.json');
+// 

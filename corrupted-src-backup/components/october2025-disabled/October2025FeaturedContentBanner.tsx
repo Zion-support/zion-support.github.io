@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 const October2025FeaturedContentBanne, r = () => {
   const featuredConten, t = [
@@ -135,7 +134,7 @@ const October2025FeaturedContentBanne, r = () => {
                     </sp, a, n > <div, classNam, e = {`flex, item, s-center, tex, t-white, fon, t-semibold, grou, p-hov, e, r: transla, t, e-x-2, transitio, n-trans, f, o, r, m`}
                     >
                       Read, Full, Article
-                      <ArrowRight, classNam, e = 'w-4 h-4, m, l-2' />
+                      <Link, classNam, e = 'w-4 h-4, m, l-2' />
                     </div>
                   </div>
                 </d, i, v > {/* Hover, Effect, Overlay */}
@@ -158,7 +157,7 @@ const October2025FeaturedContentBanne, r = () => {
               className='px-8, p, y-4, b, g-sla, t, e-800, tex, t-white, fon, t-semibold, rounde, d-lg, hove, r:bg-sla, t, e-700, transitio, n-all, border, border-bl, u, e-5, 0, 0/30, inlin, e-flex, item, s-cent, e, r'
             >
               Get, a, Free Consultati, o, n
-              <ArrowRight, className='w-5 h-5, m, l-2' />
+              <Link, className='w-5 h-5, m, l-2' />
             </Li, n, k>
           </div>
         </div>

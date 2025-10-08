@@ -238,7 +238,7 @@ featur, e, d: fal, s, e;
   hr, e, f={`/bl, o, g/${conte, n, t.sl, u, g}`}`
                   classNa, m, e="gro, u, p/btn, flex, items-center, justif, y-center, ga, p-2 w-full, b, g-gradie, n, t-to-r, fro, m-purp, l, e-500, t, o-bl, u, e-600, hove, r: fr, o, m-purp, l, e-400, hove, r:to-bl, u, e-500, tex, t-white, fon, t-bold, p, y-3, p, x-6, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-purp, l, e-5, 0, 0/50, transform, hover:-transla, t, e-y-1"
                 >
-                  <ArrowRight, className="w-4 h-4"  />
+                  <Link, className="w-4 h-4"  />
                   <sp, a, n>Explore, Breakthroug, h</sp, a, n>
                   <span, className="w-4 h-4, grou, p-hov, e, r/bt
   n:transla, t, e-x-1, transitio, n-transform, duratio, n-3, 0, 0">›</sp, a, n>
@@ -299,7 +299,7 @@ featur, e, d: fal, s, e;
   r:te, x, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, flex, items-center, justif, y-center, ga, p-2"
                 >
                   <sp, a, n>Explore, All, Breakthroughs</sp, a, n>
-                  <ArrowRight, className="w-5 h-5"  />
+                  <Link, className="w-5 h-5"  />
                 </a>
               </d, i, v>
             </d, i, v>

@@ -21,17 +21,15 @@ export const usePerformance = () => {
       const navigation = performance.getEntriesByType(
         'navigation'
       )[0] as PerformanceNavigationTiming;
-      const paintEntries = performance.getEntriesByType('paint');
+      const _paintEntries = performance.getEntriesByType('paint');
 
       const firstContentfulPaint =
-        paintEntries.find(entry => entry.name === 'first-contentful-paint')
-          ?.startTime || 0;
+        paintEntries.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0;
       const largestContentfulPaint =
-        paintEntries.find(entry => entry.name === 'largest-contentful-paint')
-          ?.startTime || 0;
+        paintEntries.find(entry => entry.name === 'largest-contentful-paint')?.startTime || 0;
 
       // Measure CLS (Cumulative Layout Shift)
-      let cumulativeLayoutShift = 0;
+      let _cumulativeLayoutShift = 0;
       if ('PerformanceObserver' in window) {
         const observer = new PerformanceObserver(list => {
           for (const entry of list.getEntries()) {
@@ -39,8 +37,7 @@ export const usePerformance = () => {
               entry.entryType === 'layout-shift' &&
               !(entry as unknown as { hadRecentInput: boolean }).hadRecentInput
             ) {
-              cumulativeLayoutShift += (entry as unknown as { value: number })
-                .value;
+              cumulativeLayoutShift += (entry as unknown as { value: number }).value;
             }
           }
         });
@@ -48,14 +45,13 @@ export const usePerformance = () => {
       }
 
       // Measure FID (First Input Delay)
-      let firstInputDelay = 0;
+      let _firstInputDelay = 0;
       if ('PerformanceObserver' in window) {
         const observer = new PerformanceObserver(list => {
           for (const entry of list.getEntries()) {
             if (entry.entryType === 'first-input') {
               firstInputDelay =
-                (entry as unknown as { processingStart: number })
-                  .processingStart - entry.startTime;
+                (entry as unknown as { processingStart: number }).processingStart - entry.startTime;
             }
           }
         });
@@ -65,8 +61,7 @@ export const usePerformance = () => {
       const performanceData: PerformanceMetrics = {
         loadTime: navigation.loadEventEnd - navigation.fetchStart,
         domContentLoaded:
-          navigation.domContentLoadedEventEnd -
-          navigation.domContentLoadedEventStart,
+          navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
         firstContentfulPaint,
         largestContentfulPaint,
         cumulativeLayoutShift,
@@ -78,11 +73,7 @@ export const usePerformance = () => {
 
       // Report to analytics using trackTiming
       analytics.trackTiming('performance', 'load_time', performanceData.loadTime);
-      analytics.trackTiming(
-        'performance',
-        'dom_content_loaded',
-        performanceData.domContentLoaded
-      );
+      analytics.trackTiming('performance', 'dom_content_loaded', performanceData.domContentLoaded);
       analytics.trackTiming(
         'performance',
         'first_contentful_paint',
@@ -98,11 +89,7 @@ export const usePerformance = () => {
         'cumulative_layout_shift',
         performanceData.cumulativeLayoutShift
       );
-      analytics.trackTiming(
-        'performance',
-        'first_input_delay',
-        performanceData.firstInputDelay
-      );
+      analytics.trackTiming('performance', 'first_input_delay', performanceData.firstInputDelay);
     };
 
     // Start monitoring

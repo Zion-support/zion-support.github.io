@@ -7,7 +7,7 @@
     ];
     link: "/services / 2029 - emerging - tech - breakthrough", category: "Emerging Tech Breakthroughs 2029",
     real_implementation: true,
-    contact_info: any,
+    contact_info: unknown,
       mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",      address: "364 E Main St STE 1008 Middletown DE 19709"
 export interface EmergingTechBreakthrough2029 {;
 export interface EmergingTechBreakthrough2029
@@ -21,7 +21,7 @@ export interface EmergingTechBreakthrough2029 {;
   link: string;
   category: string;
   realImplementation: boolean;
-  contactInfo: any;
+  contactInfo: unknown;
     mobile: string;
     email: string}
     address: string}
@@ -49,7 +49,7 @@ export const emergingTechBreakthroughServices2029: EmergingTechBreakthrough2029[
       }
     }
   real_implementation: boolean;
-  contact_info: any;
+  contact_info: unknown;
     mobile: string;
     email: string,
         mobile: '+1 302 464 0950',
@@ -90,7 +90,7 @@ export interface EmergingTechBreakthrough2029 {;
     link: "/services/2029-emerging-tech-breakthrough",
     category: "Emerging Tech Breakthroughs 2029",
     realImplementation: true,
-    contactInfo: any}
+    contactInfo: unknown}
     }
   }
 ];
@@ -120,7 +120,7 @@ export const emergingTechBreakthroughServices2029: EmergingTechBreakthrough2029[
       link: '/services/2029-emerging-tech-breakthrough',
       category: 'Emerging Tech Breakthroughs 2029',
       realImplementation: true,
-      contactInfo: any,
+      contactInfo: unknown,
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -163,7 +163,7 @@ export const emergingTechBreakthroughServices2029: EmergingTechBreakthrough2029[
     link: "/services/2029-emerging-tech-breakthrough",
     category: "Emerging Tech Breakthroughs 2029",
     realImplementation: true,
-    contactInfo: any,
+    contactInfo: unknown,
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"

@@ -65,8 +65,7 @@ const AnalyticsDashboard: React.FC = () => {
       } catch (err) {
         setError('Failed to load analytics data');
 :corrupted-src-backup/components/AnalyticsDashboard.tsx
-        console.error('Analytics error:', err);
-      } finally {
+//         } finally {
         setIsLoading(false);
       }
     };

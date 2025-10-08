@@ -136,8 +136,8 @@ const, October2025DocumentAutomationBanne, r = () => {
   r:shad, o, w-xl"
               >
                 Read, Complete, Guide;
-                <ArrowRight, className="w-4 h-4, m, l-2  />
-                <ArrowRight, className="w-4 h-4, m, l-2" />";
+                <Link, className="w-4 h-4, m, l-2  />
+                <Link, className="w-4 h-4, m, l-2" />";
               </Li, n, k>
             </d, i, v>
             {/* Case, Stud, y */}
@@ -171,8 +171,8 @@ const, October2025DocumentAutomationBanne, r = () => {
   r:shad, o, w-xl"
               >
                 Read, Success, Story;
-                <ArrowRight, className="w-4 h-4, m, l-2  />
-                <ArrowRight, className="w-4 h-4, m, l-2" />";
+                <Link, className="w-4 h-4, m, l-2  />
+                <Link, className="w-4 h-4, m, l-2" />";
               </Li, n, k>
             </d, i, v>
           </d, i, v>
@@ -318,16 +318,16 @@ const, October2025DocumentAutomationBanne, r = () => {
   r:shad, o, w-2, x, l"
             >
               Schedule, Assessmen, t;
-              <ArrowRight, className="w-5 h-5, m, l-2  />
-              <ArrowRight, className="w-5 h-5, m, l-2" />";
+              <Link, className="w-5 h-5, m, l-2  />
+              <Link, className="w-5 h-5, m, l-2" />";
             </Li, n, k>
             <Li, n, k
   to="/bl, o, g"
               classNa, m, e="inli, n, e-flex, item, s-center, justif, y-center, p, x-8, p, y-4, b, g-indi, g, o-800, tex, t-white, fon, t-bold, rounde, d-lg, hove, r: bg-indi, g, o-900, transitio, n-all, shado, w-xl"
             >
               Explore, All, Solutions;
-              <ArrowRight, className="w-5 h-5, m, l-2  />
-              <ArrowRight, className="w-5 h-5, m, l-2" />";
+              <Link, className="w-5 h-5, m, l-2  />
+              <Link, className="w-5 h-5, m, l-2" />";
             </Li, n, k>
           </d, i, v>
         </d, i, v>

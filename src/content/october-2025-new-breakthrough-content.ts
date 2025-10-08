@@ -6,7 +6,8 @@ export const octoberNewBreakthroughContent = [
     id: 'autonomous-ai-orchestration-platform-revolution',
     title: 'Autonomous AI Orchestration Platform Revolution: 95% Efficiency Gain',
     slug: 'ai-2025-oct-autonomous-ai-orchestration-platform-revolution',
-    description: 'Discover how autonomous AI orchestration platforms are transforming enterprise AI operations with 95% efficiency gains, 75% cost reduction, and $847M value creation. Complete implementation guide with real Fortune 500 results.',
+    description:
+      'Discover how autonomous AI orchestration platforms are transforming enterprise AI operations with 95% efficiency gains, 75% cost reduction, and $847M value creation. Complete implementation guide with real Fortune 500 results.',
     category: 'Enterprise AI Infrastructure',
     date: '2025-10-01',
     readTime: '18 min',
@@ -19,14 +20,14 @@ export const octoberNewBreakthroughContent = [
       'Orchestration',
       'Enterprise Infrastructure',
       'Efficiency',
-      'Cost Reduction'
+      'Cost Reduction',
     ],
     highlights: [
       '95% efficiency improvement in AI operations',
       '75% cost reduction through automation',
       '$847M value creation in Fortune 500 companies',
       'Complete implementation guide included',
-      'Real-world case studies and results'
+      'Real-world case studies and results',
     ],
     content: `
 # Autonomous AI Orchestration Platform Revolution: 95% Efficiency Gain
@@ -58,7 +59,7 @@ Enterprises implementing this technology report:
 ## The Future is Here
 This breakthrough represents the future of enterprise AI. Contact us to learn how your organization can benefit from this revolutionary technology.
     `,
-  }
+  },
 ];
 
 export const getFeaturedBreakthroughContent = () => {

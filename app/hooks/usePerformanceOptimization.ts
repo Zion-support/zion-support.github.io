@@ -17,7 +17,7 @@ export const usePerformanceOptimization = () => {
     const navigation = performance.getEntriesByType(
       'navigation'
     )[0] as PerformanceNavigationTiming;
-    const paintEntries = performance.getEntriesByType('paint');
+    const _paintEntries = performance.getEntriesByType('paint');
 
     const metrics: PerformanceMetrics = {
       loadTime: navigation
@@ -33,8 +33,8 @@ export const usePerformanceOptimization = () => {
 
     // Measure LCP
     const lcpObserver = new PerformanceObserver(list => {
-      const entries = list.getEntries();
-      const lastEntry = entries[entries.length - 1];
+      const _entries = list.getEntries();
+      const _lastEntry = entries[entries.length - 1];
       if (lastEntry) {
         metrics.largestContentfulPaint = lastEntry.startTime;
       }
@@ -42,7 +42,7 @@ export const usePerformanceOptimization = () => {
     lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
 
     // Measure CLS
-    let clsValue = 0;
+    let _clsValue = 0;
     const clsObserver = new PerformanceObserver(list => {
       for (const entry of list.getEntries()) {
         const layoutShiftEntry = entry as PerformanceEntry & {
@@ -80,12 +80,12 @@ export const usePerformanceOptimization = () => {
   }, []);
 
   const optimizeImages = useCallback(() => {
-    const images = document.querySelectorAll('img[data-src]');
+    const _images = document.querySelectorAll('img[data-src]');
     const imageObserver = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          const img = entry.target as HTMLImageElement;
-          img['src'] = img.dataset['src'] || '';
+          const _img = entry.target as HTMLImageElement;
+          img.src = img.dataset.src || '';
           img.classList.remove('lazy');
           imageObserver.unobserve(img);
         }
@@ -96,10 +96,10 @@ export const usePerformanceOptimization = () => {
   }, []);
 
   const preloadCriticalResources = useCallback(() => {
-    const criticalResources = ['/fonts/inter-var.woff2', '/css/critical.css'];
+    const _criticalResources = ['/fonts/inter-var.woff2', '/css/critical.css'];
 
     criticalResources.forEach(resource => {
-      const link = document.createElement('link');
+      const _link = document.createElement('link');
       link.rel = 'preload';
       link.href = resource;
       link.as = resource.endsWith('.woff2') ? 'font' : 'style';
@@ -113,14 +113,18 @@ export const usePerformanceOptimization = () => {
   useEffect(() => {
     // Measure performance after page load
     const timer = setTimeout(() => {
-      const metrics = measurePerformance();
+      const _metrics = measurePerformance();
       if (metrics) {
         // Send metrics to analytics in production
         if (process.env['NODE_ENV'] === 'production') {
           // Track metrics in production
         }
-        // eslint-disable-next-line no-console
-        if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { console.log('Performance Metrics:', metrics); } }
+         
+        if (process.env['NODE_ENV'] === 'development') { 
+          if (import.meta.env.DEV) { 
+
+          } 
+        }
       }
     }, 1000);
 

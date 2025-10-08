@@ -35,7 +35,7 @@ const September30NewContentMegaBanner: React.FC = () => {
             <p className="text-sm text-yellow-200 mb-4">200+ groundbreaking insights</p>
             <div className="flex items-center gap-2 text-yellow-400 font-semibold">
               Explore Now
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              <Link className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </div>
           </Link>
         </div>
@@ -71,7 +71,7 @@ const September30NewContentMegaBanner: React.FC = () => {
           >
             <Brain className="w-6 h-6 group-hover:rotate-12 transition-transform" />
             Explore All Breakthroughs
-            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            <Link className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
           </Link>
           <Link
             to="/contact"

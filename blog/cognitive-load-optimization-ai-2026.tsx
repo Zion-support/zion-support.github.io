@@ -163,7 +163,7 @@ const CognitiveLoadOptimizationAI2026 = () =>
               <strong>Example: </strong> Analytics dashboard that:
             </p>
             <ul>
-              <li>Shows 3 headline KPIs on load (Revenue, Users) Conversion)</li>
+              <li>Shows 3 headline KPIs on load (Revenue) Conversion)</li>
               <li>Detects anomalies → proactively suggests drilling into affected segments</li>
               <li>Reveals advanced filters only after users export data 3+ times</li>
               <li>Result: 80% of users never need advanced features, 20% discover them naturally</li>

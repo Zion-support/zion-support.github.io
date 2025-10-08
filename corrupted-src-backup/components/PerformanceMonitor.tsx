@@ -28,7 +28,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       ];
       
       hints.forEach(hint => {
-        const link = document.createElement('link');
+        const _link = document.createElement('link');
         link.rel = hint.rel;
         link.href = hint.href;
         if (hint.crossOrigin) {
@@ -39,7 +39,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     }
     
     // Measure page load performance
-    const pageLoadMetrics = performanceOptimizer.measurePageLoad();
+//     const pageLoadMetrics = performanceOptimizer.measurePageLoad();
     if (pageLoadMetrics) {
       setMetrics(pageLoadMetrics);
       if (enableReporting) {
@@ -51,8 +51,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     if (enableLongTaskMonitoring) {
       const observer = performanceOptimizer.monitorLongTasks((entries: PerformanceEntryList) => {
         setLongTasks(prev => [...prev, ...entries]);
-        console.warn('Long tasks detected:', entries);
-      });
+//         });
       
       return () => {
         if (observer) {
@@ -67,10 +66,10 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     if (typeof window === 'undefined' || !('PerformanceObserver' in window)) return;
 
     const observer = new PerformanceObserver((list) => {
-      const entries = list.getEntries();
+      const _entries = list.getEntries();
       entries.forEach((entry) => {
         if (entry.entryType === 'largest-contentful-paint') {
-          const lcp = entry.startTime;
+//           const lcp = entry.startTime;
           setMetrics(prev => ({ ...prev, LCP: lcp }));
           if (enableReporting) {
             performanceOptimizer.reportWebVitals({ LCP: lcp });
@@ -78,7 +77,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         }
         
         if (entry.entryType === 'first-input') {
-          const fid = (entry as any).processingStart - entry.startTime;
+//           const fid = (entry as any).processingStart - entry.startTime;
           setMetrics(prev => ({ ...prev, FID: fid }));
           if (enableReporting) {
             performanceOptimizer.reportWebVitals({ FID: fid });
@@ -86,7 +85,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         }
         
         if (entry.entryType === 'layout-shift') {
-          const cls = (entry as any).value;
+//           const cls = (entry as any).value;
           setMetrics(prev => ({ ...prev, CLS: cls }));
           if (enableReporting) {
             performanceOptimizer.reportWebVitals({ CLS: cls });
@@ -98,8 +97,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     try {
       observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
     } catch (e) {
-      console.warn('Performance Observer not supported:', e);
-    }
+//       }
 
     return () => {
       observer.disconnect();
@@ -109,8 +107,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   // Development mode: Log performance metrics
   useEffect(() => {
     if (process.env['NODE_ENV'] === 'development' && Object.keys(metrics).length > 0) {
-      console.log('Performance Metrics:', metrics);
-    }
+//       }
   }, [metrics]);
 
   return <>{children}</>;
@@ -140,13 +137,13 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   const [budgetStatus, setBudgetStatus] = useState<{ passed: boolean; violations: string[] }>({ passed: true, violations: [] });
 
   const updateMetrics = useCallback(() => {
-    const newMetrics = performanceOptimizer.measurePageLoad();
+//     const newMetrics = performanceOptimizer.measurePageLoad();
     if (newMetrics) {
       setMetrics(prev => ({ ...prev, ...newMetrics }));
       onMetricsUpdate?.(newMetrics);
       
       // Check performance budget
-      const budgetCheck = performanceOptimizer.checkPerformanceBudget(budget);
+      const _budgetCheck = performanceOptimizer.checkPerformanceBudget(budget);
       setBudgetStatus(budgetCheck);
       
       if (!budgetCheck.passed) {
@@ -163,8 +160,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
 
     // Monitor long tasks
     const longTaskObserver = performanceOptimizer.monitorLongTasks((entries) => {
-      console.warn('Long tasks detected:', entries);
-    });
+//       });
 
     // Monitor Web Vitals
     const reportVitals = (newMetrics: WebVitalsMetrics) => {
@@ -177,13 +173,13 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       const observer = new PerformanceObserver((list) => {
         list.getEntries().forEach((entry) => {
           if (entry.entryType === 'paint') {
-            const paintEntry = entry as PerformancePaintTiming;
+            const _paintEntry = entry as PerformancePaintTiming;
             if (paintEntry.name === 'first-contentful-paint') {
               reportVitals({ FCP: paintEntry.startTime });
             }
           }
           if (entry.entryType === 'largest-contentful-paint') {
-            const lcpEntry = entry as PerformanceEntry;
+            const _lcpEntry = entry as PerformanceEntry;
             reportVitals({ LCP: lcpEntry.startTime });
           }
         });

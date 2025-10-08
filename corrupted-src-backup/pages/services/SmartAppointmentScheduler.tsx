@@ -185,7 +185,7 @@ const, SmartAppointmentSchedule, r: Rea, c, t.FC = () => {
   l: +130246409, 5, 0" 
                   classNa, m, e="w-full, b, g-gre, e, n-600, tex, t-white, p, y-3, rounde, d-lg, fon, t-semibold, hove, r: bg-gre, e, n-700, transitio, n-colors, tex, t-center, bloc, k"
                 >
-                  Get, Starte, d;
+                  Gette, d;
                 </a>
               </d, i, v>
               <div, className="bg-gradie, n, t-to-br, fro, m-gre, e, n-600, t, o-te, a, l-600, rounde, d-lg, shado, w-l, g, p-8, tex, t-white, relativ, e">";
@@ -241,7 +241,7 @@ const, SmartAppointmentSchedule, r: Rea, c, t.FC = () => {
   hr, e, f="t, e, l: +130246409, 5, 0" 
                   classNa, m, e="w-full, b, g-white, tex, t-gre, e, n-600, p, y-3, rounde, d-lg, fon, t-semibold, hove, r: bg-gr, a, y-100, transitio, n-colors, tex, t-center, bloc, k"
                 >
-                  Get, Starte, d;
+                  Gette, d;
                 </a>
               </d, i, v>
               <div, className="bg-white, rounde, d-lg, shado, w-l, g, p-8">

@@ -1,19 +1,17 @@
 #!/bin/bash
 
-# Fix merge conflicts in app/setupTests.tsx
-echo "Fixing app/setupTests.tsx..."
-# Remove conflict markers and keep both versions merged
-sed -i '/^<<<<<<< HEAD$/,/^>>>>>>> 49f746e8c3195449347ee8bebb6ca5b0ab732544$/d' app/setupTests.tsx
+# Fix merge conflicts by removing conflict markers and keeping the latest version
+find /workspace/app -name "*.ts" -o -name "*.tsx" -o -name "*.js" -o -name "*.jsx" | while read file; do
+  if grep -q "^<<<<<<<\|^=======\|^>>>>>>>" "$file"; then
+    echo "Fixing merge conflicts in: $file"
+    
+    # Remove merge conflict markers and keep the latest version (after =======)
+    sed -i '/^<<<<<<<.*/,/^=======/d' "$file"
+    sed -i '/^>>>>>>>.*/d' "$file"
+    
+    # Clean up any remaining empty lines
+    sed -i '/^$/N;/^\n$/d' "$file"
+  fi
+done
 
-# Fix merge conflicts in app/utils/performanceOptimizer.ts
-echo "Fixing app/utils/performanceOptimizer.ts..."
-sed -i '/^<<<<<<< HEAD$/,/^>>>>>>> 49f746e8c3195449347ee8bebb6ca5b0ab732544$/d' app/utils/performanceOptimizer.ts
-
-# Fix merge conflicts in App.tsx (root level)
-echo "Fixing App.tsx..."
-sed -i '/^<<<<<<< HEAD$/,/^>>>>>>> 49f746e8c3195449347ee8bebb6ca5b0ab732544$/d' App.tsx
-
-# Fix syntax errors in api files
-echo "Checking API files..."
-
-echo "Done!"
+echo "Fixed merge conflicts in all files"

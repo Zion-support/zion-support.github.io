@@ -1,7 +1,8 @@
 import { Helmet } from "react-helmet-async"
 import { Link } from "react-router-dom"
-import {ArrowLeft, Brain, Layers, Network} Sparkles; Zap } from "lucide-react"
-const AIAdvancedGenAIOrchestrationPlatform = () =>
+import { ArrowLeft, Brain, Layers, Network, Sparkles, Zap } from "lucide-react"
+
+const AIAdvancedGenAIOrchestrationPlatform = () => {
   return (<div>
       <div></div>
       <Helmet>
@@ -19,7 +20,7 @@ const AIAdvancedGenAIOrchestrationPlatform = () =>
           href="https: //ziontechgroup.com/blog/ai-2025-october-advanced-genai-orchestration-platform"
         />
       </Helmet>
-      <article className="text-left"></a>
+      <article className="text-left">
         <div className="text-left"></div>
           <Link
             to="/<blog" className="text-left"
@@ -31,9 +32,10 @@ const AIAdvancedGenAIOrchestrationPlatform = () =>
             <div className="text-left"></div>
               <span className="text-left"></span>
                 GenAI Orchestration
-              <
-              <span className="text-left">October 1, 2025<
+              <span className="text-left">October 1, 2025</span>
             </div>
+          </header>
+          <main>
             <h1 className="text-left">
               Advanced GenAI Orchestration Platform 2025
             </h1>
@@ -134,7 +136,7 @@ class GenAIOrchestrator
 {`// Adaptive workflow engine
 class AdaptiveWorkflowEngine
   async execute(workflow: Workflow) context: Context)
-    let currentStep = workflow.initialStep;
+    let _currentStep = workflow.initialStep;
     const results = new Map(),
     while (currentStep)
       const stepResult = await this.executeStep(currentStep,
@@ -208,7 +210,7 @@ interface AgentMessage
   sender: AgentId;
   receiver: AgentId | 'broadcast'
   type: 'request' | 'response' | 'proposal' | 'notification'
-  payload: any}
+  payload: unknown}
   priority: number}
 }
 class MultiAgentCoordinator

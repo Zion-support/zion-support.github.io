@@ -314,7 +314,7 @@ export const useCopyToClipboard = (): {
 
   const copy = useCallback(async (text: string): Promise<boolean> => {
     if (!navigator?.clipboard) {
-      console.warn('Clipboard not supported');
+//       console.warn('Clipboard not supported');
       return false;
     }
 
@@ -324,7 +324,7 @@ export const useCopyToClipboard = (): {
       setTimeout(() => setCopied(false), 2000);
       return true;
     } catch (error) {
-      console.warn('Copy failed', error);
+//       console.warn('Copy failed', error);
       setCopied(false);
       return false;
     }

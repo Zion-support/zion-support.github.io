@@ -1,4 +1,4 @@
-'use client';
+// // 'use client'; // Removed for Vite compatibility // Removed for Vite compatibility
 
 import React, { useEffect, useState } from 'react';
 
@@ -30,7 +30,7 @@ const PWAInstaller: React.FC = () => {
       navigator.serviceWorker
         .register('/service-worker.js')
         .then((registration) => {
-          console.log('Service Worker registered:', registration);
+          // Service Worker registered
 
           // Check for updates periodically
           setInterval(() => {
@@ -39,7 +39,7 @@ const PWAInstaller: React.FC = () => {
 
           // Listen for updates
           registration.addEventListener('updatefound', () => {
-            const newWorker = registration.installing;
+            const _newWorker = registration.installing;
             if (newWorker) {
               newWorker.addEventListener('statechange', () => {
                 if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
@@ -53,8 +53,8 @@ const PWAInstaller: React.FC = () => {
             }
           });
         })
-        .catch((error) => {
-          console.error('Service Worker registration failed:', error);
+.catch(() => {
+          // Service Worker registration failed
         });
 
       // Listen for controller change
@@ -79,7 +79,7 @@ const PWAInstaller: React.FC = () => {
 
     // Listen for successful installation
     window.addEventListener('appinstalled', () => {
-      console.log('PWA installed successfully');
+      // PWA installed successfully
       setIsInstalled(true);
       setShowPrompt(false);
       setDeferredPrompt(null);
@@ -99,12 +99,12 @@ const PWAInstaller: React.FC = () => {
     await deferredPrompt.prompt();
 
     // Wait for the user's response
-    const choiceResult = await deferredPrompt.userChoice;
+    const _choiceResult = await deferredPrompt.userChoice;
 
     if (choiceResult.outcome === 'accepted') {
-      console.log('User accepted the install prompt');
+      // User accepted the install prompt
     } else {
-      console.log('User dismissed the install prompt');
+      // User dismissed the install prompt
     }
 
     // Clear the deferred prompt

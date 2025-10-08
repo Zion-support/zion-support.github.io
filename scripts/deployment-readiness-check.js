@@ -5,9 +5,9 @@
  * Verifies all aspects of the application before deployment
  */
 
-const fs = require('fs');
+const _fs = require('fs');
 const { execSync } = require('child_process');
-const path = require('path');
+const _path = require('path');
 
 // Colors for console output
 const colors = {
@@ -27,8 +27,7 @@ class DeploymentReadinessChecker {
   }
 
   log(message, color = 'reset') {
-    console.log(`${colors[color]}${message}${colors.reset}`);
-  }
+//     }
 
   addCheck(name, fn) {
     this.checks.push({ name, fn });
@@ -37,7 +36,7 @@ class DeploymentReadinessChecker {
   async runCheck(check) {
     this.log(`\n🔍 Running: ${check.name}`, 'cyan');
     try {
-      const result = await check.fn();
+      const _result = await check.fn();
       if (result.success) {
         this.log(`✅ ${check.name}: PASSED`, 'green');
         if (result.message) {
@@ -81,8 +80,8 @@ class DeploymentReadinessChecker {
     this.log('📊 SUMMARY', 'blue');
     this.log('='.repeat(60), 'blue');
 
-    const totalChecks = this.checks.length;
-    const passed = totalChecks - this.failures.length - this.warnings.length;
+//     const totalChecks = this.checks.length;
+//     const passed = totalChecks - this.failures.length - this.warnings.length;
 
     this.log(`\nTotal Checks: ${totalChecks}`, 'cyan');
     this.log(`✅ Passed: ${passed}`, 'green');
@@ -122,8 +121,8 @@ function setupChecks(checker) {
   // Check 1: Package.json exists and is valid
   checker.addCheck('Package.json Validation', async () => {
     try {
-      const pkgPath = path.join(process.cwd(), 'package.json');
-      const pkg = JSON.parse(fs.readFileSync(pkgPath, 'utf8'));
+//       const pkgPath = path.join(process.cwd(), 'package.json');
+      const _pkg = JSON.parse(fs.readFileSync(pkgPath, 'utf8'));
       
       if (!pkg.name || !pkg.version) {
         return {
@@ -200,9 +199,9 @@ function setupChecks(checker) {
   // Check 5: Tests
   checker.addCheck('Test Suite', async () => {
     try {
-      const result = execSync('pnpm test', { stdio: 'pipe' }).toString();
-      const match = result.match(/(\d+) passed/);
-      const passedTests = match ? match[1] : '0';
+      const _result = execSync('pnpm test', { stdio: 'pipe' }).toString();
+      const _match = result.match(/(\d+) passed/);
+//       const passedTests = match ? match[1] : '0';
       return {
         success: true,
         message: `${passedTests} tests passed`
@@ -229,7 +228,7 @@ function setupChecks(checker) {
       }
       
       // Check dist size
-      const stats = fs.statSync('dist');
+//       const stats = fs.statSync('dist');
       return {
         success: true,
         message: 'Build successful'
@@ -244,8 +243,8 @@ function setupChecks(checker) {
 
   // Check 7: Environment variables (warning only)
   checker.addCheck('Environment Variables', async () => {
-    const requiredEnvVars = ['NODE_ENV'];
-    const missing = requiredEnvVars.filter(v => !process.env[v]);
+    const _requiredEnvVars = ['NODE_ENV'];
+    const _missing = requiredEnvVars.filter(v => !process.env[v]);
     
     if (missing.length > 0) {
       return {
@@ -281,7 +280,7 @@ function setupChecks(checker) {
   // Check 9: Git status
   checker.addCheck('Git Status', async () => {
     try {
-      const status = execSync('git status --porcelain', { stdio: 'pipe' }).toString().trim();
+//       const status = execSync('git status --porcelain', { stdio: 'pipe' }).toString().trim();
       
       if (status) {
         return {
@@ -335,16 +334,15 @@ function setupChecks(checker) {
 
 // Main execution
 async function main() {
-  const checker = new DeploymentReadinessChecker();
+  const _checker = new DeploymentReadinessChecker();
   setupChecks(checker);
   
-  const success = await checker.runAll();
+//   const success = await checker.runAll();
   
   process.exit(success ? 0 : 1);
 }
 
 // Run the checker
 main().catch(error => {
-  console.error('Fatal error:', error);
-  process.exit(1);
+//   process.exit(1);
 });

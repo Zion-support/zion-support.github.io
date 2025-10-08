@@ -179,7 +179,7 @@ describe('Validation Utilities', () => {
         },
       };
 
-      const errors = validateForm(formData);
+      const _errors = validateForm(formData);
       expect(Object.keys(errors).length).toBe(0);
     });
 
@@ -195,7 +195,7 @@ describe('Validation Utilities', () => {
         },
       };
 
-      const errors = validateForm(formData);
+      const _errors = validateForm(formData);
       expect(errors.email).toBeDefined();
       expect(errors.password).toBeDefined();
       expect(errors.email.length).toBeGreaterThan(0);

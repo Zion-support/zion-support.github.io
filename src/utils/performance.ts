@@ -8,20 +8,20 @@ export interface PerformanceMetrics {
   ttfb: number | null; // Time to First Byte
 }
 
-export const reportWebVitals = (metric: any) => {
+export const reportWebVitals = (metric: unknown) => {
   // Log to console in development
   if (process.env['NODE_ENV'] === 'development') {
-    if (process.env.DEV) { console.log('[Web Vitals]', metric); }
+//     if (process.env.DEV) { console.log('[Web Vitals]', metric); }
   }
 
   // Send to analytics in production
   if (typeof window !== 'undefined' && (window as any).gtag) {
-    (window as any).gtag('event', metric.name, {
+    (window as any).gtag('event', (metric as any).name, {
       event_category: 'Web Vitals',
       value: Math.round(
-        metric.name === 'CLS' ? metric.value * 1000 : metric.value
+        (metric as any).name === 'CLS' ? (metric as any).value * 1000 : (metric as any).value
       ),
-      event_label: metric.id,
+      event_label: (metric as any).id,
       non_interaction: true,
     });
   }

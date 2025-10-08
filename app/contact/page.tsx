@@ -1,4 +1,7 @@
 import React from 'react';
+// import { Metadata } from 'next'; // Removed for Vite
+
+// Metadata removed for Vite compatibility
 
 const ContactPage: React.FC = () => {
   return (

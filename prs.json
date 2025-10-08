@@ -39,18 +39,10 @@
     "merged_at": null,
     "merge_commit_sha": null,
     "assignee": null,
-    "assignees": [
-
-    ],
-    "requested_reviewers": [
-
-    ],
-    "requested_teams": [
-
-    ],
-    "labels": [
-
-    ],
+    "assignees": [],
+    "requested_reviewers": [],
+    "requested_teams": [],
+    "labels": [],
     "milestone": null,
     "draft": true,
     "commits_url": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/25983/commits",
@@ -183,9 +175,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -318,9 +308,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -398,18 +386,10 @@
     "merged_at": null,
     "merge_commit_sha": null,
     "assignee": null,
-    "assignees": [
-
-    ],
-    "requested_reviewers": [
-
-    ],
-    "requested_teams": [
-
-    ],
-    "labels": [
-
-    ],
+    "assignees": [],
+    "requested_reviewers": [],
+    "requested_teams": [],
+    "labels": [],
     "milestone": null,
     "draft": true,
     "commits_url": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/25982/commits",
@@ -542,9 +522,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -677,9 +655,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -757,18 +733,10 @@
     "merged_at": null,
     "merge_commit_sha": null,
     "assignee": null,
-    "assignees": [
-
-    ],
-    "requested_reviewers": [
-
-    ],
-    "requested_teams": [
-
-    ],
-    "labels": [
-
-    ],
+    "assignees": [],
+    "requested_reviewers": [],
+    "requested_teams": [],
+    "labels": [],
     "milestone": null,
     "draft": true,
     "commits_url": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/25981/commits",
@@ -901,9 +869,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -1036,9 +1002,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -1116,18 +1080,10 @@
     "merged_at": null,
     "merge_commit_sha": null,
     "assignee": null,
-    "assignees": [
-
-    ],
-    "requested_reviewers": [
-
-    ],
-    "requested_teams": [
-
-    ],
-    "labels": [
-
-    ],
+    "assignees": [],
+    "requested_reviewers": [],
+    "requested_teams": [],
+    "labels": [],
     "milestone": null,
     "draft": true,
     "commits_url": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/25980/commits",
@@ -1260,9 +1216,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -1395,9 +1349,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -1475,18 +1427,10 @@
     "merged_at": null,
     "merge_commit_sha": null,
     "assignee": null,
-    "assignees": [
-
-    ],
-    "requested_reviewers": [
-
-    ],
-    "requested_teams": [
-
-    ],
-    "labels": [
-
-    ],
+    "assignees": [],
+    "requested_reviewers": [],
+    "requested_teams": [],
+    "labels": [],
     "milestone": null,
     "draft": true,
     "commits_url": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/25979/commits",
@@ -1619,9 +1563,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -1754,9 +1696,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -1834,18 +1774,10 @@
     "merged_at": null,
     "merge_commit_sha": null,
     "assignee": null,
-    "assignees": [
-
-    ],
-    "requested_reviewers": [
-
-    ],
-    "requested_teams": [
-
-    ],
-    "labels": [
-
-    ],
+    "assignees": [],
+    "requested_reviewers": [],
+    "requested_teams": [],
+    "labels": [],
     "milestone": null,
     "draft": true,
     "commits_url": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/25978/commits",
@@ -1978,9 +1910,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -2113,9 +2043,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -2193,18 +2121,10 @@
     "merged_at": null,
     "merge_commit_sha": null,
     "assignee": null,
-    "assignees": [
-
-    ],
-    "requested_reviewers": [
-
-    ],
-    "requested_teams": [
-
-    ],
-    "labels": [
-
-    ],
+    "assignees": [],
+    "requested_reviewers": [],
+    "requested_teams": [],
+    "labels": [],
     "milestone": null,
     "draft": true,
     "commits_url": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/25977/commits",
@@ -2337,9 +2257,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -2472,9 +2390,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -2552,18 +2468,10 @@
     "merged_at": null,
     "merge_commit_sha": null,
     "assignee": null,
-    "assignees": [
-
-    ],
-    "requested_reviewers": [
-
-    ],
-    "requested_teams": [
-
-    ],
-    "labels": [
-
-    ],
+    "assignees": [],
+    "requested_reviewers": [],
+    "requested_teams": [],
+    "labels": [],
     "milestone": null,
     "draft": true,
     "commits_url": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/25976/commits",
@@ -2696,9 +2604,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -2831,9 +2737,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -2911,18 +2815,10 @@
     "merged_at": null,
     "merge_commit_sha": null,
     "assignee": null,
-    "assignees": [
-
-    ],
-    "requested_reviewers": [
-
-    ],
-    "requested_teams": [
-
-    ],
-    "labels": [
-
-    ],
+    "assignees": [],
+    "requested_reviewers": [],
+    "requested_teams": [],
+    "labels": [],
     "milestone": null,
     "draft": true,
     "commits_url": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/25975/commits",
@@ -3055,9 +2951,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -3190,9 +3084,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -3270,18 +3162,10 @@
     "merged_at": null,
     "merge_commit_sha": null,
     "assignee": null,
-    "assignees": [
-
-    ],
-    "requested_reviewers": [
-
-    ],
-    "requested_teams": [
-
-    ],
-    "labels": [
-
-    ],
+    "assignees": [],
+    "requested_reviewers": [],
+    "requested_teams": [],
+    "labels": [],
     "milestone": null,
     "draft": true,
     "commits_url": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/25974/commits",
@@ -3414,9 +3298,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -3549,9 +3431,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -3629,18 +3509,10 @@
     "merged_at": null,
     "merge_commit_sha": null,
     "assignee": null,
-    "assignees": [
-
-    ],
-    "requested_reviewers": [
-
-    ],
-    "requested_teams": [
-
-    ],
-    "labels": [
-
-    ],
+    "assignees": [],
+    "requested_reviewers": [],
+    "requested_teams": [],
+    "labels": [],
     "milestone": null,
     "draft": true,
     "commits_url": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/25973/commits",
@@ -3773,9 +3645,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -3908,9 +3778,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -3988,18 +3856,10 @@
     "merged_at": null,
     "merge_commit_sha": null,
     "assignee": null,
-    "assignees": [
-
-    ],
-    "requested_reviewers": [
-
-    ],
-    "requested_teams": [
-
-    ],
-    "labels": [
-
-    ],
+    "assignees": [],
+    "requested_reviewers": [],
+    "requested_teams": [],
+    "labels": [],
     "milestone": null,
     "draft": true,
     "commits_url": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/25972/commits",
@@ -4132,9 +3992,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -4267,9 +4125,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -4347,18 +4203,10 @@
     "merged_at": null,
     "merge_commit_sha": null,
     "assignee": null,
-    "assignees": [
-
-    ],
-    "requested_reviewers": [
-
-    ],
-    "requested_teams": [
-
-    ],
-    "labels": [
-
-    ],
+    "assignees": [],
+    "requested_reviewers": [],
+    "requested_teams": [],
+    "labels": [],
     "milestone": null,
     "draft": true,
     "commits_url": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/25971/commits",
@@ -4491,9 +4339,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -4626,9 +4472,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -4706,18 +4550,10 @@
     "merged_at": null,
     "merge_commit_sha": null,
     "assignee": null,
-    "assignees": [
-
-    ],
-    "requested_reviewers": [
-
-    ],
-    "requested_teams": [
-
-    ],
-    "labels": [
-
-    ],
+    "assignees": [],
+    "requested_reviewers": [],
+    "requested_teams": [],
+    "labels": [],
     "milestone": null,
     "draft": true,
     "commits_url": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/25970/commits",
@@ -4850,9 +4686,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -4985,9 +4819,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -5065,18 +4897,10 @@
     "merged_at": null,
     "merge_commit_sha": null,
     "assignee": null,
-    "assignees": [
-
-    ],
-    "requested_reviewers": [
-
-    ],
-    "requested_teams": [
-
-    ],
-    "labels": [
-
-    ],
+    "assignees": [],
+    "requested_reviewers": [],
+    "requested_teams": [],
+    "labels": [],
     "milestone": null,
     "draft": true,
     "commits_url": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/25969/commits",
@@ -5209,9 +5033,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -5344,9 +5166,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -5424,18 +5244,10 @@
     "merged_at": null,
     "merge_commit_sha": null,
     "assignee": null,
-    "assignees": [
-
-    ],
-    "requested_reviewers": [
-
-    ],
-    "requested_teams": [
-
-    ],
-    "labels": [
-
-    ],
+    "assignees": [],
+    "requested_reviewers": [],
+    "requested_teams": [],
+    "labels": [],
     "milestone": null,
     "draft": true,
     "commits_url": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/25968/commits",
@@ -5568,9 +5380,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -5703,9 +5513,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -5783,18 +5591,10 @@
     "merged_at": null,
     "merge_commit_sha": null,
     "assignee": null,
-    "assignees": [
-
-    ],
-    "requested_reviewers": [
-
-    ],
-    "requested_teams": [
-
-    ],
-    "labels": [
-
-    ],
+    "assignees": [],
+    "requested_reviewers": [],
+    "requested_teams": [],
+    "labels": [],
     "milestone": null,
     "draft": true,
     "commits_url": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/25967/commits",
@@ -5927,9 +5727,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -6062,9 +5860,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -6142,18 +5938,10 @@
     "merged_at": null,
     "merge_commit_sha": null,
     "assignee": null,
-    "assignees": [
-
-    ],
-    "requested_reviewers": [
-
-    ],
-    "requested_teams": [
-
-    ],
-    "labels": [
-
-    ],
+    "assignees": [],
+    "requested_reviewers": [],
+    "requested_teams": [],
+    "labels": [],
     "milestone": null,
     "draft": true,
     "commits_url": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/25966/commits",
@@ -6286,9 +6074,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -6421,9 +6207,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -6501,18 +6285,10 @@
     "merged_at": null,
     "merge_commit_sha": null,
     "assignee": null,
-    "assignees": [
-
-    ],
-    "requested_reviewers": [
-
-    ],
-    "requested_teams": [
-
-    ],
-    "labels": [
-
-    ],
+    "assignees": [],
+    "requested_reviewers": [],
+    "requested_teams": [],
+    "labels": [],
     "milestone": null,
     "draft": true,
     "commits_url": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/25965/commits",
@@ -6645,9 +6421,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -6780,9 +6554,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -6860,18 +6632,10 @@
     "merged_at": null,
     "merge_commit_sha": null,
     "assignee": null,
-    "assignees": [
-
-    ],
-    "requested_reviewers": [
-
-    ],
-    "requested_teams": [
-
-    ],
-    "labels": [
-
-    ],
+    "assignees": [],
+    "requested_reviewers": [],
+    "requested_teams": [],
+    "labels": [],
     "milestone": null,
     "draft": true,
     "commits_url": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/25964/commits",
@@ -7004,9 +6768,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -7139,9 +6901,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -7219,18 +6979,10 @@
     "merged_at": null,
     "merge_commit_sha": null,
     "assignee": null,
-    "assignees": [
-
-    ],
-    "requested_reviewers": [
-
-    ],
-    "requested_teams": [
-
-    ],
-    "labels": [
-
-    ],
+    "assignees": [],
+    "requested_reviewers": [],
+    "requested_teams": [],
+    "labels": [],
     "milestone": null,
     "draft": true,
     "commits_url": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/25963/commits",
@@ -7363,9 +7115,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -7498,9 +7248,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -7578,18 +7326,10 @@
     "merged_at": null,
     "merge_commit_sha": null,
     "assignee": null,
-    "assignees": [
-
-    ],
-    "requested_reviewers": [
-
-    ],
-    "requested_teams": [
-
-    ],
-    "labels": [
-
-    ],
+    "assignees": [],
+    "requested_reviewers": [],
+    "requested_teams": [],
+    "labels": [],
     "milestone": null,
     "draft": true,
     "commits_url": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/25962/commits",
@@ -7722,9 +7462,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -7857,9 +7595,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -7937,18 +7673,10 @@
     "merged_at": null,
     "merge_commit_sha": null,
     "assignee": null,
-    "assignees": [
-
-    ],
-    "requested_reviewers": [
-
-    ],
-    "requested_teams": [
-
-    ],
-    "labels": [
-
-    ],
+    "assignees": [],
+    "requested_reviewers": [],
+    "requested_teams": [],
+    "labels": [],
     "milestone": null,
     "draft": true,
     "commits_url": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/25961/commits",
@@ -8081,9 +7809,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -8216,9 +7942,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -8296,18 +8020,10 @@
     "merged_at": null,
     "merge_commit_sha": null,
     "assignee": null,
-    "assignees": [
-
-    ],
-    "requested_reviewers": [
-
-    ],
-    "requested_teams": [
-
-    ],
-    "labels": [
-
-    ],
+    "assignees": [],
+    "requested_reviewers": [],
+    "requested_teams": [],
+    "labels": [],
     "milestone": null,
     "draft": true,
     "commits_url": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/25960/commits",
@@ -8440,9 +8156,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -8575,9 +8289,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -8655,18 +8367,10 @@
     "merged_at": null,
     "merge_commit_sha": null,
     "assignee": null,
-    "assignees": [
-
-    ],
-    "requested_reviewers": [
-
-    ],
-    "requested_teams": [
-
-    ],
-    "labels": [
-
-    ],
+    "assignees": [],
+    "requested_reviewers": [],
+    "requested_teams": [],
+    "labels": [],
     "milestone": null,
     "draft": true,
     "commits_url": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/25959/commits",
@@ -8799,9 +8503,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -8934,9 +8636,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -9014,18 +8714,10 @@
     "merged_at": null,
     "merge_commit_sha": null,
     "assignee": null,
-    "assignees": [
-
-    ],
-    "requested_reviewers": [
-
-    ],
-    "requested_teams": [
-
-    ],
-    "labels": [
-
-    ],
+    "assignees": [],
+    "requested_reviewers": [],
+    "requested_teams": [],
+    "labels": [],
     "milestone": null,
     "draft": true,
     "commits_url": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/25958/commits",
@@ -9158,9 +8850,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -9293,9 +8983,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -9373,18 +9061,10 @@
     "merged_at": null,
     "merge_commit_sha": null,
     "assignee": null,
-    "assignees": [
-
-    ],
-    "requested_reviewers": [
-
-    ],
-    "requested_teams": [
-
-    ],
-    "labels": [
-
-    ],
+    "assignees": [],
+    "requested_reviewers": [],
+    "requested_teams": [],
+    "labels": [],
     "milestone": null,
     "draft": true,
     "commits_url": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/25957/commits",
@@ -9517,9 +9197,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -9652,9 +9330,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -9732,18 +9408,10 @@
     "merged_at": null,
     "merge_commit_sha": null,
     "assignee": null,
-    "assignees": [
-
-    ],
-    "requested_reviewers": [
-
-    ],
-    "requested_teams": [
-
-    ],
-    "labels": [
-
-    ],
+    "assignees": [],
+    "requested_reviewers": [],
+    "requested_teams": [],
+    "labels": [],
     "milestone": null,
     "draft": true,
     "commits_url": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/25956/commits",
@@ -9876,9 +9544,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -10011,9 +9677,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -10091,18 +9755,10 @@
     "merged_at": null,
     "merge_commit_sha": null,
     "assignee": null,
-    "assignees": [
-
-    ],
-    "requested_reviewers": [
-
-    ],
-    "requested_teams": [
-
-    ],
-    "labels": [
-
-    ],
+    "assignees": [],
+    "requested_reviewers": [],
+    "requested_teams": [],
+    "labels": [],
     "milestone": null,
     "draft": true,
     "commits_url": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/25955/commits",
@@ -10235,9 +9891,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -10370,9 +10024,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -10450,18 +10102,10 @@
     "merged_at": null,
     "merge_commit_sha": null,
     "assignee": null,
-    "assignees": [
-
-    ],
-    "requested_reviewers": [
-
-    ],
-    "requested_teams": [
-
-    ],
-    "labels": [
-
-    ],
+    "assignees": [],
+    "requested_reviewers": [],
+    "requested_teams": [],
+    "labels": [],
     "milestone": null,
     "draft": true,
     "commits_url": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/25954/commits",
@@ -10594,9 +10238,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -10729,9 +10371,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -10809,18 +10449,10 @@
     "merged_at": null,
     "merge_commit_sha": null,
     "assignee": null,
-    "assignees": [
-
-    ],
-    "requested_reviewers": [
-
-    ],
-    "requested_teams": [
-
-    ],
-    "labels": [
-
-    ],
+    "assignees": [],
+    "requested_reviewers": [],
+    "requested_teams": [],
+    "labels": [],
     "milestone": null,
     "draft": true,
     "commits_url": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/25953/commits",
@@ -10953,9 +10585,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -11088,9 +10718,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -11168,18 +10796,10 @@
     "merged_at": null,
     "merge_commit_sha": null,
     "assignee": null,
-    "assignees": [
-
-    ],
-    "requested_reviewers": [
-
-    ],
-    "requested_teams": [
-
-    ],
-    "labels": [
-
-    ],
+    "assignees": [],
+    "requested_reviewers": [],
+    "requested_teams": [],
+    "labels": [],
     "milestone": null,
     "draft": true,
     "commits_url": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/25952/commits",
@@ -11312,9 +10932,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -11447,9 +11065,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -11527,18 +11143,10 @@
     "merged_at": null,
     "merge_commit_sha": null,
     "assignee": null,
-    "assignees": [
-
-    ],
-    "requested_reviewers": [
-
-    ],
-    "requested_teams": [
-
-    ],
-    "labels": [
-
-    ],
+    "assignees": [],
+    "requested_reviewers": [],
+    "requested_teams": [],
+    "labels": [],
     "milestone": null,
     "draft": true,
     "commits_url": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/25951/commits",
@@ -11671,9 +11279,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -11806,9 +11412,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -11886,18 +11490,10 @@
     "merged_at": null,
     "merge_commit_sha": null,
     "assignee": null,
-    "assignees": [
-
-    ],
-    "requested_reviewers": [
-
-    ],
-    "requested_teams": [
-
-    ],
-    "labels": [
-
-    ],
+    "assignees": [],
+    "requested_reviewers": [],
+    "requested_teams": [],
+    "labels": [],
     "milestone": null,
     "draft": true,
     "commits_url": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/25950/commits",
@@ -12030,9 +11626,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -12165,9 +11759,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -12245,18 +11837,10 @@
     "merged_at": null,
     "merge_commit_sha": null,
     "assignee": null,
-    "assignees": [
-
-    ],
-    "requested_reviewers": [
-
-    ],
-    "requested_teams": [
-
-    ],
-    "labels": [
-
-    ],
+    "assignees": [],
+    "requested_reviewers": [],
+    "requested_teams": [],
+    "labels": [],
     "milestone": null,
     "draft": true,
     "commits_url": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/25949/commits",
@@ -12389,9 +11973,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -12524,9 +12106,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -12604,18 +12184,10 @@
     "merged_at": null,
     "merge_commit_sha": null,
     "assignee": null,
-    "assignees": [
-
-    ],
-    "requested_reviewers": [
-
-    ],
-    "requested_teams": [
-
-    ],
-    "labels": [
-
-    ],
+    "assignees": [],
+    "requested_reviewers": [],
+    "requested_teams": [],
+    "labels": [],
     "milestone": null,
     "draft": true,
     "commits_url": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/25948/commits",
@@ -12748,9 +12320,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -12883,9 +12453,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -12963,18 +12531,10 @@
     "merged_at": null,
     "merge_commit_sha": null,
     "assignee": null,
-    "assignees": [
-
-    ],
-    "requested_reviewers": [
-
-    ],
-    "requested_teams": [
-
-    ],
-    "labels": [
-
-    ],
+    "assignees": [],
+    "requested_reviewers": [],
+    "requested_teams": [],
+    "labels": [],
     "milestone": null,
     "draft": true,
     "commits_url": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/25942/commits",
@@ -13107,9 +12667,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -13242,9 +12800,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -13322,18 +12878,10 @@
     "merged_at": null,
     "merge_commit_sha": "71a80a5236add51d11c817fac81fe5ac3f9c370b",
     "assignee": null,
-    "assignees": [
-
-    ],
-    "requested_reviewers": [
-
-    ],
-    "requested_teams": [
-
-    ],
-    "labels": [
-
-    ],
+    "assignees": [],
+    "requested_reviewers": [],
+    "requested_teams": [],
+    "labels": [],
     "milestone": null,
     "draft": true,
     "commits_url": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/25941/commits",
@@ -13466,9 +13014,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -13601,9 +13147,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -13681,18 +13225,10 @@
     "merged_at": null,
     "merge_commit_sha": null,
     "assignee": null,
-    "assignees": [
-
-    ],
-    "requested_reviewers": [
-
-    ],
-    "requested_teams": [
-
-    ],
-    "labels": [
-
-    ],
+    "assignees": [],
+    "requested_reviewers": [],
+    "requested_teams": [],
+    "labels": [],
     "milestone": null,
     "draft": true,
     "commits_url": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/25940/commits",
@@ -13825,9 +13361,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -13960,9 +13494,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -14040,18 +13572,10 @@
     "merged_at": null,
     "merge_commit_sha": null,
     "assignee": null,
-    "assignees": [
-
-    ],
-    "requested_reviewers": [
-
-    ],
-    "requested_teams": [
-
-    ],
-    "labels": [
-
-    ],
+    "assignees": [],
+    "requested_reviewers": [],
+    "requested_teams": [],
+    "labels": [],
     "milestone": null,
     "draft": true,
     "commits_url": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/25939/commits",
@@ -14184,9 +13708,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -14319,9 +13841,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -14399,18 +13919,10 @@
     "merged_at": null,
     "merge_commit_sha": null,
     "assignee": null,
-    "assignees": [
-
-    ],
-    "requested_reviewers": [
-
-    ],
-    "requested_teams": [
-
-    ],
-    "labels": [
-
-    ],
+    "assignees": [],
+    "requested_reviewers": [],
+    "requested_teams": [],
+    "labels": [],
     "milestone": null,
     "draft": true,
     "commits_url": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/25938/commits",
@@ -14543,9 +14055,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -14678,9 +14188,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -14758,18 +14266,10 @@
     "merged_at": null,
     "merge_commit_sha": null,
     "assignee": null,
-    "assignees": [
-
-    ],
-    "requested_reviewers": [
-
-    ],
-    "requested_teams": [
-
-    ],
-    "labels": [
-
-    ],
+    "assignees": [],
+    "requested_reviewers": [],
+    "requested_teams": [],
+    "labels": [],
     "milestone": null,
     "draft": true,
     "commits_url": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/25937/commits",
@@ -14902,9 +14402,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -15037,9 +14535,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -15117,18 +14613,10 @@
     "merged_at": null,
     "merge_commit_sha": null,
     "assignee": null,
-    "assignees": [
-
-    ],
-    "requested_reviewers": [
-
-    ],
-    "requested_teams": [
-
-    ],
-    "labels": [
-
-    ],
+    "assignees": [],
+    "requested_reviewers": [],
+    "requested_teams": [],
+    "labels": [],
     "milestone": null,
     "draft": true,
     "commits_url": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/25936/commits",
@@ -15261,9 +14749,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -15396,9 +14882,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -15476,18 +14960,10 @@
     "merged_at": null,
     "merge_commit_sha": null,
     "assignee": null,
-    "assignees": [
-
-    ],
-    "requested_reviewers": [
-
-    ],
-    "requested_teams": [
-
-    ],
-    "labels": [
-
-    ],
+    "assignees": [],
+    "requested_reviewers": [],
+    "requested_teams": [],
+    "labels": [],
     "milestone": null,
     "draft": true,
     "commits_url": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/25935/commits",
@@ -15620,9 +15096,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -15755,9 +15229,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -15835,18 +15307,10 @@
     "merged_at": null,
     "merge_commit_sha": null,
     "assignee": null,
-    "assignees": [
-
-    ],
-    "requested_reviewers": [
-
-    ],
-    "requested_teams": [
-
-    ],
-    "labels": [
-
-    ],
+    "assignees": [],
+    "requested_reviewers": [],
+    "requested_teams": [],
+    "labels": [],
     "milestone": null,
     "draft": true,
     "commits_url": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/25934/commits",
@@ -15979,9 +15443,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -16114,9 +15576,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -16194,18 +15654,10 @@
     "merged_at": null,
     "merge_commit_sha": null,
     "assignee": null,
-    "assignees": [
-
-    ],
-    "requested_reviewers": [
-
-    ],
-    "requested_teams": [
-
-    ],
-    "labels": [
-
-    ],
+    "assignees": [],
+    "requested_reviewers": [],
+    "requested_teams": [],
+    "labels": [],
     "milestone": null,
     "draft": true,
     "commits_url": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/25933/commits",
@@ -16338,9 +15790,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -16473,9 +15923,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -16553,18 +16001,10 @@
     "merged_at": null,
     "merge_commit_sha": null,
     "assignee": null,
-    "assignees": [
-
-    ],
-    "requested_reviewers": [
-
-    ],
-    "requested_teams": [
-
-    ],
-    "labels": [
-
-    ],
+    "assignees": [],
+    "requested_reviewers": [],
+    "requested_teams": [],
+    "labels": [],
     "milestone": null,
     "draft": true,
     "commits_url": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/25932/commits",
@@ -16697,9 +16137,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -16832,9 +16270,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -16912,18 +16348,10 @@
     "merged_at": null,
     "merge_commit_sha": null,
     "assignee": null,
-    "assignees": [
-
-    ],
-    "requested_reviewers": [
-
-    ],
-    "requested_teams": [
-
-    ],
-    "labels": [
-
-    ],
+    "assignees": [],
+    "requested_reviewers": [],
+    "requested_teams": [],
+    "labels": [],
     "milestone": null,
     "draft": true,
     "commits_url": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/25931/commits",
@@ -17056,9 +16484,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -17191,9 +16617,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -17271,18 +16695,10 @@
     "merged_at": null,
     "merge_commit_sha": null,
     "assignee": null,
-    "assignees": [
-
-    ],
-    "requested_reviewers": [
-
-    ],
-    "requested_teams": [
-
-    ],
-    "labels": [
-
-    ],
+    "assignees": [],
+    "requested_reviewers": [],
+    "requested_teams": [],
+    "labels": [],
     "milestone": null,
     "draft": true,
     "commits_url": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/25930/commits",
@@ -17415,9 +16831,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -17550,9 +16964,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -17630,18 +17042,10 @@
     "merged_at": null,
     "merge_commit_sha": null,
     "assignee": null,
-    "assignees": [
-
-    ],
-    "requested_reviewers": [
-
-    ],
-    "requested_teams": [
-
-    ],
-    "labels": [
-
-    ],
+    "assignees": [],
+    "requested_reviewers": [],
+    "requested_teams": [],
+    "labels": [],
     "milestone": null,
     "draft": true,
     "commits_url": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/25929/commits",
@@ -17774,9 +17178,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -17909,9 +17311,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -17989,18 +17389,10 @@
     "merged_at": null,
     "merge_commit_sha": null,
     "assignee": null,
-    "assignees": [
-
-    ],
-    "requested_reviewers": [
-
-    ],
-    "requested_teams": [
-
-    ],
-    "labels": [
-
-    ],
+    "assignees": [],
+    "requested_reviewers": [],
+    "requested_teams": [],
+    "labels": [],
     "milestone": null,
     "draft": true,
     "commits_url": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/25928/commits",
@@ -18133,9 +17525,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -18268,9 +17658,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -18348,18 +17736,10 @@
     "merged_at": null,
     "merge_commit_sha": null,
     "assignee": null,
-    "assignees": [
-
-    ],
-    "requested_reviewers": [
-
-    ],
-    "requested_teams": [
-
-    ],
-    "labels": [
-
-    ],
+    "assignees": [],
+    "requested_reviewers": [],
+    "requested_teams": [],
+    "labels": [],
     "milestone": null,
     "draft": true,
     "commits_url": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/25927/commits",
@@ -18492,9 +17872,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -18627,9 +18005,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -18707,18 +18083,10 @@
     "merged_at": null,
     "merge_commit_sha": null,
     "assignee": null,
-    "assignees": [
-
-    ],
-    "requested_reviewers": [
-
-    ],
-    "requested_teams": [
-
-    ],
-    "labels": [
-
-    ],
+    "assignees": [],
+    "requested_reviewers": [],
+    "requested_teams": [],
+    "labels": [],
     "milestone": null,
     "draft": true,
     "commits_url": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/25926/commits",
@@ -18851,9 +18219,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -18986,9 +18352,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -19066,18 +18430,10 @@
     "merged_at": null,
     "merge_commit_sha": null,
     "assignee": null,
-    "assignees": [
-
-    ],
-    "requested_reviewers": [
-
-    ],
-    "requested_teams": [
-
-    ],
-    "labels": [
-
-    ],
+    "assignees": [],
+    "requested_reviewers": [],
+    "requested_teams": [],
+    "labels": [],
     "milestone": null,
     "draft": true,
     "commits_url": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/25925/commits",
@@ -19210,9 +18566,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -19345,9 +18699,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -19425,18 +18777,10 @@
     "merged_at": null,
     "merge_commit_sha": null,
     "assignee": null,
-    "assignees": [
-
-    ],
-    "requested_reviewers": [
-
-    ],
-    "requested_teams": [
-
-    ],
-    "labels": [
-
-    ],
+    "assignees": [],
+    "requested_reviewers": [],
+    "requested_teams": [],
+    "labels": [],
     "milestone": null,
     "draft": true,
     "commits_url": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/25924/commits",
@@ -19569,9 +18913,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -19704,9 +19046,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -19784,18 +19124,10 @@
     "merged_at": null,
     "merge_commit_sha": null,
     "assignee": null,
-    "assignees": [
-
-    ],
-    "requested_reviewers": [
-
-    ],
-    "requested_teams": [
-
-    ],
-    "labels": [
-
-    ],
+    "assignees": [],
+    "requested_reviewers": [],
+    "requested_teams": [],
+    "labels": [],
     "milestone": null,
     "draft": true,
     "commits_url": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/25923/commits",
@@ -19928,9 +19260,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -20063,9 +19393,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -20143,18 +19471,10 @@
     "merged_at": null,
     "merge_commit_sha": null,
     "assignee": null,
-    "assignees": [
-
-    ],
-    "requested_reviewers": [
-
-    ],
-    "requested_teams": [
-
-    ],
-    "labels": [
-
-    ],
+    "assignees": [],
+    "requested_reviewers": [],
+    "requested_teams": [],
+    "labels": [],
     "milestone": null,
     "draft": true,
     "commits_url": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/25922/commits",
@@ -20287,9 +19607,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -20422,9 +19740,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -20502,18 +19818,10 @@
     "merged_at": null,
     "merge_commit_sha": "c879a06941f29d1a0611425617c33b48d5e060bb",
     "assignee": null,
-    "assignees": [
-
-    ],
-    "requested_reviewers": [
-
-    ],
-    "requested_teams": [
-
-    ],
-    "labels": [
-
-    ],
+    "assignees": [],
+    "requested_reviewers": [],
+    "requested_teams": [],
+    "labels": [],
     "milestone": null,
     "draft": true,
     "commits_url": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/25921/commits",
@@ -20646,9 +19954,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -20781,9 +20087,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -20861,18 +20165,10 @@
     "merged_at": null,
     "merge_commit_sha": null,
     "assignee": null,
-    "assignees": [
-
-    ],
-    "requested_reviewers": [
-
-    ],
-    "requested_teams": [
-
-    ],
-    "labels": [
-
-    ],
+    "assignees": [],
+    "requested_reviewers": [],
+    "requested_teams": [],
+    "labels": [],
     "milestone": null,
     "draft": true,
     "commits_url": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/25920/commits",
@@ -21005,9 +20301,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -21140,9 +20434,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -21220,18 +20512,10 @@
     "merged_at": null,
     "merge_commit_sha": null,
     "assignee": null,
-    "assignees": [
-
-    ],
-    "requested_reviewers": [
-
-    ],
-    "requested_teams": [
-
-    ],
-    "labels": [
-
-    ],
+    "assignees": [],
+    "requested_reviewers": [],
+    "requested_teams": [],
+    "labels": [],
     "milestone": null,
     "draft": true,
     "commits_url": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/25919/commits",
@@ -21364,9 +20648,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -21499,9 +20781,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -21579,18 +20859,10 @@
     "merged_at": null,
     "merge_commit_sha": null,
     "assignee": null,
-    "assignees": [
-
-    ],
-    "requested_reviewers": [
-
-    ],
-    "requested_teams": [
-
-    ],
-    "labels": [
-
-    ],
+    "assignees": [],
+    "requested_reviewers": [],
+    "requested_teams": [],
+    "labels": [],
     "milestone": null,
     "draft": true,
     "commits_url": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/25917/commits",
@@ -21723,9 +20995,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -21858,9 +21128,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -21938,18 +21206,10 @@
     "merged_at": null,
     "merge_commit_sha": null,
     "assignee": null,
-    "assignees": [
-
-    ],
-    "requested_reviewers": [
-
-    ],
-    "requested_teams": [
-
-    ],
-    "labels": [
-
-    ],
+    "assignees": [],
+    "requested_reviewers": [],
+    "requested_teams": [],
+    "labels": [],
     "milestone": null,
     "draft": true,
     "commits_url": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/25916/commits",
@@ -22082,9 +21342,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -22217,9 +21475,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -22297,18 +21553,10 @@
     "merged_at": null,
     "merge_commit_sha": null,
     "assignee": null,
-    "assignees": [
-
-    ],
-    "requested_reviewers": [
-
-    ],
-    "requested_teams": [
-
-    ],
-    "labels": [
-
-    ],
+    "assignees": [],
+    "requested_reviewers": [],
+    "requested_teams": [],
+    "labels": [],
     "milestone": null,
     "draft": true,
     "commits_url": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/25915/commits",
@@ -22441,9 +21689,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -22576,9 +21822,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -22656,18 +21900,10 @@
     "merged_at": null,
     "merge_commit_sha": null,
     "assignee": null,
-    "assignees": [
-
-    ],
-    "requested_reviewers": [
-
-    ],
-    "requested_teams": [
-
-    ],
-    "labels": [
-
-    ],
+    "assignees": [],
+    "requested_reviewers": [],
+    "requested_teams": [],
+    "labels": [],
     "milestone": null,
     "draft": true,
     "commits_url": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/25914/commits",
@@ -22800,9 +22036,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -22935,9 +22169,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -23015,18 +22247,10 @@
     "merged_at": null,
     "merge_commit_sha": null,
     "assignee": null,
-    "assignees": [
-
-    ],
-    "requested_reviewers": [
-
-    ],
-    "requested_teams": [
-
-    ],
-    "labels": [
-
-    ],
+    "assignees": [],
+    "requested_reviewers": [],
+    "requested_teams": [],
+    "labels": [],
     "milestone": null,
     "draft": true,
     "commits_url": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/25912/commits",
@@ -23159,9 +22383,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -23294,9 +22516,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -23374,18 +22594,10 @@
     "merged_at": null,
     "merge_commit_sha": null,
     "assignee": null,
-    "assignees": [
-
-    ],
-    "requested_reviewers": [
-
-    ],
-    "requested_teams": [
-
-    ],
-    "labels": [
-
-    ],
+    "assignees": [],
+    "requested_reviewers": [],
+    "requested_teams": [],
+    "labels": [],
     "milestone": null,
     "draft": true,
     "commits_url": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/25911/commits",
@@ -23518,9 +22730,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -23653,9 +22863,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -23733,18 +22941,10 @@
     "merged_at": null,
     "merge_commit_sha": null,
     "assignee": null,
-    "assignees": [
-
-    ],
-    "requested_reviewers": [
-
-    ],
-    "requested_teams": [
-
-    ],
-    "labels": [
-
-    ],
+    "assignees": [],
+    "requested_reviewers": [],
+    "requested_teams": [],
+    "labels": [],
     "milestone": null,
     "draft": true,
     "commits_url": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/25910/commits",
@@ -23877,9 +23077,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -24012,9 +23210,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -24092,18 +23288,10 @@
     "merged_at": null,
     "merge_commit_sha": null,
     "assignee": null,
-    "assignees": [
-
-    ],
-    "requested_reviewers": [
-
-    ],
-    "requested_teams": [
-
-    ],
-    "labels": [
-
-    ],
+    "assignees": [],
+    "requested_reviewers": [],
+    "requested_teams": [],
+    "labels": [],
     "milestone": null,
     "draft": true,
     "commits_url": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/25909/commits",
@@ -24236,9 +23424,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -24371,9 +23557,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -24451,18 +23635,10 @@
     "merged_at": null,
     "merge_commit_sha": null,
     "assignee": null,
-    "assignees": [
-
-    ],
-    "requested_reviewers": [
-
-    ],
-    "requested_teams": [
-
-    ],
-    "labels": [
-
-    ],
+    "assignees": [],
+    "requested_reviewers": [],
+    "requested_teams": [],
+    "labels": [],
     "milestone": null,
     "draft": true,
     "commits_url": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/25908/commits",
@@ -24595,9 +23771,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -24730,9 +23904,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -24810,18 +23982,10 @@
     "merged_at": null,
     "merge_commit_sha": null,
     "assignee": null,
-    "assignees": [
-
-    ],
-    "requested_reviewers": [
-
-    ],
-    "requested_teams": [
-
-    ],
-    "labels": [
-
-    ],
+    "assignees": [],
+    "requested_reviewers": [],
+    "requested_teams": [],
+    "labels": [],
     "milestone": null,
     "draft": true,
     "commits_url": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/25907/commits",
@@ -24954,9 +24118,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -25089,9 +24251,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -25169,18 +24329,10 @@
     "merged_at": null,
     "merge_commit_sha": null,
     "assignee": null,
-    "assignees": [
-
-    ],
-    "requested_reviewers": [
-
-    ],
-    "requested_teams": [
-
-    ],
-    "labels": [
-
-    ],
+    "assignees": [],
+    "requested_reviewers": [],
+    "requested_teams": [],
+    "labels": [],
     "milestone": null,
     "draft": true,
     "commits_url": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/25906/commits",
@@ -25313,9 +24465,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -25448,9 +24598,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -25528,18 +24676,10 @@
     "merged_at": null,
     "merge_commit_sha": null,
     "assignee": null,
-    "assignees": [
-
-    ],
-    "requested_reviewers": [
-
-    ],
-    "requested_teams": [
-
-    ],
-    "labels": [
-
-    ],
+    "assignees": [],
+    "requested_reviewers": [],
+    "requested_teams": [],
+    "labels": [],
     "milestone": null,
     "draft": true,
     "commits_url": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/25905/commits",
@@ -25672,9 +24812,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -25807,9 +24945,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -25887,18 +25023,10 @@
     "merged_at": null,
     "merge_commit_sha": null,
     "assignee": null,
-    "assignees": [
-
-    ],
-    "requested_reviewers": [
-
-    ],
-    "requested_teams": [
-
-    ],
-    "labels": [
-
-    ],
+    "assignees": [],
+    "requested_reviewers": [],
+    "requested_teams": [],
+    "labels": [],
     "milestone": null,
     "draft": true,
     "commits_url": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/25904/commits",
@@ -26031,9 +25159,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -26166,9 +25292,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -26246,18 +25370,10 @@
     "merged_at": null,
     "merge_commit_sha": null,
     "assignee": null,
-    "assignees": [
-
-    ],
-    "requested_reviewers": [
-
-    ],
-    "requested_teams": [
-
-    ],
-    "labels": [
-
-    ],
+    "assignees": [],
+    "requested_reviewers": [],
+    "requested_teams": [],
+    "labels": [],
     "milestone": null,
     "draft": true,
     "commits_url": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/25903/commits",
@@ -26390,9 +25506,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -26525,9 +25639,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -26605,18 +25717,10 @@
     "merged_at": null,
     "merge_commit_sha": null,
     "assignee": null,
-    "assignees": [
-
-    ],
-    "requested_reviewers": [
-
-    ],
-    "requested_teams": [
-
-    ],
-    "labels": [
-
-    ],
+    "assignees": [],
+    "requested_reviewers": [],
+    "requested_teams": [],
+    "labels": [],
     "milestone": null,
     "draft": true,
     "commits_url": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/25902/commits",
@@ -26749,9 +25853,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -26884,9 +25986,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -26964,18 +26064,10 @@
     "merged_at": null,
     "merge_commit_sha": null,
     "assignee": null,
-    "assignees": [
-
-    ],
-    "requested_reviewers": [
-
-    ],
-    "requested_teams": [
-
-    ],
-    "labels": [
-
-    ],
+    "assignees": [],
+    "requested_reviewers": [],
+    "requested_teams": [],
+    "labels": [],
     "milestone": null,
     "draft": true,
     "commits_url": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/25901/commits",
@@ -27108,9 +26200,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -27243,9 +26333,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -27323,18 +26411,10 @@
     "merged_at": null,
     "merge_commit_sha": null,
     "assignee": null,
-    "assignees": [
-
-    ],
-    "requested_reviewers": [
-
-    ],
-    "requested_teams": [
-
-    ],
-    "labels": [
-
-    ],
+    "assignees": [],
+    "requested_reviewers": [],
+    "requested_teams": [],
+    "labels": [],
     "milestone": null,
     "draft": true,
     "commits_url": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/25900/commits",
@@ -27467,9 +26547,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -27602,9 +26680,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -27682,18 +26758,10 @@
     "merged_at": null,
     "merge_commit_sha": null,
     "assignee": null,
-    "assignees": [
-
-    ],
-    "requested_reviewers": [
-
-    ],
-    "requested_teams": [
-
-    ],
-    "labels": [
-
-    ],
+    "assignees": [],
+    "requested_reviewers": [],
+    "requested_teams": [],
+    "labels": [],
     "milestone": null,
     "draft": true,
     "commits_url": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/25899/commits",
@@ -27826,9 +26894,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -27961,9 +27027,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -28041,18 +27105,10 @@
     "merged_at": null,
     "merge_commit_sha": "71fda45fa8c5d7e9b2816ad4eec703448d4ad770",
     "assignee": null,
-    "assignees": [
-
-    ],
-    "requested_reviewers": [
-
-    ],
-    "requested_teams": [
-
-    ],
-    "labels": [
-
-    ],
+    "assignees": [],
+    "requested_reviewers": [],
+    "requested_teams": [],
+    "labels": [],
     "milestone": null,
     "draft": true,
     "commits_url": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/25898/commits",
@@ -28185,9 +27241,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -28320,9 +27374,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -28400,18 +27452,10 @@
     "merged_at": null,
     "merge_commit_sha": null,
     "assignee": null,
-    "assignees": [
-
-    ],
-    "requested_reviewers": [
-
-    ],
-    "requested_teams": [
-
-    ],
-    "labels": [
-
-    ],
+    "assignees": [],
+    "requested_reviewers": [],
+    "requested_teams": [],
+    "labels": [],
     "milestone": null,
     "draft": true,
     "commits_url": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/25897/commits",
@@ -28544,9 +27588,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -28679,9 +27721,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -28759,18 +27799,10 @@
     "merged_at": null,
     "merge_commit_sha": null,
     "assignee": null,
-    "assignees": [
-
-    ],
-    "requested_reviewers": [
-
-    ],
-    "requested_teams": [
-
-    ],
-    "labels": [
-
-    ],
+    "assignees": [],
+    "requested_reviewers": [],
+    "requested_teams": [],
+    "labels": [],
     "milestone": null,
     "draft": true,
     "commits_url": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/25896/commits",
@@ -28903,9 +27935,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -29038,9 +28068,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -29118,18 +28146,10 @@
     "merged_at": null,
     "merge_commit_sha": "2c888f75c1181bc43787ce87f4f60e78031699cf",
     "assignee": null,
-    "assignees": [
-
-    ],
-    "requested_reviewers": [
-
-    ],
-    "requested_teams": [
-
-    ],
-    "labels": [
-
-    ],
+    "assignees": [],
+    "requested_reviewers": [],
+    "requested_teams": [],
+    "labels": [],
     "milestone": null,
     "draft": true,
     "commits_url": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/25895/commits",
@@ -29262,9 +28282,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -29397,9 +28415,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -29477,18 +28493,10 @@
     "merged_at": null,
     "merge_commit_sha": null,
     "assignee": null,
-    "assignees": [
-
-    ],
-    "requested_reviewers": [
-
-    ],
-    "requested_teams": [
-
-    ],
-    "labels": [
-
-    ],
+    "assignees": [],
+    "requested_reviewers": [],
+    "requested_teams": [],
+    "labels": [],
     "milestone": null,
     "draft": true,
     "commits_url": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/25894/commits",
@@ -29621,9 +28629,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -29756,9 +28762,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -29836,18 +28840,10 @@
     "merged_at": null,
     "merge_commit_sha": null,
     "assignee": null,
-    "assignees": [
-
-    ],
-    "requested_reviewers": [
-
-    ],
-    "requested_teams": [
-
-    ],
-    "labels": [
-
-    ],
+    "assignees": [],
+    "requested_reviewers": [],
+    "requested_teams": [],
+    "labels": [],
     "milestone": null,
     "draft": true,
     "commits_url": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/25893/commits",
@@ -29980,9 +28976,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -30115,9 +29109,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -30195,18 +29187,10 @@
     "merged_at": null,
     "merge_commit_sha": null,
     "assignee": null,
-    "assignees": [
-
-    ],
-    "requested_reviewers": [
-
-    ],
-    "requested_teams": [
-
-    ],
-    "labels": [
-
-    ],
+    "assignees": [],
+    "requested_reviewers": [],
+    "requested_teams": [],
+    "labels": [],
     "milestone": null,
     "draft": true,
     "commits_url": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/25892/commits",
@@ -30339,9 +29323,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -30474,9 +29456,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -30554,18 +29534,10 @@
     "merged_at": null,
     "merge_commit_sha": null,
     "assignee": null,
-    "assignees": [
-
-    ],
-    "requested_reviewers": [
-
-    ],
-    "requested_teams": [
-
-    ],
-    "labels": [
-
-    ],
+    "assignees": [],
+    "requested_reviewers": [],
+    "requested_teams": [],
+    "labels": [],
     "milestone": null,
     "draft": true,
     "commits_url": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/25891/commits",
@@ -30698,9 +29670,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -30833,9 +29803,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -30913,18 +29881,10 @@
     "merged_at": null,
     "merge_commit_sha": null,
     "assignee": null,
-    "assignees": [
-
-    ],
-    "requested_reviewers": [
-
-    ],
-    "requested_teams": [
-
-    ],
-    "labels": [
-
-    ],
+    "assignees": [],
+    "requested_reviewers": [],
+    "requested_teams": [],
+    "labels": [],
     "milestone": null,
     "draft": true,
     "commits_url": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/25890/commits",
@@ -31057,9 +30017,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -31192,9 +30150,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -31272,18 +30228,10 @@
     "merged_at": null,
     "merge_commit_sha": null,
     "assignee": null,
-    "assignees": [
-
-    ],
-    "requested_reviewers": [
-
-    ],
-    "requested_teams": [
-
-    ],
-    "labels": [
-
-    ],
+    "assignees": [],
+    "requested_reviewers": [],
+    "requested_teams": [],
+    "labels": [],
     "milestone": null,
     "draft": true,
     "commits_url": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/25889/commits",
@@ -31416,9 +30364,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -31551,9 +30497,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -31631,18 +30575,10 @@
     "merged_at": null,
     "merge_commit_sha": null,
     "assignee": null,
-    "assignees": [
-
-    ],
-    "requested_reviewers": [
-
-    ],
-    "requested_teams": [
-
-    ],
-    "labels": [
-
-    ],
+    "assignees": [],
+    "requested_reviewers": [],
+    "requested_teams": [],
+    "labels": [],
     "milestone": null,
     "draft": true,
     "commits_url": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/25888/commits",
@@ -31775,9 +30711,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -31910,9 +30844,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -31990,18 +30922,10 @@
     "merged_at": null,
     "merge_commit_sha": null,
     "assignee": null,
-    "assignees": [
-
-    ],
-    "requested_reviewers": [
-
-    ],
-    "requested_teams": [
-
-    ],
-    "labels": [
-
-    ],
+    "assignees": [],
+    "requested_reviewers": [],
+    "requested_teams": [],
+    "labels": [],
     "milestone": null,
     "draft": true,
     "commits_url": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/25887/commits",
@@ -32134,9 +31058,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -32269,9 +31191,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -32349,18 +31269,10 @@
     "merged_at": null,
     "merge_commit_sha": "fd308703a4b5763493cb27c4939eb885fbe26d3a",
     "assignee": null,
-    "assignees": [
-
-    ],
-    "requested_reviewers": [
-
-    ],
-    "requested_teams": [
-
-    ],
-    "labels": [
-
-    ],
+    "assignees": [],
+    "requested_reviewers": [],
+    "requested_teams": [],
+    "labels": [],
     "milestone": null,
     "draft": true,
     "commits_url": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/25886/commits",
@@ -32493,9 +31405,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -32628,9 +31538,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -32708,18 +31616,10 @@
     "merged_at": null,
     "merge_commit_sha": null,
     "assignee": null,
-    "assignees": [
-
-    ],
-    "requested_reviewers": [
-
-    ],
-    "requested_teams": [
-
-    ],
-    "labels": [
-
-    ],
+    "assignees": [],
+    "requested_reviewers": [],
+    "requested_teams": [],
+    "labels": [],
     "milestone": null,
     "draft": true,
     "commits_url": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/25885/commits",
@@ -32852,9 +31752,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -32987,9 +31885,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -33067,18 +31963,10 @@
     "merged_at": null,
     "merge_commit_sha": null,
     "assignee": null,
-    "assignees": [
-
-    ],
-    "requested_reviewers": [
-
-    ],
-    "requested_teams": [
-
-    ],
-    "labels": [
-
-    ],
+    "assignees": [],
+    "requested_reviewers": [],
+    "requested_teams": [],
+    "labels": [],
     "milestone": null,
     "draft": true,
     "commits_url": "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/25884/commits",
@@ -33211,9 +32099,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,
@@ -33346,9 +32232,7 @@
         "allow_forking": true,
         "is_template": false,
         "web_commit_signoff_required": false,
-        "topics": [
-
-        ],
+        "topics": [],
         "visibility": "public",
         "forks": 0,
         "open_issues": 9875,

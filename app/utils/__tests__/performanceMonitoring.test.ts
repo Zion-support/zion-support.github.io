@@ -1,4 +1,4 @@
-import { describe, it, expect, beforeEach, jest } from '@jest/globals';
+import { describe, it, expect, beforeEach } from '@jest/globals';
 import {
   recordMetric,
   getMetrics,
@@ -124,7 +124,7 @@ describe('performanceMonitoring', () => {
   describe('measureAsyncFunction', () => {
     it('should measure async function execution time', async () => {
       const asyncFn = async () => {
-        await new Promise(resolve => setTimeout(resolve, 20));
+        await new Promise(resolve => setTimeout(resolve, 10));
         return 'completed';
       };
 
@@ -134,7 +134,8 @@ describe('performanceMonitoring', () => {
       
       const metrics = getMetrics();
       expect(metrics['async-test']).toBeDefined();
-      expect(metrics['async-test'].values[0]).toBeGreaterThan(0);
+      // Use >= 9 to account for timing variations in test environment
+      expect(metrics['async-test'].values[0]).toBeGreaterThanOrEqual(9);
     });
 
     it('should handle async function errors', async () => {

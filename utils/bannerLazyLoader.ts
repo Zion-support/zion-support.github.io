@@ -4,7 +4,6 @@
  * Optimizes banner loading by implementing lazy loading and code splitting
  * to improve initial page load performance.
  */
-import { lazy } from 'react';
 import type { ComponentType } from 'react';
 
 interface BannerModule {
@@ -50,8 +49,8 @@ export const preloadBanner = (importFn: () => Promise<BannerModule>): void => {
 export const createBannerLoader = () => {
   const observer = new IntersectionObserver(
         if (entry.isIntersecting) {
-          const element = entry.target as HTMLElement;
-          const importFn = element.dataset.bannerImport;
+          const _element = entry.target as HTMLElement;
+          const _importFn = element.dataset.bannerImport;
           if (importFn) {
             // Load the banner when it comes into view
             eval(importFn)();

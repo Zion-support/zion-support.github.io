@@ -18,11 +18,7 @@ export const securityHeaders = {
       styleSrc: ["'self'", "'unsafe-inline'", 'https://fonts.googleapis.com'],
       fontSrc: ["'self'", 'https://fonts.gstatic.com'],
       imgSrc: ["'self'", 'data:', 'https:', 'blob:'],
-      connectSrc: [
-        "'self'",
-        'https://www.google-analytics.com',
-        'https://analytics.google.com',
-      ],
+      connectSrc: ["'self'", 'https://www.google-analytics.com', 'https://analytics.google.com'],
       frameSrc: ["'self'"],
       objectSrc: ["'none'"],
       upgradeInsecureRequests: true,
@@ -37,8 +33,7 @@ export const securityHeaders = {
     'X-Frame-Options': 'SAMEORIGIN',
     'X-Content-Type-Options': 'nosniff',
     'Referrer-Policy': 'strict-origin-when-cross-origin',
-    'Permissions-Policy':
-      'camera=(), microphone=(), geolocation=(), interest-cohort=()',
+    'Permissions-Policy': 'camera=(), microphone=(), geolocation=(), interest-cohort=()',
   },
 };
 
@@ -117,7 +112,7 @@ export function validateUrl(url: string): boolean {
  * Generate secure token
  */
 export function generateSecureToken(length: number = 32): string {
-  const array = new Uint8Array(length);
+  const _array = new Uint8Array(length);
   if (typeof window !== 'undefined' && window.crypto) {
     window.crypto.getRandomValues(array);
   } else {

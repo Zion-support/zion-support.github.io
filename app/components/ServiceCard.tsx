@@ -1,6 +1,5 @@
-'use client';
-
 import React from 'react';
+
 
 interface ServiceCardProps {
   title: string;
@@ -12,14 +11,9 @@ interface ServiceCardProps {
 /**
  * Reusable ServiceCard component with accessibility features
  */
-const ServiceCard: React.FC<ServiceCardProps> = ({
-  title,
-  description,
-  icon,
-  className = '',
-}) => {
+const ServiceCard: React.FC<ServiceCardProps> = ({ title, description, icon, className = '' }) => {
   return (
-    <article 
+    <article
       className={`bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300 ${className}`}
       role="article"
     >
@@ -28,12 +22,8 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
           {icon}
         </div>
       )}
-      <h3 className="text-2xl font-semibold text-gray-900 mb-4">
-        {title}
-      </h3>
-      <p className="text-gray-600">
-        {description}
-      </p>
+      <h3 className="text-2xl font-semibold text-gray-900 mb-4">{title}</h3>
+      <p className="text-gray-600">{description}</p>
     </article>
   );
 };

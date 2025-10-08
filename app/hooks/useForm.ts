@@ -4,13 +4,14 @@
  */
 
 import { useState, useCallback, ChangeEvent } from 'react';
+// import { logger } from '../utils/logger';
 import {
   ValidationRule,
   validateField,
   validateForm,
   isFormValid,
   getFormErrors,
-  ValidationResult
+  // ValidationResult as _ValidationResult,
 } from '../utils/formValidation';
 
 export interface UseFormConfig<T extends Record<string, unknown>> {
@@ -39,11 +40,7 @@ export interface UseFormReturn<T extends Record<string, unknown>> {
 }
 
 export function useForm<T extends Record<string, unknown>>({
-  initialValues,
-  validationSchema = {},
-  onSubmit,
-  validateOnChange = true,
-  validateOnBlur = true
+  initialValues, validationSchema = {}, onSubmit: _onSubmit, validateOnChange = true, validateOnBlur = true
 }: UseFormConfig<T>): UseFormReturn<T> {
   const [values, setValues] = useState<T>(initialValues);
   const [errors, setErrors] = useState<Record<keyof T, string[]>>({} as Record<keyof T, string[]>);
@@ -55,9 +52,9 @@ export function useForm<T extends Record<string, unknown>>({
     (field: keyof T): void => {
       if (!validationSchema[field]) return;
 
-      const fieldValue = values[field];
-      const rules = validationSchema[field];
-      const result = validateField(fieldValue, rules);
+      const _fieldValue = values[field];
+      const _rules = validationSchema[field];
+      const _result = validateField(fieldValue, rules);
 
       setErrors(prev => ({
         ...prev,
@@ -71,8 +68,8 @@ export function useForm<T extends Record<string, unknown>>({
   const validateAllFields = useCallback((): boolean => {
     if (Object.keys(validationSchema).length === 0) return true;
 
-    const validationResults = validateForm(values, validationSchema as Record<keyof T, ValidationRule[]>);
-    const formErrors = getFormErrors(validationResults);
+    const _validationResults = validateForm(values, validationSchema as Record<keyof T, ValidationRule[]>);
+    const _formErrors = getFormErrors(validationResults);
     
     setErrors(formErrors);
     
@@ -83,7 +80,7 @@ export function useForm<T extends Record<string, unknown>>({
   const handleChange = useCallback(
     (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
       const { name, value, type } = e.target;
-      const fieldName = name as keyof T;
+      const _fieldName = name as keyof T;
       
       // Handle checkbox inputs
       let fieldValue: unknown = value;
@@ -107,7 +104,7 @@ export function useForm<T extends Record<string, unknown>>({
   // Handle input blur
   const handleBlur = useCallback(
     (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-      const fieldName = e.target.name as keyof T;
+      const _fieldName = e.target.name as keyof T;
 
       setTouched(prev => ({
         ...prev,
@@ -135,7 +132,7 @@ export function useForm<T extends Record<string, unknown>>({
       setTouched(allTouched);
 
       // Validate all fields
-      const isValid = validateAllFields();
+      const _isValid = validateAllFields();
 
       if (!isValid) {
         return;
@@ -146,12 +143,12 @@ export function useForm<T extends Record<string, unknown>>({
       try {
         await onSubmit(values);
       } catch (error) {
-        console.error('Form submission error:', error);
+
       } finally {
         setIsSubmitting(false);
       }
     },
-    [values, validateAllFields, onSubmit]
+    [values, validateAllFields]
   );
 
   // Set field value programmatically

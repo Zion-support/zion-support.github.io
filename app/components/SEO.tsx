@@ -4,6 +4,7 @@
  */
 
 import React from 'react';
+
 import { Helmet } from 'react-helmet-async';
 
 export interface SEOProps {
@@ -26,13 +27,20 @@ export interface SEOProps {
 
 const defaultSEO = {
   title: 'Zion Tech Group - AI & IT Solutions',
-  description: 'Leading provider of AI-powered enterprise solutions and digital transformation services. Achieve 300% ROI with cutting-edge AI technology.',
-  keywords: ['AI', 'artificial intelligence', 'enterprise solutions', 'digital transformation', 'IT services'],
+  description:
+    'Leading provider of AI-powered enterprise solutions and digital transformation services. Achieve 300% ROI with cutting-edge AI technology.',
+  keywords: [
+    'AI',
+    'artificial intelligence',
+    'enterprise solutions',
+    'digital transformation',
+    'IT services',
+  ],
   image: 'https://ziontechgroup.com/og-image.jpg',
   url: 'https://ziontechgroup.com',
   type: 'website' as const,
   locale: 'en_US',
-  twitterCard: 'summary_large_image' as const
+  twitterCard: 'summary_large_image' as const,
 };
 
 export const SEO: React.FC<SEOProps> = ({
@@ -50,7 +58,7 @@ export const SEO: React.FC<SEOProps> = ({
   structuredData,
   twitterCard = defaultSEO.twitterCard,
   locale = defaultSEO.locale,
-  alternateLocales = []
+  alternateLocales = [],
 }) => {
   const seo = {
     title: title ? `${title} | Zion Tech Group` : defaultSEO.title,
@@ -60,7 +68,7 @@ export const SEO: React.FC<SEOProps> = ({
     url: url || defaultSEO.url,
     type,
     twitterCard,
-    locale
+    locale,
   };
 
   // Generate structured data
@@ -75,13 +83,13 @@ export const SEO: React.FC<SEOProps> = ({
       headline: seo.title,
       description: seo.description,
       url: seo.url,
-      image: seo.image
+      image: seo.image,
     };
 
     if (author) {
       baseStructuredData.author = {
         '@type': 'Person',
-        name: author
+        name: author,
       };
     }
 
@@ -102,10 +110,10 @@ export const SEO: React.FC<SEOProps> = ({
       <title>{seo.title}</title>
       <meta name="description" content={seo.description} />
       {seo.keywords && <meta name="keywords" content={seo.keywords.join(', ')} />}
-      
+
       {/* Canonical URL */}
       {canonical && <link rel="canonical" href={canonical} />}
-      
+
       {/* No Index */}
       {noIndex && <meta name="robots" content="noindex, nofollow" />}
 
@@ -144,17 +152,15 @@ export const SEO: React.FC<SEOProps> = ({
       )}
 
       {/* Structured Data */}
-      <script type="application/ld+json">
-        {JSON.stringify(generateStructuredData())}
-      </script>
+      <script type="application/ld+json">{JSON.stringify(generateStructuredData())}</script>
 
       {/* Preconnect to external domains */}
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-      
+
       {/* DNS Prefetch */}
       <link rel="dns-prefetch" href="https://www.google-analytics.com" />
-      
+
       {/* Preload critical resources */}
       <link
         rel="preload"

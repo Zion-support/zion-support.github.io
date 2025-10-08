@@ -69,7 +69,7 @@ class ErrorTracker {
       try {
         callback(trackedError);
       } catch (e) {
-        console.error('Error in error callback:', e);
+//         console.error('Error in error callback:', e);
       }
     });
 

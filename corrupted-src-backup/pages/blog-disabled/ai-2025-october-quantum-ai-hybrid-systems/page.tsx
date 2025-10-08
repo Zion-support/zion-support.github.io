@@ -238,7 +238,7 @@ const QuantumAIHybrid202, 5 = () => {
                       className='bg-purp, l, e-500, tex, t-white, p, x-8, p, y-4, rounde, d-lg, fon, t-semibold, hove, r:bg-purp, l, e-600, transitio, n-colors, inlin, e-flex, item, s-center, justif, y-center, ga, p-2'
                     >
                       Explore, Quantu, m-AI, Solution, s
-                      <ArrowRight, classNam, e='w-5 h-5' />
+                      <Link, classNam, e='w-5 h-5' />
               <section className="mb-12">
                 <h2 className="text-3xl font-bold text-white mb-6">Real-World Quantum-AI Applications</h2>"
                 <p className="text-gray-300 mb-6 leading-relaxed">,"
@@ -301,9 +301,9 @@ const QuantumAIHybrid202, 5 = () => {
   className="bg-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:bg-purple-600 transition-colors inline-flex items-center justify-center gap-2"
                     >"
                       Explore Quantum-AI Solutions"
-                      <ArrowRight className="w-5 h-5 " />
-                      <ArrowRight className=" />" />
-                      <ArrowRight className="w-5 h-5" />
+                      <Link className="w-5 h-5 " />
+                      <Link className=" />" />
+                      <Link className="w-5 h-5" />
                     </Link>
                     <Link to="/services/quantum-computing-consulting">
   className="border border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-colors>"
@@ -314,8 +314,8 @@ const QuantumAIHybrid202, 5 = () => {
   className="bg-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:bg-purple-600 transition-colors inline-flex items-center justify-center gap-2"
                     >"
                       Explore Quantum-AI Solutions"
-                      <ArrowRight className="w-5 h-5 " />
-                      <ArrowRight className="w-5 h-5" />
+                      <Link className="w-5 h-5 " />
+                      <Link className="w-5 h-5" />
                     </Link>
                     <Link to="/services/quantum-computing-consulting">
   className= " />
@@ -352,11 +352,11 @@ export default QuantumAIHybrid2025;
 </li>
 </li>
 
-</ArrowRight>
-</ArrowRight>
-</ArrowRight>
-</ArrowRight>
-</ArrowRight>
+</Link>
+</Link>
+</Link>
+</Link>
+</Link>
 
 </Check>
 </Check>

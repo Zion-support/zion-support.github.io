@@ -1,1 +1,0 @@
-return <ExpoPage />; return <ExpoPage />;const ExpoPage = dynamic(() => import('../../components/expo/ExpoPage'), {ssr: false }}),; ' return <ExpoPage />;const ExpoPage = dynamic (() => import ('../../components / expo / ExpoPage'); {ssr: false }}); '

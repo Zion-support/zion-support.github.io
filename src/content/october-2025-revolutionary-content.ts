@@ -24,7 +24,8 @@ export const octoberRevolutionaryContent: RevolutionaryContent[] = [
     id: 'ai-powered-customer-experience-revolution',
     title: 'AI-Powered Customer Experience Revolution: 98% Satisfaction',
     slug: 'ai-2025-october-customer-experience-revolution',
-    description: 'Revolutionary AI-powered customer experience platform delivering 98% satisfaction, 15.6% CLV increase, and $230M+ revenue growth through personalized interactions.',
+    description:
+      'Revolutionary AI-powered customer experience platform delivering 98% satisfaction, 15.6% CLV increase, and $230M+ revenue growth through personalized interactions.',
     category: 'Customer Experience',
     date: '2025-10-01',
     readTime: '14 min',
@@ -49,7 +50,8 @@ export const octoberRevolutionaryContent: RevolutionaryContent[] = [
     id: 'autonomous-business-process-optimization',
     title: 'Autonomous Business Process Optimization: 87% Efficiency Gain',
     slug: 'ai-2025-october-autonomous-business-process-optimization',
-    description: 'Revolutionary autonomous business process optimization delivering 87% efficiency gains, 92% cost reduction, and $1.2B value creation through intelligent automation.',
+    description:
+      'Revolutionary autonomous business process optimization delivering 87% efficiency gains, 92% cost reduction, and $1.2B value creation through intelligent automation.',
     category: 'Business Process Automation',
     date: '2025-10-01',
     readTime: '16 min',
@@ -69,7 +71,7 @@ export const octoberRevolutionaryContent: RevolutionaryContent[] = [
       value: '$1.2B',
       accuracy: '99.5%',
     },
-  }
+  },
 ];
 
 export const getFeaturedRevolutionaryContent = () => {

@@ -46,7 +46,7 @@ export const octoberCuttingEdgeInnovations = [
 ];
 
 export const getFeaturedInnovations = () => {
-  return octoberCuttingEdgeInnovations.filter(innovation => (innovation as any).featured);
+  return octoberCuttingEdgeInnovations.slice(0, 3);
 };
 
 export const getInnovationsByCategory = (category: string) => {

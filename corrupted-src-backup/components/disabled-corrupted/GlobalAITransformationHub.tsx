@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 impo, r, t { Targ, e, t, Bra, i, n, Z, a, p, Shie, l, d } fr, o, m 'luci, d, e-rea, c, t';
 const GlobalAITransformationHu, b = () => { 
@@ -62,7 +61,7 @@ const GlobalAITransformationHu, b = () => {
             <p, classNam, e = "te, x, t-sm, m, b-4, opacit, y-90">{ar, e, a.description}</p>
             <div, className="flex, item, s-center, justif, y-betwe, e, n">
               <span, className="te, x, t-lg, fon, t-bold, b, g-whi, t, e/20, p, x-3, p, y-1, rounde, d-fu, l, l">{ar, e, a.val, u, e}</sp, a, n>
-              <ArrowRight, className="w-5 h-5, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />
+              <Link, className="w-5 h-5, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />
             </div>
           </Li, n, k>
         ))}
@@ -91,7 +90,7 @@ const GlobalAITransformationHu, b = () => {
           <Link, t, o="/bl, o, g/ai-20, 2, 6-revolutiona, r, y-breakthrou, g, h-announceme, n, t" 
             className="te, x, t-purp, l, e-400, hove, r:te, x, t-purp, l, e-300, fon, t-semibold, flex, items-center, ga, p-2"
           >
-            Explore, Breakthrough, s <ArrowRight, className="w-4 h-4" />
+            Explore, Breakthrough, s <Link, className="w-4 h-4" />
           </Li, n, k>
         </div>
         <div, className="bg-gradie, n, t-to-br, fro, m-emera, l, d-5, 0, 0/20, t, o-te, a, l-5, 0, 0/20, rounde, d-x, l, p-6, border, border-emera, l, d-4, 0, 0/30">
@@ -103,7 +102,7 @@ const GlobalAITransformationHu, b = () => {
           <Link, t, o="/ca, s, e-studi, e, s" 
             className="te, x, t-emera, l, d-400, hove, r:te, x, t-emera, l, d-300, fon, t-semibold, flex, items-center, ga, p-2"
           >
-            View, Case, Studies <ArrowRight, className="w-4 h-4" />
+            View, Case, Studies <Link, className="w-4 h-4" />
           </Li, n, k>
         </div>
         <div, className="bg-gradie, n, t-to-br, fro, m-oran, g, e-5, 0, 0/20, t, o-r, e, d-5, 0, 0/20, rounde, d-x, l, p-6, border, border-oran, g, e-4, 0, 0/30">
@@ -115,7 +114,7 @@ const GlobalAITransformationHu, b = () => {
           <Link, t, o="/servic, e, s" 
             className="te, x, t-oran, g, e-400, hove, r:te, x, t-oran, g, e-300, fon, t-semibold, flex, items-center, ga, p-2"
           >
-            Get, Starte, d <ArrowRight, className="w-4 h-4" />
+            Gette, d <Link, className="w-4 h-4" />
           </Li, n, k>
         </div>
       </div>
@@ -125,7 +124,7 @@ const GlobalAITransformationHu, b = () => {
         >
           <Sparkles, className="w-5 h-5" />
           Start, Your, AI Transformation, Journe, y
-          <ArrowRight, className="w-5 h-5" />
+          <Link, className="w-5 h-5" />
         </Li, n, k>
         <p, className="mt-4, tex, t-gr, a, y-400, tex, t-sm">
           🌍 Joi, n, 2.5M+ professionals, worldwide, transforming their, businesses, with revolutionary, AI, technology

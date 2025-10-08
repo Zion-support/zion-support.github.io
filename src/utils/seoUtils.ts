@@ -11,10 +11,10 @@ export interface SEOData {
 }
 
 export class SEOUtils {
-  static generateStructuredData(data: any): string {
+  static generateStructuredData(data: unknown): string {
     return JSON.stringify({
       '@context': 'https://schema.org',
-      ...data
+      ...(data as Record<string, any>)
     });
   }
 

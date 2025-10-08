@@ -6,6 +6,7 @@
 import React, { ReactElement } from 'react';
 import { render, RenderOptions, RenderResult } from '@testing-library/react';
 import { HelmetProvider } from 'react-helmet-async';
+import '@testing-library/jest-dom';
 
 /**
  * Custom render function with common providers
@@ -117,7 +118,7 @@ export function mockPerformanceAPI(): void {
 /**
  * Create mock fetch response
  */
-export function mockFetch(data: any, ok: boolean = true, status: number = 200): void {
+export function mockFetch(data: unknown, ok: boolean = true, status: number = 200): void {
   global.fetch = jest.fn(() =>
     Promise.resolve({
       ok,

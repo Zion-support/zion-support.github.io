@@ -5,10 +5,9 @@
 export const performanceOptimizer = {
   init: () => {
     if (typeof window !== 'undefined') {
-      console.log('Performance optimizer initialized');
-    }
+      //       }
   },
-  
+
   getMetrics: () => {
     if (typeof window !== 'undefined' && 'performance' in window) {
       return {
@@ -22,8 +21,8 @@ export const performanceOptimizer = {
 
 export const lazyLoadImages = () => {
   if (typeof window !== 'undefined') {
-    const images = document.querySelectorAll('img[data-src]');
-    images.forEach((img) => {
+    const _images = document.querySelectorAll('img[data-src]');
+    images.forEach(img => {
       if (img instanceof HTMLImageElement) {
         img.src = img.dataset.src || '';
       }
@@ -33,13 +32,12 @@ export const lazyLoadImages = () => {
 
 export const preloadCriticalResources = () => {
   if (typeof window !== 'undefined') {
-    console.log('Preloading critical resources');
-  }
+    //     }
 };
 
 export const collectPerformanceMetrics = () => {
   if (typeof window !== 'undefined' && 'performance' in window) {
-    const perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+    //     const perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
     return {
       loadTime: perfData?.loadEventEnd - perfData?.fetchStart,
       domContentLoaded: perfData?.domContentLoadedEventEnd - perfData?.fetchStart,

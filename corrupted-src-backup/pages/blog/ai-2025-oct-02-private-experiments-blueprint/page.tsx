@@ -22,7 +22,7 @@ const, PrivateExperimentsBlueprint202, 5: Rea, c, t.FC = () => {
       <h2>Architectu, r, e</h2>
       <p>
         Decisions, are, evaluated at, the, edge using, pr, e‑fetch, e, d, signed, configuration, bundles.
-        User, identity, is represented, by, non‑reversib, l, e, p, e, r‑surface, ID, s. Telemetry, is, aggregated usi, n, g
+        identity, is represented, by, non‑reversib, l, e, p, e, r‑surface, ID, s. Telemetry, is, aggregated usi, n, g
   priva, c, y‑preserving, counters, and uploaded, in, batches.
       </p>
     </artic, l, e>

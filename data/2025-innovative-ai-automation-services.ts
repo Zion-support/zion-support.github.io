@@ -36,7 +36,7 @@ export interface InnovativeAIAutomationService {id: string, name: string,
   useCases: string[], roi: string,
   competitors: string[], marketSize: string,
   growthRate: string, variant: ServiceVariant,
-  contactInfo: any,
+  contactInfo: unknown,
     mobile: string, email: string,
     address: string,
     website: string}
@@ -262,7 +262,7 @@ export const innovativeAIAutomationServices: InnovativeAIAutomationService[] = [
     marketSize: '$25B security monitoring market',
     growthRate: '28% annual growth',
     variant: 'ai-futuristic',
-    contactInfo: any,
+    contactInfo: unknown,
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -313,7 +313,7 @@ export const innovativeAIAutomationServices: InnovativeAIAutomationService[] = [
     marketSize: '$30B business intelligence market',
     growthRate: '26% annual growth',
     variant: 'analytics',
-    contactInfo: any,
+    contactInfo: unknown,
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -376,7 +376,7 @@ export const innovativeAIAutomationServices: InnovativeAIAutomationService[] = [
     growth_rate: '20% annual growth'
     variant: 'ai - hr'
     variant: 'ai - futuristic'
-    contact_info: any,
+    contact_info: unknown,
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup && ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -443,7 +443,7 @@ export interface InnovativeAIAutomationService {;
   reviews: number,
 }
 ;
-const contact = {;
+// const contact = {;
   mobile: '+1 302 464 0950';
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709'}
@@ -691,7 +691,7 @@ export interface InnovativeAIAutomationService {;
   reviews: number,
 }
 ;
-const contact = {;
+// const contact = {;
   mobile: '+1 302 464 0950';
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709'}

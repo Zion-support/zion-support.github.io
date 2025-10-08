@@ -1,72 +1,81 @@
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 
+/**
+ * Security Middleware
+ * Applies security headers and implements security policies
+ */
+
 export function middleware(request: NextRequest) {
-  // Clone the response
-  const response = NextResponse.next();
+  const _response = NextResponse.next();
 
   // Security Headers
   const securityHeaders = {
-    // Prevent clickjacking attacks
-    'X-Frame-Options': 'SAMEORIGIN',
-    
-    // Prevent MIME type sniffing
+    // Prevent XSS attacks
     'X-Content-Type-Options': 'nosniff',
-    
-    // Enable XSS protection
+    'X-Frame-Options': 'DENY',
     'X-XSS-Protection': '1; mode=block',
-    
-    // Referrer policy
-    'Referrer-Policy': 'strict-origin-when-cross-origin',
-    
-    // Permissions policy
-    'Permissions-Policy': 'camera=(), microphone=(), geolocation=()',
-    
-    // HSTS (HTTP Strict Transport Security)
-    'Strict-Transport-Security': 'max-age=31536000; includeSubDomains',
     
     // Content Security Policy
     'Content-Security-Policy': [
       "default-src 'self'",
-      "script-src 'self' 'unsafe-eval' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com",
-      "style-src 'self' 'unsafe-inline'",
+      "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com https://vercel.live",
+      "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
+      "font-src 'self' https://fonts.gstatic.com data:",
       "img-src 'self' data: https: blob:",
-      "font-src 'self' data:",
-      "connect-src 'self' https://www.google-analytics.com https://analytics.google.com",
-      "frame-ancestors 'self'",
+      "connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://vercel.live wss:",
+      "frame-src 'self' https://vercel.live",
+      "frame-ancestors 'none'",
       "base-uri 'self'",
       "form-action 'self'",
+      "upgrade-insecure-requests",
     ].join('; '),
+    
+    // Force HTTPS
+    'Strict-Transport-Security': 'max-age=31536000; includeSubDomains; preload',
+    
+    // Referrer policy
+    'Referrer-Policy': 'strict-origin-when-cross-origin',
+    
+    // Permissions policy (Feature-Policy replacement)
+    'Permissions-Policy': [
+      'camera=()',
+      'microphone=()',
+      'geolocation=()',
+      'payment=()',
+      'usb=()',
+      'magnetometer=()',
+      'accelerometer=()',
+      'gyroscope=()',
+    ].join(', '),
+
+    // Additional security headers
+    'X-DNS-Prefetch-Control': 'on',
+    'X-Download-Options': 'noopen',
+    'X-Permitted-Cross-Domain-Policies': 'none',
   };
 
-  // Apply security headers
+  // Apply all security headers
   Object.entries(securityHeaders).forEach(([key, value]) => {
     response.headers.set(key, value);
   });
 
   // CORS headers for API routes
-  if (request.nextUrl.pathname.startsWith('/api')) {
-    response.headers.set('Access-Control-Allow-Credentials', 'true');
+  if (request.nextUrl.pathname.startsWith('/api/')) {
     response.headers.set('Access-Control-Allow-Origin', process.env.ALLOWED_ORIGIN || '*');
-    response.headers.set(
-      'Access-Control-Allow-Methods',
-      'GET,DELETE,PATCH,POST,PUT,OPTIONS'
-    );
-    response.headers.set(
-      'Access-Control-Allow-Headers',
-      'X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version, Authorization'
-    );
+    response.headers.set('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
+    response.headers.set('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+    response.headers.set('Access-Control-Max-Age', '86400');
   }
 
   // Handle preflight requests
   if (request.method === 'OPTIONS') {
-    return new NextResponse(null, { status: 200, headers: response.headers });
+    return new NextResponse(null, { status: 204, headers: response.headers });
   }
 
   return response;
 }
 
-// Configure which routes use this middleware
 export const config = {
   matcher: [
     /*
@@ -74,8 +83,8 @@ export const config = {
      * - _next/static (static files)
      * - _next/image (image optimization files)
      * - favicon.ico (favicon file)
-     * - public folder files
+     * - public folder
      */
-    '/((?!_next/static|_next/image|favicon.ico|.*\\.(?:svg|png|jpg|jpeg|gif|webp)$).*)',
+    '/((?!_next/static|_next/image|favicon.ico|public/).*)',
   ],
 };

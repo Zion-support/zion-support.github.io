@@ -25,7 +25,7 @@ export interface InnovativeBusinessSolution2025 {id: string;
   marketSize: string;
   growthRate: string;
   variant: ServiceVariant;
-  contactInfo: any;
+  contactInfo: unknown;
     mobile: string;
     email: string;
     address: string}
@@ -76,7 +76,7 @@ export const innovativeBusinessSolutionsExpansion2025: InnovativeBusinessSolutio
     marketSize: '$24B business intelligence market',
     growthRate: '22% annual growth',
     variant: 'business-intelligence-futuristic',
-    contactInfo: any,
+    contactInfo: unknown,
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -126,7 +126,7 @@ export const innovativeBusinessSolutionsExpansion2025: InnovativeBusinessSolutio
     marketSize: '$18B workflow automation market',
     growthRate: '28% annual growth',
     variant: 'enterprise-futuristic',
-    contactInfo: any,
+    contactInfo: unknown,
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -176,7 +176,7 @@ export const innovativeBusinessSolutionsExpansion2025: InnovativeBusinessSolutio
     marketSize: '$30B CRM market',
     growthRate: '25% annual growth',
     variant: 'customer-service-futuristic',
-    contactInfo: any,
+    contactInfo: unknown,
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -226,7 +226,7 @@ export const innovativeBusinessSolutionsExpansion2025: InnovativeBusinessSolutio
     marketSize: '$20B financial management market',
     growthRate: '20% annual growth',
     variant: 'finance-futuristic',
-    contactInfo: any,
+    contactInfo: unknown,
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -276,7 +276,7 @@ export const innovativeBusinessSolutionsExpansion2025: InnovativeBusinessSolutio
     marketSize: '$16B project management market',
     growthRate: '24% annual growth',
     variant: 'project-management-futuristic',
-    contactInfo: any,
+    contactInfo: unknown,
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',

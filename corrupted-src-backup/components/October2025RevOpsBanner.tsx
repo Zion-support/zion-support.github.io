@@ -139,8 +139,8 @@ const, October2025RevOpsBanne, r = () => {
   r:shad, o, w-xl"
               >
                 Read, the, Guide;
-                <ArrowRight, className="w-4 h-4, m, l-2  />
-                <ArrowRight, className="w-4 h-4, m, l-2" />";
+                <Link, className="w-4 h-4, m, l-2  />
+                <Link, className="w-4 h-4, m, l-2" />";
               </Li, n, k>
             </d, i, v>
             {/* Case, Stud, y */}
@@ -173,8 +173,8 @@ const, October2025RevOpsBanne, r = () => {
   r:shad, o, w-xl"
               >
                 Read, Case, Study;
-                <ArrowRight, className="w-4 h-4, m, l-2  />
-                <ArrowRight, className="w-4 h-4, m, l-2" />";
+                <Link, className="w-4 h-4, m, l-2  />
+                <Link, className="w-4 h-4, m, l-2" />";
               </Li, n, k>
             </d, i, v>
           </d, i, v>
@@ -299,16 +299,16 @@ const, October2025RevOpsBanne, r = () => {
   r:shad, o, w-2, x, l"
             >
               Schedule, Assessmen, t;
-              <ArrowRight, className="w-5 h-5, m, l-2  />
-              <ArrowRight, className="w-5 h-5, m, l-2" />";
+              <Link, className="w-5 h-5, m, l-2  />
+              <Link, className="w-5 h-5, m, l-2" />";
             </Li, n, k>
             <Li, n, k
   to="/bl, o, g"
               classNa, m, e="inli, n, e-flex, item, s-center, justif, y-center, p, x-8, p, y-4, b, g-emera, l, d-800, tex, t-white, fon, t-bold, rounde, d-lg, hove, r: bg-emera, l, d-900, transitio, n-all, shado, w-xl"
             >
               Explore, All, Content;
-              <ArrowRight, className="w-5 h-5, m, l-2  />
-              <ArrowRight, className="w-5 h-5, m, l-2" />";
+              <Link, className="w-5 h-5, m, l-2  />
+              <Link, className="w-5 h-5, m, l-2" />";
             </Li, n, k>
           </d, i, v>
         </d, i, v>

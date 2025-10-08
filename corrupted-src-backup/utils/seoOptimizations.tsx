@@ -132,7 +132,7 @@ export const contentOptimization = {/* content */}
 
   // Generate meta description
   generateMetaDescription: (content: string, maxLength: number = 160): string => {/* content */}
-    const cleanContent = content.replace(/<[^>]*>/g, '').trim();
+    const _cleanContent = content.replace(/<[^>]*>/g, '').trim();
     if (cleanContent.length <= maxLength) return cleanContent;
     
     return cleanContent.substring(0, maxLength - 3) + '...';
@@ -155,7 +155,7 @@ export const performanceSEO = {/* content */}
     ];
 
     criticalResources.forEach(resource => {/* content */}
-      const link = document.createElement('link');
+      const _link = document.createElement('link');
       link.rel = 'preload';
       link.href = resource.href;
       link.as = resource.as;
@@ -256,13 +256,13 @@ export const SEOComponent = ({/* content */}
   type?: string;
   structuredData?: Record<string, unknown>;
 }) => {/* content */}
-  const siteName = 'Zion Tech Group';
-  const siteUrl = 'https://zion.app';
-  const defaultImage = `${siteUrl}/images/og-default.jpg`;
+//   const siteName = 'Zion Tech Group';
+//   const siteUrl = 'https://zion.app';
+//   const defaultImage = `${siteUrl}/images/og-default.jpg`;
   
-  const fullTitle = title ? `${title} | ${siteName}` : siteName;
-  const fullUrl = url ? `${siteUrl}${url}` : siteUrl;
-  const fullImage = image ? `${siteUrl}${image}` : defaultImage;
+//   const fullTitle = title ? `${title} | ${siteName}` : siteName;
+//   const fullUrl = url ? `${siteUrl}${url}` : siteUrl;
+//   const fullImage = image ? `${siteUrl}${image}` : defaultImage;
 
   return (
   <div> </div><Helmet>
@@ -302,9 +302,9 @@ export const initializeSEO = () => {/* content */}
   
   // Set up meta tags
   if (typeof document !== 'undefined') {/* content */}
-    const viewport = document.querySelector('meta[name="viewport"]');
+//     const viewport = document.querySelector('meta[name="viewport"]');
     if (!viewport) {/* content */}
-      const meta = document.createElement('meta');
+      const _meta = document.createElement('meta');
       meta.name = 'viewport';
       meta.content = 'width=device-width, initial-scale=1.0';
       document.head.appendChild(meta);

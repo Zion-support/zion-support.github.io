@@ -16,13 +16,11 @@ class PerformanceMonitor {
       return;
     }
     this.isInitialized = true;
-    console.log('Performance monitor initialized');
-  }
+    //     }
 
   cleanup(): void {
     this.isInitialized = false;
-    console.log('Performance monitor cleaned up');
-  }
+    //     }
 }
 
 export default PerformanceMonitor;

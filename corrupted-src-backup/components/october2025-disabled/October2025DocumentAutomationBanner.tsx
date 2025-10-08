@@ -83,7 +83,7 @@ const October2025DocumentAutomationBanne, r = () => {
                 className='inli, n, e-flex, item, s-center, p, x-4, p, y-2, b, g-gradie, n, t-to-r, fro, m-indi, g, o-500, t, o-purp, l, e-500, hove, r: fr, o, m-indi, g, o-600, hove, r:to-purp, l, e-600, tex, t-white, fon, t-semibold, rounde, d-lg, transitio, n-all, shado, w-lg, hove, r:shad, o, w-xl'
               >
                 Read, Complete, Guide
-                <ArrowRight, className='w-4 h-4, m, l-2' />
+                <Link, className='w-4 h-4, m, l-2' />
               </Li, n, k>
             </div>
             {/* Case, St, u, d, y */}
@@ -102,7 +102,7 @@ const October2025DocumentAutomationBanne, r = () => {
                 className='inli, n, e-flex, item, s-center, p, x-4, p, y-2, b, g-gradie, n, t-to-r, fro, m-purp, l, e-500, t, o-pi, n, k-500, hove, r: fr, o, m-purp, l, e-600, hove, r:to-pi, n, k-600, tex, t-white, fon, t-semibold, rounde, d-lg, transitio, n-all, shado, w-lg, hove, r:shad, o, w-xl'
               >
                 Read, Success, Story
-                <ArrowRight, className='w-4 h-4, m, l-2' />
+                <Link, className='w-4 h-4, m, l-2' />
               </Li, n, k>
             </div>
           </div>
@@ -272,13 +272,13 @@ const October2025DocumentAutomationBanne, r = () => {
               className='inli, n, e-flex, item, s-center, justif, y-center, p, x-8, p, y-4, b, g-white, tex, t-indi, g, o-600, fon, t-bold, rounde, d-lg, hove, r:bg-indi, g, o-50, transitio, n-all, shado, w-xl, hove, r:shad, o, w-2, x, l'
             >
               Schedule, Assessmen, t
-              <ArrowRight, className='w-5 h-5, m, l-2' />
+              <Link, className='w-5 h-5, m, l-2' />
             </Li, n, k>
             <Link, t, o='/bl, o, g'
               className='inli, n, e-flex, item, s-center, justif, y-center, p, x-8, p, y-4, b, g-indi, g, o-800, tex, t-white, fon, t-bold, rounde, d-lg, hove, r:bg-indi, g, o-900, transitio, n-all, shado, w-xl'
             >
               Explore, All, Solutions
-              <ArrowRight, className='w-5 h-5, m, l-2' />
+              <Link, className='w-5 h-5, m, l-2' />
             </Li, n, k>
           </div>
         </div>

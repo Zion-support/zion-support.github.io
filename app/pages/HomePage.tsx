@@ -1,6 +1,5 @@
-'use client';
-
 import React from 'react';
+
 
 const HomePage: React.FC = () => {
   return (
@@ -10,7 +9,7 @@ const HomePage: React.FC = () => {
           Zion Tech Group - Advanced AI and IT Solutions
         </h1>
         <p className="text-lg text-gray-700 mb-8">
-          Leading provider of enterprise AI solutions, quantum computing, and autonomous systems. 
+          Leading provider of enterprise AI solutions, quantum computing, and autonomous systems.
           Transform your business with our cutting-edge technology.
         </p>
       </div>

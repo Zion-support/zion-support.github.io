@@ -4,7 +4,7 @@
     tagline: 'Rightsizing & schedules with IaC exports',
     price: '$99',
     period: '/month',
-    description: any,
+    description: unknown,
       'Smart schedules and rightsizing recommendations for EC2 / GKE / AKS / EKS with Terraform exports.',
     features: [,
       'Idle detection',
@@ -17,7 +17,7 @@
     color: 'from - emerald - 600 to - teal - 700',
     text_color: 'text - emerald - 300',
     link: 'https://ziontechgroup.com / services / finops - scheduler - optimizer',
-    market_position: any,
+    market_position: unknown,
       'Actionable, lowtouch FinOps that pays for itself within 90 days.',
     target_audience: 'Platform, SRE, Finance',
     trial_days: 14,
@@ -45,7 +45,7 @@
     tagline: 'AI index recommendations for Postgres / MySQL',
     price: '$79',
     period: '/month',
-    description: any,
+    description: unknown,
       'Collects slow queries and proposes safe index changes with before / after impact analysis.',
     features: [,
       'Slow query capture',
@@ -58,7 +58,7 @@
     color: 'from - indigo - 600 to - violet - 700',
     text_color: 'text - indigo - 300',
     link: 'https://ziontechgroup.com / services / db - index - advisor',
-    market_position: any,
+    market_position: unknown,
       'Modern alternative to legacy APM addons with focused insights.',
     target_audience: 'DBA, Backend, Platform',
     trial_days: 14,
@@ -334,7 +334,7 @@
 		rating: 4.5;
 		reviews: 9,
 import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services';
-const contact = {;
+// const contact = {;
 	mobile: '+1 302 464 0950';
 	email: 'kleber@ziontechgroup.com';
 	address: '364 E Main St STE 1008 Middletown DE 19709'}
@@ -449,7 +449,7 @@ export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [;
 ];
 ;
 import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services';
-const contact = {;
+// const contact = {;
 	mobile: '+1 302 464 0950';
 	email: 'kleber@ziontechgroup.com';
 	address: '364 E Main St STE 1008 Middletown DE 19709'}

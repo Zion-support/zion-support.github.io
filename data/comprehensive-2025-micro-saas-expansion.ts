@@ -358,7 +358,7 @@ export interface ComprehensiveMicroSaasService {id: string, name: string,
   useCases: string[], roi: string,
   competitors: string[], marketSize: string,
   growthRate: string, variant: ServiceVariant,
-  contactInfo: any,
+  contactInfo: unknown,
     mobile: string, email: string,
     address: string,
     website: string}
@@ -1079,7 +1079,7 @@ export interface ComprehensiveMicroSaasService {;
   marketAdvantage: string,
 }
 ;
-const contact = {;
+// const contact = {;
   mobile: '+1 302 464 0950';
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709'}

@@ -2,9 +2,7 @@
 
 import fs from 'fs';
 
-console.log('🔧 Fixing contact page JSX syntax errors...');
-
-const fixedContent = `import React from 'react';
+// // const fixedContent = `import React from 'react';
 
 const ContactPage: React.FC = () => {
   return (
@@ -135,4 +133,4 @@ export default ContactPage;
 // Write the fixed content
 fs.writeFileSync('app/contact/page.tsx', fixedContent);
 
-console.log('✅ Fixed contact page JSX syntax errors');
+// 

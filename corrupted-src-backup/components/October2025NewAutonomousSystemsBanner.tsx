@@ -128,8 +128,8 @@ const, October2025NewAutonomousSystemsBanne, r = () => {
   r:shad, o, w-lg"
                   >
                     Read, Blog, Post;
-                    <ArrowRight, className="w-4 h-4  />
-                    <ArrowRight, className="w-4 h-4" />";
+                    <Link, className="w-4 h-4  />
+                    <Link, className="w-4 h-4" />";
                   </Li, n, k>
                   <Li, n, k
   to="/ca, s, e-studi, e, s/ai-20, 2, 5-o, c, t-01-glob, a, l-manufacturi, n, g-enterpri, s, e-me, s, h-84, 7, m-succe, s, s"
@@ -214,8 +214,8 @@ const, October2025NewAutonomousSystemsBanne, r = () => {
   r:shad, o, w-lg"
                   >
                     Read, Blog, Post;
-                    <ArrowRight, className="w-4 h-4  />
-                    <ArrowRight, className="w-4 h-4" />";
+                    <Link, className="w-4 h-4  />
+                    <Link, className="w-4 h-4" />";
                   </Li, n, k>
                   <Li, n, k
   to="/ca, s, e-studi, e, s/ai-20, 2, 5-o, c, t-01-automoti, v, e-manufactur, e, r-predicti, v, e-maintenan, c, e-12, 7, m-succe, s, s"
@@ -240,10 +240,10 @@ const, October2025NewAutonomousSystemsBanne, r = () => {
           >
             <Sparkles, className="w-6 h-6  />
             Explore, All, Revolutionary Conte, n, t;
-            <ArrowRight, className="w-6 h-6  />
+            <Link, className="w-6 h-6  />
             <Sparkles, className="w-6 h-6" />";
             Explore, All, Revolutionary Conte, n, t;
-            <ArrowRight, className="w-6 h-6" />";
+            <Link, className="w-6 h-6" />";
           </Li, n, k>
         </d, i, v>
         {/* Stats, banne, r */}

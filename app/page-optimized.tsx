@@ -1,21 +1,31 @@
 import React, { lazy, Suspense } from 'react';
 import SEOOptimizer from './components/SEOOptimizer';
-import PerformanceMonitor from './components/PerformanceMonitor';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
+import PerformanceMonitor from './components/PerformanceMonitor';
 
 // Fallback component
-const EmptyComponent = () => null;
+const _EmptyComponent = () => null;
 
 // Lazy load heavy components - these may not exist, so make them optional
-const UnifiedBanner = lazy(() => import('./components/NewestContent2025Banner').catch(() => ({ default: EmptyComponent })));
-const ContentPromotion = lazy(() => import('./components/UltimateBusinessIntelligence2025Banner').catch(() => ({ default: EmptyComponent })));
-const ContentShowcase = lazy(() => import('./components/UltimateBusinessIntelligenceShowcase2025').catch(() => ({ default: EmptyComponent })));
+const UnifiedBanner = lazy(() =>
+  import('./components/NewestContent2025Banner').catch(() =>
+    import('./components/EmptyComponent').catch(() => ({ default: EmptyComponent }))
+  )
+);
 
-// Loading component
-const LoadingFallback = () => <div className="animate-pulse bg-gray-200 h-32 rounded-lg"></div>;
+const ContentPromotion = lazy(() =>
+  import('./components/UltimateBusinessIntelligence2025Banner').catch(() => {
+    return { default: EmptyComponent } as { default: React.ComponentType };
+  })
+);
 
-// Metadata for SEO (used in document head via SEOOptimizer)
-const pageMetadata = {
+const ContentShowcase = lazy(() =>
+  import('./components/UltimateBusinessIntelligenceShowcase2025').catch(() => ({
+    default: EmptyComponent,
+  }))
+);
+
+export const metadata = {
   title: 'Zion Tech Group — AI Enterprise Transformation & IT Services | 300% ROI Guaranteed',
   description: 'Transform your enterprise with AI-powered solutions. Achieve 300% ROI, 70% cost reduction, and 90% efficiency gains. Expert AI consulting, autonomous systems, and digital transformation services.',
   keywords: 'AI enterprise transformation, AI consulting, autonomous AI systems, enterprise AI services, digital transformation, AI implementation, AI ROI calculator, manufacturing AI, AI automation, AI strategy',
@@ -62,63 +72,51 @@ const pageMetadata = {
 
 export default function OptimizedHomePage() {
   return (
-    <AccessibilityEnhancer>
-      <div className="min-h-screen bg-white">
-        <SEOOptimizer />
-        <PerformanceMonitor />
-        
-        {/* Unified Banner System */}
-        <Suspense fallback={<LoadingFallback />}>
-          <UnifiedBanner />
-        </Suspense>
-        
-        {/* Main Content */}
-        <main className="relative">
-          {/* Hero Section */}
-          <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white overflow-hidden">
-            <div className="absolute inset-0 bg-black opacity-20"></div>
-            <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
-              <div className="text-center">
-                <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-                  AI Enterprise Transformation
-                  <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
-                    That Delivers Results
-                  </span>
-                </h1>
-                <p className="text-xl md:text-2xl mb-8 text-blue-100 max-w-4xl mx-auto">
-                  Transform your enterprise with AI-powered solutions that deliver 300% ROI,
-                  70% cost reduction, and 90% efficiency gains. Expert AI consulting,
-                  autonomous systems, and digital transformation services.
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <a
-                    href="/contact"
-                    className="inline-flex items-center px-8 py-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-semibold text-lg"
-                  >
-                    Get Your Free AI Assessment
-                  </a>
-                  <a
-                    href="/case-studies"
-                    className="inline-flex items-center px-8 py-4 bg-transparent border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-900 transition-colors font-semibold text-lg"
-                  >
-                    View Success Stories
-                  </a>
-                </div>
+    <div className="min-h-screen bg-white">
+      <SEOOptimizer />
+      <AccessibilityEnhancer>
+        <div />
+      </AccessibilityEnhancer>
+      <PerformanceMonitor />
+      
+      {/* Main Content */}
+      <main className="relative">
+        {/* Hero Section */}
+        <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white overflow-hidden">
+          <div className="absolute inset-0 bg-black opacity-20"></div>
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+            <div className="text-center">
+              <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
+                AI Enterprise Transformation
+                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
+                  That Delivers Results
+                </span>
+              </h1>
+              <p className="text-xl md:text-2xl mb-8 text-blue-100 max-w-4xl mx-auto">
+                Transform your enterprise with AI-powered solutions that deliver 300% ROI, 
+                70% cost reduction, and 90% efficiency gains. Expert AI consulting, 
+                autonomous systems, and digital transformation services.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a
+                  href="/contact"
+                  className="inline-flex items-center px-8 py-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-semibold text-lg"
+                >
+                  Get Your Free AI Assessment
+                </a>
+                <a
+                  href="/case-studies"
+                  className="inline-flex items-center px-8 py-4 bg-transparent border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-900 transition-colors font-semibold text-lg"
+                >
+                  View Success Stories
+                </a>
               </div>
             </div>
-          </section>
-
-          {/* Content Showcase */}
-          <Suspense fallback={<LoadingFallback />}>
-            <ContentShowcase />
-          </Suspense>
-          
-          {/* Content Promotion */}
-          <Suspense fallback={<LoadingFallback />}>
-            <ContentPromotion />
-          </Suspense>
-        </main>
-      </div>
-    </AccessibilityEnhancer>
+          </div>
+        </section>
+      </main>
+    </div>
   );
-}
+};
+
+export default OptimizedHomePage;
