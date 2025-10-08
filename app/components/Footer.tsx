@@ -138,6 +138,8 @@ const Footer: React.FC = () => {
               <p className="text-gray-300 mb-6 max-w-md">
                 Leading provider of enterprise AI solutions, quantum computing, autonomous systems, 
                 and comprehensive IT services. Transforming businesses through cutting-edge technology.
+                <br /><br />
+                <strong>Ready to transform your business?</strong> Contact us for a free consultation and custom solution design.
               </p>
               
               {/* Contact Info */}

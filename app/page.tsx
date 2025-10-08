@@ -97,6 +97,10 @@ const HomePage: React.FC = () => {
           <p className="text-lg md:text-xl text-gray-700 max-w-4xl mx-auto mb-8 leading-relaxed">
             Leading provider of enterprise AI solutions, quantum computing, and autonomous systems.
             Transform your business with our cutting-edge technology and achieve unprecedented growth.
+            <br /><br />
+            <strong>Contact us today:</strong> 📞 <a href="tel:+13024640950" className="text-indigo-600 hover:text-indigo-700 font-semibold">+1 302 464 0950</a> | 
+            ✉️ <a href="mailto:kleber@ziontechgroup.com" className="text-indigo-600 hover:text-indigo-700 font-semibold">kleber@ziontechgroup.com</a> | 
+            📍 364 E Main St STE 1008, Middletown DE 19709
           </p>
           
           {/* Key Benefits */}
