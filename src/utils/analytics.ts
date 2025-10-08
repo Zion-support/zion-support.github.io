@@ -31,16 +31,10 @@ class Analytics {
     this.userProperties = this.initializeUserProperties();
   }
 
-  /**
-   * Generate unique session ID
-   */
   private generateSessionId(): string {
     return `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
   }
 
-  /**
-   * Initialize user properties
-   */
   private initializeUserProperties(): UserProperties {
     if (typeof window === 'undefined') {
       return {
@@ -60,9 +54,6 @@ class Analytics {
     };
   }
 
-  /**
-   * Track an event
-   */
   track(
     name: string,
     category: string,
@@ -75,18 +66,16 @@ class Analytics {
       name,
       category,
       timestamp: Date.now(),
-      action,
-      label,
-      value,
-      properties,
     };
+
+    if (action) event.action = action;
+    if (label) event.label = label;
+    if (value !== undefined) event.value = value;
+    if (properties) event.properties = properties;
 
     this.events.push(event);
   }
 
-  /**
-   * Track page view
-   */
   trackPageView(page: string, title?: string): void {
     this.track('page_view', 'navigation', 'view', page, undefined, {
       page_title: title || (typeof document !== 'undefined' ? document.title : ''),
@@ -94,9 +83,6 @@ class Analytics {
     });
   }
 
-  /**
-   * Track user interaction
-   */
   trackInteraction(
     element: string,
     action: string,
@@ -105,16 +91,10 @@ class Analytics {
     this.track('interaction', category, action, element);
   }
 
-  /**
-   * Track performance metrics
-   */
-  trackPerformance(metric: string, value: number, unit: string): void {
+  trackPerformance(metric: string, value: number, unit?: string): void {
     this.track('performance', 'metrics', metric, unit, value);
   }
 
-  /**
-   * Track business events
-   */
   trackBusinessEvent(
     event: string,
     value?: number,
@@ -123,15 +103,10 @@ class Analytics {
     this.track(event, 'business', 'event', undefined, value, properties);
   }
 
-  /**
-   * Send event to analytics service
-   */
   sendEvent(event: AnalyticsEvent): void {
-    // Implementation for sending to analytics service
     if (typeof window !== 'undefined' && 'gtag' in window) {
       (window as any).gtag('event', event.name, {
         event_category: event.category,
-        event_action: event.action,
         event_label: event.label,
         value: event.value,
         ...event.properties,
@@ -139,46 +114,27 @@ class Analytics {
     }
   }
 
-  /**
-   * Get all events
-   */
-  getEvents(): AnalyticsEvent[] {
+  getAllEvents(): AnalyticsEvent[] {
     return [...this.events];
   }
 
-  /**
-   * Get events by category
-   */
   getEventsByCategory(category: string): AnalyticsEvent[] {
     return this.events.filter(event => event.category === category);
   }
 
-  /**
-   * Clear all events
-   */
   clearEvents(): void {
     this.events = [];
   }
 
-  /**
-   * Get user properties
-   */
   getUserProperties(): UserProperties {
     return { ...this.userProperties };
   }
 
-  /**
-   * Update user properties
-   */
   updateUserProperties(properties: Partial<UserProperties>): void {
-    this.userProperties = {
-      ...this.userProperties,
-      ...properties,
-    };
+    this.userProperties = { ...this.userProperties, ...properties };
   }
 }
 
-// Create singleton instance
 const analytics = new Analytics();
 
 export default analytics;
