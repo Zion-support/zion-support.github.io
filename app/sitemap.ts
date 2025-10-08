@@ -1,14 +1,5 @@
-import { MetadataRoute } from 'next'
-
-<<<<<<< HEAD
-export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://ziontechgroup.com'
-  
-=======
 export default function sitemap() {
-  const _baseUrl = 'https://ziontechgroup.com';
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-6395
+  const baseUrl = 'https://ziontechgroup.com';
   return [
     {
       url: baseUrl,
