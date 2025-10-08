@@ -227,8 +227,8 @@ class EnhancedErrorMonitoring {
 
     // Log to console in development
     if (process.env['NODE_ENV'] === 'development') {
-// eslint-disable-next-line no-console
-    console.error('Error captured:', errorReport);
+      logger.error('Error captured:', errorReport);
+
     }
   }
 
@@ -280,8 +280,8 @@ class EnhancedErrorMonitoring {
       });
     } catch (error) {
       // If sending fails, keep in queue for retry
-// eslint-disable-next-line no-console
-    console.warn('Failed to send error report:', error);
+      logger.warn('Failed to send error report:', error);
+
     }
   }
 

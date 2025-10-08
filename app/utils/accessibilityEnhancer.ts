@@ -94,12 +94,14 @@ class AccessibilityEnhancer {
       }
       
       // Escape key handling
-if (_event.key === 'Escape') {
+      if (event.key === 'Escape') {
+
         this.handleEscapeKey(_event);
       }
       
       // Arrow key navigation for custom components
-if (['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight'].includes(_event.key)) {
+      if (['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight'].includes(event.key)) {
+
         this.handleArrowNavigation(_event);
       }
     });

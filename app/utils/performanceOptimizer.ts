@@ -94,9 +94,9 @@ class PerformanceOptimizer {
       this.observeFCP();
       this.observeTTFB();
       this.observeMemory();
-    } catch (error) {
-      // eslint-disable-next-line no-console
-      console.warn('Performance monitoring initialization failed:', error);
+    } catch (_error) {
+       
+      console.warn('Performance monitoring initialization failed:', _error);
     }
   }
 
@@ -246,11 +246,11 @@ class PerformanceOptimizer {
     window.addEventListener('load', () => {
       navigator.serviceWorker.register('/sw.js')
         .then((registration) => {
-          // eslint-disable-next-line no-console
+           
           console.log('SW registered: ', registration);
         })
         .catch((registrationError) => {
-          // eslint-disable-next-line no-console
+           
           console.log('SW registration failed: ', registrationError);
         });
     });

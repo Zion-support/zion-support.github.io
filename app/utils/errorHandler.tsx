@@ -257,16 +257,14 @@ export class ErrorHandler {
       switch (error.severity) {
         case ErrorSeverity.CRITICAL:
         case ErrorSeverity.HIGH:
-// eslint-disable-next-line no-console
-    console.error(logMessage, error);
+          logger.error(logMessage, error);
           break;
         case ErrorSeverity.MEDIUM:
-          // eslint-disable-next-line no-console
-    console.warn(logMessage, error);
+          logger.warn(logMessage, error);
           break;
         case ErrorSeverity.LOW:
-          if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { // eslint-disable-next-line no-console
-    console.info(logMessage, error); } }
+          if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { logger.info(logMessage, error); } }
+
           break;
       }
     }
@@ -289,8 +287,8 @@ export class ErrorHandler {
         body: JSON.stringify(error),
       });
     } catch (err) {
-// eslint-disable-next-line no-console
-    console.error('Failed to log error to network:', err);
+      logger.error('Failed to log error to network:', err);
+
     }
   }
 
@@ -310,8 +308,8 @@ export class ErrorHandler {
         }),
       });
     } catch (err) {
-// eslint-disable-next-line no-console
-    console.error('Failed to report error:', err);
+      logger.error('Failed to report error:', err);
+
     }
   }
 
@@ -405,16 +403,16 @@ export class ErrorHandler {
       // Implement retry logic based on error type
       if (retryItem.error.type === ErrorType.NETWORK) {
         // Retry network request
-if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { // eslint-disable-next-line no-console
-    console.log(`Retrying network request (attempt ${retryItem.retryCount})`); } }
+        if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { logger.info(`Retrying network request (attempt ${retryItem.retryCount})`); } }
+
         // Add your retry logic here
       }
     } catch {
       if (retryItem.retryCount < this.config.maxRetries) {
         this.scheduleRetry(retryItem.error);
       } else {
-// eslint-disable-next-line no-console
-    console.error('Max retries exceeded for error:', retryItem.error);
+        logger.error('Max retries exceeded for error:', retryItem.error);
+
       }
     }
   }

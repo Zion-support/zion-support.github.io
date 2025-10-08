@@ -148,8 +148,10 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
 
       setMetrics(newMetrics);
       setLastUpdate(new Date());
-} catch {
-      // Failed to update metrics
+    } catch (_error) {
+       
+// Failed to update metrics
+
     }
   }, []);
 

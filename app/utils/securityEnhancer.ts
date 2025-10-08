@@ -143,8 +143,8 @@ class SecurityEnhancer {
               const element = node as Element;
               if (element.tagName === 'SCRIPT' && !element.getAttribute('src')) {
                 this.metrics.securityViolations++;
-// eslint-disable-next-line no-console
-    console.warn('Suspicious inline script detected');
+                logger.warn('Suspicious inline script detected');
+
               }
             }
           });

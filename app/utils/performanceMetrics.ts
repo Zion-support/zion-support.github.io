@@ -136,8 +136,8 @@ export class PerformanceMetrics {
         clsObserver.observe({ entryTypes: ['layout-shift'] });
         this.observers.push(clsObserver);
       } catch (error) {
-// eslint-disable-next-line no-console
-    console.warn('Failed to initialize performance observers:', error);
+        logger.warn('Failed to initialize performance observers:', error);
+
       }
     }
   }

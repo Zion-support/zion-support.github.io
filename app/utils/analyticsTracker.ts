@@ -62,8 +62,8 @@ class AnalyticsTracker {
 
       // Also log to console in development
       if (process.env.NODE_ENV === 'development') {
-// eslint-disable-next-line no-console
-    console.log('[Analytics Event]', event);
+        logger.info('[Analytics Event]', event);
+
       }
     };
 
@@ -90,8 +90,8 @@ class AnalyticsTracker {
       }
 
       if (process.env.NODE_ENV === 'development') {
-// eslint-disable-next-line no-console
-    console.log('[Analytics Page View]', path);
+        logger.info('[Analytics Page View]', path);
+
       }
     };
 
@@ -119,8 +119,8 @@ class AnalyticsTracker {
       }
 
       if (process.env.NODE_ENV === 'development') {
-// eslint-disable-next-line no-console
-    console.log('[Analytics Performance]', metrics);
+        logger.info('[Analytics Performance]', metrics);
+
       }
     };
 
@@ -147,8 +147,8 @@ class AnalyticsTracker {
       }
 
       // Always log errors to console
-// eslint-disable-next-line no-console
-    console.error('[Analytics Error]', error);
+      logger.error('[Analytics Error]', error);
+
     };
 
     if (this.isInitialized) {
@@ -175,8 +175,8 @@ class AnalyticsTracker {
       }
 
       if (process.env.NODE_ENV === 'development') {
-// eslint-disable-next-line no-console
-    console.log('[Analytics Timing]', { category, variable, value, label });
+        logger.info('[Analytics Timing]', { category, variable, value, label });
+
       }
     };
 
@@ -203,8 +203,8 @@ class AnalyticsTracker {
       }
 
       if (process.env.NODE_ENV === 'development') {
-// eslint-disable-next-line no-console
-    console.log('[Analytics Conversion]', { conversionId, value });
+        logger.info('[Analytics Conversion]', { conversionId, value });
+
       }
     };
 

@@ -63,7 +63,8 @@ class ImprovedErrorBoundary extends Component<Props, State> {
 
     // Log to console in development
     if (process.env['NODE_ENV'] === 'development') {
-// Error logging disabled for production
+      logger.error('Error Boundary caught an error:', error, errorInfo);
+
     }
 
     // Send to external error tracking (if available)
