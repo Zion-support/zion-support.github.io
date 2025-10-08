@@ -8,22 +8,11 @@ export const focusManagement = {
   trapFocus: (element: HTMLElement): (() => void) => {
     const focusableElements = element.querySelectorAll(
       'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
-      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])',
-      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
-      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
-      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
-      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
-      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
-      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
     );
     const firstElement = focusableElements[0] as HTMLElement;
     const lastElement = focusableElements[
       focusableElements.length - 1
     ] as HTMLElement;
-    );
-    
-    const firstElement = focusableElements[0] as HTMLElement;
-    const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
 
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === 'Tab') {
@@ -72,17 +61,10 @@ export const focusManagement = {
     // Focus first element
     firstElement?.focus();
 
-
-    element.addEventListener('keydown', handleKeyDown);
-    firstElement?.focus();
-
     return () => {
       element.removeEventListener('keydown', handleKeyDown);
     };
   },
-
-
-
   // Restore focus to previous element
   restoreFocus: (element: HTMLElement): void => {
     element.focus();
@@ -95,11 +77,6 @@ export const focusManagement = {
       mainElement.focus();
       mainElement.scrollIntoView();
     }
-
-  // Move focus to next focusable element
-  focusNext: (currentElement: HTMLElement): void => {
-    const focusableElements = document.querySelectorAll(
-      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])',
 
 
 
@@ -142,41 +119,6 @@ export const focusManagement = {
     const currentIndex = Array.from(focusableElements).indexOf(currentElement);
     const previousElement = focusableElements[currentIndex - 1] as HTMLElement;
   }
-    
-    if (previousElement) {
-      previousElement.focus();
-      return previousElement;
-    }
-    
-    return null;
-  },
-
-  // Focus first focusable element in container
-  focusFirst: (container: HTMLElement): HTMLElement | null => {
-    const firstElement = container.querySelector(
-      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
-    ) as HTMLElement;
-    
-    if (firstElement) {
-      firstElement.focus();
-      return firstElement;
-    }
-    
-    return null;
-  },
-    return nextElement || null;
-  },
-
-  // Move focus to previous focusable element
-  focusPrevious: (currentElement: HTMLElement): HTMLElement | null => {
-    const focusableElements = document.querySelectorAll(
-      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
-    );
-    const currentIndex = Array.from(focusableElements).indexOf(currentElement);
-    const previousElement = focusableElements[currentIndex - 1] as HTMLElement;
-    previousElement?.focus();
-    return previousElement || null;
-  }
 };
 
 // ARIA utilities
@@ -185,39 +127,15 @@ export const ariaUtils = {
     element: HTMLElement,
     attributes: Record<string, string>
   ): void => {
-  setAriaAttributes: (element: HTMLElement, attributes: Record<string, string>): void => {
-  // Set ARIA attributes
-  setAria: (element: HTMLElement, attributes: Record<string, string>): void => {
-  setAriaAttributes: (element: HTMLElement, attributes: Record<string, string>): void => {
     Object.entries(attributes).forEach(([key, value]) => {
       element.setAttribute(key, value);
     });
   },
 
-  announce: (message: string, priority: 'polite' | 'assertive' = 'polite') => {
-  // Announce to screen readers
-  // Announce to screen readers
   announce: (
     message: string,
     priority: 'polite' | 'assertive' = 'polite'
   ): void => {
-  announce: (
-    message: string,
-    priority: 'polite' | 'assertive' = 'polite'
-  )
-  ): void => {
-  announce: (message: string, priority: 'polite' | 'assertive' = 'polite'): void => {
-  // Remove ARIA attributes
-  removeAria: (element: HTMLElement, attributes: string[]): void => {
-    attributes.forEach(attr => {
-      element.removeAttribute(attr);
-    });
-  },
-
-  // Announce to screen readers
-  announce: (message: string, priority: 'polite' | 'assertive' = 'polite'): void => {
-  // Announce to screen readers
-  announce: (message: string, priority: 'polite' | 'assertive' = 'polite'): void => {
     const announcement = document.createElement('div');
     announcement.setAttribute('aria-live', priority);
     announcement.setAttribute('aria-atomic', 'true');
@@ -225,36 +143,9 @@ export const ariaUtils = {
     announcement.textContent = message;
     
     document.body.appendChild(announcement);
-    
-    announcement.textContent = text;
-    
-    document.body.appendChild(announcement);
-    
-    announcement.textContent = message;
-    
-    document.body.appendChild(announcement);
-    
     setTimeout(() => {
       document.body.removeChild(announcement);
     }, 1000);
-  // Set ARIA label
-  setLabel: (element: HTMLElement, label: string): void => {
-    element.setAttribute('aria-label', label);
-  },
-
-  // Set ARIA described by
-  setDescribedBy: (element: HTMLElement, describedBy: string): void => {
-    element.setAttribute('aria-describedby', describedBy);
-  },
-
-  // Set ARIA expanded
-  setExpanded: (element: HTMLElement, expanded: boolean): void => {
-    element.setAttribute('aria-expanded', expanded.toString());
-  },
-
-  // Set ARIA hidden
-  setHidden: (element: HTMLElement, hidden: boolean): void => {
-    element.setAttribute('aria-hidden', hidden.toString());
   },
 
   // Set ARIA live region
@@ -346,21 +237,6 @@ export const ariaUtils = {
   }
 };
 
-// Keyboard navigation utilities
-export const keyboardNavigation = {
-  // Handle arrow key navigation for lists
-// Keyboard navigation utilities
-export const keyboardNavigation = {
-  // Handle arrow key navigation for lists
-// Keyboard navigation utilities
-export const keyboardNavigation = {
-  // Handle arrow key navigation for lists
-// Keyboard navigation utilities
-export const keyboardNavigation = {
-  // Handle arrow key navigation for lists
-// Keyboard navigation utilities
-export const keyboardNavigation = {
-  // Handle arrow key navigation for lists
   handleArrowKeys: (
     event: KeyboardEvent,
     items: HTMLElement[],
@@ -397,15 +273,12 @@ export const keyboardNavigation = {
         return currentIndex;
       default:
         return currentIndex;
-      default:
-        return currentIndex;
     }
 
     return currentIndex;
       default: 
         return currentIndex;
   },
-
   // Handle Enter and Space key activation
   handleActivation: (event: KeyboardEvent, callback: () => void): void => {
     if (event.key === 'Enter' || event.key === ' ') {
@@ -492,12 +365,6 @@ export const colorContrast = {
   },
 
   // Calculate contrast ratio
-  getContrastRatio: (color1: [number, number, number], color2: [number, number, number]): number => {
-    const lum1 = colorContrast.getLuminance(...color1);
-    const lum2 = colorContrast.getLuminance(...color2);
-  getContrastRatio: (_color1: [number, number, number], _color2: [number, number, number]): number => {
-    const lum1 = colorContrast.getLuminance(..._color1);
-    const lum2 = colorContrast.getLuminance(..._color2);
   getContrastRatio: (color1: [number, number, number], color2: [number, number, number]): number => {
     const lum1 = colorContrast.getLuminance(...color1);
     const lum2 = colorContrast.getLuminance(...color2);
@@ -607,7 +474,6 @@ export const colorContrast = {
   },
 
   // Calculate contrast ratio
-  getContrastRatio: (color1: [number, number, number], color2: [number, number, number]): number => {
   getContrastRatio: (
     color1: [number, number, number],
     color2: [number, number, number]
@@ -748,9 +614,6 @@ export const formUtils = {
     label.setAttribute('for', inputId);
   },
 
-  // Add error message association
-  addErrorMessage: (input: HTMLElement, errorMessage: string): void => {
-    const errorId = ariaUtils.generateId('error');
   // Add error message association
   addErrorMessage: (input: HTMLInputElement, errorMessage: string): void => {
     const errorId = `error-${input.id}`;
@@ -918,10 +781,6 @@ export const accessibilityTesting = {
     const inputs = Array.from(
       document.querySelectorAll('input, select, textarea')
     );
-    const inputs = Array.from(document.querySelectorAll('input, select, textarea'));
-    const inputs = Array.from(
-      document.querySelectorAll('input, select, textarea')
-    );
     return inputs.filter(input => {
       const id = input.id;
       const label = id ? document.querySelector(`label[for="${id}"]`) : null;
@@ -959,8 +818,6 @@ export const accessibilityTesting = {
       
       previousLevel = level;
     });
-
-
     return { issues, structure };
   },
 
@@ -995,7 +852,6 @@ export const accessibilityTesting = {
       headings: headingCheck,
       score
     };
-    };
 
   // Create screen reader only text
   createScreenReaderText: (text: string): HTMLElement => {
@@ -1003,8 +859,6 @@ export const accessibilityTesting = {
     element.className = 'sr-only';
     element.textContent = text;
     return element;
-  },
-  },
   },
   // Check if element is focusable
   isFocusable: (element: HTMLElement): boolean => {

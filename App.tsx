@@ -1,7 +1,6 @@
-import React, { memo, useMemo, useCallback, Suspense } from 'react';
+import React, { memo, useMemo, Suspense } from 'react';
 import { HelmetProvider, Helmet } from 'react-helmet-async';
 
-// Memoized components for better performance
 const UnifiedContentPromotion = memo(() => (
   <div className='bg-gradient-to-r from-blue-600 to-purple-700 text-white py-16'>
     <div className='container mx-auto px-4 text-center'>
@@ -45,24 +44,36 @@ const InteractiveContentShowcase2026 = memo(() => (
     </div>
   </div>
 ));
+
+const LoadingSpinner = memo(() => (
+  <div className="animate-pulse bg-gray-200 h-32 rounded flex items-center justify-center">
+    <div className="text-gray-500">Loading...</div>
+  </div>
+));
+
 interface ErrorBoundaryState {
   hasError: boolean;
   error: Error | null;
 }
+
 interface ErrorBoundaryProps {
   children: React.ReactNode;
 }
+
 class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundaryState> {
   constructor(props: ErrorBoundaryProps) {
     super(props);
     this.state = { hasError: false, error: null };
   }
+
   static getDerivedStateFromError(error: Error): ErrorBoundaryState {
     return { hasError: true, error };
   }
+
   override componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
     console.error('App Error Boundary caught an error:', error, errorInfo);
   }
+
   override render() {
     if (this.state.hasError) {
       return (
@@ -72,7 +83,7 @@ class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundarySta
               Something went wrong
             </h1>
             <p className="text-gray-600 mb-4">
-              We're working to fix this issue. Please try refreshing the page.
+              We are working to fix this issue. Please try refreshing the page.
             </p>
             <button
               onClick={() => window.location.reload()}
@@ -84,16 +95,10 @@ class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundarySta
         </div>
       );
     }
+
     return this.props.children;
   }
 }
-
-// Loading component
-const LoadingSpinner = memo(() => (
-  <div className="animate-pulse bg-gray-200 h-32 rounded flex items-center justify-center">
-    <div className="text-gray-500">Loading...</div>
-  </div>
-));
 
 export default function App() {
   const structuredData = useMemo(
@@ -127,7 +132,7 @@ export default function App() {
         '@type': 'Offer',
         name: 'AI Enterprise Transformation Services',
         description:
-          'Transform your enterprise with AI-powered solutions achieving 300% ROI, 70% cost reduction, and 90% efficiency gains',
+          'Transform your enterprise with AI-powered solutions achieving 300 percent ROI, 70 percent cost reduction, and 90 percent efficiency gains',
         price: '50000',
         priceCurrency: 'USD',
         availability: 'https://schema.org/InStock',
@@ -140,23 +145,31 @@ export default function App() {
     <ErrorBoundary>
       <HelmetProvider>
         <Helmet>
-          <title>Zion Tech Group - AI & IT Solutions</title>
+          <title>Zion Tech Group - AI and IT Solutions</title>
           <meta
             name="description"
-            content="Leading provider of AI-powered enterprise solutions and digital transformation services. Achieve 300% ROI with our cutting-edge AI technology."
+            content="Leading provider of AI-powered enterprise solutions and digital transformation services. Achieve 300 percent ROI with our cutting-edge AI technology."
           />
           <meta name="keywords" content="AI, artificial intelligence, enterprise solutions, digital transformation, IT services" />
-          <meta property="og:title" content="Zion Tech Group - AI & IT Solutions" />
-          <meta property="og:description" content="Transform your enterprise with AI-powered solutions achieving 300% ROI, 70% cost reduction, and 90% efficiency gains" />
+          <meta property="og:title" content="Zion Tech Group - AI and IT Solutions" />
+          <meta property="og:description" content="Transform your enterprise with AI-powered solutions achieving 300 percent ROI, 70 percent cost reduction, and 90 percent efficiency gains" />
           <meta property="og:type" content="website" />
           <meta property="og:url" content="https://ziontechgroup.com" />
           <meta name="twitter:card" content="summary_large_image" />
-          <meta name="twitter:title" content="Zion Tech Group - AI & IT Solutions" />
-          <meta name="twitter:description" content="Transform your enterprise with AI-powered solutions achieving 300% ROI, 70% cost reduction, and 90% efficiency gains" />
+          <meta name="twitter:title" content="Zion Tech Group - AI and IT Solutions" />
+          <meta name="twitter:description" content="Transform your enterprise with AI-powered solutions achieving 300 percent ROI, 70 percent cost reduction, and 90 percent efficiency gains" />
           <script type="application/ld+json">
             {JSON.stringify(structuredData)}
           </script>
         </Helmet>
+        <div className="min-h-screen bg-white">
+          <Suspense fallback={<LoadingSpinner />}>
+            <UnifiedContentPromotion />
+            <InteractiveAIROICalculator />
+            <ContentShowcase />
+            <InteractiveContentShowcase2026 />
+          </Suspense>
+        </div>
       </HelmetProvider>
     </ErrorBoundary>
   );

@@ -1,17 +1,6 @@
 /**
  * SEO Utilities
  */
-
-// Meta tags management
-export const setMetaTags = (tags: Record<string, string>): void => {
-
-// Meta tags management
-export const setMetaTags = (tags: Record<string, string>): void => {
-  if (typeof document === 'undefined') return;
-  
-
-// Meta tags management
-export const setMetaTags = (tags: Record<string, string>): void => {
   Object.entries(tags).forEach(([name, content]) => {
     let meta = document.querySelector(`meta[name="${name}"]`) as HTMLMetaElement;
     if (!meta) {
@@ -106,36 +95,8 @@ export const setMetaTags = (tags: Record<string, string>): void => {
     }
   });
 };
-
-// Structured data
-export const setStructuredData = (data: any): void => {
-
-// Structured data management
-export const setStructuredData = (data: object): void => {
   if (typeof document === 'undefined') return;
   
-
-// Structured data
-export const setStructuredData = (data: Record<string, unknown>): void => {
-// Structured data (JSON-LD)
-export const setStructuredData = (data: any): void => {
-  // Remove existing structured data
-  const existingScript = document.querySelector(
-    'script[type="application/ld+json"]'
-  );
-  if (existingScript) {
-    existingScript.remove();
-  }
-  
-  // Add new structured data
-
-// Structured data
-export const setStructuredData = (data: any): void => {
-
-// Structured data
-export const setStructuredData = (data: any): void => {
-  if (typeof document === 'undefined') return;
-
   const script = document.createElement('script');
   script.type = 'application/ld+json';
   script.textContent = JSON.stringify(data);
@@ -156,15 +117,6 @@ export const setCanonicalUrl = (url: string): void => {
 export const setPageTitle = (title: string, siteName?: string): void => {
   const fullTitle = siteName ? `${title} | ${siteName}` : title;
   document.title = fullTitle;
-
-// Page title
-export const setPageTitle = (title: string): void => {
-};
-
-// Canonical URL management
-export const setCanonicalUrl = (url: string): void => {
-  if (typeof document === 'undefined') return;
-  
   let link = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
   if (!link) {
     link = document.createElement('link');
@@ -180,11 +132,6 @@ export const setTitle = (title: string): void => {
   document.title = title;
 };
 
-  document.title = title;
-};
-
-// Description management
-export const setDescription = (description: string): void => {
   setMetaTags({ description });
 };
 

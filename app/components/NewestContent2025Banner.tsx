@@ -1,19 +1,124 @@
 import React from 'react';
+import Link from 'next/link';
 
-export const NewestContent2025Banner: React.FC = () => {
+const NewestContent2025Banner: React.FC = () => {
   return (
-    <div className="bg-gradient-to-r from-blue-600 to-purple-700 text-white py-12">
-      <div className="container mx-auto px-4 text-center">
-        <h2 className="text-3xl font-bold mb-4">Newest Content 2025</h2>
-        <p className="text-xl mb-6">
-          Explore our latest innovations and solutions
-        </p>
-        <button className="bg-white text-blue-600 px-8 py-3 rounded-full font-bold hover:bg-gray-100">
-          Learn More
-        </button>
+      {/* Animated Background Effects */}
       </div>
-    </div>
+
+          </p>
+
+                    Edge AI & Real-Time
+                  </span>
+                </div>
+                {/* Title */}
+                <h3 className='text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors'>
+                  AI Edge Computing Real-Time Intelligence 2025
+                </h3>
+                {/* Excerpt */}
+                <p className="text-gray-300 mb-6 leading-relaxed">
+                  Deploy intelligence at the source with &lt;10ms latency. Achieve 95% bandwidth reduction, 
+                  87% cost savings, and enhanced privacy compliance at enterprise scale.
+                </p>
+
+                {/* Key Stats */}
+                <div className="grid grid-cols-3 gap-4 mb-6">
+                  <div className="text-center">
+                  </div>
+                </div>
+                {/* Meta Info */}
+                <div className='flex items-center justify-between text-sm text-gray-400 mb-6'>
+                  <span>⏱️ 35 min read</span>
+                  <span>📅 Sep 30, 2025</span>
+                </div>
+                {/* CTA Button */}
+                </div>
+                <div className='flex items-center justify-center gap-2 text-cyan-400 font-semibold group-hover:text-white transition-colors'>
+                  <span>Read Full Article</span>
+                  <span className='group-hover:translate-x-1 transition-transform'>
+                    →
+                  </span>
+                </div>
+                </div>
+              </div>
+
+              {/* Meta Info */}
+              <div className="flex items-center justify-between text-sm text-gray-400 mb-6">
+                <span>⏱️ 35 min read</span>
+                <span>📅 Sep 30, 2025</span>
+              </div>
+
+              {/* CTA Button */}
+              <Link 
+                href="/blog/ai-edge-computing-real-time-intelligence-2025"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-cyan-500/25"
+              >
+                Read Full Article
+                <span className="group-hover:translate-x-1 transition-transform">→</span>
+              </Link>
+            </div>
+          </div>
+
+                    Neural Networks & AI
+                  </span>
+                </div>
+
+              <h3 className="text-xl font-bold text-white mb-4 group-hover:text-purple-400 transition-colors">
+                Quantum-Enhanced Neural Networks 2025
+              </h3>
+
+                  <span>⏱️ 40 min read</span>
+                  <span>📅 Sep 30, 2025</span>
+                </div>
+
+                </div>
+              </div>
+
+              <div className="flex items-center justify-between text-sm text-gray-400 mb-6">
+                <span>⏱️ 28 min read</span>
+                <span>📅 Sep 30, 2025</span>
+              </div>
+
+              <Link 
+                href="/blog/quantum-enhanced-neural-networks-2025"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-purple-500 to-fuchsia-600 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-fuchsia-700 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-purple-500/25"
+              >
+                Explore Breakthrough
+                <span className="group-hover:translate-x-1 transition-transform">→</span>
+              </Link>
+            </div>
+          </div>
+
+                    Quantum Security
+                  </span>
+                </div>
+
+              <h3 className="text-xl font-bold text-white mb-4 group-hover:text-emerald-400 transition-colors">
+                Quantum-Secure AI Infrastructure 2025
+              </h3>
+
+                  <span>⏱️ 45 min read</span>
+                  <span>📅 Sep 30, 2025</span>
+                </div>
+
+                </div>
+              </div>
+
+              <span>Get Expert Consultation</span>
+            </a>
+          </div>
+
+          {[
+            { value: '500+', label: 'Enterprise Clients' },
+            { value: '10B+', label: 'Data Points Processed Daily' },
+            { value: '99.9%', label: 'System Uptime' },
+            { value: '5M+', label: 'Autonomous Operations Hours' },
+          ].map((stat, index) => (
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   );
 };
 
-export default NewestContent2025Banner;

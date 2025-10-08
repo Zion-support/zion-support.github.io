@@ -19,14 +19,6 @@ interface LazyBannerProps {
   rootMargin?: string;
 }
 
-                retryError
-              );
-                default: () => (
-                  <div className="banner-fallback">
-                    <p>Banner temporarily unavailable</p>
-                  </div>
-                )
-              });
             });
         }, 1000);
       });
@@ -111,8 +103,6 @@ export class BannerObserver {
     }
   }
     }
-  observe(element: Element): void {
-    this.observer?.observe(element);
   }
   disconnect(): void {
     this.observer?.disconnect();

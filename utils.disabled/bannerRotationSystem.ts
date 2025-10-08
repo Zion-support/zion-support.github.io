@@ -45,20 +45,6 @@ export const shouldShowBanner = (banner: BannerConfig): boolean => {
 /**
  * Get rotation score for banner prioritization
  */
-  // Calculate score based on various factors
-  let score = 0;
-  
-  // Base score from impressions
-  const impressions = getBannerImpressionCount(banner.id);
-  score += Math.max(0, 100 - impressions * 2);
-  
-  // Bonus for new banners
-  if (impressions === 0) score += 50;
-  
-  // Penalty for over-impressed banners
-  if (impressions > 10) score -= 30;
-  
-  return Math.max(0, score);
 };
 
 export const selectBannersForRotation = (allBanners: BannerConfig[], maxBanners: number = MAX_VISIBLE_BANNERS): BannerConfig[] => {
@@ -94,15 +80,6 @@ export const getBannerAnalytics = (bannerId?: string) => {
     engagementRate,
     recencyScore,
     fatigueScore,
-  const bannerImpressions = bannerId ? 
-    impressions.filter(imp => imp.bannerId === bannerId) : 
-    impressions;
-  
-  return {
-    totalImpressions: bannerImpressions.length,
-    clicks: bannerImpressions.filter(imp => imp.clicked).length,
-    engagementRate: bannerImpressions.length > 0 ? 
-      bannerImpressions.filter(imp => imp.clicked).length / bannerImpressions.length : 0
   };
 };
 
@@ -305,36 +282,6 @@ export default {
   trackBannerClickWithPage,
   trackBannerVisibility
 };
-export interface RotationConfig {
-  interval: number;
-  randomize: boolean;
-  categories: string[];
-
-interface BannerConfig {
-  id: string;
-  component: string;
-  priority: number;
-  maxDailyImpressions?: number;
-  targetAudience?: string[];
-  conversionGoal?: string;
-  abTestGroup?: 'A' | 'B' | 'control';
-}
-
-interface BannerImpression {
-  bannerId: string;
-  timestamp: number;
-  sessionId: string;
-  pageUrl: string;
-  userAgent: string;
-  conversion?: boolean;
-}
-
-interface RotationRule {
-  id: string;
-  name: string;
-  condition: (impression: BannerImpression) => boolean;
-  priority: number;
-  enabled: boolean;
 }
 
 export class BannerRotationSystem {
@@ -573,7 +520,3 @@ export const rotateBanners = (system: BannerRotationSystem): BannerConfig | null
 };
 
 export default BannerRotationSystem;
-<:utils/bannerRotationSystem.ts
-export const calculateBannerScore = (banner: BannerConfig): number => {
-  const impressions = getStoredImpressions();
-  const bannerImpressions = impressions.filter(imp => imp.bannerId === banner.id);
