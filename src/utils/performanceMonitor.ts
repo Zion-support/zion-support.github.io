@@ -145,14 +145,14 @@ export class PerformanceMonitor {
    * Measure execution time of a function
    */
   async measureAsync<T>(name: string, fn: () => Promise<T>): Promise<T> {
-//     const start = performance.now();
+    const start = performance.now();
     try {
-//       const result = await fn();
-//       const duration = performance.now() - start;
+      const result = await fn();
+      const duration = performance.now() - start;
       this.recordMetric(name, duration);
       return result;
     } catch (error) {
-//       const duration = performance.now() - start;
+      const duration = performance.now() - start;
       this.recordMetric(`${name}-error`, duration);
       throw error;
     }
@@ -162,14 +162,14 @@ export class PerformanceMonitor {
    * Measure execution time of a synchronous function
    */
   measure<T>(name: string, fn: () => T): T {
-//     const start = performance.now();
+    const start = performance.now();
     try {
-//       const result = fn();
-//       const duration = performance.now() - start;
+      const result = fn();
+      const duration = performance.now() - start;
       this.recordMetric(name, duration);
       return result;
     } catch (error) {
-//       const duration = performance.now() - start;
+      const duration = performance.now() - start;
       this.recordMetric(`${name}-error`, duration);
       throw error;
     }

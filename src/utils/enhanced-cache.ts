@@ -246,11 +246,11 @@ export class CacheManager<T = unknown> {
     if (typeof window === 'undefined') return;
     
     try {
-//       const storage = this.getStorage();
+      const storage = this.getStorage();
       const entries = Array.from(this.cache.entries());
       storage?.setItem('cache', JSON.stringify(entries));
     } catch (error) {
-//       console.error('Failed to save cache to storage:', error);
+      console.error('Failed to save cache to storage:', error);
     }
   }
   
