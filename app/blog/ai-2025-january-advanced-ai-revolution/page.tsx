@@ -1,6 +1,6 @@
 import React from 'react';
-
-const January2025AdvancedAIRevolution: React.FC = () => {
+import { Helmet } from 'react-helmet-async';
+export default function January2025AdvancedAIRevolution() {
   return (
     <div className="min-h-screen bg-gray-50">
       <div className="max-w-4xl mx-auto px-4 py-8">
@@ -126,6 +126,4 @@ const January2025AdvancedAIRevolution: React.FC = () => {
       </div>
     </div>
   );
-};
-
-export default January2025AdvancedAIRevolution;
+}

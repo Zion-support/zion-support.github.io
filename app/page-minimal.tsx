@@ -1,21 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Phone, CheckCircle, Star } from 'lucide-react';
+export const metadata = {
+  title: 'Zion Tech Group - Advanced AI and IT Solutions',
+  description: 'Leading provider of AI-powered enterprise solutions, automation, and digital transformation services.',
+};
 
-const HomePage: React.FC = () => {
+export default function HomePage() {
   return (
-
-    <>
-
-      <Helmet>
-
-        <title>Zion Tech Group</title>
-
-        <meta name="description" content="Advanced AI and IT Solutions" />
-
-      </Helmet>
-
-      <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white">
       {/* Header */}
       <header className="bg-white border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -48,8 +41,7 @@ const HomePage: React.FC = () => {
               and enterprise IT solutions that drive growth, efficiency, and innovation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/services"
+              <Link to="/services"
                 className="inline-flex items-center px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-blue-50 transition-colors font-semibold"
               >
                 Explore Our Services
@@ -128,15 +120,13 @@ const HomePage: React.FC = () => {
               Let's discuss how our AI solutions can drive your success.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
+              <Link to="/contact"
                 className="inline-flex items-center px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-blue-50 transition-colors font-semibold"
               >
                 Get Started Today
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
-              <Link
-                to="/case-studies"
+              <Link to="/case-studies"
                 className="inline-flex items-center px-8 py-4 bg-transparent border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-semibold"
               >
                 View Success Stories
@@ -170,6 +160,5 @@ const HomePage: React.FC = () => {
         </div>
       </footer>
     </div>
-    </>
   );
 }

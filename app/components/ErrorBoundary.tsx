@@ -1,7 +1,6 @@
-
 import React, { Component, ErrorInfo, ReactNode } from 'react';
+import { Link } from 'react-router-dom';
 import { FileWarning } from 'lucide-react';
-
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;

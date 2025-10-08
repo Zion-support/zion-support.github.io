@@ -1,6 +1,12 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-// Metadata will be handled by React Helmet in individual components
+import { Helmet } from 'react-helmet-async';
+const metadata = {
+  title: 'Privacy Policy - Zion Tech Group',
+  description:
+    'Privacy policy and data protection information for Zion Tech Group services and website.',
+};
+
+export { metadata };
 
 const PrivacyPage: React.FC = () => {
   return (

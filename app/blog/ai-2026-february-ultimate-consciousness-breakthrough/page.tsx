@@ -1,5 +1,6 @@
 import React from 'react';
 import { Star } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
 export default function AI2026FebruaryUltimateConsciousnessBreakthrough() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">

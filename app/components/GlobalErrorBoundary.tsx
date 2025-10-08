@@ -1,8 +1,5 @@
-// // 'use client'; // Removed for Vite compatibility // Removed for Vite compatibility
-
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { logger } from '../../src/utils/logger';
-
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;

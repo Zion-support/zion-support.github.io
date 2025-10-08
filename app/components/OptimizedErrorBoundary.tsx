@@ -1,5 +1,4 @@
 import React, { Component, ErrorInfo, ReactNode, memo } from 'react';
-
 interface OptimizedErrorBoundaryProps {
   children: ReactNode;
   fallback?: ReactNode;

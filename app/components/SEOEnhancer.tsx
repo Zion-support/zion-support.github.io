@@ -1,6 +1,5 @@
 import React, { ReactNode } from 'react';
 import { Helmet } from 'react-helmet-async';
-
 interface SEOEnhancerProps {
   children?: ReactNode;
   title?: string;

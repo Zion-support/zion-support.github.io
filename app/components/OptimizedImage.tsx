@@ -1,5 +1,4 @@
 import React, { useState, useCallback, memo } from 'react';
-
 interface OptimizedImageProps {
   src: string;
   alt: string;
@@ -53,8 +52,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = memo(({
           <span className="text-sm">Failed to load image</span>
         </div>
       ) : (
-        <img
-          src={src}
+        <img src={src}
           alt={alt}
           width={width || 200}
           height={height || 200}
@@ -67,7 +65,6 @@ const OptimizedImage: React.FC<OptimizedImageProps> = memo(({
             width: width ? `${width}px` : 'auto',
             height: height ? `${height}px` : 'auto'
           }}
-          loading={priority ? 'eager' : 'lazy'}
         />
       )}
     </div>

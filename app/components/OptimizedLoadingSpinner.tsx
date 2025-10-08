@@ -1,5 +1,4 @@
 import React, { memo, useMemo } from 'react';
-
 interface OptimizedLoadingSpinnerProps {
   size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
   variant?: 'dots' | 'pulse' | 'spinner' | 'skeleton' | 'bars';

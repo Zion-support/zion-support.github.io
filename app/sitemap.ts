@@ -1,3 +1,5 @@
+import React from 'react';
+
 interface SitemapEntry {
   url: string;
   lastModified: Date;

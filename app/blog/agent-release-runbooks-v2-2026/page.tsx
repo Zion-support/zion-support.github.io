@@ -1,32 +1,22 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { ListChecks, Calendar, Clock, FileWarning, RefreshCw } from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
+export const metadata = {
+  title: 'Agent Release Runbooks v2 (2026)',
+  description: 
+    'Budgets, canaries, approvals, and instant rollback for safe autonomy.',
+  type: 'article',
+  url: 'https://ziontechgroup.com/blog/agent-release-runbooks-v2-2026',
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Agent Release Runbooks v2 (2026)',
+    description: 
+      'Budgets, canaries, approvals, and instant rollback for safe autonomy.',
+  },
+};
 
-const AgentReleaseRunbooksV22026: React.FC = () => {
+export default function Page() {
   return (
-    <>
-      <Helmet>
-        <title>Agent Release Runbooks v2 (2026)</title>
-        <meta
-          name="description"
-          content="Budgets, canaries, approvals, and instant rollback for safe autonomy."
-        />
-        <meta property="og:title" content="Agent Release Runbooks v2 (2026)" />
-        <meta
-          property="og:description"
-          content="Budgets, canaries, approvals, and instant rollback for safe autonomy."
-        />
-        <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://ziontechgroup.com/blog/agent-release-runbooks-v2-2026" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Agent Release Runbooks v2 (2026)" />
-        <meta
-          name="twitter:description"
-          content="Budgets, canaries, approvals, and instant rollback for safe autonomy."
-        />
-      </Helmet>
-      <main className='min-h-screen bg-gradient-to-br from-fuchsia-50 via-white to-purple-50'>
+    <main className='min-h-screen bg-gradient-to-br from-fuchsia-50 via-white to-purple-50'>
       <header className='bg-gradient-to-br from-fuchsia-900 via-purple-900 to-slate-900 text-white py-20'>
         <div className='max-w-5xl mx-auto px-6'>
           <div className='inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 mb-6'>
@@ -116,8 +106,5 @@ const AgentReleaseRunbooksV22026: React.FC = () => {
         </div>
       </section>
     </main>
-    </>
   );
-};
-
-export default AgentReleaseRunbooksV22026;
+}

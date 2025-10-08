@@ -1,21 +1,22 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, Calendar, User, Clock, Tag, Target, CheckCircle, ArrowRight, Zap, TrendingUp, Brain, Cpu } from 'lucide-react';
+export const metadata = {
+  title: 'AI 2027 Implementation Roadmap - Complete Guide to Advanced Neural Superintelligence',
+  description: 'Complete step-by-step roadmap for implementing AI 2027 Advanced Neural Superintelligence in your enterprise. Achieve 1,000,000x performance gains.',
+  keywords: 'AI 2027 implementation, neural superintelligence roadmap, enterprise AI transformation, advanced AI deployment',
+  authors: [{ name: 'Zion Tech Group AI Implementation Team' }],
+  openGraph: {
+    title: 'AI 2027 Implementation Roadmap - Complete Guide',
+    description: 'Complete step-by-step roadmap for implementing AI 2027 Advanced Neural Superintelligence in your enterprise.',
+    url: 'https://ziontechgroup.com/guides/ai-2027-implementation-roadmap',
+    type: 'article'
+  },
+};
 
-const AI2027ImplementationRoadmap: React.FC = () => {
+export default function AI2027ImplementationRoadmap() {
   return (
-
-    <>
-
-      <Helmet>
-
-        <title>Zion Tech Group</title>
-
-        <meta name="description" content="Advanced AI and IT Solutions" />
-
-      </Helmet>
-
-      <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white">
       {/* Header */}
       <header className="bg-gradient-to-r from-purple-900 to-blue-900 text-white">
         <div className="max-w-6xl mx-auto px-4 py-12">
@@ -325,6 +326,5 @@ const AI2027ImplementationRoadmap: React.FC = () => {
         </div>
       </article>
     </div>
-    </>
   );
 }

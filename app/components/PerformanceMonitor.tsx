@@ -1,7 +1,4 @@
-'use client';
-
 import React, { useState, useEffect } from 'react';
-
 interface PerformanceMetrics {
   loadTime: number;
   renderTime: number;

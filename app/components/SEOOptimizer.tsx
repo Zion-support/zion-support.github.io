@@ -1,10 +1,7 @@
-
 import React, { useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
-
+import { useNavigate, useLocation } from 'react-router-dom';
 const SEOOptimizer: React.FC = () => {
-  const location = useLocation();
-//   const pathname = location.pathname;
+  const pathname = useLocation().pathname;
 
   useEffect(() => {
     // Update page title based on route
@@ -19,7 +16,6 @@ const SEOOptimizer: React.FC = () => {
   }, [pathname]);
 
   return null;
-
 };
 
 export default SEOOptimizer;

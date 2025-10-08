@@ -1,6 +1,5 @@
 import React, { useEffect, useCallback } from 'react';
 import { Helmet } from 'react-helmet-async';
-
 interface SEOData {
   title: string;
   description: string;

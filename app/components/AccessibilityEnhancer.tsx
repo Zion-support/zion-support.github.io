@@ -1,7 +1,4 @@
-// // 'use client'; // Removed for Vite compatibility // Removed for Vite compatibility
-
 import React, { useEffect, useRef, useState, useCallback } from 'react';
-
 interface AccessibilityConfig {
   enableKeyboardNavigation: boolean;
   enableScreenReaderSupport: boolean;
@@ -65,12 +62,12 @@ const AccessibilityEnhancer = React.forwardRef<AccessibilityEnhancerRef, Accessi
   useEffect(() => {
     // Check for user preferences
     if (defaultConfig.enableHighContrast) {
-//       const prefersHighContrast = window.matchMedia('(prefers-contrast: high)').matches;
+      const prefersHighContrast = window.matchMedia('(prefers-contrast: high)').matches;
       setIsHighContrast(prefersHighContrast);
     }
 
     if (defaultConfig.enableReducedMotion) {
-//       const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
       setIsReducedMotion(prefersReducedMotion);
     }
 

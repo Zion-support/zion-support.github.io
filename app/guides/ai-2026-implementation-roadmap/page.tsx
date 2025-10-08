@@ -1,21 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, Calendar, User, Clock, Tag, Target, CheckCircle, ArrowRight } from 'lucide-react';
+export const metadata = {
+  title: 'AI 2026 Implementation Roadmap: Complete Guide to Enterprise AI Transformation',
+  description: 'Master the art of AI implementation with our comprehensive 2026 roadmap. From strategy development to full-scale deployment, learn how to successfully transform your enterprise.',
+  keywords: 'AI Implementation, Enterprise AI, Digital Transformation, AI Strategy, 2026 Roadmap, Implementation Guide',
+};
 
-const AI2026ImplementationRoadmap: React.FC = () => {
+export default function AI2026ImplementationRoadmap() {
   return (
-
-    <>
-
-      <Helmet>
-
-        <title>Zion Tech Group</title>
-
-        <meta name="description" content="Advanced AI and IT Solutions" />
-
-      </Helmet>
-
-      <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white">
       {/* Header */}
       <header className="bg-white border-b border-gray-200">
         <div className="max-w-4xl mx-auto px-4 py-6">
@@ -390,6 +384,5 @@ const AI2026ImplementationRoadmap: React.FC = () => {
         </div>
       </article>
     </div>
-    </>
   );
 }
