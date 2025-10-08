@@ -671,22 +671,21 @@ class AccessibilityEnhancer {
 
   /**
    * Get accessibility report
-  /**
-   * Get accessibility report
    */
   getReport(): string {
     const metrics = this.getMetrics();
-    
-    return `Accessibility Report:
-- Violations: ${metrics.violations}
-- Warnings: ${metrics.warnings}
-- Passes: ${metrics.passes}
-- Tab Index Issues: ${metrics.tabIndexIssues}
-- Missing Alt Text: ${metrics.missingAltText}
-- Missing Labels: ${metrics.missingLabels}
-- Low Contrast: ${metrics.lowContrast}
-- Keyboard Traps: ${metrics.keyboardTraps}
-`;
+    return `
+Accessibility Report
+===================
+Focusable Elements: ${metrics.focusableElements}
+Images Without Alt: ${metrics.imagesWithoutAlt}
+Links Without Text: ${metrics.linksWithoutText}
+Headings Without Content: ${metrics.headingsWithoutContent}
+Color Contrast Issues: ${metrics.colorContrastIssues}
+Keyboard Navigation Score: ${metrics.keyboardNavigationScore}
+Screen Reader Score: ${metrics.screenReaderScore}
+Overall Score: ${metrics.overallScore}/100
+    `;
   }
 }
 
