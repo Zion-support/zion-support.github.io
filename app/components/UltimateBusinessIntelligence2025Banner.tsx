@@ -217,7 +217,6 @@ const UltimateBusinessIntelligence2025Banner = () => {
             </div>
           ))}
         </div>
-      </div>
     </section>
   );
 };
