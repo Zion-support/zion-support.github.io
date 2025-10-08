@@ -225,7 +225,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
         }
       });
     }
-  };origin/cursor/fix-errors-and-merge-to-main-6395
+  };
 
   return (
     <Helmet>
@@ -301,6 +301,5 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
       <link rel="dns-prefetch" href="//www.googletagmanager.com" />
     </Helmet>
   );
-};
 
 export default AdvancedSEOOptimizer;
