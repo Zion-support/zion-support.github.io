@@ -4,59 +4,89 @@ import { Phone, Mail, MapPin, Clock, Award, Shield, Zap } from 'lucide-react';
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-gray-900 text-white py-12">
-      <div className="container mx-auto px-4">
+    <footer className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid text-white py-16 relative overflow-hidden">
+      {/* Animated background elements */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute top-10 left-10 w-20 h-20 bg-cyan-400 rounded-full animate-pulse"></div>
+        <div className="absolute top-32 right-20 w-16 h-16 bg-purple-400 rounded-full animate-pulse delay-1000"></div>
+        <div className="absolute bottom-20 left-1/4 w-12 h-12 bg-pink-400 rounded-full animate-pulse delay-2000"></div>
+        <div className="absolute bottom-32 right-1/3 w-8 h-8 bg-green-400 rounded-full animate-pulse delay-3000"></div>
+      </div>
+      
+      <div className="container mx-auto px-4 relative z-10">
         <div className="grid md:grid-cols-4 gap-8">
           {/* Company Info */}
-          <div>
-            <h3 className="text-2xl font-bold mb-4">Zion Tech Group</h3>
-            <p className="text-gray-300 mb-4">
+          <div className="cyber-card hologram-card">
+            <h3 className="text-2xl font-bold mb-4 neon-text">Zion Tech Group</h3>
+            <p className="text-gray-300 mb-6 leading-relaxed">
               Leading provider of enterprise AI solutions, quantum computing, and autonomous
-              systems.
+              systems. Transforming businesses through cutting-edge technology.
             </p>
-            <div className="text-gray-300">
-              <p>364 E Main St STE 1008</p>
-              <p>Middletown, DE 19709</p>
-              <p>United States</p>
+            <div className="space-y-2 text-gray-300">
+              <div className="flex items-center gap-2">
+                <MapPin className="w-4 h-4 text-cyan-400" />
+                <span>364 E Main St STE 1008</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <MapPin className="w-4 h-4 text-cyan-400" />
+                <span>Middletown, DE 19709</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <MapPin className="w-4 h-4 text-cyan-400" />
+                <span>United States</span>
+              </div>
             </div>
           </div>
 
           {/* Quick Links */}
-          <div>
-            <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
-            <ul className="space-y-2">
+          <div className="cyber-card hologram-card">
+            <h4 className="text-lg font-semibold mb-6 text-cyan-400">Quick Links</h4>
+            <ul className="space-y-3">
               <li>
-                <Link to="/" className="text-gray-300 hover:text-white transition-colors">
+                <Link to="/" className="text-gray-300 hover:text-cyan-400 transition-colors flex items-center gap-2 group">
+                  <div className="w-1 h-1 bg-cyan-400 rounded-full group-hover:scale-150 transition-transform"></div>
                   Home
                 </Link>
               </li>
               <li>
-                <Link to="/about" className="text-gray-300 hover:text-white transition-colors">
+                <Link to="/about" className="text-gray-300 hover:text-cyan-400 transition-colors flex items-center gap-2 group">
+                  <div className="w-1 h-1 bg-cyan-400 rounded-full group-hover:scale-150 transition-transform"></div>
                   About
                 </Link>
               </li>
               <li>
-                <Link to="/services" className="text-gray-300 hover:text-white transition-colors">
+                <Link to="/services" className="text-gray-300 hover:text-cyan-400 transition-colors flex items-center gap-2 group">
+                  <div className="w-1 h-1 bg-cyan-400 rounded-full group-hover:scale-150 transition-transform"></div>
                   Services
                 </Link>
               </li>
               <li>
-                <Link to="/services-advertising" className="text-gray-300 hover:text-white transition-colors">
-                  AI Advertising
+                <Link to="/ai-chatbot-pro" className="text-gray-300 hover:text-cyan-400 transition-colors flex items-center gap-2 group">
+                  <div className="w-1 h-1 bg-cyan-400 rounded-full group-hover:scale-150 transition-transform"></div>
+                  AI Chatbot Pro
                 </Link>
               </li>
               <li>
-                <Link to="/case-studies" className="text-gray-300 hover:text-white transition-colors">
+                <Link to="/url-shortener-pro" className="text-gray-300 hover:text-cyan-400 transition-colors flex items-center gap-2 group">
+                  <div className="w-1 h-1 bg-cyan-400 rounded-full group-hover:scale-150 transition-transform"></div>
+                  URL Shortener Pro
+                </Link>
+              </li>
+              <li>
+                <Link to="/case-studies" className="text-gray-300 hover:text-cyan-400 transition-colors flex items-center gap-2 group">
+                  <div className="w-1 h-1 bg-cyan-400 rounded-full group-hover:scale-150 transition-transform"></div>
                   Case Studies
                 </Link>
               </li>
               <li>
-                <Link to="/enterprise" className="text-gray-300 hover:text-white transition-colors">
+                <Link to="/enterprise" className="text-gray-300 hover:text-cyan-400 transition-colors flex items-center gap-2 group">
+                  <div className="w-1 h-1 bg-cyan-400 rounded-full group-hover:scale-150 transition-transform"></div>
                   Enterprise
                 </Link>
               </li>
               <li>
-                <Link to="/team" className="text-gray-300 hover:text-white transition-colors">
+                <Link to="/team" className="text-gray-300 hover:text-cyan-400 transition-colors flex items-center gap-2 group">
+                  <div className="w-1 h-1 bg-cyan-400 rounded-full group-hover:scale-150 transition-transform"></div>
                   Team
                 </Link>
               </li>
@@ -64,56 +94,54 @@ const Footer: React.FC = () => {
           </div>
 
           {/* Services */}
-          <div>
-            <h4 className="text-lg font-semibold mb-4">Services</h4>
-            <ul className="space-y-2 text-gray-300">
+          <div className="cyber-card hologram-card">
+            <h4 className="text-lg font-semibold mb-6 text-cyan-400">Our Services</h4>
+            <ul className="space-y-3">
               <li>
-                <Link to="/services" className="hover:text-white transition-colors">
+                <Link to="/services" className="text-gray-300 hover:text-cyan-400 transition-colors flex items-center gap-2 group">
+                  <Zap className="w-4 h-4 text-cyan-400 group-hover:animate-pulse" />
                   All Services
                 </Link>
               </li>
               <li>
-                <Link to="/ai-services" className="hover:text-white transition-colors">
+                <Link to="/ai-services" className="text-gray-300 hover:text-cyan-400 transition-colors flex items-center gap-2 group">
+                  <Award className="w-4 h-4 text-cyan-400 group-hover:animate-pulse" />
                   AI Services
                 </Link>
               </li>
               <li>
-                <Link to="/it-services" className="hover:text-white transition-colors">
-                  IT Services
+                <Link to="/ai-chatbot-pro" className="text-gray-300 hover:text-cyan-400 transition-colors flex items-center gap-2 group">
+                  <Award className="w-4 h-4 text-cyan-400 group-hover:animate-pulse" />
+                  AI Chatbot Pro
                 </Link>
               </li>
               <li>
-                <Link to="/micro-saas" className="hover:text-white transition-colors">
+                <Link to="/url-shortener-pro" className="text-gray-300 hover:text-cyan-400 transition-colors flex items-center gap-2 group">
+                  <Zap className="w-4 h-4 text-cyan-400 group-hover:animate-pulse" />
+                  URL Shortener Pro
+                </Link>
+              </li>
+              <li>
+                <Link to="/micro-saas" className="text-gray-300 hover:text-cyan-400 transition-colors flex items-center gap-2 group">
+                  <Zap className="w-4 h-4 text-cyan-400 group-hover:animate-pulse" />
                   Micro SAAS
                 </Link>
               </li>
               <li>
-                <Link to="/quantum-computing" className="hover:text-white transition-colors">
+                <Link to="/quantum-computing" className="text-gray-300 hover:text-cyan-400 transition-colors flex items-center gap-2 group">
+                  <Award className="w-4 h-4 text-cyan-400 group-hover:animate-pulse" />
                   Quantum Computing
                 </Link>
               </li>
               <li>
-                <Link to="/autonomous-systems" className="hover:text-white transition-colors">
-                  Autonomous Systems
-                </Link>
-              </li>
-              <li>
-                <Link to="/business-intelligence" className="hover:text-white transition-colors">
-                  Business Intelligence
-                </Link>
-              </li>
-              <li>
-                <Link to="/blockchain-web3" className="hover:text-white transition-colors">
+                <Link to="/blockchain-web3" className="text-gray-300 hover:text-cyan-400 transition-colors flex items-center gap-2 group">
+                  <Shield className="w-4 h-4 text-cyan-400 group-hover:animate-pulse" />
                   Blockchain & Web3
                 </Link>
               </li>
               <li>
-                <Link to="/iot-edge-computing" className="hover:text-white transition-colors">
-                  IoT & Edge Computing
-                </Link>
-              </li>
-              <li>
-                <Link to="/cybersecurity" className="hover:text-white transition-colors">
+                <Link to="/cybersecurity" className="text-gray-300 hover:text-cyan-400 transition-colors flex items-center gap-2 group">
+                  <Shield className="w-4 h-4 text-cyan-400 group-hover:animate-pulse" />
                   Cybersecurity
                 </Link>
               </li>
