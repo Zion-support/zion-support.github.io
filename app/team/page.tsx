@@ -1,10 +1,13 @@
 import React from 'react';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {
+const metadata: Metadata = {
   title: 'Our Team - Zion Tech Group',
-  description: 'Meet the talented team of AI and IT experts at Zion Tech Group, driving innovation in enterprise technology solutions.',
+  description:
+    'Meet the talented team of AI and IT experts at Zion Tech Group, driving innovation in enterprise technology solutions.',
 };
+
+export { metadata };
 
 const TeamPage: React.FC = () => {
   const teamMembers = [
@@ -36,7 +39,6 @@ const TeamPage: React.FC = () => {
 
   return (
     <>
-
       <div className='min-h-screen bg-slate-50 py-16'>
         <div className='container mx-auto px-4'>
           <div className='max-w-6xl mx-auto'>
@@ -72,7 +74,7 @@ const TeamPage: React.FC = () => {
                 Join Our Team
               </h2>
               <p className='text-gray-600 text-center mb-6'>
-                We're always looking for talented individuals to join our
+                We&apos;re always looking for talented individuals to join our
                 mission of advancing AI and IT solutions.
               </p>
               <div className='text-center'>

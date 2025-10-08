@@ -109,7 +109,7 @@ console.log(`Found ${files.length} files to process...`);
 for (const file of files) {
   try {
     let content = fs.readFileSync(file, 'utf8');
-    let originalContent = content;
+    const originalContent = content;
     let fileFixes = 0;
 
     //Apply all fixes

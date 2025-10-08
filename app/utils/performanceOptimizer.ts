@@ -1,618 +1,307 @@
 /**
- * Performance optimization utilities
+ * Advanced Performance Optimizer
+ * Provides comprehensive performance monitoring and optimization utilities
  */
 
-import { logger } from './logger';
-
-// Debounce function for performance optimization
-export const debounce = <T extends (...args: unknown[]) => unknown>(
-  func: T,
-  wait: number
-): ((...args: Parameters<T>) => void) => {
-  let timeout: NodeJS.Timeout;
-  return (...args: Parameters<T>) => {
-    clearTimeout(timeout);
-    timeout = setTimeout(() => func(...args), wait);
-  };
-};
-
-// Throttle function for performance optimization
-export const throttle = <T extends (...args: unknown[]) => unknown>(
-  func: T,
-  limit: number
-): ((...args: Parameters<T>) => void) => {
-  let inThrottle: boolean;
-  return (...args: Parameters<T>) => {
-    if (!inThrottle) {
-      func(...args);
-      inThrottle = true;
-      setTimeout(() => (inThrottle = false), limit);
-    }
-  };
-};
-
-// Lazy load images with intersection observer
-export const lazyLoadImages = () => {
-  if (typeof window === 'undefined' || !('IntersectionObserver' in window)) {
-    return;
-  }
-
-  const imageObserver = new IntersectionObserver((entries, observer) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        const img = entry.target as HTMLImageElement;
-        if (img.dataset.src) {
-          img.src = img.dataset.src;
-          img.classList.remove('lazy');
-          observer.unobserve(img);
-        }
-      }
-    });
-  });
-
-  const lazyImages = document.querySelectorAll('img[data-src]');
-  lazyImages.forEach((img) => imageObserver.observe(img));
-};
-
-// Preload critical resources
-export const preloadCriticalResources = () => {
-  if (typeof document === 'undefined') return;
-
-  const criticalResources = [
-    '/fonts/inter.woff2',
-    '/css/critical.css',
-  ];
-
-  criticalResources.forEach((resource) => {
-    const link = document.createElement('link');
-    link.rel = 'preload';
-    link.href = resource;
-    link.as = resource.endsWith('.css') ? 'style' : 'font';
-    if (resource.endsWith('.woff2')) {
-      link.crossOrigin = 'anonymous';
-    }
-    document.head.appendChild(link);
-  });
-};
-
-// Optimize scroll performance
-export const optimizeScrollPerformance = () => {
-  if (typeof window === 'undefined') return;
-
-  let ticking = false;
-
-  const updateScrollPosition = () => {
-    // Add your scroll-based optimizations here
-    ticking = false;
-  };
-
-  const requestTick = () => {
-    if (!ticking) {
-      requestAnimationFrame(updateScrollPosition);
-      ticking = true;
-    }
-  };
-
-  window.addEventListener('scroll', requestTick, { passive: true });
-};
-
-// Memory usage monitoring
-export const getMemoryUsage = (): number | null => {
-  if (typeof window === 'undefined' || !('memory' in performance)) {
-    return null;
-  }
-
-  const memory = (performance as { memory: { usedJSHeapSize: number; totalJSHeapSize: number } }).memory;
-  return memory.usedJSHeapSize / memory.totalJSHeapSize;
-};
-
-// Performance metrics collector
-export const collectPerformanceMetrics = () => {
-  if (typeof window === 'undefined' || !('performance' in window)) {
-    return null;
-  }
-
-  const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-  const paintEntries = performance.getEntriesByType('paint');
-  
-  return {
-    loadTime: navigation.loadEventEnd - navigation.fetchStart,
-    domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
-    firstContentfulPaint: paintEntries.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0,
-    memoryUsage: getMemoryUsage(),
-  };
-};
-
 interface PerformanceMetrics {
-  fcp: number; // First Contentful Paint
-  lcp: number; // Largest Contentful Paint
-  fid: number; // First Input Delay
-  cls: number; // Cumulative Layout Shift
-  ttfb: number; // Time to First Byte
-  fmp: number; // First Meaningful Paint
+  loadTime: number;
+  renderTime: number;
+  memoryUsage: number;
+  bundleSize: number;
+  cacheHitRate: number;
 }
 
-interface PerformanceConfig {
-  enableMonitoring: boolean;
-  enableOptimization: boolean;
-  enableReporting: boolean;
-  sampleRate: number;
-  maxRetries: number;
+interface OptimizationConfig {
+  enableLazyLoading: boolean;
+  enableCodeSplitting: boolean;
+  enableImageOptimization: boolean;
+  enableCaching: boolean;
+  enableCompression: boolean;
 }
-
-// LayoutShift interface for type safety
-// interface LayoutShift extends PerformanceEntry {
-//   value: number;
-//   hadRecentInput: boolean;
-// }
 
 class PerformanceOptimizer {
-  private config: PerformanceConfig;
-  private metrics: Partial<PerformanceMetrics> = {};
+  private metrics: PerformanceMetrics;
+  private config: OptimizationConfig;
   private observers: PerformanceObserver[] = [];
-  private isMonitoring = false;
 
-  constructor(config: Partial<PerformanceConfig> = {}) {
+  constructor(config: Partial<OptimizationConfig> = {}) {
     this.config = {
-      enableMonitoring: true,
-      enableOptimization: true,
-      enableReporting: true,
-      sampleRate: 1.0,
-      maxRetries: 3,
+      enableLazyLoading: true,
+      enableCodeSplitting: true,
+      enableImageOptimization: true,
+      enableCaching: true,
+      enableCompression: true,
       ...config,
     };
+
+    this.metrics = {
+      loadTime: 0,
+      renderTime: 0,
+      memoryUsage: 0,
+      bundleSize: 0,
+      cacheHitRate: 0,
+    };
+
+    this.initializePerformanceMonitoring();
   }
 
-  /**
-   * Initialize performance monitoring
-   */
-  init(): void {
+  private initializePerformanceMonitoring(): void {
     if (typeof window === 'undefined') return;
 
-    this.measureWebVitals();
-    this.setupPerformanceObservers();
-
-    console.log('Performance monitoring initialized');
+    // Monitor page load performance
+    this.observeNavigationTiming();
+    
+    // Monitor resource loading
+    this.observeResourceTiming();
+    
+    // Monitor memory usage
+    this.observeMemoryUsage();
+    
+    // Monitor Core Web Vitals
+    this.observeWebVitals();
   }
 
-  /**
-   * Measure Core Web Vitals
-   */
-  private measureWebVitals(): void {
-    if (!('performance' in window)) return;
+  private observeNavigationTiming(): void {
+    if (typeof window === 'undefined') return;
 
-    // First Contentful Paint (FCP)
-    this.observePaint('first-contentful-paint', 'fcp');
-
-    // Largest Contentful Paint (LCP)
-    this.observeLCP();
-
-    // First Input Delay (FID)
-    this.observeFID();
-
-    // Cumulative Layout Shift (CLS)
-    this.observeCLS();
-
-    // Time to First Byte (TTFB)
-    this.measureTTFB();
-  }
-
-  private observePaint(entryName: string, metricName: keyof PerformanceMetrics): void {
     const observer = new PerformanceObserver((list) => {
       const entries = list.getEntries();
       entries.forEach((entry) => {
-        if (entry.name === entryName) {
-          this.metrics[metricName] = entry.startTime;
-          console.log(`${String(metricName).toUpperCase()} measured:`, entry.startTime);
+        if (entry.entryType === 'navigation') {
+          const navEntry = entry as PerformanceNavigationTiming;
+          this.metrics.loadTime = navEntry.loadEventEnd - navEntry.loadEventStart;
+          this.metrics.renderTime = navEntry.domContentLoadedEventEnd - navEntry.domContentLoadedEventStart;
         }
       });
     });
 
-    observer.observe({ entryTypes: ['paint'] });
+    observer.observe({ entryTypes: ['navigation'] });
     this.observers.push(observer);
   }
 
-  private observeLCP(): void {
-    const observer = new PerformanceObserver((list) => {
-      const entries = list.getEntries();
-      const lastEntry = entries[entries.length - 1];
-      this.metrics.lcp = lastEntry.startTime;
-      console.log('LCP measured:', lastEntry.startTime);
-    });
+  private observeResourceTiming(): void {
+    if (typeof window === 'undefined') return;
 
-    observer.observe({ entryTypes: ['largest-contentful-paint'] });
-    this.observers.push(observer);
-  }
-
-  private observeFID(): void {
     const observer = new PerformanceObserver((list) => {
       const entries = list.getEntries();
       entries.forEach((entry) => {
-        if (entry.entryType === 'first-input' && 'processingStart' in entry && 'startTime' in entry) {
-          const fid = (entry as PerformanceEventTiming).processingStart - (entry as PerformanceEventTiming).startTime;
-          this.metrics.fid = fid;
-          console.log('FID measured:', fid);
+        if (entry.entryType === 'resource') {
+          const resourceEntry = entry as PerformanceResourceTiming;
+          this.optimizeResourceLoading(resourceEntry);
         }
       });
     });
 
-    observer.observe({ entryTypes: ['first-input'] });
+    observer.observe({ entryTypes: ['resource'] });
     this.observers.push(observer);
   }
 
-  private observeCLS(): void {
-    let clsValue = 0;
-    const observer = new PerformanceObserver((list) => {
-      const entries = list.getEntries();
-      entries.forEach((entry) => {
-        if (entry.entryType === 'layout-shift' && 'hadRecentInput' in entry && 'value' in entry) {
-          const layoutEntry = entry as PerformanceEntry & { hadRecentInput: boolean; value: number };
-          if (!layoutEntry.hadRecentInput) {
-            clsValue += layoutEntry.value;
-            this.metrics.cls = clsValue;
-            console.log('CLS measured:', clsValue);
-          }
-        }
-      });
-    });
+  private observeMemoryUsage(): void {
+    if (typeof window === 'undefined') return;
 
-    observer.observe({ entryTypes: ['layout-shift'] });
-    this.observers.push(observer);
-  }
-
-  private measureTTFB(): void {
-    const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-    if (navigationEntry) {
-      const ttfb = navigationEntry.responseStart - navigationEntry.requestStart;
-      this.metrics.ttfb = ttfb;
-      console.log('TTFB measured:', ttfb);
-    }
-  }
-
-  /**
-   * Setup performance observers for Core Web Vitals
-   */
-  private async setupPerformanceObservers(): Promise<void> {
-    if (typeof window === 'undefined' || !('PerformanceObserver' in window)) {
-      return;
-    }
-
-    // First Contentful Paint (FCP)
-    const fcpObserver = new PerformanceObserver((list) => {
-      const entries = list.getEntries();
-      const fcpEntry = entries.find(entry => entry.name === 'first-contentful-paint');
-      if (fcpEntry) {
-        this.metrics.fcp = fcpEntry.startTime;
-        this.reportMetric('fcp', fcpEntry.startTime);
+    const checkMemory = () => {
+      if ('memory' in performance) {
+        const memory = (performance as any).memory;
+        this.metrics.memoryUsage = memory.usedJSHeapSize / memory.totalJSHeapSize;
       }
-    });
-    fcpObserver.observe({ entryTypes: ['paint'] });
+    };
 
-    // Largest Contentful Paint (LCP)
+    setInterval(checkMemory, 5000);
+    checkMemory();
+  }
+
+  private observeWebVitals(): void {
+    if (typeof window === 'undefined') return;
+
+    // LCP (Largest Contentful Paint)
     const lcpObserver = new PerformanceObserver((list) => {
       const entries = list.getEntries();
       const lastEntry = entries[entries.length - 1];
-      if (lastEntry) {
-        this.metrics.lcp = lastEntry.startTime;
-        this.reportMetric('lcp', lastEntry.startTime);
-      }
+      console.log('LCP:', lastEntry.startTime);
     });
     lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
+    this.observers.push(lcpObserver);
 
-    // First Input Delay (FID)
+    // FID (First Input Delay)
     const fidObserver = new PerformanceObserver((list) => {
       const entries = list.getEntries();
-      entries.forEach((entry: PerformanceEntry) => {
-        if (entry.entryType === 'first-input') {
-          const fidEntry = entry as PerformanceEventTiming;
-          this.metrics.fid = fidEntry.processingStart - fidEntry.startTime;
-          this.reportMetric('fid', fidEntry.processingStart - fidEntry.startTime);
+      entries.forEach((entry) => {
+        const fidEntry = entry as PerformanceEntry & { processingStart?: number };
+        if (fidEntry.processingStart) {
+          console.log('FID:', fidEntry.processingStart - entry.startTime);
         }
       });
     });
     fidObserver.observe({ entryTypes: ['first-input'] });
+    this.observers.push(fidObserver);
 
-    // Cumulative Layout Shift (CLS)
-    let clsValue = 0;
+    // CLS (Cumulative Layout Shift)
     const clsObserver = new PerformanceObserver((list) => {
       const entries = list.getEntries();
-      entries.forEach((entry: PerformanceEntry) => {
-        const clsEntry = entry as PerformanceEntry & { hadRecentInput?: boolean; value: number };
-        if (!clsEntry.hadRecentInput) {
-          clsValue += clsEntry.value;
-          this.metrics.cls = clsValue;
-          this.reportMetric('cls', clsValue);
+      entries.forEach((entry) => {
+        if (!(entry as any).hadRecentInput) {
+          console.log('CLS:', (entry as any).value);
         }
       });
     });
     clsObserver.observe({ entryTypes: ['layout-shift'] });
-
-    // Time to First Byte (TTFB)
-    const navigationObserver = new PerformanceObserver((list) => {
-      const entries = list.getEntries();
-      const navEntry = entries[0] as PerformanceNavigationTiming;
-      if (navEntry) {
-        this.metrics.ttfb = navEntry.responseStart - navEntry.fetchStart;
-        this.reportMetric('ttfb', navEntry.responseStart - navEntry.fetchStart);
-      }
-    });
-    navigationObserver.observe({ entryTypes: ['navigation'] });
-
-    this.observers.push(fcpObserver, lcpObserver, fidObserver, clsObserver, navigationObserver);
+    this.observers.push(clsObserver);
   }
 
-  /**
-   * Optimize critical resources
-   */
-  private async optimizeCriticalResources(): Promise<void> {
-    if (!this.config.enableOptimization || typeof document === 'undefined') {
-      return;
-    }
-
-    // Preload critical fonts
-    this.preloadFonts();
-    
-    // Optimize images
-    this.optimizeImages();
-    
-    // Setup resource hints
-    this.setupResourceHints();
-    
-    // Optimize third-party scripts
-    this.optimizeThirdPartyScripts();
-  }
-
-  /**
-   * Preload critical fonts
-   */
-  private preloadFonts(): void {
-    const criticalFonts = [
-      'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap',
-    ];
-
-    criticalFonts.forEach(fontUrl => {
-      const link = document.createElement('link');
-      link.rel = 'preload';
-      link.href = fontUrl;
-      link.as = 'style';
-      link.crossOrigin = 'anonymous';
-      document.head.appendChild(link);
-    });
-  }
-
-  /**
-   * Optimize images with lazy loading and responsive loading
-   */
-  private optimizeImages(): void {
-    const images = document.querySelectorAll('img[data-src]');
-    
-    if ('IntersectionObserver' in window) {
-      const imageObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            const img = entry.target as HTMLImageElement;
-            if (img.dataset.src) {
-              img.src = img.dataset.src;
-              img.removeAttribute('data-src');
-              imageObserver.unobserve(img);
-            }
-          }
-        });
-      });
-
-      images.forEach(img => imageObserver.observe(img));
+  private optimizeResourceLoading(entry: PerformanceResourceTiming): void {
+    // Implement resource-specific optimizations
+    if (entry.name.includes('.js') || entry.name.includes('.css')) {
+      this.optimizeBundleLoading(entry);
+    } else if (entry.name.includes('.jpg') || entry.name.includes('.png') || entry.name.includes('.webp')) {
+      this.optimizeImageLoading(entry);
     }
   }
 
-  /**
-   * Setup resource hints for better performance
-   */
-  private setupResourceHints(): void {
-    const hints = [
-      { rel: 'dns-prefetch', href: 'https://fonts.googleapis.com' },
-      { rel: 'dns-prefetch', href: 'https://fonts.gstatic.com' },
-      { rel: 'preconnect', href: 'https://fonts.googleapis.com', crossorigin: 'anonymous' },
-      { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: 'anonymous' },
-    ];
-
-    hints.forEach(hint => {
-      const link = document.createElement('link');
-      Object.entries(hint).forEach(([key, value]) => {
-        link.setAttribute(key, value as string);
-      });
-      document.head.appendChild(link);
-    });
-  }
-
-  /**
-   * Optimize third-party scripts loading
-   */
-  private optimizeThirdPartyScripts(): void {
-    // Defer non-critical scripts
-    const scripts = document.querySelectorAll('script[data-defer]');
-    scripts.forEach(script => {
-      script.setAttribute('defer', '');
-    });
-  }
-
-  /**
-   * Setup preloading for critical resources
-   */
-  private async setupPreloading(): Promise<void> {
-    const criticalResources = [
-      '/app/main.tsx',
-      '/sw.js',
-    ];
-
-    criticalResources.forEach(resource => {
-      const link = document.createElement('link');
-      link.rel = 'modulepreload';
-      link.href = resource;
-      document.head.appendChild(link);
-    });
-  }
-
-  /**
-   * Report performance metrics
-   */
-  private reportMetric(name: string, value: number): void {
-    if (!this.config.enableReporting) {
-      return;
-    }
-
-    // Only report in production or when explicitly enabled
-    if (process.env.NODE_ENV === 'production' || this.config.enableReporting) {
-      // Send to analytics service
-      if (typeof window !== 'undefined' && 'gtag' in window) {
-        (window as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag('event', 'performance_metric', {
-          event_category: 'Performance',
-          event_label: name,
-          value: Math.round(value),
-        });
-      }
-
-      // Log in development
-      if (process.env.NODE_ENV === 'development') {
-        console.log(`📊 Performance Metric - ${name}: ${value}ms`);
-      }
+  private optimizeBundleLoading(entry: PerformanceResourceTiming): void {
+    if (entry.duration > 1000) {
+      console.warn(`Slow bundle loading detected: ${entry.name} took ${entry.duration}ms`);
+      // Implement code splitting or lazy loading
+      this.suggestCodeSplitting(entry.name);
     }
   }
 
-  /**
-   * Get current performance metrics
-   */
-  public getMetrics(): Partial<PerformanceMetrics> {
+  private optimizeImageLoading(entry: PerformanceResourceTiming): void {
+    if (entry.duration > 500) {
+      console.warn(`Slow image loading detected: ${entry.name} took ${entry.duration}ms`);
+      // Implement image optimization
+      this.suggestImageOptimization(entry.name);
+    }
+  }
+
+  private suggestCodeSplitting(resourceName: string): void {
+    console.log(`Consider code splitting for: ${resourceName}`);
+    // Implementation would involve dynamic imports
+  }
+
+  private suggestImageOptimization(imageName: string): void {
+    console.log(`Consider optimizing image: ${imageName}`);
+    // Implementation would involve WebP conversion, lazy loading, etc.
+  }
+
+  public getMetrics(): PerformanceMetrics {
     return { ...this.metrics };
   }
 
-  /**
-   * Get performance score based on Core Web Vitals
-   */
-  public getPerformanceScore(): number {
-    const { fcp, lcp, fid, cls } = this.metrics;
-    let score = 100;
+  public optimizeImages(): void {
+    if (!this.config.enableImageOptimization) return;
 
-    // FCP scoring (0-100)
-    if (fcp) {
-      if (fcp > 3000) score -= 30;
-      else if (fcp > 1800) score -= 20;
-      else if (fcp > 1000) score -= 10;
-    }
+    const images = document.querySelectorAll('img');
+    images.forEach((img) => {
+      // Implement lazy loading
+      if (this.config.enableLazyLoading) {
+        img.loading = 'lazy';
+      }
 
-    // LCP scoring (0-100)
-    if (lcp) {
-      if (lcp > 4000) score -= 30;
-      else if (lcp > 2500) score -= 20;
-      else if (lcp > 1200) score -= 10;
-    }
-
-    // FID scoring (0-100)
-    if (fid) {
-      if (fid > 300) score -= 20;
-      else if (fid > 100) score -= 10;
-    }
-
-    // CLS scoring (0-100)
-    if (cls) {
-      if (cls > 0.25) score -= 20;
-      else if (cls > 0.1) score -= 10;
-    }
-
-    return Math.max(0, score);
+      // Add WebP support
+      const src = img.src;
+      if (src && !src.includes('.webp')) {
+        const webpSrc = src.replace(/\.(jpg|jpeg|png)$/i, '.webp');
+        img.src = webpSrc;
+        img.onerror = () => {
+          img.src = src; // Fallback to original
+        };
+      }
+    });
   }
 
-  /**
-   * Lazy load images for better performance
-   */
-  lazyLoadImages(): void {
-    if (typeof window === 'undefined') return;
+  public enableCaching(): void {
+    if (!this.config.enableCaching) return;
 
-    const images = document.querySelectorAll('img[data-src]');
-    const imageObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const img = entry.target as HTMLImageElement;
-          img.src = img.dataset.src || '';
-          img.removeAttribute('data-src');
-          imageObserver.unobserve(img);
-        }
+    // Implement service worker caching
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js')
+        .then((registration) => {
+          console.log('Service Worker registered:', registration);
+        })
+        .catch((error) => {
+          console.error('Service Worker registration failed:', error);
+        });
+    }
+  }
+
+  public enableCompression(): void {
+    if (!this.config.enableCompression) return;
+
+    // Implement compression for API responses
+    const originalFetch = window.fetch;
+    window.fetch = async (input, init) => {
+      const headers = new Headers(init?.headers);
+      headers.set('Accept-Encoding', 'gzip, deflate, br');
+      
+      return originalFetch(input, {
+        ...init,
+        headers,
       });
-    });
-
-    images.forEach(img => imageObserver.observe(img));
-    logger.info('Lazy loading initialized for images', 'PerformanceOptimizer');
-  }
-
-  /**
-   * Add critical resource hints
-   */
-  addCriticalResourceHints(): void {
-    if (typeof window === 'undefined') return;
-
-    const criticalResources = [
-      { href: '/fonts/inter.woff2', as: 'font', type: 'font/woff2', crossorigin: 'anonymous' },
-      { href: '/css/critical.css', as: 'style' },
-    ];
-
-    criticalResources.forEach(resource => {
-      const link = document.createElement('link');
-      link.rel = 'preload';
-      link.href = resource.href;
-      link.as = resource.as;
-      if (resource.type) link.type = resource.type;
-      if (resource.crossorigin) link.crossOrigin = resource.crossorigin;
-      document.head.appendChild(link);
-    });
-
-    logger.info('Critical resource hints added', 'PerformanceOptimizer');
-  }
-
-  /**
-   * Measure page load metrics
-   */
-  measurePageLoad(): PerformanceMetrics | null {
-    if (typeof window === 'undefined' || !('performance' in window)) return null;
-
-    const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-    if (!navigation) return null;
-
-    return {
-      ttfb: navigation.responseStart - navigation.requestStart,
-      fcp: this.metrics.fcp || 0,
-      lcp: this.metrics.lcp || 0,
-      fid: this.metrics.fid || 0,
-      cls: this.metrics.cls || 0,
-      fmp: this.metrics.fmp || 0,
     };
   }
 
-  /**
-   * Report web vitals
-   */
-  reportWebVitals(metrics: PerformanceMetrics): void {
-    logger.performance('Web Vitals reported', metrics as unknown as Record<string, unknown>, 'PerformanceOptimizer');
-    
-    // Send to analytics if available
-    if (typeof window !== 'undefined' && (window as { gtag?: Function }).gtag) {
-      Object.entries(metrics).forEach(([key, value]) => {
-        if (typeof value === 'number') {
-          (window as unknown as { gtag: Function }).gtag('event', 'web_vitals', {
-            metric_name: key,
-            metric_value: value,
-            metric_rating: value < 100 ? 'good' : value < 300 ? 'needs-improvement' : 'poor'
-          });
-        }
-      });
+  public generateReport(): string {
+    const metrics = this.getMetrics();
+    return `
+Performance Report:
+- Load Time: ${metrics.loadTime.toFixed(2)}ms
+- Render Time: ${metrics.renderTime.toFixed(2)}ms
+- Memory Usage: ${(metrics.memoryUsage * 100).toFixed(2)}%
+- Bundle Size: ${metrics.bundleSize}KB
+- Cache Hit Rate: ${(metrics.cacheHitRate * 100).toFixed(2)}%
+    `.trim();
+  }
+
+  public optimize(): void {
+    // Run all optimization strategies
+    this.optimizeImages();
+    this.enableCaching();
+    this.enableCompression();
+  }
+
+  public startMark(name: string): void {
+    if (typeof window !== 'undefined' && performance.mark) {
+      performance.mark(`${name}-start`);
     }
   }
 
-  /**
-   * Cleanup observers and resources
-   */
+  public endMark(name: string): number | undefined {
+    if (typeof window !== 'undefined' && performance.mark && performance.measure) {
+      performance.mark(`${name}-end`);
+      try {
+        const measure = performance.measure(name, `${name}-start`, `${name}-end`);
+        return measure.duration;
+      } catch {
+        return undefined;
+      }
+    }
+    return undefined;
+  }
+
+  public getPerformanceScore(): number {
+    const metrics = this.getMetrics();
+    // Calculate a score based on metrics (0-100)
+    let score = 100;
+    
+    // Deduct points for poor metrics
+    if (metrics.loadTime > 3000) score -= 20;
+    else if (metrics.loadTime > 2000) score -= 10;
+    
+    if (metrics.renderTime > 1000) score -= 15;
+    else if (metrics.renderTime > 500) score -= 7;
+    
+    if (metrics.memoryUsage > 0.8) score -= 20;
+    else if (metrics.memoryUsage > 0.6) score -= 10;
+    
+    if (metrics.cacheHitRate < 0.6) score -= 15;
+    else if (metrics.cacheHitRate < 0.8) score -= 7;
+    
+    return Math.max(0, score);
+  }
+
   public cleanup(): void {
     this.observers.forEach(observer => observer.disconnect());
     this.observers = [];
-    this.isMonitoring = false;
   }
 }
 
@@ -620,4 +309,4 @@ class PerformanceOptimizer {
 export const performanceOptimizer = new PerformanceOptimizer();
 
 // Export class for custom instances
-export { PerformanceOptimizer, type PerformanceMetrics, type PerformanceConfig };
+export { PerformanceOptimizer, type PerformanceMetrics, type OptimizationConfig };

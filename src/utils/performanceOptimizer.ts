@@ -29,7 +29,8 @@ export interface PerformanceBudget {
  * Lazy load images with Intersection Observer
  */
 export const lazyLoadImages = (): void => {
-  if (typeof window === 'undefined' || !('IntersectionObserver' in window)) return;
+  if (typeof window === 'undefined' || !('IntersectionObserver' in window))
+    return;
 
   const imageObserver = new IntersectionObserver(
     entries => {
@@ -61,12 +62,9 @@ export const lazyLoadImages = (): void => {
  */
 export const preloadCriticalResources = (): void => {
   if (typeof document === 'undefined') return;
-  
-  const criticalResources = [
-    '/fonts/inter-var.woff2',
-    '/css/critical.css'
-  ];
-  
+
+  const criticalResources = ['/fonts/inter-var.woff2', '/css/critical.css'];
+
   criticalResources.forEach(resource => {
     const link = document.createElement('link');
     link.rel = 'preload';
@@ -84,21 +82,21 @@ export const preloadCriticalResources = (): void => {
  */
 export const optimizeScroll = (): void => {
   if (typeof window === 'undefined') return;
-  
+
   let ticking = false;
-  
+
   const updateScrollPosition = () => {
     // Throttled scroll handling
     ticking = false;
   };
-  
+
   const requestTick = () => {
     if (!ticking) {
       requestAnimationFrame(updateScrollPosition);
       ticking = true;
     }
   };
-  
+
   window.addEventListener('scroll', requestTick, { passive: true });
 };
 
@@ -107,14 +105,18 @@ export const optimizeScroll = (): void => {
  */
 export const addCriticalResourceHints = (): void => {
   if (typeof document === 'undefined') return;
-  
+
   const hints = [
     { rel: 'dns-prefetch', href: 'https://fonts.googleapis.com' },
     { rel: 'dns-prefetch', href: 'https://fonts.gstatic.com' },
     { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
-    { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossOrigin: 'anonymous' }
+    {
+      rel: 'preconnect',
+      href: 'https://fonts.gstatic.com',
+      crossOrigin: 'anonymous',
+    },
   ];
-  
+
   hints.forEach(hint => {
     const link = document.createElement('link');
     link.rel = hint.rel;
@@ -151,13 +153,32 @@ export const measurePageLoad = (): WebVitalsMetrics | null => {
  * Report Web Vitals to analytics
  */
 export const reportWebVitals = (metrics: WebVitalsMetrics): void => {
-  console.log('Web Vitals: ', metrics);
+  // Web Vitals metrics available for reporting
 
   // Send to analytics service
-  if (typeof window !== 'undefined' && (window as any).gtag) {
+  if (
+    typeof window !== 'undefined' &&
+    (
+      window as unknown as {
+        gtag?: (
+          command: string,
+          eventName: string,
+          parameters: Record<string, unknown>
+        ) => void;
+      }
+    ).gtag
+  ) {
     Object.entries(metrics).forEach(([key, value]) => {
       if (value !== undefined) {
-        (window as any).gtag('event', key, {
+        (
+          window as unknown as {
+            gtag: (
+              command: string,
+              eventName: string,
+              parameters: Record<string, unknown>
+            ) => void;
+          }
+        ).gtag('event', key, {
           value: Math.round(value),
           event_category: 'Web Vitals',
           non_interaction: true,
@@ -182,8 +203,8 @@ export const monitorLongTasks = (
     });
     observer.observe({ entryTypes: ['longtask'] });
     return observer;
-  } catch (e) {
-    console.warn('Long task monitoring not supported: ', e);
+  } catch {
+    // Long task monitoring not supported - fallback handling
     return null;
   }
 };
@@ -191,7 +212,7 @@ export const monitorLongTasks = (
 /**
  * Debounce function
  */
-export const debounce = <T extends (...args: any[]) => any>(
+export const debounce = <T extends (...args: unknown[]) => unknown>(
   func: T,
   wait: number
 ): ((...args: Parameters<T>) => void) => {
@@ -205,7 +226,7 @@ export const debounce = <T extends (...args: any[]) => any>(
 /**
  * Throttle function
  */
-export const throttle = <T extends (...args: any[]) => any>(
+export const throttle = <T extends (...args: unknown[]) => unknown>(
   func: T,
   limit: number
 ): ((...args: Parameters<T>) => void) => {
@@ -268,7 +289,9 @@ class PerformanceOptimizer {
     return measurePageLoad();
   }
 
-  public monitorLongTasks(callback: (entries: PerformanceEntry[]) => void): PerformanceObserver | null {
+  public monitorLongTasks(
+    callback: (entries: PerformanceEntry[]) => void
+  ): PerformanceObserver | null {
     return monitorLongTasks(callback);
   }
 
@@ -278,16 +301,20 @@ class PerformanceOptimizer {
 
   public initialize(): void {
     this.measurePerformance('lazyLoadImages', () => this.lazyLoadImages());
-    this.measurePerformance('preloadCriticalResources', () => this.preloadCriticalResources());
+    this.measurePerformance('preloadCriticalResources', () =>
+      this.preloadCriticalResources()
+    );
     this.measurePerformance('optimizeScroll', () => this.optimizeScroll());
-    this.measurePerformance('addCriticalResourceHints', () => this.addCriticalResourceHints());
+    this.measurePerformance('addCriticalResourceHints', () =>
+      this.addCriticalResourceHints()
+    );
   }
 }
 
 // Export singleton instance
 export const performanceOptimizer = PerformanceOptimizer.getInstance();
 
-export default {
+const performanceUtils = {
   lazyLoadImages,
   preloadCriticalResources,
   optimizeScroll,
@@ -297,5 +324,7 @@ export default {
   monitorLongTasks,
   debounce,
   throttle,
-  performanceOptimizer
+  performanceOptimizer,
 };
+
+export default performanceUtils;

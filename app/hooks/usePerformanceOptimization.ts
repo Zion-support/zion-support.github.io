@@ -14,19 +14,25 @@ export const usePerformanceOptimization = () => {
       return null;
     }
 
-    const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+    const navigation = performance.getEntriesByType(
+      'navigation'
+    )[0] as PerformanceNavigationTiming;
     const paintEntries = performance.getEntriesByType('paint');
-    
+
     const metrics: PerformanceMetrics = {
-      loadTime: navigation ? navigation.loadEventEnd - navigation.loadEventStart : 0,
-      firstContentfulPaint: paintEntries.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0,
+      loadTime: navigation
+        ? navigation.loadEventEnd - navigation.loadEventStart
+        : 0,
+      firstContentfulPaint:
+        paintEntries.find(entry => entry.name === 'first-contentful-paint')
+          ?.startTime || 0,
       largestContentfulPaint: 0,
       cumulativeLayoutShift: 0,
       firstInputDelay: 0,
     };
 
     // Measure LCP
-    const lcpObserver = new PerformanceObserver((list) => {
+    const lcpObserver = new PerformanceObserver(list => {
       const entries = list.getEntries();
       const lastEntry = entries[entries.length - 1];
       if (lastEntry) {
@@ -37,9 +43,12 @@ export const usePerformanceOptimization = () => {
 
     // Measure CLS
     let clsValue = 0;
-    const clsObserver = new PerformanceObserver((list) => {
+    const clsObserver = new PerformanceObserver(list => {
       for (const entry of list.getEntries()) {
-        const layoutShiftEntry = entry as PerformanceEntry & { hadRecentInput?: boolean; value?: number };
+        const layoutShiftEntry = entry as PerformanceEntry & {
+          hadRecentInput?: boolean;
+          value?: number;
+        };
         if (!layoutShiftEntry.hadRecentInput) {
           clsValue += layoutShiftEntry.value || 0;
         }
@@ -49,10 +58,13 @@ export const usePerformanceOptimization = () => {
     clsObserver.observe({ entryTypes: ['layout-shift'] });
 
     // Measure FID
-    const fidObserver = new PerformanceObserver((list) => {
+    const fidObserver = new PerformanceObserver(list => {
       for (const entry of list.getEntries()) {
-        const fidEntry = entry as PerformanceEntry & { processingStart?: number };
-        metrics.firstInputDelay = (fidEntry.processingStart || 0) - entry.startTime;
+        const fidEntry = entry as PerformanceEntry & {
+          processingStart?: number;
+        };
+        metrics.firstInputDelay =
+          (fidEntry.processingStart || 0) - entry.startTime;
       }
     });
     fidObserver.observe({ entryTypes: ['first-input'] });
@@ -69,8 +81,8 @@ export const usePerformanceOptimization = () => {
 
   const optimizeImages = useCallback(() => {
     const images = document.querySelectorAll('img[data-src]');
-    const imageObserver = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
+    const imageObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
         if (entry.isIntersecting) {
           const img = entry.target as HTMLImageElement;
           img.src = img.dataset.src || '';
@@ -80,16 +92,13 @@ export const usePerformanceOptimization = () => {
       });
     });
 
-    images.forEach((img) => imageObserver.observe(img));
+    images.forEach(img => imageObserver.observe(img));
   }, []);
 
   const preloadCriticalResources = useCallback(() => {
-    const criticalResources = [
-      '/fonts/inter-var.woff2',
-      '/css/critical.css',
-    ];
+    const criticalResources = ['/fonts/inter-var.woff2', '/css/critical.css'];
 
-    criticalResources.forEach((resource) => {
+    criticalResources.forEach(resource => {
       const link = document.createElement('link');
       link.rel = 'preload';
       link.href = resource;
@@ -105,9 +114,13 @@ export const usePerformanceOptimization = () => {
     // Measure performance after page load
     const timer = setTimeout(() => {
       const metrics = measurePerformance();
-      if (metrics && process.env.NODE_ENV === 'production') {
-        // Send metrics to analytics
-        console.log('Performance Metrics:', metrics);
+      if (metrics) {
+        // Send metrics to analytics in production
+        if (process.env.NODE_ENV === 'production') {
+          // Track metrics in production
+        }
+        // eslint-disable-next-line no-console
+        if (process.env.NODE_ENV === 'development') { if (import.meta.env.DEV) { console.log('Performance Metrics:', metrics); } }
       }
     }, 1000);
 

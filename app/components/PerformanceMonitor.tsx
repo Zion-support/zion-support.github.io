@@ -1,128 +1,274 @@
+'use client';
+
 import React, { useEffect, useState } from 'react';
+import { performanceOptimizer } from '../utils/performanceOptimizer';
+import { logger } from '../utils/logger';
+
+interface LayoutShift extends PerformanceEntry {
+  hadRecentInput: boolean;
+  value: number;
+}
 
 interface PerformanceMetrics {
   loadTime: number;
-  domContentLoaded: number;
-  firstContentfulPaint: number;
-  largestContentfulPaint: number;
-  cumulativeLayoutShift: number;
-  firstInputDelay: number;
+  renderTime: number;
+  memoryUsage: number;
+  bundleSize: number;
+  cacheHitRate: number;
 }
 
-const PerformanceMonitor: React.FC = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
-  const [isVisible, setIsVisible] = useState(false);
+interface PerformanceMonitorProps {
+  enableRealTimeMonitoring?: boolean;
+  enableConsoleLogging?: boolean;
+  enableVisualIndicator?: boolean;
+  updateInterval?: number;
+}
+
+const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
+  enableRealTimeMonitoring = true,
+  enableConsoleLogging = false,
+  enableVisualIndicator = false,
+  updateInterval = 5000,
+}) => {
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+    loadTime: 0,
+    renderTime: 0,
+    memoryUsage: 0,
+    bundleSize: 0,
+    cacheHitRate: 0,
+  });
+
+  const [performanceScore, setPerformanceScore] = useState<number>(0);
+  const [isVisible, setIsVisible] = useState<boolean>(false);
 
   useEffect(() => {
-    const measurePerformance = () => {
-      if (typeof window === 'undefined' || !('performance' in window)) return;
+    if (!enableRealTimeMonitoring) return;
 
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-      const paintEntries = performance.getEntriesByType('paint');
+    const getMetrics = (): PerformanceMetrics => {
+      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming | undefined;
+      const memory = (performance as Performance & {
+        memory?: {
+          usedJSHeapSize: number;
+          totalJSHeapSize: number;
+          jsHeapSizeLimit: number;
+        };
+      }).memory;
       
-      const firstContentfulPaint = paintEntries.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0;
-      const largestContentfulPaint = paintEntries.find(entry => entry.name === 'largest-contentful-paint')?.startTime || 0;
-
-      // Measure CLS (Cumulative Layout Shift)
-      let cumulativeLayoutShift = 0;
-      if ('PerformanceObserver' in window) {
-        const observer = new PerformanceObserver((list) => {
-          for (const entry of list.getEntries()) {
-            if (entry.entryType === 'layout-shift' && !(entry as LayoutShift).hadRecentInput) {
-              cumulativeLayoutShift += (entry as LayoutShift).value;
-            }
-          }
-        });
-        observer.observe({ entryTypes: ['layout-shift'] });
-      }
-
-      // Measure FID (First Input Delay)
-      let firstInputDelay = 0;
-      if ('PerformanceObserver' in window) {
-        const observer = new PerformanceObserver((list) => {
-          for (const entry of list.getEntries()) {
-            if (entry.entryType === 'first-input') {
-              firstInputDelay = (entry as PerformanceEventTiming).processingStart - entry.startTime;
-            }
-          }
-        });
-        observer.observe({ entryTypes: ['first-input'] });
-      }
-
-      const performanceData: PerformanceMetrics = {
-        loadTime: navigation.loadEventEnd - navigation.fetchStart,
-        domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
-        firstContentfulPaint,
-        largestContentfulPaint,
-        cumulativeLayoutShift,
-        firstInputDelay
+      return {
+        loadTime: navigation?.loadEventEnd ?? 0,
+        renderTime: navigation?.domContentLoadedEventEnd ?? 0,
+        memoryUsage: memory?.usedJSHeapSize ?? 0,
+        bundleSize: 0,
+        cacheHitRate: 0,
       };
+    };
 
-      setMetrics(performanceData);
+    const getPerformanceScore = (): number => {
+      const metrics = getMetrics();
+      let score = 100;
+      
+      if (metrics.loadTime > 3000) score -= 20;
+      if (metrics.renderTime > 1500) score -= 15;
+      if (metrics.memoryUsage > 50000000) score -= 15;
+      
+      return Math.max(0, score);
+    };
 
-      // Log performance data in development
-      if (process.env.NODE_ENV === 'development') {
-        console.log('Performance Metrics:', performanceData);
+    const updateMetrics = () => {
+      const currentMetrics = getMetrics();
+      const score = getPerformanceScore();
+      
+      setMetrics(currentMetrics);
+      setPerformanceScore(score);
+
+      if (enableConsoleLogging) {
+        logger.group('Performance Metrics', () => {
+          logger.debug('Metrics', { metrics: currentMetrics });
+          logger.debug('Score', { score });
+        });
       }
     };
 
-    // Measure performance after page load
-    if (document.readyState === 'complete') {
-      measurePerformance();
-    } else {
-      window.addEventListener('load', measurePerformance);
+    // Initial update
+    updateMetrics();
+
+    // Set up interval for real-time monitoring
+    const interval = setInterval(updateMetrics, updateInterval);
+
+    // Set up performance observer for more detailed monitoring
+    if (typeof window !== 'undefined' && 'PerformanceObserver' in window) {
+      const observer = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        entries.forEach((entry) => {
+          if (entry.entryType === 'measure') {
+            updateMetrics();
+          }
+        });
+      });
+
+      observer.observe({ entryTypes: ['measure', 'navigation', 'resource'] });
+
+      return () => {
+        clearInterval(interval);
+        observer.disconnect();
+      };
     }
 
-    return () => {
-      window.removeEventListener('load', measurePerformance);
-    };
-  }, []);
+    return () => clearInterval(interval);
+  }, [enableRealTimeMonitoring, enableConsoleLogging, updateInterval]);
 
-  if (!metrics || process.env.NODE_ENV !== 'development') {
+  const getScoreColor = (score: number): string => {
+    if (score >= 90) return 'text-green-600';
+    if (score >= 70) return 'text-yellow-600';
+    return 'text-red-600';
+  };
+
+  const getScoreBackground = (score: number): string => {
+    if (score >= 90) return 'bg-green-100';
+    if (score >= 70) return 'bg-yellow-100';
+    return 'bg-red-100';
+  };
+
+  const formatBytes = (bytes: number): string => {
+    if (bytes === 0) return '0 Bytes';
+    const k = 1024;
+    const sizes = ['Bytes', 'KB', 'MB', 'GB'];
+    const i = Math.floor(Math.log(bytes) / Math.log(k));
+    return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
+  };
+
+  const formatTime = (ms: number): string => {
+    if (ms < 1000) return `${ms.toFixed(0)}ms`;
+    return `${(ms / 1000).toFixed(2)}s`;
+  };
+
+  if (!enableVisualIndicator) {
     return null;
   }
 
   return (
-    <div className="fixed bottom-4 right-4 z-50">
+    <>
+      {/* Toggle Button */}
       <button
         onClick={() => setIsVisible(!isVisible)}
-        className="bg-indigo-600 text-white px-3 py-2 rounded-lg text-sm font-medium hover:bg-indigo-700 transition-colors"
+        className="fixed bottom-4 left-4 z-50 bg-blue-600 text-white p-2 rounded-full shadow-lg hover:bg-blue-700 transition-colors"
+        aria-label="Toggle Performance Monitor"
+        title="Performance Monitor"
       >
-        {isVisible ? 'Hide' : 'Show'} Perf
+        <svg
+          className="w-5 h-5"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
+          />
+        </svg>
       </button>
-      
+
+      {/* Performance Monitor Panel */}
       {isVisible && (
-        <div className="absolute bottom-12 right-0 bg-white border border-gray-200 rounded-lg shadow-lg p-4 min-w-64">
-          <h3 className="font-semibold text-gray-900 mb-2">Performance Metrics</h3>
-          <div className="space-y-1 text-sm">
-            <div className="flex justify-between">
-              <span className="text-gray-600">Load Time:</span>
-              <span className="font-mono">{Math.round(metrics.loadTime)}ms</span>
+        <div className="fixed bottom-20 left-4 z-50 bg-white rounded-lg shadow-xl border border-gray-200 p-4 w-80 max-h-96 overflow-y-auto">
+          <div className="flex items-center justify-between mb-4">
+            <h3 className="text-lg font-semibold text-gray-900">
+              Performance Monitor
+            </h3>
+            <button
+              onClick={() => setIsVisible(false)}
+              className="text-gray-400 hover:text-gray-600"
+              aria-label="Close Performance Monitor"
+            >
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+
+          {/* Performance Score */}
+          <div className={`p-3 rounded-lg mb-4 ${getScoreBackground(performanceScore)}`}>
+            <div className="flex items-center justify-between">
+              <span className="text-sm font-medium text-gray-700">Performance Score</span>
+              <span className={`text-2xl font-bold ${getScoreColor(performanceScore)}`}>
+                {performanceScore}
+              </span>
             </div>
-            <div className="flex justify-between">
-              <span className="text-gray-600">DOM Ready:</span>
-              <span className="font-mono">{Math.round(metrics.domContentLoaded)}ms</span>
+            <div className="w-full bg-gray-200 rounded-full h-2 mt-2">
+              <div
+                className={`h-2 rounded-full transition-all duration-300 ${
+                  performanceScore >= 90 ? 'bg-green-500' : 
+                  performanceScore >= 70 ? 'bg-yellow-500' : 'bg-red-500'
+                }`}
+                style={{ width: `${performanceScore}%` }}
+              />
             </div>
-            <div className="flex justify-between">
-              <span className="text-gray-600">FCP:</span>
-              <span className="font-mono">{Math.round(metrics.firstContentfulPaint)}ms</span>
+          </div>
+
+          {/* Metrics */}
+          <div className="space-y-3">
+            <div className="flex justify-between items-center">
+              <span className="text-sm text-gray-600">Load Time</span>
+              <span className="text-sm font-medium">
+                {formatTime(metrics.loadTime)}
+              </span>
             </div>
-            <div className="flex justify-between">
-              <span className="text-gray-600">LCP:</span>
-              <span className="font-mono">{Math.round(metrics.largestContentfulPaint)}ms</span>
+
+            <div className="flex justify-between items-center">
+              <span className="text-sm text-gray-600">Render Time</span>
+              <span className="text-sm font-medium">
+                {formatTime(metrics.renderTime)}
+              </span>
             </div>
-            <div className="flex justify-between">
-              <span className="text-gray-600">CLS:</span>
-              <span className="font-mono">{metrics.cumulativeLayoutShift.toFixed(3)}</span>
+
+            <div className="flex justify-between items-center">
+              <span className="text-sm text-gray-600">Memory Usage</span>
+              <span className="text-sm font-medium">
+                {formatBytes(metrics.memoryUsage)}
+              </span>
             </div>
-            <div className="flex justify-between">
-              <span className="text-gray-600">FID:</span>
-              <span className="font-mono">{Math.round(metrics.firstInputDelay)}ms</span>
+
+            <div className="flex justify-between items-center">
+              <span className="text-sm text-gray-600">Bundle Size</span>
+              <span className="text-sm font-medium">
+                {formatBytes(metrics.bundleSize)}
+              </span>
             </div>
+
+            <div className="flex justify-between items-center">
+              <span className="text-sm text-gray-600">Cache Hit Rate</span>
+              <span className="text-sm font-medium">
+                {metrics.cacheHitRate.toFixed(1)}%
+              </span>
+            </div>
+          </div>
+
+          {/* Actions */}
+          <div className="mt-4 pt-4 border-t border-gray-200">
+            <button
+              onClick={() => {
+                // Trigger optimization suggestions
+                logger.group('Performance Optimization Suggestions', () => {
+                  if (metrics.bundleSize > 500000) logger.warn('⚠️ Reduce bundle size');
+                  if (metrics.loadTime > 3000) logger.warn('⚠️ Optimize images');
+                  if (metrics.cacheHitRate < 0.8) logger.warn('⚠️ Improve caching');
+                });
+                // Also trigger performance optimizations
+                performanceOptimizer.optimize();
+                if (process.env.NODE_ENV === 'development') {
+                  if (import.meta.env.DEV) { console.log('Performance optimization triggered'); }
+                }
+              }}
+              className="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition-colors text-sm"
+            >
+              Show Optimization Tips
+            </button>
           </div>
         </div>
       )}
-    </div>
+    </>
   );
 };
 

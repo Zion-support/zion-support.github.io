@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useEffect, useCallback } from 'react';
 
 interface PerformanceOptimizerProps {
@@ -61,7 +63,8 @@ const PerformanceOptimizerComponent: React.FC<PerformanceOptimizerProps> = ({
       const observer = new PerformanceObserver(list => {
         list.getEntries().forEach(entry => {
           if (entry.entryType === 'navigation') {
-            console.log('Navigation timing:', entry);
+            // eslint-disable-next-line no-console
+            if (process.env.NODE_ENV === 'development') { if (import.meta.env.DEV) { console.log('Navigation timing:', entry); } }
           }
         });
       });
