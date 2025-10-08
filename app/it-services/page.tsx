@@ -1,6 +1,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Star, Server, Shield, Cloud, Database, Network, Code, Monitor, Settings } from 'lucide-react';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 
 const ITServicesPage: React.FC = () => {
   const itServices = [
@@ -135,6 +137,149 @@ const ITServicesPage: React.FC = () => {
       marketPrice: '$3,000-6,000/month',
       category: 'Backup & Recovery',
       technologies: ['Veeam', 'Commvault', 'AWS Backup', 'Azure Backup', 'VMware']
+    },
+    {
+      title: 'Blockchain & Cryptocurrency Solutions',
+      description: 'Blockchain development, smart contracts, cryptocurrency integration, and DeFi solutions.',
+      icon: '⛓️',
+      price: 'Starting at $5,000/month',
+      features: ['Blockchain development', 'Smart contracts', 'DeFi protocols', 'NFT platforms', 'Cryptocurrency integration'],
+      benefits: ['Enable decentralized solutions', 'Improve security', 'Reduce transaction costs'],
+      marketPrice: '$8,000-20,000/month',
+      category: 'Blockchain',
+      technologies: ['Ethereum', 'Solidity', 'Web3', 'IPFS', 'MetaMask']
+    },
+    {
+      title: 'IoT & Edge Computing',
+      description: 'Internet of Things solutions, edge computing infrastructure, and connected device management.',
+      icon: '🌐',
+      price: 'Starting at $3,500/month',
+      features: ['IoT device management', 'Edge computing', 'Sensor integration', 'Data processing', 'Real-time analytics'],
+      benefits: ['Enable smart operations', 'Reduce latency', 'Improve efficiency'],
+      marketPrice: '$6,000-15,000/month',
+      category: 'IoT',
+      technologies: ['AWS IoT', 'Azure IoT', 'MQTT', 'Kubernetes', 'Docker']
+    },
+    {
+      title: 'Quantum Computing Services',
+      description: 'Quantum computing solutions, quantum algorithms, and quantum-classical hybrid systems.',
+      icon: '⚛️',
+      price: 'Starting at $10,000/month',
+      features: ['Quantum algorithm development', 'Quantum simulation', 'Quantum optimization', 'Hybrid systems', 'Quantum security'],
+      benefits: ['Solve complex problems', 'Exponential speedup', 'Breakthrough innovations'],
+      marketPrice: '$20,000-50,000/month',
+      category: 'Quantum Computing',
+      technologies: ['Qiskit', 'Cirq', 'PennyLane', 'Q#', 'Quantum Hardware']
+    },
+    {
+      title: '5G & Wireless Solutions',
+      description: '5G network implementation, wireless infrastructure, and mobile connectivity solutions.',
+      icon: '📶',
+      price: 'Starting at $4,500/month',
+      features: ['5G network design', 'Wireless infrastructure', 'Mobile optimization', 'Network slicing', 'Edge computing'],
+      benefits: ['Ultra-fast connectivity', 'Low latency', 'Massive device support'],
+      marketPrice: '$8,000-20,000/month',
+      category: 'Wireless',
+      technologies: ['5G NR', 'OpenRAN', 'MIMO', 'Beamforming', 'Network Slicing']
+    },
+    {
+      title: 'AR/VR Development',
+      description: 'Augmented and virtual reality applications, immersive experiences, and metaverse solutions.',
+      icon: '🥽',
+      price: 'Starting at $4,000/month',
+      features: ['AR/VR applications', '3D modeling', 'Immersive experiences', 'Metaverse platforms', 'Haptic feedback'],
+      benefits: ['Enhanced user experiences', 'Immersive training', 'Virtual collaboration'],
+      marketPrice: '$7,000-18,000/month',
+      category: 'AR/VR',
+      technologies: ['Unity', 'Unreal Engine', 'WebXR', 'OpenXR', 'Oculus SDK']
+    },
+    {
+      title: 'Digital Twin Solutions',
+      description: 'Digital twin development, real-time simulation, and virtual modeling of physical systems.',
+      icon: '🔄',
+      price: 'Starting at $6,000/month',
+      features: ['Digital twin creation', 'Real-time simulation', 'Predictive modeling', 'IoT integration', 'Analytics dashboard'],
+      benefits: ['Optimize operations', 'Predict failures', 'Improve efficiency'],
+      marketPrice: '$10,000-25,000/month',
+      category: 'Digital Twin',
+      technologies: ['Unity', 'Unreal Engine', 'IoT Platforms', 'Machine Learning', 'Cloud Computing']
+    },
+    {
+      title: 'Low-Code/No-Code Platforms',
+      description: 'Rapid application development platforms, workflow automation, and citizen development tools.',
+      icon: '🔧',
+      price: 'Starting at $2,000/month',
+      features: ['Visual development', 'Workflow automation', 'Form builders', 'Database integration', 'API management'],
+      benefits: ['Faster development', 'Reduce costs', 'Enable citizen developers'],
+      marketPrice: '$3,500-8,000/month',
+      category: 'Low-Code',
+      technologies: ['OutSystems', 'Mendix', 'Power Platform', 'Bubble', 'Webflow']
+    },
+    {
+      title: 'Microservices Architecture',
+      description: 'Microservices design, containerization, service mesh, and distributed system architecture.',
+      icon: '🔗',
+      price: 'Starting at $3,000/month',
+      features: ['Microservices design', 'Container orchestration', 'Service mesh', 'API gateway', 'Distributed tracing'],
+      benefits: ['Improve scalability', 'Enable rapid deployment', 'Fault isolation'],
+      marketPrice: '$5,000-12,000/month',
+      category: 'Microservices',
+      technologies: ['Kubernetes', 'Docker', 'Istio', 'Consul', 'Envoy']
+    },
+    {
+      title: 'Serverless Computing',
+      description: 'Serverless architecture, function-as-a-service, and event-driven computing solutions.',
+      icon: '☁️',
+      price: 'Starting at $1,500/month',
+      features: ['Function development', 'Event processing', 'Auto-scaling', 'Pay-per-use', 'API integration'],
+      benefits: ['Reduce costs', 'Automatic scaling', 'No server management'],
+      marketPrice: '$2,500-6,000/month',
+      category: 'Serverless',
+      technologies: ['AWS Lambda', 'Azure Functions', 'Google Cloud Functions', 'Serverless Framework']
+    },
+    {
+      title: 'Data Lake & Data Warehouse',
+      description: 'Big data solutions, data lake architecture, and enterprise data warehouse implementation.',
+      icon: '🏗️',
+      price: 'Starting at $4,000/month',
+      features: ['Data lake design', 'ETL/ELT pipelines', 'Data governance', 'Data cataloging', 'Analytics platform'],
+      benefits: ['Centralize data', 'Improve analytics', 'Enable data-driven decisions'],
+      marketPrice: '$7,000-18,000/month',
+      category: 'Big Data',
+      technologies: ['Hadoop', 'Spark', 'Snowflake', 'Databricks', 'Apache Kafka']
+    },
+    {
+      title: 'API Management & Integration',
+      description: 'API gateway, API lifecycle management, and enterprise integration platform services.',
+      icon: '🔌',
+      price: 'Starting at $2,500/month',
+      features: ['API gateway', 'API documentation', 'Rate limiting', 'Authentication', 'Monitoring'],
+      benefits: ['Secure APIs', 'Improve performance', 'Enable integration'],
+      marketPrice: '$4,000-10,000/month',
+      category: 'API Management',
+      technologies: ['Kong', 'Apigee', 'AWS API Gateway', 'Azure API Management', 'MuleSoft']
+    },
+    {
+      title: 'Content Management Systems',
+      description: 'Headless CMS, content delivery networks, and digital experience platform solutions.',
+      icon: '📝',
+      price: 'Starting at $1,800/month',
+      features: ['Headless CMS', 'Content delivery', 'Multi-channel publishing', 'Content personalization', 'SEO optimization'],
+      benefits: ['Improve content management', 'Faster delivery', 'Better SEO'],
+      marketPrice: '$3,000-8,000/month',
+      category: 'CMS',
+      technologies: ['Strapi', 'Contentful', 'Sanity', 'Cloudinary', 'CDN']
+    },
+    {
+      title: 'Identity & Access Management',
+      description: 'Single sign-on, multi-factor authentication, and identity governance solutions.',
+      icon: '🔐',
+      price: 'Starting at $2,200/month',
+      features: ['SSO implementation', 'MFA setup', 'Identity governance', 'Privileged access', 'Compliance management'],
+      benefits: ['Improve security', 'Simplify access', 'Ensure compliance'],
+      marketPrice: '$4,000-10,000/month',
+      category: 'IAM',
+      technologies: ['Okta', 'Azure AD', 'Auth0', 'Ping Identity', 'SailPoint']
     }
   ];
 
@@ -149,6 +294,7 @@ const ITServicesPage: React.FC = () => {
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+        <Header />
         {/* Hero Section */}
         <section className="relative overflow-hidden bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-20">
           <div className="absolute inset-0 bg-black opacity-20"></div>
@@ -228,11 +374,11 @@ const ITServicesPage: React.FC = () => {
                   Professional {category.toLowerCase()} solutions tailored to your business needs
                 </p>
               </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 lg:gap-8">
                 {itServices
                   .filter(service => service.category === category)
                   .map((service, index) => (
-                    <div key={index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
+                    <div key={index} className="bg-white rounded-lg shadow-lg p-4 sm:p-6 hover:shadow-xl transition-shadow h-full flex flex-col">
                       <div className="text-4xl mb-4">{service.icon}</div>
                       <h3 className="text-xl font-semibold text-gray-900 mb-3">{service.title}</h3>
                       <p className="text-gray-600 mb-4">{service.description}</p>
@@ -282,7 +428,7 @@ const ITServicesPage: React.FC = () => {
                         </ul>
                       </div>
 
-                      <button className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+                      <button className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors mt-auto">
                         Get Quote
                       </button>
                     </div>
@@ -320,6 +466,8 @@ const ITServicesPage: React.FC = () => {
             </div>
           </div>
         </section>
+        
+        <Footer />
       </div>
     </>
   );

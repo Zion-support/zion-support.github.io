@@ -1,6 +1,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Globe } from 'lucide-react';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 
 const MicroSAASPage: React.FC = () => {
   const microSAASServices = [
@@ -123,6 +125,156 @@ const MicroSAASPage: React.FC = () => {
       benefits: ['Prevent 95% of security breaches', 'Reduce response time by 80%', 'Ensure compliance'],
       marketPrice: '$400-800/month',
       category: 'Cybersecurity'
+    },
+    {
+      title: 'AI-Powered Voice Assistant',
+      description: 'Intelligent voice-activated assistant for business operations, scheduling, and task management.',
+      icon: '🎤',
+      price: '$189/month',
+      features: ['Voice commands', 'Natural language processing', 'Calendar integration', 'Task automation', 'Multi-language support'],
+      benefits: ['Increase productivity by 35%', 'Hands-free operation', 'Reduce manual tasks'],
+      marketPrice: '$300-600/month',
+      category: 'Voice Technology'
+    },
+    {
+      title: 'Smart Energy Management',
+      description: 'AI-driven energy optimization for buildings, reducing costs and environmental impact.',
+      icon: '⚡',
+      price: '$299/month',
+      features: ['Energy monitoring', 'Predictive optimization', 'Cost analysis', 'Carbon footprint tracking', 'Automated controls'],
+      benefits: ['Reduce energy costs by 25%', 'Lower carbon emissions', 'Improve sustainability'],
+      marketPrice: '$500-1000/month',
+      category: 'Sustainability'
+    },
+    {
+      title: 'AI-Powered Legal Document Analyzer',
+      description: 'Automated legal document review, contract analysis, and compliance checking.',
+      icon: '⚖️',
+      price: '$399/month',
+      features: ['Contract analysis', 'Risk assessment', 'Compliance checking', 'Document comparison', 'Legal research'],
+      benefits: ['Reduce legal review time by 70%', 'Identify risks early', 'Ensure compliance'],
+      marketPrice: '$600-1200/month',
+      category: 'Legal Tech'
+    },
+    {
+      title: 'Smart Supply Chain Optimizer',
+      description: 'AI-powered supply chain management with demand forecasting and logistics optimization.',
+      icon: '🚚',
+      price: '$349/month',
+      features: ['Demand forecasting', 'Route optimization', 'Inventory management', 'Supplier analysis', 'Risk monitoring'],
+      benefits: ['Reduce logistics costs by 30%', 'Improve delivery times', 'Minimize disruptions'],
+      marketPrice: '$500-1000/month',
+      category: 'Supply Chain'
+    },
+    {
+      title: 'AI-Powered Learning Management System',
+      description: 'Intelligent learning platform with personalized content and progress tracking.',
+      icon: '🎓',
+      price: '$199/month',
+      features: ['Personalized learning paths', 'Progress tracking', 'Content recommendations', 'Assessment automation', 'Analytics dashboard'],
+      benefits: ['Improve learning outcomes by 40%', 'Reduce training costs', 'Increase engagement'],
+      marketPrice: '$300-700/month',
+      category: 'Education'
+    },
+    {
+      title: 'Smart Customer Onboarding',
+      description: 'Automated customer onboarding with personalized experiences and progress tracking.',
+      icon: '🚀',
+      price: '$149/month',
+      features: ['Automated workflows', 'Progress tracking', 'Personalized content', 'Email sequences', 'Analytics'],
+      benefits: ['Increase conversion by 50%', 'Reduce churn by 30%', 'Improve customer satisfaction'],
+      marketPrice: '$250-500/month',
+      category: 'Customer Experience'
+    },
+    {
+      title: 'AI-Powered Real Estate Analyzer',
+      description: 'Property valuation, market analysis, and investment opportunity identification.',
+      icon: '🏠',
+      price: '$279/month',
+      features: ['Property valuation', 'Market analysis', 'Investment scoring', 'Rental yield prediction', 'Trend analysis'],
+      benefits: ['Make better investment decisions', 'Identify opportunities', 'Reduce analysis time'],
+      marketPrice: '$400-800/month',
+      category: 'Real Estate'
+    },
+    {
+      title: 'Smart Healthcare Assistant',
+      description: 'AI-powered patient management, appointment scheduling, and health monitoring.',
+      icon: '🏥',
+      price: '$329/month',
+      features: ['Patient management', 'Appointment scheduling', 'Health monitoring', 'Prescription tracking', 'Telemedicine'],
+      benefits: ['Improve patient care', 'Reduce administrative burden', 'Increase efficiency'],
+      marketPrice: '$500-1000/month',
+      category: 'Healthcare'
+    },
+    {
+      title: 'AI-Powered Restaurant Manager',
+      description: 'Intelligent restaurant operations management with inventory and staff optimization.',
+      icon: '🍽️',
+      price: '$229/month',
+      features: ['Inventory management', 'Staff scheduling', 'Menu optimization', 'Customer analytics', 'Cost tracking'],
+      benefits: ['Reduce food waste by 40%', 'Optimize staff schedules', 'Increase profitability'],
+      marketPrice: '$350-700/month',
+      category: 'Hospitality'
+    },
+    {
+      title: 'Smart Fleet Management',
+      description: 'AI-driven fleet tracking, maintenance scheduling, and route optimization.',
+      icon: '🚛',
+      price: '$259/month',
+      features: ['Fleet tracking', 'Maintenance scheduling', 'Route optimization', 'Driver monitoring', 'Fuel efficiency'],
+      benefits: ['Reduce fuel costs by 20%', 'Improve safety', 'Optimize routes'],
+      marketPrice: '$400-800/month',
+      category: 'Transportation'
+    },
+    {
+      title: 'AI-Powered Event Planner',
+      description: 'Intelligent event management with vendor coordination and attendee engagement.',
+      icon: '🎉',
+      price: '$179/month',
+      features: ['Event planning', 'Vendor management', 'Attendee tracking', 'Budget optimization', 'Feedback analysis'],
+      benefits: ['Reduce planning time by 60%', 'Improve attendee satisfaction', 'Optimize costs'],
+      marketPrice: '$300-600/month',
+      category: 'Events'
+    },
+    {
+      title: 'Smart Insurance Claims Processor',
+      description: 'Automated insurance claims processing with fraud detection and risk assessment.',
+      icon: '🛡️',
+      price: '$389/month',
+      features: ['Claims processing', 'Fraud detection', 'Risk assessment', 'Document analysis', 'Automated payouts'],
+      benefits: ['Process claims 5x faster', 'Reduce fraud by 80%', 'Improve accuracy'],
+      marketPrice: '$600-1200/month',
+      category: 'Insurance'
+    },
+    {
+      title: 'AI-Powered Personal Trainer',
+      description: 'Personalized fitness coaching with workout plans and progress tracking.',
+      icon: '💪',
+      price: '$99/month',
+      features: ['Personalized workouts', 'Progress tracking', 'Nutrition guidance', 'Goal setting', 'Motivation coaching'],
+      benefits: ['Achieve fitness goals faster', 'Stay motivated', 'Track progress effectively'],
+      marketPrice: '$150-300/month',
+      category: 'Fitness'
+    },
+    {
+      title: 'Smart Home Automation Manager',
+      description: 'AI-powered home automation with energy management and security monitoring.',
+      icon: '🏡',
+      price: '$159/month',
+      features: ['Device automation', 'Energy management', 'Security monitoring', 'Voice control', 'Mobile app'],
+      benefits: ['Reduce energy costs by 30%', 'Improve security', 'Enhance convenience'],
+      marketPrice: '$250-500/month',
+      category: 'Smart Home'
+    },
+    {
+      title: 'AI-Powered Trading Assistant',
+      description: 'Intelligent trading platform with market analysis and automated trading strategies.',
+      icon: '📈',
+      price: '$299/month',
+      features: ['Market analysis', 'Trading signals', 'Risk management', 'Portfolio optimization', 'Backtesting'],
+      benefits: ['Improve trading performance', 'Reduce emotional trading', 'Optimize portfolios'],
+      marketPrice: '$500-1000/month',
+      category: 'Finance'
     }
   ];
 
@@ -137,6 +289,7 @@ const MicroSAASPage: React.FC = () => {
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+        <Header />
         {/* Hero Section */}
         <section className="relative overflow-hidden bg-gradient-to-r from-indigo-600 to-purple-700 text-white py-20">
           <div className="absolute inset-0 bg-black opacity-20"></div>
@@ -216,11 +369,11 @@ const MicroSAASPage: React.FC = () => {
                   Specialized tools designed for {category.toLowerCase()} professionals
                 </p>
               </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 lg:gap-8">
                 {microSAASServices
                   .filter(service => service.category === category)
                   .map((service, index) => (
-                    <div key={index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
+                    <div key={index} className="bg-white rounded-lg shadow-lg p-4 sm:p-6 hover:shadow-xl transition-shadow h-full flex flex-col">
                       <div className="text-4xl mb-4">{service.icon}</div>
                       <h3 className="text-xl font-semibold text-gray-900 mb-3">{service.title}</h3>
                       <p className="text-gray-600 mb-4">{service.description}</p>
@@ -259,7 +412,7 @@ const MicroSAASPage: React.FC = () => {
                         </ul>
                       </div>
 
-                      <button className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+                      <button className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors mt-auto">
                         Start Free Trial
                       </button>
                     </div>
@@ -297,6 +450,8 @@ const MicroSAASPage: React.FC = () => {
             </div>
           </div>
         </section>
+        
+        <Footer />
       </div>
     </>
   );

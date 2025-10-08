@@ -1,6 +1,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Star, Brain, Zap, Target, BarChart, MessageSquare, Eye, Cpu, Sparkles } from 'lucide-react';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 
 const AIServicesPage: React.FC = () => {
   const aiServices = [
@@ -135,6 +137,127 @@ const AIServicesPage: React.FC = () => {
       marketPrice: '$5,000-15,000/month',
       category: 'Quality Assurance',
       technologies: ['Selenium', 'Appium', 'TestNG', 'Custom AI Models', 'CI/CD Integration']
+    },
+    {
+      title: 'AI-Powered Drug Discovery',
+      description: 'Advanced AI algorithms for pharmaceutical research, molecular design, and drug development.',
+      icon: '🧬',
+      price: 'Starting at $15,000/month',
+      features: ['Molecular modeling', 'Drug-target interaction', 'Toxicity prediction', 'Clinical trial optimization', 'Patent analysis'],
+      benefits: ['Reduce drug development time by 50%', 'Lower R&D costs by 40%', 'Improve success rates'],
+      marketPrice: '$25,000-50,000/month',
+      category: 'Pharmaceutical AI',
+      technologies: ['DeepChem', 'RDKit', 'PyTorch', 'TensorFlow', 'Quantum Computing']
+    },
+    {
+      title: 'AI-Powered Climate Modeling',
+      description: 'Advanced climate prediction and environmental impact analysis using machine learning.',
+      icon: '🌍',
+      price: 'Starting at $8,000/month',
+      features: ['Climate prediction', 'Carbon footprint analysis', 'Weather forecasting', 'Environmental monitoring', 'Policy impact assessment'],
+      benefits: ['Improve climate predictions by 30%', 'Optimize environmental policies', 'Reduce climate risks'],
+      marketPrice: '$12,000-25,000/month',
+      category: 'Climate AI',
+      technologies: ['TensorFlow', 'PyTorch', 'XGBoost', 'Climate APIs', 'Satellite Data']
+    },
+    {
+      title: 'AI-Powered Space Exploration',
+      description: 'Machine learning solutions for satellite data analysis, space mission planning, and astronomical research.',
+      icon: '🚀',
+      price: 'Starting at $12,000/month',
+      features: ['Satellite data analysis', 'Mission planning', 'Astronomical object detection', 'Space weather prediction', 'Orbital mechanics'],
+      benefits: ['Improve mission success rates', 'Optimize satellite operations', 'Discover new phenomena'],
+      marketPrice: '$20,000-40,000/month',
+      category: 'Space AI',
+      technologies: ['TensorFlow', 'PyTorch', 'OpenCV', 'Astropy', 'Space APIs']
+    },
+    {
+      title: 'AI-Powered Quantum Computing',
+      description: 'Quantum machine learning algorithms and quantum optimization solutions for complex problems.',
+      icon: '⚛️',
+      price: 'Starting at $20,000/month',
+      features: ['Quantum algorithms', 'Quantum optimization', 'Quantum machine learning', 'Quantum simulation', 'Hybrid classical-quantum'],
+      benefits: ['Solve intractable problems', 'Exponential speedup', 'Breakthrough discoveries'],
+      marketPrice: '$35,000-75,000/month',
+      category: 'Quantum AI',
+      technologies: ['Qiskit', 'Cirq', 'PennyLane', 'Q#', 'Quantum Hardware']
+    },
+    {
+      title: 'AI-Powered Autonomous Vehicles',
+      description: 'Advanced AI systems for self-driving cars, autonomous navigation, and intelligent transportation.',
+      icon: '🚗',
+      price: 'Starting at $25,000/month',
+      features: ['Computer vision', 'Path planning', 'Object detection', 'Sensor fusion', 'Real-time decision making'],
+      benefits: ['Improve safety by 90%', 'Reduce accidents', 'Optimize traffic flow'],
+      marketPrice: '$40,000-80,000/month',
+      category: 'Autonomous Systems',
+      technologies: ['TensorFlow', 'PyTorch', 'OpenCV', 'ROS', 'LiDAR Processing']
+    },
+    {
+      title: 'AI-Powered Robotics',
+      description: 'Intelligent robotic systems with advanced perception, manipulation, and decision-making capabilities.',
+      icon: '🤖',
+      price: 'Starting at $18,000/month',
+      features: ['Robotic perception', 'Manipulation planning', 'Human-robot interaction', 'Swarm robotics', 'Adaptive learning'],
+      benefits: ['Increase automation efficiency', 'Improve precision', 'Enable complex tasks'],
+      marketPrice: '$30,000-60,000/month',
+      category: 'Robotics AI',
+      technologies: ['ROS', 'TensorFlow', 'PyTorch', 'OpenCV', 'Gazebo']
+    },
+    {
+      title: 'AI-Powered Financial Trading',
+      description: 'Advanced algorithmic trading systems with machine learning for market prediction and risk management.',
+      icon: '💹',
+      price: 'Starting at $15,000/month',
+      features: ['Market prediction', 'Algorithmic trading', 'Risk management', 'Portfolio optimization', 'High-frequency trading'],
+      benefits: ['Improve trading returns by 25%', 'Reduce risk exposure', 'Automate trading strategies'],
+      marketPrice: '$25,000-50,000/month',
+      category: 'Financial AI',
+      technologies: ['TensorFlow', 'PyTorch', 'Pandas', 'NumPy', 'Financial APIs']
+    },
+    {
+      title: 'AI-Powered Cybersecurity',
+      description: 'Advanced threat detection, behavioral analysis, and automated incident response systems.',
+      icon: '🛡️',
+      price: 'Starting at $10,000/month',
+      features: ['Threat detection', 'Behavioral analysis', 'Malware detection', 'Network security', 'Incident response'],
+      benefits: ['Prevent 99% of cyber attacks', 'Reduce response time by 80%', 'Improve security posture'],
+      marketPrice: '$18,000-35,000/month',
+      category: 'Security AI',
+      technologies: ['TensorFlow', 'PyTorch', 'Scikit-learn', 'Network Analysis', 'SIEM Integration']
+    },
+    {
+      title: 'AI-Powered Manufacturing',
+      description: 'Intelligent manufacturing systems with predictive maintenance, quality control, and process optimization.',
+      icon: '🏭',
+      price: 'Starting at $12,000/month',
+      features: ['Predictive maintenance', 'Quality control', 'Process optimization', 'Supply chain management', 'Defect detection'],
+      benefits: ['Reduce downtime by 40%', 'Improve quality by 30%', 'Optimize production'],
+      marketPrice: '$20,000-40,000/month',
+      category: 'Manufacturing AI',
+      technologies: ['TensorFlow', 'PyTorch', 'OpenCV', 'IoT Integration', 'SCADA Systems']
+    },
+    {
+      title: 'AI-Powered Agriculture',
+      description: 'Smart farming solutions with crop monitoring, yield prediction, and precision agriculture.',
+      icon: '🌾',
+      price: 'Starting at $8,000/month',
+      features: ['Crop monitoring', 'Yield prediction', 'Pest detection', 'Soil analysis', 'Irrigation optimization'],
+      benefits: ['Increase crop yields by 25%', 'Reduce water usage by 30%', 'Minimize pesticide use'],
+      marketPrice: '$15,000-30,000/month',
+      category: 'AgTech AI',
+      technologies: ['TensorFlow', 'PyTorch', 'OpenCV', 'Satellite Imagery', 'IoT Sensors']
+    },
+    {
+      title: 'AI-Powered Energy Grid',
+      description: 'Intelligent energy grid management with demand forecasting, load balancing, and renewable integration.',
+      icon: '⚡',
+      price: 'Starting at $15,000/month',
+      features: ['Demand forecasting', 'Load balancing', 'Renewable integration', 'Grid optimization', 'Energy storage'],
+      benefits: ['Improve grid efficiency by 20%', 'Reduce energy waste', 'Integrate renewables'],
+      marketPrice: '$25,000-50,000/month',
+      category: 'Energy AI',
+      technologies: ['TensorFlow', 'PyTorch', 'Time Series', 'Grid APIs', 'IoT Integration']
     }
   ];
 
@@ -149,6 +272,7 @@ const AIServicesPage: React.FC = () => {
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-purple-50">
+        <Header />
         {/* Hero Section */}
         <section className="relative overflow-hidden bg-gradient-to-r from-purple-600 to-pink-700 text-white py-20">
           <div className="absolute inset-0 bg-black opacity-20"></div>
@@ -228,11 +352,11 @@ const AIServicesPage: React.FC = () => {
                   Advanced {category.toLowerCase()} services powered by state-of-the-art AI technology
                 </p>
               </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 lg:gap-8">
                 {aiServices
                   .filter(service => service.category === category)
                   .map((service, index) => (
-                    <div key={index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
+                    <div key={index} className="bg-white rounded-lg shadow-lg p-4 sm:p-6 hover:shadow-xl transition-shadow h-full flex flex-col">
                       <div className="text-4xl mb-4">{service.icon}</div>
                       <h3 className="text-xl font-semibold text-gray-900 mb-3">{service.title}</h3>
                       <p className="text-gray-600 mb-4">{service.description}</p>
@@ -282,7 +406,7 @@ const AIServicesPage: React.FC = () => {
                         </ul>
                       </div>
 
-                      <button className="w-full bg-purple-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-purple-700 transition-colors">
+                      <button className="w-full bg-purple-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-purple-700 transition-colors mt-auto">
                         Get AI Consultation
                       </button>
                     </div>
@@ -366,6 +490,8 @@ const AIServicesPage: React.FC = () => {
             </div>
           </div>
         </section>
+        
+        <Footer />
       </div>
     </>
   );
