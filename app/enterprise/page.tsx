@@ -10,18 +10,18 @@ export const metadata: Metadata = {
 const EnterprisePage: React.FC = () => {
   return (
     <>
-      <div className='min-h-screen bg-slate-50 py-16'>
-        <div className='container mx-auto px-4'>
-          <div className='max-w-6xl mx-auto'>
-            <div className='text-center mb-16'>
-              <h1 className='text-4xl font-bold text-gray-900 mb-4'>
+      <div className="min-h-screen bg-slate-50 py-16">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-16">
+              <h1 className="text-4xl font-bold text-gray-900 mb-4">
                 Enterprise Solutions
               </h1>
-              <p className='text-xl text-gray-600'>
+              <p className="text-xl text-gray-600">
                 Advanced AI and IT solutions designed for large organizations
               </p>
             </div>
-            <p className="text-lg text-gray-600 mb-12 max-w-3xl mx-auto'>
+            <p className="text-lg text-gray-600 mb-12 max-w-3xl mx-auto">
               Transform your enterprise with our proven AI solutions. Achieve
               $100M+ cost savings, 500% productivity gains, and 99.9% system
               uptime with enterprise-grade security and compliance.
@@ -103,7 +103,7 @@ const EnterprisePage: React.FC = () => {
                 <h3 className="text-2xl font-bold text-white mb-4">
                   {solution.title}
                 </h3>
-                <p className='text-gray-300'>
+                <p className="text-gray-300">
                   {solution.description}
                 </p>
               </div>

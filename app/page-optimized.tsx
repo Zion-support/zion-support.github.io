@@ -25,11 +25,12 @@ export default function OptimizedHomePage() {
     <main className="min-h-screen">
       <SEOOptimizer />
       <PerformanceMonitor />
-      <AccessibilityEnhancer />
+      <AccessibilityEnhancer>
       
       <UnifiedBanner />
       <ContentPromotion />
       <ContentShowcase />
+      </AccessibilityEnhancer>
     </main>
   );
 }
