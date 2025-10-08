@@ -1,32 +1,6 @@
-export default async function handler(req, res) {
 const { withSentry } = require('./withSentry.cjs');
 
 async function handler(req, res) {
-const { withSentry } = require('./withSentry.cjs');
-
-async function handler(req, res) {
-const { withSentry } = require('./withSentry.cjs');
-
-async function handler(req, res) {
-const { withSentry } = require('./withSentry.cjs');
-
-async function handler(req, res) {
-const { withSentry } = require('./withSentry.cjs');
-
-async function handler(req, res) {
-export default async function handler(req, res) {
-export default async function handler(req, res) {
-export default async function handler(req, res) {
-export default async function handler(req, res) {
-export default async function handler(req, res) {
-export default async function handler(req, res) {
-export default async function handler(req, res) {
-export default async function handler(req, res) {
-export default async function handler(req, res) {
-export default async function handler(req, res) {
-export default async function handler(req, res) {
-export default async function handler(req, res) {
-export default async function handler(req, res) {
   if (req.method !== 'POST') {
     res.statusCode = 405;
     res.setHeader('Allow', 'POST');
@@ -34,152 +8,45 @@ export default async function handler(req, res) {
     return;
   }
 
-
-
-
-
   try {
-    const { fromAddress, toAddress, parcel } = req.body || {};
-    const apiKey = process.env.EASYPOST_API_KEY;
-    
+    const { weight, destination, dimensions } = req.body || {};
 
-  try {
-    const { fromAddress, toAddress, parcel } = req.body || {};
-    const apiKey = process.env.EASYPOST_API_KEY;
-    
-    
-
-  try {
-    const { fromAddress, toAddress, parcel } = req.body || {};
-    const apiKey = process.env.EASYPOST_API_KEY;
-    
-
-  try {
-    const { fromAddress, toAddress, parcel } = req.body || {};
-    const apiKey = process.env.EASYPOST_API_KEY;
-    
-
-  try {
-    const { fromAddress, toAddress, parcel } = req.body || {};
-    const apiKey = process.env.EASYPOST_API_KEY;
-    
-
-  try {
-    const { fromAddress, toAddress, parcel } = req.body || {};
-    const apiKey = process.env.EASYPOST_API_KEY;
-    
-
-  try {
-    const { fromAddress, toAddress, parcel } = req.body || {};
-    const apiKey = process.env.EASYPOST_API_KEY;
-    
-
-  try {
-    const { fromAddress, toAddress, parcel } = req.body || {};
-    const apiKey = process.env.EASYPOST_API_KEY;
-    
-
-  try {
-    const { fromAddress, toAddress, parcel } = req.body || {};
-    const apiKey = process.env.EASYPOST_API_KEY;
-    
-
-  try {
-    const { fromAddress, toAddress, parcel } = req.body || {};
-    const apiKey = process.env.EASYPOST_API_KEY;
-    
-
-  try {
-    const { fromAddress, toAddress, parcel } = req.body || {};
-    const apiKey = process.env.EASYPOST_API_KEY;
-    
-
-  try {
-    const { fromAddress, toAddress, parcel } = req.body || {};
-    const apiKey = process.env.EASYPOST_API_KEY;
-    
-
-  try {
-    const { fromAddress, toAddress, parcel } = req.body || {};
-    const apiKey = process.env.EASYPOST_API_KEY;
-    
-
-  try {
-    const { fromAddress, toAddress, parcel } = req.body || {};
-    const apiKey = process.env.EASYPOST_API_KEY;
-    
-    const response = await fetch('https://api.easypost.com/v2/shipments', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Authorization': `Bearer ${apiKey}`,
-        Authorization: `Bearer ${apiKey}`,
-        'Authorization': `Bearer ${apiKey}`,
-        Authorization: `Bearer ${apiKey}`,
-        'Authorization': `Bearer ${apiKey}`,
-      },
-      body: JSON.stringify({
-        shipment: {
-          to_address: toAddress,
-          from_address: fromAddress,
-          parcel
-        }
-      }),
-    });
-
-    const data = await response.json();
-    
-    
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    if (!response.ok) {
-      res.statusCode = 500;
-      res.json({ error: data.error || 'Failed to fetch rates' });
+    if (!weight || !destination) {
+      res.statusCode = 400;
+      res.json({ error: 'Weight and destination are required' });
       return;
     }
 
+    // Mock shipping rate calculation
+    const baseRate = 10;
+    const weightRate = weight * 0.5;
+    const total = baseRate + weightRate;
+
+    const shippingRates = [
+      {
+        service: 'Standard',
+        deliveryDays: '5-7',
+        cost: total,
+      },
+      {
+        service: 'Express',
+        deliveryDays: '2-3',
+        cost: total * 1.5,
+      },
+      {
+        service: 'Overnight',
+        deliveryDays: '1',
+        cost: total * 2.5,
+      },
+    ];
+
     res.statusCode = 200;
-    res.json({ rates: data.rates });
-  } catch (err) {
-    console.error('EasyPost error:', err);
+    res.json({ success: true, rates: shippingRates });
+  } catch (error) {
+    console.error('Shipping rates error:', error);
     res.statusCode = 500;
-    res.json({ error: err.message });
+    res.json({ error: 'Failed to calculate shipping rates' });
   }
 }
-}
 
 module.exports = withSentry(handler);
-
-module.exports = withSentry(handler);
-}
-
-module.exports = withSentry(handler);
-
-module.exports = withSentry(handler);
-}
-
-module.exports = withSentry(handler);
-}
-}
-}
-}
-}
-}
-}
-}
-}
-}
-}
-}
-}
