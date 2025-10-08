@@ -256,7 +256,7 @@ export function reportWebVitals(
     )[0] as PerformanceNavigationTiming;
 
     if (navEntry) {
-//       const ttfb = navEntry.responseStart - navEntry.requestStart;
+      const ttfb = navEntry.responseStart - navEntry.requestStart;
 
       const ttfb = navEntry.responseStart - navEntry.requestStart;
       const metric: WebVitalsMetric = {
