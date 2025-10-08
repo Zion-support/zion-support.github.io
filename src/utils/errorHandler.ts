@@ -2,8 +2,6 @@
  * Error handling utilities
  * Enhanced with retry logic, error categorization, and better reporting
  */
-<<<<<<< HEAD
-=======
 
 export enum ErrorSeverity {
   LOW = 'low',
@@ -11,7 +9,6 @@ export enum ErrorSeverity {
   HIGH = 'high',
   CRITICAL = 'critical',
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-17a6
 
 export enum ErrorCategory {
   NETWORK = 'network',
@@ -20,13 +17,6 @@ export enum ErrorCategory {
   API = 'api',
   UI = 'ui',
   UNKNOWN = 'unknown',
-}
-
-export enum ErrorSeverity {
-  LOW = 'low',
-  MEDIUM = 'medium',
-  HIGH = 'high',
-  CRITICAL = 'critical',
 }
 
 export interface ErrorInfo {
@@ -76,28 +66,21 @@ export class ErrorHandler {
       ...errorInfo,
     };
 
-<<<<<<< HEAD
     // Add to queue
     this.addToQueue(errorData);
-=======
-    this.errorQueue.push(errorData);
-    if (this.errorQueue.length > this.maxQueueSize) {
-      this.errorQueue.shift();
-    }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-17a6
 
     // Send to error reporting service
     this.reportError(errorData);
   }
 
   /**
-<<<<<<< HEAD
    * Categorize error based on type and message
    */
   private categorizeError(error: Error): ErrorCategory {
     const message = error.message.toLowerCase();
+    const stack = error.stack?.toLowerCase() || '';
     
-    if (message.includes('network') || message.includes('fetch') || message.includes('timeout')) {
+    if (message.includes('network') || message.includes('fetch') || message.includes('timeout') || message.includes('xhr')) {
       return ErrorCategory.NETWORK;
     }
     
@@ -105,11 +88,15 @@ export class ErrorHandler {
       return ErrorCategory.VALIDATION;
     }
     
-    if (message.includes('api') || message.includes('request')) {
+    if (message.includes('api') || message.includes('request') || stack.includes('api')) {
       return ErrorCategory.API;
     }
     
-    if (error.name === 'TypeError' || error.name === 'ReferenceError') {
+    if (message.includes('component') || stack.includes('react')) {
+      return ErrorCategory.UI;
+    }
+    
+    if (error.name === 'TypeError' || error.name === 'ReferenceError' || message.includes('runtime') || stack.includes('runtime')) {
       return ErrorCategory.RUNTIME;
     }
     
@@ -130,6 +117,10 @@ export class ErrorHandler {
     
     if (category === ErrorCategory.VALIDATION) {
       return ErrorSeverity.LOW;
+    }
+    
+    if (category === ErrorCategory.API) {
+      return ErrorSeverity.MEDIUM;
     }
     
     return ErrorSeverity.MEDIUM;
@@ -150,34 +141,10 @@ export class ErrorHandler {
     
     if (this.errorQueue.length > this.maxQueueSize) {
       this.errorQueue.shift();
-=======
-   * Categorize error based on message and stack
-   */
-  private categorizeError(error: Error): ErrorCategory {
-    const message = error.message.toLowerCase();
-    const stack = error.stack?.toLowerCase() || '';
-
-    if (message.includes('network') || message.includes('fetch') || message.includes('xhr')) {
-      return ErrorCategory.NETWORK;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-17a6
     }
-    if (message.includes('validation') || message.includes('invalid')) {
-      return ErrorCategory.VALIDATION;
-    }
-    if (message.includes('api') || stack.includes('api')) {
-      return ErrorCategory.API;
-    }
-    if (message.includes('component') || stack.includes('react')) {
-      return ErrorCategory.UI;
-    }
-    if (message.includes('runtime') || stack.includes('runtime')) {
-      return ErrorCategory.RUNTIME;
-    }
-    return ErrorCategory.UNKNOWN;
   }
 
   /**
-<<<<<<< HEAD
    * Report error to service
    */
   private reportError(errorData: ErrorInfo): void {
@@ -196,43 +163,6 @@ export class ErrorHandler {
 
   /**
    * Get all errors from queue
-=======
-   * Determine error severity
-   */
-  private determineSeverity(error: Error, category: ErrorCategory): ErrorSeverity {
-    if (category === ErrorCategory.NETWORK) {
-      return ErrorSeverity.MEDIUM;
-    }
-    if (category === ErrorCategory.VALIDATION) {
-      return ErrorSeverity.LOW;
-    }
-    if (category === ErrorCategory.RUNTIME) {
-      return ErrorSeverity.HIGH;
-    }
-    if (category === ErrorCategory.API) {
-      return ErrorSeverity.MEDIUM;
-    }
-    return ErrorSeverity.MEDIUM;
-  }
-
-  /**
-   * Generate unique error ID
-   */
-  private generateErrorId(): string {
-    return `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-  }
-
-  /**
-   * Report error to external service
-   */
-  private reportError(errorData: ErrorInfo): void {
-    // Implementation for reporting to external service
-    console.error('Error reported:', errorData);
-  }
-
-  /**
-   * Get all errors
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-17a6
    */
   getErrors(): ErrorInfo[] {
     return [...this.errorQueue];
@@ -244,7 +174,6 @@ export class ErrorHandler {
   clearErrors(): void {
     this.errorQueue = [];
   }
-<<<<<<< HEAD
 
   /**
    * Get errors by category
@@ -264,8 +193,3 @@ export class ErrorHandler {
 // Export singleton instance
 export const errorHandler = ErrorHandler.getInstance();
 export default errorHandler;
-=======
-}
-
-export default ErrorHandler;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-17a6
