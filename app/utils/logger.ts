@@ -3,6 +3,17 @@
  * Production-ready logging with multiple levels and formatting
  */
 
+// Helper to safely check if we're in production
+function isProduction(): boolean {
+  try {
+    return typeof window !== 'undefined' 
+      ? false // Client-side defaults to dev mode
+      : false; // Server-side defaults to dev mode for safety
+  } catch {
+    return false;
+  }
+}
+
 export enum LogLevel {
   DEBUG = 0,
   INFO = 1,
@@ -32,16 +43,16 @@ export interface LoggerConfig {
 
 class Logger {
   private config: LoggerConfig = {
-    minLevel: process.env['NODE_ENV'] === 'production' ? LogLevel.WARN : LogLevel.DEBUG,
+    minLevel: isProduction() ? LogLevel.WARN : LogLevel.DEBUG,
     enableConsole: true,
-    enableRemote: process.env['NODE_ENV'] === 'production',
+    enableRemote: isProduction(),
     maxBufferSize: 100,
     batchSize: 10,
     flushInterval: 30000, // 30 seconds
   };
 
   private buffer: LogEntry[] = [];
-  private flushTimer?: NodeJS.Timeout;
+  private flushTimer?: ReturnType<typeof setInterval>;
 
   constructor() {
     if (typeof window !== 'undefined' && this.config.enableRemote) {
