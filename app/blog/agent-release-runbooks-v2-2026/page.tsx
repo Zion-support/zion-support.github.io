@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { ListChecks, Calendar, Clock, FileWarning, RefreshCw } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 
-const Page: React.FC = () => {
+const AgentReleaseRunbooksV22026: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -107,12 +107,7 @@ const Page: React.FC = () => {
                 We implement v2 runbooks in 4–6 weeks with audits and training.
               </p>
             </div>
-<<<<<<< HEAD
             <Link to='/contact'
-=======
-            <Link
-              to='/contact'
->>>>>>> cursor/fix-errors-and-merge-to-main-dd0b
               className='bg-white text-fuchsia-700 px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2'
             >
               Engage <RefreshCw />
@@ -125,4 +120,4 @@ const Page: React.FC = () => {
   );
 };
 
-export default Page;
+export default AgentReleaseRunbooksV22026;

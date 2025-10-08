@@ -1,7 +1,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const Page: React.FC = () => {
+const Ai2025Sept30OperationalTrustScorecardsV3: React.FC = () => {
+
   return (
 
     <>
@@ -86,4 +87,6 @@ const Page: React.FC = () => {
     </main>
     </>
   );
-}
+};
+
+export default Ai2025Sept30OperationalTrustScorecardsV3;

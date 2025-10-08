@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 
 const EnterprisePage: React.FC = () => {
@@ -140,10 +139,3 @@ const EnterprisePage: React.FC = () => {
 };
 
 export default EnterprisePage;
-=======
-import { Helmet } from 'react-helmet-async';
-
-import { Link } from 'react-router-dom';
-
-// Metadata moved to Helmet component
->>>>>>> cursor/fix-errors-and-merge-to-main-dd0b

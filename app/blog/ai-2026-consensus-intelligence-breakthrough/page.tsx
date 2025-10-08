@@ -1,6 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-import { Link } from 'react-router-dom';
 export default function ConsensusIntelligencePage() {
   return (
     <div className="min-h-screen bg-gray-50">
@@ -105,9 +103,3 @@ export default function ConsensusIntelligencePage() {
     </div>
   );
 }
-=======
-import { Helmet } from 'react-helmet-async';
-
-
-// Metadata moved to Helmet component
->>>>>>> cursor/fix-errors-and-merge-to-main-dd0b
