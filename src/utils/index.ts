@@ -10,23 +10,9 @@ export * from './logger';
 export * from './api';
 export * from './hooks';
 
-// Export security and validation separately to avoid conflicts
-export { 
-  sanitizeInput, 
-  escapeHtml, 
-  validatePassword, 
-  generateSecureToken,
-  isValidEmail as isValidEmailFromSecurity,
-  isValidUrl as isValidUrlFromSecurity
-} from './security';
-
-export { 
-  validateForm, 
-  validateField,
-  isValidEmail,
-  isValidUrl,
-  isValidPhone 
-} from './validation';
+// Export security and validation classes
+export { SecurityUtils as security, default as securityDefault } from './security';
+export { ValidationUtils as validation, default as validationDefault } from './validation';
 
 // Default exports
 export { default as analytics } from './analytics';

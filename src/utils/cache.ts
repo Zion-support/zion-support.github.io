@@ -34,3 +34,4 @@ export class Cache {
 }
 
 export const cache = new Cache();
+export default cache;

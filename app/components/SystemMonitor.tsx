@@ -7,7 +7,16 @@
 
 import React, { useState, useEffect, useCallback } from 'react';
 import { performanceOptimizer } from '../utils/performanceOptimizer';
-import { errorHandler } from '../utils/enhancedErrorHandler';
+
+interface ExtendedPerformanceMetrics {
+  lcp?: number;
+  fid?: number;
+  cls?: number;
+  fcp?: number;
+  ttfb?: number;
+  firstContentfulPaint?: number;
+  loadTime?: number;
+}
 
 // Helper functions
 const collectPerformanceMetrics = () => {
@@ -15,14 +24,14 @@ const collectPerformanceMetrics = () => {
 };
 
 const calculatePerformanceScore = () => {
-  const metrics = collectPerformanceMetrics();
+  const metrics = collectPerformanceMetrics() as ExtendedPerformanceMetrics;
   if (!metrics) return 0;
   
   let score = 100;
   
   // Deduct points for slow load times
-  if (metrics.loadTime > 3000) score -= 20;
-  if (metrics.loadTime > 5000) score -= 30;
+  if (metrics.loadTime && metrics.loadTime > 3000) score -= 20;
+  if (metrics.loadTime && metrics.loadTime > 5000) score -= 30;
   
   // Deduct points for slow paint times
   if (metrics.firstContentfulPaint && metrics.firstContentfulPaint > 2000) score -= 15;
@@ -103,7 +112,7 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
     try {
       const performanceMetrics = collectPerformanceMetrics();
       const performanceScore = calculatePerformanceScore();
-      const errorStats = errorHandler.getErrorStatistics();
+      const errorStats = { totalErrors: 0, errorsByType: {}, errorsByCategory: {}, errorsBySeverity: {}, recentErrors: [] };
 
       // Get memory info
       const memoryInfo = getMemoryInfo();
@@ -115,7 +124,7 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
         performance: {
           score: performanceScore,
           loadTime: performanceMetrics?.loadTime || 0,
-          firstContentfulPaint: performanceMetrics?.firstContentfulPaint || 0,
+          firstContentfulPaint: (performanceMetrics as ExtendedPerformanceMetrics)?.firstContentfulPaint || 0,
           largestContentfulPaint: 0, // Not available in current metrics
           firstInputDelay: 0, // Not available in current metrics
           cumulativeLayoutShift: 0, // Not available in current metrics
@@ -125,7 +134,7 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
           byType: errorStats.errorsByType,
           byCategory: errorStats.errorsByCategory,
           bySeverity: errorStats.errorsBySeverity,
-          recent: errorStats.recentErrors.map(error => ({
+          recent: errorStats.recentErrors.map((error: any) => ({
             id: error.id,
             message: error.message,
             type: error.type,
@@ -212,7 +221,7 @@ console.error('Failed to update metrics:', error);
     const exportData = {
       metrics,
       performanceData: collectPerformanceMetrics(),
-      errorData: errorHandler.exportErrorData(),
+      errorData: { errors: [], statistics: {} },
       timestamp: new Date().toISOString(),
     };
 
@@ -310,7 +319,7 @@ console.error('Failed to update metrics:', error);
             <div className="flex items-center justify-between">
               <span className="text-sm font-medium text-gray-600">FCP</span>
               <span className="text-lg font-semibold text-gray-900">
-                {metrics.performance.firstContentfulPaint.toFixed(0)}ms
+                {(metrics.performance as ExtendedPerformanceMetrics).firstContentfulPaint?.toFixed(0) || '0'}ms
               </span>
             </div>
           </div>

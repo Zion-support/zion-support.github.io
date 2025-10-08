@@ -30,3 +30,4 @@ class PerformanceOptimizer {
 }
 
 export const performanceOptimizer = new PerformanceOptimizer();
+export default performanceOptimizer;
