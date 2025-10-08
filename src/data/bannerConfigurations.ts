@@ -17,12 +17,6 @@ export const bannerConfigurations: BannerConfig[] = [
   },
 ];
 
-export default bannerConfigurations;
-
-
-// Type definitions
-export type BannerConfig = typeof bannerConfigurations[number];
-export type RotationStrategy = 'sequential' | 'random' | 'weighted' | 'balanced';
 
 // Stub implementations for banner rotation functions
 export const selectBannersForDisplay = async (strategy: RotationStrategy = 'sequential', maxBanners: number = 3) => {
