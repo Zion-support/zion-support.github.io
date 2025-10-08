@@ -1,12 +1,8 @@
 import React from 'react';
 import { Star } from 'lucide-react';
-import { Metadata } from 'next';
+// Metadata removed - using react-helmet-async instead;
 
-export const metadata: Metadata = {
-  title: "AI 2026 Hyperconscious Computing Revolution: Next-Gen Intelligence",
-  description: "Experience the hyperconscious computing revolution of AI 2026, featuring next-generation intelligence, advanced cognitive computing, and revolutionary AI consciousness.",
-  keywords: 'AI 2026, hyperconscious computing, next-gen intelligence, cognitive computing, AI consciousness, computing revolution'
-};
+// Metadata moved to Helmet component
 
 export default function AI2026HyperconsciousComputingRevolution() {
   return (

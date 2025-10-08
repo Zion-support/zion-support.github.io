@@ -1,21 +1,8 @@
 import React from 'react';
-import Link from 'next/link';
-import { Metadata } from 'next';
+import { Link as Link } from 'react-router-dom';
+// Metadata removed - using react-helmet-async instead;
 
-export const metadata: Metadata = {
-  title: 'AI & Technology Blog | Zion Tech Group',
-  description:
-    'Latest insights on AI, enterprise automation, and digital transformation from Zion Tech Group experts.',
-  keywords:
-    'AI blog, enterprise technology, automation insights, digital transformation',
-  openGraph: {
-    title: 'AI & Technology Blog | Zion Tech Group',
-    description:
-      'Latest insights on AI, enterprise automation, and digital transformation from Zion Tech Group experts.',
-    type: 'website',
-    url: 'https://ziontechgroup.com/blog',
-  },
-};
+// Metadata moved to Helmet component
 
 export default function BlogPage() {
   return (
@@ -37,7 +24,7 @@ export default function BlogPage() {
               breakthroughs in AI and enterprise technology.
             </p>
             <Link
-              href='/'
+              to='/'
               className='inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded-lg transition-colors'
             >
               Back to Home

@@ -1,73 +1,11 @@
-import type { Metadata } from 'next';
+import React from 'react';
+import { Helmet, HelmetProvider } from 'react-helmet-async';
 import './globals.css';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import AnalyticsProvider from './components/AnalyticsProvider';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import PWAInstaller from './components/PWAInstaller';
 import { GlobalErrorBoundary } from './components/GlobalErrorBoundary';
-
-export const metadata: Metadata = {
-  title: 'Zion Tech Group - AI & IT Solutions',
-  description:
-    'Leading provider of AI-powered enterprise solutions, automation, and digital transformation services.',
-  keywords: [
-    'AI solutions',
-    'enterprise AI',
-    'digital transformation',
-    'automation',
-    'cloud services',
-  ],
-  authors: [{ name: 'Zion Tech Group' }],
-  creator: 'Zion Tech Group',
-  publisher: 'Zion Tech Group',
-  formatDetection: {
-    email: false,
-    address: false,
-    telephone: false,
-  },
-  metadataBase: new URL('https://ziontechgroup.com'),
-  alternates: {
-    canonical: '/',
-  },
-  openGraph: {
-    title: 'Zion Tech Group - AI & IT Solutions',
-    description:
-      'Leading provider of AI-powered enterprise solutions, automation, and digital transformation services.',
-    url: 'https://ziontechgroup.com',
-    siteName: 'Zion Tech Group',
-    images: [
-      {
-        url: 'https://ziontechgroup.com/og-image.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Zion Tech Group - AI & IT Solutions',
-      },
-    ],
-    locale: 'en_US',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Zion Tech Group - AI & IT Solutions',
-    description:
-      'Leading provider of AI-powered enterprise solutions, automation, and digital transformation services.',
-    images: ['https://ziontechgroup.com/og-image.jpg'],
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
-  verification: {
-    google: 'your-google-verification-code',
-  },
-};
 
 export default function RootLayout({
   children,
@@ -100,35 +38,56 @@ export default function RootLayout({
   };
 
   return (
-    <html lang='en'>
-      <head>
-        <link rel='icon' href='/favicon.ico' />
-        <link
-          rel='apple-touch-icon'
-          sizes='180x180'
-          href='/apple-touch-icon.png'
+    <HelmetProvider>
+      <Helmet>
+        <html lang='en' />
+        <title>Zion Tech Group - AI & IT Solutions</title>
+        <meta 
+          name='description' 
+          content='Leading provider of AI-powered enterprise solutions, automation, and digital transformation services.' 
         />
-        <link
-          rel='icon'
-          type='image/png'
-          sizes='32x32'
-          href='/favicon-32x32.png'
+        <meta 
+          name='keywords' 
+          content='AI solutions, enterprise AI, digital transformation, automation, cloud services' 
         />
-        <link
-          rel='icon'
-          type='image/png'
-          sizes='16x16'
-          href='/favicon-16x16.png'
-        />
-        <link rel='manifest' href='/site.webmanifest' />
+        <meta name='author' content='Zion Tech Group' />
         <meta name='theme-color' content='#4f46e5' />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
-        <script
-          type='application/ld+json'
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-        />
-      </head>
-      <body className='antialiased'>
+        <link rel='icon' href='/favicon.ico' />
+        <link rel='apple-touch-icon' sizes='180x180' href='/apple-touch-icon.png' />
+        <link rel='icon' type='image/png' sizes='32x32' href='/favicon-32x32.png' />
+        <link rel='icon' type='image/png' sizes='16x16' href='/favicon-16x16.png' />
+        <link rel='manifest' href='/site.webmanifest' />
+        <link rel='canonical' href='https://ziontechgroup.com/' />
+        
+        {/* Open Graph */}
+        <meta property='og:title' content='Zion Tech Group - AI & IT Solutions' />
+        <meta property='og:description' content='Leading provider of AI-powered enterprise solutions, automation, and digital transformation services.' />
+        <meta property='og:url' content='https://ziontechgroup.com' />
+        <meta property='og:site_name' content='Zion Tech Group' />
+        <meta property='og:image' content='https://ziontechgroup.com/og-image.jpg' />
+        <meta property='og:image:width' content='1200' />
+        <meta property='og:image:height' content='630' />
+        <meta property='og:image:alt' content='Zion Tech Group - AI & IT Solutions' />
+        <meta property='og:locale' content='en_US' />
+        <meta property='og:type' content='website' />
+        
+        {/* Twitter */}
+        <meta name='twitter:card' content='summary_large_image' />
+        <meta name='twitter:title' content='Zion Tech Group - AI & IT Solutions' />
+        <meta name='twitter:description' content='Leading provider of AI-powered enterprise solutions, automation, and digital transformation services.' />
+        <meta name='twitter:image' content='https://ziontechgroup.com/og-image.jpg' />
+        
+        {/* Robots */}
+        <meta name='robots' content='index, follow' />
+        <meta name='googlebot' content='index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1' />
+        <meta name='google-site-verification' content='your-google-verification-code' />
+        
+        <script type='application/ld+json'>
+          {JSON.stringify(structuredData)}
+        </script>
+      </Helmet>
+      <div className='antialiased'>
         <GlobalErrorBoundary>
           <AnalyticsProvider>
             <AccessibilityEnhancer>
@@ -138,7 +97,7 @@ export default function RootLayout({
             </AccessibilityEnhancer>
           </AnalyticsProvider>
         </GlobalErrorBoundary>
-      </body>
-    </html>
+      </div>
+    </HelmetProvider>
   );
 }

@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link as Link } from 'react-router-dom';
 
 /**
  * Offline Page
@@ -104,7 +104,7 @@ const OfflinePage: React.FC = () => {
             Try Again
           </button>
           <Link
-            href='/'
+            to='/'
             className='block w-full px-6 py-3 bg-white text-indigo-600 font-medium rounded-lg border-2 border-indigo-600 hover:bg-indigo-50 transition-colors focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2'
           >
             Go to Homepage
@@ -114,8 +114,7 @@ const OfflinePage: React.FC = () => {
         <div className='mt-8 text-sm text-gray-500'>
           <p>
             Need help?{' '}
-            <a
-              href='tel:+13024640950'
+            <a href='tel:+13024640950'
               className='text-indigo-600 hover:text-indigo-700 font-medium'
             >
               Call +1 302 464 0950

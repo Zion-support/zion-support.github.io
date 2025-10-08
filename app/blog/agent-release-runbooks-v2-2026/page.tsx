@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import { Link as Link } from 'react-router-dom';
 import { ListChecks, Calendar, Clock, FileWarning, RefreshCw } from 'lucide-react';
 
 export const metadata = {
@@ -99,7 +99,7 @@ export default function Page() {
               </p>
             </div>
             <Link
-              href='/contact'
+              to='/contact'
               className='bg-white text-fuchsia-700 px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2'
             >
               Engage <RefreshCw />

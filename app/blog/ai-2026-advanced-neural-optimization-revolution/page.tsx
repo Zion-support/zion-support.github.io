@@ -1,11 +1,7 @@
 import React from 'react';
-import { Metadata } from 'next';
+// Metadata removed - using react-helmet-async instead;
 
-export const metadata: Metadata = {
-  title: "AI 2026: Advanced Neural Optimization Revolution - 1000x Performance Breakthrough",
-  description: "Discover the revolutionary neural optimization techniques delivering 1000x performance improvements in AI systems. Complete implementation guide with real-world case studies.",
-  keywords: 'neural optimization, AI performance, machine learning, deep learning, neural networks, AI breakthrough 2026'
-};
+// Metadata moved to Helmet component
 
 export default function BlogPost() {
   return (

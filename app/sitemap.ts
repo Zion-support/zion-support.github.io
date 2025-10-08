@@ -1,6 +1,13 @@
-import { MetadataRoute } from 'next';
+// Sitemap generation for static export
 
-export default function sitemap(): MetadataRoute.Sitemap {
+interface SitemapEntry {
+  url: string;
+  lastModified: Date;
+  changeFrequency: string;
+  priority: number;
+}
+
+export default function sitemap(): SitemapEntry[] {
   const baseUrl = 'https://ziontechgroup.com';
 
   return [
