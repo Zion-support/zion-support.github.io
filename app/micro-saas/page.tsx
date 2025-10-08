@@ -1,8 +1,15 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Globe } from 'lucide-react';
+import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, ArrowRight, Sparkles, Rocket, Brain, Target, Award } from 'lucide-react';
 
 const MicroSAASPage: React.FC = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  const [hoveredCard, setHoveredCard] = useState<number | null>(null);
+
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
+
   const microSAASServices = [
     // AI-Powered Services
     {
@@ -14,7 +21,9 @@ const MicroSAASPage: React.FC = () => {
       benefits: ['Reduce bugs by 70%', 'Improve code quality', 'Save 10+ hours/week on reviews'],
       marketPrice: '$150-300/month',
       category: 'Developer Tools',
-      technologies: ['GitHub Actions', 'SonarQube', 'ESLint', 'Prettier', 'Custom AI Models']
+      technologies: ['GitHub Actions', 'SonarQube', 'ESLint', 'Prettier', 'Custom AI Models'],
+      popular: true,
+      savings: '$1,200/year'
     },
     {
       title: 'AI Document Intelligence',
