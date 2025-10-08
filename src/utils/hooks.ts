@@ -18,10 +18,10 @@ export const useLocalStorage = <T>(
     }
 
     try {
-//       const item = window.localStorage.getItem(key);
+      const item = window.localStorage.getItem(key);
       return item ? (JSON.parse(item) as T) : initialValue;
     } catch (error) {
-//       console.warn(`Error reading localStorage key "${key}":`, error);
+      console.warn(`Error reading localStorage key "${key}":`, error);
       return initialValue;
     }
   }, [initialValue, key]);
@@ -31,17 +31,17 @@ export const useLocalStorage = <T>(
   const setValue = useCallback(
     (value: T | ((val: T) => T)) => {
       if (typeof window === 'undefined') {
-//         console.warn(`Tried setting localStorage key "${key}" even though environment is not a client`);
+        console.warn(`Tried setting localStorage key "${key}" even though environment is not a client`);
         return;
       }
 
       try {
-//         const newValue = value instanceof Function ? value(storedValue) : value;
+        const newValue = value instanceof Function ? value(storedValue) : value;
         window.localStorage.setItem(key, JSON.stringify(newValue));
         setStoredValue(newValue);
         window.dispatchEvent(new Event('local-storage'));
       } catch (error) {
-//         console.warn(`Error setting localStorage key "${key}":`, error);
+        console.warn(`Error setting localStorage key "${key}":`, error);
       }
     },
     [key, storedValue]
@@ -118,7 +118,7 @@ export const useIntersectionObserver = (
   const [entry, setEntry] = useState<IntersectionObserverEntry | null>(null);
 
   useEffect(() => {
-//     const element = elementRef.current;
+    const element = elementRef.current;
     if (!element) return;
 
     const observer = new IntersectionObserver(
@@ -234,7 +234,7 @@ export const useAsync = <T, E = Error>(
     setError(null);
 
     try {
-//       const response = await asyncFunction();
+      const response = await asyncFunction();
       setData(response);
     } catch (err) {
       setError(err as E);
@@ -288,8 +288,8 @@ export const useOnlineStatus = (): boolean => {
   useEffect(() => {
     if (typeof window === 'undefined') return;
 
-//     const handleOnline = () => setIsOnline(true);
-//     const handleOffline = () => setIsOnline(false);
+    const handleOnline = () => setIsOnline(true);
+    const handleOffline = () => setIsOnline(false);
 
     window.addEventListener('online', handleOnline);
     window.addEventListener('offline', handleOffline);
@@ -392,7 +392,7 @@ export const useInterval = (callback: () => void, delay: number | null): void =>
   useEffect(() => {
     if (delay === null) return;
 
-//     const id = setInterval(() => savedCallback.current(), delay);
+    const id = setInterval(() => savedCallback.current(), delay);
     return () => clearInterval(id);
   }, [delay]);
 };

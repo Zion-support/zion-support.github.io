@@ -154,7 +154,7 @@ export function reportWebVitals(
   if ('PerformanceObserver' in window) {
     const fidObserver = new PerformanceObserver((entryList) => {
       const firstInput = entryList.getEntries()[0] as any;
-//       const fid = firstInput.processingStart - firstInput.startTime;
+      const fid = firstInput.processingStart - firstInput.startTime;
 
       const metric: WebVitalsMetric = {
         name: 'FID',
@@ -167,7 +167,7 @@ export function reportWebVitals(
 
       onPerfEntry(metric);
       if (analyticsEndpoint) sendToAnalytics(metric, analyticsEndpoint);
-//       if (debug) if (process.env['NODE_ENV'] === 'development') { if (process.env.DEV) { console.log('FID:', metric); } }
+      if (debug) if (process.env['NODE_ENV'] === 'development') { if (process.env.DEV) { console.log('FID:', metric); } }
 
       fidObserver.disconnect();
     });
