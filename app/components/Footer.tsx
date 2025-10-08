@@ -153,12 +153,6 @@ const Footer: React.FC = () => {
           {/* Contact */}
           <div>
             <h4 className="text-lg font-semibold mb-4">Contact</h4>
-<<<<<<< HEAD
-            <div className="space-y-2 text-gray-300">
-              <p>Email: kleber@ziontechgroup.com</p>
-              <p>Phone: +1 (302) 464-0950</p>
-              <p>Website: ziontechgroup.com</p>
-=======
             <div className="space-y-3">
               <div className="flex items-center">
                 <Phone className="w-5 h-5 mr-3 text-blue-400" />
@@ -180,7 +174,6 @@ const Footer: React.FC = () => {
                 <Clock className="w-5 h-5 mr-3 text-blue-400" />
                 <span className="text-gray-300">24/7 Support Available</span>
               </div>
->>>>>>> cursor/analyze-improve-and-deploy-application-1a78
               <div className="flex space-x-4 mt-4">
                 <a href="https://linkedin.com/company/ziontechgroup" className="text-gray-300 hover:text-white transition-colors">
                   LinkedIn
