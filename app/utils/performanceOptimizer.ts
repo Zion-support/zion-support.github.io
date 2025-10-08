@@ -23,6 +23,7 @@ interface PerformanceMetrics {
   cls?: number;
   fmp?: number;
   ttfb?: number;
+  memory?: number;
 }
 
 interface OptimizationConfig {
@@ -77,6 +78,13 @@ class PerformanceOptimizer {
   }
 
   /**
+   * Public init method for external initialization
+   */
+  public init(): void {
+    this.initializePerformanceMonitoring();
+  }
+
+  /**
    * Measure page load time
    */
   private measureLoadTime(): void {
@@ -90,6 +98,28 @@ class PerformanceOptimizer {
       }
     } catch (error) {
       console.warn('Performance API not fully supported:', error);
+    }
+  }
+
+  /**
+   * Measure render time
+   */
+  private measureRenderTime(): void {
+    if (typeof window === 'undefined' || !window.performance) return;
+
+    try {
+      const observer = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        entries.forEach((entry) => {
+          if (entry.entryType === 'measure') {
+            this.metrics.renderTime = entry.duration;
+          }
+        });
+      });
+      observer.observe({ entryTypes: ['measure'] });
+      this.observers.push(observer);
+    } catch (error) {
+      console.warn('Performance Observer not supported:', error);
     }
   }
   private observeLCP() {
@@ -138,8 +168,6 @@ class PerformanceOptimizer {
       observer.observe({ entryTypes: ['layout-shift'] })
       this.observers.push(observer)
     } catch {
-    } catch {
-    } catch {
       // Ignore if not supported
     }
   }
@@ -155,8 +183,6 @@ class PerformanceOptimizer {
       })
       observer.observe({ entryTypes: ['paint'] })
       this.observers.push(observer)
-    } catch {
-    } catch {
     } catch {
       // Ignore if not supported
     }
@@ -176,8 +202,6 @@ class PerformanceOptimizer {
       observer.observe({ entryTypes: ['navigation'] })
       this.observers.push(observer)
     } catch {
-    } catch {
-    } catch {
       // Ignore if not supported
     }
   }
@@ -187,29 +211,6 @@ class PerformanceOptimizer {
       if (memory) {
         this.metrics.memory = memory.usedJSHeapSize / memory.jsHeapSizeLimit
       }
-    }
-  }
-  lazyLoadImages() {
-    if (typeof window === 'undefined') return
-
-    const images = document.querySelectorAll('img[data-src]')
-    
-    // Check if PerformanceObserver exists (may not be available in test environments)
-    if (typeof PerformanceObserver === 'undefined') return;
-
-    try {
-      const observer = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        entries.forEach((entry) => {
-          if (entry.entryType === 'measure') {
-            this.metrics.renderTime = entry.duration;
-          }
-        });
-      });
-
-      observer.observe({ entryTypes: ['measure'] });
-    } catch (error) {
-      // PerformanceObserver may not support 'measure' entryType in some environments
     }
   }
 
