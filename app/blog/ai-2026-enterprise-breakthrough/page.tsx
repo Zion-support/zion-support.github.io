@@ -1,13 +1,6 @@
 import React from 'react';
 import { Star } from 'lucide-react';
-import { Metadata } from 'next';
-
-export const metadata: Metadata = {
-  title: "AI 2026 Enterprise Breakthrough: Revolutionary Business Transformation",
-  description: "Discover the groundbreaking AI 2026 enterprise breakthrough featuring autonomous operations, intelligent automation, and unprecedented business value creation.",
-  keywords: 'AI 2026, enterprise breakthrough, business transformation, autonomous operations, intelligent automation'
-};
-
+import { Link } from 'react-router-dom';
 export default function AI2026EnterpriseBreakthrough() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">

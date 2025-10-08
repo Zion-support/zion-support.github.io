@@ -67,6 +67,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = memo(({
             width: width ? `${width}px` : 'auto',
             height: height ? `${height}px` : 'auto'
           }}
+          loading={priority ? 'eager' : 'lazy'}
         />
       )}
     </div>

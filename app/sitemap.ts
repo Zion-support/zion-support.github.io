@@ -1,6 +1,5 @@
-import { MetadataRoute } from 'next';
-
-export default function sitemap(): MetadataRoute.Sitemap {
+// Sitemap for Vite + React Router
+export default function sitemap() {
   const baseUrl = 'https://ziontechgroup.com';
 
   return [

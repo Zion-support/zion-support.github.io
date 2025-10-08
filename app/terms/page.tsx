@@ -1,13 +1,6 @@
 import React from 'react';
-import { Metadata } from 'next';
-
-const metadata: Metadata = {
-  title: 'Terms of Service - Zion Tech Group',
-  description:
-    'Terms of service and usage agreement for Zion Tech Group services and website.',
-};
-
-export { metadata };
+import { Link } from 'react-router-dom';
+// Metadata will be handled by React Helmet in individual components
 
 const TermsPage: React.FC = () => {
   return (
