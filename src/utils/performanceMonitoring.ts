@@ -311,7 +311,7 @@ class PerformanceMonitor {
       resourceObserver.observe({ entryTypes: ['resource'] });
       this.observers.push(resourceObserver);
     } catch (error) {
-//       console.warn('Failed to observe resource timing:', error);
+      console.warn('Failed to observe resource timing:', error);
     }
   }
 
