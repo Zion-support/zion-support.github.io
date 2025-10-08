@@ -17,9 +17,24 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   enableKeyboardNav = true,
   enableFocusIndicators = true,
 }) => {
+<<<<<<< HEAD
   // const [isReducedMotion, setIsReducedMotion] = useState(false);
   // const [isHighContrast, setIsHighContrast] = useState(false);
   // const [fontSize, setFontSize] = useState(16);
+=======
+  const [isReducedMotion, setIsReducedMotion] = useState(false);
+  const [isHighContrast, setIsHighContrast] = useState(false);
+  const [fontSize, setFontSize] = useState(16);
+
+  const addSkipLinks = useCallback(() => {
+    // Add skip links
+    const skipLink = document.createElement('a');
+    skipLink.href = '#main-content';
+    skipLink.textContent = 'Skip to main content';
+    skipLink.className = 'skip-link';
+    document.body.insertBefore(skipLink, document.body.firstChild);
+  }, []);
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd1c
 
   useEffect(() => {
     // Check for reduced motion preference
@@ -28,6 +43,10 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       setIsReducedMotion(e.matches);
     };
     
+<<<<<<< HEAD
+=======
+    setIsReducedMotion(mediaQuery.matches);
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd1c
     mediaQuery.addEventListener('change', handleChange);
     setIsReducedMotion(mediaQuery.matches);
 
@@ -244,8 +263,13 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       if (skipLink.parentNode) {
         skipLink.parentNode.removeChild(skipLink);
       }
+<<<<<<< HEAD
     };
   }, [enableSkipLinks]);
+=======
+    }, 1000);
+  }, []);
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd1c
 
   return <>{children}</>;
 };
