@@ -118,11 +118,12 @@ class AnalyticsService {
   ): void {
     try {
       if (this.hasGtag()) {
+        gtag('event', 'timing_complete', {
           name: variable,
-          value: Math.round(value)
+          value: Math.round(value),
           event_category: category,
           event_label: label,
-        })
+        });
       }
     } catch (error) {
       console.error('Failed to track timing:', error)
@@ -134,10 +135,10 @@ class AnalyticsService {
   trackPerformance(metric: string, value: number, metadata?: Record<string, unknown>): void {
     try {
       this.trackEvent({
-        action: 'performance'
-        category: 'web_vitals'
+        action: 'performance',
+        category: 'web_vitals',
         label: metric,
-        value: Math.round(value)
+        value: Math.round(value),
         metadata
       })
     } catch (error) {

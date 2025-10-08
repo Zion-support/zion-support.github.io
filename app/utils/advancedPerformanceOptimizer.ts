@@ -137,7 +137,7 @@ export class PerformanceOptimizer {
     const summary: Record<string, { avg: number; count: number }> = {}
     this.metrics.forEach((values, name) => {
       summary[name] = {
-        avg: this.getAverageMetric(name)
+        avg: this.getAverageMetric(name),
         count: values.length
       }
     })
