@@ -1,13 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-import { ChevronDown, Phone, Mail, MapPin, Menu, X } from 'lucide-react';
-const Navigation: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [servicesOpen, setServicesOpen] = useState(false);
-<<<<<<< HEAD
-=======
-=======
 import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap } from 'lucide-react';
 
 const Navigation: React.FC = () => {
@@ -44,8 +36,12 @@ const Navigation: React.FC = () => {
         { name: 'AI Automation', path: '/ai-automation' },
         { name: 'AI Healthcare', path: '/ai-healthcare' },
         { name: 'AI Fintech', path: '/ai-fintech' },
-        { name: 'AI Content Generation', path: '/ai-content' },
-        { name: 'AI Analytics', path: '/ai-analytics' }
+        { name: 'AI Data Analytics', path: '/ai-data-analytics' },
+        { name: 'AI Cybersecurity', path: '/ai-cybersecurity' },
+        { name: 'AI Workflow Automation', path: '/ai-workflow-automation' },
+        { name: 'AI Cloud Infrastructure', path: '/ai-cloud-infrastructure' },
+        { name: 'AI E-commerce Solutions', path: '/ai-ecommerce-solutions' },
+        { name: 'AI Mobile App Development', path: '/ai-mobile-app-development' }
       ]
     },
     {
@@ -55,24 +51,8 @@ const Navigation: React.FC = () => {
       bgColor: 'bg-blue-50',
       services: [
         { name: 'IT Services', path: '/it-services' },
-        { name: 'Cloud Services', path: '/cloud-services' },
         { name: 'Cybersecurity', path: '/cybersecurity' },
-        { name: 'DevOps', path: '/devops' },
-        { name: 'Database Services', path: '/database' },
-        { name: 'Network Services', path: '/networking' }
-      ]
-    },
-    {
-      title: 'Micro SAAS',
-      icon: Code,
-      color: 'text-green-600',
-      bgColor: 'bg-green-50',
-      services: [
-        { name: 'Micro SAAS', path: '/micro-saas' },
-        { name: 'Developer Tools', path: '/developer-tools' },
-        { name: 'Business Apps', path: '/business-apps' },
-        { name: 'Productivity Tools', path: '/productivity' },
-        { name: 'Marketing Tools', path: '/marketing-tools' }
+        { name: 'Micro SAAS', path: '/micro-saas' }
       ]
     },
     {
@@ -89,7 +69,6 @@ const Navigation: React.FC = () => {
       ]
     }
   ];
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-1ed2
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -100,13 +79,6 @@ const Navigation: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
-<<<<<<< HEAD
->>>>>>> cursor/fix-errors-and-merge-to-main-deb0
-          <Link to="/" className="text-2xl font-bold text-blue-600 flex items-center">
-          <Link to="/" className="text-2xl font-bold text-cyan-400 neon-text flex items-center">
-            <span className="text-3xl mr-2">⚡</span>
-            Zion Tech Group
-=======
           <Link 
             to="/" 
             className="flex items-center space-x-2 text-2xl font-bold"
@@ -118,7 +90,6 @@ const Navigation: React.FC = () => {
             <span className={`transition-colors ${isScrolled ? 'text-gray-900' : 'text-white'}`}>
               Zion Tech Group
             </span>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-1ed2
           </Link>
           {/* Desktop Menu */}
 <<<<<<< HEAD
