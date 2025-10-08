@@ -368,33 +368,43 @@ class Logger {
  */
 class ContextLogger {
   constructor(private logger: Logger, private context: string) {}
+  
   debug(message: string, metadata?: Record<string, unknown>): void {
     this.logger.debug(message, this.context, metadata)
   }
+  
   info(message: string, metadata?: Record<string, unknown>): void {
     this.logger.info(message, this.context, metadata)
   }
+  
   warn(message: string, metadata?: Record<string, unknown>): void {
     this.logger.warn(message, this.context, metadata)
   }
+  
   error(message: string, error?: Error, metadata?: Record<string, unknown>): void {
     this.logger.error(message, error, this.context, metadata)
   }
+  
   fatal(message: string, error?: Error, metadata?: Record<string, unknown>): void {
     this.logger.fatal(message, error, this.context, metadata)
   }
-  perf(metric: string, value: number, _metadata?: Record<string, unknown>): void {
-    this.logger.perf(metric, value, { ..._metadata, context: this.context })
+  
+  perf(metric: string, value: number, metadata?: Record<string, unknown>): void {
+    this.logger.perf(metric, value, { ...metadata, context: this.context })
   }
-  lifecycle(message: string, _metadata?: Record<string, unknown>): void {
+  
+  lifecycle(message: string, metadata?: Record<string, unknown>): void {
     this.logger.lifecycle(message, this.context)
   }
-  performance(message: string, data: unknown, _metadata?: Record<string, unknown>): void {
+  
+  performance(message: string, data: unknown, metadata?: Record<string, unknown>): void {
     this.logger.performance(message, data, this.context)
   }
+  
   group(label: string, fn: () => void): void {
     this.logger.group(`${this.context}: ${label}`, fn)
   }
+  
   child(subContext: string): ContextLogger {
     return new ContextLogger(this.logger, `${this.context}:${subContext}`)
   }
