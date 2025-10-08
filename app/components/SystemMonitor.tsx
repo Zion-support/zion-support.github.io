@@ -9,6 +9,17 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { performanceOptimizer } from '../utils/performanceOptimizer';
 import { errorHandler } from '../utils/enhancedErrorHandler';
 
+// Helper function for collecting performance metrics (currently unused)
+// const _collectPerformanceMetrics = () => {
+//   if (typeof window === 'undefined' || !window.performance) return null;
+//   const navigation = window.performance.timing;
+//   const paint = window.performance.getEntriesByType('paint');
+//   return {
+//     loadTime: navigation.loadEventEnd - navigation.navigationStart,
+//     firstContentfulPaint:
+//       paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0,
+//   };
+// };
 
 // Helper functions
 const calculatePerformanceScore = () => {
