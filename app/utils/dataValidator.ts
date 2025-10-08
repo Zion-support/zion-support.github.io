@@ -69,8 +69,11 @@ export function validatePhoneNumber(phone: string): boolean {
 /**
  * Validate string length
  */
-export function validateStringLength(value: string, min: number, max: number): boolean {
-  return value.length >= min && value.length <= max;
+export function validateStringLength(value: string, min: number, max?: number): boolean {
+  if (max !== undefined) {
+    return value.length >= min && value.length <= max;
+  }
+  return value.length >= min;
 }
 
 /**
@@ -126,11 +129,14 @@ export function validateDate(value: unknown): boolean {
 /**
  * Validate date range
  */
-export function validateDateRange(date: Date, min: Date, max: Date): boolean {
+export function validateDateRange(date: Date, min?: Date, max?: Date): boolean {
   if (!validateDate(date)) return false;
   
   const time = date.getTime();
-  return time >= min.getTime() && time <= max.getTime();
+  if (min && time < min.getTime()) return false;
+  if (max && time > max.getTime()) return false;
+  
+  return true;
 }
 
 /**
@@ -249,7 +255,7 @@ export function validateForm<T extends Record<string, unknown>>(
 }
 
 /**
- * Validation rules builder (legacy API)
+ * Validation rules builder
  */
 export const ValidationRulesBuilder = {
   required: <T>(): ValidationRule<T> => ({

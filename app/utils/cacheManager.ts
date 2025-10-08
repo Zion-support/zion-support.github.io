@@ -227,7 +227,7 @@ export class CacheManager {
   }
 
   /**
-   * Delete cache entry
+   * Delete a cache entry
    */
   delete(key: string): void {
     if (this.storage === CacheStorage.Memory) {
@@ -342,7 +342,7 @@ export class CacheManager {
         ? keyGenerator(...args)
         : `memoize_${fn.name}_${JSON.stringify(args)}`;
 
-      return this.getOrSet(key, () => fn(...args), cacheOptions);
+      return this.getOrSet(key, () => fn(...args), cacheOptions) as TResult;
     };
   }
 
