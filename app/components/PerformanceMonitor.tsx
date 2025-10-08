@@ -7,21 +7,16 @@ interface LayoutShift extends PerformanceEntry {
   value: number;
 }
 
-const PerformanceMonitor: React.FC = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({});
-
-  useEffect(() => {
-    // Web Vitals monitoring
-    const reportWebVitals = (metric: any) => {
-      // Send to analytics service
-      if (typeof window !== 'undefined' && (window as { gtag?: Function }).gtag) {
-        (window as unknown as { gtag: Function }).gtag('event', 'web_vitals', {
-          event_category: 'Performance',
-          event_label: metric.name,
-          value: Math.round(metric.value),
-          non_interaction: true,
-        });
-      }
+interface PerformanceMetrics {
+  loadTime?: number;
+  renderTime?: number;
+  memoryUsage?: number;
+  bundleSize?: number;
+  cacheHitRate?: number;
+  lcp?: number;
+  fid?: number;
+  cls?: number;
+}
 
 interface PerformanceMonitorProps {
   enableRealTimeMonitoring?: boolean;
@@ -29,6 +24,19 @@ interface PerformanceMonitorProps {
   enableVisualIndicator?: boolean;
   updateInterval?: number;
 }
+
+// Web Vitals monitoring helper
+const reportWebVitals = (metric: any) => {
+  // Send to analytics service
+  if (typeof window !== 'undefined' && (window as { gtag?: Function }).gtag) {
+    (window as unknown as { gtag: Function }).gtag('event', 'web_vitals', {
+      event_category: 'Performance',
+      event_label: metric.name,
+      value: Math.round(metric.value),
+      non_interaction: true,
+    });
+  }
+};
 
 const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   enableRealTimeMonitoring = true,
@@ -88,10 +96,10 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       setPerformanceScore(score);
 
       if (enableConsoleLogging) {
-        logger.group('Performance Metrics', () => {
-          logger.debug('Metrics', { metrics: currentMetrics });
-          logger.debug('Score', { score });
-        });
+        console.group('Performance Metrics');
+        console.log('Metrics:', currentMetrics);
+        console.log('Score:', score);
+        console.groupEnd();
       }
     };
 
