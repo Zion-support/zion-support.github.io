@@ -1,7 +1,19 @@
+import React from 'react';
 /**
  * Enhanced Logger Utility
  * Production-ready logging with multiple levels and formatting
  */
+
+// Helper to safely check if we're in production
+function isProduction(): boolean {
+  try {
+    return typeof window !== 'undefined' 
+      ? false // Client-side defaults to dev mode
+      : false; // Server-side defaults to dev mode for safety
+  } catch {
+    return false;
+  }
+}
 
 export enum LogLevel {
   DEBUG = 0,
@@ -32,16 +44,16 @@ export interface LoggerConfig {
 
 class Logger {
   private config: LoggerConfig = {
-    minLevel: process.env['NODE_ENV'] === 'production' ? LogLevel.WARN : LogLevel.DEBUG,
+    minLevel: isProduction() ? LogLevel.WARN : LogLevel.DEBUG,
     enableConsole: true,
-    enableRemote: process.env['NODE_ENV'] === 'production',
+    enableRemote: isProduction(),
     maxBufferSize: 100,
     batchSize: 10,
     flushInterval: 30000, // 30 seconds
   };
 
   private buffer: LogEntry[] = [];
-  private flushTimer?: NodeJS.Timeout;
+  private flushTimer?: ReturnType<typeof setInterval>;
 
   constructor() {
     if (typeof window !== 'undefined' && this.config.enableRemote) {
@@ -96,7 +108,7 @@ class Logger {
     message: string,
     errorOrContextOrMetadata?: Error | string | Record<string, unknown>,
     contextOrMetadata?: string | Record<string, unknown>,
-    metadata?: Record<string, unknown>
+    _metadata?: Record<string, unknown>
   ): void {
     let error: Error | undefined;
     let context: string | undefined;
@@ -104,7 +116,7 @@ class Logger {
 
     if (errorOrContextOrMetadata instanceof Error) {
       error = errorOrContextOrMetadata;
-      [context, meta] = this.parseArgs(contextOrMetadata, metadata);
+      [context, meta] = this.parseArgs(contextOrMetadata, _metadata);
     } else {
       [context, meta] = this.parseArgs(errorOrContextOrMetadata, contextOrMetadata as Record<string, unknown> | undefined);
     }
@@ -135,7 +147,7 @@ class Logger {
     message: string,
     errorOrContextOrMetadata?: Error | string | Record<string, unknown>,
     contextOrMetadata?: string | Record<string, unknown>,
-    metadata?: Record<string, unknown>
+    _metadata?: Record<string, unknown>
   ): void {
     let error: Error | undefined;
     let context: string | undefined;
@@ -143,7 +155,7 @@ class Logger {
 
     if (errorOrContextOrMetadata instanceof Error) {
       error = errorOrContextOrMetadata;
-      [context, meta] = this.parseArgs(contextOrMetadata, metadata);
+      [context, meta] = this.parseArgs(contextOrMetadata, _metadata);
     } else {
       [context, meta] = this.parseArgs(errorOrContextOrMetadata, contextOrMetadata as Record<string, unknown> | undefined);
     }
@@ -167,6 +179,58 @@ class Logger {
     this.processLog(entry);
     // Immediately flush fatal errors
     this.flush();
+  }
+
+  /**
+   * Log performance metrics
+   */
+  perf(metric: string, value: number, metadata?: Record<string, unknown>): void {
+    this.info(`Performance: ${metric} = ${value}ms`, 'Performance', {
+      metric,
+      value,
+      ...metadata,
+    });
+  }
+
+  /**
+   * Log lifecycle events
+   */
+  lifecycle(message: string, context?: string): void {
+    this.info(`Lifecycle: ${message}`, context);
+  }
+
+  /**
+   * Log performance data
+   */
+  performance(message: string, data: unknown, context?: string): void {
+    this.info(`Performance: ${message}`, context, { performanceData: data });
+  }
+
+  /**
+   * Group related log messages
+   */
+  group(label: string, fn?: () => void): void {
+    if (this.config.enableConsole && typeof console.group === 'function') {
+      console.group(label);
+      if (fn) {
+        try {
+          fn();
+        } finally {
+          console.groupEnd();
+        }
+      }
+    } else if (fn) {
+      fn();
+    }
+  }
+
+  /**
+   * End a console group
+   */
+  groupEnd(): void {
+    if (this.config.enableConsole && typeof console.groupEnd === 'function') {
+      console.groupEnd();
+    }
   }
 
   /**
@@ -214,36 +278,6 @@ class Logger {
 
     if (this.config.enableRemote) {
       this.startFlushTimer();
-    }
-  }
-
-  /**
-   * Log a performance metric
-   */
-  perf(metric: string, value: number, metadata?: Record<string, unknown>): void {
-    this.log(LogLevel.INFO, `[PERF] ${metric}: ${value.toFixed(2)}ms`, undefined, metadata);
-  }
-
-  /**
-   * Start a console group
-   */
-  group(label: string, fn: () => void): void {
-    if (this.config.enableConsole && typeof console.group === 'function') {
-      console.group(label);
-    }
-    try {
-      fn();
-    } finally {
-      this.groupEnd();
-    }
-  }
-
-  /**
-   * End a console group
-   */
-  groupEnd(): void {
-    if (this.config.enableConsole && typeof console.groupEnd === 'function') {
-      console.groupEnd();
     }
   }
 
@@ -368,7 +402,6 @@ class Logger {
  */
 class ContextLogger {
   constructor(private logger: Logger, private context: string) {}
-
   debug(message: string, metadata?: Record<string, unknown>): void {
     this.logger.debug(message, this.context, metadata);
   }
@@ -387,10 +420,36 @@ class ContextLogger {
 
   fatal(message: string, error?: Error, metadata?: Record<string, unknown>): void {
     this.logger.fatal(message, error, this.context, metadata);
+  debug(message: string, _metadata?: Record<string, unknown>): void {
+    this.logger.debug(message, this.context, _metadata);
   }
 
-  perf(metric: string, value: number, metadata?: Record<string, unknown>): void {
-    this.logger.perf(metric, value, { ...metadata, context: this.context });
+  info(message: string, _metadata?: Record<string, unknown>): void {
+    this.logger.info(message, this.context, _metadata);
+  }
+
+  warn(message: string, _metadata?: Record<string, unknown>): void {
+    this.logger.warn(message, this.context, _metadata);
+  }
+
+  error(message: string, error?: Error, _metadata?: Record<string, unknown>): void {
+    this.logger.error(message, error, this.context, _metadata);
+  }
+
+  fatal(message: string, error?: Error, metadata?: Record<string, unknown>): void {
+    this.logger.fatal(message, error, this.context, metadata);
+  }
+
+  perf(metric: string, value: number, _metadata?: Record<string, unknown>): void {
+    this.logger.perf(metric, value, { ..._metadata, context: this.context });
+  }
+
+  lifecycle(message: string, _metadata?: Record<string, unknown>): void {
+    this.logger.lifecycle(message, this.context);
+  }
+
+  performance(message: string, data: unknown, _metadata?: Record<string, unknown>): void {
+    this.logger.performance(message, data, this.context);
   }
 
   group(label: string, fn: () => void): void {
@@ -410,6 +469,12 @@ export const debug = (message: string, context?: string, metadata?: Record<strin
   logger.debug(message, context, metadata);
 export const info = (message: string, context?: string, metadata?: Record<string, unknown>) =>
   logger.info(message, context, metadata);
+export const warn = (message: string, context?: string, metadata?: Record<string, unknown>) =>
+  logger.warn(message, context, metadata);
+export const debug = (message: string, context?: string, _metadata?: Record<string, unknown>) =>
+  logger.debug(message, context, _metadata);
+export const info = (message: string, context?: string, _metadata?: Record<string, unknown>) =>
+  logger.info(message, context, _metadata);
 export const warn = (message: string, context?: string, metadata?: Record<string, unknown>) =>
   logger.warn(message, context, metadata);
 export const error = (
