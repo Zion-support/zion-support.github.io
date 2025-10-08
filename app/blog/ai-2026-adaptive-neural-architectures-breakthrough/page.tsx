@@ -1,11 +1,4 @@
 import React from 'react';
-
-const metadata = {
-  title: "AI 2026: Adaptive Neural Architectures - The Future of Enterprise AI | Zion Tech Group",
-  description: "Revolutionary adaptive neural architectures that self-evolve and optimize in real-time, delivering 1000x performance improvements and $25B+ enterprise value.",
-  keywords: 'adaptive neural networks, AI 2026, neural architecture, enterprise AI, machine learning, business transformation'
-};
-
 export default function AdaptiveNeuralArchitecturesPage() {
   return (
     <div className="min-h-screen bg-gray-50">

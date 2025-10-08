@@ -1,19 +1,4 @@
 import React from 'react';
-
-const metadata = {
-  title: 'April 2026 Ultimate AI Breakthrough Revolution: The Dawn of Universal Intelligence',
-  description: 'Discover the revolutionary AI breakthroughs of April 2026 that are transforming enterprise operations. Universal consciousness AI, quantum-neural superintelligence, and autonomous systems delivering unprecedented results.',
-  keywords: ['AI', 'Breakthrough', '2026', 'Enterprise', 'Quantum', 'Universal Intelligence', 'Autonomous', 'April'],
-  authors: [{ name: 'Zion Tech Group' }],
-  openGraph: {
-    title: 'April 2026 Ultimate AI Breakthrough Revolution: The Dawn of Universal Intelligence',
-    description: 'Discover the revolutionary AI breakthroughs of April 2026 that are transforming enterprise operations. Universal consciousness AI, quantum-neural superintelligence, and autonomous systems delivering unprecedented results.',
-    type: 'article',
-    authors: ['Zion Tech Group'],
-    tags: ['AI', 'Breakthrough', '2026', 'Enterprise', 'Quantum', 'Universal Intelligence', 'Autonomous'],
-  },
-};
-
 export default function April2026UltimateBreakthroughRevolution() {
   return (
     <div className="min-h-screen bg-gray-50">
