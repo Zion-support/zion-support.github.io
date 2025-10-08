@@ -5,10 +5,10 @@
 
 import React, { useState, useEffect, useCallback } from 'react';
 
-import { Link } from 'react-router-dom';import { errorHandler } from '../utils/enhancedErrorHandler';
+import { errorHandler } from '../utils/enhancedErrorHandler';
 
 // Collect basic performance metrics
-const collectPerformanceMetrics = () => {
+const _collectPerformanceMetrics = () => {
   if (typeof window === 'undefined' || !window.performance) return null;
   
   const navigation = window.performance.timing;

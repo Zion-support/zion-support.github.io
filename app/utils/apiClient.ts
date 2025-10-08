@@ -2,7 +2,6 @@
  * Enhanced API Client with retry logic, caching, and error handling
  */
 
-import React from 'react';
 import { cacheManager, CacheOptions } from './cacheManager';
 import { logError, logCritical } from './errorLogger';
 

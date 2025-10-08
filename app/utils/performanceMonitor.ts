@@ -3,7 +3,6 @@
  * Tracks and reports performance metrics with Web Vitals support
  */
 
-import React from 'react';
 import { logger } from './logger';
 import { analytics } from './analytics';
 
@@ -19,10 +18,30 @@ export interface PerformanceThresholds {
   needsImprovement: number;
 }
 
+// These interfaces are defined for future use but not currently used
+// interface _PerformancePaintTiming extends PerformanceEntry {
+//   name: 'first-paint' | 'first-contentful-paint';
+// }
+
+// interface _LargestContentfulPaint extends PerformanceEntry {
+//   renderTime: number;
+//   loadTime: number;
+//   size: number;
+//   id: string;
+//   url: string;
+//   element: Element | null;
+// }
+
+// interface _PerformanceEventTiming extends PerformanceEntry {
+//   processingStart: number;
+//   processingEnd: number;
+//   cancelable: boolean;
+//   target: EventTarget | null;
+// }
+
 // Extended types for specific performance entry types
-=======
+
 // Performance entry types are handled inline where needed
->>>>>>> cursor/fix-errors-and-merge-to-main-5c5e
 
 class PerformanceMonitor {
   private metrics: Map<string, PerformanceMetric> = new Map();
@@ -64,6 +83,7 @@ class PerformanceMonitor {
 
         // Largest Contentful Paint
         this.observeEntry('largest-contentful-paint', (entries) => {
+
           if (lastEntry) {
             this.recordMetric('LCP', lastEntry.renderTime || lastEntry.loadTime || lastEntry.startTime);
           }
@@ -71,6 +91,7 @@ class PerformanceMonitor {
 
         // First Input Delay
         this.observeEntry('first-input', (entries) => {
+
           if (firstInput && firstInput.processingStart !== undefined) {
             const fid = firstInput.processingStart - firstInput.startTime;
             this.recordMetric('FID', fid);

@@ -3,6 +3,20 @@
  * Tracks Web Vitals, custom metrics, and provides performance insights
  */
 
+// Import web vitals types
+interface LayoutShift extends PerformanceEntry {
+  value: number;
+  hadRecentInput: boolean;
+  lastInputTime: number;
+  sources: LayoutShiftAttribution[];
+}
+
+interface LayoutShiftAttribution {
+  node?: Node;
+  previousRect: DOMRectReadOnly;
+  currentRect: DOMRectReadOnly;
+}
+
 export interface PerformanceMetric {
   name: string;
   value: number;
@@ -25,6 +39,11 @@ export interface CustomMetric {
   unit: string;
   timestamp: number;
   tags?: Record<string, string>;
+}
+
+interface LayoutShift extends PerformanceEntry {
+  value: number;
+  hadRecentInput: boolean;
 }
 
 class PerformanceMonitor {
@@ -126,7 +145,7 @@ class PerformanceMonitor {
         return duration;
       }
     } catch (error) {
-//       console.warn('Failed to measure performance:', error);
+      console.warn('Failed to measure performance:', error);
     }
     return null;
   }
@@ -245,7 +264,7 @@ class PerformanceMonitor {
       clsObserver.observe({ entryTypes: ['layout-shift'] });
       this.observers.push(clsObserver);
     } catch (error) {
-//       console.warn('Failed to observe Web Vitals:', error);
+      console.warn('Failed to observe Web Vitals:', error);
     }
   }
 
@@ -311,7 +330,7 @@ class PerformanceMonitor {
       resourceObserver.observe({ entryTypes: ['resource'] });
       this.observers.push(resourceObserver);
     } catch (error) {
-//       console.warn('Failed to observe resource timing:', error);
+      console.warn('Failed to observe resource timing:', error);
     }
   }
 

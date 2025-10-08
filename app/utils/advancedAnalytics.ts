@@ -1,4 +1,3 @@
-import React from 'react';
 /**
  * Advanced Analytics System for Zion Tech Group Website
  * Provides comprehensive user behavior tracking and insights

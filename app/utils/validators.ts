@@ -1,4 +1,3 @@
-import React from 'react';
 /**
  * Validation Utilities
  * Provides common validation functions for forms and data

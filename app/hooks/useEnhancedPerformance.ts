@@ -3,7 +3,6 @@
  * Combines performance monitoring, error tracking, and analytics
  */
 
-import React from 'react';
 import { useEffect, useCallback, useRef } from 'react';
 import { errorTracker } from '../utils/enhancedErrorTracking';
 import { analytics } from '../utils/enhancedAnalytics';
@@ -100,7 +99,7 @@ export function useEnhancedPerformance(
 
   const measureOperation = useCallback(
     (operationName: string) => {
-      const markName = `${component}-${operationName}`;
+      const _markName = `${component}-${operationName}`;
       const startTime = performance.now();
 
       return {

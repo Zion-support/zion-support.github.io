@@ -22,22 +22,29 @@ import '../src/index.css';
 const App: React.FC = () => {
   useEffect(() => {
     // Initialize global error handling
-//     console.log('App initialized');
+    console.log('App initialized');
 
     // Initialize performance monitoring
     performanceOptimizer.lazyLoadImages();
     // Initialize Web Vitals monitoring
     if (typeof window !== 'undefined' && 'performance' in window) {
-//       const metrics = performanceOptimizer.measurePageLoad();
+      const metrics = performanceOptimizer.measurePageLoad();
       if (metrics) {
         performanceOptimizer.reportWebVitals(metrics);
       }
     }
 
-//     console.log('Performance monitoring initialized');
-//     console.log(
+<<<<<<< HEAD
+    console.log('Performance monitoring initialized');
+    console.log(
       '🚀 Zion Tech Group App initialized with comprehensive monitoring'
     );
+=======
+//     console.log('Performance monitoring initialized');
+//     console.log(
+//       '🚀 Zion Tech Group App initialized with comprehensive monitoring'
+//     );
+>>>>>>> cursor/fix-errors-and-merge-to-main-a0f3
   }, []);
 
   return (

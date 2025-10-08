@@ -2,13 +2,17 @@
  * Jest setup file for testing environment
  */
 
-import React from 'react';
 import '@testing-library/jest-dom';
 
+// Polyfill for TextEncoder/TextDecoder
+import { TextEncoder, TextDecoder } from 'util';
+global.TextEncoder = TextEncoder;
+global.TextDecoder = TextDecoder as any;
+
 // Suppress jsdom navigation warnings
-// eslint-disable-next-line no-console
+ 
 const originalConsoleError = console.error;
-// eslint-disable-next-line no-console
+ 
 console.error = (...args) => {
   const message = args[0]?.toString?.() || args[0]?.message || '';
   if (message.includes('Not implemented: navigation') || 

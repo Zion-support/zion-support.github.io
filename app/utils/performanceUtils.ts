@@ -4,10 +4,8 @@
  */
 
 import { lazy } from 'react';
-import React from 'react';
 
-
-import { Link } from 'react-router-dom';/**
+/**
  * Debounce function to limit execution rate
  */
 export function debounce<T extends (...args: unknown[]) => unknown>(
