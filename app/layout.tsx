@@ -17,9 +17,12 @@ export default function RootLayout({
     url: 'https://ziontechgroup.com',
     logo: 'https://ziontechgroup.com/logo.png',
     description: 'Leading provider of AI-powered enterprise solutions, automation, and digital transformation services.',
+    foundingDate: '2020',
+    numberOfEmployees: '50-100',
+    industry: 'Technology',
     contactPoint: {
       '@type': 'ContactPoint',
-      telephone: '+1-302-464-0950',
+      telephone: '+1-302-600-9898',
       contactType: 'Customer Service',
       areaServed: 'US',
       availableLanguage: 'en',
@@ -31,6 +34,11 @@ export default function RootLayout({
     address: {
       '@type': 'PostalAddress',
       addressCountry: 'US',
+    },
+    offers: {
+      '@type': 'Offer',
+      category: 'AI Solutions',
+      description: 'Enterprise AI solutions, digital transformation, and cloud services',
     },
   };
 
@@ -58,6 +66,26 @@ export default function RootLayout({
         <link rel='manifest' href='/site.webmanifest' />
         <meta name='theme-color' content='#4f46e5' />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
+        <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+        <meta name='googlebot' content='index, follow' />
+        <meta name='bingbot' content='index, follow' />
+        <meta name='author' content='Zion Tech Group' />
+        <meta name='publisher' content='Zion Tech Group' />
+        <meta name='copyright' content='Zion Tech Group' />
+        <meta name='language' content='en' />
+        <meta name='revisit-after' content='7 days' />
+        <meta name='distribution' content='global' />
+        <meta name='rating' content='general' />
+        <meta name='format-detection' content='telephone=yes' />
+        <meta name='mobile-web-app-capable' content='yes' />
+        <meta name='apple-mobile-web-app-capable' content='yes' />
+        <meta name='apple-mobile-web-app-status-bar-style' content='default' />
+        <meta name='apple-mobile-web-app-title' content='Zion Tech Group' />
+        <meta name='application-name' content='Zion Tech Group' />
+        <meta name='msapplication-TileColor' content='#4f46e5' />
+        <meta name='msapplication-config' content='/browserconfig.xml' />
+        <link rel='canonical' href='https://ziontechgroup.com' />
+        <link rel='alternate' hrefLang='en' href='https://ziontechgroup.com' />
         <script
           type='application/ld+json'
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}

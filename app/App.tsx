@@ -8,6 +8,12 @@ import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import PerformanceDashboard from './components/PerformanceDashboard';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
+import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
+import PerformanceOptimizer from './components/PerformanceOptimizer';
+import SEOEnhancer from './components/SEOEnhancer';
+import AdvancedErrorBoundary from './components/AdvancedErrorBoundary';
+import AdvancedPerformanceMonitor from './components/AdvancedPerformanceMonitor';
+import { LoadingSpinner } from './components/LoadingComponents';
 
 // Lazy load pages for better performance
 const HomePage = lazy(() => import('./page'));
