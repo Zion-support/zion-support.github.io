@@ -5,18 +5,6 @@ import { ArrowRight, Star, CheckCircle } from 'lucide-react';
 const ServicesPage: React.FC = () => {
   const serviceCategories = [
     {
-<<<<<<< HEAD
-      title: 'AI Solutions',
-      description:
-        'Advanced artificial intelligence solutions for enterprise automation and optimization.',
-      icon: '🤖',
-      features: [
-        'Machine Learning',
-        'Natural Language Processing',
-        'Computer Vision',
-        'Predictive Analytics',
-      ],
-=======
       title: 'Micro SAAS Solutions',
       description: 'Affordable, powerful AI-driven tools for modern businesses. Start from $79/month.',
       icon: '💻',
@@ -40,45 +28,27 @@ const ServicesPage: React.FC = () => {
       link: '/it-services',
       features: ['Cloud Infrastructure', 'Cybersecurity', 'DevOps & CI/CD', 'Database Administration'],
       price: 'Starting at $1,200/month'
->>>>>>> cursor/expand-services-advertise-and-build-project-f575
     },
     {
       title: 'Quantum Computing',
       description: 'Next-generation quantum computing capabilities for complex problem solving.',
       icon: '⚛️',
-<<<<<<< HEAD
-      features: ['Quantum Algorithms', 'Quantum Security', 'Optimization', 'Simulation'],
-=======
       link: '/quantum-computing',
       features: ['Quantum Algorithms', 'Quantum Security', 'Optimization', 'Simulation'],
       price: 'Custom Pricing'
->>>>>>> cursor/expand-services-advertise-and-build-project-f575
     },
     {
       title: 'Autonomous Systems',
       description: 'Self-managing and self-optimizing systems for enterprise operations.',
       icon: '🔄',
-<<<<<<< HEAD
-      features: [
-        'Self-Healing Infrastructure',
-        'Automated Operations',
-        'Intelligent Monitoring',
-        'Adaptive Learning',
-      ],
-=======
       link: '/autonomous-systems',
       features: ['Self-Healing Infrastructure', 'Automated Operations', 'Intelligent Monitoring', 'Adaptive Learning'],
       price: 'Starting at $2,500/month'
->>>>>>> cursor/expand-services-advertise-and-build-project-f575
     },
     {
       title: 'Business Intelligence',
       description: 'Data-driven insights and analytics for strategic decision making.',
       icon: '📊',
-<<<<<<< HEAD
-      features: ['Real-time Analytics', 'Data Visualization', 'Reporting', 'Dashboard Creation'],
-    },
-=======
       link: '/business-intelligence',
       features: ['Real-time Analytics', 'Data Visualization', 'Reporting', 'Dashboard Creation'],
       price: 'Starting at $1,800/month'
@@ -86,7 +56,6 @@ const ServicesPage: React.FC = () => {
   ];
 
   const additionalServices = [
->>>>>>> cursor/expand-services-advertise-and-build-project-f575
     {
       title: 'Cloud Migration',
       description: 'Seamless cloud transformation with zero downtime and cost optimization.',
@@ -131,7 +100,6 @@ const ServicesPage: React.FC = () => {
   ];
 
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-slate-50 py-16">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
@@ -143,118 +111,64 @@ const ServicesPage: React.FC = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service, index) => (
+          {serviceCategories.map((service, index) => (
             <div
               key={index}
-              className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow"
+              className={`bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow ${
+                service.popular ? 'ring-2 ring-blue-500' : ''
+              }`}
             >
+              {service.popular && (
+                <div className="flex items-center justify-center mb-4">
+                  <Star className="w-5 h-5 text-yellow-500 mr-1" />
+                  <span className="text-sm font-semibold text-yellow-600">Most Popular</span>
+                </div>
+              )}
               <div className="text-4xl mb-4">{service.icon}</div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">{service.title}</h3>
               <p className="text-gray-600 mb-4">{service.description}</p>
-              <ul className="space-y-2">
+              <div className="text-2xl font-bold text-blue-600 mb-4">{service.price}</div>
+              <ul className="space-y-2 mb-6">
                 {service.features.map((feature, featureIndex) => (
                   <li key={featureIndex} className="flex items-center text-sm text-gray-500">
-                    <span className="w-2 h-2 bg-blue-500 rounded-full mr-2"></span>
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
                     {feature}
                   </li>
                 ))}
               </ul>
-=======
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
-      {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-20">
-        <div className="absolute inset-0 bg-black opacity-20"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Our Services
-            </h1>
-            <p className="text-xl md:text-2xl mb-8 text-blue-100 max-w-3xl mx-auto">
-              Comprehensive AI, IT, and micro SAAS solutions designed to transform your business
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors">
-                Get Free Consultation
-              </button>
-              <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
-                View All Services
-              </button>
->>>>>>> cursor/expand-services-advertise-and-build-project-f575
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Main Service Categories */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Service Categories
-            </h2>
-            <p className="text-xl text-gray-600">
-              Choose from our comprehensive range of technology solutions
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {serviceCategories.map((service, index) => (
-              <div key={index} className={`bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow relative ${service.popular ? 'ring-2 ring-blue-500' : ''}`}>
-                {service.popular && (
-                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-blue-500 text-white px-4 py-1 rounded-full text-sm font-semibold flex items-center">
-                      <Star className="w-4 h-4 mr-1" />
-                      Most Popular
-                    </span>
-                  </div>
-                )}
-                <div className="text-4xl mb-4">{service.icon}</div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">{service.title}</h3>
-                <p className="text-gray-600 mb-4">{service.description}</p>
-                <div className="mb-4">
-                  <span className="text-2xl font-bold text-blue-600">{service.price}</span>
-                </div>
-                <ul className="space-y-2 mb-6">
-                  {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-sm text-gray-600">
-                      <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-                <Link 
+              {service.link && (
+                <Link
                   to={service.link}
-                  className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors inline-flex items-center justify-center"
+                  className="inline-flex items-center text-blue-600 hover:text-blue-800 font-semibold"
                 >
-                  Learn More
-                  <ArrowRight className="w-4 h-4 ml-2" />
+                  Learn More <ArrowRight className="w-4 h-4 ml-1" />
                 </Link>
-              </div>
-            ))}
-          </div>
+              )}
+            </div>
+          ))}
         </div>
-      </section>
 
-      {/* Additional Services */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Additional Services Section */}
+        <div className="mt-20">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Additional Services
-            </h2>
-            <p className="text-xl text-gray-600">
-              Specialized solutions for specific business needs
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Additional Services</h2>
+            <p className="text-lg text-gray-600">
+              Comprehensive solutions to support your digital transformation journey
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {additionalServices.map((service, index) => (
-              <div key={index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
+              <div
+                key={index}
+                className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow"
+              >
                 <div className="text-4xl mb-4">{service.icon}</div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">{service.title}</h3>
                 <p className="text-gray-600 mb-4">{service.description}</p>
                 <ul className="space-y-2">
                   {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-sm text-gray-600">
-                      <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                    <li key={featureIndex} className="flex items-center text-sm text-gray-500">
+                      <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
                       {feature}
                     </li>
                   ))}
@@ -263,36 +177,7 @@ const ServicesPage: React.FC = () => {
             ))}
           </div>
         </div>
-      </section>
-
-      {/* Contact Section */}
-      <section className="py-16 bg-gradient-to-r from-blue-600 to-indigo-600 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Ready to Transform Your Business?
-          </h2>
-          <p className="text-xl mb-8 text-blue-100">
-            Contact us today for a free consultation and custom solution recommendations
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a 
-              href="tel:+13024640950"
-              className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors inline-flex items-center"
-            >
-              📞 +1 302 464 0950
-            </a>
-            <a 
-              href="mailto:kleber@ziontechgroup.com"
-              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
-            >
-              ✉️ kleber@ziontechgroup.com
-            </a>
-          </div>
-          <div className="mt-8 text-sm text-blue-200">
-            <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
-          </div>
-        </div>
-      </section>
+      </div>
     </div>
   );
 };

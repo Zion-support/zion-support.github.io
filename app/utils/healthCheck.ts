@@ -210,7 +210,7 @@ class HealthCheckService {
     } catch (error) {
       return {
         name: 'performance',
-        status: 'warn'
+        status: 'warn',
         message: 'Could not check performance'
       }
     }
@@ -220,10 +220,10 @@ class HealthCheckService {
    */
   private checkBrowserAPIs(): HealthCheck {
     const requiredAPIs = [
-      'fetch'
-      'localStorage'
-      'sessionStorage'
-      'console'
+      'fetch',
+      'localStorage',
+      'sessionStorage',
+      'console',
       'navigator'
     ]
 
@@ -237,15 +237,15 @@ class HealthCheckService {
 
     if (missingAPIs.length > 0) {
       return {
-        name: 'browser-apis'
-        status: 'warn'
-        message: `Missing browser APIs: ${missingAPIs.join(', ')}`
+        name: 'browser-apis',
+        status: 'warn',
+        message: `Missing browser APIs: ${missingAPIs.join(', ')}`,
         details: { missingAPIs }
       }
     }
     return {
-      name: 'browser-apis'
-      status: 'pass'
+      name: 'browser-apis',
+      status: 'pass',
       message: 'All required browser APIs available'
     }
   }
@@ -264,8 +264,8 @@ class HealthCheckService {
 
       if (retrieved !== testValue) {
         return {
-          name: 'storage'
-          status: 'fail'
+          name: 'storage',
+          status: 'fail',
           message: 'LocalStorage not working correctly'
         }
       }
@@ -275,24 +275,22 @@ class HealthCheckService {
         localStorage.setItem('_size_test', testData)
         localStorage.removeItem('_size_test')
 
-      } catch {
       } catch (error) {
         return {
-          name: 'storage'
-          status: 'warn'
+          name: 'storage',
+          status: 'warn',
           message: 'LocalStorage space limited'
         }
       }
       return {
-        name: 'storage'
-        status: 'pass'
+        name: 'storage',
+        status: 'pass',
         message: 'Storage working correctly'
       }
-    } catch {
     } catch (error) {
       return {
-        name: 'storage'
-        status: 'fail'
+        name: 'storage',
+        status: 'fail',
         message: 'LocalStorage not available'
       }
     }

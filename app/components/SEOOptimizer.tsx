@@ -2,25 +2,17 @@
 
 import React, { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 
-<<<<<<< HEAD
-const SEOOptimizer: React.FC = () => {
-  const pathname = useLocation().pathname;
+interface SEOOptimizerProps {
+  children: React.ReactNode;
+  title?: string;
+  description?: string;
+  keywords?: string;
+  canonicalUrl?: string;
+  structuredData?: any;
+}
 
-  useEffect(() => {
-    // Update page title based on route
-    const titles: Record<string, string> = {
-      '/': 'Zion Tech Group - Advanced AI and IT Solutions',
-      '/services': 'Services - Zion Tech Group',
-      '/about': 'About Us - Zion Tech Group',
-      '/contact': 'Contact - Zion Tech Group',
-    };
-
-    document.title = titles[pathname || '/'] || 'Zion Tech Group';
-  }, [pathname]);
-
-  return null;
-=======
 const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   children,
   title = "Zion Tech Group - Advanced AI and IT Solutions",
@@ -91,7 +83,6 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
       {children}
     </>
   );
->>>>>>> cursor/website-audit-and-content-update-7e9e
 };
 
 export default SEOOptimizer;
