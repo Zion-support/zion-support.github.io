@@ -2,13 +2,6 @@ import React, { useCallback, useState, useEffect, Suspense, lazy, memo } from 'r
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 
-// Import components
-import ContentPromotionBanner from './components/ContentPromotionBanner';
-import ContentCarousel from './components/ContentCarousel';
-import DynamicContentShowcase from './components/DynamicContentShowcase';
-import ContentStatistics from './components/ContentStatistics';
-import ContentNewsletterSignup from './components/ContentNewsletterSignup';
-
 // Dynamically import heavy components for better performance
 const ContentPromotionBanner = lazy(() => import('./components/ContentPromotionBanner'));
 const ContentCarousel = lazy(() => import('./components/ContentCarousel'));
