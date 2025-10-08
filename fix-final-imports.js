@@ -10,42 +10,26 @@ function processFile(filePath) {
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
 
-    // Fix remaining import path issues for root-level files
+    // Fix remaining import path issues
     const replacements = [
-      // Fix root-level files that should use relative paths
-      {
-        pattern: /import\s+Link\s+from\s+'\.\.\/\.\.\/utils\/link';/g,
-        replacement: "import Link from './utils/link';"
-      },
-      {
-        pattern: /import\s+Image\s+from\s+'\.\.\/\.\.\/utils\/image';/g,
-        replacement: "import Image from './utils/image';"
-      },
-      {
-        pattern: /import\s+dynamic\s+from\s+'\.\.\/\.\.\/utils\/dynamic';/g,
-        replacement: "import dynamic from './utils/dynamic';"
-      },
+      // Fix SEOOptimizer component
       {
         pattern: /import\s+{\s*useRouter\s*}\s+from\s+'\.\.\/\.\.\/utils\/navigation';/g,
-        replacement: "import { useRouter } from './utils/navigation';"
+        replacement: "import { useRouter } from '../utils/navigation';"
       },
+      // Fix root-level files
       {
-        pattern: /import\s+{\s*Metadata\s*}\s+from\s+'\.\.\/\.\.\/types\/next';/g,
+        pattern: /import\s+{\s*Metadata\s*}\s+from\s+'\.\/types\/next';/g,
         replacement: "import { Metadata } from './types/next';"
       },
       {
-        pattern: /import\s+{\s*MetadataRoute\s*}\s+from\s+'\.\.\/\.\.\/types\/next';/g,
-        replacement: "import { MetadataRoute } from './types/next';"
+        pattern: /import\s+Link\s+from\s+'\.\/utils\/link';/g,
+        replacement: "import Link from './utils/link';"
       },
-      // Fix keywords type issues - convert string to array
+      // Fix MetadataRoute namespace issue
       {
-        pattern: /keywords:\s*'([^']+)',/g,
-        replacement: "keywords: ['$1'],"
-      },
-      // Fix authors property placement
-      {
-        pattern: /openGraph:\s*\{([^}]+)authors:\s*\[([^\]]+)\],([^}]+)\}/g,
-        replacement: "openGraph: {$1$3, authors: [$2]}"
+        pattern: /MetadataRoute\./g,
+        replacement: "MetadataRoute"
       }
     ];
 
@@ -58,7 +42,7 @@ function processFile(filePath) {
 
     if (modified) {
       fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed: ${filePath}`);
+      console.log(`Fixed final imports: ${filePath}`);
       return true;
     }
     return false;
@@ -90,6 +74,6 @@ function processDirectory(dirPath) {
 
 // Process the app directory
 const appDir = path.join(__dirname, 'app');
-console.log('Fixing final import and type issues...');
+console.log('Fixing final import issues...');
 const fixedCount = processDirectory(appDir);
 console.log(`Fixed ${fixedCount} files`);

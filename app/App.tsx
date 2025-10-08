@@ -1,4 +1,4 @@
-'use client';
+// // 'use client'; // Removed for Vite compatibility // Removed for Vite compatibility
 
 import React, { Suspense, lazy, useEffect, useCallback } from 'react';
 import { HelmetProvider } from 'react-helmet-async';
