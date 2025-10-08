@@ -1,4 +1,4 @@
-import { Menu, X } from 'lucide-react';
+import { Home, Menu, Settings, X } from 'lucide-react';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
@@ -28,7 +28,7 @@ const SidebarNavigation: React.FC = () => {
         
         <nav className='px-4 space-y-2'>
           {navigationItems.map(item => {
-            const IconComponent = item.icon;
+//             const IconComponent = item.icon;
             return (
               <Link
                 key={item.name}

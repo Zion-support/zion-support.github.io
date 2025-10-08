@@ -1,7 +1,6 @@
-// // 'use client'; // Removed for Vite compatibility // Removed for Vite compatibility
+'use client';
 
 import React, { useEffect, useState } from 'react';
-import { logger } from '../utils/logger';
 
 /**
  * PWA Installer Component
@@ -31,7 +30,7 @@ const PWAInstaller: React.FC = () => {
       navigator.serviceWorker
         .register('/service-worker.js')
         .then((registration) => {
-          // Service Worker registered
+//           console.log('Service Worker registered:', registration);
 
           // Check for updates periodically
           setInterval(() => {
@@ -55,8 +54,7 @@ const PWAInstaller: React.FC = () => {
           });
         })
         .catch((error) => {
-          logger.error('Service Worker registration failed:', error);
-
+//           console.error('Service Worker registration failed:', error);
         });
 
       // Listen for controller change
@@ -81,7 +79,7 @@ const PWAInstaller: React.FC = () => {
 
     // Listen for successful installation
     window.addEventListener('appinstalled', () => {
-      // PWA installed successfully
+//       console.log('PWA installed successfully');
       setIsInstalled(true);
       setShowPrompt(false);
       setDeferredPrompt(null);
@@ -104,9 +102,9 @@ const PWAInstaller: React.FC = () => {
     const choiceResult = await deferredPrompt.userChoice;
 
     if (choiceResult.outcome === 'accepted') {
-      // User accepted the install prompt
+//       console.log('User accepted the install prompt');
     } else {
-      // User dismissed the install prompt
+//       console.log('User dismissed the install prompt');
     }
 
     // Clear the deferred prompt

@@ -62,8 +62,7 @@ class AnalyticsTracker {
 
       // Also log to console in development
       if (process.env.NODE_ENV === 'development') {
-        logger.info('[Analytics Event]', event);
-
+//         console.log('[Analytics Event]', event);
       }
     };
 
@@ -90,8 +89,7 @@ class AnalyticsTracker {
       }
 
       if (process.env.NODE_ENV === 'development') {
-        logger.info('[Analytics Page View]', path);
-
+//         console.log('[Analytics Page View]', path);
       }
     };
 
@@ -119,8 +117,7 @@ class AnalyticsTracker {
       }
 
       if (process.env.NODE_ENV === 'development') {
-        logger.info('[Analytics Performance]', metrics);
-
+//         console.log('[Analytics Performance]', metrics);
       }
     };
 
@@ -147,8 +144,7 @@ class AnalyticsTracker {
       }
 
       // Always log errors to console
-      logger.error('[Analytics Error]', error);
-
+//       console.error('[Analytics Error]', error);
     };
 
     if (this.isInitialized) {
@@ -175,8 +171,7 @@ class AnalyticsTracker {
       }
 
       if (process.env.NODE_ENV === 'development') {
-        logger.info('[Analytics Timing]', { category, variable, value, label });
-
+//         console.log('[Analytics Timing]', { category, variable, value, label });
       }
     };
 
@@ -203,8 +198,7 @@ class AnalyticsTracker {
       }
 
       if (process.env.NODE_ENV === 'development') {
-        logger.info('[Analytics Conversion]', { conversionId, value });
-
+//         console.log('[Analytics Conversion]', { conversionId, value });
       }
     };
 

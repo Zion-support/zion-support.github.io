@@ -51,16 +51,15 @@ class AdvancedCache<T = unknown> {
     if (typeof window === 'undefined') return;
 
     try {
-      const storage = this.getStorage();
-      const data = storage?.getItem(this.storageKey);
+//       const storage = this.getStorage();
+//       const data = storage?.getItem(this.storageKey);
       if (data) {
         const parsed = JSON.parse(data);
         this.cache = new Map(Object.entries(parsed.cache));
         this.accessOrder = parsed.accessOrder || [];
       }
     } catch (error) {
-      logger.warn('Failed to load cache from storage:', error);
-
+//       console.warn('Failed to load cache from storage:', error);
     }
   }
 
@@ -68,15 +67,14 @@ class AdvancedCache<T = unknown> {
     if (typeof window === 'undefined' || this.options.storage === 'memory') return;
 
     try {
-      const storage = this.getStorage();
+//       const storage = this.getStorage();
       const data = {
         cache: Object.fromEntries(this.cache.entries()),
         accessOrder: this.accessOrder,
       };
       storage?.setItem(this.storageKey, JSON.stringify(data));
     } catch (error) {
-      logger.warn('Failed to save cache to storage:', error);
-
+//       console.warn('Failed to save cache to storage:', error);
     }
   }
 
@@ -92,7 +90,7 @@ class AdvancedCache<T = unknown> {
   }
 
   public set(key: string, value: T, ttl?: number): void {
-    const expiry = Date.now() + (ttl || this.options.ttl);
+//     const expiry = Date.now() + (ttl || this.options.ttl);
 
     // Check if we need to evict
     if (this.cache.size >= this.options.maxSize && !this.cache.has(key)) {
@@ -161,7 +159,7 @@ class AdvancedCache<T = unknown> {
     this.accessOrder = [];
 
     if (this.options.storage !== 'memory') {
-      const storage = this.getStorage();
+//       const storage = this.getStorage();
       storage?.removeItem(this.storageKey);
     }
   }
@@ -174,7 +172,7 @@ class AdvancedCache<T = unknown> {
   }
 
   private removeFromAccessOrder(key: string): void {
-    const index = this.accessOrder.indexOf(key);
+//     const index = this.accessOrder.indexOf(key);
     if (index > -1) {
       this.accessOrder.splice(index, 1);
     }
@@ -183,7 +181,7 @@ class AdvancedCache<T = unknown> {
   private evictLRU(): void {
     // Remove least recently used (first in array)
     if (this.accessOrder.length > 0) {
-      const lruKey = this.accessOrder[0];
+//       const lruKey = this.accessOrder[0];
       this.delete(lruKey);
     }
   }
@@ -242,12 +240,12 @@ class AdvancedCache<T = unknown> {
     fetcher: () => Promise<R>,
     ttl?: number
   ): Promise<R> {
-    const cached = this.get(key);
+//     const cached = this.get(key);
     if (cached !== null) {
       return cached as unknown as R;
     }
 
-    const value = await fetcher();
+//     const value = await fetcher();
     this.set(key, value, ttl);
     return value;
   }

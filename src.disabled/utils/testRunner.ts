@@ -47,7 +47,7 @@ class TestRunner {
     name: string,
     testFn: TestFunction
   ): Promise<TestResult> {
-    const startTime = performance.now();
+//     const startTime = performance.now();
     const result: TestResult = {
       name: `${this.currentSuite}: ${name}`,
       passed: false,
@@ -80,10 +80,10 @@ class TestRunner {
     failed: number;
     duration: number;
   } {
-    const total = this.results.length;
-    const passed = this.results.filter(r => r.passed).length;
-    const failed = total - passed;
-    const duration = this.results.reduce((sum, r) => sum + r.duration, 0);
+//     const total = this.results.length;
+//     const passed = this.results.filter(r => r.passed).length;
+//     const failed = total - passed;
+//     const duration = this.results.reduce((sum, r) => sum + r.duration, 0);
 
     return { total, passed, failed, duration };
   }

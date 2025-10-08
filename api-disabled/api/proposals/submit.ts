@@ -13,11 +13,11 @@ async function submitByEmail(
   text: string,
   attachments: unknown[] = []
 ) {
-  const host = process.env.EMAIL_HOST;
-  const port = Number(process.env.EMAIL_PORT || 587);
-  const user = process.env.EMAIL_USER;
-  const pass = process.env.EMAIL_PASS;
-  const from = process.env.EMAIL_FROM || user;
+//   const host = process.env.EMAIL_HOST;
+//   const port = Number(process.env.EMAIL_PORT || 587);
+//   const user = process.env.EMAIL_USER;
+//   const pass = process.env.EMAIL_PASS;
+//   const from = process.env.EMAIL_FROM || user;
 
   if (!host || !user || !pass) {
     throw new Error('Email not configured');
@@ -61,8 +61,8 @@ export default async function handler(
 
     // Email submission
     if (channels.includes('email')) {
-      const to = emailTo || process.env.UN_GATEWAY_EMAIL || 'example@un.org';
-      const subject = `[Proposal] ${meta.title} - ${meta.targetInstitution}`;
+//       const to = emailTo || process.env.UN_GATEWAY_EMAIL || 'example@un.org';
+//       const subject = `[Proposal] ${meta.title} - ${meta.targetInstitution}`;
       const text = `Please find the proposal attached.
 
 Title: ${meta.title}

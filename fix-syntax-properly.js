@@ -36,21 +36,21 @@ function fixCorruptedSyntax(content) {
   content = content.replace(
     /exp, o, r, t\s+defa, u, l, t\s+f, u, n, c, t, i, o, n\s+([^(]+)/g,
     (match, funcName) => {
-      const cleaned = funcName.replace(/,/g, '').replace(/\s+/g, ' ').trim();
+//       const cleaned = funcName.replace(/,/g, '').replace(/\s+/g, ' ').trim();
       return `export default function ${cleaned}`;
     }
   );
 
   //Fix string literals in metadata
   content = content.replace(/ti, t, l, e:\s*'([^']+)'/g, (match, title) => {
-    const cleaned = title.replace(/,/g, '').replace(/\s+/g, ' ').trim();
+//     const cleaned = title.replace(/,/g, '').replace(/\s+/g, ' ').trim();
     return `title: '${cleaned}'`;
   });
 
   content = content.replace(
     /desc r i p t, i, o, n:\s*'([^']+)'/g,
     (match, description) => {
-      const cleaned = description.replace(/,/g, '').replace(/\s+/g, ' ').trim();
+//       const cleaned = description.replace(/,/g, '').replace(/\s+/g, ' ').trim();
       return `description: '${cleaned}'`;
     }
   );
@@ -59,13 +59,13 @@ function fixCorruptedSyntax(content) {
   content = content.replace(
     /cl a s s N a m e\s*=\s*'([^']+)'/g,
     (match, className) => {
-      const cleaned = className.replace(/,/g, '').replace(/\s+/g, ' ').trim();
+//       const cleaned = className.replace(/,/g, '').replace(/\s+/g, ' ').trim();
       return `className='${cleaned}'`;
     }
   );
 
   content = content.replace(/h r e f\s*=\s*'([^']+)'/g, (match, href) => {
-    const cleaned = href.replace(/,/g, '').replace(/\s+/g, ' ').trim();
+//     const cleaned = href.replace(/,/g, '').replace(/\s+/g, ' ').trim();
     return `href='${cleaned}'`;
   });
 
@@ -106,14 +106,14 @@ function fixCorruptedSyntax(content) {
 
 //Function to find all corrupted blog files
 function findCorruptedFiles() {
-  const blogDir = path.join(process.cwd(), 'app', 'blog');
+//   const blogDir = path.join(process.cwd(), 'app', 'blog');
   const corruptedFiles = [];
 
-  function walkDir(dir) {
+  function walkDir(_dir) {
     const files = fs.readdirSync(dir);
 
     for (const file of files) {
-      const filePath = path.join(dir, file);
+//       const filePath = path.join(dir, file);
       const stat = fs.statSync(filePath);
 
       if (stat.isDirectory()) {
@@ -137,31 +137,31 @@ function findCorruptedFiles() {
 
 // Main function
 function main() {
-  console.log('🔍 Finding corrupted blog files...');
+//   console.log('🔍 Finding corrupted blog files...');
   const corruptedFiles = findCorruptedFiles();
 
-  console.log(`Found ${corruptedFiles.length} corrupted files`);
+//   console.log(`Found ${corruptedFiles.length} corrupted files`);
 
   if (corruptedFiles.length === 0) {
-    console.log('✅ No corrupted files found');
+//     console.log('✅ No corrupted files found');
     return;
   }
 
-  console.log('🔧 Fixing corrupted files...');
+//   console.log('🔧 Fixing corrupted files...');
 
   for (const filePath of corruptedFiles) {
     try {
-      console.log(`Fixing: ${filePath}`);
+//       console.log(`Fixing: ${filePath}`);
       const content = fs.readFileSync(filePath, 'utf8');
-      const fixedContent = fixCorruptedSyntax(content);
+//       const fixedContent = fixCorruptedSyntax(content);
       fs.writeFileSync(filePath, fixedContent);
-      console.log(`✅ Fixed: ${filePath}`);
+//       console.log(`✅ Fixed: ${filePath}`);
     } catch (error) {
-      console.error(`❌ Error fixing ${filePath}:`, error.message);
+//       console.error(`❌ Error fixing ${filePath}:`, error.message);
     }
   }
 
-  console.log('🎉 All files have been processed');
+//   console.log('🎉 All files have been processed');
 }
 
 main();

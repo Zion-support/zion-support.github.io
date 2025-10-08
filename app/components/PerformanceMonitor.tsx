@@ -29,16 +29,15 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   const [performanceScore, setPerformanceScore] = useState(100);
 
   useEffect(() => {
-    const _reportWebVitals = (metric: { name: string; value: number }) => {
+    const reportWebVitals = (metric: { name: string; value: number }) => {
       // Log to console in development (only on client side)
       if (typeof window !== 'undefined' && enableConsoleLogging) {
-         
-    console.log('Web Vital:', metric.name, metric.value);
+//         console.log('Web Vital:', metric.name, metric.value);
       }
     };
 
     // Monitor Core Web Vitals
-    const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming | undefined;
+//     const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming | undefined;
     const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number } }).memory;
     
     const getPerformanceScore = (): number => {
@@ -59,17 +58,15 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       
       setMetrics(currentMetrics);
       
-      const score = getPerformanceScore();
+//       const score = getPerformanceScore();
       setPerformanceScore(score);
       
       if (enableConsoleLogging) {
         if (typeof console !== 'undefined') {
-          console.group('Performance Metrics');
-           
-    console.debug('Metrics', { metrics: currentMetrics });
-           
-    console.debug('Score', { score });
-          console.groupEnd();
+//           console.group('Performance Metrics');
+//           console.debug('Metrics', { metrics: currentMetrics });
+//           console.debug('Score', { score });
+//           console.groupEnd();
         }
       }
       
@@ -82,7 +79,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     updateMetrics();
 
     // Set up interval for continuous monitoring
-    const interval = setInterval(updateMetrics, updateInterval);
+//     const interval = setInterval(updateMetrics, updateInterval);
 
     return () => clearInterval(interval);
   }, [onMetricsUpdate, enableConsoleLogging, updateInterval, metrics.renderTime, metrics.loadTime, metrics.memoryUsage]);

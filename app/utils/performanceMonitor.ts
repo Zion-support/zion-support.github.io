@@ -89,7 +89,7 @@ class PerformanceMonitor {
         this.observeEntry('first-input', (__entries) => {
           const firstInput = entries[0] as any;
           if (firstInput && firstInput.processingStart !== undefined) {
-            const fid = firstInput.processingStart - firstInput.startTime;
+//             const fid = firstInput.processingStart - firstInput.startTime;
             this.recordMetric('FID', fid);
           }
         });
@@ -143,23 +143,23 @@ class PerformanceMonitor {
           
           if (navigationEntry) {
             // Time to First Byte
-            const ttfb = navigationEntry.responseStart - navigationEntry.requestStart;
+//             const ttfb = navigationEntry.responseStart - navigationEntry.requestStart;
             this.recordMetric('TTFB', ttfb);
 
             // DOM Content Loaded
-            const dcl = navigationEntry.domContentLoadedEventEnd - navigationEntry.fetchStart;
+//             const dcl = navigationEntry.domContentLoadedEventEnd - navigationEntry.fetchStart;
             this.recordMetric('DCL', dcl);
 
             // Load Complete
-            const load = navigationEntry.loadEventEnd - navigationEntry.fetchStart;
+//             const load = navigationEntry.loadEventEnd - navigationEntry.fetchStart;
             this.recordMetric('Load', load);
 
             // DNS Lookup
-            const dns = navigationEntry.domainLookupEnd - navigationEntry.domainLookupStart;
+//             const dns = navigationEntry.domainLookupEnd - navigationEntry.domainLookupStart;
             this.recordMetric('DNS', dns);
 
             // TCP Connection
-            const tcp = navigationEntry.connectEnd - navigationEntry.connectStart;
+//             const tcp = navigationEntry.connectEnd - navigationEntry.connectStart;
             this.recordMetric('TCP', tcp);
           }
         }, 0);
@@ -176,7 +176,7 @@ class PerformanceMonitor {
         const observer = new PerformanceObserver((__list) => {
           list.getEntries().forEach((__entry) => {
             if (entry.entryType === 'resource') {
-              const resourceEntry = entry as PerformanceResourceTiming;
+//               const resourceEntry = entry as PerformanceResourceTiming;
               this.trackResourceLoad(resourceEntry);
             }
           });
@@ -193,8 +193,8 @@ class PerformanceMonitor {
    * Track individual resource load performance
    */
   private trackResourceLoad(entry: PerformanceResourceTiming): void {
-    const duration = entry.duration;
-    const type = this.getResourceType(entry.name);
+//     const duration = entry.duration;
+//     const type = this.getResourceType(entry.name);
 
     // Only track slow resources
     if (duration > 1000) {
@@ -222,7 +222,7 @@ class PerformanceMonitor {
    * Get resource type from URL
    */
   private getResourceType(url: string): string {
-    const extension = url.split('.').pop()?.toLowerCase();
+//     const extension = url.split('.').pop()?.toLowerCase();
     const typeMap: Record<string, string> = {
       js: 'script',
       css: 'style',
@@ -244,7 +244,7 @@ class PerformanceMonitor {
    * Record a performance metric
    */
   recordMetric(name: string, value: number): void {
-    const rating = this.getRating(name, value);
+//     const rating = this.getRating(name, value);
     const metric: PerformanceMetric = {
       name,
       value,
@@ -331,11 +331,11 @@ class PerformanceMonitor {
    * Time an async function
    */
   async timeAsync<T>(name: string, fn: () => Promise<T>): Promise<T> {
-    const startMark = `${name}-start`;
+//     const startMark = `${name}-start`;
     this.mark(startMark);
     
     try {
-      const result = await fn();
+//       const result = await fn();
       this.measure(name, startMark);
       return result;
     } catch (error) {
@@ -348,11 +348,11 @@ class PerformanceMonitor {
    * Time a synchronous function
    */
   time<T>(name: string, fn: () => T): T {
-    const startMark = `${name}-start`;
+//     const startMark = `${name}-start`;
     this.mark(startMark);
     
     try {
-      const result = fn();
+//       const result = fn();
       this.measure(name, startMark);
       return result;
     } catch (error) {

@@ -2,10 +2,10 @@
 
 import fs from 'fs';
 
-console.log('🔧 Fixing usePerformance.ts syntax errors...');
+// console.log('🔧 Fixing usePerformance.ts syntax errors...');
 
 // Read the file
-const content = fs.readFileSync('src/hooks/usePerformance.ts', 'utf8');
+// const content = fs.readFileSync('src/hooks/usePerformance.ts', 'utf8');
 
 // Fix the duplicate analytics definitions and syntax errors
 const fixedContent = `/**
@@ -79,8 +79,8 @@ export const useComponentPerformance = (componentName: string) => {
     renderCount.current += 1;
 
     return () => {
-      const endTime = performance.now();
-      const renderTime = endTime - startTime.current;
+//       const endTime = performance.now();
+//       const renderTime = endTime - startTime.current;
       
       analytics.trackPerformance(\`\${componentName}_render\`, renderTime);
       analytics.track('component_performance', 'render', componentName, undefined, renderTime);
@@ -103,7 +103,7 @@ export const useInteractionPerformance = () => {
   const trackClick = useCallback((element: string) => {
     const startTime = performance.now();
     return () => {
-      const duration = performance.now() - startTime;
+//       const duration = performance.now() - startTime;
       trackInteraction('click', element, duration);
     };
   }, [trackInteraction]);
@@ -111,7 +111,7 @@ export const useInteractionPerformance = () => {
   const trackHover = useCallback((element: string) => {
     const startTime = performance.now();
     return () => {
-      const duration = performance.now() - startTime;
+//       const duration = performance.now() - startTime;
       trackInteraction('hover', element, duration);
     };
   }, [trackInteraction]);
@@ -144,7 +144,7 @@ export const useMemoryMonitoring = () => {
     };
 
     // Check memory every 30 seconds
-    const interval = setInterval(checkMemory, 30000);
+//     const interval = setInterval(checkMemory, 30000);
     
     // Initial check
     checkMemory();
@@ -207,7 +207,7 @@ export const useScrollPerformance = () => {
 
     const handleScrollEnd = () => {
       if (isScrolling.current) {
-        const scrollDuration = performance.now() - scrollStartTime.current;
+//         const scrollDuration = performance.now() - scrollStartTime.current;
         analytics.trackPerformance('scroll_duration', scrollDuration);
         analytics.track('user_interaction', 'performance', 'scroll', 'page', scrollDuration);
         isScrolling.current = false;
@@ -250,4 +250,4 @@ export const usePerformanceMonitoring = () => {
 // Write the fixed content
 fs.writeFileSync('src/hooks/usePerformance.ts', fixedContent);
 
-console.log('✅ Fixed usePerformance.ts syntax errors');
+// console.log('✅ Fixed usePerformance.ts syntax errors');

@@ -136,8 +136,7 @@ export class PerformanceMetrics {
         clsObserver.observe({ entryTypes: ['layout-shift'] });
         this.observers.push(clsObserver);
       } catch (error) {
-        logger.warn('Failed to initialize performance observers:', error);
-
+//         console.warn('Failed to initialize performance observers:', error);
       }
     }
   }
@@ -161,7 +160,7 @@ export class PerformanceMetrics {
     if (typeof window === 'undefined') return;
 
     const perfData = window.performance.timing;
-    const pageLoadTime = perfData.loadEventEnd - perfData.navigationStart;
+//     const pageLoadTime = perfData.loadEventEnd - perfData.navigationStart;
 
     this.recordMetric({
       name: 'pageLoad',
@@ -221,9 +220,9 @@ export class PerformanceMetrics {
    * Measure function execution time
    */
   measureFunction<T>(name: string, fn: () => T): T {
-    const startTime = performance.now();
-    const result = fn();
-    const endTime = performance.now();
+//     const startTime = performance.now();
+//     const result = fn();
+//     const endTime = performance.now();
 
     this.recordMetric({
       name: `function:${name}`,
@@ -240,9 +239,9 @@ export class PerformanceMetrics {
    * Measure async function execution time
    */
   async measureAsyncFunction<T>(name: string, fn: () => Promise<T>): Promise<T> {
-    const startTime = performance.now();
-    const result = await fn();
-    const endTime = performance.now();
+//     const startTime = performance.now();
+//     const result = await fn();
+//     const endTime = performance.now();
 
     this.recordMetric({
       name: `async:${name}`,
@@ -332,7 +331,7 @@ export class PerformanceMetrics {
     }
 
     const networkMetrics = this.getMetricsByCategory('network');
-    const avgNetworkTime = networkMetrics.reduce((sum, m) => sum + m.value, 0) / networkMetrics.length;
+//     const avgNetworkTime = networkMetrics.reduce((sum, m) => sum + m.value, 0) / networkMetrics.length;
     if (avgNetworkTime > 500) {
       recommendations.push('Optimize network requests - consider caching and reducing payload sizes');
     }
@@ -345,7 +344,7 @@ export class PerformanceMetrics {
    */
   generateReport(): PerformanceReport {
     const loadMetrics = this.getMetricsByCategory('load');
-    const avgLoadTime = loadMetrics.reduce((sum, m) => sum + m.value, 0) / loadMetrics.length || 0;
+//     const avgLoadTime = loadMetrics.reduce((sum, m) => sum + m.value, 0) / loadMetrics.length || 0;
 
     return {
       metrics: this.getMetrics(),

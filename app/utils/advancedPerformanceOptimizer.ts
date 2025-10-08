@@ -25,7 +25,7 @@ export class PerformanceOptimizer {
     name: string,
     fn: () => T | Promise<T>
   ): T | Promise<T> {
-    const start = performance.now();
+//     const start = performance.now();
     
     try {
       const result = fn();
@@ -70,7 +70,7 @@ export class PerformanceOptimizer {
       return 0;
     }
     
-    const sum = metrics.reduce((__acc, __val) => acc + val, 0);
+//     const sum = metrics.reduce((acc, val) => acc + val, 0);
     return sum / metrics.length;
   }
 
@@ -123,7 +123,7 @@ export class PerformanceOptimizer {
     const cache = new Map<string, ReturnType<T>>();
     
     return (...args: Parameters<T>): ReturnType<T> => {
-      const key = JSON.stringify(args);
+//       const key = JSON.stringify(args);
       
       if (cache.has(key)) {
         return cache.get(key)!;
@@ -142,7 +142,7 @@ export class PerformanceOptimizer {
   getMetricsSummary(): Record<string, { avg: number; count: number }> {
     const summary: Record<string, { avg: number; count: number }> = {};
     
-    this.metrics.forEach((__values, __name) => {
+    this.metrics.forEach((values, name) => {
       summary[name] = {
         avg: this.getAverageMetric(name),
         count: values.length,

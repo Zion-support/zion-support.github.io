@@ -1,4 +1,4 @@
-// // 'use client'; // Removed for Vite compatibility // Removed for Vite compatibility
+'use client';
 
 import React, { useEffect, useState, useCallback } from 'react';
 
@@ -50,7 +50,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
         observers.push(lcpObserver);
       } catch (error) {
-        // LCP observer not supported in this browser
+//         console.warn('LCP observer not supported:', error);
       }
     }
 
@@ -76,7 +76,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         fidObserver.observe({ entryTypes: ['first-input'] });
         observers.push(fidObserver);
       } catch (error) {
-        // FID observer not supported in this browser
+//         console.warn('FID observer not supported:', error);
       }
     }
 
@@ -103,7 +103,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         clsObserver.observe({ entryTypes: ['layout-shift'] });
         observers.push(clsObserver);
       } catch (error) {
-        // CLS observer not supported in this browser
+//         console.warn('CLS observer not supported:', error);
       }
     }
 
@@ -127,7 +127,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         memory,
       }));
     } catch (error) {
-      // Performance measurement failed
+//       console.warn('Performance measurement failed:', error);
     }
 
     // Cleanup observers
@@ -136,7 +136,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         try {
           observer.disconnect();
         } catch (error) {
-          // Error disconnecting observer
+//           console.warn('Error disconnecting observer:', error);
         }
       });
     };
@@ -151,12 +151,15 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     );
 
     if (slowResources.length > 0) {
-      // Slow resources detected
-      const slowResourceData = slowResources.map((r: PerformanceResourceTiming) => ({
-          name: r.name,
-          duration: r.duration,
-          size: r.transferSize,
-        }));
+       
+//       console.warn(
+//         'Slow resources detected:',
+//         slowResources.map((r: PerformanceResourceTiming) => ({
+//           name: r.name,
+//           duration: r.duration,
+//           size: r.transferSize,
+//         }))
+//       );
     }
   }, []);
 

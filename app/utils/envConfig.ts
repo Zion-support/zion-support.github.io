@@ -25,7 +25,7 @@ class EnvironmentConfig {
 
   private loadConfig(): EnvConfig {
     // Safely access environment variables with defaults
-    const nodeEnv = (process.env['NODE_ENV'] || 'development') as EnvConfig['nodeEnv'];
+//     const nodeEnv = (process.env['NODE_ENV'] || 'development') as EnvConfig['nodeEnv'];
     
     return {
       nodeEnv,
@@ -115,8 +115,8 @@ class EnvironmentConfig {
    */
   public logConfig(): void {
     if (this.isDevelopment()) {
-      console.group('🔧 Environment Configuration');
-      console.table({
+//       console.group('🔧 Environment Configuration');
+//       console.table({
         'Environment': this.config.nodeEnv,
         'API URL': this.config.apiUrl,
         'Analytics Enabled': this.config.enableAnalytics,
@@ -126,7 +126,7 @@ class EnvironmentConfig {
         'Sentry DSN Set': !!this.config.sentryDsn,
         'GA Tracking ID Set': !!this.config.gaTrackingId
       });
-      console.groupEnd();
+//       console.groupEnd();
     }
   }
 }

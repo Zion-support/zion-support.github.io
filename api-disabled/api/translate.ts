@@ -50,7 +50,7 @@ export default async function handler(
 
     return res.status(200).json(results);
   } catch (err: unknown) {
-    console.error('Translation error:', err);
+//     console.error('Translation error:', err);
     return res.status(500).json({ error: 'Translation failed' });
   }
 }

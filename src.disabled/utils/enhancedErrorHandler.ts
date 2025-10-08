@@ -63,7 +63,7 @@ class EnhancedErrorHandler {
   }
 
   public handleError(error: Error, context: Partial<ErrorContext>): void {
-    const errorId = this.generateErrorId(error, context);
+//     const errorId = this.generateErrorId(error, context);
     const now = Date.now();
 
     const fullContext: ErrorContext = {
@@ -117,7 +117,7 @@ class EnhancedErrorHandler {
     error: Error,
     context: Partial<ErrorContext>
   ): string {
-    const key = `${error.message}-${context.component}-${context.action}`;
+//     const key = `${error.message}-${context.component}-${context.action}`;
     return btoa(key)
       .replace(/[^a-zA-Z0-9]/g, '')
       .substring(0, 16);

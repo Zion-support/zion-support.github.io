@@ -87,7 +87,7 @@ export class AdvancedDataVisualization {
       this.charts.set(chart.id, chart);
       return chart;
     } else {
-      const chartData = this.parseCSV(data);
+//       const chartData = this.parseCSV(data);
       const chart = this.createChart(
         `imported-${Date.now()}`,
         chartData,
@@ -98,15 +98,15 @@ export class AdvancedDataVisualization {
   }
 
   private convertToCSV(data: ChartData): string {
-    const headers = ['x', 'y'];
-    const rows = data.points.map(point => [point.x, point.y]);
+//     const headers = ['x', 'y'];
+//     const rows = data.points.map(point => [point.x, point.y]);
 
     return [headers, ...rows].map(row => row.join(',')).join('\n');
   }
 
   private parseCSV(csv: string): ChartData {
     const lines = csv.trim().split('\n');
-    const headers = lines[0].split(',');
+//     const headers = lines[0].split(',');
     const points: DataPoint[] = [];
 
     for (let i = 1; i < lines.length; i++) {
@@ -163,7 +163,7 @@ export class AdvancedDataVisualization {
     const points = chart.data.points;
     if (points.length === 0) return null;
 
-    const xValues = points.map(p => p.x);
+//     const xValues = points.map(p => p.x);
     const yValues = points.map(p => p.y);
 
     return {

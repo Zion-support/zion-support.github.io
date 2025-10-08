@@ -65,7 +65,7 @@ export function lazyWithRetry<T extends ComponentType<any>>(
 
       const attemptLoad = async () => {
         try {
-          const result = await importFunc();
+//           const result = await importFunc();
           clearTimeout(timeoutId);
           resolve(result);
         } catch (error) {
@@ -112,7 +112,7 @@ export function lazyWithPreload<T extends ComponentType<any>>(
   importFunc: () => Promise<{ default: T }>,
   preloadOptions: PreloadOptions = {}
 ): LazyExoticComponent<T> & { preload: () => Promise<void> } {
-  const lazyComponent = lazy(importFunc);
+//   const lazyComponent = lazy(importFunc);
   let preloadPromise: Promise<void> | null = null;
 
   const preload = () => {
@@ -323,10 +323,10 @@ export class IntelligentPreloader {
    */
   onIdle(preloadFn: () => void, timeout: number = 2000): () => void {
     if ('requestIdleCallback' in window) {
-      const id = requestIdleCallback(preloadFn, { timeout });
+//       const id = requestIdleCallback(preloadFn, { timeout });
       return () => cancelIdleCallback(id);
     } else {
-      const id = setTimeout(preloadFn, timeout);
+//       const id = setTimeout(preloadFn, timeout);
       return () => clearTimeout(id);
     }
   }

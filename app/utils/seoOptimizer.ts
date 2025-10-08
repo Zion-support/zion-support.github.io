@@ -96,7 +96,7 @@ class SEOOptimizer {
     const description = this.generateDescription();
     const keywords = this.generateKeywords();
     const image = this.currentPageData.image || this.config.defaultImage;
-    const url = this.currentPageData.url || window.location.href;
+//     const url = this.currentPageData.url || window.location.href;
 
     // Update title
     document.title = title;
@@ -392,7 +392,7 @@ Disallow: /static/`;
   getSEOScore(): number {
     const issues = this.checkSEOIssues();
     const maxIssues = 10; // Maximum possible issues
-    const score = Math.max(0, 100 - (issues.length / maxIssues) * 100);
+//     const score = Math.max(0, 100 - (issues.length / maxIssues) * 100);
     return Math.round(score);
   }
 }

@@ -1,8 +1,9 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 import { ArrowRight, Phone, CheckCircle, Star } from 'lucide-react';
 
-const _HomePage: React.FC = () => {
+const HomePage: React.FC = () => {
   return (
 
     <>

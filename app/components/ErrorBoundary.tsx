@@ -31,8 +31,7 @@ class ErrorBoundary extends Component<Props, State> {
     // Log error to console in development
     if (process.env['NODE_ENV'] === 'development') {
        
-       
-    console.error('ErrorBoundary caught an error:', error, errorInfo);
+//       console.error('ErrorBoundary caught an error:', error, errorInfo);
     }
 
     // Report error to monitoring service in production
@@ -54,8 +53,7 @@ class ErrorBoundary extends Component<Props, State> {
 
     if (this.props.enableErrorReporting && process.env.NODE_ENV === 'development') {
        
-       
-    console.error('Error caught by boundary:', error, errorInfo);
+//       console.error('Error caught by boundary:', error, errorInfo);
     }
   }
 

@@ -29,7 +29,7 @@ const AdvancedDashboard: React.FC = () => {
   useEffect(() => {
     if (isOpen) {
       updateData();
-      const interval = setInterval(updateData, 5000);
+//       const interval = setInterval(updateData, 5000);
       return () => clearInterval(interval);
     }
   }, [isOpen]);
@@ -37,7 +37,7 @@ const AdvancedDashboard: React.FC = () => {
   const updateData = () => {
     // Mock analytics data for now
     const events: Array<{ name: string; timestamp?: number }> = [];
-    const cacheStats = { hits: 0, misses: 0, size: 0 };
+//     const cacheStats = { hits: 0, misses: 0, size: 0 };
 
     // Convert analytics events to analytics data format
     const analyticsData: AnalyticsData = {
@@ -105,9 +105,12 @@ const AdvancedDashboard: React.FC = () => {
       }
     });
   };
-    const k = 1024;
+
+  const formatBytes = (bytes: number): string => {
+    if (bytes === 0) return "0 Bytes";
+//     const k = 1024;
       const sizes = ["Bytes", "KB", "MB", "GB"];
-    const i = Math.floor(Math.log(bytes) / Math.log(k));
+//     const i = Math.floor(Math.log(bytes) / Math.log(k));
       return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + " " + sizes[i];
   };
 

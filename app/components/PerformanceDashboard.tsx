@@ -35,13 +35,13 @@ const PerformanceDashboard: React.FC = () => {
         : 0;
 
       // Measure render time
-      const renderStart = performance.now();
+//       const renderStart = performance.now();
       const renderTime = performance.now() - renderStart;
 
       // Measure memory usage
       let memoryUsage = 0;
       if ('memory' in performance) {
-        const memory = (performance as { memory?: { usedJSHeapSize: number } }).memory;
+//         const memory = (performance as { memory?: { usedJSHeapSize: number } }).memory;
         memoryUsage = memory?.usedJSHeapSize || 0;
       }
 
@@ -73,7 +73,7 @@ const PerformanceDashboard: React.FC = () => {
     updateMetrics();
 
     // Update metrics every 5 seconds
-    const interval = setInterval(updateMetrics, 5000);
+//     const interval = setInterval(updateMetrics, 5000);
 
     return () => clearInterval(interval);
   }, []);

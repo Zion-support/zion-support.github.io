@@ -4,7 +4,6 @@
  */
 
 import React, { ErrorInfo, useCallback } from 'react';
-import { logger } from './logger';
 
 // Error types
 export enum ErrorType {
@@ -252,19 +251,18 @@ export class ErrorHandler {
   // Log error
   private logError(error: AppError) {
     if (this.config.enableConsoleLogging) {
-      const logMessage = `[${error.severity}] ${error.type}: ${error.message}`;
+//       const logMessage = `[${error.severity}] ${error.type}: ${error.message}`;
       
       switch (error.severity) {
         case ErrorSeverity.CRITICAL:
         case ErrorSeverity.HIGH:
-          logger.error(logMessage, error);
+//           console.error(logMessage, error);
           break;
         case ErrorSeverity.MEDIUM:
-          logger.warn(logMessage, error);
+//           console.warn(logMessage, error);
           break;
         case ErrorSeverity.LOW:
-          if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { logger.info(logMessage, error); } }
-
+//           if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { console.info(logMessage, error); } }
           break;
       }
     }
@@ -287,8 +285,7 @@ export class ErrorHandler {
         body: JSON.stringify(error),
       });
     } catch (err) {
-      logger.error('Failed to log error to network:', err);
-
+//       console.error('Failed to log error to network:', err);
     }
   }
 
@@ -308,8 +305,7 @@ export class ErrorHandler {
         }),
       });
     } catch (err) {
-      logger.error('Failed to report error:', err);
-
+//       console.error('Failed to report error:', err);
     }
   }
 
@@ -403,16 +399,14 @@ export class ErrorHandler {
       // Implement retry logic based on error type
       if (retryItem.error.type === ErrorType.NETWORK) {
         // Retry network request
-        if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { logger.info(`Retrying network request (attempt ${retryItem.retryCount})`); } }
-
+//         if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { console.log(`Retrying network request (attempt ${retryItem.retryCount})`); } }
         // Add your retry logic here
       }
     } catch {
       if (retryItem.retryCount < this.config.maxRetries) {
         this.scheduleRetry(retryItem.error);
       } else {
-        logger.error('Max retries exceeded for error:', retryItem.error);
-
+//         console.error('Max retries exceeded for error:', retryItem.error);
       }
     }
   }
@@ -460,7 +454,7 @@ export class ErrorHandler {
 
   // Get error statistics
   getErrorStatistics() {
-    const total = this.errors.length;
+//     const total = this.errors.length;
     const byType = this.errors.reduce((acc, error) => {
       acc[error.type] = (acc[error.type] || 0) + 1;
       return acc;
@@ -471,8 +465,8 @@ export class ErrorHandler {
       return acc;
     }, {} as Record<ErrorSeverity, number>);
 
-    const resolved = this.errors.filter(error => error.resolved).length;
-    const unresolved = total - resolved;
+//     const resolved = this.errors.filter(error => error.resolved).length;
+//     const unresolved = total - resolved;
 
     return {
       total,

@@ -76,10 +76,11 @@ async function sendToAnalytics(
         body,
         headers: { 'Content-Type': 'application/json' },
         keepalive: true,
-      }).catch(console.error);
+//       }).catch(console.error);
+      });
     }
-  } catch (error) {
-    console.error('Failed to send metric to analytics:', error);
+  } catch {
+//     console.error('Failed to send metric to analytics:', error);
   }
 }
 
@@ -118,7 +119,7 @@ export function reportWebVitals(
 
             onPerfEntry(metric);
             if (analyticsEndpoint) sendToAnalytics(metric, analyticsEndpoint);
-            if (debug) if (process.env['NODE_ENV'] === 'development') { if (process.env.DEV) { console.log('CLS:', metric); } }
+//             if (debug) if (process.env['NODE_ENV'] === 'development') { if (process.env.DEV) { console.log('CLS:', metric); } }
           }
         }
       }
@@ -127,7 +128,7 @@ export function reportWebVitals(
     try {
       clsObserver.observe({ type: 'layout-shift', buffered: true });
     } catch (e) {
-      if (debug) console.warn('CLS observation not supported:', e);
+//       if (debug) console.warn('CLS observation not supported:', e);
     }
 
     // Report final CLS on page hide
@@ -144,7 +145,7 @@ export function reportWebVitals(
 
         onPerfEntry(metric);
         if (analyticsEndpoint) sendToAnalytics(metric, analyticsEndpoint);
-        if (debug) if (process.env['NODE_ENV'] === 'development') { if (process.env.DEV) { console.log('Final CLS:', metric); } }
+//         if (debug) if (process.env['NODE_ENV'] === 'development') { if (process.env.DEV) { console.log('Final CLS:', metric); } }
       }
     });
   }
@@ -153,7 +154,7 @@ export function reportWebVitals(
   if ('PerformanceObserver' in window) {
     const fidObserver = new PerformanceObserver((entryList) => {
       const firstInput = entryList.getEntries()[0] as any;
-      const fid = firstInput.processingStart - firstInput.startTime;
+//       const fid = firstInput.processingStart - firstInput.startTime;
 
       const metric: WebVitalsMetric = {
         name: 'FID',
@@ -166,7 +167,7 @@ export function reportWebVitals(
 
       onPerfEntry(metric);
       if (analyticsEndpoint) sendToAnalytics(metric, analyticsEndpoint);
-      if (debug) if (process.env['NODE_ENV'] === 'development') { if (process.env.DEV) { console.log('FID:', metric); } }
+//       if (debug) if (process.env['NODE_ENV'] === 'development') { if (process.env.DEV) { console.log('FID:', metric); } }
 
       fidObserver.disconnect();
     });
@@ -174,7 +175,7 @@ export function reportWebVitals(
     try {
       fidObserver.observe({ type: 'first-input', buffered: true });
     } catch (e) {
-      if (debug) console.warn('FID observation not supported:', e);
+//       if (debug) console.warn('FID observation not supported:', e);
     }
   }
 
@@ -199,14 +200,14 @@ export function reportWebVitals(
 
         onPerfEntry(metric);
         if (analyticsEndpoint) sendToAnalytics(metric, analyticsEndpoint);
-        if (debug) if (process.env['NODE_ENV'] === 'development') { if (process.env.DEV) { console.log('LCP:', metric); } }
+//         if (debug) if (process.env['NODE_ENV'] === 'development') { if (process.env.DEV) { console.log('LCP:', metric); } }
       }
     });
 
     try {
       lcpObserver.observe({ type: 'largest-contentful-paint', buffered: true });
     } catch (e) {
-      if (debug) console.warn('LCP observation not supported:', e);
+//       if (debug) console.warn('LCP observation not supported:', e);
     }
 
     // Report final LCP on page hide
@@ -234,7 +235,7 @@ export function reportWebVitals(
 
           onPerfEntry(metric);
           if (analyticsEndpoint) sendToAnalytics(metric, analyticsEndpoint);
-          if (debug) if (process.env['NODE_ENV'] === 'development') { if (process.env.DEV) { console.log('FCP:', metric); } }
+//           if (debug) if (process.env['NODE_ENV'] === 'development') { if (process.env.DEV) { console.log('FCP:', metric); } }
 
           fcpObserver.disconnect();
         }
@@ -244,7 +245,7 @@ export function reportWebVitals(
     try {
       fcpObserver.observe({ type: 'paint', buffered: true });
     } catch (e) {
-      if (debug) console.warn('FCP observation not supported:', e);
+//       if (debug) console.warn('FCP observation not supported:', e);
     }
   }
 
@@ -255,7 +256,7 @@ export function reportWebVitals(
     )[0] as PerformanceNavigationTiming;
 
     if (navEntry) {
-      const ttfb = navEntry.responseStart - navEntry.requestStart;
+//       const ttfb = navEntry.responseStart - navEntry.requestStart;
 
       const metric: WebVitalsMetric = {
         name: 'TTFB',
@@ -268,7 +269,7 @@ export function reportWebVitals(
 
       onPerfEntry(metric);
       if (analyticsEndpoint) sendToAnalytics(metric, analyticsEndpoint);
-      if (debug) if (process.env['NODE_ENV'] === 'development') { if (process.env.DEV) { console.log('TTFB:', metric); } }
+//       if (debug) if (process.env['NODE_ENV'] === 'development') { if (process.env.DEV) { console.log('TTFB:', metric); } }
     }
   }
 }
@@ -294,7 +295,7 @@ export function monitorLongTasks(
     observer.observe({ entryTypes: ['longtask'] });
     return observer;
   } catch (e) {
-    console.warn('Long task monitoring not supported:', e);
+//     console.warn('Long task monitoring not supported:', e);
     return null;
   }
 }

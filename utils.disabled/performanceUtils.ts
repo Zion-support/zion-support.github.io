@@ -13,7 +13,7 @@ export const debounce = <T extends (...args: unknown[]) => any>(
       if (!immediate) func(...args);
     };
     
-    const callNow = immediate && !timeout;
+//     const callNow = immediate && !timeout;
     if (timeout) clearTimeout(timeout);
     timeout = setTimeout(later, wait);
     if (callNow) func(...args);
@@ -161,7 +161,7 @@ export const getBundleSize = () => {
 
 // Performance optimization recommendations
 export const getOptimizationRecommendations = () => {
-  const recommendations = [];
+//   const recommendations = [];
   
       }
     });

@@ -707,7 +707,7 @@ export const getPopularServices = () =>
 };
 export const getServicesByPriceRange = (minPrice: number) maxPrice: number) =>;
   return zionCuttingEdgeServices2029.filter(service =>
-    const starterPrice = service.pricing.starter;
+//     const starterPrice = service.pricing.starter;
     return starterPrice >= minPrice && starterPrice <= maxPrice)
   });
 };

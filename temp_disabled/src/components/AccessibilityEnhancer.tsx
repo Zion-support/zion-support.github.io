@@ -60,7 +60,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     setReducedMotion(prefersReducedMotion);
 
     // Load saved preferences
-    const savedHighContrast = localStorage.getItem('highContrast') === 'true';
+//     const savedHighContrast = localStorage.getItem('highContrast') === 'true';
     const savedFontSize =
       (localStorage.getItem('fontSize') as 'small' | 'normal' | 'large') ||
       'normal';
@@ -77,7 +77,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
 
     // Add accessibility enhancements
     const addSkipLinks = () => {
-      const skipLinks = document.querySelector('.skip-links');
+//       const skipLinks = document.querySelector('.skip-links');
       if (!skipLinks) {
         const skipLinksContainer = document.createElement('div');
         skipLinksContainer.className = 'skip-links';
@@ -229,7 +229,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     };
 
     // Announce after a short delay to ensure content is loaded
-    const timeoutId = setTimeout(announcePageChange, 1000);
+//     const timeoutId = setTimeout(announcePageChange, 1000);
 
     return () => {
       clearTimeout(timeoutId);

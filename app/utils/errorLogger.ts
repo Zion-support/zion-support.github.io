@@ -73,22 +73,21 @@ class ErrorLogger {
       [ErrorSeverity.CRITICAL]: 'color: #ef4444; font-weight: bold',
     };
 
-    console.group(
+//     console.group(
       `%c[${entry.severity.toUpperCase()}] ${entry.message}`,
       styles[entry.severity]
     );
-    logger.info('Timestamp:', entry.timestamp);
+//     console.log('Timestamp:', entry.timestamp);
     if (entry.error) {
-      logger.error('Error:', entry.error);
+//       console.error('Error:', entry.error);
     }
     if (entry.context) {
-      logger.info('Context:', entry.context);
+//       console.log('Context:', entry.context);
     }
     if (entry.stackTrace) {
-      logger.info('Stack Trace:', entry.stackTrace);
-
+//       console.log('Stack Trace:', entry.stackTrace);
     }
-    console.groupEnd();
+//     console.groupEnd();
   }
 
   /**
@@ -97,7 +96,7 @@ class ErrorLogger {
   private async sendToExternalService(entry: ErrorLogEntry): Promise<void> {
     try {
       // In production, you would send to a service like Sentry, LogRocket, etc.
-      const endpoint = process.env.NEXT_PUBLIC_ERROR_LOG_ENDPOINT;
+//       const endpoint = process.env.NEXT_PUBLIC_ERROR_LOG_ENDPOINT;
       
       if (!endpoint) {
         return;
@@ -119,8 +118,7 @@ class ErrorLogger {
       });
     } catch (error) {
       // Silently fail to avoid infinite loop
-      logger.error('Failed to send error to external service:', error);
-
+//       console.error('Failed to send error to external service:', error);
     }
   }
 

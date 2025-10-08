@@ -5,19 +5,17 @@
 import '@testing-library/jest-dom';
 
 // Suppress jsdom navigation warnings
- 
-const originalConsoleError =  
-    console.error;
- 
- 
-    console.error = (...args) => {
-  const message = args[0]?.toString?.() || args[0]?.message || '';
-  if (message.includes('Not implemented: navigation') || 
-      message.includes('navigation (except hash changes)')) {
-    return;
-  }
-  originalConsoleError(...args);
-};
+// eslint-disable-next-line no-console
+// const originalConsoleError = console.error;
+// eslint-disable-next-line no-console
+// console.error = (...args) => {
+//   const message = args[0]?.toString?.() || args[0]?.message || '';
+//   if (message.includes('Not implemented: navigation') || 
+//       message.includes('navigation (except hash changes)')) {
+//     return;
+//   }
+//   originalConsoleError(...args);
+// };
 
 // Mock window.matchMedia
 Object.defineProperty(window, 'matchMedia', {
@@ -64,13 +62,10 @@ Object.defineProperty(window, 'sessionStorage', {
 global.fetch = jest.fn();
 
 // Mock console methods for cleaner test output
-const originalConsoleWarn =  
-    console.warn;
-const originalConsoleInfo =  
-    console.info;
+// const originalConsoleWarn = console.warn;
+// const originalConsoleInfo = console.info;
 
- 
-    console.warn = (...args) => {
+// console.warn = (...args) => {
   const message = args[0]?.toString?.() || '';
   if (message.includes('Warning: ReactDOM.render is no longer supported')) {
     return;
@@ -78,8 +73,7 @@ const originalConsoleInfo =
   originalConsoleWarn(...args);
 };
 
- 
-    console.info = (...args) => {
+// console.info = (...args) => {
   const message = args[0]?.toString?.() || '';
   if (message.includes('ReactDOM.render is no longer supported')) {
     return;
@@ -101,8 +95,7 @@ global.PerformanceObserver = class MockPerformanceObserver {
 
 // Suppress JSDOM navigation warnings
 
- 
-    console.error = (...args) => {
+// console.error = (...args) => {
   if (args[0] && args[0].type === 'not implemented' && args[0].message?.includes('navigation')) {
     return; // Suppress JSDOM navigation warnings
   }

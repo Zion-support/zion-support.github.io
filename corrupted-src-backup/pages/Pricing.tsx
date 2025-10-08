@@ -2,11 +2,9 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import {
   CheckCircle,
-  Star,
   ArrowRight,
   Shield,
   Zap,
-  Users,
 } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 

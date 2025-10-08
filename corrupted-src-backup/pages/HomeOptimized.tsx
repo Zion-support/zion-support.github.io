@@ -1,9 +1,34 @@
 import React from 'react';
-import { ArrowRight, Globe } from 'lucide-react';
+import { ArrowRight, Globe, Rocket } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 
 const HomeOptimized: React.FC = () => {
+  const features = [
+    {
+      icon: <Zap className='w-8 h-8' />,
+      title: 'Lightning Fast',
+      description:
+        'Optimized for speed and performance with cutting-edge technology.',
+    },
+    {
+      icon: <Shield className='w-8 h-8' />,
+      title: 'Secure & Reliable',
+      description: 'Enterprise-grade security with 99.9% uptime guarantee.',
+    },
+    {
+      icon: <Target className='w-8 h-8' />,
+      title: 'Precision AI',
+      description:
+        'Advanced AI algorithms for accurate and intelligent solutions.',
+    },
+    {
+      icon: <Globe className='w-8 h-8' />,
+      title: 'Global Scale',
+      description: 'Deploy anywhere with our worldwide infrastructure.',
+    },
+  ];
+
   const stats = [
     { label: 'Happy Customers', value: '10,000+' },
     { label: 'Projects Completed', value: '500+' },

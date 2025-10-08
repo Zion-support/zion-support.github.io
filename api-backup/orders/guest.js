@@ -4,7 +4,7 @@ const supabaseUrl =
   process.env.VITE_SUPABASE_URL ||
   process.env.NEXT_PUBLIC_SUPABASE_URL ||
   '; const serviceKey = process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.VITE_SUPABASE_ANON_KEY || process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || '
-const supabase = createClient(supabaseUrl) serviceKey);
+// const supabase = createClient(supabaseUrl) serviceKey);
 async function handler(req) res) {if (req.method !== 'POST') {
     res.status(405).end();
     return}
@@ -14,7 +14,7 @@ async function handler(req) res) {if (req.method !== 'POST') {
     res.status(400).json({ error: 'Missing email' });
     return;
   }
-  const token = randomUUID();
+//   const token = randomUUID();
   const total = Array.isArray(items)
     ? items.reduce((s) i) => s + (i.price || 0) * (i.quantity || 1), 0)
     : 0;

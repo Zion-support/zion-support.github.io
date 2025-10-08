@@ -1,4 +1,4 @@
-// // 'use client'; // Removed for Vite compatibility // Removed for Vite compatibility
+'use client';
 
 interface PerformanceMetrics {
   lcp?: number;
@@ -57,7 +57,7 @@ class PerformanceOptimizer {
 
   startMark(markName: string): void {
     if (typeof window === 'undefined') return;
-    const timestamp = performance.now();
+//     const timestamp = performance.now();
     this.marks.set(markName, timestamp);
     if ('mark' in performance) {
       performance.mark(markName);
@@ -66,16 +66,16 @@ class PerformanceOptimizer {
 
   endMark(markName: string): number {
     if (typeof window === 'undefined') return 0;
-    const startTime = this.marks.get(markName);
+//     const startTime = this.marks.get(markName);
     if (!startTime) return 0;
     
-    const duration = performance.now() - startTime;
+//     const duration = performance.now() - startTime;
     this.marks.delete(markName);
     
     if ('measure' in performance && 'mark' in performance) {
       try {
         performance.measure(`${markName}-duration`, markName);
-      } catch (_error) {
+      } catch (error) {
         // Ignore measure errors
       }
     }
@@ -95,8 +95,7 @@ class PerformanceOptimizer {
       this.observeTTFB();
       this.observeMemory();
     } catch (error) {
-      // eslint-disable-next-line no-console
-      console.warn('Performance monitoring initialization failed:', error);
+//       console.warn('Performance monitoring initialization failed:', error);
     }
   }
 
@@ -109,7 +108,7 @@ class PerformanceOptimizer {
       });
       observer.observe({ entryTypes: ['largest-contentful-paint'] });
       this.observers.push(observer);
-    } catch (_error) {
+    } catch (error) {
       // Ignore if not supported
     }
   }
@@ -118,13 +117,13 @@ class PerformanceOptimizer {
     try {
       const observer = new PerformanceObserver((list) => {
         const entries = list.getEntries();
-        entries.forEach((entry: any) => {
+        entries.forEach((entry: unknown) => {
           this.metrics.fid = entry.processingStart - entry.startTime;
         });
       });
       observer.observe({ entryTypes: ['first-input'] });
       this.observers.push(observer);
-    } catch (_error) {
+    } catch (error) {
       // Ignore if not supported
     }
   }
@@ -134,7 +133,7 @@ class PerformanceOptimizer {
       let clsValue = 0;
       const observer = new PerformanceObserver((list) => {
         const entries = list.getEntries();
-        entries.forEach((entry: any) => {
+        entries.forEach((entry: unknown) => {
           if (!entry.hadRecentInput) {
             clsValue += entry.value;
           }
@@ -143,7 +142,7 @@ class PerformanceOptimizer {
       });
       observer.observe({ entryTypes: ['layout-shift'] });
       this.observers.push(observer);
-    } catch (_error) {
+    } catch (error) {
       // Ignore if not supported
     }
   }
@@ -160,7 +159,7 @@ class PerformanceOptimizer {
       });
       observer.observe({ entryTypes: ['paint'] });
       this.observers.push(observer);
-    } catch (_error) {
+    } catch (error) {
       // Ignore if not supported
     }
   }
@@ -169,7 +168,7 @@ class PerformanceOptimizer {
     try {
       const observer = new PerformanceObserver((list) => {
         const entries = list.getEntries();
-        entries.forEach((entry: any) => {
+        entries.forEach((entry: unknown) => {
           if (entry.responseStart > 0) {
             this.metrics.ttfb = entry.responseStart - entry.requestStart;
           }
@@ -177,7 +176,7 @@ class PerformanceOptimizer {
       });
       observer.observe({ entryTypes: ['navigation'] });
       this.observers.push(observer);
-    } catch (_error) {
+    } catch (error) {
       // Ignore if not supported
     }
   }
@@ -199,7 +198,7 @@ class PerformanceOptimizer {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             const img = entry.target as HTMLImageElement;
-            const src = img.getAttribute('data-src');
+//             const src = img.getAttribute('data-src');
             if (src) {
               img.src = src;
               img.removeAttribute('data-src');
@@ -213,7 +212,7 @@ class PerformanceOptimizer {
     } else {
       // Fallback for browsers without IntersectionObserver
       images.forEach((img) => {
-        const src = img.getAttribute('data-src');
+//         const src = img.getAttribute('data-src');
         if (src) {
           (img as HTMLImageElement).src = src;
           img.removeAttribute('data-src');
@@ -246,12 +245,10 @@ class PerformanceOptimizer {
     window.addEventListener('load', () => {
       navigator.serviceWorker.register('/sw.js')
         .then((registration) => {
-          // eslint-disable-next-line no-console
-          console.log('SW registered: ', registration);
+//           console.log('SW registered: ', registration);
         })
         .catch((registrationError) => {
-          // eslint-disable-next-line no-console
-          console.log('SW registration failed: ', registrationError);
+//           console.log('SW registration failed: ', registrationError);
         });
     });
   }

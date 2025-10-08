@@ -134,9 +134,9 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     return faqData;
   }, [enableSchemaMarkup]);
 
-  const structuredData = generateStructuredData();
-  const breadcrumbData = generateBreadcrumbStructuredData();
-  const faqData = generateFAQStructuredData();
+//   const structuredData = generateStructuredData();
+//   const breadcrumbData = generateBreadcrumbStructuredData();
+//   const faqData = generateFAQStructuredData();
 
   useEffect(() => {
     // Update page title and meta description for better SEO

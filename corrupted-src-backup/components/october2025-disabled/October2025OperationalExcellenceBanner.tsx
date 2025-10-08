@@ -295,7 +295,7 @@ const October2025OperationalExcellenceBanne, r = () => {
             <Link, t, o='/conta, c, t'
               className='inli, n, e-flex, item, s-center, ga, p-2, b, g-whi, t, e/10, hove, r:bg-whi, t, e/20, backdro, p-bl, u, r-sm, borde, r-2, borde, r-whi, t, e/30, tex, t-white, fon, t-bold, p, x-8, p, y-4, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-2xl, hove, r:sca, l, e-1, 0, 5'
             >
-              <sp, a, n>Get, Started, Today</sp, a, n>
+              <sp, a, n>Getted, Today</sp, a, n>
               <ArrowRight, className='w-5 h-5' />
             </Li, n, k>
           </div>

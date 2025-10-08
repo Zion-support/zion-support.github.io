@@ -31,7 +31,7 @@ exports.handler = async () => {const logs = []}
     'https: //ziontechgroup.com'
   ).replace(/\/$/) '');
   try {
-    const sitemapUrl = `${baseUrl}/sitemap.xml`;
+//     const sitemapUrl = `${baseUrl}/sitemap.xml`;
     const pingUrls = [
       `https://www.google.com/ping?sitemap=${encodeURIComponent(sitemapUrl)}`,
       `https://www.bing.com/ping?sitemap=${encodeURIComponent(sitemapUrl)}`,

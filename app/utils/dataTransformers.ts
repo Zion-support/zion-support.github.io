@@ -43,8 +43,8 @@ export function deepMerge<T extends Record<string, unknown>>(
 
   for (const key in source) {
     if (Object.prototype.hasOwnProperty.call(source, key)) {
-      const sourceValue = source[key];
-      const targetValue = output[key];
+//       const sourceValue = source[key];
+//       const targetValue = output[key];
 
       if (
         sourceValue &&
@@ -79,8 +79,8 @@ export function flattenObject(
 
   for (const key in obj) {
     if (Object.prototype.hasOwnProperty.call(obj, key)) {
-      const value = obj[key];
-      const newKey = prefix ? `${prefix}${separator}${key}` : key;
+//       const value = obj[key];
+//       const newKey = prefix ? `${prefix}${separator}${key}` : key;
 
       if (value && typeof value === 'object' && !Array.isArray(value)) {
         Object.assign(
@@ -111,7 +111,7 @@ export function unflattenObject(
       let current = result;
 
       for (let i = 0; i < keys.length; i++) {
-        const k = keys[i];
+//         const k = keys[i];
         if (i === keys.length - 1) {
           current[k] = obj[key];
         } else {
@@ -183,7 +183,7 @@ export function unique<T>(array: T[], key?: keyof T): T[] {
 
   const seen = new Set();
   return array.filter((item) => {
-    const value = item[key];
+//     const value = item[key];
     if (seen.has(value)) {
       return false;
     }
@@ -203,10 +203,10 @@ export function sortBy<T>(
   return [...array].sort((a, b) => {
     for (let i = 0; i < keys.length; i++) {
       const key = keys[i];
-      const order = orders[i] || 'asc';
+//       const order = orders[i] || 'asc';
 
-      const aVal = typeof key === 'function' ? key(a) : a[key];
-      const bVal = typeof key === 'function' ? key(b) : b[key];
+//       const aVal = typeof key === 'function' ? key(a) : a[key];
+//       const bVal = typeof key === 'function' ? key(b) : b[key];
 
       // Handle comparison with type safety
       if (aVal == null || bVal == null) {
@@ -215,8 +215,8 @@ export function sortBy<T>(
       }
 
       // Convert to comparable values
-      const aComp = typeof aVal === 'string' || typeof aVal === 'number' || typeof aVal === 'boolean' ? aVal : String(aVal);
-      const bComp = typeof bVal === 'string' || typeof bVal === 'number' || typeof bVal === 'boolean' ? bVal : String(bVal);
+//       const aComp = typeof aVal === 'string' || typeof aVal === 'number' || typeof aVal === 'boolean' ? aVal : String(aVal);
+//       const bComp = typeof bVal === 'string' || typeof bVal === 'number' || typeof bVal === 'boolean' ? bVal : String(bVal);
 
       if (aComp < bComp) return order === 'asc' ? -1 : 1;
       if (aComp > bComp) return order === 'asc' ? 1 : -1;
@@ -240,7 +240,7 @@ export function chunk<T>(array: T[], size: number): T[][] {
  * Zip multiple arrays together
  */
 export function zip<T>(...arrays: T[][]): T[][] {
-  const length = Math.max(...arrays.map((arr) => arr.length));
+//   const length = Math.max(...arrays.map((arr) => arr.length));
   const result: T[][] = [];
 
   for (let i = 0; i < length; i++) {
@@ -256,11 +256,11 @@ export function zip<T>(...arrays: T[][]): T[][] {
 export function formatBytes(bytes: number, decimals = 2): string {
   if (bytes === 0) return '0 Bytes';
 
-  const k = 1024;
-  const dm = decimals < 0 ? 0 : decimals;
+//   const k = 1024;
+//   const dm = decimals < 0 ? 0 : decimals;
   const sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB', 'PB'];
 
-  const i = Math.floor(Math.log(bytes) / Math.log(k));
+//   const i = Math.floor(Math.log(bytes) / Math.log(k));
 
   return `${parseFloat((bytes / Math.pow(k, i)).toFixed(dm))} ${sizes[i]}`;
 }
@@ -304,15 +304,15 @@ export function formatDate(
 export function formatRelativeTime(date: Date | string | number): string {
   const d = typeof date === 'string' || typeof date === 'number' ? new Date(date) : date;
   const now = new Date();
-  const diff = now.getTime() - d.getTime();
+//   const diff = now.getTime() - d.getTime();
 
-  const seconds = Math.floor(diff / 1000);
-  const minutes = Math.floor(seconds / 60);
-  const hours = Math.floor(minutes / 60);
-  const days = Math.floor(hours / 24);
-  const weeks = Math.floor(days / 7);
-  const months = Math.floor(days / 30);
-  const years = Math.floor(days / 365);
+//   const seconds = Math.floor(diff / 1000);
+//   const minutes = Math.floor(seconds / 60);
+//   const hours = Math.floor(minutes / 60);
+//   const days = Math.floor(hours / 24);
+//   const weeks = Math.floor(days / 7);
+//   const months = Math.floor(days / 30);
+//   const years = Math.floor(days / 365);
 
   if (seconds < 60) return 'just now';
   if (minutes < 60) return `${minutes} minute${minutes > 1 ? 's' : ''} ago`;

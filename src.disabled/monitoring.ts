@@ -8,9 +8,9 @@ export function initializePerformanceMonitoring(): void {
   performanceOptimizer.lazyLoadImages();
 
   // Track Web Vitals
-  const metrics = performanceOptimizer.getPerformanceMetrics();
+//   const metrics = performanceOptimizer.getPerformanceMetrics();
   if (metrics) {
-    console.log('Performance metrics:', metrics);
+//     console.log('Performance metrics:', metrics);
   }
 
   // Monitor long tasks
@@ -32,9 +32,9 @@ export function initializePerformanceMonitoring(): void {
   }
 
   // Track additional performance metrics
-  const timingMetrics = performanceOptimizer.getPerformanceMetrics();
+//   const timingMetrics = performanceOptimizer.getPerformanceMetrics();
   if (timingMetrics) {
-    console.log('Timing metrics:', timingMetrics);
+//     console.log('Timing metrics:', timingMetrics);
   }
 }
 

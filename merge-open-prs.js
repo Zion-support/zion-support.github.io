@@ -5,7 +5,7 @@
  */ import { execSync } from 'child_process';
 import fs from 'fs';
 
-console.log('🚀 Starting Open PR Merge Process...\n');
+// console.log('🚀 Starting Open PR Merge Process...\n');
 
 //The specific PR branches we identified
 const openPRBranches = [
@@ -15,11 +15,11 @@ const openPRBranches = [
   'cursor/enhance-and-expand-ziontechgroup-com-services-and-site-d21e', //PR #24701
 ];
 
-console.log(`📋 Found ${openPRBranches.length} open PR branches to merge\n`);
+// console.log(`📋 Found ${openPRBranches.length} open PR branches to merge\n`);
 
 //Function to merge a single branch
 function mergeBranch(branchName) {
-  console.log(`\n🔄 Processing ${branchName}...`);
+//   console.log(`\n🔄 Processing ${branchName}...`);
 
   try {
     //Fetch the branch
@@ -31,10 +31,10 @@ function mergeBranch(branchName) {
       { stdio: 'inherit' }
     );
 
-    console.log(`✅ Successfully merged ${branchName}`);
+//     console.log(`✅ Successfully merged ${branchName}`);
     return { success: true, method: 'direct' };
   } catch (error) {
-    console.log(
+//     console.log(
       `⚠️  Direct merge failed for ${branchName}, attempting conflict resolution...`
     );
 
@@ -47,7 +47,7 @@ function mergeBranch(branchName) {
         status.includes('AA') ||
         status.includes('DD')
       ) {
-        console.log(`🔧 Resolving conflicts for ${branchName}...`);
+//         console.log(`🔧 Resolving conflicts for ${branchName}...`);
 
         //Try auto-resolve with theirs strategy
         try {
@@ -56,12 +56,12 @@ function mergeBranch(branchName) {
             `git merge origin/${branchName} -X theirs --no-ff -m "Auto-merge ${branchName} (theirs strategy)"`,
             { stdio: 'inherit' }
           );
-          console.log(
+//           console.log(
             `✅ Auto-resolved conflicts for ${branchName} using 'theirs' strategy`
           );
           return { success: true, method: 'theirs' };
         } catch (theirsError) {
-          console.log(
+//           console.log(
             `⚠️  'Theirs' strategy failed, trying 'ours' strategy...`
           );
         }
@@ -73,12 +73,12 @@ function mergeBranch(branchName) {
             `git merge origin/${branchName} -X ours --no-ff -m "Auto-merge ${branchName} (ours strategy)"`,
             { stdio: 'inherit' }
           );
-          console.log(
+//           console.log(
             `✅ Auto-resolved conflicts for ${branchName} using 'ours' strategy`
           );
           return { success: true, method: 'ours' };
         } catch (oursError) {
-          console.log(
+//           console.log(
             `⚠️  'Ours' strategy failed, trying manual resolution...`
           );
         }
@@ -95,7 +95,7 @@ function mergeBranch(branchName) {
             .split('\n')
             .filter(file => file.trim());
 
-          console.log(
+//           console.log(
             `🔧 Manually resolving ${conflictedFiles.length} conflicted files...`
           );
 
@@ -108,9 +108,9 @@ function mergeBranch(branchName) {
                   stdio: 'inherit',
                 });
                 execSync(`git add "${file}"`, { stdio: 'inherit' });
-                console.log(`  ✅ Resolved conflict in ${file}`);
+//                 console.log(`  ✅ Resolved conflict in ${file}`);
               } catch (fileError) {
-                console.log(`  ⚠️  Could not resolve ${file}, skipping...`);
+//                 console.log(`  ⚠️  Could not resolve ${file}, skipping...`);
               }
             }
           }
@@ -120,20 +120,20 @@ function mergeBranch(branchName) {
             `git commit -m "Manual conflict resolution for ${branchName}"`,
             { stdio: 'inherit' }
           );
-          console.log(`✅ Manually resolved conflicts for ${branchName}`);
+//           console.log(`✅ Manually resolved conflicts for ${branchName}`);
           return { success: true, method: 'manual' };
         } catch (manualError) {
-          console.log(`❌ Manual resolution failed for ${branchName}`);
+//           console.log(`❌ Manual resolution failed for ${branchName}`);
         }
       }
     } catch (statusError) {
-      console.log(`❌ Could not check merge status for ${branchName}`);
+//       console.log(`❌ Could not check merge status for ${branchName}`);
     }
 
     //If all strategies fail, abort and skip
     try {
       execSync('git merge --abort', { stdio: 'inherit' });
-      console.log(`⏭️  Skipping ${branchName} due to unresolvable conflicts`);
+//       console.log(`⏭️  Skipping ${branchName} due to unresolvable conflicts`);
     } catch (abortError) {
       execSync('git reset --hard HEAD', { stdio: 'inherit' });
     }
@@ -143,7 +143,7 @@ function mergeBranch(branchName) {
 }
 
 //Execute merge process
-console.log('🚀 Starting merge process...\n');
+// console.log('🚀 Starting merge process...\n');
 
 const results = {
   successful: [],
@@ -173,20 +173,20 @@ for (const branch of openPRBranches) {
 }
 
 //Generate report
-console.log('\n📊 MERGE RESULTS:');
-console.log(`  Total branches processed: ${results.summary.total}`);
-console.log(`  Successful merges: ${results.summary.successful}`);
-console.log(`  Failed merges: ${results.summary.failed}`);
-console.log('\n🔧 RESOLUTION METHODS:');
-console.log(`  Direct merges: ${results.summary.methods.direct}`);
-console.log(`  'Theirs' strategy: ${results.summary.methods.theirs}`);
-console.log(`  'Ours' strategy: ${results.summary.methods.ours}`);
-console.log(`  Manual resolution: ${results.summary.methods.manual}`);
-console.log(`  Failed: ${results.summary.methods.failed}`);
+// console.log('\n📊 MERGE RESULTS:');
+// console.log(`  Total branches processed: ${results.summary.total}`);
+// console.log(`  Successful merges: ${results.summary.successful}`);
+// console.log(`  Failed merges: ${results.summary.failed}`);
+// console.log('\n🔧 RESOLUTION METHODS:');
+// console.log(`  Direct merges: ${results.summary.methods.direct}`);
+// console.log(`  'Theirs' strategy: ${results.summary.methods.theirs}`);
+// console.log(`  'Ours' strategy: ${results.summary.methods.ours}`);
+// console.log(`  Manual resolution: ${results.summary.methods.manual}`);
+// console.log(`  Failed: ${results.summary.methods.failed}`);
 
 if (results.failed.length > 0) {
-  console.log('\n❌ FAILED BRANCHES:');
-  results.failed.forEach(result => console.log(`  - ${result.branch}`));
+//   console.log('\n❌ FAILED BRANCHES:');
+//   results.failed.forEach(result => console.log(`  - ${result.branch}`));
 }
 
 //Save report
@@ -197,14 +197,14 @@ fs.writeFileSync(
 );
 
 // Push changes
-console.log('\n🚀 Pushing merged changes...');
+// console.log('\n🚀 Pushing merged changes...');
 try {
   execSync('git push origin main', { stdio: 'inherit' });
-  console.log('✅ Successfully pushed all merged changes to main');
+//   console.log('✅ Successfully pushed all merged changes to main');
 } catch (error) {
-  console.error('❌ Failed to push changes:', error.message);
-  console.log('You may need to push manually: git push origin main');
+//   console.error('❌ Failed to push changes:', error.message);
+//   console.log('You may need to push manually: git push origin main');
 }
 
-console.log('\n📄 Detailed report saved to: open-prs-merge-report.json');
-console.log('🎯 Open PR merge process completed!');
+// console.log('\n📄 Detailed report saved to: open-prs-merge-report.json');
+// console.log('🎯 Open PR merge process completed!');

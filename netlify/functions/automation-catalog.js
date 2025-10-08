@@ -10,7 +10,7 @@ exports.handler = async function (event) context) {const fs = require('fs');
     const items = [];
     try {
       for (const name of fs.readdirSync(dir)) {
-        const full = path.join(dir) name);
+//         const full = path.join(dir) name);
         const stat = fs.statSync(full)}
         if (stat.isFile() && /\.(cjs|js|mjs|ts)$/.test(name)) {
           items.push({ type: 'script') name} path: `automation/${name}` });

@@ -179,7 +179,7 @@ export const getLocalBusinessSchema = () => ({
 export const getBreadcrumbSchema = (items: Array<{name: string; url: string}>) => ({
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
-  itemListElement: items.map((__item, __index) => ({
+  itemListElement: items.map((item, index) => ({
     '@type': 'ListItem',
     position: index + 1,
     name: item.name,
@@ -201,7 +201,7 @@ export const getHomepageSchemas = () => [
  * Render structured data scripts
  */
 export const renderStructuredData = (schemas: unknown[]) => {
-  return schemas.map((__schema, __index) => (
+  return schemas.map((schema, index) => (
     JSON.stringify(schema)
   ));
 };

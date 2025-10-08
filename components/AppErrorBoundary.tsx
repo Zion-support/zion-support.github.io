@@ -83,7 +83,7 @@ export class AppErrorBoundary extends Component<
   override componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     if (process.env['NODE_ENV'] === 'development') {
        
-      console.error('Error caught by boundary:', error, errorInfo);
+//       console.error('Error caught by boundary:', error, errorInfo);
     }
     // Here you could send error to monitoring service
   }

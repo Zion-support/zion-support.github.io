@@ -47,8 +47,8 @@ export function trapFocus(element: HTMLElement): () => void {
     'a[href], button:not([disabled]), textarea:not([disabled]), input:not([disabled]), select:not([disabled]), [tabindex]:not([tabindex="-1"])'
   );
   
-  const firstFocusable = focusableElements[0];
-  const lastFocusable = focusableElements[focusableElements.length - 1];
+//   const firstFocusable = focusableElements[0];
+//   const lastFocusable = focusableElements[focusableElements.length - 1];
   
   const handleKeyDown = (e: KeyboardEvent) => {
     if (e.key !== 'Tab') return;
@@ -84,8 +84,8 @@ export function trapFocus(element: HTMLElement): () => void {
  */
 export function isKeyboardAccessible(element: HTMLElement): boolean {
   const tabindex = element.getAttribute('tabindex');
-  const role = element.getAttribute('role');
-  const isInteractive = ['button', 'link', 'input', 'select', 'textarea'].includes(element.tagName.toLowerCase());
+//   const role = element.getAttribute('role');
+//   const isInteractive = ['button', 'link', 'input', 'select', 'textarea'].includes(element.tagName.toLowerCase());
   
   return (
     isInteractive ||
@@ -134,7 +134,7 @@ export function getContrastRatio(color1: string, color2: string): number {
     // Simple RGB to luminance conversion
     const rgb = color.match(/\d+/g)?.map(Number) || [0, 0, 0];
     const [r, g, b] = rgb.map(val => {
-      const normalized = val / 255;
+//       const normalized = val / 255;
       return normalized <= 0.03928
         ? normalized / 12.92
         : Math.pow((normalized + 0.055) / 1.055, 2.4);
@@ -142,10 +142,10 @@ export function getContrastRatio(color1: string, color2: string): number {
     return 0.2126 * r + 0.7152 * g + 0.0722 * b;
   };
   
-  const lum1 = getLuminance(color1);
-  const lum2 = getLuminance(color2);
-  const brightest = Math.max(lum1, lum2);
-  const darkest = Math.min(lum1, lum2);
+//   const lum1 = getLuminance(color1);
+//   const lum2 = getLuminance(color2);
+//   const brightest = Math.max(lum1, lum2);
+//   const darkest = Math.min(lum1, lum2);
   
   return (brightest + 0.05) / (darkest + 0.05);
 }
@@ -159,7 +159,7 @@ export function meetsContrastRequirements(
   level: 'AA' | 'AAA' = 'AA',
   fontSize: 'normal' | 'large' = 'normal'
 ): boolean {
-  const ratio = getContrastRatio(color1, color2);
+//   const ratio = getContrastRatio(color1, color2);
   
   if (level === 'AAA') {
     return fontSize === 'large' ? ratio >= 4.5 : ratio >= 7;
@@ -233,7 +233,7 @@ export function createAccessibleTooltip(
   content: string,
   placement: 'top' | 'bottom' | 'left' | 'right' = 'top'
 ): () => void {
-  const tooltipId = generateId('tooltip');
+//   const tooltipId = generateId('tooltip');
   const tooltip = document.createElement('div');
   tooltip.id = tooltipId;
   tooltip.setAttribute('role', 'tooltip');

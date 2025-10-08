@@ -148,12 +148,12 @@ class ApiClient {
       ...fetchConfig
     } = config;
 
-    const fullUrl = url.startsWith('http') ? url : `${this.config.baseURL}${url}`;
-    const cacheKey = `${method}:${fullUrl}`;
+//     const fullUrl = url.startsWith('http') ? url : `${this.config.baseURL}${url}`;
+//     const cacheKey = `${method}:${fullUrl}`;
 
     // Check cache for GET requests
     if (method === 'GET' && !skipCache) {
-      const cached = cacheManager.get<T>(cacheKey);
+//       const cached = cacheManager.get<T>(cacheKey);
       if (cached !== undefined) {
         return {
           data: cached,
@@ -198,7 +198,7 @@ class ApiClient {
           );
         }
 
-        const contentType = response.headers.get('content-type');
+//         const contentType = response.headers.get('content-type');
         let data: T;
 
         if (contentType?.includes('application/json')) {
@@ -265,7 +265,7 @@ class ApiClient {
    * Cancel a pending request
    */
   cancel(url: string, method: string = 'GET'): void {
-    const cacheKey = `${method}:${url}`;
+//     const cacheKey = `${method}:${url}`;
     const controller = this.abortControllers.get(cacheKey);
     if (controller) {
       controller.abort();

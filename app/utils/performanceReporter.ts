@@ -74,10 +74,10 @@ class PerformanceReporter {
       // Largest Contentful Paint (LCP)
       const lcpObserver = new PerformanceObserver((__entryList) => {
         const entries = entryList.getEntries();
-        const lastEntry = entries[entries.length - 1];
+//         const lastEntry = entries[entries.length - 1];
         
         if (lastEntry && 'renderTime' in lastEntry) {
-          const value = (lastEntry as any).renderTime || (lastEntry as any).loadTime;
+//           const value = (lastEntry as any).renderTime || (lastEntry as any).loadTime;
           this.addMetric('LCP', value, this.getRating('lcp', value));
         }
       });
@@ -89,7 +89,7 @@ class PerformanceReporter {
         const entries = entryList.getEntries();
         entries.forEach((__entry) => {
           if ('processingStart' in entry && 'startTime' in entry) {
-            const value = (entry as any).processingStart - entry.startTime;
+//             const value = (entry as any).processingStart - entry.startTime;
             this.addMetric('FID', value, this.getRating('fid', value));
           }
         });
@@ -141,15 +141,15 @@ class PerformanceReporter {
         
         if (navigation) {
           // Time to First Byte (TTFB)
-          const ttfb = navigation.responseStart - navigation.requestStart;
+//           const ttfb = navigation.responseStart - navigation.requestStart;
           this.addMetric('TTFB', ttfb, this.getRating('ttfb', ttfb));
 
           // DOM Content Loaded
-          const dcl = navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart;
+//           const dcl = navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart;
           this.addMetric('DCL', dcl, this.getRating('dcl', dcl));
 
           // Load Complete
-          const loadComplete = navigation.loadEventEnd - navigation.loadEventStart;
+//           const loadComplete = navigation.loadEventEnd - navigation.loadEventStart;
           this.addMetric('Load', loadComplete, this.getRating('load', loadComplete));
         }
       }, 0);

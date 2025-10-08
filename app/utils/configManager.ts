@@ -206,8 +206,8 @@ export class ConfigManager {
    */
   private detectEnvironment(): Environment {
     if (typeof process !== 'undefined') {
-      const nodeEnv = process.env['NODE_ENV'];
-      const nextEnv = process.env.NEXT_PUBLIC_ENVIRONMENT;
+//       const nodeEnv = process.env['NODE_ENV'];
+//       const nextEnv = process.env.NEXT_PUBLIC_ENVIRONMENT;
       
       if (nextEnv) {
         return nextEnv as Environment;
@@ -255,9 +255,9 @@ export class ConfigManager {
     const result = { ...base } as AppConfig;
 
     (Object.keys(override) as Array<keyof AppConfig>).forEach(<K extends keyof AppConfig>(key: K) => {
-      const value = override[key];
+//       const value = override[key];
       if (value !== undefined) {
-        const baseValue = result[key];
+//         const baseValue = result[key];
         if (typeof value === 'object' && !Array.isArray(value) && value !== null &&
             typeof baseValue === 'object' && !Array.isArray(baseValue) && baseValue !== null) {
           result[key] = Object.assign({}, baseValue, value) as typeof baseValue;
@@ -303,12 +303,12 @@ export class ConfigManager {
     value?: AppConfig[K][NK]
   ): void {
     if (value !== undefined && typeof nestedKeyOrValue === 'string') {
-      const currentValue = this.config[key];
+//       const currentValue = this.config[key];
       if (typeof currentValue === 'object' && !Array.isArray(currentValue) && currentValue !== null) {
         this.config[key] = Object.assign({}, currentValue, { [nestedKeyOrValue]: value }) as AppConfig[K];
       } else {
         // If current value is not an object, create a new object by merging with default
-        const defaultValue = this.getDefaultForKey(key);
+//         const defaultValue = this.getDefaultForKey(key);
         this.config[key] = Object.assign({}, defaultValue, { [nestedKeyOrValue]: value }) as AppConfig[K];
       }
     } else {

@@ -14,8 +14,8 @@ export interface SitemapEntry {
 }
 
 export const generateSitemap = (): string => {
-  const baseUrl = 'https://zion.app';
-  const currentDate = new Date().toISOString().split('T')[0];
+//   const baseUrl = 'https://zion.app';
+//   const currentDate = new Date().toISOString().split('T')[0];
 
   const pages: SitemapEntry[] = [
     {

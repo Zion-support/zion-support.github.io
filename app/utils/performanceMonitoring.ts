@@ -69,7 +69,7 @@ class PerformanceMonitoringService {
       // Observe LCP
       const lcpObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
-        const lastEntry = entries[entries.length - 1];
+//         const lastEntry = entries[entries.length - 1];
         if (lastEntry) {
           this.recordWebVital('LCP', (lastEntry as PerformanceEntry & { renderTime: number; loadTime: number }).renderTime || (lastEntry as PerformanceEntry & { renderTime: number; loadTime: number }).loadTime);
         }
@@ -117,7 +117,7 @@ class PerformanceMonitoringService {
    * Record a Web Vital metric
    */
   private recordWebVital(name: keyof WebVitals, value: number): void {
-    const rating = this.getRating(name, value);
+//     const rating = this.getRating(name, value);
     const metric: PerformanceMetric = {
       name,
       value,
@@ -234,7 +234,7 @@ class PerformanceMonitoringService {
     customMetrics: CustomMetric[];
     recommendations: string[];
   } {
-    const score = this.getPerformanceScore();
+//     const score = this.getPerformanceScore();
     const recommendations: string[] = [];
 
     // Generate recommendations based on metrics
@@ -266,9 +266,9 @@ class PerformanceMonitoringService {
    * Measure function execution time
    */
   measureFunction<T>(name: string, fn: () => T): T {
-    const start = performance.now();
+//     const start = performance.now();
     const result = fn();
-    const duration = performance.now() - start;
+//     const duration = performance.now() - start;
     
     this.recordCustomMetric(`fn_${name}`, duration, 'ms');
     
@@ -279,9 +279,9 @@ class PerformanceMonitoringService {
    * Measure async function execution time
    */
   async measureAsyncFunction<T>(name: string, fn: () => Promise<T>): Promise<T> {
-    const start = performance.now();
+//     const start = performance.now();
     const result = await fn();
-    const duration = performance.now() - start;
+//     const duration = performance.now() - start;
     
     this.recordCustomMetric(`async_fn_${name}`, duration, 'ms');
     
@@ -414,24 +414,24 @@ export const clearMetrics = () => {
 };
 
 export const measureFunction = <T>(name: string, fn: () => T): T => {
-  const start = performance.now();
+//   const start = performance.now();
   const result = fn();
-  const duration = performance.now() - start;
+//   const duration = performance.now() - start;
   recordMetric(name, duration, MetricUnit.Milliseconds);
   return result;
 };
 
 export const measureAsyncFunction = async <T>(name: string, fn: () => Promise<T>): Promise<T> => {
-  const start = performance.now();
+//   const start = performance.now();
   const result = await fn();
-  const duration = performance.now() - start;
+//   const duration = performance.now() - start;
   recordMetric(name, duration, MetricUnit.Milliseconds);
   return result;
 };
 
 export const getPerformanceScore = (): number => {
   const metrics = getMetrics();
-  const webVitalNames = ['FCP', 'LCP', 'FID', 'CLS', 'TTFB'];
+//   const webVitalNames = ['FCP', 'LCP', 'FID', 'CLS', 'TTFB'];
   const webVitals = webVitalNames
     .map(name => metrics[name])
     .filter(Boolean);
@@ -447,7 +447,7 @@ export const getPerformanceScore = (): number => {
     }
   });
   
-  const sum = scores.reduce((a: number, b: number) => a + b, 0);
+//   const sum = scores.reduce((a: number, b: number) => a + b, 0);
   return Math.round(sum / scores.length);
 };
 

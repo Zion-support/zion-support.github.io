@@ -114,7 +114,7 @@ const GlobalAITransformationHu, b = () => {
           <Link, t, o="/servic, e, s" 
             className="te, x, t-oran, g, e-400, hove, r:te, x, t-oran, g, e-300, fon, t-semibold, flex, items-center, ga, p-2"
           >
-            Get, Starte, d <ArrowRight, className="w-4 h-4" />
+            Gette, d <ArrowRight, className="w-4 h-4" />
           </Li, n, k>
         </div>
       </div>

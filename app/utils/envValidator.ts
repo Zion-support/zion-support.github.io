@@ -47,8 +47,7 @@ class EnvValidator {
     }
 
     if (validation.warnings.length > 0) {
-      logger.warn(
-
+//       console.warn(
         `Environment warnings:\n${validation.warnings.join('\n')}`
       );
     }
@@ -62,7 +61,7 @@ class EnvValidator {
   }
 
   private validateNodeEnv(): void {
-    const nodeEnv = process.env['NODE_ENV'];
+//     const nodeEnv = process.env['NODE_ENV'];
     const validEnvs = ['development', 'production', 'test'];
 
     if (!nodeEnv) {
@@ -78,7 +77,7 @@ class EnvValidator {
   }
 
   private validateOptionalVars(): void {
-    const nodeEnv = this.getNodeEnv();
+//     const nodeEnv = this.getNodeEnv();
 
     // In production, these should be set
     if (nodeEnv === 'production') {

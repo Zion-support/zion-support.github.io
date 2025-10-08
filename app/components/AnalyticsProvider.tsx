@@ -23,7 +23,7 @@ const AnalyticsContext = createContext<AnalyticsContextType | undefined>(
 );
 
 export const useAnalytics = () => {
-  const context = useContext(AnalyticsContext);
+//   const context = useContext(AnalyticsContext);
   if (!context) {
     throw new Error('useAnalytics must be used within an AnalyticsProvider');
   }
@@ -130,8 +130,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
 
     if (enableDebug) {
        
-       
-    console.error('Analytics Error:', error, context);
+//       console.error('Analytics Error:', error, context);
     }
 
     if ((window as unknown as { gtag: (...args: unknown[]) => void }).gtag) {

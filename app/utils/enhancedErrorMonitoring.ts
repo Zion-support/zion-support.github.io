@@ -227,8 +227,7 @@ class EnhancedErrorMonitoring {
 
     // Log to console in development
     if (process.env['NODE_ENV'] === 'development') {
-      logger.error('Error captured:', errorReport);
-
+//       console.error('Error captured:', errorReport);
     }
   }
 
@@ -280,8 +279,7 @@ class EnhancedErrorMonitoring {
       });
     } catch (error) {
       // If sending fails, keep in queue for retry
-      logger.warn('Failed to send error report:', error);
-
+//       console.warn('Failed to send error report:', error);
     }
   }
 
@@ -291,7 +289,7 @@ class EnhancedErrorMonitoring {
   private async flushErrorQueue(): Promise<void> {
     if (!this.isOnline) return;
 
-    const errorsToSend = [...this.errorQueue];
+//     const errorsToSend = [...this.errorQueue];
     this.errorQueue = [];
 
     for (const error of errorsToSend) {

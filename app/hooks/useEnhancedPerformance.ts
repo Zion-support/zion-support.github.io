@@ -4,8 +4,7 @@
  */
 
 import { useEffect, useCallback, useRef } from 'react';
-import { logger } from '../utils/logger';
-import { _performanceOptimizer } from '../utils/_performanceOptimizer';
+import { performanceOptimizer } from '../utils/performanceOptimizer';
 import { errorTracker } from '../utils/enhancedErrorTracking';
 import { analytics } from '../utils/enhancedAnalytics';
 
@@ -41,7 +40,7 @@ export function useEnhancedPerformance(
     return () => {
       // Track component unmount duration
       if (trackPerformance) {
-        const duration = performance.now() - mountTimeRef.current;
+//         const duration = performance.now() - mountTimeRef.current;
         if (duration > 5000) {
           // Long-lived component
           analytics.trackCustomEvent(
@@ -66,10 +65,9 @@ export function useEnhancedPerformance(
 
     if (trackPerformance && renderCountRef.current > 10) {
       // Many re-renders detected
-      logger.warn(
-
-        `Component ${component} has re-rendered ${renderCountRef.current} times`
-      );
+//       console.warn(
+//         `Component ${component} has re-rendered ${renderCountRef.current} times`
+//       );
       analytics.trackCustomEvent(
         'Performance',
         'High Render Count',
@@ -102,12 +100,12 @@ export function useEnhancedPerformance(
 
   const measureOperation = useCallback(
     (operationName: string) => {
-      const _markName = `${component}-${operationName}`;
-      const startTime = performance.now();
+//       const markName = `${component}-${operationName}`;
+//       const startTime = performance.now();
 
       return {
         end: () => {
-          const duration = performance.now() - startTime;
+//           const duration = performance.now() - startTime;
           
           if (trackPerformance) {
             analytics.trackPerformance(

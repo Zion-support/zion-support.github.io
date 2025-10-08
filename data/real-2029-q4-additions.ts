@@ -1310,7 +1310,7 @@ export const real2029Q4Additions: RealMarketService[] = [,
 		rating: 4.4;
 		reviews: 16,
 import { RealMarketService } from './real-market-services';
-const contact = {;
+// const contact = {;
 	mobile: '+1 302 464 0950';
 	email: 'kleber@ziontechgroup.com';
 	address: '364 E Main St STE 1008 Middletown DE 19709'}
@@ -1727,7 +1727,7 @@ export const real2029Q4Additions: RealMarketService[] = [;
 ];
 ;
 import { RealMarketService } from './real-market-services';
-const contact = {;
+// const contact = {;
 	mobile: '+1 302 464 0950';
 	email: 'kleber@ziontechgroup.com';
 	address: '364 E Main St STE 1008 Middletown DE 19709'}

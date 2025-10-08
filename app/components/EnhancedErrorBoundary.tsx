@@ -53,17 +53,16 @@ class EnhancedErrorBoundary extends Component<Props, State> {
 
     // Log to console in development
     if (process.env.NODE_ENV === 'development') {
-      // Error logging disabled for production
-      // console.group('🚨 Error Boundary Caught Error');
-      // console.error('Error:', error);
-      // console.error('Error Info:', errorInfo);
-      // console.error('Component Stack:', errorInfo.componentStack);
-      // console.groupEnd();
+//       console.group('🚨 Error Boundary Caught Error');
+//       console.error('Error:', error);
+//       console.error('Error Info:', errorInfo);
+//       console.error('Component Stack:', errorInfo.componentStack);
+//       console.groupEnd();
     }
   }
 
   private reportError = (error: Error, errorInfo: ErrorInfo) => {
-    const _errorReport = {
+    const errorReport = {
       errorId: this.state.errorId,
       message: error.message,
       stack: error.stack,
@@ -77,11 +76,11 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     };
 
     // Send to error reporting service
-    this.sendErrorReport(_errorReport);
+    this.sendErrorReport(errorReport);
 
     // Send to analytics if available
-    if (typeof window !== 'undefined' && (window as unknown as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag) {
-      (window as unknown as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag('event', 'exception', {
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('event', 'exception', {
         description: error.message,
         fatal: false,
         custom_map: {
@@ -92,22 +91,20 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     }
   };
 
-  private sendErrorReport = async (_errorReport: any) => {
-
+  private sendErrorReport = async (errorReport: unknown) => {
     try {
       // In a real app, you would send this to your error reporting service
       // For now, we'll just log it
-      // Error report logged
+//       console.log('Error Report:', errorReport);
       
       // Example: Send to error reporting service
       // await fetch('/api/errors', {
       //   method: 'POST',
       //   headers: { 'Content-Type': 'application/json' },
-      //   body: JSON.stringify(_errorReport)
+      //   body: JSON.stringify(errorReport)
       // });
-    } catch (_reportingError) {
-
-      // Failed to send error report
+    } catch (reportingError) {
+//       console.warn('Failed to send error report:', reportingError);
     }
   };
 
@@ -162,7 +159,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
         // Show success message
         const button = document.getElementById('copy-error-details');
         if (button) {
-          const originalText = button.textContent;
+//           const originalText = button.textContent;
           button.textContent = 'Copied!';
           setTimeout(() => {
             button.textContent = originalText;
@@ -170,7 +167,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
         }
       })
       .catch(() => {
-        // Failed to copy error details
+//         console.warn('Failed to copy error details');
       });
   };
 
@@ -180,8 +177,8 @@ class EnhancedErrorBoundary extends Component<Props, State> {
         return this.props.fallback;
       }
 
-      const { retryCount, error, errorId } = this.state;
-      const canRetry = retryCount < this.maxRetries;
+      const { retryCount, error, errorInfo, errorId } = this.state;
+//       const canRetry = retryCount < this.maxRetries;
 
       return (
         <div className={`min-h-screen flex items-center justify-center bg-gradient-to-br from-red-50 to-orange-50 ${this.props.className || ''}`}>

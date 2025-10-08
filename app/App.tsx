@@ -14,7 +14,7 @@ import PerformanceDashboard from './components/PerformanceDashboard';
 import LoadingSpinner from './components/LoadingSpinner';
 
 // Lazy load pages
-const HomePage = lazy(() => import('./page').catch(() => ({ default: () => <div>Error loading page</div> })));
+// const HomePage = lazy(() => import('./page').catch(() => ({ default: () => <div>Error loading page</div> })));
 
 // Import proper utilities
 import { performanceOptimizer, lazyLoadImages, preloadCriticalResources, collectPerformanceMetrics } from './utils/performanceOptimizer';
@@ -32,8 +32,8 @@ const App: React.FC = () => {
     
     // Initialize Web Vitals monitoring
     if (typeof window !== 'undefined' && 'performance' in window) {
-      const pageLoadMetrics = collectPerformanceMetrics();
-      const metrics = performanceOptimizer.getMetrics();
+//       const pageLoadMetrics = collectPerformanceMetrics();
+//       const metrics = performanceOptimizer.getMetrics();
       if (pageLoadMetrics) {
         logger.info('Performance metrics collected', 'App', { metrics: pageLoadMetrics });
       }

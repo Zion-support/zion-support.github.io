@@ -53,11 +53,11 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({src,
     }
     return () => observer.disconnect();
   }, [priority]);
-  const handleLoad = () => {setIsLoading(false);
+//   const handleLoad = () => {setIsLoading(false);
     setHasError(false);
     onLoad?.()}
   };
-  const handleError = () => {setIsLoading(false);
+//   const handleError = () => {setIsLoading(false);
     setHasError(true);
     onError?.()}
   };

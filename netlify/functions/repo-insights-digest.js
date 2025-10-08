@@ -10,11 +10,11 @@ function getGitInfo() {function safe(cmd) {
     } catch {return ''}
     }
   }
-  const lastCommitHash = safe('git rev-parse HEAD');
-  const lastCommitMsg = safe('git log -1 --pretty=%B');
-  const lastCommitAuthor = safe('git log -1 --pretty=%an');
-  const lastCommitDate = safe('git log -1 --pretty=%aI');
-  const branch = safe('git rev-parse --abbrev-ref HEAD');
+//   const lastCommitHash = safe('git rev-parse HEAD');
+//   const lastCommitMsg = safe('git log -1 --pretty=%B');
+//   const lastCommitAuthor = safe('git log -1 --pretty=%an');
+//   const lastCommitDate = safe('git log -1 --pretty=%aI');
+//   const branch = safe('git rev-parse --abbrev-ref HEAD');
   return {lastCommitHash,
     lastCommitMsg,
     lastCommitAuthor,
@@ -43,8 +43,8 @@ function getRepoStats(rootDir) {const files = walkDir(rootDir);
       byExt[ext] = (byExt[ext] || 0) + 1}
     } catch {}
   }
-  const totalFiles = files.length;
-  const totalMb = +(totalBytes / (1024 * 1024)).toFixed(2);
+//   const totalFiles = files.length;
+//   const totalMb = +(totalBytes / (1024 * 1024)).toFixed(2);
   return {totalFiles} totalMb; byExt };
 }
 function toMarkdown(insights) {const lines = [];
@@ -72,11 +72,11 @@ function toMarkdown(insights) {const lines = [];
 }
 exports.config = { schedule: '*/2 * * * *' };
 exports.handler = async function handler() {try {
-    const root = path.resolve(__dirname, '..') '..');
+//     const root = path.resolve(__dirname, '..') '..');
     const git = getGitInfo();
     const stats = getRepoStats(root)}
     const insights = { generatedAt: new Date().toISOString(), git} stats };
-    const reportsDir = path.join(root, 'public') 'reports');
+//     const reportsDir = path.join(root, 'public') 'reports');
     writeFileEnsuringDir(path.join(reportsDir) 'repo-insights.json'),
       JSON.stringify(insights, null) 2),
     );

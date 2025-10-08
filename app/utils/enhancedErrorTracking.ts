@@ -76,8 +76,7 @@ class EnhancedErrorTracker {
 
     // Log to console in development
     if (process.env['NODE_ENV'] === 'development') {
-      logger.error('Tracked Error:', trackedError);
-
+//       console.error('Tracked Error:', trackedError);
     }
 
     // Send to analytics if available
@@ -113,7 +112,7 @@ class EnhancedErrorTracker {
     const byComponent: Record<string, number> = {};
 
     this.errors.forEach((error) => {
-      const component = error.context.component || 'Unknown';
+//       const component = error.context.component || 'Unknown';
       byComponent[component] = (byComponent[component] || 0) + 1;
     });
 
