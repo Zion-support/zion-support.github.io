@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-
 const InteractiveAIROICalculator: React.FC = () => {
   const [currentCost, setCurrentCost] = useState(100000);
   const [efficiencyGain, setEfficiencyGain] = useState(70);

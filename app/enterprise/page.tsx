@@ -1,12 +1,6 @@
 import React from 'react';
-import { Metadata } from 'next';
-import Link from 'next/link';
-
-export const metadata: Metadata = {
-  title: 'Enterprise Solutions - Zion Tech Group',
-  description: 'Comprehensive AI and IT solutions for enterprise organizations. Transform your business with our advanced technology stack.',
-};
-
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 const EnterprisePage: React.FC = () => {
   return (
     <>
@@ -27,8 +21,7 @@ const EnterprisePage: React.FC = () => {
               uptime with enterprise-grade security and compliance.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/contact"
+              <Link to="/contact"
                 className="group flex items-center gap-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl"
               >
                 <span>Schedule Enterprise Demo</span>
@@ -36,8 +29,7 @@ const EnterprisePage: React.FC = () => {
                   →
                 </span>
               </Link>
-              <Link
-                href="#solutions"
+              <Link to="#solutions"
                 className="group flex items-center gap-3 bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 border border-blue-700"
               >
                 <span>View Solutions</span>
@@ -121,15 +113,13 @@ const EnterprisePage: React.FC = () => {
                 transformation with our enterprise AI solutions.
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-                <Link
-                  href="tel:+13024640950"
+                <Link to="tel:+13024640950"
                   className="group flex items-center gap-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl"
                 >
                   <span className="text-xl">📞</span>
                   <span>Call Now</span>
                 </Link>
-                <Link
-                  href="/contact"
+                <Link to="/contact"
                   className="group flex items-center gap-3 bg-white/10 hover:bg-white/20 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 border border-white/30"
                 >
                   <span className="text-xl">📧</span>

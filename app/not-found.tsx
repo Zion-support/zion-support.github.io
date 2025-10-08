@@ -1,42 +1,41 @@
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { ArrowLeft, Home, Search, BookOpen, Users, Phone } from 'lucide-react';
-
 export default function NotFound() {
   const popularPages = [
     {
       title: 'Home',
       description: 'Return to our homepage',
-      href: '/',
+      to: '/',
       icon: '🏠'
     },
     {
       title: 'AI Services',
       description: 'Explore our comprehensive AI and IT solutions',
-      href: '/services',
+      to: '/services',
       icon: '🤖'
     },
     {
       title: 'Blog & Insights',
       description: 'Read about latest AI trends and innovations',
-      href: '/blog',
+      to: '/blog',
       icon: '📚'
     },
     {
       title: 'About Us',
       description: 'Learn about Zion Tech Group and our mission',
-      href: '/about',
+      to: '/about',
       icon: '🏢'
     },
     {
       title: 'Case Studies',
       description: 'See our success stories and client results',
-      href: '/case-studies',
+      to: '/case-studies',
       icon: '📊'
     },
     {
       title: 'Contact Us',
       description: 'Get in touch with our AI experts',
-      href: '/contact',
+      to: '/contact',
       icon: '📞'
     },
   ];
@@ -68,7 +67,7 @@ export default function NotFound() {
           {popularPages.map((page, index) => (
             <Link
               key={index}
-              href={page.href}
+              to={page.to}
               className="block p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 text-left"
             >
               <div className="text-3xl mb-3">{page.icon}</div>
@@ -84,15 +83,13 @@ export default function NotFound() {
 
         {/* Action Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Link
-            href="/"
+          <Link to="/"
             className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-300"
           >
             <Home className="w-4 h-4 mr-2" />
             Go Home
           </Link>
-          <Link
-            href="/contact"
+          <Link to="/contact"
             className="inline-flex items-center px-6 py-3 bg-gray-200 text-gray-800 rounded-lg hover:bg-gray-300 transition-colors duration-300"
           >
             <Phone className="w-4 h-4 mr-2" />

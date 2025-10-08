@@ -1,5 +1,4 @@
 import React from 'react';
-
 const ServicesPage: React.FC = () => {
   const services = [
     {

@@ -1,5 +1,4 @@
 import React from 'react';
-
 export const metadata = {
   title: 'AI 2025-2026 Mega Trends Breakthrough: Revolutionary Enterprise Transformation',
   description: 'Discover the groundbreaking AI trends and breakthroughs that will revolutionize enterprise operations in 2025-2026.',

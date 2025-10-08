@@ -1,18 +1,5 @@
 import React from 'react';
-import { Metadata } from 'next';
-
-export const metadata: Metadata = {
-  title: "AI 2026: Autonomous Agent Factories - The Future of Enterprise Automation",
-  description: "Revolutionary autonomous agent factories achieving 95% enterprise automation rates through self-replicating AI systems and advanced agent orchestration.",
-  authors: [{ name: 'Zion Tech Group' }],
-  openGraph: {
-    title: 'AI 2026: Autonomous Agent Factories - The Future of Enterprise Automation',
-    description: 'Revolutionary autonomous agent factories achieving 95% enterprise automation rates through self-replicating AI systems and advanced agent orchestration.',
-    authors: ['Zion Tech Group'],
-  
-    publishedTime: '2025-01-30T00:00:00Z',}
-};
-
+import { Helmet } from 'react-helmet-async';
 export default function AI2026AutonomousAgentFactoriesPage() {
   return (
     <div className="min-h-screen bg-gray-50">

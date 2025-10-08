@@ -1,10 +1,7 @@
-'use client';
-
 import React, { useEffect } from 'react';
-import { usePathname } from 'next/navigation';
-
+import { useNavigate, useLocation } from 'react-router-dom';
 const SEOOptimizer: React.FC = () => {
-  const pathname = usePathname();
+  const pathname = useLocation().pathname;
 
   useEffect(() => {
     // Update page title based on route

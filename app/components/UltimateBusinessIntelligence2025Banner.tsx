@@ -1,6 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
-
+import { Link } from 'react-router-dom';
 const UltimateBusinessIntelligence2025Banner: React.FC = () => {
   return (
     <section className="relative bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 py-20 overflow-hidden">
@@ -29,8 +28,7 @@ const UltimateBusinessIntelligence2025Banner: React.FC = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
-            <Link 
-              href="/services"
+            <Link to="/services"
               className="inline-flex items-center px-10 py-5 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-bold text-lg rounded-xl hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-2xl"
             >
               Get Started Today
@@ -38,8 +36,7 @@ const UltimateBusinessIntelligence2025Banner: React.FC = () => {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
             </Link>
-            <Link 
-              href="/contact"
+            <Link to="/contact"
               className="inline-flex items-center px-10 py-5 border-2 border-indigo-400 text-indigo-300 font-bold text-lg rounded-xl hover:bg-indigo-400/10 transition-all duration-300"
             >
               Schedule Consultation

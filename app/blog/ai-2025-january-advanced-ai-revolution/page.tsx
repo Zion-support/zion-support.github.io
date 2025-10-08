@@ -1,23 +1,5 @@
-import { Metadata } from 'next';
-
-export const metadata: Metadata = {
-  title: 'January 2025 Advanced AI Revolution: Next-Generation Enterprise Transformation | Zion Tech Group',
-  description: 'Discover the revolutionary AI breakthroughs transforming enterprise operations in January 2025. Advanced autonomous systems, quantum-enhanced intelligence, and $2.8B proven ROI.',
-  keywords: 'AI revolution 2025, enterprise AI transformation, autonomous systems, quantum AI, machine learning, artificial intelligence, business automation',
-  openGraph: {
-    title: 'January 2025 Advanced AI Revolution: Next-Generation Enterprise Transformation',
-    description: 'Revolutionary AI breakthroughs with $2.8B proven ROI, 99.9% operational autonomy, and zero downtime.',
-    type: 'article',
-    authors: ['Zion Tech Group'],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'January 2025 Advanced AI Revolution: Next-Generation Enterprise Transformation',
-    description: 'Revolutionary AI breakthroughs with $2.8B proven ROI, 99.9% operational autonomy, and zero downtime.',
-    images: ['/og/january-2025-ai-revolution.jpg']
-  }
-};
-
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 export default function January2025AdvancedAIRevolution() {
   return (
     <div className="min-h-screen bg-gray-50">

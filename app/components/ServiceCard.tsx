@@ -1,7 +1,4 @@
-'use client';
-
 import React from 'react';
-
 interface ServiceCardProps {
   title: string;
   description: string;

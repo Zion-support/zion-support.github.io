@@ -1,6 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
-
+import { Link } from 'react-router-dom';
 export const metadata = {
   title: 'AI Autonomous Business Systems 2026: 95% Automation Achievement | Zion Tech Group',
   description: 'Discover how AI autonomous business systems achieved 95% operational automation. Revolutionary self-managing enterprises transform business operations.',
@@ -27,7 +26,7 @@ export default function AIAutonomousBusinessSystems2026() {
       <div className="max-w-4xl mx-auto px-4 py-8">
         <div className="bg-white rounded-lg shadow-lg p-8">
           <div className="mb-6">
-            <Link href="/blog" className="text-indigo-600 hover:text-indigo-700 flex items-center mb-4">
+            <Link to="/blog" className="text-indigo-600 hover:text-indigo-700 flex items-center mb-4">
               ← Back to Blog
             </Link>
           </div>

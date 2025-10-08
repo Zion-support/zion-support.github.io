@@ -1,5 +1,3 @@
-'use client';
-
 interface PerformanceMetrics {
   lcp?: number;
   fid?: number;

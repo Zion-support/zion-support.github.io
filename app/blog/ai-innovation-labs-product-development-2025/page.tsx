@@ -1,5 +1,4 @@
 import React from 'react';
-
 export const metadata = {
 	title: 'AI Innovation Labs: Product Development Revolution 2025 | Zion Tech Group',
 	description: 'Discover how AI Innovation Labs are revolutionizing product development with 10x faster time-to-market, 85% cost reduction, and breakthrough innovation acceleration.',

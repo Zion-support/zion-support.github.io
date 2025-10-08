@@ -1,5 +1,4 @@
 import React from 'react';
-
 // This is a React component for the implementation guide
 
 export default function ImplementationGuide() {

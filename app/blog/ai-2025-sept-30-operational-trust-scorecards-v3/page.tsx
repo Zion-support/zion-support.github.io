@@ -1,5 +1,4 @@
 import React from 'react';
-
 export const metadata = {
   
   title: "Operational Trust Scorecards v3",

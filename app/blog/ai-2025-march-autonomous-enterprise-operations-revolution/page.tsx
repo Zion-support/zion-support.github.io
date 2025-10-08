@@ -1,24 +1,5 @@
 import React from 'react';
-import { Metadata } from 'next';
-
-export const metadata: Metadata = {
-  title: 'March 2025: Autonomous Enterprise Operations Revolution | Zion Tech Group',
-  description: 'Discover how autonomous AI agents are revolutionizing enterprise operations, delivering 85% automation rates and $35 billion in operational savings.',
-  keywords: ['Autonomous AI', 'Enterprise Operations', 'Business Automation', 'AI Agents', 'Operational Efficiency'],
-  openGraph: {
-    title: 'March 2025: Autonomous Enterprise Operations Revolution | Zion Tech Group',
-    description: 'Discover how autonomous AI agents are revolutionizing enterprise operations, delivering 85% automation rates and $35 billion in operational savings.',
-    type: 'article',
-    authors: ['Zion Tech Group'],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'March 2025: Autonomous Enterprise Operations Revolution',
-    description: 'AI agents now manage complex business operations with unprecedented efficiency, delivering $35 billion in operational savings.',
-    images: ['/og/march-2025-autonomous-operations.jpg']
-  }
-};
-
+import { Helmet } from 'react-helmet-async';
 export default function March2025AutonomousEnterpriseOperationsRevolution() {
   return (
     <div className="min-h-screen bg-gray-50">
