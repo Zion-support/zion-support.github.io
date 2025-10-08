@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
 export default function TeamPage() {
   const teamMembers = [
@@ -26,8 +27,18 @@ export default function TeamPage() {
   ];
 
   return (
-    <div className='min-h-screen bg-gray-50 py-16'>
-      <div className='container mx-auto px-4'>
+    <>
+      <Helmet>
+        <title>Our Team - Zion Tech Group AI Experts</title>
+        <meta name="description" content="Meet the expert team at Zion Tech Group. Our AI specialists, engineers, and business leaders are dedicated to delivering cutting-edge AI solutions for enterprise transformation." />
+        <meta name="keywords" content="AI team, machine learning experts, enterprise AI, technology leadership, AI specialists" />
+        <meta property="og:title" content="Our Team - Zion Tech Group AI Experts" />
+        <meta property="og:description" content="Meet the expert team at Zion Tech Group. Our AI specialists, engineers, and business leaders are dedicated to delivering cutting-edge AI solutions." />
+        <meta property="og:type" content="website" />
+        <link rel="canonical" href="https://zion.app/team" />
+      </Helmet>
+      <div className='min-h-screen bg-gray-50 py-16'>
+        <div className='container mx-auto px-4'>
         <div className='text-center mb-16'>
           <h1 className='text-4xl font-bold text-gray-900 mb-6'>Meet Our Expert Team</h1>
           <p className='text-xl text-gray-600 max-w-3xl mx-auto'>
@@ -73,5 +84,6 @@ export default function TeamPage() {
         </div>
       </div>
     </div>
+    </>
   );
 }

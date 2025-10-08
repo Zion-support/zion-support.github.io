@@ -1,8 +1,16 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
 export default function TermsPage() {
   return (
-    <div className='min-h-screen bg-gray-50 py-16'>
+    <>
+      <Helmet>
+        <title>Terms of Service - Zion Tech Group</title>
+        <meta name="description" content="Read Zion Tech Group's terms of service to understand the terms and conditions for using our AI-powered enterprise solutions and services." />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://zion.app/terms" />
+      </Helmet>
+      <div className='min-h-screen bg-gray-50 py-16'>
       <div className='container mx-auto px-4 max-w-4xl'>
         <div className='bg-white rounded-lg shadow-lg p-8'>
           <h1 className='text-4xl font-bold text-gray-900 mb-8'>Terms of Service</h1>
@@ -86,5 +94,6 @@ export default function TermsPage() {
         </div>
       </div>
     </div>
+    </>
   );
 }

@@ -1,8 +1,5 @@
 import React, { memo, useMemo, useCallback, Suspense } from 'react';
 import { HelmetProvider, Helmet } from 'react-helmet-async';
-//Memoized components for better performance
-=======
-import { HelmetProvider, Helmet } from 'react-helmet-async';
 
 // Memoized components for better performance
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-3f25
@@ -217,24 +214,6 @@ export default function App() {
             {JSON.stringify(structuredData)}
           </script>
         </Helmet>
-        
-        <div className="min-h-screen bg-white">
-          <Suspense fallback={<LoadingSpinner />}>
-            <UnifiedContentPromotion />
-            <InteractiveAIROICalculator />
-            <ContentShowcase />
-            <InteractiveContentShowcase2026 />
-          </Suspense>
-          
-          {/* Scroll to top button */}
-          <button
-            onClick={handleScrollToTop}
-            className="fixed bottom-4 right-4 bg-blue-600 text-white p-3 rounded-full shadow-lg hover:bg-blue-700 transition-colors z-50"
-            aria-label="Scroll to top"
-          >
-            ↑
-          </button>
-        </div>
       </HelmetProvider>
     </ErrorBoundary>
   );

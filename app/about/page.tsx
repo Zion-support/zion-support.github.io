@@ -1,16 +1,4 @@
 import React from 'react';
-const AboutPage: React.FC = () => {
-  return (
-    <div className='min-h-screen bg-white py-16'>
-      <div className='container mx-auto px-4'>
-        <div className='max-w-4xl mx-auto'>
-          <h1 className='text-5xl font-bold text-gray-900 mb-8 text-center'>
-            About Zion Tech Group
-          </h1>
-          <div className='prose prose-lg mx-auto mb-12'>
-            <p className='text-xl text-gray-600 text-center mb-8'>
-              Leading the future of AI-powered enterprise transformation with 
-              guaranteed 300% ROI and revolutionary technology solutions.
             </p>
           </div>
           <div className='grid md:grid-cols-2 gap-12 mb-16'>
@@ -107,6 +95,7 @@ const AboutPage: React.FC = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 export default AboutPage;
