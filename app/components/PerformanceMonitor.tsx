@@ -94,8 +94,8 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     metrics.memoryUsage,
   ]);
 
-  // Only show when explicitly enabled via props
-  if (!enableConsoleLogging) {
+  // Only show in development or when explicitly enabled
+  if (!enableConsoleLogging && process.env.NODE_ENV === 'production') {
     return null;
   }
 
