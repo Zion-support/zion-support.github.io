@@ -110,7 +110,7 @@ export default function RootLayout({
             description: 'Cloud migration and infrastructure optimization services'
           }
         }
-      ]cursor/analyze-improve-and-deploy-application-3d67
+      ]
     }
   };
 

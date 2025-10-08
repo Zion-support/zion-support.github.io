@@ -91,7 +91,7 @@ const ServicesPage: React.FC = () => {
       description: 'Decentralized applications, smart contracts, and Web3 solutions.',
       icon: '🔗',
       link: '/blockchain',
-      features: ['Smart Contracts', 'DeFi Protocols', 'NFT Marketplaces', 'Web3 Applications'],cursor/add-new-services-and-deploy-updates-f159
+      features: ['Smart Contracts', 'DeFi Protocols', 'NFT Marketplaces', 'Web3 Applications'],
       price: 'Starting at $8,000/project'
     },
     {

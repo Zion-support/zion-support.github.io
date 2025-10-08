@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, Star, Atom, Cpu, Shield, Zap, Target, BarChart, Brain, Lock } from 'lucide-react';cursor/add-new-services-and-deploy-updates-f159
+import { CheckCircle, Star, Atom, Cpu, Shield, Zap, Target, BarChart, Brain, Lock } from 'lucide-react';
 
 const QuantumComputingPage: React.FC = () => {
   const quantumServices = [

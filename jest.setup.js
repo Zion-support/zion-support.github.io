@@ -117,10 +117,10 @@ beforeAll(() => {
     ) {
       return;
     }
-    _originalError.call(console, ...args);
+    originalError.call(console, ...args);
   });
 });
 
 afterAll(() => {
-  console.error = _originalError;
+  console.error = originalError;
 });

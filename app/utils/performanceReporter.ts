@@ -247,11 +247,11 @@ class PerformanceReporter {
     const resources = performance.getEntriesByType('resource') as PerformanceResourceTiming[]
 
     return {
-      metrics: this.metrics
-      navigation
+      metrics: this.metrics,
+      navigation,
       resources: resources.slice(0, 50), // Limit to 50 resources
-      timestamp: Date.now()
-      userAgent: navigator.userAgent
+      timestamp: Date.now(),
+      userAgent: navigator.userAgent,
       url: window.location.href
     }
   }
