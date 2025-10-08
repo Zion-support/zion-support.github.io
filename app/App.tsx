@@ -5,21 +5,14 @@ import { HelmetProvider } from 'react-helmet-async';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 // Components
-import AccessibilityEnhancer from './components/AccessibilityEnhancer';
-import PerformanceDashboard from './components/PerformanceDashboard';
-import AdvancedPerformanceMonitor from './components/AdvancedPerformanceMonitor';
+import EnhancedAccessibility from './components/EnhancedAccessibility';
+import EnhancedPerformanceMonitor from './components/EnhancedPerformanceMonitor';
+import EnhancedSEO from './components/EnhancedSEO';
 import AdvancedErrorBoundary from './components/AdvancedErrorBoundary';
-import SEOEnhancer from './components/SEOEnhancer';
-import AdvancedSEOOptimizer from './components/AdvancedSEOOptimizer';
 import LoadingSpinner from './components/LoadingSpinner';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
-import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
-import SEOEnhancer from './components/SEOEnhancer';
-import AdvancedErrorBoundary from './components/AdvancedErrorBoundary';
-import AdvancedPerformanceMonitor from './components/AdvancedPerformanceMonitor';
-import { LoadingSpinner } from './components/LoadingComponents';
 
 // Lazy load components for better performance
 // const ContentShowcase = lazy(() => import('./components/ContentShowcase'));
@@ -124,76 +117,82 @@ const App: React.FC = () => {
         }}
       >
         <PerformanceOptimizer>
-          <AccessibilityEnhancer>
-            <SEOEnhancer
-              title="Zion Tech Group - Advanced AI and IT Solutions"
-              description="Leading provider of enterprise AI solutions, quantum computing, and autonomous systems. Transform your business with our cutting-edge technology."
-            >
-              <AdvancedSEOOptimizer
-                config={{
-                  title: 'Zion Tech Group - Advanced AI and IT Solutions',
-                  description: 'Leading provider of enterprise AI solutions, quantum computing, and autonomous systems. Transform your business with our cutting-edge technology.',
-                  keywords: ['AI solutions', 'enterprise AI', 'quantum computing', 'autonomous systems', 'digital transformation', 'automation', 'cloud services', 'AI consulting', 'business intelligence', 'machine learning'],
-                  canonicalUrl: 'https://ziontechgroup.com',
-                  ogImage: 'https://ziontechgroup.com/og-image.jpg',
-                  structuredData: {
-                    '@type': 'TechCompany',
-                    name: 'Zion Tech Group',
-                    description: 'Advanced AI and IT Solutions Provider',
-                    foundingDate: '2020',
-                    numberOfEmployees: '50-100',
-                    industry: 'Technology',
-                    services: [
-                      'AI Solutions',
-                      'Digital Transformation',
-                      'Cloud Services',
-                      'Automation',
-                      'Business Intelligence'
-                    ]
+          <EnhancedAccessibility
+            enableRealTimeMonitoring={process.env.NODE_ENV === 'development'}
+            enableKeyboardNavigation={true}
+            enableHighContrast={true}
+            enableReducedMotion={true}
+            onMetricsUpdate={(metrics) => {
+              if (process.env.NODE_ENV === 'development') {
+                logger.info('Accessibility Metrics', { component: 'AccessibilityEnhancer', metrics });
+              }
+            }}
+          />
+          <EnhancedSEO
+            title="Zion Tech Group - Advanced AI & Technology Solutions | Enterprise AI Transformation"
+            description="Transform your business with cutting-edge AI solutions, digital transformation, and cloud services. Proven strategies delivering $50M+ annual savings and 95% process automation."
+            keywords={[
+              'AI solutions',
+              'enterprise AI transformation',
+              'digital automation',
+              'cloud services',
+              'AI consulting',
+              'machine learning',
+              'artificial intelligence',
+              'digital transformation',
+              'technology services',
+              'Zion Tech Group',
+              'AI implementation',
+              'enterprise architecture',
+              'cost optimization',
+              'autonomous systems',
+              'quantum computing',
+              'blockchain',
+              'cybersecurity'
+            ]}
+            canonicalUrl="https://ziontechgroup.com"
+            ogImage="https://ziontechgroup.com/og-image.jpg"
+            ogType="website"
+            twitterCard="summary_large_image"
+          />
+          <Router>
+            <div className="App">
+              <Navigation />
+              <main id="main-content" role="main">
+                <Suspense fallback={<LoadingSpinner />}>
+                  <Routes>
+                    <Route path="/" element={<HomePage />} />
+                    <Route path="/about" element={<AboutPage />} />
+                    <Route path="/services" element={<ServicesPage />} />
+                    <Route path="/contact" element={<ContactPage />} />
+                    <Route path="/team" element={<TeamPage />} />
+                    <Route path="/privacy" element={<PrivacyPage />} />
+                    <Route path="/terms" element={<TermsPage />} />
+                    <Route path="/enterprise" element={<EnterprisePage />} />
+                    <Route path="/services-advertising" element={<ServicesAdvertisingPage />} />
+                    <Route path="/case-studies" element={<CaseStudiesPage />} />
+                  </Routes>
+                </Suspense>
+              </main>
+              <Footer />
+
+              {/* Enhanced Performance Monitor */}
+              <EnhancedPerformanceMonitor
+                enableRealTimeMonitoring={process.env.NODE_ENV === 'development'}
+                onMetricsUpdate={(metrics) => {
+                  if (process.env.NODE_ENV === 'development') {
+                    logger.info('Performance Metrics', { component: 'PerformanceMonitor', metrics });
                   }
                 }}
-                enableStructuredData={true}
-                enableOpenGraph={true}
-                enableTwitterCards={true}
-                enableSchemaMarkup={true}
+                threshold={{
+                  fcp: 1500,
+                  lcp: 2500,
+                  cls: 0.1,
+                  fid: 100
+                }}
               />
-              <Router>
-                <div className="App">
-                  <Navigation />
-                  <main id="main-content">
-                    <Suspense fallback={<LoadingSpinner />}>
-                      <Routes>
-                        <Route path="/" element={<HomePage />} />
-                        <Route path="/about" element={<AboutPage />} />
-                        <Route path="/services" element={<ServicesPage />} />
-                        <Route path="/contact" element={<ContactPage />} />
-                        <Route path="/team" element={<TeamPage />} />
-                        <Route path="/privacy" element={<PrivacyPage />} />
-                        <Route path="/terms" element={<TermsPage />} />
-                        <Route path="/enterprise" element={<EnterprisePage />} />
-                        <Route path="/services-advertising" element={<ServicesAdvertisingPage />} />
-                        <Route path="/case-studies" element={<CaseStudiesPage />} />
-                      </Routes>
-                    </Suspense>
-                  </main>
-                  <Footer />
-
-                  {/* Performance Dashboard */}
-                  <PerformanceDashboard />
-                  
-                  {/* Advanced Performance Monitor */}
-                  <AdvancedPerformanceMonitor
-                    enableRealTimeMonitoring={process.env['NODE_ENV'] === 'development'}
-                    onMetricsUpdate={(metrics) => {
-                      if (process.env['NODE_ENV'] === 'development') {
-                        logger.info('Performance Metrics', { component: 'PerformanceMonitor', metrics });
-                      }
-                    }}
-                  />
-                </div>
-              </Router>
-            </SEOEnhancer>
-          </AccessibilityEnhancer>
+            </div>
+          </Router>
         </PerformanceOptimizer>
       </AdvancedErrorBoundary>
     </HelmetProvider>

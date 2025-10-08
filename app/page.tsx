@@ -1,4 +1,5 @@
 import React, { useCallback, useState, useEffect, Suspense, lazy, memo } from 'react';
+import { Helmet } from 'react-helmet-async';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 
@@ -49,9 +50,69 @@ const HomePage: React.FC = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-white to-purple-50">
-      {/* Navigation */}
-      <Navigation />
+    <>
+      <Helmet>
+        <title>Zion Tech Group - Advanced AI & Technology Solutions | Enterprise AI Transformation</title>
+        <meta name="description" content="Transform your business with cutting-edge AI solutions, digital transformation, and cloud services. Proven strategies delivering $50M+ annual savings and 95% process automation for enterprise clients." />
+        <meta name="keywords" content="AI solutions, enterprise AI transformation, digital automation, cloud services, AI consulting, machine learning, artificial intelligence, digital transformation, technology services, Zion Tech Group, AI implementation, enterprise architecture, cost optimization, autonomous systems, quantum computing, blockchain, cybersecurity" />
+        <meta property="og:title" content="Zion Tech Group - Advanced AI & Technology Solutions" />
+        <meta property="og:description" content="Transform your business with cutting-edge AI solutions, digital transformation, and cloud services. Proven strategies delivering $50M+ annual savings." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://ziontechgroup.com" />
+        <meta property="og:image" content="https://ziontechgroup.com/og-image.jpg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Zion Tech Group - Advanced AI & Technology Solutions" />
+        <meta name="twitter:description" content="Transform your business with cutting-edge AI solutions and digital transformation services." />
+        <meta name="twitter:image" content="https://ziontechgroup.com/og-image.jpg" />
+        <link rel="canonical" href="https://ziontechgroup.com" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Zion Tech Group",
+            "url": "https://ziontechgroup.com",
+            "logo": "https://ziontechgroup.com/logo.png",
+            "description": "Leading provider of enterprise AI solutions, digital transformation, and cutting-edge technology services.",
+            "foundingDate": "2020",
+            "numberOfEmployees": "50-100",
+            "industry": "Technology",
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "telephone": "+1-302-600-9898",
+              "contactType": "Customer Service",
+              "areaServed": "US",
+              "availableLanguage": "en"
+            },
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "364 E Main St STE 1008",
+              "addressLocality": "Middletown",
+              "addressRegion": "DE",
+              "postalCode": "19709",
+              "addressCountry": "US"
+            },
+            "sameAs": [
+              "https://twitter.com/ziontechgroup",
+              "https://linkedin.com/company/ziontechgroup",
+              "https://github.com/ziontechgroup"
+            ],
+            "offers": [
+              {
+                "@type": "Offer",
+                "category": "AI Solutions",
+                "description": "Enterprise AI solutions, digital transformation, and cloud services",
+                "price": "1500",
+                "priceCurrency": "USD"
+              }
+            ]
+          })}
+        </script>
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-white to-purple-50">
+        {/* Navigation */}
+        <Navigation />
       
       {/* Skip to main content for accessibility */}
       <a
@@ -70,15 +131,15 @@ const HomePage: React.FC = () => {
           className={`text-center mb-16 transition-opacity duration-1000 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}
           aria-labelledby="hero-heading"
         >
-          <h1 id="hero-heading" className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
+          <h1 id="hero-heading" className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 text-balance">
             Zion Tech Group
           </h1>
-          <p className="text-xl md:text-2xl text-gray-600 mb-8" role="doc-subtitle">
+          <p className="text-xl md:text-2xl text-gray-600 mb-8 font-semibold" role="doc-subtitle">
             Advanced AI & Technology Solutions
           </p>
-          <p className="text-lg md:text-xl text-gray-700 max-w-4xl mx-auto mb-8 leading-relaxed">
+          <p className="text-lg md:text-xl text-gray-700 max-w-4xl mx-auto mb-8 leading-relaxed text-balance">
             Leading provider of enterprise AI solutions, digital transformation, and cutting-edge technology services. 
-            Transform your business with our proven strategies delivering $50M+ annual savings and 95% process automation.
+            Transform your business with our proven strategies delivering <strong>$50M+ annual savings</strong> and <strong>95% process automation</strong>.
           </p>
           
           {/* Key Benefits */}
@@ -108,14 +169,14 @@ const HomePage: React.FC = () => {
           </h2>
           
           <div className="grid md:grid-cols-3 gap-8">
-            <article className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 focus-within:ring-4 focus-within:ring-indigo-300">
-              <div className="text-4xl mb-4">🤖</div>
-              <h3 className="text-2xl font-semibold text-gray-900 mb-4">AI Solutions</h3>
+            <article className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 focus-within:ring-4 focus-within:ring-indigo-300 touch-target" tabIndex={0} role="article" aria-labelledby="ai-solutions-heading">
+              <div className="text-4xl mb-4" role="img" aria-label="AI robot icon">🤖</div>
+              <h3 id="ai-solutions-heading" className="text-2xl font-semibold text-gray-900 mb-4">AI Solutions</h3>
               <p className="text-gray-600 mb-4">
                 Harness the power of artificial intelligence to drive innovation and efficiency in
                 your organization.
               </p>
-              <ul className="text-sm text-gray-500 space-y-1">
+              <ul className="text-sm text-gray-500 space-y-1" role="list">
                 <li>• Machine Learning Models</li>
                 <li>• Natural Language Processing</li>
                 <li>• Computer Vision</li>
@@ -123,14 +184,14 @@ const HomePage: React.FC = () => {
               </ul>
             </article>
 
-            <article className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 focus-within:ring-4 focus-within:ring-indigo-300">
-              <div className="text-4xl mb-4">🔄</div>
-              <h3 className="text-2xl font-semibold text-gray-900 mb-4">Digital Transformation</h3>
+            <article className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 focus-within:ring-4 focus-within:ring-indigo-300 touch-target" tabIndex={0} role="article" aria-labelledby="digital-transformation-heading">
+              <div className="text-4xl mb-4" role="img" aria-label="Transformation cycle icon">🔄</div>
+              <h3 id="digital-transformation-heading" className="text-2xl font-semibold text-gray-900 mb-4">Digital Transformation</h3>
               <p className="text-gray-600 mb-4">
                 Transform your business processes with cutting-edge technology and expert
                 consultation.
               </p>
-              <ul className="text-sm text-gray-500 space-y-1">
+              <ul className="text-sm text-gray-500 space-y-1" role="list">
                 <li>• Process Automation</li>
                 <li>• Legacy System Modernization</li>
                 <li>• Workflow Optimization</li>
@@ -138,13 +199,13 @@ const HomePage: React.FC = () => {
               </ul>
             </article>
 
-            <article className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 focus-within:ring-4 focus-within:ring-indigo-300">
-              <div className="text-4xl mb-4">☁️</div>
-              <h3 className="text-2xl font-semibold text-gray-900 mb-4">Cloud Services</h3>
+            <article className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 focus-within:ring-4 focus-within:ring-indigo-300 touch-target" tabIndex={0} role="article" aria-labelledby="cloud-services-heading">
+              <div className="text-4xl mb-4" role="img" aria-label="Cloud services icon">☁️</div>
+              <h3 id="cloud-services-heading" className="text-2xl font-semibold text-gray-900 mb-4">Cloud Services</h3>
               <p className="text-gray-600 mb-4">
                 Scale your infrastructure with secure, reliable, and efficient cloud solutions.
               </p>
-              <ul className="text-sm text-gray-500 space-y-1">
+              <ul className="text-sm text-gray-500 space-y-1" role="list">
                 <li>• Cloud Migration</li>
                 <li>• Infrastructure as Code</li>
                 <li>• DevOps & CI/CD</li>
@@ -236,10 +297,11 @@ const HomePage: React.FC = () => {
             <a
               href="tel:+13026009898"
               onClick={handlePhoneClick}
-              className="inline-flex items-center bg-indigo-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-indigo-700 transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-4 focus:ring-indigo-300 shadow-lg"
+              className="inline-flex items-center bg-indigo-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-indigo-700 transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-4 focus:ring-indigo-300 shadow-lg touch-target"
               aria-label="Call us at (302) 600-9898"
+              role="button"
             >
-              <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
               </svg>
               Call: (302) 600-9898
@@ -247,10 +309,11 @@ const HomePage: React.FC = () => {
             
             <a
               href="/contact"
-              className="inline-flex items-center bg-white text-indigo-600 px-8 py-4 rounded-lg font-semibold border-2 border-indigo-600 hover:bg-indigo-50 transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-4 focus:ring-indigo-300 shadow-lg"
+              className="inline-flex items-center bg-white text-indigo-600 px-8 py-4 rounded-lg font-semibold border-2 border-indigo-600 hover:bg-indigo-50 transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-4 focus:ring-indigo-300 shadow-lg touch-target"
               aria-label="Contact us via form"
+              role="button"
             >
-              <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
               </svg>
               Get Free Consultation
@@ -267,7 +330,8 @@ const HomePage: React.FC = () => {
       
       {/* Footer */}
       <Footer />
-    </div>
+      </div>
+    </>
   );
 };
 

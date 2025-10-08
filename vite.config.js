@@ -4,7 +4,12 @@ import { visualizer } from 'rollup-plugin-visualizer';
 
 export default defineConfig({
   plugins: [
-    react(),
+    react({
+      // Enable React Fast Refresh
+      fastRefresh: true,
+      // Optimize JSX runtime
+      jsxRuntime: 'automatic'
+    }),
     visualizer({
       filename: 'dist/stats.html',
       open: false,
@@ -26,31 +31,12 @@ export default defineConfig({
     emptyOutDir: true,
     copyPublicDir: true,
     // Enhanced performance optimizations
-    terserOptions: {
-      compress: {
-        drop_console: true,
-        drop_debugger: true,
-        pure_funcs: ['console.log', 'console.info', 'console.debug'],
-        passes: 3,
-        unsafe: true,
-        unsafe_comps: true,
-        unsafe_math: true,
-        unsafe_proto: true,
-      },
-      mangle: {
-        safari10: true,
-        toplevel: true,
-      },
-      format: {
-        comments: false,
-        ecma: 2015,
-      },
-    },
-    // Reduce memory usage during build
     rollupOptions: {
       maxParallelFileOps: 2,
       treeshake: {
         moduleSideEffects: false,
+        propertyReadSideEffects: false,
+        unknownGlobalSideEffects: false
       },
       external: id => {
         // Externalize Next.js modules to prevent build errors
@@ -72,13 +58,14 @@ export default defineConfig({
           // UI libraries
           if (
             id.includes('node_modules/framer-motion') ||
-            id.includes('node_modules/lucide-react')
+            id.includes('node_modules/lucide-react') ||
+            id.includes('node_modules/@heroicons/react')
           ) {
             return 'ui';
           }
           // Utilities and web vitals
-          if (id.includes('node_modules/web-vitals')) {
-            return 'page';
+          if (id.includes('node_modules/web-vitals') || id.includes('node_modules/clsx')) {
+            return 'utils';
           }
           // Split other node_modules into separate chunks
           if (id.includes('node_modules')) {
@@ -88,6 +75,29 @@ export default defineConfig({
         assetFileNames: 'assets/[name]-[hash][extname]',
         chunkFileNames: 'assets/[name]-[hash].js',
         entryFileNames: 'assets/[name]-[hash].js',
+        // Optimize chunk loading
+        experimentalMinChunkSize: 20000,
+      },
+    },
+    // Enhanced performance optimizations
+    terserOptions: {
+      compress: {
+        drop_console: true,
+        drop_debugger: true,
+        pure_funcs: ['console.log', 'console.info', 'console.debug'],
+        passes: 3,
+        unsafe: true,
+        unsafe_comps: true,
+        unsafe_math: true,
+        unsafe_proto: true,
+      },
+      mangle: {
+        safari10: true,
+        toplevel: true,
+      },
+      format: {
+        comments: false,
+        ecma: 2015,
       },
     },
   },
