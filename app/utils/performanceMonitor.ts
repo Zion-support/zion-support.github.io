@@ -43,7 +43,7 @@ class PerformanceMonitor {
     this.observeCLS();
   }
 
-  private observePaint(name: string, metricKey: keyof PerformanceMetrics): void {
+  private observePaint(name: string, metricKey: 'fcp' | 'fmp'): void {
     try {
       const observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
@@ -191,7 +191,7 @@ class PerformanceMonitor {
   }
 
   getScore(): number {
-    const scores = [];
+    const scores: number[] = [];
     
     // FCP scoring (0-100)
     if (this.metrics.fcp) {
