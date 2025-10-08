@@ -72,14 +72,14 @@ class PerformanceMonitor {
     fn: () => Promise<T>,
     tags?: Record<string, string>
   ): Promise<T> {
-const start = performance.now();
+    const start = performance.now();
     try {
-const result = await fn();
-const duration = performance.now() - start;
+      const result = await fn();
+      const duration = performance.now() - start;
       this.trackMetric(name, duration, 'ms', tags);
       return result;
     } catch (error) {
-const duration = performance.now() - start;
+      const duration = performance.now() - start;
       this.trackMetric(`${name}_error`, duration, 'ms', { ...tags, error: 'true' });
       throw error;
     }
@@ -89,14 +89,14 @@ const duration = performance.now() - start;
    * Measure execution time of a synchronous function
    */
   measure<T>(name: string, fn: () => T, tags?: Record<string, string>): T {
-const start = performance.now();
+    const start = performance.now();
     try {
-const result = fn();
-const duration = performance.now() - start;
+      const result = fn();
+      const duration = performance.now() - start;
       this.trackMetric(name, duration, 'ms', tags);
       return result;
     } catch (error) {
-const duration = performance.now() - start;
+      const duration = performance.now() - start;
       this.trackMetric(`${name}_error`, duration, 'ms', { ...tags, error: 'true' });
       throw error;
     }
@@ -121,7 +121,7 @@ const duration = performance.now() - start;
       performance.measure(name, startMark, endMark);
       const entries = performance.getEntriesByName(name, 'measure');
       if (entries.length > 0) {
-const duration = entries[entries.length - 1].duration;
+        const duration = entries[entries.length - 1].duration;
         this.trackMetric(name, duration, 'ms');
         return duration;
       }
@@ -277,7 +277,7 @@ const duration = entries[entries.length - 1].duration;
         const paintEntries = performance.getEntriesByType('paint');
         const fcpEntry = paintEntries.find((entry) => entry.name === 'first-contentful-paint');
         if (fcpEntry) {
-const fcpMetric = this.createMetric('FCP', fcpEntry.startTime);
+          const fcpMetric = this.createMetric('FCP', fcpEntry.startTime);
           this.webVitals.FCP = fcpMetric;
           this.notifyCallbacks(fcpMetric);
         }
