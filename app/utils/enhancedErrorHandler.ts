@@ -138,11 +138,12 @@ class EnhancedErrorHandler {
             src?: string;
             href?: string;
           };
+          const resourceUrl = target.src || target.href || 'unknown';
           this.handleError({
             type: 'resource',
-            message: `Failed to load resource: ${target?['src'] || target?.href}`,
+            message: `Failed to load resource: ${resourceUrl}`,
             element: event.target?.constructor.name,
-            src: target?['src'] || target?.href,
+            src: resourceUrl,
           });
         }
       },
