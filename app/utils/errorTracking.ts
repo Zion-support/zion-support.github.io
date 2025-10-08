@@ -144,11 +144,15 @@ class ErrorTrackingService {
     }
 
     // Log the error
-    logger.error(`[${metadata.severity.toUpperCase()}] ${error.message}`, {
-      errorId,
-      category: metadata.category,
-      context: metadata.context,
-    });
+    logger.error(
+      `[${metadata.severity.toUpperCase()}] ${error.message}`,
+      error,
+      {
+        error_id: errorId,
+        category: metadata.category,
+        ...metadata.context,
+      }
+    );
 
     // Send to external service if critical
     if (metadata.severity === ErrorSeverity.CRITICAL) {
@@ -194,7 +198,7 @@ class ErrorTrackingService {
       try {
         listener(error);
       } catch (listenerError) {
-        logger.error('Error in error listener', listenerError);
+        logger.error('Error in error listener', listenerError as Error);
       }
     });
   }
@@ -215,7 +219,7 @@ class ErrorTrackingService {
         });
       }
     } catch (reportError) {
-      logger.error('Failed to report error to external service', reportError);
+      logger.error('Failed to report error to external service', reportError as Error);
     }
   }
 

@@ -109,7 +109,7 @@ class PerformanceMonitoringService {
       navObserver.observe({ type: 'navigation', buffered: true });
       this.observers.push(navObserver);
     } catch (error) {
-      logger.error('Failed to initialize performance observers', error);
+      logger.error('Failed to initialize performance observers', error as Error);
     }
   }
 
@@ -188,7 +188,7 @@ class PerformanceMonitoringService {
         });
       }
     } catch (error) {
-      logger.error('Failed to send metric to analytics', error);
+      logger.error('Failed to send metric to analytics', error as Error);
     }
   }
 
@@ -222,7 +222,7 @@ class PerformanceMonitoringService {
       }
     });
 
-    return Math.round(scores.reduce((a, b) => a + b, 0) / scores.length);
+    return Math.round(scores.reduce((a: number, b: number) => a + b, 0) / scores.length);
   }
 
   /**
@@ -310,7 +310,7 @@ class PerformanceMonitoringService {
           return measure.duration;
         }
       } catch (error) {
-        logger.error('Failed to measure performance', error);
+        logger.error('Failed to measure performance', error as Error);
       }
     }
     return null;
