@@ -101,11 +101,11 @@ export function useEnhancedPerformance(
   const measureOperation = useCallback(
     (operationName: string) => {
       const markName = `${component}-${operationName}`;
-      performanceOptimizer.startMark(markName);
+      const startTime = performance.now();
 
       return {
         end: () => {
-          const duration = performanceOptimizer.endMark(markName);
+          const duration = performance.now() - startTime;
           if (duration && trackPerformance) {
             analytics.trackPerformance(
               `${component}-${operationName}`,

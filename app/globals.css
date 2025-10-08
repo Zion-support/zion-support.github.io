@@ -141,9 +141,6 @@ body {
   .no-print {
     display: none !important;
   }
-<<<<<<< HEAD
-}
-=======
   
   body {
     font-size: 12pt;
@@ -154,4 +151,3 @@ body {
     page-break-after: avoid;
   }
 }
->>>>>>> origin/main
