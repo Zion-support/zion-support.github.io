@@ -4,10 +4,14 @@ import { Link } from 'react-router-dom';
 <<<<<<< HEAD
 import { Phone, Mail, MapPin, Clock, Award, Shield, Zap, ArrowRight } from 'lucide-react';
 
+<<<<<<< HEAD
+<<<<<<< HEAD
 const Footer: React.FC = memo(() => {  return (
 =======
 import { ArrowRight } from 'lucide-react';
 
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-14d1
 const Footer: React.FC = memo(() => {
   const aiServices = [
     { name: 'AI Services', url: '/ai-services' },
@@ -53,6 +57,9 @@ const Footer: React.FC = memo(() => {
     { name: 'Sitemap', url: '/sitemap' },
   ];
 
+=======
+const Footer: React.FC = memo(() => {
+>>>>>>> cursor/fix-errors-and-merge-to-main-012c
   return (
 >>>>>>> cursor/fix-errors-and-merge-to-main-ea96
     <footer className="bg-gray-900 text-white">
@@ -70,6 +77,8 @@ const Footer: React.FC = memo(() => {
               Leading provider of enterprise AI solutions, quantum computing, and autonomous systems. 
               Transform your business with cutting-edge technology.
             </p>
+<<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
           </div>
@@ -290,16 +299,21 @@ const Footer: React.FC = () => {
             <h4 className="text-lg font-semibold mb-4">Contact</h4>
 >>>>>>> cursor/fix-errors-and-merge-to-main-deb0
             <div className="space-y-3">
+=======
+            
+            {/* Contact Info */}
+            <div className="space-y-3 mt-6">
+>>>>>>> cursor/fix-errors-and-merge-to-main-012c
               <div className="flex items-center">
                 <Phone className="w-5 h-5 mr-3 text-blue-400" />
                 <a href="tel:+13024640950" className="text-gray-300 hover:text-white transition-colors">
-                  +1 (302) 464-0950
+                  +1 302 464 0950
                 </a>
               </div>
               <div className="flex items-center">
                 <Mail className="w-5 h-5 mr-3 text-blue-400" />
-                <a href="mailto:contact@ziontechgroup.com" className="text-gray-300 hover:text-white transition-colors">
-                  contact@ziontechgroup.com
+                <a href="mailto:kleber@ziontechgroup.com" className="text-gray-300 hover:text-white transition-colors">
+                  kleber@ziontechgroup.com
                 </a>
               </div>
               <div className="flex items-center">
@@ -322,6 +336,7 @@ const Footer: React.FC = () => {
                   Twitter
                 </a>
               </div>
+<<<<<<< HEAD
               
               {/* Contact Info */}
               <div className="space-y-3 mt-6">
@@ -345,6 +360,8 @@ const Footer: React.FC = () => {
                   <Clock className="w-5 h-5 mr-3 text-blue-400" />
                   <span className="text-gray-300">24/7 Support Available</span>
                 </div>              </div>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-012c
             </div>
           </div>
 
@@ -382,6 +399,7 @@ const Footer: React.FC = () => {
                     Documentation
                   </a>
                 </li>
+<<<<<<< HEAD
               </ul>            </div>
 =======
           <div className="lg:col-span-2">
@@ -416,6 +434,15 @@ const Footer: React.FC = () => {
             </div>
           </div>
 
+=======
+            <div className="text-gray-300">
+              <p>364 E Main St STE 1008</p>
+              <p>Middletown, DE 19709</p>
+              <p>United States</p>
+            </div>
+          </div>
+
+>>>>>>> cursor/website-audit-and-update-with-deployment-14d1
           {/* AI Services */}
           <div>
             <h4 className="text-lg font-semibold mb-6 text-cyan-400">AI Services</h4>
@@ -524,7 +551,13 @@ const Footer: React.FC = () => {
             <div className="cyber-card">
               <div className="text-4xl font-bold text-orange-400 mb-2">24/7</div>
               <div className="text-gray-300">Support Available</div>
+<<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-ea96
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-14d1
+=======
+              </ul>
+>>>>>>> cursor/fix-errors-and-merge-to-main-012c
             </div>
           </div>
 
@@ -695,6 +728,10 @@ const Footer: React.FC = () => {
 <<<<<<< HEAD
 Footer.displayName = 'Footer';
 
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-1ed2
 export default Footer;
+=======
+export default Footer;
+>>>>>>> cursor/website-audit-and-update-with-deployment-14d1

@@ -28,6 +28,7 @@ const PerformanceMonitor: React.FC = () => {
   useEffect(() => {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     // const _reportWebVitals = (_metric: { name: string; value: number }) => {
     //   // Log to console in development (only on client side)
     //   if (typeof window !== 'undefined' && enableConsoleLogging) {
@@ -80,18 +81,23 @@ const PerformanceMonitor: React.FC = () => {
       if (metrics.memoryUsage > 50) score -= 10;
       return Math.max(0, score);    };
 =======
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-012c
     const metrics: PerformanceMetrics = {
       lcp: null,
       fid: null,
       cls: null,
       fcp: null,
       ttfb: null
+<<<<<<< HEAD
 =======
       if (currentMetrics.renderTime > 1500) score -= 15;
       if (currentMetrics.loadTime > 3000) score -= 20;
       if (currentMetrics.memoryUsage > 50) score -= 10;
       return Math.max(0, score);
 >>>>>>> cursor/fix-errors-and-merge-to-main-ea96
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-012c
     };
 >>>>>>> cursor/fix-errors-and-merge-to-main-deb0
 
@@ -113,6 +119,7 @@ const PerformanceMonitor: React.FC = () => {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       setMetrics(currentMetrics);
 
       const score = getPerformanceScore();
@@ -124,16 +131,21 @@ const PerformanceMonitor: React.FC = () => {
             metrics: currentMetrics,
             score,          });
 =======
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-012c
         // FID - First Input Delay
         const fidObserver = new PerformanceObserver((list) => {
           list.getEntries().forEach((entry: any) => {
             metrics.fid = entry.processingStart - entry.startTime;
+<<<<<<< HEAD
 =======
         // FID - First Input Delay
         const fidObserver = new PerformanceObserver((list) => {
           list.getEntries().forEach((entry: PerformanceEntry & { processingStart: number; startTime: number }) => {
             setMetrics(prev => ({ ...prev, fid: entry.processingStart - entry.startTime }));
 >>>>>>> cursor/fix-errors-and-merge-to-main-ea96
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-012c
           });
 >>>>>>> cursor/fix-errors-and-merge-to-main-deb0
         });
@@ -234,12 +246,19 @@ const PerformanceMonitor: React.FC = () => {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     // Set up interval for continuous monitoring
     const interval = setInterval(updateMetrics, updateInterval);
 =======
 =======
     // Initial metrics update
     updateMetrics();
+=======
+    return () => {
+      // Cleanup observers if needed
+    };
+  }, []);
+>>>>>>> cursor/fix-errors-and-merge-to-main-012c
 
     // Set up interval for continuous monitoring
     const interval = setInterval(updateMetrics, 5000);
