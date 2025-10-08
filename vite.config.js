@@ -99,6 +99,12 @@ export default defineConfig({
     host: true,
   },
   optimizeDeps: {
-    include: ['react', 'react-dom', 'react-router-dom'],
+    include: ['react', 'react-dom', 'react-router-dom', 'framer-motion', 'lucide-react'],
+  },
+  css: {
+    devSourcemap: false,
+  },
+  esbuild: {
+    drop: ['console', 'debugger'],
   },
 });

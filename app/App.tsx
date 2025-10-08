@@ -14,6 +14,8 @@ import AdvancedSEOOptimizer from './components/AdvancedSEOOptimizer';
 import LoadingSpinner from './components/LoadingSpinner';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
+import PerformanceOptimizer from './components/PerformanceOptimizer';
+import Analytics from './components/Analytics';
 
 // Lazy load components for better performance
 const ContentShowcase = lazy(() => import('./components/ContentShowcase'));
@@ -150,6 +152,8 @@ const App: React.FC = () => {
             />
             <Router>
               <div className="App">
+                <Analytics trackingId="G-XXXXXXXXXX" />
+                <PerformanceOptimizer />
                 <Navigation />
                 <main id="main-content">
                   <Suspense fallback={<LoadingSpinner />}>
