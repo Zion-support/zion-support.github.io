@@ -119,8 +119,8 @@ export default function RootLayout({
       <head>
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="description" content="Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology." />
-        <meta name="keywords" content="AI solutions, quantum computing, autonomous systems, digital transformation, enterprise AI, machine learning, automation, cloud services, business intelligence" />
+        <meta name="description" content="Zion Tech Group - Leading AI and technology solutions provider specializing in enterprise AI transformation, digital automation, cloud infrastructure, and cutting-edge technology services. Transform your business with our proven AI strategies delivering $50M+ annual savings." />
+        <meta name="keywords" content="AI solutions, enterprise AI transformation, digital automation, cloud services, AI consulting, machine learning, artificial intelligence, digital transformation, technology services, Zion Tech Group, AI implementation, enterprise architecture, cost optimization, autonomous systems, quantum computing, business intelligence, process automation" />
         <meta name="author" content="Zion Tech Group" />
         <meta name="robots" content="index, follow" />
         <meta name="googlebot" content="index, follow" />

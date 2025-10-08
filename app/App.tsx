@@ -9,12 +9,15 @@ import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import PerformanceDashboard from './components/PerformanceDashboard';
 import AdvancedPerformanceMonitor from './components/AdvancedPerformanceMonitor';
 import AdvancedErrorBoundary from './components/AdvancedErrorBoundary';
+import ImprovedErrorBoundary from './components/ImprovedErrorBoundary';
 import SEOEnhancer from './components/SEOEnhancer';
 import AdvancedSEOOptimizer from './components/AdvancedSEOOptimizer';
+import AdvancedSEOComponent from './components/AdvancedSEOComponent';
+import AdvancedPerformanceOptimizer from './components/AdvancedPerformanceOptimizer';
+import EnhancedPerformanceMonitor from './components/EnhancedPerformanceMonitor';
 import LoadingSpinner from './components/LoadingSpinner';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
-<<<<<<< HEAD
 import PerformanceOptimizer from './components/PerformanceOptimizer';
 import Analytics from './components/Analytics';
 
@@ -26,21 +29,6 @@ const InteractiveContentShowcase2026 = lazy(
 const InteractiveAIROICalculator = lazy(
   () => import('./components/InteractiveAIROICalculator')
 );
-=======
-import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
-import PerformanceOptimizer from './components/PerformanceOptimizer';
-import AdvancedErrorBoundary from './components/AdvancedErrorBoundary';
-import AdvancedPerformanceMonitor from './components/AdvancedPerformanceMonitor';
-
-// Lazy load components for better performance
-// const ContentShowcase = lazy(() => import('./components/ContentShowcase'));
-// const InteractiveContentShowcase2026 = lazy(
-//   () => import('./components/InteractiveContentShowcase2026')
-// );
-// const InteractiveAIROICalculator = lazy(
-//   () => import('./components/InteractiveAIROICalculator')
-// );
->>>>>>> cursor/fix-errors-and-merge-to-main-a8ed
 
 // Lazy load pages for better performance
 const _HomePage = lazy(() => import('./page'));
@@ -97,33 +85,20 @@ const App: React.FC = () => {
       }
       if (performanceMetrics) {
         // eslint-disable-next-line no-console
-<<<<<<< HEAD
         console.log('Core Web Vitals:', performanceMetrics);
-=======
-        console.log('Core Web Vitals:', performanceMetrics);origin/cursor/fix-errors-and-merge-to-main-6395
->>>>>>> cursor/fix-errors-and-merge-to-main-a8ed
       }
     }
     
     // Log performance and accessibility metrics periodically
     const metricsInterval = setInterval(() => {
-<<<<<<< HEAD
       const performanceMetrics = performanceMonitor.getMetrics();
       const accessibilityMetrics = accessibilityEnhancer.getMetrics();
-=======
-      // const _performanceMetrics = performanceMonitor.getMetrics();
-      const accessibilityMetrics = accessibilityEnhancer.getMetrics();origin/cursor/fix-errors-and-merge-to-main-6395
->>>>>>> cursor/fix-errors-and-merge-to-main-a8ed
       
       if (process.env.NODE_ENV === 'development') {
         // eslint-disable-next-line no-console
         console.log('Performance Score:', performanceMonitor.getScore());
         // eslint-disable-next-line no-console
-<<<<<<< HEAD
         console.log('Accessibility Score:', accessibilityMetrics.overallScore);
-=======
-        console.log('Accessibility Score:', accessibilityMetrics.overallScore);origin/cursor/fix-errors-and-merge-to-main-6395
->>>>>>> cursor/fix-errors-and-merge-to-main-a8ed
       }
     }, 30000);
     
@@ -141,150 +116,120 @@ const App: React.FC = () => {
 
   return (
     <HelmetProvider>
-      <AdvancedErrorBoundary
+      <ImprovedErrorBoundary
         enableErrorReporting={true}
         enableRetry={true}
+        maxRetries={3}
         onError={(error, errorInfo) => {
           logger.error(error.message, { error, errorInfo });
         }}
       >
-<<<<<<< HEAD
-<<<<<<< HEAD
-        <PerformanceOptimizer>
-          <AccessibilityEnhancer>
-            <SEOEnhancer
-              title="Zion Tech Group - Advanced AI and IT Solutions"
-              description="Leading provider of enterprise AI solutions, quantum computing, and autonomous systems. Transform your business with our cutting-edge technology."
-            >
-              <AdvancedSEOOptimizer
-                config={{
-                  title: 'Zion Tech Group - Advanced AI and IT Solutions',
-                  description: 'Leading provider of enterprise AI solutions, quantum computing, and autonomous systems. Transform your business with our cutting-edge technology.',
-                  keywords: ['AI solutions', 'enterprise AI', 'quantum computing', 'autonomous systems', 'digital transformation', 'automation', 'cloud services', 'AI consulting', 'business intelligence', 'machine learning'],
-                  canonicalUrl: 'https://ziontechgroup.com',
-                  ogImage: 'https://ziontechgroup.com/og-image.jpg',
-                  structuredData: {
-                    '@type': 'TechCompany',
-                    name: 'Zion Tech Group',
-                    description: 'Advanced AI and IT Solutions Provider',
-                    foundingDate: '2020',
-                    numberOfEmployees: '50-100',
-                    industry: 'Technology',
-                    services: [
-                      'AI Solutions',
-                      'Digital Transformation',
-                      'Cloud Services',
-                      'Automation',
-                      'Business Intelligence'
-                    ]
+        <AdvancedPerformanceOptimizer
+          enableImageOptimization={true}
+          enableLazyLoading={true}
+          enablePreloading={true}
+          enableResourceHints={true}
+          enableCriticalCSS={true}
+          onOptimizationComplete={(metrics) => {
+            if (process.env.NODE_ENV === 'development') {
+              console.log('Optimization Complete:', metrics);
+            }
+          }}
+        />
+        <AccessibilityEnhancer>
+          <AdvancedSEOComponent
+            config={{
+              title: 'Zion Tech Group - Advanced AI and IT Solutions',
+              description: 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with our proven AI strategies delivering $50M+ annual savings.',
+              keywords: ['AI solutions', 'enterprise AI transformation', 'digital automation', 'cloud services', 'AI consulting', 'machine learning', 'artificial intelligence', 'digital transformation', 'technology services', 'Zion Tech Group', 'AI implementation', 'enterprise architecture', 'cost optimization', 'autonomous systems', 'quantum computing', 'business intelligence', 'process automation'],
+              canonicalUrl: 'https://ziontechgroup.com',
+              ogImage: 'https://ziontechgroup.com/og-image.jpg',
+              twitterCard: 'summary_large_image',
+              twitterSite: '@ziontechgroup',
+              twitterCreator: '@ziontechgroup',
+              structuredData: {
+                '@context': 'https://schema.org',
+                '@type': 'TechCompany',
+                name: 'Zion Tech Group',
+                description: 'Advanced AI and IT Solutions Provider',
+                foundingDate: '2020',
+                numberOfEmployees: '50-100',
+                industry: 'Technology',
+                services: [
+                  'AI Solutions',
+                  'Digital Transformation',
+                  'Cloud Services',
+                  'Automation',
+                  'Business Intelligence'
+                ],
+                contactPoint: {
+                  '@type': 'ContactPoint',
+                  telephone: '+1-302-464-0950',
+                  contactType: 'Customer Service',
+                  areaServed: 'US',
+                  availableLanguage: 'en',
+                },
+                sameAs: [
+                  'https://twitter.com/ziontechgroup',
+                  'https://linkedin.com/company/ziontechgroup',
+                ],
+                address: {
+                  '@type': 'PostalAddress',
+                  addressCountry: 'US',
+                },
+              }
+            }}
+            enableStructuredData={true}
+            enableOpenGraph={true}
+            enableTwitterCards={true}
+            enableSchemaMarkup={true}
+            enableBreadcrumbs={false}
+          />
+          <Router>
+            <div className="App">
+              <Analytics trackingId="G-XXXXXXXXXX" />
+              <Navigation />
+              <main id="main-content">
+                <Suspense fallback={<LoadingSpinner />}>
+                  <Routes>
+                    <Route path="/" element={<_HomePage />} />
+                    <Route path="/about" element={<_AboutPage />} />
+                    <Route path="/services" element={<_ServicesPage />} />
+                    <Route path="/contact" element={<_ContactPage />} />
+                    <Route path="/team" element={<_TeamPage />} />
+                    <Route path="/privacy" element={<_PrivacyPage />} />
+                    <Route path="/terms" element={<_TermsPage />} />
+                    <Route path="/enterprise" element={<_EnterprisePage />} />
+                    <Route path="/services-advertising" element={<_ServicesAdvertisingPage />} />
+                    <Route path="/case-studies" element={<_CaseStudiesPage />} />
+                  </Routes>
+                </Suspense>
+              </main>
+              <Footer />
+
+              {/* Performance Dashboard */}
+              <PerformanceDashboard />
+              
+              {/* Enhanced Performance Monitor */}
+              <EnhancedPerformanceMonitor
+                enableRealTimeMonitoring={process.env['NODE_ENV'] === 'development'}
+                onMetricsUpdate={(metrics) => {
+                  if (process.env['NODE_ENV'] === 'development') {
+                    logger.info('Performance Metrics', { component: 'PerformanceMonitor', metrics });
                   }
                 }}
-                enableStructuredData={true}
-                enableOpenGraph={true}
-                enableTwitterCards={true}
-                enableSchemaMarkup={true}
+                threshold={{
+                  fcp: 1800,
+                  lcp: 2500,
+                  fid: 100,
+                  cls: 0.1,
+                  ttfb: 600,
+                }}
               />
-              <Router>
-                <div className="App">
-                  <Navigation />
-                  <main id="main-content">
-                    <Suspense fallback={<LoadingSpinner />}>
-                      <Routes>
-                        <Route path="/" element={<HomePage />} />
-                        <Route path="/about" element={<AboutPage />} />
-                        <Route path="/services" element={<ServicesPage />} />
-                        <Route path="/contact" element={<ContactPage />} />
-                        <Route path="/team" element={<TeamPage />} />
-                        <Route path="/privacy" element={<PrivacyPage />} />
-                        <Route path="/terms" element={<TermsPage />} />
-                        <Route path="/enterprise" element={<EnterprisePage />} />
-                        <Route path="/services-advertising" element={<ServicesAdvertisingPage />} />
-                        <Route path="/case-studies" element={<CaseStudiesPage />} />
-                      </Routes>
-                    </Suspense>
-                  </main>
-                  <Footer />
-                </div>
-              </Router>
-=======
-        <AccessibilityEnhancer>
-          <SEOEnhancer
-            title="Zion Tech Group - Advanced AI and IT Solutions"
-            description="Leading provider of enterprise AI solutions, quantum computing, and autonomous systems. Transform your business with our cutting-edge technology."
-          >
-            <AdvancedSEOOptimizer
-              config={{
-                title: 'Zion Tech Group - Advanced AI and IT Solutions',
-                description: 'Leading provider of enterprise AI solutions, quantum computing, and autonomous systems. Transform your business with our cutting-edge technology.',
-                keywords: ['AI solutions', 'enterprise AI', 'quantum computing', 'autonomous systems', 'digital transformation', 'automation', 'cloud services', 'AI consulting', 'business intelligence', 'machine learning'],
-                canonicalUrl: 'https://ziontechgroup.com',
-                ogImage: 'https://ziontechgroup.com/og-image.jpg',
-                structuredData: {
-                  '@type': 'TechCompany',
-                  name: 'Zion Tech Group',
-                  description: 'Advanced AI and IT Solutions Provider',
-                  foundingDate: '2020',
-                  numberOfEmployees: '50-100',
-                  industry: 'Technology',
-                  services: [
-                    'AI Solutions',
-                    'Digital Transformation',
-                    'Cloud Services',
-                    'Automation',
-                    'Business Intelligence'
-                  ]
-                }
-              }}
-              enableStructuredData={true}
-              enableOpenGraph={true}
-              enableTwitterCards={true}
-              enableSchemaMarkup={true}
-            />
-            <Router>
-              <div className="App">
-                <Analytics trackingId="G-XXXXXXXXXX" />
-                <PerformanceOptimizer />
-                <Navigation />
-                <main id="main-content">
-                  <Suspense fallback={<LoadingSpinner />}>
-                    <Routes>
-                      <Route path="/" element={<HomePage />} />
-                      <Route path="/about" element={<AboutPage />} />
-                      <Route path="/services" element={<ServicesPage />} />
-                      <Route path="/contact" element={<ContactPage />} />
-                      <Route path="/team" element={<TeamPage />} />
-                      <Route path="/privacy" element={<PrivacyPage />} />
-                      <Route path="/terms" element={<TermsPage />} />
-                      <Route path="/enterprise" element={<EnterprisePage />} />
-                      <Route path="/services-advertising" element={<ServicesAdvertisingPage />} />
-                      <Route path="/case-studies" element={<CaseStudiesPage />} />
-                      <Route path="/ai-services" element={<AIServicesPage />} />
-                      <Route path="/it-services" element={<ITServicesPage />} />
-                      <Route path="/micro-saas" element={<MicroSaasPage />} />
-                    </Routes>
-                  </Suspense>
-                </main>
-                <Footer />cursor/analyze-improve-and-deploy-application-3d67
->>>>>>> cursor/fix-errors-and-merge-to-main-a8ed
-
-                  {/* Performance Dashboard */}
-                  <PerformanceDashboard />
-                  
-                  {/* Advanced Performance Monitor */}
-                  <AdvancedPerformanceMonitor
-                    enableRealTimeMonitoring={process.env['NODE_ENV'] === 'development'}
-                    onMetricsUpdate={(metrics) => {
-                      if (process.env['NODE_ENV'] === 'development') {
-                        logger.info('Performance Metrics', { component: 'PerformanceMonitor', metrics });
-                      }
-                    }}
-                  />
-                </div>
-              </Router>
-            </SEOEnhancer>
-          </AccessibilityEnhancer>
-        </PerformanceOptimizer>
-      </AdvancedErrorBoundary>
+            </div>
+          </Router>
+        </AccessibilityEnhancer>
+      </ImprovedErrorBoundary>
     </HelmetProvider>
   );
 };

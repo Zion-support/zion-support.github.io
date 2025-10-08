@@ -18,9 +18,9 @@ export default defineConfig({
     target: 'es2015',
     minify: 'terser',
     sourcemap: false,
-    chunkSizeWarningLimit: 1000,
+    chunkSizeWarningLimit: 500,
     cssCodeSplit: true,
-    assetsInlineLimit: 4096,
+    assetsInlineLimit: 2048,
     reportCompressedSize: true,
     // Optimize build performance
     emptyOutDir: true,
@@ -51,6 +51,8 @@ export default defineConfig({
       maxParallelFileOps: 2,
       treeshake: {
         moduleSideEffects: false,
+        propertyReadSideEffects: false,
+        tryCatchDeoptimization: false,
       },
       external: id => {
         // Externalize Next.js modules to prevent build errors
