@@ -1,3 +1,4 @@
+import React from 'react'
 /**
  * Enhanced Logger Utility
  * Production-ready logging with multiple levels and formatting
@@ -65,15 +66,23 @@ class Logger {
     metadata?: Record<string, unknown>
   ): [string | undefined, Record<string, unknown> | undefined] {
     if (typeof contextOrMetadata === 'string') {
-      return [contextOrMetadata, metadata]
+      return [contextOrMetadata, metadata];
     }
-    return [undefined, contextOrMetadata]
+    return [undefined, contextOrMetadata];
   }
   /**
    * Log a debug message
    */
   debug(message: string, contextOrMetadata?: string | Record<string, unknown>, metadata?: Record<string, unknown>): void {
-    const [context, meta] = this.parseArgs(contextOrMetadata, metadata)
+    const [context, meta] = this.parseArgs(contextOrMetadata, metadata);
+
+    this.log(LogLevel.DEBUG, message, context, meta);
+  }
+  /**
+   * Log an info message
+   */
+  info(message: string, contextOrMetadata?: string | Record<string, unknown>, _metadata?: Record<string, unknown>): void {
+    const [context, meta] = this.parseArgs(contextOrMetadata, _metadata)
 
     this.log(LogLevel.DEBUG, message, context, meta)
   }
@@ -82,7 +91,16 @@ class Logger {
    */
   info(message: string, contextOrMetadata?: string | Record<string, unknown>, metadata?: Record<string, unknown>): void {
     const [context, meta] = this.parseArgs(contextOrMetadata, metadata)
+
     this.log(LogLevel.INFO, message, context, meta)
+  }
+  /**
+   * Log a warning message
+   */
+  warn(message: string, contextOrMetadata?: string | Record<string, unknown>, _metadata?: Record<string, unknown>): void {
+    const [context, meta] = this.parseArgs(contextOrMetadata, _metadata)
+
+    this.log(LogLevel.WARN, message, context, meta)
   }
   /**
    * Log a warning message
@@ -106,10 +124,10 @@ class Logger {
     let meta: Record<string, unknown> | undefined
 
     if (errorOrContextOrMetadata instanceof Error) {
-      error = errorOrContextOrMetadata;
-      [context, meta] = this.parseArgs(contextOrMetadata, _metadata);
+      error = errorOrContextOrMetadata
+      [context, meta] = this.parseArgs(contextOrMetadata, _metadata)
     } else {
-      [context, meta] = this.parseArgs(errorOrContextOrMetadata, contextOrMetadata as Record<string, unknown> | undefined);
+      [context, meta] = this.parseArgs(errorOrContextOrMetadata, contextOrMetadata as Record<string, unknown> | undefined)
     }
     const entry: LogEntry = {
       level: LogLevel.ERROR,
@@ -142,10 +160,10 @@ class Logger {
     let meta: Record<string, unknown> | undefined
 
     if (errorOrContextOrMetadata instanceof Error) {
-      error = errorOrContextOrMetadata;
-      [context, meta] = this.parseArgs(contextOrMetadata, _metadata);
+      error = errorOrContextOrMetadata
+      [context, meta] = this.parseArgs(contextOrMetadata, _metadata)
     } else {
-      [context, meta] = this.parseArgs(errorOrContextOrMetadata, contextOrMetadata as Record<string, unknown> | undefined);
+      [context, meta] = this.parseArgs(errorOrContextOrMetadata, contextOrMetadata as Record<string, unknown> | undefined)
     }
     const entry: LogEntry = {
       level: LogLevel.FATAL,
@@ -381,8 +399,24 @@ class ContextLogger {
   fatal(message: string, error?: Error, metadata?: Record<string, unknown>): void {
     this.logger.fatal(message, error, this.context, metadata)
   }
-  perf(metric: string, value: number, metadata?: Record<string, unknown>): void {
-    this.logger.perf(metric, value, { ...metadata, context: this.context })
+  debug(message: string, _metadata?: Record<string, unknown>): void {
+    this.logger.debug(message, this.context, _metadata)
+  }
+  info(message: string, _metadata?: Record<string, unknown>): void {
+    this.logger.info(message, this.context, _metadata)
+  }
+  warn(message: string, _metadata?: Record<string, unknown>): void {
+    this.logger.warn(message, this.context, _metadata)
+  }
+  error(message: string, error?: Error, _metadata?: Record<string, unknown>): void {
+    this.logger.error(message, error, this.context, _metadata)
+  }
+  fatal(message: string, error?: Error, _metadata?: Record<string, unknown>): void {
+    this.logger.fatal(message, error, this.context, _metadata)
+
+  }
+  perf(metric: string, value: number, _metadata?: Record<string, unknown>): void {
+    this.logger.perf(metric, value, { ..._metadata, context: this.context })
   }
   lifecycle(message: string, _metadata?: Record<string, unknown>): void {
     this.logger.lifecycle(message, this.context)
@@ -408,6 +442,12 @@ export const info = (message: string, context?: string, metadata?: Record<string
   logger.info(message, context, metadata)
 export const warn = (message: string, context?: string, metadata?: Record<string, unknown>) =>
   logger.warn(message, context, metadata)
+export const debug = (message: string, context?: string, _metadata?: Record<string, unknown>) =>
+  logger.debug(message, context, _metadata)
+export const info = (message: string, context?: string, _metadata?: Record<string, unknown>) =>
+  logger.info(message, context, _metadata)
+export const warn = (message: string, context?: string, _metadata?: Record<string, unknown>) =>
+  logger.warn(message, context, _metadata)
 
 export const error = (
   message: string,
