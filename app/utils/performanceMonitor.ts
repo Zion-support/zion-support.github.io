@@ -48,7 +48,7 @@ class PerformanceMonitor {
       const observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           if (entry.name === name) {
-            this.metrics[metricKey] = entry.startTime;
+            (this.metrics as any)[metricKey] = entry.startTime;
             this.logMetric(metricKey as string, entry.startTime);
           }
         }
@@ -191,7 +191,7 @@ class PerformanceMonitor {
   }
 
   getScore(): number {
-    const scores = [];
+    const scores: number[] = [];
     
     // FCP scoring (0-100)
     if (this.metrics.fcp) {
@@ -232,8 +232,9 @@ class PerformanceMonitor {
     const score = this.getScore();
     const metrics = this.getMetrics();
     
-    return `
-
+    return `Performance Report\nScore: ${score}\nMetrics: ${JSON.stringify(metrics)}`;
+  }
+}
 
 export const performanceMonitor = new PerformanceMonitor();
 export default PerformanceMonitor;

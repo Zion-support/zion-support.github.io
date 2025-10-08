@@ -675,8 +675,9 @@ class AccessibilityEnhancer {
   getReport(): string {
     const metrics = this.getMetrics();
     
-    return `
-
+    return `Accessibility Report\nMetrics: ${JSON.stringify(metrics)}`;
+  }
+}
 
 export const accessibilityEnhancer = new AccessibilityEnhancer();
 export default AccessibilityEnhancer;
