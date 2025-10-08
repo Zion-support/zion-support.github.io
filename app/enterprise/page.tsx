@@ -22,9 +22,11 @@ export default function EnterprisePage() {
             </div>
             <p className="text-lg text-gray-400 mb-12 max-w-3xl mx-auto">
               Transform your enterprise with our proven AI solutions. Achieve
-              $100M+ cost savings, 500% productivity gains, and 99.9% system
-              uptime with enterprise-grade security and compliance.
+              cost savings, productivity gains, and system reliability
+              with enterprise-grade security and compliance.
             </p>
+            <div className="flex gap-4 justify-center">
+              <Link
                 href="/contact"
                 className="group flex items-center gap-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl"
               >
@@ -32,6 +34,8 @@ export default function EnterprisePage() {
                 <span className="group-hover:translate-x-1 transition-transform">
                   →
                 </span>
+              </Link>
+              <Link
                 href="#solutions"
                 className="group flex items-center gap-3 bg-white/10 hover:bg-white/20 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 border border-white/30"
               >
@@ -39,12 +43,21 @@ export default function EnterprisePage() {
                 <span className="group-hover:translate-x-1 transition-transform">
                   ↓
                 </span>
+              </Link>
             </div>
           </div>
         </div>
       </div>
 
       {/* Solutions Section */}
+      <section className="py-24" id="solutions">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              Enterprise Solutions
+            </h2>
+            <p className="text-xl text-gray-600">
+              Comprehensive solutions for your enterprise needs
             </p>
           </div>
 
@@ -52,54 +65,30 @@ export default function EnterprisePage() {
             {[
               {
                 title: 'Autonomous Operations',
-                description:
+                description: 'Self-managing systems that optimize enterprise operations',
               },
               {
                 title: 'Business Intelligence',
-                description:
+                description: 'Data-driven insights for strategic decision making',
               },
               {
-                title: 'Quantum Security',
-                description:
+                title: 'Cloud Services',
+                description: 'Scalable and secure cloud infrastructure solutions',
               },
             ].map((solution, index) => (
               <div
                 key={index}
+                className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow"
               >
-                <div className="text-4xl mb-4">{solution.icon}</div>
-                <h3 className="text-2xl font-bold text-white mb-4">
+                <h3 className="text-xl font-bold text-gray-900 mb-4">
                   {solution.title}
                 </h3>
-                <p className="text-gray-300 mb-6">{solution.description}</p>
+                <p className="text-gray-600">{solution.description}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
-
-      {/* CTA Section */}
-      <section className="py-24">
-        <div className="container mx-auto px-4">
-          <div className="text-center bg-white/5 backdrop-blur-lg rounded-3xl p-12 border border-white/20">
-            <h3 className="text-4xl font-bold text-white mb-6">
-              Ready to Transform Your Enterprise?
-            </h3>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Join 500+ Fortune 500 companies achieving unprecedented
-              transformation with our enterprise AI solutions.
-            </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-                href="tel:+13024640950"
-                className="group flex items-center gap-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl"
-              >
-                <span className="text-xl">📞</span>
-                className="group flex items-center gap-3 bg-white/10 hover:bg-white/20 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 border border-white/30"
-              >
-                <span className="text-xl">📧</span>
-                <span>Get Enterprise Consultation</span>
-            </div>
-          </div>
-        </div>
-      </section>
     </>
   );
+}
