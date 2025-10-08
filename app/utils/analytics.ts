@@ -142,17 +142,13 @@ class AnalyticsService {
    * Track performance metrics
    */
   trackPerformance(metric: string, value: number, metadata?: Record<string, unknown>): void {
-    try {
-      this.trackEvent({
-        action: 'performance',
-        category: 'web_vitals',
-        label: metric,
-        value: Math.round(value),
-        metadata,
-      });
-    } catch (error) {
-      console.error('Failed to track performance:', error);
-    }
+    this.trackEvent({
+      action: 'performance_metric',
+      category: 'performance',
+      label: metric,
+      value: Math.round(value),
+      metadata,
+    });
   }
 
   /**
@@ -161,7 +157,7 @@ class AnalyticsService {
   private hasGtag(): boolean {
     return (
       typeof window !== 'undefined' &&
-      typeof window.gtag === 'function'
+      typeof (window as any).gtag === 'function'
     );
   }
 
@@ -204,14 +200,14 @@ export const trackPageView = (path: string, title?: string) =>
   analytics.trackPageView(path, title);
 export const trackError = (error: Error, metadata?: Record<string, unknown>) =>
   analytics.trackError(error, metadata);
-export const trackPerformance = (metric: string, value: number, metadata?: Record<string, unknown>) =>
-  analytics.trackPerformance(metric, value, metadata);
 export const trackTiming = (
   category: string,
   variable: string,
   value: number,
   label?: string
 ) => analytics.trackTiming(category, variable, value, label);
+export const trackPerformance = (metric: string, value: number, metadata?: Record<string, unknown>) =>
+  analytics.trackPerformance(metric, value, metadata);
 export const identifyUser = (user: AnalyticsUser) => analytics.identifyUser(user);
 
 // Initialize on import
