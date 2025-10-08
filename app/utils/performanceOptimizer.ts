@@ -58,7 +58,6 @@ class PerformanceOptimizer {
     if (typeof window === 'undefined' || !('PerformanceObserver' in window)) return;
 
     try {
-<<<<<<< HEAD
       // Monitor Core Web Vitals
       this.observeLCP();
       this.observeFID();
@@ -96,18 +95,15 @@ class PerformanceOptimizer {
     let clsValue = 0;
     const observer = new PerformanceObserver((list) => {
       const entries = list.getEntries();
-=======
-      if (this.config.enableMonitoring) {
-        await this.setupPerformanceObservers();
-        this.startMonitoring();
-      }
-
-      if (this.config.enableOptimization) {
-        this.applyOptimizations();
-      }
-    } catch (error) {
-      console.error('Failed to initialize performance optimizer:', error);
-    }
+      entries.forEach((entry: any) => {
+        if (!entry.hadRecentInput) {
+          clsValue += entry.value;
+          this.metrics.cls = clsValue;
+        }
+      });
+    });
+    observer.observe({ entryTypes: ['layout-shift'] });
+    this.observers.push(observer);
   }
 
   /**
@@ -167,15 +163,12 @@ class PerformanceOptimizer {
       let clsValue = 0;
       const clsObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
->>>>>>> 49f746e8c3195449347ee8bebb6ca5b0ab732544
       entries.forEach((entry: any) => {
         if (!entry.hadRecentInput) {
           clsValue += entry.value;
         }
       });
-<<<<<<< HEAD
       this.metrics.cls = clsValue;
-=======
         this.metrics.cls = clsValue;
       });
       clsObserver.observe({ entryTypes: ['layout-shift'] });
@@ -276,7 +269,6 @@ class PerformanceOptimizer {
       if (!img.hasAttribute('decoding')) {
         img.setAttribute('decoding', 'async');
       }
->>>>>>> 49f746e8c3195449347ee8bebb6ca5b0ab732544
     });
     observer.observe({ entryTypes: ['layout-shift'] });
     this.observers.push(observer);
