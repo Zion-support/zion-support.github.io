@@ -228,10 +228,10 @@ class PerformanceReporter {
     // Google Analytics
     if (typeof gtag === 'function') {
       gtag('event', metric.name, {
-        event_category: 'Web Vitals'
-        value: Math.round(metric.value)
-        event_label: metric.rating
-        non_interaction: true,
+        event_category: 'Web Vitals',
+        value: Math.round(metric.value),
+        event_label: metric.rating,
+        non_interaction: true
       })
     }
   }

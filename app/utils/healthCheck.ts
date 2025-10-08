@@ -199,18 +199,17 @@ class HealthCheckService {
         message = `Critical performance issues: ${poor} poor metrics`
       }
       return {
-        name: 'performance'
-        status
-        message
+        name: 'performance',
+        status,
+        message,
         details: {
-          metrics: report.metrics
+          metrics: report.metrics,
           summary: report.summary
         }
       }
-    } catch {
     } catch (error) {
       return {
-        name: 'performance'
+        name: 'performance',
         status: 'warn'
         message: 'Could not check performance'
       }
