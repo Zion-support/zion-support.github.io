@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
 
 interface PerformanceMetrics {
@@ -59,12 +58,8 @@ const PerformanceOptimizer: React.FC = () => {
     const preloadCriticalResources = () => {
       const criticalImages = [
         '/og-image.jpg',
-<<<<<<< HEAD
-        '/logo.png'
-=======
         '/logo.png',
         '/favicon.ico'
->>>>>>> cursor/analyze-improve-and-deploy-application-3d67
       ];
 
       criticalImages.forEach(src => {
@@ -111,64 +106,6 @@ const PerformanceOptimizer: React.FC = () => {
 
     // Initialize optimizations
     preloadCriticalResources();
-<<<<<<< HEAD
-
-    // Optimize images
-    const optimizeImages = () => {
-      const images = document.querySelectorAll('img');
-      images.forEach(img => {
-        if (!img.loading) {
-          img.loading = 'lazy';
-        }
-        if (!img.decoding) {
-          img.decoding = 'async';
-        }
-      });
-    };
-
-    optimizeImages();
-
-    return () => {
-      window.removeEventListener('load', measurePerformance);
-    };
-  }, []);
-
-  // Resource hints for better performance
-  useEffect(() => {
-    const addResourceHints = () => {
-      const hints = [
-        { rel: 'dns-prefetch', href: 'https://fonts.googleapis.com' },
-        { rel: 'dns-prefetch', href: 'https://fonts.gstatic.com' },
-        { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
-        { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossOrigin: 'anonymous' }
-      ];
-
-      hints.forEach(hint => {
-        const link = document.createElement('link');
-        link.rel = hint.rel;
-        link.href = hint.href;
-        if (hint.crossOrigin) {
-          link.crossOrigin = hint.crossOrigin;
-        }
-        document.head.appendChild(link);
-      });
-    };
-
-    addResourceHints();
-  }, []);
-
-  // Don't render anything visible
-=======
-    optimizeImages();
-    setupIntersectionObserver();
-
-    // Cleanup
-    return () => {
-      // Cleanup if needed
-    };
-  }, []);
-
->>>>>>> cursor/analyze-improve-and-deploy-application-3d67
   return null;
 };
 
