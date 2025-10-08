@@ -1,11 +1,6 @@
 // // 'use client'; // Removed for Vite compatibility // Removed for Vite compatibility
 
 import React, { useEffect, useState } from 'react';
-<<<<<<< HEAD
-// import { logger } from '../utils/logger';
-=======
-import { logger as _logger } from '../utils/logger';
->>>>>>> cursor/fix-errors-and-merge-to-main-7716
 
 /**
  * PWA Installer Component
