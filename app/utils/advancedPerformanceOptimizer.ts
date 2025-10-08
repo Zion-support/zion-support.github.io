@@ -78,9 +78,6 @@ export class PerformanceOptimizer {
   /**
    * Implement debounce for performance
    */
-=======
-  debounce<T extends (...args: unknown[]) => unknown>(
-=======
   debounce<T extends (...args: unknown[]) => unknown>(
     func: T,
     wait: number
@@ -101,9 +98,6 @@ export class PerformanceOptimizer {
   /**
    * Implement throttle for performance
    */
-=======
-  throttle<T extends (...args: unknown[]) => unknown>(
-=======
   throttle<T extends (...args: unknown[]) => unknown>(
     func: T,
     limit: number
@@ -126,8 +120,7 @@ export class PerformanceOptimizer {
    */
 =======
   memoize<T extends (...args: unknown[]) => unknown>(
-=======
-  memoize<T extends (...args: unknown[]) => unknown>(
+>>>>>>> cursor/fix-errors-and-merge-to-main-5c5e
     func: T
   ): (...args: Parameters<T>) => ReturnType<T> {
     const cache = new Map<string, ReturnType<T>>();
