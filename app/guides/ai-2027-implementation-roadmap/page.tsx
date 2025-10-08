@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowLeft, Calendar, User, Clock, Tag, Target, CheckCircle, ArrowRight, Zap, TrendingUp, Brain, Cpu } from 'lucide-react';
 
 export const metadata = {
   title: 'AI 2027 Implementation Roadmap - Complete Guide to Advanced Neural Superintelligence',
