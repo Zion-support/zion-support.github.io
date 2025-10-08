@@ -41,6 +41,11 @@ export interface CustomMetric {
   tags?: Record<string, string>;
 }
 
+interface LayoutShift extends PerformanceEntry {
+  value: number;
+  hadRecentInput: boolean;
+}
+
 class PerformanceMonitor {
   private metrics: CustomMetric[] = [];
   private webVitals: WebVitals = {};
