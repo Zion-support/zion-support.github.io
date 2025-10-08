@@ -126,7 +126,7 @@ class PerformanceOptimizer {
     const fidObserver = new PerformanceObserver((list) => {
       const entries = list.getEntries();
       entries.forEach((entry) => {
-        const fidEntry = entry as any;
+        const fidEntry = entry as PerformanceEntry & { processingStart?: number };
         if (fidEntry.processingStart) {
           console.log('FID:', fidEntry.processingStart - entry.startTime);
         }
@@ -253,48 +253,40 @@ Performance Report:
   }
 
   public optimize(): void {
-    // Run all optimization strategies
+    // Run all optimizations
     this.optimizeImages();
     this.enableCaching();
     this.enableCompression();
   }
 
-  public startMark(name: string): void {
-    if (typeof window !== 'undefined' && performance.mark) {
-      performance.mark(`${name}-start`);
+  public startMark(markName: string): void {
+    if (typeof performance !== 'undefined' && 'mark' in performance) {
+      performance.mark(`${markName}-start`);
     }
   }
 
-  public endMark(name: string): number | undefined {
-    if (typeof window !== 'undefined' && performance.mark && performance.measure) {
-      performance.mark(`${name}-end`);
+  public endMark(markName: string): number | null {
+    if (typeof performance !== 'undefined' && 'mark' in performance && 'measure' in performance) {
       try {
-        const measure = performance.measure(name, `${name}-start`, `${name}-end`);
-        return measure.duration;
-      } catch {
-        return undefined;
+        performance.mark(`${markName}-end`);
+        performance.measure(markName, `${markName}-start`, `${markName}-end`);
+        const measure = performance.getEntriesByName(markName, 'measure')[0];
+        return measure ? measure.duration : null;
+      } catch (error) {
+        console.error('Failed to measure performance:', error);
+        return null;
       }
     }
-    return undefined;
+    return null;
   }
 
   public getPerformanceScore(): number {
-    const metrics = this.getMetrics();
-    // Calculate a score based on metrics (0-100)
+    // Calculate a basic performance score based on available metrics
     let score = 100;
     
-    // Deduct points for poor metrics
-    if (metrics.loadTime > 3000) score -= 20;
-    else if (metrics.loadTime > 2000) score -= 10;
-    
-    if (metrics.renderTime > 1000) score -= 15;
-    else if (metrics.renderTime > 500) score -= 7;
-    
-    if (metrics.memoryUsage > 0.8) score -= 20;
-    else if (metrics.memoryUsage > 0.6) score -= 10;
-    
-    if (metrics.cacheHitRate < 0.6) score -= 15;
-    else if (metrics.cacheHitRate < 0.8) score -= 7;
+    if (this.metrics.loadTime > 3000) score -= 20;
+    if (this.metrics.renderTime > 1500) score -= 15;
+    if (this.metrics.memoryUsage > 0.8) score -= 15;
     
     return Math.max(0, score);
   }
