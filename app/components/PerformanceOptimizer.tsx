@@ -1,84 +1,117 @@
-import React, { useEffect, useCallback } from 'react';
+import React, { useEffect, useState } from 'react';
 
-
-interface PerformanceOptimizerProps {
-  children: React.ReactNode;
+interface PerformanceMetrics {
+  loadTime: number;
+  firstContentfulPaint: number;
+  largestContentfulPaint: number;
+  cumulativeLayoutShift: number;
+  firstInputDelay: number;
 }
 
-const PerformanceOptimizerComponent: React.FC<PerformanceOptimizerProps> = ({
-  children,
-}) => {
-  // Preload critical resources
-  useEffect(() => {
-    const preloadCriticalResources = () => {
-      // Preload critical fonts
-      const fontLink = document.createElement('link');
-      fontLink.rel = 'preload';
-      fontLink.href =
-        'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap';
-      fontLink.as = 'style';
-      document.head.appendChild(fontLink);
+const PerformanceOptimizer: React.FC = () => {
+  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
+  const [isOptimized, setIsOptimized] = useState(false);
 
-      // Preload critical images
+  useEffect(() => {
+    // Performance monitoring
+    const measurePerformance = () => {
+      if ('performance' in window) {
+        const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+        const paintEntries = performance.getEntriesByType('paint');
+        
+        const fcp = paintEntries.find(entry => entry.name === 'first-contentful-paint');
+        const lcp = performance.getEntriesByType('largest-contentful-paint')[0];
+        
+        const metrics: PerformanceMetrics = {
+          loadTime: navigation.loadEventEnd - navigation.loadEventStart,
+          firstContentfulPaint: fcp ? fcp.startTime : 0,
+          largestContentfulPaint: lcp ? lcp.startTime : 0,
+          cumulativeLayoutShift: 0, // Would need to be measured with observer
+          firstInputDelay: 0 // Would need to be measured with observer
+        };
+        
+        setMetrics(metrics);
+        
+        // Check if performance is optimized
+        const isGoodPerformance = 
+          metrics.firstContentfulPaint < 1500 && 
+          metrics.largestContentfulPaint < 2500;
+        
+        setIsOptimized(isGoodPerformance);
+      }
+    };
+
+    // Measure after page load
+    if (document.readyState === 'complete') {
+      measurePerformance();
+    } else {
+      window.addEventListener('load', measurePerformance);
+    }
+
+    // Preload critical resources
+    const preloadCriticalResources = () => {
       const criticalImages = [
-        '/images/hero-bg.jpg',
-        '/images/logo.png',
-        '/images/og-image.jpg',
+        '/og-image.jpg',
+        '/logo.png'
       ];
 
       criticalImages.forEach(src => {
-        const img = new Image();
-        img['src'] = src;
+        const link = document.createElement('link');
+        link.rel = 'preload';
+        link.as = 'image';
+        link.href = src;
+        document.head.appendChild(link);
       });
     };
 
     preloadCriticalResources();
-  }, []);
 
-  // Optimize scroll performance
-  const handleScroll = useCallback(() => {
-    // Throttle scroll events for better performance
-    let ticking = false;
-
-    const updateScrollPosition = () => {
-      // Add scroll-based optimizations here
-      ticking = false;
+    // Optimize images
+    const optimizeImages = () => {
+      const images = document.querySelectorAll('img');
+      images.forEach(img => {
+        if (!img.loading) {
+          img.loading = 'lazy';
+        }
+        if (!img.decoding) {
+          img.decoding = 'async';
+        }
+      });
     };
 
-    if (!ticking) {
-      requestAnimationFrame(updateScrollPosition);
-      ticking = true;
-    }
+    optimizeImages();
+
+    return () => {
+      window.removeEventListener('load', measurePerformance);
+    };
   }, []);
 
+  // Resource hints for better performance
   useEffect(() => {
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, [handleScroll]);
+    const addResourceHints = () => {
+      const hints = [
+        { rel: 'dns-prefetch', href: 'https://fonts.googleapis.com' },
+        { rel: 'dns-prefetch', href: 'https://fonts.gstatic.com' },
+        { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
+        { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossOrigin: 'anonymous' }
+      ];
 
-  // Add performance monitoring
-  useEffect(() => {
-    if ('performance' in window) {
-      const observer = new PerformanceObserver(list => {
-        list.getEntries().forEach(entry => {
-          if (entry.entryType === 'navigation') {
-             
-            if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { console.log('Navigation timing:', entry); } }
-          }
-        });
+      hints.forEach(hint => {
+        const link = document.createElement('link');
+        link.rel = hint.rel;
+        link.href = hint.href;
+        if (hint.crossOrigin) {
+          link.crossOrigin = hint.crossOrigin;
+        }
+        document.head.appendChild(link);
       });
+    };
 
-      observer.observe({
-        entryTypes: ['navigation', 'paint', 'largest-contentful-paint'],
-      });
-
-      return () => observer.disconnect();
-    }
-
-    return undefined;
+    addResourceHints();
   }, []);
 
-  return <>{children}</>;
+  // Don't render anything visible
+  return null;
 };
 
-export default PerformanceOptimizerComponent;
+export default PerformanceOptimizer;
