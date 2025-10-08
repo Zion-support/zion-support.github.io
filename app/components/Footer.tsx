@@ -1,12 +1,6 @@
 import React, { memo } from 'react';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { Phone, Mail, MapPin, Clock, Award, Shield, Zap, ArrowRight } from 'lucide-react';
-
-const Footer: React.FC = memo(() => {  return (
-=======
-import { ArrowRight } from 'lucide-react';
 
 const Footer: React.FC = memo(() => {
   const aiServices = [
@@ -54,7 +48,6 @@ const Footer: React.FC = memo(() => {
   ];
 
   return (
->>>>>>> cursor/fix-errors-and-merge-to-main-ea96
     <footer className="bg-gray-900 text-white">
       {/* Main Footer Content */}
       <div className="container mx-auto px-4 py-16">
