@@ -1,14 +1,14 @@
 /// <reference types="vite/client" />
 
 interface ImportMetaEnv {
+  readonly VITE_APP_TITLE?: string;
+  readonly MODE: string;
   readonly DEV: boolean;
   readonly PROD: boolean;
-  readonly MODE: string;
   readonly SSR: boolean;
-  [key: string]: any;
+  readonly BASE_URL: string;
 }
 
 interface ImportMeta {
   readonly env: ImportMetaEnv;
-  readonly url: string;
 }
