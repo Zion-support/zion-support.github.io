@@ -26,6 +26,7 @@ export interface LogEntry {
   message: string;
   context?: LogContext;
   error?: Error;
+  data?: Record<string, unknown>;
 }
 
 class Logger {
@@ -108,10 +109,10 @@ class Logger {
 
       switch (level) {
         case LogLevel.DEBUG:
-          if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { console.debug(formattedMessage); } }
+          if (import.meta.env.DEV) { console.debug(message, entry.data ?? ''); }
           break;
         case LogLevel.INFO:
-          if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { console.info(formattedMessage); } }
+          if (import.meta.env.DEV) { console.info(message, entry.data ?? ''); }
           break;
         case LogLevel.WARN:
           console.warn(formattedMessage);
@@ -157,9 +158,10 @@ class Logger {
   }
 
   /**
-   * Info level logging
+   * Info level logging - flexible signature
    */
-  info(message: string, context?: LogContext): void {
+  info(message: string, contextOrString?: LogContext | string): void {
+    const context = typeof contextOrString === 'string' ? { component: contextOrString } : contextOrString;
     this.log(LogLevel.INFO, message, context);
   }
 
@@ -171,10 +173,39 @@ class Logger {
   }
 
   /**
-   * Error level logging
+   * Error level logging - flexible signature
    */
-  error(message: string, error?: Error, context?: LogContext): void {
-    this.log(LogLevel.ERROR, message, context, error);
+  error(messageOrError: string | Error, errorOrContext?: Error | string | LogContext, context?: LogContext): void {
+    if (typeof messageOrError === 'string') {
+      // Called as: error(message, error, context) or error(message, context)
+      if (errorOrContext instanceof Error) {
+        this.log(LogLevel.ERROR, messageOrError, context, errorOrContext);
+      } else if (typeof errorOrContext === 'string') {
+        this.log(LogLevel.ERROR, messageOrError, { component: errorOrContext });
+      } else {
+        this.log(LogLevel.ERROR, messageOrError, errorOrContext);
+      }
+    } else {
+      // Called as: error(error, context)
+      const ctx = typeof errorOrContext === 'string' ? { component: errorOrContext } : errorOrContext as LogContext;
+      this.log(LogLevel.ERROR, messageOrError.message, ctx, messageOrError);
+    }
+  }
+
+  /**
+   * Log lifecycle events
+   */
+  lifecycle(message: string, context?: string | LogContext): void {
+    const ctx = typeof context === 'string' ? { component: context } : context;
+    this.info(message, ctx);
+  }
+
+  /**
+   * Log performance metrics
+   */
+  performance(message: string, metrics: Record<string, unknown>, context?: string | LogContext): void {
+    const ctx = typeof context === 'string' ? { component: context, ...metrics } : { ...context, ...metrics };
+    this.info(message, ctx);
   }
 
   /**
@@ -221,7 +252,7 @@ class Logger {
    */
   styled(message: string, style: string): void {
     if (isDevelopment()) {
-      if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { console.log(`%c${message}`, style); } }
+      if (import.meta.env.DEV) { console.log(`%c${message}`, style); }
     }
   }
 }
@@ -230,4 +261,3 @@ class Logger {
 const logger = new Logger(isDevelopment() ? LogLevel.DEBUG : LogLevel.INFO);
 
 export { logger };
-export default logger;
