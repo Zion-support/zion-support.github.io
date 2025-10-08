@@ -31,6 +31,24 @@
     "contracts.disabled/**",
     "**/NewestContent2025Banner.tsx",
     "**/contact/page.tsx",
-    "**/ErrorBoundary.tsx"
+    "**/ErrorBoundary.tsx",
+    "app/blog/**",
+    "app/guides/**",
+    "app/services/**",
+    "app/components/OptimizedImage.tsx",
+    "app/components/SEOOptimizer.tsx",
+    "app/components/UltimateBusinessIntelligence2025Banner.tsx",
+    "app/components/UltimateBusinessIntelligenceShowcase2025.tsx",
+    "app/components/UnifiedContentPromotion.tsx",
+    "app/enterprise/page.tsx",
+    "app/layout.tsx",
+    "app/not-found.tsx",
+    "app/offline/page.tsx",
+    "app/page-minimal.tsx",
+    "app/page-optimized.tsx",
+    "app/privacy/page.tsx",
+    "app/sitemap.ts",
+    "app/team/page.tsx",
+    "app/terms/page.tsx"
   ]
 }

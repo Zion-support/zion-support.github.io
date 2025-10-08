@@ -1,12 +1,5 @@
-const nextJest = require('next/jest');
-
-const createJestConfig = nextJest({
-  // Provide the path to your Next.js app to load next.config.js and .env files in your test environment
-  dir: './',
-});
-
-// Add any custom config to be passed to Jest
-const customJestConfig = {
+// Jest configuration for Vite/React project
+module.exports = {
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
   testEnvironment: 'jest-environment-jsdom',
   moduleNameMapper: {
@@ -14,6 +7,11 @@ const customJestConfig = {
     '^@/app/(.*)$': '<rootDir>/app/$1',
     '^@/components/(.*)$': '<rootDir>/app/components/$1',
     '^@/utils/(.*)$': '<rootDir>/src/utils/$1',
+    '\\.(css|less|scss|sass)$': 'identity-obj-proxy',
+    '\\.(jpg|jpeg|png|gif|svg|webp)$': '<rootDir>/__mocks__/fileMock.js',
+  },
+  transform: {
+    '^.+\\.(ts|tsx|js|jsx)$': ['babel-jest', { configFile: './babel.config.js' }],
   },
   testMatch: [
     '**/__tests__/**/*.[jt]s?(x)',
@@ -24,7 +22,6 @@ const customJestConfig = {
     'src/**/*.{js,jsx,ts,tsx}',
     '!**/*.d.ts',
     '!**/node_modules/**',
-    '!**/.next/**',
     '!**/coverage/**',
     '!**/dist/**',
   ],
@@ -38,7 +35,6 @@ const customJestConfig = {
   },
   testPathIgnorePatterns: [
     '<rootDir>/node_modules/',
-    '<rootDir>/.next/',
     '<rootDir>/out/',
     '<rootDir>/dist/',
     '<rootDir>/backup/',
@@ -62,13 +58,4 @@ const customJestConfig = {
   transformIgnorePatterns: [
     '/node_modules/(?!(lucide-react|@heroicons/react)/)',
   ],
-  globals: {
-    'ts-jest': {
-      useESM: true
-    }
-  },
-  extensionsToTreatAsEsm: ['.ts', '.tsx'],
 };
-
-// createJestConfig is exported this way to ensure that next/jest can load the Next.js config which is async
-module.exports = createJestConfig(customJestConfig);
