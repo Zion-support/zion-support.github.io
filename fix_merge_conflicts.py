@@ -1,15 +1,18 @@
 #!/usr/bin/env python3
 """
 <<<<<<< HEAD
+<<<<<<< HEAD
 Script to automatically resolve common merge conflicts in TypeScript/JavaScript files.
 =======
 Script to automatically resolve merge conflicts in TypeScript/JavaScript files
 by choosing the HEAD version and cleaning up conflict markers.
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-3927
+=======
+Script to fix merge conflicts in TypeScript files
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-4496
 """
-
-import os
 import re
+<<<<<<< HEAD
 import sys
 from pathlib import Path
 
@@ -19,10 +22,17 @@ def fix_merge_conflicts(file_path):
 =======
     """Fix merge conflicts in a single file by choosing HEAD version."""
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-3927
+=======
+import os
+
+def fix_merge_conflicts(file_path):
+    """Fix merge conflicts in a file"""
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-4496
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
         
+<<<<<<< HEAD
 <<<<<<< HEAD
         original_content = content
         
@@ -85,6 +95,34 @@ def fix_merge_conflicts(file_path):
         
         # Clean up multiple empty lines
         fixed_content = re.sub(r'\n\s*\n\s*\n', '\n\n', fixed_content)
+=======
+        # Remove merge conflict markers and keep the HEAD version
+        # Pattern to match merge conflicts
+        pattern = r'<<<<<<< HEAD\n(.*?)\n=======\n(.*?)\n>>>>>>> [a-f0-9]+'
+        
+        def replace_conflict(match):
+            head_content = match.group(1)
+            # Clean up any remaining conflict markers
+            head_content = re.sub(r'<<<<<<< HEAD\n?', '', head_content)
+            head_content = re.sub(r'=======\n?', '', head_content)
+            head_content = re.sub(r'>>>>>>> [a-f0-9]+\n?', '', head_content)
+            return head_content
+        
+        # Replace all merge conflicts
+        new_content = re.sub(pattern, replace_conflict, content, flags=re.DOTALL)
+        
+        # Clean up any remaining conflict markers
+        new_content = re.sub(r'<<<<<<< HEAD\n?', '', new_content)
+        new_content = re.sub(r'=======\n?', '', new_content)
+        new_content = re.sub(r'>>>>>>> [a-f0-9]+\n?', '', new_content)
+        
+        # Write the cleaned content back
+        with open(file_path, 'w', encoding='utf-8') as f:
+            f.write(new_content)
+        
+        print(f"Fixed merge conflicts in {file_path}")
+        return True
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-4496
         
         if content != fixed_content:
             with open(file_path, 'w', encoding='utf-8') as f:
@@ -94,10 +132,11 @@ def fix_merge_conflicts(file_path):
         return False
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-3927
     except Exception as e:
-        print(f"Error processing {file_path}: {e}")
+        print(f"Error fixing {file_path}: {e}")
         return False
 
 def main():
+<<<<<<< HEAD
 <<<<<<< HEAD
     """Main function to process all files with merge conflicts."""
     # Get list of files with merge conflicts
@@ -122,9 +161,17 @@ def main():
         '*.ts',
         '*.js',
         '*.jsx'
+=======
+    """Main function to fix merge conflicts in all TypeScript files"""
+    files_to_fix = [
+        'src/utils/performanceOptimizer.ts',
+        'src/hooks/usePerformance.ts',
+        'app/components/LoadingSpinner.tsx'
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-4496
     ]
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-3927
     
+<<<<<<< HEAD
     files = [f.strip() for f in result.split('\n') if f.strip()]
     
 <<<<<<< HEAD
@@ -146,6 +193,13 @@ def main():
     
     print(f"\nProcessed {files_processed} files, fixed {files_fixed} files")
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-3927
+=======
+    for file_path in files_to_fix:
+        if os.path.exists(file_path):
+            fix_merge_conflicts(file_path)
+        else:
+            print(f"File not found: {file_path}")
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-4496
 
 if __name__ == "__main__":
     main()

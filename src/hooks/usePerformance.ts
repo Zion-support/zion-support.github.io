@@ -56,8 +56,6 @@ export const useRenderPerformance = (componentName: string) => {
   const renderCount = useRef<number>(0);
 
   useEffect(() => {
-    renderStart.current = performance.now();
-    renderCount.current += 1;
 
     return () => {
       const renderTime = performance.now() - renderStart.current;
