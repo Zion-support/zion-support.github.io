@@ -264,7 +264,8 @@ class SEOOptimizer {
       let clsValue = 0
       new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
-          // Process layout shift entries
+          if (entry.hadRecentInput) continue
+          clsValue += entry.value
         }
         if (clsValue > 0.25) { // Poor CLS
           this.trackSEOMetric('poor_cls', clsValue)
@@ -282,8 +283,16 @@ class SEOOptimizer {
         metric_value: Math.round(value),
         event_category: 'seo'
       })
+    } else {
+      // Track SEO metrics
+      console.log('SEO Metric:', {
+        metric_name: metric,
+        metric_value: Math.round(value),
+        event_category: 'seo'
+      });
     }
   }
+  
   /**
    * Generate sitemap data
    */

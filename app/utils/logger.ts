@@ -66,17 +66,17 @@ class Logger {
     metadata?: Record<string, unknown>
   ): [string | undefined, Record<string, unknown> | undefined] {
     if (typeof contextOrMetadata === 'string') {
-      return [contextOrMetadata, metadata];
+      return [contextOrMetadata, metadata]
     }
-    return [undefined, contextOrMetadata];
+    return [undefined, contextOrMetadata]
   }
   /**
    * Log a debug message
    */
   debug(message: string, contextOrMetadata?: string | Record<string, unknown>, metadata?: Record<string, unknown>): void {
-    const [context, meta] = this.parseArgs(contextOrMetadata, metadata);
+    const [context, meta] = this.parseArgs(contextOrMetadata, metadata)
 
-    this.log(LogLevel.DEBUG, message, context, meta);
+    this.log(LogLevel.DEBUG, message, context, meta)
   }
   /**
    * Log an info message
@@ -383,10 +383,10 @@ class ContextLogger {
   fatal(message: string, error?: Error, metadata?: Record<string, unknown>): void {
     this.logger.fatal(message, error, this.context, metadata)
   }
-  perf(metric: string, value: number, _metadata?: Record<string, unknown>): void {
-    this.logger.perf(metric, value, { ..._metadata, context: this.context })
+  perf(metric: string, value: number, metadata?: Record<string, unknown>): void {
+    this.logger.perf(metric, value, { ...metadata, context: this.context })
   }
-  lifecycle(message: string, _metadata?: Record<string, unknown>): void {
+  lifecycle(message: string, metadata?: Record<string, unknown>): void {
     this.logger.lifecycle(message, this.context)
   }
   performance(message: string, data: unknown, _metadata?: Record<string, unknown>): void {

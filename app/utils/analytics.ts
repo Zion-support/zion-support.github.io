@@ -116,7 +116,7 @@ class AnalyticsService {
   trackTiming(category: string, variable: string, value: number, label?: string): void {
     try {
       if (this.hasGtag()) {
-        gtag('event', 'custom_metric', {
+        gtag('event', 'timing_complete', {
           name: variable,
           value: Math.round(value),
           event_category: category,
@@ -124,7 +124,7 @@ class AnalyticsService {
         });
       }
     } catch (error) {
-      console.error('Failed to track timing:', error);
+      console.error('Failed to track timing:', error)
     }
   }
   /**
@@ -140,7 +140,7 @@ class AnalyticsService {
         metadata,
       });
     } catch (error) {
-      console.error('Failed to track performance:', error);
+      console.error('Failed to track performance:', error)
     }
   }
   /**
