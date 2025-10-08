@@ -38,9 +38,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
   enableTwitterCards = true,
   enableSchemaMarkup = true,
 }) => {
-=======
   const _structuredDataRef = useRef<HTMLScriptElement | null>(null);
->>>>>>> 3e2c60dea79c (Final fix: Resolve remaining merge conflicts)
   const generateStructuredData = useCallback(() => {
     if (!enableStructuredData || !seoData.structuredData) return null;
 
@@ -164,6 +162,10 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     }
   }, [seoData]);
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> e4fe97c96940 (Fix merge conflicts and resolve build errors)
   return (
     <Helmet>
       {/* Basic Meta Tags */}
