@@ -1,4 +1,3 @@
-import React from 'react'
 interface PerformanceMetrics {
   lcp?: number
   fid?: number
@@ -107,7 +106,7 @@ class PerformanceOptimizer {
         entries.forEach((entry: PerformanceEntry) => {
           const fidEntry = entry as PerformanceEntry & { processingStart: number }
           this.metrics.fid = fidEntry.processingStart - fidEntry.startTime
-
+        })
       })
       observer.observe({ entryTypes: ['first-input'] });
       this.observers.push(observer);

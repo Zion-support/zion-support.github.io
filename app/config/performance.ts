@@ -83,12 +83,6 @@ export const performanceConfig = {
   },
 };
 
-<<<<<<< HEAD
 export type PerformanceConfig = typeof performanceConfig;
 
 export default performanceConfig;
-=======
-export type PerformanceConfig = typeof performanceConfig
-
-export default performanceConfig
->>>>>>> cursor/fix-errors-and-merge-to-main-d70e
