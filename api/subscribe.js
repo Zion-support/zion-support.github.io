@@ -1,6 +1,7 @@
+const { withSentry } = require('./withSentry.cjs');
+const { isValidEmail } = require('./emailUtils.cjs');
 const fs = require('fs');
 const path = require('path');
-const { withSentry } = require('./withSentry.cjs');
 
 async function handler(req, res) {
   if (req.method !== 'POST') {
@@ -10,26 +11,34 @@ async function handler(req, res) {
     return;
   }
 
+  const { email, name, source = 'website' } = req.body || {};
+
+  if (!email) {
+    res.statusCode = 400;
+    res.json({ error: 'Email is required' });
+    return;
+  }
+
+  if (!isValidEmail(email)) {
+    res.statusCode = 400;
+    res.json({ error: 'Invalid email' });
+    return;
+  }
+
   try {
-    const { email, name, source } = req.body || {};
-
-    if (!email) {
-      res.statusCode = 400;
-      res.json({ error: 'Email is required' });
-      return;
-    }
-
-    const file = path.join(process.cwd(), 'data', 'subscribers.json');
+    const file = path.join(
+      process.cwd(),
+      'data',
+      'newsletter-subscriptions.json'
+    );
+    
     let existing = [];
 
-    if (fs.existsSync(file)) {
-      existing = JSON.parse(fs.readFileSync(file, 'utf-8'));
-    }
-
-    if (existing.find(sub => sub.email === email)) {
-      res.statusCode = 200;
-      res.json({ success: true, message: 'Already subscribed' });
-      return;
+    try {
+      existing = JSON.parse(fs.readFileSync(file, 'utf8'));
+      if (!Array.isArray(existing)) existing = [];
+    } catch {
+      // File doesn't exist or is invalid, use empty array
     }
 
     existing.push({

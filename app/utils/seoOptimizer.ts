@@ -1,4 +1,3 @@
-// @ts-nocheck
 /**
  * Advanced SEO Optimization Utility
  * Provides comprehensive SEO enhancements and monitoring
@@ -46,6 +45,7 @@ class SEOOptimizer {
   init(): void {
     this.setupStructuredData();
     this.setupCanonicalUrls();
+    this.setMetaTags();
     this.setupPerformanceMonitoring();
   }
 

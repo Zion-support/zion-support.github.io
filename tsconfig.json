@@ -75,7 +75,6 @@
   },
   "include": [
     "next-env.d.ts",
-    "vite-env.d.ts",
     "app/**/*",
     "app/**/*.ts",
     "app/**/*.tsx",
@@ -88,6 +87,7 @@
     "api/**/*.js",
     "src/**/*",
     "App.tsx",
+    "*.ts",
     "*.tsx",
     ".next/types/**/*.ts"
   ],
@@ -98,7 +98,6 @@
     "dist",
     "vite.config.ts",
     "vite.config.js",
-    "vite.config.*.js",
     "_app_disabled/**",
     "app_disabled/**",
     "_conflicted_disabled/**",
