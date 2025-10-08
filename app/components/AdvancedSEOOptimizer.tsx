@@ -5,6 +5,7 @@ interface SEOConfig {
   title: string;
   description: string;
   keywords: string[];
+  url: string;
   canonicalUrl: string;
   ogTitle?: string;
   ogDescription?: string;
@@ -21,14 +22,6 @@ interface SEOConfig {
   modifiedTime?: string;
   section?: string;
   tags?: string[];
-}
-
-interface SEOConfig {
-  title: string;
-  description: string;
-  url: string;
-  canonicalUrl: string;
-  keywords: string[];
 }
 
 interface AdvancedSEOOptimizerProps {
@@ -185,6 +178,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     trackPageView({
       title: config.title,
       description: config.description,
+      keywords: config.keywords,
       url: config.canonicalUrl,
       canonicalUrl: config.canonicalUrl,
     });

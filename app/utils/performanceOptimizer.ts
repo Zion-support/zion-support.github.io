@@ -231,6 +231,45 @@ class PerformanceOptimizer {
     this.observers.forEach(observer => observer.disconnect());
     this.observers = [];
   }
+
+  /**
+   * Start a performance mark
+   */
+  startMark(markName: string): void {
+    if (typeof window === 'undefined' || !window.performance || !window.performance.mark) return;
+    try {
+      performance.mark(markName);
+    } catch (error) {
+      console.warn(`Failed to start mark ${markName}:`, error);
+    }
+  }
+
+  /**
+   * End a performance mark and return duration
+   */
+  endMark(markName: string): number | null {
+    if (typeof window === 'undefined' || !window.performance || !window.performance.mark) return null;
+    try {
+      const endMarkName = `${markName}-end`;
+      performance.mark(endMarkName);
+      performance.measure(markName, markName, endMarkName);
+      
+      const measures = performance.getEntriesByName(markName, 'measure');
+      if (measures.length > 0) {
+        const duration = measures[0].duration;
+        
+        // Clean up marks and measures
+        performance.clearMarks(markName);
+        performance.clearMarks(endMarkName);
+        performance.clearMeasures(markName);
+        
+        return duration;
+      }
+    } catch (error) {
+      console.warn(`Failed to end mark ${markName}:`, error);
+    }
+    return null;
+  }
 }
 
 // Create singleton instance
