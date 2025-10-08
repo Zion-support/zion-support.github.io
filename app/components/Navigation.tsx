@@ -1,31 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { ChevronDown, Phone, Mail, MapPin, Menu, X } from 'lucide-react';
-const Navigation: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [servicesOpen, setServicesOpen] = useState(false);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-bd1c
 import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap } from 'lucide-react';
-=======
-import { ChevronDown, Menu, X } from 'lucide-react';
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-14d1
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-012c
-
-const Navigation: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [servicesOpen, setServicesOpen] = useState(false);
->>>>>>> cursor/fix-errors-and-merge-to-main-ea96
 
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -56,44 +31,33 @@ const Navigation: React.FC = () => {
   };
 
   const aiServices = [
-    { name: 'AI Consulting', href: '/ai-services', icon: Brain },
-    { name: 'Machine Learning', href: '/ai-services', icon: Brain },
-    { name: 'Natural Language Processing', href: '/ai-services', icon: Brain },
-    { name: 'Computer Vision', href: '/ai-services', icon: Brain },
-    { name: 'Predictive Analytics', href: '/ai-services', icon: BarChart },
-    { name: 'AI Automation', href: '/ai-services', icon: Zap },
+    { name: 'AI Services', href: '/ai-services', icon: Brain },
+    { name: 'AI Marketing', href: '/ai-marketing', icon: Brain },
+    { name: 'AI Automation', href: '/ai-automation', icon: Brain },
+    { name: 'AI Healthcare', href: '/ai-healthcare', icon: Brain },
+    { name: 'AI Fintech', href: '/ai-fintech', icon: Brain },
+    { name: 'AI Data Analytics', href: '/ai-data-analytics', icon: BarChart },
+    { name: 'AI Cybersecurity', href: '/ai-cybersecurity', icon: Shield },
+    { name: 'AI Workflow Automation', href: '/ai-workflow-automation', icon: Zap },
   ];
 
   const itServices = [
-    { name: 'Cloud Infrastructure', href: '/cloud-solutions', icon: Cloud },
+    { name: 'IT Services', href: '/it-services', icon: Cloud },
+    { name: 'Micro SAAS', href: '/micro-saas', icon: Code },
     { name: 'Cybersecurity', href: '/cybersecurity', icon: Shield },
-    { name: 'Data Analytics', href: '/data-analytics', icon: BarChart },
-    { name: 'Mobile Development', href: '/mobile-development', icon: Code },
-    { name: 'Web Development', href: '/web-development', icon: Code },
-    { name: 'DevOps', href: '/devops', icon: Code },
+    { name: 'Cloud Infrastructure', href: '/ai-cloud-infrastructure', icon: Cloud },
+    { name: 'E-commerce Solutions', href: '/ai-ecommerce-solutions', icon: Code },
+    { name: 'Mobile App Development', href: '/ai-mobile-app-development', icon: Code },
   ];
 
   const emergingTech = [
-    { name: 'Blockchain & Web3', href: '/blockchain', icon: Shield },
     { name: 'Quantum Computing', href: '/quantum-computing', icon: Zap },
-    { name: 'IoT Solutions', href: '/iot-solutions', icon: Cloud },
-    { name: 'AR/VR Development', href: '/ar-vr', icon: Code },
-    { name: 'Edge Computing', href: '/edge-computing', icon: Cloud },
-    { name: '5G Solutions', href: '/5g-solutions', icon: Zap },
+    { name: 'Autonomous Systems', href: '/autonomous-systems', icon: Brain },
+    { name: 'Business Intelligence', href: '/business-intelligence', icon: BarChart },
+    { name: 'Blockchain & Web3', href: '/blockchain-web3', icon: Shield },
+    { name: 'IoT & Edge Computing', href: '/iot-edge-computing', icon: Cloud },
+    { name: 'Robotics', href: '/robotics', icon: Code },
   ];
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-1ed2
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-ea96
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-14d1
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-012c
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-bd1c
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
