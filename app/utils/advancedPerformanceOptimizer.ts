@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 /**
  * Advanced Performance Optimizer
  * Generated: 2025-10-08T02:06:22.084Z
@@ -9,14 +9,16 @@ export class PerformanceOptimizer {
   private metrics: Map<string, number[]>;
 
   private constructor() {
-    this.metrics = new Map()
+    this.metrics = new Map();
   }
+
   static getInstance(): PerformanceOptimizer {
     if (!PerformanceOptimizer.instance) {
-      PerformanceOptimizer.instance = new PerformanceOptimizer()
+      PerformanceOptimizer.instance = new PerformanceOptimizer();
     }
-    return PerformanceOptimizer.instance
+    return PerformanceOptimizer.instance;
   }
+
   /**
    * Measure function execution time
    */
@@ -24,123 +26,95 @@ export class PerformanceOptimizer {
     name: string,
     fn: () => T | Promise<T>
   ): T | Promise<T> {
-    const start = performance.now()
+    const start = performance.now();
     
     try {
-      const result = fn()
+      const result = fn();
       
       if (result instanceof Promise) {
-        return result.finally(() => {
-          this.recordMetric(name, performance.now() - start)
-        }) as Promise<T>
+        return result.then((res) => {
+          const duration = performance.now() - start;
+          this.recordMetric(name, duration);
+          return res;
+        });
       } else {
-        this.recordMetric(name, performance.now() - start)
-        return result
+        const duration = performance.now() - start;
+        this.recordMetric(name, duration);
+        return result;
       }
     } catch (error) {
-      this.recordMetric(name, performance.now() - start)
-      throw error
+      const duration = performance.now() - start;
+      this.recordMetric(`${name}_error`, duration);
+      throw error;
     }
   }
+
   /**
-   * Record performance metric
+   * Record a performance metric
    */
-  private recordMetric(name: string, duration: number): void {
+  recordMetric(name: string, value: number): void {
     if (!this.metrics.has(name)) {
-      this.metrics.set(name, [])
+      this.metrics.set(name, []);
     }
-    const metrics = this.metrics.get(name)!
-    metrics.push(duration)
     
-    // Keep only last 100 measurements
-    if (metrics.length > 100) {
-      metrics.shift()
+    const values = this.metrics.get(name)!;
+    values.push(value);
+    
+    // Keep only the last 100 measurements
+    if (values.length > 100) {
+      values.shift();
     }
   }
+
   /**
-   * Get average performance metric
+   * Get average performance for a metric
    */
   getAverageMetric(name: string): number {
-    const metrics = this.metrics.get(name)
-    if (!metrics || metrics.length === 0) {
-      return 0
-    }
-    const sum = metrics.reduce((acc, val) => acc + val, 0)
-    return sum / metrics.length
-  }
-  /**
-   * Implement debounce for performance
-   */
-
-  debounce<T extends (...args: unknown[]) => unknown>(
-    func: T,
-    wait: number,
-  ): (...args: Parameters<T>) => void {
-    let timeout: NodeJS.Timeout | null = null
+    const values = this.metrics.get(name);
+    if (!values || values.length === 0) return 0;
     
-    return (...args: Parameters<T>) => {
-      if (timeout) {
-        clearTimeout(timeout)
-      }
-      timeout = setTimeout(() => {
-        func(...args)
-      }, wait)
-    }
+    const sum = values.reduce((acc, val) => acc + val, 0);
+    return sum / values.length;
   }
-  /**
-   * Implement throttle for performance
-   */
 
-  throttle<T extends (...args: unknown[]) => unknown>(
-    func: T,
-    limit: number,
-  ): (...args: Parameters<T>) => void {
-    let inThrottle: boolean = false
-    
-    return (...args: Parameters<T>) => {
-      if (!inThrottle) {
-        func(...args)
-        inThrottle = true
-        setTimeout(() => {
-          inThrottle = false
-        }, limit)
-      }
-    }
-  }
   /**
-   * Memoize function results
+   * Get all metrics
    */
+  getAllMetrics(): Map<string, number[]> {
+    return new Map(this.metrics);
+  }
 
-  memoize<T extends (...args: unknown[]) => unknown>(
-    func: T,
-  ): (...args: Parameters<T>) => ReturnType<T> {
-    const cache = new Map<string, ReturnType<T>>()
-    
-    return (...args: Parameters<T>): ReturnType<T> => {
-      const key = JSON.stringify(args)
-      
-      if (cache.has(key)) {
-        return cache.get(key)!
-      }
-      const result = func(...args)
-      cache.set(key, result)
-      
-      return result
-    }
-  }
   /**
-   * Get all metrics summary
+   * Clear all metrics
    */
-  getMetricsSummary(): Record<string, { avg: number; count: number }> {
-    const summary: Record<string, { avg: number; count: number }> = {}
+  clearMetrics(): void {
+    this.metrics.clear();
+  }
+
+  /**
+   * Get performance summary
+   */
+  getPerformanceSummary(): Record<string, { average: number; count: number; min: number; max: number }> {
+    const summary: Record<string, { average: number; count: number; min: number; max: number }> = {};
+    
     this.metrics.forEach((values, name) => {
-      summary[name] = {
-        avg: this.getAverageMetric(name),
-        count: values.length
+      if (values.length > 0) {
+        const average = values.reduce((acc, val) => acc + val, 0) / values.length;
+        const min = Math.min(...values);
+        const max = Math.max(...values);
+        
+        summary[name] = {
+          average,
+          count: values.length,
+          min,
+          max
+        };
       }
-    })
+    });
     
-    return summary
+    return summary;
   }
 }
-export default PerformanceOptimizer.getInstance()
+
+// Export singleton instance
+export const performanceOptimizer = PerformanceOptimizer.getInstance();
