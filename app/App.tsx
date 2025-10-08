@@ -62,11 +62,14 @@ const App: React.FC = () => {
 =======
     logger.lifecycle('performance monitoring initialized', 'App');
     logger.info('🚀 Zion Tech Group App initialized with comprehensive monitoring', { component: 'App' });
+<<<<<<< HEAD
   }, []);
 
   const handleError = useCallback((error: Error, errorInfo: any) => {
     logger.error('Application Error', error, { component: 'ErrorBoundary', errorInfo });
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-4560
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-32a9
   }, []);
 
   return (
@@ -87,10 +90,13 @@ const App: React.FC = () => {
                 description: 'Leading provider of enterprise AI solutions, quantum computing, and autonomous systems. Transform your business with our cutting-edge technology.',
                 keywords: ['AI solutions', 'enterprise AI', 'quantum computing', 'autonomous systems', 'digital transformation', 'automation', 'cloud services', 'AI consulting', 'business intelligence', 'machine learning'],
 <<<<<<< HEAD
+<<<<<<< HEAD
                 url: 'https://ziontechgroup.com',
                 canonicalUrl: 'https://ziontechgroup.com',
                 structuredData: {}
 =======
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-32a9
                 canonicalUrl: 'https://ziontechgroup.com'
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-16e0
               }}

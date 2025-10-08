@@ -209,6 +209,10 @@ const AboutPage: React.FC = () => {
           </div>
         </div>
       </div>
+<<<<<<< HEAD
     </div>
+=======
+    </>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-32a9
   );
 }

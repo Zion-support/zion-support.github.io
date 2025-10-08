@@ -6,6 +6,7 @@ import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 
 // Lazy load heavy components - these may not exist, so make them optional
 <<<<<<< HEAD
+<<<<<<< HEAD
 const UnifiedBanner = dynamic(
   () => import('./components/NewestContent2025Banner').catch(() => Promise.resolve({ default: () => null })), 
   {
@@ -23,11 +24,18 @@ const ContentPromotion = dynamic(
 );
 =======
 const UnifiedBanner = dynamic(() => import('./components/NewestContent2025Banner').catch(() => import('./components/EmptyComponent')), {
+=======
+const UnifiedBanner = dynamic(() => Promise.resolve({ default: () => null }), {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-32a9
   loading: () => <div className="animate-pulse bg-gray-200 h-32 rounded-lg"></div>,
   ssr: false
 });
 
+<<<<<<< HEAD
 const ContentPromotion = dynamic(() => import('./components/UltimateBusinessIntelligence2025Banner').catch(() => import('./components/EmptyComponent')), {
+=======
+const ContentPromotion = dynamic(() => import('./components/UltimateBusinessIntelligence2025Banner').catch(() => Promise.resolve({ default: () => null })), {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-32a9
   loading: () => <div className="animate-pulse bg-gray-200 h-64 rounded-lg"></div>,
   ssr: false
 });

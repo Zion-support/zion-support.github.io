@@ -4,6 +4,7 @@
  */
 
 import React, { useState, useEffect, useCallback, useMemo } from 'react';
+<<<<<<< HEAD
 import bannerConfigurations from '../data/bannerConfigurations';
 
 // Define types inline since they're not exported
@@ -16,6 +17,9 @@ interface BannerConfig {
   weight?: number;
   enabled: boolean;
 }
+=======
+import bannerConfigurations from "../data/bannerConfigurations"; // @ts-ignore
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-32a9
 
 interface UseBannerRotationOptions {
   strategy?: RotationStrategy;
