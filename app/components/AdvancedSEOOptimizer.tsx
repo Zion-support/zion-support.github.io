@@ -162,7 +162,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     }
   }, [seoData]);
 
-  const addMetaTag = (name: string, content: string, attribute: string = 'name') => {
+  const _addMetaTag = (name: string, content: string, attribute: string = 'name') => {
     const metaTag = document.createElement('meta');
     metaTag.setAttribute(attribute, name);
     metaTag.content = content;
@@ -182,7 +182,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     }
   };
 
-  const addStructuredData = (data: Record<string, unknown>) => {
+  const _addStructuredData = (data: Record<string, unknown>) => {
     // Remove existing structured data
     if (structuredDataRef.current) {
       structuredDataRef.current.remove();
@@ -197,7 +197,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     structuredDataRef.current = script;
   };
 
-  const trackPageView = (config: SEOData) => {
+  const _trackPageView = (config: SEOData) => {
     if (typeof window !== 'undefined' && 'gtag' in window) {
       (
         window as unknown as {

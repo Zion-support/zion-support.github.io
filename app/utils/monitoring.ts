@@ -63,7 +63,7 @@ class MonitoringService {
         // First Input Delay
         const fidObserver = new PerformanceObserver(list => {
           const entries = list.getEntries();
-          entries.forEach((entry: any) => {
+          entries.forEach((entry: PerformanceEntry) => {
             this.metrics.fid = entry.processingStart - entry.startTime;
             this.reportMetric('fid', this.metrics.fid);
           });
@@ -74,7 +74,7 @@ class MonitoringService {
         let clsValue = 0;
         const clsObserver = new PerformanceObserver(list => {
           const entries = list.getEntries();
-          entries.forEach((entry: any) => {
+          entries.forEach((entry: PerformanceEntry) => {
             if (!entry.hadRecentInput) {
               clsValue += entry.value;
               this.metrics.cls = clsValue;
@@ -93,7 +93,7 @@ class MonitoringService {
           });
         });
         fcpObserver.observe({ entryTypes: ['paint'] });
-      } catch (error) {
+      } catch (_error) {
         console.error('Error setting up performance observers:', error);
       }
     }
@@ -110,7 +110,7 @@ class MonitoringService {
           }
         });
         longTaskObserver.observe({ entryTypes: ['longtask'] });
-      } catch (error) {
+      } catch (_error) {
         // Long task API might not be available
       }
     }
@@ -120,7 +120,7 @@ class MonitoringService {
       try {
         const resourceObserver = new PerformanceObserver(list => {
           const entries = list.getEntries();
-          entries.forEach((entry: any) => {
+          entries.forEach((entry: PerformanceEntry) => {
             if (entry.duration > 1000) {
               console.warn('Slow resource detected:', {
                 name: entry.name,
@@ -131,7 +131,7 @@ class MonitoringService {
           });
         });
         resourceObserver.observe({ entryTypes: ['resource'] });
-      } catch (error) {
+      } catch (_error) {
         console.error('Error monitoring resources:', error);
       }
     }

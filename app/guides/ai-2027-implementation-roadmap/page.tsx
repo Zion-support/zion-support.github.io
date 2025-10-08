@@ -2,17 +2,13 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import {
   ArrowLeft,
-  Calendar,
-  User,
   Clock,
-  Tag,
   Target,
   CheckCircle,
   ArrowRight,
   Zap,
   TrendingUp,
   Brain,
-  Cpu,
 } from 'lucide-react';
 
 export const metadata = {
@@ -37,11 +33,7 @@ export default function AI2027ImplementationRoadmap() {
       {/* Header */}
       <header className="bg-gradient-to-r from-purple-900 to-blue-900 text-white">
         <div className="max-w-6xl mx-auto px-4 py-12">
-<<<<<<< HEAD
-          <Link 
-=======
           <Link
->>>>>>> cursor/fix-errors-and-merge-to-main-0000
             to="/"
             className="inline-flex items-center text-blue-200 hover:text-white transition-colors mb-8"
           >
