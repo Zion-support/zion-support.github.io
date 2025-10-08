@@ -24,7 +24,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     });
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
-      console.error('Error caught by boundary:', error, errorInfo);
+      
     }
     // Call custom error handler if provided
     if (this.props.onError) {
@@ -39,11 +39,11 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       // eslint-disable-next-line no-console
       console.group('🚨 Error Boundary Caught Error');
       // eslint-disable-next-line no-console
-      console.error('Error:', error);
+      
       // eslint-disable-next-line no-console
-      console.error('Error Info:', errorInfo);
+      
       // eslint-disable-next-line no-console
-      console.error('Component Stack:', errorInfo.componentStack);
+      
       // eslint-disable-next-line no-console
       console.groupEnd();
     }
@@ -88,7 +88,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       // });
     } catch (reportingError) {
       // eslint-disable-next-line no-console
-      console.warn('Failed to send error report:', reportingError);
+      
     }
   };
   private getUserId = (): string | null => {

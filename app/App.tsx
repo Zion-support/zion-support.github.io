@@ -103,15 +103,15 @@ const App: React.FC = () => {
       
       if (pageLoadMetrics) {
         // eslint-disable-next-line no-console
-        console.log('Performance metrics collected:', pageLoadMetrics);
+        
       }
       if (metrics) {
         // eslint-disable-next-line no-console
-        console.log('Performance metrics:', metrics);
+        
       }
       if (performanceMetrics) {
         // eslint-disable-next-line no-console
-        console.log('Core Web Vitals:', performanceMetrics);
+        
       }
     }
     
@@ -123,11 +123,11 @@ const App: React.FC = () => {
         
         if (performanceMetrics) {
           // eslint-disable-next-line no-console
-          console.log('Performance Score:', performanceMonitor.getScore());
+          );
         }
         if (accessibilityMetrics) {
           // eslint-disable-next-line no-console
-          console.log('Accessibility Score:', accessibilityMetrics.overallScore);
+          
         }
       }
     }, 30000);

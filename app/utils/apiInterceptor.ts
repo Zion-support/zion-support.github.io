@@ -18,7 +18,7 @@ class ErrorHandler {
   }
 
   handleNetworkError(error: Error, url: string, config?: unknown): void {
-    console.error('Network error:', { error: error.message, url, config });
+    
   }
 }
 

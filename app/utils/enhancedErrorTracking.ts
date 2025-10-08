@@ -76,7 +76,7 @@ class EnhancedErrorTracker {
 
     // Log to console in development
     if (process.env['NODE_ENV'] === 'development') {
-      console.error('Tracked Error:', trackedError);
+      
     }
 
     // Send to analytics if available

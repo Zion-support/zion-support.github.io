@@ -34,8 +34,7 @@ class AnalyticsService {
       this.processQueue()
       this.isInitialized = true
     } catch (error) {
-      console.error('Analytics initialization failed:', error)
-    }
+      }
   }
   /**
    * Track a custom event
@@ -59,8 +58,7 @@ class AnalyticsService {
       if (process.env['NODE_ENV'] === 'development') {
         }
     } catch (error) {
-      console.error('Failed to track event:', error)
-    }
+      }
   }
   /**
    * Track page view
@@ -74,8 +72,7 @@ class AnalyticsService {
         })
       }
     } catch (error) {
-      console.error('Failed to track page view:', error)
-    }
+      }
   }
   /**
    * Track user properties
@@ -89,8 +86,7 @@ class AnalyticsService {
         })
       }
     } catch (error) {
-      console.error('Failed to identify user:', error)
-    }
+      }
   }
   /**
    * Track error events
@@ -125,8 +121,7 @@ class AnalyticsService {
         });
       }
     } catch (error) {
-      console.error('Failed to track timing:', error)
-    }
+      }
   }
   /**
    * Track performance metrics
@@ -141,8 +136,7 @@ class AnalyticsService {
         metadata
       })
     } catch (error) {
-      console.error('Failed to track performance:', error)
-    }
+      }
   }
   /**
    * Check if gtag is available

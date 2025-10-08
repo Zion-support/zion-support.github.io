@@ -55,7 +55,7 @@ const PerformanceMonitor: React.FC = () => {
         try {
           lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
         } catch (e) {
-          console.warn('LCP observer not supported');
+          
         }
 
 <<<<<<< HEAD
@@ -72,7 +72,7 @@ const PerformanceMonitor: React.FC = () => {
 =======
         // FID - First Input Delay
         const fidObserver = new PerformanceObserver((list) => {
-          list.getEntries().forEach((entry: any) => {
+          list.getEntries().forEach((entry: unknown => {
             metrics.fid = entry.processingStart - entry.startTime;
           });
 >>>>>>> cursor/fix-errors-and-merge-to-main-deb0
@@ -81,13 +81,13 @@ const PerformanceMonitor: React.FC = () => {
         try {
           fidObserver.observe({ entryTypes: ['first-input'] });
         } catch (e) {
-          console.warn('FID observer not supported');
+          
         }
 
         // CLS - Cumulative Layout Shift
         let clsValue = 0;
         const clsObserver = new PerformanceObserver((list) => {
-          list.getEntries().forEach((entry: any) => {
+          list.getEntries().forEach((entry: unknown => {
             if (!entry.hadRecentInput) {
               clsValue += entry.value;
             }
@@ -98,7 +98,7 @@ const PerformanceMonitor: React.FC = () => {
         try {
           clsObserver.observe({ entryTypes: ['layout-shift'] });
         } catch (e) {
-          console.warn('CLS observer not supported');
+          
         }
 
         // FCP - First Contentful Paint
@@ -113,7 +113,7 @@ const PerformanceMonitor: React.FC = () => {
         try {
           fcpObserver.observe({ entryTypes: ['paint'] });
         } catch (e) {
-          console.warn('FCP observer not supported');
+          
         }
       }
 
@@ -152,7 +152,7 @@ const PerformanceMonitor: React.FC = () => {
           }
 
           // Log metrics for debugging
-          console.log('Performance Metrics:', metrics);
+          
         }, 2000);
       });
     };
@@ -165,7 +165,7 @@ const PerformanceMonitor: React.FC = () => {
         const resourceObserver = new PerformanceObserver((list) => {
           list.getEntries().forEach((entry) => {
             if (entry.duration > 1000) { // Log slow resources
-              console.warn('Slow resource:', entry.name, entry.duration + 'ms');
+              
             }
           });
         });
@@ -173,7 +173,7 @@ const PerformanceMonitor: React.FC = () => {
         try {
           resourceObserver.observe({ entryTypes: ['resource'] });
         } catch (e) {
-          console.warn('Resource observer not supported');
+          
         }
       }
     };

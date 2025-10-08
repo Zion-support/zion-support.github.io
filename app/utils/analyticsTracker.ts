@@ -141,7 +141,7 @@ class AnalyticsTracker {
       }
 
       // Always log errors to console
-      console.error('[Analytics Error]', error);
+      
     };
 
     if (this.isInitialized) {

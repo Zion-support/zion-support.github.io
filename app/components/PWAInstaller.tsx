@@ -65,7 +65,7 @@ const PWAInstaller: React.FC = () => {
       setDeferredPrompt(null);
       setShowInstallButton(false);
     } catch (error) {
-      console.error('Error installing PWA:', error);
+      
     }
   };
 

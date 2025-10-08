@@ -19,27 +19,27 @@ export const LOG_LEVELS: LogLevel = {
 class Logger {
   private isDevelopment = process.env.NODE_ENV === 'development';
 
-  debug(message: string, data?: any): void {
+  debug(message: string, data?: unknown: void {
     if (this.isDevelopment && typeof console !== 'undefined') {
-      console.debug(`[DEBUG] ${message}`, data || '');
+      
     }
   }
 
-  info(message: string, data?: any): void {
+  info(message: string, data?: unknown: void {
     if (typeof console !== 'undefined') {
-      console.info(`[INFO] ${message}`, data || '');
+      
     }
   }
 
-  warn(message: string, data?: any): void {
+  warn(message: string, data?: unknown: void {
     if (typeof console !== 'undefined') {
-      console.warn(`[WARN] ${message}`, data || '');
+      
     }
   }
 
   error(message: string, error?: Error | any): void {
     if (typeof console !== 'undefined') {
-      console.error(`[ERROR] ${message}`, error || '');
+      
     }
   }
 }

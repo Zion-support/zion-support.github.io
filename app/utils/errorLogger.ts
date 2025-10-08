@@ -75,7 +75,7 @@ class ErrorLogger {
 
     console.group(`%c[${entry.severity.toUpperCase()}] ${entry.message}`, styles[entry.severity]);
     if (entry.error) {
-      console.error('Error:', entry.error);
+      
     }
     if (entry.context) {
       }
@@ -114,7 +114,7 @@ class ErrorLogger {
       });
     } catch (error) {
       // Silently fail to avoid infinite loop
-      console.error('Failed to send error to external service:', error);
+      
     }
   }
 

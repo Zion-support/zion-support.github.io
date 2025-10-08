@@ -124,11 +124,12 @@ export default function RootLayout({
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         {/* Primary meta tags */}
-        <meta name="description" content="Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology." />
-        <meta name="keywords" content="AI solutions, quantum computing, autonomous systems, digital transformation, enterprise AI, machine learning, automation, cloud services, business intelligence" />
+        <meta name="description" content="Zion Tech Group - Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology and achieve unprecedented growth." />
+        <meta name="keywords" content="AI solutions, quantum computing, autonomous systems, digital transformation, enterprise AI, machine learning, automation, cloud services, business intelligence, AI healthcare, AI fintech, AI marketing, AI automation, cybersecurity, blockchain" />
         <meta name="author" content="Zion Tech Group" />
-        <meta name="robots" content="index, follow" />
-        <meta name="googlebot" content="index, follow" />
+        <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+        <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+        <meta name="bingbot" content="index, follow" />
         
         {/* Favicons */}
         <link rel='icon' href='/favicon.ico' />
@@ -154,25 +155,61 @@ export default function RootLayout({
         <meta name='msapplication-config' content='/browserconfig.xml' />
         <link rel='canonical' href='https://ziontechgroup.com' />
         <link rel='alternate' hrefLang='en' href='https://ziontechgroup.com' />
+        <link rel='alternate' hrefLang='en-US' href='https://ziontechgroup.com' />
+        
+        {/* Additional SEO meta tags */}
+        <meta name="geo.region" content="US-DE" />
+        <meta name="geo.placename" content="Middletown" />
+        <meta name="geo.position" content="39.8283;-75.5795" />
+        <meta name="ICBM" content="39.8283, -75.5795" />
+        <meta name="DC.title" content="Zion Tech Group - Advanced AI and IT Solutions" />
+        <meta name="DC.creator" content="Zion Tech Group" />
+        <meta name="DC.subject" content="AI Solutions, Technology Services, Digital Transformation" />
+        <meta name="DC.description" content="Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services." />
+        <meta name="DC.publisher" content="Zion Tech Group" />
+        <meta name="DC.contributor" content="Zion Tech Group" />
+        <meta name="DC.date" content="2024-01-01" />
+        <meta name="DC.type" content="Text" />
+        <meta name="DC.format" content="text/html" />
+        <meta name="DC.identifier" content="https://ziontechgroup.com" />
+        <meta name="DC.language" content="en" />
+        <meta name="DC.rights" content="Copyright 2024 Zion Tech Group" />
+        <meta name="DC.coverage" content="United States" />
+        <meta name="DC.audience" content="Enterprise, Business, Technology" />
         
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://ziontechgroup.com" />
         <meta property="og:title" content="Zion Tech Group - Advanced AI and IT Solutions" />
-        <meta property="og:description" content="Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services." />
+        <meta property="og:description" content="Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology." />
         <meta property="og:image" content="https://ziontechgroup.com/og-image.jpg" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
+        <meta property="og:image:alt" content="Zion Tech Group - Advanced AI and IT Solutions" />
         <meta property="og:site_name" content="Zion Tech Group" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:updated_time" content="2024-01-01T00:00:00Z" />
+        <meta property="article:author" content="Zion Tech Group" />
+        <meta property="article:publisher" content="Zion Tech Group" />
+        <meta property="article:section" content="Technology" />
+        <meta property="article:tag" content="AI Solutions" />
+        <meta property="article:tag" content="Quantum Computing" />
+        <meta property="article:tag" content="Digital Transformation" />
         
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:url" content="https://ziontechgroup.com" />
         <meta name="twitter:title" content="Zion Tech Group - Advanced AI and IT Solutions" />
-        <meta name="twitter:description" content="Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services." />
+        <meta name="twitter:description" content="Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology." />
         <meta name="twitter:image" content="https://ziontechgroup.com/og-image.jpg" />
+        <meta name="twitter:image:alt" content="Zion Tech Group - Advanced AI and IT Solutions" />
         <meta name="twitter:site" content="@ziontechgroup" />
         <meta name="twitter:creator" content="@ziontechgroup" />
+        <meta name="twitter:domain" content="ziontechgroup.com" />
+        <meta name="twitter:label1" content="Services" />
+        <meta name="twitter:data1" content="AI Solutions, Quantum Computing, Digital Transformation" />
+        <meta name="twitter:label2" content="Contact" />
+        <meta name="twitter:data2" content="(302) 464-0950" />
         <script
           type='application/ld+json'
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
