@@ -1,10 +1,10 @@
-// Enhanced Error Handler
-export class AppError extends Error {
+// Enhanced Error Handler;
+export class AppError extends Error {;
   statusCode: number;
   isOperational: boolean;
   timestamp: string;
-
-  constructor(message: string, statusCode = 500, isOperational = true) {
+;
+  constructor(message: string, statusCode = 500, isOperational = true) {;
     super(message);
     this.statusCode = statusCode;
     this.isOperational = isOperational;
@@ -12,24 +12,25 @@ export class AppError extends Error {
     Error.captureStackTrace(this, this.constructor);
   }
 }
-
-export const errorHandler = (error: AppError | Error) => {
+;
+export const errorHandler = (error: AppError | Error) => {;
   const isDevelopment = process.env.NODE_ENV === 'development';
   const appError = error instanceof AppError ? error : new AppError(error.message);
-  
-  if (process.env.NODE_ENV === 'development') console.error({
-    message: appError.message,
-    stack: isDevelopment ? appError.stack : undefined,
-    timestamp: new Date().toISOString(),
-    statusCode: appError.statusCode || 500
+;
+  console.error({;
+    message: appError.message,;
+    stack: isDevelopment ? appError.stack : undefined,;
+    timestamp: new Date().toISOString(),;
+    statusCode: appError.statusCode || 500;
   });
-
-  return {
-    message: appError.isOperational ? appError.message : 'An unexpected error occurred',
-    statusCode: appError.statusCode || 500
+;
+  return {;
+    message: appError.isOperational ? appError.message : 'An unexpected error occurred',;
+    statusCode: appError.statusCode || 500;
   };
 };
-
-export const asyncHandler = (fn: Function) => (_req: any, _res: any, next: any) => {
+;
+export const asyncHandler = (fn: Function) => (req: any, res: any, next: any) => {;
   Promise.resolve(fn(req, res, next)).catch(next);
 };
+;
