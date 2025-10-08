@@ -1,4 +1,3 @@
-import React from 'react';
 /**
  * Advanced Caching Utility
  * Provides intelligent caching with TTL, LRU eviction, and storage options

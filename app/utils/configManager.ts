@@ -1,4 +1,3 @@
-import React from 'react';
 /**
  * Configuration Manager
  * Centralized configuration management with environment-based settings

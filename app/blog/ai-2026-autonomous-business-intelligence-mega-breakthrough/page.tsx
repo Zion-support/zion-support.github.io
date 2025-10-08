@@ -1,11 +1,11 @@
 import React from 'react';
 // import { Metadata } from 'next'; // Removed for Vite
 
-// export const metadata: Metadata = // Removed for Vite {
-  title: "AI 2026: Autonomous Business Intelligence Mega Breakthrough - 99% Automation",
-  description: "Revolutionary autonomous business intelligence systems achieving 99% automation with $3.5B+ ROI. Complete implementation guide for enterprise transformation.",
-  keywords: 'autonomous business intelligence, AI automation, business intelligence, data analytics, enterprise AI, BI automation'
-};
+// export const metadata: Metadata = { // Removed for Vite
+// title: "AI 2026: Autonomous Business Intelligence Mega Breakthrough - 99% Automation",
+//   description: "Revolutionary autonomous business intelligence systems achieving 99% automation with $3.5B+ ROI. Complete implementation guide for enterprise transformation.",
+//   keywords: 'autonomous business intelligence, AI automation, business intelligence, data analytics, enterprise AI, BI automation'
+// };
 
 export default function BlogPost() {
   return (

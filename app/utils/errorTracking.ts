@@ -3,7 +3,6 @@
  * Provides comprehensive error tracking with categorization and analytics
  */
 
-import React from 'react';
 import { logger } from './logger';
 
 export enum ErrorSeverity {
