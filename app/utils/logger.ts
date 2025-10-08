@@ -122,10 +122,10 @@ class Logger {
         ...meta,
         error: error ? {
           name: error.name,
-          message: error.message
+          message: error.message,
           stack: error.stack
         } : undefined
-      }
+      },
       stack: error?.stack
     }
     this.processLog(entry)
@@ -135,8 +135,8 @@ class Logger {
    */
   fatal(
     message: string,
-    errorOrContextOrMetadata?: Error | string | Record<string, unknown>
-    contextOrMetadata?: string | Record<string, unknown>
+    errorOrContextOrMetadata?: Error | string | Record<string, unknown>,
+    contextOrMetadata?: string | Record<string, unknown>,
     _metadata?: Record<string, unknown>
   ): void {
     let error: Error | undefined
@@ -150,18 +150,18 @@ class Logger {
       [context, meta] = this.parseArgs(errorOrContextOrMetadata, contextOrMetadata as Record<string, unknown> | undefined)
     }
     const entry: LogEntry = {
-      level: LogLevel.FATAL
-      message
-      timestamp: new Date()
-      context
+      level: LogLevel.FATAL,
+      message,
+      timestamp: new Date(),
+      context,
       metadata: {
-        ...meta
+        ...meta,
         error: error ? {
-          name: error.name
-          message: error.message
+          name: error.name,
+          message: error.message,
           stack: error.stack
         } : undefined
-      }
+      },
       stack: error?.stack
     }
     this.processLog(entry)
@@ -173,8 +173,8 @@ class Logger {
    */
   perf(metric: string, value: number, metadata?: Record<string, unknown>): void {
     this.info(`Performance: ${metric} = ${value}ms`, 'Performance', {
-      metric
-      value
+      metric,
+      value,
       ...metadata
     })
   }
