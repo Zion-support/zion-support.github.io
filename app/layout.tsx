@@ -63,9 +63,9 @@ export default function RootLayout({
           sizes='16x16'
           href='/favicon-16x16.png'
         />
-        <link rel='manifest' href='/site.webmanifest' />
+        <link rel='manifest' href='/manifest.json' />
         <meta name='theme-color' content='#4f46e5' />
-        <meta name='viewport' content='width=device-width, initial-scale=1' />
+        <meta name='viewport' content='width=device-width, initial-scale=1, viewport-fit=cover' />
         <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
         <meta name='googlebot' content='index, follow' />
         <meta name='bingbot' content='index, follow' />
@@ -79,16 +79,50 @@ export default function RootLayout({
         <meta name='format-detection' content='telephone=yes' />
         <meta name='mobile-web-app-capable' content='yes' />
         <meta name='apple-mobile-web-app-capable' content='yes' />
-        <meta name='apple-mobile-web-app-status-bar-style' content='default' />
+        <meta name='apple-mobile-web-app-status-bar-style' content='black-translucent' />
         <meta name='apple-mobile-web-app-title' content='Zion Tech Group' />
         <meta name='application-name' content='Zion Tech Group' />
         <meta name='msapplication-TileColor' content='#4f46e5' />
         <meta name='msapplication-config' content='/browserconfig.xml' />
         <link rel='canonical' href='https://ziontechgroup.com' />
         <link rel='alternate' hrefLang='en' href='https://ziontechgroup.com' />
+        
+        {/* PWA Meta Tags */}
+        <meta name='apple-mobile-web-app-capable' content='yes' />
+        <meta name='apple-mobile-web-app-status-bar-style' content='black-translucent' />
+        <meta name='apple-mobile-web-app-title' content='Zion Tech Group' />
+        <meta name='mobile-web-app-capable' content='yes' />
+        <meta name='msapplication-starturl' content='/' />
+        <meta name='msapplication-tap-highlight' content='no' />
+        
+        {/* Preconnect to external domains for performance */}
+        <link rel='preconnect' href='https://fonts.googleapis.com' />
+        <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin />
+        <link rel='preconnect' href='https://www.googletagmanager.com' />
+        
+        {/* DNS Prefetch for performance */}
+        <link rel='dns-prefetch' href='//fonts.googleapis.com' />
+        <link rel='dns-prefetch' href='//www.googletagmanager.com' />
         <script
           type='application/ld+json'
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              if ('serviceWorker' in navigator) {
+                window.addEventListener('load', function() {
+                  navigator.serviceWorker.register('/sw.js')
+                    .then(function(registration) {
+                      console.log('SW registered: ', registration);
+                    })
+                    .catch(function(registrationError) {
+                      console.log('SW registration failed: ', registrationError);
+                    });
+                });
+              }
+            `,
+          }}
         />
       </head>
       <body className='antialiased'>
