@@ -4,22 +4,7 @@
  */
 
 import React, { useState, useEffect, useCallback, useMemo } from 'react';
-<<<<<<< HEAD
-import bannerConfigurations from '../data/bannerConfigurations';
-
-// Define types inline since they're not exported
-type RotationStrategy = 'sequential' | 'random' | 'weighted' | 'balanced';
-
-interface BannerConfig {
-  id: string;
-  component: string;
-  priority: number;
-  weight?: number;
-  enabled: boolean;
-}
-=======
-import bannerConfigurations from "../data/bannerConfigurations"; // @ts-ignore
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-32a9
+import bannerConfigurations, { BannerConfig, RotationStrategy } from '../data/bannerConfigurations';
 
 interface UseBannerRotationOptions {
   strategy?: RotationStrategy;
@@ -28,120 +13,131 @@ interface UseBannerRotationOptions {
   enableTracking?: boolean;
 }
 
-interface BannerRotationState {
+interface UseBannerRotationReturn {
   currentBanners: BannerConfig[];
-  isLoading: boolean;
-  error: string | null;
-  stats: {
-    impressions: number;
-    clicks: number;
-    ctr: number;
-  };
+  rotateBanners: () => void;
+  trackBannerImpression: (bannerId: string) => void;
+  trackBannerClick: (bannerId: string) => void;
+  isRotating: boolean;
 }
 
-// Helper functions defined inline
-const selectBannersForDisplay = (banners: any[], maxBanners: number, strategy: RotationStrategy) => {
-  const enabled = banners.filter((b: any) => b.enabled !== false);
-  const sorted = enabled.sort((a: any, b: any) => (b.priority || 0) - (a.priority || 0));
-  return sorted.slice(0, maxBanners);
-};
-
-const selectBalancedBanners = (banners: any[], maxBanners: number) => {
-  return selectBannersForDisplay(banners, maxBanners, 'balanced');
-};
-
-const trackImpression = (bannerId: string) => {
-  if (typeof window !== 'undefined') {
-    const key = `banner_impression_${bannerId}`;
-    const current = parseInt(localStorage.getItem(key) || '0');
-    localStorage.setItem(key, String(current + 1));
-  }
-};
-
-const trackClick = (bannerId: string) => {
-  if (typeof window !== 'undefined') {
-    const key = `banner_click_${bannerId}`;
-    const current = parseInt(localStorage.getItem(key) || '0');
-    localStorage.setItem(key, String(current + 1));
-  }
-};
-
-const loadBannerStats = () => {
-  return {
-    impressions: 0,
-    clicks: 0,
-    ctr: 0
-  };
-};
-
-const getRefreshInterval = () => 30000;
-const getRotationStrategy = (): RotationStrategy => 'balanced';
-
-export const useBannerRotation = (options: UseBannerRotationOptions = {}) => {
+/**
+ * Custom hook for managing dynamic banner rotation
+ */
+export function useBannerRotation(
+  options: UseBannerRotationOptions = {}
+): UseBannerRotationReturn {
   const {
-    strategy = 'balanced',
+    strategy = 'sequential',
     maxBanners = 3,
     refreshInterval = 30000,
-    enableTracking = true
+    enableTracking = true,
   } = options;
 
-  const [state, setState] = useState<BannerRotationState>({
-    currentBanners: [],
-    isLoading: true,
-    error: null,
-    stats: {
-      impressions: 0,
-      clicks: 0,
-      ctr: 0
-    }
-  });
+  const [currentBanners, setCurrentBanners] = useState<BannerConfig[]>([]);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isRotating, setIsRotating] = useState(false);
 
-  // Load initial banners
-  useEffect(() => {
-    try {
-      const configs = Array.isArray(bannerConfigurations) ? bannerConfigurations : [];
-      const selected = strategy === 'balanced' 
-        ? selectBalancedBanners(configs, maxBanners)
-        : selectBannersForDisplay(configs, maxBanners, strategy);
-      
-      setState(prev => ({
-        ...prev,
-        currentBanners: selected,
-        isLoading: false
-      }));
-    } catch (error) {
-      setState(prev => ({
-        ...prev,
-        error: 'Failed to load banners',
-        isLoading: false
-      }));
-    }
-  }, [strategy, maxBanners]);
+  // Filter enabled banners
+  const enabledBanners = useMemo(() => {
+    return bannerConfigurations.filter((banner) => banner.enabled);
+  }, []);
 
-  // Track impressions
+  // Select banners based on strategy
+  const selectBanners = useCallback(
+    (startIndex: number = 0): BannerConfig[] => {
+      if (enabledBanners.length === 0) return [];
+
+      switch (strategy) {
+        case 'random':
+          return [...enabledBanners]
+            .sort(() => Math.random() - 0.5)
+            .slice(0, maxBanners);
+
+        case 'weighted':
+          // Simple weighted selection based on priority
+          const weighted = [...enabledBanners].sort(
+            (a, b) => (b.priority || 0) - (a.priority || 0)
+          );
+          return weighted.slice(0, maxBanners);
+
+        case 'balanced':
+          // Rotate through all banners evenly
+          const selected: BannerConfig[] = [];
+          for (let i = 0; i < maxBanners && i < enabledBanners.length; i++) {
+            const index = (startIndex + i) % enabledBanners.length;
+            selected.push(enabledBanners[index]);
+          }
+          return selected;
+
+        case 'sequential':
+        default:
+          return enabledBanners.slice(0, maxBanners);
+      }
+    },
+    [enabledBanners, strategy, maxBanners]
+  );
+
+  // Rotate to next set of banners
+  const rotateBanners = useCallback(() => {
+    setIsRotating(true);
+    const nextIndex = (currentIndex + maxBanners) % enabledBanners.length;
+    setCurrentIndex(nextIndex);
+    setCurrentBanners(selectBanners(nextIndex));
+    setTimeout(() => setIsRotating(false), 300); // Animation duration
+  }, [currentIndex, maxBanners, enabledBanners.length, selectBanners]);
+
+  // Track banner impression
+  const trackBannerImpression = useCallback(
+    (bannerId: string) => {
+      if (enableTracking) {
+        console.log(`Banner impression tracked: ${bannerId}`);
+        // Implement your tracking logic here
+      }
+    },
+    [enableTracking]
+  );
+
+  // Track banner click
+  const trackBannerClick = useCallback(
+    (bannerId: string) => {
+      if (enableTracking) {
+        console.log(`Banner click tracked: ${bannerId}`);
+        // Implement your tracking logic here
+      }
+    },
+    [enableTracking]
+  );
+
+  // Initialize banners on mount
   useEffect(() => {
-    if (enableTracking && state.currentBanners.length > 0) {
-      state.currentBanners.forEach(banner => {
-        trackImpression(banner.id);
+    setCurrentBanners(selectBanners(0));
+  }, [selectBanners]);
+
+  // Set up auto-rotation
+  useEffect(() => {
+    if (refreshInterval > 0 && enabledBanners.length > maxBanners) {
+      const intervalId = setInterval(rotateBanners, refreshInterval);
+      return () => clearInterval(intervalId);
+    }
+  }, [refreshInterval, enabledBanners.length, maxBanners, rotateBanners]);
+
+  // Track impressions for current banners
+  useEffect(() => {
+    if (enableTracking) {
+      currentBanners.forEach((banner) => {
+        trackBannerImpression(banner.id);
       });
     }
-  }, [state.currentBanners, enableTracking]);
-
-  // Handle banner click
-  const handleBannerClick = useCallback((bannerId: string) => {
-    if (enableTracking) {
-      trackClick(bannerId);
-    }
-  }, [enableTracking]);
+  }, [currentBanners, enableTracking, trackBannerImpression]);
 
   return {
-    ...state,
-    handleBannerClick,
-    refresh: () => {
-      // Trigger refresh
-      setState(prev => ({ ...prev, isLoading: true }));
-    }
+    currentBanners,
+    rotateBanners,
+    trackBannerImpression,
+    trackBannerClick,
+    isRotating,
   };
-};
+}
 
 export default useBannerRotation;

@@ -23,15 +23,12 @@ export default function NotFound() {
     },
     {
       title: 'About Us',
-<<<<<<< HEAD
       description: 'Learn more about Zion Tech Group',
       href: '/about',
       icon: '👥'
-=======
       description: 'Learn about Zion Tech Group and our mission',
       href: '/about',
       icon: '🏢'
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-17a6
     },
     {
       title: 'Case Studies',
@@ -48,13 +45,10 @@ export default function NotFound() {
   ];
 
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center px-4 py-12">
       <div className="max-w-4xl w-full text-center">
-=======
     <div className="min-h-screen bg-gray-50 flex items-center justify-center px-4">
       <div className="max-w-2xl w-full text-center">
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-17a6
         {/* Error Code */}
         <div className="mb-8">
           <h1 className="text-9xl font-bold text-white/20 mb-4">
@@ -65,7 +59,6 @@ export default function NotFound() {
 
         {/* Error Message */}
         <div className="mb-12">
-<<<<<<< HEAD
           <h2 className="text-4xl font-bold text-white mb-4">
             Page Not Found
           </h2>
@@ -134,7 +127,6 @@ export default function NotFound() {
               Contact Support
             </Link>
           </div>
-=======
           <h2 className="text-3xl font-bold text-gray-900 mb-4">
             Page Not Found
           </h2>
@@ -179,7 +171,6 @@ export default function NotFound() {
             <Phone className="w-4 h-4 mr-2" />
             Contact Support
           </Link>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-17a6
         </div>
       </div>
     </div>
