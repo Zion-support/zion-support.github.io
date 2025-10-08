@@ -259,12 +259,8 @@ class Logger {
         });
       }
     } catch (error) {
-<<<<<<< HEAD
       // eslint-disable-next-line no-console
-    console.error('Failed to flush logs:', error);
-=======
-      logger.error('Failed to flush logs:', error);
->>>>>>> cursor/fix-errors-and-merge-to-main-add2
+      console.error('Failed to flush logs:', error);
       // Put logs back in buffer if flush failed
       this.buffer = [...logs, ...this.buffer];
     }
@@ -336,40 +332,24 @@ class Logger {
 
     switch (entry.level) {
       case LogLevel.DEBUG:
-<<<<<<< HEAD
         // eslint-disable-next-line no-console
-    console.debug(message, entry.metadata);
+        console.debug(message, entry.metadata);
         break;
       case LogLevel.INFO:
         // eslint-disable-next-line no-console
-    console.info(message, entry.metadata);
+        console.info(message, entry.metadata);
         break;
       case LogLevel.WARN:
         // eslint-disable-next-line no-console
-    console.warn(message, entry.metadata);
+        console.warn(message, entry.metadata);
         break;
       case LogLevel.ERROR:
       case LogLevel.FATAL:
         // eslint-disable-next-line no-console
-    console.error(message, entry.metadata);
+        console.error(message, entry.metadata);
         if (entry.stack) {
           // eslint-disable-next-line no-console
-    console.error(entry.stack);
-=======
-        console.debug(message, entry._metadata);
-        break;
-      case LogLevel.INFO:
-        logger.info(message, entry._metadata);
-        break;
-      case LogLevel.WARN:
-        logger.warn(message, entry._metadata);
-        break;
-      case LogLevel.ERROR:
-      case LogLevel.FATAL:
-        logger.error(message, entry._metadata);
-        if (entry.stack) {
-          logger.error(entry.stack);
->>>>>>> cursor/fix-errors-and-merge-to-main-add2
+          console.error(entry.stack);
         }
         break;
     }
