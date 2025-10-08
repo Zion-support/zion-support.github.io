@@ -92,11 +92,8 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     }
   };
 
-<<<<<<< HEAD
-  private sendErrorReport = async (_errorReport: Record<string, unknown>) => {
-=======
   private sendErrorReport = async (_errorReport: any) => {
->>>>>>> cursor/fix-errors-and-merge-to-main-add2
+
     try {
       // In a real app, you would send this to your error reporting service
       // For now, we'll just log it
@@ -108,11 +105,8 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       //   headers: { 'Content-Type': 'application/json' },
       //   body: JSON.stringify(_errorReport)
       // });
-<<<<<<< HEAD
-    } catch {
-=======
     } catch (_reportingError) {
->>>>>>> cursor/fix-errors-and-merge-to-main-add2
+
       // Failed to send error report
     }
   };

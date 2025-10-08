@@ -1,11 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-import { ArrowLeft, Calendar, User, Clock, Tag, ArrowRight } from 'lucide-react';
-=======
 import { ArrowLeft, Calendar, User, Clock, Tag,   ArrowRight } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-add2
 
 const AI2026ImplementationRoadmap: React.FC = () => {
   return (

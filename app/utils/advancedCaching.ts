@@ -59,12 +59,8 @@ class AdvancedCache<T = unknown> {
         this.accessOrder = parsed.accessOrder || [];
       }
     } catch (error) {
-<<<<<<< HEAD
-      // eslint-disable-next-line no-console
-    console.warn('Failed to load cache from storage:', error);
-=======
       logger.warn('Failed to load cache from storage:', error);
->>>>>>> cursor/fix-errors-and-merge-to-main-add2
+
     }
   }
 
@@ -79,12 +75,8 @@ class AdvancedCache<T = unknown> {
       };
       storage?.setItem(this.storageKey, JSON.stringify(data));
     } catch (error) {
-<<<<<<< HEAD
-      // eslint-disable-next-line no-console
-    console.warn('Failed to save cache to storage:', error);
-=======
       logger.warn('Failed to save cache to storage:', error);
->>>>>>> cursor/fix-errors-and-merge-to-main-add2
+
     }
   }
 

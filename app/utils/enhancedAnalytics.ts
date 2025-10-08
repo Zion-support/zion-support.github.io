@@ -205,12 +205,8 @@ class EnhancedAnalytics {
 
     // In a real implementation, send to analytics backend
     if (process.env['NODE_ENV'] === 'development') {
-<<<<<<< HEAD
-      // eslint-disable-next-line no-console
-    console.log('Analytics batch:', this.queue);
-=======
       logger.info('Analytics batch:', this.queue);
->>>>>>> cursor/fix-errors-and-merge-to-main-add2
+
     }
 
     // Clear queue

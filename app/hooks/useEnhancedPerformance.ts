@@ -66,12 +66,8 @@ export function useEnhancedPerformance(
 
     if (trackPerformance && renderCountRef.current > 10) {
       // Many re-renders detected
-<<<<<<< HEAD
-      // eslint-disable-next-line no-console
-    console.warn(
-=======
       logger.warn(
->>>>>>> cursor/fix-errors-and-merge-to-main-add2
+
         `Component ${component} has re-rendered ${renderCountRef.current} times`
       );
       analytics.trackCustomEvent(
