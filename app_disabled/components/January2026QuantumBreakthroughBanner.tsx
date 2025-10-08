@@ -125,7 +125,7 @@ export default function January2026QuantumBreakthroughBanner() {
           >
             Get Your Quantum AI Demo
             <ArrowRight className="w-5 h-5" />
-          </ArrowRight>
+          </Link>
           <p className="text-blue-200 text-sm mt-3">
             Schedule a personalized demonstration and ROI analysis
           </p>

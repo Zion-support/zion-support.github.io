@@ -1,7 +1,8 @@
 import { Helmet } from "react-helmet-async"
 import { Link } from "react-router-dom"
-import {ArrowLeft, Zap, Video, Mic, Image, FileText} Cpu; TrendingUp } from "lucide-react"
-const RealTimeMultimodalProcessingRevolution = () =>
+import { ArrowLeft, Zap, Video, Mic, Image, FileText, Cpu, TrendingUp } from "lucide-react"
+
+const RealTimeMultimodalProcessingRevolution = () => {
   return (<div>
       <div></div>
       <Helmet>
@@ -19,7 +20,7 @@ const RealTimeMultimodalProcessingRevolution = () =>
           href="https: //ziontechgroup.com/blog/ai-2025-october-real-time-multimodal-processing-revolution"
         />
       </Helmet>
-      <article className="text-left"></a>
+      <article className="text-left">
         <div className="text-left"></div>
           <Link
             to="/<blog" className="text-left"
@@ -31,9 +32,10 @@ const RealTimeMultimodalProcessingRevolution = () =>
             <div className="text-left"></div>
               <span className="text-left"></span>
                 Multimodal AI
-              <
-              <span className="text-left">October 1, 2025<
+              <span className="text-left">October 1, 2025</span>
             </div>
+          </header>
+          <main>
             <h1 className="text-left">
               Real-Time Multimodal AI Processing Revolution 2025
             </h1>

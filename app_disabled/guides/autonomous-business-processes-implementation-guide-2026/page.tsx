@@ -29,7 +29,7 @@ export default function ImplementationGuide() {
       {/* Header */}
       <div className="bg-white shadow-sm border-b">
         <div className="max-w-4xl mx-auto px-4 py-8">
-          <ArrowRight href="/guides" className="inline-flex items-center text-blue-600 hover:text-blue-700 mb-6">
+          <Link href="/guides" className="inline-flex items-center text-blue-600 hover:text-blue-700 mb-6">
             <ArrowLeft className="w-5 h-5 mr-2" />
             Back to Guides
           </Link>

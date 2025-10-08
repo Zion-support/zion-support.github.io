@@ -1,7 +1,8 @@
 import { Helmet } from "react-helmet-async"
 import { Link } from "react-router-dom"
-import {ArrowLeft, Lock, Shield, Eye, AlertTriangle} CheckCircle; Network } from "lucide-react"
-const EnterpriseAISecurityZeroTrustFramework = () =>
+import { ArrowLeft, Lock, Shield, Eye, AlertTriangle, CheckCircle, Network } from "lucide-react"
+
+const EnterpriseAISecurityZeroTrustFramework = () => {
   return (<div>
       <div></div>
       <Helmet>
@@ -19,7 +20,7 @@ const EnterpriseAISecurityZeroTrustFramework = () =>
           href="https: //ziontechgroup.com/blog/ai-2025-october-enterprise-ai-security-zero-trust-framework"
         />
       </Helmet>
-      <article className="text-left"></a>
+      <article className="text-left">
         <div className="text-left"></div>
           <Link
             to="/<blog" className="text-left"
@@ -31,9 +32,10 @@ const EnterpriseAISecurityZeroTrustFramework = () =>
             <div className="text-left"></div>
               <span className="text-left"></span>
                 AI Security
-              <
-              <span className="text-left">October 1, 2025<
+              <span className="text-left">October 1, 2025</span>
             </div>
+          </header>
+          <main>
             <h1 className="text-left">
               Enterprise AI Security: Zero Trust Framework 2025
             </h1>

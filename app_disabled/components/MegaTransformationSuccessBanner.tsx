@@ -49,7 +49,7 @@ export default function MegaTransformationSuccessBanner() {
               className='text-blue-300 hover:text-blue-200 transition-colors font-semibold flex items-center'
             >
               Read Full Case Study <ArrowRight className="w-4 h-4 ml-1" />
-            </ArrowRight>
+            </Link>
             <div className="text-xs text-yellow-300 mt-2 font-semibold">🌟 PREMIUM SUCCESS</div>
           </div>
 
@@ -84,7 +84,7 @@ export default function MegaTransformationSuccessBanner() {
               className='text-blue-300 hover:text-blue-200 transition-colors font-semibold flex items-center'
             >
               Read Full Case Study <ArrowRight className="w-4 h-4 ml-1" />
-            </ArrowRight>
+            </Link>
             <div className="text-xs text-orange-300 mt-2 font-semibold">⚡ MEGA SUCCESS</div>
           </div>
 
@@ -119,7 +119,7 @@ export default function MegaTransformationSuccessBanner() {
               className='text-blue-300 hover:text-blue-200 transition-colors font-semibold flex items-center'
             >
               Read Full Case Study <ArrowRight className="w-4 h-4 ml-1" />
-            </ArrowRight>
+            </Link>
             <div className="text-xs text-red-300 mt-2 font-semibold">💎 INNOVATION</div>
           </div>
 
@@ -152,7 +152,7 @@ export default function MegaTransformationSuccessBanner() {
               className='text-blue-300 hover:text-blue-200 transition-colors font-semibold flex items-center'
             >
               Read Full Case Study <ArrowRight className="w-4 h-4 ml-1" />
-            </ArrowRight>
+            </Link>
             <div className="text-xs text-green-300 mt-2 font-semibold">🚀 AUTOMATION</div>
           </div>
 
@@ -187,7 +187,7 @@ export default function MegaTransformationSuccessBanner() {
               className='text-blue-300 hover:text-blue-200 transition-colors font-semibold flex items-center'
             >
               Read Full Case Study <ArrowRight className="w-4 h-4 ml-1" />
-            </ArrowRight>
+            </Link>
             <div className="text-xs text-blue-300 mt-2 font-semibold">⚡ OPTIMIZATION</div>
           </div>
 
@@ -222,7 +222,7 @@ export default function MegaTransformationSuccessBanner() {
               className='text-blue-300 hover:text-blue-200 transition-colors font-semibold flex items-center'
             >
               Read Full Case Study <ArrowRight className="w-4 h-4 ml-1" />
-            </ArrowRight>
+            </Link>
             <div className="text-xs text-purple-300 mt-2 font-semibold">🌍 GLOBAL</div>
           </div>
         </div>
@@ -263,18 +263,18 @@ export default function MegaTransformationSuccessBanner() {
         {/* Call to Action */}
         <div className="text-center">
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-6">
-            <ArrowRight
+            <Link
               href="/case-studies"
               className="bg-white text-green-900 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors shadow-lg flex items-center"
             >
               View All Case Studies <ArrowRight className="w-5 h-5 ml-2" />
-            </ArrowRight>
-            <ArrowRight
+            </Link>
+            <Link
               href="/contact"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-green-900 transition-colors flex items-center"
             >
               Start Your Transformation <Star className="w-5 h-5 ml-2" />
-            </ArrowRight>
+            </Link>
           </div>
           <p className='text-sm opacity-75'>
             Join the ranks of industry leaders who have achieved extraordinary

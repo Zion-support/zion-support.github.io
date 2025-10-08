@@ -66,7 +66,7 @@ export default function AIFutureWorkforceBanner2026() {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4">
-              <ArrowRight
+              <Link
                 href="/blog/ai-future-workforce-2026"
                 className="bg-white text-indigo-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-flex items-center"
               >
@@ -136,13 +136,13 @@ export default function AIFutureWorkforceBanner2026() {
               </div>
 
               <div className="mt-6 pt-6 border-t border-white/20">
-                <ArrowRight
+                <Link
                   href="/blog/ai-future-workforce-2026"
                   className="inline-flex items-center text-white hover:text-yellow-200 transition-colors font-semibold"
                 >
                   Learn More About Workforce Transformation
                   <ArrowRight className="w-4 h-4 ml-2" />
-                </ArrowRight>
+                </Link>
               </div>
             </div>
           </div>
