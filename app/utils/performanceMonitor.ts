@@ -234,11 +234,15 @@ class PerformanceMonitor {
     
     return `
 Performance Report:
-- Score: ${score}/100
-- FCP: ${metrics.fcp}ms
-- LCP: ${metrics.lcp}ms
-- FID: ${metrics.fid}ms
-- CLS: ${metrics.cls}
+
+Score: ${score}/100
+FCP: ${metrics.fcp}ms
+LCP: ${metrics.lcp}ms  
+FID: ${metrics.fid}ms
+CLS: ${metrics.cls}
+TTFB: ${metrics.ttfb}ms
 `;
   }
 }
+
+export const performanceMonitor = new PerformanceMonitor();

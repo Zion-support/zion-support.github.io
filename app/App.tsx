@@ -11,7 +11,6 @@ import AdvancedPerformanceMonitor from './components/AdvancedPerformanceMonitor'
 import AdvancedErrorBoundary from './components/AdvancedErrorBoundary';
 import SEOEnhancer from './components/SEOEnhancer';
 import AdvancedSEOOptimizer from './components/AdvancedSEOOptimizer';
-import LoadingSpinner from './components/LoadingSpinner';
 
 // Lazy load pages for better performance
 const HomePage = lazy(() => import('./page'));
@@ -22,6 +21,13 @@ import { logger } from './utils/logger';
 
 // Styles
 import './globals.css';
+
+// Loading spinner component
+const LoadingSpinner: React.FC = () => (
+  <div className="flex items-center justify-center min-h-screen">
+    <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-indigo-600"></div>
+  </div>
+);
 
 const App: React.FC = () => {
   useEffect(() => {
@@ -46,7 +52,7 @@ const App: React.FC = () => {
     }
     
     logger.lifecycle('performance monitoring initialized', 'App');
-    logger.info('🚀 Zion Tech Group App initialized with comprehensive monitoring', { component: 'App' });
+    logger.info('🚀 Zion Tech Group App initialized with comprehensive monitoring', 'App');
   }, []);
 
   return (

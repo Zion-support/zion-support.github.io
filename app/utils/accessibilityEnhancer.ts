@@ -678,10 +678,13 @@ class AccessibilityEnhancer {
     
     return `
 Accessibility Report:
-- Total Checks: ${metrics.totalChecks}
-- Issues Found: ${metrics.issuesFound}
-- Warnings: ${metrics.warnings}
-- Success Rate: ${metrics.successRate.toFixed(2)}%
+
+ARIA Labels: ${metrics.ariaLabels}
+Keyboard Navigation: ${metrics.keyboardNavigation ? "Enabled" : "Disabled"}
+Focus Management: ${metrics.focusManagement ? "Enabled" : "Disabled"}
+Screen Reader Support: ${metrics.screenReaderSupport ? "Enabled" : "Disabled"}
 `;
   }
 }
+
+export const accessibilityEnhancer = new AccessibilityEnhancer();
