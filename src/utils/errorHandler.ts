@@ -21,57 +21,28 @@ export enum ErrorSeverity {
 
 export interface ErrorInfo {
   id: string;
-  message: string;
-  stack?: string;
+  error: Error;
   category: ErrorCategory;
   severity: ErrorSeverity;
-  timestamp: string;
-  url: string;
-  userAgent: string;
-  userId?: string;
+  timestamp: number;
+  context?: Record<string, unknown>;
 }
 
 class ErrorHandler {
-  private static instance: ErrorHandler;
   private errorQueue: ErrorInfo[] = [];
-  private maxQueueSize = 50;
+  private maxQueueSize = 100;
 
-  private constructor() {
-    this.setupGlobalErrorHandlers();
-  }
-
-  public static getInstance(): ErrorHandler {
-    if (!ErrorHandler.instance) {
-      ErrorHandler.instance = new ErrorHandler();
-    }
-    return ErrorHandler.instance;
-  }
-
-  private setupGlobalErrorHandlers(): void {
-    if (typeof window !== 'undefined') {
-      window.addEventListener('error', (event) => {
-        this.handleError(event.error);
-      });
-
-      window.addEventListener('unhandledrejection', (event) => {
-        this.handleError(new Error(event.reason));
-      });
-    }
-  }
-
-  public handleError(error: Error): void {
+  handleError(error: Error, context?: Record<string, unknown>): void {
     const category = this.categorizeError(error);
     const severity = this.determineSeverity(error, category);
-
+    
     const errorData: ErrorInfo = {
       id: this.generateErrorId(),
-      message: error.message,
-      stack: error.stack,
+      error,
       category,
       severity,
-      timestamp: new Date().toISOString(),
-      url: typeof window !== 'undefined' ? window.location.href : '',
-      userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : '',
+      timestamp: Date.now(),
+      context,
     };
 
     this.errorQueue.push(errorData);
@@ -134,19 +105,6 @@ class ErrorHandler {
 
   clearErrors(): void {
     this.errorQueue = [];
-  }
-
-  public getErrorStats(): { total: number; recent: number } {
-    const now = new Date();
-    const oneHourAgo = new Date(now.getTime() - 60 * 60 * 1000);
-    const recent = this.errorQueue.filter(
-      error => new Date(error.timestamp) > oneHourAgo
-    ).length;
-    
-    return {
-      total: this.errorQueue.length,
-      recent
-    };
   }
 }
 
