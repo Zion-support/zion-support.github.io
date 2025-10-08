@@ -95,13 +95,8 @@ class PerformanceReporter {
       let clsValue = 0;
       const clsObserver = new PerformanceObserver(entryList => {
         entryList.getEntries().forEach(entry => {
-<<<<<<< HEAD
-          if (!(entry as LayoutShift).hadRecentInput) {
-            clsValue += (entry as LayoutShift).value;
-=======
           if (!(entry as PerformanceEntry).hadRecentInput) {
             clsValue += (entry as PerformanceEntry).value;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-283b
           }
         });
         this.addMetric('CLS', clsValue, this.getRating('cls', clsValue));
