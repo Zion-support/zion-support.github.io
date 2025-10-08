@@ -52,7 +52,8 @@ class ErrorBoundary extends Component<Props, State> {
       this.props.onError(error, errorInfo);
     }
 
-    if (this.props.enableErrorReporting) {
+    if (this.props.enableErrorReporting && process.env.NODE_ENV === 'development') {
+      // eslint-disable-next-line no-console
       console.error('Error caught by boundary:', error, errorInfo);
     }
   }
@@ -98,11 +99,9 @@ class ErrorBoundary extends Component<Props, State> {
                     <div className="mb-2">
                       <strong>Error:</strong> {this.state.error.message}
                     </div>
-                    </div>
-                </div>
-              </details>
-            )}
-          </div>
+                  </div>
+                </details>
+              )}
           </div>
         </div>
       );

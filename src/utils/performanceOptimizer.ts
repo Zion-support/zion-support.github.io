@@ -328,3 +328,8 @@ const performanceUtils = {
 };
 
 export default performanceUtils;
+
+// Collect performance metrics
+export const collectPerformanceMetrics = (): WebVitalsMetrics | null => {
+  return measurePageLoad();
+};
