@@ -114,8 +114,8 @@ export class EnhancedLogger {
     if (!EnhancedLogger.instance) {
       EnhancedLogger.instance = new EnhancedLogger(config);
     } else if (config) {
-      // Update config if provided
-      EnhancedLogger.instance.updateConfig(config);
+      // Config already set, instance exists
+      Object.assign(EnhancedLogger.instance.config, config);
     }
     return EnhancedLogger.instance;
   }
@@ -360,19 +360,19 @@ export class EnhancedLogger {
 
       switch (entry.level) {
         case LogLevel.DEBUG:
-          if (this.isDevelopment()) { console.debug(message, structuredLog); }
+          if (this.isDevelopment()) { logger.debug(message, structuredLog); }
           break;
         case LogLevel.INFO:
           if (this.isDevelopment()) { console.info(message, structuredLog); }
           break;
         case LogLevel.WARN:
-          console.warn(message, structuredLog);
+          logger.warn(message, structuredLog);
           break;
         case LogLevel.ERROR:
         case LogLevel.FATAL:
-          console.error(message, structuredLog);
+          logger.error(message, structuredLog);
           if (entry.stack) {
-            console.error('Stack trace:', entry.stack);
+            logger.error('Stack trace:', { stack: entry.stack });
           }
           break;
       }
@@ -380,17 +380,17 @@ export class EnhancedLogger {
       // Simple console output
       switch (entry.level) {
         case LogLevel.DEBUG:
-          if (this.isDevelopment()) { console.debug(message, entry.data); }
+          if (this.isDevelopment()) { logger.debug(message, entry.data); }
           break;
         case LogLevel.INFO:
           if (this.isDevelopment()) { console.info(message, entry.data); }
           break;
         case LogLevel.WARN:
-          console.warn(message, entry.data);
+          logger.warn(message, entry.data);
           break;
         case LogLevel.ERROR:
         case LogLevel.FATAL:
-          console.error(message, entry.data);
+          logger.error(message, entry.data);
           break;
       }
     }
@@ -418,7 +418,9 @@ export class EnhancedLogger {
       });
     } catch (error) {
       // Fallback to console if remote logging fails
-      console.error('Failed to send log to remote endpoint:', error);
+      logger.error('Failed to send log to remote endpoint:', { 
+        error: error instanceof Error ? error.message : String(error) 
+      });
     }
   }
 
