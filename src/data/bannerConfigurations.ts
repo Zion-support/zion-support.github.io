@@ -30,18 +30,22 @@ export const selectBalancedBanners = (maxBanners: number = 3): BannerConfig[] =>
 
 export const trackImpression = (bannerId: string): void => {
   if (typeof window !== 'undefined') {
-    console.log('Banner impression:', bannerId);
+    console.log(`Banner impression: ${bannerId}`);
   }
 };
 
 export const trackClick = (bannerId: string): void => {
   if (typeof window !== 'undefined') {
-    console.log('Banner click:', bannerId);
+    console.log(`Banner click: ${bannerId}`);
   }
 };
 
-export const loadBannerStats = (): Record<string, { impressions: number; clicks: number }> => {
-  return {};
+export const loadBannerStats = (): Record<string, { impressions: number; clicks: number; ctr?: number }> => {
+  return {
+    impressions: 0,
+    clicks: 0,
+    ctr: 0
+  };
 };
 
 export const getRefreshInterval = (): number => {

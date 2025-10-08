@@ -1,6 +1,6 @@
 import React from 'react';
-import Link from 'next/link';
 import { Metadata } from 'next';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Enterprise Solutions - Zion Tech Group',
@@ -38,7 +38,7 @@ const EnterprisePage: React.FC = () => {
               </Link>
               <Link
                 href="#solutions"
-                className="group flex items-center gap-3 bg-slate-600 hover:bg-slate-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 border border-slate-500"
+                className="group flex items-center gap-3 bg-slate-200 hover:bg-slate-300 text-gray-800 font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 border border-slate-300"
               >
                 <span>View Solutions</span>
                 <span className="group-hover:translate-x-1 transition-transform">
@@ -80,9 +80,9 @@ const EnterprisePage: React.FC = () => {
                 icon: '🔒'
               },
               {
-                title: 'Cloud Infrastructure',
-                description: 'Scalable and secure cloud architecture',
-                icon: '☁️'
+                title: 'Quantum Computing',
+                description: 'Next-generation computing power for complex business problems',
+                icon: '⚛️'
               },
               {
                 title: 'Enterprise AI',
@@ -90,9 +90,9 @@ const EnterprisePage: React.FC = () => {
                 icon: '🧠'
               },
               {
-                title: 'Data Analytics',
-                description: 'Advanced analytics and business intelligence',
-                icon: '📈'
+                title: 'Cloud Infrastructure',
+                description: 'Scalable and secure cloud architecture',
+                icon: '☁️'
               },
             ].map((solution, index) => (
               <div
@@ -115,7 +115,7 @@ const EnterprisePage: React.FC = () => {
       {/* CTA Section */}
       <section className="py-24 bg-slate-50">
         <div className="container mx-auto px-4">
-          <div className="text-center bg-gradient-to-r from-blue-600 to-purple-600 rounded-3xl p-12 border border-blue-500/20">
+          <div className="text-center bg-gradient-to-r from-blue-600 to-purple-600 rounded-3xl p-12">
             <h3 className="text-4xl font-bold text-white mb-6">
               Ready to Transform Your Enterprise?
             </h3>
@@ -126,7 +126,7 @@ const EnterprisePage: React.FC = () => {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
               <Link
                 href="tel:+13024640950"
-                className="group flex items-center gap-3 bg-white text-blue-600 hover:bg-gray-100 font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl"
+                className="group flex items-center gap-3 bg-white hover:bg-gray-100 text-blue-600 font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl"
               >
                 <span className="text-xl">📞</span>
                 <span>Call Now</span>

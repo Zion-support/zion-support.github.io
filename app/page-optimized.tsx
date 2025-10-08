@@ -4,9 +4,9 @@ import SEOOptimizer from './components/SEOOptimizer';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 
-// Lazy load heavy components
+// Lazy load heavy components with proper error handling
 const UnifiedBanner = dynamic(
-  () => import('./components/NewestContent2025Banner'),
+  () => import('./components/NewestContent2025Banner').catch(() => Promise.resolve({ default: () => null })), 
   {
     loading: () => <div className="animate-pulse bg-gray-200 h-32 rounded-lg"></div>,
     ssr: false
@@ -14,7 +14,7 @@ const UnifiedBanner = dynamic(
 );
 
 const ContentPromotion = dynamic(
-  () => import('./components/UltimateBusinessIntelligence2025Banner'),
+  () => import('./components/UltimateBusinessIntelligence2025Banner').catch(() => Promise.resolve({ default: () => null })), 
   {
     loading: () => <div className="animate-pulse bg-gray-200 h-64 rounded-lg"></div>,
     ssr: false
@@ -22,7 +22,7 @@ const ContentPromotion = dynamic(
 );
 
 const ContentShowcase = dynamic(
-  () => import('./components/UltimateBusinessIntelligenceShowcase2025'),
+  () => import('./components/UltimateBusinessIntelligenceShowcase2025').catch(() => Promise.resolve({ default: () => null })), 
   {
     loading: () => <div className="animate-pulse bg-gray-200 h-48 rounded-lg"></div>,
     ssr: false
@@ -69,8 +69,8 @@ export const metadata = {
   },
   verification: {
     google: 'your-google-verification-code',
-    yandex: 'yandex-verification-code',
-    yahoo: 'yahoo-verification-code',
+    yandex: 'your-yandex-verification-code',
+    yahoo: 'your-yahoo-verification-code',
   },
 };
 
