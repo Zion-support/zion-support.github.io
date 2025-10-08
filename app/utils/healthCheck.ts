@@ -133,8 +133,8 @@ export async function performHealthCheck(): Promise<HealthStatus> {
     logger.info(`Checks: ${JSON.stringify(status.checks)}`, 'HealthCheck');
     logger.info(`Metrics: ${JSON.stringify(status.metrics)}`, 'HealthCheck');
     logger.perf('Health check duration', performance.now() - startTime);
+    logger.groupEnd();
   });
-  logger.groupEnd();
 
   return status;
 }

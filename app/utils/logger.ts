@@ -170,28 +170,30 @@ class Logger {
   }
 
   /**
-   * Log a performance metric
+   * Log performance metrics
    */
   perf(metric: string, value: number, metadata?: Record<string, unknown>): void {
-    this.log(LogLevel.DEBUG, `Performance: ${metric}`, 'Performance', {
-      ...metadata,
+    this.info(`Performance: ${metric} = ${value}ms`, 'Performance', {
       metric,
       value,
+      ...metadata,
     });
   }
 
   /**
    * Group related log messages
    */
-  group(label: string, fn: () => void): void {
-    if (this.config.enableConsole) {
+  group(label: string, fn?: () => void): void {
+    if (this.config.enableConsole && typeof console.group === 'function') {
       console.group(label);
-      try {
-        fn();
-      } finally {
-        console.groupEnd();
+      if (fn) {
+        try {
+          fn();
+        } finally {
+          console.groupEnd();
+        }
       }
-    } else {
+    } else if (fn) {
       fn();
     }
   }
