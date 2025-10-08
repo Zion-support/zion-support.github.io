@@ -187,6 +187,84 @@ class PerformanceOptimizer {
     return { ...this.metrics };
   }
 
+  /**
+   * Run all optimizations
+   */
+  public optimize(): void {
+    this.optimizeImages();
+    this.enableCaching();
+    this.enableCompression();
+  }
+
+  /**
+   * Start a performance mark
+   */
+  public startMark(markName: string): void {
+    if (typeof performance !== 'undefined') {
+      performance.mark(`${markName}-start`);
+    }
+  }
+
+  /**
+   * End a performance mark and return duration
+   */
+  public endMark(markName: string): number | null {
+    if (typeof performance === 'undefined') return null;
+    
+    try {
+      performance.mark(`${markName}-end`);
+      const measure = performance.measure(
+        markName,
+        `${markName}-start`,
+        `${markName}-end`
+      );
+      
+      // Clean up marks
+      performance.clearMarks(`${markName}-start`);
+      performance.clearMarks(`${markName}-end`);
+      performance.clearMeasures(markName);
+      
+      return measure.duration;
+    } catch {
+      return null;
+    }
+  }
+
+  /**
+   * Get overall performance score (0-100)
+   */
+  public getPerformanceScore(): number {
+    const metrics = this.getMetrics();
+    const scores: number[] = [];
+
+    // Load time score (0-100)
+    if (metrics.loadTime > 0) {
+      const loadScore = Math.max(0, 100 - (metrics.loadTime / 50)); // 5s = 0 score
+      scores.push(loadScore);
+    }
+
+    // Render time score
+    if (metrics.renderTime > 0) {
+      const renderScore = Math.max(0, 100 - (metrics.renderTime / 10)); // 1s = 0 score
+      scores.push(renderScore);
+    }
+
+    // Memory usage score (assuming 100MB is threshold)
+    if (metrics.memoryUsage > 0) {
+      const memoryScore = Math.max(0, 100 - (metrics.memoryUsage / 1000000)); // 100MB = 0 score
+      scores.push(memoryScore);
+    }
+
+    // Cache hit rate score
+    if (metrics.cacheHitRate >= 0) {
+      scores.push(metrics.cacheHitRate * 100);
+    }
+
+    // Return average score
+    if (scores.length === 0) return 50; // Default if no metrics
+    return Math.round(scores.reduce((a, b) => a + b, 0) / scores.length);
+  }
+
   public optimizeImages(): void {
     if (!this.config.enableImageOptimization) return;
 
@@ -250,53 +328,6 @@ Performance Report:
 - Bundle Size: ${metrics.bundleSize}KB
 - Cache Hit Rate: ${(metrics.cacheHitRate * 100).toFixed(2)}%
     `.trim();
-  }
-
-  public optimize(): void {
-    // Run all optimization strategies
-    this.optimizeImages();
-    this.enableCaching();
-    this.enableCompression();
-  }
-
-  public startMark(name: string): void {
-    if (typeof window !== 'undefined' && performance.mark) {
-      performance.mark(`${name}-start`);
-    }
-  }
-
-  public endMark(name: string): number | undefined {
-    if (typeof window !== 'undefined' && performance.mark && performance.measure) {
-      performance.mark(`${name}-end`);
-      try {
-        const measure = performance.measure(name, `${name}-start`, `${name}-end`);
-        return measure.duration;
-      } catch {
-        return undefined;
-      }
-    }
-    return undefined;
-  }
-
-  public getPerformanceScore(): number {
-    const metrics = this.getMetrics();
-    // Calculate a score based on metrics (0-100)
-    let score = 100;
-    
-    // Deduct points for poor metrics
-    if (metrics.loadTime > 3000) score -= 20;
-    else if (metrics.loadTime > 2000) score -= 10;
-    
-    if (metrics.renderTime > 1000) score -= 15;
-    else if (metrics.renderTime > 500) score -= 7;
-    
-    if (metrics.memoryUsage > 0.8) score -= 20;
-    else if (metrics.memoryUsage > 0.6) score -= 10;
-    
-    if (metrics.cacheHitRate < 0.6) score -= 15;
-    else if (metrics.cacheHitRate < 0.8) score -= 7;
-    
-    return Math.max(0, score);
   }
 
   public cleanup(): void {
