@@ -64,6 +64,11 @@ class ErrorBoundary extends Component<Props, State> {
       }
 
       return (
+        <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-red-50 to-orange-50 p-4">
+          <div className="max-w-md w-full bg-white rounded-2xl shadow-2xl p-8 text-center">
+            <div className="mb-6">
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-red-100 rounded-full mb-4">
+                <FileWarning className="w-8 h-8 text-red-600" />
               </div>
               <h1 className="text-2xl font-bold text-gray-900 mb-2">
                 Oops! Something went wrong
