@@ -14,7 +14,6 @@ export const metadata = {
     type: 'article'
   }
 }
-};
 
 export default function AI20262027RevolutionaryBreakthroughComprehensiveGuidePage() {
   return (

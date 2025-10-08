@@ -4,11 +4,7 @@
  */
 
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-<<<<<<< HEAD
-// import { logger } from '../utils/logger';
-=======
-import { logger as _logger } from '../utils/logger';
->>>>>>> cursor/fix-errors-and-merge-to-main-7716
+// import { logger as _logger } from '../utils/logger';
 import monitoring from '../utils/monitoring';
 
 interface Props {

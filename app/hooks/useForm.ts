@@ -6,7 +6,6 @@
 import { useState, useCallback, ChangeEvent } from 'react';
 // import { logger } from '../utils/logger';
 import {
-<<<<<<< HEAD
   ValidationRule,
   validateField,
   validateForm,
@@ -14,9 +13,6 @@ import {
   getFormErrors,
   // _ValidationResult
 } from '../utils/formValidation';
-=======
-  ValidationRule, validateField, validateForm, isFormValid, getFormErrors, _ValidationResult} from '../utils/formValidation';
->>>>>>> cursor/fix-errors-and-merge-to-main-7716
 
 export interface UseFormConfig<T extends Record<string, unknown>> {
   initialValues: T;
@@ -152,7 +148,7 @@ export function useForm<T extends Record<string, unknown>>({
         setIsSubmitting(false);
       }
     },
-    [values, validateAllFields, onSubmit]
+    [values, validateAllFields]
   );
 
   // Set field value programmatically
