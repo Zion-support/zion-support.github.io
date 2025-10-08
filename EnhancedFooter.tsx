@@ -1,71 +1,4 @@
-<<<<<<< HEAD
-=======
-import {
-  Github,
-  Linkedin,
-  Mail,
-  MapPin,
-  Phone,
-  Twitter,
-} from 'lucide-react';
->>>>>>> 49f746e8c3195449347ee8bebb6ca5b0ab732544
-import React from 'react';
-import { Link } from 'react-router-dom';
-
-const EnhancedFooter: React.FC = () => {
-  const currentYear = new Date().getFullYear();
-
-  const services = [
-    { name: 'AI Solutions', href: '/services/ai' },
-    { name: 'Cloud Architecture', href: '/services/cloud' },
-    { name: 'Web Development', href: '/services/web' },
-    { name: 'Mobile Apps', href: '/services/mobile' },
-    { name: 'Data Analytics', href: '/services/analytics' },
-    { name: 'DevOps', href: '/services/devops' },
-  ];
-
-  const products = [
-    { name: 'AI Platform', href: '/products/ai-platform' },
-    { name: 'Cloud Suite', href: '/products/cloud-suite' },
-    { name: 'Analytics Dashboard', href: '/products/analytics' },
-    { name: 'Mobile SDK', href: '/products/mobile-sdk' },
-  ];
-
-  const quickLinks = [
-    { name: 'About Us', href: '/about' },
-    { name: 'Contact', href: '/contact' },
-    { name: 'Blog', href: '/blog' },
-    { name: 'Careers', href: '/careers' },
-    { name: 'Privacy Policy', href: '/privacy' },
-    { name: 'Terms of Service', href: '/terms' },
-  ];
-
-  return (
-    <footer className='bg-gray-900 text-white'>
-      <div className='container mx-auto px-4 py-12'>
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8'>
-          <div className='lg:col-span-2'>
-            <div className='flex items-center space-x-2 mb-4'>
-              <div className='w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center'>
-                <span className='text-white font-bold text-xl'>Z</span>
-              </div>
-              <div className='text-xl font-bold'>Zion Tech Group</div>
-            </div>
-            <p className='text-gray-300 mb-6 max-w-md'>
-              Leading technology solutions provider helping businesses transform
-              their digital presence with cutting-edge AI, cloud architecture
-              and innovative development services.
-            </p>
-            <div className='flex space-x-4'>
-              <a
-                href='https://linkedin.com/company/ziontechgroup'
-                className='text-gray-400 hover:text-white transition-colors'
-              >
-<<<<<<< HEAD
-                <span className='text-lg'>💼</span>
-=======
                 <Linkedin className='w-5 h-5' />
->>>>>>> 49f746e8c3195449347ee8bebb6ca5b0ab732544
               </a>
               <a
                 href='https://twitter.com/ziontechgroup'
@@ -77,11 +10,7 @@ const EnhancedFooter: React.FC = () => {
                 href='https://github.com/ziontechgroup'
                 className='text-gray-400 hover:text-white transition-colors'
               >
-<<<<<<< HEAD
-                <span className='text-lg'>🐙</span>
-=======
                 <Github className='w-5 h-5' />
->>>>>>> 49f746e8c3195449347ee8bebb6ca5b0ab732544
               </a>
             </div>
           </div>
