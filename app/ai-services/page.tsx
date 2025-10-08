@@ -259,7 +259,7 @@ const AIServicesPage: React.FC = () => {
     }
   ];
 
-  const _categories = [...new Set(aiServices.map(service => service.category))];
+  const categories = [...new Set(aiServices.map(service => service.category))];
 
   return (
     <>
@@ -269,69 +269,103 @@ const AIServicesPage: React.FC = () => {
         <meta name="keywords" content="AI services, machine learning, artificial intelligence, NLP, computer vision, automation, AI consulting" />
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-purple-50">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid">
         {/* Hero Section */}
-        <section className="relative overflow-hidden bg-gradient-to-r from-purple-600 to-pink-700 text-white py-20">
-          <div className="absolute inset-0 bg-black opacity-20"></div>
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center">
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+        <section className="relative overflow-hidden py-20">
+          <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-purple-500/10"></div>
+          <div className="container mx-auto px-4 relative z-10">
+            <div className="text-center max-w-4xl mx-auto">
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 neon-text">
                 Advanced AI Services
               </h1>
-              <p className="text-xl md:text-2xl mb-8 text-purple-100 max-w-3xl mx-auto">
+              <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium">
                 Transform your business with cutting-edge artificial intelligence solutions
               </p>
+              <p className="text-lg text-gray-300 mb-12 leading-relaxed">
+                Harness the power of artificial intelligence with our comprehensive suite of AI services. 
+                From machine learning to computer vision, we deliver enterprise-grade AI solutions that drive real business value.
+              </p>
+              
+              {/* Stats */}
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
+                <div className="cyber-card text-center">
+                  <div className="text-3xl font-bold text-cyan-400 mb-2">25+</div>
+                  <div className="text-gray-300">AI Services</div>
+                </div>
+                <div className="cyber-card text-center">
+                  <div className="text-3xl font-bold text-green-400 mb-2">500+</div>
+                  <div className="text-gray-300">AI Projects</div>
+                </div>
+                <div className="cyber-card text-center">
+                  <div className="text-3xl font-bold text-purple-400 mb-2">99.9%</div>
+                  <div className="text-gray-300">Accuracy</div>
+                </div>
+                <div className="cyber-card text-center">
+                  <div className="text-3xl font-bold text-orange-400 mb-2">24/7</div>
+                  <div className="text-gray-300">AI Support</div>
+                </div>
+              </div>
+
+              {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-colors">
-                  Start AI Journey
-                </button>
-                <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors">
-                  View AI Solutions
-                </button>
+                <a
+                  href="tel:+13024640950"
+                  className="cyber-button"
+                  aria-label="Call us at (302) 464-0950"
+                >
+                  📞 Call Now: (302) 464-0950
+                </a>
+                <a
+                  href="mailto:kleber@ziontechgroup.com"
+                  className="cyber-button"
+                  style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}
+                >
+                  ✉️ Get Free AI Consultation
+                </a>
               </div>
             </div>
           </div>
         </section>
 
         {/* Key Benefits */}
-        <section className="py-16 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section className="py-16 bg-gradient-to-r from-slate-800 to-purple-900">
+          <div className="container mx-auto px-4">
             <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 neon-text">
                 Why Choose Our AI Services?
               </h2>
-              <p className="text-xl text-gray-600">
+              <p className="text-lg text-gray-300 max-w-3xl mx-auto">
                 Cutting-edge AI solutions delivered by PhD-level experts with proven industry experience
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              <div className="text-center">
-                <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Brain className="w-8 h-8 text-purple-600" />
+              <div className="cyber-card text-center">
+                <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center mx-auto mb-6">
+                  <Brain className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">AI Experts</h3>
-                <p className="text-gray-600">PhD-level data scientists and AI researchers</p>
+                <h3 className="text-xl font-bold text-white mb-4">AI Experts</h3>
+                <p className="text-gray-300">PhD-level data scientists and AI researchers</p>
               </div>
-              <div className="text-center">
-                <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Zap className="w-8 h-8 text-green-600" />
+              <div className="cyber-card text-center">
+                <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-teal-500 rounded-lg flex items-center justify-center mx-auto mb-6">
+                  <Zap className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Rapid Deployment</h3>
-                <p className="text-gray-600">Deploy AI solutions in weeks, not months</p>
+                <h3 className="text-xl font-bold text-white mb-4">Rapid Deployment</h3>
+                <p className="text-gray-300">Deploy AI solutions in weeks, not months</p>
               </div>
-              <div className="text-center">
-                <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Target className="w-8 h-8 text-blue-600" />
+              <div className="cyber-card text-center">
+                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mx-auto mb-6">
+                  <Target className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Custom Solutions</h3>
-                <p className="text-gray-600">Tailored AI models for your specific use case</p>
+                <h3 className="text-xl font-bold text-white mb-4">Custom Solutions</h3>
+                <p className="text-gray-300">Tailored AI models for your specific use case</p>
               </div>
-              <div className="text-center">
-                <div className="bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <BarChart className="w-8 h-8 text-orange-600" />
+              <div className="cyber-card text-center">
+                <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-lg flex items-center justify-center mx-auto mb-6">
+                  <BarChart className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Proven ROI</h3>
-                <p className="text-gray-600">Average 400% ROI within 12 months</p>
+                <h3 className="text-xl font-bold text-white mb-4">Proven ROI</h3>
+                <p className="text-gray-300">Average 400% ROI within 12 months</p>
               </div>
             </div>
           </div>
@@ -339,13 +373,13 @@ const AIServicesPage: React.FC = () => {
 
         {/* Services by Category */}
         {categories.map(category => (
-          <section key={category} className="py-16 bg-gray-50">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <section key={category} className="py-16">
+            <div className="container mx-auto px-4">
               <div className="text-center mb-12">
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 neon-text">
                   {category} Solutions
                 </h2>
-                <p className="text-xl text-gray-600">
+                <p className="text-lg text-gray-300 max-w-3xl mx-auto">
                   Advanced {category.toLowerCase()} services powered by state-of-the-art AI technology
                 </p>
               </div>
@@ -353,38 +387,38 @@ const AIServicesPage: React.FC = () => {
                 {aiServices
                   .filter(service => service.category === category)
                   .map((service, index) => (
-                    <div key={index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
-                      <div className="text-4xl mb-4">{service.icon}</div>
-                      <h3 className="text-xl font-semibold text-gray-900 mb-3">{service.title}</h3>
-                      <p className="text-gray-600 mb-4">{service.description}</p>
+                    <div key={index} className="cyber-card hologram-card group">
+                      <div className="text-4xl mb-6 text-center">{service.icon}</div>
+                      <h3 className="text-xl font-bold text-white mb-4 text-center">{service.title}</h3>
+                      <p className="text-gray-300 mb-6 text-center leading-relaxed">{service.description}</p>
                       
-                      <div className="mb-4">
+                      <div className="mb-6">
                         <div className="flex items-center justify-between mb-2">
-                          <span className="text-2xl font-bold text-purple-600">{service.price}</span>
-                          <span className="text-sm text-gray-500">Market: {service.marketPrice}</span>
+                          <span className="text-2xl font-bold text-cyan-400">{service.price}</span>
+                          <span className="text-sm text-gray-400">Market: {service.marketPrice}</span>
                         </div>
-                        <div className="text-sm text-green-600 font-semibold">
+                        <div className="text-sm text-green-400 font-semibold text-center">
                           Save up to 50% vs market rates
                         </div>
                       </div>
 
-                      <div className="mb-4">
-                        <h4 className="font-semibold text-gray-900 mb-2">Key Features:</h4>
-                        <ul className="space-y-1">
+                      <div className="mb-6">
+                        <h4 className="font-semibold text-white mb-3">Key Features:</h4>
+                        <ul className="space-y-2">
                           {service.features.map((feature, featureIndex) => (
-                            <li key={featureIndex} className="flex items-center text-sm text-gray-600">
-                              <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                            <li key={featureIndex} className="flex items-center text-sm text-gray-300">
+                              <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
                               {feature}
                             </li>
                           ))}
                         </ul>
                       </div>
 
-                      <div className="mb-4">
-                        <h4 className="font-semibold text-gray-900 mb-2">Technologies:</h4>
+                      <div className="mb-6">
+                        <h4 className="font-semibold text-white mb-3">Technologies:</h4>
                         <div className="flex flex-wrap gap-2">
                           {service.technologies.map((tech, techIndex) => (
-                            <span key={techIndex} className="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded">
+                            <span key={techIndex} className="bg-cyan-500/20 text-cyan-400 text-xs px-2 py-1 rounded border border-cyan-500/30">
                               {tech}
                             </span>
                           ))}
@@ -392,18 +426,18 @@ const AIServicesPage: React.FC = () => {
                       </div>
 
                       <div className="mb-6">
-                        <h4 className="font-semibold text-gray-900 mb-2">Business Benefits:</h4>
-                        <ul className="space-y-1">
+                        <h4 className="font-semibold text-white mb-3">Business Benefits:</h4>
+                        <ul className="space-y-2">
                           {service.benefits.map((benefit, benefitIndex) => (
-                            <li key={benefitIndex} className="flex items-center text-sm text-gray-600">
-                              <Star className="w-4 h-4 text-yellow-500 mr-2 flex-shrink-0" />
+                            <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
+                              <Star className="w-4 h-4 text-yellow-400 mr-3 flex-shrink-0" />
                               {benefit}
                             </li>
                           ))}
                         </ul>
                       </div>
 
-                      <button className="w-full bg-purple-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-purple-700 transition-colors">
+                      <button className="w-full cyber-button">
                         Get AI Consultation
                       </button>
                     </div>
@@ -414,75 +448,89 @@ const AIServicesPage: React.FC = () => {
         ))}
 
         {/* AI Capabilities Showcase */}
-        <section className="py-16 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section className="py-16 bg-gradient-to-r from-slate-800 to-purple-900">
+          <div className="container mx-auto px-4">
             <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 neon-text">
                 Our AI Capabilities
               </h2>
-              <p className="text-xl text-gray-600">
+              <p className="text-lg text-gray-300 max-w-3xl mx-auto">
                 Cutting-edge AI technologies and methodologies we use to solve complex business problems
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <div className="text-center p-6 bg-gradient-to-br from-blue-50 to-indigo-100 rounded-lg">
-                <Brain className="w-12 h-12 text-blue-600 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Deep Learning</h3>
-                <p className="text-gray-600">Neural networks, CNNs, RNNs, and transformer models</p>
+              <div className="cyber-card text-center">
+                <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center mx-auto mb-6">
+                  <Brain className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-4">Deep Learning</h3>
+                <p className="text-gray-300">Neural networks, CNNs, RNNs, and transformer models</p>
               </div>
-              <div className="text-center p-6 bg-gradient-to-br from-green-50 to-emerald-100 rounded-lg">
-                <MessageSquare className="w-12 h-12 text-green-600 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Natural Language Processing</h3>
-                <p className="text-gray-600">Text analysis, sentiment, translation, and generation</p>
+              <div className="cyber-card text-center">
+                <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-teal-500 rounded-lg flex items-center justify-center mx-auto mb-6">
+                  <MessageSquare className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-4">Natural Language Processing</h3>
+                <p className="text-gray-300">Text analysis, sentiment, translation, and generation</p>
               </div>
-              <div className="text-center p-6 bg-gradient-to-br from-purple-50 to-violet-100 rounded-lg">
-                <Eye className="w-12 h-12 text-purple-600 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Computer Vision</h3>
-                <p className="text-gray-600">Image recognition, object detection, and video analysis</p>
+              <div className="cyber-card text-center">
+                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mx-auto mb-6">
+                  <Eye className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-4">Computer Vision</h3>
+                <p className="text-gray-300">Image recognition, object detection, and video analysis</p>
               </div>
-              <div className="text-center p-6 bg-gradient-to-br from-orange-50 to-amber-100 rounded-lg">
-                <Cpu className="w-12 h-12 text-orange-600 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Machine Learning</h3>
-                <p className="text-gray-600">Supervised, unsupervised, and reinforcement learning</p>
+              <div className="cyber-card text-center">
+                <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-lg flex items-center justify-center mx-auto mb-6">
+                  <Cpu className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-4">Machine Learning</h3>
+                <p className="text-gray-300">Supervised, unsupervised, and reinforcement learning</p>
               </div>
-              <div className="text-center p-6 bg-gradient-to-br from-pink-50 to-rose-100 rounded-lg">
-                <Sparkles className="w-12 h-12 text-pink-600 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Generative AI</h3>
-                <p className="text-gray-600">Content generation, creative AI, and synthetic data</p>
+              <div className="cyber-card text-center">
+                <div className="w-16 h-16 bg-gradient-to-r from-pink-500 to-rose-500 rounded-lg flex items-center justify-center mx-auto mb-6">
+                  <Sparkles className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-4">Generative AI</h3>
+                <p className="text-gray-300">Content generation, creative AI, and synthetic data</p>
               </div>
-              <div className="text-center p-6 bg-gradient-to-br from-indigo-50 to-blue-100 rounded-lg">
-                <BarChart className="w-12 h-12 text-indigo-600 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Predictive Analytics</h3>
-                <p className="text-gray-600">Forecasting, trend analysis, and predictive modeling</p>
+              <div className="cyber-card text-center">
+                <div className="w-16 h-16 bg-gradient-to-r from-indigo-500 to-blue-500 rounded-lg flex items-center justify-center mx-auto mb-6">
+                  <BarChart className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-4">Predictive Analytics</h3>
+                <p className="text-gray-300">Forecasting, trend analysis, and predictive modeling</p>
               </div>
             </div>
           </div>
         </section>
 
         {/* Contact Section */}
-        <section className="py-16 bg-gradient-to-r from-purple-600 to-pink-600 text-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+        <section className="py-16 bg-gradient-to-r from-slate-800 to-purple-900">
+          <div className="container mx-auto px-4 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">
               Ready to Harness the Power of AI?
             </h2>
-            <p className="text-xl mb-8 text-purple-100">
+            <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
               Contact our AI experts for a free consultation and custom AI strategy development
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
+              <a
                 href="tel:+13024640950"
-                className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-colors inline-flex items-center"
+                className="cyber-button"
+                aria-label="Call us at (302) 464-0950"
               >
-                📞 +1 302 464 0950
+                📞 Call Now: (302) 464-0950
               </a>
-              <a 
+              <a
                 href="mailto:kleber@ziontechgroup.com"
-                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
+                className="cyber-button"
+                style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}
               >
-                ✉️ kleber@ziontechgroup.com
+                ✉️ Get Free AI Consultation
               </a>
             </div>
-            <div className="mt-8 text-sm text-purple-200">
+            <div className="mt-8 text-sm text-gray-400">
               <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
             </div>
           </div>
