@@ -126,7 +126,10 @@ class PerformanceOptimizer {
     const fidObserver = new PerformanceObserver((list) => {
       const entries = list.getEntries();
       entries.forEach((entry) => {
-        console.log('FID:', entry.processingStart - entry.startTime);
+        const fidEntry = entry as PerformanceEntry & { processingStart?: number };
+        if (fidEntry.processingStart) {
+          console.log('FID:', fidEntry.processingStart - entry.startTime);
+        }
       });
     });
     fidObserver.observe({ entryTypes: ['first-input'] });
@@ -247,6 +250,45 @@ Performance Report:
 - Bundle Size: ${metrics.bundleSize}KB
 - Cache Hit Rate: ${(metrics.cacheHitRate * 100).toFixed(2)}%
     `.trim();
+  }
+
+  public optimize(): void {
+    // Run all optimizations
+    this.optimizeImages();
+    this.enableCaching();
+    this.enableCompression();
+  }
+
+  public startMark(markName: string): void {
+    if (typeof performance !== 'undefined' && 'mark' in performance) {
+      performance.mark(`${markName}-start`);
+    }
+  }
+
+  public endMark(markName: string): number | null {
+    if (typeof performance !== 'undefined' && 'mark' in performance && 'measure' in performance) {
+      try {
+        performance.mark(`${markName}-end`);
+        performance.measure(markName, `${markName}-start`, `${markName}-end`);
+        const measure = performance.getEntriesByName(markName, 'measure')[0];
+        return measure ? measure.duration : null;
+      } catch (error) {
+        console.error('Failed to measure performance:', error);
+        return null;
+      }
+    }
+    return null;
+  }
+
+  public getPerformanceScore(): number {
+    // Calculate a basic performance score based on available metrics
+    let score = 100;
+    
+    if (this.metrics.loadTime > 3000) score -= 20;
+    if (this.metrics.renderTime > 1500) score -= 15;
+    if (this.metrics.memoryUsage > 0.8) score -= 15;
+    
+    return Math.max(0, score);
   }
 
   public cleanup(): void {
