@@ -162,14 +162,14 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     }
   }, [seoData]);
 
-  const _addMetaTag = (name: string, content: string, attribute: string = 'name') => {
+  const addMetaTag = (name: string, content: string, attribute: string = 'name') => {
     const metaTag = document.createElement('meta');
     metaTag.setAttribute(attribute, name);
     metaTag.content = content;
     document.head.appendChild(metaTag);
   };
 
-  const _updateCanonicalUrl = (url: string) => {
+  const updateCanonicalUrl = (url: string) => {
     let canonicalLink = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
 
     if (canonicalLink) {
@@ -182,7 +182,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     }
   };
 
-  const _addStructuredData = (data: Record<string, unknown>) => {
+  const addStructuredData = (data: Record<string, unknown>) => {
     // Remove existing structured data
     if (structuredDataRef.current) {
       structuredDataRef.current.remove();
@@ -197,7 +197,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     structuredDataRef.current = script;
   };
 
-  const _trackPageView = (config: SEOData) => {
+  const trackPageView = (config: SEOData) => {
     if (typeof window !== 'undefined' && 'gtag' in window) {
       (
         window as unknown as {
@@ -210,7 +210,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     }
   };
 
-  const _trackPerformanceMetrics = () => {
+  const trackPerformanceMetrics = () => {
     if (typeof window !== 'undefined' && 'performance' in window) {
       window.addEventListener('load', () => {
         const perfData = performance.getEntriesByType(
