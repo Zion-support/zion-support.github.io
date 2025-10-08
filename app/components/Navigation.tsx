@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ChevronDown, Phone, Mail, MapPin } from 'lucide-react';
+import { ChevronDown, Phone, Mail, MapPin, Menu, X, ChevronRight } from 'lucide-react';
 
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
   const [aiServicesOpen, setAiServicesOpen] = useState(false);
   const [itServicesOpen, setItServicesOpen] = useState(false);
+  const [sidebarOpen, setSidebarOpen] = useState(false);
 
   return (
     <>
@@ -116,19 +117,29 @@ const Navigation: React.FC = () => {
             </div>
 
             {/* Mobile Menu Button */}
-            <button
-              onClick={() => setIsOpen(!isOpen)}
-              className="lg:hidden text-gray-700 hover:text-blue-600"
-            >
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M4 6h16M4 12h16M4 18h16"
-                />
-              </svg>
-            </button>
+            <div className="flex items-center space-x-2">
+              <button
+                onClick={() => setSidebarOpen(!sidebarOpen)}
+                className="lg:hidden text-gray-700 hover:text-blue-600"
+                aria-label="Open sidebar"
+              >
+                <Menu className="w-6 h-6" />
+              </button>
+              <button
+                onClick={() => setIsOpen(!isOpen)}
+                className="lg:hidden text-gray-700 hover:text-blue-600"
+                aria-label="Open mobile menu"
+              >
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M4 6h16M4 12h16M4 18h16"
+                  />
+                </svg>
+              </button>
+            </div>
           </div>
 
           {/* Mobile Menu */}
@@ -190,6 +201,136 @@ const Navigation: React.FC = () => {
           )}
         </div>
       </nav>
+
+      {/* Sidebar */}
+      {sidebarOpen && (
+        <div className="fixed inset-0 z-50 lg:hidden">
+          <div className="fixed inset-0 bg-black bg-opacity-50" onClick={() => setSidebarOpen(false)} />
+          <div className="fixed top-0 left-0 h-full w-80 bg-white shadow-xl">
+            <div className="flex items-center justify-between p-4 border-b">
+              <h2 className="text-xl font-bold text-gray-900">Navigation</h2>
+              <button
+                onClick={() => setSidebarOpen(false)}
+                className="text-gray-500 hover:text-gray-700"
+                aria-label="Close sidebar"
+              >
+                <X className="w-6 h-6" />
+              </button>
+            </div>
+            
+            <div className="p-4 space-y-4 overflow-y-auto h-full pb-20">
+              {/* Main Navigation */}
+              <div className="space-y-2">
+                <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wider">Main</h3>
+                <Link to="/" className="flex items-center text-gray-700 hover:text-blue-600 py-2">
+                  <span>Home</span>
+                </Link>
+                <Link to="/about" className="flex items-center text-gray-700 hover:text-blue-600 py-2">
+                  <span>About</span>
+                </Link>
+                <Link to="/contact" className="flex items-center text-gray-700 hover:text-blue-600 py-2">
+                  <span>Contact</span>
+                </Link>
+              </div>
+
+              {/* Services */}
+              <div className="space-y-2">
+                <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wider">Services</h3>
+                <Link to="/services" className="flex items-center text-gray-700 hover:text-blue-600 py-2">
+                  <span>All Services</span>
+                </Link>
+                <Link to="/ai-services" className="flex items-center text-gray-700 hover:text-blue-600 py-2">
+                  <span>AI Services</span>
+                </Link>
+                <Link to="/it-services" className="flex items-center text-gray-700 hover:text-blue-600 py-2">
+                  <span>IT Services</span>
+                </Link>
+                <Link to="/micro-saas" className="flex items-center text-gray-700 hover:text-blue-600 py-2">
+                  <span>Micro SAAS</span>
+                </Link>
+                <Link to="/quantum-computing" className="flex items-center text-gray-700 hover:text-blue-600 py-2">
+                  <span>Quantum Computing</span>
+                </Link>
+                <Link to="/autonomous-systems" className="flex items-center text-gray-700 hover:text-blue-600 py-2">
+                  <span>Autonomous Systems</span>
+                </Link>
+                <Link to="/blockchain-web3" className="flex items-center text-gray-700 hover:text-blue-600 py-2">
+                  <span>Blockchain & Web3</span>
+                </Link>
+                <Link to="/cybersecurity" className="flex items-center text-gray-700 hover:text-blue-600 py-2">
+                  <span>Cybersecurity</span>
+                </Link>
+                <Link to="/business-intelligence" className="flex items-center text-gray-700 hover:text-blue-600 py-2">
+                  <span>Business Intelligence</span>
+                </Link>
+                <Link to="/iot-edge-computing" className="flex items-center text-gray-700 hover:text-blue-600 py-2">
+                  <span>IoT & Edge Computing</span>
+                </Link>
+              </div>
+
+              {/* Company */}
+              <div className="space-y-2">
+                <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wider">Company</h3>
+                <Link to="/case-studies" className="flex items-center text-gray-700 hover:text-blue-600 py-2">
+                  <span>Case Studies</span>
+                </Link>
+                <Link to="/enterprise" className="flex items-center text-gray-700 hover:text-blue-600 py-2">
+                  <span>Enterprise</span>
+                </Link>
+                <Link to="/team" className="flex items-center text-gray-700 hover:text-blue-600 py-2">
+                  <span>Team</span>
+                </Link>
+              </div>
+
+              {/* Resources */}
+              <div className="space-y-2">
+                <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wider">Resources</h3>
+                <Link to="/blog" className="flex items-center text-gray-700 hover:text-blue-600 py-2">
+                  <span>Blog</span>
+                </Link>
+                <Link to="/guides" className="flex items-center text-gray-700 hover:text-blue-600 py-2">
+                  <span>Guides</span>
+                </Link>
+                <Link to="/sitemap" className="flex items-center text-gray-700 hover:text-blue-600 py-2">
+                  <span>Sitemap</span>
+                </Link>
+              </div>
+
+              {/* Legal */}
+              <div className="space-y-2">
+                <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wider">Legal</h3>
+                <Link to="/privacy" className="flex items-center text-gray-700 hover:text-blue-600 py-2">
+                  <span>Privacy Policy</span>
+                </Link>
+                <Link to="/terms" className="flex items-center text-gray-700 hover:text-blue-600 py-2">
+                  <span>Terms of Service</span>
+                </Link>
+              </div>
+
+              {/* External Links */}
+              <div className="space-y-2">
+                <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wider">External</h3>
+                <a href="https://github.com/ziontechgroup" className="flex items-center text-gray-700 hover:text-blue-600 py-2" target="_blank" rel="noopener noreferrer">
+                  <span>GitHub</span>
+                  <ChevronRight className="w-4 h-4 ml-auto" />
+                </a>
+                <a href="https://docs.ziontechgroup.com" className="flex items-center text-gray-700 hover:text-blue-600 py-2" target="_blank" rel="noopener noreferrer">
+                  <span>Documentation</span>
+                  <ChevronRight className="w-4 h-4 ml-auto" />
+                </a>
+                <a href="https://linkedin.com/company/ziontechgroup" className="flex items-center text-gray-700 hover:text-blue-600 py-2" target="_blank" rel="noopener noreferrer">
+                  <span>LinkedIn</span>
+                  <ChevronRight className="w-4 h-4 ml-auto" />
+                </a>
+                <a href="https://twitter.com/ziontechgroup" className="flex items-center text-gray-700 hover:text-blue-600 py-2" target="_blank" rel="noopener noreferrer">
+                  <span>Twitter</span>
+                  <ChevronRight className="w-4 h-4 ml-auto" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </>
   );
 };

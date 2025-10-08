@@ -8,7 +8,7 @@ const Footer: React.FC = () => {
       {/* Main Footer Content */}
       <div className="py-16">
         <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-5 md:grid-cols-3 gap-8">
+          <div className="grid lg:grid-cols-6 md:grid-cols-3 gap-8">
             {/* Company Info */}
             <div className="lg:col-span-2">
               <div className="flex items-center mb-4">
@@ -147,13 +147,8 @@ const Footer: React.FC = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link to="/privacy" className="text-gray-300 hover:text-white transition-colors">
-                    Privacy Policy
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/terms" className="text-gray-300 hover:text-white transition-colors">
-                    Terms of Service
+                  <Link to="/sitemap" className="text-gray-300 hover:text-white transition-colors">
+                    Sitemap
                   </Link>
                 </li>
                 <li>
@@ -165,6 +160,28 @@ const Footer: React.FC = () => {
                   <a href="https://docs.ziontechgroup.com" className="text-gray-300 hover:text-white transition-colors">
                     Documentation
                   </a>
+                </li>
+              </ul>
+            </div>
+
+            {/* Legal */}
+            <div>
+              <h4 className="text-lg font-semibold mb-6">Legal</h4>
+              <ul className="space-y-3">
+                <li>
+                  <Link to="/privacy" className="text-gray-300 hover:text-white transition-colors">
+                    Privacy Policy
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/terms" className="text-gray-300 hover:text-white transition-colors">
+                    Terms of Service
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/offline" className="text-gray-300 hover:text-white transition-colors">
+                    Offline Mode
+                  </Link>
                 </li>
               </ul>
             </div>
