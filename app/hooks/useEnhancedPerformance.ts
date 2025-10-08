@@ -118,7 +118,7 @@ export function useEnhancedPerformance(
               // Ignore measurement errors
             }
           }
-
+          
           if (duration && trackPerformance) {
             analytics.trackPerformance(
               `${component}-${operationName}`,
@@ -137,6 +137,7 @@ export function useEnhancedPerformance(
     trackError,
     trackUserAction,
     measureOperation,
-    renderCount: renderCountRef.current,
   };
 }
+
+export default useEnhancedPerformance;

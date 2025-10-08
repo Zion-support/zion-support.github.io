@@ -90,6 +90,9 @@ importers:
       '@next/eslint-plugin-next':
         specifier: ^15.5.4
         version: 15.5.4
+      '@next/swc-linux-x64-gnu':
+        specifier: ^15.5.4
+        version: 15.5.4
       '@rollup/rollup-linux-x64-gnu':
         specifier: 4.52.3
         version: 4.52.3
@@ -6777,8 +6780,7 @@ snapshots:
   '@next/swc-linux-arm64-musl@15.5.4':
     optional: true
 
-  '@next/swc-linux-x64-gnu@15.5.4':
-    optional: true
+  '@next/swc-linux-x64-gnu@15.5.4': {}
 
   '@next/swc-linux-x64-musl@15.5.4':
     optional: true
