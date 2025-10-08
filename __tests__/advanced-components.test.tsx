@@ -1,6 +1,6 @@
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import { HelmetProvider } from 'react-helmet-async';
-import { MemoryRouter } from 'react-router-dom';
+import { MemoryRouter, RouterProvider, createMemoryRouter } from 'react-router-dom';
 import AdvancedErrorBoundary from '../app/components/AdvancedErrorBoundary';
 import AdvancedSEOOptimizer from '../app/components/AdvancedSEOOptimizer';
 import AdvancedPerformanceMonitor from '../app/components/AdvancedPerformanceMonitor';
@@ -17,13 +17,18 @@ const ThrowError = ({ shouldThrow }: { shouldThrow: boolean }) => {
 
 describe('AdvancedErrorBoundary', () => {
   it('renders children when there is no error', () => {
-    render(
-      <MemoryRouter>
-        <AdvancedErrorBoundary>
-          <div>Test content</div>
-        </AdvancedErrorBoundary>
-      </MemoryRouter>
-    );
+    const router = createMemoryRouter([
+      {
+        path: '/',
+        element: (
+          <AdvancedErrorBoundary>
+            <div>Test content</div>
+          </AdvancedErrorBoundary>
+        ),
+      },
+    ]);
+
+    render(<RouterProvider router={router} />);
 
     expect(screen.getByText('Test content')).toBeInTheDocument();
   });
@@ -33,13 +38,18 @@ describe('AdvancedErrorBoundary', () => {
       .spyOn(console, 'error')
       .mockImplementation(() => {});
 
-    render(
-      <MemoryRouter>
-        <AdvancedErrorBoundary enableRetry={true}>
-          <ThrowError shouldThrow={true} />
-        </AdvancedErrorBoundary>
-      </MemoryRouter>
-    );
+    const router = createMemoryRouter([
+      {
+        path: '/',
+        element: (
+          <AdvancedErrorBoundary enableRetry={true}>
+            <ThrowError shouldThrow={true} />
+          </AdvancedErrorBoundary>
+        ),
+      },
+    ]);
+
+    render(<RouterProvider router={router} />);
 
     expect(screen.getByText('Oops! Something went wrong')).toBeInTheDocument();
     expect(screen.getByText(/Try Again/)).toBeInTheDocument();
