@@ -186,48 +186,93 @@ class PerformanceOptimizer {
   }
 
   /**
-   * Observe First Input Delay
+   * Observe First Input Delay (FID)
    */
   private observeFID(): void {
     if (typeof window === 'undefined') return;
-    // FID monitoring implementation
-    console.log('FID monitoring initialized');
+    
+    try {
+      const observer = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          console.log('FID:', entry);
+        }
+      });
+      observer.observe({ entryTypes: ['first-input'] });
+    } catch (error) {
+      console.error('Failed to observe FID:', error);
+    }
   }
 
   /**
-   * Observe Cumulative Layout Shift
+   * Observe Cumulative Layout Shift (CLS)
    */
   private observeCLS(): void {
     if (typeof window === 'undefined') return;
-    // CLS monitoring implementation
-    console.log('CLS monitoring initialized');
+    
+    try {
+      const observer = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          console.log('CLS:', entry);
+        }
+      });
+      observer.observe({ entryTypes: ['layout-shift'] });
+    } catch (error) {
+      console.error('Failed to observe CLS:', error);
+    }
   }
 
   /**
-   * Observe First Contentful Paint
+   * Observe First Contentful Paint (FCP)
    */
   private observeFCP(): void {
     if (typeof window === 'undefined') return;
-    // FCP monitoring implementation
-    console.log('FCP monitoring initialized');
+    
+    try {
+      const observer = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          console.log('FCP:', entry);
+        }
+      });
+      observer.observe({ entryTypes: ['paint'] });
+    } catch (error) {
+      console.error('Failed to observe FCP:', error);
+    }
   }
 
   /**
-   * Observe Time to First Byte
+   * Observe Time to First Byte (TTFB)
    */
   private observeTTFB(): void {
     if (typeof window === 'undefined') return;
-    // TTFB monitoring implementation
-    console.log('TTFB monitoring initialized');
+    
+    try {
+      const observer = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          if (entry.entryType === 'navigation') {
+            console.log('TTFB:', entry);
+          }
+        }
+      });
+      observer.observe({ entryTypes: ['navigation'] });
+    } catch (error) {
+      console.error('Failed to observe TTFB:', error);
+    }
   }
 
   /**
-   * Observe Memory usage
+   * Observe memory usage
    */
   private observeMemory(): void {
     if (typeof window === 'undefined') return;
-    // Memory monitoring implementation
-    console.log('Memory monitoring initialized');
+    
+    if ('memory' in performance) {
+      const memory = (performance as any).memory;
+      console.log('Memory usage:', {
+        used: memory.usedJSHeapSize,
+        total: memory.totalJSHeapSize,
+        limit: memory.jsHeapSizeLimit
+      });
+    }
   }
 }
 
