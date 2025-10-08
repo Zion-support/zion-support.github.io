@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { logger } from '../utils/logger';
 
 /**
  * PWA Installer Component
@@ -28,7 +29,7 @@ const PWAInstaller: React.FC = () => {
       navigator.serviceWorker
         .register('/service-worker.js')
         .then((registration) => {
-          console.log('Service Worker registered:', registration);
+          logger.info('Service Worker registered', { registration });
 
           // Check for updates periodically
           setInterval(() => {
@@ -52,7 +53,7 @@ const PWAInstaller: React.FC = () => {
           });
         })
         .catch((error) => {
-          console.error('Service Worker registration failed:', error);
+          logger.error('Service Worker registration failed', error as Error);
         });
 
       // Listen for controller change
@@ -77,7 +78,7 @@ const PWAInstaller: React.FC = () => {
 
     // Listen for successful installation
     window.addEventListener('appinstalled', () => {
-      console.log('PWA installed successfully');
+      logger.info('PWA installed successfully');
       setIsInstalled(true);
       setShowPrompt(false);
       setDeferredPrompt(null);
@@ -100,9 +101,9 @@ const PWAInstaller: React.FC = () => {
     const choiceResult = await deferredPrompt.userChoice;
 
     if (choiceResult.outcome === 'accepted') {
-      console.log('User accepted the install prompt');
+      logger.info('User accepted the install prompt');
     } else {
-      console.log('User dismissed the install prompt');
+      logger.info('User dismissed the install prompt');
     }
 
     // Clear the deferred prompt

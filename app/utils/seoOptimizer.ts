@@ -199,15 +199,15 @@ class SEOOptimizer {
     if (!this.currentPageData) return
 
     const structuredData = {
-      '@context': 'https://schema.org'
-      '@type': this.currentPageData.type === 'article' ? 'Article' : 'WebPage'
-      headline: this.generateTitle()
-      description: this.generateDescription()
-      url: this.currentPageData.url || window.location.href
-      image: this.currentPageData.image || this.config.defaultImage
+      '@context': 'https://schema.org',
+      '@type': this.currentPageData.type === 'article' ? 'Article' : 'WebPage',
+      headline: this.generateTitle(),
+      description: this.generateDescription(),
+      url: this.currentPageData.url || window.location.href,
+      image: this.currentPageData.image || this.config.defaultImage,
       publisher: {
-        '@type': 'Organization'
-        name: this.config.siteName
+        '@type': 'Organization',
+        name: this.config.siteName,
         url: this.config.siteUrl
       }
     }
@@ -215,12 +215,12 @@ class SEOOptimizer {
     if (this.currentPageData.type === 'article') {
       Object.assign(structuredData, {
         author: {
-          '@type': 'Person'
+          '@type': 'Person',
           name: this.currentPageData.author || this.config.siteName
-        }
-        datePublished: this.currentPageData.publishedTime
-        dateModified: this.currentPageData.modifiedTime
-        articleSection: this.currentPageData.section
+        },
+        datePublished: this.currentPageData.publishedTime,
+        dateModified: this.currentPageData.modifiedTime,
+        articleSection: this.currentPageData.section,
         keywords: this.generateKeywords()
       })
     }
@@ -264,7 +264,7 @@ class SEOOptimizer {
       let clsValue = 0
       new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
-          }
+          // Process layout shift entries
         }
         if (clsValue > 0.25) { // Poor CLS
           this.trackSEOMetric('poor_cls', clsValue)
