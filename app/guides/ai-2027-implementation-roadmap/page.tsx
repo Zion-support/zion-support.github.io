@@ -1,22 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowLeft, Clock, Target, CheckCircle, ArrowRight, Zap, TrendingUp, Brain } from 'lucide-react';
-
-export const metadata = {
-  title: 'AI 2027 Implementation Roadmap - Complete Guide to Advanced Neural Superintelligence',
-  description:
-    'Complete step-by-step roadmap for implementing AI 2027 Advanced Neural Superintelligence in your enterprise. Achieve 1,000,000x performance gains.',
-  keywords:
-    'AI 2027 implementation, neural superintelligence roadmap, enterprise AI transformation, advanced AI deployment',
-  authors: [{ name: 'Zion Tech Group AI Implementation Team' }],
-  openGraph: {
-    title: 'AI 2027 Implementation Roadmap - Complete Guide',
-    description:
-      'Complete step-by-step roadmap for implementing AI 2027 Advanced Neural Superintelligence in your enterprise.',
-    url: 'https://ziontechgroup.com/guides/ai-2027-implementation-roadmap',
-    type: 'article',
-  },
-};
+import { ArrowLeft, Calendar, User, Clock, Tag, Target, CheckCircle, ArrowRight, Zap, TrendingUp, Brain, Cpu } from 'lucide-react';
 
 export default function AI2027ImplementationRoadmap() {
   return (

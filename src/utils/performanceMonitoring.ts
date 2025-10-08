@@ -10,6 +10,11 @@ export interface PerformanceMetric {
   timestamp: number;
 }
 
+interface LayoutShift extends PerformanceEntry {
+  value: number;
+  hadRecentInput: boolean;
+}
+
 export interface WebVitals {
   CLS?: PerformanceMetric;  // Cumulative Layout Shift
   FID?: PerformanceMetric;  // First Input Delay

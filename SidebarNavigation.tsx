@@ -1,4 +1,4 @@
-import { Menu, X, Home, User, Settings } from 'lucide-react';
+import { Home, Menu, Settings, X, User } from 'lucide-react';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
