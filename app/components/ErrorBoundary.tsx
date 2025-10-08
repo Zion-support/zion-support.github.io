@@ -1,109 +1,83 @@
-'use client';
+import React, { Component, ReactNode, ErrorInfo } from 'react';
 
-import React, { Component, ErrorInfo, ReactNode } from 'react';
-import Link from 'next/link';
-import { FileWarning } from 'lucide-react';
-
-interface Props {
+interface ErrorBoundaryProps {
   children: ReactNode;
   fallback?: ReactNode;
-  onError?: (error: Error, errorInfo: ErrorInfo) => void;
-  enableErrorReporting?: boolean;
-  enableRetry?: boolean;
 }
 
-interface State {
+interface ErrorBoundaryState {
   hasError: boolean;
-  error?: Error;
-  errorInfo?: ErrorInfo;
+  error: Error | null;
+  errorInfo: ErrorInfo | null;
 }
 
-class ErrorBoundary extends Component<Props, State> {
-  constructor(props: Props) {
+class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
+  constructor(props: ErrorBoundaryProps) {
     super(props);
-    this.state = { hasError: false };
+    this.state = {
+      hasError: false,
+      error: null,
+      errorInfo: null,
+    };
   }
 
-  static getDerivedStateFromError(error: Error): State {
+  static getDerivedStateFromError(error: Error): Partial<ErrorBoundaryState> {
     return { hasError: true, error };
   }
 
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    if (process.env.NODE_ENV === 'development') {
-      console.error('ErrorBoundary caught an error:', error, errorInfo);
-    }
-
-    if (process.env.NODE_ENV === 'production') {
-      if (typeof window !== 'undefined' && 'gtag' in window) {
-        (window as any).gtag('event', 'exception', {
-          description: error.message,
-          fatal: false
-        });
-      }
-    }
-    
-    this.setState({ errorInfo });
-    
-    if (this.props.onError) {
-      this.props.onError(error, errorInfo);
-    }
-
-    if (this.props.enableErrorReporting) {
-      console.error('Error caught by boundary:', error, errorInfo);
-    }
+  componentDidCatch(error: Error, errorInfo: ErrorInfo): void {
+    console.error('ErrorBoundary caught an error:', error, errorInfo);
+    this.setState({
+      error,
+      errorInfo,
+    });
   }
 
-  render() {
+  handleReset = (): void => {
+    this.setState({
+      hasError: false,
+      error: null,
+      errorInfo: null,
+    });
+  };
+
+  render(): ReactNode {
     if (this.state.hasError) {
       if (this.props.fallback) {
         return this.props.fallback;
       }
 
       return (
-        <div className="min-h-screen bg-gradient-to-br from-red-50 to-orange-50 flex items-center justify-center p-4">
-          <div className="max-w-md w-full bg-white rounded-xl shadow-xl p-8">
-            <div className="text-center">
-              <div className="flex justify-center mb-4">
-                <FileWarning className="h-16 w-16 text-red-500" />
-              </div>
-              <h1 className="text-2xl font-bold text-gray-900 mb-2">
+        <div className='min-h-screen flex items-center justify-center bg-gray-50'>
+          <div className='max-w-md w-full bg-white shadow-lg rounded-lg p-6'>
+            <div className='text-center'>
+              <h1 className='text-2xl font-bold text-red-600 mb-4'>
                 Oops! Something went wrong
               </h1>
-              <p className="text-gray-600 mb-6">
-                We&apos;re sorry for the inconvenience. Please try refreshing the page.
+              <p className='text-gray-600 mb-4'>
+                We apologize for the inconvenience. An unexpected error has occurred.
               </p>
-              <div className="space-y-3">
+              {this.state.error && (
+                <div className='bg-red-50 border border-red-200 rounded p-4 mb-4 text-left'>
+                  <p className='text-sm text-red-800 font-mono'>
+                    {this.state.error.toString()}
+                  </p>
+                </div>
+              )}
+              <div className='flex gap-4 justify-center'>
+                <button
+                  onClick={this.handleReset}
+                  className='bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded transition-colors'
+                >
+                  Try Again
+                </button>
                 <button
                   onClick={() => window.location.reload()}
-                  className="w-full bg-red-600 hover:bg-red-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors"
+                  className='bg-gray-600 hover:bg-gray-700 text-white font-semibold py-2 px-4 rounded transition-colors'
                 >
-                  Refresh Page
+                  Reload Page
                 </button>
-                <Link
-                  href="/"
-                  className="block w-full border-2 border-red-600 text-red-600 hover:bg-red-50 font-semibold py-3 px-6 rounded-lg transition-colors text-center"
-                >
-                  Go to Homepage
-                </Link>
               </div>
-              {this.props.enableErrorReporting && this.state.error && (
-                <details className="mt-6 text-left">
-                  <summary className="cursor-pointer text-sm text-gray-500 hover:text-gray-700">
-                    Error Details
-                  </summary>
-                  <div className="mt-2 p-4 bg-gray-100 rounded text-xs">
-                    <div className="mb-2">
-                      <strong>Error:</strong> {this.state.error.message}
-                    </div>
-                    {this.state.errorInfo && (
-                      <div>
-                        <strong>Component Stack:</strong>
-                        <pre className="whitespace-pre-wrap">{this.state.errorInfo.componentStack}</pre>
-                      </div>
-                    )}
-                  </div>
-                </details>
-              )}
             </div>
           </div>
         </div>

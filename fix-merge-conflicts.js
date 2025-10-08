@@ -1,81 +1,32 @@
 const fs = require('fs');
 const path = require('path');
+const { execSync } = require('child_process');
 
-// Files with merge conflicts that need fixing
-const filesToFix = [
-  'api/shipping-rates.js',
-  'api/subscribe.js',
-  'api/wallet.js',
-  'components/LoadingComponents.tsx',
-  'src/hooks/usePerformance.ts',
-];
+// Find all backup files
+const result = execSync('find app -name "*.backup" -type f', { encoding: 'utf-8' });
+const backupFiles = result.trim().split('\n').filter(f => f);
 
-function cleanMergeConflicts(content) {
-  const lines = content.split('\n');
-  const cleanedLines = [];
-  let inConflict = false;
-  let inOursSection = false;
-  let collectOurs = [];
+console.log(`Found ${backupFiles.length} backup files`);
+
+backupFiles.forEach(backupFile => {
+  const targetFile = backupFile.replace('.backup', '');
+  console.log(`Processing: ${backupFile} -> ${targetFile}`);
   
-  for (let i = 0; i < lines.length; i++) {
-    const line = lines[i];
+  try {
+    let content = fs.readFileSync(backupFile, 'utf-8');
     
-    // Check for conflict start marker
-    if (line.match(/^<<<<<<< /)) {
-      inConflict = true;
-      inOursSection = true;
-      collectOurs = [];
-      continue;
+    // Check if backup has merge conflicts
+    if (content.includes('<<<<<<<') || content.includes('=======') || content.includes('>>>>>>>')) {
+      console.log(`  Backup has merge conflicts, keeping original`);
+      return;
     }
     
-    // Check for conflict separator
-    if (line.match(/^=======/)) {
-      inOursSection = false;
-      continue;
-    }
-    
-    // Check for conflict end marker
-    if (line.match(/^>>>>>>> /)) {
-      // Keep our version (the one before =======)
-      cleanedLines.push(...collectOurs);
-      inConflict = false;
-      inOursSection = false;
-      collectOurs = [];
-      continue;
-    }
-    
-    // If in conflict and in our section, collect lines
-    if (inConflict && inOursSection) {
-      collectOurs.push(line);
-      continue;
-    }
-    
-    // If in conflict but in their section, skip
-    if (inConflict && !inOursSection) {
-      continue;
-    }
-    
-    // Normal line, keep it
-    cleanedLines.push(line);
+    // If backup is clean, use it
+    fs.copyFileSync(backupFile, targetFile);
+    console.log(`  ✓ Restored from backup`);
+  } catch (err) {
+    console.log(`  ✗ Error: ${err.message}`);
   }
-  
-  return cleanedLines.join('\n');
-}
+});
 
-// Fix each file
-for (const file of filesToFix) {
-  const filePath = path.join(__dirname, file);
-  
-  if (!fs.existsSync(filePath)) {
-    console.log(`File not found: ${file}`);
-    continue;
-  }
-  
-  console.log(`Fixing: ${file}`);
-  const content = fs.readFileSync(filePath, 'utf8');
-  const cleaned = cleanMergeConflicts(content);
-  fs.writeFileSync(filePath, cleaned, 'utf8');
-  console.log(`Fixed: ${file}`);
-}
-
-console.log('All merge conflicts fixed!');
+console.log('\\nDone!');

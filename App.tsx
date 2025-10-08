@@ -1,4 +1,4 @@
-import React, { memo, useMemo, useCallback, Suspense } from 'react';
+import React, { memo, useMemo, Suspense } from 'react';
 import { HelmetProvider, Helmet } from 'react-helmet-async';
 
 // Memoized components for better performance
@@ -165,7 +165,7 @@ export default function App() {
             {JSON.stringify(structuredData)}
           </script>
         </Helmet>
-        <div className="min-h-screen bg-white">
+        <div className="min-h-screen">
           <Suspense fallback={<LoadingSpinner />}>
             <UnifiedContentPromotion />
             <InteractiveAIROICalculator />
