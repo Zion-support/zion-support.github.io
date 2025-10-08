@@ -14,6 +14,7 @@ interface PerformanceMetrics {
   loadTime: number;
   renderTime: number;
   memoryUsage: number;
+  memory?: number;
   bundleSize: number;
   cacheHitRate: number;
   firstContentfulPaint?: number;
@@ -73,7 +74,7 @@ class PerformanceOptimizer {
     });
 
     // Monitor render performance
-    this.measureRenderTime();
+    // this.measureRenderTime(); // Method not implemented yet
   }
 
   /**
@@ -138,8 +139,6 @@ class PerformanceOptimizer {
       observer.observe({ entryTypes: ['layout-shift'] })
       this.observers.push(observer)
     } catch {
-    } catch {
-    } catch {
       // Ignore if not supported
     }
   }
@@ -155,8 +154,6 @@ class PerformanceOptimizer {
       })
       observer.observe({ entryTypes: ['paint'] })
       this.observers.push(observer)
-    } catch {
-    } catch {
     } catch {
       // Ignore if not supported
     }
@@ -176,8 +173,6 @@ class PerformanceOptimizer {
       observer.observe({ entryTypes: ['navigation'] })
       this.observers.push(observer)
     } catch {
-    } catch {
-    } catch {
       // Ignore if not supported
     }
   }
@@ -187,29 +182,6 @@ class PerformanceOptimizer {
       if (memory) {
         this.metrics.memory = memory.usedJSHeapSize / memory.jsHeapSizeLimit
       }
-    }
-  }
-  lazyLoadImages() {
-    if (typeof window === 'undefined') return
-
-    const images = document.querySelectorAll('img[data-src]')
-    
-    // Check if PerformanceObserver exists (may not be available in test environments)
-    if (typeof PerformanceObserver === 'undefined') return;
-
-    try {
-      const observer = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        entries.forEach((entry) => {
-          if (entry.entryType === 'measure') {
-            this.metrics.renderTime = entry.duration;
-          }
-        });
-      });
-
-      observer.observe({ entryTypes: ['measure'] });
-    } catch (error) {
-      // PerformanceObserver may not support 'measure' entryType in some environments
     }
   }
 
@@ -428,6 +400,17 @@ class PerformanceOptimizer {
 
   /**
    * Cleanup observers and resources
+   */
+  public cleanup(): void {
+    this.observers.forEach(observer => observer.disconnect());
+    this.observers = [];
+    this.isMonitoring = false;
+  }
+
+  /**
+   * Generate performance report
+   */
+  private generateReport(): string {
     const metrics = this.getMetrics();
 
     return `
@@ -459,11 +442,6 @@ ${metrics.memoryUsage > 30 * 1024 * 1024 ? '- Review memory usage and optimize c
       console.log('Performance optimization completed'); 
       console.log(this.generateReport()); 
     }
-  }
-  public cleanup(): void {
-    this.observers.forEach(observer => observer.disconnect());
-    this.observers = [];
-    this.isMonitoring = false;
   }
 }
 

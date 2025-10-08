@@ -6,10 +6,10 @@ export interface BannerConfig {
 
 export type RotationStrategy = 'balanced' | 'sequential' | 'random';
 
-export const selectBannersForDisplay = () => [];
-export const selectBalancedBanners = () => [];
-export const trackImpression = () => {};
-export const trackClick = () => {};
-export const loadBannerStats = () => ({});
+export const selectBannersForDisplay = (strategy: RotationStrategy, maxBanners: number) => [];
+export const selectBalancedBanners = (banners: BannerConfig[], maxBanners: number) => [];
+export const trackImpression = (bannerId: string) => {};
+export const trackClick = (bannerId: string) => {};
+export const loadBannerStats = async () => Promise.resolve({ impressions: 0, clicks: 0, ctr: 0 });
 export const getRefreshInterval = () => 5000;
 export const getRotationStrategy = (): RotationStrategy => 'balanced';
