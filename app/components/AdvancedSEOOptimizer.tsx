@@ -182,6 +182,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
       keywords: config.keywords,
       canonicalUrl: config.canonicalUrl,
     });
+      keywords: config.keywords,
 
     // Cleanup on unmount
     return () => {
