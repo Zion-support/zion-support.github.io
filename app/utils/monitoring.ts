@@ -102,7 +102,7 @@ class MonitoringService {
         const longTaskObserver = new PerformanceObserver((list) => {
           for (const entry of list.getEntries()) {
             console.warn('Long task detected:', {
-              duration: entry.duration
+              duration: entry.duration,
               startTime: entry.startTime
             })
           }

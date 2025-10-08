@@ -97,8 +97,6 @@ class PerformanceOptimizer {
       observer.observe({ entryTypes: ['largest-contentful-paint'] })
       this.observers.push(observer)
     } catch {
-    } catch {
-    } catch {
       // Ignore if not supported
     }
   }
