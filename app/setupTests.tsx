@@ -6,10 +6,10 @@ import '@testing-library/jest-dom';
 
 // Suppress jsdom navigation warnings
  
-const originalConsoleError = // eslint-disable-next-line no-console
+const originalConsoleError =  
     console.error;
  
-// eslint-disable-next-line no-console
+ 
     console.error = (...args) => {
   const message = args[0]?.toString?.() || args[0]?.message || '';
   if (message.includes('Not implemented: navigation') || 
@@ -64,12 +64,12 @@ Object.defineProperty(window, 'sessionStorage', {
 global.fetch = jest.fn();
 
 // Mock console methods for cleaner test output
-const originalConsoleWarn = // eslint-disable-next-line no-console
+const originalConsoleWarn =  
     console.warn;
-const originalConsoleInfo = // eslint-disable-next-line no-console
+const originalConsoleInfo =  
     console.info;
 
-// eslint-disable-next-line no-console
+ 
     console.warn = (...args) => {
   const message = args[0]?.toString?.() || '';
   if (message.includes('Warning: ReactDOM.render is no longer supported')) {
@@ -78,7 +78,7 @@ const originalConsoleInfo = // eslint-disable-next-line no-console
   originalConsoleWarn(...args);
 };
 
-// eslint-disable-next-line no-console
+ 
     console.info = (...args) => {
   const message = args[0]?.toString?.() || '';
   if (message.includes('ReactDOM.render is no longer supported')) {
@@ -101,7 +101,7 @@ global.PerformanceObserver = class MockPerformanceObserver {
 
 // Suppress JSDOM navigation warnings
 
-// eslint-disable-next-line no-console
+ 
     console.error = (...args) => {
   if (args[0] && args[0].type === 'not implemented' && args[0].message?.includes('navigation')) {
     return; // Suppress JSDOM navigation warnings

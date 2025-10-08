@@ -6,6 +6,7 @@
 import React, { ReactElement } from 'react';
 import { render, RenderOptions, RenderResult } from '@testing-library/react';
 import { HelmetProvider } from 'react-helmet-async';
+import '@testing-library/jest-dom';
 
 /**
  * Custom render function with common providers
