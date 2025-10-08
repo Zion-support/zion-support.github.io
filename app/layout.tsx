@@ -4,6 +4,8 @@ import AnalyticsProvider from './components/AnalyticsProvider';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import PWAInstaller from './components/PWAInstaller';
 import { GlobalErrorBoundary } from './components/GlobalErrorBoundary';
+import Navigation from './components/Navigation';
+import Footer from './components/Footer';
 
 export default function RootLayout({
   children,
@@ -22,7 +24,7 @@ export default function RootLayout({
     industry: 'Technology',
     contactPoint: {
       '@type': 'ContactPoint',
-      telephone: '+1-302-600-9898',
+      telephone: '+1-302-464-0950',
       contactType: 'Customer Service',
       areaServed: 'US',
       availableLanguage: 'en',
@@ -97,7 +99,11 @@ export default function RootLayout({
             <AccessibilityEnhancer>
               <PerformanceMonitor />
               <PWAInstaller />
-              {children}
+              <Navigation />
+              <div className="pt-20">
+                {children}
+              </div>
+              <Footer />
             </AccessibilityEnhancer>
           </AnalyticsProvider>
         </GlobalErrorBoundary>
