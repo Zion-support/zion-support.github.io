@@ -3,6 +3,8 @@
  * Provides utilities for optimizing performance in React applications
  */
 
+import React from 'react';
+
 /**
  * Debounce function to limit execution rate
  */
@@ -146,21 +148,30 @@ export function runWhenIdle(
   callback: () => void,
   options?: IdleRequestOptions
 ): number {
-  if ('requestIdleCallback' in window) {
+  if (typeof window === 'undefined') {
+    return 0;
+  }
+  
+  if ('requestIdleCallback' in window && window.requestIdleCallback) {
     return window.requestIdleCallback(callback, options);
   }
+  
   // Fallback for browsers that don't support requestIdleCallback
-  return window.setTimeout(callback, 1) as unknown as number;
+  return (window as typeof window & {setTimeout: typeof setTimeout}).setTimeout(callback, 1) as unknown as number;
 }
 
 /**
  * Cancel idle callback
  */
 export function cancelIdle(id: number): void {
-  if ('cancelIdleCallback' in window) {
+  if (typeof window === 'undefined') {
+    return;
+  }
+  
+  if ('cancelIdleCallback' in window && window.cancelIdleCallback) {
     window.cancelIdleCallback(id);
   } else {
-    window.clearTimeout(id);
+    (window as typeof window & {clearTimeout: typeof clearTimeout}).clearTimeout(id);
   }
 }
 
@@ -246,7 +257,7 @@ export function preloadResources(resources: Array<{ url: string; as: string }>):
  * Check if code splitting is supported
  */
 export function supportsCodeSplitting(): boolean {
-  return typeof import === 'function';
+  return typeof window !== 'undefined' && 'import' in Function.prototype;
 }
 
 /**
