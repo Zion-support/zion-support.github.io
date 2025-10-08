@@ -81,7 +81,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
     if (!isInitialized || typeof window === 'undefined') return;
 
     if (enableDebug) {
-      logger.debug('Analytics Event', { event: JSON.stringify(event) });
+      logger.debug('Analytics Event', 'AnalyticsProvider', { event: JSON.stringify(event) });
     }
 
     if ((window as unknown as { gtag: (...args: unknown[]) => void }).gtag) {
@@ -97,7 +97,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
     if (!isInitialized || typeof window === 'undefined') return;
 
     if (enableDebug) {
-      logger.debug('Page View', { page });
+      logger.debug('Page View', 'AnalyticsProvider', { page });
     }
 
     if ((window as unknown as { gtag: (...args: unknown[]) => void }).gtag) {
@@ -112,7 +112,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
     if (!isInitialized || typeof window === 'undefined') return;
 
     if (enableDebug) {
-      logger.perf(metric, value);
+      logger.debug('Performance Metric', 'AnalyticsProvider', { metric, value });
     }
 
     if ((window as unknown as { gtag: (...args: unknown[]) => void }).gtag) {

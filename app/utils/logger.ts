@@ -132,6 +132,33 @@ class Logger {
   }
 
   /**
+   * Log a performance message
+   */
+  perf(message: string, value?: number, context?: string, metadata?: Record<string, unknown>): void {
+    this.log(LogLevel.DEBUG, message, context, { ...metadata, perfValue: value });
+  }
+
+  /**
+   * Create a console group for related logs
+   */
+  group(label: string, context?: string): void {
+    if (this.config.enableConsole && typeof console.group !== 'undefined') {
+      const timestamp = new Date().toISOString();
+      const contextStr = context ? `[${context}]` : '';
+      console.group(`${timestamp} ${contextStr} ${label}`);
+    }
+  }
+
+  /**
+   * End a console group
+   */
+  groupEnd(): void {
+    if (this.config.enableConsole && typeof console.groupEnd !== 'undefined') {
+      console.groupEnd();
+    }
+  }
+
+    /**
    * Create a child logger with a specific context
    */
   child(context: string): ContextLogger {

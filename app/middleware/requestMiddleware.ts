@@ -66,8 +66,7 @@ export class MiddlewareExecutor {
 export const loggingMiddleware: Middleware = async (context, next) => {
   const startTime = Date.now();
   
-  logger.info('Request started', {
-    component: 'RequestMiddleware',
+  logger.info('Request started', 'RequestMiddleware', {
     method: context.request.method,
     url: context.request.url,
   });
@@ -88,8 +87,7 @@ export const loggingMiddleware: Middleware = async (context, next) => {
   } catch (error) {
     const duration = Date.now() - startTime;
 
-    logger.error('Request failed', error as Error, {
-      component: 'RequestMiddleware',
+    logger.error('Request failed', error as Error, 'RequestMiddleware', {
       method: context.request.method,
       url: context.request.url,
       duration,
@@ -135,8 +133,7 @@ export const errorHandlingMiddleware: Middleware = async (context, next) => {
       method: context.request.method,
     };
 
-    logger.error('Request error handled', error as Error, {
-      component: 'ErrorHandlingMiddleware',
+    logger.error('Request error handled', error as Error, 'ErrorHandlingMiddleware', {
       ...standardError,
     });
 
@@ -187,7 +184,7 @@ export const cachingMiddleware = (ttl: number): Middleware => {
     const cached = cache.get(key);
 
     if (cached && Date.now() - cached.timestamp < ttl) {
-      logger.debug('Cache hit', { component: 'CachingMiddleware', url: key });
+      logger.debug('Cache hit', 'CachingMiddleware', { url: key });
       return cached.data;
     }
 
@@ -216,8 +213,7 @@ export const retryMiddleware = (maxRetries: number, delay: number): Middleware =
         lastError = error as Error;
 
         if (attempt < maxRetries) {
-          logger.warn(`Request failed, retrying (${attempt + 1}/${maxRetries})`, {
-            component: 'RetryMiddleware',
+          logger.warn(`Request failed, retrying (${attempt + 1}/${maxRetries})`, 'RetryMiddleware', {
             url: context.request.url,
           });
 

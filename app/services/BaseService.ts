@@ -108,8 +108,7 @@ export class BaseService {
 
       return data as T;
     } catch (error) {
-      logger.error('GET request failed', error as Error, {
-        component: 'BaseService',
+      logger.error('GET request failed', error as Error, 'BaseService', {
         endpoint,
       });
       throw error;
@@ -127,8 +126,7 @@ export class BaseService {
         retries: this.options.retries,
       })) as T;
     } catch (error) {
-      logger.error('POST request failed', error as Error, {
-        component: 'BaseService',
+      logger.error('POST request failed', error as Error, 'BaseService', {
         endpoint,
       });
       throw error;
@@ -146,8 +144,7 @@ export class BaseService {
         retries: this.options.retries,
       })) as T;
     } catch (error) {
-      logger.error('PUT request failed', error as Error, {
-        component: 'BaseService',
+      logger.error('PUT request failed', error as Error, 'BaseService', {
         endpoint,
       });
       throw error;
@@ -165,8 +162,7 @@ export class BaseService {
         retries: this.options.retries,
       })) as T;
     } catch (error) {
-      logger.error('PATCH request failed', error as Error, {
-        component: 'BaseService',
+      logger.error('PATCH request failed', error as Error, 'BaseService', {
         endpoint,
       });
       throw error;
@@ -184,8 +180,7 @@ export class BaseService {
         retries: this.options.retries,
       })) as T;
     } catch (error) {
-      logger.error('DELETE request failed', error as Error, {
-        component: 'BaseService',
+      logger.error('DELETE request failed', error as Error, 'BaseService', {
         endpoint,
       });
       throw error;
@@ -196,8 +191,7 @@ export class BaseService {
    * Handle service error
    */
   protected handleError(error: Error, context?: Record<string, unknown>): never {
-    logger.error('Service error', error, {
-      component: this.constructor.name,
+    logger.error('Service error', error, this.constructor.name, {
       ...context,
     });
     throw error;

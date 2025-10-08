@@ -116,6 +116,13 @@ class AnalyticsService {
   }
 
   /**
+  /**
+   * Track performance metrics
+   */
+  trackPerformance(metric: string, value: number): void {
+    this.trackTiming('Performance', metric, value);
+  }
+
    * Track timing events (for performance monitoring)
    */
   trackTiming(
@@ -186,6 +193,8 @@ export const trackEvent = (event: AnalyticsEvent) => analytics.trackEvent(event)
 export const trackPageView = (path: string, title?: string) =>
   analytics.trackPageView(path, title);
 export const trackError = (error: Error, metadata?: Record<string, unknown>) =>
+export const trackPerformance = (metric: string, value: number) =>
+  analytics.trackPerformance(metric, value);
   analytics.trackError(error, metadata);
 export const trackTiming = (
   category: string,

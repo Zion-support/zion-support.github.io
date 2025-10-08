@@ -269,7 +269,7 @@ export class CacheManager {
       keysToRemove.forEach(key => sessionStorage.removeItem(key));
     }
 
-    logger.info('Cache cleared', { storage: this.storage });
+    logger.info('Cache cleared', 'CacheManager', { storage: this.storage });
   }
 
   /**
