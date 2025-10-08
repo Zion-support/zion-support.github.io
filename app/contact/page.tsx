@@ -1,4 +1,8 @@
 import React from 'react';
+<<<<<<< HEAD
+=======
+import { Link } from 'react-router-dom';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0aa9
 const ContactPage: React.FC = () => {
   return (
     <div className='min-h-screen bg-gradient-to-br from-blue-50 to-gray-100 py-12 px-4 sm:px-6 lg:px-8'>
@@ -77,4 +81,8 @@ const ContactPage: React.FC = () => {
   );
 };
 
+<<<<<<< HEAD
 export default ContactPage;
+=======
+export default ContactPage;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0aa9

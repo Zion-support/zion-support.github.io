@@ -107,9 +107,13 @@ const Page: React.FC = () => {
                 We implement v2 runbooks in 4–6 weeks with audits and training.
               </p>
             </div>
+<<<<<<< HEAD
             <Link
               to='/contact'
               className='bg-white text-fuchsia-700 px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2'
+=======
+            <Link to='/contact'              className='bg-white text-fuchsia-700 px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2'
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0aa9
             >
               Engage <RefreshCw />
             </Link>

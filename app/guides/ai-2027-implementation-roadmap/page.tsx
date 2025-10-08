@@ -20,9 +20,13 @@ const AI2027ImplementationRoadmap: React.FC = () => {
       {/* Header */}
       <header className="bg-gradient-to-r from-purple-900 to-blue-900 text-white">
         <div className="max-w-6xl mx-auto px-4 py-12">
+<<<<<<< HEAD
           <Link 
             to="/"
             className="inline-flex items-center text-blue-200 hover:text-white transition-colors mb-8"
+=======
+          <Link to="/"            className="inline-flex items-center text-blue-200 hover:text-white transition-colors mb-8"
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0aa9
           >
             <ArrowLeft className="w-4 h-4 mr-2" />
             Back to Home
@@ -311,16 +315,24 @@ const AI2027ImplementationRoadmap: React.FC = () => {
             Join the leaders in neural superintelligence implementation. Get your personalized roadmap today.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
+<<<<<<< HEAD
             <Link 
               to="/contact"
               className="inline-flex items-center px-8 py-4 bg-white text-purple-900 rounded-lg hover:bg-blue-50 transition-colors font-semibold"
+=======
+            <Link to="/contact"              className="inline-flex items-center px-8 py-4 bg-white text-purple-900 rounded-lg hover:bg-blue-50 transition-colors font-semibold"
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0aa9
             >
               Get Your Roadmap
               <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
+<<<<<<< HEAD
             <Link 
               to="/case-studies"
               className="inline-flex items-center px-8 py-4 bg-transparent border-2 border-white text-white rounded-lg hover:bg-white hover:text-purple-900 transition-colors font-semibold"
+=======
+            <Link to="/case-studies"              className="inline-flex items-center px-8 py-4 bg-transparent border-2 border-white text-white rounded-lg hover:bg-white hover:text-purple-900 transition-colors font-semibold"
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0aa9
             >
               View Success Stories
               <ArrowRight className="w-5 h-5 ml-2" />

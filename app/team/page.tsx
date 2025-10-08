@@ -1,6 +1,11 @@
 import React from 'react';
+<<<<<<< HEAD
 // Metadata will be handled by React Helmet in individual components
 
+=======
+import { Link } from 'react-router-dom';
+// Metadata will be handled by React Helmet in individual components
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0aa9
 const TeamPage: React.FC = () => {
   const teamMembers = [
     {

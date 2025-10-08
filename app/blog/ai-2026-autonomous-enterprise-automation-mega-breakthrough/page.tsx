@@ -1,5 +1,9 @@
 import React from 'react';
 import { Star } from 'lucide-react';
+<<<<<<< HEAD
+=======
+import { Link } from 'react-router-dom';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0aa9
 export default function AutonomousEnterpriseAutomationMegaBreakthrough() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">

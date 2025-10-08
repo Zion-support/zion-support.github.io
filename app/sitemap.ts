@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 interface SitemapEntry {
   url: string;
   lastModified: Date;
@@ -7,6 +8,10 @@ interface SitemapEntry {
 
 export default function sitemap(): SitemapEntry[] {
 //   const baseUrl = 'https://ziontechgroup.com';
+=======
+// Sitemap for Vite + React Router
+export default function sitemap() {  const baseUrl = 'https://ziontechgroup.com';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0aa9
 
   return [
     {

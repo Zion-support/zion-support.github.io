@@ -9,11 +9,16 @@ import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 // const EmptyComponent = () => null;
 
 // Lazy load heavy components - these may not exist, so make them optional
+<<<<<<< HEAD
 // const UnifiedBanner = lazy(() => import('./components/NewestContent2025Banner').catch(() => ({ default: EmptyComponent })));
 
 // const ContentPromotion = lazy(() => import('./components/UltimateBusinessIntelligence2025Banner').catch(() => ({ default: EmptyComponent })));
 
 // const ContentShowcase = lazy(() => import('./components/UltimateBusinessIntelligenceShowcase2025').catch(() => ({ default: EmptyComponent })));
+=======
+const UnifiedBanner = lazy(() => import('./components/NewestContent2025Banner').catch(() => ({ default: EmptyComponent })));
+const ContentPromotion = lazy(() => import('./components/UltimateBusinessIntelligence2025Banner').catch(() => ({ default: EmptyComponent })));const ContentShowcase = lazy(() => import('./components/UltimateBusinessIntelligenceShowcase2025').catch(() => ({ default: EmptyComponent })));
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0aa9
 
 const OptimizedHomePage: React.FC = () => {
   return (
