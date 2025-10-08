@@ -118,7 +118,6 @@ export function useEnhancedPerformance(
               // Ignore measurement errors
             }
           }
-=======
       // Performance marking - startMark not available
 
       return {
@@ -137,3 +136,10 @@ export function useEnhancedPerformance(
     },
     [component, trackPerformance]
   );
+
+  return {
+    trackError,
+    trackUserAction,
+    measureOperation,
+  };
+}

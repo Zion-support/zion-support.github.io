@@ -127,6 +127,9 @@ const EnterprisePage: React.FC = () => {
             ))}
           </div>
 
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-24">
         <div className="container mx-auto px-4">
@@ -154,9 +157,9 @@ const EnterprisePage: React.FC = () => {
                 <span>Get Enterprise Consultation</span>
               </Link>
             </div>
-          </section>
+          </div>
         </div>
-      </div>
+      </section>
     </>
   );
 }

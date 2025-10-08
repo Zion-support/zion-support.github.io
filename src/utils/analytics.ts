@@ -159,6 +159,5 @@ class Analytics {
 }
 
 const analytics = new Analytics();
-=======
 export { analytics };
 export default analytics;

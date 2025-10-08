@@ -98,13 +98,6 @@ class ErrorBoundary extends Component<Props, State> {
                     <div className="mb-2">
                       <strong>Error:</strong> {this.state.error.message}
                     </div>
-<<<<<<< HEAD
-                  )}
-                </div>
-              </details>
-            )}
-          </div>
-=======
                     {this.state.errorInfo && (
                       <div>
                         <strong>Component Stack:</strong>
@@ -114,7 +107,6 @@ class ErrorBoundary extends Component<Props, State> {
                   </div>
                 </details>
               )}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-17a6
           </div>
         </div>
       );

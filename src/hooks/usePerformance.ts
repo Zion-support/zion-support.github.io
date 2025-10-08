@@ -18,7 +18,6 @@ export const usePerformance = () => {
         );
       });
     });
-=======
 import { analytics } from '../utils/analytics';
 
 export const usePerformance = () => {
