@@ -38,7 +38,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       this.props.onError(error, errorInfo);
     }
 
-<<<<<<< HEAD
     // Enhanced error reporting
     if (this.props.enableErrorReporting) {
       this.reportError(error, errorInfo);
@@ -55,12 +54,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       console.error('Error Info:', errorInfo);
       // eslint-disable-next-line no-console
       console.error('Component Stack:', errorInfo.componentStack);
-      // eslint-disable-next-line no-console
-=======
-
-
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-6395
+      // eslint-disable-next-line no-consoleorigin/cursor/fix-errors-and-merge-to-main-6395
       console.groupEnd();
     }
   }
@@ -99,13 +93,9 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     try {
       // In a real app, you would send this to your error reporting service
       // For now, we'll just log it
-<<<<<<< HEAD
       // eslint-disable-next-line no-console
       console.log('Error Report:', errorReport);
-      
-=======
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-6395
+      origin/cursor/fix-errors-and-merge-to-main-6395
       // Example: Send to error reporting service
       // await fetch('/api/errors', {
       //   method: 'POST',
@@ -113,12 +103,8 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       //   body: JSON.stringify(errorReport)
       // });
     } catch (reportingError) {
-<<<<<<< HEAD
       // eslint-disable-next-line no-console
-      console.warn('Failed to send error report:', reportingError);
-=======
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-6395
+      console.warn('Failed to send error report:', reportingError);origin/cursor/fix-errors-and-merge-to-main-6395
     }
   };
 
@@ -181,12 +167,8 @@ class EnhancedErrorBoundary extends Component<Props, State> {
         }
       })
       .catch(() => {
-<<<<<<< HEAD
         // eslint-disable-next-line no-console
-        console.warn('Failed to copy error details');
-=======
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-6395
+        console.warn('Failed to copy error details');origin/cursor/fix-errors-and-merge-to-main-6395
       });
   };
 

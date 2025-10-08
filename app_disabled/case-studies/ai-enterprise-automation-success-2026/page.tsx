@@ -668,13 +668,8 @@ export default function AIEnterpriseAutomationSuccess2026() {
             <div>
               <h3 className="font-semibold text-gray-900 mb-3">Company</h3>
               <div className="space-y-2">
-<<<<<<< HEAD
                 <Link href="/about" className="block text-gray-600 hover:text-blue-600 transition-colors">About</ArrowRight>
-                <Link href="/contact" className="block text-gray-600 hover:text-blue-600 transition-colors">Contact</ArrowRight>
-=======
-                <Link href="/about" className="block text-gray-600 hover:text-blue-600 transition-colors">About</Link>
-                <Link href="/contact" className="block text-gray-600 hover:text-blue-600 transition-colors">Contact</Link>
->>>>>>> 1d68394de6252bd8b85f69f386dad01902598b0b
+                <Link href="/contact" className="block text-gray-600 hover:text-blue-600 transition-colors">Contact</ArrowRight>1d68394de6252bd8b85f69f386dad01902598b0b
               </div>
             </div>
             <div>

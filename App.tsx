@@ -68,12 +68,8 @@ class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundarySta
   override componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
     // Log error for debugging in development
     if (process.env.NODE_ENV === 'development') {
-<<<<<<< HEAD
       // eslint-disable-next-line no-console
-      console.error('App Error Boundary caught an error:', error, errorInfo);
-=======
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-6395
+      console.error('App Error Boundary caught an error:', error, errorInfo);origin/cursor/fix-errors-and-merge-to-main-6395
     }
   }
 

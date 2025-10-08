@@ -14,36 +14,21 @@ import AdvancedSEOOptimizer from './components/AdvancedSEOOptimizer';
 import LoadingSpinner from './components/LoadingSpinner';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
-<<<<<<< HEAD
 import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
-import SEOEnhancer from './components/SEOEnhancer';
 import AdvancedErrorBoundary from './components/AdvancedErrorBoundary';
 import AdvancedPerformanceMonitor from './components/AdvancedPerformanceMonitor';
-import { LoadingSpinner } from './components/LoadingComponents';
-=======
-import PerformanceOptimizer from './components/PerformanceOptimizer';
-import Analytics from './components/Analytics';
->>>>>>> cursor/analyze-improve-and-deploy-application-3d67
+<<<<<<< HEADcursor/analyze-improve-and-deploy-application-3d67
+>>>>>>> origin/main
 
 // Lazy load components for better performance
-<<<<<<< HEAD
 // const ContentShowcase = lazy(() => import('./components/ContentShowcase'));
 // const InteractiveContentShowcase2026 = lazy(
 //   () => import('./components/InteractiveContentShowcase2026')
 // );
 // const InteractiveAIROICalculator = lazy(
 //   () => import('./components/InteractiveAIROICalculator')
-// );
-=======
-const _ContentShowcase = lazy(() => import('./components/ContentShowcase'));
-const InteractiveContentShowcase2026 = lazy(
-  () => import('./components/InteractiveContentShowcase2026')
-);
-const InteractiveAIROICalculator = lazy(
-  () => import('./components/InteractiveAIROICalculator')
-);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-6395
+// );origin/cursor/fix-errors-and-merge-to-main-6395
 
 // Lazy load pages for better performance
 const _HomePage = lazy(() => import('./page'));
@@ -86,7 +71,6 @@ const App: React.FC = () => {
     
     // Initialize Web Vitals monitoring
     if (typeof window !== 'undefined' && 'performance' in window) {
-<<<<<<< HEAD
       const pageLoadMetrics = collectPerformanceMetrics();
       const metrics = performanceOptimizer.getMetrics();
       // const performanceMetrics = performanceMonitor.getMetrics();
@@ -101,43 +85,20 @@ const App: React.FC = () => {
       }
       if (performanceMetrics) {
         // eslint-disable-next-line no-console
-        console.log('Core Web Vitals:', performanceMetrics);
-=======
-      const _pageLoadMetrics = collectPerformanceMetrics();
-      const _metrics = performanceOptimizer.getMetrics();
-      const _performanceMetrics = performanceMonitor.getMetrics();
-      
-      if (pageLoadMetrics) {
-
-      }
-      if (metrics) {
-
-      }
-      if (performanceMetrics) {
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-6395
+        console.log('Core Web Vitals:', performanceMetrics);origin/cursor/fix-errors-and-merge-to-main-6395
       }
     }
     
     // Log performance and accessibility metrics periodically
     const metricsInterval = setInterval(() => {
-<<<<<<< HEAD
       // const _performanceMetrics = performanceMonitor.getMetrics();
-      const accessibilityMetrics = accessibilityEnhancer.getMetrics();
-=======
-      const _performanceMetrics = performanceMonitor.getMetrics();
-      const _accessibilityMetrics = accessibilityEnhancer.getMetrics();
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-6395
+      const accessibilityMetrics = accessibilityEnhancer.getMetrics();origin/cursor/fix-errors-and-merge-to-main-6395
       
       if (process.env.NODE_ENV === 'development') {
         // eslint-disable-next-line no-console
         console.log('Performance Score:', performanceMonitor.getScore());
-<<<<<<< HEAD
         // eslint-disable-next-line no-console
-        console.log('Accessibility Score:', accessibilityMetrics.overallScore);
-=======
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-6395
+        console.log('Accessibility Score:', accessibilityMetrics.overallScore);origin/cursor/fix-errors-and-merge-to-main-6395
       }
     }, 30000);
     
@@ -162,62 +123,6 @@ const App: React.FC = () => {
           logger.error(error.message, { error, errorInfo });
         }}
       >
-<<<<<<< HEAD
-        <PerformanceOptimizer>
-          <AccessibilityEnhancer>
-            <SEOEnhancer
-              title="Zion Tech Group - Advanced AI and IT Solutions"
-              description="Leading provider of enterprise AI solutions, quantum computing, and autonomous systems. Transform your business with our cutting-edge technology."
-            >
-              <AdvancedSEOOptimizer
-                config={{
-                  title: 'Zion Tech Group - Advanced AI and IT Solutions',
-                  description: 'Leading provider of enterprise AI solutions, quantum computing, and autonomous systems. Transform your business with our cutting-edge technology.',
-                  keywords: ['AI solutions', 'enterprise AI', 'quantum computing', 'autonomous systems', 'digital transformation', 'automation', 'cloud services', 'AI consulting', 'business intelligence', 'machine learning'],
-                  canonicalUrl: 'https://ziontechgroup.com',
-                  ogImage: 'https://ziontechgroup.com/og-image.jpg',
-                  structuredData: {
-                    '@type': 'TechCompany',
-                    name: 'Zion Tech Group',
-                    description: 'Advanced AI and IT Solutions Provider',
-                    foundingDate: '2020',
-                    numberOfEmployees: '50-100',
-                    industry: 'Technology',
-                    services: [
-                      'AI Solutions',
-                      'Digital Transformation',
-                      'Cloud Services',
-                      'Automation',
-                      'Business Intelligence'
-                    ]
-                  }
-                }}
-                enableStructuredData={true}
-                enableOpenGraph={true}
-                enableTwitterCards={true}
-                enableSchemaMarkup={true}
-              />
-              <Router>
-                <div className="App">
-                  <Navigation />
-                  <main id="main-content">
-                    <Suspense fallback={<LoadingSpinner />}>
-                      <Routes>
-                        <Route path="/" element={<HomePage />} />
-                        <Route path="/about" element={<AboutPage />} />
-                        <Route path="/services" element={<ServicesPage />} />
-                        <Route path="/contact" element={<ContactPage />} />
-                        <Route path="/team" element={<TeamPage />} />
-                        <Route path="/privacy" element={<PrivacyPage />} />
-                        <Route path="/terms" element={<TermsPage />} />
-                        <Route path="/enterprise" element={<EnterprisePage />} />
-                        <Route path="/services-advertising" element={<ServicesAdvertisingPage />} />
-                        <Route path="/case-studies" element={<CaseStudiesPage />} />
-                      </Routes>
-                    </Suspense>
-                  </main>
-                  <Footer />
-=======
         <AccessibilityEnhancer>
           <SEOEnhancer
             title="Zion Tech Group - Advanced AI and IT Solutions"
@@ -275,8 +180,7 @@ const App: React.FC = () => {
                     </Routes>
                   </Suspense>
                 </main>
-                <Footer />
->>>>>>> cursor/analyze-improve-and-deploy-application-3d67
+                <Footer />cursor/analyze-improve-and-deploy-application-3d67
 
                   {/* Performance Dashboard */}
                   <PerformanceDashboard />
