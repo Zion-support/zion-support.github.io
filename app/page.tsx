@@ -128,6 +128,36 @@ const HomePage: React.FC = () => {
           <p className="text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto">
             Comprehensive AI and IT solutions designed to transform your business operations
           </p>
+          
+          {/* Micro SAAS Highlight */}
+          <div className="mb-12">
+            <div className="cyber-card hologram-card text-center max-w-4xl mx-auto">
+              <div className="text-6xl mb-4">🌟</div>
+              <h3 className="text-2xl font-bold text-white mb-4">NEW: Micro SAAS Solutions</h3>
+              <p className="text-gray-300 mb-6 leading-relaxed">
+                Discover our comprehensive suite of 17+ micro SAAS tools designed to streamline your business operations, 
+                boost productivity, and drive growth with cutting-edge AI technology.
+              </p>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-cyan-400">17+</div>
+                  <div className="text-sm text-gray-400">Micro SAAS Tools</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-green-400">150K+</div>
+                  <div className="text-sm text-gray-400">Active Users</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-purple-400">$19</div>
+                  <div className="text-sm text-gray-400">Starting Price</div>
+                </div>
+              </div>
+              <a href="/micro-saas" className="cyber-button">
+                Explore Micro SAAS Solutions →
+              </a>
+            </div>
+          </div>
+          
           <div className="grid md:grid-cols-3 gap-8 mb-12">
             <Suspense fallback={<ServiceCardSkeleton />}>
               <article className="cyber-card hologram-card">

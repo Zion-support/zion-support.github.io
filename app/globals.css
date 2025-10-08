@@ -49,6 +49,78 @@ body {
   }
 }
 
+@keyframes neon-pulse-intense {
+  0%, 100% {
+    text-shadow: 
+      0 0 5px currentColor, 
+      0 0 10px currentColor, 
+      0 0 15px currentColor,
+      0 0 20px currentColor;
+  }
+  50% {
+    text-shadow: 
+      0 0 10px currentColor, 
+      0 0 20px currentColor, 
+      0 0 30px currentColor,
+      0 0 40px currentColor;
+  }
+}
+
+@keyframes cyber-scan {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes hologram-glitch {
+  0%, 100% {
+    transform: translate(0);
+    filter: hue-rotate(0deg);
+  }
+  20% {
+    transform: translate(-2px, 2px);
+    filter: hue-rotate(90deg);
+  }
+  40% {
+    transform: translate(-2px, -2px);
+    filter: hue-rotate(180deg);
+  }
+  60% {
+    transform: translate(2px, 2px);
+    filter: hue-rotate(270deg);
+  }
+  80% {
+    transform: translate(2px, -2px);
+    filter: hue-rotate(360deg);
+  }
+}
+
+@keyframes energy-flow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes particle-float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+    opacity: 0.7;
+  }
+  50% {
+    transform: translateY(-20px) rotate(180deg);
+    opacity: 1;
+  }
+}
+
 @keyframes neon-pulse {
   0%, 100% {
     box-shadow: 0 0 5px currentColor, 0 0 10px currentColor, 0 0 15px currentColor;
@@ -101,6 +173,53 @@ body {
   animation: neon-glow 2s ease-in-out infinite alternate;
 }
 
+.neon-text-intense {
+  color: var(--neon-cyan);
+  animation: neon-pulse-intense 1.5s ease-in-out infinite alternate;
+}
+
+.cyber-scan {
+  background: linear-gradient(90deg, transparent, rgba(0, 255, 255, 0.4), transparent);
+  background-size: 200% 100%;
+  animation: cyber-scan 3s linear infinite;
+}
+
+.hologram-glitch {
+  animation: hologram-glitch 0.3s ease-in-out infinite;
+}
+
+.energy-flow {
+  background: linear-gradient(45deg, #00ffff, #8b5cf6, #ec4899, #00ffff);
+  background-size: 400% 400%;
+  animation: energy-flow 3s ease infinite;
+}
+
+.particle-float {
+  animation: particle-float 4s ease-in-out infinite;
+}
+
+.cyber-border {
+  border: 2px solid transparent;
+  background: linear-gradient(45deg, #00ffff, #8b5cf6, #ec4899) border-box;
+  border-radius: 12px;
+  position: relative;
+}
+
+.cyber-border::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, #00ffff, #8b5cf6, #ec4899);
+  border-radius: 12px;
+  padding: 2px;
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  -webkit-mask-composite: xor;
+}
+
 .neon-border {
   border: 2px solid var(--neon-cyan);
   box-shadow: 0 0 10px var(--neon-cyan), inset 0 0 10px var(--neon-cyan);
@@ -112,6 +231,30 @@ body {
   border: 1px solid rgba(139, 92, 246, 0.3);
   backdrop-filter: blur(10px);
   animation: hologram-flicker 3s ease-in-out infinite;
+  position: relative;
+  overflow: hidden;
+}
+
+.hologram-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(0, 255, 255, 0.1), transparent);
+  animation: cyber-scan 4s linear infinite;
+}
+
+.hologram-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--neon-cyan), var(--neon-purple), var(--neon-pink));
+  animation: energy-flow 2s ease infinite;
 }
 
 .glass-morphism {
@@ -214,6 +357,75 @@ body {
   .cyber-button {
     padding: 10px 20px;
     font-size: 14px;
+  }
+  
+  .neon-text {
+    font-size: 2.5rem;
+  }
+  
+  .neon-text-intense {
+    font-size: 2.5rem;
+  }
+  
+  .hologram-card {
+    margin-bottom: 1rem;
+  }
+  
+  .cyber-grid {
+    background-size: 15px 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .cyber-card {
+    padding: 12px;
+  }
+  
+  .cyber-button {
+    padding: 8px 16px;
+    font-size: 12px;
+  }
+  
+  .neon-text {
+    font-size: 2rem;
+  }
+  
+  .neon-text-intense {
+    font-size: 2rem;
+  }
+  
+  .hologram-card::before {
+    animation-duration: 6s;
+  }
+  
+  .hologram-card::after {
+    height: 1px;
+  }
+}
+
+/* Large screens */
+@media (min-width: 1200px) {
+  .cyber-card {
+    padding: 32px;
+  }
+  
+  .neon-text {
+    font-size: 4rem;
+  }
+  
+  .neon-text-intense {
+    font-size: 4rem;
+  }
+}
+
+/* Ultra-wide screens */
+@media (min-width: 1920px) {
+  .container {
+    max-width: 1600px;
+  }
+  
+  .cyber-card {
+    padding: 40px;
   }
 }
 
