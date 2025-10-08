@@ -1,9 +1,5 @@
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-import { ArrowLeft, Home, Search, BookOpen, Users, Phone } from 'lucide-react';
-=======
 import { Home, Phone } from 'lucide-react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b3e6
 
 export default function NotFound() {
   const popularPages = [
