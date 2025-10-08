@@ -1,9 +1,5 @@
->>>>>>> main
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-e42d
  */
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-8da8
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-e42d
  * Resource hints for performance
  */
 export const prefetchResources = (urls: string[]): void => {
@@ -17,7 +13,6 @@ export const prefetchResources = (urls: string[]): void => {
 };
 
 /**
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-4854
 
  * Resource hints for performance
  */
@@ -83,7 +78,6 @@ export const lazyLoadImages = (): void => {
  * Optimize scroll performance
  */
 export function debounce<T extends (...args: any[]) => any>(
->>>>>>> main
   func: T,
   wait: number
 ): (...args: Parameters<T>) => void {
@@ -272,7 +266,6 @@ public lazyLoadImages(): void {
     preloadCriticalResources();
   }
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-e42d
   public prefetchResources(urls: string[]): void {
   public prefetchResources(urls: string[]): void {
     prefetchResources(urls);
@@ -389,21 +382,11 @@ export const clearOldCaches = (): void => {
   });
 };
 
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-e42d
 export default {
   prefetchResources,
   preconnectDomains,
   lazyLoadImages,
 
->>>>>>> main
->>>>>>> main
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-e42d
   debounce,
   throttle,
   measurePageLoad,
@@ -419,20 +402,6 @@ export default {
   clearOldCaches,
   checkPerformanceBudget
 
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-e42d
-=======
       observer.observe({ entryTypes: ['first-input'] });
     }
   }
@@ -472,6 +441,3 @@ export const DEFAULT_BUDGET: PerformanceBudget = {
   maxFirstLoad: 2000, // 2s
   maxInteractive: 3000 // 3s
 };
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-ee0f
-=======
->>>>>>> origin/main

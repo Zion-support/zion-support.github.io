@@ -1,23 +1,13 @@
 /**
  * Performance Utilities
  */
-=======
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3f25:utils/performanceUtils.ts
 
 // Debounce function for performance optimization
 export const debounce = <T extends (...args: any[]) => any>(
   func: T,
   wait: number
 ): ((...args: Parameters<T>) => void) => {
-=======
   
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-1f83
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a0d
-=======
   let timeout: NodeJS.Timeout;
   return (...args: Parameters<T>) => {
     clearTimeout(timeout);
@@ -40,7 +30,6 @@ export const debounce = <T extends (...args: any[]) => any>(
   let timeout: NodeJS.Timeout | null = null;
   
   
->>>>>>> origin/main
   return function executedFunction(...args: Parameters<T>) {
     const later = () => {
       timeout = null;
@@ -51,15 +40,10 @@ export const debounce = <T extends (...args: any[]) => any>(
     if (timeout) clearTimeout(timeout);
     timeout = setTimeout(later, wait);
     if (callNow) func(...args);
-=======
->>>>>>> origin/main
   };
 };
 
 // Throttle function for performance optimization
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3f25:utils/performanceUtils.ts
-=======
 export const throttle = <T extends (...args: unknown[]) => unknown>(
   func: T,
   _limit: number // eslint-disable-line @typescript-eslint/no-unused-vars
@@ -72,25 +56,19 @@ export const throttle = <T extends (...args: unknown[]) => unknown>(
       setTimeout(() => {
         inThrottle = false;
       }, limit);
->>>>>>> origin/main
 export const throttle = <T extends (...args: any[]) => any>(
   func: T,
   limit: number
 ): ((...args: Parameters<T>) => void) => {
   let inThrottle: boolean;
-=======
   return function executedFunction(this: any, ...args: Parameters<T>) {
     if (!inThrottle) {
       func.apply(this, args);
       inThrottle = true;
       setTimeout(() => (inThrottle = false), limit);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8
-=======
   
   return function executedFunction(...args: Parameters<T>) {
-=======
   return (...args: Parameters<T>) => {
-=======
   return function executedFunction(...args: Parameters<T>) {
     if (!inThrottle) {
       func.apply(this, args);
@@ -107,7 +85,6 @@ export const throttle = <T extends (...args: any[]) => any>(
       setTimeout(() => (inThrottle = false), limit);
   
   return function executedFunction(...args: Parameters<T>) {
->>>>>>> origin/main
     if (!inThrottle) {
       func(...args);
       inThrottle = true;
@@ -116,9 +93,6 @@ export const throttle = <T extends (...args: any[]) => any>(
   };
 };
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0a61
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-11d4
 // Preload critical resources
 export const preloadCriticalResources = (): void => {
 // Lazy load images with intersection observer
@@ -144,8 +118,6 @@ export const lazyLoadImages = (): void => {
 // Preload critical resources
 export const preloadCriticalResources = (): void => {
   const criticalResources = ['/fonts/main-font.woff2', '/css/critical.css'];
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
   criticalResources.forEach(resource => {
     const link = document.createElement('link');
     link.rel = 'preload';
@@ -153,12 +125,8 @@ export const preloadCriticalResources = (): void => {
     link.as = resource.endsWith('.css') ? 'style' : 'font';
       link.crossOrigin = 'anonymous';
     }
-=======
     link.crossOrigin = 'anonymous';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3b0a
-=======
     link.crossOrigin = 'anonymous';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
     document.head.appendChild(link);
   });
 };
@@ -171,7 +139,6 @@ export const optimizeScrollPerformance = (): void => {
   const updateScrollPosition = () => {
     }
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a4f
     ticking = false;
   };
     }
@@ -209,10 +176,7 @@ export const collectPerformanceMetrics = (): any => {
     dom: navigation.domContentLoadedEventEnd - (navigation.activationStart || 0),
     load: navigation.loadEventEnd - (navigation.activationStart || 0)
   };
-=======
   window.addEventListener('scroll', requestTick, { passive: true });
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
-=======
 
 // Performance monitoring utilities
 export const measurePerformance = (name: string, fn: () => void) => {
@@ -220,7 +184,6 @@ export const measurePerformance = (name: string, fn: () => void) => {
   fn();
   const end = performance.now();
   console.log(`${name} took ${end - start} milliseconds`);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3f25:utils/performanceUtils.ts
 };
 
 // Memory usage monitoring
@@ -276,13 +239,11 @@ export const getOptimizationRecommendations = () => {
   images.forEach(img => imageObserver.observe(img));
 };
 // Performance monitoring
-=======
 
 // Get memory usage information
 export const getMemoryUsage = (): any => {
   if (typeof window === 'undefined' || !('performance' in window)) {
     return null;
-=======
   // Check for large images
   const images = document.querySelectorAll('img');
   images.forEach(img => {
@@ -295,7 +256,6 @@ export const getMemoryUsage = (): any => {
   const stylesheets = document.querySelectorAll('link[rel="stylesheet"]');
   if (stylesheets.length > 5) {
     recommendations.push('Consider reducing the number of stylesheets');
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3f25:utils/performanceUtils.ts
   }
 
   return recommendations;
@@ -310,10 +270,7 @@ export const performanceMonitor = {
     if (typeof window === 'undefined' || !('performance' in window)) return;
     performance.mark(`${name}-end`);
     performance.measure(name, `${name}-start`, `${name}-end`);
-=======
 
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3f25:utils/performanceUtils.ts
 export default {
   debounce,
   throttle,
@@ -341,10 +298,7 @@ export const optimizeScrollPerformance = (): void => {
     }
   };
 };
-=======
 };
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3fed
-=======
 
   window.addEventListener('scroll', requestTick, { passive: true });
 };
@@ -366,8 +320,6 @@ export const checkPerformanceBudget = (budget: PerformanceBudget): boolean => {
     metrics.dom <= budget.maxInteractive
   );
 };
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-1f83
-=======
     const measure = performance.getEntriesByName(name)[0];
     return measure ? measure.duration : 0;
   },
@@ -384,8 +336,6 @@ export const checkPerformanceBudget = (budget: PerformanceBudget): boolean => {
     performance.clearMeasures();
   },
 };
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
-=======
   measurePerformance,
   getMemoryUsage,
   lazyLoad,
@@ -394,7 +344,6 @@ export const checkPerformanceBudget = (budget: PerformanceBudget): boolean => {
   collectMetrics,
   getOptimizationRecommendations
 };
-=======
 
 // Preload critical resources
 export const preloadCriticalResources = (): void => {
@@ -788,4 +737,3 @@ export const checkPerformanceBudget = (budget: PerformanceBudget): boolean => {
     performance.clearMeasures();
   },
 };
->>>>>>> origin/main

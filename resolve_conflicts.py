@@ -1,63 +1,128 @@
 #!/usr/bin/env python3
+"""
+Script to automatically resolve merge conflicts by keeping the main branch version
+"""
 import os
 import re
-import glob
+from pathlib import Path
 
-def resolve_merge_conflicts(file_path):
-    """Resolve merge conflicts by choosing HEAD version"""
+def resolve_merge_conflicts_in_file(filepath):
+    """
+    Resolve merge conflicts in a file by keeping the 'origin/main' version
+    """
     try:
-        with open(file_path, 'r', encoding='utf-8') as f:
+        with open(filepath, 'r', encoding='utf-8') as f:
             content = f.read()
         
         # Check if file has merge conflicts
-        if '<<<<<<< HEAD' not in content:
-            return False
-            
-        print(f"Resolving conflicts in {file_path}")
+        if '<<<<<' not in content:
+            return False, "No conflicts found"
         
         # Pattern to match merge conflict blocks
-        pattern = r'<<<<<<< HEAD\n(.*?)\n=======\n(.*?)\n>>>>>>> [^\n]+\n'
+        # This regex finds the conflict markers and captures the different versions
+        conflict_pattern = r'<<<<<<< HEAD\n(.*?)\n=======\n(.*?)\n>>>>>>> origin/[^\n]+\n'
         
-        def replace_conflict(match):
-            head_content = match.group(1)
-            return head_content + '\n'
+        original_content = content
         
-        # Replace all merge conflicts with HEAD version
-        resolved_content = re.sub(pattern, replace_conflict, content, flags=re.DOTALL)
+        # First, let's handle nested conflicts by processing line by line
+        lines = content.split('\n')
+        cleaned_lines = []
+        in_conflict = False
+        conflict_depth = 0
+        keep_section = None  # 'head', 'main', or None
         
-        # Write back the resolved content
-        with open(file_path, 'w', encoding='utf-8') as f:
-            f.write(resolved_content)
+        i = 0
+        while i < len(lines):
+            line = lines[i]
             
-        return True
+            if line.startswith('<<<<<<< HEAD'):
+                in_conflict = True
+                conflict_depth += 1
+                keep_section = None
+                i += 1
+                continue
+            elif line.startswith('=======') and in_conflict:
+                # Switch to the main branch section
+                keep_section = 'main'
+                i += 1
+                continue
+            elif line.startswith('>>>>>>> origin/') and in_conflict:
+                # End of conflict
+                conflict_depth -= 1
+                if conflict_depth == 0:
+                    in_conflict = False
+                    keep_section = None
+                i += 1
+                continue
+            
+            # Add lines if not in conflict, or if in the 'main' section
+            if not in_conflict:
+                cleaned_lines.append(line)
+            elif keep_section == 'main':
+                cleaned_lines.append(line)
+            
+            i += 1
+        
+        resolved_content = '\n'.join(cleaned_lines)
+        
+        # Write back if changed
+        if resolved_content != original_content:
+            with open(filepath, 'w', encoding='utf-8') as f:
+                f.write(resolved_content)
+            return True, "Conflicts resolved"
+        else:
+            return False, "No changes made"
+    
     except Exception as e:
-        print(f"Error processing {file_path}: {e}")
-        return False
+        return False, f"Error: {str(e)}"
 
-def main():
-    # Find all TypeScript/JavaScript files
-    patterns = [
-        '**/*.tsx',
-        '**/*.ts', 
-        '**/*.js',
-        '**/*.jsx'
+
+def find_files_with_conflicts(root_dir):
+    """Find all files with merge conflicts"""
+    files_with_conflicts = []
+    
+    # List of files that had conflicts based on the error output
+    conflict_files = [
+        'tsconfig.json',
+        'app/App.tsx',
+        'src/hooks/usePerformance.ts',
+        'src/utils/performanceOptimizer.ts',
     ]
     
-    files_processed = 0
-    conflicts_resolved = 0
+    for file_path in conflict_files:
+        full_path = os.path.join(root_dir, file_path)
+        if os.path.exists(full_path):
+            with open(full_path, 'r', encoding='utf-8') as f:
+                content = f.read()
+                if '<<<<<' in content:
+                    files_with_conflicts.append(full_path)
     
-    for pattern in patterns:
-        for file_path in glob.glob(pattern, recursive=True):
-            # Skip node_modules and other directories
-            if any(skip in file_path for skip in ['node_modules', '.git', '.next', 'dist', 'build']):
-                continue
-                
-            files_processed += 1
-            if resolve_merge_conflicts(file_path):
-                conflicts_resolved += 1
-    
-    print(f"Processed {files_processed} files")
-    print(f"Resolved conflicts in {conflicts_resolved} files")
+    return files_with_conflicts
 
-if __name__ == "__main__":
+
+def main():
+    root_dir = '/workspace'
+    
+    print("Finding files with merge conflicts...")
+    conflict_files = find_files_with_conflicts(root_dir)
+    
+    if not conflict_files:
+        print("No files with merge conflicts found!")
+        return
+    
+    print(f"\nFound {len(conflict_files)} files with conflicts:")
+    for f in conflict_files:
+        print(f"  - {f}")
+    
+    print("\nResolving conflicts...")
+    for filepath in conflict_files:
+        rel_path = os.path.relpath(filepath, root_dir)
+        resolved, message = resolve_merge_conflicts_in_file(filepath)
+        status = "✓" if resolved else "✗"
+        print(f"{status} {rel_path}: {message}")
+    
+    print("\nDone!")
+
+
+if __name__ == '__main__':
     main()

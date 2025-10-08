@@ -9,300 +9,100 @@
     ],
     "module": "ESNext",
     "skipLibCheck": true,
-<<<<<<< HEAD
-<<<<<<< HEAD
+    "moduleResolution": "bundler",
     "allowImportingTsExtensions": false,
-=======
-    "moduleResolution": "node",
-    "allowImportingTsExtensions": true,
->>>>>>> origin/fix-merge-conflicts-final
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
     "jsxImportSource": "react",
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3f25
-=======
-    "jsxImportSource": "react",
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b1c3
-    "strict": true,
-    "strictNullChecks": true,
-=======
-    "allowImportingTsExtensions": false,
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "noEmit": true,
-    "jsx": "preserve",
     "strict": false,
->>>>>>> origin/main
     "noUnusedLocals": false,
     "noUnusedParameters": false,
     "noFallthroughCasesInSwitch": false,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
-    "moduleResolution": "bundler",
     "baseUrl": ".",
     "paths": {
       "@/*": [
         "src/*"
       ],
       "@/components/*": [
-        "src/components/*"
+        "components/*"
       ],
-      "@/pages/*": [
-        "src/pages/*"
+      "@/lib/*": [
+        "lib/*"
       ],
       "@/utils/*": [
-        "src/utils/*"
-      ],
-      "@/types/*": [
-        "src/types/*"
+        "utils/*"
       ],
       "@/hooks/*": [
-        "src/hooks/*"
+        "hooks/*"
+      ],
+      "@/types/*": [
+        "types/*"
       ],
       "@/config/*": [
-        "src/config/*"
+        "config/*"
       ],
-      "@/data/*": [
-        "src/data/*"
-      ],
-      "@/content/*": [
-        "src/content/*"
+      "@/app/*": [
+        "app/*"
       ]
     },
+    "allowJs": true,
+    "forceConsistentCasingInFileNames": true,
     "incremental": true,
     "plugins": [
       {
         "name": "next"
       }
-    ],
-    "allowJs": true,
-<<<<<<< HEAD
-    "forceConsistentCasingInFileNames": true,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b1c3
-    "noImplicitAny": true,
-    "noImplicitReturns": true,
-    "noImplicitThis": true,
-<<<<<<< HEAD
-    "exactOptionalPropertyTypes": true,
-    "noImplicitOverride": true,
-    "noPropertyAccessFromIndexSignature": true,
-    "noUncheckedIndexedAccess": true,
-<<<<<<< HEAD
-=======
-    "noImplicitAny": false,
-    "noImplicitReturns": false,
-    "noImplicitThis": false,
-=======
->>>>>>> origin/fix-merge-conflicts-final
-    "exactOptionalPropertyTypes": false,
-    "noImplicitOverride": false,
-    "noPropertyAccessFromIndexSignature": false,
-    "noUncheckedIndexedAccess": false,
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3f25
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b1c3
-=======
->>>>>>> origin/fix-merge-conflicts-final
-    "allowUnusedLabels": false,
-    "allowUnreachableCode": false,
-    "verbatimModuleSyntax": false
-  },
-  "include": [
-    "app/**/*",
-<<<<<<< HEAD
-<<<<<<< HEAD
-    "src/**/*"
-=======
-    "src/**/*",
-    "App.tsx",
-    "components/**/*"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3f25
-=======
-    "src/**/*",
-    "App.tsx",
-    "components/**/*"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b1c3
-=======
-    "tsBuildInfoFile": ".next/cache/tsconfig.tsbuildinfo"
+    ]
   },
   "include": [
     "next-env.d.ts",
     "app/**/*.ts",
     "app/**/*.tsx",
+    "src/**/*.ts",
+    "src/**/*.tsx",
     "components/**/*.ts",
     "components/**/*.tsx",
-    "api/**/*.ts",
-    "api/**/*.js",
-    "*.ts",
-    "*.tsx",
+    "types/**/*.ts",
+    "App.tsx",
     ".next/types/**/*.ts"
->>>>>>> origin/main
   ],
   "exclude": [
     "node_modules",
     ".next",
-    "out",
     "dist",
-    "_app_disabled/**",
+    "build",
+    "out",
+    "**/*.spec.ts",
+    "**/*.test.ts",
+    "**/*.spec.tsx",
+    "**/*.test.tsx",
+    "**/node_modules/**",
+    "**/.next/**",
+    "**/dist/**",
+    "**/build/**",
+    "**/out/**",
+    "utils.disabled/**",
+    "src.disabled/**",
+    "components.disabled/**",
     "app_disabled/**",
-    "_conflicted_disabled/**",
-    "_pages_api_disabled/**",
-    "_pages_disabled/**",
-    "admin-api-disabled/**",
+    "_*/**",
+    "*.backup",
+    "*.disabled",
+    "backup/**",
+    "automation/**",
+    "corrupted*/**",
+    "*_backup/**",
     "api-disabled/**",
     "api.disabled/**",
-    "api.disabled.temp/**",
-    "api-backup/**",
-    "apps.backup/**",
-    "automation_backup/**",
-    "ai-optimization-backups/**",
-    "automation_logs/**",
-    "all-automations-reports/**",
-    "accessibility-reports/**",
-    "corrupted-files-backup/**",
-    "corrupted_backup/**",
-    "corrupted_files_backup_2/**",
-    "components_backup/**",
-    "data_backup/**",
-    "lib_backup/**",
-    "automation/**",
-    "app/blog/**",
-    "_app_disabled/blog/**",
-    "app_disabled/blog/**",
-    "app_disabled/case-studies/**",
-    "app_disabled/components/**",
-    "app_disabled/enterprise/**",
-    "app_disabled/guides/**",
-    "apps/**",
-    "backup-banner-components/**",
-    "backup-pages/**",
-    "backup-problematic-files/**",
-    "backup/**",
-    "blockchain-solutions.tsx",
-    "blog/**",
-    "broken_files_backup/**",
-    "clean-build/**",
-    "browserstack.config.ts",
-    "components-disabled/**",
-    "components.disabled/**",
-    "components.disabled_full/**",
-    "content/**",
-    "contracts.disabled/**",
-    "contracts/**",
-    "corrupted-services-backup/**",
-    "corrupted-src-backup/**",
-    "cypress/**",
-    "cypress.disabled/**",
-    "cypress.config.ts",
-    "data.disabled/**",
-    "data/**",
     "disabled-api/**",
-    "fix_utils_files.ts",
-    "hooks.disabled/**",
-    "lib.broken/**",
-    "lib.disabled/**",
-    "lib/integrations/**",
-    "lint-target/**",
-    "marketing-index.ts",
-    "middleware.security.ts",
-    "netlify/**",
-    "pages_disabled/**",
-    "src.disabled/**",
-    "utils.disabled/**",
-    "vite.config.performance.ts",
-    "app_disabled/**",
-    "dao/**",
-    "deployments/**",
-    "e2e/**",
-    "factories/**",
-    "src/pages/blog-disabled/**",
-    "hooks/**",
-    "lib.broken/**",
-    "lib.disabled/**",
-    "lib/integrations/**",
-    "lint-target/**",
-    "marketing-index.ts",
-    "middleware.security.ts",
-    "middleware/**",
-<<<<<<< HEAD
-    "app/blog/**",
-    "app/page-optimized.tsx",
-    "app/services/**/*",
-    "app/case-studies/**/*",
-    "app/guides/**/*",
-    "app/components/**/*",
-<<<<<<< HEAD
-=======
-    "src/components/disabled-corrupted/**",
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b1c3
-    "EnhancedFooter.tsx",
-    "EnhancedHeader.tsx",
-    "EnhancedNavigation.tsx",
-    "ModernNavigation.tsx",
-    "SidebarNavigation.tsx",
-    "api-documentation.tsx",
-    "app/components/NewContentPromotionalBanner2026.tsx",
-    "app/components/NewestContent2025Banner.tsx",
-<<<<<<< HEAD
-    "api/**",
     "lib/**",
-    "utils/seoUtils.ts"
-=======
-<<<<<<< HEAD
-    "utils/**/*"
-=======
-    "utils/**/*",
-    "blog/**",
-    "backup-problematic-files/**",
-    "automation/**",
-    "**/*.disabled/**",
-    "**/*.backup/**"
-=======
-    "utils/accessibilityUtils.ts",
-    "utils/bannerLazyLoader.ts",
-    "utils/bannerRegistry.ts",
-    "utils/bannerRotationSystem.ts",
-    "utils/bannerPrioritization.ts",
-    "utils/comprehensiveOptimizer.ts",
-    "utils/performanceUtils.ts",
-    "utils/seoUtils.ts"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a0d
-=======
-    "utils/bannerLazyLoader.ts",
-    "utils/bannerPrioritization.ts",
-    "utils/bannerRegistry.ts",
-    "utils/bannerRotationSystem.ts",
-    "utils/comprehensiveOptimizer.ts",
-    "utils/performanceUtils.ts",
     "utils/**",
-    "src/utils/**"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b1c3
-  ],
-  "references": [
-    {
-      "path": "./tsconfig.node.json"
-    }
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3f25
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b1c3
-=======
-    "netlify/**",
-    "pages_disabled/**",
-    "services/**",
-    "src.disabled/**",
-    "fix-*.jsx",
-    "fix-*.ts",
-    "jest.setup.*"
->>>>>>> origin/main
+    "hooks/**",
+    "api/**",
+    "scripts/**"
   ]
 }

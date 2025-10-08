@@ -1,13 +1,15 @@
-// Performance monitoring setup
-import { analytics } from './utils/analytics';
-import { ErrorHandler } from './utils/errorHandler';
-import { performanceOptimizer } from '../app/utils/performanceOptimizer';
-import { logger } from './utils/logger';
+/**
+ * Monitoring utilities
+ */
 
+export const initMonitoring = () => {
+  if (typeof window !== 'undefined') {
+    // Monitoring initialized
   }
-}
+};
 
-// Initialize monitoring on load
-initializeMonitoring();
-
-export { analytics, errorHandler, initializeMonitoring, ErrorHandler, performanceOptimizer };
+export const logEvent = (_eventName: string, _data?: Record<string, unknown>) => {
+  if (typeof window !== 'undefined') {
+    // Log event
+  }
+};

@@ -1,118 +1,181 @@
 #!/usr/bin/env python3
 """
-Comprehensive script to fix all merge conflicts and corrupted files
+Script to fix all merge conflicts and syntax errors
 """
-
 import os
 import re
-import glob
-import shutil
 
-def is_corrupted_file(file_path):
-    """Check if a file appears to be corrupted based on common patterns."""
+def fix_app_tsx():
+    """Fix app/App.tsx by creating a clean version"""
+    content = """'use client';
+
+import React, { Suspense, lazy, useCallback, useEffect } from 'react';
+import { HelmetProvider } from 'react-helmet-async';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
+// Components
+import AccessibilityEnhancer from './components/AccessibilityEnhancer';
+import PerformanceDashboard from './components/PerformanceDashboard';
+import AdvancedPerformanceMonitor from './components/AdvancedPerformanceMonitor';
+import AdvancedErrorBoundary from './components/AdvancedErrorBoundary';
+import SEOEnhancer from './components/SEOEnhancer';
+import AdvancedSEOOptimizer from './components/AdvancedSEOOptimizer';
+import LoadingSpinner from './components/LoadingSpinner';
+
+// Lazy load components for better performance
+const ContentShowcase = lazy(() => import('./components/ContentShowcase'));
+const InteractiveContentShowcase2026 = lazy(
+  () => import('./components/InteractiveContentShowcase2026')
+);
+const InteractiveAIROICalculator = lazy(
+  () => import('./components/InteractiveAIROICalculator')
+);
+
+// Utils
+import { lazyLoadImages, preloadCriticalResources, collectPerformanceMetrics, performanceOptimizer } from './utils/performanceOptimizer';
+import { logger } from './utils/logger';
+
+// Styles
+import './globals.css';
+
+const App: React.FC = () => {
+  useEffect(() => {
+    logger.lifecycle('initialized', 'App');
+
+    // Initialize performance monitoring
+    lazyLoadImages();
+    preloadCriticalResources();
+    performanceOptimizer.init();
+    
+    // Initialize Web Vitals monitoring
+    if (typeof window !== 'undefined' && 'performance' in window) {
+      const pageLoadMetrics = collectPerformanceMetrics();
+      const metrics = performanceOptimizer.getMetrics();
+      if (pageLoadMetrics) {
+        console.log('Performance metrics collected:', pageLoadMetrics);
+      }
+      if (metrics) {
+        console.log('Performance metrics:', metrics);
+      }
+    }
+    
+    logger.lifecycle('performance monitoring initialized', 'App');
+    logger.info('🚀 Zion Tech Group App initialized with comprehensive monitoring', 'App');
+  }, []);
+
+  return (
+    <HelmetProvider>
+      <AdvancedErrorBoundary
+        enableErrorReporting={true}
+        enableRetry={true}
+        onError={(error, errorInfo) => {
+          logger.error('Application Error', 'ErrorBoundary', { error: error.message, errorInfo });
+        }}
+      >
+        <Router>
+          <AccessibilityEnhancer />
+          <SEOEnhancer />
+          <AdvancedSEOOptimizer />
+          <AdvancedPerformanceMonitor />
+          <PerformanceDashboard />
+          
+          <Suspense fallback={<LoadingSpinner />}>
+            <Routes>
+              <Route path="/" element={<ContentShowcase />} />
+              <Route path="/showcase" element={<InteractiveContentShowcase2026 />} />
+              <Route path="/calculator" element={<InteractiveAIROICalculator />} />
+            </Routes>
+          </Suspense>
+        </Router>
+      </AdvancedErrorBoundary>
+    </HelmetProvider>
+  );
+};
+
+export default App;
+"""
+    with open('/workspace/app/App.tsx', 'w') as f:
+        f.write(content)
+    print("✓ Fixed app/App.tsx")
+
+
+def fix_use_performance_ts():
+    """Fix src/hooks/usePerformance.ts"""
+    content = """import { useEffect, useState } from 'react';
+
+export const usePerformance = () => {
+  const [metrics, setMetrics] = useState<any>(null);
+
+  useEffect(() => {
+    if (typeof window !== 'undefined' && 'performance' in window) {
+      const perfObserver = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          console.log('Performance entry:', entry);
+        }
+      });
+      
+      try {
+        perfObserver.observe({ entryTypes: ['measure', 'navigation', 'resource'] });
+      } catch (e) {
+        console.error('Performance observer error:', e);
+      }
+    }
+  }, []);
+
+  return metrics;
+};
+"""
+    with open('/workspace/src/hooks/usePerformance.ts', 'w') as f:
+        f.write(content)
+    print("✓ Fixed src/hooks/usePerformance.ts")
+
+
+def fix_performance_optimizer_ts():
+    """Fix src/utils/performanceOptimizer.ts by removing conflict markers"""
+    filepath = '/workspace/src/utils/performanceOptimizer.ts'
+    
     try:
-        with open(file_path, 'r', encoding='utf-8') as f:
+        with open(filepath, 'r') as f:
             content = f.read()
         
-        # Check for common corruption patterns
-        corruption_patterns = [
-            r'/\* content \*/',  # Malformed comments
-            r'loading: \(\) => </div><div',  # Malformed JSX
-            r'export const metadata: Metadata = \{/\* content \*/',  # Malformed metadata
-            r'<div>/\* content \*/',  # Malformed JSX
-            r'<span className="text-left">"',  # Unclosed quotes
-            r'<div className="text-left">"',  # Unclosed quotes
-            r'<div className="text-left"> </div><div className="text-left">"',  # Malformed structure
-        ]
-        
-        for pattern in corruption_patterns:
-            if re.search(pattern, content):
-                return True
-                
-        return False
-        
-    except Exception:
-        return True
-
-def fix_merge_conflicts(file_path):
-    """Fix merge conflicts in a single file by keeping HEAD version."""
-    try:
-        with open(file_path, 'r', encoding='utf-8') as f:
-            content = f.read()
-        
-        # Check if file has merge conflicts
-        if '<<<<<<< HEAD' not in content:
-            return False
-        
-        # Split content into lines
+        # Remove conflict markers
         lines = content.split('\n')
-        new_lines = []
-        skip_until_end = False
+        cleaned_lines = []
+        skip_until_marker = False
         
         for line in lines:
-            if line.strip() == '<<<<<<< HEAD':
-                skip_until_end = False
+            if line.startswith('<<<<<<< HEAD'):
+                skip_until_marker = True
                 continue
-            elif line.strip() == '=======':
-                skip_until_end = True
+            elif line.startswith('======='):
+                if skip_until_marker:
+                    skip_until_marker = False
                 continue
-            elif line.strip().startswith('>>>>>>>'):
-                skip_until_end = False
+            elif line.startswith('>>>>>>> origin/'):
                 continue
-            elif not skip_until_end:
-                new_lines.append(line)
+            else:
+                if not skip_until_marker:
+                    cleaned_lines.append(line)
         
-        # Write the cleaned content back
-        new_content = '\n'.join(new_lines)
-        with open(file_path, 'w', encoding='utf-8') as f:
-            f.write(new_content)
+        with open(filepath, 'w') as f:
+            f.write('\n'.join(cleaned_lines))
         
-        print(f"Fixed merge conflicts in: {file_path}")
-        return True
-        
+        print("✓ Fixed src/utils/performanceOptimizer.ts")
     except Exception as e:
-        print(f"Error processing {file_path}: {e}")
-        return False
+        print(f"✗ Error fixing src/utils/performanceOptimizer.ts: {e}")
+
 
 def main():
-    """Main function to process all files."""
-    # Find all TypeScript/JavaScript files
-    patterns = [
-        '**/*.tsx',
-        '**/*.ts',
-        '**/*.jsx',
-        '**/*.js'
-    ]
+    print("Fixing all merge conflicts and syntax errors...")
+    print()
     
-    files_processed = 0
-    files_fixed = 0
-    files_deleted = 0
+    fix_app_tsx()
+    fix_use_performance_ts()
+    fix_performance_optimizer_ts()
     
-    for pattern in patterns:
-        for file_path in glob.glob(pattern, recursive=True):
-            # Skip node_modules and other directories
-            if any(skip in file_path for skip in ['node_modules', '.git', 'dist', 'build', '__pycache__']):
-                continue
-                
-            files_processed += 1
-            
-            # Check if file is corrupted
-            if is_corrupted_file(file_path):
-                print(f"Deleting corrupted file: {file_path}")
-                try:
-                    os.remove(file_path)
-                    files_deleted += 1
-                except Exception as e:
-                    print(f"Error deleting {file_path}: {e}")
-                continue
-            
-            # Try to fix merge conflicts
-            if fix_merge_conflicts(file_path):
-                files_fixed += 1
-    
-    print(f"\nProcessed {files_processed} files")
-    print(f"Fixed merge conflicts in {files_fixed} files")
-    print(f"Deleted {files_deleted} corrupted files")
+    print()
+    print("Done!")
 
-if __name__ == "__main__":
+
+if __name__ == '__main__':
     main()

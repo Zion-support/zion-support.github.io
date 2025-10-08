@@ -1,6 +1,5 @@
   if (typeof window === 'undefined') return;
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
   try {
   } catch (error) {
     console.error('Failed to store banner impressions:', error);
@@ -19,8 +18,6 @@ export const recordBannerImpression = (impression: Omit<BannerImpression, 'times
     };
     
     impressions.push(newImpression);
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a4f
   } catch (error) {
     console.error('Failed to record banner impression:', error);
   }
@@ -48,7 +45,6 @@ export const shouldShowBanner = (banner: BannerConfig): boolean => {
 /**
  * Get rotation score for banner prioritization
  */
-=======
   // Calculate score based on various factors
   let score = 0;
   
@@ -63,13 +59,8 @@ export const shouldShowBanner = (banner: BannerConfig): boolean => {
   if (impressions > 10) score -= 30;
   
   return Math.max(0, score);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a05b
 };
 
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-1f83
 export const selectBannersForRotation = (allBanners: BannerConfig[], maxBanners: number = MAX_VISIBLE_BANNERS): BannerConfig[] => {
   // Calculate scores for all banners
   const scoredBanners = allBanners.map(banner => ({
@@ -103,7 +94,6 @@ export const getBannerAnalytics = (bannerId?: string) => {
     engagementRate,
     recencyScore,
     fatigueScore,
-=======
   const bannerImpressions = bannerId ? 
     impressions.filter(imp => imp.bannerId === bannerId) : 
     impressions;
@@ -113,7 +103,6 @@ export const getBannerAnalytics = (bannerId?: string) => {
     clicks: bannerImpressions.filter(imp => imp.clicked).length,
     engagementRate: bannerImpressions.length > 0 ? 
       bannerImpressions.filter(imp => imp.clicked).length / bannerImpressions.length : 0
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-bcb8
   };
 };
 
@@ -316,14 +305,10 @@ export default {
   trackBannerClickWithPage,
   trackBannerVisibility
 };
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a4f
-=======
 export interface RotationConfig {
   interval: number;
   randomize: boolean;
   categories: string[];
-=======
 
 interface BannerConfig {
   id: string;
@@ -350,7 +335,6 @@ interface RotationRule {
   condition: (impression: BannerImpression) => boolean;
   priority: number;
   enabled: boolean;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3f25:utils/bannerRotationSystem.ts
 }
 
 export class BannerRotationSystem {
@@ -589,9 +573,7 @@ export const rotateBanners = (system: BannerRotationSystem): BannerConfig | null
 };
 
 export default BannerRotationSystem;
-=======
 <:utils/bannerRotationSystem.ts
 export const calculateBannerScore = (banner: BannerConfig): number => {
   const impressions = getStoredImpressions();
   const bannerImpressions = impressions.filter(imp => imp.bannerId === banner.id);
->>>>>>> origin/main

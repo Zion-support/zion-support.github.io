@@ -1,4 +1,3 @@
-);
 
 // Loading fallback component
 const LoadingFallback: React.FC<{ height?: string }> = ({

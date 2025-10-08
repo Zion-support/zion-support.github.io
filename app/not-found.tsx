@@ -1,85 +1,51 @@
-import { ArrowLeft, Home, Search, BookOpen, Users, Phone } from 'lucide-react';
+import React from 'react';
+import Link from 'next/link';
 
 export default function NotFound() {
   const popularPages = [
-    {
-      title: 'AI Services',
-      description: 'Explore our comprehensive AI and IT solutions',
-      href: '/services',
-      icon: '🤖'
-    },
-    {
-      title: 'Blog & Insights',
-      description: 'Read about latest AI trends and innovations',
-      href: '/blog',
-      icon: '📚'
-    },
-    {
-    },
-    {
-      title: 'Case Studies',
-      description: 'See our success stories and client results',
-      href: '/case-studies',
-      icon: '📊'
-    },
-    {
-      title: 'Contact Us',
-      description: 'Get in touch with our AI experts',
-      href: '/contact',
-      icon: '📞'
-    },
+    { name: 'Home', path: '/' },
+    { name: 'Services', path: '/services' },
+    { name: 'About', path: '/about' },
+    { name: 'Contact', path: '/contact' },
   ];
 
   return (
-        {/* Error Code */}
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 flex items-center justify-center px-4">
+      <div className="max-w-2xl w-full text-center">
         <div className="mb-8">
           <h1 className="text-9xl font-bold text-gray-300 mb-4">
             404
           </h1>
           <div className="text-6xl mb-4">🔍</div>
         </div>
-
-        {/* Error Message */}
-            The page you're looking for doesn't exist or has been moved. 
-            Don't worry, let's get you back on track!
+        
+        <div className="mb-8">
+          <p className="text-2xl text-gray-200 mb-4">
+            The page you are looking for does not exist or has been moved.
+          </p>
+          <p className="text-lg text-gray-300">
+            Do not worry, let us get you back on track!
           </p>
         </div>
 
-            {popularPages.map((page, index) => (
-              <Link
-                key={index}
-              </Link>
-            ))}
-          </div>
+        <div className="grid grid-cols-2 gap-4 mb-8">
+          {popularPages.map((page) => (
+            <Link
+              key={page.path}
+              href={page.path}
+              className="bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 rounded-xl p-4 transition-all"
+            >
+              {page.name}
+            </Link>
+          ))}
         </div>
 
-        </div>
-
-        {/* Search Suggestion */}
-        <div className="mt-12 bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8">
-          <h3 className="text-xl font-bold text-white mb-4">
-            Can't find what you're looking for?
-          </h3>
-          <p className="text-gray-300 mb-6">
-            Try searching for what you need or contact our support team.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-3 justify-center">
-            <Link
-              to="/search"
-              className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300"
-            >
-              <Search className="w-4 h-4 mr-2" />
-              Search Our Site
-            </Link>
-            <Link
-              to="/contact"
-              className="inline-flex items-center px-6 py-3 bg-white/20 text-white border border-white/30 rounded-lg hover:bg-white/30 transition-all duration-300"
-            >
-              <Phone className="w-4 h-4 mr-2" />
-              Contact Support
-            </Link>
-          </div>
-        </div>
+        <Link
+          href="/"
+          className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full transition-all"
+        >
+          Go Home
+        </Link>
       </div>
     </div>
   );
