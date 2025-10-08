@@ -1,3 +1,4 @@
+import React from 'react'
 /**
  * Advanced SEO Optimization Utility
  * Provides comprehensive SEO enhancements and monitoring
@@ -228,7 +229,7 @@ class SEOOptimizer {
   /**
    * Add structured data to page
    */
-  private addStructuredData(data: Record<string, unknown>): void {
+  private addStructuredData(data: any): void {
     const script = document.createElement('script')
     script.type = 'application/ld+json'
     script.textContent = JSON.stringify(data)
@@ -262,10 +263,12 @@ class SEOOptimizer {
       // Monitor CLS (Cumulative Layout Shift)
       let clsValue = 0
       new PerformanceObserver((list) => {
-        // Process layout shift entries
-        list.getEntries().forEach(_entry => {
-          // Process each entry
-        });
+        for (const entry of list.getEntries()) {
+          const clsEntry = entry as any
+          if (!clsEntry.hadRecentInput) {
+            clsValue += clsEntry.value || 0
+          }
+        }
         if (clsValue > 0.25) { // Poor CLS
           this.trackSEOMetric('poor_cls', clsValue)
         }
@@ -276,26 +279,17 @@ class SEOOptimizer {
    * Track SEO-related metrics
    */
   private trackSEOMetric(metric: string, value: number): void {
-    if (typeof gtag !== 'undefined') {
-      gtag('event', 'seo_metric', {
-        metric_name: metric,
-        metric_value: Math.round(value),
-        event_category: 'seo'
-      })
-    } else {
-      // Track SEO metrics
-      console.log('SEO Metric:', {
-        metric_name: metric,
-        metric_value: Math.round(value),
-        event_category: 'seo'
-      });
-    }
+    // Track SEO metrics
+    console.log('SEO Metric:', {
+      metric_name: metric,
+      metric_value: Math.round(value),
+      event_category: 'seo'
+    })
   }
-  
   /**
    * Generate sitemap data
    */
-  generateSitemapData(): Array<{ url: string; lastmod: string; changefreq: string; priority: number }> {
+  generateSitemapData(): any[] {
     // This would typically come from your CMS or routing system
     return [
       {
