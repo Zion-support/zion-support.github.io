@@ -16,10 +16,10 @@ function initializeMonitoring() {
       performanceOptimizer.init();
       
       // Set up error tracking
-      // errorHandler.init(); // Commenting out as init method might not exist
+      // errorHandler.init() - method does not exist;
       
       // Initialize analytics
-      // analytics.init(); // Commenting out as init method might not exist
+      // analytics.init() - method does not exist;
       
       logger.info('Monitoring initialized successfully');
     }

@@ -74,11 +74,11 @@ class Analytics {
     const event: AnalyticsEvent = {
       name,
       category,
+      timestamp: Date.now(),
       action,
       label,
       value,
       properties,
-      timestamp: Date.now(),
     };
 
     this.events.push(event);
@@ -115,7 +115,7 @@ class Analytics {
   /**
    * Track business events
    */
-  trackBusiness(
+  trackBusinessEvent(
     event: string,
     value?: number,
     properties?: Record<string, unknown>
@@ -131,8 +131,10 @@ class Analytics {
     if (typeof window !== 'undefined' && 'gtag' in window) {
       (window as any).gtag('event', event.name, {
         event_category: event.category,
+        event_action: event.action,
         event_label: event.label,
         value: event.value,
+        ...event.properties,
       });
     }
   }
@@ -176,6 +178,7 @@ class Analytics {
   }
 }
 
-// Create and export singleton instance
+// Create singleton instance
 const analytics = new Analytics();
+
 export default analytics;

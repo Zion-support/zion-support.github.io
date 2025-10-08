@@ -19,13 +19,13 @@ async function handler(req, res) {
     return;
   }
 
-  if (!isValidEmail(email)) {
-    res.statusCode = 400;
-    res.json({ error: 'Invalid email' });
-    return;
-  }
-
   try {
+    if (!isValidEmail(email)) {
+      res.statusCode = 400;
+      res.json({ error: 'Invalid email' });
+      return;
+    }
+
     const file = path.join(
       process.cwd(),
       'data',

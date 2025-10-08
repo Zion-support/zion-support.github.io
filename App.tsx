@@ -1,4 +1,4 @@
-import React, { memo, useMemo, useCallback, Suspense } from 'react';
+import React, { memo, useMemo } from 'react';
 import { HelmetProvider, Helmet } from 'react-helmet-async';
 
 // Memoized components for better performance
@@ -45,24 +45,38 @@ const InteractiveContentShowcase2026 = memo(() => (
     </div>
   </div>
 ));
+
+// Loading component
+const LoadingSpinner = memo(() => (
+  <div className="animate-pulse bg-gray-200 h-32 rounded flex items-center justify-center">
+    <div className="text-gray-500">Loading...</div>
+  </div>
+));
+
+// Error Boundary Component
 interface ErrorBoundaryState {
   hasError: boolean;
   error: Error | null;
 }
+
 interface ErrorBoundaryProps {
   children: React.ReactNode;
 }
+
 class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundaryState> {
   constructor(props: ErrorBoundaryProps) {
     super(props);
     this.state = { hasError: false, error: null };
   }
+
   static getDerivedStateFromError(error: Error): ErrorBoundaryState {
     return { hasError: true, error };
   }
+
   override componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
     console.error('App Error Boundary caught an error:', error, errorInfo);
   }
+
   override render() {
     if (this.state.hasError) {
       return (
@@ -84,17 +98,10 @@ class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundarySta
         </div>
       );
     }
+
     return this.props.children;
   }
 }
-//Loading component
-
-// Loading component
-const LoadingSpinner = memo(() => (
-  <div className="animate-pulse bg-gray-200 h-32 rounded flex items-center justify-center">
-    <div className="text-gray-500">Loading...</div>
-  </div>
-));
 
 export default function App() {
   const structuredData = useMemo(
