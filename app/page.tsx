@@ -2,13 +2,6 @@ import React, { useCallback, useState, useEffect, Suspense, lazy, memo } from 'r
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 
-// Import components
-import ContentPromotionBanner from './components/ContentPromotionBanner';
-import ContentCarousel from './components/ContentCarousel';
-import DynamicContentShowcase from './components/DynamicContentShowcase';
-import ContentStatistics from './components/ContentStatistics';
-import ContentNewsletterSignup from './components/ContentNewsletterSignup';
-
 // Dynamically import heavy components for better performance
 const ContentPromotionBanner = lazy(() => import('./components/ContentPromotionBanner'));
 const ContentCarousel = lazy(() => import('./components/ContentCarousel'));
@@ -85,14 +78,10 @@ const HomePage: React.FC = () => {
           }`}
           aria-labelledby="hero-heading"
         >
-<<<<<<< HEAD
           <h1 
             id="hero-heading" 
             className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent"
           >
-=======
-          <h1 id="hero-heading" className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
->>>>>>> cursor/fix-errors-and-merge-to-main-a8ed
             Zion Tech Group
           </h1>
           <p className="text-xl md:text-2xl text-gray-600 mb-8 font-medium" role="doc-subtitle">
@@ -119,7 +108,6 @@ const HomePage: React.FC = () => {
               <div className="text-3xl mb-3">🔒</div>
               <h3 className="font-bold text-gray-900 mb-3 text-lg">Enterprise Security</h3>
               <p className="text-sm text-gray-600 leading-relaxed">Bank-level security and compliance for your critical data and infrastructure</p>
-<<<<<<< HEAD
             </div>
           </div>
           
@@ -139,9 +127,6 @@ const HomePage: React.FC = () => {
             >
               Get Free Consultation
             </a>
-=======
-            </div>cursor/analyze-improve-and-deploy-application-3d67
->>>>>>> cursor/fix-errors-and-merge-to-main-a8ed
           </div>
         </section>
 
@@ -201,11 +186,7 @@ const HomePage: React.FC = () => {
                 </div>
               </article>
             </Suspense>
-<<<<<<< HEAD
           </div>
-=======
-          </div>cursor/analyze-improve-and-deploy-application-3d67
->>>>>>> cursor/fix-errors-and-merge-to-main-a8ed
           
           <div className="grid md:grid-cols-3 gap-8">
             <article className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 focus-within:ring-4 focus-within:ring-indigo-300">
@@ -252,17 +233,31 @@ const HomePage: React.FC = () => {
               </ul>
             </article>
           </div>
-<<<<<<< HEAD
+          
+          <div className="text-center mt-8">
+            <a 
+              href="/services"
+              className="inline-block bg-indigo-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-4 focus:ring-indigo-300"
+            >
+              View All Services
+            </a>
+          </div>
         </section>
 
         {/* Content Carousel */}
-        <ContentCarousel />
+        <Suspense fallback={<div className="h-64 bg-gray-100 rounded-lg animate-pulse"></div>}>
+          <ContentCarousel />
+        </Suspense>
 
         {/* Dynamic Content Showcase */}
-        <DynamicContentShowcase />
+        <Suspense fallback={<div className="h-64 bg-gray-100 rounded-lg animate-pulse"></div>}>
+          <DynamicContentShowcase />
+        </Suspense>
 
         {/* Content Statistics */}
-        <ContentStatistics />
+        <Suspense fallback={<div className="h-64 bg-gray-100 rounded-lg animate-pulse"></div>}>
+          <ContentStatistics />
+        </Suspense>
 
         {/* Social Proof Section */}
         <section className="bg-gray-50 py-16" aria-labelledby="social-proof-heading">
@@ -322,7 +317,9 @@ const HomePage: React.FC = () => {
         </section>
 
         {/* Newsletter Signup */}
-        <ContentNewsletterSignup />
+        <Suspense fallback={<div className="h-32 bg-gray-100 rounded-lg animate-pulse"></div>}>
+          <ContentNewsletterSignup />
+        </Suspense>
 
         {/* Call to Action Section */}
         <section className="text-center bg-gradient-to-r from-indigo-50 to-purple-50 rounded-2xl p-12" aria-labelledby="cta-heading">
@@ -354,17 +351,6 @@ const HomePage: React.FC = () => {
             <p>✓ Custom solution design</p>
             <p>✓ 24/7 support available</p>
           </div>
-=======
-          
-          <div className="text-center mt-8">
-            <a 
-              href="/services"
-              className="inline-block bg-indigo-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-4 focus:ring-indigo-300"
-            >
-              View All Services
-            </a>cursor/analyze-improve-and-deploy-application-3d67
->>>>>>> origin/main
->>>>>>> cursor/fix-errors-and-merge-to-main-a8ed
         </section>
       </main>
       
