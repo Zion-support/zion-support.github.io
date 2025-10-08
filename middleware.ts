@@ -9,7 +9,7 @@ const MAX_REQUESTS = 100; // Max requests per window
 function getRateLimitKey(request: NextRequest): string {
   const forwarded = request.headers.get('x-forwarded-for');
   const realIp = request.headers.get('x-real-ip');
-  const ip = forwarded ? forwarded.split(',')[0].trim() : realIp || 'unknown';
+  const ip = forwarded ? forwarded.split(',')[0] : realIp || 'unknown';
   return `${ip}`;
 }
 

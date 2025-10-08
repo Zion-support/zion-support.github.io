@@ -2,7 +2,7 @@
  * Enhanced API Client with retry logic, caching, and error handling
  */
 
-import { cacheManager, CacheOptions as CacheMgrOptions } from './cacheManager';
+import { cacheManager, CacheOptions } from './cacheManager';
 import { logError, logCritical } from './errorLogger';
 
 export interface ApiClientConfig {
@@ -11,12 +11,12 @@ export interface ApiClientConfig {
   retries?: number;
   retryDelay?: number;
   headers?: Record<string, string>;
-  cacheOptions?: CacheMgrOptions;
+  cache?: CacheOptions;
 }
 
-export interface RequestConfig extends RequestInit {
+export interface RequestConfig extends Omit<RequestInit, 'cache'> {
   url: string;
-  cacheOptions?: CacheMgrOptions;
+  cacheOptions?: CacheOptions;
   retries?: number;
   timeout?: number;
   skipCache?: boolean;
@@ -41,7 +41,7 @@ export class ApiError extends Error {
 }
 
 class ApiClient {
-  private config: Required<Omit<ApiClientConfig, 'cacheOptions' | 'baseURL'>> & { baseURL: string; cacheOptions?: CacheMgrOptions };
+  private config: Required<Omit<ApiClientConfig, 'cache' | 'baseURL'>> & { baseURL: string; cache?: CacheOptions };
   private abortControllers: Map<string, AbortController> = new Map();
 
   constructor(config: ApiClientConfig = {}) {
@@ -53,7 +53,7 @@ class ApiClient {
       headers: config.headers || {
         'Content-Type': 'application/json',
       },
-      cacheOptions: config.cacheOptions,
+      cache: config.cache,
     };
   }
 
@@ -212,7 +212,7 @@ class ApiClient {
           cacheManager.set(
             cacheKey,
             data,
-            cacheConfig || this.config.cacheOptions || {}
+            cacheConfig || this.config.cache
           );
         }
 
@@ -337,7 +337,7 @@ const apiClient = new ApiClient({
   timeout: 30000,
   retries: 3,
   retryDelay: 1000,
-  cacheOptions: {
+  cache: {
     ttl: 5 * 60 * 1000, // 5 minutes
   },
 });

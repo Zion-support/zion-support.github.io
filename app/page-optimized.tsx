@@ -1,8 +1,8 @@
 import React from 'react';
 import dynamic from 'next/dynamic';
 import SEOOptimizer from './components/SEOOptimizer';
-import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import PerformanceMonitor from './components/PerformanceMonitor';
+import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 
 // Lazy load heavy components - these may not exist, so make them optional
 const UnifiedBanner = dynamic(() => import('./components/NewestContent2025Banner').catch(() => ({ default: () => null })), {
@@ -67,16 +67,16 @@ export const metadata = {
 
 export default function OptimizedHomePage() {
   return (
-    <div className="min-h-screen bg-white">
-      <SEOOptimizer />
-      <PerformanceMonitor />
-      
-      <AccessibilityEnhancer>
+    <AccessibilityEnhancer>
+      <div className="min-h-screen bg-white">
+        <SEOOptimizer />
+        <PerformanceMonitor />
+        
+        {/* Unified Banner System */}
+        <UnifiedBanner />
+        
         {/* Main Content */}
         <main className="relative">
-          {/* Unified Banner System - Optional */}
-          <UnifiedBanner />
-          
           {/* Hero Section */}
           <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white overflow-hidden">
             <div className="absolute inset-0 bg-black opacity-20"></div>
@@ -111,13 +111,13 @@ export default function OptimizedHomePage() {
             </div>
           </section>
 
-          {/* Content Showcase - Optional */}
+          {/* Content Showcase */}
           <ContentShowcase />
           
-          {/* Content Promotion - Optional */}
+          {/* Content Promotion */}
           <ContentPromotion />
         </main>
-      </AccessibilityEnhancer>
-    </div>
+      </div>
+    </AccessibilityEnhancer>
   );
 }
