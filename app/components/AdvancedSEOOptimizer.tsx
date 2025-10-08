@@ -5,9 +5,7 @@ interface SEOConfig {
   title: string;
   description: string;
   keywords: string[];
-  url: string;
   canonicalUrl: string;
-  url?: string;
   ogTitle?: string;
   ogDescription?: string;
   ogImage?: string;
@@ -23,6 +21,14 @@ interface SEOConfig {
   modifiedTime?: string;
   section?: string;
   tags?: string[];
+}
+
+interface SEOConfig {
+  title: string;
+  description: string;
+  url: string;
+  canonicalUrl: string;
+  keywords: string[];
 }
 
 interface AdvancedSEOOptimizerProps {
@@ -179,15 +185,13 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     trackPageView({
       title: config.title,
       description: config.description,
-      keywords: config.keywords,
-      url: config.canonicalUrl,
+      url: config.url,
       canonicalUrl: config.canonicalUrl,
       keywords: config.keywords,
     });
-      keywords: config.keywords,
 
     // Cleanup on unmount
-      keywords: config.keywords,
+    return () => {
       if (structuredDataRef.current) {
         structuredDataRef.current.remove();
       }
