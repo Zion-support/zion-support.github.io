@@ -49,7 +49,7 @@ export const loadBannerStats = async () => {
 };
 
 export const getRefreshInterval = () => {
-  return 30000; // 30 seconds default
+  return 30000;
 };
 
 export const getRotationStrategy = (): RotationStrategy => {
