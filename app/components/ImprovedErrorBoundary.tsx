@@ -102,7 +102,7 @@ class ImprovedErrorBoundary extends Component<Props, State> {
     window.location.reload();
   };
 
-  handleGoHome = (): void {
+  handleGoHome = (): void => {
     window.location.href = '/';
   };
 
