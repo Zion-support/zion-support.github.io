@@ -53,7 +53,7 @@ const HomePage: React.FC = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 neural-network-bg">
       {/* Navigation */}
       <Navigation />
       
@@ -141,7 +141,7 @@ const HomePage: React.FC = () => {
           </p>
           <div className="grid md:grid-cols-3 gap-8 mb-12">
             <Suspense fallback={<ServiceCardSkeleton />}>
-              <article className="cyber-card hologram-card">
+              <article className="cyber-card hologram-card quantum-float">
                 <div className="text-5xl mb-6 text-center">🤖</div>
                 <h3 className="text-2xl font-bold text-white mb-4 text-center">AI Services</h3>
                 <p className="text-gray-300 mb-6 text-center leading-relaxed">
@@ -157,7 +157,7 @@ const HomePage: React.FC = () => {
             </Suspense>
 
             <Suspense fallback={<ServiceCardSkeleton />}>
-              <article className="cyber-card hologram-card">
+              <article className="cyber-card hologram-card quantum-float">
                 <div className="text-5xl mb-6 text-center">📢</div>
                 <h3 className="text-2xl font-bold text-white mb-4 text-center">AI Marketing</h3>
                 <p className="text-gray-300 mb-6 text-center leading-relaxed">
@@ -173,7 +173,7 @@ const HomePage: React.FC = () => {
             </Suspense>
 
             <Suspense fallback={<ServiceCardSkeleton />}>
-              <article className="cyber-card hologram-card">
+              <article className="cyber-card hologram-card quantum-float">
                 <div className="text-5xl mb-6 text-center">⚙️</div>
                 <h3 className="text-2xl font-bold text-white mb-4 text-center">AI Automation</h3>
                 <p className="text-gray-300 mb-6 text-center leading-relaxed">
@@ -315,6 +315,83 @@ const HomePage: React.FC = () => {
             </a>
           </div>
 >>>>>>> cursor/analyze-improve-and-deploy-application-144c
+        </section>
+
+        {/* Micro SAAS Services Section */}
+        <section className="mb-16" aria-labelledby="micro-saas-heading">
+          <h2 id="micro-saas-heading" className="text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text">
+            Micro SAAS Solutions
+          </h2>
+          <p className="text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto">
+            Revolutionary AI-powered micro SAAS tools starting from just $79/month
+          </p>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+            <article className="cyber-card hologram-card quantum-float">
+              <div className="text-4xl mb-4 text-center">📝</div>
+              <h3 className="text-xl font-bold text-white mb-3 text-center">AI Content Generator</h3>
+              <p className="text-gray-300 mb-4 text-center text-sm">
+                Generate unlimited high-quality content with AI
+              </p>
+              <div className="text-center">
+                <div className="text-lg font-bold text-cyan-400 mb-2">$99/month</div>
+                <a href="/micro-saas" className="text-cyan-400 hover:text-cyan-300 font-medium text-sm">
+                  Learn More →
+                </a>
+              </div>
+            </article>
+
+            <article className="cyber-card hologram-card quantum-float">
+              <div className="text-4xl mb-4 text-center">📊</div>
+              <h3 className="text-xl font-bold text-white mb-3 text-center">Smart Analytics</h3>
+              <p className="text-gray-300 mb-4 text-center text-sm">
+                Real-time business intelligence and insights
+              </p>
+              <div className="text-center">
+                <div className="text-lg font-bold text-pink-400 mb-2">$149/month</div>
+                <a href="/micro-saas" className="text-pink-400 hover:text-pink-300 font-medium text-sm">
+                  Learn More →
+                </a>
+              </div>
+            </article>
+
+            <article className="cyber-card hologram-card quantum-float">
+              <div className="text-4xl mb-4 text-center">💬</div>
+              <h3 className="text-xl font-bold text-white mb-3 text-center">AI Customer Support</h3>
+              <p className="text-gray-300 mb-4 text-center text-sm">
+                24/7 AI-powered customer service automation
+              </p>
+              <div className="text-center">
+                <div className="text-lg font-bold text-blue-400 mb-2">$79/month</div>
+                <a href="/micro-saas" className="text-blue-400 hover:text-blue-300 font-medium text-sm">
+                  Learn More →
+                </a>
+              </div>
+            </article>
+
+            <article className="cyber-card hologram-card quantum-float">
+              <div className="text-4xl mb-4 text-center">📱</div>
+              <h3 className="text-xl font-bold text-white mb-3 text-center">AI Social Media</h3>
+              <p className="text-gray-300 mb-4 text-center text-sm">
+                Complete social media automation platform
+              </p>
+              <div className="text-center">
+                <div className="text-lg font-bold text-green-400 mb-2">$129/month</div>
+                <a href="/micro-saas" className="text-green-400 hover:text-green-300 font-medium text-sm">
+                  Learn More →
+                </a>
+              </div>
+            </article>
+          </div>
+          
+          <div className="text-center">
+            <a 
+              href="/micro-saas"
+              className="cyber-button"
+              style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}
+            >
+              View All Micro SAAS Solutions
+            </a>
+          </div>
         </section>
 
         {/* Content Carousel */}

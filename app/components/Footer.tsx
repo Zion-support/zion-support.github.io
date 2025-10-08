@@ -4,59 +4,75 @@ import { Phone, Mail, MapPin, Clock, Award, Shield, Zap } from 'lucide-react';
 
 const Footer: React.FC = memo(() => {
   return (
-    <footer className="bg-gray-900 text-white py-12">
+    <footer className="bg-slate-900/95 backdrop-blur-md text-white py-16 border-t border-cyan-500/20">
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-4 gap-8">
           {/* Company Info */}
           <div>
-            <h3 className="text-2xl font-bold mb-4">Zion Tech Group</h3>
-            <p className="text-gray-300 mb-4">
+            <h3 className="text-2xl font-bold mb-4 text-cyan-400 neon-text">Zion Tech Group</h3>
+            <p className="text-gray-300 mb-4 leading-relaxed">
               Leading provider of enterprise AI solutions, quantum computing, and autonomous
-              systems.
+              systems. Transforming businesses with cutting-edge technology.
             </p>
-            <div className="text-gray-300">
-              <p>364 E Main St STE 1008</p>
-              <p>Middletown, DE 19709</p>
-              <p>United States</p>
+            <div className="text-gray-300 space-y-1">
+              <div className="flex items-center">
+                <MapPin className="w-4 h-4 mr-2 text-cyan-400" />
+                <span>364 E Main St STE 1008</span>
+              </div>
+              <div className="flex items-center">
+                <MapPin className="w-4 h-4 mr-2 text-cyan-400 opacity-0" />
+                <span>Middletown, DE 19709</span>
+              </div>
+              <div className="flex items-center">
+                <MapPin className="w-4 h-4 mr-2 text-cyan-400 opacity-0" />
+                <span>United States</span>
+              </div>
             </div>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
+            <h4 className="text-lg font-semibold mb-4 text-cyan-400">Quick Links</h4>
             <ul className="space-y-2">
               <li>
-                <Link to="/" className="text-gray-300 hover:text-white transition-colors">
+                <Link to="/" className="text-gray-300 hover:text-cyan-400 transition-colors flex items-center">
+                  <Zap className="w-3 h-3 mr-2" />
                   Home
                 </Link>
               </li>
               <li>
-                <Link to="/about" className="text-gray-300 hover:text-white transition-colors">
+                <Link to="/about" className="text-gray-300 hover:text-cyan-400 transition-colors flex items-center">
+                  <Zap className="w-3 h-3 mr-2" />
                   About
                 </Link>
               </li>
               <li>
-                <Link to="/services" className="text-gray-300 hover:text-white transition-colors">
+                <Link to="/services" className="text-gray-300 hover:text-cyan-400 transition-colors flex items-center">
+                  <Zap className="w-3 h-3 mr-2" />
                   Services
                 </Link>
               </li>
               <li>
-                <Link to="/services-advertising" className="text-gray-300 hover:text-white transition-colors">
-                  AI Advertising
+                <Link to="/micro-saas" className="text-gray-300 hover:text-cyan-400 transition-colors flex items-center">
+                  <Zap className="w-3 h-3 mr-2" />
+                  Micro SAAS
                 </Link>
               </li>
               <li>
-                <Link to="/case-studies" className="text-gray-300 hover:text-white transition-colors">
+                <Link to="/case-studies" className="text-gray-300 hover:text-cyan-400 transition-colors flex items-center">
+                  <Zap className="w-3 h-3 mr-2" />
                   Case Studies
                 </Link>
               </li>
               <li>
-                <Link to="/enterprise" className="text-gray-300 hover:text-white transition-colors">
+                <Link to="/enterprise" className="text-gray-300 hover:text-cyan-400 transition-colors flex items-center">
+                  <Zap className="w-3 h-3 mr-2" />
                   Enterprise
                 </Link>
               </li>
               <li>
-                <Link to="/team" className="text-gray-300 hover:text-white transition-colors">
+                <Link to="/team" className="text-gray-300 hover:text-cyan-400 transition-colors flex items-center">
+                  <Zap className="w-3 h-3 mr-2" />
                   Team
                 </Link>
               </li>
@@ -65,85 +81,89 @@ const Footer: React.FC = memo(() => {
 
           {/* Services */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Services</h4>
+            <h4 className="text-lg font-semibold mb-4 text-cyan-400">Services</h4>
             <ul className="space-y-2 text-gray-300">
               <li>
-                <Link to="/services" className="hover:text-white transition-colors">
+                <Link to="/services" className="hover:text-cyan-400 transition-colors flex items-center">
+                  <Shield className="w-3 h-3 mr-2" />
                   All Services
                 </Link>
               </li>
               <li>
-                <Link to="/ai-services" className="hover:text-white transition-colors">
-                  AI Services
-                </Link>
-              </li>
-              <li>
-                <Link to="/ai-data-analytics" className="hover:text-white transition-colors">
-                  AI Data Analytics
-                </Link>
-              </li>
-              <li>
-                <Link to="/ai-cybersecurity" className="hover:text-white transition-colors">
-                  AI Cybersecurity
-                </Link>
-              </li>
-              <li>
-                <Link to="/ai-workflow-automation" className="hover:text-white transition-colors">
-                  AI Workflow Automation
-                </Link>
-              </li>
-              <li>
-                <Link to="/ai-cloud-infrastructure" className="hover:text-white transition-colors">
-                  AI Cloud Infrastructure
-                </Link>
-              </li>
-              <li>
-                <Link to="/ai-ecommerce-solutions" className="hover:text-white transition-colors">
-                  AI E-commerce Solutions
-                </Link>
-              </li>
-              <li>
-                <Link to="/ai-mobile-app-development" className="hover:text-white transition-colors">
-                  AI Mobile App Development
-                </Link>
-              </li>
-              <li>
-                <Link to="/it-services" className="hover:text-white transition-colors">
-                  IT Services
-                </Link>
-              </li>
-              <li>
-                <Link to="/micro-saas" className="hover:text-white transition-colors">
+                <Link to="/micro-saas" className="hover:text-cyan-400 transition-colors flex items-center">
+                  <Shield className="w-3 h-3 mr-2" />
                   Micro SAAS
                 </Link>
               </li>
               <li>
-                <Link to="/quantum-computing" className="hover:text-white transition-colors">
+                <Link to="/ai-services" className="hover:text-cyan-400 transition-colors flex items-center">
+                  <Shield className="w-3 h-3 mr-2" />
+                  AI Services
+                </Link>
+              </li>
+              <li>
+                <Link to="/ai-data-analytics" className="hover:text-cyan-400 transition-colors flex items-center">
+                  <Shield className="w-3 h-3 mr-2" />
+                  AI Data Analytics
+                </Link>
+              </li>
+              <li>
+                <Link to="/ai-cybersecurity" className="hover:text-cyan-400 transition-colors flex items-center">
+                  <Shield className="w-3 h-3 mr-2" />
+                  AI Cybersecurity
+                </Link>
+              </li>
+              <li>
+                <Link to="/ai-workflow-automation" className="hover:text-cyan-400 transition-colors flex items-center">
+                  <Shield className="w-3 h-3 mr-2" />
+                  AI Workflow Automation
+                </Link>
+              </li>
+              <li>
+                <Link to="/ai-cloud-infrastructure" className="hover:text-cyan-400 transition-colors flex items-center">
+                  <Shield className="w-3 h-3 mr-2" />
+                  AI Cloud Infrastructure
+                </Link>
+              </li>
+              <li>
+                <Link to="/ai-ecommerce-solutions" className="hover:text-cyan-400 transition-colors flex items-center">
+                  <Shield className="w-3 h-3 mr-2" />
+                  AI E-commerce Solutions
+                </Link>
+              </li>
+              <li>
+                <Link to="/ai-mobile-app-development" className="hover:text-cyan-400 transition-colors flex items-center">
+                  <Shield className="w-3 h-3 mr-2" />
+                  AI Mobile App Development
+                </Link>
+              </li>
+              <li>
+                <Link to="/it-services" className="hover:text-cyan-400 transition-colors flex items-center">
+                  <Shield className="w-3 h-3 mr-2" />
+                  IT Services
+                </Link>
+              </li>
+              <li>
+                <Link to="/quantum-computing" className="hover:text-cyan-400 transition-colors flex items-center">
+                  <Shield className="w-3 h-3 mr-2" />
                   Quantum Computing
                 </Link>
               </li>
               <li>
-                <Link to="/autonomous-systems" className="hover:text-white transition-colors">
+                <Link to="/autonomous-systems" className="hover:text-cyan-400 transition-colors flex items-center">
+                  <Shield className="w-3 h-3 mr-2" />
                   Autonomous Systems
                 </Link>
               </li>
               <li>
-                <Link to="/business-intelligence" className="hover:text-white transition-colors">
-                  Business Intelligence
-                </Link>
-              </li>
-              <li>
-                <Link to="/blockchain-web3" className="hover:text-white transition-colors">
+                <Link to="/blockchain-web3" className="hover:text-cyan-400 transition-colors flex items-center">
+                  <Shield className="w-3 h-3 mr-2" />
                   Blockchain & Web3
                 </Link>
               </li>
               <li>
-                <Link to="/iot-edge-computing" className="hover:text-white transition-colors">
-                  IoT & Edge Computing
-                </Link>
-              </li>
-              <li>
-                <Link to="/cybersecurity" className="hover:text-white transition-colors">
+                <Link to="/cybersecurity" className="hover:text-cyan-400 transition-colors flex items-center">
+                  <Shield className="w-3 h-3 mr-2" />
                   Cybersecurity
                 </Link>
               </li>
@@ -152,42 +172,40 @@ const Footer: React.FC = memo(() => {
 
           {/* Contact */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Contact</h4>
-            <div className="space-y-2 text-gray-300">
-              <p>Email: kleber@ziontechgroup.com</p>
-              <p>Phone: +1 (302) 464-0950</p>
-              <p>Website: ziontechgroup.com</p>
-              <div className="flex space-x-4 mt-4">
-                <a href="https://linkedin.com/company/ziontechgroup" className="text-gray-300 hover:text-white transition-colors">
-                  LinkedIn
-                </a>
-                <a href="https://twitter.com/ziontechgroup" className="text-gray-300 hover:text-white transition-colors">
-                  Twitter
+            <h4 className="text-lg font-semibold mb-4 text-cyan-400">Contact</h4>
+            <div className="space-y-3">
+              <div className="flex items-center">
+                <Phone className="w-5 h-5 mr-3 text-cyan-400" />
+                <a href="tel:+13024640950" className="text-gray-300 hover:text-cyan-400 transition-colors">
+                  +1 302 464 0950
                 </a>
               </div>
+              <div className="flex items-center">
+                <Mail className="w-5 h-5 mr-3 text-cyan-400" />
+                <a href="mailto:kleber@ziontechgroup.com" className="text-gray-300 hover:text-cyan-400 transition-colors">
+                  kleber@ziontechgroup.com
+                </a>
+              </div>
+              <div className="flex items-center">
+                <MapPin className="w-5 h-5 mr-3 text-cyan-400" />
+                <span className="text-gray-300">364 E Main St STE 1008, Middletown DE 19709</span>
+              </div>
+              <div className="flex items-center">
+                <Clock className="w-5 h-5 mr-3 text-cyan-400" />
+                <span className="text-gray-300">24/7 Support Available</span>
+              </div>
               
-              {/* Contact Info */}
-              <div className="space-y-3 mt-6">
-                <div className="flex items-center">
-                  <Phone className="w-5 h-5 mr-3 text-blue-400" />
-                  <a href="tel:+13024640950" className="text-gray-300 hover:text-white transition-colors">
-                    +1 302 464 0950
-                  </a>
-                </div>
-                <div className="flex items-center">
-                  <Mail className="w-5 h-5 mr-3 text-blue-400" />
-                  <a href="mailto:kleber@ziontechgroup.com" className="text-gray-300 hover:text-white transition-colors">
-                    kleber@ziontechgroup.com
-                  </a>
-                </div>
-                <div className="flex items-center">
-                  <MapPin className="w-5 h-5 mr-3 text-blue-400" />
-                  <span className="text-gray-300">364 E Main St STE 1008, Middletown DE 19709</span>
-                </div>
-                <div className="flex items-center">
-                  <Clock className="w-5 h-5 mr-3 text-blue-400" />
-                  <span className="text-gray-300">24/7 Support Available</span>
-                </div>
+              {/* Social Links */}
+              <div className="flex space-x-4 mt-6">
+                <a href="https://linkedin.com/company/ziontechgroup" className="text-gray-300 hover:text-cyan-400 transition-colors">
+                  LinkedIn
+                </a>
+                <a href="https://twitter.com/ziontechgroup" className="text-gray-300 hover:text-cyan-400 transition-colors">
+                  Twitter
+                </a>
+                <a href="https://github.com/ziontechgroup" className="text-gray-300 hover:text-cyan-400 transition-colors">
+                  GitHub
+                </a>
               </div>
             </div>
 
