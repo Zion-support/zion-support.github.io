@@ -11,7 +11,7 @@ export interface ApiClientConfig {
   retries?: number;
   retryDelay?: number;
   headers?: Record<string, string>;
-  cache?: CacheOptions;
+  cacheOptions?: CacheOptions;
 }
 
 export interface RequestConfig extends Omit<RequestInit, 'cache'> {
@@ -41,7 +41,7 @@ export class ApiError extends Error {
 }
 
 class ApiClient {
-  private config: Required<Omit<ApiClientConfig, 'cache' | 'baseURL'>> & { baseURL: string; cache?: CacheOptions };
+  private config: Required<Omit<ApiClientConfig, 'cacheOptions' | 'baseURL'>> & { baseURL: string; cacheOptions?: CacheOptions };
   private abortControllers: Map<string, AbortController> = new Map();
 
   constructor(config: ApiClientConfig = {}) {
@@ -53,7 +53,7 @@ class ApiClient {
       headers: config.headers || {
         'Content-Type': 'application/json',
       },
-      cache: config.cache,
+      cacheOptions: config.cacheOptions,
     };
   }
 
@@ -141,7 +141,7 @@ class ApiClient {
       url,
       method = 'GET',
       headers = {},
-      cache: cacheConfig,
+      cacheOptions: cacheConfig,
       skipCache = false,
       retries = this.config.retries,
       timeout = this.config.timeout,
@@ -212,7 +212,7 @@ class ApiClient {
           cacheManager.set(
             cacheKey,
             data,
-            cacheConfig || this.config.cache
+            cacheConfig || this.config.cacheOptions || {}
           );
         }
 
@@ -337,7 +337,7 @@ const apiClient = new ApiClient({
   timeout: 30000,
   retries: 3,
   retryDelay: 1000,
-  cache: {
+  cacheOptions: {
     ttl: 5 * 60 * 1000, // 5 minutes
   },
 });
