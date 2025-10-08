@@ -106,6 +106,10 @@
     "app_disabled/**",
     "fix-*.jsx",
     "fix-*.ts",
-    "jest.setup.*"
+    "jest.setup.*",
+    "lint-target/**",
+    "pages_disabled/**",
+    "temp-files/**",
+    "netlify/**"
   ]
 }
