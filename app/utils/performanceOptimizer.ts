@@ -130,15 +130,12 @@ class PerformanceOptimizer {
           const clsEntry = entry as PerformanceEntry & { hadRecentInput?: boolean; value: number }
           if (!clsEntry.hadRecentInput) {
             clsValue += clsEntry.value
-
           }
         })
         this.metrics.cls = clsValue
       })
       observer.observe({ entryTypes: ['layout-shift'] })
       this.observers.push(observer)
-    } catch {
-    } catch {
     } catch {
       // Ignore if not supported
     }
@@ -156,8 +153,6 @@ class PerformanceOptimizer {
       observer.observe({ entryTypes: ['paint'] })
       this.observers.push(observer)
     } catch {
-    } catch {
-    } catch {
       // Ignore if not supported
     }
   }
@@ -169,14 +164,11 @@ class PerformanceOptimizer {
           const navEntry = entry as PerformanceEntry & { responseStart: number; requestStart: number }
           if (navEntry.responseStart > 0) {
             this.metrics.ttfb = navEntry.responseStart - navEntry.requestStart
-
           }
         })
       })
       observer.observe({ entryTypes: ['navigation'] })
       this.observers.push(observer)
-    } catch {
-    } catch {
     } catch {
       // Ignore if not supported
     }
@@ -185,15 +177,13 @@ class PerformanceOptimizer {
     if ('memory' in performance) {
       const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; jsHeapSizeLimit: number } }).memory
       if (memory) {
-        this.metrics.memory = memory.usedJSHeapSize / memory.jsHeapSizeLimit
+        this.metrics.memoryUsage = memory.usedJSHeapSize
       }
     }
   }
-  lazyLoadImages() {
+  private measureRenderTime(): void {
     if (typeof window === 'undefined') return
 
-    const images = document.querySelectorAll('img[data-src]')
-    
     // Check if PerformanceObserver exists (may not be available in test environments)
     if (typeof PerformanceObserver === 'undefined') return;
 
@@ -427,7 +417,10 @@ class PerformanceOptimizer {
   }
 
   /**
-   * Cleanup observers and resources
+   * Generate comprehensive performance report
+   */
+  generateComprehensiveReport(): string {
+    const score = this.getPerformanceScore();
     const metrics = this.getMetrics();
 
     return `
@@ -457,7 +450,7 @@ ${metrics.memoryUsage > 30 * 1024 * 1024 ? '- Review memory usage and optimize c
     
     if (process.env.NODE_ENV === 'development') { 
       console.log('Performance optimization completed'); 
-      console.log(this.generateReport()); 
+      console.log(this.generateComprehensiveReport()); 
     }
   }
   public cleanup(): void {

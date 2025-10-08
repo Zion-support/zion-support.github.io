@@ -10,6 +10,6 @@ export const selectBannersForDisplay = () => [];
 export const selectBalancedBanners = () => [];
 export const trackImpression = () => {};
 export const trackClick = () => {};
-export const loadBannerStats = () => ({});
+export const loadBannerStats = () => ({ impressions: 0, clicks: 0, ctr: 0 });
 export const getRefreshInterval = () => 5000;
 export const getRotationStrategy = (): RotationStrategy => 'balanced';
