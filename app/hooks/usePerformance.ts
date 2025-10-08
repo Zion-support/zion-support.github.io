@@ -76,25 +76,30 @@ export const usePerformance = () => {
       setMetrics(performanceData);
       setIsMonitoring(false);
 
-      // Report to analytics
-      analytics.trackPerformance('load_time', performanceData.loadTime);
-      analytics.trackPerformance(
+      // Report to analytics using trackTiming
+      analytics.trackTiming('performance', 'load_time', performanceData.loadTime);
+      analytics.trackTiming(
+        'performance',
         'dom_content_loaded',
         performanceData.domContentLoaded
       );
-      analytics.trackPerformance(
+      analytics.trackTiming(
+        'performance',
         'first_contentful_paint',
         performanceData.firstContentfulPaint
       );
-      analytics.trackPerformance(
+      analytics.trackTiming(
+        'performance',
         'largest_contentful_paint',
         performanceData.largestContentfulPaint
       );
-      analytics.trackPerformance(
+      analytics.trackTiming(
+        'performance',
         'cumulative_layout_shift',
         performanceData.cumulativeLayoutShift
       );
-      analytics.trackPerformance(
+      analytics.trackTiming(
+        'performance',
         'first_input_delay',
         performanceData.firstInputDelay
       );
