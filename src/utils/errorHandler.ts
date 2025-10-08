@@ -133,19 +133,6 @@ export class ErrorHandler {
     if (this.errorQueue.length > this.maxQueueSize) {
       this.errorQueue.shift();
     }
-    if (message.includes('validation') || message.includes('invalid')) {
-      return ErrorCategory.VALIDATION;
-    }
-    if (message.includes('api') || stack.includes('api')) {
-      return ErrorCategory.API;
-    }
-    if (message.includes('component') || stack.includes('react')) {
-      return ErrorCategory.UI;
-    }
-    if (message.includes('runtime') || stack.includes('runtime')) {
-      return ErrorCategory.RUNTIME;
-    }
-    return ErrorCategory.UNKNOWN;
   }
 
   /**

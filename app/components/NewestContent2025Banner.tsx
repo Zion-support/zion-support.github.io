@@ -130,7 +130,6 @@ const NewestContent2025Banner: React.FC = () => {
             </div>
           </div>
         </div>
-      </div>
     </section>
   );
 };
