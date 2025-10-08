@@ -160,7 +160,7 @@ export class CSRFProtection {
   }
   
   public static validateToken(token: string): boolean {
-//     const storedToken = this.getToken();
+const storedToken = this.getToken();
     return storedToken !== null && storedToken === token;
   }
   
@@ -190,13 +190,13 @@ export class SecureStorage {
   
   public static setItem(key: string, value: string): void {
     if (typeof localStorage === 'undefined') return;
-//     const encrypted = this.encryptData(value);
+const encrypted = this.encryptData(value);
     localStorage.setItem(key, encrypted);
   }
   
   public static getItem(key: string): string | null {
     if (typeof localStorage === 'undefined') return null;
-//     const encrypted = localStorage.getItem(key);
+const encrypted = localStorage.getItem(key);
     if (!encrypted) return null;
     return this.decryptData(encrypted);
   }
