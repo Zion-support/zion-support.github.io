@@ -83,7 +83,7 @@ export class AppErrorBoundary extends Component<AppErrorBoundaryProps, AppErrorB
     this.setState({ hasError: false, error: undefined });
   };
 
-  override render() {
+  render() {
     if (this.state.hasError && this.state.error) {
       return <ErrorFallback error={this.state.error} resetError={this.resetError} />;
     }

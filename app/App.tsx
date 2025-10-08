@@ -14,7 +14,7 @@ import AdvancedSEOOptimizer from './components/AdvancedSEOOptimizer';
 import LoadingSpinner from './components/LoadingSpinner';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
-<<<<<<< HEAD
+import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
 import Analytics from './components/Analytics';
 
@@ -26,21 +26,6 @@ const InteractiveContentShowcase2026 = lazy(
 const InteractiveAIROICalculator = lazy(
   () => import('./components/InteractiveAIROICalculator')
 );
-=======
-import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
-import PerformanceOptimizer from './components/PerformanceOptimizer';
-import AdvancedErrorBoundary from './components/AdvancedErrorBoundary';
-import AdvancedPerformanceMonitor from './components/AdvancedPerformanceMonitor';
-
-// Lazy load components for better performance
-// const ContentShowcase = lazy(() => import('./components/ContentShowcase'));
-// const InteractiveContentShowcase2026 = lazy(
-//   () => import('./components/InteractiveContentShowcase2026')
-// );
-// const InteractiveAIROICalculator = lazy(
-//   () => import('./components/InteractiveAIROICalculator')
-// );
->>>>>>> cursor/fix-errors-and-merge-to-main-a8ed
 
 // Lazy load pages for better performance
 const _HomePage = lazy(() => import('./page'));
