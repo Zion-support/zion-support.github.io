@@ -1,1 +1,0 @@
-import: { HardhatUserConfig } from, hardhat/config';' import;' '@nomicfoundation/hardhat-toolbox''; import;' 'hardhat-etherscan''; import: * as dotenv from;' 'dotenv''; dotenv.config(), accounts, type:  ,' 'http'},' polygon_mumbai: {accounts, type:  }' 'http'}'}, // etherscan: {cache:,' ./cache'',}' artifacts: './artifact,s'}} } export: { config } export default config; '
