@@ -1,12 +1,12 @@
 import React from 'react';
-import Link from 'next/link';
+import Link from '../../utils/link';
 import { ArrowLeft } from 'lucide-react';
-import { Metadata } from 'next';
+import { Metadata } from '../../types/next';
 
 export const metadata: Metadata = {
   title: "AI-Powered Autonomous Business Processes: The 2026 Revolution",
   description: "Discover how AI-powered autonomous business processes are revolutionizing enterprise operations in 2026, delivering unprecedented efficiency and strategic insights.",
-  keywords: 'autonomous business processes, AI automation, enterprise transformation, business process optimization, AI agents',
+  keywords: ['autonomous business processes, AI automation, enterprise transformation, business process optimization, AI agents'],
   openGraph: {
     title: 'AI-Powered Autonomous Business Processes: The 2026 Revolution',
     description: 'Discover how AI-powered autonomous business processes are revolutionizing enterprise operations in 2026, delivering unprecedented efficiency and strategic insights.',

@@ -1,13 +1,12 @@
 import React from 'react';
-import Link from 'next/link';
-import { Metadata } from 'next';
+import Link from './utils/link';
+import { Metadata } from './types/next';
 
 export const metadata: Metadata = {
   title: 'AI & Technology Blog | Zion Tech Group',
   description:
     'Latest insights on AI, enterprise automation, and digital transformation from Zion Tech Group experts.',
-  keywords:
-    'AI blog, enterprise technology, automation insights, digital transformation',
+  keywords: ['AI blog, enterprise technology, automation insights, digital transformation'],
   openGraph: {
     title: 'AI & Technology Blog | Zion Tech Group',
     description:

@@ -1,10 +1,10 @@
 import React from 'react';
-import Link from 'next/link';
+import Link from '../../utils/link';
 
 export const metadata = {
   title: 'AI Autonomous Business Systems 2026: 95% Automation Achievement | Zion Tech Group',
   description: 'Discover how AI autonomous business systems achieved 95% operational automation. Revolutionary self-managing enterprises transform business operations.',
-  keywords: 'autonomous business systems, AI automation 2026, self-managing enterprise, business process automation, AI operations',
+  keywords: ['autonomous business systems, AI automation 2026, self-managing enterprise, business process automation, AI operations'],
   openGraph: {
     title: 'AI Autonomous Business Systems 2026: 95% Automation Achievement',
     description: 'Revolutionary self-managing enterprises achieve 95% operational automation through AI autonomous business systems.',

@@ -1,6 +1,6 @@
 import React from 'react';
-import { Metadata } from 'next';
-import Link from 'next/link';
+import { Metadata } from './types/next';
+import Link from './utils/link';
 
 export const metadata: Metadata = {
   title: 'Enterprise Solutions - Zion Tech Group',

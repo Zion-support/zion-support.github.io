@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import Link from '../utils/link';
 
 const UltimateBusinessIntelligence2025Banner: React.FC = () => {
   return (

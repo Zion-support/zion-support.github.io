@@ -1,5 +1,5 @@
 import React from 'react';
-import { Metadata } from 'next';
+import { Metadata } from '../../types/next';
 
 export const metadata: Metadata = {
   title: "AI 2026 April Revolutionary Breakthrough: Meta-Cognitive Superintelligence Platform",
@@ -8,9 +8,9 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'AI 2026 April Revolutionary Breakthrough: Meta-Cognitive Superintelligence Platform',
     description: 'Revolutionary AI breakthrough featuring meta-cognitive superintelligence and quantum-neural consciousness fusion delivering unprecedented enterprise transformation.',
-    authors: ['Zion Tech Group'],
-  
-    publishedTime: '2026-04-01T00:00:00.000Z',}
+    publishedTime: '2026-04-01T00:00:00.000Z',
+    authors: ['Zion Tech Group']
+  }
 };
 
 export default function AI2026AprilRevolutionaryBreakthrough() {

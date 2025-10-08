@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import Link from './utils/link';
 import { ArrowLeft, Home, Search, BookOpen, Users, Phone } from 'lucide-react';
 
 export default function NotFound() {

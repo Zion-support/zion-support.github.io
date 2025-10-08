@@ -1,5 +1,5 @@
 import React from 'react';
-import { Metadata } from 'next';
+import { Metadata } from './types/next';
 
 const metadata: Metadata = {
   title: 'Privacy Policy - Zion Tech Group',

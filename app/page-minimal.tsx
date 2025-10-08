@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import Link from './utils/link';
 import { ArrowRight, Phone, CheckCircle, Star } from 'lucide-react';
 
 export const metadata = {

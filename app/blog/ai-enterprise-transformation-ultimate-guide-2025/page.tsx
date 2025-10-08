@@ -1,10 +1,10 @@
 import React from 'react';
-import { Metadata } from 'next';
+import { Metadata } from '../../types/next';
 
 export const metadata: Metadata = {
   title: 'AI Enterprise Transformation Ultimate Guide 2025: $2B+ ROI Strategies | Zion Tech Group',
   description: 'Complete guide to AI enterprise transformation achieving $2B+ ROI. Learn autonomous operations, quantum AI, and multi-agent orchestration strategies from Fortune 500 success stories.',
-  keywords: 'AI enterprise transformation, autonomous operations, quantum AI, multi-agent orchestration, enterprise AI ROI, Fortune 500 AI success, AI strategy, enterprise automation',
+  keywords: ['AI enterprise transformation, autonomous operations, quantum AI, multi-agent orchestration, enterprise AI ROI, Fortune 500 AI success, AI strategy, enterprise automation'],
   openGraph: {
     title: 'AI Enterprise Transformation Ultimate Guide 2025: $2B+ ROI Strategies',
     description: 'Complete guide to AI enterprise transformation achieving $2B+ ROI. Learn autonomous operations, quantum AI, and multi-agent orchestration strategies.',

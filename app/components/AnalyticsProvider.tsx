@@ -1,4 +1,4 @@
-'use client';
+// // 'use client'; // Removed for Vite compatibility // Removed for Vite compatibility
 
 import React, { createContext, useContext, useEffect, useState } from 'react';
 import { logger } from '../utils/logger';

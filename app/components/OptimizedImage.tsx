@@ -1,5 +1,5 @@
 import React, { useState, useCallback, memo } from 'react';
-import Image from 'next/image';
+import Image from '../utils/image';
 
 interface OptimizedImageProps {
   src: string;

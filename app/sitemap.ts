@@ -1,6 +1,6 @@
-import { MetadataRoute } from 'next';
+import { MetadataRoute, MetadataRouteSitemap } from './types/next';
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default function sitemap(): MetadataRouteSitemap {
   const baseUrl = 'https://ziontechgroup.com';
 
   return [

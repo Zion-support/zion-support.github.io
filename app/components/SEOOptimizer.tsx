@@ -1,7 +1,7 @@
-'use client';
+// // 'use client'; // Removed for Vite compatibility // Removed for Vite compatibility
 
 import React, { useEffect } from 'react';
-import { usePathname } from 'next/navigation';
+import { usePathname } from '../utils/navigation';
 
 const SEOOptimizer: React.FC = () => {
   const pathname = usePathname();

@@ -1,7 +1,7 @@
-'use client';
+// // 'use client'; // Removed for Vite compatibility // Removed for Vite compatibility
 
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-import Link from 'next/link';
+import Link from '../utils/link';
 import { FileWarning } from 'lucide-react';
 
 interface Props {
