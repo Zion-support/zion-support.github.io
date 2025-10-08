@@ -20,10 +20,18 @@ export default function HomePage() {
               </Link>
             </div>
             <nav className="hidden md:flex space-x-8">
-              <Link to="/" className="text-gray-900 hover:text-blue-600">Home</Link>
-              <Link to="/services" className="text-gray-900 hover:text-blue-600">Services</Link>
-              <Link to="/blog" className="text-gray-900 hover:text-blue-600">Blog</Link>
-              <Link to="/case-studies" className="text-gray-900 hover:text-blue-600">Case Studies</Link>
+              <Link to="/" className="text-gray-900 hover:text-blue-600">
+                Home
+              </Link>
+              <Link to="/services" className="text-gray-900 hover:text-blue-600">
+                Services
+              </Link>
+              <Link to="/blog" className="text-gray-900 hover:text-blue-600">
+                Blog
+              </Link>
+              <Link to="/contact" className="text-gray-900 hover:text-blue-600">
+                Contact
+              </Link>
             </nav>
           </div>
         </div>
@@ -129,11 +137,11 @@ export default function HomePage() {
                 <Link className="w-5 h-5 ml-2" />
               </Link>
               <Link
-                to="/case-studies"
+                to="/blog"
                 className="inline-flex items-center px-8 py-4 bg-transparent border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-semibold"
               >
-                View Success Stories
-                <Link className="w-5 h-5 ml-2" />
+                View Our Blog
+                <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
             </div>
           </div>
