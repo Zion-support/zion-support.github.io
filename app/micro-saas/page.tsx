@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Globe } from 'lucide-react';
+import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Search, Phone, Mail, MapPin, FileText, BarChart3, MessageSquare, Calendar, Database, Settings, Headphones } from 'lucide-react';
 
 const MicroSAASPage: React.FC = () => {
   const microSAASServices = [
