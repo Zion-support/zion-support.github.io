@@ -21,6 +21,13 @@ export default defineConfig({
     assetsInlineLimit: 4096,
     reportCompressedSize: true,
     rollupOptions: {
+      external: (id) => {
+        // Externalize Next.js modules to prevent build errors
+        if (id.includes('next/') || id.includes('next')) {
+          return true;
+        }
+        return false;
+      },
       output: {
         manualChunks: (id) => {
           // Core React libraries
