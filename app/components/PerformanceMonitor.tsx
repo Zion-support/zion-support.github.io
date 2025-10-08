@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState, memo } from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 interface LayoutShift extends PerformanceEntry {
   hadRecentInput: boolean;
@@ -9,6 +10,8 @@ interface LayoutShift extends PerformanceEntry {
 }
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-4560
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-77f8
 
 interface PerformanceMetrics {
   fcp?: number;
@@ -33,6 +36,9 @@ const PerformanceMonitor: React.FC = () => {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-77f8
     // Set up performance observer for more detailed monitoring
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-4560
