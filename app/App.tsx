@@ -2,15 +2,15 @@
 
 import React, { Suspense, lazy, useEffect, useCallback } from 'react';
 import { HelmetProvider } from 'react-helmet-async';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 
 // Components
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
-import PerformanceDashboard from './components/PerformanceDashboard';
-import AdvancedPerformanceMonitor from './components/AdvancedPerformanceMonitor';
 import AdvancedErrorBoundary from './components/AdvancedErrorBoundary';
-import SEOEnhancer from './components/SEOEnhancer';
 import AdvancedSEOOptimizer from './components/AdvancedSEOOptimizer';
+import AdvancedPerformanceMonitor from './components/AdvancedPerformanceMonitor';
+import SEOEnhancer from './components/SEOEnhancer';
+import PerformanceDashboard from './components/PerformanceDashboard';
 import LoadingSpinner from './components/LoadingSpinner';
 
 // Lazy load pages for better performance
@@ -45,12 +45,12 @@ const App: React.FC = () => {
       }
     }
     
-    console.log('Performance monitoring initialized');
-    console.log('🚀 Zion Tech Group App initialized with comprehensive monitoring');
+    logger.lifecycle('performance monitoring initialized', 'App');
+    logger.info('🚀 Zion Tech Group App initialized with comprehensive monitoring', 'App');
   }, []);
 
-  const handleError = useCallback((error: Error, errorInfo: React.ErrorInfo) => {
-    console.error('Application Error:', error, errorInfo);
+  const handleError = useCallback((error: Error, errorInfo: any) => {
+    logger.error('Application Error', 'ErrorBoundary', { error: error.message, errorInfo });
   }, []);
 
   return (
@@ -58,7 +58,9 @@ const App: React.FC = () => {
       <AdvancedErrorBoundary
         enableErrorReporting={true}
         enableRetry={true}
-        onError={handleError}
+        onError={(error, errorInfo) => {
+          logger.error('Application Error', error, { component: 'ErrorBoundary', errorInfo });
+        }}
       >
         <AccessibilityEnhancer>
           <SEOEnhancer

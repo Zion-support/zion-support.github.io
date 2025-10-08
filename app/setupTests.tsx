@@ -4,19 +4,6 @@
 
 import '@testing-library/jest-dom';
 
-// Suppress jsdom navigation warnings
-// eslint-disable-next-line no-console
-const originalConsoleError = console.error;
-// eslint-disable-next-line no-console
-console.error = (...args) => {
-  const message = args[0]?.toString?.() || args[0]?.message || '';
-  if (message.includes('Not implemented: navigation') || 
-      message.includes('navigation (except hash changes)')) {
-    return;
-  }
-  originalConsoleError(...args);
-};
-
 // Mock window.matchMedia
 Object.defineProperty(window, 'matchMedia', {
   writable: true,
@@ -62,9 +49,36 @@ Object.defineProperty(window, 'sessionStorage', {
 global.fetch = jest.fn();
 
 // Mock console methods for cleaner test output
+const originalConsoleError = console.error;
 const originalConsoleWarn = console.warn;
 const originalConsoleInfo = console.info;
 
+// Suppress jsdom navigation warnings
+// eslint-disable-next-line no-console
+console.error = (...args) => {
+  const message = args[0]?.toString?.() || args[0]?.message || '';
+  if (message.includes('Not implemented: navigation') || 
+      message.includes('navigation (except hash changes)')) {
+    return;
+  }
+  originalConsoleError(...args);
+};
+
+console.warn = (...args) => {
+  const message = args[0]?.toString?.() || '';
+  if (message.includes('Warning: ReactDOM.render is no longer supported')) {
+    return;
+  }
+  originalConsoleWarn(...args);
+};
+
+console.info = (...args) => {
+  const message = args[0]?.toString?.() || '';
+  if (message.includes('ReactDOM.render is no longer supported')) {
+    return;
+  }
+  originalConsoleInfo(...args);
+};
 
 // Mock PerformanceObserver
 global.PerformanceObserver = class MockPerformanceObserver {
@@ -93,20 +107,4 @@ delete (window as unknown as Record<string, unknown>).location;
   reload: jest.fn(),
   assign: jest.fn(),
   replace: jest.fn(),
-};
-
-console.warn = (...args) => {
-  const message = args[0]?.toString?.() || '';
-  if (message.includes('Warning: ReactDOM.render is no longer supported')) {
-    return;
-  }
-  originalConsoleWarn(...args);
-};
-
-console.info = (...args) => {
-  const message = args[0]?.toString?.() || '';
-  if (message.includes('ReactDOM.render is no longer supported')) {
-    return;
-  }
-  originalConsoleInfo(...args);
 };
