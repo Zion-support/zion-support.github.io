@@ -102,6 +102,8 @@ class ErrorHandler {
 
     // Send to error reporting service
     this.reportError(errorData);
+    
+    return errorData;
   }
 
   /**
