@@ -90,6 +90,7 @@ class HealthCheckService {
           name,
           duration
         })
+
       } catch (error) {
         logger.error(`Health check "${name}" failed`, error as Error)
 
