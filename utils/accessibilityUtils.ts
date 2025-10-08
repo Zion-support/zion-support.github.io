@@ -201,8 +201,8 @@ export const formAccessibility = {
 
   // Check color contrast
   checkContrast: (
-    foreground: string,
-    background: string,
+    _foreground: string,
+    _background: string,
     level: 'AA' | 'AAA' = 'AA'
   ): boolean => {
     const thresholds = { AA: 4.5, AAA: 7 };

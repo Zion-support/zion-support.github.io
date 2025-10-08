@@ -42,7 +42,7 @@ class ImprovedErrorBoundary extends Component<Props, State> {
     // Log error to monitoring service
     monitoring.logError({
       message: error.message,
-      stack: error.stack,
+      stack: error.stack || undefined,
       component: errorInfo.componentStack,
       timestamp: Date.now(),
       userAgent: navigator.userAgent,

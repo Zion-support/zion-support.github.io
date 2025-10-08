@@ -259,8 +259,8 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     return cleanupEventListeners;
   }, []);
 
-  // Announce changes to screen readers
-  const announceToScreenReader = (message: string) => {
+  // Announce changes to screen readers (available for future use)
+  const _announceToScreenReader = (message: string) => {
     const liveRegion = document.getElementById('live-region');
     if (liveRegion) {
       liveRegion.textContent = message;
