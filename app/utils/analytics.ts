@@ -3,13 +3,6 @@
  * Provides type-safe analytics tracking with error handling
  */
 
-
-// Declare gtag for Google Analytics
-declare global {
-  interface Window {
-    gtag: (...args: unknown[]) => void;
-  }
-}
 export interface AnalyticsEvent {
   action: string;
   category: string;
