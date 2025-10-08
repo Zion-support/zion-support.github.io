@@ -1,3 +1,5 @@
+import { ServiceVariant } from '../types/service-variants';
+import { ServiceVariant } from '../types/service-variants';
 
   id: string;
   name: string;
@@ -832,7 +834,7 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [,
     launchDate: '2024-09-01', customers: 123,
     rating: 4.8,
     reviews: 52,
-import { ServiceVariant } from '../types/service-variants';
+
 export interface InnovativeITService2025 {;
   id: string;
   name: string;
@@ -1900,7 +1902,7 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [;
     implementationDetails: 'Cloud-based blockchain platform with multi-chain support and enterprise features.'
     launchDate: '2024-09-01'
     customers: 123,
-import { ServiceVariant } from '../types/service-variants';
+
 export interface InnovativeITService2025 {;
   id: string;
   name: string;

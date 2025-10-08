@@ -1,7 +1,9 @@
-#!/usr/bin/env node
-
 import fs from 'fs';
 import path from 'path';
+#!/usr/bin/env node
+
+
+
 
 //Correct icon mappings - using actual lucide-react exports
 const iconMappings = {

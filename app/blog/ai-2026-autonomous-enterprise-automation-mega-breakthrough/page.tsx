@@ -1,5 +1,4 @@
-import React from 'react';
-import { Star } from 'lucide-react';
+import { Star } from "lucide-react";
 // import { Metadata } from 'next'; // Removed for Vite
 
 // Metadata removed for Vite compatibility
@@ -14,11 +13,14 @@ export default function AutonomousEnterpriseAutomationMegaBreakthrough() {
             AI 2026 Autonomous Enterprise Automation Mega Breakthrough
           </h1>
           <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8">
-            Complete Business Transformation with 99.98% Self-Managing Operations
+            Complete Business Transformation with 99.98% Self-Managing
+            Operations
           </p>
           <div className="flex items-center justify-center gap-2 text-yellow-400">
             <Star className="w-6 h-6 fill-current" />
-            <span className="text-lg font-semibold">Revolutionary Technology</span>
+            <span className="text-lg font-semibold">
+              Revolutionary Technology
+            </span>
           </div>
         </div>
 
@@ -76,7 +78,8 @@ export default function AutonomousEnterpriseAutomationMegaBreakthrough() {
               Ready to Transform Your Enterprise?
             </h2>
             <p className="text-gray-300 mb-6">
-              Join the autonomous enterprise revolution and unlock unprecedented business value.
+              Join the autonomous enterprise revolution and unlock unprecedented
+              business value.
             </p>
             <button className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl">
               Get Started Today

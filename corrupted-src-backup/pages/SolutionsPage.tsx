@@ -1,5 +1,5 @@
-import React from 'react';
-import SEO from '../components/SEO';
+import React from "react";
+import SEO from "../components/SEO";
 
 const SolutionsPage: React.FC = () => {
   return (
@@ -22,7 +22,8 @@ const SolutionsPage: React.FC = () => {
             <div className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow">
               <h3 className="text-xl font-semibold mb-4">AI Platform</h3>
               <p className="text-gray-600 mb-4">
-                Comprehensive AI platform with advanced machine learning capabilities.
+                Comprehensive AI platform with advanced machine learning
+                capabilities.
               </p>
               <a
                 href="/solutions/ai-platform"
@@ -35,7 +36,8 @@ const SolutionsPage: React.FC = () => {
             <div className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow">
               <h3 className="text-xl font-semibold mb-4">AI Security</h3>
               <p className="text-gray-600 mb-4">
-                Advanced security solutions powered by AI to protect your business.
+                Advanced security solutions powered by AI to protect your
+                business.
               </p>
               <a
                 href="/solutions/ai-security"

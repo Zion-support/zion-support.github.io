@@ -3,6 +3,7 @@
 Thank you for your interest in contributing to Zion.app! This document provides guidelines and instructions for contributing.
 
 ## Table of Contents
+
 - [Code of Conduct](#code-of-conduct)
 - [Getting Started](#getting-started)
 - [Development Process](#development-process)

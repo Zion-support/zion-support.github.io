@@ -1,7 +1,7 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { CheckCircle, ArrowRight, Shield, Zap } from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
+import React from "react";
+import { Link } from "react-router-dom";
+import { CheckCircle, ArrowRight, Shield, Zap } from "lucide-react";
+import { Helmet } from "react-helmet-async";
 
 const Pricing: React.FC = () => {
   return (
@@ -60,7 +60,9 @@ const Pricing: React.FC = () => {
               </div>
               <div className="text-center mb-6">
                 <h3 className="text-2xl font-semibold mb-2">Professional</h3>
-                <div className="text-4xl font-bold text-blue-600 mb-2">$299</div>
+                <div className="text-4xl font-bold text-blue-600 mb-2">
+                  $299
+                </div>
                 <div className="text-gray-600">per month</div>
               </div>
               <ul className="space-y-3 mb-8">
@@ -92,7 +94,9 @@ const Pricing: React.FC = () => {
             <div className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow">
               <div className="text-center mb-6">
                 <h3 className="text-2xl font-semibold mb-2">Enterprise</h3>
-                <div className="text-4xl font-bold text-blue-600 mb-2">Custom</div>
+                <div className="text-4xl font-bold text-blue-600 mb-2">
+                  Custom
+                </div>
                 <div className="text-gray-600">contact us</div>
               </div>
               <ul className="space-y-3 mb-8">

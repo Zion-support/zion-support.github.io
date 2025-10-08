@@ -1,7 +1,9 @@
-#!/usr/bin/env node
-
 import fs from 'fs';
 import { glob } from 'glob';
+#!/usr/bin/env node
+
+
+
 
 // Function to fix syntax errors in a file
 function fixSyntaxErrors(filePath) {

@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from 'react';
+import React, { useState, useCallback } from "react";
 
 interface ImageProps {
   src: string;
@@ -8,7 +8,7 @@ interface ImageProps {
   className?: string;
   priority?: boolean;
   _quality?: number;
-  _placeholder?: 'blur' | 'empty';
+  _placeholder?: "blur" | "empty";
   _blurDataURL?: string;
   fill?: boolean;
   sizes?: string;
@@ -25,7 +25,7 @@ export const Image: React.FC<ImageProps> = ({
   className,
   priority = false,
   _quality = 75,
-  _placeholder = 'empty',
+  _placeholder = "empty",
   _blurDataURL,
   fill = false,
   sizes,
@@ -50,12 +50,12 @@ export const Image: React.FC<ImageProps> = ({
   const imageStyle: React.CSSProperties = {
     ...style,
     ...(fill && {
-      position: 'absolute',
+      position: "absolute",
       top: 0,
       left: 0,
-      width: '100%',
-      height: '100%',
-      objectFit: 'cover',
+      width: "100%",
+      height: "100%",
+      objectFit: "cover",
     }),
   };
 
@@ -80,7 +80,7 @@ export const Image: React.FC<ImageProps> = ({
       className={className}
       style={imageStyle}
       sizes={sizes}
-      loading={priority ? 'eager' : 'lazy'}
+      loading={priority ? "eager" : "lazy"}
       onLoad={handleLoad}
       onError={handleError}
       {...props}

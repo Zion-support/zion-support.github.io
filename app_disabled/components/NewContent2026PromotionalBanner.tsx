@@ -18,7 +18,8 @@ export default function NewContent2026PromotionalBanner() {
             Latest AI Innovations & Success Stories
           </h2>
           <p className="text-xl text-blue-100 max-w-3xl mx-auto">
-            Explore cutting-edge AI technologies that are transforming industries worldwide
+            Explore cutting-edge AI technologies that are transforming
+            industries worldwide
           </p>
         </div>
 
@@ -42,8 +43,9 @@ export default function NewContent2026PromotionalBanner() {
             </h3>
 
             <p className="text-blue-100 mb-6 line-clamp-3">
-              Master privacy-preserving machine learning at scale. Achieve 99.9% accuracy while
-              keeping data distributed and secure across your organization.
+              Master privacy-preserving machine learning at scale. Achieve 99.9%
+              accuracy while keeping data distributed and secure across your
+              organization.
             </p>
 
             <div className="flex gap-4 mb-6">
@@ -86,8 +88,8 @@ export default function NewContent2026PromotionalBanner() {
             </h3>
 
             <p className="text-blue-100 mb-6 line-clamp-3">
-              Deploy intelligent robots that learn from experience. Achieve 98% task success rates
-              and $15M+ operational savings with deep RL.
+              Deploy intelligent robots that learn from experience. Achieve 98%
+              task success rates and $15M+ operational savings with deep RL.
             </p>
 
             <div className="flex gap-4 mb-6">
@@ -130,8 +132,8 @@ export default function NewContent2026PromotionalBanner() {
             </h3>
 
             <p className="text-blue-100 mb-6 line-clamp-3">
-              See how GlobalRetail Corp achieved $25M revenue increase and 45% conversion
-              improvement through AI-powered personalization.
+              See how GlobalRetail Corp achieved $25M revenue increase and 45%
+              conversion improvement through AI-powered personalization.
             </p>
 
             <div className="flex gap-4 mb-6">

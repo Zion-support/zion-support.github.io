@@ -1,6 +1,6 @@
 module.exports = {
   wcagCompliance: {
-    level: 'AA',
+    level: "AA",
     guidelines: {
       perceivable: true,
       operable: true,
@@ -23,9 +23,9 @@ module.exports = {
     focusIndicators: true,
   },
   colorContrast: {
-    ratio: '4.5:1',
-    largeText: '3:1',
-    enhanced: '7:1',
+    ratio: "4.5:1",
+    largeText: "3:1",
+    enhanced: "7:1",
   },
   motionPreferences: {
     respectReducedMotion: true,
@@ -35,8 +35,8 @@ module.exports = {
   altText: {
     images: true,
     icons: true,
-    decorative: 'empty',
-    functional: 'descriptive',
+    decorative: "empty",
+    functional: "descriptive",
   },
-  timestamp: '2025-10-08T15:29:24.151Z',
+  timestamp: "2025-10-08T15:29:24.151Z",
 };

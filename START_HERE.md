@@ -25,12 +25,12 @@ The code has been repaired and the build works locally. **You just need to do ON
 
 ## 📖 Documentation
 
-| Read This | When | Purpose |
-|-----------|------|---------|
-| **`QUICK_FIX.md`** | Right now | 3-minute visual guide |
-| `FIX_COMPLETE.md` | For overview | Complete summary |
-| `CHANGES_SUMMARY.md` | For details | All changes made |
-| `README_FIX.md` | For reference | Documentation index |
+| Read This            | When          | Purpose               |
+| -------------------- | ------------- | --------------------- |
+| **`QUICK_FIX.md`**   | Right now     | 3-minute visual guide |
+| `FIX_COMPLETE.md`    | For overview  | Complete summary      |
+| `CHANGES_SUMMARY.md` | For details   | All changes made      |
+| `README_FIX.md`      | For reference | Documentation index   |
 
 ---
 
@@ -104,7 +104,7 @@ This removes Next.js packages to prevent future issues.
 
 ---
 
-**TL;DR:** 
+**TL;DR:**
 
 1. Go to Netlify dashboard
 2. Remove `@netlify/plugin-nextjs` plugin

@@ -1,9 +1,14 @@
+import type { Metric } from 'web-vitals';
+import { onCLS, onFCP, onLCP, onTTFB } from 'web-vitals';
+import { onCLS, onFCP, onLCP, onTTFB, type Metric } from 'web-vitals';
+import { onCLS, onFCP, onLCP, onTTFB, type Metric } from 'web-vitals';
+import { onCLS, onFCP, onLCP, onTTFB, type Metric } from 'web-vitals';
 /**
  * Performance Monitoring Utility
  * Tracks and reports web vitals and performance metrics
  */
-import { onCLS, onFCP, onLCP, onTTFB } from 'web-vitals';
-import type { Metric } from 'web-vitals';
+
+
 
 // Extend Window interface for gtag
 declare global {
@@ -11,9 +16,9 @@ declare global {
     gtag?: (...args: unknown[]) => void;
   }
 }
-import { onCLS, onFCP, onLCP, onTTFB, type Metric } from 'web-vitals';
-import { onCLS, onFCP, onLCP, onTTFB, type Metric } from 'web-vitals';
-import { onCLS, onFCP, onLCP, onTTFB, type Metric } from 'web-vitals';
+
+
+
 
 // Types
 interface PerformanceMetric {

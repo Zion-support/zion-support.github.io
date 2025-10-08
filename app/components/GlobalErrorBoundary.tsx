@@ -1,4 +1,4 @@
-import React, { Component, ErrorInfo, ReactNode } from 'react';
+import React, { Component, ErrorInfo, ReactNode } from "react";
 
 interface Props {
   children: ReactNode;
@@ -24,22 +24,22 @@ class GlobalErrorBoundary extends Component<Props, State> {
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
       error,
-      errorInfo
+      errorInfo,
     });
 
     // Log error to console in development
-    if (process.env.NODE_ENV === 'development') {
-      console.error('Error caught by boundary:', error, errorInfo);
+    if (process.env.NODE_ENV === "development") {
+      console.error("Error caught by boundary:", error, errorInfo);
     }
 
     // Log error to analytics in production
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('event', 'exception', {
+    if (typeof window !== "undefined" && (window as any).gtag) {
+      (window as any).gtag("event", "exception", {
         description: error.message,
         fatal: false,
         custom_map: {
-          stack: error.stack
-        }
+          stack: error.stack,
+        },
       });
     }
   }
@@ -57,8 +57,18 @@ class GlobalErrorBoundary extends Component<Props, State> {
           <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6">
             <div className="flex items-center mb-4">
               <div className="flex-shrink-0">
-                <svg className="h-8 w-8 text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />
+                <svg
+                  className="h-8 w-8 text-red-400"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z"
+                  />
                 </svg>
               </div>
               <div className="ml-3">
@@ -69,7 +79,8 @@ class GlobalErrorBoundary extends Component<Props, State> {
             </div>
             <div className="mt-2">
               <p className="text-sm text-gray-500">
-                We're sorry, but something unexpected happened. Please try refreshing the page.
+                We're sorry, but something unexpected happened. Please try
+                refreshing the page.
               </p>
             </div>
             <div className="mt-4 flex space-x-3">
@@ -80,13 +91,19 @@ class GlobalErrorBoundary extends Component<Props, State> {
                 Refresh Page
               </button>
               <button
-                onClick={() => this.setState({ hasError: false, error: undefined, errorInfo: undefined })}
+                onClick={() =>
+                  this.setState({
+                    hasError: false,
+                    error: undefined,
+                    errorInfo: undefined,
+                  })
+                }
                 className="inline-flex items-center px-3 py-2 border border-gray-300 text-sm leading-4 font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
               >
                 Try Again
               </button>
             </div>
-            {process.env.NODE_ENV === 'development' && this.state.error && (
+            {process.env.NODE_ENV === "development" && this.state.error && (
               <details className="mt-4">
                 <summary className="text-sm font-medium text-gray-700 cursor-pointer">
                   Error Details (Development)

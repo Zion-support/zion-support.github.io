@@ -1,23 +1,25 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
 
 const AIInnovationAdvertisingBanner: React.FC = () => {
   const features = [
     {
-      title: 'AI-Powered Solutions',
+      title: "AI-Powered Solutions",
       description:
-        'Leverage cutting-edge artificial intelligence to transform your business operations.',
-      icon: '🤖',
+        "Leverage cutting-edge artificial intelligence to transform your business operations.",
+      icon: "🤖",
     },
     {
-      title: 'Advanced Analytics',
-      description: 'Get deep insights with our comprehensive analytics and reporting tools.',
-      icon: '📊',
+      title: "Advanced Analytics",
+      description:
+        "Get deep insights with our comprehensive analytics and reporting tools.",
+      icon: "📊",
     },
     {
-      title: 'Scalable Infrastructure',
-      description: 'Built to scale with your business needs and growth requirements.',
-      icon: '⚡',
+      title: "Scalable Infrastructure",
+      description:
+        "Built to scale with your business needs and growth requirements.",
+      icon: "⚡",
     },
   ];
 
@@ -27,8 +29,8 @@ const AIInnovationAdvertisingBanner: React.FC = () => {
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold mb-4">AI Innovation at Scale</h2>
           <p className="text-xl text-purple-200 max-w-3xl mx-auto">
-            Transform your business with our comprehensive AI solutions and cutting-edge technology
-            stack.
+            Transform your business with our comprehensive AI solutions and
+            cutting-edge technology stack.
           </p>
         </div>
 
@@ -41,7 +43,9 @@ const AIInnovationAdvertisingBanner: React.FC = () => {
                 <div key={index} className="flex items-start space-x-4">
                   <div className="text-2xl">{feature.icon}</div>
                   <div>
-                    <h4 className="text-lg font-medium mb-2">{feature.title}</h4>
+                    <h4 className="text-lg font-medium mb-2">
+                      {feature.title}
+                    </h4>
                     <p className="text-purple-200">{feature.description}</p>
                   </div>
                 </div>
@@ -51,10 +55,12 @@ const AIInnovationAdvertisingBanner: React.FC = () => {
 
           {/* Right Side - CTA */}
           <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 flex flex-col justify-center">
-            <h3 className="text-2xl font-semibold mb-4">Ready to Get Started?</h3>
+            <h3 className="text-2xl font-semibold mb-4">
+              Ready to Get Started?
+            </h3>
             <p className="text-purple-200 mb-6">
-              Join thousands of businesses already using our AI solutions to drive growth and
-              innovation.
+              Join thousands of businesses already using our AI solutions to
+              drive growth and innovation.
             </p>
             <div className="space-y-4">
               <Link

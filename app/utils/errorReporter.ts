@@ -3,7 +3,7 @@
  * Provides comprehensive error tracking, logging, and reporting capabilities
  */
 
-import { logger } from './logger';
+import { logger } from "./logger";
 
 export interface ErrorReport {
   message: string;
@@ -12,7 +12,7 @@ export interface ErrorReport {
   timestamp: string;
   userAgent: string;
   url: string;
-  severity: 'low' | 'medium' | 'high' | 'critical';
+  severity: "low" | "medium" | "high" | "critical";
   context?: Record<string, unknown>;
 }
 
@@ -25,8 +25,8 @@ export interface ErrorReporterConfig {
 }
 
 const defaultConfig: ErrorReporterConfig = {
-  enableConsoleLogging: process.env['NODE_ENV'] === 'development',
-  enableRemoteLogging: process.env['NODE_ENV'] === 'production',
+  enableConsoleLogging: process.env["NODE_ENV"] === "development",
+  enableRemoteLogging: process.env["NODE_ENV"] === "production",
   maxErrorsInMemory: 50,
   captureContext: true,
 };
@@ -59,15 +59,16 @@ export class ErrorReporter {
    */
   reportError(
     error: Error,
-    severity: ErrorReport['severity'] = 'medium',
-    context?: Record<string, unknown>
+    severity: ErrorReport["severity"] = "medium",
+    context?: Record<string, unknown>,
   ): void {
     const errorReport: ErrorReport = {
       message: error.message,
       stack: error.stack,
       timestamp: new Date().toISOString(),
-      userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : 'unknown',
-      url: typeof window !== 'undefined' ? window.location.href : 'unknown',
+      userAgent:
+        typeof navigator !== "undefined" ? navigator.userAgent : "unknown",
+      url: typeof window !== "undefined" ? window.location.href : "unknown",
       severity,
       context: this.config.captureContext ? context : undefined,
     };
@@ -99,23 +100,18 @@ export class ErrorReporter {
   private logToConsole(report: ErrorReport): void {
     const style = this.getConsoleStyle(report.severity);
     console.group(`%c[${report.severity.toUpperCase()}] Error Report`, style);
-    if (process.env['NODE_ENV'] === 'development') {
-      console.log('Message:', report.message);
+    if (process.env["NODE_ENV"] === "development") {
     }
-    if (process.env['NODE_ENV'] === 'development') {
-      console.log('Timestamp:', report.timestamp);
+    if (process.env["NODE_ENV"] === "development") {
     }
-    if (process.env['NODE_ENV'] === 'development') {
-      console.log('URL:', report.url);
+    if (process.env["NODE_ENV"] === "development") {
     }
     if (report.stack) {
-      if (process.env['NODE_ENV'] === 'development') {
-        console.log('Stack:', report.stack);
+      if (process.env["NODE_ENV"] === "development") {
       }
     }
     if (report.context) {
-      if (process.env['NODE_ENV'] === 'development') {
-        console.log('Context:', report.context);
+      if (process.env["NODE_ENV"] === "development") {
       }
     }
     console.groupEnd();
@@ -124,12 +120,12 @@ export class ErrorReporter {
   /**
    * Get console styling based on severity
    */
-  private getConsoleStyle(severity: ErrorReport['severity']): string {
+  private getConsoleStyle(severity: ErrorReport["severity"]): string {
     const styles = {
-      low: 'color: #2196F3; font-weight: bold',
-      medium: 'color: #FF9800; font-weight: bold',
-      high: 'color: #F44336; font-weight: bold',
-      critical: 'color: #D32F2F; font-weight: bold; font-size: 14px',
+      low: "color: #2196F3; font-weight: bold",
+      medium: "color: #FF9800; font-weight: bold",
+      high: "color: #F44336; font-weight: bold",
+      critical: "color: #D32F2F; font-weight: bold; font-size: 14px",
     };
     return styles[severity];
   }
@@ -142,16 +138,16 @@ export class ErrorReporter {
 
     try {
       await fetch(this.config.remoteEndpoint, {
-        method: 'POST',
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
         body: JSON.stringify(report),
       });
     } catch (error) {
       // Silently fail to avoid infinite loop
       if (this.config.enableConsoleLogging) {
-        logger.warn('Failed to send error to remote endpoint:', error);
+        logger.warn("Failed to send error to remote endpoint:", error);
       }
     }
   }
@@ -197,7 +193,7 @@ export class ErrorReporter {
         errors: this.errorQueue,
       },
       null,
-      2
+      2,
     );
   }
 }
@@ -207,8 +203,8 @@ export class ErrorReporter {
  */
 export const reportError = (
   error: Error,
-  severity?: ErrorReport['severity'],
-  context?: Record<string, unknown>
+  severity?: ErrorReport["severity"],
+  context?: Record<string, unknown>,
 ): void => {
   ErrorReporter.getInstance().reportError(error, severity, context);
 };
@@ -219,10 +215,10 @@ export const reportError = (
 export const captureComponentError = (
   error: Error,
   errorInfo: { componentStack: string },
-  componentName: string
+  componentName: string,
 ): void => {
   const report = ErrorReporter.getInstance();
-  report.reportError(error, 'high', {
+  report.reportError(error, "high", {
     componentName,
     componentStack: errorInfo.componentStack,
   });

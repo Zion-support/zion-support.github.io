@@ -1,7 +1,9 @@
-#!/usr/bin/env node
-
 import fs from 'fs';
 import { glob } from 'glob';
+#!/usr/bin/env node
+
+
+
 
 // Function to process a file
 function processFile(filePath) {
@@ -10,19 +12,19 @@ function processFile(filePath) {
     let _modified = false;
 
     // Fix duplicate React imports
-    if (content.includes("import React from 'react';\nimport React from 'react';")) {
+    if (content.includes("\n")) {
       content = content.replace(
-        /import React from 'react';\nimport React from 'react';/g,
-        "import React from 'react';"
+        /\n/g,
+        ""
       );
       modified = true;
     }
 
     // Fix duplicate React imports with different spacing
-    if (content.includes("import React from 'react';\n\nimport React from 'react';")) {
+    if (content.includes("\n\n")) {
       content = content.replace(
-        /import React from 'react';\n\nimport React from 'react';/g,
-        "import React from 'react';"
+        /\n\n/g,
+        ""
       );
       modified = true;
     }
@@ -41,7 +43,7 @@ function processFile(filePath) {
 
     // Fix Next.js imports in sitemap
     if (content.includes("import { Metadata } from 'next';")) {
-      content = content.replace(/import { Metadata } from 'next';/g, "import React from 'react';");
+      content = content.replace(/import { Metadata } from 'next';/g, "");
       modified = true;
     }
 

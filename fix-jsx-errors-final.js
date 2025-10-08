@@ -1,7 +1,9 @@
-#!/usr/bin/env node
-
 import fs from 'fs';
 import { glob } from 'glob';
+#!/usr/bin/env node
+
+
+
 
 //Find all TypeScript/JSX files in src/components
 const _files = await glob('src/components/**/*.{tsx,ts}');

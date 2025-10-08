@@ -1,105 +1,106 @@
-'use client';
-
-import React, { Suspense, lazy, useEffect } from 'react';
-import { HelmetProvider } from 'react-helmet-async';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import "./globals.css";
+import AccessibilityEnhancer from "./components/AccessibilityEnhancer";
+import AdvancedErrorBoundary from "./components/AdvancedErrorBoundary";
+import AdvancedPerformanceMonitor from "./components/AdvancedPerformanceMonitor";
+import AdvancedSEOOptimizer from "./components/AdvancedSEOOptimizer";
+import Analytics from "./components/Analytics";
+import Footer from "./components/Footer";
+import LoadingSpinner from "./components/LoadingSpinner";
+import Navigation from "./components/Navigation";
+import PerformanceDashboard from "./components/PerformanceDashboard";
+import PerformanceOptimizer from "./components/PerformanceOptimizer";
+import React, { Suspense, lazy, useEffect } from "react";
+import SEOEnhancer from "./components/SEOEnhancer";
+import accessibilityEnhancer from "./utils/accessibilityEnhancer";
+import performanceMonitor from "./utils/performanceMonitor";
+import seoOptimizer from "./utils/seoOptimizer";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HelmetProvider } from "react-helmet-async";
+import {
+  lazyLoadImages,
+  preloadCriticalResources,
+  collectPerformanceMetrics,
+  performanceOptimizer,
+} from "./utils/performanceOptimizer";
+import { logger } from "./utils/logger";
+("use client");
 
 // Components
-import AccessibilityEnhancer from './components/AccessibilityEnhancer';
-import PerformanceDashboard from './components/PerformanceDashboard';
-import AdvancedPerformanceMonitor from './components/AdvancedPerformanceMonitor';
-import AdvancedErrorBoundary from './components/AdvancedErrorBoundary';
-import SEOEnhancer from './components/SEOEnhancer';
-import AdvancedSEOOptimizer from './components/AdvancedSEOOptimizer';
-import LoadingSpinner from './components/LoadingSpinner';
-import Navigation from './components/Navigation';
-import Footer from './components/Footer';
-import PerformanceOptimizer from './components/PerformanceOptimizer';
-import Analytics from './components/Analytics';
 
 // Lazy load components for better performance
-const _ContentShowcase = lazy(() => import('./components/ContentShowcase'));
+const _ContentShowcase = lazy(() => import("./components/ContentShowcase"));
 const InteractiveContentShowcase2026 = lazy(
-  () => import('./components/InteractiveContentShowcase2026')
+  () => import("./components/InteractiveContentShowcase2026"),
 );
 const InteractiveAIROICalculator = lazy(
-  () => import('./components/InteractiveAIROICalculator')
+  () => import("./components/InteractiveAIROICalculator"),
 );
 
 // Lazy load pages for better performance
-const _HomePage = lazy(() => import('./page'));
-const _AboutPage = lazy(() => import('./about/page'));
-const _ServicesPage = lazy(() => import('./services/page'));
-const _ContactPage = lazy(() => import('./contact/page'));
-const _TeamPage = lazy(() => import('./team/page'));
-const _PrivacyPage = lazy(() => import('./privacy/page'));
-const _TermsPage = lazy(() => import('./terms/page'));
-const _EnterprisePage = lazy(() => import('./enterprise/page'));
-const _ServicesAdvertisingPage = lazy(() => import('./services-advertising/page'));
-const _CaseStudiesPage = lazy(() => import('./case-studies/page'));
+const _HomePage = lazy(() => import("./page"));
+const _AboutPage = lazy(() => import("./about/page"));
+const _ServicesPage = lazy(() => import("./services/page"));
+const _ContactPage = lazy(() => import("./contact/page"));
+const _TeamPage = lazy(() => import("./team/page"));
+const _PrivacyPage = lazy(() => import("./privacy/page"));
+const _TermsPage = lazy(() => import("./terms/page"));
+const _EnterprisePage = lazy(() => import("./enterprise/page"));
+const _ServicesAdvertisingPage = lazy(
+  () => import("./services-advertising/page"),
+);
+const _CaseStudiesPage = lazy(() => import("./case-studies/page"));
 
 // Utils
-import { lazyLoadImages, preloadCriticalResources, collectPerformanceMetrics, performanceOptimizer } from './utils/performanceOptimizer';
-import { logger } from './utils/logger';
-import performanceMonitor from './utils/performanceMonitor';
-import seoOptimizer from './utils/seoOptimizer';
-import accessibilityEnhancer from './utils/accessibilityEnhancer';
 
 // Styles
-import './globals.css';
 
 const App: React.FC = () => {
   useEffect(() => {
     // Initialize global error handling
-    logger.info('initialized', { component: 'App' });
+    logger.info("initialized", { component: "App" });
 
     // Initialize performance monitoring
     lazyLoadImages();
     preloadCriticalResources();
     performanceOptimizer.init();
     performanceMonitor.init();
-    
+
     // Initialize SEO optimization
     seoOptimizer.init();
-    
+
     // Initialize accessibility enhancements
     accessibilityEnhancer.init();
-    
+
     // Initialize Web Vitals monitoring
-    if (typeof window !== 'undefined' && 'performance' in window) {
+    if (typeof window !== "undefined" && "performance" in window) {
       const pageLoadMetrics = collectPerformanceMetrics();
       const metrics = performanceOptimizer.getMetrics();
       const performanceMetrics = performanceMonitor.getMetrics();
-      
+
       if (pageLoadMetrics) {
-        // eslint-disable-next-line no-console
-        console.log('Performance metrics collected:', pageLoadMetrics);
       }
       if (metrics) {
-        // eslint-disable-next-line no-console
-        console.log('Performance metrics:', metrics);
       }
       if (performanceMetrics) {
-        // eslint-disable-next-line no-console
-        console.log('Core Web Vitals:', performanceMetrics);
       }
     }
-    
+
     // Log performance and accessibility metrics periodically
     const metricsInterval = setInterval(() => {
       const performanceMetrics = performanceMonitor.getMetrics();
       const accessibilityMetrics = accessibilityEnhancer.getMetrics();
-      
-      if (process.env.NODE_ENV === 'development') {
+
+      if (process.env.NODE_ENV === "development") {
         // eslint-disable-next-line no-console
-        console.log('Performance Score:', performanceMonitor.getScore());
-        // eslint-disable-next-line no-console
-        console.log('Accessibility Score:', accessibilityMetrics.overallScore);
+        console.log("Performance Score:", performanceMonitor.getScore());
       }
     }, 30000);
-    
-    logger.info('performance monitoring initialized', { component: 'App' });
-    logger.info('🚀 Zion Tech Group App initialized with comprehensive monitoring', { component: 'App' });
+
+    logger.info("performance monitoring initialized", { component: "App" });
+    logger.info(
+      "🚀 Zion Tech Group App initialized with comprehensive monitoring",
+      { component: "App" },
+    );
 
     return () => {
       // Cleanup
@@ -127,26 +128,38 @@ const App: React.FC = () => {
             >
               <AdvancedSEOOptimizer
                 config={{
-                  title: 'Zion Tech Group - Advanced AI and IT Solutions',
-                  description: 'Leading provider of enterprise AI solutions, quantum computing, and autonomous systems. Transform your business with our cutting-edge technology.',
-                  keywords: ['AI solutions', 'enterprise AI', 'quantum computing', 'autonomous systems', 'digital transformation', 'automation', 'cloud services', 'AI consulting', 'business intelligence', 'machine learning'],
-                  canonicalUrl: 'https://ziontechgroup.com',
-                  ogImage: 'https://ziontechgroup.com/og-image.jpg',
+                  title: "Zion Tech Group - Advanced AI and IT Solutions",
+                  description:
+                    "Leading provider of enterprise AI solutions, quantum computing, and autonomous systems. Transform your business with our cutting-edge technology.",
+                  keywords: [
+                    "AI solutions",
+                    "enterprise AI",
+                    "quantum computing",
+                    "autonomous systems",
+                    "digital transformation",
+                    "automation",
+                    "cloud services",
+                    "AI consulting",
+                    "business intelligence",
+                    "machine learning",
+                  ],
+                  canonicalUrl: "https://ziontechgroup.com",
+                  ogImage: "https://ziontechgroup.com/og-image.jpg",
                   structuredData: {
-                    '@type': 'TechCompany',
-                    name: 'Zion Tech Group',
-                    description: 'Advanced AI and IT Solutions Provider',
-                    foundingDate: '2020',
-                    numberOfEmployees: '50-100',
-                    industry: 'Technology',
+                    "@type": "TechCompany",
+                    name: "Zion Tech Group",
+                    description: "Advanced AI and IT Solutions Provider",
+                    foundingDate: "2020",
+                    numberOfEmployees: "50-100",
+                    industry: "Technology",
                     services: [
-                      'AI Solutions',
-                      'Digital Transformation',
-                      'Cloud Services',
-                      'Automation',
-                      'Business Intelligence'
-                    ]
-                  }
+                      "AI Solutions",
+                      "Digital Transformation",
+                      "Cloud Services",
+                      "Automation",
+                      "Business Intelligence",
+                    ],
+                  },
                 }}
                 enableStructuredData={true}
                 enableOpenGraph={true}
@@ -167,9 +180,18 @@ const App: React.FC = () => {
                         <Route path="/team" element={<_TeamPage />} />
                         <Route path="/privacy" element={<_PrivacyPage />} />
                         <Route path="/terms" element={<_TermsPage />} />
-                        <Route path="/enterprise" element={<_EnterprisePage />} />
-                        <Route path="/services-advertising" element={<_ServicesAdvertisingPage />} />
-                        <Route path="/case-studies" element={<_CaseStudiesPage />} />
+                        <Route
+                          path="/enterprise"
+                          element={<_EnterprisePage />}
+                        />
+                        <Route
+                          path="/services-advertising"
+                          element={<_ServicesAdvertisingPage />}
+                        />
+                        <Route
+                          path="/case-studies"
+                          element={<_CaseStudiesPage />}
+                        />
                       </Routes>
                     </Suspense>
                   </main>
@@ -177,13 +199,18 @@ const App: React.FC = () => {
 
                   {/* Performance Dashboard */}
                   <PerformanceDashboard />
-                  
+
                   {/* Advanced Performance Monitor */}
                   <AdvancedPerformanceMonitor
-                    enableRealTimeMonitoring={process.env['NODE_ENV'] === 'development'}
+                    enableRealTimeMonitoring={
+                      process.env["NODE_ENV"] === "development"
+                    }
                     onMetricsUpdate={(metrics) => {
-                      if (process.env['NODE_ENV'] === 'development') {
-                        logger.info('Performance Metrics', { component: 'PerformanceMonitor', metrics });
+                      if (process.env["NODE_ENV"] === "development") {
+                        logger.info("Performance Metrics", {
+                          component: "PerformanceMonitor",
+                          metrics,
+                        });
                       }
                     }}
                   />

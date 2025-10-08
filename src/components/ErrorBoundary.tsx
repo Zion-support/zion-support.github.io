@@ -1,5 +1,5 @@
-import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
+import React, { Component, ErrorInfo, ReactNode } from "react";
+import { AlertTriangle, RefreshCw, Home } from "lucide-react";
 
 interface Props {
   children: ReactNode;
@@ -40,18 +40,26 @@ class ErrorBoundary extends Component<Props, State> {
   private reportError = (error: Error, errorInfo: ErrorInfo) => {
     // Report to external service (e.g., Sentry, LogRocket, etc.)
     if (
-      typeof window !== 'undefined' &&
+      typeof window !== "undefined" &&
       (
         window as unknown as {
-          gtag?: (command: string, eventName: string, parameters: Record<string, unknown>) => void;
+          gtag?: (
+            command: string,
+            eventName: string,
+            parameters: Record<string, unknown>,
+          ) => void;
         }
       ).gtag
     ) {
       (
         window as unknown as {
-          gtag: (command: string, eventName: string, parameters: Record<string, unknown>) => void;
+          gtag: (
+            command: string,
+            eventName: string,
+            parameters: Record<string, unknown>,
+          ) => void;
         }
-      ).gtag('event', 'exception', {
+      ).gtag("event", "exception", {
         description: error.message,
         fatal: false,
         custom_map: {
@@ -68,7 +76,7 @@ class ErrorBoundary extends Component<Props, State> {
 
   private handleGoHome = () => {
     if (window?.location) {
-      window.location.href = '/';
+      window.location.href = "/";
     }
   };
 
@@ -79,12 +87,17 @@ class ErrorBoundary extends Component<Props, State> {
           <div className="min-h-screen flex items-center justify-center bg-gray-900">
             <div className="text-center p-8 max-w-md">
               <AlertTriangle className="w-16 h-16 text-red-500 mx-auto mb-4" />
-              <h1 className="text-2xl font-bold text-white mb-4">Something went wrong</h1>
+              <h1 className="text-2xl font-bold text-white mb-4">
+                Something went wrong
+              </h1>
               <p className="text-gray-300 mb-6">
-                We&apos;re sorry, but something unexpected happened. Our team has been notified.
+                We&apos;re sorry, but something unexpected happened. Our team
+                has been notified.
               </p>
               {this.state.errorId && (
-                <p className="text-gray-400 mb-4 text-sm">Error ID: {this.state.errorId}</p>
+                <p className="text-gray-400 mb-4 text-sm">
+                  Error ID: {this.state.errorId}
+                </p>
               )}
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button

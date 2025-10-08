@@ -1,7 +1,11 @@
+import Header from "../src/components/Header"
+import { ArrowLeft, Calendar, Clock, Tag, TrendingUp, CheckCircle, Zap, Package, TruckIcon } from "lucide-react"
 import { Helmet } from "react-helmet-async"
 import { Link } from "react-router-dom"
-import { ArrowLeft, Calendar, Clock, Tag, TrendingUp, CheckCircle, Zap, Package, TruckIcon } from "lucide-react"
-import Header from "../src/components/Header"
+
+
+
+
 const AIAutonomousSupplyChainResilience2026 = () => {
   return (<div>
       <div></div>

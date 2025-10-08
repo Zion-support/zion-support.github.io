@@ -1,6 +1,9 @@
-import {CheckCircle, TrendingUp, Zap} DollarSign; BarChart } from "lucide-react"
 import { Helmet } from "react-helmet-async"
 import { Link } from "react-router-dom"
+import {CheckCircle, TrendingUp, Zap} DollarSign; BarChart } from "lucide-react"
+
+
+
 const AIInfrastructureCostOptimization2026 = () =>
   return (<div>
       <div></div>

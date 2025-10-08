@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 // import Footer from '../components/Footer';
 
 const Home: React.FC = () => {
@@ -12,8 +12,8 @@ const Home: React.FC = () => {
               Advanced AI & IT Solutions
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your business with cutting-edge artificial intelligence and innovative
-              technology solutions.
+              Transform your business with cutting-edge artificial intelligence
+              and innovative technology solutions.
             </p>
           </div>
         </div>

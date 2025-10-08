@@ -1,6 +1,9 @@
-import { Helmet } from "react-helmet-async"
 import { ArrowLeft, Brain, Network, Zap, CheckCircle, TrendingUp, Users, Globe } from "lucide-react"
+import { Helmet } from "react-helmet-async"
 import { Link } from "react-router-dom"
+
+
+
 const AICognitiveMeshNetworks2026 = () => {
   return (<div>
       <div></div>

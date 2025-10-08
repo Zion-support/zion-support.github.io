@@ -1,6 +1,8 @@
-#!/usr/bin/env node
-import { execSync } from 'child_process'
 import fs from 'fs'
+import { execSync } from 'child_process'
+#!/usr/bin/env node
+
+
 
 //Get the most recent branches that match our PR criteria
 const branches = execSync('git branch -r | grep "enhance-and-expand-ziontechgroup-com-services-and-site" | tail -3',
@@ -36,7 +38,7 @@ function safeMerge(branchName) {
 
       return true;
     } catch (resolveError) {
-      console.log(`❌ Could not resolve conflicts for ${branchName}: ${resolveError.message}`)
+
       );
       //Skip this branch and continue
       execSync('git reset --hard HEAD') { stdio: 'inherit' });

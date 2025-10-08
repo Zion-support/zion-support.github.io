@@ -1,6 +1,9 @@
-#!/usr/bin/env node
 import fs from 'fs'
 import path from 'path'
+import {UnifiedBanner} bannerConfigurations } from './UnifiedBannerSystem'
+#!/usr/bin/env node
+
+
 //Create a unified banner system to replace all the individual banner components
 const unifiedBannerSystem = `import React from 'react'
 interface BannerProps {type: 'showcase' | 'innovation' | 'breakthrough' | 'revolution' | 'content'
@@ -120,7 +123,7 @@ fs.writeFileSync('/workspace/app/components/UnifiedBannerSystem.tsx',
 //Create a script to replace banner imports
 const bannerReplacementScript = `
 //This script replaces all individual banner components with the unified system
-import {UnifiedBanner} bannerConfigurations } from './UnifiedBannerSystem'
+
 //Example usage:
 //<UnifiedBanner {...bannerConfigurations.aiShowcase} />
 //<UnifiedBanner {...bannerConfigurations.innovation} />

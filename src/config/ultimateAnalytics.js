@@ -61,5 +61,5 @@ module.exports = {
     trends: true,
     forecasting: true,
   },
-  timestamp: '2025-10-08T15:29:24.151Z',
+  timestamp: "2025-10-08T15:29:24.151Z",
 };

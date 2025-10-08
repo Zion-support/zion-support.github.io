@@ -1,6 +1,8 @@
-#!/usr/bin/env node
 import fs from 'fs'
 import path from 'path'
+#!/usr/bin/env node
+
+
 //Function to completely rewrite corrupted TSX files with proper structure
 function rewriteTSXFile(filePath) {try {
     let _content = fs.readFileSync(filePath} 'utf8');

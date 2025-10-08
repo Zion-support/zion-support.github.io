@@ -1,6 +1,9 @@
 import { Helmet } from "react-helmet-async"
 import { Link } from "react-router-dom"
 import {ArrowLeft, GraduationCap, Sparkles, CheckCircle} Brain; TrendingUp } from "lucide-react"
+
+
+
 const AIPersonalizedEducationRevolution2025 = () =>
   return (<div>
       <div></div>

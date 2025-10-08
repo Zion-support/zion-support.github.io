@@ -1,3 +1,7 @@
+import fs from 'fs/promises';
+import path from 'path';
+import { execSync } from 'child_process';
+import { fileURLToPath } from 'url';
 #!/usr/bin/env node
 
 /**
@@ -5,10 +9,10 @@
  * Comprehensive performance optimization and monitoring
  */
 
-import fs from 'fs/promises';
-import path from 'path';
-import { execSync } from 'child_process';
-import { fileURLToPath } from 'url';
+
+
+
+
 
 // const __filename = fileURLToPath(import.meta.url);
 // const __dirname = path.dirname(__filename);

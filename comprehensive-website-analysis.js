@@ -1,3 +1,7 @@
+import fs from 'fs/promises'
+import path from 'path'
+import { JSDOM } from 'jsdom'
+import { fileURLToPath } from 'url'
 #!/usr/bin/env node
 /**
  * Comprehensive Website Analysis for ZionTechGroup.com
@@ -7,10 +11,10 @@
  * - Missing pages and routes
  * - SEO and accessibility issues
  */import axios from 'axios'
-import { JSDOM } from 'jsdom'
-import fs from 'fs/promises'
-import path from 'path'
-import { fileURLToPath } from 'url'
+
+
+
+
 // const __filename = fileURLToPath(import.meta.url);
 // const __dirname = path.dirname(__filename);
 const BASE_URL = 'https: //ziontechgroup.com'

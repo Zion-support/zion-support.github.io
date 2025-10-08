@@ -4,9 +4,9 @@
  */
 
 export interface WebVitalsMetric {
-  name: 'CLS' | 'FID' | 'FCP' | 'LCP' | 'TTFB' | 'INP';
+  name: "CLS" | "FID" | "FCP" | "LCP" | "TTFB" | "INP";
   value: number;
-  rating: 'good' | 'needs-improvement' | 'poor';
+  rating: "good" | "needs-improvement" | "poor";
   delta: number;
   id: string;
   navigationType: string;
@@ -34,13 +34,13 @@ const THRESHOLDS = {
  * Calculate metric rating based on value
  */
 function getRating(
-  metricName: WebVitalsMetric['name'],
-  value: number
-): WebVitalsMetric['rating'] {
+  metricName: WebVitalsMetric["name"],
+  value: number,
+): WebVitalsMetric["rating"] {
   const threshold = THRESHOLDS[metricName];
-  if (value <= threshold.good) return 'good';
-  if (value <= threshold.poor) return 'needs-improvement';
-  return 'poor';
+  if (value <= threshold.good) return "good";
+  if (value <= threshold.poor) return "needs-improvement";
+  return "poor";
 }
 
 /**
@@ -55,7 +55,7 @@ function generateUniqueId(): string {
  */
 async function sendToAnalytics(
   metric: WebVitalsMetric,
-  endpoint?: string
+  endpoint?: string,
 ): Promise<void> {
   if (!endpoint) return;
 
@@ -72,15 +72,15 @@ async function sendToAnalytics(
       navigator.sendBeacon(endpoint, body);
     } else {
       fetch(endpoint, {
-        method: 'POST',
+        method: "POST",
         body,
-        headers: { 'Content-Type': 'application/json' },
+        headers: { "Content-Type": "application/json" },
         keepalive: true,
-//       }).catch(console.error);
+        //       }).catch(console.error);
       });
     }
   } catch {
-//     console.error('Failed to send metric to analytics:', error);
+    //     console.error('Failed to send metric to analytics:', error);
   }
 }
 
@@ -89,14 +89,14 @@ async function sendToAnalytics(
  */
 export function reportWebVitals(
   onPerfEntry?: (metric: WebVitalsMetric) => void,
-  config: WebVitalsConfig = {}
+  config: WebVitalsConfig = {},
 ): void {
-  if (!onPerfEntry || typeof window === 'undefined') return;
+  if (!onPerfEntry || typeof window === "undefined") return;
 
   const { reportAllChanges = false, debug = false, analyticsEndpoint } = config;
 
   // Cumulative Layout Shift (CLS)
-  if ('PerformanceObserver' in window) {
+  if ("PerformanceObserver" in window) {
     let clsValue = 0;
     let clsEntries: PerformanceEntry[] = [];
 
@@ -109,78 +109,83 @@ export function reportWebVitals(
 
           if (reportAllChanges) {
             const metric: WebVitalsMetric = {
-              name: 'CLS',
+              name: "CLS",
               value: clsValue,
-              rating: getRating('CLS', clsValue),
+              rating: getRating("CLS", clsValue),
               delta: (entry as any).value,
               id: generateUniqueId(),
-              navigationType: 'navigate',
+              navigationType: "navigate",
             };
 
             onPerfEntry(metric);
             if (analyticsEndpoint) sendToAnalytics(metric, analyticsEndpoint);
-//             if (debug) if (process.env['NODE_ENV'] === 'development') { if (process.env.DEV) { console.log('CLS:', metric); } }
+            //             if (debug) if (process.env['NODE_ENV'] === 'development') { if (process.env.DEV) { console.log('CLS:', metric); } }
           }
         }
       }
     });
 
     try {
-      clsObserver.observe({ type: 'layout-shift', buffered: true });
+      clsObserver.observe({ type: "layout-shift", buffered: true });
     } catch (e) {
-//       if (debug) console.warn('CLS observation not supported:', e);
+      //       if (debug) console.warn('CLS observation not supported:', e);
     }
 
     // Report final CLS on page hide
-    addEventListener('visibilitychange', () => {
-      if (document.visibilityState === 'hidden' && clsValue > 0) {
+    addEventListener("visibilitychange", () => {
+      if (document.visibilityState === "hidden" && clsValue > 0) {
         const metric: WebVitalsMetric = {
-          name: 'CLS',
+          name: "CLS",
           value: clsValue,
-          rating: getRating('CLS', clsValue),
+          rating: getRating("CLS", clsValue),
           delta: clsValue,
           id: generateUniqueId(),
-          navigationType: 'navigate',
+          navigationType: "navigate",
         };
 
         onPerfEntry(metric);
         if (analyticsEndpoint) sendToAnalytics(metric, analyticsEndpoint);
-//         if (debug) if (process.env['NODE_ENV'] === 'development') { if (process.env.DEV) { console.log('Final CLS:', metric); } }
+        //         if (debug) if (process.env['NODE_ENV'] === 'development') { if (process.env.DEV) { console.log('Final CLS:', metric); } }
       }
     });
   }
 
   // First Input Delay (FID)
-  if ('PerformanceObserver' in window) {
+  if ("PerformanceObserver" in window) {
     const fidObserver = new PerformanceObserver((entryList) => {
       const firstInput = entryList.getEntries()[0] as any;
       const fid = firstInput.processingStart - firstInput.startTime;
 
       const metric: WebVitalsMetric = {
-        name: 'FID',
+        name: "FID",
         value: fid,
-        rating: getRating('FID', fid),
+        rating: getRating("FID", fid),
         delta: fid,
         id: generateUniqueId(),
-        navigationType: 'navigate',
+        navigationType: "navigate",
       };
 
       onPerfEntry(metric);
       if (analyticsEndpoint) sendToAnalytics(metric, analyticsEndpoint);
-      if (debug) if (process.env['NODE_ENV'] === 'development') { if (process.env.DEV) { console.log('FID:', metric); } }
+      if (debug)
+        if (process.env["NODE_ENV"] === "development") {
+          if (process.env.DEV) {
+            console.log("FID:", metric);
+          }
+        }
 
       fidObserver.disconnect();
     });
 
     try {
-      fidObserver.observe({ type: 'first-input', buffered: true });
+      fidObserver.observe({ type: "first-input", buffered: true });
     } catch (e) {
-//       if (debug) console.warn('FID observation not supported:', e);
+      //       if (debug) console.warn('FID observation not supported:', e);
     }
   }
 
   // Largest Contentful Paint (LCP)
-  if ('PerformanceObserver' in window) {
+  if ("PerformanceObserver" in window) {
     let lcpValue = 0;
 
     const lcpObserver = new PerformanceObserver((entryList) => {
@@ -188,31 +193,31 @@ export function reportWebVitals(
       const lastEntry = entries[entries.length - 1];
       lcpValue = lastEntry.startTime;
 
-      if (reportAllChanges || document.visibilityState === 'hidden') {
+      if (reportAllChanges || document.visibilityState === "hidden") {
         const metric: WebVitalsMetric = {
-          name: 'LCP',
+          name: "LCP",
           value: lcpValue,
-          rating: getRating('LCP', lcpValue),
+          rating: getRating("LCP", lcpValue),
           delta: lcpValue,
           id: generateUniqueId(),
-          navigationType: 'navigate',
+          navigationType: "navigate",
         };
 
         onPerfEntry(metric);
         if (analyticsEndpoint) sendToAnalytics(metric, analyticsEndpoint);
-//         if (debug) if (process.env['NODE_ENV'] === 'development') { if (process.env.DEV) { console.log('LCP:', metric); } }
+        //         if (debug) if (process.env['NODE_ENV'] === 'development') { if (process.env.DEV) { console.log('LCP:', metric); } }
       }
     });
 
     try {
-      lcpObserver.observe({ type: 'largest-contentful-paint', buffered: true });
+      lcpObserver.observe({ type: "largest-contentful-paint", buffered: true });
     } catch (e) {
-//       if (debug) console.warn('LCP observation not supported:', e);
+      //       if (debug) console.warn('LCP observation not supported:', e);
     }
 
     // Report final LCP on page hide
-    addEventListener('visibilitychange', () => {
-      if (document.visibilityState === 'hidden' && lcpValue > 0) {
+    addEventListener("visibilitychange", () => {
+      if (document.visibilityState === "hidden" && lcpValue > 0) {
         lcpObserver.takeRecords();
         lcpObserver.disconnect();
       }
@@ -220,22 +225,22 @@ export function reportWebVitals(
   }
 
   // First Contentful Paint (FCP)
-  if ('PerformanceObserver' in window) {
+  if ("PerformanceObserver" in window) {
     const fcpObserver = new PerformanceObserver((entryList) => {
       for (const entry of entryList.getEntries()) {
-        if (entry.name === 'first-contentful-paint') {
+        if (entry.name === "first-contentful-paint") {
           const metric: WebVitalsMetric = {
-            name: 'FCP',
+            name: "FCP",
             value: entry.startTime,
-            rating: getRating('FCP', entry.startTime),
+            rating: getRating("FCP", entry.startTime),
             delta: entry.startTime,
             id: generateUniqueId(),
-            navigationType: 'navigate',
+            navigationType: "navigate",
           };
 
           onPerfEntry(metric);
           if (analyticsEndpoint) sendToAnalytics(metric, analyticsEndpoint);
-//           if (debug) if (process.env['NODE_ENV'] === 'development') { if (process.env.DEV) { console.log('FCP:', metric); } }
+          //           if (debug) if (process.env['NODE_ENV'] === 'development') { if (process.env.DEV) { console.log('FCP:', metric); } }
 
           fcpObserver.disconnect();
         }
@@ -243,25 +248,25 @@ export function reportWebVitals(
     });
 
     try {
-      fcpObserver.observe({ type: 'paint', buffered: true });
+      fcpObserver.observe({ type: "paint", buffered: true });
     } catch (e) {
-//       if (debug) console.warn('FCP observation not supported:', e);
+      //       if (debug) console.warn('FCP observation not supported:', e);
     }
   }
 
   // Time to First Byte (TTFB)
-  if ('performance' in window && 'navigation' in performance) {
+  if ("performance" in window && "navigation" in performance) {
     const navEntry = performance.getEntriesByType(
-      'navigation'
+      "navigation",
     )[0] as PerformanceNavigationTiming;
 
     if (navEntry) {
       const ttfb = navEntry.responseStart - navEntry.requestStart;
 
       const metric: WebVitalsMetric = {
-        name: 'TTFB',
+        name: "TTFB",
         value: ttfb,
-        rating: getRating('TTFB', ttfb),
+        rating: getRating("TTFB", ttfb),
         delta: ttfb,
         id: generateUniqueId(),
         navigationType: navEntry.type,
@@ -269,7 +274,7 @@ export function reportWebVitals(
 
       onPerfEntry(metric);
       if (analyticsEndpoint) sendToAnalytics(metric, analyticsEndpoint);
-//       if (debug) if (process.env['NODE_ENV'] === 'development') { if (process.env.DEV) { console.log('TTFB:', metric); } }
+      //       if (debug) if (process.env['NODE_ENV'] === 'development') { if (process.env.DEV) { console.log('TTFB:', metric); } }
     }
   }
 }
@@ -278,9 +283,9 @@ export function reportWebVitals(
  * Monitor long tasks that block the main thread
  */
 export function monitorLongTasks(
-  callback: (duration: number, startTime: number) => void
+  callback: (duration: number, startTime: number) => void,
 ): PerformanceObserver | null {
-  if (!('PerformanceObserver' in window)) return null;
+  if (!("PerformanceObserver" in window)) return null;
 
   try {
     const observer = new PerformanceObserver((list) => {
@@ -292,10 +297,10 @@ export function monitorLongTasks(
       }
     });
 
-    observer.observe({ entryTypes: ['longtask'] });
+    observer.observe({ entryTypes: ["longtask"] });
     return observer;
   } catch (e) {
-//     console.warn('Long task monitoring not supported:', e);
+    //     console.warn('Long task monitoring not supported:', e);
     return null;
   }
 }
@@ -304,12 +309,12 @@ export function monitorLongTasks(
  * Get current performance metrics snapshot
  */
 export function getPerformanceSnapshot(): Record<string, number> {
-  if (typeof window === 'undefined' || !('performance' in window)) {
+  if (typeof window === "undefined" || !("performance" in window)) {
     return {};
   }
 
   const navigation = performance.getEntriesByType(
-    'navigation'
+    "navigation",
   )[0] as PerformanceNavigationTiming;
 
   if (!navigation) return {};

@@ -12,35 +12,46 @@ export interface BannerConfig {
   [key: string]: any;
 }
 
-export type RotationStrategy = 'balanced' | 'sequential' | 'random' | 'weighted';
+export type RotationStrategy =
+  | "balanced"
+  | "sequential"
+  | "random"
+  | "weighted";
 
-export const selectBannersForDisplay = async (strategy: RotationStrategy, maxBanners: number): Promise<BannerConfig[]> => {
+export const selectBannersForDisplay = async (
+  strategy: RotationStrategy,
+  maxBanners: number,
+): Promise<BannerConfig[]> => {
   // Return empty array for now - this would be implemented with actual banner data
   return [];
 };
 
-export const selectBalancedBanners = async (maxBanners: number): Promise<BannerConfig[]> => {
+export const selectBalancedBanners = async (
+  maxBanners: number,
+): Promise<BannerConfig[]> => {
   return [];
 };
 
 export const trackImpression = async (bannerId: string): Promise<void> => {
   // Implementation would track banner impressions
-  console.log(`Tracking impression for banner: ${bannerId}`);
 };
 
 export const trackClick = async (bannerId: string): Promise<void> => {
   // Implementation would track banner clicks
-  console.log(`Tracking click for banner: ${bannerId}`);
 };
 
-export const loadBannerStats = async (): Promise<{ impressions: number; clicks: number; ctr: number }> => {
+export const loadBannerStats = async (): Promise<{
+  impressions: number;
+  clicks: number;
+  ctr: number;
+}> => {
   return {
     impressions: 0,
     clicks: 0,
-    ctr: 0
+    ctr: 0,
   };
 };
 
 export const getRefreshInterval = (): number => 5000;
 
-export const getRotationStrategy = (): RotationStrategy => 'balanced';
+export const getRotationStrategy = (): RotationStrategy => "balanced";

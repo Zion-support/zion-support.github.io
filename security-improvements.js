@@ -19,4 +19,4 @@ addSecurityHeaders();
 implementCSP();
 addInputValidation();
 
-// 
+//

@@ -2,7 +2,8 @@
 
 export const metadata = {
   title: "AI 2026 Revolutionary Breakthroughs: The Future is Here",
-  description: "Discover the revolutionary AI breakthroughs of 2026 that are transforming industries. From quantum AI to neural superintelligence.",
+  description:
+    "Discover the revolutionary AI breakthroughs of 2026 that are transforming industries. From quantum AI to neural superintelligence.",
   type: "article",
   url: "https://ziontechgroup.com/blog/ai-2026-revolutionary-breakthroughs",
   images: [
@@ -10,9 +11,9 @@ export const metadata = {
       url: "https://ziontechgroup.com/images/ai-2026-revolutionary-breakthroughs.jpg",
       width: 1200,
       height: 630,
-      alt: "AI 2026 Revolutionary Breakthroughs"
-    }
-  ]
+      alt: "AI 2026 Revolutionary Breakthroughs",
+    },
+  ],
 };
 
 export default function AI2026RevolutionaryBreakthroughsPage() {
@@ -23,7 +24,8 @@ export default function AI2026RevolutionaryBreakthroughsPage() {
           AI 2026 Revolutionary Breakthroughs: The Future is Here
         </h1>
         <p className="text-xl text-gray-300 mb-8">
-          Discover the revolutionary AI breakthroughs of 2026 that are transforming industries.
+          Discover the revolutionary AI breakthroughs of 2026 that are
+          transforming industries.
         </p>
       </div>
     </div>

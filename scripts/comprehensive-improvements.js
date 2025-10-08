@@ -1,3 +1,12 @@
+import fs from 'fs';
+import path from 'path';
+import performanceOptimizer from './src/utils/performanceOptimizer';
+import react from '@vitejs/plugin-react';
+import { analytics } from './src/utils/analytics';
+import { errorHandler } from './src/utils/errorHandler';
+import { execSync } from 'child_process';
+import { fileURLToPath } from 'url';
+import { visualizer } from 'rollup-plugin-visualizer';
 #!/usr/bin/env node
 
 /**
@@ -5,10 +14,10 @@
  * Automatically applies various code quality and performance improvements
  */
 
-import fs from 'fs';
-import path from 'path';
-import { execSync } from 'child_process';
-import { fileURLToPath } from 'url';
+
+
+
+
 
 // const __filename = fileURLToPath(import.meta.url);
 // const __dirname = path.dirname(__filename);
@@ -159,8 +168,8 @@ if (fs.existsSync(viteConfigPath)) {
 
 // Enhanced Vite configuration
 // const improvedViteConfig = `import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
-import { visualizer } from 'rollup-plugin-visualizer';
+
+
 
 export default defineConfig({
   plugins: [
@@ -217,9 +226,9 @@ export default defineConfig({
 fs.writeFileSync(viteConfigPath, improvedViteConfig);
 // // 6. Create performance monitoring setup
 // const performanceSetup = `// Performance monitoring setup
-import { analytics } from './src/utils/analytics';
-import { errorHandler } from './src/utils/errorHandler';
-import performanceOptimizer from './src/utils/performanceOptimizer';
+
+
+
 
 // Initialize performance monitoring
 if (typeof window !== 'undefined') {

@@ -1,11 +1,14 @@
+import fs from 'fs'
+import path from 'path'
+import { execSync } from 'child_process'
 #!/usr/bin/env node
 /**
  * Final Optimization Script for Zion Tech Group Website
  * Comprehensive performance, security, and quality improvements
  */
-import fs from 'fs'
-import path from 'path'
-import { execSync } from 'child_process'
+
+
+
 // // Performance optimizations
 const performanceOptimizations = {bundleAnalysis: () => {
 //     console.log('📊 Analyzing bundle size...'),

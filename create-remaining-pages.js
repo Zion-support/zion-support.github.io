@@ -1,5 +1,8 @@
 import fs from 'fs'
 import path from 'path'
+import { motion } from 'framer-motion'
+
+
 const remainingPages = [
   {name: 'ai-seo',
     title: 'AI SEO',
@@ -58,7 +61,7 @@ const remainingPages = [
 ];
 const generateServicePage = service => {
   const template = `import React from 'react'
-import { motion } from 'framer-motion'
+
 const ${service.name
     .split('-')
     .map(word => word.charAt(0).toUpperCase() + word.slice(1))

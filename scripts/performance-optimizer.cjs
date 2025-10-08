@@ -5,9 +5,9 @@
  * Comprehensive performance optimization script for the Zion Tech Group website
  */
 
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
+const fs = require("fs");
+const path = require("path");
+const { execSync } = require("child_process");
 
 class PerformanceOptimizer {
   constructor() {
@@ -21,13 +21,13 @@ class PerformanceOptimizer {
   }
 
   async optimizeImages() {
-    this.log('🖼️ Optimizing images...');
-    
-    const imageExtensions = ['.jpg', '.jpeg', '.png', '.webp', '.svg'];
-    const publicDir = path.join(process.cwd(), 'public');
-    
+    this.log("🖼️ Optimizing images...");
+
+    const imageExtensions = [".jpg", ".jpeg", ".png", ".webp", ".svg"];
+    const publicDir = path.join(process.cwd(), "public");
+
     if (!fs.existsSync(publicDir)) {
-      this.log('⚠️ Public directory not found, skipping image optimization');
+      this.log("⚠️ Public directory not found, skipping image optimization");
       return;
     }
 
@@ -35,14 +35,15 @@ class PerformanceOptimizer {
       try {
         const stats = fs.statSync(filePath);
         const sizeKB = Math.round(stats.size / 1024);
-        
-        if (sizeKB > 100) { // Only optimize images larger than 100KB
+
+        if (sizeKB > 100) {
+          // Only optimize images larger than 100KB
           this.log(`Optimizing ${path.basename(filePath)} (${sizeKB}KB)`);
           this.optimizations.push({
-            type: 'image',
+            type: "image",
             file: filePath,
             originalSize: sizeKB,
-            optimized: true
+            optimized: true,
           });
         }
       } catch (error) {
@@ -52,13 +53,15 @@ class PerformanceOptimizer {
 
     const walkDir = (dir) => {
       const files = fs.readdirSync(dir);
-      files.forEach(file => {
+      files.forEach((file) => {
         const filePath = path.join(dir, file);
         const stat = fs.statSync(filePath);
-        
+
         if (stat.isDirectory()) {
           walkDir(filePath);
-        } else if (imageExtensions.some(ext => file.toLowerCase().endsWith(ext))) {
+        } else if (
+          imageExtensions.some((ext) => file.toLowerCase().endsWith(ext))
+        ) {
           optimizeImage(filePath);
         }
       });
@@ -69,19 +72,19 @@ class PerformanceOptimizer {
   }
 
   async optimizeBundle() {
-    this.log('📦 Optimizing bundle...');
-    
+    this.log("📦 Optimizing bundle...");
+
     try {
       // Run Vite build with analysis
-      execSync('npm run build:analyze', { stdio: 'inherit' });
-      
+      execSync("npm run build:analyze", { stdio: "inherit" });
+
       this.optimizations.push({
-        type: 'bundle',
-        action: 'analyzed',
-        timestamp: new Date().toISOString()
+        type: "bundle",
+        action: "analyzed",
+        timestamp: new Date().toISOString(),
       });
-      
-      this.log('✅ Bundle analysis completed');
+
+      this.log("✅ Bundle analysis completed");
     } catch (error) {
       this.log(`⚠️ Bundle analysis failed: ${error.message}`);
     }
@@ -90,7 +93,7 @@ class PerformanceOptimizer {
   async generateReport() {
     const endTime = Date.now();
     const duration = endTime - this.startTime;
-    
+
     const report = {
       timestamp: new Date().toISOString(),
       duration: `${duration}ms`,
@@ -100,26 +103,31 @@ class PerformanceOptimizer {
         byType: this.optimizations.reduce((acc, opt) => {
           acc[opt.type] = (acc[opt.type] || 0) + 1;
           return acc;
-        }, {})
-      }
+        }, {}),
+      },
     };
 
-    const reportPath = path.join(process.cwd(), 'performance-optimization-report.json');
+    const reportPath = path.join(
+      process.cwd(),
+      "performance-optimization-report.json",
+    );
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-    
+
     this.log(`📊 Performance optimization report generated: ${reportPath}`);
-    this.log(`✅ Completed ${this.optimizations.length} optimizations in ${duration}ms`);
+    this.log(
+      `✅ Completed ${this.optimizations.length} optimizations in ${duration}ms`,
+    );
   }
 
   async run() {
-    this.log('🚀 Starting performance optimization...');
-    
+    this.log("🚀 Starting performance optimization...");
+
     try {
       await this.optimizeImages();
       await this.optimizeBundle();
       await this.generateReport();
-      
-      this.log('🎉 Performance optimization completed successfully!');
+
+      this.log("🎉 Performance optimization completed successfully!");
     } catch (error) {
       this.log(`❌ Performance optimization failed: ${error.message}`);
       process.exit(1);

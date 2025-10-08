@@ -15,7 +15,7 @@ export interface Organization {
 }
 
 export interface ContactPoint {
-  '@type': 'ContactPoint';
+  "@type": "ContactPoint";
   telephone: string;
   contactType: string;
   email?: string;
@@ -24,7 +24,7 @@ export interface ContactPoint {
 }
 
 export interface PostalAddress {
-  '@type': 'PostalAddress';
+  "@type": "PostalAddress";
   streetAddress?: string;
   addressLocality?: string;
   addressRegion?: string;
@@ -44,7 +44,7 @@ export interface Article {
 }
 
 export interface Person {
-  '@type': 'Person';
+  "@type": "Person";
   name: string;
   url?: string;
   image?: string;
@@ -71,10 +71,12 @@ export interface Service {
  * @param org - Organization details
  * @returns JSON-LD structured data
  */
-export function generateOrganizationSchema(org: Organization): Record<string, unknown> {
+export function generateOrganizationSchema(
+  org: Organization,
+): Record<string, unknown> {
   return {
-    '@context': 'https://schema.org',
-    '@type': 'Organization',
+    "@context": "https://schema.org",
+    "@type": "Organization",
     name: org.name,
     url: org.url,
     ...(org.logo && { logo: org.logo }),
@@ -97,11 +99,11 @@ export function generateWebSiteSchema(
   name: string,
   url: string,
   description?: string,
-  searchUrl?: string
+  searchUrl?: string,
 ): Record<string, unknown> {
   const schema: Record<string, unknown> = {
-    '@context': 'https://schema.org',
-    '@type': 'WebSite',
+    "@context": "https://schema.org",
+    "@type": "WebSite",
     name,
     url,
   };
@@ -112,12 +114,12 @@ export function generateWebSiteSchema(
 
   if (searchUrl) {
     schema.potentialAction = {
-      '@type': 'SearchAction',
+      "@type": "SearchAction",
       target: {
-        '@type': 'EntryPoint',
+        "@type": "EntryPoint",
         urlTemplate: searchUrl,
       },
-      'query-input': 'required name=search_term_string',
+      "query-input": "required name=search_term_string",
     };
   }
 
@@ -129,22 +131,26 @@ export function generateWebSiteSchema(
  * @param article - Article details
  * @returns JSON-LD structured data
  */
-export function generateArticleSchema(article: Article): Record<string, unknown> {
+export function generateArticleSchema(
+  article: Article,
+): Record<string, unknown> {
   const author =
-    typeof article.author === 'string'
-      ? { '@type': 'Person', name: article.author }
+    typeof article.author === "string"
+      ? { "@type": "Person", name: article.author }
       : article.author;
 
   return {
-    '@context': 'https://schema.org',
-    '@type': 'Article',
+    "@context": "https://schema.org",
+    "@type": "Article",
     headline: article.headline,
     description: article.description,
     author,
     datePublished: article.datePublished,
     ...(article.dateModified && { dateModified: article.dateModified }),
     ...(article.image && { image: article.image }),
-    ...(article.publisher && { publisher: generateOrganizationSchema(article.publisher) }),
+    ...(article.publisher && {
+      publisher: generateOrganizationSchema(article.publisher),
+    }),
     ...(article.url && { url: article.url }),
   };
 }
@@ -154,12 +160,14 @@ export function generateArticleSchema(article: Article): Record<string, unknown>
  * @param items - Breadcrumb items
  * @returns JSON-LD structured data
  */
-export function generateBreadcrumbSchema(items: BreadcrumbItem[]): Record<string, unknown> {
+export function generateBreadcrumbSchema(
+  items: BreadcrumbItem[],
+): Record<string, unknown> {
   return {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
     itemListElement: items.map((item, index) => ({
-      '@type': 'ListItem',
+      "@type": "ListItem",
       position: index + 1,
       name: item.name,
       item: item.url,
@@ -172,10 +180,12 @@ export function generateBreadcrumbSchema(items: BreadcrumbItem[]): Record<string
  * @param service - Service details
  * @returns JSON-LD structured data
  */
-export function generateServiceSchema(service: Service): Record<string, unknown> {
+export function generateServiceSchema(
+  service: Service,
+): Record<string, unknown> {
   return {
-    '@context': 'https://schema.org',
-    '@type': 'Service',
+    "@context": "https://schema.org",
+    "@type": "Service",
     name: service.name,
     description: service.description,
     provider: generateOrganizationSchema(service.provider),
@@ -191,16 +201,16 @@ export function generateServiceSchema(service: Service): Record<string, unknown>
  * @returns JSON-LD structured data
  */
 export function generateFAQSchema(
-  questions: Array<{ question: string; answer: string }>
+  questions: Array<{ question: string; answer: string }>,
 ): Record<string, unknown> {
   return {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: questions.map(qa => ({
-      '@type': 'Question',
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: questions.map((qa) => ({
+      "@type": "Question",
       name: qa.question,
       acceptedAnswer: {
-        '@type': 'Answer',
+        "@type": "Answer",
         text: qa.answer,
       },
     })),
@@ -222,8 +232,8 @@ export function generateLocalBusinessSchema(business: {
   openingHours?: string[];
 }): Record<string, unknown> {
   return {
-    '@context': 'https://schema.org',
-    '@type': 'LocalBusiness',
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
     name: business.name,
     ...(business.image && { image: business.image }),
     ...(business.telephone && { telephone: business.telephone }),
@@ -254,22 +264,22 @@ export function generateSoftwareApplicationSchema(app: {
   };
 }): Record<string, unknown> {
   return {
-    '@context': 'https://schema.org',
-    '@type': 'SoftwareApplication',
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
     name: app.name,
     description: app.description,
     applicationCategory: app.applicationCategory,
     ...(app.operatingSystem && { operatingSystem: app.operatingSystem }),
     ...(app.offers && {
       offers: {
-        '@type': 'Offer',
+        "@type": "Offer",
         price: app.offers.price,
         priceCurrency: app.offers.priceCurrency,
       },
     }),
     ...(app.aggregateRating && {
       aggregateRating: {
-        '@type': 'AggregateRating',
+        "@type": "AggregateRating",
         ratingValue: app.aggregateRating.ratingValue,
         reviewCount: app.aggregateRating.reviewCount,
       },
@@ -296,18 +306,18 @@ export function generateReviewSchema(review: {
   datePublished?: string;
 }): Record<string, unknown> {
   return {
-    '@context': 'https://schema.org',
-    '@type': 'Review',
+    "@context": "https://schema.org",
+    "@type": "Review",
     itemReviewed: {
-      '@type': review.itemReviewed.type,
+      "@type": review.itemReviewed.type,
       name: review.itemReviewed.name,
     },
     author: {
-      '@type': 'Person',
+      "@type": "Person",
       name: review.author,
     },
     reviewRating: {
-      '@type': 'Rating',
+      "@type": "Rating",
       ratingValue: review.reviewRating.ratingValue,
       bestRating: review.reviewRating.bestRating || 5,
     },
@@ -321,7 +331,9 @@ export function generateReviewSchema(review: {
  * @param data - Structured data object
  * @returns JSON string for script tag
  */
-export function toJSONLD(data: Record<string, unknown> | Array<Record<string, unknown>>): string {
+export function toJSONLD(
+  data: Record<string, unknown> | Array<Record<string, unknown>>,
+): string {
   return JSON.stringify(data, null, 2);
 }
 
@@ -346,7 +358,11 @@ export function generatePageStructuredData(config: {
 
   // Website schema
   schemas.push(
-    generateWebSiteSchema(config.websiteName, config.websiteUrl, config.websiteDescription)
+    generateWebSiteSchema(
+      config.websiteName,
+      config.websiteUrl,
+      config.websiteDescription,
+    ),
   );
 
   // Breadcrumbs if provided
@@ -361,7 +377,7 @@ export function generatePageStructuredData(config: {
 
   // Services if provided
   if (config.services && config.services.length > 0) {
-    config.services.forEach(service => {
+    config.services.forEach((service) => {
       schemas.push(generateServiceSchema(service));
     });
   }
@@ -373,23 +389,23 @@ export function generatePageStructuredData(config: {
  * Default organization data for Zion Tech Group
  */
 export const ZION_ORGANIZATION: Organization = {
-  name: 'Zion Tech Group',
-  url: 'https://zion.app',
-  logo: 'https://zion.app/logo.png',
-  description: 'Advanced AI and IT Solutions Provider',
+  name: "Zion Tech Group",
+  url: "https://zion.app",
+  logo: "https://zion.app/logo.png",
+  description: "Advanced AI and IT Solutions Provider",
   contactPoint: [
     {
-      '@type': 'ContactPoint',
-      telephone: '+1-555-ZION-TECH',
-      contactType: 'Customer Service',
-      email: 'contact@zion.app',
-      areaServed: 'Worldwide',
-      availableLanguage: ['English'],
+      "@type": "ContactPoint",
+      telephone: "+1-555-ZION-TECH",
+      contactType: "Customer Service",
+      email: "contact@zion.app",
+      areaServed: "Worldwide",
+      availableLanguage: ["English"],
     },
   ],
   sameAs: [
-    'https://twitter.com/ziontech',
-    'https://linkedin.com/company/ziontech',
-    'https://github.com/ziontech',
+    "https://twitter.com/ziontech",
+    "https://linkedin.com/company/ziontech",
+    "https://github.com/ziontech",
   ],
 };

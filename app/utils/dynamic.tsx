@@ -1,4 +1,4 @@
-import React, { lazy, Suspense, ComponentType } from 'react';
+import React, { lazy, Suspense, ComponentType } from "react";
 
 interface DynamicOptions {
   loading?: () => React.ReactElement;
@@ -7,12 +7,14 @@ interface DynamicOptions {
 
 export function dynamic<T extends ComponentType<unknown>>(
   importFunc: () => Promise<{ default: T }>,
-  options: DynamicOptions = {}
+  options: DynamicOptions = {},
 ): ComponentType<unknown> {
   const LazyComponent = lazy(importFunc);
 
   return (props: unknown) => (
-    <Suspense fallback={options.loading ? options.loading() : <div>Loading...</div>}>
+    <Suspense
+      fallback={options.loading ? options.loading() : <div>Loading...</div>}
+    >
       <LazyComponent {...props} />
     </Suspense>
   );

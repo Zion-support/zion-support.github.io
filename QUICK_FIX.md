@@ -8,18 +8,23 @@
 ## The 3-Minute Fix
 
 ### Step 1: Go to Netlify
+
 👉 https://app.netlify.com → Your Site → **Site Settings**
 
 ### Step 2: Find Build Plugins
+
 Navigate to: **Build & deploy → Build plugins**
 
 ### Step 3: Remove Next.js Plugin
+
 Find `@netlify/plugin-nextjs` → Click **Remove** → Confirm
 
 ### Step 4: Deploy
+
 Go to **Deploys** → **Trigger deploy** → **Clear cache and deploy site**
 
 ### Step 5: Success! 🎉
+
 Your build should now work.
 
 ---
@@ -36,7 +41,7 @@ Your build should now work.
 ✅ Removed Next.js Link imports  
 ✅ Now uses React Router  
 ✅ Build works locally  
-✅ Ready to deploy  
+✅ Ready to deploy
 
 ## Just Remove the Plugin!
 
@@ -45,6 +50,7 @@ The code is ready. You just need to remove that one plugin from the Netlify dash
 ---
 
 **Expected build log after fix:**
+
 ```
 ✓ vite build completed
 ✓ built in 3-4s

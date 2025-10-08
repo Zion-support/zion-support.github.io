@@ -27,7 +27,9 @@ export class MemoryCache<T = unknown> {
   constructor(options: CacheOptions = {}) {
     this.defaultTTL = options.ttl ?? 5 * 60 * 1000; // 5 minutes default
     this.maxSize = options.maxSize ?? 100;
-    this.onEvict = options.onEvict as ((key: string, value: T) => void) | undefined;
+    this.onEvict = options.onEvict as
+      | ((key: string, value: T) => void)
+      | undefined;
   }
 
   /**
@@ -193,7 +195,7 @@ export class PersistentCache<T = unknown> {
   private readonly prefix: string;
   private readonly defaultTTL: number;
 
-  constructor(prefix = 'cache_', ttl = 24 * 60 * 60 * 1000) {
+  constructor(prefix = "cache_", ttl = 24 * 60 * 60 * 1000) {
     this.prefix = prefix;
     this.defaultTTL = ttl;
   }
@@ -202,7 +204,7 @@ export class PersistentCache<T = unknown> {
    * Set a value in persistent storage
    */
   public set(key: string, value: T, ttl?: number): void {
-    if (typeof localStorage === 'undefined') return;
+    if (typeof localStorage === "undefined") return;
 
     const entry: CacheEntry<T> = {
       value,
@@ -214,7 +216,7 @@ export class PersistentCache<T = unknown> {
     try {
       localStorage.setItem(this.prefix + key, JSON.stringify(entry));
     } catch (error) {
-//       console.error('Failed to set cache item:', error);
+      //       console.error('Failed to set cache item:', error);
     }
   }
 
@@ -222,7 +224,7 @@ export class PersistentCache<T = unknown> {
    * Get a value from persistent storage
    */
   public get(key: string): T | undefined {
-    if (typeof localStorage === 'undefined') return undefined;
+    if (typeof localStorage === "undefined") return undefined;
 
     try {
       const item = localStorage.getItem(this.prefix + key);
@@ -253,7 +255,7 @@ export class PersistentCache<T = unknown> {
    * Delete a key
    */
   public delete(key: string): void {
-    if (typeof localStorage === 'undefined') return;
+    if (typeof localStorage === "undefined") return;
     localStorage.removeItem(this.prefix + key);
   }
 
@@ -261,7 +263,7 @@ export class PersistentCache<T = unknown> {
    * Clear all entries with this prefix
    */
   public clear(): void {
-    if (typeof localStorage === 'undefined') return;
+    if (typeof localStorage === "undefined") return;
 
     const keysToRemove: string[] = [];
     for (let i = 0; i < localStorage.length; i++) {
@@ -271,7 +273,7 @@ export class PersistentCache<T = unknown> {
       }
     }
 
-    keysToRemove.forEach(key => localStorage.removeItem(key));
+    keysToRemove.forEach((key) => localStorage.removeItem(key));
   }
 }
 
@@ -280,7 +282,7 @@ export class PersistentCache<T = unknown> {
  */
 export const memoize = <TArgs extends unknown[], TResult>(
   fn: (...args: TArgs) => TResult,
-  options: CacheOptions = {}
+  options: CacheOptions = {},
 ): ((...args: TArgs) => TResult) => {
   const cache = new MemoryCache<TResult>(options);
 
@@ -303,14 +305,14 @@ export const memoize = <TArgs extends unknown[], TResult>(
  */
 export const memoizeAsync = <TArgs extends unknown[], TResult>(
   fn: (...args: TArgs) => Promise<TResult>,
-  options: CacheOptions = {}
+  options: CacheOptions = {},
 ): ((...args: TArgs) => Promise<TResult>) => {
   const cache = new MemoryCache<TResult>(options);
   const pending = new Map<string, Promise<TResult>>();
 
   return async (...args: TArgs): Promise<TResult> => {
     const key = JSON.stringify(args);
-    
+
     // Check cache
     const cached = cache.get(key);
     if (cached !== undefined) {

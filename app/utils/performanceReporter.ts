@@ -1,10 +1,12 @@
+import React from 'react'
+import { logger } from './logger'
 /**
  * Performance Reporter
  * Comprehensive performance monitoring and reporting
  */
 
-import React from 'react'
-import { logger } from './logger'
+
+
 
 export interface PerformanceMetric {
   name: string;

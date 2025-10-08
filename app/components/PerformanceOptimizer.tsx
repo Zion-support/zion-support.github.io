@@ -1,22 +1,22 @@
-import React, { useEffect } from 'react';
+import React, { useEffect } from "react";
 
 const PerformanceOptimizer: React.FC = () => {
   useEffect(() => {
     // Preload critical resources
     const preloadCriticalResources = () => {
       const criticalResources = [
-        '/fonts/inter-var.woff2',
-        '/images/hero-bg.webp',
-        '/images/logo.svg'
+        "/fonts/inter-var.woff2",
+        "/images/hero-bg.webp",
+        "/images/logo.svg",
       ];
 
-      criticalResources.forEach(resource => {
-        const link = document.createElement('link');
-        link.rel = 'preload';
+      criticalResources.forEach((resource) => {
+        const link = document.createElement("link");
+        link.rel = "preload";
         link.href = resource;
-        link.as = resource.endsWith('.woff2') ? 'font' : 'image';
-        if (resource.endsWith('.woff2')) {
-          link.crossOrigin = 'anonymous';
+        link.as = resource.endsWith(".woff2") ? "font" : "image";
+        if (resource.endsWith(".woff2")) {
+          link.crossOrigin = "anonymous";
         }
         document.head.appendChild(link);
       });
@@ -24,27 +24,27 @@ const PerformanceOptimizer: React.FC = () => {
 
     // Optimize images
     const optimizeImages = () => {
-      const images = document.querySelectorAll('img[data-src]');
+      const images = document.querySelectorAll("img[data-src]");
       const imageObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
+        entries.forEach((entry) => {
           if (entry.isIntersecting) {
             const img = entry.target as HTMLImageElement;
-            img.src = img.dataset.src || '';
-            img.classList.remove('lazy');
+            img.src = img.dataset.src || "";
+            img.classList.remove("lazy");
             imageObserver.unobserve(img);
           }
         });
       });
 
-      images.forEach(img => imageObserver.observe(img));
+      images.forEach((img) => imageObserver.observe(img));
     };
 
     // Defer non-critical JavaScript
     const deferNonCriticalJS = () => {
-      const scripts = document.querySelectorAll('script[data-defer]');
-      scripts.forEach(script => {
-        const newScript = document.createElement('script');
-        newScript.src = script.getAttribute('src') || '';
+      const scripts = document.querySelectorAll("script[data-defer]");
+      scripts.forEach((script) => {
+        const newScript = document.createElement("script");
+        newScript.src = script.getAttribute("src") || "";
         newScript.async = true;
         script.parentNode?.replaceChild(newScript, script);
       });
@@ -56,23 +56,21 @@ const PerformanceOptimizer: React.FC = () => {
     deferNonCriticalJS();
 
     // Performance monitoring
-    if ('performance' in window) {
+    if ("performance" in window) {
       const observer = new PerformanceObserver((list) => {
         list.getEntries().forEach((entry) => {
-          if (entry.entryType === 'largest-contentful-paint') {
-            console.log('LCP:', entry.startTime);
+          if (entry.entryType === "largest-contentful-paint") {
           }
-          if (entry.entryType === 'first-input') {
-            console.log('FID:', entry.processingStart - entry.startTime);
+          if (entry.entryType === "first-input") {
           }
         });
       });
 
       try {
-        observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input'] });
-      } catch (e) {
-        console.warn('Performance Observer not supported');
-      }
+        observer.observe({
+          entryTypes: ["largest-contentful-paint", "first-input"],
+        });
+      } catch (e) {}
     }
 
     return () => {

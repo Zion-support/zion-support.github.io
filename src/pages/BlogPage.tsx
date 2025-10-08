@@ -1,6 +1,5 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
+import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
 
 export default function BlogPage() {
   return (
@@ -15,7 +14,10 @@ export default function BlogPage() {
           name="keywords"
           content="AI blog, enterprise technology, automation insights, digital transformation"
         />
-        <meta property="og:title" content="AI & Technology Blog | Zion Tech Group" />
+        <meta
+          property="og:title"
+          content="AI & Technology Blog | Zion Tech Group"
+        />
         <meta
           property="og:description"
           content="Latest insights on AI, enterprise automation, and digital transformation from Zion Tech Group experts."
@@ -29,7 +31,8 @@ export default function BlogPage() {
           <header className="text-center mb-12">
             <h1 className="text-4xl font-bold mb-4">AI & Technology Blog</h1>
             <p className="text-xl text-gray-300">
-              Latest insights on AI, enterprise automation, and digital transformation
+              Latest insights on AI, enterprise automation, and digital
+              transformation
             </p>
           </header>
 
@@ -37,8 +40,8 @@ export default function BlogPage() {
             <div className="bg-gray-800 rounded-lg p-8 text-center">
               <h2 className="text-2xl font-semibold mb-4">Coming Soon</h2>
               <p className="text-gray-300 mb-6">
-                We&apos;re working on bringing you the latest insights and breakthroughs in AI and
-                enterprise technology.
+                We&apos;re working on bringing you the latest insights and
+                breakthroughs in AI and enterprise technology.
               </p>
               <Link
                 to="/"

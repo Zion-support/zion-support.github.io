@@ -1,75 +1,96 @@
-'use client';
-
-import React, { useState } from 'react';
-import Link from 'next/link';
+import Link from "next/link";
+import React, { useState } from "react";
+("use client");
 
 const UltimateBusinessIntelligenceShowcase2025 = () => {
-  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [selectedCategory, setSelectedCategory] = useState("all");
 
   const content = [
     {
-      id: 'ultimate-business-intelligence-revolution',
-      title: 'AI 2025: The Ultimate Business Intelligence Revolution',
-      description: 'Transform your enterprise with next-generation AI-powered business intelligence that delivers unprecedented insights and competitive advantage.',
-      url: '/blog/ai-2025-ultimate-business-intelligence-revolution-ultimate-breakthrough',
-      type: 'Blog Post',
-      category: 'blog',
+      id: "ultimate-business-intelligence-revolution",
+      title: "AI 2025: The Ultimate Business Intelligence Revolution",
+      description:
+        "Transform your enterprise with next-generation AI-powered business intelligence that delivers unprecedented insights and competitive advantage.",
+      url: "/blog/ai-2025-ultimate-business-intelligence-revolution-ultimate-breakthrough",
+      type: "Blog Post",
+      category: "blog",
       metrics: {
-        roi: '30,000%',
-        efficiency: '500%',
-        accuracy: '99.9%',
-        timeline: '12 months'
+        roi: "30,000%",
+        efficiency: "500%",
+        accuracy: "99.9%",
+        timeline: "12 months",
       },
-      readingTime: '35 min read',
+      readingTime: "35 min read",
       featured: true,
-      tags: ['AI Revolution', 'Business Intelligence', 'ROI', 'Fortune 500', '30,000% ROI']
+      tags: [
+        "AI Revolution",
+        "Business Intelligence",
+        "ROI",
+        "Fortune 500",
+        "30,000% ROI",
+      ],
     },
     {
-      id: 'fortune-500-business-intelligence-success',
-      title: 'Fortune 500 Ultimate Business Intelligence Success',
-      description: 'How a $15.2B manufacturing giant achieved unprecedented business intelligence transformation with AI-powered analytics.',
-      url: '/case-studies/fortune-500-ultimate-business-intelligence-success',
-      type: 'Case Study',
-      category: 'case-study',
+      id: "fortune-500-business-intelligence-success",
+      title: "Fortune 500 Ultimate Business Intelligence Success",
+      description:
+        "How a $15.2B manufacturing giant achieved unprecedented business intelligence transformation with AI-powered analytics.",
+      url: "/case-studies/fortune-500-ultimate-business-intelligence-success",
+      type: "Case Study",
+      category: "case-study",
       metrics: {
-        roi: '30,000%',
-        savings: '$750B',
-        company: '$15.2B',
-        timeline: '18 months'
+        roi: "30,000%",
+        savings: "$750B",
+        company: "$15.2B",
+        timeline: "18 months",
       },
-      readingTime: '25 min read',
+      readingTime: "25 min read",
       featured: true,
-      tags: ['Fortune 500', 'Success Story', '30,000% ROI', 'Manufacturing', 'Case Study']
+      tags: [
+        "Fortune 500",
+        "Success Story",
+        "30,000% ROI",
+        "Manufacturing",
+        "Case Study",
+      ],
     },
     {
-      id: 'business-intelligence-implementation-guide',
-      title: 'AI 2025 Ultimate Business Intelligence Implementation Guide',
-      description: 'Complete roadmap to 30,000% ROI through revolutionary AI-powered business intelligence transformation.',
-      url: '/resources/ai-2025-ultimate-business-intelligence-implementation-guide',
-      type: 'Implementation Guide',
-      category: 'resource',
+      id: "business-intelligence-implementation-guide",
+      title: "AI 2025 Ultimate Business Intelligence Implementation Guide",
+      description:
+        "Complete roadmap to 30,000% ROI through revolutionary AI-powered business intelligence transformation.",
+      url: "/resources/ai-2025-ultimate-business-intelligence-implementation-guide",
+      type: "Implementation Guide",
+      category: "resource",
       metrics: {
-        roi: '30,000%',
-        success: '99.8%',
-        timeline: '18 months',
-        adoption: '100%'
+        roi: "30,000%",
+        success: "99.8%",
+        timeline: "18 months",
+        adoption: "100%",
       },
-      readingTime: '45 min read',
+      readingTime: "45 min read",
       featured: true,
-      tags: ['Implementation', 'Guide', '30,000% ROI', 'Roadmap', 'Best Practices']
-    }
+      tags: [
+        "Implementation",
+        "Guide",
+        "30,000% ROI",
+        "Roadmap",
+        "Best Practices",
+      ],
+    },
   ];
 
   const categories = [
-    { id: 'all', name: 'All Content' },
-    { id: 'blog', name: 'Blog Posts' },
-    { id: 'case-study', name: 'Case Studies' },
-    { id: 'resource', name: 'Resources' }
+    { id: "all", name: "All Content" },
+    { id: "blog", name: "Blog Posts" },
+    { id: "case-study", name: "Case Studies" },
+    { id: "resource", name: "Resources" },
   ];
 
-  const filteredContent = selectedCategory === 'all' 
-    ? content 
-    : content.filter(item => item.category === selectedCategory);
+  const filteredContent =
+    selectedCategory === "all"
+      ? content
+      : content.filter((item) => item.category === selectedCategory);
 
   return (
     <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">
@@ -78,11 +99,11 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl animate-pulse"></div>
         <div
           className="absolute top-3/4 right-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-pulse"
-          style={{ animationDelay: '2s' }}
+          style={{ animationDelay: "2s" }}
         ></div>
         <div
           className="absolute bottom-1/4 left-1/3 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl animate-pulse"
-          style={{ animationDelay: '1s' }}
+          style={{ animationDelay: "1s" }}
         ></div>
       </div>
 
@@ -104,8 +125,8 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
             </span>
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
-            Explore our comprehensive collection of AI-powered business intelligence
-            content that&apos;s transforming enterprises worldwide
+            Explore our comprehensive collection of AI-powered business
+            intelligence content that&apos;s transforming enterprises worldwide
           </p>
         </div>
 
@@ -117,8 +138,8 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
               onClick={() => setSelectedCategory(category.id)}
               className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
                 selectedCategory === category.id
-                  ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-lg'
-                  : 'bg-white/10 text-gray-300 hover:bg-white/20'
+                  ? "bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-lg"
+                  : "bg-white/10 text-gray-300 hover:bg-white/20"
               }`}
             >
               {category.name}
@@ -137,7 +158,7 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
                 <span className="text-green-400 font-semibold text-sm">
-                  {item.featured ? 'FEATURED' : 'NEW'}
+                  {item.featured ? "FEATURED" : "NEW"}
                 </span>
                 <span className="text-gray-400 text-sm">{item.type}</span>
               </div>
@@ -199,7 +220,8 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
               Ready to Transform Your Business?
             </h3>
             <p className="text-cyan-100 mb-6">
-              Join thousands of enterprises already using our AI-powered solutions
+              Join thousands of enterprises already using our AI-powered
+              solutions
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <Link
@@ -207,7 +229,12 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
                 className="inline-flex items-center px-12 py-6 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-bold text-xl rounded-2xl hover:from-blue-700 hover:to-indigo-700 transition-all duration-300 transform hover:scale-105 shadow-2xl"
               >
                 Start Your Transformation
-                <svg className="ml-3 w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg
+                  className="ml-3 w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
                   <path
                     strokeLinecap="round"
                     strokeLinejoin="round"

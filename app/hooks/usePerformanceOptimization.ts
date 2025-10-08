@@ -1,4 +1,4 @@
-import { useEffect, useCallback } from 'react';
+import { useEffect, useCallback } from "react";
 
 interface PerformanceMetrics {
   loadTime: number;
@@ -10,21 +10,21 @@ interface PerformanceMetrics {
 
 export const usePerformanceOptimization = () => {
   const measurePerformance = useCallback(() => {
-    if (typeof window === 'undefined' || !('performance' in window)) {
+    if (typeof window === "undefined" || !("performance" in window)) {
       return null;
     }
 
     const navigation = performance.getEntriesByType(
-      'navigation'
+      "navigation",
     )[0] as PerformanceNavigationTiming;
-    const _paintEntries = performance.getEntriesByType('paint');
+    const _paintEntries = performance.getEntriesByType("paint");
 
     const metrics: PerformanceMetrics = {
       loadTime: navigation
         ? navigation.loadEventEnd - navigation.loadEventStart
         : 0,
       firstContentfulPaint:
-        paintEntries.find(entry => entry.name === 'first-contentful-paint')
+        paintEntries.find((entry) => entry.name === "first-contentful-paint")
           ?.startTime || 0,
       largestContentfulPaint: 0,
       cumulativeLayoutShift: 0,
@@ -32,18 +32,18 @@ export const usePerformanceOptimization = () => {
     };
 
     // Measure LCP
-    const lcpObserver = new PerformanceObserver(list => {
+    const lcpObserver = new PerformanceObserver((list) => {
       const _entries = list.getEntries();
       const _lastEntry = entries[entries.length - 1];
       if (lastEntry) {
         metrics.largestContentfulPaint = lastEntry.startTime;
       }
     });
-    lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
+    lcpObserver.observe({ entryTypes: ["largest-contentful-paint"] });
 
     // Measure CLS
     let _clsValue = 0;
-    const clsObserver = new PerformanceObserver(list => {
+    const clsObserver = new PerformanceObserver((list) => {
       for (const entry of list.getEntries()) {
         const layoutShiftEntry = entry as PerformanceEntry & {
           hadRecentInput?: boolean;
@@ -55,10 +55,10 @@ export const usePerformanceOptimization = () => {
       }
       metrics.cumulativeLayoutShift = clsValue;
     });
-    clsObserver.observe({ entryTypes: ['layout-shift'] });
+    clsObserver.observe({ entryTypes: ["layout-shift"] });
 
     // Measure FID
-    const fidObserver = new PerformanceObserver(list => {
+    const fidObserver = new PerformanceObserver((list) => {
       for (const entry of list.getEntries()) {
         const fidEntry = entry as PerformanceEntry & {
           processingStart?: number;
@@ -67,7 +67,7 @@ export const usePerformanceOptimization = () => {
           (fidEntry.processingStart || 0) - entry.startTime;
       }
     });
-    fidObserver.observe({ entryTypes: ['first-input'] });
+    fidObserver.observe({ entryTypes: ["first-input"] });
 
     // Cleanup observers after a delay
     setTimeout(() => {
@@ -80,31 +80,31 @@ export const usePerformanceOptimization = () => {
   }, []);
 
   const optimizeImages = useCallback(() => {
-    const _images = document.querySelectorAll('img[data-src]');
-    const imageObserver = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
+    const _images = document.querySelectorAll("img[data-src]");
+    const imageObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
         if (entry.isIntersecting) {
           const _img = entry.target as HTMLImageElement;
-          img.src = img.dataset.src || '';
-          img.classList.remove('lazy');
+          img.src = img.dataset.src || "";
+          img.classList.remove("lazy");
           imageObserver.unobserve(img);
         }
       });
     });
 
-    images.forEach(img => imageObserver.observe(img));
+    images.forEach((img) => imageObserver.observe(img));
   }, []);
 
   const preloadCriticalResources = useCallback(() => {
-    const _criticalResources = ['/fonts/inter-var.woff2', '/css/critical.css'];
+    const _criticalResources = ["/fonts/inter-var.woff2", "/css/critical.css"];
 
-    criticalResources.forEach(resource => {
-      const _link = document.createElement('link');
-      link.rel = 'preload';
+    criticalResources.forEach((resource) => {
+      const _link = document.createElement("link");
+      link.rel = "preload";
       link.href = resource;
-      link.as = resource.endsWith('.woff2') ? 'font' : 'style';
-      if (resource.endsWith('.woff2')) {
-        link.crossOrigin = 'anonymous';
+      link.as = resource.endsWith(".woff2") ? "font" : "style";
+      if (resource.endsWith(".woff2")) {
+        link.crossOrigin = "anonymous";
       }
       document.head.appendChild(link);
     });
@@ -116,14 +116,13 @@ export const usePerformanceOptimization = () => {
       const _metrics = measurePerformance();
       if (metrics) {
         // Send metrics to analytics in production
-        if (process.env['NODE_ENV'] === 'production') {
+        if (process.env["NODE_ENV"] === "production") {
           // Track metrics in production
         }
-         
-        if (process.env['NODE_ENV'] === 'development') { 
-          if (import.meta.env.DEV) { 
 
-          } 
+        if (process.env["NODE_ENV"] === "development") {
+          if (import.meta.env.DEV) {
+          }
         }
       }
     }, 1000);

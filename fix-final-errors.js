@@ -1,7 +1,9 @@
-#!/usr/bin/env node
-
 import fs from 'fs';
 import { execSync } from 'child_process';
+#!/usr/bin/env node
+
+
+
 
 // Get all files with remaining syntax errors
 const files = execSync(

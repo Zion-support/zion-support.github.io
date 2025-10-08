@@ -1,19 +1,21 @@
-import { Menu, X } from 'lucide-react';
-import React, { useState } from 'react';
-import Link from 'next/link';
+import Link from "next/link";
+import React, { useState } from "react";
+import { Menu, X } from "lucide-react";
 
 interface ModernNavigationProps {
   className?: string;
 }
 
-const ModernNavigation: React.FC<ModernNavigationProps> = ({ className = '' }) => {
+const ModernNavigation: React.FC<ModernNavigationProps> = ({
+  className = "",
+}) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const navigationItems = [
-    { name: 'Home', href: '/' },
-    { name: 'Services', href: '/services' },
-    { name: 'About', href: '/about' },
-    { name: 'Contact', href: '/contact' },
+    { name: "Home", href: "/" },
+    { name: "Services", href: "/services" },
+    { name: "About", href: "/about" },
+    { name: "Contact", href: "/contact" },
   ];
 
   return (
@@ -26,7 +28,7 @@ const ModernNavigation: React.FC<ModernNavigationProps> = ({ className = '' }) =
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex space-x-8">
-            {navigationItems.map(item => (
+            {navigationItems.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
@@ -38,7 +40,10 @@ const ModernNavigation: React.FC<ModernNavigationProps> = ({ className = '' }) =
           </div>
 
           {/* Mobile Menu Button */}
-          <button onClick={() => setIsOpen(!isOpen)} className="md:hidden text-gray-700">
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className="md:hidden text-gray-700"
+          >
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
@@ -46,7 +51,7 @@ const ModernNavigation: React.FC<ModernNavigationProps> = ({ className = '' }) =
         {/* Mobile Navigation */}
         {isOpen && (
           <div className="md:hidden py-4 border-t">
-            {navigationItems.map(item => (
+            {navigationItems.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}

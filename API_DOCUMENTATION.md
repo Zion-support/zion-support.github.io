@@ -1,7 +1,7 @@
-
 # Zion Tech Group - API Documentation
 
 ## Table of Contents
+
 - [Overview](#overview)
 - [Authentication](#authentication)
 - [Rate Limiting](#rate-limiting)
@@ -17,8 +17,8 @@ This documentation covers the internal APIs, utilities, and components available
 ### Base Configuration
 
 ```typescript
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || '/api';
-const API_VERSION = 'v1';
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || "/api";
+const API_VERSION = "v1";
 ```
 
 ## Authentication
@@ -41,7 +41,7 @@ All API requests include security headers automatically via middleware:
 CSRF tokens are automatically validated for state-changing operations:
 
 ```typescript
-import { CSRFProtection } from '@/src/utils/security';
+import { CSRFProtection } from "@/src/utils/security";
 
 const csrf = new CSRFProtection();
 const token = csrf.generateToken();
@@ -53,11 +53,12 @@ const isValid = csrf.validateToken(token);
 ### Available Rate Limiters
 
 #### Strict Rate Limiter
+
 - **Limit**: 10 requests per minute
 - **Use Case**: Sensitive operations (password reset, account changes)
 
 ```typescript
-import { rateLimiters } from '@/app/middleware/rateLimiter';
+import { rateLimiters } from "@/app/middleware/rateLimiter";
 
 const result = rateLimiters.strict.check(clientIp);
 if (!result.allowed) {
@@ -66,6 +67,7 @@ if (!result.allowed) {
 ```
 
 #### Standard Rate Limiter
+
 - **Limit**: 100 requests per 15 minutes
 - **Use Case**: General API endpoints
 
@@ -74,6 +76,7 @@ const result = rateLimiters.standard.check(clientIp);
 ```
 
 #### API Rate Limiter
+
 - **Limit**: 60 requests per minute
 - **Use Case**: Public API endpoints
 
@@ -82,6 +85,7 @@ const result = rateLimiters.api.check(clientIp);
 ```
 
 #### Authentication Rate Limiter
+
 - **Limit**: 5 attempts per 15 minutes
 - **Use Case**: Login and authentication endpoints
 
@@ -92,12 +96,12 @@ const result = rateLimiters.auth.check(clientIp);
 ### Custom Rate Limiter
 
 ```typescript
-import { RateLimiter } from '@/app/middleware/rateLimiter';
+import { RateLimiter } from "@/app/middleware/rateLimiter";
 
 const customLimiter = new RateLimiter({
   windowMs: 60 * 1000, // 1 minute
   max: 30, // 30 requests
-  message: 'Custom rate limit exceeded'
+  message: "Custom rate limit exceeded",
 });
 ```
 
@@ -118,7 +122,10 @@ import GlobalErrorBoundary from '@/app/components/GlobalErrorBoundary';
 ### Error Handler Utility
 
 ```typescript
-import ErrorHandler, { ErrorSeverity, ErrorCategory } from '@/src/utils/errorHandler';
+import ErrorHandler, {
+  ErrorSeverity,
+  ErrorCategory,
+} from "@/src/utils/errorHandler";
 
 try {
   // Your code
@@ -126,7 +133,7 @@ try {
   ErrorHandler.handle(error, {
     severity: ErrorSeverity.HIGH,
     category: ErrorCategory.NETWORK,
-    context: { userId, action: 'fetchData' },
+    context: { userId, action: "fetchData" },
   });
 }
 ```
@@ -145,9 +152,9 @@ try {
 #### Email Validation
 
 ```typescript
-import { validateEmail } from '@/src/utils/validation';
+import { validateEmail } from "@/src/utils/validation";
 
-const result = validateEmail('user@example.com');
+const result = validateEmail("user@example.com");
 if (result.isValid) {
   // Proceed with valid email
 } else {
@@ -158,32 +165,32 @@ if (result.isValid) {
 #### Phone Validation
 
 ```typescript
-import { validatePhone } from '@/src/utils/validation';
+import { validatePhone } from "@/src/utils/validation";
 
-const result = validatePhone('+1-234-567-8900');
+const result = validatePhone("+1-234-567-8900");
 ```
 
 #### URL Validation
 
 ```typescript
-import { validateURL } from '@/src/utils/validation';
+import { validateURL } from "@/src/utils/validation";
 
-const result = validateURL('https://example.com', true); // requireProtocol
+const result = validateURL("https://example.com", true); // requireProtocol
 ```
 
 #### Password Validation
 
 ```typescript
-import { validatePassword } from '@/src/utils/validation';
+import { validatePassword } from "@/src/utils/validation";
 
-const result = validatePassword('SecureP@ssw0rd');
+const result = validatePassword("SecureP@ssw0rd");
 // Checks for: length, uppercase, lowercase, numbers, special chars
 ```
 
 #### Input Sanitization
 
 ```typescript
-import { sanitizeHTML, sanitizeInput } from '@/src/utils/validation';
+import { sanitizeHTML, sanitizeInput } from "@/src/utils/validation";
 
 const safe = sanitizeHTML('<script>alert("xss")</script>');
 const cleaned = sanitizeInput(userInput, 1000); // maxLength
@@ -194,7 +201,10 @@ const cleaned = sanitizeInput(userInput, 1000); // maxLength
 #### Organization Schema
 
 ```typescript
-import { generateOrganizationSchema, ZION_ORGANIZATION } from '@/src/utils/structuredData';
+import {
+  generateOrganizationSchema,
+  ZION_ORGANIZATION,
+} from "@/src/utils/structuredData";
 
 const schema = generateOrganizationSchema(ZION_ORGANIZATION);
 ```
@@ -202,45 +212,49 @@ const schema = generateOrganizationSchema(ZION_ORGANIZATION);
 #### Article Schema
 
 ```typescript
-import { generateArticleSchema } from '@/src/utils/structuredData';
+import { generateArticleSchema } from "@/src/utils/structuredData";
 
 const schema = generateArticleSchema({
-  headline: 'Article Title',
-  description: 'Article description',
-  author: 'Author Name',
-  datePublished: '2025-10-08',
-  image: 'https://example.com/image.jpg',
+  headline: "Article Title",
+  description: "Article description",
+  author: "Author Name",
+  datePublished: "2025-10-08",
+  image: "https://example.com/image.jpg",
 });
 ```
 
 #### Breadcrumb Schema
 
 ```typescript
-import { generateBreadcrumbSchema } from '@/src/utils/structuredData';
+import { generateBreadcrumbSchema } from "@/src/utils/structuredData";
 
 const schema = generateBreadcrumbSchema([
-  { name: 'Home', url: '/' },
-  { name: 'Blog', url: '/blog' },
-  { name: 'Article', url: '/blog/article' },
+  { name: "Home", url: "/" },
+  { name: "Blog", url: "/blog" },
+  { name: "Article", url: "/blog/article" },
 ]);
 ```
 
 ### Sitemap Generation
 
 ```typescript
-import { generateSitemap, PRIORITY, CHANGEFREQ } from '@/app/utils/sitemapGenerator';
+import {
+  generateSitemap,
+  PRIORITY,
+  CHANGEFREQ,
+} from "@/app/utils/sitemapGenerator";
 
 const sitemap = generateSitemap({
-  hostname: 'https://zion.app',
+  hostname: "https://zion.app",
   urls: [
     {
-      loc: '/',
+      loc: "/",
       changefreq: CHANGEFREQ.DAILY,
       priority: PRIORITY.CRITICAL,
       lastmod: new Date().toISOString(),
     },
     {
-      loc: '/about',
+      loc: "/about",
       changefreq: CHANGEFREQ.MONTHLY,
       priority: PRIORITY.HIGH,
     },
@@ -253,12 +267,12 @@ const sitemap = generateSitemap({
 #### Track Events
 
 ```typescript
-import { trackEvent } from '@/app/utils/analyticsTracker';
+import { trackEvent } from "@/app/utils/analyticsTracker";
 
 trackEvent({
-  category: 'User',
-  action: 'Click',
-  label: 'CTA Button',
+  category: "User",
+  action: "Click",
+  label: "CTA Button",
   value: 1,
 });
 ```
@@ -266,7 +280,7 @@ trackEvent({
 #### Track Page Views
 
 ```typescript
-import { trackPageView } from '@/app/utils/analyticsTracker';
+import { trackPageView } from "@/app/utils/analyticsTracker";
 
 trackPageView(window.location.pathname);
 ```
@@ -274,9 +288,9 @@ trackPageView(window.location.pathname);
 #### Track Performance Metrics
 
 ```typescript
-import { trackPerformance } from '@/app/utils/analyticsTracker';
+import { trackPerformance } from "@/app/utils/analyticsTracker";
 
-trackPerformance('LCP', 2500, 'good');
+trackPerformance("LCP", 2500, "good");
 ```
 
 ### Caching
@@ -284,16 +298,16 @@ trackPerformance('LCP', 2500, 'good');
 #### Cache Manager
 
 ```typescript
-import { cacheManager } from '@/app/utils/cacheManager';
+import { cacheManager } from "@/app/utils/cacheManager";
 
 // Set cache
-await cacheManager.set('key', data, 3600); // TTL in seconds
+await cacheManager.set("key", data, 3600); // TTL in seconds
 
 // Get cache
-const data = await cacheManager.get('key');
+const data = await cacheManager.get("key");
 
 // Delete cache
-await cacheManager.delete('key');
+await cacheManager.delete("key");
 
 // Clear all cache
 await cacheManager.clear();
@@ -354,28 +368,32 @@ import PerformanceMonitor from '@/app/components/PerformanceMonitor';
 ### Security
 
 1. **Always validate user input**
+
    ```typescript
-   import { validateRequired, validateLength } from '@/src/utils/validation';
+   import { validateRequired, validateLength } from "@/src/utils/validation";
    ```
 
 2. **Sanitize HTML content**
+
    ```typescript
-   import { sanitizeHTML } from '@/src/utils/validation';
+   import { sanitizeHTML } from "@/src/utils/validation";
    ```
 
 3. **Use CSRF protection for state-changing operations**
+
    ```typescript
-   import { CSRFProtection } from '@/src/utils/security';
+   import { CSRFProtection } from "@/src/utils/security";
    ```
 
 4. **Implement rate limiting on sensitive endpoints**
    ```typescript
-   import { rateLimiters } from '@/app/middleware/rateLimiter';
+   import { rateLimiters } from "@/app/middleware/rateLimiter";
    ```
 
 ### Performance
 
 1. **Use dynamic imports for code splitting**
+
    ```typescript
    const Component = dynamic(() => import('./Component'), {
      loading: () => <Loading />,
@@ -383,18 +401,20 @@ import PerformanceMonitor from '@/app/components/PerformanceMonitor';
    ```
 
 2. **Implement proper caching strategies**
+
    ```typescript
-   import { cacheManager } from '@/app/utils/cacheManager';
+   import { cacheManager } from "@/app/utils/cacheManager";
    ```
 
 3. **Monitor Core Web Vitals**
    ```typescript
-   import { trackPerformance } from '@/app/utils/analyticsTracker';
+   import { trackPerformance } from "@/app/utils/analyticsTracker";
    ```
 
 ### Error Handling
 
 1. **Always wrap risky operations in try-catch**
+
    ```typescript
    try {
      await riskyOperation();
@@ -404,6 +424,7 @@ import PerformanceMonitor from '@/app/components/PerformanceMonitor';
    ```
 
 2. **Use Error Boundaries for React components**
+
    ```typescript
    <GlobalErrorBoundary>
      <Component />
@@ -412,19 +433,21 @@ import PerformanceMonitor from '@/app/components/PerformanceMonitor';
 
 3. **Provide meaningful error messages**
    ```typescript
-   throw new Error('Failed to fetch user data: ' + error.message);
+   throw new Error("Failed to fetch user data: " + error.message);
    ```
 
 ### SEO
 
 1. **Add structured data to all pages**
+
    ```typescript
-   import { generatePageStructuredData } from '@/src/utils/structuredData';
+   import { generatePageStructuredData } from "@/src/utils/structuredData";
    ```
 
 2. **Generate and maintain sitemaps**
+
    ```typescript
-   import { generateSitemap } from '@/app/utils/sitemapGenerator';
+   import { generateSitemap } from "@/app/utils/sitemapGenerator";
    ```
 
 3. **Use proper meta tags and Open Graph data**
@@ -456,6 +479,7 @@ RATE_LIMIT_MAX_REQUESTS=100
 ## Support
 
 For issues or questions:
+
 - Email: dev@zion.app
 - Documentation: https://docs.zion.app
 - GitHub: https://github.com/zion-holdings/zion.app

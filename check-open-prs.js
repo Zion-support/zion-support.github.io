@@ -1,7 +1,9 @@
+import fs from 'fs';
+import https from 'https';
 #!/usr/bin/env node
 
-import https from 'https';
-import fs from 'fs';
+
+
 
 //GitHub API configuration
 const options = {

@@ -1,5 +1,4 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import { Helmet } from "react-helmet-async";
 
 export default function ContactPage() {
   return (
@@ -19,20 +18,27 @@ export default function ContactPage() {
       <div className="min-h-screen bg-gray-50">
         <div className="container mx-auto px-4 py-16">
           <div className="max-w-4xl mx-auto">
-            <h1 className="text-4xl font-bold text-gray-900 mb-8">Contact Us</h1>
+            <h1 className="text-4xl font-bold text-gray-900 mb-8">
+              Contact Us
+            </h1>
 
             <div className="grid md:grid-cols-2 gap-8">
               <div>
-                <h2 className="text-2xl font-semibold text-gray-900 mb-4">Get in Touch</h2>
+                <h2 className="text-2xl font-semibold text-gray-900 mb-4">
+                  Get in Touch
+                </h2>
                 <p className="text-gray-600 mb-6">
-                  Ready to transform your business with AI? Contact our team of experts to discuss
-                  your project and discover how we can help.
+                  Ready to transform your business with AI? Contact our team of
+                  experts to discuss your project and discover how we can help.
                 </p>
 
                 <div className="space-y-4">
                   <div>
                     <h3 className="font-semibold text-gray-900">Phone</h3>
-                    <a href="tel:+13026009898" className="text-indigo-600 hover:text-indigo-800">
+                    <a
+                      href="tel:+13026009898"
+                      className="text-indigo-600 hover:text-indigo-800"
+                    >
                       (302) 600-9898
                     </a>
                   </div>
@@ -50,10 +56,15 @@ export default function ContactPage() {
               </div>
 
               <div className="bg-white rounded-lg shadow-lg p-6">
-                <h2 className="text-2xl font-semibold text-gray-900 mb-4">Send us a Message</h2>
+                <h2 className="text-2xl font-semibold text-gray-900 mb-4">
+                  Send us a Message
+                </h2>
                 <form className="space-y-4">
                   <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
+                    <label
+                      htmlFor="name"
+                      className="block text-sm font-medium text-gray-700 mb-1"
+                    >
                       Name
                     </label>
                     <input
@@ -66,7 +77,10 @@ export default function ContactPage() {
                   </div>
 
                   <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
+                    <label
+                      htmlFor="email"
+                      className="block text-sm font-medium text-gray-700 mb-1"
+                    >
                       Email
                     </label>
                     <input

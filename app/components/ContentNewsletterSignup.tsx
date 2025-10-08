@@ -1,28 +1,28 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 const ContentNewsletterSignup: React.FC = () => {
-  const [email, setEmail] = useState('');
+  const [email, setEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubscribed, setIsSubscribed] = useState(false);
-  const [error, setError] = useState('');
+  const [error, setError] = useState("");
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    setError('');
+    setError("");
 
     // Simulate API call
     try {
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      
-      if (email.includes('@')) {
+      await new Promise((resolve) => setTimeout(resolve, 1000));
+
+      if (email.includes("@")) {
         setIsSubscribed(true);
-        setEmail('');
+        setEmail("");
       } else {
-        setError('Please enter a valid email address');
+        setError("Please enter a valid email address");
       }
     } catch (_err) {
-      setError('Something went wrong. Please try again.');
+      setError("Something went wrong. Please try again.");
     } finally {
       setIsSubmitting(false);
     }
@@ -37,10 +37,13 @@ const ContentNewsletterSignup: React.FC = () => {
             Welcome to Our Content Community!
           </h2>
           <p className="text-xl text-gray-600 mb-8">
-            You'll receive our latest AI insights, enterprise transformation guides, and breakthrough content directly in your inbox.
+            You'll receive our latest AI insights, enterprise transformation
+            guides, and breakthrough content directly in your inbox.
           </p>
           <div className="bg-white rounded-lg p-6 shadow-lg max-w-md mx-auto">
-            <h3 className="text-lg font-semibold text-gray-900 mb-2">What's Next?</h3>
+            <h3 className="text-lg font-semibold text-gray-900 mb-2">
+              What's Next?
+            </h3>
             <ul className="text-left text-gray-600 space-y-2">
               <li>✅ Weekly AI trend reports</li>
               <li>✅ Exclusive enterprise case studies</li>
@@ -61,15 +64,16 @@ const ContentNewsletterSignup: React.FC = () => {
           Stay Ahead with AI Insights
         </h2>
         <p className="text-xl text-indigo-100 mb-8 max-w-2xl mx-auto">
-          Get exclusive access to our latest AI breakthroughs, enterprise transformation guides, 
-          and cutting-edge content that's transforming businesses worldwide.
+          Get exclusive access to our latest AI breakthroughs, enterprise
+          transformation guides, and cutting-edge content that's transforming
+          businesses worldwide.
         </p>
 
         <div className="bg-white rounded-2xl p-8 shadow-2xl max-w-2xl mx-auto">
           <h3 className="text-2xl font-bold text-gray-900 mb-6">
             Join 10,000+ Enterprise Leaders
           </h3>
-          
+
           <form onSubmit={handleSubmit} className="space-y-4">
             <div className="flex flex-col sm:flex-row gap-4">
               <input
@@ -85,13 +89,11 @@ const ContentNewsletterSignup: React.FC = () => {
                 disabled={isSubmitting}
                 className="px-8 py-3 bg-indigo-600 text-white rounded-lg font-semibold hover:bg-indigo-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                {isSubmitting ? 'Subscribing...' : 'Get Free Content'}
+                {isSubmitting ? "Subscribing..." : "Get Free Content"}
               </button>
             </div>
-            
-            {error && (
-              <p className="text-red-600 text-sm">{error}</p>
-            )}
+
+            {error && <p className="text-red-600 text-sm">{error}</p>}
           </form>
 
           <div className="mt-6 text-sm text-gray-600">
@@ -103,22 +105,34 @@ const ContentNewsletterSignup: React.FC = () => {
             <div className="flex items-start space-x-3">
               <div className="text-2xl">🚀</div>
               <div>
-                <h4 className="font-semibold text-gray-900">Latest AI Trends</h4>
-                <p className="text-sm text-gray-600">Weekly insights on breakthrough technologies</p>
+                <h4 className="font-semibold text-gray-900">
+                  Latest AI Trends
+                </h4>
+                <p className="text-sm text-gray-600">
+                  Weekly insights on breakthrough technologies
+                </p>
               </div>
             </div>
             <div className="flex items-start space-x-3">
               <div className="text-2xl">💼</div>
               <div>
-                <h4 className="font-semibold text-gray-900">Enterprise Guides</h4>
-                <p className="text-sm text-gray-600">Proven strategies from Fortune 500 companies</p>
+                <h4 className="font-semibold text-gray-900">
+                  Enterprise Guides
+                </h4>
+                <p className="text-sm text-gray-600">
+                  Proven strategies from Fortune 500 companies
+                </p>
               </div>
             </div>
             <div className="flex items-start space-x-3">
               <div className="text-2xl">🎯</div>
               <div>
-                <h4 className="font-semibold text-gray-900">Exclusive Content</h4>
-                <p className="text-sm text-gray-600">Early access to premium resources</p>
+                <h4 className="font-semibold text-gray-900">
+                  Exclusive Content
+                </h4>
+                <p className="text-sm text-gray-600">
+                  Early access to premium resources
+                </p>
               </div>
             </div>
           </div>

@@ -4,10 +4,10 @@
  */
 
 export enum ErrorSeverity {
-  LOW = 'low',
-  MEDIUM = 'medium',
-  HIGH = 'high',
-  CRITICAL = 'critical',
+  LOW = "low",
+  MEDIUM = "medium",
+  HIGH = "high",
+  CRITICAL = "critical",
 }
 
 export interface ErrorContext {
@@ -39,10 +39,10 @@ class ErrorTracker {
   trackError(
     error: Error | string,
     severity: ErrorSeverity = ErrorSeverity.MEDIUM,
-    context: ErrorContext = {}
+    context: ErrorContext = {},
   ): void {
-    const errorMessage = typeof error === 'string' ? error : error.message;
-    const errorStack = typeof error === 'string' ? undefined : error.stack;
+    const errorMessage = typeof error === "string" ? error : error.message;
+    const errorStack = typeof error === "string" ? undefined : error.stack;
 
     const trackedError: TrackedError = {
       message: errorMessage,
@@ -51,8 +51,12 @@ class ErrorTracker {
       context: {
         ...context,
         timestamp: Date.now(),
-        userAgent: typeof window !== 'undefined' ? window.navigator.userAgent : undefined,
-        page: typeof window !== 'undefined' ? window.location.pathname : undefined,
+        userAgent:
+          typeof window !== "undefined"
+            ? window.navigator.userAgent
+            : undefined,
+        page:
+          typeof window !== "undefined" ? window.location.pathname : undefined,
       },
       fingerprint: this.generateFingerprint(errorMessage, errorStack),
     };
@@ -69,7 +73,7 @@ class ErrorTracker {
       try {
         callback(trackedError);
       } catch (e) {
-//         console.error('Error in error callback:', e);
+        //         console.error('Error in error callback:', e);
       }
     });
 
@@ -139,7 +143,7 @@ class ErrorTracker {
    * Generate a unique fingerprint for error deduplication
    */
   private generateFingerprint(message: string, stack?: string): string {
-    const content = stack ? `${message}:${stack.split('\n')[0]}` : message;
+    const content = stack ? `${message}:${stack.split("\n")[0]}` : message;
     let hash = 0;
     for (let i = 0; i < content.length; i++) {
       const char = content.charCodeAt(i);
@@ -154,17 +158,15 @@ class ErrorTracker {
    */
   private logError(error: TrackedError): void {
     const logMessage = `[${error.severity.toUpperCase()}] ${error.message}`;
-    
+
     switch (error.severity) {
       case ErrorSeverity.CRITICAL:
       case ErrorSeverity.HIGH:
         console.error(logMessage, error);
         break;
       case ErrorSeverity.MEDIUM:
-        console.warn(logMessage, error);
         break;
       case ErrorSeverity.LOW:
-        console.info(logMessage, error);
         break;
     }
   }
@@ -175,12 +177,15 @@ class ErrorTracker {
   private reportCriticalError(error: TrackedError): void {
     // In production, this would send to error tracking service
     // e.g., Sentry, Rollbar, LogRocket, etc.
-    if (typeof window !== 'undefined' && process.env['NODE_ENV'] === 'production') {
+    if (
+      typeof window !== "undefined" &&
+      process.env["NODE_ENV"] === "production"
+    ) {
       // Example: Send to error tracking API
       try {
-        fetch('/api/errors', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
+        fetch("/api/errors", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
           body: JSON.stringify(error),
         }).catch(() => {
           // Fail silently to avoid error loops
@@ -195,30 +200,30 @@ class ErrorTracker {
    * Set up global error handlers
    */
   setupGlobalHandlers(): void {
-    if (typeof window === 'undefined') return;
+    if (typeof window === "undefined") return;
 
     // Handle unhandled promise rejections
-    window.addEventListener('unhandledrejection', (event) => {
+    window.addEventListener("unhandledrejection", (event) => {
       this.trackError(
         new Error(`Unhandled Promise Rejection: ${event.reason}`),
         ErrorSeverity.HIGH,
-        { action: 'unhandledrejection' }
+        { action: "unhandledrejection" },
       );
     });
 
     // Handle global errors
-    window.addEventListener('error', (event) => {
+    window.addEventListener("error", (event) => {
       this.trackError(
         event.error || new Error(event.message),
         ErrorSeverity.HIGH,
         {
-          action: 'global_error',
+          action: "global_error",
           metadata: {
             filename: event.filename,
             lineno: event.lineno,
             colno: event.colno,
           },
-        }
+        },
       );
     });
   }
@@ -228,7 +233,7 @@ class ErrorTracker {
 export const errorTracker = new ErrorTracker();
 
 // Initialize global handlers
-if (typeof window !== 'undefined') {
+if (typeof window !== "undefined") {
   errorTracker.setupGlobalHandlers();
 }
 

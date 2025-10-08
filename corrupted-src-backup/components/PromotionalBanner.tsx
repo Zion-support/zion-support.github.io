@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 const PromotionalBanner: React.FC = () => {
   return (
@@ -6,7 +6,8 @@ const PromotionalBanner: React.FC = () => {
       <div className="max-w-4xl mx-auto">
         <h2 className="text-3xl font-bold mb-4">Promotional Banner</h2>
         <p className="text-lg mb-6">
-          This component is being restored. Please check back later for full functionality.
+          This component is being restored. Please check back later for full
+          functionality.
         </p>
       </div>
     </div>

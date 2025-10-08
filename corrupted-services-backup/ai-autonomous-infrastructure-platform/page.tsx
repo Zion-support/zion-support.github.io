@@ -12,9 +12,9 @@ export default function AIAutonomousInfrastructurePlatform() {
             🏗️ AI Autonomous Infrastructure Platform
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-4xl">
-            Revolutionary infrastructure that manages itself—self-healing failures, self-optimizing
-            performance, and self-scaling resources. Achieve 99.99% uptime with zero manual
-            intervention.
+            Revolutionary infrastructure that manages itself—self-healing
+            failures, self-optimizing performance, and self-scaling resources.
+            Achieve 99.99% uptime with zero manual intervention.
           </p>
           <div className="flex flex-wrap gap-3 mb-8">
             <span className="px-3 py-1 bg-emerald-500/20 text-emerald-300 rounded-full text-sm">
@@ -39,7 +39,9 @@ export default function AIAutonomousInfrastructurePlatform() {
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 text-center">
-              <div className="text-4xl font-bold text-emerald-400 mb-2">99.99%</div>
+              <div className="text-4xl font-bold text-emerald-400 mb-2">
+                99.99%
+              </div>
               <div className="text-sm text-gray-300">Uptime Guarantee</div>
             </div>
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 text-center">
@@ -47,11 +49,15 @@ export default function AIAutonomousInfrastructurePlatform() {
               <div className="text-sm text-gray-300">Cost Reduction</div>
             </div>
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 text-center">
-              <div className="text-4xl font-bold text-purple-400 mb-2">Zero</div>
+              <div className="text-4xl font-bold text-purple-400 mb-2">
+                Zero
+              </div>
               <div className="text-sm text-gray-300">Manual Intervention</div>
             </div>
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 text-center">
-              <div className="text-4xl font-bold text-orange-400 mb-2">24/7</div>
+              <div className="text-4xl font-bold text-orange-400 mb-2">
+                24/7
+              </div>
               <div className="text-sm text-gray-300">Autonomous Operation</div>
             </div>
           </div>
@@ -65,18 +71,23 @@ export default function AIAutonomousInfrastructurePlatform() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
               <div className="text-3xl mb-4">🔮</div>
-              <h3 className="text-xl font-bold mb-4 text-cyan-400">Predictive Failure Detection</h3>
+              <h3 className="text-xl font-bold mb-4 text-cyan-400">
+                Predictive Failure Detection
+              </h3>
               <p className="text-gray-300">
-                Advanced AI algorithms that predict infrastructure failures before they occur,
-                enabling proactive remediation and preventing downtime.
+                Advanced AI algorithms that predict infrastructure failures
+                before they occur, enabling proactive remediation and preventing
+                downtime.
               </p>
             </div>
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
               <div className="text-3xl mb-4">🚨</div>
-              <h3 className="text-xl font-bold mb-4 text-blue-400">Automated Incident Response</h3>
+              <h3 className="text-xl font-bold mb-4 text-blue-400">
+                Automated Incident Response
+              </h3>
               <p className="text-gray-300">
-                Intelligent incident response systems that automatically diagnose issues and
-                implement fixes without human intervention.
+                Intelligent incident response systems that automatically
+                diagnose issues and implement fixes without human intervention.
               </p>
             </div>
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
@@ -85,8 +96,8 @@ export default function AIAutonomousInfrastructurePlatform() {
                 Self-Optimizing Resource Allocation
               </h3>
               <p className="text-gray-300">
-                Dynamic resource optimization that continuously adjusts compute, storage, and
-                network resources for optimal performance and cost.
+                Dynamic resource optimization that continuously adjusts compute,
+                storage, and network resources for optimal performance and cost.
               </p>
             </div>
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
@@ -95,8 +106,8 @@ export default function AIAutonomousInfrastructurePlatform() {
                 Intelligent Capacity Planning
               </h3>
               <p className="text-gray-300">
-                AI-driven capacity planning that predicts future resource needs and automatically
-                provisions infrastructure to meet demand.
+                AI-driven capacity planning that predicts future resource needs
+                and automatically provisions infrastructure to meet demand.
               </p>
             </div>
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
@@ -105,8 +116,8 @@ export default function AIAutonomousInfrastructurePlatform() {
                 Zero-Touch Deployment Pipelines
               </h3>
               <p className="text-gray-300">
-                Fully automated deployment pipelines that handle everything from code commits to
-                production deployment with zero manual steps.
+                Fully automated deployment pipelines that handle everything from
+                code commits to production deployment with zero manual steps.
               </p>
             </div>
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
@@ -115,8 +126,8 @@ export default function AIAutonomousInfrastructurePlatform() {
                 Autonomous Security Management
               </h3>
               <p className="text-gray-300">
-                Self-managing security systems that continuously monitor, detect, and respond to
-                threats without human intervention.
+                Self-managing security systems that continuously monitor,
+                detect, and respond to threats without human intervention.
               </p>
             </div>
           </div>
@@ -139,10 +150,12 @@ export default function AIAutonomousInfrastructurePlatform() {
                       1
                     </span>
                     <div>
-                      <h4 className="text-lg font-bold text-white mb-2">Continuous Monitoring</h4>
+                      <h4 className="text-lg font-bold text-white mb-2">
+                        Continuous Monitoring
+                      </h4>
                       <p className="text-gray-300">
-                        AI agents continuously monitor all infrastructure components, applications,
-                        and services in real-time.
+                        AI agents continuously monitor all infrastructure
+                        components, applications, and services in real-time.
                       </p>
                     </div>
                   </div>
@@ -151,10 +164,12 @@ export default function AIAutonomousInfrastructurePlatform() {
                       2
                     </span>
                     <div>
-                      <h4 className="text-lg font-bold text-white mb-2">Predictive Analysis</h4>
+                      <h4 className="text-lg font-bold text-white mb-2">
+                        Predictive Analysis
+                      </h4>
                       <p className="text-gray-300">
-                        Machine learning models analyze patterns and predict potential issues before
-                        they impact operations.
+                        Machine learning models analyze patterns and predict
+                        potential issues before they impact operations.
                       </p>
                     </div>
                   </div>
@@ -163,10 +178,12 @@ export default function AIAutonomousInfrastructurePlatform() {
                       3
                     </span>
                     <div>
-                      <h4 className="text-lg font-bold text-white mb-2">Autonomous Remediation</h4>
+                      <h4 className="text-lg font-bold text-white mb-2">
+                        Autonomous Remediation
+                      </h4>
                       <p className="text-gray-300">
-                        Self-healing systems automatically implement fixes, scale resources, and
-                        optimize performance.
+                        Self-healing systems automatically implement fixes,
+                        scale resources, and optimize performance.
                       </p>
                     </div>
                   </div>
@@ -175,44 +192,56 @@ export default function AIAutonomousInfrastructurePlatform() {
                       4
                     </span>
                     <div>
-                      <h4 className="text-lg font-bold text-white mb-2">Continuous Learning</h4>
+                      <h4 className="text-lg font-bold text-white mb-2">
+                        Continuous Learning
+                      </h4>
                       <p className="text-gray-300">
-                        The system continuously learns from outcomes to improve future predictions
-                        and responses.
+                        The system continuously learns from outcomes to improve
+                        future predictions and responses.
                       </p>
                     </div>
                   </div>
                 </div>
               </div>
               <div>
-                <h3 className="text-2xl font-bold mb-6 text-emerald-400">Key Technologies</h3>
+                <h3 className="text-2xl font-bold mb-6 text-emerald-400">
+                  Key Technologies
+                </h3>
                 <div className="space-y-4">
                   <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/10">
                     <h4 className="font-bold text-white mb-2">
                       Machine Learning Operations (MLOps)
                     </h4>
                     <p className="text-sm text-gray-300">
-                      Automated model training, deployment, and monitoring for continuous
-                      improvement.
+                      Automated model training, deployment, and monitoring for
+                      continuous improvement.
                     </p>
                   </div>
                   <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/10">
-                    <h4 className="font-bold text-white mb-2">Infrastructure as Code (IaC)</h4>
+                    <h4 className="font-bold text-white mb-2">
+                      Infrastructure as Code (IaC)
+                    </h4>
                     <p className="text-sm text-gray-300">
-                      Programmable infrastructure that can be automatically modified and optimized.
+                      Programmable infrastructure that can be automatically
+                      modified and optimized.
                     </p>
                   </div>
                   <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/10">
-                    <h4 className="font-bold text-white mb-2">Chaos Engineering</h4>
+                    <h4 className="font-bold text-white mb-2">
+                      Chaos Engineering
+                    </h4>
                     <p className="text-sm text-gray-300">
-                      Controlled failure testing to improve system resilience and recovery
-                      capabilities.
+                      Controlled failure testing to improve system resilience
+                      and recovery capabilities.
                     </p>
                   </div>
                   <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/10">
-                    <h4 className="font-bold text-white mb-2">Observability Platforms</h4>
+                    <h4 className="font-bold text-white mb-2">
+                      Observability Platforms
+                    </h4>
                     <p className="text-sm text-gray-300">
-                      Comprehensive monitoring and alerting systems for complete system visibility.
+                      Comprehensive monitoring and alerting systems for complete
+                      system visibility.
                     </p>
                   </div>
                 </div>
@@ -233,8 +262,9 @@ export default function AIAutonomousInfrastructurePlatform() {
                 Enterprise Cloud Infrastructure
               </h3>
               <p className="text-gray-300 mb-4">
-                Transform your enterprise cloud infrastructure into a self-managing, self-healing
-                system that automatically optimizes for performance and cost.
+                Transform your enterprise cloud infrastructure into a
+                self-managing, self-healing system that automatically optimizes
+                for performance and cost.
               </p>
               <ul className="space-y-2 text-sm text-gray-300">
                 <li className="flex items-center">
@@ -253,10 +283,12 @@ export default function AIAutonomousInfrastructurePlatform() {
             </div>
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
               <div className="text-3xl mb-4">🏭</div>
-              <h3 className="text-xl font-bold mb-4 text-pink-400">Industrial IoT Systems</h3>
+              <h3 className="text-xl font-bold mb-4 text-pink-400">
+                Industrial IoT Systems
+              </h3>
               <p className="text-gray-300 mb-4">
-                Manage complex industrial IoT deployments with autonomous infrastructure that adapts
-                to changing operational requirements.
+                Manage complex industrial IoT deployments with autonomous
+                infrastructure that adapts to changing operational requirements.
               </p>
               <ul className="space-y-2 text-sm text-gray-300">
                 <li className="flex items-center">
@@ -283,7 +315,9 @@ export default function AIAutonomousInfrastructurePlatform() {
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
-              <h3 className="text-2xl font-bold mb-4 text-orange-400">Starter</h3>
+              <h3 className="text-2xl font-bold mb-4 text-orange-400">
+                Starter
+              </h3>
               <div className="text-4xl font-bold mb-4">
                 $12,000<span className="text-lg text-gray-400">/month</span>
               </div>
@@ -313,8 +347,12 @@ export default function AIAutonomousInfrastructurePlatform() {
               </a>
             </div>
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-emerald-400/50 border-2">
-              <div className="text-emerald-400 text-sm font-bold mb-2">RECOMMENDED</div>
-              <h3 className="text-2xl font-bold mb-4 text-emerald-400">Professional</h3>
+              <div className="text-emerald-400 text-sm font-bold mb-2">
+                RECOMMENDED
+              </div>
+              <h3 className="text-2xl font-bold mb-4 text-emerald-400">
+                Professional
+              </h3>
               <div className="text-4xl font-bold mb-4">
                 $25,000<span className="text-lg text-gray-400">/month</span>
               </div>
@@ -348,7 +386,9 @@ export default function AIAutonomousInfrastructurePlatform() {
               </a>
             </div>
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
-              <h3 className="text-2xl font-bold mb-4 text-red-400">Enterprise</h3>
+              <h3 className="text-2xl font-bold mb-4 text-red-400">
+                Enterprise
+              </h3>
               <div className="text-4xl font-bold mb-4">
                 Custom<span className="text-lg text-gray-400">/month</span>
               </div>
@@ -391,8 +431,8 @@ export default function AIAutonomousInfrastructurePlatform() {
               Ready to Transform Your Infrastructure?
             </h3>
             <p className="text-gray-300 mb-6">
-              Join leading enterprises that have achieved 99.99% uptime with zero manual
-              intervention.
+              Join leading enterprises that have achieved 99.99% uptime with
+              zero manual intervention.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a

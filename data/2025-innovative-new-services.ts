@@ -1,8 +1,12 @@
+import { ServiceVariant  } from "../types/service-variants"
+import { ServiceVariant } from '../types/service-variants'
+import { ServiceVariant } from '../types/service-variants';
+import { ServiceVariant } from '../types/service-variants';
 
 export interface InnovativeNewService2025
 export interface InnovativeNewService2025 {;
-import { ServiceVariant } from '../types/service-variants'
-import { ServiceVariant  } from "../types/service-variants"
+
+
 export interface InnovativeNewService2025
 export interface InnovativeNewService2025 {;
 export interface InnovativeNewService2025 {
@@ -254,7 +258,7 @@ export const innovativeNewServices2025: InnovativeNewService[] = [,
     launchDate: '2025-01-08', customers: 12,
     rating: 4.9,
     reviews: 6,
-import { ServiceVariant } from '../types/service-variants';
+
 export interface InnovativeNewService {;
   id: string;
   name: string;
@@ -529,7 +533,7 @@ export const innovativeNewServices2025: InnovativeNewService[] = [;
     implementationDetails: 'Quantum-powered financial trading platform with advanced algorithms and real-time market analysis.'
     launchDate: '2025-01-08'
     customers: 12,
-import { ServiceVariant } from '../types/service-variants';
+
 export interface InnovativeNewService {;
   id: string;
   name: string;

@@ -26,9 +26,9 @@ class Logger {
   private constructor(config: Partial<LoggerConfig> = {}) {
     this.config = {
       level: this.getLogLevelFromEnv(),
-      prefix: config.prefix || 'APP',
+      prefix: config.prefix || "APP",
       timestamp: config.timestamp !== false,
-      colorize: config.colorize !== false && typeof window !== 'undefined',
+      colorize: config.colorize !== false && typeof window !== "undefined",
     };
   }
 
@@ -40,27 +40,35 @@ class Logger {
   }
 
   private getLogLevelFromEnv(): LogLevel {
-    if (typeof process !== 'undefined' && process.env) {
+    if (typeof process !== "undefined" && process.env) {
       //       const envLevel = process.env.NEXT_PUBLIC_LOG_LEVEL || process.env.LOG_LEVEL;
       switch (envLevel?.toUpperCase()) {
-        case 'DEBUG':
+        case "DEBUG":
           return LogLevel.DEBUG;
-        case 'INFO':
+        case "INFO":
           return LogLevel.INFO;
-        case 'WARN':
+        case "WARN":
           return LogLevel.WARN;
-        case 'ERROR':
+        case "ERROR":
           return LogLevel.ERROR;
-        case 'NONE':
+        case "NONE":
           return LogLevel.NONE;
       }
     }
     // Default to INFO in production, DEBUG in development
-    return process.env['NODE_ENV'] === 'production' ? LogLevel.INFO : LogLevel.DEBUG;
+    return process.env["NODE_ENV"] === "production"
+      ? LogLevel.INFO
+      : LogLevel.DEBUG;
   }
 
-  private formatMessage(level: string, message: string, ...args: unknown[]): string {
-    const _timestamp = this.config.timestamp ? `[${new Date().toISOString()}]` : '';
+  private formatMessage(
+    level: string,
+    message: string,
+    ...args: unknown[]
+  ): string {
+    const _timestamp = this.config.timestamp
+      ? `[${new Date().toISOString()}]`
+      : "";
     //     const prefix = this.config.prefix ? `[${this.config.prefix}]` : '';
     //     const formattedArgs = args.length > 0 ? JSON.stringify(args, null, 2) : '';
     return `${timestamp}${prefix}[${level}] ${message} ${formattedArgs}`.trim();
@@ -91,7 +99,9 @@ class Logger {
   public error(message: string, error?: Error | any, ...args: unknown[]): void {
     if (this.shouldLog(LogLevel.ERROR)) {
       const errorDetails =
-        error instanceof Error ? { message: error.message, stack: error.stack } : error;
+        error instanceof Error
+          ? { message: error.message, stack: error.stack }
+          : error;
       //       console.error(this.formatMessage('ERROR', message, errorDetails, ...args));
     }
   }
@@ -109,10 +119,16 @@ class Logger {
 export const logger = Logger.getInstance();
 
 // Export convenience functions
-export const debug = (message: string, ...args: unknown[]) => logger.debug(message, ...args);
-export const info = (message: string, ...args: unknown[]) => logger.info(message, ...args);
-export const warn = (message: string, ...args: unknown[]) => logger.warn(message, ...args);
-export const error = (message: string, error?: Error | any, ...args: unknown[]) =>
-  logger.error(message, error, ...args);
+export const debug = (message: string, ...args: unknown[]) =>
+  logger.debug(message, ...args);
+export const info = (message: string, ...args: unknown[]) =>
+  logger.info(message, ...args);
+export const warn = (message: string, ...args: unknown[]) =>
+  logger.warn(message, ...args);
+export const error = (
+  message: string,
+  error?: Error | any,
+  ...args: unknown[]
+) => logger.error(message, error, ...args);
 
 export default logger;

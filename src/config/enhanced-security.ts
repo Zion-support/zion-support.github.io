@@ -9,12 +9,12 @@ export interface SecurityHeaders {
 
 export const securityHeaders: SecurityHeaders = {
   // Prevent XSS attacks
-  'X-Content-Type-Options': 'nosniff',
-  'X-Frame-Options': 'DENY',
-  'X-XSS-Protection': '1; mode=block',
+  "X-Content-Type-Options": "nosniff",
+  "X-Frame-Options": "DENY",
+  "X-XSS-Protection": "1; mode=block",
 
   // Content Security Policy
-  'Content-Security-Policy': [
+  "Content-Security-Policy": [
     "default-src 'self'",
     "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-this.com",
     "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
@@ -24,28 +24,33 @@ export const securityHeaders: SecurityHeaders = {
     "frame-ancestors 'none'",
     "base-uri 'self'",
     "form-action 'self'",
-  ].join('; '),
+  ].join("; "),
 
   // Force HTTPS
-  'Strict-Transport-Security': 'max-age=31536000; includeSubDomains; preload',
+  "Strict-Transport-Security": "max-age=31536000; includeSubDomains; preload",
 
   // Referrer policy
-  'Referrer-Policy': 'strict-origin-when-cross-origin',
+  "Referrer-Policy": "strict-origin-when-cross-origin",
 
   // Permissions policy
-  'Permissions-Policy': ['camera=()', 'microphone=()', 'geolocation=()', 'payment=()'].join(', '),
+  "Permissions-Policy": [
+    "camera=()",
+    "microphone=()",
+    "geolocation=()",
+    "payment=()",
+  ].join(", "),
 };
 
 /**
  * Input sanitization utilities
  */
 export const sanitizeInput = (input: string): string => {
-  if (!input) return '';
+  if (!input) return "";
 
   return input
-    .replace(/[<>]/g, '') // Remove angle brackets
-    .replace(/javascript:/gi, '') // Remove javascript: protocol
-    .replace(/on\w+\s*=/gi, '') // Remove event handlers
+    .replace(/[<>]/g, "") // Remove angle brackets
+    .replace(/javascript:/gi, "") // Remove javascript: protocol
+    .replace(/on\w+\s*=/gi, "") // Remove event handlers
     .trim();
 };
 
@@ -63,7 +68,7 @@ export const isValidEmail = (email: string): boolean => {
 export const isValidUrl = (url: string): boolean => {
   try {
     const urlObj = new URL(url);
-    return urlObj.protocol === 'http:' || urlObj.protocol === 'https:';
+    return urlObj.protocol === "http:" || urlObj.protocol === "https:";
   } catch {
     return false;
   }
@@ -95,7 +100,9 @@ export class RateLimiter {
     const requests = this.requests.get(identifier) || [];
 
     // Remove old requests outside the window
-    const validRequests = requests.filter(time => now - time < this.config.windowMs);
+    const validRequests = requests.filter(
+      (time) => now - time < this.config.windowMs,
+    );
 
     if (validRequests.length >= this.config.maxRequests) {
       return false;
@@ -116,7 +123,7 @@ export class RateLimiter {
  * CORS configuration
  */
 export const corsConfig = {
-  origin: process.env.ALLOWED_ORIGINS?.split(',') || ['http:localhost: 3000'],
+  origin: process.env.ALLOWED_ORIGINS?.split(",") || ["http:localhost: 3000"],
   credentials: true,
   optionsSuccessStatus: 200,
 };

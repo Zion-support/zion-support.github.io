@@ -5,7 +5,7 @@
 
 export interface CacheOptions {
   ttl?: number; // Time to live in milliseconds
-  storage?: 'memory' | 'localStorage' | 'sessionStorage';
+  storage?: "memory" | "localStorage" | "sessionStorage";
   maxSize?: number; // Maximum number of entries
 }
 
@@ -20,17 +20,17 @@ class AdvancedCache<T = unknown> {
   private cache: Map<string, CacheEntry<T>> = new Map();
   private accessOrder: string[] = [];
   private options: Required<CacheOptions>;
-  private storageKey = 'advanced-cache';
+  private storageKey = "advanced-cache";
 
   constructor(options: CacheOptions = {}) {
     this.options = {
       ttl: options.ttl || 5 * 60 * 1000, // Default 5 minutes
-      storage: options.storage || 'memory',
+      storage: options.storage || "memory",
       maxSize: options.maxSize || 100,
     };
 
     // Load from persistent storage if needed
-    if (this.options.storage !== 'memory') {
+    if (this.options.storage !== "memory") {
       this.loadFromStorage();
     }
 
@@ -39,7 +39,7 @@ class AdvancedCache<T = unknown> {
   }
 
   private setupCleanup(): void {
-    if (typeof window !== 'undefined') {
+    if (typeof window !== "undefined") {
       // Clean expired entries every minute
       setInterval(() => {
         this.cleanExpired();
@@ -48,7 +48,7 @@ class AdvancedCache<T = unknown> {
   }
 
   private loadFromStorage(): void {
-    if (typeof window === 'undefined') return;
+    if (typeof window === "undefined") return;
 
     try {
       const storage = this.getStorage();
@@ -58,13 +58,12 @@ class AdvancedCache<T = unknown> {
         this.cache = new Map(Object.entries(parsed.cache));
         this.accessOrder = parsed.accessOrder || [];
       }
-    } catch (error) {
-      console.warn('Failed to load cache from storage:', error);
-    }
+    } catch (error) {}
   }
 
   private saveToStorage(): void {
-    if (typeof window === 'undefined' || this.options.storage === 'memory') return;
+    if (typeof window === "undefined" || this.options.storage === "memory")
+      return;
 
     try {
       const storage = this.getStorage();
@@ -73,17 +72,15 @@ class AdvancedCache<T = unknown> {
         accessOrder: this.accessOrder,
       };
       storage?.setItem(this.storageKey, JSON.stringify(data));
-    } catch (error) {
-      console.warn('Failed to save cache to storage:', error);
-    }
+    } catch (error) {}
   }
 
   private getStorage(): Storage | null {
-    if (typeof window === 'undefined') return null;
+    if (typeof window === "undefined") return null;
 
-    if (this.options.storage === 'localStorage') {
+    if (this.options.storage === "localStorage") {
       return window.localStorage;
-    } else if (this.options.storage === 'sessionStorage') {
+    } else if (this.options.storage === "sessionStorage") {
       return window.sessionStorage;
     }
     return null;
@@ -108,7 +105,7 @@ class AdvancedCache<T = unknown> {
     this.updateAccessOrder(key);
 
     // Save to storage if needed
-    if (this.options.storage !== 'memory') {
+    if (this.options.storage !== "memory") {
       this.saveToStorage();
     }
   }
@@ -158,7 +155,7 @@ class AdvancedCache<T = unknown> {
     this.cache.clear();
     this.accessOrder = [];
 
-    if (this.options.storage !== 'memory') {
+    if (this.options.storage !== "memory") {
       const storage = this.getStorage();
       storage?.removeItem(this.storageKey);
     }
@@ -196,9 +193,9 @@ class AdvancedCache<T = unknown> {
       }
     });
 
-    keysToDelete.forEach(key => this.delete(key));
+    keysToDelete.forEach((key) => this.delete(key));
 
-    if (keysToDelete.length > 0 && this.options.storage !== 'memory') {
+    if (keysToDelete.length > 0 && this.options.storage !== "memory") {
       this.saveToStorage();
     }
   }
@@ -238,7 +235,7 @@ class AdvancedCache<T = unknown> {
   public async getOrFetch<R extends T>(
     key: string,
     fetcher: () => Promise<R>,
-    ttl?: number
+    ttl?: number,
   ): Promise<R> {
     const cached = this.get(key);
     if (cached !== null) {
@@ -252,7 +249,9 @@ class AdvancedCache<T = unknown> {
 }
 
 // Export factory function
-export function createCache<T = unknown>(options?: CacheOptions): AdvancedCache<T> {
+export function createCache<T = unknown>(
+  options?: CacheOptions,
+): AdvancedCache<T> {
   return new AdvancedCache<T>(options);
 }
 

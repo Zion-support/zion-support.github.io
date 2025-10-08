@@ -15,7 +15,7 @@ export const codeQualityUtils = {
     if (obj1 == null || obj2 == null) return false;
     if (typeof obj1 !== typeof obj2) return false;
 
-    if (typeof obj1 === 'object') {
+    if (typeof obj1 === "object") {
       const _keys1 = Object.keys(obj1);
       const _keys2 = Object.keys(obj2);
 
@@ -58,7 +58,7 @@ export const codeQualityUtils = {
   },
 
   // Memoization
-  memoize: fn => {
+  memoize: (fn) => {
     const _cache = new Map();
     return function (...args) {
       //       const key = JSON.stringify(args);

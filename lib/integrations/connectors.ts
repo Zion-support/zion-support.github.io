@@ -1,5 +1,18 @@
 import type { ProviderConnection, SyncLogEntry } from './types';
 import type { ProviderConnection, SyncLogEntry } from './types';
+import type { ProviderConnection, SyncLogEntry } from './types';
+import type { ProviderConnection, SyncLogEntry } from './types';
+import type { ProviderConnection, SyncLogEntry } from './types';
+import type { ProviderConnection, SyncLogEntry } from './types';
+import type { ProviderConnection, SyncLogEntry } from './types';
+import type { ProviderConnection, SyncLogEntry } from './types';
+import { ProviderConnection, SyncLogEntry } from './types';
+import { ProviderConnection, SyncLogEntry } from './types';
+import { ProviderConnection, SyncLogEntry } from './types';
+import { ProviderConnection, SyncLogEntry } from './types';
+import { ProviderConnection, SyncLogEntry } from './types';
+
+
 
 export async function simulateAction<T = unknown>(
   connection: ProviderConnection,
@@ -8,23 +21,23 @@ export async function simulateAction<T = unknown>(
 ): Promise<{ log: SyncLogEntry; result: T }> {
   const log: SyncLogEntry = {
     id: Math.random().toString(36).substr(2, 9),
-import { ProviderConnection, SyncLogEntry } from './types';
-import type { ProviderConnection, SyncLogEntry } from './types';
-import type { ProviderConnection, SyncLogEntry } from './types';
+
+
+
 // Simple UUID generator since uuid package is not available
 const generateId = (): string => {
   return Math.random().toString(36).substr(2, 9);
 };
-import { ProviderConnection, SyncLogEntry } from './types';
-import { ProviderConnection, SyncLogEntry } from './types';
-import type { ProviderConnection, SyncLogEntry } from './types';
-import { ProviderConnection, SyncLogEntry } from './types';
-import type { ProviderConnection, SyncLogEntry } from './types';
-import type { ProviderConnection, SyncLogEntry } from './types';
 
-import type { ProviderConnection, SyncLogEntry } from './types';
 
-import { ProviderConnection, SyncLogEntry } from './types';
+
+
+
+
+
+
+
+
 
 export async function simulateAction<T = any>(
   connection: ProviderConnection,

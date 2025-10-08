@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 
 interface PerformanceMetrics {
   loadTime: number;
@@ -19,14 +19,18 @@ const PerformanceDashboard: React.FC = () => {
   useEffect(() => {
     const updateMetrics = () => {
       const navigation = performance.getEntriesByType(
-        'navigation'
+        "navigation",
       )[0] as PerformanceNavigationTiming;
-      const _loadTime = navigation ? navigation.loadEventEnd - navigation.loadEventStart : 0;
+      const _loadTime = navigation
+        ? navigation.loadEventEnd - navigation.loadEventStart
+        : 0;
 
-      const _memory = (performance as Performance & { memory?: { usedJSHeapSize: number } }).memory;
+      const _memory = (
+        performance as Performance & { memory?: { usedJSHeapSize: number } }
+      ).memory;
       const _memoryUsage = memory ? memory.usedJSHeapSize / 1024 / 1024 : 0;
 
-      setMetrics(prev => ({
+      setMetrics((prev) => ({
         ...prev,
         loadTime,
         memoryUsage,
@@ -43,7 +47,7 @@ const PerformanceDashboard: React.FC = () => {
   }, []);
 
   //Only show in development
-  if (process.env['NODE_ENV'] !== 'development') {
+  if (process.env["NODE_ENV"] !== "development") {
     return null;
   }
 
@@ -59,15 +63,21 @@ const PerformanceDashboard: React.FC = () => {
 
       {isVisible && (
         <div className="absolute bottom-12 right-0 bg-white border border-gray-200 rounded-lg shadow-lg p-4 min-w-64">
-          <h3 className="text-sm font-semibold text-gray-900 mb-3">Performance Metrics</h3>
+          <h3 className="text-sm font-semibold text-gray-900 mb-3">
+            Performance Metrics
+          </h3>
           <div className="space-y-2 text-xs">
             <div className="flex justify-between">
               <span className="text-gray-600">Load Time:</span>
-              <span className="font-mono">{metrics?.loadTime.toFixed(2)}ms</span>
+              <span className="font-mono">
+                {metrics?.loadTime.toFixed(2)}ms
+              </span>
             </div>
             <div className="flex justify-between">
               <span className="text-gray-600">Memory:</span>
-              <span className="font-mono">{metrics?.memoryUsage.toFixed(2)}MB</span>
+              <span className="font-mono">
+                {metrics?.memoryUsage.toFixed(2)}MB
+              </span>
             </div>
             <div className="flex justify-between">
               <span className="text-gray-600">FPS:</span>

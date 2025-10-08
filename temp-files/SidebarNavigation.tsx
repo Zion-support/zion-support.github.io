@@ -1,20 +1,22 @@
-import { Home, Menu, Settings, X } from 'lucide-react';
-import React, { useState } from 'react';
-import Link from 'next/link';
+import Link from "next/link";
+import React, { useState } from "react";
+import { Home, Menu, Settings, X } from "lucide-react";
 
 const SidebarNavigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const navigationItems = [
-    { name: 'Home', href: '/', icon: Home },
-    { name: 'Profile', href: '/profile', icon: User },
-    { name: 'Settings', href: '/settings', icon: Settings },
+    { name: "Home", href: "/", icon: Home },
+    { name: "Profile", href: "/profile", icon: User },
+    { name: "Settings", href: "/settings", icon: Settings },
   ];
 
   return (
     <div className="flex h-screen">
       {/* Sidebar */}
-      <div className={`${isOpen ? 'w-64' : 'w-16'} transition-all duration-300 bg-white shadow-lg`}>
+      <div
+        className={`${isOpen ? "w-64" : "w-16"} transition-all duration-300 bg-white shadow-lg`}
+      >
         <div className="p-4">
           <button
             onClick={() => setIsOpen(!isOpen)}
@@ -25,12 +27,12 @@ const SidebarNavigation: React.FC = () => {
         </div>
 
         <nav className="px-4 pb-4">
-          {navigationItems.map(item => (
+          {navigationItems.map((item) => (
             <Link
               key={item.name}
               href={item.href}
               className={`flex items-center p-3 rounded-lg hover:bg-gray-100 transition-colors mb-2 ${
-                isOpen ? 'justify-start' : 'justify-center'
+                isOpen ? "justify-start" : "justify-center"
               }`}
             >
               <item.icon className="w-5 h-5" />

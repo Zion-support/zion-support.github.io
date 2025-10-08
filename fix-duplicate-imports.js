@@ -1,7 +1,9 @@
-#!/usr/bin/env node
-
 import fs from 'fs';
 import { glob } from 'glob';
+#!/usr/bin/env node
+
+
+
 
 // Function to process a file
 function processFile(filePath) {
@@ -18,7 +20,7 @@ function processFile(filePath) {
       const _line = lines[i];
 
       // Check if this is a React import
-      if (line.trim().startsWith("import React from 'react';")) {
+      if (line.trim().startsWith("")) {
         if (!seenReactImport) {
           newLines.push(line);
           seenReactImport = true;

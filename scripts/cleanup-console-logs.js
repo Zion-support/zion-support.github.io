@@ -2,6 +2,9 @@ import fs from 'fs';
 import path from 'path';
 import { glob } from 'glob';
 
+
+
+
 // Function to remove console.log statements from a file
 function removeConsoleLogs(filePath) {
   try {

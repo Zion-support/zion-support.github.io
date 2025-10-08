@@ -1,49 +1,49 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
 
 const Services: React.FC = () => {
   const services = [
     {
-      title: 'AI Autonomous Operations',
+      title: "AI Autonomous Operations",
       description:
-        'Self-healing infrastructure and autonomous operations that reduce costs by 70% and achieve 99.9% uptime.',
-      icon: '🤖',
-      href: '/services/autonomous-operations',
+        "Self-healing infrastructure and autonomous operations that reduce costs by 70% and achieve 99.9% uptime.",
+      icon: "🤖",
+      href: "/services/autonomous-operations",
     },
     {
-      title: 'Quantum Computing Solutions',
+      title: "Quantum Computing Solutions",
       description:
-        'Revolutionary quantum computing that delivers 2000x processing speed improvements for complex calculations.',
-      icon: '⚡',
-      href: '/services/quantum-computing',
+        "Revolutionary quantum computing that delivers 2000x processing speed improvements for complex calculations.",
+      icon: "⚡",
+      href: "/services/quantum-computing",
     },
     {
-      title: 'Advanced Cybersecurity AI',
+      title: "Advanced Cybersecurity AI",
       description:
-        'Next-generation AI-powered cybersecurity solutions with 99.9% threat detection accuracy.',
-      icon: '🛡️',
-      href: '/services/cybersecurity',
+        "Next-generation AI-powered cybersecurity solutions with 99.9% threat detection accuracy.",
+      icon: "🛡️",
+      href: "/services/cybersecurity",
     },
     {
-      title: 'Enterprise AI Consulting',
+      title: "Enterprise AI Consulting",
       description:
-        'Strategic AI implementation guidance that transforms business operations and drives exponential growth.',
-      icon: '🎯',
-      href: '/services/consulting',
+        "Strategic AI implementation guidance that transforms business operations and drives exponential growth.",
+      icon: "🎯",
+      href: "/services/consulting",
     },
     {
-      title: 'Cloud Migration Services',
+      title: "Cloud Migration Services",
       description:
-        'Seamless cloud migration with zero downtime, ensuring business continuity and improved scalability.',
-      icon: '☁️',
-      href: '/services/cloud-migration',
+        "Seamless cloud migration with zero downtime, ensuring business continuity and improved scalability.",
+      icon: "☁️",
+      href: "/services/cloud-migration",
     },
     {
-      title: 'Digital Transformation',
+      title: "Digital Transformation",
       description:
-        'Complete digital transformation solutions that modernize operations and enhance customer experiences.',
-      icon: '🔄',
-      href: '/services/digital-transformation',
+        "Complete digital transformation solutions that modernize operations and enhance customer experiences.",
+      icon: "🔄",
+      href: "/services/digital-transformation",
     },
   ];
 
@@ -53,8 +53,8 @@ const Services: React.FC = () => {
         <div className="text-center mb-16">
           <h1 className="text-5xl font-bold text-white mb-6">Our Services</h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Comprehensive AI and technology solutions designed to transform your business and drive
-            unprecedented growth and efficiency.
+            Comprehensive AI and technology solutions designed to transform your
+            business and drive unprecedented growth and efficiency.
           </p>
         </div>
 
@@ -65,7 +65,9 @@ const Services: React.FC = () => {
               className="bg-white/10 backdrop-blur-sm rounded-xl p-8 hover:bg-white/20 transition-all duration-300 border border-white/20"
             >
               <div className="text-4xl mb-4">{service.icon}</div>
-              <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>
+              <h3 className="text-2xl font-bold text-white mb-4">
+                {service.title}
+              </h3>
               <p className="text-gray-300 mb-6">{service.description}</p>
               <Link
                 to={service.href}
@@ -78,9 +80,12 @@ const Services: React.FC = () => {
         </div>
 
         <div className="text-center mt-16">
-          <h2 className="text-3xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
+          <h2 className="text-3xl font-bold text-white mb-6">
+            Ready to Transform Your Business?
+          </h2>
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-            Let our AI experts help you implement cutting-edge solutions that drive real results.
+            Let our AI experts help you implement cutting-edge solutions that
+            drive real results.
           </p>
           <Link
             to="/contact"

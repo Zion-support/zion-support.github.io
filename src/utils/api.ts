@@ -2,7 +2,7 @@
  * API client utilities with retry logic and error handling
  */
 
-import { logger } from './logger';
+import { logger } from "./logger";
 
 export interface ApiRequestOptions extends RequestInit {
   retries?: number;
@@ -23,7 +23,7 @@ export interface ApiResponse<T> {
  */
 export const fetchWithRetry = async <T = unknown>(
   url: string,
-  options: ApiRequestOptions = {}
+  options: ApiRequestOptions = {},
 ): Promise<ApiResponse<T>> => {
   const {
     retries = 3,
@@ -50,12 +50,12 @@ export const fetchWithRetry = async <T = unknown>(
 
       // Parse response
       let data: T | undefined;
-      const contentType = response.headers.get('content-type');
-      
-      if (contentType?.includes('application/json')) {
-        data = await response.json() as T;
+      const contentType = response.headers.get("content-type");
+
+      if (contentType?.includes("application/json")) {
+        data = (await response.json()) as T;
       } else {
-        data = await response.text() as T;
+        data = (await response.text()) as T;
       }
 
       if (!response.ok) {
@@ -69,9 +69,9 @@ export const fetchWithRetry = async <T = unknown>(
       };
     } catch (error) {
       lastError = error instanceof Error ? error : new Error(String(error));
-      
+
       // Don't retry on client errors (4xx)
-      if (error instanceof Error && error.message.includes('HTTP 4')) {
+      if (error instanceof Error && error.message.includes("HTTP 4")) {
         break;
       }
 
@@ -80,23 +80,28 @@ export const fetchWithRetry = async <T = unknown>(
         if (onRetry) {
           onRetry(attempt + 1, lastError);
         }
-        
-        logger.warn(`API request failed, retrying (${attempt + 1}/${retries})`, {
-          url,
-          error: lastError.message,
-        });
+
+        logger.warn(
+          `API request failed, retrying (${attempt + 1}/${retries})`,
+          {
+            url,
+            error: lastError.message,
+          },
+        );
 
         // Exponential backoff
-        await new Promise(resolve => setTimeout(resolve, retryDelay * Math.pow(2, attempt)));
+        await new Promise((resolve) =>
+          setTimeout(resolve, retryDelay * Math.pow(2, attempt)),
+        );
       }
     }
   }
 
   // All retries failed
-  logger.error('API request failed after retries', lastError);
+  logger.error("API request failed after retries", lastError);
 
   return {
-    error: lastError?.message || 'Unknown error',
+    error: lastError?.message || "Unknown error",
     status: 0,
     headers: new Headers(),
   };
@@ -109,7 +114,9 @@ export class ApiClient {
   private baseUrl: string;
   private defaultHeaders: HeadersInit;
   private interceptors: {
-    request: Array<(url: string, options: RequestInit) => RequestInit | Promise<RequestInit>>;
+    request: Array<
+      (url: string, options: RequestInit) => RequestInit | Promise<RequestInit>
+    >;
     response: Array<(response: Response) => Response | Promise<Response>>;
   } = {
     request: [],
@@ -117,9 +124,9 @@ export class ApiClient {
   };
 
   constructor(baseUrl: string, defaultHeaders: HeadersInit = {}) {
-    this.baseUrl = baseUrl.replace(/\/$/, ''); // Remove trailing slash
+    this.baseUrl = baseUrl.replace(/\/$/, ""); // Remove trailing slash
     this.defaultHeaders = {
-      'Content-Type': 'application/json',
+      "Content-Type": "application/json",
       ...defaultHeaders,
     };
   }
@@ -128,7 +135,10 @@ export class ApiClient {
    * Add request interceptor
    */
   public addRequestInterceptor(
-    interceptor: (url: string, options: RequestInit) => RequestInit | Promise<RequestInit>
+    interceptor: (
+      url: string,
+      options: RequestInit,
+    ) => RequestInit | Promise<RequestInit>,
   ): void {
     this.interceptors.request.push(interceptor);
   }
@@ -137,7 +147,7 @@ export class ApiClient {
    * Add response interceptor
    */
   public addResponseInterceptor(
-    interceptor: (response: Response) => Response | Promise<Response>
+    interceptor: (response: Response) => Response | Promise<Response>,
   ): void {
     this.interceptors.response.push(interceptor);
   }
@@ -146,7 +156,9 @@ export class ApiClient {
    * Build full URL
    */
   private buildUrl(endpoint: string): string {
-    const url = endpoint.startsWith('http') ? endpoint : `${this.baseUrl}${endpoint}`;
+    const url = endpoint.startsWith("http")
+      ? endpoint
+      : `${this.baseUrl}${endpoint}`;
     return url;
   }
 
@@ -155,7 +167,7 @@ export class ApiClient {
    */
   private async request<T>(
     endpoint: string,
-    options: ApiRequestOptions = {}
+    options: ApiRequestOptions = {},
   ): Promise<ApiResponse<T>> {
     let url = this.buildUrl(endpoint);
     let requestOptions: RequestInit = {
@@ -180,10 +192,13 @@ export class ApiClient {
   /**
    * GET request
    */
-  public async get<T>(endpoint: string, options?: ApiRequestOptions): Promise<ApiResponse<T>> {
+  public async get<T>(
+    endpoint: string,
+    options?: ApiRequestOptions,
+  ): Promise<ApiResponse<T>> {
     return this.request<T>(endpoint, {
       ...options,
-      method: 'GET',
+      method: "GET",
     });
   }
 
@@ -193,11 +208,11 @@ export class ApiClient {
   public async post<T>(
     endpoint: string,
     data?: unknown,
-    options?: ApiRequestOptions
+    options?: ApiRequestOptions,
   ): Promise<ApiResponse<T>> {
     return this.request<T>(endpoint, {
       ...options,
-      method: 'POST',
+      method: "POST",
       body: data ? JSON.stringify(data) : undefined,
     });
   }
@@ -208,11 +223,11 @@ export class ApiClient {
   public async put<T>(
     endpoint: string,
     data?: unknown,
-    options?: ApiRequestOptions
+    options?: ApiRequestOptions,
   ): Promise<ApiResponse<T>> {
     return this.request<T>(endpoint, {
       ...options,
-      method: 'PUT',
+      method: "PUT",
       body: data ? JSON.stringify(data) : undefined,
     });
   }
@@ -223,11 +238,11 @@ export class ApiClient {
   public async patch<T>(
     endpoint: string,
     data?: unknown,
-    options?: ApiRequestOptions
+    options?: ApiRequestOptions,
   ): Promise<ApiResponse<T>> {
     return this.request<T>(endpoint, {
       ...options,
-      method: 'PATCH',
+      method: "PATCH",
       body: data ? JSON.stringify(data) : undefined,
     });
   }
@@ -235,10 +250,13 @@ export class ApiClient {
   /**
    * DELETE request
    */
-  public async delete<T>(endpoint: string, options?: ApiRequestOptions): Promise<ApiResponse<T>> {
+  public async delete<T>(
+    endpoint: string,
+    options?: ApiRequestOptions,
+  ): Promise<ApiResponse<T>> {
     return this.request<T>(endpoint, {
       ...options,
-      method: 'DELETE',
+      method: "DELETE",
     });
   }
 
@@ -257,7 +275,7 @@ export class ApiClient {
    */
   public clearAuthToken(): void {
     const headers = { ...this.defaultHeaders };
-    delete (headers as Record<string, string>)['Authorization'];
+    delete (headers as Record<string, string>)["Authorization"];
     this.defaultHeaders = headers;
   }
 }
@@ -265,7 +283,10 @@ export class ApiClient {
 /**
  * Create a default API client instance
  */
-export const createApiClient = (baseUrl: string, headers?: HeadersInit): ApiClient => {
+export const createApiClient = (
+  baseUrl: string,
+  headers?: HeadersInit,
+): ApiClient => {
   return new ApiClient(baseUrl, headers);
 };
 

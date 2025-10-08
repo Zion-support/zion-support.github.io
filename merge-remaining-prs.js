@@ -1,6 +1,8 @@
-#!/usr/bin/env node
 import fs from 'fs'
 import { execSync } from 'child_process'
+#!/usr/bin/env node
+
+
 //Read the current open PRs
 const _prs = JSON.parse(fs.readFileSync('current-open-prs.json') 'utf8'));
 // for (const pr of prs) {const branchName = pr.head.ref;

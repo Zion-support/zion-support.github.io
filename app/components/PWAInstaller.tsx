@@ -1,12 +1,13 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from "react";
 
 interface BeforeInstallPromptEvent extends Event {
   prompt(): Promise<void>;
-  userChoice: Promise<{ outcome: 'accepted' | 'dismissed' }>;
+  userChoice: Promise<{ outcome: "accepted" | "dismissed" }>;
 }
 
 const PWAInstaller: React.FC = () => {
-  const [deferredPrompt, setDeferredPrompt] = useState<BeforeInstallPromptEvent | null>(null);
+  const [deferredPrompt, setDeferredPrompt] =
+    useState<BeforeInstallPromptEvent | null>(null);
   const [showInstallButton, setShowInstallButton] = useState(false);
 
   useEffect(() => {
@@ -21,27 +22,30 @@ const PWAInstaller: React.FC = () => {
     const handleAppInstalled = () => {
       setShowInstallButton(false);
       setDeferredPrompt(null);
-      
+
       // Track installation in analytics
-      if (typeof window !== 'undefined' && (window as any).gtag) {
-        (window as any).gtag('event', 'pwa_install', {
-          event_category: 'engagement',
-          event_label: 'app_installed'
+      if (typeof window !== "undefined" && (window as any).gtag) {
+        (window as any).gtag("event", "pwa_install", {
+          event_category: "engagement",
+          event_label: "app_installed",
         });
       }
     };
 
-    window.addEventListener('beforeinstallprompt', handleBeforeInstallPrompt);
-    window.addEventListener('appinstalled', handleAppInstalled);
+    window.addEventListener("beforeinstallprompt", handleBeforeInstallPrompt);
+    window.addEventListener("appinstalled", handleAppInstalled);
 
     // Check if app is already installed
-    if (window.matchMedia('(display-mode: standalone)').matches) {
+    if (window.matchMedia("(display-mode: standalone)").matches) {
       setShowInstallButton(false);
     }
 
     return () => {
-      window.removeEventListener('beforeinstallprompt', handleBeforeInstallPrompt);
-      window.removeEventListener('appinstalled', handleAppInstalled);
+      window.removeEventListener(
+        "beforeinstallprompt",
+        handleBeforeInstallPrompt,
+      );
+      window.removeEventListener("appinstalled", handleAppInstalled);
     };
   }, []);
 
@@ -51,21 +55,21 @@ const PWAInstaller: React.FC = () => {
     try {
       await deferredPrompt.prompt();
       const { outcome } = await deferredPrompt.userChoice;
-      
-      if (outcome === 'accepted') {
+
+      if (outcome === "accepted") {
         // Track successful prompt acceptance
-        if (typeof window !== 'undefined' && (window as any).gtag) {
-          (window as any).gtag('event', 'pwa_install_prompt', {
-            event_category: 'engagement',
-            event_label: 'prompt_accepted'
+        if (typeof window !== "undefined" && (window as any).gtag) {
+          (window as any).gtag("event", "pwa_install_prompt", {
+            event_category: "engagement",
+            event_label: "prompt_accepted",
           });
         }
       }
-      
+
       setDeferredPrompt(null);
       setShowInstallButton(false);
     } catch (error) {
-      console.error('Error installing PWA:', error);
+      console.error("Error installing PWA:", error);
     }
   };
 
@@ -76,14 +80,22 @@ const PWAInstaller: React.FC = () => {
       <div className="bg-white rounded-lg shadow-lg border border-gray-200 p-4 max-w-sm">
         <div className="flex items-start">
           <div className="flex-shrink-0">
-            <svg className="h-6 w-6 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+            <svg
+              className="h-6 w-6 text-indigo-600"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"
+              />
             </svg>
           </div>
           <div className="ml-3 flex-1">
-            <h3 className="text-sm font-medium text-gray-900">
-              Install App
-            </h3>
+            <h3 className="text-sm font-medium text-gray-900">Install App</h3>
             <p className="mt-1 text-sm text-gray-500">
               Install this app on your device for a better experience.
             </p>
@@ -109,7 +121,11 @@ const PWAInstaller: React.FC = () => {
             >
               <span className="sr-only">Close</span>
               <svg className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                <path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd" />
+                <path
+                  fillRule="evenodd"
+                  d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                  clipRule="evenodd"
+                />
               </svg>
             </button>
           </div>

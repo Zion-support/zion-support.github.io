@@ -1,5 +1,5 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import React from "react";
+import { Helmet } from "react-helmet-async";
 
 interface SEOHeadProps {
   title?: string;
@@ -19,13 +19,13 @@ interface SEOHeadProps {
 }
 
 const SEOHead: React.FC<SEOHeadProps> = ({
-  title = 'Zion Tech Group - Advanced AI and IT Solutions',
-  description = 'Leading provider of AI-powered enterprise solutions, automation, and digital transformation services. Transform your business with cutting-edge technology.',
-  keywords = 'AI solutions, artificial intelligence, enterprise automation, digital transformation, cloud services, machine learning, business intelligence',
-  image = 'https://ziontechgroup.com/og-image.jpg',
-  url = 'https://ziontechgroup.com',
-  type = 'website',
-  author = 'Zion Tech Group',
+  title = "Zion Tech Group - Advanced AI and IT Solutions",
+  description = "Leading provider of AI-powered enterprise solutions, automation, and digital transformation services. Transform your business with cutting-edge technology.",
+  keywords = "AI solutions, artificial intelligence, enterprise automation, digital transformation, cloud services, machine learning, business intelligence",
+  image = "https://ziontechgroup.com/og-image.jpg",
+  url = "https://ziontechgroup.com",
+  type = "website",
+  author = "Zion Tech Group",
   publishedTime,
   modifiedTime,
   section,
@@ -34,9 +34,11 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   nofollow = false,
   canonical,
 }) => {
-  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
+  const fullTitle = title.includes("Zion Tech Group")
+    ? title
+    : `${title} | Zion Tech Group`;
   const canonicalUrl = canonical || url;
-  const robotsContent = `${noindex ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}`;
+  const robotsContent = `${noindex ? "noindex" : "index"}, ${nofollow ? "nofollow" : "follow"}`;
 
   return (
     <Helmet>
@@ -66,10 +68,14 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <meta name="twitter:creator" content="@ziontechgroup" />
 
       {/* Article specific meta tags */}
-      {type === 'article' && (
+      {type === "article" && (
         <>
-          {publishedTime && <meta property="article:published_time" content={publishedTime} />}
-          {modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}
+          {publishedTime && (
+            <meta property="article:published_time" content={publishedTime} />
+          )}
+          {modifiedTime && (
+            <meta property="article:modified_time" content={modifiedTime} />
+          )}
           {author && <meta property="article:author" content={author} />}
           {section && <meta property="article:section" content={section} />}
           {tags.map((tag, index) => (
@@ -87,30 +93,30 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       {/* Structured Data */}
       <script type="application/ld+json">
         {JSON.stringify({
-          '@context': 'https://schema.org',
-          '@type': type === 'article' ? 'Article' : 'WebPage',
+          "@context": "https://schema.org",
+          "@type": type === "article" ? "Article" : "WebPage",
           name: fullTitle,
           description: description,
           url: url,
           image: image,
           author: {
-            '@type': 'Organization',
+            "@type": "Organization",
             name: author,
           },
           publisher: {
-            '@type': 'Organization',
-            name: 'Zion Tech Group',
+            "@type": "Organization",
+            name: "Zion Tech Group",
             logo: {
-              '@type': 'ImageObject',
-              url: 'https://ziontechgroup.com/logo.png',
+              "@type": "ImageObject",
+              url: "https://ziontechgroup.com/logo.png",
             },
           },
-          ...(type === 'article' && {
+          ...(type === "article" && {
             datePublished: publishedTime,
             dateModified: modifiedTime || publishedTime,
             mainEntityOfPage: {
-              '@type': 'WebPage',
-              '@id': url,
+              "@type": "WebPage",
+              "@id": url,
             },
           }),
         })}

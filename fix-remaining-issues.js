@@ -1,18 +1,20 @@
-#!/usr/bin/env node
-
 import fs from 'fs';
 import { glob } from 'glob';
+#!/usr/bin/env node
+
+
+
 
 // Patterns to replace
 const replacements = [
   // Fix duplicate React imports
   {
-    from: /import React from 'react';\s*import React from 'react';/g,
-    to: "import React from 'react';",
+    from: /\s*/g,
+    to: "",
   },
   {
-    from: /import React from 'react';\s*\nimport React from 'react';/g,
-    to: "import React from 'react';",
+    from: /\s*\n/g,
+    to: "",
   },
 
   // Fix Metadata type issues

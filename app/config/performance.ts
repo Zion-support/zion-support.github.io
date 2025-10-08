@@ -43,17 +43,19 @@ export const performanceConfig = {
   },
   // Resource hints
   preload: [
-    { href: '/fonts/inter-var.woff2', as: 'font', type: 'font/woff2', crossorigin: 'anonymous' },
+    {
+      href: "/fonts/inter-var.woff2",
+      as: "font",
+      type: "font/woff2",
+      crossorigin: "anonymous",
+    },
   ],
-  prefetch: [
-    '/api/health',
-    '/api/config',
-  ],
+  prefetch: ["/api/health", "/api/config"],
   // Image optimization
   images: {
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
-    formats: ['image/avif', 'image/webp'],
+    formats: ["image/avif", "image/webp"],
     minimumCacheTTL: 60,
     dangerouslyAllowSVG: false,
   },
@@ -82,7 +84,7 @@ export const performanceConfig = {
     sampleRate: 1.0, // 100% in production
     reportInterval: 30000, // 30 seconds
     sendToAnalytics: true,
-    logThreshold: 'needsImprovement',
+    logThreshold: "needsImprovement",
   },
 };
 

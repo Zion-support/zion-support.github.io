@@ -1,8 +1,11 @@
-#!/usr/bin/env node
-
 import fs from 'fs';
 import path from 'path';
 import { glob } from 'glob';
+#!/usr/bin/env node
+
+
+
+
 
 async function main() {
   //Find all TSX files in src/components

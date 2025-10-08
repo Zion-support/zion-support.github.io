@@ -1,5 +1,5 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
 
 interface ContentPreviewCardProps {
   id: string;
@@ -29,40 +29,44 @@ const ContentPreviewCard: React.FC<ContentPreviewCardProps> = ({
   image,
   featured = false,
   stats,
-  excerpt
+  excerpt,
 }) => {
   const formatNumber = (num: number): string => {
     if (num >= 1000) {
-      return (num / 1000).toFixed(1) + 'k';
+      return (num / 1000).toFixed(1) + "k";
     }
     return num.toString();
   };
 
   const getCategoryColor = (category: string): string => {
     const colors: { [key: string]: string } = {
-      'Success Story': 'from-green-500 to-emerald-600',
-      'Mega Trends': 'from-blue-500 to-cyan-600',
-      'Architecture': 'from-purple-500 to-pink-600',
-      'AI Agents': 'from-orange-500 to-red-600',
-      'Cost Optimization': 'from-yellow-500 to-orange-600',
-      'Intelligence': 'from-indigo-500 to-purple-600',
-      'Transformation': 'from-teal-500 to-blue-600',
-      'default': 'from-gray-500 to-gray-600'
+      "Success Story": "from-green-500 to-emerald-600",
+      "Mega Trends": "from-blue-500 to-cyan-600",
+      Architecture: "from-purple-500 to-pink-600",
+      "AI Agents": "from-orange-500 to-red-600",
+      "Cost Optimization": "from-yellow-500 to-orange-600",
+      Intelligence: "from-indigo-500 to-purple-600",
+      Transformation: "from-teal-500 to-blue-600",
+      default: "from-gray-500 to-gray-600",
     };
     return colors[category] || colors.default;
   };
 
   return (
-    <article className={`bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 ${
-      featured ? 'ring-2 ring-indigo-200' : ''
-    }`}>
+    <article
+      className={`bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 ${
+        featured ? "ring-2 ring-indigo-200" : ""
+      }`}
+    >
       {/* Image/Visual Header */}
-      <div className={`h-48 bg-gradient-to-br ${getCategoryColor(category)} flex items-center justify-center relative`}>
+      <div
+        className={`h-48 bg-gradient-to-br ${getCategoryColor(category)} flex items-center justify-center relative`}
+      >
         <div className="text-center text-white">
           <div className="text-6xl mb-2">{image}</div>
           <div className="text-sm font-medium opacity-90">{category}</div>
         </div>
-        
+
         {/* Featured Badge */}
         {featured && (
           <div className="absolute top-4 left-4">
@@ -113,17 +117,46 @@ const ContentPreviewCard: React.FC<ContentPreviewCardProps> = ({
           <div className="flex items-center justify-between mb-4 text-sm">
             <div className="flex items-center space-x-4">
               <div className="flex items-center">
-                <svg className="w-4 h-4 text-gray-400 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                <svg
+                  className="w-4 h-4 text-gray-400 mr-1"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                  />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+                  />
                 </svg>
-                <span className="text-gray-600">{formatNumber(stats.views)} views</span>
+                <span className="text-gray-600">
+                  {formatNumber(stats.views)} views
+                </span>
               </div>
               <div className="flex items-center">
-                <svg className="w-4 h-4 text-green-500 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                <svg
+                  className="w-4 h-4 text-green-500 mr-1"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                  />
                 </svg>
-                <span className="text-green-600 font-medium">{stats.engagement}% engagement</span>
+                <span className="text-green-600 font-medium">
+                  {stats.engagement}% engagement
+                </span>
               </div>
             </div>
           </div>
@@ -137,8 +170,18 @@ const ContentPreviewCard: React.FC<ContentPreviewCardProps> = ({
             className="inline-flex items-center text-indigo-600 hover:text-indigo-700 font-medium text-sm"
           >
             Read Article
-            <svg className="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            <svg
+              className="ml-1 w-4 h-4"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M9 5l7 7-7 7"
+              />
             </svg>
           </Link>
         </div>

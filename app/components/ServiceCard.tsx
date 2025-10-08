@@ -1,5 +1,4 @@
-import React from 'react';
-
+import React from "react";
 
 interface ServiceCardProps {
   title: string;
@@ -11,7 +10,12 @@ interface ServiceCardProps {
 /**
  * Reusable ServiceCard component with accessibility features
  */
-const ServiceCard: React.FC<ServiceCardProps> = ({ title, description, icon, className = '' }) => {
+const ServiceCard: React.FC<ServiceCardProps> = ({
+  title,
+  description,
+  icon,
+  className = "",
+}) => {
   return (
     <article
       className={`bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300 ${className}`}

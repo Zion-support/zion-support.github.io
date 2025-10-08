@@ -1,6 +1,10 @@
-import { execSync } from 'child_process';
 import fs from 'fs';
 import path from 'path';
+import { execSync } from 'child_process';
+import { performanceEnhancer } from '../utils/performanceEnhancer';`
+
+
+
 
 // // 1. Fix AdvancedSEOOptimizer component props
 // // const seoOptimizerPath = '/workspace/app/components/AdvancedSEOOptimizer.tsx';
@@ -144,7 +148,7 @@ if (fs.existsSync(systemMonitorPath)) {
   content = content.replace(
     /import React.*from 'react';/,
     `import React from 'react';
-import { performanceEnhancer } from '../utils/performanceEnhancer';`
+
   );
 
   fs.writeFileSync(systemMonitorPath, content);

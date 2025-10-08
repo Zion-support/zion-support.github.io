@@ -2,12 +2,12 @@ module.exports = {
   nextjsOptimizations: {
     experimental: {
       optimizeCss: true,
-      optimizePackageImports: ['@mui/material', '@mui/icons-material'],
+      optimizePackageImports: ["@mui/material", "@mui/icons-material"],
       turbo: {
         rules: {
-          '*.svg': {
-            loaders: ['@svgr/webpack'],
-            as: '*.js',
+          "*.svg": {
+            loaders: ["@svgr/webpack"],
+            as: "*.js",
           },
         },
       },
@@ -17,7 +17,7 @@ module.exports = {
       styledComponents: true,
     },
     images: {
-      formats: ['image/webp', 'image/avif'],
+      formats: ["image/webp", "image/avif"],
       deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
       imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
       minimumCacheTTL: 31536000,
@@ -39,34 +39,34 @@ module.exports = {
       staleWhileRevalidate: 86400,
     },
     serviceWorker: {
-      cacheFirst: ['/static/', '/images/', '/fonts/'],
-      networkFirst: ['/api/', '/_next/static/'],
-      staleWhileRevalidate: ['/'],
+      cacheFirst: ["/static/", "/images/", "/fonts/"],
+      networkFirst: ["/api/", "/_next/static/"],
+      staleWhileRevalidate: ["/"],
     },
   },
   bundleOptimization: {
     codeSplitting: {
-      chunks: 'all',
+      chunks: "all",
       maxInitialRequests: 30,
       maxAsyncRequests: 30,
       cacheGroups: {
         vendor: {
           test: {},
-          name: 'vendors',
-          chunks: 'all',
+          name: "vendors",
+          chunks: "all",
           priority: 10,
         },
         common: {
-          name: 'common',
+          name: "common",
           minChunks: 2,
-          chunks: 'all',
+          chunks: "all",
           enforce: true,
           priority: 5,
         },
         styles: {
-          name: 'styles',
+          name: "styles",
           test: {},
-          chunks: 'all',
+          chunks: "all",
           enforce: true,
         },
       },
@@ -96,5 +96,5 @@ module.exports = {
       garbageCollection: true,
     },
   },
-  timestamp: '2025-10-08T15:29:24.149Z',
+  timestamp: "2025-10-08T15:29:24.149Z",
 };

@@ -1,3 +1,5 @@
+import type { NextRequest } from "next/server";
+import { NextResponse } from "next/server";
 // DISABLED: This is Next.js middleware and does not work with Vite
 // Security headers are configured in netlify.toml instead
 //
@@ -7,8 +9,8 @@
 // 3. Server-side logic should use Netlify Functions or Edge Functions
 
 /*
-import { NextResponse } from 'next/server';
-import type { NextRequest } from 'next/server';
+
+
 
 export function middleware(request: NextRequest) {
   const response = NextResponse.next();

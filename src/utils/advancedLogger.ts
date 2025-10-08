@@ -69,7 +69,12 @@ class AdvancedLogger {
   /**
    * Log an error message
    */
-  error(message: string, error?: Error, context?: Record<string, any>, tags?: string[]): void {
+  error(
+    message: string,
+    error?: Error,
+    context?: Record<string, any>,
+    tags?: string[],
+  ): void {
     const enrichedContext = {
       ...context,
       error: error
@@ -86,7 +91,12 @@ class AdvancedLogger {
   /**
    * Log a critical message
    */
-  critical(message: string, error?: Error, context?: Record<string, any>, tags?: string[]): void {
+  critical(
+    message: string,
+    error?: Error,
+    context?: Record<string, any>,
+    tags?: string[],
+  ): void {
     const enrichedContext = {
       ...context,
       error: error
@@ -108,7 +118,7 @@ class AdvancedLogger {
     message: string,
     context?: Record<string, any>,
     tags?: string[],
-    stack?: string
+    stack?: string,
   ): void {
     // Check if level meets minimum threshold
     if (level < this.config.minLevel) {
@@ -147,7 +157,7 @@ class AdvancedLogger {
       try {
         callback(entry);
       } catch (error) {
-//         console.error('Error in log callback:', error);
+        //         console.error('Error in log callback:', error);
       }
     });
   }
@@ -156,28 +166,28 @@ class AdvancedLogger {
    * Log to console with appropriate formatting
    */
   private logToConsole(entry: LogEntry): void {
-const levelName = LogLevel[entry.level];
-const timestamp = new Date(entry.timestamp).toISOString();
-const prefix = `[${timestamp}] [${levelName}]`;
-    const tags = entry.tags ? `[${entry.tags.join(', ')}]` : '';
+    const levelName = LogLevel[entry.level];
+    const timestamp = new Date(entry.timestamp).toISOString();
+    const prefix = `[${timestamp}] [${levelName}]`;
+    const tags = entry.tags ? `[${entry.tags.join(", ")}]` : "";
 
-const formattedMessage = `${prefix} ${tags} ${entry.message}`;
+    const formattedMessage = `${prefix} ${tags} ${entry.message}`;
 
     switch (entry.level) {
       case LogLevel.DEBUG:
-//         console.debug(formattedMessage, entry.context || '');
+        //         console.debug(formattedMessage, entry.context || '');
         break;
       case LogLevel.INFO:
-//         console.info(formattedMessage, entry.context || '');
+        //         console.info(formattedMessage, entry.context || '');
         break;
       case LogLevel.WARN:
-//         console.warn(formattedMessage, entry.context || '');
+        //         console.warn(formattedMessage, entry.context || '');
         break;
       case LogLevel.ERROR:
       case LogLevel.CRITICAL:
-//         console.error(formattedMessage, entry.context || '');
+        //         console.error(formattedMessage, entry.context || '');
         if (entry.stack) {
-//           console.error('Stack trace:', entry.stack);
+          //           console.error('Stack trace:', entry.stack);
         }
         break;
     }
@@ -190,20 +200,20 @@ const formattedMessage = `${prefix} ${tags} ${entry.message}`;
     if (!this.config.remoteEndpoint) return;
 
     // Don't log in development unless explicitly enabled
-    if (process.env['NODE_ENV'] !== 'production' && !this.config.enableRemote) {
+    if (process.env["NODE_ENV"] !== "production" && !this.config.enableRemote) {
       return;
     }
 
     try {
       fetch(this.config.remoteEndpoint, {
-        method: 'POST',
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
         body: JSON.stringify(entry),
       }).catch((error) => {
         // Fail silently to avoid logging loops
-//         console.error('Failed to send log to remote:', error);
+        //         console.error('Failed to send log to remote:', error);
       });
     } catch (error) {
       // Fail silently
@@ -222,7 +232,7 @@ const formattedMessage = `${prefix} ${tags} ${entry.message}`;
 
     if (tags && tags.length > 0) {
       filtered = filtered.filter((entry) =>
-        tags.some((tag) => entry.tags?.includes(tag))
+        tags.some((tag) => entry.tags?.includes(tag)),
       );
     }
 
@@ -255,7 +265,8 @@ const formattedMessage = `${prefix} ${tags} ${entry.message}`;
       total: this.logs.length,
       byLevel,
       byoldestLog: this.logs.length > 0 ? this.logs[0].timestamp : null,
-      newestLog: this.logs.length > 0 ? this.logs[this.logs.length - 1].timestamp : null,
+      newestLog:
+        this.logs.length > 0 ? this.logs[this.logs.length - 1].timestamp : null,
     };
   }
 
@@ -286,12 +297,23 @@ const formattedMessage = `${prefix} ${tags} ${entry.message}`;
   /**
    * Create a child logger with additional context
    */
-  child(context: Record<string, any>, tags?: string[]): {
+  child(
+    context: Record<string, any>,
+    tags?: string[],
+  ): {
     debug: (message: string, extraContext?: Record<string, any>) => void;
     info: (message: string, extraContext?: Record<string, any>) => void;
     warn: (message: string, extraContext?: Record<string, any>) => void;
-    error: (message: string, error?: Error, extraContext?: Record<string, any>) => void;
-    critical: (message: string, error?: Error, extraContext?: Record<string, any>) => void;
+    error: (
+      message: string,
+      error?: Error,
+      extraContext?: Record<string, any>,
+    ) => void;
+    critical: (
+      message: string,
+      error?: Error,
+      extraContext?: Record<string, any>,
+    ) => void;
   } {
     return {
       debug: (message: string, extraContext?: Record<string, any>) =>
@@ -300,10 +322,16 @@ const formattedMessage = `${prefix} ${tags} ${entry.message}`;
         this.info(message, { ...context, ...extraContext }, tags),
       warn: (message: string, extraContext?: Record<string, any>) =>
         this.warn(message, { ...context, ...extraContext }, tags),
-      error: (message: string, error?: Error, extraContext?: Record<string, any>) =>
-        this.error(message, error, { ...context, ...extraContext }, tags),
-      critical: (message: string, error?: Error, extraContext?: Record<string, any>) =>
-        this.critical(message, error, { ...context, ...extraContext }, tags),
+      error: (
+        message: string,
+        error?: Error,
+        extraContext?: Record<string, any>,
+      ) => this.error(message, error, { ...context, ...extraContext }, tags),
+      critical: (
+        message: string,
+        error?: Error,
+        extraContext?: Record<string, any>,
+      ) => this.critical(message, error, { ...context, ...extraContext }, tags),
     };
   }
 
@@ -343,11 +371,12 @@ const formattedMessage = `${prefix} ${tags} ${entry.message}`;
 export const logger = new AdvancedLogger();
 
 // Configure based on environment
-if (typeof window !== 'undefined') {
+if (typeof window !== "undefined") {
   logger.configure({
-    minLevel: process.env['NODE_ENV'] === 'production' ? LogLevel.INFO : LogLevel.DEBUG,
+    minLevel:
+      process.env["NODE_ENV"] === "production" ? LogLevel.INFO : LogLevel.DEBUG,
     enableConsole: true,
-    enableRemote: process.env['NODE_ENV'] === 'production',
+    enableRemote: process.env["NODE_ENV"] === "production",
     remoteEndpoint: process.env.NEXT_PUBLIC_LOG_ENDPOINT,
   });
 }

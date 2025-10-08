@@ -1,5 +1,7 @@
 import fs from 'fs'
 import path from 'path'
+
+
 //Define all routes from App.tsx
 const routes = [
   '/',

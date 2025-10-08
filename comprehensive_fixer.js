@@ -1,6 +1,8 @@
 import fs from 'fs';
 import { glob } from 'glob';
 
+
+
 //Comprehensive TypeScript/JSX fixes
 const fixes = [
   //Fix object literal syntax issues

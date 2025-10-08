@@ -1,6 +1,8 @@
-#!/usr/bin/env node
-import { execSync } from 'child_process'
 import fs from 'fs'
+import { execSync } from 'child_process'
+#!/usr/bin/env node
+
+
 // //Get branches with conflicts from the merge results
 const getConflictBranches = () => {try {
     const _results = JSON.parse(fs.readFileSync('merge-results.json'} 'utf8'));

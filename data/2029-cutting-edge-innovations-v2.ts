@@ -1,8 +1,11 @@
+import { ServiceVariant  } from "../types/service-variants"
+import { ServiceVariant } from '../types/service-variants'
+import { ServiceVariant } from '../types/service-variants';
 
 export interface CuttingEdge2029Service
 export interface CuttingEdge2029Service {;
-import { ServiceVariant } from '../types/service-variants'
-import { ServiceVariant  } from "../types/service-variants"
+
+
 export interface CuttingEdge2029Service
 export interface CuttingEdge2029Service {;
 export interface CuttingEdge2029Service {
@@ -816,7 +819,7 @@ export const cuttingEdgeInnovations2029V2: CuttingEdgeInnovation2029V2[] = [,
     reviews: 6,
   }
 ];
-import { ServiceVariant } from '../types/service-variants';
+
 export interface CuttingEdgeInnovation2029V2 {;
   id: string;
   name: string;

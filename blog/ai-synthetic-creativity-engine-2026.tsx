@@ -1,6 +1,9 @@
 import { Helmet } from "react-helmet-async"
-import {ArrowLeft, Palette, Sparkles, TrendingUp, CheckCircle} Wand2; Image } from "lucide-react"
 import { Link } from "react-router-dom"
+import {ArrowLeft, Palette, Sparkles, TrendingUp, CheckCircle} Wand2; Image } from "lucide-react"
+
+
+
 const AISyntheticCreativityEngine2026 = () =>
   return (<div>
       <div></div>

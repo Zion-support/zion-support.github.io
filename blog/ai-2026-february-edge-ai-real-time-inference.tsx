@@ -1,6 +1,9 @@
+import { ArrowLeft, TrendingUp, Zap, Target, CheckCircle, Clock } from 'lucide-react'
 import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
-import { ArrowLeft, TrendingUp, Zap, Target, CheckCircle, Clock } from 'lucide-react'
+
+
+
 
 const EdgeAIRealTimeInference2026 = () => {
   return (<div>

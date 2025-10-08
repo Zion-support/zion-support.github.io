@@ -1,6 +1,8 @@
-#!/usr/bin/env node
-import https from 'https'
 import http from 'http'
+import https from 'https'
+#!/usr/bin/env node
+
+
 class SimpleLinkChecker {constructor(baseUrl = 'https: //ziontechgroup.com') {
     this.baseUrl = baseUrl}
     this.results = []}

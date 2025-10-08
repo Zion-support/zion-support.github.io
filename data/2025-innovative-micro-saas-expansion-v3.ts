@@ -1,3 +1,5 @@
+import { ServiceVariant } from '../types/service-variants';
+import { ServiceVariant } from '../types/service-variants';
 
   id: string;
   name: string;
@@ -603,7 +605,7 @@ export const innovative2025MicroSaasExpansionV3: InnovativeMicroSaasService[] = 
     reviews: 28,
   }
 ];
-import { ServiceVariant } from '../types/service-variants';
+
 export interface InnovativeMicroSaasService {;
   id: string;
   name: string;
@@ -1362,7 +1364,7 @@ export const innovative2025MicroSaasExpansionV3: InnovativeMicroSaasService[] = 
     launchDate: '2023-10-01', customers: 34;
     rating: 4.9;
     reviews: 28,
-import { ServiceVariant } from '../types/service-variants';
+
 export interface InnovativeMicroSaasService {;
   id: string;
   name: string;

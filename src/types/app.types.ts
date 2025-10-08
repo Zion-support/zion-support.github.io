@@ -1,48 +1,49 @@
-/**
- * Comprehensive Type Definitions for the Application
- */
+import React from 'react';
+/**;
+ * Comprehensive Type Definitions for the Application;
+ */;
 
-// ============================================================================
-// Common Types
-// ============================================================================
+// ============================================================================;
+// Common Types;
+// ============================================================================;
 
 export type Nullable<T> = T | null;
 export type Optional<T> = T | undefined;
 export type AsyncResult<T> = Promise<T>;
+;
+// ============================================================================;
+// API Types;
+// ============================================================================;
 
-// ============================================================================
-// API Types
-// ============================================================================
-
-export interface ApiResponse<T = unknown> {
+export interface ApiResponse<T = unknown> {;
   data: T;
   status: number;
   message?: string;
   error?: ApiError;
 }
-
-export interface ApiError {
+;
+export interface ApiError {;
   code: string;
   message: string;
   details?: Record<string, unknown>;
   timestamp: number;
 }
-
-export interface PaginatedResponse<T> {
+;
+export interface PaginatedResponse<T> {;
   data: T[];
-  pagination: {
+  pagination: {;
     page: number;
     pageSize: number;
     total: number;
     totalPages: number;
   };
 }
+;
+// ============================================================================;
+// User Types;
+// ============================================================================;
 
-// ============================================================================
-// User Types
-// ============================================================================
-
-export interface User {
+export interface User {;
   id: string;
   email: string;
   name: string;
@@ -51,37 +52,37 @@ export interface User {
   createdAt: Date;
   updatedAt: Date;
 }
-
-export enum UserRole {
-  ADMIN = 'admin',
-  USER = 'user',
-  GUEST = 'guest',
+;
+export enum UserRole {;
+  ADMIN = 'admin',;
+  USER = 'user',;
+  GUEST = 'guest',;
 }
+;
+// ============================================================================;
+// Performance Types;
+// ============================================================================;
 
-// ============================================================================
-// Performance Types
-// ============================================================================
-
-export interface PerformanceMetrics {
-  fcp: number; // First Contentful Paint
-  lcp: number; // Largest Contentful Paint
-  fid: number; // First Input Delay
-  cls: number; // Cumulative Layout Shift
-  ttfb: number; // Time to First Byte
+export interface PerformanceMetrics {;
+  fcp: number; // First Contentful Paint;
+  lcp: number; // Largest Contentful Paint;
+  fid: number; // First Input Delay;
+  cls: number; // Cumulative Layout Shift;
+  ttfb: number; // Time to First Byte;
 }
-
-export interface PerformanceEntry {
+;
+export interface PerformanceEntry {;
   name: string;
   entryType: string;
   startTime: number;
   duration: number;
 }
+;
+// ============================================================================;
+// Analytics Types;
+// ============================================================================;
 
-// ============================================================================
-// Analytics Types
-// ============================================================================
-
-export interface AnalyticsEvent {
+export interface AnalyticsEvent {;
   event: string;
   category: string;
   action: string;
@@ -89,19 +90,19 @@ export interface AnalyticsEvent {
   value?: number;
   timestamp: number;
 }
-
-export interface PageView {
+;
+export interface PageView {;
   path: string;
   title: string;
   referrer?: string;
   timestamp: number;
 }
+;
+// ============================================================================;
+// Content Types;
+// ============================================================================;
 
-// ============================================================================
-// Content Types
-// ============================================================================
-
-export interface BlogPost {
+export interface BlogPost {;
   id: string;
   title: string;
   slug: string;
@@ -116,27 +117,27 @@ export interface BlogPost {
   coverImage?: string;
   readTime?: number;
 }
-
-export interface Author {
+;
+export interface Author {;
   id: string;
   name: string;
   bio?: string;
   avatar?: string;
   socialLinks?: SocialLinks;
 }
-
-export interface SocialLinks {
+;
+export interface SocialLinks {;
   twitter?: string;
   linkedin?: string;
   github?: string;
   website?: string;
 }
+;
+// ============================================================================;
+// SEO Types;
+// ============================================================================;
 
-// ============================================================================
-// SEO Types
-// ============================================================================
-
-export interface SEOMetadata {
+export interface SEOMetadata {;
   title: string;
   description: string;
   keywords?: string[];
@@ -145,79 +146,79 @@ export interface SEOMetadata {
   canonicalUrl?: string;
   structuredData?: StructuredData;
 }
-
-export interface StructuredData {
+;
+export interface StructuredData {;
   '@context': string;
   '@type': string;
   [key: string]: unknown;
 }
+;
+// ============================================================================;
+// Form Types;
+// ============================================================================;
 
-// ============================================================================
-// Form Types
-// ============================================================================
-
-export interface FormField<T = string> {
+export interface FormField<T = string> {;
   value: T;
   error?: string;
   touched: boolean;
   dirty: boolean;
 }
-
-export interface FormState<T extends Record<string, unknown>> {
+;
+export interface FormState<T extends Record<string, unknown>> {;
   values: T;
   errors: Partial<Record<keyof T, string>>;
   touched: Partial<Record<keyof T, boolean>>;
   isSubmitting: boolean;
   isValid: boolean;
 }
-
+;
 export type FormValidator<T> = (value: T) => string | undefined;
+;
+// ============================================================================;
+// Component Types;
+// ============================================================================;
 
-// ============================================================================
-// Component Types
-// ============================================================================
-
-export interface BaseComponentProps {
+export interface BaseComponentProps {;
   className?: string;
   style?: React.CSSProperties;
   children?: React.ReactNode;
 }
-
-export interface ErrorBoundaryProps extends BaseComponentProps {
+;
+export interface ErrorBoundaryProps extends BaseComponentProps {;
   fallback?: React.ReactNode;
   onError?: (error: Error, errorInfo: React.ErrorInfo) => void;
 }
+;
+// ============================================================================;
+// Route Types;
+// ============================================================================;
 
-// ============================================================================
-// Route Types
-// ============================================================================
-
-export interface Route {
+export interface Route {;
   path: string;
   component: React.ComponentType;
   exact?: boolean;
   meta?: RouteMeta;
 }
-
-export interface RouteMeta {
+;
+export interface RouteMeta {;
   title: string;
   description?: string;
   requiresAuth?: boolean;
   roles?: UserRole[];
 }
+;
+// ============================================================================;
+// Theme Types;
+// ============================================================================;
 
-// ============================================================================
-// Theme Types
-// ============================================================================
-
-export interface Theme {
+export interface Theme {;
   colors: ColorPalette;
   typography: Typography;
   spacing: Spacing;
   breakpoints: Breakpoints;
 }
-
-export interface ColorPalette {
+;
+export interface ColorPalette {;
   primary: string;
   secondary: string;
   success: string;
@@ -226,20 +227,20 @@ export interface ColorPalette {
   info: string;
   background: string;
   surface: string;
-  text: {
+  text: {;
     primary: string;
     secondary: string;
     disabled: string;
   };
 }
-
-export interface Typography {
-  fontFamily: {
+;
+export interface Typography {;
+  fontFamily: {;
     primary: string;
     secondary: string;
     monospace: string;
   };
-  fontSize: {
+  fontSize: {;
     xs: string;
     sm: string;
     md: string;
@@ -248,7 +249,7 @@ export interface Typography {
     '2xl': string;
     '3xl': string;
   };
-  fontWeight: {
+  fontWeight: {;
     light: number;
     regular: number;
     medium: number;
@@ -256,8 +257,8 @@ export interface Typography {
     bold: number;
   };
 }
-
-export interface Spacing {
+;
+export interface Spacing {;
   xs: string;
   sm: string;
   md: string;
@@ -265,8 +266,8 @@ export interface Spacing {
   xl: string;
   '2xl': string;
 }
-
-export interface Breakpoints {
+;
+export interface Breakpoints {;
   xs: string;
   sm: string;
   md: string;
@@ -274,46 +275,46 @@ export interface Breakpoints {
   xl: string;
   '2xl': string;
 }
+;
+// ============================================================================;
+// State Management Types;
+// ============================================================================;
 
-// ============================================================================
-// State Management Types
-// ============================================================================
-
-export interface Action<T = unknown> {
+export interface Action<T = unknown> {;
   type: string;
   payload?: T;
 }
-
+;
 export type Reducer<S, A extends Action> = (state: S, action: A) => S;
-
-export interface Store<S> {
+;
+export interface Store<S> {;
   getState: () => S;
   dispatch: (action: Action) => void;
   subscribe: (listener: () => void) => () => void;
 }
+;
+// ============================================================================;
+// Utility Types;
+// ============================================================================;
 
-// ============================================================================
-// Utility Types
-// ============================================================================
-
-export type DeepPartial<T> = {
+export type DeepPartial<T> = {;
   [P in keyof T]?: T[P] extends object ? DeepPartial<T[P]> : T[P];
 };
-
-export type RequireAtLeastOne<T, Keys extends keyof T = keyof T> = Pick<T, Exclude<keyof T, Keys>> &
-  {
+;
+export type RequireAtLeastOne<T, Keys extends keyof T = keyof T> = Pick<T, Exclude<keyof T, Keys>> &;
+  {;
     [K in Keys]-?: Required<Pick<T, K>> & Partial<Pick<T, Exclude<Keys, K>>>;
   }[Keys];
-
-export type Prettify<T> = {
+;
+export type Prettify<T> = {;
   [K in keyof T]: T[K];
 } & {};
+;
+// ============================================================================;
+// Export all types;
+// ============================================================================;
 
-// ============================================================================
-// Export all types
-// ============================================================================
-
-export type AppTypes = {
+export type AppTypes = {;
   ApiResponse: ApiResponse;
   ApiError: ApiError;
   User: User;

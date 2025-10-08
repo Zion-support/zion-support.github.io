@@ -38,19 +38,19 @@ class EnhancedAnalytics {
   }
 
   private setupOfflineHandling(): void {
-    if (typeof window !== 'undefined') {
-      window.addEventListener('online', () => {
+    if (typeof window !== "undefined") {
+      window.addEventListener("online", () => {
         this.flushOfflineQueue();
       });
 
-      window.addEventListener('beforeunload', () => {
+      window.addEventListener("beforeunload", () => {
         this.flush();
       });
     }
   }
 
   private setupPeriodicFlush(): void {
-    if (typeof window !== 'undefined') {
+    if (typeof window !== "undefined") {
       setInterval(() => {
         this.flush();
       }, this.flushInterval);
@@ -69,8 +69,8 @@ class EnhancedAnalytics {
 
     // Track initialization
     this.trackEvent({
-      category: 'System',
-      action: 'Analytics Initialized',
+      category: "System",
+      action: "Analytics Initialized",
       metadata: {
         timestamp: new Date().toISOString(),
         userAgent: navigator.userAgent,
@@ -92,7 +92,7 @@ class EnhancedAnalytics {
         ...event.metadata,
         sessionId: this.sessionId,
         timestamp: new Date().toISOString(),
-        url: typeof window !== 'undefined' ? window.location.href : '',
+        url: typeof window !== "undefined" ? window.location.href : "",
       },
     };
 
@@ -110,18 +110,26 @@ class EnhancedAnalytics {
 
   private sendToGtag(event: AnalyticsEvent): void {
     if (
-      typeof window !== 'undefined' &&
+      typeof window !== "undefined" &&
       (
         window as {
-          gtag?: (command: string, action: string, parameters: Record<string, unknown>) => void;
+          gtag?: (
+            command: string,
+            action: string,
+            parameters: Record<string, unknown>,
+          ) => void;
         }
       ).gtag
     ) {
       (
         window as unknown as {
-          gtag: (command: string, action: string, parameters: Record<string, unknown>) => void;
+          gtag: (
+            command: string,
+            action: string,
+            parameters: Record<string, unknown>,
+          ) => void;
         }
-      ).gtag('event', event.action, {
+      ).gtag("event", event.action, {
         event_category: event.category,
         event_label: event.label,
         value: event.value,
@@ -132,8 +140,8 @@ class EnhancedAnalytics {
 
   public trackPageView(pagePath: string, pageTitle?: string): void {
     this.trackEvent({
-      category: 'Navigation',
-      action: 'Page View',
+      category: "Navigation",
+      action: "Page View",
       label: pagePath,
       metadata: {
         pageTitle: pageTitle || document.title,
@@ -142,9 +150,13 @@ class EnhancedAnalytics {
     });
   }
 
-  public trackUserInteraction(action: string, label?: string, value?: number): void {
+  public trackUserInteraction(
+    action: string,
+    label?: string,
+    value?: number,
+  ): void {
     this.trackEvent({
-      category: 'User Interaction',
+      category: "User Interaction",
       action,
       label,
       value,
@@ -153,8 +165,8 @@ class EnhancedAnalytics {
 
   public trackError(error: Error, context?: Record<string, unknown>): void {
     this.trackEvent({
-      category: 'Error',
-      action: 'Error Occurred',
+      category: "Error",
+      action: "Error Occurred",
       label: error.message,
       metadata: {
         stack: error.stack,
@@ -163,9 +175,13 @@ class EnhancedAnalytics {
     });
   }
 
-  public trackPerformance(metric: string, value: number, rating?: string): void {
+  public trackPerformance(
+    metric: string,
+    value: number,
+    rating?: string,
+  ): void {
     this.trackEvent({
-      category: 'Performance',
+      category: "Performance",
       action: metric,
       value: Math.round(value),
       metadata: {
@@ -176,7 +192,7 @@ class EnhancedAnalytics {
 
   public trackConversion(conversionType: string, value?: number): void {
     this.trackEvent({
-      category: 'Conversion',
+      category: "Conversion",
       action: conversionType,
       value,
       metadata: {
@@ -190,7 +206,7 @@ class EnhancedAnalytics {
     action: string,
     label?: string,
     value?: number,
-    metadata?: Record<string, unknown>
+    metadata?: Record<string, unknown>,
   ): void {
     this.trackEvent({
       category,
@@ -205,15 +221,14 @@ class EnhancedAnalytics {
     if (this.queue.length === 0) return;
 
     // Check if online
-    if (typeof navigator !== 'undefined' && !navigator.onLine) {
+    if (typeof navigator !== "undefined" && !navigator.onLine) {
       this.offlineQueue.push(...this.queue);
       this.queue = [];
       return;
     }
 
     // In a real implementation, send to analytics backend
-    if (process.env['NODE_ENV'] === 'development') {
-      console.log('Analytics batch:', this.queue);
+    if (process.env["NODE_ENV"] === "development") {
     }
 
     // Clear queue

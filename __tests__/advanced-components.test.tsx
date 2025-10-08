@@ -1,36 +1,38 @@
-import { render, screen, fireEvent, waitFor } from '@testing-library/react';
-import { HelmetProvider } from 'react-helmet-async';
-import { MemoryRouter, RouterProvider, createMemoryRouter } from 'react-router-dom';
-import AdvancedErrorBoundary from '../app/components/AdvancedErrorBoundary';
-import AdvancedSEOOptimizer from '../app/components/AdvancedSEOOptimizer';
-import AdvancedPerformanceMonitor from '../app/components/AdvancedPerformanceMonitor';
-
-
+import AdvancedErrorBoundary from "../app/components/AdvancedErrorBoundary";
+import AdvancedPerformanceMonitor from "../app/components/AdvancedPerformanceMonitor";
+import AdvancedSEOOptimizer from "../app/components/AdvancedSEOOptimizer";
+import { HelmetProvider } from "react-helmet-async";
+import {
+  MemoryRouter,
+  RouterProvider,
+  createMemoryRouter,
+} from "react-router-dom";
+import { render, screen, fireEvent, waitFor } from "@testing-library/react";
 
 // Mock component that throws an error
 const ThrowError = ({ shouldThrow }: { shouldThrow: boolean }) => {
   if (shouldThrow) {
-    throw new Error('Test error');
+    throw new Error("Test error");
   }
   return <div>Test content</div>;
 };
 
-describe('AdvancedErrorBoundary', () => {
-  it('renders children when there is no error', () => {
+describe("AdvancedErrorBoundary", () => {
+  it("renders children when there is no error", () => {
     render(
       <MemoryRouter>
         <AdvancedErrorBoundary>
           <div>Test content</div>
         </AdvancedErrorBoundary>
-      </MemoryRouter>
+      </MemoryRouter>,
     );
 
-    expect(screen.getByText('Test content')).toBeInTheDocument();
+    expect(screen.getByText("Test content")).toBeInTheDocument();
   });
 
-  it('renders error UI when there is an error', () => {
+  it("renders error UI when there is an error", () => {
     const consoleSpy = jest
-      .spyOn(console, 'error')
+      .spyOn(console, "error")
       .mockImplementation(() => {});
 
     render(
@@ -38,21 +40,21 @@ describe('AdvancedErrorBoundary', () => {
         <AdvancedErrorBoundary enableRetry={true}>
           <ThrowError shouldThrow={true} />
         </AdvancedErrorBoundary>
-      </MemoryRouter>
+      </MemoryRouter>,
     );
 
-    expect(screen.getByText('Oops! Something went wrong')).toBeInTheDocument();
+    expect(screen.getByText("Oops! Something went wrong")).toBeInTheDocument();
     expect(screen.getByText(/Try Again/)).toBeInTheDocument();
-    expect(screen.getByText('Reload Page')).toBeInTheDocument();
-    expect(screen.getByText('Go to Homepage')).toBeInTheDocument();
+    expect(screen.getByText("Reload Page")).toBeInTheDocument();
+    expect(screen.getByText("Go to Homepage")).toBeInTheDocument();
 
     consoleSpy.mockRestore();
   });
 
-  it('calls onError callback when error occurs', () => {
+  it("calls onError callback when error occurs", () => {
     const onError = jest.fn();
     const consoleSpy = jest
-      .spyOn(console, 'error')
+      .spyOn(console, "error")
       .mockImplementation(() => {});
 
     render(
@@ -60,16 +62,16 @@ describe('AdvancedErrorBoundary', () => {
         <AdvancedErrorBoundary onError={onError}>
           <ThrowError shouldThrow={true} />
         </AdvancedErrorBoundary>
-      </MemoryRouter>
+      </MemoryRouter>,
     );
 
     expect(onError).toHaveBeenCalled();
     consoleSpy.mockRestore();
   });
 
-  it('retries when retry button is clicked', async () => {
+  it("retries when retry button is clicked", async () => {
     const consoleSpy = jest
-      .spyOn(console, 'error')
+      .spyOn(console, "error")
       .mockImplementation(() => {});
 
     let shouldThrow = true;
@@ -80,11 +82,11 @@ describe('AdvancedErrorBoundary', () => {
         <AdvancedErrorBoundary enableRetry={true}>
           <TestComponent />
         </AdvancedErrorBoundary>
-      </MemoryRouter>
+      </MemoryRouter>,
     );
 
-    const retryButton = screen.getByText('Try Again (3 attempts left)');
-    
+    const retryButton = screen.getByText("Try Again (3 attempts left)");
+
     // Change shouldThrow before clicking retry
     shouldThrow = false;
     fireEvent.click(retryButton);
@@ -92,7 +94,7 @@ describe('AdvancedErrorBoundary', () => {
     // After retry, the error boundary should reset and show the child component
     await waitFor(() => {
       expect(
-        screen.queryByText('Oops! Something went wrong')
+        screen.queryByText("Oops! Something went wrong"),
       ).not.toBeInTheDocument();
     });
 
@@ -100,47 +102,47 @@ describe('AdvancedErrorBoundary', () => {
   });
 });
 
-describe('AdvancedSEOOptimizer', () => {
+describe("AdvancedSEOOptimizer", () => {
   const mockSEOData = {
-    title: 'Test Title',
-    description: 'Test Description',
-    keywords: ['test', 'keywords'],
-    canonicalUrl: 'https://example.com',
-    ogImage: 'https://example.com/image.jpg',
+    title: "Test Title",
+    description: "Test Description",
+    keywords: ["test", "keywords"],
+    canonicalUrl: "https://example.com",
+    ogImage: "https://example.com/image.jpg",
     structuredData: {
-      '@type': 'Organization',
-      name: 'Test Organization',
+      "@type": "Organization",
+      name: "Test Organization",
     },
   };
 
-  it('renders without crashing', () => {
+  it("renders without crashing", () => {
     render(
       <MemoryRouter>
         <HelmetProvider>
           <AdvancedSEOOptimizer seoData={mockSEOData} />
           <div>Test content</div>
         </HelmetProvider>
-      </MemoryRouter>
+      </MemoryRouter>,
     );
 
-    expect(screen.getByText('Test content')).toBeInTheDocument();
+    expect(screen.getByText("Test content")).toBeInTheDocument();
   });
 
-  it('sets document title', async () => {
+  it("sets document title", async () => {
     render(
       <MemoryRouter>
         <HelmetProvider>
           <AdvancedSEOOptimizer seoData={mockSEOData} />
         </HelmetProvider>
-      </MemoryRouter>
+      </MemoryRouter>,
     );
 
     // Wait for helmet to update the document title
-    await new Promise(resolve => setTimeout(resolve, 100));
-    expect(document.title).toBe('Test Title');
+    await new Promise((resolve) => setTimeout(resolve, 100));
+    expect(document.title).toBe("Test Title");
   });
 
-  it('renders structured data when enabled', async () => {
+  it("renders structured data when enabled", async () => {
     const helmetContext = {};
     const { container } = render(
       <MemoryRouter>
@@ -150,7 +152,7 @@ describe('AdvancedSEOOptimizer', () => {
             enableStructuredData={true}
           />
         </HelmetProvider>
-      </MemoryRouter>
+      </MemoryRouter>,
     );
 
     // In test environment, helmet may not render scripts in the DOM
@@ -160,14 +162,14 @@ describe('AdvancedSEOOptimizer', () => {
     });
   });
 
-  it('renders Open Graph tags when enabled', async () => {
+  it("renders Open Graph tags when enabled", async () => {
     const helmetContext = {};
     const { container } = render(
       <MemoryRouter>
         <HelmetProvider context={helmetContext}>
           <AdvancedSEOOptimizer seoData={mockSEOData} enableOpenGraph={true} />
         </HelmetProvider>
-      </MemoryRouter>
+      </MemoryRouter>,
     );
 
     // In test environment, helmet renders to document head, not container
@@ -177,14 +179,17 @@ describe('AdvancedSEOOptimizer', () => {
     });
   });
 
-  it('renders Twitter Card tags when enabled', async () => {
+  it("renders Twitter Card tags when enabled", async () => {
     const helmetContext = {};
     const { container } = render(
       <MemoryRouter>
         <HelmetProvider context={helmetContext}>
-          <AdvancedSEOOptimizer seoData={mockSEOData} enableTwitterCards={true} />
+          <AdvancedSEOOptimizer
+            seoData={mockSEOData}
+            enableTwitterCards={true}
+          />
         </HelmetProvider>
-      </MemoryRouter>
+      </MemoryRouter>,
     );
 
     // In test environment, helmet renders to document head, not container
@@ -195,7 +200,7 @@ describe('AdvancedSEOOptimizer', () => {
   });
 });
 
-describe('AdvancedPerformanceMonitor', () => {
+describe("AdvancedPerformanceMonitor", () => {
   // Mock performance API
   const mockPerformance = {
     getEntriesByName: jest.fn(() => []),
@@ -213,12 +218,14 @@ describe('AdvancedPerformanceMonitor', () => {
     callback: PerformanceObserverCallback;
     observe() {}
     disconnect() {}
-    takeRecords() { return []; }
+    takeRecords() {
+      return [];
+    }
   }
 
   beforeEach(() => {
     // Mock performance API
-    Object.defineProperty(window, 'performance', {
+    Object.defineProperty(window, "performance", {
       value: mockPerformance,
       writable: true,
       configurable: true,
@@ -232,40 +239,55 @@ describe('AdvancedPerformanceMonitor', () => {
     jest.clearAllMocks();
   });
 
-  it('renders nothing in production mode', () => {
-    const originalEnv = process.env['NODE_ENV'];
-    Object.defineProperty(process.env, 'NODE_ENV', { value: 'production', writable: true });
+  it("renders nothing in production mode", () => {
+    const originalEnv = process.env["NODE_ENV"];
+    Object.defineProperty(process.env, "NODE_ENV", {
+      value: "production",
+      writable: true,
+    });
 
     const { container } = render(
       <MemoryRouter>
         <AdvancedPerformanceMonitor enableRealTimeMonitoring={true} />
-      </MemoryRouter>
+      </MemoryRouter>,
     );
 
     expect(container.firstChild).toBeNull();
 
-    Object.defineProperty(process.env, 'NODE_ENV', { value: originalEnv, writable: true });
+    Object.defineProperty(process.env, "NODE_ENV", {
+      value: originalEnv,
+      writable: true,
+    });
   });
 
-  it('renders performance monitor in development mode', () => {
-    const originalEnv = process.env['NODE_ENV'];
-    Object.defineProperty(process.env, 'NODE_ENV', { value: 'development', writable: true });
+  it("renders performance monitor in development mode", () => {
+    const originalEnv = process.env["NODE_ENV"];
+    Object.defineProperty(process.env, "NODE_ENV", {
+      value: "development",
+      writable: true,
+    });
 
     render(
       <MemoryRouter>
         <AdvancedPerformanceMonitor enableRealTimeMonitoring={true} />
-      </MemoryRouter>
+      </MemoryRouter>,
     );
 
-    expect(screen.getByText('Performance Monitor')).toBeInTheDocument();
+    expect(screen.getByText("Performance Monitor")).toBeInTheDocument();
 
-    Object.defineProperty(process.env, 'NODE_ENV', { value: originalEnv, writable: true });
+    Object.defineProperty(process.env, "NODE_ENV", {
+      value: originalEnv,
+      writable: true,
+    });
   });
 
-  it('calls onMetricsUpdate when metrics change', async () => {
+  it("calls onMetricsUpdate when metrics change", async () => {
     const onMetricsUpdate = jest.fn();
-    const originalEnv = process.env['NODE_ENV'];
-    Object.defineProperty(process.env, 'NODE_ENV', { value: 'development', writable: true });
+    const originalEnv = process.env["NODE_ENV"];
+    Object.defineProperty(process.env, "NODE_ENV", {
+      value: "development",
+      writable: true,
+    });
 
     mockPerformance.getEntriesByName.mockReturnValue([{ startTime: 100 }]);
 
@@ -275,19 +297,25 @@ describe('AdvancedPerformanceMonitor', () => {
           enableRealTimeMonitoring={true}
           onMetricsUpdate={onMetricsUpdate}
         />
-      </MemoryRouter>
+      </MemoryRouter>,
     );
 
     await waitFor(() => {
       expect(onMetricsUpdate).toHaveBeenCalled();
     });
 
-    Object.defineProperty(process.env, 'NODE_ENV', { value: originalEnv, writable: true });
+    Object.defineProperty(process.env, "NODE_ENV", {
+      value: originalEnv,
+      writable: true,
+    });
   });
 
-  it('shows performance recommendations when metrics are poor', () => {
-    const originalEnv = process.env['NODE_ENV'];
-    Object.defineProperty(process.env, 'NODE_ENV', { value: 'development', writable: true });
+  it("shows performance recommendations when metrics are poor", () => {
+    const originalEnv = process.env["NODE_ENV"];
+    Object.defineProperty(process.env, "NODE_ENV", {
+      value: "development",
+      writable: true,
+    });
 
     // Mock poor performance metrics
     mockPerformance.getEntriesByName.mockReturnValue([
@@ -297,12 +325,15 @@ describe('AdvancedPerformanceMonitor', () => {
     render(
       <MemoryRouter>
         <AdvancedPerformanceMonitor enableRealTimeMonitoring={true} />
-      </MemoryRouter>
+      </MemoryRouter>,
     );
 
     // Should show recommendations for poor performance
-    expect(screen.getByText('Recommendations:')).toBeInTheDocument();
+    expect(screen.getByText("Recommendations:")).toBeInTheDocument();
 
-    Object.defineProperty(process.env, 'NODE_ENV', { value: originalEnv, writable: true });
+    Object.defineProperty(process.env, "NODE_ENV", {
+      value: originalEnv,
+      writable: true,
+    });
   });
 });

@@ -1,5 +1,5 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
 
 const HomePage: React.FC = () => {
   return (
@@ -11,8 +11,8 @@ const HomePage: React.FC = () => {
             Transform Your Business with AI-Powered Solutions
           </h1>
           <p className="text-xl mb-8 max-w-3xl mx-auto">
-            Zion Tech Group delivers cutting-edge AI and IT solutions that drive innovation,
-            efficiency, and growth for modern businesses.
+            Zion Tech Group delivers cutting-edge AI and IT solutions that drive
+            innovation, efficiency, and growth for modern businesses.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
@@ -35,9 +35,12 @@ const HomePage: React.FC = () => {
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our Core Services</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Our Core Services
+            </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Comprehensive technology solutions designed to accelerate your digital transformation.
+              Comprehensive technology solutions designed to accelerate your
+              digital transformation.
             </p>
           </div>
 
@@ -47,10 +50,12 @@ const HomePage: React.FC = () => {
               <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mb-6">
                 <span className="text-2xl">🤖</span>
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">AI Services</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                AI Services
+              </h3>
               <p className="text-gray-600 mb-6">
-                Advanced artificial intelligence solutions including machine learning, natural
-                language processing, and predictive analytics.
+                Advanced artificial intelligence solutions including machine
+                learning, natural language processing, and predictive analytics.
               </p>
               <div className="space-y-2">
                 <Link
@@ -73,10 +78,12 @@ const HomePage: React.FC = () => {
               <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mb-6">
                 <span className="text-2xl">⚡</span>
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Micro SaaS</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                Micro SaaS
+              </h3>
               <p className="text-gray-600 mb-6">
-                Scalable software-as-a-service solutions that adapt and grow with your business
-                needs.
+                Scalable software-as-a-service solutions that adapt and grow
+                with your business needs.
               </p>
               <div className="space-y-2">
                 <Link
@@ -99,10 +106,12 @@ const HomePage: React.FC = () => {
               <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mb-6">
                 <span className="text-2xl">🛠️</span>
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">IT Services</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                IT Services
+              </h3>
               <p className="text-gray-600 mb-6">
-                Comprehensive IT infrastructure, cloud solutions, and enterprise-grade security
-                services.
+                Comprehensive IT infrastructure, cloud solutions, and
+                enterprise-grade security services.
               </p>
               <div className="space-y-2">
                 <Link
@@ -131,8 +140,8 @@ const HomePage: React.FC = () => {
               Why Choose Zion Tech Group?
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              We combine cutting-edge technology with deep industry expertise to deliver exceptional
-              results.
+              We combine cutting-edge technology with deep industry expertise to
+              deliver exceptional results.
             </p>
           </div>
 
@@ -141,9 +150,12 @@ const HomePage: React.FC = () => {
               <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl">🚀</span>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Innovation</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">
+                Innovation
+              </h3>
               <p className="text-gray-600">
-                Cutting-edge AI and technology solutions that keep you ahead of the competition.
+                Cutting-edge AI and technology solutions that keep you ahead of
+                the competition.
               </p>
             </div>
 
@@ -153,7 +165,8 @@ const HomePage: React.FC = () => {
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-2">Speed</h3>
               <p className="text-gray-600">
-                Rapid deployment and implementation to accelerate your digital transformation.
+                Rapid deployment and implementation to accelerate your digital
+                transformation.
               </p>
             </div>
 
@@ -163,7 +176,8 @@ const HomePage: React.FC = () => {
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-2">Security</h3>
               <p className="text-gray-600">
-                Enterprise-grade security measures to protect your data and operations.
+                Enterprise-grade security measures to protect your data and
+                operations.
               </p>
             </div>
 
@@ -173,7 +187,8 @@ const HomePage: React.FC = () => {
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-2">Growth</h3>
               <p className="text-gray-600">
-                Scalable solutions that grow with your business and drive measurable results.
+                Scalable solutions that grow with your business and drive
+                measurable results.
               </p>
             </div>
           </div>
@@ -183,9 +198,12 @@ const HomePage: React.FC = () => {
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Transform Your Business?</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            Ready to Transform Your Business?
+          </h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto">
-            Let our experts help you implement AI-powered solutions that drive real results.
+            Let our experts help you implement AI-powered solutions that drive
+            real results.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link

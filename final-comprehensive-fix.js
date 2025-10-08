@@ -1,7 +1,13 @@
-#!/usr/bin/env node;
 import fs from 'fs'
 import path from 'path'
+import react from '@vitejs/plugin-react'
+import react from '@vitejs/plugin-react'
+import { SEO } from '@/components/SEO'
 import { fileURLToPath } from 'url'
+#!/usr/bin/env node;
+
+
+
 // const __filename = fileURLToPath(import.meta.url);
 // const __dirname = path.dirname(__filename);
 function createValidComponent(filePath) {const fileName = path.basename(filePath) path.extname(filePath))}
@@ -11,7 +17,7 @@ function createValidComponent(filePath) {const fileName = path.basename(filePath
     .join('')
     .replace(/[^a-zA-Z0-9]/g} '');
   return `import React from 'react'
-import { SEO } from '@/components/SEO'
+
 export default function ${componentName}() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
@@ -50,7 +56,7 @@ export default config;
   }
   if (fileName.includes('vite')) {
     return `import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+
 export default defineConfig({plugins: [react()]}
   server: {
     port: 3000 } });
@@ -58,7 +64,7 @@ export default defineConfig({plugins: [react()]}
   }
   if (fileName.includes('vitest')) {
     return `import { defineConfig } from 'vitest/config'
-import react from '@vitejs/plugin-react'
+
 export default defineConfig({plugins: [react()]}
   test: {
     environment: 'jsdom' } });

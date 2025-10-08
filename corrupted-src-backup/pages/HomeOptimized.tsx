@@ -1,37 +1,39 @@
-import React from 'react';
-import { ArrowRight, Globe, Rocket } from 'lucide-react';
-import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
+import React from "react";
+import { ArrowRight, Globe, Rocket } from "lucide-react";
+import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
 const HomeOptimized: React.FC = () => {
   const features = [
     {
       icon: <Zap className="w-8 h-8" />,
-      title: 'Lightning Fast',
-      description: 'Optimized for speed and performance with cutting-edge technology.',
+      title: "Lightning Fast",
+      description:
+        "Optimized for speed and performance with cutting-edge technology.",
     },
     {
       icon: <Shield className="w-8 h-8" />,
-      title: 'Secure & Reliable',
-      description: 'Enterprise-grade security with 99.9% uptime guarantee.',
+      title: "Secure & Reliable",
+      description: "Enterprise-grade security with 99.9% uptime guarantee.",
     },
     {
       icon: <Target className="w-8 h-8" />,
-      title: 'Precision AI',
-      description: 'Advanced AI algorithms for accurate and intelligent solutions.',
+      title: "Precision AI",
+      description:
+        "Advanced AI algorithms for accurate and intelligent solutions.",
     },
     {
       icon: <Globe className="w-8 h-8" />,
-      title: 'Global Scale',
-      description: 'Deploy anywhere with our worldwide infrastructure.',
+      title: "Global Scale",
+      description: "Deploy anywhere with our worldwide infrastructure.",
     },
   ];
 
   const stats = [
-    { label: 'Happy Customers', value: '10,000+' },
-    { label: 'Projects Completed', value: '500+' },
-    { label: 'Uptime', value: '99.9%' },
-    { label: 'Countries', value: '50+' },
+    { label: "Happy Customers", value: "10,000+" },
+    { label: "Projects Completed", value: "500+" },
+    { label: "Uptime", value: "99.9%" },
+    { label: "Countries", value: "50+" },
   ];
 
   return (
@@ -47,10 +49,12 @@ const HomeOptimized: React.FC = () => {
       <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
         <div className="container mx-auto px-4 py-16">
           <div className="text-center mb-16">
-            <h1 className="text-6xl font-bold text-gray-900 mb-6">Revolutionary AI Solutions</h1>
+            <h1 className="text-6xl font-bold text-gray-900 mb-6">
+              Revolutionary AI Solutions
+            </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-              Delivering unprecedented business value and transformation with cutting-edge AI
-              technology.
+              Delivering unprecedented business value and transformation with
+              cutting-edge AI technology.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -70,11 +74,15 @@ const HomeOptimized: React.FC = () => {
           </div>
 
           <div className="bg-white rounded-lg shadow-lg p-8 mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 text-center mb-8">Why Choose Us?</h2>
+            <h2 className="text-3xl font-bold text-gray-900 text-center mb-8">
+              Why Choose Us?
+            </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {stats.map((stat, index) => (
                 <div key={index} className="text-center">
-                  <div className="text-3xl font-bold text-blue-600 mb-2">{stat.value}</div>
+                  <div className="text-3xl font-bold text-blue-600 mb-2">
+                    {stat.value}
+                  </div>
                   <div className="text-gray-600">{stat.label}</div>
                 </div>
               ))}
@@ -88,8 +96,8 @@ const HomeOptimized: React.FC = () => {
                 <h3 className="text-xl font-semibold">AI Platform 2025</h3>
               </div>
               <p className="text-gray-600 mb-4">
-                Revolutionary AI platform delivering unprecedented business transformation with
-                measurable results.
+                Revolutionary AI platform delivering unprecedented business
+                transformation with measurable results.
               </p>
               <Link
                 to="/services/ai-platform"
@@ -105,8 +113,8 @@ const HomeOptimized: React.FC = () => {
                 <h3 className="text-xl font-semibold">Quantum AI Security</h3>
               </div>
               <p className="text-gray-600 mb-4">
-                Advanced quantum AI security framework providing unprecedented protection against
-                emerging threats.
+                Advanced quantum AI security framework providing unprecedented
+                protection against emerging threats.
               </p>
               <Link
                 to="/services/quantum-ai-security"
@@ -122,7 +130,8 @@ const HomeOptimized: React.FC = () => {
                 <h3 className="text-xl font-semibold">AI Performance</h3>
               </div>
               <p className="text-gray-600 mb-4">
-                Optimize AI performance with advanced monitoring and optimization tools.
+                Optimize AI performance with advanced monitoring and
+                optimization tools.
               </p>
               <Link
                 to="/services/ai-performance"

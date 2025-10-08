@@ -1,5 +1,4 @@
-import React, { useEffect, useState, useCallback } from 'react';
-
+import React, { useEffect, useState, useCallback } from "react";
 
 interface PerformanceMetrics {
   fcp: number | null;
@@ -29,90 +28,92 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   });
 
   const measureWebVitals = useCallback(() => {
-    if (typeof window === 'undefined' || !('performance' in window)) return;
-    if (typeof PerformanceObserver === 'undefined') return;
+    if (typeof window === "undefined" || !("performance" in window)) return;
+    if (typeof PerformanceObserver === "undefined") return;
 
     const observers: PerformanceObserver[] = [];
 
     // Measure First Contentful Paint (FCP)
-    const _fcpEntries = performance.getEntriesByName('first-contentful-paint') || [];
+    const _fcpEntries =
+      performance.getEntriesByName("first-contentful-paint") || [];
     const _fcp = fcpEntries.length > 0 ? fcpEntries[0].startTime : null;
 
     // Measure Largest Contentful Paint (LCP)
-    if ('PerformanceObserver' in window) {
+    if ("PerformanceObserver" in window) {
       try {
-        const lcpObserver = new PerformanceObserver(list => {
+        const lcpObserver = new PerformanceObserver((list) => {
           const _entries = list.getEntries();
           const _lastEntry = entries[entries.length - 1];
-          setMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }));
+          setMetrics((prev) => ({ ...prev, lcp: lastEntry.startTime }));
         });
-        lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
+        lcpObserver.observe({ entryTypes: ["largest-contentful-paint"] });
         observers.push(lcpObserver);
-      } catch (error) {
-        // eslint-disable-next-line no-console
-        console.warn('LCP observer not supported:', error);
-      }
+      } catch (error) {}
     }
 
     // Measure First Input Delay (FID)
-    if ('PerformanceObserver' in window) {
+    if ("PerformanceObserver" in window) {
       try {
-        const fidObserver = new PerformanceObserver(list => {
+        const fidObserver = new PerformanceObserver((list) => {
           const _entries = list.getEntries();
-          entries.forEach(entry => {
+          entries.forEach((entry) => {
             if (
-              entry.entryType === 'first-input' &&
-              'processingStart' in entry &&
-              'startTime' in entry
+              entry.entryType === "first-input" &&
+              "processingStart" in entry &&
+              "startTime" in entry
             ) {
               const _fidEntry = entry as PerformanceEventTiming;
-              setMetrics(prev => ({
+              setMetrics((prev) => ({
                 ...prev,
                 fid: fidEntry.processingStart - fidEntry.startTime,
               }));
             }
           });
         });
-        fidObserver.observe({ entryTypes: ['first-input'] });
+        fidObserver.observe({ entryTypes: ["first-input"] });
         observers.push(fidObserver);
       } catch (error) {
         // eslint-disable-next-line no-console
-        console.warn('FID observer not supported:', error);origin/cursor/fix-errors-and-merge-to-main-6395
+        console.warn("FID observer not supported:", error);
+        origin / cursor / fix - errors - and - merge - to - main - 6395;
       }
     }
 
     // Measure Cumulative Layout Shift (CLS)
-    if ('PerformanceObserver' in window) {
+    if ("PerformanceObserver" in window) {
       try {
         let _clsValue = 0;
-        const clsObserver = new PerformanceObserver(list => {
+        const clsObserver = new PerformanceObserver((list) => {
           const _entries = list.getEntries();
-          entries.forEach(entry => {
+          entries.forEach((entry) => {
             if (
-              entry.entryType === 'layout-shift' &&
-              'hadRecentInput' in entry &&
-              'value' in entry
+              entry.entryType === "layout-shift" &&
+              "hadRecentInput" in entry &&
+              "value" in entry
             ) {
               const _clsEntry = entry as LayoutShift;
               if (!clsEntry.hadRecentInput) {
                 clsValue += clsEntry.value;
-                setMetrics(prev => ({ ...prev, cls: clsValue }));
+                setMetrics((prev) => ({ ...prev, cls: clsValue }));
               }
             }
           });
         });
-        clsObserver.observe({ entryTypes: ['layout-shift'] });
+        clsObserver.observe({ entryTypes: ["layout-shift"] });
         observers.push(clsObserver);
       } catch (error) {
         // eslint-disable-next-line no-console
-        console.warn('CLS observer not supported:', error);origin/cursor/fix-errors-and-merge-to-main-6395
+        console.warn("CLS observer not supported:", error);
+        origin / cursor / fix - errors - and - merge - to - main - 6395;
       }
     }
 
     // Measure Time to First Byte (TTFB)
     try {
-      const _navigationEntries = performance.getEntriesByType?.('navigation') || [];
-      const _navigationEntry = navigationEntries[0] as PerformanceNavigationTiming;
+      const _navigationEntries =
+        performance.getEntriesByType?.("navigation") || [];
+      const _navigationEntry =
+        navigationEntries[0] as PerformanceNavigationTiming;
       const ttfb = navigationEntry
         ? navigationEntry.responseStart - navigationEntry.requestStart
         : null;
@@ -122,7 +123,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         (performance as Performance & { memory?: { usedJSHeapSize: number } })
           .memory?.usedJSHeapSize || null;
 
-      setMetrics(prev => ({
+      setMetrics((prev) => ({
         ...prev,
         fcp,
         ttfb,
@@ -130,71 +131,72 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       }));
     } catch (error) {
       // eslint-disable-next-line no-console
-      console.warn('Performance measurement failed:', error);origin/cursor/fix-errors-and-merge-to-main-6395
+      console.warn("Performance measurement failed:", error);
+      origin / cursor / fix - errors - and - merge - to - main - 6395;
     }
 
     // Cleanup observers
     return () => {
-      observers.forEach(observer => {
+      observers.forEach((observer) => {
         try {
           observer.disconnect();
         } catch (error) {
           // eslint-disable-next-line no-console
-          console.warn('Error disconnecting observer:', error);origin/cursor/fix-errors-and-merge-to-main-6395
+          console.warn("Error disconnecting observer:", error);
+          origin / cursor / fix - errors - and - merge - to - main - 6395;
         }
       });
     };
   }, []);
 
   const measureResourceTiming = useCallback(() => {
-    if (typeof window === 'undefined' || !('performance' in window)) return;
+    if (typeof window === "undefined" || !("performance" in window)) return;
 
-    const _resources = performance.getEntriesByType('resource');
+    const _resources = performance.getEntriesByType("resource");
     const slowResources = resources.filter(
-      (resource: PerformanceResourceTiming) => resource.duration > 1000
+      (resource: PerformanceResourceTiming) => resource.duration > 1000,
     );
 
     if (slowResources.length > 0) {
-       
       // eslint-disable-next-line no-console
       console.warn(
-        'Slow resources detected:',
+        "Slow resources detected:",
         slowResources.map((r: PerformanceResourceTiming) => ({
           name: r.name,
           duration: r.duration,
           size: r.transferSize,
-        }))
+        })),
       );
     }
   }, []);
 
   const measureCoreWebVitals = useCallback(() => {
-    if (typeof window === 'undefined') return;
+    if (typeof window === "undefined") return;
 
     // Use web-vitals library if available
     try {
-      import('web-vitals')
-        .then(webVitals => {
+      import("web-vitals")
+        .then((webVitals) => {
           const { onCLS, onFCP, onLCP, onTTFB } = webVitals;
 
           if (onCLS) {
             onCLS((metric: { value: number }) =>
-              setMetrics(prev => ({ ...prev, cls: metric.value }))
+              setMetrics((prev) => ({ ...prev, cls: metric.value })),
             );
           }
           if (onFCP) {
             onFCP((metric: { value: number }) =>
-              setMetrics(prev => ({ ...prev, fcp: metric.value }))
+              setMetrics((prev) => ({ ...prev, fcp: metric.value })),
             );
           }
           if (onLCP) {
             onLCP((metric: { value: number }) =>
-              setMetrics(prev => ({ ...prev, lcp: metric.value }))
+              setMetrics((prev) => ({ ...prev, lcp: metric.value })),
             );
           }
           if (onTTFB) {
             onTTFB((metric: { value: number }) =>
-              setMetrics(prev => ({ ...prev, ttfb: metric.value }))
+              setMetrics((prev) => ({ ...prev, ttfb: metric.value })),
             );
           }
         })
@@ -241,31 +243,31 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
 
     if (metrics.fcp && metrics.fcp > 1800) {
       recommendations.push(
-        'First Contentful Paint is slow. Consider optimizing critical rendering path.'
+        "First Contentful Paint is slow. Consider optimizing critical rendering path.",
       );
     }
 
     if (metrics.lcp && metrics.lcp > 2500) {
       recommendations.push(
-        'Largest Contentful Paint is slow. Optimize images and reduce render-blocking resources.'
+        "Largest Contentful Paint is slow. Optimize images and reduce render-blocking resources.",
       );
     }
 
     if (metrics.fid && metrics.fid > 100) {
       recommendations.push(
-        'First Input Delay is high. Reduce JavaScript execution time.'
+        "First Input Delay is high. Reduce JavaScript execution time.",
       );
     }
 
     if (metrics.cls && metrics.cls > 0.1) {
       recommendations.push(
-        'Cumulative Layout Shift is high. Ensure stable layout and avoid dynamic content insertion.'
+        "Cumulative Layout Shift is high. Ensure stable layout and avoid dynamic content insertion.",
       );
     }
 
     if (metrics.ttfb && metrics.ttfb > 600) {
       recommendations.push(
-        'Time to First Byte is slow. Optimize server response time.'
+        "Time to First Byte is slow. Optimize server response time.",
       );
     }
 
@@ -274,31 +276,31 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
 
   const _recommendations = getPerformanceRecommendations();
 
-  if (process.env['NODE_ENV'] === 'development') {
+  if (process.env["NODE_ENV"] === "development") {
     return (
-      <div className='fixed bottom-4 right-4 bg-white p-4 rounded-lg shadow-lg border max-w-sm z-50'>
-        <h3 className='font-semibold text-sm mb-2'>Performance Monitor</h3>
-        <div className='text-xs space-y-1'>
-          <div>FCP: {metrics.fcp ? `${metrics.fcp.toFixed(0)}ms` : 'N/A'}</div>
-          <div>LCP: {metrics.lcp ? `${metrics.lcp.toFixed(0)}ms` : 'N/A'}</div>
-          <div>FID: {metrics.fid ? `${metrics.fid.toFixed(0)}ms` : 'N/A'}</div>
-          <div>CLS: {metrics.cls ? metrics.cls.toFixed(3) : 'N/A'}</div>
+      <div className="fixed bottom-4 right-4 bg-white p-4 rounded-lg shadow-lg border max-w-sm z-50">
+        <h3 className="font-semibold text-sm mb-2">Performance Monitor</h3>
+        <div className="text-xs space-y-1">
+          <div>FCP: {metrics.fcp ? `${metrics.fcp.toFixed(0)}ms` : "N/A"}</div>
+          <div>LCP: {metrics.lcp ? `${metrics.lcp.toFixed(0)}ms` : "N/A"}</div>
+          <div>FID: {metrics.fid ? `${metrics.fid.toFixed(0)}ms` : "N/A"}</div>
+          <div>CLS: {metrics.cls ? metrics.cls.toFixed(3) : "N/A"}</div>
           <div>
-            TTFB: {metrics.ttfb ? `${metrics.ttfb.toFixed(0)}ms` : 'N/A'}
+            TTFB: {metrics.ttfb ? `${metrics.ttfb.toFixed(0)}ms` : "N/A"}
           </div>
           <div>
-            Memory:{' '}
+            Memory:{" "}
             {metrics.memory
               ? `${(metrics.memory / 1024 / 1024).toFixed(1)}MB`
-              : 'N/A'}
+              : "N/A"}
           </div>
         </div>
         {recommendations.length > 0 && (
-          <div className='mt-2'>
-            <h4 className='font-semibold text-xs text-red-600'>
+          <div className="mt-2">
+            <h4 className="font-semibold text-xs text-red-600">
               Recommendations:
             </h4>
-            <ul className='text-xs text-red-600'>
+            <ul className="text-xs text-red-600">
               {recommendations.map((rec, index) => (
                 <li key={index}>• {rec}</li>
               ))}

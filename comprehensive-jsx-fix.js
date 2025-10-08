@@ -1,8 +1,12 @@
-#!/usr/bin/env node
 import fs from 'fs'
 import path from 'path'
-import { glob } from 'glob'
 import { fileURLToPath } from 'url'
+import { glob } from 'glob'
+#!/usr/bin/env node
+
+
+
+
 // const __filename = fileURLToPath(import.meta.url);
 // const __dirname = path.dirname(__filename);
 //Function to fix JSX structure issues

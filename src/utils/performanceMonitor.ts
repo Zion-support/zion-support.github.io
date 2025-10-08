@@ -6,7 +6,7 @@
 export interface PerformanceMetric {
   name: string;
   value: number;
-  rating: 'good' | 'needs-improvement' | 'poor';
+  rating: "good" | "needs-improvement" | "poor";
   timestamp: number;
 }
 
@@ -27,19 +27,19 @@ export class PerformanceMonitor {
   }
 
   private initializeObservers(): void {
-    if (typeof window === 'undefined') return;
+    if (typeof window === "undefined") return;
 
     // Observe long tasks
-    if ('PerformanceObserver' in window) {
+    if ("PerformanceObserver" in window) {
       try {
         const longTaskObserver = new PerformanceObserver((list) => {
           for (const entry of list.getEntries()) {
-            this.recordMetric('long-task', entry.duration);
+            this.recordMetric("long-task", entry.duration);
           }
         });
-        longTaskObserver.observe({ entryTypes: ['longtask'] });
+        longTaskObserver.observe({ entryTypes: ["longtask"] });
       } catch (e) {
-//         console.warn('Long task observer not supported');
+        //         console.warn('Long task observer not supported');
       }
     }
   }
@@ -72,21 +72,24 @@ export class PerformanceMonitor {
   /**
    * Get rating for a metric based on web vitals thresholds
    */
-  private getRating(name: string, value: number): 'good' | 'needs-improvement' | 'poor' {
+  private getRating(
+    name: string,
+    value: number,
+  ): "good" | "needs-improvement" | "poor" {
     const thresholds: Record<string, { good: number; poor: number }> = {
-      'FCP': { good: 1800, poor: 3000 },
-      'LCP': { good: 2500, poor: 4000 },
-      'FID': { good: 100, poor: 300 },
-      'CLS': { good: 0.1, poor: 0.25 },
-      'TTFB': { good: 800, poor: 1800 },
-      'long-task': { good: 50, poor: 100 },
+      FCP: { good: 1800, poor: 3000 },
+      LCP: { good: 2500, poor: 4000 },
+      FID: { good: 100, poor: 300 },
+      CLS: { good: 0.1, poor: 0.25 },
+      TTFB: { good: 800, poor: 1800 },
+      "long-task": { good: 50, poor: 100 },
     };
 
     const threshold = thresholds[name] || { good: 100, poor: 500 };
 
-    if (value <= threshold.good) return 'good';
-    if (value <= threshold.poor) return 'needs-improvement';
-    return 'poor';
+    if (value <= threshold.good) return "good";
+    if (value <= threshold.poor) return "needs-improvement";
+    return "poor";
   }
 
   /**
@@ -118,8 +121,14 @@ export class PerformanceMonitor {
   /**
    * Get performance summary
    */
-  getSummary(): Record<string, { average: number; count: number; rating: string }> {
-    const summary: Record<string, { average: number; count: number; rating: string }> = {};
+  getSummary(): Record<
+    string,
+    { average: number; count: number; rating: string }
+  > {
+    const summary: Record<
+      string,
+      { average: number; count: number; rating: string }
+    > = {};
 
     this.metrics.forEach((metrics, name) => {
       const average = this.getAverage(name);

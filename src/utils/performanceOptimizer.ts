@@ -29,30 +29,30 @@ export interface PerformanceBudget {
  * Lazy load images with Intersection Observer
  */
 export const lazyLoadImages = (): void => {
-  if (typeof window === 'undefined' || !('IntersectionObserver' in window))
+  if (typeof window === "undefined" || !("IntersectionObserver" in window))
     return;
 
   const imageObserver = new IntersectionObserver(
-    entries => {
-      entries.forEach(entry => {
+    (entries) => {
+      entries.forEach((entry) => {
         if (entry.isIntersecting) {
           const img = entry.target as HTMLImageElement;
-          const src = img.dataset['src'];
+          const src = img.dataset["src"];
           if (src) {
-            img['src'] = src;
-            img.removeAttribute('data-src');
+            img["src"] = src;
+            img.removeAttribute("data-src");
             imageObserver.unobserve(img);
           }
         }
       });
     },
     {
-      rootMargin: '50px 0px',
+      rootMargin: "50px 0px",
       threshold: 0.01,
-    }
+    },
   );
 
-  document.querySelectorAll('img[data-src]').forEach(img => {
+  document.querySelectorAll("img[data-src]").forEach((img) => {
     imageObserver.observe(img);
   });
 };
@@ -61,17 +61,17 @@ export const lazyLoadImages = (): void => {
  * Preload critical resources
  */
 export const preloadCriticalResources = (): void => {
-  if (typeof document === 'undefined') return;
+  if (typeof document === "undefined") return;
 
-  const criticalResources = ['/fonts/inter-var.woff2', '/css/critical.css'];
+  const criticalResources = ["/fonts/inter-var.woff2", "/css/critical.css"];
 
-  criticalResources.forEach(resource => {
-    const link = document.createElement('link');
-    link.rel = 'preload';
+  criticalResources.forEach((resource) => {
+    const link = document.createElement("link");
+    link.rel = "preload";
     link.href = resource;
-    link.as = resource.endsWith('.css') ? 'style' : 'font';
-    if (resource.endsWith('.woff2')) {
-      link.crossOrigin = 'anonymous';
+    link.as = resource.endsWith(".css") ? "style" : "font";
+    if (resource.endsWith(".woff2")) {
+      link.crossOrigin = "anonymous";
     }
     document.head.appendChild(link);
   });
@@ -81,7 +81,7 @@ export const preloadCriticalResources = (): void => {
  * Optimize scroll performance
  */
 export const optimizeScroll = (): void => {
-  if (typeof window === 'undefined') return;
+  if (typeof window === "undefined") return;
 
   let ticking = false;
 
@@ -97,28 +97,28 @@ export const optimizeScroll = (): void => {
     }
   };
 
-  window.addEventListener('scroll', requestTick, { passive: true });
+  window.addEventListener("scroll", requestTick, { passive: true });
 };
 
 /**
  * Add critical resource hints
  */
 export const addCriticalResourceHints = (): void => {
-  if (typeof document === 'undefined') return;
+  if (typeof document === "undefined") return;
 
   const hints = [
-    { rel: 'dns-prefetch', href: 'https://fonts.googleapis.com' },
-    { rel: 'dns-prefetch', href: 'https://fonts.gstatic.com' },
-    { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
+    { rel: "dns-prefetch", href: "https://fonts.googleapis.com" },
+    { rel: "dns-prefetch", href: "https://fonts.gstatic.com" },
+    { rel: "preconnect", href: "https://fonts.googleapis.com" },
     {
-      rel: 'preconnect',
-      href: 'https://fonts.gstatic.com',
-      crossOrigin: 'anonymous',
+      rel: "preconnect",
+      href: "https://fonts.gstatic.com",
+      crossOrigin: "anonymous",
     },
   ];
 
-  hints.forEach(hint => {
-    const link = document.createElement('link');
+  hints.forEach((hint) => {
+    const link = document.createElement("link");
     link.rel = hint.rel;
     link.href = hint.href;
     if (hint.crossOrigin) {
@@ -132,11 +132,11 @@ export const addCriticalResourceHints = (): void => {
  * Measure page load performance
  */
 export const measurePageLoad = (): WebVitalsMetrics | null => {
-  if (typeof window === 'undefined' || !window.performance) return null;
+  if (typeof window === "undefined" || !window.performance) return null;
 
   const perfData = window.performance.timing;
   const navigation = window.performance.getEntriesByType(
-    'navigation'
+    "navigation",
   )[0] as PerformanceNavigationTiming;
 
   return {
@@ -157,13 +157,13 @@ export const reportWebVitals = (metrics: WebVitalsMetrics): void => {
 
   // Send to analytics service
   if (
-    typeof window !== 'undefined' &&
+    typeof window !== "undefined" &&
     (
       window as unknown as {
         gtag?: (
           command: string,
           eventName: string,
-          parameters: Record<string, unknown>
+          parameters: Record<string, unknown>,
         ) => void;
       }
     ).gtag
@@ -175,12 +175,12 @@ export const reportWebVitals = (metrics: WebVitalsMetrics): void => {
             gtag: (
               command: string,
               eventName: string,
-              parameters: Record<string, unknown>
+              parameters: Record<string, unknown>,
             ) => void;
           }
-        ).gtag('event', key, {
+        ).gtag("event", key, {
           value: Math.round(value),
-          event_category: 'Web Vitals',
+          event_category: "Web Vitals",
           non_interaction: true,
         });
       }
@@ -192,16 +192,16 @@ export const reportWebVitals = (metrics: WebVitalsMetrics): void => {
  * Monitor long tasks
  */
 export const monitorLongTasks = (
-  callback: (entries: PerformanceEntry[]) => void
+  callback: (entries: PerformanceEntry[]) => void,
 ): PerformanceObserver | null => {
-  if (typeof window === 'undefined' || !('PerformanceObserver' in window))
+  if (typeof window === "undefined" || !("PerformanceObserver" in window))
     return null;
 
   try {
-    const observer = new PerformanceObserver(list => {
+    const observer = new PerformanceObserver((list) => {
       callback(list.getEntries());
     });
-    observer.observe({ entryTypes: ['longtask'] });
+    observer.observe({ entryTypes: ["longtask"] });
     return observer;
   } catch {
     // Long task monitoring not supported - fallback handling
@@ -214,7 +214,7 @@ export const monitorLongTasks = (
  */
 export const debounce = <T extends (...args: unknown[]) => unknown>(
   func: T,
-  wait: number
+  wait: number,
 ): ((...args: Parameters<T>) => void) => {
   let timeout: ReturnType<typeof setTimeout>;
   return (...args: Parameters<T>) => {
@@ -228,7 +228,7 @@ export const debounce = <T extends (...args: unknown[]) => unknown>(
  */
 export const throttle = <T extends (...args: unknown[]) => unknown>(
   func: T,
-  limit: number
+  limit: number,
 ): ((...args: Parameters<T>) => void) => {
   let inThrottle: boolean;
   return (...args: Parameters<T>) => {
@@ -290,7 +290,7 @@ class PerformanceOptimizer {
   }
 
   public monitorLongTasks(
-    callback: (entries: PerformanceEntry[]) => void
+    callback: (entries: PerformanceEntry[]) => void,
   ): PerformanceObserver | null {
     return monitorLongTasks(callback);
   }
@@ -300,13 +300,13 @@ class PerformanceOptimizer {
   }
 
   public initialize(): void {
-    this.measurePerformance('lazyLoadImages', () => this.lazyLoadImages());
-    this.measurePerformance('preloadCriticalResources', () =>
-      this.preloadCriticalResources()
+    this.measurePerformance("lazyLoadImages", () => this.lazyLoadImages());
+    this.measurePerformance("preloadCriticalResources", () =>
+      this.preloadCriticalResources(),
     );
-    this.measurePerformance('optimizeScroll', () => this.optimizeScroll());
-    this.measurePerformance('addCriticalResourceHints', () =>
-      this.addCriticalResourceHints()
+    this.measurePerformance("optimizeScroll", () => this.optimizeScroll());
+    this.measurePerformance("addCriticalResourceHints", () =>
+      this.addCriticalResourceHints(),
     );
   }
 }

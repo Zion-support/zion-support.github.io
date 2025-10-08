@@ -3,6 +3,7 @@
 ## ✅ GOOD NEWS: No Errors or Conflicts!
 
 Your main branch is **completely clean** and working perfectly:
+
 - ✅ No merge conflicts
 - ✅ No code errors
 - ✅ All fixes already applied
@@ -13,6 +14,7 @@ Your main branch is **completely clean** and working perfectly:
 **Problem:** 84 duplicate PRs are open, all trying to fix issues that are already fixed.
 
 **Solution:** Close them manually:
+
 1. Go to: https://github.com/Zion-Holdings/zion.app/pulls
 2. Close all PRs titled "Fix errors and merge to main"
 3. Add comment: "Duplicate - fixes already in main"
@@ -24,7 +26,7 @@ Multiple automated attempts were made to fix the same issues, creating duplicate
 ## Bottom Line
 
 ✅ **Your code is fine**  
-⚠️ **Just need to clean up PRs manually**  
+⚠️ **Just need to clean up PRs manually**
 
 ---
 

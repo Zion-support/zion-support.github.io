@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -18,18 +18,32 @@ const Header: React.FC = () => {
             <Link to="/about" className="hover:text-blue-400 transition-colors">
               About
             </Link>
-            <Link to="/services" className="hover:text-blue-400 transition-colors">
+            <Link
+              to="/services"
+              className="hover:text-blue-400 transition-colors"
+            >
               Services
             </Link>
             <Link to="/blog" className="hover:text-blue-400 transition-colors">
               Blog
             </Link>
-            <Link to="/contact" className="hover:text-blue-400 transition-colors">
+            <Link
+              to="/contact"
+              className="hover:text-blue-400 transition-colors"
+            >
               Contact
             </Link>
           </nav>
-          <button className="md:hidden" onClick={() => setIsMenuOpen(!isMenuOpen)}>
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <button
+            className="md:hidden"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+          >
+            <svg
+              className="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"

@@ -6,10 +6,13 @@
 /**
  * Check color contrast ratio (WCAG 2.1)
  */
-export const getContrastRatio = (foreground: string, background: string): number => {
+export const getContrastRatio = (
+  foreground: string,
+  background: string,
+): number => {
   const getLuminance = (color: string): number => {
     // Convert hex to RGB
-    const hex = color.replace('#', '');
+    const hex = color.replace("#", "");
     const r = parseInt(hex.substring(0, 2), 16) / 255;
     const g = parseInt(hex.substring(2, 4), 16) / 255;
     const b = parseInt(hex.substring(4, 6), 16) / 255;
@@ -34,7 +37,11 @@ export const getContrastRatio = (foreground: string, background: string): number
 /**
  * Check if contrast ratio meets WCAG AA standards
  */
-export const meetsWCAGAA = (foreground: string, background: string, largeText: boolean = false): boolean => {
+export const meetsWCAGAA = (
+  foreground: string,
+  background: string,
+  largeText: boolean = false,
+): boolean => {
   const ratio = getContrastRatio(foreground, background);
   return largeText ? ratio >= 3 : ratio >= 4.5;
 };
@@ -42,7 +49,11 @@ export const meetsWCAGAA = (foreground: string, background: string, largeText: b
 /**
  * Check if contrast ratio meets WCAG AAA standards
  */
-export const meetsWCAGAAA = (foreground: string, background: string, largeText: boolean = false): boolean => {
+export const meetsWCAGAAA = (
+  foreground: string,
+  background: string,
+  largeText: boolean = false,
+): boolean => {
   const ratio = getContrastRatio(foreground, background);
   return largeText ? ratio >= 4.5 : ratio >= 7;
 };
@@ -50,37 +61,40 @@ export const meetsWCAGAAA = (foreground: string, background: string, largeText: 
 /**
  * Generate ARIA labels for common elements
  */
-export const generateARIALabel = (elementType: string, context?: string): string => {
+export const generateARIALabel = (
+  elementType: string,
+  context?: string,
+): string => {
   const labels: Record<string, string> = {
-    button: 'Click to perform action',
-    link: 'Navigate to page',
-    input: 'Enter text',
-    checkbox: 'Toggle option',
-    radio: 'Select option',
-    select: 'Choose from dropdown',
-    textarea: 'Enter multi-line text',
-    search: 'Enter search query',
-    menu: 'Open menu',
-    dialog: 'Open dialog',
-    alert: 'Important message',
+    button: "Click to perform action",
+    link: "Navigate to page",
+    input: "Enter text",
+    checkbox: "Toggle option",
+    radio: "Select option",
+    select: "Choose from dropdown",
+    textarea: "Enter multi-line text",
+    search: "Enter search query",
+    menu: "Open menu",
+    dialog: "Open dialog",
+    alert: "Important message",
   };
 
-  const baseLabel = labels[elementType] || 'Interactive element';
+  const baseLabel = labels[elementType] || "Interactive element";
   return context ? `${baseLabel}: ${context}` : baseLabel;
 };
 
 /**
  * Trap focus within a modal or dialog
  */
-export const trapFocus = (element: HTMLElement): () => void => {
+export const trapFocus = (element: HTMLElement): (() => void) => {
   const focusableElements = element.querySelectorAll<HTMLElement>(
-    'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+    'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])',
   );
   const firstFocusable = focusableElements[0];
   const lastFocusable = focusableElements[focusableElements.length - 1];
 
   const handleTabKey = (e: KeyboardEvent) => {
-    if (e.key !== 'Tab') return;
+    if (e.key !== "Tab") return;
 
     if (e.shiftKey) {
       if (document.activeElement === firstFocusable) {
@@ -95,32 +109,35 @@ export const trapFocus = (element: HTMLElement): () => void => {
     }
   };
 
-  element.addEventListener('keydown', handleTabKey);
+  element.addEventListener("keydown", handleTabKey);
 
   // Focus first element
   firstFocusable?.focus();
 
   // Return cleanup function
   return () => {
-    element.removeEventListener('keydown', handleTabKey);
+    element.removeEventListener("keydown", handleTabKey);
   };
 };
 
 /**
  * Announce message to screen readers
  */
-export const announceToScreenReader = (message: string, priority: 'polite' | 'assertive' = 'polite'): void => {
-  if (typeof document === 'undefined') return;
+export const announceToScreenReader = (
+  message: string,
+  priority: "polite" | "assertive" = "polite",
+): void => {
+  if (typeof document === "undefined") return;
 
-  let liveRegion = document.getElementById('a11y-live-region');
+  let liveRegion = document.getElementById("a11y-live-region");
 
   if (!liveRegion) {
-    liveRegion = document.createElement('div');
-    liveRegion.id = 'a11y-live-region';
-    liveRegion.setAttribute('role', 'status');
-    liveRegion.setAttribute('aria-live', priority);
-    liveRegion.setAttribute('aria-atomic', 'true');
-    liveRegion.className = 'sr-only';
+    liveRegion = document.createElement("div");
+    liveRegion.id = "a11y-live-region";
+    liveRegion.setAttribute("role", "status");
+    liveRegion.setAttribute("aria-live", priority);
+    liveRegion.setAttribute("aria-atomic", "true");
+    liveRegion.className = "sr-only";
     liveRegion.style.cssText = `
       position: absolute;
       left: -10000px;
@@ -132,7 +149,7 @@ export const announceToScreenReader = (message: string, priority: 'polite' | 'as
   }
 
   // Clear and set new message
-  liveRegion.textContent = '';
+  liveRegion.textContent = "";
   setTimeout(() => {
     if (liveRegion) {
       liveRegion.textContent = message;
@@ -145,16 +162,19 @@ export const announceToScreenReader = (message: string, priority: 'polite' | 'as
  */
 export const isVisibleToScreenReader = (element: HTMLElement): boolean => {
   // Check if element has screen reader only class or styles
-  const hasScreenReaderClass = element.classList.contains('sr-only') || 
-                                element.classList.contains('visually-hidden');
-  
+  const hasScreenReaderClass =
+    element.classList.contains("sr-only") ||
+    element.classList.contains("visually-hidden");
+
   if (hasScreenReaderClass) return true;
 
   // Check if element is visible in viewport
   const style = window.getComputedStyle(element);
-  return style.display !== 'none' && 
-         style.visibility !== 'hidden' && 
-         style.opacity !== '0';
+  return (
+    style.display !== "none" &&
+    style.visibility !== "hidden" &&
+    style.opacity !== "0"
+  );
 };
 
 /**
@@ -164,17 +184,19 @@ export const addKeyboardNavigation = (
   container: HTMLElement,
   options: {
     selector?: string;
-    orientation?: 'horizontal' | 'vertical' | 'both';
+    orientation?: "horizontal" | "vertical" | "both";
     loop?: boolean;
-  } = {}
-): () => void => {
+  } = {},
+): (() => void) => {
   const {
     selector = '[role="button"], [role="tab"], [role="menuitem"]',
-    orientation = 'both',
+    orientation = "both",
     loop = true,
   } = options;
 
-  const elements = Array.from(container.querySelectorAll<HTMLElement>(selector));
+  const elements = Array.from(
+    container.querySelectorAll<HTMLElement>(selector),
+  );
 
   const handleKeyDown = (e: KeyboardEvent) => {
     const currentIndex = elements.indexOf(e.target as HTMLElement);
@@ -183,35 +205,35 @@ export const addKeyboardNavigation = (
     let nextIndex = currentIndex;
 
     switch (e.key) {
-      case 'ArrowRight':
-        if (orientation === 'horizontal' || orientation === 'both') {
+      case "ArrowRight":
+        if (orientation === "horizontal" || orientation === "both") {
           nextIndex = currentIndex + 1;
           e.preventDefault();
         }
         break;
-      case 'ArrowLeft':
-        if (orientation === 'horizontal' || orientation === 'both') {
+      case "ArrowLeft":
+        if (orientation === "horizontal" || orientation === "both") {
           nextIndex = currentIndex - 1;
           e.preventDefault();
         }
         break;
-      case 'ArrowDown':
-        if (orientation === 'vertical' || orientation === 'both') {
+      case "ArrowDown":
+        if (orientation === "vertical" || orientation === "both") {
           nextIndex = currentIndex + 1;
           e.preventDefault();
         }
         break;
-      case 'ArrowUp':
-        if (orientation === 'vertical' || orientation === 'both') {
+      case "ArrowUp":
+        if (orientation === "vertical" || orientation === "both") {
           nextIndex = currentIndex - 1;
           e.preventDefault();
         }
         break;
-      case 'Home':
+      case "Home":
         nextIndex = 0;
         e.preventDefault();
         break;
-      case 'End':
+      case "End":
         nextIndex = elements.length - 1;
         e.preventDefault();
         break;
@@ -229,10 +251,10 @@ export const addKeyboardNavigation = (
     }
   };
 
-  container.addEventListener('keydown', handleKeyDown);
+  container.addEventListener("keydown", handleKeyDown);
 
   return () => {
-    container.removeEventListener('keydown', handleKeyDown);
+    container.removeEventListener("keydown", handleKeyDown);
   };
 };
 
@@ -274,18 +296,18 @@ export const validateARIA = (element: HTMLElement): string[] => {
   const issues: string[] = [];
 
   // Check for required ARIA attributes based on role
-  const role = element.getAttribute('role');
-  
+  const role = element.getAttribute("role");
+
   if (role) {
     const requiredAttributes: Record<string, string[]> = {
       button: [],
-      checkbox: ['aria-checked'],
-      radio: ['aria-checked'],
-      tab: ['aria-controls', 'aria-selected'],
-      tabpanel: ['aria-labelledby'],
-      dialog: ['aria-labelledby', 'aria-describedby'],
-      alert: ['aria-live'],
-      progressbar: ['aria-valuenow', 'aria-valuemin', 'aria-valuemax'],
+      checkbox: ["aria-checked"],
+      radio: ["aria-checked"],
+      tab: ["aria-controls", "aria-selected"],
+      tabpanel: ["aria-labelledby"],
+      dialog: ["aria-labelledby", "aria-describedby"],
+      alert: ["aria-live"],
+      progressbar: ["aria-valuenow", "aria-valuemin", "aria-valuemax"],
     };
 
     const required = requiredAttributes[role];
@@ -299,12 +321,12 @@ export const validateARIA = (element: HTMLElement): string[] => {
   }
 
   // Check for invalid ARIA references
-  const labelledby = element.getAttribute('aria-labelledby');
+  const labelledby = element.getAttribute("aria-labelledby");
   if (labelledby && !document.getElementById(labelledby)) {
     issues.push(`aria-labelledby references non-existent id: ${labelledby}`);
   }
 
-  const describedby = element.getAttribute('aria-describedby');
+  const describedby = element.getAttribute("aria-describedby");
   if (describedby && !document.getElementById(describedby)) {
     issues.push(`aria-describedby references non-existent id: ${describedby}`);
   }
@@ -316,16 +338,16 @@ export const validateARIA = (element: HTMLElement): string[] => {
  * Add skip links to page
  */
 export const addSkipLinks = (): void => {
-  if (typeof document === 'undefined') return;
+  if (typeof document === "undefined") return;
 
-  const skipLinks = document.createElement('div');
-  skipLinks.className = 'skip-links';
+  const skipLinks = document.createElement("div");
+  skipLinks.className = "skip-links";
   skipLinks.innerHTML = `
     <a href="#main-content" class="skip-link">Skip to main content</a>
     <a href="#navigation" class="skip-link">Skip to navigation</a>
   `;
 
-  const style = document.createElement('style');
+  const style = document.createElement("style");
   style.textContent = `
     .skip-link {
       position: absolute;
@@ -349,7 +371,7 @@ export const addSkipLinks = (): void => {
 /**
  * Generate unique ID for ARIA relationships
  */
-export const generateUniqueId = (prefix: string = 'a11y'): string => {
+export const generateUniqueId = (prefix: string = "a11y"): string => {
   return `${prefix}-${Math.random().toString(36).substring(2, 9)}`;
 };
 

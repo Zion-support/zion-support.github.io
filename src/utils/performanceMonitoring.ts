@@ -6,7 +6,7 @@
 export interface PerformanceMetric {
   name: string;
   value: number;
-  rating: 'good' | 'needs-improvement' | 'poor';
+  rating: "good" | "needs-improvement" | "poor";
   timestamp: number;
 }
 
@@ -16,12 +16,12 @@ interface LayoutShift extends PerformanceEntry {
 }
 
 export interface WebVitals {
-  CLS?: PerformanceMetric;  // Cumulative Layout Shift
-  FID?: PerformanceMetric;  // First Input Delay
-  FCP?: PerformanceMetric;  // First Contentful Paint
-  LCP?: PerformanceMetric;  // Largest Contentful Paint
+  CLS?: PerformanceMetric; // Cumulative Layout Shift
+  FID?: PerformanceMetric; // First Input Delay
+  FCP?: PerformanceMetric; // First Contentful Paint
+  LCP?: PerformanceMetric; // Largest Contentful Paint
   TTFB?: PerformanceMetric; // Time to First Byte
-  INP?: PerformanceMetric;  // Interaction to Next Paint
+  INP?: PerformanceMetric; // Interaction to Next Paint
 }
 
 // Layout Shift API types
@@ -61,7 +61,7 @@ class PerformanceMonitor {
    * Initialize performance monitoring
    */
   init(): void {
-    if (typeof window === 'undefined') return;
+    if (typeof window === "undefined") return;
 
     this.observeWebVitals();
     this.observeNavigationTiming();
@@ -71,7 +71,12 @@ class PerformanceMonitor {
   /**
    * Track a custom performance metric
    */
-  trackMetric(name: string, value: number, unit: string = 'ms', tags?: Record<string, string>): void {
+  trackMetric(
+    name: string,
+    value: number,
+    unit: string = "ms",
+    tags?: Record<string, string>,
+  ): void {
     const metric: CustomMetric = {
       name,
       value,
@@ -83,8 +88,8 @@ class PerformanceMonitor {
     this.metrics.push(metric);
 
     // Log in development
-    if (process.env['NODE_ENV'] === 'development') {
-//       console.log(`[Performance] ${name}: ${value}${unit}`, tags);
+    if (process.env["NODE_ENV"] === "development") {
+      //       console.log(`[Performance] ${name}: ${value}${unit}`, tags);
     }
   }
 
@@ -94,17 +99,20 @@ class PerformanceMonitor {
   async measureAsync<T>(
     name: string,
     fn: () => Promise<T>,
-    tags?: Record<string, string>
+    tags?: Record<string, string>,
   ): Promise<T> {
     const start = performance.now();
     try {
       const result = await fn();
       const duration = performance.now() - start;
-      this.trackMetric(name, duration, 'ms', tags);
+      this.trackMetric(name, duration, "ms", tags);
       return result;
     } catch (error) {
       const duration = performance.now() - start;
-      this.trackMetric(`${name}_error`, duration, 'ms', { ...tags, error: 'true' });
+      this.trackMetric(`${name}_error`, duration, "ms", {
+        ...tags,
+        error: "true",
+      });
       throw error;
     }
   }
@@ -117,11 +125,14 @@ class PerformanceMonitor {
     try {
       const result = fn();
       const duration = performance.now() - start;
-      this.trackMetric(name, duration, 'ms', tags);
+      this.trackMetric(name, duration, "ms", tags);
       return result;
     } catch (error) {
       const duration = performance.now() - start;
-      this.trackMetric(`${name}_error`, duration, 'ms', { ...tags, error: 'true' });
+      this.trackMetric(`${name}_error`, duration, "ms", {
+        ...tags,
+        error: "true",
+      });
       throw error;
     }
   }
@@ -130,7 +141,7 @@ class PerformanceMonitor {
    * Create a performance mark
    */
   mark(name: string): void {
-    if (typeof performance !== 'undefined' && performance.mark) {
+    if (typeof performance !== "undefined" && performance.mark) {
       performance.mark(name);
     }
   }
@@ -138,20 +149,22 @@ class PerformanceMonitor {
   /**
    * Measure between two marks
    */
-  measureBetween(name: string, startMark: string, endMark: string): number | null {
-    if (typeof performance === 'undefined' || !performance.measure) return null;
+  measureBetween(
+    name: string,
+    startMark: string,
+    endMark: string,
+  ): number | null {
+    if (typeof performance === "undefined" || !performance.measure) return null;
 
     try {
       performance.measure(name, startMark, endMark);
-      const entries = performance.getEntriesByName(name, 'measure');
+      const entries = performance.getEntriesByName(name, "measure");
       if (entries.length > 0) {
         const duration = entries[entries.length - 1].duration;
-        this.trackMetric(name, duration, 'ms');
+        this.trackMetric(name, duration, "ms");
         return duration;
       }
-    } catch (error) {
-      console.warn('Failed to measure performance:', error);
-    }
+    } catch (error) {}
     return null;
   }
 
@@ -193,16 +206,20 @@ class PerformanceMonitor {
     const averagesByName: Record<string, number> = {};
 
     // Group metrics by name and calculate averages
-    const metricsByName = this.metrics.reduce((acc, metric) => {
-      if (!acc[metric.name]) {
-        acc[metric.name] = [];
-      }
-      acc[metric.name].push(metric.value);
-      return acc;
-    }, {} as Record<string, number[]>);
+    const metricsByName = this.metrics.reduce(
+      (acc, metric) => {
+        if (!acc[metric.name]) {
+          acc[metric.name] = [];
+        }
+        acc[metric.name].push(metric.value);
+        return acc;
+      },
+      {} as Record<string, number[]>,
+    );
 
     Object.entries(metricsByName).forEach(([name, values]) => {
-      averagesByName[name] = values.reduce((sum, val) => sum + val, 0) / values.length;
+      averagesByName[name] =
+        values.reduce((sum, val) => sum + val, 0) / values.length;
     });
 
     return {
@@ -223,7 +240,8 @@ class PerformanceMonitor {
    * Observe Web Vitals
    */
   private observeWebVitals(): void {
-    if (typeof window === 'undefined' || !('PerformanceObserver' in window)) return;
+    if (typeof window === "undefined" || !("PerformanceObserver" in window))
+      return;
 
     try {
       // Observe Largest Contentful Paint (LCP)
@@ -231,24 +249,30 @@ class PerformanceMonitor {
         const entries = list.getEntries();
         const lastEntry = entries[entries.length - 1] as any;
         if (lastEntry) {
-          const metric = this.createMetric('LCP', lastEntry.renderTime || lastEntry.loadTime);
+          const metric = this.createMetric(
+            "LCP",
+            lastEntry.renderTime || lastEntry.loadTime,
+          );
           this.webVitals.LCP = metric;
           this.notifyCallbacks(metric);
         }
       });
-      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
+      lcpObserver.observe({ entryTypes: ["largest-contentful-paint"] });
       this.observers.push(lcpObserver);
 
       // Observe First Input Delay (FID)
       const fidObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
         entries.forEach((entry: any) => {
-          const metric = this.createMetric('FID', entry.processingStart - entry.startTime);
+          const metric = this.createMetric(
+            "FID",
+            entry.processingStart - entry.startTime,
+          );
           this.webVitals.FID = metric;
           this.notifyCallbacks(metric);
         });
       });
-      fidObserver.observe({ entryTypes: ['first-input'] });
+      fidObserver.observe({ entryTypes: ["first-input"] });
       this.observers.push(fidObserver);
 
       // Observe Cumulative Layout Shift (CLS)
@@ -260,14 +284,14 @@ class PerformanceMonitor {
             clsValue += entry.value;
           }
         });
-        const metric = this.createMetric('CLS', clsValue);
+        const metric = this.createMetric("CLS", clsValue);
         this.webVitals.CLS = metric;
         this.notifyCallbacks(metric);
       });
-      clsObserver.observe({ entryTypes: ['layout-shift'] });
+      clsObserver.observe({ entryTypes: ["layout-shift"] });
       this.observers.push(clsObserver);
     } catch (error) {
-//       console.warn('Failed to observe Web Vitals:', error);
+      //       console.warn('Failed to observe Web Vitals:', error);
     }
   }
 
@@ -275,33 +299,43 @@ class PerformanceMonitor {
    * Observe navigation timing
    */
   private observeNavigationTiming(): void {
-    if (typeof window === 'undefined' || !performance.getEntriesByType) return;
+    if (typeof window === "undefined" || !performance.getEntriesByType) return;
 
-    window.addEventListener('load', () => {
-      const navigationEntries = performance.getEntriesByType('navigation') as PerformanceNavigationTiming[];
+    window.addEventListener("load", () => {
+      const navigationEntries = performance.getEntriesByType(
+        "navigation",
+      ) as PerformanceNavigationTiming[];
       if (navigationEntries.length > 0) {
         const nav = navigationEntries[0];
-        
+
         // Track various navigation metrics
-        this.trackMetric('dns_lookup', nav.domainLookupEnd - nav.domainLookupStart);
-        this.trackMetric('tcp_connection', nav.connectEnd - nav.connectStart);
-        this.trackMetric('request_time', nav.responseStart - nav.requestStart);
-        this.trackMetric('response_time', nav.responseEnd - nav.responseStart);
-        this.trackMetric('dom_interactive', nav.domInteractive - nav.fetchStart);
-        this.trackMetric('dom_complete', nav.domComplete - nav.fetchStart);
-        this.trackMetric('load_event', nav.loadEventEnd - nav.loadEventStart);
+        this.trackMetric(
+          "dns_lookup",
+          nav.domainLookupEnd - nav.domainLookupStart,
+        );
+        this.trackMetric("tcp_connection", nav.connectEnd - nav.connectStart);
+        this.trackMetric("request_time", nav.responseStart - nav.requestStart);
+        this.trackMetric("response_time", nav.responseEnd - nav.responseStart);
+        this.trackMetric(
+          "dom_interactive",
+          nav.domInteractive - nav.fetchStart,
+        );
+        this.trackMetric("dom_complete", nav.domComplete - nav.fetchStart);
+        this.trackMetric("load_event", nav.loadEventEnd - nav.loadEventStart);
 
         // TTFB (Time to First Byte)
         const ttfb = nav.responseStart - nav.requestStart;
-        const ttfbMetric = this.createMetric('TTFB', ttfb);
+        const ttfbMetric = this.createMetric("TTFB", ttfb);
         this.webVitals.TTFB = ttfbMetric;
         this.notifyCallbacks(ttfbMetric);
 
         // FCP (First Contentful Paint)
-        const paintEntries = performance.getEntriesByType('paint');
-        const fcpEntry = paintEntries.find((entry) => entry.name === 'first-contentful-paint');
+        const paintEntries = performance.getEntriesByType("paint");
+        const fcpEntry = paintEntries.find(
+          (entry) => entry.name === "first-contentful-paint",
+        );
         if (fcpEntry) {
-          const fcpMetric = this.createMetric('FCP', fcpEntry.startTime);
+          const fcpMetric = this.createMetric("FCP", fcpEntry.startTime);
           this.webVitals.FCP = fcpMetric;
           this.notifyCallbacks(fcpMetric);
         }
@@ -313,7 +347,8 @@ class PerformanceMonitor {
    * Observe resource timing
    */
   private observeResourceTiming(): void {
-    if (typeof window === 'undefined' || !('PerformanceObserver' in window)) return;
+    if (typeof window === "undefined" || !("PerformanceObserver" in window))
+      return;
 
     try {
       const resourceObserver = new PerformanceObserver((list) => {
@@ -323,17 +358,15 @@ class PerformanceMonitor {
             this.trackMetric(
               `resource_${entry.initiatorType}`,
               entry.duration,
-              'ms',
-              { name: entry.name }
+              "ms",
+              { name: entry.name },
             );
           }
         });
       });
-      resourceObserver.observe({ entryTypes: ['resource'] });
+      resourceObserver.observe({ entryTypes: ["resource"] });
       this.observers.push(resourceObserver);
-    } catch (error) {
-      console.warn('Failed to observe resource timing:', error);
-    }
+    } catch (error) {}
   }
 
   /**
@@ -351,7 +384,10 @@ class PerformanceMonitor {
   /**
    * Get rating for a metric based on thresholds
    */
-  private getRating(name: string, value: number): 'good' | 'needs-improvement' | 'poor' {
+  private getRating(
+    name: string,
+    value: number,
+  ): "good" | "needs-improvement" | "poor" {
     const thresholds: Record<string, { good: number; poor: number }> = {
       LCP: { good: 2500, poor: 4000 },
       FID: { good: 100, poor: 300 },
@@ -362,11 +398,11 @@ class PerformanceMonitor {
     };
 
     const threshold = thresholds[name];
-    if (!threshold) return 'good';
+    if (!threshold) return "good";
 
-    if (value <= threshold.good) return 'good';
-    if (value <= threshold.poor) return 'needs-improvement';
-    return 'poor';
+    if (value <= threshold.good) return "good";
+    if (value <= threshold.poor) return "needs-improvement";
+    return "poor";
   }
 
   /**
@@ -377,7 +413,7 @@ class PerformanceMonitor {
       try {
         callback(metric);
       } catch (error) {
-//         console.error('Error in performance callback:', error);
+        //         console.error('Error in performance callback:', error);
       }
     });
   }
@@ -395,7 +431,7 @@ class PerformanceMonitor {
 export const performanceMonitor = new PerformanceMonitor();
 
 // Initialize on browser
-if (typeof window !== 'undefined') {
+if (typeof window !== "undefined") {
   performanceMonitor.init();
 }
 

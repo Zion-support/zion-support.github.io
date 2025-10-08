@@ -1,10 +1,12 @@
-import React from 'react';
+import React from "react";
 
 interface SEOEnhancerProps {
   className?: string;
 }
 
-const SEOEnhancer = React.memo(function SEOEnhancer({ className = '' }: SEOEnhancerProps) {
+const SEOEnhancer = React.memo(function SEOEnhancer({
+  className = "",
+}: SEOEnhancerProps) {
   return (
     <div className={`bg-blue-100 p-4 rounded-lg ${className}`}>
       <h3 className="text-lg font-semibold text-blue-800">SEOEnhancer</h3>

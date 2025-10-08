@@ -19,4 +19,4 @@ addARIALabels();
 improveKeyboardNavigation();
 addAltText();
 
-// 
+//

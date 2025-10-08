@@ -41,7 +41,11 @@ export class Logger {
   private maxLogs = 1000;
 
   private constructor(options: LoggerOptions = {}) {
-    this.minLevel = options.minLevel ?? (process.env['NODE_ENV'] === 'production' ? LogLevel.INFO : LogLevel.DEBUG);
+    this.minLevel =
+      options.minLevel ??
+      (process.env["NODE_ENV"] === "production"
+        ? LogLevel.INFO
+        : LogLevel.DEBUG);
     this.enableConsole = options.enableConsole ?? true;
     this.enableRemote = options.enableRemote ?? false;
     this.remoteEndpoint = options.remoteEndpoint;
@@ -95,7 +99,12 @@ export class Logger {
   /**
    * Core logging method
    */
-  private log(level: LogLevel, message: string, data?: unknown, stack?: string): void {
+  private log(
+    level: LogLevel,
+    message: string,
+    data?: unknown,
+    stack?: string,
+  ): void {
     if (level < this.minLevel) {
       return;
     }
@@ -130,24 +139,24 @@ export class Logger {
    * Output to console
    */
   private logToConsole(entry: LogEntry): void {
-//     const prefix = `[${LogLevel[entry.level]}] ${entry.timestamp.toISOString()}`;
-//     const message = entry.context ? `${prefix} [${entry.context}] ${entry.message}` : `${prefix} ${entry.message}`;
+    //     const prefix = `[${LogLevel[entry.level]}] ${entry.timestamp.toISOString()}`;
+    //     const message = entry.context ? `${prefix} [${entry.context}] ${entry.message}` : `${prefix} ${entry.message}`;
 
     switch (entry.level) {
       case LogLevel.DEBUG:
-        if (process.env['NODE_ENV'] === 'development') {
-//           if (process.env.DEV) { console.debug(message, entry.data ?? ''); }
+        if (process.env["NODE_ENV"] === "development") {
+          //           if (process.env.DEV) { console.debug(message, entry.data ?? ''); }
         }
         break;
       case LogLevel.INFO:
-//         if (process.env['NODE_ENV'] === 'development') { if (process.env.DEV) { console.info(message, entry.data ?? ''); } }
+        //         if (process.env['NODE_ENV'] === 'development') { if (process.env.DEV) { console.info(message, entry.data ?? ''); } }
         break;
       case LogLevel.WARN:
-//         console.warn(message, entry.data ?? '');
+        //         console.warn(message, entry.data ?? '');
         break;
       case LogLevel.ERROR:
       case LogLevel.FATAL:
-//         console.error(message, entry.data ?? '', entry.stack ?? '');
+        //         console.error(message, entry.data ?? '', entry.stack ?? '');
         break;
     }
   }
@@ -156,22 +165,22 @@ export class Logger {
    * Send to remote logging service
    */
   private async logToRemote(entry: LogEntry): Promise<void> {
-    if (!this.remoteEndpoint || typeof fetch === 'undefined') {
+    if (!this.remoteEndpoint || typeof fetch === "undefined") {
       return;
     }
 
     try {
       await fetch(this.remoteEndpoint, {
-        method: 'POST',
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
         body: JSON.stringify(entry),
       });
     } catch (error) {
       // Silent fail to prevent logging loops
-      if (process.env['NODE_ENV'] === 'development') {
-//         console.error('Failed to send log to remote:', error);
+      if (process.env["NODE_ENV"] === "development") {
+        //         console.error('Failed to send log to remote:', error);
       }
     }
   }
@@ -226,7 +235,10 @@ export class Logger {
 export const logger = Logger.getInstance();
 
 // Utility function to create child loggers
-export const createLogger = (context: string, options?: LoggerOptions): Logger => {
+export const createLogger = (
+  context: string,
+  options?: LoggerOptions,
+): Logger => {
   return Logger.getInstance(options).createChild(context);
 };
 

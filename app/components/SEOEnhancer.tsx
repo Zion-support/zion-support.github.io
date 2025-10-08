@@ -1,6 +1,5 @@
-import React, { ReactNode } from 'react';
-
-import { Helmet } from 'react-helmet-async';
+import React, { ReactNode } from "react";
+import { Helmet } from "react-helmet-async";
 
 interface SEOEnhancerProps {
   children?: ReactNode;
@@ -16,47 +15,47 @@ interface SEOEnhancerProps {
 
 const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
   children,
-  title = 'Zion Tech Group - Advanced AI and IT Solutions',
-  description = 'Leading provider of enterprise AI solutions, quantum computing, and autonomous systems. Transform your business with cutting-edge technology.',
+  title = "Zion Tech Group - Advanced AI and IT Solutions",
+  description = "Leading provider of enterprise AI solutions, quantum computing, and autonomous systems. Transform your business with cutting-edge technology.",
   keywords = [
-    'AI',
-    'artificial intelligence',
-    'quantum computing',
-    'autonomous systems',
-    'enterprise solutions',
-    'machine learning',
+    "AI",
+    "artificial intelligence",
+    "quantum computing",
+    "autonomous systems",
+    "enterprise solutions",
+    "machine learning",
   ],
   canonicalUrl,
-  ogImage = 'https://ziontechgroup.com/og-image.jpg',
-  ogType = 'website',
+  ogImage = "https://ziontechgroup.com/og-image.jpg",
+  ogType = "website",
   structuredData,
   noIndex = false,
 }) => {
   const defaultStructuredData = {
-    '@context': 'https://schema.org',
-    '@type': 'Organization',
-    name: 'Zion Tech Group',
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "Zion Tech Group",
     description,
-    url: 'https://ziontechgroup.com',
-    logo: 'https://ziontechgroup.com/logo.png',
+    url: "https://ziontechgroup.com",
+    logo: "https://ziontechgroup.com/logo.png",
     sameAs: [
-      'https://linkedin.com/company/zion-tech-group',
-      'https://twitter.com/ziontechgroup',
-      'https://github.com/zion-tech-group',
+      "https://linkedin.com/company/zion-tech-group",
+      "https://twitter.com/ziontechgroup",
+      "https://github.com/zion-tech-group",
     ],
     contactPoint: {
-      '@type': 'ContactPoint',
-      telephone: '+1-555-ZION-TECH',
-      contactType: 'customer service',
-      availableLanguage: 'English',
+      "@type": "ContactPoint",
+      telephone: "+1-555-ZION-TECH",
+      contactType: "customer service",
+      availableLanguage: "English",
     },
     address: {
-      '@type': 'PostalAddress',
-      streetAddress: '123 Tech Innovation Drive',
-      addressLocality: 'San Francisco',
-      addressRegion: 'CA',
-      postalCode: '94105',
-      addressCountry: 'US',
+      "@type": "PostalAddress",
+      streetAddress: "123 Tech Innovation Drive",
+      addressLocality: "San Francisco",
+      addressRegion: "CA",
+      postalCode: "94105",
+      addressCountry: "US",
     },
   };
 
@@ -68,9 +67,12 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
         {/* Basic Meta Tags */}
         <title>{title}</title>
         <meta name="description" content={description} />
-        <meta name="keywords" content={keywords.join(', ')} />
+        <meta name="keywords" content={keywords.join(", ")} />
         <meta name="author" content="Zion Tech Group" />
-        <meta name="robots" content={noIndex ? 'noindex,nofollow' : 'index,follow'} />
+        <meta
+          name="robots"
+          content={noIndex ? "noindex,nofollow" : "index,follow"}
+        />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="language" content="English" />
@@ -86,7 +88,10 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
         <meta property="og:image" content={ogImage} />
-        <meta property="og:url" content={canonicalUrl || 'https://ziontechgroup.com'} />
+        <meta
+          property="og:url"
+          content={canonicalUrl || "https://ziontechgroup.com"}
+        />
         <meta property="og:site_name" content="Zion Tech Group" />
         <meta property="og:locale" content="en_US" />
 
@@ -102,15 +107,24 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
         <meta name="theme-color" content="#1f2937" />
         <meta name="msapplication-TileColor" content="#1f2937" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
-        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+        <meta
+          name="apple-mobile-web-app-status-bar-style"
+          content="black-translucent"
+        />
         <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
 
         {/* Structured Data */}
-        <script type="application/ld+json">{JSON.stringify(finalStructuredData)}</script>
+        <script type="application/ld+json">
+          {JSON.stringify(finalStructuredData)}
+        </script>
 
         {/* Preconnect to external domains */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="anonymous"
+        />
         <link rel="preconnect" href="https://www.google-analytics.com" />
         <link rel="preconnect" href="https://www.googletagmanager.com" />
 

@@ -1,11 +1,11 @@
-import React from 'react';
+import React from "react";
 
 interface MobileNavigationProps {
   className?: string;
 }
 
 const MobileNavigation = React.memo(function MobileNavigation({
-  className = '',
+  className = "",
 }: MobileNavigationProps) {
   return (
     <div className={`bg-blue-100 p-4 rounded-lg ${className}`}>

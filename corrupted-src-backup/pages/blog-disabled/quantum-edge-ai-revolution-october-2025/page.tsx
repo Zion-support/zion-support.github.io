@@ -1,6 +1,6 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import Header from '../../../components/Header';
+import React from "react";
+import { Helmet } from "react-helmet-async";
+import Header from "../../../components/Header";
 
 export default function BlogPost(): React.JSX.Element {
   return (
@@ -8,7 +8,9 @@ export default function BlogPost(): React.JSX.Element {
       <Header />
       <div className="min-h-screen bg-gradient-to-br from-blue-600 via-blue-700 to-purple-800 text-white">
         <Helmet>
-          <title>Quantum Edge Ai Revolution October 2025 - Zion Tech Group</title>
+          <title>
+            Quantum Edge Ai Revolution October 2025 - Zion Tech Group
+          </title>
           <meta
             name="description"
             content="Quantum Edge Ai Revolution October 2025 - Latest insights from Zion Tech Group"
@@ -33,20 +35,20 @@ export default function BlogPost(): React.JSX.Element {
             <div className="text-gray-200 leading-relaxed">
               <h2>Introduction</h2>
               <p>
-                This is a placeholder blog post. The content for "Quantum Edge Ai Revolution October
-                2025" will be added here.
+                This is a placeholder blog post. The content for "Quantum Edge
+                Ai Revolution October 2025" will be added here.
               </p>
 
               <h2>Main Content</h2>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
-                incididunt ut labore et dolore magna aliqua.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
               </p>
 
               <h2>Conclusion</h2>
               <p>
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                ex ea commodo consequat.
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                laboris nisi ut aliquip ex ea commodo consequat.
               </p>
             </div>
           </div>
@@ -57,7 +59,7 @@ export default function BlogPost(): React.JSX.Element {
                 <h3 className="text-xl font-bold mb-2">Share this article</h3>
                 <div className="flex gap-4">
                   <a
-                    href={`https://twitter.com/intent/tweet?text=${encodeURIComponent('Quantum Edge Ai Revolution October 2025')}&url=${encodeURIComponent(window.location.href)}`}
+                    href={`https://twitter.com/intent/tweet?text=${encodeURIComponent("Quantum Edge Ai Revolution October 2025")}&url=${encodeURIComponent(window.location.href)}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="bg-white bg-opacity-20 hover:bg-opacity-30 px-4 py-2 rounded-lg transition-colors"

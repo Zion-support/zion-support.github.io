@@ -1,6 +1,9 @@
-import { execSync } from 'child_process';
 import fs from 'fs';
 import path from 'path';
+import { execSync } from 'child_process';
+
+
+
 
 // // 1. Fix test imports
 // // const appMinimalTestPath = '/workspace/__tests__/AppMinimal.test.tsx';
@@ -125,7 +128,7 @@ if (fs.existsSync(systemMonitorPath)) {
 
   // Add proper React imports
   content = content.replace(
-    /import React from 'react';/,
+    //,
     `import React, { useState, useEffect } from 'react';`
   );
 

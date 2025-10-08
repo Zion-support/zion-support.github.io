@@ -1,7 +1,10 @@
+import { ServiceVariant } from '../types/service-variants'
+import { ServiceVariant } from '../types/service-variants';
+import { ServiceVariant } from '../types/service-variants';
 
 export interface EmergingTechService
 export interface EmergingTechService {;
-import { ServiceVariant } from '../types/service-variants'
+
 export interface EmergingTechService
 export interface EmergingTechService {;
 export interface EmergingTechService {
@@ -542,7 +545,7 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [,
     launchDate: '2024-04-30', customers: 18,
     rating: 4.8,
     reviews: 11,
-import { ServiceVariant } from '../types/service-variants';
+
 export interface EmergingTechService2025 {;
   id: string;
   name: string;
@@ -1213,7 +1216,7 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [;
     implementationDetails: 'Quantum metaverse platform with enhanced graphics and AI capabilities.'
     launchDate: '2024-04-30'
     customers: 18,
-import { ServiceVariant } from '../types/service-variants';
+
 export interface EmergingTechService2025 {;
   id: string;
   name: string;

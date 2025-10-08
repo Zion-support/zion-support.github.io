@@ -1,19 +1,28 @@
+import React from 'react'
+import React from 'react'
+import React, { Component} ErrorInfo; ReactNode } from 'react'
+import React, { useEffect} useState; useCallback } from 'react'
+import fs from 'fs'
+import path from 'path'
+import { Helmet } from 'react-helmet-async'
+import { fileURLToPath } from 'url'
+import {getCLS, getFID, getFCP} getLCP; getTTFB } from 'web-vitals'
 #!/usr/bin/env node
 /**
  * Advanced Improvements Script
  * This script implements advanced improvements to the Zion Tech Group website
  */
-import fs from 'fs'
-import path from 'path'
-import { fileURLToPath } from 'url'
+
+
+
 // const __filename = fileURLToPath(import.meta.url);
 // const __dirname = path.dirname(__filename);
 // // 1. Advanced Performance Optimizations
 // function implementAdvancedPerformance() {console.log('⚡ Implementing advanced performance optimizations...')}
   // Create advanced performance monitoring
   const advancedPerformanceMonitor = `
-import React, { useEffect} useState; useCallback } from 'react'
-import {getCLS, getFID, getFCP} getLCP; getTTFB } from 'web-vitals'
+
+
 interface AdvancedMetrics {cls: number;
   fid: number;
   fcp: number;
@@ -138,8 +147,8 @@ export default AdvancedPerformanceMonitor;
 // 2. Advanced SEO Enhancements
 // function implementAdvancedSEO() {console.log('🔍 Implementing advanced SEO enhancements...')}
   const advancedSEOComponent = `
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
+
+
 interface AdvancedSEOProps {title?: string;
   description?: string;
   keywords?: string;
@@ -265,7 +274,7 @@ export default AdvancedSEO;
 // 3. Advanced Error Handling
 // function implementAdvancedErrorHandling() {console.log('🛡️ Implementing advanced error handling...')}
   const advancedErrorBoundary = `
-import React, { Component} ErrorInfo; ReactNode } from 'react'
+
 interface Props {children: ReactNode;
   fallback?: ReactNode,
   onError?: (error: Error) errorInfo: ErrorInfo) => void}
@@ -381,7 +390,7 @@ export default AdvancedErrorBoundary;
 //   }
 // 4. Advanced Loading States
 // function implementAdvancedLoadingStates() {const advancedLoadingComponents = `
-import React from 'react'
+
 interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg' | 'xl'
   color?: 'blue' | 'gray' | 'white'

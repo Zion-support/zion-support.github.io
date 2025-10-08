@@ -1,6 +1,15 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Container, Typography, Box, Grid, Card, CardContent, Button, Chip } from '@mui/material';
+import React from "react";
+import { Helmet } from "react-helmet-async";
+import {
+  Container,
+  Typography,
+  Box,
+  Grid,
+  Card,
+  CardContent,
+  Button,
+  Chip,
+} from "@mui/material";
 
 const AIMicroSAAS: React.FC = () => {
   return (
@@ -19,7 +28,8 @@ const AIMicroSAAS: React.FC = () => {
             AI Micro SAAS Solutions
           </Typography>
           <Typography variant="h5" color="text.secondary" paragraph>
-            Revolutionary AI Micro SAAS solutions delivering unprecedented business value
+            Revolutionary AI Micro SAAS solutions delivering unprecedented
+            business value
           </Typography>
         </Box>
 
@@ -31,8 +41,8 @@ const AIMicroSAAS: React.FC = () => {
                   AI Platform 2025
                 </Typography>
                 <Typography variant="body1" paragraph>
-                  Revolutionary AI platform delivering unprecedented business transformation with
-                  measurable results.
+                  Revolutionary AI platform delivering unprecedented business
+                  transformation with measurable results.
                 </Typography>
                 <Box mb={2}>
                   <Chip label="AI Platform" color="primary" />
@@ -52,8 +62,8 @@ const AIMicroSAAS: React.FC = () => {
                   Quantum AI Security
                 </Typography>
                 <Typography variant="body1" paragraph>
-                  Advanced quantum AI security framework providing unprecedented protection against
-                  emerging threats.
+                  Advanced quantum AI security framework providing unprecedented
+                  protection against emerging threats.
                 </Typography>
                 <Box mb={2}>
                   <Chip label="Security" color="primary" />

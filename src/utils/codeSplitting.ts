@@ -2,7 +2,7 @@
  * Code Splitting and Lazy Loading Optimization Utilities
  */
 
-import { lazy, ComponentType, LazyExoticComponent } from 'react';
+import { lazy, ComponentType, LazyExoticComponent } from "react";
 
 export interface LoadingOptions {
   /**
@@ -40,7 +40,7 @@ export interface PreloadOptions {
   /**
    * Priority for preloading
    */
-  priority?: 'high' | 'medium' | 'low';
+  priority?: "high" | "medium" | "low";
 }
 
 /**
@@ -48,13 +48,9 @@ export interface PreloadOptions {
  */
 export function lazyWithRetry<T extends ComponentType<any>>(
   importFunc: () => Promise<{ default: T }>,
-  options: LoadingOptions = {}
+  options: LoadingOptions = {},
 ): LazyExoticComponent<T> {
-  const {
-    retries = 3,
-    retryDelay = 1000,
-    timeout = 10000,
-  } = options;
+  const { retries = 3, retryDelay = 1000, timeout = 10000 } = options;
 
   return lazy(() => {
     return new Promise<{ default: T }>((resolve, reject) => {
@@ -75,8 +71,8 @@ export function lazyWithRetry<T extends ComponentType<any>>(
             clearTimeout(timeoutId);
             reject(
               new Error(
-                `Failed to load component after ${attempts} attempts: ${error}`
-              )
+                `Failed to load component after ${attempts} attempts: ${error}`,
+              ),
             );
             return;
           }
@@ -95,7 +91,7 @@ export function lazyWithRetry<T extends ComponentType<any>>(
  * Preload a lazy component
  */
 export function preloadComponent<T extends ComponentType<any>>(
-  lazyComponent: LazyExoticComponent<T>
+  lazyComponent: LazyExoticComponent<T>,
 ): Promise<void> {
   // Access the _init method to trigger preload
   const component = lazyComponent as any;
@@ -110,7 +106,7 @@ export function preloadComponent<T extends ComponentType<any>>(
  */
 export function lazyWithPreload<T extends ComponentType<any>>(
   importFunc: () => Promise<{ default: T }>,
-  preloadOptions: PreloadOptions = {}
+  preloadOptions: PreloadOptions = {},
 ): LazyExoticComponent<T> & { preload: () => Promise<void> } {
   const lazyComponent = lazy(importFunc);
   let preloadPromise: Promise<void> | null = null;
@@ -125,7 +121,9 @@ export function lazyWithPreload<T extends ComponentType<any>>(
   // Add preload method to component
   (lazyComponent as any).preload = preload;
 
-  return lazyComponent as LazyExoticComponent<T> & { preload: () => Promise<void> };
+  return lazyComponent as LazyExoticComponent<T> & {
+    preload: () => Promise<void>;
+  };
 }
 
 /**
@@ -135,21 +133,21 @@ export interface RouteConfig {
   path: string;
   component: () => Promise<{ default: ComponentType<any> }>;
   preload?: boolean;
-  priority?: 'high' | 'medium' | 'low';
+  priority?: "high" | "medium" | "low";
 }
 
 export function createRouteSplitting(routes: RouteConfig[]) {
   const lazyRoutes = routes.map((route) => ({
     ...route,
     Component: lazyWithPreload(route.component, {
-      priority: route.priority || 'medium',
+      priority: route.priority || "medium",
     }),
   }));
 
   /**
    * Preload routes based on priority
    */
-  const preloadRoutes = (priority: 'high' | 'medium' | 'low' = 'high') => {
+  const preloadRoutes = (priority: "high" | "medium" | "low" = "high") => {
     lazyRoutes
       .filter((route) => route.preload && route.priority === priority)
       .forEach((route) => {
@@ -180,11 +178,11 @@ export function createRouteSplitting(routes: RouteConfig[]) {
  * Dynamic chunk loading with prefetch
  */
 export function prefetchChunk(chunkName: string): void {
-  if (typeof window === 'undefined') return;
+  if (typeof window === "undefined") return;
 
-  const link = document.createElement('link');
-  link.rel = 'prefetch';
-  link.as = 'script';
+  const link = document.createElement("link");
+  link.rel = "prefetch";
+  link.as = "script";
   link.href = `/chunks/${chunkName}.js`;
   document.head.appendChild(link);
 }
@@ -239,7 +237,8 @@ export class ChunkLoadMonitor {
   static getAllMetrics() {
     const metrics: any[] = [];
     for (const [chunkName] of this.chunks) {
-      const m = this.getMetrics(chunkName); if (m) metrics.push(m);
+      const m = this.getMetrics(chunkName);
+      if (m) metrics.push(m);
     }
     return metrics.filter((m) => m !== null);
   }
@@ -262,7 +261,7 @@ export class IntelligentPreloader {
   onHover(
     element: HTMLElement,
     preloadFn: () => void,
-    delay: number = 200
+    delay: number = 200,
   ): () => void {
     const handleMouseEnter = () => {
       this.hoverTimeout = setTimeout(preloadFn, delay);
@@ -275,13 +274,13 @@ export class IntelligentPreloader {
       }
     };
 
-    element.addEventListener('mouseenter', handleMouseEnter);
-    element.addEventListener('mouseleave', handleMouseLeave);
+    element.addEventListener("mouseenter", handleMouseEnter);
+    element.addEventListener("mouseleave", handleMouseLeave);
 
     // Return cleanup function
     return () => {
-      element.removeEventListener('mouseenter', handleMouseEnter);
-      element.removeEventListener('mouseleave', handleMouseLeave);
+      element.removeEventListener("mouseenter", handleMouseEnter);
+      element.removeEventListener("mouseleave", handleMouseLeave);
       if (this.hoverTimeout) {
         clearTimeout(this.hoverTimeout);
       }
@@ -294,9 +293,9 @@ export class IntelligentPreloader {
   onVisible(
     element: HTMLElement,
     preloadFn: () => void,
-    threshold: number = 0.5
+    threshold: number = 0.5,
   ): () => void {
-    if (!('IntersectionObserver' in window)) {
+    if (!("IntersectionObserver" in window)) {
       return () => {};
     }
 
@@ -309,7 +308,7 @@ export class IntelligentPreloader {
           }
         });
       },
-      { threshold }
+      { threshold },
     );
 
     observer.observe(element);
@@ -322,7 +321,7 @@ export class IntelligentPreloader {
    * Preload on idle
    */
   onIdle(preloadFn: () => void, timeout: number = 2000): () => void {
-    if ('requestIdleCallback' in window) {
+    if ("requestIdleCallback" in window) {
       const id = requestIdleCallback(preloadFn, { timeout });
       return () => cancelIdleCallback(id);
     } else {
@@ -335,13 +334,13 @@ export class IntelligentPreloader {
    * Preload based on connection speed
    */
   preloadByConnection(preloadFn: () => void): void {
-    if ('connection' in navigator) {
+    if ("connection" in navigator) {
       const connection = (navigator as any).connection;
 
       // Only preload on fast connections
       if (
-        connection.effectiveType === '4g' ||
-        connection.effectiveType === '3g'
+        connection.effectiveType === "4g" ||
+        connection.effectiveType === "3g"
       ) {
         // Check if user has data saver enabled
         if (!connection.saveData) {
@@ -383,16 +382,16 @@ export function analyzeBundleSize(): {
   totalSize: number;
   chunks: Array<{ name: string; size: number }>;
 } {
-  if (typeof window === 'undefined') {
+  if (typeof window === "undefined") {
     return { totalSize: 0, chunks: [] };
   }
 
-  const scripts = Array.from(document.querySelectorAll('script[src]'));
+  const scripts = Array.from(document.querySelectorAll("script[src]"));
   const chunks: Array<{ name: string; size: number }> = [];
   let totalSize = 0;
 
   scripts.forEach((script) => {
-    const src = script.getAttribute('src');
+    const src = script.getAttribute("src");
     if (src) {
       // This is a rough estimate - in production, you'd track actual sizes
       const estimatedSize = src.length * 100; // Very rough estimate

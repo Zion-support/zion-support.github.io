@@ -5,14 +5,14 @@
  * Enhances monitoring, testing, and deployment capabilities
  */
 
-const fs = require('fs');
-const path = require('path');
+const fs = require("fs");
+const path = require("path");
 
-console.log('🚀 Applying additional improvements...\n');
+console.log("🚀 Applying additional improvements...\n");
 
 const improvements = {
   applied: [],
-  errors: []
+  errors: [],
 };
 
 // 1. Create advanced monitoring configuration
@@ -22,33 +22,33 @@ const monitoringConfig = {
   errorTracking: {
     enabled: true,
     sampleRate: 1.0,
-    ignoreErrors: ['ChunkLoadError', 'NetworkError']
+    ignoreErrors: ["ChunkLoadError", "NetworkError"],
   },
   performanceMonitoring: {
     enabled: true,
     sampleRate: 0.1,
     trackComponents: true,
-    trackRoutes: true
+    trackRoutes: true,
   },
   userAnalytics: {
     enabled: true,
     trackPageViews: true,
     trackUserActions: true,
-    trackFormSubmissions: true
+    trackFormSubmissions: true,
   },
   alerts: {
     errorRateThreshold: 0.05,
     responseTimeThreshold: 3000,
-    memoryUsageThreshold: 0.9
-  }
+    memoryUsageThreshold: 0.9,
+  },
 };
 
 try {
   fs.writeFileSync(
-    path.join(__dirname, 'monitoring.config.json'),
-    JSON.stringify(monitoringConfig, null, 2)
+    path.join(__dirname, "monitoring.config.json"),
+    JSON.stringify(monitoringConfig, null, 2),
   );
-  improvements.applied.push('✅ Created advanced monitoring configuration');
+  improvements.applied.push("✅ Created advanced monitoring configuration");
 } catch (error) {
   improvements.errors.push(`❌ Monitoring config error: ${error.message}`);
 }
@@ -57,43 +57,43 @@ try {
 const deploymentConfig = {
   environments: {
     development: {
-      apiUrl: 'http://localhost:3000',
+      apiUrl: "http://localhost:3000",
       enableDebug: true,
-      enableSourceMaps: true
+      enableSourceMaps: true,
     },
     staging: {
-      apiUrl: 'https://staging.ziontechgroup.com',
+      apiUrl: "https://staging.ziontechgroup.com",
       enableDebug: false,
-      enableSourceMaps: true
+      enableSourceMaps: true,
     },
     production: {
-      apiUrl: 'https://ziontechgroup.com',
+      apiUrl: "https://ziontechgroup.com",
       enableDebug: false,
       enableSourceMaps: false,
       enableCompression: true,
-      enableCaching: true
-    }
+      enableCaching: true,
+    },
   },
   build: {
     minify: true,
     sourceMaps: false,
     compression: true,
-    bundleAnalyzer: false
+    bundleAnalyzer: false,
   },
   deployment: {
-    platform: 'netlify',
-    branch: 'main',
-    buildCommand: 'npm run build',
-    publishDirectory: 'dist'
-  }
+    platform: "netlify",
+    branch: "main",
+    buildCommand: "npm run build",
+    publishDirectory: "dist",
+  },
 };
 
 try {
   fs.writeFileSync(
-    path.join(__dirname, 'deployment.config.json'),
-    JSON.stringify(deploymentConfig, null, 2)
+    path.join(__dirname, "deployment.config.json"),
+    JSON.stringify(deploymentConfig, null, 2),
   );
-  improvements.applied.push('✅ Created deployment configuration');
+  improvements.applied.push("✅ Created deployment configuration");
 } catch (error) {
   improvements.errors.push(`❌ Deployment config error: ${error.message}`);
 }
@@ -106,37 +106,37 @@ const testingConfig = {
       statements: 80,
       branches: 75,
       functions: 80,
-      lines: 80
+      lines: 80,
     },
     exclude: [
-      'node_modules/**',
-      'dist/**',
-      '**/*.test.ts',
-      '**/*.test.tsx',
-      '**/__tests__/**'
-    ]
+      "node_modules/**",
+      "dist/**",
+      "**/*.test.ts",
+      "**/*.test.tsx",
+      "**/__tests__/**",
+    ],
   },
   e2e: {
     enabled: true,
-    browser: 'chromium',
+    browser: "chromium",
     headless: true,
     viewport: {
       width: 1280,
-      height: 720
-    }
+      height: 720,
+    },
   },
   visual: {
     enabled: false,
-    threshold: 0.01
-  }
+    threshold: 0.01,
+  },
 };
 
 try {
   fs.writeFileSync(
-    path.join(__dirname, 'testing.config.json'),
-    JSON.stringify(testingConfig, null, 2)
+    path.join(__dirname, "testing.config.json"),
+    JSON.stringify(testingConfig, null, 2),
   );
-  improvements.applied.push('✅ Created enhanced testing configuration');
+  improvements.applied.push("✅ Created enhanced testing configuration");
 } catch (error) {
   improvements.errors.push(`❌ Testing config error: ${error.message}`);
 }
@@ -146,30 +146,30 @@ const featureFlagsConfig = {
   features: {
     newHomepageDesign: {
       enabled: false,
-      rolloutPercentage: 0
+      rolloutPercentage: 0,
     },
     advancedAnalytics: {
       enabled: true,
-      rolloutPercentage: 100
+      rolloutPercentage: 100,
     },
     experimentalFeatures: {
       enabled: false,
-      rolloutPercentage: 0
+      rolloutPercentage: 0,
     },
     performanceOptimizations: {
       enabled: true,
-      rolloutPercentage: 100
-    }
+      rolloutPercentage: 100,
+    },
   },
-  defaultEnabled: false
+  defaultEnabled: false,
 };
 
 try {
   fs.writeFileSync(
-    path.join(__dirname, 'feature-flags.config.json'),
-    JSON.stringify(featureFlagsConfig, null, 2)
+    path.join(__dirname, "feature-flags.config.json"),
+    JSON.stringify(featureFlagsConfig, null, 2),
   );
-  improvements.applied.push('✅ Created feature flags configuration');
+  improvements.applied.push("✅ Created feature flags configuration");
 } catch (error) {
   improvements.errors.push(`❌ Feature flags error: ${error.message}`);
 }
@@ -179,29 +179,29 @@ const rateLimitConfig = {
   enabled: true,
   windowMs: 60000, // 1 minute
   maxRequests: 100,
-  message: 'Too many requests, please try again later.',
+  message: "Too many requests, please try again later.",
   standardHeaders: true,
   legacyHeaders: false,
   skipSuccessfulRequests: false,
   skipFailedRequests: false,
   endpoints: {
-    '/api/auth': {
+    "/api/auth": {
       windowMs: 300000, // 5 minutes
-      maxRequests: 5
+      maxRequests: 5,
     },
-    '/api/data': {
+    "/api/data": {
       windowMs: 60000,
-      maxRequests: 50
-    }
-  }
+      maxRequests: 50,
+    },
+  },
 };
 
 try {
   fs.writeFileSync(
-    path.join(__dirname, 'rate-limit.config.json'),
-    JSON.stringify(rateLimitConfig, null, 2)
+    path.join(__dirname, "rate-limit.config.json"),
+    JSON.stringify(rateLimitConfig, null, 2),
   );
-  improvements.applied.push('✅ Created API rate limiting configuration');
+  improvements.applied.push("✅ Created API rate limiting configuration");
 } catch (error) {
   improvements.errors.push(`❌ Rate limit config error: ${error.message}`);
 }
@@ -245,12 +245,12 @@ STRIPE_SECRET_KEY=
 `;
 
 try {
-  const envPath = path.join(__dirname, '.env.template');
+  const envPath = path.join(__dirname, ".env.template");
   if (!fs.existsSync(envPath)) {
     fs.writeFileSync(envPath, envTemplate);
-    improvements.applied.push('✅ Created environment variables template');
+    improvements.applied.push("✅ Created environment variables template");
   } else {
-    improvements.applied.push('ℹ️  Environment template already exists');
+    improvements.applied.push("ℹ️  Environment template already exists");
   }
 } catch (error) {
   improvements.errors.push(`❌ Env template error: ${error.message}`);
@@ -298,15 +298,12 @@ jobs:
 `;
 
 try {
-  const workflowDir = path.join(__dirname, '.github/workflows');
+  const workflowDir = path.join(__dirname, ".github/workflows");
   if (!fs.existsSync(workflowDir)) {
     fs.mkdirSync(workflowDir, { recursive: true });
   }
-  fs.writeFileSync(
-    path.join(workflowDir, 'ci-cd.yml'),
-    githubWorkflow
-  );
-  improvements.applied.push('✅ Created GitHub Actions CI/CD workflow');
+  fs.writeFileSync(path.join(workflowDir, "ci-cd.yml"), githubWorkflow);
+  improvements.applied.push("✅ Created GitHub Actions CI/CD workflow");
 } catch (error) {
   improvements.errors.push(`❌ GitHub workflow error: ${error.message}`);
 }
@@ -317,50 +314,52 @@ const report = {
   summary: {
     totalImprovements: improvements.applied.length,
     errors: improvements.errors.length,
-    status: improvements.errors.length === 0 ? 'SUCCESS' : 'PARTIAL_SUCCESS'
+    status: improvements.errors.length === 0 ? "SUCCESS" : "PARTIAL_SUCCESS",
   },
   improvements: improvements.applied,
   errors: improvements.errors,
   categories: {
-    monitoring: ['Advanced monitoring configuration'],
-    deployment: ['Deployment configuration', 'GitHub Actions workflow'],
-    testing: ['Enhanced testing configuration'],
-    features: ['Feature flags configuration'],
-    security: ['API rate limiting', 'Environment template']
+    monitoring: ["Advanced monitoring configuration"],
+    deployment: ["Deployment configuration", "GitHub Actions workflow"],
+    testing: ["Enhanced testing configuration"],
+    features: ["Feature flags configuration"],
+    security: ["API rate limiting", "Environment template"],
   },
   nextSteps: [
-    'Configure environment variables for each environment',
-    'Set up monitoring and error tracking services',
-    'Enable and configure feature flags',
-    'Review and adjust rate limiting rules',
-    'Set up automated deployment pipeline',
-    'Configure CDN and caching layers'
-  ]
+    "Configure environment variables for each environment",
+    "Set up monitoring and error tracking services",
+    "Enable and configure feature flags",
+    "Review and adjust rate limiting rules",
+    "Set up automated deployment pipeline",
+    "Configure CDN and caching layers",
+  ],
 };
 
 try {
   fs.writeFileSync(
-    path.join(__dirname, 'ADDITIONAL_IMPROVEMENTS_REPORT.json'),
-    JSON.stringify(report, null, 2)
+    path.join(__dirname, "ADDITIONAL_IMPROVEMENTS_REPORT.json"),
+    JSON.stringify(report, null, 2),
   );
-  improvements.applied.push('✅ Generated additional improvements report');
+  improvements.applied.push("✅ Generated additional improvements report");
 } catch (error) {
   improvements.errors.push(`❌ Report generation error: ${error.message}`);
 }
 
 // Print summary
-console.log('\n📊 Additional Improvements Summary:');
-console.log('====================================\n');
+console.log("\n📊 Additional Improvements Summary:");
+console.log("====================================\n");
 
-improvements.applied.forEach(msg => console.log(msg));
+improvements.applied.forEach((msg) => console.log(msg));
 
 if (improvements.errors.length > 0) {
-  console.log('\n⚠️  Errors:');
-  improvements.errors.forEach(msg => console.log(msg));
+  console.log("\n⚠️  Errors:");
+  improvements.errors.forEach((msg) => console.log(msg));
 }
 
 console.log(`\n✨ Total improvements applied: ${improvements.applied.length}`);
 console.log(`⚠️  Errors encountered: ${improvements.errors.length}`);
-console.log(`\n📄 Detailed report saved to: ADDITIONAL_IMPROVEMENTS_REPORT.json\n`);
+console.log(
+  `\n📄 Detailed report saved to: ADDITIONAL_IMPROVEMENTS_REPORT.json\n`,
+);
 
 process.exit(improvements.errors.length > 0 ? 1 : 0);

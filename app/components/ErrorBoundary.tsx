@@ -1,8 +1,7 @@
-'use client';
-
-import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { Link } from 'react-router-dom';
-import { FileWarning } from 'lucide-react';
+import React, { Component, ErrorInfo, ReactNode } from "react";
+import { FileWarning } from "lucide-react";
+import { Link } from "react-router-dom";
+("use client");
 
 interface Props {
   children: ReactNode;
@@ -30,29 +29,38 @@ class ErrorBoundary extends Component<Props, State> {
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     // Log error to console in development
-    if (process.env['NODE_ENV'] === 'development') {
-
+    if (process.env["NODE_ENV"] === "development") {
     }
 
     // Report error to monitoring service in production
-    if (process.env['NODE_ENV'] === 'production') {
+    if (process.env["NODE_ENV"] === "production") {
       // Send to error tracking service
-      if (typeof window !== 'undefined' && 'gtag' in window) {
-        (window as unknown as { gtag: (command: string, eventName: string, parameters: Record<string, unknown>) => void }).gtag('event', 'exception', {
+      if (typeof window !== "undefined" && "gtag" in window) {
+        (
+          window as unknown as {
+            gtag: (
+              command: string,
+              eventName: string,
+              parameters: Record<string, unknown>,
+            ) => void;
+          }
+        ).gtag("event", "exception", {
           description: error.message,
-          fatal: false
+          fatal: false,
         });
       }
     }
-    
+
     this.setState({ errorInfo });
-    
+
     if (this.props.onError) {
       this.props.onError(error, errorInfo);
     }
 
-    if (this.props.enableErrorReporting && process.env.NODE_ENV === 'development') {
-
+    if (
+      this.props.enableErrorReporting &&
+      process.env.NODE_ENV === "development"
+    ) {
     }
   }
 
@@ -68,9 +76,12 @@ class ErrorBoundary extends Component<Props, State> {
             <div className="mb-6">
               <FileWarning className="mx-auto h-16 w-16 text-red-500" />
             </div>
-            <h1 className="text-2xl font-bold text-gray-900 mb-2">Oops! Something went wrong</h1>
+            <h1 className="text-2xl font-bold text-gray-900 mb-2">
+              Oops! Something went wrong
+            </h1>
             <p className="text-gray-600 mb-6">
-              We&apos;re sorry for the inconvenience. Please try refreshing the page.
+              We&apos;re sorry for the inconvenience. Please try refreshing the
+              page.
             </p>
             <div className="space-y-3">
               <button
@@ -96,8 +107,8 @@ class ErrorBoundary extends Component<Props, State> {
                     <strong>Error:</strong> {this.state.error.message}
                   </div>
                 </div>
-                </details>
-              )}
+              </details>
+            )}
           </div>
         </div>
       );

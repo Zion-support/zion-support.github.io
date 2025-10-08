@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 const January2026NewContentShowcaseBanner: React.FC = () => {
   return (

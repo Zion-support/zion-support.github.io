@@ -3,14 +3,14 @@
  * Provides utilities for optimizing performance in React applications
  */
 
-import React from 'react';
+import React from "react";
 
 /**
  * Debounce function to limit execution rate
  */
 export function debounce<T extends (...args: unknown[]) => unknown>(
   func: T,
-  wait: number
+  wait: number,
 ): (...args: Parameters<T>) => void {
   let timeout: NodeJS.Timeout | null = null;
 
@@ -32,7 +32,7 @@ export function debounce<T extends (...args: unknown[]) => unknown>(
  */
 export function throttle<T extends (...args: unknown[]) => unknown>(
   func: T,
-  limit: number
+  limit: number,
 ): (...args: Parameters<T>) => void {
   let inThrottle: boolean;
 
@@ -48,9 +48,7 @@ export function throttle<T extends (...args: unknown[]) => unknown>(
 /**
  * Memoize function results
  */
-export function memoize<T extends (...args: unknown[]) => unknown>(
-  func: T
-): T {
+export function memoize<T extends (...args: unknown[]) => unknown>(func: T): T {
   const cache = new Map<string, ReturnType<T>>();
 
   return ((...args: Parameters<T>): ReturnType<T> => {
@@ -69,14 +67,14 @@ export function memoize<T extends (...args: unknown[]) => unknown>(
  */
 export function lazyLoad<T extends React.ComponentType<unknown>>(
   importFunc: () => Promise<{ default: T }>,
-  fallback?: React.ReactNode
+  fallback?: React.ReactNode,
 ): React.LazyExoticComponent<T> {
   const LazyComponent = React.lazy(importFunc);
-  
+
   if (fallback) {
     return LazyComponent;
   }
-  
+
   return LazyComponent;
 }
 
@@ -85,14 +83,18 @@ export function lazyLoad<T extends React.ComponentType<unknown>>(
  */
 export async function measureTime<T>(
   name: string,
-  func: () => T | Promise<T>
+  func: () => T | Promise<T>,
 ): Promise<{ result: T; duration: number }> {
   const start = performance.now();
   const result = await func();
   const duration = performance.now() - start;
-  
-  if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { console.log(`[Performance] ${name}: ${duration.toFixed(2)}ms`); } }
-  
+
+  if (process.env["NODE_ENV"] === "development") {
+    if (import.meta.env.DEV) {
+      console.log(`[Performance] ${name}: ${duration.toFixed(2)}ms`);
+    }
+  }
+
   return { result, duration };
 }
 
@@ -102,29 +104,31 @@ export async function measureTime<T>(
 export async function batchAsync<T, R>(
   items: T[],
   operation: (item: T) => Promise<R>,
-  batchSize = 10
+  batchSize = 10,
 ): Promise<R[]> {
   const results: R[] = [];
-  
+
   for (let i = 0; i < items.length; i += batchSize) {
     const batch = items.slice(i, i + batchSize);
     const batchResults = await Promise.all(batch.map(operation));
     results.push(...batchResults);
   }
-  
+
   return results;
 }
 
 /**
  * Create a request animation frame loop
  */
-export function rafLoop(callback: (time: number) => boolean | void): () => void {
+export function rafLoop(
+  callback: (time: number) => boolean | void,
+): () => void {
   let rafId: number;
   let running = true;
 
   function loop(time: number) {
     if (!running) return;
-    
+
     const shouldContinue = callback(time);
     if (shouldContinue !== false) {
       rafId = requestAnimationFrame(loop);
@@ -146,13 +150,13 @@ export function rafLoop(callback: (time: number) => boolean | void): () => void 
  */
 export function runWhenIdle(
   callback: () => void,
-  options?: IdleRequestOptions
+  options?: IdleRequestOptions,
 ): number {
-  if (typeof window !== 'undefined' && 'requestIdleCallback' in window) {
+  if (typeof window !== "undefined" && "requestIdleCallback" in window) {
     return window.requestIdleCallback(callback, options);
   }
   // Fallback for browsers that don't support requestIdleCallback
-  if (typeof window !== 'undefined') {
+  if (typeof window !== "undefined") {
     return (window as Window).setTimeout(callback, 1) as unknown as number;
   }
   return 0;
@@ -162,8 +166,8 @@ export function runWhenIdle(
  * Cancel idle callback
  */
 export function cancelIdle(id: number): void {
-  if (typeof window !== 'undefined') {
-    if ('cancelIdleCallback' in window) {
+  if (typeof window !== "undefined") {
+    if ("cancelIdleCallback" in window) {
       window.cancelIdleCallback(id);
     } else {
       (window as Window).clearTimeout(id);
@@ -185,7 +189,11 @@ export class VirtualScroller<T> {
     this.containerHeight = containerHeight;
   }
 
-  getVisibleRange(scrollTop: number): { start: number; end: number; offsetY: number } {
+  getVisibleRange(scrollTop: number): {
+    start: number;
+    end: number;
+    offsetY: number;
+  } {
     const start = Math.floor(scrollTop / this.itemHeight);
     const end = Math.ceil((scrollTop + this.containerHeight) / this.itemHeight);
     const offsetY = start * this.itemHeight;
@@ -211,20 +219,20 @@ export class VirtualScroller<T> {
  * Image lazy loading helper
  */
 export function setupLazyImages(
-  selector = 'img[data-src]',
-  options?: IntersectionObserverInit
+  selector = "img[data-src]",
+  options?: IntersectionObserverInit,
 ): () => void {
   const images = document.querySelectorAll<HTMLImageElement>(selector);
-  
+
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         const img = entry.target as HTMLImageElement;
-        const src = img.dataset['src'];
-        
+        const src = img.dataset["src"];
+
         if (src) {
-          img['src'] = src;
-          img.removeAttribute('data-src');
+          img["src"] = src;
+          img.removeAttribute("data-src");
           observer.unobserve(img);
         }
       }
@@ -239,10 +247,12 @@ export function setupLazyImages(
 /**
  * Preload critical resources
  */
-export function preloadResources(resources: Array<{ url: string; as: string }>): void {
+export function preloadResources(
+  resources: Array<{ url: string; as: string }>,
+): void {
   resources.forEach(({ url, as }) => {
-    const link = document.createElement('link');
-    link.rel = 'preload';
+    const link = document.createElement("link");
+    link.rel = "preload";
     link.href = url;
     link.as = as;
     document.head.appendChild(link);
@@ -267,8 +277,8 @@ export function supportsCodeSplitting(): boolean {
  * Optimize bundle loading
  */
 export function prefetchBundle(url: string): void {
-  const link = document.createElement('link');
-  link.rel = 'prefetch';
+  const link = document.createElement("link");
+  link.rel = "prefetch";
   link.href = url;
   document.head.appendChild(link);
 }
@@ -281,8 +291,16 @@ export function getMemoryUsage(): {
   total: number;
   limit: number;
 } | null {
-  if ('memory' in performance) {
-    const memory = (performance as Performance & { memory: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
+  if ("memory" in performance) {
+    const memory = (
+      performance as Performance & {
+        memory: {
+          usedJSHeapSize: number;
+          totalJSHeapSize: number;
+          jsHeapSizeLimit: number;
+        };
+      }
+    ).memory;
     return {
       used: memory.usedJSHeapSize,
       total: memory.totalJSHeapSize,

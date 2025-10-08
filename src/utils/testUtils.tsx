@@ -1,16 +1,15 @@
+import "@testing-library/jest-dom";
+import React, { ReactElement } from "react";
 /**
  * Test Utilities
  * Helper functions for testing React components and utilities
  */
 
-import React, { ReactElement } from 'react';
-import '@testing-library/jest-dom';
-
 /**
  * Mock performance API for testing
  */
 export function mockPerformanceAPI() {
-  if (typeof window === 'undefined') return;
+  if (typeof window === "undefined") return;
 
   if (!window.performance) {
     (window as any).performance = {};
@@ -23,7 +22,7 @@ export function mockPerformanceAPI() {
   if (!window.performance.mark) {
     window.performance.mark = ((name: string) => ({
       name,
-      entryType: 'mark' as const,
+      entryType: "mark" as const,
       startTime: Date.now(),
       duration: 0,
       toJSON: () => ({}),
@@ -34,7 +33,7 @@ export function mockPerformanceAPI() {
   if (!window.performance.measure) {
     window.performance.measure = ((name: string) => ({
       name,
-      entryType: 'measure' as const,
+      entryType: "measure" as const,
       startTime: Date.now(),
       duration: 0,
       toJSON: () => ({}),
@@ -58,7 +57,7 @@ export function mockLocalStorage() {
       delete store[key];
     },
     clear: () => {
-      Object.keys(store).forEach(key => delete store[key]);
+      Object.keys(store).forEach((key) => delete store[key]);
     },
     get length() {
       return Object.keys(store).length;
@@ -69,8 +68,8 @@ export function mockLocalStorage() {
     },
   };
 
-  if (typeof window !== 'undefined') {
-    Object.defineProperty(window, 'localStorage', {
+  if (typeof window !== "undefined") {
+    Object.defineProperty(window, "localStorage", {
       value: mockStorage,
       writable: true,
     });
@@ -82,7 +81,10 @@ export function mockLocalStorage() {
 /**
  * Mock fetch API for testing
  */
-export function mockFetch(responseData: unknown, options: { status?: number; ok?: boolean } = {}) {
+export function mockFetch(
+  responseData: unknown,
+  options: { status?: number; ok?: boolean } = {},
+) {
   const mockResponse = {
     ok: options.ok ?? true,
     status: options.status ?? 200,
@@ -100,7 +102,7 @@ export function mockFetch(responseData: unknown, options: { status?: number; ok?
  * Wait for next tick (useful for async tests)
  */
 export function waitForNextTick(): Promise<void> {
-  return new Promise(resolve => setTimeout(resolve, 0));
+  return new Promise((resolve) => setTimeout(resolve, 0));
 }
 
 /**
@@ -109,15 +111,15 @@ export function waitForNextTick(): Promise<void> {
 export async function waitFor(
   condition: () => boolean,
   timeout = 5000,
-  interval = 50
+  interval = 50,
 ): Promise<void> {
   const startTime = Date.now();
 
   while (!condition()) {
     if (Date.now() - startTime > timeout) {
-      throw new Error('Timeout waiting for condition');
+      throw new Error("Timeout waiting for condition");
     }
-    await new Promise(resolve => setTimeout(resolve, interval));
+    await new Promise((resolve) => setTimeout(resolve, interval));
   }
 }
 
@@ -125,9 +127,12 @@ export async function waitFor(
  * Create a mock function with tracking
  */
 export function createMockFn<T extends (...args: unknown[]) => any>(
-  implementation?: T
+  implementation?: T,
 ): jest.Mock<ReturnType<T>, Parameters<T>> {
-  return jest.fn(implementation) as unknown as jest.Mock<ReturnType<T>, Parameters<T>>;
+  return jest.fn(implementation) as unknown as jest.Mock<
+    ReturnType<T>,
+    Parameters<T>
+  >;
 }
 
 /**
@@ -159,17 +164,17 @@ export function suppressConsoleWarn(): () => void {
  */
 export const testData = {
   user: (overrides = {}) => ({
-    id: '1',
-    name: 'Test User',
-    email: 'test@example.com',
-    role: 'user',
+    id: "1",
+    name: "Test User",
+    email: "test@example.com",
+    role: "user",
     createdAt: new Date().toISOString(),
     ...overrides,
   }),
 
   error: (overrides = {}) => ({
-    message: 'Test error',
-    code: 'TEST_ERROR',
+    message: "Test error",
+    code: "TEST_ERROR",
     status: 500,
     ...overrides,
   }),
@@ -186,7 +191,7 @@ export const testData = {
  * Delay execution (useful for testing loading states)
  */
 export function delay(ms: number): Promise<void> {
-  return new Promise(resolve => setTimeout(resolve, ms));
+  return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
 /**
@@ -194,7 +199,9 @@ export function delay(ms: number): Promise<void> {
  */
 export const random = {
   string: (length = 10): string => {
-    return Math.random().toString(36).substring(2, 2 + length);
+    return Math.random()
+      .toString(36)
+      .substring(2, 2 + length);
   },
 
   number: (min = 0, max = 100): number => {
@@ -219,7 +226,7 @@ export const random = {
  */
 export async function assertThrows(
   fn: () => any | Promise<any>,
-  expectedError?: string | RegExp
+  expectedError?: string | RegExp,
 ): Promise<void> {
   let threw = false;
   let error: unknown;
@@ -232,21 +239,21 @@ export async function assertThrows(
   }
 
   if (!threw) {
-    throw new Error('Expected function to throw an error');
+    throw new Error("Expected function to throw an error");
   }
 
   if (expectedError) {
     const message = (error as any)?.message || String(error);
-    if (typeof expectedError === 'string') {
+    if (typeof expectedError === "string") {
       if (!message.includes(expectedError)) {
         throw new Error(
-          `Expected error message to include "${expectedError}", but got "${message}"`
+          `Expected error message to include "${expectedError}", but got "${message}"`,
         );
       }
     } else {
       if (!expectedError.test(message)) {
         throw new Error(
-          `Expected error message to match ${expectedError}, but got "${message}"`
+          `Expected error message to match ${expectedError}, but got "${message}"`,
         );
       }
     }

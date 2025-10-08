@@ -1,5 +1,5 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
 
 const EnterprisePage: React.FC = () => {
   return (
@@ -45,61 +45,82 @@ const EnterprisePage: React.FC = () => {
       </div>
 
       {/* Solutions Section */}
-      <section id="solutions" className="py-24 bg-gradient-to-br from-blue-900 to-purple-900">
+      <section
+        id="solutions"
+        className="py-24 bg-gradient-to-br from-blue-900 to-purple-900"
+      >
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-6">
               Enterprise AI Solutions
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Comprehensive suite of enterprise-grade AI and IT solutions tailored for large organizations
+              Comprehensive suite of enterprise-grade AI and IT solutions
+              tailored for large organizations
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-white bg-opacity-10 backdrop-blur-lg rounded-2xl p-8 hover:bg-opacity-20 transition-all duration-300">
               <div className="text-4xl mb-4">🚀</div>
-              <h3 className="text-2xl font-bold text-white mb-4">AI Automation</h3>
+              <h3 className="text-2xl font-bold text-white mb-4">
+                AI Automation
+              </h3>
               <p className="text-gray-300">
-                Automate complex workflows with advanced AI. Reduce manual work by 70% and improve accuracy.
+                Automate complex workflows with advanced AI. Reduce manual work
+                by 70% and improve accuracy.
               </p>
             </div>
 
             <div className="bg-white bg-opacity-10 backdrop-blur-lg rounded-2xl p-8 hover:bg-opacity-20 transition-all duration-300">
               <div className="text-4xl mb-4">🔒</div>
-              <h3 className="text-2xl font-bold text-white mb-4">Enterprise Security</h3>
+              <h3 className="text-2xl font-bold text-white mb-4">
+                Enterprise Security
+              </h3>
               <p className="text-gray-300">
-                Bank-grade security with SOC 2 compliance, encryption, and advanced threat detection.
+                Bank-grade security with SOC 2 compliance, encryption, and
+                advanced threat detection.
               </p>
             </div>
 
             <div className="bg-white bg-opacity-10 backdrop-blur-lg rounded-2xl p-8 hover:bg-opacity-20 transition-all duration-300">
               <div className="text-4xl mb-4">📊</div>
-              <h3 className="text-2xl font-bold text-white mb-4">Advanced Analytics</h3>
+              <h3 className="text-2xl font-bold text-white mb-4">
+                Advanced Analytics
+              </h3>
               <p className="text-gray-300">
-                Real-time insights with predictive analytics. Make data-driven decisions faster.
+                Real-time insights with predictive analytics. Make data-driven
+                decisions faster.
               </p>
             </div>
 
             <div className="bg-white bg-opacity-10 backdrop-blur-lg rounded-2xl p-8 hover:bg-opacity-20 transition-all duration-300">
               <div className="text-4xl mb-4">☁️</div>
-              <h3 className="text-2xl font-bold text-white mb-4">Cloud Infrastructure</h3>
+              <h3 className="text-2xl font-bold text-white mb-4">
+                Cloud Infrastructure
+              </h3>
               <p className="text-gray-300">
-                Scalable, resilient cloud architecture with 99.9% uptime guarantee.
+                Scalable, resilient cloud architecture with 99.9% uptime
+                guarantee.
               </p>
             </div>
 
             <div className="bg-white bg-opacity-10 backdrop-blur-lg rounded-2xl p-8 hover:bg-opacity-20 transition-all duration-300">
               <div className="text-4xl mb-4">🤖</div>
-              <h3 className="text-2xl font-bold text-white mb-4">AI Integration</h3>
+              <h3 className="text-2xl font-bold text-white mb-4">
+                AI Integration
+              </h3>
               <p className="text-gray-300">
-                Seamlessly integrate AI into existing systems. No disruption to operations.
+                Seamlessly integrate AI into existing systems. No disruption to
+                operations.
               </p>
             </div>
 
             <div className="bg-white bg-opacity-10 backdrop-blur-lg rounded-2xl p-8 hover:bg-opacity-20 transition-all duration-300">
               <div className="text-4xl mb-4">💼</div>
-              <h3 className="text-2xl font-bold text-white mb-4">24/7 Support</h3>
+              <h3 className="text-2xl font-bold text-white mb-4">
+                24/7 Support
+              </h3>
               <p className="text-gray-300">
                 Dedicated enterprise support team available around the clock.
               </p>

@@ -1,6 +1,10 @@
+import fs from 'fs';
+import { analytics } from '../utils/analytics';
+import { performanceOptimizer } from '../utils/performanceOptimizer';
+import { useEffect, useCallback, useRef } from 'react';
 #!/usr/bin/env node
 
-import fs from 'fs';
+
 
 // // Read the file
 // const content = fs.readFileSync('src/hooks/usePerformance.ts', 'utf8');
@@ -10,9 +14,9 @@ const fixedContent = `/**
  * Performance Monitoring Hook
  * Provides React hooks for performance monitoring and optimization
  */
-import { useEffect, useCallback, useRef } from 'react';
-import { performanceOptimizer } from '../utils/performanceOptimizer';
-import { analytics } from '../utils/analytics';
+
+
+
 
 /**
  * Hook for monitoring page load performance

@@ -1,3 +1,5 @@
+import { readFileSync, existsSync } from 'fs';
+import { resolve } from 'path';
 #!/usr/bin/env node
 
 /**
@@ -5,8 +7,8 @@
  * Checks for common issues before building the application
  */
 
-import { readFileSync, existsSync } from 'fs';
-import { resolve } from 'path';
+
+
 
 const _errors = [];
 const _warnings = [];

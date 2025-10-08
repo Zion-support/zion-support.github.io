@@ -1,4 +1,4 @@
-import React, { Component, ErrorInfo, ReactNode } from 'react';
+import React, { Component, ErrorInfo, ReactNode } from "react";
 
 interface Props {
   children: ReactNode;
@@ -26,8 +26,8 @@ export class AdvancedErrorBoundary extends Component<Props, State> {
 
     // Log error to monitoring service
     //     // Send to error tracking service
-    if (typeof window !== 'undefined' && 'gtag' in window) {
-      (window as any).gtag('event', 'exception', {
+    if (typeof window !== "undefined" && "gtag" in window) {
+      (window as any).gtag("event", "exception", {
         description: error.toString(),
         fatal: false,
       });
@@ -40,7 +40,7 @@ export class AdvancedErrorBoundary extends Component<Props, State> {
         this.props.fallback || (
           <div className="error-boundary">
             <h2>Something went wrong.</h2>
-            <details style={{ whiteSpace: 'pre-wrap' }}>
+            <details style={{ whiteSpace: "pre-wrap" }}>
               {this.state.error && this.state.error.toString()}
               <br />
               {this.state.errorInfo?.componentStack}

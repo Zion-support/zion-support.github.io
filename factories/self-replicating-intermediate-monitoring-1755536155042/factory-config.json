@@ -19,7 +19,12 @@
     "targetExponentialFactor": 10,
     "autonomousEnabled": true
   },
-  "specializations": ["observability", "alerting", "optimization", "predictive-analytics"],
+  "specializations": [
+    "observability",
+    "alerting",
+    "optimization",
+    "predictive-analytics"
+  ],
   "autonomousCapabilities": {
     "selfReplication": true,
     "intelligentEvolution": true,

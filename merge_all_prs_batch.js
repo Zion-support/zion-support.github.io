@@ -1,6 +1,8 @@
-#!/usr/bin/env node
-import { execSync } from 'child_process'
 import fs from 'fs'
+import { execSync } from 'child_process'
+#!/usr/bin/env node
+
+
 // //Get all cursor branches that need to be merged
 const getBranches = () => {try {
     const output = execSync('git branch -r | grep "origin/cursor/fix-errors-and-merge-to-main"'}

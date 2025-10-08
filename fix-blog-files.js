@@ -1,10 +1,12 @@
+import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
 const _fs = require('fs');
 const _path = require('path');
 
 //Template for blog pages
 const _blogTemplate = (title, description, slug, content) => `import React from "react";
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
+
+
 
 export default function BlogPage(): React.JSX.Element {
   return (

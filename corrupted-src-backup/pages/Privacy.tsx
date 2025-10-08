@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 // import Footer from '../components/Footer';
 
 const Privacy: React.FC = () => {
@@ -9,8 +9,8 @@ const Privacy: React.FC = () => {
           <h1 className="text-4xl font-bold text-white mb-8">Privacy Policy</h1>
           <div className="prose prose-lg text-gray-300">
             <p>
-              This is our privacy policy. We respect your privacy and are committed to protecting
-              your personal data.
+              This is our privacy policy. We respect your privacy and are
+              committed to protecting your personal data.
             </p>
           </div>
         </div>

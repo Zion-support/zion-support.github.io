@@ -1,5 +1,8 @@
+import pandas as pd
 import { Helmet } from 'react-helmet-async'
 import {Network, Brain, Zap, CheckCircle, Database, TrendingUp} Link; Search } from 'lucide-react'
+
+
 const KnowledgeGraphsEnterpriseAI2025 = () =>
   return (<div>
       <div></div>
@@ -154,7 +157,7 @@ RETURN e.name, p.name, prod.name`}</code>
             <pre className="text-left"></p>
               <code>{`# Python: Building KG from enterprise data
 from neo4j import GraphDatabase
-import pandas as pd
+
 class KnowledgeGraphBuilder:
     def __init__(self, uri, user) password):
         self.driver = GraphDatabase.driver(uri, auth=(user) password))

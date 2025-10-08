@@ -1,9 +1,9 @@
 // import Link from 'next/link';
 
 export const metadata = {
-  title: 'Zion Tech Group - Advanced AI and IT Solutions',
+  title: "Zion Tech Group - Advanced AI and IT Solutions",
   description:
-    'Leading provider of AI-powered enterprise solutions, automation, and digital transformation services.',
+    "Leading provider of AI-powered enterprise solutions, automation, and digital transformation services.",
 };
 
 export default function HomePage() {
@@ -14,7 +14,7 @@ export default function HomePage() {
           <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-cyan-500/10 to-blue-500/10 animate-pulse"></div>
           <div
             className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-purple-500/10 to-pink-500/10 animate-pulse"
-            style={{ animationDelay: '2s' }}
+            style={{ animationDelay: "2s" }}
           ></div>
         </div>
 
@@ -26,13 +26,22 @@ export default function HomePage() {
               </Link>
             </div>
             <nav className="flex items-center gap-8">
-              <Link href="/" className="text-gray-300 hover:text-white transition-colors">
+              <Link
+                href="/"
+                className="text-gray-300 hover:text-white transition-colors"
+              >
                 Home
               </Link>
-              <Link href="/services" className="text-gray-300 hover:text-white transition-colors">
+              <Link
+                href="/services"
+                className="text-gray-300 hover:text-white transition-colors"
+              >
                 Services
               </Link>
-              <Link href="/blog" className="text-gray-300 hover:text-white transition-colors">
+              <Link
+                href="/blog"
+                className="text-gray-300 hover:text-white transition-colors"
+              >
                 Blog
               </Link>
               <Link
@@ -56,8 +65,9 @@ export default function HomePage() {
           </h1>
 
           <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-            Transform your enterprise with cutting-edge AI and IT solutions that deliver
-            unprecedented performance, automation, and competitive advantage.
+            Transform your enterprise with cutting-edge AI and IT solutions that
+            deliver unprecedented performance, automation, and competitive
+            advantage.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -74,7 +84,9 @@ export default function HomePage() {
               className="group flex items-center gap-3 bg-white/10 hover:bg-white/20 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 border border-white/30"
             >
               <span>Explore Services</span>
-              <span className="group-hover:translate-x-1 transition-transform">→</span>
+              <span className="group-hover:translate-x-1 transition-transform">
+                →
+              </span>
             </Link>
           </div>
         </div>
@@ -83,22 +95,25 @@ export default function HomePage() {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {[
             {
-              title: 'AI Automation',
-              description: 'Automate complex business processes with intelligent AI systems.',
-              icon: '🤖',
-              metrics: ['95% Automation', '300% ROI', 'Zero Touch'],
+              title: "AI Automation",
+              description:
+                "Automate complex business processes with intelligent AI systems.",
+              icon: "🤖",
+              metrics: ["95% Automation", "300% ROI", "Zero Touch"],
             },
             {
-              title: 'Enterprise Solutions',
-              description: 'Comprehensive AI solutions designed for enterprise scale.',
-              icon: '🏢',
-              metrics: ['500+ Clients', '99.9% Uptime', '24/7 Support'],
+              title: "Enterprise Solutions",
+              description:
+                "Comprehensive AI solutions designed for enterprise scale.",
+              icon: "🏢",
+              metrics: ["500+ Clients", "99.9% Uptime", "24/7 Support"],
             },
             {
-              title: 'Digital Transformation',
-              description: 'Transform your business with cutting-edge AI technologies.',
-              icon: '⚡',
-              metrics: ['70% Cost Reduction', '90% Efficiency', 'Future Ready'],
+              title: "Digital Transformation",
+              description:
+                "Transform your business with cutting-edge AI technologies.",
+              icon: "⚡",
+              metrics: ["70% Cost Reduction", "90% Efficiency", "Future Ready"],
             },
           ].map((feature, index) => (
             <div
@@ -106,11 +121,16 @@ export default function HomePage() {
               className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-white/40 transition-all duration-500"
             >
               <div className="text-4xl mb-4">{feature.icon}</div>
-              <h3 className="text-2xl font-bold text-white mb-4">{feature.title}</h3>
+              <h3 className="text-2xl font-bold text-white mb-4">
+                {feature.title}
+              </h3>
               <p className="text-gray-300 mb-6">{feature.description}</p>
               <div className="space-y-2">
                 {feature.metrics.map((metric, metricIndex) => (
-                  <div key={metricIndex} className="flex items-center gap-2 text-cyan-400 text-sm">
+                  <div
+                    key={metricIndex}
+                    className="flex items-center gap-2 text-cyan-400 text-sm"
+                  >
                     <span>✓</span>
                     <span>{metric}</span>
                   </div>
@@ -122,9 +142,12 @@ export default function HomePage() {
 
         {/* CTA Section */}
         <div className="text-center bg-white/5 backdrop-blur-lg rounded-2xl p-12 border border-white/20">
-          <h2 className="text-3xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
+          <h2 className="text-3xl font-bold text-white mb-6">
+            Ready to Transform Your Business?
+          </h2>
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-            Join 500+ enterprises achieving unprecedented results with our AI solutions.
+            Join 500+ enterprises achieving unprecedented results with our AI
+            solutions.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
@@ -140,7 +163,9 @@ export default function HomePage() {
               className="group flex items-center gap-3 bg-white/10 hover:bg-white/20 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 border border-white/30"
             >
               <span>View Case Studies</span>
-              <span className="group-hover:translate-x-1 transition-transform">→</span>
+              <span className="group-hover:translate-x-1 transition-transform">
+                →
+              </span>
             </Link>
           </div>
         </div>
@@ -150,10 +175,13 @@ export default function HomePage() {
         <div className="text-center text-gray-300">
           <p>&copy; 2026 Zion Tech Group. All rights reserved.</p>
           <p className="mt-2">
-            <Link href="/privacy" className="hover:text-white transition-colors">
+            <Link
+              href="/privacy"
+              className="hover:text-white transition-colors"
+            >
               Privacy Policy
             </Link>
-            {' | '}
+            {" | "}
             <Link href="/terms" className="hover:text-white transition-colors">
               Terms of Service
             </Link>

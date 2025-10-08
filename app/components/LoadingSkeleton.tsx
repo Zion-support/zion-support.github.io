@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 interface SkeletonProps {
   className?: string;
@@ -9,16 +9,16 @@ interface SkeletonProps {
 }
 
 const Skeleton: React.FC<SkeletonProps> = ({
-  className = '',
+  className = "",
   width,
   height,
   rounded = false,
-  animated = true
+  animated = true,
 }) => {
-  const baseClasses = 'bg-gray-200';
-  const roundedClasses = rounded ? 'rounded' : '';
-  const animatedClasses = animated ? 'animate-pulse' : '';
-  
+  const baseClasses = "bg-gray-200";
+  const roundedClasses = rounded ? "rounded" : "";
+  const animatedClasses = animated ? "animate-pulse" : "";
+
   return (
     <div
       className={`${baseClasses} ${roundedClasses} ${animatedClasses} ${className}`}
@@ -47,16 +47,16 @@ export const TextSkeleton: React.FC<{ lines?: number }> = ({ lines = 3 }) => (
       <Skeleton
         key={index}
         height="16px"
-        width={index === lines - 1 ? '75%' : '100%'}
+        width={index === lines - 1 ? "75%" : "100%"}
       />
     ))}
   </div>
 );
 
-export const ImageSkeleton: React.FC<{ aspectRatio?: string }> = ({ 
-  aspectRatio = '16/9' 
+export const ImageSkeleton: React.FC<{ aspectRatio?: string }> = ({
+  aspectRatio = "16/9",
 }) => (
-  <div 
+  <div
     className="bg-gray-200 rounded-lg animate-pulse"
     style={{ aspectRatio }}
     role="status"
@@ -80,20 +80,23 @@ export const ListSkeleton: React.FC<{ items?: number }> = ({ items = 5 }) => (
   </div>
 );
 
-export const TableSkeleton: React.FC<{ rows?: number; columns?: number }> = ({ 
-  rows = 5, 
-  columns = 4 
+export const TableSkeleton: React.FC<{ rows?: number; columns?: number }> = ({
+  rows = 5,
+  columns = 4,
 }) => (
   <div className="overflow-hidden">
-    <div className="grid gap-4 mb-4" style={{ gridTemplateColumns: `repeat(${columns}, 1fr)` }}>
+    <div
+      className="grid gap-4 mb-4"
+      style={{ gridTemplateColumns: `repeat(${columns}, 1fr)` }}
+    >
       {Array.from({ length: columns }).map((_, index) => (
         <Skeleton key={index} height="20px" />
       ))}
     </div>
     {Array.from({ length: rows }).map((_, rowIndex) => (
-      <div 
-        key={rowIndex} 
-        className="grid gap-4 mb-2" 
+      <div
+        key={rowIndex}
+        className="grid gap-4 mb-2"
         style={{ gridTemplateColumns: `repeat(${columns}, 1fr)` }}
       >
         {Array.from({ length: columns }).map((_, colIndex) => (

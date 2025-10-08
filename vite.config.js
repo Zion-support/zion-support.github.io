@@ -1,22 +1,22 @@
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
-import { visualizer } from 'rollup-plugin-visualizer';
+import react from "@vitejs/plugin-react";
+import { defineConfig } from "vite";
+import { visualizer } from "rollup-plugin-visualizer";
 
 export default defineConfig({
   plugins: [
     react(),
     visualizer({
-      filename: 'dist/stats.html',
+      filename: "dist/stats.html",
       open: false,
       gzipSize: true,
       brotliSize: true,
     }),
   ],
-  root: '.',
+  root: ".",
   build: {
-    outDir: 'dist',
-    target: 'es2015',
-    minify: 'terser',
+    outDir: "dist",
+    target: "es2015",
+    minify: "terser",
     sourcemap: false,
     chunkSizeWarningLimit: 1000,
     cssCodeSplit: true,
@@ -30,7 +30,7 @@ export default defineConfig({
       compress: {
         drop_console: true,
         drop_debugger: true,
-        pure_funcs: ['console.log', 'console.info', 'console.debug'],
+        pure_funcs: ["console.log", "console.info", "console.debug"],
         passes: 3,
         unsafe: true,
         unsafe_comps: true,
@@ -49,12 +49,10 @@ export default defineConfig({
     // Reduce memory usage during build
     rollupOptions: {
       maxParallelFileOps: 2,
-      treeshake: {
-        moduleSideEffects: false,
-      },
-      external: id => {
+      treeshake: { moduleSideEffects: false, propertyReadSideEffects: false },
+      external: (id) => {
         // Externalize Next.js modules to prevent build errors
-        if (id.includes('next/') || id.includes('next')) {
+        if (id.includes("next/") || id.includes("next")) {
           return true;
         }
         return false;
@@ -100,12 +98,18 @@ export default defineConfig({
     host: true,
   },
   optimizeDeps: {
-    include: ['react', 'react-dom', 'react-router-dom', 'framer-motion', 'lucide-react'],
+    include: [
+      "react",
+      "react-dom",
+      "react-router-dom",
+      "framer-motion",
+      "lucide-react",
+    ],
   },
   css: {
     devSourcemap: false,
   },
   esbuild: {
-    drop: ['console', 'debugger'],
+    drop: ["console", "debugger"],
   },
 });

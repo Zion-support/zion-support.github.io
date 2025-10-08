@@ -1,7 +1,9 @@
-#!/usr/bin/env node
-
 import fs from 'fs';
 import path from 'path';
+#!/usr/bin/env node
+
+
+
 
 // Get all TypeScript and JavaScript files
 function getAllFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {

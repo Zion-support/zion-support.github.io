@@ -1,11 +1,10 @@
+import { analytics } from "../utils/enhancedAnalytics";
+import { errorTracker } from "../utils/enhancedErrorTracking";
+import { useEffect, useCallback, useRef } from "react";
 /**
  * Enhanced Performance Hook
  * Combines performance monitoring, error tracking, and analytics
  */
-
-import { useEffect, useCallback, useRef } from 'react';
-import { errorTracker } from '../utils/enhancedErrorTracking';
-import { analytics } from '../utils/enhancedAnalytics';
 
 export interface UseEnhancedPerformanceOptions {
   component?: string;
@@ -14,9 +13,11 @@ export interface UseEnhancedPerformanceOptions {
   trackAnalytics?: boolean;
 }
 
-export function useEnhancedPerformance(_options: UseEnhancedPerformanceOptions = {}) {
+export function useEnhancedPerformance(
+  _options: UseEnhancedPerformanceOptions = {},
+) {
   const {
-    component = 'Unknown',
+    component = "Unknown",
     trackErrors = true,
     trackPerformance = true,
     trackAnalytics = true,
@@ -31,7 +32,7 @@ export function useEnhancedPerformance(_options: UseEnhancedPerformanceOptions =
 
     // Track component mount
     if (trackAnalytics) {
-      analytics.trackCustomEvent('Component', 'Mounted', component);
+      analytics.trackCustomEvent("Component", "Mounted", component);
     }
 
     return () => {
@@ -41,17 +42,17 @@ export function useEnhancedPerformance(_options: UseEnhancedPerformanceOptions =
         if (duration > 5000) {
           // Long-lived component
           analytics.trackCustomEvent(
-            'Performance',
-            'Long Component Lifetime',
+            "Performance",
+            "Long Component Lifetime",
             component,
-            Math.round(duration)
+            Math.round(duration),
           );
         }
       }
 
       // Track component unmount
       if (trackAnalytics) {
-        analytics.trackCustomEvent('Component', 'Unmounted', component);
+        analytics.trackCustomEvent("Component", "Unmounted", component);
       }
     };
   }, [component, trackAnalytics, trackPerformance]);
@@ -64,10 +65,10 @@ export function useEnhancedPerformance(_options: UseEnhancedPerformanceOptions =
       // Many re-renders detected
 
       analytics.trackCustomEvent(
-        'Performance',
-        'High Render Count',
+        "Performance",
+        "High Render Count",
         component,
-        renderCountRef.current
+        renderCountRef.current,
       );
     }
   });
@@ -81,16 +82,22 @@ export function useEnhancedPerformance(_options: UseEnhancedPerformanceOptions =
         });
       }
     },
-    [component, trackErrors]
+    [component, trackErrors],
   );
 
   const trackUserAction = useCallback(
     (action: string, metadata?: Record<string, unknown>) => {
       if (trackAnalytics) {
-        analytics.trackCustomEvent('User Action', action, component, undefined, metadata);
+        analytics.trackCustomEvent(
+          "User Action",
+          action,
+          component,
+          undefined,
+          metadata,
+        );
       }
     },
-    [component, trackAnalytics]
+    [component, trackAnalytics],
   );
 
   const measureOperation = useCallback(
@@ -101,20 +108,20 @@ export function useEnhancedPerformance(_options: UseEnhancedPerformanceOptions =
       return {
         end: () => {
           const _duration = performance.now() - startTime;
-          
+
           if (trackPerformance) {
             analytics.trackPerformance(
               `${component}-${operationName}`,
               duration,
-              duration > 1000 ? 'slow' : 'fast'
+              duration > 1000 ? "slow" : "fast",
             );
           }
-          
+
           return duration;
         },
       };
     },
-    [component, trackPerformance]
+    [component, trackPerformance],
   );
 
   return {

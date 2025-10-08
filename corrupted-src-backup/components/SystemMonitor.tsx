@@ -1,20 +1,20 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 
 const SystemMonitor: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     // Only show in development
-    if (process.env['NODE_ENV'] !== 'development') return;
+    if (process.env["NODE_ENV"] !== "development") return;
 
     const handleKeyPress = (e: KeyboardEvent) => {
-      if (e.ctrlKey && e.shiftKey && e.key === 'M') {
-        setIsVisible(prev => !prev);
+      if (e.ctrlKey && e.shiftKey && e.key === "M") {
+        setIsVisible((prev) => !prev);
       }
     };
 
-    window.addEventListener('keydown', handleKeyPress);
-    return () => window.removeEventListener('keydown', handleKeyPress);
+    window.addEventListener("keydown", handleKeyPress);
+    return () => window.removeEventListener("keydown", handleKeyPress);
   }, []);
 
   if (!isVisible) return null;
@@ -24,7 +24,10 @@ const SystemMonitor: React.FC = () => {
       <div className="mb-2 font-bold">System Monitor</div>
       <div>Status: Running</div>
       <div>
-        Memory: {Math.round((performance as any).memory?.usedJSHeapSize / 1024 / 1024 || 0)}
+        Memory:{" "}
+        {Math.round(
+          (performance as any).memory?.usedJSHeapSize / 1024 / 1024 || 0,
+        )}
         MB
       </div>
       <div>Press Ctrl+Shift+M to toggle</div>

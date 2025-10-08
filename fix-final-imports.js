@@ -1,20 +1,21 @@
-import fs from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
+import fs from "fs";
+import path from "path";
+import { fileURLToPath } from "url";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 function processFile(filePath) {
   try {
-    let _content = fs.readFileSync(filePath, 'utf8');
+    let _content = fs.readFileSync(filePath, "utf8");
     let _modified = false;
 
     // Fix remaining import path issues
     const replacements = [
       // Fix SEOOptimizer component
       {
-        pattern: /import\s+{\s*useRouter\s*}\s+from\s+'\.\.\/\.\.\/utils\/navigation';/g,
+        pattern:
+          /import\s+{\s*useRouter\s*}\s+from\s+'\.\.\/\.\.\/utils\/navigation';/g,
         replacement: "import { useRouter } from '../utils/navigation';",
       },
       // Fix root-level files
@@ -29,7 +30,7 @@ function processFile(filePath) {
       // Fix MetadataRoute namespace issue
       {
         pattern: /MetadataRoute\./g,
-        replacement: 'MetadataRoute',
+        replacement: "MetadataRoute",
       },
     ];
 
@@ -41,13 +42,12 @@ function processFile(filePath) {
     });
 
     if (modified) {
-      fs.writeFileSync(filePath, content, 'utf8');
+      fs.writeFileSync(filePath, content, "utf8");
 
       return true;
     }
     return false;
   } catch (error) {
-
     return false;
   }
 }
@@ -56,13 +56,13 @@ function processDirectory(dirPath) {
   const _items = fs.readdirSync(dirPath);
   let _totalFixed = 0;
 
-  items.forEach(item => {
+  items.forEach((item) => {
     const _fullPath = path.join(dirPath, item);
     const _stat = fs.statSync(fullPath);
 
     if (stat.isDirectory()) {
       totalFixed += processDirectory(fullPath);
-    } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
+    } else if (item.endsWith(".tsx") || item.endsWith(".ts")) {
       if (processFile(fullPath)) {
         totalFixed++;
       }
@@ -73,6 +73,6 @@ function processDirectory(dirPath) {
 }
 
 // Process the app directory
-const _appDir = path.join(__dirname, 'app');
+const _appDir = path.join(__dirname, "app");
 
 const _fixedCount = processDirectory(appDir);

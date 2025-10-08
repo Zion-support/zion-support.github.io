@@ -3,9 +3,9 @@
  * Provides React hooks for performance monitoring and optimization
  */
 
-import { useEffect, useCallback, useRef } from 'react';
-import performanceOptimizer from '../utils/performanceOptimizer';
-import analytics from '../utils/analytics';
+import { useEffect, useCallback, useRef } from "react";
+import performanceOptimizer from "../utils/performanceOptimizer";
+import analytics from "../utils/analytics";
 
 export interface PerformanceMetrics {
   renderTime: number;
@@ -63,7 +63,7 @@ export const usePerformance = (options: UsePerformanceOptions) => {
       };
 
       // Track memory usage if available
-      if (trackMemoryUsage && 'memory' in performance) {
+      if (trackMemoryUsage && "memory" in performance) {
         const _memory = (performance as any).memory;
         metrics.memoryUsage = memory.usedJSHeapSize;
       }
@@ -72,7 +72,13 @@ export const usePerformance = (options: UsePerformanceOptions) => {
       analytics.trackPerformance(`${componentName}_render_time`, renderTime);
 
       if (isSlowRender) {
-        analytics.track('slow_render', 'performance', 'warning', componentName, renderTime);
+        analytics.track(
+          "slow_render",
+          "performance",
+          "warning",
+          componentName,
+          renderTime,
+        );
       }
     });
   }, [componentName, trackRenderTime, slowRenderThreshold, trackMemoryUsage]);
@@ -94,18 +100,20 @@ export const usePageLoadPerformance = () => {
   useEffect(() => {
     const trackPageLoad = () => {
       // Wait for page to be fully loaded
-      if (document.readyState === 'complete') {
+      if (document.readyState === "complete") {
         const navigation = performance.getEntriesByType(
-          'navigation'
+          "navigation",
         )[0] as PerformanceNavigationTiming;
 
         if (navigation) {
           const metrics = {
             domContentLoaded:
-              navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
+              navigation.domContentLoadedEventEnd -
+              navigation.domContentLoadedEventStart,
             loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
             firstByte: navigation.responseStart - navigation.requestStart,
-            domInteractive: navigation.domInteractive - navigation.navigationStart,
+            domInteractive:
+              navigation.domInteractive - navigation.navigationStart,
             totalLoadTime: navigation.loadEventEnd - navigation.navigationStart,
           };
 
@@ -116,23 +124,23 @@ export const usePageLoadPerformance = () => {
 
           // Track overall page load performance
           analytics.track(
-            'page_load_complete',
-            'performance',
-            'complete',
+            "page_load_complete",
+            "performance",
+            "complete",
             undefined,
-            metrics.totalLoadTime
+            metrics.totalLoadTime,
           );
         }
       }
     };
 
     // Track immediately if page is already loaded
-    if (document.readyState === 'complete') {
+    if (document.readyState === "complete") {
       trackPageLoad();
     } else {
       // Wait for load event
-      window.addEventListener('load', trackPageLoad);
-      return () => window.removeEventListener('load', trackPageLoad);
+      window.addEventListener("load", trackPageLoad);
+      return () => window.removeEventListener("load", trackPageLoad);
     }
   }, []);
 };
@@ -142,20 +150,20 @@ export const usePageLoadPerformance = () => {
  */
 export const useResourcePerformance = () => {
   useEffect(() => {
-    const observer = new PerformanceObserver(list => {
-      list.getEntries().forEach(entry => {
-        if (entry.entryType === 'resource') {
+    const observer = new PerformanceObserver((list) => {
+      list.getEntries().forEach((entry) => {
+        if (entry.entryType === "resource") {
           const _resourceEntry = entry as PerformanceResourceTiming;
           analytics.trackPerformance(
-            `resource_${resourceEntry.name.split('.').pop()}`,
+            `resource_${resourceEntry.name.split(".").pop()}`,
             resourceEntry.duration,
-            'ms'
+            "ms",
           );
         }
       });
     });
 
-    observer.observe({ entryTypes: ['resource'] });
+    observer.observe({ entryTypes: ["resource"] });
 
     return () => observer.disconnect();
   }, []);
@@ -166,9 +174,15 @@ export const useResourcePerformance = () => {
  */
 export const useLongTaskMonitoring = () => {
   useEffect(() => {
-    const observer = performanceOptimizer.monitorLongTasks(entries => {
-      entries.forEach(entry => {
-        analytics.track('long_task', 'performance', 'detected', undefined, entry.duration);
+    const observer = performanceOptimizer.monitorLongTasks((entries) => {
+      entries.forEach((entry) => {
+        analytics.track(
+          "long_task",
+          "performance",
+          "detected",
+          undefined,
+          entry.duration,
+        );
       });
     });
 

@@ -7,7 +7,7 @@
  * Wait for a specified amount of time
  */
 export const wait = (ms: number): Promise<void> => {
-  return new Promise(resolve => setTimeout(resolve, ms));
+  return new Promise((resolve) => setTimeout(resolve, ms));
 };
 
 /**
@@ -16,7 +16,7 @@ export const wait = (ms: number): Promise<void> => {
 export const waitFor = async (
   condition: () => boolean,
   timeout = 5000,
-  interval = 100
+  interval = 100,
 ): Promise<void> => {
   const startTime = Date.now();
 
@@ -34,9 +34,9 @@ export const waitFor = async (
 export const mockFetch = (
   response: unknown,
   status = 200,
-  headers: Record<string, string> = {}
+  headers: Record<string, string> = {},
 ): void => {
-  if (typeof global !== 'undefined') {
+  if (typeof global !== "undefined") {
     (global as typeof global & { fetch: typeof fetch }).fetch = jest.fn(() =>
       Promise.resolve({
         ok: status >= 200 && status < 300,
@@ -44,7 +44,7 @@ export const mockFetch = (
         headers: new Headers(headers),
         json: async () => response,
         text: async () => JSON.stringify(response),
-      } as Response)
+      } as Response),
     ) as typeof fetch;
   }
 };
@@ -92,8 +92,8 @@ export const createMockStorage = (): MockStorage => {
  * Mock window object
  */
 export const mockWindow = (overrides: Partial<Window> = {}): void => {
-  if (typeof global !== 'undefined') {
-    Object.defineProperty(global, 'window', {
+  if (typeof global !== "undefined") {
+    Object.defineProperty(global, "window", {
       value: {
         ...global.window,
         ...overrides,
@@ -114,7 +114,7 @@ export const createMockPerformance = (): Performance => {
     mark: (name: string) => {
       entries.push({
         name,
-        entryType: 'mark',
+        entryType: "mark",
         startTime: Date.now(),
         duration: 0,
         toJSON: () => ({}),
@@ -123,14 +123,15 @@ export const createMockPerformance = (): Performance => {
     measure: (name: string, _startMark?: string, _endMark?: string) => {
       entries.push({
         name,
-        entryType: 'measure',
+        entryType: "measure",
         startTime: Date.now(),
         duration: 100,
         toJSON: () => ({}),
       } as PerformanceEntry);
     },
-    getEntriesByName: (name: string) => entries.filter(e => e.name === name),
-    getEntriesByType: (type: string) => entries.filter(e => e.entryType === type),
+    getEntriesByName: (name: string) => entries.filter((e) => e.name === name),
+    getEntriesByType: (type: string) =>
+      entries.filter((e) => e.entryType === type),
     getEntries: () => entries,
     clearMarks: () => {
       entries.length = 0;
@@ -214,15 +215,15 @@ export class ConsoleSpy {
 
   private mock(): void {
     console.log = (...args: unknown[]) => {
-      this.logs.push(args.map(String).join(' '));
+      this.logs.push(args.map(String).join(" "));
     };
 
     console.error = (...args: unknown[]) => {
-      this.errors.push(args.map(String).join(' '));
+      this.errors.push(args.map(String).join(" "));
     };
 
     console.warn = (...args: unknown[]) => {
-      this.warnings.push(args.map(String).join(' '));
+      this.warnings.push(args.map(String).join(" "));
     };
   }
 
@@ -278,7 +279,7 @@ export const createDeferred = <T>(): Deferred<T> => {
 export const retryWithBackoff = async <T>(
   fn: () => Promise<T>,
   maxRetries = 3,
-  initialDelay = 1000
+  initialDelay = 1000,
 ): Promise<T> => {
   let lastError: Error;
 
@@ -300,7 +301,7 @@ export const retryWithBackoff = async <T>(
  * Measure execution time of a function
  */
 export const measureExecutionTime = async <T>(
-  fn: () => T | Promise<T>
+  fn: () => T | Promise<T>,
 ): Promise<{ result: T; duration: number }> => {
   const start = performance.now();
   const result = await fn();

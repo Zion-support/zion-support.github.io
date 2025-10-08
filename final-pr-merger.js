@@ -1,7 +1,9 @@
+import fs from 'fs';
+import { execSync } from 'child_process';
 #!/usr/bin/env node
 
-import { execSync } from 'child_process';
-import fs from 'fs';
+
+
 
 // // //Function to safely execute git commands
 function safeGitCommand(command, description) {

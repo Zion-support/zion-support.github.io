@@ -5,37 +5,37 @@
  * Applies performance, security, accessibility, and SEO improvements
  */
 
-const fs = require('fs');
-const path = require('path');
+const fs = require("fs");
+const path = require("path");
 
-console.log('🚀 Starting comprehensive improvements...\n');
+console.log("🚀 Starting comprehensive improvements...\n");
 
 const improvements = {
   applied: [],
-  errors: []
+  errors: [],
 };
 
 // 1. Create performance monitoring configuration
 const performanceConfig = {
   enableWebVitals: true,
   enableRUM: true,
-  reportingEndpoint: '/api/analytics',
+  reportingEndpoint: "/api/analytics",
   sampleRate: 1.0,
   thresholds: {
     LCP: 2500,
     FID: 100,
     CLS: 0.1,
     FCP: 1800,
-    TTFB: 600
-  }
+    TTFB: 600,
+  },
 };
 
 try {
   fs.writeFileSync(
-    path.join(__dirname, 'performance.config.json'),
-    JSON.stringify(performanceConfig, null, 2)
+    path.join(__dirname, "performance.config.json"),
+    JSON.stringify(performanceConfig, null, 2),
   );
-  improvements.applied.push('✅ Created performance monitoring configuration');
+  improvements.applied.push("✅ Created performance monitoring configuration");
 } catch (error) {
   improvements.errors.push(`❌ Performance config error: ${error.message}`);
 }
@@ -47,28 +47,28 @@ const securityHeaders = {
       defaultSrc: ["'self'"],
       scriptSrc: ["'self'", "'unsafe-inline'", "'unsafe-eval'"],
       styleSrc: ["'self'", "'unsafe-inline'"],
-      imgSrc: ["'self'", 'data:', 'https:'],
-      fontSrc: ["'self'", 'data:'],
+      imgSrc: ["'self'", "data:", "https:"],
+      fontSrc: ["'self'", "data:"],
       connectSrc: ["'self'"],
       frameSrc: ["'none'"],
       objectSrc: ["'none'"],
-      upgradeInsecureRequests: []
-    }
+      upgradeInsecureRequests: [],
+    },
   },
   headers: {
-    'X-Frame-Options': 'DENY',
-    'X-Content-Type-Options': 'nosniff',
-    'Referrer-Policy': 'strict-origin-when-cross-origin',
-    'Permissions-Policy': 'camera=(), microphone=(), geolocation=()'
-  }
+    "X-Frame-Options": "DENY",
+    "X-Content-Type-Options": "nosniff",
+    "Referrer-Policy": "strict-origin-when-cross-origin",
+    "Permissions-Policy": "camera=(), microphone=(), geolocation=()",
+  },
 };
 
 try {
   fs.writeFileSync(
-    path.join(__dirname, 'security-headers.config.json'),
-    JSON.stringify(securityHeaders, null, 2)
+    path.join(__dirname, "security-headers.config.json"),
+    JSON.stringify(securityHeaders, null, 2),
   );
-  improvements.applied.push('✅ Created security headers configuration');
+  improvements.applied.push("✅ Created security headers configuration");
 } catch (error) {
   improvements.errors.push(`❌ Security headers error: ${error.message}`);
 }
@@ -80,49 +80,50 @@ const accessibilityConfig = {
   keyboardNavigation: true,
   screenReaderOptimization: true,
   colorContrastRatio: 4.5,
-  minimumTouchTarget: 44
+  minimumTouchTarget: 44,
 };
 
 try {
   fs.writeFileSync(
-    path.join(__dirname, 'accessibility.config.json'),
-    JSON.stringify(accessibilityConfig, null, 2)
+    path.join(__dirname, "accessibility.config.json"),
+    JSON.stringify(accessibilityConfig, null, 2),
   );
-  improvements.applied.push('✅ Created accessibility configuration');
+  improvements.applied.push("✅ Created accessibility configuration");
 } catch (error) {
   improvements.errors.push(`❌ Accessibility config error: ${error.message}`);
 }
 
 // 4. Create SEO optimization configuration
 const seoConfig = {
-  siteName: 'Zion Tech Group',
-  defaultTitle: 'Zion Tech Group - Advanced AI and IT Solutions',
-  titleTemplate: '%s | Zion Tech Group',
-  defaultDescription: 'Leading provider of enterprise AI solutions, quantum computing, and autonomous systems. Transform your business with our cutting-edge technology.',
-  siteUrl: 'https://ziontechgroup.com',
-  defaultImage: '/images/og-image.jpg',
-  twitterHandle: '@ziontechgroup',
-  facebookAppId: '',
+  siteName: "Zion Tech Group",
+  defaultTitle: "Zion Tech Group - Advanced AI and IT Solutions",
+  titleTemplate: "%s | Zion Tech Group",
+  defaultDescription:
+    "Leading provider of enterprise AI solutions, quantum computing, and autonomous systems. Transform your business with our cutting-edge technology.",
+  siteUrl: "https://ziontechgroup.com",
+  defaultImage: "/images/og-image.jpg",
+  twitterHandle: "@ziontechgroup",
+  facebookAppId: "",
   structuredData: {
-    '@context': 'https://schema.org',
-    '@type': 'Organization',
-    name: 'Zion Tech Group',
-    url: 'https://ziontechgroup.com',
-    logo: 'https://ziontechgroup.com/logo.png',
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "Zion Tech Group",
+    url: "https://ziontechgroup.com",
+    logo: "https://ziontechgroup.com/logo.png",
     contactPoint: {
-      '@type': 'ContactPoint',
-      telephone: '+1-302-600-9898',
-      contactType: 'Customer Service'
-    }
-  }
+      "@type": "ContactPoint",
+      telephone: "+1-302-600-9898",
+      contactType: "Customer Service",
+    },
+  },
 };
 
 try {
   fs.writeFileSync(
-    path.join(__dirname, 'seo.config.json'),
-    JSON.stringify(seoConfig, null, 2)
+    path.join(__dirname, "seo.config.json"),
+    JSON.stringify(seoConfig, null, 2),
   );
-  improvements.applied.push('✅ Created SEO optimization configuration');
+  improvements.applied.push("✅ Created SEO optimization configuration");
 } catch (error) {
   improvements.errors.push(`❌ SEO config error: ${error.message}`);
 }
@@ -131,24 +132,24 @@ try {
 const cacheConfig = {
   staticAssets: {
     maxAge: 31536000,
-    immutable: true
+    immutable: true,
   },
   apiResponses: {
     maxAge: 300,
-    staleWhileRevalidate: 60
+    staleWhileRevalidate: 60,
   },
   pages: {
     maxAge: 3600,
-    staleWhileRevalidate: 86400
-  }
+    staleWhileRevalidate: 86400,
+  },
 };
 
 try {
   fs.writeFileSync(
-    path.join(__dirname, 'cache.config.json'),
-    JSON.stringify(cacheConfig, null, 2)
+    path.join(__dirname, "cache.config.json"),
+    JSON.stringify(cacheConfig, null, 2),
   );
-  improvements.applied.push('✅ Created caching strategy configuration');
+  improvements.applied.push("✅ Created caching strategy configuration");
 } catch (error) {
   improvements.errors.push(`❌ Cache config error: ${error.message}`);
 }
@@ -187,15 +188,15 @@ export const asyncHandler = (fn) => (req, res, next) => {
 `;
 
 try {
-  const utilsDir = path.join(__dirname, 'app/utils');
+  const utilsDir = path.join(__dirname, "app/utils");
   if (!fs.existsSync(utilsDir)) {
     fs.mkdirSync(utilsDir, { recursive: true });
   }
   fs.writeFileSync(
-    path.join(utilsDir, 'errorHandlerEnhanced.ts'),
-    errorHandlerContent
+    path.join(utilsDir, "errorHandlerEnhanced.ts"),
+    errorHandlerContent,
   );
-  improvements.applied.push('✅ Created enhanced error handler');
+  improvements.applied.push("✅ Created enhanced error handler");
 } catch (error) {
   improvements.errors.push(`❌ Error handler error: ${error.message}`);
 }
@@ -239,15 +240,15 @@ export const usePerformanceMonitoring = () => {
 `;
 
 try {
-  const hooksDir = path.join(__dirname, 'app/hooks');
+  const hooksDir = path.join(__dirname, "app/hooks");
   if (!fs.existsSync(hooksDir)) {
     fs.mkdirSync(hooksDir, { recursive: true });
   }
   fs.writeFileSync(
-    path.join(hooksDir, 'usePerformanceMonitoringEnhanced.ts'),
-    performanceHookContent
+    path.join(hooksDir, "usePerformanceMonitoringEnhanced.ts"),
+    performanceHookContent,
   );
-  improvements.applied.push('✅ Created enhanced performance monitoring hook');
+  improvements.applied.push("✅ Created enhanced performance monitoring hook");
 } catch (error) {
   improvements.errors.push(`❌ Performance hook error: ${error.message}`);
 }
@@ -258,51 +259,57 @@ const report = {
   summary: {
     totalImprovements: improvements.applied.length,
     errors: improvements.errors.length,
-    status: improvements.errors.length === 0 ? 'SUCCESS' : 'PARTIAL_SUCCESS'
+    status: improvements.errors.length === 0 ? "SUCCESS" : "PARTIAL_SUCCESS",
   },
   improvements: improvements.applied,
   errors: improvements.errors,
   categories: {
-    performance: ['Performance monitoring configuration', 'Performance monitoring hook', 'Caching strategy'],
-    security: ['Security headers configuration', 'Enhanced error handler'],
-    accessibility: ['Accessibility configuration'],
-    seo: ['SEO optimization configuration']
+    performance: [
+      "Performance monitoring configuration",
+      "Performance monitoring hook",
+      "Caching strategy",
+    ],
+    security: ["Security headers configuration", "Enhanced error handler"],
+    accessibility: ["Accessibility configuration"],
+    seo: ["SEO optimization configuration"],
   },
   recommendations: [
-    'Enable Progressive Web App (PWA) features',
-    'Implement service worker for offline support',
-    'Add image optimization pipeline',
-    'Configure CDN for static assets',
-    'Enable HTTP/2 and HTTP/3',
-    'Implement rate limiting for API endpoints',
-    'Add comprehensive monitoring and alerting',
-    'Regular security audits and dependency updates'
-  ]
+    "Enable Progressive Web App (PWA) features",
+    "Implement service worker for offline support",
+    "Add image optimization pipeline",
+    "Configure CDN for static assets",
+    "Enable HTTP/2 and HTTP/3",
+    "Implement rate limiting for API endpoints",
+    "Add comprehensive monitoring and alerting",
+    "Regular security audits and dependency updates",
+  ],
 };
 
 try {
   fs.writeFileSync(
-    path.join(__dirname, 'COMPREHENSIVE_IMPROVEMENTS_REPORT.json'),
-    JSON.stringify(report, null, 2)
+    path.join(__dirname, "COMPREHENSIVE_IMPROVEMENTS_REPORT.json"),
+    JSON.stringify(report, null, 2),
   );
-  improvements.applied.push('✅ Generated comprehensive improvement report');
+  improvements.applied.push("✅ Generated comprehensive improvement report");
 } catch (error) {
   improvements.errors.push(`❌ Report generation error: ${error.message}`);
 }
 
 // Print summary
-console.log('\n📊 Improvement Summary:');
-console.log('========================\n');
+console.log("\n📊 Improvement Summary:");
+console.log("========================\n");
 
-improvements.applied.forEach(msg => console.log(msg));
+improvements.applied.forEach((msg) => console.log(msg));
 
 if (improvements.errors.length > 0) {
-  console.log('\n⚠️  Errors:');
-  improvements.errors.forEach(msg => console.log(msg));
+  console.log("\n⚠️  Errors:");
+  improvements.errors.forEach((msg) => console.log(msg));
 }
 
 console.log(`\n✨ Total improvements applied: ${improvements.applied.length}`);
 console.log(`⚠️  Errors encountered: ${improvements.errors.length}`);
-console.log(`\n📄 Detailed report saved to: COMPREHENSIVE_IMPROVEMENTS_REPORT.json\n`);
+console.log(
+  `\n📄 Detailed report saved to: COMPREHENSIVE_IMPROVEMENTS_REPORT.json\n`,
+);
 
 process.exit(improvements.errors.length > 0 ? 1 : 0);

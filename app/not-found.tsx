@@ -1,43 +1,43 @@
-import { Link } from 'react-router-dom';
-import { Home, Phone } from 'lucide-react';
+import { Home, Phone } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export default function NotFound() {
   const popularPages = [
     {
-      title: 'Home',
-      description: 'Return to our homepage',
-      href: '/',
-      icon: '🏠'
+      title: "Home",
+      description: "Return to our homepage",
+      href: "/",
+      icon: "🏠",
     },
     {
-      title: 'AI Services',
-      description: 'Explore our comprehensive AI and IT solutions',
-      href: '/services',
-      icon: '🤖'
+      title: "AI Services",
+      description: "Explore our comprehensive AI and IT solutions",
+      href: "/services",
+      icon: "🤖",
     },
     {
-      title: 'Blog & Insights',
-      description: 'Read about latest AI trends and innovations',
-      href: '/blog',
-      icon: '📚'
+      title: "Blog & Insights",
+      description: "Read about latest AI trends and innovations",
+      href: "/blog",
+      icon: "📚",
     },
     {
-      title: 'About Us',
-      description: 'Learn about Zion Tech Group and our mission',
-      href: '/about',
-      icon: '🏢'
+      title: "About Us",
+      description: "Learn about Zion Tech Group and our mission",
+      href: "/about",
+      icon: "🏢",
     },
     {
-      title: 'Case Studies',
-      description: 'See our success stories and client results',
-      href: '/case-studies',
-      icon: '📊'
+      title: "Case Studies",
+      description: "See our success stories and client results",
+      href: "/case-studies",
+      icon: "📊",
     },
     {
-      title: 'Contact Us',
-      description: 'Get in touch with our AI experts',
-      href: '/contact',
-      icon: '📞'
+      title: "Contact Us",
+      description: "Get in touch with our AI experts",
+      href: "/contact",
+      icon: "📞",
     },
   ];
 
@@ -46,9 +46,7 @@ export default function NotFound() {
       <div className="max-w-2xl w-full text-center">
         {/* Error Code */}
         <div className="mb-8">
-          <h1 className="text-9xl font-bold text-white/20 mb-4">
-            404
-          </h1>
+          <h1 className="text-9xl font-bold text-white/20 mb-4">404</h1>
           <div className="text-6xl mb-4">🔍</div>
         </div>
 
@@ -58,8 +56,8 @@ export default function NotFound() {
             Page Not Found
           </h2>
           <p className="text-lg text-gray-600">
-            The page you're looking for doesn't exist or has been moved. 
-            Don't worry, let's get you back on track!
+            The page you're looking for doesn't exist or has been moved. Don't
+            worry, let's get you back on track!
           </p>
         </div>
 
@@ -75,9 +73,7 @@ export default function NotFound() {
               <h3 className="text-lg font-semibold text-gray-900 mb-2">
                 {page.title}
               </h3>
-              <p className="text-gray-600 text-sm">
-                {page.description}
-              </p>
+              <p className="text-gray-600 text-sm">{page.description}</p>
             </Link>
           ))}
         </div>

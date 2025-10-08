@@ -1,60 +1,75 @@
-import dynamic from 'next/dynamic';
-import { UnifiedBanner, bannerConfigurations } from './components/UnifiedBannerSystem';
-import { LazyWrapper } from './components/LazyLoader';
-import { SEOOptimizer } from './components/SEOOptimizer';
-import { AccessibilityEnhancer } from './components/AccessibilityEnhancer';
-import { PerformanceMonitor } from './components/PerformanceMonitor';
+import dynamic from "next/dynamic";
+import {
+  UnifiedBanner,
+  bannerConfigurations,
+} from "./components/UnifiedBannerSystem";
+import { LazyWrapper } from "./components/LazyLoader";
+import { SEOOptimizer } from "./components/SEOOptimizer";
+import { AccessibilityEnhancer } from "./components/AccessibilityEnhancer";
+import { PerformanceMonitor } from "./components/PerformanceMonitor";
 
 // Lazy load heavy components
-const UnifiedContentPromotion = dynamic(() => import('../components/UnifiedContentPromotion'), {
-  loading: () => <div className="animate-pulse bg-gray-200 h-32 rounded-lg"></div>,
-});
-
-const InteractiveAIROICalculator = dynamic(
-  () => import('../components/InteractiveAIROICalculator'),
+const UnifiedContentPromotion = dynamic(
+  () => import("../components/UnifiedContentPromotion"),
   {
-    loading: () => <div className="animate-pulse bg-gray-200 h-64 rounded-lg"></div>,
-  }
+    loading: () => (
+      <div className="animate-pulse bg-gray-200 h-32 rounded-lg"></div>
+    ),
+  },
 );
 
-const ContentShowcase = dynamic(() => import('../components/ContentShowcase'), {
-  loading: () => <div className="animate-pulse bg-gray-200 h-48 rounded-lg"></div>,
+const InteractiveAIROICalculator = dynamic(
+  () => import("../components/InteractiveAIROICalculator"),
+  {
+    loading: () => (
+      <div className="animate-pulse bg-gray-200 h-64 rounded-lg"></div>
+    ),
+  },
+);
+
+const ContentShowcase = dynamic(() => import("../components/ContentShowcase"), {
+  loading: () => (
+    <div className="animate-pulse bg-gray-200 h-48 rounded-lg"></div>
+  ),
 });
 
 const InteractiveContentShowcase2026 = dynamic(
-  () => import('../components/InteractiveContentShowcase2026'),
+  () => import("../components/InteractiveContentShowcase2026"),
   {
-    loading: () => <div className="animate-pulse bg-gray-200 h-48 rounded-lg"></div>,
-  }
+    loading: () => (
+      <div className="animate-pulse bg-gray-200 h-48 rounded-lg"></div>
+    ),
+  },
 );
 
 export const metadata = {
-  title: 'Zion Tech Group — AI Enterprise Transformation & IT Services | 300% ROI Guaranteed',
+  title:
+    "Zion Tech Group — AI Enterprise Transformation & IT Services | 300% ROI Guaranteed",
   description:
-    'Transform your enterprise with AI-powered solutions. Achieve 300% ROI, 70% cost reduction, and 90% efficiency gains. Expert AI consulting, autonomous systems, and digital transformation services.',
+    "Transform your enterprise with AI-powered solutions. Achieve 300% ROI, 70% cost reduction, and 90% efficiency gains. Expert AI consulting, autonomous systems, and digital transformation services.",
   keywords:
-    'AI enterprise transformation, AI consulting, autonomous AI systems, enterprise AI services, digital transformation, AI implementation, AI ROI calculator, manufacturing AI, AI automation, AI strategy',
+    "AI enterprise transformation, AI consulting, autonomous AI systems, enterprise AI services, digital transformation, AI implementation, AI ROI calculator, manufacturing AI, AI automation, AI strategy",
   openGraph: {
-    title: 'Zion Tech Group — AI Enterprise Transformation & IT Services',
+    title: "Zion Tech Group — AI Enterprise Transformation & IT Services",
     description:
-      'Transform your enterprise with AI-powered solutions. Achieve 300% ROI, 70% cost reduction, and 90% efficiency gains.',
-    type: 'website',
-    url: 'https://ziontechgroup.com',
+      "Transform your enterprise with AI-powered solutions. Achieve 300% ROI, 70% cost reduction, and 90% efficiency gains.",
+    type: "website",
+    url: "https://ziontechgroup.com",
     images: [
       {
-        url: '/og-image.jpg',
+        url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: 'Zion Tech Group AI Enterprise Transformation',
+        alt: "Zion Tech Group AI Enterprise Transformation",
       },
     ],
   },
   twitter: {
-    card: 'summary_large_image',
-    title: 'Zion Tech Group — AI Enterprise Transformation & IT Services',
+    card: "summary_large_image",
+    title: "Zion Tech Group — AI Enterprise Transformation & IT Services",
     description:
-      'Transform your enterprise with AI-powered solutions. Achieve 300% ROI, 70% cost reduction, and 90% efficiency gains.',
-    images: ['/og-image.jpg'],
+      "Transform your enterprise with AI-powered solutions. Achieve 300% ROI, 70% cost reduction, and 90% efficiency gains.",
+    images: ["/og-image.jpg"],
   },
   robots: {
     index: true,
@@ -62,13 +77,13 @@ export const metadata = {
     googleBot: {
       index: true,
       follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
     },
   },
   alternates: {
-    canonical: 'https://ziontechgroup.com',
+    canonical: "https://ziontechgroup.com",
   },
 };
 
@@ -91,8 +106,8 @@ export default function HomePageOptimized() {
               </span>
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-gray-200 max-w-3xl mx-auto">
-              Achieve 300% ROI, 70% cost reduction, and 90% efficiency gains with our proven AI
-              transformation methodology
+              Achieve 300% ROI, 70% cost reduction, and 90% efficiency gains
+              with our proven AI transformation methodology
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200">
@@ -136,7 +151,9 @@ export default function HomePageOptimized() {
               <div className="text-gray-600">Efficiency Gains</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-orange-600 mb-2">24/7</div>
+              <div className="text-4xl font-bold text-orange-600 mb-2">
+                24/7
+              </div>
               <div className="text-gray-600">Autonomous Operations</div>
             </div>
           </div>
@@ -157,10 +174,12 @@ export default function HomePageOptimized() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-200">
               <div className="text-blue-600 text-4xl mb-4">🤖</div>
-              <h3 className="text-xl font-semibold mb-3">Autonomous AI Systems</h3>
+              <h3 className="text-xl font-semibold mb-3">
+                Autonomous AI Systems
+              </h3>
               <p className="text-gray-600 mb-4">
-                Self-managing AI systems that operate independently and adapt to changing business
-                conditions.
+                Self-managing AI systems that operate independently and adapt to
+                changing business conditions.
               </p>
               <button className="text-blue-600 font-semibold hover:text-blue-800">
                 Learn More →
@@ -168,10 +187,12 @@ export default function HomePageOptimized() {
             </div>
             <div className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-200">
               <div className="text-green-600 text-4xl mb-4">📊</div>
-              <h3 className="text-xl font-semibold mb-3">Predictive Analytics</h3>
+              <h3 className="text-xl font-semibold mb-3">
+                Predictive Analytics
+              </h3>
               <p className="text-gray-600 mb-4">
-                Advanced analytics and machine learning to predict trends and optimize business
-                decisions.
+                Advanced analytics and machine learning to predict trends and
+                optimize business decisions.
               </p>
               <button className="text-blue-600 font-semibold hover:text-blue-800">
                 Learn More →
@@ -181,7 +202,8 @@ export default function HomePageOptimized() {
               <div className="text-purple-600 text-4xl mb-4">⚡</div>
               <h3 className="text-xl font-semibold mb-3">Process Automation</h3>
               <p className="text-gray-600 mb-4">
-                Intelligent automation solutions that streamline operations and reduce manual work.
+                Intelligent automation solutions that streamline operations and
+                reduce manual work.
               </p>
               <button className="text-blue-600 font-semibold hover:text-blue-800">
                 Learn More →
@@ -218,7 +240,8 @@ export default function HomePageOptimized() {
             Ready to Transform Your Enterprise?
           </h2>
           <p className="text-xl mb-8 text-blue-100">
-            Get a free AI assessment and discover how we can help you achieve 300% ROI
+            Get a free AI assessment and discover how we can help you achieve
+            300% ROI
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-white text-blue-600 hover:bg-gray-100 font-semibold py-3 px-8 rounded-lg transition-colors duration-200">

@@ -22,27 +22,27 @@ export const generateCSP = (): string => {
     "upgrade-insecure-requests",
   ];
 
-  return cspDirectives.join('; ');
+  return cspDirectives.join("; ");
 };
 
 /**
  * Security headers configuration
  */
 export const securityHeaders = {
-  'Content-Security-Policy': generateCSP(),
-  'X-Frame-Options': 'DENY',
-  'X-Content-Type-Options': 'nosniff',
-  'X-XSS-Protection': '1; mode=block',
-  'Referrer-Policy': 'strict-origin-when-cross-origin',
-  'Permissions-Policy': 'geolocation=(), microphone=(), camera=()',
-  'Strict-Transport-Security': 'max-age=31536000; includeSubDomains',
+  "Content-Security-Policy": generateCSP(),
+  "X-Frame-Options": "DENY",
+  "X-Content-Type-Options": "nosniff",
+  "X-XSS-Protection": "1; mode=block",
+  "Referrer-Policy": "strict-origin-when-cross-origin",
+  "Permissions-Policy": "geolocation=(), microphone=(), camera=()",
+  "Strict-Transport-Security": "max-age=31536000; includeSubDomains",
 };
 
 /**
  * Sanitize HTML to prevent XSS attacks
  */
 export const sanitizeHTML = (html: string): string => {
-  const div = document.createElement('div');
+  const div = document.createElement("div");
   div.textContent = html;
   return div.innerHTML;
 };
@@ -72,12 +72,12 @@ export const isValidURL = (url: string): boolean => {
  */
 export const escapeHTML = (text: string): string => {
   const map: Record<string, string> = {
-    '&': '&amp;',
-    '<': '&lt;',
-    '>': '&gt;',
-    '"': '&quot;',
-    "'": '&#x27;',
-    '/': '&#x2F;',
+    "&": "&amp;",
+    "<": "&lt;",
+    ">": "&gt;",
+    '"': "&quot;",
+    "'": "&#x27;",
+    "/": "&#x2F;",
   };
   return text.replace(/[&<>"'/]/g, (char) => map[char]);
 };
@@ -87,16 +87,22 @@ export const escapeHTML = (text: string): string => {
  */
 export const generateCSRFToken = (): string => {
   const array = new Uint8Array(32);
-  if (typeof window !== 'undefined' && window.crypto) {
+  if (typeof window !== "undefined" && window.crypto) {
     window.crypto.getRandomValues(array);
   }
-  return Array.from(array, (byte: number) => byte.toString(16).padStart(2, '0')).join('');
+  return Array.from(array, (byte: number) =>
+    byte.toString(16).padStart(2, "0"),
+  ).join("");
 };
 
 /**
  * Validate input length
  */
-export const isValidLength = (input: string, min: number, max: number): boolean => {
+export const isValidLength = (
+  input: string,
+  min: number,
+  max: number,
+): boolean => {
   return input.length >= min && input.length <= max;
 };
 
@@ -128,7 +134,9 @@ export class RateLimiter {
     const requests = this.requests.get(key) || [];
 
     // Remove old requests outside the window
-    const validRequests = requests.filter((timestamp) => now - timestamp < this.window);
+    const validRequests = requests.filter(
+      (timestamp) => now - timestamp < this.window,
+    );
 
     if (validRequests.length >= this.limit) {
       return false;
@@ -152,7 +160,9 @@ export class RateLimiter {
   getRemaining(key: string): number {
     const now = Date.now();
     const requests = this.requests.get(key) || [];
-    const validRequests = requests.filter((timestamp) => now - timestamp < this.window);
+    const validRequests = requests.filter(
+      (timestamp) => now - timestamp < this.window,
+    );
     return Math.max(0, this.limit - validRequests.length);
   }
 }
@@ -163,7 +173,7 @@ export class RateLimiter {
 export class SecureStorage {
   private prefix: string;
 
-  constructor(prefix: string = 'app_') {
+  constructor(prefix: string = "app_") {
     this.prefix = prefix;
   }
 
@@ -177,7 +187,7 @@ export class SecureStorage {
       const encryptedData = btoa(data);
       localStorage.setItem(`${this.prefix}${key}`, encryptedData);
     } catch (error) {
-      console.error('Failed to set storage item:', error);
+      console.error("Failed to set storage item:", error);
     }
   }
 
@@ -193,7 +203,7 @@ export class SecureStorage {
       const data = atob(encryptedData);
       return JSON.parse(data) as T;
     } catch (error) {
-      console.error('Failed to get storage item:', error);
+      console.error("Failed to get storage item:", error);
       return null;
     }
   }
@@ -222,7 +232,7 @@ export class SecureStorage {
  * Password strength validator
  */
 export const validatePasswordStrength = (
-  password: string
+  password: string,
 ): {
   isValid: boolean;
   score: number;
@@ -232,31 +242,31 @@ export const validatePasswordStrength = (
   let score = 0;
 
   if (password.length < 8) {
-    feedback.push('Password must be at least 8 characters long');
+    feedback.push("Password must be at least 8 characters long");
   } else {
     score += 1;
   }
 
   if (!/[a-z]/.test(password)) {
-    feedback.push('Password must contain lowercase letters');
+    feedback.push("Password must contain lowercase letters");
   } else {
     score += 1;
   }
 
   if (!/[A-Z]/.test(password)) {
-    feedback.push('Password must contain uppercase letters');
+    feedback.push("Password must contain uppercase letters");
   } else {
     score += 1;
   }
 
   if (!/[0-9]/.test(password)) {
-    feedback.push('Password must contain numbers');
+    feedback.push("Password must contain numbers");
   } else {
     score += 1;
   }
 
   if (!/[^a-zA-Z0-9]/.test(password)) {
-    feedback.push('Password must contain special characters');
+    feedback.push("Password must contain special characters");
   } else {
     score += 1;
   }
@@ -274,8 +284,8 @@ export const validatePasswordStrength = (
 export const sanitizeFileName = (fileName: string): string => {
   // Remove dangerous characters and paths
   return fileName
-    .replace(/[^a-zA-Z0-9._-]/g, '_')
-    .replace(/\.\.+/g, '.')
+    .replace(/[^a-zA-Z0-9._-]/g, "_")
+    .replace(/\.\.+/g, ".")
     .substring(0, 255);
 };
 
@@ -284,9 +294,9 @@ export const sanitizeFileName = (fileName: string): string => {
  */
 export const isAllowedFileType = (
   fileName: string,
-  allowedExtensions: string[]
+  allowedExtensions: string[],
 ): boolean => {
-  const ext = fileName.split('.').pop()?.toLowerCase();
+  const ext = fileName.split(".").pop()?.toLowerCase();
   return ext ? allowedExtensions.includes(ext) : false;
 };
 
@@ -294,12 +304,12 @@ export const isAllowedFileType = (
  * Generate nonce for inline scripts
  */
 export const generateNonce = (): string => {
-  if (typeof window !== 'undefined' && window.crypto) {
+  if (typeof window !== "undefined" && window.crypto) {
     const array = new Uint8Array(16);
     window.crypto.getRandomValues(array);
     return btoa(String.fromCharCode.apply(null, Array.from(array)));
   }
-  return '';
+  return "";
 };
 
 export default {

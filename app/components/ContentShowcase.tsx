@@ -1,5 +1,4 @@
-import React from 'react';
-
+import React from "react";
 
 const ContentShowcase: React.FC = () => {
   return (
@@ -13,7 +12,7 @@ const ContentShowcase: React.FC = () => {
             Explore our latest content and insights
           </p>
         </div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* Placeholder content cards */}
           {[1, 2, 3].map((item) => (
@@ -26,7 +25,8 @@ const ContentShowcase: React.FC = () => {
                 Content Item {item}
               </h3>
               <p className="text-gray-600">
-                Discover innovative solutions and insights from our team of experts.
+                Discover innovative solutions and insights from our team of
+                experts.
               </p>
             </div>
           ))}

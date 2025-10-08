@@ -1,11 +1,9 @@
+import React from "react";
+import { Helmet } from "react-helmet-async";
 /**
  * SEO Component
  * Provides comprehensive SEO meta tags and structured data
  */
-
-import React from 'react';
-
-import { Helmet } from 'react-helmet-async';
 
 export interface SEOProps {
   title?: string;
@@ -13,34 +11,34 @@ export interface SEOProps {
   keywords?: string[];
   image?: string;
   url?: string;
-  type?: 'website' | 'article' | 'product' | 'profile';
+  type?: "website" | "article" | "product" | "profile";
   author?: string;
   publishDate?: string;
   modifiedDate?: string;
   canonical?: string;
   noIndex?: boolean;
   structuredData?: Record<string, unknown>;
-  twitterCard?: 'summary' | 'summary_large_image' | 'app' | 'player';
+  twitterCard?: "summary" | "summary_large_image" | "app" | "player";
   locale?: string;
   alternateLocales?: { locale: string; url: string }[];
 }
 
 const defaultSEO = {
-  title: 'Zion Tech Group - AI & IT Solutions',
+  title: "Zion Tech Group - AI & IT Solutions",
   description:
-    'Leading provider of AI-powered enterprise solutions and digital transformation services. Achieve 300% ROI with cutting-edge AI technology.',
+    "Leading provider of AI-powered enterprise solutions and digital transformation services. Achieve 300% ROI with cutting-edge AI technology.",
   keywords: [
-    'AI',
-    'artificial intelligence',
-    'enterprise solutions',
-    'digital transformation',
-    'IT services',
+    "AI",
+    "artificial intelligence",
+    "enterprise solutions",
+    "digital transformation",
+    "IT services",
   ],
-  image: 'https://ziontechgroup.com/og-image.jpg',
-  url: 'https://ziontechgroup.com',
-  type: 'website' as const,
-  locale: 'en_US',
-  twitterCard: 'summary_large_image' as const,
+  image: "https://ziontechgroup.com/og-image.jpg",
+  url: "https://ziontechgroup.com",
+  type: "website" as const,
+  locale: "en_US",
+  twitterCard: "summary_large_image" as const,
 };
 
 export const SEO: React.FC<SEOProps> = ({
@@ -78,8 +76,8 @@ export const SEO: React.FC<SEOProps> = ({
     }
 
     const baseStructuredData: Record<string, unknown> = {
-      '@context': 'https://schema.org',
-      '@type': type === 'article' ? 'Article' : 'WebPage',
+      "@context": "https://schema.org",
+      "@type": type === "article" ? "Article" : "WebPage",
       headline: seo.title,
       description: seo.description,
       url: seo.url,
@@ -88,7 +86,7 @@ export const SEO: React.FC<SEOProps> = ({
 
     if (author) {
       baseStructuredData.author = {
-        '@type': 'Person',
+        "@type": "Person",
         name: author,
       };
     }
@@ -109,7 +107,9 @@ export const SEO: React.FC<SEOProps> = ({
       {/* Basic Meta Tags */}
       <title>{seo.title}</title>
       <meta name="description" content={seo.description} />
-      {seo.keywords && <meta name="keywords" content={seo.keywords.join(', ')} />}
+      {seo.keywords && (
+        <meta name="keywords" content={seo.keywords.join(", ")} />
+      )}
 
       {/* Canonical URL */}
       {canonical && <link rel="canonical" href={canonical} />}
@@ -143,20 +143,30 @@ export const SEO: React.FC<SEOProps> = ({
       {author && <meta name="twitter:creator" content={`@${author}`} />}
 
       {/* Article Meta Tags */}
-      {type === 'article' && (
+      {type === "article" && (
         <>
-          {publishDate && <meta property="article:published_time" content={publishDate} />}
-          {modifiedDate && <meta property="article:modified_time" content={modifiedDate} />}
+          {publishDate && (
+            <meta property="article:published_time" content={publishDate} />
+          )}
+          {modifiedDate && (
+            <meta property="article:modified_time" content={modifiedDate} />
+          )}
           {author && <meta property="article:author" content={author} />}
         </>
       )}
 
       {/* Structured Data */}
-      <script type="application/ld+json">{JSON.stringify(generateStructuredData())}</script>
+      <script type="application/ld+json">
+        {JSON.stringify(generateStructuredData())}
+      </script>
 
       {/* Preconnect to external domains */}
       <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+      <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossOrigin="anonymous"
+      />
 
       {/* DNS Prefetch */}
       <link rel="dns-prefetch" href="https://www.google-analytics.com" />

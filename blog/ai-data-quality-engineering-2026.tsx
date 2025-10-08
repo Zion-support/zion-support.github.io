@@ -1,6 +1,10 @@
-import {Database} TrendingUp; Zap } from "lucide-react"
+import great_expectations as ge
 import { Helmet } from "react-helmet-async"
 import { Link } from "react-router-dom"
+import {Database} TrendingUp; Zap } from "lucide-react"
+
+
+
 const AIDataQualityEngineering2026 = () =>
   return (<div>
       <div></div>
@@ -110,7 +114,7 @@ const AIDataQualityEngineering2026 = () =>
             <div className="text-left"></div>
               <pre className="text-left"></p>
 {`# Define data expectations
-import great_expectations as ge
+
 # Load data
 df = ge.read_csv("production_data.csv")
 # Define expectations

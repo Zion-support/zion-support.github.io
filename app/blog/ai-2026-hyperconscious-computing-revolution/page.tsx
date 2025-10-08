@@ -1,5 +1,4 @@
-import React from 'react';
-import { Star } from 'lucide-react';
+import { Star } from "lucide-react";
 // import { Metadata } from 'next'; // Removed for Vite
 
 // Metadata removed for Vite compatibility
@@ -18,14 +17,18 @@ export default function AI2026HyperconsciousComputingRevolution() {
           </p>
           <div className="flex items-center justify-center gap-2 text-yellow-400">
             <Star className="w-6 h-6 fill-current" />
-            <span className="text-lg font-semibold">Hyperconscious Computing</span>
+            <span className="text-lg font-semibold">
+              Hyperconscious Computing
+            </span>
           </div>
         </div>
 
         {/* Content Sections */}
         <div className="grid md:grid-cols-2 gap-12 mb-16">
           <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8">
-            <h2 className="text-3xl font-bold text-white mb-6">Revolutionary Features</h2>
+            <h2 className="text-3xl font-bold text-white mb-6">
+              Revolutionary Features
+            </h2>
             <ul className="space-y-4 text-gray-300">
               <li className="flex items-center gap-3">
                 <Star className="w-5 h-5 text-cyan-400" />

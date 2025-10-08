@@ -1,5 +1,5 @@
-import { useEffect, useCallback } from 'react';
-import { useAnalytics } from '../components/AnalyticsProvider';
+import { useAnalytics } from "../components/AnalyticsProvider";
+import { useEffect, useCallback } from "react";
 
 // PerformanceMetrics interface removed as it's not used in this hook
 
@@ -10,95 +10,96 @@ export const usePerformanceMonitoring = () => {
     (name: string, value: number) => {
       trackPerformance(name, value);
     },
-    [trackPerformance]
+    [trackPerformance],
   );
 
   useEffect(() => {
-    if (typeof window === 'undefined' || !('PerformanceObserver' in window)) {
+    if (typeof window === "undefined" || !("PerformanceObserver" in window)) {
       return () => {};
     }
 
     try {
       // LCP - Largest Contentful Paint
-      const lcpObserver = new PerformanceObserver(list => {
+      const lcpObserver = new PerformanceObserver((list) => {
         const _entries = list.getEntries();
         const _lastEntry = entries[entries.length - 1];
-        reportMetric('LCP', lastEntry.startTime);
+        reportMetric("LCP", lastEntry.startTime);
       });
-      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
+      lcpObserver.observe({ entryTypes: ["largest-contentful-paint"] });
 
       // FID - First Input Delay
-      const fidObserver = new PerformanceObserver(list => {
+      const fidObserver = new PerformanceObserver((list) => {
         const _entries = list.getEntries();
         entries.forEach(
           (entry: PerformanceEntry & { processingStart?: number }) => {
             const fid =
               (entry.processingStart || entry.startTime) - entry.startTime;
-            reportMetric('FID', fid);
-          }
+            reportMetric("FID", fid);
+          },
         );
       });
-      fidObserver.observe({ entryTypes: ['first-input'] });
+      fidObserver.observe({ entryTypes: ["first-input"] });
 
       // CLS - Cumulative Layout Shift
       let _clsValue = 0;
-      const clsObserver = new PerformanceObserver(list => {
+      const clsObserver = new PerformanceObserver((list) => {
         const _entries = list.getEntries();
         entries.forEach(
           (
             entry: PerformanceEntry & {
               hadRecentInput?: boolean;
               value?: number;
-            }
+            },
           ) => {
             if (!entry.hadRecentInput && entry.value) {
               clsValue += entry.value;
             }
-          }
+          },
         );
-        reportMetric('CLS', clsValue);
+        reportMetric("CLS", clsValue);
       });
-      clsObserver.observe({ entryTypes: ['layout-shift'] });
+      clsObserver.observe({ entryTypes: ["layout-shift"] });
 
       // FCP - First Contentful Paint
-      const fcpObserver = new PerformanceObserver(list => {
+      const fcpObserver = new PerformanceObserver((list) => {
         const _entries = list.getEntries();
-        entries.forEach(entry => {
-          if (entry.name === 'first-contentful-paint') {
-            reportMetric('FCP', entry.startTime);
+        entries.forEach((entry) => {
+          if (entry.name === "first-contentful-paint") {
+            reportMetric("FCP", entry.startTime);
           }
         });
       });
-      fcpObserver.observe({ entryTypes: ['paint'] });
+      fcpObserver.observe({ entryTypes: ["paint"] });
 
       // TTFB - Time to First Byte
-      const navigationObserver = new PerformanceObserver(list => {
+      const navigationObserver = new PerformanceObserver((list) => {
         const _entries = list.getEntries();
         entries.forEach((entry) => {
-          if (entry.entryType === 'navigation') {
+          if (entry.entryType === "navigation") {
             const _navEntry = entry as PerformanceNavigationTiming;
             const _ttfb = navEntry.responseStart - navEntry.requestStart;
-            reportMetric('TTFB', ttfb);
+            reportMetric("TTFB", ttfb);
           }
         });
       });
-      navigationObserver.observe({ entryTypes: ['navigation'] });
+      navigationObserver.observe({ entryTypes: ["navigation"] });
 
       // Resource timing
-      const resourceObserver = new PerformanceObserver(list => {
+      const resourceObserver = new PerformanceObserver((list) => {
         const _entries = list.getEntries();
         entries.forEach((entry) => {
-          if (entry.entryType === 'resource') {
+          if (entry.entryType === "resource") {
             const _resourceEntry = entry as PerformanceResourceTiming;
-            const _loadTime = resourceEntry.responseEnd - resourceEntry.requestStart;
+            const _loadTime =
+              resourceEntry.responseEnd - resourceEntry.requestStart;
             if (loadTime > 1000) {
               // Only track slow resources
-              reportMetric('SLOW_RESOURCE', loadTime);
+              reportMetric("SLOW_RESOURCE", loadTime);
             }
           }
         });
       });
-      resourceObserver.observe({ entryTypes: ['resource'] });
+      resourceObserver.observe({ entryTypes: ["resource"] });
 
       // Cleanup
       return () => {
@@ -110,7 +111,6 @@ export const usePerformanceMonitoring = () => {
         resourceObserver.disconnect();
       };
     } catch (error) {
-
       return () => {};
     }
   }, [reportMetric]);
@@ -118,10 +118,10 @@ export const usePerformanceMonitoring = () => {
   // Monitor page load performance
   useEffect(() => {
     const handleLoad = () => {
-      if (typeof window === 'undefined') return;
+      if (typeof window === "undefined") return;
 
       const navigation = performance.getEntriesByType(
-        'navigation'
+        "navigation",
       )[0] as PerformanceNavigationTiming;
 
       if (navigation) {
@@ -140,8 +140,8 @@ export const usePerformanceMonitoring = () => {
       }
     };
 
-    window.addEventListener('load', handleLoad);
-    return () => window.removeEventListener('load', handleLoad);
+    window.addEventListener("load", handleLoad);
+    return () => window.removeEventListener("load", handleLoad);
   }, [reportMetric]);
 
   return {

@@ -4,19 +4,19 @@
  */
 
 export enum ErrorCategory {
-  NETWORK = 'network',
-  VALIDATION = 'validation',
-  API = 'api',
-  UI = 'ui',
-  RUNTIME = 'runtime',
-  UNKNOWN = 'unknown',
+  NETWORK = "network",
+  VALIDATION = "validation",
+  API = "api",
+  UI = "ui",
+  RUNTIME = "runtime",
+  UNKNOWN = "unknown",
 }
 
 export enum ErrorSeverity {
-  LOW = 'low',
-  MEDIUM = 'medium',
-  HIGH = 'high',
-  CRITICAL = 'critical',
+  LOW = "low",
+  MEDIUM = "medium",
+  HIGH = "high",
+  CRITICAL = "critical",
 }
 
 export interface ErrorInfo {
@@ -35,7 +35,7 @@ class ErrorHandler {
   handleError(error: Error, context?: Record<string, unknown>): void {
     const category = this.categorizeError(error);
     const severity = this.determineSeverity(error, category);
-    
+
     const errorData: ErrorInfo = {
       id: this.generateErrorId(),
       error,
@@ -55,27 +55,34 @@ class ErrorHandler {
 
   private categorizeError(error: Error): ErrorCategory {
     const message = error.message.toLowerCase();
-    const stack = error.stack?.toLowerCase() || '';
+    const stack = error.stack?.toLowerCase() || "";
 
-    if (message.includes('network') || message.includes('fetch') || message.includes('xhr')) {
+    if (
+      message.includes("network") ||
+      message.includes("fetch") ||
+      message.includes("xhr")
+    ) {
       return ErrorCategory.NETWORK;
     }
-    if (message.includes('validation') || message.includes('invalid')) {
+    if (message.includes("validation") || message.includes("invalid")) {
       return ErrorCategory.VALIDATION;
     }
-    if (message.includes('api') || stack.includes('api')) {
+    if (message.includes("api") || stack.includes("api")) {
       return ErrorCategory.API;
     }
-    if (message.includes('component') || stack.includes('react')) {
+    if (message.includes("component") || stack.includes("react")) {
       return ErrorCategory.UI;
     }
-    if (message.includes('runtime') || stack.includes('runtime')) {
+    if (message.includes("runtime") || stack.includes("runtime")) {
       return ErrorCategory.RUNTIME;
     }
     return ErrorCategory.UNKNOWN;
   }
 
-  private determineSeverity(error: Error, category: ErrorCategory): ErrorSeverity {
+  private determineSeverity(
+    error: Error,
+    category: ErrorCategory,
+  ): ErrorSeverity {
     if (category === ErrorCategory.NETWORK) {
       return ErrorSeverity.MEDIUM;
     }
@@ -96,7 +103,7 @@ class ErrorHandler {
   }
 
   private reportError(errorData: ErrorInfo): void {
-//     console.error('Error reported:', errorData);
+    //     console.error('Error reported:', errorData);
   }
 
   getErrors(): ErrorInfo[] {

@@ -1,5 +1,13 @@
-import React from 'react';
-import { Bot, Shield, Cloud, Building, DollarSign, Award, ArrowRight } from 'lucide-react';
+import React from "react";
+import {
+  Bot,
+  Shield,
+  Cloud,
+  Building,
+  DollarSign,
+  Award,
+  ArrowRight,
+} from "lucide-react";
 
 const EnterpriseSolutionsShowcase2026: React.FC = () => {
   return (
@@ -10,7 +18,8 @@ const EnterpriseSolutionsShowcase2026: React.FC = () => {
             Enterprise AI Solutions
           </h2>
           <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8">
-            Transform your enterprise with our comprehensive suite of AI-powered solutions.
+            Transform your enterprise with our comprehensive suite of AI-powered
+            solutions.
           </p>
         </div>
       </div>

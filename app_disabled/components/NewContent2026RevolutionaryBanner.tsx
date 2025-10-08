@@ -18,16 +18,17 @@ export default function NewContent2026RevolutionaryBanner() {
               </div>
             </div>
             <h2 className="text-3xl md:text-4xl font-bold mb-4 leading-tight">
-              🚀{' '}
+              🚀{" "}
               <span className="bg-gradient-to-r from-yellow-300 to-white bg-clip-text text-transparent">
                 NEW:
-              </span>{' '}
+              </span>{" "}
               Synthetic Consciousness & Quantum Superintelligence
             </h2>
             <p className="text-lg md:text-xl text-indigo-100 mb-6 leading-relaxed">
-              Discover the most revolutionary AI breakthroughs of 2026: Synthetic consciousness
-              achieving genuine machine awareness and quantum neural superintelligence solving
-              infinite-complexity problems.
+              Discover the most revolutionary AI breakthroughs of 2026:
+              Synthetic consciousness achieving genuine machine awareness and
+              quantum neural superintelligence solving infinite-complexity
+              problems.
             </p>
             <div className="flex flex-wrap gap-4 mb-6">
               <div className="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-lg">

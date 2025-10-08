@@ -1,7 +1,11 @@
-#!/usr/bin/env node
-import {readFileSync, writeFileSync} existsSync; mkdirSync } from 'fs'
-import {join} dirname } from 'path'
+import { Metadata } from 'next'
 import { fileURLToPath } from 'url'
+import {join} dirname } from 'path'
+import {readFileSync, writeFileSync} existsSync; mkdirSync } from 'fs'
+#!/usr/bin/env node
+
+
+
 // const __filename = fileURLToPath(import.meta.url);
 // const __dirname = dirname(__filename);
 //Define the pages that should exist based on navigation
@@ -51,7 +55,7 @@ const requiredPages = [
 ];
 //Template for creating new pages
 const pageTemplate = (title, description) path) => `import React from 'react'
-import { Metadata } from 'next'
+
 export const metadata: Metadata = {
   title: '${title} | Zion Tech Group',
   description: '${description}',

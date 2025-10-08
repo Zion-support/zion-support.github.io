@@ -27,7 +27,7 @@ export class RateLimiter {
 
   constructor(config: RateLimitConfig) {
     this.config = {
-      message: 'Too many requests, please try again later.',
+      message: "Too many requests, please try again later.",
       skipSuccessfulRequests: false,
       skipFailedRequests: false,
       ...config,
@@ -42,7 +42,11 @@ export class RateLimiter {
    * @param identifier - Unique identifier (e.g., IP address)
    * @returns Whether the request is allowed
    */
-  check(identifier: string): { allowed: boolean; remaining: number; resetTime: number } {
+  check(identifier: string): {
+    allowed: boolean;
+    remaining: number;
+    resetTime: number;
+  } {
     const _now = Date.now();
     const _record = this.requests.get(identifier);
 
@@ -104,7 +108,7 @@ export const rateLimiters = {
   strict: new RateLimiter({
     windowMs: 60 * 1000,
     max: 10,
-    message: 'Too many requests. Please try again in a minute.',
+    message: "Too many requests. Please try again in a minute.",
   }),
 
   // Standard: 100 requests per 15 minutes
@@ -123,14 +127,14 @@ export const rateLimiters = {
   api: new RateLimiter({
     windowMs: 60 * 1000,
     max: 60,
-    message: 'API rate limit exceeded. Please try again later.',
+    message: "API rate limit exceeded. Please try again later.",
   }),
 
   // Authentication: 5 login attempts per 15 minutes
   auth: new RateLimiter({
     windowMs: 15 * 60 * 1000,
     max: 5,
-    message: 'Too many login attempts. Please try again later.',
+    message: "Too many login attempts. Please try again later.",
     skipSuccessfulRequests: true,
   }),
 };
@@ -143,16 +147,16 @@ export const rateLimiters = {
 export function getClientIdentifier(request: Request): string {
   // Try to get real IP from headers (for proxied requests)
   const _headers = request.headers;
-  const _forwardedFor = headers.get('x-forwarded-for');
-  const _realIp = headers.get('x-real-ip');
-  const _cfConnectingIp = headers.get('cf-connecting-ip');
+  const _forwardedFor = headers.get("x-forwarded-for");
+  const _realIp = headers.get("x-real-ip");
+  const _cfConnectingIp = headers.get("cf-connecting-ip");
 
   if (cfConnectingIp) return cfConnectingIp;
   if (realIp) return realIp;
-  if (forwardedFor) return forwardedFor.split(',')[0].trim();
+  if (forwardedFor) return forwardedFor.split(",")[0].trim();
 
   // Fallback to a default identifier
-  return 'unknown';
+  return "unknown";
 }
 
 /**
@@ -168,19 +172,19 @@ export function createRateLimitMiddleware(limiter: RateLimiter) {
     if (!allowed) {
       return new Response(
         JSON.stringify({
-          error: 'Rate limit exceeded',
+          error: "Rate limit exceeded",
           retryAfter: Math.ceil((resetTime - Date.now()) / 1000),
         }),
         {
           status: 429,
           headers: {
-            'Content-Type': 'application/json',
-            'Retry-After': String(Math.ceil((resetTime - Date.now()) / 1000)),
-            'X-RateLimit-Limit': String(limiter['config'].max),
-            'X-RateLimit-Remaining': String(remaining),
-            'X-RateLimit-Reset': String(resetTime),
+            "Content-Type": "application/json",
+            "Retry-After": String(Math.ceil((resetTime - Date.now()) / 1000)),
+            "X-RateLimit-Limit": String(limiter["config"].max),
+            "X-RateLimit-Remaining": String(remaining),
+            "X-RateLimit-Reset": String(resetTime),
           },
-        }
+        },
       );
     }
 

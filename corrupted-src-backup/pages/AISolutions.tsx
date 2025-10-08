@@ -1,7 +1,17 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Brain, Zap, Shield, Cloud, Database, Users, BarChart3, Cog, Rocket } from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
+import React from "react";
+import { Link } from "react-router-dom";
+import {
+  Brain,
+  Zap,
+  Shield,
+  Cloud,
+  Database,
+  Users,
+  BarChart3,
+  Cog,
+  Rocket,
+} from "lucide-react";
+import { Helmet } from "react-helmet-async";
 
 const AISolutions: React.FC = () => {
   return (
@@ -17,9 +27,12 @@ const AISolutions: React.FC = () => {
       <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
         <div className="container mx-auto px-4 py-16">
           <div className="text-center mb-16">
-            <h1 className="text-5xl font-bold text-gray-900 mb-6">AI Solutions</h1>
+            <h1 className="text-5xl font-bold text-gray-900 mb-6">
+              AI Solutions
+            </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Revolutionary AI solutions delivering unprecedented business value and transformation.
+              Revolutionary AI solutions delivering unprecedented business value
+              and transformation.
             </p>
           </div>
 
@@ -30,8 +43,8 @@ const AISolutions: React.FC = () => {
                 <h3 className="text-xl font-semibold">AI Platform 2025</h3>
               </div>
               <p className="text-gray-600 mb-4">
-                Revolutionary AI platform delivering unprecedented business transformation with
-                measurable results.
+                Revolutionary AI platform delivering unprecedented business
+                transformation with measurable results.
               </p>
               <Link
                 to="/services/ai-platform"
@@ -47,8 +60,8 @@ const AISolutions: React.FC = () => {
                 <h3 className="text-xl font-semibold">Quantum AI Security</h3>
               </div>
               <p className="text-gray-600 mb-4">
-                Advanced quantum AI security framework providing unprecedented protection against
-                emerging threats.
+                Advanced quantum AI security framework providing unprecedented
+                protection against emerging threats.
               </p>
               <Link
                 to="/services/quantum-ai-security"
@@ -64,7 +77,8 @@ const AISolutions: React.FC = () => {
                 <h3 className="text-xl font-semibold">AI Performance</h3>
               </div>
               <p className="text-gray-600 mb-4">
-                Optimize AI performance with advanced monitoring and optimization tools.
+                Optimize AI performance with advanced monitoring and
+                optimization tools.
               </p>
               <Link
                 to="/services/ai-performance"

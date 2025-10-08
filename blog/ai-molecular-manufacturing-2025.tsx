@@ -1,6 +1,9 @@
 import { Helmet } from "react-helmet-async"
 import { Link } from "react-router-dom"
 import {ArrowLeft, Atom, Sparkles, CheckCircle} Beaker; Factory } from "lucide-react"
+
+
+
 const AIMolecularManufacturing2025 = () =>
   return (<div>
       <div></div>

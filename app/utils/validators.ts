@@ -16,7 +16,8 @@ const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 /**
  * Phone number validation regex (US format)
  */
-const PHONE_REGEX = /^(\+1\s?)?(\([0-9]{3}\)|[0-9]{3})[-\s]?[0-9]{3}[-\s]?[0-9]{4}$/;
+const PHONE_REGEX =
+  /^(\+1\s?)?(\([0-9]{3}\)|[0-9]{3})[-\s]?[0-9]{3}[-\s]?[0-9]{4}$/;
 
 /**
  * URL validation regex
@@ -98,7 +99,7 @@ export function isStrongPassword(password: string): boolean {
   const hasUpperCase = /[A-Z]/.test(password);
   const hasLowerCase = /[a-z]/.test(password);
   const hasNumber = /[0-9]/.test(password);
-  
+
   return hasMinLength && hasUpperCase && hasLowerCase && hasNumber;
 }
 
@@ -107,13 +108,13 @@ export function isStrongPassword(password: string): boolean {
  */
 export function getPasswordStrength(password: string): number {
   let score = 0;
-  
+
   if (password.length >= 8) score++;
   if (password.length >= 12) score++;
   if (/[A-Z]/.test(password) && /[a-z]/.test(password)) score++;
   if (/[0-9]/.test(password)) score++;
   if (/[^a-zA-Z0-9]/.test(password)) score++;
-  
+
   return Math.min(score, 4);
 }
 
@@ -121,29 +122,29 @@ export function getPasswordStrength(password: string): number {
  * Validate credit card number using Luhn algorithm
  */
 export function isValidCreditCard(cardNumber: string): boolean {
-  const cleaned = cardNumber.replace(/\s/g, '');
-  
+  const cleaned = cardNumber.replace(/\s/g, "");
+
   if (!/^\d{13,19}$/.test(cleaned)) {
     return false;
   }
-  
+
   let sum = 0;
   let isEven = false;
-  
+
   for (let i = cleaned.length - 1; i >= 0; i--) {
     let digit = parseInt(cleaned.charAt(i), 10);
-    
+
     if (isEven) {
       digit *= 2;
       if (digit > 9) {
         digit -= 9;
       }
     }
-    
+
     sum += digit;
     isEven = !isEven;
   }
-  
+
   return sum % 10 === 0;
 }
 
@@ -158,7 +159,7 @@ export function isValidZipCode(zipCode: string): boolean {
  * Sanitize HTML to prevent XSS
  */
 export function sanitizeHtml(html: string): string {
-  const div = document.createElement('div');
+  const div = document.createElement("div");
   div.textContent = html;
   return div.innerHTML;
 }
@@ -168,19 +169,19 @@ export function sanitizeHtml(html: string): string {
  */
 export function validateObject<T extends Record<string, unknown>>(
   obj: T,
-  schema: Record<keyof T, (value: unknown) => boolean>
+  schema: Record<keyof T, (value: unknown) => boolean>,
 ): ValidationResult {
   const errors: string[] = [];
-  
+
   for (const key in schema) {
     const validator = schema[key];
     const value = obj[key];
-    
+
     if (!validator(value)) {
       errors.push(`Invalid value for field: ${String(key)}`);
     }
   }
-  
+
   return {
     isValid: errors.length === 0,
     errors,
@@ -199,25 +200,25 @@ export interface FormField {
 }
 
 export function validateForm(
-  fields: Record<string, FormField>
+  fields: Record<string, FormField>,
 ): Record<string, string[]> {
   const errors: Record<string, string[]> = {};
-  
+
   for (const fieldName in fields) {
     const field = fields[fieldName];
     const fieldErrors: string[] = [];
-    
+
     for (const validator of field.validators) {
       if (!validator.validate(field.value)) {
         fieldErrors.push(validator.message);
       }
     }
-    
+
     if (fieldErrors.length > 0) {
       errors[fieldName] = fieldErrors;
     }
   }
-  
+
   return errors;
 }
 
@@ -225,27 +226,35 @@ export function validateForm(
  * Common form validators
  */
 export const validators = {
-  required: (message = 'This field is required') => ({
+  required: (message = "This field is required") => ({
     validate: isRequired,
     message,
   }),
-  email: (message = 'Please enter a valid email address') => ({
+  email: (message = "Please enter a valid email address") => ({
     validate: isValidEmail,
     message,
   }),
-  phone: (message = 'Please enter a valid phone number') => ({
+  phone: (message = "Please enter a valid phone number") => ({
     validate: isValidPhone,
     message,
   }),
-  minLength: (min: number, message = `Minimum length is ${min} characters`) => ({
+  minLength: (
+    min: number,
+    message = `Minimum length is ${min} characters`,
+  ) => ({
     validate: (value: string) => minLength(value, min),
     message,
   }),
-  maxLength: (max: number, message = `Maximum length is ${max} characters`) => ({
+  maxLength: (
+    max: number,
+    message = `Maximum length is ${max} characters`,
+  ) => ({
     validate: (value: string) => maxLength(value, max),
     message,
   }),
-  password: (message = 'Password must be at least 8 characters with uppercase, lowercase, and number') => ({
+  password: (
+    message = "Password must be at least 8 characters with uppercase, lowercase, and number",
+  ) => ({
     validate: isStrongPassword,
     message,
   }),

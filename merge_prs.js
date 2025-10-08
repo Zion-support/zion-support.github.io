@@ -1,7 +1,9 @@
-#!/usr/bin/env node
-
 import https from 'https';
 import { execSync } from 'child_process';
+#!/usr/bin/env node
+
+
+
 
 // GitHub API configuration
 const _GITHUB_API_BASE = 'https://api.github.com';

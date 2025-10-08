@@ -1,31 +1,31 @@
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
+const fs = require("fs");
+const path = require("path");
+const { execSync } = require("child_process");
 
-console.log('🚀 Applying codebase improvements...\n');
+console.log("🚀 Applying codebase improvements...\n");
 
 const improvements = {
   performance: {
-    name: 'Performance Optimizations',
-    items: []
+    name: "Performance Optimizations",
+    items: [],
   },
   security: {
-    name: 'Security Enhancements',
-    items: []
+    name: "Security Enhancements",
+    items: [],
   },
   codeQuality: {
-    name: 'Code Quality',
-    items: []
+    name: "Code Quality",
+    items: [],
   },
   documentation: {
-    name: 'Documentation',
-    items: []
-  }
+    name: "Documentation",
+    items: [],
+  },
 };
 
 // 1. Create comprehensive .env.example if it doesn't exist
-console.log('📋 1. Creating environment template...');
-if (!fs.existsSync('.env.example')) {
+console.log("📋 1. Creating environment template...");
+if (!fs.existsSync(".env.example")) {
   const envTemplate = `# Application Configuration
 NODE_ENV=production
 VITE_APP_NAME="Zion Tech Group"
@@ -48,15 +48,15 @@ VITE_ENABLE_PERFORMANCE_MONITORING=true
 VITE_CSP_ENABLED=true
 VITE_HSTS_ENABLED=true
 `;
-  fs.writeFileSync('.env.example', envTemplate);
-  improvements.documentation.items.push('Created .env.example template');
-  console.log('  ✓ Created .env.example');
+  fs.writeFileSync(".env.example", envTemplate);
+  improvements.documentation.items.push("Created .env.example template");
+  console.log("  ✓ Created .env.example");
 } else {
-  console.log('  ℹ .env.example already exists');
+  console.log("  ℹ .env.example already exists");
 }
 
 // 2. Create/update .gitignore
-console.log('\n📋 2. Updating .gitignore...');
+console.log("\n📋 2. Updating .gitignore...");
 const gitignoreAdditions = `
 # Error logs
 *.log
@@ -109,104 +109,114 @@ mark_*.cjs
 `;
 
 try {
-  let gitignore = fs.existsSync('.gitignore') ? fs.readFileSync('.gitignore', 'utf8') : '';
-  if (!gitignore.includes('*.log')) {
-    fs.appendFileSync('.gitignore', gitignoreAdditions);
-    improvements.codeQuality.items.push('Updated .gitignore with comprehensive rules');
-    console.log('  ✓ Updated .gitignore');
+  let gitignore = fs.existsSync(".gitignore")
+    ? fs.readFileSync(".gitignore", "utf8")
+    : "";
+  if (!gitignore.includes("*.log")) {
+    fs.appendFileSync(".gitignore", gitignoreAdditions);
+    improvements.codeQuality.items.push(
+      "Updated .gitignore with comprehensive rules",
+    );
+    console.log("  ✓ Updated .gitignore");
   } else {
-    console.log('  ℹ .gitignore already comprehensive');
+    console.log("  ℹ .gitignore already comprehensive");
   }
 } catch (error) {
-  console.log('  ⚠ Could not update .gitignore');
+  console.log("  ⚠ Could not update .gitignore");
 }
 
 // 3. Create performance budget configuration
-console.log('\n📋 3. Creating performance budget...');
+console.log("\n📋 3. Creating performance budget...");
 const perfBudget = {
   budgets: [
     {
-      resourceType: 'script',
-      budget: 300
+      resourceType: "script",
+      budget: 300,
     },
     {
-      resourceType: 'total',
-      budget: 500
+      resourceType: "total",
+      budget: 500,
     },
     {
-      resourceType: 'image',
-      budget: 200
-    }
+      resourceType: "image",
+      budget: 200,
+    },
   ],
   metrics: {
     firstContentfulPaint: 2000,
     largestContentfulPaint: 2500,
     timeToInteractive: 3500,
     totalBlockingTime: 300,
-    cumulativeLayoutShift: 0.1
-  }
+    cumulativeLayoutShift: 0.1,
+  },
 };
 
-fs.writeFileSync('performance-budget.json', JSON.stringify(perfBudget, null, 2));
-improvements.performance.items.push('Created performance budget configuration');
-console.log('  ✓ Created performance-budget.json');
+fs.writeFileSync(
+  "performance-budget.json",
+  JSON.stringify(perfBudget, null, 2),
+);
+improvements.performance.items.push("Created performance budget configuration");
+console.log("  ✓ Created performance-budget.json");
 
 // 4. Create security headers configuration
-console.log('\n📋 4. Creating security headers...');
+console.log("\n📋 4. Creating security headers...");
 const securityHeaders = {
   headers: [
     {
-      key: 'X-DNS-Prefetch-Control',
-      value: 'on'
+      key: "X-DNS-Prefetch-Control",
+      value: "on",
     },
     {
-      key: 'Strict-Transport-Security',
-      value: 'max-age=63072000; includeSubDomains; preload'
+      key: "Strict-Transport-Security",
+      value: "max-age=63072000; includeSubDomains; preload",
     },
     {
-      key: 'X-Frame-Options',
-      value: 'SAMEORIGIN'
+      key: "X-Frame-Options",
+      value: "SAMEORIGIN",
     },
     {
-      key: 'X-Content-Type-Options',
-      value: 'nosniff'
+      key: "X-Content-Type-Options",
+      value: "nosniff",
     },
     {
-      key: 'X-XSS-Protection',
-      value: '1; mode=block'
+      key: "X-XSS-Protection",
+      value: "1; mode=block",
     },
     {
-      key: 'Referrer-Policy',
-      value: 'strict-origin-when-cross-origin'
+      key: "Referrer-Policy",
+      value: "strict-origin-when-cross-origin",
     },
     {
-      key: 'Permissions-Policy',
-      value: 'camera=(), microphone=(), geolocation=()'
-    }
-  ]
+      key: "Permissions-Policy",
+      value: "camera=(), microphone=(), geolocation=()",
+    },
+  ],
 };
 
-fs.writeFileSync('security-headers.json', JSON.stringify(securityHeaders, null, 2));
-improvements.security.items.push('Created security headers configuration');
-console.log('  ✓ Created security-headers.json');
+fs.writeFileSync(
+  "security-headers.json",
+  JSON.stringify(securityHeaders, null, 2),
+);
+improvements.security.items.push("Created security headers configuration");
+console.log("  ✓ Created security-headers.json");
 
 // 5. Create README for the improvements
-console.log('\n📋 5. Creating improvements documentation...');
+console.log("\n📋 5. Creating improvements documentation...");
 const improvementsDoc = `# Codebase Improvements Applied
 
-## Date: ${new Date().toISOString().split('T')[0]}
+## Date: ${new Date().toISOString().split("T")[0]}
 
 ### Performance Optimizations
-${improvements.performance.items.map(item => `- ${item}`).join('\n')}
+${improvements.performance.items.map((item) => `- ${item}`).join("\n")}
 
 ### Security Enhancements
-${improvements.security.items.map(item => `- ${item}`).join('\n')}
+${improvements.security.items.map((item) => `- ${item}`).join("\n")}
 
 ### Code Quality
-${improvements.codeQuality.items.map(item => `- ${item}`).join('\n')}
+${improvements.codeQuality.items.map((item) => `- ${item}`).join("\n")}
 
 ### Documentation
-${improvements.documentation.items.map(item => `- ${item}`).join('\n')}
+${improvements.documentation.items.map((item) => `- ${item}`).join("\n")}
 
 ## Performance Budget
 Monitor bundle sizes and load times against the thresholds in \`performance-budget.json\`.
@@ -255,48 +265,51 @@ const HeavyComponent = lazy(() => import('./HeavyComponent'));
 4. **Deploy**: Test the changes in a staging environment before production
 `;
 
-fs.writeFileSync('IMPROVEMENTS.md', improvementsDoc);
-improvements.documentation.items.push('Created comprehensive improvements documentation');
-console.log('  ✓ Created IMPROVEMENTS.md');
+fs.writeFileSync("IMPROVEMENTS.md", improvementsDoc);
+improvements.documentation.items.push(
+  "Created comprehensive improvements documentation",
+);
+console.log("  ✓ Created IMPROVEMENTS.md");
 
 // 6. Update package.json scripts with new commands
-console.log('\n📋 6. Checking package.json scripts...');
+console.log("\n📋 6. Checking package.json scripts...");
 try {
-  const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
+  const packageJson = JSON.parse(fs.readFileSync("package.json", "utf8"));
   let scriptsUpdated = false;
-  
-  if (!packageJson.scripts['audit:all-comprehensive']) {
-    packageJson.scripts['audit:all-comprehensive'] = 'pnpm run type-check && pnpm run lint && pnpm run test && pnpm run build';
+
+  if (!packageJson.scripts["audit:all-comprehensive"]) {
+    packageJson.scripts["audit:all-comprehensive"] =
+      "pnpm run type-check && pnpm run lint && pnpm run test && pnpm run build";
     scriptsUpdated = true;
   }
-  
-  if (!packageJson.scripts['check:performance']) {
-    packageJson.scripts['check:performance'] = 'pnpm run build && du -sh dist';
+
+  if (!packageJson.scripts["check:performance"]) {
+    packageJson.scripts["check:performance"] = "pnpm run build && du -sh dist";
     scriptsUpdated = true;
   }
-  
+
   if (scriptsUpdated) {
-    fs.writeFileSync('package.json', JSON.stringify(packageJson, null, 2));
-    improvements.codeQuality.items.push('Added comprehensive audit scripts');
-    console.log('  ✓ Updated package.json scripts');
+    fs.writeFileSync("package.json", JSON.stringify(packageJson, null, 2));
+    improvements.codeQuality.items.push("Added comprehensive audit scripts");
+    console.log("  ✓ Updated package.json scripts");
   } else {
-    console.log('  ℹ Package.json scripts already optimal');
+    console.log("  ℹ Package.json scripts already optimal");
   }
 } catch (error) {
-  console.log('  ⚠ Could not update package.json');
+  console.log("  ⚠ Could not update package.json");
 }
 
 // Summary
-console.log('\n' + '='.repeat(60));
-console.log('✅ IMPROVEMENTS COMPLETE');
-console.log('='.repeat(60));
+console.log("\n" + "=".repeat(60));
+console.log("✅ IMPROVEMENTS COMPLETE");
+console.log("=".repeat(60));
 
 Object.entries(improvements).forEach(([category, data]) => {
   if (data.items.length > 0) {
     console.log(`\n${data.name}:`);
-    data.items.forEach(item => console.log(`  ✓ ${item}`));
+    data.items.forEach((item) => console.log(`  ✓ ${item}`));
   }
 });
 
-console.log('\n📚 See IMPROVEMENTS.md for detailed documentation');
-console.log('\n🎉 All improvements applied successfully!');
+console.log("\n📚 See IMPROVEMENTS.md for detailed documentation");
+console.log("\n🎉 All improvements applied successfully!");

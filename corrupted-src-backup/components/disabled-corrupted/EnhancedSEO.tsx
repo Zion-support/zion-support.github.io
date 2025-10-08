@@ -1,6 +1,6 @@
-import React, { useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { useLocation } from 'react-router-dom';
+import React, { useEffect } from "react";
+import { Helmet } from "react-helmet-async";
+import { useLocation } from "react-router-dom";
 
 interface SEOProps {
   title?: string;
@@ -20,13 +20,13 @@ interface SEOProps {
 }
 
 const EnhancedSEO: React.FC<SEOProps> = ({
-  title = 'Zion Tech Group - Advanced AI and IT Solutions',
-  description = 'Leading provider of AI and IT solutions, offering cutting-edge technology services, enterprise software development, and digital transformation solutions.',
-  keywords = 'AI solutions, IT services, enterprise software, digital transformation, machine learning, artificial intelligence, technology consulting',
-  image = '/images/zion-tech-group-og-image.jpg',
+  title = "Zion Tech Group - Advanced AI and IT Solutions",
+  description = "Leading provider of AI and IT solutions, offering cutting-edge technology services, enterprise software development, and digital transformation solutions.",
+  keywords = "AI solutions, IT services, enterprise software, digital transformation, machine learning, artificial intelligence, technology consulting",
+  image = "/images/zion-tech-group-og-image.jpg",
   url,
-  type = 'website',
-  author = 'Zion Tech Group',
+  type = "website",
+  author = "Zion Tech Group",
   publishedTime,
   modifiedTime,
   section,
@@ -42,59 +42,59 @@ const EnhancedSEO: React.FC<SEOProps> = ({
 
   // Generate structured data
   const structuredData = {
-    '@context': 'https://schema.org',
-    '@type': 'Organization',
-    name: 'Zion Tech Group',
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "Zion Tech Group",
     description: description,
     url: window.location.origin,
     logo: `${window.location.origin}/images/logo.png`,
     sameAs: [
-      'https://linkedin.com/company/zion-tech-group',
-      'https://twitter.com/ziontechgroup',
-      'https://github.com/zion-tech-group',
+      "https://linkedin.com/company/zion-tech-group",
+      "https://twitter.com/ziontechgroup",
+      "https://github.com/zion-tech-group",
     ],
     contactPoint: {
-      '@type': 'ContactPoint',
-      telephone: '+1-555-0123',
-      contactType: 'customer service',
-      areaServed: 'US',
-      availableLanguage: 'English',
+      "@type": "ContactPoint",
+      telephone: "+1-555-0123",
+      contactType: "customer service",
+      areaServed: "US",
+      availableLanguage: "English",
     },
     address: {
-      '@type': 'PostalAddress',
-      streetAddress: '123 Tech Street',
-      addressLocality: 'San Francisco',
-      addressRegion: 'CA',
-      postalCode: '94105',
-      addressCountry: 'US',
+      "@type": "PostalAddress",
+      streetAddress: "123 Tech Street",
+      addressLocality: "San Francisco",
+      addressRegion: "CA",
+      postalCode: "94105",
+      addressCountry: "US",
     },
   };
 
   // Add article structured data if type is article
-  if (type === 'article') {
+  if (type === "article") {
     const articleData = {
-      '@context': 'https://schema.org',
-      '@type': 'Article',
+      "@context": "https://schema.org",
+      "@type": "Article",
       headline: title,
       description: description,
       image: image,
       author: {
-        '@type': 'Organization',
+        "@type": "Organization",
         name: author,
       },
       publisher: {
-        '@type': 'Organization',
-        name: 'Zion Tech Group',
+        "@type": "Organization",
+        name: "Zion Tech Group",
         logo: {
-          '@type': 'ImageObject',
+          "@type": "ImageObject",
           url: `${window.location.origin}/images/logo.png`,
         },
       },
       datePublished: publishedTime || currentTime,
       dateModified: modifiedTime || currentTime,
       mainEntityOfPage: {
-        '@type': 'WebPage',
-        '@id': currentUrl,
+        "@type": "WebPage",
+        "@id": currentUrl,
       },
     };
 
@@ -103,25 +103,25 @@ const EnhancedSEO: React.FC<SEOProps> = ({
     }
 
     if (tags.length > 0) {
-      (articleData as any).keywords = tags.join(', ');
+      (articleData as any).keywords = tags.join(", ");
     }
 
-    (structuredData as any)['@graph'] = [structuredData, articleData];
+    (structuredData as any)["@graph"] = [structuredData, articleData];
   }
 
   // Track page view
   useEffect(() => {
     // Google Analytics tracking
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('config', 'GA_MEASUREMENT_ID', {
+    if (typeof window !== "undefined" && (window as any).gtag) {
+      (window as any).gtag("config", "GA_MEASUREMENT_ID", {
         page_title: title,
         page_location: currentUrl,
       });
     }
 
     // Custom analytics tracking
-    if (typeof window !== 'undefined' && (window as any).analytics) {
-      (window as any).analytics.track('Page Viewed', {
+    if (typeof window !== "undefined" && (window as any).analytics) {
+      (window as any).analytics.track("Page Viewed", {
         title,
         url: currentUrl,
         type,
@@ -140,7 +140,7 @@ const EnhancedSEO: React.FC<SEOProps> = ({
       {/* Robots */}
       <meta
         name="robots"
-        content={`${noindex ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}`}
+        content={`${noindex ? "noindex" : "index"}, ${nofollow ? "nofollow" : "follow"}`}
       />
 
       {/* Canonical URL */}
@@ -152,7 +152,9 @@ const EnhancedSEO: React.FC<SEOProps> = ({
       <meta property="og:description" content={description} />
       <meta
         property="og:image"
-        content={image.startsWith('http') ? image : `${window.location.origin}${image}`}
+        content={
+          image.startsWith("http") ? image : `${window.location.origin}${image}`
+        }
       />
       <meta property="og:url" content={currentUrl} />
       <meta property="og:site_name" content="Zion Tech Group" />
@@ -164,7 +166,9 @@ const EnhancedSEO: React.FC<SEOProps> = ({
       <meta name="twitter:description" content={description} />
       <meta
         name="twitter:image"
-        content={image.startsWith('http') ? image : `${window.location.origin}${image}`}
+        content={
+          image.startsWith("http") ? image : `${window.location.origin}${image}`
+        }
       />
       <meta name="twitter:site" content="@ziontechgroup" />
       <meta name="twitter:creator" content="@ziontechgroup" />
@@ -183,14 +187,32 @@ const EnhancedSEO: React.FC<SEOProps> = ({
 
       {/* Favicon */}
       <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+      <link
+        rel="apple-touch-icon"
+        sizes="180x180"
+        href="/apple-touch-icon.png"
+      />
+      <link
+        rel="icon"
+        type="image/png"
+        sizes="32x32"
+        href="/favicon-32x32.png"
+      />
+      <link
+        rel="icon"
+        type="image/png"
+        sizes="16x16"
+        href="/favicon-16x16.png"
+      />
       <link rel="manifest" href="/site.webmanifest" />
 
       {/* Preconnect to external domains */}
       <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+      <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossOrigin="anonymous"
+      />
       <link rel="preconnect" href="https://www.google-analytics.com" />
 
       {/* DNS Prefetch */}
@@ -198,23 +220,25 @@ const EnhancedSEO: React.FC<SEOProps> = ({
       <link rel="dns-prefetch" href="//www.google-analytics.com" />
 
       {/* Structured Data */}
-      <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
+      <script type="application/ld+json">
+        {JSON.stringify(structuredData)}
+      </script>
 
       {/* Additional structured data for breadcrumbs */}
-      {location.pathname !== '/' && (
+      {location.pathname !== "/" && (
         <script type="application/ld+json">
           {JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'BreadcrumbList',
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
             itemListElement: [
               {
-                '@type': 'ListItem',
+                "@type": "ListItem",
                 position: 1,
-                name: 'Home',
+                name: "Home",
                 item: window.location.origin,
               },
               {
-                '@type': 'ListItem',
+                "@type": "ListItem",
                 position: 2,
                 name: title,
                 item: currentUrl,

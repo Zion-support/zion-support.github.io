@@ -1,7 +1,9 @@
-#!/usr/bin/env node
-
 import fs from 'fs';
 import { execSync } from 'child_process';
+#!/usr/bin/env node
+
+
+
 
 // Get all files with remaining metadata issues
 const files = execSync("find /workspace/app -name '*.tsx' -o -name '*.ts' | xargs grep -l 'export const metadata'", { encoding: 'utf8' })

@@ -4,10 +4,10 @@
  */
 
 export enum ErrorSeverity {
-  LOW = 'low',
-  MEDIUM = 'medium',
-  HIGH = 'high',
-  CRITICAL = 'critical',
+  LOW = "low",
+  MEDIUM = "medium",
+  HIGH = "high",
+  CRITICAL = "critical",
 }
 
 export interface ErrorLogEntry {
@@ -32,7 +32,7 @@ class ErrorLogger {
     message: string,
     severity: ErrorSeverity = ErrorSeverity.MEDIUM,
     error?: Error,
-    context?: Record<string, unknown>
+    context?: Record<string, unknown>,
   ): void {
     const entry: ErrorLogEntry = {
       timestamp: new Date().toISOString(),
@@ -40,8 +40,9 @@ class ErrorLogger {
       message,
       error,
       context,
-      userAgent: typeof window !== 'undefined' ? window.navigator.userAgent : undefined,
-      url: typeof window !== 'undefined' ? window.location.href : undefined,
+      userAgent:
+        typeof window !== "undefined" ? window.navigator.userAgent : undefined,
+      url: typeof window !== "undefined" ? window.location.href : undefined,
       stackTrace: error?.stack,
     };
 
@@ -52,12 +53,15 @@ class ErrorLogger {
     }
 
     // Console logging in development
-    if (process.env['NODE_ENV'] === 'development') {
+    if (process.env["NODE_ENV"] === "development") {
       this.logToConsole(entry);
     }
 
     // Send to external logging service in production
-    if (process.env['NODE_ENV'] === 'production' && severity === ErrorSeverity.CRITICAL) {
+    if (
+      process.env["NODE_ENV"] === "production" &&
+      severity === ErrorSeverity.CRITICAL
+    ) {
       this.sendToExternalService(entry);
     }
   }
@@ -67,22 +71,23 @@ class ErrorLogger {
    */
   private logToConsole(entry: ErrorLogEntry): void {
     const styles: Record<ErrorSeverity, string> = {
-      [ErrorSeverity.LOW]: 'color: #4ade80',
-      [ErrorSeverity.MEDIUM]: 'color: #fbbf24',
-      [ErrorSeverity.HIGH]: 'color: #fb923c',
-      [ErrorSeverity.CRITICAL]: 'color: #ef4444; font-weight: bold',
+      [ErrorSeverity.LOW]: "color: #4ade80",
+      [ErrorSeverity.MEDIUM]: "color: #fbbf24",
+      [ErrorSeverity.HIGH]: "color: #fb923c",
+      [ErrorSeverity.CRITICAL]: "color: #ef4444; font-weight: bold",
     };
 
-    console.group(`%c[${entry.severity.toUpperCase()}] ${entry.message}`, styles[entry.severity]);
-    console.log('Timestamp:', entry.timestamp);
+    console.group(
+      `%c[${entry.severity.toUpperCase()}] ${entry.message}`,
+      styles[entry.severity],
+    );
+
     if (entry.error) {
-      console.error('Error:', entry.error);
+      console.error("Error:", entry.error);
     }
     if (entry.context) {
-      console.log('Context:', entry.context);
     }
     if (entry.stackTrace) {
-      console.log('Stack Trace:', entry.stackTrace);
     }
     console.groupEnd();
   }
@@ -100,9 +105,9 @@ class ErrorLogger {
       }
 
       await fetch(endpoint, {
-        method: 'POST',
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
         body: JSON.stringify({
           ...entry,
@@ -117,7 +122,7 @@ class ErrorLogger {
       });
     } catch (error) {
       // Silently fail to avoid infinite loop
-      console.error('Failed to send error to external service:', error);
+      console.error("Failed to send error to external service:", error);
     }
   }
 
@@ -132,7 +137,7 @@ class ErrorLogger {
    * Get logs by severity
    */
   getLogsBySeverity(severity: ErrorSeverity): ErrorLogEntry[] {
-    return this.logs.filter(log => log.severity === severity);
+    return this.logs.filter((log) => log.severity === severity);
   }
 
   /**
@@ -154,14 +159,22 @@ class ErrorLogger {
 const errorLogger = new ErrorLogger();
 
 // Convenience functions
-export const logError = (message: string, error?: Error, context?: Record<string, unknown>) =>
-  errorLogger.log(message, ErrorSeverity.MEDIUM, error, context);
+export const logError = (
+  message: string,
+  error?: Error,
+  context?: Record<string, unknown>,
+) => errorLogger.log(message, ErrorSeverity.MEDIUM, error, context);
 
-export const logCritical = (message: string, error?: Error, context?: Record<string, unknown>) =>
-  errorLogger.log(message, ErrorSeverity.CRITICAL, error, context);
+export const logCritical = (
+  message: string,
+  error?: Error,
+  context?: Record<string, unknown>,
+) => errorLogger.log(message, ErrorSeverity.CRITICAL, error, context);
 
-export const logWarning = (message: string, context?: Record<string, unknown>) =>
-  errorLogger.log(message, ErrorSeverity.LOW, undefined, context);
+export const logWarning = (
+  message: string,
+  context?: Record<string, unknown>,
+) => errorLogger.log(message, ErrorSeverity.LOW, undefined, context);
 
 export const logInfo = (message: string, context?: Record<string, unknown>) =>
   errorLogger.log(message, ErrorSeverity.LOW, undefined, context);

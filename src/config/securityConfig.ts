@@ -9,15 +9,24 @@ export const securityConfig = {
    */
   csp: {
     directives: {
-      'default-src': ["'self'"],
-      'script-src': ["'self'", "'unsafe-inline'", "'unsafe-eval'", 'https://cdn.jsdelivr.net'],
-      'style-src': ["'self'", "'unsafe-inline'", 'https://fonts.googleapis.com'],
-      'font-src': ["'self'", 'https://fonts.gstatic.com'],
-      'img-src': ["'self'", 'data:', 'https:', 'blob:'],
-      'connect-src': ["'self'", 'https://api.github.com'],
-      'frame-ancestors': ["'none'"],
-      'base-uri': ["'self'"],
-      'form-action': ["'self'"],
+      "default-src": ["'self'"],
+      "script-src": [
+        "'self'",
+        "'unsafe-inline'",
+        "'unsafe-eval'",
+        "https://cdn.jsdelivr.net",
+      ],
+      "style-src": [
+        "'self'",
+        "'unsafe-inline'",
+        "https://fonts.googleapis.com",
+      ],
+      "font-src": ["'self'", "https://fonts.gstatic.com"],
+      "img-src": ["'self'", "data:", "https:", "blob:"],
+      "connect-src": ["'self'", "https://api.github.com"],
+      "frame-ancestors": ["'none'"],
+      "base-uri": ["'self'"],
+      "form-action": ["'self'"],
     },
   },
 
@@ -35,9 +44,10 @@ export const securityConfig = {
    * CORS Configuration
    */
   cors: {
-    origin: process.env.NODE_ENV === 'production' 
-      ? ['https://zion.app', 'https://www.zion.app']
-      : ['http:localhost: 3000', 'http:localhost: 5173'],
+    origin:
+      process.env.NODE_ENV === "production"
+        ? ["https://zion.app", "https://www.zion.app"]
+        : ["http:localhost: 3000", "http:localhost: 5173"],
     credentials: true,
     maxAge: 86400, // 24 hours
   },
@@ -46,14 +56,15 @@ export const securityConfig = {
    * Session Configuration
    */
   session: {
-    secret: process.env.SESSION_SECRET || 'fallback-secret-change-in-production',
+    secret:
+      process.env.SESSION_SECRET || "fallback-secret-change-in-production",
     resave: false,
     saveUninitialized: false,
     cookie: {
-      secure: process.env.NODE_ENV === 'production',
+      secure: process.env.NODE_ENV === "production",
       httpOnly: true,
       maxAge: 24 * 60 * 60 * 1000, // 24 hours
-      sameSite: 'strict' as const,
+      sameSite: "strict" as const,
     },
   },
 
@@ -75,7 +86,7 @@ export const securityConfig = {
     },
     url: {
       maxLength: 2048,
-      allowedProtocols: ['http', 'https'],
+      allowedProtocols: ["http", "https"],
     },
   },
 
@@ -83,12 +94,12 @@ export const securityConfig = {
    * Security Headers
    */
   headers: {
-    'X-Content-Type-Options': 'nosniff',
-    'X-Frame-Options': 'DENY',
-    'X-XSS-Protection': '1; mode=block',
-    'Strict-Transport-Security': 'max-age=31536000; includeSubDomains',
-    'Referrer-Policy': 'strict-origin-when-cross-origin',
-    'Permissions-Policy': 'geolocation=(), microphone=(), camera=()',
+    "X-Content-Type-Options": "nosniff",
+    "X-Frame-Options": "DENY",
+    "X-XSS-Protection": "1; mode=block",
+    "Strict-Transport-Security": "max-age=31536000; includeSubDomains",
+    "Referrer-Policy": "strict-origin-when-cross-origin",
+    "Permissions-Policy": "geolocation=(), microphone=(), camera=()",
   },
 };
 
@@ -96,12 +107,12 @@ export const securityConfig = {
  * Sanitize user input
  */
 export function sanitizeInput(input: string): string {
-  if (typeof input !== 'string') return '';
-  
+  if (typeof input !== "string") return "";
+
   return input
-    .replace(/[<>]/g, '') // Remove angle brackets
-    .replace(/javascript:/gi, '') // Remove javascript: protocol
-    .replace(/on\w+=/gi, '') // Remove event handlers
+    .replace(/[<>]/g, "") // Remove angle brackets
+    .replace(/javascript:/gi, "") // Remove javascript: protocol
+    .replace(/on\w+=/gi, "") // Remove event handlers
     .trim()
     .slice(0, 10000); // Limit length
 }
@@ -122,7 +133,9 @@ export function validateEmail(email: string): boolean {
 export function validateUrl(url: string): boolean {
   try {
     const parsed = new URL(url);
-    return securityConfig.validation.url.allowedProtocols.includes(parsed.protocol.replace(':', ''));
+    return securityConfig.validation.url.allowedProtocols.includes(
+      parsed.protocol.replace(":", ""),
+    );
   } catch {
     return false;
   }
@@ -147,19 +160,19 @@ export function validatePassword(password: string): {
   }
 
   if (rules.requireUppercase && !/[A-Z]/.test(password)) {
-    errors.push('Password must contain at least one uppercase letter');
+    errors.push("Password must contain at least one uppercase letter");
   }
 
   if (rules.requireLowercase && !/[a-z]/.test(password)) {
-    errors.push('Password must contain at least one lowercase letter');
+    errors.push("Password must contain at least one lowercase letter");
   }
 
   if (rules.requireNumbers && !/\d/.test(password)) {
-    errors.push('Password must contain at least one number');
+    errors.push("Password must contain at least one number");
   }
 
   if (rules.requireSpecialChars && !/[!@#$%^&*(),.?":{}|<>]/.test(password)) {
-    errors.push('Password must contain at least one special character');
+    errors.push("Password must contain at least one special character");
   }
 
   return {
@@ -173,9 +186,9 @@ export function validatePassword(password: string): {
  */
 export function generateCSPHeader(): string {
   const directives = Object.entries(securityConfig.csp.directives)
-    .map(([key, values]) => `${key} ${values.join(' ')}`)
-    .join('; ');
-  
+    .map(([key, values]) => `${key} ${values.join(" ")}`)
+    .join("; ");
+
   return directives;
 }
 

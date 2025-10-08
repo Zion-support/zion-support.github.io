@@ -1,13 +1,13 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 const EnhancedHeader: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const navigationItems = [
-    { name: 'Home', href: '/' },
-    { name: 'Services', href: '/services' },
-    { name: 'About', href: '/about' },
-    { name: 'Contact', href: '/contact' },
+    { name: "Home", href: "/" },
+    { name: "Services", href: "/services" },
+    { name: "About", href: "/about" },
+    { name: "Contact", href: "/contact" },
   ];
 
   return (
@@ -19,7 +19,7 @@ const EnhancedHeader: React.FC = () => {
           </Link>
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
-            {navigationItems.map(item => (
+            {navigationItems.map((item) => (
               <Link
                 key={item.name}
                 to={item.href}
@@ -30,13 +30,20 @@ const EnhancedHeader: React.FC = () => {
             ))}
           </nav>
           {/* Mobile Menu Button */}
-          <button onClick={() => setIsOpen(!isOpen)} className="md:hidden text-gray-700">
-            {isOpen ? <span className="text-xl">✕</span> : <span className="text-xl">☰</span>}
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className="md:hidden text-gray-700"
+          >
+            {isOpen ? (
+              <span className="text-xl">✕</span>
+            ) : (
+              <span className="text-xl">☰</span>
+            )}
           </button>
         </div>
         {isOpen && (
           <div className="md:hidden py-4 border-t">
-            {navigationItems.map(item => (
+            {navigationItems.map((item) => (
               <Link
                 key={item.name}
                 to={item.href}

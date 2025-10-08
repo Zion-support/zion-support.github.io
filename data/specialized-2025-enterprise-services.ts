@@ -1,3 +1,5 @@
+import { ServiceVariant } from '../types/service-variants'
+import { ServiceVariant } from '../types/service-variants';
 
   id: string;
   name: string;
@@ -57,7 +59,7 @@ const contact =
   email: 'kleber@ziontechgroup && ziontechgroup.com'
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup && ziontechgroup.com'
-import { ServiceVariant } from '../types/service-variants'
+
 export interface SpecializedEnterpriseService {id: string, name: string,
   tagline: string, price: string,
   period: string, description: string,
@@ -965,7 +967,7 @@ export default specializedEnterpriseServices;
 ;
 export default specializedEnterpriseServices;
 ;
-import { ServiceVariant } from '../types/service-variants';
+
 export interface SpecializedEnterpriseService {;
   id: string;
   name: string;

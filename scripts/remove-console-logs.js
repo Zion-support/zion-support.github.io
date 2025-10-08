@@ -1,8 +1,11 @@
-#!/usr/bin/env node
-
 import fs from 'fs';
 import path from 'path';
 import { glob } from 'glob';
+#!/usr/bin/env node
+
+
+
+
 
 // Function to remove console.log statements from a file
 function removeConsoleLogs(filePath) {

@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 interface ServiceCardProps {
   title: string;
@@ -6,7 +6,11 @@ interface ServiceCardProps {
   icon?: React.ReactNode;
 }
 
-const ServiceCard: React.FC<ServiceCardProps> = ({ title, description, icon }) => {
+const ServiceCard: React.FC<ServiceCardProps> = ({
+  title,
+  description,
+  icon,
+}) => {
   return (
     <div className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
       {icon && <div className="mb-4">{icon}</div>}

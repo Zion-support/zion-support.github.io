@@ -36,12 +36,12 @@ class Analytics {
   }
 
   private initializeUserProperties(): UserProperties {
-    if (typeof window === 'undefined') {
+    if (typeof window === "undefined") {
       return {
         sessionId: this.sessionId,
-        userAgent: 'server',
-        language: 'en',
-        timezone: 'UTC',
+        userAgent: "server",
+        language: "en",
+        timezone: "UTC",
       };
     }
 
@@ -60,7 +60,7 @@ class Analytics {
     action?: string,
     label?: string,
     value?: number,
-    properties?: Record<string, unknown>
+    properties?: Record<string, unknown>,
   ): void {
     const event: AnalyticsEvent = {
       name,
@@ -78,22 +78,30 @@ class Analytics {
   /**
    * Track user interaction
    */
-  trackInteraction(element: string, action: string, category: string = 'user_interaction'): void {
-    this.track('interaction', category, action, element);
+  trackInteraction(
+    element: string,
+    action: string,
+    category: string = "user_interaction",
+  ): void {
+    this.track("interaction", category, action, element);
   }
 
   /**
    * Track performance metrics
    */
-  trackPerformance(metric: string, value: number, unit: string = 'ms'): void {
-    this.track('performance', 'metrics', metric, unit, value);
+  trackPerformance(metric: string, value: number, unit: string = "ms"): void {
+    this.track("performance", "metrics", metric, unit, value);
   }
 
   /**
    * Track business events
    */
-  trackBusiness(event: string, value?: number, properties?: Record<string, unknown>): void {
-    this.track(event, 'business', 'event', undefined, value, properties);
+  trackBusiness(
+    event: string,
+    value?: number,
+    properties?: Record<string, unknown>,
+  ): void {
+    this.track(event, "business", "event", undefined, value, properties);
   }
 
   /**

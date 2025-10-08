@@ -1,5 +1,5 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import React from "react";
+import { Helmet } from "react-helmet-async";
 
 const AboutPage: React.FC = () => {
   return (
@@ -14,7 +14,9 @@ const AboutPage: React.FC = () => {
 
       <div>
         <h1>About Zion Tech Group</h1>
-        <p>Revolutionary AI solutions delivering unprecedented business value.</p>
+        <p>
+          Revolutionary AI solutions delivering unprecedented business value.
+        </p>
       </div>
     </div>
   );

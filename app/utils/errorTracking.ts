@@ -3,22 +3,22 @@
  * Provides comprehensive error tracking with categorization and analytics
  */
 
-import { logger } from './logger';
+import { logger } from "./logger";
 
 export enum ErrorSeverity {
-  Low = 'low',
-  Medium = 'medium',
-  High = 'high',
-  Critical = 'critical',
+  Low = "low",
+  Medium = "medium",
+  High = "high",
+  Critical = "critical",
 }
 
 export enum ErrorCategory {
-  Network = 'network',
-  Validation = 'validation',
-  Authorization = 'authorization',
-  Runtime = 'runtime',
-  Configuration = 'configuration',
-  ExternalService = 'external_service',
+  Network = "network",
+  Validation = "validation",
+  Authorization = "authorization",
+  Runtime = "runtime",
+  Configuration = "configuration",
+  ExternalService = "external_service",
 }
 
 export interface ErrorMetadata {
@@ -64,10 +64,10 @@ class ErrorTrackingService {
    * Set up global error handlers
    */
   private setupGlobalErrorHandlers(): void {
-    if (typeof window === 'undefined') return;
+    if (typeof window === "undefined") return;
 
     // Handle unhandled errors
-    window.addEventListener('error', event => {
+    window.addEventListener("error", (event) => {
       this.trackError(event.error || new Error(event.message), {
         category: ErrorCategory.Runtime,
         severity: ErrorSeverity.High,
@@ -80,12 +80,15 @@ class ErrorTrackingService {
     });
 
     // Handle unhandled promise rejections
-    window.addEventListener('unhandledrejection', event => {
-      this.trackError(new Error(`Unhandled Promise Rejection: ${event.reason}`), {
-        category: ErrorCategory.Runtime,
-        severity: ErrorSeverity.Critical,
-        context: { reason: event.reason },
-      });
+    window.addEventListener("unhandledrejection", (event) => {
+      this.trackError(
+        new Error(`Unhandled Promise Rejection: ${event.reason}`),
+        {
+          category: ErrorCategory.Runtime,
+          severity: ErrorSeverity.Critical,
+          context: { reason: event.reason },
+        },
+      );
     });
   }
 
@@ -94,7 +97,10 @@ class ErrorTrackingService {
    */
   trackError(
     error: Error,
-    metadata: Partial<ErrorMetadata> & { category: ErrorCategory; severity: ErrorSeverity }
+    metadata: Partial<ErrorMetadata> & {
+      category: ErrorCategory;
+      severity: ErrorSeverity;
+    },
   ): string {
     const errorId = this.generateErrorId(error.message);
     const timestamp = Date.now();
@@ -103,8 +109,9 @@ class ErrorTrackingService {
       ...metadata,
       timestamp,
       stackTrace: error.stack,
-      userAgent: typeof window !== 'undefined' ? window.navigator.userAgent : undefined,
-      url: typeof window !== 'undefined' ? window.location.href : undefined,
+      userAgent:
+        typeof window !== "undefined" ? window.navigator.userAgent : undefined,
+      url: typeof window !== "undefined" ? window.location.href : undefined,
     };
 
     const existingError = this.errors.get(errorId);
@@ -138,11 +145,16 @@ class ErrorTrackingService {
     }
 
     // Log the error
-    logger.error(`[${metadata.severity.toUpperCase()}] ${error.message}`, error, 'ErrorTracking', {
-      error_id: errorId,
-      category: metadata.category,
-      ...metadata.context,
-    });
+    logger.error(
+      `[${metadata.severity.toUpperCase()}] ${error.message}`,
+      error,
+      "ErrorTracking",
+      {
+        error_id: errorId,
+        category: metadata.category,
+        ...metadata.context,
+      },
+    );
 
     // Send to external service if critical
     if (metadata.severity === ErrorSeverity.Critical) {
@@ -160,7 +172,7 @@ class ErrorTrackingService {
     let hash = 0;
     for (let i = 0; i < message.length; i++) {
       const char = message.charCodeAt(i);
-      hash = (hash * 32) - hash + char;
+      hash = hash * 32 - hash + char;
       hash = hash & hash; // Convert to 32bit integer
     }
     return `err_${Math.abs(hash).toString(36)}`;
@@ -177,18 +189,18 @@ class ErrorTrackingService {
    * Remove an error listener
    */
   removeListener(listener: (error: TrackedError) => void): void {
-    this.errorListeners = this.errorListeners.filter(l => l !== listener);
+    this.errorListeners = this.errorListeners.filter((l) => l !== listener);
   }
 
   /**
    * Notify all listeners of a new error
    */
   private notifyListeners(error: TrackedError): void {
-    this.errorListeners.forEach(listener => {
+    this.errorListeners.forEach((listener) => {
       try {
         listener(error);
       } catch (listenerError) {
-        logger.error('Error in error listener', listenerError as Error);
+        logger.error("Error in error listener", listenerError as Error);
       }
     });
   }
@@ -201,15 +213,18 @@ class ErrorTrackingService {
     if (!error) return;
 
     try {
-      if (typeof window !== 'undefined' && 'fetch' in window) {
-        await fetch('/api/error-report', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
+      if (typeof window !== "undefined" && "fetch" in window) {
+        await fetch("/api/error-report", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
           body: JSON.stringify(error),
         });
       }
     } catch (reportError) {
-      logger.error('Failed to report error to external service', reportError as Error);
+      logger.error(
+        "Failed to report error to external service",
+        reportError as Error,
+      );
     }
   }
 
@@ -224,14 +239,14 @@ class ErrorTrackingService {
    * Get errors by category
    */
   getErrorsByCategory(category: ErrorCategory): TrackedError[] {
-    return this.getErrors().filter(e => e.metadata.category === category);
+    return this.getErrors().filter((e) => e.metadata.category === category);
   }
 
   /**
    * Get errors by severity
    */
   getErrorsBySeverity(severity: ErrorSeverity): TrackedError[] {
-    return this.getErrors().filter(e => e.metadata.severity === severity);
+    return this.getErrors().filter((e) => e.metadata.severity === severity);
   }
 
   /**
@@ -248,14 +263,16 @@ class ErrorTrackingService {
     const byCategory = {} as Record<ErrorCategory, number>;
     const bySeverity = {} as Record<ErrorSeverity, number>;
 
-    errors.forEach(error => {
+    errors.forEach((error) => {
       byCategory[error.metadata.category] =
         (byCategory[error.metadata.category] || 0) + error.occurrences;
       bySeverity[error.metadata.severity] =
         (bySeverity[error.metadata.severity] || 0) + error.occurrences;
     });
 
-    const topErrors = errors.sort((a, b) => b.occurrences - a.occurrences).slice(0, 10);
+    const topErrors = errors
+      .sort((a, b) => b.occurrences - a.occurrences)
+      .slice(0, 10);
 
     return {
       total: errors.length,
@@ -289,7 +306,10 @@ export const errorTracking = ErrorTrackingService.getInstance();
 export default ErrorTrackingService;
 
 // Export convenience functions for easier testing and usage
-export const trackError = (error: Error, options?: Partial<Omit<ErrorMetadata, 'timestamp'>>) => {
+export const trackError = (
+  error: Error,
+  options?: Partial<Omit<ErrorMetadata, "timestamp">>,
+) => {
   const category = options?.category || ErrorCategory.Runtime;
   const severity = options?.severity || ErrorSeverity.Medium;
 
@@ -302,7 +322,7 @@ export const trackError = (error: Error, options?: Partial<Omit<ErrorMetadata, '
 
 export const getErrorStatistics = () => {
   const stats = errorTracking.getStatistics();
-  const errors = errorTracking.getErrors().map(error => ({
+  const errors = errorTracking.getErrors().map((error) => ({
     ...error,
     context: error.metadata.context,
   }));

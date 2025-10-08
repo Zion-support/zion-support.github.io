@@ -35,25 +35,25 @@ class EnhancedErrorTracker {
   }
 
   private setupGlobalErrorHandler(): void {
-    if (typeof window !== 'undefined') {
-      window.addEventListener('error', event => {
+    if (typeof window !== "undefined") {
+      window.addEventListener("error", (event) => {
         this.trackError(event.error, {
-          component: 'Global',
-          action: 'Uncaught Error',
+          component: "Global",
+          action: "Uncaught Error",
         });
       });
 
-      window.addEventListener('unhandledrejection', event => {
+      window.addEventListener("unhandledrejection", (event) => {
         this.trackError(new Error(event.reason), {
-          component: 'Global',
-          action: 'Unhandled Promise Rejection',
+          component: "Global",
+          action: "Unhandled Promise Rejection",
         });
       });
     }
   }
 
   public trackError(error: Error, context: ErrorContext = {}): void {
-    if (typeof window === 'undefined') return;
+    if (typeof window === "undefined") return;
 
     const trackedError: TrackedError = {
       message: error.message,
@@ -75,8 +75,8 @@ class EnhancedErrorTracker {
     }
 
     // Log to console in development
-    if (process.env['NODE_ENV'] === 'development') {
-      console.error('Tracked Error:', trackedError);
+    if (process.env["NODE_ENV"] === "development") {
+      console.error("Tracked Error:", trackedError);
     }
 
     // Send to analytics if available
@@ -85,18 +85,26 @@ class EnhancedErrorTracker {
 
   private sendToAnalytics(error: TrackedError): void {
     if (
-      typeof window !== 'undefined' &&
+      typeof window !== "undefined" &&
       (
         window as {
-          gtag?: (command: string, action: string, parameters: Record<string, unknown>) => void;
+          gtag?: (
+            command: string,
+            action: string,
+            parameters: Record<string, unknown>,
+          ) => void;
         }
       ).gtag
     ) {
       (
         window as unknown as {
-          gtag: (command: string, action: string, parameters: Record<string, unknown>) => void;
+          gtag: (
+            command: string,
+            action: string,
+            parameters: Record<string, unknown>,
+          ) => void;
         }
-      ).gtag('event', 'exception', {
+      ).gtag("event", "exception", {
         description: error.message,
         fatal: false,
         component: error.context.component,
@@ -119,8 +127,8 @@ class EnhancedErrorTracker {
   } {
     const byComponent: Record<string, number> = {};
 
-    this.errors.forEach(error => {
-      const component = error.context.component || 'Unknown';
+    this.errors.forEach((error) => {
+      const component = error.context.component || "Unknown";
       byComponent[component] = (byComponent[component] || 0) + 1;
     });
 

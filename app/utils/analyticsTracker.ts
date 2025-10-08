@@ -14,14 +14,14 @@ interface AnalyticsEvent {
 interface PerformanceMetrics {
   metric: string;
   value: number;
-  rating?: 'good' | 'needs-improvement' | 'poor';
+  rating?: "good" | "needs-improvement" | "poor";
 }
 
 interface ErrorReport {
   message: string;
   stack?: string;
   componentStack?: string;
-  severity: 'low' | 'medium' | 'high' | 'critical';
+  severity: "low" | "medium" | "high" | "critical";
 }
 
 class AnalyticsTracker {
@@ -32,12 +32,12 @@ class AnalyticsTracker {
    * Initialize the analytics tracker
    */
   initialize(): void {
-    if (typeof window === 'undefined') return;
+    if (typeof window === "undefined") return;
 
     this.isInitialized = true;
 
     // Process queued events
-    this.queue.forEach(fn => fn());
+    this.queue.forEach((fn) => fn());
     this.queue = [];
 
     // Track initial page view
@@ -48,11 +48,11 @@ class AnalyticsTracker {
    * Track a custom event
    */
   trackEvent(event: AnalyticsEvent): void {
-    if (typeof window === 'undefined') return;
+    if (typeof window === "undefined") return;
 
     const track = () => {
       if (window.gtag) {
-        window.gtag('event', event.action, {
+        window.gtag("event", event.action, {
           event_category: event.category,
           event_label: event.label,
           value: event.value,
@@ -61,8 +61,7 @@ class AnalyticsTracker {
       }
 
       // Also log to console in development
-      if (process.env.NODE_ENV === 'development') {
-        console.log('[Analytics Event]', event);
+      if (process.env.NODE_ENV === "development") {
       }
     };
 
@@ -77,19 +76,18 @@ class AnalyticsTracker {
    * Track page views
    */
   trackPageView(path: string): void {
-    if (typeof window === 'undefined') return;
+    if (typeof window === "undefined") return;
 
     const track = () => {
       if (window.gtag) {
-        window.gtag('event', 'page_view', {
+        window.gtag("event", "page_view", {
           page_path: path,
           page_title: document.title,
           page_location: window.location.href,
         });
       }
 
-      if (process.env.NODE_ENV === 'development') {
-        console.log('[Analytics Page View]', path);
+      if (process.env.NODE_ENV === "development") {
       }
     };
 
@@ -104,20 +102,19 @@ class AnalyticsTracker {
    * Track performance metrics
    */
   trackPerformance(metrics: PerformanceMetrics): void {
-    if (typeof window === 'undefined') return;
+    if (typeof window === "undefined") return;
 
     const track = () => {
       if (window.gtag) {
-        window.gtag('event', 'performance', {
-          event_category: 'Web Vitals',
+        window.gtag("event", "performance", {
+          event_category: "Web Vitals",
           event_label: metrics.metric,
           value: Math.round(metrics.value),
           metric_rating: metrics.rating,
         });
       }
 
-      if (process.env.NODE_ENV === 'development') {
-        console.log('[Analytics Performance]', metrics);
+      if (process.env.NODE_ENV === "development") {
       }
     };
 
@@ -132,19 +129,19 @@ class AnalyticsTracker {
    * Track errors
    */
   trackError(error: ErrorReport): void {
-    if (typeof window === 'undefined') return;
+    if (typeof window === "undefined") return;
 
     const track = () => {
       if (window.gtag) {
-        window.gtag('event', 'exception', {
+        window.gtag("event", "exception", {
           description: error.message,
-          fatal: error.severity === 'critical',
+          fatal: error.severity === "critical",
           error_severity: error.severity,
         });
       }
 
       // Always log errors to console
-      console.error('[Analytics Error]', error);
+      console.error("[Analytics Error]", error);
     };
 
     if (this.isInitialized) {
@@ -157,12 +154,17 @@ class AnalyticsTracker {
   /**
    * Track user timing
    */
-  trackTiming(category: string, variable: string, value: number, label?: string): void {
-    if (typeof window === 'undefined') return;
+  trackTiming(
+    category: string,
+    variable: string,
+    value: number,
+    label?: string,
+  ): void {
+    if (typeof window === "undefined") return;
 
     const track = () => {
       if (window.gtag) {
-        window.gtag('event', 'timing_complete', {
+        window.gtag("event", "timing_complete", {
           name: variable,
           value: Math.round(value),
           event_category: category,
@@ -170,8 +172,7 @@ class AnalyticsTracker {
         });
       }
 
-      if (process.env.NODE_ENV === 'development') {
-        console.log('[Analytics Timing]', { category, variable, value, label });
+      if (process.env.NODE_ENV === "development") {
       }
     };
 
@@ -186,19 +187,18 @@ class AnalyticsTracker {
    * Track conversions
    */
   trackConversion(conversionId: string, value?: number): void {
-    if (typeof window === 'undefined') return;
+    if (typeof window === "undefined") return;
 
     const track = () => {
       if (window.gtag) {
-        window.gtag('event', 'conversion', {
+        window.gtag("event", "conversion", {
           send_to: conversionId,
           value: value,
-          currency: 'USD',
+          currency: "USD",
         });
       }
 
-      if (process.env.NODE_ENV === 'development') {
-        console.log('[Analytics Conversion]', { conversionId, value });
+      if (process.env.NODE_ENV === "development") {
       }
     };
 
@@ -214,11 +214,11 @@ class AnalyticsTracker {
 export const analyticsTracker = new AnalyticsTracker();
 
 // Auto-initialize when window is available
-if (typeof window !== 'undefined') {
-  if (document.readyState === 'complete') {
+if (typeof window !== "undefined") {
+  if (document.readyState === "complete") {
     analyticsTracker.initialize();
   } else {
-    window.addEventListener('load', () => {
+    window.addEventListener("load", () => {
       analyticsTracker.initialize();
     });
   }

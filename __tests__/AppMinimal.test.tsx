@@ -1,10 +1,10 @@
-import { render, screen } from '@testing-library/react';
-// Jest globals are available in test environment
-import '@testing-library/jest-dom';
-import React from 'react';
+import "@testing-library/jest-dom";
+import { render, screen } from "@testing-library/react";
 
-describe('AppMinimal', () => {
-  it('renders without crashing', () => {
+// Jest globals are available in test environment
+
+describe("AppMinimal", () => {
+  it("renders without crashing", () => {
     // Mock component for testing
     const MockAppMinimal = () => <div>Zion Tech Group</div>;
     render(<MockAppMinimal />);

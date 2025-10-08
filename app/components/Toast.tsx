@@ -1,7 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from "react";
 
-
-export type ToastType = 'success' | 'error' | 'warning' | 'info';
+export type ToastType = "success" | "error" | "warning" | "info";
 
 export interface ToastProps {
   message: string;
@@ -13,7 +12,7 @@ export interface ToastProps {
 
 const Toast: React.FC<ToastProps> = ({
   message,
-  type = 'success',
+  type = "success",
   duration = 3000,
   onClose,
   show,
@@ -41,31 +40,31 @@ const Toast: React.FC<ToastProps> = ({
 
   const getToastStyles = () => {
     switch (type) {
-      case 'success':
-        return 'bg-green-600 text-white';
-      case 'error':
-        return 'bg-red-600 text-white';
-      case 'warning':
-        return 'bg-yellow-500 text-white';
-      case 'info':
-        return 'bg-blue-600 text-white';
+      case "success":
+        return "bg-green-600 text-white";
+      case "error":
+        return "bg-red-600 text-white";
+      case "warning":
+        return "bg-yellow-500 text-white";
+      case "info":
+        return "bg-blue-600 text-white";
       default:
-        return 'bg-gray-800 text-white';
+        return "bg-gray-800 text-white";
     }
   };
 
   const getIcon = () => {
     switch (type) {
-      case 'success':
-        return '✓';
-      case 'error':
-        return '✕';
-      case 'warning':
-        return '⚠';
-      case 'info':
-        return 'ℹ';
+      case "success":
+        return "✓";
+      case "error":
+        return "✕";
+      case "warning":
+        return "⚠";
+      case "info":
+        return "ℹ";
       default:
-        return '';
+        return "";
     }
   };
 
@@ -101,16 +100,16 @@ export const useToast = () => {
     type: ToastType;
   }>({
     show: false,
-    message: '',
-    type: 'success',
+    message: "",
+    type: "success",
   });
 
-  const showToast = (message: string, type: ToastType = 'success') => {
+  const showToast = (message: string, type: ToastType = "success") => {
     setToast({ show: true, message, type });
   };
 
   const hideToast = () => {
-    setToast(prev => ({ ...prev, show: false }));
+    setToast((prev) => ({ ...prev, show: false }));
   };
 
   return {

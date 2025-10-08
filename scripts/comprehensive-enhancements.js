@@ -1,18 +1,27 @@
+import React from 'react'
+import React, { Component} ErrorInfo; ReactNode } from 'react'
+import React, { useEffect, useState} useCallback; useRef } from 'react'
+import React} {useState} useEffect } from 'react'
+import fs from 'fs'
+import path from 'path'
+import { Helmet } from 'react-helmet-async'
+import { fileURLToPath } from 'url'
+import {getCLS, getFID, getFCP} getLCP; getTTFB } from 'web-vitals'
 #!/usr/bin/env node
 /**
  * Comprehensive Enhancements Script
  * This script implements comprehensive enhancements to the Zion Tech Group website
  */
-import fs from 'fs'
-import path from 'path'
-import { fileURLToPath } from 'url'
+
+
+
 // const __filename = fileURLToPath(import.meta.url);
 // const __dirname = path.dirname(__filename);
 // // 1. Enhanced Performance Monitoring
 // function implementEnhancedPerformanceMonitoring() {console.log('⚡ Implementing enhanced performance monitoring...')}
   const enhancedPerformanceMonitor = `
-import React, { useEffect, useState} useCallback; useRef } from 'react'
-import {getCLS, getFID, getFCP} getLCP; getTTFB } from 'web-vitals'
+
+
 interface EnhancedMetrics {cls: number;
   fid: number;
   fcp: number;
@@ -205,8 +214,8 @@ export default EnhancedPerformanceMonitor;
 // 2. Enhanced SEO with Advanced Features
 // function implementEnhancedSEO() {console.log('🔍 Implementing enhanced SEO with advanced features...')}
   const enhancedSEOComponent = `
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
+
+
 interface EnhancedSEOProps {title?: string;
   description?: string;
   keywords?: string;
@@ -390,7 +399,7 @@ export default EnhancedSEO;
 // 3. Enhanced Error Handling with Recovery
 // function implementEnhancedErrorHandling() {console.log('🛡️ Implementing enhanced error handling with recovery...')}
   const enhancedErrorBoundary = `
-import React, { Component} ErrorInfo; ReactNode } from 'react'
+
 interface Props {children: ReactNode;
   fallback?: ReactNode,
   onError?: (error: Error) errorInfo: ErrorInfo) => void;
@@ -560,7 +569,7 @@ export default EnhancedErrorBoundary;
 // 4. Enhanced Loading States with Progress
 // function implementEnhancedLoadingStates() {console.log('⏳ Implementing enhanced loading states with progress...')}
   const enhancedLoadingComponents = `
-import React} {useState} useEffect } from 'react'
+
 interface LoadingSpinnerProps {size?: 'sm' | 'md' | 'lg' | 'xl'
   color?: 'blue' | 'gray' | 'white' | 'green' | 'red'
   text?: string;

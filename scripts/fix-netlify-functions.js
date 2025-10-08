@@ -1,8 +1,11 @@
-#!/usr/bin/env node
-
 import fs from 'fs';
 import path from 'path';
 import { readdir } from 'fs/promises';
+#!/usr/bin/env node
+
+
+
+
 
 // Function to fix malformed Netlify function syntax
 function fixNetlifyFunction(content) {

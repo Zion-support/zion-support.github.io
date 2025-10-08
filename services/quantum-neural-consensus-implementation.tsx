@@ -1,15 +1,16 @@
-import { Metadata } from 'next';
+import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: 'Quantum Neural Consensus Implementation | Zion Tech Group',
+  title: "Quantum Neural Consensus Implementation | Zion Tech Group",
   description:
-    'Professional Quantum Neural Consensus Implementation services from Zion Tech Group.',
-  keywords: 'Quantum Neural Consensus Implementation, services, technology, enterprise',
+    "Professional Quantum Neural Consensus Implementation services from Zion Tech Group.",
+  keywords:
+    "Quantum Neural Consensus Implementation, services, technology, enterprise",
   openGraph: {
-    title: 'Quantum Neural Consensus Implementation',
+    title: "Quantum Neural Consensus Implementation",
     description:
-      'Professional Quantum Neural Consensus Implementation services from Zion Tech Group.',
-    type: 'website',
+      "Professional Quantum Neural Consensus Implementation services from Zion Tech Group.",
+    type: "website",
   },
 };
 
@@ -22,12 +23,15 @@ export default function QuantumNeuralConsensusImplementation() {
             <h1 className="text-4xl font-bold text-gray-900 mb-4">
               Quantum Neural Consensus Implementation
             </h1>
-            <p className="text-xl text-gray-600 mb-6">Professional Technology Services</p>
+            <p className="text-xl text-gray-600 mb-6">
+              Professional Technology Services
+            </p>
           </div>
           <div className="prose max-w-none">
             <p className="text-lg text-gray-700 mb-6">
-              Our Quantum Neural Consensus Implementation services are designed to help your
-              business achieve its goals through innovative technology solutions.
+              Our Quantum Neural Consensus Implementation services are designed
+              to help your business achieve its goals through innovative
+              technology solutions.
             </p>
           </div>
         </div>
