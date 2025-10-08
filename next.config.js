@@ -1,4 +1,5 @@
 import withBundleAnalyzer from '@next/bundle-analyzer';
+import crypto from 'crypto';
 
 const bundleAnalyzer = withBundleAnalyzer({
   enabled: process.env.ANALYZE === 'true',
@@ -54,7 +55,7 @@ const nextConfig = {
               );
             },
             name(module) {
-              const hash = require('crypto').createHash('sha1');
+              const hash = crypto.createHash('sha1');
               hash.update(module.identifier());
               return hash.digest('hex').substring(0, 8);
             },
@@ -71,7 +72,7 @@ const nextConfig = {
             name(module, chunks) {
               return (
                 'shared-' +
-                require('crypto')
+                crypto
                   .createHash('sha1')
                   .update(chunks.reduce((acc, chunk) => acc + chunk.name, ''))
                   .digest('hex')
