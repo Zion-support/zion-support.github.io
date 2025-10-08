@@ -4,7 +4,6 @@
  */
 
 import React from 'react';
-import { logger } from './logger';
 
 /**
  * Debounce function to limit execution rate
