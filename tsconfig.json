@@ -78,6 +78,7 @@
     "out",
     "dist",
     "_app_disabled/**/*",
+    "app_disabled/**/*",
     "_conflicted_disabled/**/*",
     "_pages_api_disabled/**/*",
     "_pages_disabled/**/*",
