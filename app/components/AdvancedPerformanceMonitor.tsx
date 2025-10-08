@@ -49,8 +49,8 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         });
         lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
         observers.push(lcpObserver);
-      } catch {
-        // LCP observer not supported
+      } catch (error) {
+        // LCP observer not supported in this browser
       }
     }
 
@@ -75,8 +75,8 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         });
         fidObserver.observe({ entryTypes: ['first-input'] });
         observers.push(fidObserver);
-      } catch {
-        // FID observer not supported
+      } catch (error) {
+        // FID observer not supported in this browser
       }
     }
 
@@ -102,8 +102,8 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         });
         clsObserver.observe({ entryTypes: ['layout-shift'] });
         observers.push(clsObserver);
-      } catch {
-        // CLS observer not supported
+      } catch (error) {
+        // CLS observer not supported in this browser
       }
     }
 
@@ -126,7 +126,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         ttfb,
         memory,
       }));
-    } catch {
+    } catch (error) {
       // Performance measurement failed
     }
 
@@ -135,7 +135,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       observers.forEach(observer => {
         try {
           observer.disconnect();
-        } catch {
+        } catch (error) {
           // Error disconnecting observer
         }
       });
@@ -151,13 +151,12 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     );
 
     if (slowResources.length > 0) {
-      // Slow resources detected - could be logged to monitoring service
-      const _slowResourceData = slowResources.map((r: PerformanceResourceTiming) => ({
-        name: r.name,
-        duration: r.duration,
-        size: r.transferSize,
-      }));
-      // Could send to monitoring service here
+      // Slow resources detected
+      const slowResourceData = slowResources.map((r: PerformanceResourceTiming) => ({
+          name: r.name,
+          duration: r.duration,
+          size: r.transferSize,
+        }));
     }
   }, []);
 
