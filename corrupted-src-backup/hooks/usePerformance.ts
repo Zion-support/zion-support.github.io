@@ -40,7 +40,7 @@ export const usePerformance = (options: UsePerformanceOptions) => {
     mountTimeRef.current = performance.now();
 
     return () => {
-      const mountDuration = performance.now() - mountTimeRef.current;
+//       const mountDuration = performance.now() - mountTimeRef.current;
       analytics.trackPerformance(`${componentName}_mount_time`, mountDuration);
     };
   }, [componentName]);
@@ -53,8 +53,8 @@ export const usePerformance = (options: UsePerformanceOptions) => {
 
     // Use requestAnimationFrame to measure actual render time
     requestAnimationFrame(() => {
-      const renderTime = performance.now() - renderStartTimeRef.current;
-      const isSlowRender = renderTime > slowRenderThreshold;
+//       const renderTime = performance.now() - renderStartTimeRef.current;
+//       const isSlowRender = renderTime > slowRenderThreshold;
 
       const metrics: PerformanceMetrics = {
         renderTime,

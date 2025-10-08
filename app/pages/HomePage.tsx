@@ -1,8 +1,7 @@
-'use client';
-
 import React from 'react';
 
-const HomePage: React.FC = () => {
+
+import { Link } from 'react-router-dom';const HomePage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       <div className="container mx-auto px-4 py-16">

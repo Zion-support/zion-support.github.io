@@ -3,6 +3,7 @@
  * Advanced performance optimization tools for the application
  */
 
+import React from 'react';
 import { useEffect, useRef } from 'react';
 
 // Debounce function for performance optimization

@@ -301,7 +301,7 @@ class AnalyticsOptimizer {
     try {
       await this.sendEvents(events);
     } catch (error) {
-      console.error('Failed to send analytics events:', error);
+//       console.error('Failed to send analytics events:', error);
       // Re-queue events for retry
       this.eventQueue.unshift(...events);
     }
@@ -348,7 +348,7 @@ class AnalyticsOptimizer {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
     } catch (error) {
-      console.warn('Failed to send to custom analytics endpoint:', error);
+//       console.warn('Failed to send to custom analytics endpoint:', error);
     }
   }
 
@@ -356,7 +356,7 @@ class AnalyticsOptimizer {
     let timeoutId;
     let lastExecTime = 0;
     return function (...args) {
-      const currentTime = Date.now();
+//       const currentTime = Date.now();
 
       if (currentTime - lastExecTime > delay) {
         func.apply(this, args);

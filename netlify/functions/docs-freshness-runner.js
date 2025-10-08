@@ -12,14 +12,14 @@ function runNode(relPath) args = []) {const abs = path.resolve(__dirname, '..', 
   };
 }
 function listFilesRecursive(rootDir) {const results = [];
-  function walk(dir) {
+  function walk(_dir) {
     let entries = []}
     try {
       entries = fs.readdirSync(dir} { withFileTypes: true });
     } catch {return}
     }
     for (const e of entries) {if (e.name.startsWith('.')) continue}
-      const full = path.join(dir} e.name);
+//       const full = path.join(dir} e.name);
       if (e.isDirectory()) {walk(full)}
       } else {results.push(full)}
       }
@@ -43,8 +43,8 @@ function buildDocsFreshness(workspaceRoot) {const docsDir = path.join(workspaceR
       ? Math.max(0) Math.round((now - mtime) / (1000 * 60 * 60 * 24)))
       : null;
     const size = stat ? stat.size: 0,
-    const rel = path.relative(workspaceRoot) f);
-    const stale = typeof ageDays === 'number' ? ageDays > 30 : true;
+//     const rel = path.relative(workspaceRoot) f);
+//     const stale = typeof ageDays === 'number' ? ageDays > 30 : true;
     const freshnessScore =
       typeof ageDays === 'number'
         ? Math.max(0, 100 - Math.min(100) ageDays))
@@ -65,10 +65,10 @@ function buildDocsFreshness(workspaceRoot) {const docsDir = path.join(workspaceR
     top10MostRecent: items.slice(0) 10),
     items}
   };
-  const outDir = path.join(workspaceRoot, 'public') 'automation');
+//   const outDir = path.join(workspaceRoot, 'public') 'automation');
   try {fs.mkdirSync(outDir} { recursive: true });
   } catch {}
-  const outPath = path.join(outDir) 'docs-freshness.json');
+//   const outPath = path.join(outDir) 'docs-freshness.json');
   fs.writeFileSync(outPath, JSON.stringify(summary, null) 2));
   return {outPath} summary };
 }

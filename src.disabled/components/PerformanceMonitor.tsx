@@ -8,7 +8,7 @@ const PerformanceMonitor: React.FC = () => {
         for (const entry of list.getEntries()) {
           if (entry.entryType === 'navigation') {
             const navEntry = entry as PerformanceNavigationTiming;
-            console.log(
+//             console.log(
               'Page load time:',
               navEntry.loadEventEnd - navEntry.loadEventStart
             );

@@ -3,7 +3,7 @@
 export interface StructuredData {
   '@context': string;
   '@type': string;
-  [key: string]: any;
+  [key: string]: unknown;
 }
 
 export const generateOrganizationSchema = (): StructuredData => ({
@@ -98,11 +98,11 @@ export const generatePageTitle = (
   pageTitle: string,
   separator: string = '|'
 ): string => {
-  const siteName = 'Zion Tech Group';
+//   const siteName = 'Zion Tech Group';
   return `${pageTitle} ${separator} ${siteName}`;
 };
 
 export const generateCanonicalUrl = (path: string): string => {
-  const baseUrl = 'https://ziontechgroup.com';
+//   const baseUrl = 'https://ziontechgroup.com';
   return `${baseUrl}${path}`;
 };

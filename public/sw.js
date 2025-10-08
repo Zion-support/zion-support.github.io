@@ -3,8 +3,8 @@
  * Provides offline support, caching, and performance improvements
  */
 
-const CACHE_VERSION = 'v1.0.0';
-const CACHE_NAME = `zion-tech-${CACHE_VERSION}`;
+// const CACHE_VERSION = 'v1.0.0';
+// const CACHE_NAME = `zion-tech-${CACHE_VERSION}`;
 
 const STATIC_ASSETS = [
   '/',
@@ -21,12 +21,12 @@ const CACHE_STRATEGIES = {
 
 // Install event - cache static assets
 self.addEventListener('install', (event) => {
-  console.log('[Service Worker] Installing...');
+//   console.log('[Service Worker] Installing...');
   
   event.waitUntil(
     caches.open(CACHE_NAME)
       .then((cache) => {
-        console.log('[Service Worker] Caching static assets');
+//         console.log('[Service Worker] Caching static assets');
         return cache.addAll(STATIC_ASSETS);
       })
       .then(() => self.skipWaiting())
@@ -35,7 +35,7 @@ self.addEventListener('install', (event) => {
 
 // Activate event - clean up old caches
 self.addEventListener('activate', (event) => {
-  console.log('[Service Worker] Activating...');
+//   console.log('[Service Worker] Activating...');
   
   event.waitUntil(
     caches.keys()
@@ -44,7 +44,7 @@ self.addEventListener('activate', (event) => {
           cacheNames
             .filter((name) => name !== CACHE_NAME)
             .map((name) => {
-              console.log('[Service Worker] Deleting old cache:', name);
+//               console.log('[Service Worker] Deleting old cache:', name);
               return caches.delete(name);
             })
         );
@@ -76,7 +76,7 @@ self.addEventListener('fetch', (event) => {
 });
 
 // Handle fetch with different strategies
-async function handleFetch(request, strategy) {
+async function handleFetch(_request, strategy) {
   const cache = await caches.open(CACHE_NAME);
 
   switch (strategy) {
@@ -95,8 +95,8 @@ async function handleFetch(request, strategy) {
 }
 
 // Cache-first strategy
-async function cacheFirst(request, cache) {
-  const cached = await cache.match(request);
+async function cacheFirst(_request, cache) {
+//   const cached = await cache.match(request);
   
   if (cached) {
     return cached;
@@ -111,13 +111,13 @@ async function cacheFirst(request, cache) {
     
     return response;
   } catch (error) {
-    console.error('[Service Worker] Fetch failed:', error);
+//     console.error('[Service Worker] Fetch failed:', error);
     return new Response('Offline', { status: 503 });
   }
 }
 
 // Network-first strategy
-async function networkFirst(request, cache) {
+async function networkFirst(_request, cache) {
   try {
     const response = await fetch(request);
     
@@ -127,7 +127,7 @@ async function networkFirst(request, cache) {
     
     return response;
   } catch (error) {
-    const cached = await cache.match(request);
+//     const cached = await cache.match(request);
     
     if (cached) {
       return cached;
@@ -135,7 +135,7 @@ async function networkFirst(request, cache) {
     
     // Return offline page for navigation requests
     if (request.mode === 'navigate') {
-      const offlinePage = await cache.match('/offline.html');
+//       const offlinePage = await cache.match('/offline.html');
       if (offlinePage) {
         return offlinePage;
       }
@@ -146,8 +146,8 @@ async function networkFirst(request, cache) {
 }
 
 // Stale-while-revalidate strategy
-async function staleWhileRevalidate(request, cache) {
-  const cached = await cache.match(request);
+async function staleWhileRevalidate(_request, cache) {
+//   const cached = await cache.match(request);
   
   const fetchPromise = fetch(request).then((response) => {
     if (response.ok) {
@@ -168,7 +168,7 @@ self.addEventListener('message', (event) => {
   }
   
   if (event.data && event.data.type === 'CACHE_URLS') {
-    const urls = event.data.urls || [];
+//     const urls = event.data.urls || [];
     
     event.waitUntil(
       caches.open(CACHE_NAME)
@@ -186,7 +186,7 @@ self.addEventListener('sync', (event) => {
 
 async function syncData() {
   // Implement background sync logic here
-  console.log('[Service Worker] Syncing data...');
+//   console.log('[Service Worker] Syncing data...');
 }
 
 // Push notification support
@@ -212,4 +212,4 @@ self.addEventListener('notificationclick', (event) => {
   );
 });
 
-console.log('[Service Worker] Loaded successfully');
+// console.log('[Service Worker] Loaded successfully');

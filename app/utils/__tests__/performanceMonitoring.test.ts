@@ -1,3 +1,4 @@
+import React from 'react';
 import { describe, it, expect, beforeEach, jest } from '@jest/globals';
 import {
   recordMetric,

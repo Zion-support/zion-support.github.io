@@ -2,59 +2,13 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import {
   CheckCircle,
-  Star,
   ArrowRight,
   Shield,
   Zap,
-  Users,
 } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 
 const Pricing: React.FC = () => {
-  const pricingPlans = [
-    {
-      name: 'Starter',
-      description: 'Perfect for small businesses and startups',
-      price: '$29',
-      period: 'per month',
-      features: [
-        'Basic AI features',
-        'Email support',
-        '5 projects',
-        '1GB storage',
-      ],
-      popular: false,
-    },
-    {
-      name: 'Professional',
-      description: 'Ideal for growing businesses',
-      price: '$99',
-      period: 'per month',
-      features: [
-        'Advanced AI features',
-        'Priority support',
-        'Unlimited projects',
-        '10GB storage',
-        'API access',
-      ],
-      popular: true,
-    },
-    {
-      name: 'Enterprise',
-      description: 'For large organizations',
-      price: '$299',
-      period: 'per month',
-      features: [
-        'All AI features',
-        '24/7 support',
-        'Unlimited everything',
-        'Custom integrations',
-        'Dedicated account manager',
-      ],
-      popular: false,
-    },
-  ];
-
   return (
     <div className='min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100'>
       <Helmet>

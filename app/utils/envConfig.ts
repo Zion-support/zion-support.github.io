@@ -1,3 +1,4 @@
+import React from 'react';
 /**
  * Environment Configuration Manager
  * Provides type-safe access to environment variables with validation

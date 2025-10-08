@@ -1,3 +1,4 @@
+import React from 'react';
 /**
  * Enhanced Logger Utility
  * Production-ready logging with multiple levels and formatting

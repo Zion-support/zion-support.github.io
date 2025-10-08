@@ -1,14 +1,24 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-export const metadata = {
-  
-  title: "Operational Trust Scorecards v3",
-  description: "Measure reliability, cost, safety, and value with live AI scorecards.",
-  type: 'article'};
 
-export default function Page() {
+const Page: React.FC = () => {
+
   return (
-    <main className="min-h-screen bg-slate-950 text-white">
+
+    <>
+
+      <Helmet>
+
+        <title>Operational Trust Scorecards v3</title>
+
+        <meta name="description" content="Measure reliability, cost, safety, and value with live AI scorecards." />
+
+        <meta property="og:type" content="article" />
+
+      </Helmet>
+
+      <main className="min-h-screen bg-slate-950 text-white">
       <section className="py-16 border-b border-white/10">
         <div className="max-w-3xl mx-auto px-4">
           <div className="mb-6 inline-flex items-center gap-2">
@@ -76,5 +86,6 @@ export default function Page() {
         </div>
       </section>
     </main>
+    </>
   );
 }

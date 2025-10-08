@@ -8,7 +8,7 @@
   link: string;
   category: string;
   realImplementation: boolean;
-  contactInfo: any;
+  contactInfo: unknown;
     mobile: string;
     email: string;
 export interface Innovative2026AiServiceV3 {;
@@ -38,7 +38,7 @@ export interface Innovative2026AiServiceV3 {;
   description: string, features: string[],
   link: string, category: string,
   realImplementation: boolean,
-  contactInfo: any,
+  contactInfo: unknown,
     mobile: string, email: string,
     address: string,
   }
@@ -86,7 +86,7 @@ export const innovative2026AIServicesV3: Innovative2026AiServiceV3[] = [,
     link: "/services/2026-innovative-ai-v3",
     category: "Innovative 2026 AI V3",
     realImplementation: true,
-    contactInfo: any,
+    contactInfo: unknown,
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       mobile: '+1 302 464 0950',

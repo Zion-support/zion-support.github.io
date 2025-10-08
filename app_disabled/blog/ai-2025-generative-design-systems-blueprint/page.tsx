@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { ArrowLeft, ArrowRight, Calendar, Clock, User } from 'lucide-react';
+import { ArrowRight, Clock } from 'lucide-react';
 export default function GenerativeDesignSystemsBlueprintPage() {
   return (
     <div>

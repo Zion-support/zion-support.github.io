@@ -43,11 +43,11 @@ export default function BlogPage(): React.JSX.Element {
 }`;
 
 //Find all corrupted blog files
-const blogDir = 'src/pages/blog';
+// const blogDir = 'src/pages/blog';
 const corruptedFiles = [];
 
-function findCorruptedFiles(dir) {
-  const files = fs.readdirSync(dir);
+function findCorruptedFiles(_dir) {
+//   const files = fs.readdirSync(dir);
 
   for (const file of files) {
     const filePath = path.join(dir, file);
@@ -71,26 +71,26 @@ function findCorruptedFiles(dir) {
 
 findCorruptedFiles(blogDir);
 
-console.log(`Found ${corruptedFiles.length} corrupted files`);
+// console.log(`Found ${corruptedFiles.length} corrupted files`);
 
 //Fix each corrupted file
 for (const filePath of corruptedFiles) {
   try {
-    const slug = filePath.split('/').slice(-2, -1)[0];
+//     const slug = filePath.split('/').slice(-2, -1)[0];
     const title = slug
       .split('-')
       .map(word => word.charAt(0).toUpperCase() + word.slice(1))
       .join(' ');
 
-    const description = `Learn about ${title.toLowerCase()} and how it can benefit your enterprise.`;
+//     const description = `Learn about ${title.toLowerCase()} and how it can benefit your enterprise.`;
     const content = `This comprehensive guide covers ${title.toLowerCase()} and provides practical insights for enterprise implementation.`;
 
-    const newContent = blogTemplate(title, description, slug, content);
+//     const newContent = blogTemplate(title, description, slug, content);
     fs.writeFileSync(filePath, newContent);
-    console.log(`Fixed: ${filePath}`);
+//     console.log(`Fixed: ${filePath}`);
   } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
+//     console.error(`Error fixing ${filePath}:`, error.message);
   }
 }
 
-console.log('Done fixing corrupted blog files');
+// console.log('Done fixing corrupted blog files');

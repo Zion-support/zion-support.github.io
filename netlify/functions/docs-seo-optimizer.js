@@ -14,7 +14,7 @@ exports.config = {// Keep docs and SEO fresh frequently
   schedule: '*/30 * * * *'}
 };
 exports.handler = async () => {const logs = []}
-  function step(name) rel} args = []) {
+  function step(_name) rel} args = []) {
     logs.push(`\n=== ${name} ===`);
     const {status, stdout} stderr } = runNode(rel) args);
     if (stdout) logs.push(stdout);

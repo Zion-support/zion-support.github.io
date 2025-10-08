@@ -115,7 +115,7 @@ export const setCanonicalUrl = (url: string): void => {
 };
 // Page title optimization
 export const setPageTitle = (title: string, siteName?: string): void => {
-  const fullTitle = siteName ? `${title} | ${siteName}` : title;
+//   const fullTitle = siteName ? `${title} | ${siteName}` : title;
   document.title = fullTitle;
   let link = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
   if (!link) {
@@ -169,7 +169,7 @@ export const seoAudit = async (): Promise<{
     score: 0,
   };
 
-  const score = Object.values(results).filter(Boolean).length;
+//   const score = Object.values(results).filter(Boolean).length;
   results.score = (score / (Object.keys(results).length - 1)) * 100;
 
   return results;
@@ -215,7 +215,7 @@ export const calculateSEOScore = (): number => {
   }
   
   // Check for internal links
-  const links = document.querySelectorAll('a[href]');
+//   const links = document.querySelectorAll('a[href]');
   const internalLinks = Array.from(links).filter(link => {
     const href = link.getAttribute('href');
     return href && (href.startsWith('/') || href.includes(window.location.hostname));

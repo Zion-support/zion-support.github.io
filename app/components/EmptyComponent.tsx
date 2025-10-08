@@ -5,7 +5,8 @@
 
 import React from 'react';
 
-const EmptyComponent: React.FC = () => {
+
+import { Link } from 'react-router-dom';const EmptyComponent: React.FC = () => {
   return null;
 };
 

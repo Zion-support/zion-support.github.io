@@ -24,7 +24,7 @@ if (typeof window !== 'undefined') {
   });
 
   // Track Web Vitals
-  const metrics = measurePageLoad();
+//   const metrics = measurePageLoad();
   if (metrics) {
     reportWebVitals(metrics);
   }

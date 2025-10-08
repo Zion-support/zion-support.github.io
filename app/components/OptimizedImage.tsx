@@ -1,6 +1,13 @@
 import React, { useState, useCallback, memo } from 'react';
 
-interface OptimizedImageProps {
+<<<<<<< HEAD
+=======
+import { Helmet } from 'react-helmet-async';
+
+>>>>>>> main
+
+
+import { Link } from 'react-router-dom';interface OptimizedImageProps {
   src: string;
   alt: string;
   width?: number;
@@ -67,6 +74,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = memo(({
             width: width ? `${width}px` : 'auto',
             height: height ? `${height}px` : 'auto'
           }}
+          loading={priority ? 'eager' : 'lazy'}
         />
       )}
     </div>

@@ -8,7 +8,7 @@ export interface ExtraService {id: string;
   link: string;
   category: string;
   real_implementation: boolean;
-  contact_info: any;
+  contact_info: unknown;
     mobile: string}
     email: string}
 }
@@ -23,7 +23,7 @@ export const extra_services: ExtraService[] = [,
     name: 'Cloud Migration Expert',
     tagline: 'Seamless cloud migration and optimization',
     price: '$99 / hour',
-    description: any,
+    description: unknown,
       'Professional cloud migration services for businesses looking to modernize their infrastructure.',
     features: [,
       'AWS / Azure / GCP migration',
@@ -35,7 +35,7 @@ export const extra_services: ExtraService[] = [,
     link: '/services / cloud - migration - expert',
     category: 'Cloud Services',
     real_implementation: true,
-    contact_info: any,
+    contact_info: unknown,
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -46,7 +46,7 @@ export const extra_services: ExtraService[] = [,
   description: string, features: string[],
   link: string, category: string,
   realImplementation: boolean,
-  contactInfo: any,
+  contactInfo: unknown,
     mobile: string, email: string,
     address: string;
   id: string;
@@ -58,7 +58,7 @@ export const extra_services: ExtraService[] = [,
   link: string;
   category: string;
   realImplementation: boolean;
-  contactInfo: any;
+  contactInfo: unknown;
     mobile: string;
     email: string;
     address: string,
@@ -114,7 +114,7 @@ export const extraServices: ExtraService[] = [;
     name: 'Cybersecurity Audit Pro',
     tagline: 'Comprehensive security assessment and protection',
     price: '$199 / hour',
-    description: any,
+    description: unknown,
       'Complete cybersecurity audit and vulnerability assessment for enterprise - level protection.',
     features: [,
       'Vulnerability assessment',
@@ -126,7 +126,7 @@ export const extraServices: ExtraService[] = [;
     link: '/services / cybersecurity - audit',
     category: 'Security',
     real_implementation: true,
-    contact_info: any,
+    contact_info: unknown,
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -148,7 +148,7 @@ export const extraServices: ExtraService[] = [;
     link: "/services/cloud-migration-expert",
     category: "Cloud Services",
     realImplementation: true,
-    contactInfo: any,
+    contactInfo: unknown,
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
@@ -192,7 +192,7 @@ export const extraServices: ExtraService[] = [;
     link: "/services/cloud-migration-expert",
     category: "Cloud Services",
     realImplementation: true,
-    contactInfo: any,
+    contactInfo: unknown,
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
@@ -213,7 +213,7 @@ export const extraServices: ExtraService[] = [;
     link: "/services/cybersecurity-audit",
     category: "Security",
     realImplementation: true,
-    contactInfo: any,
+    contactInfo: unknown,
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       mobile: '+1 302 464 0950',

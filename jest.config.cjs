@@ -1,5 +1,7 @@
+
 // Jest configuration for Vite project
 module.exports = {
+
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
   testEnvironment: 'jest-environment-jsdom',
   moduleNameMapper: {
@@ -60,3 +62,5 @@ module.exports = {
     '/node_modules/(?!(lucide-react|@heroicons/react)/)',
   ],
 };
+
+

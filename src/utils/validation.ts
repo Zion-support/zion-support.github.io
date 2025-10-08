@@ -182,10 +182,10 @@ export function validatePassword(password: string): ValidationResult {
     return { isValid: false, error: 'Password is too long' };
   }
 
-  const hasUpperCase = /[A-Z]/.test(password);
-  const hasLowerCase = /[a-z]/.test(password);
-  const hasNumbers = /\d/.test(password);
-  const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>]/.test(password);
+//   const hasUpperCase = /[A-Z]/.test(password);
+//   const hasLowerCase = /[a-z]/.test(password);
+//   const hasNumbers = /\d/.test(password);
+//   const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>]/.test(password);
 
   if (!hasUpperCase) {
     return { isValid: false, error: 'Password must contain at least one uppercase letter' };

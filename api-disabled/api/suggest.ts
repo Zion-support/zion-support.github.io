@@ -29,7 +29,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
     return res.status(200).json({ suggestions });
   } catch (error) {
-    console.error('Error:', error);
+//     console.error('Error:', error);
     return res.status(500).json({ error: 'Internal server error' });
   }
 }

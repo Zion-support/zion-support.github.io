@@ -32,11 +32,11 @@ export class PerformanceOptimizer {
    * End tracking a component render and record metrics
    */
   endRender(componentName: string): void {
-    const startTime = this.renderStartTimes.get(componentName);
+//     const startTime = this.renderStartTimes.get(componentName);
     if (!startTime) return;
 
-    const renderTime = performance.now() - startTime;
-    const memoryUsage = this.getMemoryUsage();
+//     const renderTime = performance.now() - startTime;
+//     const memoryUsage = this.getMemoryUsage();
 
     const metric: PerformanceMetrics = {
       componentName,
@@ -98,7 +98,7 @@ export class PerformanceOptimizer {
       [];
 
     for (const [componentName] of this.metrics) {
-      const averageTime = this.getAverageRenderTime(componentName);
+//       const averageTime = this.getAverageRenderTime(componentName);
       components.push({ componentName, averageTime });
     }
 
@@ -143,7 +143,7 @@ export class PerformanceOptimizer {
     averageRenderTime: number;
     slowestComponents: Array<{ componentName: string; averageTime: number }>;
   } {
-    const totalComponents = this.metrics.size;
+//     const totalComponents = this.metrics.size;
     let totalRenders = 0;
     let totalRenderTime = 0;
 
@@ -157,7 +157,7 @@ export class PerformanceOptimizer {
 
     const averageRenderTime =
       totalRenders > 0 ? totalRenderTime / totalRenders : 0;
-    const slowestComponents = this.getSlowestComponents(5);
+//     const slowestComponents = this.getSlowestComponents(5);
 
     return {
       totalComponents,
@@ -169,6 +169,6 @@ export class PerformanceOptimizer {
 }
 
 // Create singleton instance
-const performanceOptimizer = new PerformanceOptimizer();
+// const performanceOptimizer = new PerformanceOptimizer();
 
 export default performanceOptimizer;

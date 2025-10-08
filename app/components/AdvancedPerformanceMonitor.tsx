@@ -1,8 +1,7 @@
-'use client';
-
 import React, { useEffect, useState, useCallback } from 'react';
 
-interface PerformanceMetrics {
+
+import { Link } from 'react-router-dom';interface PerformanceMetrics {
   fcp: number | null;
   lcp: number | null;
   fid: number | null;

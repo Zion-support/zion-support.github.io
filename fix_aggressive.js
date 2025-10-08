@@ -4,8 +4,8 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+// const __filename = fileURLToPath(import.meta.url);
+// const __dirname = path.dirname(__filename);
 
 //Function to aggressively fix corrupted syntax
 function fixCorruptedSyntax(text) {
@@ -192,7 +192,7 @@ function fixCorruptedSyntax(text) {
   //Fix specific corrupted patterns
   fixed = fixed.replace(
     /useStateuseEffectSuspenselazyuseCallback/g,
-    'useState, useEffect, Suspense, lazy, useCallback'
+    'useState, useEffect, Suspense'
   );
   fixed = fixed.replace(/RouterRoutesRoute/g, 'Router, Routes, Route');
   fixed = fixed.replace(/HelmetProvider/g, 'HelmetProvider');
@@ -222,17 +222,17 @@ function fixCorruptedSyntax(text) {
 //Function to process a file
 function processFile(filePath) {
   try {
-    const content = fs.readFileSync(filePath, 'utf8');
-    const fixedContent = fixCorruptedSyntax(content);
+//     const content = fs.readFileSync(filePath, 'utf8');
+//     const fixedContent = fixCorruptedSyntax(content);
 
     if (content !== fixedContent) {
       fs.writeFileSync(filePath, fixedContent, 'utf8');
-      console.log(`Fixed: ${filePath}`);
+//       console.log(`Fixed: ${filePath}`);
       return true;
     }
     return false;
   } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
+//     console.error(`Error processing ${filePath}:`, error.message);
     return false;
   }
 }
@@ -242,10 +242,10 @@ function processDirectory(dirPath) {
   let processedCount = 0;
 
   try {
-    const items = fs.readdirSync(dirPath);
+//     const items = fs.readdirSync(dirPath);
 
     for (const item of items) {
-      const fullPath = path.join(dirPath, item);
+//       const fullPath = path.join(dirPath, item);
       const stat = fs.statSync(fullPath);
 
       if (stat.isDirectory()) {
@@ -265,14 +265,14 @@ function processDirectory(dirPath) {
       }
     }
   } catch (error) {
-    console.error(`Error processing directory ${dirPath}:`, error.message);
+//     console.error(`Error processing directory ${dirPath}:`, error.message);
   }
 
   return processedCount;
 }
 
 //Main execution
-console.log('Starting aggressive fix of corrupted syntax...');
+// console.log('Starting aggressive fix of corrupted syntax...');
 let processedCount = processDirectory('./src');
 processedCount += processDirectory('./utils');
-console.log(`Fixed ${processedCount} files.`);
+// console.log(`Fixed ${processedCount} files.`);

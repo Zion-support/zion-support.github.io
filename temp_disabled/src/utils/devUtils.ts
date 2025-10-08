@@ -2,26 +2,26 @@
  * Development Utilities
  * Tools and helpers for development and debugging
  */
-export const devLog = (message: string, data?: any) => {
+export const devLog = (message: string, data?: unknown) => {
   if (process.env['NODE_ENV'] === 'development') {
     //DEV: ${message}
   }
 };
-export const devError = (message: string, error?: any) => {
+export const devError = (message: string, error?: unknown) => {
   if (process.env['NODE_ENV'] === 'development') {
     //DEV ERROR: ${message}
   }
 };
-export const devWarn = (message: string, data?: any) => {
+export const devWarn = (message: string, data?: unknown) => {
   if (process.env['NODE_ENV'] === 'development') {
     //DEV WARN: ${message}
   }
 };
 export const measurePerformance = (name: string, fn: () => void) => {
   if (process.env['NODE_ENV'] === 'development') {
-    const start = performance.now();
+//     const start = performance.now();
     fn();
-    const end = performance.now();
+//     const end = performance.now();
     // PERF: ${name}: ${(end - start).toFixed(2)}ms
   } else {
     fn();

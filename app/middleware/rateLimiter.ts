@@ -1,3 +1,4 @@
+import React from 'react';
 /**
  * Rate Limiting Middleware
  * Prevents abuse by limiting the number of requests from a single IP

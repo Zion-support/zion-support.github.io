@@ -26,7 +26,7 @@ export type InnovativeMicroSaas = {;
 export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [,
     id: 'local - seo - reviews - booster',
     name: 'Local SEO Reviews Booster',
-    description: any,
+    description: unknown,
       'Automated post - visit SMS / email review requests with smart routing to preferred platforms and churn - risk alerts.',
     category: 'Marketing Automation',
     pricing: { starter: '$29 / mo' },
@@ -54,7 +54,7 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [,
   },
     id: 'local - seo - reviews - booster',
     name: 'Local SEO Reviews Booster',
-    description: any,
+    description: unknown,
       'Automated post - visit SMS / email review requests with smart routing to preferred platforms and churn - risk alerts.',
     category: 'Marketing Automation',
     pricing: { starter: '$29 / mo' },
@@ -72,7 +72,7 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [,
   },
     id: 'smart - invoice - reconciliation',
     name: 'Smart Invoice Reconciliation',
-    description: any,
+    description: unknown,
       'Reconciling bank transactions with invoices using OCR and matching heuristics, with discrepancy alerts.',
     category: 'Financial Technology',
     pricing: { starter: '$59 / mo' },
@@ -100,7 +100,7 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [,
       'Summarize resumes, score against job descriptions, and auto-generate interview question sets.',
     id: 'candidate - screening - copilot',
     name: 'Candidate Screening Copilot',
-    description: any,
+    description: unknown,
       'Summarize resumes, score against job descriptions, and auto - generate interview question sets.',
     category: 'Human Resources',
     pricing: { starter: '$69/mo' },
@@ -192,7 +192,7 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [,
 name: string;
 description: string;
 tagline?: string;
-category: any,
+category: unknown,
   | 'Content Marketing'
   | 'Business Operations'
   | 'Marketing Automation'
@@ -269,7 +269,7 @@ export type InnovativeMicroSaas = {;
 	name: string,,
   description: string;
 	tagline?: string;
-	category: any,
+	category: unknown,
 		| 'Content Marketing'
 		| 'Business Operations'
 		| 'Marketing Automation'
@@ -347,7 +347,7 @@ export type InnovativeMicroSaas = {;
 	name: string,,
   description: string;
 	tagline?: string;
-	category: any,
+	category: unknown,
 		| 'Content Marketing'
 		| 'Business Operations'
 		| 'Marketing Automation'
@@ -424,7 +424,7 @@ export type InnovativeMicroSaas =
   name: string,
   description: string;
   tagline?: string;
-  category: any,
+  category: unknown,
       'Smart review routing',
       'NPS & CSAT',
       'Churn alerts',
@@ -511,7 +511,7 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [,
 name: string,
   description: string;
 tagline?: string;
-category: any,
+category: unknown,
   | 'Content Marketing'
   | 'Business Operations'
   | 'Marketing Automation'

@@ -202,7 +202,7 @@ const October2025NewBreakthroughBanne, r = () => {
             </div>
           </div>
         </div>
-        {/* Technology, Tag, s */}
+        {/* Technology, s */}
         <div, className='mt-12, tex, t-cent, e, r'>
           <div, className='inli, n, e-flex, fle, x-wrap, ga, p-3, justif, y-cent, e, r'>
             { [

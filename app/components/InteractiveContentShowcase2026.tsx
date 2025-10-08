@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 
-const InteractiveContentShowcase2026: React.FC = () => {
+
+import { Link } from 'react-router-dom';const InteractiveContentShowcase2026: React.FC = () => {
   const [activeTab, setActiveTab] = useState(0);
 
   const tabs = [

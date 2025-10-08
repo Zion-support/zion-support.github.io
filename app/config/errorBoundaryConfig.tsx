@@ -5,7 +5,8 @@
 
 import React from 'react';
 
-export interface ErrorBoundaryConfig {
+
+import { Link } from 'react-router-dom';export interface ErrorBoundaryConfig {
   /**
    * Whether to log errors to console
    */

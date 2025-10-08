@@ -6,8 +6,6 @@ import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import PWAInstaller from './components/PWAInstaller';
 import { GlobalErrorBoundary } from './components/GlobalErrorBoundary';
 
-// Metadata will be handled by Helmet in individual components
-
 export default function RootLayout({
   children,
 }: {

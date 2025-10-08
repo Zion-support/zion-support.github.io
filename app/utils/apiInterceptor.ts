@@ -3,6 +3,7 @@
  * Centralized API request handling with error handling, retry logic, and caching
  */
 
+import React from 'react';
 import { ErrorHandler, ErrorType } from './errorHandler';
 import { performanceMetrics } from './performanceMetrics';
 

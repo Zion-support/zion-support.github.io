@@ -24,7 +24,7 @@
   marketSize: string;
   growthRate: string;
   variant: string;
-  contactInfo: any;
+  contactInfo: unknown;
     mobile: string;
     email: string;
 export interface EnterpriseItService2029 {;
@@ -54,7 +54,7 @@ export interface EnterpriseItService2029 {;
   description: string, features: string[],
   link: string, category: string,
   realImplementation: boolean,
-  contactInfo: any,
+  contactInfo: unknown,
     mobile: string, email: string,
     address: string,
   }
@@ -102,7 +102,7 @@ export const enterpriseITServices2029: EnterpriseItService2029[] = [,
     link: "/services/2029-enterprise-it",
     category: "Enterprise IT Services 2029",
     realImplementation: true,
-    contactInfo: any,
+    contactInfo: unknown,
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       mobile: '+1 302 464 0950',

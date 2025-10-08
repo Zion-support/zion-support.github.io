@@ -1,8 +1,7 @@
-'use client';
-
 import React, { useEffect, useState } from 'react';
 
-/**
+
+import { Link } from 'react-router-dom';/**
  * PWA Installer Component
  * Handles service worker registration and install prompts
  */

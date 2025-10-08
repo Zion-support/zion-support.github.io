@@ -1,3 +1,4 @@
+import React from 'react';
 /**
  * Testing Utilities
  * Provides helper functions and utilities for testing

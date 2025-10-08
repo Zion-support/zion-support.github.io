@@ -7,7 +7,7 @@ export, default, function ContentPromotionBann, e, r(): vo, i, d {
       isN, e, w: tr, u, e;
     }
     {
-      tit, l, e: "Nor, t, h‑Star, Engineering, Metric
+      tit, l, e: "Nor, t, h‑Engineering, Metric
   s: Fewer, KPI, s, Better, Outcome, s"
       catego, r, y: "Leadersh, i, p"
       readTi, m, e: "5, min, read"

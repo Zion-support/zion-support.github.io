@@ -48,7 +48,7 @@ let successCount = 0;
 let failCount = 0;
 //Merge each branch
 for (const branch of branches) {if (branch.trim()) {
-    const success = safeMerge(branch);
+//     const success = safeMerge(branch);
     if (success) {
       successCount++}
     } else {failCount++}

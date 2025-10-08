@@ -12,7 +12,7 @@
     "preview": "vite preview --host --open",
     "lint": "eslint src/ --ext .ts,.tsx,.js,.jsx --ignore-pattern 'src/components/**' --ignore-pattern 'src/pages/**' --ignore-pattern 'src/content/**' --ignore-pattern 'src/data/**' --ignore-pattern 'src/hooks/**' --ignore-pattern 'src/types/**' --ignore-pattern 'src/utils/**' --ignore-pattern 'src/config/**' --max-warnings 0",
     "lint:fix": "eslint . --ext .ts,.tsx,.js,.jsx --ignore-pattern '__tests__/**' --ignore-pattern '_app_disabled/**' --ignore-pattern '_conflicted_disabled/**' --ignore-pattern '_pages_api_disabled/**' --ignore-pattern '_pages_disabled/**' --ignore-pattern 'admin-api-disabled/**' --ignore-pattern 'api-disabled/**' --ignore-pattern 'api.disabled/**' --ignore-pattern 'api.disabled.temp/**' --ignore-pattern 'api-backup/**' --ignore-pattern 'apps.backup/**' --ignore-pattern 'automation_backup/**' --ignore-pattern 'ai-optimization-backups/**' --ignore-pattern 'automation_logs/**' --ignore-pattern 'all-automations-reports/**' --ignore-pattern 'accessibility-reports/**' --ignore-pattern 'app/blog/**' --ignore-pattern 'corrupted-files-backup/**' --ignore-pattern 'corrupted_backup/**' --ignore-pattern 'corrupted_files_backup_2/**' --ignore-pattern 'content/**' --ignore-pattern 'contracts/**' --ignore-pattern 'components_backup/**' --ignore-pattern 'app/services/**' --ignore-pattern 'app/guides/**' --ignore-pattern 'data/**' --ignore-pattern 'data_backup/**' --ignore-pattern 'dao/**' --ignore-pattern 'deployments/**' --ignore-pattern 'disabled-api/**' --ignore-pattern 'e2e/**' --ignore-pattern 'factories/**' --ignore-pattern 'src/pages/blog-disabled/**' --ignore-pattern 'hooks/**' --ignore-pattern 'lib_backup/**' --ignore-pattern 'services/**' --ignore-pattern 'middleware/**' --ignore-pattern 'fix-*.jsx' --ignore-pattern 'fix-*.ts' --ignore-pattern 'jest.setup.*' --ignore-pattern 'lib/integrations/**' --ignore-pattern 'lint-target/**' --ignore-pattern 'middleware.security.ts' --ignore-pattern 'components/AutonomousEnterpriseBreakthroughBanner.tsx' --ignore-pattern 'components/ConsensusIntelligenceBreakthroughBanner.tsx' --ignore-pattern 'components/FeaturedServiceCard.tsx' --ignore-pattern 'app/components/NewestContent2025Banner.tsx' --ignore-pattern 'app/components/September30NewContent2025Banner.tsx' --ignore-pattern 'app/components/UltimateBusinessIntelligence2025Banner.tsx' --ignore-pattern 'app/components/UltimateBusinessIntelligenceShowcase2025.tsx' --ignore-pattern 'app/contact/page.tsx' --ignore-pattern 'app/enterprise/page.tsx' --ignore-pattern 'app/not-found.tsx' --ignore-pattern 'app/page-minimal.tsx' --ignore-pattern 'app/page-optimized.tsx' --ignore-pattern 'app/services-advertising/page.tsx' --ignore-pattern 'fix_typescript_syntax_errors.jsx' --ignore-pattern 'fix_utils_files.ts' --fix",
-    "type-check": "tsc --noEmit -p tsconfig.typecheck.json",
+    "type-check": "tsc --noEmit -p tsconfig.src.json",
     "type-check:ci": "tsc --noEmit -p tsconfig.ci.json",
     "test": "jest --passWithNoTests",
     "test:watch": "jest --watch",
@@ -86,7 +86,9 @@
     "precommit": "npm run type-check && npm run lint && npm run test:unit",
     "postinstall": "echo 'Dependencies installed successfully'",
     "deploy:check": "node scripts/deployment-readiness-check.js",
-    "predeploy": "pnpm run deploy:check"
+    "predeploy": "pnpm run deploy:check",
+    "audit:all-comprehensive": "pnpm run type-check && pnpm run lint && pnpm run test && pnpm run build",
+    "check:performance": "pnpm run build && du -sh dist"
   },
   "dependencies": {
     "@esbuild/linux-x64": "^0.25.10",

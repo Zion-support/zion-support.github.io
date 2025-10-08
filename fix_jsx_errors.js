@@ -38,7 +38,7 @@ function fixJSXErrors(filePath) {
     ];
 
     patterns.forEach(fix => {
-      const newContent = content.replace(fix.pattern, fix.replacement);
+//       const newContent = content.replace(fix.pattern, fix.replacement);
       if (newContent !== content) {
         content = newContent;
         modified = true;
@@ -47,20 +47,20 @@ function fixJSXErrors(filePath) {
 
     if (modified) {
       fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed JSX errors in: ${filePath}`);
+//       console.log(`Fixed JSX errors in: ${filePath}`);
       return true;
     }
     return false;
   } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
+//     console.error(`Error fixing ${filePath}:`, error.message);
     return false;
   }
 }
 
 // Fix the specific file
-const filePath = process.argv[2];
+// const filePath = process.argv[2];
 if (filePath) {
   fixJSXErrors(filePath);
 } else {
-  console.log('Usage: node fix_jsx_errors.js <file_path>');
+//   console.log('Usage: node fix_jsx_errors.js <file_path>');
 }

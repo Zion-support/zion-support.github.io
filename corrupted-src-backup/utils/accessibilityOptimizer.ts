@@ -175,7 +175,7 @@ class AccessibilityOptimizer {
         !element.getAttribute('aria-describedby') &&
         element.getAttribute('aria-invalid') === 'true'
       ) {
-        const errorId = `error-${Math.random().toString(36).substr(2, 9)}`;
+//         const errorId = `error-${Math.random().toString(36).substr(2, 9)}`;
         element.setAttribute('aria-describedby', errorId);
         improvements.push('Added aria-describedby for error state');
         score += 15;

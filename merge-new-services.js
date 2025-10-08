@@ -6,21 +6,21 @@
  */ import { execSync } from 'child_process';
 import fs from 'fs';
 
-console.log('🚀 Starting New Services Branch Merge Process...\n');
+// console.log('🚀 Starting New Services Branch Merge Process...\n');
 
 //Step 1: Ensure we're on main and up to date
-console.log('📋 Step 1: Preparing main branch...');
+// console.log('📋 Step 1: Preparing main branch...');
 try {
   execSync('git checkout main', { stdio: 'inherit' });
   execSync('git pull origin main', { stdio: 'inherit' });
-  console.log('✅ Main branch is up to date\n');
+//   console.log('✅ Main branch is up to date\n');
 } catch (error) {
-  console.error('❌ Failed to prepare main branch:', error.message);
+//   console.error('❌ Failed to prepare main branch:', error.message);
   process.exit(1);
 }
 
 //Step 2: Get new service branches
-console.log('🔍 Step 2: Finding new service branches...');
+// console.log('🔍 Step 2: Finding new service branches...');
 const newServiceBranches = [
   'cursor/add-new-services-and-deploy-updates-0c4f',
   'cursor/add-new-services-and-deploy-updates-0f78',
@@ -44,13 +44,13 @@ const newServiceBranches = [
   'cursor/add-new-services-and-deploy-updates-6ed4',
 ];
 
-console.log(
+// console.log(
   `📊 Found ${newServiceBranches.length} new service branches to process\n`
 );
 
 //Step 3: Enhanced merge function with conflict resolution
 function mergeServiceBranch(branchName) {
-  console.log(`\n🔄 Processing ${branchName}...`);
+//   console.log(`\n🔄 Processing ${branchName}...`);
 
   try {
     //Fetch the branch
@@ -62,10 +62,10 @@ function mergeServiceBranch(branchName) {
       { stdio: 'inherit' }
     );
 
-    console.log(`✅ Successfully merged ${branchName}`);
+//     console.log(`✅ Successfully merged ${branchName}`);
     return { success: true, method: 'direct' };
   } catch (error) {
-    console.log(
+//     console.log(
       `⚠️  Direct merge failed for ${branchName}, attempting conflict resolution...`
     );
 
@@ -77,12 +77,12 @@ function mergeServiceBranch(branchName) {
         { stdio: 'inherit' }
       );
 
-      console.log(
+//       console.log(
         `✅ Auto-resolved conflicts for ${branchName} using 'theirs' strategy`
       );
       return { success: true, method: 'theirs' };
     } catch (theirsError) {
-      console.log(`⚠️  'Theirs' strategy failed, trying 'ours' strategy...`);
+//       console.log(`⚠️  'Theirs' strategy failed, trying 'ours' strategy...`);
 
       try {
         execSync('git reset --hard HEAD', { stdio: 'inherit' });
@@ -91,12 +91,12 @@ function mergeServiceBranch(branchName) {
           { stdio: 'inherit' }
         );
 
-        console.log(
+//         console.log(
           `✅ Auto-resolved conflicts for ${branchName} using 'ours' strategy`
         );
         return { success: true, method: 'ours' };
       } catch (oursError) {
-        console.log(`❌ All merge strategies failed for ${branchName}`);
+//         console.log(`❌ All merge strategies failed for ${branchName}`);
 
         //Abort and skip
         try {
@@ -112,7 +112,7 @@ function mergeServiceBranch(branchName) {
 }
 
 //Step 4: Process all new service branches
-console.log('🚀 Step 4: Processing new service branches...\n');
+// console.log('🚀 Step 4: Processing new service branches...\n');
 
 const results = {
   summary: {
@@ -148,31 +148,31 @@ fs.writeFileSync(
 );
 
 //Step 6: Display summary
-console.log('\n🎉 NEW SERVICES MERGE COMPLETED!\n');
-console.log('📊 SUMMARY:');
-console.log(`  Total branches processed: ${results.summary.total}`);
-console.log(`  Successful merges: ${results.summary.successful}`);
-console.log(`  Failed merges: ${results.summary.failed}`);
-console.log('\n🔧 RESOLUTION METHODS:');
-console.log(`  Direct merges: ${results.summary.methods.direct}`);
-console.log(`  'Theirs' strategy: ${results.summary.methods.theirs}`);
-console.log(`  'Ours' strategy: ${results.summary.methods.ours}`);
-console.log(`  Failed: ${results.summary.methods.failed}`);
+// console.log('\n🎉 NEW SERVICES MERGE COMPLETED!\n');
+// console.log('📊 SUMMARY:');
+// console.log(`  Total branches processed: ${results.summary.total}`);
+// console.log(`  Successful merges: ${results.summary.successful}`);
+// console.log(`  Failed merges: ${results.summary.failed}`);
+// console.log('\n🔧 RESOLUTION METHODS:');
+// console.log(`  Direct merges: ${results.summary.methods.direct}`);
+// console.log(`  'Theirs' strategy: ${results.summary.methods.theirs}`);
+// console.log(`  'Ours' strategy: ${results.summary.methods.ours}`);
+// console.log(`  Failed: ${results.summary.methods.failed}`);
 
 if (results.failed.length > 0) {
-  console.log('\n❌ FAILED BRANCHES:');
-  results.failed.forEach(branch => console.log(`  - ${branch}`));
+//   console.log('\n❌ FAILED BRANCHES:');
+//   results.failed.forEach(branch => console.log(`  - ${branch}`));
 }
 
 // Step 7: Push changes
-console.log('\n🚀 Step 7: Pushing merged changes...');
+// console.log('\n🚀 Step 7: Pushing merged changes...');
 try {
   execSync('git push origin main', { stdio: 'inherit' });
-  console.log('✅ Successfully pushed all merged changes to main');
+//   console.log('✅ Successfully pushed all merged changes to main');
 } catch (error) {
-  console.error('❌ Failed to push changes:', error.message);
-  console.log('You may need to push manually: git push origin main');
+//   console.error('❌ Failed to push changes:', error.message);
+//   console.log('You may need to push manually: git push origin main');
 }
 
-console.log('\n📄 Detailed report saved to: new-services-merge-report.json');
-console.log('🎯 New services merge process completed!');
+// console.log('\n📄 Detailed report saved to: new-services-merge-report.json');
+// console.log('🎯 New services merge process completed!');

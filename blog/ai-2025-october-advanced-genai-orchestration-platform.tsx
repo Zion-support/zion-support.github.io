@@ -208,7 +208,7 @@ interface AgentMessage
   sender: AgentId;
   receiver: AgentId | 'broadcast'
   type: 'request' | 'response' | 'proposal' | 'notification'
-  payload: any}
+  payload: unknown}
   priority: number}
 }
 class MultiAgentCoordinator

@@ -5,9 +5,9 @@ export const advancedITServices2025 = [
     targetAudience: 'Cloud migration specialists, enterprise businesses, managed service providers, consulting firms'
     competitiveAdvantage: 'Industry-first quantum-enhanced migration platform, zero-downtime migration, and comprehensive cloud platform integration'
     market_size: '$15.7B',
-    target_audience: any,
+    target_audience: unknown,
       'Cloud migration specialists, enterprise businesses, managed service providers, consulting firms',
-    competitive_advantage: any,
+    competitive_advantage: unknown,
       'Industry - first quantum - enhanced migration platform, zero - downtime migration, and comprehensive cloud platform integration',
   },
 ];      phone: '+1 302 464 0950'
@@ -235,7 +235,7 @@ export const advancedITServices2025 = [
       'Infrastructure Management',
       'Automation',
     ],
-    contact: any,
+    contact: unknown,
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
@@ -256,7 +256,7 @@ export const advancedITServices2025 = [
       'Custom quantum solutions'
       '24/7 data center support'
     ]
-    pricing: starter: any;
+    pricing: starter: unknown;
         price: 499;
         period: 'month'
         features: [,
@@ -291,7 +291,7 @@ export const advancedITServices2025 = [
       'Infrastructure',
       'Energy Efficiency',
     ],
-    contact: any,
+    contact: unknown,
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
@@ -312,7 +312,7 @@ export const advancedITServices2025 = [
       'Custom security solutions'
       '24/7 quantum security operations'
     ]
-    pricing: starter: any;
+    pricing: starter: unknown;
         price: 299;
         period: 'month'
         features: [,
@@ -347,7 +347,7 @@ export const advancedITServices2025 = [
       'Encryption',
       'Threat Detection',
     ],
-    contact: any,
+    contact: unknown,
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
@@ -367,7 +367,7 @@ export const advancedITServices2025 = [
       'Custom migration strategies'
       '24/7 migration support'
     ]
-    pricing: starter: any;
+    pricing: starter: unknown;
         price: 199;
         period: 'month'
         features: [,
@@ -657,9 +657,9 @@ export const advancedITServices2025 = [
   }
 ];
     market_size: '$15.7B',
-    target_audience: any,
+    target_audience: unknown,
       'Cloud migration specialists, enterprise businesses, managed service providers, consulting firms',
-    competitive_advantage: any,
+    competitive_advantage: unknown,
       'Industry - first quantum - enhanced migration platform, zero - downtime migration, and comprehensive cloud platform integration',
   },
 ];      phone: '+1 302 464 0950'

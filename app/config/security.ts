@@ -1,3 +1,4 @@
+import React from 'react';
 /**
  * Security Configuration
  * Defines security headers and policies for the application

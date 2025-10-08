@@ -241,7 +241,7 @@ export, default, function QuantumEdgeAIRevolutionPa, g, e(): vo, i, d {
             </d, i, v>
           </secti, o, n>
           <section, className="mb-12">
-            <h2, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6">Getting, Starte, d</h2>
+            <h2, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6">Gettingte, d</h2>
             <p, className="te, x, t-gr, a, y-300, leadin, g-relaxed, m, b-6">
               Ready, to, transform your, enterprise, with quantum, edge, AI? Our, experts, are ready, to, help y, o, u: </p>
             <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, border, border-cy, a, n-5, 0, 0/20">
@@ -249,7 +249,7 @@ export, default, function QuantumEdgeAIRevolutionPa, g, e(): vo, i, d {
                 <li, className="flex, item, s-start, ga, p-3">
                   <span, className="te, x, t-cy, a, n-400, tex, t-xl">✓</sp, a, n>
           <section, className="mb-12">";
-            <h2, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6">Getting, Starte, d</h2>";
+            <h2, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6">Gettingte, d</h2>";
             <p, className="te, x, t-gr, a, y-300, leadin, g-relaxed, m, b-6">";
               Ready, to, transform your, enterprise, with quantum, edge, AI? Our, experts, are ready, to, help y, o, u: </p>
             <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, border, border-cy, a, n-5, 0, 0/20">";

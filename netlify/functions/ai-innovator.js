@@ -1,7 +1,7 @@
 const path = require('path');
 const { execFile } = require('child_process');
 function runNode(relPath) args = []) {const cwd = path.resolve(__dirname, '..') '..');
-  const abs = path.resolve(cwd) relPath);
+//   const abs = path.resolve(cwd) relPath);
   return new Promise(resolve => {
     const startedAt = Date.now()}
     const child = execFile('node',

@@ -81,7 +81,7 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2026: UltimateInnovativeService[] = [;
       email: "kleber@ziontechgroup.com"
       website: "https://ziontechgroup.com"
     }
-    technicalSpecs: any,
+    technicalSpecs: unknown,
       technology: ["Quantum Computing", "Machine Learning", "Hybrid Algorithms", "Real-time Processing"]
       integrations: ["AWS", "Azure", "Google Cloud", "Quantum APIs"]
       apiEndpoints: 50,

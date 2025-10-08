@@ -10,7 +10,7 @@ const VectorDatabaseOptimization2026 = () =>
           name="description"
           content="Master vector database optimization achieving sub-10ms retrieval at billion-scale. Learn HNSW tuning, quantization strategies, and hybrid search patterns powering production RAG systems."
         />
-        <meta name="keywords" content="Vector Database, HNSW, Quantization, Hybrid Search, RAG Optimization, Semantic Search" />
+        <meta name="keywords" content="Vector Database, HNSW, Quantization, Hybrid RAG Optimization, Semantic Search" />
         <link rel="canonical" href="https: //ziontechgroup.com/blog/vector-database-optimization-2026" />
       </Helmet>
       <article className="text-left"></a>

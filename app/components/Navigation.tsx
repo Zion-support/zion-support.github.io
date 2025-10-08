@@ -1,7 +1,10 @@
-'use client';
-
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+'use client';
+
+
+
+
 
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
