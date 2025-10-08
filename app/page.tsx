@@ -1,9 +1,4 @@
-import React, { useCallback, useState, useEffect, Suspense, lazy } from 'react';
-import DynamicContentShowcase from './components/DynamicContentShowcase';
-import ContentPromotionBanner from './components/ContentPromotionBanner';
-import ContentCarousel from './components/ContentCarousel';
-import ContentStatistics from './components/ContentStatistics';
-import ContentNewsletterSignup from './components/ContentNewsletterSignup';
+import React, { useCallback, useState, useEffect, Suspense } from 'react';
 
 // Dynamically import heavy components for better performance
 // const _ServiceCard = lazy(() => import('./components/ServiceCard'));

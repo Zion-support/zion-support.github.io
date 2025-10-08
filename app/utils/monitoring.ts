@@ -60,21 +60,20 @@ class MonitoringService {
         // First Input Delay
         const fidObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
-          entries.forEach((entry: unknown) => {
-            const perfEntry = entry as PerformanceEventTiming;
-            this.metrics.fid = perfEntry.processingStart - perfEntry.startTime;
+          entries.forEach((entry: PerformanceEntry) => {
+            this.metrics.fid = (entry as PerformanceEventTiming).processingStart - entry.startTime;
             this.reportMetric('fid', this.metrics.fid);
           });
         });
         fidObserver.observe({ entryTypes: ['first-input'] });
 
         // Cumulative Layout Shift
-        let clsValue = 0
-        const clsObserver = new PerformanceObserver((list) => {
-          for (const entry of list.getEntries() as PerformanceEntry[]) {
-            const layoutShiftEntry = entry as any;
-            if (!layoutShiftEntry.hadRecentInput) {
-              clsValue += layoutShiftEntry.value;
+        let clsValue = 0;
+        const clsObserver = new PerformanceObserver(list => {
+          const entries = list.getEntries();
+          entries.forEach((entry: PerformanceEntry) => {
+            if (!(entry as PerformanceEventTiming).hadRecentInput) {
+              clsValue += entry.value;
               this.metrics.cls = clsValue;
               this.reportMetric('cls', clsValue);
             }

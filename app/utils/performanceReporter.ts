@@ -71,8 +71,8 @@ class PerformanceReporter {
         const lastEntry = entries[entries.length - 1]
         
         if (lastEntry && 'renderTime' in lastEntry) {
-          const value = (lastEntry as any).renderTime || (lastEntry as any).loadTime || 0;
-          this.addMetric('LCP', value, this.getRating('lcp', value))
+          const value = (lastEntry as PerformanceEventTiming).renderTime || (lastEntry as PerformanceEventTiming).loadTime || 0;
+          this.addMetric('LCP', value, this.getRating('lcp', value));
         }
       })
 
@@ -83,8 +83,8 @@ class PerformanceReporter {
         const entries = entryList.getEntries()
         entries.forEach((entry) => {
           if ('processingStart' in entry && 'startTime' in entry) {
-            const value = (entry as any).processingStart - (entry as any).startTime;
-            this.addMetric('FID', value, this.getRating('fid', value))
+            const value = (entry as PerformanceEventTiming).processingStart - (entry as PerformanceEventTiming).startTime;
+            this.addMetric('FID', value, this.getRating('fid', value));
           }
         })
       })
@@ -92,11 +92,11 @@ class PerformanceReporter {
       fidObserver.observe({ type: 'first-input', buffered: true })
 
       // Cumulative Layout Shift (CLS)
-      let clsValue = 0
-      const clsObserver = new PerformanceObserver((entryList) => {
-        entryList.getEntries().forEach((entry: any) => {
-          if (!entry.hadRecentInput) {
-            clsValue += entry.value;
+      let clsValue = 0;
+      const clsObserver = new PerformanceObserver(entryList => {
+        entryList.getEntries().forEach(entry => {
+          if (!(entry as PerformanceEventTiming).hadRecentInput) {
+            clsValue += (entry as PerformanceEventTiming).value;
           }
         })
         this.addMetric('CLS', clsValue, this.getRating('cls', clsValue))
