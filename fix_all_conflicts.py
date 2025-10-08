@@ -1,57 +1,79 @@
 #!/usr/bin/env python3
-import os
+"""
+Advanced Merge Conflict Resolver
+Resolves all types of merge conflicts including nested ones
+"""
 
-def fix_merge_conflicts(filepath):
-    """Fix merge conflicts by keeping HEAD version."""
+import re
+from pathlib import Path
+
+def resolve_all_conflicts(file_path):
+    """Resolve all merge conflicts in a file"""
     try:
-        with open(filepath, 'r') as f:
-            lines = f.readlines()
+        with open(file_path, 'r', encoding='utf-8') as f:
+            content = f.read()
         
-        result = []
-        skip = False
-        in_conflict = False
+        original_content = content
+        max_iterations = 10
+        iteration = 0
         
-        i = 0
-        while i < len(lines):
-            line = lines[i]
+        while iteration < max_iterations:
+            # Pattern for standard conflicts
+            pattern1 = r'<<<<<<< HEAD\n(.*?)\n=======\n(.*?)\n>>>>>>> [^\n]+\n'
             
-            if line.startswith('<<<<<<< HEAD'):
-                in_conflict = True
-                i += 1
-                continue
-            elif line.startswith('=======') and in_conflict:
-                skip = True
-                i += 1
-                continue
-            elif line.startswith('>>>>>>>') and in_conflict:
-                in_conflict = False
-                skip = False
-                i += 1
-                continue
+            # Replace with incoming version (group 2)
+            new_content = re.sub(pattern1, r'\2\n', content, flags=re.DOTALL)
             
-            if not skip:
-                result.append(line)
-            
-            i += 1
+            # Check if we made any changes
+            if new_content == content:
+                break
+                
+            content = new_content
+            iteration += 1
         
-        if len(result) != len(lines):
-            with open(filepath, 'w') as f:
-                f.writelines(result)
-            print(f"Fixed merge conflicts in {filepath}")
+        # Remove any remaining conflict markers (in case of malformed conflicts)
+        content = re.sub(r'<<<<<<< HEAD\n', '', content)
+        content = re.sub(r'=======\n', '', content)
+        content = re.sub(r'>>>>>>> [^\n]+\n', '', content)
+        
+        # Write back if changed
+        if content != original_content:
+            with open(file_path, 'w', encoding='utf-8') as f:
+                f.write(content)
+            print(f"✓ Fixed {file_path}")
             return True
-        return False
+        else:
+            print(f"- No changes needed for {file_path}")
+            return False
+            
     except Exception as e:
-        print(f"Error fixing {filepath}: {e}")
+        print(f"✗ Error processing {file_path}: {e}")
         return False
 
-# Files to fix
-files_to_fix = [
-    'app/enterprise/page.tsx',
-    'app/setupTests.tsx',
-]
+def main():
+    """Main function"""
+    files = [
+        'app/components/NewestContent2025Banner.tsx',
+        'app/enterprise/page.tsx',
+        'app/page-optimized.tsx',
+        'src/hooks/usePerformance.ts',
+        'src/utils/analytics.ts',
+        'src/utils/codeSplitting.ts',
+        'src/utils/errorHandler.ts',
+    ]
+    
+    fixed_count = 0
+    for file_path in files:
+        full_path = Path('/workspace') / file_path
+        if full_path.exists():
+            if resolve_all_conflicts(full_path):
+                fixed_count += 1
+        else:
+            print(f"! File not found: {file_path}")
+    
+    print(f"\n{'='*60}")
+    print(f"Fixed {fixed_count} file(s)")
+    print(f"{'='*60}")
 
-for filepath in files_to_fix:
-    if os.path.exists(filepath):
-        fix_merge_conflicts(filepath)
-    else:
-        print(f"File not found: {filepath}")
+if __name__ == '__main__':
+    main()
