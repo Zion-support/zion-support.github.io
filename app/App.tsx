@@ -62,7 +62,7 @@ const App: React.FC = () => {
   }, []);
 
   const handleError = useCallback((error: Error, errorInfo: any) => {
-    logger.error('Application Error', error, { component: 'ErrorBoundary' });
+    logger.error('Application Error', error, 'ErrorBoundary');
     // eslint-disable-next-line no-console
     console.error('Error info:', errorInfo);
   }, []);
