@@ -1,4 +1,4 @@
-import React, { useEffect, useCallback, useRef } from 'react';
+import React, { useEffect, useCallback } from 'react';
 import { Helmet } from 'react-helmet-async';
 
 interface SEOData {
@@ -38,7 +38,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
   enableTwitterCards = true,
   enableSchemaMarkup = true,
 }) => {
-  const _structuredDataRef = useRef<HTMLScriptElement | null>(null);
+  // const structuredDataRef = useRef<HTMLScriptElement | null>(null);
   const generateStructuredData = useCallback(() => {
     if (!enableStructuredData || !seoData.structuredData) return null;
 
@@ -196,29 +196,29 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
   //   structuredDataRef.current = script;
   // };
 
-  const _trackPageView = (config: SEOData) => {
-    if (typeof window !== 'undefined' && 'gtag' in window) {
-      (window as unknown as { gtag: (command: string, targetId: string, config: Record<string, unknown>) => void }).gtag('config', 'GA_MEASUREMENT_ID', {
-        page_title: config.title,
-        page_location: config.canonicalUrl,
-      });
-    }
-  };
+  // const trackPageView = (config: SEOData) => {
+  //   if (typeof window !== 'undefined' && 'gtag' in window) {
+  //     (window as unknown as { gtag: (command: string, targetId: string, config: Record<string, unknown>) => void }).gtag('config', 'GA_MEASUREMENT_ID', {
+  //       page_title: config.title,
+  //       page_location: config.canonicalUrl,
+  //     });
+  //   }
+  // };
 
-  const _trackPerformanceMetrics = () => {
-    if (typeof window !== 'undefined' && 'performance' in window) {
-      window.addEventListener('load', () => {
-        const perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-        if (perfData && typeof window !== 'undefined' && 'gtag' in window) {
-          (window as unknown as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag('event', 'page_load_performance', {
-            event_category: 'Performance',
-            event_label: 'Page Load',
-            value: Math.round(perfData.loadEventEnd - perfData.fetchStart),
-          });
-        }
-      });
-    }
-  };
+  // const trackPerformanceMetrics = () => {
+  //   if (typeof window !== 'undefined' && 'performance' in window) {
+  //     window.addEventListener('load', () => {
+  //       const perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+  //       if (perfData && typeof window !== 'undefined' && 'gtag' in window) {
+  //         (window as unknown as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag('event', 'page_load_performance', {
+  //           event_category: 'Performance',
+  //           event_label: 'Page Load',
+  //           value: Math.round(perfData.loadEventEnd - perfData.fetchStart),
+  //         });
+  //       }
+  //     });
+  //   }
+  // };
 
   return (
     <Helmet>

@@ -18,7 +18,7 @@ import PerformanceOptimizer from './components/PerformanceOptimizer';
 import Analytics from './components/Analytics';
 
 // Lazy load components for better performance
-// const _ContentShowcase = lazy(() => import('./components/ContentShowcase'));
+// const ContentShowcase = lazy(() => import('./components/ContentShowcase'));
 // const InteractiveContentShowcase2026 = lazy(
 //   () => import('./components/InteractiveContentShowcase2026')
 // );
@@ -99,7 +99,7 @@ const App: React.FC = () => {
     if (typeof window !== 'undefined' && 'performance' in window) {
       const pageLoadMetrics = collectPerformanceMetrics();
       const metrics = performanceOptimizer.getMetrics();
-      const performanceMetrics = performanceMonitor.getMetrics();
+      // const performanceMetrics = performanceMonitor.getMetrics();
       
       if (pageLoadMetrics) {
         // eslint-disable-next-line no-console
@@ -109,32 +109,19 @@ const App: React.FC = () => {
         // eslint-disable-next-line no-console
         console.log('Performance metrics:', metrics);
       }
-      if (performanceMetrics) {
-        // eslint-disable-next-line no-console
-        console.log('Core Web Vitals:', performanceMetrics);
-      }
+      // Performance metrics logging removed for production
     }
     
-    // Log performance and accessibility metrics periodically - optimized
+    // Log performance and accessibility metrics periodically
     const metricsInterval = setInterval(() => {
-<<<<<<< HEAD
-=======
-      // const _performanceMetrics = performanceMonitor.getMetrics();
+      // const performanceMetrics = performanceMonitor.getMetrics();
       const accessibilityMetrics = accessibilityEnhancer.getMetrics();
       
->>>>>>> cursor/fix-errors-and-merge-to-main-1f43
       if (process.env.NODE_ENV === 'development') {
-        const performanceMetrics = performanceMonitor.getMetrics();
-        const accessibilityMetrics = accessibilityEnhancer.getMetrics();
-        
-        if (performanceMetrics) {
-          // eslint-disable-next-line no-console
-          console.log('Performance Score:', performanceMonitor.getScore());
-        }
-        if (accessibilityMetrics) {
-          // eslint-disable-next-line no-console
-          console.log('Accessibility Score:', accessibilityMetrics.overallScore);
-        }
+        // eslint-disable-next-line no-console
+        console.log('Performance Score:', performanceMonitor.getScore());
+        // eslint-disable-next-line no-console
+        console.log('Accessibility Score:', accessibilityMetrics.overallScore);
       }
     }, 30000);
     

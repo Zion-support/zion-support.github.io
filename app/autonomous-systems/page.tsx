@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, Star, Bot, Cpu, Shield, Zap, Target, BarChart, Brain, Settings, RefreshCw } from 'lucide-react';
+import { CheckCircle, Bot, Cpu, Shield, Zap, Target, BarChart, Brain, Settings, RefreshCw } from 'lucide-react';
 
 const AutonomousSystemsPage: React.FC = () => {
   const autonomousServices = [
@@ -138,7 +138,7 @@ const AutonomousSystemsPage: React.FC = () => {
     }
   ];
 
-  // const _categories = [...new Set(autonomousServices.map(service => service.category))];
+  // const categories = [...new Set(autonomousServices.map(service => service.category))];
 
   return (
     <>

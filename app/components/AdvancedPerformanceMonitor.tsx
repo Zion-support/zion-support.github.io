@@ -153,7 +153,8 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       (resource: PerformanceResourceTiming) => resource.duration > 1000
     );
 
-    if (slowResources.length > 0) {
+    if (slowResources.length > 0 && process.env.NODE_ENV === 'development') {
+      // eslint-disable-next-line no-console
       console.log('Slow resources detected:', slowResources.map(r => ({
         name: r.name,
         duration: r.duration,
