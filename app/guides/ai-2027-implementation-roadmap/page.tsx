@@ -2,13 +2,17 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import {
   ArrowLeft,
+  Calendar,
+  User,
   Clock,
+  Tag,
   Target,
   CheckCircle,
   ArrowRight,
   Zap,
   TrendingUp,
   Brain,
+  Cpu,
 } from 'lucide-react';
 
 export const metadata = {
@@ -33,7 +37,11 @@ export default function AI2027ImplementationRoadmap() {
       {/* Header */}
       <header className="bg-gradient-to-r from-purple-900 to-blue-900 text-white">
         <div className="max-w-6xl mx-auto px-4 py-12">
+<<<<<<< HEAD
+          <Link 
+=======
           <Link
+>>>>>>> cursor/fix-errors-and-merge-to-main-0000
             to="/"
             className="inline-flex items-center text-blue-200 hover:text-white transition-colors mb-8"
           >
@@ -354,14 +362,14 @@ export default function AI2027ImplementationRoadmap() {
             roadmap today.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <Link
+            <Link 
               to="/contact"
               className="inline-flex items-center px-8 py-4 bg-white text-purple-900 rounded-lg hover:bg-blue-50 transition-colors font-semibold"
             >
               Get Your Roadmap
               <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
-            <Link
+            <Link 
               to="/case-studies"
               className="inline-flex items-center px-8 py-4 bg-transparent border-2 border-white text-white rounded-lg hover:bg-white hover:text-purple-900 transition-colors font-semibold"
             >

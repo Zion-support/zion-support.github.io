@@ -384,7 +384,7 @@ class ContextLogger {
   perf(metric: string, value: number, metadata?: Record<string, unknown>): void {
     this.logger.perf(metric, value, { ...metadata, context: this.context })
   }
-  lifecycle(message: string, metadata?: Record<string, unknown>): void {
+  lifecycle(message: string, _metadata?: Record<string, unknown>): void {
     this.logger.lifecycle(message, this.context)
   }
   performance(message: string, data: unknown, _metadata?: Record<string, unknown>): void {
