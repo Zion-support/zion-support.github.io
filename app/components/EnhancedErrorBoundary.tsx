@@ -145,17 +145,15 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       })
       .catch(() => {
         // eslint-disable-next-line no-console
-        });
+        console.error('Error reporting failed');
+      });
   };
-<<<<<<< HEAD
+
   // In production, you might want to send this to an error reporting service
   if (process.env.NODE_ENV === 'production') {
     // Example: send to error reporting service
     // errorReportingService.captureException(error, { extra: errorInfo });
   }
-=======
-
->>>>>>> cursor/fix-errors-and-merge-to-main-deb0
   render() {
     if (this.state.hasError) {
       if (this.props.fallback) {

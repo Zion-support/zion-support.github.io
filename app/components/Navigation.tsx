@@ -1,13 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-import { ChevronDown, Phone, Mail, MapPin, Menu, X } from 'lucide-react';
-const Navigation: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [servicesOpen, setServicesOpen] = useState(false);
-<<<<<<< HEAD
-=======
-=======
 import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap } from 'lucide-react';
 
 const Navigation: React.FC = () => {
@@ -89,7 +81,6 @@ const Navigation: React.FC = () => {
       ]
     }
   ];
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-1ed2
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${

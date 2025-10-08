@@ -10,7 +10,6 @@ interface PerformanceMetrics {
 
 const PerformanceMonitor: React.FC = () => {
   useEffect(() => {
-<<<<<<< HEAD
     // const _reportWebVitals = (_metric: { name: string; value: number }) => {
     //   // Log to console in development (only on client side)
     //   if (typeof window !== 'undefined' && enableConsoleLogging) {

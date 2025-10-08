@@ -20,19 +20,15 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   const [isReducedMotion, setIsReducedMotion] = useState(false);
   const [isHighContrast, setIsHighContrast] = useState(false);
   const [fontSize, setFontSize] = useState(16);
-<<<<<<< HEAD
-<<<<<<< HEAD
-      // Add skip links
-      const skipLink = document.createElement('a');
-      skipLink.href = '#main-content';
-      skipLink.textContent = 'Skip to main content';
-      skipLink.className = 'skip-link';
-      document.body.insertBefore(skipLink, document.body.firstChild);
-    };
 
-=======
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-1f43
+  useEffect(() => {
+    // Add skip links
+    const skipLink = document.createElement('a');
+    skipLink.href = '#main-content';
+    skipLink.textContent = 'Skip to main content';
+    skipLink.className = 'skip-link';
+    document.body.insertBefore(skipLink, document.body.firstChild);
+  }, []);
 
   useEffect(() => {
     // Check for reduced motion preference

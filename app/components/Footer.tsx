@@ -1,6 +1,5 @@
 import React, { memo } from 'react';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
 import { Phone, Mail, MapPin, Clock, Award, Shield, Zap, ArrowRight } from 'lucide-react';
 
 const Footer: React.FC = memo(() => {  return (
@@ -14,15 +13,10 @@ const Footer: React.FC = memo(() => {  return (
               <span className="text-3xl mr-2">⚡</span>
               <h3 className="text-2xl font-bold text-cyan-400">Zion Tech Group</h3>
             </div>
-<<<<<<< HEAD
             <p className="text-gray-300 mb-6 leading-relaxed">
               Leading provider of enterprise AI solutions, quantum computing, and autonomous systems. 
               Transform your business with cutting-edge technology.
             </p>
-=======
-          </div>
-=======
-import { Phone, Mail, MapPin, Clock, Award, Shield, Zap, Brain, Cloud, Code, BarChart, Users, Globe, ArrowRight } from 'lucide-react';
 
 const Footer: React.FC = () => {
   const serviceCategories = [
