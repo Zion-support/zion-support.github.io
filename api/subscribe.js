@@ -1,4 +1,3 @@
-const { withSentry } = require('./withSentry.cjs');
 const { isValidEmail } = require('./emailUtils.cjs');
 const fs = require('fs');
 const path = require('path');
@@ -57,3 +56,4 @@ async function handler(req, res) {
   }
 }
 
+module.exports = { handler };
