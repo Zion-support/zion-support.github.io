@@ -165,14 +165,11 @@ const formattedMessage = `${prefix} ${tags} ${entry.message}`;
 
     switch (entry.level) {
       case LogLevel.DEBUG:
-//         console.debug(formattedMessage, entry.context || '');
-        break;
+//         break;
       case LogLevel.INFO:
-//         console.info(formattedMessage, entry.context || '');
-        break;
+//         break;
       case LogLevel.WARN:
-//         console.warn(formattedMessage, entry.context || '');
-        break;
+//         break;
       case LogLevel.ERROR:
       case LogLevel.CRITICAL:
 //         console.error(formattedMessage, entry.context || '');

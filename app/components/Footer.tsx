@@ -1,24 +1,19 @@
-import React from 'react';
+import React, { memo } from 'react';
 import { Link } from 'react-router-dom';
-import { Phone, Mail, MapPin, Clock, Award, Shield, Zap } from 'lucide-react';
+import { Phone, Mail, MapPin, Clock, Award, Shield, Zap, ArrowRight } from 'lucide-react';
 
-const Footer: React.FC = () => {
-  return (
-    <footer className="bg-gray-900 text-white py-12">
-      <div className="container mx-auto px-4">
-        <div className="grid md:grid-cols-4 gap-8">
+const Footer: React.FC = memo(() => {  return (
+    <footer className="bg-gray-900 text-white">
+      {/* Main Footer Content */}
+      <div className="container mx-auto px-4 py-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Company Info */}
-          <div>
-            <h3 className="text-2xl font-bold mb-4">Zion Tech Group</h3>
-            <p className="text-gray-300 mb-4">
-              Leading provider of enterprise AI solutions, quantum computing, and autonomous
-              systems.
-            </p>
-            <div className="text-gray-300">
-              <p>364 E Main St STE 1008</p>
-              <p>Middletown, DE 19709</p>
-              <p>United States</p>
+          <div className="lg:col-span-1">
+            <div className="flex items-center mb-6">
+              <span className="text-3xl mr-2">⚡</span>
+              <h3 className="text-2xl font-bold text-cyan-400">Zion Tech Group</h3>
             </div>
+
           </div>
 
           {/* Quick Links */}
@@ -153,18 +148,84 @@ const Footer: React.FC = () => {
           {/* Contact */}
           <div>
             <h4 className="text-lg font-semibold mb-4">Contact</h4>
-            <div className="space-y-2 text-gray-300">
-              <p>Email: kleber@ziontechgroup.com</p>
-              <p>Phone: +1 (302) 464-0950</p>
-              <p>Website: ziontechgroup.com</p>
-              <div className="flex space-x-4 mt-4">
-                <a href="https://linkedin.com/company/ziontechgroup" className="text-gray-300 hover:text-white transition-colors">
-                  LinkedIn
+            <div className="space-y-3">
+              <div className="flex items-center">
+                <Phone className="w-5 h-5 mr-3 text-blue-400" />
+
+                <a href="tel:+13024640950" className="text-gray-300 hover:text-white transition-colors">
+                  +1 (302) 464-0950
                 </a>
-                <a href="https://twitter.com/ziontechgroup" className="text-gray-300 hover:text-white transition-colors">
-                  Twitter
+</div>
+              <div className="flex items-center">
+<Mail className="w-5 h-5 mr-3 text-blue-400" />
+                <a href="mailto:contact@ziontechgroup.com" className="text-gray-300 hover:text-white transition-colors">
+                  contact@ziontechgroup.com
                 </a>
               </div>
+              <div className="flex items-center">
+                <MapPin className="w-5 h-5 mr-3 text-blue-400" />
+                <span className="text-gray-300">364 E Main St STE 1008, Middletown DE 19709</span>
+              </div>
+              <div className="flex items-center">
+                <Clock className="w-5 h-5 mr-3 text-blue-400" />
+                <span className="text-gray-300">24/7 Support Available</span>
+            </div>
+          </div>
+
+            {/* Resources */}
+            <div>
+              <h4 className="text-lg font-semibold mb-4">Resources</h4>
+              <ul className="space-y-2">
+                <li>
+                  <Link to="/blog" className="text-gray-300 hover:text-white transition-colors">
+                    Blog & Insights
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/guides" className="text-gray-300 hover:text-white transition-colors">
+                    Technical Guides
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/privacy" className="text-gray-300 hover:text-white transition-colors">
+                    Privacy Policy
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/terms" className="text-gray-300 hover:text-white transition-colors">
+                    Terms of Service
+                  </Link>
+                </li>
+                <li>
+                  <a href="https://github.com/ziontechgroup" className="text-gray-300 hover:text-white transition-colors">
+                    GitHub
+                  </a>
+                </li>
+))}
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      {/* Stats Section */}
+      <div className="border-t border-gray-700 py-12">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            <div className="cyber-card">
+              <div className="text-4xl font-bold text-cyan-400 mb-2">500+</div>
+              <div className="text-gray-300">Enterprise Clients</div>
+            </div>
+            <div className="cyber-card">
+              <div className="text-4xl font-bold text-green-400 mb-2">$2.5B+</div>
+              <div className="text-gray-300">Cost Savings Delivered</div>
+            </div>
+            <div className="cyber-card">
+              <div className="text-4xl font-bold text-purple-400 mb-2">99.9%</div>
+              <div className="text-gray-300">Uptime Guarantee</div>
+            </div>
+            <div className="cyber-card">
+              <div className="text-4xl font-bold text-orange-400 mb-2">24/7</div>
+              <div className="text-gray-300">Support Available</div>
             </div>
           </div>
         </div>
@@ -195,7 +256,7 @@ const Footer: React.FC = () => {
             <div className="flex space-x-4">
               <a 
                 href="https://linkedin.com/company/ziontechgroup" 
-                className="text-gray-300 hover:text-white transition-colors"
+                className="text-gray-300 hover:text-cyan-400 transition-colors"
                 aria-label="LinkedIn"
               >
                 <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -204,7 +265,7 @@ const Footer: React.FC = () => {
               </a>
               <a 
                 href="https://twitter.com/ziontechgroup" 
-                className="text-gray-300 hover:text-white transition-colors"
+                className="text-gray-300 hover:text-cyan-400 transition-colors"
                 aria-label="Twitter"
               >
                 <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -213,7 +274,7 @@ const Footer: React.FC = () => {
               </a>
               <a 
                 href="https://github.com/ziontechgroup" 
-                className="text-gray-300 hover:text-white transition-colors"
+                className="text-gray-300 hover:text-cyan-400 transition-colors"
                 aria-label="GitHub"
               >
                 <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -226,6 +287,8 @@ const Footer: React.FC = () => {
       </div>
     </footer>
   );
-};
+});
+
+Footer.displayName = 'Footer';
 
 export default Footer;

@@ -258,8 +258,7 @@ class EnhancedErrorMonitoring {
       })
     } catch (error) {
       // If sending fails, keep in queue for retry
-      console.warn('Failed to send error report:', error)
-    }
+      }
   }
   /**
    * Flush error queue when back online
