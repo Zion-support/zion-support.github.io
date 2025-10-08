@@ -86,7 +86,7 @@ export const escapeHTML = (text: string): string => {
  * Generate a random token for CSRF protection
  */
 export const generateCSRFToken = (): string => {
-//   const array = new Uint8Array(32);
+  const array = new Uint8Array(32);
   if (typeof window !== 'undefined' && window.crypto) {
     window.crypto.getRandomValues(array);
   }
