@@ -65,12 +65,20 @@ export const performanceConfig = {
       cacheGroups: {
         vendor: {
           test: /[\\/]node_modules[\\/]/,
+<<<<<<< HEAD
           prioritypriority: -10,
+=======
+          priority: -10,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-f5eb
           reuseExistingChunk: true,
         },
         default: {
           minChunks: 2,
+<<<<<<< HEAD
           prioritypriority: -20,
+=======
+          priority: -20,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-f5eb
           reuseExistingChunk: true,
         },
       },
@@ -84,8 +92,16 @@ export const performanceConfig = {
     sendToAnalytics: true,
     logThreshold: 'needsImprovement',
   },
+<<<<<<< HEAD
 }
 
 export type PerformanceConfig = typeof performanceConfig
 
 export default performanceConfig
+=======
+};
+
+export type PerformanceConfig = typeof performanceConfig;
+
+export default performanceConfig;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-f5eb

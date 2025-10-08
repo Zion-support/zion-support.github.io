@@ -162,14 +162,14 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     }
   }, [seoData]);
 
-  const addMetaTag = (name: string, content: string, attribute: string = 'name') => {
+  const _addMetaTag = (name: string, content: string, attribute: string = 'name') => {
     const metaTag = document.createElement('meta');
     metaTag.setAttribute(attribute, name);
     metaTag.content = content;
     document.head.appendChild(metaTag);
   };
 
-  const updateCanonicalUrl = (url: string) => {
+  const _updateCanonicalUrl = (url: string) => {
     let canonicalLink = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
     
     if (canonicalLink) {
@@ -182,7 +182,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     }
   };
 
-  const addStructuredData = (data: Record<string, unknown>) => {
+  const _addStructuredData = (data: Record<string, unknown>) => {
     // Remove existing structured data
     if (structuredDataRef.current) {
       structuredDataRef.current.remove();
@@ -197,7 +197,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     structuredDataRef.current = script;
   };
 
-  const trackPageView = (config: SEOData) => {
+  const _trackPageView = (config: SEOData) => {
     if (typeof window !== 'undefined' && 'gtag' in window) {
       (window as unknown as { gtag: (command: string, targetId: string, config: Record<string, unknown>) => void }).gtag('config', 'GA_MEASUREMENT_ID', {
         page_title: config.title,
@@ -206,7 +206,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     }
   };
 
-  const trackPerformanceMetrics = () => {
+  const _trackPerformanceMetrics = () => {
     if (typeof window !== 'undefined' && 'performance' in window) {
       window.addEventListener('load', () => {
         const perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
