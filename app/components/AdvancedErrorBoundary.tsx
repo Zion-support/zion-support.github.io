@@ -64,11 +64,11 @@ class AdvancedErrorBoundary extends Component<
 
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
-      logger.error(
-        'Error Boundary caught an error',
-        error,
-        { context: 'ErrorBoundary', errorInfo }
-      );
+      logger.error('Error Boundary caught an error', { 
+        context: 'ErrorBoundary', 
+        error: error.message,
+        errorInfo 
+      });
     }
 
     // Call custom error handler
@@ -113,7 +113,7 @@ class AdvancedErrorBoundary extends Component<
   private getSessionId = (): string => {
     // Generate or retrieve session ID
     try {
-      let _sessionId = sessionStorage.getItem('sessionId');
+      let sessionId = sessionStorage.getItem('sessionId');
       if (!sessionId) {
         sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
         sessionStorage.setItem('sessionId', sessionId);
@@ -139,11 +139,10 @@ class AdvancedErrorBoundary extends Component<
         body: JSON.stringify(errorReport),
       });
     } catch (reportError) {
-      logger.error(
-        'Failed to send error report',
-        reportError as Error,
-        { context: 'ErrorReporting' }
-      );
+      logger.error('Failed to send error report', { 
+        context: 'ErrorReporting',
+        error: reportError 
+      });
     }
   };
 

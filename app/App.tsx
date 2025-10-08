@@ -69,11 +69,7 @@ const _GuidesPage = lazy(() => import('./guides/page'));
 const _SitemapPage = lazy(() => import('./sitemap-page'));
 
 // Utils
-import { lazyLoadImages, preloadCriticalResources, collectPerformanceMetrics, performanceOptimizer } from './utils/performanceOptimizer';
 import { logger } from './utils/logger';
-import performanceMonitor from './utils/performanceMonitor';
-import seoOptimizer from './utils/seoOptimizer';
-import accessibilityEnhancer from './utils/accessibilityEnhancer';
 
 // Styles
 import './globals.css';
@@ -82,66 +78,6 @@ const App: React.FC = () => {
   useEffect(() => {
     // Initialize global error handling
     logger.info('initialized', { component: 'App' });
-
-    // Initialize performance monitoring
-    lazyLoadImages();
-    preloadCriticalResources();
-    performanceOptimizer.init();
-    performanceMonitor.init();
-    
-    // Initialize SEO optimization
-    seoOptimizer.init();
-    
-    // Initialize accessibility enhancements
-    accessibilityEnhancer.init();
-    
-    // Initialize Web Vitals monitoring
-    if (typeof window !== 'undefined' && 'performance' in window) {
-      const pageLoadMetrics = collectPerformanceMetrics();
-      const metrics = performanceOptimizer.getMetrics();
-      const performanceMetrics = performanceMonitor.getMetrics();
-      
-      if (pageLoadMetrics) {
-        // eslint-disable-next-line no-console
-        console.log('Performance metrics collected:', pageLoadMetrics);
-      }
-      if (metrics) {
-        // eslint-disable-next-line no-console
-        console.log('Performance metrics:', metrics);
-      }
-      if (performanceMetrics) {
-        // eslint-disable-next-line no-console
-        console.log('Core Web Vitals:', performanceMetrics);
-      }
-    }
-    
-    // Log performance and accessibility metrics periodically - optimized
-    const metricsInterval = setInterval(() => {
-      if (process.env.NODE_ENV === 'development') {
-        const performanceMetrics = performanceMonitor.getMetrics();
-        const accessibilityMetrics = accessibilityEnhancer.getMetrics();
-        
-        if (performanceMetrics) {
-          // eslint-disable-next-line no-console
-          console.log('Performance Score:', performanceMonitor.getScore());
-        }
-        if (accessibilityMetrics) {
-          // eslint-disable-next-line no-console
-          console.log('Accessibility Score:', accessibilityMetrics.overallScore);
-        }
-      }
-    }, 30000);
-    
-    logger.info('performance monitoring initialized', { component: 'App' });
-    logger.info('🚀 Zion Tech Group App initialized with comprehensive monitoring', { component: 'App' });
-
-    return () => {
-      // Cleanup
-      performanceOptimizer.cleanup();
-      performanceMonitor.cleanup();
-      accessibilityEnhancer.cleanup();
-      clearInterval(metricsInterval);
-    };
   }, []);
 
   return (
@@ -153,40 +89,11 @@ const App: React.FC = () => {
           logger.error(error.message, { error, errorInfo });
         }}
       >
-        <PerformanceOptimizer>
-          <AccessibilityEnhancer>
-            <SEOEnhancer
-              title="Zion Tech Group - Advanced AI and IT Solutions"
-              description="Leading provider of enterprise AI solutions, quantum computing, and autonomous systems. Transform your business with our cutting-edge technology."
-            >
-              <AdvancedSEOOptimizer
-                config={{
-                  title: 'Zion Tech Group - Advanced AI and IT Solutions',
-                  description: 'Leading provider of enterprise AI solutions, quantum computing, and autonomous systems. Transform your business with our cutting-edge technology.',
-                  keywords: ['AI solutions', 'enterprise AI', 'quantum computing', 'autonomous systems', 'digital transformation', 'automation', 'cloud services', 'AI consulting', 'business intelligence', 'machine learning'],
-                  canonicalUrl: 'https://ziontechgroup.com',
-                  ogImage: 'https://ziontechgroup.com/og-image.jpg',
-                  structuredData: {
-                    '@type': 'TechCompany',
-                    name: 'Zion Tech Group',
-                    description: 'Advanced AI and IT Solutions Provider',
-                    foundingDate: '2020',
-                    numberOfEmployees: '50-100',
-                    industry: 'Technology',
-                    services: [
-                      'AI Solutions',
-                      'Digital Transformation',
-                      'Cloud Services',
-                      'Automation',
-                      'Business Intelligence'
-                    ]
-                  }
-                }}
-                enableStructuredData={true}
-                enableOpenGraph={true}
-                enableTwitterCards={true}
-                enableSchemaMarkup={true}
-              />
+        <AccessibilityEnhancer>
+          <SEOEnhancer
+            title="Zion Tech Group - Advanced AI and IT Solutions"
+            description="Leading provider of enterprise AI solutions, quantum computing, and autonomous systems. Transform your business with our cutting-edge technology."
+          >
               <Router>
                 <div className="App">
                   <Analytics trackingId="G-XXXXXXXXXX" />
@@ -253,9 +160,8 @@ const App: React.FC = () => {
                   />
                 </div>
               </Router>
-            </SEOEnhancer>
-          </AccessibilityEnhancer>
-        </PerformanceOptimizer>
+          </SEOEnhancer>
+        </AccessibilityEnhancer>
       </AdvancedErrorBoundary>
     </HelmetProvider>
   );
