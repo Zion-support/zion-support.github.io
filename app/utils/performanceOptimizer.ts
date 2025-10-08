@@ -105,7 +105,6 @@ class PerformanceOptimizer {
    * Measure render time using PerformanceObserver
    */
   private measureRenderTime(): void {
-    if (typeof window === 'undefined') return;
     
     // Check if PerformanceObserver exists (may not be available in test environments)
     if (typeof PerformanceObserver === 'undefined') return;
@@ -124,9 +123,9 @@ class PerformanceOptimizer {
       this.observers.push(observer);
     } catch (error) {
       // PerformanceObserver may not support 'measure' entryType in some environments
+      console.warn('Performance Observer not supported:', error);
     }
   }
-
 
   private observeLCP() {
     try {
