@@ -62,13 +62,18 @@ const Footer: React.FC = () => {
             </ul>
           </div>
 
-          {/* Services */}
+          {/* Core Services */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Services</h4>
+            <h4 className="text-lg font-semibold mb-4">Core Services</h4>
             <ul className="space-y-2 text-gray-300">
               <li>
                 <Link to="/services" className="hover:text-white transition-colors">
                   All Services
+                </Link>
+              </li>
+              <li>
+                <Link to="/micro-saas" className="hover:text-white transition-colors">
+                  Micro SAAS
                 </Link>
               </li>
               <li>
@@ -82,10 +87,22 @@ const Footer: React.FC = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/micro-saas" className="hover:text-white transition-colors">
-                  Micro SAAS
+                <Link to="/business-intelligence" className="hover:text-white transition-colors">
+                  Business Intelligence
                 </Link>
               </li>
+              <li>
+                <Link to="/cybersecurity" className="hover:text-white transition-colors">
+                  Cybersecurity
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Advanced Technologies */}
+          <div>
+            <h4 className="text-lg font-semibold mb-4">Advanced Technologies</h4>
+            <ul className="space-y-2 text-gray-300">
               <li>
                 <Link to="/quantum-computing" className="hover:text-white transition-colors">
                   Quantum Computing
@@ -94,11 +111,6 @@ const Footer: React.FC = () => {
               <li>
                 <Link to="/autonomous-systems" className="hover:text-white transition-colors">
                   Autonomous Systems
-                </Link>
-              </li>
-              <li>
-                <Link to="/business-intelligence" className="hover:text-white transition-colors">
-                  Business Intelligence
                 </Link>
               </li>
               <li>
@@ -112,8 +124,13 @@ const Footer: React.FC = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/cybersecurity" className="hover:text-white transition-colors">
-                  Cybersecurity
+                <Link to="/robotics" className="hover:text-white transition-colors">
+                  Robotics
+                </Link>
+              </li>
+              <li>
+                <Link to="/services-advertising" className="hover:text-white transition-colors">
+                  AI Advertising
                 </Link>
               </li>
             </ul>
@@ -123,9 +140,11 @@ const Footer: React.FC = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4">Contact</h4>
             <div className="space-y-2 text-gray-300">
-              <p>Email: contact@ziontechgroup.com</p>
-              <p>Phone: +1 (302) 600-9898</p>
+              <p>Email: kleber@ziontechgroup.com</p>
+              <p>Phone: +1 (302) 464-0950</p>
               <p>Website: ziontechgroup.com</p>
+              <p>Address: 364 E Main St STE 1008</p>
+              <p>Middletown, DE 19709</p>
               <div className="flex space-x-4 mt-4">
                 <a href="https://linkedin.com/company/ziontechgroup" className="text-gray-300 hover:text-white transition-colors">
                   LinkedIn
