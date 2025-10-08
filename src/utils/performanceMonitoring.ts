@@ -321,10 +321,10 @@ class PerformanceMonitor {
         entries.forEach((entry: any) => {
           if (entry.initiatorType) {
             this.trackMetric(
-              `resource_${resourceEntry.initiatorType}`,
-              resourceEntry.duration,
+              `resource_${entry.initiatorType}`,
+              entry.duration,
               'ms',
-              { name: resourceEntry.name }
+              { name: entry.name }
             );
           }
         });
