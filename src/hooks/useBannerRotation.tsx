@@ -25,13 +25,13 @@ interface BannerRotationState {
 }
 
 // Helper functions defined inline
-const selectBannersForDisplay = (banners: unknown[], maxBanners: number, strategy: RotationStrategy) => {
-  const enabled = banners.filter((b: unknown) => (b as any).enabled !== false);
-  const sorted = enabled.sort((a: unknown, b: unknown) => ((b as any).priority || 0) - ((a as any).priority || 0));
+const selectBannersForDisplay = (banners: BannerConfig[], maxBanners: number, strategy: RotationStrategy) => {
+  const enabled = banners.filter((b: BannerConfig) => b.enabled !== false);
+  const sorted = enabled.sort((a: BannerConfig, b: BannerConfig) => (b.priority || 0) - (a.priority || 0));
   return sorted.slice(0, maxBanners);
 };
 
-const selectBalancedBanners = (banners: unknown[], maxBanners: number) => {
+const selectBalancedBanners = (banners: BannerConfig[], maxBanners: number) => {
   return selectBannersForDisplay(banners, maxBanners, 'balanced');
 };
 
@@ -62,13 +62,13 @@ const loadBannerStats = () => {
 // const getRefreshInterval = () => 30000;
 // const getRotationStrategy = (): RotationStrategy => 'balanced';
 
-export const useBannerRotation = (_options: UseBannerRotationOptions = {}) => {
+export const useBannerRotation = (options: UseBannerRotationOptions = {}) => {
   const {
     strategy = 'balanced',
     maxBanners = 3,
     refreshInterval = 30000,
     enableTracking = true
-  } = _options;
+  } = options;
 
   const [state, setState] = useState<BannerRotationState>({
     currentBanners: [],
@@ -91,7 +91,7 @@ export const useBannerRotation = (_options: UseBannerRotationOptions = {}) => {
       
       setState(prev => ({
         ...prev,
-        currentBanners: selected as BannerConfig[],
+        currentBanners: selected,
         isLoading: false
       }));
     } catch (error) {
