@@ -2,7 +2,8 @@ import React, { memo } from 'react';
 import { Link } from 'react-router-dom';
 import { Phone, Mail, MapPin, Clock, Award, Shield, Zap, ArrowRight } from 'lucide-react';
 
-const Footer: React.FC = memo(() => {  return (
+const Footer: React.FC = memo(() => {
+  return (
     <footer className="bg-gray-900 text-white">
       {/* Main Footer Content */}
       <div className="container mx-auto px-4 py-16">
@@ -13,12 +14,21 @@ const Footer: React.FC = memo(() => {  return (
               <span className="text-3xl mr-2">⚡</span>
               <h3 className="text-2xl font-bold text-cyan-400">Zion Tech Group</h3>
             </div>
-<<<<<<< HEAD
             <p className="text-gray-300 mb-6 leading-relaxed">
               Leading provider of enterprise AI solutions, quantum computing, and autonomous systems. 
               Transform your business with cutting-edge technology.
             </p>
-=======
+            <div className="flex space-x-4">
+              <a href="https://linkedin.com/company/ziontechgroup" className="text-gray-300 hover:text-cyan-400 transition-colors">
+                LinkedIn
+              </a>
+              <a href="https://twitter.com/ziontechgroup" className="text-gray-300 hover:text-cyan-400 transition-colors">
+                Twitter
+              </a>
+              <a href="https://github.com/ziontechgroup" className="text-gray-300 hover:text-cyan-400 transition-colors">
+                GitHub
+              </a>
+            </div>
           </div>
 
           {/* Quick Links */}
@@ -38,11 +48,6 @@ const Footer: React.FC = memo(() => {  return (
               <li>
                 <Link to="/services" className="text-gray-300 hover:text-white transition-colors">
                   Services
-                </Link>
-              </li>
-              <li>
-                <Link to="/services-advertising" className="text-gray-300 hover:text-white transition-colors">
-                  AI Advertising
                 </Link>
               </li>
               <li>
@@ -68,53 +73,28 @@ const Footer: React.FC = memo(() => {  return (
             <h4 className="text-lg font-semibold mb-4">Services</h4>
             <ul className="space-y-2 text-gray-300">
               <li>
-                <Link to="/services" className="hover:text-white transition-colors">
-                  All Services
-                </Link>
-              </li>
-              <li>
                 <Link to="/ai-services" className="hover:text-white transition-colors">
                   AI Services
                 </Link>
               </li>
               <li>
-                <Link to="/ai-data-analytics" className="hover:text-white transition-colors">
-                  AI Data Analytics
+                <Link to="/ai-marketing" className="hover:text-white transition-colors">
+                  AI Marketing
                 </Link>
               </li>
               <li>
-                <Link to="/ai-cybersecurity" className="hover:text-white transition-colors">
-                  AI Cybersecurity
+                <Link to="/ai-automation" className="hover:text-white transition-colors">
+                  AI Automation
                 </Link>
               </li>
               <li>
-                <Link to="/ai-workflow-automation" className="hover:text-white transition-colors">
-                  AI Workflow Automation
+                <Link to="/ai-healthcare" className="hover:text-white transition-colors">
+                  AI Healthcare
                 </Link>
               </li>
               <li>
-                <Link to="/ai-cloud-infrastructure" className="hover:text-white transition-colors">
-                  AI Cloud Infrastructure
-                </Link>
-              </li>
-              <li>
-                <Link to="/ai-ecommerce-solutions" className="hover:text-white transition-colors">
-                  AI E-commerce Solutions
-                </Link>
-              </li>
-              <li>
-                <Link to="/ai-mobile-app-development" className="hover:text-white transition-colors">
-                  AI Mobile App Development
-                </Link>
-              </li>
-              <li>
-                <Link to="/it-services" className="hover:text-white transition-colors">
-                  IT Services
-                </Link>
-              </li>
-              <li>
-                <Link to="/micro-saas" className="hover:text-white transition-colors">
-                  Micro SAAS
+                <Link to="/ai-fintech" className="hover:text-white transition-colors">
+                  AI Fintech
                 </Link>
               </li>
               <li>
@@ -128,23 +108,45 @@ const Footer: React.FC = memo(() => {  return (
                 </Link>
               </li>
               <li>
-                <Link to="/business-intelligence" className="hover:text-white transition-colors">
-                  Business Intelligence
-                </Link>
-              </li>
-              <li>
                 <Link to="/blockchain-web3" className="hover:text-white transition-colors">
                   Blockchain & Web3
                 </Link>
               </li>
+            </ul>
+          </div>
+
+          {/* Technologies */}
+          <div>
+            <h4 className="text-lg font-semibold mb-4">Technologies</h4>
+            <ul className="space-y-2 text-gray-300">
               <li>
-                <Link to="/iot-edge-computing" className="hover:text-white transition-colors">
-                  IoT & Edge Computing
+                <Link to="/technologies/machine-learning" className="hover:text-white transition-colors">
+                  Machine Learning
                 </Link>
               </li>
               <li>
-                <Link to="/cybersecurity" className="hover:text-white transition-colors">
-                  Cybersecurity
+                <Link to="/technologies/deep-learning" className="hover:text-white transition-colors">
+                  Deep Learning
+                </Link>
+              </li>
+              <li>
+                <Link to="/technologies/nlp" className="hover:text-white transition-colors">
+                  Natural Language Processing
+                </Link>
+              </li>
+              <li>
+                <Link to="/technologies/computer-vision" className="hover:text-white transition-colors">
+                  Computer Vision
+                </Link>
+              </li>
+              <li>
+                <Link to="/robotics" className="hover:text-white transition-colors">
+                  Robotics
+                </Link>
+              </li>
+              <li>
+                <Link to="/technologies/edge-computing" className="hover:text-white transition-colors">
+                  Edge Computing
                 </Link>
               </li>
             </ul>
@@ -153,101 +155,28 @@ const Footer: React.FC = memo(() => {  return (
           {/* Contact */}
           <div>
             <h4 className="text-lg font-semibold mb-4">Contact</h4>
->>>>>>> cursor/fix-errors-and-merge-to-main-deb0
             <div className="space-y-3">
               <div className="flex items-center">
-                <Phone className="w-5 h-5 mr-3 text-blue-400" />
+                <Phone className="w-5 h-5 mr-3 text-cyan-400" />
                 <a href="tel:+13024640950" className="text-gray-300 hover:text-white transition-colors">
                   +1 (302) 464-0950
                 </a>
               </div>
               <div className="flex items-center">
-                <Mail className="w-5 h-5 mr-3 text-blue-400" />
+                <Mail className="w-5 h-5 mr-3 text-cyan-400" />
                 <a href="mailto:contact@ziontechgroup.com" className="text-gray-300 hover:text-white transition-colors">
                   contact@ziontechgroup.com
                 </a>
               </div>
               <div className="flex items-center">
-                <MapPin className="w-5 h-5 mr-3 text-blue-400" />
+                <MapPin className="w-5 h-5 mr-3 text-cyan-400" />
                 <span className="text-gray-300">364 E Main St STE 1008, Middletown DE 19709</span>
               </div>
               <div className="flex items-center">
-                <Clock className="w-5 h-5 mr-3 text-blue-400" />
+                <Clock className="w-5 h-5 mr-3 text-cyan-400" />
                 <span className="text-gray-300">24/7 Support Available</span>
-<<<<<<< HEAD
-              </div>              <div className="flex space-x-4 mt-4">
-=======
               </div>
-              <div className="flex space-x-4 mt-4">
->>>>>>> cursor/fix-errors-and-merge-to-main-deb0
-                <a href="https://linkedin.com/company/ziontechgroup" className="text-gray-300 hover:text-white transition-colors">
-                  LinkedIn
-                </a>
-                <a href="https://twitter.com/ziontechgroup" className="text-gray-300 hover:text-white transition-colors">
-                  Twitter
-                </a>
-              </div>
-              
-              {/* Contact Info */}
-              <div className="space-y-3 mt-6">
-                <div className="flex items-center">
-                  <Phone className="w-5 h-5 mr-3 text-blue-400" />
-                  <a href="tel:+13024640950" className="text-gray-300 hover:text-white transition-colors">
-                    +1 302 464 0950
-                  </a>
-                </div>
-                <div className="flex items-center">
-                  <Mail className="w-5 h-5 mr-3 text-blue-400" />
-                  <a href="mailto:kleber@ziontechgroup.com" className="text-gray-300 hover:text-white transition-colors">
-                    kleber@ziontechgroup.com
-                  </a>
-                </div>
-                <div className="flex items-center">
-                  <MapPin className="w-5 h-5 mr-3 text-blue-400" />
-                  <span className="text-gray-300">364 E Main St STE 1008, Middletown DE 19709</span>
-                </div>
-                <div className="flex items-center">
-                  <Clock className="w-5 h-5 mr-3 text-blue-400" />
-                  <span className="text-gray-300">24/7 Support Available</span>
-                </div>              </div>
             </div>
-          </div>
-
-            {/* Resources */}
-            <div>
-              <h4 className="text-lg font-semibold mb-4">Resources</h4>
-              <ul className="space-y-2">
-                <li>
-                  <Link to="/blog" className="text-gray-300 hover:text-white transition-colors">
-                    Blog & Insights
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/guides" className="text-gray-300 hover:text-white transition-colors">
-                    Technical Guides
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/privacy" className="text-gray-300 hover:text-white transition-colors">
-                    Privacy Policy
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/terms" className="text-gray-300 hover:text-white transition-colors">
-                    Terms of Service
-                  </Link>
-                </li>
-                <li>
-                  <a href="https://github.com/ziontechgroup" className="text-gray-300 hover:text-white transition-colors">
-                    GitHub
-                  </a>
-                </li>
-                <li>
-                  <a href="https://docs.ziontechgroup.com" className="text-gray-300 hover:text-white transition-colors">
-                    Documentation
-                  </a>
-                </li>
-              </ul>            </div>
           </div>
         </div>
       </div>
