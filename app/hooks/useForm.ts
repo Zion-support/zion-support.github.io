@@ -6,6 +6,7 @@
 import { useState, useCallback, ChangeEvent } from 'react';
 // import { logger } from '../utils/logger';
 import {
+<<<<<<< HEAD
   ValidationRule,
   validateField,
   validateForm,
@@ -13,6 +14,9 @@ import {
   getFormErrors,
   // _ValidationResult
 } from '../utils/formValidation';
+=======
+  ValidationRule, validateField, validateForm, isFormValid, getFormErrors, _ValidationResult} from '../utils/formValidation';
+>>>>>>> cursor/fix-errors-and-merge-to-main-7716
 
 export interface UseFormConfig<T extends Record<string, unknown>> {
   initialValues: T;
@@ -40,11 +44,7 @@ export interface UseFormReturn<T extends Record<string, unknown>> {
 }
 
 export function useForm<T extends Record<string, unknown>>({
-  initialValues,
-  validationSchema = {},
-  onSubmit,
-  validateOnChange = true,
-  validateOnBlur = true
+  initialValues, validationSchema = {}, onSubmit: _onSubmit, validateOnChange = true, validateOnBlur = true
 }: UseFormConfig<T>): UseFormReturn<T> {
   const [values, setValues] = useState<T>(initialValues);
   const [errors, setErrors] = useState<Record<keyof T, string[]>>({} as Record<keyof T, string[]>);
@@ -147,8 +147,7 @@ export function useForm<T extends Record<string, unknown>>({
       try {
         await onSubmit(values);
       } catch (error) {
- 
-    console.error('Form submission error:', error);
+        console.error('Form submission error:', error);
       } finally {
         setIsSubmitting(false);
       }
