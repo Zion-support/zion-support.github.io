@@ -1,6 +1,7 @@
-import { Metadata } from 'next';
+import React from 'react';
+// import { Metadata } from 'next'; // Removed for Vite
 
-export const metadata: Metadata = {
+// export const metadata: Metadata = // Removed for Vite {
   title: 'January 2025 Advanced AI Revolution: Next-Generation Enterprise Transformation | Zion Tech Group',
   description: 'Discover the revolutionary AI breakthroughs transforming enterprise operations in January 2025. Advanced autonomous systems, quantum-enhanced intelligence, and $2.8B proven ROI.',
   keywords: 'AI revolution 2025, enterprise AI transformation, autonomous systems, quantum AI, machine learning, artificial intelligence, business automation',

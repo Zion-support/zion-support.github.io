@@ -3,6 +3,7 @@
  * Tracks and reports performance metrics with Web Vitals support
  */
 
+import React from 'react';
 import { logger } from './logger';
 import { analytics } from './analytics';
 

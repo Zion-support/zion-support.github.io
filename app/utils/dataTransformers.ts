@@ -1,3 +1,4 @@
+import React from 'react';
 /**
  * Data Transformation Utilities
  * Provides utilities for transforming and formatting data

@@ -3,6 +3,7 @@
  * Provides utilities for optimizing performance in React applications
  */
 
+import { lazy } from 'react';
 import React from 'react';
 
 /**

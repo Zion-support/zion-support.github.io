@@ -1,5 +1,4 @@
-'use client';
-
+import React from 'react';
 interface PerformanceMetrics {
   lcp?: number;
   fid?: number;

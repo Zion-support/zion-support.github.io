@@ -3,6 +3,7 @@
  * Provides middleware for handling requests and responses
  */
 
+import React from 'react';
 import logger from '../utils/logger';
 
 export type NextFunction = () => Promise<unknown> | unknown;

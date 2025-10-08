@@ -1,8 +1,8 @@
 import React from 'react';
-import { Metadata } from 'next';
-import Link from 'next/link';
+// import { Metadata } from 'next'; // Removed for Vite
+import { Link } from 'react-router-dom';
 
-export const metadata: Metadata = {
+// export const metadata: Metadata = // Removed for Vite {
   title: 'Enterprise Solutions - Zion Tech Group',
   description: 'Comprehensive AI and IT solutions for enterprise organizations. Transform your business with our advanced technology stack.',
 };

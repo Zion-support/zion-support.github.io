@@ -1,3 +1,4 @@
+import React from 'react';
 /**
  * Security Enhancer
  * Provides comprehensive security utilities and monitoring

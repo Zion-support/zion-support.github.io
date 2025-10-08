@@ -1,5 +1,6 @@
+import { lazy } from 'react';
 import React from 'react';
-import dynamic from 'next/dynamic';
+// import dynamic from 'next/dynamic'; // Replaced with React.lazy
 import SEOOptimizer from './components/SEOOptimizer';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
@@ -8,12 +9,12 @@ import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 const EmptyComponent = () => null;
 
 // Lazy load heavy components - these may not exist, so make them optional
-const UnifiedBanner = dynamic(() => import('./components/NewestContent2025Banner').catch(() => import('./components/EmptyComponent').catch(() => ({ default: EmptyComponent }))), {
+const UnifiedBanner = lazy(() => import('./components/NewestContent2025Banner').catch(() => import('./components/EmptyComponent').catch(() => ({ default: EmptyComponent }))), {
   loading: () => <div className="animate-pulse bg-gray-200 h-32 rounded-lg"></div>,
   ssr: false
 });
 
-const ContentPromotion = dynamic(
+const ContentPromotion = lazy(
   () => import('./components/UltimateBusinessIntelligence2025Banner').catch(() => {
     return { default: EmptyComponent } as any;
   }), 
@@ -23,7 +24,7 @@ const ContentPromotion = dynamic(
   }
 );
 
-const ContentShowcase = dynamic(() => import('./components/UltimateBusinessIntelligenceShowcase2025').catch(() => ({ default: EmptyComponent })), {
+const ContentShowcase = lazy(() => import('./components/UltimateBusinessIntelligenceShowcase2025').catch(() => ({ default: EmptyComponent })), {
   loading: () => <div className="animate-pulse bg-gray-200 h-48 rounded-lg"></div>,
   ssr: false
 });

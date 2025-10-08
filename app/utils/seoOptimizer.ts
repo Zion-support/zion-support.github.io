@@ -1,3 +1,4 @@
+import React from 'react';
 /**
  * Advanced SEO Optimization Utility
  * Provides comprehensive SEO enhancements and monitoring
