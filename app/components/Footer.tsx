@@ -1,106 +1,208 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Mail, Phone, MapPin, ExternalLink } from 'lucide-react';
 
 const Footer: React.FC = () => {
+  const currentYear = new Date().getFullYear();
+
   return (
-    <footer className="bg-gray-900 text-white py-12">
+    <footer className="bg-gray-900 text-white py-16" role="contentinfo">
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-4 gap-8">
           {/* Company Info */}
-          <div>
-            <h3 className="text-2xl font-bold mb-4">Zion Tech Group</h3>
-            <p className="text-gray-300 mb-4">
+          <div className="md:col-span-1">
+            <h3 className="text-2xl font-bold mb-4 text-white">Zion Tech Group</h3>
+            <p className="text-gray-300 mb-6 leading-relaxed">
               Leading provider of enterprise AI solutions, quantum computing, and autonomous
-              systems.
+              systems. Transforming businesses with cutting-edge technology.
             </p>
-            <div className="text-gray-300">
-              <p>364 E Main St STE 1008</p>
-              <p>Middletown, DE 19709</p>
-              <p>United States</p>
+            <div className="space-y-2 text-gray-300">
+              <div className="flex items-center space-x-2">
+                <MapPin className="w-4 h-4 text-blue-400" />
+                <span>364 E Main St STE 1008</span>
+              </div>
+              <div className="flex items-center space-x-2 ml-6">
+                <span>Middletown, DE 19709</span>
+              </div>
+              <div className="flex items-center space-x-2 ml-6">
+                <span>United States</span>
+              </div>
             </div>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
-            <ul className="space-y-2">
-              <li>
-                <Link to="/" className="text-gray-300 hover:text-white transition-colors">
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link to="/about" className="text-gray-300 hover:text-white transition-colors">
-                  About
-                </Link>
-              </li>
-              <li>
-                <Link to="/services" className="text-gray-300 hover:text-white transition-colors">
-                  Services
-                </Link>
-              </li>
-              <li>
-                <Link to="/services-advertising" className="text-gray-300 hover:text-white transition-colors">
-                  AI Advertising
-                </Link>
-              </li>
-              <li>
-                <Link to="/case-studies" className="text-gray-300 hover:text-white transition-colors">
-                  Case Studies
-                </Link>
-              </li>
-              <li>
-                <Link to="/enterprise" className="text-gray-300 hover:text-white transition-colors">
-                  Enterprise
-                </Link>
-              </li>
-              <li>
-                <Link to="/team" className="text-gray-300 hover:text-white transition-colors">
-                  Team
-                </Link>
-              </li>
-            </ul>
+            <h4 className="text-lg font-semibold mb-6 text-white">Quick Links</h4>
+            <nav aria-label="Footer navigation">
+              <ul className="space-y-3">
+                <li>
+                  <Link 
+                    to="/" 
+                    className="text-gray-300 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-gray-900 rounded-md px-1 py-1"
+                  >
+                    Home
+                  </Link>
+                </li>
+                <li>
+                  <Link 
+                    to="/about" 
+                    className="text-gray-300 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-gray-900 rounded-md px-1 py-1"
+                  >
+                    About
+                  </Link>
+                </li>
+                <li>
+                  <Link 
+                    to="/services" 
+                    className="text-gray-300 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-gray-900 rounded-md px-1 py-1"
+                  >
+                    Services
+                  </Link>
+                </li>
+                <li>
+                  <Link 
+                    to="/services-advertising" 
+                    className="text-gray-300 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-gray-900 rounded-md px-1 py-1"
+                  >
+                    AI Advertising
+                  </Link>
+                </li>
+                <li>
+                  <Link 
+                    to="/case-studies" 
+                    className="text-gray-300 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-gray-900 rounded-md px-1 py-1"
+                  >
+                    Case Studies
+                  </Link>
+                </li>
+                <li>
+                  <Link 
+                    to="/enterprise" 
+                    className="text-gray-300 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-gray-900 rounded-md px-1 py-1"
+                  >
+                    Enterprise
+                  </Link>
+                </li>
+                <li>
+                  <Link 
+                    to="/team" 
+                    className="text-gray-300 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-gray-900 rounded-md px-1 py-1"
+                  >
+                    Team
+                  </Link>
+                </li>
+              </ul>
+            </nav>
           </div>
 
           {/* Services */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Services</h4>
-            <ul className="space-y-2 text-gray-300">
-              <li>AI Solutions</li>
-              <li>Quantum Computing</li>
-              <li>Autonomous Systems</li>
-              <li>Business Intelligence</li>
-              <li>Cloud Migration</li>
+            <h4 className="text-lg font-semibold mb-6 text-white">Our Services</h4>
+            <ul className="space-y-3 text-gray-300">
+              <li className="flex items-center space-x-2">
+                <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
+                <span>AI Solutions</span>
+              </li>
+              <li className="flex items-center space-x-2">
+                <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
+                <span>Quantum Computing</span>
+              </li>
+              <li className="flex items-center space-x-2">
+                <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
+                <span>Autonomous Systems</span>
+              </li>
+              <li className="flex items-center space-x-2">
+                <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
+                <span>Business Intelligence</span>
+              </li>
+              <li className="flex items-center space-x-2">
+                <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
+                <span>Cloud Migration</span>
+              </li>
+              <li className="flex items-center space-x-2">
+                <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
+                <span>Digital Transformation</span>
+              </li>
             </ul>
           </div>
 
           {/* Contact */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Contact</h4>
-            <div className="space-y-2 text-gray-300">
-              <p>Email: contact@ziontechgroup.com</p>
-              <p>Phone: +1 (302) 464-0950</p>
-              <p>Website: ziontechgroup.com</p>
-              <div className="flex space-x-4 mt-4">
-                <a href="https://linkedin.com/company/ziontechgroup" className="text-gray-300 hover:text-white transition-colors">
-                  LinkedIn
+            <h4 className="text-lg font-semibold mb-6 text-white">Contact Us</h4>
+            <div className="space-y-4 text-gray-300">
+              <div className="flex items-center space-x-3">
+                <Mail className="w-5 h-5 text-blue-400" />
+                <a 
+                  href="mailto:contact@ziontechgroup.com" 
+                  className="hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-gray-900 rounded-md px-1 py-1"
+                >
+                  contact@ziontechgroup.com
                 </a>
-                <a href="https://twitter.com/ziontechgroup" className="text-gray-300 hover:text-white transition-colors">
-                  Twitter
+              </div>
+              <div className="flex items-center space-x-3">
+                <Phone className="w-5 h-5 text-blue-400" />
+                <a 
+                  href="tel:+13024640950" 
+                  className="hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-gray-900 rounded-md px-1 py-1"
+                >
+                  +1 (302) 464-0950
+                </a>
+              </div>
+              <div className="flex items-center space-x-3">
+                <ExternalLink className="w-5 h-5 text-blue-400" />
+                <a 
+                  href="https://ziontechgroup.com" 
+                  className="hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-gray-900 rounded-md px-1 py-1"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  ziontechgroup.com
+                </a>
+              </div>
+              <div className="flex space-x-4 mt-6">
+                <a 
+                  href="https://linkedin.com/company/ziontechgroup" 
+                  className="text-gray-300 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-gray-900 rounded-md p-2"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Follow us on LinkedIn"
+                >
+                  <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                  </svg>
+                </a>
+                <a 
+                  href="https://twitter.com/ziontechgroup" 
+                  className="text-gray-300 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-gray-900 rounded-md p-2"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Follow us on Twitter"
+                >
+                  <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                  </svg>
                 </a>
               </div>
             </div>
           </div>
         </div>
 
-        <div className="border-t border-gray-700 mt-8 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-gray-300 mb-4 md:mb-0">&copy; 2024 Zion Tech Group. All rights reserved.</p>
+        <div className="border-t border-gray-700 mt-12 pt-8">
+          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+            <p className="text-gray-300 text-sm">
+              &copy; {currentYear} Zion Tech Group. All rights reserved.
+            </p>
             <div className="flex space-x-6">
-              <Link to="/privacy" className="text-gray-300 hover:text-white transition-colors text-sm">
+              <Link 
+                to="/privacy" 
+                className="text-gray-300 hover:text-white transition-colors text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-gray-900 rounded-md px-2 py-1"
+              >
                 Privacy Policy
               </Link>
-              <Link to="/terms" className="text-gray-300 hover:text-white transition-colors text-sm">
+              <Link 
+                to="/terms" 
+                className="text-gray-300 hover:text-white transition-colors text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-gray-900 rounded-md px-2 py-1"
+              >
                 Terms of Service
               </Link>
             </div>

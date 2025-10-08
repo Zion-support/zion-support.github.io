@@ -1,6 +1,12 @@
 import React, { useCallback, useState, useEffect, Suspense, lazy } from 'react';
+import { Helmet } from 'react-helmet-async';
 
 // Dynamically import heavy components for better performance
+const ContentPromotionBanner = lazy(() => import('./components/ContentPromotionBanner'));
+const ContentCarousel = lazy(() => import('./components/ContentCarousel'));
+const DynamicContentShowcase = lazy(() => import('./components/DynamicContentShowcase'));
+const ContentStatistics = lazy(() => import('./components/ContentStatistics'));
+const ContentNewsletterSignup = lazy(() => import('./components/ContentNewsletterSignup'));
 
 // Loading skeleton component
 const ServiceCardSkeleton: React.FC = () => (
@@ -40,17 +46,83 @@ const HomePage: React.FC = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-white to-purple-50">
-      {/* Skip to main content for accessibility */}
-      <a
-        href="#main-content"
-        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-indigo-600 text-white px-4 py-2 rounded-md z-50"
-      >
-        Skip to main content
-      </a>
+    <>
+      <Helmet>
+        <title>Zion Tech Group - Advanced AI and IT Solutions | Enterprise Technology</title>
+        <meta 
+          name="description" 
+          content="Leading provider of enterprise AI solutions, quantum computing, and autonomous systems. Transform your business with cutting-edge technology. Contact us at (302) 464-0950." 
+        />
+        <meta 
+          name="keywords" 
+          content="AI solutions, enterprise AI, quantum computing, autonomous systems, digital transformation, automation, cloud services, AI consulting, business intelligence, machine learning, Zion Tech Group" 
+        />
+        <meta property="og:title" content="Zion Tech Group - Advanced AI and IT Solutions" />
+        <meta property="og:description" content="Leading provider of enterprise AI solutions, quantum computing, and autonomous systems. Transform your business with cutting-edge technology." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://ziontechgroup.com" />
+        <meta property="og:image" content="https://ziontechgroup.com/og-image.jpg" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Zion Tech Group - Advanced AI and IT Solutions" />
+        <meta name="twitter:description" content="Leading provider of enterprise AI solutions, quantum computing, and autonomous systems." />
+        <meta name="twitter:image" content="https://ziontechgroup.com/og-image.jpg" />
+        <link rel="canonical" href="https://ziontechgroup.com" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Zion Tech Group",
+            "url": "https://ziontechgroup.com",
+            "logo": "https://ziontechgroup.com/logo.png",
+            "description": "Leading provider of enterprise AI solutions, quantum computing, and autonomous systems.",
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "telephone": "+1-302-464-0950",
+              "contactType": "Customer Service",
+              "areaServed": "US",
+              "availableLanguage": "en"
+            },
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "364 E Main St STE 1008",
+              "addressLocality": "Middletown",
+              "addressRegion": "DE",
+              "postalCode": "19709",
+              "addressCountry": "US"
+            },
+            "sameAs": [
+              "https://twitter.com/ziontechgroup",
+              "https://linkedin.com/company/ziontechgroup"
+            ],
+            "foundingDate": "2020",
+            "numberOfEmployees": "50-100",
+            "industry": "Technology",
+            "services": [
+              "AI Solutions",
+              "Digital Transformation", 
+              "Cloud Services",
+              "Automation",
+              "Business Intelligence",
+              "Quantum Computing",
+              "Autonomous Systems"
+            ]
+          })}
+        </script>
+      </Helmet>
+      
+      <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-white to-purple-50">
+        {/* Skip to main content for accessibility */}
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-indigo-600 text-white px-4 py-2 rounded-md z-50"
+        >
+          Skip to main content
+        </a>
 
-      {/* Content Promotion Banner */}
-      <ContentPromotionBanner />
+        {/* Content Promotion Banner */}
+        <Suspense fallback={<div className="h-32 bg-gradient-to-r from-indigo-600 to-purple-600 animate-pulse"></div>}>
+          <ContentPromotionBanner />
+        </Suspense>
 
       <main id="main-content" className="container mx-auto px-4 py-16" role="main">
         {/* Hero Section */}
@@ -121,16 +193,24 @@ const HomePage: React.FC = () => {
         </section>
 
         {/* Content Carousel */}
-        <ContentCarousel />
+        <Suspense fallback={<div className="h-96 bg-gray-100 animate-pulse rounded-2xl"></div>}>
+          <ContentCarousel />
+        </Suspense>
 
         {/* Dynamic Content Showcase */}
-        <DynamicContentShowcase />
+        <Suspense fallback={<div className="h-96 bg-gray-100 animate-pulse rounded-2xl"></div>}>
+          <DynamicContentShowcase />
+        </Suspense>
 
         {/* Content Statistics */}
-        <ContentStatistics />
+        <Suspense fallback={<div className="h-96 bg-gray-100 animate-pulse rounded-2xl"></div>}>
+          <ContentStatistics />
+        </Suspense>
 
         {/* Newsletter Signup */}
-        <ContentNewsletterSignup />
+        <Suspense fallback={<div className="h-64 bg-gradient-to-r from-indigo-600 to-purple-600 animate-pulse rounded-2xl"></div>}>
+          <ContentNewsletterSignup />
+        </Suspense>
 
         {/* Call to Action Section */}
         <section className="text-center" aria-labelledby="cta-heading">
@@ -147,7 +227,8 @@ const HomePage: React.FC = () => {
           </a>
         </section>
       </main>
-    </div>
+      </div>
+    </>
   );
 };
 
