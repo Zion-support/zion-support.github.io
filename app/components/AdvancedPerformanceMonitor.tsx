@@ -42,19 +42,15 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     if ('PerformanceObserver' in window) {
       try {
         const lcpObserver = new PerformanceObserver(list => {
-          const _entries = list.getEntries();
-          const _lastEntry = entries[entries.length - 1];
+          const entries = list.getEntries();
+          const lastEntry = entries[entries.length - 1];
           setMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }));
         });
         lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
         observers.push(lcpObserver);
       } catch (error) {
-<<<<<<< HEAD
         // eslint-disable-next-line no-console
         console.warn('LCP observer not supported:', error);
-=======
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-6395
       }
     }
 
@@ -62,7 +58,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     if ('PerformanceObserver' in window) {
       try {
         const fidObserver = new PerformanceObserver(list => {
-          const _entries = list.getEntries();
+          const entries = list.getEntries();
           entries.forEach(entry => {
             if (
               entry.entryType === 'first-input' &&
@@ -80,28 +76,24 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         fidObserver.observe({ entryTypes: ['first-input'] });
         observers.push(fidObserver);
       } catch (error) {
-<<<<<<< HEAD
         // eslint-disable-next-line no-console
         console.warn('FID observer not supported:', error);
-=======
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-6395
       }
     }
 
     // Measure Cumulative Layout Shift (CLS)
     if ('PerformanceObserver' in window) {
       try {
-        let _clsValue = 0;
+        let clsValue = 0;
         const clsObserver = new PerformanceObserver(list => {
-          const _entries = list.getEntries();
+          const entries = list.getEntries();
           entries.forEach(entry => {
             if (
               entry.entryType === 'layout-shift' &&
               'hadRecentInput' in entry &&
               'value' in entry
             ) {
-              const _clsEntry = entry as LayoutShift;
+              const clsEntry = entry as LayoutShift;
               if (!clsEntry.hadRecentInput) {
                 clsValue += clsEntry.value;
                 setMetrics(prev => ({ ...prev, cls: clsValue }));
@@ -112,19 +104,15 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         clsObserver.observe({ entryTypes: ['layout-shift'] });
         observers.push(clsObserver);
       } catch (error) {
-<<<<<<< HEAD
         // eslint-disable-next-line no-console
         console.warn('CLS observer not supported:', error);
-=======
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-6395
       }
     }
 
     // Measure Time to First Byte (TTFB)
     try {
-      const _navigationEntries = performance.getEntriesByType?.('navigation') || [];
-      const _navigationEntry = navigationEntries[0] as PerformanceNavigationTiming;
+      const navigationEntries = performance.getEntriesByType?.('navigation') || [];
+      const navigationEntry = navigationEntries[0] as PerformanceNavigationTiming;
       const ttfb = navigationEntry
         ? navigationEntry.responseStart - navigationEntry.requestStart
         : null;
@@ -141,12 +129,8 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         memory,
       }));
     } catch (error) {
-<<<<<<< HEAD
       // eslint-disable-next-line no-console
       console.warn('Performance measurement failed:', error);
-=======
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-6395
     }
 
     // Cleanup observers
@@ -155,12 +139,8 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         try {
           observer.disconnect();
         } catch (error) {
-<<<<<<< HEAD
           // eslint-disable-next-line no-console
           console.warn('Error disconnecting observer:', error);
-=======
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-6395
         }
       });
     };
@@ -169,7 +149,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   const measureResourceTiming = useCallback(() => {
     if (typeof window === 'undefined' || !('performance' in window)) return;
 
-    const _resources = performance.getEntriesByType('resource');
+    const resources = performance.getEntriesByType('resource');
     const slowResources = resources.filter(
       (resource: PerformanceResourceTiming) => resource.duration > 1000
     );
