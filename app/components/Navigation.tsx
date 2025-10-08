@@ -23,12 +23,34 @@ const Navigation: React.FC = () => {
             <Link to="/about" className="text-gray-700 hover:text-blue-600 transition-colors">
               About
             </Link>
-            <Link to="/services" className="text-gray-700 hover:text-blue-600 transition-colors">
-              Services
-            </Link>
-            <Link to="/services-advertising" className="text-gray-700 hover:text-blue-600 transition-colors">
-              AI Advertising
-            </Link>
+            <div className="relative">
+              <button
+                onClick={() => setServicesOpen(!servicesOpen)}
+                className="text-gray-700 hover:text-blue-600 transition-colors flex items-center"
+              >
+                Services
+                <ChevronDown className="w-4 h-4 ml-1" />
+              </button>
+              {servicesOpen && (
+                <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg border py-2 z-50">
+                  <Link to="/services" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                    All Services
+                  </Link>
+                  <Link to="/micro-saas" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                    Micro SAAS Solutions
+                  </Link>
+                  <Link to="/ai-services" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                    AI Services
+                  </Link>
+                  <Link to="/it-services" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                    IT Services
+                  </Link>
+                  <Link to="/services-advertising" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                    Advertising Services
+                  </Link>
+                </div>
+              )}
+            </div>
             <Link to="/case-studies" className="text-gray-700 hover:text-blue-600 transition-colors">
               Case Studies
             </Link>
@@ -89,9 +111,6 @@ const Navigation: React.FC = () => {
                   </Link>
                 </div>
               </div>
-              <Link to="/services-advertising" className="text-gray-700 hover:text-blue-600 transition-colors">
-                AI Advertising
-              </Link>
               <Link to="/case-studies" className="text-gray-700 hover:text-blue-600 transition-colors">
                 Case Studies
               </Link>
