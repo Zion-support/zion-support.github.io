@@ -45,6 +45,21 @@ const Footer: React.FC = () => {
                 </Link>
               </li>
               <li>
+                <Link to="/quantum-computing" className="text-gray-300 hover:text-white transition-colors">
+                  Quantum Computing
+                </Link>
+              </li>
+              <li>
+                <Link to="/autonomous-systems" className="text-gray-300 hover:text-white transition-colors">
+                  Autonomous Systems
+                </Link>
+              </li>
+              <li>
+                <Link to="/business-intelligence" className="text-gray-300 hover:text-white transition-colors">
+                  Business Intelligence
+                </Link>
+              </li>
+              <li>
                 <Link to="/case-studies" className="text-gray-300 hover:text-white transition-colors">
                   Case Studies
                 </Link>
@@ -67,10 +82,13 @@ const Footer: React.FC = () => {
             <h4 className="text-lg font-semibold mb-4">Services</h4>
             <ul className="space-y-2 text-gray-300">
               <li>AI Solutions</li>
+              <li>IT Services</li>
+              <li>Micro SAAS</li>
               <li>Quantum Computing</li>
               <li>Autonomous Systems</li>
               <li>Business Intelligence</li>
               <li>Cloud Migration</li>
+              <li>Cybersecurity</li>
             </ul>
           </div>
 

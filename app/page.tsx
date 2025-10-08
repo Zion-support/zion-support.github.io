@@ -1,5 +1,12 @@
 import React, { useCallback, useState, useEffect, Suspense, lazy } from 'react';
 
+// Import components
+import ContentPromotionBanner from './components/ContentPromotionBanner';
+import ContentCarousel from './components/ContentCarousel';
+import DynamicContentShowcase from './components/DynamicContentShowcase';
+import ContentStatistics from './components/ContentStatistics';
+import ContentNewsletterSignup from './components/ContentNewsletterSignup';
+
 // Dynamically import heavy components for better performance
 
 // Loading skeleton component

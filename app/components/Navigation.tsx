@@ -48,6 +48,15 @@ const Navigation: React.FC = () => {
                   <Link to="/services-advertising" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
                     Advertising Services
                   </Link>
+                  <Link to="/quantum-computing" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                    Quantum Computing
+                  </Link>
+                  <Link to="/autonomous-systems" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                    Autonomous Systems
+                  </Link>
+                  <Link to="/business-intelligence" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                    Business Intelligence
+                  </Link>
                 </div>
               )}
             </div>
@@ -108,6 +117,15 @@ const Navigation: React.FC = () => {
                   </Link>
                   <Link to="/services-advertising" className="block text-gray-600 hover:text-blue-600 transition-colors">
                     Advertising Services
+                  </Link>
+                  <Link to="/quantum-computing" className="block text-gray-600 hover:text-blue-600 transition-colors">
+                    Quantum Computing
+                  </Link>
+                  <Link to="/autonomous-systems" className="block text-gray-600 hover:text-blue-600 transition-colors">
+                    Autonomous Systems
+                  </Link>
+                  <Link to="/business-intelligence" className="block text-gray-600 hover:text-blue-600 transition-colors">
+                    Business Intelligence
                   </Link>
                 </div>
               </div>
