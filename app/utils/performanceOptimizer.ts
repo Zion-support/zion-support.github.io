@@ -149,8 +149,6 @@ class PerformanceOptimizer {
       observer.observe({ entryTypes: ['paint'] })
       this.observers.push(observer)
     } catch {
-    } catch {
-    } catch {
       // Ignore if not supported
     }
   }

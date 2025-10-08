@@ -691,3 +691,13 @@ class AccessibilityEnhancer {
     const metrics = this.getMetrics();
     return `
 Accessibility Report
+Generated: ${new Date().toISOString()}
+Total Issues: ${metrics.totalIssues}
+Critical: ${metrics.critical}
+Serious: ${metrics.serious}
+Moderate: ${metrics.moderate}
+Minor: ${metrics.minor}
+Score: ${metrics.score}/100
+`;
+  }
+}

@@ -45,7 +45,7 @@ const App: React.FC = () => {
   }, []);
 
   const handleError = useCallback((error: Error, errorInfo: React.ErrorInfo) => {
-    logger.error('Application Error', error, { errorInfo, component: 'ErrorBoundary' });
+    logger.error('Application Error', error, 'ErrorBoundary', { errorInfo });
   }, []);
 
   return (

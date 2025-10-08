@@ -246,11 +246,11 @@ class PerformanceReporter {
     const resources = performance.getEntriesByType('resource') as PerformanceResourceTiming[]
 
     return {
-      metrics: this.metrics
-      navigation
+      metrics: this.metrics,
+      navigation,
       resources: resources.slice(0, 50), // Limit to 50 resources
-      timestamp: Date.now()
-      userAgent: navigator.userAgent
+      timestamp: Date.now(),
+      userAgent: navigator.userAgent,
       url: window.location.href
     }
   }
@@ -266,10 +266,10 @@ class PerformanceReporter {
       return
     }
     logger.info('Performance Report', {
-      metrics: report.metrics
+      metrics: report.metrics,
       navigation: {
         ttfb: report.navigation?.responseStart ? 
-          report.navigation.responseStart - report.navigation.requestStart : null
+          report.navigation.responseStart - report.navigation.requestStart : null,
         domContentLoaded: report.navigation?.domContentLoadedEventEnd ?
           report.navigation.domContentLoadedEventEnd - report.navigation.domContentLoadedEventStart : null
       }
@@ -294,7 +294,7 @@ export const performanceReporter = new PerformanceReporter()
 // Auto-initialize in browser
 if (typeof window !== 'undefined') {
   performanceReporter.init({
-    enabled: process.env['NODE_ENV'] === 'production'
+    enabled: process.env['NODE_ENV'] === 'production',
     reportInterval: 60000, // Report every minute
   })
 }

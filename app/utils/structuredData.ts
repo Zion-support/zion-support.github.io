@@ -200,9 +200,8 @@ export const getHomepageSchemas = () => [
 /**
  * Render structured data scripts
  */
-export const renderStructuredData = (schemas: unknown[]) => {
-  return schemas.map((schema, _index) => (
-=======
-    JSON.stringify(schema)
-  ));
+export const renderStructuredData = (schemas: unknown[]): string => {
+  return schemas.map((schema) => 
+    `<script type="application/ld+json">${JSON.stringify(schema)}</script>`
+  ).join('\n');
 };
