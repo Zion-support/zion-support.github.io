@@ -27,7 +27,7 @@ export default function AIAutonomousBusinessSystems2026() {
       <div className="max-w-4xl mx-auto px-4 py-8">
         <div className="bg-white rounded-lg shadow-lg p-8">
           <div className="mb-6">
-            <Link href="/blog" className="text-indigo-600 hover:text-indigo-700 flex items-center mb-4">
+            <Link to="/blog" className="text-indigo-600 hover:text-indigo-700 flex items-center mb-4">
               ← Back to Blog
             </Link>
           </div>

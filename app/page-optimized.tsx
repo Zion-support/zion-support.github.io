@@ -82,7 +82,9 @@ export default function OptimizedHomePage() {
         <PerformanceMonitor />
         
         {/* Unified Banner System */}
-        <UnifiedBanner />
+        <Suspense fallback={<div className="animate-pulse bg-gray-200 h-32 rounded-lg"></div>}>
+          <UnifiedBanner />
+        </Suspense>
         
         {/* Main Content */}
         <main className="relative">
@@ -121,10 +123,14 @@ export default function OptimizedHomePage() {
           </section>
 
           {/* Content Showcase */}
-          <ContentShowcase />
+          <Suspense fallback={<div className="animate-pulse bg-gray-200 h-48 rounded-lg"></div>}>
+            <ContentShowcase />
+          </Suspense>
           
           {/* Content Promotion */}
-          <ContentPromotion />
+          <Suspense fallback={<div className="animate-pulse bg-gray-200 h-64 rounded-lg"></div>}>
+            <ContentPromotion />
+          </Suspense>
         </main>
       </div>
     </AccessibilityEnhancer>
