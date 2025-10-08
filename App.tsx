@@ -2,7 +2,6 @@ import React, { memo, useMemo, useCallback, Suspense } from 'react';
 import { HelmetProvider, Helmet } from 'react-helmet-async';
 
 // Memoized components for better performance
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3f25
 const UnifiedContentPromotion = memo(() => (
   <div className='bg-gradient-to-r from-blue-600 to-purple-700 text-white py-16'>
     <div className='container mx-auto px-4 text-center'>
@@ -89,16 +88,13 @@ class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundarySta
   }
 }
 //Loading component
-=======
 
 // Loading component
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3f25
 const LoadingSpinner = memo(() => (
   <div className="animate-pulse bg-gray-200 h-32 rounded flex items-center justify-center">
     <div className="text-gray-500">Loading...</div>
   </div>
 ));
-=======
 
 // Error Boundary Component
 interface ErrorBoundaryState {
@@ -150,7 +146,6 @@ class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundarySta
   }
 }
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3f25
 export default function App() {
   const structuredData = useMemo(
     () => ({
