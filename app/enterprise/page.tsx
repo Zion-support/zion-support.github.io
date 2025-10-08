@@ -54,9 +54,9 @@ const EnterprisePage: React.FC = () => {
                 Advanced AI and IT solutions designed for large organizations
               </p>
             </div>
-            <p className="text-lg text-gray-400 mb-12 max-w-3xl mx-auto">
+            <p className="text-lg text-gray-600 mb-12 max-w-3xl mx-auto">
               Transform your enterprise with our proven AI solutions. Achieve
-              $100M+ cost savings, 500% productivity gains, and 99.9% system
+              significant cost savings, productivity gains, and system
               uptime with enterprise-grade security and compliance.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -71,7 +71,7 @@ const EnterprisePage: React.FC = () => {
               </Link>
               <Link
                 href="#solutions"
-                className="group flex items-center gap-3 bg-gray-200 hover:bg-gray-300 text-gray-900 font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-300"
+                className="group flex items-center gap-3 bg-white hover:bg-gray-50 text-gray-900 font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-300"
               >
                 <span>View Solutions</span>
                 <span className="group-hover:translate-x-1 transition-transform">
@@ -96,17 +96,17 @@ const EnterprisePage: React.FC = () => {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((solution, index) => (
+            {features.map((feature, index) => (
               <div
                 key={index}
                 className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300"
               >
-                <div className="text-4xl mb-4">{solution.icon}</div>
+                <div className="text-4xl mb-4">{feature.icon}</div>
                 <h3 className="text-2xl font-bold text-white mb-4">
-                  {solution.title}
+                  {feature.title}
                 </h3>
                 <p className='text-gray-300'>
-                  {solution.description}
+                  {feature.description}
                 </p>
               </div>
             ))}
@@ -117,12 +117,12 @@ const EnterprisePage: React.FC = () => {
       {/* CTA Section */}
       <section className="py-24 bg-slate-50">
         <div className="container mx-auto px-4">
-          <div className="text-center bg-gradient-to-br from-blue-900 to-purple-900 rounded-3xl p-12 border border-blue-800">
-            <h3 className="text-4xl font-bold text-white mb-6">
+          <div className="text-center bg-white rounded-3xl p-12 border border-gray-200 shadow-xl">
+            <h3 className="text-4xl font-bold text-gray-900 mb-6">
               Ready to Transform Your Enterprise?
             </h3>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Join 500+ Fortune 500 companies achieving unprecedented
+            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+              Join hundreds of leading organizations achieving unprecedented
               transformation with our enterprise AI solutions.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
@@ -135,14 +135,14 @@ const EnterprisePage: React.FC = () => {
               </Link>
               <Link
                 href="/contact"
-                className="group flex items-center gap-3 bg-white/10 hover:bg-white/20 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 border border-white/30"
+                className="group flex items-center gap-3 bg-white hover:bg-gray-50 text-gray-900 font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-300"
               >
                 <span className="text-xl">📧</span>
                 <span>Get Enterprise Consultation</span>
               </Link>
             </div>
           </div>
-        </div>
+        </section>
       </section>
     </>
   );

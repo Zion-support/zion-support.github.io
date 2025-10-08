@@ -131,3 +131,13 @@ export function useEnhancedPerformance(
     },
     [component, trackPerformance]
   );
+
+  return {
+    trackError,
+    trackUserAction,
+    measureOperation,
+    renderCount: renderCountRef.current,
+  };
+}
+
+export default useEnhancedPerformance;

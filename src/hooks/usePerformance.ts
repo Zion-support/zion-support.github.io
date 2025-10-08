@@ -18,14 +18,31 @@ export const usePerformance = () => {
         );
       });
     });
+import { analytics } from '../utils/analytics';
 
-    observer.observe({ entryTypes: ['longtask'] });
+export const usePerformance = () => {
+  useEffect(() => {
+    if ('PerformanceObserver' in window) {
+      const observer = new PerformanceObserver((list) => {
+        list.getEntries().forEach((entry) => {
+          analytics.track(
+            'long_task',
+            'performance',
+            'detected',
+            undefined,
+            entry.duration
+          );
+        });
+      });
 
-    return () => {
-      if (observer && typeof observer.disconnect === 'function') {
-        observer.disconnect();
-      }
-    };
+      observer.observe({ entryTypes: ['longtask'] });
+
+      return () => {
+        if (observer && typeof observer.disconnect === 'function') {
+          observer.disconnect();
+        }
+      };
+    }
   }, []);
 };
 

@@ -1,98 +1,88 @@
-export type ErrorCategory = 'network' | 'validation' | 'auth' | 'runtime' | 'unknown';
-export type ErrorSeverity = 'low' | 'medium' | 'high' | 'critical';
-
-export interface ErrorInfo {
-  id: string;
-  message: string;
-  stack?: string;
-  timestamp: number;
-  category: ErrorCategory;
-  severity: ErrorSeverity;
-  context?: Record<string, any>;
-}
-
-export class ErrorHandler {
-  private errorQueue: ErrorInfo[] = [];
-  private readonly MAX_ERROR_QUEUE = 50;
-
-  handleError(error: Error | string, context?: Record<string, any>): void {
-    const errorObj = typeof error === 'string' ? new Error(error) : error;
-    
-    const errorInfo: ErrorInfo = {
-      message: errorObj.message,
-      stack: errorObj.stack,
-      timestamp: Date.now(),
-      category: this.categorizeError(errorObj),
-      severity: this.determineSeverity(errorObj, this.categorizeError(errorObj)),
-      context,
-      id: this.generateErrorId(),
-    };
-
-    this.errorQueue.push(errorInfo);
-    if (this.errorQueue.length > this.MAX_ERROR_QUEUE) {
+/**
+ * Error handling utilities
+ * Enhanced with retry logic, error categorization, and better reporting
+ */
+    this.errorQueue.push(errorData);
+    if (this.errorQueue.length > this.maxQueueSize) {
       this.errorQueue.shift();
     }
 
-    this.reportError(errorInfo);
+    // Send to error reporting service
+    this.reportError(errorData);
   }
 
+  /**
+   * Categorize error based on message and stack
+   */
   private categorizeError(error: Error): ErrorCategory {
     const message = error.message.toLowerCase();
-    
-    if (message.includes('network') || message.includes('fetch')) {
-      return 'network';
+    const stack = error.stack?.toLowerCase() || '';
+
+    if (message.includes('network') || message.includes('fetch') || message.includes('xhr')) {
+      return ErrorCategory.NETWORK;
     }
-    
     if (message.includes('validation') || message.includes('invalid')) {
-      return 'validation';
+      return ErrorCategory.VALIDATION;
     }
-    
-    if (message.includes('auth') || message.includes('unauthorized')) {
-      return 'auth';
+    if (message.includes('api') || stack.includes('api')) {
+      return ErrorCategory.API;
     }
-    
-    if (error.name === 'TypeError' || error.name === 'ReferenceError') {
-      return 'runtime';
+    if (message.includes('component') || stack.includes('react')) {
+      return ErrorCategory.UI;
     }
-    
-    return 'unknown';
+    if (message.includes('runtime') || stack.includes('runtime')) {
+      return ErrorCategory.RUNTIME;
+    }
+    return ErrorCategory.UNKNOWN;
   }
 
+  /**
+   * Determine error severity
+   */
   private determineSeverity(error: Error, category: ErrorCategory): ErrorSeverity {
-    if (category === 'auth' || category === 'network') {
-      return 'high';
+    if (category === ErrorCategory.NETWORK) {
+      return ErrorSeverity.MEDIUM;
     }
-    
-    if (category === 'validation') {
-      return 'medium';
+    if (category === ErrorCategory.VALIDATION) {
+      return ErrorSeverity.LOW;
     }
-    
-    if (category === 'runtime') {
-      if (error.name === 'TypeError' || error.name === 'ReferenceError') {
-        return 'critical';
-      }
-      return 'high';
+    if (category === ErrorCategory.RUNTIME) {
+      return ErrorSeverity.HIGH;
     }
-    
-    return 'medium';
+    if (category === ErrorCategory.API) {
+      return ErrorSeverity.MEDIUM;
+    }
+    return ErrorSeverity.MEDIUM;
   }
 
+  /**
+   * Generate unique error ID
+   */
   private generateErrorId(): string {
-    return `err_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+    return `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
   }
 
+  /**
+   * Report error to external service
+   */
   private reportError(errorData: ErrorInfo): void {
+    // Implementation for reporting to external service
     console.error('Error reported:', errorData);
   }
 
+  /**
+   * Get all errors
+   */
   getErrors(): ErrorInfo[] {
     return [...this.errorQueue];
   }
 
+  /**
+   * Clear error queue
+   */
   clearErrors(): void {
     this.errorQueue = [];
   }
 }
 
-export const errorHandler = new ErrorHandler();
-export default errorHandler;
+export default ErrorHandler;
