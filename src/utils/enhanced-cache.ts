@@ -235,7 +235,7 @@ export class CacheManager<T = unknown> {
         this.cache = new Map(entries);
       }
     } catch (error) {
-//       console.error('Failed to load cache from storage:', error);
+      console.error('Failed to load cache from storage:', error);
     }
   }
   
@@ -250,7 +250,7 @@ export class CacheManager<T = unknown> {
       const entries = Array.from(this.cache.entries());
       storage?.setItem('cache', JSON.stringify(entries));
     } catch (error) {
-//       console.error('Failed to save cache to storage:', error);
+      console.error('Failed to save cache to storage:', error);
     }
   }
   
@@ -264,7 +264,7 @@ export class CacheManager<T = unknown> {
       const storage = this.getStorage();
       storage?.removeItem('cache');
     } catch (error) {
-//       console.error('Failed to clear cache storage:', error);
+      console.error('Failed to clear cache storage:', error);
     }
   }
   
