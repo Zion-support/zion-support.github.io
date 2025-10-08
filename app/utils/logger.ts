@@ -134,8 +134,8 @@ class Logger {
    */
   fatal(
     message: string,
-    errorOrContextOrMetadata?: Error | string | Record<string, unknown>
-    contextOrMetadata?: string | Record<string, unknown>
+    errorOrContextOrMetadata?: Error | string | Record<string, unknown>,
+    contextOrMetadata?: string | Record<string, unknown>,
     _metadata?: Record<string, unknown>
   ): void {
     let error: Error | undefined
