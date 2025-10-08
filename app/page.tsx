@@ -1,13 +1,8 @@
 import React, { useCallback, useState, useEffect, Suspense, lazy, memo } from 'react';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
-
-// Import components
-import ContentPromotionBanner from './components/ContentPromotionBanner';
-import ContentCarousel from './components/ContentCarousel';
-import DynamicContentShowcase from './components/DynamicContentShowcase';
-import ContentStatistics from './components/ContentStatistics';
-import ContentNewsletterSignup from './components/ContentNewsletterSignup';
+import ErrorBoundary from './components/ErrorBoundary';
+import LoadingSpinner from './components/LoadingSpinner';
 
 // Dynamically import heavy components for better performance
 const ContentPromotionBanner = lazy(() => import('./components/ContentPromotionBanner'));
@@ -60,9 +55,10 @@ const HomePage: React.FC = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-white to-purple-50">
-      {/* Navigation */}
-      <Navigation />
+    <ErrorBoundary>
+      <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-white to-purple-50">
+        {/* Navigation */}
+        <Navigation />
       
       {/* Skip to main content for accessibility */}
       <a
@@ -72,8 +68,10 @@ const HomePage: React.FC = () => {
         Skip to main content
       </a>
 
-      {/* Content Promotion Banner */}
-      <ContentPromotionBanner />
+        {/* Content Promotion Banner */}
+        <Suspense fallback={<LoadingSpinner text="Loading content..." />}>
+          <ContentPromotionBanner />
+        </Suspense>
 
       <main id="main-content" className="container mx-auto px-4 py-16" role="main">
         {/* Hero Section */}
@@ -293,13 +291,19 @@ const HomePage: React.FC = () => {
         </section>
 
         {/* Content Carousel */}
-        <ContentCarousel />
+        <Suspense fallback={<LoadingSpinner text="Loading carousel..." />}>
+          <ContentCarousel />
+        </Suspense>
 
         {/* Dynamic Content Showcase */}
-        <DynamicContentShowcase />
+        <Suspense fallback={<LoadingSpinner text="Loading showcase..." />}>
+          <DynamicContentShowcase />
+        </Suspense>
 
         {/* Content Statistics */}
-        <ContentStatistics />
+        <Suspense fallback={<LoadingSpinner text="Loading statistics..." />}>
+          <ContentStatistics />
+        </Suspense>
 
         {/* Social Proof Section */}
         <section className="bg-gray-50 py-16" aria-labelledby="social-proof-heading">
@@ -359,7 +363,9 @@ const HomePage: React.FC = () => {
         </section>
 
         {/* Newsletter Signup */}
-        <ContentNewsletterSignup />
+        <Suspense fallback={<LoadingSpinner text="Loading newsletter..." />}>
+          <ContentNewsletterSignup />
+        </Suspense>
 
         {/* Call to Action Section */}
         <section className="text-center bg-gradient-to-r from-indigo-50 to-purple-50 rounded-2xl p-12" aria-labelledby="cta-heading">
@@ -394,9 +400,10 @@ const HomePage: React.FC = () => {
         </section>
       </main>
       
-      {/* Footer */}
-      <Footer />
-    </div>
+        {/* Footer */}
+        <Footer />
+      </div>
+    </ErrorBoundary>
   );
 };
 

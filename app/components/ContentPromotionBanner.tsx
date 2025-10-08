@@ -82,37 +82,37 @@ const ContentPromotionBanner: React.FC = () => {
 
   if (!isVisible) return null;
 
-  const _banner = banners[currentBanner];
+  const currentBannerData = banners[currentBanner];
 
   return (
     <div className="relative overflow-hidden">
       {/* Background with gradient */}
-      <div className={`bg-gradient-to-r ${banner.backgroundColor} py-12 px-4`}>
+      <div className={`bg-gradient-to-r ${currentBannerData.backgroundColor} py-12 px-4`}>
         <div className="max-w-7xl mx-auto">
           <div className="flex items-center justify-between">
             {/* Content */}
             <div className="flex-1">
               <div className="flex items-center mb-4">
-                <span className="text-4xl mr-4">{banner.icon}</span>
+                <span className="text-4xl mr-4">{currentBannerData.icon}</span>
                 <div>
-                  <h2 className={`text-3xl font-bold ${banner.textColor} mb-2`}>
-                    {banner.title}
+                  <h2 className={`text-3xl font-bold ${currentBannerData.textColor} mb-2`}>
+                    {currentBannerData.title}
                   </h2>
-                  <p className={`text-lg ${banner.textColor} opacity-90`}>
-                    {banner.subtitle}
+                  <p className={`text-lg ${currentBannerData.textColor} opacity-90`}>
+                    {currentBannerData.subtitle}
                   </p>
                 </div>
               </div>
 
               {/* Stats */}
-              {banner.stats && (
+              {currentBannerData.stats && (
                 <div className="flex space-x-8 mb-6">
-                  {banner.stats.map((stat, index) => (
+                  {currentBannerData.stats.map((stat, index) => (
                     <div key={index} className="text-center">
-                      <div className={`text-2xl font-bold ${banner.textColor}`}>
+                      <div className={`text-2xl font-bold ${currentBannerData.textColor}`}>
                         {stat.value}
                       </div>
-                      <div className={`text-sm ${banner.textColor} opacity-80`}>
+                      <div className={`text-sm ${currentBannerData.textColor} opacity-80`}>
                         {stat.label}
                       </div>
                     </div>
@@ -122,10 +122,10 @@ const ContentPromotionBanner: React.FC = () => {
 
               {/* CTA Button */}
               <Link
-                to={banner.ctaLink}
+                to={currentBannerData.ctaLink}
                 className="inline-block bg-white text-gray-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors shadow-lg"
               >
-                {banner.ctaText}
+                {currentBannerData.ctaText}
                 <svg className="ml-2 w-4 h-4 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
@@ -135,7 +135,7 @@ const ContentPromotionBanner: React.FC = () => {
             {/* Close button */}
             <button
               onClick={handleClose}
-              className={`ml-6 p-2 rounded-full hover:bg-white hover:bg-opacity-20 transition-colors ${banner.textColor}`}
+              className={`ml-6 p-2 rounded-full hover:bg-white hover:bg-opacity-20 transition-colors ${currentBannerData.textColor}`}
               aria-label="Close banner"
             >
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
