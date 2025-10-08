@@ -3,21 +3,47 @@ import { analytics } from '../utils/analytics';
 
 export const usePerformance = () => {
   useEffect(() => {
-    if (typeof window === 'undefined' || !('PerformanceObserver' in window)) {
-      return;
+    // Monitor performance entries
+    const observer = new PerformanceObserver((list) => {
+      for (const entry of list.getEntries()) {
+        if (entry.entryType === 'measure' || entry.entryType === 'navigation') {
+          analytics.track(
+            'performance_entry',
+            'performance',
+            entry.entryType,
+            undefined,
+            entry.duration
+          );
+        }
+      }
+    });
+
+    // Observe long tasks if supported
+    if ('PerformanceLongTaskTiming' in window) {
+      const longTaskObserver = new PerformanceObserver((list) => {
+        list.getEntries().forEach((entry) => {
+          analytics.track(
+            'long_task',
+            'performance',
+            'detected',
+            undefined,
+            entry.duration
+          );
+        });
+      });
+
+      try {
+        longTaskObserver.observe({ entryTypes: ['longtask'] });
+      } catch (e) {
+        console.warn('Long task observation not supported');
+      }
     }
 
-    const observer = new PerformanceObserver((list) => {
-      list.getEntries().forEach((entry) => {
-        analytics.track(
-          'long_task',
-          'performance',
-          'detected',
-          undefined,
-          entry.duration
-        );
-      });
-    });
+    try {
+      observer.observe({ entryTypes: ['measure', 'navigation'] });
+    } catch (e) {
+      console.warn('Performance observation not supported');
+    }
 
     return () => {
       if (observer && typeof observer.disconnect === 'function') {

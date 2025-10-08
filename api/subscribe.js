@@ -22,43 +22,54 @@ async function handler(req, res) {
   try {
     if (!isValidEmail(email)) {
       res.statusCode = 400;
-      res.json({ error: 'Invalid email format' });
+      res.json({ error: 'Invalid email' });
       return;
     }
 
-    // Store subscription
-    const file = path.join(process.cwd(), 'data', 'subscribers.json');
-    let subscribers = [];
+    const file = path.join(
+      process.cwd(),
+      'data',
+      'newsletter-subscriptions.json'
+    );
+
+    let existing = [];
 
     try {
-      subscribers = JSON.parse(fs.readFileSync(file, 'utf8'));
-      if (!Array.isArray(subscribers)) subscribers = [];
+      existing = JSON.parse(fs.readFileSync(file, 'utf8'));
+      if (!Array.isArray(existing)) existing = [];
     } catch {
       // File doesn't exist or is invalid, use empty array
     }
 
-    // Check if already subscribed
-    if (subscribers.find(sub => sub.email === email)) {
+    // Check if email already exists
+    const existingSubscriber = existing.find((sub) => sub.email === email);
+    if (existingSubscriber) {
       res.statusCode = 200;
       res.json({ success: true, message: 'Already subscribed' });
       return;
     }
 
-    subscribers.push({
+    existing.push({
       email,
       name,
       source,
-      subscribedAt: new Date().toISOString()
+      subscribedAt: new Date().toISOString(),
     });
 
-    fs.writeFileSync(file, JSON.stringify(subscribers, null, 2));
+    // Ensure data directory exists
+    const dataDir = path.dirname(file);
+    if (!fs.existsSync(dataDir)) {
+      fs.mkdirSync(dataDir, { recursive: true });
+    }
+
+    fs.writeFileSync(file, JSON.stringify(existing, null, 2));
 
     res.statusCode = 200;
-    res.json({ success: true, message: 'Successfully subscribed' });
+    res.json({ success: true });
   } catch (err) {
     console.error('Subscribe error:', err);
     res.statusCode = 500;
-    res.json({ error: 'Failed to process subscription' });
+    res.json({ error: err.message || 'Subscribe failed' });
   }
 }
 
