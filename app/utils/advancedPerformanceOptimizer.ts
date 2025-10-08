@@ -79,10 +79,14 @@ export class PerformanceOptimizer {
    * Implement debounce for performance
    */
 <<<<<<< HEAD
+<<<<<<< HEAD
   debounce<T extends (...args: any[]) => any>(
 =======
   debounce<T extends (...args: unknown[]) => unknown>(
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbf5
+=======
+  debounce<T extends (...args: unknown[]) => unknown>(
+>>>>>>> cursor/fix-errors-and-merge-to-main-5c5e
     func: T,
     wait: number
   ): (...args: Parameters<T>) => void {
@@ -103,10 +107,14 @@ export class PerformanceOptimizer {
    * Implement throttle for performance
    */
 <<<<<<< HEAD
+<<<<<<< HEAD
   throttle<T extends (...args: any[]) => any>(
 =======
   throttle<T extends (...args: unknown[]) => unknown>(
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbf5
+=======
+  throttle<T extends (...args: unknown[]) => unknown>(
+>>>>>>> cursor/fix-errors-and-merge-to-main-5c5e
     func: T,
     limit: number
   ): (...args: Parameters<T>) => void {
@@ -127,10 +135,14 @@ export class PerformanceOptimizer {
    * Memoize function results
    */
 <<<<<<< HEAD
+<<<<<<< HEAD
   memoize<T extends (...args: any[]) => any>(
 =======
   memoize<T extends (...args: unknown[]) => unknown>(
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbf5
+=======
+  memoize<T extends (...args: unknown[]) => unknown>(
+>>>>>>> cursor/fix-errors-and-merge-to-main-5c5e
     func: T
   ): (...args: Parameters<T>) => ReturnType<T> {
     const cache = new Map<string, ReturnType<T>>();

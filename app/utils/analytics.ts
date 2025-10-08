@@ -52,7 +52,11 @@ class AnalyticsService {
 
       // Send to Google Analytics if available
       if (this.hasGtag()) {
+<<<<<<< HEAD
         (window as { gtag: (command: string, action: string, params: Record<string, unknown>) => void }).gtag('event', event.action, {
+=======
+        (window as unknown as { gtag: Function }).gtag('event', event.action, {
+>>>>>>> cursor/fix-errors-and-merge-to-main-5c5e
           event_category: event.category,
           event_label: event.label,
           value: event.value,
@@ -75,7 +79,11 @@ class AnalyticsService {
   trackPageView(path: string, title?: string): void {
     try {
       if (this.hasGtag()) {
+<<<<<<< HEAD
         (window as { gtag: (command: string, id: string, params: Record<string, unknown>) => void }).gtag('config', this.getGtagId(), {
+=======
+        (window as unknown as { gtag: Function }).gtag('config', this.getGtagId(), {
+>>>>>>> cursor/fix-errors-and-merge-to-main-5c5e
           page_path: path,
           page_title: title,
         });
@@ -91,7 +99,11 @@ class AnalyticsService {
   identifyUser(user: AnalyticsUser): void {
     try {
       if (this.hasGtag() && user.id) {
+<<<<<<< HEAD
         (window as { gtag: (command: string, target: string, params: Record<string, unknown>) => void }).gtag('set', 'user_properties', {
+=======
+        (window as unknown as { gtag: Function }).gtag('set', 'user_properties', {
+>>>>>>> cursor/fix-errors-and-merge-to-main-5c5e
           user_id: user.id,
           ...user.properties,
         });
@@ -127,7 +139,11 @@ class AnalyticsService {
   ): void {
     try {
       if (this.hasGtag()) {
+<<<<<<< HEAD
         (window as { gtag: (command: string, action: string, params: Record<string, unknown>) => void }).gtag('event', 'timing_complete', {
+=======
+        (window as unknown as { gtag: Function }).gtag('event', 'timing_complete', {
+>>>>>>> cursor/fix-errors-and-merge-to-main-5c5e
           name: variable,
           value: Math.round(value),
           event_category: category,
