@@ -19,6 +19,13 @@ export enum ErrorCategory {
   UNKNOWN = 'unknown',
 }
 
+export enum ErrorSeverity {
+  LOW = 'low',
+  MEDIUM = 'medium',
+  HIGH = 'high',
+  CRITICAL = 'critical',
+}
+
 export interface ErrorInfo {
   message: string;
   stack?: string;
@@ -82,19 +89,19 @@ export class ErrorHandler {
     const message = error.message.toLowerCase();
     const stack = error.stack?.toLowerCase() || '';
 
-    if (message.includes('network') || message.includes('fetch') || message.includes('xhr') || message.includes('timeout')) {
+    if (message.includes('network') || message.includes('fetch') || message.includes('xhr')) {
       return ErrorCategory.NETWORK;
     }
     if (message.includes('validation') || message.includes('invalid')) {
       return ErrorCategory.VALIDATION;
     }
-    if (message.includes('api') || stack.includes('api') || message.includes('request')) {
+    if (message.includes('api') || stack.includes('api')) {
       return ErrorCategory.API;
     }
     if (message.includes('component') || stack.includes('react')) {
       return ErrorCategory.UI;
     }
-    if (error.name === 'TypeError' || error.name === 'ReferenceError' || message.includes('runtime') || stack.includes('runtime')) {
+    if (message.includes('runtime') || stack.includes('runtime')) {
       return ErrorCategory.RUNTIME;
     }
     return ErrorCategory.UNKNOWN;
@@ -130,17 +137,8 @@ export class ErrorHandler {
    * Report error to external service
    */
   private reportError(errorData: ErrorInfo): void {
-    // Log to console in development
-    if (process.env.NODE_ENV === 'development') {
-      console.error('Error reported:', errorData);
-    }
-
-    // Send to error tracking service (e.g., Sentry, LogRocket)
-    if (typeof window !== 'undefined' && (window as any).Sentry) {
-      (window as any).Sentry.captureException(new Error(errorData.message), {
-        extra: errorData,
-      });
-    }
+    // Implementation for reporting to external service
+    console.error('Error reported:', errorData);
   }
 
   /**
@@ -156,22 +154,6 @@ export class ErrorHandler {
   clearErrors(): void {
     this.errorQueue = [];
   }
-
-  /**
-   * Get errors by category
-   */
-  getErrorsByCategory(category: ErrorCategory): ErrorInfo[] {
-    return this.errorQueue.filter(error => error.category === category);
-  }
-
-  /**
-   * Get errors by severity
-   */
-  getErrorsBySeverity(severity: ErrorSeverity): ErrorInfo[] {
-    return this.errorQueue.filter(error => error.severity === severity);
-  }
 }
 
-// Export singleton instance
-export const errorHandler = ErrorHandler.getInstance();
-export default errorHandler;
+export default ErrorHandler;
