@@ -234,3 +234,8 @@ class PerformanceMonitor {
     
     return `
 Performance Report:
+`;
+  }
+}
+
+export default new PerformanceMonitor();

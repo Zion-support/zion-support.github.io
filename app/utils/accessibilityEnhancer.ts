@@ -678,3 +678,8 @@ class AccessibilityEnhancer {
     
     return `
 Accessibility Report:
+`;
+  }
+}
+
+export default new AccessibilityEnhancer();
