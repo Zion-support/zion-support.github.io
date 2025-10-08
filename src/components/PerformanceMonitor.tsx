@@ -36,10 +36,7 @@ export const PerformanceMonitor: React.FC = () => {
     } else {
       window.addEventListener('load', measurePerformance);
     }
-<<<<<<< HEAD
     
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-17a6
     return () => {
       window.removeEventListener('load', measurePerformance);
     };

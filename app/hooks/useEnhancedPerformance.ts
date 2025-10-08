@@ -118,13 +118,6 @@ export function useEnhancedPerformance(
               // Ignore measurement errors
             }
           }
-=======
-      // Performance marking - startMark not available
-
-      return {
-        end: () => {
-          const duration = 0; // Performance marking - endMark not available
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-fd0a
           if (duration && trackPerformance) {
             analytics.trackPerformance(
               `${component}-${operationName}`,

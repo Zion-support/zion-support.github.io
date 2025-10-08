@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -11,7 +12,7 @@ const EnterprisePage: React.FC = () => {
     {
       title: 'Autonomous Systems',
       description: 'Self-managing enterprise operations with AI-powered automation',
-      icon: '🤖'
+      icon: '��'
     },
     {
       title: 'Quantum Computing',
@@ -53,7 +54,7 @@ const EnterprisePage: React.FC = () => {
                 Advanced AI and IT solutions designed for large organizations
               </p>
             </div>
-            <p className="text-lg text-gray-400 mb-12 max-w-3xl mx-auto">
+            <p className="text-lg text-gray-600 mb-12 max-w-3xl mx-auto">
               Transform your enterprise with our proven AI solutions. Achieve
               $100M+ cost savings, 500% productivity gains, and 99.9% system
               uptime with enterprise-grade security and compliance.
@@ -70,7 +71,7 @@ const EnterprisePage: React.FC = () => {
               </Link>
               <Link
                 href="#solutions"
-                className="group flex items-center gap-3 bg-white/10 hover:bg-white/20 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 border border-white/30"
+                className="group flex items-center gap-3 bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl border border-white/30"
               >
                 <span>View Solutions</span>
                 <span className="group-hover:translate-x-1 transition-transform">
@@ -120,15 +121,17 @@ const EnterprisePage: React.FC = () => {
                 <h3 className="text-2xl font-bold text-white mb-4">
                   {solution.title}
                 </h3>
-                <p className='text-gray-600'>
-                  {feature.description}
+                <p className='text-gray-300'>
+                  {solution.description}
                 </p>
               </div>
             ))}
           </div>
+        </div>
+      </section>
 
       {/* CTA Section */}
-      <section className="py-24">
+      <section className="py-24 bg-gradient-to-br from-purple-900 to-indigo-900">
         <div className="container mx-auto px-4">
           <div className="text-center bg-white/5 backdrop-blur-lg rounded-3xl p-12 border border-white/20">
             <h3 className="text-4xl font-bold text-white mb-6">
@@ -154,9 +157,11 @@ const EnterprisePage: React.FC = () => {
                 <span>Get Enterprise Consultation</span>
               </Link>
             </div>
-          </section>
+          </div>
         </div>
-      </div>
+      </section>
     </>
   );
-}
+};
+
+export default EnterprisePage;

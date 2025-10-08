@@ -75,25 +75,6 @@ class Analytics {
     this.events.push(event);
   }
 
-<<<<<<< HEAD
-=======
-  /**
-   * Track page view
-   */
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-17a6
-  trackPageView(page: string, title?: string): void {
-    this.track('page_view', 'navigation', 'view', page, undefined, {
-      page_title: title || (typeof document !== 'undefined' ? document.title : ''),
-      page_url: typeof window !== 'undefined' ? window.location.href : page,
-    });
-  }
-
-<<<<<<< HEAD
-  trackInteraction(element: string, action: string, category: string = 'user_interaction'): void {
-    this.track('interaction', category, action, element);
-  }
-
-=======
   /**
    * Track user interaction
    */
@@ -108,17 +89,10 @@ class Analytics {
   /**
    * Track performance metrics
    */
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-17a6
   trackPerformance(metric: string, value: number, unit: string = 'ms'): void {
     this.track('performance', 'metrics', metric, unit, value);
   }
 
-<<<<<<< HEAD
-  trackBusinessEvent(event: string, value?: number, properties?: Record<string, unknown>): void {
-    this.track(event, 'business', 'event', undefined, value, properties);
-  }
-
-=======
   /**
    * Track business events
    */
@@ -141,59 +115,27 @@ class Analytics {
   /**
    * Get all events
    */
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-17a6
   getEvents(): AnalyticsEvent[] {
     return [...this.events];
   }
 
-<<<<<<< HEAD
-=======
-  /**
-   * Get events by category
-   */
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-17a6
-  getEventsByCategory(category: string): AnalyticsEvent[] {
-    return this.events.filter(event => event.category === category);
-  }
-
-<<<<<<< HEAD
-=======
   /**
    * Clear all events
    */
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-17a6
   clearEvents(): void {
     this.events = [];
   }
 
-<<<<<<< HEAD
-=======
-  /**
-   * Get user properties
-   */
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-17a6
-  getUserProperties(): UserProperties {
-    return { ...this.userProperties };
-  }
-
-<<<<<<< HEAD
-=======
   /**
    * Update user properties
    */
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-17a6
   updateUserProperties(properties: Partial<UserProperties>): void {
     this.userProperties = { ...this.userProperties, ...properties };
   }
 }
 
 const analytics = new Analytics();
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-17a6
 =======
 export { analytics };
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-fd0a
 export default analytics;
