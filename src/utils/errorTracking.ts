@@ -153,18 +153,18 @@ class ErrorTracker {
    * Log error to console with appropriate level
    */
   private logError(error: TrackedError): void {
-//     const logMessage = `[${error.severity.toUpperCase()}] ${error.message}`;
+    const logMessage = `[${error.severity.toUpperCase()}] ${error.message}`;
     
     switch (error.severity) {
       case ErrorSeverity.CRITICAL:
       case ErrorSeverity.HIGH:
-//         console.error(logMessage, error);
+        console.error(logMessage, error);
         break;
       case ErrorSeverity.MEDIUM:
-//         console.warn(logMessage, error);
+        console.warn(logMessage, error);
         break;
       case ErrorSeverity.LOW:
-//         console.info(logMessage, error);
+        console.info(logMessage, error);
         break;
     }
   }
