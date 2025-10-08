@@ -42,6 +42,24 @@ const EnterprisePage = lazy(() => import('./enterprise/page'));
 const ServicesAdvertisingPage = lazy(() => import('./services-advertising/page'));
 const CaseStudiesPage = lazy(() => import('./case-studies/page'));
 
+// Additional service pages
+const AiServicesPage = lazy(() => import('./ai-services/page'));
+const ItServicesPage = lazy(() => import('./it-services/page'));
+const MicroSaasPage = lazy(() => import('./micro-saas/page'));
+const QuantumComputingPage = lazy(() => import('./quantum-computing/page'));
+const AutonomousSystemsPage = lazy(() => import('./autonomous-systems/page'));
+const BlockchainWeb3Page = lazy(() => import('./blockchain-web3/page'));
+const CybersecurityPage = lazy(() => import('./cybersecurity/page'));
+const BusinessIntelligencePage = lazy(() => import('./business-intelligence/page'));
+const IotEdgeComputingPage = lazy(() => import('./iot-edge-computing/page'));
+
+// Additional pages
+const BlogPage = lazy(() => import('./blog-index'));
+const GuidesPage = lazy(() => import('./guides/page'));
+const SitemapPage = lazy(() => import('./sitemap/page'));
+const NotFoundPage = lazy(() => import('./not-found'));
+const OfflinePage = lazy(() => import('./offline/page'));
+
 // Utils
 import { lazyLoadImages, preloadCriticalResources, collectPerformanceMetrics, performanceOptimizer } from './utils/performanceOptimizer';
 import { logger } from './utils/logger';
@@ -173,6 +191,24 @@ const App: React.FC = () => {
                         <Route path="/enterprise" element={<EnterprisePage />} />
                         <Route path="/services-advertising" element={<ServicesAdvertisingPage />} />
                         <Route path="/case-studies" element={<CaseStudiesPage />} />
+                        
+                        {/* Service Pages */}
+                        <Route path="/ai-services" element={<AiServicesPage />} />
+                        <Route path="/it-services" element={<ItServicesPage />} />
+                        <Route path="/micro-saas" element={<MicroSaasPage />} />
+                        <Route path="/quantum-computing" element={<QuantumComputingPage />} />
+                        <Route path="/autonomous-systems" element={<AutonomousSystemsPage />} />
+                        <Route path="/blockchain-web3" element={<BlockchainWeb3Page />} />
+                        <Route path="/cybersecurity" element={<CybersecurityPage />} />
+                        <Route path="/business-intelligence" element={<BusinessIntelligencePage />} />
+                        <Route path="/iot-edge-computing" element={<IotEdgeComputingPage />} />
+                        
+                        {/* Additional Pages */}
+                        <Route path="/blog" element={<BlogPage />} />
+                        <Route path="/guides" element={<GuidesPage />} />
+                        <Route path="/sitemap" element={<SitemapPage />} />
+                        <Route path="/offline" element={<OfflinePage />} />
+                        <Route path="*" element={<NotFoundPage />} />
                       </Routes>
                     </Suspense>
                   </main>
