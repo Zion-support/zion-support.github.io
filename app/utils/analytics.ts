@@ -48,9 +48,10 @@ class AnalyticsService {
       }
       // Send to Google Analytics if available
       if (this.hasGtag()) {
-          event_category: event.category
-          event_label: event.label
-          value: event.value
+        gtag('event', event.action, {
+          event_category: event.category,
+          event_label: event.label,
+          value: event.value,
           ...event.metadata
         })
       }
@@ -68,6 +69,7 @@ class AnalyticsService {
   trackPageView(path: string, title?: string): void {
     try {
       if (this.hasGtag()) {
+        gtag('config', this.config.gaId, {
           page_path: path,
           page_title: title,
         })
@@ -82,7 +84,8 @@ class AnalyticsService {
   identifyUser(user: AnalyticsUser): void {
     try {
       if (this.hasGtag() && user.id) {
-          user_id: user.id
+        gtag('config', this.config.gaId, {
+          user_id: user.id,
           ...user.properties
         })
       }
@@ -95,11 +98,11 @@ class AnalyticsService {
    */
   trackError(error: Error, metadata?: Record<string, unknown>): void {
     this.trackEvent({
-      action: 'error'
-      category: 'exception'
-      label: error.message
+      action: 'error',
+      category: 'exception',
+      label: error.message,
       metadata: {
-        stack: error.stack
+        stack: error.stack,
         ...metadata
       }
     })
@@ -115,8 +118,9 @@ class AnalyticsService {
   ): void {
     try {
       if (this.hasGtag()) {
+        gtag('event', 'timing_complete', {
           name: variable,
-          value: Math.round(value)
+          value: Math.round(value),
           event_category: category,
           event_label: label,
         })

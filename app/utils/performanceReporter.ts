@@ -166,8 +166,8 @@ class PerformanceReporter {
 
         slowResources.forEach((resource) => {
           logger.warn('Slow resource detected', {
-            name: resource.name
-            duration: resource.duration
+            name: resource.name,
+            duration: resource.duration,
             type: resource.initiatorType
           })
         })
@@ -179,9 +179,9 @@ class PerformanceReporter {
    */
   private addMetric(name: string, value: number, rating: 'good' | 'needs-improvement' | 'poor'): void {
     const metric: PerformanceMetric = {
-      name
-      value
-      rating
+      name,
+      value,
+      rating,
       timestamp: Date.now()
     }
     this.metrics.push(metric)
@@ -198,12 +198,12 @@ class PerformanceReporter {
    */
   private getRating(metric: string, value: number): 'good' | 'needs-improvement' | 'poor' {
     const thresholds: Record<string, { good: number; poor: number }> = {
-      lcp: { good: 2500, poor: 4000 }
-      fid: { good: 100, poor: 300 }
-      cls: { good: 0.1, poor: 0.25 }
-      fcp: { good: 1800, poor: 3000 }
-      ttfb: { good: 800, poor: 1800 }
-      dcl: { good: 1000, poor: 3000 }
+      lcp: { good: 2500, poor: 4000 },
+      fid: { good: 100, poor: 300 },
+      cls: { good: 0.1, poor: 0.25 },
+      fcp: { good: 1800, poor: 3000 },
+      ttfb: { good: 800, poor: 1800 },
+      dcl: { good: 1000, poor: 3000 },
       load: { good: 2000, poor: 4000 }
     }
     const threshold = thresholds[metric.toLowerCase()]
@@ -228,10 +228,10 @@ class PerformanceReporter {
     // Google Analytics
     if (typeof gtag === 'function') {
       gtag('event', metric.name, {
-        event_category: 'Web Vitals'
-        value: Math.round(metric.value)
-        event_label: metric.rating
-        non_interaction: true,
+        event_category: 'Web Vitals',
+        value: Math.round(metric.value),
+        event_label: metric.rating,
+        non_interaction: true
       })
     }
   }
