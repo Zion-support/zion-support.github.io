@@ -678,13 +678,8 @@ class AccessibilityEnhancer {
     
     return `
 Accessibility Report:
-
-ARIA Labels: ${metrics.ariaLabels}
-Keyboard Navigation: ${metrics.keyboardNavigation ? "Enabled" : "Disabled"}
-Focus Management: ${metrics.focusManagement ? "Enabled" : "Disabled"}
-Screen Reader Support: ${metrics.screenReaderSupport ? "Enabled" : "Disabled"}
 `;
   }
 }
 
-export const accessibilityEnhancer = new AccessibilityEnhancer();
+export default new AccessibilityEnhancer();

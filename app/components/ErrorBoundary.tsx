@@ -90,30 +90,29 @@ class ErrorBoundary extends Component<Props, State> {
                   Go to Homepage
                 </Link>
               </div>
-            </div>
-            
-            {this.props.enableErrorReporting && this.state.error && (
-              <details className="mt-4">
-                <summary className="text-sm font-medium text-gray-700 cursor-pointer">
-                  Error Details
-                </summary>
-                <div className="mt-2 p-3 bg-gray-100 rounded text-xs font-mono text-gray-800 overflow-auto">
-                  <div className="mb-2">
-                    <strong>Error:</strong> {this.state.error.message}
-                  </div>
-                  <div>
-                    <strong>Stack:</strong>
-                    <pre className="whitespace-pre-wrap">{this.state.error.stack}</pre>
-                  </div>
-                  {this.state.errorInfo && (
-                    <div className="mt-2">
-                      <strong>Component Stack:</strong>
-                      <pre className="whitespace-pre-wrap">{this.state.errorInfo.componentStack}</pre>
+              {this.props.enableErrorReporting && this.state.error && (
+                <details className="mt-6 text-left">
+                  <summary className="cursor-pointer text-sm text-gray-500 hover:text-gray-700">
+                    Error Details
+                  </summary>
+                  <div className="mt-2 p-4 bg-gray-100 rounded text-xs">
+                    <div className="mb-2">
+                      <strong>Error:</strong> {this.state.error.message}
                     </div>
-                  )}
-                </div>
-              </details>
-            )}
+                    <div>
+                      <strong>Stack:</strong>
+                      <pre className="whitespace-pre-wrap">{this.state.error.stack}</pre>
+                    </div>
+                    {this.state.errorInfo && (
+                      <div className="mt-2">
+                        <strong>Component Stack:</strong>
+                        <pre className="whitespace-pre-wrap">{this.state.errorInfo.componentStack}</pre>
+                      </div>
+                    )}
+                  </div>
+                </details>
+              )}
+            </div>
           </div>
         </div>
       );
