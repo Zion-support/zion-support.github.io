@@ -2,6 +2,9 @@ import React, { useEffect, useCallback, useState } from 'react';
 
 interface AccessibilityEnhancerProps {
   children: React.ReactNode;
+  enableSkipLinks?: boolean;
+  enableKeyboardNav?: boolean;
+  enableFocusIndicators?: boolean;
 }
 
 /**
@@ -14,17 +17,9 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   enableKeyboardNav = true,
   enableFocusIndicators = true,
 }) => {
-  useEffect(() => {
-    // Announce route changes to screen readers
-    const announceRouteChange = () => {
-      const _title = document.title;
-      const _announcement = document.createElement('div');
-      announcement.setAttribute('role', 'status');
-      announcement.setAttribute('aria-live', 'polite');
-      announcement.setAttribute('aria-atomic', 'true');
-      announcement.className = 'sr-only';
-      announcement.textContent = `Navigated to ${title}`;
-      document.body.appendChild(announcement);origin/cursor/fix-errors-and-merge-to-main-6395
+  const [isReducedMotion, setIsReducedMotion] = useState(false);
+  const [isHighContrast, setIsHighContrast] = useState(false);
+  const [fontSize, setFontSize] = useState(16);
 
   // Check for user preferences
   useEffect(() => {
@@ -40,13 +35,9 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
 
     mediaQuery.addEventListener('change', handleChange);
 
-    const _titleElement = document.querySelector('title');
-    if (titleElement) {
-      observer.observe(titleElement.parentNode as Node, {
-        childList: true,
-        subtree: true,
-      });
-    }origin/cursor/fix-errors-and-merge-to-main-6395
+    // Check for high contrast preference
+    const highContrastQuery = window.matchMedia('(prefers-contrast: high)');
+    setIsHighContrast(highContrastQuery.matches);
 
     const handleContrastChange = (e: MediaQueryListEvent) => {
       setIsHighContrast(e.matches);
@@ -55,7 +46,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     highContrastQuery.addEventListener('change', handleContrastChange);
 
     // Check for font size preference
-    const fontSizeQuery = window.matchMedia('(min-width: 1px)');
     const computedStyle = getComputedStyle(document.documentElement);
     const rootFontSize = parseFloat(computedStyle.fontSize);
     setFontSize(rootFontSize);
@@ -75,7 +65,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       // Skip to main content with Alt + M
       if (e.altKey && e.key === 'm') {
         e.preventDefault();
-        const _main = document.querySelector('main');
+        const main = document.querySelector('main');
         if (main) {
           (main as HTMLElement).focus();
           (main as HTMLElement).scrollIntoView({ behavior: 'smooth' });
@@ -85,7 +75,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       // Skip to navigation with Alt + N
       if (e.altKey && e.key === 'n') {
         e.preventDefault();
-        const _nav = document.querySelector('nav');
+        const nav = document.querySelector('nav');
         if (nav) {
           (nav as HTMLElement).focus();
           (nav as HTMLElement).scrollIntoView({ behavior: 'smooth' });
@@ -94,9 +84,9 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
 
       // Close modals/dropdowns with Escape
       if (e.key === 'Escape') {
-        const _modals = document.querySelectorAll('[role="dialog"][aria-modal="true"]');
+        const modals = document.querySelectorAll('[role="dialog"][aria-modal="true"]');
         modals.forEach((modal) => {
-          const _closeButton = modal.querySelector('[aria-label*="close" i], [aria-label*="dismiss" i]');
+          const closeButton = modal.querySelector('[aria-label*="close" i], [aria-label*="dismiss" i]');
           if (closeButton) {
             (closeButton as HTMLElement).click();
           }
@@ -111,11 +101,16 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
 
     // Remove keyboard navigation class on mouse use
     const handleMouseDown = () => {
-      document.body.classList.remove('keyboard-navigation');origin/cursor/fix-errors-and-merge-to-main-6395
+      document.body.classList.remove('keyboard-navigation');
     };
 
     document.addEventListener('keydown', handleKeyDown);
-    return () => document.removeEventListener('keydown', handleKeyDown);
+    document.addEventListener('mousedown', handleMouseDown);
+    
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown);
+      document.removeEventListener('mousedown', handleMouseDown);
+    };
   }, []);
 
   // Focus management
@@ -137,7 +132,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     if (!enableFocusIndicators) return;
 
     // Add custom focus styles
-    const _style = document.createElement('style');
+    const style = document.createElement('style');
     style.textContent = `
       .keyboard-navigation *:focus {
         outline: 3px solid #3B82F6 !important;
@@ -213,13 +208,19 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
         outline-offset: 2px;
       }
     `;
-    document.head.appendChild(style);origin/cursor/fix-errors-and-merge-to-main-6395
+    document.head.appendChild(style);
+
+    document.addEventListener('focusin', handleFocusIn);
+    document.addEventListener('focusout', handleFocusOut);
 
     return () => {
       document.removeEventListener('focusin', handleFocusIn);
       document.removeEventListener('focusout', handleFocusOut);
+      if (style.parentNode) {
+        style.parentNode.removeChild(style);
+      }
     };
-  }, [handleFocusIn, handleFocusOut]);
+  }, [handleFocusIn, handleFocusOut, enableFocusIndicators]);
 
   // Screen reader announcements
   const announceToScreenReader = useCallback((message: string) => {
@@ -232,7 +233,9 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     document.body.appendChild(announcement);
     
     setTimeout(() => {
-      document.body.removeChild(announcement);
+      if (announcement.parentNode) {
+        announcement.parentNode.removeChild(announcement);
+      }
     }, 1000);
   }, []);
 

@@ -44,7 +44,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     ).memory;
 
     const getPerformanceScore = (): number => {
-      let _score = 100;
+      let score = 100;
       if (metrics.renderTime > 1500) score -= 15;
       if (metrics.loadTime > 3000) score -= 20;
       if (metrics.memoryUsage > 50) score -= 10;
@@ -61,7 +61,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
 
       setMetrics(currentMetrics);
 
-      const _score = getPerformanceScore();
+      const score = getPerformanceScore();
       setPerformanceScore(score);
 
       if (enableConsoleLogging) {
@@ -82,7 +82,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     updateMetrics();
 
     // Set up interval for continuous monitoring
-    const _interval = setInterval(updateMetrics, updateInterval);
+    const interval = setInterval(updateMetrics, updateInterval);
 
     return () => clearInterval(interval);
   }, [
