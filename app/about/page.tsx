@@ -1,17 +1,22 @@
 import React from 'react';
+import { Metadata } from 'next';
 
-export default function AboutPage() {
+export const metadata: Metadata = {
+  title: 'About Us - Zion Tech Group',
+  description: 'Learn about Zion Tech Group - your partner in AI and IT innovation.',
+};
+
+const AboutPage: React.FC = () => {
   return (
     <>
-      <div className='bg-gradient-to-b from-gray-50 to-white min-h-screen'>
-        <div className='container mx-auto px-4 py-12'>
-          <div className='max-w-4xl mx-auto'>
-            <div className='mb-12 text-center'>
-              <h1 className='text-4xl font-bold text-gray-900 mb-4'>
-                About Zion Tech Group
-              </h1>
-              <p className='text-xl text-gray-600'>
-                Leading the future of AI and IT solutions
+      <div className="min-h-screen bg-gray-50 py-16">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <h1 className="text-4xl font-bold text-gray-900 mb-6">
+              About Zion Tech Group
+            </h1>
+            <p className="text-xl text-gray-600 mb-8">
+              Leading provider of AI-powered enterprise solutions and digital transformation services.
               </p>
             </div>
 
@@ -109,4 +114,6 @@ export default function AboutPage() {
       </div>
     </>
   );
-}
+};
+
+export default AboutPage;

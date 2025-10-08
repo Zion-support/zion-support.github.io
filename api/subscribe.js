@@ -19,48 +19,46 @@ async function handler(req, res) {
     return;
   }
 
-  if (!isValidEmail(email)) {
-    res.statusCode = 400;
-    res.json({ error: 'Invalid email' });
-    return;
-  }
-
   try {
-    const file = path.join(
-      process.cwd(),
-      'data',
-      'newsletter-subscriptions.json'
-    );
-    let existing = [];
+    if (!isValidEmail(email)) {
+      res.statusCode = 400;
+      res.json({ error: 'Invalid email format' });
+      return;
+    }
+
+    // Store subscription
+    const file = path.join(process.cwd(), 'data', 'subscribers.json');
+    let subscribers = [];
 
     try {
-      existing = JSON.parse(fs.readFileSync(file, 'utf8'));
-      if (!Array.isArray(existing)) existing = [];
+      subscribers = JSON.parse(fs.readFileSync(file, 'utf8'));
+      if (!Array.isArray(subscribers)) subscribers = [];
     } catch {
       // File doesn't exist or is invalid, use empty array
     }
 
-    // Check if email already exists
-    if (existing.some(sub => sub.email === email)) {
+    // Check if already subscribed
+    if (subscribers.find(sub => sub.email === email)) {
       res.statusCode = 200;
       res.json({ success: true, message: 'Already subscribed' });
       return;
     }
 
-    existing.push({
+    subscribers.push({
       email,
       name,
       source,
-      subscribedAt: new Date().toISOString(),
+      subscribedAt: new Date().toISOString()
     });
 
-    fs.writeFileSync(file, JSON.stringify(existing, null, 2));
+    fs.writeFileSync(file, JSON.stringify(subscribers, null, 2));
+
     res.statusCode = 200;
-    res.json({ success: true });
+    res.json({ success: true, message: 'Successfully subscribed' });
   } catch (err) {
     console.error('Subscribe error:', err);
     res.statusCode = 500;
-    res.json({ error: err.message });
+    res.json({ error: 'Failed to process subscription' });
   }
 }
 
