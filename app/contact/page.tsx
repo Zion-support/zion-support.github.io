@@ -36,7 +36,22 @@ const ContactPage: React.FC = () => {
                     Middletown, DE 19709<br />
                     United States
                   </p>
-                  </div>
+                </div>
+                <div>
+                  <h3 className='text-lg font-semibold text-gray-900 mb-2'>
+                    Phone
+                  </h3>
+                  <p className='text-gray-600'>
+                    <a href="tel:+1-302-464-0950" className="hover:text-blue-600">+1-302-464-0950</a>
+                  </p>
+                </div>
+                <div>
+                  <h3 className='text-lg font-semibold text-gray-900 mb-2'>
+                    Email
+                  </h3>
+                  <p className='text-gray-600'>
+                    <a href="mailto:kleber@ziontechgroup.com" className="hover:text-blue-600">kleber@ziontechgroup.com</a>
+                  </p>
                 </div>
               </div>
             </div>

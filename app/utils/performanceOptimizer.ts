@@ -151,7 +151,7 @@ class PerformanceOptimizer {
             const img = entry.target as HTMLImageElement;
             const src = img.getAttribute('data-src');
             if (src) {
-              img.src = src;
+              img['src'] = src;
               img.removeAttribute('data-src');
               imageObserver.unobserve(img);
             }
@@ -165,7 +165,7 @@ class PerformanceOptimizer {
       images.forEach((img) => {
         const src = img.getAttribute('data-src');
         if (src) {
-          (img as HTMLImageElement).src = src;
+          (img as HTMLImageElement)['src'] = src;
           img.removeAttribute('data-src');
         }
       });
@@ -225,40 +225,6 @@ class PerformanceOptimizer {
       response: navigation.responseEnd - navigation.responseStart,
       processing: navigation.domComplete - navigation.responseEnd
     };
-  }
-
-  startMark(markName: string): void {
-    if (typeof window === 'undefined' || !performance.mark) return;
-    try {
-      performance.mark(markName);
-    } catch (error) {
-      console.warn(`Failed to create performance mark: ${markName}`, error);
-    }
-  }
-
-  endMark(markName: string): number | undefined {
-    if (typeof window === 'undefined' || !performance.mark || !performance.measure) return undefined;
-    try {
-      const endMarkName = `${markName}-end`;
-      performance.mark(endMarkName);
-      const measureName = `${markName}-measure`;
-      performance.measure(measureName, markName, endMarkName);
-      
-      const measures = performance.getEntriesByName(measureName);
-      if (measures.length > 0) {
-        const duration = measures[0].duration;
-        
-        // Clean up marks and measures
-        performance.clearMarks(markName);
-        performance.clearMarks(endMarkName);
-        performance.clearMeasures(measureName);
-        
-        return duration;
-      }
-    } catch (error) {
-      console.warn(`Failed to measure performance mark: ${markName}`, error);
-    }
-    return undefined;
   }
 
   cleanup() {

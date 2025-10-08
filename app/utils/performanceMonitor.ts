@@ -43,13 +43,13 @@ class PerformanceMonitor {
     this.observeCLS();
   }
 
-  private observePaint(name: string, metricKey: 'fcp' | 'lcp' | 'fid' | 'cls' | 'ttfb' | 'fmp'): void {
+  private observePaint(name: string, metricKey: keyof PerformanceMetrics): void {
     try {
       const observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           if (entry.name === name) {
             this.metrics[metricKey] = entry.startTime;
-            this.logMetric(metricKey, entry.startTime);
+            this.logMetric(metricKey as string, entry.startTime);
           }
         }
       });
@@ -191,7 +191,7 @@ class PerformanceMonitor {
   }
 
   getScore(): number {
-    const scores: number[] = [];
+    const scores = [];
     
     // FCP scoring (0-100)
     if (this.metrics.fcp) {
@@ -233,4 +233,7 @@ class PerformanceMonitor {
     const metrics = this.getMetrics();
     
     return `
-Performance Report:
+
+
+export const performanceMonitor = new PerformanceMonitor();
+export default PerformanceMonitor;

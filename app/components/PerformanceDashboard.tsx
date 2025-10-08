@@ -7,6 +7,15 @@ interface PerformanceMetrics {
   fps: number;
 }
 
+interface PerformanceMetrics {
+  loadTime: number;
+  renderTime: number;
+  memoryUsage: number;
+  fps: number;
+  [key: string]: number;
+}
+
+
 const PerformanceDashboard: React.FC = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     loadTime: 0,

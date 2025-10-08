@@ -108,10 +108,10 @@ class Logger {
 
       switch (level) {
         case LogLevel.DEBUG:
-          if (process.env.NODE_ENV === 'development') { if (import.meta.env.DEV) { console.debug(formattedMessage); } }
+          if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { console.debug(formattedMessage); } }
           break;
         case LogLevel.INFO:
-          if (process.env.NODE_ENV === 'development') { if (import.meta.env.DEV) { console.info(formattedMessage); } }
+          if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { console.info(formattedMessage); } }
           break;
         case LogLevel.WARN:
           console.warn(formattedMessage);
@@ -206,17 +206,17 @@ class Logger {
   }
 
   /**
-   * Log performance metrics with context
+   * Log lifecycle events
    */
-  performance(message: string, metrics: Record<string, unknown>, component?: string): void {
-    this.info(message, { ...metrics, component });
+  lifecycle(message: string, context?: string): void {
+    this.info(message, context ? { component: context } : undefined);
   }
 
   /**
-   * Log lifecycle events
+   * Log performance data
    */
-  lifecycle(message: string, component?: string): void {
-    this.debug(`Lifecycle: ${message}`, { component, lifecycle: true });
+  performance(message: string, data: Record<string, unknown>, context?: string): void {
+    this.info(message, { ...data, component: context || 'Performance' });
   }
 
   /**
@@ -235,7 +235,7 @@ class Logger {
    */
   styled(message: string, style: string): void {
     if (isDevelopment()) {
-      if (process.env.NODE_ENV === 'development') { if (import.meta.env.DEV) { console.log(`%c${message}`, style); } }
+      if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { console.log(`%c${message}`, style); } }
     }
   }
 }

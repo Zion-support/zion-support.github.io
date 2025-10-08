@@ -1,4 +1,3 @@
-// @ts-nocheck
 /**
  * Advanced Accessibility Enhancement Utility
  * Provides comprehensive accessibility improvements and monitoring
@@ -153,7 +152,7 @@ class AccessibilityEnhancer {
     if (!currentElement) return;
 
     // Handle radio button groups
-    if ('type' in currentElement && (currentElement as HTMLInputElement).type === 'radio') {
+    if ((currentElement as HTMLInputElement).type === 'radio') {
       this.handleRadioGroupNavigation(event, currentElement as HTMLInputElement);
     }
     
@@ -677,4 +676,7 @@ class AccessibilityEnhancer {
     const metrics = this.getMetrics();
     
     return `
-Accessibility Report:
+
+
+export const accessibilityEnhancer = new AccessibilityEnhancer();
+export default AccessibilityEnhancer;

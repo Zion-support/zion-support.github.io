@@ -31,16 +31,10 @@ class Analytics {
     this.userProperties = this.initializeUserProperties();
   }
 
-  /**
-   * Generate unique session ID
-   */
   private generateSessionId(): string {
     return `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
   }
 
-  /**
-   * Initialize user properties
-   */
   private initializeUserProperties(): UserProperties {
     if (typeof window === 'undefined') {
       return {
@@ -60,9 +54,6 @@ class Analytics {
     };
   }
 
-  /**
-   * Track an event
-   */
   track(
     name: string,
     category: string,
@@ -84,9 +75,6 @@ class Analytics {
     this.events.push(event);
   }
 
-  /**
-   * Track page view
-   */
   trackPageView(page: string, title?: string): void {
     this.track('page_view', 'navigation', 'view', page, undefined, {
       page_title: title || (typeof document !== 'undefined' ? document.title : ''),
@@ -94,66 +82,34 @@ class Analytics {
     });
   }
 
-  /**
-   * Track user interaction
-   */
-  trackInteraction(
-    element: string,
-    action: string,
-    category: string = 'user_interaction'
-  ): void {
+  trackInteraction(element: string, action: string, category: string = 'user_interaction'): void {
     this.track('interaction', category, action, element);
   }
 
-  /**
-   * Track performance metrics
-   */
-  trackPerformance(metric: string, value: number, unit: string): void {
+  trackPerformance(metric: string, value: number, unit: string = 'ms'): void {
     this.track('performance', 'metrics', metric, unit, value);
   }
 
-  /**
-   * Track business events
-   */
-  trackBusinessEvent(
-    event: string,
-    value?: number,
-    properties?: Record<string, unknown>
-  ): void {
+  trackBusinessEvent(event: string, value?: number, properties?: Record<string, unknown>): void {
     this.track(event, 'business', 'event', undefined, value, properties);
   }
 
-  /**
-   * Get all events
-   */
-  getAllEvents(): AnalyticsEvent[] {
+  getEvents(): AnalyticsEvent[] {
     return [...this.events];
   }
 
-  /**
-   * Get events by category
-   */
   getEventsByCategory(category: string): AnalyticsEvent[] {
     return this.events.filter(event => event.category === category);
   }
 
-  /**
-   * Clear all events
-   */
   clearEvents(): void {
     this.events = [];
   }
 
-  /**
-   * Get user properties
-   */
   getUserProperties(): UserProperties {
     return { ...this.userProperties };
   }
 
-  /**
-   * Update user properties
-   */
   updateUserProperties(properties: Partial<UserProperties>): void {
     this.userProperties = { ...this.userProperties, ...properties };
   }
