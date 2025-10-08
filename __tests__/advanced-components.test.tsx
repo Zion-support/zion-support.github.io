@@ -5,16 +5,6 @@ import AdvancedErrorBoundary from '../app/components/AdvancedErrorBoundary';
 import AdvancedSEOOptimizer from '../app/components/AdvancedSEOOptimizer';
 import AdvancedPerformanceMonitor from '../app/components/AdvancedPerformanceMonitor';
 
-// Mock react-router-dom Link component
-jest.mock('react-router-dom', () => ({
-  ...jest.requireActual('react-router-dom'),
-  Link: ({ children, to, ...props }: any) => (
-    <a href={to} {...props}>
-      {children}
-    </a>
-  ),
-}));
-
 
 
 // Mock component that throws an error
@@ -25,21 +15,14 @@ const ThrowError = ({ shouldThrow }: { shouldThrow: boolean }) => {
   return <div>No error</div>;
 };
 
-// Helper component to wrap with router
-const RouterWrapper = ({ children }: { children: React.ReactNode }) => (
-  <MemoryRouter initialEntries={['/']}>
-    {children}
-  </MemoryRouter>
-);
-
 describe('AdvancedErrorBoundary', () => {
   it('renders children when there is no error', () => {
     render(
-      <RouterWrapper>
+      <BrowserRouter>
         <AdvancedErrorBoundary>
           <div>Test content</div>
         </AdvancedErrorBoundary>
-      </RouterWrapper>
+      </BrowserRouter>
     );
 
     expect(screen.getByText('Test content')).toBeInTheDocument();
@@ -51,15 +34,11 @@ describe('AdvancedErrorBoundary', () => {
       .mockImplementation(() => {});
 
     render(
-<<<<<<< HEAD
-      <RouterWrapper>
-=======
-      <MemoryRouter initialEntries={['/']}>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b23a
+      <BrowserRouter>
         <AdvancedErrorBoundary enableRetry={true}>
           <ThrowError shouldThrow={true} />
         </AdvancedErrorBoundary>
-      </RouterWrapper>
+      </BrowserRouter>
     );
 
     expect(screen.getByText('Oops! Something went wrong')).toBeInTheDocument();
@@ -77,15 +56,11 @@ describe('AdvancedErrorBoundary', () => {
       .mockImplementation(() => {});
 
     render(
-<<<<<<< HEAD
-      <RouterWrapper>
-=======
-      <MemoryRouter initialEntries={['/']}>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b23a
+      <BrowserRouter>
         <AdvancedErrorBoundary onError={onError}>
           <ThrowError shouldThrow={true} />
         </AdvancedErrorBoundary>
-      </RouterWrapper>
+      </BrowserRouter>
     );
 
     expect(onError).toHaveBeenCalled();
@@ -101,15 +76,11 @@ describe('AdvancedErrorBoundary', () => {
     const TestComponent = () => <ThrowError shouldThrow={shouldThrow} />;
 
     const { rerender } = render(
-<<<<<<< HEAD
-      <RouterWrapper>
-=======
-      <MemoryRouter initialEntries={['/']}>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b23a
+      <BrowserRouter>
         <AdvancedErrorBoundary enableRetry={true}>
           <TestComponent />
         </AdvancedErrorBoundary>
-      </RouterWrapper>
+      </BrowserRouter>
     );
 
     const retryButton = screen.getByText('Try Again (3 attempts left)');
