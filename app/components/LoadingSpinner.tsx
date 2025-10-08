@@ -29,20 +29,11 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   return (
     <div className={`flex flex-col items-center justify-center ${className}`} role="status" aria-live="polite">
       <div
-        className={`${sizeClasses[size]} ${colorClasses[color]} animate-spin`}
-        style={{
-          border: '3px solid rgba(0, 0, 0, 0.1)',
-          borderTop: '3px solid currentColor',
-          borderRadius: '50%',
-        }}
-        aria-hidden="true"
-      />
+        className={`animate-spin rounded-full border-2 border-gray-300 border-t-${color}-600 ${sizeClasses[size]} ${colorClasses[color]}`}
+      ></div>
       {text && (
-        <span className="mt-2 text-sm text-gray-600 dark:text-gray-400">
-          {text}
-        </span>
+        <p className='mt-2 text-sm text-gray-600 animate-pulse'>{text}</p>
       )}
-      <span className="sr-only">Loading...</span>
     </div>
   );
 };

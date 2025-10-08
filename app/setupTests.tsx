@@ -32,6 +32,66 @@ Object.defineProperty(window, 'matchMedia', {
   })),
 });
 
+// Mock IntersectionObserver
+global.IntersectionObserver = class IntersectionObserver {
+  root: Element | null = null;
+  rootMargin: string = '0px';
+  thresholds: ReadonlyArray<number> = [0];
+  
+  constructor() {}
+  observe() {
+    return null;
+  }
+  disconnect() {
+    return null;
+  }
+  unobserve() {
+    return null;
+  }
+  takeRecords() {
+    return [];
+  }
+} as any;
+
+// Mock ResizeObserver
+global.ResizeObserver = class ResizeObserver {
+  constructor() {}
+  observe() {}
+  unobserve() {}
+  disconnect() {}
+};
+
+// Mock window.location
+delete (window as unknown as Record<string, unknown>).location;
+(window as unknown as Record<string, unknown>).location = {
+  href: 'http://localhost:3000',
+  origin: 'http://localhost:3000',
+  protocol: 'http:',
+  host: 'localhost:3000',
+  hostname: 'localhost',
+  port: '3000',
+  pathname: '/',
+  search: '',
+  hash: '',
+  reload: jest.fn(),
+  assign: jest.fn(),
+  replace: jest.fn(),
+};
+
+// Mock performance API
+Object.defineProperty(window, 'performance', {
+  writable: true,
+  value: {
+    now: jest.fn(() => Date.now()),
+    mark: jest.fn(),
+    measure: jest.fn(),
+    getEntriesByType: jest.fn(() => []),
+    getEntriesByName: jest.fn(() => []),
+    clearMarks: jest.fn(),
+    clearMeasures: jest.fn(),
+  },
+});
+
 // Mock requestAnimationFrame
 global.requestAnimationFrame = jest.fn(cb => setTimeout(cb, 0));
 global.cancelAnimationFrame = jest.fn(id => clearTimeout(id));

@@ -1,58 +1,62 @@
 import React from 'react';
 
 const ContentShowcase: React.FC = () => {
-  const features = [
+  const contentItems = [
     {
-      title: 'Enterprise AI',
-      description: 'Advanced AI solutions tailored for enterprise needs',
-      icon: '🤖',
+      title: 'AI-Powered Manufacturing',
+      description:
+        'Revolutionize your production line with intelligent automation and predictive maintenance.',
+      image: '/api/placeholder/400/300',
+      category: 'Manufacturing',
     },
     {
-      title: 'Cloud Infrastructure',
-      description: 'Scalable and secure cloud solutions',
-      icon: '☁️',
+      title: 'Enterprise AI Strategy',
+      description:
+        'Comprehensive AI implementation roadmap tailored to your business needs.',
+      image: '/api/placeholder/400/300',
+      category: 'Strategy',
     },
     {
-      title: 'Data Analytics',
-      description: 'Powerful insights from your data',
-      icon: '📊',
-    },
-    {
-      title: 'Automation',
-      description: 'Streamline your business processes',
-      icon: '⚡',
+      title: 'Autonomous Operations',
+      description:
+        'Self-managing systems that optimize performance and reduce operational costs.',
+      image: '/api/placeholder/400/300',
+      category: 'Operations',
     },
   ];
 
   return (
-    <div className="py-12 bg-gray-50 dark:bg-gray-800">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-extrabold text-gray-900 dark:text-white sm:text-4xl">
-            Our Solutions
-          </h2>
-          <p className="mt-4 text-xl text-gray-600 dark:text-gray-300">
-            Cutting-edge technology solutions for modern businesses
-          </p>
-        </div>
-        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
-          {features.map((feature, index) => (
+    <section className='py-16'>
+      <div className='container mx-auto px-4'>
+        <h2 className='text-4xl font-bold text-center text-gray-900 mb-12'>
+          Featured Solutions
+        </h2>
+        <div className='grid md:grid-cols-3 gap-8'>
+          {contentItems.map((item, index) => (
             <div
               key={index}
-              className="relative group bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
+              className='bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300'
             >
-              <div className="text-5xl mb-4">{feature.icon}</div>
-              <h3 className="text-lg font-medium text-gray-900 dark:text-white mb-2">
-                {feature.title}
-              </h3>
-              <p className="text-base text-gray-500 dark:text-gray-300">
-                {feature.description}
-              </p>
+              <div className='h-48 bg-gray-200 flex items-center justify-center'>
+                <span className='text-gray-500'>Image Placeholder</span>
+              </div>
+              <div className='p-6'>
+                <div className='text-sm text-blue-600 font-semibold mb-2'>
+                  {item.category}
+                </div>
+                <h3 className='text-xl font-bold text-gray-900 mb-3'>
+                  {item.title}
+                </h3>
+                <p className='text-gray-600 mb-4'>{item.description}</p>
+                <button className='w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition-colors duration-300'>
+                  Learn More
+                </button>
+              </div>
             </div>
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
