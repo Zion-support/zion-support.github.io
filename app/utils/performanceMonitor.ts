@@ -234,3 +234,13 @@ class PerformanceMonitor {
     
     return `
 Performance Report:
+
+- Score: ${score}
+- LCP: ${metrics.lcp}ms
+- FID: ${metrics.fid}ms
+- CLS: ${metrics.cls}
+- FCP: ${metrics.fcp}ms
+- TTFB: ${metrics.ttfb}ms
+    `;
+  }
+}
