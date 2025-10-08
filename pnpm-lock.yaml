@@ -15,7 +15,7 @@ importers:
         specifier: ^2.2.0
         version: 2.2.0(react@18.3.1)
       '@tailwindcss/postcss':
-        specifier: ^4.1.14
+        specifier: ^4.1.13
         version: 4.1.14
       clsx:
         specifier: ^2.1.1

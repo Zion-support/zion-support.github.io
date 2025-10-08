@@ -6,8 +6,20 @@
  */
 
 import React, { useState, useEffect, useCallback } from 'react';
-import { collectPerformanceMetrics } from '../utils/performanceOptimizer';
 import { errorHandler } from '../utils/enhancedErrorHandler';
+
+// Collect basic performance metrics
+const collectPerformanceMetrics = () => {
+  if (typeof window === 'undefined' || !window.performance) return null;
+  
+  const navigation = window.performance.timing;
+  const paint = window.performance.getEntriesByType('paint');
+  
+  return {
+    loadTime: navigation.loadEventEnd - navigation.navigationStart,
+    firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0,
+  };
+};
 
 // Helper functions
 const calculatePerformanceScore = () => {
@@ -107,14 +119,10 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
       // Get network info
       const networkInfo = getNetworkInfo();
 
-      // Calculate performance score
-      const performanceMetrics = collectPerformanceMetrics();
-      const performanceScore = calculatePerformanceScore();
-
       const newMetrics: SystemMetrics = {
         performance: {
           score: performanceScore,
-          loadTime: performanceMetrics?.loadTime || loadTime,
+          loadTime: performanceMetrics?.loadTime || 0,
           firstContentfulPaint: performanceMetrics?.firstContentfulPaint || 0,
           largestContentfulPaint: 0, // Not available in current metrics
           firstInputDelay: 0, // Not available in current metrics
@@ -193,7 +201,7 @@ console.error('Failed to update metrics:', error);
         effectiveType: connection?.effectiveType || 'unknown',
         downlink: connection?.downlink || 0,
         rtt: connection?.rtt || 0,
-        saveData: connection.saveData || false,
+        saveData: connection?.saveData || false,
       };
     }
 

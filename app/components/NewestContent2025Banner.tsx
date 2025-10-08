@@ -1,34 +1,8 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { ArrowRight, Sparkles } from 'lucide-react';
+import Link from 'next/link';
 
 const NewestContent2025Banner = () => {
-  const featuredArticles = [
-    {
-      id: 1,
-      title: 'Edge Computing Revolution',
-      description: 'Discover how edge computing is transforming enterprise AI deployment',
-      slug: 'edge-computing-revolution',
-      icon: '💻',
-    },
-    {
-      id: 2,
-      title: 'Neural Networks Breakthrough',
-      description: 'Latest advances in neural network architectures and applications',
-      slug: 'neural-networks-breakthrough',
-      icon: '🧠',
-    },
-    {
-      id: 3,
-      title: 'Quantum Security',
-      description: 'Next-generation security powered by quantum computing',
-      slug: 'quantum-security',
-      icon: '🔐',
-    },
-  ];
-
   return (
-    <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden py-20">
     <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">
       {/* Animated Background Effects */}
       <div className="absolute inset-0 opacity-20">
@@ -43,25 +17,16 @@ const NewestContent2025Banner = () => {
         ></div>
       </div>
 
-      <div className="relative z-10 container mx-auto px-4">
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         {/* Header */}
         <div className="text-center mb-16">
           <div className="flex items-center justify-center gap-3 mb-6">
             <span className="text-2xl">🚀</span>
-            <span className="text-cyan-400 font-bold text-xl">
             <span className="text-yellow-400 font-bold text-xl">
               BREAKING: 3 REVOLUTIONARY ARTICLES JUST PUBLISHED!
             </span>
             <span className="text-2xl">⚡</span>
           </div>
-          <h2 className="text-4xl md:text-6xl font-extrabold text-white mb-6">
-          <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-6">
-            September 30, 2025 — Cutting-Edge AI Insights
-          </h2>
-          <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
-            Edge Computing • Neural Networks • Quantum Security — The future of enterprise AI starts here
-
           <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-6">
             September 30, 2025 — Cutting-Edge AI Insights
           </h2>
@@ -72,12 +37,6 @@ const NewestContent2025Banner = () => {
         </div>
 
         {/* Featured Articles Grid */}
-        <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto">
-          {featuredArticles.map((article) => (
-            <Link
-              key={article.id}
-              to={`/blog/${article.slug}`}
-              className="group relative bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:-translate-y-2"
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {/* Article 1: AI Edge Computing */}
           <Link href="/blog/ai-edge-computing-real-time-2025" className="group">
@@ -262,25 +221,24 @@ const NewestContent2025Banner = () => {
           </h3>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Join 50,000+ AI leaders implementing these breakthrough technologies. Get expert guidance 
-            from Zion Tech Group's AI transformation specialists.
+            from Zion Tech Group&apos;s AI transformation specialists.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
               href="tel:+13024640950"
               className="flex items-center gap-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl"
             >
-              <div className="text-6xl mb-4">{article.icon}</div>
-              <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">
-                {article.title}
-              </h3>
-              <p className="text-gray-400 mb-6">{article.description}</p>
-              <div className="flex items-center text-cyan-400 font-semibold">
-                Read More
-                <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-2 transition-transform" />
-              </div>
+              <span className="text-xl">📞</span>
+              <span>Call Now: +1 (302) 464-0950</span>
+            </a>
+            <Link
+              href="/contact"
+              className="flex items-center gap-3 border-2 border-white/30 hover:border-white/60 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 hover:bg-white/10"
+            >
+              <span className="text-xl">✉️</span>
+              <span>Schedule Consultation</span>
             </Link>
-            </div>
-          ))}
+          </div>
         </div>
       </div>
     </section>
