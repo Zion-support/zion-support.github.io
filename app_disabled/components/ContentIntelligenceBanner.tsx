@@ -172,7 +172,7 @@ export default function ContentIntelligenceBanner() {
 
         {/* Additional CTA */}
         <div className="text-center">
-          <ArrowRight
+          <Link
             href="/contact"
             className="inline-flex items-center gap-2 border-3 border-white text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-white hover:text-emerald-600 transition-all shadow-2xl hover:scale-105"
           >

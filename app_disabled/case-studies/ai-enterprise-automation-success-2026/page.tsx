@@ -578,7 +578,7 @@ export default function AIEnterpriseAutomationSuccess2026() {
             success through AI enterprise automation.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <ArrowRight
+            <Link
               href="/services"
               className="bg-white text-green-600 hover:bg-gray-100 font-bold py-4 px-8 rounded-xl transition-colors"
             >
