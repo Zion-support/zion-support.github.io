@@ -1,6 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+<<<<<<< HEAD
 import { ArrowLeft, Calendar, User, Clock, Tag, _Target, _CheckCircle, ArrowRight } from 'lucide-react';
+=======
+import { ArrowLeft, Calendar, User, Clock, Tag, ArrowRight } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-c52d
 
 export const metadata = {
   title: 'AI 2026 Implementation Roadmap: Complete Guide to Enterprise AI Transformation',
