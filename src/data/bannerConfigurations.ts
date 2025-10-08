@@ -17,6 +17,8 @@ export const bannerConfigurations: BannerConfig[] = [
   },
 ];
 
+export default bannerConfigurations;
+
 // Stub implementations for banner rotation functions
 export const selectBannersForDisplay = async (strategy: RotationStrategy = 'sequential', maxBanners: number = 3) => {
   return bannerConfigurations.slice(0, maxBanners);
