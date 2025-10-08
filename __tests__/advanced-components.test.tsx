@@ -14,11 +14,6 @@ jest.mock('react-router-dom', () => ({
     </a>
   ),
 }));
-<<<<<<< HEAD
-
-
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-fe06
 
 // Mock component that throws an error
 const ThrowError = ({ shouldThrow }: { shouldThrow: boolean }) => {
