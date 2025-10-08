@@ -22,6 +22,17 @@ const ContentShowcase = dynamic(() => import('./components/UltimateBusinessIntel
 
 export default function OptimizedHomePage() {
   return (
+<<<<<<< HEAD
+    <main className="min-h-screen">
+      <SEOOptimizer />
+      <PerformanceMonitor />
+      <AccessibilityEnhancer>
+        <UnifiedBanner />
+        <ContentPromotion />
+        <ContentShowcase />
+      </AccessibilityEnhancer>
+    </main>
+=======
     <AccessibilityEnhancer>
       <main className="min-h-screen">
         <SEOOptimizer />
@@ -32,5 +43,6 @@ export default function OptimizedHomePage() {
         <ContentShowcase />
       </main>
     </AccessibilityEnhancer>
+>>>>>>> origin/main
   );
 }
