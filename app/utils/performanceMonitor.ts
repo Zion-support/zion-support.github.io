@@ -88,7 +88,7 @@ class PerformanceMonitor {
         // First Input Delay
         this.observeEntry('first-input', (entries) => {
           const firstInput = entries[0] as any;
-          if (firstInput && firstInput.processingStart) {
+          if (firstInput && firstInput.processingStart !== undefined) {
             const fid = firstInput.processingStart - firstInput.startTime;
             this.recordMetric('FID', fid);
           }
