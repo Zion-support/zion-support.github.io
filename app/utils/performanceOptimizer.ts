@@ -5,8 +5,8 @@
 
 // Simple logger for performance optimizer
 const logger = {
-  info: (message: string, context?: string) => ,
-  performance: (message: string, data: Record<string, unknown>, context?: string) => ,
+  info: (message: string, context?: string) => console.log('[INFO]', message, context),
+  performance: (message: string, data: Record<string, unknown>, context?: string) => console.log('[PERF]', message, data, context),
   error: (message: string, error: Error) => console.error('[ERROR]', message, error),
 };
 
@@ -97,14 +97,14 @@ class PerformanceOptimizer {
         this.metrics.loadTime = navigation.loadEventEnd - navigation.loadEventStart;
       }
     } catch (error) {
-      }
+      // PerformanceObserver may not support 'measure' entryType in some environments
+    }
   }
 
   /**
    * Measure render time using PerformanceObserver
    */
   private measureRenderTime(): void {
-    
     // Check if PerformanceObserver exists (may not be available in test environments)
     if (typeof PerformanceObserver === 'undefined') return;
 
