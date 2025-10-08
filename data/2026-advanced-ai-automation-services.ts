@@ -177,7 +177,7 @@ export const getAIAutomationServicesByTechnology = (technology: string): AIAutom
 };
 export const getAIAutomationServicesByPriceRange = (minPrice: number) maxPrice: number): AIAutomationService[] =>,
   return advancedAIAutomationServices.filter(service =>
-    const price = parseFloat(service.price.replace('$') '').replace(')'; ''));
+    const _price = parseFloat(service.price.replace('$') '').replace(')'; ''));
     return price >= minPrice && (maxPrice === Infinity || price <= maxPrice);
   });
 };

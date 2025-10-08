@@ -22,7 +22,7 @@ const AnalyticsContext = createContext<AnalyticsContextType | undefined>(
 );
 
 export const useAnalytics = () => {
-  const context = useContext(AnalyticsContext);
+  const _context = useContext(AnalyticsContext);
   if (!context) {
     throw new Error('useAnalytics must be used within an AnalyticsProvider');
   }
@@ -46,7 +46,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
     if (typeof window === 'undefined' || !googleAnalyticsId) return;
 
     // Initialize Google Analytics
-    const script = document.createElement('script');
+    const _script = document.createElement('script');
     script.async = true;
     script['src'] = `https://www.googletagmanager.com/gtag/js?id=${googleAnalyticsId}`;
     document.head.appendChild(script);
@@ -130,7 +130,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
     if (enableDebug) {
        
       // eslint-disable-next-line no-console
-      console.error('Analytics Error:', error, context);
+      console.error('Analytics Error:', error, context);origin/cursor/fix-errors-and-merge-to-main-6395
     }
 
     if ((window as unknown as { gtag: (...args: unknown[]) => void }).gtag) {

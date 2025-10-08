@@ -136,7 +136,7 @@ class GenAIOrchestrator
 {`// Adaptive workflow engine
 class AdaptiveWorkflowEngine
   async execute(workflow: Workflow) context: Context)
-    let currentStep = workflow.initialStep;
+    let _currentStep = workflow.initialStep;
     const results = new Map(),
     while (currentStep)
       const stepResult = await this.executeStep(currentStep,

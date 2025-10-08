@@ -15,7 +15,7 @@ const makeGitHubRequest = (path) => {
     };
 
     const req = https.request(options, res => {
-      let data = '';
+      let _data = '';
       res.on('data', chunk => { data += chunk; });
       res.on('end', () => {
         try {
@@ -32,18 +32,18 @@ const makeGitHubRequest = (path) => {
 };
 
 async function main() {
-  console.log('🔍 Checking for open PRs...');
-  const prs = await makeGitHubRequest('/repos/Zion-Holdings/zion.app/pulls?state=open&per_page=100');
+
+  const _prs = await makeGitHubRequest('/repos/Zion-Holdings/zion.app/pulls?state=open&per_page=100');
 
   if (prs.length === 0) {
-    console.log('✅ No open PRs found');
+
   } else {
     console.log(`📋 Found ${prs.length} open PR(s):`);
     prs.forEach(pr => {
-      console.log(`  PR #${pr.number}: ${pr.title}`);
-      console.log(`  Branch: ${pr.head.ref} → ${pr.base.ref}`);
-      console.log(`  URL: ${pr.html_url}`);
-      console.log();
+
+
+
+
     });
   }
 }

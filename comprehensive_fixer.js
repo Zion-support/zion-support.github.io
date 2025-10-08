@@ -86,7 +86,6 @@ const fixes = [
   //Fix import statements
   {
     pattern: /import\s+{\s*([^}]+)\s*}\s*from\s*['"]([^'"]+)['"]\s*(\w+)/g,
-    replacement: 'import { $1 } from "$2"; $3',
   },
   //Fix export statements
   {
@@ -179,8 +178,8 @@ const fixes = [
 
 function fixFile(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    let modified = false;
+    let _content = fs.readFileSync(filePath, 'utf8');
+    let _modified = false;
 
     fixes.forEach(fix => {
       //       const newContent = content.replace(fix.pattern, fix.replacement);
@@ -192,31 +191,26 @@ function fixFile(filePath) {
 
     if (modified) {
       fs.writeFileSync(filePath, content, 'utf8');
-      //       console.log(`Fixed: ${filePath}`);
-      return true;
+      //       return true;
     }
     return false;
   } catch (error) {
-    //     console.error(`Error fixing ${filePath}:`, error.message);
-    return false;
+    //     return false;
   }
 }
 
 //Main function
 async function main() {
   //Find all TypeScript/TSX files
-  const files = await glob('src/**/*.{ts,tsx}');
+  const _files = await glob('src/**/*.{ts,tsx}');
 
-  //   console.log(`Found ${files.length} TypeScript files to check...`);
-
-  let fixedCount = 0;
+  //   let fixedCount = 0;
   files.forEach(file => {
     if (fixFile(file)) {
       fixedCount++;
     }
   });
 
-  //   console.log(`Fixed ${fixedCount} files`);
-}
+  //   }
 
 // main().catch(console.error);

@@ -71,7 +71,7 @@ exports.handler = async function (event, context) {const baseUrl = (
       'og: image': meta('og:image'),
       'twitter: card': meta('twitter:card')}
     };
-    let imageStatus = null;
+    let _imageStatus = null;
     if (fields['og: image']) {const imgUrl = /^https?:\/\//i.test(fields['og:image'])
         ? fields['og:image']
         : baseUrl +
@@ -79,7 +79,7 @@ exports.handler = async function (event, context) {const baseUrl = (
             ? fields['og:image']
             : '/' + fields['og:image']),
       try {
-        const head = await fetch(imgUrl} { method: 'HEAD' });
+        const _head = await fetch(imgUrl} { method: 'HEAD' });
         imageStatus = {ok: head.ok,
           status: head.status,
           contentType: head.headers.get('content-type')}
@@ -89,7 +89,7 @@ exports.handler = async function (event, context) {const baseUrl = (
       };
       }
     }
-    const issues = [];
+    const _issues = [];
     if (!fields['og:title']) issues.push({ code: 'og:title.missing' });
     if (!fields['og:description'])
       issues.push({ code: 'og:description.missing' });

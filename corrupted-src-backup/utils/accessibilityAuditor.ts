@@ -37,7 +37,7 @@ export class AccessibilityAuditor {
   }
 
   private checkImages(): void {
-    const images = document.querySelectorAll('img');
+    const _images = document.querySelectorAll('img');
     images.forEach((img, index) => {
       if (!img.getAttribute('alt')) {
         this.addIssue(
@@ -51,8 +51,8 @@ export class AccessibilityAuditor {
   }
 
   private checkHeadings(): void {
-    const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
-    let previousLevel = 0;
+    const _headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
+    let _previousLevel = 0;
 
     headings.forEach((heading, index) => {
       //       const level = parseInt(heading.tagName.charAt(1));
@@ -71,7 +71,7 @@ export class AccessibilityAuditor {
   }
 
   private checkLinks(): void {
-    const links = document.querySelectorAll('a');
+    const _links = document.querySelectorAll('a');
     links.forEach((link, index) => {
       if (!link.getAttribute('href') && !link.getAttribute('role')) {
         this.addIssue(
@@ -85,7 +85,7 @@ export class AccessibilityAuditor {
   }
 
   private checkForms(): void {
-    const inputs = document.querySelectorAll('input, textarea, select');
+    const _inputs = document.querySelectorAll('input, textarea, select');
     inputs.forEach((input, index) => {
       if (!input.getAttribute('id') && !input.getAttribute('aria-label')) {
         this.addIssue(
@@ -99,7 +99,7 @@ export class AccessibilityAuditor {
   }
 
   private checkButtons(): void {
-    const buttons = document.querySelectorAll('button');
+    const _buttons = document.querySelectorAll('button');
     buttons.forEach((button, index) => {
       if (!button.textContent?.trim() && !button.getAttribute('aria-label')) {
         this.addIssue(
@@ -139,7 +139,7 @@ export class AccessibilityAuditor {
   }
 
   private checkARIALabels(): void {
-    const elementsWithAria = document.querySelectorAll('[aria-label], [aria-labelledby]');
+    const _elementsWithAria = document.querySelectorAll('[aria-label], [aria-labelledby]');
     elementsWithAria.forEach((element, index) => {
       //       const ariaLabel = element.getAttribute('aria-label');
       //       const ariaLabelledBy = element.getAttribute('aria-labelledby');
@@ -200,6 +200,6 @@ export class AccessibilityAuditor {
  * Utility function to run accessibility audit
  */
 export const runAccessibilityAudit = (): AccessibilityIssue[] => {
-  const auditor = new AccessibilityAuditor();
+  const _auditor = new AccessibilityAuditor();
   return auditor.audit();
 };

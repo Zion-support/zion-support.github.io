@@ -21,7 +21,7 @@ export const usePerformance = () => {
       const navigation = performance.getEntriesByType(
         'navigation'
       )[0] as PerformanceNavigationTiming;
-      const paintEntries = performance.getEntriesByType('paint');
+      const _paintEntries = performance.getEntriesByType('paint');
 
       const firstContentfulPaint =
         paintEntries.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0;
@@ -29,7 +29,7 @@ export const usePerformance = () => {
         paintEntries.find(entry => entry.name === 'largest-contentful-paint')?.startTime || 0;
 
       // Measure CLS (Cumulative Layout Shift)
-      let cumulativeLayoutShift = 0;
+      let _cumulativeLayoutShift = 0;
       if ('PerformanceObserver' in window) {
         const observer = new PerformanceObserver(list => {
           for (const entry of list.getEntries()) {
@@ -45,7 +45,7 @@ export const usePerformance = () => {
       }
 
       // Measure FID (First Input Delay)
-      let firstInputDelay = 0;
+      let _firstInputDelay = 0;
       if ('PerformanceObserver' in window) {
         const observer = new PerformanceObserver(list => {
           for (const entry of list.getEntries()) {

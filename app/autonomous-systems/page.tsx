@@ -1,16 +1,11 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-import { CheckCircle, Star, Bot, Cpu, Shield, Zap, Target, BarChart, Brain, Settings, RefreshCw, Eye } from 'lucide-react';
-=======
-import { CheckCircle, Star, Bot, Zap, Shield, Cpu, Brain, Target, BarChart, Settings, RefreshCw } from 'lucide-react';
->>>>>>> cursor/add-new-services-and-deploy-updates-f159
+import { CheckCircle, Star, Bot, Cpu, Shield, Zap, Target, BarChart, Brain, Settings, RefreshCw, Eye } from 'lucide-react';cursor/add-new-services-and-deploy-updates-f159
 
 const AutonomousSystemsPage: React.FC = () => {
   const autonomousServices = [
     {
       title: 'Self-Healing Infrastructure',
-<<<<<<< HEAD
       description: 'AI-powered infrastructure that automatically detects, diagnoses, and repairs system issues without human intervention.',
       icon: '🔄',
       price: 'Starting at $3,500/month',
@@ -61,65 +56,11 @@ const AutonomousSystemsPage: React.FC = () => {
       features: ['Auto-scaling', 'Cost optimization', 'Performance tuning', 'Resource allocation', 'Capacity planning'],
       benefits: ['Reduce cloud costs by 40%', 'Improve performance by 50%', 'Eliminate manual optimization'],
       marketPrice: '$4,000-8,000/month',
-      category: 'Cloud Automation',
-=======
-      description: 'Automated system monitoring, diagnosis, and repair for maximum uptime and reliability.',
-      icon: '🔧',
-      price: 'Starting at $3,500/month',
-      features: ['Automated diagnostics', 'Self-repair capabilities', 'Predictive maintenance', 'Performance optimization', '24/7 monitoring'],
-      benefits: ['Reduce downtime by 90%', 'Lower maintenance costs by 60%', 'Improve system reliability'],
-      marketPrice: '$5,000-12,000/month',
-      category: 'Infrastructure',
-      technologies: ['Kubernetes', 'Docker', 'Prometheus', 'Grafana', 'Ansible']
-    },
-    {
-      title: 'Autonomous Business Process Automation',
-      description: 'AI-powered automation of complex business processes with decision-making capabilities.',
-      icon: '🤖',
-      price: 'Starting at $4,000/month',
-      features: ['Process discovery', 'Workflow automation', 'Decision automation', 'Exception handling', 'Continuous optimization'],
-      benefits: ['Reduce process time by 70%', 'Eliminate human errors', 'Improve compliance'],
-      marketPrice: '$6,000-15,000/month',
-      category: 'Process Automation',
-      technologies: ['UiPath', 'Automation Anywhere', 'Blue Prism', 'Custom AI Models', 'RPA Tools']
-    },
-    {
-      title: 'Intelligent Monitoring & Alerting',
-      description: 'Advanced monitoring systems that learn patterns and predict issues before they occur.',
-      icon: '📊',
-      price: 'Starting at $2,500/month',
-      features: ['Anomaly detection', 'Predictive alerts', 'Root cause analysis', 'Performance optimization', 'Custom dashboards'],
-      benefits: ['Prevent issues before they occur', 'Reduce alert fatigue by 80%', 'Improve system performance'],
-      marketPrice: '$4,000-8,000/month',
-      category: 'Monitoring',
-      technologies: ['ELK Stack', 'Splunk', 'DataDog', 'New Relic', 'Custom ML Models']
-    },
-    {
-      title: 'Autonomous Data Management',
-      description: 'Self-managing data pipelines with automatic optimization and quality assurance.',
-      icon: '🗄️',
-      price: 'Starting at $3,000/month',
-      features: ['Data quality monitoring', 'Automatic data cleansing', 'Schema evolution', 'Performance tuning', 'Backup automation'],
-      benefits: ['Ensure data quality', 'Reduce manual data management', 'Improve data accessibility'],
-      marketPrice: '$4,500-10,000/month',
-      category: 'Data Management',
-      technologies: ['Apache Airflow', 'dbt', 'Great Expectations', 'Apache Kafka', 'Data Quality Tools']
-    },
-    {
-      title: 'Self-Optimizing Cloud Resources',
-      description: 'Automated cloud resource scaling and optimization based on real-time demand.',
-      icon: '☁️',
-      price: 'Starting at $2,800/month',
-      features: ['Auto-scaling', 'Cost optimization', 'Performance tuning', 'Resource allocation', 'Capacity planning'],
-      benefits: ['Reduce cloud costs by 40%', 'Improve performance', 'Eliminate over-provisioning'],
-      marketPrice: '$4,000-9,000/month',
-      category: 'Cloud Optimization',
->>>>>>> cursor/add-new-services-and-deploy-updates-f159
+      category: 'Cloud Automation',cursor/add-new-services-and-deploy-updates-f159
       technologies: ['AWS Auto Scaling', 'Kubernetes HPA', 'Terraform', 'CloudFormation', 'Cost Optimization Tools']
     },
     {
       title: 'Autonomous Security Operations',
-<<<<<<< HEAD
       description: 'AI-driven security systems that automatically detect, analyze, and respond to security threats.',
       icon: '🛡️',
       price: 'Starting at $4,000/month',
@@ -193,108 +134,23 @@ const AutonomousSystemsPage: React.FC = () => {
       benefits: ['Reduce testing time by 75%', 'Improve test coverage', 'Catch bugs earlier'],
       marketPrice: '$5,000-12,000/month',
       category: 'Quality Assurance',
-      technologies: ['Selenium', 'Appium', 'TestNG', 'Performance Tools', 'Security Scanners']
-=======
-      description: 'AI-powered security monitoring, threat detection, and automated incident response.',
-      icon: '🛡️',
-      price: 'Starting at $4,500/month',
-      features: ['Threat detection', 'Automated response', 'Vulnerability scanning', 'Compliance monitoring', 'Incident analysis'],
-      benefits: ['Detect threats 10x faster', 'Reduce false positives by 70%', 'Improve security posture'],
-      marketPrice: '$7,000-18,000/month',
-      category: 'Security',
-      technologies: ['SIEM', 'SOAR', 'EDR', 'XDR', 'Threat Intelligence']
-    },
-    {
-      title: 'Self-Learning Customer Service',
-      description: 'Autonomous customer service systems that learn and improve from every interaction.',
-      icon: '💬',
-      price: 'Starting at $2,200/month',
-      features: ['Natural language processing', 'Sentiment analysis', 'Automated responses', 'Learning algorithms', 'Escalation management'],
-      benefits: ['Improve customer satisfaction', 'Reduce response time by 80%', 'Lower support costs'],
-      marketPrice: '$3,500-8,000/month',
-      category: 'Customer Service',
-      technologies: ['NLP', 'Machine Learning', 'Chatbots', 'CRM Integration', 'Analytics']
-    },
-    {
-      title: 'Autonomous Supply Chain Management',
-      description: 'Self-managing supply chain with predictive analytics and automated decision making.',
-      icon: '📦',
-      price: 'Starting at $5,000/month',
-      features: ['Demand forecasting', 'Inventory optimization', 'Supplier management', 'Risk assessment', 'Automated ordering'],
-      benefits: ['Reduce inventory costs by 30%', 'Improve delivery times', 'Minimize supply chain risks'],
-      marketPrice: '$8,000-20,000/month',
-      category: 'Supply Chain',
-      technologies: ['Machine Learning', 'Predictive Analytics', 'IoT Sensors', 'Blockchain', 'ERP Integration']
-    },
-    {
-      title: 'Self-Adaptive Software Development',
-      description: 'Autonomous software development with automated testing, deployment, and optimization.',
-      icon: '💻',
-      price: 'Starting at $3,800/month',
-      features: ['Automated testing', 'Code optimization', 'Performance tuning', 'Bug detection', 'Deployment automation'],
-      benefits: ['Reduce development time by 50%', 'Improve code quality', 'Faster time to market'],
-      marketPrice: '$6,000-15,000/month',
-      category: 'Software Development',
-      technologies: ['CI/CD', 'Automated Testing', 'Code Analysis', 'Performance Monitoring', 'DevOps Tools']
-    },
-    {
-      title: 'Autonomous Financial Operations',
-      description: 'Self-managing financial systems with automated trading, risk management, and compliance.',
-      icon: '💰',
-      price: 'Starting at $6,000/month',
-      features: ['Algorithmic trading', 'Risk assessment', 'Compliance monitoring', 'Fraud detection', 'Portfolio optimization'],
-      benefits: ['Improve trading performance', 'Reduce financial risks', 'Ensure compliance'],
-      marketPrice: '$10,000-25,000/month',
-      category: 'Financial Services',
-      technologies: ['Algorithmic Trading', 'Risk Management', 'Compliance Tools', 'Blockchain', 'AI/ML']
-    },
-    {
-      title: 'Self-Optimizing Marketing Automation',
-      description: 'Autonomous marketing systems that optimize campaigns and customer engagement in real-time.',
-      icon: '📈',
-      price: 'Starting at $2,500/month',
-      features: ['Campaign optimization', 'Customer segmentation', 'Content personalization', 'A/B testing', 'Performance analytics'],
-      benefits: ['Increase ROI by 60%', 'Improve customer engagement', 'Reduce marketing costs'],
-      marketPrice: '$4,000-10,000/month',
-      category: 'Marketing',
-      technologies: ['Marketing Automation', 'AI/ML', 'Analytics', 'Personalization', 'A/B Testing']
-    },
-    {
-      title: 'Autonomous Quality Assurance',
-      description: 'Self-managing quality systems with automated testing, monitoring, and improvement.',
-      icon: '🔍',
-      price: 'Starting at $2,800/month',
-      features: ['Automated testing', 'Quality monitoring', 'Defect prediction', 'Process optimization', 'Continuous improvement'],
-      benefits: ['Improve product quality', 'Reduce defects by 80%', 'Lower quality costs'],
-      marketPrice: '$4,500-12,000/month',
-      category: 'Quality Assurance',
-      technologies: ['Automated Testing', 'Quality Metrics', 'Process Mining', 'AI/ML', 'Analytics']
->>>>>>> cursor/add-new-services-and-deploy-updates-f159
+      technologies: ['Selenium', 'Appium', 'TestNG', 'Performance Tools', 'Security Scanners']cursor/add-new-services-and-deploy-updates-f159
     }
   ];
 
-  const categories = [...new Set(autonomousServices.map(service => service.category))];
+  const _categories = [...new Set(autonomousServices.map(service => service.category))];
 
   return (
     <>
       <Helmet>
         <title>Autonomous Systems Services - Zion Tech Group</title>
-<<<<<<< HEAD
-        <meta name="description" content="Advanced autonomous systems and self-managing technology solutions for enterprise automation and optimization." />
-        <meta name="keywords" content="autonomous systems, self-healing infrastructure, process automation, AI automation, intelligent systems" />
-=======
         <meta name="description" content="Advanced autonomous systems services including self-healing infrastructure, process automation, and intelligent monitoring solutions." />
-        <meta name="keywords" content="autonomous systems, self-healing infrastructure, process automation, intelligent monitoring, business automation" />
->>>>>>> cursor/add-new-services-and-deploy-updates-f159
+        <meta name="keywords" content="autonomous systems, self-healing infrastructure, process automation, intelligent monitoring, business automation" />cursor/add-new-services-and-deploy-updates-f159
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-green-50">
         {/* Hero Section */}
-<<<<<<< HEAD
-        <section className="relative overflow-hidden bg-gradient-to-r from-green-600 to-teal-700 text-white py-20">
-=======
-        <section className="relative overflow-hidden bg-gradient-to-r from-green-600 to-blue-700 text-white py-20">
->>>>>>> cursor/add-new-services-and-deploy-updates-f159
+        <section className="relative overflow-hidden bg-gradient-to-r from-green-600 to-teal-700 text-white py-20">cursor/add-new-services-and-deploy-updates-f159
           <div className="absolute inset-0 bg-black opacity-20"></div>
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
@@ -302,11 +158,7 @@ const AutonomousSystemsPage: React.FC = () => {
                 Autonomous Systems Services
               </h1>
               <p className="text-xl md:text-2xl mb-8 text-green-100 max-w-3xl mx-auto">
-<<<<<<< HEAD
-                Self-managing, self-optimizing systems that operate independently and continuously improve
-=======
-                Self-managing, self-optimizing systems that adapt and improve without human intervention
->>>>>>> cursor/add-new-services-and-deploy-updates-f159
+                Self-managing, self-optimizing systems that operate independently and continuously improvecursor/add-new-services-and-deploy-updates-f159
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-green-50 transition-colors">
@@ -328,11 +180,7 @@ const AutonomousSystemsPage: React.FC = () => {
                 Why Choose Our Autonomous Systems?
               </h2>
               <p className="text-xl text-gray-600">
-<<<<<<< HEAD
-                Cutting-edge autonomous technology that reduces costs, improves efficiency, and eliminates manual work
-=======
-                Cutting-edge autonomous technology that reduces costs, improves efficiency, and eliminates human errors
->>>>>>> cursor/add-new-services-and-deploy-updates-f159
+                Cutting-edge autonomous technology that reduces costs, improves efficiency, and eliminates human errorscursor/add-new-services-and-deploy-updates-f159
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -340,31 +188,6 @@ const AutonomousSystemsPage: React.FC = () => {
                 <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Bot className="w-8 h-8 text-green-600" />
                 </div>
-<<<<<<< HEAD
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Fully Autonomous</h3>
-                <p className="text-gray-600">Systems that operate independently without human intervention</p>
-              </div>
-              <div className="text-center">
-                <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Brain className="w-8 h-8 text-blue-600" />
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Self-Learning</h3>
-                <p className="text-gray-600">AI systems that continuously learn and improve performance</p>
-              </div>
-              <div className="text-center">
-                <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <RefreshCw className="w-8 h-8 text-purple-600" />
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Self-Healing</h3>
-                <p className="text-gray-600">Systems that automatically detect and fix issues</p>
-              </div>
-              <div className="text-center">
-                <div className="bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Zap className="w-8 h-8 text-orange-600" />
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Cost Effective</h3>
-                <p className="text-gray-600">Reduce operational costs by up to 70% through automation</p>
-=======
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Self-Managing</h3>
                 <p className="text-gray-600">Systems that monitor, diagnose, and repair themselves automatically</p>
               </div>
@@ -387,8 +210,7 @@ const AutonomousSystemsPage: React.FC = () => {
                   <Target className="w-8 h-8 text-orange-600" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Proven ROI</h3>
-                <p className="text-gray-600">Average 400% ROI within 12 months of implementation</p>
->>>>>>> cursor/add-new-services-and-deploy-updates-f159
+                <p className="text-gray-600">Average 400% ROI within 12 months of implementation</p>cursor/add-new-services-and-deploy-updates-f159
               </div>
             </div>
           </div>
@@ -400,17 +222,10 @@ const AutonomousSystemsPage: React.FC = () => {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="text-center mb-12">
                 <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-<<<<<<< HEAD
-                  {category} Services
-                </h2>
-                <p className="text-xl text-gray-600">
-                  Advanced {category.toLowerCase()} solutions with autonomous capabilities
-=======
                   {category} Solutions
                 </h2>
                 <p className="text-xl text-gray-600">
-                  Autonomous {category.toLowerCase()} systems that adapt and optimize continuously
->>>>>>> cursor/add-new-services-and-deploy-updates-f159
+                  Autonomous {category.toLowerCase()} systems that adapt and optimize continuouslycursor/add-new-services-and-deploy-updates-f159
                 </p>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -491,40 +306,12 @@ const AutonomousSystemsPage: React.FC = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <div className="text-center p-6 bg-gradient-to-br from-green-50 to-emerald-100 rounded-lg">
                 <Bot className="w-12 h-12 text-green-600 mx-auto mb-4" />
-<<<<<<< HEAD
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Autonomous Operations</h3>
-                <p className="text-gray-600">Self-managing systems that operate without human intervention</p>
-=======
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Self-Healing Systems</h3>
-                <p className="text-gray-600">Automated diagnosis, repair, and optimization of system issues</p>
->>>>>>> cursor/add-new-services-and-deploy-updates-f159
+                <p className="text-gray-600">Self-managing systems that operate without human intervention</p>cursor/add-new-services-and-deploy-updates-f159
               </div>
               <div className="text-center p-6 bg-gradient-to-br from-blue-50 to-cyan-100 rounded-lg">
                 <Brain className="w-12 h-12 text-blue-600 mx-auto mb-4" />
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Machine Learning</h3>
-<<<<<<< HEAD
-                <p className="text-gray-600">AI systems that continuously learn and improve performance</p>
-              </div>
-              <div className="text-center p-6 bg-gradient-to-br from-purple-50 to-violet-100 rounded-lg">
-                <RefreshCw className="w-12 h-12 text-purple-600 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Self-Healing</h3>
-                <p className="text-gray-600">Systems that automatically detect and repair issues</p>
-              </div>
-              <div className="text-center p-6 bg-gradient-to-br from-orange-50 to-amber-100 rounded-lg">
-                <Settings className="w-12 h-12 text-orange-600 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Self-Optimization</h3>
-                <p className="text-gray-600">Continuous optimization of performance and resource usage</p>
-              </div>
-              <div className="text-center p-6 bg-gradient-to-br from-pink-50 to-rose-100 rounded-lg">
-                <Eye className="w-12 h-12 text-pink-600 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Intelligent Monitoring</h3>
-                <p className="text-gray-600">AI-powered monitoring with predictive capabilities</p>
-              </div>
-              <div className="text-center p-6 bg-gradient-to-br from-indigo-50 to-blue-100 rounded-lg">
-                <Shield className="w-12 h-12 text-indigo-600 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Autonomous Security</h3>
-                <p className="text-gray-600">Self-managing security systems with automated responses</p>
-=======
                 <p className="text-gray-600">Continuous learning and adaptation from system behavior</p>
               </div>
               <div className="text-center p-6 bg-gradient-to-br from-purple-50 to-violet-100 rounded-lg">
@@ -545,19 +332,14 @@ const AutonomousSystemsPage: React.FC = () => {
               <div className="text-center p-6 bg-gradient-to-br from-indigo-50 to-blue-100 rounded-lg">
                 <Cpu className="w-12 h-12 text-indigo-600 mx-auto mb-4" />
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Intelligent Monitoring</h3>
-                <p className="text-gray-600">Advanced monitoring with anomaly detection and alerting</p>
->>>>>>> cursor/add-new-services-and-deploy-updates-f159
+                <p className="text-gray-600">Advanced monitoring with anomaly detection and alerting</p>cursor/add-new-services-and-deploy-updates-f159
               </div>
             </div>
           </div>
         </section>
 
         {/* Contact Section */}
-<<<<<<< HEAD
-        <section className="py-16 bg-gradient-to-r from-green-600 to-teal-600 text-white">
-=======
-        <section className="py-16 bg-gradient-to-r from-green-600 to-blue-600 text-white">
->>>>>>> cursor/add-new-services-and-deploy-updates-f159
+        <section className="py-16 bg-gradient-to-r from-green-600 to-teal-600 text-white">cursor/add-new-services-and-deploy-updates-f159
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Ready to Automate Your Operations?

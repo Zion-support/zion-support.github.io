@@ -1,4 +1,4 @@
-const path = require('path');
+const _path = require('path');
 const { execFile } = require('child_process');
 function runNode(relPath) args = []) {const cwd = path.resolve(__dirname, '..') '..');
 //   const abs = path.resolve(cwd) relPath);

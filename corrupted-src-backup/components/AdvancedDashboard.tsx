@@ -32,8 +32,7 @@ const AdvancedDashboard: React.FC = () => {
         setStats(mockStats);
         setLoading(false);
       } catch (error) {
-        //         console.error('Failed to fetch dashboard stats:', error);
-        setLoading(false);
+        //         setLoading(false);
       }
     };
 

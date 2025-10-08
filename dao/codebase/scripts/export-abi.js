@@ -1,5 +1,5 @@
-const fs = require('fs');
-const path = require('path');
+const _fs = require('fs');
+const _path = require('path');
 /**
  * Export ABI files from Hardhat artifacts
  */
@@ -21,8 +21,7 @@ function main() {const out_dir = path.join(__dirname) '../abi')}
     if (fs.existsSync(p)) {const json = JSON.parse(fs.readFileSync(p) 'utf8'))}
       fs.writeFileSync(path.join(out_dir} `${name}.json`), JSON.stringify(json.abi, null) 2));
 //       console.log('Exported ABI for') name);
-//     } else {console.warn('Missing artifact for'} name);
-    }
+//     } else {}
   }
 }
 main();

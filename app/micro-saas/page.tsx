@@ -160,6 +160,147 @@ const MicroSAASPage: React.FC = () => {
       technologies: ['SIEM', 'EDR', 'Machine Learning', 'Python', 'Custom AI Models']
     },
     {
+      title: 'AI-Powered Code Review Assistant',
+      description: 'Automated code analysis, bug detection, and security vulnerability scanning for development teams.',
+      icon: '💻',
+      price: '$189/month',
+      features: ['Automated code review', 'Bug detection', 'Security scanning', 'Performance analysis', 'Best practices suggestions'],
+      benefits: ['Reduce bugs by 60%', 'Improve code quality', 'Accelerate development cycles'],
+      marketPrice: '$300-600/month',
+      category: 'Development'
+    },
+    {
+      title: 'Smart Contract Auditor',
+      description: 'AI-powered smart contract analysis and security auditing for blockchain projects.',
+      icon: '⛓️',
+      price: '$399/month',
+      features: ['Smart contract analysis', 'Vulnerability detection', 'Gas optimization', 'Compliance checking', 'Audit reports'],
+      benefits: ['Prevent costly exploits', 'Ensure contract security', 'Optimize gas usage'],
+      marketPrice: '$600-1200/month',
+      category: 'Blockchain'
+    },
+    {
+      title: 'AI Voice Assistant Builder',
+      description: 'Create custom voice assistants and chatbots for customer service and internal operations.',
+      icon: '🎤',
+      price: '$159/month',
+      features: ['Voice recognition', 'Natural language processing', 'Multi-language support', 'Integration APIs', 'Analytics dashboard'],
+      benefits: ['Improve customer service', 'Reduce support costs', '24/7 availability'],
+      marketPrice: '$250-500/month',
+      category: 'Customer Service'
+    },
+    {
+      title: 'Predictive Maintenance AI',
+      description: 'Machine learning-powered equipment monitoring and predictive maintenance scheduling.',
+      icon: '🔧',
+      price: '$299/month',
+      features: ['Equipment monitoring', 'Failure prediction', 'Maintenance scheduling', 'Cost optimization', 'Alert system'],
+      benefits: ['Reduce downtime by 70%', 'Lower maintenance costs', 'Extend equipment life'],
+      marketPrice: '$500-1000/month',
+      category: 'Manufacturing'
+    },
+    {
+      title: 'AI-Powered SEO Optimizer',
+      description: 'Automated SEO analysis, keyword optimization, and content improvement suggestions.',
+      icon: '🔍',
+      price: '$99/month',
+      features: ['SEO analysis', 'Keyword research', 'Content optimization', 'Competitor analysis', 'Rank tracking'],
+      benefits: ['Increase organic traffic by 150%', 'Improve search rankings', 'Save 20 hours/week'],
+      marketPrice: '$150-300/month',
+      category: 'Marketing'
+    },
+    {
+      title: 'Smart Energy Management',
+      description: 'AI-driven energy consumption optimization and cost reduction for businesses.',
+      icon: '⚡',
+      price: '$199/month',
+      features: ['Energy monitoring', 'Consumption optimization', 'Cost analysis', 'Renewable integration', 'Carbon tracking'],
+      benefits: ['Reduce energy costs by 30%', 'Lower carbon footprint', 'Improve sustainability'],
+      marketPrice: '$300-600/month',
+      category: 'Sustainability'
+    },
+    {
+      title: 'AI Legal Document Analyzer',
+      description: 'Automated legal document review, contract analysis, and compliance checking.',
+      icon: '⚖️',
+      price: '$349/month',
+      features: ['Document analysis', 'Contract review', 'Compliance checking', 'Risk assessment', 'Legal research'],
+      benefits: ['Reduce legal costs by 50%', 'Faster document processing', 'Improved accuracy'],
+      marketPrice: '$500-1000/month',
+      category: 'Legal'
+    },
+    {
+      title: 'Smart Supply Chain Optimizer',
+      description: 'AI-powered supply chain visibility, demand forecasting, and logistics optimization.',
+      icon: '🚚',
+      price: '$399/month',
+      features: ['Supply chain visibility', 'Demand forecasting', 'Route optimization', 'Inventory management', 'Risk assessment'],
+      benefits: ['Reduce logistics costs by 25%', 'Improve delivery times', 'Minimize supply disruptions'],
+      marketPrice: '$600-1200/month',
+      category: 'Supply Chain'
+    },
+    {
+      title: 'AI-Powered Learning Management System',
+      description: 'Personalized learning paths, automated assessments, and skill gap analysis.',
+      icon: '🎓',
+      price: '$179/month',
+      features: ['Personalized learning', 'Automated assessments', 'Skill tracking', 'Progress analytics', 'Content recommendations'],
+      benefits: ['Improve learning outcomes', 'Reduce training costs', 'Track skill development'],
+      marketPrice: '$300-600/month',
+      category: 'Education'
+    },
+    {
+      title: 'Smart Property Management',
+      description: 'AI-driven property management with tenant screening, maintenance scheduling, and rent optimization.',
+      icon: '🏢',
+      price: '$229/month',
+      features: ['Tenant screening', 'Maintenance scheduling', 'Rent optimization', 'Lease management', 'Financial reporting'],
+      benefits: ['Increase rental income by 15%', 'Reduce vacancy rates', 'Streamline operations'],
+      marketPrice: '$400-800/month',
+      category: 'Real Estate'
+    },
+    {
+      title: 'AI-Powered Quality Assurance',
+      description: 'Automated quality testing, defect detection, and process optimization for manufacturing.',
+      icon: '✅',
+      price: '$279/month',
+      features: ['Quality testing', 'Defect detection', 'Process optimization', 'Compliance monitoring', 'Quality reporting'],
+      benefits: ['Improve product quality', 'Reduce defects by 80%', 'Ensure compliance'],
+      marketPrice: '$450-900/month',
+      category: 'Manufacturing'
+    },
+    {
+      title: 'Smart Fleet Management',
+      description: 'AI-powered fleet tracking, route optimization, and predictive maintenance for vehicles.',
+      icon: '🚛',
+      price: '$199/month',
+      features: ['Fleet tracking', 'Route optimization', 'Driver behavior analysis', 'Fuel optimization', 'Maintenance scheduling'],
+      benefits: ['Reduce fuel costs by 20%', 'Improve driver safety', 'Optimize routes'],
+      marketPrice: '$300-600/month',
+      category: 'Transportation'
+    },
+    {
+      title: 'AI-Powered Compliance Monitor',
+      description: 'Automated compliance monitoring, regulatory updates, and risk assessment for various industries.',
+      icon: '📋',
+      price: '$249/month',
+      features: ['Compliance monitoring', 'Regulatory updates', 'Risk assessment', 'Audit preparation', 'Reporting'],
+      benefits: ['Ensure compliance', 'Reduce audit costs', 'Minimize regulatory risks'],
+      marketPrice: '$400-800/month',
+      category: 'Compliance'
+    },
+    {
+      title: 'Smart Waste Management',
+      description: 'AI-driven waste optimization, recycling tracking, and sustainability reporting.',
+      icon: '♻️',
+      price: '$149/month',
+      features: ['Waste tracking', 'Recycling optimization', 'Sustainability reporting', 'Cost analysis', 'Compliance monitoring'],
+      benefits: ['Reduce waste by 40%', 'Improve recycling rates', 'Lower disposal costs'],
+      marketPrice: '$250-500/month',
+      category: 'Sustainability',
+      technologies: ['IoT Sensors', 'Machine Learning', 'Python', 'React', 'Custom AI Models']
+    },
+    {
       title: 'AI Data Processing Pipeline',
       description: 'Automated data cleaning, transformation, and analysis with intelligent insights.',
       icon: '🔄',
@@ -1382,7 +1523,7 @@ const MicroSAASPage: React.FC = () => {
     }
   ];
 
-  const categories = [...new Set(microSAASServices.map(service => service.category))];
+  const _categories = [...new Set(microSAASServices.map(service => service.category))];
 
   return (
     <>

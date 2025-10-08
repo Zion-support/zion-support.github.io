@@ -16,14 +16,13 @@ exports.handler = async function () {
 //   const githubRepo = process.env.GITHUB_REPO || 'Zion-Holdings/zion.app';
 //   const githubBranch = process.env.GIT_BRANCH || 'main';
   function log(msg) {
-    //     console.log(`[structured-data-auditor] ${msg}`);
-  }
+    //     }
   async function fetchText(_url) {
     try {
-      const r = await fetch(url, { redirect: 'follow' });
+      const _r = await fetch(url, { redirect: 'follow' });
       if (!r.ok,
         return { ok: false, status: r.status, text: '' };
-      const text = await r.text();
+      const _text = await r.text();
       return { ok: true, status: r.status, text };
     } catch (e) {
       return { ok: false, status: 0, text: '', error: String(e
@@ -33,10 +32,10 @@ exports.handler = async function () {
   async function fetchSitemapUrls() {
     if (!baseUrl,
         return [];
-    const res = await fetchText(`${baseUrl}/sitemap.xml`);
+    const _res = await fetchText(`${baseUrl}/sitemap.xml`);
     if (!res.ok,
         return [baseUrl];
-    const urls = [];
+    const _urls = [];
     try {
       //       const matches = [...res.text.matchAll(/<loc>(.*?)<\/loc>/g)];
       for (const m of matches) {
@@ -54,8 +53,8 @@ exports.handler = async function () {
     return urls.length ? urls : [baseUrl];
   }
   function extractJsonLd(html) {
-    const scripts = [];
-    const regex = /<script[^>]*type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/gi;
+    const _scripts = [];
+    const _regex = /<script[^>]*type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/gi;
     let m;
     while ((m = regex.exec(html)) !== null) {
       //       const content = m[1].trim();
@@ -84,7 +83,7 @@ exports.handler = async function () {
         { headers
       });
       if (getRes.ok) {
-        const json = await getRes.json();
+        const _json = await getRes.json();
         sha = json.sha;
       }
     } catch {}
@@ -127,11 +126,11 @@ exports.handler = async function () {
         body: JSON.stringify({ ok: false, error: 'No base URL' }),
       };
     }
-    const urls = await fetchSitemapUrls();
-    const results = [];
-    let pagesWithJsonLd = 0;
+    const _urls = await fetchSitemapUrls();
+    const _results = [];
+    let _pagesWithJsonLd = 0;
     for (const url of urls) {
-      const res = await fetchText(url);
+      const _res = await fetchText(url);
       if (!res.ok) {
         results.push({ url, ok: false, status: res.status
       });
@@ -141,7 +140,7 @@ exports.handler = async function () {
 
       //       const blocks = extractJsonLd(res.text);
 //       const blocks = extractJsonLd(res.text);
-      const parsed = [];
+      const _parsed = [];
       for (const block of blocks) {
         try {
           parsed.push(JSON.parse(block));

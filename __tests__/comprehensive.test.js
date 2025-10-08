@@ -6,9 +6,9 @@ describe('Comprehensive Test Suite', () => {
   });
 
   it('should pass performance test', () => {
-    const startTime = Date.now();
+    const _startTime = Date.now();
     // Simulate some work
-    const endTime = Date.now();
+    const _endTime = Date.now();
     expect(endTime - startTime).toBeLessThan(1000);
   });
 

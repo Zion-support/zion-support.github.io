@@ -29,8 +29,8 @@ const filesToFix = [
 ];
 
 function createBasicComponent(filePath) {
-  const fileName = path.basename(filePath);
-  const componentName = fileName.replace(/\.(tsx?|jsx?)$/, '');
+  const _fileName = path.basename(filePath);
+  const _componentName = fileName.replace(/\.(tsx?|jsx?)$/, '');
   //   const isTsx = fileName.endsWith('.tsx');
   //   const isTs = fileName.endsWith('.ts');
 
@@ -92,11 +92,10 @@ function fixFile(filePath) {
     //     const fullPath = path.join(__dirname, filePath);
 
     if (!fs.existsSync(fullPath)) {
-      //       console.log(`File not found: ${filePath}`);
-      return;
+      //       return;
     }
 
-    const content = fs.readFileSync(fullPath, 'utf8');
+    const _content = fs.readFileSync(fullPath, 'utf8');
 
     // Check if file has severe corruption
     if (
@@ -111,21 +110,14 @@ function fixFile(filePath) {
       content.includes('const,') ||
       (content.includes('{') && content.includes('expected'))
     ) {
-      //       console.log(`Fixing corrupted file: ${filePath}`);
-
-      //       const newContent = createBasicComponent(filePath);
+      //       //       const newContent = createBasicComponent(filePath);
       fs.writeFileSync(fullPath, newContent);
-      //       console.log(`✓ Fixed: ${filePath}`);
-    } else {
-      //       console.log(`File looks OK: ${filePath}`);
-    }
+      //       } else {
+      //       }
   } catch (error) {
-    //     console.error(`Error fixing ${filePath}:`, error.message);
-  }
+    //     }
 }
 
-// console.log('Starting final file fixes...\n');
+// filesToFix.forEach(fixFile);
 
-filesToFix.forEach(fixFile);
-
-// console.log('\n✓ Final file fixes completed!');
+// 

@@ -16,8 +16,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({preloadImage
       const observer = new PerformanceObserver(list => {
         for (const entry of list.getEntries()) {
           if (entry.entryType === 'largest-contentful-paint') {
-//             console.log('LCP: '} entry.startTime);
-          }
+//             }
 //           if (entry.entryType === 'first-input') {console.log('FID: ')
               (entry as any).processingStart - entry.startTime}
             );
@@ -33,7 +32,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({preloadImage
 //         console.log('Performance monitoring not fully supported')}
       }
       // Resource hints for better performance
-      const addResourceHint = (href: string, as: string) type?: string) => {const link = document.createElement('link');
+      const _addResourceHint = (href: string, as: string) type?: string) => {const link = document.createElement('link');
         link.rel = 'preload'
         link.href = href;
         link.as = as;

@@ -1,7 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import OpenAI from 'openai';
 
-const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
+const _openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 
 // In-memory simple rate limiter (per IP)
 const RATE_LIMIT_WINDOW_MS = 5 * 60 * 1000; // 5 minutes
@@ -9,8 +9,8 @@ const RATE_LIMIT_WINDOW_MS = 5 * 60 * 1000; // 5 minutes
 const ipToRequests: Record<string, { timestamps: number[] }> = {};
 
 function isRateLimited(ip: string): boolean {
-  const now = Date.now();
-  const bucket = ipToRequests[ip] || { timestamps: [] };
+  const _now = Date.now();
+  const _bucket = ipToRequests[ip] || { timestamps: [] };
 
   // Drop old timestamps
   bucket.timestamps = bucket.timestamps.filter(timestamp => now - timestamp < RATE_LIMIT_WINDOW_MS);
@@ -31,8 +31,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
 
   // Auth via Bearer token
-  const authHeader = req.headers.authorization || '';
-  const token = authHeader.startsWith('Bearer ') ? authHeader.slice(7) : undefined;
+  const _authHeader = req.headers.authorization || '';
+  const _token = authHeader.startsWith('Bearer ') ? authHeader.slice(7) : undefined;
 
   if (!token || token !== process.env.OPERATOR_API_TOKEN) {
     return res.status(401).json({ error: 'Unauthorized' });
@@ -72,7 +72,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     //     const text = completion.choices?.[0]?.message?.content ?? '';
     return res.status(200).json({ text });
   } catch (err: unknown) {
-    //     console.error('Operator error:', err);
-    return res.status(500).json({ error: 'Internal Server Error' });
+    //     return res.status(500).json({ error: 'Internal Server Error' });
   }
 }

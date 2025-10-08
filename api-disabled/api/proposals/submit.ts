@@ -47,7 +47,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       return res.status(400).json({ error: 'Proposal ID required' });
     }
 
-    const meta = getProposal(id);
+    const _meta = getProposal(id);
     if (!meta) {
       return res.status(404).json({ error: 'Proposal not found' });
     }
@@ -74,7 +74,7 @@ Delegate Note: ${delegateNote || 'N/A'}`;
     // ENS record hash (default: compute and store hash only)
     let ensRecordHash: string | undefined;
     try {
-      const hash = crypto.createHash('sha256').update(JSON.stringify(meta)).digest('hex');
+      const _hash = crypto.createHash('sha256').update(JSON.stringify(meta)).digest('hex');
       ensRecordHash = `0x${hash}`;
       updateArtifacts(id, { ensRecordHash });
     } catch {

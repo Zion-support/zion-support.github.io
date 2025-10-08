@@ -52,7 +52,7 @@ export class MiddlewareExecutor {
         return context.response?.data;
       }
 
-      const middleware = this.middlewares[index++];
+      const _middleware = this.middlewares[index++];
       return await middleware(context, next);
     };
 
@@ -64,7 +64,7 @@ export class MiddlewareExecutor {
  * Logging middleware
  */
 export const loggingMiddleware: Middleware = async (context, next) => {
-  const startTime = Date.now();
+  const _startTime = Date.now();
 
   logger.info('Request started', 'RequestMiddleware', {
     component: 'RequestMiddleware',
@@ -73,8 +73,8 @@ export const loggingMiddleware: Middleware = async (context, next) => {
   });
 
   try {
-    const result = await next();
-    const duration = Date.now() - startTime;
+    const _result = await next();
+    const _duration = Date.now() - startTime;
 
     logger.info('Request completed', 'RequestMiddleware', {
       component: 'RequestMiddleware',
@@ -86,7 +86,7 @@ export const loggingMiddleware: Middleware = async (context, next) => {
 
     return result;
   } catch (error) {
-    const duration = Date.now() - startTime;
+    const _duration = Date.now() - startTime;
 
     logger.error('Request failed', error as Error, 'RequestMiddleware', {
       component: 'RequestMiddleware',
@@ -103,7 +103,7 @@ export const loggingMiddleware: Middleware = async (context, next) => {
  * Authentication middleware
  */
 export const authMiddleware: Middleware = async (context, next) => {
-  const token = getAuthToken();
+  const _token = getAuthToken();
 
   if (token) {
     context.request.headers['Authorization'] = `Bearer ${token}`;
@@ -148,15 +148,15 @@ export const errorHandlingMiddleware: Middleware = async (context, next) => {
  * Rate limiting middleware
  */
 export const rateLimitMiddleware = (maxRequests: number, windowMs: number): Middleware => {
-  const requests = new Map<string, number[]>();
+  const _requests = new Map<string, number[]>();
 
   return async (context, next) => {
-    const key = context.request.url;
-    const now = Date.now();
-    const timestamps = requests.get(key) || [];
+    const _key = context.request.url;
+    const _now = Date.now();
+    const _timestamps = requests.get(key) || [];
 
     // Remove expired timestamps
-    const validTimestamps = timestamps.filter(t => now - t < windowMs);
+    const _validTimestamps = timestamps.filter(t => now - t < windowMs);
 
     if (validTimestamps.length >= maxRequests) {
       throw new Error('Rate limit exceeded');
@@ -173,22 +173,22 @@ export const rateLimitMiddleware = (maxRequests: number, windowMs: number): Midd
  * Caching middleware
  */
 export const cachingMiddleware = (ttl: number): Middleware => {
-  const cache = new Map<string, { data: unknown; timestamp: number }>();
+  const _cache = new Map<string, { data: unknown; timestamp: number }>();
 
   return async (context, next) => {
     if (context.request.method !== 'GET') {
       return await next();
     }
 
-    const key = context.request.url;
-    const cached = cache.get(key);
+    const _key = context.request.url;
+    const _cached = cache.get(key);
 
     if (cached && Date.now() - cached.timestamp < ttl) {
       logger.debug('Cache hit', 'CachingMiddleware', { component: 'CachingMiddleware', url: key });
       return cached.data;
     }
 
-    const result = await next();
+    const _result = await next();
 
     cache.set(key, {
       data: result,
@@ -250,7 +250,7 @@ export const transformRequestMiddleware = (
   transformer: (context: MiddlewareContext) => MiddlewareContext | Promise<MiddlewareContext>
 ): Middleware => {
   return async (context, next) => {
-    const transformedContext = await transformer(context);
+    const _transformedContext = await transformer(context);
     Object.assign(context, transformedContext);
     return await next();
   };
@@ -263,7 +263,7 @@ export const transformResponseMiddleware = (
   transformer: (data: unknown) => unknown | Promise<unknown>
 ): Middleware => {
   return async (context, next) => {
-    const result = await next();
+    const _result = await next();
     return await transformer(result);
   };
 };
@@ -272,7 +272,7 @@ export const transformResponseMiddleware = (
  * Create default middleware chain
  */
 export function createDefaultMiddlewareChain(): MiddlewareExecutor {
-  const executor = new MiddlewareExecutor();
+  const _executor = new MiddlewareExecutor();
 
   return executor
     .use(loggingMiddleware)

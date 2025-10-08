@@ -7,8 +7,7 @@ export const measurePerformance = (name: string, fn: () => void) => {
     //     const start = performance.now();
     fn();
     //     const end = performance.now();
-    //     console.log(`${name}: ${end - start}ms`);
-  } else {
+    //     } else {
     fn();
   }
 };
@@ -23,7 +22,7 @@ export const getPageLoadTime = (): number | null => {
 
 export const optimizeImages = () => {
   if (typeof window !== 'undefined') {
-    const images = document.querySelectorAll('img');
+    const _images = document.querySelectorAll('img');
     images.forEach(img => {
       if (!img.loading) {
         img.loading = 'lazy';

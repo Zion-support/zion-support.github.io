@@ -5,8 +5,8 @@ import path from 'path';
 
 function fixJSXErrors(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    let modified = false;
+    let _content = fs.readFileSync(filePath, 'utf8');
+    let _modified = false;
 
     //Fix malformed JSX elements like: className="..." <span> -> className="..." /> <span>
     const patterns = [
@@ -47,13 +47,11 @@ function fixJSXErrors(filePath) {
 
     if (modified) {
       fs.writeFileSync(filePath, content, 'utf8');
-      //       console.log(`Fixed JSX errors in: ${filePath}`);
-      return true;
+      //       return true;
     }
     return false;
   } catch (error) {
-    //     console.error(`Error fixing ${filePath}:`, error.message);
-    return false;
+    //     return false;
   }
 }
 
@@ -62,5 +60,4 @@ function fixJSXErrors(filePath) {
 if (filePath) {
   fixJSXErrors(filePath);
 } else {
-  //   console.log('Usage: node fix_jsx_errors.js <file_path>');
-}
+  //   }

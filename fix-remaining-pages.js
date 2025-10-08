@@ -10,20 +10,18 @@ const filesToFix = [
   '/workspace/app/terms/page.tsx',
 ];
 
-// console.log(`Fixing ${filesToFix.length} page files`);
-
-// Function to process a single file
+// // Function to process a single file
 function processFile(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    let modified = false;
+    let _content = fs.readFileSync(filePath, 'utf8');
+    let _modified = false;
 
     // Remove any broken metadata lines
-    const lines = content.split('\n');
-    const filteredLines = [];
+    const _lines = content.split('\n');
+    const _filteredLines = [];
 
     for (let i = 0; i < lines.length; i++) {
-      const line = lines[i];
+      const _line = lines[i];
 
       // Skip lines that look like broken metadata
       if (
@@ -69,23 +67,21 @@ function processFile(filePath) {
 
     if (modified || content !== fs.readFileSync(filePath, 'utf8')) {
       fs.writeFileSync(filePath, content);
-      //       console.log(`✓ Fixed: ${filePath}`);
-      return true;
+      //       return true;
     }
 
     return false;
   } catch (error) {
-    //     console.error(`Error processing ${filePath}:`, error.message);
-    return false;
+    //     return false;
   }
 }
 
 // Process all files
-let fixedCount = 0;
+let _fixedCount = 0;
 filesToFix.forEach(file => {
   if (processFile(file)) {
     fixedCount++;
   }
 });
 
-// console.log(`\nFixed ${fixedCount} out of ${filesToFix.length} files`);
+// 

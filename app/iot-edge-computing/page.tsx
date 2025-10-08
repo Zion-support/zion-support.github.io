@@ -138,7 +138,7 @@ const IoTEdgeComputingPage: React.FC = () => {
     }
   ];
 
-  const categories = [...new Set(iotServices.map(service => service.category))];
+  const _categories = [...new Set(iotServices.map(service => service.category))];
 
   return (
     <>

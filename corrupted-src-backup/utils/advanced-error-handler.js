@@ -52,8 +52,7 @@ class AdvancedErrorHandler {
   setupUnhandledRejectionHandler() {
     // Additional promise rejection handling
     window.addEventListener('rejectionhandled', event => {
-      //       console.log('Promise rejection was handled:', event.reason);
-    });
+      //       });
   }
 
   setupResourceErrorHandler() {
@@ -120,19 +119,17 @@ class AdvancedErrorHandler {
     }
 
     // Console logging
-    //     console.error('Error logged:', errorInfo);
-  }
+    //     }
 
   attemptRecovery(errorInfo) {
     //     const errorType = this.categorizeError(errorInfo);
-    const recoveryStrategy = this.recoveryStrategies.get(errorType);
+    const _recoveryStrategy = this.recoveryStrategies.get(errorType);
 
     if (recoveryStrategy) {
       try {
         recoveryStrategy(errorInfo);
       } catch (recoveryError) {
-        //         console.error('Recovery attempt failed:', recoveryError);
-      }
+        //         }
     }
   }
 
@@ -204,8 +201,7 @@ class AdvancedErrorHandler {
       fetch(errorInfo.originalRequest)
         .then(response => {
           if (response.ok) {
-            //             console.log('Request retry successful');
-          }
+            //             }
         })
         .catch(error => {
           this.handleError({
@@ -218,7 +214,7 @@ class AdvancedErrorHandler {
   }
 
   loadFallbackImage(src) {
-    const img = document.querySelector(`img[src="${src}"]`);
+    const _img = document.querySelector(`img[src="${src}"]`);
     if (img) {
       img.src = '/images/placeholder.png';
       img.alt = 'Image failed to load';
@@ -227,7 +223,7 @@ class AdvancedErrorHandler {
 
   loadFallbackScript(src) {
     // Load from CDN or local fallback
-    const script = document.createElement('script');
+    const _script = document.createElement('script');
     script.src = src.replace('cdn.example.com', 'fallback.example.com');
     script.onerror = () => {
       // Load local fallback
@@ -238,7 +234,7 @@ class AdvancedErrorHandler {
 
   loadFallbackStylesheet(src) {
     // Load fallback stylesheet
-    const link = document.createElement('link');
+    const _link = document.createElement('link');
     link.rel = 'stylesheet';
     link.href = src.replace('cdn.example.com', 'fallback.example.com');
     link.onerror = () => {
@@ -250,14 +246,12 @@ class AdvancedErrorHandler {
 
   handlePropertyAccessError(errorInfo) {
     // Try to fix property access errors
-    //     console.log('Attempting to fix property access error');
-    // Implementation would depend on specific error
+    //     // Implementation would depend on specific error
   }
 
   handleFunctionCallError(errorInfo) {
     // Try to fix function call errors
-    //     console.log('Attempting to fix function call error');
-    // Implementation would depend on specific error
+    //     // Implementation would depend on specific error
   }
 
   clearCaches() {
@@ -287,7 +281,7 @@ class AdvancedErrorHandler {
 
   showOfflineMessage() {
     // Show offline message to user
-    const offlineMessage = document.createElement('div');
+    const _offlineMessage = document.createElement('div');
     offlineMessage.className = 'offline-message';
     offlineMessage.innerHTML = `
       <div style="
@@ -317,7 +311,7 @@ class AdvancedErrorHandler {
   }
 
   showCriticalErrorModal(errorInfo) {
-    const modal = document.createElement('div');
+    const _modal = document.createElement('div');
     modal.className = 'error-modal';
     modal.innerHTML = `
       <div style="
@@ -356,7 +350,7 @@ class AdvancedErrorHandler {
   }
 
   showErrorToast(errorInfo) {
-    const toast = document.createElement('div');
+    const _toast = document.createElement('div');
     toast.className = 'error-toast';
     toast.innerHTML = `
       <div style="
@@ -391,7 +385,7 @@ class AdvancedErrorHandler {
   }
 
   handleNetworkStatusChange(status) {
-    const message = status === 'online' ? 'Connection restored' : 'Connection lost';
+    const _message = status === 'online' ? 'Connection restored' : 'Connection lost';
     this.showErrorToast({
       message,
       type: 'Network Status',
@@ -416,8 +410,7 @@ class AdvancedErrorHandler {
       },
       body: JSON.stringify(errorInfo),
     }).catch(error => {
-      //       console.error('Failed to report error:', error);
-    });
+      //       });
   }
 
   // Public methods

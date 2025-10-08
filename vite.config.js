@@ -25,6 +25,27 @@ export default defineConfig({
     // Optimize build performance
     emptyOutDir: true,
     copyPublicDir: true,
+    // Enhanced performance optimizations
+    terserOptions: {
+      compress: {
+        drop_console: true,
+        drop_debugger: true,
+        pure_funcs: ['console.log', 'console.info', 'console.debug'],
+        passes: 3,
+        unsafe: true,
+        unsafe_comps: true,
+        unsafe_math: true,
+        unsafe_proto: true,
+      },
+      mangle: {
+        safari10: true,
+        toplevel: true,
+      },
+      format: {
+        comments: false,
+        ecma: 2015,
+      },
+    },
     // Reduce memory usage during build
     rollupOptions: {
       maxParallelFileOps: 2,
@@ -69,26 +90,6 @@ export default defineConfig({
         entryFileNames: 'assets/[name]-[hash].js',
       },
     },
-    terserOptions: {
-      compress: {
-        drop_console: true,
-        drop_debugger: true,
-        //         pure_funcs: ['console.log', 'console.info', 'console.debug'],
-        passes: 3,
-        unsafe: true,
-        unsafe_comps: true,
-        unsafe_math: true,
-        unsafe_proto: true,
-      },
-      mangle: {
-        safari10: true,
-        toplevel: true,
-      },
-      format: {
-        comments: false,
-        ecma: 2015,
-      },
-    },
   },
   server: {
     port: 3000,
@@ -99,6 +100,12 @@ export default defineConfig({
     host: true,
   },
   optimizeDeps: {
-    include: ['react', 'react-dom', 'react-router-dom'],
+    include: ['react', 'react-dom', 'react-router-dom', 'framer-motion', 'lucide-react'],
+  },
+  css: {
+    devSourcemap: false,
+  },
+  esbuild: {
+    drop: ['console', 'debugger'],
   },
 });

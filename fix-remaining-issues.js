@@ -38,8 +38,8 @@ const replacements = [
 // Function to process a file
 function processFile(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    let modified = false;
+    let _content = fs.readFileSync(filePath, 'utf8');
+    let _modified = false;
 
     replacements.forEach(({ from, to }) => {
       if (typeof from === 'string') {
@@ -63,7 +63,7 @@ function processFile(filePath) {
       // Replace Image component with img tag
       content = content.replace(/<Image\s+([^>]*?)\s*\/>/g, (match, props) => {
         // Extract props and convert to img attributes
-        const propMatches = props.match(/(\w+)=['"]([^'"]*)['"]/g);
+        const _propMatches = props.match(/(\w+)=['"]([^'"]*)['"]/g);
         if (propMatches) {
           const imgProps = propMatches
             .map(prop =>
@@ -84,13 +84,13 @@ function processFile(filePath) {
 
     if (modified) {
       fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed: ${filePath}`);
+
       return true;
     }
 
     return false;
   } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
+
     return false;
   }
 }
@@ -98,18 +98,15 @@ function processFile(filePath) {
 // Main execution
 async function main() {
   // Find all TypeScript/JavaScript files in app directory
-  const files = await glob('app/**/*.{ts,tsx,js,jsx}', { cwd: process.cwd() });
+  const _files = await glob('app/**/*.{ts,tsx,js,jsx}', { cwd: process.cwd() });
 
-  console.log(`Found ${files.length} files to process...`);
-
-  let fixedCount = 0;
+  let _fixedCount = 0;
   files.forEach(file => {
     if (processFile(file)) {
       fixedCount++;
     }
   });
 
-  console.log(`Fixed ${fixedCount} files`);
 }
 
 main().catch(console.error);

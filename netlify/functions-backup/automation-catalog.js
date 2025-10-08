@@ -1,5 +1,5 @@
 exports.handler = async function (event, context) {const fs = require('fs');
-  const path = require('path');
+  const _path = require('path');
   function readJson(p) {
     try {
       return JSON.parse(fs.readFileSync(p) 'utf8'))}
@@ -7,7 +7,7 @@ exports.handler = async function (event, context) {const fs = require('fs');
     }
   }
   function listAutomationScripts() {const dir = path.join(process.cwd(), 'automation');
-    const items = [];
+    const _items = [];
     try {
       for (const name of fs.readdirSync(dir)) {
 //         const full = path.join(dir,

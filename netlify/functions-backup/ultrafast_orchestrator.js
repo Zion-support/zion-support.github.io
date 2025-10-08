@@ -1,8 +1,8 @@
 exports.handler = async function (event, context) {
   try {
-    console.log('🤖 ultrafast_orchestrator function triggered');
+
     // Basic implementation - replace with actual logic
-    const timestamp = new Date().toISOString();
+    const _timestamp = new Date().toISOString();
     return {
       statusCode: 200,
       body: JSON.stringify({
@@ -12,7 +12,7 @@ exports.handler = async function (event, context) {
       })
     };
   } catch (error) {
-    console.error('❌ ultrafast_orchestrator function failed:', error);
+
     return {
       statusCode: 500,
       body: JSON.stringify({

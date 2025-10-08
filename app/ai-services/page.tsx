@@ -135,10 +135,131 @@ const AIServicesPage: React.FC = () => {
       marketPrice: '$5,000-15,000/month',
       category: 'Quality Assurance',
       technologies: ['Selenium', 'Appium', 'TestNG', 'Custom AI Models', 'CI/CD Integration']
+    },
+    {
+      title: 'AI-Powered Drug Discovery',
+      description: 'Machine learning models for pharmaceutical research, molecular design, and drug development optimization.',
+      icon: '💊',
+      price: 'Starting at $15,000/month',
+      features: ['Molecular property prediction', 'Drug-target interaction modeling', 'ADMET prediction', 'Compound optimization', 'Clinical trial optimization'],
+      benefits: ['Accelerate drug discovery by 40%', 'Reduce R&D costs by 30%', 'Improve success rates'],
+      marketPrice: '$25,000-75,000/month',
+      category: 'Healthcare AI',
+      technologies: ['RDKit', 'DeepChem', 'PyTorch', 'TensorFlow', 'Molecular Dynamics']
+    },
+    {
+      title: 'AI-Powered Financial Trading',
+      description: 'Algorithmic trading systems using machine learning for market prediction and automated trading strategies.',
+      icon: '📈',
+      price: 'Starting at $8,000/month',
+      features: ['Market prediction models', 'Risk assessment', 'Portfolio optimization', 'High-frequency trading', 'Sentiment analysis'],
+      benefits: ['Increase trading profits by 25%', 'Reduce risk exposure', 'Automate trading decisions'],
+      marketPrice: '$15,000-50,000/month',
+      category: 'FinTech AI',
+      technologies: ['QuantLib', 'Zipline', 'Backtrader', 'TensorFlow', 'PyTorch']
+    },
+    {
+      title: 'AI-Powered Autonomous Vehicles',
+      description: 'Computer vision and sensor fusion systems for autonomous vehicle navigation and safety.',
+      icon: '🚗',
+      price: 'Starting at $20,000/month',
+      features: ['Object detection', 'Path planning', 'Sensor fusion', 'Real-time decision making', 'Safety systems'],
+      benefits: ['Improve safety by 90%', 'Reduce accidents', 'Enable autonomous driving'],
+      marketPrice: '$35,000-100,000/month',
+      category: 'Autonomous Systems',
+      technologies: ['OpenCV', 'ROS', 'TensorFlow', 'PyTorch', 'CUDA']
+    },
+    {
+      title: 'AI-Powered Climate Modeling',
+      description: 'Machine learning models for climate prediction, environmental monitoring, and sustainability optimization.',
+      icon: '🌍',
+      price: 'Starting at $6,000/month',
+      features: ['Climate prediction', 'Carbon footprint analysis', 'Renewable energy optimization', 'Environmental monitoring', 'Sustainability reporting'],
+      benefits: ['Improve climate predictions', 'Optimize energy usage', 'Reduce environmental impact'],
+      marketPrice: '$10,000-30,000/month',
+      category: 'Environmental AI',
+      technologies: ['Xarray', 'NetCDF', 'TensorFlow', 'PyTorch', 'Climate Data APIs']
+    },
+    {
+      title: 'AI-Powered Cybersecurity',
+      description: 'Advanced threat detection, vulnerability assessment, and automated security response systems.',
+      icon: '🛡️',
+      price: 'Starting at $7,500/month',
+      features: ['Threat detection', 'Malware analysis', 'Network security', 'Incident response', 'Security orchestration'],
+      benefits: ['Prevent 99% of cyber attacks', 'Reduce response time by 80%', 'Automate security operations'],
+      marketPrice: '$12,000-40,000/month',
+      category: 'Cybersecurity AI',
+      technologies: ['TensorFlow', 'PyTorch', 'Scikit-learn', 'Suricata', 'ELK Stack']
+    },
+    {
+      title: 'AI-Powered Supply Chain Optimization',
+      description: 'Machine learning models for demand forecasting, inventory optimization, and logistics planning.',
+      icon: '🚚',
+      price: 'Starting at $5,500/month',
+      features: ['Demand forecasting', 'Inventory optimization', 'Route planning', 'Supplier risk assessment', 'Cost optimization'],
+      benefits: ['Reduce costs by 20%', 'Improve delivery times', 'Minimize supply disruptions'],
+      marketPrice: '$9,000-25,000/month',
+      category: 'Supply Chain AI',
+      technologies: ['Apache Spark', 'TensorFlow', 'PyTorch', 'OR-Tools', 'Gurobi']
+    },
+    {
+      title: 'AI-Powered Personalized Medicine',
+      description: 'Genomic analysis and personalized treatment recommendations using machine learning.',
+      icon: '🧬',
+      price: 'Starting at $12,000/month',
+      features: ['Genomic analysis', 'Treatment recommendation', 'Drug response prediction', 'Risk assessment', 'Clinical decision support'],
+      benefits: ['Improve treatment outcomes', 'Reduce side effects', 'Personalize healthcare'],
+      marketPrice: '$20,000-60,000/month',
+      category: 'Healthcare AI',
+      technologies: ['Biopython', 'Pandas', 'Scikit-learn', 'TensorFlow', 'PyTorch']
+    },
+    {
+      title: 'AI-Powered Smart Cities',
+      description: 'IoT data analysis and urban planning optimization for smart city infrastructure.',
+      icon: '🏙️',
+      price: 'Starting at $8,500/month',
+      features: ['Traffic optimization', 'Energy management', 'Waste management', 'Public safety', 'Urban planning'],
+      benefits: ['Improve city efficiency', 'Reduce energy consumption', 'Enhance citizen services'],
+      marketPrice: '$15,000-45,000/month',
+      category: 'Smart Cities AI',
+      technologies: ['Apache Kafka', 'TensorFlow', 'PyTorch', 'InfluxDB', 'Grafana']
+    },
+    {
+      title: 'AI-Powered Agricultural Optimization',
+      description: 'Precision agriculture using AI for crop monitoring, yield prediction, and resource optimization.',
+      icon: '🌾',
+      price: 'Starting at $4,500/month',
+      features: ['Crop monitoring', 'Yield prediction', 'Pest detection', 'Irrigation optimization', 'Soil analysis'],
+      benefits: ['Increase crop yields by 30%', 'Reduce water usage by 25%', 'Minimize pesticide use'],
+      marketPrice: '$7,500-22,000/month',
+      category: 'AgTech AI',
+      technologies: ['OpenCV', 'TensorFlow', 'PyTorch', 'Satellite Imagery', 'IoT Sensors']
+    },
+    {
+      title: 'AI-Powered Energy Grid Management',
+      description: 'Smart grid optimization, renewable energy integration, and demand response management.',
+      icon: '⚡',
+      price: 'Starting at $6,500/month',
+      features: ['Grid optimization', 'Renewable integration', 'Demand response', 'Energy storage', 'Load forecasting'],
+      benefits: ['Improve grid efficiency', 'Integrate renewables', 'Reduce energy costs'],
+      marketPrice: '$11,000-35,000/month',
+      category: 'Energy AI',
+      technologies: ['TensorFlow', 'PyTorch', 'Pandas', 'Time Series DB', 'Grid APIs']
+    },
+    {
+      title: 'AI-Powered Space Exploration',
+      description: 'Machine learning for satellite data analysis, space mission planning, and astronomical research.',
+      icon: '🚀',
+      price: 'Starting at $18,000/month',
+      features: ['Satellite data analysis', 'Mission planning', 'Astronomical research', 'Space weather prediction', 'Orbital mechanics'],
+      benefits: ['Improve mission success', 'Discover new phenomena', 'Optimize space operations'],
+      marketPrice: '$30,000-90,000/month',
+      category: 'Space AI',
+      technologies: ['Astropy', 'TensorFlow', 'PyTorch', 'OpenCV', 'Space Data APIs']
     }
   ];
 
-  const categories = [...new Set(aiServices.map(service => service.category))];
+  const _categories = [...new Set(aiServices.map(service => service.category))];
 
   return (
     <>

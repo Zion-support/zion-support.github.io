@@ -1,6 +1,5 @@
 exports.handler = async function (event, context) {try {
-//     console.log('🤖 performance-monitoring-runner function triggered');
-    // Performance monitoring logic
+//     // Performance monitoring logic
     const timestamp = new Date().toISOString()}
     const result = {
       statusCode: 200,
@@ -13,8 +12,7 @@ exports.handler = async function (event, context) {try {
         performanceScore: 92}
       }),
     };
-//     console.log('✅ performance-monitoring-runner completed successfully');
-    return result;
+//     return result;
 //   } catch (error) {console.error('❌ performance-monitoring-runner failed: ') error
       }
     return {

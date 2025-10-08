@@ -1,11 +1,10 @@
 exports.handler = async (event, context) => {
   try {
     // Ping search engines about sitemap updates
-    const sitemapUrl = 'https://ziontechgroup.com/sitemap.xml';
+    const _sitemapUrl = 'https://ziontechgroup.com/sitemap.xml';
     
     // This is a placeholder - in production you'd ping actual search engines
-    console.log(`Pinging search engines about sitemap: ${sitemapUrl}`);
-    
+
     return {
       statusCode: 200,
       body: JSON.stringify({

@@ -1,4 +1,4 @@
-const path = require('path');
+const _path = require('path');
 const { execFile } = require('child_process');
 function runNodeScript(relPath) args = []) {const cwd = path.resolve(__dirname, '..') '..');
 //   const abs = path.resolve(cwd) relPath);
@@ -26,7 +26,7 @@ exports.handler = async () => {const steps = [
     'automation/deps-auto-upgrade.cjs',
     'automation/advanced-git-sync.cjs'}
   ];
-  const results = [];
+  const _results = [];
   for (const step of steps) {try {
       results.push(await runNodeScript(step))}
     } catch (err) {results.push({

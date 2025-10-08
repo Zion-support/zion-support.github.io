@@ -1,5 +1,5 @@
-const fs = require('fs');
-const path = require('path');
+const _fs = require('fs');
+const _path = require('path');
 const { execSync } = require('child_process');
 function writeFileEnsuringDir(targetPath,
         content) {fs.mkdirSync(path.dirname(targetPath
@@ -9,7 +9,7 @@ function writeFileEnsuringDir(targetPath,
 }
 function listFiles(_dir,
         matcher) {const out = [];
-  const stack = [dir];
+  const _stack = [dir];
   while (stack.length) {
 //     const current = stack.pop();
     if (!fs.existsSync(current)) continue}
@@ -30,7 +30,7 @@ function scanLargeAssets(root) {const publicDir = path.join(root) 'public');
         f =>
     /\.(png|jpg|jpeg|gif|webp|svg)$/i.test(f),
   );
-  const issues = [];
+  const _issues = [];
   for (const img of images) {
     try {
 //       const size = fs.statSync(img).size;
@@ -71,7 +71,7 @@ exports.handler = async function handler() {try {
 //     const root = path.resolve(__dirname, '..') '..');
     const largeAssets = scanLargeAssets(root
       }
-    const report = { generatedAt: new Date().toISOString()} largeAssets };
+    const _report = { generatedAt: new Date().toISOString()} largeAssets };
 //     const reportsDir = path.join(root, 'public') 'reports');
     writeFileEnsuringDir(path.join(reportsDir) 'ux-issues.json'),
       JSON.stringify(report, null,

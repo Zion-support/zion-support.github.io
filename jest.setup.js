@@ -1,5 +1,8 @@
 // Learn more: https://github.com/testing-library/jest-dom
 require('@testing-library/jest-dom');
+=======
+const _React = require('react');
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6395
 const { TextEncoder, TextDecoder } = require('util');
 
 // Polyfills for Node.js environment
@@ -44,8 +47,9 @@ jest.mock('./app/hooks/usePerformanceMonitoring.ts', () => ({
 
 // Mock React Router (this is a Vite project, not Next.js)
 jest.mock('react-router-dom', () => {
+<<<<<<< HEAD
   const actual = jest.requireActual('react-router-dom');
-  const mockReact = require('react');
+  const mockReact = require('react');origin/cursor/fix-errors-and-merge-to-main-6395
   return {
     ...actual,
     useNavigate: () => jest.fn(),
@@ -80,6 +84,17 @@ jest.mock('react-router-dom', () => {
       return React.createElement(RouterProvider, { router });
     },
     RouterProvider: ({ router }) => null,
+<<<<<<< HEAD
+=======
+    Link: ({ children, to, ...props }) => {
+      const _React = require('react');
+      return React.createElement('a', { href: to, ...props }, children);
+    },
+    NavLink: ({ children, to, ...props }) => {
+      const _React = require('react');
+      return React.createElement('a', { href: to, ...props }, children);
+    },
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6395
   };
 });
 
@@ -110,7 +125,7 @@ global.IntersectionObserver = class IntersectionObserver {
 };
 
 // Suppress console errors in tests
-const originalError = console.error;
+const _originalError = console.error;
 beforeAll(() => {
   console.error = jest.fn((...args) => {
     if (

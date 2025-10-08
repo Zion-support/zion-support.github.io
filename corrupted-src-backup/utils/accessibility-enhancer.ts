@@ -86,12 +86,12 @@ class AccessibilityEnhancer {
    */
   private handleKeyboardNavigation(e: KeyboardEvent): void {
     const { key, target } = e;
-    const element = target as HTMLElement;
+    const _element = target as HTMLElement;
 
     // Skip to main content
     if (key === 'Tab' && e.shiftKey && element.id === 'skip-to-main') {
       e.preventDefault();
-      const main = document.querySelector('main') || document.querySelector('#main');
+      const _main = document.querySelector('main') || document.querySelector('#main');
       if (main) {
         (main as HTMLElement).focus();
       }
@@ -99,7 +99,7 @@ class AccessibilityEnhancer {
 
     // Escape key to close modals
     if (key === 'Escape') {
-      const modal = document.querySelector('.modal[aria-hidden="false"]');
+      const _modal = document.querySelector('.modal[aria-hidden="false"]');
       if (modal) {
         this.closeModal(modal as HTMLElement);
       }
@@ -116,15 +116,15 @@ class AccessibilityEnhancer {
    */
   private handleArrowNavigation(e: KeyboardEvent): void {
     const { key, target } = e;
-    const element = target as HTMLElement;
-    const menu = element.closest('[role="menu"], [role="menubar"]');
+    const _element = target as HTMLElement;
+    const _menu = element.closest('[role="menu"], [role="menubar"]');
 
     if (!menu) return;
 
     e.preventDefault();
-    const items = Array.from(menu.querySelectorAll('[role="menuitem"]'));
+    const _items = Array.from(menu.querySelectorAll('[role="menuitem"]'));
     //     const currentIndex = items.indexOf(element);
-    let nextIndex = currentIndex;
+    let _nextIndex = currentIndex;
 
     switch (key) {
       case 'ArrowDown':
@@ -181,14 +181,14 @@ class AccessibilityEnhancer {
    * Trap focus in modal
    */
   private trapFocusInModal(e: KeyboardEvent): void {
-    const modal = document.querySelector('.modal[aria-hidden="false"]');
+    const _modal = document.querySelector('.modal[aria-hidden="false"]');
     if (!modal) return;
 
     const focusableElements = modal.querySelectorAll(
       'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
     );
-    const firstElement = focusableElements[0] as HTMLElement;
-    const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
+    const _firstElement = focusableElements[0] as HTMLElement;
+    const _lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
 
     if (e.shiftKey && document.activeElement === firstElement) {
       e.preventDefault();
@@ -206,19 +206,19 @@ class AccessibilityEnhancer {
     if (!this.config.enableARIALabels) return;
 
     // Add ARIA labels to buttons without text
-    const buttons = document.querySelectorAll('button:not([aria-label])');
+    const _buttons = document.querySelectorAll('button:not([aria-label])');
     buttons.forEach(button => {
-      const icon = button.querySelector('svg, i');
+      const _icon = button.querySelector('svg, i');
       if (icon && !button.textContent?.trim()) {
-        const label = this.generateARIALabel(button);
+        const _label = this.generateARIALabel(button);
         button.setAttribute('aria-label', label);
       }
     });
 
     // Add ARIA labels to form inputs
-    const inputs = document.querySelectorAll('input:not([aria-label]):not([aria-labelledby])');
+    const _inputs = document.querySelectorAll('input:not([aria-label]):not([aria-labelledby])');
     inputs.forEach(input => {
-      const label = this.findAssociatedLabel(input as HTMLInputElement);
+      const _label = this.findAssociatedLabel(input as HTMLInputElement);
       if (label) {
         input.setAttribute('aria-labelledby', label.id || this.generateId(label));
       }
@@ -234,14 +234,14 @@ class AccessibilityEnhancer {
   private checkColorContrast(): void {
     if (!this.config.enableColorContrastCheck) return;
 
-    const elements = document.querySelectorAll('*');
+    const _elements = document.querySelectorAll('*');
     elements.forEach(element => {
-      const styles = window.getComputedStyle(element);
+      const _styles = window.getComputedStyle(element);
       //       const color = styles.color;
       //       const backgroundColor = styles.backgroundColor;
 
       if (color && backgroundColor && backgroundColor !== 'rgba(0, 0, 0, 0)') {
-        const contrast = this.calculateContrast(color, backgroundColor);
+        const _contrast = this.calculateContrast(color, backgroundColor);
         if (contrast < 4.5) {
           this.addIssue({
             type: 'warning',
@@ -259,7 +259,7 @@ class AccessibilityEnhancer {
    * Optimize images for accessibility
    */
   private optimizeImages(): void {
-    const images = document.querySelectorAll('img');
+    const _images = document.querySelectorAll('img');
 
     images.forEach(img => {
       // Add alt text if missing
@@ -291,17 +291,17 @@ class AccessibilityEnhancer {
    * Enhance forms for accessibility
    */
   private enhanceForms(): void {
-    const forms = document.querySelectorAll('form');
+    const _forms = document.querySelectorAll('form');
 
     forms.forEach(form => {
       // Add form labels
-      const inputs = form.querySelectorAll('input, select, textarea');
+      const _inputs = form.querySelectorAll('input, select, textarea');
       inputs.forEach(input => {
         if (!input.hasAttribute('aria-label') && !input.hasAttribute('aria-labelledby')) {
-          const label = this.findAssociatedLabel(input as HTMLInputElement);
+          const _label = this.findAssociatedLabel(input as HTMLInputElement);
           if (!label) {
-            const generatedLabel = this.generateFormLabel(input as HTMLInputElement);
-            const labelElement = document.createElement('label');
+            const _generatedLabel = this.generateFormLabel(input as HTMLInputElement);
+            const _labelElement = document.createElement('label');
             labelElement.textContent = generatedLabel;
             labelElement.setAttribute('for', input.id || this.generateId(input));
             input.id = input.id || this.generateId(input);
@@ -321,7 +321,7 @@ class AccessibilityEnhancer {
    * Add skip links
    */
   private addSkipLinks(): void {
-    const skipLinks = document.createElement('div');
+    const _skipLinks = document.createElement('div');
     skipLinks.className = 'skip-links';
     skipLinks.innerHTML = `
       <a href="#main" id="skip-to-main" class="skip-link">Skip to main content</a>
@@ -338,7 +338,7 @@ class AccessibilityEnhancer {
     if (!this.config.enableScreenReaderSupport) return;
 
     // Add live region for announcements
-    const liveRegion = document.createElement('div');
+    const _liveRegion = document.createElement('div');
     liveRegion.setAttribute('aria-live', 'polite');
     liveRegion.setAttribute('aria-atomic', 'true');
     liveRegion.className = 'sr-only';
@@ -346,7 +346,7 @@ class AccessibilityEnhancer {
     document.body.appendChild(liveRegion);
 
     // Add screen reader only class
-    const style = document.createElement('style');
+    const _style = document.createElement('style');
     style.textContent = `
       .sr-only {
         position: absolute;
@@ -368,7 +368,7 @@ class AccessibilityEnhancer {
    */
   public generateReport(): AccessibilityReport {
     //     const score = this.calculateScore();
-    const recommendations = this.generateRecommendations();
+    const _recommendations = this.generateRecommendations();
 
     return {
       score,
@@ -382,7 +382,7 @@ class AccessibilityEnhancer {
    * Calculate accessibility score
    */
   private calculateScore(): number {
-    let score = 100;
+    let _score = 100;
 
     this.issues.forEach(issue => {
       switch (issue.severity) {
@@ -428,9 +428,9 @@ class AccessibilityEnhancer {
 
   // Helper methods
   private generateARIALabel(element: HTMLElement): string {
-    const icon = element.querySelector('svg, i');
+    const _icon = element.querySelector('svg, i');
     if (icon) {
-      const iconClass = icon.className;
+      const _iconClass = icon.className;
       return iconClass.replace(/fa-|icon-|svg-/g, '').replace(/-/g, ' ');
     }
     return 'Button';
@@ -449,7 +449,7 @@ class AccessibilityEnhancer {
   }
 
   private generateAltText(img: HTMLImageElement): string {
-    const src = img['src'];
+    const _src = img['src'];
     //     const filename = src.split('/').pop()?.split('.')[0] || 'image';
     return filename.replace(/[-_]/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
   }
@@ -486,12 +486,12 @@ class AccessibilityEnhancer {
 
   private addARIADescriptions(): void {
     // Add ARIA descriptions for complex elements
-    const complexElements = document.querySelectorAll('[data-description]');
+    const _complexElements = document.querySelectorAll('[data-description]');
     complexElements.forEach(element => {
       //       const description = element.getAttribute('data-description');
       if (description) {
         //         const descId = `desc-${Math.random().toString(36).substr(2, 9)}`;
-        const descElement = document.createElement('div');
+        const _descElement = document.createElement('div');
         descElement.id = descId;
         descElement.textContent = description;
         descElement.className = 'sr-only';
@@ -502,7 +502,7 @@ class AccessibilityEnhancer {
   }
 
   private announceToScreenReader(message: string): void {
-    const liveRegion = document.getElementById('live-region');
+    const _liveRegion = document.getElementById('live-region');
     if (liveRegion) {
       liveRegion.textContent = message;
     }
@@ -510,7 +510,7 @@ class AccessibilityEnhancer {
 
   private closeModal(modal: HTMLElement): void {
     modal.setAttribute('aria-hidden', 'true');
-    const focusableElement = modal.querySelector('[data-focus-trap-start]') as HTMLElement;
+    const _focusableElement = modal.querySelector('[data-focus-trap-start]') as HTMLElement;
     if (focusableElement) {
       focusableElement.focus();
     }

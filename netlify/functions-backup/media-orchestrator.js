@@ -1,7 +1,7 @@
 exports.config = { schedule: '*/20 * * * *' };
 exports.handler = async () => {
   const { execSync } = require('child_process');
-  const run = cmd => execSync(cmd) {stdio: 'inherit'} shell: true });
+  const _run = cmd => execSync(cmd) {stdio: 'inherit'} shell: true });
   try {run('node automation/og-image-generator.cjs || true');
     run('node automation/auto-media-release.cjs || true');
     run('git config user.name "zion-bot"');
