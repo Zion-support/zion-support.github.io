@@ -22,7 +22,7 @@ const ContactPage = lazy(() => import('./contact/page'));
 const EnterprisePage = lazy(() => import('./enterprise/page'));
 
 // Styles
-import '../src/index.css';
+import './globals.css';
 
 const App: React.FC = () => {
   useEffect(() => {
@@ -32,29 +32,51 @@ const App: React.FC = () => {
     // Initialize global error handling with advanced tracking
     const handleGlobalError = (event: ErrorEvent) => {
       errorTracking.trackError(event.error || new Error(event.message), {
-        category: ErrorCategory.RUNTIME,
-        severity: ErrorSeverity.HIGH,
+        category: ErrorCategory.Runtime,
+        severity: ErrorSeverity.High,
         context: {
           filename: event.filename,
           lineno: event.lineno,
           colno: event.colno,
         },
       });
+      
+      // Prevent default error handling to avoid console clutter in production
+      if (import.meta.env.PROD) {
+        event.preventDefault();
+      }
     };
 
     const handleUnhandledRejection = (event: PromiseRejectionEvent) => {
       errorTracking.trackError(
         new Error(`Unhandled Promise Rejection: ${event.reason}`),
         {
-          category: ErrorCategory.RUNTIME,
-          severity: ErrorSeverity.CRITICAL,
+          category: ErrorCategory.Runtime,
+          severity: ErrorSeverity.Critical,
           context: { reason: event.reason },
         }
       );
+      
+      // Prevent default handling in production
+      if (import.meta.env.PROD) {
+        event.preventDefault();
+      }
     };
 
     window.addEventListener('error', handleGlobalError);
     window.addEventListener('unhandledrejection', handleUnhandledRejection);
+
+    // Register Service Worker for offline support
+    if ('serviceWorker' in navigator && import.meta.env.PROD) {
+      navigator.serviceWorker
+        .register('/sw.js')
+        .then((registration) => {
+          logger.info('Service Worker registered', { scope: registration.scope });
+        })
+        .catch((error: Error) => {
+          logger.error('Service Worker registration failed', error);
+        });
+    }
 
     // Initialize performance monitoring and Web Vitals
     if (typeof window !== 'undefined' && 'performance' in window) {

@@ -35,15 +35,13 @@ export function validateEnv(): ValidationResult {
 
   // Helper to get env variable
   const getEnvVar = (key: string): string | undefined => {
-    try {
-      if (typeof process !== 'undefined' && process.env) {
-        return process.env[key];
-      }
-      if (typeof import.meta?.env !== 'undefined') {
-        return import.meta.env[key];
-      }
-    } catch {
-      // Fallback
+    // Check if running in browser (Vite) or Node environment
+    if (typeof process !== 'undefined' && process.env) {
+      return process.env[key];
+    }
+    // For browser environment, try window object
+    if (typeof window !== 'undefined' && (window as any).ENV) {
+      return (window as any).ENV[key];
     }
     return undefined;
   };
@@ -56,8 +54,8 @@ export function validateEnv(): ValidationResult {
     config.NODE_ENV = nodeEnv as EnvConfig['NODE_ENV'];
   }
 
-  // Validate API_URL (check both NEXT_PUBLIC_API_URL and VITE_API_URL)
-  const apiUrl = getEnvVar('NEXT_PUBLIC_API_URL') || getEnvVar('VITE_API_URL');
+  // Validate API_URL
+  const apiUrl = getEnvVar('VITE_API_URL');
   if (apiUrl) {
     try {
       new URL(apiUrl);
@@ -70,30 +68,30 @@ export function validateEnv(): ValidationResult {
   }
 
   // Validate API_TIMEOUT
-  const apiTimeout = getEnvVar('API_TIMEOUT');
+  const apiTimeout = getEnvVar('VITE_API_TIMEOUT');
   if (apiTimeout) {
     const timeout = parseInt(apiTimeout, 10);
-    if (isNaN(timeout) || timeout < 0) {
-      errors.push(`Invalid API_TIMEOUT: ${apiTimeout}. Must be a positive number`);
+    if (isNaN(timeout) || timeout <= 0) {
+      errors.push(`Invalid API_TIMEOUT: ${apiTimeout}. Must be a positive number greater than zero`);
     } else {
       config.API_TIMEOUT = timeout;
     }
   }
 
   // Validate ENABLE_ANALYTICS
-  const enableAnalytics = getEnvVar('NEXT_PUBLIC_ENABLE_ANALYTICS') || getEnvVar('VITE_ENABLE_ANALYTICS');
+  const enableAnalytics = getEnvVar('VITE_ENABLE_ANALYTICS');
   if (enableAnalytics !== undefined) {
-    config.ENABLE_ANALYTICS = enableAnalytics === 'true' || enableAnalytics === '1';
+    config.ENABLE_ANALYTICS = enableAnalytics === 'true';
   }
 
   // Validate ENABLE_ERROR_REPORTING
-  const enableErrorReporting = getEnvVar('NEXT_PUBLIC_ENABLE_ERROR_REPORTING') || getEnvVar('VITE_ENABLE_ERROR_REPORTING');
+  const enableErrorReporting = getEnvVar('VITE_ENABLE_ERROR_REPORTING');
   if (enableErrorReporting !== undefined) {
-    config.ENABLE_ERROR_REPORTING = enableErrorReporting === 'true' || enableErrorReporting === '1';
+    config.ENABLE_ERROR_REPORTING = enableErrorReporting === 'true';
   }
 
   // Validate SENTRY_DSN
-  const sentryDsn = getEnvVar('NEXT_PUBLIC_SENTRY_DSN') || getEnvVar('VITE_SENTRY_DSN');
+  const sentryDsn = getEnvVar('VITE_SENTRY_DSN');
   if (sentryDsn) {
     if (!sentryDsn.startsWith('https://')) {
       errors.push(`Invalid SENTRY_DSN: ${sentryDsn}. Must start with 'https://'`);
@@ -105,7 +103,7 @@ export function validateEnv(): ValidationResult {
   }
 
   // Validate GA_TRACKING_ID
-  const gaTrackingId = getEnvVar('NEXT_PUBLIC_GOOGLE_ANALYTICS_ID') || getEnvVar('VITE_GA_TRACKING_ID');
+  const gaTrackingId = getEnvVar('VITE_GA_TRACKING_ID');
   if (gaTrackingId) {
     if (!gaTrackingId.startsWith('G-') && !gaTrackingId.startsWith('UA-')) {
       warnings.push(`GA_TRACKING_ID format may be invalid: ${gaTrackingId}`);
@@ -116,7 +114,7 @@ export function validateEnv(): ValidationResult {
   }
 
   // Validate LOG_LEVEL
-  const logLevel = getEnvVar('LOG_LEVEL') || getEnvVar('VITE_LOG_LEVEL');
+  const logLevel = getEnvVar('VITE_LOG_LEVEL');
   if (logLevel) {
     if (!['debug', 'info', 'warn', 'error'].includes(logLevel)) {
       errors.push(`Invalid LOG_LEVEL: ${logLevel}. Must be 'debug', 'info', 'warn', or 'error'`);
@@ -126,22 +124,22 @@ export function validateEnv(): ValidationResult {
   }
 
   // Validate MAX_CACHE_SIZE
-  const maxCacheSize = getEnvVar('MAX_CACHE_SIZE');
+  const maxCacheSize = getEnvVar('VITE_MAX_CACHE_SIZE');
   if (maxCacheSize) {
     const size = parseInt(maxCacheSize, 10);
-    if (isNaN(size) || size < 0) {
-      errors.push(`Invalid MAX_CACHE_SIZE: ${maxCacheSize}. Must be a positive number`);
+    if (isNaN(size) || size <= 0) {
+      errors.push(`Invalid MAX_CACHE_SIZE: ${maxCacheSize}. Must be a positive number greater than zero`);
     } else {
       config.MAX_CACHE_SIZE = size;
     }
   }
 
   // Validate CACHE_TTL
-  const cacheTTL = getEnvVar('CACHE_TTL');
+  const cacheTTL = getEnvVar('VITE_CACHE_TTL');
   if (cacheTTL) {
     const ttl = parseInt(cacheTTL, 10);
-    if (isNaN(ttl) || ttl < 0) {
-      errors.push(`Invalid CACHE_TTL: ${cacheTTL}. Must be a positive number`);
+    if (isNaN(ttl) || ttl <= 0) {
+      errors.push(`Invalid CACHE_TTL: ${cacheTTL}. Must be a positive number greater than zero`);
     } else {
       config.CACHE_TTL = ttl;
     }
@@ -230,15 +228,5 @@ export function isTest(): boolean {
   return getEnvConfig().NODE_ENV === 'test';
 }
 
-/**
- * Check if feature is enabled
- */
-export function isFeatureEnabled(feature: string): boolean {
-  const config = getEnvConfig();
-  const key = `ENABLE_${feature.toUpperCase()}` as keyof EnvConfig;
-  return Boolean(config[key]);
-}
-
 // Export for use in other modules
 export const ENV = getEnvConfig();
-export default ENV;

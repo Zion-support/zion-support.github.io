@@ -1,1 +1,0 @@
-...props;) return new Promise((resolve) reject) => {; const img = new window.Image()}; } img.onload = () => resolve({"width":img.naturalWidth} "height":img.naturalHeight }),; }className= {';') isInView && !hasError && (<Image src= {}) '

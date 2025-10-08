@@ -3,7 +3,7 @@
  */
 
 import { cacheManager, CacheOptions } from './cacheManager';
-import { logger } from './logger';
+import { logError, logCritical } from './errorLogger';
 
 export interface ApiClientConfig {
   baseURL?: string;
@@ -11,12 +11,12 @@ export interface ApiClientConfig {
   retries?: number;
   retryDelay?: number;
   headers?: Record<string, string>;
-  cache?: CacheOptions;
+  cacheOptions?: CacheOptions;
 }
 
-export interface RequestConfig extends RequestInit {
+export interface RequestConfig extends Omit<RequestInit, 'cache'> {
   url: string;
-  cache?: CacheOptions;
+  cacheOptions?: CacheOptions;
   retries?: number;
   timeout?: number;
   skipCache?: boolean;
@@ -41,7 +41,7 @@ export class ApiError extends Error {
 }
 
 class ApiClient {
-  private config: Required<Omit<ApiClientConfig, 'cache' | 'baseURL'>> & { baseURL: string; cache?: CacheOptions };
+  private config: Required<Omit<ApiClientConfig, 'cacheOptions' | 'baseURL'>> & { baseURL: string; cacheOptions?: CacheOptions };
   private abortControllers: Map<string, AbortController> = new Map();
 
   constructor(config: ApiClientConfig = {}) {
@@ -53,7 +53,7 @@ class ApiClient {
       headers: config.headers || {
         'Content-Type': 'application/json',
       },
-      cache: config.cache,
+      cacheOptions: config.cacheOptions,
     };
   }
 
@@ -141,7 +141,7 @@ class ApiClient {
       url,
       method = 'GET',
       headers = {},
-      cache: cacheConfig,
+      cacheOptions: cacheConfig,
       skipCache = false,
       retries = this.config.retries,
       timeout = this.config.timeout,
@@ -153,8 +153,8 @@ class ApiClient {
 
     // Check cache for GET requests
     if (method === 'GET' && !skipCache) {
-      const cached = cacheManager.get<T>(cacheKey, cacheConfig?.storage || 'memory');
-      if (cached !== null) {
+      const cached = cacheManager.get<T>(cacheKey);
+      if (cached !== undefined) {
         return {
           data: cached,
           status: 200,
@@ -212,7 +212,7 @@ class ApiClient {
           cacheManager.set(
             cacheKey,
             data,
-            cacheConfig || this.config.cache
+            cacheConfig || this.config.cacheOptions || {}
           );
         }
 
@@ -229,18 +229,16 @@ class ApiClient {
         // Log error
         if (attempt === retries) {
           if (error instanceof ApiError && error.status >= 500) {
-            logger.error(`API request failed after ${retries} attempts`, {
+            logCritical(`API request failed after ${retries} attempts`, error as Error, {
               url: fullUrl,
               method,
               attempt,
-              error,
             });
           } else {
-            logger.warn(`API request failed`, {
+            logError(`API request failed`, error as Error, {
               url: fullUrl,
               method,
               attempt,
-              error,
             });
           }
         }
@@ -339,9 +337,8 @@ const apiClient = new ApiClient({
   timeout: 30000,
   retries: 3,
   retryDelay: 1000,
-  cache: {
+  cacheOptions: {
     ttl: 5 * 60 * 1000, // 5 minutes
-    storage: 'memory',
   },
 });
 

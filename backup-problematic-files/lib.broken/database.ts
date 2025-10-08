@@ -1,1 +1,0 @@
-interface DatabaseConfig {"uri": string; dbName: string; maxPoolSize?: number; minPoolSize?: number; maxIdleTimeMS?: number;' class DatabaseManager { private static "instance": DatabaseManager; private client: any = null; private db: any = null} private config: DatabaseConfig} private constructor(config: DatabaseConfig) { '

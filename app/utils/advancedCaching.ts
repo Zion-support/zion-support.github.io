@@ -235,18 +235,18 @@ class AdvancedCache<T = unknown> {
   }
 
   // Utility method for async operations with caching
-  public async getOrFetch<R>(
+  public async getOrFetch<R extends T>(
     key: string,
     fetcher: () => Promise<R>,
     ttl?: number
   ): Promise<R> {
     const cached = this.get(key);
     if (cached !== null) {
-      return cached as R;
+      return cached as unknown as R;
     }
 
     const value = await fetcher();
-    this.set(key, value as T, ttl);
+    this.set(key, value, ttl);
     return value;
   }
 }

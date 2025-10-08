@@ -4,11 +4,23 @@
  */
 
 import { logger } from './logger';
+import { performanceMonitoring } from './performanceMonitoring';
+
+export enum CacheStorage {
+  Memory = 'memory',
+  LocalStorage = 'localStorage',
+  SessionStorage = 'sessionStorage',
+}
 
 export interface CacheOptions {
   ttl?: number; // Time to live in milliseconds
-  storage?: 'memory' | 'localStorage' | 'sessionStorage';
+  storage?: CacheStorage;
   compress?: boolean;
+}
+
+export interface CacheConfig {
+  storage?: CacheStorage;
+  defaultTTL?: number;
 }
 
 export interface CacheEntry<T> {
@@ -17,21 +29,25 @@ export interface CacheEntry<T> {
   ttl: number;
 }
 
-class CacheManager {
-  private static instance: CacheManager;
+export interface CacheStats {
+  hits: number;
+  misses: number;
+  hitRate: number;
+  count: number;
+  entries: number;
+}
+
+export class CacheManager {
   private memoryCache: Map<string, CacheEntry<unknown>> = new Map();
-  private readonly DEFAULT_TTL = 5 * 60 * 1000; // 5 minutes
+  private readonly defaultTTL: number;
+  private readonly storage: CacheStorage;
   private cleanupInterval: NodeJS.Timeout | null = null;
+  private stats = { hits: 0, misses: 0 };
 
-  private constructor() {
+  constructor(config: CacheConfig = {}) {
+    this.defaultTTL = config.defaultTTL || 5 * 60 * 1000; // 5 minutes
+    this.storage = config.storage || CacheStorage.Memory;
     this.startCleanup();
-  }
-
-  static getInstance(): CacheManager {
-    if (!CacheManager.instance) {
-      CacheManager.instance = new CacheManager();
-    }
-    return CacheManager.instance;
   }
 
   /**
@@ -99,6 +115,7 @@ class CacheManager {
    * Check if cache entry is expired
    */
   private isExpired(entry: CacheEntry<unknown>, now = Date.now()): boolean {
+    if (entry.ttl === Infinity) return false;
     return now - entry.timestamp > entry.ttl;
   }
 
@@ -115,12 +132,9 @@ class CacheManager {
   set<T>(
     key: string,
     value: T,
-    options: CacheOptions = {}
+    options: { ttl?: number } = {}
   ): void {
-    const {
-      ttl = this.DEFAULT_TTL,
-      storage = 'memory',
-    } = options;
+    const ttl = options.ttl !== undefined ? options.ttl : this.defaultTTL;
 
     const entry: CacheEntry<T> = {
       value,
@@ -128,9 +142,11 @@ class CacheManager {
       ttl,
     };
 
-    if (storage === 'memory') {
+    performanceMonitoring.recordCustomMetric(`cache_set_${key}`, 1, 'count');
+
+    if (this.storage === CacheStorage.Memory) {
       this.memoryCache.set(key, entry);
-    } else if (storage === 'localStorage' && typeof window !== 'undefined' && window.localStorage) {
+    } else if (this.storage === CacheStorage.LocalStorage && typeof window !== 'undefined' && window.localStorage) {
       try {
         localStorage.setItem(
           this.getStorageKey(key),
@@ -141,7 +157,7 @@ class CacheManager {
         // Fallback to memory cache
         this.memoryCache.set(key, entry);
       }
-    } else if (storage === 'sessionStorage' && typeof window !== 'undefined' && window.sessionStorage) {
+    } else if (this.storage === CacheStorage.SessionStorage && typeof window !== 'undefined' && window.sessionStorage) {
       try {
         sessionStorage.setItem(
           this.getStorageKey(key),
@@ -158,12 +174,14 @@ class CacheManager {
   /**
    * Get cache entry
    */
-  get<T>(key: string, storage: 'memory' | 'localStorage' | 'sessionStorage' = 'memory'): T | null {
+  get<T>(key: string): T | undefined {
+    performanceMonitoring.recordCustomMetric(`cache_get_${key}`, 1, 'count');
+
     let entry: CacheEntry<T> | null = null;
 
-    if (storage === 'memory') {
+    if (this.storage === CacheStorage.Memory) {
       entry = this.memoryCache.get(key) as CacheEntry<T> | undefined || null;
-    } else if (storage === 'localStorage' && typeof window !== 'undefined' && window.localStorage) {
+    } else if (this.storage === CacheStorage.LocalStorage && typeof window !== 'undefined' && window.localStorage) {
       try {
         const item = localStorage.getItem(this.getStorageKey(key));
         if (item) {
@@ -172,7 +190,7 @@ class CacheManager {
       } catch (error) {
         logger.error('Failed to get localStorage cache', error);
       }
-    } else if (storage === 'sessionStorage' && typeof window !== 'undefined' && window.sessionStorage) {
+    } else if (this.storage === CacheStorage.SessionStorage && typeof window !== 'undefined' && window.sessionStorage) {
       try {
         const item = sessionStorage.getItem(this.getStorageKey(key));
         if (item) {
@@ -184,33 +202,39 @@ class CacheManager {
     }
 
     if (!entry) {
-      return null;
+      this.stats.misses++;
+      performanceMonitoring.recordCustomMetric(`cache_miss_${key}`, 1, 'count');
+      return undefined;
     }
 
     if (this.isExpired(entry)) {
-      this.delete(key, storage);
-      return null;
+      this.delete(key);
+      this.stats.misses++;
+      performanceMonitoring.recordCustomMetric(`cache_expired_${key}`, 1, 'count');
+      return undefined;
     }
 
+    this.stats.hits++;
+    performanceMonitoring.recordCustomMetric(`cache_hit_${key}`, 1, 'count');
     return entry.value;
   }
 
   /**
-   * Check if key exists in cache
+   * Check if key exists and is not expired
    */
-  has(key: string, storage: 'memory' | 'localStorage' | 'sessionStorage' = 'memory'): boolean {
-    return this.get(key, storage) !== null;
+  has(key: string): boolean {
+    return this.get(key) !== undefined;
   }
 
   /**
-   * Delete cache entry
+   * Delete a cache entry
    */
-  delete(key: string, storage: 'memory' | 'localStorage' | 'sessionStorage' = 'memory'): void {
-    if (storage === 'memory') {
+  delete(key: string): void {
+    if (this.storage === CacheStorage.Memory) {
       this.memoryCache.delete(key);
-    } else if (storage === 'localStorage' && typeof window !== 'undefined' && window.localStorage) {
+    } else if (this.storage === CacheStorage.LocalStorage && typeof window !== 'undefined' && window.localStorage) {
       localStorage.removeItem(this.getStorageKey(key));
-    } else if (storage === 'sessionStorage' && typeof window !== 'undefined' && window.sessionStorage) {
+    } else if (this.storage === CacheStorage.SessionStorage && typeof window !== 'undefined' && window.sessionStorage) {
       sessionStorage.removeItem(this.getStorageKey(key));
     }
   }
@@ -218,12 +242,12 @@ class CacheManager {
   /**
    * Clear all cache entries
    */
-  clear(storage: 'memory' | 'localStorage' | 'sessionStorage' | 'all' = 'all'): void {
-    if (storage === 'memory' || storage === 'all') {
+  clear(): void {
+    if (this.storage === CacheStorage.Memory) {
       this.memoryCache.clear();
     }
 
-    if ((storage === 'localStorage' || storage === 'all') && typeof window !== 'undefined' && window.localStorage) {
+    if (this.storage === CacheStorage.LocalStorage && typeof window !== 'undefined' && window.localStorage) {
       const keysToRemove: string[] = [];
       for (let i = 0; i < localStorage.length; i++) {
         const key = localStorage.key(i);
@@ -234,7 +258,7 @@ class CacheManager {
       keysToRemove.forEach(key => localStorage.removeItem(key));
     }
 
-    if ((storage === 'sessionStorage' || storage === 'all') && typeof window !== 'undefined' && window.sessionStorage) {
+    if (this.storage === CacheStorage.SessionStorage && typeof window !== 'undefined' && window.sessionStorage) {
       const keysToRemove: string[] = [];
       for (let i = 0; i < sessionStorage.length; i++) {
         const key = sessionStorage.key(i);
@@ -245,25 +269,61 @@ class CacheManager {
       keysToRemove.forEach(key => sessionStorage.removeItem(key));
     }
 
-    logger.info('Cache cleared', { storage });
+    logger.info('Cache cleared', { storage: this.storage });
   }
 
   /**
-   * Get or set with function
+   * Get or set with function (handles both sync and async)
    */
-  async getOrSet<T>(
+  getOrSet<T>(
     key: string,
-    fn: () => Promise<T> | T,
-    options: CacheOptions = {}
-  ): Promise<T> {
-    const storage = options.storage || 'memory';
-    const cached = this.get<T>(key, storage);
+    fn: () => T | Promise<T>,
+    options: { ttl?: number } = {}
+  ): T | Promise<T> {
+    const cached = this.get<T>(key);
 
-    if (cached !== null) {
+    if (cached !== undefined) {
       return cached;
     }
 
+    const start = performance.now();
+    const value = fn();
+    const duration = performance.now() - start;
+
+    performanceMonitoring.recordCustomMetric(`cache_compute_${key}`, duration, 'ms');
+
+    // Handle both sync and async values
+    if (value instanceof Promise) {
+      return value.then(resolvedValue => {
+        this.set(key, resolvedValue, options);
+        return resolvedValue;
+      });
+    }
+
+    this.set(key, value, options);
+    return value;
+  }
+
+  /**
+   * Get or set with async function
+   */
+  async getOrSetAsync<T>(
+    key: string,
+    fn: () => Promise<T> | T,
+    options: { ttl?: number } = {}
+  ): Promise<T> {
+    const cached = this.get<T>(key);
+
+    if (cached !== undefined) {
+      return cached;
+    }
+
+    const start = performance.now();
     const value = await fn();
+    const duration = performance.now() - start;
+
+    performanceMonitoring.recordCustomMetric(`cache_compute_${key}`, duration, 'ms');
+
     this.set(key, value, options);
     return value;
   }
@@ -272,22 +332,36 @@ class CacheManager {
    * Memoize a function with caching
    */
   memoize<TArgs extends unknown[], TResult>(
-    fn: (...args: TArgs) => TResult | Promise<TResult>,
-    options: CacheOptions & { keyGenerator?: (...args: TArgs) => string } = {}
-  ): (...args: TArgs) => Promise<TResult> {
+    fn: (...args: TArgs) => TResult,
+    options: { ttl?: number; keyGenerator?: (...args: TArgs) => string } = {}
+  ): (...args: TArgs) => TResult {
     const { keyGenerator, ...cacheOptions } = options;
 
-    return async (...args: TArgs): Promise<TResult> => {
+    return (...args: TArgs): TResult => {
       const key = keyGenerator
         ? keyGenerator(...args)
         : `memoize_${fn.name}_${JSON.stringify(args)}`;
 
-      return this.getOrSet(key, () => fn(...args), cacheOptions);
+      return this.getOrSet(key, () => fn(...args), cacheOptions) as TResult;
     };
   }
 
   /**
    * Get cache statistics
+   */
+  getStatistics(): CacheStats {
+    const total = this.stats.hits + this.stats.misses;
+    return {
+      hits: this.stats.hits,
+      misses: this.stats.misses,
+      hitRate: total > 0 ? this.stats.hits / total : 0,
+      count: this.memoryCache.size,
+      entries: this.memoryCache.size,
+    };
+  }
+
+  /**
+   * Get cache count
    */
   getStats(): {
     memorySize: number;
@@ -325,5 +399,5 @@ class CacheManager {
   }
 }
 
-export const cacheManager = CacheManager.getInstance();
+export const cacheManager = new CacheManager();
 export default CacheManager;
