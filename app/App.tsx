@@ -58,14 +58,17 @@ const App: React.FC = () => {
       const metrics = performanceOptimizer.getMetrics();
       const performanceMetrics = performanceMonitor.getMetrics();
       
-      if (pageLoadMetrics) {
-        console.log('Performance metrics collected:', pageLoadMetrics);
-      }
-      if (metrics) {
-        console.log('Performance metrics:', metrics);
-      }
-      if (performanceMetrics) {
-        console.log('Core Web Vitals:', performanceMetrics);
+      // Only log in development mode
+      if (process.env.NODE_ENV === 'development') {
+        if (pageLoadMetrics) {
+          console.log('Performance metrics collected:', pageLoadMetrics);
+        }
+        if (metrics) {
+          console.log('Performance metrics:', metrics);
+        }
+        if (performanceMetrics) {
+          console.log('Core Web Vitals:', performanceMetrics);
+        }
       }
     }
     
