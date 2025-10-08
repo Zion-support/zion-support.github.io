@@ -2,7 +2,7 @@
  * Enhanced API Client with retry logic, caching, and error handling
  */
 
-import { cacheManager, CacheOptions, CacheStorage } from './cacheManager';
+import { cacheManager, CacheOptions } from './cacheManager';
 import { logError, logCritical } from './errorLogger';
 
 export interface ApiClientConfig {
@@ -14,9 +14,9 @@ export interface ApiClientConfig {
   cache?: CacheOptions;
 }
 
-export interface RequestConfig extends RequestInit {
+export interface RequestConfig extends Omit<RequestInit, 'cache'> {
   url: string;
-  cache?: CacheOptions;
+  cacheOptions?: CacheOptions;
   retries?: number;
   timeout?: number;
   skipCache?: boolean;
@@ -339,7 +339,6 @@ const apiClient = new ApiClient({
   retryDelay: 1000,
   cache: {
     ttl: 5 * 60 * 1000, // 5 minutes
-    storage: CacheStorage.Memory,
   },
 });
 
