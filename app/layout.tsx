@@ -4,6 +4,8 @@ import AnalyticsProvider from './components/AnalyticsProvider';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import PWAInstaller from './components/PWAInstaller';
 import { GlobalErrorBoundary } from './components/GlobalErrorBoundary';
+import FuturisticHeader from './components/FuturisticHeader';
+import FuturisticFooter from './components/FuturisticFooter';
 
 export default function RootLayout({
   children,
@@ -69,7 +71,11 @@ export default function RootLayout({
             <AccessibilityEnhancer>
               <PerformanceMonitor />
               <PWAInstaller />
-              {children}
+              <FuturisticHeader />
+              <div className="pt-20">
+                {children}
+              </div>
+              <FuturisticFooter />
             </AccessibilityEnhancer>
           </AnalyticsProvider>
         </GlobalErrorBoundary>
