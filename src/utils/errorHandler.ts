@@ -2,8 +2,6 @@
  * Error handling utilities
  * Enhanced with retry logic, error categorization, and better reporting
  */
-<<<<<<< HEAD
-=======
 
 export enum ErrorSeverity {
   LOW = 'low',
@@ -11,7 +9,6 @@ export enum ErrorSeverity {
   HIGH = 'high',
   CRITICAL = 'critical',
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-17a6
 
 export enum ErrorCategory {
   NETWORK = 'network',
@@ -76,22 +73,18 @@ export class ErrorHandler {
       ...errorInfo,
     };
 
-<<<<<<< HEAD
     // Add to queue
     this.addToQueue(errorData);
-=======
     this.errorQueue.push(errorData);
     if (this.errorQueue.length > this.maxQueueSize) {
       this.errorQueue.shift();
     }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-17a6
 
     // Send to error reporting service
     this.reportError(errorData);
   }
 
   /**
-<<<<<<< HEAD
    * Categorize error based on type and message
    */
   private categorizeError(error: Error): ErrorCategory {
@@ -150,7 +143,6 @@ export class ErrorHandler {
     
     if (this.errorQueue.length > this.maxQueueSize) {
       this.errorQueue.shift();
-=======
    * Categorize error based on message and stack
    */
   private categorizeError(error: Error): ErrorCategory {
@@ -159,7 +151,6 @@ export class ErrorHandler {
 
     if (message.includes('network') || message.includes('fetch') || message.includes('xhr')) {
       return ErrorCategory.NETWORK;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-17a6
     }
     if (message.includes('validation') || message.includes('invalid')) {
       return ErrorCategory.VALIDATION;
@@ -177,7 +168,6 @@ export class ErrorHandler {
   }
 
   /**
-<<<<<<< HEAD
    * Report error to service
    */
   private reportError(errorData: ErrorInfo): void {
@@ -196,7 +186,6 @@ export class ErrorHandler {
 
   /**
    * Get all errors from queue
-=======
    * Determine error severity
    */
   private determineSeverity(error: Error, category: ErrorCategory): ErrorSeverity {
@@ -232,7 +221,6 @@ export class ErrorHandler {
 
   /**
    * Get all errors
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-17a6
    */
   getErrors(): ErrorInfo[] {
     return [...this.errorQueue];
@@ -244,7 +232,6 @@ export class ErrorHandler {
   clearErrors(): void {
     this.errorQueue = [];
   }
-<<<<<<< HEAD
 
   /**
    * Get errors by category
@@ -264,8 +251,6 @@ export class ErrorHandler {
 // Export singleton instance
 export const errorHandler = ErrorHandler.getInstance();
 export default errorHandler;
-=======
 }
 
 export default ErrorHandler;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-17a6
