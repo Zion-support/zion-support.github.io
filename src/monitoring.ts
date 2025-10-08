@@ -28,9 +28,8 @@ function initializeMonitoring(): void {
     // Track errors globally
     window.addEventListener('error', (event) => {
       const error = event.error || new Error(event.message);
-      errorHandler.handleError(error, {
+      errorHandler.logError(error, {
         componentStack: `${event.filename}:${event.lineno}:${event.colno}`,
-      }, {
         errorId: `global_error_${Date.now()}`,
       });
     });
@@ -38,9 +37,8 @@ function initializeMonitoring(): void {
     // Track unhandled promise rejections
     window.addEventListener('unhandledrejection', (event) => {
       const error = new Error(`Unhandled Promise Rejection: ${event.reason}`);
-      errorHandler.handleError(error, {
+      errorHandler.logError(error, {
         componentStack: String(event.reason),
-      }, {
         errorId: `unhandled_rejection_${Date.now()}`,
       });
     });
