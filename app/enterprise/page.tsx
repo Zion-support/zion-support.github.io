@@ -21,7 +21,7 @@ const EnterprisePage: React.FC = () => {
                 Advanced AI and IT solutions designed for large organizations
               </p>
             </div>
-            <p className="text-lg text-gray-600 mb-12 max-w-3xl mx-auto'>
+            <p className="text-lg text-gray-600 mb-12 max-w-3xl mx-auto">
               Transform your enterprise with our proven AI solutions. Achieve
               $100M+ cost savings, 500% productivity gains, and 99.9% system
               uptime with enterprise-grade security and compliance.
@@ -33,7 +33,7 @@ const EnterprisePage: React.FC = () => {
               >
                 <span>Schedule Enterprise Demo</span>
                 <span className="group-hover:translate-x-1 transition-transform">
-                  →
+                  &rarr;
                 </span>
               </Link>
               <Link
@@ -42,7 +42,7 @@ const EnterprisePage: React.FC = () => {
               >
                 <span>View Solutions</span>
                 <span className="group-hover:translate-x-1 transition-transform">
-                  ↓
+                  &darr;
                 </span>
               </Link>
             </div>
