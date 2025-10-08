@@ -2,7 +2,6 @@
  * Error handling utilities
  * Enhanced with retry logic, error categorization, and better reporting
  */
-}
 
 export enum ErrorCategory {
   NETWORK = 'network',
@@ -11,6 +10,13 @@ export enum ErrorCategory {
   API = 'api',
   UI = 'ui',
   UNKNOWN = 'unknown',
+}
+
+export enum ErrorSeverity {
+  LOW = 'low',
+  MEDIUM = 'medium',
+  HIGH = 'high',
+  CRITICAL = 'critical',
 }
 
 export interface ErrorInfo {
@@ -59,19 +65,122 @@ export class ErrorHandler {
       severity,
       ...errorInfo,
     };
-    }
+
+    // Add to queue
+    this.addToQueue(errorData);
 
     // Send to error reporting service
     this.reportError(errorData);
   }
 
   /**
+   * Categorize error based on type and message
+   */
+  private categorizeError(error: Error): ErrorCategory {
+    const message = error.message.toLowerCase();
+    
+    if (message.includes('network') || message.includes('fetch') || message.includes('timeout')) {
+      return ErrorCategory.NETWORK;
+    }
+    
+    if (message.includes('validation') || message.includes('invalid')) {
+      return ErrorCategory.VALIDATION;
+    }
+    
+    if (message.includes('api') || message.includes('request')) {
+      return ErrorCategory.API;
+    }
+    
+    if (error.name === 'TypeError' || error.name === 'ReferenceError') {
+      return ErrorCategory.RUNTIME;
+    }
+    
+    return ErrorCategory.UNKNOWN;
+  }
+
+  /**
+   * Determine error severity
+   */
+  private determineSeverity(error: Error, category: ErrorCategory): ErrorSeverity {
+    if (category === ErrorCategory.NETWORK) {
+      return ErrorSeverity.MEDIUM;
+    }
+    
+    if (category === ErrorCategory.RUNTIME) {
+      return ErrorSeverity.HIGH;
+    }
+    
+    if (category === ErrorCategory.VALIDATION) {
+      return ErrorSeverity.LOW;
+    }
+    
+    return ErrorSeverity.MEDIUM;
+  }
+
+  /**
+   * Generate unique error ID
+   */
+  private generateErrorId(): string {
+    return `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+  }
+
+  /**
+   * Add error to queue
+   */
+  private addToQueue(errorData: ErrorInfo): void {
+    this.errorQueue.push(errorData);
+    
+    if (this.errorQueue.length > this.maxQueueSize) {
+      this.errorQueue.shift();
     }
   }
 
   /**
+   * Report error to service
+   */
+  private reportError(errorData: ErrorInfo): void {
+    // Log to console in development
+    if (process.env.NODE_ENV === 'development') {
+      console.error('Error reported:', errorData);
+    }
+
+    // Send to error tracking service (e.g., Sentry, LogRocket)
+    if (typeof window !== 'undefined' && (window as any).Sentry) {
+      (window as any).Sentry.captureException(new Error(errorData.message), {
+        extra: errorData,
+      });
+    }
+  }
+
+  /**
+   * Get all errors from queue
+   */
+  getErrors(): ErrorInfo[] {
     return [...this.errorQueue];
   }
 
   /**
    * Clear error queue
+   */
+  clearErrors(): void {
+    this.errorQueue = [];
+  }
+
+  /**
+   * Get errors by category
+   */
+  getErrorsByCategory(category: ErrorCategory): ErrorInfo[] {
+    return this.errorQueue.filter(error => error.category === category);
+  }
+
+  /**
+   * Get errors by severity
+   */
+  getErrorsBySeverity(severity: ErrorSeverity): ErrorInfo[] {
+    return this.errorQueue.filter(error => error.severity === severity);
+  }
+}
+
+// Export singleton instance
+export const errorHandler = ErrorHandler.getInstance();
+export default errorHandler;

@@ -13,6 +13,11 @@ export const PerformanceMonitor: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
+    const measurePerformance = () => {
+      if (typeof window === 'undefined' || !window.performance) return;
+
+      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      const paintEntries = performance.getEntriesByType('paint');
       
       const fcp = paintEntries.find(entry => entry.name === 'first-contentful-paint');
       const lcp = performance.getEntriesByType('largest-contentful-paint')[0] as PerformanceEntry;
@@ -34,7 +39,10 @@ export const PerformanceMonitor: React.FC = () => {
     } else {
       window.addEventListener('load', measurePerformance);
     }
-    return undefined;
+    
+    return () => {
+      window.removeEventListener('load', measurePerformance);
+    };
   }, []);
 
   // Toggle visibility with keyboard shortcut (Ctrl+Shift+P)
@@ -73,3 +81,5 @@ export const PerformanceMonitor: React.FC = () => {
     </div>
   );
 };
+
+export default PerformanceMonitor;
