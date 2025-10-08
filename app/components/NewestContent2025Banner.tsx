@@ -1,9 +1,9 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 const NewestContent2025Banner = () => {
   return (
-    <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">
+    <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden py-20">
       {/* Animated Background Effects */}
       <div className="absolute inset-0 opacity-20">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500 rounded-full blur-3xl animate-pulse"></div>
@@ -31,15 +31,14 @@ const NewestContent2025Banner = () => {
             September 30, 2025 — Cutting-Edge AI Insights
           </h2>
           <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
-            Edge Computing • Neural Networks • Quantum Security — The future of
-            enterprise AI starts here
+            Edge Computing • Neural Networks • Quantum Security — The future of enterprise AI starts here
           </p>
         </div>
 
         {/* Featured Articles Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {/* Article 1: AI Edge Computing */}
-          <Link href="/blog/ai-edge-computing-real-time-2025" className="group">
+          <Link to="/blog/ai-edge-computing-real-time-2025" className="group">
             <div className="relative bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:border-white/40 transition-all duration-500 hover:scale-105 h-full">
               {/* Card glow effect */}
               <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/20 to-blue-600/20 opacity-0 group-hover:opacity-100 transition-all duration-500 rounded-2xl"></div>
@@ -104,7 +103,7 @@ const NewestContent2025Banner = () => {
           </Link>
 
           {/* Article 2: Neural Networks */}
-          <Link href="/blog/ai-neural-networks-enterprise-transformation-2025" className="group">
+          <Link to="/blog/ai-neural-networks-enterprise-transformation-2025" className="group">
             <div className="relative bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:border-white/40 transition-all duration-500 hover:scale-105 h-full">
               <div className="absolute inset-0 bg-gradient-to-br from-purple-500/20 to-fuchsia-600/20 opacity-0 group-hover:opacity-100 transition-all duration-500 rounded-2xl"></div>
               <div className="relative z-10">
@@ -159,7 +158,7 @@ const NewestContent2025Banner = () => {
           </Link>
 
           {/* Article 3: Quantum Security */}
-          <Link href="/blog/ai-quantum-security-protocols-2026" className="group">
+          <Link to="/blog/ai-quantum-security-protocols-2026" className="group">
             <div className="relative bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:border-white/40 transition-all duration-500 hover:scale-105 h-full">
               <div className="absolute inset-0 bg-gradient-to-br from-red-500/20 to-orange-600/20 opacity-0 group-hover:opacity-100 transition-all duration-500 rounded-2xl"></div>
               <div className="relative z-10">
@@ -221,21 +220,21 @@ const NewestContent2025Banner = () => {
           </h3>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Join 50,000+ AI leaders implementing these breakthrough technologies. Get expert guidance 
-            from Zion Tech Group&apos;s AI transformation specialists.
+            from Zion Tech Group's AI transformation specialists.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
               href="tel:+13024640950"
               className="flex items-center gap-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl"
             >
-              <span className="text-xl">📞</span>
-              <span>Call Now: +1 (302) 464-0950</span>
+              <span>📞</span>
+              <span>Call (302) 464-0950</span>
             </a>
             <Link
-              href="/contact"
-              className="flex items-center gap-3 border-2 border-white/30 hover:border-white/60 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 hover:bg-white/10"
+              to="/contact"
+              className="flex items-center gap-3 bg-white/10 hover:bg-white/20 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 border border-white/20"
             >
-              <span className="text-xl">✉️</span>
+              <span>✉️</span>
               <span>Schedule Consultation</span>
             </Link>
           </div>
