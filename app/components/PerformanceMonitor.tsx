@@ -118,4 +118,4 @@ const PerformanceMonitor: React.FC = () => {
   );
 };
 
-export default memo(PerformanceMonitor);
+export default memo(PerformanceMonitor);export default PerformanceMonitor;

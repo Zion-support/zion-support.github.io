@@ -71,6 +71,7 @@ console.warn = (...args) => {
     return;
   }
   originalConsoleWarn(...args);
+>>>>>>> 49f746e8c3195449347ee8bebb6ca5b0ab732544
 };
 
 console.info = (...args) => {

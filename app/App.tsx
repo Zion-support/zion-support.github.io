@@ -6,11 +6,11 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 // Components
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
-import AdvancedErrorBoundary from './components/AdvancedErrorBoundary';
-import AdvancedSEOOptimizer from './components/AdvancedSEOOptimizer';
-import AdvancedPerformanceMonitor from './components/AdvancedPerformanceMonitor';
-import SEOEnhancer from './components/SEOEnhancer';
 import PerformanceDashboard from './components/PerformanceDashboard';
+import AdvancedPerformanceMonitor from './components/AdvancedPerformanceMonitor';
+import AdvancedErrorBoundary from './components/AdvancedErrorBoundary';
+import SEOEnhancer from './components/SEOEnhancer';
+import AdvancedSEOOptimizer from './components/AdvancedSEOOptimizer';
 import LoadingSpinner from './components/LoadingSpinner';
 
 // Lazy load pages for better performance
@@ -26,7 +26,7 @@ import './globals.css';
 const App: React.FC = () => {
   useEffect(() => {
     // Initialize global error handling
-    logger.info('App initialized');
+    logger.lifecycle('initialized', 'App');
 
     // Initialize performance monitoring
     lazyLoadImages();
@@ -45,8 +45,8 @@ const App: React.FC = () => {
       }
     }
     
-    logger.info('Performance monitoring initialized');
-    logger.info('🚀 Zion Tech Group App initialized with comprehensive monitoring');
+    logger.lifecycle('performance monitoring initialized', 'App');
+    logger.info('🚀 Zion Tech Group App initialized with comprehensive monitoring', 'App');
   }, []);
 
   return (
@@ -55,7 +55,7 @@ const App: React.FC = () => {
         enableErrorReporting={true}
         enableRetry={true}
         onError={(error, errorInfo) => {
-          logger.error('Application Error', error, { ...errorInfo, component: 'ErrorBoundary' });
+          logger.error('Application Error', 'ErrorBoundary', { error: error.message, errorInfo });
         }}
       >
         <AccessibilityEnhancer>
@@ -110,7 +110,7 @@ const App: React.FC = () => {
                   enableRealTimeMonitoring={process.env['NODE_ENV'] === 'development'}
                   onMetricsUpdate={(metrics) => {
                     if (process.env['NODE_ENV'] === 'development') {
-                      // Performance metrics logged;
+                      logger.performance('Performance Metrics', metrics as unknown as Record<string, unknown>, 'PerformanceMonitor');
                     }
                   }}
                 />
