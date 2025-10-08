@@ -110,9 +110,12 @@ const App: React.FC = () => {
     
     // Log performance and accessibility metrics periodically
     const metricsInterval = setInterval(() => {
+<<<<<<< HEAD
       // const performanceMetrics = performanceMonitor.getMetrics();
       const accessibilityMetrics = accessibilityEnhancer.getMetrics();
       
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-1e5f
       if (process.env.NODE_ENV === 'development') {
         // eslint-disable-next-line no-console
         console.log('Performance Score:', performanceMonitor.getScore());
