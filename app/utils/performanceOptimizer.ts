@@ -78,6 +78,18 @@ class PerformanceOptimizer {
         // Ignore measure errors
       }
     }
+    
+    return duration;
+  }
+
+  private initMonitoring() {
+    if (typeof window === 'undefined') return;
+    
+    this.observeFID();
+    this.observeCLS();
+    this.observeFCP();
+    this.observeTTFB();
+    this.observeMemory();
   }
 
   private observeFID() {
