@@ -234,24 +234,15 @@ class PerformanceMonitor {
     
     return `
 Performance Report:
-- Overall Score: ${score}
-- FCP: ${metrics.fcp ? metrics.fcp.toFixed(2) : 'N/A'}ms
-- LCP: ${metrics.lcp ? metrics.lcp.toFixed(2) : 'N/A'}ms
-- FID: ${metrics.fid ? metrics.fid.toFixed(2) : 'N/A'}ms
-- CLS: ${metrics.cls ? metrics.cls.toFixed(3) : 'N/A'}
-- TTFB: ${metrics.ttfb ? metrics.ttfb.toFixed(2) : 'N/A'}ms
-    `;
-
-  }
-
-  cleanup(): void {
-    this.observers.forEach(observer => observer.disconnect());
-    this.observers = [];
-    this.isInitialized = false;
+- Performance Score: ${score}%
+- First Contentful Paint: ${metrics.fcp}ms
+- Largest Contentful Paint: ${metrics.lcp}ms
+- First Input Delay: ${metrics.fid}ms
+- Cumulative Layout Shift: ${metrics.cls}
+- Time to First Byte: ${metrics.ttfb}ms
+- Total Blocking Time: ${metrics.tbt}ms
+`;
   }
 }
 
-// Export singleton instance
-export const performanceMonitor = new PerformanceMonitor();
-export default performanceMonitor;
-
+export default PerformanceMonitor;
