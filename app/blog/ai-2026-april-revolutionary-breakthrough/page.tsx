@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 export default function AI2026AprilRevolutionaryBreakthrough() {
   return (
@@ -104,9 +103,3 @@ export default function AI2026AprilRevolutionaryBreakthrough() {
     </div>
   );
 }
-=======
-import { Helmet } from 'react-helmet-async';
-
-
-// Metadata moved to Helmet component
->>>>>>> cursor/fix-errors-and-merge-to-main-dd0b

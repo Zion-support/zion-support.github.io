@@ -1,7 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Star } from 'lucide-react';
-<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 export default function AI2026HyperconsciousComputingRevolution() {
   return (
@@ -86,8 +85,3 @@ export default function AI2026HyperconsciousComputingRevolution() {
     </div>
   );
 }
-=======
-
-
-// Metadata moved to Helmet component
->>>>>>> cursor/fix-errors-and-merge-to-main-dd0b

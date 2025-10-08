@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Link } from 'react-router-dom';
 export default function January2025CuttingEdgeTrendsBreakthrough() {
@@ -145,8 +144,3 @@ export default function January2025CuttingEdgeTrendsBreakthrough() {
     </div>
   );
 }
-=======
-
-
-// Metadata moved to Helmet component
->>>>>>> cursor/fix-errors-and-merge-to-main-dd0b

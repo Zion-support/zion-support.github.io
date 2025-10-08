@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 export const metadata = {
   title: 'AI Cost Optimization Breakthrough 2026: Cut AI Spending by 90% | Zion Tech Group',
@@ -27,14 +26,7 @@ export const metadata = {
   }
 };
 
-export default function AICostOptimizationBreakthrough2026() {
-=======
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-
-const AICostOptimizationBreakthrough2026: React.FC = () => {
->>>>>>> cursor/fix-errors-and-merge-to-main-dd0b
-  return (
+export default function AICostOptimizationBreakthrough2026() {  return (
 
     <>
 

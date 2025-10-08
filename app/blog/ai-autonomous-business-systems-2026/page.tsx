@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 export const metadata = {
   title: 'AI Autonomous Business Systems 2026: 95% Automation Achievement | Zion Tech Group',
@@ -21,14 +20,7 @@ export const metadata = {
   },
 };
 
-export default function AIAutonomousBusinessSystems2026() {
-=======
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-
-const AIAutonomousBusinessSystems2026: React.FC = () => {
->>>>>>> cursor/fix-errors-and-merge-to-main-dd0b
-  return (
+export default function AIAutonomousBusinessSystems2026() {  return (
 
     <>
 
