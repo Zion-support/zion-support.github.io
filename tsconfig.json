@@ -85,10 +85,6 @@
     "components/**/*.tsx",
     "api/**/*.ts",
     "api/**/*.js",
-    "src/**/*",
-    "App.tsx",
-    "*.ts",
-    "*.tsx",
     ".next/types/**/*.ts"
   ],
   "exclude": [
@@ -199,7 +195,8 @@
     "fix-*.ts",
     "jest.setup.*",
     "**/*.disabled/**",
-    "**/*.backup/**"
+    "**/*.backup/**",
+    "vite.config.d.ts"
   ],
   "references": [
     {
