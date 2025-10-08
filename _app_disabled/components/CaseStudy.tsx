@@ -1,1 +1,0 @@
-export default function CaseStudy({company, industry) result} description; metrics }: CaseStudyProps) {

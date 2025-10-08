@@ -2,7 +2,7 @@
  * Custom React hooks for common patterns
  */
 
-import { useState, useEffect, useRef, useCallback, useMemo } from 'react';
+import { useState, useEffect, useRef, useCallback } from 'react';
 
 /**
  * Hook for managing local storage with React state
@@ -89,6 +89,7 @@ export const useThrottle = <T extends (...args: unknown[]) => unknown>(
         lastRun.current = now;
         return callback(...args);
       }
+      return undefined;
     },
     [callback, delay]
   ) as T;

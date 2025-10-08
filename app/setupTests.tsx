@@ -127,4 +127,16 @@ delete (window as { location?: unknown }).location;
   replace: jest.fn(),
   ancestorOrigins: {} as DOMStringList,
   reload: jest.fn(),
+} as Location;
+
+// Suppress jsdom navigation warnings
+const originalConsoleError = console.error;
+console.error = (...args) => {
+  if (
+    typeof args[0] === 'string' &&
+    args[0].includes('Not implemented: navigation')
+  ) {
+    return;
+  }
+  originalConsoleError.apply(console, args);
 };

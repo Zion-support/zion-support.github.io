@@ -1,8 +1,8 @@
 // Performance monitoring setup
-import { analytics } from '../app/utils/analytics';
-import { ErrorHandler } from '../app/utils/errorHandler';
+import { analytics } from './utils/analytics';
+import { ErrorHandler } from './utils/errorHandler';
 import { performanceOptimizer } from '../app/utils/performanceOptimizer';
-import { logger } from '../src/utils/logger';
+import { logger } from './utils/logger';
 
 // Create error handler instance
 const errorHandler = new ErrorHandler();
@@ -52,12 +52,7 @@ function initializeMonitoring(): void {
         const observer = new PerformanceObserver((list) => {
           const entries = list.getEntries();
           entries.forEach((entry: PerformanceEntry) => {
-            analytics.track({
-              event: 'long_task',
-              category: 'performance',
-              label: 'detected',
-              value: entry.duration,
-            });
+            analytics.track('long_task', 'performance', 'detected', 'long_task', entry.duration);
           });
         });
         observer.observe({ entryTypes: ['longtask'] });
@@ -79,12 +74,7 @@ function initializeMonitoring(): void {
     });
     
     // Track performance metrics
-    analytics.track({
-      event: 'performance_metrics',
-      category: 'performance',
-      label: 'measured',
-      value: score
-    });
+    analytics.track('performance_metrics', 'performance', 'measured', 'metrics', score);
   } catch (error) {
     // eslint-disable-next-line no-console
     console.error('Failed to initialize monitoring:', error);

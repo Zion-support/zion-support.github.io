@@ -1,233 +1,80 @@
 /**
- * Logger Utility
- * Provides structured logging with different log levels and context
+ * Logger utility for consistent logging across the application
  */
 
-import { isDevelopment, isProduction } from '../config/appConfig';
+export type LogLevel = 'debug' | 'info' | 'warn' | 'error' | 'lifecycle' | 'performance';
 
-export enum LogLevel {
-  DEBUG = 0,
-  INFO = 1,
-  WARN = 2,
-  ERROR = 3,
-}
-
-export interface LogContext {
-  component?: string;
-  action?: string;
-  userId?: string;
-  sessionId?: string;
-  [key: string]: unknown;
-}
-
-export interface LogEntry {
-  timestamp: string;
+interface LogEntry {
   level: LogLevel;
   message: string;
-  context?: LogContext;
-  error?: Error;
+  context?: string;
+  data?: any;
+  timestamp: string;
 }
 
 class Logger {
-  private minLevel: LogLevel;
-  private logs: LogEntry[] = [];
-  private maxLogSize: number = 1000;
+  private isDevelopment = process.env.NODE_ENV === 'development';
 
-  constructor(minLevel: LogLevel = LogLevel.INFO) {
-    this.minLevel = minLevel;
-  }
-
-  /**
-   * Set minimum log level
-   */
-  setMinLevel(level: LogLevel): void {
-    this.minLevel = level;
-  }
-
-  /**
-   * Create a log entry
-   */
-  private createLogEntry(
-    level: LogLevel,
-    message: string,
-    context?: LogContext,
-    error?: Error
-  ): LogEntry {
-    return {
-      timestamp: new Date().toISOString(),
-      level,
-      message,
-      context,
-      error,
-    };
-  }
-
-  /**
-   * Store log entry
-   */
-  private storeLog(entry: LogEntry): void {
-    this.logs.push(entry);
-    if (this.logs.length > this.maxLogSize) {
-      this.logs = this.logs.slice(-this.maxLogSize);
-    }
-  }
-
-  /**
-   * Format log message for console
-   */
-  private formatMessage(entry: LogEntry): string {
-    const levelName = LogLevel[entry.level];
-    let message = `[${entry.timestamp}] ${levelName}: ${entry.message}`;
-    
-    if (entry.context && Object.keys(entry.context).length > 0) {
-      message += ` | Context: ${JSON.stringify(entry.context)}`;
-    }
-    
-    return message;
-  }
-
-  /**
-   * Log a message with a specific level
-   */
-  private log(
-    level: LogLevel,
-    message: string,
-    context?: LogContext,
-    error?: Error
-  ): void {
-    if (level < this.minLevel) {
+  private log(level: LogLevel, message: string, context?: string, data?: any): void {
+    if (!this.isDevelopment && level === 'debug') {
       return;
     }
 
-    const entry = this.createLogEntry(level, message, context, error);
-    this.storeLog(entry);
+    const entry: LogEntry = {
+      level,
+      message,
+      context,
+      data,
+      timestamp: new Date().toISOString(),
+    };
 
-    // Only output to console in development or for errors/warnings in production
-    if (isDevelopment() || level >= LogLevel.WARN) {
-      const formattedMessage = this.formatMessage(entry);
+    const logMessage = `[${entry.timestamp}] ${entry.level.toUpperCase()}${context ? ` [${context}]` : ''}: ${message}`;
 
-      switch (level) {
-        case LogLevel.DEBUG:
-          console.debug(formattedMessage);
-          break;
-        case LogLevel.INFO:
-          console.info(formattedMessage);
-          break;
-        case LogLevel.WARN:
-          console.warn(formattedMessage);
-          if (error) console.warn(error);
-          break;
-        case LogLevel.ERROR:
-          console.error(formattedMessage);
-          if (error) console.error(error);
-          break;
-      }
-    }
-
-    // Send errors to monitoring service in production
-    if (isProduction() && level === LogLevel.ERROR && error) {
-      this.sendToMonitoring(entry);
-    }
-  }
-
-  /**
-   * Send error to monitoring service
-   */
-  private sendToMonitoring(entry: LogEntry): void {
-    // In production, this would send to a monitoring service like Sentry
-    // For now, we'll just store it
-    if (typeof window !== 'undefined' && (window as unknown as { errorMonitoring?: unknown }).errorMonitoring) {
-      try {
-        // Send to error monitoring service
-        const monitoring = (window as unknown as { errorMonitoring: { captureException: (error: Error, context?: LogContext) => void } }).errorMonitoring;
-        if (entry.error) {
-          monitoring.captureException(entry.error, entry.context);
-        }
-      } catch (e) {
-        console.error('Failed to send error to monitoring:', e);
-      }
+    switch (level) {
+      case 'debug':
+        console.debug(logMessage, data || '');
+        break;
+      case 'info':
+        console.info(logMessage, data || '');
+        break;
+      case 'warn':
+        console.warn(logMessage, data || '');
+        break;
+      case 'error':
+        console.error(logMessage, data || '');
+        break;
+      case 'lifecycle':
+        console.log(`🔄 ${logMessage}`, data || '');
+        break;
+      case 'performance':
+        console.log(`⚡ ${logMessage}`, data || '');
+        break;
     }
   }
 
-  /**
-   * Debug level logging
-   */
-  debug(message: string, context?: LogContext): void {
-    this.log(LogLevel.DEBUG, message, context);
+  debug(message: string, context?: string, data?: any): void {
+    this.log('debug', message, context, data);
   }
 
-  /**
-   * Info level logging
-   */
-  info(message: string, context?: LogContext): void {
-    this.log(LogLevel.INFO, message, context);
+  info(message: string, context?: string, data?: any): void {
+    this.log('info', message, context, data);
   }
 
-  /**
-   * Warning level logging
-   */
-  warn(message: string, context?: LogContext, error?: Error): void {
-    this.log(LogLevel.WARN, message, context, error);
+  warn(message: string, context?: string, data?: any): void {
+    this.log('warn', message, context, data);
   }
 
-  /**
-   * Error level logging
-   */
-  error(message: string, error?: Error, context?: LogContext): void {
-    this.log(LogLevel.ERROR, message, context, error);
+  error(message: string, context?: string, data?: any): void {
+    this.log('error', message, context, data);
   }
 
-  /**
-   * Get recent logs
-   */
-  getRecentLogs(count: number = 100): LogEntry[] {
-    return this.logs.slice(-count);
+  lifecycle(message: string, context?: string, data?: any): void {
+    this.log('lifecycle', message, context, data);
   }
 
-  /**
-   * Clear all logs
-   */
-  clearLogs(): void {
-    this.logs = [];
-  }
-
-  /**
-   * Export logs as JSON
-   */
-  exportLogs(): string {
-    return JSON.stringify(this.logs, null, 2);
-  }
-
-  /**
-   * Log performance metrics (development only)
-   */
-  perf(label: string, value: number, unit = 'ms'): void {
-    this.debug(`${label}: ${value}${unit}`, { component: 'performance' });
-  }
-
-  /**
-   * Group related logs (development only)
-   */
-  group(label: string, fn: () => void): void {
-    if (isDevelopment()) {
-      console.group(label);
-      fn();
-      console.groupEnd();
-    }
-  }
-
-  /**
-   * Log with custom styling (development only)
-   */
-  styled(message: string, style: string): void {
-    if (isDevelopment()) {
-      console.log(`%c${message}`, style);
-    }
+  performance(message: string, context?: string, data?: any): void {
+    this.log('performance', message, context, data);
   }
 }
 
-// Create and export singleton instance
-const logger = new Logger(isDevelopment() ? LogLevel.DEBUG : LogLevel.INFO);
-
-export { logger };
-export default logger;
+export const logger = new Logger();

@@ -1,186 +1,101 @@
 /**
- * Analytics and Tracking Utility
- * Provides comprehensive analytics tracking for the application
+ * Analytics tracking utility
+ * Provides methods for tracking user interactions and events
  */
 
-export interface AnalyticsEvent {
-  name: string;
+interface AnalyticsEvent {
   category: string;
-  action?: string;
+  action: string;
   label?: string;
   value?: number;
-  properties?: Record<string, unknown>;
-  timestamp: number;
-}
-
-export interface UserProperties {
-  userId?: string;
-  sessionId: string;
-  userAgent: string;
-  language: string;
-  timezone: string;
-  referrer?: string;
 }
 
 class Analytics {
+  private enabled: boolean = typeof window !== 'undefined';
   private events: AnalyticsEvent[] = [];
-  private userProperties: UserProperties;
-  private sessionId: string;
-
-  constructor() {
-    this.sessionId = this.generateSessionId();
-    this.userProperties = this.initializeUserProperties();
-  }
 
   /**
-   * Generate unique session ID
+   * Track a page view
    */
-  private generateSessionId(): string {
-    return `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-  }
+  trackPageView(path: string): void {
+    if (!this.enabled) return;
 
-  /**
-   * Initialize user properties
-   */
-  private initializeUserProperties(): UserProperties {
-    if (typeof window === 'undefined') {
-      return {
-        sessionId: this.sessionId,
-        userAgent: 'server',
-        language: 'en',
-        timezone: 'UTC',
-      };
+    try {
+      // In production, integrate with your analytics service (GA, Mixpanel, etc.)
+      if (process.env.NODE_ENV === 'development') {
+        console.log('[Analytics] Page view:', path);
+      }
+
+      this.events.push({
+        category: 'pageview',
+        action: 'view',
+        label: path,
+      });
+    } catch (error) {
+      console.error('[Analytics] Failed to track page view:', error);
     }
-
-    return {
-      sessionId: this.sessionId,
-      userAgent: window.navigator.userAgent,
-      language: window.navigator.language,
-      timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
-      referrer: document.referrer || undefined,
-    };
   }
 
   /**
-   * Track an event
+   * Track a custom event
    */
   track(
-    name: string,
+    eventName: string,
     category: string,
-    action?: string,
-    label?: string,
-    value?: number,
-    properties?: Record<string, unknown>
-  ): void {
-    const event: AnalyticsEvent = {
-      name,
-      category,
-      action,
-      label,
-      value,
-      properties,
-      timestamp: Date.now(),
-    };
-
-    this.events.push(event);
-
-    // Send to analytics service
-    this.sendToAnalytics(event);
-
-    // Log in development
-    if (process.env['NODE_ENV'] === 'development') {
-      // Analytics event logged for development
-    }
-  }
-
-  /**
-   * Track page view
-   */
-  trackPageView(page: string, title?: string): void {
-    this.track('page_view', 'navigation', 'view', page, undefined, {
-      page_title: title || document.title,
-      page_url: typeof window !== 'undefined' ? window.location.href : page,
-    });
-  }
-
-  /**
-   * Track user interaction
-   */
-  trackInteraction(
-    element: string,
     action: string,
-    category: string = 'user_interaction'
+    label?: string,
+    value?: number
   ): void {
-    this.track('interaction', category, action, element);
-  }
+    if (!this.enabled) return;
 
-  /**
-   * Track performance metrics
-   */
-  trackPerformance(metric: string, value: number, unit: string = 'ms'): void {
-    this.track('performance', 'metrics', metric, unit, value);
-  }
-
-  /**
-   * Track business events
-   */
-  trackBusinessEvent(
-    event: string,
-    value?: number,
-    properties?: Record<string, unknown>
-  ): void {
-    this.track(event, 'business', 'event', undefined, value, properties);
-  }
-
-  /**
-   * Send event to analytics service
-   */
-  private async sendToAnalytics(_event: AnalyticsEvent): Promise<void> {
     try {
-      // In a real application, you would send to services like Google Analytics, Mixpanel, etc.
-      // Analytics event sent successfully
-    } catch {
-      // Failed to send analytics event - could be reported to error tracking
+      const event: AnalyticsEvent = {
+        category,
+        action,
+        label: label || eventName,
+        value,
+      };
+
+      if (process.env.NODE_ENV === 'development') {
+        console.log('[Analytics] Event:', event);
+      }
+
+      this.events.push(event);
+
+      // Send to analytics service in production
+      if (typeof window !== 'undefined' && (window as any).gtag) {
+        (window as any).gtag('event', action, {
+          event_category: category,
+          event_label: label,
+          value: value,
+        });
+      }
+    } catch (error) {
+      console.error('[Analytics] Failed to track event:', error);
     }
   }
 
   /**
-   * Get all events
+   * Track an error
+   */
+  trackError(error: Error, context?: Record<string, any>): void {
+    this.track('error', 'error', error.message, JSON.stringify(context));
+  }
+
+  /**
+   * Get all tracked events (for debugging)
    */
   getEvents(): AnalyticsEvent[] {
     return [...this.events];
   }
 
   /**
-   * Get events by category
-   */
-  getEventsByCategory(category: string): AnalyticsEvent[] {
-    return this.events.filter(event => event.category === category);
-  }
-
-  /**
-   * Clear all events
+   * Clear all tracked events
    */
   clearEvents(): void {
     this.events = [];
   }
-
-  /**
-   * Get user properties
-   */
-  getUserProperties(): UserProperties {
-    return { ...this.userProperties };
-  }
-
-  /**
-   * Update user properties
-   */
-  updateUserProperties(properties: Partial<UserProperties>): void {
-    this.userProperties = { ...this.userProperties, ...properties };
-  }
 }
 
-// Create singleton instance
 export const analytics = new Analytics();
-
 export default analytics;

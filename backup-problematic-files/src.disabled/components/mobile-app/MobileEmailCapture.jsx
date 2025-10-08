@@ -1,1 +1,0 @@
-const {Mail,CheckCircle,AlertCircle export const MobileEmailCapture = () => { const [email,setEmail] = useState(") const [status}setStatus] = useState("idle")"";"";"""

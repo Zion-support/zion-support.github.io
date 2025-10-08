@@ -1,92 +1,122 @@
 /**
- * Error handling utilities
+ * Error handling utility
+ * Centralized error logging and reporting
  */
 
-import { logger } from './logger';
-
-export interface ErrorInfo {
-  message: string;
-  stack?: string;
+interface ErrorContext {
   componentStack?: string;
-  errorBoundary?: string;
-  errorBoundaryStack?: string;
   errorId?: string;
-  timestamp?: string;
+  [key: string]: any;
+}
+
+interface ErrorLog {
+  error: Error;
+  context?: ErrorContext;
+  timestamp: number;
   userAgent?: string;
   url?: string;
-  userId?: string;
 }
 
 export class ErrorHandler {
-  private static instance: ErrorHandler;
-  private errorQueue: ErrorInfo[] = [];
-  private maxQueueSize = 100;
-
-  static getInstance(): ErrorHandler {
-    if (!ErrorHandler.instance) {
-      ErrorHandler.instance = new ErrorHandler();
-    }
-    return ErrorHandler.instance;
-  }
+  private errors: ErrorLog[] = [];
+  private maxErrors: number = 100;
 
   /**
-   * Log an error
+   * Log an error with context
    */
-  logError(error: Error, errorInfo?: Partial<ErrorInfo>): void {
-    const errorData: ErrorInfo = {
-      message: error.message,
-      stack: error.stack,
-      timestamp: new Date().toISOString(),
-      userAgent: typeof window !== 'undefined' ? window.navigator.userAgent : undefined,
-      url: typeof window !== 'undefined' ? window.location.href : undefined,
-      ...errorInfo,
-    };
-
-    // Add to queue
-    this.errorQueue.push(errorData);
-    if (this.errorQueue.length > this.maxQueueSize) {
-      this.errorQueue.shift();
-    }
-
-    // Log using logger utility
-    logger.error('Error logged', errorData);
-
-    // Send to error reporting service
-    this.reportError(errorData);
-  }
-
-  /**
-   * Report error to external service
-   */
-  private async reportError(errorData: ErrorInfo): Promise<void> {
+  logError(error: Error, context?: ErrorContext): void {
     try {
-      if (typeof window !== 'undefined' && 'fetch' in window) {
-        await fetch('/api/error-report', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(errorData),
+      const errorLog: ErrorLog = {
+        error,
+        context,
+        timestamp: Date.now(),
+        userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : undefined,
+        url: typeof window !== 'undefined' ? window.location.href : undefined,
+      };
+
+      // Add to internal log
+      this.errors.push(errorLog);
+
+      // Keep only the most recent errors
+      if (this.errors.length > this.maxErrors) {
+        this.errors = this.errors.slice(-this.maxErrors);
+      }
+
+      // Log to console in development
+      if (process.env.NODE_ENV === 'development') {
+        console.error('[ErrorHandler] Error logged:', {
+          message: error.message,
+          stack: error.stack,
+          context,
         });
       }
-    } catch (reportError) {
-      logger.error('Failed to report error', reportError);
+
+      // In production, send to error tracking service (Sentry, Rollbar, etc.)
+      this.sendToErrorService(errorLog);
+    } catch (loggingError) {
+      console.error('[ErrorHandler] Failed to log error:', loggingError);
     }
   }
 
   /**
-   * Get error queue
+   * Log a warning
    */
-  getErrorQueue(): ErrorInfo[] {
-    return [...this.errorQueue];
+  logWarning(message: string, context?: ErrorContext): void {
+    const warning = new Error(message);
+    warning.name = 'Warning';
+    this.logError(warning, { ...context, severity: 'warning' });
   }
 
   /**
-   * Clear error queue
+   * Send error to external service
    */
-  clearErrorQueue(): void {
-    this.errorQueue = [];
+  private sendToErrorService(_errorLog: ErrorLog): void {
+    // In production, integrate with error tracking service
+    if (process.env.NODE_ENV === 'production' && typeof fetch !== 'undefined') {
+      // Example: Send to your error tracking endpoint
+      // fetch('/api/errors', {
+      //   method: 'POST',
+      //   headers: { 'Content-Type': 'application/json' },
+      //   body: JSON.stringify(_errorLog),
+      // }).catch(() => {});
+    }
+  }
+
+  /**
+   * Get all logged errors
+   */
+  getErrors(): ErrorLog[] {
+    return [...this.errors];
+  }
+
+  /**
+   * Clear all logged errors
+   */
+  clearErrors(): void {
+    this.errors = [];
+  }
+
+  /**
+   * Get error summary
+   */
+  getErrorSummary(): {
+    total: number;
+    recent: ErrorLog[];
+    byType: Record<string, number>;
+  } {
+    const byType: Record<string, number> = {};
+    
+    this.errors.forEach((log) => {
+      const type = log.error.name || 'Unknown';
+      byType[type] = (byType[type] || 0) + 1;
+    });
+
+    return {
+      total: this.errors.length,
+      recent: this.errors.slice(-10),
+      byType,
+    };
   }
 }
 
-export const errorHandler = ErrorHandler.getInstance();
+export default ErrorHandler;

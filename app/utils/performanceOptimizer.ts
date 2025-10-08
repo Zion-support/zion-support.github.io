@@ -165,7 +165,7 @@ class PerformanceOptimizer {
 
     // This would typically be handled by the bundler (Vite/Webpack)
     // Here we can add runtime optimizations
-    console.log('Code splitting enabled for better performance');
+    if (process.env.NODE_ENV === 'development') { console.log('Code splitting enabled for better performance'); }
   }
 
   /**
@@ -179,10 +179,10 @@ class PerformanceOptimizer {
     // Register service worker for caching
     navigator.serviceWorker.register('/sw.js')
       .then((registration) => {
-        console.log('Service Worker registered:', registration);
+        if (process.env.NODE_ENV === 'development') { console.log('Service Worker registered:', registration); }
       })
       .catch((error) => {
-        console.log('Service Worker registration failed:', error);
+        if (process.env.NODE_ENV === 'development') { console.log('Service Worker registration failed:', error); }
       });
   }
 
@@ -239,6 +239,78 @@ ${metrics.memoryUsage > 30 * 1024 * 1024 ? '- Review memory usage and optimize c
   }
 
   /**
+   * Lazy load images for better performance
+   */
+  lazyLoadImages(): void {
+    if (typeof window === 'undefined') return;
+
+    const images = document.querySelectorAll('img[data-src]');
+    const imageObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const img = entry.target as HTMLImageElement;
+          img.src = img.dataset.src || '';
+          img.removeAttribute('data-src');
+          imageObserver.unobserve(img);
+        }
+      });
+    });
+
+    images.forEach(img => imageObserver.observe(img));
+    if (process.env.NODE_ENV === 'development') {
+      console.log('Lazy loading initialized for images');
+    }
+  }
+
+  /**
+   * Add critical resource hints
+   */
+  addCriticalResourceHints(): void {
+    if (typeof window === 'undefined') return;
+
+    const criticalResources = [
+      { href: '/fonts/inter.woff2', as: 'font', type: 'font/woff2', crossorigin: 'anonymous' },
+      { href: '/css/critical.css', as: 'style' },
+    ];
+
+    criticalResources.forEach(resource => {
+      const link = document.createElement('link');
+      link.rel = 'preload';
+      link.href = resource.href;
+      link.as = resource.as;
+      if (resource.type) link.type = resource.type;
+      if (resource.crossorigin) link.crossOrigin = resource.crossorigin;
+      document.head.appendChild(link);
+    });
+
+    if (process.env.NODE_ENV === 'development') {
+      console.log('Critical resource hints added');
+    }
+  }
+
+  /**
+   * Report web vitals
+   */
+  reportWebVitals(metrics: PerformanceMetrics): void {
+    if (process.env.NODE_ENV === 'development') {
+      console.log('Web Vitals reported', metrics);
+    }
+    
+    // Send to analytics if available
+    if (typeof window !== 'undefined' && (window as { gtag?: Function }).gtag) {
+      Object.entries(metrics).forEach(([key, value]) => {
+        if (typeof value === 'number') {
+          (window as unknown as { gtag: Function }).gtag('event', 'web_vitals', {
+            metric_name: key,
+            metric_value: value,
+            metric_rating: value < 100 ? 'good' : value < 300 ? 'needs-improvement' : 'poor'
+          });
+        }
+      });
+    }
+  }
+
+  /**
    * Optimize the entire application
    */
   optimize(): void {
@@ -246,11 +318,14 @@ ${metrics.memoryUsage > 30 * 1024 * 1024 ? '- Review memory usage and optimize c
     this.enableCodeSplitting();
     this.enableCaching();
     
-    console.log('Performance optimization completed');
-    console.log(this.generateReport());
+    if (process.env.NODE_ENV === 'development') {
+      console.log('Performance optimization completed');
+      console.log(this.generateReport());
+    }
   }
 }
 
 // Export singleton instance
 export const performanceOptimizer = new PerformanceOptimizer();
 export default PerformanceOptimizer;
+export { PerformanceOptimizer, type PerformanceMetrics, type OptimizationConfig };
