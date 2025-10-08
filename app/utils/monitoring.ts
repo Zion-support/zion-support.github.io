@@ -104,10 +104,16 @@ class MonitoringService {
             console.warn('Long task detected:', {
               duration: entry.duration,
               startTime: entry.startTime
-            })
+            });
           }
+<<<<<<< HEAD
         })
         longTaskObserver.observe({ entryTypes: ['longtask'] })
+=======
+        });
+        longTaskObserver.observe({ entryTypes: ['longtask'] });
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-ffb2
       } catch (error) {
         // Long task API might not be available
       }

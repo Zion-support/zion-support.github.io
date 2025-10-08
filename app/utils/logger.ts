@@ -81,26 +81,10 @@ class Logger {
   /**
    * Log an info message
    */
-  info(message: string, contextOrMetadata?: string | Record<string, unknown>, _metadata?: Record<string, unknown>): void {
-    const [context, meta] = this.parseArgs(contextOrMetadata, _metadata)
-
-    this.log(LogLevel.DEBUG, message, context, meta)
-  }
-  /**
-   * Log an info message
-   */
   info(message: string, contextOrMetadata?: string | Record<string, unknown>, metadata?: Record<string, unknown>): void {
     const [context, meta] = this.parseArgs(contextOrMetadata, metadata)
 
     this.log(LogLevel.INFO, message, context, meta)
-  }
-  /**
-   * Log a warning message
-   */
-  warn(message: string, contextOrMetadata?: string | Record<string, unknown>, _metadata?: Record<string, unknown>): void {
-    const [context, meta] = this.parseArgs(contextOrMetadata, _metadata)
-
-    this.log(LogLevel.WARN, message, context, meta)
   }
   /**
    * Log a warning message
@@ -130,12 +114,12 @@ class Logger {
       [context, meta] = this.parseArgs(errorOrContextOrMetadata, contextOrMetadata as Record<string, unknown> | undefined)
     }
     const entry: LogEntry = {
-      level: LogLevel.ERROR
-      message
-      timestamp: new Date()
-      context
+      level: LogLevel.ERROR,
+      message,
+      timestamp: new Date(),
+      context,
       metadata: {
-        ...meta
+        ...meta,
         error: error ? {
           name: error.name
           message: error.message
