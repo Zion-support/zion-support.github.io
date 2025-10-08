@@ -62,7 +62,7 @@ class Logger {
    * Parse arguments to determine context and metadata
    */
   private parseArgs(
-    contextOrMetadata?: string | Record<string, unknown>
+    contextOrMetadata?: string | Record<string, unknown>,
     metadata?: Record<string, unknown>
   ): [string | undefined, Record<string, unknown> | undefined] {
     if (typeof contextOrMetadata === 'string') {
@@ -73,9 +73,6 @@ class Logger {
   /**
    * Log a debug message
    */
-  debug(message: string, contextOrMetadata?: string | Record<string, unknown>, _metadata?: Record<string, unknown>): void {
-    const [context, meta] = this.parseArgs(contextOrMetadata, _metadata)
-
   debug(message: string, contextOrMetadata?: string | Record<string, unknown>, metadata?: Record<string, unknown>): void {
     const [context, meta] = this.parseArgs(contextOrMetadata, metadata)
 
@@ -87,6 +84,11 @@ class Logger {
   info(message: string, contextOrMetadata?: string | Record<string, unknown>, _metadata?: Record<string, unknown>): void {
     const [context, meta] = this.parseArgs(contextOrMetadata, _metadata)
 
+    this.log(LogLevel.DEBUG, message, context, meta)
+  }
+  /**
+   * Log an info message
+   */
   info(message: string, contextOrMetadata?: string | Record<string, unknown>, metadata?: Record<string, unknown>): void {
     const [context, meta] = this.parseArgs(contextOrMetadata, metadata)
 
@@ -98,6 +100,11 @@ class Logger {
   warn(message: string, contextOrMetadata?: string | Record<string, unknown>, _metadata?: Record<string, unknown>): void {
     const [context, meta] = this.parseArgs(contextOrMetadata, _metadata)
 
+    this.log(LogLevel.WARN, message, context, meta)
+  }
+  /**
+   * Log a warning message
+   */
   warn(message: string, contextOrMetadata?: string | Record<string, unknown>, metadata?: Record<string, unknown>): void {
     const [context, meta] = this.parseArgs(contextOrMetadata, metadata)
 

@@ -10,3 +10,10 @@ export default function MultiAgentOpsControlTowerBlueprintPage() {
           <div>
             <div>
               <span>🛰️ MULTI-AGENT OPS CONTROL</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}
