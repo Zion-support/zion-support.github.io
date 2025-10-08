@@ -32,7 +32,7 @@ export default function RootLayout({
     ],
     contactPoint: {
       '@type': 'ContactPoint',
-      telephone: '+1-302-600-9898',
+      telephone: '+1-302-464-0950',
       contactType: 'Customer Service',
       areaServed: 'US',
       availableLanguage: 'en',

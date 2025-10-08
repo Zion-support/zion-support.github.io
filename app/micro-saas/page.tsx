@@ -148,6 +148,117 @@ const MicroSAASPage: React.FC = () => {
       category: 'Sales',
       technologies: ['Machine Learning', 'Python', 'Salesforce API', 'HubSpot API', 'Custom AI Models']
     },
+    // New Advanced AI Services
+    {
+      title: 'AI Voice Assistant Builder',
+      description: 'Create custom voice assistants for customer service, sales, and internal operations.',
+      icon: '🎤',
+      price: '$199/month',
+      features: ['Voice recognition', 'Natural language processing', 'Multi-language support', 'Custom wake words', 'Integration APIs'],
+      benefits: ['Reduce call center costs by 60%', 'Provide 24/7 voice support', 'Improve customer satisfaction'],
+      marketPrice: '$300-600/month',
+      category: 'Voice AI',
+      technologies: ['Google Speech API', 'Amazon Polly', 'OpenAI Whisper', 'React', 'WebRTC']
+    },
+    {
+      title: 'AI Video Analytics Platform',
+      description: 'Real-time video analysis for security, retail analytics, and behavior monitoring.',
+      icon: '📹',
+      price: '$299/month',
+      features: ['Object detection', 'Facial recognition', 'Behavior analysis', 'Real-time alerts', 'Cloud storage'],
+      benefits: ['Improve security by 80%', 'Reduce false alarms', 'Gain valuable insights'],
+      marketPrice: '$500-1000/month',
+      category: 'Computer Vision',
+      technologies: ['OpenCV', 'TensorFlow', 'YOLO', 'React', 'AWS Rekognition']
+    },
+    {
+      title: 'AI Contract Analyzer',
+      description: 'Automated contract review, risk assessment, and compliance checking.',
+      icon: '📋',
+      price: '$179/month',
+      features: ['Contract parsing', 'Risk identification', 'Compliance checking', 'Clause analysis', 'Version comparison'],
+      benefits: ['Reduce review time by 90%', 'Identify risks early', 'Ensure compliance'],
+      marketPrice: '$250-500/month',
+      category: 'Legal Tech',
+      technologies: ['NLP', 'Machine Learning', 'Python', 'React', 'Document AI']
+    },
+    {
+      title: 'AI Supply Chain Optimizer',
+      description: 'Predictive analytics for supply chain management and logistics optimization.',
+      icon: '🚚',
+      price: '$249/month',
+      features: ['Demand forecasting', 'Route optimization', 'Inventory management', 'Supplier analysis', 'Risk assessment'],
+      benefits: ['Reduce costs by 25%', 'Improve delivery times', 'Minimize disruptions'],
+      marketPrice: '$400-800/month',
+      category: 'Supply Chain',
+      technologies: ['Python', 'TensorFlow', 'PostgreSQL', 'React', 'Custom ML Models']
+    },
+    {
+      title: 'AI Energy Management System',
+      description: 'Smart energy monitoring and optimization for buildings and facilities.',
+      icon: '⚡',
+      price: '$159/month',
+      features: ['Energy monitoring', 'Usage optimization', 'Predictive maintenance', 'Cost analysis', 'Carbon tracking'],
+      benefits: ['Reduce energy costs by 30%', 'Improve sustainability', 'Prevent equipment failures'],
+      marketPrice: '$250-500/month',
+      category: 'Energy Tech',
+      technologies: ['IoT Sensors', 'Machine Learning', 'React', 'Node.js', 'Time Series DB']
+    },
+    {
+      title: 'AI Fraud Detection Suite',
+      description: 'Advanced fraud detection for financial transactions and identity verification.',
+      icon: '🛡️',
+      price: '$199/month',
+      features: ['Transaction monitoring', 'Identity verification', 'Risk scoring', 'Real-time alerts', 'Compliance reporting'],
+      benefits: ['Reduce fraud by 85%', 'Save millions in losses', 'Improve customer trust'],
+      marketPrice: '$300-700/month',
+      category: 'Fintech',
+      technologies: ['Machine Learning', 'Python', 'TensorFlow', 'React', 'Blockchain']
+    },
+    {
+      title: 'AI Mental Health Assistant',
+      description: 'AI-powered mental health support and wellness tracking platform.',
+      icon: '🧠',
+      price: '$89/month',
+      features: ['Mood tracking', 'Stress analysis', 'Wellness recommendations', 'Crisis detection', 'Professional referrals'],
+      benefits: ['Improve mental wellness', 'Provide 24/7 support', 'Reduce healthcare costs'],
+      marketPrice: '$150-300/month',
+      category: 'Health Tech',
+      technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'Health APIs']
+    },
+    {
+      title: 'AI Real Estate Analyzer',
+      description: 'Property valuation, market analysis, and investment recommendations.',
+      icon: '🏠',
+      price: '$129/month',
+      features: ['Property valuation', 'Market analysis', 'Investment scoring', 'Rental income prediction', 'Location insights'],
+      benefits: ['Make better investment decisions', 'Save time on research', 'Maximize returns'],
+      marketPrice: '$200-400/month',
+      category: 'Real Estate',
+      technologies: ['Machine Learning', 'Python', 'Real Estate APIs', 'React', 'PostgreSQL']
+    },
+    {
+      title: 'AI Learning Management System',
+      description: 'Personalized learning platform with AI-driven content and progress tracking.',
+      icon: '🎓',
+      price: '$149/month',
+      features: ['Personalized learning paths', 'Progress tracking', 'Skill assessment', 'Content generation', 'Gamification'],
+      benefits: ['Improve learning outcomes', 'Reduce training costs', 'Engage learners better'],
+      marketPrice: '$250-500/month',
+      category: 'EdTech',
+      technologies: ['Machine Learning', 'React', 'Node.js', 'MongoDB', 'Custom AI Models']
+    },
+    {
+      title: 'AI Environmental Monitor',
+      description: 'Environmental data collection and analysis for sustainability and compliance.',
+      icon: '🌱',
+      price: '$119/month',
+      features: ['Air quality monitoring', 'Water quality tracking', 'Waste management', 'Carbon footprint', 'Compliance reporting'],
+      benefits: ['Improve environmental impact', 'Ensure compliance', 'Reduce costs'],
+      marketPrice: '$200-400/month',
+      category: 'Environmental',
+      technologies: ['IoT Sensors', 'Machine Learning', 'React', 'Python', 'Environmental APIs']
+    },
     {
       title: 'AI Security Monitoring Suite',
       description: 'Automated threat detection, vulnerability scanning, and security incident response.',

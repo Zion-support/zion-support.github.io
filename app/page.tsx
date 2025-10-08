@@ -236,8 +236,6 @@ const HomePage: React.FC = () => {
                 </div>
               </article>
             </Suspense>
-<<<<<<< HEAD
-=======
 
             <Suspense fallback={<ServiceCardSkeleton />}>
               <article className="bg-white rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
@@ -254,7 +252,6 @@ const HomePage: React.FC = () => {
                 </div>
               </article>
             </Suspense>
->>>>>>> cursor/analyze-improve-and-deploy-application-144c
           </div>
           
           <div className="grid md:grid-cols-3 gap-8">
@@ -302,8 +299,40 @@ const HomePage: React.FC = () => {
               </ul>
             </article>
           </div>
-<<<<<<< HEAD
-=======
+          
+          {/* Additional Service Categories */}
+          <div className="mt-12">
+            <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">Specialized Solutions</h3>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <article className="bg-gradient-to-br from-blue-50 to-indigo-100 rounded-lg shadow-lg p-6 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                <div className="text-3xl mb-4">🔒</div>
+                <h4 className="text-lg font-semibold text-gray-900 mb-3">Cybersecurity</h4>
+                <p className="text-sm text-gray-600 mb-3">Advanced security solutions to protect your digital assets</p>
+                <div className="text-sm font-semibold text-blue-600">Starting at $2,500/month</div>
+              </article>
+              
+              <article className="bg-gradient-to-br from-green-50 to-emerald-100 rounded-lg shadow-lg p-6 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                <div className="text-3xl mb-4">📊</div>
+                <h4 className="text-lg font-semibold text-gray-900 mb-3">Business Intelligence</h4>
+                <p className="text-sm text-gray-600 mb-3">Data-driven insights for strategic decision making</p>
+                <div className="text-sm font-semibold text-green-600">Starting at $1,800/month</div>
+              </article>
+              
+              <article className="bg-gradient-to-br from-purple-50 to-violet-100 rounded-lg shadow-lg p-6 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                <div className="text-3xl mb-4">⛓️</div>
+                <h4 className="text-lg font-semibold text-gray-900 mb-3">Blockchain & Web3</h4>
+                <p className="text-sm text-gray-600 mb-3">Decentralized solutions and smart contracts</p>
+                <div className="text-sm font-semibold text-purple-600">Starting at $8,000/project</div>
+              </article>
+              
+              <article className="bg-gradient-to-br from-orange-50 to-amber-100 rounded-lg shadow-lg p-6 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                <div className="text-3xl mb-4">📱</div>
+                <h4 className="text-lg font-semibold text-gray-900 mb-3">IoT & Edge Computing</h4>
+                <p className="text-sm text-gray-600 mb-3">Connected devices and edge analytics</p>
+                <div className="text-sm font-semibold text-orange-600">Starting at $2,500/month</div>
+              </article>
+            </div>
+          </div>
           
           <div className="text-center mt-8">
             <a 
@@ -313,7 +342,6 @@ const HomePage: React.FC = () => {
               View All Services
             </a>
           </div>
->>>>>>> cursor/analyze-improve-and-deploy-application-144c
         </section>
 
         {/* Content Carousel */}

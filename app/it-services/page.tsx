@@ -289,6 +289,117 @@ const ITServicesPage: React.FC = () => {
       marketPrice: '$2,500-6,000/month',
       category: 'Asset Management',
       technologies: ['ServiceNow', 'Lansweeper', 'Asset Panda', 'Flexera', 'Microsoft Intune']
+    },
+    // Additional Advanced IT Services
+    {
+      title: 'AI Infrastructure Setup',
+      description: 'Complete AI/ML infrastructure setup with GPU clusters, model deployment, and monitoring.',
+      icon: '🤖',
+      price: 'Starting at $4,500/month',
+      features: ['GPU cluster setup', 'ML pipeline deployment', 'Model versioning', 'A/B testing', 'Performance monitoring'],
+      benefits: ['Accelerate AI development', 'Scale ML operations', 'Reduce infrastructure costs'],
+      marketPrice: '$7,000-15,000/month',
+      category: 'AI Infrastructure',
+      technologies: ['Kubernetes', 'TensorFlow', 'PyTorch', 'MLflow', 'NVIDIA GPUs']
+    },
+    {
+      title: 'Blockchain Development',
+      description: 'Smart contract development, DeFi protocols, and blockchain infrastructure setup.',
+      icon: '⛓️',
+      price: 'Starting at $3,500/month',
+      features: ['Smart contract development', 'DeFi protocols', 'NFT marketplaces', 'Blockchain infrastructure', 'Security auditing'],
+      benefits: ['Enable decentralized solutions', 'Improve transparency', 'Reduce intermediaries'],
+      marketPrice: '$6,000-12,000/month',
+      category: 'Blockchain',
+      technologies: ['Solidity', 'Ethereum', 'Polygon', 'Web3.js', 'Hardhat']
+    },
+    {
+      title: 'IoT Platform Development',
+      description: 'End-to-end IoT solutions including device management, data processing, and analytics.',
+      icon: '🌐',
+      price: 'Starting at $2,800/month',
+      features: ['Device management', 'Data collection', 'Real-time processing', 'Dashboard development', 'Predictive maintenance'],
+      benefits: ['Enable smart operations', 'Improve efficiency', 'Reduce manual monitoring'],
+      marketPrice: '$4,500-9,000/month',
+      category: 'IoT',
+      technologies: ['AWS IoT', 'Azure IoT', 'MQTT', 'InfluxDB', 'Grafana']
+    },
+    {
+      title: 'Microservices Architecture',
+      description: 'Design and implement microservices architecture for scalable, maintainable applications.',
+      icon: '🔧',
+      price: 'Starting at $3,200/month',
+      features: ['Service design', 'API gateway setup', 'Service mesh', 'Container orchestration', 'Monitoring'],
+      benefits: ['Improve scalability', 'Enable independent deployment', 'Reduce system complexity'],
+      marketPrice: '$5,000-10,000/month',
+      category: 'Architecture',
+      technologies: ['Docker', 'Kubernetes', 'Istio', 'Consul', 'Prometheus']
+    },
+    {
+      title: 'Data Engineering & ETL',
+      description: 'Build robust data pipelines, data lakes, and real-time data processing systems.',
+      icon: '📈',
+      price: 'Starting at $2,600/month',
+      features: ['Data pipeline design', 'ETL/ELT processes', 'Data lake setup', 'Stream processing', 'Data quality'],
+      benefits: ['Enable data-driven decisions', 'Improve data quality', 'Reduce processing time'],
+      marketPrice: '$4,000-8,000/month',
+      category: 'Data Engineering',
+      technologies: ['Apache Kafka', 'Apache Spark', 'Airflow', 'Snowflake', 'dbt']
+    },
+    {
+      title: 'Security Operations Center (SOC)',
+      description: '24/7 security monitoring, threat hunting, and incident response services.',
+      icon: '🛡️',
+      price: 'Starting at $4,000/month',
+      features: ['24/7 monitoring', 'Threat hunting', 'Incident response', 'Vulnerability management', 'Compliance reporting'],
+      benefits: ['Detect threats early', 'Minimize security incidents', 'Ensure compliance'],
+      marketPrice: '$6,000-15,000/month',
+      category: 'Security Operations',
+      technologies: ['SIEM', 'SOAR', 'EDR', 'XDR', 'Threat Intelligence']
+    },
+    {
+      title: 'Cloud Cost Optimization',
+      description: 'Analyze and optimize cloud spending to reduce costs while maintaining performance.',
+      icon: '💰',
+      price: 'Starting at $1,500/month',
+      features: ['Cost analysis', 'Resource optimization', 'Reserved instances', 'Spot instances', 'Cost alerts'],
+      benefits: ['Reduce cloud costs by 40%', 'Improve resource utilization', 'Optimize spending'],
+      marketPrice: '$2,500-5,000/month',
+      category: 'Cloud Optimization',
+      technologies: ['AWS Cost Explorer', 'Azure Cost Management', 'CloudHealth', 'Terraform', 'Ansible']
+    },
+    {
+      title: 'API Gateway & Management',
+      description: 'Centralized API management with security, monitoring, and rate limiting.',
+      icon: '🚪',
+      price: 'Starting at $1,800/month',
+      features: ['API gateway setup', 'Rate limiting', 'Authentication', 'Monitoring', 'Documentation'],
+      benefits: ['Centralize API management', 'Improve security', 'Enable API monetization'],
+      marketPrice: '$3,000-6,000/month',
+      category: 'API Management',
+      technologies: ['Kong', 'AWS API Gateway', 'Azure API Management', 'Apigee', 'KrakenD']
+    },
+    {
+      title: 'Container Security',
+      description: 'Comprehensive container security including scanning, runtime protection, and compliance.',
+      icon: '🔐',
+      price: 'Starting at $2,200/month',
+      features: ['Container scanning', 'Runtime protection', 'Image security', 'Compliance checking', 'Vulnerability management'],
+      benefits: ['Secure containerized apps', 'Prevent breaches', 'Ensure compliance'],
+      marketPrice: '$3,500-7,000/month',
+      category: 'Container Security',
+      technologies: ['Twistlock', 'Aqua Security', 'Falco', 'Clair', 'Trivy']
+    },
+    {
+      title: 'Multi-Cloud Strategy',
+      description: 'Design and implement multi-cloud strategies for redundancy, cost optimization, and vendor independence.',
+      icon: '☁️',
+      price: 'Starting at $3,800/month',
+      features: ['Multi-cloud design', 'Vendor management', 'Data synchronization', 'Disaster recovery', 'Cost optimization'],
+      benefits: ['Reduce vendor lock-in', 'Improve reliability', 'Optimize costs'],
+      marketPrice: '$6,000-12,000/month',
+      category: 'Multi-Cloud',
+      technologies: ['Terraform', 'Kubernetes', 'Istio', 'CloudFormation', 'ARM Templates']
     }
   ];
 
