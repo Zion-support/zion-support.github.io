@@ -264,7 +264,7 @@ export class CacheManager<T = unknown> {
       const storage = this.getStorage();
       storage?.removeItem('cache');
     } catch (error) {
-//       console.error('Failed to clear cache storage:', error);
+      console.error('Failed to clear cache storage:', error);
     }
   }
   

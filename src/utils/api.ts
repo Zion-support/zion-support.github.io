@@ -25,7 +25,13 @@ export const fetchWithRetry = async <T = unknown>(
   url: string,
   options: ApiRequestOptions = {}
 ): Promise<ApiResponse<T>> => {
-  const { retries = 3, retryDelay = 1000, timeout = 30000, onRetry, ...fetchOptions } = options;
+  const {
+    retries = 3,
+    retryDelay = 1000,
+    timeout = 30000,
+    onRetry,
+    ...fetchOptions
+  } = options;
 
   let lastError: Error | null = null;
 
@@ -45,11 +51,11 @@ export const fetchWithRetry = async <T = unknown>(
       // Parse response
       let data: T | undefined;
       const contentType = response.headers.get('content-type');
-
+      
       if (contentType?.includes('application/json')) {
-        data = (await response.json()) as T;
+        data = await response.json() as T;
       } else {
-        data = (await response.text()) as T;
+        data = await response.text() as T;
       }
 
       if (!response.ok) {
@@ -63,7 +69,7 @@ export const fetchWithRetry = async <T = unknown>(
       };
     } catch (error) {
       lastError = error instanceof Error ? error : new Error(String(error));
-
+      
       // Don't retry on client errors (4xx)
       if (error instanceof Error && error.message.includes('HTTP 4')) {
         break;
@@ -74,7 +80,7 @@ export const fetchWithRetry = async <T = unknown>(
         if (onRetry) {
           onRetry(attempt + 1, lastError);
         }
-
+        
         logger.warn(`API request failed, retrying (${attempt + 1}/${retries})`, {
           url,
           error: lastError.message,

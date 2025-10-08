@@ -126,7 +126,7 @@ class PerformanceMonitor {
         return duration;
       }
     } catch (error) {
-//       console.warn('Failed to measure performance:', error);
+      console.warn('Failed to measure performance:', error);
     }
     return null;
   }
@@ -218,9 +218,8 @@ class PerformanceMonitor {
       // Observe First Input Delay (FID)
       const fidObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
-        entries.forEach((entry: unknown) => {
-          const fidEntry = entry as PerformanceEventTiming;
-          const metric = this.createMetric('FID', fidEntry.processingStart - fidEntry.startTime);
+        entries.forEach((entry: any) => {
+          const metric = this.createMetric('FID', entry.processingStart - entry.startTime);
           this.webVitals.FID = metric;
           this.notifyCallbacks(metric);
         });
@@ -232,10 +231,9 @@ class PerformanceMonitor {
       let clsValue = 0;
       const clsObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
-        entries.forEach((entry: unknown) => {
-          const clsEntry = entry as LayoutShift;
-          if (!clsEntry.hadRecentInput) {
-            clsValue += clsEntry.value;
+        entries.forEach((entry: any) => {
+          if (!entry.hadRecentInput) {
+            clsValue += entry.value;
           }
         });
         const metric = this.createMetric('CLS', clsValue);
@@ -296,14 +294,13 @@ class PerformanceMonitor {
     try {
       const resourceObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
-        entries.forEach((entry: unknown) => {
-          const resourceEntry = entry as PerformanceResourceTiming;
-          if (resourceEntry.initiatorType) {
+        entries.forEach((entry: any) => {
+          if (entry.initiatorType) {
             this.trackMetric(
-              `resource_${resourceEntry.initiatorType}`,
-              resourceEntry.duration,
+              `resource_${entry.initiatorType}`,
+              entry.duration,
               'ms',
-              { name: resourceEntry.name }
+              { name: entry.name }
             );
           }
         });
@@ -311,7 +308,7 @@ class PerformanceMonitor {
       resourceObserver.observe({ entryTypes: ['resource'] });
       this.observers.push(resourceObserver);
     } catch (error) {
-//       console.warn('Failed to observe resource timing:', error);
+      console.warn('Failed to observe resource timing:', error);
     }
   }
 

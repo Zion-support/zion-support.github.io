@@ -11,7 +11,7 @@ export interface PerformanceMetrics {
 export const reportWebVitals = (metric: unknown) => {
   // Log to console in development
   if (process.env['NODE_ENV'] === 'development') {
-    //     if (process.env.DEV) { console.log('[Web Vitals]', metric); }
+//     if (process.env.DEV) { console.log('[Web Vitals]', metric); }
   }
 
   // Send to analytics in production
@@ -38,7 +38,9 @@ export const measurePageLoad = (): PerformanceMetrics => {
     };
   }
 
-  const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+  const navigation = performance.getEntriesByType(
+    'navigation'
+  )[0] as PerformanceNavigationTiming;
 
   return {
     fcp: null, // Will be measured by web-vitals library
@@ -53,19 +55,17 @@ export const logPerformance = (label: string) => {
   if (typeof performance !== 'undefined') {
     const mark = `${label}-start`;
     performance.mark(mark);
-
+    
     return () => {
       const endMark = `${label}-end`;
       performance.mark(endMark);
       performance.measure(label, mark, endMark);
-
+      
       const measure = performance.getEntriesByName(label)[0];
-      if (process.env.DEV) {
-        console.log(`[Performance] ${label}: ${measure.duration.toFixed(2)}ms`);
-      }
+      if (process.env.DEV) { console.log(`[Performance] ${label}: ${measure.duration.toFixed(2)}ms`); }
     };
   }
-
+  
   return () => {};
 };
 
