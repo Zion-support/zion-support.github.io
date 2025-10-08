@@ -10,8 +10,12 @@ import { performanceOptimizer } from '../utils/performanceOptimizer';
 import { errorHandler } from '../utils/enhancedErrorHandler';
 
 // Helper functions
+const collectPerformanceMetrics = () => {
+  return performanceOptimizer.getMetrics();
+};
+
 const calculatePerformanceScore = () => {
-  const metrics = performanceOptimizer.getMetrics();
+  const metrics = collectPerformanceMetrics();
   if (!metrics) return 0;
   
   let score = 100;
@@ -97,7 +101,7 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
   // Update metrics
   const updateMetrics = useCallback(() => {
     try {
-      const performanceMetrics = performanceOptimizer.getMetrics();
+      const performanceMetrics = collectPerformanceMetrics();
       const performanceScore = calculatePerformanceScore();
       const errorStats = errorHandler.getErrorStatistics();
 
@@ -106,10 +110,6 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
 
       // Get network info
       const networkInfo = getNetworkInfo();
-
-      // Calculate performance score
-      const performanceMetrics = performanceOptimizer.getMetrics();
-      const performanceScore = calculatePerformanceScore();
 
       const newMetrics: SystemMetrics = {
         performance: {
@@ -211,7 +211,7 @@ console.error('Failed to update metrics:', error);
 
     const exportData = {
       metrics,
-      performanceData: performanceOptimizer.getMetrics(),
+      performanceData: collectPerformanceMetrics(),
       errorData: errorHandler.exportErrorData(),
       timestamp: new Date().toISOString(),
     };

@@ -1,28 +1,8 @@
 import React from 'react';
 import dynamic from 'next/dynamic';
-// import { UnifiedBanner, bannerConfigurations } from './components/UnifiedBannerSystem';
-// import { LazyWrapper } from './components/LazyLoader';
 import SEOOptimizer from './components/SEOOptimizer';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import PerformanceMonitor from './components/PerformanceMonitor';
-
-// Lazy load heavy components
-const UnifiedContentPromotion = dynamic(() => import('./components/UnifiedContentPromotion'), {
-  loading: () => <div className="animate-pulse bg-gray-200 h-32 rounded-lg"></div>,
-  ssr: false
-});
-
-// const InteractiveAIROICalculator = dynamic(() => import('./components/InteractiveAIROICalculator'), {
-//   loading: () => <div className="animate-pulse bg-gray-200 h-64 rounded-lg"></div>
-// });
-
-// const ContentShowcase = dynamic(() => import('./components/ContentShowcase'), {
-//   loading: () => <div className="animate-pulse bg-gray-200 h-48 rounded-lg"></div>
-// });
-
-// const InteractiveContentShowcase2026 = dynamic(() => import('./components/InteractiveContentShowcase2026'), {
-//   loading: () => <div className="animate-pulse bg-gray-200 h-48 rounded-lg"></div>
-// });
 
 export const metadata = {
   title: 'Zion Tech Group — AI Enterprise Transformation & IT Services | 300% ROI Guaranteed',
@@ -73,12 +53,11 @@ export default function OptimizedHomePage() {
   return (
     <div className="min-h-screen bg-white">
       <SEOOptimizer />
-      <AccessibilityEnhancer>
-        <PerformanceMonitor />
-      </AccessibilityEnhancer>
+      <AccessibilityEnhancer />
+      <PerformanceMonitor />
       
-      {/* Unified Banner System - Commented out due to missing components */}
-      {/* <UnifiedBanner configurations={bannerConfigurations} /> */}
+      {/* Unified Banner System */}
+      <UnifiedBanner configurations={bannerConfigurations} />
       
       {/* Main Content */}
       <main className="relative">
@@ -116,23 +95,25 @@ export default function OptimizedHomePage() {
           </div>
         </section>
 
-        {/* ROI Calculator Section - Commented out due to missing components */}
-        {/* <LazyWrapper>
+        {/* ROI Calculator Section */}
+        <LazyWrapper>
           <InteractiveAIROICalculator />
-        </LazyWrapper> */}
+        </LazyWrapper>
 
-        {/* Content Showcase - Commented out due to missing components */}
-        {/* <LazyWrapper>
+        {/* Content Showcase */}
+        <LazyWrapper>
           <ContentShowcase />
-        </LazyWrapper> */}
+        </LazyWrapper>
 
-        {/* Interactive Content Showcase 2026 - Commented out due to missing components */}
-        {/* <LazyWrapper>
+        {/* Interactive Content Showcase 2026 */}
+        <LazyWrapper>
           <InteractiveContentShowcase2026 />
-        </LazyWrapper> */}
+        </LazyWrapper>
 
         {/* Unified Content Promotion */}
-        <UnifiedContentPromotion />
+        <LazyWrapper>
+          <UnifiedContentPromotion />
+        </LazyWrapper>
       </main>
     </div>
   );

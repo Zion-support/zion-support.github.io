@@ -25,7 +25,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   const [isHighContrast, setIsHighContrast] = useState(false);
   const [isReducedMotion, setIsReducedMotion] = useState(false);
   const [focusVisible, setFocusVisible] = useState(false);
-  const [fontSize, _setFontSize] = useState(16);
+  const [fontSize, setFontSize] = useState(16);
   const skipLinkRef = useRef<HTMLAnchorElement | null>(null);
 
   const defaultConfig: AccessibilityConfig = {
@@ -267,10 +267,8 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     }
   };
 
-  // Font size setter wrapper
-  const setFontSize = useCallback((size: number) => {
-    _setFontSize(size);
-  }, []);
+  // Expose utility functions
+  // Note: useImperativeHandle removed as component doesn't use forwardRef
   // Helper functions
   const addSkipLinks = useCallback(() => {
     const skipLinksContainer = document.createElement('div');

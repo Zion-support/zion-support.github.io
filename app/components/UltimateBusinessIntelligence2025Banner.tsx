@@ -3,7 +3,6 @@ import Link from 'next/link';
 
 const UltimateBusinessIntelligence2025Banner = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [isVisible, setIsVisible] = useState(true);
 
   const content = [
     {
@@ -21,18 +20,18 @@ const UltimateBusinessIntelligence2025Banner = () => {
       tags: ['AI', 'Business Intelligence', 'Enterprise', 'ROI', '2025']
     },
     {
-      id: 'ai-dashboard-2025',
-      title: 'Revolutionary AI Dashboard 2025',
-      description: 'Experience the future of data visualization with our cutting-edge AI dashboard featuring real-time analytics and predictive insights.',
-      url: '/services/ai-dashboard',
-      type: 'Service',
+      id: 'fortune-500-case-study',
+      title: 'Fortune 500 Ultimate Business Intelligence Success',
+      description: 'How a $15.2B manufacturing giant achieved 30,000% ROI through AI-powered business intelligence transformation.',
+      url: '/case-studies/fortune-500-ultimate-business-intelligence-30000-roi-success-story',
+      type: 'Case Study',
       metrics: {
-        users: '1M+',
-        uptime: '99.9%',
-        response: '<100ms',
-        insights: 'Real-time'
+        roi: '30,000%',
+        savings: '$750M',
+        timeline: '18 months',
+        efficiency: '500%'
       },
-      tags: ['Dashboard', 'Analytics', 'Real-time', 'AI', '2025']
+      tags: ['Case Study', 'Fortune 500', '30,000% ROI', 'Success Story', 'Manufacturing']
     },
     {
       id: 'enterprise-automation-2025',
@@ -57,12 +56,6 @@ const UltimateBusinessIntelligence2025Banner = () => {
 
     return () => clearInterval(timer);
   }, [content.length]);
-
-  const handleClose = () => {
-    setIsVisible(false);
-  };
-
-  if (!isVisible) return null;
 
   const currentContent = content[currentSlide];
 
@@ -112,34 +105,26 @@ const UltimateBusinessIntelligence2025Banner = () => {
                   NEW 2025
                 </span>
               </div>
-              
-              <button
-                onClick={handleClose}
-                className="text-gray-300 hover:text-white transition-colors text-2xl"
-                aria-label="Close banner"
-              >
-                ×
-              </button>
             </div>
 
-            {/* Key Metrics */}
+            {/* Metrics Grid */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8">
               {Object.entries(currentContent.metrics).map(([key, value]) => (
                 <div key={key} className="text-center">
-                  <div className="text-2xl font-bold text-cyan-400">{value}</div>
-                  <div className="text-xs text-gray-300 capitalize">
+                  <div className="text-3xl font-bold text-cyan-400 mb-2">{value}</div>
+                  <div className="text-sm text-gray-300 capitalize">
                     {key.replace(/([A-Z])/g, ' $1').trim()}
                   </div>
                 </div>
               ))}
             </div>
-            
+
             {/* Tags */}
             <div className="flex flex-wrap gap-2 mb-8">
               {currentContent.tags.map((tag) => (
                 <span
                   key={tag}
-                  className="bg-white/10 text-white px-3 py-1 rounded-full text-xs font-medium"
+                  className="bg-white/10 text-white px-3 py-1 rounded-full text-sm border border-white/20"
                 >
                   {tag}
                 </span>
