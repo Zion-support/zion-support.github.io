@@ -5,16 +5,16 @@ const PerformanceOptimizer: React.FC = () => {
     // Preload critical resources
     const preloadCriticalResources = () => {
       const criticalResources = [
-        '/fonts/inter-var.woff2',
-        '/images/hero-bg.webp',
-        '/images/logo.svg'
+        '/fonts/inter.woff2',
+        '/images/hero-bg.jpg',
+        '/icons/logo.svg'
       ];
 
       criticalResources.forEach(resource => {
         const link = document.createElement('link');
         link.rel = 'preload';
         link.href = resource;
-        link.as = resource.endsWith('.woff2') ? 'font' : 'image';
+        link.as = resource.endsWith('.woff2') ? 'font' : resource.endsWith('.jpg') ? 'image' : 'image';
         if (resource.endsWith('.woff2')) {
           link.crossOrigin = 'anonymous';
         }
@@ -39,44 +39,46 @@ const PerformanceOptimizer: React.FC = () => {
       images.forEach(img => imageObserver.observe(img));
     };
 
-    // Defer non-critical JavaScript
-    const deferNonCriticalJS = () => {
-      const scripts = document.querySelectorAll('script[data-defer]');
-      scripts.forEach(script => {
-        const newScript = document.createElement('script');
-        newScript.src = script.getAttribute('src') || '';
-        newScript.async = true;
-        script.parentNode?.replaceChild(newScript, script);
-      });
+    // Optimize animations
+    const optimizeAnimations = () => {
+      // Reduce motion for users who prefer it
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        document.documentElement.style.setProperty('--animation-duration', '0.01ms');
+        document.documentElement.style.setProperty('--transition-duration', '0.01ms');
+      }
+    };
+
+    // Optimize scroll performance
+    const optimizeScroll = () => {
+      let ticking = false;
+      
+      const updateScrollPosition = () => {
+        // Throttle scroll events
+        if (!ticking) {
+          requestAnimationFrame(() => {
+            // Update scroll-dependent elements here
+            ticking = false;
+          });
+          ticking = true;
+        }
+      };
+
+      window.addEventListener('scroll', updateScrollPosition, { passive: true });
+      
+      return () => {
+        window.removeEventListener('scroll', updateScrollPosition);
+      };
     };
 
     // Initialize optimizations
     preloadCriticalResources();
     optimizeImages();
-    deferNonCriticalJS();
+    optimizeAnimations();
+    const cleanupScroll = optimizeScroll();
 
-    // Performance monitoring
-    if ('performance' in window) {
-      const observer = new PerformanceObserver((list) => {
-        list.getEntries().forEach((entry) => {
-          if (entry.entryType === 'largest-contentful-paint') {
-            console.log('LCP:', entry.startTime);
-          }
-          if (entry.entryType === 'first-input') {
-            console.log('FID:', entry.processingStart - entry.startTime);
-          }
-        });
-      });
-
-      try {
-        observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input'] });
-      } catch (e) {
-        console.warn('Performance Observer not supported');
-      }
-    }
-
+    // Cleanup on unmount
     return () => {
-      // Cleanup if needed
+      cleanupScroll();
     };
   }, []);
 
