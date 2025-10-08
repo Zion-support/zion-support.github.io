@@ -218,10 +218,10 @@ class HealthCheckService {
    */
   private checkBrowserAPIs(): HealthCheck {
     const requiredAPIs = [
-      'fetch'
-      'localStorage'
-      'sessionStorage'
-      'console'
+      'fetch',
+      'localStorage',
+      'sessionStorage',
+      'console',
       'navigator'
     ]
 

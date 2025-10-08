@@ -27,7 +27,7 @@ export const errorHandler = (error: AppError | Error) => {
     statusCode: appError.statusCode || 500
   };
 };
-export const asyncHandler = (fn: Function) => (req: unknown, res: unknown, next: unknown) => {
+export const asyncHandler = (fn: (req: unknown, res: unknown, next: unknown) => Promise<unknown>) => (req: unknown, res: unknown, next: unknown) => {
   Promise.resolve(fn(req, res, next)).catch((error: unknown) => {
     if (next && typeof next === 'function') {
       next(error);

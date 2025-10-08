@@ -100,14 +100,13 @@ class EnhancedErrorMonitoring {
    */
   private setupNetworkErrorMonitoring(): void {
     const originalFetch = window.fetch
-    const self = this
 
-    window.fetch = async function(...args) {
+    window.fetch = async (...args) => {
       try {
-        const response = await originalFetch.apply(this, args)
+        const response = await originalFetch.apply(window, args)
         
         if (!response.ok) {
-          self.handleError(new Error(`HTTP ${response.status}: ${response.statusText}`), {
+          this.handleError(new Error(`HTTP ${response.status}: ${response.statusText}`), {
             url: args[0] as string,
             status: response.status,
             statusText: response.statusText,
@@ -116,7 +115,7 @@ class EnhancedErrorMonitoring {
         }
         return response
       } catch (error) {
-        self.handleError(error as Error, {
+        this.handleError(error as Error, {
           url: args[0] as string,
           category: 'network'
         })
@@ -317,9 +316,9 @@ class EnhancedErrorMonitoring {
     }, {} as Record<string, number>)
 
     return {
-      total: this.errorQueue.length
-      bySeverity
-      byCategory
+      total: this.errorQueue.length,
+      bySeverity,
+      byCategory,
       recent: recent.slice(0, 10)
     }
   }
