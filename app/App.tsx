@@ -90,11 +90,10 @@ const App: React.FC = () => {
             description="Leading provider of enterprise AI solutions, quantum computing, and autonomous systems. Transform your business with our cutting-edge technology."
           >
             <AdvancedSEOOptimizer
-              config={{
+              seoData={{
                 title: 'Zion Tech Group - Advanced AI and IT Solutions',
                 description: 'Leading provider of enterprise AI solutions, quantum computing, and autonomous systems. Transform your business with our cutting-edge technology.',
                 keywords: ['AI solutions', 'enterprise AI', 'quantum computing', 'autonomous systems', 'digital transformation', 'automation', 'cloud services', 'AI consulting', 'business intelligence', 'machine learning'],
-                url: 'https://ziontechgroup.com',
                 canonicalUrl: 'https://ziontechgroup.com'
               }}
               enableStructuredData={true}
