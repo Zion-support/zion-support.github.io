@@ -66,8 +66,7 @@ export class MiddlewareExecutor {
 export const loggingMiddleware: Middleware = async (context, next) => {
   const startTime = Date.now();
   
-  logger.info('Request started', {
-    component: 'RequestMiddleware',
+  logger.info('Request started', 'RequestMiddleware', {
     method: context.request.method,
     url: context.request.url,
   });
@@ -76,8 +75,7 @@ export const loggingMiddleware: Middleware = async (context, next) => {
     const result = await next();
     const duration = Date.now() - startTime;
 
-    logger.info('Request completed', {
-      component: 'RequestMiddleware',
+    logger.info('Request completed', 'RequestMiddleware', {
       method: context.request.method,
       url: context.request.url,
       status: context.response?.status,
@@ -88,8 +86,7 @@ export const loggingMiddleware: Middleware = async (context, next) => {
   } catch (error) {
     const duration = Date.now() - startTime;
 
-    logger.error('Request failed', error as Error, {
-      component: 'RequestMiddleware',
+    logger.error('Request failed', error as Error, 'RequestMiddleware', {
       method: context.request.method,
       url: context.request.url,
       duration,
@@ -135,10 +132,7 @@ export const errorHandlingMiddleware: Middleware = async (context, next) => {
       method: context.request.method,
     };
 
-    logger.error('Request error handled', error as Error, {
-      component: 'ErrorHandlingMiddleware',
-      ...standardError,
-    });
+    logger.error('Request error handled', error as Error, 'ErrorHandlingMiddleware', standardError);
 
     throw standardError;
   }

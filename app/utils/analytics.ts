@@ -51,7 +51,7 @@ class AnalyticsService {
 
       // Send to Google Analytics if available
       if (this.hasGtag()) {
-        window.gtag!('event', event.action, {
+        (window as any).gtag('event', event.action, {
           event_category: event.category,
           event_label: event.label,
           value: event.value,
@@ -74,7 +74,7 @@ class AnalyticsService {
   trackPageView(path: string, title?: string): void {
     try {
       if (this.hasGtag()) {
-        window.gtag!('config', this.getGtagId(), {
+        (window as any).gtag('config', this.getGtagId(), {
           page_path: path,
           page_title: title,
         });
@@ -90,7 +90,7 @@ class AnalyticsService {
   identifyUser(user: AnalyticsUser): void {
     try {
       if (this.hasGtag() && user.id) {
-        window.gtag!('set', 'user_properties', {
+        (window as any).gtag('set', 'user_properties', {
           user_id: user.id,
           ...user.properties,
         });
@@ -126,7 +126,7 @@ class AnalyticsService {
   ): void {
     try {
       if (this.hasGtag()) {
-        window.gtag!('event', 'timing_complete', {
+        (window as any).gtag('event', 'timing_complete', {
           name: variable,
           value: Math.round(value),
           event_category: category,
@@ -142,7 +142,7 @@ class AnalyticsService {
    * Track performance metrics
    */
   trackPerformance(metric: string, value: number, metadata?: Record<string, unknown>): void {
-    this.trackTiming('performance', metric, value, metadata?.label as string | undefined);
+    this.trackTiming('performance', metric, value, metadata?.label as string);
   }
 
   /**
@@ -156,20 +156,20 @@ class AnalyticsService {
   }
 
   /**
-   * Get Google Tag ID
+   * Get Google Analytics ID
    */
   private getGtagId(): string {
-    return process.env['NEXT_PUBLIC_GA_ID'] || process.env['GA_TRACKING_ID'] || 'G-XXXXXXXXXX';
+    // Return the tracking ID from environment or config
+    return process.env['NEXT_PUBLIC_GA_ID'] || 'GA_MEASUREMENT_ID';
   }
 
   /**
-   * Queue an event for later processing
+   * Queue event for later processing
    */
   private queueEvent(event: AnalyticsEvent): void {
-    if (this.queue.length >= this.maxQueueSize) {
-      this.queue.shift(); // Remove oldest event
+    if (this.queue.length < this.maxQueueSize) {
+      this.queue.push(event);
     }
-    this.queue.push(event);
   }
 
   /**
@@ -192,7 +192,6 @@ export const analytics = new AnalyticsService();
 export const trackEvent = (event: AnalyticsEvent) => analytics.trackEvent(event);
 export const trackPageView = (path: string, title?: string) =>
   analytics.trackPageView(path, title);
-export const identifyUser = (user: AnalyticsUser) => analytics.identifyUser(user);
 export const trackError = (error: Error, metadata?: Record<string, unknown>) =>
   analytics.trackError(error, metadata);
 export const trackTiming = (
@@ -201,10 +200,11 @@ export const trackTiming = (
   value: number,
   label?: string
 ) => analytics.trackTiming(category, variable, value, label);
-export const trackPerformance = (
-  metric: string,
-  value: number,
-  metadata?: Record<string, unknown>
-) => analytics.trackPerformance(metric, value, metadata);
+export const identifyUser = (user: AnalyticsUser) => analytics.identifyUser(user);
+
+// Initialize on import
+if (typeof window !== 'undefined') {
+  analytics.initialize();
+}
 
 export default analytics;

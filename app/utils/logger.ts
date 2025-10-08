@@ -55,25 +55,22 @@ class Logger {
   /**
    * Log a debug message
    */
-  debug(message: string, contextOrMetadata?: string | Record<string, unknown>, metadata?: Record<string, unknown>): void {
-    const [context, meta] = this.parseContextAndMetadata(contextOrMetadata, metadata);
-    this.log(LogLevel.DEBUG, message, context, meta);
+  debug(message: string, context?: string, metadata?: Record<string, unknown>): void {
+    this.log(LogLevel.DEBUG, message, context, metadata);
   }
 
   /**
    * Log an info message
    */
-  info(message: string, contextOrMetadata?: string | Record<string, unknown>, metadata?: Record<string, unknown>): void {
-    const [context, meta] = this.parseContextAndMetadata(contextOrMetadata, metadata);
-    this.log(LogLevel.INFO, message, context, meta);
+  info(message: string, context?: string, metadata?: Record<string, unknown>): void {
+    this.log(LogLevel.INFO, message, context, metadata);
   }
 
   /**
    * Log a warning message
    */
-  warn(message: string, contextOrMetadata?: string | Record<string, unknown>, metadata?: Record<string, unknown>): void {
-    const [context, meta] = this.parseContextAndMetadata(contextOrMetadata, metadata);
-    this.log(LogLevel.WARN, message, context, meta);
+  warn(message: string, context?: string, metadata?: Record<string, unknown>): void {
+    this.log(LogLevel.WARN, message, context, metadata);
   }
 
   /**
@@ -81,30 +78,17 @@ class Logger {
    */
   error(
     message: string,
-    errorOrContextOrMetadata?: Error | string | Record<string, unknown>,
-    contextOrMetadata?: string | Record<string, unknown>,
+    error?: Error,
+    context?: string,
     metadata?: Record<string, unknown>
   ): void {
-    let error: Error | undefined;
-    let context: string | undefined;
-    let meta: Record<string, unknown> | undefined;
-
-    // Parse parameters based on types
-    if (errorOrContextOrMetadata instanceof Error) {
-      error = errorOrContextOrMetadata;
-      [context, meta] = this.parseContextAndMetadata(contextOrMetadata, metadata);
-    } else {
-      error = undefined;
-      [context, meta] = this.parseContextAndMetadata(errorOrContextOrMetadata, contextOrMetadata as Record<string, unknown> | undefined);
-    }
-
     const entry: LogEntry = {
       level: LogLevel.ERROR,
       message,
       timestamp: new Date(),
       context,
       metadata: {
-        ...meta,
+        ...metadata,
         error: error ? {
           name: error.name,
           message: error.message,
@@ -148,23 +132,25 @@ class Logger {
   }
 
   /**
-   * Log performance metric
+   * Log a performance metric
    */
-  perf(metric: string, value: number, metadata?: Record<string, unknown>): void {
-    this.debug(`Performance: ${metric}`, { value, ...metadata });
+  perf(metric: string, value: number, context?: string, metadata?: Record<string, unknown>): void {
+    this.log(LogLevel.DEBUG, `Performance: ${metric} = ${value}ms`, context, { ...metadata, metric, value });
   }
 
   /**
-   * Log a group of related messages
+   * Group related log messages
    */
-  group(label: string, callback: () => void): void {
-    if (typeof console.group === 'function') {
+  group(label: string, callback: () => void, context?: string): void {
+    if (this.config.enableConsole) {
       console.group(label);
+    }
+    try {
       callback();
-      console.groupEnd();
-    } else {
-      this.debug(`Group: ${label}`);
-      callback();
+    } finally {
+      if (this.config.enableConsole) {
+        console.groupEnd();
+      }
     }
   }
 
@@ -214,21 +200,6 @@ class Logger {
     if (this.config.enableRemote) {
       this.startFlushTimer();
     }
-  }
-
-  /**
-   * Parse context and metadata parameters
-   */
-  private parseContextAndMetadata(
-    contextOrMetadata?: string | Record<string, unknown>,
-    metadata?: Record<string, unknown>
-  ): [string | undefined, Record<string, unknown> | undefined] {
-    if (typeof contextOrMetadata === 'string') {
-      return [contextOrMetadata, metadata];
-    } else if (typeof contextOrMetadata === 'object') {
-      return [undefined, contextOrMetadata];
-    }
-    return [undefined, undefined];
   }
 
   /**
