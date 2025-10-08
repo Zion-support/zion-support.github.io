@@ -43,11 +43,7 @@ class ImprovedErrorBoundary extends Component<Props, State> {
     monitoring.logError({
       message: error.message,
       stack: error.stack,
-<<<<<<< HEAD
-      component: errorInfo.componentStack || undefined,
-=======
       component: errorInfo.componentStack ?? undefined,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-4560
       timestamp: Date.now(),
       userAgent: navigator.userAgent,
       url: window.location.href,
