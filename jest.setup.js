@@ -1,5 +1,6 @@
 // Learn more: https://github.com/testing-library/jest-dom
 require('@testing-library/jest-dom');
+const React = require('react');
 const { TextEncoder, TextDecoder } = require('util');
 
 // Polyfills for Node.js environment
@@ -117,10 +118,10 @@ beforeAll(() => {
     ) {
       return;
     }
-    _originalError.call(console, ...args);
+    originalError.call(console, ...args);
   });
 });
 
 afterAll(() => {
-  console.error = _originalError;
+  console.error = originalError;
 });
