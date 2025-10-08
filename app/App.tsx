@@ -11,6 +11,27 @@ import AdvancedSEOOptimizer from './components/AdvancedSEOOptimizer';
 import SEOEnhancer from './components/SEOEnhancer';
 import LoadingSpinner from './components/LoadingSpinner';
 
+// Types
+interface ErrorBoundaryProps {
+  children: React.ReactNode;
+}
+
+interface ErrorBoundaryState {
+  hasError: boolean;
+  error: Error | null;
+}
+
+// Utils
+import { logger } from './utils/logger';
+import { lazyLoadImages, preloadCriticalResources } from './utils/performanceOptimizer';
+
+// Pages
+import HomePage from './page';
+
+// Components
+import PerformanceDashboard from '../components/PerformanceDashboard';
+import AdvancedPerformanceMonitor from './components/AdvancedPerformanceMonitor';
+
 class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundaryState> {
   constructor(props: ErrorBoundaryProps) {
     super(props);
@@ -24,6 +45,7 @@ class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundarySta
   override componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
     console.error('App Error Boundary caught an error:', error, errorInfo);
   }
+}
 
 const App: React.FC = () => {
   useEffect(() => {
@@ -33,20 +55,11 @@ const App: React.FC = () => {
     // Initialize performance monitoring
     lazyLoadImages();
     preloadCriticalResources();
-    performanceOptimizer.init();
     
     // Initialize Web Vitals monitoring
     if (typeof window !== 'undefined' && 'performance' in window) {
-      const pageLoadMetrics = collectPerformanceMetrics();
-      const metrics = performanceOptimizer.getMetrics();
-      if (pageLoadMetrics) {
-        // eslint-disable-next-line no-console
-        console.log('Performance metrics collected:', pageLoadMetrics);
-      }
-      if (metrics) {
-        // eslint-disable-next-line no-console
-        console.log('Performance metrics:', metrics);
-      }
+      // eslint-disable-next-line no-console
+      console.log('Performance monitoring initialized');
     }
     
     logger.lifecycle('Performance monitoring initialized', 'App');
@@ -72,12 +85,10 @@ const App: React.FC = () => {
             description="Leading provider of enterprise AI solutions, quantum computing, and autonomous systems. Transform your business with our cutting-edge technology."
           >
             <AdvancedSEOOptimizer
-              config={{
+              seoData={{
                 title: 'Zion Tech Group - Advanced AI and IT Solutions',
-                description: 'Leading provider of enterprise AI solutions, quantum computing, and autonomous systems. Transform your business with our cutting-edge technology.',
-                keywords: ['AI solutions', 'enterprise AI', 'quantum computing', 'autonomous systems', 'digital transformation', 'automation', 'cloud services', 'AI consulting', 'business intelligence', 'machine learning'],
-                url: 'https://ziontechgroup.com',
-                canonicalUrl: 'https://ziontechgroup.com'
+                description: 'Leading provider of enterprise AI solutions, quantum computing, and autonomous systems.',
+                keywords: ['AI solutions', 'enterprise AI', 'quantum computing', 'autonomous systems']
               }}
               enableStructuredData={true}
               enableOpenGraph={true}
