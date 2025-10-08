@@ -5,13 +5,13 @@ interface DynamicOptions {
   ssr?: boolean;
 }
 
-export function dynamic<T extends ComponentType<any>>(
+export function dynamic<T extends ComponentType<unknown>>(
   importFunc: () => Promise<{ default: T }>,
   options: DynamicOptions = {}
-): ComponentType<any> {
+): ComponentType<unknown> {
   const LazyComponent = lazy(importFunc);
-  
-  return (props: any) => (
+
+  return (props: unknown) => (
     <Suspense fallback={options.loading ? options.loading() : <div>Loading...</div>}>
       <LazyComponent {...props} />
     </Suspense>

@@ -13,6 +13,7 @@ export const metadata = {
     locale: "en_US",
     type: 'article'
   }
+}
 };
 
 export default function AI20262027RevolutionaryBreakthroughComprehensiveGuidePage() {

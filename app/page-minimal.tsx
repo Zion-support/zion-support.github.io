@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Phone, CheckCircle, Star } from 'lucide-react';
 
-export default function HomePage() {
+const _HomePage: React.FC = () => {
   return (
 
     <>

@@ -4,7 +4,6 @@
  */
 
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-// import { logger } from '../utils/logger';
 import monitoring from '../utils/monitoring';
 
 interface Props {
