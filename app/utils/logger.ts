@@ -211,6 +211,42 @@ class Logger {
   }
 
   /**
+   * Create a performance log group
+   */
+  perf(label: string, callback: () => void): void {
+    if (typeof window !== 'undefined' && performance?.mark) {
+      performance.mark(`${label}-start`);
+      callback();
+      performance.mark(`${label}-end`);
+      try {
+        performance.measure(label, `${label}-start`, `${label}-end`);
+      } catch (e) {
+        // Measurement may fail if marks don't exist
+      }
+    } else {
+      callback();
+    }
+  }
+
+  /**
+   * Create a console group
+   */
+  group(label: string): void {
+    if (this.config.enableConsole && typeof console.group === 'function') {
+      console.group(label);
+    }
+  }
+
+  /**
+   * End a console group
+   */
+  groupEnd(): void {
+    if (this.config.enableConsole && typeof console.groupEnd === 'function') {
+      console.groupEnd();
+    }
+  }
+
+  /**
    * Flush buffered logs to remote endpoint
    */
   async flush(): Promise<void> {
