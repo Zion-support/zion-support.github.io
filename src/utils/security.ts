@@ -160,7 +160,7 @@ export class CSRFProtection {
   }
   
   public static validateToken(token: string): boolean {
-//     const storedToken = this.getToken();
+    const storedToken = this.getToken();
     return storedToken !== null && storedToken === token;
   }
   
