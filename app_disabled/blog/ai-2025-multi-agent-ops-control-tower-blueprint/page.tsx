@@ -17,7 +17,3 @@ export default function MultiAgentOpsControlTowerBlueprintPage() {
     </div>
   );
 }
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-d70e
->>>>>>> main
