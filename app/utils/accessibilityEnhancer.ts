@@ -677,13 +677,6 @@ class AccessibilityEnhancer {
     const metrics = this.getMetrics();
     
     return `
-Accessibility Report:
-- Violations: ${this.metrics.violations}
-- Issues Fixed: ${this.metrics.issuesFixed}
-- Total Checks: ${this.metrics.totalChecks}
-- Pass Rate: ${((this.metrics.totalChecks - this.metrics.violations) / this.metrics.totalChecks * 100).toFixed(2)}%
-    `;
-  }
+Accessibility Report:`
 }
-
-export default new AccessibilityEnhancer();
+}

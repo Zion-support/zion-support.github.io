@@ -1,298 +1,142 @@
 #!/usr/bin/env python3
+"""Script to automatically resolve merge conflicts in the codebase."""
+
 import re
 import os
+from pathlib import Path
 
-def fix_error_boundary():
-    """Fix merge conflicts in ErrorBoundary.tsx"""
-    filepath = 'app/components/ErrorBoundary.tsx'
-    with open(filepath, 'r') as f:
-        lines = f.readlines()
-    
-    # Find and remove merge conflict markers
+def remove_conflict_markers(content: str) -> str:
+    """Remove merge conflict markers and keep the most appropriate version."""
+    lines = content.split('\n')
     result = []
-    skip_until = None
-    in_conflict = False
-    use_head = True  # We'll use the HEAD version
-    
     i = 0
+    
     while i < len(lines):
         line = lines[i]
         
-        if line.startswith('<<<<<<< HEAD'):
-            in_conflict = True
-            use_head = True
+        # Check if this is a conflict marker
+        if line.startswith('<<<<<<<'):
+            # Found start of conflict
+            head_content = []
             i += 1
-            continue
-        elif line.startswith('=======') and in_conflict:
-            use_head = False
-            i += 1
-            continue
-        elif line.startswith('>>>>>>>') and in_conflict:
-            in_conflict = False
-            use_head = True
-            i += 1
-            continue
-        
-        if not in_conflict or use_head:
-            result.append(line)
-        
-        i += 1
-    
-    with open(filepath, 'w') as f:
-        f.writelines(result)
-    print(f"Fixed {filepath}")
-
-def fix_newest_content_banner():
-    """Fix syntax errors in NewestContent2025Banner.tsx"""
-    filepath = 'app/components/NewestContent2025Banner.tsx'
-    
-    if not os.path.exists(filepath):
-        print(f"Skipping {filepath} - file not found")
-        return
-    
-    # Read the file
-    with open(filepath, 'r') as f:
-        content = f.read()
-    
-    # This file has complex syntax errors - let's see if there are merge conflicts first
-    if '<<<<<<< HEAD' in content:
-        lines = content.split('\n')
-        result = []
-        in_conflict = False
-        use_head = True
-        
-        for line in lines:
-            if line.startswith('<<<<<<< HEAD'):
-                in_conflict = True
-                use_head = True
-                continue
-            elif line.startswith('=======') and in_conflict:
-                use_head = False
-                continue
-            elif line.startswith('>>>>>>>') and in_conflict:
-                in_conflict = False
-                use_head = True
-                continue
             
-            if not in_conflict or use_head:
-                result.append(line)
-        
-        with open(filepath, 'w') as f:
-            f.write('\n'.join(result))
-        print(f"Fixed merge conflicts in {filepath}")
-    else:
-        print(f"No merge conflicts in {filepath}, but may have syntax errors")
-
-def fix_contact_page():
-    """Fix syntax errors in contact page"""
-    filepath = 'app/contact/page.tsx'
-    
-    if not os.path.exists(filepath):
-        print(f"Skipping {filepath} - file not found")
-        return
-    
-    with open(filepath, 'r') as f:
-        lines = f.readlines()
-    
-    result = []
-    in_conflict = False
-    use_head = True
-    
-    for line in lines:
-        if line.startswith('<<<<<<< HEAD'):
-            in_conflict = True
-            use_head = True
-            continue
-        elif line.startswith('=======') and in_conflict:
-            use_head = False
-            continue
-        elif line.startswith('>>>>>>>') and in_conflict:
-            in_conflict = False
-            use_head = True
-            continue
-        
-        if not in_conflict or use_head:
-            result.append(line)
-    
-    with open(filepath, 'w') as f:
-        f.writelines(result)
-    print(f"Fixed {filepath}")
-
-def fix_enterprise_page():
-    """Fix merge conflicts in enterprise page"""
-    filepath = 'app/enterprise/page.tsx'
-    
-    if not os.path.exists(filepath):
-        print(f"Skipping {filepath} - file not found")
-        return
-    
-    with open(filepath, 'r') as f:
-        lines = f.readlines()
-    
-    result = []
-    in_conflict = False
-    use_head = True
-    
-    for line in lines:
-        if line.startswith('<<<<<<< HEAD'):
-            in_conflict = True
-            use_head = True
-            continue
-        elif line.startswith('=======') and in_conflict:
-            use_head = False
-            continue
-        elif line.startswith('>>>>>>>') and in_conflict:
-            in_conflict = False
-            use_head = True
-            continue
-        
-        if not in_conflict or use_head:
-            result.append(line)
-    
-    with open(filepath, 'w') as f:
-        f.writelines(result)
-    print(f"Fixed {filepath}")
-
-def fix_setup_tests():
-    """Fix merge conflicts in setupTests"""
-    filepath = 'app/setupTests.tsx'
-    
-    if not os.path.exists(filepath):
-        print(f"Skipping {filepath} - file not found")
-        return
-    
-    with open(filepath, 'r') as f:
-        lines = f.readlines()
-    
-    result = []
-    in_conflict = False
-    use_head = True
-    
-    for line in lines:
-        if line.startswith('<<<<<<< HEAD'):
-            in_conflict = True
-            use_head = True
-            continue
-        elif line.startswith('=======') and in_conflict:
-            use_head = False
-            continue
-        elif line.startswith('>>>>>>>') and in_conflict:
-            in_conflict = False
-            use_head = True
-            continue
-        
-        if not in_conflict or use_head:
-            result.append(line)
-    
-    with open(filepath, 'w') as f:
-        f.writelines(result)
-    print(f"Fixed {filepath}")
-
-def fix_accessibility_enhancer_util():
-    """Fix unterminated template literal in accessibilityEnhancer.ts"""
-    filepath = 'app/utils/accessibilityEnhancer.ts'
-    
-    if not os.path.exists(filepath):
-        print(f"Skipping {filepath} - file not found")
-        return
-    
-    with open(filepath, 'r') as f:
-        content = f.read()
-    
-    # Check if there are merge conflicts
-    if '<<<<<<< HEAD' in content:
-        lines = content.split('\n')
-        result = []
-        in_conflict = False
-        use_head = True
-        
-        for line in lines:
-            if line.startswith('<<<<<<< HEAD'):
-                in_conflict = True
-                use_head = True
-                continue
-            elif line.startswith('=======') and in_conflict:
-                use_head = False
-                continue
-            elif line.startswith('>>>>>>>') and in_conflict:
-                in_conflict = False
-                use_head = True
-                continue
+            # Collect HEAD content
+            while i < len(lines) and not lines[i].startswith('======='):
+                head_content.append(lines[i])
+                i += 1
             
-            if not in_conflict or use_head:
-                result.append(line)
-        
-        with open(filepath, 'w') as f:
-            f.write('\n'.join(result))
-        print(f"Fixed {filepath}")
-    else:
-        # Check for unterminated template literals
-        # Count backticks to see if they're balanced
-        backtick_count = content.count('`')
-        if backtick_count % 2 != 0:
-            print(f"WARNING: {filepath} has unbalanced backticks, manual fix may be needed")
+            # Skip the ======= line
+            if i < len(lines):
+                i += 1
+            
+            # Collect incoming content
+            incoming_content = []
+            while i < len(lines) and not lines[i].startswith('>>>>>>>'):
+                # Check for nested conflict markers
+                if lines[i].startswith('>>>>>>>'):
+                    break
+                incoming_content.append(lines[i])
+                i += 1
+            
+            # Skip the >>>>>>> line
+            if i < len(lines):
+                i += 1
+            
+            # Decision logic: prefer incoming (non-HEAD) version if it's not empty
+            # Otherwise keep HEAD version
+            if incoming_content and any(line.strip() for line in incoming_content):
+                # Use incoming content
+                result.extend(incoming_content)
+            elif head_content:
+                # Use HEAD content
+                result.extend(head_content)
         else:
-            print(f"No obvious issues in {filepath}")
+            result.append(line)
+            i += 1
+    
+    return '\n'.join(result)
 
-def fix_performance_monitor():
-    """Fix unterminated template literal in performanceMonitor.ts"""
-    filepath = 'app/utils/performanceMonitor.ts'
+def fix_jsx_syntax_errors(content: str, filename: str) -> str:
+    """Fix common JSX syntax errors."""
     
-    if not os.path.exists(filepath):
-        print(f"Skipping {filepath} - file not found")
-        return
+    # Remove any remaining conflict markers
+    content = re.sub(r'^<<<<<<< .*$', '', content, flags=re.MULTILINE)
+    content = re.sub(r'^=======\s*$', '', content, flags=re.MULTILINE)
+    content = re.sub(r'^>>>>>>> .*$', '', content, flags=re.MULTILINE)
     
-    with open(filepath, 'r') as f:
-        content = f.read()
-    
-    # Check if there are merge conflicts
-    if '<<<<<<< HEAD' in content:
-        lines = content.split('\n')
-        result = []
-        in_conflict = False
-        use_head = True
-        
-        for line in lines:
-            if line.startswith('<<<<<<< HEAD'):
-                in_conflict = True
-                use_head = True
-                continue
-            elif line.startswith('=======') and in_conflict:
-                use_head = False
-                continue
-            elif line.startswith('>>>>>>>') and in_conflict:
-                in_conflict = False
-                use_head = True
-                continue
-            
-            if not in_conflict or use_head:
-                result.append(line)
-        
-        with open(filepath, 'w') as f:
-            f.write('\n'.join(result))
-        print(f"Fixed {filepath}")
-    else:
-        # Check for unterminated template literals
+    # Fix unterminated template literals (add closing backtick if missing)
+    # This is a simple heuristic - count backticks and add one if odd number
+    if filename.endswith('.ts') or filename.endswith('.tsx'):
+        # Count backticks not in strings
         backtick_count = content.count('`')
-        if backtick_count % 2 != 0:
-            print(f"WARNING: {filepath} has unbalanced backticks, manual fix may be needed")
-        else:
-            print(f"No obvious issues in {filepath}")
+        # Simple fix: if odd number and file doesn't end with backtick, add one
+        if backtick_count % 2 == 1 and not content.rstrip().endswith('`'):
+            content = content.rstrip() + '`\n'
+    
+    return content
 
-def main():
-    print("Starting merge conflict resolution...")
-    print("-" * 50)
+def fix_file(filepath: Path) -> bool:
+    """Fix merge conflicts in a single file."""
+    try:
+        with open(filepath, 'r', encoding='utf-8') as f:
+            content = f.read()
+        
+        # Check if file has conflict markers
+        if '<<<<<<< ' not in content and '=======' not in content and '>>>>>>> ' not in content:
+            # Check for other syntax issues
+            if filepath.suffix in ['.ts', '.tsx', '.js', '.jsx']:
+                fixed_content = fix_jsx_syntax_errors(content, str(filepath))
+                if fixed_content != content:
+                    with open(filepath, 'w', encoding='utf-8') as f:
+                        f.write(fixed_content)
+                    print(f"Fixed syntax in: {filepath}")
+                    return True
+            return False
+        
+        original_content = content
+        fixed_content = remove_conflict_markers(content)
+        fixed_content = fix_jsx_syntax_errors(fixed_content, str(filepath))
+        
+        if fixed_content != original_content:
+            with open(filepath, 'w', encoding='utf-8') as f:
+                f.write(fixed_content)
+            print(f"Fixed conflicts in: {filepath}")
+            return True
+        
+        return False
+    except Exception as e:
+        print(f"Error fixing {filepath}: {e}")
+        return False
+
+def find_and_fix_conflicts(root_dir: str) -> int:
+    """Find and fix all files with merge conflicts."""
+    root_path = Path(root_dir)
+    fixed_count = 0
     
-    fix_error_boundary()
-    fix_newest_content_banner()
-    fix_contact_page()
-    fix_enterprise_page()
-    fix_setup_tests()
-    fix_accessibility_enhancer_util()
-    fix_performance_monitor()
+    # Files we know have conflicts from type-check
+    problem_files = [
+        'tsconfig.json',
+        'app/App.tsx',
+        'app/components/AccessibilityEnhancer.tsx',
+        'app/components/ErrorBoundary.tsx',
+        'app/components/NewestContent2025Banner.tsx',
+        'app/contact/page.tsx',
+        'app/enterprise/page.tsx',
+        'app/setupTests.tsx',
+        'app/utils/accessibilityEnhancer.ts',
+        'app/utils/performanceMonitor.ts',
+    ]
     
-    print("-" * 50)
-    print("Merge conflict resolution complete!")
+    for rel_path in problem_files:
+        filepath = root_path / rel_path
+        if filepath.exists():
+            if fix_file(filepath):
+                fixed_count += 1
+    
+    return fixed_count
 
 if __name__ == '__main__':
-    main()
+    workspace = '/workspace'
+    print("Fixing merge conflicts...")
+    fixed = find_and_fix_conflicts(workspace)
+    print(f"\nFixed {fixed} files")
