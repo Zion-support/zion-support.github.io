@@ -10,7 +10,7 @@ const files = execSync("find /workspace/app -name '*.tsx' -o -name '*.ts' | xarg
   .split('\n')
   .filter(file => file.length > 0);
 
-console.log(`Found ${files.length} files with Next.js imports`);
+// console.log(`Found ${files.length} files with Next.js imports`);
 
 // Replacement mappings
 const replacements = [
@@ -78,13 +78,13 @@ function processFile(filePath) {
     
     if (modified) {
       fs.writeFileSync(filePath, content);
-      console.log(`✓ Fixed: ${filePath}`);
+      // console.log(`✓ Fixed: ${filePath}`);
       return true;
     }
     
     return false;
   } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
+    // console.error(`Error processing ${filePath}:`, error.message);
     return false;
   }
 }
@@ -97,4 +97,4 @@ files.forEach(file => {
   }
 });
 
-console.log(`\nFixed ${fixedCount} out of ${files.length} files`);
+// console.log(`\nFixed ${fixedCount} out of ${files.length} files`);

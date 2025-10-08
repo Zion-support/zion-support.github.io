@@ -196,12 +196,12 @@ function fixFile(filePath) {
 
     if (modified) {
       fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed: ${filePath}`);
+      // console.log(`Fixed: ${filePath}`);
       return true;
     }
     return false;
   } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
+    // console.error(`Error fixing ${filePath}:`, error.message);
     return false;
   }
 }
@@ -211,7 +211,7 @@ async function main() {
   //Find all TypeScript/TSX files
   const files = await glob('src/**/*.{ts,tsx}');
 
-  console.log(`Found ${files.length} TypeScript files to check...`);
+  // console.log(`Found ${files.length} TypeScript files to check...`);
 
   let fixedCount = 0;
   files.forEach(file => {
@@ -220,7 +220,7 @@ async function main() {
     }
   });
 
-  console.log(`Fixed ${fixedCount} files`);
+  // console.log(`Fixed ${fixedCount} files`);
 }
 
 main().catch(console.error);

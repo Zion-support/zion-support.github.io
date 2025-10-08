@@ -48,7 +48,7 @@ function makeGitHubRequest(path, method = 'GET', data = null) {
 }
 
 async function getAllOpenPRs() {
-  console.log('📋 Fetching all open PRs...');
+  // console.log('📋 Fetching all open PRs...');
   let page = 1;
   let allPRs = [];
   
@@ -56,12 +56,12 @@ async function getAllOpenPRs() {
     const prs = await makeGitHubRequest(`/repos/${OWNER}/${REPO}/pulls?state=open&per_page=100&page=${page}`);
     if (!prs || prs.length === 0) break;
     allPRs = allPRs.concat(prs);
-    console.log(`   Fetched page ${page}: ${prs.length} PRs`);
+    // console.log(`   Fetched page ${page}: ${prs.length} PRs`);
     if (prs.length < 100) break;
     page++;
   }
   
-  console.log(`✅ Total open PRs found: ${allPRs.length}`);
+  // console.log(`✅ Total open PRs found: ${allPRs.length}`);
   return allPRs;
 }
 
@@ -75,7 +75,7 @@ async function checkPRMergeable(prNumber) {
 }
 
 async function mergePR(prNumber) {
-  console.log(`🔀 Attempting to merge PR #${prNumber}...`);
+  // console.log(`🔀 Attempting to merge PR #${prNumber}...`);
   
   try {
     const result = await makeGitHubRequest(
@@ -89,20 +89,20 @@ async function mergePR(prNumber) {
     );
     
     if (result.merged) {
-      console.log(`✅ Successfully merged PR #${prNumber}`);
+      // console.log(`✅ Successfully merged PR #${prNumber}`);
       return true;
     } else {
-      console.log(`❌ Failed to merge PR #${prNumber}: ${result.message}`);
+      // console.log(`❌ Failed to merge PR #${prNumber}: ${result.message}`);
       return false;
     }
   } catch (error) {
-    console.log(`❌ Error merging PR #${prNumber}:`, error.message);
+    // console.log(`❌ Error merging PR #${prNumber}:`, error.message);
     return false;
   }
 }
 
 async function updatePRFromDraft(prNumber) {
-  console.log(`📝 Marking PR #${prNumber} as ready for review...`);
+  // console.log(`📝 Marking PR #${prNumber} as ready for review...`);
   
   try {
     await makeGitHubRequest(
@@ -110,31 +110,31 @@ async function updatePRFromDraft(prNumber) {
       'PATCH',
       { draft: false }
     );
-    console.log(`✅ PR #${prNumber} marked as ready for review`);
+    // console.log(`✅ PR #${prNumber} marked as ready for review`);
     return true;
   } catch (error) {
-    console.log(`❌ Error updating PR #${prNumber}:`, error.message);
+    // console.log(`❌ Error updating PR #${prNumber}:`, error.message);
     return false;
   }
 }
 
 async function main() {
-  console.log('🚀 Starting comprehensive PR merge process...\n');
+  // console.log('🚀 Starting comprehensive PR merge process...\n');
   
   // Fetch all open PRs
   const openPRs = await getAllOpenPRs();
   
   if (openPRs.length === 0) {
-    console.log('✅ No open PRs found. Nothing to merge!');
+    // console.log('✅ No open PRs found. Nothing to merge!');
     return;
   }
   
-  console.log('\n📊 PR Summary:');
+  // console.log('\n📊 PR Summary:');
   openPRs.forEach(pr => {
-    console.log(`   PR #${pr.number}: ${pr.title} (${pr.head.ref} -> ${pr.base.ref}) ${pr.draft ? '[DRAFT]' : ''}`);
+    // console.log(`   PR #${pr.number}: ${pr.title} (${pr.head.ref} -> ${pr.base.ref}) ${pr.draft ? '[DRAFT]' : ''}`);
   });
   
-  console.log('\n🔍 Checking mergeable status for all PRs...\n');
+  // console.log('\n🔍 Checking mergeable status for all PRs...\n');
   
   let mergedCount = 0;
   let conflictCount = 0;
@@ -142,11 +142,11 @@ async function main() {
   let otherIssues = 0;
   
   for (const pr of openPRs) {
-    console.log(`\n--- Processing PR #${pr.number}: ${pr.title} ---`);
+    // console.log(`\n--- Processing PR #${pr.number}: ${pr.title} ---`);
     
     // Check if PR is draft
     if (pr.draft) {
-      console.log(`⚠️  PR #${pr.number} is in draft state`);
+      // console.log(`⚠️  PR #${pr.number} is in draft state`);
       draftCount++;
       
       // Try to mark as ready for review
@@ -158,7 +158,7 @@ async function main() {
     
     // Check mergeable status
     const status = await checkPRMergeable(pr.number);
-    console.log(`   Mergeable: ${status.mergeable}, State: ${status.mergeable_state}`);
+    // console.log(`   Mergeable: ${status.mergeable}, State: ${status.mergeable_state}`);
     
     if (status.mergeable === true && status.mergeable_state === 'clean') {
       // Try to merge
@@ -167,10 +167,10 @@ async function main() {
         mergedCount++;
       }
     } else if (status.mergeable === false) {
-      console.log(`⚠️  PR #${pr.number} has merge conflicts and needs manual resolution`);
+      // console.log(`⚠️  PR #${pr.number} has merge conflicts and needs manual resolution`);
       conflictCount++;
     } else {
-      console.log(`⚠️  PR #${pr.number} has state: ${status.mergeable_state}`);
+      // console.log(`⚠️  PR #${pr.number} has state: ${status.mergeable_state}`);
       otherIssues++;
     }
     
@@ -178,20 +178,20 @@ async function main() {
     await new Promise(resolve => setTimeout(resolve, 1000));
   }
   
-  console.log('\n\n📊 Final Summary:');
-  console.log(`   Total PRs processed: ${openPRs.length}`);
-  console.log(`   ✅ Successfully merged: ${mergedCount}`);
-  console.log(`   ⚠️  PRs with conflicts: ${conflictCount}`);
-  console.log(`   📝 Draft PRs: ${draftCount}`);
-  console.log(`   ❓ Other issues: ${otherIssues}`);
+  // console.log('\n\n📊 Final Summary:');
+  // console.log(`   Total PRs processed: ${openPRs.length}`);
+  // console.log(`   ✅ Successfully merged: ${mergedCount}`);
+  // console.log(`   ⚠️  PRs with conflicts: ${conflictCount}`);
+  // console.log(`   📝 Draft PRs: ${draftCount}`);
+  // console.log(`   ❓ Other issues: ${otherIssues}`);
   
   if (conflictCount > 0) {
-    console.log('\n⚠️  Some PRs have merge conflicts that need manual resolution.');
-    console.log('   These PRs cannot be automatically merged and require intervention.');
+    // console.log('\n⚠️  Some PRs have merge conflicts that need manual resolution.');
+    // console.log('   These PRs cannot be automatically merged and require intervention.');
   }
 }
 
 main().catch(error => {
-  console.error('❌ Fatal error:', error);
+  // console.error('❌ Fatal error:', error);
   process.exit(1);
 });

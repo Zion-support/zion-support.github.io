@@ -7,7 +7,7 @@ async function removeProblematicIcons() {
   //Find all TypeScript/JavaScript files in src/components
   const files = await glob('src/components/**/*.{ts,tsx,js,jsx}');
 
-  console.log(`Found ${files.length} files to process...`);
+  // console.log(`Found ${files.length} files to process...`);
 
   for (const filePath of files) {
     try {
@@ -41,14 +41,14 @@ async function removeProblematicIcons() {
 
       if (modified) {
         fs.writeFileSync(filePath, content, 'utf8');
-        console.log(`Removed problematic icons in: ${filePath}`);
+        // console.log(`Removed problematic icons in: ${filePath}`);
       }
     } catch (error) {
-      console.error(`Error processing ${filePath}:`, error.message);
+      // console.error(`Error processing ${filePath}:`, error.message);
     }
   }
 
-  console.log('Icon removal completed!');
+  // console.log('Icon removal completed!');
 }
 
 removeProblematicIcons().catch(console.error);

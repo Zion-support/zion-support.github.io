@@ -5,7 +5,7 @@
 export const performanceOptimizer = {
   init: () => {
     if (typeof window !== 'undefined') {
-      console.log('Performance optimizer initialized');
+      // console.log('Performance optimizer initialized');
     }
   },
   
@@ -33,7 +33,7 @@ export const lazyLoadImages = () => {
 
 export const preloadCriticalResources = () => {
   if (typeof window !== 'undefined') {
-    console.log('Preloading critical resources');
+    // console.log('Preloading critical resources');
   }
 };
 

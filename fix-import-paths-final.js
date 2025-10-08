@@ -88,12 +88,12 @@ function processFile(filePath) {
 
     if (modified) {
       fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed imports: ${filePath}`);
+      // console.log(`Fixed imports: ${filePath}`);
       return true;
     }
     return false;
   } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
+    // console.error(`Error processing ${filePath}:`, error.message);
     return false;
   }
 }
@@ -120,6 +120,6 @@ function processDirectory(dirPath) {
 
 // Process the app directory
 const appDir = path.join(__dirname, 'app');
-console.log('Fixing import paths with correct relative paths...');
+// console.log('Fixing import paths with correct relative paths...');
 const fixedCount = processDirectory(appDir);
-console.log(`Fixed ${fixedCount} files`);
+// console.log(`Fixed ${fixedCount} files`);

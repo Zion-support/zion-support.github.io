@@ -47,12 +47,12 @@ function fixJSXErrors(filePath) {
 
     if (modified) {
       fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed JSX errors in: ${filePath}`);
+      // console.log(`Fixed JSX errors in: ${filePath}`);
       return true;
     }
     return false;
   } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
+    // console.error(`Error fixing ${filePath}:`, error.message);
     return false;
   }
 }
@@ -62,5 +62,5 @@ const filePath = process.argv[2];
 if (filePath) {
   fixJSXErrors(filePath);
 } else {
-  console.log('Usage: node fix_jsx_errors.js <file_path>');
+  // console.log('Usage: node fix_jsx_errors.js <file_path>');
 }

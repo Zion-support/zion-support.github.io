@@ -27,7 +27,7 @@ class DeploymentReadinessChecker {
   }
 
   log(message, color = 'reset') {
-    console.log(`${colors[color]}${message}${colors.reset}`);
+    // console.log(`${colors[color]}${message}${colors.reset}`);
   }
 
   addCheck(name, fn) {
@@ -345,6 +345,6 @@ async function main() {
 
 // Run the checker
 main().catch(error => {
-  console.error('Fatal error:', error);
+  // console.error('Fatal error:', error);
   process.exit(1);
 });

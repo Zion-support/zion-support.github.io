@@ -7,7 +7,7 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-console.log('🎨 Optimizing assets...');
+// console.log('🎨 Optimizing assets...');
 
 // Optimize CSS
 function optimizeCSS() {
@@ -27,7 +27,7 @@ function optimizeCSS() {
         fs.writeFileSync(filePath, content);
       }
     });
-    console.log('✅ CSS optimized');
+    // console.log('✅ CSS optimized');
   }
 }
 
@@ -51,10 +51,10 @@ function optimizeJS() {
         fs.writeFileSync(filePath, content);
       }
     });
-    console.log('✅ JavaScript bundles optimized');
+    // console.log('✅ JavaScript bundles optimized');
   }
 }
 
 optimizeCSS();
 optimizeJS();
-console.log('🎉 Asset optimization complete!');
+// console.log('🎉 Asset optimization complete!');

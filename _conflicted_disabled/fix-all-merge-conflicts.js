@@ -1,1 +1,1 @@
-return files; return conflictedFiles; } // Main execution try {console.log('🎯 Merge conflict resolution completed!')} } '
+return files; return conflictedFiles; } // Main execution try {// console.log('🎯 Merge conflict resolution completed!')} } '

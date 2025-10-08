@@ -15,11 +15,11 @@ const Terms = lazy(() => import('./pages/Terms'));
 function App() {
   useEffect(() => {
     // Initialize basic optimizations
-    console.log('App initialized successfully');
+    // console.log('App initialized successfully');
 
     // Cleanup on unmount
     return () => {
-      console.log('App cleanup');
+      // console.log('App cleanup');
     };
   }, []);
 
@@ -63,7 +63,7 @@ class ErrorBoundary extends React.Component<
   }
 
   componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
+    // console.error('Error caught by boundary:', error, errorInfo);
   }
 
   render() {

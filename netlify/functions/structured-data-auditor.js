@@ -13,7 +13,7 @@ exports.handler = async function () {
   const githubBranch = process.env.GIT_BRANCH || 'main';
 
   function log(msg) {
-    console.log(`[structured-data-auditor] ${msg}`);
+    // console.log(`[structured-data-auditor] ${msg}`);
   }
 
   async function fetchText(url) {

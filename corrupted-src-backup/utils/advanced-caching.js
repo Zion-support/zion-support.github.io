@@ -127,7 +127,7 @@ class AdvancedCachingSystem {
       };
       localStorage.setItem(`cache_${key}`, JSON.stringify(item));
     } catch (error) {
-      console.warn('Failed to persist cache item:', error);
+      // console.warn('Failed to persist cache item:', error);
     }
   }
 
@@ -135,7 +135,7 @@ class AdvancedCachingSystem {
     try {
       localStorage.removeItem(`cache_${key}`);
     } catch (error) {
-      console.warn('Failed to remove cache item from storage:', error);
+      // console.warn('Failed to remove cache item from storage:', error);
     }
   }
 
@@ -148,7 +148,7 @@ class AdvancedCachingSystem {
         }
       });
     } catch (error) {
-      console.warn('Failed to clear cache storage:', error);
+      // console.warn('Failed to clear cache storage:', error);
     }
   }
 
@@ -171,7 +171,7 @@ class AdvancedCachingSystem {
         }
       });
     } catch (error) {
-      console.warn('Failed to load cache from storage:', error);
+      // console.warn('Failed to load cache from storage:', error);
     }
   }
 

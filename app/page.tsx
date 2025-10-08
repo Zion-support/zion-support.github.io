@@ -2,7 +2,7 @@
 import React, { useCallback, useState, useEffect, Suspense, lazy } from 'react';
 
 // Dynamically import heavy components for better performance
-const ServiceCard = lazy(() => import('./components/ServiceCard'));
+
 
 // Loading skeleton component
 const ServiceCardSkeleton: React.FC = () => (

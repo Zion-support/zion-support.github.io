@@ -25,7 +25,7 @@ export class AdvancedErrorBoundary extends Component<Props, State> {
     this.setState({ error, errorInfo });
 
     // Log error to monitoring service
-    console.error('Error caught by boundary:', error, errorInfo);
+    // console.error('Error caught by boundary:', error, errorInfo);
 
     // Send to error tracking service
     if (typeof window !== 'undefined' && 'gtag' in window) {

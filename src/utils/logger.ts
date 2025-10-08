@@ -140,14 +140,16 @@ export class Logger {
         }
         break;
       case LogLevel.INFO:
-        if (process.env['NODE_ENV'] === 'development') { if (process.env.DEV) { console.info(message, entry.data ?? ''); } }
+        if (process.env['NODE_ENV'] === 'development') {
+          // console.info(message, entry.data ?? '');
+        }
         break;
       case LogLevel.WARN:
-        console.warn(message, entry.data ?? '');
+        // console.warn(message, entry.data ?? '');
         break;
       case LogLevel.ERROR:
       case LogLevel.FATAL:
-        console.error(message, entry.data ?? '', entry.stack ?? '');
+        // console.error(message, entry.data ?? '', entry.stack ?? '');
         break;
     }
   }
@@ -171,7 +173,7 @@ export class Logger {
     } catch (error) {
       // Silent fail to prevent logging loops
       if (process.env['NODE_ENV'] === 'development') {
-        console.error('Failed to send log to remote:', error);
+        // console.error('Failed to send log to remote:', error);
       }
     }
   }

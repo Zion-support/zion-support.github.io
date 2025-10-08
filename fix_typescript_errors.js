@@ -2,10 +2,10 @@ import { execSync } from 'child_process';
 import fs from 'fs';
 import path from 'path';
 
-console.log('🔧 Starting TypeScript error fixes...');
+// console.log('🔧 Starting TypeScript error fixes...');
 
 // 1. Fix AdvancedSEOOptimizer component props
-console.log('📝 Fixing AdvancedSEOOptimizer component...');
+// console.log('📝 Fixing AdvancedSEOOptimizer component...');
 
 const seoOptimizerPath = '/workspace/app/components/AdvancedSEOOptimizer.tsx';
 if (fs.existsSync(seoOptimizerPath)) {
@@ -30,11 +30,11 @@ if (fs.existsSync(seoOptimizerPath)) {
     );
     
     fs.writeFileSync(seoOptimizerPath, content);
-    console.log('✅ Fixed AdvancedSEOOptimizer props');
+    // console.log('✅ Fixed AdvancedSEOOptimizer props');
 }
 
 // 2. Fix App.tsx SEO component usage
-console.log('📝 Fixing App.tsx SEO component usage...');
+// console.log('📝 Fixing App.tsx SEO component usage...');
 
 const appPath = '/workspace/App.tsx';
 if (fs.existsSync(appPath)) {
@@ -47,11 +47,11 @@ if (fs.existsSync(appPath)) {
     );
     
     fs.writeFileSync(appPath, content);
-    console.log('✅ Fixed App.tsx SEO component usage');
+    // console.log('✅ Fixed App.tsx SEO component usage');
 }
 
 // 3. Fix test files
-console.log('📝 Fixing test files...');
+// console.log('📝 Fixing test files...');
 
 // Fix AppMinimal.test.tsx
 const appMinimalTestPath = '/workspace/__tests__/AppMinimal.test.tsx';
@@ -65,7 +65,7 @@ if (fs.existsSync(appMinimalTestPath)) {
     );
     
     fs.writeFileSync(appMinimalTestPath, content);
-    console.log('✅ Fixed AppMinimal.test.tsx');
+    // console.log('✅ Fixed AppMinimal.test.tsx');
 }
 
 // Fix advanced-components.test.tsx
@@ -80,11 +80,11 @@ if (fs.existsSync(advancedComponentsTestPath)) {
     );
     
     fs.writeFileSync(advancedComponentsTestPath, content);
-    console.log('✅ Fixed advanced-components.test.tsx');
+    // console.log('✅ Fixed advanced-components.test.tsx');
 }
 
 // 4. Fix blog page metadata issues
-console.log('📝 Fixing blog page metadata...');
+// console.log('📝 Fixing blog page metadata...');
 
 const blogPages = [
     'app/blog/ai-2026-april-revolutionary-breakthrough/page.tsx',
@@ -100,12 +100,12 @@ blogPages.forEach(pagePath => {
         content = content.replace(/\s+type: ['"][^'"]*['"],?\s*/g, '');
         
         fs.writeFileSync(pagePath, content);
-        console.log(`✅ Fixed ${pagePath}`);
+        // console.log(`✅ Fixed ${pagePath}`);
     }
 });
 
 // 5. Fix OpenGraph authors issue
-console.log('📝 Fixing OpenGraph authors...');
+// console.log('📝 Fixing OpenGraph authors...');
 
 const openGraphPages = [
     'app/blog/ai-2026-consensus-intelligence-breakthrough/page.tsx',
@@ -123,12 +123,12 @@ openGraphPages.forEach(pagePath => {
         );
         
         fs.writeFileSync(pagePath, content);
-        console.log(`✅ Fixed ${pagePath}`);
+        // console.log(`✅ Fixed ${pagePath}`);
     }
 });
 
 // 6. Fix missing Calculator import
-console.log('📝 Fixing missing Calculator import...');
+// console.log('📝 Fixing missing Calculator import...');
 
 const calculatorPagePath = '/workspace/app/blog/ai-enterprise-transformation-ultimate-guide-2025/page.tsx';
 if (fs.existsSync(calculatorPagePath)) {
@@ -145,11 +145,11 @@ if (fs.existsSync(calculatorPagePath)) {
     );
     
     fs.writeFileSync(calculatorPagePath, content);
-    console.log('✅ Fixed Calculator import');
+    // console.log('✅ Fixed Calculator import');
 }
 
 // 7. Fix dataLayer declaration conflicts
-console.log('📝 Fixing dataLayer conflicts...');
+// console.log('📝 Fixing dataLayer conflicts...');
 
 const analyticsTrackerPath = '/workspace/app/components/AnalyticsTracker.tsx';
 if (fs.existsSync(analyticsTrackerPath)) {
@@ -165,11 +165,11 @@ if (fs.existsSync(analyticsTrackerPath)) {
     );
     
     fs.writeFileSync(analyticsTrackerPath, content);
-    console.log('✅ Fixed dataLayer conflicts');
+    // console.log('✅ Fixed dataLayer conflicts');
 }
 
 // 8. Fix performanceEnhancer references
-console.log('📝 Fixing performanceEnhancer references...');
+// console.log('📝 Fixing performanceEnhancer references...');
 
 const systemMonitorPath = '/workspace/app/components/SystemMonitor.tsx';
 if (fs.existsSync(systemMonitorPath)) {
@@ -183,11 +183,11 @@ import { performanceEnhancer } from '../utils/performanceEnhancer';`
     );
     
     fs.writeFileSync(systemMonitorPath, content);
-    console.log('✅ Fixed performanceEnhancer references');
+    // console.log('✅ Fixed performanceEnhancer references');
 }
 
 // 9. Fix gtag declaration conflicts
-console.log('📝 Fixing gtag conflicts...');
+// console.log('📝 Fixing gtag conflicts...');
 
 const performancePath = '/workspace/lib/performance.ts';
 if (fs.existsSync(performancePath)) {
@@ -203,7 +203,7 @@ if (fs.existsSync(performancePath)) {
     );
     
     fs.writeFileSync(performancePath, content);
-    console.log('✅ Fixed gtag conflicts');
+    // console.log('✅ Fixed gtag conflicts');
 }
 
-console.log('🎉 TypeScript error fixes completed!');
+// console.log('🎉 TypeScript error fixes completed!');

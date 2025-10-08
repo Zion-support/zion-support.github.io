@@ -65,7 +65,7 @@ class ErrorHandler {
     this.setupReactErrorBoundary();
 
     this.isInitialized = true;
-    console.log('Error handling system initialized');
+    // console.log('Error handling system initialized');
   }
 
   private generateSessionId(): string {
@@ -140,7 +140,7 @@ class ErrorHandler {
 
   private setupReactErrorBoundary(): void {
     // This would integrate with React Error Boundary
-    console.log('React Error Boundary setup complete');
+    // console.log('React Error Boundary setup complete');
   }
 
   handleError(errorData: {
@@ -199,7 +199,7 @@ class ErrorHandler {
 
     // Log error for development
     if (process.env['NODE_ENV'] === 'development') {
-      console.error('Error captured:', errorData);
+      // console.error('Error captured:', errorData);
     }
 
     // Send to error reporting service in production
@@ -246,14 +246,14 @@ class ErrorHandler {
   private sendErrorReport(errorReport: ErrorReport): void {
     // In a real application, this would send to an error reporting service
     // like Sentry, LogRocket, or a custom API endpoint
-    console.log('Sending error report:', errorReport.id);
+    // console.log('Sending error report:', errorReport.id);
 
     // Example: Send to external service
     // fetch('/api/errors', {
     //   method: 'POST',
     //   headers: { 'Content-Type': 'application/json' },
     //   body: JSON.stringify(errorReport)
-    // }).catch(err => console.error('Failed to send error report:', err));
+    // }).catch(err => // console.error('Failed to send error report:', err));
   }
 
   private cleanupOldErrors(): void {
@@ -363,7 +363,7 @@ Last Updated: ${new Date().toISOString()}
     this.errors.clear();
     this.isInitialized = false;
     this.errorCount = 0;
-    console.log('Error handling system cleaned up');
+    // console.log('Error handling system cleaned up');
   }
 }
 

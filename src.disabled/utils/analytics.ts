@@ -131,7 +131,7 @@ class Analytics {
 
   private sendEvent(event: AnalyticsEvent): void {
     // In a real implementation, this would send the event to your analytics service
-    console.log('Analytics Event:', event);
+    // console.log('Analytics Event:', event);
   }
 }
 

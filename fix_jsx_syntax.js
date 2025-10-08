@@ -8,7 +8,7 @@ async function main() {
   //Find all TSX files in src/components
   const files = await glob('src/components/**/*.tsx');
 
-  console.log(`Found ${files.length} TSX files to process...`);
+  // console.log(`Found ${files.length} TSX files to process...`);
 
   files.forEach(file => {
     try {
@@ -83,14 +83,14 @@ async function main() {
 
       if (modified) {
         fs.writeFileSync(file, content, 'utf8');
-        console.log(`Fixed: ${file}`);
+        // console.log(`Fixed: ${file}`);
       }
     } catch (error) {
-      console.error(`Error processing ${file}:`, error.message);
+      // console.error(`Error processing ${file}:`, error.message);
     }
   });
 
-  console.log('JSX syntax fixes completed!');
+  // console.log('JSX syntax fixes completed!');
 }
 
 main().catch(console.error);

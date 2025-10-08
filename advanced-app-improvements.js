@@ -4,7 +4,7 @@ const path = require('path');
 
 // Create advanced monitoring system
 function createAdvancedMonitoring() {
-  console.log('\n📊 Creating advanced monitoring system...');
+  // console.log('\n📊 Creating advanced monitoring system...');
   const monitoringFiles = {
     'monitoring/health-check.js': `// Advanced health check system
 module.exports = {
@@ -15,7 +15,7 @@ module.exports = {
 }
 
 function createAdvancedCaching() {
-  console.log('\n⚡ Creating advanced caching system...');
+  // console.log('\n⚡ Creating advanced caching system...');
   const cachingFiles = {
     'caching/cache-manager.js': `// Advanced cache manager
 module.exports = {
@@ -26,7 +26,7 @@ module.exports = {
 }
 
 function createAPIOptimization() {
-  console.log('\n🚀 Creating API optimization...');
+  // console.log('\n🚀 Creating API optimization...');
   const apiFiles = {
     'api/optimizer.js': `// API optimizer
 module.exports = {
@@ -40,7 +40,7 @@ function main() {
   createAdvancedMonitoring();
   createAdvancedCaching();
   createAPIOptimization();
-  console.log('\n✅ Advanced app improvements complete!');
+  // console.log('\n✅ Advanced app improvements complete!');
 }
 
 if (require.main === module) {

@@ -18,12 +18,12 @@ class SecurityEnhancer {
 
   private setupXSSProtection(): void {
     // XSS protection setup
-    console.log('XSS protection configured');
+    // console.log('XSS protection configured');
   }
 
   private setupSecurityHeaders(): void {
     // Additional security headers setup
-    console.log('Security headers configured');
+    // console.log('Security headers configured');
   }
 
   public static getInstance(): SecurityEnhancer {

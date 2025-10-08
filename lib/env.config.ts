@@ -119,7 +119,7 @@ class EnvironmentConfig {
     }
 
     if (errors.length > 0) {
-      console.error('Environment configuration errors:', errors);
+      // console.error('Environment configuration errors:', errors);
       // In production, we might want to throw, but in development just warn
       if (this.config.NODE_ENV === 'production') {
         throw new Error(`Environment validation failed: ${errors.join(', ')}`);

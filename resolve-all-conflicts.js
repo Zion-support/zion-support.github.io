@@ -4,7 +4,7 @@ const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
-console.log('🔧 Starting comprehensive merge conflict resolution...');
+// console.log('🔧 Starting comprehensive merge conflict resolution...');
 
 //Function to find all files with merge conflicts
 function findConflictFiles(dir) {

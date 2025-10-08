@@ -12,7 +12,7 @@ const filesToFix = [
   '/workspace/app/page-optimized.tsx'
 ];
 
-console.log(`Fixing ${filesToFix.length} files with type errors`);
+// console.log(`Fixing ${filesToFix.length} files with type errors`);
 
 // Function to process a single file
 function processFile(filePath) {
@@ -69,13 +69,13 @@ function processFile(filePath) {
     
     if (modified) {
       fs.writeFileSync(filePath, content);
-      console.log(`✓ Fixed: ${filePath}`);
+      // console.log(`✓ Fixed: ${filePath}`);
       return true;
     }
     
     return false;
   } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
+    // console.error(`Error processing ${filePath}:`, error.message);
     return false;
   }
 }
@@ -88,4 +88,4 @@ filesToFix.forEach(file => {
   }
 });
 
-console.log(`\nFixed ${fixedCount} out of ${filesToFix.length} files`);
+// console.log(`\nFixed ${fixedCount} out of ${filesToFix.length} files`);

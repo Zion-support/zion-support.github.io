@@ -1,6 +1,6 @@
-<<<<<<< HEAD
-import React from 'react';
-import { Link } from 'react-router-dom';
+
+
+
 export default function January2025AdvancedAIRevolution() {
   return (
     <div className="min-h-screen bg-gray-50">
@@ -128,8 +128,3 @@ export default function January2025AdvancedAIRevolution() {
     </div>
   );
 }
-=======
-
-
-// Metadata moved to Helmet component
->>>>>>> cursor/fix-errors-and-merge-to-main-dd0b

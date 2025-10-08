@@ -47,12 +47,12 @@ function processFile(filePath) {
 
     if (content !== fixed) {
       fs.writeFileSync(filePath, fixed, 'utf8');
-      console.log(`Fixed: ${filePath}`);
+      // console.log(`Fixed: ${filePath}`);
       return true;
     }
     return false;
   } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
+    // console.error(`Error processing ${filePath}:`, error.message);
     return false;
   }
 }
@@ -100,7 +100,7 @@ async function main() {
     }
   }
 
-  console.log(`\nTotal files fixed: ${totalFixed}`);
+  // console.log(`\nTotal files fixed: ${totalFixed}`);
 }
 
 if (import.meta.url === `file://${process.argv[1]}`) {

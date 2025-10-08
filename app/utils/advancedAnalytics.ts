@@ -401,7 +401,7 @@ class AdvancedAnalytics {
         body: JSON.stringify(event)
       });
     } catch (error) {
-      console.warn('Failed to send analytics event:', error);
+      // console.warn('Failed to send analytics event:', error);
     }
   }
 
@@ -591,7 +591,7 @@ class AdvancedAnalytics {
         body: JSON.stringify(session)
       });
     } catch (error) {
-      console.warn('Failed to send session data:', error);
+      // console.warn('Failed to send session data:', error);
     }
   }
 

@@ -25,7 +25,7 @@ function removeConsoleLogs(filePath) {
     
     return modified;
   } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
+    // console.error(`Error processing ${filePath}:`, error.message);
     return false;
   }
 }
@@ -50,16 +50,16 @@ async function processFiles(pattern) {
     processedCount++;
     if (removeConsoleLogs(file)) {
       modifiedCount++;
-      console.log(`Modified: ${file}`);
+      // console.log(`Modified: ${file}`);
     }
   });
   
-  console.log(`\nProcessed ${processedCount} files, modified ${modifiedCount} files`);
+  // console.log(`\nProcessed ${processedCount} files, modified ${modifiedCount} files`);
   return { processedCount, modifiedCount };
 }
 
 // Main execution
-console.log('Starting console.log removal...');
+// console.log('Starting console.log removal...');
 
 const patterns = [
   'src/**/*.{js,jsx,ts,tsx}',
@@ -72,13 +72,13 @@ let totalProcessed = 0;
 let totalModified = 0;
 
 for (const pattern of patterns) {
-  console.log(`\nProcessing pattern: ${pattern}`);
+  // console.log(`\nProcessing pattern: ${pattern}`);
   const result = await processFiles(pattern);
   totalProcessed += result.processedCount;
   totalModified += result.modifiedCount;
 }
 
-console.log(`\n=== Summary ===`);
-console.log(`Total files processed: ${totalProcessed}`);
-console.log(`Total files modified: ${totalModified}`);
-console.log('Console.log removal completed!');
+// console.log(`\n=== Summary ===`);
+// console.log(`Total files processed: ${totalProcessed}`);
+// console.log(`Total files modified: ${totalModified}`);
+// console.log('Console.log removal completed!');

@@ -7,7 +7,7 @@ import { useEffect, useCallback, useRef } from 'react';
 // Mock analytics object for performance tracking
 const analytics = {
   trackPerformance: (name: string, value: number, unit: string = 'ms') => {
-    console.log(`Performance: ${name} = ${value}${unit}`);
+    // console.log(`Performance: ${name} = ${value}${unit}`);
   },
   track: (
     event: string,
@@ -16,7 +16,7 @@ const analytics = {
     label?: string,
     value?: number
   ) => {
-    console.log(`Analytics: ${event} - ${category} - ${action}`, {
+    // console.log(`Analytics: ${event} - ${category} - ${action}`, {
       label,
       value,
     });
@@ -75,7 +75,7 @@ export function usePerformance(
       metricsRef.current.componentMountTime = mountTime;
 
       if (logToConsole) {
-        console.log(
+        // console.log(
           `Component ${componentName} mount time: ${mountTime.toFixed(2)}ms`
         );
       }
@@ -92,7 +92,7 @@ export function usePerformance(
         metricsRef.current.memoryUsage = memory.usedJSHeapSize / 1024 / 1024; // MB
 
         if (logToConsole) {
-          console.log(
+          // console.log(
             `Component ${componentName} memory usage: ${metricsRef.current.memoryUsage.toFixed(2)}MB`
           );
         }
@@ -116,7 +116,7 @@ export function usePerformance(
         metricsRef.current.renderTime = renderTime;
 
         if (logToConsole) {
-          console.log(
+          // console.log(
             `Component ${componentName} render time: ${renderTime.toFixed(2)}ms`
           );
         }
@@ -133,7 +133,7 @@ export function usePerformance(
         metricsRef.current.interactionTime = interactionTime;
 
         if (logToConsole) {
-          console.log(
+          // console.log(
             `Component ${componentName} interaction: ${action} at ${interactionTime.toFixed(2)}ms`
           );
         }
@@ -176,7 +176,7 @@ export function usePagePerformance(pageName: string) {
       analytics.trackPerformance(`${pageName}_load`, loadTime);
       analytics.track('page_load', pageName, 'loaded', undefined, loadTime);
 
-      console.log(`Page ${pageName} loaded in ${loadTime.toFixed(2)}ms`);
+      // console.log(`Page ${pageName} loaded in ${loadTime.toFixed(2)}ms`);
     };
 
     // Track when page is fully loaded
@@ -206,7 +206,7 @@ export function useAPIPerformance() {
         duration
       );
 
-      console.log(
+      // console.log(
         `API ${endpoint}: ${duration.toFixed(2)}ms (${success ? 'success' : 'error'})`
       );
     },

@@ -69,19 +69,19 @@ class Logger {
 
   public debug(message: string, ...args: any[]): void {
     if (this.shouldLog(LogLevel.DEBUG)) {
-      console.log(this.formatMessage('DEBUG', message, ...args));
+      // console.log(this.formatMessage('DEBUG', message, ...args));
     }
   }
 
   public info(message: string, ...args: any[]): void {
     if (this.shouldLog(LogLevel.INFO)) {
-      console.info(this.formatMessage('INFO', message, ...args));
+      // console.info(this.formatMessage('INFO', message, ...args));
     }
   }
 
   public warn(message: string, ...args: any[]): void {
     if (this.shouldLog(LogLevel.WARN)) {
-      console.warn(this.formatMessage('WARN', message, ...args));
+      // console.warn(this.formatMessage('WARN', message, ...args));
     }
   }
 
@@ -90,7 +90,7 @@ class Logger {
       const errorDetails = error instanceof Error 
         ? { message: error.message, stack: error.stack }
         : error;
-      console.error(this.formatMessage('ERROR', message, errorDetails, ...args));
+      // console.error(this.formatMessage('ERROR', message, errorDetails, ...args));
     }
   }
 

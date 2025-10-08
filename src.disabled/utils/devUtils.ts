@@ -5,25 +5,25 @@
 
 export const devLog = (message: string, data?: unknown) => {
   if (process.env['NODE_ENV'] === 'development') {
-    console.log(`[DEV] ${message}`, data || '');
+    // console.log(`[DEV] ${message}`, data || '');
   }
 };
 
 export const devError = (message: string, error?: unknown) => {
   if (process.env['NODE_ENV'] === 'development') {
-    console.error(`[DEV ERROR] ${message}`, error || '');
+    // console.error(`[DEV ERROR] ${message}`, error || '');
   }
 };
 
 export const devWarn = (message: string, data?: unknown) => {
   if (process.env['NODE_ENV'] === 'development') {
-    console.warn(`[DEV WARN] ${message}`, data || '');
+    // console.warn(`[DEV WARN] ${message}`, data || '');
   }
 };
 
 export const devInfo = (message: string, data?: unknown) => {
   if (process.env['NODE_ENV'] === 'development') {
-    console.info(`[DEV INFO] ${message}`, data || '');
+    // console.info(`[DEV INFO] ${message}`, data || '');
   }
 };
 

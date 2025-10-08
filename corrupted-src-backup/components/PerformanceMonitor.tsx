@@ -51,7 +51,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     if (enableLongTaskMonitoring) {
       const observer = performanceOptimizer.monitorLongTasks((entries: PerformanceEntryList) => {
         setLongTasks(prev => [...prev, ...entries]);
-        console.warn('Long tasks detected:', entries);
+        // console.warn('Long tasks detected:', entries);
       });
       
       return () => {
@@ -98,7 +98,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     try {
       observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
     } catch (e) {
-      console.warn('Performance Observer not supported:', e);
+      // console.warn('Performance Observer not supported:', e);
     }
 
     return () => {
@@ -109,7 +109,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   // Development mode: Log performance metrics
   useEffect(() => {
     if (process.env['NODE_ENV'] === 'development' && Object.keys(metrics).length > 0) {
-      console.log('Performance Metrics:', metrics);
+      // console.log('Performance Metrics:', metrics);
     }
   }, [metrics]);
 
@@ -163,7 +163,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
 
     // Monitor long tasks
     const longTaskObserver = performanceOptimizer.monitorLongTasks((entries) => {
-      console.warn('Long tasks detected:', entries);
+      // console.warn('Long tasks detected:', entries);
     });
 
     // Monitor Web Vitals

@@ -52,7 +52,7 @@ class AdvancedErrorHandler {
   setupUnhandledRejectionHandler() {
     // Additional promise rejection handling
     window.addEventListener('rejectionhandled', event => {
-      console.log('Promise rejection was handled:', event.reason);
+      // console.log('Promise rejection was handled:', event.reason);
     });
   }
 
@@ -126,7 +126,7 @@ class AdvancedErrorHandler {
     }
 
     // Console logging
-    console.error('Error logged:', errorInfo);
+    // console.error('Error logged:', errorInfo);
   }
 
   attemptRecovery(errorInfo) {
@@ -137,7 +137,7 @@ class AdvancedErrorHandler {
       try {
         recoveryStrategy(errorInfo);
       } catch (recoveryError) {
-        console.error('Recovery attempt failed:', recoveryError);
+        // console.error('Recovery attempt failed:', recoveryError);
       }
     }
   }
@@ -219,7 +219,7 @@ class AdvancedErrorHandler {
       fetch(errorInfo.originalRequest)
         .then(response => {
           if (response.ok) {
-            console.log('Request retry successful');
+            // console.log('Request retry successful');
           }
         })
         .catch(error => {
@@ -265,13 +265,13 @@ class AdvancedErrorHandler {
 
   handlePropertyAccessError(errorInfo) {
     // Try to fix property access errors
-    console.log('Attempting to fix property access error');
+    // console.log('Attempting to fix property access error');
     // Implementation would depend on specific error
   }
 
   handleFunctionCallError(errorInfo) {
     // Try to fix function call errors
-    console.log('Attempting to fix function call error');
+    // console.log('Attempting to fix function call error');
     // Implementation would depend on specific error
   }
 
@@ -432,7 +432,7 @@ class AdvancedErrorHandler {
       },
       body: JSON.stringify(errorInfo),
     }).catch(error => {
-      console.error('Failed to report error:', error);
+      // console.error('Failed to report error:', error);
     });
   }
 

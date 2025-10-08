@@ -32,12 +32,12 @@ function processFile(filePath) {
 
     if (modified) {
       fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed final imports: ${filePath}`);
+      // console.log(`Fixed final imports: ${filePath}`);
       return true;
     }
     return false;
   } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
+    // console.error(`Error processing ${filePath}:`, error.message);
     return false;
   }
 }
@@ -64,6 +64,6 @@ function processDirectory(dirPath) {
 
 // Process the app directory
 const appDir = path.join(__dirname, 'app');
-console.log('Fixing final import issues...');
+// console.log('Fixing final import issues...');
 const fixedCount = processDirectory(appDir);
-console.log(`Fixed ${fixedCount} files`);
+// console.log(`Fixed ${fixedCount} files`);

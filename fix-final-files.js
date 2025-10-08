@@ -92,7 +92,7 @@ function fixFile(filePath) {
     const fullPath = path.join(__dirname, filePath);
 
     if (!fs.existsSync(fullPath)) {
-      console.log(`File not found: ${filePath}`);
+      // console.log(`File not found: ${filePath}`);
       return;
     }
 
@@ -111,21 +111,21 @@ function fixFile(filePath) {
       content.includes('const,') ||
       (content.includes('{') && content.includes('expected'))
     ) {
-      console.log(`Fixing corrupted file: ${filePath}`);
+      // console.log(`Fixing corrupted file: ${filePath}`);
 
       const newContent = createBasicComponent(filePath);
       fs.writeFileSync(fullPath, newContent);
-      console.log(`✓ Fixed: ${filePath}`);
+      // console.log(`✓ Fixed: ${filePath}`);
     } else {
-      console.log(`File looks OK: ${filePath}`);
+      // console.log(`File looks OK: ${filePath}`);
     }
   } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
+    // console.error(`Error fixing ${filePath}:`, error.message);
   }
 }
 
-console.log('Starting final file fixes...\n');
+// console.log('Starting final file fixes...\n');
 
 filesToFix.forEach(fixFile);
 
-console.log('\n✓ Final file fixes completed!');
+// console.log('\n✓ Final file fixes completed!');

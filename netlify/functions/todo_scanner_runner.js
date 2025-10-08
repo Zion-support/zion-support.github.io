@@ -1,6 +1,6 @@
 exports.handler = async function (event, context) {
   try {
-    console.log('🤖 todo_scanner_runner function triggered');
+    // console.log('🤖 todo_scanner_runner function triggered');
     // Basic implementation - replace with actual logic
     const timestamp = new Date().toISOString();
     return {
@@ -12,7 +12,7 @@ exports.handler = async function (event, context) {
       }),
     };
   } catch (error) {
-    console.error('❌ todo_scanner_runner function failed:', error);
+    // console.error('❌ todo_scanner_runner function failed:', error);
     return {
       statusCode: 500,
       body: JSON.stringify({

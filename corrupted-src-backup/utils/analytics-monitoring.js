@@ -35,7 +35,7 @@ export const analyticsUtils = {
     };
 
     // Send to analytics service
-    console.error('Error tracked:', errorData);
+    // console.error('Error tracked:', errorData);
 
     // You can integrate with services like Sentry, LogRocket, etc.
     return errorData;
@@ -53,7 +53,7 @@ export const analyticsUtils = {
       metadata,
     };
 
-    console.log('User interaction tracked:', interactionData);
+    // console.log('User interaction tracked:', interactionData);
     return interactionData;
   },
 

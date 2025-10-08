@@ -10,7 +10,7 @@ const filesToFix = [
   '/workspace/app/components/UnifiedContentPromotion.tsx'
 ];
 
-console.log(`Fixing ${filesToFix.length} component files`);
+// console.log(`Fixing ${filesToFix.length} component files`);
 
 // Function to process a single file
 function processFile(filePath) {
@@ -26,13 +26,13 @@ function processFile(filePath) {
     
     if (modified || content !== fs.readFileSync(filePath, 'utf8')) {
       fs.writeFileSync(filePath, content);
-      console.log(`✓ Fixed: ${filePath}`);
+      // console.log(`✓ Fixed: ${filePath}`);
       return true;
     }
     
     return false;
   } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
+    // console.error(`Error processing ${filePath}:`, error.message);
     return false;
   }
 }
@@ -45,4 +45,4 @@ filesToFix.forEach(file => {
   }
 });
 
-console.log(`\nFixed ${fixedCount} out of ${filesToFix.length} files`);
+// console.log(`\nFixed ${fixedCount} out of ${filesToFix.length} files`);

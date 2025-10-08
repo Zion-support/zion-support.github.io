@@ -214,7 +214,7 @@ export class PersistentCache<T = unknown> {
     try {
       localStorage.setItem(this.prefix + key, JSON.stringify(entry));
     } catch (error) {
-      console.error('Failed to set cache item:', error);
+      // console.error('Failed to set cache item:', error);
     }
   }
 

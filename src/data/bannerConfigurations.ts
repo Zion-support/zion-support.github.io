@@ -29,13 +29,13 @@ export const selectBalancedBanners = (count: number = 3) => {
 
 export const trackImpression = (bannerId: string) => {
   if (typeof window !== 'undefined') {
-    console.log(`Banner impression: ${bannerId}`);
+    // console.log(`Banner impression: ${bannerId}`);
   }
 };
 
 export const trackClick = (bannerId: string) => {
   if (typeof window !== 'undefined') {
-    console.log(`Banner click: ${bannerId}`);
+    // console.log(`Banner click: ${bannerId}`);
   }
 };
 

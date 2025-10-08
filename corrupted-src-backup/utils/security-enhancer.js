@@ -450,7 +450,7 @@ class SecurityEnhancer {
       },
       body: JSON.stringify(event),
     }).catch(error => {
-      console.error('Failed to report security event:', error);
+      // console.error('Failed to report security event:', error);
     });
   }
 

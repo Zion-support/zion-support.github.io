@@ -2,7 +2,7 @@
 
 import fs from 'fs';
 
-console.log('🔧 Fixing duplicate errorHandler declarations...');
+// console.log('🔧 Fixing duplicate errorHandler declarations...');
 
 let content = fs.readFileSync('src/utils/errorHandler.ts', 'utf8');
 
@@ -20,4 +20,4 @@ content = content.replace(
 
 fs.writeFileSync('src/utils/errorHandler.ts', content);
 
-console.log('✅ Fixed duplicate errorHandler declarations');
+// console.log('✅ Fixed duplicate errorHandler declarations');

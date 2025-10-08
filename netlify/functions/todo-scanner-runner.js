@@ -1,6 +1,6 @@
 exports.handler = async function (event, context) {
   try {
-    console.log('todo-scanner-runner function triggered');
+    // console.log('todo-scanner-runner function triggered');
     // Todo scanning simulation
     const result = {
       statusCode: 200,
@@ -22,7 +22,7 @@ exports.handler = async function (event, context) {
     };
     return result;
   } catch (error) {
-    console.error('Error in todo-scanner-runner:', error);
+    // console.error('Error in todo-scanner-runner:', error);
     return {
       statusCode: 500,
       headers: {

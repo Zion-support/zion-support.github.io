@@ -113,16 +113,16 @@ class ErrorHandler {
 
     switch (severity) {
       case 'critical':
-        console.error(logMessage, logData);
+        // console.error(logMessage, logData);
         break;
       case 'high':
-        console.error(logMessage, logData);
+        // console.error(logMessage, logData);
         break;
       case 'medium':
-        console.warn(logMessage, logData);
+        // console.warn(logMessage, logData);
         break;
       case 'low':
-        console.info(logMessage, logData);
+        // console.info(logMessage, logData);
         break;
     }
   }

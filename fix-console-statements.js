@@ -27,12 +27,12 @@ function fixConsoleStatements(filePath) {
 
     if (modified) {
       fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed console statements in: ${filePath}`);
+      // console.log(`Fixed console statements in: ${filePath}`);
       return true;
     }
     return false;
   } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
+    // console.error(`Error processing ${filePath}:`, error.message);
     return false;
   }
 }
@@ -59,7 +59,7 @@ async function main() {
     });
   }
 
-  console.log(`\nTotal files fixed: ${totalFixed}`);
+  // console.log(`\nTotal files fixed: ${totalFixed}`);
 }
 
 main();

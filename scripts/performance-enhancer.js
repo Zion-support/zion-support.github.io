@@ -24,7 +24,7 @@ class PerformanceEnhancer {
   }
 
   async enhance() {
-    console.log('🚀 Starting Advanced Performance Enhancement...\n');
+    // console.log('🚀 Starting Advanced Performance Enhancement...\n');
 
     try {
       await this.analyzeBundle();
@@ -35,16 +35,16 @@ class PerformanceEnhancer {
       await this.optimizeBuild();
       await this.generateReport();
 
-      console.log('✅ Performance enhancement completed successfully!');
-      console.log(`📊 Report saved to: ${path.join(process.cwd(), 'performance-enhancement-report.json')}`);
+      // console.log('✅ Performance enhancement completed successfully!');
+      // console.log(`📊 Report saved to: ${path.join(process.cwd(), 'performance-enhancement-report.json')}`);
     } catch (error) {
-      console.error('❌ Performance enhancement failed:', error.message);
+      // console.error('❌ Performance enhancement failed:', error.message);
       process.exit(1);
     }
   }
 
   async analyzeBundle() {
-    console.log('📦 Analyzing bundle size...');
+    // console.log('📦 Analyzing bundle size...');
     
     try {
       // Build with analysis
@@ -81,14 +81,14 @@ class PerformanceEnhancer {
         details: `Total bundle size: ${(totalSize / 1024).toFixed(2)} KB`
       });
       
-      console.log(`✅ Bundle analysis completed. Total size: ${(totalSize / 1024).toFixed(2)} KB`);
+      // console.log(`✅ Bundle analysis completed. Total size: ${(totalSize / 1024).toFixed(2)} KB`);
     } catch (error) {
-      console.log('⚠️  Bundle analysis skipped:', error.message);
+      // console.log('⚠️  Bundle analysis skipped:', error.message);
     }
   }
 
   async optimizeImages() {
-    console.log('🖼️  Optimizing images...');
+    // console.log('🖼️  Optimizing images...');
     
     try {
       const publicPath = path.join(process.cwd(), 'public');
@@ -98,7 +98,7 @@ class PerformanceEnhancer {
       try {
         await fs.access(imagesPath);
       } catch {
-        console.log('⚠️  No images directory found, skipping image optimization');
+        // console.log('⚠️  No images directory found, skipping image optimization');
         return;
       }
       
@@ -125,14 +125,14 @@ class PerformanceEnhancer {
         details: `Processed ${optimizedCount} images`
       });
       
-      console.log(`✅ Image optimization completed. Processed ${optimizedCount} images`);
+      // console.log(`✅ Image optimization completed. Processed ${optimizedCount} images`);
     } catch (error) {
-      console.log('⚠️  Image optimization skipped:', error.message);
+      // console.log('⚠️  Image optimization skipped:', error.message);
     }
   }
 
   async optimizeCSS() {
-    console.log('🎨 Optimizing CSS...');
+    // console.log('🎨 Optimizing CSS...');
     
     try {
       // Generate critical CSS
@@ -159,14 +159,14 @@ class PerformanceEnhancer {
         details: 'Critical CSS generated'
       });
       
-      console.log('✅ CSS optimization completed');
+      // console.log('✅ CSS optimization completed');
     } catch (error) {
-      console.log('⚠️  CSS optimization skipped:', error.message);
+      // console.log('⚠️  CSS optimization skipped:', error.message);
     }
   }
 
   async optimizeJavaScript() {
-    console.log('⚡ Optimizing JavaScript...');
+    // console.log('⚡ Optimizing JavaScript...');
     
     try {
       // Generate performance monitoring script
@@ -182,14 +182,14 @@ class PerformanceEnhancer {
       new PerformanceObserver((list) => {
         const entries = list.getEntries();
         const lastEntry = entries[entries.length - 1];
-        console.log('LCP:', lastEntry.startTime);
+        // console.log('LCP:', lastEntry.startTime);
       }).observe({ entryTypes: ['largest-contentful-paint'] });
       
       // FID
       new PerformanceObserver((list) => {
         const entries = list.getEntries();
         entries.forEach((entry) => {
-          console.log('FID:', entry.processingStart - entry.startTime);
+          // console.log('FID:', entry.processingStart - entry.startTime);
         });
       }).observe({ entryTypes: ['first-input'] });
       
@@ -202,7 +202,7 @@ class PerformanceEnhancer {
             clsValue += entry.value;
           }
         });
-        console.log('CLS:', clsValue);
+        // console.log('CLS:', clsValue);
       }).observe({ entryTypes: ['layout-shift'] });
     }
   }
@@ -225,14 +225,14 @@ class PerformanceEnhancer {
         details: 'Performance monitoring script generated'
       });
       
-      console.log('✅ JavaScript optimization completed');
+      // console.log('✅ JavaScript optimization completed');
     } catch (error) {
-      console.log('⚠️  JavaScript optimization skipped:', error.message);
+      // console.log('⚠️  JavaScript optimization skipped:', error.message);
     }
   }
 
   async generateServiceWorker() {
-    console.log('🔧 Generating service worker...');
+    // console.log('🔧 Generating service worker...');
     
     try {
       const serviceWorkerScript = `
@@ -286,14 +286,14 @@ self.addEventListener('activate', (event) => {
         details: 'Service worker generated for offline support'
       });
       
-      console.log('✅ Service worker generated');
+      // console.log('✅ Service worker generated');
     } catch (error) {
-      console.log('⚠️  Service worker generation skipped:', error.message);
+      // console.log('⚠️  Service worker generation skipped:', error.message);
     }
   }
 
   async optimizeBuild() {
-    console.log('🏗️  Optimizing build configuration...');
+    // console.log('🏗️  Optimizing build configuration...');
     
     try {
       // Check if vite.config.js exists
@@ -315,7 +315,7 @@ self.addEventListener('activate', (event) => {
         }
         
       } catch {
-        console.log('⚠️  No vite.config.js found');
+        // console.log('⚠️  No vite.config.js found');
       }
       
       this.report.optimizations.push({
@@ -324,14 +324,14 @@ self.addEventListener('activate', (event) => {
         details: 'Build configuration analyzed'
       });
       
-      console.log('✅ Build optimization completed');
+      // console.log('✅ Build optimization completed');
     } catch (error) {
-      console.log('⚠️  Build optimization skipped:', error.message);
+      // console.log('⚠️  Build optimization skipped:', error.message);
     }
   }
 
   async generateReport() {
-    console.log('📊 Generating performance report...');
+    // console.log('📊 Generating performance report...');
     
     const reportPath = path.join(process.cwd(), 'performance-enhancement-report.json');
     await fs.writeFile(reportPath, JSON.stringify(this.report, null, 2));
@@ -341,7 +341,7 @@ self.addEventListener('activate', (event) => {
     const markdownPath = path.join(process.cwd(), 'performance-enhancement-report.md');
     await fs.writeFile(markdownPath, markdownReport);
     
-    console.log('✅ Performance report generated');
+    // console.log('✅ Performance report generated');
   }
 
   generateMarkdownReport() {

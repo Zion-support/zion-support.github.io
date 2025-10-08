@@ -211,7 +211,7 @@ export class ComprehensiveOptimizer {
       this.memoryInterval = setInterval(() => {
         const memory = getMemoryUsage();
         if (memory && memory.percentage > 80) {
-          console.warn('⚠️ High memory usage detected:', memory);
+          // console.warn('⚠️ High memory usage detected:', memory);
           this.handleHighMemoryUsage(memory);
         }
       }, 5000);
@@ -243,17 +243,17 @@ export class ComprehensiveOptimizer {
     switch (entryType) {
       case 'largest-contentful-paint':
         if (entry.startTime > 2500) {
-          console.warn('⚠️ Slow LCP detected:', entry.startTime);
+          // console.warn('⚠️ Slow LCP detected:', entry.startTime);
         }
         break;
       case 'first-input':
         if (entry.startTime > 100) {
-          console.warn('⚠️ Slow FID detected:', entry.startTime);
+          // console.warn('⚠️ Slow FID detected:', entry.startTime);
         }
         break;
       case 'layout-shift':
         if ((entry as any).value > 0.1) {
-          console.warn('⚠️ High CLS detected:', (entry as any).value);
+          // console.warn('⚠️ High CLS detected:', (entry as any).value);
         }
         break;
     }
@@ -382,7 +382,7 @@ export class ComprehensiveOptimizer {
     this.memoryInterval = setInterval(() => {
       const memoryUsage = getMemoryUsage();
       if (memoryUsage && memoryUsage.usedJSHeapSize > 100 * 1024 * 1024) { // 100MB
-        console.warn('High memory usage detected:', memoryUsage);
+        // console.warn('High memory usage detected:', memoryUsage);
       }
     }, 30000); // Check every 30 seconds
   }
@@ -439,7 +439,7 @@ export class ComprehensiveOptimizer {
       setInterval(() => {
         const memory = getMemoryUsage();
         if (memory) {
-          console.log('Memory usage:', memory);
+          // console.log('Memory usage:', memory);
         }
       }, 30000); // Check every 30 seconds
     }
@@ -481,9 +481,9 @@ export class ComprehensiveOptimizer {
       // Run SEO audit
       try {
         const auditResults = await seoAudit();
-        console.log('SEO Audit Results:', auditResults);
+        // console.log('SEO Audit Results:', auditResults);
       } catch (error) {
-        console.error('SEO audit failed:', error);
+        // console.error('SEO audit failed:', error);
       }
     }
   }
@@ -511,7 +511,7 @@ export class ComprehensiveOptimizer {
       if (backgroundColor && color) {
         const ratio = contrastUtils.getContrastRatio(backgroundColor, color);
         if (ratio < 4.5) {
-          console.warn('Low contrast ratio detected:', ratio);
+          // console.warn('Low contrast ratio detected:', ratio);
         }
       }
     }

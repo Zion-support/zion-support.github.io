@@ -84,7 +84,7 @@ export const recordBannerImpression = (impression: Omit<BannerImpression, 'times
     const trimmedImpressions = impressions.slice(-1000);
     storeImpressions(trimmedImpressions);
   } catch (error) {
-    console.error('Failed to store banner impressions:', error);
+    // console.error('Failed to store banner impressions:', error);
   }
 };
 

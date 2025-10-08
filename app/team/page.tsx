@@ -1,10 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
-import { Link } from 'react-router-dom';
-// Metadata will be handled by React Helmet in individual components
-=======
-import { Helmet } from 'react-helmet-async';
->>>>>>> cursor/fix-errors-and-merge-to-main-dd0b
+
 
 const TeamPage: React.FC = () => {
   const teamMembers = [

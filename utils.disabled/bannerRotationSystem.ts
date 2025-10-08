@@ -2,7 +2,7 @@
 
   try {
   } catch (error) {
-    console.error('Failed to store banner impressions:', error);
+    // console.error('Failed to store banner impressions:', error);
   }
 };
 
@@ -19,7 +19,7 @@ export const recordBannerImpression = (impression: Omit<BannerImpression, 'times
     
     impressions.push(newImpression);
   } catch (error) {
-    console.error('Failed to record banner impression:', error);
+    // console.error('Failed to record banner impression:', error);
   }
 };
 

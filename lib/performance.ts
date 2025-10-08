@@ -115,7 +115,7 @@ function sendToAnalytics(metric: Metric): void {
   };
 
   // Log in development
-    console.log('Performance Metric:', performanceMetric);
+    // console.log('Performance Metric:', performanceMetric);
   }
 
     id: metric.id,
@@ -124,7 +124,7 @@ function sendToAnalytics(metric: Metric): void {
   // Log in development
   if (process.env['NODE_ENV'] === 'development') {
     // eslint-disable-next-line no-console
-    console.log('Performance Metric:', performanceMetric);
+    // console.log('Performance Metric:', performanceMetric);
   }
 
   // Send to analytics
@@ -176,7 +176,7 @@ function sendToAnalytics(metric: Metric): void {
         userAgent: navigator.userAgent,
       }),
       keepalive: true,
-    }).catch(error => console.error('Performance reporting error:', error));
+    }).catch(error => // console.error('Performance reporting error:', error));
   }
     });
   }
@@ -211,7 +211,7 @@ function sendToAnalytics(metric: Metric): void {
       keepalive: true,
     }).catch(error => {
       // eslint-disable-next-line no-console
-      console.error('Performance reporting error:', error);
+      // console.error('Performance reporting error:', error);
     });
   }
 }
@@ -240,16 +240,16 @@ export function initPerformanceMonitoring(): void {
     getLCP(sendToAnalytics);
     getTTFB(sendToAnalytics);
   } catch (error) {
-    console.error('Error initializing performance monitoring:', error);
+    // console.error('Error initializing performance monitoring:', error);
     onCLS(sendToAnalytics);
     onINP(sendToAnalytics);
     onFCP(sendToAnalytics);
     onLCP(sendToAnalytics);
     onTTFB(sendToAnalytics);
   } catch (error) {
-    console.error('Error initializing performance monitoring:', error);
+    // console.error('Error initializing performance monitoring:', error);
   } catch (error) {
-    console.error('Error initializing performance monitoring:', error);
+    // console.error('Error initializing performance monitoring:', error);
   }
 /**
  * Generate performance report
@@ -317,7 +317,7 @@ export function generatePerformanceReport(): PerformanceReport {
   }
 
   if (process.env['NODE_ENV'] === 'development') {
-    console.log(`Performance: ${name} took ${duration.toFixed(2)}ms`);
+    // console.log(`Performance: ${name} took ${duration.toFixed(2)}ms`);
   }
 
 
@@ -350,12 +350,12 @@ export function markPerformance(name: string): void {
   try {
     performance.mark(name);
   } catch (error) {
-    console.error('Error marking performance:', error);
+    // console.error('Error marking performance:', error);
   }
   } catch (error) {
      
     // eslint-disable-next-line no-console
-    console.error('Error initializing performance monitoring:', error);
+    // console.error('Error initializing performance monitoring:', error);
   }
 }
 
@@ -384,7 +384,7 @@ export function measurePerformance(name: string, startTime: number): number {
   if (process.env['NODE_ENV'] === 'development') {
      
     // eslint-disable-next-line no-console
-    console.log(`Performance: ${name} took ${duration.toFixed(2)}ms`);
+    // console.log(`Performance: ${name} took ${duration.toFixed(2)}ms`);
   }
 
   return duration;
@@ -401,7 +401,7 @@ export function markPerformance(name: string): void {
   } catch (error) {
      
     // eslint-disable-next-line no-console
-    console.error('Error marking performance:', error);
+    // console.error('Error marking performance:', error);
   }
 }
 
@@ -431,7 +431,7 @@ export function measureBetween(
   } catch (error) {
      
     // eslint-disable-next-line no-console
-    console.error('Error measuring between marks:', error);
+    // console.error('Error measuring between marks:', error);
     return 0;
   }
 }
@@ -473,7 +473,7 @@ export function measureBetween(name: string, startMark: string, endMark: string)
       const entries = performance.getEntriesByName(name, 'measure');
       return entries.length > 0 ? entries[0]?.duration || 0 : 0;
     } catch (error) {
-      console.warn('Performance measure failed:', error);
+      // console.warn('Performance measure failed:', error);
       return 0;
     }
   }
@@ -516,7 +516,7 @@ export function getNavigationTiming(): Record<string, number> | null {
   try {
     return performance.getEntriesByType('resource') as PerformanceResourceTiming[];
   } catch (error) {
-    console.error('Error getting resource timing:', error);
+    // console.error('Error getting resource timing:', error);
     return [];
   }
 }
@@ -733,7 +733,7 @@ export function generatePerformanceReport(): PerformanceReport {
   } catch (error) {
      
     // eslint-disable-next-line no-console
-    console.error('Error monitoring long tasks:', error);
+    // console.error('Error monitoring long tasks:', error);
     return null;
   }
 }
@@ -754,7 +754,7 @@ export function generatePerformanceReport(): PerformanceReport {
   } catch (error) {
      
     // eslint-disable-next-line no-console
-    console.error('Error monitoring layout shifts:', error);
+    // console.error('Error monitoring layout shifts:', error);
     return null;
   }
 }
@@ -840,7 +840,7 @@ export function monitorLongTasks(
     observer.observe({ entryTypes: ['longtask'] });
     return observer;
   } catch (error) {
-    console.error('Error monitoring long tasks:', error);
+    // console.error('Error monitoring long tasks:', error);
     return null;
   }
 }
@@ -867,7 +867,7 @@ export function monitorLayoutShifts(
     observer.observe({ entryTypes: ['layout-shift'] });
     return observer;
   } catch (error) {
-    console.error('Error monitoring layout shifts:', error);
+    // console.error('Error monitoring layout shifts:', error);
     return null;
   }
 }
@@ -1032,7 +1032,7 @@ export function isPerformanceMonitoringSupported(): boolean {
   };
 
   // Send to analytics service
-  console.log('Performance Metric:', performanceMetric);
+  // console.log('Performance Metric:', performanceMetric);
   
   // You can send this to your analytics service
   // analytics.track('performance_metric', performanceMetric);

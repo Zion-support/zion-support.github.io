@@ -5,7 +5,7 @@
  */ import { execSync } from 'child_process';
 import fs from 'fs';
 
-console.log('🔧 Fixing remaining syntax errors...');
+// console.log('🔧 Fixing remaining syntax errors...');
 
 //Get the list of files with errors from the lint output
 const errorFiles = [
@@ -60,7 +60,7 @@ let fixedCount = 0;
 for (const file of errorFiles) {
   try {
     if (!fs.existsSync(file)) {
-      console.log(`⚠️ File not found: ${file}`);
+      // console.log(`⚠️ File not found: ${file}`);
       continue;
     }
 
@@ -132,29 +132,29 @@ for (const file of errorFiles) {
 
     if (modified) {
       fs.writeFileSync(file, content);
-      console.log(`✅ Fixed syntax errors in ${file}`);
+      // console.log(`✅ Fixed syntax errors in ${file}`);
       fixedCount++;
     }
   } catch (error) {
-    console.log(`❌ Error processing ${file}: ${error.message}`);
+    // console.log(`❌ Error processing ${file}: ${error.message}`);
   }
 }
 
-console.log(`\n🎉 Fixed syntax errors in ${fixedCount} files`);
+// console.log(`\n🎉 Fixed syntax errors in ${fixedCount} files`);
 
 // Run a quick syntax check
-console.log('\n🔍 Running syntax check...');
+// console.log('\n🔍 Running syntax check...');
 try {
   execSync('npm run type-check', { stdio: 'pipe' });
-  console.log('✅ TypeScript syntax check passed');
+  // console.log('✅ TypeScript syntax check passed');
 } catch (error) {
-  console.log('⚠️ TypeScript syntax check failed, but continuing...');
+  // console.log('⚠️ TypeScript syntax check failed, but continuing...');
 }
 
-console.log('\n🔍 Running linting to verify fixes...');
+// console.log('\n🔍 Running linting to verify fixes...');
 try {
   execSync('npm run lint:comprehensive', { stdio: 'inherit' });
-  console.log('✅ All syntax errors have been resolved!');
+  // console.log('✅ All syntax errors have been resolved!');
 } catch (error) {
-  console.log('⚠️ Some syntax errors may still exist. Check the output above.');
+  // console.log('⚠️ Some syntax errors may still exist. Check the output above.');
 }

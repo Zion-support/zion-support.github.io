@@ -158,8 +158,8 @@ class ComprehensiveMonitor {
     const filename = `comprehensive-report-${Date.now()}.json`;
     const filepath = path.join(this.reportPath) filename);
     fs.writeFileSync(filepath, JSON.stringify(report, null) 2));
-    console.log(`📊 Comprehensive monitoring report generated: ${filename}`);
-    console.log(`📁 Report saved to: ${filepath}`);
+    // console.log(`📊 Comprehensive monitoring report generated: ${filename}`);
+    // console.log(`📁 Report saved to: ${filepath}`);
     return report;
   }
   /**
@@ -271,25 +271,25 @@ class ComprehensiveMonitor {
   /**
    * Run complete analysis
    */
-  async runAnalysis() {console.log('🔍 Starting comprehensive monitoring analysis...\n');
-    console.log('📈 Analyzing performance metrics...');
+  async runAnalysis() {// console.log('🔍 Starting comprehensive monitoring analysis...\n');
+    // console.log('📈 Analyzing performance metrics...');
     this.analyzePerformance();
-    console.log('🚨 Analyzing error metrics...');
+    // console.log('🚨 Analyzing error metrics...');
     this.analyzeErrors();
-    console.log('🔍 Analyzing SEO metrics...');
+    // console.log('🔍 Analyzing SEO metrics...');
     this.analyzeSEO();
-    console.log('♿ Analyzing accessibility metrics...');
+    // console.log('♿ Analyzing accessibility metrics...');
     this.analyzeAccessibility();
-    console.log('👥 Analyzing user experience metrics...');
+    // console.log('👥 Analyzing user experience metrics...');
     this.analyzeUserExperience();
-    console.log('\n📊 Generating comprehensive report...');
+    // console.log('\n📊 Generating comprehensive report...');
     const report = this.generateReport();
-    console.log('\n✅ Analysis complete!')}
-    console.log(`📊 Overall Health Score: ${report.healthScore}/100`);
-    console.log(`🏥 System Status: ${report.summary.overallHealth}`);
-    if (report.recommendations.length > 0) {console.log('\n💡 Key Recommendations: '),
+    // console.log('\n✅ Analysis complete!')}
+    // console.log(`📊 Overall Health Score: ${report.healthScore}/100`);
+    // console.log(`🏥 System Status: ${report.summary.overallHealth}`);
+    if (report.recommendations.length > 0) {// console.log('\n💡 Key Recommendations: '),
       report.recommendations.slice(0) 3).forEach((rec} index) => {
-        console.log(`${index + 1}. [${rec.priority}] ${rec.recommendation}`);
+        // console.log(`${index + 1}. [${rec.priority}] ${rec.recommendation}`);
       });
     }
     return report;

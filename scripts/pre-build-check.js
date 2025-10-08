@@ -11,7 +11,7 @@ import { resolve } from 'path';
 const errors = [];
 const warnings = [];
 
-console.log('🔍 Running pre-build checks...\n');
+// console.log('🔍 Running pre-build checks...\n');
 
 // Check Node version
 const requiredNodeVersion = '18.0.0';
@@ -19,7 +19,7 @@ const currentNodeVersion = process.version.slice(1);
 if (currentNodeVersion < requiredNodeVersion) {
   errors.push(`Node.js version ${requiredNodeVersion} or higher is required (current: ${currentNodeVersion})`);
 } else {
-  console.log('✅ Node.js version:', currentNodeVersion);
+  // console.log('✅ Node.js version:', currentNodeVersion);
 }
 
 // Check for required files
@@ -35,7 +35,7 @@ requiredFiles.forEach((file) => {
   if (!existsSync(resolve(process.cwd(), file))) {
     errors.push(`Required file missing: ${file}`);
   } else {
-    console.log(`✅ Found: ${file}`);
+    // console.log(`✅ Found: ${file}`);
   }
 });
 
@@ -50,7 +50,7 @@ try {
     }
   });
   
-  console.log('✅ Critical dependencies present');
+  // console.log('✅ Critical dependencies present');
 } catch (error) {
   errors.push('Failed to read package.json');
 }
@@ -62,7 +62,7 @@ try {
   if (!tsConfig.compilerOptions) {
     warnings.push('tsconfig.json missing compilerOptions');
   } else {
-    console.log('✅ TypeScript configuration valid');
+    // console.log('✅ TypeScript configuration valid');
   }
 } catch (error) {
   errors.push('Failed to read tsconfig.json');
@@ -72,29 +72,29 @@ try {
 if (!existsSync(resolve(process.cwd(), '.env.example'))) {
   warnings.push('.env.example file not found - consider adding environment variable documentation');
 } else {
-  console.log('✅ Environment example file present');
+  // console.log('✅ Environment example file present');
 }
 
 // Report results
-console.log('\n📊 Pre-build Check Results:\n');
+// console.log('\n📊 Pre-build Check Results:\n');
 
 if (errors.length > 0) {
-  console.log('❌ Errors found:');
-  errors.forEach((error) => console.log(`   - ${error}`));
+  // console.log('❌ Errors found:');
+  errors.forEach((error) => // console.log(`   - ${error}`));
 }
 
 if (warnings.length > 0) {
-  console.log('\n⚠️  Warnings:');
-  warnings.forEach((warning) => console.log(`   - ${warning}`));
+  // console.log('\n⚠️  Warnings:');
+  warnings.forEach((warning) => // console.log(`   - ${warning}`));
 }
 
 if (errors.length === 0 && warnings.length === 0) {
-  console.log('✅ All checks passed! Ready to build.\n');
+  // console.log('✅ All checks passed! Ready to build.\n');
   process.exit(0);
 } else if (errors.length > 0) {
-  console.log('\n❌ Build cannot proceed. Please fix the errors above.\n');
+  // console.log('\n❌ Build cannot proceed. Please fix the errors above.\n');
   process.exit(1);
 } else {
-  console.log('\n✅ Build can proceed (with warnings).\n');
+  // console.log('\n✅ Build can proceed (with warnings).\n');
   process.exit(0);
 }

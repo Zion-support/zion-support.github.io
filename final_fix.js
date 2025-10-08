@@ -2,10 +2,10 @@ import { execSync } from 'child_process';
 import fs from 'fs';
 import path from 'path';
 
-console.log('🔧 Starting final comprehensive fixes...');
+// console.log('🔧 Starting final comprehensive fixes...');
 
 // 1. Fix test imports properly
-console.log('📝 Fixing test imports...');
+// console.log('📝 Fixing test imports...');
 
 const appMinimalTestPath = '/workspace/__tests__/AppMinimal.test.tsx';
 if (fs.existsSync(appMinimalTestPath)) {
@@ -18,11 +18,11 @@ if (fs.existsSync(appMinimalTestPath)) {
     );
     
     fs.writeFileSync(appMinimalTestPath, content);
-    console.log('✅ Fixed test imports');
+    // console.log('✅ Fixed test imports');
 }
 
 // 2. Fix blog page metadata - remove publishedTime completely
-console.log('📝 Fixing blog page metadata...');
+// console.log('📝 Fixing blog page metadata...');
 
 const blogPages = [
     'app/blog/ai-2026-april-revolutionary-breakthrough/page.tsx',
@@ -38,12 +38,12 @@ blogPages.forEach(pagePath => {
         content = content.replace(/\s+publishedTime: ['"][^'"]*['"],?\s*/g, '');
         
         fs.writeFileSync(pagePath, content);
-        console.log(`✅ Fixed ${pagePath}`);
+        // console.log(`✅ Fixed ${pagePath}`);
     }
 });
 
 // 3. Fix OpenGraph authors - use string array instead of object array
-console.log('📝 Fixing OpenGraph authors...');
+// console.log('📝 Fixing OpenGraph authors...');
 
 const openGraphPages = [
     'app/blog/ai-2026-consensus-intelligence-breakthrough/page.tsx',
@@ -61,12 +61,12 @@ openGraphPages.forEach(pagePath => {
         );
         
         fs.writeFileSync(pagePath, content);
-        console.log(`✅ Fixed ${pagePath}`);
+        // console.log(`✅ Fixed ${pagePath}`);
     }
 });
 
 // 4. Fix Calculator import - use a different icon
-console.log('📝 Fixing Calculator import...');
+// console.log('📝 Fixing Calculator import...');
 
 const calculatorPagePath = '/workspace/app/blog/ai-enterprise-transformation-ultimate-guide-2025/page.tsx';
 if (fs.existsSync(calculatorPagePath)) {
@@ -83,11 +83,11 @@ if (fs.existsSync(calculatorPagePath)) {
     );
     
     fs.writeFileSync(calculatorPagePath, content);
-    console.log('✅ Fixed Calculator import');
+    // console.log('✅ Fixed Calculator import');
 }
 
 // 5. Fix AnalyticsTracker dataLayer type conflict
-console.log('📝 Fixing AnalyticsTracker...');
+// console.log('📝 Fixing AnalyticsTracker...');
 
 const analyticsTrackerPath = '/workspace/app/components/AnalyticsTracker.tsx';
 if (fs.existsSync(analyticsTrackerPath)) {
@@ -100,11 +100,11 @@ if (fs.existsSync(analyticsTrackerPath)) {
     );
     
     fs.writeFileSync(analyticsTrackerPath, content);
-    console.log('✅ Fixed AnalyticsTracker');
+    // console.log('✅ Fixed AnalyticsTracker');
 }
 
 // 6. Fix SystemMonitor - remove performanceEnhancer calls
-console.log('📝 Fixing SystemMonitor...');
+// console.log('📝 Fixing SystemMonitor...');
 
 const systemMonitorPath = '/workspace/app/components/SystemMonitor.tsx';
 if (fs.existsSync(systemMonitorPath)) {
@@ -135,7 +135,7 @@ if (fs.existsSync(systemMonitorPath)) {
     );
     
     fs.writeFileSync(systemMonitorPath, content);
-    console.log('✅ Fixed SystemMonitor');
+    // console.log('✅ Fixed SystemMonitor');
 }
 
-console.log('🎉 Final comprehensive fixes completed!');
+// console.log('🎉 Final comprehensive fixes completed!');

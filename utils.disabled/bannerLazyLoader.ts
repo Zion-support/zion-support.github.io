@@ -18,7 +18,7 @@ interface LazyBannerConfig {
               );
               // Return a fallback component
               resolve({ default: () => null });
-              console.error(`Retry failed for banner: ${componentName}`, retryError);
+              // console.error(`Retry failed for banner: ${componentName}`, retryError);
               // Return a fallback component
               resolve({
                 default: () => React.createElement('div', null, 'Banner temporarily unavailable')
@@ -64,7 +64,7 @@ export class BannerObserver {
       // Fallback for browsers without requestIdleCallback
       setTimeout(() => {
         importFn().catch(error => {
-          console.warn('Banner preload failed:', error);
+          // console.warn('Banner preload failed:', error);
         });
       }, 100);
     }
@@ -97,7 +97,7 @@ export const trackBannerPerformance = (
 ) => {
   if (typeof window !== 'undefined' && 'performance' in window) {
     // Send to analytics
-    console.log(`Banner Performance [${bannerName}]:`, metrics);
+    // console.log(`Banner Performance [${bannerName}]:`, metrics);
     // You can integrate with your analytics service here
     // Example: gtag('event', 'banner_performance', {...metrics, banner: bannerName });
   }
@@ -212,7 +212,7 @@ export class BannerManager {
       const module = await config.importFn();
       this.loadedBanners.set(config.name, module.default);
     } catch (error) {
-      console.warn(`Failed to preload banner: ${config.name}`, error);
+      // console.warn(`Failed to preload banner: ${config.name}`, error);
     }
   }
 

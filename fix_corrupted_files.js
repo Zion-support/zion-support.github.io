@@ -157,12 +157,12 @@ function processFile(filePath) {
 
     if (content !== fixedContent) {
       fs.writeFileSync(filePath, fixedContent, 'utf8');
-      console.log(`Fixed: ${filePath}`);
+      // console.log(`Fixed: ${filePath}`);
       return true;
     }
     return false;
   } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
+    // console.error(`Error processing ${filePath}:`, error.message);
     return false;
   }
 }
@@ -195,13 +195,13 @@ function processDirectory(dirPath) {
       }
     }
   } catch (error) {
-    console.error(`Error processing directory ${dirPath}:`, error.message);
+    // console.error(`Error processing directory ${dirPath}:`, error.message);
   }
 
   return processedCount;
 }
 
 //Main execution
-console.log('Starting to fix corrupted files...');
+// console.log('Starting to fix corrupted files...');
 const processedCount = processDirectory('./src');
-console.log(`Fixed ${processedCount} files.`);
+// console.log(`Fixed ${processedCount} files.`);

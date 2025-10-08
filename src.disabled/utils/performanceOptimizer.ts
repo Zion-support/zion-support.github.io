@@ -343,7 +343,7 @@ export const monitorLongTasks = (): void => {
   const observer = new PerformanceObserver((list) => {
     for (const entry of list.getEntries()) {
       if (entry.duration > 50) {
-        console.warn('Long task detected:', entry);
+        // console.warn('Long task detected:', entry);
       }
     }
   });
@@ -351,7 +351,7 @@ export const monitorLongTasks = (): void => {
   try {
     observer.observe({ entryTypes: ['longtask'] });
   } catch (error) {
-    console.warn('Long task monitoring not supported:', error);
+    // console.warn('Long task monitoring not supported:', error);
   }
 };
 

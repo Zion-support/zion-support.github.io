@@ -53,7 +53,7 @@ class AdvancedPerformanceMonitor {
     this.setupMemoryMonitoring();
     this.setupNetworkMonitoring();
 
-    console.log('Advanced Performance Monitor started');
+    // console.log('Advanced Performance Monitor started');
   }
 
   /**
@@ -65,7 +65,7 @@ class AdvancedPerformanceMonitor {
       this.observer.disconnect();
       this.observer = null;
     }
-    console.log('Advanced Performance Monitor stopped');
+    // console.log('Advanced Performance Monitor stopped');
   }
 
   /**
@@ -154,7 +154,7 @@ class AdvancedPerformanceMonitor {
         ],
       });
     } catch (error) {
-      console.warn('Performance Observer setup failed:', error);
+      // console.warn('Performance Observer setup failed:', error);
     }
   }
 
@@ -188,7 +188,7 @@ class AdvancedPerformanceMonitor {
         });
       })
       .catch(error => {
-        console.warn('Web Vitals import failed:', error);
+        // console.warn('Web Vitals import failed:', error);
       });
   }
 
@@ -335,7 +335,7 @@ class AdvancedPerformanceMonitor {
     }
 
     if (warnings.length > 0) {
-      console.warn('Performance threshold exceeded:', warnings);
+      // console.warn('Performance threshold exceeded:', warnings);
     }
   }
 

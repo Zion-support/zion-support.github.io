@@ -31,29 +31,29 @@ const prs = [
   },
 ];
 
-console.log('Starting PR merge process...');
+// console.log('Starting PR merge process...');
 
 //Ensure we're on main branch
 try {
   execSync('git checkout main', { stdio: 'inherit' });
-  console.log('✓ Switched to main branch');
+  // console.log('✓ Switched to main branch');
 } catch (error) {
-  console.error('Error switching to main:', error.message);
+  // console.error('Error switching to main:', error.message);
   process.exit(1);
 }
 
 //Pull latest changes
 try {
   execSync('git pull origin main', { stdio: 'inherit' });
-  console.log('✓ Pulled latest changes from main');
+  // console.log('✓ Pulled latest changes from main');
 } catch (error) {
-  console.error('Error pulling latest changes:', error.message);
+  // console.error('Error pulling latest changes:', error.message);
   process.exit(1);
 }
 
 //Process each PR
 for (const pr of prs) {
-  console.log(`\n--- Processing PR #${pr.number}: ${pr.title} ---`);
+  // console.log(`\n--- Processing PR #${pr.number}: ${pr.title} ---`);
 
   try {
     //Check if branch exists
@@ -62,9 +62,9 @@ for (const pr of prs) {
         `git show-ref --verify --quiet refs/remotes/origin/${pr.branch}`,
         { stdio: 'pipe' }
       );
-      console.log(`✓ Branch ${pr.branch} exists`);
+      // console.log(`✓ Branch ${pr.branch} exists`);
     } catch (error) {
-      console.log(`⚠ Branch ${pr.branch} not found, skipping...`);
+      // console.log(`⚠ Branch ${pr.branch} not found, skipping...`);
       continue;
     }
 
@@ -74,9 +74,9 @@ for (const pr of prs) {
         `git merge origin/${pr.branch} --no-ff -m "Merge PR #${pr.number}: ${pr.title}"`,
         { stdio: 'inherit' }
       );
-      console.log(`✓ Successfully merged PR #${pr.number}`);
+      // console.log(`✓ Successfully merged PR #${pr.number}`);
     } catch (error) {
-      console.log(
+      // console.log(
         `⚠ Merge conflict or error for PR #${pr.number}:`,
         error.message
       );
@@ -84,32 +84,32 @@ for (const pr of prs) {
       //Try to resolve conflicts automatically
       try {
         execSync('git status --porcelain', { stdio: 'pipe' });
-        console.log('Checking for merge conflicts...');
+        // console.log('Checking for merge conflicts...');
 
         //If there are conflicts, try to resolve them
         const status = execSync('git status --porcelain', { encoding: 'utf8' });
         if (status.includes('UU') || status.includes('AA')) {
-          console.log('Found merge conflicts, attempting to resolve...');
+          // console.log('Found merge conflicts, attempting to resolve...');
 
           //Reset the merge
           execSync('git merge --abort', { stdio: 'inherit' });
-          console.log('Reset merge due to conflicts');
+          // console.log('Reset merge due to conflicts');
         }
       } catch (resolveError) {
-        console.log('Could not resolve conflicts automatically');
+        // console.log('Could not resolve conflicts automatically');
       }
     }
   } catch (error) {
-    console.error(`Error processing PR #${pr.number}:`, error.message);
+    // console.error(`Error processing PR #${pr.number}:`, error.message);
   }
 }
 
 // Push changes
 try {
   execSync('git push origin main', { stdio: 'inherit' });
-  console.log('✓ Pushed changes to main');
+  // console.log('✓ Pushed changes to main');
 } catch (error) {
-  console.error('Error pushing changes:', error.message);
+  // console.error('Error pushing changes:', error.message);
 }
 
-console.log('\n--- PR merge process completed ---');
+// console.log('\n--- PR merge process completed ---');

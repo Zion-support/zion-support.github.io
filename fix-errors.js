@@ -8,9 +8,9 @@ try {
   // Remove the extra }); at line 34
   content = content.replace(/  }\)\),\n}\);\n\n\/\/ Mock requestAnimationFrame/, '  })),\n});\n\n// Mock requestAnimationFrame');
   fs.writeFileSync(setupTestsPath, content);
-  console.log('✓ Fixed app/setupTests.tsx');
+  // console.log('✓ Fixed app/setupTests.tsx');
 } catch (err) {
-  console.log('✗ Error fixing setupTests.tsx:', err.message);
+  // console.log('✗ Error fixing setupTests.tsx:', err.message);
 }
 
 // Fix enhancedErrorHandler.ts - fix optional chaining
@@ -20,9 +20,9 @@ try {
   // Fix the optional chaining syntax
   content = content.replace(/target\?\['src'\]/g, 'target?.src');
   fs.writeFileSync(errorHandlerPath, content);
-  console.log('✓ Fixed app/utils/enhancedErrorHandler.ts');
+  // console.log('✓ Fixed app/utils/enhancedErrorHandler.ts');
 } catch (err) {
-  console.log('✗ Error fixing enhancedErrorHandler.ts:', err.message);
+  // console.log('✗ Error fixing enhancedErrorHandler.ts:', err.message);
 }
 
 // Fix ErrorBoundary.tsx - recreate with complete content
@@ -60,7 +60,7 @@ class ErrorBoundary extends Component<Props, State> {
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     if (process.env.NODE_ENV === 'development') {
-      console.error('ErrorBoundary caught an error:', error, errorInfo);
+      // console.error('ErrorBoundary caught an error:', error, errorInfo);
     }
 
     if (process.env.NODE_ENV === 'production' && typeof window !== 'undefined' && 'gtag' in window) {
@@ -77,7 +77,7 @@ class ErrorBoundary extends Component<Props, State> {
     }
 
     if (this.props.enableErrorReporting) {
-      console.error('Error caught by boundary:', error, errorInfo);
+      // console.error('Error caught by boundary:', error, errorInfo);
     }
   }
 
@@ -142,9 +142,9 @@ class ErrorBoundary extends Component<Props, State> {
 export default ErrorBoundary;
 `;
   fs.writeFileSync(errorBoundaryPath, errorBoundaryContent);
-  console.log('✓ Fixed app/components/ErrorBoundary.tsx');
+  // console.log('✓ Fixed app/components/ErrorBoundary.tsx');
 } catch (err) {
-  console.log('✗ Error fixing ErrorBoundary.tsx:', err.message);
+  // console.log('✗ Error fixing ErrorBoundary.tsx:', err.message);
 }
 
 // Fix src/components/PerformanceMonitor.tsx
@@ -156,9 +156,9 @@ try {
   content = content.replace(/^=======.*$/gm, '');
   content = content.replace(/^>>>>>>> .*$/gm, '');
   fs.writeFileSync(perfMonitorPath, content);
-  console.log('✓ Fixed src/components/PerformanceMonitor.tsx');
+  // console.log('✓ Fixed src/components/PerformanceMonitor.tsx');
 } catch (err) {
-  console.log('✗ Error fixing PerformanceMonitor.tsx:', err.message);
+  // console.log('✗ Error fixing PerformanceMonitor.tsx:', err.message);
 }
 
 // Fix src/utils/analytics.ts
@@ -172,9 +172,9 @@ try {
     content += '\n*/\n';
   }
   fs.writeFileSync(analyticsPath, content);
-  console.log('✓ Fixed src/utils/analytics.ts');
+  // console.log('✓ Fixed src/utils/analytics.ts');
 } catch (err) {
-  console.log('✗ Error fixing analytics.ts:', err.message);
+  // console.log('✗ Error fixing analytics.ts:', err.message);
 }
 
 // Fix src/utils/errorHandler.ts
@@ -192,9 +192,9 @@ try {
     content += '\n*/\n';
   }
   fs.writeFileSync(errorHandlerPath, content);
-  console.log('✓ Fixed src/utils/errorHandler.ts');
+  // console.log('✓ Fixed src/utils/errorHandler.ts');
 } catch (err) {
-  console.log('✗ Error fixing errorHandler.ts:', err.message);
+  // console.log('✗ Error fixing errorHandler.ts:', err.message);
 }
 
 // Fix App.tsx
@@ -206,9 +206,9 @@ try {
   content = content.replace(/^=======.*$/gm, '');
   content = content.replace(/^>>>>>>> .*$/gm, '');
   fs.writeFileSync(appPath, content);
-  console.log('✓ Fixed App.tsx');
+  // console.log('✓ Fixed App.tsx');
 } catch (err) {
-  console.log('✗ Error fixing App.tsx:', err.message);
+  // console.log('✗ Error fixing App.tsx:', err.message);
 }
 
-console.log('\n✅ All fixes completed!');
+// console.log('\n✅ All fixes completed!');

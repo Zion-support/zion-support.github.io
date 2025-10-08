@@ -1,13 +1,8 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-<<<<<<< HEAD
 
-export default function BlogPage() {
-=======
-import { Helmet } from 'react-helmet-async';
+
 
 const BlogPage: React.FC = () => {
->>>>>>> cursor/fix-errors-and-merge-to-main-dd0b
   return (
     <>
       <Helmet>
@@ -36,14 +31,6 @@ const BlogPage: React.FC = () => {
               Latest insights on AI, enterprise automation, and digital
               transformation
             </p>
-<<<<<<< HEAD
-            <Link
-              to='/'
-              className='inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded-lg transition-colors'
-            >
-              Back to Home
-            </Link>
-=======
           </header>
 
           <div className='max-w-4xl mx-auto'>
@@ -60,7 +47,6 @@ const BlogPage: React.FC = () => {
                 Back to Home
               </Link>
             </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-dd0b
           </div>
         </div>
       </div>

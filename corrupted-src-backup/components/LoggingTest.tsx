@@ -17,13 +17,13 @@ const Button: React.FC<{
 // Simple logger replacement
 const logger = {
   error: (message: string, error?: any, meta?: any) => {
-    console.error(message, error, meta);
+    // console.error(message, error, meta);
   },
   warn: (message: string, error?: any, meta?: any) => {
-    console.warn(message, error, meta);
+    // console.warn(message, error, meta);
   },
   info: (message: string, meta?: any) => {
-    console.info(message, meta);
+    // console.info(message, meta);
   },
   debug: (message: string, meta?: any) => {
     console.debug(message, meta);

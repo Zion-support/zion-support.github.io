@@ -21,12 +21,12 @@ const CACHE_STRATEGIES = {
 
 // Install event - cache static assets
 self.addEventListener('install', (event) => {
-  console.log('[Service Worker] Installing...');
+  // console.log('[Service Worker] Installing...');
   
   event.waitUntil(
     caches.open(CACHE_NAME)
       .then((cache) => {
-        console.log('[Service Worker] Caching static assets');
+        // console.log('[Service Worker] Caching static assets');
         return cache.addAll(STATIC_ASSETS);
       })
       .then(() => self.skipWaiting())
@@ -35,7 +35,7 @@ self.addEventListener('install', (event) => {
 
 // Activate event - clean up old caches
 self.addEventListener('activate', (event) => {
-  console.log('[Service Worker] Activating...');
+  // console.log('[Service Worker] Activating...');
   
   event.waitUntil(
     caches.keys()
@@ -44,7 +44,7 @@ self.addEventListener('activate', (event) => {
           cacheNames
             .filter((name) => name !== CACHE_NAME)
             .map((name) => {
-              console.log('[Service Worker] Deleting old cache:', name);
+              // console.log('[Service Worker] Deleting old cache:', name);
               return caches.delete(name);
             })
         );
@@ -111,7 +111,7 @@ async function cacheFirst(request, cache) {
     
     return response;
   } catch (error) {
-    console.error('[Service Worker] Fetch failed:', error);
+    // console.error('[Service Worker] Fetch failed:', error);
     return new Response('Offline', { status: 503 });
   }
 }
@@ -186,7 +186,7 @@ self.addEventListener('sync', (event) => {
 
 async function syncData() {
   // Implement background sync logic here
-  console.log('[Service Worker] Syncing data...');
+  // console.log('[Service Worker] Syncing data...');
 }
 
 // Push notification support
@@ -212,4 +212,4 @@ self.addEventListener('notificationclick', (event) => {
   );
 });
 
-console.log('[Service Worker] Loaded successfully');
+// console.log('[Service Worker] Loaded successfully');

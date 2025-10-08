@@ -47,7 +47,7 @@ class EnvValidator {
     }
 
     if (validation.warnings.length > 0) {
-      console.warn(
+      // console.warn(
         `Environment warnings:\n${validation.warnings.join('\n')}`
       );
     }

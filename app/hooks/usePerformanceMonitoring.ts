@@ -112,8 +112,8 @@ export const usePerformanceMonitoring = () => {
         resourceObserver.disconnect();
       };
     } catch (error) {
-      // eslint-disable-next-line no-console
-      console.warn('Performance monitoring not supported:', error);
+       
+      // console.warn('Performance monitoring not supported:', error);
       return () => {};
     }
   }, [reportMetric]);

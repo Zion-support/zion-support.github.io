@@ -6,29 +6,29 @@
  */ import { execSync } from 'child_process';
 import fs from 'fs';
 
-console.log('🚀 Starting Comprehensive PR Merge Process...\n');
+// console.log('🚀 Starting Comprehensive PR Merge Process...\n');
 
 //Step 1: Ensure we're on main and up to date
-console.log('📋 Step 1: Preparing main branch...');
+// console.log('📋 Step 1: Preparing main branch...');
 try {
   execSync('git checkout main', { stdio: 'inherit' });
   execSync('git reset --hard HEAD', { stdio: 'inherit' });
   execSync('git pull origin main', { stdio: 'inherit' });
-  console.log('✅ Main branch is up to date\n');
+  // console.log('✅ Main branch is up to date\n');
 } catch (error) {
-  console.error('❌ Failed to prepare main branch:', error.message);
+  // console.error('❌ Failed to prepare main branch:', error.message);
   process.exit(1);
 }
 
 //Step 2: Get all remote branches that could be PRs
-console.log('🔍 Step 2: Finding all potential PR branches...');
+// console.log('🔍 Step 2: Finding all potential PR branches...');
 const branches = execSync('git branch -r', { encoding: 'utf8' })
   .split('\n')
   .filter(branch => branch.trim())
   .map(branch => branch.trim().replace('origin/', ''))
   .filter(branch => branch.startsWith('cursor/') && branch !== 'HEAD');
 
-console.log(`📊 Found ${branches.length} cursor branches to process\n`);
+// console.log(`📊 Found ${branches.length} cursor branches to process\n`);
 
 //Step 3: Create merge strategy with conflict resolution
 const mergeStrategy = {
@@ -65,15 +65,15 @@ const mergeStrategy = {
   ),
 };
 
-console.log('📋 Merge Strategy:');
-console.log(`  Priority branches: ${mergeStrategy.priority.length}`);
-console.log(`  Feature branches: ${mergeStrategy.features.length}`);
-console.log(`  Content branches: ${mergeStrategy.content.length}`);
-console.log(`  Branches to skip: ${mergeStrategy.skip.length}\n`);
+// console.log('📋 Merge Strategy:');
+// console.log(`  Priority branches: ${mergeStrategy.priority.length}`);
+// console.log(`  Feature branches: ${mergeStrategy.features.length}`);
+// console.log(`  Content branches: ${mergeStrategy.content.length}`);
+// console.log(`  Branches to skip: ${mergeStrategy.skip.length}\n`);
 
 //Step 4: Enhanced conflict resolution function
 function resolveConflictsAndMerge(branchName) {
-  console.log(`\n🔄 Processing ${branchName}...`);
+  // console.log(`\n🔄 Processing ${branchName}...`);
 
   try {
     //Fetch the branch
@@ -85,10 +85,10 @@ function resolveConflictsAndMerge(branchName) {
       { stdio: 'inherit' }
     );
 
-    console.log(`✅ Successfully merged ${branchName}`);
+    // console.log(`✅ Successfully merged ${branchName}`);
     return { success: true, method: 'direct' };
   } catch (error) {
-    console.log(
+    // console.log(
       `⚠️  Direct merge failed for ${branchName}, attempting conflict resolution...`
     );
 
@@ -101,7 +101,7 @@ function resolveConflictsAndMerge(branchName) {
         status.includes('AA') ||
         status.includes('DD')
       ) {
-        console.log(`🔧 Resolving conflicts for ${branchName}...`);
+        // console.log(`🔧 Resolving conflicts for ${branchName}...`);
 
         //Strategy 1: Auto-resolve with theirs for most conflicts
         try {
@@ -110,12 +110,12 @@ function resolveConflictsAndMerge(branchName) {
             `git merge origin/${branchName} -X theirs --no-ff -m "Auto-merge ${branchName} (theirs strategy)"`,
             { stdio: 'inherit' }
           );
-          console.log(
+          // console.log(
             `✅ Auto-resolved conflicts for ${branchName} using 'theirs' strategy`
           );
           return { success: true, method: 'theirs' };
         } catch (theirsError) {
-          console.log(
+          // console.log(
             `⚠️  'Theirs' strategy failed, trying 'ours' strategy...`
           );
         }
@@ -127,12 +127,12 @@ function resolveConflictsAndMerge(branchName) {
             `git merge origin/${branchName} -X ours --no-ff -m "Auto-merge ${branchName} (ours strategy)"`,
             { stdio: 'inherit' }
           );
-          console.log(
+          // console.log(
             `✅ Auto-resolved conflicts for ${branchName} using 'ours' strategy`
           );
           return { success: true, method: 'ours' };
         } catch (oursError) {
-          console.log(
+          // console.log(
             `⚠️  'Ours' strategy failed, trying manual resolution...`
           );
         }
@@ -149,7 +149,7 @@ function resolveConflictsAndMerge(branchName) {
             .split('\n')
             .filter(file => file.trim());
 
-          console.log(
+          // console.log(
             `🔧 Manually resolving ${conflictedFiles.length} conflicted files...`
           );
 
@@ -162,9 +162,9 @@ function resolveConflictsAndMerge(branchName) {
                   stdio: 'inherit',
                 });
                 execSync(`git add "${file}"`, { stdio: 'inherit' });
-                console.log(`  ✅ Resolved conflict in ${file}`);
+                // console.log(`  ✅ Resolved conflict in ${file}`);
               } catch (fileError) {
-                console.log(`  ⚠️  Could not resolve ${file}, skipping...`);
+                // console.log(`  ⚠️  Could not resolve ${file}, skipping...`);
               }
             }
           }
@@ -174,20 +174,20 @@ function resolveConflictsAndMerge(branchName) {
             `git commit -m "Manual conflict resolution for ${branchName}"`,
             { stdio: 'inherit' }
           );
-          console.log(`✅ Manually resolved conflicts for ${branchName}`);
+          // console.log(`✅ Manually resolved conflicts for ${branchName}`);
           return { success: true, method: 'manual' };
         } catch (manualError) {
-          console.log(`❌ Manual resolution failed for ${branchName}`);
+          // console.log(`❌ Manual resolution failed for ${branchName}`);
         }
       }
     } catch (statusError) {
-      console.log(`❌ Could not check merge status for ${branchName}`);
+      // console.log(`❌ Could not check merge status for ${branchName}`);
     }
 
     //If all strategies fail, abort and skip
     try {
       execSync('git merge --abort', { stdio: 'inherit' });
-      console.log(`⏭️  Skipping ${branchName} due to unresolvable conflicts`);
+      // console.log(`⏭️  Skipping ${branchName} due to unresolvable conflicts`);
     } catch (abortError) {
       execSync('git reset --hard HEAD', { stdio: 'inherit' });
     }
@@ -197,7 +197,7 @@ function resolveConflictsAndMerge(branchName) {
 }
 
 //Step 5: Execute merge strategy
-console.log('🚀 Step 5: Executing merge strategy...\n');
+// console.log('🚀 Step 5: Executing merge strategy...\n');
 
 const results = {
   priority: [],
@@ -213,7 +213,7 @@ const results = {
 };
 
 //Merge priority branches first
-console.log('🎯 Merging priority branches...');
+// console.log('🎯 Merging priority branches...');
 for (const branch of mergeStrategy.priority) {
   const result = resolveConflictsAndMerge(branch);
   results.priority.push({ branch, ...result });
@@ -229,7 +229,7 @@ for (const branch of mergeStrategy.priority) {
 }
 
 //Merge feature branches
-console.log('\n🚀 Merging feature branches...');
+// console.log('\n🚀 Merging feature branches...');
 for (const branch of mergeStrategy.features) {
   if (!mergeStrategy.skip.includes(branch)) {
     const result = resolveConflictsAndMerge(branch);
@@ -247,7 +247,7 @@ for (const branch of mergeStrategy.features) {
 }
 
 //Merge content branches
-console.log('\n📝 Merging content branches...');
+// console.log('\n📝 Merging content branches...');
 for (const branch of mergeStrategy.content) {
   if (!mergeStrategy.skip.includes(branch)) {
     const result = resolveConflictsAndMerge(branch);
@@ -265,7 +265,7 @@ for (const branch of mergeStrategy.content) {
 }
 
 //Step 6: Generate comprehensive report
-console.log('\n📊 Step 6: Generating merge report...');
+// console.log('\n📊 Step 6: Generating merge report...');
 results.timestamp = new Date().toISOString();
 results.branchCounts = {
   priority: mergeStrategy.priority.length,
@@ -280,32 +280,32 @@ fs.writeFileSync(
 );
 
 //Step 7: Display summary
-console.log('\n🎉 MERGE PROCESS COMPLETED!\n');
-console.log('📊 SUMMARY:');
-console.log(`  Total branches processed: ${results.summary.total}`);
-console.log(`  Successful merges: ${results.summary.successful}`);
-console.log(`  Failed merges: ${results.summary.failed}`);
-console.log('\n🔧 RESOLUTION METHODS:');
-console.log(`  Direct merges: ${results.summary.methods.direct}`);
-console.log(`  'Theirs' strategy: ${results.summary.methods.theirs}`);
-console.log(`  'Ours' strategy: ${results.summary.methods.ours}`);
-console.log(`  Manual resolution: ${results.summary.methods.manual}`);
-console.log(`  Failed: ${results.summary.methods.failed}`);
+// console.log('\n🎉 MERGE PROCESS COMPLETED!\n');
+// console.log('📊 SUMMARY:');
+// console.log(`  Total branches processed: ${results.summary.total}`);
+// console.log(`  Successful merges: ${results.summary.successful}`);
+// console.log(`  Failed merges: ${results.summary.failed}`);
+// console.log('\n🔧 RESOLUTION METHODS:');
+// console.log(`  Direct merges: ${results.summary.methods.direct}`);
+// console.log(`  'Theirs' strategy: ${results.summary.methods.theirs}`);
+// console.log(`  'Ours' strategy: ${results.summary.methods.ours}`);
+// console.log(`  Manual resolution: ${results.summary.methods.manual}`);
+// console.log(`  Failed: ${results.summary.methods.failed}`);
 
 if (results.failed.length > 0) {
-  console.log('\n❌ FAILED BRANCHES:');
-  results.failed.forEach(branch => console.log(`  - ${branch}`));
+  // console.log('\n❌ FAILED BRANCHES:');
+  results.failed.forEach(branch => // console.log(`  - ${branch}`));
 }
 
 // Step 8: Push changes
-console.log('\n🚀 Step 8: Pushing merged changes...');
+// console.log('\n🚀 Step 8: Pushing merged changes...');
 try {
   execSync('git push origin main', { stdio: 'inherit' });
-  console.log('✅ Successfully pushed all merged changes to main');
+  // console.log('✅ Successfully pushed all merged changes to main');
 } catch (error) {
-  console.error('❌ Failed to push changes:', error.message);
-  console.log('You may need to push manually: git push origin main');
+  // console.error('❌ Failed to push changes:', error.message);
+  // console.log('You may need to push manually: git push origin main');
 }
 
-console.log('\n📄 Detailed report saved to: comprehensive-merge-report.json');
-console.log('🎯 Merge process completed successfully!');
+// console.log('\n📄 Detailed report saved to: comprehensive-merge-report.json');
+// console.log('🎯 Merge process completed successfully!');

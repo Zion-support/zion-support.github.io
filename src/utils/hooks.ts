@@ -21,7 +21,7 @@ export const useLocalStorage = <T>(
       const item = window.localStorage.getItem(key);
       return item ? (JSON.parse(item) as T) : initialValue;
     } catch (error) {
-      console.warn(`Error reading localStorage key "${key}":`, error);
+      // console.warn(`Error reading localStorage key "${key}":`, error);
       return initialValue;
     }
   }, [initialValue, key]);
@@ -31,7 +31,7 @@ export const useLocalStorage = <T>(
   const setValue = useCallback(
     (value: T | ((val: T) => T)) => {
       if (typeof window === 'undefined') {
-        console.warn(`Tried setting localStorage key "${key}" even though environment is not a client`);
+        // console.warn(`Tried setting localStorage key "${key}" even though environment is not a client`);
         return;
       }
 
@@ -41,7 +41,7 @@ export const useLocalStorage = <T>(
         setStoredValue(newValue);
         window.dispatchEvent(new Event('local-storage'));
       } catch (error) {
-        console.warn(`Error setting localStorage key "${key}":`, error);
+        // console.warn(`Error setting localStorage key "${key}":`, error);
       }
     },
     [key, storedValue]
@@ -314,7 +314,7 @@ export const useCopyToClipboard = (): {
 
   const copy = useCallback(async (text: string): Promise<boolean> => {
     if (!navigator?.clipboard) {
-      console.warn('Clipboard not supported');
+      // console.warn('Clipboard not supported');
       return false;
     }
 
@@ -324,7 +324,7 @@ export const useCopyToClipboard = (): {
       setTimeout(() => setCopied(false), 2000);
       return true;
     } catch (error) {
-      console.warn('Copy failed', error);
+      // console.warn('Copy failed', error);
       setCopied(false);
       return false;
     }

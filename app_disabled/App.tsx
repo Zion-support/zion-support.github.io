@@ -22,7 +22,7 @@ import '../src/index.css';
 const App: React.FC = () => {
   useEffect(() => {
     // Initialize global error handling
-    console.log('App initialized');
+    // console.log('App initialized');
 
     // Initialize performance monitoring
     performanceOptimizer.lazyLoadImages();
@@ -34,8 +34,8 @@ const App: React.FC = () => {
       }
     }
 
-    console.log('Performance monitoring initialized');
-    console.log(
+    // console.log('Performance monitoring initialized');
+    // console.log(
       '🚀 Zion Tech Group App initialized with comprehensive monitoring'
     );
   }, []);

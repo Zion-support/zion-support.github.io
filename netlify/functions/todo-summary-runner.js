@@ -1,6 +1,6 @@
 exports.handler = async function (event, context) {
   try {
-    console.log('todo-summary-runner function triggered');
+    // console.log('todo-summary-runner function triggered');
     // Todo summary simulation
     const result = {
       statusCode: 200,
@@ -22,7 +22,7 @@ exports.handler = async function (event, context) {
     };
     return result;
   } catch (error) {
-    console.error('Error in todo-summary-runner:', error);
+    // console.error('Error in todo-summary-runner:', error);
     return {
       statusCode: 500,
       headers: {

@@ -69,7 +69,7 @@ class ErrorTracker {
       try {
         callback(trackedError);
       } catch (e) {
-        console.error('Error in error callback:', e);
+        // console.error('Error in error callback:', e);
       }
     });
 
@@ -158,13 +158,13 @@ class ErrorTracker {
     switch (error.severity) {
       case ErrorSeverity.CRITICAL:
       case ErrorSeverity.HIGH:
-        console.error(logMessage, error);
+        // console.error(logMessage, error);
         break;
       case ErrorSeverity.MEDIUM:
-        console.warn(logMessage, error);
+        // console.warn(logMessage, error);
         break;
       case ErrorSeverity.LOW:
-        console.info(logMessage, error);
+        // console.info(logMessage, error);
         break;
     }
   }

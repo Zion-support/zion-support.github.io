@@ -2,7 +2,7 @@
 
 import fs from 'fs';
 
-console.log('🔧 Fixing usePerformance.ts syntax errors...');
+// console.log('🔧 Fixing usePerformance.ts syntax errors...');
 
 // Read the file
 const content = fs.readFileSync('src/hooks/usePerformance.ts', 'utf8');
@@ -250,4 +250,4 @@ export const usePerformanceMonitoring = () => {
 // Write the fixed content
 fs.writeFileSync('src/hooks/usePerformance.ts', fixedContent);
 
-console.log('✅ Fixed usePerformance.ts syntax errors');
+// console.log('✅ Fixed usePerformance.ts syntax errors');

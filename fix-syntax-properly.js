@@ -137,31 +137,31 @@ function findCorruptedFiles() {
 
 // Main function
 function main() {
-  console.log('🔍 Finding corrupted blog files...');
+  // console.log('🔍 Finding corrupted blog files...');
   const corruptedFiles = findCorruptedFiles();
 
-  console.log(`Found ${corruptedFiles.length} corrupted files`);
+  // console.log(`Found ${corruptedFiles.length} corrupted files`);
 
   if (corruptedFiles.length === 0) {
-    console.log('✅ No corrupted files found');
+    // console.log('✅ No corrupted files found');
     return;
   }
 
-  console.log('🔧 Fixing corrupted files...');
+  // console.log('🔧 Fixing corrupted files...');
 
   for (const filePath of corruptedFiles) {
     try {
-      console.log(`Fixing: ${filePath}`);
+      // console.log(`Fixing: ${filePath}`);
       const content = fs.readFileSync(filePath, 'utf8');
       const fixedContent = fixCorruptedSyntax(content);
       fs.writeFileSync(filePath, fixedContent);
-      console.log(`✅ Fixed: ${filePath}`);
+      // console.log(`✅ Fixed: ${filePath}`);
     } catch (error) {
-      console.error(`❌ Error fixing ${filePath}:`, error.message);
+      // console.error(`❌ Error fixing ${filePath}:`, error.message);
     }
   }
 
-  console.log('🎉 All files have been processed');
+  // console.log('🎉 All files have been processed');
 }
 
 main();

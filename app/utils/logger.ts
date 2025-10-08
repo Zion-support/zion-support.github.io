@@ -259,7 +259,7 @@ class Logger {
         });
       }
     } catch (error) {
-      console.error('Failed to flush logs:', error);
+      // console.error('Failed to flush logs:', error);
       // Put logs back in buffer if flush failed
       this.buffer = [...logs, ...this.buffer];
     }
@@ -334,16 +334,16 @@ class Logger {
         console.debug(message, entry.metadata);
         break;
       case LogLevel.INFO:
-        console.info(message, entry.metadata);
+        // console.info(message, entry.metadata);
         break;
       case LogLevel.WARN:
-        console.warn(message, entry.metadata);
+        // console.warn(message, entry.metadata);
         break;
       case LogLevel.ERROR:
       case LogLevel.FATAL:
-        console.error(message, entry.metadata);
+        // console.error(message, entry.metadata);
         if (entry.stack) {
-          console.error(entry.stack);
+          // console.error(entry.stack);
         }
         break;
     }

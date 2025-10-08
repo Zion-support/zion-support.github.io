@@ -12,7 +12,7 @@ class ImageOptimizer {
 
   async optimizeImages() {
     if (!fs.existsSync(this.inputDir)) {
-      console.log('No images directory found');
+      // console.log('No images directory found');
       return;
     }
 
@@ -29,7 +29,7 @@ class ImageOptimizer {
       await this.optimizeImage(file);
     }
 
-    console.log('Image optimization complete');
+    // console.log('Image optimization complete');
   }
 
   async optimizeImage(filename) {
@@ -45,9 +45,9 @@ class ImageOptimizer {
           .webp({ quality: 80 })
           .toFile(outputPath);
         
-        console.log(`Generated: ${outputPath}`);
+        // console.log(`Generated: ${outputPath}`);
       } catch (error) {
-        console.error(`Error optimizing ${filename} at size ${size}:`, error);
+        // console.error(`Error optimizing ${filename} at size ${size}:`, error);
       }
     }
   }

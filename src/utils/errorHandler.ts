@@ -96,7 +96,7 @@ class ErrorHandler {
   }
 
   private reportError(errorData: ErrorInfo): void {
-    console.error('Error reported:', errorData);
+    // console.error('Error reported:', errorData);
   }
 
   getErrors(): ErrorInfo[] {

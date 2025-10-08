@@ -58,7 +58,7 @@ class PerformanceMonitor {
     this.trackPageLoadMetrics();
 
     this.isInitialized = true;
-    console.log('Performance monitoring initialized');
+    // console.log('Performance monitoring initialized');
   }
 
   private setupPerformanceObserver(): void {
@@ -83,7 +83,7 @@ class PerformanceMonitor {
         ],
       });
     } catch (error) {
-      console.warn('Performance Observer not supported:', error);
+      // console.warn('Performance Observer not supported:', error);
     }
   }
 
@@ -173,7 +173,7 @@ class PerformanceMonitor {
       return total + (resource.transferSize || 0);
     }, 0);
 
-    console.log(
+    // console.log(
       `Total resources loaded: ${resources.length}, Total size: ${(totalResourceSize / 1024).toFixed(2)} KB`
     );
   }
@@ -251,7 +251,7 @@ User Interactions: ${interactions.length}
       this.observer = null;
     }
     this.isInitialized = false;
-    console.log('Performance monitoring cleaned up');
+    // console.log('Performance monitoring cleaned up');
   }
 }
 

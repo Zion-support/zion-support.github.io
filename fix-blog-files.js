@@ -71,7 +71,7 @@ function findCorruptedFiles(dir) {
 
 findCorruptedFiles(blogDir);
 
-console.log(`Found ${corruptedFiles.length} corrupted files`);
+// console.log(`Found ${corruptedFiles.length} corrupted files`);
 
 //Fix each corrupted file
 for (const filePath of corruptedFiles) {
@@ -87,10 +87,10 @@ for (const filePath of corruptedFiles) {
 
     const newContent = blogTemplate(title, description, slug, content);
     fs.writeFileSync(filePath, newContent);
-    console.log(`Fixed: ${filePath}`);
+    // console.log(`Fixed: ${filePath}`);
   } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
+    // console.error(`Error fixing ${filePath}:`, error.message);
   }
 }
 
-console.log('Done fixing corrupted blog files');
+// console.log('Done fixing corrupted blog files');

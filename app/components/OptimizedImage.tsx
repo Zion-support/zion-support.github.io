@@ -1,8 +1,4 @@
 import React, { useState, useCallback, memo } from 'react';
-<<<<<<< HEAD
-=======
-import { Helmet } from 'react-helmet-async';
->>>>>>> cursor/fix-errors-and-merge-to-main-dd0b
 
 interface OptimizedImageProps {
   src: string;

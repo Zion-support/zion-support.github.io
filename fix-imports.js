@@ -60,10 +60,10 @@ function fixImportsInFile(filePath) {
 
     if (modified) {
       fs.writeFileSync(filePath, content);
-      console.log(`Fixed imports in: ${filePath}`);
+      // console.log(`Fixed imports in: ${filePath}`);
     }
   } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
+    // console.error(`Error processing ${filePath}:`, error.message);
   }
 }
 
@@ -77,4 +77,4 @@ const files = fs
 // Process each file
 files.forEach(fixImportsInFile);
 
-console.log('Import fixing completed!');
+// console.log('Import fixing completed!');
