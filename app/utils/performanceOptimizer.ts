@@ -103,6 +103,7 @@ class PerformanceOptimizer {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
   /**
@@ -224,12 +225,15 @@ class PerformanceOptimizer {
 =======
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-6ad8
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-e97f
 
   /**
    * Measure render time
    */
   private measureRenderTime(): void {
     if (typeof window === 'undefined' || !window.performance) return;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-eab2
 =======
@@ -241,6 +245,8 @@ class PerformanceOptimizer {
   private measureRenderTime(): void {
     if (typeof window === 'undefined') return;
 >>>>>>> cursor/fix-errors-and-merge-to-main-b1a4
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-e97f
     
 =======
   private measureRenderTime(): void {

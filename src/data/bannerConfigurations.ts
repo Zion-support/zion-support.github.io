@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 // Stub file to satisfy import
 export interface BannerConfig {
   id: string;
@@ -62,6 +63,8 @@ export const getRotationStrategy = (): RotationStrategy => 'balanced';
 =======
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-6ad8
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-e97f
 export interface BannerConfig {
   id: string;
   title: string;
@@ -120,6 +123,9 @@ export const getRotationStrategy = (): RotationStrategy => {
 
 export default bannerConfigurations;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-eab2
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-6ad8
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-e97f
