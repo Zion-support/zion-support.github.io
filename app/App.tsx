@@ -45,12 +45,12 @@ const App: React.FC = () => {
       }
     }
     
-    logger.lifecycle('performance monitoring initialized', 'App');
-    logger.info('🚀 Zion Tech Group App initialized with comprehensive monitoring', 'App');
+    console.log('Performance monitoring initialized');
+    console.log('🚀 Zion Tech Group App initialized with comprehensive monitoring');
   }, []);
 
   const handleError = useCallback((error: Error, errorInfo: React.ErrorInfo) => {
-    logger.error('Application Error', 'ErrorBoundary', { error: error.message, errorInfo });
+    console.error('Application Error:', error, errorInfo);
   }, []);
 
   return (
