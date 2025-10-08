@@ -140,4 +140,3 @@ export function useEnhancedPerformance(
   };
 }
 
-export default useEnhancedPerformance;
