@@ -5,6 +5,16 @@ import AdvancedErrorBoundary from '../app/components/AdvancedErrorBoundary';
 import AdvancedSEOOptimizer from '../app/components/AdvancedSEOOptimizer';
 import AdvancedPerformanceMonitor from '../app/components/AdvancedPerformanceMonitor';
 
+// Mock react-router-dom Link component
+jest.mock('react-router-dom', () => ({
+  ...jest.requireActual('react-router-dom'),
+  Link: ({ children, to, ...props }: any) => (
+    <a href={to} {...props}>
+      {children}
+    </a>
+  ),
+}));
+
 
 
 // Mock component that throws an error
@@ -34,7 +44,7 @@ describe('AdvancedErrorBoundary', () => {
       .mockImplementation(() => {});
 
     render(
-      <MemoryRouter>
+      <MemoryRouter initialEntries={['/']}>
         <AdvancedErrorBoundary enableRetry={true}>
           <ThrowError shouldThrow={true} />
         </AdvancedErrorBoundary>
@@ -56,7 +66,7 @@ describe('AdvancedErrorBoundary', () => {
       .mockImplementation(() => {});
 
     render(
-      <MemoryRouter>
+      <MemoryRouter initialEntries={['/']}>
         <AdvancedErrorBoundary onError={onError}>
           <ThrowError shouldThrow={true} />
         </AdvancedErrorBoundary>
@@ -76,7 +86,7 @@ describe('AdvancedErrorBoundary', () => {
     const TestComponent = () => <ThrowError shouldThrow={shouldThrow} />;
 
     const { rerender } = render(
-      <MemoryRouter>
+      <MemoryRouter initialEntries={['/']}>
         <AdvancedErrorBoundary enableRetry={true}>
           <TestComponent />
         </AdvancedErrorBoundary>
