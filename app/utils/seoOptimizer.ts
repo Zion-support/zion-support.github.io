@@ -199,15 +199,15 @@ class SEOOptimizer {
     if (!this.currentPageData) return
 
     const structuredData = {
-      '@context': 'https://schema.org'
-      '@type': this.currentPageData.type === 'article' ? 'Article' : 'WebPage'
-      headline: this.generateTitle()
-      description: this.generateDescription()
-      url: this.currentPageData.url || window.location.href
-      image: this.currentPageData.image || this.config.defaultImage
+      '@context': 'https://schema.org',
+      '@type': this.currentPageData.type === 'article' ? 'Article' : 'WebPage',
+      headline: this.generateTitle(),
+      description: this.generateDescription(),
+      url: this.currentPageData.url || window.location.href,
+      image: this.currentPageData.image || this.config.defaultImage,
       publisher: {
-        '@type': 'Organization'
-        name: this.config.siteName
+        '@type': 'Organization',
+        name: this.config.siteName,
         url: this.config.siteUrl
       }
     }
