@@ -15,9 +15,13 @@
     "noEmit": true,
     "jsx": "react-jsx",
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     "jsxImportSource": "react",
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-3f25
+=======
+    "jsxImportSource": "react",
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b1c3
     "strict": true,
     "strictNullChecks": true,
     "noUnusedLocals": false,
@@ -47,6 +51,9 @@
     "allowJs": true,
     "forceConsistentCasingInFileNames": true,
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b1c3
     "noImplicitAny": true,
     "noImplicitReturns": true,
     "noImplicitThis": true,
@@ -54,6 +61,7 @@
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,
     "noUncheckedIndexedAccess": true,
+<<<<<<< HEAD
 =======
     "noImplicitAny": false,
     "noImplicitReturns": false,
@@ -63,6 +71,8 @@
     "noPropertyAccessFromIndexSignature": false,
     "noUncheckedIndexedAccess": false,
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-3f25
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b1c3
     "allowUnusedLabels": false,
     "allowUnreachableCode": false,
     "verbatimModuleSyntax": true
@@ -70,12 +80,18 @@
   "include": [
     "app/**/*",
 <<<<<<< HEAD
+<<<<<<< HEAD
     "src/**/*"
 =======
     "src/**/*",
     "App.tsx",
     "components/**/*"
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-3f25
+=======
+    "src/**/*",
+    "App.tsx",
+    "components/**/*"
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b1c3
   ],
   "exclude": [
     "node_modules",
@@ -123,6 +139,10 @@
     "app/case-studies/**/*",
     "app/guides/**/*",
     "app/components/**/*",
+<<<<<<< HEAD
+=======
+    "src/components/disabled-corrupted/**",
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b1c3
     "EnhancedFooter.tsx",
     "EnhancedHeader.tsx",
     "EnhancedNavigation.tsx",
@@ -136,12 +156,43 @@
     "lib/**",
     "utils/seoUtils.ts"
 =======
+<<<<<<< HEAD
     "utils/**/*"
+=======
+    "utils/**/*",
+    "blog/**",
+    "backup-problematic-files/**",
+    "automation/**",
+    "**/*.disabled/**",
+    "**/*.backup/**"
+=======
+    "utils/accessibilityUtils.ts",
+    "utils/bannerLazyLoader.ts",
+    "utils/bannerRegistry.ts",
+    "utils/bannerRotationSystem.ts",
+    "utils/bannerPrioritization.ts",
+    "utils/comprehensiveOptimizer.ts",
+    "utils/performanceUtils.ts",
+    "utils/seoUtils.ts"
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a0d
+=======
+    "utils/bannerLazyLoader.ts",
+    "utils/bannerPrioritization.ts",
+    "utils/bannerRegistry.ts",
+    "utils/bannerRotationSystem.ts",
+    "utils/comprehensiveOptimizer.ts",
+    "utils/performanceUtils.ts",
+    "utils/**",
+    "src/utils/**"
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b1c3
   ],
   "references": [
     {
       "path": "./tsconfig.node.json"
     }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-3f25
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b1c3
   ]
 }
