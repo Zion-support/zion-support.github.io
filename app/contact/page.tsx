@@ -36,7 +36,6 @@ const ContactPage: React.FC = () => {
                     Middletown, DE 19709<br />
                     United States
                   </p>
-                  </div>
                 </div>
               </div>
             </div>

@@ -678,3 +678,15 @@ class AccessibilityEnhancer {
     
     return `
 Accessibility Report:
+- Color Contrast Checks: ${metrics.colorContrastChecks}
+- Keyboard Navigation Tests: ${metrics.keyboardNavigationTests}
+- Screen Reader Announcements: ${metrics.screenReaderAnnouncements}
+- Focus Management Updates: ${metrics.focusManagementUpdates}
+- ARIA Labels Added: ${metrics.ariaLabelsAdded}
+- Skip Links Added: ${metrics.skipLinksAdded}
+`;
+  }
+}
+
+export const accessibilityEnhancer = new AccessibilityEnhancer();
+export default accessibilityEnhancer;

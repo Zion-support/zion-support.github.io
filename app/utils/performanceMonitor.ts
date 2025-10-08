@@ -234,3 +234,12 @@ class PerformanceMonitor {
     
     return `
 Performance Report:
+- Overall Score: ${score}/100
+- Metrics Collected: ${metrics.length}
+- Status: ${score >= 80 ? 'Good' : score >= 60 ? 'Needs Improvement' : 'Poor'}
+`;
+  }
+}
+
+export const performanceMonitor = new PerformanceMonitor();
+export default performanceMonitor;
