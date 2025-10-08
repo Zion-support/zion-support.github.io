@@ -3,31 +3,12 @@
  * Provides tools for monitoring and optimizing application performance
  */
 
-// Simple logger utility
-const logger = {
-  info: (message: string, context?: string) => {
-    if (process.env.NODE_ENV === 'development') {
-      console.log(`[INFO${context ? ` - ${context}` : ''}]: ${message}`);
-    }
-  },
-  performance: (message: string, data?: Record<string, unknown>, context?: string) => {
-    if (process.env.NODE_ENV === 'development') {
-      console.log(`[PERFORMANCE${context ? ` - ${context}` : ''}]: ${message}`, data);
-    }
-  }
-};
-
 interface PerformanceMetrics {
   loadTime: number;
   renderTime: number;
   memoryUsage: number;
   bundleSize: number;
   cacheHitRate: number;
-  fcp?: number;
-  lcp?: number;
-  fid?: number;
-  cls?: number;
-  fmp?: number;
 }
 
 interface OptimizationConfig {
@@ -37,9 +18,6 @@ interface OptimizationConfig {
   enableCaching: boolean;
   enableCompression: boolean;
 }
-
-// Export as PerformanceConfig for compatibility
-export type PerformanceConfig = OptimizationConfig;
 
 class PerformanceOptimizer {
   private metrics: PerformanceMetrics = {
@@ -57,9 +35,6 @@ class PerformanceOptimizer {
     enableCaching: true,
     enableCompression: true,
   };
-
-  private observers: IntersectionObserver[] = [];
-  private isMonitoring: boolean = false;
 
   constructor(config?: Partial<OptimizationConfig>) {
     this.config = { ...this.config, ...config };
@@ -282,7 +257,9 @@ ${metrics.memoryUsage > 30 * 1024 * 1024 ? '- Review memory usage and optimize c
     });
 
     images.forEach(img => imageObserver.observe(img));
-    logger.info('Lazy loading initialized for images', 'PerformanceOptimizer');
+    if (process.env.NODE_ENV === 'development') {
+      console.log('Lazy loading initialized for images');
+    }
   }
 
   /**
@@ -306,37 +283,18 @@ ${metrics.memoryUsage > 30 * 1024 * 1024 ? '- Review memory usage and optimize c
       document.head.appendChild(link);
     });
 
-    logger.info('Critical resource hints added', 'PerformanceOptimizer');
-  }
-
-  /**
-   * Measure page load metrics
-   */
-  measurePageLoad(): PerformanceMetrics | null {
-    if (typeof window === 'undefined' || !('performance' in window)) return null;
-
-    const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-    if (!navigation) return null;
-
-    return {
-      loadTime: navigation.loadEventEnd - navigation.fetchStart,
-      renderTime: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
-      memoryUsage: this.metrics.memoryUsage,
-      bundleSize: this.metrics.bundleSize,
-      cacheHitRate: this.metrics.cacheHitRate,
-      fcp: this.metrics.fcp || 0,
-      lcp: this.metrics.lcp || 0,
-      fid: this.metrics.fid || 0,
-      cls: this.metrics.cls || 0,
-      fmp: this.metrics.fmp || 0,
-    };
+    if (process.env.NODE_ENV === 'development') {
+      console.log('Critical resource hints added');
+    }
   }
 
   /**
    * Report web vitals
    */
   reportWebVitals(metrics: PerformanceMetrics): void {
-    logger.performance('Web Vitals reported', metrics as unknown as Record<string, unknown>, 'PerformanceOptimizer');
+    if (process.env.NODE_ENV === 'development') {
+      console.log('Web Vitals reported', metrics);
+    }
     
     // Send to analytics if available
     if (typeof window !== 'undefined' && (window as { gtag?: Function }).gtag) {
@@ -360,21 +318,14 @@ ${metrics.memoryUsage > 30 * 1024 * 1024 ? '- Review memory usage and optimize c
     this.enableCodeSplitting();
     this.enableCaching();
     
-    if (process.env.NODE_ENV === 'development') { console.log('Performance optimization completed'); }
-    if (process.env.NODE_ENV === 'development') { console.log(this.generateReport()); }
-  }
-
-  /**
-   * Cleanup observers and resources
-   */
-  public cleanup(): void {
-    this.observers.forEach(observer => observer.disconnect());
-    this.observers = [];
-    this.isMonitoring = false;
+    if (process.env.NODE_ENV === 'development') {
+      console.log('Performance optimization completed');
+      console.log(this.generateReport());
+    }
   }
 }
 
 // Export singleton instance
 export const performanceOptimizer = new PerformanceOptimizer();
 export default PerformanceOptimizer;
-export { PerformanceOptimizer, type PerformanceMetrics };
+export { PerformanceOptimizer, type PerformanceMetrics, type OptimizationConfig };
