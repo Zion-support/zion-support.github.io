@@ -63,7 +63,7 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
 
   const categories = [
     { id: 'all', name: 'All Content' },
-    { id: 'blog', name: 'Blog Posts' },
+    { id: 'blog', name: 'Blog' },
     { id: 'case-study', name: 'Case Studies' },
     { id: 'resource', name: 'Resources' }
   ];
@@ -72,14 +72,14 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
     ? content 
     : content.filter(item => item.category === selectedCategory);
 
+  const currentContent = content[currentSlide];
+
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % content.length);
     }, 5000);
     return () => clearInterval(interval);
   }, [content.length]);
-
-  const currentContent = content[currentSlide];
 
   return (
     <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">
@@ -120,14 +120,14 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
         </div>
 
         {/* Category Filter */}
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
+        <div className="flex justify-center gap-4 mb-12">
           {categories.map((category) => (
             <button
               key={category.id}
               onClick={() => setSelectedCategory(category.id)}
-              className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
+              className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
                 selectedCategory === category.id
-                  ? 'bg-cyan-500 text-white'
+                  ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white'
                   : 'bg-white/10 text-gray-300 hover:bg-white/20'
               }`}
             >
@@ -149,15 +149,21 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
               </div>
             </div>
 
-            {/* Title and Description */}
-            <h2 className="text-3xl font-bold text-white mb-4">{currentContent.title}</h2>
-            <p className="text-gray-300 mb-8">{currentContent.description}</p>
+            {/* Title */}
+            <h2 className="text-3xl font-bold text-white mb-4">
+              {currentContent.title}
+            </h2>
 
-            {/* Metrics Grid */}
+            {/* Description */}
+            <p className="text-gray-300 mb-8 text-lg">
+              {currentContent.description}
+            </p>
+
+            {/* Stats Grid */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8">
               {Object.entries(currentContent.metrics).map(([key, value]) => (
                 <div key={key} className="text-center">
-                  <div className="text-2xl font-bold text-cyan-400">{value}</div>
+                  <div className="text-3xl font-bold text-cyan-400 mb-2">{value}</div>
                   <div className="text-sm text-gray-300 capitalize">{key}</div>
                 </div>
               ))}

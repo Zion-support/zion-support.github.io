@@ -50,6 +50,8 @@ const UltimateBusinessIntelligence2025Banner = () => {
     }
   ];
 
+  const currentContent = content[currentSlide];
+
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % content.length);
@@ -63,8 +65,6 @@ const UltimateBusinessIntelligence2025Banner = () => {
   };
 
   if (!isVisible) return null;
-
-  const currentContent = content[currentSlide];
 
   return (
     <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">
@@ -115,19 +115,19 @@ const UltimateBusinessIntelligence2025Banner = () => {
               
               <button
                 onClick={handleClose}
-                className="text-gray-300 hover:text-white transition-colors text-2xl"
+                className="text-gray-300 hover:text-white transition-colors text-3xl"
                 aria-label="Close banner"
               >
                 ×
               </button>
             </div>
 
-            {/* Key Metrics */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8">
+            {/* Metrics Grid */}
+            <div className="flex flex-wrap gap-6 mb-8">
               {Object.entries(currentContent.metrics).map(([key, value]) => (
                 <div key={key} className="text-center">
-                  <div className="text-2xl font-bold text-cyan-400">{value}</div>
-                  <div className="text-xs text-gray-300 capitalize">
+                  <div className="text-3xl font-bold text-cyan-400">{value}</div>
+                  <div className="text-sm text-gray-300 capitalize">
                     {key.replace(/([A-Z])/g, ' $1').trim()}
                   </div>
                 </div>
@@ -139,7 +139,7 @@ const UltimateBusinessIntelligence2025Banner = () => {
               {currentContent.tags.map((tag) => (
                 <span
                   key={tag}
-                  className="bg-white/10 text-white px-3 py-1 rounded-full text-xs font-medium"
+                  className="bg-white/10 text-white px-3 py-1 rounded-full text-sm"
                 >
                   {tag}
                 </span>
