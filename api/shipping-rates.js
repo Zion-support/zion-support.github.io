@@ -1,12 +1,40 @@
 const { withSentry } = require('./withSentry.cjs');
 
 async function handler(req, res) {
+const { withSentry } = require('./withSentry.cjs');
+
+async function handler(req, res) {
+const { withSentry } = require('./withSentry.cjs');
+
+async function handler(req, res) {
+export default async function handler(req, res) {
+export default async function handler(req, res) {
+export default async function handler(req, res) {
+export default async function handler(req, res) {
+export default async function handler(req, res) {
+export default async function handler(req, res) {
+export default async function handler(req, res) {
+export default async function handler(req, res) {
+export default async function handler(req, res) {
+export default async function handler(req, res) {
+export default async function handler(req, res) {
+export default async function handler(req, res) {
+export default async function handler(req, res) {
+const { withSentry } = require('./withSentry.cjs');
+
+async function handler(req, res) {
   if (req.method !== 'POST') {
     res.statusCode = 405;
     res.setHeader('Allow', 'POST');
     res.end('Method Not Allowed');
     return;
   }
+
+
+
+  try {
+    const { fromAddress, toAddress, parcel } = req.body || {};
+    const apiKey = process.env.EASYPOST_API_KEY;
 
   try {
     const { fromAddress, toAddress, parcel } = req.body || {};
@@ -48,6 +76,27 @@ async function handler(req, res) {
     res.statusCode = 500;
     res.json({ error: err.message });
   }
+}
+
+module.exports = withSentry(handler);
+
+module.exports = withSentry(handler);
+}
+
+module.exports = withSentry(handler);
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
 }
 
 module.exports = withSentry(handler);
