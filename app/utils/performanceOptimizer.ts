@@ -54,185 +54,53 @@ class PerformanceOptimizer {
     }
   }
 
-  private async initMonitoring() {
+  private initMonitoring() {
     if (typeof window === 'undefined' || !('PerformanceObserver' in window)) return;
 
     try {
-      if (this.config.enableMonitoring) {
-        await this.setupPerformanceObservers();
-        this.startMonitoring();
-      }
-
-      if (this.config.enableOptimization) {
-        this.applyOptimizations();
-      }
+      // Monitor Core Web Vitals
+      this.observeLCP();
+      this.observeFID();
+      this.observeCLS();
+      this.observeFCP();
+      this.observeTTFB();
+      this.observeMemory();
     } catch (error) {
-      console.error('Failed to initialize performance optimizer:', error);
+      console.warn('Performance monitoring initialization failed:', error);
     }
   }
 
-  /**
-   * Setup performance observers for Core Web Vitals
-   */
-  private async setupPerformanceObservers(): Promise<void> {
-    if (typeof window === 'undefined' || !('PerformanceObserver' in window)) return;
+  private observeLCP() {
+    const observer = new PerformanceObserver((list) => {
+      const entries = list.getEntries();
+      const lastEntry = entries[entries.length - 1];
+      this.metrics.lcp = lastEntry.startTime;
+    });
+    observer.observe({ entryTypes: ['largest-contentful-paint'] });
+    this.observers.push(observer);
+  }
 
-    // First Contentful Paint (FCP)
-    try {
-      const fcpObserver = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        const fcpEntry = entries.find(entry => entry.name === 'first-contentful-paint');
-        if (fcpEntry) {
-          this.metrics.fcp = fcpEntry.startTime;
-        }
+  private observeFID() {
+    const observer = new PerformanceObserver((list) => {
+      const entries = list.getEntries();
+      entries.forEach((entry: any) => {
+        this.metrics.fid = entry.processingStart - entry.startTime;
       });
-      fcpObserver.observe({ entryTypes: ['paint'] });
-      this.observers.push(fcpObserver);
-    } catch (error) {
-      console.warn('FCP observer setup failed:', error);
-    }
+    });
+    observer.observe({ entryTypes: ['first-input'] });
+    this.observers.push(observer);
+  }
 
-    // Largest Contentful Paint (LCP)
-    try {
-      const lcpObserver = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        const lastEntry = entries[entries.length - 1];
-        if (lastEntry) {
-          this.metrics.lcp = lastEntry.startTime;
-        }
-      });
-      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
-      this.observers.push(lcpObserver);
-    } catch (error) {
-      console.warn('LCP observer setup failed:', error);
-    }
-
-    // First Input Delay (FID)
-    try {
-      const fidObserver = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-      entries.forEach((entry: PerformanceEventTiming) => {
-        if (entry.processingStart && entry.startTime) {
-          this.metrics.fid = entry.processingStart - entry.startTime;
-        }
-      });
-      });
-      fidObserver.observe({ entryTypes: ['first-input'] });
-      this.observers.push(fidObserver);
-    } catch (error) {
-      console.warn('FID observer setup failed:', error);
-    }
-
-    // Cumulative Layout Shift (CLS)
-    try {
-      let clsValue = 0;
-      const clsObserver = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
+  private observeCLS() {
+    let clsValue = 0;
+    const observer = new PerformanceObserver((list) => {
+      const entries = list.getEntries();
       entries.forEach((entry: any) => {
         if (!entry.hadRecentInput) {
           clsValue += entry.value;
         }
       });
-        this.metrics.cls = clsValue;
-      });
-      clsObserver.observe({ entryTypes: ['layout-shift'] });
-      this.observers.push(clsObserver);
-    } catch (error) {
-      console.warn('CLS observer setup failed:', error);
-    }
-
-    // Time to First Byte (TTFB)
-    try {
-      const navigationObserver = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        entries.forEach((entry: PerformanceNavigationTiming) => {
-          this.metrics.ttfb = entry.responseStart - entry.requestStart;
-        });
-      });
-      navigationObserver.observe({ entryTypes: ['navigation'] });
-      this.observers.push(navigationObserver);
-    } catch (error) {
-      console.warn('TTFB observer setup failed:', error);
-    }
-  }
-
-  /**
-   * Start performance monitoring
-   */
-  private startMonitoring(): void {
-    if (this.isMonitoring) return;
-    this.isMonitoring = true;
-
-    // Monitor memory usage
-    if (this.config.enableMonitoring) {
-      setInterval(() => {
-        this.checkMemoryUsage();
-      }, 5000);
-    }
-  }
-
-  /**
-   * Apply performance optimizations
-   */
-  private applyOptimizations(): void {
-    if (typeof window === 'undefined') return;
-
-    // Lazy load images
-    lazyLoadImages();
-
-    // Preload critical resources
-    preloadCriticalResources();
-
-    // Optimize scroll performance
-    optimizeScrollPerformance();
-
-    // Optimize animations
-    this.optimizeAnimations();
-
-    // Optimize images
-    this.optimizeImages();
-  }
-
-  /**
-   * Optimize animations for better performance
-   */
-  private optimizeAnimations(): void {
-    if (typeof document === 'undefined') return;
-
-    const style = document.createElement('style');
-    style.textContent = `
-      * {
-        will-change: auto;
-      }
-      
-      .animate {
-        will-change: transform, opacity;
-      }
-      
-      .animate:hover {
-        will-change: auto;
-      }
-    `;
-    document.head.appendChild(style);
-  }
-
-  /**
-   * Optimize images for better loading
-   */
-  private optimizeImages(): void {
-    if (typeof document === 'undefined') return;
-
-    const images = document.querySelectorAll('img');
-    images.forEach((img) => {
-      // Add loading="lazy" for images below the fold
-      if (!img.hasAttribute('loading')) {
-        img.setAttribute('loading', 'lazy');
-      }
-
-      // Add decoding="async" for better performance
-      if (!img.hasAttribute('decoding')) {
-        img.setAttribute('decoding', 'async');
-      }
+      this.metrics.cls = clsValue;
     });
     observer.observe({ entryTypes: ['layout-shift'] });
     this.observers.push(observer);

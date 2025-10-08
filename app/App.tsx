@@ -1,8 +1,9 @@
 'use client';
 
-import React, { Suspense, lazy, useEffect } from 'react';
+import React, { Suspense, lazy, useEffect, useCallback } from 'react';
 import { HelmetProvider } from 'react-helmet-async';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Link from 'next/link';
 
 // Components
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
@@ -14,6 +15,7 @@ import PerformanceDashboard from './components/PerformanceDashboard';
 import ContentShowcase from './components/ContentShowcase';
 import InteractiveContentShowcase2026 from './components/InteractiveContentShowcase2026';
 import InteractiveAIROICalculator from './components/InteractiveAIROICalculator';
+import LoadingSpinner from './components/LoadingSpinner';
 
 // Lazy load pages for better performance
 const HomePage = lazy(() => import('./page'));
@@ -28,27 +30,27 @@ import './globals.css';
 const App: React.FC = () => {
   useEffect(() => {
     // Initialize global error handling
-    console.log('App initialized');
+    logger.lifecycle('initialized', 'App');
 
     // Initialize performance monitoring
+    lazyLoadImages();
+    preloadCriticalResources();
     performanceOptimizer.init();
     
     // Initialize Web Vitals monitoring
     if (typeof window !== 'undefined' && 'performance' in window) {
+      const pageLoadMetrics = collectPerformanceMetrics();
       const metrics = performanceOptimizer.getMetrics();
+      if (pageLoadMetrics) {
+        console.log('Performance metrics collected:', pageLoadMetrics);
+      }
       if (metrics) {
-        // eslint-disable-next-line no-console
         console.log('Performance metrics:', metrics);
       }
     }
-
-    // Preload critical resources
-    preloadCriticalResources();
     
-    // eslint-disable-next-line no-console
-    console.log('Performance monitoring initialized');
-    // eslint-disable-next-line no-console
-    console.log('🚀 Zion Tech Group App initialized with comprehensive monitoring');
+    logger.lifecycle('performance monitoring initialized', 'App');
+    logger.info('🚀 Zion Tech Group App initialized with comprehensive monitoring', 'App');
   }, []);
 
   const handleError = useCallback((error: Error, errorInfo: any) => {
@@ -57,12 +59,46 @@ const App: React.FC = () => {
 
   return (
     <HelmetProvider>
-      <ErrorBoundary>
-        <div>
-          <SEOOptimizer />
-          <AccessibilityEnhancer>
+      <AdvancedErrorBoundary
+        enableErrorReporting={true}
+        enableRetry={true}
+        onError={handleError}
+      >
+        <AccessibilityEnhancer>
+          <SEOEnhancer
+            title="Zion Tech Group - Advanced AI and IT Solutions"
+            description="Leading provider of enterprise AI solutions, quantum computing, and autonomous systems. Transform your business with our cutting-edge technology."
+          >
+            <AdvancedSEOOptimizer
+              seoData={{
+                title: 'Zion Tech Group - Advanced AI and IT Solutions',
+                description: 'Leading provider of enterprise AI solutions, quantum computing, and autonomous systems. Transform your business with our cutting-edge technology.',
+                keywords: ['AI solutions', 'enterprise AI', 'quantum computing', 'autonomous systems', 'digital transformation', 'automation', 'cloud services', 'AI consulting', 'business intelligence', 'machine learning'],
+                canonicalUrl: 'https://ziontechgroup.com',
+                ogImage: 'https://ziontechgroup.com/og-image.jpg',
+                structuredData: {
+                  '@type': 'TechCompany',
+                  name: 'Zion Tech Group',
+                  description: 'Advanced AI and IT Solutions Provider',
+                  foundingDate: '2020',
+                  numberOfEmployees: '50-100',
+                  industry: 'Technology',
+                  services: [
+                    'AI Solutions',
+                    'Digital Transformation',
+                    'Cloud Services',
+                    'Automation',
+                    'Business Intelligence'
+                  ]
+                }
+              }}
+              enableStructuredData={true}
+              enableOpenGraph={true}
+              enableTwitterCards={true}
+              enableSchemaMarkup={true}
+            />
             <Router>
-              <div className='App'>
+              <div className="App">
                 {/* Skip to main content link for accessibility */}
                 <a
                   href='#main-content'
@@ -81,20 +117,47 @@ const App: React.FC = () => {
                   Skip to main content
                 </a>
 
-                <Suspense fallback={<LoadingSpinner />}>
-                  <Routes>
-                    <Route path='/' element={<HomePage />} />
-                    {/* Add more routes as needed */}
-                  </Routes>
-                </Suspense>
+                <main id="main-content">
+                  <Suspense fallback={<LoadingSpinner />}>
+                    <Routes>
+                      <Route path="/" element={<HomePage />} />
+                      {/* Add more routes as needed */}
+                    </Routes>
+                  </Suspense>
+
+                  {/* Content Showcase */}
+                  <Suspense fallback={<LoadingFallback height="h-96" />}>
+                    <ContentShowcase />
+                  </Suspense>
+
+                  {/* Interactive Content Showcase 2026 */}
+                  <Suspense fallback={<LoadingFallback height="h-96" />}>
+                    <InteractiveContentShowcase2026 />
+                  </Suspense>
+
+                  {/* Interactive AI ROI Calculator */}
+                  <Suspense fallback={<LoadingFallback height="h-96" />}>
+                    <InteractiveAIROICalculator />
+                  </Suspense>
+                </main>
 
                 {/* Performance Dashboard */}
                 <PerformanceDashboard />
+                
+                {/* Advanced Performance Monitor */}
+                <AdvancedPerformanceMonitor
+                  enableRealTimeMonitoring={process.env['NODE_ENV'] === 'development'}
+                  onMetricsUpdate={(metrics) => {
+                    if (process.env['NODE_ENV'] === 'development') {
+                      logger.performance('Performance Metrics', metrics as unknown as Record<string, unknown>, 'PerformanceMonitor');
+                    }
+                  }}
+                />
               </div>
             </Router>
-            </AccessibilityEnhancer>
-        </div>
-      </ErrorBoundary>
+          </SEOEnhancer>
+        </AccessibilityEnhancer>
+      </AdvancedErrorBoundary>
     </HelmetProvider>
   );
 };
