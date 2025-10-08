@@ -83,14 +83,15 @@ const App: React.FC = () => {
         // eslint-disable-next-line no-console
         console.log('Performance metrics:', metrics);
       }
-      // if (performanceMetrics) {
-      //   console.log('Core Web Vitals:', performanceMetrics);
-      // }
+      if (performanceMetrics) {
+        // eslint-disable-next-line no-console
+        console.log('Core Web Vitals:', performanceMetrics);
+      }
     }
     
     // Log performance and accessibility metrics periodically
     const metricsInterval = setInterval(() => {
-      // const performanceMetrics = performanceMonitor.getMetrics();
+      // const _performanceMetrics = performanceMonitor.getMetrics();
       const accessibilityMetrics = accessibilityEnhancer.getMetrics();
       
       if (process.env.NODE_ENV === 'development') {

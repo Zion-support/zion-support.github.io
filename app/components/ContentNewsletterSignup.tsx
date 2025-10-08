@@ -21,7 +21,7 @@ const ContentNewsletterSignup: React.FC = () => {
       } else {
         setError('Please enter a valid email address');
       }
-    } catch {
+    } catch (_err) {
       setError('Something went wrong. Please try again.');
     } finally {
       setIsSubmitting(false);
