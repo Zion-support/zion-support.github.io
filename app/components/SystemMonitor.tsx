@@ -7,6 +7,7 @@
 
 import React, { useState, useEffect, useCallback } from 'react';
 import { errorHandler } from '../utils/enhancedErrorHandler';
+import { performanceOptimizer } from '../utils/performanceOptimizer';
 
 // Collect basic performance metrics
 const collectPerformanceMetrics = () => {

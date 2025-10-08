@@ -108,10 +108,10 @@ class Logger {
 
       switch (level) {
         case LogLevel.DEBUG:
-          if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { console.debug(formattedMessage); } }
+          if (process.env.NODE_ENV === 'development') { if (import.meta.env.DEV) { console.debug(formattedMessage); } }
           break;
         case LogLevel.INFO:
-          if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { console.info(formattedMessage); } }
+          if (process.env.NODE_ENV === 'development') { if (import.meta.env.DEV) { console.info(formattedMessage); } }
           break;
         case LogLevel.WARN:
           console.warn(formattedMessage);
@@ -173,44 +173,8 @@ class Logger {
   /**
    * Error level logging
    */
-  error(message: string, errorOrContext?: Error | string | LogContext, context?: LogContext): void {
-    if (typeof errorOrContext === 'string') {
-      this.log(LogLevel.ERROR, message, { ...context, component: errorOrContext });
-    } else if (errorOrContext instanceof Error) {
-      this.log(LogLevel.ERROR, message, context, errorOrContext);
-    } else {
-      this.log(LogLevel.ERROR, message, errorOrContext);
-    }
-  }
-
-  /**
-   * Lifecycle logging for application events
-   */
-  lifecycle(message: string, component?: string): void {
-    this.info(`[Lifecycle] ${message}`, { component });
-  }
-
-  /**
-   * Performance logging
-   */
-  performance(message: string, metrics: Record<string, unknown>, component?: string): void {
-    this.info(`[Performance] ${message}`, { ...metrics, component });
-  }
-
-  /**
-   * Lifecycle event logging
-   */
-  lifecycle(message: string, context?: string | LogContext): void {
-    const ctx = typeof context === 'string' ? { component: context } : context;
-    this.info(message, ctx);
-  }
-
-  /**
-   * Performance logging
-   */
-  performance(message: string, metrics: Record<string, unknown>, context?: string | LogContext): void {
-    const ctx = typeof context === 'string' ? { component: context, ...metrics } : { ...context, ...metrics };
-    this.info(message, ctx);
+  error(message: string, error?: Error, context?: LogContext): void {
+    this.log(LogLevel.ERROR, message, context, error);
   }
 
   /**
@@ -244,15 +208,17 @@ class Logger {
   /**
    * Log lifecycle events
    */
-  lifecycle(message: string, component: string): void {
-    this.info(`[${component}] ${message}`, { component, type: 'lifecycle' });
+  lifecycle(message: string, context?: string | LogContext): void {
+    const ctx = typeof context === 'string' ? { component: context } : context;
+    this.info(`Lifecycle: ${message}`, ctx);
   }
 
   /**
-   * Log performance metrics with detailed context
+   * Log performance data
    */
-  performance(message: string, metrics: Record<string, unknown>, component: string): void {
-    this.info(`[${component}] ${message}`, { component, type: 'performance', ...metrics });
+  performance(message: string, data: Record<string, unknown>, context?: string | LogContext): void {
+    const ctx = typeof context === 'string' ? { component: context, ...data } : { ...context, ...data };
+    this.info(`Performance: ${message}`, ctx);
   }
 
   /**
@@ -269,33 +235,10 @@ class Logger {
   /**
    * Log with custom styling (development only)
    */
-
-  /**
-   * Log lifecycle events
-   */
-  lifecycle(message: string, component: string): void {
-    this.info(message, { component, action: 'lifecycle' });
-  }
-
-  /**
-   * Log performance metrics with context
-   */
-  performance(label: string, metrics: Record<string, unknown>, component: string): void {
-    this.debug(`Performance: ${label}`, { component, metrics });
-  }
-
-  /**
-   * Log lifecycle events
-   */
-  lifecycle(message: string, component: string): void {
-    this.info(message, { component });
-  }
-
-  /**
-   * Log performance metrics
-   */
-  performance(message: string, metrics: Record<string, unknown>, component: string): void {
-    this.info(message, { component, ...metrics });
+  styled(message: string, style: string): void {
+    if (isDevelopment()) {
+      if (process.env.NODE_ENV === 'development') { if (import.meta.env.DEV) { console.log(`%c${message}`, style); } }
+    }
   }
 }
 
@@ -303,3 +246,4 @@ class Logger {
 const logger = new Logger(isDevelopment() ? LogLevel.DEBUG : LogLevel.INFO);
 
 export { logger };
+export default logger;
