@@ -14,12 +14,7 @@ import AdvancedSEOOptimizer from './components/AdvancedSEOOptimizer';
 import LoadingSpinner from './components/LoadingSpinner';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
-import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
-import AdvancedErrorBoundary from './components/AdvancedErrorBoundary';
-import AdvancedPerformanceMonitor from './components/AdvancedPerformanceMonitor';
-<<<<<<< HEADcursor/analyze-improve-and-deploy-application-3d67
->>>>>>> origin/main
 
 // Lazy load components for better performance
 // const ContentShowcase = lazy(() => import('./components/ContentShowcase'));
@@ -28,19 +23,32 @@ import AdvancedPerformanceMonitor from './components/AdvancedPerformanceMonitor'
 // );
 // const InteractiveAIROICalculator = lazy(
 //   () => import('./components/InteractiveAIROICalculator')
-// );origin/cursor/fix-errors-and-merge-to-main-6395
+// );
 
 // Lazy load pages for better performance
-const _HomePage = lazy(() => import('./page'));
-const _AboutPage = lazy(() => import('./about/page'));
-const _ServicesPage = lazy(() => import('./services/page'));
-const _ContactPage = lazy(() => import('./contact/page'));
-const _TeamPage = lazy(() => import('./team/page'));
-const _PrivacyPage = lazy(() => import('./privacy/page'));
-const _TermsPage = lazy(() => import('./terms/page'));
-const _EnterprisePage = lazy(() => import('./enterprise/page'));
-const _ServicesAdvertisingPage = lazy(() => import('./services-advertising/page'));
-const _CaseStudiesPage = lazy(() => import('./case-studies/page'));
+const HomePage = lazy(() => import('./page'));
+const AboutPage = lazy(() => import('./about/page'));
+const ServicesPage = lazy(() => import('./services/page'));
+const ContactPage = lazy(() => import('./contact/page'));
+const TeamPage = lazy(() => import('./team/page'));
+const PrivacyPage = lazy(() => import('./privacy/page'));
+const TermsPage = lazy(() => import('./terms/page'));
+const EnterprisePage = lazy(() => import('./enterprise/page'));
+const ServicesAdvertisingPage = lazy(() => import('./services-advertising/page'));
+const CaseStudiesPage = lazy(() => import('./case-studies/page'));
+const AIServicesPage = lazy(() => import('./ai-services/page'));
+const ITServicesPage = lazy(() => import('./it-services/page'));
+const MicroSaasPage = lazy(() => import('./micro-saas/page'));
+const QuantumComputingPage = lazy(() => import('./quantum-computing/page'));
+const AutonomousSystemsPage = lazy(() => import('./autonomous-systems/page'));
+const BusinessIntelligencePage = lazy(() => import('./business-intelligence/page'));
+const BlockchainWeb3Page = lazy(() => import('./blockchain-web3/page'));
+const IoTEdgeComputingPage = lazy(() => import('./iot-edge-computing/page'));
+const CybersecurityPage = lazy(() => import('./cybersecurity/page'));
+const RoboticsPage = lazy(() => import('./robotics/page'));
+const BlogPage = lazy(() => import('./blog/page'));
+const GuidesPage = lazy(() => import('./guides/page'));
+const SitemapPage = lazy(() => import('./sitemap/page'));
 
 // Utils
 import { lazyLoadImages, preloadCriticalResources, collectPerformanceMetrics, performanceOptimizer } from './utils/performanceOptimizer';
@@ -83,22 +91,17 @@ const App: React.FC = () => {
         // eslint-disable-next-line no-console
         console.log('Performance metrics:', metrics);
       }
-      if (performanceMetrics) {
-        // eslint-disable-next-line no-console
-        console.log('Core Web Vitals:', performanceMetrics);origin/cursor/fix-errors-and-merge-to-main-6395
-      }
     }
     
     // Log performance and accessibility metrics periodically
     const metricsInterval = setInterval(() => {
-      // const _performanceMetrics = performanceMonitor.getMetrics();
-      const accessibilityMetrics = accessibilityEnhancer.getMetrics();origin/cursor/fix-errors-and-merge-to-main-6395
+      const accessibilityMetrics = accessibilityEnhancer.getMetrics();
       
       if (process.env.NODE_ENV === 'development') {
         // eslint-disable-next-line no-console
         console.log('Performance Score:', performanceMonitor.getScore());
         // eslint-disable-next-line no-console
-        console.log('Accessibility Score:', accessibilityMetrics.overallScore);origin/cursor/fix-errors-and-merge-to-main-6395
+        console.log('Accessibility Score:', accessibilityMetrics.overallScore);
       }
     }, 30000);
     
@@ -158,7 +161,6 @@ const App: React.FC = () => {
             />
             <Router>
               <div className="App">
-                <Analytics trackingId="G-XXXXXXXXXX" />
                 <PerformanceOptimizer />
                 <Navigation />
                 <main id="main-content">
@@ -177,25 +179,35 @@ const App: React.FC = () => {
                       <Route path="/ai-services" element={<AIServicesPage />} />
                       <Route path="/it-services" element={<ITServicesPage />} />
                       <Route path="/micro-saas" element={<MicroSaasPage />} />
+                      <Route path="/quantum-computing" element={<QuantumComputingPage />} />
+                      <Route path="/autonomous-systems" element={<AutonomousSystemsPage />} />
+                      <Route path="/business-intelligence" element={<BusinessIntelligencePage />} />
+                      <Route path="/blockchain-web3" element={<BlockchainWeb3Page />} />
+                      <Route path="/iot-edge-computing" element={<IoTEdgeComputingPage />} />
+                      <Route path="/cybersecurity" element={<CybersecurityPage />} />
+                      <Route path="/robotics" element={<RoboticsPage />} />
+                      <Route path="/blog" element={<BlogPage />} />
+                      <Route path="/guides" element={<GuidesPage />} />
+                      <Route path="/sitemap" element={<SitemapPage />} />
                     </Routes>
                   </Suspense>
                 </main>
-                <Footer />cursor/analyze-improve-and-deploy-application-3d67
+                <Footer />
 
-                  {/* Performance Dashboard */}
-                  <PerformanceDashboard />
-                  
-                  {/* Advanced Performance Monitor */}
-                  <AdvancedPerformanceMonitor
-                    enableRealTimeMonitoring={process.env['NODE_ENV'] === 'development'}
-                    onMetricsUpdate={(metrics) => {
-                      if (process.env['NODE_ENV'] === 'development') {
-                        logger.info('Performance Metrics', { component: 'PerformanceMonitor', metrics });
-                      }
-                    }}
-                  />
-                </div>
-              </Router>
+                {/* Performance Dashboard */}
+                <PerformanceDashboard />
+                
+                {/* Advanced Performance Monitor */}
+                <AdvancedPerformanceMonitor
+                  enableRealTimeMonitoring={process.env['NODE_ENV'] === 'development'}
+                  onMetricsUpdate={(metrics) => {
+                    if (process.env['NODE_ENV'] === 'development') {
+                      logger.info('Performance Metrics', { component: 'PerformanceMonitor', metrics });
+                    }
+                  }}
+                />
+              </div>
+            </Router>
             </SEOEnhancer>
           </AccessibilityEnhancer>
         </PerformanceOptimizer>

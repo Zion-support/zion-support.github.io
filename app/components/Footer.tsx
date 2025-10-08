@@ -56,6 +56,16 @@ const Footer: React.FC = () => {
                 </Link>
               </li>
               <li>
+                <Link to="/blog" className="text-gray-300 hover:text-white transition-colors">
+                  Blog
+                </Link>
+              </li>
+              <li>
+                <Link to="/guides" className="text-gray-300 hover:text-white transition-colors">
+                  Guides
+                </Link>
+              </li>
+              <li>
                 <Link to="/team" className="text-gray-300 hover:text-white transition-colors">
                   Team
                 </Link>
@@ -133,7 +143,7 @@ const Footer: React.FC = () => {
                 </a>
                 <a href="https://twitter.com/ziontechgroup" className="text-gray-300 hover:text-white transition-colors">
                   Twitter
-                </a>origin/main
+                </a>
               </div>
               <p className="text-gray-300 mb-6 max-w-md">
                 Leading provider of enterprise AI solutions, quantum computing, autonomous systems, 
