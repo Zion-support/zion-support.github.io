@@ -72,14 +72,14 @@ class PerformanceMonitor {
     fn: () => Promise<T>,
     tags?: Record<string, string>
   ): Promise<T> {
-const start = performance.now();
+    const start = performance.now();
     try {
-const result = await fn();
-const duration = performance.now() - start;
+      const result = await fn();
+      const duration = performance.now() - start;
       this.trackMetric(name, duration, 'ms', tags);
       return result;
     } catch (error) {
-const duration = performance.now() - start;
+      const duration = performance.now() - start;
       this.trackMetric(`${name}_error`, duration, 'ms', { ...tags, error: 'true' });
       throw error;
     }
@@ -89,14 +89,14 @@ const duration = performance.now() - start;
    * Measure execution time of a synchronous function
    */
   measure<T>(name: string, fn: () => T, tags?: Record<string, string>): T {
-const start = performance.now();
+    const start = performance.now();
     try {
-const result = fn();
-const duration = performance.now() - start;
+      const result = fn();
+      const duration = performance.now() - start;
       this.trackMetric(name, duration, 'ms', tags);
       return result;
     } catch (error) {
-const duration = performance.now() - start;
+      const duration = performance.now() - start;
       this.trackMetric(`${name}_error`, duration, 'ms', { ...tags, error: 'true' });
       throw error;
     }
@@ -121,12 +121,12 @@ const duration = performance.now() - start;
       performance.measure(name, startMark, endMark);
       const entries = performance.getEntriesByName(name, 'measure');
       if (entries.length > 0) {
-const duration = entries[entries.length - 1].duration;
+        const duration = entries[entries.length - 1].duration;
         this.trackMetric(name, duration, 'ms');
         return duration;
       }
     } catch (error) {
-//       console.warn('Failed to measure performance:', error);
+      console.warn('Failed to measure performance:', error);
     }
     return null;
   }
@@ -218,8 +218,8 @@ const duration = entries[entries.length - 1].duration;
       // Observe First Input Delay (FID)
       const fidObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
-        entries.forEach((entry: PerformanceEntry) => {
-          const metric = this.createMetric('FID', (entry as any).processingStart - entry.startTime);
+        entries.forEach((entry: any) => {
+          const metric = this.createMetric('FID', entry.processingStart - entry.startTime);
           this.webVitals.FID = metric;
           this.notifyCallbacks(metric);
         });
@@ -231,9 +231,9 @@ const duration = entries[entries.length - 1].duration;
       let clsValue = 0;
       const clsObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
-        entries.forEach((entry: PerformanceEntry) => {
-          if (!(entry as any).hadRecentInput) {
-            clsValue += (entry as any).value;
+        entries.forEach((entry: any) => {
+          if (!entry.hadRecentInput) {
+            clsValue += entry.value;
           }
         });
         const metric = this.createMetric('CLS', clsValue);
@@ -277,7 +277,7 @@ const duration = entries[entries.length - 1].duration;
         const paintEntries = performance.getEntriesByType('paint');
         const fcpEntry = paintEntries.find((entry) => entry.name === 'first-contentful-paint');
         if (fcpEntry) {
-const fcpMetric = this.createMetric('FCP', fcpEntry.startTime);
+          const fcpMetric = this.createMetric('FCP', fcpEntry.startTime);
           this.webVitals.FCP = fcpMetric;
           this.notifyCallbacks(fcpMetric);
         }
@@ -294,10 +294,10 @@ const fcpMetric = this.createMetric('FCP', fcpEntry.startTime);
     try {
       const resourceObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
-        entries.forEach((entry: PerformanceEntry) => {
-          if ((entry as any).initiatorType) {
+        entries.forEach((entry: any) => {
+          if (entry.initiatorType) {
             this.trackMetric(
-              `resource_${(entry as any).initiatorType}`,
+              `resource_${entry.initiatorType}`,
               entry.duration,
               'ms',
               { name: entry.name }

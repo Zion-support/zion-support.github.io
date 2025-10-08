@@ -111,7 +111,7 @@ export async function waitFor(
   timeout = 5000,
   interval = 50
 ): Promise<void> {
-const startTime = Date.now();
+  const startTime = Date.now();
 
   while (!condition()) {
     if (Date.now() - startTime > timeout) {

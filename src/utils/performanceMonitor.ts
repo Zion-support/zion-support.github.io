@@ -48,7 +48,7 @@ export class PerformanceMonitor {
    * Record a performance metric
    */
   recordMetric(name: string, value: number): void {
-const rating = this.getRating(name, value);
+    const rating = this.getRating(name, value);
     const metric: PerformanceMetric = {
       name,
       value,
@@ -111,7 +111,7 @@ const rating = this.getRating(name, value);
     const metrics = this.metrics.get(name) || [];
     if (metrics.length === 0) return 0;
 
-const sum = metrics.reduce((acc, metric) => acc + metric.value, 0);
+    const sum = metrics.reduce((acc, metric) => acc + metric.value, 0);
     return sum / metrics.length;
   }
 
@@ -122,8 +122,8 @@ const sum = metrics.reduce((acc, metric) => acc + metric.value, 0);
     const summary: Record<string, { average: number; count: number; rating: string }> = {};
 
     this.metrics.forEach((metrics, name) => {
-const average = this.getAverage(name);
-const rating = this.getRating(name, average);
+      const average = this.getAverage(name);
+      const rating = this.getRating(name, average);
       summary[name] = {
         average,
         count: metrics.length,
@@ -145,14 +145,14 @@ const rating = this.getRating(name, average);
    * Measure execution time of a function
    */
   async measureAsync<T>(name: string, fn: () => Promise<T>): Promise<T> {
-const start = performance.now();
+    const start = performance.now();
     try {
-const result = await fn();
-const duration = performance.now() - start;
+      const result = await fn();
+      const duration = performance.now() - start;
       this.recordMetric(name, duration);
       return result;
     } catch (error) {
-const duration = performance.now() - start;
+      const duration = performance.now() - start;
       this.recordMetric(`${name}-error`, duration);
       throw error;
     }
@@ -162,14 +162,14 @@ const duration = performance.now() - start;
    * Measure execution time of a synchronous function
    */
   measure<T>(name: string, fn: () => T): T {
-const start = performance.now();
+    const start = performance.now();
     try {
-const result = fn();
-const duration = performance.now() - start;
+      const result = fn();
+      const duration = performance.now() - start;
       this.recordMetric(name, duration);
       return result;
     } catch (error) {
-const duration = performance.now() - start;
+      const duration = performance.now() - start;
       this.recordMetric(`${name}-error`, duration);
       throw error;
     }
