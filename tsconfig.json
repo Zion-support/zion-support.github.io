@@ -9,35 +9,14 @@
     ],
     "module": "ESNext",
     "skipLibCheck": true,
-<<<<<<< HEAD
-<<<<<<< HEAD
-    "allowImportingTsExtensions": false,
-=======
-    "moduleResolution": "node",
-    "allowImportingTsExtensions": true,
->>>>>>> origin/fix-merge-conflicts-final
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "noEmit": true,
-    "jsx": "react-jsx",
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-    "jsxImportSource": "react",
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3f25
-=======
-    "jsxImportSource": "react",
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b1c3
-    "strict": true,
-    "strictNullChecks": true,
-=======
     "allowImportingTsExtensions": false,
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "preserve",
+    "jsxImportSource": "react",
     "strict": false,
->>>>>>> origin/main
+    "strictNullChecks": true,
     "noUnusedLocals": false,
     "noUnusedParameters": false,
     "noFallthroughCasesInSwitch": false,
@@ -81,57 +60,17 @@
       }
     ],
     "allowJs": true,
-<<<<<<< HEAD
     "forceConsistentCasingInFileNames": true,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b1c3
-    "noImplicitAny": true,
-    "noImplicitReturns": true,
-    "noImplicitThis": true,
-<<<<<<< HEAD
-    "exactOptionalPropertyTypes": true,
-    "noImplicitOverride": true,
-    "noPropertyAccessFromIndexSignature": true,
-    "noUncheckedIndexedAccess": true,
-<<<<<<< HEAD
-=======
     "noImplicitAny": false,
     "noImplicitReturns": false,
     "noImplicitThis": false,
-=======
->>>>>>> origin/fix-merge-conflicts-final
     "exactOptionalPropertyTypes": false,
     "noImplicitOverride": false,
     "noPropertyAccessFromIndexSignature": false,
     "noUncheckedIndexedAccess": false,
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3f25
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b1c3
-=======
->>>>>>> origin/fix-merge-conflicts-final
     "allowUnusedLabels": false,
     "allowUnreachableCode": false,
-    "verbatimModuleSyntax": false
-  },
-  "include": [
-    "app/**/*",
-<<<<<<< HEAD
-<<<<<<< HEAD
-    "src/**/*"
-=======
-    "src/**/*",
-    "App.tsx",
-    "components/**/*"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3f25
-=======
-    "src/**/*",
-    "App.tsx",
-    "components/**/*"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b1c3
-=======
+    "verbatimModuleSyntax": false,
     "tsBuildInfoFile": ".next/cache/tsconfig.tsbuildinfo"
   },
   "include": [
@@ -142,10 +81,11 @@
     "components/**/*.tsx",
     "api/**/*.ts",
     "api/**/*.js",
+    "src/**/*",
+    "App.tsx",
     "*.ts",
     "*.tsx",
     ".next/types/**/*.ts"
->>>>>>> origin/main
   ],
   "exclude": [
     "node_modules",
@@ -219,31 +159,19 @@
     "src.disabled/**",
     "utils.disabled/**",
     "vite.config.performance.ts",
-    "app_disabled/**",
     "dao/**",
     "deployments/**",
     "e2e/**",
     "factories/**",
     "src/pages/blog-disabled/**",
     "hooks/**",
-    "lib.broken/**",
-    "lib.disabled/**",
-    "lib/integrations/**",
-    "lint-target/**",
-    "marketing-index.ts",
-    "middleware.security.ts",
     "middleware/**",
-<<<<<<< HEAD
-    "app/blog/**",
     "app/page-optimized.tsx",
     "app/services/**/*",
     "app/case-studies/**/*",
     "app/guides/**/*",
     "app/components/**/*",
-<<<<<<< HEAD
-=======
     "src/components/disabled-corrupted/**",
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b1c3
     "EnhancedFooter.tsx",
     "EnhancedHeader.tsx",
     "EnhancedNavigation.tsx",
@@ -252,21 +180,6 @@
     "api-documentation.tsx",
     "app/components/NewContentPromotionalBanner2026.tsx",
     "app/components/NewestContent2025Banner.tsx",
-<<<<<<< HEAD
-    "api/**",
-    "lib/**",
-    "utils/seoUtils.ts"
-=======
-<<<<<<< HEAD
-    "utils/**/*"
-=======
-    "utils/**/*",
-    "blog/**",
-    "backup-problematic-files/**",
-    "automation/**",
-    "**/*.disabled/**",
-    "**/*.backup/**"
-=======
     "utils/accessibilityUtils.ts",
     "utils/bannerLazyLoader.ts",
     "utils/bannerRegistry.ts",
@@ -274,35 +187,19 @@
     "utils/bannerPrioritization.ts",
     "utils/comprehensiveOptimizer.ts",
     "utils/performanceUtils.ts",
-    "utils/seoUtils.ts"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a0d
-=======
-    "utils/bannerLazyLoader.ts",
-    "utils/bannerPrioritization.ts",
-    "utils/bannerRegistry.ts",
-    "utils/bannerRotationSystem.ts",
-    "utils/comprehensiveOptimizer.ts",
-    "utils/performanceUtils.ts",
+    "utils/seoUtils.ts",
     "utils/**",
-    "src/utils/**"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b1c3
+    "src/utils/**",
+    "services/**",
+    "fix-*.jsx",
+    "fix-*.ts",
+    "jest.setup.*",
+    "**/*.disabled/**",
+    "**/*.backup/**"
   ],
   "references": [
     {
       "path": "./tsconfig.node.json"
     }
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3f25
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b1c3
-=======
-    "netlify/**",
-    "pages_disabled/**",
-    "services/**",
-    "src.disabled/**",
-    "fix-*.jsx",
-    "fix-*.ts",
-    "jest.setup.*"
->>>>>>> origin/main
   ]
 }
