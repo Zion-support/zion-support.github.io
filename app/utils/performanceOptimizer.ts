@@ -54,16 +54,107 @@ export class PerformanceOptimizer {
         console.error('Failed to initialize performance observer:', error);
       }
     }
-    
-    return duration;
   }
 
-  private initMonitoring() {
-    this.observeFID();
-    this.observeCLS();
-    this.observeFCP();
-    this.observeTTFB();
-    this.observeMemory();
+  /**
+   * Lazy load images for better performance
+   */
+  lazyLoadImages(): void {
+    if (typeof window === 'undefined') return;
+    
+    const images = document.querySelectorAll('img[data-src]');
+    const imageObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const img = entry.target as HTMLImageElement;
+          img.src = img.dataset.src || '';
+          img.removeAttribute('data-src');
+          imageObserver.unobserve(img);
+        }
+      });
+    });
+    
+    images.forEach(img => imageObserver.observe(img));
+  }
+
+  /**
+   * Optimize scroll performance
+   */
+  optimizeScroll(): void {
+    if (typeof window === 'undefined') return;
+    
+    let ticking = false;
+    const handleScroll = () => {
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          // Scroll optimization logic here
+          ticking = false;
+        });
+        ticking = true;
+      }
+    };
+    
+    window.addEventListener('scroll', handleScroll, { passive: true });
+  }
+
+  /**
+   * Preload critical resources
+   */
+  preloadCriticalResources(): void {
+    if (typeof window === 'undefined') return;
+    
+    const criticalResources = [
+      '/fonts/critical.woff2',
+      '/css/critical.css'
+    ];
+    
+    criticalResources.forEach(resource => {
+      const link = document.createElement('link');
+      link.rel = 'preload';
+      link.href = resource;
+      link.as = resource.endsWith('.css') ? 'style' : 'font';
+      document.head.appendChild(link);
+    });
+  }
+
+  /**
+   * Observe First Input Delay
+   */
+  private observeFID(): void {
+    if (typeof window === 'undefined') return;
+    // FID observation logic would go here
+  }
+
+  /**
+   * Observe Cumulative Layout Shift
+   */
+  private observeCLS(): void {
+    if (typeof window === 'undefined') return;
+    // CLS observation logic would go here
+  }
+
+  /**
+   * Observe First Contentful Paint
+   */
+  private observeFCP(): void {
+    if (typeof window === 'undefined') return;
+    // FCP observation logic would go here
+  }
+
+  /**
+   * Observe Time to First Byte
+   */
+  private observeTTFB(): void {
+    if (typeof window === 'undefined') return;
+    // TTFB observation logic would go here
+  }
+
+  /**
+   * Observe memory usage
+   */
+  private observeMemory(): void {
+    if (typeof window === 'undefined') return;
+    // Memory observation logic would go here
   }
 }
 
