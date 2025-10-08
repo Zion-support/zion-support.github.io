@@ -3,7 +3,10 @@
  * Provides utilities for optimizing performance in React applications
  */
 
+<<<<<<< HEAD
 // import { lazy } from 'react';
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-9c09
 
 /**
  * Debounce function to limit execution rate

@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 // import React from 'react';
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-9c09
 /**
  * Security Enhancer
  * Provides comprehensive security utilities and monitoring
