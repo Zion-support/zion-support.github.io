@@ -1,23 +1,23 @@
-import { ArrowRight, Target, CheckCircle } from 'lucide-react';
-import { Star } from 'lucide-react';
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import { ArrowLeft, Calendar, User, Clock, Tag, Target, CheckCircle, ArrowRight } from 'lucide-react';
 
-export const metadata = {
-  title: 'AI 2026 Implementation Roadmap: Complete Guide to Enterprise AI Transformation',
-  description: 'Master the art of AI implementation with our comprehensive 2026 roadmap. From strategy development to full-scale deployment, learn how to successfully transform your enterprise.',
-  keywords: 'AI Implementation, Enterprise AI, Digital Transformation, AI Strategy, 2026 Roadmap, Implementation Guide',
-};
-
-export default function AI2026ImplementationRoadmap() {
+const AI2026ImplementationRoadmap: React.FC = () => {
   return (
-    <div className="min-h-screen bg-white">
+    <>
+      <Helmet>
+        <title>AI 2026 Implementation Roadmap: Complete Guide to Enterprise AI Transformation</title>
+        <meta name="description" content="Master the art of AI implementation with our comprehensive 2026 roadmap. From strategy development to full-scale deployment, learn how to successfully transform your enterprise." />
+        <meta name="keywords" content="AI Implementation, Enterprise AI, Digital Transformation, AI Strategy, 2026 Roadmap, Implementation Guide" />
+      </Helmet>
+      
+      <div className="min-h-screen bg-white">
       {/* Header */}
       <header className="bg-white border-b border-gray-200">
         <div className="max-w-4xl mx-auto px-4 py-6">
           <Link 
-            href="/"
+            to="/"
             className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors"
           >
             <ArrowLeft className="w-4 h-4 mr-2" />
@@ -372,23 +372,26 @@ export default function AI2026ImplementationRoadmap() {
             </p>
             <div className="flex flex-wrap gap-4">
               <Link 
-                href="/case-studies/fortune-500-ai-transformation-success"
+                to="/contact"
                 className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
               >
-                View Success Stories
+                Contact Us
                 <ArrowRight className="w-4 h-4 ml-2" />
               </Link>
               <Link 
-                href="/tools/ai-roi-calculator"
+                to="/services"
                 className="inline-flex items-center px-6 py-3 bg-white text-blue-600 border border-blue-600 rounded-lg hover:bg-blue-50 transition-colors"
               >
-                Calculate Your ROI
+                View Services
                 <ArrowRight className="w-4 h-4 ml-2" />
               </Link>
             </div>
           </div>
         </div>
       </article>
-    </div>
+      </div>
+    </>
   );
-  }
+};
+
+export default AI2026ImplementationRoadmap;

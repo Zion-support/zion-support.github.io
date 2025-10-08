@@ -43,6 +43,38 @@ const Footer: React.FC = () => {
                   Enterprise
                 </Link>
               </li>
+              <li>
+                <Link to="/team" className="text-gray-300 hover:text-white transition-colors">
+                  Team
+                </Link>
+              </li>
+              <li>
+                <Link to="/contact" className="text-gray-300 hover:text-white transition-colors">
+                  Contact
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Guides */}
+          <div>
+            <h4 className="text-lg font-semibold mb-4">Guides</h4>
+            <ul className="space-y-2">
+              <li>
+                <Link to="/guides/ai-2026-implementation-roadmap" className="text-gray-300 hover:text-white transition-colors">
+                  AI 2026 Roadmap
+                </Link>
+              </li>
+              <li>
+                <Link to="/guides/ai-2027-implementation-roadmap" className="text-gray-300 hover:text-white transition-colors">
+                  AI 2027 Roadmap
+                </Link>
+              </li>
+              <li>
+                <Link to="/guides/autonomous-business-processes-implementation-guide-2026" className="text-gray-300 hover:text-white transition-colors">
+                  Autonomous Processes
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -55,6 +87,7 @@ const Footer: React.FC = () => {
               <li>Autonomous Systems</li>
               <li>Business Intelligence</li>
               <li>Cloud Migration</li>
+              <li>Enterprise Consulting</li>
             </ul>
           </div>
 
@@ -62,13 +95,14 @@ const Footer: React.FC = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4">Contact</h4>
             <div className="space-y-2 text-gray-300">
-              <p>Email: kleber@ziontechgroup.com</p>
+              <p>Email: contact@ziontechgroup.com</p>
               <p>Phone: +1 (302) 464-0950</p>
+              <p>Website: ziontechgroup.com</p>
               <div className="flex space-x-4 mt-4">
-                <a href="#" className="text-gray-300 hover:text-white transition-colors">
+                <a href="https://linkedin.com/company/ziontechgroup" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors">
                   LinkedIn
                 </a>
-                <a href="#" className="text-gray-300 hover:text-white transition-colors">
+                <a href="https://twitter.com/ziontechgroup" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors">
                   Twitter
                 </a>
               </div>
@@ -76,8 +110,18 @@ const Footer: React.FC = () => {
           </div>
         </div>
 
-        <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-300">
-          <p>&copy; 2024 Zion Tech Group. All rights reserved.</p>
+        <div className="border-t border-gray-700 mt-8 pt-8">
+          <div className="flex flex-col md:flex-row justify-between items-center">
+            <p className="text-gray-300 mb-4 md:mb-0">&copy; 2024 Zion Tech Group. All rights reserved.</p>
+            <div className="flex space-x-6">
+              <Link to="/privacy" className="text-gray-300 hover:text-white transition-colors text-sm">
+                Privacy Policy
+              </Link>
+              <Link to="/terms" className="text-gray-300 hover:text-white transition-colors text-sm">
+                Terms of Service
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
     </footer>

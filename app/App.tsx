@@ -9,9 +9,21 @@ import LoadingSpinner from './components/LoadingSpinner';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
 import PerformanceDashboard from './components/PerformanceDashboard';
+import Navigation from './components/Navigation';
+import Footer from './components/Footer';
 
 // Lazy load pages for better performance
 const HomePage = lazy(() => import('./page'));
+const AboutPage = lazy(() => import('./about/page'));
+const ServicesPage = lazy(() => import('./services/page'));
+const ContactPage = lazy(() => import('./contact/page'));
+const EnterprisePage = lazy(() => import('./enterprise/page'));
+const TeamPage = lazy(() => import('./team/page'));
+const PrivacyPage = lazy(() => import('./privacy/page'));
+const TermsPage = lazy(() => import('./terms/page'));
+const AI2026Guide = lazy(() => import('./guides/ai-2026-implementation-roadmap/page'));
+const AI2027Guide = lazy(() => import('./guides/ai-2027-implementation-roadmap/page'));
+const AutonomousProcessesGuide = lazy(() => import('./guides/autonomous-business-processes-implementation-guide-2026/page'));
 
 // Utils
 import { performanceOptimizer, prefetchResources } from '../utils/performanceOptimizer';
@@ -54,14 +66,25 @@ const App: React.FC = () => {
             >
               <Router>
                 <div className='App'>
+                  <Navigation />
                   <main id='main-content'>
                     <Suspense fallback={<LoadingSpinner />}>
                       <Routes>
                         <Route path='/' element={<HomePage />} />
-                        {/* Add more routes as needed */}
+                        <Route path='/about' element={<AboutPage />} />
+                        <Route path='/services' element={<ServicesPage />} />
+                        <Route path='/contact' element={<ContactPage />} />
+                        <Route path='/enterprise' element={<EnterprisePage />} />
+                        <Route path='/team' element={<TeamPage />} />
+                        <Route path='/privacy' element={<PrivacyPage />} />
+                        <Route path='/terms' element={<TermsPage />} />
+                        <Route path='/guides/ai-2026-implementation-roadmap' element={<AI2026Guide />} />
+                        <Route path='/guides/ai-2027-implementation-roadmap' element={<AI2027Guide />} />
+                        <Route path='/guides/autonomous-business-processes-implementation-guide-2026' element={<AutonomousProcessesGuide />} />
                       </Routes>
                     </Suspense>
                   </main>
+                  <Footer />
 
                   {/* Performance Dashboard */}
                   <PerformanceDashboard />

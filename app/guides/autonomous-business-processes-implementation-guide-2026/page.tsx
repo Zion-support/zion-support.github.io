@@ -1,31 +1,22 @@
-import { Zap, Target, CheckCircle } from 'lucide-react';
-import { Shield } from 'lucide-react';
-import { Star } from 'lucide-react';
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import { ArrowLeft, BookOpen, CheckCircle, Clock, Target, Users, Zap, TrendingUp, Brain, Shield, Settings, BarChart3 } from 'lucide-react';
-import type { Metadata } from 'next';
 
-export const metadata: Metadata = {
-  title: 'Complete Guide to Implementing Autonomous Business Processes in 2026 | Zion Tech Group',
-  description: 'Comprehensive step-by-step guide to implementing AI-powered autonomous business processes in your organization with proven methodologies and best practices.',
-  keywords: 'autonomous business processes, implementation guide, AI automation, business transformation, process optimization',
-  openGraph: {
-    title: 'Complete Guide to Implementing Autonomous Business Processes in 2026',
-    description: 'Comprehensive step-by-step guide to implementing AI-powered autonomous business processes in your organization with proven methodologies and best practices.',
-    type: 'article',
-    publishedTime: '2026-01-15T00:00:00Z',
-    authors: ['Zion Tech Group'],
-  },
-};
-
-export default function ImplementationGuide() {
+const ImplementationGuide: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-green-50">
+    <>
+      <Helmet>
+        <title>Complete Guide to Implementing Autonomous Business Processes in 2026 | Zion Tech Group</title>
+        <meta name="description" content="Comprehensive step-by-step guide to implementing AI-powered autonomous business processes in your organization with proven methodologies and best practices." />
+        <meta name="keywords" content="autonomous business processes, implementation guide, AI automation, business transformation, process optimization" />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-green-50">
       {/* Header */}
       <header className="bg-white shadow-sm border-b">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-          <Link href="/guides" className="inline-flex items-center text-green-600 hover:text-green-800 transition-colors duration-200">
+          <Link to="/" className="inline-flex items-center text-green-600 hover:text-green-800 transition-colors duration-200">
             <ArrowLeft className="w-4 h-4 mr-2" />
             Back to Guides
           </Link>
@@ -390,23 +381,26 @@ export default function ImplementationGuide() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link 
-                href="/case-studies/autonomous-processes-success"
+                to="/about"
                 className="inline-flex items-center px-6 py-3 bg-white text-green-600 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200"
               >
-                View Success Stories
+                Learn More
                 <ArrowLeft className="w-4 h-4 ml-2 rotate-180" />
               </Link>
               <Link 
-                href="/tools/process-automation-calculator"
+                to="/contact"
                 className="inline-flex items-center px-6 py-3 border-2 border-white text-white rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors duration-200"
               >
-                Calculate Your ROI
+                Contact Us
                 <BarChart3 className="w-4 h-4 ml-2" />
               </Link>
             </div>
           </div>
         </div>
       </article>
-    </div>
+      </div>
+    </>
   );
-}
+};
+
+export default ImplementationGuide;

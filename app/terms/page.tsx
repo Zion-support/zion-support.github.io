@@ -85,8 +85,8 @@ const TermsPage: React.FC = () => {
                   <div className="mt-4 p-4 bg-gray-50 rounded-lg">
                     <p className="text-gray-600">
                       <strong>Email:</strong> legal@ziontechgroup.com<br />
-                      <strong>Phone:</strong> +1 (555) 123-4567<br />
-                      <strong>Address:</strong> 123 Tech Street, San Francisco, CA 94105
+                      <strong>Phone:</strong> +1 (302) 464-0950<br />
+                      <strong>Address:</strong> 364 E Main St STE 1008, Middletown, DE 19709, United States
                     </p>
                   </div>
                 </section>

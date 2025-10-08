@@ -108,12 +108,12 @@ const EnterprisePage: React.FC = () => {
                 Contact our enterprise team to discuss your specific needs and requirements.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+                <a href="/contact" className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-center">
                   Schedule Consultation
-                </button>
-                <button className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors">
-                  Download Brochure
-                </button>
+                </a>
+                <a href="/services" className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors text-center">
+                  View Services
+                </a>
               </div>
             </div>
           </div>

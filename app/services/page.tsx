@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
 const ServicesPage: React.FC = () => {
   const services = [
@@ -41,7 +42,14 @@ const ServicesPage: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-slate-50 py-16">
+    <>
+      <Helmet>
+        <title>Our Services - Zion Tech Group</title>
+        <meta name="description" content="Comprehensive AI and IT solutions including AI solutions, quantum computing, autonomous systems, and business intelligence for enterprise transformation." />
+        <meta name="keywords" content="AI solutions, quantum computing, autonomous systems, business intelligence, cloud migration, enterprise consulting" />
+      </Helmet>
+      
+      <div className="min-h-screen bg-slate-50 py-16">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
@@ -77,12 +85,13 @@ const ServicesPage: React.FC = () => {
           <p className="text-xl text-gray-600 mb-8">
             Contact us today to discuss how our AI solutions can help your organization
           </p>
-          <button className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+          <a href="/contact" className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors inline-block">
             Get Started
-          </button>
+          </a>
         </div>
       </div>
-    </div>
+      </div>
+    </>
   );
 };
 

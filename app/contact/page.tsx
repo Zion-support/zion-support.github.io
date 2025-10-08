@@ -91,13 +91,14 @@ const ContactPage: React.FC = () => {
                     </div>
                     <div>
                       <h4 className="font-semibold text-gray-900">Phone</h4>
-                      <p className="text-gray-600">+1 (555) 123-4567</p>
+                      <p className="text-gray-600">+1 (302) 464-0950</p>
                     </div>
                     <div>
                       <h4 className="font-semibold text-gray-900">Address</h4>
                       <p className="text-gray-600">
-                        123 Tech Street<br />
-                        San Francisco, CA 94105
+                        364 E Main St STE 1008<br />
+                        Middletown, DE 19709<br />
+                        United States
                       </p>
                     </div>
                   </div>

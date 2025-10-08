@@ -73,9 +73,9 @@ const TeamPage: React.FC = () => {
                 We're always looking for talented individuals to join our mission of advancing AI and IT solutions.
               </p>
               <div className="text-center">
-                <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
-                  View Open Positions
-                </button>
+                <a href="/contact" className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors inline-block">
+                  Contact Us About Careers
+                </a>
               </div>
             </div>
           </div>
