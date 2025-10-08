@@ -25,6 +25,8 @@ export default function EnterprisePage() {
               $100M+ cost savings, 500% productivity gains, and 99.9% system
               uptime with enterprise-grade security and compliance.
             </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
                 href="/contact"
                 className="group flex items-center gap-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl"
               >
@@ -32,6 +34,8 @@ export default function EnterprisePage() {
                 <span className="group-hover:translate-x-1 transition-transform">
                   →
                 </span>
+              </Link>
+              <Link
                 href="#solutions"
                 className="group flex items-center gap-3 bg-white/10 hover:bg-white/20 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 border border-white/30"
               >
@@ -39,12 +43,21 @@ export default function EnterprisePage() {
                 <span className="group-hover:translate-x-1 transition-transform">
                   ↓
                 </span>
+              </Link>
             </div>
           </div>
         </div>
       </div>
 
       {/* Solutions Section */}
+      <section id="solutions" className="py-24 bg-gradient-to-br from-blue-900 to-purple-900">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Enterprise AI Solutions
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Comprehensive AI solutions designed for enterprise-scale operations
             </p>
           </div>
 
@@ -52,19 +65,23 @@ export default function EnterprisePage() {
             {[
               {
                 title: 'Autonomous Operations',
-                description:
+                description: 'Self-managing systems that optimize operations 24/7',
+                icon: '🤖'
               },
               {
                 title: 'Business Intelligence',
-                description:
+                description: 'Advanced analytics and insights for strategic decisions',
+                icon: '📊'
               },
               {
                 title: 'Quantum Security',
-                description:
+                description: 'Next-generation security with quantum encryption',
+                icon: '🔒'
               },
             ].map((solution, index) => (
               <div
                 key={index}
+                className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300"
               >
                 <div className="text-4xl mb-4">{solution.icon}</div>
                 <h3 className="text-2xl font-bold text-white mb-4">
@@ -89,14 +106,20 @@ export default function EnterprisePage() {
               transformation with our enterprise AI solutions.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
+              <Link
                 href="tel:+13024640950"
                 className="group flex items-center gap-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl"
               >
                 <span className="text-xl">📞</span>
+                <span>Call Now</span>
+              </Link>
+              <Link
+                href="/contact"
                 className="group flex items-center gap-3 bg-white/10 hover:bg-white/20 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 border border-white/30"
               >
                 <span className="text-xl">📧</span>
                 <span>Get Enterprise Consultation</span>
+              </Link>
             </div>
           </div>
         </div>

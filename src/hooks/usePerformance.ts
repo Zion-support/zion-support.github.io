@@ -1,20 +1,30 @@
-        analytics.track(
-          'long_task',
-          'performance',
-          'detected',
-          undefined,
-          entry.duration
-        );
-      });
-    });
+import { useEffect } from 'react';
+import { analytics } from '../utils/analytics';
 
-    return () => {
-      if (observer && typeof observer.disconnect === 'function') {
-        observer.disconnect();
-      }
-    };
+export const usePerformance = () => {
+  useEffect(() => {
+    if ('PerformanceObserver' in window) {
+      const observer = new PerformanceObserver((list) => {
+        list.getEntries().forEach((entry) => {
+          analytics.track(
+            'long_task',
+            'performance',
+            'detected',
+            undefined,
+            entry.duration
+          );
+        });
+      });
+
+      observer.observe({ entryTypes: ['longtask'] });
+
+      return () => {
+        if (observer && typeof observer.disconnect === 'function') {
+          observer.disconnect();
+        }
+      };
+    }
   }, []);
 };
 
 export default usePerformance;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-88f7
