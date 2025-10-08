@@ -48,11 +48,17 @@ const Navigation: React.FC = () => {
                   <Link to="/services-advertising" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
                     Advertising Services
                   </Link>
+                  <Link to="/guides" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                    Implementation Guides
+                  </Link>
                 </div>
               )}
             </div>
             <Link to="/case-studies" className="text-gray-700 hover:text-blue-600 transition-colors">
               Case Studies
+            </Link>
+            <Link to="/blog" className="text-gray-700 hover:text-blue-600 transition-colors">
+              Blog
             </Link>
             <Link to="/enterprise" className="text-gray-700 hover:text-blue-600 transition-colors">
               Enterprise
@@ -109,10 +115,16 @@ const Navigation: React.FC = () => {
                   <Link to="/services-advertising" className="block text-gray-600 hover:text-blue-600 transition-colors">
                     Advertising Services
                   </Link>
+                  <Link to="/guides" className="block text-gray-600 hover:text-blue-600 transition-colors">
+                    Implementation Guides
+                  </Link>
                 </div>
               </div>
               <Link to="/case-studies" className="text-gray-700 hover:text-blue-600 transition-colors">
                 Case Studies
+              </Link>
+              <Link to="/blog" className="text-gray-700 hover:text-blue-600 transition-colors">
+                Blog
               </Link>
               <Link to="/enterprise" className="text-gray-700 hover:text-blue-600 transition-colors">
                 Enterprise
