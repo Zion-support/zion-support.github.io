@@ -52,7 +52,6 @@ module.exports = {
     '<rootDir>/components_backup/',
     '<rootDir>/data_backup/',
     '<rootDir>/lib_backup/',
-    '<rootDir>/app/',
   ],
   transformIgnorePatterns: [
     '/node_modules/(?!(lucide-react|@heroicons/react|framer-motion)/)',
