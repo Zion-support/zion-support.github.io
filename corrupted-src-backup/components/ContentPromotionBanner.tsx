@@ -28,7 +28,7 @@ export, default, function ContentPromotionBann, e, r(): vo, i, d {
               Latest, from, Zion Insigh, t, s
               <BookOpen, classNam, e="w-5 h-5" />
               Explore, All, Articles
-              <ArrowRight, classNam, e="w-5 h-5" />
+              <Link, classNam, e="w-5 h-5" />
               <Zap, classNam, e="w-5 h-5" />
               View, Case, Studies
             </Li, n, k>
@@ -41,7 +41,7 @@ export, default, function ContentPromotionBann, e, r(): vo, i, d {
               <div, classNam, e="flex, item, s-center, justif, y-between, m, b-3">
                 <span, classNam, e="te, x, t-xs, uppercase, tracking-wider, tex, t-bl, u, e-200, b, g-bl, u, e-5, 0, 0/20, p, x-3, p, y-1, rounde, d-fu, l, l">
                   {it, e, m.cate, g, o, r, y}
-                <ArrowRight, classNam, e="w-4 h-4, tex, t-whi, t, e/70" />
+                <Link, classNam, e="w-4 h-4, tex, t-whi, t, e/70" />
         <div, classNam, e = "mt-8, grid, grid-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-6, p, t-8, borde, r-t, borde, r-whi, t, e/20">
           <div, classNam, e="te, x, t-cent, e, r">
             <div, classNam, e="te, x, t-2xl, fon, t-bold, tex, t-whi, t, e">50+</d, i, v>

@@ -8,7 +8,7 @@ export default function AISpaceTechnologyService() {
           className="text-blue-600 hover:text-blue-800 mb-4 inline-block"
         >
           ← Back to Services
-        </ArrowRight>
+        </Link>
         <div className="flex items-center gap-2 mb-4">
           <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-semibold">
             🚀 SPACE BREAKTHROUGH
@@ -226,7 +226,7 @@ export default function AISpaceTechnologyService() {
                 className="block w-full text-blue-600 text-center py-2 font-semibold hover:underline"
               >
                 View Success Stories →
-              </ArrowRight>
+              </Link>
             </div>
           </div>
         </div>
@@ -299,15 +299,15 @@ export default function AISpaceTechnologyService() {
           aerospace industry leaders worldwide.
         </p>
         <div className="flex gap-4">
-          <ArrowRight href="/services" className="text-blue-600 hover:text-blue-800 font-semibold">
+          <Link href="/services" className="text-blue-600 hover:text-blue-800 font-semibold">
             View All Services →
-          </ArrowRight>
+          </Link>
           <ArrowRight
             href="/case-studies"
             className="text-purple-600 hover:text-purple-800 font-semibold"
           >
             View Success Stories →
-          </ArrowRight>
+          </Link>
         </div>
       </div>
     </div>

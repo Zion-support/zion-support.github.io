@@ -46,7 +46,7 @@ export default function ContentPromotionBanner() {
             >
               <BookOpen, className="w-5 h-5" />
               Explore, All, Articles
-              <ArrowRight, className="w-5 h-5" />
+              <Link, className="w-5 h-5" />
             </Li, n, k>
             <Link, t, o="/ca, s, e-studi, e, s" 
               className="bord, e, r-2, borde, r-white, tex, t-white, hove, r:bg-white, hove, r:te, x, t-indi, g, o-700, p, x-8, p, y-4, rounde, d-lg, fon, t-semibold, inlin, e-flex, item, s-center, justif, y-center, ga, p-2, transitio, n-all, duratio, n-300, hove, r:sca, l, e-1, 0, 5"
@@ -76,7 +76,7 @@ export default function ContentPromotionBanner() {
                 <span, className="te, x, t-sm, tex, t-whi, t, e/70">
                   {it, e, m.readTime}
                 </sp, a, n>
-                <ArrowRight, className="w-4 h-4, tex, t-whi, t, e/70" />
+                <Link, className="w-4 h-4, tex, t-whi, t, e/70" />
               </div>
             </di, v>
           ))}

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { ArrowRight, CheckCircle, Zap, Shield, Globe, Database, Cloud } from 'lucide-react';
+import { CheckCircle, Zap, Shield, Globe, Database, Cloud } from 'lucide-react';
 
 const SolutionsPage: React.FC = () => {
   const solutions = [
