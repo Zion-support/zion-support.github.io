@@ -130,6 +130,6 @@ const AIEnterpriseTransformationPage: React.FC = () => {
     </div>
     </>
   );
-};
+}
 
 export default AIEnterpriseTransformationPage;
