@@ -32,7 +32,8 @@ const Navigation: React.FC = () => {
                 <ChevronDown className="w-4 h-4 ml-1" />
               </button>
               {servicesOpen && (
-                <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg border py-2 z-50">
+                <div className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-lg border py-2 z-50">
+                  <div className="px-4 py-2 text-sm font-semibold text-gray-500 border-b">Core Services</div>
                   <Link to="/services" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
                     All Services
                   </Link>
@@ -47,6 +48,26 @@ const Navigation: React.FC = () => {
                   </Link>
                   <Link to="/services-advertising" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
                     Advertising Services
+                  </Link>
+                  
+                  <div className="px-4 py-2 text-sm font-semibold text-gray-500 border-b mt-2">Specialized Services</div>
+                  <Link to="/business-intelligence" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                    Business Intelligence
+                  </Link>
+                  <Link to="/quantum-computing" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                    Quantum Computing
+                  </Link>
+                  <Link to="/autonomous-systems" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                    Autonomous Systems
+                  </Link>
+                  <Link to="/blockchain-web3" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                    Blockchain & Web3
+                  </Link>
+                  <Link to="/iot-edge-computing" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                    IoT & Edge Computing
+                  </Link>
+                  <Link to="/cybersecurity" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                    Cybersecurity
                   </Link>
                 </div>
               )}
@@ -92,7 +113,7 @@ const Navigation: React.FC = () => {
                 About
               </Link>
               <div className="space-y-2">
-                <div className="text-gray-700 font-semibold">Services</div>
+                <div className="text-gray-700 font-semibold">Core Services</div>
                 <div className="ml-4 space-y-2">
                   <Link to="/services" className="block text-gray-600 hover:text-blue-600 transition-colors">
                     All Services
@@ -108,6 +129,28 @@ const Navigation: React.FC = () => {
                   </Link>
                   <Link to="/services-advertising" className="block text-gray-600 hover:text-blue-600 transition-colors">
                     Advertising Services
+                  </Link>
+                </div>
+                
+                <div className="text-gray-700 font-semibold mt-4">Specialized Services</div>
+                <div className="ml-4 space-y-2">
+                  <Link to="/business-intelligence" className="block text-gray-600 hover:text-blue-600 transition-colors">
+                    Business Intelligence
+                  </Link>
+                  <Link to="/quantum-computing" className="block text-gray-600 hover:text-blue-600 transition-colors">
+                    Quantum Computing
+                  </Link>
+                  <Link to="/autonomous-systems" className="block text-gray-600 hover:text-blue-600 transition-colors">
+                    Autonomous Systems
+                  </Link>
+                  <Link to="/blockchain-web3" className="block text-gray-600 hover:text-blue-600 transition-colors">
+                    Blockchain & Web3
+                  </Link>
+                  <Link to="/iot-edge-computing" className="block text-gray-600 hover:text-blue-600 transition-colors">
+                    IoT & Edge Computing
+                  </Link>
+                  <Link to="/cybersecurity" className="block text-gray-600 hover:text-blue-600 transition-colors">
+                    Cybersecurity
                   </Link>
                 </div>
               </div>

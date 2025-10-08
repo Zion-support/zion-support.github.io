@@ -41,6 +41,15 @@ const TermsPage = lazy(() => import('./terms/page'));
 const EnterprisePage = lazy(() => import('./enterprise/page'));
 const ServicesAdvertisingPage = lazy(() => import('./services-advertising/page'));
 const CaseStudiesPage = lazy(() => import('./case-studies/page'));
+const MicroSAASPage = lazy(() => import('./micro-saas/page'));
+const AIServicesPage = lazy(() => import('./ai-services/page'));
+const ITServicesPage = lazy(() => import('./it-services/page'));
+const BusinessIntelligencePage = lazy(() => import('./business-intelligence/page'));
+const QuantumComputingPage = lazy(() => import('./quantum-computing/page'));
+const AutonomousSystemsPage = lazy(() => import('./autonomous-systems/page'));
+const BlockchainWeb3Page = lazy(() => import('./blockchain-web3/page'));
+const IoTEdgeComputingPage = lazy(() => import('./iot-edge-computing/page'));
+const CybersecurityPage = lazy(() => import('./cybersecurity/page'));
 
 // Utils
 import { lazyLoadImages, preloadCriticalResources, collectPerformanceMetrics, performanceOptimizer } from './utils/performanceOptimizer';
@@ -172,6 +181,15 @@ const App: React.FC = () => {
                         <Route path="/enterprise" element={<EnterprisePage />} />
                         <Route path="/services-advertising" element={<ServicesAdvertisingPage />} />
                         <Route path="/case-studies" element={<CaseStudiesPage />} />
+                        <Route path="/micro-saas" element={<MicroSAASPage />} />
+                        <Route path="/ai-services" element={<AIServicesPage />} />
+                        <Route path="/it-services" element={<ITServicesPage />} />
+                        <Route path="/business-intelligence" element={<BusinessIntelligencePage />} />
+                        <Route path="/quantum-computing" element={<QuantumComputingPage />} />
+                        <Route path="/autonomous-systems" element={<AutonomousSystemsPage />} />
+                        <Route path="/blockchain-web3" element={<BlockchainWeb3Page />} />
+                        <Route path="/iot-edge-computing" element={<IoTEdgeComputingPage />} />
+                        <Route path="/cybersecurity" element={<CybersecurityPage />} />
                       </Routes>
                     </Suspense>
                   </main>
