@@ -94,14 +94,9 @@ class MonitoringService {
         });
         fcpObserver.observe({ entryTypes: ['paint'] });
 
-<<<<<<< HEAD
-      } catch (error) {
+} catch (error) {
         // eslint-disable-next-line no-console
     console.error('Error setting up performance observers:', error);
-=======
-      } catch (_error) {
-        logger.error('Error setting up performance observers:', error);
->>>>>>> cursor/fix-errors-and-merge-to-main-add2
       }
     }
   }
@@ -111,12 +106,8 @@ class MonitoringService {
       try {
         const longTaskObserver = new PerformanceObserver((list) => {
           for (const entry of list.getEntries()) {
-<<<<<<< HEAD
-            // eslint-disable-next-line no-console
+// eslint-disable-next-line no-console
     console.warn('Long task detected:', {
-=======
-            logger.warn('Long task detected:', {
->>>>>>> cursor/fix-errors-and-merge-to-main-add2
               duration: entry.duration,
               startTime: entry.startTime,
             });
@@ -136,12 +127,8 @@ class MonitoringService {
           const entries = list.getEntries();
           entries.forEach((entry: unknown) => {
             if (entry.duration > 1000) {
-<<<<<<< HEAD
-              // eslint-disable-next-line no-console
+// eslint-disable-next-line no-console
     console.warn('Slow resource detected:', {
-=======
-              logger.warn('Slow resource detected:', {
->>>>>>> cursor/fix-errors-and-merge-to-main-add2
                 name: entry.name,
                 duration: entry.duration,
                 type: entry.initiatorType,
@@ -150,14 +137,9 @@ class MonitoringService {
           });
         });
         resourceObserver.observe({ entryTypes: ['resource'] });
-<<<<<<< HEAD
-      } catch (error) {
+} catch (error) {
         // eslint-disable-next-line no-console
     console.error('Error monitoring resources:', error);
-=======
-      } catch (_error) {
-        logger.error('Error monitoring resources:', error);
->>>>>>> cursor/fix-errors-and-merge-to-main-add2
       }
     }
   }
@@ -195,12 +177,8 @@ class MonitoringService {
     if (thresholds) {
       const rating = value <= thresholds.good ? 'good' : value <= thresholds.needsImprovement ? 'needs-improvement' : 'poor';
       
-<<<<<<< HEAD
-      // eslint-disable-next-line no-console
+// eslint-disable-next-line no-console
     console.log(`[Performance] ${name}:`, {
-=======
-      logger.info(`[Performance] ${name}:`, {
->>>>>>> cursor/fix-errors-and-merge-to-main-add2
         value,
         rating,
         unit: name === 'cls' ? 'score' : 'ms',
@@ -225,12 +203,8 @@ class MonitoringService {
       this.errors = this.errors.slice(-50);
     }
 
-<<<<<<< HEAD
-    // eslint-disable-next-line no-console
+// eslint-disable-next-line no-console
     console.error('[Error]', error);
-=======
-    logger.error('[Error]', error);
->>>>>>> cursor/fix-errors-and-merge-to-main-add2
 
     // Send to error tracking service (if configured)
     if (typeof window !== 'undefined' && (window as any).Sentry) {
@@ -253,12 +227,8 @@ class MonitoringService {
   public measureMemory(): void {
     if ('memory' in performance && performanceConfig.monitoring.enableMemoryMonitoring) {
       const memory = (performance as any).memory;
-<<<<<<< HEAD
-      // eslint-disable-next-line no-console
+// eslint-disable-next-line no-console
     console.log('[Memory]', {
-=======
-      logger.info('[Memory]', {
->>>>>>> cursor/fix-errors-and-merge-to-main-add2
         used: `${Math.round(memory.usedJSHeapSize / 1048576)}MB`,
         total: `${Math.round(memory.totalJSHeapSize / 1048576)}MB`,
         limit: `${Math.round(memory.jsHeapSizeLimit / 1048576)}MB`,
@@ -270,12 +240,8 @@ class MonitoringService {
     if ('performance' in window && 'getEntriesByType' in performance) {
       const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
       if (navigation) {
-<<<<<<< HEAD
-        // eslint-disable-next-line no-console
+// eslint-disable-next-line no-console
     console.log('[Navigation Timing]', {
-=======
-        logger.info('[Navigation Timing]', {
->>>>>>> cursor/fix-errors-and-merge-to-main-add2
           'DNS Lookup': `${Math.round(navigation.domainLookupEnd - navigation.domainLookupStart)}ms`,
           'TCP Connect': `${Math.round(navigation.connectEnd - navigation.connectStart)}ms`,
           'TTFB': `${Math.round(navigation.responseStart - navigation.requestStart)}ms`,
