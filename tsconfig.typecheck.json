@@ -22,6 +22,8 @@
     "lib.disabled/**",
     "lint-target/**",
     "netlify/**",
-    "contracts.disabled/**"
+    "contracts.disabled/**",
+    "app/components/NewestContent2025Banner.tsx",
+    "app/components/NewContentPromotionalBanner2026.tsx"
   ]
 }

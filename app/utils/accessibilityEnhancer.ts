@@ -678,14 +678,15 @@ class AccessibilityEnhancer {
     
     return `
 Accessibility Report:
-- Images without alt: ${metrics.imagesWithoutAlt}
-- Links without text: ${metrics.linksWithoutText}
-- Headings without content: ${metrics.headingsWithoutContent}
-- Keyboard Navigation Score: ${metrics.keyboardNavigationScore}/100
-- Screen Reader Score: ${metrics.screenReaderScore}/100
-- Overall Score: ${metrics.overallScore}/100
-    `;
+- Color Contrast Checks: ${metrics.colorContrastChecks}
+- Keyboard Navigation Tests: ${metrics.keyboardNavigationTests}
+- Screen Reader Announcements: ${metrics.screenReaderAnnouncements}
+- Focus Management Updates: ${metrics.focusManagementUpdates}
+- ARIA Labels Added: ${metrics.ariaLabelsAdded}
+- Skip Links Added: ${metrics.skipLinksAdded}
+`;
   }
 }
 
-export default new AccessibilityEnhancer();
+export const accessibilityEnhancer = new AccessibilityEnhancer();
+export default accessibilityEnhancer;
