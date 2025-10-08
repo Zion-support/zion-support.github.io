@@ -38,7 +38,6 @@ export const usePerformanceOptimization = () => {
           processingStart: number;
           processingEnd: number;
         };
-<<<<<<< HEAD
         metrics.firstInputDelay = fidEntry.processingStart - fidEntry.startTime;
       }
     });
