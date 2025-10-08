@@ -51,7 +51,11 @@ export {
 } from './validation';
 
 // Export errorHandler module items individually
-export { ErrorSeverity, ErrorCategory, type ErrorInfo } from './errorHandler';
+export {
+  ErrorSeverity,
+  ErrorCategory,
+  type ErrorInfo,
+} from './errorHandler';
 export { default as ErrorHandler } from './errorHandler';
 
 // Default exports

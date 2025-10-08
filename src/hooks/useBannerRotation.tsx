@@ -25,13 +25,13 @@ interface BannerRotationState {
 }
 
 // Helper functions defined inline
-const selectBannersForDisplay = (banners: unknown[], maxBanners: number, strategy: RotationStrategy) => {
+const selectBannersForDisplay = (banners: any[], maxBanners: number, strategy: RotationStrategy) => {
   const enabled = banners.filter((b: any) => b.enabled !== false);
   const sorted = enabled.sort((a: any, b: any) => (b.priority || 0) - (a.priority || 0));
   return sorted.slice(0, maxBanners);
 };
 
-const selectBalancedBanners = (banners: unknown[], maxBanners: number) => {
+const selectBalancedBanners = (banners: any[], maxBanners: number) => {
   return selectBannersForDisplay(banners, maxBanners, 'balanced');
 };
 
@@ -59,8 +59,8 @@ const loadBannerStats = () => {
   };
 };
 
-// const getRefreshInterval = () => 30000;
-// const getRotationStrategy = (): RotationStrategy => 'balanced';
+const getRefreshInterval = () => 30000;
+const getRotationStrategy = (): RotationStrategy => 'balanced';
 
 export const useBannerRotation = (options: UseBannerRotationOptions = {}) => {
   const {
@@ -91,7 +91,7 @@ export const useBannerRotation = (options: UseBannerRotationOptions = {}) => {
       
       setState(prev => ({
         ...prev,
-        currentBanners: selected as BannerConfig[],
+        currentBanners: selected,
         isLoading: false
       }));
     } catch (error) {

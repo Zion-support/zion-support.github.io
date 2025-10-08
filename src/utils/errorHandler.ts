@@ -9,50 +9,56 @@ export enum ErrorCategory {
   API = 'api',
   UI = 'ui',
   RUNTIME = 'runtime',
-  UNKNOWN = 'unknown',
+  UNKNOWN = 'unknown'
 }
 
 export enum ErrorSeverity {
   LOW = 'low',
   MEDIUM = 'medium',
   HIGH = 'high',
-  CRITICAL = 'critical',
+  CRITICAL = 'critical'
 }
 
 export interface ErrorInfo {
   id: string;
-  error: Error;
+  message: string;
   category: ErrorCategory;
   severity: ErrorSeverity;
   timestamp: number;
-  context?: Record<string, unknown>;
+  stack?: string;
 }
 
 class ErrorHandler {
   private errorQueue: ErrorInfo[] = [];
   private maxQueueSize = 100;
 
-  handleError(error: Error, context?: Record<string, unknown>): void {
-    const category = this.categorizeError(error);
-    const severity = this.determineSeverity(error, category);
-    
+  /**
+   * Handle error and add to queue
+   */
+  handleError(error: Error): void {
     const errorData: ErrorInfo = {
       id: this.generateErrorId(),
-      error,
-      category,
-      severity,
+      message: error.message,
+      category: this.categorizeError(error),
+      severity: ErrorSeverity.MEDIUM,
       timestamp: Date.now(),
-      context,
+      stack: error.stack
     };
+
+    errorData.severity = this.determineSeverity(error, errorData.category);
 
     this.errorQueue.push(errorData);
     if (this.errorQueue.length > this.maxQueueSize) {
       this.errorQueue.shift();
     }
 
+    // Send to error reporting service
     this.reportError(errorData);
   }
 
+  /**
+   * Categorize error based on message and stack
+   */
   private categorizeError(error: Error): ErrorCategory {
     const message = error.message.toLowerCase();
     const stack = error.stack?.toLowerCase() || '';
@@ -75,6 +81,9 @@ class ErrorHandler {
     return ErrorCategory.UNKNOWN;
   }
 
+  /**
+   * Determine error severity
+   */
   private determineSeverity(error: Error, category: ErrorCategory): ErrorSeverity {
     if (category === ErrorCategory.NETWORK) {
       return ErrorSeverity.MEDIUM;
@@ -91,18 +100,31 @@ class ErrorHandler {
     return ErrorSeverity.MEDIUM;
   }
 
+  /**
+   * Generate unique error ID
+   */
   private generateErrorId(): string {
     return `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
   }
 
+  /**
+   * Report error to external service
+   */
   private reportError(errorData: ErrorInfo): void {
+    // Implementation for reporting to external service
     console.error('Error reported:', errorData);
   }
 
+  /**
+   * Get all errors
+   */
   getErrors(): ErrorInfo[] {
     return [...this.errorQueue];
   }
 
+  /**
+   * Clear error queue
+   */
   clearErrors(): void {
     this.errorQueue = [];
   }
