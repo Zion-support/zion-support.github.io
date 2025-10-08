@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { ArrowLeft, Home, Search, Phone } from 'lucide-react';
+import { ArrowLeft, Home, Search, BookOpen, Users, Phone } from 'lucide-react';
 
 export default function NotFound() {
   const popularPages = [
@@ -23,9 +23,9 @@ export default function NotFound() {
     },
     {
       title: 'About Us',
-      description: 'Learn about Zion Tech Group and our mission',
+      description: 'Learn more about Zion Tech Group',
       href: '/about',
-      icon: '🏢'
+      icon: '👥'
     },
     {
       title: 'Case Studies',

@@ -8,6 +8,39 @@ export const metadata: Metadata = {
 };
 
 const EnterprisePage: React.FC = () => {
+  const features = [
+    {
+      title: 'Autonomous Systems',
+      description: 'Self-managing enterprise operations with AI-powered automation',
+      icon: '🤖'
+    },
+    {
+      title: 'Quantum Computing',
+      description: 'Next-generation computing power for complex business problems',
+      icon: '⚛️'
+    },
+    {
+      title: 'Enterprise AI',
+      description: 'Custom AI solutions tailored to your business needs',
+      icon: '🧠'
+    },
+    {
+      title: 'Cloud Infrastructure',
+      description: 'Scalable and secure cloud architecture',
+      icon: '☁️'
+    },
+    {
+      title: 'Data Analytics',
+      description: 'Advanced analytics and business intelligence',
+      icon: '📊'
+    },
+    {
+      title: 'Cybersecurity',
+      description: 'Enterprise-grade security solutions',
+      icon: '🔒'
+    },
+  ];
+
   return (
     <>
       <div className='min-h-screen bg-slate-50 py-16'>
@@ -38,7 +71,7 @@ const EnterprisePage: React.FC = () => {
               </Link>
               <Link
                 href="#solutions"
-                className="group flex items-center gap-3 bg-white hover:bg-gray-100 text-gray-900 font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-300"
+                className="group flex items-center gap-3 bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 border border-blue-700"
               >
                 <span>View Solutions</span>
                 <span className="group-hover:translate-x-1 transition-transform">
@@ -63,48 +96,17 @@ const EnterprisePage: React.FC = () => {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              {
-                title: 'Autonomous Operations',
-                description: 'Self-managing systems that optimize operations 24/7',
-                icon: '🤖'
-              },
-              {
-                title: 'Business Intelligence',
-                description: 'Advanced analytics and insights for strategic decisions',
-                icon: '📊'
-              },
-              {
-                title: 'Quantum Security',
-                description: 'Next-generation security with quantum encryption',
-                icon: '🔒'
-              },
-              {
-                title: 'Autonomous Systems',
-                description: 'Self-managing enterprise operations with AI-powered automation',
-                icon: '🤖'
-              },
-              {
-                title: 'Quantum Computing',
-                description: 'Next-generation computing power for complex business problems',
-                icon: '⚛️'
-              },
-              {
-                title: 'Enterprise AI',
-                description: 'Custom AI solutions tailored to your business needs',
-                icon: '🧠'
-              },
-            ].map((solution, index) => (
+            {features.map((feature, index) => (
               <div
                 key={index}
                 className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300"
               >
-                <div className="text-4xl mb-4">{solution.icon}</div>
+                <div className="text-4xl mb-4">{feature.icon}</div>
                 <h3 className="text-2xl font-bold text-white mb-4">
-                  {solution.title}
+                  {feature.title}
                 </h3>
                 <p className='text-gray-300'>
-                  {solution.description}
+                  {feature.description}
                 </p>
               </div>
             ))}
@@ -115,7 +117,7 @@ const EnterprisePage: React.FC = () => {
       {/* CTA Section */}
       <section className="py-24 bg-slate-50">
         <div className="container mx-auto px-4">
-          <div className="text-center bg-gradient-to-r from-blue-600 to-purple-600 rounded-3xl p-12">
+          <div className="text-center bg-gradient-to-r from-blue-600 to-purple-600 rounded-3xl p-12 shadow-2xl">
             <h3 className="text-4xl font-bold text-white mb-6">
               Ready to Transform Your Enterprise?
             </h3>
@@ -126,7 +128,7 @@ const EnterprisePage: React.FC = () => {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
               <Link
                 href="tel:+13024640950"
-                className="group flex items-center gap-3 bg-white text-blue-600 hover:bg-gray-100 font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl"
+                className="group flex items-center gap-3 bg-white hover:bg-gray-100 text-blue-600 font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl"
               >
                 <span className="text-xl">📞</span>
                 <span>Call Now</span>
