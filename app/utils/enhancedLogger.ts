@@ -350,10 +350,10 @@ export class EnhancedLogger {
 
       switch (entry.level) {
         case LogLevel.DEBUG:
-          console.debug(message, structuredLog);
+          if (import.meta.env.DEV) { console.debug(message, structuredLog); }
           break;
         case LogLevel.INFO:
-          console.info(message, structuredLog);
+          if (import.meta.env.DEV) { console.info(message, structuredLog); }
           break;
         case LogLevel.WARN:
           console.warn(message, structuredLog);
@@ -370,10 +370,10 @@ export class EnhancedLogger {
       // Simple console output
       switch (entry.level) {
         case LogLevel.DEBUG:
-          console.debug(message, entry.data);
+          if (import.meta.env.DEV) { console.debug(message, entry.data); }
           break;
         case LogLevel.INFO:
-          console.info(message, entry.data);
+          if (import.meta.env.DEV) { console.info(message, entry.data); }
           break;
         case LogLevel.WARN:
           console.warn(message, entry.data);
