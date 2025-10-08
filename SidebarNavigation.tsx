@@ -7,16 +7,19 @@ const SidebarNavigation: React.FC = () => {
 
   const navigationItems = [
     { name: 'Dashboard', href: '/dashboard', icon: Home },
+    { name: 'Dashboard', href: '/dashboard', icon: Home },
     { name: 'Profile', href: '/profile', icon: User },
     { name: 'Settings', href: '/settings', icon: Settings },
   ];
 
   return (
     <div className='flex h-screen bg-gray-100'>
+    <div className='flex h-screen bg-gray-100'>
       {/* Sidebar */}
       <div
         className={`${isOpen ? 'w-64' : 'w-16'} transition-all duration-300 bg-white shadow-lg`}
       >
+        <div className='p-4'>
         <div className='p-4'>
           <button
             onClick={() => setIsOpen(!isOpen)}
@@ -47,6 +50,20 @@ const SidebarNavigation: React.FC = () => {
         </nav>
       </div>
 
+            <Link
+              key={item.name}
+              to={item.href}
+              className={`flex items-center p-3 rounded-lg hover:bg-gray-100 transition-colors mb-2 ${
+                isOpen ? 'justify-start' : 'justify-center'
+              }`}
+            >
+              <item.icon className='w-5 h-5' />
+              {isOpen && <span className='ml-3 font-medium'>{item.name}</span>}
+            </Link>
+          ))}
+        </nav>
+      </div>
+      
       {/* Main Content */}
       <div className='flex-1 p-8'>
         <h1 className='text-2xl font-bold text-gray-800'>Dashboard</h1>
@@ -56,4 +73,5 @@ const SidebarNavigation: React.FC = () => {
   );
 };
 
+export default SidebarNavigation;
 export default SidebarNavigation;

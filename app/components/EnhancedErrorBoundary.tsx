@@ -68,6 +68,12 @@ class EnhancedErrorBoundary extends Component<Props, State> {
   }
 
   private async reportError(error: Error, errorInfo: ErrorInfo): Promise<void> {
+  handleRetry = () => {
+    this.setState({
+      hasError: false,
+      error: null,
+      errorInfo: null,
+    });
     try {
       const errorReport = {
         error: {

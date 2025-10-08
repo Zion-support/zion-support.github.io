@@ -154,6 +154,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     );
   };
 
+
   return (
     <Helmet>
       <title>{config.title}</title>
