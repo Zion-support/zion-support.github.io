@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { analytics } from '../utils/analytics';
 
 export const usePerformance = () => {
