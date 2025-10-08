@@ -170,6 +170,36 @@ class Logger {
   }
 
   /**
+   * Log a performance metric
+   */
+  perf(metric: string, value: number, metadata?: Record<string, unknown>): void {
+    this.info(`Performance: ${metric} = ${value}ms`, metadata);
+  }
+
+  /**
+   * Create a console group
+   */
+  group(label: string, fn: () => void): void {
+    if (typeof console.group !== 'undefined') {
+      console.group(label);
+    }
+    try {
+      fn();
+    } finally {
+      this.groupEnd();
+    }
+  }
+
+  /**
+   * End a console group
+   */
+  groupEnd(): void {
+    if (typeof console.groupEnd !== 'undefined') {
+      console.groupEnd();
+    }
+  }
+
+  /**
    * Create a child logger with a specific context
    */
   child(context: string): ContextLogger {
