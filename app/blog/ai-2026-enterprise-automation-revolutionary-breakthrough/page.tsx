@@ -1,18 +1,4 @@
 import React from 'react';
-// import { Metadata } from "next" // Removed for Vite compatibility;
-
-export const metadata = {
-  title: "AI 2026: Revolutionary Enterprise Automation Breakthrough",
-  description: "The most comprehensive guide to AI automation breakthroughs transforming enterprises in 2026.",
-  authors: [{ name: 'Zion Tech Group' }],
-  openGraph: {
-    title: 'AI 2026: Revolutionary Enterprise Automation Breakthrough',
-    description: 'The most comprehensive guide to AI automation breakthroughs transforming enterprises in 2026.',
-    type: 'article',
-    authors: ['Zion Tech Group']
-  }
-};
-
 export default function AI2026EnterpriseAutomationRevolutionaryBreakthrough() {
   return (
     <div className="min-h-screen bg-gray-50">

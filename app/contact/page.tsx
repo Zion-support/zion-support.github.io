@@ -1,12 +1,4 @@
 import React from 'react';
-import { Metadata } from 'next';
-
-export const metadata = {
-  title: 'Contact Us - Zion Tech Group',
-  description:
-    'Get in touch with Zion Tech Group for AI and IT solutions. Contact our experts for consultation and support.',
-};
-
 const ContactPage: React.FC = () => {
   return (
     <div className='min-h-screen bg-gradient-to-br from-blue-50 to-gray-100 py-12 px-4 sm:px-6 lg:px-8'>

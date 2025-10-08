@@ -30,7 +30,7 @@ class ErrorBoundary extends Component<Props, State> {
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     // Log error to console in development
     if (process.env['NODE_ENV'] === 'development') {
-      // eslint-disable-next-line no-console
+       
       console.error('ErrorBoundary caught an error:', error, errorInfo);
     }
 
@@ -52,7 +52,7 @@ class ErrorBoundary extends Component<Props, State> {
     }
 
     if (this.props.enableErrorReporting && process.env.NODE_ENV === 'development') {
-      // eslint-disable-next-line no-console
+       
       console.error('Error caught by boundary:', error, errorInfo);
     }
   }

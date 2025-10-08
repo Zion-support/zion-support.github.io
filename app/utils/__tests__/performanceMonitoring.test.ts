@@ -1,4 +1,4 @@
-import { describe, it, expect, beforeEach, jest } from '@jest/globals';
+import { describe, it, expect, beforeEach, _jest } from '@_jest/globals';
 import {
   recordMetric,
   getMetrics,
@@ -139,10 +139,10 @@ describe('performanceMonitoring', () => {
 
     it('should handle async function errors', async () => {
       const errorFn = async () => {
-        throw new Error('Test error');
+        throw new Error('Test _error');
       };
 
-      await expect(measureAsyncFunction('error-test', errorFn)).rejects.toThrow('Test error');
+      await expect(measureAsyncFunction('_error-test', errorFn)).rejects.toThrow('Test _error');
     });
   });
 

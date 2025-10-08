@@ -1,4 +1,4 @@
-// // 'use client'; // Removed for Vite compatibility // Removed for Vite compatibility
+'use client';
 
 import React, { useEffect, useState, useCallback } from 'react';
 
@@ -49,8 +49,8 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         });
         lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
         observers.push(lcpObserver);
-      } catch (error) {
-        // LCP observer not supported
+      } catch (_error) {
+        if (process.env.NODE_ENV === 'development') { console.warn('LCP observer not supported:', _error); }
       }
     }
 
@@ -75,8 +75,8 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         });
         fidObserver.observe({ entryTypes: ['first-input'] });
         observers.push(fidObserver);
-      } catch (error) {
-        // FID observer not supported
+      } catch (_error) {
+        if (process.env.NODE_ENV === 'development') { console.warn('FID observer not supported:', _error); }
       }
     }
 
@@ -102,8 +102,8 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         });
         clsObserver.observe({ entryTypes: ['layout-shift'] });
         observers.push(clsObserver);
-      } catch (error) {
-        // CLS observer not supported
+      } catch (_error) {
+        if (process.env.NODE_ENV === 'development') { console.warn('CLS observer not supported:', _error); }
       }
     }
 
@@ -126,8 +126,8 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         ttfb,
         memory,
       }));
-    } catch (error) {
-      // Performance measurement failed
+    } catch (_error) {
+      if (process.env.NODE_ENV === 'development') { console.warn('Performance measurement failed:', _error); }
     }
 
     // Cleanup observers
@@ -135,8 +135,8 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       observers.forEach(observer => {
         try {
           observer.disconnect();
-        } catch (error) {
-          // Error disconnecting observer
+        } catch (_error) {
+          if (process.env.NODE_ENV === 'development') { console.warn('Error disconnecting observer:', _error); }
         }
       });
     };
@@ -151,13 +151,15 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     );
 
     if (slowResources.length > 0) {
-      // Slow resources detected - could be logged to monitoring service
-      const slowResourceData = slowResources.map((r: PerformanceResourceTiming) => ({
-        name: r.name,
-        duration: r.duration,
-        size: r.transferSize,
-      }));
-      // Could send to monitoring service here
+       
+      console.warn(
+        'Slow resources detected:',
+        slowResources.map((r: PerformanceResourceTiming) => ({
+          name: r.name,
+          duration: r.duration,
+          size: r.transferSize,
+        }))
+      );
     }
   }, []);
 
@@ -168,7 +170,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     try {
       import('web-vitals')
         .then(webVitals => {
-          const { onCLS, onFCP, onLCP, onTTFB } = webVitals;
+          const { onCLS, onFCP, onLCP, onTTFB} = webVitals;
 
           if (onCLS) {
             onCLS((metric: { value: number }) =>

@@ -1,13 +1,5 @@
 import React from 'react';
-// import { Metadata } from "next" // Removed for Vite compatibility;
-
-const metadata = {
-  title: 'Our Team - Zion Tech Group',
-  description:
-    'Meet the talented team of AI and IT experts at Zion Tech Group, driving innovation in enterprise technology solutions.',
-};
-
-export { metadata };
+// Metadata will be handled by React Helmet in individual components
 
 const TeamPage: React.FC = () => {
   const teamMembers = [

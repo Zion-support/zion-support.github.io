@@ -1,4 +1,4 @@
-// // 'use client'; // Removed for Vite compatibility // Removed for Vite compatibility
+'use client';
 
 /**
  * System Monitor Component
@@ -8,7 +8,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { errorHandler } from '../utils/enhancedErrorHandler';
 
-// Collect basic performance metrics (currently unused but available for future use)
+// Collect basic performance metrics
 // const collectPerformanceMetrics = () => {
 //   if (typeof window === 'undefined' || !window.performance) return null;
 //   
@@ -134,12 +134,12 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
           byType: errorStats.errorsByType,
           byCategory: errorStats.errorsByCategory,
           bySeverity: errorStats.errorsBySeverity,
-          recent: errorStats.recentErrors.map(error => ({
-            id: error.id,
-            message: error.message,
-            type: error.type,
-            severity: error.severity,
-            timestamp: error.context.timestamp,
+          recent: errorStats.recentErrors.map(_error => ({
+            id: _error.id,
+            message: _error.message,
+            type: _error.type,
+            severity: _error.severity,
+            timestamp: _error.context.timestamp,
           })),
         },
         memory: memoryInfo,
@@ -148,16 +148,16 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
 
       setMetrics(newMetrics);
       setLastUpdate(new Date());
-    } catch (error) {
+    } catch (_error) {
        
-// Failed to update metrics
+if (process.env.NODE_ENV === 'development') { console.error('Failed to update metrics:', _error); }
     }
   }, []);
 
   // Initialize monitoring
   useEffect(() => {
     const initializeMonitoring = () => {
-      // Start monitoring (placeholder - implement as needed)
+      // Start monitoring (_placeholder - implement as needed)
       setIsMonitoring(true);
       updateMetrics();
     };
@@ -165,7 +165,7 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
     initializeMonitoring();
 
     return () => {
-      // Stop monitoring (placeholder - implement as needed)
+      // Stop monitoring (_placeholder - implement as needed)
       setIsMonitoring(false);
     };
   }, [updateMetrics]);
@@ -447,17 +447,17 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
         <div className="mb-8">
           <h3 className="text-lg font-semibold text-gray-900 mb-4">Recent Errors</h3>
           <div className="space-y-2 max-h-64 overflow-y-auto">
-            {metrics.errors.recent.map((error) => (
-              <div key={error.id} className="bg-gray-50 p-3 rounded-lg">
+            {metrics.errors.recent.map((_error) => (
+              <div key={_error.id} className="bg-gray-50 p-3 rounded-lg">
                 <div className="flex items-center justify-between mb-2">
-                  <span className="text-sm font-medium text-gray-900">{error.message}</span>
-                  <span className={`px-2 py-1 rounded-full text-xs font-medium ${getSeverityColor(error.severity)}`}>
-                    {error.severity}
+                  <span className="text-sm font-medium text-gray-900">{_error.message}</span>
+                  <span className={`px-2 py-1 rounded-full text-xs font-medium ${getSeverityColor(_error.severity)}`}>
+                    {_error.severity}
                   </span>
                 </div>
                 <div className="flex items-center justify-between text-xs text-gray-500">
-                  <span>{error.type}</span>
-                  <span>{new Date(error.timestamp).toLocaleTimeString()}</span>
+                  <span>{_error.type}</span>
+                  <span>{new Date(_error.timestamp).toLocaleTimeString()}</span>
                 </div>
               </div>
             ))}

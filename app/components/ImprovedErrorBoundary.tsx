@@ -1,6 +1,6 @@
 /**
  * Improved Error Boundary
- * Enhanced error handling with recovery mechanisms and user-friendly fallbacks
+ * Enhanced _error handling with recovery mechanisms and user-friendly fallbacks
  */
 
 import React, { Component, ErrorInfo, ReactNode } from 'react';
@@ -9,14 +9,14 @@ import monitoring from '../utils/monitoring';
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
-  onError?: (error: Error, errorInfo: ErrorInfo) => void;
+  onError?: (_error: Error, _errorInfo: ErrorInfo) => void;
   resetKeys?: Array<string | number>;
 }
 
 interface State {
   hasError: boolean;
-  error: Error | null;
-  errorInfo: ErrorInfo | null;
+  _error: Error | null;
+  _errorInfo: ErrorInfo | null;
   errorCount: number;
 }
 
@@ -25,52 +25,52 @@ class ImprovedErrorBoundary extends Component<Props, State> {
     super(props);
     this.state = {
       hasError: false,
-      error: null,
-      errorInfo: null,
+      _error: null,
+      _errorInfo: null,
       errorCount: 0,
     };
   }
 
-  static getDerivedStateFromError(error: Error): Partial<State> {
+  static getDerivedStateFromError(_error: Error): Partial<State> {
     return {
       hasError: true,
-      error,
+      _error,
     };
   }
 
-  componentDidCatch(error: Error, errorInfo: ErrorInfo): void {
-    // Log error to monitoring service
+  componentDidCatch(_error: Error, _errorInfo: ErrorInfo): void {
+    // Log _error to monitoring service
     monitoring.logError({
-      message: error.message,
-      stack: error.stack,
-      component: errorInfo.componentStack ?? undefined,
+      message: _error.message,
+      stack: _error.stack,
+      component: _errorInfo.componentStack ?? undefined,
       timestamp: Date.now(),
       userAgent: navigator.userAgent,
       url: window.location.href,
     });
 
-    // Call custom error handler if provided
+    // Call custom _error handler if provided
     if (this.props.onError) {
-      this.props.onError(error, errorInfo);
+      this.props.onError(_error, _errorInfo);
     }
 
-    // Update state with error details
+    // Update state with _error details
     this.setState((prevState) => ({
-      errorInfo,
+      _errorInfo,
       errorCount: prevState.errorCount + 1,
     }));
 
     // Log to console in development
     if (process.env['NODE_ENV'] === 'development') {
-      console.error('Error Boundary caught an error:', error, errorInfo);
+      if (process.env.NODE_ENV === 'development') { console.error('Error Boundary caught an _error:', _error, _errorInfo); }
     }
 
-    // Send to external error tracking (if available)
-    if (typeof window !== 'undefined' && (window as any).Sentry) {
-      (window as any).Sentry.captureException(error, {
+    // Send to external _error tracking (if available)
+    if (typeof window !== 'undefined' && (window as unknown as { Sentry?: { captureException: Function } }).Sentry) {
+      ((window as unknown as { Sentry: { captureException: Function } }).Sentry).captureException(_error, {
         contexts: {
           react: {
-            componentStack: errorInfo.componentStack,
+            componentStack: _errorInfo.componentStack,
           },
         },
       });
@@ -78,7 +78,7 @@ class ImprovedErrorBoundary extends Component<Props, State> {
   }
 
   componentDidUpdate(prevProps: Props): void {
-    // Reset error state if resetKeys changed
+    // Reset _error state if resetKeys changed
     if (this.props.resetKeys && prevProps.resetKeys) {
       const resetKeysChanged = this.props.resetKeys.some(
         (key, index) => key !== prevProps.resetKeys![index]
@@ -93,8 +93,8 @@ class ImprovedErrorBoundary extends Component<Props, State> {
   resetErrorBoundary = (): void => {
     this.setState({
       hasError: false,
-      error: null,
-      errorInfo: null,
+      _error: null,
+      _errorInfo: null,
     });
   };
 
@@ -113,32 +113,32 @@ class ImprovedErrorBoundary extends Component<Props, State> {
         return this.props.fallback;
       }
 
-      // Default error UI
+      // Default _error UI
       return (
-        <div className="error-boundary-container" style={styles.container}>
+        <div className="_error-boundary-container" style={styles.container}>
           <div style={styles.content}>
             <div style={styles.icon}>⚠️</div>
             <h1 style={styles.title}>Oops! Something went wrong</h1>
             <p style={styles.message}>
-              We're sorry for the inconvenience. The application encountered an unexpected error.
+              We're sorry for the inconvenience. The application encountered an unexpected _error.
             </p>
             
-            {process.env['NODE_ENV'] === 'development' && this.state.error && (
+            {process.env['NODE_ENV'] === 'development' && this.state._error && (
               <details style={styles.details}>
                 <summary style={styles.summary}>Error Details (Development Only)</summary>
                 <div style={styles.errorDetails}>
                   <p style={styles.errorMessage}>
-                    <strong>Error:</strong> {this.state.error.message}
+                    <strong>Error:</strong> {this.state._error.message}
                   </p>
-                  {this.state.error.stack && (
+                  {this.state._error.stack && (
                     <pre style={styles.stack}>
-                      {this.state.error.stack}
+                      {this.state._error.stack}
                     </pre>
                   )}
-                  {this.state.errorInfo?.componentStack && (
+                  {this.state._errorInfo?.componentStack && (
                     <pre style={styles.stack}>
                       <strong>Component Stack:</strong>
-                      {this.state.errorInfo.componentStack}
+                      {this.state._errorInfo.componentStack}
                     </pre>
                   )}
                 </div>
@@ -171,7 +171,7 @@ class ImprovedErrorBoundary extends Component<Props, State> {
 
             {this.state.errorCount > 1 && (
               <p style={styles.errorCount}>
-                This error has occurred {this.state.errorCount} times
+                This _error has occurred {this.state.errorCount} times
               </p>
             )}
           </div>

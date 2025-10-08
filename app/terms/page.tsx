@@ -1,13 +1,5 @@
 import React from 'react';
-// import { Metadata } from "next" // Removed for Vite compatibility;
-
-const metadata = {
-  title: 'Terms of Service - Zion Tech Group',
-  description:
-    'Terms of service and usage agreement for Zion Tech Group services and website.',
-};
-
-export { metadata };
+// Metadata will be handled by React Helmet in individual components
 
 const TermsPage: React.FC = () => {
   return (

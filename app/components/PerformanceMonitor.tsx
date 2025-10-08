@@ -1,4 +1,4 @@
-// // 'use client'; // Removed for Vite compatibility // Removed for Vite compatibility
+'use client';
 
 import React, { useState, useEffect } from 'react';
 
@@ -29,6 +29,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   const [performanceScore, setPerformanceScore] = useState(100);
 
   useEffect(() => {
+    // Web Vitals monitoring is handled by the performance observer below
 
     // Monitor Core Web Vitals
     const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming | undefined;
@@ -57,7 +58,10 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       
       if (enableConsoleLogging) {
         if (typeof console !== 'undefined') {
-          // Performance metrics tracked
+          console.group('Performance Metrics');
+          if (process.env.NODE_ENV === 'development') { if (process.env.NODE_ENV === 'development') { console.debug('Metrics', { metrics: currentMetrics }); } }
+          if (process.env.NODE_ENV === 'development') { if (process.env.NODE_ENV === 'development') { console.debug('Score', { score }); } }
+          console.groupEnd();
         }
       }
       
