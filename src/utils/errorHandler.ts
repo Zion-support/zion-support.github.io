@@ -12,34 +12,54 @@ export enum ErrorCategory {
   UNKNOWN = 'unknown',
 }
 
+export enum ErrorSeverity {
+  LOW = 'low',
+  MEDIUM = 'medium',
+  HIGH = 'high',
+  CRITICAL = 'critical',
+}
+
 export interface ErrorInfo {
   id: string;
   message: string;
   stack?: string;
   category: ErrorCategory;
   severity: ErrorSeverity;
-  timestamp: number;
-  context?: Record<string, unknown>;
+  timestamp: string;
+  url: string;
+  userAgent: string;
+  userId?: string;
 }
 
 class ErrorHandler {
   private static instance: ErrorHandler;
   private errorQueue: ErrorInfo[] = [];
-  private readonly maxQueueSize: number = 100;
+  private maxQueueSize = 50;
 
-  private constructor() {}
+  private constructor() {
+    this.setupGlobalErrorHandlers();
+  }
 
-  static getInstance(): ErrorHandler {
+  public static getInstance(): ErrorHandler {
     if (!ErrorHandler.instance) {
       ErrorHandler.instance = new ErrorHandler();
     }
     return ErrorHandler.instance;
   }
 
-  /**
-   * Handle an error with categorization and reporting
-   */
-  handleError(error: Error, context?: Record<string, unknown>): ErrorInfo {
+  private setupGlobalErrorHandlers(): void {
+    if (typeof window !== 'undefined') {
+      window.addEventListener('error', (event) => {
+        this.handleError(event.error);
+      });
+
+      window.addEventListener('unhandledrejection', (event) => {
+        this.handleError(new Error(event.reason));
+      });
+    }
+  }
+
+  public handleError(error: Error): void {
     const category = this.categorizeError(error);
     const severity = this.determineSeverity(error, category);
 
@@ -49,8 +69,9 @@ class ErrorHandler {
       stack: error.stack,
       category,
       severity,
-      timestamp: Date.now(),
-      context,
+      timestamp: new Date().toISOString(),
+      url: typeof window !== 'undefined' ? window.location.href : '',
+      userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : '',
     };
 
     this.errorQueue.push(errorData);
@@ -114,20 +135,6 @@ class ErrorHandler {
   clearErrors(): void {
     this.errorQueue = [];
   }
-
-  public getErrorStats(): { total: number; recent: number } {
-    const now = new Date();
-    const oneHourAgo = new Date(now.getTime() - 60 * 60 * 1000);
-    const recent = this.errorQueue.filter(
-      error => error.timestamp ? new Date(error.timestamp) > oneHourAgo : false
-    ).length;
-
-    return {
-      total: this.errorQueue.length,
-      recent,
-    };
-  }
 }
 
-// Export default instance
-export default ErrorHandler.getInstance();
+export default ErrorHandler;

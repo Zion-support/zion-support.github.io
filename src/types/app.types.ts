@@ -325,7 +325,7 @@ export type AppTypes = {
   AnalyticsEvent: AnalyticsEvent;
   BlogPost: BlogPost;
   SEOMetadata: SEOMetadata;
-  FormState: FormState;
+  FormState: FormState<any>;
   Route: Route;
   Theme: Theme;
 };
