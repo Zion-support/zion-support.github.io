@@ -2,6 +2,12 @@
  * Error handling utilities
  * Enhanced with retry logic, error categorization, and better reporting
  */
+
+export enum ErrorSeverity {
+  LOW = 'low',
+  MEDIUM = 'medium',
+  HIGH = 'high',
+  CRITICAL = 'critical',
 }
 
 export enum ErrorCategory {
@@ -59,6 +65,12 @@ export class ErrorHandler {
       severity,
       ...errorInfo,
     };
+
+    this.errorQueue.push(errorData);
+    
+    // Limit queue size
+    if (this.errorQueue.length > this.maxQueueSize) {
+      this.errorQueue.shift();
     }
 
     // Send to error reporting service
@@ -66,12 +78,92 @@ export class ErrorHandler {
   }
 
   /**
+   * Categorize error based on error type and message
+   */
+  private categorizeError(error: Error): ErrorCategory {
+    const message = error.message.toLowerCase();
+    
+    if (message.includes('network') || message.includes('fetch') || message.includes('ajax')) {
+      return ErrorCategory.NETWORK;
     }
+    if (message.includes('validation') || message.includes('invalid')) {
+      return ErrorCategory.VALIDATION;
+    }
+    if (message.includes('api') || message.includes('endpoint')) {
+      return ErrorCategory.API;
+    }
+    if (error.name === 'TypeError' || error.name === 'ReferenceError') {
+      return ErrorCategory.RUNTIME;
+    }
+    
+    return ErrorCategory.UNKNOWN;
   }
 
   /**
+   * Determine error severity
+   */
+  private determineSeverity(error: Error, category: ErrorCategory): ErrorSeverity {
+    if (category === ErrorCategory.NETWORK || category === ErrorCategory.API) {
+      return ErrorSeverity.HIGH;
+    }
+    if (category === ErrorCategory.RUNTIME) {
+      return ErrorSeverity.CRITICAL;
+    }
+    if (category === ErrorCategory.VALIDATION) {
+      return ErrorSeverity.MEDIUM;
+    }
+    return ErrorSeverity.LOW;
+  }
+
+  /**
+   * Generate unique error ID
+   */
+  private generateErrorId(): string {
+    return `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+  }
+
+  /**
+   * Report error to external service
+   */
+  private reportError(errorData: ErrorInfo): void {
+    // Log to console in development
+    if (process.env['NODE_ENV'] === 'development') {
+      console.error('Error logged:', errorData);
+    }
+
+    // Send to error reporting service (e.g., Sentry, LogRocket)
+    // Implementation depends on the service being used
+  }
+
+  /**
+   * Get all errors from queue
+   */
+  getErrors(): ErrorInfo[] {
     return [...this.errorQueue];
   }
 
   /**
    * Clear error queue
+   */
+  clearErrors(): void {
+    this.errorQueue = [];
+  }
+
+  /**
+   * Get errors by category
+   */
+  getErrorsByCategory(category: ErrorCategory): ErrorInfo[] {
+    return this.errorQueue.filter(error => error.category === category);
+  }
+
+  /**
+   * Get errors by severity
+   */
+  getErrorsBySeverity(severity: ErrorSeverity): ErrorInfo[] {
+    return this.errorQueue.filter(error => error.severity === severity);
+  }
+}
+
+// Export singleton instance
+export const errorHandler = ErrorHandler.getInstance();
+export default errorHandler;
