@@ -4,6 +4,7 @@
  */
 
 import React, { ReactElement } from 'react';
+import '@testing-library/jest-dom';
 
 /**
  * Mock performance API for testing
@@ -20,11 +21,25 @@ export function mockPerformanceAPI() {
   }
 
   if (!window.performance.mark) {
-    window.performance.mark = (() => ({} as PerformanceMark)) as any;
+    window.performance.mark = ((name: string) => ({
+      name,
+      entryType: 'mark' as const,
+      startTime: Date.now(),
+      duration: 0,
+      toJSON: () => ({}),
+      detail: undefined,
+    })) as any;
   }
 
   if (!window.performance.measure) {
-    window.performance.measure = (() => ({} as PerformanceMeasure)) as any;
+    window.performance.measure = ((name: string) => ({
+      name,
+      entryType: 'measure' as const,
+      startTime: Date.now(),
+      duration: 0,
+      toJSON: () => ({}),
+      detail: undefined,
+    })) as any;
   }
 }
 
@@ -67,7 +82,7 @@ export function mockLocalStorage() {
 /**
  * Mock fetch API for testing
  */
-export function mockFetch(responseData: any, options: { status?: number; ok?: boolean } = {}) {
+export function mockFetch(responseData: unknown, options: { status?: number; ok?: boolean } = {}) {
   const mockResponse = {
     ok: options.ok ?? true,
     status: options.status ?? 200,
@@ -109,10 +124,10 @@ export async function waitFor(
 /**
  * Create a mock function with tracking
  */
-export function createMockFn<T extends (...args: any[]) => any>(
+export function createMockFn<T extends (...args: unknown[]) => any>(
   implementation?: T
 ): jest.Mock<ReturnType<T>, Parameters<T>> {
-  return jest.fn(implementation) as jest.Mock<ReturnType<T>, Parameters<T>>;
+  return jest.fn(implementation) as unknown as jest.Mock<ReturnType<T>, Parameters<T>>;
 }
 
 /**
@@ -207,7 +222,7 @@ export async function assertThrows(
   expectedError?: string | RegExp
 ): Promise<void> {
   let threw = false;
-  let error: any;
+  let error: unknown;
 
   try {
     await fn();
@@ -221,7 +236,7 @@ export async function assertThrows(
   }
 
   if (expectedError) {
-    const message = error?.message || String(error);
+    const message = (error as any)?.message || String(error);
     if (typeof expectedError === 'string') {
       if (!message.includes(expectedError)) {
         throw new Error(

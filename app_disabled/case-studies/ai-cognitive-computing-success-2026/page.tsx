@@ -19,7 +19,7 @@ export default function AICognitiveComputingSuccess2026() {
       <div className="bg-gradient-to-r from-green-600 to-blue-600 text-white py-16">
         <div className="max-w-4xl mx-auto px-4">
           <div className="flex items-center gap-2 text-green-200 mb-4">
-            <ArrowRight href="/case-studies" className="flex items-center gap-1 hover:text-white transition-colors">
+            <Link href="/case-studies" className="flex items-center gap-1 hover:text-white transition-colors">
               <ArrowLeft className="w-4 h-4" />
               Back to Case Studies
             </Link>

@@ -524,7 +524,11 @@ export class AccessibilityChecker {
    */
   private checkLandmarks(element: Element): void {
     const hasMain = element.querySelector('main, [role="main"]');
+<<<<<<< HEAD
     // const hasNav = element.querySelector('nav, [role="navigation"]');
+=======
+    // const _hasNav = element.querySelector('nav, [role="navigation"]');
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b3e6
 
     if (!hasMain) {
       this.addIssue({

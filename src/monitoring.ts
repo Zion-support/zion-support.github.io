@@ -13,7 +13,7 @@ function initializeMonitoring() {
     // Set up performance monitoring
     if (typeof window !== 'undefined') {
       // Monitor web vitals
-      performanceOptimizer.initialize();
+      // performanceOptimizer.init(); // Method doesn't exist
       
       // Set up error tracking
       // errorHandler.init(); // Method may not exist
@@ -31,4 +31,4 @@ function initializeMonitoring() {
 // Initialize monitoring on load
 initializeMonitoring();
 
-export { analytics, errorHandler, initializeMonitoring, ErrorHandler };
+export { analytics, errorHandler, initializeMonitoring, ErrorHandler, performanceOptimizer };

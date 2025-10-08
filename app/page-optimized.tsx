@@ -1,4 +1,5 @@
-import React, { lazy, Suspense } from 'react';
+import React from 'react';
+import dynamic from 'next/dynamic';
 import SEOOptimizer from './components/SEOOptimizer';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
@@ -9,7 +10,7 @@ const UnifiedBanner = dynamic(() => import('./components/NewestContent2025Banner
   ssr: false
 });
 
-const ContentPromotion = dynamic(() => import('./components/UltimateBusinessIntelligence2025Banner'), {
+const ContentPromotion = dynamic(() => import('./components/UltimateBusinessIntelligence2025Banner').catch(() => import('./components/EmptyComponent')), {
   loading: () => <div className="animate-pulse bg-gray-200 h-64 rounded-lg"></div>,
   ssr: false
 });
