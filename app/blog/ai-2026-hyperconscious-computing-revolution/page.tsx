@@ -1,11 +1,9 @@
 import React from 'react';
 
-import { Link } from 'react-router-dom';import { Star } from 'lucide-react';
-export const metadata: any= {
-  title: "AI 2026 Hyperconscious Computing Revolution: Next-Gen Intelligence",
-  description: "Experience the hyperconscious computing revolution of AI 2026, featuring next-generation intelligence, advanced cognitive computing, and revolutionary AI consciousness.",
-  keywords: 'AI 2026, hyperconscious computing, next-gen intelligence, cognitive computing, AI consciousness, computing revolution'
-};
+import { Helmet } from 'react-helmet-async';
+import { Star } from 'lucide-react';
+<<<<<<< HEAD
+import { Link } from 'react-router-dom';
 
 export default function AI2026HyperconsciousComputingRevolution() {
   return (
@@ -90,3 +88,8 @@ export default function AI2026HyperconsciousComputingRevolution() {
     </div>
   );
 }
+=======
+
+
+// Metadata moved to Helmet component
+>>>>>>> cursor/fix-errors-and-merge-to-main-dd0b

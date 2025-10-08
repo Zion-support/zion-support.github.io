@@ -1,16 +1,7 @@
 import React from 'react';
 
-import { Link } from 'react-router-dom';export const metadata: any= {
-  title: "AI 2026: Revolutionary Enterprise Automation Breakthrough",
-  description: "The most comprehensive guide to AI automation breakthroughs transforming enterprises in 2026.",
-  authors: [{ name: 'Zion Tech Group' }],
-  openGraph: {
-    title: 'AI 2026: Revolutionary Enterprise Automation Breakthrough',
-    description: 'The most comprehensive guide to AI automation breakthroughs transforming enterprises in 2026.',
-    type: 'article',
-    authors: ['Zion Tech Group']
-  }
-};
+<<<<<<< HEAD
+import { Link } from 'react-router-dom';
 
 export default function AI2026EnterpriseAutomationRevolutionaryBreakthrough() {
   return (
@@ -113,3 +104,9 @@ export default function AI2026EnterpriseAutomationRevolutionaryBreakthrough() {
     </div>
   );
 }
+=======
+import { Helmet } from 'react-helmet-async';
+
+
+// Metadata moved to Helmet component
+>>>>>>> cursor/fix-errors-and-merge-to-main-dd0b

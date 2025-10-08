@@ -1,12 +1,8 @@
 import React from 'react';
+
+<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 
-
-
-export const metadata: any= {
-  title: 'Enterprise Solutions - Zion Tech Group',
-  description: 'Comprehensive AI and IT solutions for enterprise organizations. Transform your business with our advanced technology stack.',
-};
 
 const EnterprisePage: React.FC = () => {
   return (
@@ -37,15 +33,17 @@ const EnterprisePage: React.FC = () => {
                   →
                 </span>
               </Link>
-              <Link
-                to="#solutions"
+
+              <a
+                href="#solutions"
+
                 className="group flex items-center gap-3 bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 border border-blue-700"
               >
                 <span>View Solutions</span>
                 <span className="group-hover:translate-x-1 transition-transform">
                   ↓
                 </span>
-              </Link>
+              </a>
             </div>
           </div>
         </div>
@@ -122,13 +120,15 @@ const EnterprisePage: React.FC = () => {
                 transformation with our enterprise AI solutions.
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-                <Link
-                  to="tel:+13024640950"
+
+                <a
+                  href="tel:+13024640950"
+
                   className="group flex items-center gap-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl"
                 >
                   <span className="text-xl">📞</span>
                   <span>Call Now</span>
-                </Link>
+                </a>
                 <Link
                   to="/contact"
                   className="group flex items-center gap-3 bg-white/10 hover:bg-white/20 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 border border-white/30"
@@ -146,3 +146,10 @@ const EnterprisePage: React.FC = () => {
 };
 
 export default EnterprisePage;
+=======
+import { Helmet } from 'react-helmet-async';
+
+import { Link } from 'react-router-dom';
+
+// Metadata moved to Helmet component
+>>>>>>> cursor/fix-errors-and-merge-to-main-dd0b

@@ -1,10 +1,7 @@
 import React from 'react';
 
-import { Link } from 'react-router-dom';export const metadata: any= {
-  title: "AI 2026: Advanced Neural Optimization Revolution - 1000x Performance Breakthrough",
-  description: "Discover the revolutionary neural optimization techniques delivering 1000x performance improvements in AI systems. Complete implementation guide with real-world case studies.",
-  keywords: 'neural optimization, AI performance, machine learning, deep learning, neural networks, AI breakthrough 2026'
-};
+<<<<<<< HEAD
+import { Link } from 'react-router-dom';
 
 export default function BlogPost() {
   return (
@@ -143,3 +140,9 @@ export default function BlogPost() {
     </div>
   );
 }
+=======
+import { Helmet } from 'react-helmet-async';
+
+
+// Metadata moved to Helmet component
+>>>>>>> cursor/fix-errors-and-merge-to-main-dd0b

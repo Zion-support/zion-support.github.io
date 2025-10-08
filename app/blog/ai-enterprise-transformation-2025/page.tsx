@@ -1,9 +1,24 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
 
-import { Link } from 'react-router-dom';export default function Page() {
+const Page: React.FC = () => {
+
   return (
-    <div className="min-h-screen bg-gray-50">
+
+    <>
+
+      <Helmet>
+
+        <title>AI Enterprise Transformation: $50M Annual Savings Blueprint | Zion Tech Group</title>
+
+        <meta name="description" content="Discover how Fortune 500 companies achieve $50M annual savings, 95% process automation, and 300% ROI through comprehensive AI transformation strategies." />
+
+        <meta property="og:url" content="/og/ai-enterprise-transformation-2025.jpg" />
+
+      </Helmet>
+
+      <div className="min-h-screen bg-gray-50">
       <div className="max-w-4xl mx-auto px-4 py-8">
         <div className="bg-white rounded-lg shadow-lg p-8">
           <div className="text-center mb-8">
@@ -113,5 +128,6 @@ import { Link } from 'react-router-dom';export default function Page() {
         </div>
       </div>
     </div>
+    </>
   );
 }

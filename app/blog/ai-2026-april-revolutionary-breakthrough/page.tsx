@@ -1,16 +1,7 @@
 import React from 'react';
 
-import { Link } from 'react-router-dom';export const metadata: any= {
-  title: "AI 2026 April Revolutionary Breakthrough: Meta-Cognitive Superintelligence Platform",
-  description: "Revolutionary AI breakthrough featuring meta-cognitive superintelligence and quantum-neural consciousness fusion delivering unprecedented enterprise transformation.",
-  authors: [{ name: 'Zion Tech Group' }],
-  openGraph: {
-    title: 'AI 2026 April Revolutionary Breakthrough: Meta-Cognitive Superintelligence Platform',
-    description: 'Revolutionary AI breakthrough featuring meta-cognitive superintelligence and quantum-neural consciousness fusion delivering unprecedented enterprise transformation.',
-    authors: ['Zion Tech Group'],
-  
-    publishedTime: '2026-04-01T00:00:00.000Z',}
-};
+<<<<<<< HEAD
+import { Link } from 'react-router-dom';
 
 export default function AI2026AprilRevolutionaryBreakthrough() {
   return (
@@ -113,3 +104,9 @@ export default function AI2026AprilRevolutionaryBreakthrough() {
     </div>
   );
 }
+=======
+import { Helmet } from 'react-helmet-async';
+
+
+// Metadata moved to Helmet component
+>>>>>>> cursor/fix-errors-and-merge-to-main-dd0b

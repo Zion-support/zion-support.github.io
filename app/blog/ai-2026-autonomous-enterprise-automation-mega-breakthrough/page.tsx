@@ -1,11 +1,9 @@
 import React from 'react';
 
-import { Link } from 'react-router-dom';import { Star } from 'lucide-react';
-export const metadata: any= {
-  title: "AI 2026 Autonomous Enterprise Automation Mega Breakthrough: Complete Business Transformation",
-  description: "Discover the revolutionary autonomous enterprise automation breakthrough of 2026, featuring 99.98% self-managing operations, intelligent process optimization, and $15 billion in proven enterprise value.",
-  keywords: 'AI 2026, autonomous enterprise automation, business transformation, intelligent automation, enterprise AI, process optimization'
-};
+import { Helmet } from 'react-helmet-async';
+import { Star } from 'lucide-react';
+<<<<<<< HEAD
+import { Link } from 'react-router-dom';
 
 export default function AutonomousEnterpriseAutomationMegaBreakthrough() {
   return (
@@ -90,3 +88,8 @@ export default function AutonomousEnterpriseAutomationMegaBreakthrough() {
     </div>
   );
 }
+=======
+
+
+// Metadata moved to Helmet component
+>>>>>>> cursor/fix-errors-and-merge-to-main-dd0b

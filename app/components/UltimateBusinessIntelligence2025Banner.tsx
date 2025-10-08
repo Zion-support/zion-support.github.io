@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 
 
 
-
 const UltimateBusinessIntelligence2025Banner: React.FC = () => {
   return (
     <section className="relative bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 py-20 overflow-hidden">
@@ -95,6 +94,7 @@ const UltimateBusinessIntelligence2025Banner: React.FC = () => {
       </div>
     </section>
   );
+
 };
 
 export default UltimateBusinessIntelligence2025Banner;

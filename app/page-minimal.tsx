@@ -1,14 +1,27 @@
 import React from 'react';
+
+<<<<<<< HEAD
+=======
+import { Helmet } from 'react-helmet-async';
+
 import { Link } from 'react-router-dom';
 import { ArrowRight, Phone, CheckCircle, Star } from 'lucide-react';
 
-
-
-
-
-export default function HomePage() {
+const HomePage: React.FC = () => {
+>>>>>>> main
   return (
-    <div className="min-h-screen bg-white">
+
+    <>
+
+      <Helmet>
+
+        <title>Zion Tech Group</title>
+
+        <meta name="description" content="Advanced AI and IT Solutions" />
+
+      </Helmet>
+
+      <div className="min-h-screen bg-white">
       {/* Header */}
       <header className="bg-white border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -162,5 +175,6 @@ export default function HomePage() {
         </div>
       </footer>
     </div>
+    </>
   );
 }

@@ -1,10 +1,7 @@
 import React from 'react';
 
-import { Link } from 'react-router-dom';export const metadata: any= {
-  title: "AI 2026: Adaptive Neural Architectures - The Future of Enterprise AI | Zion Tech Group",
-  description: "Revolutionary adaptive neural architectures that self-evolve and optimize in real-time, delivering 1000x performance improvements and $25B+ enterprise value.",
-  keywords: 'adaptive neural networks, AI 2026, neural architecture, enterprise AI, machine learning, business transformation'
-};
+<<<<<<< HEAD
+import { Link } from 'react-router-dom';
 
 export default function AdaptiveNeuralArchitecturesPage() {
   return (
@@ -143,3 +140,9 @@ export default function AdaptiveNeuralArchitecturesPage() {
     </div>
   );
 }
+=======
+import { Helmet } from 'react-helmet-async';
+
+
+// Metadata moved to Helmet component
+>>>>>>> cursor/fix-errors-and-merge-to-main-dd0b

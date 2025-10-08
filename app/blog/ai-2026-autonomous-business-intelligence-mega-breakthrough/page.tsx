@@ -1,10 +1,7 @@
 import React from 'react';
 
-import { Link } from 'react-router-dom';export const metadata: any= {
-  title: "AI 2026: Autonomous Business Intelligence Mega Breakthrough - 99% Automation",
-  description: "Revolutionary autonomous business intelligence systems achieving 99% automation with $3.5B+ ROI. Complete implementation guide for enterprise transformation.",
-  keywords: 'autonomous business intelligence, AI automation, business intelligence, data analytics, enterprise AI, BI automation'
-};
+<<<<<<< HEAD
+import { Link } from 'react-router-dom';
 
 export default function BlogPost() {
   return (
@@ -107,3 +104,9 @@ export default function BlogPost() {
     </div>
   );
 }
+=======
+import { Helmet } from 'react-helmet-async';
+
+
+// Metadata moved to Helmet component
+>>>>>>> cursor/fix-errors-and-merge-to-main-dd0b

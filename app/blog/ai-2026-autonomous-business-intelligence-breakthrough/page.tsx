@@ -1,19 +1,7 @@
 import React from 'react';
 
-import { Link } from 'react-router-dom';export const metadata: any= {
-  title: 'AI 2026 Autonomous Business Intelligence Breakthrough',
-  description: 'Revolutionary autonomous BI systems delivering 300% ROI improvements and automated decision-making.',
-  keywords: 'AI 2026, autonomous business intelligence, BI automation, enterprise AI, data analytics, business intelligence',
-  openGraph: {
-    authors: ['Zion Tech Group'],
-    siteName: 'Zion Tech Group',
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "AI 2026 Autonomous Business Intelligence Breakthrough",
-    description: "Revolutionary autonomous BI systems delivering 300% ROI improvements and automated decision-making."
-  }
-};
+<<<<<<< HEAD
+import { Link } from 'react-router-dom';
 
 export default function AutonomousBusinessIntelligenceBreakthrough() {
   return (
@@ -117,3 +105,9 @@ export default function AutonomousBusinessIntelligenceBreakthrough() {
     </div>
   );
 }
+=======
+import { Helmet } from 'react-helmet-async';
+
+
+// Metadata moved to Helmet component
+>>>>>>> cursor/fix-errors-and-merge-to-main-dd0b

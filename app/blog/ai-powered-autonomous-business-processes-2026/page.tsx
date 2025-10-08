@@ -1,22 +1,8 @@
 import React from 'react';
+
+<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
-
-
-
-
-export const metadata: any= {
-  title: "AI-Powered Autonomous Business Processes: The 2026 Revolution",
-  description: "Discover how AI-powered autonomous business processes are revolutionizing enterprise operations in 2026, delivering unprecedented efficiency and strategic insights.",
-  keywords: 'autonomous business processes, AI automation, enterprise transformation, business process optimization, AI agents',
-  openGraph: {
-    title: 'AI-Powered Autonomous Business Processes: The 2026 Revolution',
-    description: 'Discover how AI-powered autonomous business processes are revolutionizing enterprise operations in 2026, delivering unprecedented efficiency and strategic insights.',
-    type: 'article',
-    publishedTime: '2026-01-15T00:00:00Z',
-    authors: ['Zion Tech Group']
-  }
-};
 
 export default function AutonomousBusinessProcessesBlog() {
   return (
@@ -132,3 +118,11 @@ export default function AutonomousBusinessProcessesBlog() {
     </div>
   );
 }
+=======
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { ArrowLeft } from 'lucide-react';
+
+
+// Metadata moved to Helmet component
+>>>>>>> cursor/fix-errors-and-merge-to-main-dd0b

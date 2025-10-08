@@ -1,19 +1,37 @@
 import React from 'react';
+
+<<<<<<< HEAD
+=======
+import { Helmet } from 'react-helmet-async';
+
 import { Link } from 'react-router-dom';
 import { ArrowLeft, Calendar, User, Clock, Tag, Target, CheckCircle, ArrowRight, Zap, TrendingUp, Brain, Cpu } from 'lucide-react';
 
-
-
-
-
-export default function AI2027ImplementationRoadmap() {
+const AI2027ImplementationRoadmap: React.FC = () => {
+>>>>>>> main
   return (
-    <div className="min-h-screen bg-white">
+
+    <>
+
+      <Helmet>
+
+        <title>Zion Tech Group</title>
+
+        <meta name="description" content="Advanced AI and IT Solutions" />
+
+      </Helmet>
+
+      <div className="min-h-screen bg-white">
       {/* Header */}
       <header className="bg-gradient-to-r from-purple-900 to-blue-900 text-white">
         <div className="max-w-6xl mx-auto px-4 py-12">
+
           <Link 
             to="/"
+<<<<<<< HEAD
+=======
+
+>>>>>>> main
             className="inline-flex items-center text-blue-200 hover:text-white transition-colors mb-8"
           >
             <ArrowLeft className="w-4 h-4 mr-2" />
@@ -303,15 +321,25 @@ export default function AI2027ImplementationRoadmap() {
             Join the leaders in neural superintelligence implementation. Get your personalized roadmap today.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
+
             <Link 
               to="/contact"
+<<<<<<< HEAD
+=======
+
+>>>>>>> main
               className="inline-flex items-center px-8 py-4 bg-white text-purple-900 rounded-lg hover:bg-blue-50 transition-colors font-semibold"
             >
               Get Your Roadmap
               <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
+
             <Link 
               to="/case-studies"
+<<<<<<< HEAD
+=======
+
+>>>>>>> main
               className="inline-flex items-center px-8 py-4 bg-transparent border-2 border-white text-white rounded-lg hover:bg-white hover:text-purple-900 transition-colors font-semibold"
             >
               View Success Stories
@@ -321,5 +349,6 @@ export default function AI2027ImplementationRoadmap() {
         </div>
       </article>
     </div>
+    </>
   );
 }

@@ -1,16 +1,7 @@
 import React from 'react';
 
-import { Link } from 'react-router-dom';export const metadata: any= {
-  title: "AI 2026: Consensus Intelligence Breakthrough",
-  description: "Revolutionary AI system enabling unanimous decisions through quantum-accelerated consensus protocols.",
-  authors: [{ name: 'Zion Tech Group' }],
-  openGraph: {
-    title: 'AI 2026: Consensus Intelligence Breakthrough',
-    description: 'Revolutionary AI system enabling unanimous decisions through quantum-accelerated consensus protocols.',
-    type: 'article',
-    authors: ['Zion Tech Group']
-  }
-};
+<<<<<<< HEAD
+import { Link } from 'react-router-dom';
 
 export default function ConsensusIntelligencePage() {
   return (
@@ -114,3 +105,9 @@ export default function ConsensusIntelligencePage() {
     </div>
   );
 }
+=======
+import { Helmet } from 'react-helmet-async';
+
+
+// Metadata moved to Helmet component
+>>>>>>> cursor/fix-errors-and-merge-to-main-dd0b

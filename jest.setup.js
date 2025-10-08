@@ -37,13 +37,11 @@ jest.mock('./app/hooks/usePerformanceMonitoring.ts', () => ({
   })),
 }));
 
-// Mock TextEncoder/TextDecoder for Node.js environment
-const { TextEncoder, TextDecoder } = require('util');
-global.TextEncoder = TextEncoder;
-global.TextDecoder = TextDecoder;
 
-// Mock React Router
+// Mock React Router (this is a Vite project, not Next.js)
 jest.mock('react-router-dom', () => ({
+  ...jest.requireActual('react-router-dom'),
+
   useNavigate: () => jest.fn(),
   useLocation: () => ({
     pathname: '/',
@@ -52,8 +50,8 @@ jest.mock('react-router-dom', () => ({
     state: null,
   }),
   useParams: () => ({}),
-  Link: ({ children, to, ...props }) => <a href={to} {...props}>{children}</a>,
-  NavLink: ({ children, to, ...props }) => <a href={to} {...props}>{children}</a>,
+
+
 }));
 
 // Mock window.matchMedia

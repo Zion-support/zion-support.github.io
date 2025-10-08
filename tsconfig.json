@@ -69,7 +69,6 @@
     "tsBuildInfoFile": ".tsbuildinfo"
   },
   "include": [
-    "app/**/*",
     "src/**/*",
     "App.tsx",
     "components/**/*",
@@ -83,6 +82,7 @@
     ".next",
     "out",
     "dist",
+    "app/**/*",
     "_app_disabled/**/*",
     "app_disabled/**",
     "_conflicted_disabled/**/*",

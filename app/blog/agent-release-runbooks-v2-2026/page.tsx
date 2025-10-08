@@ -1,9 +1,36 @@
+
+import React from 'react';
+
 import { Link } from 'react-router-dom';
 import { ListChecks, Calendar, Clock, FileWarning, RefreshCw } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
 
-export default function Page() {
+
+const Page: React.FC = () => {
+
   return (
-    <main className='min-h-screen bg-gradient-to-br from-fuchsia-50 via-white to-purple-50'>
+    <>
+      <Helmet>
+        <title>Agent Release Runbooks v2 (2026)</title>
+        <meta
+          name="description"
+          content="Budgets, canaries, approvals, and instant rollback for safe autonomy."
+        />
+        <meta property="og:title" content="Agent Release Runbooks v2 (2026)" />
+        <meta
+          property="og:description"
+          content="Budgets, canaries, approvals, and instant rollback for safe autonomy."
+        />
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content="https://ziontechgroup.com/blog/agent-release-runbooks-v2-2026" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Agent Release Runbooks v2 (2026)" />
+        <meta
+          name="twitter:description"
+          content="Budgets, canaries, approvals, and instant rollback for safe autonomy."
+        />
+      </Helmet>
+      <main className='min-h-screen bg-gradient-to-br from-fuchsia-50 via-white to-purple-50'>
       <header className='bg-gradient-to-br from-fuchsia-900 via-purple-900 to-slate-900 text-white py-20'>
         <div className='max-w-5xl mx-auto px-6'>
           <div className='inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 mb-6'>
@@ -84,8 +111,13 @@ export default function Page() {
                 We implement v2 runbooks in 4–6 weeks with audits and training.
               </p>
             </div>
+
             <Link
               to='/contact'
+<<<<<<< HEAD
+=======
+
+>>>>>>> main
               className='bg-white text-fuchsia-700 px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2'
             >
               Engage <RefreshCw />
@@ -94,5 +126,8 @@ export default function Page() {
         </div>
       </section>
     </main>
+    </>
   );
-}
+};
+
+export default Page;

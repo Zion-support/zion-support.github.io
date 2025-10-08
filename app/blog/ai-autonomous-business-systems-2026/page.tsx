@@ -1,11 +1,48 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
+<<<<<<< HEAD
+import { Link } from 'react-router-dom';
+export const metadata = {
+  title: 'AI Autonomous Business Systems 2026: 95% Automation Achievement | Zion Tech Group',
+  description: 'Discover how AI autonomous business systems achieved 95% operational automation. Revolutionary self-managing enterprises transform business operations.',
+  keywords: 'autonomous business systems, AI automation 2026, self-managing enterprise, business process automation, AI operations',
+  openGraph: {
+    title: 'AI Autonomous Business Systems 2026: 95% Automation Achievement',
+    description: 'Revolutionary self-managing enterprises achieve 95% operational automation through AI autonomous business systems.',
+    type: 'article',
+    url: 'https://ziontechgroup.com/blog/ai-autonomous-business-systems-2026',
+    images: [
+      {
+        url: '/og-autonomous-business-2026.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'AI Autonomous Business Systems 2026',
+      },
+    ],
+  },
+};
 
 
 export default function AIAutonomousBusinessSystems2026() {
+=======
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+
+const AIAutonomousBusinessSystems2026: React.FC = () => {
+>>>>>>> cursor/fix-errors-and-merge-to-main-dd0b
   return (
-    <div className="min-h-screen bg-gray-50">
+
+    <>
+
+      <Helmet>
+
+        <title>Zion Tech Group</title>
+
+        <meta name="description" content="Advanced AI and IT Solutions" />
+
+      </Helmet>
+
+      <div className="min-h-screen bg-gray-50">
       <div className="max-w-4xl mx-auto px-4 py-8">
         <div className="bg-white rounded-lg shadow-lg p-8">
           <div className="mb-6">
@@ -145,5 +182,6 @@ export default function AIAutonomousBusinessSystems2026() {
         </div>
       </div>
     </div>
+    </>
   );
 }

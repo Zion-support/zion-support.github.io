@@ -1,10 +1,7 @@
 import React from 'react';
 
-import { Link } from 'react-router-dom';export const metadata: any= {
-  title: 'Contact Us - Zion Tech Group',
-  description:
-    'Get in touch with Zion Tech Group for AI and IT solutions. Contact our experts for consultation and support.',
-};
+<<<<<<< HEAD
+import { Link } from 'react-router-dom';
 
 const ContactPage: React.FC = () => {
   return (
@@ -85,3 +82,9 @@ const ContactPage: React.FC = () => {
 };
 
 export default ContactPage;
+=======
+import { Helmet } from 'react-helmet-async';
+
+
+// Metadata moved to Helmet component
+>>>>>>> cursor/fix-errors-and-merge-to-main-dd0b

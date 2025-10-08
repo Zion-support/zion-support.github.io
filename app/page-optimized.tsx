@@ -1,6 +1,12 @@
-import React, { Suspense, lazy } from 'react';
 
-import { Link } from 'react-router-dom';import SEOOptimizer from './components/SEOOptimizer';
+import React, { lazy, Suspense } from 'react';
+<<<<<<< HEAD
+=======
+import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
+
+import SEOOptimizer from './components/SEOOptimizer';
+>>>>>>> main
 import PerformanceMonitor from './components/PerformanceMonitor';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 
@@ -10,14 +16,30 @@ const EmptyComponent = () => null;
 // Lazy load heavy components - these may not exist, so make them optional
 const UnifiedBanner = lazy(() => import('./components/NewestContent2025Banner').catch(() => ({ default: EmptyComponent })));
 
+<<<<<<< HEAD
 const ContentPromotion = lazy(() => import('./components/UltimateBusinessIntelligence2025Banner').catch(() => ({ default: EmptyComponent })));
+=======
+
+const ContentPromotion = lazy(() => import('./components/UltimateBusinessIntelligence2025Banner').catch(() => ({ default: EmptyComponent })));
+
 
 const ContentShowcase = lazy(() => import('./components/UltimateBusinessIntelligenceShowcase2025').catch(() => ({ default: EmptyComponent })));
 
-
-export default function OptimizedHomePage() {
+const OptimizedHomePage: React.FC = () => {
+>>>>>>> main
   return (
-    <AccessibilityEnhancer>
+
+    <>
+
+      <Helmet>
+
+        <title>Zion Tech Group</title>
+
+        <meta name="description" content="Advanced AI and IT Solutions" />
+
+      </Helmet>
+
+      <AccessibilityEnhancer>
       <div className="min-h-screen bg-white">
         <SEOOptimizer />
         <PerformanceMonitor />
@@ -73,5 +95,6 @@ export default function OptimizedHomePage() {
         </main>
       </div>
     </AccessibilityEnhancer>
+    </>
   );
 }

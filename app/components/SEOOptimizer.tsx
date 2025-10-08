@@ -1,8 +1,8 @@
-'use client';
 
 import React, { useEffect } from 'react';
 
-import { Link } from 'react-router-dom';import { useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
+
 
 const SEOOptimizer: React.FC = () => {
   const location = useLocation();
@@ -21,6 +21,7 @@ const SEOOptimizer: React.FC = () => {
   }, [pathname]);
 
   return null;
+
 };
 
 export default SEOOptimizer;

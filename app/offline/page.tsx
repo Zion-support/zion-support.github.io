@@ -1,8 +1,13 @@
 import React from 'react';
+
+<<<<<<< HEAD
+import { Link } from 'react-router-dom';
+=======
+import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 
 
-
+>>>>>>> cursor/fix-errors-and-merge-to-main-dd0b
 /**
  * Offline Page
  * Displayed when the user is offline and tries to access a page
@@ -10,7 +15,18 @@ import { Link } from 'react-router-dom';
 
 const OfflinePage: React.FC = () => {
   return (
-    <div className='min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center px-4'>
+
+    <>
+
+      <Helmet>
+
+        <title>Zion Tech Group</title>
+
+        <meta name="description" content="Advanced AI and IT Solutions" />
+
+      </Helmet>
+
+      <div className='min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center px-4'>
       <div className='max-w-md w-full text-center'>
         <div className='mb-8'>
           <div className='mx-auto w-24 h-24 bg-indigo-100 rounded-full flex items-center justify-center mb-6'>
@@ -100,8 +116,13 @@ const OfflinePage: React.FC = () => {
           >
             Try Again
           </button>
+
           <Link
             to='/'
+<<<<<<< HEAD
+=======
+
+>>>>>>> main
             className='block w-full px-6 py-3 bg-white text-indigo-600 font-medium rounded-lg border-2 border-indigo-600 hover:bg-indigo-50 transition-colors focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2'
           >
             Go to Homepage
@@ -120,6 +141,7 @@ const OfflinePage: React.FC = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

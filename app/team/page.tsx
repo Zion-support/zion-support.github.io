@@ -1,12 +1,12 @@
 import React from 'react';
 
-import { Link } from 'react-router-dom';const metadata: any= {
-  title: 'Our Team - Zion Tech Group',
-  description:
-    'Meet the talented team of AI and IT experts at Zion Tech Group, driving innovation in enterprise technology solutions.',
-};
+<<<<<<< HEAD
+import { Link } from 'react-router-dom';
+// Metadata will be handled by React Helmet in individual components
+=======
+import { Helmet } from 'react-helmet-async';
 
-export { metadata };
+>>>>>>> main
 
 const TeamPage: React.FC = () => {
   const teamMembers = [
