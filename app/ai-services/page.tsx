@@ -256,6 +256,105 @@ const AIServicesPage: React.FC = () => {
       marketPrice: '$30,000-90,000/month',
       category: 'Space AI',
       technologies: ['Astropy', 'TensorFlow', 'PyTorch', 'OpenCV', 'Space Data APIs']
+    },
+    {
+      title: 'AI-Powered Medical Diagnosis',
+      description: 'Advanced medical imaging analysis, disease detection, and diagnostic assistance using deep learning.',
+      icon: '🏥',
+      price: 'Starting at $12,000/month',
+      features: ['Medical image analysis', 'Disease detection', 'Diagnostic assistance', 'Treatment recommendations', 'Patient monitoring'],
+      benefits: ['Improve diagnostic accuracy by 40%', 'Reduce misdiagnosis rates', 'Enable early detection'],
+      marketPrice: '$20,000-60,000/month',
+      category: 'Healthcare AI',
+      technologies: ['PyTorch', 'TensorFlow', 'OpenCV', 'DICOM', 'Medical Imaging APIs']
+    },
+    {
+      title: 'AI-Powered Real Estate Analytics',
+      description: 'Property valuation, market analysis, and investment recommendations using machine learning.',
+      icon: '🏠',
+      price: 'Starting at $3,500/month',
+      features: ['Property valuation', 'Market analysis', 'Investment recommendations', 'Price prediction', 'Risk assessment'],
+      benefits: ['Improve investment decisions', 'Accurate property valuations', 'Market trend analysis'],
+      marketPrice: '$6,000-15,000/month',
+      category: 'Real Estate AI',
+      technologies: ['Python', 'Scikit-learn', 'Pandas', 'Real Estate APIs', 'Machine Learning']
+    },
+    {
+      title: 'AI-Powered Insurance Underwriting',
+      description: 'Automated risk assessment, fraud detection, and policy pricing using advanced AI models.',
+      icon: '🛡️',
+      price: 'Starting at $8,500/month',
+      features: ['Risk assessment', 'Fraud detection', 'Policy pricing', 'Claims processing', 'Customer profiling'],
+      benefits: ['Reduce underwriting time by 70%', 'Improve risk accuracy', 'Prevent fraud'],
+      marketPrice: '$15,000-40,000/month',
+      category: 'Insurance AI',
+      technologies: ['Machine Learning', 'Python', 'TensorFlow', 'Insurance APIs', 'Risk Models']
+    },
+    {
+      title: 'AI-Powered Retail Analytics',
+      description: 'Customer behavior analysis, inventory optimization, and personalized shopping experiences.',
+      icon: '🛒',
+      price: 'Starting at $4,500/month',
+      features: ['Customer analytics', 'Inventory optimization', 'Personalization', 'Demand forecasting', 'Price optimization'],
+      benefits: ['Increase sales by 25%', 'Reduce inventory costs', 'Improve customer experience'],
+      marketPrice: '$8,000-20,000/month',
+      category: 'Retail AI',
+      technologies: ['Python', 'TensorFlow', 'Pandas', 'Retail APIs', 'Machine Learning']
+    },
+    {
+      title: 'AI-Powered Sports Analytics',
+      description: 'Performance analysis, injury prediction, and strategic insights for sports teams and athletes.',
+      icon: '⚽',
+      price: 'Starting at $6,500/month',
+      features: ['Performance analysis', 'Injury prediction', 'Strategic insights', 'Player scouting', 'Game optimization'],
+      benefits: ['Improve performance', 'Prevent injuries', 'Optimize strategies'],
+      marketPrice: '$12,000-30,000/month',
+      category: 'Sports AI',
+      technologies: ['Computer Vision', 'TensorFlow', 'OpenCV', 'Sports APIs', 'Machine Learning']
+    },
+    {
+      title: 'AI-Powered Music Generation',
+      description: 'Automated music composition, sound design, and audio processing using neural networks.',
+      icon: '🎵',
+      price: 'Starting at $2,500/month',
+      features: ['Music composition', 'Sound design', 'Audio processing', 'Style transfer', 'Lyrics generation'],
+      benefits: ['Create music 10x faster', 'Explore new styles', 'Reduce production costs'],
+      marketPrice: '$4,000-12,000/month',
+      category: 'Creative AI',
+      technologies: ['TensorFlow', 'PyTorch', 'Audio Processing', 'Neural Networks', 'Music APIs']
+    },
+    {
+      title: 'AI-Powered Video Analysis',
+      description: 'Automated video content analysis, object tracking, and scene understanding for various applications.',
+      icon: '🎬',
+      price: 'Starting at $3,000/month',
+      features: ['Object detection', 'Scene analysis', 'Content moderation', 'Video summarization', 'Real-time processing'],
+      benefits: ['Automate video analysis', 'Improve content safety', 'Extract insights'],
+      marketPrice: '$5,000-15,000/month',
+      category: 'Video AI',
+      technologies: ['OpenCV', 'TensorFlow', 'PyTorch', 'Video Processing', 'Computer Vision']
+    },
+    {
+      title: 'AI-Powered Language Translation',
+      description: 'Real-time translation services with context understanding and cultural adaptation.',
+      icon: '🌐',
+      price: 'Starting at $1,500/month',
+      features: ['Real-time translation', 'Context understanding', 'Cultural adaptation', 'Multi-language support', 'Voice translation'],
+      benefits: ['Break language barriers', 'Improve communication', 'Enable global reach'],
+      marketPrice: '$2,500-8,000/month',
+      category: 'Language AI',
+      technologies: ['Transformer Models', 'Google Translate API', 'OpenAI', 'NLP', 'Machine Learning']
+    },
+    {
+      title: 'AI-Powered Personal Assistant',
+      description: 'Intelligent personal assistant with scheduling, task management, and decision support capabilities.',
+      icon: '🤖',
+      price: 'Starting at $199/month',
+      features: ['Task management', 'Scheduling', 'Decision support', 'Information retrieval', 'Automation'],
+      benefits: ['Increase productivity', 'Reduce cognitive load', 'Improve organization'],
+      marketPrice: '$300-800/month',
+      category: 'Personal AI',
+      technologies: ['NLP', 'Machine Learning', 'APIs', 'Voice Recognition', 'Task Automation']
     }
   ];
 

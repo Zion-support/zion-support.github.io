@@ -117,14 +117,14 @@ const HomePage: React.FC = () => {
 =======
           <h1 
             id="hero-heading" 
-            className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent"
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent"
           >
             Zion Tech Group
           </h1>
-          <p className="text-xl md:text-2xl text-gray-600 mb-8 font-medium" role="doc-subtitle">
+          <p className="text-lg sm:text-xl md:text-2xl text-gray-600 mb-8 font-medium" role="doc-subtitle">
             Advanced AI and IT Solutions
           </p>
-          <p className="text-lg md:text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-base sm:text-lg md:text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed px-4">
             Leading provider of enterprise AI solutions, quantum computing, and autonomous systems.
             Transform your business with our cutting-edge technology and achieve unprecedented growth.
           </p>
@@ -213,15 +213,15 @@ const HomePage: React.FC = () => {
           </div>
 >>>>>>> cursor/analyze-improve-and-deploy-application-3d67
           
-          <div className="grid md:grid-cols-3 gap-8">
-            <article className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 focus-within:ring-4 focus-within:ring-indigo-300">
-              <div className="text-4xl mb-4">🤖</div>
-              <h3 className="text-2xl font-semibold text-gray-900 mb-4">AI Solutions</h3>
-              <p className="text-gray-600 mb-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+            <article className="bg-white rounded-lg shadow-lg p-4 sm:p-6 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 focus-within:ring-4 focus-within:ring-indigo-300">
+              <div className="text-3xl sm:text-4xl mb-4">🤖</div>
+              <h3 className="text-xl sm:text-2xl font-semibold text-gray-900 mb-4">AI Solutions</h3>
+              <p className="text-gray-600 mb-4 text-sm sm:text-base">
                 Harness the power of artificial intelligence to drive innovation and efficiency in
                 your organization.
               </p>
-              <ul className="text-sm text-gray-500 space-y-1">
+              <ul className="text-xs sm:text-sm text-gray-500 space-y-1">
                 <li>• Machine Learning Models</li>
                 <li>• Natural Language Processing</li>
                 <li>• Computer Vision</li>
@@ -229,14 +229,14 @@ const HomePage: React.FC = () => {
               </ul>
             </article>
 
-            <article className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 focus-within:ring-4 focus-within:ring-indigo-300">
-              <div className="text-4xl mb-4">🔄</div>
-              <h3 className="text-2xl font-semibold text-gray-900 mb-4">Digital Transformation</h3>
-              <p className="text-gray-600 mb-4">
+            <article className="bg-white rounded-lg shadow-lg p-4 sm:p-6 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 focus-within:ring-4 focus-within:ring-indigo-300">
+              <div className="text-3xl sm:text-4xl mb-4">🔄</div>
+              <h3 className="text-xl sm:text-2xl font-semibold text-gray-900 mb-4">Digital Transformation</h3>
+              <p className="text-gray-600 mb-4 text-sm sm:text-base">
                 Transform your business processes with cutting-edge technology and expert
                 consultation.
               </p>
-              <ul className="text-sm text-gray-500 space-y-1">
+              <ul className="text-xs sm:text-sm text-gray-500 space-y-1">
                 <li>• Process Automation</li>
                 <li>• Legacy System Modernization</li>
                 <li>• Workflow Optimization</li>
@@ -244,13 +244,13 @@ const HomePage: React.FC = () => {
               </ul>
             </article>
 
-            <article className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 focus-within:ring-4 focus-within:ring-indigo-300">
-              <div className="text-4xl mb-4">☁️</div>
-              <h3 className="text-2xl font-semibold text-gray-900 mb-4">Cloud Services</h3>
-              <p className="text-gray-600 mb-4">
+            <article className="bg-white rounded-lg shadow-lg p-4 sm:p-6 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 focus-within:ring-4 focus-within:ring-indigo-300 sm:col-span-2 lg:col-span-1">
+              <div className="text-3xl sm:text-4xl mb-4">☁️</div>
+              <h3 className="text-xl sm:text-2xl font-semibold text-gray-900 mb-4">Cloud Services</h3>
+              <p className="text-gray-600 mb-4 text-sm sm:text-base">
                 Scale your infrastructure with secure, reliable, and efficient cloud solutions.
               </p>
-              <ul className="text-sm text-gray-500 space-y-1">
+              <ul className="text-xs sm:text-sm text-gray-500 space-y-1">
                 <li>• Cloud Migration</li>
                 <li>• Infrastructure as Code</li>
                 <li>• DevOps & CI/CD</li>
@@ -276,22 +276,22 @@ const HomePage: React.FC = () => {
               Trusted by Industry Leaders
             </h2>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 mb-12">
               <div className="text-center">
-                <div className="text-4xl font-bold text-indigo-600 mb-2">500+</div>
-                <div className="text-gray-600">Enterprise Clients</div>
+                <div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-indigo-600 mb-2">500+</div>
+                <div className="text-gray-600 text-sm sm:text-base">Enterprise Clients</div>
               </div>
               <div className="text-center">
-                <div className="text-4xl font-bold text-green-600 mb-2">$2.5B+</div>
-                <div className="text-gray-600">Cost Savings Delivered</div>
+                <div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-green-600 mb-2">$2.5B+</div>
+                <div className="text-gray-600 text-sm sm:text-base">Cost Savings Delivered</div>
               </div>
               <div className="text-center">
-                <div className="text-4xl font-bold text-purple-600 mb-2">99.9%</div>
-                <div className="text-gray-600">Uptime Guarantee</div>
+                <div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-purple-600 mb-2">99.9%</div>
+                <div className="text-gray-600 text-sm sm:text-base">Uptime Guarantee</div>
               </div>
               <div className="text-center">
-                <div className="text-4xl font-bold text-orange-600 mb-2">24/7</div>
-                <div className="text-gray-600">Support Available</div>
+                <div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-orange-600 mb-2">24/7</div>
+                <div className="text-gray-600 text-sm sm:text-base">Support Available</div>
               </div>
             </div>
 
@@ -300,26 +300,26 @@ const HomePage: React.FC = () => {
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">What Our Clients Say</h3>
               </div>
               
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
                 <div className="text-center">
-                  <div className="text-yellow-400 text-2xl mb-4">★★★★★</div>
-                  <p className="text-gray-600 mb-4 italic">"Zion Tech Group transformed our operations with AI solutions that delivered $50M in annual savings. Their expertise is unmatched."</p>
-                  <div className="font-semibold text-gray-900">Sarah Johnson</div>
-                  <div className="text-sm text-gray-500">CTO, Fortune 500 Company</div>
+                  <div className="text-yellow-400 text-xl sm:text-2xl mb-4">★★★★★</div>
+                  <p className="text-gray-600 mb-4 italic text-sm sm:text-base">"Zion Tech Group transformed our operations with AI solutions that delivered $50M in annual savings. Their expertise is unmatched."</p>
+                  <div className="font-semibold text-gray-900 text-sm sm:text-base">Sarah Johnson</div>
+                  <div className="text-xs sm:text-sm text-gray-500">CTO, Fortune 500 Company</div>
                 </div>
                 
                 <div className="text-center">
-                  <div className="text-yellow-400 text-2xl mb-4">★★★★★</div>
-                  <p className="text-gray-600 mb-4 italic">"The digital transformation they implemented increased our efficiency by 300%. Highly recommend their services."</p>
-                  <div className="font-semibold text-gray-900">Michael Chen</div>
-                  <div className="text-sm text-gray-500">VP Operations, Global Corp</div>
+                  <div className="text-yellow-400 text-xl sm:text-2xl mb-4">★★★★★</div>
+                  <p className="text-gray-600 mb-4 italic text-sm sm:text-base">"The digital transformation they implemented increased our efficiency by 300%. Highly recommend their services."</p>
+                  <div className="font-semibold text-gray-900 text-sm sm:text-base">Michael Chen</div>
+                  <div className="text-xs sm:text-sm text-gray-500">VP Operations, Global Corp</div>
                 </div>
                 
-                <div className="text-center">
-                  <div className="text-yellow-400 text-2xl mb-4">★★★★★</div>
-                  <p className="text-gray-600 mb-4 italic">"Outstanding cloud infrastructure and AI implementation. They exceeded all our expectations."</p>
-                  <div className="font-semibold text-gray-900">Emily Rodriguez</div>
-                  <div className="text-sm text-gray-500">Director of Technology, Tech Giant</div>
+                <div className="text-center md:col-span-2 lg:col-span-1">
+                  <div className="text-yellow-400 text-xl sm:text-2xl mb-4">★★★★★</div>
+                  <p className="text-gray-600 mb-4 italic text-sm sm:text-base">"Outstanding cloud infrastructure and AI implementation. They exceeded all our expectations."</p>
+                  <div className="font-semibold text-gray-900 text-sm sm:text-base">Emily Rodriguez</div>
+                  <div className="text-xs sm:text-sm text-gray-500">Director of Technology, Tech Giant</div>
                 </div>
               </div>
             </div>
