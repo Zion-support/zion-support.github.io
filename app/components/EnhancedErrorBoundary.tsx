@@ -180,7 +180,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     }
   }
 
->>>>>>> cursor/analyze-improve-and-deploy-application-3d67
   render() {
     if (this.state.hasError) {
       if (this.props.fallback) {

@@ -18,8 +18,6 @@ import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
 import AdvancedErrorBoundary from './components/AdvancedErrorBoundary';
 import AdvancedPerformanceMonitor from './components/AdvancedPerformanceMonitor';
-<<<<<<< HEADcursor/analyze-improve-and-deploy-application-3d67
->>>>>>> origin/main
 
 // Lazy load components for better performance
 // const ContentShowcase = lazy(() => import('./components/ContentShowcase'));

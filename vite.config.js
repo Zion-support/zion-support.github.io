@@ -76,6 +76,10 @@ export default defineConfig({
           ) {
             return 'ui';
           }
+          // Utilities
+          if (id.includes('node_modules/clsx') || id.includes('node_modules/tailwind-merge')) {
+            return 'utils';
+          }
           // Utilities and web vitals
           if (id.includes('node_modules/web-vitals')) {
             return 'page';

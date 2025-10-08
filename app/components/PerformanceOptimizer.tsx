@@ -53,13 +53,12 @@ import React, { useEffect } from 'react';
 
 const PerformanceOptimizer: React.FC = () => {
   useEffect(() => {
->>>>>>> cursor/analyze-improve-and-deploy-application-3d67
     // Preload critical resources
     const preloadCriticalResources = () => {
       const criticalImages = [
         '/og-image.jpg',
         '/logo.png',
-        '/favicon.ico'cursor/analyze-improve-and-deploy-application-3d67
+        '/favicon.ico'
       ];
 
       criticalImages.forEach(src => {
@@ -165,7 +164,6 @@ const PerformanceOptimizer: React.FC = () => {
     };
   }, []);
 
->>>>>>> cursor/analyze-improve-and-deploy-application-3d67
   return null;
 };
 

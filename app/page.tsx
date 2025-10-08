@@ -2,19 +2,16 @@ import React, { useCallback, useState, useEffect, Suspense, lazy, memo } from 'r
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 
-// Import components
-import ContentPromotionBanner from './components/ContentPromotionBanner';
-import ContentCarousel from './components/ContentCarousel';
-import DynamicContentShowcase from './components/DynamicContentShowcase';
-import ContentStatistics from './components/ContentStatistics';
-import ContentNewsletterSignup from './components/ContentNewsletterSignup';
-
 // Dynamically import heavy components for better performance
 const ContentPromotionBanner = lazy(() => import('./components/ContentPromotionBanner'));
 const ContentCarousel = lazy(() => import('./components/ContentCarousel'));
 const DynamicContentShowcase = lazy(() => import('./components/DynamicContentShowcase'));
 const ContentStatistics = lazy(() => import('./components/ContentStatistics'));
 const ContentNewsletterSignup = lazy(() => import('./components/ContentNewsletterSignup'));
+
+// Performance monitoring
+const PerformanceMonitor = lazy(() => import('./components/PerformanceMonitor'));
+const WebVitalsMonitor = lazy(() => import('./components/WebVitalsMonitor'));
 
 // Loading skeleton component
 const ServiceCardSkeleton: React.FC = memo(() => (
@@ -61,6 +58,12 @@ const HomePage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-white to-purple-50">
+      {/* Performance Monitoring */}
+      <Suspense fallback={null}>
+        <PerformanceMonitor />
+        <WebVitalsMonitor />
+      </Suspense>
+      
       {/* Navigation */}
       <Navigation />
       
@@ -96,6 +99,23 @@ const HomePage: React.FC = () => {
             Transform your business with our proven strategies delivering $50M+ annual savings and 95% process automation.
           </p>
           
+          {/* Call to Action */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+            <a 
+              href="/contact" 
+              className="bg-indigo-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-indigo-700 transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-4 focus:ring-indigo-300"
+              onClick={handlePhoneClick}
+            >
+              Get Started Today
+            </a>
+            <a 
+              href="/solutions" 
+              className="border-2 border-indigo-600 text-indigo-600 px-8 py-4 rounded-lg font-semibold hover:bg-indigo-600 hover:text-white transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-indigo-300"
+            >
+              View Solutions
+            </a>
+          </div>
+          
           {/* Key Benefits */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto mb-12">
             <div className="bg-white bg-opacity-60 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
@@ -112,7 +132,7 @@ const HomePage: React.FC = () => {
               <div className="text-3xl mb-3">🔒</div>
               <h3 className="font-bold text-gray-900 mb-3 text-lg">Enterprise Security</h3>
               <p className="text-sm text-gray-600 leading-relaxed">Bank-level security and compliance for your critical data and infrastructure</p>
-            </div>cursor/analyze-improve-and-deploy-application-3d67
+            </div>
           </div>
         </section>
 
@@ -172,7 +192,7 @@ const HomePage: React.FC = () => {
                 </div>
               </article>
             </Suspense>
-          </div>cursor/analyze-improve-and-deploy-application-3d67
+          </div>
           
           <div className="grid md:grid-cols-3 gap-8">
             <article className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 focus-within:ring-4 focus-within:ring-indigo-300">
@@ -226,9 +246,49 @@ const HomePage: React.FC = () => {
               className="inline-block bg-indigo-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-4 focus:ring-indigo-300"
             >
               View All Services
-            </a>cursor/analyze-improve-and-deploy-application-3d67
->>>>>>> origin/main
+            </a>
         </section>
+
+        {/* Testimonials Section */}
+        <section className="mb-16" aria-labelledby="testimonials-heading">
+          <h2 id="testimonials-heading" className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 text-center">
+            What Our Clients Say
+          </h2>
+          <p className="text-lg text-gray-600 text-center mb-12 max-w-3xl mx-auto">
+            Trusted by leading enterprises worldwide
+          </p>
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="bg-white rounded-xl shadow-lg p-8 text-center">
+              <div className="text-4xl mb-4">⭐⭐⭐⭐⭐</div>
+              <p className="text-gray-600 mb-4 italic">
+                "Zion Tech Group transformed our operations with AI. We achieved 300% ROI in just 6 months."
+              </p>
+              <div className="font-semibold text-gray-900">- Sarah Johnson, CTO</div>
+              <div className="text-sm text-gray-500">Fortune 500 Company</div>
+            </div>
+            <div className="bg-white rounded-xl shadow-lg p-8 text-center">
+              <div className="text-4xl mb-4">⭐⭐⭐⭐⭐</div>
+              <p className="text-gray-600 mb-4 italic">
+                "The automation solutions saved us $50M annually. Exceptional service and results."
+              </p>
+              <div className="font-semibold text-gray-900">- Michael Chen, CEO</div>
+              <div className="text-sm text-gray-500">Global Manufacturing</div>
+            </div>
+            <div className="bg-white rounded-xl shadow-lg p-8 text-center">
+              <div className="text-4xl mb-4">⭐⭐⭐⭐⭐</div>
+              <p className="text-gray-600 mb-4 italic">
+                "Outstanding AI implementation. Our efficiency increased by 95% across all departments."
+              </p>
+              <div className="font-semibold text-gray-900">- Emily Rodriguez, COO</div>
+              <div className="text-sm text-gray-500">Tech Startup</div>
+            </div>
+          </div>
+        </section>
+
+        {/* Newsletter Signup */}
+        <Suspense fallback={<ServiceCardSkeleton />}>
+          <ContentNewsletterSignup />
+        </Suspense>
       </main>
       
       {/* Footer */}
