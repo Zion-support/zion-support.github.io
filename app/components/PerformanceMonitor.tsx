@@ -1,11 +1,14 @@
 'use client';
 
 import React, { useEffect, useState, memo } from 'react';
+<<<<<<< HEAD
 
 interface LayoutShift extends PerformanceEntry {
   hadRecentInput: boolean;
   value: number;
 }
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-4560
 
 interface PerformanceMetrics {
   fcp?: number;
@@ -23,17 +26,18 @@ const PerformanceMonitor: React.FC = () => {
     if (typeof window === 'undefined') return;
 
     const reportWebVitals = (metric: { name: string; value: number }) => {
-      // Log to console in development
       if (process.env['NODE_ENV'] === 'development') {
         console.log('Web Vital:', metric.name, metric.value);
       }
     };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     // Set up performance observer for more detailed monitoring
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-4560
     if (typeof window !== 'undefined' && 'PerformanceObserver' in window) {
       try {
-        // LCP - Largest Contentful Paint
         new PerformanceObserver((list) => {
           const entries = list.getEntries();
           const lastEntry = entries[entries.length - 1];
@@ -44,7 +48,6 @@ const PerformanceMonitor: React.FC = () => {
           setMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }));
         }).observe({ entryTypes: ['largest-contentful-paint'] });
 
-        // FID - First Input Delay
         new PerformanceObserver((list) => {
           const entries = list.getEntries();
           entries.forEach((entry: PerformanceEntry & { processingStart?: number }) => {
@@ -59,7 +62,6 @@ const PerformanceMonitor: React.FC = () => {
           });
         }).observe({ entryTypes: ['first-input'] });
 
-        // CLS - Cumulative Layout Shift
         let clsValue = 0;
         new PerformanceObserver((list) => {
           const entries = list.getEntries();
@@ -75,7 +77,6 @@ const PerformanceMonitor: React.FC = () => {
           });
         }).observe({ entryTypes: ['layout-shift'] });
 
-        // FCP - First Contentful Paint
         new PerformanceObserver((list) => {
           const entries = list.getEntries();
           entries.forEach((entry) => {
@@ -87,7 +88,6 @@ const PerformanceMonitor: React.FC = () => {
           });
         }).observe({ entryTypes: ['paint'] });
 
-        // TTFB - Time to First Byte
         new PerformanceObserver((list) => {
           const entries = list.getEntries();
           entries.forEach((entry: PerformanceEntry & { responseStart?: number; requestStart?: number }) => {
@@ -153,6 +153,7 @@ const PerformanceMonitor: React.FC = () => {
     };
   }, []);
 
+<<<<<<< HEAD
   // Toggle visibility with keyboard shortcut (Ctrl+Shift+P)
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -166,6 +167,11 @@ const PerformanceMonitor: React.FC = () => {
   }, []);
 
   if (!isVisible) return null;
+=======
+  if (process.env['NODE_ENV'] !== 'development') {
+    return null;
+  }
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-4560
 
   return (
     <div className="fixed bottom-4 right-4 bg-black bg-opacity-90 text-white p-4 rounded-lg text-sm font-mono z-50 max-w-md">

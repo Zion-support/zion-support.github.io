@@ -5,6 +5,7 @@ import PerformanceMonitor from './components/PerformanceMonitor';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 
 // Lazy load heavy components - these may not exist, so make them optional
+<<<<<<< HEAD
 const UnifiedBanner = dynamic(
   () => import('./components/NewestContent2025Banner').catch(() => Promise.resolve({ default: () => null })), 
   {
@@ -20,6 +21,17 @@ const ContentPromotion = dynamic(
     ssr: false
   }
 );
+=======
+const UnifiedBanner = dynamic(() => import('./components/NewestContent2025Banner').catch(() => import('./components/EmptyComponent')), {
+  loading: () => <div className="animate-pulse bg-gray-200 h-32 rounded-lg"></div>,
+  ssr: false
+});
+
+const ContentPromotion = dynamic(() => import('./components/UltimateBusinessIntelligence2025Banner').catch(() => import('./components/EmptyComponent')), {
+  loading: () => <div className="animate-pulse bg-gray-200 h-64 rounded-lg"></div>,
+  ssr: false
+});
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-4560
 
 const ContentShowcase = dynamic(
   () => import('./components/UltimateBusinessIntelligenceShowcase2025').catch(() => Promise.resolve({ default: () => null })), 

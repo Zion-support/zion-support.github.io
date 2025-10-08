@@ -12,6 +12,15 @@ import SEOEnhancer from './components/SEOEnhancer';
 import LoadingSpinner from './components/LoadingSpinner';
 import PerformanceDashboard from './components/PerformanceDashboard';
 import AdvancedPerformanceMonitor from './components/AdvancedPerformanceMonitor';
+<<<<<<< HEAD
+=======
+
+// Lazy load pages for better performance
+const HomePage = lazy(() => import('./page'));
+
+// Utils
+import { lazyLoadImages, preloadCriticalResources, collectPerformanceMetrics, performanceOptimizer } from './utils/performanceOptimizer';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-4560
 import { logger } from './utils/logger';
 import { lazyLoadImages, preloadCriticalResources, collectPerformanceMetrics, performanceOptimizer } from './utils/performanceOptimizer';
 
@@ -39,6 +48,7 @@ const App: React.FC = () => {
       }
     }
     
+<<<<<<< HEAD
     if (typeof console !== 'undefined') {
       console.log('🚀 Zion Tech Group App initialized with comprehensive monitoring');
     }
@@ -49,6 +59,14 @@ const App: React.FC = () => {
     console.error('Application Error:', error);
     // eslint-disable-next-line no-console
     console.error('Error info:', errorInfo);
+=======
+    logger.lifecycle('performance monitoring initialized', 'App');
+    logger.info('🚀 Zion Tech Group App initialized with comprehensive monitoring', { component: 'App' });
+  }, []);
+
+  const handleError = useCallback((error: Error, errorInfo: any) => {
+    logger.error('Application Error', error, { component: 'ErrorBoundary', errorInfo });
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-4560
   }, []);
 
   return (
