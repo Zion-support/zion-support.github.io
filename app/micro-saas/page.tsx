@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Globe } from 'lucide-react';
+import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, ArrowRight, Phone, Mail, MapPin } from 'lucide-react';
 
 const MicroSAASPage: React.FC = () => {
   const microSAASServices = [
@@ -377,6 +377,97 @@ const MicroSAASPage: React.FC = () => {
       benefits: ['Reduce fuel costs by 20%', 'Improve driver safety', 'Optimize routes'],
       marketPrice: '$300-600/month',
       category: 'Transportation'
+    },
+    {
+      title: 'AI Content Generator Pro',
+      description: 'High-quality content creation for blogs, social media, and marketing materials.',
+      icon: '✍️',
+      price: '$119/month',
+      features: ['Blog post generation', 'Social media content', 'Email templates', 'SEO optimization', 'Brand voice consistency'],
+      benefits: ['Create content 5x faster', 'Improve SEO rankings', 'Maintain consistent quality'],
+      marketPrice: '$180-350/month',
+      category: 'Content Creation',
+      popular: true
+    },
+    {
+      title: 'AI Lead Scoring Engine',
+      description: 'Intelligent lead qualification and scoring to maximize conversion rates.',
+      icon: '🎯',
+      price: '$139/month',
+      features: ['Behavioral analysis', 'Lead scoring', 'Conversion prediction', 'CRM integration', 'Follow-up automation'],
+      benefits: ['Increase conversion by 40%', 'Focus on high-value leads', 'Reduce sales cycle time'],
+      marketPrice: '$200-400/month',
+      category: 'Sales'
+    },
+    {
+      title: 'AI Security Monitoring Suite',
+      description: 'Automated threat detection, vulnerability scanning, and security incident response.',
+      icon: '🔒',
+      price: '$249/month',
+      features: ['Threat detection', 'Vulnerability scanning', 'Incident response', 'Compliance monitoring', 'Security reporting'],
+      benefits: ['Prevent 95% of security breaches', 'Reduce response time by 80%', 'Ensure compliance'],
+      marketPrice: '$400-800/month',
+      category: 'Cybersecurity'
+    },
+    {
+      title: 'AI-Powered Learning Management System',
+      description: 'Personalized learning paths, automated assessments, and skill gap analysis.',
+      icon: '🎓',
+      price: '$179/month',
+      features: ['Personalized learning', 'Automated assessments', 'Skill tracking', 'Progress analytics', 'Content recommendations'],
+      benefits: ['Improve learning outcomes', 'Reduce training costs', 'Track skill development'],
+      marketPrice: '$300-600/month',
+      category: 'Education'
+    },
+    {
+      title: 'Smart Property Management',
+      description: 'AI-driven property management with tenant screening, maintenance scheduling, and rent optimization.',
+      icon: '🏢',
+      price: '$229/month',
+      features: ['Tenant screening', 'Maintenance scheduling', 'Rent optimization', 'Lease management', 'Financial reporting'],
+      benefits: ['Increase rental income by 15%', 'Reduce vacancy rates', 'Streamline operations'],
+      marketPrice: '$400-800/month',
+      category: 'Real Estate'
+    },
+    {
+      title: 'AI-Powered Quality Assurance',
+      description: 'Automated quality testing, defect detection, and process optimization for manufacturing.',
+      icon: '✅',
+      price: '$279/month',
+      features: ['Quality testing', 'Defect detection', 'Process optimization', 'Compliance monitoring', 'Quality reporting'],
+      benefits: ['Improve product quality', 'Reduce defects by 80%', 'Ensure compliance'],
+      marketPrice: '$450-900/month',
+      category: 'Manufacturing'
+    },
+    {
+      title: 'AI Voice Assistant Builder',
+      description: 'Create custom voice assistants and chatbots for customer service and internal operations.',
+      icon: '🎤',
+      price: '$159/month',
+      features: ['Voice recognition', 'Natural language processing', 'Multi-language support', 'Integration APIs', 'Analytics dashboard'],
+      benefits: ['Improve customer service', 'Reduce support costs', '24/7 availability'],
+      marketPrice: '$250-500/month',
+      category: 'Customer Service'
+    },
+    {
+      title: 'Smart Contract Auditor',
+      description: 'AI-powered smart contract analysis and security auditing for blockchain projects.',
+      icon: '⛓️',
+      price: '$399/month',
+      features: ['Smart contract analysis', 'Vulnerability detection', 'Gas optimization', 'Compliance checking', 'Audit reports'],
+      benefits: ['Prevent costly exploits', 'Ensure contract security', 'Optimize gas usage'],
+      marketPrice: '$600-1200/month',
+      category: 'Blockchain'
+    },
+    {
+      title: 'Predictive Maintenance AI',
+      description: 'Machine learning-powered equipment monitoring and predictive maintenance scheduling.',
+      icon: '🔧',
+      price: '$299/month',
+      features: ['Equipment monitoring', 'Failure prediction', 'Maintenance scheduling', 'Cost optimization', 'Alert system'],
+      benefits: ['Reduce downtime by 70%', 'Lower maintenance costs', 'Extend equipment life'],
+      marketPrice: '$500-1000/month',
+      category: 'Manufacturing'
     },
     {
       title: 'AI-Powered Compliance Monitor',
