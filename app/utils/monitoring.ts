@@ -7,20 +7,20 @@ import React from 'react'
 import { performanceConfig } from '../../performance.config'
 
 export interface PerformanceMetrics {
-  lcp?: number
-  fid?: number
-  cls?: number
-  fcp?: number
-  ttfb?: number
-  inp?: number
+  lcp?: number;
+  fid?: number;
+  cls?: number;
+  fcp?: number;
+  ttfb?: number;
+  inp?: number;
 }
 export interface ErrorReport {
-  message: string,
-  stack?: string
-  component?: string
-  timestamp: number,
-  userAgent: string,
-  url: string,
+  message: string;
+  stack?: string;
+  component?: string;
+  timestamp: number;
+  userAgent: string;
+  url: string;
 }
 class MonitoringService {
   private metrics: PerformanceMetrics = {}
@@ -70,12 +70,14 @@ class MonitoringService {
         // Cumulative Layout Shift
         let clsValue = 0
         const clsObserver = new PerformanceObserver((list) => {
+          const entries = list.getEntries()
+          entries.forEach((entry: any) => {
             if (!entry.hadRecentInput) {
               clsValue += entry.value
               this.metrics.cls = clsValue
               this.reportMetric('cls', clsValue)
             }
-          }
+          })
         })
         clsObserver.observe({ entryTypes: ['layout-shift'] })
 
@@ -100,14 +102,13 @@ class MonitoringService {
         const longTaskObserver = new PerformanceObserver((list) => {
           for (const entry of list.getEntries()) {
             console.warn('Long task detected:', {
-              duration: entry.duration
+              duration: entry.duration,
               startTime: entry.startTime
-            })
+            });
           }
         })
         longTaskObserver.observe({ entryTypes: ['longtask'] })
 
-      } catch {
       } catch (error) {
         // Long task API might not be available
       }
@@ -121,10 +122,10 @@ class MonitoringService {
           entries.forEach((entry: any) => {
             if (entry.duration > 1000) {
               console.warn('Slow resource detected:', {
-                name: entry.name
-                duration: entry.duration
+                name: entry.name,
+                duration: entry.duration,
                 type: entry.initiatorType
-              })
+              });
             }
           })
         })

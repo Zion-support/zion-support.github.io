@@ -8,17 +8,17 @@ import { logger } from './logger'
 import { performanceMonitor } from './performanceMonitor'
 
 export interface HealthStatus {
-  status: 'healthy' | 'degraded' | 'unhealthy'
-  timestamp: number,
-  uptime: number,
-  checks: HealthCheck[]
+  status: 'healthy' | 'degraded' | 'unhealthy';
+  timestamp: number;
+  uptime: number;
+  checks: HealthCheck[];
 }
 export interface HealthCheck {
-  name: string,
-  status: 'pass' | 'warn' | 'fail'
-  message?: string
-  details?: Record<string, unknown>
-  duration?: number
+  name: string;
+  status: 'pass' | 'warn' | 'fail';
+  message?: string;
+  details?: Record<string, unknown>;
+  duration?: number;
 }
 export type HealthCheckFunction = () => Promise<HealthCheck> | HealthCheck
 
@@ -86,20 +86,17 @@ class HealthCheckService {
         const duration = performance.now() - startTime
         
         checks.push({
-          ...check
-          name
+          ...check,
+          name,
           duration
-        })
-
-      } catch {
-logger._error(`Health check "${name}" failed`, _error as Error)
+        });
 
       } catch (error) {
-        logger.error(`Health check "${name}" failed`, error as Error)
+        logger.error(`Health check "${name}" failed`, error as Error);
 
         checks.push({
-          name
-          status: 'fail'
+          name,
+          status: 'fail',
           message: error instanceof Error ? error.message : 'Unknown error'
         })
       }
@@ -117,11 +114,11 @@ logger._error(`Health check "${name}" failed`, _error as Error)
       status = 'healthy'
     }
     const healthStatus: HealthStatus = {
-      status
+      status,
       timestamp: now,
-      uptime: now - this.startTime
+      uptime: now - this.startTime,
       checks
-    }
+    };
     // Cache the result
     this.cachedStatus = healthStatus
     this.lastCheckTime = now
@@ -146,10 +143,10 @@ logger._error(`Health check "${name}" failed`, _error as Error)
   private checkMemory(): HealthCheck {
     if (typeof performance === 'undefined' || !('memory' in performance)) {
       return {
-        name: 'memory'
-        status: 'pass'
+        name: 'memory',
+        status: 'pass',
         message: 'Memory API not available'
-      }
+      };
     }
     try {
       const usedPercent = (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100
@@ -165,13 +162,13 @@ logger._error(`Health check "${name}" failed`, _error as Error)
         message = `High memory usage: ${usedPercent.toFixed(1)}%`
       }
       return {
-        name: 'memory'
-        status
-        message
+        name: 'memory',
+        status,
+        message,
         details: {
-          used: memory.usedJSHeapSize
-          total: memory.totalJSHeapSize
-          limit: memory.jsHeapSizeLimit
+          used: memory.usedJSHeapSize,
+          total: memory.totalJSHeapSize,
+          limit: memory.jsHeapSizeLimit,
           usedPercent
         }
       }

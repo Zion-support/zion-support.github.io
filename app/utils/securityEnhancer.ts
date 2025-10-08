@@ -5,24 +5,24 @@ import React from 'react'
  */
 
 interface SecurityConfig {
-  enableCSP: boolean,
-  enableHSTS: boolean,
-  enableXSSProtection: boolean,
-  enableCSRFProtection: boolean,
-  enableContentSecurityPolicy: boolean,
-  allowedOrigins: string[]
-  trustedDomains: string[]
+  enableCSP: boolean;
+  enableHSTS: boolean;
+  enableXSSProtection: boolean;
+  enableCSRFProtection: boolean;
+  enableContentSecurityPolicy: boolean;
+  allowedOrigins: string[];
+  trustedDomains: string[];
 }
 interface SecurityMetrics {
-  blockedRequests: number,
-  suspiciousActivity: number,
-  securityViolations: number,
-  lastScanTime: number,
+  blockedRequests: number;
+  suspiciousActivity: number;
+  securityViolations: number;
+  lastScanTime: number;
 }
 class SecurityEnhancer {
-  private config: SecurityConfig,
-  private metrics: SecurityMetrics,
-  private eventListeners: Array<() => void> = []
+  private config: SecurityConfig;
+  private metrics: SecurityMetrics;
+  private eventListeners: Array<() => void> = [];
 
   constructor(config: Partial<SecurityConfig> = {}) {
     this.config = {
@@ -31,10 +31,10 @@ class SecurityEnhancer {
       enableXSSProtection: true,
       enableCSRFProtection: true,
       enableContentSecurityPolicy: true,
-      allowedOrigins: ['https://zion.app', 'https://www.zion.app']
-      trustedDomains: ['zion.app', 'www.zion.app']
+      allowedOrigins: ['https://zion.app', 'https://www.zion.app'],
+      trustedDomains: ['zion.app', 'www.zion.app'],
       ...config
-    }
+    };
     this.metrics = {
       blockedRequests: 0,
       suspiciousActivity: 0,
@@ -56,14 +56,14 @@ class SecurityEnhancer {
     if (!this.config.enableContentSecurityPolicy) return
 
     const csp = [
-      "default-src 'self'"
-      "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.jsdelivr.net"
-      "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com"
-      "font-src 'self' https://fonts.gstatic.com"
-      "img-src 'self' data: https:"
-      "connect-src 'self' https://api.zion.app"
-      "frame-ancestors 'none'"
-      "base-uri 'self'"
+      "default-src 'self'",
+      "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.jsdelivr.net",
+      "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
+      "font-src 'self' https://fonts.gstatic.com",
+      "img-src 'self' data: https:",
+      "connect-src 'self' https://api.zion.app",
+      "frame-ancestors 'none'",
+      "base-uri 'self'",
       "form-action 'self'"
     ].join('; ')
 

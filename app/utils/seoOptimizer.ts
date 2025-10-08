@@ -5,34 +5,34 @@ import React from 'react'
  */
 
 interface SEOConfig {
-  siteName: string,
-  siteUrl: string,
-  defaultTitle: string,
-  defaultDescription: string,
-  defaultImage: string,
-  twitterHandle?: string
-  facebookAppId?: string
-  googleAnalyticsId?: string
-  googleTagManagerId?: string
+  siteName: string;
+  siteUrl: string;
+  defaultTitle: string;
+  defaultDescription: string;
+  defaultImage: string;
+  twitterHandle?: string;
+  facebookAppId?: string;
+  googleAnalyticsId?: string;
+  googleTagManagerId?: string;
 }
 interface PageSEOData {
-  title: string,
-  description: string,
-  keywords: string[]
-  image?: string
-  url?: string
-  type?: 'website' | 'article' | 'product' | 'profile'
-  publishedTime?: string
-  modifiedTime?: string
-  author?: string
-  section?: string
-  tags?: string[]
-  noindex?: boolean
-  nofollow?: boolean
+  title: string;
+  description: string;
+  keywords: string[];
+  image?: string;
+  url?: string;
+  type?: 'website' | 'article' | 'product' | 'profile';
+  publishedTime?: string;
+  modifiedTime?: string;
+  author?: string;
+  section?: string;
+  tags?: string[];
+  noindex?: boolean;
+  nofollow?: boolean;
 }
 class SEOOptimizer {
-  private config: SEOConfig,
-  private currentPageData: PageSEOData | null = null
+  private config: SEOConfig;
+  private currentPageData: PageSEOData | null = null;
 
   constructor(config: SEOConfig) {
     this.config = config
@@ -180,13 +180,13 @@ class SEOOptimizer {
    */
   private setupStructuredData(): void {
     const structuredData = {
-      '@context': 'https://schema.org'
-      '@type': 'WebSite'
-      name: this.config.siteName
-      url: this.config.siteUrl
+      '@context': 'https://schema.org',
+      '@type': 'WebSite',
+      name: this.config.siteName,
+      url: this.config.siteUrl,
       potentialAction: {
-        '@type': 'SearchAction'
-        target: `${this.config.siteUrl}/search?q={search_term_string}`
+        '@type': 'SearchAction',
+        target: `${this.config.siteUrl}/search?q={search_term_string}`,
         'query-input': 'required name=search_term_string'
       }
     }
@@ -199,18 +199,18 @@ class SEOOptimizer {
     if (!this.currentPageData) return
 
     const structuredData = {
-      '@context': 'https://schema.org'
-      '@type': this.currentPageData.type === 'article' ? 'Article' : 'WebPage'
-      headline: this.generateTitle()
-      description: this.generateDescription()
-      url: this.currentPageData.url || window.location.href
-      image: this.currentPageData.image || this.config.defaultImage
+      '@context': 'https://schema.org',
+      '@type': this.currentPageData.type === 'article' ? 'Article' : 'WebPage',
+      headline: this.generateTitle(),
+      description: this.generateDescription(),
+      url: this.currentPageData.url || window.location.href,
+      image: this.currentPageData.image || this.config.defaultImage,
       publisher: {
-        '@type': 'Organization'
-        name: this.config.siteName
+        '@type': 'Organization',
+        name: this.config.siteName,
         url: this.config.siteUrl
       }
-    }
+    };
     // Add article-specific properties
     if (this.currentPageData.type === 'article') {
       Object.assign(structuredData, {

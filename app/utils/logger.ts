@@ -15,38 +15,38 @@ function isProduction(): boolean {
   }
 }
 export enum LogLevel {
-  DEBUG = 0
-  INFO = 1
-  WARN = 2
-  ERROR = 3
+  DEBUG = 0,
+  INFO = 1,
+  WARN = 2,
+  ERROR = 3,
   FATAL = 4
 }
 export interface LogEntry {
-  level: LogLevel,
-  message: string,
-  timestamp: Date,
-  context?: string
-  metadata?: Record<string, unknown>
-  stack?: string
+  level: LogLevel;
+  message: string;
+  timestamp: Date;
+  context?: string;
+  metadata?: Record<string, unknown>;
+  stack?: string;
 }
 export interface LoggerConfig {
-  minLevel: LogLevel,
-  enableConsole: boolean,
-  enableRemote: boolean,
-  remoteEndpoint?: string
-  maxBufferSize: number,
-  batchSize: number,
-  flushInterval: number,
+  minLevel: LogLevel;
+  enableConsole: boolean;
+  enableRemote: boolean;
+  remoteEndpoint?: string;
+  maxBufferSize: number;
+  batchSize: number;
+  flushInterval: number;
 }
 class Logger {
   private config: LoggerConfig = {
-    minLevel: isProduction() ? LogLevel.WARN : LogLevel.DEBUG
+    minLevel: isProduction() ? LogLevel.WARN : LogLevel.DEBUG,
     enableConsole: true,
-    enableRemote: isProduction()
+    enableRemote: isProduction(),
     maxBufferSize: 100,
     batchSize: 10,
     flushInterval: 30000, // 30 seconds
-  }
+  };
   private buffer: LogEntry[] = []
   private flushTimer?: ReturnType<typeof setInterval>
 
@@ -62,7 +62,7 @@ class Logger {
    * Parse arguments to determine context and metadata
    */
   private parseArgs(
-    contextOrMetadata?: string | Record<string, unknown>
+    contextOrMetadata?: string | Record<string, unknown>,
     metadata?: Record<string, unknown>
   ): [string | undefined, Record<string, unknown> | undefined] {
     if (typeof contextOrMetadata === 'string') {
@@ -74,7 +74,9 @@ class Logger {
    * Log a debug message
    */
   debug(message: string, contextOrMetadata?: string | Record<string, unknown>, _metadata?: Record<string, unknown>): void {
-    const [context, meta] = this.parseArgs(contextOrMetadata, _metadata)
+    const [context, meta] = this.parseArgs(contextOrMetadata, _metadata);
+    this.log(LogLevel.DEBUG, message, context, meta);
+  }
 
   debug(message: string, contextOrMetadata?: string | Record<string, unknown>, metadata?: Record<string, unknown>): void {
     const [context, meta] = this.parseArgs(contextOrMetadata, metadata)

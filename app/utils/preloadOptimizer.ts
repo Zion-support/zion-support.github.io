@@ -7,9 +7,9 @@ export const preloadCriticalResources = () => {
 
   // Preload critical fonts
   const fontPreloads = [
-    'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap'
+    'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap',
     'https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap'
-  ]
+  ];
 
   fontPreloads.forEach(href => {
     const link = document.createElement('link')
@@ -22,10 +22,10 @@ export const preloadCriticalResources = () => {
 
   // Preload critical images
   const criticalImages = [
-    '/images/hero-bg.jpg'
-    '/images/logo.png'
+    '/images/hero-bg.jpg',
+    '/images/logo.png',
     '/images/favicon.ico'
-  ]
+  ];
 
   criticalImages.forEach(src => {
     const link = document.createElement('link')
@@ -40,10 +40,10 @@ export const preloadRoute = (route: string) => {
 
   // Preload route-specific resources
   const routeResources = {
-    '/blog': ['/api/blog/posts', '/images/blog-hero.jpg']
-    '/services': ['/api/services', '/images/services-hero.jpg']
+    '/blog': ['/api/blog/posts', '/images/blog-hero.jpg'],
+    '/services': ['/api/services', '/images/services-hero.jpg'],
     '/contact': ['/api/contact', '/images/contact-hero.jpg']
-  }
+  };
   const resources = routeResources[route as keyof typeof routeResources]
   if (resources) {
     resources.forEach(resource => {

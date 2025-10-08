@@ -5,15 +5,15 @@ import React from 'react'
  */
 
 export interface AnalyticsEvent {
-  action: string,
-  category: string,
-  label?: string
-  value?: number
-  metadata?: Record<string, unknown>
+  action: string;
+  category: string;
+  label?: string;
+  value?: number;
+  metadata?: Record<string, unknown>;
 }
 export interface AnalyticsUser {
-  id?: string
-  properties?: Record<string, unknown>
+  id?: string;
+  properties?: Record<string, unknown>;
 }
 class AnalyticsService {
   private isInitialized = false
@@ -48,11 +48,12 @@ class AnalyticsService {
       }
       // Send to Google Analytics if available
       if (this.hasGtag()) {
-          event_category: event.category
-          event_label: event.label
-          value: event.value
+        (window as any).gtag('event', event.action, {
+          event_category: event.category,
+          event_label: event.label,
+          value: event.value,
           ...event.metadata
-        })
+        });
       }
       // Log in development
       if (process.env['NODE_ENV'] === 'development') {
@@ -68,9 +69,10 @@ class AnalyticsService {
   trackPageView(path: string, title?: string): void {
     try {
       if (this.hasGtag()) {
+        (window as any).gtag('config', this.config.gaId, {
           page_path: path,
           page_title: title,
-        })
+        });
       }
     } catch (error) {
       console.error('Failed to track page view:', error)
@@ -82,9 +84,10 @@ class AnalyticsService {
   identifyUser(user: AnalyticsUser): void {
     try {
       if (this.hasGtag() && user.id) {
-          user_id: user.id
+        (window as any).gtag('config', this.config.gaId, {
+          user_id: user.id,
           ...user.properties
-        })
+        });
       }
     } catch (error) {
       console.error('Failed to identify user:', error)
