@@ -256,10 +256,209 @@ const AIServicesPage: React.FC = () => {
       marketPrice: '$30,000-90,000/month',
       category: 'Space AI',
       technologies: ['Astropy', 'TensorFlow', 'PyTorch', 'OpenCV', 'Space Data APIs']
+    },
+    // NEW CUTTING-EDGE AI SERVICES
+    {
+      title: 'Generative AI & Large Language Models',
+      description: 'Custom GPT models, fine-tuned language models, and generative AI solutions for enterprise applications.',
+      icon: '🧠',
+      price: 'Starting at $8,500/month',
+      features: ['Custom GPT fine-tuning', 'Domain-specific models', 'Multi-modal AI', 'Prompt engineering', 'Model optimization'],
+      benefits: ['Achieve 95% accuracy in domain tasks', 'Reduce training costs by 60%', 'Enable advanced AI capabilities'],
+      marketPrice: '$15,000-50,000/month',
+      category: 'Generative AI',
+      technologies: ['GPT-4', 'Claude', 'Llama', 'Hugging Face', 'Custom Fine-tuned Models']
+    },
+    {
+      title: 'AI-Powered Quantum Machine Learning',
+      description: 'Quantum-enhanced machine learning algorithms for solving complex optimization and classification problems.',
+      icon: '⚛️',
+      price: 'Starting at $25,000/month',
+      features: ['Quantum algorithms', 'Hybrid quantum-classical models', 'Quantum optimization', 'Quantum neural networks', 'Quantum advantage'],
+      benefits: ['Solve exponentially complex problems', 'Achieve quantum advantage', 'Enable breakthrough discoveries'],
+      marketPrice: '$50,000-150,000/month',
+      category: 'Quantum AI',
+      technologies: ['Qiskit', 'Cirq', 'PennyLane', 'TensorFlow Quantum', 'IBM Quantum']
+    },
+    {
+      title: 'AI-Powered Edge Intelligence',
+      description: 'On-device AI processing for real-time decision making with minimal latency and privacy protection.',
+      icon: '📱',
+      price: 'Starting at $4,500/month',
+      features: ['Edge model optimization', 'Federated learning', 'Privacy-preserving AI', 'Real-time inference', 'Offline capabilities'],
+      benefits: ['Reduce latency by 90%', 'Ensure data privacy', 'Enable offline AI processing'],
+      marketPrice: '$8,000-25,000/month',
+      category: 'Edge AI',
+      technologies: ['TensorFlow Lite', 'ONNX', 'Core ML', 'OpenVINO', 'Custom Edge Models']
+    },
+    {
+      title: 'AI-Powered Synthetic Data Generation',
+      description: 'Generate high-quality synthetic datasets for training AI models while preserving privacy and data diversity.',
+      icon: '🎭',
+      price: 'Starting at $3,500/month',
+      features: ['Synthetic data generation', 'Privacy preservation', 'Data augmentation', 'Bias mitigation', 'Quality validation'],
+      benefits: ['Protect sensitive data', 'Increase dataset diversity', 'Reduce data collection costs'],
+      marketPrice: '$6,000-20,000/month',
+      category: 'Synthetic Data',
+      technologies: ['GANs', 'VAEs', 'Diffusion Models', 'TensorFlow', 'PyTorch']
+    },
+    {
+      title: 'AI-Powered Explainable AI (XAI)',
+      description: 'Transparent and interpretable AI systems that explain their decisions and build trust with stakeholders.',
+      icon: '🔍',
+      price: 'Starting at $5,500/month',
+      features: ['Model interpretability', 'Decision explanations', 'Bias detection', 'Fairness auditing', 'Regulatory compliance'],
+      benefits: ['Build AI trust', 'Ensure fairness', 'Meet regulatory requirements'],
+      marketPrice: '$10,000-30,000/month',
+      category: 'Explainable AI',
+      technologies: ['SHAP', 'LIME', 'Captum', 'Alibi', 'Custom XAI Models']
+    },
+    {
+      title: 'AI-Powered Multimodal Learning',
+      description: 'Advanced AI systems that process and understand multiple data types (text, images, audio, video) simultaneously.',
+      icon: '🎨',
+      price: 'Starting at $7,500/month',
+      features: ['Multimodal fusion', 'Cross-modal learning', 'Audio-visual analysis', 'Text-image understanding', 'Video comprehension'],
+      benefits: ['Achieve human-level understanding', 'Process complex multimedia', 'Enable advanced applications'],
+      marketPrice: '$15,000-45,000/month',
+      category: 'Multimodal AI',
+      technologies: ['CLIP', 'DALL-E', 'GPT-4V', 'Whisper', 'Custom Multimodal Models']
+    },
+    {
+      title: 'AI-Powered Reinforcement Learning',
+      description: 'Advanced RL systems for autonomous decision making, game playing, and complex optimization problems.',
+      icon: '🎮',
+      price: 'Starting at $6,500/month',
+      features: ['Deep RL algorithms', 'Multi-agent systems', 'Continuous control', 'Reward engineering', 'Policy optimization'],
+      benefits: ['Solve complex optimization', 'Enable autonomous systems', 'Achieve superhuman performance'],
+      marketPrice: '$12,000-40,000/month',
+      category: 'Reinforcement Learning',
+      technologies: ['OpenAI Gym', 'Stable Baselines', 'Ray RLlib', 'TensorFlow', 'PyTorch']
+    },
+    {
+      title: 'AI-Powered Transfer Learning',
+      description: 'Leverage pre-trained models and transfer learning to quickly adapt AI solutions to new domains and tasks.',
+      icon: '🔄',
+      price: 'Starting at $3,000/month',
+      features: ['Pre-trained model adaptation', 'Domain adaptation', 'Few-shot learning', 'Model compression', 'Knowledge distillation'],
+      benefits: ['Reduce training time by 80%', 'Lower data requirements', 'Improve model performance'],
+      marketPrice: '$5,500-18,000/month',
+      category: 'Transfer Learning',
+      technologies: ['Hugging Face', 'TensorFlow Hub', 'PyTorch Hub', 'Custom Pre-trained Models']
+    },
+    {
+      title: 'AI-Powered Federated Learning',
+      description: 'Distributed machine learning that trains models across multiple devices while keeping data local and private.',
+      icon: '🌐',
+      price: 'Starting at $4,500/month',
+      features: ['Distributed training', 'Privacy preservation', 'Model aggregation', 'Differential privacy', 'Secure communication'],
+      benefits: ['Protect data privacy', 'Enable collaborative learning', 'Reduce data transfer costs'],
+      marketPrice: '$8,000-25,000/month',
+      category: 'Federated Learning',
+      technologies: ['TensorFlow Federated', 'PySyft', 'Flower', 'Custom FL Framework']
+    },
+    {
+      title: 'AI-Powered AutoML Platform',
+      description: 'Automated machine learning platform that automatically builds, trains, and optimizes AI models.',
+      icon: '🤖',
+      price: 'Starting at $2,500/month',
+      features: ['Automated model selection', 'Hyperparameter optimization', 'Feature engineering', 'Model deployment', 'Performance monitoring'],
+      benefits: ['Democratize AI development', 'Reduce development time', 'Improve model performance'],
+      marketPrice: '$5,000-20,000/month',
+      category: 'AutoML',
+      technologies: ['AutoML', 'H2O.ai', 'DataRobot', 'Google AutoML', 'Custom AutoML']
+    },
+    {
+      title: 'AI-Powered Computer Vision for Medical Imaging',
+      description: 'Advanced medical image analysis for diagnosis, treatment planning, and disease detection using deep learning.',
+      icon: '🏥',
+      price: 'Starting at $12,000/month',
+      features: ['Medical image analysis', 'Disease detection', 'Treatment planning', 'Radiology AI', 'Pathology analysis'],
+      benefits: ['Improve diagnostic accuracy', 'Reduce reading time', 'Enable early detection'],
+      marketPrice: '$25,000-80,000/month',
+      category: 'Medical AI',
+      technologies: ['MONAI', 'TensorFlow', 'PyTorch', 'DICOM', 'Medical Imaging APIs']
+    },
+    {
+      title: 'AI-Powered Natural Language Understanding',
+      description: 'Advanced NLU systems that understand context, intent, and sentiment in human language with high accuracy.',
+      icon: '💭',
+      price: 'Starting at $4,000/month',
+      features: ['Intent recognition', 'Context understanding', 'Sentiment analysis', 'Entity extraction', 'Language generation'],
+      benefits: ['Improve human-AI interaction', 'Enable natural conversations', 'Understand complex language'],
+      marketPrice: '$7,500-25,000/month',
+      category: 'NLU',
+      technologies: ['BERT', 'RoBERTa', 'T5', 'GPT-3/4', 'Custom NLU Models']
+    },
+    {
+      title: 'AI-Powered Time Series Forecasting',
+      description: 'Advanced time series analysis and forecasting for financial markets, weather, and business metrics.',
+      icon: '⏰',
+      price: 'Starting at $3,500/month',
+      features: ['Time series modeling', 'Seasonal decomposition', 'Anomaly detection', 'Multi-step forecasting', 'Uncertainty quantification'],
+      benefits: ['Improve forecast accuracy', 'Identify anomalies', 'Enable proactive planning'],
+      marketPrice: '$6,500-22,000/month',
+      category: 'Time Series',
+      technologies: ['Prophet', 'ARIMA', 'LSTM', 'Transformer', 'Custom TS Models']
+    },
+    {
+      title: 'AI-Powered Graph Neural Networks',
+      description: 'Advanced graph-based machine learning for social networks, recommendation systems, and knowledge graphs.',
+      icon: '🕸️',
+      price: 'Starting at $5,500/month',
+      features: ['Graph representation learning', 'Node classification', 'Link prediction', 'Graph generation', 'Community detection'],
+      benefits: ['Understand complex relationships', 'Improve recommendations', 'Enable network analysis'],
+      marketPrice: '$10,000-35,000/month',
+      category: 'Graph AI',
+      technologies: ['PyTorch Geometric', 'DGL', 'NetworkX', 'TensorFlow', 'Custom GNN Models']
+    },
+    {
+      title: 'AI-Powered Adversarial Machine Learning',
+      description: 'Robust AI systems that defend against adversarial attacks and ensure model security and reliability.',
+      icon: '🛡️',
+      price: 'Starting at $6,000/month',
+      features: ['Adversarial training', 'Attack detection', 'Defense mechanisms', 'Robustness testing', 'Security auditing'],
+      benefits: ['Protect against attacks', 'Ensure model reliability', 'Maintain performance under attack'],
+      marketPrice: '$12,000-40,000/month',
+      category: 'Adversarial AI',
+      technologies: ['CleverHans', 'Adversarial Robustness Toolbox', 'TensorFlow', 'PyTorch', 'Custom Defense Models']
+    },
+    {
+      title: 'AI-Powered Causal Inference',
+      description: 'Advanced causal analysis to understand cause-and-effect relationships in data and make better decisions.',
+      icon: '🔗',
+      price: 'Starting at $7,000/month',
+      features: ['Causal discovery', 'Treatment effect estimation', 'Confounding control', 'Causal mediation', 'Counterfactual analysis'],
+      benefits: ['Understand true causality', 'Make better decisions', 'Avoid spurious correlations'],
+      marketPrice: '$15,000-50,000/month',
+      category: 'Causal AI',
+      technologies: ['DoWhy', 'CausalML', 'EconML', 'TensorFlow', 'PyTorch']
+    },
+    {
+      title: 'AI-Powered Meta-Learning',
+      description: 'Learning to learn systems that quickly adapt to new tasks with minimal training data and examples.',
+      icon: '🎯',
+      price: 'Starting at $8,500/month',
+      features: ['Few-shot learning', 'Meta-optimization', 'Task adaptation', 'Model-agnostic learning', 'Rapid prototyping'],
+      benefits: ['Learn new tasks quickly', 'Reduce data requirements', 'Enable rapid adaptation'],
+      marketPrice: '$18,000-60,000/month',
+      category: 'Meta-Learning',
+      technologies: ['MAML', 'Reptile', 'Prototypical Networks', 'TensorFlow', 'PyTorch']
+    },
+    {
+      title: 'AI-Powered Neuromorphic Computing',
+      description: 'Brain-inspired AI systems that mimic neural processing for ultra-efficient and fast computation.',
+      icon: '🧬',
+      price: 'Starting at $15,000/month',
+      features: ['Spiking neural networks', 'Event-driven processing', 'Low-power computation', 'Real-time learning', 'Hardware optimization'],
+      benefits: ['Achieve brain-like efficiency', 'Enable real-time learning', 'Reduce power consumption'],
+      marketPrice: '$30,000-100,000/month',
+      category: 'Neuromorphic AI',
+      technologies: ['NEST', 'Brian', 'SpyNNaker', 'Intel Loihi', 'Custom Neuromorphic Hardware']
     }
   ];
 
-  const _categories = [...new Set(aiServices.map(service => service.category))];
+  const categories = [...new Set(aiServices.map(service => service.category))];
 
   return (
     <>

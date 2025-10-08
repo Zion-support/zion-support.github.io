@@ -65,7 +65,7 @@ const Footer: React.FC = () => {
 
           {/* Services */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Services</h4>
+            <h4 className="text-lg font-semibold mb-4">Core Services</h4>
             <ul className="space-y-2 text-gray-300">
               <li>
                 <Link to="/services" className="hover:text-white transition-colors">
@@ -84,7 +84,34 @@ const Footer: React.FC = () => {
               </li>
               <li>
                 <Link to="/micro-saas" className="hover:text-white transition-colors">
-                  Micro SAAS
+                  Micro SAAS Solutions
+                </Link>
+              </li>
+              <li>
+                <Link to="/ai-marketing" className="hover:text-white transition-colors">
+                  AI Marketing
+                </Link>
+              </li>
+              <li>
+                <Link to="/ai-automation" className="hover:text-white transition-colors">
+                  AI Automation
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Specialized AI */}
+          <div>
+            <h4 className="text-lg font-semibold mb-4">Specialized AI</h4>
+            <ul className="space-y-2 text-gray-300">
+              <li>
+                <Link to="/ai-healthcare" className="hover:text-white transition-colors">
+                  AI Healthcare
+                </Link>
+              </li>
+              <li>
+                <Link to="/ai-fintech" className="hover:text-white transition-colors">
+                  AI Fintech
                 </Link>
               </li>
               <li>
@@ -107,14 +134,31 @@ const Footer: React.FC = () => {
                   Blockchain & Web3
                 </Link>
               </li>
+            </ul>
+          </div>
+
+          {/* Infrastructure */}
+          <div>
+            <h4 className="text-lg font-semibold mb-4">Infrastructure</h4>
+            <ul className="space-y-2 text-gray-300">
+              <li>
+                <Link to="/cybersecurity" className="hover:text-white transition-colors">
+                  Cybersecurity
+                </Link>
+              </li>
               <li>
                 <Link to="/iot-edge-computing" className="hover:text-white transition-colors">
                   IoT & Edge Computing
                 </Link>
               </li>
               <li>
-                <Link to="/cybersecurity" className="hover:text-white transition-colors">
-                  Cybersecurity
+                <Link to="/robotics" className="hover:text-white transition-colors">
+                  Robotics
+                </Link>
+              </li>
+              <li>
+                <Link to="/services-advertising" className="hover:text-white transition-colors">
+                  Advertising Services
                 </Link>
               </li>
             </ul>

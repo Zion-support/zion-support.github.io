@@ -289,10 +289,220 @@ const ITServicesPage: React.FC = () => {
       marketPrice: '$2,500-6,000/month',
       category: 'Asset Management',
       technologies: ['ServiceNow', 'Lansweeper', 'Asset Panda', 'Flexera', 'Microsoft Intune']
+    },
+    // ADDITIONAL COMPREHENSIVE IT SERVICES
+    {
+      title: 'AI-Powered IT Operations',
+      description: 'Intelligent IT operations with automated incident response, predictive maintenance, and self-healing systems.',
+      icon: '🤖',
+      price: 'Starting at $4,500/month',
+      features: ['AIOps platform', 'Predictive analytics', 'Automated remediation', 'Anomaly detection', 'Root cause analysis'],
+      benefits: ['Reduce MTTR by 70%', 'Prevent 80% of incidents', 'Improve system reliability'],
+      marketPrice: '$7,500-15,000/month',
+      category: 'AI Operations',
+      technologies: ['Machine Learning', 'BigPanda', 'Moogsoft', 'PagerDuty', 'Custom AI Models']
+    },
+    {
+      title: 'Zero Trust Security Architecture',
+      description: 'Comprehensive zero trust implementation with identity verification, micro-segmentation, and continuous monitoring.',
+      icon: '🛡️',
+      price: 'Starting at $5,500/month',
+      features: ['Identity verification', 'Micro-segmentation', 'Continuous monitoring', 'Policy enforcement', 'Threat detection'],
+      benefits: ['Eliminate security perimeters', 'Reduce attack surface', 'Improve compliance'],
+      marketPrice: '$9,000-20,000/month',
+      category: 'Security',
+      technologies: ['Zscaler', 'Palo Alto', 'Cisco', 'Microsoft', 'Okta']
+    },
+    {
+      title: 'Edge Computing Solutions',
+      description: 'Edge infrastructure deployment, edge AI processing, and distributed computing solutions.',
+      icon: '📡',
+      price: 'Starting at $6,500/month',
+      features: ['Edge infrastructure', 'Edge AI processing', 'Data synchronization', 'Latency optimization', 'Offline capabilities'],
+      benefits: ['Reduce latency by 90%', 'Enable real-time processing', 'Improve reliability'],
+      marketPrice: '$12,000-30,000/month',
+      category: 'Edge Computing',
+      technologies: ['AWS Wavelength', 'Azure Edge', 'Google Edge', 'Kubernetes', 'TensorFlow Lite']
+    },
+    {
+      title: 'Hybrid Cloud Management',
+      description: 'Seamless hybrid cloud orchestration with multi-cloud visibility and unified management.',
+      icon: '☁️',
+      price: 'Starting at $3,500/month',
+      features: ['Multi-cloud orchestration', 'Unified management', 'Cost optimization', 'Security compliance', 'Disaster recovery'],
+      benefits: ['Optimize cloud costs', 'Improve flexibility', 'Ensure compliance'],
+      marketPrice: '$6,000-15,000/month',
+      category: 'Cloud Services',
+      technologies: ['Terraform', 'Ansible', 'Kubernetes', 'AWS', 'Azure', 'GCP']
+    },
+    {
+      title: 'Advanced Threat Intelligence',
+      description: 'Proactive threat hunting, intelligence gathering, and security orchestration services.',
+      icon: '🔍',
+      price: 'Starting at $4,000/month',
+      features: ['Threat hunting', 'Intelligence gathering', 'Security orchestration', 'Incident response', 'Forensic analysis'],
+      benefits: ['Prevent advanced threats', 'Improve detection rates', 'Reduce response time'],
+      marketPrice: '$7,000-18,000/month',
+      category: 'Security',
+      technologies: ['CrowdStrike', 'SentinelOne', 'Splunk', 'IBM QRadar', 'Custom AI Models']
+    },
+    {
+      title: 'Digital Workplace Solutions',
+      description: 'Modern workplace technology including collaboration tools, virtual desktops, and employee experience platforms.',
+      icon: '💼',
+      price: 'Starting at $2,800/month',
+      features: ['Collaboration tools', 'Virtual desktops', 'Employee experience', 'Unified communications', 'Productivity analytics'],
+      benefits: ['Improve productivity', 'Enhance collaboration', 'Reduce IT complexity'],
+      marketPrice: '$4,500-12,000/month',
+      category: 'Workplace',
+      technologies: ['Microsoft 365', 'Google Workspace', 'Slack', 'Zoom', 'Citrix']
+    },
+    {
+      title: 'API-First Architecture',
+      description: 'API-centric architecture design with microservices, API gateways, and developer portal development.',
+      icon: '🔌',
+      price: 'Starting at $3,800/month',
+      features: ['API design', 'Microservices architecture', 'API gateway', 'Developer portal', 'API analytics'],
+      benefits: ['Improve scalability', 'Enable rapid development', 'Enhance integration'],
+      marketPrice: '$6,500-16,000/month',
+      category: 'Architecture',
+      technologies: ['Kong', 'Apigee', 'AWS API Gateway', 'Kubernetes', 'GraphQL']
+    },
+    {
+      title: 'Data Lake & Analytics Platform',
+      description: 'Modern data lake implementation with real-time analytics, machine learning pipelines, and business intelligence.',
+      icon: '🏞️',
+      price: 'Starting at $5,200/month',
+      features: ['Data lake design', 'Real-time analytics', 'ML pipelines', 'Data governance', 'Self-service BI'],
+      benefits: ['Enable data-driven decisions', 'Improve data quality', 'Accelerate insights'],
+      marketPrice: '$9,000-25,000/month',
+      category: 'Data Analytics',
+      technologies: ['AWS S3', 'Azure Data Lake', 'Snowflake', 'Apache Spark', 'Tableau']
+    },
+    {
+      title: 'Container Security & Compliance',
+      description: 'Comprehensive container security with vulnerability scanning, runtime protection, and compliance monitoring.',
+      icon: '🐳',
+      price: 'Starting at $2,200/month',
+      features: ['Container scanning', 'Runtime protection', 'Compliance monitoring', 'Policy enforcement', 'Vulnerability management'],
+      benefits: ['Secure containerized apps', 'Ensure compliance', 'Prevent breaches'],
+      marketPrice: '$4,000-10,000/month',
+      category: 'Security',
+      technologies: ['Twistlock', 'Aqua Security', 'Falco', 'Kubernetes', 'Docker']
+    },
+    {
+      title: 'Intelligent Process Automation',
+      description: 'AI-powered business process automation with RPA, cognitive automation, and workflow optimization.',
+      icon: '⚙️',
+      price: 'Starting at $3,200/month',
+      features: ['RPA implementation', 'Cognitive automation', 'Workflow optimization', 'Process mining', 'Change management'],
+      benefits: ['Automate 80% of processes', 'Reduce errors by 95%', 'Improve efficiency'],
+      marketPrice: '$5,500-15,000/month',
+      category: 'Automation',
+      technologies: ['UiPath', 'Automation Anywhere', 'Blue Prism', 'Microsoft Power Automate', 'Custom AI']
+    },
+    {
+      title: 'Multi-Cloud Disaster Recovery',
+      description: 'Comprehensive disaster recovery across multiple cloud providers with automated failover and testing.',
+      icon: '🔄',
+      price: 'Starting at $4,800/month',
+      features: ['Multi-cloud DR', 'Automated failover', 'Recovery testing', 'RTO/RPO optimization', 'Compliance reporting'],
+      benefits: ['Minimize downtime', 'Ensure business continuity', 'Reduce recovery costs'],
+      marketPrice: '$8,000-20,000/month',
+      category: 'Backup & Recovery',
+      technologies: ['AWS', 'Azure', 'GCP', 'Veeam', 'Zerto']
+    },
+    {
+      title: 'DevSecOps Implementation',
+      description: 'Security-integrated DevOps with automated security testing, compliance checking, and secure deployment pipelines.',
+      icon: '🔒',
+      price: 'Starting at $3,500/month',
+      features: ['Security integration', 'Automated testing', 'Compliance checking', 'Secure pipelines', 'Threat modeling'],
+      benefits: ['Shift security left', 'Reduce vulnerabilities', 'Ensure compliance'],
+      marketPrice: '$6,000-15,000/month',
+      category: 'DevOps',
+      technologies: ['Jenkins', 'GitLab', 'SonarQube', 'OWASP ZAP', 'HashiCorp Vault']
+    },
+    {
+      title: 'Enterprise Service Mesh',
+      description: 'Service mesh implementation for microservices communication, security, and observability.',
+      icon: '🕸️',
+      price: 'Starting at $4,200/month',
+      features: ['Service mesh setup', 'Traffic management', 'Security policies', 'Observability', 'Performance optimization'],
+      benefits: ['Improve service communication', 'Enhance security', 'Enable observability'],
+      marketPrice: '$7,500-18,000/month',
+      category: 'Architecture',
+      technologies: ['Istio', 'Linkerd', 'Consul Connect', 'Kubernetes', 'Envoy']
+    },
+    {
+      title: 'AI-Powered IT Service Management',
+      description: 'Intelligent ITSM with automated ticket routing, predictive analytics, and self-service capabilities.',
+      icon: '🎫',
+      price: 'Starting at $2,500/month',
+      features: ['Automated routing', 'Predictive analytics', 'Self-service portal', 'Knowledge management', 'Performance metrics'],
+      benefits: ['Improve service quality', 'Reduce resolution time', 'Increase satisfaction'],
+      marketPrice: '$4,500-12,000/month',
+      category: 'ITSM',
+      technologies: ['ServiceNow', 'Jira Service Management', 'Remedy', 'Custom AI', 'Machine Learning']
+    },
+    {
+      title: 'Cloud-Native Application Development',
+      description: 'Modern cloud-native application development with microservices, serverless, and containerization.',
+      icon: '☁️',
+      price: 'Starting at $5,500/month',
+      features: ['Microservices design', 'Serverless architecture', 'Containerization', 'API development', 'Cloud optimization'],
+      benefits: ['Improve scalability', 'Reduce costs', 'Enable rapid deployment'],
+      marketPrice: '$9,500-25,000/month',
+      category: 'Application Development',
+      technologies: ['Kubernetes', 'Docker', 'AWS Lambda', 'Azure Functions', 'Google Cloud Functions']
+    },
+    {
+      title: 'Intelligent Data Governance',
+      description: 'AI-powered data governance with automated classification, privacy protection, and compliance monitoring.',
+      icon: '📊',
+      price: 'Starting at $3,800/month',
+      features: ['Data classification', 'Privacy protection', 'Compliance monitoring', 'Data lineage', 'Quality management'],
+      benefits: ['Ensure data privacy', 'Maintain compliance', 'Improve data quality'],
+      marketPrice: '$6,500-18,000/month',
+      category: 'Data Governance',
+      technologies: ['Collibra', 'Informatica', 'Alation', 'Custom AI', 'Machine Learning']
+    },
+    {
+      title: 'Advanced Network Security',
+      description: 'Next-generation network security with AI-powered threat detection, zero-trust networking, and SD-WAN.',
+      icon: '🌐',
+      price: 'Starting at $4,500/month',
+      features: ['AI threat detection', 'Zero-trust networking', 'SD-WAN implementation', 'Network segmentation', 'Traffic analysis'],
+      benefits: ['Prevent advanced threats', 'Improve network performance', 'Ensure compliance'],
+      marketPrice: '$8,000-20,000/month',
+      category: 'Networking',
+      technologies: ['Cisco', 'Palo Alto', 'Fortinet', 'VMware', 'Custom AI']
+    },
+    {
+      title: 'Intelligent Infrastructure Monitoring',
+      description: 'AI-powered infrastructure monitoring with predictive analytics, automated alerting, and capacity planning.',
+      icon: '📈',
+      price: 'Starting at $2,800/month',
+      features: ['Predictive analytics', 'Automated alerting', 'Capacity planning', 'Performance optimization', 'Anomaly detection'],
+      benefits: ['Prevent outages', 'Optimize performance', 'Reduce costs'],
+      marketPrice: '$5,000-15,000/month',
+      category: 'Monitoring',
+      technologies: ['Datadog', 'New Relic', 'Splunk', 'Prometheus', 'Custom AI']
+    },
+    {
+      title: 'Enterprise Integration Platform',
+      description: 'Comprehensive integration platform with API management, data transformation, and real-time synchronization.',
+      icon: '🔗',
+      price: 'Starting at $4,200/month',
+      features: ['API management', 'Data transformation', 'Real-time sync', 'Event streaming', 'Workflow orchestration'],
+      benefits: ['Connect all systems', 'Enable real-time data', 'Improve efficiency'],
+      marketPrice: '$7,500-20,000/month',
+      category: 'Integration',
+      technologies: ['MuleSoft', 'Dell Boomi', 'Tibco', 'Apache Kafka', 'Custom Solutions']
     }
   ];
 
-  const _categories = [...new Set(itServices.map(service => service.category))];
+  const categories = [...new Set(itServices.map(service => service.category))];
 
   return (
     <>
