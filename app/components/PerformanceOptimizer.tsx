@@ -1,174 +1,89 @@
-<<<<<<< HEAD
-import React, { useEffect, useState } from 'react';
-
-interface PerformanceMetrics {
-  loadTime: number;
-  firstContentfulPaint: number;
-  largestContentfulPaint: number;
-  cumulativeLayoutShift: number;
-  firstInputDelay: number;
-}
-
-const PerformanceOptimizer: React.FC = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
-  const [isOptimized, setIsOptimized] = useState(false);
-
-  useEffect(() => {
-    // Performance monitoring
-    const measurePerformance = () => {
-      if ('performance' in window) {
-        const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-        const paintEntries = performance.getEntriesByType('paint');
-        
-        const fcp = paintEntries.find(entry => entry.name === 'first-contentful-paint');
-        const lcp = performance.getEntriesByType('largest-contentful-paint')[0];
-        
-        const metrics: PerformanceMetrics = {
-          loadTime: navigation.loadEventEnd - navigation.loadEventStart,
-          firstContentfulPaint: fcp ? fcp.startTime : 0,
-          largestContentfulPaint: lcp ? lcp.startTime : 0,
-          cumulativeLayoutShift: 0, // Would need to be measured with observer
-          firstInputDelay: 0 // Would need to be measured with observer
-        };
-        
-        setMetrics(metrics);
-        
-        // Check if performance is optimized
-        const isGoodPerformance = 
-          metrics.firstContentfulPaint < 1500 && 
-          metrics.largestContentfulPaint < 2500;
-        
-        setIsOptimized(isGoodPerformance);
-      }
-    };
-
-    // Measure after page load
-    if (document.readyState === 'complete') {
-      measurePerformance();
-    } else {
-      window.addEventListener('load', measurePerformance);
-    }
-
-=======
 import React, { useEffect } from 'react';
 
 const PerformanceOptimizer: React.FC = () => {
   useEffect(() => {
->>>>>>> cursor/analyze-improve-and-deploy-application-3d67
     // Preload critical resources
     const preloadCriticalResources = () => {
-      const criticalImages = [
-        '/og-image.jpg',
-<<<<<<< HEAD
-        '/logo.png'
-=======
-        '/logo.png',
-        '/favicon.ico'
->>>>>>> cursor/analyze-improve-and-deploy-application-3d67
+      const criticalResources = [
+        '/fonts/inter-var.woff2',
+        '/images/hero-bg.webp',
       ];
 
-      criticalImages.forEach(src => {
+      criticalResources.forEach((resource) => {
         const link = document.createElement('link');
         link.rel = 'preload';
-        link.as = 'image';
-        link.href = src;
+        link.href = resource;
+        link.as = resource.endsWith('.woff2') ? 'font' : 'image';
+        if (resource.endsWith('.woff2')) {
+          link.crossOrigin = 'anonymous';
+        }
         document.head.appendChild(link);
       });
     };
 
     // Optimize images
     const optimizeImages = () => {
-      const images = document.querySelectorAll('img');
-      images.forEach(img => {
-        // Add loading="lazy" to non-critical images
-        if (!img.hasAttribute('loading')) {
-          img.setAttribute('loading', 'lazy');
-        }
-        
-        // Add decoding="async" for better performance
-        if (!img.hasAttribute('decoding')) {
-          img.setAttribute('decoding', 'async');
-        }
+      const images = document.querySelectorAll('img[data-src]');
+      const imageObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const img = entry.target as HTMLImageElement;
+            img.src = img.dataset.src || '';
+            img.classList.remove('lazy');
+            imageObserver.unobserve(img);
+          }
+        });
       });
+
+      images.forEach((img) => imageObserver.observe(img));
     };
 
-    // Intersection Observer for animations
-    const setupIntersectionObserver = () => {
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach(entry => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add('animate-fade-in');
-            }
-          });
-        },
-        { threshold: 0.1 }
-      );
+    // Add loading states
+    const addLoadingStates = () => {
+      const lazyElements = document.querySelectorAll('[data-lazy]');
+      const lazyObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate-fade-in');
+            lazyObserver.unobserve(entry.target);
+          }
+        });
+      });
 
-      const elements = document.querySelectorAll('.animate-on-scroll');
-      elements.forEach(el => observer.observe(el));
+      lazyElements.forEach((el) => lazyObserver.observe(el));
     };
 
     // Initialize optimizations
     preloadCriticalResources();
-<<<<<<< HEAD
-
-    // Optimize images
-    const optimizeImages = () => {
-      const images = document.querySelectorAll('img');
-      images.forEach(img => {
-        if (!img.loading) {
-          img.loading = 'lazy';
-        }
-        if (!img.decoding) {
-          img.decoding = 'async';
-        }
-      });
-    };
-
     optimizeImages();
+    addLoadingStates();
+
+    // Add CSS for animations
+    const style = document.createElement('style');
+    style.textContent = `
+      .lazy {
+        opacity: 0;
+        transition: opacity 0.3s;
+      }
+      .animate-fade-in {
+        animation: fadeIn 0.6s ease-in-out;
+      }
+      @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+    `;
+    document.head.appendChild(style);
 
     return () => {
-      window.removeEventListener('load', measurePerformance);
-    };
-  }, []);
-
-  // Resource hints for better performance
-  useEffect(() => {
-    const addResourceHints = () => {
-      const hints = [
-        { rel: 'dns-prefetch', href: 'https://fonts.googleapis.com' },
-        { rel: 'dns-prefetch', href: 'https://fonts.gstatic.com' },
-        { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
-        { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossOrigin: 'anonymous' }
-      ];
-
-      hints.forEach(hint => {
-        const link = document.createElement('link');
-        link.rel = hint.rel;
-        link.href = hint.href;
-        if (hint.crossOrigin) {
-          link.crossOrigin = hint.crossOrigin;
-        }
-        document.head.appendChild(link);
+      // Cleanup observers
+      const observers = document.querySelectorAll('[data-observer]');
+      observers.forEach((el) => {
+        // Remove any custom observers if needed
       });
     };
-
-    addResourceHints();
   }, []);
 
-  // Don't render anything visible
-=======
-    optimizeImages();
-    setupIntersectionObserver();
-
-    // Cleanup
-    return () => {
-      // Cleanup if needed
-    };
-  }, []);
-
->>>>>>> cursor/analyze-improve-and-deploy-application-3d67
   return null;
 };
 
