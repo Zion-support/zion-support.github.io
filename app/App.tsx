@@ -2,20 +2,15 @@
 
 import React, { Suspense, lazy, useEffect, useCallback } from 'react';
 import { HelmetProvider } from 'react-helmet-async';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 // Components
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import PerformanceDashboard from './components/PerformanceDashboard';
 import AdvancedPerformanceMonitor from './components/AdvancedPerformanceMonitor';
 import AdvancedErrorBoundary from './components/AdvancedErrorBoundary';
-import AdvancedSEOOptimizer from './components/AdvancedSEOOptimizer';
-import AdvancedPerformanceMonitor from './components/AdvancedPerformanceMonitor';
 import SEOEnhancer from './components/SEOEnhancer';
-import PerformanceDashboard from './components/PerformanceDashboard';
-import ContentShowcase from './components/ContentShowcase';
-import InteractiveContentShowcase2026 from './components/InteractiveContentShowcase2026';
-import InteractiveAIROICalculator from './components/InteractiveAIROICalculator';
+import AdvancedSEOOptimizer from './components/AdvancedSEOOptimizer';
 import LoadingSpinner from './components/LoadingSpinner';
 
 // Lazy load pages for better performance
@@ -51,7 +46,11 @@ const App: React.FC = () => {
     }
     
     logger.lifecycle('performance monitoring initialized', 'App');
-    logger.info('🚀 Zion Tech Group App initialized with comprehensive monitoring', { component: 'App' });
+    logger.info('🚀 Zion Tech Group App initialized with comprehensive monitoring', 'App');
+  }, []);
+
+  const handleError = useCallback((error: Error, errorInfo: unknown) => {
+    logger.error('Application Error', 'ErrorBoundary', { error: error.message, errorInfo });
   }, []);
 
   return (
@@ -59,9 +58,7 @@ const App: React.FC = () => {
       <AdvancedErrorBoundary
         enableErrorReporting={true}
         enableRetry={true}
-        onError={(error, errorInfo) => {
-          logger.error('Application Error', error, { component: 'ErrorBoundary', errorInfo });
-        }}
+        onError={handleError}
       >
         <AccessibilityEnhancer>
           <SEOEnhancer
@@ -69,27 +66,12 @@ const App: React.FC = () => {
             description="Leading provider of enterprise AI solutions, quantum computing, and autonomous systems. Transform your business with our cutting-edge technology."
           >
             <AdvancedSEOOptimizer
-              seoData={{
+              config={{
                 title: 'Zion Tech Group - Advanced AI and IT Solutions',
                 description: 'Leading provider of enterprise AI solutions, quantum computing, and autonomous systems. Transform your business with our cutting-edge technology.',
                 keywords: ['AI solutions', 'enterprise AI', 'quantum computing', 'autonomous systems', 'digital transformation', 'automation', 'cloud services', 'AI consulting', 'business intelligence', 'machine learning'],
-                canonicalUrl: 'https://ziontechgroup.com',
-                ogImage: 'https://ziontechgroup.com/og-image.jpg',
-                structuredData: {
-                  '@type': 'TechCompany',
-                  name: 'Zion Tech Group',
-                  description: 'Advanced AI and IT Solutions Provider',
-                  foundingDate: '2020',
-                  numberOfEmployees: '50-100',
-                  industry: 'Technology',
-                  services: [
-                    'AI Solutions',
-                    'Digital Transformation',
-                    'Cloud Services',
-                    'Automation',
-                    'Business Intelligence'
-                  ]
-                }
+                url: 'https://ziontechgroup.com',
+                canonicalUrl: 'https://ziontechgroup.com'
               }}
               enableStructuredData={true}
               enableOpenGraph={true}
@@ -127,15 +109,5 @@ const App: React.FC = () => {
     </HelmetProvider>
   );
 };
-
-export default App;
-// Loading fallback component
-const LoadingFallback: React.FC<{ height?: string }> = ({
-  height = 'h-32',
-}) => (
-  <div className={`flex items-center justify-center ${height} w-full`}>
-    <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-indigo-600"></div>
-  </div>
-);
 
 export default App;
