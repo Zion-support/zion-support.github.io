@@ -1,7 +1,31 @@
 import React from 'react';
+// import { Metadata } from 'next'; // Removed for Vite
 
-<<<<<<< HEAD
-import { Link } from 'react-router-dom';
+// export const metadata: Metadata = // Removed for Vite {
+  title: 'AI Enterprise Transformation Ultimate Guide 2025: $2B+ ROI Strategies | Zion Tech Group',
+  description: 'Complete guide to AI enterprise transformation achieving $2B+ ROI. Learn autonomous operations, quantum AI, and multi-agent orchestration strategies from Fortune 500 success stories.',
+  keywords: 'AI enterprise transformation, autonomous operations, quantum AI, multi-agent orchestration, enterprise AI ROI, Fortune 500 AI success, AI strategy, enterprise automation',
+  openGraph: {
+    title: 'AI Enterprise Transformation Ultimate Guide 2025: $2B+ ROI Strategies',
+    description: 'Complete guide to AI enterprise transformation achieving $2B+ ROI. Learn autonomous operations, quantum AI, and multi-agent orchestration strategies.',
+    type: 'article',
+    url: 'https://ziontechgroup.com/blog/ai-enterprise-transformation-ultimate-guide-2025',
+    images: [
+      {
+        url: 'https://ziontechgroup.com/images/ai-enterprise-transformation-2025.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'AI Enterprise Transformation Ultimate Guide 2025',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'AI Enterprise Transformation Ultimate Guide 2025: $2B+ ROI Strategies',
+    description: 'Complete guide to AI enterprise transformation achieving $2B+ ROI. Learn autonomous operations, quantum AI, and multi-agent orchestration strategies.',
+    images: ['https://ziontechgroup.com/images/ai-enterprise-transformation-2025.jpg'],
+  },
+};
 
 export default function AIEnterpriseTransformationUltimateGuide2025() {
   return (
@@ -108,14 +132,16 @@ export default function AIEnterpriseTransformationUltimateGuide2025() {
                 Join Fortune 500 companies achieving breakthrough results through strategic AI transformation
               </p>
               <div className="space-x-4">
-                <Link to="/contact"
+                <a 
+                  href="/contact"
                   className="inline-block bg-indigo-600 text-white px-6 py-3 rounded-lg hover:bg-indigo-700 transition-colors">
                   Get Transformation Assessment
-                </Link>
-                <Link to="/services"
+                </a>
+                <a 
+                  href="/services"
                   className="inline-block bg-white text-indigo-600 px-6 py-3 rounded-lg border-2 border-indigo-600 hover:bg-indigo-50 transition-colors">
                   Explore AI Services
-                </Link>
+                </a>
               </div>
             </div>
           </div>
@@ -124,9 +150,3 @@ export default function AIEnterpriseTransformationUltimateGuide2025() {
     </div>
   );
 }
-=======
-import { Helmet } from 'react-helmet-async';
-
-
-// Metadata moved to Helmet component
->>>>>>> cursor/fix-errors-and-merge-to-main-dd0b

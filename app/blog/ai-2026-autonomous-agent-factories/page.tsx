@@ -1,7 +1,17 @@
 import React from 'react';
+// import { Metadata } from 'next'; // Removed for Vite
 
-<<<<<<< HEAD
-import { Link } from 'react-router-dom';
+// export const metadata: Metadata = // Removed for Vite {
+  title: "AI 2026: Autonomous Agent Factories - The Future of Enterprise Automation",
+  description: "Revolutionary autonomous agent factories achieving 95% enterprise automation rates through self-replicating AI systems and advanced agent orchestration.",
+  authors: [{ name: 'Zion Tech Group' }],
+  openGraph: {
+    title: 'AI 2026: Autonomous Agent Factories - The Future of Enterprise Automation',
+    description: 'Revolutionary autonomous agent factories achieving 95% enterprise automation rates through self-replicating AI systems and advanced agent orchestration.',
+    authors: ['Zion Tech Group'],
+  
+    publishedTime: '2025-01-30T00:00:00Z',}
+};
 
 export default function AI2026AutonomousAgentFactoriesPage() {
   return (
@@ -101,14 +111,16 @@ export default function AI2026AutonomousAgentFactoriesPage() {
                 Join leading enterprises achieving autonomous agent factories for revolutionary automation
               </p>
               <div className="space-x-4">
-                <Link to="/contact"
+                <a 
+                  href="/contact"
                   className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">
                   Get Agent Factory Assessment
-                </Link>
-                <Link to="/services"
+                </a>
+                <a 
+                  href="/services"
                   className="inline-block bg-white text-blue-600 px-6 py-3 rounded-lg border-2 border-blue-600 hover:bg-blue-50 transition-colors">
                   Explore AI Services
-                </Link>
+                </a>
               </div>
             </div>
           </div>
@@ -117,9 +129,3 @@ export default function AI2026AutonomousAgentFactoriesPage() {
     </div>
   );
 }
-=======
-import { Helmet } from 'react-helmet-async';
-
-
-// Metadata moved to Helmet component
->>>>>>> cursor/fix-errors-and-merge-to-main-dd0b

@@ -1,11 +1,12 @@
-/// <reference types="vite/client" />;
-interface ImportMetaEnv {;
-  readonly DEV: boolean;
-  readonly PROD: boolean;
-  readonly MODE: string;
+import React from 'react';
+/// <reference types="vite/client" />
+
+interface ImportMetaEnv {
+  readonly DEV: boolean
+  readonly PROD: boolean
+  readonly MODE: string
 }
-;
-interface ImportMeta {;
-  readonly env: ImportMetaEnv;
+
+interface ImportMeta {
+  readonly env: ImportMetaEnv
 }
-;

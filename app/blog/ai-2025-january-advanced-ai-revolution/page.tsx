@@ -1,7 +1,23 @@
-
-<<<<<<< HEAD
 import React from 'react';
-import { Link } from 'react-router-dom';
+// import { Metadata } from 'next'; // Removed for Vite
+
+// export const metadata: Metadata = // Removed for Vite {
+  title: 'January 2025 Advanced AI Revolution: Next-Generation Enterprise Transformation | Zion Tech Group',
+  description: 'Discover the revolutionary AI breakthroughs transforming enterprise operations in January 2025. Advanced autonomous systems, quantum-enhanced intelligence, and $2.8B proven ROI.',
+  keywords: 'AI revolution 2025, enterprise AI transformation, autonomous systems, quantum AI, machine learning, artificial intelligence, business automation',
+  openGraph: {
+    title: 'January 2025 Advanced AI Revolution: Next-Generation Enterprise Transformation',
+    description: 'Revolutionary AI breakthroughs with $2.8B proven ROI, 99.9% operational autonomy, and zero downtime.',
+    type: 'article',
+    authors: ['Zion Tech Group'],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'January 2025 Advanced AI Revolution: Next-Generation Enterprise Transformation',
+    description: 'Revolutionary AI breakthroughs with $2.8B proven ROI, 99.9% operational autonomy, and zero downtime.',
+    images: ['/og/january-2025-ai-revolution.jpg']
+  }
+};
 
 export default function January2025AdvancedAIRevolution() {
   return (
@@ -112,14 +128,16 @@ export default function January2025AdvancedAIRevolution() {
                 Join leading enterprises achieving breakthrough results with advanced AI technologies
               </p>
               <div className="space-x-4">
-                <Link to="/contact"
+                <a 
+                  href="/contact"
                   className="inline-block bg-indigo-600 text-white px-6 py-3 rounded-lg hover:bg-indigo-700 transition-colors">
                   Get AI Assessment
-                </Link>
-                <Link to="/services"
+                </a>
+                <a 
+                  href="/services"
                   className="inline-block bg-white text-indigo-600 px-6 py-3 rounded-lg border-2 border-indigo-600 hover:bg-indigo-50 transition-colors">
                   Explore AI Services
-                </Link>
+                </a>
               </div>
             </div>
           </div>
@@ -128,8 +146,3 @@ export default function January2025AdvancedAIRevolution() {
     </div>
   );
 }
-=======
-
-
-// Metadata moved to Helmet component
->>>>>>> cursor/fix-errors-and-merge-to-main-dd0b

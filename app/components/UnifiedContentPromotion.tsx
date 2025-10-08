@@ -1,13 +1,6 @@
 import React from 'react';
-
-<<<<<<< HEAD
-import { Link } from 'react-router-dom';
-=======
-import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 
-
->>>>>>> cursor/fix-errors-and-merge-to-main-dd0b
 const UnifiedContentPromotion: React.FC = () => {
   const features = [
     {
@@ -50,13 +43,8 @@ const UnifiedContentPromotion: React.FC = () => {
               <p className="text-gray-600 mb-4">
                 {feature.description}
               </p>
-
               <Link 
-                to={feature.link}
-<<<<<<< HEAD
-=======
-
->>>>>>> main
+                href={feature.link}
                 className="text-blue-600 hover:text-blue-700 font-medium inline-flex items-center"
               >
                 Learn More →
@@ -67,7 +55,6 @@ const UnifiedContentPromotion: React.FC = () => {
       </div>
     </div>
   );
-
 };
 
 export default UnifiedContentPromotion;

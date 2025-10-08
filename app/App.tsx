@@ -1,5 +1,4 @@
-'use client';
-
+import { lazy } from 'react';
 import React, { Suspense, lazy, useEffect, useCallback } from 'react';
 
 import { Link } from 'react-router-dom';import { HelmetProvider } from 'react-helmet-async';

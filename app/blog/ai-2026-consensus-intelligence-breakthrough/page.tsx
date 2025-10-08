@@ -1,7 +1,17 @@
 import React from 'react';
+// import { Metadata } from 'next'; // Removed for Vite
 
-<<<<<<< HEAD
-import { Link } from 'react-router-dom';
+// export const metadata: Metadata = // Removed for Vite {
+  title: "AI 2026: Consensus Intelligence Breakthrough",
+  description: "Revolutionary AI system enabling unanimous decisions through quantum-accelerated consensus protocols.",
+  authors: [{ name: 'Zion Tech Group' }],
+  openGraph: {
+    title: 'AI 2026: Consensus Intelligence Breakthrough',
+    description: 'Revolutionary AI system enabling unanimous decisions through quantum-accelerated consensus protocols.',
+    type: 'article',
+    authors: ['Zion Tech Group']
+  }
+};
 
 export default function ConsensusIntelligencePage() {
   return (
@@ -89,14 +99,16 @@ export default function ConsensusIntelligencePage() {
                 Join leading enterprises achieving unanimous decisions with consensus intelligence
               </p>
               <div className="space-x-4">
-                <Link to="/contact"
+                <a 
+                  href="/contact"
                   className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">
                   Get Consensus Assessment
-                </Link>
-                <Link to="/services"
+                </a>
+                <a 
+                  href="/services"
                   className="inline-block bg-white text-blue-600 px-6 py-3 rounded-lg border-2 border-blue-600 hover:bg-blue-50 transition-colors">
                   Explore AI Services
-                </Link>
+                </a>
               </div>
             </div>
           </div>
@@ -105,9 +117,3 @@ export default function ConsensusIntelligencePage() {
     </div>
   );
 }
-=======
-import { Helmet } from 'react-helmet-async';
-
-
-// Metadata moved to Helmet component
->>>>>>> cursor/fix-errors-and-merge-to-main-dd0b

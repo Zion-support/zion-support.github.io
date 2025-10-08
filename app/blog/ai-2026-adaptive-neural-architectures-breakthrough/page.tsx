@@ -1,7 +1,11 @@
 import React from 'react';
+// import { Metadata } from 'next'; // Removed for Vite
 
-<<<<<<< HEAD
-import { Link } from 'react-router-dom';
+// export const metadata: Metadata = // Removed for Vite {
+  title: "AI 2026: Adaptive Neural Architectures - The Future of Enterprise AI | Zion Tech Group",
+  description: "Revolutionary adaptive neural architectures that self-evolve and optimize in real-time, delivering 1000x performance improvements and $25B+ enterprise value.",
+  keywords: 'adaptive neural networks, AI 2026, neural architecture, enterprise AI, machine learning, business transformation'
+};
 
 export default function AdaptiveNeuralArchitecturesPage() {
   return (
@@ -124,14 +128,16 @@ export default function AdaptiveNeuralArchitecturesPage() {
                 Join leading enterprises achieving breakthrough performance with adaptive neural architectures
               </p>
               <div className="space-x-4">
-                <Link to="/contact"
+                <a 
+                  href="/contact"
                   className="inline-block bg-purple-600 text-white px-6 py-3 rounded-lg hover:bg-purple-700 transition-colors">
                   Get Neural Assessment
-                </Link>
-                <Link to="/services"
+                </a>
+                <a 
+                  href="/services"
                   className="inline-block bg-white text-purple-600 px-6 py-3 rounded-lg border-2 border-purple-600 hover:bg-purple-50 transition-colors">
                   Explore AI Services
-                </Link>
+                </a>
               </div>
             </div>
           </div>
@@ -140,9 +146,3 @@ export default function AdaptiveNeuralArchitecturesPage() {
     </div>
   );
 }
-=======
-import { Helmet } from 'react-helmet-async';
-
-
-// Metadata moved to Helmet component
->>>>>>> cursor/fix-errors-and-merge-to-main-dd0b

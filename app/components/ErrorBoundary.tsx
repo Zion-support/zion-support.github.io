@@ -1,13 +1,6 @@
-
-
-import React, { Link } from 'react-router-dom';
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-<<<<<<< HEAD
-=======
 import { Link } from 'react-router-dom';
-
 import { FileWarning } from 'lucide-react';
->>>>>>> main
 
 interface Props {
   children: ReactNode;
@@ -26,11 +19,11 @@ interface State {
 class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
-    this.state = { hasError: false 
+    this.state = { hasError: false };
   }
 
   static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error 
+    return { hasError: true, error };
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
@@ -88,13 +81,8 @@ class ErrorBoundary extends Component<Props, State> {
                 >
                   Refresh Page
                 </button>
-
                 <Link
-                  to="/"
-<<<<<<< HEAD
-=======
-
->>>>>>> main
+                  href="/"
                   className="block w-full border-2 border-red-600 text-red-600 hover:bg-red-50 font-semibold py-3 px-6 rounded-lg transition-colors"
                 >
                   Go to Homepage

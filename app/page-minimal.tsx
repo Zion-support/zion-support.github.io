@@ -1,41 +1,29 @@
 import React from 'react';
-
-<<<<<<< HEAD
-=======
-import { Helmet } from 'react-helmet-async';
-
 import { Link } from 'react-router-dom';
 import { ArrowRight, Phone, CheckCircle, Star } from 'lucide-react';
 
-const HomePage: React.FC = () => {
->>>>>>> main
+export const metadata = {
+  title: 'Zion Tech Group - Advanced AI and IT Solutions',
+  description: 'Leading provider of AI-powered enterprise solutions, automation, and digital transformation services.',
+};
+
+export default function HomePage() {
   return (
-
-    <>
-
-      <Helmet>
-
-        <title>Zion Tech Group</title>
-
-        <meta name="description" content="Advanced AI and IT Solutions" />
-
-      </Helmet>
-
-      <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white">
       {/* Header */}
       <header className="bg-white border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-6">
             <div className="flex items-center">
-              <Link to="/" className="text-2xl font-bold text-gray-900">
+              <Link href="/" className="text-2xl font-bold text-gray-900">
                 Zion Tech Group
               </Link>
             </div>
             <nav className="hidden md:flex space-x-8">
-              <Link to="/" className="text-gray-900 hover:text-blue-600">Home</Link>
-              <Link to="/services" className="text-gray-900 hover:text-blue-600">Services</Link>
-              <Link to="/blog" className="text-gray-900 hover:text-blue-600">Blog</Link>
-              <Link to="/case-studies" className="text-gray-900 hover:text-blue-600">Case Studies</Link>
+              <Link href="/" className="text-gray-900 hover:text-blue-600">Home</Link>
+              <Link href="/services" className="text-gray-900 hover:text-blue-600">Services</Link>
+              <Link href="/blog" className="text-gray-900 hover:text-blue-600">Blog</Link>
+              <Link href="/case-studies" className="text-gray-900 hover:text-blue-600">Case Studies</Link>
             </nav>
           </div>
         </div>
@@ -55,18 +43,19 @@ const HomePage: React.FC = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                to="/services"
+                href="/services"
                 className="inline-flex items-center px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-blue-50 transition-colors font-semibold"
               >
                 Explore Our Services
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
-              <Link to="tel:+13024640950"
+              <a
+                href="tel:+13024640950"
                 className="inline-flex items-center px-8 py-4 bg-transparent border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-semibold"
               >
                 <Phone className="w-5 h-5 mr-2" />
                 Call +1 302 464 0950
-              </Link>
+              </a>
             </div>
           </div>
         </section>
@@ -134,14 +123,14 @@ const HomePage: React.FC = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                to="/contact"
+                href="/contact"
                 className="inline-flex items-center px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-blue-50 transition-colors font-semibold"
               >
                 Get Started Today
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
               <Link
-                to="/case-studies"
+                href="/case-studies"
                 className="inline-flex items-center px-8 py-4 bg-transparent border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-semibold"
               >
                 View Success Stories
@@ -161,10 +150,10 @@ const HomePage: React.FC = () => {
               Advanced AI and IT Solutions for Enterprise Transformation
             </p>
             <div className="flex justify-center space-x-6">
-              <Link to="/services" className="text-gray-400 hover:text-white">Services</Link>
-              <Link to="/about" className="text-gray-400 hover:text-white">About</Link>
-              <Link to="/contact" className="text-gray-400 hover:text-white">Contact</Link>
-              <Link to="/privacy" className="text-gray-400 hover:text-white">Privacy</Link>
+              <Link href="/services" className="text-gray-400 hover:text-white">Services</Link>
+              <Link href="/about" className="text-gray-400 hover:text-white">About</Link>
+              <Link href="/contact" className="text-gray-400 hover:text-white">Contact</Link>
+              <Link href="/privacy" className="text-gray-400 hover:text-white">Privacy</Link>
             </div>
             <div className="mt-8 pt-8 border-t border-gray-800">
               <p className="text-gray-400 text-sm">
@@ -175,6 +164,5 @@ const HomePage: React.FC = () => {
         </div>
       </footer>
     </div>
-    </>
   );
 }

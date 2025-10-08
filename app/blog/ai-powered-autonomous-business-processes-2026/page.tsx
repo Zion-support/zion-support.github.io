@@ -1,8 +1,20 @@
 import React from 'react';
-
-<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
+// import { Metadata } from 'next'; // Removed for Vite
+
+// export const metadata: Metadata = // Removed for Vite {
+  title: "AI-Powered Autonomous Business Processes: The 2026 Revolution",
+  description: "Discover how AI-powered autonomous business processes are revolutionizing enterprise operations in 2026, delivering unprecedented efficiency and strategic insights.",
+  keywords: 'autonomous business processes, AI automation, enterprise transformation, business process optimization, AI agents',
+  openGraph: {
+    title: 'AI-Powered Autonomous Business Processes: The 2026 Revolution',
+    description: 'Discover how AI-powered autonomous business processes are revolutionizing enterprise operations in 2026, delivering unprecedented efficiency and strategic insights.',
+    type: 'article',
+    publishedTime: '2026-01-15T00:00:00Z',
+    authors: ['Zion Tech Group']
+  }
+};
 
 export default function AutonomousBusinessProcessesBlog() {
   return (
@@ -10,7 +22,7 @@ export default function AutonomousBusinessProcessesBlog() {
       <div className="max-w-4xl mx-auto px-4 py-8">
         <div className="bg-white rounded-lg shadow-lg p-8">
           <div className="mb-6">
-            <Link to="/blog" className="text-indigo-600 hover:text-indigo-700 flex items-center mb-4">
+            <Link href="/blog" className="text-indigo-600 hover:text-indigo-700 flex items-center mb-4">
               <ArrowLeft className="w-4 h-4 mr-2" />
               Back to Blog
             </Link>
@@ -102,14 +114,16 @@ export default function AutonomousBusinessProcessesBlog() {
                 Join leading enterprises achieving autonomous operations with AI-powered business processes
               </p>
               <div className="space-x-4">
-                <Link to="/contact"
+                <a 
+                  href="/contact"
                   className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">
                   Get Autonomous Assessment
-                </Link>
-                <Link to="/services"
+                </a>
+                <a 
+                  href="/services"
                   className="inline-block bg-white text-blue-600 px-6 py-3 rounded-lg border-2 border-blue-600 hover:bg-blue-50 transition-colors">
                   Explore AI Services
-                </Link>
+                </a>
               </div>
             </div>
           </div>
@@ -118,11 +132,3 @@ export default function AutonomousBusinessProcessesBlog() {
     </div>
   );
 }
-=======
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowLeft } from 'lucide-react';
-
-
-// Metadata moved to Helmet component
->>>>>>> cursor/fix-errors-and-merge-to-main-dd0b

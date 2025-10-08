@@ -1,9 +1,12 @@
 import React from 'react';
-
-import { Helmet } from 'react-helmet-async';
 import { Star } from 'lucide-react';
-<<<<<<< HEAD
-import { Link } from 'react-router-dom';
+// import { Metadata } from 'next'; // Removed for Vite
+
+// export const metadata: Metadata = // Removed for Vite {
+  title: "AI 2026 February Mega Breakthrough Revolution: Transform Your Business",
+  description: "Experience the revolutionary AI 2026 February mega breakthrough featuring advanced automation, intelligent systems, and unprecedented business transformation.",
+  keywords: 'AI 2026, February breakthrough, mega revolution, business transformation, intelligent automation'
+};
 
 export default function AI2026FebruaryMegaBreakthroughRevolution() {
   return (
@@ -88,8 +91,3 @@ export default function AI2026FebruaryMegaBreakthroughRevolution() {
     </div>
   );
 }
-=======
-
-
-// Metadata moved to Helmet component
->>>>>>> cursor/fix-errors-and-merge-to-main-dd0b

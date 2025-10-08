@@ -1,9 +1,12 @@
 import React from 'react';
-
-import { Helmet } from 'react-helmet-async';
 import { Star } from 'lucide-react';
-<<<<<<< HEAD
-import { Link } from 'react-router-dom';
+// import { Metadata } from 'next'; // Removed for Vite
+
+// export const metadata: Metadata = // Removed for Vite {
+  title: "AI 2026 Enterprise Breakthrough: Revolutionary Business Transformation",
+  description: "Discover the groundbreaking AI 2026 enterprise breakthrough featuring autonomous operations, intelligent automation, and unprecedented business value creation.",
+  keywords: 'AI 2026, enterprise breakthrough, business transformation, autonomous operations, intelligent automation'
+};
 
 export default function AI2026EnterpriseBreakthrough() {
   return (
@@ -88,8 +91,3 @@ export default function AI2026EnterpriseBreakthrough() {
     </div>
   );
 }
-=======
-
-
-// Metadata moved to Helmet component
->>>>>>> cursor/fix-errors-and-merge-to-main-dd0b

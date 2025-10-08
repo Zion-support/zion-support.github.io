@@ -1,9 +1,12 @@
 import React from 'react';
-
-import { Helmet } from 'react-helmet-async';
 import { Star } from 'lucide-react';
-<<<<<<< HEAD
-import { Link } from 'react-router-dom';
+// import { Metadata } from 'next'; // Removed for Vite
+
+// export const metadata: Metadata = // Removed for Vite {
+  title: "AI 2026 February Ultimate Consciousness Breakthrough: Mind-Expanding Technology",
+  description: "Discover the ultimate consciousness breakthrough of AI 2026 February, featuring mind-expanding technology, advanced cognitive systems, and revolutionary AI consciousness.",
+  keywords: 'AI 2026, consciousness breakthrough, mind-expanding technology, cognitive systems, AI consciousness'
+};
 
 export default function AI2026FebruaryUltimateConsciousnessBreakthrough() {
   return (
@@ -88,8 +91,3 @@ export default function AI2026FebruaryUltimateConsciousnessBreakthrough() {
     </div>
   );
 }
-=======
-
-
-// Metadata moved to Helmet component
->>>>>>> cursor/fix-errors-and-merge-to-main-dd0b

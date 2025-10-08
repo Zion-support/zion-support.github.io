@@ -1,7 +1,23 @@
-
-<<<<<<< HEAD
 import React from 'react';
-import { Link } from 'react-router-dom';
+// import { Metadata } from 'next'; // Removed for Vite
+
+// export const metadata: Metadata = // Removed for Vite {
+  title: 'January 2025 Cutting-Edge AI Trends: Revolutionary Breakthrough Technologies | Zion Tech Group',
+  description: 'Explore the latest cutting-edge AI trends and breakthrough technologies transforming enterprise operations in January 2025. Neural consciousness, quantum optimization, and autonomous intelligence.',
+  keywords: 'AI trends 2025, cutting-edge AI, breakthrough technologies, neural consciousness, quantum AI, autonomous intelligence, enterprise AI',
+  openGraph: {
+    title: 'January 2025 Cutting-Edge AI Trends: Revolutionary Breakthrough Technologies | Zion Tech Group',
+    description: 'Explore the latest cutting-edge AI trends and breakthrough technologies transforming enterprise operations in January 2025. Neural consciousness, quantum optimization, and autonomous intelligence.',
+    type: 'article',
+    authors: ['Zion Tech Group'],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'January 2025 Cutting-Edge AI Trends: Revolutionary Breakthrough Technologies',
+    description: 'Latest cutting-edge AI trends revolutionizing enterprise operations with neural consciousness, quantum optimization, and autonomous intelligence.',
+    images: ['/og/january-2025-cutting-edge-trends.jpg']
+  }
+};
 
 export default function January2025CuttingEdgeTrendsBreakthrough() {
   return (
@@ -129,14 +145,16 @@ export default function January2025CuttingEdgeTrendsBreakthrough() {
                 Join leading enterprises embracing cutting-edge AI technologies for revolutionary transformation
               </p>
               <div className="space-x-4">
-                <Link to="/contact"
+                <a 
+                  href="/contact"
                   className="inline-block bg-purple-600 text-white px-6 py-3 rounded-lg hover:bg-purple-700 transition-colors">
                   Get Breakthrough Assessment
-                </Link>
-                <Link to="/services"
+                </a>
+                <a 
+                  href="/services"
                   className="inline-block bg-white text-purple-600 px-6 py-3 rounded-lg border-2 border-purple-600 hover:bg-purple-50 transition-colors">
                   Explore AI Services
-                </Link>
+                </a>
               </div>
             </div>
           </div>
@@ -145,8 +163,3 @@ export default function January2025CuttingEdgeTrendsBreakthrough() {
     </div>
   );
 }
-=======
-
-
-// Metadata moved to Helmet component
->>>>>>> cursor/fix-errors-and-merge-to-main-dd0b

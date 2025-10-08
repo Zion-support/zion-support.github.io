@@ -1,7 +1,17 @@
 import React from 'react';
+// import { Metadata } from 'next'; // Removed for Vite
 
-<<<<<<< HEAD
-import { Link } from 'react-router-dom';
+// export const metadata: Metadata = // Removed for Vite {
+  title: "AI Trends 2026: Future Enterprise Transformation with Quantum Intelligence",
+  description: "Explore the top AI trends shaping enterprise transformation in 2026, from quantum intelligence and conscious computing to autonomous operations and neuromorphic architectures.",
+  keywords: 'AI trends 2026, enterprise transformation, quantum intelligence, conscious computing, autonomous operations',
+  openGraph: {
+    title: 'AI Trends 2026: Future Enterprise Transformation with Quantum Intelligence',
+    description: 'Explore the top AI trends shaping enterprise transformation in 2026, from quantum intelligence and conscious computing to autonomous operations and neuromorphic architectures.',
+    type: 'article',
+    authors: ['Zion Tech Group'],
+  }
+};
 
 export default function AITrends2026FutureEnterpriseTransformation() {
   return (
@@ -119,14 +129,16 @@ export default function AITrends2026FutureEnterpriseTransformation() {
                 Join leading enterprises preparing for the quantum intelligence revolution
               </p>
               <div className="space-x-4">
-                <Link to="/contact"
+                <a 
+                  href="/contact"
                   className="inline-block bg-purple-600 text-white px-6 py-3 rounded-lg hover:bg-purple-700 transition-colors">
                   Get 2026 AI Assessment
-                </Link>
-                <Link to="/services"
+                </a>
+                <a 
+                  href="/services"
                   className="inline-block bg-white text-purple-600 px-6 py-3 rounded-lg border-2 border-purple-600 hover:bg-purple-50 transition-colors">
                   Explore AI Services
-                </Link>
+                </a>
               </div>
             </div>
           </div>
@@ -135,9 +147,3 @@ export default function AITrends2026FutureEnterpriseTransformation() {
     </div>
   );
 }
-=======
-import { Helmet } from 'react-helmet-async';
-
-
-// Metadata moved to Helmet component
->>>>>>> cursor/fix-errors-and-merge-to-main-dd0b

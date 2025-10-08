@@ -1,7 +1,11 @@
 import React from 'react';
+// import { Metadata } from 'next'; // Removed for Vite
 
-<<<<<<< HEAD
-import { Link } from 'react-router-dom';
+// export const metadata: Metadata = // Removed for Vite {
+  title: "AI 2026: Autonomous Business Intelligence Mega Breakthrough - 99% Automation",
+  description: "Revolutionary autonomous business intelligence systems achieving 99% automation with $3.5B+ ROI. Complete implementation guide for enterprise transformation.",
+  keywords: 'autonomous business intelligence, AI automation, business intelligence, data analytics, enterprise AI, BI automation'
+};
 
 export default function BlogPost() {
   return (
@@ -88,14 +92,16 @@ export default function BlogPost() {
                 Join leading enterprises achieving 99% automation with autonomous business intelligence
               </p>
               <div className="space-x-4">
-                <Link to="/contact"
+                <a 
+                  href="/contact"
                   className="inline-block bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition-colors">
                   Get BI Mega Assessment
-                </Link>
-                <Link to="/services"
+                </a>
+                <a 
+                  href="/services"
                   className="inline-block bg-white text-green-600 px-6 py-3 rounded-lg border-2 border-green-600 hover:bg-green-50 transition-colors">
                   Explore AI Services
-                </Link>
+                </a>
               </div>
             </div>
           </div>
@@ -104,9 +110,3 @@ export default function BlogPost() {
     </div>
   );
 }
-=======
-import { Helmet } from 'react-helmet-async';
-
-
-// Metadata moved to Helmet component
->>>>>>> cursor/fix-errors-and-merge-to-main-dd0b

@@ -1,7 +1,23 @@
 import React from 'react';
+// import { Metadata } from 'next'; // Removed for Vite
 
-<<<<<<< HEAD
-import { Link } from 'react-router-dom';
+// export const metadata: Metadata = // Removed for Vite {
+  title: 'March 2025: Autonomous Enterprise Operations Revolution | Zion Tech Group',
+  description: 'Discover how autonomous AI agents are revolutionizing enterprise operations, delivering 85% automation rates and $35 billion in operational savings.',
+  keywords: ['Autonomous AI', 'Enterprise Operations', 'Business Automation', 'AI Agents', 'Operational Efficiency'],
+  openGraph: {
+    title: 'March 2025: Autonomous Enterprise Operations Revolution | Zion Tech Group',
+    description: 'Discover how autonomous AI agents are revolutionizing enterprise operations, delivering 85% automation rates and $35 billion in operational savings.',
+    type: 'article',
+    authors: ['Zion Tech Group'],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'March 2025: Autonomous Enterprise Operations Revolution',
+    description: 'AI agents now manage complex business operations with unprecedented efficiency, delivering $35 billion in operational savings.',
+    images: ['/og/march-2025-autonomous-operations.jpg']
+  }
+};
 
 export default function March2025AutonomousEnterpriseOperationsRevolution() {
   return (
@@ -93,14 +109,16 @@ export default function March2025AutonomousEnterpriseOperationsRevolution() {
                 Join Fortune 500 companies achieving autonomous operations with AI agents
               </p>
               <div className="space-x-4">
-                <Link to="/contact"
+                <a 
+                  href="/contact"
                   className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">
                   Get Autonomous Assessment
-                </Link>
-                <Link to="/services"
+                </a>
+                <a 
+                  href="/services"
                   className="inline-block bg-white text-blue-600 px-6 py-3 rounded-lg border-2 border-blue-600 hover:bg-blue-50 transition-colors">
                   Explore AI Services
-                </Link>
+                </a>
               </div>
             </div>
           </div>
@@ -109,9 +127,3 @@ export default function March2025AutonomousEnterpriseOperationsRevolution() {
     </div>
   );
 }
-=======
-import { Helmet } from 'react-helmet-async';
-
-
-// Metadata moved to Helmet component
->>>>>>> cursor/fix-errors-and-merge-to-main-dd0b

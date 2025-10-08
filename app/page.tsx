@@ -1,5 +1,5 @@
+import { lazy } from 'react';
 import React, { useCallback, useState, useEffect, Suspense, lazy } from 'react';
-import { Link } from 'react-router-dom';
 
 // Dynamically import heavy components for better performance
 const ServiceCard = lazy(() => import('./components/ServiceCard'));
@@ -52,11 +52,12 @@ const HomePage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-white to-purple-50">
       {/* Skip to main content for accessibility */}
-      <Link to="#main-content" 
+      <a 
+        href="#main-content" 
         className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-indigo-600 text-white px-4 py-2 rounded-md z-50"
       >
         Skip to main content
-      </Link>
+      </a>
 
       <main id="main-content" className="container mx-auto px-4 py-16" role="main">
         {/* Hero Section */}
@@ -122,13 +123,14 @@ const HomePage: React.FC = () => {
           <h2 id="cta-heading" className="text-3xl font-bold text-gray-900 mb-6">
             Ready to Get Started?
           </h2>
-          <Link to="tel:+13026009898"
+          <a
+            href="tel:+13026009898"
             onClick={handlePhoneClick}
             className="inline-block bg-indigo-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-4 focus:ring-indigo-300"
             aria-label="Call us at (302) 600-9898"
           >
             Contact Us: (302) 600-9898
-          </Link>
+          </a>
         </section>
       </main>
     </div>

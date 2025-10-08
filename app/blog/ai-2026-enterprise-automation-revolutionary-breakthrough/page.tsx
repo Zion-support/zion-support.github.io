@@ -1,7 +1,17 @@
 import React from 'react';
+// import { Metadata } from 'next'; // Removed for Vite
 
-<<<<<<< HEAD
-import { Link } from 'react-router-dom';
+// export const metadata: Metadata = // Removed for Vite {
+  title: "AI 2026: Revolutionary Enterprise Automation Breakthrough",
+  description: "The most comprehensive guide to AI automation breakthroughs transforming enterprises in 2026.",
+  authors: [{ name: 'Zion Tech Group' }],
+  openGraph: {
+    title: 'AI 2026: Revolutionary Enterprise Automation Breakthrough',
+    description: 'The most comprehensive guide to AI automation breakthroughs transforming enterprises in 2026.',
+    type: 'article',
+    authors: ['Zion Tech Group']
+  }
+};
 
 export default function AI2026EnterpriseAutomationRevolutionaryBreakthrough() {
   return (
@@ -88,14 +98,16 @@ export default function AI2026EnterpriseAutomationRevolutionaryBreakthrough() {
                 Join leading enterprises achieving revolutionary automation for unprecedented business transformation
               </p>
               <div className="space-x-4">
-                <Link to="/contact"
+                <a 
+                  href="/contact"
                   className="inline-block bg-indigo-600 text-white px-6 py-3 rounded-lg hover:bg-indigo-700 transition-colors">
                   Get Automation Assessment
-                </Link>
-                <Link to="/services"
+                </a>
+                <a 
+                  href="/services"
                   className="inline-block bg-white text-indigo-600 px-6 py-3 rounded-lg border-2 border-indigo-600 hover:bg-indigo-50 transition-colors">
                   Explore AI Services
-                </Link>
+                </a>
               </div>
             </div>
           </div>
@@ -104,9 +116,3 @@ export default function AI2026EnterpriseAutomationRevolutionaryBreakthrough() {
     </div>
   );
 }
-=======
-import { Helmet } from 'react-helmet-async';
-
-
-// Metadata moved to Helmet component
->>>>>>> cursor/fix-errors-and-merge-to-main-dd0b

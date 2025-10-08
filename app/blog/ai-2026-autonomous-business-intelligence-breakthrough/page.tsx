@@ -1,7 +1,20 @@
 import React from 'react';
+// import { Metadata } from 'next'; // Removed for Vite
 
-<<<<<<< HEAD
-import { Link } from 'react-router-dom';
+// export const metadata: Metadata = // Removed for Vite {
+  title: 'AI 2026 Autonomous Business Intelligence Breakthrough',
+  description: 'Revolutionary autonomous BI systems delivering 300% ROI improvements and automated decision-making.',
+  keywords: 'AI 2026, autonomous business intelligence, BI automation, enterprise AI, data analytics, business intelligence',
+  openGraph: {
+    authors: ['Zion Tech Group'],
+    siteName: 'Zion Tech Group',
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "AI 2026 Autonomous Business Intelligence Breakthrough",
+    description: "Revolutionary autonomous BI systems delivering 300% ROI improvements and automated decision-making."
+  }
+};
 
 export default function AutonomousBusinessIntelligenceBreakthrough() {
   return (
@@ -89,14 +102,16 @@ export default function AutonomousBusinessIntelligenceBreakthrough() {
                 Join leading enterprises achieving autonomous business intelligence for revolutionary ROI
               </p>
               <div className="space-x-4">
-                <Link to="/contact"
+                <a 
+                  href="/contact"
                   className="inline-block bg-indigo-600 text-white px-6 py-3 rounded-lg hover:bg-indigo-700 transition-colors">
                   Get BI Assessment
-                </Link>
-                <Link to="/services"
+                </a>
+                <a 
+                  href="/services"
                   className="inline-block bg-white text-indigo-600 px-6 py-3 rounded-lg border-2 border-indigo-600 hover:bg-indigo-50 transition-colors">
                   Explore AI Services
-                </Link>
+                </a>
               </div>
             </div>
           </div>
@@ -105,9 +120,3 @@ export default function AutonomousBusinessIntelligenceBreakthrough() {
     </div>
   );
 }
-=======
-import { Helmet } from 'react-helmet-async';
-
-
-// Metadata moved to Helmet component
->>>>>>> cursor/fix-errors-and-merge-to-main-dd0b
