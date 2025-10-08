@@ -161,6 +161,7 @@ export default function RootLayout({
         <meta property="og:image:height" content="630" />
         <meta property="og:site_name" content="Zion Tech Group" />
         
+<<<<<<< HEAD
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:url" content="https://ziontechgroup.com" />
@@ -169,6 +170,15 @@ export default function RootLayout({
         <meta name="twitter:image" content="https://ziontechgroup.com/og-image.jpg" />
         <meta name="twitter:site" content="@ziontechgroup" />
         <meta name="twitter:creator" content="@ziontechgroup" />
+=======
+        {/* Enhanced Twitter Card tags */}
+        <meta name='twitter:card' content='summary_large_image' />
+        <meta name='twitter:title' content='Zion Tech Group - AI & Technology Solutions' />
+        <meta name='twitter:description' content='Transform your business with cutting-edge AI solutions and digital transformation services.' />
+        <meta name='twitter:image' content='https://ziontechgroup.com/og-image.jpg' />
+        <meta name='twitter:site' content='@ziontechgroup' />
+        <meta name='twitter:creator' content='@ziontechgroup' />
+>>>>>>> cursor/website-audit-and-update-with-deployment-26dd
         <script
           type='application/ld+json'
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}

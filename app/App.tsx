@@ -37,6 +37,7 @@ const _TermsPage = lazy(() => import('./terms/page'));
 const _EnterprisePage = lazy(() => import('./enterprise/page'));
 const _ServicesAdvertisingPage = lazy(() => import('./services-advertising/page'));
 const _CaseStudiesPage = lazy(() => import('./case-studies/page'));
+const _SitemapPage = lazy(() => import('./sitemap/page'));
 
 // Utils
 import { lazyLoadImages, preloadCriticalResources, collectPerformanceMetrics, performanceOptimizer } from './utils/performanceOptimizer';
@@ -170,11 +171,19 @@ const App: React.FC = () => {
                         <Route path="/enterprise" element={<_EnterprisePage />} />
                         <Route path="/services-advertising" element={<_ServicesAdvertisingPage />} />
                         <Route path="/case-studies" element={<_CaseStudiesPage />} />
+<<<<<<< HEAD
+=======
+                        <Route path="/sitemap" element={<_SitemapPage />} />
+>>>>>>> cursor/website-audit-and-update-with-deployment-26dd
                       </Routes>
                     </Suspense>
                   </main>
                   <Footer />
+<<<<<<< HEAD
 
+=======
+                  
+>>>>>>> cursor/website-audit-and-update-with-deployment-26dd
                   {/* Performance Dashboard */}
                   <PerformanceDashboard />
                   

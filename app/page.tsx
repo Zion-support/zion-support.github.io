@@ -237,6 +237,7 @@ const HomePage: React.FC = () => {
               </article>
             </Suspense>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
             <Suspense fallback={<ServiceCardSkeleton />}>
@@ -255,6 +256,8 @@ const HomePage: React.FC = () => {
               </article>
             </Suspense>
 >>>>>>> cursor/analyze-improve-and-deploy-application-144c
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-26dd
           </div>
           
           <div className="grid md:grid-cols-3 gap-8">
@@ -303,6 +306,7 @@ const HomePage: React.FC = () => {
             </article>
           </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
           
           <div className="text-center mt-8">
@@ -314,6 +318,8 @@ const HomePage: React.FC = () => {
             </a>
           </div>
 >>>>>>> cursor/analyze-improve-and-deploy-application-144c
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-26dd
         </section>
 
         {/* Content Carousel */}
