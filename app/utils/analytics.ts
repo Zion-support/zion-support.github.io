@@ -204,6 +204,8 @@ export const trackPageView = (path: string, title?: string) =>
   analytics.trackPageView(path, title);
 export const trackError = (error: Error, metadata?: Record<string, unknown>) =>
   analytics.trackError(error, metadata);
+export const trackPerformance = (metric: string, value: number) =>
+  analytics.trackPerformance(metric, value);
 export const trackTiming = (
   category: string,
   variable: string,

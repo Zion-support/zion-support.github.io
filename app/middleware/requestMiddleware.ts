@@ -68,8 +68,7 @@ export const loggingMiddleware: Middleware = async (context, next) => {
   
   logger.info('Request started', 'RequestMiddleware', {
     method: context.request.method,
-    url: context.request.url,
-  });
+    url: context.request.url });
 
   try {
     const result = await next();
@@ -79,8 +78,7 @@ export const loggingMiddleware: Middleware = async (context, next) => {
       method: context.request.method,
       url: context.request.url,
       status: context.response?.status,
-      duration,
-    });
+      duration });
 
     return result;
   } catch (error) {
@@ -89,8 +87,7 @@ export const loggingMiddleware: Middleware = async (context, next) => {
     logger.error('Request failed', error as Error, 'RequestMiddleware', {
       method: context.request.method,
       url: context.request.url,
-      duration,
-    });
+      duration });
 
     throw error;
   }

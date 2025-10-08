@@ -90,7 +90,7 @@ const defaultConfig: LoggerConfig = {
  * @example
  * ```typescript
  * const logger = EnhancedLogger.getInstance();
- * logger.info('User logged in', { userId: '123' });
+ * logger.info('User logged in', undefined, { userId: '123' });
  * logger.error('API request failed', { error: err }, err);
  * ```
  */
@@ -372,7 +372,7 @@ export class EnhancedLogger {
         case LogLevel.FATAL:
           logger.error(message, structuredLog);
           if (entry.stack) {
-            logger.error('Stack trace:', { stack: entry.stack });
+            console.info('Stack trace:', { stack: entry.stack });
           }
           break;
       }

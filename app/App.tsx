@@ -58,11 +58,11 @@ const App: React.FC = () => {
     }
     
     logger.lifecycle('Performance monitoring initialized', 'App');
-    logger.info('🚀 Zion Tech Group App initialized with comprehensive monitoring', { component: 'App' });
+    logger.info('🚀 Zion Tech Group App initialized with comprehensive monitoring', 'App');
   }, []);
 
   const handleError = useCallback((error: Error, errorInfo: any) => {
-    logger.error('Application Error', error, { component: 'ErrorBoundary' });
+    logger.error('Application Error', error, 'ErrorBoundary');
     // eslint-disable-next-line no-console
     console.error('Error info:', errorInfo);
   }, []);
