@@ -1,4 +1,4 @@
-import React, { useEffect, useCallback, useRef } from 'react';
+import React, { useEffect, useCallback } from 'react';
 import { Helmet } from 'react-helmet-async';
 
 interface SEOData {
@@ -232,12 +232,12 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
   //   }
   // };
 
-  // Suppress unused variable warnings
-  void _addMetaTag;
-  void _updateCanonicalUrl;
-  void _addStructuredData;
-  void _trackPageView;
-  void _trackPerformanceMetrics;
+  // Suppress unused variable warnings - these are commented out helper functions
+  // void _addMetaTag;
+  // void _updateCanonicalUrl;
+  // void _addStructuredData;
+  // void _trackPageView;
+  // void _trackPerformanceMetrics;
 
   return (
     <Helmet>
