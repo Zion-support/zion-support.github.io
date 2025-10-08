@@ -161,9 +161,12 @@ const App: React.FC = () => {
                       <Route path="/enterprise" element={<EnterprisePage />} />
                       <Route path="/services-advertising" element={<ServicesAdvertisingPage />} />
                       <Route path="/case-studies" element={<CaseStudiesPage />} />
+<<<<<<< HEAD
                       <Route path="/ai-services" element={<lazy(() => import('./ai-services/page')) />} />
                       <Route path="/it-services" element={<lazy(() => import('./it-services/page')) />} />
                       <Route path="/micro-saas" element={<lazy(() => import('./micro-saas/page')) />} />
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-913d
                     </Routes>
                   </Suspense>
                 </main>
