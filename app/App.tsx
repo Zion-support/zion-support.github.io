@@ -3,30 +3,31 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 
 // Components
-import ErrorBoundary from '../src/components/ErrorBoundary';
-import SEOOptimizer from '../src/components/SEOOptimizer';
-import AccessibilityEnhancer from './components/AccessibilityEnhancer';
-import PerformanceDashboard from './components/PerformanceDashboard';
-import Navigation from './components/Navigation';
-import Footer from './components/Footer';
-import LoadingSpinner from './components/LoadingSpinner';
-
-// Utils
-// import { performanceOptimizer } from '../src/utils/performanceOptimizer';
-
-// Styles
-import '../src/index.css';
+>>>>>>> origin/fix-merge-conflicts-final
 
 // Lazy load pages for better performance
 const HomePage = lazy(() => import('./page'));
 
+
+// Styles
+import '../index.css';
+
 const App: React.FC = () => {
   useEffect(() => {
     // Initialize global error handling
-    if (process.env['NODE_ENV'] === 'development') {
-      console.log('App initialized');
-      console.log('Performance monitoring initialized');
-      console.log('🚀 Zion Tech Group App initialized with comprehensive monitoring');
+    console.log('App initialized');
+
+    // Initialize performance monitoring
+    performanceOptimizer.lazyLoadImages();
+    prefetchResources(['/api/health']);
+    
+    // Initialize Web Vitals monitoring
+    if (typeof window !== 'undefined' && 'performance' in window) {
+      const metrics = performanceOptimizer.measurePageLoad();
+      if (metrics) {
+        performanceOptimizer.reportWebVitals(metrics);
+      }
+>>>>>>> origin/fix-merge-conflicts-final
     }
   }, []);
 
@@ -54,20 +55,21 @@ const App: React.FC = () => {
                 >
                   Skip to main content
                 </a>
-                <Navigation />
-                <Suspense fallback={<LoadingSpinner />}>
-                  <Routes>
-                    <Route path='/' element={<HomePage />} />
-                    {/* Add more routes as needed */}
-                  </Routes>
-                </Suspense>
-                <Footer />
+
+              <Suspense fallback={<LoadingSpinner />}>
+                <Routes>
+                  <Route path='/' element={<HomePage />} />
+                  {/* Add more routes as needed */}
+                </Routes>
+              </Suspense>
+
                 {/* Performance Dashboard */}
                 <PerformanceDashboard />
               </div>
             </Router>
           </AccessibilityEnhancer>
         </SEOOptimizer>
+>>>>>>> 5fd561acd32fd4817eedd259cb34bdcff04831f0
       </ErrorBoundary>
     </HelmetProvider>
   );

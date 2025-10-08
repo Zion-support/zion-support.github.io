@@ -2,12 +2,17 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://zion.app/</loc>
+<<<<<<< HEAD
     <lastmod>2025-01-01</lastmod>
+=======
+    <lastmod>2025-10-05T11:44:26.970Z</lastmod>
+>>>>>>> origin/fix-merge-conflicts-final
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://zion.app/about</loc>
+<<<<<<< HEAD
     <lastmod>2025-01-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -35,5 +40,58 @@
     <lastmod>2025-01-01</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
+=======
+    <lastmod>2025-10-05T11:44:26.970Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://zion.app/services</loc>
+    <lastmod>2025-10-05T11:44:26.970Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://zion.app/services/ai-services</loc>
+    <lastmod>2025-10-05T11:44:26.970Z</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://zion.app/services/it-services</loc>
+    <lastmod>2025-10-05T11:44:26.970Z</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://zion.app/services/micro-saas</loc>
+    <lastmod>2025-10-05T11:44:26.970Z</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://zion.app/services/ai-powered-crm</loc>
+    <lastmod>2025-10-05T11:44:26.970Z</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://zion.app/services/smart-invoice-generator</loc>
+    <lastmod>2025-10-05T11:44:26.970Z</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://zion.app/services/ai-meeting-assistant</loc>
+    <lastmod>2025-10-05T11:44:26.970Z</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://zion.app/contact</loc>
+    <lastmod>2025-10-05T11:44:26.970Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+>>>>>>> origin/fix-merge-conflicts-final
   </url>
 </urlset>

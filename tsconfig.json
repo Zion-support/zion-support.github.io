@@ -9,7 +9,12 @@
     ],
     "module": "ESNext",
     "skipLibCheck": true,
+<<<<<<< HEAD
     "allowImportingTsExtensions": false,
+=======
+    "moduleResolution": "node",
+    "allowImportingTsExtensions": true,
+>>>>>>> origin/fix-merge-conflicts-final
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
@@ -57,6 +62,7 @@
     "noImplicitAny": true,
     "noImplicitReturns": true,
     "noImplicitThis": true,
+<<<<<<< HEAD
     "exactOptionalPropertyTypes": true,
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,
@@ -66,16 +72,21 @@
     "noImplicitAny": false,
     "noImplicitReturns": false,
     "noImplicitThis": false,
+=======
+>>>>>>> origin/fix-merge-conflicts-final
     "exactOptionalPropertyTypes": false,
     "noImplicitOverride": false,
     "noPropertyAccessFromIndexSignature": false,
     "noUncheckedIndexedAccess": false,
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-3f25
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-b1c3
+=======
+>>>>>>> origin/fix-merge-conflicts-final
     "allowUnusedLabels": false,
     "allowUnreachableCode": false,
-    "verbatimModuleSyntax": true
+    "verbatimModuleSyntax": false
   },
   "include": [
     "app/**/*",
