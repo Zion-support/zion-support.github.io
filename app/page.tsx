@@ -1,12 +1,4 @@
-'use client';
-
 import React, { useCallback, useState, useEffect, Suspense } from 'react';
-import dynamic from 'next/dynamic';
-
-// Dynamically import heavy components for better performance
-const ServiceCard = dynamic(() => import('./components/ServiceCard'), {
-  loading: () => <ServiceCardSkeleton />,
-});
 
 // Loading skeleton component
 const ServiceCardSkeleton: React.FC = () => (

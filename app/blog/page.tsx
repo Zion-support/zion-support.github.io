@@ -1,6 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
-import { Metadata } from 'next';
+import { Link } from 'react-router-dom';
 
 export const metadata: Metadata = {
   title: 'AI & Technology Blog | Zion Tech Group',

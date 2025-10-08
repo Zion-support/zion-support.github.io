@@ -1,11 +1,5 @@
 import React from 'react';
-import { Metadata } from 'next';
-import Link from 'next/link';
-
-export const metadata: Metadata = {
-  title: 'Enterprise Solutions - Zion Tech Group',
-  description: 'Comprehensive AI and IT solutions for enterprise organizations. Transform your business with our advanced technology stack.',
-};
+import { Link } from 'react-router-dom';
 
 const EnterprisePage: React.FC = () => {
   return (
