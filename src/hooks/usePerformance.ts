@@ -1,20 +1,33 @@
-        analytics.track(
-          'long_task',
-          'performance',
-          'detected',
-          undefined,
-          entry.duration
-        );
-      });
-    });
+import { useEffect, useState } from 'react';
 
-    return () => {
-      if (observer && typeof observer.disconnect === 'function') {
-        observer.disconnect();
+export interface PerformanceMetrics {
+  fcp?: number;
+  lcp?: number;
+  fid?: number;
+  cls?: number;
+  ttfb?: number;
+  inp?: number;
+}
+
+export const usePerformance = () => {
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({});
+
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+
+    const updateMetrics = () => {
+      const newMetrics: PerformanceMetrics = {};
+      const perfData = window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      if (perfData) {
+        newMetrics.ttfb = perfData.responseStart - perfData.requestStart;
       }
+      setMetrics(newMetrics);
     };
+
+    updateMetrics();
   }, []);
+
+  return metrics;
 };
 
 export default usePerformance;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-88f7

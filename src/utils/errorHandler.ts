@@ -1,77 +1,40 @@
-/**
- * Error handling utilities
- * Enhanced with retry logic, error categorization, and better reporting
- */
+// Error handling utilities
+
+export class AppError extends Error {
+  statusCode: number;
+  isOperational: boolean;
+
+  constructor(message: string, statusCode: number = 500, isOperational: boolean = true) {
+    super(message);
+    this.statusCode = statusCode;
+    this.isOperational = isOperational;
+    Object.setPrototypeOf(this, AppError.prototype);
+  }
 }
 
-export enum ErrorCategory {
-  NETWORK = 'network',
-  VALIDATION = 'validation',
-  RUNTIME = 'runtime',
-  API = 'api',
-  UI = 'ui',
-  UNKNOWN = 'unknown',
-}
+export const handleError = (error: Error | AppError): void => {
+  const statusCode = error instanceof AppError ? error.statusCode : 500;
+  const message = error.message || 'Internal Server Error';
 
-export interface ErrorInfo {
-  message: string;
-  stack?: string;
-  componentStack?: string;
-  errorBoundary?: string;
-  errorBoundaryStack?: string;
-  errorId?: string;
-  timestamp?: string;
-  userAgent?: string;
-  url?: string;
-  userId?: string;
-  severity?: ErrorSeverity;
-  category?: ErrorCategory;
-  metadata?: Record<string, unknown>;
-}
+  console.error('Error:', {
+    message,
+    statusCode,
+    stack: error.stack,
+  });
 
-export class ErrorHandler {
-  private static instance: ErrorHandler;
-  private errorQueue: ErrorInfo[] = [];
-  private maxQueueSize = 100;
+  // In production, you might want to send errors to a logging service
+  if (process.env.NODE_ENV === 'production') {
+    // Send to logging service
+  }
+};
 
-  static getInstance(): ErrorHandler {
-    if (!ErrorHandler.instance) {
-      ErrorHandler.instance = new ErrorHandler();
+export const asyncErrorHandler = (fn: Function) => {
+  return async (...args: any[]) => {
+    try {
+      return await fn(...args);
+    } catch (error) {
+      handleError(error as Error);
+      throw error;
     }
-    return ErrorHandler.instance;
-  }
-
-  /**
-   * Log an error with automatic categorization
-   */
-  logError(error: Error, errorInfo?: Partial<ErrorInfo>): void {
-    const category = this.categorizeError(error);
-    const severity = this.determineSeverity(error, category);
-    
-    const errorData: ErrorInfo = {
-      message: error.message,
-      stack: error.stack,
-      timestamp: new Date().toISOString(),
-      userAgent: typeof window !== 'undefined' ? window.navigator.userAgent : undefined,
-      url: typeof window !== 'undefined' ? window.location.href : undefined,
-      errorId: this.generateErrorId(),
-      category,
-      severity,
-      ...errorInfo,
-    };
-    }
-
-    // Send to error reporting service
-    this.reportError(errorData);
-  }
-
-  /**
-    }
-  }
-
-  /**
-    return [...this.errorQueue];
-  }
-
-  /**
-   * Clear error queue
+  };
+};
