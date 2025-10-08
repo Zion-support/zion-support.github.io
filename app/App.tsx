@@ -1,6 +1,6 @@
 'use client';
 
-import React, { Suspense, lazy, useEffect, useCallback } from 'react';
+import React, { Suspense, lazy, useEffect } from 'react';
 import { HelmetProvider } from 'react-helmet-async';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
@@ -55,7 +55,7 @@ const App: React.FC = () => {
         enableErrorReporting={true}
         enableRetry={true}
         onError={(error, errorInfo) => {
-          logger.error('Application Error', error, { component: 'ErrorBoundary', errorInfo });
+          logger.error('Application Error', 'ErrorBoundary', { error: error.message, errorInfo });
         }}
       >
         <AccessibilityEnhancer>
@@ -64,12 +64,27 @@ const App: React.FC = () => {
             description="Leading provider of enterprise AI solutions, quantum computing, and autonomous systems. Transform your business with our cutting-edge technology."
           >
             <AdvancedSEOOptimizer
-              config={{
+              seoData={{
                 title: 'Zion Tech Group - Advanced AI and IT Solutions',
                 description: 'Leading provider of enterprise AI solutions, quantum computing, and autonomous systems. Transform your business with our cutting-edge technology.',
                 keywords: ['AI solutions', 'enterprise AI', 'quantum computing', 'autonomous systems', 'digital transformation', 'automation', 'cloud services', 'AI consulting', 'business intelligence', 'machine learning'],
-                url: 'https://ziontechgroup.com',
-                canonicalUrl: 'https://ziontechgroup.com'
+                canonicalUrl: 'https://ziontechgroup.com',
+                ogImage: 'https://ziontechgroup.com/og-image.jpg',
+                structuredData: {
+                  '@type': 'TechCompany',
+                  name: 'Zion Tech Group',
+                  description: 'Advanced AI and IT Solutions Provider',
+                  foundingDate: '2020',
+                  numberOfEmployees: '50-100',
+                  industry: 'Technology',
+                  services: [
+                    'AI Solutions',
+                    'Digital Transformation',
+                    'Cloud Services',
+                    'Automation',
+                    'Business Intelligence'
+                  ]
+                }
               }}
               enableStructuredData={true}
               enableOpenGraph={true}

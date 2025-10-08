@@ -195,5 +195,6 @@
     {
       "path": "./tsconfig.node.json"
     }
+
   ]
 }
