@@ -134,23 +134,27 @@ class Logger {
   /**
    * Log a performance metric
    */
-  perf(metric: string, value: number, context?: string, metadata?: Record<string, unknown>): void {
-    this.log(LogLevel.DEBUG, `Performance: ${metric} = ${value}ms`, context, { ...metadata, metric, value });
+  perf(metric: string, value: number, metadata?: Record<string, unknown>): void {
+    this.log(LogLevel.DEBUG, `Performance: ${metric}`, 'Performance', {
+      ...metadata,
+      metric,
+      value,
+    });
   }
 
   /**
    * Group related log messages
    */
-  group(label: string, callback: () => void, context?: string): void {
+  group(label: string, fn: () => void): void {
     if (this.config.enableConsole) {
       console.group(label);
-    }
-    try {
-      callback();
-    } finally {
-      if (this.config.enableConsole) {
+      try {
+        fn();
+      } finally {
         console.groupEnd();
       }
+    } else {
+      fn();
     }
   }
 
@@ -159,31 +163,6 @@ class Logger {
    */
   child(context: string): ContextLogger {
     return new ContextLogger(this, context);
-  }
-
-  /**
-   * Group related logs together (for console grouping)
-   */
-  group(label: string): void {
-    if (typeof console.group !== 'undefined') {
-      console.group(label);
-    }
-  }
-
-  /**
-   * End a log group
-   */
-  groupEnd(): void {
-    if (typeof console.groupEnd !== 'undefined') {
-      console.groupEnd();
-    }
-  }
-
-  /**
-   * Log performance measurements
-   */
-  perf(label: string, duration: number, metadata?: Record<string, unknown>): void {
-    this.info(`⚡ ${label}: ${duration.toFixed(2)}ms`, 'Performance', metadata);
   }
 
   /**

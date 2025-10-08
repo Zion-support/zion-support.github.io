@@ -132,7 +132,9 @@ export const errorHandlingMiddleware: Middleware = async (context, next) => {
       method: context.request.method,
     };
 
-    logger.error('Request error handled', error as Error, 'ErrorHandlingMiddleware', standardError);
+    logger.error('Request error handled', error as Error, 'ErrorHandlingMiddleware', {
+      ...standardError,
+    });
 
     throw standardError;
   }
