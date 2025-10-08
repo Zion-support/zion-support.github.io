@@ -15,7 +15,8 @@ function processFile(filePath) {
     const isInComponents = filePath.includes('/components/');
     const isInGuides = filePath.includes('/guides/');
     const isInPages = filePath.includes('/pages/');
-    const isInApp = filePath.includes('/app/') && !isInBlog && !isInComponents && !isInGuides && !isInPages;
+    const isInApp =
+      filePath.includes('/app/') && !isInBlog && !isInComponents && !isInGuides && !isInPages;
 
     let utilsPath, typesPath;
 
@@ -37,40 +38,40 @@ function processFile(filePath) {
     const replacements = [
       {
         pattern: /import\s+Link\s+from\s+'\.\/utils\/link';/g,
-        replacement: `import Link from '${utilsPath}link';`
+        replacement: `import Link from '${utilsPath}link';`,
       },
       {
         pattern: /import\s+Image\s+from\s+'\.\/utils\/image';/g,
-        replacement: `import Image from '${utilsPath}image';`
+        replacement: `import Image from '${utilsPath}image';`,
       },
       {
         pattern: /import\s+dynamic\s+from\s+'\.\/utils\/dynamic';/g,
-        replacement: `import dynamic from '${utilsPath}dynamic';`
+        replacement: `import dynamic from '${utilsPath}dynamic';`,
       },
       {
         pattern: /import\s+{\s*useRouter\s*}\s+from\s+'\.\/utils\/navigation';/g,
-        replacement: `import { useRouter } from '${utilsPath}navigation';`
+        replacement: `import { useRouter } from '${utilsPath}navigation';`,
       },
       {
         pattern: /import\s+{\s*usePathname\s*}\s+from\s+'\.\/utils\/navigation';/g,
-        replacement: `import { usePathname } from '${utilsPath}navigation';`
+        replacement: `import { usePathname } from '${utilsPath}navigation';`,
       },
       {
         pattern: /import\s+{\s*useSearchParams\s*}\s+from\s+'\.\/utils\/navigation';/g,
-        replacement: `import { useSearchParams } from '${utilsPath}navigation';`
+        replacement: `import { useSearchParams } from '${utilsPath}navigation';`,
       },
       {
         pattern: /import\s+{\s*Metadata\s*}\s+from\s+'\.\/types\/next';/g,
-        replacement: `import { Metadata } from '${typesPath}next';`
+        replacement: `import { Metadata } from '${typesPath}next';`,
       },
       {
         pattern: /import\s+{\s*MetadataRoute\s*}\s+from\s+'\.\/types\/next';/g,
-        replacement: `import { MetadataRoute } from '${typesPath}next';`
+        replacement: `import { MetadataRoute } from '${typesPath}next';`,
       },
       {
         pattern: /import\s+type\s+{\s*Metadata\s*}\s+from\s+'\.\/types\/next';/g,
-        replacement: `import type { Metadata } from '${typesPath}next';`
-      }
+        replacement: `import type { Metadata } from '${typesPath}next';`,
+      },
     ];
 
     replacements.forEach(({ pattern, replacement }) => {

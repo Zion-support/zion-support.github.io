@@ -65,7 +65,7 @@ export class MiddlewareExecutor {
  */
 export const loggingMiddleware: Middleware = async (context, next) => {
   const startTime = Date.now();
-  
+
   logger.info('Request started', 'RequestMiddleware', {
     component: 'RequestMiddleware',
     method: context.request.method,
@@ -147,10 +147,7 @@ export const errorHandlingMiddleware: Middleware = async (context, next) => {
 /**
  * Rate limiting middleware
  */
-export const rateLimitMiddleware = (
-  maxRequests: number,
-  windowMs: number
-): Middleware => {
+export const rateLimitMiddleware = (maxRequests: number, windowMs: number): Middleware => {
   const requests = new Map<string, number[]>();
 
   return async (context, next) => {
@@ -159,7 +156,7 @@ export const rateLimitMiddleware = (
     const timestamps = requests.get(key) || [];
 
     // Remove expired timestamps
-    const validTimestamps = timestamps.filter((t) => now - t < windowMs);
+    const validTimestamps = timestamps.filter(t => now - t < windowMs);
 
     if (validTimestamps.length >= maxRequests) {
       throw new Error('Rate limit exceeded');
@@ -216,12 +213,16 @@ export const retryMiddleware = (maxRetries: number, delay: number): Middleware =
         lastError = error as Error;
 
         if (attempt < maxRetries) {
-          logger.warn(`Request failed, retrying (${attempt + 1}/${maxRetries})`, 'RetryMiddleware', {
-            component: 'RetryMiddleware',
-            url: context.request.url,
-          });
+          logger.warn(
+            `Request failed, retrying (${attempt + 1}/${maxRetries})`,
+            'RetryMiddleware',
+            {
+              component: 'RetryMiddleware',
+              url: context.request.url,
+            }
+          );
 
-          await new Promise((resolve) => setTimeout(resolve, delay * Math.pow(2, attempt)));
+          await new Promise(resolve => setTimeout(resolve, delay * Math.pow(2, attempt)));
         }
       }
     }
@@ -237,9 +238,7 @@ export const timeoutMiddleware = (timeoutMs: number): Middleware => {
   return async (context, next) => {
     return await Promise.race([
       next(),
-      new Promise((_, reject) =>
-        setTimeout(() => reject(new Error('Request timeout')), timeoutMs)
-      ),
+      new Promise((_, reject) => setTimeout(() => reject(new Error('Request timeout')), timeoutMs)),
     ]);
   };
 };

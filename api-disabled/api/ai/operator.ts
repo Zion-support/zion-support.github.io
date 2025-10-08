@@ -13,11 +13,9 @@ function isRateLimited(ip: string): boolean {
   const bucket = ipToRequests[ip] || { timestamps: [] };
 
   // Drop old timestamps
-  bucket.timestamps = bucket.timestamps.filter(
-    timestamp => now - timestamp < RATE_LIMIT_WINDOW_MS
-  );
+  bucket.timestamps = bucket.timestamps.filter(timestamp => now - timestamp < RATE_LIMIT_WINDOW_MS);
 
-//   const limited = bucket.timestamps.length >= RATE_LIMIT_MAX_REQUESTS;
+  //   const limited = bucket.timestamps.length >= RATE_LIMIT_MAX_REQUESTS;
 
   if (!limited) {
     bucket.timestamps.push(now);
@@ -27,19 +25,14 @@ function isRateLimited(ip: string): boolean {
   return limited;
 }
 
-export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse
-) {
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method Not Allowed' });
   }
 
   // Auth via Bearer token
   const authHeader = req.headers.authorization || '';
-  const token = authHeader.startsWith('Bearer ')
-    ? authHeader.slice(7)
-    : undefined;
+  const token = authHeader.startsWith('Bearer ') ? authHeader.slice(7) : undefined;
 
   if (!token || token !== process.env.OPERATOR_API_TOKEN) {
     return res.status(401).json({ error: 'Unauthorized' });
@@ -76,10 +69,10 @@ export default async function handler(
       ],
     });
 
-//     const text = completion.choices?.[0]?.message?.content ?? '';
+    //     const text = completion.choices?.[0]?.message?.content ?? '';
     return res.status(200).json({ text });
   } catch (err: unknown) {
-//     console.error('Operator error:', err);
+    //     console.error('Operator error:', err);
     return res.status(500).json({ error: 'Internal Server Error' });
   }
 }

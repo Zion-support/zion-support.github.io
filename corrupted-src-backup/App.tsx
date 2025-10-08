@@ -15,11 +15,11 @@ import './index.css';
 function App() {
   useEffect(() => {
     // Initialize basic optimizations
-//     console.log('App initialized successfully');
+    //     console.log('App initialized successfully');
 
     // Cleanup on unmount
     return () => {
-//       console.log('App cleanup');
+      //       console.log('App cleanup');
     };
   }, []);
 
@@ -29,14 +29,14 @@ function App() {
         <Router>
           <Suspense fallback={<div>Loading...</div>}>
             <Routes>
-              <Route path='/' element={<Home />} />
-              <Route path='/about' element={<About />} />
-              <Route path='/services' element={<Services />} />
-              <Route path='/blog' element={<Blog />} />
-              <Route path='/contact' element={<Contact />} />
-              <Route path='/team' element={<Team />} />
-              <Route path='/privacy' element={<Privacy />} />
-              <Route path='/terms' element={<Terms />} />
+              <Route path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/services" element={<Services />} />
+              <Route path="/blog" element={<Blog />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/team" element={<Team />} />
+              <Route path="/privacy" element={<Privacy />} />
+              <Route path="/terms" element={<Terms />} />
             </Routes>
           </Suspense>
         </Router>
@@ -50,10 +50,7 @@ class ErrorBoundary extends React.Component<
   { children: React.ReactNode; fallback?: React.ReactNode },
   { hasError: boolean }
 > {
-  constructor(props: {
-    children: React.ReactNode;
-    fallback?: React.ReactNode;
-  }) {
+  constructor(props: { children: React.ReactNode; fallback?: React.ReactNode }) {
     super(props);
     this.state = { hasError: false };
   }
@@ -63,21 +60,19 @@ class ErrorBoundary extends React.Component<
   }
 
   componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
-//     console.error('Error caught by boundary:', error, errorInfo);
+    //     console.error('Error caught by boundary:', error, errorInfo);
   }
 
   render() {
     if (this.state.hasError) {
       return (
         this.props.fallback || (
-          <div className='min-h-screen flex items-center justify-center bg-gray-50'>
-            <div className='text-center'>
-              <h1 className='text-2xl font-bold text-gray-900 mb-4'>
-                Something went wrong
-              </h1>
+          <div className="min-h-screen flex items-center justify-center bg-gray-50">
+            <div className="text-center">
+              <h1 className="text-2xl font-bold text-gray-900 mb-4">Something went wrong</h1>
               <button
                 onClick={() => this.setState({ hasError: false })}
-                className='bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700'
+                className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
               >
                 Try again
               </button>

@@ -9,21 +9,18 @@ class SecurityEnhancer {
       location.protocol !== 'https:' &&
       location.hostname !== 'localhost'
     ) {
-      location.replace(
-        'https:' +
-          window.location.href.substring(window.location.protocol.length)
-      );
+      location.replace('https:' + window.location.href.substring(window.location.protocol.length));
     }
   }
 
   private setupXSSProtection(): void {
     // XSS protection setup
-//     console.log('XSS protection configured');
+    //     console.log('XSS protection configured');
   }
 
   private setupSecurityHeaders(): void {
     // Additional security headers setup
-//     console.log('Security headers configured');
+    //     console.log('Security headers configured');
   }
 
   public static getInstance(): SecurityEnhancer {

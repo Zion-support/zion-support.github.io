@@ -23,7 +23,7 @@ export default defineConfig({
     assetsInlineLimit: 4096,
     reportCompressedSize: true,
     rollupOptions: {
-      external: (id) => {
+      external: id => {
         // Externalize Next.js modules to prevent build errors
         if (id.includes('next/') || id.includes('next')) {
           return true;
@@ -31,7 +31,7 @@ export default defineConfig({
         return false;
       },
       output: {
-        manualChunks: (id) => {
+        manualChunks: id => {
           // Core React libraries
           if (id.includes('node_modules/react') || id.includes('node_modules/react-dom')) {
             return 'vendor';
@@ -41,7 +41,10 @@ export default defineConfig({
             return 'router';
           }
           // UI libraries
-          if (id.includes('node_modules/framer-motion') || id.includes('node_modules/lucide-react')) {
+          if (
+            id.includes('node_modules/framer-motion') ||
+            id.includes('node_modules/lucide-react')
+          ) {
             return 'ui';
           }
           // Utilities and web vitals
@@ -62,7 +65,7 @@ export default defineConfig({
       compress: {
         drop_console: true,
         drop_debugger: true,
-//         pure_funcs: ['console.log', 'console.info', 'console.debug'],
+        //         pure_funcs: ['console.log', 'console.info', 'console.debug'],
         passes: 3,
         unsafe: true,
         unsafe_comps: true,

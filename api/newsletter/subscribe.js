@@ -35,7 +35,7 @@ async function handler(req, res) {
       subscription,
     });
   } catch {
-//     console.error('Newsletter subscription error:', error);
+    //     console.error('Newsletter subscription error:', error);
     res.statusCode = 500;
     res.json({ error: 'Failed to subscribe to newsletter' });
   }

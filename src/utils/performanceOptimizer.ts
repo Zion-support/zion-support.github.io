@@ -29,8 +29,7 @@ export interface PerformanceBudget {
  * Lazy load images with Intersection Observer
  */
 export const lazyLoadImages = (): void => {
-  if (typeof window === 'undefined' || !('IntersectionObserver' in window))
-    return;
+  if (typeof window === 'undefined' || !('IntersectionObserver' in window)) return;
 
   const imageObserver = new IntersectionObserver(
     entries => {
@@ -144,8 +143,7 @@ export const measurePageLoad = (): WebVitalsMetrics | null => {
     TTFB: perfData.responseStart - perfData.navigationStart,
     loadTime: perfData.loadEventEnd - perfData.navigationStart,
     interactiveTime: perfData.domInteractive - perfData.navigationStart,
-    domContentLoaded:
-      perfData.domContentLoadedEventEnd - perfData.navigationStart,
+    domContentLoaded: perfData.domContentLoadedEventEnd - perfData.navigationStart,
   };
 };
 
@@ -160,11 +158,7 @@ export const reportWebVitals = (metrics: WebVitalsMetrics): void => {
     typeof window !== 'undefined' &&
     (
       window as unknown as {
-        gtag?: (
-          command: string,
-          eventName: string,
-          parameters: Record<string, unknown>
-        ) => void;
+        gtag?: (command: string, eventName: string, parameters: Record<string, unknown>) => void;
       }
     ).gtag
   ) {
@@ -172,11 +166,7 @@ export const reportWebVitals = (metrics: WebVitalsMetrics): void => {
       if (value !== undefined) {
         (
           window as unknown as {
-            gtag: (
-              command: string,
-              eventName: string,
-              parameters: Record<string, unknown>
-            ) => void;
+            gtag: (command: string, eventName: string, parameters: Record<string, unknown>) => void;
           }
         ).gtag('event', key, {
           value: Math.round(value),
@@ -194,8 +184,7 @@ export const reportWebVitals = (metrics: WebVitalsMetrics): void => {
 export const monitorLongTasks = (
   callback: (entries: PerformanceEntry[]) => void
 ): PerformanceObserver | null => {
-  if (typeof window === 'undefined' || !('PerformanceObserver' in window))
-    return null;
+  if (typeof window === 'undefined' || !('PerformanceObserver' in window)) return null;
 
   try {
     const observer = new PerformanceObserver(list => {
@@ -301,13 +290,9 @@ class PerformanceOptimizer {
 
   public initialize(): void {
     this.measurePerformance('lazyLoadImages', () => this.lazyLoadImages());
-    this.measurePerformance('preloadCriticalResources', () =>
-      this.preloadCriticalResources()
-    );
+    this.measurePerformance('preloadCriticalResources', () => this.preloadCriticalResources());
     this.measurePerformance('optimizeScroll', () => this.optimizeScroll());
-    this.measurePerformance('addCriticalResourceHints', () =>
-      this.addCriticalResourceHints()
-    );
+    this.measurePerformance('addCriticalResourceHints', () => this.addCriticalResourceHints());
   }
 }
 

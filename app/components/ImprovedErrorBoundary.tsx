@@ -55,7 +55,7 @@ class ImprovedErrorBoundary extends Component<Props, State> {
     }
 
     // Update state with error details
-    this.setState((prevState) => ({
+    this.setState(prevState => ({
       errorInfo,
       errorCount: prevState.errorCount + 1,
     }));
@@ -83,7 +83,7 @@ class ImprovedErrorBoundary extends Component<Props, State> {
       const resetKeysChanged = this.props.resetKeys.some(
         (key, index) => key !== prevProps.resetKeys![index]
       );
-      
+
       if (resetKeysChanged && this.state.hasError) {
         this.resetErrorBoundary();
       }
@@ -122,7 +122,7 @@ class ImprovedErrorBoundary extends Component<Props, State> {
             <p style={styles.message}>
               We're sorry for the inconvenience. The application encountered an unexpected error.
             </p>
-            
+
             {process.env['NODE_ENV'] === 'development' && this.state.error && (
               <details style={styles.details}>
                 <summary style={styles.summary}>Error Details (Development Only)</summary>
@@ -131,9 +131,7 @@ class ImprovedErrorBoundary extends Component<Props, State> {
                     <strong>Error:</strong> {this.state.error.message}
                   </p>
                   {this.state.error.stack && (
-                    <pre style={styles.stack}>
-                      {this.state.error.stack}
-                    </pre>
+                    <pre style={styles.stack}>{this.state.error.stack}</pre>
                   )}
                   {this.state.errorInfo?.componentStack && (
                     <pre style={styles.stack}>
@@ -155,14 +153,14 @@ class ImprovedErrorBoundary extends Component<Props, State> {
               </button>
               <button
                 onClick={this.handleReload}
-                style={{...styles.button, ...styles.secondaryButton}}
+                style={{ ...styles.button, ...styles.secondaryButton }}
                 aria-label="Reload Page"
               >
                 Reload Page
               </button>
               <button
                 onClick={this.handleGoHome}
-                style={{...styles.button, ...styles.secondaryButton}}
+                style={{ ...styles.button, ...styles.secondaryButton }}
                 aria-label="Go to Homepage"
               >
                 Go Home
@@ -170,9 +168,7 @@ class ImprovedErrorBoundary extends Component<Props, State> {
             </div>
 
             {this.state.errorCount > 1 && (
-              <p style={styles.errorCount}>
-                This error has occurred {this.state.errorCount} times
-              </p>
+              <p style={styles.errorCount}>This error has occurred {this.state.errorCount} times</p>
             )}
           </div>
         </div>
@@ -191,7 +187,8 @@ const styles = {
     justifyContent: 'center',
     padding: '20px',
     backgroundColor: '#f5f5f5',
-    fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif',
+    fontFamily:
+      '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif',
   },
   content: {
     maxWidth: '600px',

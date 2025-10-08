@@ -19,7 +19,7 @@ export const generateCSP = (): string => {
     "base-uri 'self'",
     "form-action 'self'",
     "frame-ancestors 'none'",
-    "upgrade-insecure-requests",
+    'upgrade-insecure-requests',
   ];
 
   return cspDirectives.join('; ');
@@ -79,7 +79,7 @@ export const escapeHTML = (text: string): string => {
     "'": '&#x27;',
     '/': '&#x2F;',
   };
-  return text.replace(/[&<>"'/]/g, (char) => map[char]);
+  return text.replace(/[&<>"'/]/g, char => map[char]);
 };
 
 /**
@@ -128,7 +128,7 @@ export class RateLimiter {
     const requests = this.requests.get(key) || [];
 
     // Remove old requests outside the window
-    const validRequests = requests.filter((timestamp) => now - timestamp < this.window);
+    const validRequests = requests.filter(timestamp => now - timestamp < this.window);
 
     if (validRequests.length >= this.limit) {
       return false;
@@ -152,7 +152,7 @@ export class RateLimiter {
   getRemaining(key: string): number {
     const now = Date.now();
     const requests = this.requests.get(key) || [];
-    const validRequests = requests.filter((timestamp) => now - timestamp < this.window);
+    const validRequests = requests.filter(timestamp => now - timestamp < this.window);
     return Math.max(0, this.limit - validRequests.length);
   }
 }
@@ -210,7 +210,7 @@ export class SecureStorage {
    */
   clear(): void {
     const keys = Object.keys(localStorage);
-    keys.forEach((key) => {
+    keys.forEach(key => {
       if (key.startsWith(this.prefix)) {
         localStorage.removeItem(key);
       }
@@ -282,10 +282,7 @@ export const sanitizeFileName = (fileName: string): string => {
 /**
  * Check if file type is allowed
  */
-export const isAllowedFileType = (
-  fileName: string,
-  allowedExtensions: string[]
-): boolean => {
+export const isAllowedFileType = (fileName: string, allowedExtensions: string[]): boolean => {
   const ext = fileName.split('.').pop()?.toLowerCase();
   return ext ? allowedExtensions.includes(ext) : false;
 };

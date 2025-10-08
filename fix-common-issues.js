@@ -10,38 +10,29 @@ const __dirname = path.dirname(__filename);
 // Function to fix console statements
 function fixConsoleStatements(content) {
   // Replace console.log with proper logging in production
-  content = content.replace(
-    /console\.(log|error|warn|info)\(/g,
-    (match, method) => {
-      return `if (process.env.NODE_ENV === 'development') console.${method}(`;
-    }
-  );
-  
+  content = content.replace(/console\.(log|error|warn|info)\(/g, (match, method) => {
+    return `if (process.env.NODE_ENV === 'development') console.${method}(`;
+  });
+
   // Add closing parenthesis for the if statement
   content = content.replace(
     /if \(process\.env\.NODE_ENV === 'development'\) console\.(log|error|warn|info)\([^)]*\);/g,
-    (match) => {
+    match => {
       return match.replace(/\);$/, '); }');
     }
   );
-  
+
   return content;
 }
 
 // Function to fix unused variables by prefixing with underscore
 function fixUnusedVariables(content) {
   // Fix unused function parameters
-  content = content.replace(
-    /(\w+)\s*:\s*any\s*,\s*(\w+)\s*:\s*any/g,
-    '_$1: any, _$2: any'
-  );
-  
+  content = content.replace(/(\w+)\s*:\s*any\s*,\s*(\w+)\s*:\s*any/g, '_$1: any, _$2: any');
+
   // Fix unused variables in function parameters
-  content = content.replace(
-    /\((\w+)\s*:\s*any\s*,\s*(\w+)\s*:\s*any\)/g,
-    '(_$1: any, _$2: any)'
-  );
-  
+  content = content.replace(/\((\w+)\s*:\s*any\s*,\s*(\w+)\s*:\s*any\)/g, '(_$1: any, _$2: any)');
+
   return content;
 }
 
@@ -55,11 +46,11 @@ function fixFile(filePath) {
     }
 
     let content = fs.readFileSync(fullPath, 'utf8');
-    
+
     // Apply fixes
     content = fixConsoleStatements(content);
     content = fixUnusedVariables(content);
-    
+
     fs.writeFileSync(fullPath, content);
     console.log(`Fixed: ${filePath}`);
   } catch (error) {
@@ -94,7 +85,7 @@ const filesToFix = [
   'app/utils/errorLogger.ts',
   'app/utils/errorReporter.ts',
   'app/utils/logger.ts',
-  'app/utils/monitoring.ts'
+  'app/utils/monitoring.ts',
 ];
 
 // Fix all files

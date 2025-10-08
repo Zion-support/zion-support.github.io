@@ -27,10 +27,7 @@ export const AdvancedPerformanceMonitor: React.FC = () => {
             ...prev,
             fid: (entry as any).processingStart - entry.startTime,
           }));
-        } else if (
-          entry.entryType === 'layout-shift' &&
-          !(entry as any).hadRecentInput
-        ) {
+        } else if (entry.entryType === 'layout-shift' && !(entry as any).hadRecentInput) {
           setMetrics(prev => ({
             ...prev,
             cls: (prev.cls || 0) + (entry as any).value,
@@ -79,9 +76,7 @@ export const AdvancedPerformanceMonitor: React.FC = () => {
       <div>LCP: {metrics.lcp ? metrics.lcp.toFixed(2) + 'ms' : 'N/A'}</div>
       <div>FID: {metrics.fid ? metrics.fid.toFixed(2) + 'ms' : 'N/A'}</div>
       <div>CLS: {metrics.cls ? metrics.cls.toFixed(3) : 'N/A'}</div>
-      <div style={{ marginTop: '10px', fontSize: '10px' }}>
-        Press Ctrl+Shift+P to toggle
-      </div>
+      <div style={{ marginTop: '10px', fontSize: '10px' }}>Press Ctrl+Shift+P to toggle</div>
     </div>
   );
 };

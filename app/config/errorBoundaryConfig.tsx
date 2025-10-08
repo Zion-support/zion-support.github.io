@@ -5,7 +5,6 @@
 
 import React from 'react';
 
-
 export interface ErrorBoundaryConfig {
   /**
    * Whether to log errors to console
@@ -89,13 +88,7 @@ export function getErrorBoundaryConfig(): ErrorBoundaryConfig {
 /**
  * Default error fallback component
  */
-function DefaultErrorFallback({
-  error,
-  resetError,
-}: {
-  error: Error;
-  resetError: () => void;
-}) {
+function DefaultErrorFallback({ error, resetError }: { error: Error; resetError: () => void }) {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4">
       <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-6">
@@ -121,9 +114,7 @@ function DefaultErrorFallback({
           {error.message || 'An unexpected error occurred'}
         </p>
         {process.env['NODE_ENV'] === 'development' && (
-          <pre className="mt-4 p-4 bg-gray-100 rounded text-xs overflow-auto">
-            {error.stack}
-          </pre>
+          <pre className="mt-4 p-4 bg-gray-100 rounded text-xs overflow-auto">{error.stack}</pre>
         )}
         <div className="mt-6 flex gap-4">
           <button
@@ -147,12 +138,7 @@ function DefaultErrorFallback({
 /**
  * Network error fallback component
  */
-function NetworkErrorFallback({
-  resetError,
-}: {
-  error: Error;
-  resetError: () => void;
-}) {
+function NetworkErrorFallback({ resetError }: { error: Error; resetError: () => void }) {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4">
       <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-6">
@@ -171,12 +157,9 @@ function NetworkErrorFallback({
             />
           </svg>
         </div>
-        <h2 className="mt-4 text-2xl font-bold text-center text-gray-900">
-          Connection Issue
-        </h2>
+        <h2 className="mt-4 text-2xl font-bold text-center text-gray-900">Connection Issue</h2>
         <p className="mt-2 text-center text-gray-600">
-          Unable to connect to the server. Please check your internet connection
-          and try again.
+          Unable to connect to the server. Please check your internet connection and try again.
         </p>
         <div className="mt-6">
           <button
@@ -199,9 +182,7 @@ function NotFoundFallback(): JSX.Element {
     <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4">
       <div className="max-w-md w-full text-center">
         <h1 className="text-6xl font-bold text-gray-900">404</h1>
-        <h2 className="mt-4 text-2xl font-bold text-gray-900">
-          Page Not Found
-        </h2>
+        <h2 className="mt-4 text-2xl font-bold text-gray-900">Page Not Found</h2>
         <p className="mt-2 text-gray-600">
           The page you're looking for doesn't exist or has been moved.
         </p>

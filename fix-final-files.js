@@ -31,8 +31,8 @@ const filesToFix = [
 function createBasicComponent(filePath) {
   const fileName = path.basename(filePath);
   const componentName = fileName.replace(/\.(tsx?|jsx?)$/, '');
-//   const isTsx = fileName.endsWith('.tsx');
-//   const isTs = fileName.endsWith('.ts');
+  //   const isTsx = fileName.endsWith('.tsx');
+  //   const isTs = fileName.endsWith('.ts');
 
   if (isTsx) {
     return `import React from 'react';
@@ -89,10 +89,10 @@ export default ${componentName};
 
 function fixFile(filePath) {
   try {
-//     const fullPath = path.join(__dirname, filePath);
+    //     const fullPath = path.join(__dirname, filePath);
 
     if (!fs.existsSync(fullPath)) {
-//       console.log(`File not found: ${filePath}`);
+      //       console.log(`File not found: ${filePath}`);
       return;
     }
 
@@ -111,16 +111,16 @@ function fixFile(filePath) {
       content.includes('const,') ||
       (content.includes('{') && content.includes('expected'))
     ) {
-//       console.log(`Fixing corrupted file: ${filePath}`);
+      //       console.log(`Fixing corrupted file: ${filePath}`);
 
-//       const newContent = createBasicComponent(filePath);
+      //       const newContent = createBasicComponent(filePath);
       fs.writeFileSync(fullPath, newContent);
-//       console.log(`✓ Fixed: ${filePath}`);
+      //       console.log(`✓ Fixed: ${filePath}`);
     } else {
-//       console.log(`File looks OK: ${filePath}`);
+      //       console.log(`File looks OK: ${filePath}`);
     }
   } catch (error) {
-//     console.error(`Error fixing ${filePath}:`, error.message);
+    //     console.error(`Error fixing ${filePath}:`, error.message);
   }
 }
 

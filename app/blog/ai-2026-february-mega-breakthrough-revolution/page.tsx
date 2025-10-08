@@ -76,9 +76,7 @@ export default function AI2026FebruaryMegaBreakthroughRevolution() {
         {/* CTA Section */}
         <div className="text-center">
           <div className="bg-gradient-to-r from-cyan-500/20 to-blue-600/20 border border-cyan-500/30 rounded-2xl p-8">
-            <h2 className="text-3xl font-bold text-white mb-4">
-              Join the Mega Revolution
-            </h2>
+            <h2 className="text-3xl font-bold text-white mb-4">Join the Mega Revolution</h2>
             <p className="text-gray-300 mb-6">
               Transform your business with the AI 2026 February mega breakthrough.
             </p>

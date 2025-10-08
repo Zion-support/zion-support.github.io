@@ -13,7 +13,7 @@ const filesToFix = [
   '/workspace/app/page-optimized.tsx',
   '/workspace/app/privacy/page.tsx',
   '/workspace/app/team/page.tsx',
-  '/workspace/app/terms/page.tsx'
+  '/workspace/app/terms/page.tsx',
 ];
 
 // console.log(`Fixing ${filesToFix.length} files`);
@@ -23,11 +23,11 @@ function processFile(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
-    
+
     // Extract metadata information before removing it
     let metadata = {};
     const metadataMatch = content.match(/export const metadata = \{([\s\S]*?)\};/);
-    
+
     if (metadataMatch) {
       try {
         const metadataStr = metadataMatch[1];
@@ -35,7 +35,7 @@ function processFile(filePath) {
         const descMatch = metadataStr.match(/description:\s*['"`]([^'"`]+)['"`]/);
         const typeMatch = metadataStr.match(/type:\s*['"`]([^'"`]+)['"`]/);
         const urlMatch = metadataStr.match(/url:\s*['"`]([^'"`]+)['"`]/);
-        
+
         if (titleMatch) metadata.title = titleMatch[1];
         if (descMatch) metadata.description = descMatch[1];
         if (typeMatch) metadata.type = typeMatch[1];
@@ -44,61 +44,70 @@ function processFile(filePath) {
         // If parsing fails, use defaults
         metadata = {
           title: 'Zion Tech Group',
-          description: 'Advanced AI and IT Solutions'
+          description: 'Advanced AI and IT Solutions',
         };
       }
     }
-    
+
     // Remove the entire metadata export
     content = content.replace(/export const metadata = \{[\s\S]*?\};/g, '');
-    
+
     // Remove any remaining broken metadata lines
     const lines = content.split('\n');
     const filteredLines = [];
     let skipUntilSemicolon = false;
-    
+
     for (let i = 0; i < lines.length; i++) {
       const line = lines[i];
-      
+
       // Skip broken metadata lines
       if (line.includes('title:') && !line.includes('//') && !line.includes('<title>')) {
         skipUntilSemicolon = true;
         continue;
       }
-      
-      if (skipUntilSemicolon && (line.trim() === '};' || line.trim() === '}' || line.includes('const ') || line.includes('function '))) {
+
+      if (
+        skipUntilSemicolon &&
+        (line.trim() === '};' ||
+          line.trim() === '}' ||
+          line.includes('const ') ||
+          line.includes('function '))
+      ) {
         skipUntilSemicolon = false;
         if (line.includes('const ') || line.includes('function ')) {
           filteredLines.push(line);
         }
         continue;
       }
-      
+
       if (!skipUntilSemicolon) {
         filteredLines.push(line);
       }
     }
-    
+
     content = filteredLines.join('\n');
-    
+
     // Clean up extra empty lines
     content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
-    
+
     // Fix function declarations
-    content = content.replace(/export default function (\w+)\(\) \{/, 'const $1: React.FC = () => {');
-    
+    content = content.replace(
+      /export default function (\w+)\(\) \{/,
+      'const $1: React.FC = () => {'
+    );
+
     // Add proper export at the end if missing
     if (!content.includes('export default') && content.includes('const ')) {
-//       const componentName = content.match(/const (\w+): React\.FC/)?.[1];
+      //       const componentName = content.match(/const (\w+): React\.FC/)?.[1];
       if (componentName) {
         content = content.replace(/^\s*}\s*$/, `  );\n};\n\nexport default ${componentName};`);
         modified = true;
       }
     }
-    
+
     // Update Helmet with extracted metadata
     if (metadata.title || metadata.description) {
-//       const helmetMatch = content.match(/(<Helmet>[\s\S]*?<\/Helmet>)/);
+      //       const helmetMatch = content.match(/(<Helmet>[\s\S]*?<\/Helmet>)/);
       if (helmetMatch) {
         const newHelmet = `<Helmet>
         <title>${metadata.title || 'Zion Tech Group'}</title>
@@ -106,21 +115,21 @@ function processFile(filePath) {
         ${metadata.type ? `<meta property="og:type" content="${metadata.type}" />` : ''}
         ${metadata.url ? `<meta property="og:url" content="${metadata.url}" />` : ''}
       </Helmet>`;
-        
+
         content = content.replace(/(<Helmet>[\s\S]*?<\/Helmet>)/, newHelmet);
         modified = true;
       }
     }
-    
+
     if (modified || content !== fs.readFileSync(filePath, 'utf8')) {
       fs.writeFileSync(filePath, content);
-//       console.log(`✓ Fixed: ${filePath}`);
+      //       console.log(`✓ Fixed: ${filePath}`);
       return true;
     }
-    
+
     return false;
   } catch (error) {
-//     console.error(`Error processing ${filePath}:`, error.message);
+    //     console.error(`Error processing ${filePath}:`, error.message);
     return false;
   }
 }

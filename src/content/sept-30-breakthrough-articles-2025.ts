@@ -23,8 +23,10 @@ export const sept30BreakthroughArticles2025: BreakthroughArticle[] = [
     id: 'ai-trading-algorithm-breakthrough',
     slug: 'ai-trading-algorithm-breakthrough-2025',
     title: 'AI Trading Algorithm Breakthrough: 95% Prediction Accuracy',
-    description: 'Revolutionary AI trading algorithm achieving 95% prediction accuracy and 350% returns improvement in just 5 weeks.',
-    excerpt: 'Discover how our breakthrough AI trading algorithm is revolutionizing financial markets with unprecedented accuracy and returns.',
+    description:
+      'Revolutionary AI trading algorithm achieving 95% prediction accuracy and 350% returns improvement in just 5 weeks.',
+    excerpt:
+      'Discover how our breakthrough AI trading algorithm is revolutionizing financial markets with unprecedented accuracy and returns.',
     author: 'Zion Tech Group Trading Team',
     date: '2025-09-30',
     category: 'AI Trading',
@@ -42,8 +44,10 @@ export const sept30BreakthroughArticles2025: BreakthroughArticle[] = [
     id: 'quantum-computing-breakthrough',
     slug: 'quantum-computing-breakthrough-2025',
     title: 'Quantum Computing Breakthrough: 1000x Speed Improvement',
-    description: 'Revolutionary quantum computing breakthrough delivering 1000x speed improvement and 99.9% accuracy.',
-    excerpt: 'Explore how our quantum computing breakthrough is transforming computational capabilities with unprecedented speed and accuracy.',
+    description:
+      'Revolutionary quantum computing breakthrough delivering 1000x speed improvement and 99.9% accuracy.',
+    excerpt:
+      'Explore how our quantum computing breakthrough is transforming computational capabilities with unprecedented speed and accuracy.',
     author: 'Zion Tech Group Quantum Team',
     date: '2025-09-30',
     category: 'Quantum Computing',
@@ -56,7 +60,7 @@ export const sept30BreakthroughArticles2025: BreakthroughArticle[] = [
       roi: '99.9% accuracy',
       timeframe: '3 months to deployment',
     },
-  }
+  },
 ];
 
 export const getFeaturedBreakthroughArticles = () => {

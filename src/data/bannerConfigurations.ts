@@ -17,9 +17,11 @@ export const bannerConfigurations: BannerConfig[] = [
   },
 ];
 
-
 // Stub implementations for banner rotation functions
-export const selectBannersForDisplay = async (strategy: RotationStrategy = 'sequential', maxBanners: number = 3) => {
+export const selectBannersForDisplay = async (
+  strategy: RotationStrategy = 'sequential',
+  maxBanners: number = 3
+) => {
   return bannerConfigurations.slice(0, maxBanners);
 };
 
@@ -29,13 +31,13 @@ export const selectBalancedBanners = (count: number = 3) => {
 
 export const trackImpression = (bannerId: string) => {
   if (typeof window !== 'undefined') {
-//     console.log(`Banner impression: ${bannerId}`);
+    //     console.log(`Banner impression: ${bannerId}`);
   }
 };
 
 export const trackClick = (bannerId: string) => {
   if (typeof window !== 'undefined') {
-//     console.log(`Banner click: ${bannerId}`);
+    //     console.log(`Banner click: ${bannerId}`);
   }
 };
 
@@ -43,7 +45,7 @@ export const loadBannerStats = async () => {
   return {
     impressions: 0,
     clicks: 0,
-    ctr: 0
+    ctr: 0,
   };
 };
 

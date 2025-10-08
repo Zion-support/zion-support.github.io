@@ -196,7 +196,7 @@ class AdvancedCache<T = unknown> {
       }
     });
 
-    keysToDelete.forEach((key) => this.delete(key));
+    keysToDelete.forEach(key => this.delete(key));
 
     if (keysToDelete.length > 0 && this.options.storage !== 'memory') {
       this.saveToStorage();

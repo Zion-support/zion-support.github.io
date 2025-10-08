@@ -14,11 +14,13 @@ export const PerformanceMonitor: React.FC = () => {
 
   useEffect(() => {
     const measurePerformance = () => {
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      const navigation = performance.getEntriesByType(
+        'navigation'
+      )[0] as PerformanceNavigationTiming;
       const paintEntries = performance.getEntriesByType('paint');
       const fcp = paintEntries.find(entry => entry.name === 'first-contentful-paint');
       const lcp = performance.getEntriesByType('largest-contentful-paint')[0] as PerformanceEntry;
-      
+
       const metrics: PerformanceMetrics = {
         loadTime: navigation.loadEventEnd - navigation.loadEventStart,
         firstContentfulPaint: fcp ? fcp.startTime : 0,
@@ -36,7 +38,7 @@ export const PerformanceMonitor: React.FC = () => {
     } else {
       window.addEventListener('load', measurePerformance);
     }
-    
+
     return () => {
       window.removeEventListener('load', measurePerformance);
     };
@@ -60,10 +62,7 @@ export const PerformanceMonitor: React.FC = () => {
     <div className="fixed bottom-4 right-4 bg-black bg-opacity-90 text-white p-4 rounded-lg text-sm font-mono z-50">
       <div className="flex items-center justify-between mb-2">
         <h3 className="font-bold">Performance Metrics</h3>
-        <button 
-          onClick={() => setIsVisible(false)}
-          className="text-gray-400 hover:text-white"
-        >
+        <button onClick={() => setIsVisible(false)} className="text-gray-400 hover:text-white">
           ×
         </button>
       </div>
@@ -71,11 +70,8 @@ export const PerformanceMonitor: React.FC = () => {
         <div>Load Time: {metrics.loadTime.toFixed(2)}ms</div>
         <div>FCP: {metrics.firstContentfulPaint.toFixed(2)}ms</div>
         <div>LCP: {metrics.largestContentfulPaint.toFixed(2)}ms</div>
-        <div className="text-xs text-gray-400 mt-2">
-          Press Ctrl+Shift+P to toggle
-        </div>
+        <div className="text-xs text-gray-400 mt-2">Press Ctrl+Shift+P to toggle</div>
       </div>
     </div>
   );
 };
-

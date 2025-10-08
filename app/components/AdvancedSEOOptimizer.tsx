@@ -142,7 +142,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     // Update page title and meta description for better SEO
     if (typeof document !== 'undefined') {
       document.title = seoData.title;
-      
+
       let metaDescription = document.querySelector('meta[name="description"]');
       if (!metaDescription) {
         metaDescription = document.createElement('meta');
@@ -171,7 +171,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
 
   const _updateCanonicalUrl = (url: string) => {
     let canonicalLink = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
-    
+
     if (canonicalLink) {
       canonicalLink.href = url;
     } else {
@@ -199,7 +199,11 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
 
   const _trackPageView = (config: SEOData) => {
     if (typeof window !== 'undefined' && 'gtag' in window) {
-      (window as unknown as { gtag: (command: string, targetId: string, config: Record<string, unknown>) => void }).gtag('config', 'GA_MEASUREMENT_ID', {
+      (
+        window as unknown as {
+          gtag: (command: string, targetId: string, config: Record<string, unknown>) => void;
+        }
+      ).gtag('config', 'GA_MEASUREMENT_ID', {
         page_title: config.title,
         page_location: config.canonicalUrl,
       });
@@ -209,9 +213,15 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
   const _trackPerformanceMetrics = () => {
     if (typeof window !== 'undefined' && 'performance' in window) {
       window.addEventListener('load', () => {
-        const perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+        const perfData = performance.getEntriesByType(
+          'navigation'
+        )[0] as PerformanceNavigationTiming;
         if (perfData && typeof window !== 'undefined' && 'gtag' in window) {
-          (window as unknown as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag('event', 'page_load_performance', {
+          (
+            window as unknown as {
+              gtag: (command: string, action: string, parameters: Record<string, unknown>) => void;
+            }
+          ).gtag('event', 'page_load_performance', {
             event_category: 'Performance',
             event_label: 'Page Load',
             value: Math.round(perfData.loadEventEnd - perfData.fetchStart),
@@ -228,7 +238,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
       <meta name="description" content={seoData.description} />
       <meta name="keywords" content={seoData.keywords.join(', ')} />
       <link rel="canonical" href={seoData.canonicalUrl} />
-      
+
       {/* Open Graph Tags */}
       {enableOpenGraph && (
         <>
@@ -257,7 +267,10 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
       )}
 
       {/* Additional SEO Meta Tags */}
-      <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+      <meta
+        name="robots"
+        content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+      />
       <meta name="googlebot" content="index, follow" />
       <meta name="bingbot" content="index, follow" />
       <meta name="author" content="Zion Tech Group" />
@@ -271,21 +284,15 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
 
       {/* Structured Data */}
       {enableSchemaMarkup && structuredData && (
-        <script type="application/ld+json">
-          {JSON.stringify(structuredData)}
-        </script>
+        <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
       )}
 
       {enableSchemaMarkup && breadcrumbData && (
-        <script type="application/ld+json">
-          {JSON.stringify(breadcrumbData)}
-        </script>
+        <script type="application/ld+json">{JSON.stringify(breadcrumbData)}</script>
       )}
 
       {enableSchemaMarkup && faqData && (
-        <script type="application/ld+json">
-          {JSON.stringify(faqData)}
-        </script>
+        <script type="application/ld+json">{JSON.stringify(faqData)}</script>
       )}
 
       {/* Preconnect to external domains for performance */}

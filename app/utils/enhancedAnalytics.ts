@@ -111,9 +111,17 @@ class EnhancedAnalytics {
   private sendToGtag(event: AnalyticsEvent): void {
     if (
       typeof window !== 'undefined' &&
-      (window as { gtag?: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag
+      (
+        window as {
+          gtag?: (command: string, action: string, parameters: Record<string, unknown>) => void;
+        }
+      ).gtag
     ) {
-      (window as unknown as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag('event', event.action, {
+      (
+        window as unknown as {
+          gtag: (command: string, action: string, parameters: Record<string, unknown>) => void;
+        }
+      ).gtag('event', event.action, {
         event_category: event.category,
         event_label: event.label,
         value: event.value,

@@ -7,9 +7,12 @@ export default function NotFoundPage() {
     <>
       <Helmet>
         <title>Page Not Found | Zion Tech Group</title>
-        <meta name="description" content="The page you're looking for doesn't exist. Return to Zion Tech Group's homepage." />
+        <meta
+          name="description"
+          content="The page you're looking for doesn't exist. Return to Zion Tech Group's homepage."
+        />
       </Helmet>
-      
+
       <div className="min-h-screen bg-gray-50 flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-6xl font-bold text-gray-900 mb-4">404</h1>

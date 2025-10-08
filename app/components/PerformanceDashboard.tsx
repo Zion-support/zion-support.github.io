@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 
-
 interface PerformanceMetrics {
   loadTime: number;
   renderTime: number;
@@ -16,7 +15,6 @@ interface PerformanceMetrics {
   [key: string]: number;
 }
 
-
 const PerformanceDashboard: React.FC = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     loadTime: 0,
@@ -31,9 +29,7 @@ const PerformanceDashboard: React.FC = () => {
       const navigation = performance.getEntriesByType(
         'navigation'
       )[0] as PerformanceNavigationTiming;
-      const loadTime = navigation
-        ? navigation.loadEventEnd - navigation.fetchStart
-        : 0;
+      const loadTime = navigation ? navigation.loadEventEnd - navigation.fetchStart : 0;
 
       // Measure render time
       const renderStart = performance.now();
@@ -94,10 +90,7 @@ const PerformanceDashboard: React.FC = () => {
     <div className="fixed bottom-4 right-4 bg-white border border-gray-300 rounded-lg shadow-lg p-4 w-80 max-h-96 overflow-y-auto">
       <div className="flex justify-between items-center mb-4">
         <h3 className="text-lg font-semibold text-gray-800">Performance Dashboard</h3>
-        <button
-          onClick={() => setIsVisible(false)}
-          className="text-gray-500 hover:text-gray-700"
-        >
+        <button onClick={() => setIsVisible(false)} className="text-gray-500 hover:text-gray-700">
           ×
         </button>
       </div>
@@ -105,16 +98,12 @@ const PerformanceDashboard: React.FC = () => {
       <div className="space-y-3">
         <div className="flex justify-between">
           <span className="text-sm text-gray-600">Load Time:</span>
-          <span className="text-sm font-mono">
-            {metrics.loadTime.toFixed(2)}ms
-          </span>
+          <span className="text-sm font-mono">{metrics.loadTime.toFixed(2)}ms</span>
         </div>
 
         <div className="flex justify-between">
           <span className="text-sm text-gray-600">Render Time:</span>
-          <span className="text-sm font-mono">
-            {metrics.renderTime.toFixed(2)}ms
-          </span>
+          <span className="text-sm font-mono">{metrics.renderTime.toFixed(2)}ms</span>
         </div>
 
         <div className="flex justify-between">

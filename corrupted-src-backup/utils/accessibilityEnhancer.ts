@@ -138,9 +138,7 @@ class AccessibilityEnhancer {
 
   private handleTabNavigation(event: KeyboardEvent): void {
     const focusableElements = this.getFocusableElements();
-    const currentIndex = focusableElements.indexOf(
-      document.activeElement as HTMLElement
-    );
+    const currentIndex = focusableElements.indexOf(document.activeElement as HTMLElement);
 
     if (event.shiftKey) {
       // Shift + Tab: move backwards
@@ -194,7 +192,7 @@ class AccessibilityEnhancer {
   }
 
   private getImagesWithAltText(): HTMLImageElement[] {
-//     const images = document.querySelectorAll('img');
+    //     const images = document.querySelectorAll('img');
     return Array.from(images).filter(img => img.alt && img.alt.trim() !== '');
   }
 
@@ -204,7 +202,7 @@ class AccessibilityEnhancer {
     let previousLevel = 0;
 
     headings.forEach(heading => {
-//       const level = parseInt(heading.tagName.charAt(1));
+      //       const level = parseInt(heading.tagName.charAt(1));
       if (level > previousLevel + 1) {
         score -= 20; // Penalty for skipped heading levels
       }
@@ -219,14 +217,8 @@ class AccessibilityEnhancer {
   }
 
   public getOverallScore(): number {
-    const totalScore = this.metrics.reduce(
-      (sum, metric) => sum + metric.value,
-      0
-    );
-    const maxScore = this.metrics.reduce(
-      (sum, metric) => sum + metric.threshold,
-      0
-    );
+    const totalScore = this.metrics.reduce((sum, metric) => sum + metric.value, 0);
+    const maxScore = this.metrics.reduce((sum, metric) => sum + metric.threshold, 0);
     return Math.round((totalScore / maxScore) * 100);
   }
 

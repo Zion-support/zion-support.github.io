@@ -26,9 +26,7 @@ const ThrowError = ({ shouldThrow }: { shouldThrow: boolean }) => {
 // Test wrapper with proper router context
 const TestWrapper = ({ children }: { children: React.ReactNode }) => (
   <MemoryRouter>
-    <HelmetProvider>
-      {children}
-    </HelmetProvider>
+    <HelmetProvider>{children}</HelmetProvider>
   </MemoryRouter>
 );
 
@@ -46,9 +44,7 @@ describe('AdvancedErrorBoundary', () => {
   });
 
   it('renders error UI when there is an error', () => {
-    const consoleSpy = jest
-      .spyOn(console, 'error')
-      .mockImplementation(() => {});
+    const consoleSpy = jest.spyOn(console, 'error').mockImplementation(() => {});
 
     render(
       <TestWrapper>
@@ -68,9 +64,7 @@ describe('AdvancedErrorBoundary', () => {
 
   it('calls onError callback when error occurs', () => {
     const onError = jest.fn();
-    const consoleSpy = jest
-      .spyOn(console, 'error')
-      .mockImplementation(() => {});
+    const consoleSpy = jest.spyOn(console, 'error').mockImplementation(() => {});
 
     render(
       <TestWrapper>
@@ -85,9 +79,7 @@ describe('AdvancedErrorBoundary', () => {
   });
 
   it('retries when retry button is clicked', async () => {
-    const consoleSpy = jest
-      .spyOn(console, 'error')
-      .mockImplementation(() => {});
+    const consoleSpy = jest.spyOn(console, 'error').mockImplementation(() => {});
 
     let shouldThrow = true;
     const TestComponent = () => <ThrowError shouldThrow={shouldThrow} />;
@@ -101,16 +93,14 @@ describe('AdvancedErrorBoundary', () => {
     );
 
     const retryButton = screen.getByText('Try Again (3 attempts left)');
-    
+
     // Change shouldThrow before clicking retry
     shouldThrow = false;
     fireEvent.click(retryButton);
 
     // After retry, the error boundary should reset and show the child component
     await waitFor(() => {
-      expect(
-        screen.queryByText('Oops! Something went wrong')
-      ).not.toBeInTheDocument();
+      expect(screen.queryByText('Oops! Something went wrong')).not.toBeInTheDocument();
     });
 
     consoleSpy.mockRestore();
@@ -162,10 +152,7 @@ describe('AdvancedSEOOptimizer', () => {
     const { container } = render(
       <TestWrapper>
         <HelmetProvider context={helmetContext}>
-          <AdvancedSEOOptimizer
-            seoData={mockSEOData}
-            enableStructuredData={true}
-          />
+          <AdvancedSEOOptimizer seoData={mockSEOData} enableStructuredData={true} />
         </HelmetProvider>
       </TestWrapper>
     );
@@ -230,7 +217,9 @@ describe('AdvancedPerformanceMonitor', () => {
     callback: PerformanceObserverCallback;
     observe() {}
     disconnect() {}
-    takeRecords() { return []; }
+    takeRecords() {
+      return [];
+    }
   }
 
   beforeEach(() => {

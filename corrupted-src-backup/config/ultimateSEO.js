@@ -1,8 +1,7 @@
 module.exports = {
   metaTags: {
     viewport: 'width=device-width, initial-scale=1, viewport-fit=cover',
-    robots:
-      'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1',
+    robots: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1',
     canonical: true,
     alternate: true,
     ogTags: {

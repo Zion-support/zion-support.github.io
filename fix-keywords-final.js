@@ -14,8 +14,8 @@ function processFile(filePath) {
     const replacements = [
       {
         pattern: /keywords:\s*'([^']+)',/g,
-        replacement: "keywords: ['$1'],"
-      }
+        replacement: "keywords: ['$1'],",
+      },
     ];
 
     replacements.forEach(({ pattern, replacement }) => {

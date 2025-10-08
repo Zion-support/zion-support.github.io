@@ -214,7 +214,7 @@ export class PersistentCache<T = unknown> {
     try {
       localStorage.setItem(this.prefix + key, JSON.stringify(entry));
     } catch (error) {
-//       console.error('Failed to set cache item:', error);
+      //       console.error('Failed to set cache item:', error);
     }
   }
 
@@ -310,7 +310,7 @@ export const memoizeAsync = <TArgs extends unknown[], TResult>(
 
   return async (...args: TArgs): Promise<TResult> => {
     const key = JSON.stringify(args);
-    
+
     // Check cache
     const cached = cache.get(key);
     if (cached !== undefined) {

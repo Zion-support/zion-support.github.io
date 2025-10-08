@@ -22,13 +22,7 @@ interface ErrorReport {
   stack?: string;
   context: ErrorContext;
   severity: 'low' | 'medium' | 'high' | 'critical';
-  category:
-    | 'syntax'
-    | 'runtime'
-    | 'network'
-    | 'security'
-    | 'performance'
-    | 'unknown';
+  category: 'syntax' | 'runtime' | 'network' | 'security' | 'performance' | 'unknown';
   tags: string[];
   metadata: Record<string, unknown>;
   resolved: boolean;
@@ -89,7 +83,7 @@ class EnhancedErrorHandler {
     this.setupErrorCleanup();
 
     this.isInitialized = true;
-     
+
     if (process.env['NODE_ENV'] === 'development') {
       console.log('🛡️ Enhanced Error Handler initialized');
     }
@@ -205,7 +199,6 @@ class EnhancedErrorHandler {
         });
         observer.observe({ type: 'longtask', buffered: true });
       } catch (error) {
-         
         console.warn('Failed to setup performance error handler:', error);
       }
     }
@@ -367,17 +360,10 @@ class EnhancedErrorHandler {
     status?: number;
     element?: string;
   }): ErrorReport['severity'] {
-    if (
-      errorData.type === 'network' &&
-      errorData.status &&
-      errorData.status >= 500
-    ) {
+    if (errorData.type === 'network' && errorData.status && errorData.status >= 500) {
       return 'critical';
     }
-    if (
-      errorData.type === 'javascript' &&
-      errorData.message.includes('Cannot read property')
-    ) {
+    if (errorData.type === 'javascript' && errorData.message.includes('Cannot read property')) {
       return 'high';
     }
     if (errorData.type === 'resource' && errorData.element === 'img') {
@@ -402,10 +388,7 @@ class EnhancedErrorHandler {
     if (errorData.type === 'resource') {
       return 'performance';
     }
-    if (
-      errorData.message.includes('SecurityError') ||
-      errorData.message.includes('CORS')
-    ) {
+    if (errorData.message.includes('SecurityError') || errorData.message.includes('CORS')) {
       return 'security';
     }
     if (errorData.message.includes('SyntaxError')) {
@@ -507,25 +490,24 @@ class EnhancedErrorHandler {
    */
   private logError(errorReport: ErrorReport): void {
     const emoji = this.getSeverityEmoji(errorReport.severity);
-     
+
     console.group(`${emoji} Error Report: ${errorReport.id}`);
-     
+
     console.error('Message:', errorReport.message);
-     
+
     console.error('Type:', errorReport.type);
-     
+
     console.error('Severity:', errorReport.severity);
-     
+
     console.error('Category:', errorReport.category);
-     
+
     console.error('Context:', errorReport.context);
-     
+
     console.error('Metadata:', errorReport.metadata);
     if (errorReport.stack) {
-       
       console.error('Stack:', errorReport.stack);
     }
-     
+
     console.groupEnd();
   }
 
@@ -563,7 +545,6 @@ class EnhancedErrorHandler {
         body: JSON.stringify(errorReport),
       });
     } catch (error) {
-       
       console.warn('Failed to report error to remote service:', error);
     }
   }
@@ -573,21 +554,15 @@ class EnhancedErrorHandler {
    */
   private aggregateError(errorReport: ErrorReport): void {
     // This could be expanded to include more sophisticated aggregation
-     
-    console.log(
-      `📊 Error aggregated: ${errorReport.type} - ${errorReport.category}`
-    );
+
+    console.log(`📊 Error aggregated: ${errorReport.type} - ${errorReport.category}`);
   }
 
   /**
    * Assess performance impact
    */
   private assessPerformanceImpact(errorReport: ErrorReport): void {
-    if (
-      errorReport.type === 'resource' ||
-      errorReport.category === 'performance'
-    ) {
-       
+    if (errorReport.type === 'resource' || errorReport.category === 'performance') {
       console.warn('⚠️ Performance impact detected from error');
     }
   }
@@ -597,15 +572,12 @@ class EnhancedErrorHandler {
    */
   private attemptErrorRecovery(): void {
     const recentErrors = this.errors.filter(
-      error =>
-        !error.resolved &&
-        Date.now() - new Date(error.context.timestamp).getTime() < 300000 // Last 5 minutes
+      error => !error.resolved && Date.now() - new Date(error.context.timestamp).getTime() < 300000 // Last 5 minutes
     );
 
     if (recentErrors.length > 5) {
-       
-      if (process.env['NODE_ENV'] === 'development') { 
-        console.log('🔄 Attempting error recovery...'); 
+      if (process.env['NODE_ENV'] === 'development') {
+        console.log('🔄 Attempting error recovery...');
       }
       // Implement recovery strategies here
       this.clearErrorState();
@@ -621,9 +593,8 @@ class EnhancedErrorHandler {
     this.errorCategories.clear();
     this.errorRateLimit = 0;
 
-     
-    if (process.env['NODE_ENV'] === 'development') { 
-      console.log('🧹 Error state cleared'); 
+    if (process.env['NODE_ENV'] === 'development') {
+      console.log('🧹 Error state cleared');
     }
   }
 
@@ -634,13 +605,10 @@ class EnhancedErrorHandler {
     const cutoffDate = new Date();
     cutoffDate.setDate(cutoffDate.getDate() - this.config.errorRetentionDays);
 
-    this.errors = this.errors.filter(
-      error => new Date(error.context.timestamp) > cutoffDate
-    );
+    this.errors = this.errors.filter(error => new Date(error.context.timestamp) > cutoffDate);
 
-     
-    if (process.env['NODE_ENV'] === 'development') { 
-      console.log(`🧹 Cleaned up old errors, ${this.errors.length} remaining`); 
+    if (process.env['NODE_ENV'] === 'development') {
+      console.log(`🧹 Cleaned up old errors, ${this.errors.length} remaining`);
     }
   }
 
@@ -660,18 +628,14 @@ class EnhancedErrorHandler {
 
     this.errors.forEach(error => {
       errorsByType[error.type] = (errorsByType[error.type] || 0) + 1;
-      errorsByCategory[error.category] =
-        (errorsByCategory[error.category] || 0) + 1;
-      errorsBySeverity[error.severity] =
-        (errorsBySeverity[error.severity] || 0) + 1;
+      errorsByCategory[error.category] = (errorsByCategory[error.category] || 0) + 1;
+      errorsBySeverity[error.severity] = (errorsBySeverity[error.severity] || 0) + 1;
     });
 
     const recentErrors = this.errors
       .filter(error => !error.resolved)
       .sort(
-        (a, b) =>
-          new Date(b.context.timestamp).getTime() -
-          new Date(a.context.timestamp).getTime()
+        (a, b) => new Date(b.context.timestamp).getTime() - new Date(a.context.timestamp).getTime()
       )
       .slice(0, 10);
 
@@ -719,9 +683,4 @@ class EnhancedErrorHandler {
 export const errorHandler = new EnhancedErrorHandler();
 
 // Export class for custom instances
-export {
-  EnhancedErrorHandler,
-  type ErrorReport,
-  type ErrorContext,
-  type ErrorHandlerConfig,
-};
+export { EnhancedErrorHandler, type ErrorReport, type ErrorContext, type ErrorHandlerConfig };

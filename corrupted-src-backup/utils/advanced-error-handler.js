@@ -52,7 +52,7 @@ class AdvancedErrorHandler {
   setupUnhandledRejectionHandler() {
     // Additional promise rejection handling
     window.addEventListener('rejectionhandled', event => {
-//       console.log('Promise rejection was handled:', event.reason);
+      //       console.log('Promise rejection was handled:', event.reason);
     });
   }
 
@@ -90,14 +90,8 @@ class AdvancedErrorHandler {
   setupRecoveryStrategies() {
     // Define recovery strategies for different error types
     this.recoveryStrategies.set('network', this.handleNetworkError.bind(this));
-    this.recoveryStrategies.set(
-      'resource',
-      this.handleResourceError.bind(this)
-    );
-    this.recoveryStrategies.set(
-      'javascript',
-      this.handleJavaScriptError.bind(this)
-    );
+    this.recoveryStrategies.set('resource', this.handleResourceError.bind(this));
+    this.recoveryStrategies.set('javascript', this.handleJavaScriptError.bind(this));
     this.recoveryStrategies.set('memory', this.handleMemoryError.bind(this));
   }
 
@@ -126,42 +120,33 @@ class AdvancedErrorHandler {
     }
 
     // Console logging
-//     console.error('Error logged:', errorInfo);
+    //     console.error('Error logged:', errorInfo);
   }
 
   attemptRecovery(errorInfo) {
-//     const errorType = this.categorizeError(errorInfo);
+    //     const errorType = this.categorizeError(errorInfo);
     const recoveryStrategy = this.recoveryStrategies.get(errorType);
 
     if (recoveryStrategy) {
       try {
         recoveryStrategy(errorInfo);
       } catch (recoveryError) {
-//         console.error('Recovery attempt failed:', recoveryError);
+        //         console.error('Recovery attempt failed:', recoveryError);
       }
     }
   }
 
   categorizeError(errorInfo) {
-    if (
-      errorInfo.message?.includes('network') ||
-      errorInfo.message?.includes('fetch')
-    ) {
+    if (errorInfo.message?.includes('network') || errorInfo.message?.includes('fetch')) {
       return 'network';
     }
     if (errorInfo.type === 'Resource Error') {
       return 'resource';
     }
-    if (
-      errorInfo.type === 'JavaScript Error' ||
-      errorInfo.type === 'Unhandled Promise Rejection'
-    ) {
+    if (errorInfo.type === 'JavaScript Error' || errorInfo.type === 'Unhandled Promise Rejection') {
       return 'javascript';
     }
-    if (
-      errorInfo.message?.includes('memory') ||
-      errorInfo.message?.includes('allocation')
-    ) {
+    if (errorInfo.message?.includes('memory') || errorInfo.message?.includes('allocation')) {
       return 'memory';
     }
     return 'unknown';
@@ -211,7 +196,7 @@ class AdvancedErrorHandler {
 
   retryFailedRequest(errorInfo) {
     // Implement retry logic for failed requests
-//     const retryCount = (errorInfo.retryCount || 0) + 1;
+    //     const retryCount = (errorInfo.retryCount || 0) + 1;
     errorInfo.retryCount = retryCount;
 
     // Retry the original request
@@ -219,7 +204,7 @@ class AdvancedErrorHandler {
       fetch(errorInfo.originalRequest)
         .then(response => {
           if (response.ok) {
-//             console.log('Request retry successful');
+            //             console.log('Request retry successful');
           }
         })
         .catch(error => {
@@ -265,13 +250,13 @@ class AdvancedErrorHandler {
 
   handlePropertyAccessError(errorInfo) {
     // Try to fix property access errors
-//     console.log('Attempting to fix property access error');
+    //     console.log('Attempting to fix property access error');
     // Implementation would depend on specific error
   }
 
   handleFunctionCallError(errorInfo) {
     // Try to fix function call errors
-//     console.log('Attempting to fix function call error');
+    //     console.log('Attempting to fix function call error');
     // Implementation would depend on specific error
   }
 
@@ -406,8 +391,7 @@ class AdvancedErrorHandler {
   }
 
   handleNetworkStatusChange(status) {
-    const message =
-      status === 'online' ? 'Connection restored' : 'Connection lost';
+    const message = status === 'online' ? 'Connection restored' : 'Connection lost';
     this.showErrorToast({
       message,
       type: 'Network Status',
@@ -432,7 +416,7 @@ class AdvancedErrorHandler {
       },
       body: JSON.stringify(errorInfo),
     }).catch(error => {
-//       console.error('Failed to report error:', error);
+      //       console.error('Failed to report error:', error);
     });
   }
 

@@ -26,21 +26,13 @@ const HomePage: React.FC = () => {
       typeof window !== 'undefined' &&
       (
         window as unknown as {
-          gtag?: (
-            command: string,
-            action: string,
-            parameters: Record<string, unknown>
-          ) => void;
+          gtag?: (command: string, action: string, parameters: Record<string, unknown>) => void;
         }
       ).gtag
     ) {
       (
         window as unknown as {
-          gtag: (
-            command: string,
-            action: string,
-            parameters: Record<string, unknown>
-          ) => void;
+          gtag: (command: string, action: string, parameters: Record<string, unknown>) => void;
         }
       ).gtag('event', 'phone_click', {
         event_category: 'engagement',
@@ -53,14 +45,20 @@ const HomePage: React.FC = () => {
     <>
       <Helmet>
         <title>Zion Tech Group - AI & IT Solutions</title>
-        <meta name="description" content="Leading provider of AI-powered enterprise solutions, automation, and digital transformation services." />
-        <meta name="keywords" content="AI solutions, enterprise AI, digital transformation, automation, cloud services" />
+        <meta
+          name="description"
+          content="Leading provider of AI-powered enterprise solutions, automation, and digital transformation services."
+        />
+        <meta
+          name="keywords"
+          content="AI solutions, enterprise AI, digital transformation, automation, cloud services"
+        />
       </Helmet>
-      
+
       <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-white to-purple-50">
         {/* Skip to main content for accessibility */}
-        <a 
-          href="#main-content" 
+        <a
+          href="#main-content"
           className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-indigo-600 text-white px-4 py-2 rounded-md z-50"
         >
           Skip to main content
@@ -68,7 +66,7 @@ const HomePage: React.FC = () => {
 
         <main id="main-content" className="container mx-auto px-4 py-16" role="main">
           {/* Hero Section */}
-          <section 
+          <section
             className={`text-center mb-16 transition-opacity duration-1000 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}
             aria-labelledby="hero-heading"
           >
@@ -79,25 +77,23 @@ const HomePage: React.FC = () => {
               Advanced AI and IT Solutions
             </p>
             <p className="text-lg text-gray-700 max-w-3xl mx-auto">
-              Leading provider of enterprise AI solutions, quantum computing, and autonomous systems. 
-              Transform your business with our cutting-edge technology.
+              Leading provider of enterprise AI solutions, quantum computing, and autonomous
+              systems. Transform your business with our cutting-edge technology.
             </p>
           </section>
 
           {/* Services Section */}
-          <section 
-            className="grid md:grid-cols-3 gap-8 mb-16"
-            aria-labelledby="services-heading"
-          >
-            <h2 id="services-heading" className="sr-only">Our Services</h2>
-            
+          <section className="grid md:grid-cols-3 gap-8 mb-16" aria-labelledby="services-heading">
+            <h2 id="services-heading" className="sr-only">
+              Our Services
+            </h2>
+
             <Suspense fallback={<ServiceCardSkeleton />}>
               <article className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
-                <h3 className="text-2xl font-semibold text-gray-900 mb-4">
-                  AI Solutions
-                </h3>
+                <h3 className="text-2xl font-semibold text-gray-900 mb-4">AI Solutions</h3>
                 <p className="text-gray-600">
-                  Harness the power of artificial intelligence to drive innovation and efficiency in your organization.
+                  Harness the power of artificial intelligence to drive innovation and efficiency in
+                  your organization.
                 </p>
               </article>
             </Suspense>
@@ -108,16 +104,15 @@ const HomePage: React.FC = () => {
                   Digital Transformation
                 </h3>
                 <p className="text-gray-600">
-                  Transform your business processes with cutting-edge technology and expert consultation.
+                  Transform your business processes with cutting-edge technology and expert
+                  consultation.
                 </p>
               </article>
             </Suspense>
 
             <Suspense fallback={<ServiceCardSkeleton />}>
               <article className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
-                <h3 className="text-2xl font-semibold text-gray-900 mb-4">
-                  Cloud Services
-                </h3>
+                <h3 className="text-2xl font-semibold text-gray-900 mb-4">Cloud Services</h3>
                 <p className="text-gray-600">
                   Scale your infrastructure with secure, reliable, and efficient cloud solutions.
                 </p>

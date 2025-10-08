@@ -23,17 +23,19 @@ export interface SitemapOptions {
  */
 export function generateSitemap(options: SitemapOptions): string {
   const { hostname, urls } = options;
-  
-  const urlEntries = urls.map((url) => {
-    const loc = url.loc.startsWith('http') ? url.loc : `${hostname}${url.loc}`;
-    return `  <url>
+
+  const urlEntries = urls
+    .map(url => {
+      const loc = url.loc.startsWith('http') ? url.loc : `${hostname}${url.loc}`;
+      return `  <url>
     <loc>${loc}</loc>
     ${url.lastmod ? `<lastmod>${url.lastmod}</lastmod>` : ''}
     ${url.changefreq ? `<changefreq>${url.changefreq}</changefreq>` : ''}
     ${url.priority !== undefined ? `<priority>${url.priority.toFixed(1)}</priority>` : ''}
   </url>`;
-  }).join('\n');
-  
+    })
+    .join('\n');
+
   return `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${urlEntries}

@@ -30,13 +30,10 @@ export const usePerformanceMonitoring = () => {
       // FID - First Input Delay
       const fidObserver = new PerformanceObserver(list => {
         const entries = list.getEntries();
-        entries.forEach(
-          (entry: PerformanceEntry & { processingStart?: number }) => {
-            const fid =
-              (entry.processingStart || entry.startTime) - entry.startTime;
-            reportMetric('FID', fid);
-          }
-        );
+        entries.forEach((entry: PerformanceEntry & { processingStart?: number }) => {
+          const fid = (entry.processingStart || entry.startTime) - entry.startTime;
+          reportMetric('FID', fid);
+        });
       });
       fidObserver.observe({ entryTypes: ['first-input'] });
 
@@ -74,7 +71,7 @@ export const usePerformanceMonitoring = () => {
       // TTFB - Time to First Byte
       const navigationObserver = new PerformanceObserver(list => {
         const entries = list.getEntries();
-        entries.forEach((entry) => {
+        entries.forEach(entry => {
           if (entry.entryType === 'navigation') {
             const navEntry = entry as PerformanceNavigationTiming;
             const ttfb = navEntry.responseStart - navEntry.requestStart;
@@ -87,7 +84,7 @@ export const usePerformanceMonitoring = () => {
       // Resource timing
       const resourceObserver = new PerformanceObserver(list => {
         const entries = list.getEntries();
-        entries.forEach((entry) => {
+        entries.forEach(entry => {
           if (entry.entryType === 'resource') {
             const resourceEntry = entry as PerformanceResourceTiming;
             const loadTime = resourceEntry.responseEnd - resourceEntry.requestStart;
@@ -110,7 +107,6 @@ export const usePerformanceMonitoring = () => {
         resourceObserver.disconnect();
       };
     } catch (error) {
-       
       console.warn('Performance monitoring not supported:', error);
       return () => {};
     }
@@ -128,8 +124,7 @@ export const usePerformanceMonitoring = () => {
       if (navigation) {
         const metrics = {
           domContentLoaded:
-            navigation.domContentLoadedEventEnd -
-            navigation.domContentLoadedEventStart,
+            navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
           loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
           domInteractive: navigation.domInteractive - navigation.fetchStart,
           totalLoadTime: navigation.loadEventEnd - navigation.fetchStart,

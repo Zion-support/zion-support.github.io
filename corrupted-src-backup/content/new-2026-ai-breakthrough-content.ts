@@ -16,8 +16,7 @@ export interface AIBreakthroughContent {
 export const new2026AIBreakthroughContent: AIBreakthroughContent[] = [
   {
     id: 'ai-2026-hyperconscious-computing-revolution',
-    title:
-      'AI 2026 Hyperconscious Computing Revolution: Beyond Artificial Intelligence',
+    title: 'AI 2026 Hyperconscious Computing Revolution: Beyond Artificial Intelligence',
     description:
       'Revolutionary breakthrough in hyperconscious AI systems achieving genuine self-awareness, emotional intelligence, and creative autonomy with $1.2T enterprise value creation.',
     content: `
@@ -34,12 +33,7 @@ The next evolution of AI is here - systems that not only think but feel, create,
     author: 'Zion Tech Group',
     publishedAt: '2026-01-01',
     category: 'AI Consciousness',
-    tags: [
-      'AI Consciousness',
-      'Hyperconscious Computing',
-      '2026',
-      'Breakthrough',
-    ],
+    tags: ['AI Consciousness', 'Hyperconscious Computing', '2026', 'Breakthrough'],
     featured: true,
     readTime: '25 min read',
     image: '/images/ai-2026-hyperconscious-computing.jpg',
@@ -47,8 +41,7 @@ The next evolution of AI is here - systems that not only think but feel, create,
   },
   {
     id: 'quantum-ai-synthesis-2026',
-    title:
-      'Quantum AI Synthesis 2026: The Convergence of Quantum and Artificial Intelligence',
+    title: 'Quantum AI Synthesis 2026: The Convergence of Quantum and Artificial Intelligence',
     description:
       'Groundbreaking fusion of quantum computing and AI creating unprecedented computational capabilities and problem-solving abilities.',
     content: `

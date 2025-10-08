@@ -153,11 +153,13 @@ describe('Password Validation', () => {
 
 describe('HTML Sanitization', () => {
   test('sanitizes HTML special characters', () => {
-    expect(sanitizeHTML('<script>alert("xss")</script>'))
-      .toBe('&lt;script&gt;alert(&quot;xss&quot;)&lt;&#x2F;script&gt;');
-    
-    expect(sanitizeHTML('Test & <strong>bold</strong>'))
-      .toBe('Test &amp; &lt;strong&gt;bold&lt;&#x2F;strong&gt;');
+    expect(sanitizeHTML('<script>alert("xss")</script>')).toBe(
+      '&lt;script&gt;alert(&quot;xss&quot;)&lt;&#x2F;script&gt;'
+    );
+
+    expect(sanitizeHTML('Test & <strong>bold</strong>')).toBe(
+      'Test &amp; &lt;strong&gt;bold&lt;&#x2F;strong&gt;'
+    );
   });
 
   test('handles empty and non-string inputs', () => {
@@ -258,7 +260,7 @@ describe('Composite Validation', () => {
 describe('Async Validation', () => {
   test('handles successful async validation', async () => {
     const asyncValidator = async (val: unknown) => {
-      return new Promise<any>((resolve) => {
+      return new Promise<any>(resolve => {
         setTimeout(() => resolve({ isValid: true }), 10);
       });
     };

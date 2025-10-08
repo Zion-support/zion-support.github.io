@@ -35,9 +35,10 @@ export const securityConfig = {
    * CORS Configuration
    */
   cors: {
-    origin: process.env.NODE_ENV === 'production' 
-      ? ['https://zion.app', 'https://www.zion.app']
-      : ['http://localhost:3000', 'http://localhost:5173'],
+    origin:
+      process.env.NODE_ENV === 'production'
+        ? ['https://zion.app', 'https://www.zion.app']
+        : ['http://localhost:3000', 'http://localhost:5173'],
     credentials: true,
     maxAge: 86400, // 24 hours
   },
@@ -97,7 +98,7 @@ export const securityConfig = {
  */
 export function sanitizeInput(input: string): string {
   if (typeof input !== 'string') return '';
-  
+
   return input
     .replace(/[<>]/g, '') // Remove angle brackets
     .replace(/javascript:/gi, '') // Remove javascript: protocol
@@ -122,7 +123,9 @@ export function validateEmail(email: string): boolean {
 export function validateUrl(url: string): boolean {
   try {
     const parsed = new URL(url);
-    return securityConfig.validation.url.allowedProtocols.includes(parsed.protocol.replace(':', ''));
+    return securityConfig.validation.url.allowedProtocols.includes(
+      parsed.protocol.replace(':', '')
+    );
   } catch {
     return false;
   }
@@ -175,7 +178,7 @@ export function generateCSPHeader(): string {
   const directives = Object.entries(securityConfig.csp.directives)
     .map(([key, values]) => `${key} ${values.join(' ')}`)
     .join('; ');
-  
+
   return directives;
 }
 

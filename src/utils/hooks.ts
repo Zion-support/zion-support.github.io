@@ -31,7 +31,9 @@ export const useLocalStorage = <T>(
   const setValue = useCallback(
     (value: T | ((val: T) => T)) => {
       if (typeof window === 'undefined') {
-        console.warn(`Tried setting localStorage key "${key}" even though environment is not a client`);
+        console.warn(
+          `Tried setting localStorage key "${key}" even though environment is not a client`
+        );
         return;
       }
 
@@ -121,12 +123,9 @@ export const useIntersectionObserver = (
     const element = elementRef.current;
     if (!element) return;
 
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        setEntry(entry);
-      },
-      options
-    );
+    const observer = new IntersectionObserver(([entry]) => {
+      setEntry(entry);
+    }, options);
 
     observer.observe(element);
 

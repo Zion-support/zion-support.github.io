@@ -6,23 +6,29 @@ export default function ContactPage() {
     <>
       <Helmet>
         <title>Contact Us | Zion Tech Group</title>
-        <meta name="description" content="Get in touch with Zion Tech Group for AI solutions, digital transformation, and enterprise automation services." />
-        <meta name="keywords" content="contact, get in touch, AI consulting, enterprise solutions" />
+        <meta
+          name="description"
+          content="Get in touch with Zion Tech Group for AI solutions, digital transformation, and enterprise automation services."
+        />
+        <meta
+          name="keywords"
+          content="contact, get in touch, AI consulting, enterprise solutions"
+        />
       </Helmet>
-      
+
       <div className="min-h-screen bg-gray-50">
         <div className="container mx-auto px-4 py-16">
           <div className="max-w-4xl mx-auto">
             <h1 className="text-4xl font-bold text-gray-900 mb-8">Contact Us</h1>
-            
+
             <div className="grid md:grid-cols-2 gap-8">
               <div>
                 <h2 className="text-2xl font-semibold text-gray-900 mb-4">Get in Touch</h2>
                 <p className="text-gray-600 mb-6">
-                  Ready to transform your business with AI? Contact our team of experts 
-                  to discuss your project and discover how we can help.
+                  Ready to transform your business with AI? Contact our team of experts to discuss
+                  your project and discover how we can help.
                 </p>
-                
+
                 <div className="space-y-4">
                   <div>
                     <h3 className="font-semibold text-gray-900">Phone</h3>
@@ -30,16 +36,19 @@ export default function ContactPage() {
                       (302) 600-9898
                     </a>
                   </div>
-                  
+
                   <div>
                     <h3 className="font-semibold text-gray-900">Email</h3>
-                    <a href="mailto:info@ziontechgroup.com" className="text-indigo-600 hover:text-indigo-800">
+                    <a
+                      href="mailto:info@ziontechgroup.com"
+                      className="text-indigo-600 hover:text-indigo-800"
+                    >
                       info@ziontechgroup.com
                     </a>
                   </div>
                 </div>
               </div>
-              
+
               <div className="bg-white rounded-lg shadow-lg p-6">
                 <h2 className="text-2xl font-semibold text-gray-900 mb-4">Send us a Message</h2>
                 <form className="space-y-4">
@@ -55,7 +64,7 @@ export default function ContactPage() {
                       required
                     />
                   </div>
-                  
+
                   <div>
                     <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
                       Email
@@ -68,9 +77,12 @@ export default function ContactPage() {
                       required
                     />
                   </div>
-                  
+
                   <div>
-                    <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
+                    <label
+                      htmlFor="message"
+                      className="block text-sm font-medium text-gray-700 mb-1"
+                    >
                       Message
                     </label>
                     <textarea
@@ -81,7 +93,7 @@ export default function ContactPage() {
                       required
                     ></textarea>
                   </div>
-                  
+
                   <button
                     type="submit"
                     className="w-full bg-indigo-600 text-white py-2 px-4 rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500"

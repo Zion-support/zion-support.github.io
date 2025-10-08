@@ -39,46 +39,35 @@ const TeamPage: React.FC = () => {
 
   return (
     <>
-      <div className='min-h-screen bg-slate-50 py-16'>
-        <div className='container mx-auto px-4'>
-          <div className='max-w-6xl mx-auto'>
-            <div className='text-center mb-16'>
-              <h1 className='text-4xl font-bold text-gray-900 mb-4'>
-                Our Team
-              </h1>
-              <p className='text-xl text-gray-600'>
+      <div className="min-h-screen bg-slate-50 py-16">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-16">
+              <h1 className="text-4xl font-bold text-gray-900 mb-4">Our Team</h1>
+              <p className="text-xl text-gray-600">
                 Meet the experts behind our innovative AI and IT solutions
               </p>
             </div>
 
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {teamMembers.map((member, index) => (
-                <div
-                  key={index}
-                  className='bg-white rounded-lg shadow-lg p-6 text-center'
-                >
-                  <div className='text-6xl mb-4'>{member.image}</div>
-                  <h3 className='text-xl font-bold text-gray-900 mb-2'>
-                    {member.name}
-                  </h3>
-                  <p className='text-blue-600 font-semibold mb-3'>
-                    {member.role}
-                  </p>
-                  <p className='text-gray-600 text-sm'>{member.bio}</p>
+                <div key={index} className="bg-white rounded-lg shadow-lg p-6 text-center">
+                  <div className="text-6xl mb-4">{member.image}</div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">{member.name}</h3>
+                  <p className="text-blue-600 font-semibold mb-3">{member.role}</p>
+                  <p className="text-gray-600 text-sm">{member.bio}</p>
                 </div>
               ))}
             </div>
 
-            <div className='mt-16 bg-white rounded-lg shadow-lg p-8'>
-              <h2 className='text-2xl font-bold text-gray-900 mb-6 text-center'>
-                Join Our Team
-              </h2>
-              <p className='text-gray-600 text-center mb-6'>
-                We&apos;re always looking for talented individuals to join our
-                mission of advancing AI and IT solutions.
+            <div className="mt-16 bg-white rounded-lg shadow-lg p-8">
+              <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">Join Our Team</h2>
+              <p className="text-gray-600 text-center mb-6">
+                We&apos;re always looking for talented individuals to join our mission of advancing
+                AI and IT solutions.
               </p>
-              <div className='text-center'>
-                <button className='bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors'>
+              <div className="text-center">
+                <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
                   View Open Positions
                 </button>
               </div>

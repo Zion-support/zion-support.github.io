@@ -1,4 +1,4 @@
-import { lazy } from 'react';
+import { lazy, Suspense } from 'react';
 import React from 'react';
 // import dynamic from 'next/dynamic'; // Replaced with React.lazy
 import SEOOptimizer from './components/SEOOptimizer';
@@ -9,33 +9,49 @@ import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 const EmptyComponent = () => null;
 
 // Lazy load heavy components - these may not exist, so make them optional
-const UnifiedBanner = lazy(() => import('./components/NewestContent2025Banner').catch(() => import('./components/EmptyComponent').catch(() => ({ default: EmptyComponent }))), {
-  loading: () => <div className="animate-pulse bg-gray-200 h-32 rounded-lg"></div>,
-  ssr: false
-});
-
-const ContentPromotion = lazy(
-  () => import('./components/UltimateBusinessIntelligence2025Banner').catch(() => {
-    return { default: EmptyComponent } as any;
-  }), 
+const UnifiedBanner = lazy(
+  () =>
+    import('./components/NewestContent2025Banner').catch(() =>
+      import('./components/EmptyComponent').catch(() => ({ default: EmptyComponent }))
+    ),
   {
-    loading: () => <div className="animate-pulse bg-gray-200 h-64 rounded-lg"></div>,
-    ssr: false
+    loading: () => <div className="animate-pulse bg-gray-200 h-32 rounded-lg"></div>,
+    ssr: false,
   }
 );
 
-const ContentShowcase = lazy(() => import('./components/UltimateBusinessIntelligenceShowcase2025').catch(() => ({ default: EmptyComponent })), {
-  loading: () => <div className="animate-pulse bg-gray-200 h-48 rounded-lg"></div>,
-  ssr: false
-});
+const ContentPromotion = lazy(
+  () =>
+    import('./components/UltimateBusinessIntelligence2025Banner').catch(() => {
+      return { default: EmptyComponent } as any;
+    }),
+  {
+    loading: () => <div className="animate-pulse bg-gray-200 h-64 rounded-lg"></div>,
+    ssr: false,
+  }
+);
+
+const ContentShowcase = lazy(
+  () =>
+    import('./components/UltimateBusinessIntelligenceShowcase2025').catch(() => ({
+      default: EmptyComponent,
+    })),
+  {
+    loading: () => <div className="animate-pulse bg-gray-200 h-48 rounded-lg"></div>,
+    ssr: false,
+  }
+);
 
 export const metadata = {
   title: 'Zion Tech Group — AI Enterprise Transformation & IT Services | 300% ROI Guaranteed',
-  description: 'Transform your enterprise with AI-powered solutions. Achieve 300% ROI, 70% cost reduction, and 90% efficiency gains. Expert AI consulting, autonomous systems, and digital transformation services.',
-  keywords: 'AI enterprise transformation, AI consulting, autonomous AI systems, enterprise AI services, digital transformation, AI implementation, AI ROI calculator, manufacturing AI, AI automation, AI strategy',
+  description:
+    'Transform your enterprise with AI-powered solutions. Achieve 300% ROI, 70% cost reduction, and 90% efficiency gains. Expert AI consulting, autonomous systems, and digital transformation services.',
+  keywords:
+    'AI enterprise transformation, AI consulting, autonomous AI systems, enterprise AI services, digital transformation, AI implementation, AI ROI calculator, manufacturing AI, AI automation, AI strategy',
   openGraph: {
     title: 'Zion Tech Group — AI Enterprise Transformation & IT Services',
-    description: 'Transform your enterprise with AI-powered solutions. Achieve 300% ROI, 70% cost reduction, and 90% efficiency gains.',
+    description:
+      'Transform your enterprise with AI-powered solutions. Achieve 300% ROI, 70% cost reduction, and 90% efficiency gains.',
     type: 'website',
     url: 'https://ziontechgroup.com',
     images: [
@@ -50,7 +66,8 @@ export const metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Zion Tech Group — AI Enterprise Transformation & IT Services',
-    description: 'Transform your enterprise with AI-powered solutions. Achieve 300% ROI, 70% cost reduction, and 90% efficiency gains.',
+    description:
+      'Transform your enterprise with AI-powered solutions. Achieve 300% ROI, 70% cost reduction, and 90% efficiency gains.',
     images: ['/og-image.jpg'],
   },
   robots: {
@@ -80,12 +97,12 @@ export default function OptimizedHomePage() {
       <div className="min-h-screen bg-white">
         <SEOOptimizer />
         <PerformanceMonitor />
-        
+
         {/* Unified Banner System */}
         <Suspense fallback={<div className="animate-pulse bg-gray-200 h-32 rounded-lg"></div>}>
           <UnifiedBanner />
         </Suspense>
-        
+
         {/* Main Content */}
         <main className="relative">
           {/* Hero Section */}
@@ -100,9 +117,9 @@ export default function OptimizedHomePage() {
                   </span>
                 </h1>
                 <p className="text-xl md:text-2xl mb-8 text-blue-100 max-w-4xl mx-auto">
-                  Transform your enterprise with AI-powered solutions that deliver 300% ROI,
-                  70% cost reduction, and 90% efficiency gains. Expert AI consulting,
-                  autonomous systems, and digital transformation services.
+                  Transform your enterprise with AI-powered solutions that deliver 300% ROI, 70%
+                  cost reduction, and 90% efficiency gains. Expert AI consulting, autonomous
+                  systems, and digital transformation services.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <a
@@ -126,7 +143,7 @@ export default function OptimizedHomePage() {
           <Suspense fallback={<div className="animate-pulse bg-gray-200 h-48 rounded-lg"></div>}>
             <ContentShowcase />
           </Suspense>
-          
+
           {/* Content Promotion */}
           <Suspense fallback={<div className="animate-pulse bg-gray-200 h-64 rounded-lg"></div>}>
             <ContentPromotion />

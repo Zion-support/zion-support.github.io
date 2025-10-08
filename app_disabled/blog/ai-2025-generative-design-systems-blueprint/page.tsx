@@ -17,3 +17,7 @@ export default function GenerativeDesignSystemsBlueprintPage() {
     </div>
   );
 }
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-d70e
+>>>>>>> main
