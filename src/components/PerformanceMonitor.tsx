@@ -14,6 +14,8 @@ export const PerformanceMonitor: React.FC = () => {
 
   useEffect(() => {
     const measurePerformance = () => {
+      if (!window.performance) return;
+
       const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
       const paintEntries = performance.getEntriesByType('paint');
       
@@ -76,5 +78,3 @@ export const PerformanceMonitor: React.FC = () => {
     </div>
   );
 };
-
-export default PerformanceMonitor;

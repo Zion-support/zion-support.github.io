@@ -13,7 +13,7 @@ import SEOEnhancer from './components/SEOEnhancer';
 import AdvancedSEOOptimizer from './components/AdvancedSEOOptimizer';
 import LoadingSpinner from './components/LoadingSpinner';
 
-// Lazy load components for better performance
+// Lazy load pages and components for better performance
 const HomePage = lazy(() => import('./page'));
 const ContentShowcase = lazy(() => import('./components/ContentShowcase'));
 const InteractiveContentShowcase2026 = lazy(
