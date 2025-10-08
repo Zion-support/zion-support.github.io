@@ -41,8 +41,8 @@ class ErrorTracker {
     severity: ErrorSeverity = ErrorSeverity.MEDIUM,
     context: ErrorContext = {}
   ): void {
-//     const errorMessage = typeof error === 'string' ? error : error.message;
-//     const errorStack = typeof error === 'string' ? undefined : error.stack;
+    const errorMessage = typeof error === 'string' ? error : error.message;
+    const errorStack = typeof error === 'string' ? undefined : error.stack;
 
     const trackedError: TrackedError = {
       message: errorMessage,
@@ -142,7 +142,7 @@ class ErrorTracker {
     const content = stack ? `${message}:${stack.split('\n')[0]}` : message;
     let hash = 0;
     for (let i = 0; i < content.length; i++) {
-//       const char = content.charCodeAt(i);
+      const char = content.charCodeAt(i);
       hash = (hash << 5) - hash + char;
       hash = hash & hash;
     }

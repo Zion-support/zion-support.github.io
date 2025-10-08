@@ -1,6 +1,6 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-
-import { Link } from 'react-router-dom';import { logger } from '../utils/logger';
+import { Link } from 'react-router-dom';
+import { logger } from '../utils/logger';
 
 interface ErrorBoundaryState {
   hasError: boolean;
