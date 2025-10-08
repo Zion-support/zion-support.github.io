@@ -239,7 +239,7 @@ export class ChunkLoadMonitor {
   static getAllMetrics() {
     const metrics = [];
     for (const [chunkName] of this.chunks) {
-      metrics.push(this.getMetrics(chunkName));
+      const m = this.getMetrics(chunkName); if (m) metrics.push(m);
     }
     return metrics.filter((m) => m !== null);
   }

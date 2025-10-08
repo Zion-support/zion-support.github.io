@@ -677,8 +677,11 @@ class AccessibilityEnhancer {
     const metrics = this.getMetrics();
     
     return `
-Accessibility Report:`;
+Accessibility Report:
+- Total Checks: ${metrics.totalChecks}
+- Issues Found: ${metrics.issuesFound}
+- Warnings: ${metrics.warnings}
+- Success Rate: ${metrics.successRate.toFixed(2)}%
+`;
   }
 }
-
-export const accessibilityEnhancer = AccessibilityEnhancer.getInstance();

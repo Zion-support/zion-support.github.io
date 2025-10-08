@@ -233,8 +233,12 @@ class PerformanceMonitor {
     const metrics = this.getMetrics();
     
     return `
-Performance Report:`;
+Performance Report:
+- Score: ${score}/100
+- FCP: ${metrics.fcp}ms
+- LCP: ${metrics.lcp}ms
+- FID: ${metrics.fid}ms
+- CLS: ${metrics.cls}
+`;
   }
 }
-
-export const performanceMonitor = PerformanceMonitor.getInstance();

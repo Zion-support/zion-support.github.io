@@ -1,16 +1,16 @@
 'use client';
 
-import React, { Suspense, lazy, useEffect, useCallback } from 'react';
+import React, { Suspense, lazy, useEffect } from 'react';
 import { HelmetProvider } from 'react-helmet-async';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 // Components
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
-import AdvancedErrorBoundary from './components/AdvancedErrorBoundary';
-import AdvancedSEOOptimizer from './components/AdvancedSEOOptimizer';
-import AdvancedPerformanceMonitor from './components/AdvancedPerformanceMonitor';
-import SEOEnhancer from './components/SEOEnhancer';
 import PerformanceDashboard from './components/PerformanceDashboard';
+import AdvancedPerformanceMonitor from './components/AdvancedPerformanceMonitor';
+import AdvancedErrorBoundary from './components/AdvancedErrorBoundary';
+import SEOEnhancer from './components/SEOEnhancer';
+import AdvancedSEOOptimizer from './components/AdvancedSEOOptimizer';
 import LoadingSpinner from './components/LoadingSpinner';
 
 // Lazy load pages for better performance
@@ -46,11 +46,7 @@ const App: React.FC = () => {
     }
     
     logger.lifecycle('performance monitoring initialized', 'App');
-    logger.info('🚀 Zion Tech Group App initialized with comprehensive monitoring', { context: 'App' });
-  }, []);
-
-  const handleError = useCallback((error: Error, errorInfo: any) => {
-    logger.error('Application Error', error, { context: 'ErrorBoundary', errorInfo });
+    logger.info('🚀 Zion Tech Group App initialized with comprehensive monitoring', { component: 'App' });
   }, []);
 
   return (
@@ -58,7 +54,9 @@ const App: React.FC = () => {
       <AdvancedErrorBoundary
         enableErrorReporting={true}
         enableRetry={true}
-        onError={handleError}
+        onError={(error, errorInfo) => {
+          logger.error('Application Error', error, { component: 'ErrorBoundary', errorInfo });
+        }}
       >
         <AccessibilityEnhancer>
           <SEOEnhancer

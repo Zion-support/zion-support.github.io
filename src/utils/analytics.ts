@@ -162,3 +162,6 @@ class Analytics {
 const analytics = new Analytics();
 
 export default analytics;
+
+export const analytics = new Analytics();
+export default analytics;
