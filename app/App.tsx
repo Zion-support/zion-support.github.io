@@ -15,8 +15,6 @@ import ContentShowcase from './components/ContentShowcase';
 import InteractiveContentShowcase2026 from './components/InteractiveContentShowcase2026';
 import InteractiveAIROICalculator from './components/InteractiveAIROICalculator';
 
-// Lazy load pages for better performance
-const HomePage = lazy(() => import('./page'));
 
 // Utils
 import { lazyLoadImages, preloadCriticalResources, collectPerformanceMetrics, performanceOptimizer } from './utils/performanceOptimizer';
