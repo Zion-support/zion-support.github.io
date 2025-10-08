@@ -1,12 +1,22 @@
-'use client';
-
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+
+interface ContentItem {
+  id: string;
+  title: string;
+  description: string;
+  url: string;
+  type: string;
+  metrics: Record<string, string>;
+  tags: string[];
+  readingTime?: string;
+  featured?: boolean;
+}
 
 const UltimateBusinessIntelligence2025Banner = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  const content = [
+  const content: ContentItem[] = [
     {
       id: 'ultimate-business-intelligence-revolution',
       title: 'AI 2025: The Ultimate Business Intelligence Revolution',
@@ -19,21 +29,25 @@ const UltimateBusinessIntelligence2025Banner = () => {
         timeline: '6 months',
         adoption: '95%'
       },
-      tags: ['AI', 'Business Intelligence', 'Enterprise', 'ROI', '2025']
+      tags: ['AI', 'Business Intelligence', 'Enterprise', 'ROI', '2025'],
+      readingTime: '45 min read',
+      featured: true
     },
     {
-      id: 'fortune-500-business-intelligence',
-      title: 'Fortune 500 Ultimate Business Intelligence 30,000% ROI Success Story',
-      description: 'How a $15.2B manufacturing giant achieved 30,000% ROI with AI-powered business intelligence transformation.',
+      id: 'fortune-500-case-study',
+      title: 'Fortune 500 Ultimate Business Intelligence Success',
+      description: 'Discover how Fortune 500 companies achieved 30,000% ROI, 70% cost reduction, and 90% efficiency gains with our Ultimate Business Intelligence platform.',
       url: '/case-studies/fortune-500-ultimate-business-intelligence-30000-roi-success-story',
       type: 'Case Study',
       metrics: {
-        users: '1M+',
-        uptime: '99.9%',
-        response: '<100ms',
-        insights: 'Real-time'
+        roi: '30,000%',
+        costReduction: '70%',
+        efficiency: '90%',
+        timeToValue: '3 months'
       },
-      tags: ['Fortune 500', 'Case Study', '30,000% ROI', 'Success Story', 'Manufacturing']
+      tags: ['Case Study', 'Fortune 500', 'ROI', 'Success', '2025'],
+      readingTime: '60 min read',
+      featured: true
     },
     {
       id: 'enterprise-automation-2025',
@@ -51,6 +65,8 @@ const UltimateBusinessIntelligence2025Banner = () => {
     }
   ];
 
+  const currentContent = content[currentSlide];
+
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % content.length);
@@ -58,8 +74,6 @@ const UltimateBusinessIntelligence2025Banner = () => {
 
     return () => clearInterval(timer);
   }, [content.length]);
-
-  const currentContent = content[currentSlide];
 
   return (
     <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">
@@ -103,18 +117,25 @@ const UltimateBusinessIntelligence2025Banner = () => {
                 <span className="px-4 py-2 bg-gradient-to-r from-cyan-500/30 to-blue-500/30 text-cyan-200 text-sm font-bold rounded-full border border-cyan-400/50">
                   {currentContent.type}
                 </span>
-                <span className="text-yellow-400 text-sm font-medium">
-                  NEW 2025
-                </span>
+                {currentContent.featured && (
+                  <span className="text-yellow-400 text-sm font-medium">
+                    ⭐ FEATURED
+                  </span>
+                )}
+                {currentContent.readingTime && (
+                  <span className="text-gray-400 text-sm">
+                    📖 {currentContent.readingTime}
+                  </span>
+                )}
               </div>
             </div>
 
             {/* Metrics Grid */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8">
               {Object.entries(currentContent.metrics).map(([key, value]) => (
-                <div key={key} className="text-center">
-                  <div className="text-2xl font-bold text-cyan-400">{value}</div>
-                  <div className="text-xs text-gray-300 capitalize">
+                <div key={key} className="text-center bg-white/5 rounded-xl p-4 border border-white/10">
+                  <div className="text-3xl font-bold text-cyan-400 mb-2">{value}</div>
+                  <div className="text-sm text-gray-300 capitalize">
                     {key.replace(/([A-Z])/g, ' $1').trim()}
                   </div>
                 </div>
@@ -126,9 +147,9 @@ const UltimateBusinessIntelligence2025Banner = () => {
               {currentContent.tags.map((tag) => (
                 <span
                   key={tag}
-                  className="bg-white/10 text-white px-3 py-1 rounded-full text-xs"
+                  className="bg-white/10 text-white px-3 py-1 rounded-full text-sm border border-white/20"
                 >
-                  {tag}
+                  #{tag}
                 </span>
               ))}
             </div>
@@ -160,7 +181,7 @@ const UltimateBusinessIntelligence2025Banner = () => {
                 key={index}
                 onClick={() => setCurrentSlide(index)}
                 className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                  index === currentSlide ? 'bg-cyan-400' : 'bg-white/30'
+                  index === currentSlide ? 'bg-cyan-400 w-8' : 'bg-white/30'
                 }`}
                 aria-label={`Go to slide ${index + 1}`}
               />
@@ -176,7 +197,7 @@ const UltimateBusinessIntelligence2025Banner = () => {
             { value: '99.9%', label: 'Success Rate' },
             { value: '5M+', label: 'Data Points Processed' },
           ].map((stat, index) => (
-            <div key={index} className="text-center">
+            <div key={index} className="text-center bg-white/5 rounded-xl p-6 border border-white/10">
               <div className="text-3xl font-bold text-cyan-400 mb-2">{stat.value}</div>
               <div className="text-gray-300">{stat.label}</div>
             </div>

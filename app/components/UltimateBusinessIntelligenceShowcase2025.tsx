@@ -3,11 +3,24 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 
-const UltimateBusinessIntelligenceShowcase2025 = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [selectedCategory, setSelectedCategory] = useState('all');
+interface ContentItem {
+  id: string;
+  title: string;
+  description: string;
+  url: string;
+  type: string;
+  category: string;
+  metrics: Record<string, string>;
+  readingTime: string;
+  featured: boolean;
+  tags: string[];
+}
 
-  const content = [
+const UltimateBusinessIntelligenceShowcase2025 = () => {
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  const content: ContentItem[] = [
     {
       id: 'ultimate-business-intelligence-revolution',
       title: 'AI 2025: The Ultimate Business Intelligence Revolution',
@@ -72,14 +85,14 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
     ? content 
     : content.filter(item => item.category === selectedCategory);
 
+  const currentContent = content[currentSlide];
+
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % content.length);
     }, 5000);
     return () => clearInterval(interval);
   }, [content.length]);
-
-  const currentContent = content[currentSlide];
 
   return (
     <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">
@@ -120,14 +133,14 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
         </div>
 
         {/* Category Filter */}
-        <div className="flex justify-center gap-4 mb-12">
+        <div className="flex flex-wrap justify-center gap-4 mb-12">
           {categories.map((category) => (
             <button
               key={category.id}
               onClick={() => setSelectedCategory(category.id)}
               className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
                 selectedCategory === category.id
-                  ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white'
+                  ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-lg'
                   : 'bg-white/10 text-gray-300 hover:bg-white/20'
               }`}
             >
@@ -136,7 +149,7 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
           ))}
         </div>
 
-        {/* Main Content Card */}
+        {/* Featured Content Carousel */}
         <div className="max-w-6xl mx-auto mb-16">
           <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-8 md:p-12 border border-white/20 shadow-2xl">
             {/* Content Type Badge */}
@@ -160,7 +173,7 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
             {/* Stats Grid */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8">
               {Object.entries(currentContent.metrics).map(([key, value]) => (
-                <div key={key} className="text-center">
+                <div key={key} className="text-center bg-white/5 rounded-xl p-4 border border-white/10">
                   <div className="text-3xl font-bold text-cyan-400 mb-2">{value}</div>
                   <div className="text-sm text-gray-300 capitalize">
                     {key.replace(/([A-Z])/g, ' $1').trim()}
@@ -176,7 +189,7 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
                   key={index}
                   className="px-3 py-1 bg-white/10 text-gray-300 text-sm rounded-full border border-white/20"
                 >
-                  {tag}
+                  #{tag}
                 </span>
               ))}
             </div>
@@ -208,7 +221,7 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
                 key={index}
                 onClick={() => setCurrentSlide(index)}
                 className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                  index === currentSlide ? 'bg-cyan-400' : 'bg-white/30'
+                  index === currentSlide ? 'bg-cyan-400 w-8' : 'bg-white/30'
                 }`}
                 aria-label={`Go to slide ${index + 1}`}
               />
@@ -217,11 +230,11 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
         </div>
 
         {/* Content Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {filteredContent.map((item) => (
             <div
               key={item.id}
-              className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 group"
+              className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:bg-white/15 hover:border-cyan-500/50 transition-all duration-300 group"
             >
               {/* Badge */}
               <div className="flex items-center gap-3 mb-4">
@@ -244,13 +257,13 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
 
               {/* Metrics */}
               <div className="grid grid-cols-2 gap-4 mb-6">
-                <div className="text-center">
+                <div className="text-center bg-white/5 rounded-lg p-3">
                   <div className="text-2xl font-bold text-cyan-400">
                     {item.metrics.roi}
                   </div>
                   <div className="text-gray-400 text-xs">ROI</div>
                 </div>
-                <div className="text-center">
+                <div className="text-center bg-white/5 rounded-lg p-3">
                   <div className="text-2xl font-bold text-green-400">
                     {item.metrics.timeline}
                   </div>
@@ -265,7 +278,7 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
                     key={index}
                     className="px-3 py-1 bg-white/10 text-gray-300 text-xs rounded-full"
                   >
-                    {tag}
+                    #{tag}
                   </span>
                 ))}
               </div>
@@ -273,10 +286,10 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
               {/* CTA */}
               <Link
                 href={item.url}
-                className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-700 hover:to-purple-700 transition-all duration-300 w-full justify-center"
+                className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-700 hover:to-purple-700 transition-all duration-300 w-full justify-center group-hover:shadow-lg"
               >
                 Read {item.readingTime}
-                <span className="text-lg">→</span>
+                <span className="text-lg group-hover:translate-x-1 transition-transform">→</span>
               </Link>
             </div>
           ))}
@@ -284,11 +297,11 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
 
         {/* Call to Action */}
         <div className="text-center">
-          <div className="bg-gradient-to-r from-cyan-600 to-purple-600 rounded-2xl p-8">
-            <h3 className="text-2xl font-bold text-white mb-4">
+          <div className="bg-gradient-to-r from-cyan-600 to-purple-600 rounded-2xl p-12">
+            <h3 className="text-3xl font-bold text-white mb-4">
               Ready to Transform Your Business?
             </h3>
-            <p className="text-cyan-100 mb-6">
+            <p className="text-xl text-cyan-100 mb-8">
               Join thousands of enterprises already using our AI-powered solutions
             </p>
             <Link
