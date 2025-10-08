@@ -258,7 +258,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
                 // Also trigger performance optimizations
                 performanceOptimizer.optimize();
                 if (process.env.NODE_ENV === 'development') {
-                  console.log('Performance optimization triggered');
+                  if (import.meta.env.DEV) { console.log('Performance optimization triggered'); }
                 }
               }}
               className="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition-colors text-sm"

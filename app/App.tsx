@@ -10,8 +10,11 @@ import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 import LoadingSpinner from './components/LoadingSpinner';
 
-// Performance utilities
+// Advanced utilities
 import { performanceOptimizer } from './utils/performanceOptimizer';
+import { performanceMonitoring } from './utils/performanceMonitoring';
+import { errorTracking, ErrorCategory, ErrorSeverity } from './utils/errorTracking';
+import { logger } from './utils/logger';
 
 // Lazy load pages for better performance
 const HomePage = lazy(() => import('./page'));
@@ -23,22 +26,63 @@ import '../src/index.css';
 
 const App: React.FC = () => {
   useEffect(() => {
-    // Initialize global error handling
-    window.addEventListener('error', (event) => {
-      console.error('Global error:', event.error);
-    });
+    // Mark app initialization start
+    performanceMonitoring.mark('app-init-start');
 
-    window.addEventListener('unhandledrejection', (event) => {
-      console.error('Unhandled promise rejection:', event.reason);
-    });
+    // Initialize global error handling with advanced tracking
+    const handleGlobalError = (event: ErrorEvent) => {
+      errorTracking.trackError(event.error || new Error(event.message), {
+        category: ErrorCategory.RUNTIME,
+        severity: ErrorSeverity.HIGH,
+        context: {
+          filename: event.filename,
+          lineno: event.lineno,
+          colno: event.colno,
+        },
+      });
+    };
+
+    const handleUnhandledRejection = (event: PromiseRejectionEvent) => {
+      errorTracking.trackError(
+        new Error(`Unhandled Promise Rejection: ${event.reason}`),
+        {
+          category: ErrorCategory.RUNTIME,
+          severity: ErrorSeverity.CRITICAL,
+          context: { reason: event.reason },
+        }
+      );
+    };
+
+    window.addEventListener('error', handleGlobalError);
+    window.addEventListener('unhandledrejection', handleUnhandledRejection);
 
     // Initialize performance monitoring and Web Vitals
     if (typeof window !== 'undefined' && 'performance' in window) {
       performanceOptimizer.optimizeImages();
-      const metrics = performanceOptimizer.getMetrics();
-      const score = performanceOptimizer.getPerformanceScore();
-      if (process.env.NODE_ENV === 'development') { console.log('Performance metrics:', metrics, 'Score:', score); }
+      
+      // Record initial metrics
+      performanceMonitoring.recordCustomMetric('app-mount', performance.now(), 'ms');
+      
+      // Log performance summary in development
+      if (import.meta.env.DEV) {
+        const summary = performanceMonitoring.getSummary();
+        logger.info('Performance Summary', {
+          score: summary.score,
+          vitals: summary.webVitals,
+          recommendations: summary.recommendations,
+        });
+      }
     }
+
+    // Mark app initialization end
+    performanceMonitoring.mark('app-init-end');
+    performanceMonitoring.measure('app-init-duration', 'app-init-start', 'app-init-end');
+
+    // Cleanup
+    return () => {
+      window.removeEventListener('error', handleGlobalError);
+      window.removeEventListener('unhandledrejection', handleUnhandledRejection);
+    };
   }, []);
 
   return (

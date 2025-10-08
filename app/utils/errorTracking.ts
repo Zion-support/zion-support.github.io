@@ -144,11 +144,15 @@ class ErrorTrackingService {
     }
 
     // Log the error
-    logger.error(`[${metadata.severity.toUpperCase()}] ${error.message}`, {
-      errorId,
-      category: metadata.category,
-      context: metadata.context,
-    });
+    logger.error(
+      `[${metadata.severity.toUpperCase()}] ${error.message}`,
+      error,
+      {
+        error_id: errorId,
+        category: metadata.category,
+        ...metadata.context,
+      }
+    );
 
     // Send to external service if critical
     if (metadata.severity === ErrorSeverity.CRITICAL) {
@@ -194,7 +198,7 @@ class ErrorTrackingService {
       try {
         listener(error);
       } catch (listenerError) {
-        logger.error('Error in error listener', listenerError);
+        logger.error('Error in error listener', listenerError as Error);
       }
     });
   }
@@ -215,7 +219,7 @@ class ErrorTrackingService {
         });
       }
     } catch (reportError) {
-      logger.error('Failed to report error to external service', reportError);
+      logger.error('Failed to report error to external service', reportError as Error);
     }
   }
 
@@ -293,3 +297,34 @@ class ErrorTrackingService {
 
 export const errorTracking = ErrorTrackingService.getInstance();
 export default ErrorTrackingService;
+
+// Export convenience functions for easier testing and usage
+export const trackError = (
+  error: Error,
+  options?: Partial<Omit<ErrorMetadata, 'timestamp'>>
+) => {
+  const category = options?.category || ErrorCategory.RUNTIME;
+  const severity = options?.severity || ErrorSeverity.MEDIUM;
+  
+  return errorTracking.trackError(error, {
+    ...options,
+    category,
+    severity,
+  });
+};
+
+export const getErrorStatistics = () => {
+  const stats = errorTracking.getStatistics();
+  return {
+    total: stats.total,
+    byCategory: stats.byCategory,
+    bySeverity: stats.bySeverity,
+    errors: errorTracking.getErrors(),
+  };
+};
+
+export const clearErrorHistory = () => errorTracking.clearErrors();
+export const addErrorListener = (listener: (error: TrackedError) => void) => 
+  errorTracking.addListener(listener);
+export const removeErrorListener = (listener: (error: TrackedError) => void) => 
+  errorTracking.removeListener(listener);

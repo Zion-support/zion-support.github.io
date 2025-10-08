@@ -2,8 +2,8 @@
  * Enhanced API Client with retry logic, caching, and error handling
  */
 
-import { getCache, setCache, CacheOptions } from './cacheManager';
-import { logError, logCritical } from './errorLogger';
+import { cacheManager, CacheOptions } from './cacheManager';
+import { logger } from './logger';
 
 export interface ApiClientConfig {
   baseURL?: string;
@@ -153,7 +153,7 @@ class ApiClient {
 
     // Check cache for GET requests
     if (method === 'GET' && !skipCache) {
-      const cached = await getCache<T>(cacheKey, cacheConfig?.strategy);
+      const cached = cacheManager.get<T>(cacheKey, cacheConfig?.storage || 'memory');
       if (cached !== null) {
         return {
           data: cached,
@@ -209,7 +209,7 @@ class ApiClient {
 
         // Cache successful GET requests
         if (method === 'GET' && !skipCache) {
-          await setCache(
+          cacheManager.set(
             cacheKey,
             data,
             cacheConfig || this.config.cache
@@ -229,16 +229,18 @@ class ApiClient {
         // Log error
         if (attempt === retries) {
           if (error instanceof ApiError && error.status >= 500) {
-            logCritical(`API request failed after ${retries} attempts`, error as Error, {
+            logger.error(`API request failed after ${retries} attempts`, {
               url: fullUrl,
               method,
               attempt,
+              error,
             });
           } else {
-            logError(`API request failed`, error as Error, {
+            logger.warn(`API request failed`, {
               url: fullUrl,
               method,
               attempt,
+              error,
             });
           }
         }
@@ -339,7 +341,7 @@ const apiClient = new ApiClient({
   retryDelay: 1000,
   cache: {
     ttl: 5 * 60 * 1000, // 5 minutes
-    strategy: 'memory',
+    storage: 'memory',
   },
 });
 
