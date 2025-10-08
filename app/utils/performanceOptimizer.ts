@@ -110,13 +110,8 @@ class PerformanceOptimizer {
 
         })
       })
-<<<<<<< HEAD
-      observer.observe({ entryTypes: ['first-input'] });
-      this.observers.push(observer);
-=======
       observer.observe({ entryTypes: ['first-input'] })
       this.observers.push(observer)
->>>>>>> cursor/fix-errors-and-merge-to-main-17dd
     } catch {
       // Ignore if not supported
     }
@@ -172,8 +167,6 @@ class PerformanceOptimizer {
       observer.observe({ entryTypes: ['navigation'] })
       this.observers.push(observer)
     } catch {
-    } catch {
-    } catch {
       // Ignore if not supported
     }
   }
@@ -221,8 +214,8 @@ class PerformanceOptimizer {
     if (typeof window === 'undefined') return
 
     const criticalResources = [
-      '/fonts/inter.woff2'
-      '/css/critical.css'
+      '/fonts/inter.woff2',
+      '/css/critical.css',
       '/js/critical.js'
     ]
 
@@ -257,14 +250,14 @@ class PerformanceOptimizer {
     if (!navigation) return null
 
     return {
-      domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart
-      loadComplete: navigation.loadEventEnd - navigation.loadEventStart
-      domInteractive: navigation.domInteractive - navigation.fetchStart
-      redirect: navigation.redirectEnd - navigation.redirectStart
-      dns: navigation.domainLookupEnd - navigation.domainLookupStart
-      tcp: navigation.connectEnd - navigation.connectStart
-      request: navigation.responseStart - navigation.requestStart
-      response: navigation.responseEnd - navigation.responseStart
+      domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
+      loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
+      domInteractive: navigation.domInteractive - navigation.fetchStart,
+      redirect: navigation.redirectEnd - navigation.redirectStart,
+      dns: navigation.domainLookupEnd - navigation.domainLookupStart,
+      tcp: navigation.connectEnd - navigation.connectStart,
+      request: navigation.responseStart - navigation.requestStart,
+      response: navigation.responseEnd - navigation.responseStart,
       processing: navigation.domComplete - navigation.responseEnd
     }
   }
