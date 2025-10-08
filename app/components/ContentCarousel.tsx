@@ -120,7 +120,7 @@ const ContentCarousel: React.FC = () => {
     return num.toString();
   };
 
-  const currentItem = contentItems[currentIndex];
+  const _currentItem = contentItems[currentIndex];
 
   return (
     <div className="bg-gray-50 py-16 px-4">

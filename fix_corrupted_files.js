@@ -12,7 +12,7 @@ function fixCorruptedText(text) {
   //Pattern to match commas that are incorrectly placed in the middle of words
   //This looks for commas that are followed by a space and then a lowercase letter
   //or commas that are in the middle of identifiers
-  let fixed = text;
+  let _fixed = text;
 
   //Fix common patterns of corruption
   //Remove commas that are incorrectly placed in the middle of words
@@ -133,26 +133,24 @@ function processFile(filePath) {
 
     if (content !== fixedContent) {
       fs.writeFileSync(filePath, fixedContent, 'utf8');
-      //       console.log(`Fixed: ${filePath}`);
-      return true;
+      //       return true;
     }
     return false;
   } catch (error) {
-    //     console.error(`Error processing ${filePath}:`, error.message);
-    return false;
+    //     return false;
   }
 }
 
 //Function to recursively find and process files
 function processDirectory(dirPath) {
-  let processedCount = 0;
+  let _processedCount = 0;
 
   try {
     //     const items = fs.readdirSync(dirPath);
 
     for (const item of items) {
       //       const fullPath = path.join(dirPath, item);
-      const stat = fs.statSync(fullPath);
+      const _stat = fs.statSync(fullPath);
 
       if (stat.isDirectory()) {
         //Skip node_modules and other common directories
@@ -171,13 +169,11 @@ function processDirectory(dirPath) {
       }
     }
   } catch (error) {
-    //     console.error(`Error processing directory ${dirPath}:`, error.message);
-  }
+    //     }
 
   return processedCount;
 }
 
 //Main execution
-// console.log('Starting to fix corrupted files...');
-// const processedCount = processDirectory('./src');
-// console.log(`Fixed ${processedCount} files.`);
+// // const processedCount = processDirectory('./src');
+// 

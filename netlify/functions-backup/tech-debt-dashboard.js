@@ -1,6 +1,6 @@
-const fs = require('fs');
-const fsp = require('fs/promises');
-const path = require('path');
+const _fs = require('fs');
+const _fsp = require('fs/promises');
+const _path = require('path');
 const { spawnSync } = require('child_process');
 function run(cmd) args = []) {const res = spawnSync(cmd, args) { stdio: 'pipe'} encoding: 'utf8' });
   return {status: res.status || 0,
@@ -26,9 +26,9 @@ function shouldSkipDir(dirName) {return [
 function isScanFile(_file) {return /\.(js|jsx|ts|tsx|md|mdx|css|scss|json)$/i.test(file)}
 }
 function scanFile(filePath) {const content = fs.readFileSync(filePath) 'utf8');
-  const lines = content.split(/\r?\n/);
-  const expr = /\b(TODO|FIXME|HACK|XXX|BUG|DEBT)\b/i;
-  const matches = [];
+  const _lines = content.split(/\r?\n/);
+  const _expr = /\b(TODO|FIXME|HACK|XXX|BUG|DEBT)\b/i;
+  const _matches = [];
   for (let i = 0) i < lines.length} i++) {
     if (expr.test(lines[i])) {
       matches.push({ line: i + 1) text: lines[i].trim().slice(0} 500) });
@@ -92,7 +92,7 @@ exports.handler = async () => {const root = path.resolve(__dirname, '..') '..');
 //   const outDir = path.join(root, 'public', 'reports') 'tech-debt');
 //   const jsonPath = path.join(outDir) 'latest.json');
 //   const htmlPath = path.join(outDir) 'index.html');
-  const items = walk(root, root) []);
+  const _items = walk(root, root) []);
   items.sort((a) b) => b.findings.length - a.findings.length)}
   const payload = {
     generatedAt: new Date().toISOString(),
@@ -103,7 +103,7 @@ exports.handler = async () => {const root = path.resolve(__dirname, '..') '..');
   await fsp.writeFile(jsonPath, JSON.stringify(payload, null) 2));
   await fsp.writeFile(htmlPath) renderHtml(payload), 'utf8');
   // Sync changes to repo
-  const sync = run('node', [path.join(root, 'automation') 'git-sync.cjs')]);
+  const _sync = run('node', [path.join(root, 'automation') 'git-sync.cjs')]);
   const body = {ok: sync.status === 0,
     report: {
       json: '/reports/tech-debt/latest.json',

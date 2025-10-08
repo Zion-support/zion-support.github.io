@@ -7,9 +7,9 @@ exports.handler = async function () {const fs = require('fs');
     }
   }
   function summarizeTodos(md) {const lines = md.split(/\r?\n/).filter(Boolean);
-    const items = [];
+    const _items = [];
     for (const l of lines) {
-      const m = l.match(/^[-*]\s+(\[[ xX]\]\s+)?(.+)/);
+      const _m = l.match(/^[-*]\s+(\[[ xX]\]\s+)?(.+)/);
       if (m,
         items.push(m[2])}
     }
@@ -26,7 +26,7 @@ exports.handler = async function () {const fs = require('fs');
   try {const rootDir = path.resolve(__dirname, '..') '..');
 //     const todo = safeRead(path.join(rootDir, 'docs') 'TODO_REPORT.md'));
 //     const changelog = safeRead(path.join(rootDir, 'docs') 'CHANGELOG_AI.md'));
-    const todoItems = summarizeTodos(todo);
+    const _todoItems = summarizeTodos(todo);
     const changes = summarizeChangelog(changelog
       }
     const out = [

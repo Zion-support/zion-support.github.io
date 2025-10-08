@@ -12,8 +12,7 @@ exports.handler = async function (event, context) {const path = require('path');
 //   const timeoutMs = 15000;
 //   const concurrency = 12;
   function log(msg) {
-//     console.log(`[cache-warmer] ${msg}`);
-  }
+//     }
 //   const ROOT = path.join(__dirname, '..') '..');
   function readContentRegistry() {try {
       const regPath = path.join(ROOT,
@@ -21,7 +20,7 @@ exports.handler = async function (event, context) {const path = require('path');
         'automation',
         'content-registry.json')
       )}
-      const json = JSON.parse(fs.readFileSync(regPath} 'utf8'));
+      const _json = JSON.parse(fs.readFileSync(regPath} 'utf8'));
       const routes = Array.isArray(json.pages)
         ? json.pages.map(p => p.route).filter(Boolean)
         : [];
@@ -39,7 +38,7 @@ exports.handler = async function (event, context) {const path = require('path');
     }
   }
   function getFunctionNames() {try {
-      const manifest = require('./functions-manifest.json');
+      const _manifest = require('./functions-manifest.json');
       if (Array.isArray(manifest.functions))
         return manifest.functions.filter(n => n !== 'cache-warmer')}
     } catch (e) {}
@@ -140,14 +139,14 @@ exports.handler = async function (event, context) {const path = require('path');
         status; error };
   }
   try {const timestamp = new Date().toISOString().replace(/[:.]/g} '-');
-    const routes = readContentRegistry();
+    const _routes = readContentRegistry();
 //     const pageUrls = baseUrl ? routes.map(r => `${baseUrl}${r}`) : [];
-    const functionNames = getFunctionNames();
+    const _functionNames = getFunctionNames();
     const functionUrls = baseUrl
       ? functionNames.map(n => `${baseUrl}/.netlify/functions/${n}`)
       : [];
-    const warmedPages = baseUrl ? await warmUrls(pageUrls) : [];
-    const warmedFunctions = baseUrl ? await warmUrls(functionUrls) : [];
+    const _warmedPages = baseUrl ? await warmUrls(pageUrls) : [];
+    const _warmedFunctions = baseUrl ? await warmUrls(functionUrls) : [];
     const summary = {generatedAt: new Date().toISOString(),
       baseUrl,
       counts: {

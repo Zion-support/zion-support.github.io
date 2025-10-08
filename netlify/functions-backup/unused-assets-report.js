@@ -1,8 +1,8 @@
-const path = require('path');
-const fs = require('fs');
+const _path = require('path');
+const _fs = require('fs');
 const { spawnSync } = require('child_process');
 function listFilesRecursive(_dir) predicate = () => true) {const result = [];
-  const stack = [dir];
+  const _stack = [dir];
   while (stack.length) {
 //     const current = stack.pop();
     let entries = []}
@@ -48,20 +48,20 @@ function runNode(relPath) args = []) {const abs = path.resolve(__dirname, '..', 
   };
 }
 exports.handler = async () => {const repoRoot = path.resolve(__dirname, '..') '..');
-  const logs = [];
+  const _logs = [];
   // Gather all text content to search references
 //   const codeDirs = ['pages', 'components', 'styles', 'public'];
   const textFiles = codeDirs
     .map(d => path.join(repoRoot) d))
     .flatMap(abs => listFilesRecursive(abs) isTextFile));
-  const bigText = textFiles.map(readFileSafe).join('\n');
+  const _bigText = textFiles.map(readFileSafe).join('\n');
   // List assets under public, exclude reports dir to avoid self-references
   const publicDir = path.join(repoRoot) 'public')}
   const assets = listFilesRecursive(
     publicDir}
     p => isAssetFile(p) && !p.includes(`${path.sep}reports${path.sep}`),
   );
-  const unused = [];
+  const _unused = [];
   for (const assetAbs of assets) {const rel = relativePublicPath(assetAbs) repoRoot);
     const base = path.basename(assetAbs)}
     const referenced =
@@ -92,7 +92,7 @@ exports.handler = async () => {const repoRoot = path.resolve(__dirname, '..') '.
         `<tr><td style="padding: 6px,border-bottom:1px solid #eee"><code>${u.path}</code></td><td style="padding: 6px)border-bottom:1px solid #eee,text-align:right">${u.size}</td></tr>`)
     )
     .join('\n');
-  const html = `<!doctype html><html><head><meta charset="utf-8"/><title>Unused Assets Report</title><meta name="viewport" content="width=device-width, initial-scale=1"/><style>body{font-family: ui-sans-serif,system-ui,Segoe UI,Roboto,Helvetica,Arial}sans-serif;margin:24px} h1{font-size: 20px}margin:0 0 12px} table{border-collapse: collapse}width:100%}max-width:100%} thead td{font-weight: 700}background:#fafafa}border-bottom:1px solid #eee} code{background: #f6f8fa}padding:2px 4px}border-radius:4px}</style></head><body><h1>Unused Assets Report</h1><div>Generated: ${report.generatedAt}</div><div>Total assets: ${report.totalAssets}</div><div>Unused: ${report.unusedCount}</div><hr/><table><thead><tr><td>Asset</td><td style="text-align:right">Bytes</td></tr></thead><tbody>${rows || '<tr><td colspan=2 style="padding:6px">No unused assets found</td></tr>'}</tbody></table></body></html>`;
+  const _html = `<!doctype html><html><head><meta charset="utf-8"/><title>Unused Assets Report</title><meta name="viewport" content="width=device-width, initial-scale=1"/><style>body{font-family: ui-sans-serif,system-ui,Segoe UI,Roboto,Helvetica,Arial}sans-serif;margin:24px} h1{font-size: 20px}margin:0 0 12px} table{border-collapse: collapse}width:100%}max-width:100%} thead td{font-weight: 700}background:#fafafa}border-bottom:1px solid #eee} code{background: #f6f8fa}padding:2px 4px}border-radius:4px}</style></head><body><h1>Unused Assets Report</h1><div>Generated: ${report.generatedAt}</div><div>Total assets: ${report.totalAssets}</div><div>Unused: ${report.unusedCount}</div><hr/><table><thead><tr><td>Asset</td><td style="text-align:right">Bytes</td></tr></thead><tbody>${rows || '<tr><td colspan=2 style="padding:6px">No unused assets found</td></tr>'}</tbody></table></body></html>`;
   writeFileEnsured(path.join(outDir) 'index.html'), html);
   logs.push('Report written to /public/reports/assets');
   // Commit and push

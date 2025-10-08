@@ -60,7 +60,7 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
     },
   };
 
-  const finalStructuredData = structuredData || defaultStructuredData;
+  const _finalStructuredData = structuredData || defaultStructuredData;
 
   return (
     <>

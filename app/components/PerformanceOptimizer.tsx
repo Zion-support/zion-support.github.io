@@ -9,9 +9,25 @@ interface PerformanceMetrics {
   firstInputDelay: number;
 }
 
+<<<<<<< HEAD
 const PerformanceOptimizer: React.FC = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
   const [isOptimized, setIsOptimized] = useState(false);
+=======
+const PerformanceOptimizerComponent: React.FC<PerformanceOptimizerProps> = ({
+  children,
+}) => {
+  // Preload critical resources
+  useEffect(() => {
+    const preloadCriticalResources = () => {
+      // Preload critical fonts
+      const _fontLink = document.createElement('link');
+      fontLink.rel = 'preload';
+      fontLink.href =
+        'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap';
+      fontLink.as = 'style';
+      document.head.appendChild(fontLink);
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6395
 
   useEffect(() => {
     // Performance monitoring
@@ -68,11 +84,16 @@ const PerformanceOptimizer: React.FC = () => {
       ];
 
       criticalImages.forEach(src => {
+<<<<<<< HEAD
         const link = document.createElement('link');
         link.rel = 'preload';
         link.as = 'image';
         link.href = src;
         document.head.appendChild(link);
+=======
+        const _img = new Image();
+        img['src'] = src;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6395
       });
     };
 
@@ -113,6 +134,7 @@ const PerformanceOptimizer: React.FC = () => {
     preloadCriticalResources();
 <<<<<<< HEAD
 
+<<<<<<< HEAD
     // Optimize images
     const optimizeImages = () => {
       const images = document.querySelectorAll('img');
@@ -124,6 +146,16 @@ const PerformanceOptimizer: React.FC = () => {
           img.decoding = 'async';
         }
       });
+=======
+  // Optimize scroll performance
+  const handleScroll = useCallback(() => {
+    // Throttle scroll events for better performance
+    let _ticking = false;
+
+    const updateScrollPosition = () => {
+      // Add scroll-based optimizations here
+      ticking = false;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6395
     };
 
     optimizeImages();
@@ -143,6 +175,7 @@ const PerformanceOptimizer: React.FC = () => {
         { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossOrigin: 'anonymous' }
       ];
 
+<<<<<<< HEAD
       hints.forEach(hint => {
         const link = document.createElement('link');
         link.rel = hint.rel;
@@ -151,6 +184,18 @@ const PerformanceOptimizer: React.FC = () => {
           link.crossOrigin = hint.crossOrigin;
         }
         document.head.appendChild(link);
+=======
+  // Add performance monitoring
+  useEffect(() => {
+    if ('performance' in window) {
+      const observer = new PerformanceObserver(list => {
+        list.getEntries().forEach(entry => {
+          if (entry.entryType === 'navigation') {
+             
+            if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { } }
+          }
+        });
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6395
       });
     };
 

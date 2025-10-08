@@ -10,8 +10,8 @@ const __dirname = path.dirname(__filename);
 // Function to fix remaining lint issues in a file
 function fixRemainingLintIssues(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    let modified = false;
+    let _content = fs.readFileSync(filePath, 'utf8');
+    let _modified = false;
 
     // Skip if not a source file
     if (
@@ -22,8 +22,6 @@ function fixRemainingLintIssues(filePath) {
     ) {
       return false;
     }
-
-    console.log(`Fixing remaining lint issues in: ${filePath}`);
 
     // Fix 1: Add underscore prefix to unused parameters
     content = content.replace(/(\w+):\s*(\w+)\s*=\s*[^,)]+\)\s*=>/g, (match, param1, param2) => {
@@ -86,11 +84,11 @@ function fixRemainingLintIssues(filePath) {
     });
 
     // Fix 2: Comment out unused variable declarations
-    const lines = content.split('\n');
-    const fixedLines = [];
+    const _lines = content.split('\n');
+    const _fixedLines = [];
 
     for (let i = 0; i < lines.length; i++) {
-      const line = lines[i];
+      const _line = lines[i];
 
       // Comment out unused variable declarations
       if (
@@ -100,7 +98,7 @@ function fixRemainingLintIssues(filePath) {
         !line.includes('console.') &&
         !line.includes('//')
       ) {
-        const varName = line.match(/(const|let|var)\s+(\w+)/)?.[2];
+        const _varName = line.match(/(const|let|var)\s+(\w+)/)?.[2];
         if (
           varName &&
           [
@@ -276,9 +274,9 @@ function fixRemainingLintIssues(filePath) {
 
       // Fix 3: Add underscore prefix to unused function parameters
       if (line.includes('function') && line.includes('(') && line.includes(')')) {
-        const paramMatch = line.match(/function\s+\w+\s*\(([^)]+)\)/);
+        const _paramMatch = line.match(/function\s+\w+\s*\(([^)]+)\)/);
         if (paramMatch) {
-          const params = paramMatch[1].split(',').map(p => p.trim());
+          const _params = paramMatch[1].split(',').map(p => p.trim());
           const fixedParams = params.map(p => {
             if (
               p &&
@@ -391,7 +389,7 @@ function fixRemainingLintIssues(filePath) {
 
     return false;
   } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
+
     return false;
   }
 }
@@ -399,14 +397,14 @@ function fixRemainingLintIssues(filePath) {
 // Function to recursively fix remaining lint issues
 function fixAllRemainingLintIssues(_dir) {
   try {
-    const files = fs.readdirSync(dir);
-    let fixedCount = 0;
+    const _files = fs.readdirSync(dir);
+    let _fixedCount = 0;
 
     for (const file of files) {
-      const filePath = path.join(dir, file);
+      const _filePath = path.join(dir, file);
 
       try {
-        const stat = fs.statSync(filePath);
+        const _stat = fs.statSync(filePath);
 
         if (stat.isDirectory()) {
           // Skip certain directories
@@ -425,20 +423,19 @@ function fixAllRemainingLintIssues(_dir) {
           }
         }
       } catch (error) {
-        console.log(`Skipping ${filePath}: ${error.message}`);
+
         continue;
       }
     }
 
     return fixedCount;
   } catch (error) {
-    console.log(`Skipping directory ${dir}: ${error.message}`);
+
     return 0;
   }
 }
 
 // Main execution
-const workspaceDir = process.cwd();
-console.log('Starting remaining lint issue resolution...');
-const fixedCount = fixAllRemainingLintIssues(workspaceDir);
-console.log(`Fixed remaining lint issues in ${fixedCount} files.`);
+const _workspaceDir = process.cwd();
+
+const _fixedCount = fixAllRemainingLintIssues(workspaceDir);

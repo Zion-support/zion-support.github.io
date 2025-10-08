@@ -22,8 +22,8 @@ export function usePerformanceMetrics() {
 
     // First Contentful Paint
     new PerformanceObserver(list => {
-      const entries = list.getEntries();
-      const fcpEntry = entries.find(entry => entry.name === 'first-contentful-paint');
+      const _entries = list.getEntries();
+      const _fcpEntry = entries.find(entry => entry.name === 'first-contentful-paint');
       if (fcpEntry) {
         setMetrics(prev => ({ ...prev, fcp: fcpEntry.startTime }));
       }
@@ -31,16 +31,16 @@ export function usePerformanceMetrics() {
 
     // Largest Contentful Paint
     new PerformanceObserver(list => {
-      const entries = list.getEntries();
-      const lastEntry = entries[entries.length - 1];
+      const _entries = list.getEntries();
+      const _lastEntry = entries[entries.length - 1];
       setMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }));
     }).observe({ entryTypes: ['largest-contentful-paint'] });
 
     // First Input Delay
     new PerformanceObserver(list => {
-      const entries = list.getEntries();
+      const _entries = list.getEntries();
       entries.forEach(entry => {
-        const inputEntry = entry as PerformanceEventTiming;
+        const _inputEntry = entry as PerformanceEventTiming;
         setMetrics(prev => ({
           ...prev,
           fid: inputEntry.processingStart - inputEntry.startTime,
@@ -49,9 +49,9 @@ export function usePerformanceMetrics() {
     }).observe({ entryTypes: ['first-input'] });
 
     // Cumulative Layout Shift
-    let clsValue = 0;
+    let _clsValue = 0;
     new PerformanceObserver(list => {
-      const entries = list.getEntries();
+      const _entries = list.getEntries();
       entries.forEach(entry => {
         const layoutEntry = entry as PerformanceEntry & {
           hadRecentInput?: boolean;
@@ -66,7 +66,7 @@ export function usePerformanceMetrics() {
 
     // Time to First Byte
     new PerformanceObserver(list => {
-      const entries = list.getEntries();
+      const _entries = list.getEntries();
       const ttfbEntry = entries.find(entry =>
         entry.name.includes('document')
       ) as PerformanceNavigationTiming;

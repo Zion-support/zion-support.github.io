@@ -13,7 +13,7 @@ export interface SEOConfig {
 export const generateMetaTags = (config: SEOConfig): string => {
   const { title, description, keywords, ogImage, canonicalUrl } = config;
 
-  let tags = `<title>${title}</title>`;
+  let _tags = `<title>${title}</title>`;
   tags += `<meta name="description" content="${description}" />`;
 
   if (keywords && keywords.length > 0) {

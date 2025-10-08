@@ -552,9 +552,9 @@ const contact = {mobile: "+1 302 464 0950"
   customers: number, rating: number,
   reviews: number;
   return emergingTechServices2025.filter(service =>
-    const price = parseInt(service.price.monthly.toString()) |0;
+    const _price = parseInt(service.price.monthly.toString()) |0;
   return emergingTechServices2025.filter(service => {)
-    const price = parseInt(service.price.monthly.toString()) || 0;
+    const _price = parseInt(service.price.monthly.toString()) || 0;
     return price >= minPrice && price <= maxPrice}
   });
 };import { MicroSaasService  } from "./enhanced-real-micro-saas-services"
@@ -1003,7 +1003,7 @@ export const emergingTechServices2025: MicroSaasService[] = [;
     customers: 9;
     rating: 4.9;
   return emergingTechServices2025 && emergingTechServices2025.filter(service =>
-    const price = parseInt(service && service.price.monthly && monthly.toString()) || 0;
+    const _price = parseInt(service && service.price.monthly && monthly.toString()) || 0;
     return price >= minPrice && price <= maxPrice;
 ;
 export const getPopularEmergingTechServices = () =>: unknown
@@ -1018,7 +1018,7 @@ export const getEmergingTechServicesByCategory = (category: string) =>: unknown;
 export const getEmergingTechServicesByPriceRange = (min_price: number)
   max_price: number) =>: unknown;
   return emergingTechServices2025.filter (service =>
-    const price = parse_int (service.price.monthly.to_string ()) || 0;
+    const _price = parse_int (service.price.monthly.to_string ()) || 0;
     return price >= min_price && price <= max_price;
   });
 }import { MicroSaasService   } from './enhanced - real - micro - saas - services'
@@ -1968,7 +1968,7 @@ export const getEmergingTechServicesByCategory = (category: string) => {;
 };
 export const getEmergingTechServicesByPriceRange = (minPrice: number) maxPrice: number) => {;
   return emergingTechServices2025.filter(service => {}
-    const price = parseInt(service.price.monthly.toString()) || 0;
+    const _price = parseInt(service.price.monthly.toString()) || 0;
     return price >= minPrice && price <= maxPrice;
   })
 };

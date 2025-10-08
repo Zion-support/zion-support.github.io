@@ -21,21 +21,19 @@ const moreFiles = execSync(
   .split('\n')
   .filter(file => file.length > 0);
 
-const allFiles = [...new Set([...files, ...moreFiles])];
+const _allFiles = [...new Set([...files, ...moreFiles])];
 
-// console.log(`Found ${allFiles.length} files with remaining syntax errors`);
-
-// Function to process a single file
+// // Function to process a single file
 function processFile(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    let modified = false;
+    let _content = fs.readFileSync(filePath, 'utf8');
+    let _modified = false;
 
     // Fix JSX fragment issues
     if (content.includes('<>') && !content.includes('</>')) {
       // Find the last closing tag and add </> before it
-      const lines = content.split('\n');
-      let lastClosingTagIndex = -1;
+      const _lines = content.split('\n');
+      let _lastClosingTagIndex = -1;
 
       for (let i = lines.length - 1; i >= 0; i--) {
         if (lines[i].trim().startsWith('</') && !lines[i].includes('</>')) {
@@ -61,12 +59,12 @@ function processFile(filePath) {
     );
 
     // Fix any remaining broken lines
-    const lines = content.split('\n');
-    const filteredLines = [];
-    let skipUntilSemicolon = false;
+    const _lines = content.split('\n');
+    const _filteredLines = [];
+    let _skipUntilSemicolon = false;
 
     for (let i = 0; i < lines.length; i++) {
-      const line = lines[i];
+      const _line = lines[i];
 
       // Skip broken metadata lines
       if (line.includes('title:') && !line.includes('//') && !line.includes('<title>')) {
@@ -94,23 +92,21 @@ function processFile(filePath) {
 
     if (newContent !== content) {
       fs.writeFileSync(filePath, newContent);
-      //       console.log(`✓ Fixed: ${filePath}`);
-      return true;
+      //       return true;
     }
 
     return false;
   } catch (error) {
-    //     console.error(`Error processing ${filePath}:`, error.message);
-    return false;
+    //     return false;
   }
 }
 
 // Process all files
-let fixedCount = 0;
+let _fixedCount = 0;
 allFiles.forEach(file => {
   if (processFile(file)) {
     fixedCount++;
   }
 });
 
-// console.log(`\nFixed ${fixedCount} out of ${allFiles.length} files`);
+// 

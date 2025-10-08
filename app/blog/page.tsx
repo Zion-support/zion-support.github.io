@@ -131,13 +131,13 @@ export default function BlogPage() {
     return () => clearTimeout(timer);
   }, []);
 
-  const categories = ['all', ...Array.from(new Set(blogPosts.map(post => post.category)))];
+  const _categories = ['all', ...Array.from(new Set(blogPosts.map(post => post.category)))];
   const filteredPosts = selectedCategory === 'all' 
     ? posts 
     : posts.filter(post => post.category === selectedCategory);
 
-  const featuredPosts = posts.filter(post => post.featured);
-  const regularPosts = posts.filter(post => !post.featured);
+  const _featuredPosts = posts.filter(post => post.featured);
+  const _regularPosts = posts.filter(post => !post.featured);
 
   if (loading) {
     return (

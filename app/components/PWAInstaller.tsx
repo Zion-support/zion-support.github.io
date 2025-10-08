@@ -1,7 +1,6 @@
 // // 'use client'; // Removed for Vite compatibility // Removed for Vite compatibility
 
 import React, { useEffect, useState } from 'react';
-// import { logger as _logger } from '../utils/logger';
 
 /**
  * PWA Installer Component
@@ -40,7 +39,7 @@ const PWAInstaller: React.FC = () => {
 
           // Listen for updates
           registration.addEventListener('updatefound', () => {
-            const newWorker = registration.installing;
+            const _newWorker = registration.installing;
             if (newWorker) {
               newWorker.addEventListener('statechange', () => {
                 if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
@@ -100,7 +99,7 @@ const PWAInstaller: React.FC = () => {
     await deferredPrompt.prompt();
 
     // Wait for the user's response
-    const choiceResult = await deferredPrompt.userChoice;
+    const _choiceResult = await deferredPrompt.userChoice;
 
     if (choiceResult.outcome === 'accepted') {
       // User accepted the install prompt

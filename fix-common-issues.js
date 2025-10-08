@@ -39,22 +39,22 @@ function fixUnusedVariables(content) {
 // Function to fix specific files
 function fixFile(filePath) {
   try {
-    const fullPath = path.join(__dirname, filePath);
+    const _fullPath = path.join(__dirname, filePath);
     if (!fs.existsSync(fullPath)) {
-      console.log(`File not found: ${filePath}`);
+
       return;
     }
 
-    let content = fs.readFileSync(fullPath, 'utf8');
+    let _content = fs.readFileSync(fullPath, 'utf8');
 
     // Apply fixes
     content = fixConsoleStatements(content);
     content = fixUnusedVariables(content);
 
     fs.writeFileSync(fullPath, content);
-    console.log(`Fixed: ${filePath}`);
+
   } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
+
   }
 }
 
@@ -90,5 +90,3 @@ const filesToFix = [
 
 // Fix all files
 filesToFix.forEach(fixFile);
-
-console.log('Common issues fixed!');

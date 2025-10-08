@@ -27,6 +27,7 @@ import Analytics from './components/Analytics';
 >>>>>>> cursor/analyze-improve-and-deploy-application-3d67
 
 // Lazy load components for better performance
+<<<<<<< HEAD
 // const ContentShowcase = lazy(() => import('./components/ContentShowcase'));
 // const InteractiveContentShowcase2026 = lazy(
 //   () => import('./components/InteractiveContentShowcase2026')
@@ -34,18 +35,27 @@ import Analytics from './components/Analytics';
 // const InteractiveAIROICalculator = lazy(
 //   () => import('./components/InteractiveAIROICalculator')
 // );
+=======
+const _ContentShowcase = lazy(() => import('./components/ContentShowcase'));
+const InteractiveContentShowcase2026 = lazy(
+  () => import('./components/InteractiveContentShowcase2026')
+);
+const InteractiveAIROICalculator = lazy(
+  () => import('./components/InteractiveAIROICalculator')
+);
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6395
 
 // Lazy load pages for better performance
-const HomePage = lazy(() => import('./page'));
-const AboutPage = lazy(() => import('./about/page'));
-const ServicesPage = lazy(() => import('./services/page'));
-const ContactPage = lazy(() => import('./contact/page'));
-const TeamPage = lazy(() => import('./team/page'));
-const PrivacyPage = lazy(() => import('./privacy/page'));
-const TermsPage = lazy(() => import('./terms/page'));
-const EnterprisePage = lazy(() => import('./enterprise/page'));
-const ServicesAdvertisingPage = lazy(() => import('./services-advertising/page'));
-const CaseStudiesPage = lazy(() => import('./case-studies/page'));
+const _HomePage = lazy(() => import('./page'));
+const _AboutPage = lazy(() => import('./about/page'));
+const _ServicesPage = lazy(() => import('./services/page'));
+const _ContactPage = lazy(() => import('./contact/page'));
+const _TeamPage = lazy(() => import('./team/page'));
+const _PrivacyPage = lazy(() => import('./privacy/page'));
+const _TermsPage = lazy(() => import('./terms/page'));
+const _EnterprisePage = lazy(() => import('./enterprise/page'));
+const _ServicesAdvertisingPage = lazy(() => import('./services-advertising/page'));
+const _CaseStudiesPage = lazy(() => import('./case-studies/page'));
 
 // Utils
 import { lazyLoadImages, preloadCriticalResources, collectPerformanceMetrics, performanceOptimizer } from './utils/performanceOptimizer';
@@ -76,6 +86,7 @@ const App: React.FC = () => {
     
     // Initialize Web Vitals monitoring
     if (typeof window !== 'undefined' && 'performance' in window) {
+<<<<<<< HEAD
       const pageLoadMetrics = collectPerformanceMetrics();
       const metrics = performanceOptimizer.getMetrics();
       // const performanceMetrics = performanceMonitor.getMetrics();
@@ -91,19 +102,42 @@ const App: React.FC = () => {
       if (performanceMetrics) {
         // eslint-disable-next-line no-console
         console.log('Core Web Vitals:', performanceMetrics);
+=======
+      const _pageLoadMetrics = collectPerformanceMetrics();
+      const _metrics = performanceOptimizer.getMetrics();
+      const _performanceMetrics = performanceMonitor.getMetrics();
+      
+      if (pageLoadMetrics) {
+
+      }
+      if (metrics) {
+
+      }
+      if (performanceMetrics) {
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6395
       }
     }
     
     // Log performance and accessibility metrics periodically
     const metricsInterval = setInterval(() => {
+<<<<<<< HEAD
       // const _performanceMetrics = performanceMonitor.getMetrics();
       const accessibilityMetrics = accessibilityEnhancer.getMetrics();
+=======
+      const _performanceMetrics = performanceMonitor.getMetrics();
+      const _accessibilityMetrics = accessibilityEnhancer.getMetrics();
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6395
       
       if (process.env.NODE_ENV === 'development') {
         // eslint-disable-next-line no-console
         console.log('Performance Score:', performanceMonitor.getScore());
+<<<<<<< HEAD
         // eslint-disable-next-line no-console
         console.log('Accessibility Score:', accessibilityMetrics.overallScore);
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6395
       }
     }, 30000);
     

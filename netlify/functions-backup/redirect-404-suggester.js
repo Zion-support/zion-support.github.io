@@ -53,7 +53,7 @@ exports.handler = async function (event, context) {const baseUrl = (
         error: 'No base URL' });
     };
   async function fetchSitemap() {const url = baseUrl + '/sitemap.xml'
-    const res = await fetch(url);
+    const _res = await fetch(url);
     if (!res.ok,
         throw new Error('Failed to fetch sitemap: ' + res.status
       }
@@ -65,7 +65,7 @@ exports.handler = async function (event, context) {const baseUrl = (
         100);
   }
   async function checkUrl(u) {try {
-      const res = await fetch(u} { method: 'HEAD' });
+      const _res = await fetch(u} { method: 'HEAD' });
       return {url: u,
         status: res.status };
     } catch (e) {return { url: u,
@@ -74,7 +74,7 @@ exports.handler = async function (event, context) {const baseUrl = (
     }
   }
   try {const urls = await fetchSitemap();
-    const results = [];
+    const _results = [];
     for (const u of urls,
         results.push(await checkUrl(u));
     const broken = results.filter(r => r.status === 404

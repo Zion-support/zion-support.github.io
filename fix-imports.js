@@ -32,8 +32,8 @@ const iconMappings = {
 //Function to fix imports in a file
 function fixImportsInFile(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    let modified = false;
+    let _content = fs.readFileSync(filePath, 'utf8');
+    let _modified = false;
 
     //Fix lucide-react imports
     for (const [broken, correct] of Object.entries(iconMappings)) {
@@ -43,7 +43,6 @@ function fixImportsInFile(filePath) {
       if (content.includes(oldImport)) {
         content = content.replace(
           new RegExp(`import ${correct} from '${oldImport}';`, 'g'),
-          `import { ${correct} } from '${newImport}';`
         );
         modified = true;
       }
@@ -57,11 +56,9 @@ function fixImportsInFile(filePath) {
 
     if (modified) {
       fs.writeFileSync(filePath, content);
-      //       console.log(`Fixed imports in: ${filePath}`);
-    }
+      //       }
   } catch (error) {
-    //     console.error(`Error processing ${filePath}:`, error.message);
-  }
+    //     }
 }
 
 //Get all blog files
@@ -74,4 +71,4 @@ const files = fs
 // Process each file
 files.forEach(fixImportsInFile);
 
-// console.log('Import fixing completed!');
+// 

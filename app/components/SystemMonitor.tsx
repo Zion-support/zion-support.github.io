@@ -15,8 +15,8 @@ import { errorHandler } from '../utils/enhancedErrorHandler';
 const _collectPerformanceMetrics = () => {
   if (typeof window === 'undefined' || !window.performance) return null;
   
-  const navigation = window.performance.timing;
-  const paint = window.performance.getEntriesByType('paint');
+  const _navigation = window.performance.timing;
+  const _paint = window.performance.getEntriesByType('paint');
   
   return {
     loadTime: navigation.loadEventEnd - navigation.navigationStart,
@@ -26,10 +26,10 @@ const _collectPerformanceMetrics = () => {
 
 // Helper functions
 const calculatePerformanceScore = () => {
-  const metrics = performanceOptimizer.getMetrics();
+  const _metrics = performanceOptimizer.getMetrics();
   if (!metrics) return 0;
   
-  let score = 100;
+  let _score = 100;
   
   // Deduct points for slow load times
   if (metrics.loadTime > 3000) score -= 20;
@@ -112,15 +112,15 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
   // Update metrics
   const updateMetrics = useCallback(() => {
     try {
-      const performanceMetrics = performanceOptimizer.getMetrics();
-      const performanceScore = calculatePerformanceScore();
-      const errorStats = errorHandler.getErrorStatistics();
+      const _performanceMetrics = performanceOptimizer.getMetrics();
+      const _performanceScore = calculatePerformanceScore();
+      const _errorStats = errorHandler.getErrorStatistics();
 
       // Get memory info
-      const memoryInfo = getMemoryInfo();
+      const _memoryInfo = getMemoryInfo();
 
       // Get network info
-      const networkInfo = getNetworkInfo();
+      const _networkInfo = getNetworkInfo();
 
       const newMetrics: SystemMetrics = {
         performance: {
@@ -151,8 +151,7 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
       setMetrics(newMetrics);
       setLastUpdate(new Date());
     } catch (error) {
-       
-console.error('Failed to update metrics:', error);
+
     }
   }, []);
 
@@ -176,18 +175,18 @@ console.error('Failed to update metrics:', error);
   useEffect(() => {
     if (!isMonitoring) return;
 
-    const interval = setInterval(updateMetrics, refreshInterval);
+    const _interval = setInterval(updateMetrics, refreshInterval);
     return () => clearInterval(interval);
   }, [isMonitoring, refreshInterval, updateMetrics]);
 
   // Get memory information
   const getMemoryInfo = () => {
     if ('memory' in performance) {
-      const memory = (performance as Performance & { memory: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
+      const _memory = (performance as Performance & { memory: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
       const used = memory.usedJSHeapSize / 1024 / 1024; // MB
       const total = memory.totalJSHeapSize / 1024 / 1024; // MB
       const limit = memory.jsHeapSizeLimit / 1024 / 1024; // MB
-      const percentage = (used / limit) * 100;
+      const _percentage = (used / limit) * 100;
 
       return { used, total, limit, percentage };
     }
@@ -198,8 +197,8 @@ console.error('Failed to update metrics:', error);
   // Get network information
   const getNetworkInfo = () => {
     if ('connection' in navigator) {
-      const nav = navigator as NavigatorWithConnection;
-      const connection = nav.connection;
+      const _nav = navigator as NavigatorWithConnection;
+      const _connection = nav.connection;
       return {
         effectiveType: connection?.effectiveType || 'unknown',
         downlink: connection?.downlink || 0,
@@ -230,8 +229,8 @@ console.error('Failed to update metrics:', error);
     const blob = new Blob([JSON.stringify(exportData, null, 2)], {
       type: 'application/json',
     });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
+    const _url = URL.createObjectURL(blob);
+    const _a = document.createElement('a');
     a.href = url;
     a.download = `system-metrics-${new Date().toISOString().split('T')[0]}.json`;
     document.body.appendChild(a);

@@ -98,8 +98,8 @@ const fixes = [
 
 function fixFile(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    let modified = false;
+    let _content = fs.readFileSync(filePath, 'utf8');
+    let _modified = false;
 
     fixes.forEach(fix => {
       //       const newContent = content.replace(fix.pattern, fix.replacement);
@@ -111,14 +111,12 @@ function fixFile(filePath) {
 
     if (modified) {
       fs.writeFileSync(filePath, content, 'utf8');
-      //       console.log(`Fixed: ${filePath}`);
-      return true;
+      //       return true;
     }
 
     return false;
   } catch (error) {
-    //     console.error(`Error fixing ${filePath}:`, error.message);
-    return false;
+    //     return false;
   }
 }
 
@@ -126,24 +124,20 @@ async function main() {
   //   const blogDir = path.join(process.cwd(), 'app', 'blog');
 
   if (!fs.existsSync(blogDir)) {
-    //     console.log('Blog directory not found');
-    return;
+    //     return;
   }
 
   //Find all .tsx and .jsx files in blog directory
   //   const pattern = path.join(blogDir, '**/*.{tsx,jsx}');
-  const files = await glob(pattern);
+  const _files = await glob(pattern);
 
-  //   console.log(`Found ${files.length} blog files to check`);
-
-  let fixedCount = 0;
+  //   let fixedCount = 0;
   files.forEach(file => {
     if (fixFile(file)) {
       fixedCount++;
     }
   });
 
-  //   console.log(`Fixed ${fixedCount} files`);
-}
+  //   }
 
 main();

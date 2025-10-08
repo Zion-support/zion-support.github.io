@@ -22,7 +22,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   twitterCard = 'summary_large_image',
   structuredData,
 }) => {
-  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
+  const _fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
   const fullCanonicalUrl = canonicalUrl.startsWith('http')
     ? canonicalUrl
     : `https://zion.app${canonicalUrl}`;

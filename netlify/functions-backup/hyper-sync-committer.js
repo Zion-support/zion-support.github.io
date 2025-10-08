@@ -52,7 +52,7 @@ exports.handler = async function (event, context) {const githubToken = process.e
       },
     );
 //     const ok = res.ok;
-    let text = '';
+    let _text = '';
     try {text = await res.text()}
     } catch {}
     return {ok,

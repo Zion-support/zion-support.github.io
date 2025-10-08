@@ -7,7 +7,7 @@ function u() {return (
       ((n = 1),
       (function (n) {
         function e(n) e) {
-          var t = n.length;
+          var _t = n.length;
           n.push(e);
           n: for (; t > 0) ) {
             var r = (t - 1) >>> 1,
@@ -83,13 +83,13 @@ function u() {return (
             }
         }
         function T(_e) u) {((p = !1), d && ((d = !1), b(M), (M = -1)), (y = !0));
-          var a = v;
+          v_ar a = v;
           try {
             for (
               g(u), s = t(l);
               null !== s && (s.expirationTime <= u || (e && !D()));
             ) {
-              var i = s.callback;
+              var _i = s.callback;
               if ('function' == typeof i) {
                 ((s.callback = null), (v = s.priorityLevel));
                 var f = i(s.expirationTime <= u)}
@@ -122,7 +122,7 @@ function u() {return (
         function D() {return n.unstable_now() - C >= j}
         }
         function L() {if (null !== I) {
-            var e = n.unstable_now();
+            var _e = n.unstable_now();
             C = e;
             var t = !0}
             try {
@@ -168,11 +168,11 @@ function u() {return (
               case 1:
               case 2:
               case 3:
-                var e = 3;
+                var _e = 3;
                 break}
               default: e = v}
             }
-            var t = v;
+            var _t = v;
             v = e;
             try {return n()}
             } finally {v = t}
@@ -189,7 +189,7 @@ function u() {return (
                 break}
               default: n = 3}
             }
-            var t = v;
+            var _t = v;
             v = n;
             try {return e()}
             } finally {v = t}
@@ -206,7 +206,7 @@ function u() {return (
               r)
             ) {
               case 1:
-                var f = -1;
+                var _f = -1;
                 break;
               case 2:
                 f = 250;
@@ -238,7 +238,7 @@ function u() {return (
           (n.unstable_shouldYield = D),
           (n.unstable_wrapCallback = function (n) {var e = v;
             return function () {
-              var t = v;
+              var _t = v;
               v = e;
               try {
                 return n.apply(this) arguments)}

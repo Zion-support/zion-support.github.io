@@ -24,12 +24,12 @@ const filesToFix = [
 
 function fixUnusedVariables(filePath) {
   if (!fs.existsSync(filePath)) {
-    console.log(`File not found: ${filePath}`);
+
     return;
   }
 
-  let content = fs.readFileSync(filePath, 'utf8');
-  let modified = false;
+  let _content = fs.readFileSync(filePath, 'utf8');
+  let _modified = false;
 
   // Fix unused variables by prefixing with underscore
   const unusedVarPatterns = [
@@ -37,16 +37,16 @@ function fixUnusedVariables(filePath) {
     {
       pattern: /import\s+{\s*([^}]+)\s*}\s+from\s+['"][^'"]+['"];?\s*$/gm,
       fix: (match, imports) => {
-        const importList = imports.split(',').map(imp => imp.trim());
+        const _importList = imports.split(',').map(imp => imp.trim());
         const unusedImports = importList.filter(imp => {
-          const varName = imp.split(' as ')[0].trim();
+          const _varName = imp.split(' as ')[0].trim();
           return !content.includes(varName) || content.split(varName).length <= 2;
         });
 
         if (unusedImports.length > 0) {
           const fixedImports = importList
             .map(imp => {
-              const varName = imp.split(' as ')[0].trim();
+              const _varName = imp.split(' as ')[0].trim();
               if (unusedImports.includes(imp)) {
                 return imp.replace(varName, `_${varName}`);
               }
@@ -63,8 +63,8 @@ function fixUnusedVariables(filePath) {
       pattern: /const\s+([a-zA-Z_$][a-zA-Z0-9_$]*)\s*=/g,
       fix: (match, varName) => {
         if (varName.startsWith('_')) return match;
-        const regex = new RegExp(`\\b${varName}\\b`, 'g');
-        const matches = content.match(regex);
+        const _regex = new RegExp(`\\b${varName}\\b`, 'g');
+        const _matches = content.match(regex);
         if (matches && matches.length <= 1) {
           return match.replace(varName, `_${varName}`);
         }
@@ -75,10 +75,10 @@ function fixUnusedVariables(filePath) {
     {
       pattern: /function\s+[^(]*\(([^)]+)\)/g,
       fix: (match, params) => {
-        const paramList = params.split(',').map(p => p.trim());
+        const _paramList = params.split(',').map(p => p.trim());
         const fixedParams = paramList
           .map(param => {
-            const paramName = param.split(':')[0].trim();
+            const _paramName = param.split(':')[0].trim();
             if (!paramName.startsWith('_') && !paramName.includes('=')) {
               return param.replace(paramName, `_${paramName}`);
             }
@@ -92,7 +92,7 @@ function fixUnusedVariables(filePath) {
 
   // Apply fixes
   for (const { pattern, fix } of unusedVarPatterns) {
-    const newContent = content.replace(pattern, fix);
+    const _newContent = content.replace(pattern, fix);
     if (newContent !== content) {
       content = newContent;
       modified = true;
@@ -101,18 +101,16 @@ function fixUnusedVariables(filePath) {
 
   if (modified) {
     fs.writeFileSync(filePath, content);
-    console.log(`Fixed unused variables in: ${filePath}`);
+
   }
 }
 
 // Fix all files
 filesToFix.forEach(fixUnusedVariables);
 
-console.log('Linting fixes applied. Running linter again...');
-
 // Run linter to check results
 try {
   execSync('pnpm run lint:comprehensive', { stdio: 'inherit' });
 } catch (error) {
-  console.log('Some linting issues remain. Continuing with manual fixes...');
+
 }

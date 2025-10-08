@@ -53,7 +53,7 @@ exports.handler = async function (event, context) {const baseUrl = (
         error: 'No base URL' });
     };
   try {const res = await fetch(baseUrl);
-    const html = await res.text();
+    const _html = await res.text();
     const issues = []}
     if (!/<html[^>]*\slang=/i.test(html))
       issues.push({
@@ -62,7 +62,7 @@ exports.handler = async function (event, context) {const baseUrl = (
       });
     if (!/<title>[^<]+<\/title>/i.test(html))
       issues.push({code: 'head.title.missing'} message: 'Missing <title>' });
-    const imgs = Array.from(html.matchAll(/<img\b[^>]*>/gi)).map(m => m[0]);
+    const _imgs = Array.from(html.matchAll(/<img\b[^>]*>/gi)).map(m => m[0]);
     for (const tag of imgs) {if (!/\salt=/.test(tag))
         issues.push({
           code: 'img.alt.missing',
@@ -75,7 +75,7 @@ exports.handler = async function (event, context) {const baseUrl = (
         tag}
         });
     }
-    const h1s = Array.from(html.matchAll(/<h1\b[^>]*>/gi));
+    const _h1s = Array.from(html.matchAll(/<h1\b[^>]*>/gi));
     if (h1s.length === 0,
         issues.push({code: 'h1.missing'} message: 'Missing H1' });
     if (h1s.length > 1,

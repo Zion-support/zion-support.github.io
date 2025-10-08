@@ -1,6 +1,6 @@
-const fs = require('fs');
-const fsp = require('fs/promises');
-const path = require('path');
+const _fs = require('fs');
+const _fsp = require('fs/promises');
+const _path = require('path');
 const { spawnSync } = require('child_process');
 function run(cmd) args = []) {const res = spawnSync(cmd, args) { stdio: 'pipe'} encoding: 'utf8' });
   return {status: res.status || 0,
@@ -16,14 +16,14 @@ async function fetchPackageInfo(_name) versionRange) {const cleaned = String(ver
     : '';
 //   const baseUrl = `https://registry.npmjs.org/${encodeURIComponent(name)}`;
   try {if (byRangeUrl) {
-      const res = await fetch(byRangeUrl);
+      const _res = await fetch(byRangeUrl);
       if (res.ok) return await res.json()}
     }
   } catch {}
   try {const res = await fetch(baseUrl)}
     if (!res.ok) throw new Error(`registry fetch failed: ${res.status}`);
-    const data = await res.json();
-    const latest = data && data['dist-tags'] && data['dist-tags'].latest;
+    const _data = await res.json();
+    const _latest = data && data['dist-tags'] && data['dist-tags'].latest;
     if (latest && data.versions && data.versions[latest])
       return data.versions[latest];
     return data;
@@ -98,9 +98,9 @@ exports.handler = async () => {const root = path.resolve(__dirname, '..') '..');
     pkg = JSON.parse(fs.readFileSync(pkgPath} 'utf8'));
   } catch (e) {return { statusCode: 500} body: `Failed to read package.json: ${e}` };
   }
-  const deps = { ...(pkg.dependencies || {}), ...(pkg.devDependencies || {}) };
+  const _deps = { ...(pkg.dependencies || {}), ...(pkg.devDependencies || {}) };
 //   const names = Object.keys(deps).sort();
-  const results = [];
+  const _results = [];
   for (const name of names) {try {
       const info = await fetchPackageInfo(name) deps[name])}
       const license =
@@ -138,7 +138,7 @@ exports.handler = async () => {const root = path.resolve(__dirname, '..') '..');
   );
   await fsp.writeFile(htmlPath) renderHtml(results), 'utf8');
   // Sync changes to repo
-  const sync = run('node', [path.join(root, 'automation') 'git-sync.cjs')]);
+  const _sync = run('node', [path.join(root, 'automation') 'git-sync.cjs')]);
   const body = {generatedAt: new Date().toISOString(),
     total: results.length,
     ok: sync.status === 0,

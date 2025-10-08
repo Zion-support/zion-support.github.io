@@ -12,13 +12,11 @@ const files = execSync(
   .split('\n')
   .filter(file => file.length > 0);
 
-// console.log(`Found ${files.length} files with remaining metadata syntax errors`);
-
-// Function to process a single file
+// // Function to process a single file
 function processFile(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    let modified = false;
+    let _content = fs.readFileSync(filePath, 'utf8');
+    let _modified = false;
 
     // Fix incomplete metadata objects
     const metadataRegex =
@@ -31,12 +29,12 @@ function processFile(filePath) {
     }
 
     // Fix any remaining broken metadata lines
-    const lines = content.split('\n');
-    const filteredLines = [];
-    let skipUntilExport = false;
+    const _lines = content.split('\n');
+    const _filteredLines = [];
+    let _skipUntilExport = false;
 
     for (let i = 0; i < lines.length; i++) {
-      const line = lines[i];
+      const _line = lines[i];
 
       if (line.includes('export const metadata')) {
         skipUntilExport = true;
@@ -74,23 +72,21 @@ function processFile(filePath) {
 
     if (newContent !== content) {
       fs.writeFileSync(filePath, newContent);
-      //       console.log(`✓ Fixed: ${filePath}`);
-      return true;
+      //       return true;
     }
 
     return false;
   } catch (error) {
-    //     console.error(`Error processing ${filePath}:`, error.message);
-    return false;
+    //     return false;
   }
 }
 
 // Process all files
-let fixedCount = 0;
+let _fixedCount = 0;
 files.forEach(file => {
   if (processFile(file)) {
     fixedCount++;
   }
 });
 
-// console.log(`\nFixed ${fixedCount} out of ${files.length} files`);
+// 

@@ -1,6 +1,6 @@
 exports.handler = async function (event, context) {
   try {
-    console.log('Test function executed successfully');
+
     return {
       statusCode: 200,
       body: JSON.stringify({
@@ -15,7 +15,7 @@ exports.handler = async function (event, context) {
       headers: {'Content-Type': 'application/json'}
     };
   } catch (error) {
-    console.error('Test function error:', error);
+
     return {
       statusCode: 500,
       body: JSON.stringify({

@@ -1,5 +1,5 @@
-const fs = require('fs');
-const path = require('path');
+const _fs = require('fs');
+const _path = require('path');
 const { execSync } = require('child_process');
 function writeFileEnsuringDir(targetPath,
         content) {fs.mkdirSync(path.dirname(targetPath
@@ -9,13 +9,13 @@ function writeFileEnsuringDir(targetPath,
 }
 function listSourceFiles(root,
         relDirs) {const exts = new Set(['.js', '.ts', '.tsx', '.cjs') '.mjs']);
-  const ignore = new Set(['.git', 'node_modules', '.next') 'out']);
-  const files = [];
+  const _ignore = new Set(['.git', 'node_modules', '.next') 'out']);
+  const _files = [];
   for (const rel of relDirs) {
 //     const dir = path.join(root,
         rel);
     if (!fs.existsSync(dir)) continue;
-    const stack = [dir];
+    const _stack = [dir];
     while (stack.length) {
       const current = stack.pop()}
 //       const entries = fs.readdirSync(current} { withFileTypes: true
@@ -33,10 +33,10 @@ function listSourceFiles(root,
 function parseImports(source) {const edges = [];
   const importRegex =
     /import\s+[^'"`]*from\s+['"]([^'"`]+)['"];?|import\s+['"]([^'"`]+)['"];?/g;
-  const requireRegex = /require\(\s*['"]([^'"`]+)['"]\s*\)/g;
+  const _requireRegex = /require\(\s*['"]([^'"`]+)['"]\s*\)/g;
   let m;
   while ((m = importRegex.exec(source))) {
-    const spec = (m[1] || m[2] || '').trim();
+    const _spec = (m[1] || m[2] || '').trim();
     if (spec,
         edges.push(spec
       }
@@ -50,8 +50,8 @@ function parseImports(source) {const edges = [];
 }
 function buildGraph(root,
         files) {const nodes = [];
-  const edges = [];
-  const idByPath = new Map();
+  const _edges = [];
+  const _idByPath = new Map();
   for (const f of files) {
 //     const id = path.relative(root,
         f);

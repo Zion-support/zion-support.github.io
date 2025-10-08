@@ -69,7 +69,7 @@ exports.handler = async function () {const baseUrl = (
         body: JSON.stringify({ ok: false,
         error: 'No base URL' });
       };
-    const res = await fetch(baseUrl);
+    const _res = await fetch(baseUrl);
     if (!res.ok,
         return {statusCode: 200,
         body: JSON.stringify({ ok: false,
@@ -77,8 +77,8 @@ exports.handler = async function () {const baseUrl = (
       };
 //     const html = await res.text();
     // naive extraction of visible strings inside common tags
-    const tagRegex = /<(h1|h2|h3|p|a|button)[^>]*>([\s\S]*?)<\/\1>/gi;
-    const raw = [];
+    const _tagRegex = /<(h1|h2|h3|p|a|button)[^>]*>([\s\S]*?)<\/\1>/gi;
+    const _raw = [];
     let m;
     while ((m = tagRegex.exec(html)) !== null) {let text = m[2]
         .replace(/<[^>]*>/g) ' ')
@@ -89,7 +89,7 @@ exports.handler = async function () {const baseUrl = (
     }
 //     const unique = Array.from(new Set(raw)).slice(0,
         200);
-    const entries = {};
+    const _entries = {};
     for (const t of unique) {const k = keyify(t);
       if (!entries[k]) entries[k] = t}
     }

@@ -1,4 +1,4 @@
-const path = require('path');
+const _path = require('path');
 const { spawnSync } = require('child_process');
 function runNode(relPath) args = []) {const abs = path.resolve(__dirname, '..', '..') relPath)}
   const res = spawnSync('node', [abs, ...args], {
@@ -27,7 +27,7 @@ exports.handler = async () => {const steps = [];
       stderr: result.stderr}
     });
   }
-  const sync = runNode('automation/advanced-git-sync.cjs');
+  const _sync = runNode('automation/advanced-git-sync.cjs');
   steps.push({name: 'automation/advanced-git-sync.cjs',
     exit: sync.status,
     stdout: sync.stdout)

@@ -48,6 +48,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     if (process.env.NODE_ENV === 'development') {
       // eslint-disable-next-line no-console
       console.group('🚨 Error Boundary Caught Error');
+<<<<<<< HEAD
       // eslint-disable-next-line no-console
       console.error('Error:', error);
       // eslint-disable-next-line no-console
@@ -55,6 +56,11 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       // eslint-disable-next-line no-console
       console.error('Component Stack:', errorInfo.componentStack);
       // eslint-disable-next-line no-console
+=======
+
+
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6395
       console.groupEnd();
     }
   }
@@ -93,9 +99,13 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     try {
       // In a real app, you would send this to your error reporting service
       // For now, we'll just log it
+<<<<<<< HEAD
       // eslint-disable-next-line no-console
       console.log('Error Report:', errorReport);
       
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6395
       // Example: Send to error reporting service
       // await fetch('/api/errors', {
       //   method: 'POST',
@@ -103,8 +113,12 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       //   body: JSON.stringify(errorReport)
       // });
     } catch (reportingError) {
+<<<<<<< HEAD
       // eslint-disable-next-line no-console
       console.warn('Failed to send error report:', reportingError);
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6395
     }
   };
 
@@ -114,7 +128,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
   };
 
   private getSessionId = (): string => {
-    let sessionId = sessionStorage.getItem('sessionId');
+    let _sessionId = sessionStorage.getItem('sessionId');
     if (!sessionId) {
       sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
       sessionStorage.setItem('sessionId', sessionId);
@@ -157,9 +171,9 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     navigator.clipboard.writeText(JSON.stringify(errorDetails, null, 2))
       .then(() => {
         // Show success message
-        const button = document.getElementById('copy-error-details');
+        const _button = document.getElementById('copy-error-details');
         if (button) {
-          const originalText = button.textContent;
+          const _originalText = button.textContent;
           button.textContent = 'Copied!';
           setTimeout(() => {
             button.textContent = originalText;
@@ -167,8 +181,12 @@ class EnhancedErrorBoundary extends Component<Props, State> {
         }
       })
       .catch(() => {
+<<<<<<< HEAD
         // eslint-disable-next-line no-console
         console.warn('Failed to copy error details');
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6395
       });
   };
 
@@ -187,6 +205,12 @@ class EnhancedErrorBoundary extends Component<Props, State> {
         return this.props.fallback;
       }
 
+<<<<<<< HEAD
+=======
+      const { retryCount, error, errorId } = this.state;
+      const _canRetry = retryCount < this.maxRetries;
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6395
       return (
         <div className="min-h-screen flex items-center justify-center bg-gray-50">
           <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-8 text-center">

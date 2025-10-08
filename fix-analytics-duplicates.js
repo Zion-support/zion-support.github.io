@@ -2,9 +2,7 @@
 
 import fs from 'fs';
 
-// console.log('🔧 Fixing duplicate analytics declarations...');
-
-let content = fs.readFileSync('src/utils/analytics.ts', 'utf8');
+// let content = fs.readFileSync('src/utils/analytics.ts', 'utf8');
 
 // Remove the duplicate analytics object at the end
 content = content.replace(
@@ -14,4 +12,4 @@ content = content.replace(
 
 fs.writeFileSync('src/utils/analytics.ts', content);
 
-// console.log('✅ Fixed duplicate analytics declarations');
+// 
