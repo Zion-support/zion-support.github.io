@@ -45,7 +45,7 @@ class SEOOptimizer {
   init(): void {
     this.setupStructuredData();
     this.setupCanonicalUrls();
-    this.setupMetaTags();
+    this.initializeMetaTags();
     this.setupPerformanceMonitoring();
   }
 
@@ -128,6 +128,28 @@ class SEOOptimizer {
     this.setMetaTag('viewport', 'width=device-width, initial-scale=1.0');
     this.setMetaTag('theme-color', '#1e40af');
     this.setMetaTag('msapplication-TileColor', '#1e40af');
+  }
+
+  /**
+   * Initialize meta tags
+   */
+  private initializeMetaTags(): void {
+    if (typeof document === 'undefined') return;
+    
+    // Set default meta tags
+    this.setMetaTag('description', this.currentPageData.description || 'Advanced AI and IT Solutions');
+    this.setMetaTag('keywords', (this.currentPageData.keywords || []).join(', ') || 'AI, IT Solutions, Technology');
+    this.setMetaTag('author', 'Zion Tech Group');
+    
+    // Open Graph tags
+    this.setMetaTag('og:type', 'website', 'property');
+    this.setMetaTag('og:title', this.currentPageData.title || 'Zion Tech Group', 'property');
+    this.setMetaTag('og:description', this.currentPageData.description || 'Advanced AI and IT Solutions', 'property');
+    
+    // Twitter Card tags
+    this.setMetaTag('twitter:card', 'summary_large_image');
+    this.setMetaTag('twitter:title', this.currentPageData.title || 'Zion Tech Group');
+    this.setMetaTag('twitter:description', this.currentPageData.description || 'Advanced AI and IT Solutions');
   }
 
   /**

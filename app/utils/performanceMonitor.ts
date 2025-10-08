@@ -43,13 +43,13 @@ class PerformanceMonitor {
     this.observeCLS();
   }
 
-  private observePaint(name: string, metricKey: keyof PerformanceMetrics): void {
+  private observePaint(name: string, metricKey: 'fcp' | 'fmp'): void {
     try {
       const observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           if (entry.name === name) {
             this.metrics[metricKey] = entry.startTime;
-            this.logMetric(metricKey as string, entry.startTime);
+            this.logMetric(metricKey, entry.startTime);
           }
         }
       });
@@ -81,8 +81,12 @@ class PerformanceMonitor {
     try {
       const observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
-          this.metrics.fid = (entry as any).processingStart - entry.startTime;
-          this.logMetric('fid', this.metrics.fid);
+          const fidEntry = entry as PerformanceEventTiming;
+          if (fidEntry.processingStart && fidEntry.startTime) {
+            const fid = fidEntry.processingStart - fidEntry.startTime;
+            this.metrics.fid = fid;
+            this.logMetric('fid', fid);
+          }
         }
       });
       
@@ -98,12 +102,13 @@ class PerformanceMonitor {
       let clsValue = 0;
       const observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
-          if (!(entry as any).hadRecentInput) {
-            clsValue += (entry as any).value;
+          const layoutShiftEntry = entry as LayoutShift;
+          if (!layoutShiftEntry.hadRecentInput) {
+            clsValue += layoutShiftEntry.value;
+            this.metrics.cls = clsValue;
+            this.logMetric('cls', clsValue);
           }
         }
-        this.metrics.cls = clsValue;
-        this.logMetric('cls', clsValue);
       });
       
       observer.observe({ entryTypes: ['layout-shift'] });
@@ -114,22 +119,12 @@ class PerformanceMonitor {
   }
 
   private setupCustomMetrics(): void {
-    // Time to First Byte
-    if (performance.timing) {
-      this.metrics.ttfb = performance.timing.responseStart - performance.timing.navigationStart;
-      this.logMetric('ttfb', this.metrics.ttfb);
-    }
-
-    // Page Load Time
-    if (performance.timing) {
-      const loadTime = performance.timing.loadEventEnd - performance.timing.navigationStart;
-      this.addCustomMetric('pageLoadTime', loadTime);
-    }
-
-    // DOM Content Loaded
-    if (performance.timing) {
-      const domContentLoaded = performance.timing.domContentLoadedEventEnd - performance.timing.navigationStart;
-      this.addCustomMetric('domContentLoaded', domContentLoaded);
+    // Track Time to First Byte
+    if (typeof window !== 'undefined' && window.performance && window.performance.timing) {
+      const timing = window.performance.timing;
+      const ttfb = timing.responseStart - timing.requestStart;
+      this.metrics.ttfb = ttfb;
+      this.logMetric('ttfb', ttfb);
     }
   }
 
@@ -137,9 +132,10 @@ class PerformanceMonitor {
     try {
       const observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
-          if (entry.entryType === 'resource') {
-            const resourceEntry = entry as PerformanceResourceTiming;
-            this.analyzeResource(resourceEntry);
+          const resourceEntry = entry as PerformanceResourceTiming;
+          // Track resource loading times
+          if (resourceEntry.duration > 1000) {
+            this.trackCustomMetric(`slow_resource_${resourceEntry.name}`, resourceEntry.duration);
           }
         }
       });
@@ -147,43 +143,19 @@ class PerformanceMonitor {
       observer.observe({ entryTypes: ['resource'] });
       this.observers.push(observer);
     } catch (error) {
-      console.warn('Failed to observe resources:', error);
+      console.warn('Failed to observe resource timing:', error);
     }
-  }
-
-  private analyzeResource(entry: PerformanceResourceTiming): void {
-    const duration = entry.responseEnd - entry.startTime;
-    const size = entry.transferSize || 0;
-    
-    // Track slow resources
-    if (duration > 1000) {
-      this.addCustomMetric(`slowResource_${entry.name}`, duration);
-    }
-    
-    // Track large resources
-    if (size > 100000) { // 100KB
-      this.addCustomMetric(`largeResource_${entry.name}`, size);
-    }
-  }
-
-  addCustomMetric(name: string, value: number): void {
-    this.metrics.customMetrics[name] = value;
-    this.logMetric(name, value);
   }
 
   private logMetric(name: string, value: number): void {
-    if (process.env.NODE_ENV === 'development') {
+    if (process.env['NODE_ENV'] === 'development') {
       console.log(`[Performance] ${name}: ${value.toFixed(2)}ms`);
     }
-    
-    // Send to analytics if available
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('event', 'performance_metric', {
-        metric_name: name,
-        metric_value: Math.round(value),
-        event_category: 'performance'
-      });
-    }
+  }
+
+  trackCustomMetric(name: string, value: number): void {
+    this.metrics.customMetrics[name] = value;
+    this.logMetric(name, value);
   }
 
   getMetrics(): PerformanceMetrics {
@@ -191,64 +163,43 @@ class PerformanceMonitor {
   }
 
   getScore(): number {
-    const scores = [];
+    const scores: number[] = [];
     
-    // FCP scoring (0-100)
-    if (this.metrics.fcp) {
+    // Score FCP
+    if (this.metrics.fcp !== undefined) {
       if (this.metrics.fcp <= 1800) scores.push(100);
       else if (this.metrics.fcp <= 3000) scores.push(75);
       else if (this.metrics.fcp <= 4000) scores.push(50);
       else scores.push(25);
     }
     
-    // LCP scoring (0-100)
-    if (this.metrics.lcp) {
+    // Score LCP
+    if (this.metrics.lcp !== undefined) {
       if (this.metrics.lcp <= 2500) scores.push(100);
       else if (this.metrics.lcp <= 4000) scores.push(75);
       else if (this.metrics.lcp <= 6000) scores.push(50);
       else scores.push(25);
     }
     
-    // FID scoring (0-100)
-    if (this.metrics.fid) {
+    // Score FID
+    if (this.metrics.fid !== undefined) {
       if (this.metrics.fid <= 100) scores.push(100);
       else if (this.metrics.fid <= 300) scores.push(75);
       else if (this.metrics.fid <= 500) scores.push(50);
       else scores.push(25);
     }
     
-    // CLS scoring (0-100)
-    if (this.metrics.cls) {
+    // Score CLS
+    if (this.metrics.cls !== undefined) {
       if (this.metrics.cls <= 0.1) scores.push(100);
       else if (this.metrics.cls <= 0.25) scores.push(75);
       else if (this.metrics.cls <= 0.4) scores.push(50);
       else scores.push(25);
     }
     
-    return scores.length > 0 ? Math.round(scores.reduce((a, b) => a + b, 0) / scores.length) : 0;
-  }
-
-  generateReport(): string {
-    const score = this.getScore();
-    const metrics = this.getMetrics();
-    
-    return `
-Performance Report:
-==================
-Overall Score: ${score}/100
-
-Core Web Vitals:
-- First Contentful Paint: ${metrics.fcp?.toFixed(2) || 'N/A'}ms
-- Largest Contentful Paint: ${metrics.lcp?.toFixed(2) || 'N/A'}ms
-- First Input Delay: ${metrics.fid?.toFixed(2) || 'N/A'}ms
-- Cumulative Layout Shift: ${metrics.cls?.toFixed(3) || 'N/A'}
-- Time to First Byte: ${metrics.ttfb?.toFixed(2) || 'N/A'}ms
-
-Custom Metrics:
-${Object.entries(metrics.customMetrics)
-  .map(([key, value]) => `- ${key}: ${value.toFixed(2)}ms`)
-  .join('\n')}
-    `.trim();
+    return scores.length > 0 
+      ? scores.reduce((a, b) => a + b, 0) / scores.length 
+      : 0;
   }
 
   cleanup(): void {
@@ -258,5 +209,9 @@ ${Object.entries(metrics.customMetrics)
   }
 }
 
-export const performanceMonitor = new PerformanceMonitor();
+// Create and export singleton instance
+const performanceMonitor = new PerformanceMonitor();
+
 export default performanceMonitor;
+export { PerformanceMonitor };
+export type { PerformanceMetrics };
