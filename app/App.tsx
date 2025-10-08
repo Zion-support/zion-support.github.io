@@ -1,290 +1,156 @@
-'use client';
-
-import React, { Suspense, lazy, useEffect } from 'react';
-import { HelmetProvider } from 'react-helmet-async';
+import React, { Suspense, lazy, useEffect, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
+import { ErrorBoundary } from 'react-error-boundary';
 
-// Components
-import AccessibilityEnhancer from './components/AccessibilityEnhancer';
-import PerformanceDashboard from './components/PerformanceDashboard';
+// Import core components
+import Navigation from './components/Navigation';
+import Footer from './components/Footer';
+import PerformanceOptimizer from './components/PerformanceOptimizer';
+import Analytics from './components/Analytics';
 import AdvancedPerformanceMonitor from './components/AdvancedPerformanceMonitor';
 import AdvancedErrorBoundary from './components/AdvancedErrorBoundary';
 import SEOEnhancer from './components/SEOEnhancer';
 import AdvancedSEOOptimizer from './components/AdvancedSEOOptimizer';
 import LoadingSpinner from './components/LoadingSpinner';
-import Navigation from './components/Navigation';
-import Footer from './components/Footer';
-<<<<<<< HEAD
-import PerformanceOptimizer from './components/PerformanceOptimizer';
-import Analytics from './components/Analytics';
 
 // Lazy load components for better performance
-const _ContentShowcase = lazy(() => import('./components/ContentShowcase'));
+const ContentShowcase = lazy(() => import('./components/ContentShowcase'));
 const InteractiveContentShowcase2026 = lazy(
   () => import('./components/InteractiveContentShowcase2026')
 );
 const InteractiveAIROICalculator = lazy(
   () => import('./components/InteractiveAIROICalculator')
 );
-=======
-import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
-import PerformanceOptimizer from './components/PerformanceOptimizer';
-import AdvancedErrorBoundary from './components/AdvancedErrorBoundary';
-import AdvancedPerformanceMonitor from './components/AdvancedPerformanceMonitor';
-
-// Lazy load components for better performance
-// const ContentShowcase = lazy(() => import('./components/ContentShowcase'));
-// const InteractiveContentShowcase2026 = lazy(
-//   () => import('./components/InteractiveContentShowcase2026')
-// );
-// const InteractiveAIROICalculator = lazy(
-//   () => import('./components/InteractiveAIROICalculator')
-// );
->>>>>>> cursor/fix-errors-and-merge-to-main-a8ed
 
 // Lazy load pages for better performance
-const _HomePage = lazy(() => import('./page'));
-const _AboutPage = lazy(() => import('./about/page'));
-const _ServicesPage = lazy(() => import('./services/page'));
-const _ContactPage = lazy(() => import('./contact/page'));
-const _TeamPage = lazy(() => import('./team/page'));
-const _PrivacyPage = lazy(() => import('./privacy/page'));
-const _TermsPage = lazy(() => import('./terms/page'));
-const _EnterprisePage = lazy(() => import('./enterprise/page'));
-const _ServicesAdvertisingPage = lazy(() => import('./services-advertising/page'));
-const _CaseStudiesPage = lazy(() => import('./case-studies/page'));
+const HomePage = lazy(() => import('./page'));
+const AboutPage = lazy(() => import('./about/page'));
+const ServicesPage = lazy(() => import('./services/page'));
+const ContactPage = lazy(() => import('./contact/page'));
+const TeamPage = lazy(() => import('./team/page'));
+const EnterprisePage = lazy(() => import('./enterprise/page'));
+const CaseStudiesPage = lazy(() => import('./case-studies/page'));
 
-// Utils
-import { lazyLoadImages, preloadCriticalResources, collectPerformanceMetrics, performanceOptimizer } from './utils/performanceOptimizer';
-import { logger } from './utils/logger';
-import performanceMonitor from './utils/performanceMonitor';
-import seoOptimizer from './utils/seoOptimizer';
-import accessibilityEnhancer from './utils/accessibilityEnhancer';
+// AI Services Pages
+const AIServicesPage = lazy(() => import('./ai-services/page'));
+const AIMarketingPage = lazy(() => import('./ai-marketing/page'));
+const AIAutomationPage = lazy(() => import('./ai-automation/page'));
+const AIHealthcarePage = lazy(() => import('./ai-healthcare/page'));
+const AIFintechPage = lazy(() => import('./ai-fintech/page'));
 
-// Styles
-import './globals.css';
+// Specialized Services Pages
+const QuantumComputingPage = lazy(() => import('./quantum-computing/page'));
+const AutonomousSystemsPage = lazy(() => import('./autonomous-systems/page'));
+const BusinessIntelligencePage = lazy(() => import('./business-intelligence/page'));
+const BlockchainWeb3Page = lazy(() => import('./blockchain-web3/page'));
+const IoTEdgeComputingPage = lazy(() => import('./iot-edge-computing/page'));
+const CybersecurityPage = lazy(() => import('./cybersecurity/page'));
+const ITServicesPage = lazy(() => import('./it-services/page'));
+const MicroSAASPage = lazy(() => import('./micro-saas/page'));
+const ServicesAdvertisingPage = lazy(() => import('./services-advertising/page'));
+
+// Blog Pages
+const BlogIndexPage = lazy(() => import('./blog-index'));
+const BlogPage = lazy(() => import('./blog/page'));
+
+// Utility Pages
+const PrivacyPage = lazy(() => import('./privacy/page'));
+const TermsPage = lazy(() => import('./terms/page'));
+const NotFoundPage = lazy(() => import('./not-found'));
+
+// Error fallback component
+const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
+  <div className="min-h-screen flex items-center justify-center bg-gray-50">
+    <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6 text-center">
+      <h2 className="text-2xl font-bold text-gray-900 mb-4">Something went wrong</h2>
+      <p className="text-gray-600 mb-6">{error.message}</p>
+      <button
+        onClick={resetErrorBoundary}
+        className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+      >
+        Try again
+      </button>
+    </div>
+  </div>
+);
 
 const App: React.FC = () => {
+  const [isLoading, setIsLoading] = useState(true);
+
   useEffect(() => {
-    // Initialize global error handling
-    logger.info('initialized', { component: 'App' });
+    // Simulate loading time for better UX
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 1000);
 
-    // Initialize performance monitoring
-    lazyLoadImages();
-    preloadCriticalResources();
-    performanceOptimizer.init();
-    performanceMonitor.init();
-    
-    // Initialize SEO optimization
-    seoOptimizer.init();
-    
-    // Initialize accessibility enhancements
-    accessibilityEnhancer.init();
-    
-    // Initialize Web Vitals monitoring
-    if (typeof window !== 'undefined' && 'performance' in window) {
-      const pageLoadMetrics = collectPerformanceMetrics();
-      const metrics = performanceOptimizer.getMetrics();
-      const performanceMetrics = performanceMonitor.getMetrics();
-      
-      if (pageLoadMetrics) {
-        // eslint-disable-next-line no-console
-        console.log('Performance metrics collected:', pageLoadMetrics);
-      }
-      if (metrics) {
-        // eslint-disable-next-line no-console
-        console.log('Performance metrics:', metrics);
-      }
-      if (performanceMetrics) {
-        // eslint-disable-next-line no-console
-<<<<<<< HEAD
-        console.log('Core Web Vitals:', performanceMetrics);
-=======
-        console.log('Core Web Vitals:', performanceMetrics);origin/cursor/fix-errors-and-merge-to-main-6395
->>>>>>> cursor/fix-errors-and-merge-to-main-a8ed
-      }
-    }
-    
-    // Log performance and accessibility metrics periodically
-    const metricsInterval = setInterval(() => {
-<<<<<<< HEAD
-      const performanceMetrics = performanceMonitor.getMetrics();
-      const accessibilityMetrics = accessibilityEnhancer.getMetrics();
-=======
-      // const _performanceMetrics = performanceMonitor.getMetrics();
-      const accessibilityMetrics = accessibilityEnhancer.getMetrics();origin/cursor/fix-errors-and-merge-to-main-6395
->>>>>>> cursor/fix-errors-and-merge-to-main-a8ed
-      
-      if (process.env.NODE_ENV === 'development') {
-        // eslint-disable-next-line no-console
-        console.log('Performance Score:', performanceMonitor.getScore());
-        // eslint-disable-next-line no-console
-<<<<<<< HEAD
-        console.log('Accessibility Score:', accessibilityMetrics.overallScore);
-=======
-        console.log('Accessibility Score:', accessibilityMetrics.overallScore);origin/cursor/fix-errors-and-merge-to-main-6395
->>>>>>> cursor/fix-errors-and-merge-to-main-a8ed
-      }
-    }, 30000);
-    
-    logger.info('performance monitoring initialized', { component: 'App' });
-    logger.info('🚀 Zion Tech Group App initialized with comprehensive monitoring', { component: 'App' });
-
-    return () => {
-      // Cleanup
-      performanceOptimizer.cleanup();
-      performanceMonitor.cleanup();
-      accessibilityEnhancer.cleanup();
-      clearInterval(metricsInterval);
-    };
+    return () => clearTimeout(timer);
   }, []);
+
+  if (isLoading) {
+    return <LoadingSpinner />;
+  }
 
   return (
     <HelmetProvider>
-      <AdvancedErrorBoundary
-        enableErrorReporting={true}
-        enableRetry={true}
-        onError={(error, errorInfo) => {
-          logger.error(error.message, { error, errorInfo });
-        }}
-      >
-<<<<<<< HEAD
-<<<<<<< HEAD
-        <PerformanceOptimizer>
-          <AccessibilityEnhancer>
-            <SEOEnhancer
-              title="Zion Tech Group - Advanced AI and IT Solutions"
-              description="Leading provider of enterprise AI solutions, quantum computing, and autonomous systems. Transform your business with our cutting-edge technology."
-            >
-              <AdvancedSEOOptimizer
-                config={{
-                  title: 'Zion Tech Group - Advanced AI and IT Solutions',
-                  description: 'Leading provider of enterprise AI solutions, quantum computing, and autonomous systems. Transform your business with our cutting-edge technology.',
-                  keywords: ['AI solutions', 'enterprise AI', 'quantum computing', 'autonomous systems', 'digital transformation', 'automation', 'cloud services', 'AI consulting', 'business intelligence', 'machine learning'],
-                  canonicalUrl: 'https://ziontechgroup.com',
-                  ogImage: 'https://ziontechgroup.com/og-image.jpg',
-                  structuredData: {
-                    '@type': 'TechCompany',
-                    name: 'Zion Tech Group',
-                    description: 'Advanced AI and IT Solutions Provider',
-                    foundingDate: '2020',
-                    numberOfEmployees: '50-100',
-                    industry: 'Technology',
-                    services: [
-                      'AI Solutions',
-                      'Digital Transformation',
-                      'Cloud Services',
-                      'Automation',
-                      'Business Intelligence'
-                    ]
-                  }
-                }}
-                enableStructuredData={true}
-                enableOpenGraph={true}
-                enableTwitterCards={true}
-                enableSchemaMarkup={true}
-              />
-              <Router>
-                <div className="App">
-                  <Navigation />
-                  <main id="main-content">
-                    <Suspense fallback={<LoadingSpinner />}>
-                      <Routes>
-                        <Route path="/" element={<HomePage />} />
-                        <Route path="/about" element={<AboutPage />} />
-                        <Route path="/services" element={<ServicesPage />} />
-                        <Route path="/contact" element={<ContactPage />} />
-                        <Route path="/team" element={<TeamPage />} />
-                        <Route path="/privacy" element={<PrivacyPage />} />
-                        <Route path="/terms" element={<TermsPage />} />
-                        <Route path="/enterprise" element={<EnterprisePage />} />
-                        <Route path="/services-advertising" element={<ServicesAdvertisingPage />} />
-                        <Route path="/case-studies" element={<CaseStudiesPage />} />
-                      </Routes>
-                    </Suspense>
-                  </main>
-                  <Footer />
-                </div>
-              </Router>
-=======
-        <AccessibilityEnhancer>
-          <SEOEnhancer
-            title="Zion Tech Group - Advanced AI and IT Solutions"
-            description="Leading provider of enterprise AI solutions, quantum computing, and autonomous systems. Transform your business with our cutting-edge technology."
-          >
-            <AdvancedSEOOptimizer
-              config={{
-                title: 'Zion Tech Group - Advanced AI and IT Solutions',
-                description: 'Leading provider of enterprise AI solutions, quantum computing, and autonomous systems. Transform your business with our cutting-edge technology.',
-                keywords: ['AI solutions', 'enterprise AI', 'quantum computing', 'autonomous systems', 'digital transformation', 'automation', 'cloud services', 'AI consulting', 'business intelligence', 'machine learning'],
-                canonicalUrl: 'https://ziontechgroup.com',
-                ogImage: 'https://ziontechgroup.com/og-image.jpg',
-                structuredData: {
-                  '@type': 'TechCompany',
-                  name: 'Zion Tech Group',
-                  description: 'Advanced AI and IT Solutions Provider',
-                  foundingDate: '2020',
-                  numberOfEmployees: '50-100',
-                  industry: 'Technology',
-                  services: [
-                    'AI Solutions',
-                    'Digital Transformation',
-                    'Cloud Services',
-                    'Automation',
-                    'Business Intelligence'
-                  ]
-                }
-              }}
-              enableStructuredData={true}
-              enableOpenGraph={true}
-              enableTwitterCards={true}
-              enableSchemaMarkup={true}
-            />
-            <Router>
-              <div className="App">
-                <Analytics trackingId="G-XXXXXXXXXX" />
-                <PerformanceOptimizer />
-                <Navigation />
-                <main id="main-content">
-                  <Suspense fallback={<LoadingSpinner />}>
-                    <Routes>
-                      <Route path="/" element={<HomePage />} />
-                      <Route path="/about" element={<AboutPage />} />
-                      <Route path="/services" element={<ServicesPage />} />
-                      <Route path="/contact" element={<ContactPage />} />
-                      <Route path="/team" element={<TeamPage />} />
-                      <Route path="/privacy" element={<PrivacyPage />} />
-                      <Route path="/terms" element={<TermsPage />} />
-                      <Route path="/enterprise" element={<EnterprisePage />} />
-                      <Route path="/services-advertising" element={<ServicesAdvertisingPage />} />
-                      <Route path="/case-studies" element={<CaseStudiesPage />} />
-                      <Route path="/ai-services" element={<AIServicesPage />} />
-                      <Route path="/it-services" element={<ITServicesPage />} />
-                      <Route path="/micro-saas" element={<MicroSaasPage />} />
-                    </Routes>
-                  </Suspense>
-                </main>
-                <Footer />cursor/analyze-improve-and-deploy-application-3d67
->>>>>>> cursor/fix-errors-and-merge-to-main-a8ed
-
-                  {/* Performance Dashboard */}
-                  <PerformanceDashboard />
+      <ErrorBoundary FallbackComponent={ErrorFallback}>
+        <Router>
+          <div className="min-h-screen bg-gray-50">
+            <SEOEnhancer />
+            <AdvancedSEOOptimizer />
+            <AdvancedPerformanceMonitor />
+            <PerformanceOptimizer />
+            <Analytics />
+            
+            <Navigation />
+            
+            <main className="flex-1">
+              <Suspense fallback={<LoadingSpinner />}>
+                <Routes>
+                  <Route path="/" element={<HomePage />} />
+                  <Route path="/about" element={<AboutPage />} />
+                  <Route path="/services" element={<ServicesPage />} />
+                  <Route path="/contact" element={<ContactPage />} />
+                  <Route path="/team" element={<TeamPage />} />
+                  <Route path="/enterprise" element={<EnterprisePage />} />
+                  <Route path="/case-studies" element={<CaseStudiesPage />} />
                   
-                  {/* Advanced Performance Monitor */}
-                  <AdvancedPerformanceMonitor
-                    enableRealTimeMonitoring={process.env['NODE_ENV'] === 'development'}
-                    onMetricsUpdate={(metrics) => {
-                      if (process.env['NODE_ENV'] === 'development') {
-                        logger.info('Performance Metrics', { component: 'PerformanceMonitor', metrics });
-                      }
-                    }}
-                  />
-                </div>
-              </Router>
-            </SEOEnhancer>
-          </AccessibilityEnhancer>
-        </PerformanceOptimizer>
-      </AdvancedErrorBoundary>
+                  {/* AI Services */}
+                  <Route path="/ai-services" element={<AIServicesPage />} />
+                  <Route path="/ai-marketing" element={<AIMarketingPage />} />
+                  <Route path="/ai-automation" element={<AIAutomationPage />} />
+                  <Route path="/ai-healthcare" element={<AIHealthcarePage />} />
+                  <Route path="/ai-fintech" element={<AIFintechPage />} />
+                  
+                  {/* Specialized Services */}
+                  <Route path="/quantum-computing" element={<QuantumComputingPage />} />
+                  <Route path="/autonomous-systems" element={<AutonomousSystemsPage />} />
+                  <Route path="/business-intelligence" element={<BusinessIntelligencePage />} />
+                  <Route path="/blockchain-web3" element={<BlockchainWeb3Page />} />
+                  <Route path="/iot-edge-computing" element={<IoTEdgeComputingPage />} />
+                  <Route path="/cybersecurity" element={<CybersecurityPage />} />
+                  <Route path="/it-services" element={<ITServicesPage />} />
+                  <Route path="/micro-saas" element={<MicroSAASPage />} />
+                  <Route path="/services-advertising" element={<ServicesAdvertisingPage />} />
+                  
+                  {/* Blog */}
+                  <Route path="/blog" element={<BlogIndexPage />} />
+                  <Route path="/blog/*" element={<BlogPage />} />
+                  
+                  {/* Utility Pages */}
+                  <Route path="/privacy" element={<PrivacyPage />} />
+                  <Route path="/terms" element={<TermsPage />} />
+                  
+                  {/* 404 */}
+                  <Route path="*" element={<NotFoundPage />} />
+                </Routes>
+              </Suspense>
+            </main>
+            
+            <Footer />
+          </div>
+        </Router>
+      </ErrorBoundary>
     </HelmetProvider>
   );
 };

@@ -29,11 +29,7 @@ export default function RootLayout({
       'Cloud Services',
       'Automation',
       'Business Intelligence'
-<<<<<<< HEAD
     ],
-=======
-    ],cursor/analyze-improve-and-deploy-application-3d67
->>>>>>> cursor/fix-errors-and-merge-to-main-a8ed
     contactPoint: {
       '@type': 'ContactPoint',
       telephone: '+1-302-600-9898',
@@ -114,7 +110,7 @@ export default function RootLayout({
             description: 'Cloud migration and infrastructure optimization services'
           }
         }
-      ]cursor/analyze-improve-and-deploy-application-3d67
+      ]
     }
   };
 
@@ -190,7 +186,7 @@ export default function RootLayout({
         <meta name='twitter:description' content='Transform your business with cutting-edge AI solutions and digital transformation services.' />
         <meta name='twitter:image' content='https://ziontechgroup.com/og-image.jpg' />
         <meta name='twitter:site' content='@ziontechgroup' />
-        <meta name='twitter:creator' content='@ziontechgroup' />cursor/analyze-improve-and-deploy-application-3d67
+        <meta name='twitter:creator' content='@ziontechgroup' />
         <script
           type='application/ld+json'
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}

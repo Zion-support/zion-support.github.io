@@ -1,6 +1,5 @@
 import React, { useEffect, useState, useCallback } from 'react';
 
-
 interface PerformanceMetrics {
   fcp: number | null;
   lcp: number | null;
@@ -157,9 +156,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     if (slowResources.length > 0) {
        
       // eslint-disable-next-line no-console
-      console.warn(
-        'Slow resources detected:',
-        slowResources.map((r: PerformanceResourceTiming) => ({
+      => ({
           name: r.name,
           duration: r.duration,
           size: r.transferSize,

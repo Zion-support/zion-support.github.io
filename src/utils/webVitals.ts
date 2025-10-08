@@ -119,7 +119,7 @@ export function reportWebVitals(
 
             onPerfEntry(metric);
             if (analyticsEndpoint) sendToAnalytics(metric, analyticsEndpoint);
-//             if (debug) if (process.env['NODE_ENV'] === 'development') { if (process.env.DEV) { console.log('CLS:', metric); } }
+//             if (debug) if (process.env['NODE_ENV'] === 'development') { if (process.env.DEV) { } }
           }
         }
       }
@@ -128,8 +128,7 @@ export function reportWebVitals(
     try {
       clsObserver.observe({ type: 'layout-shift', buffered: true });
     } catch (e) {
-//       if (debug) console.warn('CLS observation not supported:', e);
-    }
+//       if (debug) }
 
     // Report final CLS on page hide
     addEventListener('visibilitychange', () => {
@@ -145,7 +144,7 @@ export function reportWebVitals(
 
         onPerfEntry(metric);
         if (analyticsEndpoint) sendToAnalytics(metric, analyticsEndpoint);
-//         if (debug) if (process.env['NODE_ENV'] === 'development') { if (process.env.DEV) { console.log('Final CLS:', metric); } }
+//         if (debug) if (process.env['NODE_ENV'] === 'development') { if (process.env.DEV) { } }
       }
     });
   }
@@ -167,7 +166,7 @@ export function reportWebVitals(
 
       onPerfEntry(metric);
       if (analyticsEndpoint) sendToAnalytics(metric, analyticsEndpoint);
-      if (debug) if (process.env['NODE_ENV'] === 'development') { if (process.env.DEV) { console.log('FID:', metric); } }
+      if (debug) if (process.env['NODE_ENV'] === 'development') { if (process.env.DEV) { } }
 
       fidObserver.disconnect();
     });
@@ -175,8 +174,7 @@ export function reportWebVitals(
     try {
       fidObserver.observe({ type: 'first-input', buffered: true });
     } catch (e) {
-//       if (debug) console.warn('FID observation not supported:', e);
-    }
+//       if (debug) }
   }
 
   // Largest Contentful Paint (LCP)
@@ -200,15 +198,14 @@ export function reportWebVitals(
 
         onPerfEntry(metric);
         if (analyticsEndpoint) sendToAnalytics(metric, analyticsEndpoint);
-//         if (debug) if (process.env['NODE_ENV'] === 'development') { if (process.env.DEV) { console.log('LCP:', metric); } }
+//         if (debug) if (process.env['NODE_ENV'] === 'development') { if (process.env.DEV) { } }
       }
     });
 
     try {
       lcpObserver.observe({ type: 'largest-contentful-paint', buffered: true });
     } catch (e) {
-//       if (debug) console.warn('LCP observation not supported:', e);
-    }
+//       if (debug) }
 
     // Report final LCP on page hide
     addEventListener('visibilitychange', () => {
@@ -235,7 +232,7 @@ export function reportWebVitals(
 
           onPerfEntry(metric);
           if (analyticsEndpoint) sendToAnalytics(metric, analyticsEndpoint);
-//           if (debug) if (process.env['NODE_ENV'] === 'development') { if (process.env.DEV) { console.log('FCP:', metric); } }
+//           if (debug) if (process.env['NODE_ENV'] === 'development') { if (process.env.DEV) { } }
 
           fcpObserver.disconnect();
         }
@@ -245,8 +242,7 @@ export function reportWebVitals(
     try {
       fcpObserver.observe({ type: 'paint', buffered: true });
     } catch (e) {
-//       if (debug) console.warn('FCP observation not supported:', e);
-    }
+//       if (debug) }
   }
 
   // Time to First Byte (TTFB)
@@ -269,7 +265,7 @@ export function reportWebVitals(
 
       onPerfEntry(metric);
       if (analyticsEndpoint) sendToAnalytics(metric, analyticsEndpoint);
-//       if (debug) if (process.env['NODE_ENV'] === 'development') { if (process.env.DEV) { console.log('TTFB:', metric); } }
+//       if (debug) if (process.env['NODE_ENV'] === 'development') { if (process.env.DEV) { } }
     }
   }
 }
@@ -295,8 +291,7 @@ export function monitorLongTasks(
     observer.observe({ entryTypes: ['longtask'] });
     return observer;
   } catch (e) {
-//     console.warn('Long task monitoring not supported:', e);
-    return null;
+//     return null;
   }
 }
 
