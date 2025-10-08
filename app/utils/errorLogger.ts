@@ -77,15 +77,15 @@ class ErrorLogger {
       `%c[${entry.severity.toUpperCase()}] ${entry.message}`,
       styles[entry.severity]
     );
-    console.log('Timestamp:', entry.timestamp);
+    if (process.env.NODE_ENV === 'development') console.log('Timestamp:', entry.timestamp); }
     if (entry.error) {
-      console.error('Error:', entry.error);
+      if (process.env.NODE_ENV === 'development') console.error('Error:', entry.error); }
     }
     if (entry.context) {
-      console.log('Context:', entry.context);
+      if (process.env.NODE_ENV === 'development') console.log('Context:', entry.context); }
     }
     if (entry.stackTrace) {
-      console.log('Stack Trace:', entry.stackTrace);
+      if (process.env.NODE_ENV === 'development') console.log('Stack Trace:', entry.stackTrace); }
     }
     console.groupEnd();
   }
@@ -118,7 +118,7 @@ class ErrorLogger {
       });
     } catch (error) {
       // Silently fail to avoid infinite loop
-      console.error('Failed to send error to external service:', error);
+      if (process.env.NODE_ENV === 'development') console.error('Failed to send error to external service:', error); }
     }
   }
 

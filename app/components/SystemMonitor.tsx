@@ -150,7 +150,7 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
       setLastUpdate(new Date());
     } catch (error) {
        
-console.error('Failed to update metrics:', error);
+if (process.env.NODE_ENV === 'development') console.error('Failed to update metrics:', error); }
     }
   }, []);
 

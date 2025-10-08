@@ -3,7 +3,7 @@
  * Centralized API request handling with error handling, retry logic, and caching
  */
 
-import { ErrorHandler, ErrorType } from './errorHandler';
+import { ErrorHandler, _ErrorType } from './errorHandler';
 import { performanceMetrics } from './performanceMetrics';
 
 export interface APIConfig {

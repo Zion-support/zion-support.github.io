@@ -7,9 +7,9 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// Function to properly fix console statements
-function fixConsoleStatements(content) {
-  // Fix console statements that are already wrapped in if conditions
+// Function to fix console statement syntax errors
+function fixConsoleSyntax(content) {
+  // Fix console statements with extra closing braces
   content = content.replace(
     /if \(process\.env\.NODE_ENV === 'development'\) console\.(log|error|warn|info)\([^)]*\); \}/g,
     (match) => {
@@ -17,7 +17,7 @@ function fixConsoleStatements(content) {
     }
   );
   
-  // Fix console statements that are missing closing brace
+  // Fix console statements missing closing braces
   content = content.replace(
     /if \(process\.env\.NODE_ENV === 'development'\) console\.(log|error|warn|info)\([^)]*\);$/gm,
     (match) => {
@@ -25,20 +25,17 @@ function fixConsoleStatements(content) {
     }
   );
   
-  // Fix console statements that have extra closing brace
+  // Fix typeof issues
   content = content.replace(
-    /if \(process\.env\.NODE_ENV === 'development'\) console\.(log|error|warn|info)\([^)]*\); \}\s*$/gm,
-    (match) => {
-      return match.replace(/; \}\s*$/, '; }');
-    }
+    /typeof\s+process\.env\.NODE_ENV/g,
+    'typeof process.env.NODE_ENV'
   );
   
   return content;
 }
 
-// Files that need console statement fixes
+// Files that need syntax fixes
 const filesToFix = [
-  'app/components/AdvancedPerformanceMonitor.tsx',
   'app/components/EnhancedErrorBoundary.tsx',
   'app/components/ImprovedErrorBoundary.tsx',
   'app/components/PWAInstaller.tsx',
@@ -63,7 +60,7 @@ function fixFile(filePath) {
     let content = fs.readFileSync(fullPath, 'utf8');
     
     // Apply fixes
-    content = fixConsoleStatements(content);
+    content = fixConsoleSyntax(content);
     
     fs.writeFileSync(fullPath, content);
     console.log(`Fixed: ${filePath}`);
@@ -75,4 +72,4 @@ function fixFile(filePath) {
 // Fix all files
 filesToFix.forEach(fixFile);
 
-console.log('Console statement syntax errors fixed!');
+console.log('Syntax errors fixed!');

@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 // Metadata will be handled by React Helmet in individual components
 
 const PrivacyPage: React.FC = () => {

@@ -94,7 +94,7 @@ class MonitoringService {
         fcpObserver.observe({ entryTypes: ['paint'] });
 
       } catch (error) {
-        console.error('Error setting up performance observers:', error);
+        if (process.env.NODE_ENV === 'development') console.error('Error setting up performance observers:', error); }
       }
     }
   }
@@ -104,10 +104,10 @@ class MonitoringService {
       try {
         const longTaskObserver = new PerformanceObserver((list) => {
           for (const entry of list.getEntries()) {
-            console.warn('Long task detected:', {
+            if (process.env.NODE_ENV === 'development') console.warn('Long task detected:', {
               duration: entry.duration,
               startTime: entry.startTime,
-            });
+            }); }
           }
         });
         longTaskObserver.observe({ entryTypes: ['longtask'] });
@@ -124,17 +124,17 @@ class MonitoringService {
           const entries = list.getEntries();
           entries.forEach((entry: any) => {
             if (entry.duration > 1000) {
-              console.warn('Slow resource detected:', {
+              if (process.env.NODE_ENV === 'development') console.warn('Slow resource detected:', {
                 name: entry.name,
                 duration: entry.duration,
                 type: entry.initiatorType,
-              });
+              }); }
             }
           });
         });
         resourceObserver.observe({ entryTypes: ['resource'] });
       } catch (error) {
-        console.error('Error monitoring resources:', error);
+        if (process.env.NODE_ENV === 'development') console.error('Error monitoring resources:', error); }
       }
     }
   }
@@ -172,11 +172,11 @@ class MonitoringService {
     if (thresholds) {
       const rating = value <= thresholds.good ? 'good' : value <= thresholds.needsImprovement ? 'needs-improvement' : 'poor';
       
-      console.log(`[Performance] ${name}:`, {
+      if (process.env.NODE_ENV === 'development') console.log(`[Performance] ${name}:`, {
         value,
         rating,
         unit: name === 'cls' ? 'score' : 'ms',
-      });
+      }); }
     }
 
     // Send to analytics (if configured)
@@ -197,7 +197,7 @@ class MonitoringService {
       this.errors = this.errors.slice(-50);
     }
 
-    console.error('[Error]', error);
+    if (process.env.NODE_ENV === 'development') console.error('[Error]', error); }
 
     // Send to error tracking service (if configured)
     if (typeof window !== 'undefined' && (window as any).Sentry) {
@@ -220,7 +220,7 @@ class MonitoringService {
   public measureMemory(): void {
     if ('memory' in performance && performanceConfig.monitoring.enableMemoryMonitoring) {
       const memory = (performance as any).memory;
-      console.log('[Memory]', {
+      if (process.env.NODE_ENV === 'development') console.log('[Memory]', {
         used: `${Math.round(memory.usedJSHeapSize / 1048576)}MB`,
         total: `${Math.round(memory.totalJSHeapSize / 1048576)}MB`,
         limit: `${Math.round(memory.jsHeapSizeLimit / 1048576)}MB`,
@@ -232,7 +232,7 @@ class MonitoringService {
     if ('performance' in window && 'getEntriesByType' in performance) {
       const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
       if (navigation) {
-        console.log('[Navigation Timing]', {
+        if (process.env.NODE_ENV === 'development') console.log('[Navigation Timing]', {
           'DNS Lookup': `${Math.round(navigation.domainLookupEnd - navigation.domainLookupStart)}ms`,
           'TCP Connect': `${Math.round(navigation.connectEnd - navigation.connectStart)}ms`,
           'TTFB': `${Math.round(navigation.responseStart - navigation.requestStart)}ms`,

@@ -62,7 +62,7 @@ class AnalyticsTracker {
 
       // Also log to console in development
       if (process.env.NODE_ENV === 'development') {
-        console.log('[Analytics Event]', event);
+        if (process.env.NODE_ENV === 'development') console.log('[Analytics Event]', event); }
       }
     };
 
@@ -89,7 +89,7 @@ class AnalyticsTracker {
       }
 
       if (process.env.NODE_ENV === 'development') {
-        console.log('[Analytics Page View]', path);
+        if (process.env.NODE_ENV === 'development') console.log('[Analytics Page View]', path); }
       }
     };
 
@@ -117,7 +117,7 @@ class AnalyticsTracker {
       }
 
       if (process.env.NODE_ENV === 'development') {
-        console.log('[Analytics Performance]', metrics);
+        if (process.env.NODE_ENV === 'development') console.log('[Analytics Performance]', metrics); }
       }
     };
 
@@ -144,7 +144,7 @@ class AnalyticsTracker {
       }
 
       // Always log errors to console
-      console.error('[Analytics Error]', error);
+      if (process.env.NODE_ENV === 'development') console.error('[Analytics Error]', error); }
     };
 
     if (this.isInitialized) {
@@ -171,7 +171,7 @@ class AnalyticsTracker {
       }
 
       if (process.env.NODE_ENV === 'development') {
-        console.log('[Analytics Timing]', { category, variable, value, label });
+        if (process.env.NODE_ENV === 'development') console.log('[Analytics Timing]', { category, variable, value, label }); }
       }
     };
 
@@ -198,7 +198,7 @@ class AnalyticsTracker {
       }
 
       if (process.env.NODE_ENV === 'development') {
-        console.log('[Analytics Conversion]', { conversionId, value });
+        if (process.env.NODE_ENV === 'development') console.log('[Analytics Conversion]', { conversionId, value }); }
       }
     };
 

@@ -54,9 +54,9 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     // Log to console in development
     if (process.env.NODE_ENV === 'development') {
       console.group('🚨 Error Boundary Caught Error');
-      console.error('Error:', error);
-      console.error('Error Info:', errorInfo);
-      console.error('Component Stack:', errorInfo.componentStack);
+      if (process.env.NODE_ENV === 'development') console.error('Error:', error);
+      if (process.env.NODE_ENV === 'development') console.error('Error Info:', errorInfo);
+      if (process.env.NODE_ENV === 'development') console.error('Component Stack:', errorInfo.componentStack);
       console.groupEnd();
     }
   }
@@ -95,8 +95,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     try {
       // In a real app, you would send this to your error reporting service
       // For now, we'll just log it
-      console.log('Error Report:', errorReport);
-      
+      if (process.env.NODE_ENV === 'development') console.log('Error Report:', errorReport);
       // Example: Send to error reporting service
       // await fetch('/api/errors', {
       //   method: 'POST',
@@ -104,7 +103,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       //   body: JSON.stringify(errorReport)
       // });
     } catch (reportingError) {
-      console.warn('Failed to send error report:', reportingError);
+      if (process.env.NODE_ENV === 'development') console.warn('Failed to send error report:', reportingError);
     }
   };
 
@@ -167,7 +166,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
         }
       })
       .catch(() => {
-        console.warn('Failed to copy error details');
+        if (process.env.NODE_ENV === 'development') console.warn('Failed to copy error details');
       });
   };
 

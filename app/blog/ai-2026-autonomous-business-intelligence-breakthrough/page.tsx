@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 export default function AutonomousBusinessIntelligenceBreakthrough() {
   return (
     <div className="min-h-screen bg-gray-50">
