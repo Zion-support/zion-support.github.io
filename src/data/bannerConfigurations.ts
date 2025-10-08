@@ -1,54 +1,90 @@
-/**
- * Banner Configuration Data
- * Manages banner display tracking and rotation logic
- */
-
-export interface BannerConfig {
+export interface Banner {
   id: string;
-  name: string;
+  title: string;
+  description: string;
+  ctaText: string;
+  ctaUrl: string;
+  featured: boolean;
   priority: number;
-  enabled: boolean;
 }
 
-export type RotationStrategy = 'sequential' | 'random' | 'priority' | 'balanced';
+export type BannerConfig = Banner;
+export type RotationStrategy = 'sequential' | 'random' | 'weighted' | 'balanced';
 
-export function selectBannersForDisplay(
-  banners: BannerConfig[],
-  count: number,
-  strategy: RotationStrategy = 'balanced'
-): BannerConfig[] {
-  const enabled = banners.filter(b => b.enabled);
-  if (strategy === 'priority') {
-    return enabled.sort((a, b) => b.priority - a.priority).slice(0, count);
-  }
-  return enabled.slice(0, count);
+const bannerStats: Map<string, { impressions: number; clicks: number }> = new Map();
+
+export async function selectBannersForDisplay(strategy: RotationStrategy = 'balanced', maxBanners: number = 3): Promise<BannerConfig[]> {
+  return getFeaturedBanners(maxBanners);
 }
 
-export function selectBalancedBanners(
-  banners: BannerConfig[],
-  count: number
-): BannerConfig[] {
-  return selectBannersForDisplay(banners, count, 'balanced');
+export function selectBalancedBanners(maxBanners: number = 3): BannerConfig[] {
+  return getFeaturedBanners(maxBanners);
 }
 
 export function trackImpression(bannerId: string): void {
-  // Stub implementation
-  console.log('Banner impression:', bannerId);
+  const stats = bannerStats.get(bannerId) || { impressions: 0, clicks: 0 };
+  stats.impressions++;
+  bannerStats.set(bannerId, stats);
 }
 
 export function trackClick(bannerId: string): void {
-  // Stub implementation
-  console.log('Banner click:', bannerId);
+  const stats = bannerStats.get(bannerId) || { impressions: 0, clicks: 0 };
+  stats.clicks++;
+  bannerStats.set(bannerId, stats);
 }
 
-export function loadBannerStats(): Record<string, number> {
-  return {};
+export async function loadBannerStats(): Promise<{ impressions: number; clicks: number; ctr: number }> {
+  let totalImpressions = 0;
+  let totalClicks = 0;
+  bannerStats.forEach(stats => {
+    totalImpressions += stats.impressions;
+    totalClicks += stats.clicks;
+  });
+  return {
+    impressions: totalImpressions,
+    clicks: totalClicks,
+    ctr: totalImpressions > 0 ? totalClicks / totalImpressions : 0,
+  };
 }
 
 export function getRefreshInterval(): number {
-  return 30000; // 30 seconds
+  return 30000;
 }
 
 export function getRotationStrategy(): RotationStrategy {
   return 'balanced';
 }
+
+export const getFeaturedBanners = (count: number = 3): Banner[] => {
+  const banners: Banner[] = [
+    {
+      id: 'ai-solutions',
+      title: 'AI Solutions for Enterprise',
+      description: 'Transform your business with cutting-edge AI technology',
+      ctaText: 'Learn More',
+      ctaUrl: '/services',
+      featured: true,
+      priority: 1,
+    },
+    {
+      id: 'automation-platform',
+      title: 'Automation Platform',
+      description: 'Streamline operations with intelligent automation',
+      ctaText: 'Get Started',
+      ctaUrl: '/services/automation',
+      featured: true,
+      priority: 2,
+    },
+    {
+      id: 'data-analytics',
+      title: 'Data Analytics Solutions',
+      description: 'Unlock insights from your data with advanced analytics',
+      ctaText: 'Explore',
+      ctaUrl: '/services/analytics',
+      featured: true,
+      priority: 3,
+    },
+  ];
+
+  return banners.slice(0, count);
+};

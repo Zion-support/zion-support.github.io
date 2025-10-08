@@ -233,6 +233,20 @@ class Logger {
   performance(label: string, metrics: Record<string, unknown>, component: string): void {
     this.debug(`Performance: ${label}`, { component, metrics });
   }
+
+  /**
+   * Log lifecycle events
+   */
+  lifecycle(message: string, component: string): void {
+    this.info(message, { component });
+  }
+
+  /**
+   * Log performance metrics
+   */
+  performance(message: string, metrics: Record<string, unknown>, component: string): void {
+    this.info(message, { component, ...metrics });
+  }
 }
 
 // Create and export singleton instance

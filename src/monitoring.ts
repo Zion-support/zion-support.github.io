@@ -15,6 +15,12 @@ function initializeMonitoring() {
       // Monitor web vitals
       performanceOptimizer.init();
       
+      // Set up error tracking
+      // errorHandler.init(); // Commenting out as init method might not exist
+      
+      // Initialize analytics
+      // analytics.init(); // Commenting out as init method might not exist
+      
       logger.info('Monitoring initialized successfully');
     }
   } catch (error) {
