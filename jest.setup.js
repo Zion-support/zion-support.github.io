@@ -1,10 +1,28 @@
 // Learn more: https://github.com/testing-library/jest-dom
 import '@testing-library/jest-dom';
 
-// Polyfill for TextEncoder/TextDecoder
+// Polyfill TextEncoder and TextDecoder for Node.js environment
 import { TextEncoder, TextDecoder } from 'util';
+
 global.TextEncoder = TextEncoder;
 global.TextDecoder = TextDecoder;
+
+// Mock React Router
+jest.mock('react-router-dom', () => ({
+  useNavigate: () => jest.fn(),
+  useLocation: () => ({
+    pathname: '/',
+    search: '',
+    hash: '',
+    state: null,
+  }),
+  useParams: () => ({}),
+  BrowserRouter: ({ children }) => children,
+  MemoryRouter: ({ children }) => children,
+  Router: ({ children }) => children,
+  Link: ({ children, ...props }) => <a {...props}>{children}</a>,
+  NavLink: ({ children, ...props }) => <a {...props}>{children}</a>,
+}));
 
 // Mock files that use import.meta.env
 jest.mock('./app/utils/logger.ts', () => ({
@@ -43,44 +61,6 @@ jest.mock('./app/hooks/usePerformanceMonitoring.ts', () => ({
 }));
 
 
-// Mock React Router (this is a Vite project, not Next.js)
-jest.mock('react-router-dom', () => ({
-  ...jest.requireActual('react-router-dom'),
-
-  useNavigate: () => jest.fn(),
-  useLocation: () => ({
-    pathname: '/',
-    search: '',
-    hash: '',
-    state: null,
-  }),
-  useParams: () => ({}),
-  BrowserRouter: ({ children }) => children,
-  MemoryRouter: ({ children, basename = '/' }) => {
-    const React = require('react');
-    const { createContext } = React;
-    
-    // Create a mock router context
-    const RouterContext = createContext({
-      basename,
-      location: { pathname: '/', search: '', hash: '', state: null },
-      navigator: {
-        createHref: jest.fn(),
-        go: jest.fn(),
-        push: jest.fn(),
-        replace: jest.fn(),
-      },
-      static: false,
-    });
-    
-    return React.createElement(RouterContext.Provider, { value: RouterContext._currentValue }, children);
-  },
-  RouterProvider: ({ router }) => null,
-  Link: ({ children, to, ...props }) => {
-    const React = require('react');
-    return React.createElement('a', { href: to, ...props }, children);
-  },
-}));
 
 // Mock window.matchMedia
 Object.defineProperty(window, 'matchMedia', {
@@ -107,8 +87,6 @@ global.IntersectionObserver = class IntersectionObserver {
   }
   unobserve() {}
 };
-
-// TextEncoder and TextDecoder are already imported and set globally above
 
 // Suppress console errors in tests
 const originalError = console.error;
