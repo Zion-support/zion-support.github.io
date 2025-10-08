@@ -166,10 +166,8 @@ export function logPerformanceMetrics(): void {
       if (process.env.NODE_ENV === 'development') { console.log(`${i + 1}.`, rec); }
     });
     console.groupEnd();
+    /* eslint-enable no-console */
   }
-  
-  console.groupEnd();
-  /* eslint-enable no-console */
 }
 
 /**
