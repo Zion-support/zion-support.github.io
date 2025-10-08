@@ -50,4 +50,8 @@ async function handler(req, res) {
   }
 }
 
+<<<<<<< HEAD
 module.exports = withSentry(handler);
+=======
+module.exports = withSentry(handler);
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-17a6
