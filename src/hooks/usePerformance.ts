@@ -28,5 +28,3 @@ export const usePerformance = () => {
     };
   }, []);
 };
-
-export default usePerformance;
