@@ -24,30 +24,21 @@ export {
 } from './security';
 
 export {
-  isDefined,
-  isString,
-  isNumber,
-  isBoolean,
-  isArray,
-  isObject,
-  isFunction,
-  isEmpty,
-  isEmptyObject,
-  isValidUrl,
-  isValidEmail,
-  validateRequiredFields,
-  isError,
-  isValidLength,
-  isInRange,
-  safeParse,
-  assertNever,
-  safeArrayAccess,
-  safeGet,
-  hasProperty,
-  isValidDate,
-  isValidJson,
-  isValidHexColor,
-  isValidUuid,
+  validateEmail,
+  validatePhone,
+  validateURL,
+  validateLength,
+  validateRequired,
+  validateNumberRange,
+  validatePassword,
+  sanitizeHTML,
+  sanitizeInput,
+  validateDate,
+  validateCreditCard,
+  validateJSON,
+  validateComposite,
+  validateAsync,
+  type ValidationResult,
 } from './validation';
 
 // Export errorHandler module items individually
@@ -62,7 +53,6 @@ export {
 export { default as analytics } from './analytics';
 export { default as performanceOptimizer } from './performanceOptimizer';
 export { default as securityUtils } from './security';
-export { default as validationUtils } from './validation';
 export { default as cacheUtils } from './cache';
 export { default as logger } from './logger';
 export { default as apiUtils } from './api';
