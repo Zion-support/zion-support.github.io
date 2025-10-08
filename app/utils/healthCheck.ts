@@ -262,8 +262,8 @@ class HealthCheckService {
 
       if (retrieved !== testValue) {
         return {
-          name: 'storage'
-          status: 'fail'
+          name: 'storage',
+          status: 'fail',
           message: 'LocalStorage not working correctly'
         }
       }
@@ -274,8 +274,8 @@ class HealthCheckService {
         localStorage.removeItem('_size_test');
       } catch {
         return {
-          name: 'storage'
-          status: 'warn'
+          name: 'storage',
+          status: 'warn',
           message: 'LocalStorage space limited'
         }
       }
