@@ -1,5 +1,6 @@
-import React from 'react';
-import dynamic from 'next/dynamic';
+import React, { lazy, Suspense } from 'react';
+import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import SEOOptimizer from './components/SEOOptimizer';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
@@ -8,74 +9,26 @@ import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 const EmptyComponent = () => null;
 
 // Lazy load heavy components - these may not exist, so make them optional
-const UnifiedBanner = dynamic(() => import('./components/NewestContent2025Banner').catch(() => import('./components/EmptyComponent').catch(() => ({ default: EmptyComponent }))), {
-  loading: () => <div className="animate-pulse bg-gray-200 h-32 rounded-lg"></div>,
-  ssr: false
-});
+const UnifiedBanner = lazy(() => import('./components/NewestContent2025Banner').catch(() => ({ default: EmptyComponent })));
 
-const ContentPromotion = dynamic(
-  () => import('./components/UltimateBusinessIntelligence2025Banner').catch(() => {
-    return { default: EmptyComponent } as any;
-  }), 
-  {
-    loading: () => <div className="animate-pulse bg-gray-200 h-64 rounded-lg"></div>,
-    ssr: false
-  }
-);
+const ContentPromotion = lazy(() => import('./components/UltimateBusinessIntelligence2025Banner').catch(() => ({ default: EmptyComponent })));
 
-const ContentShowcase = dynamic(() => import('./components/UltimateBusinessIntelligenceShowcase2025').catch(() => ({ default: EmptyComponent })), {
-  loading: () => <div className="animate-pulse bg-gray-200 h-48 rounded-lg"></div>,
-  ssr: false
-});
+const ContentShowcase = lazy(() => import('./components/UltimateBusinessIntelligenceShowcase2025').catch(() => ({ default: EmptyComponent })));
 
-export const metadata = {
-  title: 'Zion Tech Group — AI Enterprise Transformation & IT Services | 300% ROI Guaranteed',
-  description: 'Transform your enterprise with AI-powered solutions. Achieve 300% ROI, 70% cost reduction, and 90% efficiency gains. Expert AI consulting, autonomous systems, and digital transformation services.',
-  keywords: 'AI enterprise transformation, AI consulting, autonomous AI systems, enterprise AI services, digital transformation, AI implementation, AI ROI calculator, manufacturing AI, AI automation, AI strategy',
-  openGraph: {
-    title: 'Zion Tech Group — AI Enterprise Transformation & IT Services',
-    description: 'Transform your enterprise with AI-powered solutions. Achieve 300% ROI, 70% cost reduction, and 90% efficiency gains.',
-    type: 'website',
-    url: 'https://ziontechgroup.com',
-    images: [
-      {
-        url: '/og-image.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Zion Tech Group AI Enterprise Transformation',
-      },
-    ],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Zion Tech Group — AI Enterprise Transformation & IT Services',
-    description: 'Transform your enterprise with AI-powered solutions. Achieve 300% ROI, 70% cost reduction, and 90% efficiency gains.',
-    images: ['/og-image.jpg'],
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
-  alternates: {
-    canonical: 'https://ziontechgroup.com',
-  },
-  verification: {
-    google: 'your-google-verification-code',
-    yandex: 'your-yandex-verification-code',
-    yahoo: 'your-yahoo-verification-code',
-  },
-};
-
-export default function OptimizedHomePage() {
+const OptimizedHomePage: React.FC = () => {
   return (
-    <AccessibilityEnhancer>
+
+    <>
+
+      <Helmet>
+
+        <title>Zion Tech Group</title>
+
+        <meta name="description" content="Advanced AI and IT Solutions" />
+
+      </Helmet>
+
+      <AccessibilityEnhancer>
       <div className="min-h-screen bg-white">
         <SEOOptimizer />
         <PerformanceMonitor />
@@ -102,18 +55,16 @@ export default function OptimizedHomePage() {
                   autonomous systems, and digital transformation services.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <a
-                    href="/contact"
+                  <Link to="/contact"
                     className="inline-flex items-center px-8 py-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-semibold text-lg"
                   >
                     Get Your Free AI Assessment
-                  </a>
-                  <a
-                    href="/case-studies"
+                  </Link>
+                  <Link to="/case-studies"
                     className="inline-flex items-center px-8 py-4 bg-transparent border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-900 transition-colors font-semibold text-lg"
                   >
                     View Success Stories
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -127,5 +78,6 @@ export default function OptimizedHomePage() {
         </main>
       </div>
     </AccessibilityEnhancer>
+    </>
   );
 }

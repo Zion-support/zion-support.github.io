@@ -1,13 +1,5 @@
 import React from 'react';
-import { Metadata } from 'next';
-
-const metadata: Metadata = {
-  title: 'Privacy Policy - Zion Tech Group',
-  description:
-    'Privacy policy and data protection information for Zion Tech Group services and website.',
-};
-
-export { metadata };
+import { Helmet } from 'react-helmet-async';
 
 const PrivacyPage: React.FC = () => {
   return (

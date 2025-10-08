@@ -1,5 +1,6 @@
 import React from 'react';
-import Link from 'next/link';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 
 const UnifiedContentPromotion: React.FC = () => {
   const features = [
@@ -44,7 +45,7 @@ const UnifiedContentPromotion: React.FC = () => {
                 {feature.description}
               </p>
               <Link 
-                href={feature.link}
+                to={feature.link}
                 className="text-blue-600 hover:text-blue-700 font-medium inline-flex items-center"
               >
                 Learn More →
@@ -55,6 +56,7 @@ const UnifiedContentPromotion: React.FC = () => {
       </div>
     </div>
   );
+
 };
 
 export default UnifiedContentPromotion;
