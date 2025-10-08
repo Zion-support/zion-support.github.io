@@ -73,7 +73,7 @@ export class AppError extends Error {
     message: string,
     public category: ErrorCategory = ErrorCategory.UNKNOWN,
     public severity: ErrorSeverity = ErrorSeverity.MEDIUM,
-    public metadata?: Record<string, any>
+    public metadata?: Record<string, unknown>
   ) {
     super(message);
     this.name = 'AppError';

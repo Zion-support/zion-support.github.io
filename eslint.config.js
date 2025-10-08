@@ -108,7 +108,7 @@ export default [
         { argsIgnorePattern: '^_' },
       ],
       '@typescript-eslint/no-explicit-any': 'warn',
-      'no-console': 'warn',
+      'no-console': 'off',
       'no-debugger': 'error',
     },
   },

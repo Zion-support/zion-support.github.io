@@ -401,7 +401,7 @@ class AdvancedAnalytics {
         body: JSON.stringify(event)
       });
     } catch (error) {
-      console.warn('Failed to send analytics event:', error);
+      if (process.env.NODE_ENV === 'development') { console.warn('Failed to send analytics event:', error); }
     }
   }
 
@@ -591,7 +591,7 @@ class AdvancedAnalytics {
         body: JSON.stringify(session)
       });
     } catch (error) {
-      console.warn('Failed to send session data:', error);
+      if (process.env.NODE_ENV === 'development') { console.warn('Failed to send session data:', error); }
     }
   }
 

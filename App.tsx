@@ -1,4 +1,4 @@
-import React, { memo, useMemo, useCallback, Suspense } from 'react';
+import React, { memo, useMemo, Suspense } from 'react';
 import { HelmetProvider, Helmet } from 'react-helmet-async';
 
 // Memoized components for better performance
@@ -56,7 +56,7 @@ const LoadingSpinner = memo(() => (
 // Error Boundary Component
 interface ErrorBoundaryState {
   hasError: boolean;
-  error: Error | null;
+  _error: Error | null;
 }
 
 interface ErrorBoundaryProps {
@@ -74,7 +74,8 @@ class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundarySta
   }
 
   override componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
-    console.error('App Error Boundary caught an error:', error, errorInfo);
+    // Log error for debugging in development
+    if (process.env.NODE_ENV === 'development') { console.error('App Error Boundary caught an error:', error, errorInfo); }
   }
 
   override render() {

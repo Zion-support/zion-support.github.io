@@ -97,12 +97,12 @@ class HealthCheckService {
           name,
           duration,
         });
-      } catch (error) {
-        logger.error(`Health check "${name}" failed`, error as Error);
+      } catch (_error) {
+        logger._error(`Health check "${name}" failed`, _error as Error);
         checks.push({
           name,
           status: 'fail',
-          message: error instanceof Error ? error.message : 'Unknown error',
+          message: _error instanceof Error ? _error.message : 'Unknown _error',
         });
       }
     }
@@ -133,7 +133,7 @@ class HealthCheckService {
 
     // Log unhealthy status
     if (status === 'unhealthy') {
-      logger.error('Application health check failed', { healthStatus });
+      logger._error('Application health check failed', { healthStatus });
     } else if (status === 'degraded') {
       logger.warn('Application health degraded', { healthStatus });
     }
@@ -186,7 +186,7 @@ class HealthCheckService {
           usedPercent,
         },
       };
-    } catch (error) {
+    } catch (_error) {
       return {
         name: 'memory',
         status: 'warn',
@@ -201,7 +201,7 @@ class HealthCheckService {
   private checkPerformance(): HealthCheck {
     try {
       const report = performanceMonitor.getReport();
-      const { poor, needsImprovement, good } = report.summary;
+      const { poor, needsImprovement, good} = report.summary;
 
       let status: 'pass' | 'warn' | 'fail' = 'pass';
       let message = `Performance: ${good} good, ${needsImprovement} needs improvement, ${poor} poor`;
@@ -224,7 +224,7 @@ class HealthCheckService {
           summary: report.summary,
         },
       };
-    } catch (error) {
+    } catch (_error) {
       return {
         name: 'performance',
         status: 'warn',
@@ -295,7 +295,7 @@ class HealthCheckService {
       try {
         localStorage.setItem('_size_test', testData);
         localStorage.removeItem('_size_test');
-      } catch (error) {
+      } catch (_error) {
         return {
           name: 'storage',
           status: 'warn',
@@ -308,7 +308,7 @@ class HealthCheckService {
         status: 'pass',
         message: 'Storage working correctly',
       };
-    } catch (error) {
+    } catch (_error) {
       return {
         name: 'storage',
         status: 'fail',

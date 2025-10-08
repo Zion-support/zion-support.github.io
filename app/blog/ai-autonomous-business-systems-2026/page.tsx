@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 export const metadata = {
   title: 'AI Autonomous Business Systems 2026: 95% Automation Achievement | Zion Tech Group',
   description: 'Discover how AI autonomous business systems achieved 95% operational automation. Revolutionary self-managing enterprises transform business operations.',

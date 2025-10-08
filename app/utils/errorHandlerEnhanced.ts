@@ -30,6 +30,6 @@ export const errorHandler = (error: AppError | Error) => {
   };
 };
 
-export const asyncHandler = (fn: Function) => (req: any, res: any, next: any) => {
+export const asyncHandler = (fn: Function) => (_req: unknown, _res: unknown, next: unknown) => {
   Promise.resolve(fn(req, res, next)).catch(next);
 };

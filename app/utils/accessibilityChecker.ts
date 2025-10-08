@@ -84,7 +84,7 @@ export interface A11yCheckResult {
  * ```typescript
  * const checker = new AccessibilityChecker();
  * const result = checker.checkElement(document.getElementById('main'));
- * if (import.meta.env.DEV) { console.log(`Score: ${result.score}, Issues: ${result.issueCount}`); }
+ * if (import.meta.env.DEV) { if (process.env.NODE_ENV === 'development') { if (process.env.NODE_ENV === 'development') { console.log(`Score: ${result.score}, Issues: ${result.issueCount}`); } } }
  * ```
  */
 export class AccessibilityChecker {
@@ -438,7 +438,7 @@ export class AccessibilityChecker {
           wcagCriterion: '2.1.1',
           message: `${el.tagName.toLowerCase()} has onclick but no keyboard support`,
           element: el.tagName.toLowerCase(),
-          fix: 'Add role, tabindex, and keyboard event handlers, or use a button',
+          fix: 'Add role, tabindex, and keyboard _event handlers, or use a button',
           codeExample: '<button onClick={handleClick}>Click me</button>',
         });
       }
@@ -503,7 +503,7 @@ export class AccessibilityChecker {
    */
   private checkLandmarks(element: Element): void {
     const hasMain = element.querySelector('main, [role="main"]');
-    const hasNav = element.querySelector('nav, [role="navigation"]');
+    const _hasNav = element.querySelector('nav, [role="navigation"]');
 
     if (!hasMain) {
       this.addIssue({

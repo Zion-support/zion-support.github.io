@@ -119,7 +119,7 @@ export const usePerformanceOptimization = () => {
         if (process.env['NODE_ENV'] === 'production') {
           // Track metrics in production
         }
-        // eslint-disable-next-line no-console
+         
         if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { console.log('Performance Metrics:', metrics); } }
       }
     }, 1000);

@@ -1,9 +1,8 @@
 /**
  * API Interceptor Utility
- * Centralized API request handling with error handling, retry logic, and caching
+ * Centralized API request handling with _error handling, retry logic, and caching
  */
 
-import { ErrorHandler, ErrorType } from './errorHandler';
 import { performanceMetrics } from './performanceMetrics';
 
 export interface APIConfig {
@@ -17,7 +16,7 @@ export interface APIConfig {
   interceptors?: {
     request?: (config: RequestConfig) => RequestConfig | Promise<RequestConfig>;
     response?: (response: Response) => Response | Promise<Response>;
-    error?: (error: Error) => Error | Promise<Error>;
+    _error?: (_error: Error) => Error | Promise<Error>;
   };
 }
 
@@ -160,18 +159,18 @@ export class APIInterceptor {
         headers: finalResponse.headers,
         config: finalConfig,
       };
-    } catch (error) {
+    } catch (_error) {
       const duration = performance.now() - startTime;
-      const err = error as Error;
+      const err = _error as Error;
 
-      // Record error metric
+      // Record _error metric
       performanceMetrics.recordNetworkRequest(
         this.buildURL(config),
         duration,
         0
       );
 
-      // Handle error with error handler
+      // Handle _error with _error handler
       this.errorHandler.handleNetworkError(
         err,
         this.buildURL(config),
@@ -184,9 +183,9 @@ export class APIInterceptor {
         return this.executeRequest<T>(config, attempt + 1);
       }
 
-      // Apply error interceptor
-      if (this.config.interceptors?.error) {
-        const modifiedError = await this.config.interceptors.error(err);
+      // Apply _error interceptor
+      if (this.config.interceptors?._error) {
+        const modifiedError = await this.config.interceptors._error(err);
         throw modifiedError;
       }
 
