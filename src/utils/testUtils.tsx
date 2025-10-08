@@ -20,11 +20,11 @@ export function mockPerformanceAPI() {
   }
 
   if (!window.performance.mark) {
-    window.performance.mark = () => {};
+    window.performance.mark = () => ({} as PerformanceMark);
   }
 
   if (!window.performance.measure) {
-    window.performance.measure = () => {};
+    window.performance.measure = () => ({} as PerformanceMeasure);
   }
 }
 
@@ -112,7 +112,7 @@ export async function waitFor(
 export function createMockFn<T extends (...args: any[]) => any>(
   implementation?: T
 ): jest.Mock<ReturnType<T>, Parameters<T>> {
-  return jest.fn(implementation);
+  return jest.fn(implementation) as jest.Mock<ReturnType<T>, Parameters<T>>;
 }
 
 /**
