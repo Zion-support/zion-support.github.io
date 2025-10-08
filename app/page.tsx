@@ -1,6 +1,8 @@
 import React, { useCallback, useState, useEffect, Suspense, lazy, memo } from 'react';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
+import SEO from './components/SEO';
+import PerformanceMonitor from './components/PerformanceMonitor';
 
 // Dynamically import heavy components for better performance
 const ContentPromotionBanner = lazy(() => import('./components/ContentPromotionBanner'));
@@ -53,9 +55,16 @@ const HomePage: React.FC = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid">
-      {/* Navigation */}
-      <Navigation />
+    <>
+      <SEO 
+        title="Zion Tech Group - Advanced AI and IT Solutions"
+        description="Leading provider of enterprise AI solutions, quantum computing, and autonomous systems. Transform your business with cutting-edge technology and achieve unprecedented growth."
+        keywords="AI, artificial intelligence, quantum computing, autonomous systems, IT solutions, digital transformation, enterprise technology, cybersecurity, cloud computing, machine learning"
+      />
+      <PerformanceMonitor />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid">
+        {/* Navigation */}
+        <Navigation />
       
       {/* Skip to main content for accessibility */}
       <a
@@ -422,9 +431,10 @@ const HomePage: React.FC = () => {
         </section>
       </main>
       
-      {/* Footer */}
-      <Footer />
-    </div>
+        {/* Footer */}
+        <Footer />
+      </div>
+    </>
   );
 };
 
