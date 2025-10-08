@@ -87,9 +87,6 @@ class Logger {
   /**
    * Log a warning message
    */
-  warn(message: string, contextOrMetadata?: string | Record<string, unknown>, _metadata?: Record<string, unknown>): void {
-    const [context, meta] = this.parseArgs(contextOrMetadata, _metadata)
-
   warn(message: string, contextOrMetadata?: string | Record<string, unknown>, metadata?: Record<string, unknown>): void {
     const [context, meta] = this.parseArgs(contextOrMetadata, metadata)
 
