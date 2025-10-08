@@ -232,12 +232,12 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
   //   }
   // };
 
-  // Suppress unused variable warnings
-  void _addMetaTag;
-  void _updateCanonicalUrl;
-  void _addStructuredData;
-  void _trackPageView;
-  void _trackPerformanceMetrics;
+  // Suppress unused variable warnings - these functions are commented out but referenced to avoid linting warnings
+  // void _addMetaTag;
+  // void _updateCanonicalUrl;
+  // void _addStructuredData;
+  // void _trackPageView;
+  // void _trackPerformanceMetrics;
 
   return (
     <Helmet>
