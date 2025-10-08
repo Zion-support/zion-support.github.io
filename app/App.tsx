@@ -5,6 +5,7 @@ import { HelmetProvider } from 'react-helmet-async';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 // Components
+<<<<<<< HEAD
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import PerformanceDashboard from './components/PerformanceDashboard';
 import AdvancedPerformanceMonitor from './components/AdvancedPerformanceMonitor';
@@ -31,11 +32,16 @@ import { logger } from './utils/logger';
 import performanceMonitor from './utils/performanceMonitor';
 import seoOptimizer from './utils/seoOptimizer';
 import accessibilityEnhancer from './utils/accessibilityEnhancer';
+=======
+// Lazy load pages for better performance
+const HomePage = lazy(() => import('./page'));
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-1035
 
 // Styles
 import './globals.css';
 
 const App: React.FC = () => {
+<<<<<<< HEAD
   useEffect(() => {
     // Initialize global error handling
     logger.lifecycle('initialized', 'App');
@@ -162,8 +168,28 @@ const App: React.FC = () => {
           </SEOEnhancer>
         </AccessibilityEnhancer>
       </AdvancedErrorBoundary>
+=======
+  return (
+    <HelmetProvider>
+      <Router>
+        <div className="App">
+          <main id="main-content">
+            <Suspense fallback={<div>Loading...</div>}>
+              <Routes>
+                <Route path="/" element={<HomePage />} />
+                {/* Add more routes as needed */}
+              </Routes>
+            </Suspense>
+          </main>
+        </div>
+      </Router>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-1035
     </HelmetProvider>
   );
 };
 
+<<<<<<< HEAD
 export default App;
+=======
+export default App;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-1035

@@ -1,4 +1,4 @@
-import React, { memo, useMemo, useCallback, Suspense } from 'react';
+import React, { memo, useMemo } from 'react';
 import { HelmetProvider, Helmet } from 'react-helmet-async';
 
 // Memoized components for better performance
@@ -98,7 +98,6 @@ class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundarySta
         </div>
       );
     }
-
     return this.props.children;
   }
 }
