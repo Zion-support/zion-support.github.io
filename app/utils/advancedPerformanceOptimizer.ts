@@ -5,8 +5,8 @@ import React from 'react'
  */
 
 export class PerformanceOptimizer {
-  private static instance: PerformanceOptimizer,
-  private metrics: Map<string, number[]>
+  private static instance: PerformanceOptimizer;
+  private metrics: Map<string, number[]>;
 
   private constructor() {
     this.metrics = new Map()

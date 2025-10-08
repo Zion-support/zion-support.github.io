@@ -7,18 +7,18 @@ import React from 'react'
 import { logger } from './logger'
 
 export interface PerformanceMetric {
-  name: string,
-  value: number,
-  rating: 'good' | 'needs-improvement' | 'poor'
-  timestamp: number,
+  name: string;
+  value: number;
+  rating: 'good' | 'needs-improvement' | 'poor';
+  timestamp: number;
 }
 export interface PerformanceReport {
-  metrics: PerformanceMetric[]
-  navigation?: PerformanceNavigationTiming
-  resources?: PerformanceResourceTiming[]
-  timestamp: number,
-  userAgent: string,
-  url: string,
+  metrics: PerformanceMetric[];
+  navigation?: PerformanceNavigationTiming;
+  resources?: PerformanceResourceTiming[];
+  timestamp: number;
+  userAgent: string;
+  url: string;
 }
 class PerformanceReporter {
   private metrics: PerformanceMetric[] = []
@@ -71,6 +71,7 @@ class PerformanceReporter {
         const lastEntry = entries[entries.length - 1]
         
         if (lastEntry && 'renderTime' in lastEntry) {
+          const value = (lastEntry as any).renderTime || (lastEntry as any).loadTime || 0;
           this.addMetric('LCP', value, this.getRating('lcp', value))
         }
       })
@@ -82,6 +83,7 @@ class PerformanceReporter {
         const entries = entryList.getEntries()
         entries.forEach((entry) => {
           if ('processingStart' in entry && 'startTime' in entry) {
+            const value = (entry as any).processingStart - (entry as any).startTime;
             this.addMetric('FID', value, this.getRating('fid', value))
           }
         })
@@ -93,6 +95,8 @@ class PerformanceReporter {
       let clsValue = 0
       const clsObserver = new PerformanceObserver((entryList) => {
         entryList.getEntries().forEach((entry) => {
+          if (!(entry as any).hadRecentInput) {
+            clsValue += (entry as any).value;
           }
         })
         this.addMetric('CLS', clsValue, this.getRating('cls', clsValue))

@@ -5,34 +5,34 @@ import React from 'react'
  */
 
 interface SEOConfig {
-  siteName: string,
-  siteUrl: string,
-  defaultTitle: string,
-  defaultDescription: string,
-  defaultImage: string,
-  twitterHandle?: string
-  facebookAppId?: string
-  googleAnalyticsId?: string
-  googleTagManagerId?: string
+  siteName: string;
+  siteUrl: string;
+  defaultTitle: string;
+  defaultDescription: string;
+  defaultImage: string;
+  twitterHandle?: string;
+  facebookAppId?: string;
+  googleAnalyticsId?: string;
+  googleTagManagerId?: string;
 }
 interface PageSEOData {
-  title: string,
-  description: string,
-  keywords: string[]
-  image?: string
-  url?: string
-  type?: 'website' | 'article' | 'product' | 'profile'
-  publishedTime?: string
-  modifiedTime?: string
-  author?: string
-  section?: string
-  tags?: string[]
-  noindex?: boolean
-  nofollow?: boolean
+  title: string;
+  description: string;
+  keywords: string[];
+  image?: string;
+  url?: string;
+  type?: 'website' | 'article' | 'product' | 'profile';
+  publishedTime?: string;
+  modifiedTime?: string;
+  author?: string;
+  section?: string;
+  tags?: string[];
+  noindex?: boolean;
+  nofollow?: boolean;
 }
 class SEOOptimizer {
-  private config: SEOConfig,
-  private currentPageData: PageSEOData | null = null
+  private config: SEOConfig;
+  private currentPageData: PageSEOData | null = null;
 
   constructor(config: SEOConfig) {
     this.config = config

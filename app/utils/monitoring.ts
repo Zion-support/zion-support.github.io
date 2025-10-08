@@ -7,20 +7,20 @@ import React from 'react'
 import { performanceConfig } from '../../performance.config'
 
 export interface PerformanceMetrics {
-  lcp?: number
-  fid?: number
-  cls?: number
-  fcp?: number
-  ttfb?: number
-  inp?: number
+  lcp?: number;
+  fid?: number;
+  cls?: number;
+  fcp?: number;
+  ttfb?: number;
+  inp?: number;
 }
 export interface ErrorReport {
-  message: string,
-  stack?: string
-  component?: string
-  timestamp: number,
-  userAgent: string,
-  url: string,
+  message: string;
+  stack?: string;
+  component?: string;
+  timestamp: number;
+  userAgent: string;
+  url: string;
 }
 class MonitoringService {
   private metrics: PerformanceMetrics = {}
@@ -70,12 +70,14 @@ class MonitoringService {
         // Cumulative Layout Shift
         let clsValue = 0
         const clsObserver = new PerformanceObserver((list) => {
+          const entries = list.getEntries()
+          entries.forEach((entry: any) => {
             if (!entry.hadRecentInput) {
               clsValue += entry.value
               this.metrics.cls = clsValue
               this.reportMetric('cls', clsValue)
             }
-          }
+          })
         })
         clsObserver.observe({ entryTypes: ['layout-shift'] })
 

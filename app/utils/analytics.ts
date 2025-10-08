@@ -5,15 +5,15 @@ import React from 'react'
  */
 
 export interface AnalyticsEvent {
-  action: string,
-  category: string,
-  label?: string
-  value?: number
-  metadata?: Record<string, unknown>
+  action: string;
+  category: string;
+  label?: string;
+  value?: number;
+  metadata?: Record<string, unknown>;
 }
 export interface AnalyticsUser {
-  id?: string
-  properties?: Record<string, unknown>
+  id?: string;
+  properties?: Record<string, unknown>;
 }
 class AnalyticsService {
   private isInitialized = false

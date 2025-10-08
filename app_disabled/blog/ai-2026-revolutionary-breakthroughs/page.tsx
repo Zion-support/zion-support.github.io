@@ -2,7 +2,6 @@ import Link from 'next/link';
 
 export const metadata = {
   title: "AI 2026 Revolutionary Breakthroughs: The Future is Here",
->>>>>>> cursor/fix-errors-and-merge-to-main-4e61
   description: "Discover the revolutionary AI breakthroughs of 2026 that are transforming industries. From quantum AI to neural superintelligence.",
   type: "article",
   url: "https://ziontechgroup.com/blog/ai-2026-revolutionary-breakthroughs",

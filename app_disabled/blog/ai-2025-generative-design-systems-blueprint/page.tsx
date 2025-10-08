@@ -1,5 +1,7 @@
+import React from 'react';
 import Link from 'next/link';
 import { ArrowRight, Clock } from 'lucide-react';
+
 export default function GenerativeDesignSystemsBlueprintPage() {
   return (
     <div>
@@ -8,5 +10,3 @@ export default function GenerativeDesignSystemsBlueprintPage() {
           <div>
             <div>
               <span>🎨 GENERATIVE DESIGN SYSTEMS</span>
-import React from 'react';
-import Link from 'next/link';
