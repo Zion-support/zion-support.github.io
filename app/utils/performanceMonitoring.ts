@@ -56,8 +56,8 @@ class PerformanceMonitoringService {
 
     try {
       // Observe paint metrics (FCP)
-      const paintObserver = new PerformanceObserver(list => {
-        list.getEntries().forEach(entry => {
+      const paintObserver = new PerformanceObserver((list) => {
+        list.getEntries().forEach((entry) => {
           if (entry.name === 'first-contentful-paint') {
             this.recordWebVital('FCP', entry.startTime);
           }
@@ -67,15 +67,11 @@ class PerformanceMonitoringService {
       this.observers.push(paintObserver);
 
       // Observe LCP
-      const lcpObserver = new PerformanceObserver(list => {
+      const lcpObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
         const lastEntry = entries[entries.length - 1];
         if (lastEntry) {
-          this.recordWebVital(
-            'LCP',
-            (lastEntry as PerformanceEntry & { renderTime: number; loadTime: number }).renderTime ||
-              (lastEntry as PerformanceEntry & { renderTime: number; loadTime: number }).loadTime
-          );
+          this.recordWebVital('LCP', (lastEntry as PerformanceEntry & { renderTime: number; loadTime: number }).renderTime || (lastEntry as PerformanceEntry & { renderTime: number; loadTime: number }).loadTime);
         }
       });
       lcpObserver.observe({ type: 'largest-contentful-paint', buffered: true });
@@ -83,8 +79,8 @@ class PerformanceMonitoringService {
 
       // Observe CLS
       let clsValue = 0;
-      const clsObserver = new PerformanceObserver(list => {
-        list.getEntries().forEach(entry => {
+      const clsObserver = new PerformanceObserver((list) => {
+        list.getEntries().forEach((entry) => {
           if (!(entry as PerformanceEntry & { hadRecentInput: boolean }).hadRecentInput) {
             clsValue += (entry as PerformanceEntry & { value: number }).value;
             this.recordWebVital('CLS', clsValue);
@@ -95,21 +91,17 @@ class PerformanceMonitoringService {
       this.observers.push(clsObserver);
 
       // Observe FID
-      const fidObserver = new PerformanceObserver(list => {
-        list.getEntries().forEach(entry => {
-          this.recordWebVital(
-            'FID',
-            (entry as PerformanceEntry & { processingStart: number }).processingStart -
-              entry.startTime
-          );
+      const fidObserver = new PerformanceObserver((list) => {
+        list.getEntries().forEach((entry) => {
+          this.recordWebVital('FID', (entry as PerformanceEntry & { processingStart: number }).processingStart - entry.startTime);
         });
       });
       fidObserver.observe({ type: 'first-input', buffered: true });
       this.observers.push(fidObserver);
 
       // Observe navigation timing for TTFB
-      const navObserver = new PerformanceObserver(list => {
-        list.getEntries().forEach(entry => {
+      const navObserver = new PerformanceObserver((list) => {
+        list.getEntries().forEach((entry) => {
           const navEntry = entry as PerformanceNavigationTiming;
           this.recordWebVital('TTFB', navEntry.responseStart - navEntry.requestStart);
         });
@@ -135,7 +127,7 @@ class PerformanceMonitoringService {
 
     this.webVitals[name] = metric;
 
-    logger.info(`Web Vital: ${name}`, 'PerformanceMonitoring', { value, rating });
+    logger.info(`Web Vital: ${name}`, 'PerformanceMonitor', { value, rating });
 
     // Send to analytics
     this.sendToAnalytics(metric);
@@ -180,7 +172,7 @@ class PerformanceMonitoringService {
       this.customMetrics.shift();
     }
 
-    logger.debug(`Custom Metric: ${name}`, 'PerformanceMonitoring', { value, unit });
+    logger.debug(`Custom Metric: ${name}`, 'PerformanceMonitor', { value, unit });
   }
 
   /**
@@ -223,14 +215,10 @@ class PerformanceMonitoringService {
 
     const scores = vitals.map(metric => {
       switch (metric.rating) {
-        case 'good':
-          return 100;
-        case 'needs-improvement':
-          return 50;
-        case 'poor':
-          return 0;
-        default:
-          return 0;
+        case 'good': return 100;
+        case 'needs-improvement': return 50;
+        case 'poor': return 0;
+        default: return 0;
       }
     });
 
@@ -254,9 +242,7 @@ class PerformanceMonitoringService {
       recommendations.push('Improve First Contentful Paint by optimizing critical rendering path');
     }
     if (this.webVitals.LCP && this.webVitals.LCP.rating !== 'good') {
-      recommendations.push(
-        'Improve Largest Contentful Paint by optimizing images and server response'
-      );
+      recommendations.push('Improve Largest Contentful Paint by optimizing images and server response');
     }
     if (this.webVitals.CLS && this.webVitals.CLS.rating !== 'good') {
       recommendations.push('Reduce Cumulative Layout Shift by reserving space for dynamic content');
@@ -283,9 +269,9 @@ class PerformanceMonitoringService {
     const start = performance.now();
     const result = fn();
     const duration = performance.now() - start;
-
+    
     this.recordCustomMetric(`fn_${name}`, duration, 'ms');
-
+    
     return result;
   }
 
@@ -296,9 +282,9 @@ class PerformanceMonitoringService {
     const start = performance.now();
     const result = await fn();
     const duration = performance.now() - start;
-
+    
     this.recordCustomMetric(`async_fn_${name}`, duration, 'ms');
-
+    
     return result;
   }
 
@@ -371,11 +357,7 @@ interface MetricData {
 
 const simpleMetrics = new Map<string, MetricData>();
 
-export const recordMetric = (
-  name: string,
-  value: number,
-  unit: MetricUnit = MetricUnit.Milliseconds
-) => {
+export const recordMetric = (name: string, value: number, unit: MetricUnit = MetricUnit.Milliseconds) => {
   // Record in our simple metrics store for testing
   const existing = simpleMetrics.get(name);
   if (existing) {
@@ -395,19 +377,19 @@ export const recordMetric = (
       rating: getRating(name, value),
     });
   }
-
+  
   // Also record in the main performance monitoring service
   performanceMonitoring.recordCustomMetric(name, value, unit);
 };
 
 function getRating(name: string, value: number): 'good' | 'needs-improvement' | 'poor' {
   const thresholds: Record<string, { good: number; poor: number }> = {
-    FCP: { good: 1800, poor: 3000 },
-    LCP: { good: 2500, poor: 4000 },
-    FID: { good: 100, poor: 300 },
-    CLS: { good: 0.1, poor: 0.25 },
-    TTFB: { good: 800, poor: 1800 },
-    INP: { good: 200, poor: 500 },
+    'FCP': { good: 1800, poor: 3000 },
+    'LCP': { good: 2500, poor: 4000 },
+    'FID': { good: 100, poor: 300 },
+    'CLS': { good: 0.1, poor: 0.25 },
+    'TTFB': { good: 800, poor: 1800 },
+    'INP': { good: 200, poor: 500 },
   };
 
   const threshold = thresholds[name];
@@ -450,23 +432,21 @@ export const measureAsyncFunction = async <T>(name: string, fn: () => Promise<T>
 export const getPerformanceScore = (): number => {
   const metrics = getMetrics();
   const webVitalNames = ['FCP', 'LCP', 'FID', 'CLS', 'TTFB'];
-  const webVitals = webVitalNames.map(name => metrics[name]).filter(Boolean);
-
+  const webVitals = webVitalNames
+    .map(name => metrics[name])
+    .filter(Boolean);
+  
   if (webVitals.length === 0) return 0;
-
+  
   const scores = webVitals.map(metric => {
     switch (metric.rating) {
-      case 'good':
-        return 100;
-      case 'needs-improvement':
-        return 50;
-      case 'poor':
-        return 0;
-      default:
-        return 0;
+      case 'good': return 100;
+      case 'needs-improvement': return 50;
+      case 'poor': return 0;
+      default: return 0;
     }
   });
-
+  
   const sum = scores.reduce((a: number, b: number) => a + b, 0);
   return Math.round(sum / scores.length);
 };
@@ -474,11 +454,9 @@ export const getPerformanceScore = (): number => {
 export const getRecommendations = (): string[] => {
   const metrics = getMetrics();
   const recommendations: string[] = [];
-
+  
   if (metrics.FCP && metrics.FCP.rating !== 'good') {
-    recommendations.push(
-      'Improve FCP by optimizing critical CSS and reducing render-blocking resources'
-    );
+    recommendations.push('Improve FCP by optimizing critical CSS and reducing render-blocking resources');
   }
   if (metrics.LCP && metrics.LCP.rating !== 'good') {
     recommendations.push('Improve LCP by optimizing largest images and server response time');
@@ -487,13 +465,11 @@ export const getRecommendations = (): string[] => {
     recommendations.push('Improve FID by reducing JavaScript execution time');
   }
   if (metrics.CLS && metrics.CLS.rating !== 'good') {
-    recommendations.push(
-      'Improve CLS by reserving space for dynamic content and avoiding layout shifts'
-    );
+    recommendations.push('Improve CLS by reserving space for dynamic content and avoiding layout shifts');
   }
   if (metrics.TTFB && metrics.TTFB.rating !== 'good') {
     recommendations.push('Improve TTFB by optimizing server response time and using CDN');
   }
-
+  
   return recommendations;
 };
