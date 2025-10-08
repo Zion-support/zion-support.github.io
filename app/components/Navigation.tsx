@@ -4,7 +4,11 @@ import { Link } from 'react-router-dom';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { ChevronDown, Phone, Mail, MapPin, Menu, X } from 'lucide-react';
+=======
+import { ChevronDown, Phone, Mail, MapPin, Menu, X, ArrowRight } from 'lucide-react';
+>>>>>>> cursor/analyze-improve-and-deploy-application-fe44
 
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);

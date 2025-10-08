@@ -349,6 +349,7 @@ const Footer: React.FC = () => {
             <div className="space-y-3 mt-6">
 >>>>>>> cursor/fix-errors-and-merge-to-main-012c
               <div className="flex items-center">
+<<<<<<< HEAD
                 <Phone className="w-5 h-5 mr-3 text-blue-400" />
                 <a href="tel:+13024640950" className="text-gray-300 hover:text-white transition-colors">
                   +1 302 464 0950
@@ -359,6 +360,21 @@ const Footer: React.FC = () => {
                 <a href="mailto:kleber@ziontechgroup.com" className="text-gray-300 hover:text-white transition-colors">
                   kleber@ziontechgroup.com
                 </a>
+=======
+                <Phone className="w-5 h-5 text-cyan-400 mr-3" />
+                <span className="text-gray-300">+1 (302) 464-0950</span>
+              </div>
+              <div className="flex items-center">
+                <Mail className="w-5 h-5 text-cyan-400 mr-3" />
+                <span className="text-gray-300">info@ziontechgroup.com</span>
+              </div>
+              <div className="flex items-start">
+                <MapPin className="w-5 h-5 text-cyan-400 mr-3 mt-1" />
+                <span className="text-gray-300">
+                  364 E Main St STE 1008<br />
+                  Middletown, DE 19709
+                </span>
+>>>>>>> cursor/analyze-improve-and-deploy-application-fe44
               </div>
               <div className="flex items-center">
                 <Clock className="w-5 h-5 text-cyan-400 mr-3" />

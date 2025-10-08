@@ -9,6 +9,17 @@ const DynamicContentShowcase = lazy(() => import('./components/DynamicContentSho
 const ContentStatistics = lazy(() => import('./components/ContentStatistics'));
 const ContentNewsletterSignup = lazy(() => import('./components/ContentNewsletterSignup'));
 
+// Preload critical components
+const preloadComponents = () => {
+  if (typeof window !== 'undefined') {
+    // Preload critical components after initial render
+    setTimeout(() => {
+      import('./components/ContentPromotionBanner');
+      import('./components/ContentCarousel');
+    }, 100);
+  }
+};
+
 // Loading skeleton component
 const ServiceCardSkeleton: React.FC = memo(() => (
   <div className="bg-white rounded-lg shadow-lg p-6 animate-pulse" role="status" aria-label="Loading service card">
@@ -28,6 +39,8 @@ const HomePage: React.FC = () => {
     setIsLoaded(true);
     // Trigger visibility animation
     const timer = setTimeout(() => setIsVisible(true), 100);
+    // Preload components
+    preloadComponents();
     return () => clearTimeout(timer);
   }, []);
 
