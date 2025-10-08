@@ -92,6 +92,7 @@
     ".next/types/**/*.ts"
   ],
   "exclude": [
+    "vite.config.ts",
     "node_modules",
     ".next",
     "out",
