@@ -1,4 +1,3 @@
-import React from 'react'
 /**
  * Enhanced Logger Utility
  * Production-ready logging with multiple levels and formatting
@@ -81,16 +80,15 @@ class Logger {
   /**
    * Log an info message
    */
-  info(message: string, contextOrMetadata?: string | Record<string, unknown>, _metadata?: Record<string, unknown>): void {
-    const [context, meta] = this.parseArgs(contextOrMetadata, _metadata)
-
+  info(message: string, contextOrMetadata?: string | Record<string, unknown>, metadata?: Record<string, unknown>): void {
+    const [context, meta] = this.parseArgs(contextOrMetadata, metadata)
     this.log(LogLevel.INFO, message, context, meta)
   }
   /**
    * Log a warning message
    */
-  warn(message: string, contextOrMetadata?: string | Record<string, unknown>, _metadata?: Record<string, unknown>): void {
-    const [context, meta] = this.parseArgs(contextOrMetadata, _metadata)
+  warn(message: string, contextOrMetadata?: string | Record<string, unknown>, metadata?: Record<string, unknown>): void {
+    const [context, meta] = this.parseArgs(contextOrMetadata, metadata)
 
     this.log(LogLevel.WARN, message, context, meta)
   }
@@ -99,8 +97,8 @@ class Logger {
    */
   error(
     message: string,
-    errorOrContextOrMetadata?: Error | string | Record<string, unknown>
-    contextOrMetadata?: string | Record<string, unknown>
+    errorOrContextOrMetadata?: Error | string | Record<string, unknown>,
+    contextOrMetadata?: string | Record<string, unknown>,
     _metadata?: Record<string, unknown>
   ): void {
     let error: Error | undefined
@@ -114,10 +112,10 @@ class Logger {
       [context, meta] = this.parseArgs(errorOrContextOrMetadata, contextOrMetadata as Record<string, unknown> | undefined);
     }
     const entry: LogEntry = {
-      level: LogLevel.ERROR
-      message
-      timestamp: new Date()
-      context
+      level: LogLevel.ERROR,
+      message,
+      timestamp: new Date(),
+      context,
       metadata: {
         ...meta,
         error: error ? {
@@ -125,7 +123,8 @@ class Logger {
           message: error.message,
           stack: error.stack
         } : undefined
-      }
+      },
+      stack: error?.stack
     }
     this.processLog(entry)
   }
@@ -160,7 +159,8 @@ class Logger {
           message: error.message,
           stack: error.stack
         } : undefined
-      }
+      },
+      stack: error?.stack
     }
     this.processLog(entry)
     // Immediately flush fatal errors
@@ -381,8 +381,13 @@ class ContextLogger {
   fatal(message: string, error?: Error, metadata?: Record<string, unknown>): void {
     this.logger.fatal(message, error, this.context, metadata)
   }
+<<<<<<< HEAD
   perf(metric: string, value: number, metadata?: Record<string, unknown>): void {
     this.logger.perf(metric, value, { ...metadata, context: this.context })
+=======
+  perf(metric: string, value: number, _metadata?: Record<string, unknown>): void {
+    this.logger.perf(metric, value, { ..._metadata, context: this.context })
+>>>>>>> cursor/fix-errors-and-merge-to-main-bdc9
   }
   lifecycle(message: string, metadata?: Record<string, unknown>): void {
     this.logger.lifecycle(message, this.context)
