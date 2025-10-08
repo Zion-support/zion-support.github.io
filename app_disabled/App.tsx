@@ -34,17 +34,10 @@ const App: React.FC = () => {
       }
     }
 
-<<<<<<< HEAD
     console.log('Performance monitoring initialized');
     console.log(
       '🚀 Zion Tech Group App initialized with comprehensive monitoring'
     );
-=======
-//     console.log('Performance monitoring initialized');
-//     console.log(
-//       '🚀 Zion Tech Group App initialized with comprehensive monitoring'
-//     );
->>>>>>> cursor/fix-errors-and-merge-to-main-a0f3
   }, []);
 
   return (

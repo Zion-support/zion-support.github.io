@@ -97,8 +97,6 @@ class PerformanceOptimizer {
       observer.observe({ entryTypes: ['largest-contentful-paint'] })
       this.observers.push(observer)
     } catch {
-    } catch {
-    } catch {
       // Ignore if not supported
     }
   }
@@ -114,8 +112,6 @@ class PerformanceOptimizer {
       })
       observer.observe({ entryTypes: ['first-input'] })
       this.observers.push(observer)
-    } catch {
-    } catch {
     } catch {
       // Ignore if not supported
     }
@@ -137,8 +133,6 @@ class PerformanceOptimizer {
       observer.observe({ entryTypes: ['layout-shift'] })
       this.observers.push(observer)
     } catch {
-    } catch {
-    } catch {
       // Ignore if not supported
     }
   }
@@ -154,8 +148,6 @@ class PerformanceOptimizer {
       })
       observer.observe({ entryTypes: ['paint'] })
       this.observers.push(observer)
-    } catch {
-    } catch {
     } catch {
       // Ignore if not supported
     }
@@ -174,8 +166,6 @@ class PerformanceOptimizer {
       })
       observer.observe({ entryTypes: ['navigation'] })
       this.observers.push(observer)
-    } catch {
-    } catch {
     } catch {
       // Ignore if not supported
     }
@@ -224,8 +214,8 @@ class PerformanceOptimizer {
     if (typeof window === 'undefined') return
 
     const criticalResources = [
-      '/fonts/inter.woff2'
-      '/css/critical.css'
+      '/fonts/inter.woff2',
+      '/css/critical.css',
       '/js/critical.js'
     ]
 

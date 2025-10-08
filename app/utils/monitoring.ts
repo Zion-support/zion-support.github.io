@@ -102,14 +102,13 @@ class MonitoringService {
         const longTaskObserver = new PerformanceObserver((list) => {
           for (const entry of list.getEntries()) {
             console.warn('Long task detected:', {
-              duration: entry.duration
+              duration: entry.duration,
               startTime: entry.startTime
             })
           }
         })
         longTaskObserver.observe({ entryTypes: ['longtask'] })
 
-      } catch {
       } catch (error) {
         // Long task API might not be available
       }
@@ -123,8 +122,8 @@ class MonitoringService {
           entries.forEach((entry: any) => {
             if (entry.duration > 1000) {
               console.warn('Slow resource detected:', {
-                name: entry.name
-                duration: entry.duration
+                name: entry.name,
+                duration: entry.duration,
                 type: entry.initiatorType
               })
             }
@@ -140,10 +139,10 @@ class MonitoringService {
     // Global error handler
     window.addEventListener('error', (event) => {
       this.logError({
-        message: event.message
-        stack: event.error?.stack
-        timestamp: Date.now()
-        userAgent: navigator.userAgent
+        message: event.message,
+        stack: event.error?.stack,
+        timestamp: Date.now(),
+        userAgent: navigator.userAgent,
         url: window.location.href
       })
     })
@@ -151,9 +150,9 @@ class MonitoringService {
     // Unhandled promise rejection handler
     window.addEventListener('unhandledrejection', (event) => {
       this.logError({
-        message: `Unhandled Promise Rejection: ${event.reason}`
-        timestamp: Date.now()
-        userAgent: navigator.userAgent
+        message: `Unhandled Promise Rejection: ${event.reason}`,
+        timestamp: Date.now(),
+        userAgent: navigator.userAgent,
         url: window.location.href
       })
     })
@@ -168,15 +167,16 @@ class MonitoringService {
       const rating = value <= thresholds.good ? 'good' : value <= thresholds.needsImprovement ? 'needs-improvement' : 'poor'
       
       console.log(`[Performance] ${name}:`, {
-        value
-        rating
+        value,
+        rating,
         unit: name === 'cls' ? 'score' : 'ms'
       })
     }
     // Send to analytics (if configured)
-
-        value: Math.round(name === 'cls' ? value * 1000 : value)
-        event_category: 'Web Vitals'
+    if (typeof gtag !== 'undefined') {
+      gtag('event', 'web_vitals', {
+        value: Math.round(name === 'cls' ? value * 1000 : value),
+        event_category: 'Web Vitals',
         non_interaction: true,
       })
     }
