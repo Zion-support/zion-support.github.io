@@ -162,64 +162,69 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     }
   }, [seoData]);
 
-  const _addMetaTag = (name: string, content: string, attribute: string = 'name') => {
-    const metaTag = document.createElement('meta');
-    metaTag.setAttribute(attribute, name);
-    metaTag.content = content;
-    document.head.appendChild(metaTag);
-  };
+  // Helper function for adding meta tags (currently unused)
+  // const _addMetaTag = (name: string, content: string, attribute: string = 'name') => {
+  //   const metaTag = document.createElement('meta');
+  //   metaTag.setAttribute(attribute, name);
+  //   metaTag.content = content;
+  //   document.head.appendChild(metaTag);
+  // };
 
-  const _updateCanonicalUrl = (url: string) => {
-    let canonicalLink = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
-    
-    if (canonicalLink) {
-      canonicalLink.href = url;
-    } else {
-      canonicalLink = document.createElement('link');
-      canonicalLink.rel = 'canonical';
-      canonicalLink.href = url;
-      document.head.appendChild(canonicalLink);
-    }
-  };
+  // Helper function for updating canonical URL (currently unused)
+  // const _updateCanonicalUrl = (url: string) => {
+  //   let canonicalLink = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
+  //   
+  //   if (canonicalLink) {
+  //     canonicalLink.href = url;
+  //   } else {
+  //     canonicalLink = document.createElement('link');
+  //     canonicalLink.rel = 'canonical';
+  //     canonicalLink.href = url;
+  //     document.head.appendChild(canonicalLink);
+  //   }
+  // };
 
-  const _addStructuredData = (data: Record<string, unknown>) => {
-    // Remove existing structured data
-    if (structuredDataRef.current) {
-      structuredDataRef.current.remove();
-    }
+  // Helper function for adding structured data (currently unused)
+  // const _addStructuredData = (data: Record<string, unknown>) => {
+  //   // Remove existing structured data
+  //   if (structuredDataRef.current) {
+  //     structuredDataRef.current.remove();
+  //   }
 
-    // Add new structured data
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
-    script.textContent = JSON.stringify(data);
-    script.id = 'structured-data';
-    document.head.appendChild(script);
-    structuredDataRef.current = script;
-  };
+  //   // Add new structured data
+  //   const script = document.createElement('script');
+  //   script.type = 'application/ld+json';
+  //   script.textContent = JSON.stringify(data);
+  //   script.id = 'structured-data';
+  //   document.head.appendChild(script);
+  //   structuredDataRef.current = script;
+  // };
 
-  const _trackPageView = (config: SEOData) => {
-    if (typeof window !== 'undefined' && 'gtag' in window) {
-      (window as unknown as { gtag: (command: string, targetId: string, config: Record<string, unknown>) => void }).gtag('config', 'GA_MEASUREMENT_ID', {
-        page_title: config.title,
-        page_location: config.canonicalUrl,
-      });
-    }
-  };
+  // Helper function for tracking page views (currently unused)
+  // const _trackPageView = (config: SEOData) => {
+  //   if (typeof window !== 'undefined' && 'gtag' in window) {
+  //     (window as unknown as { gtag: (command: string, targetId: string, config: Record<string, unknown>) => void }).gtag('config', 'GA_MEASUREMENT_ID', {
+  //       page_title: config.title,
+  //       page_location: config.canonicalUrl,
+  //     });
+  //   }
+  // };
 
-  const _trackPerformanceMetrics = () => {
-    if (typeof window !== 'undefined' && 'performance' in window) {
-      window.addEventListener('load', () => {
-        const perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-        if (perfData && typeof window !== 'undefined' && 'gtag' in window) {
-          (window as unknown as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag('event', 'page_load_performance', {
-            event_category: 'Performance',
-            event_label: 'Page Load',
-            value: Math.round(perfData.loadEventEnd - perfData.fetchStart),
-          });
-        }
-      });
-    }
-  };
+  // Helper function for tracking performance metrics (currently unused)
+  // const _trackPerformanceMetrics = () => {
+  //   if (typeof window !== 'undefined' && 'performance' in window) {
+  //     window.addEventListener('load', () => {
+  //       const perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+  //       if (perfData && typeof window !== 'undefined' && 'gtag' in window) {
+  //         (window as unknown as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag('event', 'page_load_performance', {
+  //           event_category: 'Performance',
+  //           event_label: 'Page Load',
+  //           value: Math.round(perfData.loadEventEnd - perfData.fetchStart),
+  //         });
+  //       }
+  //     });
+  //   }
+  // };
 
   return (
     <Helmet>
