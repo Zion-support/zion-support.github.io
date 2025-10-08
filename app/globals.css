@@ -31,12 +31,19 @@ body {
   --neon-green: #10b981;
   --neon-orange: #f59e0b;
   --neon-blue: #3b82f6;
+  --neon-emerald: #10b981;
+  --neon-red: #ef4444;
+  --neon-yellow: #eab308;
+  --neon-sky: #0ea5e9;
   --dark-bg: #0f0f23;
   --dark-surface: #1a1a2e;
   --dark-elevated: #16213e;
   --text-primary: #ffffff;
   --text-secondary: #a1a1aa;
   --text-muted: #71717a;
+  --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --gradient-secondary: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  --gradient-tertiary: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
 }
 
 /* Futuristic Animations */
@@ -95,6 +102,70 @@ body {
   }
 }
 
+@keyframes cyber-pulse {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.3), 0 0 40px rgba(0, 255, 255, 0.1);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.5), 0 0 60px rgba(0, 255, 255, 0.2);
+  }
+}
+
+@keyframes matrix-fall {
+  0% {
+    transform: translateY(-100vh) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+@keyframes hologram-scan {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+}
+
+@keyframes energy-flow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes cyber-rotation {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    transform: rotate(180deg) scale(1.05);
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
+}
+
 /* Futuristic Components */
 .neon-text {
   color: var(--neon-cyan);
@@ -112,6 +183,24 @@ body {
   border: 1px solid rgba(139, 92, 246, 0.3);
   backdrop-filter: blur(10px);
   animation: hologram-flicker 3s ease-in-out infinite;
+  position: relative;
+  overflow: hidden;
+}
+
+.hologram-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(0, 255, 255, 0.1), transparent);
+  animation: hologram-scan 4s linear infinite;
+}
+
+.hologram-card:hover {
+  animation: cyber-pulse 1s ease-in-out infinite;
+  transform: translateY(-5px) scale(1.02);
 }
 
 .glass-morphism {
@@ -123,8 +212,11 @@ body {
 .cyber-grid {
   background-image: 
     linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px);
-  background-size: 20px 20px;
+    linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px),
+    radial-gradient(circle at 25% 25%, rgba(139, 92, 246, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 75% 75%, rgba(236, 72, 153, 0.1) 0%, transparent 50%);
+  background-size: 20px 20px, 20px 20px, 200px 200px, 200px 200px;
+  animation: energy-flow 20s ease-in-out infinite;
 }
 
 .data-stream {
