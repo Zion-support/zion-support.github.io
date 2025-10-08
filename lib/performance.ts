@@ -270,6 +270,16 @@ export function getMemoryUsage(): Record<string, number> | null {
       performance: Performance & { memory?: PerformanceMemory };
     }
   ).performance.memory;
+  
+  if (!memory) {
+    return {
+      usedJSHeapSize: 0,
+      totalJSHeapSize: 0,
+      jsHeapSizeLimit: 0,
+      usedPercentage: 0,
+    };
+  }
+  
   return {
     usedJSHeapSize: memory.usedJSHeapSize,
     totalJSHeapSize: memory.totalJSHeapSize,
@@ -350,7 +360,7 @@ export function isSlowConnection(): boolean {
   const connection = (navigator as NavigatorWithConnection).connection;
   const slowTypes = ['slow-2g', '2g'];
   return (
-    slowTypes.includes(connection.effectiveType) || connection.saveData === true
+    slowTypes.includes(connection?.effectiveType || '') || connection?.saveData === true
   );
 }
 
