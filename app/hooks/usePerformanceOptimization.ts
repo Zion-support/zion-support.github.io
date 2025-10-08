@@ -34,7 +34,7 @@ export const usePerformanceOptimization = () => {
     // Measure LCP
     const lcpObserver = new PerformanceObserver(list => {
       const entries = list.getEntries();
-      const lastEntry = entries[entries.length - 1];
+      const lastEntry = entries[entries.length - 1] as PerformanceEntry & { startTime: number };
       if (lastEntry) {
         metrics.largestContentfulPaint = lastEntry.startTime;
       }
@@ -61,12 +61,13 @@ export const usePerformanceOptimization = () => {
     const fidObserver = new PerformanceObserver(list => {
       for (const entry of list.getEntries()) {
         const fidEntry = entry as PerformanceEntry & {
-          processingStart?: number;
+          processingStart: number;
+          processingEnd: number;
         };
-        metrics.firstInputDelay =
-          (fidEntry.processingStart || 0) - entry.startTime;
+        metrics.firstInputDelay = fidEntry.processingStart - fidEntry.startTime;
       }
     });
+
     fidObserver.observe({ entryTypes: ['first-input'] });
 
     // Cleanup observers after a delay
@@ -80,30 +81,36 @@ export const usePerformanceOptimization = () => {
   }, []);
 
   const optimizeImages = useCallback(() => {
-    const images = document.querySelectorAll('img[data-src]');
-    const imageObserver = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const img = entry.target as HTMLImageElement;
-          img.src = img.dataset.src || '';
-          img.classList.remove('lazy');
-          imageObserver.unobserve(img);
-        }
-      });
-    });
+    if (typeof window === 'undefined') return;
 
-    images.forEach(img => imageObserver.observe(img));
+    const images = document.querySelectorAll('img');
+    images.forEach(img => {
+      // Handle lazy loading
+      if (img.dataset.src) {
+        const imageObserver = new IntersectionObserver(entries => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              const targetImg = entry.target as HTMLImageElement;
+              targetImg.src = targetImg.dataset.src || '';
+              targetImg.classList.remove('lazy');
+              imageObserver.unobserve(targetImg);
+            }
+          });
+        });
+        imageObserver.observe(img);
+      }
+    });
   }, []);
 
   const preloadCriticalResources = useCallback(() => {
     const criticalResources = ['/fonts/inter-var.woff2', '/css/critical.css'];
 
-    criticalResources.forEach(resource => {
+    criticalResources.forEach(href => {
       const link = document.createElement('link');
       link.rel = 'preload';
-      link.href = resource;
-      link.as = resource.endsWith('.woff2') ? 'font' : 'style';
-      if (resource.endsWith('.woff2')) {
+      link.href = href;
+      link.as = href.endsWith('.css') ? 'style' : 'font';
+      if (href.endsWith('.woff2')) {
         link.crossOrigin = 'anonymous';
       }
       document.head.appendChild(link);
