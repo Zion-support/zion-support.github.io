@@ -31,8 +31,8 @@ class SecurityEnhancer {
       enableXSSProtection: true,
       enableCSRFProtection: true,
       enableContentSecurityPolicy: true,
-      allowedOrigins: ['https://zion.app', 'https://www.zion.app']
-      trustedDomains: ['zion.app', 'www.zion.app']
+      allowedOrigins: ['https://zion.app', 'https://www.zion.app'],
+      trustedDomains: ['zion.app', 'www.zion.app'],
       ...config
     }
     this.metrics = {

@@ -67,8 +67,6 @@ class PerformanceOptimizer {
       try {
         performance.measure(`${markName}-duration`, markName)
       } catch {
-      } catch {
-      } catch {
         // Ignore measure errors
       }
     }

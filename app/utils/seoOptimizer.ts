@@ -180,9 +180,9 @@ class SEOOptimizer {
    */
   private setupStructuredData(): void {
     const structuredData = {
-      '@context': 'https://schema.org'
-      '@type': 'WebSite'
-      name: this.config.siteName
+      '@context': 'https://schema.org',
+      '@type': 'WebSite',
+      name: this.config.siteName,
       url: this.config.siteUrl
       potentialAction: {
         '@type': 'SearchAction'

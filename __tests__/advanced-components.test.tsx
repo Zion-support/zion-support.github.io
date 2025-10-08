@@ -51,11 +51,19 @@ describe('AdvancedErrorBoundary', () => {
       .mockImplementation(() => {});
 
     render(
+<<<<<<< HEAD
       <TestWrapper>
         <AdvancedErrorBoundary enableRetry={true}>
           <ThrowError shouldThrow={true} />
         </AdvancedErrorBoundary>
       </TestWrapper>
+=======
+      <BrowserRouter>
+        <AdvancedErrorBoundary enableRetry={true}>
+          <ThrowError shouldThrow={true} />
+        </AdvancedErrorBoundary>
+      </BrowserRouter>
+>>>>>>> cursor/fix-errors-and-merge-to-main-a0f3
     );
 
     expect(screen.getByText('Oops! Something went wrong')).toBeInTheDocument();
@@ -73,11 +81,19 @@ describe('AdvancedErrorBoundary', () => {
       .mockImplementation(() => {});
 
     render(
+<<<<<<< HEAD
       <TestWrapper>
         <AdvancedErrorBoundary onError={onError}>
           <ThrowError shouldThrow={true} />
         </AdvancedErrorBoundary>
       </TestWrapper>
+=======
+      <BrowserRouter>
+        <AdvancedErrorBoundary onError={onError}>
+          <ThrowError shouldThrow={true} />
+        </AdvancedErrorBoundary>
+      </BrowserRouter>
+>>>>>>> cursor/fix-errors-and-merge-to-main-a0f3
     );
 
     expect(onError).toHaveBeenCalled();
@@ -93,11 +109,19 @@ describe('AdvancedErrorBoundary', () => {
     const TestComponent = () => <ThrowError shouldThrow={shouldThrow} />;
 
     const { rerender } = render(
+<<<<<<< HEAD
       <TestWrapper>
         <AdvancedErrorBoundary enableRetry={true}>
           <TestComponent />
         </AdvancedErrorBoundary>
       </TestWrapper>
+=======
+      <BrowserRouter>
+        <AdvancedErrorBoundary enableRetry={true}>
+          <TestComponent />
+        </AdvancedErrorBoundary>
+      </BrowserRouter>
+>>>>>>> cursor/fix-errors-and-merge-to-main-a0f3
     );
 
     const retryButton = screen.getByText('Try Again (3 attempts left)');
