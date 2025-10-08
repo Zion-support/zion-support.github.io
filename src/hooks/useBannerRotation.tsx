@@ -4,7 +4,7 @@
  */
 
 import React, { useState, useEffect, useCallback, useMemo } from 'react';
-import bannerConfigurations, { BannerConfig, RotationStrategy } from "../data/bannerConfigurations";
+import bannerConfigurations from "../data/bannerConfigurations"; // @ts-ignore
 
 interface UseBannerRotationOptions {
   strategy?: RotationStrategy;

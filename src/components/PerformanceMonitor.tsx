@@ -15,7 +15,8 @@ export const PerformanceMonitor: React.FC = () => {
   useEffect(() => {
     const measurePerformance = () => {
       const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-      const paintEntries = performance.getEntriesByType('paint');      const fcp = paintEntries.find(entry => entry.name === 'first-contentful-paint');
+      const paintEntries = performance.getEntriesByType('paint');
+      const fcp = paintEntries.find(entry => entry.name === 'first-contentful-paint');
       const lcp = performance.getEntriesByType('largest-contentful-paint')[0] as PerformanceEntry;
       
       const metrics: PerformanceMetrics = {

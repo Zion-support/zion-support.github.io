@@ -50,7 +50,8 @@ class PerformanceMonitor {
       const observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           if (entry.name === name) {
-            (this.metrics as any)[metricKey] = entry.startTime;            this.logMetric(metricKey as string, entry.startTime);
+            (this.metrics as any)[metricKey] = entry.startTime;
+            this.logMetric(metricKey as string, entry.startTime);
           }
         }
       });
@@ -241,7 +242,8 @@ class PerformanceMonitor {
       - First Input Delay: ${metrics.fid?.toFixed(2)}ms
       - Cumulative Layout Shift: ${metrics.cls?.toFixed(4)}
       - Time to Interactive: ${metrics.tti?.toFixed(2)}ms
-      - Total Blocking Time: ${metrics.tbt?.toFixed(2)}ms    `;
+      - Total Blocking Time: ${metrics.tbt?.toFixed(2)}ms
+    `;
   }
 }
 

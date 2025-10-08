@@ -88,7 +88,8 @@ class Analytics {
 
   /**
    * Track performance metrics
-   */  trackPerformance(metric: string, value: number, unit: string = 'ms'): void {
+   */
+  trackPerformance(metric: string, value: number, unit: string = 'ms'): void {
     this.track('performance', 'metrics', metric, unit, value);
   }
 
@@ -113,22 +114,26 @@ class Analytics {
 
   /**
    * Get all events
-   */  getEvents(): AnalyticsEvent[] {
+   */
+  getEvents(): AnalyticsEvent[] {
     return [...this.events];
   }
 
   /**
    * Clear all events
-   */  clearEvents(): void {
+   */
+  clearEvents(): void {
     this.events = [];
   }
 
   /**
    * Update user properties
-   */  updateUserProperties(properties: Partial<UserProperties>): void {
+   */
+  updateUserProperties(properties: Partial<UserProperties>): void {
     this.userProperties = { ...this.userProperties, ...properties };
   }
 }
 
 const analytics = new Analytics();
-export { analytics };export default analytics;
+export { analytics };
+export default analytics;

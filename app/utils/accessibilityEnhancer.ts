@@ -683,7 +683,8 @@ class AccessibilityEnhancer {
       - Color Contrast Issues: ${metrics.colorContrastIssues}
       - Keyboard Navigation Score: ${metrics.keyboardNavigationScore}%
       - Screen Reader Score: ${metrics.screenReaderScore}%
-      - Overall Score: ${metrics.overallScore}%    `;
+      - Overall Score: ${metrics.overallScore}%
+    `;
   }
 }
 
