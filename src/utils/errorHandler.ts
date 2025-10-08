@@ -2,6 +2,71 @@
  * Error handling utilities
  * Enhanced with retry logic, error categorization, and better reporting
  */
+
+export enum ErrorCategory {
+  NETWORK = 'NETWORK',
+  VALIDATION = 'VALIDATION',
+  API = 'API',
+  UI = 'UI',
+  RUNTIME = 'RUNTIME',
+  UNKNOWN = 'UNKNOWN',
+}
+
+export enum ErrorSeverity {
+  LOW = 'LOW',
+  MEDIUM = 'MEDIUM',
+  HIGH = 'HIGH',
+  CRITICAL = 'CRITICAL',
+}
+
+export interface ErrorInfo {
+  id: string;
+  message: string;
+  stack?: string;
+  category: ErrorCategory;
+  severity: ErrorSeverity;
+  timestamp: string;
+  url: string;
+  userAgent: string;
+  userId?: string;
+}
+
+class ErrorHandler {
+  private static instance: ErrorHandler;
+  private errorQueue: ErrorInfo[] = [];
+  private maxQueueSize = 50;
+
+  private constructor() {
+    // Private constructor for singleton
+  }
+
+  public static getInstance(): ErrorHandler {
+    if (!ErrorHandler.instance) {
+      ErrorHandler.instance = new ErrorHandler();
+    }
+    return ErrorHandler.instance;
+  }
+
+  /**
+   * Handle error with categorization and severity
+   */
+  public handleError(error: Error, context?: Partial<ErrorInfo>): void {
+    const category = this.categorizeError(error);
+    const severity = this.determineSeverity(error, category);
+
+    const errorData: ErrorInfo = {
+      id: this.generateErrorId(),
+      message: error.message,
+      stack: error.stack,
+      category,
+      severity,
+      timestamp: new Date().toISOString(),
+      url: typeof window !== 'undefined' ? window.location.href : '',
+      userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : '',
+      userId: context?.userId,
+    };
+
+    // Add to queue
     this.errorQueue.push(errorData);
     if (this.errorQueue.length > this.maxQueueSize) {
       this.errorQueue.shift();
