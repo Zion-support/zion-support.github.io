@@ -17,8 +17,7 @@ export const getOrganizationSchema = () => ({
   '@type': 'Organization',
   name: 'Zion Tech Group',
   alternateName: 'Zion Holdings',
-  description:
-    'Leading provider of AI-powered enterprise solutions and digital transformation services',
+  description: 'Leading provider of AI-powered enterprise solutions and digital transformation services',
   url: 'https://ziontechgroup.com',
   logo: {
     '@type': 'ImageObject',
@@ -36,17 +35,15 @@ export const getOrganizationSchema = () => ({
     value: '50-100',
   },
   slogan: 'Transform Your Enterprise with AI - 300% ROI Guaranteed',
-  contactPoint: [
-    {
-      '@type': 'ContactPoint',
-      telephone: '+1-302-464-0950',
-      contactType: 'customer service',
-      email: 'kleber@ziontechgroup.com',
-      areaServed: 'US',
-      availableLanguage: ['English'],
-      contactOption: 'TollFree',
-    },
-  ],
+  contactPoint: [{
+    '@type': 'ContactPoint',
+    telephone: '+1-302-464-0950',
+    contactType: 'customer service',
+    email: 'kleber@ziontechgroup.com',
+    areaServed: 'US',
+    availableLanguage: ['English'],
+    contactOption: 'TollFree',
+  }],
   address: {
     '@type': 'PostalAddress',
     streetAddress: '',
@@ -114,8 +111,7 @@ export const getServiceSchema = () => ({
         itemOffered: {
           '@type': 'Service',
           name: 'Enterprise AI Solutions',
-          description:
-            'Custom AI automation solutions designed to transform enterprise operations with 300% ROI',
+          description: 'Custom AI automation solutions designed to transform enterprise operations with 300% ROI',
           category: 'Artificial Intelligence',
         },
       },
@@ -169,20 +165,18 @@ export const getLocalBusinessSchema = () => ({
     postalCode: '19801',
     addressCountry: 'US',
   },
-  openingHoursSpecification: [
-    {
-      '@type': 'OpeningHoursSpecification',
-      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
-      opens: '09:00',
-      closes: '18:00',
-    },
-  ],
+  openingHoursSpecification: [{
+    '@type': 'OpeningHoursSpecification',
+    dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+    opens: '09:00',
+    closes: '18:00',
+  }],
 });
 
 /**
  * Generate breadcrumb list schema
  */
-export const getBreadcrumbSchema = (items: Array<{ name: string; url: string }>) => ({
+export const getBreadcrumbSchema = (items: Array<{name: string; url: string}>) => ({
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: items.map((item, index) => ({
@@ -207,5 +201,7 @@ export const getHomepageSchemas = () => [
  * Render structured data scripts
  */
 export const renderStructuredData = (schemas: unknown[]) => {
-  return schemas.map((schema, _index) => JSON.stringify(schema));
+  return schemas.map((schema, _index) => (
+    JSON.stringify(schema)
+  ));
 };

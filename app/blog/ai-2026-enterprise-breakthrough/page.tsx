@@ -1,6 +1,12 @@
 import React from 'react';
 import { Star } from 'lucide-react';
-// Metadata removed - use React Helmet instead
+// import { Metadata } from 'next'; // Removed for Vite
+
+// export const metadata: Metadata = { // Removed for Vite
+//  title: "AI 2026 Enterprise Breakthrough: Revolutionary Business Transformation",
+//  description: "Discover the groundbreaking AI 2026 enterprise breakthrough featuring autonomous operations, intelligent automation, and unprecedented business value creation.",
+//  keywords: 'AI 2026, enterprise breakthrough, business transformation, autonomous operations, intelligent automation'
+// };
 
 export default function AI2026EnterpriseBreakthrough() {
   return (
