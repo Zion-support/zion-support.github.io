@@ -104,7 +104,7 @@ export function useEnhancedPerformance(
       const startMarkName = `${markName}-start`;
       const endMarkName = `${markName}-end`;
       
-      // Use native Performance API
+      // Start performance mark
       if (typeof performance !== 'undefined' && performance.mark) {
         performance.mark(startMarkName);
       }
@@ -113,18 +113,27 @@ export function useEnhancedPerformance(
         end: () => {
           let duration: number | undefined;
           
+          // End performance mark and measure
           if (typeof performance !== 'undefined' && performance.mark && performance.measure) {
-            performance.mark(endMarkName);
             try {
-              const measure = performance.measure(markName, startMarkName, endMarkName);
-              duration = measure.duration;
-            } catch (e) {
-              // Measure may fail if marks don't exist
-              duration = undefined;
+              performance.mark(endMarkName);
+              performance.measure(markName, startMarkName, endMarkName);
+              
+              const measure = performance.getEntriesByName(markName)[0];
+              if (measure) {
+                duration = measure.duration;
+              }
+              
+              // Clean up marks
+              performance.clearMarks(startMarkName);
+              performance.clearMarks(endMarkName);
+              performance.clearMeasures(markName);
+            } catch (error) {
+              console.warn('Failed to measure performance:', error);
             }
           }
           
-          if (duration !== undefined && trackPerformance) {
+          if (duration && trackPerformance) {
             analytics.trackPerformance(
               `${component}-${operationName}`,
               duration,
