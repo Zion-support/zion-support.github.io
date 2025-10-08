@@ -3,7 +3,10 @@ import Link from 'next/link';
 
 const NewestContent2025Banner: React.FC = () => {
   return (
+    <section className="relative py-20 bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900 overflow-hidden">
       {/* Animated Background Effects */}
+      <div className="absolute inset-0 opacity-20">
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20 animate-pulse"></div>
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
@@ -23,70 +26,9 @@ const NewestContent2025Banner: React.FC = () => {
             Discover the latest innovations in artificial intelligence, quantum computing, 
             and autonomous systems that are transforming enterprise operations worldwide.
           </p>
+        </div>
 
-                  <span className="inline-block px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/30 to-blue-500/30 text-cyan-200 text-sm font-bold border border-cyan-400/50">
-                    Edge AI & Real-Time
-                  </span>
-                </div>
-                {/* Title */}
-                <h3 className='text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors'>
-                  AI Edge Computing Real-Time Intelligence 2025
-                </h3>
-                {/* Excerpt */}
-                  AI Edge Computing Real-Time Intelligence 2025
-                </h3>
-                {/* Excerpt */}
-                <p className="text-gray-300 mb-6 leading-relaxed">
-                  Deploy intelligence at the source with &lt;10ms latency. Achieve 95% bandwidth reduction, 
-                  87% cost savings, and enhanced privacy compliance at enterprise scale.
-                </p>
-
-                {/* Key Stats */}
-                <div className="grid grid-cols-3 gap-4 mb-6">
-                  <div className="text-center">
-                    <div className="text-2xl font-bold text-blue-400">&lt;10ms</div>
-                    <div className="text-gray-400 text-sm">Latency</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-2xl font-bold text-green-400">95%</div>
-                    <div className="text-gray-400 text-sm">Bandwidth ↓</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-2xl font-bold text-yellow-400">87%</div>
-                    <div className="text-gray-400 text-sm">Cost ↓</div>
-                <p className='text-gray-300 mb-6 leading-relaxed'>
-                  Deploy intelligence at the source with &lt;10ms latency.
-                  Achieve 95% bandwidth reduction, 87% cost savings, and
-                  enhanced privacy compliance at enterprise scale.
-                </p>
-                {/* Key Stats */}
-                <div className='grid grid-cols-3 gap-4 mb-6'>
-                  <div className='text-center'>
-                    <div className='text-2xl font-bold text-cyan-400'>
-                      &lt;10ms
-                    </div>
-                    <div className='text-gray-400 text-sm'>Latency</div>
-                  </div>
-                  <div className='text-center'>
-                    <div className='text-2xl font-bold text-green-400'>95%</div>
-                    <div className='text-gray-400 text-sm'>Bandwidth ↓</div>
-                  </div>
-                  <div className='text-center'>
-                    <div className='text-2xl font-bold text-purple-400'>
-                      87%
-                    </div>
-                    <div className='text-gray-400 text-sm'>Cost ↓</div>
-                  </div>
-                </div>
-                {/* Meta Info */}
-                <div className='flex items-center justify-between text-sm text-gray-400 mb-6'>
-                  <span>⏱️ 35 min read</span>
-                  <span>📅 Sep 30, 2025</span>
-                </div>
-                {/* CTA Button */}
-                <div className="flex items-center justify-center gap-2 text-blue-400 font-semibold group-hover:text-blue-300 transition-colors">
-                  <span>Read Full Article</span>
-                  <span className="group-hover:translate-x-1 transition-transform">→</span>
+        {/* Article Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {/* Article 1 */}
           <div className="group relative bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-500 hover:scale-105">
@@ -139,13 +81,6 @@ const NewestContent2025Banner: React.FC = () => {
                   <div className="text-2xl font-bold text-yellow-400">87%</div>
                   <div className="text-sm text-gray-300">Cost ↓</div>
                 </div>
-                <div className='flex items-center justify-center gap-2 text-cyan-400 font-semibold group-hover:text-white transition-colors'>
-                  <span>Read Full Article</span>
-                  <span className='group-hover:translate-x-1 transition-transform'>
-                    →
-                  </span>
-                </div>
-                </div>
               </div>
 
               {/* Meta Info */}
@@ -165,9 +100,6 @@ const NewestContent2025Banner: React.FC = () => {
             </div>
           </div>
 
-                    Neural Networks & AI
-                  </span>
-                </div>
           {/* Article 2 */}
           <div className="group relative bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50 hover:border-purple-500/50 transition-all duration-500 hover:scale-105">
             <div className="absolute inset-0 bg-gradient-to-br from-purple-500 to-fuchsia-600 opacity-0 group-hover:opacity-10 transition-all duration-500 rounded-2xl"></div>
@@ -192,18 +124,6 @@ const NewestContent2025Banner: React.FC = () => {
                 Quantum-Enhanced Neural Networks 2025
               </h3>
 
-                  <span>⏱️ 40 min read</span>
-                  <span>📅 Sep 30, 2025</span>
-                </div>
-
-                <div className="flex items-center justify-center gap-2 text-purple-400 font-semibold group-hover:text-purple-300 transition-colors">
-                  <span>Read Full Article</span>
-                  <span className="group-hover:translate-x-1 transition-transform">→</span>
-                <div className='flex items-center justify-center gap-2 text-purple-400 font-semibold group-hover:text-white transition-colors'>
-                  <span>Read Full Article</span>
-                  <span className='group-hover:translate-x-1 transition-transform'>
-                    →
-                  </span>
               <p className="text-gray-300 mb-6 leading-relaxed">
                 Revolutionary quantum-classical hybrid neural networks delivering 1000x faster training, 
                 unprecedented accuracy, and breakthrough capabilities in enterprise AI applications.
@@ -239,9 +159,6 @@ const NewestContent2025Banner: React.FC = () => {
             </div>
           </div>
 
-                    Quantum Security
-                  </span>
-                </div>
           {/* Article 3 */}
           <div className="group relative bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50 hover:border-emerald-500/50 transition-all duration-500 hover:scale-105">
             <div className="absolute inset-0 bg-gradient-to-br from-emerald-500 to-teal-600 opacity-0 group-hover:opacity-10 transition-all duration-500 rounded-2xl"></div>
@@ -266,18 +183,6 @@ const NewestContent2025Banner: React.FC = () => {
                 Quantum-Secure AI Infrastructure 2025
               </h3>
 
-                  <span>⏱️ 45 min read</span>
-                  <span>📅 Sep 30, 2025</span>
-                </div>
-
-                <div className="flex items-center justify-center gap-2 text-red-400 font-semibold group-hover:text-red-300 transition-colors">
-                  <span>Read Full Article</span>
-                  <span className="group-hover:translate-x-1 transition-transform">→</span>
-                <div className='flex items-center justify-center gap-2 text-red-400 font-semibold group-hover:text-white transition-colors'>
-                  <span>Read Full Article</span>
-                  <span className='group-hover:translate-x-1 transition-transform'>
-                    →
-                  </span>
               <p className="text-gray-300 mb-6 leading-relaxed">
                 Next-generation quantum-resistant security protocols protecting AI systems against 
                 future quantum attacks with military-grade encryption and zero-trust architecture.
@@ -298,43 +203,6 @@ const NewestContent2025Banner: React.FC = () => {
                 </div>
               </div>
 
-              className="flex items-center gap-3 border-2 border-white/30 hover:border-white/60 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1"
-            >
-              <span className="text-2xl">📧</span>
-              <span>Get Expert Consultation</span>
-            </a>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <Link 
-              href="/blog"
-              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
-            >
-              Explore Latest Articles
-              <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
-            </Link>
-            <Link 
-              href="/services"
-              className="inline-flex items-center px-8 py-4 border-2 border-blue-400 text-blue-300 font-semibold rounded-lg hover:bg-blue-400/10 transition-all duration-300"
-            >
-              View Our Services
-            </Link>
-          </div>
-
-          {[
-            { value: '500+', label: 'Enterprise Clients' },
-            { value: '10B+', label: 'Data Points Processed Daily' },
-            { value: '99.9%', label: 'System Uptime' },
-            { value: '5M+', label: 'Autonomous Operations Hours' },
-          ].map((stat, index) => (
-            <div key={index} className="text-center">
-              <div className="text-3xl font-bold text-yellow-400 mb-2">{stat.value}</div>
-              <div className="text-gray-300">{stat.label}</div>
-            <div key={index} className='text-center'>
-              <div className='text-3xl font-bold text-cyan-400 mb-2'>
-                {stat.value}
-              </div>
-              <div className='text-gray-300'>{stat.label}</div>
               <div className="flex items-center justify-between text-sm text-gray-400 mb-6">
                 <span>⏱️ 42 min read</span>
                 <span>📅 Sep 30, 2025</span>
@@ -374,6 +242,9 @@ const NewestContent2025Banner: React.FC = () => {
               >
                 Schedule Consultation
               </Link>
+            </div>
+          </div>
+
           {/* Featured Content Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16">
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
@@ -412,3 +283,4 @@ const NewestContent2025Banner: React.FC = () => {
   );
 };
 
+export default NewestContent2025Banner;
