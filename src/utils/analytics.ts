@@ -32,7 +32,7 @@ class Analytics {
   }
 
   /**
-   * Generate unique session ID
+   * Generate a unique session ID
    */
   private generateSessionId(): string {
     return `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
@@ -45,7 +45,7 @@ class Analytics {
     if (typeof window === 'undefined') {
       return {
         sessionId: this.sessionId,
-        userAgent: 'server',
+        userAgent: 'SSR',
         language: 'en',
         timezone: 'UTC',
       };
@@ -61,7 +61,7 @@ class Analytics {
   }
 
   /**
-   * Track an event
+   * Track an analytics event
    */
   track(
     name: string,
@@ -74,25 +74,46 @@ class Analytics {
     const event: AnalyticsEvent = {
       name,
       category,
+      action,
+      label,
+      value,
+      properties,
       timestamp: Date.now(),
     };
 
     this.events.push(event);
+
+    // Send to analytics service if available
+    if (typeof window !== 'undefined' && 'gtag' in window) {
+      try {
+        (window as unknown as { gtag: (command: string, eventName: string, parameters: Record<string, unknown>) => void }).gtag('event', name, {
+          event_category: category,
+          event_label: label,
+          value: value,
+          ...properties,
+        });
+      } catch (error) {
+        console.error('Error sending analytics event:', error);
+      }
     }
   }
 
   /**
    * Track page view
+   */
+  trackPageView(page: string, title?: string): void {
     this.track('page_view', 'navigation', 'view', page, undefined, {
-      page_title: title || document.title,
+      page_title: title || (typeof document !== 'undefined' ? document.title : ''),
       page_url: typeof window !== 'undefined' ? window.location.href : page,
     });
   }
 
   /**
    * Track user interaction
+   */
+  trackInteraction(
     element: string,
-  action: string,
+    action: string,
     category: string = 'user_interaction'
   ): void {
     this.track('interaction', category, action, element);
@@ -100,11 +121,15 @@ class Analytics {
 
   /**
    * Track performance metrics
+   */
+  trackPerformance(metric: string, value: number, unit?: string): void {
     this.track('performance', 'metrics', metric, unit, value);
   }
 
   /**
    * Track business events
+   */
+  trackBusinessEvent(
     event: string,
     value?: number,
     properties?: Record<string, unknown>
@@ -114,35 +139,58 @@ class Analytics {
 
   /**
    * Send event to analytics service
+   */
+  sendToAnalytics(event: AnalyticsEvent): void {
+    if (typeof window !== 'undefined' && 'gtag' in window) {
+      try {
+        (window as unknown as { gtag: (command: string, eventName: string, parameters: Record<string, unknown>) => void }).gtag('event', event.name, {
+          event_category: event.category,
+          event_label: event.label,
+          value: event.value,
+          ...event.properties,
+        });
+      } catch (error) {
+        console.error('Error sending event to analytics:', error);
+      }
     }
   }
 
   /**
    * Get all events
+   */
+  getAllEvents(): AnalyticsEvent[] {
     return [...this.events];
   }
 
   /**
    * Get events by category
+   */
+  getEventsByCategory(category: string): AnalyticsEvent[] {
     return this.events.filter(event => event.category === category);
   }
 
   /**
    * Clear all events
+   */
+  clearEvents(): void {
     this.events = [];
   }
 
   /**
    * Get user properties
    */
-  getUserProperties() {
+  getUserProperties(): UserProperties {
     return { ...this.userProperties };
   }
 
   /**
    * Update user properties
+   */
+  updateUserProperties(properties: Partial<UserProperties>): void {
+    this.userProperties = { ...this.userProperties, ...properties };
   }
+}
 
-  /**
-   * Update user properties
+// Create and export a singleton instance
+const analytics = new Analytics();
 export default analytics;
