@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { logger } from '../utils/logger';
 
 interface PerformanceMetrics {
   loadTime: number;
@@ -30,7 +31,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     const reportWebVitals = (metric: { name: string; value: number }) => {
       // Log to console in development (only on client side)
       if (typeof window !== 'undefined' && enableConsoleLogging) {
-        console.log('Web Vital:', metric.name, metric.value);
+        logger.info('Web Vital captured', { name: metric.name, value: metric.value });
       }
     };
 
@@ -61,10 +62,10 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       
       if (enableConsoleLogging) {
         if (typeof console !== 'undefined') {
-          console.group('Performance Metrics');
-          console.debug('Metrics', { metrics: currentMetrics });
-          console.debug('Score', { score });
-          console.groupEnd();
+          logger.debug('Performance Metrics', { 
+            metrics: currentMetrics,
+            score 
+          });
         }
       }
       
