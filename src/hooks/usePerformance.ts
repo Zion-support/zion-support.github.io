@@ -1,30 +1,33 @@
-import { useEffect } from 'react';
-import analytics from '../utils/analytics';
+import { useEffect, useState } from 'react';
+
+export interface PerformanceMetrics {
+  fcp?: number;
+  lcp?: number;
+  fid?: number;
+  cls?: number;
+  ttfb?: number;
+  inp?: number;
+}
 
 export const usePerformance = () => {
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({});
+
   useEffect(() => {
-    if (typeof window === 'undefined' || !('PerformanceObserver' in window)) {
-      return;
-    }
+    if (typeof window === 'undefined') return;
 
-    const observer = new PerformanceObserver(list => {
-      list.getEntries().forEach(entry => {
-        analytics.track(
-          'long_task',
-          'performance',
-          'detected',
-          undefined,
-          entry.duration
-        );
-      });
-    });
-
-    return () => {
-      if (observer && typeof observer.disconnect === 'function') {
-        observer.disconnect();
+    const updateMetrics = () => {
+      const newMetrics: PerformanceMetrics = {};
+      const perfData = window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      if (perfData) {
+        newMetrics.ttfb = perfData.responseStart - perfData.requestStart;
       }
+      setMetrics(newMetrics);
     };
+
+    updateMetrics();
   }, []);
+
+  return metrics;
 };
 
 export default usePerformance;
