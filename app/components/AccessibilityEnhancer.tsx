@@ -15,7 +15,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   children,
   enableSkipLinks = true,
   enableKeyboardNav = true,
-  enableFocusIndicators = true,
+  enableFocusIndicators = true, // eslint-disable-line @typescript-eslint/no-unused-vars
 }) => {
   const [isReducedMotion, setIsReducedMotion] = useState(false);
   const [isHighContrast, setIsHighContrast] = useState(false);
@@ -137,12 +137,12 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   }, []);
 
   // Expose utility functions to children via context if needed
-  const accessibilityUtils = {
-    announceToScreenReader,
-    isReducedMotion,
-    isHighContrast,
-    fontSize,
-  };
+  // const accessibilityUtils = {
+  //   announceToScreenReader,
+  //   isReducedMotion,
+  //   isHighContrast,
+  //   fontSize,
+  // };
 
   return (
     <div 

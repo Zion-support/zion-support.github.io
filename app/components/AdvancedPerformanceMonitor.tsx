@@ -154,11 +154,12 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     );
 
     if (slowResources.length > 0) {
-      console.log('Slow resources detected:', slowResources.map(r => ({
-        name: r.name,
-        duration: r.duration,
-        size: r.transferSize,
-      })));
+      // Slow resources detected - could be logged to analytics service
+      // console.log('Slow resources detected:', slowResources.map(r => ({
+      //   name: r.name,
+      //   duration: r.duration,
+      //   size: r.transferSize,
+      // })));
     }
   }, []);
 
