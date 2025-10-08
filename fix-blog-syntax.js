@@ -6,10 +6,10 @@
 import fs from 'fs';
 import path from 'path';
 
-console.log('🔧 Starting blog syntax fix process...');
+// console.log('🔧 Starting blog syntax fix process...');
 
 //Get all blog files with syntax errors
-const blogDir = './app/blog';
+// const blogDir = './app/blog';
 const files = [];
 
 try {
@@ -19,11 +19,11 @@ try {
     .split('\n')
     .filter(file => file.trim());
 
-  console.log(`📁 Found ${blogFiles.length} blog files to check`);
+//   console.log(`📁 Found ${blogFiles.length} blog files to check`);
 
   for (const file of blogFiles) {
     try {
-      const content = fs.readFileSync(file, 'utf8');
+//       const content = fs.readFileSync(file, 'utf8');
       let modified = false;
       let newContent = content;
 
@@ -80,27 +80,27 @@ try {
 
       if (modified) {
         fs.writeFileSync(file, newContent);
-        console.log(`✅ Fixed syntax errors in ${file}`);
+//         console.log(`✅ Fixed syntax errors in ${file}`);
         files.push(file);
       }
     } catch (error) {
-      console.log(`❌ Error processing ${file}: ${error.message}`);
+//       console.log(`❌ Error processing ${file}: ${error.message}`);
     }
   }
 
-  console.log(`\n🎉 Fixed syntax errors in ${files.length} files`);
+//   console.log(`\n🎉 Fixed syntax errors in ${files.length} files`);
 
   // Run linting to check if errors are resolved
-  console.log('\n🔍 Running linting to verify fixes...');
+//   console.log('\n🔍 Running linting to verify fixes...');
   try {
     execSync('npm run lint:comprehensive', { stdio: 'inherit' });
-    console.log('✅ All syntax errors have been resolved!');
+//     console.log('✅ All syntax errors have been resolved!');
   } catch (error) {
-    console.log(
+//     console.log(
       '⚠️ Some syntax errors may still exist. Check the output above.'
     );
   }
 } catch (error) {
-  console.log(`❌ Error: ${error.message}`);
+//   console.log(`❌ Error: ${error.message}`);
   process.exit(1);
 }

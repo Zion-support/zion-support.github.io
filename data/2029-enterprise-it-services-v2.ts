@@ -33,7 +33,7 @@ export interface EnterpriseITService2029V2 {;
   partnership: string;
   funding: string;
   exit: string;
-  contact: any;
+  contact: unknown;
     mobile: string;
     email: string;
     website: string}
@@ -344,7 +344,7 @@ export const enterpriseITServices2029V2: EnterpriseITService2029V2[] = [,
     partnership: 'Strategic cloud partnerships',
     funding: 'Series C funding, $400M valuation',
     exit: 'IPO or cloud acquisition',
-    contact: any,
+    contact: unknown,
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -383,7 +383,7 @@ export const enterpriseITServices2029V2: EnterpriseITService2029V2[] = [,
     partnership: 'Strategic security partnerships',
     funding: 'Series C funding, $250M valuation',
     exit: 'IPO or security acquisition',
-    contact: any,
+    contact: unknown,
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -445,7 +445,7 @@ export const enterpriseITServices2029V2: EnterpriseITService2029V2[] = [,
     customization: 'Custom workflows, integration templates'
     funding: 'Series B funding, $180M valuation'
     exit: 'IPO or enterprise acquisition'
-    contact: any,
+    contact: unknown,
       mobile: '+1 302 464 0950'
       address: '364 E Main St STE 1008 Middletown DE 19709'
     }
@@ -462,7 +462,7 @@ export const enterpriseITServices2029V2: EnterpriseITService2029V2[] = [,
     partnership: 'Strategic enterprise partnerships',
     funding: 'Series B funding, $180M valuation',
     exit: 'IPO or enterprise acquisition',
-    contact: any,
+    contact: unknown,
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'

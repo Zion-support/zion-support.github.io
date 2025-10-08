@@ -29,11 +29,11 @@
   partnership: string;
   funding: string;
   exit: string;
-  contact: any;
+  contact: unknown;
     mobile: string;
     email: string;
     website: string;
-      contact: any,
+      contact: unknown,
         'Quantum physics research',
         'Quantum algorithm development',
         'Quantum cryptography research',
@@ -126,7 +126,7 @@
       partnership: 'Quantum research partnerships',
       funding: 'Series B funding, $150M valuation',
       exit: 'IPO or quantum acquisition',
-      contact: any,
+      contact: unknown,
         'Academic research',
         'Corporate research',
         'Government research',
@@ -200,7 +200,7 @@
       partnership: 'AI research partnerships',
       funding: 'Series A funding, $80M valuation',
       exit: 'Acquisition by major research platform',
-      contact: any,
+      contact: unknown,
         'Pharmaceutical research',
         'Genetic research',
         'Clinical trials',
@@ -232,7 +232,7 @@
       partnership: 'Biotech research partnerships',
       funding: 'Series B funding, $120M valuation',
       exit: 'IPO or biotech acquisition',
-      contact: any,
+      contact: unknown,
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         website: 'https://ziontechgroup && ziontechgroup.com',
@@ -274,7 +274,7 @@
     partnership: 'Research institution partnerships',
     funding: 'Series A funding, $60M valuation',
     exit: 'Acquisition by major research platform',
-    contact: any,
+    contact: unknown,
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',      address: '364 E Main St STE 1008 Middletown DE 19709'
     }
@@ -315,7 +315,7 @@
     partnership: 'Quantum research partnerships',
     funding: 'Series B funding, $150M valuation',
     exit: 'IPO or quantum acquisition',
-    contact: any,
+    contact: unknown,
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',      address: '364 E Main St STE 1008 Middletown DE 19709'
     }
@@ -356,7 +356,7 @@
     partnership: 'AI research partnerships',
     funding: 'Series A funding, $80M valuation',
     exit: 'Acquisition by major research platform',
-    contact: any,
+    contact: unknown,
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',      address: '364 E Main St STE 1008 Middletown DE 19709'
     }
@@ -392,7 +392,7 @@
     partnership: 'Research institution partnerships',
     funding: 'Series A funding, $60M valuation',
     exit: 'Acquisition by major research platform',
-    contact: any,
+    contact: unknown,
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',      address: '364 E Main St STE 1008 Middletown DE 19709'
     }
@@ -425,7 +425,7 @@
     partnership: 'Quantum research partnerships',
     funding: 'Series B funding, $150M valuation',
     exit: 'IPO or quantum acquisition',
-    contact: any,
+    contact: unknown,
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',      address: '364 E Main St STE 1008 Middletown DE 19709'
     }
@@ -458,7 +458,7 @@
     partnership: 'AI research partnerships',
     funding: 'Series A funding, $80M valuation',
     exit: 'Acquisition by major research platform',
-    contact: any,
+    contact: unknown,
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',      address: '364 E Main St STE 1008 Middletown DE 19709'
     }
@@ -495,7 +495,7 @@
     partnership: 'Biotech research partnerships',
     funding: 'Series B funding, $120M valuation',
     exit: 'IPO or biotech acquisition',
-    contact: any,
+    contact: unknown,
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',      address: '364 E Main St STE 1008 Middletown DE 19709'
     }

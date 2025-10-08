@@ -246,7 +246,7 @@ export, default, function AIDevOpsAutomationRevolution2025Pa, g, e(): vo, i, d {
             </d, i, v>
           </secti, o, n>
           <section, className="mb-12, b, g-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, border, border-whi, t, e/10">";
-            <h2, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6">Get, Started, Today</h2>";
+            <h2, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6">Getted, Today</h2>";
             <p, className="te, x, t-gr, a, y-300, leadin, g-relaxed, m, b-6">";
               Transform, your, DevOps operations, with, AI-powered, automatio, n. Our, team, of experts, will, help you, design, and implement, a, custom solution, tailored, to your, infrastructure, and business, need, s.
             </p>

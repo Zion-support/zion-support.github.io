@@ -173,7 +173,7 @@ export class TestRunner {
       afterEach: [],
     };
 
-    const previousSuite = this.currentSuite;
+//     const previousSuite = this.currentSuite;
     this.currentSuite = suite;
     this.suites.push(suite);
 
@@ -208,11 +208,11 @@ export class TestRunner {
     component: ReactElement,
     testName: string
   ): Promise<{ passed: boolean; metrics: PerformanceMetrics }> {
-      const startTime = performance.now();
+//       const startTime = performance.now();
       
       const { unmount } = this.customRender(component);
       
-      const renderTime = performance.now() - startTime;
+//       const renderTime = performance.now() - startTime;
       
       // Measure memory usage if available
       let memoryUsage = 0;
@@ -231,7 +231,7 @@ export class TestRunner {
       timestamp: new Date().toISOString(),
     };
 
-    const passed = renderTime < this.config.performanceThreshold;
+//     const passed = renderTime < this.config.performanceThreshold;
 
     this.testResults.push({
       name: `Performance: ${testName}`,
@@ -377,8 +377,8 @@ export class TestRunner {
    * Run a single test
    */
   private async runTest(suite: TestSuite, test: Test): Promise<void> {
-    const testName = `${suite.name} - ${test.name}`;
-    const startTime = Date.now();
+//     const testName = `${suite.name} - ${test.name}`;
+//     const startTime = Date.now();
     const assertions: AssertionResult[] = [];
 
     try {
@@ -470,10 +470,10 @@ export class TestRunner {
    * Generate test report
    */
   private generateReport(): void {
-    const duration = Date.now() - this.startTime;
-    const passed = this.results.filter(r => r.status === 'passed').length;
-    const failed = this.results.filter(r => r.status === 'failed').length;
-    const skipped = this.results.filter(r => r.status === 'skipped').length;
+//     const duration = Date.now() - this.startTime;
+//     const passed = this.results.filter(r => r.status === 'passed').length;
+//     const failed = this.results.filter(r => r.status === 'failed').length;
+//     const skipped = this.results.filter(r => r.status === 'skipped').length;
 
     // eslint-disable-next-line no-console
     if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { console.log('\n📊 Test Results:'); } }
@@ -590,9 +590,9 @@ export class TestRunner {
     // Check for missing labels on form inputs
     const inputs = container.querySelectorAll('input, select, textarea');
     inputs.forEach((input, index) => {
-      const id = input.getAttribute('id');
-      const ariaLabel = input.getAttribute('aria-label');
-      const ariaLabelledBy = input.getAttribute('aria-labelledby');
+//       const id = input.getAttribute('id');
+//       const ariaLabel = input.getAttribute('aria-label');
+//       const ariaLabelledBy = input.getAttribute('aria-labelledby');
       
       if (!id && !ariaLabel && !ariaLabelledBy) {
         violations.push(`Input ${index} missing label`);
@@ -603,7 +603,7 @@ export class TestRunner {
     const headings = container.querySelectorAll('h1, h2, h3, h4, h5, h6');
     let previousLevel = 0;
     headings.forEach((heading, index) => {
-      const level = parseInt(heading.tagName.charAt(1));
+//       const level = parseInt(heading.tagName.charAt(1));
       if (level > previousLevel + 1) {
         violations.push(`Heading ${index} skips level (h${previousLevel} to h${level})`);
       }
@@ -613,15 +613,15 @@ export class TestRunner {
     // Check for proper button text
     const buttons = container.querySelectorAll('button');
     buttons.forEach((button, index) => {
-      const text = button.textContent?.trim();
-      const ariaLabel = button.getAttribute('aria-label');
+//       const text = button.textContent?.trim();
+//       const ariaLabel = button.getAttribute('aria-label');
       
       if (!text && !ariaLabel) {
         violations.push(`Button ${index} missing accessible text`);
       }
     });
 
-    const passed = violations.length === 0;
+//     const passed = violations.length === 0;
 
     this.testResults.push({
       name: `Accessibility: ${testName}`,
@@ -752,7 +752,7 @@ export class TestRunner {
       lines: 85,
     };
 
-    const passed = coverage.statements >= this.config.coverageThreshold;
+//     const passed = coverage.statements >= this.config.coverageThreshold;
 
     this.testResults.push({
       name: 'Coverage',
@@ -772,7 +772,7 @@ export class TestRunner {
     assertions?: (result: RenderResult) => void;
     userInteractions?: (result: RenderResult) => Promise<void>;
   }>): Promise<{ passed: boolean; results: Array<{ name: string; type: string; passed: boolean; error?: string }> }> {
-    const results: any[] = [];
+    const results: unknown[] = [];
 
     for (const test of tests) {
       let result;
@@ -808,7 +808,7 @@ export class TestRunner {
       results.push({ ...result, name: test.name, type: test.type });
     }
 
-    const passed = results.every(result => result.passed);
+//     const passed = results.every(result => result.passed);
 
     return { passed, results };
   }
@@ -820,10 +820,10 @@ export class TestRunner {
 
   // Get test statistics
   getTestStatistics() {
-    const total = this.testResults.length;
-    const passed = this.testResults.filter(result => result.status === 'passed').length;
-    const failed = this.testResults.filter(result => result.status === 'failed').length;
-    const skipped = this.testResults.filter(result => result.status === 'skipped').length;
+//     const total = this.testResults.length;
+//     const passed = this.testResults.filter(result => result.status === 'passed').length;
+//     const failed = this.testResults.filter(result => result.status === 'failed').length;
+//     const skipped = this.testResults.filter(result => result.status === 'skipped').length;
 
     return {
       total,
@@ -841,7 +841,7 @@ export class TestRunner {
 
   // Generate test report
   generateTestReport() {
-    const statistics = this.getTestStatistics();
+//     const statistics = this.getTestStatistics();
     const results = this.getTestResults();
 
     return {
@@ -893,7 +893,7 @@ export const useTestRunner = () => {
 export const testUtils = {
   // Create mock data
   createMockData: (type: string, count: number = 10) => {
-    const mockData: any[] = [];
+    const mockData: unknown[] = [];
     for (let i = 0; i < count; i++) {
       mockData.push({
         id: i + 1,
@@ -1212,7 +1212,7 @@ class Mock {
     overrides: Partial<InstanceType<T>> = {}
   ): MockFunction {
     const mockFn = Mock.fn((...args) => {
-      const instance = new constructor(...args) as InstanceType<T>;
+//       const instance = new constructor(...args) as InstanceType<T>;
       return Object.assign(instance as object, overrides);
     });
 
@@ -1226,8 +1226,8 @@ class Mock {
     object: T,
     method: K
   ): MockFunction {
-    const original = object[method];
-    const mockFn = Mock.fn();
+//     const original = object[method];
+//     const mockFn = Mock.fn();
 
     (object as Record<string, unknown>)[method as string] = mockFn;
 

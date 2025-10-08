@@ -88,9 +88,9 @@ class HealthCheckService {
     // Run all checks
     for (const [name, checkFn] of this.checks.entries()) {
       try {
-        const startTime = performance.now();
-        const check = await checkFn();
-        const duration = performance.now() - startTime;
+//         const startTime = performance.now();
+//         const check = await checkFn();
+//         const duration = performance.now() - startTime;
         
         checks.push({
           ...check,
@@ -108,8 +108,8 @@ class HealthCheckService {
     }
 
     // Determine overall status
-    const hasFailures = checks.some((c) => c.status === 'fail');
-    const hasWarnings = checks.some((c) => c.status === 'warn');
+//     const hasFailures = checks.some((c) => c.status === 'fail');
+//     const hasWarnings = checks.some((c) => c.status === 'warn');
     
     let status: 'healthy' | 'degraded' | 'unhealthy';
     if (hasFailures) {
@@ -274,12 +274,12 @@ class HealthCheckService {
    */
   private checkStorage(): HealthCheck {
     try {
-      const testKey = '_health_check_test';
-      const testValue = 'test';
+//       const testKey = '_health_check_test';
+//       const testValue = 'test';
 
       // Test localStorage
       localStorage.setItem(testKey, testValue);
-      const retrieved = localStorage.getItem(testKey);
+//       const retrieved = localStorage.getItem(testKey);
       localStorage.removeItem(testKey);
 
       if (retrieved !== testValue) {
@@ -328,11 +328,11 @@ class HealthCheckService {
    * Get formatted uptime string
    */
   getFormattedUptime(): string {
-    const uptime = this.getUptime();
-    const seconds = Math.floor(uptime / 1000);
-    const minutes = Math.floor(seconds / 60);
-    const hours = Math.floor(minutes / 60);
-    const days = Math.floor(hours / 24);
+//     const uptime = this.getUptime();
+//     const seconds = Math.floor(uptime / 1000);
+//     const minutes = Math.floor(seconds / 60);
+//     const hours = Math.floor(minutes / 60);
+//     const days = Math.floor(hours / 24);
 
     if (days > 0) {
       return `${days}d ${hours % 24}h ${minutes % 60}m`;

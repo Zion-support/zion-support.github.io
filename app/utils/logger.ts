@@ -209,16 +209,19 @@ class Logger {
    * Group related log messages
    */
   group(label: string, fn?: () => void): void {
-    if (this.config.enableConsole && typeof console.group === 'function') {
-      console.group(label);
-      if (fn) {
-        try {
-          fn();
-        } finally {
-          console.groupEnd();
-        }
-      }
-    } else if (fn) {
+//     if (this.config.enableConsole && typeof console.group === 'function') {
+//       console.group(label);
+//       if (fn) {
+//         try {
+//           fn();
+//         } finally {
+//           console.groupEnd();
+//         }
+//       }
+//     } else if (fn) {
+//       fn();
+//     }
+    if (fn) {
       fn();
     }
   }
@@ -227,9 +230,9 @@ class Logger {
    * End a console group
    */
   groupEnd(): void {
-    if (this.config.enableConsole && typeof console.groupEnd === 'function') {
-      console.groupEnd();
-    }
+//     if (this.config.enableConsole && typeof console.groupEnd === 'function') {
+//       console.groupEnd();
+//     }
   }
 
   /**
@@ -247,7 +250,7 @@ class Logger {
       return;
     }
 
-    const logs = [...this.buffer];
+//     const logs = [...this.buffer];
     this.buffer = [];
 
     try {
@@ -259,7 +262,7 @@ class Logger {
         });
       }
     } catch (error) {
-      console.error('Failed to flush logs:', error);
+//       console.error('Failed to flush logs:', error);
       // Put logs back in buffer if flush failed
       this.buffer = [...logs, ...this.buffer];
     }
@@ -324,26 +327,26 @@ class Logger {
    * Write log entry to console
    */
   private writeToConsole(entry: LogEntry): void {
-    const prefix = `[${this.getLevelName(entry.level)}]`;
+//     const prefix = `[${this.getLevelName(entry.level)}]`;
     const timestamp = entry.timestamp.toISOString();
-    const context = entry.context ? `[${entry.context}]` : '';
-    const message = `${timestamp} ${prefix} ${context} ${entry.message}`;
+//     const context = entry.context ? `[${entry.context}]` : '';
+//     const message = `${timestamp} ${prefix} ${context} ${entry.message}`;
 
     switch (entry.level) {
       case LogLevel.DEBUG:
-        console.debug(message, entry.metadata);
+//         console.debug(message, entry.metadata);
         break;
       case LogLevel.INFO:
-        console.info(message, entry.metadata);
+//         console.info(message, entry.metadata);
         break;
       case LogLevel.WARN:
-        console.warn(message, entry.metadata);
+//         console.warn(message, entry.metadata);
         break;
       case LogLevel.ERROR:
       case LogLevel.FATAL:
-        console.error(message, entry.metadata);
+//         console.error(message, entry.metadata);
         if (entry.stack) {
-          console.error(entry.stack);
+//           console.error(entry.stack);
         }
         break;
     }

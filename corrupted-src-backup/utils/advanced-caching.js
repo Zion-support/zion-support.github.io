@@ -27,7 +27,7 @@ class AdvancedCachingSystem {
 
   set(key, value, ttl = this.defaultTTL) {
     const now = Date.now();
-    const expiry = now + ttl;
+//     const expiry = now + ttl;
 
     // Check if we need to evict items
     if (this.cache.size >= this.maxSize) {
@@ -46,7 +46,7 @@ class AdvancedCachingSystem {
 
   get(key) {
     const now = Date.now();
-    const expiry = this.ttlMap.get(key);
+//     const expiry = this.ttlMap.get(key);
 
     // Check if expired
     if (expiry && now > expiry) {
@@ -54,10 +54,10 @@ class AdvancedCachingSystem {
       return null;
     }
 
-    const value = this.cache.get(key);
+//     const value = this.cache.get(key);
     if (value !== undefined) {
       // Update access count
-      const count = this.accessCount.get(key) || 0;
+//       const count = this.accessCount.get(key) || 0;
       this.accessCount.set(key, count + 1);
     }
 
@@ -85,7 +85,7 @@ class AdvancedCachingSystem {
   }
 
   isExpired(key) {
-    const expiry = this.ttlMap.get(key);
+//     const expiry = this.ttlMap.get(key);
     return expiry ? Date.now() > expiry : false;
   }
 
@@ -127,7 +127,7 @@ class AdvancedCachingSystem {
       };
       localStorage.setItem(`cache_${key}`, JSON.stringify(item));
     } catch (error) {
-      console.warn('Failed to persist cache item:', error);
+//       console.warn('Failed to persist cache item:', error);
     }
   }
 
@@ -135,7 +135,7 @@ class AdvancedCachingSystem {
     try {
       localStorage.removeItem(`cache_${key}`);
     } catch (error) {
-      console.warn('Failed to remove cache item from storage:', error);
+//       console.warn('Failed to remove cache item from storage:', error);
     }
   }
 
@@ -148,7 +148,7 @@ class AdvancedCachingSystem {
         }
       });
     } catch (error) {
-      console.warn('Failed to clear cache storage:', error);
+//       console.warn('Failed to clear cache storage:', error);
     }
   }
 
@@ -161,7 +161,7 @@ class AdvancedCachingSystem {
         if (key.startsWith('cache_')) {
           const item = JSON.parse(localStorage.getItem(key));
           if (item && item.expiry > now) {
-            const cacheKey = key.replace('cache_', '');
+//             const cacheKey = key.replace('cache_', '');
             this.cache.set(cacheKey, item.value);
             this.ttlMap.set(cacheKey, item.expiry);
             this.accessCount.set(cacheKey, 1);
@@ -171,7 +171,7 @@ class AdvancedCachingSystem {
         }
       });
     } catch (error) {
-      console.warn('Failed to load cache from storage:', error);
+//       console.warn('Failed to load cache from storage:', error);
     }
   }
 
@@ -180,7 +180,7 @@ class AdvancedCachingSystem {
     if ('memory' in performance) {
       setInterval(() => {
         const memInfo = performance.memory;
-        const usedRatio = memInfo.usedJSHeapSize / memInfo.totalJSHeapSize;
+//         const usedRatio = memInfo.usedJSHeapSize / memInfo.totalJSHeapSize;
 
         if (usedRatio > 0.8) {
           this.aggressiveCleanup();
@@ -196,7 +196,7 @@ class AdvancedCachingSystem {
       .map(([key]) => key);
 
     // Remove 25% of least used items
-    const removeCount = Math.floor(sortedKeys.length * 0.25);
+//     const removeCount = Math.floor(sortedKeys.length * 0.25);
     for (let i = 0; i < removeCount; i++) {
       this.delete(sortedKeys[i]);
     }
@@ -226,7 +226,7 @@ class AdvancedCachingSystem {
       keys.map(async key => {
         if (!this.has(key)) {
           try {
-            const value = await fetcher(key);
+//             const value = await fetcher(key);
             this.set(key, value);
             return { key, success: true };
           } catch (error) {
@@ -240,7 +240,7 @@ class AdvancedCachingSystem {
 
   // Prefetch related data
   prefetch(primaryKey, relatedKeys, fetcher) {
-    const primaryValue = this.get(primaryKey);
+//     const primaryValue = this.get(primaryKey);
     if (primaryValue) {
       this.warmCache(relatedKeys, fetcher);
     }

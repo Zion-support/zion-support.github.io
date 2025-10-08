@@ -132,7 +132,7 @@ export function validateDate(value: unknown): boolean {
 export function validateDateRange(date: Date, min?: Date, max?: Date): boolean {
   if (!validateDate(date)) return false;
   
-  const time = date.getTime();
+//   const time = date.getTime();
   if (min && time < min.getTime()) return false;
   if (max && time > max.getTime()) return false;
   
@@ -161,7 +161,7 @@ export function createCustomValidator<T>(
   message: string
 ): (value: T) => { isValid: boolean; errors: string[] } {
   return (value: T) => {
-    const isValid = validator(value);
+//     const isValid = validator(value);
     return {
       isValid,
       errors: isValid ? [] : [message],
@@ -217,7 +217,7 @@ export function validateForm<T extends Record<string, unknown>>(
 
   for (const field in rules) {
     const value = data[field];
-    const fieldRules = rules[field] || [];
+//     const fieldRules = rules[field] || [];
     const fieldErrors: string[] = [];
 
     for (const rule of fieldRules) {

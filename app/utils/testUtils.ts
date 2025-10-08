@@ -18,7 +18,7 @@ export const waitFor = async (
   timeout = 5000,
   interval = 100
 ): Promise<void> => {
-  const startTime = Date.now();
+//   const startTime = Date.now();
   
   while (!condition()) {
     if (Date.now() - startTime > timeout) {
@@ -300,9 +300,9 @@ export const retryWithBackoff = async <T>(
 export const measureExecutionTime = async <T>(
   fn: () => T | Promise<T>
 ): Promise<{ result: T; duration: number }> => {
-  const start = performance.now();
-  const result = await fn();
-  const duration = performance.now() - start;
+//   const start = performance.now();
+//   const result = await fn();
+//   const duration = performance.now() - start;
   
   return { result, duration };
 };

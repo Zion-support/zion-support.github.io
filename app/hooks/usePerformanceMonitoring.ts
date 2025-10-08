@@ -79,7 +79,7 @@ export const usePerformanceMonitoring = () => {
         entries.forEach((entry) => {
           if (entry.entryType === 'navigation') {
             const navEntry = entry as PerformanceNavigationTiming;
-            const ttfb = navEntry.responseStart - navEntry.requestStart;
+//             const ttfb = navEntry.responseStart - navEntry.requestStart;
             reportMetric('TTFB', ttfb);
           }
         });
@@ -92,7 +92,7 @@ export const usePerformanceMonitoring = () => {
         entries.forEach((entry) => {
           if (entry.entryType === 'resource') {
             const resourceEntry = entry as PerformanceResourceTiming;
-            const loadTime = resourceEntry.responseEnd - resourceEntry.requestStart;
+//             const loadTime = resourceEntry.responseEnd - resourceEntry.requestStart;
             if (loadTime > 1000) {
               // Only track slow resources
               reportMetric('SLOW_RESOURCE', loadTime);
@@ -112,8 +112,8 @@ export const usePerformanceMonitoring = () => {
         resourceObserver.disconnect();
       };
     } catch (error) {
-      // eslint-disable-next-line no-console
-      console.warn('Performance monitoring not supported:', error);
+       
+//       console.warn('Performance monitoring not supported:', error);
       return () => {};
     }
   }, [reportMetric]);

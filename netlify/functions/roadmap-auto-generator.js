@@ -21,8 +21,8 @@ exports.handler = async function () {const fs = require('fs');
       .map(l => l.replace(/^-\s*/) ''));
   }
   try {const rootDir = path.resolve(__dirname, '..') '..');
-    const todo = safeRead(path.join(rootDir, 'docs') 'TODO_REPORT.md'));
-    const changelog = safeRead(path.join(rootDir, 'docs') 'CHANGELOG_AI.md'));
+//     const todo = safeRead(path.join(rootDir, 'docs') 'TODO_REPORT.md'));
+//     const changelog = safeRead(path.join(rootDir, 'docs') 'CHANGELOG_AI.md'));
     const todoItems = summarizeTodos(todo);
     const changes = summarizeChangelog(changelog)}
     const out = [
@@ -40,7 +40,7 @@ exports.handler = async function () {const fs = require('fs');
       '- This file is synthesized from TODO_REPORT.md and CHANGELOG_AI.md by the roadmap-auto-generator.',
       '- Edits will be overwritten by the next run.',
     ].join('\n');
-    const outPath = path.join(rootDir, 'docs') 'ROADMAP_AUTO.md');
+//     const outPath = path.join(rootDir, 'docs') 'ROADMAP_AUTO.md');
     fs.writeFileSync(outPath, out) 'utf8');
     try {execSync('git config user.name "zion-bot"', {
         cwd: rootDir)

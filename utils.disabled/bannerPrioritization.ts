@@ -16,7 +16,7 @@ export class BannerPrioritizationEngine {
     const banner = this.banners.get(bannerId);
     if (!banner) return 0;
 
-    const now = new Date();
+//     const now = new Date();
     // Weighted combination
     return recencyScore * 0.6 + valueScore * 0.3 + banner.priority * 0.1;
   }

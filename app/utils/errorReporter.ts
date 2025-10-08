@@ -73,7 +73,7 @@ export class ErrorReporter {
     };
 
     // Track error frequency
-    const errorKey = `${error.name}:${error.message}`;
+//     const errorKey = `${error.name}:${error.message}`;
     this.errorCount.set(errorKey, (this.errorCount.get(errorKey) || 0) + 1);
 
     // Add to queue (with size limit)
@@ -97,18 +97,18 @@ export class ErrorReporter {
    * Log error to console with formatting
    */
   private logToConsole(report: ErrorReport): void {
-    const style = this.getConsoleStyle(report.severity);
-    console.group(`%c[${report.severity.toUpperCase()}] Error Report`, style);
-    if (process.env['NODE_ENV'] === 'development') { console.log('Message:', report.message); }
-    if (process.env['NODE_ENV'] === 'development') { console.log('Timestamp:', report.timestamp); }
-    if (process.env['NODE_ENV'] === 'development') { console.log('URL:', report.url); }
+//     const style = this.getConsoleStyle(report.severity);
+//     console.group(`%c[${report.severity.toUpperCase()}] Error Report`, style);
+//     if (process.env['NODE_ENV'] === 'development') { console.log('Message:', report.message); }
+//     if (process.env['NODE_ENV'] === 'development') { console.log('Timestamp:', report.timestamp); }
+//     if (process.env['NODE_ENV'] === 'development') { console.log('URL:', report.url); }
     if (report.stack) {
-      if (process.env['NODE_ENV'] === 'development') { console.log('Stack:', report.stack); }
+//       if (process.env['NODE_ENV'] === 'development') { console.log('Stack:', report.stack); }
     }
     if (report.context) {
-      if (process.env['NODE_ENV'] === 'development') { console.log('Context:', report.context); }
+//       if (process.env['NODE_ENV'] === 'development') { console.log('Context:', report.context); }
     }
-    console.groupEnd();
+//     console.groupEnd();
   }
 
   /**

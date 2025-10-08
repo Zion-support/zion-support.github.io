@@ -39,7 +39,7 @@ export const fetchWithRetry = async <T = unknown>(
     try {
       // Create abort controller for timeout
       const controller = new AbortController();
-      const timeoutId = setTimeout(() => controller.abort(), timeout);
+//       const timeoutId = setTimeout(() => controller.abort(), timeout);
 
       const response = await fetch(url, {
         ...fetchOptions,
@@ -50,7 +50,7 @@ export const fetchWithRetry = async <T = unknown>(
 
       // Parse response
       let data: T | undefined;
-      const contentType = response.headers.get('content-type');
+//       const contentType = response.headers.get('content-type');
       
       if (contentType?.includes('application/json')) {
         data = await response.json() as T;
@@ -146,7 +146,7 @@ export class ApiClient {
    * Build full URL
    */
   private buildUrl(endpoint: string): string {
-    const url = endpoint.startsWith('http') ? endpoint : `${this.baseUrl}${endpoint}`;
+//     const url = endpoint.startsWith('http') ? endpoint : `${this.baseUrl}${endpoint}`;
     return url;
   }
 
@@ -157,7 +157,7 @@ export class ApiClient {
     endpoint: string,
     options: ApiRequestOptions = {}
   ): Promise<ApiResponse<T>> {
-    let url = this.buildUrl(endpoint);
+//     let url = this.buildUrl(endpoint);
     let requestOptions: RequestInit = {
       ...options,
       headers: {

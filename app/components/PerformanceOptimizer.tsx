@@ -63,8 +63,8 @@ const PerformanceOptimizerComponent: React.FC<PerformanceOptimizerProps> = ({
       const observer = new PerformanceObserver(list => {
         list.getEntries().forEach(entry => {
           if (entry.entryType === 'navigation') {
-            // eslint-disable-next-line no-console
-            if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { console.log('Navigation timing:', entry); } }
+             
+//             if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { console.log('Navigation timing:', entry); } }
           }
         });
       });

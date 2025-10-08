@@ -10,13 +10,13 @@ const files = execSync("find /workspace/app -name '*.tsx' -o -name '*.ts' | xarg
   .split('\n')
   .filter(file => file.length > 0);
 
-console.log(`Found ${files.length} files with Next.js imports`);
+// console.log(`Found ${files.length} files with Next.js imports`);
 
 // Replacement mappings
 const replacements = [
   // Next.js imports
-  { from: "import Link from 'next/link';", to: "import { Link } from 'react-router-dom';" },
-  { from: "import Image from 'next/image';", to: "import { Helmet } from 'react-helmet-async';" },
+  { from: "import Link from 'next/link';", to: "" },
+  { from: "import Image from 'next/image';", to: "" },
   { from: "import { useRouter } from 'next/navigation';", to: "import { useNavigate } from 'react-router-dom';" },
   { from: "import { usePathname } from 'next/navigation';", to: "import { useLocation } from 'react-router-dom';" },
   { from: "import { useSearchParams } from 'next/navigation';", to: "import { useSearchParams } from 'react-router-dom';" },
@@ -71,20 +71,20 @@ function processFile(filePath) {
     if (content.includes('title:') && !content.includes('react-helmet-async')) {
       content = content.replace(
         /import React from 'react';/,
-        "import React from 'react';\nimport { Helmet } from 'react-helmet-async';"
+        "import React from 'react';\n"
       );
       modified = true;
     }
     
     if (modified) {
       fs.writeFileSync(filePath, content);
-      console.log(`✓ Fixed: ${filePath}`);
+//       console.log(`✓ Fixed: ${filePath}`);
       return true;
     }
     
     return false;
   } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
+//     console.error(`Error processing ${filePath}:`, error.message);
     return false;
   }
 }
@@ -97,4 +97,4 @@ files.forEach(file => {
   }
 });
 
-console.log(`\nFixed ${fixedCount} out of ${files.length} files`);
+// console.log(`\nFixed ${fixedCount} out of ${files.length} files`);

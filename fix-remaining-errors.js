@@ -9,7 +9,7 @@ const files = execSync("find /workspace/app -name '*.tsx' -o -name '*.ts' | xarg
   .split('\n')
   .filter(file => file.length > 0);
 
-console.log(`Found ${files.length} files with remaining metadata syntax errors`);
+// console.log(`Found ${files.length} files with remaining metadata syntax errors`);
 
 // Function to process a single file
 function processFile(filePath) {
@@ -53,17 +53,17 @@ function processFile(filePath) {
       }
     }
     
-    const newContent = filteredLines.join('\n');
+//     const newContent = filteredLines.join('\n');
     
     if (newContent !== content) {
       fs.writeFileSync(filePath, newContent);
-      console.log(`✓ Fixed: ${filePath}`);
+//       console.log(`✓ Fixed: ${filePath}`);
       return true;
     }
     
     return false;
   } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
+//     console.error(`Error processing ${filePath}:`, error.message);
     return false;
   }
 }
@@ -76,4 +76,4 @@ files.forEach(file => {
   }
 });
 
-console.log(`\nFixed ${fixedCount} out of ${files.length} files`);
+// console.log(`\nFixed ${fixedCount} out of ${files.length} files`);

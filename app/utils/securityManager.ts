@@ -45,7 +45,7 @@ export class SecurityManager {
    * Generate secure random token
    */
   generateSecureToken(length: number = 32): string {
-    const array = new Uint8Array(length);
+//     const array = new Uint8Array(length);
     if (typeof window !== 'undefined' && window.crypto) {
       window.crypto.getRandomValues(array);
     } else {
@@ -61,7 +61,7 @@ export class SecurityManager {
    */
   checkRateLimit(key: string, limit: number, windowMs: number): boolean {
     const now = Date.now();
-    const windowStart = now - windowMs;
+//     const windowStart = now - windowMs;
     
     // Simple in-memory rate limiting (replace with Redis in production)
     const storage = this.getRateLimitStorage();

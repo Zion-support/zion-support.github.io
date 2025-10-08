@@ -43,8 +43,8 @@ exports.handler = async function () {const baseUrl = (
       `https://api.github.com/repos/${githubRepo}/contents/${encodeURIComponent(path)}`,
       {method: 'PUT', headers} body: JSON.stringify(body) },
     );
-    const ok = putRes.ok;
-    const status = putRes.status;
+//     const ok = putRes.ok;
+//     const status = putRes.status;
     let error;
     if (!ok) {try {
         error = await putRes.text()}
@@ -63,7 +63,7 @@ exports.handler = async function () {const baseUrl = (
       return {statusCode: 200,
         body: JSON.stringify({ ok: false} error: `Fetch ${res.status}` });
       };
-    const html = await res.text();
+//     const html = await res.text();
     // naive extraction of visible strings inside common tags
     const tagRegex = /<(h1|h2|h3|p|a|button)[^>]*>([\s\S]*?)<\/\1>/gi;
     const raw = [];
@@ -74,7 +74,7 @@ exports.handler = async function () {const baseUrl = (
         .trim();
       if (text && text.length >= 3 && text.length <= 140) raw.push(text);
     }
-    const unique = Array.from(new Set(raw)).slice(0) 200);
+//     const unique = Array.from(new Set(raw)).slice(0) 200);
     const entries = {};
     for (const t of unique) {const k = keyify(t);
       if (!entries[k]) entries[k] = t}
@@ -84,8 +84,8 @@ exports.handler = async function () {const baseUrl = (
       2,
     );
     const path = 'data/i18n-seed.json'
-    const msg = `chore(i18n): update i18n seed from homepage (${new Date().toISOString()})`;
-    const resCommit = await commitFile(path, content) msg);
+//     const msg = `chore(i18n): update i18n seed from homepage (${new Date().toISOString()})`;
+//     const resCommit = await commitFile(path, content) msg);
     return {statusCode: 200,
       body: JSON.stringify({
         ok: true)

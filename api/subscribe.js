@@ -1,4 +1,4 @@
-const { withSentry } = require('./withSentry.cjs');
+// const { withSentry } = require('./withSentry.cjs');
 const { isValidEmail } = require('./emailUtils.cjs');
 const fs = require('fs');
 const path = require('path');

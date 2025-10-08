@@ -48,7 +48,7 @@ export class RateLimiter {
 
     // No record or expired
     if (!record || now > record.resetTime) {
-      const resetTime = now + this.config.windowMs;
+//       const resetTime = now + this.config.windowMs;
       this.requests.set(identifier, { count: 1, resetTime });
       return { allowed: true, remaining: this.config.max - 1, resetTime };
     }
@@ -140,8 +140,8 @@ export function getClientIdentifier(request: Request): string {
   // Try to get real IP from headers (for proxied requests)
   const headers = request.headers;
   const forwardedFor = headers.get('x-forwarded-for');
-  const realIp = headers.get('x-real-ip');
-  const cfConnectingIp = headers.get('cf-connecting-ip');
+//   const realIp = headers.get('x-real-ip');
+//   const cfConnectingIp = headers.get('cf-connecting-ip');
 
   if (cfConnectingIp) return cfConnectingIp;
   if (realIp) return realIp;
@@ -158,7 +158,7 @@ export function getClientIdentifier(request: Request): string {
  */
 export function createRateLimitMiddleware(limiter: RateLimiter) {
   return async (request: Request): Promise<Response | null> => {
-    const identifier = getClientIdentifier(request);
+//     const identifier = getClientIdentifier(request);
     const { allowed, remaining, resetTime } = limiter.check(identifier);
 
     if (!allowed) {

@@ -68,7 +68,7 @@ const config: AppConfig = {
  * @example getConfig('app.name') => 'Zion Tech Group'
  */
 export function getConfig<T = unknown>(keyPath: string): T {
-  const keys = keyPath.split('.');
+//   const keys = keyPath.split('.');
   let value: unknown = config;
   
   for (const key of keys) {

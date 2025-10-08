@@ -54,7 +54,7 @@ export class AccessibilityEnhancer {
     document.addEventListener('keydown', event => {
       //Skip to main content
       if (event.key === 'Tab' && event.ctrlKey) {
-        const mainContent = document.querySelector('main, [role="main"]');
+//         const mainContent = document.querySelector('main, [role="main"]');
         if (mainContent) {
           (mainContent as HTMLElement).focus();
           event.preventDefault();
@@ -193,8 +193,8 @@ export class AccessibilityEnhancer {
       elements.forEach(element => {
         const htmlElement = element as HTMLElement;
         const styles = window.getComputedStyle(htmlElement);
-        const color = styles.color;
-        const backgroundColor = styles.backgroundColor;
+//         const color = styles.color;
+//         const backgroundColor = styles.backgroundColor;
 
         if (
           color &&
@@ -307,7 +307,7 @@ export class AccessibilityEnhancer {
     const validateImages = () => {
       const images = document.querySelectorAll('img');
       images.forEach(img => {
-        const alt = img.getAttribute('alt');
+//         const alt = img.getAttribute('alt');
         if (!alt) {
           this.addIssue({
             type: 'missing-alt-text',
@@ -347,7 +347,7 @@ export class AccessibilityEnhancer {
         const inputs = form.querySelectorAll('input, select, textarea');
         inputs.forEach(input => {
           const htmlInput = input as HTMLInputElement;
-          const id = htmlInput.id;
+//           const id = htmlInput.id;
           const label = form.querySelector(`label[for="${id}"]`);
 
           if (
@@ -396,7 +396,7 @@ export class AccessibilityEnhancer {
         (issuesBySeverity[issue.severity] || 0) + 1;
     });
 
-    const score = this.calculateAccessibilityScore();
+//     const score = this.calculateAccessibilityScore();
 
     return {
       totalIssues: this.issues.length,

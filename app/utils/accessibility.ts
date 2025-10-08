@@ -29,13 +29,13 @@ class AccessibilityService {
     ratio: number;
     passes: { normal: boolean; large: boolean };
   } {
-    const rgb1 = this.hexToRgb(foreground);
-    const rgb2 = this.hexToRgb(background);
+//     const rgb1 = this.hexToRgb(foreground);
+//     const rgb2 = this.hexToRgb(background);
     
-    const l1 = this.getLuminance(rgb1);
-    const l2 = this.getLuminance(rgb2);
+//     const l1 = this.getLuminance(rgb1);
+//     const l2 = this.getLuminance(rgb2);
     
-    const ratio = l1 > l2 ? (l1 + 0.05) / (l2 + 0.05) : (l2 + 0.05) / (l1 + 0.05);
+//     const ratio = l1 > l2 ? (l1 + 0.05) / (l2 + 0.05) : (l2 + 0.05) / (l1 + 0.05);
     
     return {
       ratio: Math.round(ratio * 100) / 100,
@@ -59,7 +59,7 @@ class AccessibilityService {
 
   private getLuminance(rgb: { r: number; g: number; b: number }): number {
     const [r, g, b] = [rgb.r, rgb.g, rgb.b].map((val) => {
-      const v = val / 255;
+//       const v = val / 255;
       return v <= 0.03928 ? v / 12.92 : Math.pow((v + 0.055) / 1.055, 2.4);
     });
     return 0.2126 * r + 0.7152 * g + 0.0722 * b;
@@ -109,7 +109,7 @@ class AccessibilityService {
     const headings = Array.from(document.querySelectorAll('h1, h2, h3, h4, h5, h6'));
     let prevLevel = 0;
     headings.forEach((heading) => {
-      const level = parseInt(heading.tagName[1]);
+//       const level = parseInt(heading.tagName[1]);
       if (level > prevLevel + 1) {
         warnings.push({
           type: 'heading-hierarchy',
@@ -122,7 +122,7 @@ class AccessibilityService {
     });
 
     // Check for skip navigation link
-    const hasSkipLink = document.querySelector('a[href="#main"], a[href="#content"]');
+//     const hasSkipLink = document.querySelector('a[href="#main"], a[href="#content"]');
     if (!hasSkipLink) {
       warnings.push({
         type: 'missing-skip-link',
@@ -146,7 +146,7 @@ class AccessibilityService {
     // Check for sufficient link text
     document.querySelectorAll('a').forEach((link) => {
       const text = link.textContent?.trim() || '';
-      const ariaLabel = link.getAttribute('aria-label');
+//       const ariaLabel = link.getAttribute('aria-label');
       
       if (!text && !ariaLabel) {
         errors.push({
@@ -179,7 +179,7 @@ class AccessibilityService {
     });
 
     // Calculate score (100 - errors * 10 - warnings * 2)
-    const score = Math.max(0, 100 - errors.length * 10 - warnings.length * 2);
+//     const score = Math.max(0, 100 - errors.length * 10 - warnings.length * 2);
 
     return {
       errors,
@@ -205,7 +205,7 @@ class AccessibilityService {
     document.addEventListener('keydown', (e) => {
       // Alt + H: Go to main heading
       if (e.altKey && e.key === 'h') {
-        const mainHeading = document.querySelector('h1');
+//         const mainHeading = document.querySelector('h1');
         if (mainHeading) {
           (mainHeading as HTMLElement).focus();
         }
@@ -213,7 +213,7 @@ class AccessibilityService {
 
       // Alt + M: Go to main content
       if (e.altKey && e.key === 'm') {
-        const mainContent = document.querySelector('main');
+//         const mainContent = document.querySelector('main');
         if (mainContent) {
           (mainContent as HTMLElement).focus();
         }
@@ -221,7 +221,7 @@ class AccessibilityService {
 
       // Alt + N: Go to navigation
       if (e.altKey && e.key === 'n') {
-        const nav = document.querySelector('nav');
+//         const nav = document.querySelector('nav');
         if (nav) {
           (nav as HTMLElement).focus();
         }
@@ -300,6 +300,6 @@ class AccessibilityService {
 }
 
 // Singleton instance
-const a11y = new AccessibilityService();
+// const a11y = new AccessibilityService();
 
 export default a11y;

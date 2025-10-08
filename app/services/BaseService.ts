@@ -42,7 +42,7 @@ export class BaseService {
     const entry = this.cache.get(key);
     if (!entry) return false;
 
-    const age = Date.now() - entry.timestamp;
+//     const age = Date.now() - entry.timestamp;
     return age < (this.options.cacheDuration || 300000);
   }
 
@@ -88,10 +88,10 @@ export class BaseService {
    * Make a GET request
    */
   protected async get<T>(endpoint: string, useCache = true): Promise<T> {
-    const cacheKey = `GET:${endpoint}`;
+//     const cacheKey = `GET:${endpoint}`;
     
     if (useCache) {
-      const cached = this.getFromCache<T>(cacheKey);
+//       const cached = this.getFromCache<T>(cacheKey);
       if (cached) return cached;
     }
 

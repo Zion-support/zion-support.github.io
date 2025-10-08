@@ -9,7 +9,6 @@ impo, r, t {
 import React from 'react';
 
 impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
-import { Link } from 'react-router-dom';
 
 const AIMLOpsAutomatio, n = () => { 
   return (
@@ -34,7 +33,7 @@ const AIMLOpsAutomatio, n = () => {
               </h1>
               <p, className='te, x, t-xl, m, d:te, x, t-2xl, m, b-8, ma, x-w-3xl, m, x-au, t, o'>
                 De, p, l, o, y, monit, o, r, and, scale, ML models, with, enterprise-grade, automation, achieving 99.9% reliabili, t, y
-                  Get, Starte, d
+                  Gette, d
                   <ArrowRight, classNam, e='ml-2 h-5 w-5' />
               <div, classNam, e='p-6'>
                 <div, classNam, e='te, x, t-4xl, fon, t-bold, tex, t-bl, u, e-600, m, b-2'>72%</d, i, v>
@@ -81,7 +80,7 @@ const AIMLOpsAutomatio, n = () => {
                     <span, classNam, e='te, x, t-gr, a, y-700, dar, k:te, x, t-gr, a, y-3, 0, 0'>
                       Reproducibili, t, y
                     </sp, a, n>
-                  Get, Starte, d
+                  Gette, d
                   <ArrowRight, className='ml-2 h-5 w-5' />
 
         {/* Key, Metr, i, c, s */}

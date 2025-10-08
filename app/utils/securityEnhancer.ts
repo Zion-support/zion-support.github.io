@@ -91,7 +91,7 @@ class SecurityEnhancer {
     if (!this.config.enableCSRFProtection) return;
 
     // Generate CSRF token
-    const token = this.generateCSRFToken();
+//     const token = this.generateCSRFToken();
     document.cookie = `csrf-token=${token}; Secure; SameSite=Strict; HttpOnly`;
     
     // Add token to all forms
@@ -99,7 +99,7 @@ class SecurityEnhancer {
   }
 
   private generateCSRFToken(): string {
-    const array = new Uint8Array(32);
+//     const array = new Uint8Array(32);
     crypto.getRandomValues(array);
     return Array.from(array, byte => byte.toString(16).padStart(2, '0')).join('');
   }
@@ -127,7 +127,7 @@ class SecurityEnhancer {
     
     // Override console methods to detect debugging
     ['log', 'warn', 'error', 'info'].forEach(method => {
-      (console as any)[method] = (...args: any[]) => {
+      (console as any)[method] = (...args: unknown[]) => {
         this.metrics.suspiciousActivity++;
         originalConsole[method](...args);
       };
@@ -143,7 +143,7 @@ class SecurityEnhancer {
               const element = node as Element;
               if (element.tagName === 'SCRIPT' && !element.getAttribute('src')) {
                 this.metrics.securityViolations++;
-                console.warn('Suspicious inline script detected');
+//                 console.warn('Suspicious inline script detected');
               }
             }
           });
@@ -162,7 +162,7 @@ class SecurityEnhancer {
   private monitorNetworkRequests(): void {
     const originalFetch = window.fetch;
     window.fetch = async (input, init) => {
-      const url = typeof input === 'string' ? input : input instanceof Request ? input.url : input.toString();
+//       const url = typeof input === 'string' ? input : input instanceof Request ? input.url : input.toString();
       
       // Check if request is to allowed origins
       if (!this.isAllowedOrigin(url)) {

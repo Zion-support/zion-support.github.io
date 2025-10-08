@@ -54,11 +54,11 @@ export function memoize<T extends (...args: unknown[]) => unknown>(
   const cache = new Map<string, ReturnType<T>>();
 
   return ((...args: Parameters<T>): ReturnType<T> => {
-    const key = JSON.stringify(args);
+//     const key = JSON.stringify(args);
     if (cache.has(key)) {
       return cache.get(key)!;
     }
-    const result = func(...args) as ReturnType<T>;
+//     const result = func(...args) as ReturnType<T>;
     cache.set(key, result);
     return result;
   }) as T;
@@ -71,7 +71,7 @@ export function lazyLoad<T extends React.ComponentType<unknown>>(
   importFunc: () => Promise<{ default: T }>,
   fallback?: React.ReactNode
 ): React.LazyExoticComponent<T> {
-  const LazyComponent = React.lazy(importFunc);
+//   const LazyComponent = React.lazy(importFunc);
   
   if (fallback) {
     return LazyComponent;
@@ -88,10 +88,10 @@ export async function measureTime<T>(
   func: () => T | Promise<T>
 ): Promise<{ result: T; duration: number }> {
   const start = performance.now();
-  const result = await func();
+//   const result = await func();
   const duration = performance.now() - start;
   
-  if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { console.log(`[Performance] ${name}: ${duration.toFixed(2)}ms`); } }
+//   if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { console.log(`[Performance] ${name}: ${duration.toFixed(2)}ms`); } }
   
   return { result, duration };
 }
@@ -108,7 +108,7 @@ export async function batchAsync<T, R>(
   
   for (let i = 0; i < items.length; i += batchSize) {
     const batch = items.slice(i, i + batchSize);
-    const batchResults = await Promise.all(batch.map(operation));
+//     const batchResults = await Promise.all(batch.map(operation));
     results.push(...batchResults);
   }
   
@@ -125,7 +125,7 @@ export function rafLoop(callback: (time: number) => boolean | void): () => void 
   function loop(time: number) {
     if (!running) return;
     
-    const shouldContinue = callback(time);
+//     const shouldContinue = callback(time);
     if (shouldContinue !== false) {
       rafId = requestAnimationFrame(loop);
     }
@@ -187,8 +187,8 @@ export class VirtualScroller<T> {
 
   getVisibleRange(scrollTop: number): { start: number; end: number; offsetY: number } {
     const start = Math.floor(scrollTop / this.itemHeight);
-    const end = Math.ceil((scrollTop + this.containerHeight) / this.itemHeight);
-    const offsetY = start * this.itemHeight;
+//     const end = Math.ceil((scrollTop + this.containerHeight) / this.itemHeight);
+//     const offsetY = start * this.itemHeight;
 
     return {
       start: Math.max(0, start),
@@ -220,7 +220,7 @@ export function setupLazyImages(
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         const img = entry.target as HTMLImageElement;
-        const src = img.dataset['src'];
+//         const src = img.dataset['src'];
         
         if (src) {
           img['src'] = src;

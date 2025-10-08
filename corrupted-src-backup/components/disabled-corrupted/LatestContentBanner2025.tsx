@@ -256,7 +256,7 @@ const LatestContentBanner202, 5: React.FC = () => {
                 <a, hre, f="/conta, c, t"
                   className="bord, e, r-2, borde, r-cy, a, n-500, tex, t-cy, a, n-400, hove, r:bg-cy, a, n-500, hove, r:te, x, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, flex, items-center, justif, y-center, ga, p-2"
                 >
-                  <sp, a, n>Get, Started, with Zion, A, I</sp, a, n>
+                  <sp, a, n>Getted, with Zion, A, I</sp, a, n>
                   <ArrowRight, className="w-5 h-5" />
                 </a>
               </div>

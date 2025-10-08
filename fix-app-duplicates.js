@@ -2,7 +2,7 @@
 
 import fs from 'fs';
 
-console.log('🔧 Fixing duplicate ErrorBoundary in App.tsx...');
+// console.log('🔧 Fixing duplicate ErrorBoundary in App.tsx...');
 
 let content = fs.readFileSync('App.tsx', 'utf8');
 
@@ -14,4 +14,4 @@ content = content.replace(
 
 fs.writeFileSync('App.tsx', content);
 
-console.log('✅ Fixed duplicate ErrorBoundary in App.tsx');
+// console.log('✅ Fixed duplicate ErrorBoundary in App.tsx');

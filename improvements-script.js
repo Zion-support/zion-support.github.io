@@ -16,7 +16,7 @@ const config = {
 };
 
 // Helper function to read files recursively
-function getAllFiles(dir, fileList = []) {
+function getAllFiles(_dir, fileList = []) {
   const files = fs.readdirSync(dir);
   
   files.forEach((file) => {
@@ -61,8 +61,8 @@ function improveLogging(content, filePath) {
         !content.includes('from "./utils/logger"')
       ) {
         // Determine correct path to logger
-        const depth = (filePath.match(/app\//g) || []).length - 1;
-        const loggerPath = '../'.repeat(depth) + 'utils/logger';
+//         const depth = (filePath.match(/app\//g) || []).length - 1;
+//         const loggerPath = '../'.repeat(depth) + 'utils/logger';
         
         if (content.includes('import')) {
           newContent = content.replace(
@@ -151,7 +151,7 @@ function optimizeImports(content) {
   if (importLines.length !== uniqueImports.length) {
     improved = true;
     // Replace duplicate imports
-    const contentWithoutImports = content.replace(/^import.*$/gm, '');
+//     const contentWithoutImports = content.replace(/^import.*$/gm, '');
     newContent = uniqueImports.join('\n') + '\n' + contentWithoutImports;
   }
   
@@ -209,7 +209,7 @@ function processFile(filePath) {
 }
 
 // Run improvements
-console.log('🚀 Starting comprehensive improvements...\n');
+// console.log('🚀 Starting comprehensive improvements...\n');
 
 const files = getAllFiles(config.appDir);
 let filesImproved = 0;
@@ -221,34 +221,34 @@ files.forEach((file) => {
 });
 
 // Generate report
-console.log('\n✅ Improvements Complete!\n');
-console.log(`📊 Summary:`);
-console.log(`  - Files processed: ${files.length}`);
-console.log(`  - Files improved: ${filesImproved}`);
-console.log(`  - Total improvements: ${config.improvements.length}`);
-console.log(`  - Errors: ${config.errors.length}\n`);
+// console.log('\n✅ Improvements Complete!\n');
+// console.log(`📊 Summary:`);
+// console.log(`  - Files processed: ${files.length}`);
+// console.log(`  - Files improved: ${filesImproved}`);
+// console.log(`  - Total improvements: ${config.improvements.length}`);
+// console.log(`  - Errors: ${config.errors.length}\n`);
 
 if (config.improvements.length > 0) {
-  console.log('📝 Improvements applied:');
+//   console.log('📝 Improvements applied:');
   config.improvements.slice(0, 20).forEach((improvement, i) => {
-    console.log(`  ${i + 1}. ${improvement}`);
+//     console.log(`  ${i + 1}. ${improvement}`);
   });
   if (config.improvements.length > 20) {
-    console.log(`  ... and ${config.improvements.length - 20} more`);
+//     console.log(`  ... and ${config.improvements.length - 20} more`);
   }
-  console.log('');
+//   console.log('');
 }
 
 if (config.errors.length > 0) {
-  console.log('⚠️  Errors encountered:');
+//   console.log('⚠️  Errors encountered:');
   config.errors.forEach((error, i) => {
-    console.log(`  ${i + 1}. ${error}`);
+//     console.log(`  ${i + 1}. ${error}`);
   });
-  console.log('');
+//   console.log('');
 }
 
 // Save detailed report
-const reportPath = path.join(__dirname, 'improvements-report.json');
+// const reportPath = path.join(__dirname, 'improvements-report.json');
 fs.writeFileSync(
   reportPath,
   JSON.stringify(
@@ -268,7 +268,7 @@ fs.writeFileSync(
   )
 );
 
-console.log(`📄 Detailed report saved to: improvements-report.json\n`);
-console.log('✨ All done!\n');
+// console.log(`📄 Detailed report saved to: improvements-report.json\n`);
+// console.log('✨ All done!\n');
 
 process.exit(config.errors.length > 0 ? 1 : 0);

@@ -25,7 +25,7 @@ export class PerformanceOptimizer {
     name: string,
     fn: () => T | Promise<T>
   ): T | Promise<T> {
-    const start = performance.now();
+//     const start = performance.now();
     
     try {
       const result = fn();
@@ -70,14 +70,14 @@ export class PerformanceOptimizer {
       return 0;
     }
     
-    const sum = metrics.reduce((acc, val) => acc + val, 0);
+//     const sum = metrics.reduce((acc, val) => acc + val, 0);
     return sum / metrics.length;
   }
 
   /**
    * Implement debounce for performance
    */
-  debounce<T extends (...args: any[]) => any>(
+  debounce<T extends (...args: unknown[]) => any>(
     func: T,
     wait: number
   ): (...args: Parameters<T>) => void {
@@ -97,7 +97,7 @@ export class PerformanceOptimizer {
   /**
    * Implement throttle for performance
    */
-  throttle<T extends (...args: any[]) => any>(
+  throttle<T extends (...args: unknown[]) => any>(
     func: T,
     limit: number
   ): (...args: Parameters<T>) => void {
@@ -117,13 +117,13 @@ export class PerformanceOptimizer {
   /**
    * Memoize function results
    */
-  memoize<T extends (...args: any[]) => any>(
+  memoize<T extends (...args: unknown[]) => any>(
     func: T
   ): (...args: Parameters<T>) => ReturnType<T> {
     const cache = new Map<string, ReturnType<T>>();
     
     return (...args: Parameters<T>): ReturnType<T> => {
-      const key = JSON.stringify(args);
+//       const key = JSON.stringify(args);
       
       if (cache.has(key)) {
         return cache.get(key)!;

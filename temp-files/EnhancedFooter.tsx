@@ -11,7 +11,7 @@ import React from 'react';
 import Link from 'next/link';
 
 const EnhancedFooter: React.FC = () => {
-  const currentYear = new Date().getFullYear();
+//   const currentYear = new Date().getFullYear();
 
   const services = [
     { name: 'AI Solutions', href: '/services/ai' },

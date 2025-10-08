@@ -77,9 +77,9 @@ global.IntersectionObserver = class IntersectionObserver {
 };
 
 // Suppress console errors in tests
-const originalError = console.error;
+// const originalError = console.error;
 beforeAll(() => {
-  console.error = jest.fn((...args) => {
+//   console.error = jest.fn((...args) => {
     if (
       typeof args[0] === 'string' &&
       (args[0].includes('Warning: ReactDOM.render') ||
@@ -92,5 +92,5 @@ beforeAll(() => {
 });
 
 afterAll(() => {
-  console.error = originalError;
+//   console.error = originalError;
 });

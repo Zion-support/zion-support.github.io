@@ -110,7 +110,7 @@ class AccessibilityEnhancer {
    */
   private handleTabNavigation(event: KeyboardEvent, isShift: boolean): void {
     const focusableElements = this.getFocusableElements();
-    const currentIndex = focusableElements.indexOf(document.activeElement as HTMLElement);
+//     const currentIndex = focusableElements.indexOf(document.activeElement as HTMLElement);
     
     if (currentIndex === -1) return;
     
@@ -132,14 +132,14 @@ class AccessibilityEnhancer {
     // Close any open modals or dropdowns
     const modals = document.querySelectorAll('[role="dialog"][aria-hidden="false"]');
     modals.forEach(modal => {
-      const closeButton = modal.querySelector('[aria-label*="close"], [aria-label*="Close"]') as HTMLElement;
+//       const closeButton = modal.querySelector('[aria-label*="close"], [aria-label*="Close"]') as HTMLElement;
       closeButton?.click();
     });
     
     // Close any open menus
     const menus = document.querySelectorAll('[role="menu"][aria-expanded="true"]');
     menus.forEach(menu => {
-      const trigger = document.querySelector(`[aria-controls="${menu.id}"]`) as HTMLElement;
+//       const trigger = document.querySelector(`[aria-controls="${menu.id}"]`) as HTMLElement;
       trigger?.click();
     });
   }
@@ -166,11 +166,11 @@ class AccessibilityEnhancer {
    * Handle radio group navigation
    */
   private handleRadioGroupNavigation(event: KeyboardEvent, currentElement: HTMLInputElement): void {
-    const name = currentElement.name;
+//     const name = currentElement.name;
     if (!name) return;
 
     const radioButtons = Array.from(document.querySelectorAll(`input[type="radio"][name="${name}"]`)) as HTMLInputElement[];
-    const currentIndex = radioButtons.indexOf(currentElement);
+//     const currentIndex = radioButtons.indexOf(currentElement);
     
     let nextIndex: number;
     if (event.key === 'ArrowUp' || event.key === 'ArrowLeft') {
@@ -192,7 +192,7 @@ class AccessibilityEnhancer {
     if (!menu) return;
 
     const menuItems = Array.from(menu.querySelectorAll('[role="menuitem"]')) as HTMLElement[];
-    const currentIndex = menuItems.indexOf(currentElement);
+//     const currentIndex = menuItems.indexOf(currentElement);
     
     let nextIndex: number;
     if (event.key === 'ArrowUp') {
@@ -278,7 +278,7 @@ class AccessibilityEnhancer {
       
       // Add aria-label if no label exists
       if (!element.getAttribute('aria-label') && !element.getAttribute('aria-labelledby')) {
-        const placeholder = element.getAttribute('placeholder');
+//         const placeholder = element.getAttribute('placeholder');
         if (placeholder) {
           element.setAttribute('aria-label', placeholder);
         }
@@ -493,7 +493,7 @@ class AccessibilityEnhancer {
       const inputs = form.querySelectorAll('input, textarea, select');
       inputs.forEach((input) => {
         const element = input as HTMLElement;
-        const id = element.id || `input-${Math.random().toString(36).substr(2, 9)}`;
+//         const id = element.id || `input-${Math.random().toString(36).substr(2, 9)}`;
         element.id = id;
         
         if (!element.getAttribute('aria-label') && !element.getAttribute('aria-labelledby')) {
@@ -601,11 +601,11 @@ class AccessibilityEnhancer {
    */
   private calculateKeyboardScore(): number {
     const focusableElements = this.getFocusableElements();
-    const totalElements = document.querySelectorAll('*').length;
+//     const totalElements = document.querySelectorAll('*').length;
     
     if (totalElements === 0) return 0;
     
-    const focusableRatio = focusableElements.length / totalElements;
+//     const focusableRatio = focusableElements.length / totalElements;
     return Math.min(100, Math.round(focusableRatio * 100));
   }
 
@@ -676,7 +676,6 @@ class AccessibilityEnhancer {
     const metrics = this.getMetrics();
     return `
 Accessibility Report
-===================
 Focusable Elements: ${metrics.focusableElements}
 Images Without Alt: ${metrics.imagesWithoutAlt}
 Links Without Text: ${metrics.linksWithoutText}

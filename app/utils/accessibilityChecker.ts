@@ -84,7 +84,7 @@ export interface A11yCheckResult {
  * ```typescript
  * const checker = new AccessibilityChecker();
  * const result = checker.checkElement(document.getElementById('main'));
- * if (import.meta.env.DEV) { console.log(`Score: ${result.score}, Issues: ${result.issueCount}`); }
+//  * if (import.meta.env.DEV) { console.log(`Score: ${result.score}, Issues: ${result.issueCount}`); }
  * ```
  */
 export class AccessibilityChecker {
@@ -110,7 +110,7 @@ export class AccessibilityChecker {
     this.checkARIA(element);
     this.checkLandmarks(element);
 
-    const score = this.calculateScore();
+//     const score = this.calculateScore();
 
     return {
       passed: this.issues.length === 0,
@@ -150,8 +150,8 @@ export class AccessibilityChecker {
     const images = element.querySelectorAll('img');
     
     images.forEach((img, index) => {
-      const alt = img.getAttribute('alt');
-      const role = img.getAttribute('role');
+//       const alt = img.getAttribute('alt');
+//       const role = img.getAttribute('role');
 
       // Check for missing alt attribute
       if (alt === null && role !== 'presentation') {
@@ -197,7 +197,7 @@ export class AccessibilityChecker {
     let previousLevel = 0;
 
     headings.forEach((heading, index) => {
-      const level = parseInt(heading.tagName.charAt(1));
+//       const level = parseInt(heading.tagName.charAt(1));
 
       // Check for skipped heading levels
       if (level > previousLevel + 1 && previousLevel !== 0) {
@@ -230,7 +230,7 @@ export class AccessibilityChecker {
     });
 
     // Check for multiple h1s
-    const h1Count = element.querySelectorAll('h1').length;
+//     const h1Count = element.querySelectorAll('h1').length;
     if (h1Count > 1) {
       this.addIssue({
         type: 'multiple-h1',
@@ -255,9 +255,9 @@ export class AccessibilityChecker {
 
     links.forEach((link, index) => {
       const text = link.textContent?.trim();
-      const ariaLabel = link.getAttribute('aria-label');
-      const ariaLabelledBy = link.getAttribute('aria-labelledby');
-      const title = link.getAttribute('title');
+//       const ariaLabel = link.getAttribute('aria-label');
+//       const ariaLabelledBy = link.getAttribute('aria-labelledby');
+//       const title = link.getAttribute('title');
 
       // Check for links without accessible text
       if (!text && !ariaLabel && !ariaLabelledBy && !title) {
@@ -288,7 +288,7 @@ export class AccessibilityChecker {
       }
 
       // Check for links opening in new window without warning
-      const target = link.getAttribute('target');
+//       const target = link.getAttribute('target');
       if (target === '_blank' && !ariaLabel?.includes('new window') && !text?.includes('(opens in new window)')) {
         this.addIssue({
           type: 'new-window-no-warning',
@@ -315,8 +315,8 @@ export class AccessibilityChecker {
 
     buttons.forEach((button, index) => {
       const text = button.textContent?.trim();
-      const ariaLabel = button.getAttribute('aria-label');
-      const ariaLabelledBy = button.getAttribute('aria-labelledby');
+//       const ariaLabel = button.getAttribute('aria-label');
+//       const ariaLabelledBy = button.getAttribute('aria-labelledby');
 
       // Check for buttons without accessible text
       if (!text && !ariaLabel && !ariaLabelledBy) {
@@ -344,11 +344,11 @@ export class AccessibilityChecker {
     const inputs = element.querySelectorAll('input, select, textarea');
 
     inputs.forEach((input, index) => {
-      const id = input.getAttribute('id');
-      const ariaLabel = input.getAttribute('aria-label');
-      const ariaLabelledBy = input.getAttribute('aria-labelledby');
+//       const id = input.getAttribute('id');
+//       const ariaLabel = input.getAttribute('aria-label');
+//       const ariaLabelledBy = input.getAttribute('aria-labelledby');
       const label = id ? element.querySelector(`label[for="${id}"]`) : null;
-      const type = input.getAttribute('type');
+//       const type = input.getAttribute('type');
 
       // Skip hidden and submit inputs
       if (type === 'hidden' || type === 'submit' || type === 'button') return;
@@ -407,7 +407,7 @@ export class AccessibilityChecker {
     const interactiveElements = element.querySelectorAll('a, button, input, select, textarea');
 
     interactiveElements.forEach((el) => {
-      const tabindex = el.getAttribute('tabindex');
+//       const tabindex = el.getAttribute('tabindex');
       if (tabindex === '-1') {
         this.addIssue({
           type: 'interactive-not-focusable',
@@ -426,9 +426,9 @@ export class AccessibilityChecker {
     const clickableNonInteractive = element.querySelectorAll('[onclick]:not(a):not(button)');
 
     clickableNonInteractive.forEach((el) => {
-      const role = el.getAttribute('role');
-      const tabindex = el.getAttribute('tabindex');
-      const onKeyDown = el.getAttribute('onkeydown');
+//       const role = el.getAttribute('role');
+//       const tabindex = el.getAttribute('tabindex');
+//       const onKeyDown = el.getAttribute('onkeydown');
 
       if (!role || !tabindex || !onKeyDown) {
         this.addIssue({
@@ -455,7 +455,7 @@ export class AccessibilityChecker {
     const elementsWithAria = element.querySelectorAll('[role], [aria-label], [aria-labelledby], [aria-describedby]');
 
     elementsWithAria.forEach((el) => {
-      const role = el.getAttribute('role');
+//       const role = el.getAttribute('role');
 
       // Check for invalid ARIA roles
       const validRoles = [
@@ -477,9 +477,9 @@ export class AccessibilityChecker {
       }
 
       // Check aria-labelledby references
-      const labelledBy = el.getAttribute('aria-labelledby');
+//       const labelledBy = el.getAttribute('aria-labelledby');
       if (labelledBy) {
-        const referencedElement = document.getElementById(labelledBy);
+//         const referencedElement = document.getElementById(labelledBy);
         if (!referencedElement) {
           this.addIssue({
             type: 'aria-labelledby-missing',
@@ -502,8 +502,8 @@ export class AccessibilityChecker {
    * @param element - Root element to check
    */
   private checkLandmarks(element: Element): void {
-    const hasMain = element.querySelector('main, [role="main"]');
-    const hasNav = element.querySelector('nav, [role="navigation"]');
+//     const hasMain = element.querySelector('main, [role="main"]');
+//     const hasNav = element.querySelector('nav, [role="navigation"]');
 
     if (!hasMain) {
       this.addIssue({
@@ -562,7 +562,7 @@ export class AccessibilityChecker {
     }, 0);
 
     // Score decreases with more/severe issues
-    const score = Math.max(0, 100 - totalPenalty);
+//     const score = Math.max(0, 100 - totalPenalty);
     return Math.round(score);
   }
 

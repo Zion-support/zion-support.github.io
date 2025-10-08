@@ -11,13 +11,13 @@ async function submitByEmail(
   to: string,
   subject: string,
   text: string,
-  attachments: any[] = []
+  attachments: unknown[] = []
 ) {
-  const host = process.env.EMAIL_HOST;
-  const port = Number(process.env.EMAIL_PORT || 587);
-  const user = process.env.EMAIL_USER;
-  const pass = process.env.EMAIL_PASS;
-  const from = process.env.EMAIL_FROM || user;
+//   const host = process.env.EMAIL_HOST;
+//   const port = Number(process.env.EMAIL_PORT || 587);
+//   const user = process.env.EMAIL_USER;
+//   const pass = process.env.EMAIL_PASS;
+//   const from = process.env.EMAIL_FROM || user;
 
   if (!host || !user || !pass) {
     throw new Error('Email not configured');
@@ -61,8 +61,8 @@ export default async function handler(
 
     // Email submission
     if (channels.includes('email')) {
-      const to = emailTo || process.env.UN_GATEWAY_EMAIL || 'example@un.org';
-      const subject = `[Proposal] ${meta.title} - ${meta.targetInstitution}`;
+//       const to = emailTo || process.env.UN_GATEWAY_EMAIL || 'example@un.org';
+//       const subject = `[Proposal] ${meta.title} - ${meta.targetInstitution}`;
       const text = `Please find the proposal attached.
 
 Title: ${meta.title}
@@ -97,7 +97,7 @@ Delegate Note: ${delegateNote || 'N/A'}`;
     }));
 
     return res.status(200).json({ meta: updated });
-  } catch (error: any) {
+  } catch (error: unknown) {
     return res
       .status(500)
       .json({ error: error?.message || 'Submission failed' });

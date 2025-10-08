@@ -25,8 +25,8 @@ interface BannerImpression {
   clicked?: boolean;
 }
 
-const STORAGE_KEY = 'zion_banner_impressions';
-const SESSION_KEY = 'zion_session_id';
+// const STORAGE_KEY = 'zion_banner_impressions';
+// const SESSION_KEY = 'zion_session_id';
 const MAX_VISIBLE_BANNERS = 10; // Limit visible banners for performance
 
 /**
@@ -46,7 +46,7 @@ const getSessionId = (): string => {
  */
 const getStoredImpressions = (): BannerImpression[] => {
   try {
-    const stored = localStorage.getItem(STORAGE_KEY);
+//     const stored = localStorage.getItem(STORAGE_KEY);
     return stored ? JSON.parse(stored) : [];
   } catch {
     return [];
@@ -81,10 +81,10 @@ export const recordBannerImpression = (impression: Omit<BannerImpression, 'times
     impressions.push(newImpression);
     
     // Keep only last 1000 impressions to prevent storage bloat
-    const trimmedImpressions = impressions.slice(-1000);
+//     const trimmedImpressions = impressions.slice(-1000);
     storeImpressions(trimmedImpressions);
   } catch (error) {
-    console.error('Failed to store banner impressions:', error);
+//     console.error('Failed to store banner impressions:', error);
   }
 };
 
@@ -93,7 +93,7 @@ export const recordBannerImpression = (impression: Omit<BannerImpression, 'times
  */
 export const getBannerImpressionCount = (bannerId: string, hours: number = 24): number => {
   const impressions = getStoredImpressions();
-  const cutoff = Date.now() - (hours * 60 * 60 * 1000);
+//   const cutoff = Date.now() - (hours * 60 * 60 * 1000);
   return impressions.filter(imp => imp.bannerId === bannerId && imp.timestamp > cutoff).length;
 };
 
@@ -103,7 +103,7 @@ export const getBannerImpressionCount = (bannerId: string, hours: number = 24): 
 export const shouldShowBanner = (banner: BannerConfig): boolean => {
   if (!banner.maxDailyImpressions) return true;
   
-  const todayImpressions = getBannerImpressionCount(banner.id, 24);
+//   const todayImpressions = getBannerImpressionCount(banner.id, 24);
   return todayImpressions < banner.maxDailyImpressions;
 };
 
@@ -115,15 +115,15 @@ export const calculateBannerScore = (banner: BannerConfig): number => {
   const bannerImpressions = impressions.filter(imp => imp.bannerId === banner.id);
   
   // Calculate engagement rate
-  const clicks = bannerImpressions.filter(imp => imp.clicked).length;
-  const engagementRate = bannerImpressions.length > 0 ? clicks / bannerImpressions.length : 0;
+//   const clicks = bannerImpressions.filter(imp => imp.clicked).length;
+//   const engagementRate = bannerImpressions.length > 0 ? clicks / bannerImpressions.length : 0;
   
   // Calculate recency score (more recent impressions = higher score)
   const recentImpressions = bannerImpressions.filter(imp => imp.timestamp > Date.now() - 24 * 60 * 60 * 1000);
-  const recencyScore = Math.min(1, recentImpressions.length / 10);
+//   const recencyScore = Math.min(1, recentImpressions.length / 10);
   
   // Calculate fatigue score (too many impressions = lower score)
-  const fatigueScore = Math.max(0, 1 - (bannerImpressions.length / 50));
+//   const fatigueScore = Math.max(0, 1 - (bannerImpressions.length / 50));
   
   // Weighted combination
   return (banner.priority * 0.4) + (engagementRate * 0.3) + (recencyScore * 0.2) + (fatigueScore * 0.1);
@@ -156,9 +156,9 @@ export const getBannerAnalytics = (bannerId?: string) => {
   const impressions = getStoredImpressions();
   const bannerImpressions = bannerId ? impressions.filter(imp => imp.bannerId === bannerId) : impressions;
   
-  const totalImpressions = bannerImpressions.length;
-  const clicks = bannerImpressions.filter(imp => imp.clicked).length;
-  const engagementRate = totalImpressions > 0 ? clicks / totalImpressions : 0;
+//   const totalImpressions = bannerImpressions.length;
+//   const clicks = bannerImpressions.filter(imp => imp.clicked).length;
+//   const engagementRate = totalImpressions > 0 ? clicks / totalImpressions : 0;
   
   // Calculate average time visible
   const visibleImpressions = bannerImpressions.filter(imp => imp.timeVisible);
@@ -186,9 +186,9 @@ export const getBannerAnalytics = (bannerId?: string) => {
  * Clear old impressions
  */
 export const clearOldImpressions = (daysToKeep: number = 30): void => {
-  const cutoff = Date.now() - (daysToKeep * 24 * 60 * 60 * 1000);
+//   const cutoff = Date.now() - (daysToKeep * 24 * 60 * 60 * 1000);
   const impressions = getStoredImpressions();
-  const filteredImpressions = impressions.filter(imp => imp.timestamp > cutoff);
+//   const filteredImpressions = impressions.filter(imp => imp.timestamp > cutoff);
   storeImpressions(filteredImpressions);
 };
 

@@ -9,7 +9,6 @@ import {
   Users,
   BarChart3,
   Cog,
-  Target,
   Rocket,
 } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';

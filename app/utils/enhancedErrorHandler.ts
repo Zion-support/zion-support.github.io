@@ -89,9 +89,9 @@ class EnhancedErrorHandler {
     this.setupErrorCleanup();
 
     this.isInitialized = true;
-    // eslint-disable-next-line no-console
+     
     if (process.env['NODE_ENV'] === 'development') {
-      console.log('🛡️ Enhanced Error Handler initialized');
+//       console.log('🛡️ Enhanced Error Handler initialized');
     }
   }
 
@@ -206,7 +206,7 @@ class EnhancedErrorHandler {
         observer.observe({ type: 'longtask', buffered: true });
       } catch (error) {
         // eslint-disable-next-line no-console
-        console.warn('Failed to setup performance error handler:', error);
+//         console.warn('Failed to setup performance error handler:', error);
       }
     }
   }
@@ -286,8 +286,8 @@ class EnhancedErrorHandler {
     category?: string;
   }): ErrorReport {
     const context = this.getErrorContext();
-    const severity = this.determineSeverity(errorData);
-    const category = this.categorizeError(errorData);
+//     const severity = this.determineSeverity(errorData);
+//     const category = this.categorizeError(errorData);
     const tags = this.generateTags(errorData);
 
     return {
@@ -474,7 +474,7 @@ class EnhancedErrorHandler {
    */
   private checkRateLimit(): boolean {
     const now = Date.now();
-    const timeDiff = now - this.lastErrorTime;
+//     const timeDiff = now - this.lastErrorTime;
 
     if (timeDiff < 60000) {
       // Within 1 minute
@@ -494,7 +494,7 @@ class EnhancedErrorHandler {
    * Update error counters
    */
   private updateErrorCounts(errorReport: ErrorReport): void {
-    const key = `${errorReport.type}_${errorReport.category}`;
+//     const key = `${errorReport.type}_${errorReport.category}`;
     this.errorCounts.set(key, (this.errorCounts.get(key) || 0) + 1);
     this.errorCategories.set(
       errorReport.category,
@@ -506,27 +506,27 @@ class EnhancedErrorHandler {
    * Log error to console
    */
   private logError(errorReport: ErrorReport): void {
-    const emoji = this.getSeverityEmoji(errorReport.severity);
+//     const emoji = this.getSeverityEmoji(errorReport.severity);
     // eslint-disable-next-line no-console
-    console.group(`${emoji} Error Report: ${errorReport.id}`);
+//     console.group(`${emoji} Error Report: ${errorReport.id}`);
     // eslint-disable-next-line no-console
-    console.error('Message:', errorReport.message);
+//     console.error('Message:', errorReport.message);
     // eslint-disable-next-line no-console
-    console.error('Type:', errorReport.type);
+//     console.error('Type:', errorReport.type);
     // eslint-disable-next-line no-console
-    console.error('Severity:', errorReport.severity);
+//     console.error('Severity:', errorReport.severity);
     // eslint-disable-next-line no-console
-    console.error('Category:', errorReport.category);
+//     console.error('Category:', errorReport.category);
     // eslint-disable-next-line no-console
-    console.error('Context:', errorReport.context);
+//     console.error('Context:', errorReport.context);
     // eslint-disable-next-line no-console
-    console.error('Metadata:', errorReport.metadata);
+//     console.error('Metadata:', errorReport.metadata);
     if (errorReport.stack) {
       // eslint-disable-next-line no-console
-      console.error('Stack:', errorReport.stack);
+//       console.error('Stack:', errorReport.stack);
     }
     // eslint-disable-next-line no-console
-    console.groupEnd();
+//     console.groupEnd();
   }
 
   /**
@@ -564,7 +564,7 @@ class EnhancedErrorHandler {
       });
     } catch (error) {
       // eslint-disable-next-line no-console
-      console.warn('Failed to report error to remote service:', error);
+//       console.warn('Failed to report error to remote service:', error);
     }
   }
 
@@ -574,7 +574,7 @@ class EnhancedErrorHandler {
   private aggregateError(errorReport: ErrorReport): void {
     // This could be expanded to include more sophisticated aggregation
     // eslint-disable-next-line no-console
-    console.log(
+//     console.log(
       `📊 Error aggregated: ${errorReport.type} - ${errorReport.category}`
     );
   }
@@ -588,7 +588,7 @@ class EnhancedErrorHandler {
       errorReport.category === 'performance'
     ) {
       // eslint-disable-next-line no-console
-      console.warn('⚠️ Performance impact detected from error');
+//       console.warn('⚠️ Performance impact detected from error');
     }
   }
 
@@ -603,9 +603,9 @@ class EnhancedErrorHandler {
     );
 
     if (recentErrors.length > 5) {
-      // eslint-disable-next-line no-console
+       
       if (process.env['NODE_ENV'] === 'development') { 
-        console.log('🔄 Attempting error recovery...'); 
+//         console.log('🔄 Attempting error recovery...'); 
       }
       // Implement recovery strategies here
       this.clearErrorState();
@@ -621,9 +621,9 @@ class EnhancedErrorHandler {
     this.errorCategories.clear();
     this.errorRateLimit = 0;
 
-    // eslint-disable-next-line no-console
+     
     if (process.env['NODE_ENV'] === 'development') { 
-      console.log('🧹 Error state cleared'); 
+//       console.log('🧹 Error state cleared'); 
     }
   }
 
@@ -638,9 +638,9 @@ class EnhancedErrorHandler {
       error => new Date(error.context.timestamp) > cutoffDate
     );
 
-    // eslint-disable-next-line no-console
+     
     if (process.env['NODE_ENV'] === 'development') { 
-      console.log(`🧹 Cleaned up old errors, ${this.errors.length} remaining`); 
+//       console.log(`🧹 Cleaned up old errors, ${this.errors.length} remaining`); 
     }
   }
 

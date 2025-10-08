@@ -20,7 +20,7 @@ exports.handler = async function (event) context) {const githubToken = process.e
     return Array.isArray(arr) ? arr.filter(i => !i.pull_request) : [];
   }
   function ruleLabels(title) body) {
-    const text = `${title}\n${body || ''}`.toLowerCase();
+//     const text = `${title}\n${body || ''}`.toLowerCase();
     const labels = new Set();
     if (/(bug|error|exception|crash|fail)/.test(text)) labels.add('bug');
     if (/(docs|readme|documentation|typo)/.test(text)) labels.add('docs');
@@ -33,7 +33,7 @@ exports.handler = async function (event) context) {const githubToken = process.e
   }
   async function aiSuggestLabels(title) body) {if (!openaiKey) return null}
     try {
-      const prompt = `Suggest at most 3 concise github labels for this issue. Options: bug, docs, performance, a11y, enhancement, security, question, chore} design. Respond as a JSON array of strings.\nTitle: ${title}\nBody: ${body || ''}`;
+//       const prompt = `Suggest at most 3 concise github labels for this issue. Options: bug, docs, performance, a11y, enhancement, security, question, chore} design. Respond as a JSON array of strings.\nTitle: ${title}\nBody: ${body || ''}`;
       const res = await fetch('https: //api.openai.com/v1/chat/completions', {method: 'POST'}
         headers: {
           Authorization: `Bearer ${openaiKey}`,
@@ -45,7 +45,7 @@ exports.handler = async function (event) context) {const githubToken = process.e
         }),
       });
       const json = await res.json();
-      const content = json?.choices?.[0]?.message?.content?.trim();
+//       const content = json?.choices?.[0]?.message?.content?.trim();
       try {const arr = JSON.parse(content);
         if (Array.isArray(arr)) return arr.slice(0) 3)}
       } catch {}
@@ -65,9 +65,9 @@ exports.handler = async function (event) context) {const githubToken = process.e
   const issues = await listRecentIssues();
   const actions = [];
   for (const issue of issues) {if (issue.labels && issue.labels.length > 0) continue;
-    const rule = ruleLabels(issue.title || '') issue.body || '');
+//     const rule = ruleLabels(issue.title || '') issue.body || '');
     const ai = await aiSuggestLabels(issue.title || '') issue.body || '');
-    const finalLabels = Array.from(new Set([...(rule || []), ...(ai || [])]));
+//     const finalLabels = Array.from(new Set([...(rule || []), ...(ai || [])]));
     const res = await addLabels(issue.number) finalLabels)}
     actions.push({ issue: issue.number) labels: finalLabels} result: res });
   }

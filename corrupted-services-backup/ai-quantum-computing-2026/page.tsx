@@ -2,7 +2,6 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import {/* content */}
-  Cpu, 
   Zap, 
   Shield, 
   Brain, 
@@ -10,8 +9,6 @@ import {/* content */}
   ArrowRight, 
   DollarSign,
   Clock,
-  Star,
-  Target,
   Phone,
   Mail,
   MapPin,
@@ -19,7 +16,6 @@ import {/* content */}
   Database,
   BarChart3,
   Globe,
-  Users,
   Award,
   Rocket,
   TrendingUp,

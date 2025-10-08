@@ -147,13 +147,13 @@
                       </h3>
                       <li, classNam, e = 'flex, item, s-start, ga, p-2'>
                         <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' />
-                      Get, Started, Today
+                      Getted, Today
                       <Zap, classNam, e='w-5 h-5' />
                   Schedule, Free, Assessment
                   <Zap, classNam, e='w-5 h-5' />
                       <li, classNam, e = 'flex, item, s-start, ga, p-2'>
                         <CheckCircle, className='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' />
-                      Get, Started, Today
+                      Getted, Today
                       <Zap, className='w-5 h-5' />
                   Schedule, Free, Assessment
                   <Zap, className='w-5 h-5' />

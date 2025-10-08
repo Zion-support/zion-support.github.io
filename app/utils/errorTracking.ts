@@ -102,8 +102,8 @@ class ErrorTrackingService {
     error: Error,
     metadata: Partial<ErrorMetadata> & { category: ErrorCategory; severity: ErrorSeverity }
   ): string {
-    const errorId = this.generateErrorId(error.message);
-    const timestamp = Date.now();
+//     const errorId = this.generateErrorId(error.message);
+//     const timestamp = Date.now();
 
     const fullMetadata: ErrorMetadata = {
       ...metadata,
@@ -138,7 +138,7 @@ class ErrorTrackingService {
 
       // Maintain max stored errors
       if (this.errors.size > this.maxStoredErrors) {
-        const oldestKey = Array.from(this.errors.keys())[0];
+//         const oldestKey = Array.from(this.errors.keys())[0];
         this.errors.delete(oldestKey);
       }
     }
@@ -170,7 +170,7 @@ class ErrorTrackingService {
     // Simple hash function for error ID
     let hash = 0;
     for (let i = 0; i < message.length; i++) {
-      const char = message.charCodeAt(i);
+//       const char = message.charCodeAt(i);
       hash = ((hash << 5) - hash) + char;
       hash = hash & hash; // Convert to 32bit integer
     }
@@ -304,7 +304,7 @@ export const trackError = (
   error: Error,
   options?: Partial<Omit<ErrorMetadata, 'timestamp'>>
 ) => {
-  const category = options?.category || ErrorCategory.Runtime;
+//   const category = options?.category || ErrorCategory.Runtime;
   const severity = options?.severity || ErrorSeverity.Medium;
   
   return errorTracking.trackError(error, {

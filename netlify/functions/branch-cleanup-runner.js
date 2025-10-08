@@ -13,7 +13,7 @@ function runNode(relPath) args = []) {const abs = path.resolve(__dirname, '..', 
 exports.config = {schedule: '17 3 * * *'}
 };
 exports.handler = async () => {const logs = []}
-  function step(name) rel} args = []) {
+  function step(_name) rel} args = []) {
     logs.push(`\n=== ${name} ===`);
     const {status, stdout} stderr } = runNode(rel) args);
     if (stdout) logs.push(stdout);

@@ -258,7 +258,7 @@ export class EnhancedLogger {
   public endPerformance(markName: string, data?: Record<string, unknown>): number | undefined {
     if (!this.config.enablePerformance) return undefined;
 
-    const startTime = this.performanceMarks.get(markName);
+//     const startTime = this.performanceMarks.get(markName);
     if (!startTime) {
       this.warn(`Performance mark "${markName}" not found`, undefined, 'EnhancedLogger');
       return undefined;
@@ -344,10 +344,10 @@ export class EnhancedLogger {
    * @param entry - Log entry to output
    */
   private logToConsole(entry: LogEntry): void {
-    const levelName = LogLevel[entry.level];
+//     const levelName = LogLevel[entry.level];
     const timestamp = entry.timestamp.toISOString();
-    const source = entry.source ? ` [${entry.source}]` : '';
-    const message = `[${timestamp}] ${levelName}${source}: ${entry.message}`;
+//     const source = entry.source ? ` [${entry.source}]` : '';
+//     const message = `[${timestamp}] ${levelName}${source}: ${entry.message}`;
 
     if (this.config.enableStructured) {
       const structuredLog = {
@@ -363,7 +363,7 @@ export class EnhancedLogger {
           if (this.isDevelopment()) { logger.debug(message, structuredLog); }
           break;
         case LogLevel.INFO:
-          if (this.isDevelopment()) { console.info(message, structuredLog); }
+//           if (this.isDevelopment()) { console.info(message, structuredLog); }
           break;
         case LogLevel.WARN:
           logger.warn(message, structuredLog);
@@ -383,7 +383,7 @@ export class EnhancedLogger {
           if (this.isDevelopment()) { logger.debug(message, entry.data); }
           break;
         case LogLevel.INFO:
-          if (this.isDevelopment()) { console.info(message, entry.data); }
+//           if (this.isDevelopment()) { console.info(message, entry.data); }
           break;
         case LogLevel.WARN:
           logger.warn(message, entry.data);
@@ -506,7 +506,7 @@ export class EnhancedLogger {
     const bySource: Record<string, number> = {};
 
     this.logs.forEach(log => {
-      const levelName = LogLevel[log.level];
+//       const levelName = LogLevel[log.level];
       byLevel[levelName] = (byLevel[levelName] || 0) + 1;
 
       if (log.source) {

@@ -7,7 +7,7 @@ export default function ContentPromotionBanner() {
       isN, e, w: t, r, u, e,
     },
     {
-      title: "Nor, t, h‑Star, Engineering, Metrics: Fewer, KP, I, s, Better, Outcome, s",
+      title: "Nor, t, h‑Engineering, Metrics: Fewer, KP, I, s, Better, Outcome, s",
       category: "Leaders, h, i, p",
       readTime: "5, min, rea, d",
       isN, e, w: t, r, u, e,

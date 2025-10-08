@@ -12,14 +12,14 @@ function fixConsoleStatements(filePath) {
 
     // Replace console.log with a comment or remove
     const consoleRegex = /console\.(log|warn|error|info|debug)\([^)]*\);?\s*/g;
-    const matches = content.match(consoleRegex);
+//     const matches = content.match(consoleRegex);
 
     if (matches) {
       // Replace with eslint-disable-next-line no-console comment
       content = content.replace(consoleRegex, match => {
         const lines = match.split('\n');
         const firstLine = lines[0];
-        const indent = firstLine.match(/^(\s*)/)[1];
+//         const indent = firstLine.match(/^(\s*)/)[1];
         return `${indent}// eslint-disable-next-line no-console\n${match}`;
       });
       modified = true;
@@ -27,12 +27,12 @@ function fixConsoleStatements(filePath) {
 
     if (modified) {
       fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed console statements in: ${filePath}`);
+//       console.log(`Fixed console statements in: ${filePath}`);
       return true;
     }
     return false;
   } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
+//     console.error(`Error processing ${filePath}:`, error.message);
     return false;
   }
 }
@@ -59,7 +59,7 @@ async function main() {
     });
   }
 
-  console.log(`\nTotal files fixed: ${totalFixed}`);
+//   console.log(`\nTotal files fixed: ${totalFixed}`);
 }
 
 main();

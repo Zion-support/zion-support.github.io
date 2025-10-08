@@ -77,7 +77,7 @@ export const lazyLoadImages = (): void => {
 
  * Optimize scroll performance
  */
-export function debounce<T extends (...args: any[]) => any>(
+export function debounce<T extends (...args: unknown[]) => any>(
   func: T,
   wait: number
 ): (...args: Parameters<T>) => void {
@@ -116,7 +116,7 @@ export const measurePageLoad = (): WebVitalsMetrics | null => {
   if (typeof window === 'undefined' || !window.performance) return null;
   
   const perfData = window.performance.timing;
-  const navigation = window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+//   const navigation = window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
   
   return {
     FCP: navigation?.responseStart - navigation?.fetchStart,
@@ -166,7 +166,7 @@ export const getConnectionQuality = (): 'slow' | 'medium' | 'fast' => {
                    (navigator as unknown as { webkitConnection?: { effectiveType?: string } }).webkitConnection;
   if (!connection) return 'medium';
   
-  const effectiveType = connection.effectiveType;
+//   const effectiveType = connection.effectiveType;
   if (effectiveType === 'slow-2g' || effectiveType === '2g') return 'slow';
   if (effectiveType === '3g') return 'medium';
   return 'fast';
@@ -176,8 +176,8 @@ export const getConnectionQuality = (): 'slow' | 'medium' | 'fast' => {
  * Adaptive loading based on network conditions
  */
 export const shouldLoadHeavyAssets = (): boolean => {
-  const quality = getConnectionQuality();
-  const saveData = typeof navigator !== 'undefined' && (navigator as unknown as { connection?: { saveData?: boolean } }).connection?.saveData;
+//   const quality = getConnectionQuality();
+//   const saveData = typeof navigator !== 'undefined' && (navigator as unknown as { connection?: { saveData?: boolean } }).connection?.saveData;
   return quality === 'fast' && !saveData;
 };
 
@@ -193,7 +193,7 @@ export const requestIdleCallback = (callback: IdleRequestCallback): number => {
   
   // Fallback for browsers that don't support requestIdleCallback
   return (window as unknown as { setTimeout: (fn: () => void, delay: number) => number }).setTimeout(() => {
-    const start = Date.now();
+//     const start = Date.now();
     callback({
       didTimeout: false,
       timeRemaining: () => Math.max(0, 50 - (Date.now() - start))
@@ -246,10 +246,10 @@ export const preloadCriticalResources = (): void => {
     document.head.appendChild(link);
   });
 };
-    const start = performance.now();
+//     const start = performance.now();
     fn();
-    const end = performance.now();
-    const duration = end - start;
+//     const end = performance.now();
+//     const duration = end - start;
     this.metrics.set(name, duration);
     return duration;
   }
@@ -283,8 +283,8 @@ public lazyLoadImages(): void {
   }
   
   const timing = window.performance.timing;
-  const loadTime = timing.loadEventEnd - timing.navigationStart;
-  const interactiveTime = timing.domInteractive - timing.navigationStart;
+//   const loadTime = timing.loadEventEnd - timing.navigationStart;
+//   const interactiveTime = timing.domInteractive - timing.navigationStart;
   
   if (loadTime > budget.maxFirstLoad) {
     violations.push(`First load time (${loadTime}ms) exceeds budget (${budget.maxFirstLoad}ms)`);
@@ -343,7 +343,7 @@ export const monitorLongTasks = (): void => {
   const observer = new PerformanceObserver((list) => {
     for (const entry of list.getEntries()) {
       if (entry.duration > 50) {
-        console.warn('Long task detected:', entry);
+//         console.warn('Long task detected:', entry);
       }
     }
   });
@@ -351,14 +351,14 @@ export const monitorLongTasks = (): void => {
   try {
     observer.observe({ entryTypes: ['longtask'] });
   } catch (error) {
-    console.warn('Long task monitoring not supported:', error);
+//     console.warn('Long task monitoring not supported:', error);
   }
 };
 
 export const cacheStaticAssets = (): void => {
   if (typeof window === 'undefined' || !('caches' in window)) return;
   
-  const cacheName = 'static-assets-v1';
+//   const cacheName = 'static-assets-v1';
   const assetsToCache = [
     '/',
     '/static/css/main.css',
@@ -384,8 +384,7 @@ export const clearOldCaches = (): void => {
 
 export default {
   prefetchResources,
-  preconnectDomains,
-  lazyLoadImages,
+  preconnectDomainsLoadImages,
 
   debounce,
   throttle,

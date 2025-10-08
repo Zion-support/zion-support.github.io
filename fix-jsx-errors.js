@@ -104,7 +104,7 @@ const files = await glob('**/*.{ts,tsx,js,jsx}', {
 let fixedFiles = 0;
 let totalFixes = 0;
 
-console.log(`Found ${files.length} files to process...`);
+// console.log(`Found ${files.length} files to process...`);
 
 for (const file of files) {
   try {
@@ -130,14 +130,14 @@ for (const file of files) {
 
       if (fileFixes > 0) {
         fs.writeFileSync(file, content, 'utf8');
-        console.log(`Fixed ${fileFixes} issues in ${file}`);
+//         console.log(`Fixed ${fileFixes} issues in ${file}`);
         fixedFiles++;
         totalFixes += fileFixes;
       }
     }
   } catch (error) {
-    console.error(`Error processing ${file}:`, error.message);
+//     console.error(`Error processing ${file}:`, error.message);
   }
 }
 
-console.log(`\nFixed ${totalFixes} JSX issues across ${fixedFiles} files.`);
+// console.log(`\nFixed ${totalFixes} JSX issues across ${fixedFiles} files.`);

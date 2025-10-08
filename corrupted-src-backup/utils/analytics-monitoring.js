@@ -35,7 +35,7 @@ export const analyticsUtils = {
     };
 
     // Send to analytics service
-    console.error('Error tracked:', errorData);
+//     console.error('Error tracked:', errorData);
 
     // You can integrate with services like Sentry, LogRocket, etc.
     return errorData;
@@ -53,7 +53,7 @@ export const analyticsUtils = {
       metadata,
     };
 
-    console.log('User interaction tracked:', interactionData);
+//     console.log('User interaction tracked:', interactionData);
     return interactionData;
   },
 
@@ -62,11 +62,11 @@ export const analyticsUtils = {
     if (typeof window !== 'undefined' && 'web-vitals' in window) {
       import('web-vitals').then(
         ({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
-          getCLS(console.log);
-          getFID(console.log);
-          getFCP(console.log);
-          getLCP(console.log);
-          getTTFB(console.log);
+//           getCLS(console.log);
+//           getFID(console.log);
+//           getFCP(console.log);
+//           getLCP(console.log);
+//           getTTFB(console.log);
         }
       );
     }

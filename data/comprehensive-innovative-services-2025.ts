@@ -25,7 +25,7 @@ export interface ComprehensiveInnovativeService {id: string;
   marketSize: string;
   growthRate: string;
   variant: ServiceVariant;
-  contactInfo: any;
+  contactInfo: unknown;
     mobile: string;
     email: string;
     address: string}
@@ -77,7 +77,7 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     marketSize: '$23.1B market',
     growthRate: '280% annual growth',
     variant: 'ai-futuristic',
-    contactInfo: any,
+    contactInfo: unknown,
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -128,7 +128,7 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     marketSize: '$1.8B market',
     growthRate: '500% annual growth',
     variant: 'quantum-futuristic',
-    contactInfo: any,
+    contactInfo: unknown,
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -179,7 +179,7 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     marketSize: '$18.5B market',
     growthRate: '320% annual growth',
     variant: 'security-futuristic',
-    contactInfo: any,
+    contactInfo: unknown,
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -230,7 +230,7 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     marketSize: '$12.8B market',
     growthRate: '250% annual growth',
     variant: 'cloud-futuristic',
-    contactInfo: any,
+    contactInfo: unknown,
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -281,7 +281,7 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     marketSize: '$15.2B market',
     growthRate: '300% annual growth',
     variant: 'data-futuristic',
-    contactInfo: any,
+    contactInfo: unknown,
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -332,7 +332,7 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     marketSize: '$19.9B market',
     growthRate: '400% annual growth',
     variant: 'blockchain-futuristic',
-    contactInfo: any,
+    contactInfo: unknown,
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -383,7 +383,7 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     marketSize: '$16.8B market',
     growthRate: '280% annual growth',
     variant: 'iot-futuristic',
-    contactInfo: any,
+    contactInfo: unknown,
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -434,7 +434,7 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     marketSize: '$26.5B market',
     growthRate: '350% annual growth',
     variant: 'fintech-futuristic',
-    contactInfo: any,
+    contactInfo: unknown,
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -485,7 +485,7 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     marketSize: '$31.2B market',
     growthRate: '450% annual growth',
     variant: 'ai-healthcare',
-    contactInfo: any,
+    contactInfo: unknown,
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -536,7 +536,7 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     marketSize: '$28.7B market',
     growthRate: '500% annual growth',
     variant: 'autonomous-futuristic',
-    contactInfo: any,
+    contactInfo: unknown,
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',

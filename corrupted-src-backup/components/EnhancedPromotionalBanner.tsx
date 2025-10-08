@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import type { EnhancedPromotionalBanner as BannerType } from '../content/enhanced-promotional-banners';
 
 interface EnhancedPromotionalBannerProps {

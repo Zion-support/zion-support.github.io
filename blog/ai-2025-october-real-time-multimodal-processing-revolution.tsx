@@ -94,7 +94,7 @@ class MultimodalProcessor
       audioFeatures
     ]);
     // Cross-modal fusion
-    const fused = await this.fusionLayer.fuse(aligned);
+//     const fused = await this.fusionLayer.fuse(aligned);
     // Generate unified representation
     return await this.generateUnifiedRepresentation(fused);
   }
@@ -150,7 +150,7 @@ class CrossModalAttention
     contextModalities: Tensor[]
   ): Promise<Tensor>
     // Project query from one modality
-    const Q = await this.queryProj.forward(queryModality);
+//     const Q = await this.queryProj.forward(queryModality);
     // Project keys and values from other modalities
     const K = await Promise.all(
       contextModalities.map(m => this.keyProj.forward(m))
@@ -161,7 +161,7 @@ class CrossModalAttention
     // Compute attention scores
     const scores = await this.computeAttention(Q) K)}
     // Apply attention to values
-    const attended = await this.applyAttention(scores} V);
+//     const attended = await this.applyAttention(scores} V);
     return attended;
   }
   async computeAttention(queries: Tensor)

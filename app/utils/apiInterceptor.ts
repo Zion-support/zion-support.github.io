@@ -79,11 +79,11 @@ export class APIInterceptor {
    */
   async request<T = unknown>(config: RequestConfig): Promise<APIResponse<T>> {
     const fullConfig = this.prepareRequest(config);
-    const cacheKey = this.getCacheKey(fullConfig);
+//     const cacheKey = this.getCacheKey(fullConfig);
 
     // Check cache for GET requests
     if (fullConfig.method === 'GET' && fullConfig.cache !== false && this.config.enableCaching) {
-      const cachedResponse = this.getFromCache(cacheKey);
+//       const cachedResponse = this.getFromCache(cacheKey);
       if (cachedResponse) {
         return cachedResponse as APIResponse<T>;
       }
@@ -95,7 +95,7 @@ export class APIInterceptor {
     }
 
     // Create the request promise
-    const requestPromise = this.executeRequest<T>(fullConfig);
+//     const requestPromise = this.executeRequest<T>(fullConfig);
     this.pendingRequests.set(cacheKey, requestPromise as Promise<APIResponse>);
 
     try {
@@ -116,7 +116,7 @@ export class APIInterceptor {
    * Execute the actual request
    */
   private async executeRequest<T>(config: RequestConfig, attempt = 1): Promise<APIResponse<T>> {
-    const startTime = performance.now();
+//     const startTime = performance.now();
     
     try {
       // Apply request interceptor
@@ -134,7 +134,7 @@ export class APIInterceptor {
       };
 
       const response = await fetch(url, fetchOptions);
-      const duration = performance.now() - startTime;
+//       const duration = performance.now() - startTime;
 
       // Record performance metric
       performanceMetrics.recordNetworkRequest(url, duration, response.status);
@@ -151,7 +151,7 @@ export class APIInterceptor {
       }
 
       // Parse response data
-      const data = await this.parseResponse<T>(finalResponse);
+//       const data = await this.parseResponse<T>(finalResponse);
 
       return {
         data,
@@ -161,8 +161,8 @@ export class APIInterceptor {
         config: finalConfig,
       };
     } catch (error) {
-      const duration = performance.now() - startTime;
-      const err = error as Error;
+//       const duration = performance.now() - startTime;
+//       const err = error as Error;
 
       // Record error metric
       performanceMetrics.recordNetworkRequest(
@@ -186,7 +186,7 @@ export class APIInterceptor {
 
       // Apply error interceptor
       if (this.config.interceptors?.error) {
-        const modifiedError = await this.config.interceptors.error(err);
+//         const modifiedError = await this.config.interceptors.error(err);
         throw modifiedError;
       }
 
@@ -306,7 +306,7 @@ export class APIInterceptor {
    * Parse response based on content type
    */
   private async parseResponse<T>(response: Response): Promise<T> {
-    const contentType = response.headers.get('content-type');
+//     const contentType = response.headers.get('content-type');
     
     if (contentType?.includes('application/json')) {
       return await response.json();
@@ -379,8 +379,8 @@ export class APIInterceptor {
   getCacheStats() {
     const entries = Array.from(this.cache.values());
     const now = Date.now();
-    const valid = entries.filter((e) => now <= e.expiresAt).length;
-    const expired = entries.length - valid;
+//     const valid = entries.filter((e) => now <= e.expiresAt).length;
+//     const expired = entries.length - valid;
 
     return {
       total: entries.length,

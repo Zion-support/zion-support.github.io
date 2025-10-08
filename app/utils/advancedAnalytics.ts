@@ -225,7 +225,7 @@ class AdvancedAnalytics {
     document.addEventListener('submit', (event) => {
       const form = event.target as HTMLFormElement;
       const formData = new FormData(form);
-      const formFields = Array.from(formData.keys());
+//       const formFields = Array.from(formData.keys());
       
       const submitEvent: UserEvent = {
         id: this.generateEventId(),
@@ -401,7 +401,7 @@ class AdvancedAnalytics {
         body: JSON.stringify(event)
       });
     } catch (error) {
-      console.warn('Failed to send analytics event:', error);
+//       console.warn('Failed to send analytics event:', error);
     }
   }
 
@@ -411,7 +411,7 @@ class AdvancedAnalytics {
   private async flushEventQueue(): Promise<void> {
     if (!this.isOnline) return;
 
-    const eventsToSend = [...this.eventQueue];
+//     const eventsToSend = [...this.eventQueue];
     this.eventQueue = [];
 
     for (const event of eventsToSend) {
@@ -431,9 +431,9 @@ class AdvancedAnalytics {
     text?: string;
   } {
     const tagName = element.tagName.toLowerCase();
-    const id = element.id || '';
-    const className = element.className || '';
-    const text = element.textContent?.trim();
+//     const id = element.id || '';
+//     const className = element.className || '';
+//     const text = element.textContent?.trim();
 
     // Determine category based on element type
     let category = 'interaction';
@@ -473,7 +473,7 @@ class AdvancedAnalytics {
    * Detect device type
    */
   private detectDevice(): 'desktop' | 'mobile' | 'tablet' {
-    const width = window.innerWidth;
+//     const width = window.innerWidth;
     if (width < 768) return 'mobile';
     if (width < 1024) return 'tablet';
     return 'desktop';
@@ -542,7 +542,7 @@ class AdvancedAnalytics {
     conversionRate: number;
   } {
     const events = this.currentSession.events;
-    const totalEvents = events.length;
+//     const totalEvents = events.length;
 
     const eventsByType = events.reduce((acc, event) => {
       acc[event.type] = (acc[event.type] || 0) + 1;
@@ -565,8 +565,8 @@ class AdvancedAnalytics {
       return acc;
     }, [] as Array<{ url: string; views: number }>).sort((a, b) => b.views - a.views);
 
-    const conversions = events.filter(e => e.category === 'conversion').length;
-    const conversionRate = totalEvents > 0 ? (conversions / totalEvents) * 100 : 0;
+//     const conversions = events.filter(e => e.category === 'conversion').length;
+//     const conversionRate = totalEvents > 0 ? (conversions / totalEvents) * 100 : 0;
 
     return {
       session: this.currentSession,
@@ -591,7 +591,7 @@ class AdvancedAnalytics {
         body: JSON.stringify(session)
       });
     } catch (error) {
-      console.warn('Failed to send session data:', error);
+//       console.warn('Failed to send session data:', error);
     }
   }
 

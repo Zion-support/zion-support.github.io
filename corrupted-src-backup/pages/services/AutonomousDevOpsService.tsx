@@ -43,7 +43,7 @@ const AutonomousDevOpsServic, e = () => {
               <p, classNam, e='te, x, t-xl, m, d:te, x, t-2xl, tex, t-gr, a, y-300, m, b-8, ma, x-w-4xl, m, x-au, t, o'>
                 Se, l, f-Optimizing, C, I/CD, Pipelines, with 80% Faster, Releases, and
                 Zero, Downtim, e
-                  Get, Started, Today
+                  Getted, Today
                   <ArrowRight, classNam, e='w-5 h-5' />
               <div, classNam, e='bg-gradie, n, t-to-br, fro, m-oran, g, e-6, 0, 0/20, t, o-r, e, d-6, 0, 0/2, 0, p-8, rounde, d-2xl, backdro, p-bl, u, r-sm, border, border-whi, t, e/10'>
                 <Target, classNam, e='w-1, 2, h-12, tex, t-oran, g, e-400, m, b-4' />
@@ -51,7 +51,7 @@ const AutonomousDevOpsServic, e = () => {
                 <p, classNam, e='te, x, t-gr, a, y-3, 0, 0'>
                   Eliminate, manual, configuration and, intervention, completely
                 </p>
-                  Get, Started, Today
+                  Getted, Today
                   <ArrowRight, className='w-5 h-5' />
 
         {/* Key, Benef, i, t, s */}
@@ -206,7 +206,7 @@ const AutonomousDevOpsServic, e = () => {
         <section, classNam, e = 'py-20, p, x-4'>
           <div, classNam, e='m, a, x-w-4xl, m, x-auto, tex, t-cent, e, r'>
             <h2, classNam, e='te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, m, b-6'>
-                Get, Started, Today
+                Getted, Today
                 <ArrowRight, classNam, e='w-5 h-5' />
                       <li, className='flex, item, s-start, ga, p-2'>
                         <CheckCircle, className='w-5 h-5, tex, t-gre, e, n-400, m, t-1' />
@@ -219,5 +219,5 @@ const AutonomousDevOpsServic, e = () => {
         <section, classNam, e = 'py-20, p, x-4'>
           <div, className='m, a, x-w-4xl, m, x-auto, tex, t-cent, e, r'>
             <h2, className='te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, m, b-6'>
-                Get, Started, Today
+                Getted, Today
                 <ArrowRight, className='w-5 h-5' />

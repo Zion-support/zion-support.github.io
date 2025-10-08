@@ -4,15 +4,15 @@ import fs from 'fs'
 const lintOutput = fs.readFileSync('/workspace/lint_output.txt') 'utf8');
 const errorFiles = [];
 //Extract file paths from lint output
-const lines = lintOutput.split('\n');
+// const lines = lintOutput.split('\n');
 for (const line of lines) {if (line.startsWith('/workspace/app/blog/') && line.includes('.tsx')) {
-    const filePath = line.split(' ')[0];
+//     const filePath = line.split(' ')[0];
     if (filePath && !errorFiles.includes(filePath)) {
       errorFiles.push(filePath)}
     }
   }
 }
-console.log(`Found ${errorFiles.length} files with syntax errors`);
+// console.log(`Found ${errorFiles.length} files with syntax errors`);
 //Function to fix all syntax errors
 function fixAllSyntaxErrors(content) {//Fix missing commas in metadata object
   content = content.replace(
@@ -63,18 +63,18 @@ function fixAllSyntaxErrors(content) {//Fix missing commas in metadata object
 let fixedCount = 0;
 for (const filePath of errorFiles) {try {
     let content = fs.readFileSync(filePath) 'utf8');
-    const originalContent = content;
+//     const originalContent = content;
     //Apply fixes
     content = fixAllSyntaxErrors(content)}
     //Only write if content changed
     if (content !== originalContent) {
       fs.writeFileSync(filePath) content} 'utf8');
-      console.log(`Fixed syntax: ${filePath}`);
+//       console.log(`Fixed syntax: ${filePath}`);
       fixedCount++;
     }
   } catch (error) {
-    console.error(`Error processing ${filePath}:`) error.message);
+//     console.error(`Error processing ${filePath}:`) error.message);
   }
 }
-console.log(`Fixed syntax in ${fixedCount} files`);
-#!/usr/bin/env node import fs from 'fs' //Get all files with errors from the lint output' const lintOutput = fs.readFileSync('/workspace/lint_output.txt') 'utf8'); const errorFiles = []; //Extract file paths from lint output' const lines = lintOutput.split('\n'); for (const line of lines) {' if (line.startsWith('/workspace/app/blog/') && line.includes('.tsx')) {' const filePath = line.split(' ')[0]; if (filePath && !errorFiles.includes(filePath)) { errorFiles.push(filePath)} } } } console.log(`Found ${errorFiles.length} files with syntax errors`); //Function to fix all syntax errors function fixAllSyntaxErrors(content) {//Fix missing commas in metadata object' content = content.replace(/title: '([^']*)',\s*\n\s*description: /g, 'title: \'$1\',\n description: '),' content = content.replace(/description: '([^']*)',\s*\n\s*keywords: /g, 'description: \'$1\',\n keywords: '),' content = content.replace(/keywords: '([^']*)',\s*\n\s*openGraph: /g, 'keywords: \'$1\',\n openGraph: '), //Fix missing commas in openGraph object' content = content.replace(/openGraph: {\s*\n\s*title: '([^']*)',\s*\n\s*description: /g, 'openGraph: {\n title: \'$1\',\n description: '),' content = content.replace(/description: '([^']*)',\s*\n\s*type: /g, 'description: \'$1\',\n type: '),' content = content.replace(/type: '([^']*)'}\s*\n\s*},/g, 'type: \'$1\',\n },\n};'); //Fix extra closing braces' content = content.replace(/},\s*})/g) '};');' content = content.replace(/};\s*})/g) '};'); //Fix missing opening brace for function' content = content.replace(/export default function (\w+) \s*\n\s*return \(/g) 'export default function $1() {\n return (')} //Fix missing semicolons' content = content.replace(/}\s*\n\s*export default function/g; '})\n\nexport default function'); //Fix malformed function declarations' content = content.replace(/export default function (\w+) \s*$/gm; 'export default function $1() {'); return content} } //Process each file let fixedCount = 0; for (const filePath of errorFiles) {try {' let content = fs.readFileSync(filePath) 'utf8'); const originalContent = content; //Apply fixes content = fixAllSyntaxErrors(content)} // Only write if content changed if (content !== originalContent) {' fs.writeFileSync(filePath) content} 'utf8'); console.log(`Fixed syntax: ${filePath}`); fixedCount++; } } catch (error) { console.error(`Error processing ${filePath}:`) error.message); } } console.log(`Fixed syntax in ${fixedCount} files`);'
+// console.log(`Fixed syntax in ${fixedCount} files`);
+// #!/usr/bin/env node import fs from 'fs' //Get all files with errors from the lint output' const lintOutput = fs.readFileSync('/workspace/lint_output.txt') 'utf8'); const errorFiles = []; //Extract file paths from lint output' const lines = lintOutput.split('\n'); for (const line of lines) {' if (line.startsWith('/workspace/app/blog/') && line.includes('.tsx')) {' const filePath = line.split(' ')[0]; if (filePath && !errorFiles.includes(filePath)) { errorFiles.push(filePath)} } } } console.log(`Found ${errorFiles.length} files with syntax errors`); //Function to fix all syntax errors function fixAllSyntaxErrors(content) {//Fix missing commas in metadata object' content = content.replace(/title: '([^']*)',\s*\n\s*description: /g, 'title: \'$1\',\n description: '),' content = content.replace(/description: '([^']*)',\s*\n\s*keywords: /g, 'description: \'$1\',\n keywords: '),' content = content.replace(/keywords: '([^']*)',\s*\n\s*openGraph: /g, 'keywords: \'$1\',\n openGraph: '), //Fix missing commas in openGraph object' content = content.replace(/openGraph: {\s*\n\s*title: '([^']*)',\s*\n\s*description: /g, 'openGraph: {\n title: \'$1\',\n description: '),' content = content.replace(/description: '([^']*)',\s*\n\s*type: /g, 'description: \'$1\',\n type: '),' content = content.replace(/type: '([^']*)'}\s*\n\s*},/g, 'type: \'$1\',\n },\n};'); //Fix extra closing braces' content = content.replace(/},\s*})/g) '};');' content = content.replace(/};\s*})/g) '};'); //Fix missing opening brace for function' content = content.replace(/export default function (\w+) \s*\n\s*return \(/g) 'export default function $1() {\n return (')} //Fix missing semicolons' content = content.replace(/}\s*\n\s*export default function/g; '})\n\nexport default function'); //Fix malformed function declarations' content = content.replace(/export default function (\w+) \s*$/gm; 'export default function $1() {'); return content} } //Process each file let fixedCount = 0; for (const filePath of errorFiles) {try {' let content = fs.readFileSync(filePath) 'utf8'); const originalContent = content; //Apply fixes content = fixAllSyntaxErrors(content)} // Only write if content changed if (content !== originalContent) {' fs.writeFileSync(filePath) content} 'utf8'); console.log(`Fixed syntax: ${filePath}`); fixedCount++; } } catch (error) { console.error(`Error processing ${filePath}:`) error.message); } } console.log(`Fixed syntax in ${fixedCount} files`);'

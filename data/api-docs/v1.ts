@@ -60,18 +60,18 @@ const baseUrl = 'https://api.zion.os'
 const baseUrl = 'https://api.zion.os'
 const v1: ApiDocsSpec =,
   openapi: '3.0.0',
-  info: any,
+  info: unknown,
     title: 'Zion OS API',
     version: '1.0.0',
     description: 'Zion OS API Documentation'
   },
   servers: [{ url: baseUrl }],
-  paths: '/v1/nation/stats': any;
-      get: any,
+  paths: '/v1/nation/stats': unknown;
+      get: unknown,
         summary: 'Get Nation Stats',
-        responses: '200': any,
+        responses: '200': unknown,
             description: 'Success',
-            content: 'application/json': any,
+            content: 'application/json': unknown,
                 schema: { type: 'object' }
               }
             }
@@ -90,7 +90,7 @@ const v1: ApiDocsSpec =,
           description: 'List job postings with optional filters.', path: '/v1/jobs',
           method: 'GET', visibility: 'public',
           auth: ['jwt'],
-          query: any,
+          query: unknown,
        q: 'Search text', status: 'open|closed'
     },
     responseBodySchema: {type: 'object', properties: { items: { type: 'array'} items: { type: 'object' } }, nextPage: { type: 'string' } } },

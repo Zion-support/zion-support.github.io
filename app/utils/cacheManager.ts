@@ -92,7 +92,7 @@ export class CacheManager {
         const key = localStorage.key(i);
         if (key && key.startsWith('cache_')) {
           try {
-            const item = localStorage.getItem(key);
+//             const item = localStorage.getItem(key);
             if (item) {
               const entry = JSON.parse(item) as CacheEntry<unknown>;
               if (this.isExpired(entry, now)) {
@@ -134,7 +134,7 @@ export class CacheManager {
     value: T,
     options: { ttl?: number } = {}
   ): void {
-    const ttl = options.ttl !== undefined ? options.ttl : this.defaultTTL;
+//     const ttl = options.ttl !== undefined ? options.ttl : this.defaultTTL;
 
     const entry: CacheEntry<T> = {
       value,
@@ -183,7 +183,7 @@ export class CacheManager {
       entry = this.memoryCache.get(key) as CacheEntry<T> | undefined || null;
     } else if (this.storage === CacheStorage.LocalStorage && typeof window !== 'undefined' && window.localStorage) {
       try {
-        const item = localStorage.getItem(this.getStorageKey(key));
+//         const item = localStorage.getItem(this.getStorageKey(key));
         if (item) {
           entry = JSON.parse(item) as CacheEntry<T>;
         }
@@ -192,7 +192,7 @@ export class CacheManager {
       }
     } else if (this.storage === CacheStorage.SessionStorage && typeof window !== 'undefined' && window.sessionStorage) {
       try {
-        const item = sessionStorage.getItem(this.getStorageKey(key));
+//         const item = sessionStorage.getItem(this.getStorageKey(key));
         if (item) {
           entry = JSON.parse(item) as CacheEntry<T>;
         }
@@ -280,15 +280,15 @@ export class CacheManager {
     fn: () => T | Promise<T>,
     options: { ttl?: number } = {}
   ): T | Promise<T> {
-    const cached = this.get<T>(key);
+//     const cached = this.get<T>(key);
 
     if (cached !== undefined) {
       return cached;
     }
 
-    const start = performance.now();
+//     const start = performance.now();
     const value = fn();
-    const duration = performance.now() - start;
+//     const duration = performance.now() - start;
 
     performanceMonitoring.recordCustomMetric(`cache_compute_${key}`, duration, 'ms');
 
@@ -312,15 +312,15 @@ export class CacheManager {
     fn: () => Promise<T> | T,
     options: { ttl?: number } = {}
   ): Promise<T> {
-    const cached = this.get<T>(key);
+//     const cached = this.get<T>(key);
 
     if (cached !== undefined) {
       return cached;
     }
 
-    const start = performance.now();
+//     const start = performance.now();
     const value = await fn();
-    const duration = performance.now() - start;
+//     const duration = performance.now() - start;
 
     performanceMonitoring.recordCustomMetric(`cache_compute_${key}`, duration, 'ms');
 
@@ -350,7 +350,7 @@ export class CacheManager {
    * Get cache statistics
    */
   getStatistics(): CacheStats {
-    const total = this.stats.hits + this.stats.misses;
+//     const total = this.stats.hits + this.stats.misses;
     return {
       hits: this.stats.hits,
       misses: this.stats.misses,

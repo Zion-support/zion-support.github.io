@@ -6,7 +6,7 @@ import { glob } from 'glob';
 //Find all TypeScript/JSX files in src/components
 const files = await glob('src/components/**/*.{tsx,ts}');
 
-console.log(`Found ${files.length} files to check...`);
+// console.log(`Found ${files.length} files to check...`);
 
 let fixedFiles = 0;
 
@@ -40,12 +40,12 @@ for (const filePath of files) {
 
     if (content !== originalContent) {
       fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed: ${filePath}`);
+//       console.log(`Fixed: ${filePath}`);
       fixedFiles++;
     }
   } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
+//     console.error(`Error processing ${filePath}:`, error.message);
   }
 }
 
-console.log(`\nFixed ${fixedFiles} files.`);
+// console.log(`\nFixed ${fixedFiles} files.`);

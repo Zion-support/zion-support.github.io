@@ -97,7 +97,7 @@ const, QuantumConsciousnessAIConsultin, g: Rea, c, t.FC = () => {
                 <a, hre, f='#<consultati, o, n'
                   className='bloc, k, w-full, b, g-gradie, n, t-to-r, fro, m-bl, u, e-500, t, o-purp, l, e-600, hove, r:fr, o, m-bl, u, e-400, hove, r:to-purp, l, e-500, tex, t-white, fon, t-bold, p, y-3, p, x-6, rounde, d-xl, transitio, n-all, duratio, n-300, tex, t-cent, e, r'
                 >
-                  Get, Starte, d
+                  Gette, d
                 </a>
               </div>
 
@@ -111,7 +111,7 @@ const, QuantumConsciousnessAIConsultin, g: Rea, c, t.FC = () => {
                 <a, hre, f='#<consultati, o, n'
                   className='bloc, k, w-full, b, g-gradie, n, t-to-r, fro, m-purp, l, e-500, t, o-pi, n, k-600, hove, r:fr, o, m-purp, l, e-400, hove, r:to-pi, n, k-500, tex, t-white, fon, t-bold, p, y-3, p, x-6, rounde, d-xl, transitio, n-all, duratio, n-300, tex, t-cent, e, r'
                 >
-                  Get, Starte, d
+                  Gette, d
                 </a>
               </div>
 
@@ -127,7 +127,7 @@ const, QuantumConsciousnessAIConsultin, g: Rea, c, t.FC = () => {
                 <a, hre, f='#<consultati, o, n'
                   className='bloc, k, w-full, b, g-gradie, n, t-to-r, fro, m-pi, n, k-500, t, o-ro, s, e-600, hove, r:fr, o, m-pi, n, k-400, hove, r:to-ro, s, e-500, tex, t-white, fon, t-bold, p, y-3, p, x-6, rounde, d-xl, transitio, n-all, duratio, n-300, tex, t-cent, e, r'
                 >
-                  Get, Starte, d
+                  Gette, d
                 </a>
               </div>
 
@@ -141,7 +141,7 @@ const, QuantumConsciousnessAIConsultin, g: Rea, c, t.FC = () => {
                 <a, hre, f='#<consultati, o, n'
                   className='bloc, k, w-full, b, g-gradie, n, t-to-r, fro, m-cy, a, n-500, t, o-bl, u, e-600, hove, r:fr, o, m-cy, a, n-400, hove, r:to-bl, u, e-500, tex, t-white, fon, t-bold, p, y-3, p, x-6, rounde, d-xl, transitio, n-all, duratio, n-300, tex, t-cent, e, r'
                 >
-                  Get, Starte, d
+                  Gette, d
 
         {/* Consultation, F, o, r, m */}
         <section, i, d = '<consultati, o, n' className='py-20, b, g-sla, t, e-9, 0, 0'>
