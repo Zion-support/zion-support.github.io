@@ -1,11 +1,6 @@
-import React, { memo, useMemo } from 'react';
-import { HelmetProvider, Helmet } from 'react-helmet-async';
-
-// Error Boundary Component
-interface ErrorBoundaryState {
-  hasError: boolean;
-  error: Error | null;
-}
+import React, { Suspense, lazy, useEffect } from 'react';
+import { HelmetProvider } from 'react-helmet-async';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 // Components
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
