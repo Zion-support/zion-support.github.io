@@ -233,7 +233,7 @@ class PerformanceMonitor {
       const clsObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
         entries.forEach((entry: unknown) => {
-          const clsEntry = entry as any;
+          const clsEntry = entry as LayoutShift;
           if (!clsEntry.hadRecentInput) {
             clsValue += clsEntry.value;
           }
@@ -311,7 +311,7 @@ class PerformanceMonitor {
       resourceObserver.observe({ entryTypes: ['resource'] });
       this.observers.push(resourceObserver);
     } catch (error) {
-//       console.warn('Failed to observe resource timing:', error);
+      console.warn('Failed to observe resource timing:', error);
     }
   }
 
