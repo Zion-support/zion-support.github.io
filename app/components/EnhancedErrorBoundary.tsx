@@ -99,6 +99,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     }
   }
 
+
   private trackError(error: Error): void {
     if (typeof window !== 'undefined') {
       const windowWithGtag = window as Window & {
