@@ -1,6 +1,3 @@
-'use client';
-
-import Link from 'next/link';
 import { ArrowLeft, Home, Search, BookOpen, Users, Phone } from 'lucide-react';
 
 export default function NotFound() {
@@ -20,6 +17,12 @@ export default function NotFound() {
     {
     },
     {
+      title: 'Case Studies',
+      description: 'See our success stories and client results',
+      href: '/case-studies',
+      icon: '📊'
+    },
+    {
       title: 'Contact Us',
       description: 'Get in touch with our AI experts',
       href: '/contact',
@@ -37,11 +40,6 @@ export default function NotFound() {
         </div>
 
         {/* Error Message */}
-        <div className="mb-8">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">
-            Oops! Page Not Found
-          </h2>
-          <p className="text-lg text-gray-600 mb-6">
             The page you're looking for doesn't exist or has been moved. 
             Don't worry, let's get you back on track!
           </p>
@@ -50,12 +48,37 @@ export default function NotFound() {
             {popularPages.map((page, index) => (
               <Link
                 key={index}
-                href={page.href}
               </Link>
             ))}
           </div>
         </div>
 
+        </div>
+
+        {/* Search Suggestion */}
+        <div className="mt-12 bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8">
+          <h3 className="text-xl font-bold text-white mb-4">
+            Can't find what you're looking for?
+          </h3>
+          <p className="text-gray-300 mb-6">
+            Try searching for what you need or contact our support team.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-3 justify-center">
+            <Link
+              to="/search"
+              className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300"
+            >
+              <Search className="w-4 h-4 mr-2" />
+              Search Our Site
+            </Link>
+            <Link
+              to="/contact"
+              className="inline-flex items-center px-6 py-3 bg-white/20 text-white border border-white/30 rounded-lg hover:bg-white/30 transition-all duration-300"
+            >
+              <Phone className="w-4 h-4 mr-2" />
+              Contact Support
+            </Link>
+          </div>
         </div>
       </div>
     </div>

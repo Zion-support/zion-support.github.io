@@ -3,7 +3,6 @@
  */
 
 // Debounce function for performance optimization
-export const debounce = <T extends (...args: any[]) => any>(
   func: T,
   wait: number,
   immediate = false
@@ -14,7 +13,6 @@ export const debounce = <T extends (...args: any[]) => any>(
       timeout = null;
       if (!immediate) func(...args);
     };
-    
     const callNow = immediate && !timeout;
     if (timeout) clearTimeout(timeout);
     timeout = setTimeout(later, wait);
@@ -23,15 +21,10 @@ export const debounce = <T extends (...args: any[]) => any>(
 };
 
 // Throttle function for performance optimization
-export const throttle = <T extends (...args: any[]) => any>(
   func: T,
   limit: number
 ): ((...args: Parameters<T>) => void) => {
   let inThrottle: boolean;
-  return function executedFunction(this: any, ...args: Parameters<T>) {
-    if (!inThrottle) {
-      func.apply(this, args);
-      inThrottle = true;
     }
   };
 };
@@ -63,4 +56,3 @@ export const optimizeScrollPerformance = (): void => {
   };
 
   window.addEventListener('scroll', requestTick, { passive: true });
-};

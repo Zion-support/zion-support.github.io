@@ -7,9 +7,16 @@
 
 // Meta tags management
 export const setMetaTags = (tags: Record<string, string>): void => {
+=======
+
+// Meta tags management
+export const setMetaTags = (tags: Record<string, string>): void => {
   if (typeof document === 'undefined') return;
   
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3f25:utils/seoUtils.ts
+
+// Meta tags management
+export const setMetaTags = (tags: Record<string, string>): void => {
+>>>>>>> origin/main
   Object.entries(tags).forEach(([name, content]) => {
     let meta = document.querySelector(`meta[name="${name}"]`) as HTMLMetaElement;
     if (!meta) {
@@ -27,7 +34,6 @@ export const setMetaTags = (tags: Record<string, string>): void => {
     'og:url': ogData.url,
   };
 
-=======
     'og: title': ogData.title,
     'og: description': ogData.description,
     'og: image': ogData.image,
@@ -35,30 +41,30 @@ export const setMetaTags = (tags: Record<string, string>): void => {
     'og: type': ogData.type || 'website',
     'og: site_name': ogData.siteName
   };
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3b0a
-=======
     'og:type': ogData.type || 'website',
     'og:site_name': ogData.siteName
   };
   
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8
   Object.entries(ogTags).forEach(([property, content]) => {
-=======
 }): void => {
 =======
-// Open Graph tags management
-export const setOpenGraphTags = (tags: Record<string, string>): void => {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3f25:utils/seoUtils.ts
+>>>>>>> origin/main
   if (typeof document === 'undefined') return;
+
+  const ogTags = [
+    { property: 'og:title', content: ogData.title },
+    { property: 'og:description', content: ogData.description },
+    { property: 'og:image', content: ogData.image },
+    { property: 'og:url', content: ogData.url },
+    { property: 'og:type', content: ogData.type || 'website' }
+  ];
+
+  ogTags.forEach(({ property, content }) => {
+    'og:type': ogData.type || 'website',
+    'og:site_name': ogData.siteName
+  };
   
-  Object.entries(tags).forEach(([property, content]) => {
-    let meta = document.querySelector(`meta[property="${property}"]`) as HTMLMetaElement;
-    if (!meta) {
-      meta = document.createElement('meta');
-      meta.setAttribute('property', property);
-      document.head.appendChild(meta);
     }
-    meta.content = content;
   });
 };
 
@@ -67,7 +73,6 @@ export const setOpenGraphTags = (tags: Record<string, string>): void => {
   image?: string;
 }): void => {
   const twitterTags = {
-=======
   title?: string;
   description?: string;
   image?: string;
@@ -83,31 +88,33 @@ export const setOpenGraphTags = (tags: Record<string, string>): void => {
     'twitter:site': twitterData.site
   };
   
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8
   Object.entries(twitterTags).forEach(([name, content]) => {
-=======
 }): void => {
 =======
-// Twitter Card tags management
-export const setTwitterCardTags = (tags: Record<string, string>): void => {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3f25:utils/seoUtils.ts
+>>>>>>> origin/main
   if (typeof document === 'undefined') return;
+
+  const twitterTags = [
+    { name: 'twitter:card', content: twitterData.card || 'summary_large_image' },
+    { name: 'twitter:title', content: twitterData.title },
+    { name: 'twitter:description', content: twitterData.description },
+    { name: 'twitter:image', content: twitterData.image },
+    { name: 'twitter:site', content: twitterData.site },
+    { name: 'twitter:creator', content: twitterData.creator }
+  ];
+
+  twitterTags.forEach(({ name, content }) => {
+    'twitter:card': twitterData.card || 'summary_large_image',
+    'twitter:site': twitterData.site,
+    'twitter:creator': twitterData.creator,
+    'twitter:title': twitterData.title,
+    'twitter:description': twitterData.description,
+    'twitter:image': twitterData.image
+  };
   
-  Object.entries(tags).forEach(([name, content]) => {
-    let meta = document.querySelector(`meta[name="${name}"]`) as HTMLMetaElement;
-    if (!meta) {
-      meta = document.createElement('meta');
-      meta.name = name;
-      document.head.appendChild(meta);
     }
-    meta.content = content;
   });
 };
-=======
-
-// Structured data
-export const setStructuredData = (data: any): void => {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8
 =======
 
 // Structured data
@@ -119,6 +126,30 @@ export const setStructuredData = (data: object): void => {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-3f25:utils/seoUtils.ts
   if (typeof document === 'undefined') return;
   
+=======
+
+// Structured data
+export const setStructuredData = (data: Record<string, unknown>): void => {
+// Structured data (JSON-LD)
+export const setStructuredData = (data: any): void => {
+  // Remove existing structured data
+  const existingScript = document.querySelector(
+    'script[type="application/ld+json"]'
+  );
+  if (existingScript) {
+    existingScript.remove();
+  }
+  
+  // Add new structured data
+
+// Structured data
+export const setStructuredData = (data: any): void => {
+
+// Structured data
+export const setStructuredData = (data: any): void => {
+  if (typeof document === 'undefined') return;
+
+>>>>>>> origin/main
   const script = document.createElement('script');
   script.type = 'application/ld+json';
   script.textContent = JSON.stringify(data);
@@ -132,8 +163,6 @@ export const setCanonicalUrl = (url: string): void => {
     canonical = document.createElement('link');
     canonical.rel = 'canonical';
     document.head.appendChild(canonical);
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
   }
   link.href = url;
 };
@@ -152,6 +181,8 @@ export const setPageTitle = (title: string): void => {
 export const setCanonicalUrl = (url: string): void => {
   if (typeof document === 'undefined') return;
   
+=======
+>>>>>>> origin/main
   let link = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
   if (!link) {
     link = document.createElement('link');
@@ -164,10 +195,16 @@ export const setCanonicalUrl = (url: string): void => {
 // Title management
 export const setTitle = (title: string): void => {
   if (typeof document === 'undefined') return;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3f25:utils/seoUtils.ts
   document.title = title;
 };
 
+=======
+  document.title = title;
+};
+
+// Description management
+export const setDescription = (description: string): void => {
+>>>>>>> origin/main
   setMetaTags({ description });
 };
 
@@ -186,7 +223,6 @@ export const setRobots = (robots: string): void => {
   }
   meta.content = viewport;
 };
-=======
 
 // SEO audit
 export const seoAudit = async (): Promise<{
@@ -211,8 +247,7 @@ export const seoAudit = async (): Promise<{
 
   return results;
 =======
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3f25:utils/seoUtils.ts
+>>>>>>> origin/main
 // Generate sitemap
 export const generateSitemap = (urls: string[]): string => {
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
@@ -319,4 +354,3 @@ export default {
   generateSitemap,
   calculateSEOScore,
   getSEORecommendations
-};

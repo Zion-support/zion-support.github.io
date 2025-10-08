@@ -7,7 +7,7 @@ exports.handler = async function () {
     process.env.DEPLOY_PRIME_URL ||
     ''
   ).replace(/\/$/, '');
-  
+
   const githubToken = process.env.GITHUB_TOKEN || '';
   const githubRepo = process.env.GITHUB_REPO || 'Zion-Holdings/zion.app';
   const githubBranch = process.env.GIT_BRANCH || 'main';
@@ -45,7 +45,8 @@ exports.handler = async function () {
 
   function extractJsonLd(html) {
     const scripts = [];
-    const regex = /<script[^>]*type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/gi;
+    const regex =
+      /<script[^>]*type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/gi;
     let m;
     while ((m = regex.exec(html)) !== null) {
       const content = m[1].trim();
@@ -55,18 +56,22 @@ exports.handler = async function () {
   }
 
   async function commitFile(path, content, message) {
-    if (!githubToken) return { ok: false, status: 0, error: 'No GITHUB_TOKEN provided' };
-    
+    if (!githubToken)
+      return { ok: false, status: 0, error: 'No GITHUB_TOKEN provided' };
+
     const headers = {
       Authorization: `token ${githubToken}`,
       'Content-Type': 'application/json',
-      'User-Agent': 'netlify-structured-data-auditor'
+      'User-Agent': 'netlify-structured-data-auditor',
     };
 
     // get sha if exists
     let sha;
     try {
-      const getRes = await fetch(`https://api.github.com/repos/${githubRepo}/contents/${encodeURIComponent(path)}?ref=${encodeURIComponent(githubBranch)}`, { headers });
+      const getRes = await fetch(
+        `https://api.github.com/repos/${githubRepo}/contents/${encodeURIComponent(path)}?ref=${encodeURIComponent(githubBranch)}`,
+        { headers }
+      );
       if (getRes.ok) {
         const json = await getRes.json();
         sha = json.sha;
@@ -76,16 +81,19 @@ exports.handler = async function () {
     const body = {
       message,
       content: Buffer.from(content).toString('base64'),
-      branch: githubBranch
+      branch: githubBranch,
     };
     if (sha) body.sha = sha;
 
-    const putRes = await fetch(`https://api.github.com/repos/${githubRepo}/contents/${encodeURIComponent(path)}`, {
-      method: 'PUT',
-      headers,
-      body: JSON.stringify(body)
-    });
-    
+    const putRes = await fetch(
+      `https://api.github.com/repos/${githubRepo}/contents/${encodeURIComponent(path)}`,
+      {
+        method: 'PUT',
+        headers,
+        body: JSON.stringify(body),
+      }
+    );
+
     const ok = putRes.ok;
     const status = putRes.status;
     let error;
@@ -103,7 +111,7 @@ exports.handler = async function () {
     if (!baseUrl) {
       return {
         statusCode: 200,
-        body: JSON.stringify({ ok: false, error: 'No base URL' })
+        body: JSON.stringify({ ok: false, error: 'No base URL' }),
       };
     }
 
@@ -132,7 +140,12 @@ exports.handler = async function () {
       }
 
       if (parsed.length > 0) pagesWithJsonLd += 1;
-      results.push({ url, ok: true, status: res.status, jsonLdCount: parsed.length });
+      results.push({
+        url,
+        ok: true,
+        status: res.status,
+        jsonLdCount: parsed.length,
+      });
     }
 
     const summary = {
@@ -141,9 +154,9 @@ exports.handler = async function () {
       totals: {
         pages: urls.length,
         pagesWithJsonLd,
-        pagesMissingJsonLd: urls.length - pagesWithJsonLd
+        pagesMissingJsonLd: urls.length - pagesWithJsonLd,
       },
-      results
+      results,
     };
 
     const jsonContent = JSON.stringify(summary, null, 2);
@@ -157,7 +170,7 @@ exports.handler = async function () {
       `- Missing JSON-LD: ${urls.length - pagesWithJsonLd}`,
       '',
       '## Pages',
-      ...results.map(r => `- ${r.url} — JSON-LD blocks: ${r.jsonLdCount || 0}`)
+      ...results.map(r => `- ${r.url} — JSON-LD blocks: ${r.jsonLdCount || 0}`),
     ];
 
     const jsonPath = 'automation/reports/structured-data-report.json';
@@ -166,18 +179,23 @@ exports.handler = async function () {
 
     const [jsonRes, mdRes] = await Promise.all([
       commitFile(jsonPath, jsonContent, msg),
-      commitFile(mdPath, mdLines.join('\n'), msg)
+      commitFile(mdPath, mdLines.join('\n'), msg),
     ]);
 
     return {
       statusCode: 200,
-      body: JSON.stringify({ ok: true, jsonRes, mdRes, totals: summary.totals })
+      body: JSON.stringify({
+        ok: true,
+        jsonRes,
+        mdRes,
+        totals: summary.totals,
+      }),
     };
   } catch (e) {
     log(String(e));
     return {
       statusCode: 500,
-      body: JSON.stringify({ ok: false, error: String(e) })
+      body: JSON.stringify({ ok: false, error: String(e) }),
     };
   }
 };

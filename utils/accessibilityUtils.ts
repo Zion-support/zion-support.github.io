@@ -61,21 +61,17 @@ export const ariaUtils = {
   },
 
   // Set ARIA attributes
-  setAriaAttributes: (element: HTMLElement, attributes: Record<string, string>): void => {
     Object.entries(attributes).forEach(([key, value]) => {
       element.setAttribute(key, value);
     });
   },
 
   // Announce to screen readers
-  announce: (message: string, priority: 'polite' | 'assertive' = 'polite'): void => {
     const announcement = document.createElement('div');
     announcement.setAttribute('aria-live', priority);
     announcement.setAttribute('aria-atomic', 'true');
     announcement.className = 'sr-only';
     announcement.textContent = message;
-    
-    document.body.appendChild(announcement);
     setTimeout(() => {
       document.body.removeChild(announcement);
     }, 1000);
@@ -89,10 +85,6 @@ export const keyboardNavigation = {
     event: KeyboardEvent,
     items: HTMLElement[],
     currentIndex: number,
-    orientation: 'horizontal' | 'vertical' = 'vertical',
-  ): number => {
-    const isVertical = orientation === 'vertical';
-    const isHorizontal = orientation === 'horizontal';
     switch (event.key) {
       case isVertical ? 'ArrowDown' : 'ArrowRight':
         event.preventDefault();
@@ -126,10 +118,6 @@ export const colorContrast = {
       c = c / 255;
       return c <= 0.03928 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4);
     });
-    return 0.2126 * (rs || 0) + 0.7152 * (gs || 0) + 0.0722 * (bs || 0);
-  },
-  // Calculate contrast ratio
-  getContrastRatio: (color1: [number, number, number], color2: [number, number, number]): number => {
     const lum1 = colorContrast.getLuminance(...color1);
     const lum2 = colorContrast.getLuminance(...color2);
     const brightest = Math.max(lum1, lum2);
@@ -165,7 +153,6 @@ export const formAccessibility = {
   // Associate label with input
   associateLabel: (
     input: HTMLInputElement,
-    labelText: string,
   ): HTMLLabelElement => {
     const label = document.createElement('label');
     label.textContent = labelText;
@@ -182,36 +169,10 @@ export const formAccessibility = {
   },
 
   // Check color contrast
-  checkContrast: (foreground: string, background: string, level: 'AA' | 'AAA' = 'AA'): boolean => {
     const thresholds = { AA: 4.5, AAA: 7 };
     // Simplified contrast calculation - in real implementation, use a proper color contrast library
     const contrastRatio = 4.5; // Placeholder
     return contrastRatio >= thresholds[level];
-  },
-};
-// Form accessibility utilities (extended)
-export const formAccessibilityExtended = {
-  // Add error message association
-  addErrorMessage: (input: HTMLInputElement, errorMessage: string): void => {
-    const errorId = `error-${input.id}`;
-    const errorElement = document.createElement('div');
-    errorElement.id = errorId;
-    errorElement.className = 'error-message';
-    errorElement.textContent = errorMessage;
-    errorElement.setAttribute('role', 'alert');
-    input.setAttribute('aria-describedby', errorId);
-    input.setAttribute('aria-invalid', 'true');
-    input.parentNode?.insertBefore(errorElement, input.nextSibling);
-  },
-  // Remove error message
-  removeErrorMessage: (input: HTMLInputElement): void => {
-    const errorId = input.getAttribute('aria-describedby');
-    if (errorId) {
-      const errorElement = document.getElementById(errorId);
-      errorElement?.remove();
-      input.removeAttribute('aria-describedby');
-      input.removeAttribute('aria-invalid');
-    }
   },
 };
 // Screen reader utilities
@@ -244,10 +205,6 @@ export const accessibilityTesting = {
     const empty = images.filter(img => img.getAttribute('alt') === '');
     return { missing, empty };
   },
-  // Check for missing form labels
-  checkFormLabels: (): HTMLInputElement[] => {
-    const inputs = Array.from(
-      document.querySelectorAll('input, select, textarea'),
     );
     return inputs.filter(input => {
       const id = input.id;
@@ -257,29 +214,19 @@ export const accessibilityTesting = {
       return !label && !ariaLabel && !ariaLabelledBy;
     }) as HTMLInputElement[];
   },
-  // Check for proper heading hierarchy
-  checkHeadingHierarchy: (): { issues: string[]; structure: string[] } => {
-    const headings = Array.from(
-      document.querySelectorAll('h1, h2, h3, h4, h5, h6'),
     );
     const issues: string[] = [];
     const structure: string[] = [];
     let previousLevel = 0;
-    headings.forEach((heading, index) => {
-      const level = parseInt(heading.tagName[1] || '0');
-      structure.push(`${heading.tagName}: ${heading.textContent?.trim() || ''}`);
       if (index === 0 && level !== 1) {
         issues.push('First heading should be h1');
       }
       if (level > previousLevel + 1) {
         issues.push(
-          `Heading level skipped from h${previousLevel} to h${level}`,
         );
       }
       previousLevel = level;
     });
-    return { issues, structure };
-  },
   // Generate accessibility report
   generateReport: (): {
     images: { missing: number; empty: number };
@@ -315,43 +262,8 @@ export const accessibilityTesting = {
       'select:not([disabled])',
       'textarea:not([disabled])',
       'a[href]',
-      '[tabindex]:not([tabindex="-1"])'
     ];
     return focusableSelectors.some(selector => element.matches(selector));
-  },
-};
-
-// Motion accessibility utilities
-export const motionAccessibility = {
-  // Check if user prefers reduced motion
-  prefersReducedMotion: (): boolean => {
-    return window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  },
-  // Apply reduced motion styles
-  applyReducedMotion: (element: HTMLElement): void => {
-    if (motionAccessibility.prefersReducedMotion()) {
-      element.style.animation = 'none';
-      element.style.transition = 'none';
-    }
-  },
-};
-
-// Screen reader utilities
-export const screenReader = {
-  // Hide element from screen readers
-  hideFromScreenReader: (element: HTMLElement): void => {
-    element.setAttribute('aria-hidden', 'true');
-  },
-  // Show element to screen readers
-  showToScreenReader: (element: HTMLElement): void => {
-    element.removeAttribute('aria-hidden');
-  },
-  // Create screen reader only text
-  createScreenReaderText: (text: string): HTMLElement => {
-    const element = document.createElement('span');
-    element.textContent = text;
-    element.className = 'sr-only';
-    return element;
   },
 };
 
@@ -380,4 +292,3 @@ export const initAccessibility = (): void => {
     skipLink.style.top = '-40px';
   });
   document.body.insertBefore(skipLink, document.body.firstChild);
-};

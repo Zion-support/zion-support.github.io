@@ -1,38 +1,16 @@
 import type { ProviderConnection, SyncLogEntry } from './types';
-import { v4 as uuidv4 } from 'uuid';
-// Simple UUID v4 implementation
-function uuidv4(): string {
-  return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
-    const r = Math.random() * 16 | 0;
-    const v = c === 'x' ? r : (r & 0x3 | 0x8);
-    return v.toString(16);
-  });
-}
-import { ProviderConnection, SyncLogEntry } from './types';
-import { v4 as uuidv4 } from 'uuid';
->>>>>>> cursor/fix-errors-and-merge-to-main-bd65
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-e42d
 import type { ProviderConnection, SyncLogEntry } from './types';
+=======
+>>>>>>> origin/main
 
 export async function simulateAction<T = unknown>(
-=======
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-6231
-
-export async function simulateAction<T = any>(
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-4854
   connection: ProviderConnection,
   action: string,
   details: Record<string, unknown> = {}
 ): Promise<{ log: SyncLogEntry; result: T }> {
   const log: SyncLogEntry = {
     id: Math.random().toString(36).substr(2, 9),
-=======
-import { ProviderConnection, SyncLogEntry } from './types';
-import { v4 as uuidv4 } from 'uuid';
-=======
-import type { ProviderConnection, SyncLogEntry } from './types';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8
 =======
 import { ProviderConnection, SyncLogEntry } from './types';
 import { v4 as uuidv4 } from 'uuid';
@@ -132,53 +110,37 @@ export async function simulateAction<T = any>(
     timestamp: Date.now(),
     providerId: connection.providerId,
     level: 'info',
+=======
+    connectionId: connection.id,
+>>>>>>> origin/main
     action,
-    details
+    status: 'success',
+    message: `Action ${action} completed successfully`,
+    details,
+    timestamp: new Date(),
   };
-=======
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8
-=======
+  // Simulate occasional errors
+  if (Math.random() < 0.1) {
+    log.status = 'error';
+    log.message = `Action ${action} failed: Simulated error`;
+    throw new Error(log.message);
+  }
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-8344
-=======
+  // Simulate occasional warnings
+  if (Math.random() < 0.2) {
+    log.status = 'warning';
+    log.message = `Action ${action} completed with warnings`;
+  }
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3fed
-=======
+  const result = {
+    success: true,
+    data: details,
+    timestamp: new Date().toISOString(),
+  } as T;
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-1f83
-=======
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-9d58
-=======
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
-=======
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a0d
-=======
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-d12c
-=======
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-efe9
-=======
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-9008
-=======
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-6abd
-=======
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-ee0f
-  // In a real implementation, call provider SDK/API here using connection.accessToken
-  return {
-    log,
-    result: { ok: true } as unknown as T
-  };
+  return { log, result };
 }
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e3b
   
   async addProjectNote(connection: ProviderConnection, note: Record<string, any>) {
     return simulateAction(connection, 'crm.addProjectNote', { note });
@@ -228,11 +190,25 @@ export const ats = {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e3b
   
 =======
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-895b
 =======
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b781
+export async function testConnection(
+  connection: ProviderConnection
+): Promise<boolean> {
+  try {
+    await simulateAction(connection, 'test_connection');
+    return true;
+  } catch {
+    return false;
+  }
+}
+>>>>>>> origin/main
+
+export async function syncData(
+  connection: ProviderConnection
+): Promise<SyncLogEntry[]> {
+  const logs: SyncLogEntry[] = [];
+
   async updateStatus(connection: ProviderConnection, change: Record<string, any>) {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-3d1d
 =======
@@ -314,16 +290,24 @@ export const crm = {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-ee0f
   async addEmailTouchpoint(connection: ProviderConnection, touch: Record<string, any>) {
     return simulateAction(connection, 'crm.addEmailTouchpoint', { touch });
-  }
-};
-
-// ATS actions
-export const ats = {
-  async pushApplicant(connection: ProviderConnection, applicant: Record<string, any>) {
-    return simulateAction(connection, 'ats.pushApplicant', { applicant });
-  },
 =======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8
+  try {
+    const { log } = await simulateAction(connection, 'sync_data', {
+      lastSync: connection.lastSync?.toISOString(),
+    });
+    logs.push(log);
+  } catch (error) {
+    logs.push({
+      id: Math.random().toString(36).substr(2, 9),
+      connectionId: connection.id,
+      action: 'sync_data',
+      status: 'error',
+      message: error instanceof Error ? error.message : 'Unknown error',
+      timestamp: new Date(),
+    });
+>>>>>>> origin/main
+  }
+
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-8344
 =======
@@ -363,3 +347,7 @@ export const ats = {
     return simulateAction(connection, 'ats.updateStatus', { change });
   }
 };
+=======
+  return logs;
+}
+>>>>>>> origin/main

@@ -1,9 +1,4 @@
 =======
-import { IntegrationProviderMeta } from './types';
-
-export const PROVIDERS: IntegrationProviderMeta[] = [
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-8344
-=======
 import type { IntegrationProviderMeta } from './types';
 
 export const PROVIDERS: IntegrationProviderMeta[] = [
@@ -82,58 +77,57 @@ import { IntegrationProviderMeta } from './types';
 
 export const PROVIDERS: IntegrationProviderMeta[] = [
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-ee0f
+=======
+import type { IntegrationProviderMeta } from './types';
+
+export const PROVIDERS: IntegrationProviderMeta[] = [
+>>>>>>> origin/main
   {
     id: 'salesforce',
     name: 'Salesforce',
     category: 'crm',
-    description: 'Enterprise CRM'
+    description: 'Enterprise CRM',
   },
   {
     id: 'hubspot',
     name: 'HubSpot',
     category: 'crm',
-    description: 'Marketing & Sales CRM'
+    description: 'Marketing & Sales CRM',
   },
   {
     id: 'zoho',
     name: 'Zoho CRM',
     category: 'crm',
-    description: 'All-in-one CRM'
+    description: 'All-in-one CRM',
   },
   {
     id: 'pipedrive',
     name: 'PipeDrive',
     category: 'crm',
-    description: 'Sales pipeline CRM'
+    description: 'Sales pipeline CRM',
   },
   {
     id: 'greenhouse',
     name: 'Greenhouse',
     category: 'ats',
-    description: 'ATS & recruiting'
+    description: 'ATS & recruiting',
   },
   {
     id: 'lever',
     name: 'Lever',
     category: 'ats',
-    description: 'ATS & CRM'
+    description: 'ATS & CRM',
   },
   {
     id: 'workable',
     name: 'Workable',
     category: 'ats',
-    description: 'Recruiting software'
+    description: 'Recruiting software',
   },
   {
     id: 'bamboohr',
     name: 'BambooHR',
     category: 'ats',
-    description: 'HRIS & ATS'
-  }
-];
-=======
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8
 =======
   { id: 'bamboohr', name: 'BambooHR', category: 'ats', description: 'HRIS & ATS' }
 ];
@@ -178,5 +172,14 @@ export const PROVIDERS: IntegrationProviderMeta[] = [
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-ee0f
 export function getProviderById(id: string): IntegrationProviderMeta | undefined {
+=======
+    description: 'HRIS & ATS',
+  },
+];
+
+export function getProviderById(
+  id: string
+): IntegrationProviderMeta | undefined {
+>>>>>>> origin/main
   return PROVIDERS.find(p => p.id === id);
 }

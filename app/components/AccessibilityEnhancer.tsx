@@ -1,114 +1,157 @@
-import React, { useEffect, useState, type ReactNode } from 'react';
+'use client';
 
-interface AccessibilityEnhancerProps {
-  children: ReactNode;
+import React, { useEffect, useRef, useState, useCallback } from 'react';
+
+interface AccessibilityConfig {
+  enableKeyboardNavigation: boolean;
+  enableScreenReaderSupport: boolean;
+  enableHighContrast: boolean;
+  enableReducedMotion: boolean;
+  enableFocusManagement: boolean;
+  enableSkipLinks: boolean;
+  enableARIALabels: boolean;
+  enableColorContrast: boolean;
 }
 
-const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {
+interface AccessibilityEnhancerProps {
+  config?: Partial<AccessibilityConfig>;
+  children: React.ReactNode;
+}
+
+interface AccessibilityEnhancerRef {
+  announceToScreenReader: (message: string) => void;
+  setFontSize: (size: number) => void;
+}
+
+const AccessibilityEnhancer = React.forwardRef<AccessibilityEnhancerRef, AccessibilityEnhancerProps>(({
+  config = {},
+  children
+}, ref) => {
   const [isHighContrast, setIsHighContrast] = useState(false);
-  const [fontSize, setFontSize] = useState<'small' | 'normal' | 'large'>('normal');
-  const [reducedMotion, setReducedMotion] = useState(false);
+  const [fontSize, setFontSize] = useState(16);
+  const [isReducedMotion, setIsReducedMotion] = useState(false);
+  const [isKeyboardNavigation, setIsKeyboardNavigation] = useState(false);
+  const announcementRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
-    //Check for user preferences
-    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    setReducedMotion(prefersReducedMotion);
+  const defaultConfig: AccessibilityConfig = {
+    enableKeyboardNavigation: true,
+    enableScreenReaderSupport: true,
+    enableHighContrast: true,
+    enableReducedMotion: true,
+    enableFocusManagement: true,
+    enableSkipLinks: true,
+    enableARIALabels: true,
+    enableColorContrast: true,
+    ...config
+  };
 
-    //Load saved preferences
-    const savedHighContrast = localStorage.getItem('highContrast') === 'true';
-    const savedFontSize = (localStorage.getItem('fontSize') as 'small' | 'normal' | 'large') || 'normal';
-    
-    setIsHighContrast(savedHighContrast);
-    setFontSize(savedFontSize);
-
-    //Apply initial styles
-    applyAccessibilityStyles(savedHighContrast, savedFontSize, prefersReducedMotion);
+  const announceToScreenReader = useCallback((message: string) => {
+    if (announcementRef.current) {
+      announcementRef.current.textContent = message;
+      announcementRef.current.setAttribute('aria-live', 'polite');
+    }
   }, []);
 
-  const applyAccessibilityStyles = (highContrast: boolean,
-  fontSize: string, reducedMotion: boolean) => {
+  const handleKeyDown = useCallback((event: KeyboardEvent) => {
+    if (event.key === 'Tab') {
+      setIsKeyboardNavigation(true);
+    }
+  }, []);
+
+  const handleMouseDown = useCallback(() => {
+    setIsKeyboardNavigation(false);
+  }, []);
+
+  useEffect(() => {
+    // Check for user preferences
+    if (defaultConfig.enableHighContrast) {
+      const prefersHighContrast = window.matchMedia('(prefers-contrast: high)').matches;
+      setIsHighContrast(prefersHighContrast);
+    }
+
+    if (defaultConfig.enableReducedMotion) {
+      const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      setIsReducedMotion(prefersReducedMotion);
+    }
+
+    // Add event listeners
+    document.addEventListener('keydown', handleKeyDown);
+    document.addEventListener('mousedown', handleMouseDown);
+
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown);
+      document.removeEventListener('mousedown', handleMouseDown);
+    };
+  }, [defaultConfig.enableHighContrast, defaultConfig.enableReducedMotion, handleKeyDown, handleMouseDown]);
+
+  useEffect(() => {
+    // Apply accessibility styles
     const root = document.documentElement;
     
-    //Apply high contrast
-    if (highContrast) {
+    if (isHighContrast) {
       root.classList.add('high-contrast');
     } else {
       root.classList.remove('high-contrast');
     }
 
-    //Apply font size
-    root.classList.remove('font-small', 'font-normal', 'font-large');
-    root.classList.add(`font-${fontSize}`);
-
-    //Apply reduced motion
-    if (reducedMotion) {
+    if (isReducedMotion) {
       root.classList.add('reduced-motion');
     } else {
       root.classList.remove('reduced-motion');
     }
-  };
 
-  const toggleHighContrast = () => {
-    const newValue = !isHighContrast;
-    setIsHighContrast(newValue);
-    localStorage.setItem('highContrast', newValue.toString());
-    applyAccessibilityStyles(newValue, fontSize, reducedMotion);
-  };
+    if (isKeyboardNavigation) {
+      root.classList.add('keyboard-navigation');
+    } else {
+      root.classList.remove('keyboard-navigation');
+    }
 
-  const changeFontSize = (size: 'small' | 'normal' | 'large') => {
-    setFontSize(size);
-    localStorage.setItem('fontSize', size);
-    applyAccessibilityStyles(isHighContrast, size, reducedMotion);
-  };
+    // Set font size
+    root.style.fontSize = `${fontSize}px`;
+  }, [isHighContrast, isReducedMotion, isKeyboardNavigation, fontSize]);
+
+  // Expose methods via ref
+  React.useImperativeHandle(ref, () => ({
+    announceToScreenReader,
+    setFontSize: (size: number) => {
+      setFontSize(Math.max(12, Math.min(24, size)));
+    }
+  }), [announceToScreenReader]);
 
   return (
-    <>
-      {children}
-      
-      {/* Accessibility Controls - Only show in development */}
-      {process.env['NODE_ENV'] === 'development' && (
-        <div className="fixed top-4 left-4 z-50 bg-white border border-gray-200 rounded-lg shadow-lg p-4">
-          <h3 className="text-sm font-semibold text-gray-900 mb-3">
-            Accessibility Controls
-          </h3>
-          
-          <div className="space-y-3">
-            <div>
-              <label className="flex items-center space-x-2">
-                <input
-                  type="checkbox"
-                  checked={isHighContrast}
-                  onChange={toggleHighContrast}
-                  className="rounded"
-                />
-                <span className="text-sm text-gray-700">High Contrast</span>
-              </label>
-            </div>
-            
-            <div>
-              <label className="text-sm text-gray-700 block mb-2">Font Size:</label>
-              <div className="flex space-x-1">
-                {(['small', 'normal', 'large'] as const).map((size) => (
-                  <button
-                    key={size}
-                    onClick={() => changeFontSize(size)}
-                    className={`px-2 py-1 text-xs rounded ${
-                      fontSize === size
-                        ? 'bg-blue-600 text-white'
-                        : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
-                    }`}
-                    aria-label={`Set font size to ${size}`}
-                  >
-                    {size.charAt(0).toUpperCase()}
-                  </button>
-                ))}
-              </div>
-            </div>
-          </div>
+    <div className="accessibility-enhancer">
+      {defaultConfig.enableSkipLinks && (
+        <div className="skip-links">
+          <a 
+            href="#main-content" 
+            className="skip-link sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50"
+          >
+            Skip to main content
+          </a>
+          <a 
+            href="#navigation" 
+            className="skip-link sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-32 bg-blue-600 text-white px-4 py-2 rounded z-50"
+          >
+            Skip to navigation
+          </a>
         </div>
       )}
-    </>
+      
+      {children}
+      
+      {/* Screen reader announcements */}
+      {defaultConfig.enableScreenReaderSupport && (
+        <div
+          ref={announcementRef}
+          className="sr-only"
+          aria-live="polite"
+          aria-atomic="true"
+        />
+      )}
+    </div>
   );
-};
+});
+
+AccessibilityEnhancer.displayName = 'AccessibilityEnhancer';
 
 export default AccessibilityEnhancer;

@@ -1,13 +1,3 @@
-/**
- * Banner Rotation System Utility
- */
-=======
-export const recordBannerImpression = (
-  impression: Omit<BannerImpression, 'timestamp' | 'sessionId'>
-) => {
-=======
-export const recordBannerImpression = (impression: Omit<BannerImpression, 'timestamp' | 'sessionId'>) => {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a0d
   if (typeof window === 'undefined') return;
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
@@ -599,3 +589,9 @@ export const rotateBanners = (system: BannerRotationSystem): BannerConfig | null
 };
 
 export default BannerRotationSystem;
+=======
+<:utils/bannerRotationSystem.ts
+export const calculateBannerScore = (banner: BannerConfig): number => {
+  const impressions = getStoredImpressions();
+  const bannerImpressions = impressions.filter(imp => imp.bannerId === banner.id);
+>>>>>>> origin/main

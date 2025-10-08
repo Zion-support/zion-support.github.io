@@ -3,7 +3,7 @@
 /**
  * Merge New Services Branches
  * This script will merge all the new service branches that haven't been merged yet
- */import { execSync } from 'child_process';
+ */ import { execSync } from 'child_process';
 import fs from 'fs';
 
 console.log('🚀 Starting New Services Branch Merge Process...\n');
@@ -117,10 +117,9 @@ console.log('🚀 Step 4: Processing new service branches...\n');
 const results = {
   summary: {
     total: 0,
-  successful: 0,
+    successful: 0,
     failed: 0,
-    methods: { direct: 0,
-  theirs: 0, ours: 0, failed: 0 },
+    methods: { direct: 0, theirs: 0, ours: 0, failed: 0 },
   },
   branches: [],
   failed: [],

@@ -1,7 +1,11 @@
+import { Calculator } from 'lucide-react';
 import React from 'react';
 import dynamic from 'next/dynamic';
+<<<<<<< HEAD:app/page-optimized.tsx.disabled
 //import { UnifiedBanner, bannerConfigurations } from './components/UnifiedBannerSystem';
 //import { LazyWrapper } from './components/LazyLoader';
+import { UnifiedBanner, bannerConfigurations } from './components/UnifiedBannerSystem';
+import { LazyWrapper } from './components/LazyLoader';
 import SEOOptimizer from './components/SEOOptimizer';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import { PerformanceMonitor } from './components/PerformanceMonitor';
@@ -220,4 +224,6 @@ export default function HomePageOptimized() {
       </section>
     </div>
   );
+<<<<<<< HEAD:app/page-optimized.tsx.disabled
 }
+  }

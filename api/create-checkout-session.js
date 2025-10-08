@@ -11,7 +11,7 @@ async function handler(req, res) {
   }
 
   const { productId, userId } = req.body || {};
-  
+
   if (!productId) {
     res.statusCode = 400;
     res.json({ error: 'Product ID is required' });
@@ -24,7 +24,7 @@ async function handler(req, res) {
       productId,
       userId,
       domain: PROD_DOMAIN,
-      timestamp: new Date().toISOString()
+      timestamp: new Date().toISOString(),
     };
 
     res.statusCode = 200;

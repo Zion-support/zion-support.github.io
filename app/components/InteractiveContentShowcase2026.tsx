@@ -1,29 +1,28 @@
-import React from 'react';
 
 const InteractiveContentShowcase2026: React.FC = () => {
-  const features = [
+  const [activeTab, setActiveTab] = useState(0);
+
+  const tabs = [
     {
-      icon: '🚀',
-      title: 'Next-Gen AI',
-      description:
-        'Cutting-edge artificial intelligence solutions for 2026 and beyond.',
+      title: "AI Innovation",
+      content: "Cutting-edge artificial intelligence solutions for 2026 and beyond.",
+      icon: "🚀"
     },
     {
-      icon: '⚡',
-      title: 'Lightning Fast',
-      description: 'Optimized performance with sub-second response times.',
+      title: "Performance",
+      content: "Optimized performance with sub-second response times.",
+      icon: "⚡"
     },
     {
-      icon: '🔒',
-      title: 'Enterprise Security',
-      description: 'Bank-level security for your most sensitive data.',
+      title: "Security",
+      content: "Bank-level security for your most sensitive data.",
+      icon: "🔒"
     },
     {
-      icon: '📊',
-      title: 'Real-time Analytics',
-      description:
-        'Live insights and predictive analytics for better decisions.',
-    },
+      title: "Analytics",
+      content: "Live insights and predictive analytics for better decisions.",
+      icon: "📊"
+    }
   ];
 
   return (
@@ -39,25 +38,30 @@ const InteractiveContentShowcase2026: React.FC = () => {
           </p>
         </div>
 
-        <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-6'>
-          {features.map((feature, index) => (
-            <div
-              key={index}
-              className='bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1'
-            >
-              <div className='text-4xl mb-4'>{feature.icon}</div>
-              <h3 className='text-lg font-semibold text-gray-900 mb-2'>
-                {feature.title}
-              </h3>
-              <p className='text-gray-600 text-sm'>{feature.description}</p>
-            </div>
-          ))}
-        </div>
+        <div className='max-w-4xl mx-auto'>
+          <div className='flex flex-wrap justify-center gap-2 mb-8'>
+            {tabs.map((tab, index) => (
+              <button
+                key={index}
+                onClick={() => setActiveTab(index)}
+                className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 ${
+                  activeTab === index
+                    ? 'bg-blue-600 text-white shadow-lg'
+                    : 'bg-white text-gray-600 hover:bg-gray-100'
+                }`}
+              >
+                <span className='mr-2'>{tab.icon}</span>
+                {tab.title}
+              </button>
+            ))}
+          </div>
 
-        <div className='text-center mt-12'>
-          <button className='bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold py-4 px-8 rounded-lg text-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105'>
-            Explore 2026 Solutions
-          </button>
+          <div className='bg-white p-8 rounded-2xl shadow-lg'>
+            <div className='text-center'>
+              <div className='text-6xl mb-4'>{tabs[activeTab].icon}</div>
+              <h3 className='text-2xl font-bold text-gray-900 mb-4'>
+                {tabs[activeTab].title}
+              </h3>
         </div>
       </div>
     </section>

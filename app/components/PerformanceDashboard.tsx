@@ -1,11 +1,5 @@
 import React, { useState, useEffect } from 'react';
 
-// interface PerformanceMetrics {
-//   loadTime: number;
-//   renderTime: number;
-//   memoryUsage: number;
-//   fps: number;
-// }
 
 const PerformanceDashboard: React.FC = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
@@ -22,68 +16,109 @@ const PerformanceDashboard: React.FC = () => {
         'navigation'
       )[0] as PerformanceNavigationTiming;
       const loadTime = navigation
-        ? navigation.loadEventEnd - navigation.loadEventStart
+        ? navigation.loadEventEnd - navigation.fetchStart
         : 0;
 
-      const memory = (
-        performance as Performance & { memory?: { usedJSHeapSize: number } }
-      ).memory;
-      const memoryUsage = memory ? memory.usedJSHeapSize / 1024 / 1024 : 0;
+      // Measure render time
+      const renderStart = performance.now();
+      const renderTime = performance.now() - renderStart;
 
-      setMetrics(prev => ({
-        ...prev,
+      // Measure memory usage
+      let memoryUsage = 0;
+      if ('memory' in performance) {
+        const memory = (performance as { memory?: { usedJSHeapSize: number } }).memory;
+        memoryUsage = memory?.usedJSHeapSize || 0;
+      }
+
+      // Measure FPS (simplified)
+      let fps = 0;
+      if ('requestAnimationFrame' in window) {
+        let lastTime = performance.now();
+        let frameCount = 0;
+        const measureFPS = (currentTime: number) => {
+          frameCount++;
+          if (currentTime - lastTime >= 1000) {
+            fps = Math.round((frameCount * 1000) / (currentTime - lastTime));
+            frameCount = 0;
+            lastTime = currentTime;
+          }
+          requestAnimationFrame(measureFPS);
+        };
+        requestAnimationFrame(measureFPS);
+      }
+
+      setMetrics({
         loadTime,
+        renderTime,
         memoryUsage,
-      }));
+        fps,
+      });
     };
 
-    // Update metrics on load
     updateMetrics();
 
-    // Update metrics periodically
-    const interval = setInterval(updateMetrics, 1000);
+    // Update metrics every 5 seconds
+    const interval = setInterval(updateMetrics, 5000);
 
     return () => clearInterval(interval);
   }, []);
 
-  // Only show in development
-  if (process.env['NODE_ENV'] !== 'development') {
-    return null;
+  if (!isVisible) {
+    return (
+      <button
+        onClick={() => setIsVisible(true)}
+        className="fixed bottom-4 right-4 bg-blue-600 text-white px-4 py-2 rounded-lg shadow-lg hover:bg-blue-700 transition-colors"
+      >
+        Show Performance
+      </button>
+    );
   }
 
   return (
-    <div className='fixed bottom-4 right-4 z-50'>
-      <button
-        onClick={() => setIsVisible(!isVisible)}
-        className='bg-blue-600 text-white px-3 py-2 rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors'
-        aria-label='Toggle performance dashboard'
-      >
-        Perf
-      </button>
+    <div className="fixed bottom-4 right-4 bg-white border border-gray-300 rounded-lg shadow-lg p-4 w-80 max-h-96 overflow-y-auto">
+      <div className="flex justify-between items-center mb-4">
+        <h3 className="text-lg font-semibold text-gray-800">Performance Dashboard</h3>
+        <button
+          onClick={() => setIsVisible(false)}
+          className="text-gray-500 hover:text-gray-700"
+        >
+          ×
+        </button>
+      </div>
 
-      {isVisible && (
-        <div className='absolute bottom-12 right-0 bg-white border border-gray-200 rounded-lg shadow-lg p-4 min-w-64'>
-          <h3 className='text-sm font-semibold text-gray-900 mb-3'>
-            Performance Metrics
-          </h3>
-          <div className='space-y-2 text-xs'>
-            <div className='flex justify-between'>
-              <span className='text-gray-600'>Load Time:</span>
-              <span className='font-mono'>{metrics.loadTime.toFixed(2)}ms</span>
-            </div>
-            <div className='flex justify-between'>
-              <span className='text-gray-600'>Memory:</span>
-              <span className='font-mono'>
-                {metrics.memoryUsage.toFixed(2)}MB
-              </span>
-            </div>
-            <div className='flex justify-between'>
-              <span className='text-gray-600'>FPS:</span>
-              <span className='font-mono'>{metrics.fps.toFixed(1)}</span>
-            </div>
+      <div className="space-y-3">
+        <div className="flex justify-between">
+          <span className="text-sm text-gray-600">Load Time:</span>
+          <span className="text-sm font-mono">
+            {metrics.loadTime.toFixed(2)}ms
+          </span>
+        </div>
+
+        <div className="flex justify-between">
+          <span className="text-sm text-gray-600">Render Time:</span>
+          <span className="text-sm font-mono">
+            {metrics.renderTime.toFixed(2)}ms
+          </span>
+        </div>
+
+        <div className="flex justify-between">
+          <span className="text-sm text-gray-600">Memory Usage:</span>
+          <span className="text-sm font-mono">
+            {(metrics.memoryUsage / 1024 / 1024).toFixed(2)}MB
+          </span>
+        </div>
+
+        <div className="flex justify-between">
+          <span className="text-sm text-gray-600">FPS:</span>
+          <span className="text-sm font-mono">{metrics.fps}</span>
+        </div>
+
+        <div className="pt-2 border-t border-gray-200">
+          <div className="text-xs text-gray-500">
+            Last updated: {new Date().toLocaleTimeString()}
           </div>
         </div>
-      )}
+      </div>
     </div>
   );
 };

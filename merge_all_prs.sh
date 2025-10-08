@@ -1,86 +1,79 @@
 #!/bin/bash
 
-# Script to merge all cursor/fix-errors-and-merge-to-main branches
-set -e
+TOKEN="ghs_iI0OzYYFiL6Tvp2m7AFAFAAtnbwrsz2D51F3"
+REPO="Zion-Holdings/zion.app"
 
-echo "Starting systematic merge of all PR branches..."
+echo "===== Merging Open PRs ====="
+echo ""
 
-# Get all cursor/fix-errors-and-merge-to-main branches
-branches=$(git branch -r | grep "cursor/fix-errors-and-merge-to-main" | sed 's/origin\///' | head -20)
+# Get list of open PRs
+PR_NUMBERS=$(curl -s -H "Authorization: token $TOKEN" \
+  "https://api.github.com/repos/$REPO/pulls?state=open&per_page=100" | \
+  python3 -c "import sys, json; data = json.load(sys.stdin); print(' '.join(str(pr['number']) for pr in data))")
 
-successful_merges=0
-failed_merges=0
-conflict_resolutions=0
+echo "Open PRs: $PR_NUMBERS"
+echo ""
 
-for branch in $branches; do
-    echo "Processing branch: $branch"
+for PR_NUM in $PR_NUMBERS; do
+  echo "Processing PR #$PR_NUM..."
+  
+  # Get PR details
+  PR_DATA=$(curl -s -H "Authorization: token $TOKEN" \
+    "https://api.github.com/repos/$REPO/pulls/$PR_NUM")
+  
+  MERGEABLE=$(echo "$PR_DATA" | python3 -c "import sys, json; pr = json.load(sys.stdin); print(pr.get('mergeable', 'null'))")
+  STATE=$(echo "$PR_DATA" | python3 -c "import sys, json; pr = json.load(sys.stdin); print(pr.get('mergeable_state', 'unknown'))")
+  BRANCH=$(echo "$PR_DATA" | python3 -c "import sys, json; pr = json.load(sys.stdin); print(pr['head']['ref'])")
+  
+  echo "  Branch: $BRANCH"
+  echo "  Mergeable: $MERGEABLE"
+  echo "  State: $STATE"
+  
+  # Try to merge if clean
+  if [ "$MERGEABLE" = "True" ]; then
+    echo "  Attempting to merge..."
+    MERGE_RESULT=$(curl -s -X PUT -H "Authorization: token $TOKEN" \
+      -H "Content-Type: application/json" \
+      -d '{"commit_title":"Auto-merge PR #'$PR_NUM'","commit_message":"Automated merge of PR #'$PR_NUM'","merge_method":"merge"}' \
+      "https://api.github.com/repos/$REPO/pulls/$PR_NUM/merge")
     
-    # Checkout the branch
-    if git checkout "$branch" 2>/dev/null; then
-        echo "  ✓ Checked out $branch"
-        
-        # Try to merge with main
-        if git merge origin/main --no-edit 2>/dev/null; then
-            echo "  ✓ Successfully merged $branch with main"
-            ((successful_merges++))
-            
-            # Push the merged changes back to the branch
-            if git push origin "$branch" 2>/dev/null; then
-                echo "  ✓ Pushed merged changes for $branch"
-            else
-                echo "  ⚠ Could not push changes for $branch (sandbox restriction)"
-            fi
-        else
-            echo "  ⚠ Merge conflict in $branch - attempting resolution"
-            
-            # Check if there are actual conflicts
-            if git status --porcelain | grep -q "^UU\|^AA\|^DD"; then
-                echo "  🔧 Resolving conflicts in $branch"
-                
-                # Try to resolve common conflicts automatically
-                # Fix TypeScript process.env issues
-                if grep -q "process.env.NODE_ENV" components/PerformanceDashboard.tsx 2>/dev/null; then
-                    sed -i "s/process\.env\.NODE_ENV/process.env['NODE_ENV']/g" components/PerformanceDashboard.tsx
-                    echo "    Fixed process.env access in PerformanceDashboard.tsx"
-                fi
-                
-                # Add and commit the resolution
-                git add .
-                if git commit -m "Resolve merge conflicts automatically" 2>/dev/null; then
-                    echo "  ✓ Resolved conflicts in $branch"
-                    ((conflict_resolutions++))
-                    ((successful_merges++))
-                    
-                    # Push the resolved changes
-                    if git push origin "$branch" 2>/dev/null; then
-                        echo "  ✓ Pushed resolved changes for $branch"
-                    else
-                        echo "  ⚠ Could not push resolved changes for $branch (sandbox restriction)"
-                    fi
-                else
-                    echo "  ❌ Failed to resolve conflicts in $branch"
-                    ((failed_merges++))
-                fi
-            else
-                echo "  ✓ No actual conflicts in $branch"
-                ((successful_merges++))
-            fi
-        fi
+    MERGED=$(echo "$MERGE_RESULT" | python3 -c "import sys, json; result = json.load(sys.stdin); print(result.get('merged', False))")
+    
+    if [ "$MERGED" = "True" ]; then
+      echo "  ✓ Successfully merged PR #$PR_NUM"
     else
-        echo "  ❌ Could not checkout $branch"
-        ((failed_merges++))
+      echo "  ✗ Failed to merge PR #$PR_NUM"
+      echo "  Response: $MERGE_RESULT"
     fi
+  elif [ "$MERGEABLE" = "False" ]; then
+    echo "  ⚠ PR has conflicts, attempting local merge..."
     
-    echo "  ---"
+    # Fetch the branch
+    git fetch origin "$BRANCH" 2>&1
+    
+    # Try to merge locally
+    git merge "origin/$BRANCH" --no-edit 2>&1
+    
+    if [ $? -eq 0 ]; then
+      echo "  ✓ Local merge successful, pushing to main..."
+      git push origin main 2>&1
+      
+      # Close the PR
+      curl -s -X PATCH -H "Authorization: token $TOKEN" \
+        -H "Content-Type: application/json" \
+        -d '{"state":"closed"}' \
+        "https://api.github.com/repos/$REPO/pulls/$PR_NUM" > /dev/null
+      echo "  ✓ Closed PR #$PR_NUM"
+    else
+      echo "  ✗ Local merge failed with conflicts"
+      # Abort the merge
+      git merge --abort 2>&1
+    fi
+  else
+    echo "  ⚠ Skipping - mergeable status unknown"
+  fi
+  
+  echo ""
 done
 
-echo ""
-echo "=== MERGE SUMMARY ==="
-echo "Successful merges: $successful_merges"
-echo "Failed merges: $failed_merges"
-echo "Conflict resolutions: $conflict_resolutions"
-echo ""
-
-# Return to main branch
-git checkout main
-echo "Returned to main branch"
+echo "===== Merge process completed ====="

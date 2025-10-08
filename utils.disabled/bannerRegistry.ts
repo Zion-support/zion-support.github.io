@@ -1,11 +1,8 @@
-/**
 ];
 
 /**
  * Get banners by category
  */
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a0d
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-ee0f
 export function getBannersByCategory(category: BannerConfig['category']): BannerConfig[] {
@@ -17,19 +14,39 @@ export function getBannersByCategory(category: BannerConfig['category']): Banner
   return BANNER_REGISTRY.filter(banner => banner.category === category && banner.enabled);
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
+=======
+:utils/bannerRegistry.ts
+export function getBannersByCategory(category: BannerConfig['category']): BannerConfig[] {
+  return BANNER_REGISTRY.filter(banner => banner.category === category && banner.enabled);
+}
+export const getBannersByCategory = (category: BannerConfig['category']): BannerConfig[] => {
+  return BANNER_REGISTRY.filter(banner => banner.category === category && banner.enabled);
+};
+export function getBannersByCategory(category: BannerConfig['category']): BannerConfig[] {
+  return BANNER_REGISTRY.filter(banner => banner.category === category && banner.enabled);
+}
+export function getBannersByCategory(category: BannerConfig['category']): BannerConfig[] {
+  return BANNER_REGISTRY.filter(banner => banner.category === category && banner.enabled);
+}
+>>>>>>> origin/main
 
 /**
  * Get banners by priority range
  */
 =======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-ee0f
+:utils/bannerRegistry.ts
+>>>>>>> origin/main
 export function getBannersByPriority(minPriority: number, maxPriority: number): BannerConfig[] {
   return BANNER_REGISTRY.filter(banner =>
       banner.priority >= minPriority &&
       banner.priority <= maxPriority &&
       banner.enabled
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8
   );
+=======
+  );
+:utils/bannerRegistry.ts
+}
+>>>>>>> origin/main
 };
 
 /**
@@ -48,7 +65,8 @@ export function getBannersByTags(tags: string[]): BannerConfig[] {
     banner => tags.some(tag => banner.tags.includes(tag)) && banner.enabled
   );
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-7a4f
+=======
+>>>>>>> origin/main
 
 /**
  * Get enabled banners sorted by priority
@@ -62,42 +80,27 @@ export function getBannersByTags(tags: string[]): BannerConfig[] {
  * Get banners by tags (duplicate function - removing)
  */
 =======
- * Banner Registry Utility
+:utils/bannerRegistry.ts
+export function getBannersByTags(tags: string[]): BannerConfig[] {
+  return BANNER_REGISTRY.filter(banner => 
+    banner.enabled && tags.some(tag => banner.tags.includes(tag))
+  );
+}
+
+/**
+ * Get recent banners (published within last N days)
  */
-export interface BannerInfo {
-  id: string;
-  name: string;
-  component: any;
-  priority: number;
-  category: string;
+export function getRecentBanners(days: number = 30): BannerConfig[] {
+  const cutoffDate = new Date();
+  cutoffDate.setDate(cutoffDate.getDate() - days);
+  
+  return BANNER_REGISTRY.filter(banner => {
+    if (!banner.enabled) return false;
+    const publishDate = new Date(banner.datePublished);
+    return publishDate >= cutoffDate;
+  });
+:utils/bannerRegistry.ts
 }
-
-export class BannerRegistry {
-  private banners = new Map<string, BannerInfo>();
-
-  register(banner: BannerInfo): void {
-    this.banners.set(banner.id, banner);
-  }
-
-  unregister(id: string): void {
-    this.banners.delete(id);
-  }
-
-  get(id: string): BannerInfo | undefined {
-    return this.banners.get(id);
-  }
-
-  getAll(): BannerInfo[] {
-    return Array.from(this.banners.values());
-  }
-
-  getByCategory(category: string): BannerInfo[] {
-    return Array.from(this.banners.values()).filter(
-      banner => banner.category === category
-    );
-  }
-}
-
-export const bannerRegistry = new BannerRegistry();
-export default bannerRegistry;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3fed
+<:utils/bannerRegistry.ts
+export default BANNER_REGISTRY;
+>>>>>>> origin/main

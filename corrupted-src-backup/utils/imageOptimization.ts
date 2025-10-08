@@ -1,41 +1,3 @@
-/**
- * Advanced Image Optimization Syst e m
- * Lazy loadin g responsive image s and progressive enhancement
- */
-
-export interface ImageConfig { 
-  s, r, c: string;
-  a, l, t: string;
-  wid, t, h?: number;
-  heig, h, t?: number;
-  loadi, n, g?: 'la, z, y' | 'eag, e, r';
-  priori, t, y?: boolean;
-  quali, t, y?: number;
-  forma, t, s ?  : ('we, b, p' | 'av, i, f' | 'j, p, g' | 'pn, g')[];
- }
-
-export interface ResponsiveImageConfig extends, ImageConfi, g { 
-  srcS, e, t?: string;
-  siz, e, s?: string;
-  breakpoin, t, s ?  : number[];
- }
-
-/**
- * Generate srcSet for responsive image s
- */
-export const generateSrcSet = (
-  baseS, r, c: st, r, i, n, g,
-  breakpoin, t, s: number[] = [64, 0, 7, 5, 0, 8, 2, 8, 10, 8, 0, 12, 0, 0, 19, 2, 0, 20, 4, 8, 38, 4, 0],
-): string = > { 
-  return, breakpoint, s
-    .m, a, p(wid, t, h = > `${getOptimizedU, r, l(base, S, r, c, { wid, t, h  })} ${wid, t, h}w`)
-    .jo, i, n(', ');
-export const generateSizes = (conf, i, g?: { 
-  mobi, l, e?: string; tabl, e, t?: string;
-  deskt, o, p ?  : str, i, n, g;
- }): string = > {
-  const default, s = {
->>>>>>> origin/merge-fixes-20251005-193002
     mobi, l, e: '1, 0, 0, v, w',
     tabl, e, t: '5, 0, v, w',
     deskt, o, p: '3, 3, v, w',
@@ -167,3 +129,5 @@ export const estimateDataUsage = (
         priori, t, y,
         callba, c, k: reso, l, v, e,
        }); th, i, s.que, u, e.so, r, t((a, b) => b.priori, t, y - a.priori, t, y);
+=======
+>>>>>>> origin/main

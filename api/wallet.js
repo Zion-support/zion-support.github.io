@@ -1,8 +1,5 @@
 =======
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0a8c
-=======
-
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8
 =======
 
@@ -135,6 +132,8 @@ async function handler(req, res) {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-895b
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-b781
+=======
+>>>>>>> origin/main
 const { withSentry } = require('./withSentry.cjs');
 
 async function handler(req, res) {
@@ -142,11 +141,11 @@ async function handler(req, res) {
     res.statusCode = 405;
     res.setHeader('Allow', 'POST');
 =======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e3b
-=======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-895b
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-b781
+=======
+>>>>>>> origin/main
     res.end('Method Not Allowed');
     return;
   }
@@ -161,37 +160,39 @@ async function handler(req, res) {
 
   try {
     switch (action) {
-      case 'create_payment_intent':
+      case 'create_payment_intent': {
         if (!amount) {
           res.statusCode = 400;
           res.json({ error: 'Amount is required for payment intent' });
           return;
         }
-        
+
         // Mock payment intent creation
         const paymentIntent = {
           id: `pi_${Date.now()}`,
           amount: Math.round(amount * 100), // Convert to cents
           currency: currency.toLowerCase(),
           status: 'requires_payment_method',
-          client_secret: `pi_${Date.now()}_secret_${Math.random().toString(36).substr(2, 9)}`
+          client_secret: `pi_${Date.now()}_secret_${Math.random().toString(36).substr(2, 9)}`,
         };
 
         res.statusCode = 200;
         res.json({ success: true, paymentIntent });
         break;
+      }
 
-      case 'get_balance':
+      case 'get_balance': {
         // Mock balance retrieval
         const balance = {
-          available: 1000.00,
-          pending: 0.00,
-          currency: currency.toUpperCase()
+          available: 1000.0,
+          pending: 0.0,
+          currency: currency.toUpperCase(),
         };
 
         res.statusCode = 200;
         res.json({ success: true, balance });
         break;
+      }
 
       default:
         res.statusCode = 400;
@@ -205,10 +206,6 @@ async function handler(req, res) {
 }
 
 module.exports = withSentry(handler);
-=======
-  try {
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-6abd
     // Wallet functionality would go here
     res.statusCode = 200;
     res.json({ message: 'Wallet endpoint' });
@@ -267,3 +264,5 @@ module.exports = withErrorLogging(handler);
 =======
 module.exports = withErrorLogging(handler);
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-ee0f
+=======
+>>>>>>> origin/main

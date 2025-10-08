@@ -1,0 +1,171 @@
+/**
+ * Enhanced Performance Hook
+ * Combines performance monitoring, error tracking, and analytics
+ */
+
+import { useEffect, useCallback, useRef } from 'react';
+import { performanceOptimizer } from '../utils/performanceOptimizer';
+import { errorTracker } from '../utils/enhancedErrorTracking';
+import { analytics } from '../utils/enhancedAnalytics';
+
+export interface UseEnhancedPerformanceOptions {
+  component?: string;
+  trackErrors?: boolean;
+  trackPerformance?: boolean;
+  trackAnalytics?: boolean;
+}
+
+export function useEnhancedPerformance(
+  options: UseEnhancedPerformanceOptions = {}
+) {
+  const {
+    component = 'Unknown',
+    trackErrors = true,
+    trackPerformance = true,
+    trackAnalytics = true,
+  } = options;
+
+  const mountTimeRef = useRef<number>(0);
+  const renderCountRef = useRef<number>(0);
+
+  useEffect(() => {
+    mountTimeRef.current = performance.now();
+    renderCountRef.current = 0;
+
+    // Track component mount
+    if (trackAnalytics) {
+      analytics.trackCustomEvent('Component', 'Mounted', component);
+    }
+
+    return () => {
+      // Track component unmount duration
+      if (trackPerformance) {
+        const duration = performance.now() - mountTimeRef.current;
+        if (duration > 5000) {
+          // Long-lived component
+          analytics.trackCustomEvent(
+            'Performance',
+            'Long Component Lifetime',
+            component,
+            Math.round(duration)
+          );
+        }
+      }
+
+      // Track component unmount
+      if (trackAnalytics) {
+        analytics.trackCustomEvent('Component', 'Unmounted', component);
+      }
+    };
+  }, [component, trackAnalytics, trackPerformance]);
+
+  // Track render performance
+  useEffect(() => {
+    renderCountRef.current++;
+
+    if (trackPerformance && renderCountRef.current > 10) {
+      // Many re-renders detected
+      console.warn(
+        `Component ${component} has re-rendered ${renderCountRef.current} times`
+      );
+      analytics.trackCustomEvent(
+        'Performance',
+        'High Render Count',
+        component,
+        renderCountRef.current
+      );
+    }
+  });
+
+  const trackError = useCallback(
+    (error: Error, context?: Record<string, unknown>) => {
+      if (trackErrors) {
+        errorTracker.trackError(error, {
+          component,
+          ...context,
+        });
+      }
+    },
+    [component, trackErrors]
+  );
+
+  const trackUserAction = useCallback(
+    (action: string, metadata?: Record<string, unknown>) => {
+      if (trackAnalytics) {
+        analytics.trackCustomEvent('User Action', action, component, undefined, metadata);
+      }
+    },
+    [component, trackAnalytics]
+  );
+
+  const measureOperation = useCallback(
+    (operationName: string) => {
+      const markName = `${component}-${operationName}`;
+      performanceOptimizer.startMark(markName);
+
+      return {
+        end: () => {
+          const duration = performanceOptimizer.endMark(markName);
+          if (duration && trackPerformance) {
+            analytics.trackPerformance(
+              `${component}-${operationName}`,
+              duration,
+              duration > 1000 ? 'slow' : 'fast'
+            );
+          }
+          return duration;
+        },
+      };
+    },
+    [component, trackPerformance]
+  );
+
+  const withErrorBoundary = useCallback(
+    <T extends unknown[], R>(fn: (...args: T) => R) => {
+      return (...args: T): R | undefined => {
+        try {
+          return fn(...args);
+        } catch (error) {
+          trackError(error as Error, {
+            action: 'Function Call',
+            args: args.map(String),
+          });
+          return undefined;
+        }
+      };
+    },
+    [trackError]
+  );
+
+  const withPerformanceTracking = useCallback(
+    <T extends unknown[], R>(
+      operationName: string,
+      fn: (...args: T) => R
+    ) => {
+      return (...args: T): R => {
+        const measurement = measureOperation(operationName);
+        try {
+          const result = fn(...args);
+          measurement.end();
+          return result;
+        } catch (error) {
+          measurement.end();
+          throw error;
+        }
+      };
+    },
+    [measureOperation]
+  );
+
+  return {
+    trackError,
+    trackUserAction,
+    measureOperation,
+    withErrorBoundary,
+    withPerformanceTracking,
+    renderCount: renderCountRef.current,
+    component,
+  };
+}
+
+export default useEnhancedPerformance;

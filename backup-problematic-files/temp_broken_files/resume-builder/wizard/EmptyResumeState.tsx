@@ -1,1 +1,0 @@
-import { EmptyResumeProps } from "./types"; export const EmptyResumeState = ({ onCreateClick } EmptyResumeProps) => {; return (}

@@ -1,11 +1,3 @@
-/**
-  id: string;
-  priority: number;
-  category: string;
-}
-
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-d12c
 export class BannerPrioritizationEngine {
   private banners: Map<string, BannerMetadata> = new Map();
   private visibilityThreshold = 5; // Max banners to show above the fold
@@ -57,6 +49,87 @@ export class BannerPrioritizationEngine {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
   }
 
+=======
+:utils/bannerPrioritization.ts
+    const daysSincePublish = (now.getTime() - banner.publishDate.getTime()) / (1000 * 60 * 60 * 24);
+    
+    // Recency factor (newer = higher priority)
+    const recencyFactor = Math.max(0, 100 - daysSincePublish);
+    
+    // Value factor (higher value = higher priority)
+    const valueFactor = Math.min(100, banner.value * 10);
+    
+    // Category factor
+    const categoryFactors = {
+      'service': 100,
+      'case-study': 80,
+      'blog': 60,
+      'showcase': 40
+    };
+    const categoryFactor = categoryFactors[banner.category] || 50;
+    
+    // Calculate weighted priority
+    const priority = (
+      recencyFactor * 0.4 +
+      valueFactor * 0.3 +
+      categoryFactor * 0.2 +
+      banner.priority * 0.1
+    );
+
+    return Math.round(priority);
+:utils/bannerPrioritization.ts
+    const ageInDays = (now.getTime() - banner.publishDate.getTime()) / (1000 * 60 * 60 * 24);
+    
+    // Recency score (0-100): Newer content scores higher
+    const recencyScore = Math.max(0, 100 - ageInDays * 2);
+    
+    // Value score (0-100): Higher value content scores higher
+    const valueScore = Math.min(100, (banner.value / 100) * 100);
+    
+    const ageInDays =
+      (now.getTime() - banner.publishDate.getTime()) / (1000 * 60 * 60 * 24);
+
+    // Recency score (0-100): Newer content scores higher
+    const recencyScore = Math.max(0, 100 - ageInDays * 2);
+
+    // Value score (0-100): Higher value content scores higher
+    const valueScore = Math.min(100, (banner.value / 100) * 100);
+
+    // Weighted combination
+    return recencyScore * 0.6 + valueScore * 0.3 + banner.priority * 0.1;
+  }
+
+  /**
+   * Get banners sorted by priority
+   */
+  getPrioritizedBanners(): BannerMetadata[] {
+    return Array.from(this.banners.values())
+      .map(banner => ({
+        ...banner,
+        priority: this.calculatePriority(banner.id)
+      }))
+:utils/bannerPrioritization.ts
+      .sort((a, b) => b.priority - a.priority);
+      .sort((a, b) => b.priority - a.priority);
+  }
+
+  /**
+   * Get visible banners (above the fold)
+   */
+:utils/bannerPrioritization.ts
+  getVisibleBanners(): BannerMetadata[] {
+    return this.getPrioritizedBanners()
+      .slice(0, this.visibilityThreshold)
+      .map(banner => ({ ...banner, isVisible: true }));
+  getBannersByLoadStrategy(strategy: 'immediate' | 'lazy' | 'on-demand'): BannerMetadata[] {
+    return Array.from(this.banners.values()).filter(banner => banner.loadStrategy === strategy && banner.isVisible);
+  getBannersByLoadStrategy(strategy: 'immediate' | 'lazy' | 'on-demand'): BannerMetadata[] {
+    return Array.from(this.banners.values()).filter(
+      banner => banner.loadStrategy === strategy && banner.isVisible
+    );
+  }
+
+>>>>>>> origin/main
   /**
    * Get lazy load banners
    */
@@ -80,6 +153,7 @@ export class BannerPrioritizationEngine {
    */
   getBanner(id: string): BannerMetadata | undefined {
     return this.banners.get(id);
+:utils/bannerPrioritization.ts
   }
 
   getBannersByLoadStrategy(strategy: 'immediate' | 'lazy' | 'on-demand'): BannerMetadata[] {
@@ -87,7 +161,6 @@ export class BannerPrioritizationEngine {
       .filter(banner => banner.loadStrategy === strategy && banner.isVisible);
   }
 
-=======
       .sort((a, b) => b.dynamicPriority - a.dynamicPriority);
 
     return limit ? sortedBanners.slice(0, limit) : sortedBanners;
@@ -101,7 +174,6 @@ export class BannerPrioritizationEngine {
       .filter(banner => banner.loadStrategy === 'immediate');
   }
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8
   /**
    * Get banners for lazy loading
    */
@@ -119,16 +191,6 @@ export class BannerPrioritizationEngine {
       banner.isVisible = isVisible;
       this.banners.set(id, banner);
     }
-  }
-
-  /**
-=======
-export class BannerPrioritizer {
-  private banners: BannerPriority[] = [];
-
-  addBanner(banner: BannerPriority): void {
-    this.banners.push(banner);
-    this.sortBanners();
   }
 
   removeBanner(id: string): void {
@@ -150,4 +212,5 @@ export class BannerPrioritizer {
 
 export const bannerPrioritizer = new BannerPrioritizer();
 export default bannerPrioritizer;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3fed
+=======
+>>>>>>> origin/main

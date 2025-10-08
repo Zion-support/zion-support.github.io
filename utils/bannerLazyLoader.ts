@@ -16,19 +16,12 @@ interface BannerModule {
  */
 export const lazyLoadBanner = (
   importFn: () => Promise<BannerModule>,
-  componentName: string,
-) => {
-  return lazy(() =>
-    importFn().catch(error => {
-      console.error(`Failed to load banner: ${componentName}`, error);
       // Retry once after a delay
       return new Promise<BannerModule>(resolve => {
         setTimeout(() => {
           importFn()
             .then(resolve)
             .catch(retryError => {
-              console.error(
-                `Retry failed for banner: ${componentName}`,
             });
         }, 1000);
       });
@@ -48,7 +41,6 @@ export const preloadBanner = (importFn: () => Promise<BannerModule>): void => {
           // Silently fail for preload
         });
       });
-    });
   }
 };
 
@@ -57,8 +49,6 @@ export const preloadBanner = (importFn: () => Promise<BannerModule>): void => {
  */
 export const createBannerLoader = () => {
   const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
         if (entry.isIntersecting) {
           const element = entry.target as HTMLElement;
           const importFn = element.dataset.bannerImport;

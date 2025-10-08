@@ -1,15 +1,12 @@
-export type IntegrationProviderId = 
-  | 'salesforce' 
-  | 'hubspot' 
-  | 'zoho' 
-  | 'pipedrive' 
-  | 'greenhouse' 
-  | 'lever' 
-  | 'workable' 
+export type IntegrationProviderId =
+  | 'salesforce'
+  | 'hubspot'
+  | 'zoho'
+  | 'pipedrive'
+  | 'greenhouse'
+  | 'lever'
+  | 'workable'
   | 'bamboohr';
-=======
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-4606
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e3b
@@ -38,15 +35,16 @@ export type SyncStatus = 'connected' | 'warning' | 'disconnected';
 export type SyncStatus = 'connected' | 'warning' | 'disconnected';
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-6abd
+=======
+
+export type SyncStatus = 'connected' | 'warning' | 'disconnected';
+
+>>>>>>> origin/main
 export interface IntegrationProviderMeta {
   id: IntegrationProviderId;
   name: string;
   category: 'crm' | 'ats';
   description: string;
-=======
-}
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0a8c
 =======
 
 export type SyncStatus = 'connected' | 'warning' | 'disconnected';
@@ -139,6 +137,8 @@ export interface ProviderConnection {
 =======
   expiresAt?: number;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-6231
+=======
+>>>>>>> origin/main
 }
 
 export interface ProviderConnection {
@@ -146,13 +146,6 @@ export interface ProviderConnection {
   providerId: IntegrationProviderId;
   name: string;
   status: SyncStatus;
-  accessToken: string;
-  refreshToken?: string;
-  expiresAt?: number;
-  lastSyncAt?: number;
-  createdAt: number;
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-895b
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-b781
 }
@@ -244,17 +237,18 @@ export type SyncStatus = 'connected' | 'warning' | 'disconnected';
 }
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-ee0f
-export interface SyncLogEntry {
-  id: string;
-  timestamp: number;
-  providerId: IntegrationProviderId;
-  level: 'info' | 'warn' | 'error';
-  action: string;
 =======
-  details?: Record<string, any>;
+  lastSync?: Date;
+  config: Record<string, unknown>;
+  createdAt: Date;
+  updatedAt: Date;
 }
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8
+>>>>>>> origin/main
+export interface SyncLogEntry {
+  id: string;
+  connectionId: string;
+  action: string;
 =======
   details?: Record<string, any>;
 }
@@ -365,40 +359,36 @@ export interface ZapierEvent {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-895b
 =======
 export interface IntegrationProviderMeta {
+=======
+  status: 'success' | 'error' | 'warning';
+  message: string;
+  details?: Record<string, unknown>;
+  timestamp: Date;
+}
+
+export interface IntegrationOverride {
   id: string;
-  name: string;
-  category: 'crm' | 'ats' | 'hr';
-  description: string;
+  connectionId: string;
+  field: string;
+  value: unknown;
+  reason: string;
+  createdAt: Date;
+  updatedAt: Date;
 }
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-4854
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b781
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-6231
-=======
-  payload: Record<string, any>;
-}
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0a8c
-=======
-  payload: Record<string, any>;
-=======
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-9008
-  payload: Record<string, any>;
+export interface IntegrationEvent {
+>>>>>>> origin/main
+  id: string;
+  type: 'sync' | 'error' | 'warning' | 'connection';
+  connectionId?: string;
+  message: string;
+  details?: Record<string, unknown>;
+  timestamp: Date;
 }
 
 export interface IntegrationsState {
   connections: ProviderConnection[];
   logs: SyncLogEntry[];
-  overrides: ManualOverride[];
-  events: ZapierEvent[];
-}
-=======
-  payload: Record<string, any>;
-}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-9d58
 
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-e42d
@@ -534,3 +524,8 @@ export interface IntegrationsState {
 =======
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-ee0f
+=======
+  overrides: IntegrationOverride[];
+  events: IntegrationEvent[];
+}
+>>>>>>> origin/main

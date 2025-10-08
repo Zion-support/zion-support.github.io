@@ -5,7 +5,6 @@
 // Meta tags management
 export const setMetaTags = (tags: Record<string, string>): void => {
   Object.entries(tags).forEach(([name, content]) => {
-    let meta = document.querySelector(`meta[name="${name}"]`) as HTMLMetaElement;
     if (!meta) {
       meta = document.createElement('meta');
       meta.name = name;
@@ -35,7 +34,6 @@ export const setOpenGraphTags = (ogData: {
 
   Object.entries(ogTags).forEach(([property, content]) => {
     if (content) {
-      let meta = document.querySelector(`meta[property="${property}"]`) as HTMLMetaElement;
       if (!meta) {
         meta = document.createElement('meta');
         meta.setAttribute('property', property);
@@ -56,7 +54,6 @@ export const setTwitterCardTags = (twitterData: {
 
   Object.entries(twitterTags).forEach(([name, content]) => {
     if (content) {
-      let meta = document.querySelector(`meta[name="${name}"]`) as HTMLMetaElement;
       if (!meta) {
         meta = document.createElement('meta');
         meta.name = name;
@@ -75,4 +72,3 @@ export const setStructuredData = (data: Record<string, unknown>): void => {
   document.head.appendChild(script);
 };
 
-};

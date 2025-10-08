@@ -1,36 +1,96 @@
 # Security Policy
 
+## Supported Versions
+
+We actively support the following versions with security updates:
+
+| Version | Supported          |
+| ------- | ------------------ |
+| 1.x.x   | :white_check_mark: |
+| < 1.0   | :x:                |
+
 ## Reporting a Vulnerability
 
-**Please do not report security vulnerabilities through public GitHub issues.**
+We take the security of our application seriously. If you discover a security vulnerability, please follow these steps:
 
-If you believe you have found a security vulnerability, please report it to us via email:
+### 1. Do Not Publicly Disclose
 
-**Email**: kleber@ziontechgroup.com
+Please do not create a public GitHub issue for security vulnerabilities. This helps protect our users while we work on a fix.
 
-You should receive a response within 48 hours.
+### 2. Contact Us Directly
 
-## What to Include
+Send details of the vulnerability to: **security@zion.app**
 
-Please include as much of the following information as possible:
+Include the following information:
+- Description of the vulnerability
+- Steps to reproduce the issue
+- Potential impact
+- Any suggested fixes or patches
 
-- Type of issue (buffer overflow, SQL injection, XSS, etc.)
-- Full paths of affected source files
-- Step-by-step reproduction instructions
-- Proof-of-concept code (if available)
-- Impact assessment
+### 3. Response Timeline
 
-## Response Timeline
+- **Initial Response**: Within 48 hours
+- **Assessment**: Within 5 business days
+- **Fix Timeline**: Depends on severity
+  - Critical: 1-3 days
+  - High: 1-2 weeks
+  - Medium: 2-4 weeks
+  - Low: Next release cycle
 
-- **Initial Response**: 48 hours
-- **Triage**: 1 week
-- **Fix Development**: 2-4 weeks
-- **Public Disclosure**: Within 90 days
+### 4. Coordinated Disclosure
 
-## Security Contact
+We follow coordinated disclosure practices:
+1. We'll work with you to understand and validate the issue
+2. We'll develop and test a fix
+3. We'll release the fix and credit you (if desired)
+4. Public disclosure after fix is deployed
 
-- **Primary**: kleber@ziontechgroup.com
-- **Phone**: +1 302 464 0950
-- **Address**: 364 E Main St STE 1008, Middletown DE 19709
+## Security Best Practices
 
-We appreciate responsible disclosure and will work with you to address any security issues promptly.
+### For Contributors
+
+- Never commit sensitive data (API keys, passwords, tokens)
+- Use environment variables for configuration
+- Follow secure coding guidelines
+- Keep dependencies up to date
+- Run security audits before submitting PRs
+
+### For Users
+
+- Keep your deployment updated
+- Use strong authentication
+- Enable HTTPS in production
+- Regular security audits
+- Monitor for suspicious activity
+
+## Security Features
+
+Our application includes:
+- Content Security Policy (CSP)
+- HTTPS enforcement
+- XSS protection
+- CSRF protection
+- Secure headers
+- Input validation
+- Output encoding
+- Rate limiting
+- Session management
+- Audit logging
+
+## Vulnerability Disclosure Program
+
+We appreciate security researchers who help make our platform more secure. Eligible vulnerabilities may qualify for recognition in our security acknowledgments.
+
+## Security Updates
+
+Stay informed about security updates:
+- Watch this repository
+- Subscribe to our security announcements
+- Follow our changelog
+
+## Contact
+
+For security concerns: security@zion.app  
+For general support: support@zion.app
+
+Thank you for helping keep Zion Tech Group and our users safe!

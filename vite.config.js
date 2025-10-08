@@ -8,7 +8,7 @@ export default defineConfig({
     visualizer({
       filename: 'dist/stats.html',
       open: false,
-  gzipSize: true,
+      gzipSize: true,
       brotliSize: true,
     }),
   ],
@@ -16,6 +16,7 @@ export default defineConfig({
     target: 'es2015',
     minify: 'terser',
     sourcemap: false,
+    chunkSizeWarningLimit: 1000,
     rollupOptions: {
       output: {
         manualChunks: {
@@ -23,22 +24,33 @@ export default defineConfig({
           router: ['react-router-dom'],
           ui: ['framer-motion', 'lucide-react'],
         },
+        assetFileNames: 'assets/[name]-[hash][extname]',
+        chunkFileNames: 'assets/[name]-[hash].js',
+        entryFileNames: 'assets/[name]-[hash].js',
       },
     },
     terserOptions: {
       compress: {
         drop_console: true,
-  drop_debugger: true,
+        drop_debugger: true,
+        pure_funcs: ['console.log', 'console.info', 'console.debug'],
+        passes: 2,
+      },
+      mangle: {
+        safari10: true,
+      },
+      format: {
+        comments: false,
       },
     },
   },
   server: {
     port: 3000,
-  host: true,
+    host: true,
   },
   preview: {
     port: 4173,
-  host: true,
+    host: true,
   },
   optimizeDeps: {
     include: ['react', 'react-dom', 'react-router-dom'],
