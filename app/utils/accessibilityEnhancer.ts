@@ -678,3 +678,14 @@ class AccessibilityEnhancer {
     
     return `
 Accessibility Report:
+- A11y Issues: ${metrics.a11yIssues}
+- Focusable Elements: ${metrics.focusableElements}
+- Images with Alt: ${metrics.imagesWithAlt}
+- Forms with Labels: ${metrics.formsWithLabels}
+- ARIA Landmarks: ${metrics.ariaLandmarks}
+- Heading Structure: ${metrics.headingStructure ? 'Valid' : 'Invalid'}
+    `;
+  }
+}
+
+export const accessibilityEnhancer = new AccessibilityEnhancer();
