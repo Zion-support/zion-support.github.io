@@ -1,4 +1,4 @@
-// import React from 'react';
+import React from 'react';
 /**
  * Enhanced Analytics Utility
  * Provides type-safe analytics tracking with error handling
@@ -11,24 +11,23 @@ export interface AnalyticsEvent {
   value?: number;
   metadata?: Record<string, unknown>;
 }
+
 export interface AnalyticsUser {
   id?: string;
   properties?: Record<string, unknown>;
 }
+
 class AnalyticsService {
   private isInitialized = false;
   private queue: AnalyticsEvent[] = [];
   private readonly maxQueueSize = 100;
-  private config = {
-    trackingId: process.env['NEXT_PUBLIC_GA_ID'] || 'GA_MEASUREMENT_ID',
-  };
 
   /**
    * Initialize analytics service
    */
   initialize(): void {
     if (this.isInitialized) return;
-
+    
     try {
       // Check if we're in a browser environment
       if (typeof window === 'undefined') return;
@@ -40,6 +39,7 @@ class AnalyticsService {
       console.error('Analytics initialization failed:', error);
     }
   }
+
   /**
    * Track a custom event
    */
@@ -49,15 +49,16 @@ class AnalyticsService {
         this.queueEvent(event);
         return;
       }
+
       // Send to Google Analytics if available
       if (this.hasGtag()) {
-        gtag('event', event.action, {
           event_category: event.category,
           event_label: event.label,
           value: event.value,
           ...event.metadata,
         });
       }
+
       // Log in development
       if (process.env['NODE_ENV'] === 'development') {
         console.log('Analytics Event:', event);
@@ -66,13 +67,13 @@ class AnalyticsService {
       console.error('Failed to track event:', error);
     }
   }
+
   /**
    * Track page view
    */
   trackPageView(path: string, title?: string): void {
     try {
       if (this.hasGtag()) {
-        gtag('config', this.config.trackingId, {
           page_path: path,
           page_title: title,
         });
@@ -81,13 +82,13 @@ class AnalyticsService {
       console.error('Failed to track page view:', error);
     }
   }
+
   /**
    * Track user properties
    */
   identifyUser(user: AnalyticsUser): void {
     try {
       if (this.hasGtag() && user.id) {
-        gtag('config', this.config.trackingId, {
           user_id: user.id,
           ...user.properties,
         });
@@ -96,6 +97,7 @@ class AnalyticsService {
       console.error('Failed to identify user:', error);
     }
   }
+
   /**
    * Track error events
    */
@@ -110,13 +112,18 @@ class AnalyticsService {
       },
     });
   }
+
   /**
    * Track timing events (for performance monitoring)
    */
-  trackTiming(category: string, variable: string, value: number, label?: string): void {
+  trackTiming(
+    category: string,
+    variable: string,
+    value: number,
+    label?: string
+  ): void {
     try {
       if (this.hasGtag()) {
-        gtag('event', 'timing_complete', {
           name: variable,
           value: Math.round(value),
           event_category: category,
@@ -127,6 +134,7 @@ class AnalyticsService {
       console.error('Failed to track timing:', error);
     }
   }
+
   /**
    * Track performance metrics
    */
@@ -143,12 +151,17 @@ class AnalyticsService {
       console.error('Failed to track performance:', error);
     }
   }
+
   /**
    * Check if gtag is available
    */
   private hasGtag(): boolean {
-    return typeof window !== 'undefined' && typeof window.gtag === 'function';
+    return (
+      typeof window !== 'undefined' &&
+      typeof window.gtag === 'function'
+    );
   }
+
   /**
    * Get Google Analytics ID
    */
@@ -156,6 +169,7 @@ class AnalyticsService {
     // Return the tracking ID from environment or config
     return process.env['NEXT_PUBLIC_GA_ID'] || 'GA_MEASUREMENT_ID';
   }
+
   /**
    * Queue event for later processing
    */
@@ -164,6 +178,7 @@ class AnalyticsService {
       this.queue.push(event);
     }
   }
+
   /**
    * Process queued events
    */
@@ -176,25 +191,29 @@ class AnalyticsService {
     }
   }
 }
+
 // Export singleton instance
 export const analytics = new AnalyticsService();
 
 // Export convenience functions
 export const trackEvent = (event: AnalyticsEvent) => analytics.trackEvent(event);
-export const trackPageView = (path: string, title?: string) => analytics.trackPageView(path, title);
+export const trackPageView = (path: string, title?: string) =>
+  analytics.trackPageView(path, title);
 export const trackError = (error: Error, metadata?: Record<string, unknown>) =>
   analytics.trackError(error, metadata);
-export const trackPerformance = (
-  metric: string,
+export const trackPerformance = (metric: string, value: number, metadata?: Record<string, unknown>) =>
+  analytics.trackPerformance(metric, value, metadata);
+export const trackTiming = (
+  category: string,
+  variable: string,
   value: number,
-  metadata?: Record<string, unknown>
-) => analytics.trackPerformance(metric, value, metadata);
-export const trackTiming = (category: string, variable: string, value: number, label?: string) =>
-  analytics.trackTiming(category, variable, value, label);
+  label?: string
+) => analytics.trackTiming(category, variable, value, label);
 export const identifyUser = (user: AnalyticsUser) => analytics.identifyUser(user);
 
 // Initialize on import
 if (typeof window !== 'undefined') {
   analytics.initialize();
 }
+
 export default analytics;
