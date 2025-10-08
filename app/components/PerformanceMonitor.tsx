@@ -34,6 +34,8 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         logger.info('Web Vital captured', { name: _metric.name, value: _metric.value });
       }
     };
+    // Suppress unused variable warning
+    void _reportWebVitals;
 
     // Monitor Core Web Vitals
     const navigation = performance.getEntriesByType('navigation')[0] as

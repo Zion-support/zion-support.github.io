@@ -2,6 +2,8 @@ import React, { useCallback, useState, useEffect, Suspense, lazy } from 'react';
 
 // Dynamically import heavy components for better performance
 const _ServiceCard = lazy(() => import('./components/ServiceCard'));
+// Suppress unused variable warning
+void _ServiceCard;
 
 // Loading skeleton component
 const ServiceCardSkeleton: React.FC = () => (

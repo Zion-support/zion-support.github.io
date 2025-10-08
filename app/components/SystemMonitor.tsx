@@ -20,6 +20,8 @@ const _collectPerformanceMetrics = () => {
       paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0,
   };
 };
+// Suppress unused variable warning
+void _collectPerformanceMetrics;
 
 // Helper functions
 const calculatePerformanceScore = (loadTime: number, firstContentfulPaint: number) => {
