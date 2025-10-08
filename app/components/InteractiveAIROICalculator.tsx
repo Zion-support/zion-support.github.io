@@ -74,7 +74,6 @@ const InteractiveAIROICalculator: React.FC = () => {
                 <div className='text-6xl font-bold text-blue-600 mb-4'>
                   {roi.toFixed(0)}%
                 </div>
-                </div>
               </div>
             </div>
           </div>
