@@ -69,7 +69,7 @@ const _GuidesPage = lazy(() => import('./guides/page'));
 const _SitemapPage = lazy(() => import('./sitemap-page'));
 
 // Utils
-import { lazyLoadImages, preloadCriticalResources, collectPerformanceMetrics, performanceOptimizer } from './utils/performanceOptimizer';
+import { performanceOptimizer } from './utils/performanceOptimizer';
 import { logger } from './utils/logger';
 import performanceMonitor from './utils/performanceMonitor';
 import seoOptimizer from './utils/seoOptimizer';
@@ -84,8 +84,8 @@ const App: React.FC = () => {
     logger.info('initialized', { component: 'App' });
 
     // Initialize performance monitoring
-    lazyLoadImages();
-    preloadCriticalResources();
+    performanceOptimizer.lazyLoadImages();
+    performanceOptimizer.preloadCriticalResources();
     performanceOptimizer.init();
     performanceMonitor.init();
     
@@ -97,7 +97,7 @@ const App: React.FC = () => {
     
     // Initialize Web Vitals monitoring
     if (typeof window !== 'undefined' && 'performance' in window) {
-      const pageLoadMetrics = collectPerformanceMetrics();
+      const pageLoadMetrics = performanceOptimizer.collectPerformanceMetrics();
       const metrics = performanceOptimizer.getMetrics();
       const performanceMetrics = performanceMonitor.getMetrics();
       
