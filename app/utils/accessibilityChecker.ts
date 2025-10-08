@@ -524,9 +524,7 @@ export class AccessibilityChecker {
    */
   private checkLandmarks(element: Element): void {
     const hasMain = element.querySelector('main, [role="main"]');
-    const _hasNav = element.querySelector('nav, [role="navigation"]');
-    // Suppress unused variable warning
-    void _hasNav;
+    // const hasNav = element.querySelector('nav, [role="navigation"]');
 
     if (!hasMain) {
       this.addIssue({

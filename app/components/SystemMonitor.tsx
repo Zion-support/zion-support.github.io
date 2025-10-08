@@ -7,9 +7,8 @@ import React, { useState, useEffect, useCallback } from 'react';
 
 import { errorHandler } from '../utils/enhancedErrorHandler';
 
-<<<<<<< HEAD
 // Collect basic performance metrics
-const _collectPerformanceMetrics = () => {
+  // const _collectPerformanceMetrics = () => {
   if (typeof window === 'undefined' || !window.performance) return null;
 
   const navigation = window.performance.timing;
@@ -21,10 +20,6 @@ const _collectPerformanceMetrics = () => {
       paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0,
   };
 };
-// Suppress unused variable warning
-void _collectPerformanceMetrics;
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-283b
 
 // Helper functions
 const calculatePerformanceScore = (loadTime: number, firstContentfulPaint: number) => {

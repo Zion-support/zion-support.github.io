@@ -172,9 +172,8 @@ class MonitoringService {
       })
     }
     // Send to analytics (if configured)
-    if (process.env.NODE_ENV === 'production') {
-      // Analytics tracking would go here
-      console.log('Analytics event:', {
+    if (typeof gtag !== 'undefined') {
+      gtag('event', 'web_vitals', {
         value: Math.round(name === 'cls' ? value * 1000 : value),
         event_category: 'Web Vitals',
         non_interaction: true,
@@ -191,6 +190,12 @@ class MonitoringService {
     console.error('[Error]', error)
 
     // Send to error tracking service (if configured)
+    if (typeof gtag !== 'undefined') {
+      gtag('event', 'exception', {
+        description: error.message,
+        fatal: false,
+      })
+    }
   }
   public getMetrics(): PerformanceMetrics {
     return { ...this.metrics }
