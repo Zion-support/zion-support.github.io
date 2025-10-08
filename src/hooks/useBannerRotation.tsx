@@ -3,7 +3,7 @@
  * Manages banner display tracking and rotation logic
  */
 
-import React, { useState, useEffect, useCallback, useMemo } from 'react';
+import { useState, useEffect, useCallback, useMemo } from 'react';
 import bannerConfigurations, { BannerConfig, RotationStrategy } from "../data/bannerConfigurations";
 
 interface UseBannerRotationOptions {
@@ -59,8 +59,8 @@ const loadBannerStats = () => {
   };
 };
 
-const getRefreshInterval = () => 30000;
-const getRotationStrategy = (): RotationStrategy => 'balanced';
+// const getRefreshInterval = () => 30000;
+// const getRotationStrategy = (): RotationStrategy => 'balanced';
 
 export const useBannerRotation = (options: UseBannerRotationOptions = {}) => {
   const {
@@ -84,14 +84,14 @@ export const useBannerRotation = (options: UseBannerRotationOptions = {}) => {
   // Load initial banners
   useEffect(() => {
     try {
-      const configs = Array.isArray(bannerConfigurations) ? bannerConfigurations : [];
+      const configs: BannerConfig[] = [];
       const selected = strategy === 'balanced' 
         ? selectBalancedBanners(configs, maxBanners)
         : selectBannersForDisplay(configs, maxBanners, strategy);
       
       setState(prev => ({
         ...prev,
-        currentBanners: selected as BannerConfig[],
+        currentBanners: selected,
         isLoading: false
       }));
     } catch (error) {
