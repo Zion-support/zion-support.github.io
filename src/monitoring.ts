@@ -18,8 +18,8 @@ function initializeMonitoring() {
       // Set up error tracking
       // errorHandler.init(); // Method may not exist
       
-      // Initialize analytics
-      (analytics as any).init?.();
+      // Analytics is already initialized as a singleton
+      // No additional initialization needed
       
       logger.info('Monitoring initialized successfully');
     }
