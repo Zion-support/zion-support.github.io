@@ -4,6 +4,7 @@ import PerformanceMonitor from './components/PerformanceMonitor';
 import AnalyticsProvider from './components/AnalyticsProvider';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import PWAInstaller from './components/PWAInstaller';
+import { GlobalErrorBoundary } from './components/GlobalErrorBoundary';
 
 export const metadata: Metadata = {
   title: 'Zion Tech Group - AI & IT Solutions',
@@ -128,13 +129,15 @@ export default function RootLayout({
         />
       </head>
       <body className='antialiased'>
-        <AnalyticsProvider>
-          <AccessibilityEnhancer>
-            <PerformanceMonitor />
-            <PWAInstaller />
-            {children}
-          </AccessibilityEnhancer>
-        </AnalyticsProvider>
+        <GlobalErrorBoundary>
+          <AnalyticsProvider>
+            <AccessibilityEnhancer>
+              <PerformanceMonitor />
+              <PWAInstaller />
+              {children}
+            </AccessibilityEnhancer>
+          </AnalyticsProvider>
+        </GlobalErrorBoundary>
       </body>
     </html>
   );
