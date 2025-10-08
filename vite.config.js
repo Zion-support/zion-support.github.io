@@ -4,7 +4,12 @@ import { visualizer } from 'rollup-plugin-visualizer';
 
 export default defineConfig({
   plugins: [
-    react(),
+    react({
+      // Enable React Fast Refresh
+      fastRefresh: true,
+      // Optimize JSX runtime
+      jsxRuntime: 'automatic',
+    }),
     visualizer({
       filename: 'dist/stats.html',
       open: false,
@@ -72,13 +77,14 @@ export default defineConfig({
           // UI libraries
           if (
             id.includes('node_modules/framer-motion') ||
-            id.includes('node_modules/lucide-react')
+            id.includes('node_modules/lucide-react') ||
+            id.includes('node_modules/@heroicons/react')
           ) {
             return 'ui';
           }
-          // Utilities and web vitals
+          // Analytics and monitoring
           if (id.includes('node_modules/web-vitals')) {
-            return 'page';
+            return 'analytics';
           }
           // Split other node_modules into separate chunks
           if (id.includes('node_modules')) {
@@ -94,18 +100,47 @@ export default defineConfig({
   server: {
     port: 3000,
     host: true,
+    // Enable HMR
+    hmr: true,
+    // Optimize dev server
+    fs: {
+      strict: false,
+    },
   },
   preview: {
     port: 4173,
     host: true,
   },
   optimizeDeps: {
-    include: ['react', 'react-dom', 'react-router-dom', 'framer-motion', 'lucide-react'],
+    include: [
+      'react',
+      'react-dom',
+      'react-router-dom',
+      'react-helmet-async',
+      'framer-motion',
+      'lucide-react',
+      '@heroicons/react',
+      'web-vitals',
+    ],
+    // Exclude problematic dependencies
+    exclude: ['@vite/client', '@vite/env'],
   },
+  // CSS optimization
   css: {
     devSourcemap: false,
   },
-  esbuild: {
-    drop: ['console', 'debugger'],
+  // Define global constants
+  define: {
+    __DEV__: JSON.stringify(process.env.NODE_ENV === 'development'),
+    __VERSION__: JSON.stringify(process.env.npm_package_version || '1.0.0'),
+  },
+  // Resolve configuration
+  resolve: {
+    alias: {
+      '@': '/src',
+      '@app': '/app',
+      '@components': '/app/components',
+      '@utils': '/app/utils',
+    },
   },
 });

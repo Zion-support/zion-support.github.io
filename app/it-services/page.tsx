@@ -1,6 +1,9 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Star, Server, Shield, Cloud, Database, Network, Code, Monitor, Settings } from 'lucide-react';
+import FuturisticNavigation from '../components/FuturisticNavigation';
+import FuturisticFooter from '../components/FuturisticFooter';
+import FuturisticDesignSystem from '../components/FuturisticDesignSystem';
 
 const ITServicesPage: React.FC = () => {
   const itServices = [
@@ -296,29 +299,31 @@ const ITServicesPage: React.FC = () => {
 
   return (
     <>
+      <FuturisticDesignSystem />
       <Helmet>
         <title>IT Services - Zion Tech Group</title>
         <meta name="description" content="Comprehensive IT services including cloud, security, DevOps, and infrastructure solutions for modern businesses." />
         <meta name="keywords" content="IT services, cloud computing, cybersecurity, DevOps, infrastructure, technology consulting" />
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+      <div className="min-h-screen animated-bg">
+        <FuturisticNavigation />
         {/* Hero Section */}
-        <section className="relative overflow-hidden bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-20">
+        <section className="relative overflow-hidden bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-20 cyber-grid">
           <div className="absolute inset-0 bg-black opacity-20"></div>
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+              <h1 className="text-6xl md:text-8xl font-bold mb-6 holographic">
                 Professional IT Services
               </h1>
-              <p className="text-xl md:text-2xl mb-8 text-blue-100 max-w-3xl mx-auto">
+              <p className="text-2xl md:text-3xl mb-8 text-blue-100 max-w-4xl mx-auto neon-glow-blue">
                 Comprehensive technology solutions to power your business growth and digital transformation
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors">
+              <div className="flex flex-col sm:flex-row gap-6 justify-center">
+                <button className="cyber-button text-lg px-10 py-4">
                   Get Free Assessment
                 </button>
-                <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
+                <button className="border-2 border-white text-white px-10 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-all duration-300 text-lg">
                   View Our Portfolio
                 </button>
               </div>

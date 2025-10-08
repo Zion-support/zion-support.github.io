@@ -1,6 +1,9 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Star, Brain, Zap, Target, BarChart, MessageSquare, Eye, Cpu, Sparkles } from 'lucide-react';
+import FuturisticNavigation from '../components/FuturisticNavigation';
+import FuturisticFooter from '../components/FuturisticFooter';
+import FuturisticDesignSystem from '../components/FuturisticDesignSystem';
 
 const AIServicesPage: React.FC = () => {
   const aiServices = [
@@ -263,29 +266,31 @@ const AIServicesPage: React.FC = () => {
 
   return (
     <>
+      <FuturisticDesignSystem />
       <Helmet>
         <title>AI Services - Zion Tech Group</title>
         <meta name="description" content="Advanced AI services including machine learning, NLP, computer vision, and automation solutions for enterprise businesses." />
         <meta name="keywords" content="AI services, machine learning, artificial intelligence, NLP, computer vision, automation, AI consulting" />
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-purple-50">
+      <div className="min-h-screen animated-bg">
+        <FuturisticNavigation />
         {/* Hero Section */}
-        <section className="relative overflow-hidden bg-gradient-to-r from-purple-600 to-pink-700 text-white py-20">
+        <section className="relative overflow-hidden bg-gradient-to-r from-purple-600 to-pink-700 text-white py-20 cyber-grid">
           <div className="absolute inset-0 bg-black opacity-20"></div>
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+              <h1 className="text-6xl md:text-8xl font-bold mb-6 holographic">
                 Advanced AI Services
               </h1>
-              <p className="text-xl md:text-2xl mb-8 text-purple-100 max-w-3xl mx-auto">
+              <p className="text-2xl md:text-3xl mb-8 text-purple-100 max-w-4xl mx-auto neon-glow-purple">
                 Transform your business with cutting-edge artificial intelligence solutions
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-colors">
+              <div className="flex flex-col sm:flex-row gap-6 justify-center">
+                <button className="cyber-button text-lg px-10 py-4">
                   Start AI Journey
                 </button>
-                <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors">
+                <button className="border-2 border-white text-white px-10 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 text-lg">
                   View AI Solutions
                 </button>
               </div>
@@ -487,6 +492,9 @@ const AIServicesPage: React.FC = () => {
             </div>
           </div>
         </section>
+        
+        {/* Footer */}
+        <FuturisticFooter />
       </div>
     </>
   );
