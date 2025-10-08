@@ -1,4 +1,4 @@
-import React, { memo, useMemo, Suspense } from 'react';
+import React, { memo, useMemo } from 'react';
 import { HelmetProvider, Helmet } from 'react-helmet-async';
 
 // Memoized components for better performance
@@ -91,7 +91,6 @@ class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundarySta
         </div>
       );
     }
-
     return this.props.children;
   }
 }
@@ -165,13 +164,11 @@ export default function App() {
             {JSON.stringify(structuredData)}
           </script>
         </Helmet>
-        <div className="min-h-screen bg-white">
-          <Suspense fallback={<LoadingSpinner />}>
-            <UnifiedContentPromotion />
-            <InteractiveAIROICalculator />
-            <ContentShowcase />
-            <InteractiveContentShowcase2026 />
-          </Suspense>
+        <div>
+          <UnifiedContentPromotion />
+          <InteractiveAIROICalculator />
+          <ContentShowcase />
+          <InteractiveContentShowcase2026 />
         </div>
       </HelmetProvider>
     </ErrorBoundary>
