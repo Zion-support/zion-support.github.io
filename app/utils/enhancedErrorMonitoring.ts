@@ -42,12 +42,8 @@ class EnhancedErrorMonitoring {
   private errorQueue: ErrorReport[] = [];
   private maxQueueSize = 1000;
   private sessionId: string;
-<<<<<<< HEAD
   private userId?: string;
   private isOnline = true;
-=======
-  private userId?: string
-  private isOnline = true
 >>>>>>> cursor/fix-errors-and-merge-to-main-a0f3
 
   private constructor() {

@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-import { useEffect, useCallback } from 'react'
-
-interface PerformanceMetrics {
-  loadTime: number
-  firstContentfulPaint: number
-  largestContentfulPaint: number
-  cumulativeLayoutShift: number
-  firstInputDelay: number
-=======
 import { useEffect, useCallback } from 'react';
 
 interface PerformanceMetrics {
@@ -16,28 +6,18 @@ interface PerformanceMetrics {
   largestContentfulPaint: number;
   cumulativeLayoutShift: number;
   firstInputDelay: number;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f5eb
 }
 
 export const usePerformanceOptimization = () => {
   const measurePerformance = useCallback(() => {
     if (typeof window === 'undefined' || !('performance' in window)) {
-<<<<<<< HEAD
-      return null
-=======
       return null;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f5eb
     }
 
     const navigation = performance.getEntriesByType(
       'navigation'
-<<<<<<< HEAD
-    )[0] as PerformanceNavigationTiming
-    const paintEntries = performance.getEntriesByType('paint')
-=======
     )[0] as PerformanceNavigationTiming;
     const paintEntries = performance.getEntriesByType('paint');
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f5eb
 
     const metrics: PerformanceMetrics = {
       loadTime: navigation
