@@ -55,22 +55,34 @@ class Logger {
   /**
    * Log a debug message
    */
-  debug(message: string, context?: string, metadata?: Record<string, unknown>): void {
-    this.log(LogLevel.DEBUG, message, context, metadata);
+  debug(message: string, metadataOrContext?: string | Record<string, unknown>, metadata?: Record<string, unknown>): void {
+    if (typeof metadataOrContext === 'string') {
+      this.log(LogLevel.DEBUG, message, metadataOrContext, metadata);
+    } else {
+      this.log(LogLevel.DEBUG, message, undefined, metadataOrContext);
+    }
   }
 
   /**
    * Log an info message
    */
-  info(message: string, context?: string, metadata?: Record<string, unknown>): void {
-    this.log(LogLevel.INFO, message, context, metadata);
+  info(message: string, metadataOrContext?: string | Record<string, unknown>, metadata?: Record<string, unknown>): void {
+    if (typeof metadataOrContext === 'string') {
+      this.log(LogLevel.INFO, message, metadataOrContext, metadata);
+    } else {
+      this.log(LogLevel.INFO, message, undefined, metadataOrContext);
+    }
   }
 
   /**
    * Log a warning message
    */
-  warn(message: string, context?: string, metadata?: Record<string, unknown>): void {
-    this.log(LogLevel.WARN, message, context, metadata);
+  warn(message: string, metadataOrContext?: string | Record<string, unknown>, metadata?: Record<string, unknown>): void {
+    if (typeof metadataOrContext === 'string') {
+      this.log(LogLevel.WARN, message, metadataOrContext, metadata);
+    } else {
+      this.log(LogLevel.WARN, message, undefined, metadataOrContext);
+    }
   }
 
   /**
@@ -78,17 +90,34 @@ class Logger {
    */
   error(
     message: string,
-    error?: Error,
-    context?: string,
+    errorOrMetadata?: Error | Record<string, unknown>,
+    contextOrMetadata?: string | Record<string, unknown>,
     metadata?: Record<string, unknown>
   ): void {
+    let error: Error | undefined;
+    let context: string | undefined;
+    let meta: Record<string, unknown> | undefined;
+
+    // Handle different parameter combinations
+    if (errorOrMetadata instanceof Error) {
+      error = errorOrMetadata;
+      if (typeof contextOrMetadata === 'string') {
+        context = contextOrMetadata;
+        meta = metadata;
+      } else {
+        meta = contextOrMetadata;
+      }
+    } else {
+      meta = errorOrMetadata;
+    }
+
     const entry: LogEntry = {
       level: LogLevel.ERROR,
       message,
       timestamp: new Date(),
       context,
       metadata: {
-        ...metadata,
+        ...meta,
         error: error ? {
           name: error.name,
           message: error.message,
@@ -129,6 +158,36 @@ class Logger {
     this.processLog(entry);
     // Immediately flush fatal errors
     this.flush();
+  }
+
+  /**
+   * Log a performance metric
+   */
+  perf(metric: string, value: number, metadata?: Record<string, unknown>): void {
+    this.log(LogLevel.DEBUG, `Performance: ${metric} = ${value}ms`, undefined, {
+      ...metadata,
+      metric,
+      value,
+    });
+  }
+
+  /**
+   * Group related log messages
+   */
+  group(label: string, callback: () => void): void {
+    if (typeof console.group === 'function') {
+      console.group(label);
+      try {
+        callback();
+      } finally {
+        console.groupEnd();
+      }
+    } else {
+      // Fallback for environments without console.group
+      this.info(`=== ${label} ===`);
+      callback();
+      this.info(`=== End ${label} ===`);
+    }
   }
 
   /**
