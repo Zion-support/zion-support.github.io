@@ -99,4 +99,6 @@ export default function OptimizedHomePage() {
       </main>
     </div>
   );
-}
+};
+
+export default OptimizedHomePage;

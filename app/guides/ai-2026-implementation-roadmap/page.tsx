@@ -389,4 +389,6 @@ export default function AI2026ImplementationRoadmap() {
       </article>
     </div>
   );
-}
+};
+
+export default AI2026ImplementationRoadmap;

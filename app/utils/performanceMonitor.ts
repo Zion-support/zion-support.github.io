@@ -29,18 +29,54 @@ class PerformanceMonitor {
     this.setupResourceTiming();
   }
 
-  private setupWebVitals(): void {
-    // First Contentful Paint
-    this.observePaint('first-contentful-paint', 'fcp');
-    
-    // Largest Contentful Paint
-    this.observeLCP();
-    
-    // First Input Delay
-    this.observeFID();
-    
-    // Cumulative Layout Shift
-    this.observeCLS();
+  /**
+   * Initialize performance observers
+   */
+  private initializeObservers(): void {
+    try {
+      // Observe paint metrics
+      if ('PerformanceObserver' in window) {
+        // First Contentful Paint
+        this.observeEntry('paint', (entries) => {
+          entries.forEach((entry) => {
+            if (entry.name === 'first-contentful-paint') {
+              this.recordMetric('FCP', entry.startTime);
+            }
+          });
+        });
+
+        // Largest Contentful Paint
+        this.observeEntry('largest-contentful-paint', (entries) => {
+          if (lastEntry) {
+            this.recordMetric('LCP', lastEntry.renderTime || lastEntry.loadTime || lastEntry.startTime);
+          }
+        });
+
+        // First Input Delay
+        this.observeEntry('first-input', (entries) => {
+          if (firstInput && firstInput.processingStart !== undefined) {
+            const fid = firstInput.processingStart - firstInput.startTime;
+            this.recordMetric('FID', fid);
+          }
+        });
+
+        // Cumulative Layout Shift
+        this.observeEntry('layout-shift', (entries) => {
+          let clsValue = 0;
+          entries.forEach((entry: unknown) => {
+            const layoutShiftEntry = entry as any;
+            if (!layoutShiftEntry.hadRecentInput) {
+              clsValue += layoutShiftEntry.value;
+            }
+          });
+          if (clsValue > 0) {
+            this.recordMetric('CLS', clsValue);
+          }
+        });
+      }
+    } catch (error) {
+      logger.error('Failed to initialize performance observers', error as Error);
+    }
   }
 
   private observePaint(name: string, metricKey: keyof PerformanceMetrics): void {

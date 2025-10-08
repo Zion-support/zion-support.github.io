@@ -59,23 +59,24 @@ class MonitoringService {
 
         // First Input Delay
         const fidObserver = new PerformanceObserver((list) => {
-          const entries = list.getEntries()
-          entries.forEach((entry: any) => {
-            this.metrics.fid = entry.processingStart - entry.startTime
-            this.reportMetric('fid', this.metrics.fid)
-          })
-        })
-        fidObserver.observe({ entryTypes: ['first-input'] })
+          const entries = list.getEntries();
+          entries.forEach((entry: unknown) => {
+            const perfEntry = entry as PerformanceEventTiming;
+            this.metrics.fid = perfEntry.processingStart - perfEntry.startTime;
+            this.reportMetric('fid', this.metrics.fid);
+          });
+        });
+        fidObserver.observe({ entryTypes: ['first-input'] });
 
         // Cumulative Layout Shift
         let clsValue = 0
         const clsObserver = new PerformanceObserver((list) => {
-          const entries = list.getEntries()
-          entries.forEach((entry: any) => {
-            if (!entry.hadRecentInput) {
-              clsValue += entry.value
-              this.metrics.cls = clsValue
-              this.reportMetric('cls', clsValue)
+          for (const entry of list.getEntries() as PerformanceEntry[]) {
+            const layoutShiftEntry = entry as any;
+            if (!layoutShiftEntry.hadRecentInput) {
+              clsValue += layoutShiftEntry.value;
+              this.metrics.cls = clsValue;
+              this.reportMetric('cls', clsValue);
             }
           })
         })
@@ -118,14 +119,15 @@ class MonitoringService {
     if ('PerformanceObserver' in window) {
       try {
         const resourceObserver = new PerformanceObserver((list) => {
-          const entries = list.getEntries()
-          entries.forEach((entry: any) => {
-            if (entry.duration > 1000) {
+          const entries = list.getEntries();
+          entries.forEach((entry: unknown) => {
+            const resourceEntry = entry as PerformanceResourceTiming;
+            if (resourceEntry.duration > 1000) {
               console.warn('Slow resource detected:', {
-                name: entry.name,
-                duration: entry.duration,
-                type: entry.initiatorType
-              })
+                name: resourceEntry.name,
+                duration: resourceEntry.duration,
+                type: resourceEntry.initiatorType,
+              });
             }
           })
         })
