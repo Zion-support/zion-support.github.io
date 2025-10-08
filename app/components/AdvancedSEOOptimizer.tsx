@@ -6,6 +6,7 @@ interface SEOConfig {
   description: string;
   keywords: string[];
   canonicalUrl: string;
+  url?: string;
   ogTitle?: string;
   ogDescription?: string;
   ogImage?: string;
@@ -21,14 +22,6 @@ interface SEOConfig {
   modifiedTime?: string;
   section?: string;
   tags?: string[];
-}
-
-interface SEOConfig {
-  title: string;
-  description: string;
-  url: string;
-  canonicalUrl: string;
-  keywords: string[];
 }
 
 interface AdvancedSEOOptimizerProps {
@@ -190,9 +183,10 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
       canonicalUrl: config.canonicalUrl,
       keywords: config.keywords,
     });
+      keywords: config.keywords,
 
     // Cleanup on unmount
-    return () => {
+      keywords: config.keywords,
       if (structuredDataRef.current) {
         structuredDataRef.current.remove();
       }

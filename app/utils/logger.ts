@@ -173,8 +173,28 @@ class Logger {
   /**
    * Error level logging
    */
-  error(message: string, error?: Error, context?: LogContext): void {
-    this.log(LogLevel.ERROR, message, context, error);
+  error(message: string, errorOrContext?: Error | string | LogContext, context?: LogContext): void {
+    if (typeof errorOrContext === 'string') {
+      this.log(LogLevel.ERROR, message, { ...context, component: errorOrContext });
+    } else if (errorOrContext instanceof Error) {
+      this.log(LogLevel.ERROR, message, context, errorOrContext);
+    } else {
+      this.log(LogLevel.ERROR, message, errorOrContext);
+    }
+  }
+
+  /**
+   * Lifecycle logging for application events
+   */
+  lifecycle(message: string, component?: string): void {
+    this.info(`[Lifecycle] ${message}`, { component });
+  }
+
+  /**
+   * Performance logging
+   */
+  performance(message: string, metrics: Record<string, unknown>, component?: string): void {
+    this.info(`[Performance] ${message}`, { ...metrics, component });
   }
 
   /**
