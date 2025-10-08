@@ -177,7 +177,7 @@ export class SecureStorage {
       const encryptedData = btoa(data);
       localStorage.setItem(`${this.prefix}${key}`, encryptedData);
     } catch (error) {
-//       console.error('Failed to set storage item:', error);
+      console.error('Failed to set storage item:', error);
     }
   }
 

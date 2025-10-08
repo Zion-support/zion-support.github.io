@@ -11,7 +11,7 @@ export interface PerformanceMetrics {
 export const reportWebVitals = (metric: unknown) => {
   // Log to console in development
   if (process.env['NODE_ENV'] === 'development') {
-//     if (process.env.DEV) { console.log('[Web Vitals]', metric); }
+    if (process.env.DEV) { console.log('[Web Vitals]', metric); }
   }
 
   // Send to analytics in production
