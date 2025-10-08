@@ -56,7 +56,6 @@ export {
   ErrorCategory,
   type ErrorInfo,
   ErrorHandler,
-  errorHandler,
 } from './errorHandler';
 
 // Default exports
