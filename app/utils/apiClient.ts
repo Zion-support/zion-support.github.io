@@ -16,7 +16,7 @@ export interface ApiClientConfig {
 
 export interface RequestConfig extends Omit<RequestInit, 'cache'> {
   url: string;
-  cache?: CacheOptions;
+  cacheOptions?: CacheOptions;
   retries?: number;
   timeout?: number;
   skipCache?: boolean;
