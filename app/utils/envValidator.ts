@@ -35,11 +35,15 @@ export function validateEnv(): ValidationResult {
 
   // Helper to get env variable
   const getEnvVar = (key: string): string | undefined => {
-    try {
-      return import.meta?.env?.[key] || process.env[key];
-    } catch {
+    // Check if running in browser (Vite) or Node environment
+    if (typeof process !== 'undefined' && process.env) {
       return process.env[key];
     }
+    // For browser environment, try window object
+    if (typeof window !== 'undefined' && (window as any).ENV) {
+      return (window as any).ENV[key];
+    }
+    return undefined;
   };
 
   // Validate NODE_ENV
@@ -67,8 +71,8 @@ export function validateEnv(): ValidationResult {
   const apiTimeout = getEnvVar('VITE_API_TIMEOUT');
   if (apiTimeout) {
     const timeout = parseInt(apiTimeout, 10);
-    if (isNaN(timeout) || timeout < 0) {
-      errors.push(`Invalid API_TIMEOUT: ${apiTimeout}. Must be a positive number`);
+    if (isNaN(timeout) || timeout <= 0) {
+      errors.push(`Invalid API_TIMEOUT: ${apiTimeout}. Must be a positive number greater than zero`);
     } else {
       config.API_TIMEOUT = timeout;
     }
@@ -123,8 +127,8 @@ export function validateEnv(): ValidationResult {
   const maxCacheSize = getEnvVar('VITE_MAX_CACHE_SIZE');
   if (maxCacheSize) {
     const size = parseInt(maxCacheSize, 10);
-    if (isNaN(size) || size < 0) {
-      errors.push(`Invalid MAX_CACHE_SIZE: ${maxCacheSize}. Must be a positive number`);
+    if (isNaN(size) || size <= 0) {
+      errors.push(`Invalid MAX_CACHE_SIZE: ${maxCacheSize}. Must be a positive number greater than zero`);
     } else {
       config.MAX_CACHE_SIZE = size;
     }
@@ -134,8 +138,8 @@ export function validateEnv(): ValidationResult {
   const cacheTTL = getEnvVar('VITE_CACHE_TTL');
   if (cacheTTL) {
     const ttl = parseInt(cacheTTL, 10);
-    if (isNaN(ttl) || ttl < 0) {
-      errors.push(`Invalid CACHE_TTL: ${cacheTTL}. Must be a positive number`);
+    if (isNaN(ttl) || ttl <= 0) {
+      errors.push(`Invalid CACHE_TTL: ${cacheTTL}. Must be a positive number greater than zero`);
     } else {
       config.CACHE_TTL = ttl;
     }
