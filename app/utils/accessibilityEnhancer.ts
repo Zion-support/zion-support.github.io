@@ -85,7 +85,7 @@ class AccessibilityEnhancer {
   private setupKeyboardNavigation(): void {
     if (!this.config.enableKeyboardNavigation) return;
 
-    document.addEventListener('keydown', (event) => {
+    document.addEventListener('keydown', (_event) => {
       // Skip links for better navigation
       if (event.key === 'Tab' && event.shiftKey) {
         this.handleTabNavigation(event, true);
@@ -95,12 +95,12 @@ class AccessibilityEnhancer {
       
       // Escape key handling
       if (event.key === 'Escape') {
-        this.handleEscapeKey(event);
+        this.handleEscapeKey(_event);
       }
       
       // Arrow key navigation for custom components
       if (['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight'].includes(event.key)) {
-        this.handleArrowNavigation(event);
+        this.handleArrowNavigation(_event);
       }
     });
   }
@@ -348,12 +348,12 @@ class AccessibilityEnhancer {
     if (!this.config.enableFocusManagement) return;
 
     // Track focus changes
-    document.addEventListener('focusin', (event) => {
-      this.handleFocusIn(event);
+    document.addEventListener('focusin', (_event) => {
+      this.handleFocusIn(_event);
     });
 
-    document.addEventListener('focusout', (event) => {
-      this.handleFocusOut(event);
+    document.addEventListener('focusout', (_event) => {
+      this.handleFocusOut(_event);
     });
   }
 

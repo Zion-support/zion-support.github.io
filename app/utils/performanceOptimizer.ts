@@ -75,7 +75,7 @@ class PerformanceOptimizer {
     if ('measure' in performance && 'mark' in performance) {
       try {
         performance.measure(`${markName}-duration`, markName);
-      } catch (error) {
+      } catch (_error) {
         // Ignore measure errors
       }
     }
@@ -94,8 +94,8 @@ class PerformanceOptimizer {
       this.observeFCP();
       this.observeTTFB();
       this.observeMemory();
-    } catch (error) {
-      console.warn('Performance monitoring initialization failed:', error);
+    } catch (_error) {
+      logger.warn('Performance monitoring initialization failed:', error);
     }
   }
 
@@ -108,7 +108,7 @@ class PerformanceOptimizer {
       });
       observer.observe({ entryTypes: ['largest-contentful-paint'] });
       this.observers.push(observer);
-    } catch (error) {
+    } catch (_error) {
       // Ignore if not supported
     }
   }
@@ -123,7 +123,7 @@ class PerformanceOptimizer {
       });
       observer.observe({ entryTypes: ['first-input'] });
       this.observers.push(observer);
-    } catch (error) {
+    } catch (_error) {
       // Ignore if not supported
     }
   }
@@ -142,7 +142,7 @@ class PerformanceOptimizer {
       });
       observer.observe({ entryTypes: ['layout-shift'] });
       this.observers.push(observer);
-    } catch (error) {
+    } catch (_error) {
       // Ignore if not supported
     }
   }
@@ -159,7 +159,7 @@ class PerformanceOptimizer {
       });
       observer.observe({ entryTypes: ['paint'] });
       this.observers.push(observer);
-    } catch (error) {
+    } catch (_error) {
       // Ignore if not supported
     }
   }
@@ -176,7 +176,7 @@ class PerformanceOptimizer {
       });
       observer.observe({ entryTypes: ['navigation'] });
       this.observers.push(observer);
-    } catch (error) {
+    } catch (_error) {
       // Ignore if not supported
     }
   }
@@ -245,10 +245,10 @@ class PerformanceOptimizer {
     window.addEventListener('load', () => {
       navigator.serviceWorker.register('/sw.js')
         .then((registration) => {
-          console.log('SW registered: ', registration);
+          logger.info('SW registered: ', registration);
         })
         .catch((registrationError) => {
-          console.log('SW registration failed: ', registrationError);
+          logger.info('SW registration failed: ', registrationError);
         });
     });
   }

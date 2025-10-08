@@ -77,15 +77,15 @@ class ErrorLogger {
       `%c[${entry.severity.toUpperCase()}] ${entry.message}`,
       styles[entry.severity]
     );
-    console.log('Timestamp:', entry.timestamp);
+    logger.info('Timestamp:', entry.timestamp);
     if (entry.error) {
-      console.error('Error:', entry.error);
+      logger.error('Error:', entry.error);
     }
     if (entry.context) {
-      console.log('Context:', entry.context);
+      logger.info('Context:', entry.context);
     }
     if (entry.stackTrace) {
-      console.log('Stack Trace:', entry.stackTrace);
+      logger.info('Stack Trace:', entry.stackTrace);
     }
     console.groupEnd();
   }
@@ -118,7 +118,7 @@ class ErrorLogger {
       });
     } catch (error) {
       // Silently fail to avoid infinite loop
-      console.error('Failed to send error to external service:', error);
+      logger.error('Failed to send error to external service:', error);
     }
   }
 

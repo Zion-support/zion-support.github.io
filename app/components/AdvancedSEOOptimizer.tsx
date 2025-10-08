@@ -38,7 +38,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
   enableTwitterCards = true,
   enableSchemaMarkup = true,
 }) => {
-  const structuredDataRef = useRef<HTMLScriptElement | null>(null);
+  const _structuredDataRef = useRef<HTMLScriptElement | null>(null);
   const generateStructuredData = useCallback(() => {
     if (!enableStructuredData || !seoData.structuredData) return null;
 
@@ -184,8 +184,8 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
 
   // const addStructuredData = (data: Record<string, unknown>) => {
   //   // Remove existing structured data
-  //   if (structuredDataRef.current) {
-  //     structuredDataRef.current.remove();
+  //   if (_structuredDataRef.current) {
+  //     _structuredDataRef.current.remove();
   //   }
 
   //   // Add new structured data
@@ -194,7 +194,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
   //   script.textContent = JSON.stringify(data);
   //   script.id = 'structured-data';
   //   document.head.appendChild(script);
-  //   structuredDataRef.current = script;
+  //   _structuredDataRef.current = script;
   // };
 
   // const trackPageView = (config: SEOData) => {
