@@ -4,24 +4,14 @@
  */
 
 import React, { useState, useEffect, useCallback, useMemo } from 'react';
+import bannerConfigurations from '../data/bannerConfigurations';
 
-// Types
-export interface BannerConfig {
+type RotationStrategy = 'random' | 'sequential' | 'weighted' | 'balanced';
+
+interface BannerConfig {
   id: string;
-  name: string;
-  priority: number;
+  [key: string]: unknown;
 }
-
-export type RotationStrategy = 'balanced' | 'priority' | 'random';
-
-// Placeholder functions for banner operations
-const selectBannersForDisplay = async (strategy: RotationStrategy, max: number): Promise<BannerConfig[]> => [];
-const selectBalancedBanners = async (max: number): Promise<BannerConfig[]> => [];
-const trackImpression = (id: string) => {};
-const trackClick = (id: string) => {};
-const loadBannerStats = async () => ({ impressions: 0, clicks: 0, ctr: 0 });
-const getRefreshInterval = () => 30000;
-const getRotationStrategy = (): RotationStrategy => 'balanced';
 
 interface UseBannerRotationOptions {
   strategy?: RotationStrategy;
