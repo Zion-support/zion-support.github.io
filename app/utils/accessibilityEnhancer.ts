@@ -678,16 +678,11 @@ class AccessibilityEnhancer {
     
     return `
 Accessibility Report:
-
-- Total Violations: ${metrics.violations}
-- Aria Labels: ${metrics.ariaLabels}
-- Keyboard Navigation: ${metrics.keyboardNavigation}
-- Color Contrast: ${metrics.colorContrast}
-- Focus Management: ${metrics.focusManagement}
-- Screen Reader Support: ${metrics.screenReaderSupport}
-- High Contrast: ${metrics.highContrast ? 'Enabled' : 'Disabled'}
-- Reduced Motion: ${metrics.reducedMotion ? 'Enabled' : 'Disabled'}
-    `;
+- Focus Indicators Fixed: ${metrics.focusIndicatorsFixed}
+- ARIA Labels Added: ${metrics.ariaLabelsAdded}
+- Color Contrast Issues Fixed: ${metrics.colorContrastFixed}
+- Keyboard Navigation Issues Fixed: ${metrics.keyboardNavFixed}
+`;
   }
 }
 

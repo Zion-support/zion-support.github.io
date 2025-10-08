@@ -3,10 +3,10 @@ import Link from 'next/link';
 
 const NewestContent2025Banner: React.FC = () => {
   return (
-    <section className="relative py-20 bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900 overflow-hidden">
+    <section className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 overflow-hidden">
       {/* Animated Background Effects */}
-      <div className="absolute inset-0 opacity-20">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20 animate-pulse"></div>
+      <div className="absolute inset-0 opacity-30">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-blue-500 via-transparent to-transparent"></div>
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
@@ -28,46 +28,35 @@ const NewestContent2025Banner: React.FC = () => {
           </p>
         </div>
 
-        {/* Article Grid */}
+        {/* Featured Content Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {/* Article 1 */}
           <div className="group relative bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-500 hover:scale-105">
-            {/* Card glow effect */}
             <div className="absolute inset-0 bg-gradient-to-br from-cyan-500 to-blue-600 opacity-0 group-hover:opacity-10 transition-all duration-500 rounded-2xl"></div>
             
             <div className="relative z-10">
-              {/* Icon & Badges */}
               <div className="flex items-center justify-between mb-6">
                 <div className="text-4xl">⚡</div>
-                <div className="flex gap-2">
-                  <span className="px-3 py-1 bg-gradient-to-r from-red-500 to-orange-500 text-white text-xs font-bold rounded-full">
-                    🔥 HOT
-                  </span>
-                  <span className="px-3 py-1 bg-gradient-to-r from-green-500 to-emerald-500 text-white text-xs font-bold rounded-full">
-                    NEW TODAY
-                  </span>
-                </div>
+                <span className="px-3 py-1 bg-gradient-to-r from-red-500 to-orange-500 text-white text-xs font-bold rounded-full">
+                  🔥 HOT
+                </span>
               </div>
 
-              {/* Category Tag */}
               <div className="mb-4">
                 <span className="px-3 py-1 bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-xs font-semibold rounded-full">
                   Edge AI & Real-Time
                 </span>
               </div>
 
-              {/* Title */}
               <h3 className="text-xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors">
                 AI Edge Computing Real-Time Intelligence 2025
               </h3>
 
-              {/* Excerpt */}
               <p className="text-gray-300 mb-6 leading-relaxed">
                 Deploy intelligence at the source with &lt;10ms latency. Achieve 95% bandwidth reduction, 
                 87% cost savings, and enhanced privacy compliance at enterprise scale.
               </p>
 
-              {/* Key Stats */}
               <div className="grid grid-cols-3 gap-4 mb-6">
                 <div className="text-center">
                   <div className="text-2xl font-bold text-cyan-400">&lt;10ms</div>
@@ -83,13 +72,11 @@ const NewestContent2025Banner: React.FC = () => {
                 </div>
               </div>
 
-              {/* Meta Info */}
               <div className="flex items-center justify-between text-sm text-gray-400 mb-6">
                 <span>⏱️ 35 min read</span>
                 <span>📅 Sep 30, 2025</span>
               </div>
 
-              {/* CTA Button */}
               <Link 
                 href="/blog/ai-edge-computing-real-time-intelligence-2025"
                 className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-cyan-500/25"
@@ -107,11 +94,9 @@ const NewestContent2025Banner: React.FC = () => {
             <div className="relative z-10">
               <div className="flex items-center justify-between mb-6">
                 <div className="text-4xl">🧠</div>
-                <div className="flex gap-2">
-                  <span className="px-3 py-1 bg-gradient-to-r from-purple-500 to-fuchsia-600 text-white text-xs font-bold rounded-full">
-                    BREAKTHROUGH
-                  </span>
-                </div>
+                <span className="px-3 py-1 bg-gradient-to-r from-purple-500 to-fuchsia-600 text-white text-xs font-bold rounded-full">
+                  BREAKTHROUGH
+                </span>
               </div>
 
               <div className="mb-4">
@@ -146,7 +131,7 @@ const NewestContent2025Banner: React.FC = () => {
 
               <div className="flex items-center justify-between text-sm text-gray-400 mb-6">
                 <span>⏱️ 28 min read</span>
-                <span>📅 Sep 30, 2025</span>
+                <span>�� Sep 30, 2025</span>
               </div>
 
               <Link 
@@ -166,11 +151,9 @@ const NewestContent2025Banner: React.FC = () => {
             <div className="relative z-10">
               <div className="flex items-center justify-between mb-6">
                 <div className="text-4xl">🔒</div>
-                <div className="flex gap-2">
-                  <span className="px-3 py-1 bg-gradient-to-r from-emerald-500 to-teal-600 text-white text-xs font-bold rounded-full">
-                    SECURITY
-                  </span>
-                </div>
+                <span className="px-3 py-1 bg-gradient-to-r from-emerald-500 to-teal-600 text-white text-xs font-bold rounded-full">
+                  SECURITY
+                </span>
               </div>
 
               <div className="mb-4">
@@ -242,39 +225,6 @@ const NewestContent2025Banner: React.FC = () => {
               >
                 Schedule Consultation
               </Link>
-            </div>
-          </div>
-
-          {/* Featured Content Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16">
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-              <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg flex items-center justify-center mb-4">
-                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-2">AI Innovation</h3>
-              <p className="text-gray-300 text-sm">Latest breakthroughs in artificial intelligence and machine learning technologies.</p>
-            </div>
-
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-              <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mb-4">
-                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-2">Quantum Computing</h3>
-              <p className="text-gray-300 text-sm">Revolutionary quantum computing solutions for enterprise applications.</p>
-            </div>
-
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-              <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center mb-4">
-                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-2">Autonomous Systems</h3>
-              <p className="text-gray-300 text-sm">Self-managing systems that optimize operations automatically.</p>
             </div>
           </div>
         </div>
