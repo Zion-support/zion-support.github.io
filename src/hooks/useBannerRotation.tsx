@@ -25,13 +25,13 @@ interface BannerRotationState {
 }
 
 // Helper functions defined inline
-const selectBannersForDisplay = (banners: unknown[], maxBanners: number, strategy: RotationStrategy) => {
-  const enabled = banners.filter((b: unknown) => b.enabled !== false);
-  const sorted = enabled.sort((a: unknown, b: unknown) => (b.priority || 0) - (a.priority || 0));
+const selectBannersForDisplay = (banners: any[], maxBanners: number, strategy: RotationStrategy) => {
+  const enabled = banners.filter((b: any) => b.enabled !== false);
+  const sorted = enabled.sort((a: any, b: any) => (b.priority || 0) - (a.priority || 0));
   return sorted.slice(0, maxBanners);
 };
 
-const selectBalancedBanners = (banners: unknown[], maxBanners: number) => {
+const selectBalancedBanners = (banners: any[], maxBanners: number) => {
   return selectBannersForDisplay(banners, maxBanners, 'balanced');
 };
 
@@ -49,7 +49,6 @@ const trackClick = (bannerId: string) => {
     const current = parseInt(localStorage.getItem(key) || '0');
     localStorage.setItem(key, String(current + 1));
   }
-};
 };
 export const useBannerRotation = (options: UseBannerRotationOptions = {}) => {
   const {
@@ -80,7 +79,7 @@ export const useBannerRotation = (options: UseBannerRotationOptions = {}) => {
       
       setState(prev => ({
         ...prev,
-        currentBanners: selected,
+        currentBanners: selected as BannerConfig[],
         isLoading: false
       }));
     } catch (error) {

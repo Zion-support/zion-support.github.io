@@ -1,4 +1,4 @@
-import { describe, it, expect, beforeEach, _jest } from '@_jest/globals';
+import { describe, it, expect, beforeEach, jest } from '@jest/globals';
 import {
   recordMetric,
   getMetrics,

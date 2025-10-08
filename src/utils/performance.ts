@@ -16,12 +16,12 @@ export const reportWebVitals = (metric: unknown) => {
 
   // Send to analytics in production
   if (typeof window !== 'undefined' && (window as any).gtag) {
-    (window as any).gtag('event', metric.name, {
+    (window as any).gtag('event', (metric as any).name, {
       event_category: 'Web Vitals',
       value: Math.round(
-        metric.name === 'CLS' ? metric.value * 1000 : metric.value
+        (metric as any).name === 'CLS' ? (metric as any).value * 1000 : (metric as any).value
       ),
-      event_label: metric.id,
+      event_label: (metric as any).id,
       non_interaction: true,
     });
   }

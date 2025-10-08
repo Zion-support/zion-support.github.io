@@ -235,7 +235,7 @@ export async function assertThrows(
   }
 
   if (expectedError) {
-    const message = error?.message || String(error);
+    const message = (error as any)?.message || String(error);
     if (typeof expectedError === 'string') {
       if (!message.includes(expectedError)) {
         throw new Error(
