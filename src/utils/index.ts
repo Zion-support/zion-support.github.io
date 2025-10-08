@@ -6,15 +6,39 @@ export * from './analytics';
 export * from './errorHandler';
 export * from './performanceOptimizer';
 export * from './security';
-export * from './validation';
 export * from './cache';
 export * from './logger';
 export * from './api';
 export * from './hooks';
 
+// Export validation utilities individually to avoid conflicts
+export {
+  isDefined,
+  isString,
+  isNumber,
+  isBoolean,
+  isObject,
+  isArray,
+  isFunction,
+  isEmpty,
+  isEmptyObject,
+  validateRequiredFields,
+  isError,
+  isValidLength,
+  isInRange,
+  safeParse,
+  assertNever,
+  safeArrayAccess,
+  safeGet,
+  isValidDate,
+  isValidJson,
+  isValidHexColor,
+  isValidUuid,
+  hasProperty,
+} from './validation';
+
 // Default exports
 export { default as analytics } from './analytics';
-export { default as errorHandler } from './errorHandler';
 export { default as performanceOptimizer } from './performanceOptimizer';
 export { default as securityUtils } from './security';
 export { default as validationUtils } from './validation';

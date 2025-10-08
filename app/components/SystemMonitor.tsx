@@ -193,7 +193,7 @@ console.error('Failed to update metrics:', error);
         effectiveType: connection?.effectiveType || 'unknown',
         downlink: connection?.downlink || 0,
         rtt: connection?.rtt || 0,
-        saveData: connection.saveData || false,
+        saveData: connection?.saveData || false,
       };
     }
 
