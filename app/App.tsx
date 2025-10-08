@@ -1,13 +1,8 @@
 'use client';
 
 import React, { Suspense, lazy, useEffect } from 'react';
-import Link from 'next/link';
 import { HelmetProvider } from 'react-helmet-async';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-
-// Styles
-import './globals.css';
-import '../index.css';
 
 // Components
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
@@ -18,8 +13,10 @@ import SEOEnhancer from './components/SEOEnhancer';
 import AdvancedSEOOptimizer from './components/AdvancedSEOOptimizer';
 import LoadingSpinner from './components/LoadingSpinner';
 
-// Lazy load pages and components for better performance
+// Lazy load pages for better performance
 const HomePage = lazy(() => import('./page'));
+
+// Lazy load components for better performance
 const ContentShowcase = lazy(() => import('./components/ContentShowcase'));
 const InteractiveContentShowcase2026 = lazy(
   () => import('./components/InteractiveContentShowcase2026')
@@ -31,6 +28,9 @@ const InteractiveAIROICalculator = lazy(
 // Utils
 import { lazyLoadImages, preloadCriticalResources, collectPerformanceMetrics, performanceOptimizer } from './utils/performanceOptimizer';
 import { logger } from './utils/logger';
+
+// Styles
+import './globals.css';
 
 const App: React.FC = () => {
   useEffect(() => {
