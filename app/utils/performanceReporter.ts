@@ -94,9 +94,9 @@ class PerformanceReporter {
       // Cumulative Layout Shift (CLS)
       let clsValue = 0
       const clsObserver = new PerformanceObserver((entryList) => {
-        entryList.getEntries().forEach((entry) => {
-          if (!(entry as any).hadRecentInput) {
-            clsValue += (entry as any).value;
+        entryList.getEntries().forEach((entry: any) => {
+          if (!entry.hadRecentInput) {
+            clsValue += entry.value;
           }
         })
         this.addMetric('CLS', clsValue, this.getRating('cls', clsValue))
@@ -169,7 +169,7 @@ class PerformanceReporter {
             name: resource.name,
             duration: resource.duration,
             type: resource.initiatorType
-          })
+          });
         })
       }, 0)
     })
@@ -183,7 +183,7 @@ class PerformanceReporter {
       value,
       rating,
       timestamp: Date.now()
-    }
+    };
     this.metrics.push(metric)
 
     // Log poor performing metrics
@@ -205,7 +205,7 @@ class PerformanceReporter {
       ttfb: { good: 800, poor: 1800 },
       dcl: { good: 1000, poor: 3000 },
       load: { good: 2000, poor: 4000 }
-    }
+    };
     const threshold = thresholds[metric.toLowerCase()]
     if (!threshold) {
       return 'good'
@@ -228,9 +228,9 @@ class PerformanceReporter {
     // Google Analytics
     if (typeof gtag === 'function') {
       gtag('event', metric.name, {
-        event_category: 'Web Vitals',
-        value: Math.round(metric.value),
-        event_label: metric.rating,
+        event_category: 'Web Vitals'
+        value: Math.round(metric.value)
+        event_label: metric.rating
         non_interaction: true,
       })
     }
@@ -246,11 +246,11 @@ class PerformanceReporter {
     const resources = performance.getEntriesByType('resource') as PerformanceResourceTiming[]
 
     return {
-      metrics: this.metrics,
-      navigation,
+      metrics: this.metrics
+      navigation
       resources: resources.slice(0, 50), // Limit to 50 resources
-      timestamp: Date.now(),
-      userAgent: navigator.userAgent,
+      timestamp: Date.now()
+      userAgent: navigator.userAgent
       url: window.location.href
     }
   }
@@ -266,10 +266,10 @@ class PerformanceReporter {
       return
     }
     logger.info('Performance Report', {
-      metrics: report.metrics,
+      metrics: report.metrics
       navigation: {
         ttfb: report.navigation?.responseStart ? 
-          report.navigation.responseStart - report.navigation.requestStart : null,
+          report.navigation.responseStart - report.navigation.requestStart : null
         domContentLoaded: report.navigation?.domContentLoadedEventEnd ?
           report.navigation.domContentLoadedEventEnd - report.navigation.domContentLoadedEventStart : null
       }
@@ -294,7 +294,7 @@ export const performanceReporter = new PerformanceReporter()
 // Auto-initialize in browser
 if (typeof window !== 'undefined') {
   performanceReporter.init({
-    enabled: process.env['NODE_ENV'] === 'production',
+    enabled: process.env['NODE_ENV'] === 'production'
     reportInterval: 60000, // Report every minute
   })
 }

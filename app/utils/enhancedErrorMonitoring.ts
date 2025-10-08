@@ -69,7 +69,7 @@ class EnhancedErrorMonitoring {
         lineno: event.lineno,
         colno: event.colno,
         category: 'javascript'
-      })
+      });
     })
 
     // Unhandled promise rejections
@@ -77,14 +77,13 @@ class EnhancedErrorMonitoring {
       this.handleError(new Error(`Unhandled Promise Rejection: ${event.reason}`), {
         reason: event.reason,
         category: 'promise'
-      })
+      });
     })
 
     // Resource loading errors
     window.addEventListener('error', (event) => {
       if (event.target !== window) {
-        this.handleError(new Error(`Resource loading error: ${event.target}`), {
-          resource: (event.target as any).src || (event.target as any).href,
+        this.handleError(new Error(`Resource loading error: ${event.type}`), {
           category: 'resource'
         })
       }
@@ -113,12 +112,12 @@ class EnhancedErrorMonitoring {
             status: response.status,
             statusText: response.statusText,
             category: 'network'
-          })
+          });
         }
         return response
       } catch (error) {
         self.handleError(error as Error, {
-          url: args[0] as string,
+          url: args[0] as string
           category: 'network'
         })
         throw error
@@ -135,8 +134,8 @@ class EnhancedErrorMonitoring {
         for (const entry of list.getEntries()) {
           if (entry.duration > 50) { // Tasks longer than 50ms
             this.handleError(new Error(`Long task detected: ${entry.duration}ms`), {
-              duration: entry.duration,
-              startTime: entry.startTime,
+              duration: entry.duration
+              startTime: entry.startTime
               category: 'performance'
             })
           }
@@ -149,7 +148,7 @@ class EnhancedErrorMonitoring {
           if (entry.entryType === 'memory') {
             if (memory.usedJSHeapSize > 100 * 1024 * 1024) { // 100MB
               this.handleError(new Error(`High memory usage detected: ${memory.usedJSHeapSize / 1024 / 1024}MB`), {
-                memoryUsage: memory.usedJSHeapSize,
+                memoryUsage: memory.usedJSHeapSize
                 category: 'performance'
               })
             }
@@ -178,22 +177,22 @@ class EnhancedErrorMonitoring {
    */
   handleError(error: Error, context: Partial<ErrorContext> = {}): void {
     const errorReport: ErrorReport = {
-      id: this.generateErrorId(),
-      message: error.message,
-      stack: error.stack,
+      id: this.generateErrorId()
+      message: error.message
+      stack: error.stack
       context: {
-        sessionId: this.sessionId,
-        userId: this.userId,
-        url: window.location.href,
-        userAgent: navigator.userAgent,
-        timestamp: new Date().toISOString(),
+        sessionId: this.sessionId
+        userId: this.userId
+        url: window.location.href
+        userAgent: navigator.userAgent
+        timestamp: new Date().toISOString()
         ...context
-      },
-      severity: this.calculateSeverity(error, context),
-      category: (context.category as 'javascript' | 'network' | 'promise' | 'resource' | 'custom') || 'javascript',
+      }
+      severity: this.calculateSeverity(error, context)
+      category: (context.category as 'javascript' | 'network' | 'promise' | 'resource' | 'custom') || 'javascript'
       resolved: false,
       occurrences: 1,
-      firstSeen: new Date().toISOString(),
+      firstSeen: new Date().toISOString()
       lastSeen: new Date().toISOString()
     }
     // Check if similar error already exists
@@ -252,10 +251,10 @@ class EnhancedErrorMonitoring {
   private async sendErrorReport(errorReport: ErrorReport): Promise<void> {
     try {
       await fetch('/api/errors', {
-        method: 'POST',
+        method: 'POST'
         headers: {
           'Content-Type': 'application/json'
-        },
+        }
         body: JSON.stringify(errorReport)
       })
     } catch (error) {
@@ -318,9 +317,9 @@ class EnhancedErrorMonitoring {
     }, {} as Record<string, number>)
 
     return {
-      total: this.errorQueue.length,
-      bySeverity,
-      byCategory,
+      total: this.errorQueue.length
+      bySeverity
+      byCategory
       recent: recent.slice(0, 10)
     }
   }

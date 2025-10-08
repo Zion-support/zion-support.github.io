@@ -104,7 +104,7 @@ class MonitoringService {
             console.warn('Long task detected:', {
               duration: entry.duration,
               startTime: entry.startTime
-            })
+            });
           }
         })
         longTaskObserver.observe({ entryTypes: ['longtask'] })
@@ -125,7 +125,7 @@ class MonitoringService {
                 name: entry.name,
                 duration: entry.duration,
                 type: entry.initiatorType
-              })
+              });
             }
           })
         })
@@ -144,7 +144,7 @@ class MonitoringService {
         timestamp: Date.now(),
         userAgent: navigator.userAgent,
         url: window.location.href
-      })
+      });
     })
 
     // Unhandled promise rejection handler

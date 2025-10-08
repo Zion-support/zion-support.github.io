@@ -34,7 +34,7 @@ class SecurityEnhancer {
       allowedOrigins: ['https://zion.app', 'https://www.zion.app'],
       trustedDomains: ['zion.app', 'www.zion.app'],
       ...config
-    }
+    };
     this.metrics = {
       blockedRequests: 0,
       suspiciousActivity: 0,

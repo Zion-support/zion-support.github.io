@@ -210,7 +210,7 @@ class SEOOptimizer {
         name: this.config.siteName,
         url: this.config.siteUrl
       }
-    }
+    };
     // Add article-specific properties
     if (this.currentPageData.type === 'article') {
       Object.assign(structuredData, {
