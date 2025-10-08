@@ -1,4 +1,5 @@
 
+>>>>>>> 1684f58a157a4496bdf1f11291796d45799723dd
   const baseUrl = 'https://ziontechgroup.com';
 
   return [

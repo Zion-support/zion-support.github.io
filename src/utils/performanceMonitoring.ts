@@ -245,7 +245,7 @@ class PerformanceMonitor {
       clsObserver.observe({ entryTypes: ['layout-shift'] });
       this.observers.push(clsObserver);
     } catch (error) {
-//       console.warn('Failed to observe Web Vitals:', error);
+      console.warn('Failed to observe Web Vitals:', error);
     }
   }
 
