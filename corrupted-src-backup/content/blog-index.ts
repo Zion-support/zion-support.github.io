@@ -139,18 +139,18 @@ export function getFeaturedPosts(): BlogPost[] {
 }
 
 export function getAllCategories(): string[] {
-  const categories = new Set(allBlogPosts.map(post => post.category));
+//   const categories = new Set(allBlogPosts.map(post => post.category));
   return Array.from(categories);
 }
 
 export function getAllTags(): string[] {
-  const tags = new Set(allBlogPosts.flatMap(post => post.tags));
+//   const tags = new Set(allBlogPosts.flatMap(post => post.tags));
   return Array.from(tags);
 }
 
 export function getTotalValueProposition(): string {
   const totalValue = allBlogPosts.reduce((sum, post) => {
-    const value = post.valueProposition.match(/\$(\d+)M/);
+    const _value = post.valueProposition.match(/\$(\d+)M/);
 :corrupted-src-backup/content/blog-index.ts
   }, 0);
   return `$${totalValue}M+ total value proposition`;

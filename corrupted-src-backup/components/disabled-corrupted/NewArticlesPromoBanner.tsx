@@ -66,7 +66,7 @@ const NewArticlesPromoBanne, r: React.FC<NewArticlesPromoBannerPro, p, s> = ({
                   <span, className="te, x, t-sm, tex, t-purp, l, e-2, 0, 0">{artic, l, e.readTime}</sp, a, n>
                   <Link, t, o = { artic, l, e.l, i, n, k }, classNa, m, e = "te, x, t-yell, o, w-300, fon, t-semibold, hove, r: te, x, t-yell, o, w-200, flex, items-center, ga, p-1"
                   >
-                    Re, a, d <ArrowRight, className="w-4 h-4" />
+                    Re, a, d <Link, className="w-4 h-4" />
                   </Li, n, k>
                 </div>
               </div>
@@ -77,7 +77,7 @@ const NewArticlesPromoBanne, r: React.FC<NewArticlesPromoBannerPro, p, s> = ({
               className="inli, n, e-flex, item, s-center, ga, p-2, b, g-white, tex, t-purp, l, e-700, p, x-8, p, y-4, rounde, d-xl, fon, t-bold, hove, r: bg-purp, l, e-50, transitio, n-all, hove, r:sca, l, e-1, 0, 5"
             >
               View, All, Articles
-              <ArrowRight, className="w-5 h-5" />
+              <Link, className="w-5 h-5" />
             </Li, n, k>
           </div>
         </div>
@@ -116,7 +116,7 @@ const NewArticlesPromoBanne, r: React.FC<NewArticlesPromoBannerPro, p, s> = ({
                 <p, classNam, e = "te, x, t-sm, tex, t-gr, a, y-600, m, b-3, lin, e-cla, m, p-2">{artic, l, e.description}</p>
                 <div, className="flex, item, s-center, justif, y-between, tex, t-sm">
                   <span, className="te, x, t-gr, a, y-5, 0, 0">{artic, l, e.readTime}</sp, a, n>
-                  <ArrowRight, className="w-4 h-4, tex, t-indi, g, o-600, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />
+                  <Link, className="w-4 h-4, tex, t-indi, g, o-600, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />
                 </div>
               </Li, n, k>
             ))}

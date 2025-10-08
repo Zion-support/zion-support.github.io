@@ -16,7 +16,7 @@ export function deepClone<T>(obj: T): T {
   }
 
   if (obj instanceof Array) {
-    return obj.map((item) => deepClone(item)) as unknown as T;
+    return obj.map(item => deepClone(item)) as unknown as T;
   }
 
   if (obj instanceof Object) {
@@ -35,10 +35,7 @@ export function deepClone<T>(obj: T): T {
 /**
  * Deep merge two objects
  */
-export function deepMerge<T extends Record<string, unknown>>(
-  target: T,
-  source: Partial<T>
-): T {
+export function deepMerge<T extends Record<string, unknown>>(target: T, source: Partial<T>): T {
   const output = { ...target };
 
   for (const key in source) {
@@ -133,7 +130,7 @@ export function pick<T extends Record<string, unknown>, K extends keyof T>(
   keys: K[]
 ): Pick<T, K> {
   const result = {} as Pick<T, K>;
-  keys.forEach((key) => {
+  keys.forEach(key => {
     if (key in obj) {
       result[key] = obj[key];
     }
@@ -149,7 +146,7 @@ export function omit<T extends Record<string, unknown>, K extends keyof T>(
   keys: K[]
 ): Omit<T, K> {
   const result = { ...obj };
-  keys.forEach((key) => {
+  keys.forEach(key => {
     delete result[key];
   });
   return result as Omit<T, K>;
@@ -164,8 +161,7 @@ export function groupBy<T>(
 ): Record<string, T[]> {
   return array.reduce(
     (result, item) => {
-      const groupKey =
-        typeof key === 'function' ? String(key(item)) : String(item[key]);
+      const groupKey = typeof key === 'function' ? String(key(item)) : String(item[key]);
       (result[groupKey] = result[groupKey] || []).push(item);
       return result;
     },
@@ -182,7 +178,7 @@ export function unique<T>(array: T[], key?: keyof T): T[] {
   }
 
   const seen = new Set();
-  return array.filter((item) => {
+  return array.filter(item => {
     const value = item[key];
     if (seen.has(value)) {
       return false;
@@ -215,8 +211,14 @@ export function sortBy<T>(
       }
 
       // Convert to comparable values
-      const aComp = typeof aVal === 'string' || typeof aVal === 'number' || typeof aVal === 'boolean' ? aVal : String(aVal);
-      const bComp = typeof bVal === 'string' || typeof bVal === 'number' || typeof bVal === 'boolean' ? bVal : String(bVal);
+      const aComp =
+        typeof aVal === 'string' || typeof aVal === 'number' || typeof aVal === 'boolean'
+          ? aVal
+          : String(aVal);
+      const bComp =
+        typeof bVal === 'string' || typeof bVal === 'number' || typeof bVal === 'boolean'
+          ? bVal
+          : String(bVal);
 
       if (aComp < bComp) return order === 'asc' ? -1 : 1;
       if (aComp > bComp) return order === 'asc' ? 1 : -1;
@@ -240,11 +242,11 @@ export function chunk<T>(array: T[], size: number): T[][] {
  * Zip multiple arrays together
  */
 export function zip<T>(...arrays: T[][]): T[][] {
-  const length = Math.max(...arrays.map((arr) => arr.length));
+  const length = Math.max(...arrays.map(arr => arr.length));
   const result: T[][] = [];
 
   for (let i = 0; i < length; i++) {
-    result.push(arrays.map((arr) => arr[i]));
+    result.push(arrays.map(arr => arr[i]));
   }
 
   return result;
@@ -275,11 +277,7 @@ export function formatNumber(num: number, locale = 'en-US'): string {
 /**
  * Format currency
  */
-export function formatCurrency(
-  amount: number,
-  currency = 'USD',
-  locale = 'en-US'
-): string {
+export function formatCurrency(amount: number, currency = 'USD', locale = 'en-US'): string {
   return new Intl.NumberFormat(locale, {
     style: 'currency',
     currency,
@@ -345,7 +343,7 @@ export function titleCase(str: string): string {
   return str
     .toLowerCase()
     .split(' ')
-    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
     .join(' ');
 }
 
@@ -363,9 +361,7 @@ export function kebabCase(str: string): string {
  * Convert to camel case
  */
 export function camelCase(str: string): string {
-  return str
-    .toLowerCase()
-    .replace(/[^a-zA-Z0-9]+(.)/g, (_, chr) => chr.toUpperCase());
+  return str.toLowerCase().replace(/[^a-zA-Z0-9]+(.)/g, (_, chr) => chr.toUpperCase());
 }
 
 /**

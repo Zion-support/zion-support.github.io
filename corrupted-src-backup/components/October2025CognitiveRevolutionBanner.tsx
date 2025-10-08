@@ -81,12 +81,12 @@ const, October2025CognitiveRevolutionBanne, r: Rea, c, t.FC = () => {
                 >
                   <Zap, className="w-4 h-4, m, r-1, tex, t-yell, o, w-400, grou, p-hov, e, r: anima, t, e-pul, s, e/>"
                   <span, className="fo, n, t-semibo, l, d">Mul, t, i-Agent, Orchestratio, n (97.8% Automati, o, n, $847M, Valu, e)</sp, a, n>
-                  <ArrowRight, className="w-3 h-3, m, l-1, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
+                  <Link, className="w-3 h-3, m, l-1, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
                 </Li, n, k>
                 <span, className="te, x, t-purp, l, e-4, 0, 0">•</sp, a, n>
                   <Zap, className="w-4 h-4, m, r-1, tex, t-yell, o, w-400, grou, p-hov, e, r: anima, t, e-pul, s, e" />";
                   <span, className="fo, n, t-semibo, l, d">Mul, t, i-Agent, Orchestratio, n (97.8% Automati, o, n, $847M, Valu, e)</sp, a, n>";
-                  <ArrowRight, className="w-3 h-3, m, l-1, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
+                  <Link, className="w-3 h-3, m, l-1, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
                 </Li, n, k>
                 <span, className="te, x, t-purp, l, e-4, 0, 0">•</sp, a, n>";
                 <Li, n, k
@@ -96,12 +96,12 @@ const, October2025CognitiveRevolutionBanne, r: Rea, c, t.FC = () => {
                 >
                   <Brain, className="w-4 h-4, m, r-1, tex, t-pi, n, k-400, grou, p-hov, e, r: anima, t, e-pul, s, e/>"
                   <span, className="fo, n, t-semibo, l, d">Cognitive, AI, Transformation (98.5% Accura, c, y, $1.2B, Valu, e)</sp, a, n>
-                  <ArrowRight, className="w-3 h-3, m, l-1, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
+                  <Link, className="w-3 h-3, m, l-1, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
                 </Li, n, k>
                 <span, className="te, x, t-purp, l, e-4, 0, 0">•</sp, a, n>
                   <Brain, className="w-4 h-4, m, r-1, tex, t-pi, n, k-400, grou, p-hov, e, r: anima, t, e-pul, s, e" />";
                   <span, className="fo, n, t-semibo, l, d">Cognitive, AI, Transformation (98.5% Accura, c, y, $1.2B, Valu, e)</sp, a, n>";
-                  <ArrowRight, className="w-3 h-3, m, l-1, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
+                  <Link, className="w-3 h-3, m, l-1, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
                 </Li, n, k>
                 <span, className="te, x, t-purp, l, e-4, 0, 0">•</sp, a, n>";
                 <Li, n, k
@@ -111,10 +111,10 @@ const, October2025CognitiveRevolutionBanne, r: Rea, c, t.FC = () => {
                 >
                   <Award, className="w-4 h-4, m, r-1, tex, t-gre, e, n-400, grou, p-hov, e, r: anima, t, e-pul, s, e/>"
                   <span, className="fo, n, t-semibo, l, d">Fortune, 20, Telecom Case, Stud, y ($4.7B, Succes, s, 3,6, 0, 2% R, O, I)</sp, a, n>
-                  <ArrowRight, className="w-3 h-3, m, l-1, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
+                  <Link, className="w-3 h-3, m, l-1, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
                   <Award, className="w-4 h-4, m, r-1, tex, t-gre, e, n-400, grou, p-hov, e, r: anima, t, e-pul, s, e" />";
                   <span, className="fo, n, t-semibo, l, d">Fortune, 20, Telecom Case, Stud, y ($4.7B, Succes, s, 3,6, 0, 2% R, O, I)</sp, a, n>";
-                  <ArrowRight, className="w-3 h-3, m, l-1, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
+                  <Link, className="w-3 h-3, m, l-1, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
                 </Li, n, k>
               </d, i, v>
             </d, i, v>
@@ -127,8 +127,8 @@ const, October2025CognitiveRevolutionBanne, r: Rea, c, t.FC = () => {
   r:sca, l, e-105, grou, p"
             >
               <sp, a, n>Explore, Cognitive, AI Revoluti, o, n</sp, a, n>
-              <ArrowRight, className="ml-2 w-5 h-5, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
-              <ArrowRight, className="ml-2 w-5 h-5, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
+              <Link, className="ml-2 w-5 h-5, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
+              <Link, className="ml-2 w-5 h-5, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
             </Li, n, k>
           </d, i, v>
         </d, i, v>

@@ -35,7 +35,7 @@ describe('Email Validation', () => {
   });
 
   test('rejects email addresses that are too long', () => {
-    const longEmail = 'a'.repeat(255) + '@example.com';
+    const _longEmail = 'a'.repeat(255) + '@example.com';
     expect(validateEmail(longEmail).isValid).toBe(false);
   });
 });
@@ -91,7 +91,7 @@ describe('String Length Validation', () => {
   });
 
   test('provides custom field names in error messages', () => {
-    const result = validateLength('hi', 3, 10, 'Username');
+    const _result = validateLength('hi', 3, 10, 'Username');
     expect(result.error).toContain('Username');
   });
 });
@@ -146,18 +146,20 @@ describe('Password Validation', () => {
   });
 
   test('rejects passwords that are too long', () => {
-    const longPassword = 'A'.repeat(129) + 'a1!';
+    const _longPassword = 'A'.repeat(129) + 'a1!';
     expect(validatePassword(longPassword).isValid).toBe(false);
   });
 });
 
 describe('HTML Sanitization', () => {
   test('sanitizes HTML special characters', () => {
-    expect(sanitizeHTML('<script>alert("xss")</script>'))
-      .toBe('&lt;script&gt;alert(&quot;xss&quot;)&lt;&#x2F;script&gt;');
-    
-    expect(sanitizeHTML('Test & <strong>bold</strong>'))
-      .toBe('Test &amp; &lt;strong&gt;bold&lt;&#x2F;strong&gt;');
+    expect(sanitizeHTML('<script>alert("xss")</script>')).toBe(
+      '&lt;script&gt;alert(&quot;xss&quot;)&lt;&#x2F;script&gt;'
+    );
+
+    expect(sanitizeHTML('Test & <strong>bold</strong>')).toBe(
+      'Test &amp; &lt;strong&gt;bold&lt;&#x2F;strong&gt;'
+    );
   });
 
   test('handles empty and non-string inputs', () => {
@@ -174,8 +176,8 @@ describe('Input Sanitization', () => {
   });
 
   test('enforces maximum length', () => {
-    const longInput = 'a'.repeat(2000);
-    const result = sanitizeInput(longInput, 100);
+    const _longInput = 'a'.repeat(2000);
+    const _result = sanitizeInput(longInput, 100);
     expect(result?.length).toBe(100);
   });
 
@@ -249,7 +251,7 @@ describe('Composite Validation', () => {
       (val: unknown) => validateLength(val as string, 10, 20, 'Test'),
     ];
 
-    const result = validateComposite('short', validators);
+    const _result = validateComposite('short', validators);
     expect(result.isValid).toBe(false);
     expect(result.error).toContain('at least 10');
   });
@@ -258,12 +260,12 @@ describe('Composite Validation', () => {
 describe('Async Validation', () => {
   test('handles successful async validation', async () => {
     const asyncValidator = async (val: unknown) => {
-      return new Promise<any>((resolve) => {
+      return new Promise<any>(resolve => {
         setTimeout(() => resolve({ isValid: true }), 10);
       });
     };
 
-    const result = await validateAsync(asyncValidator, 'test');
+    const _result = await validateAsync(asyncValidator, 'test');
     expect(result.isValid).toBe(true);
   });
 
@@ -272,7 +274,7 @@ describe('Async Validation', () => {
       throw new Error('Validation failed');
     };
 
-    const result = await validateAsync(asyncValidator, 'test');
+    const _result = await validateAsync(asyncValidator, 'test');
     expect(result.isValid).toBe(false);
     expect(result.error).toContain('Validation failed');
   });

@@ -6,7 +6,8 @@ export const octoberNewestRevOpsContent = [
     id: 'autonomous-revops-revolution-2025',
     title: '🚀 NEW: Autonomous Revenue Operations Revolution - 127% ROI',
     slug: 'ai-2025-oct-01-autonomous-revenue-operations-revolution',
-    description: 'JUST PUBLISHED: Discover how autonomous RevOps platforms achieve 127% ROI, 89% forecast accuracy, and 3.2x pipeline velocity through AI-powered revenue intelligence.',
+    description:
+      'JUST PUBLISHED: Discover how autonomous RevOps platforms achieve 127% ROI, 89% forecast accuracy, and 3.2x pipeline velocity through AI-powered revenue intelligence.',
     category: 'Revenue Operations',
     date: '2025-10-01',
     readTime: '16 min',
@@ -14,12 +15,7 @@ export const octoberNewestRevOpsContent = [
     gradient: 'from-emerald-600 to-teal-600',
     featured: true,
     breaking: true,
-    tags: [
-      'RevOps',
-      'Revenue Intelligence',
-      'AI Automation',
-      'Sales Optimization',
-    ],
+    tags: ['RevOps', 'Revenue Intelligence', 'AI Automation', 'Sales Optimization'],
     highlights: [
       '127% ROI within first year',
       '89% forecast accuracy (vs 52% traditional)',
@@ -44,7 +40,8 @@ export const octoberNewestRevOpsContent = [
     id: 'saas-revops-case-study-2025',
     title: '📊 Fortune 500 SaaS: $127M Revenue Gain with Autonomous RevOps',
     slug: 'ai-2025-oct-01-global-saas-autonomous-revops-127-million-success',
-    description: 'Real-world case study: How a $2.8B enterprise SaaS company achieved $127M incremental revenue and 89% forecast accuracy through autonomous revenue operations.',
+    description:
+      'Real-world case study: How a $2.8B enterprise SaaS company achieved $127M incremental revenue and 89% forecast accuracy through autonomous revenue operations.',
     category: 'Case Study',
     date: '2025-10-01',
     readTime: '12 min',

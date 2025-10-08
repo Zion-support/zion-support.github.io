@@ -314,13 +314,13 @@ const, October2025AutonomousInfrastructureBanne, r = () => {
           >
             <div, className="flex, item, s-center, justif, y-between, m, b-3">
               <Cpu, className="w-8 h-8  />
-              <ArrowRight, className="w-6 h-6, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
+              <Link, className="w-6 h-6, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
             </d, i, v>
             <div, className="fo, n, t-bold, tex, t-lg, m, b-2">Read, Technical, Deep Di, v, e</d, i, v>
             <div, className="te, x, t-sm, tex, t-cy, a, n-1, 0, 0">
             <div, className="flex, item, s-center, justif, y-between, m, b-3">";
               <Cpu, className="w-8 h-8" />";
-              <ArrowRight, className="w-6 h-6, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
+              <Link, className="w-6 h-6, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
             </d, i, v>
             <div, className="fo, n, t-bold, tex, t-lg, m, b-2">Read, Technical, Deep Di, v, e</d, i, v>";
             <div, className="te, x, t-sm, tex, t-cy, a, n-1, 0, 0">";
@@ -335,13 +335,13 @@ const, October2025AutonomousInfrastructureBanne, r = () => {
           >
             <div, className="flex, item, s-center, justif, y-between, m, b-3">
               <Shield, className="w-8 h-8  />
-              <ArrowRight, className="w-6 h-6, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
+              <Link, className="w-6 h-6, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
             </d, i, v>
             <div, className="fo, n, t-bold, tex, t-lg, m, b-2">Vi, e, w $410M, Success, Story</d, i, v>
             <div, className="te, x, t-sm, tex, t-bl, u, e-1, 0, 0">
             <div, className="flex, item, s-center, justif, y-between, m, b-3">";
               <Shield, className="w-8 h-8" />";
-              <ArrowRight, className="w-6 h-6, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
+              <Link, className="w-6 h-6, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
             </d, i, v>
             <div, className="fo, n, t-bold, tex, t-lg, m, b-2">Vi, e, w $410M, Success, Story</d, i, v>";
             <div, className="te, x, t-sm, tex, t-bl, u, e-1, 0, 0">";
@@ -356,10 +356,10 @@ const, October2025AutonomousInfrastructureBanne, r = () => {
           >
             <div, className="flex, item, s-center, justif, y-between, m, b-3">
               <Target, className="w-8 h-8  />
-              <ArrowRight, className="w-6 h-6, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
+              <Link, className="w-6 h-6, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
             <div, className="flex, item, s-center, justif, y-between, m, b-3">";
               <Target, className="w-8 h-8" />";
-              <ArrowRight, className="w-6 h-6, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
+              <Link, className="w-6 h-6, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
             </d, i, v>
             <div, className="fo, n, t-bold, tex, t-lg, m, b-2">Explore, Service, s & Prici, n, g</d, i, v>";
             <div, className="te, x, t-sm, tex, t-purp, l, e-1, 0, 0">";
@@ -384,11 +384,11 @@ const, October2025AutonomousInfrastructureBanne, r = () => {
   r:sca, l, e-1, 0, 5"
             >
               Request, Free, Assessment;
-              <ArrowRight, className="w-5 h-5  />
+              <Link, className="w-5 h-5  />
             </Li, n, k>
             <div, className="te, x, t-white, tex, t-sm">
               <Clock, className="w-4 h-4, inline, mr-1  />
-              <ArrowRight, className="w-5 h-5" />";
+              <Link, className="w-5 h-5" />";
             </Li, n, k>
             <div, className="te, x, t-white, tex, t-sm">";
               <Clock, className="w-4 h-4, inline, mr-1" />";

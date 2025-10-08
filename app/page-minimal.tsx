@@ -1,6 +1,6 @@
 import React from 'react';
-import { Link as Link } from 'react-router-dom';
-import { ArrowRight, Phone, CheckCircle, Star } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { Phone, CheckCircle, Star } from 'lucide-react';
 
 export const metadata = {
   title: 'Zion Tech Group - Advanced AI and IT Solutions',
@@ -20,10 +20,18 @@ export default function HomePage() {
               </Link>
             </div>
             <nav className="hidden md:flex space-x-8">
-              <Link to="/" className="text-gray-900 hover:text-blue-600">Home</Link>
-              <Link to="/services" className="text-gray-900 hover:text-blue-600">Services</Link>
-              <Link to="/blog" className="text-gray-900 hover:text-blue-600">Blog</Link>
-              <Link to="/case-studies" className="text-gray-900 hover:text-blue-600">Case Studies</Link>
+              <Link to="/" className="text-gray-900 hover:text-blue-600">
+                Home
+              </Link>
+              <Link to="/services" className="text-gray-900 hover:text-blue-600">
+                Services
+              </Link>
+              <Link to="/blog" className="text-gray-900 hover:text-blue-600">
+                Blog
+              </Link>
+              <Link to="/contact" className="text-gray-900 hover:text-blue-600">
+                Contact
+              </Link>
             </nav>
           </div>
         </div>
@@ -47,7 +55,7 @@ export default function HomePage() {
                 className="inline-flex items-center px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-blue-50 transition-colors font-semibold"
               >
                 Explore Our Services
-                <ArrowRight className="w-5 h-5 ml-2" />
+                <Link className="w-5 h-5 ml-2" />
               </Link>
               <a href="tel:+13024640950"
                 className="inline-flex items-center px-8 py-4 bg-transparent border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-semibold"
@@ -98,7 +106,7 @@ export default function HomePage() {
               
               <div className="bg-white p-8 rounded-lg shadow-lg">
                 <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
-                  <ArrowRight className="w-6 h-6 text-purple-600" />
+                  <Link className="w-6 h-6 text-purple-600" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">
                   Fast Implementation
@@ -126,13 +134,13 @@ export default function HomePage() {
                 className="inline-flex items-center px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-blue-50 transition-colors font-semibold"
               >
                 Get Started Today
-                <ArrowRight className="w-5 h-5 ml-2" />
+                <Link className="w-5 h-5 ml-2" />
               </Link>
               <Link
-                to="/case-studies"
+                to="/blog"
                 className="inline-flex items-center px-8 py-4 bg-transparent border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-semibold"
               >
-                View Success Stories
+                View Our Blog
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
             </div>
@@ -164,4 +172,6 @@ export default function HomePage() {
       </footer>
     </div>
   );
-}
+};
+
+export default HomePage;

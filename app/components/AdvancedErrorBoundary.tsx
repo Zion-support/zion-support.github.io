@@ -1,4 +1,5 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
+// import { Link } from 'react-router-dom';
 import { logger } from '../utils/logger';
 
 interface ErrorBoundaryState {
@@ -66,8 +67,7 @@ class AdvancedErrorBoundary extends Component<
       logger.error(
         'Error Boundary caught an error',
         error,
-        'ErrorBoundary',
-        { component: 'ErrorBoundary', errorInfo }
+        { context: 'ErrorBoundary', errorInfo }
       );
     }
 
@@ -113,7 +113,7 @@ class AdvancedErrorBoundary extends Component<
   private getSessionId = (): string => {
     // Generate or retrieve session ID
     try {
-      let sessionId = sessionStorage.getItem('sessionId');
+      let _sessionId = sessionStorage.getItem('sessionId');
       if (!sessionId) {
         sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
         sessionStorage.setItem('sessionId', sessionId);
@@ -141,9 +141,8 @@ class AdvancedErrorBoundary extends Component<
     } catch (reportError) {
       logger.error(
         'Failed to send error report',
-        reportError instanceof Error ? reportError : new Error(String(reportError)),
-        'ErrorReporting',
-        { component: 'ErrorReporting' }
+        reportError as Error,
+        { context: 'ErrorReporting' }
       );
     }
   };

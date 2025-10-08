@@ -62,21 +62,21 @@ export class SecurityManager {
   checkRateLimit(key: string, limit: number, windowMs: number): boolean {
     const now = Date.now();
     const windowStart = now - windowMs;
-    
+
     // Simple in-memory rate limiting (replace with Redis in production)
     const storage = this.getRateLimitStorage();
     const requests = storage.get(key) || [];
-    
+
     // Remove old requests
     const validRequests = requests.filter((time: number) => time > windowStart);
-    
+
     if (validRequests.length >= limit) {
       return false;
     }
-    
+
     validRequests.push(now);
     storage.set(key, validRequests);
-    
+
     return true;
   }
 

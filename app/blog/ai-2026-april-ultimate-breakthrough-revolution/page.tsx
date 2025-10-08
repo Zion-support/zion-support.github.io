@@ -1,7 +1,7 @@
 import React from 'react';
-// Metadata removed - using react-helmet-async instead;
+// import { Metadata } from 'next'; // Removed for Vite
 
-// Metadata moved to Helmet component
+// Metadata removed for Vite compatibility
 
 export default function April2026UltimateBreakthroughRevolution() {
   return (

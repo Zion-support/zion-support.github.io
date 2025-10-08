@@ -1,9 +1,9 @@
 import React from 'react';
-import { Link as Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
-// Metadata removed - using react-helmet-async instead;
+// import { Metadata } from 'next'; // Removed for Vite
 
-// Metadata moved to Helmet component
+// Metadata removed for Vite compatibility
 
 export default function AutonomousBusinessProcessesBlog() {
   return (

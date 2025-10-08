@@ -91,7 +91,7 @@ const defaultSEOConfig: SEOConfig = {
   locale: 'en_US',
   siteName: 'Zion Holdings',
   author: 'Zion Holdings',
-}
+};
 
 // Generate structured data
 export const generateStructuredData = (data: {
@@ -214,13 +214,13 @@ export class SEOEnhancer {
     const script = document.createElement('script');
     script.type = 'application/ld+json';
     script.textContent = JSON.stringify(data);
-    
+
     // Remove existing structured data
     const existingScript = document.querySelector('script[type="application/ld+json"]');
     if (existingScript) {
       existingScript.remove();
     }
-    
+
     document.head.appendChild(script);
   }
 
@@ -245,8 +245,10 @@ export class SEOEnhancer {
   private updateMetaTag(nameOrProperty: string, content: string) {
     if (typeof document === 'undefined') return;
 
-    let meta = document.querySelector(`meta[name="${nameOrProperty}"], meta[property="${nameOrProperty}"]`) as HTMLMetaElement;
-    
+    let meta = document.querySelector(
+      `meta[name="${nameOrProperty}"], meta[property="${nameOrProperty}"]`
+    ) as HTMLMetaElement;
+
     if (!meta) {
       meta = document.createElement('meta');
       if (nameOrProperty.startsWith('og:') || nameOrProperty.startsWith('twitter:')) {
@@ -256,20 +258,26 @@ export class SEOEnhancer {
       }
       document.head.appendChild(meta);
     }
-    
+
     meta.content = content;
   }
 
   // Generate sitemap
-  generateSitemap(pages: Array<{ url: string; lastmod: string; changefreq: string; priority: string }>) {
+  generateSitemap(
+    pages: Array<{ url: string; lastmod: string; changefreq: string; priority: string }>
+  ) {
     const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${pages.map(page => `  <url>
+${pages
+  .map(
+    page => `  <url>
     <loc>${page.url}</loc>
     <lastmod>${page.lastmod}</lastmod>
     <changefreq>${page.changefreq}</changefreq>
     <priority>${page.priority}</priority>
-  </url>`).join('\n')}
+  </url>`
+  )
+  .join('\n')}
 </urlset>`;
 
     return sitemap;
@@ -292,7 +300,7 @@ Sitemap: ${this.config.canonicalUrl}/sitemap.xml`;
     if (typeof document === 'undefined') return;
 
     const finalConfig = { ...this.config, ...config };
-    
+
     this.updateTitle(finalConfig.title);
     this.updateDescription(finalConfig.description);
     this.updateKeywords(finalConfig.keywords);
@@ -311,10 +319,11 @@ Sitemap: ${this.config.canonicalUrl}/sitemap.xml`;
   // Get current SEO data
   getCurrentSEO() {
     if (typeof document === 'undefined') return {};
-    
+
     return {
       title: document.title,
-      description: document.querySelector('meta[name="description"]')?.getAttribute('content') || '',
+      description:
+        document.querySelector('meta[name="description"]')?.getAttribute('content') || '',
       keywords: document.querySelector('meta[name="keywords"]')?.getAttribute('content') || '',
       canonical: document.querySelector('link[rel="canonical"]')?.getAttribute('href') || '',
     };
@@ -399,14 +408,7 @@ export const generateSitemapData = (
   pages: Array<{
     url: string;
     lastModified: string;
-    changeFrequency:
-      | 'always'
-      | 'hourly'
-      | 'daily'
-      | 'weekly'
-      | 'monthly'
-      | 'yearly'
-      | 'never';
+    changeFrequency: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';
     priority: number;
   }>
 ) => {
@@ -424,13 +426,8 @@ export const generateSitemapData = (
 };
 
 // Generate robots.txt content
-export const generateRobotsTxt = (
-  sitemapUrl: string,
-  disallowPaths: string[] = []
-) => {
-  const disallowRules = disallowPaths
-    .map(path => `Disallow: ${path}`)
-    .join('\n');
+export const generateRobotsTxt = (sitemapUrl: string, disallowPaths: string[] = []) => {
+  const disallowRules = disallowPaths.map(path => `Disallow: ${path}`).join('\n');
 
   return `User-agent: *
 ${disallowRules}
@@ -439,11 +436,7 @@ Sitemap: ${sitemapUrl}`;
 };
 
 // SEO validation
-export const validateSEOData = (data: {
-  title: string;
-  description: string;
-  url: string;
-}) => {
+export const validateSEOData = (data: { title: string; description: string; url: string }) => {
   const issues: string[] = [];
 
   // Check title length
@@ -498,10 +491,7 @@ export const initializeSEOEnhancements = () => {
     description: 'Leading provider of AI-powered business solutions',
     url: 'https://zion.app',
     logo: 'https://zion.app/logo.jpg',
-    sameAs: [
-      'https://twitter.com/zionholdings',
-      'https://linkedin.com/company/zion-holdings',
-    ],
+    sameAs: ['https://twitter.com/zionholdings', 'https://linkedin.com/company/zion-holdings'],
   });
 
   const script = document.createElement('script');

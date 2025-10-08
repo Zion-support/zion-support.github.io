@@ -6,14 +6,17 @@
  */
 
 import React, { useState, useEffect, useCallback } from 'react';
+import { performanceOptimizer } from '../utils/performanceOptimizer';
+import { errorHandler } from '../utils/enhancedErrorHandler';
+
 import { errorHandler } from '../utils/enhancedErrorHandler';
 
 // Collect basic performance metrics
-const collectPerformanceMetrics = () => {
+const _collectPerformanceMetrics = () => {
   if (typeof window === 'undefined' || !window.performance) return null;
   
-  const navigation = window.performance.timing;
-  const paint = window.performance.getEntriesByType('paint');
+  const _navigation = window.performance.timing;
+  const _paint = window.performance.getEntriesByType('paint');
   
   return {
     loadTime: navigation.loadEventEnd - navigation.navigationStart,
@@ -22,16 +25,19 @@ const collectPerformanceMetrics = () => {
 };
 
 // Helper functions
-const calculatePerformanceScore = (loadTime: number, firstContentfulPaint: number) => {
-  let score = 100;
+const calculatePerformanceScore = () => {
+  const _metrics = performanceOptimizer.getMetrics();
+  if (!metrics) return 0;
+  
+  let _score = 100;
   
   // Deduct points for slow load times
-  if (loadTime > 3000) score -= 20;
-  if (loadTime > 5000) score -= 30;
+  if (metrics.loadTime > 3000) score -= 20;
+  if (metrics.loadTime > 5000) score -= 30;
   
   // Deduct points for slow paint times
-  if (firstContentfulPaint > 2000) score -= 15;
-  if (firstContentfulPaint > 3000) score -= 25;
+  if (metrics.firstContentfulPaint && metrics.firstContentfulPaint > 2000) score -= 15;
+  if (metrics.firstContentfulPaint && metrics.firstContentfulPaint > 3000) score -= 25;
   
   return Math.max(0, score);
 };
@@ -106,25 +112,21 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
   // Update metrics
   const updateMetrics = useCallback(() => {
     try {
-      const errorStats = errorHandler.getErrorStatistics();
+      const _performanceMetrics = performanceOptimizer.getMetrics();
+      const _performanceScore = calculatePerformanceScore();
+      const _errorStats = errorHandler.getErrorStatistics();
 
       // Get memory info
-      const memoryInfo = getMemoryInfo();
+      const _memoryInfo = getMemoryInfo();
 
       // Get network info
-      const networkInfo = getNetworkInfo();
-
-      // Calculate performance metrics
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming | undefined;
-      const loadTime = navigation ? navigation.loadEventEnd - navigation.fetchStart : 0;
-      const firstContentfulPaint = performance.getEntriesByType('paint').find(e => e.name === 'first-contentful-paint')?.startTime || 0;
-      const performanceScore = calculatePerformanceScore(loadTime, firstContentfulPaint);
+      const _networkInfo = getNetworkInfo();
 
       const newMetrics: SystemMetrics = {
         performance: {
           score: performanceScore,
-          loadTime: loadTime,
-          firstContentfulPaint: firstContentfulPaint,
+          loadTime: performanceMetrics?.loadTime || 0,
+          firstContentfulPaint: performanceMetrics?.firstContentfulPaint || 0,
           largestContentfulPaint: 0, // Not available in current metrics
           firstInputDelay: 0, // Not available in current metrics
           cumulativeLayoutShift: 0, // Not available in current metrics
@@ -149,8 +151,7 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
       setMetrics(newMetrics);
       setLastUpdate(new Date());
     } catch (error) {
-       
-console.error('Failed to update metrics:', error);
+
     }
   }, []);
 
@@ -174,18 +175,18 @@ console.error('Failed to update metrics:', error);
   useEffect(() => {
     if (!isMonitoring) return;
 
-    const interval = setInterval(updateMetrics, refreshInterval);
+    const _interval = setInterval(updateMetrics, refreshInterval);
     return () => clearInterval(interval);
   }, [isMonitoring, refreshInterval, updateMetrics]);
 
   // Get memory information
   const getMemoryInfo = () => {
     if ('memory' in performance) {
-      const memory = (performance as Performance & { memory: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
+      const _memory = (performance as Performance & { memory: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
       const used = memory.usedJSHeapSize / 1024 / 1024; // MB
       const total = memory.totalJSHeapSize / 1024 / 1024; // MB
       const limit = memory.jsHeapSizeLimit / 1024 / 1024; // MB
-      const percentage = (used / limit) * 100;
+      const _percentage = (used / limit) * 100;
 
       return { used, total, limit, percentage };
     }
@@ -196,8 +197,8 @@ console.error('Failed to update metrics:', error);
   // Get network information
   const getNetworkInfo = () => {
     if ('connection' in navigator) {
-      const nav = navigator as NavigatorWithConnection;
-      const connection = nav.connection;
+      const _nav = navigator as NavigatorWithConnection;
+      const _connection = nav.connection;
       return {
         effectiveType: connection?.effectiveType || 'unknown',
         downlink: connection?.downlink || 0,
@@ -220,6 +221,7 @@ console.error('Failed to update metrics:', error);
 
     const exportData = {
       metrics,
+      performanceData: performanceOptimizer.getMetrics(),
       errorData: errorHandler.exportErrorData(),
       timestamp: new Date().toISOString(),
     };
@@ -227,8 +229,8 @@ console.error('Failed to update metrics:', error);
     const blob = new Blob([JSON.stringify(exportData, null, 2)], {
       type: 'application/json',
     });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
+    const _url = URL.createObjectURL(blob);
+    const _a = document.createElement('a');
     a.href = url;
     a.download = `system-metrics-${new Date().toISOString().split('T')[0]}.json`;
     document.body.appendChild(a);

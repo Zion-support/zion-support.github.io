@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link as Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 /**
  * Offline Page
@@ -104,8 +104,8 @@ const OfflinePage: React.FC = () => {
             Try Again
           </button>
           <Link
-            to='/'
-            className='block w-full px-6 py-3 bg-white text-indigo-600 font-medium rounded-lg border-2 border-indigo-600 hover:bg-indigo-50 transition-colors focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2'
+            to="/"
+            className="block w-full px-6 py-3 bg-white text-indigo-600 font-medium rounded-lg border-2 border-indigo-600 hover:bg-indigo-50 transition-colors focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
           >
             Go to Homepage
           </Link>

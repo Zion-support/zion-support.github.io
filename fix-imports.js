@@ -32,43 +32,37 @@ const iconMappings = {
 //Function to fix imports in a file
 function fixImportsInFile(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    let modified = false;
+    let _content = fs.readFileSync(filePath, 'utf8');
+    let _modified = false;
 
     //Fix lucide-react imports
     for (const [broken, correct] of Object.entries(iconMappings)) {
-      const oldImport = `lucide-react/dist/esm/icons/${broken}`;
-      const newImport = `lucide-react`;
+      //       const oldImport = `lucide-react/dist/esm/icons/${broken}`;
+      //       const newImport = `lucide-react`;
 
       if (content.includes(oldImport)) {
         content = content.replace(
           new RegExp(`import ${correct} from '${oldImport}';`, 'g'),
-          `import { ${correct} } from '${newImport}';`
         );
         modified = true;
       }
     }
 
     //Fix Link imports if missing
-    if (
-      content.includes('Link') &&
-      !content.includes("import Link from 'next/link'")
-    ) {
+    if (content.includes('Link') && !content.includes("import Link from 'next/link'")) {
       content = "import Link from 'next/link';\n" + content;
       modified = true;
     }
 
     if (modified) {
       fs.writeFileSync(filePath, content);
-      console.log(`Fixed imports in: ${filePath}`);
-    }
+      //       }
   } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
-  }
+    //     }
 }
 
 //Get all blog files
-const blogDir = '/workspace/app/blog';
+// const blogDir = '/workspace/app/blog';
 const files = fs
   .readdirSync(blogDir, { recursive: true })
   .filter(file => file.endsWith('.tsx'))
@@ -77,4 +71,4 @@ const files = fs
 // Process each file
 files.forEach(fixImportsInFile);
 
-console.log('Import fixing completed!');
+// 

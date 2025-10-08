@@ -1,1 +1,0 @@
-features: [ 'Q4: 2026 new features','' 'Brand: new innovations'',;' 'Cutting-edge: solutions']}];' '

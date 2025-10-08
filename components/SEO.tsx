@@ -16,8 +16,8 @@ const SEO: React.FC<SEOProps> = ({
   return (
     <>
       <title>{title}</title>
-      <meta name='description' content={description} />
-      <meta name='keywords' content={keywords.join(', ')} />
+      <meta name="description" content={description} />
+      <meta name="keywords" content={keywords.join(', ')} />
       {children}
     </>
   );

@@ -141,9 +141,9 @@ const, October2025UltimateEnterpriseBanne, r = () => {
   r:shad, o, w-cy, a, n-5, 0, 0/50, grou, p"
             >
               <span, className="te, x, t-lg">{multiCloudConte, n, t.c, t, a.te, x, t}</sp, a, n>
-              <ArrowRight, className="w-5 h-5, grou, p-hov, e, r: transla, t, e-x-2, transitio, n-transfo, r, m/>"
+              <Link, className="w-5 h-5, grou, p-hov, e, r: transla, t, e-x-2, transitio, n-transfo, r, m/>"
               <span, className="te, x, t-lg">{multiCloudConte, n, t.c, t, a.te, x, t}</sp, a, n>";
-              <ArrowRight, className="w-5 h-5, grou, p-hov, e, r: transla, t, e-x-2, transitio, n-transfo, r, m" />";
+              <Link, className="w-5 h-5, grou, p-hov, e, r: transla, t, e-x-2, transitio, n-transfo, r, m" />";
             </Li, n, k>
           </d, i, v>
           {/* Conversational, AI, Card */}
@@ -234,9 +234,9 @@ const, October2025UltimateEnterpriseBanne, r = () => {
   r:shad, o, w-purp, l, e-5, 0, 0/50, grou, p"
             >
               <span, className="te, x, t-lg">{conversationalAIConte, n, t.c, t, a.te, x, t}</sp, a, n>
-              <ArrowRight, className="w-5 h-5, grou, p-hov, e, r: transla, t, e-x-2, transitio, n-transfo, r, m/>"
+              <Link, className="w-5 h-5, grou, p-hov, e, r: transla, t, e-x-2, transitio, n-transfo, r, m/>"
               <span, className="te, x, t-lg">{conversationalAIConte, n, t.c, t, a.te, x, t}</sp, a, n>";
-              <ArrowRight, className="w-5 h-5, grou, p-hov, e, r: transla, t, e-x-2, transitio, n-transfo, r, m" />";
+              <Link, className="w-5 h-5, grou, p-hov, e, r: transla, t, e-x-2, transitio, n-transfo, r, m" />";
             </Li, n, k>
           </d, i, v>
         </d, i, v>

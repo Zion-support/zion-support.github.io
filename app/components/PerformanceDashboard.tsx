@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
+
 interface PerformanceMetrics {
   loadTime: number;
   renderTime: number;
@@ -35,21 +36,21 @@ const PerformanceDashboard: React.FC = () => {
         : 0;
 
       // Measure render time
-      const renderStart = performance.now();
-      const renderTime = performance.now() - renderStart;
+      const _renderStart = performance.now();
+      const _renderTime = performance.now() - renderStart;
 
       // Measure memory usage
-      let memoryUsage = 0;
+      let _memoryUsage = 0;
       if ('memory' in performance) {
-        const memory = (performance as { memory?: { usedJSHeapSize: number } }).memory;
+        const _memory = (performance as { memory?: { usedJSHeapSize: number } }).memory;
         memoryUsage = memory?.usedJSHeapSize || 0;
       }
 
       // Measure FPS (simplified)
-      let fps = 0;
+      let _fps = 0;
       if ('requestAnimationFrame' in window) {
-        let lastTime = performance.now();
-        let frameCount = 0;
+        let _lastTime = performance.now();
+        let _frameCount = 0;
         const measureFPS = (currentTime: number) => {
           frameCount++;
           if (currentTime - lastTime >= 1000) {
@@ -73,7 +74,7 @@ const PerformanceDashboard: React.FC = () => {
     updateMetrics();
 
     // Update metrics every 5 seconds
-    const interval = setInterval(updateMetrics, 5000);
+    const _interval = setInterval(updateMetrics, 5000);
 
     return () => clearInterval(interval);
   }, []);

@@ -346,8 +346,8 @@ const, Ultimate2026ContentShowcas, e: Rea, c, t.FC = () => {
   r:-transla, t, e-y-2"
                 >
                   <sp, a, n>Access, Masterclas, s</sp, a, n>
-                  <ArrowRight, className="w-5 h-5, grou, p-hov, e, r/b, t, n: transla, t, e-x-1, transitio, n-transform, duratio, n-3, 0, 0/>"
-                  <ArrowRight, className="w-5 h-5, grou, p-hov, e, r/b, t, n: transla, t, e-x-1, transitio, n-transform, duratio, n-3, 0, 0" />";
+                  <Link, className="w-5 h-5, grou, p-hov, e, r/b, t, n: transla, t, e-x-1, transitio, n-transform, duratio, n-3, 0, 0/>"
+                  <Link, className="w-5 h-5, grou, p-hov, e, r/b, t, n: transla, t, e-x-1, transitio, n-transform, duratio, n-3, 0, 0" />";
                 </a>
               </d, i, v>
             </moti, o, n.d, i, v>
@@ -439,8 +439,8 @@ const, Ultimate2026ContentShowcas, e: Rea, c, t.FC = () => {
   r:te, x, t-white, fon, t-bold, p, y-6, p, x-12, rounde, d-xl, transitio, n-all, duratio, n-300, flex, items-center, justif, y-center, ga, p-3, tex, t-lg"
                 >
                   <sp, a, n>Explore, All, Masterclasses</sp, a, n>
-                  <ArrowRight, className="w-6 h-6  />
-                  <ArrowRight, className="w-6 h-6" />";
+                  <Link, className="w-6 h-6  />
+                  <Link, className="w-6 h-6" />";
                 </a>
               </d, i, v>
             </d, i, v>

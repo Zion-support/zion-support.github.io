@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link as Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 export const metadata = {
   title: 'AI Cost Optimization Breakthrough 2026: Cut AI Spending by 90% | Zion Tech Group',
@@ -171,4 +171,6 @@ export default function AICostOptimizationBreakthrough2026() {
       </div>
     </div>
   );
-}
+};
+
+export default AICostOptimizationBreakthrough2026;

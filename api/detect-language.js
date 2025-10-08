@@ -13,10 +13,7 @@ export default function handler(req, res) {
     }
   }
 
-  res.setHeader(
-    'Set-Cookie',
-    `zion_language=${lang}; Path=/; Max-Age=31536000`
-  );
+  res.setHeader('Set-Cookie', `zion_language=${lang}; Path=/; Max-Age=31536000`);
   res.statusCode = 200;
   res.json({ language: lang });
 }

@@ -1,8 +1,6 @@
-import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import {/* content */}
-  Cpu, 
   Zap, 
   Shield, 
   Brain, 
@@ -10,8 +8,6 @@ import {/* content */}
   ArrowRight, 
   DollarSign,
   Clock,
-  Star,
-  Target,
   Phone,
   Mail,
   MapPin,
@@ -19,7 +15,6 @@ import {/* content */}
   Database,
   BarChart3,
   Globe,
-  Users,
   Award,
   Rocket,
   TrendingUp,
@@ -118,7 +113,7 @@ export default function AIQuantumComputingServices2026() {
                     href="/contact"
                     className="text-left">
                     Get Quantum Consultation
-                    <ArrowRight className="text-left" />
+                    <Link className="text-left" />
                   </Link>
                 </div>
               ))}

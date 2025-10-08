@@ -45,7 +45,7 @@ class SEOOptimizer {
   init(): void {
     this.setupStructuredData();
     this.setupCanonicalUrls();
-    // this.setupMetaTags();
+    // Meta tags are set individually
     this.setupPerformanceMonitoring();
   }
 
@@ -131,32 +131,10 @@ class SEOOptimizer {
   }
 
   /**
-   * Initialize meta tags
-   */
-  private initializeMetaTags(): void {
-    /*
-    this.setMetaTag('description', this.currentPageData?.description || 'Advanced AI and IT Solutions');
-    this.setMetaTag('author', 'Zion Tech Group');
-    this.setMetaTag('og:type', 'website', 'property');
-    this.setMetaTag('og:description', this.currentPageData?.description || 'Advanced AI and IT Solutions', 'property');
-    this.setMetaTag('twitter:card', 'summary_large_image');
-    this.setMetaTag('twitter:description', this.currentPageData?.description || 'Advanced AI and IT Solutions');
-    */
-    
-    if (typeof document === 'undefined') return;
-    // Set default meta tags
-    this.setMetaTag('keywords', (this.currentPageData?.keywords || []).join(', ') || 'AI, IT Solutions, Technology');
-    // Open Graph tags
-    this.setMetaTag('og:title', this.currentPageData?.title || 'Zion Tech Group', 'property');
-    // Twitter Card tags
-    this.setMetaTag('twitter:title', this.currentPageData?.title || 'Zion Tech Group');
-  }
-  
-  /**
    * Set meta tag
    */
   private setMetaTag(name: string, content: string, attribute: string = 'name'): void {
-    let meta = document.querySelector(`meta[${attribute}="${name}"]`);
+    let meta = document.querySelector(`meta[${attribute}="${name}"]`) as HTMLMetaElement;
     
     if (!meta) {
       meta = document.createElement('meta');
@@ -164,7 +142,7 @@ class SEOOptimizer {
       document.head.appendChild(meta);
     }
     
-    (meta as HTMLMetaElement).content = content;
+    meta.content = content;
   }
 
   /**
@@ -173,11 +151,9 @@ class SEOOptimizer {
   private getRobotsContent(): string {
     if (!this.currentPageData) return 'index, follow';
     
-    const directives: string[] = [];
+    const directives = [];
     
     if (!this.currentPageData.noindex) {
-      directives.push('index');
-    } else {
       directives.push('noindex');
     }
     
@@ -314,7 +290,7 @@ class SEOOptimizer {
   /**
    * Generate sitemap data
    */
-  generateSitemapData(): any[] {
+  generateSitemapData(): Array<{ url: string; lastmod: string; changefreq: string; priority: number }> {
     // This would typically come from your CMS or routing system
     return [
       {

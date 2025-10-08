@@ -1,4 +1,4 @@
-import Link from 'next/link';
+// import Link from 'next/link';
 
 
 
@@ -151,28 +151,28 @@ export default function ContentIntelligenceBanner() {
 
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
-          <ArrowRight
+          <Link
             href="/blog/ai-2025-oct-01-autonomous-content-intelligence-revolution"
             className="group bg-yellow-400 text-emerald-900 px-8 py-4 rounded-xl font-bold text-lg hover:bg-yellow-300 transition-all shadow-2xl hover:shadow-yellow-400/50 hover:scale-105 flex items-center gap-2"
           >
             <BookOpen className='w-6 h-6' />
             <span>📖 Read Complete Guide (18 min)</span>
             <span className="group-hover:translate-x-1 transition-transform">→</span>
-          </ArrowRight>
+          </Link>
           
-          <ArrowRight
+          <Link
             href="/case-studies/ai-2025-oct-01-content-intelligence-127-million-success"
             className="group bg-white text-emerald-600 px-8 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all shadow-2xl hover:shadow-white/50 hover:scale-105 flex items-center gap-2"
           >
             <Award />
             <span>💎 View $127M Success Story</span>
             <span className="group-hover:translate-x-1 transition-transform">→</span>
-          </ArrowRight>
+          </Link>
         </div>
 
         {/* Additional CTA */}
         <div className="text-center">
-          <ArrowRight
+          <Link
             href="/contact"
             className="inline-flex items-center gap-2 border-3 border-white text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-white hover:text-emerald-600 transition-all shadow-2xl hover:scale-105"
           >
@@ -222,7 +222,7 @@ export function ContentIntelligenceShowcaseBanner() {
           systems. Fortune 100 proven success across 84 countries worldwide.
         </p>
         <div className="flex flex-wrap gap-4 justify-center">
-          <ArrowRight
+          <Link
             href="/blog/ai-2025-oct-01-autonomous-content-intelligence-revolution"
             className="bg-yellow-400 text-emerald-900 font-bold py-3 px-8 rounded-lg hover:bg-yellow-300 transition-colors shadow-2xl"
           >

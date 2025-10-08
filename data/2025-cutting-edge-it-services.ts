@@ -15,7 +15,7 @@ export const cuttingEdgeITServices2025 = [{id: 'quantum-cloud-infrastructure-pla
       'Quantum-enhanced data processing'
       'Automated infrastructure management'
     ]
-    pricing: starter: any;
+    pricing: starter: unknown;
         price: 399}
         period: 'month'
         features: [}
@@ -92,7 +92,7 @@ export const cuttingEdgeITServices2025 = [{id: 'quantum-cloud-infrastructure-pla
       'Edge-to-cloud synchronization'
       'Performance optimization algorithms'
     ]
-    pricing: starter: any;
+    pricing: starter: unknown;
         price: 299;
         period: 'month'
         features: [,
@@ -172,7 +172,7 @@ export const cuttingEdgeITServices2025 = [{id: 'quantum-cloud-infrastructure-pla
       'Automated security responses'
       'Comprehensive audit logging'
     ]
-    pricing: starter: any;
+    pricing: starter: unknown;
         price: 499;
         period: 'month'
         features: [,
@@ -249,7 +249,7 @@ export const cuttingEdgeITServices2025 = [{id: 'quantum-cloud-infrastructure-pla
       'Multi-party workflow automation'
       'Comprehensive reporting and analytics'
     ]
-    pricing: starter: any;
+    pricing: starter: unknown;
         price: 599;
         period: 'month'
         features: [,
@@ -329,7 +329,7 @@ export const cuttingEdgeITServices2025 = [{id: 'quantum-cloud-infrastructure-pla
       'Automated security scanning'
       'Comprehensive analytics and reporting'
     ]
-    pricing: starter: any;
+    pricing: starter: unknown;
         price: 399;
         period: 'month'
         features: [,
@@ -398,9 +398,9 @@ export const cuttingEdgeITServices2025 = [
       'Quantum-enhanced security protocolsDistributed quantum computing nodesReal-time infrastructure optimizationQuantum-resistant encryptionAdvanced load balancing algorithmsPredictive scaling capabilitiesMulti-cloud quantum orchestrationReal-time performance monitoring'
       'Quantum-enhanced data processingAutomated infrastructure management'
     market_size: '$25.6B',
-    target_audience: any,
+    target_audience: unknown,
       'Software development companies, enterprises, DevOps teams, IT operations teams, development agencies',
-    competitive_advantage: any,
+    competitive_advantage: unknown,
       'AI - powered DevOps automation, predictive monitoring, intelligent incident response',
     use_cases: [,
       'Software development automation',

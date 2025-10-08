@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link as Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 export const metadata = {
   title: 'AI Autonomous Business Systems 2026: 95% Automation Achievement | Zion Tech Group',
@@ -164,4 +164,6 @@ export default function AIAutonomousBusinessSystems2026() {
       </div>
     </div>
   );
-}
+};
+
+export default AIAutonomousBusinessSystems2026;

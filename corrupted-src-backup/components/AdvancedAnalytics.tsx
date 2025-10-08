@@ -35,45 +35,36 @@ const AdvancedAnalytics: React.FC<AdvancedAnalyticsProps> = ({
     // Initialize analytics tracking
     if (enableConversionTracking) {
       // Track conversion events
-      console.log('Conversion tracking enabled');
-    }
+      //       }
 
     if (enablePerformanceTracking) {
       // Track performance metrics
-      console.log('Performance tracking enabled');
-    }
+      //       }
 
     if (enableErrorTracking) {
       // Track errors
-      console.log('Error tracking enabled');
-    }
-  }, [
-    enableConversionTracking,
-    enablePerformanceTracking,
-    enableErrorTracking,
-  ]);
+      //       }
+  }, [enableConversionTracking, enablePerformanceTracking, enableErrorTracking]);
 
   return (
-    <div className='advanced-analytics'>
+    <div className="advanced-analytics">
       <h2>Advanced Analytics Dashboard</h2>
-      <div className='metrics-grid'>
-        <div className='metric-card'>
+      <div className="metrics-grid">
+        <div className="metric-card">
           <h3>Page Views</h3>
-          <p className='metric-value'>{analytics.pageViews.toLocaleString()}</p>
+          <p className="metric-value">{analytics.pageViews.toLocaleString()}</p>
         </div>
-        <div className='metric-card'>
+        <div className="metric-card">
           <h3>Unique Visitors</h3>
-          <p className='metric-value'>
-            {analytics.uniqueVisitors.toLocaleString()}
-          </p>
+          <p className="metric-value">{analytics.uniqueVisitors.toLocaleString()}</p>
         </div>
-        <div className='metric-card'>
+        <div className="metric-card">
           <h3>Bounce Rate</h3>
-          <p className='metric-value'>{analytics.bounceRate.toFixed(1)}%</p>
+          <p className="metric-value">{analytics.bounceRate.toFixed(1)}%</p>
         </div>
-        <div className='metric-card'>
+        <div className="metric-card">
           <h3>Conversion Rate</h3>
-          <p className='metric-value'>{analytics.conversionRate.toFixed(1)}%</p>
+          <p className="metric-value">{analytics.conversionRate.toFixed(1)}%</p>
         </div>
       </div>
     </div>

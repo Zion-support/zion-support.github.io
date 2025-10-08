@@ -35,9 +35,9 @@ class AnalyticsTracker {
     if (typeof window === 'undefined') return;
 
     this.isInitialized = true;
-    
+
     // Process queued events
-    this.queue.forEach((fn) => fn());
+    this.queue.forEach(fn => fn());
     this.queue = [];
 
     // Track initial page view

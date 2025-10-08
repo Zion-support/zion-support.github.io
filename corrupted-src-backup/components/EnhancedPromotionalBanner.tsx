@@ -1,6 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import type { EnhancedPromotionalBanner as BannerType } from '../content/enhanced-promotional-banners';
 
 interface EnhancedPromotionalBannerProps {
   banner: BannerType;
@@ -33,7 +31,7 @@ const EnhancedPromotionalBanner: React.FC<EnhancedPromotionalBannerProps> = ({
               <h3, classNam, e='fo, n, t-bold, tex, t-lg'>{bann, e, r.title}</h3>
               <p, classNam, e='te, x, t-sm, opacit, y-90'>{bann, e, r.description}</p>
             {bann, e, r.cta, T, e, x, t}
-            <ArrowRight, classNam, e = 'w-4 h-4' />
+            <Link, classNam, e = 'w-4 h-4' />
             {banner.ctaText}
           </Link>
         </div>

@@ -1,5 +1,13 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+// import { Metadata } from 'next'; // Removed for Vite
+
+const metadata = {
+  title: 'Our Team - Zion Tech Group',
+  description:
+    'Meet the talented team of AI and IT experts at Zion Tech Group, driving innovation in enterprise technology solutions.',
+};
+
+export { metadata };
 
 const TeamPage: React.FC = () => {
   const teamMembers = [

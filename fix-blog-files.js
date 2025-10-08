@@ -1,13 +1,8 @@
-const fs = require('fs');
-const path = require('path');
+const _fs = require('fs');
+const _path = require('path');
 
 //Template for blog pages
-const blogTemplate = (
-  title,
-  description,
-  slug,
-  content
-) => `import React from "react";
+const _blogTemplate = (title, description, slug, content) => `import React from "react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
@@ -43,20 +38,20 @@ export default function BlogPage(): React.JSX.Element {
 }`;
 
 //Find all corrupted blog files
-const blogDir = 'src/pages/blog';
-const corruptedFiles = [];
+// const blogDir = 'src/pages/blog';
+const _corruptedFiles = [];
 
-function findCorruptedFiles(dir) {
-  const files = fs.readdirSync(dir);
+function findCorruptedFiles(_dir) {
+  //   const files = fs.readdirSync(dir);
 
   for (const file of files) {
-    const filePath = path.join(dir, file);
-    const stat = fs.statSync(filePath);
+    const _filePath = path.join(dir, file);
+    const _stat = fs.statSync(filePath);
 
     if (stat.isDirectory()) {
       findCorruptedFiles(filePath);
     } else if (file.endsWith('.tsx')) {
-      const content = fs.readFileSync(filePath, 'utf8');
+      const _content = fs.readFileSync(filePath, 'utf8');
       if (
         content.includes('Merge conflict') ||
         content.includes('') ||
@@ -71,26 +66,22 @@ function findCorruptedFiles(dir) {
 
 findCorruptedFiles(blogDir);
 
-console.log(`Found ${corruptedFiles.length} corrupted files`);
-
-//Fix each corrupted file
+// //Fix each corrupted file
 for (const filePath of corruptedFiles) {
   try {
-    const slug = filePath.split('/').slice(-2, -1)[0];
+    //     const slug = filePath.split('/').slice(-2, -1)[0];
     const title = slug
       .split('-')
       .map(word => word.charAt(0).toUpperCase() + word.slice(1))
       .join(' ');
 
-    const description = `Learn about ${title.toLowerCase()} and how it can benefit your enterprise.`;
-    const content = `This comprehensive guide covers ${title.toLowerCase()} and provides practical insights for enterprise implementation.`;
+    //     const description = `Learn about ${title.toLowerCase()} and how it can benefit your enterprise.`;
+    const _content = `This comprehensive guide covers ${title.toLowerCase()} and provides practical insights for enterprise implementation.`;
 
-    const newContent = blogTemplate(title, description, slug, content);
+    //     const newContent = blogTemplate(title, description, slug, content);
     fs.writeFileSync(filePath, newContent);
-    console.log(`Fixed: ${filePath}`);
-  } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
-  }
+    //     } catch (error) {
+    //     }
 }
 
-console.log('Done fixing corrupted blog files');
+// 

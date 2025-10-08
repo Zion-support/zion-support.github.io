@@ -106,7 +106,7 @@ const January2026RevolutionaryContentBanne, r: React.FC = () => {
                 className='w-full, b, g-gradie, n, t-to-r, fro, m-bl, u, e-500, t, o-purp, l, e-600, hove, r: fr, o, m-bl, u, e-400, hove, r:to-purp, l, e-500, tex, t-white, fon, t-bold, p, y-3, p, x-6, rounde, d-xl, transitio, n-all, duratio, n-300, flex, items-center, justif, y-center, ga, p-2, grou, p-hov, e, r:shad, o, w-lg, grou, p-hov, e, r:shad, o, w-bl, u, e-5, 0, 0/25'
               >
                 { conte, n, t.ty, p, e === 'bl, o, g'  ? 'Read, Articl, e'  : 'View, Case, Stu, d, y' }
-                <ArrowRight, classNam, e = 'w-4 h-4' />
+                <Link, classNam, e = 'w-4 h-4' />
               </Li, n, k>
             </di, v>
           ))}

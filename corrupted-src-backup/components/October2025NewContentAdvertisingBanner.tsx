@@ -114,8 +114,8 @@ export, default, function October2025NewContentAdvertisingBann, e, r(): vo, i, d
   r:shad, o, w-yell, o, w-5, 0, 0/50"
               >
                 <sp, a, n>GET, STARTED, NOW</sp, a, n>
-                <ArrowRight, className="w-6 h-6, grou, p-hov, e, r: transla, t, e-x-2, transitio, n-transfo, r, m/>"
-                <ArrowRight, className="w-6 h-6, grou, p-hov, e, r: transla, t, e-x-2, transitio, n-transfo, r, m" />";
+                <Link, className="w-6 h-6, grou, p-hov, e, r: transla, t, e-x-2, transitio, n-transfo, r, m/>"
+                <Link, className="w-6 h-6, grou, p-hov, e, r: transla, t, e-x-2, transitio, n-transfo, r, m" />";
               </Li, n, k>
               <Li, n, k
   to="/bl, o, g"

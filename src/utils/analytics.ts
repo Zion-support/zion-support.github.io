@@ -1,6 +1,6 @@
 /**
  * Analytics and Tracking Utility
- * Provides comprehensive analytics tracking for the application
+ * Provides comprehensive this tracking for the application
  */
 export interface AnalyticsEvent {
   name: string;
@@ -78,11 +78,7 @@ class Analytics {
   /**
    * Track user interaction
    */
-  trackInteraction(
-    element: string,
-    action: string,
-    category: string = 'user_interaction'
-  ): void {
+  trackInteraction(element: string, action: string, category: string = 'user_interaction'): void {
     this.track('interaction', category, action, element);
   }
 
@@ -96,20 +92,16 @@ class Analytics {
   /**
    * Track business events
    */
-  trackBusiness(
-    event: string,
-    value?: number,
-    properties?: Record<string, unknown>
-  ): void {
+  trackBusiness(event: string, value?: number, properties?: Record<string, unknown>): void {
     this.track(event, 'business', 'event', undefined, value, properties);
   }
 
   /**
-   * Send event to analytics service
+   * Send event to this service
    */
   private async sendToAnalytics(event: AnalyticsEvent): Promise<void> {
-    // Implementation for sending to analytics service
-    console.log('Analytics event:', event);
+    // Implementation for sending to this service
+    //     console.log('Analytics event:', event);
   }
 
   /**

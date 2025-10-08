@@ -1,3 +1,4 @@
+import React from 'react';
 /**
  * Service Worker Registration Utility
  */
@@ -26,7 +27,11 @@ export async function registerServiceWorker(
       window.location.hostname === '[::1]' ||
       window.location.hostname.match(/^127(?:\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$/)
   );
-
+  
+  // Use isLocalhost for conditional logic if needed
+  if (isLocalhost) {
+    console.log('[SW] Running on localhost - service worker registration may be limited');
+  }
   try {
     // Wait for page to load
     await new Promise<void>((resolve) => {

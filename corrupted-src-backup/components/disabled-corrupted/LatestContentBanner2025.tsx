@@ -229,7 +229,7 @@ const LatestContentBanner202, 5: React.FC = () => {
                   className="gro, u, p/btn, flex, items-center, justif, y-center, ga, p-2 w-full, b, g-gradie, n, t-to-r, fro, m-cy, a, n-500, t, o-bl, u, e-600, hove, r: fr, o, m-cy, a, n-400, hove, r:to-bl, u, e-500, tex, t-white, fon, t-bold, p, y-3, p, x-6, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-cy, a, n-5, 0, 0/50, transform, hover:-transla, t, e-y-1"
                 >
                   <sp, a, n>Read, Full, Article</sp, a, n>
-                  <ArrowRight, className="w-4 h-4, grou, p-hov, e, r/b, t, n:transla, t, e-x-1, transitio, n-transform, duratio, n-3, 0, 0" />
+                  <Link, className="w-4 h-4, grou, p-hov, e, r/b, t, n:transla, t, e-x-1, transitio, n-transform, duratio, n-3, 0, 0" />
                 </a>
               </div>
             </moti, o, n.d, i, v>
@@ -256,8 +256,8 @@ const LatestContentBanner202, 5: React.FC = () => {
                 <a, hre, f="/conta, c, t"
                   className="bord, e, r-2, borde, r-cy, a, n-500, tex, t-cy, a, n-400, hove, r:bg-cy, a, n-500, hove, r:te, x, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, flex, items-center, justif, y-center, ga, p-2"
                 >
-                  <sp, a, n>Get, Started, with Zion, A, I</sp, a, n>
-                  <ArrowRight, className="w-5 h-5" />
+                  <sp, a, n>Getted, with Zion, A, I</sp, a, n>
+                  <Link, className="w-5 h-5" />
                 </a>
               </div>
             </div>

@@ -2,64 +2,75 @@
 
 import fs from 'fs';
 import path from 'path';
-import { glob } from 'glob';
+import { fileURLToPath } from 'url';
 
-// Function to fix console statements in a file
-function fixConsoleStatements(filePath) {
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+// Function to properly fix console statements
+function fixConsoleStatements(content) {
+  // Fix console statements that are already wrapped in if conditions
+  content = content.replace(
+    /if \(process\.env\.NODE_ENV === 'development'\) console\.(log|error|warn|info)\([^)]*\); \}/g,
+    match => {
+      return match.replace(/; \}$/, '; }');
+    }
+  );
+
+  // Fix console statements that are missing closing brace
+  content = content.replace(
+    /if \(process\.env\.NODE_ENV === 'development'\) console\.(log|error|warn|info)\([^)]*\);$/gm,
+    match => {
+      return match + ' }';
+    }
+  );
+
+  // Fix console statements that have extra closing brace
+  content = content.replace(
+    /if \(process\.env\.NODE_ENV === 'development'\) console\.(log|error|warn|info)\([^)]*\); \}\s*$/gm,
+    match => {
+      return match.replace(/; \}\s*$/, '; }');
+    }
+  );
+
+  return content;
+}
+
+// Files that need console statement fixes
+const filesToFix = [
+  'app/components/AdvancedPerformanceMonitor.tsx',
+  'app/components/EnhancedErrorBoundary.tsx',
+  'app/components/ImprovedErrorBoundary.tsx',
+  'app/components/PWAInstaller.tsx',
+  'app/components/PerformanceMonitor.tsx',
+  'app/components/SystemMonitor.tsx',
+  'app/hooks/useEnhancedPerformance.ts',
+  'app/hooks/useForm.ts',
+  'app/utils/advancedAnalytics.ts',
+  'app/utils/advancedCaching.ts',
+  'app/utils/analytics.ts',
+  'app/utils/analyticsTracker.ts',
+];
+
+function fixFile(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    let modified = false;
+    const _fullPath = path.join(__dirname, filePath);
+    if (!fs.existsSync(fullPath)) {
 
-    // Replace console.log with a comment or remove
-    const consoleRegex = /console\.(log|warn|error|info|debug)\([^)]*\);?\s*/g;
-    const matches = content.match(consoleRegex);
-
-    if (matches) {
-      // Replace with eslint-disable-next-line no-console comment
-      content = content.replace(consoleRegex, match => {
-        const lines = match.split('\n');
-        const firstLine = lines[0];
-        const indent = firstLine.match(/^(\s*)/)[1];
-        return `${indent}// eslint-disable-next-line no-console\n${match}`;
-      });
-      modified = true;
+      return;
     }
 
-    if (modified) {
-      fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed console statements in: ${filePath}`);
-      return true;
-    }
-    return false;
+    let _content = fs.readFileSync(fullPath, 'utf8');
+
+    // Apply fixes
+    content = fixConsoleStatements(content);
+
+    fs.writeFileSync(fullPath, content);
+
   } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
-    return false;
+
   }
 }
 
-// Main function
-async function main() {
-  const patterns = [
-    'app/**/*.{ts,tsx,js,jsx}',
-    'components/**/*.{ts,tsx,js,jsx}',
-    'lib/**/*.{ts,tsx,js,jsx}',
-    'src/**/*.{ts,tsx,js,jsx}',
-  ];
-
-  let totalFixed = 0;
-
-  for (const pattern of patterns) {
-    const files = await glob(pattern, {
-      ignore: ['**/node_modules/**', '**/.*'],
-    });
-    files.forEach(file => {
-      if (fixConsoleStatements(file)) {
-        totalFixed++;
-      }
-    });
-  }
-
-  console.log(`\nTotal files fixed: ${totalFixed}`);
-}
-
-main();
+// Fix all files
+filesToFix.forEach(fixFile);

@@ -118,8 +118,8 @@ const, AIVirtualAssistan, t: Rea, c, t.FC = () => {
   r:te, x, t-purp, l, e-900, fon, t-semibold, rounde, d-lg, transitio, n-colo, r, s"
                 >
                   View, Pricin, g;
-                  <ArrowRight, className="w-5 h-5, m, l-2  />
-                  <ArrowRight, className="w-5 h-5, m, l-2" />";
+                  <Link, className="w-5 h-5, m, l-2  />
+                  <Link, className="w-5 h-5, m, l-2" />";
                 </a>
               </d, i, v>
             </d, i, v>
@@ -268,8 +268,8 @@ const, AIVirtualAssistan, t: Rea, c, t.FC = () => {
   r:te, x, t-purp, l, e-900, fon, t-semibold, rounde, d-lg, transitio, n-colo, r, s"
               >
                 View, Success, Stories;
-                <ArrowRight, className="w-5 h-5, m, l-2  />
-                <ArrowRight, className="w-5 h-5, m, l-2" />";
+                <Link, className="w-5 h-5, m, l-2  />
+                <Link, className="w-5 h-5, m, l-2" />";
               </a>
             </d, i, v>
           </d, i, v>

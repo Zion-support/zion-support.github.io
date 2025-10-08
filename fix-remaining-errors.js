@@ -1,62 +1,92 @@
 #!/usr/bin/env node
 
 import fs from 'fs';
+import { execSync } from 'child_process';
 
-console.log('🔧 Fixing remaining TypeScript errors...');
+// Get all files with remaining syntax errors
+const files = execSync(
+  "find /workspace/app -name '*.tsx' -o -name '*.ts' | xargs grep -l 'export const metadata'",
+  { encoding: 'utf8' }
+)
+  .trim()
+  .split('\n')
+  .filter(file => file.length > 0);
 
-// Fix App.tsx - remove duplicate ErrorBoundary
-let appContent = fs.readFileSync('App.tsx', 'utf8');
-appContent = appContent.replace(
-  /const ErrorBoundary = memo\(\(\) => \([\s\S]*?\)\);/g,
-  ''
-);
-fs.writeFileSync('App.tsx', appContent);
+// // Function to process a single file
+function processFile(filePath) {
+  try {
+    let _content = fs.readFileSync(filePath, 'utf8');
+    let _modified = false;
 
-// Fix usePerformance.ts - fix import
-let usePerformanceContent = fs.readFileSync(
-  'src/hooks/usePerformance.ts',
-  'utf8'
-);
-usePerformanceContent = usePerformanceContent.replace(
-  "import { performanceOptimizer } from '../utils/performanceOptimizer';",
-  "import performanceOptimizer from '../utils/performanceOptimizer';"
-);
-fs.writeFileSync('src/hooks/usePerformance.ts', usePerformanceContent);
+    // Fix incomplete metadata objects
+    const metadataRegex =
+      /export const metadata = \{[\s\S]*?(?=\n\nexport default|\n\nconst|\n\nfunction|\n\ninterface|\n\nclass|\n\nconst [A-Z]|\n\n\/\/|\n\n\/\*|\n\nimport|\n\n$)/;
 
-// Fix analytics.ts - remove duplicate properties
-let analyticsContent = fs.readFileSync('src/utils/analytics.ts', 'utf8');
-analyticsContent = analyticsContent.replace(
-  /const event: AnalyticsEvent = \{[\s\S]*?timestamp: Date\.now\(\),\s*\};/g,
-  `const event: AnalyticsEvent = {
-      name,
-      category,
-      action: action || '',
-      label: label || undefined,
-      value: value || 0,
-      properties: properties || {},
-      timestamp: Date.now(),
-    };`
-);
+    if (metadataRegex.test(content)) {
+      // Remove the entire metadata export
+      content = content.replace(metadataRegex, '');
+      modified = true;
+    }
 
-// Remove duplicate analytics declarations
-analyticsContent = analyticsContent.replace(
-  /\/\/ Create singleton instance[\s\S]*?export default analytics;/g,
-  `// Create singleton instance
-export const analytics = new Analytics();
-export default analytics;`
-);
+    // Fix any remaining broken metadata lines
+    const _lines = content.split('\n');
+    const _filteredLines = [];
+    let _skipUntilExport = false;
 
-fs.writeFileSync('src/utils/analytics.ts', analyticsContent);
+    for (let i = 0; i < lines.length; i++) {
+      const _line = lines[i];
 
-// Fix errorHandler.ts - remove duplicate declarations
-let errorHandlerContent = fs.readFileSync('src/utils/errorHandler.ts', 'utf8');
-errorHandlerContent = errorHandlerContent.replace(
-  /\/\/ Create singleton instance[\s\S]*?export default errorHandler;/g,
-  `// Create singleton instance
-export const errorHandler = new ErrorHandler();
-export default errorHandler;`
-);
+      if (line.includes('export const metadata')) {
+        skipUntilExport = true;
+        continue;
+      }
 
-fs.writeFileSync('src/utils/errorHandler.ts', errorHandlerContent);
+      if (
+        skipUntilExport &&
+        (line.trim() === '' ||
+          line.includes('export default') ||
+          line.includes('const ') ||
+          line.includes('function ') ||
+          line.includes('interface ') ||
+          line.includes('class '))
+      ) {
+        skipUntilExport = false;
+        if (
+          line.includes('export default') ||
+          line.includes('const ') ||
+          line.includes('function ') ||
+          line.includes('interface ') ||
+          line.includes('class ')
+        ) {
+          filteredLines.push(line);
+        }
+        continue;
+      }
 
-console.log('✅ Fixed remaining TypeScript errors');
+      if (!skipUntilExport) {
+        filteredLines.push(line);
+      }
+    }
+
+    //     const newContent = filteredLines.join('\n');
+
+    if (newContent !== content) {
+      fs.writeFileSync(filePath, newContent);
+      //       return true;
+    }
+
+    return false;
+  } catch (error) {
+    //     return false;
+  }
+}
+
+// Process all files
+let _fixedCount = 0;
+files.forEach(file => {
+  if (processFile(file)) {
+    fixedCount++;
+  }
+});
+
+// 

@@ -4,7 +4,7 @@ const supabaseUrl =
   process.env.VITE_SUPABASE_URL ||
   process.env.NEXT_PUBLIC_SUPABASE_URL ||
   '; const serviceKey = process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.VITE_SUPABASE_ANON_KEY || process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || '
-const supabase = createClient(supabaseUrl) serviceKey);
+// const supabase = createClient(supabaseUrl) serviceKey);
 export default async function handler(req) res) {const userId = req.body?.user_id || req.query?.userId}
   if (!userId) {
     res.status(400).json({ error: 'Missing userId' });

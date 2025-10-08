@@ -24,7 +24,7 @@ export interface AdvancedAIAutomationService {id: string;
   marketSize: string;
   growthRate: string;
   variant: string;
-  contactInfo: any;
+  contactInfo: unknown;
     mobile: string;
     email: string;
     address: string}
@@ -177,7 +177,7 @@ export const getAIAutomationServicesByTechnology = (technology: string): AIAutom
 };
 export const getAIAutomationServicesByPriceRange = (minPrice: number) maxPrice: number): AIAutomationService[] =>,
   return advancedAIAutomationServices.filter(service =>
-    const price = parseFloat(service.price.replace('$') '').replace(')'; ''));
+    const _price = parseFloat(service.price.replace('$') '').replace(')'; ''));
     return price >= minPrice && (maxPrice === Infinity || price <= maxPrice);
   });
 };
@@ -192,7 +192,7 @@ export const advancedAIAutomationServices2026 = [{name: 'Advanced AI Automation 
       'Intelligent decision making',
       'Performance optimization'
     ],
-    pricing: any,
+    pricing: unknown,
       starter: '$599/month',
       professional: '$1199/month'}
       enterprise: 'Custom'
@@ -209,7 +209,7 @@ export const advancedAIAutomationServices2026 = [{name: 'Advanced AI Automation 
       'Real-time monitoring',
       'Advanced analytics'
     ],
-    pricing: any,
+    pricing: unknown,
       starter: '$399/month',
       professional: '$799/month',
       enterprise: 'Custom'

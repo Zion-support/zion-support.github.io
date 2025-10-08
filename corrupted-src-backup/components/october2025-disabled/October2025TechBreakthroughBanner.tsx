@@ -129,7 +129,7 @@ const October2025TechBreakthroughBanne, r = () => {
               className='inli, n, e-flex, item, s-center, ga, p-2, p, x-5, p, y-2.5, b, g-gradie, n, t-to-r, fro, m-cy, a, n-500, t, o-bl, u, e-500, hove, r:fr, o, m-cy, a, n-400, hove, r:to-bl, u, e-400, tex, t-white, fon, t-semibold, rounde, d-lg, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-cy, a, n-5, 0, 0/50, grou, p-hov, e, r:sca, l, e-1, 0, 5'
             >
               Read, Full, Analysis
-              <ArrowRight, className='w-4 h-4, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m' />
+              <Link, className='w-4 h-4, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m' />
             </Li, n, k>
           </div>
 
@@ -173,7 +173,7 @@ const October2025TechBreakthroughBanne, r = () => {
               className='inli, n, e-flex, item, s-center, ga, p-2, p, x-5, p, y-2.5, b, g-gradie, n, t-to-r, fro, m-bl, u, e-500, t, o-indi, g, o-500, hove, r: fr, o, m-bl, u, e-400, hove, r:to-indi, g, o-400, tex, t-white, fon, t-semibold, rounde, d-lg, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-bl, u, e-5, 0, 0/50, grou, p-hov, e, r:sca, l, e-1, 0, 5'
             >
               Explore, Platfor, m
-              <ArrowRight, className='w-4 h-4, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m' />
+              <Link, className='w-4 h-4, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m' />
             </Li, n, k>
           </div>
 
@@ -217,7 +217,7 @@ const October2025TechBreakthroughBanne, r = () => {
               className='inli, n, e-flex, item, s-center, ga, p-2, p, x-5, p, y-2.5, b, g-gradie, n, t-to-r, fro, m-indi, g, o-500, t, o-purp, l, e-500, hove, r: fr, o, m-indi, g, o-400, hove, r:to-purp, l, e-400, tex, t-white, fon, t-semibold, rounde, d-lg, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-indi, g, o-5, 0, 0/50, grou, p-hov, e, r:sca, l, e-1, 0, 5'
             >
               Discover, Technolog, y
-              <ArrowRight, className='w-4 h-4, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m' />
+              <Link, className='w-4 h-4, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m' />
             </Li, n, k>
           </div>
         </div>
@@ -318,13 +318,13 @@ const October2025TechBreakthroughBanne, r = () => {
             >
               <Sparkles, className='w-6 h-6' />
               Read, All, 3 Breakthrough, Article, s
-              <ArrowRight, className='w-6 h-6' />
+              <Link, className='w-6 h-6' />
             </Li, n, k>
             <Link, t, o='/<conta, c, t'
               className='inli, n, e-flex, item, s-center, ga, p-2, p, x-8, p, y-4, b, g-whi, t, e/10, hove, r:bg-whi, t, e/20, backdro, p-bl, u, r-sm, tex, t-white, fon, t-bold, rounde, d-xl, transitio, n-all, duratio, n-300, borde, r-2, borde, r-whi, t, e/30, hove, r:bord, e, r-whi, t, e/60, hove, r:sca, l, e-105, tex, t-lg'
             >
               Get, Free, Assessment
-              <ArrowRight, className='w-6 h-6' />
+              <Link, className='w-6 h-6' />
             </Li, n, k>
           </div>
           <p, className='te, x, t-cy, a, n-200, tex, t-sm, m, t-4'>

@@ -1,5 +1,6 @@
 import React, { memo, useMemo } from 'react';
 
+
 interface OptimizedLoadingSpinnerProps {
   size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
   variant?: 'dots' | 'pulse' | 'spinner' | 'skeleton' | 'bars';
@@ -52,7 +53,7 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(
     );
 
     const renderSpinner = useMemo(() => {
-      const baseClasses = `${sizeClasses[size]} ${colorClasses[color]}`;
+      const _baseClasses = `${sizeClasses[size]} ${colorClasses[color]}`;
 
       switch (variant) {
         case 'dots':
@@ -123,8 +124,8 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(
     }, [size, variant, color, sizeClasses, colorClasses]);
 
     const containerClasses = useMemo(() => {
-      const baseClasses = 'flex items-center justify-center';
-      const fullScreenClasses = fullScreen ? 'min-h-screen' : '';
+      const _baseClasses = 'flex items-center justify-center';
+      const _fullScreenClasses = fullScreen ? 'min-h-screen' : '';
       return `${baseClasses} ${fullScreenClasses} ${className}`;
     }, [fullScreen, className]);
 

@@ -93,7 +93,7 @@ export, default, function October2025NewTechBreakthroughsBann, e, r(): vo, i, d 
             </d, i, v>
             <div, className="flex, item, s-center, tex, t-bl, u, e-300, grou, p-hov, e, r: te, x, t-bl, u, e-200, fon, t-semibo, l, d">"
               Read, Full, Guide;
-              <ArrowRight, className="ml-2 w-5 h-5, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
+              <Link, className="ml-2 w-5 h-5, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
             <div, className="spa, c, e-y-2, m, b-4">";
               <div, className="flex, item, s-center, ga, p-2, tex, t-sm">";
                 <TrendingUp, className="w-4 h-4, tex, t-gre, e, n-4, 0, 0" />";
@@ -113,7 +113,7 @@ export, default, function October2025NewTechBreakthroughsBann, e, r(): vo, i, d 
             </d, i, v>
             <div, className="flex, item, s-center, tex, t-bl, u, e-300, grou, p-hov, e, r: te, x, t-bl, u, e-200, fon, t-semibo, l, d">";
               Read, Full, Guide;
-              <ArrowRight, className="ml-2 w-5 h-5, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
+              <Link, className="ml-2 w-5 h-5, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
             </d, i, v>
           </Li, n, k>
           {/* Artic, l, e 
@@ -166,7 +166,7 @@ export, default, function October2025NewTechBreakthroughsBann, e, r(): vo, i, d 
             </d, i, v>
             <div, className="flex, item, s-center, tex, t-purp, l, e-300, grou, p-hov, e, r: te, x, t-purp, l, e-200, fon, t-semibo, l, d">"
               Explore, Integratio, n;
-              <ArrowRight, className="ml-2 w-5 h-5, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
+              <Link, className="ml-2 w-5 h-5, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
             <div, className="spa, c, e-y-2, m, b-4">";
               <div, className="flex, item, s-center, ga, p-2, tex, t-sm">";
                 <TrendingUp, className="w-4 h-4, tex, t-gre, e, n-4, 0, 0" />";
@@ -186,7 +186,7 @@ export, default, function October2025NewTechBreakthroughsBann, e, r(): vo, i, d 
             </d, i, v>
             <div, className="flex, item, s-center, tex, t-purp, l, e-300, grou, p-hov, e, r: te, x, t-purp, l, e-200, fon, t-semibo, l, d">";
               Explore, Integratio, n;
-              <ArrowRight, className="ml-2 w-5 h-5, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
+              <Link, className="ml-2 w-5 h-5, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
             </d, i, v>
           </Li, n, k>
           {/* Artic, l, e 
@@ -239,7 +239,7 @@ export, default, function October2025NewTechBreakthroughsBann, e, r(): vo, i, d 
             </d, i, v>
             <div, className="flex, item, s-center, tex, t-gre, e, n-300, grou, p-hov, e, r: te, x, t-gre, e, n-200, fon, t-semibo, l, d">"
               Learn, Green, AI;
-              <ArrowRight, className="ml-2 w-5 h-5, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
+              <Link, className="ml-2 w-5 h-5, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
             <div, className="spa, c, e-y-2, m, b-4">";
               <div, className="flex, item, s-center, ga, p-2, tex, t-sm">";
                 <TrendingUp, className="w-4 h-4, tex, t-gre, e, n-4, 0, 0" />";
@@ -273,10 +273,10 @@ export, default, function October2025NewTechBreakthroughsBann, e, r(): vo, i, d 
           >
             <Sparkles, className="w-5 h-5  />
             Explore, All, Latest Breakthroug, h, s;
-            <ArrowRight, className="w-5 h-5  />
+            <Link, className="w-5 h-5  />
             <Sparkles, className="w-5 h-5" />";
             Explore, All, Latest Breakthroug, h, s;
-            <ArrowRight, className="w-5 h-5" />";
+            <Link, className="w-5 h-5" />";
           </Li, n, k>
         </d, i, v>
       </d, i, v>

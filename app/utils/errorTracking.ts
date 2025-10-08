@@ -67,31 +67,25 @@ class ErrorTrackingService {
     if (typeof window === 'undefined') return;
 
     // Handle unhandled errors
-    window.addEventListener('error', (event) => {
-      this.trackError(
-        event.error || new Error(event.message),
-        {
-          category: ErrorCategory.Runtime,
-          severity: ErrorSeverity.High,
-          context: {
-            filename: event.filename,
-            lineno: event.lineno,
-            colno: event.colno,
-          },
-        }
-      );
+    window.addEventListener('error', event => {
+      this.trackError(event.error || new Error(event.message), {
+        category: ErrorCategory.Runtime,
+        severity: ErrorSeverity.High,
+        context: {
+          filename: event.filename,
+          lineno: event.lineno,
+          colno: event.colno,
+        },
+      });
     });
 
     // Handle unhandled promise rejections
-    window.addEventListener('unhandledrejection', (event) => {
-      this.trackError(
-        new Error(`Unhandled Promise Rejection: ${event.reason}`),
-        {
-          category: ErrorCategory.Runtime,
-          severity: ErrorSeverity.Critical,
-          context: { reason: event.reason },
-        }
-      );
+    window.addEventListener('unhandledrejection', event => {
+      this.trackError(new Error(`Unhandled Promise Rejection: ${event.reason}`), {
+        category: ErrorCategory.Runtime,
+        severity: ErrorSeverity.Critical,
+        context: { reason: event.reason },
+      });
     });
   }
 
@@ -144,16 +138,11 @@ class ErrorTrackingService {
     }
 
     // Log the error
-    logger.error(
-      `[${metadata.severity.toUpperCase()}] ${error.message}`,
-      error,
-      'ErrorTracking',
-      {
-        error_id: errorId,
-        category: metadata.category,
-        ...metadata.context,
-      }
-    );
+    logger.error(`[${metadata.severity.toUpperCase()}] ${error.message}`, error, 'ErrorTracking', {
+      error_id: errorId,
+      category: metadata.category,
+      ...metadata.context,
+    });
 
     // Send to external service if critical
     if (metadata.severity === ErrorSeverity.Critical) {
@@ -171,7 +160,7 @@ class ErrorTrackingService {
     let hash = 0;
     for (let i = 0; i < message.length; i++) {
       const char = message.charCodeAt(i);
-      hash = ((hash << 5) - hash) + char;
+      hash = (hash * 32) - hash + char;
       hash = hash & hash; // Convert to 32bit integer
     }
     return `err_${Math.abs(hash).toString(36)}`;
@@ -255,18 +244,18 @@ class ErrorTrackingService {
     topErrors: TrackedError[];
   } {
     const errors = this.getErrors();
-    
+
     const byCategory = {} as Record<ErrorCategory, number>;
     const bySeverity = {} as Record<ErrorSeverity, number>;
 
     errors.forEach(error => {
-      byCategory[error.metadata.category] = (byCategory[error.metadata.category] || 0) + error.occurrences;
-      bySeverity[error.metadata.severity] = (bySeverity[error.metadata.severity] || 0) + error.occurrences;
+      byCategory[error.metadata.category] =
+        (byCategory[error.metadata.category] || 0) + error.occurrences;
+      bySeverity[error.metadata.severity] =
+        (bySeverity[error.metadata.severity] || 0) + error.occurrences;
     });
 
-    const topErrors = errors
-      .sort((a, b) => b.occurrences - a.occurrences)
-      .slice(0, 10);
+    const topErrors = errors.sort((a, b) => b.occurrences - a.occurrences).slice(0, 10);
 
     return {
       total: errors.length,
@@ -300,13 +289,10 @@ export const errorTracking = ErrorTrackingService.getInstance();
 export default ErrorTrackingService;
 
 // Export convenience functions for easier testing and usage
-export const trackError = (
-  error: Error,
-  options?: Partial<Omit<ErrorMetadata, 'timestamp'>>
-) => {
+export const trackError = (error: Error, options?: Partial<Omit<ErrorMetadata, 'timestamp'>>) => {
   const category = options?.category || ErrorCategory.Runtime;
   const severity = options?.severity || ErrorSeverity.Medium;
-  
+
   return errorTracking.trackError(error, {
     ...options,
     category,
@@ -329,7 +315,7 @@ export const getErrorStatistics = () => {
 };
 
 export const clearErrorHistory = () => errorTracking.clearErrors();
-export const addErrorListener = (listener: (error: TrackedError) => void) => 
+export const addErrorListener = (listener: (error: TrackedError) => void) =>
   errorTracking.addListener(listener);
-export const removeErrorListener = (listener: (error: TrackedError) => void) => 
+export const removeErrorListener = (listener: (error: TrackedError) => void) =>
   errorTracking.removeListener(listener);

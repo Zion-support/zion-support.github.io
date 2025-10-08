@@ -1,23 +1,19 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import nodemailer from 'nodemailer';
 import crypto from 'crypto';
-import {
-  getProposal,
-  updateProposalMeta,
-  updateArtifacts,
-} from '../../../utils/data/proposals';
+import { getProposal, updateProposalMeta, updateArtifacts } from '../../../utils/data/proposals';
 
 async function submitByEmail(
   to: string,
   subject: string,
   text: string,
-  attachments: any[] = []
+  attachments: unknown[] = []
 ) {
-  const host = process.env.EMAIL_HOST;
-  const port = Number(process.env.EMAIL_PORT || 587);
-  const user = process.env.EMAIL_USER;
-  const pass = process.env.EMAIL_PASS;
-  const from = process.env.EMAIL_FROM || user;
+  //   const host = process.env.EMAIL_HOST;
+  //   const port = Number(process.env.EMAIL_PORT || 587);
+  //   const user = process.env.EMAIL_USER;
+  //   const pass = process.env.EMAIL_PASS;
+  //   const from = process.env.EMAIL_FROM || user;
 
   if (!host || !user || !pass) {
     throw new Error('Email not configured');
@@ -39,10 +35,7 @@ async function submitByEmail(
   });
 }
 
-export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse
-) {
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' });
   }
@@ -54,15 +47,15 @@ export default async function handler(
       return res.status(400).json({ error: 'Proposal ID required' });
     }
 
-    const meta = getProposal(id);
+    const _meta = getProposal(id);
     if (!meta) {
       return res.status(404).json({ error: 'Proposal not found' });
     }
 
     // Email submission
     if (channels.includes('email')) {
-      const to = emailTo || process.env.UN_GATEWAY_EMAIL || 'example@un.org';
-      const subject = `[Proposal] ${meta.title} - ${meta.targetInstitution}`;
+      //       const to = emailTo || process.env.UN_GATEWAY_EMAIL || 'example@un.org';
+      //       const subject = `[Proposal] ${meta.title} - ${meta.targetInstitution}`;
       const text = `Please find the proposal attached.
 
 Title: ${meta.title}
@@ -81,10 +74,7 @@ Delegate Note: ${delegateNote || 'N/A'}`;
     // ENS record hash (default: compute and store hash only)
     let ensRecordHash: string | undefined;
     try {
-      const hash = crypto
-        .createHash('sha256')
-        .update(JSON.stringify(meta))
-        .digest('hex');
+      const _hash = crypto.createHash('sha256').update(JSON.stringify(meta)).digest('hex');
       ensRecordHash = `0x${hash}`;
       updateArtifacts(id, { ensRecordHash });
     } catch {
@@ -97,9 +87,7 @@ Delegate Note: ${delegateNote || 'N/A'}`;
     }));
 
     return res.status(200).json({ meta: updated });
-  } catch (error: any) {
-    return res
-      .status(500)
-      .json({ error: error?.message || 'Submission failed' });
+  } catch (error: unknown) {
+    return res.status(500).json({ error: error?.message || 'Submission failed' });
   }
 }

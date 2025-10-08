@@ -28,7 +28,7 @@ class ErrorBoundary extends Component<Props, State> {
   }
 
   override componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    // Report error to analytics/monitoring service
+    // Report error to this/monitoring service
     this.reportError(error, errorInfo);
 
     // Call custom error handler if provided
@@ -39,8 +39,19 @@ class ErrorBoundary extends Component<Props, State> {
 
   private reportError = (error: Error, errorInfo: ErrorInfo) => {
     // Report to external service (e.g., Sentry, LogRocket, etc.)
-    if (typeof window !== 'undefined' && (window as unknown as { gtag?: (command: string, eventName: string, parameters: Record<string, unknown>) => void }).gtag) {
-      (window as unknown as { gtag: (command: string, eventName: string, parameters: Record<string, unknown>) => void }).gtag('event', 'exception', {
+    if (
+      typeof window !== 'undefined' &&
+      (
+        window as unknown as {
+          gtag?: (command: string, eventName: string, parameters: Record<string, unknown>) => void;
+        }
+      ).gtag
+    ) {
+      (
+        window as unknown as {
+          gtag: (command: string, eventName: string, parameters: Record<string, unknown>) => void;
+        }
+      ).gtag('event', 'exception', {
         description: error.message,
         fatal: false,
         custom_map: {
@@ -63,43 +74,43 @@ class ErrorBoundary extends Component<Props, State> {
 
   override render() {
     if (this.state.hasError) {
-      return this.props.fallback || (
-        <div className="min-h-screen flex items-center justify-center bg-gray-900">
-          <div className="text-center p-8 max-w-md">
-            <AlertTriangle className="w-16 h-16 text-red-500 mx-auto mb-4" />
-            <h1 className="text-2xl font-bold text-white mb-4">Something went wrong</h1>
-            <p className="text-gray-300 mb-6">
-              We&apos;re sorry, but something unexpected happened. Our team has been notified.
-            </p>
-            {this.state.errorId && (
-              <p className="text-gray-400 mb-4 text-sm">
-                Error ID: {this.state.errorId}
+      return (
+        this.props.fallback || (
+          <div className="min-h-screen flex items-center justify-center bg-gray-900">
+            <div className="text-center p-8 max-w-md">
+              <AlertTriangle className="w-16 h-16 text-red-500 mx-auto mb-4" />
+              <h1 className="text-2xl font-bold text-white mb-4">Something went wrong</h1>
+              <p className="text-gray-300 mb-6">
+                We&apos;re sorry, but something unexpected happened. Our team has been notified.
               </p>
-            )}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              {this.state.errorId && (
+                <p className="text-gray-400 mb-4 text-sm">Error ID: {this.state.errorId}</p>
+              )}
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button
+                  onClick={this.handleRetry}
+                  className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg transition-colors flex items-center justify-center gap-2"
+                >
+                  <RefreshCw className="w-4 h-4" />
+                  Try Again
+                </button>
+                <button
+                  onClick={this.handleGoHome}
+                  className="bg-gray-600 hover:bg-gray-700 text-white px-6 py-3 rounded-lg transition-colors flex items-center justify-center gap-2"
+                >
+                  <Home className="w-4 h-4" />
+                  Go Home
+                </button>
+              </div>
               <button
-                onClick={this.handleRetry}
-                className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg transition-colors flex items-center justify-center gap-2"
+                onClick={() => window.location.reload()}
+                className="mt-4 text-gray-400 hover:text-white text-sm underline"
               >
-                <RefreshCw className="w-4 h-4" />
-                Try Again
-              </button>
-              <button
-                onClick={this.handleGoHome}
-                className="bg-gray-600 hover:bg-gray-700 text-white px-6 py-3 rounded-lg transition-colors flex items-center justify-center gap-2"
-              >
-                <Home className="w-4 h-4" />
-                Go Home
+                Or refresh the page
               </button>
             </div>
-            <button
-              onClick={() => window.location.reload()}
-              className="mt-4 text-gray-400 hover:text-white text-sm underline"
-            >
-              Or refresh the page
-            </button>
           </div>
-        </div>
+        )
       );
     }
 

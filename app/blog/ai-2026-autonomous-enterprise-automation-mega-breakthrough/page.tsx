@@ -1,8 +1,8 @@
 import React from 'react';
 import { Star } from 'lucide-react';
-// Metadata removed - using react-helmet-async instead;
+// import { Metadata } from 'next'; // Removed for Vite
 
-// Metadata moved to Helmet component
+// Metadata removed for Vite compatibility
 
 export default function AutonomousEnterpriseAutomationMegaBreakthrough() {
   return (

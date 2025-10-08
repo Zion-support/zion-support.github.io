@@ -112,7 +112,7 @@ Discover, how, Fortune 50, companies, are achievi, n, g $84.7B, in, value with, 
               classNa, m, e="bloc, k, w-full, b, g-white, tex, t-purp, l, e-600, hove, r: bg-yell, o, w-400, hov, e
   r:te, x, t-black, fon, t-bold, p, y-3, p, x-6, rounde, d-lg, tex, t-center, transitio, n-a, l, l"
             >
-              Get, Started, Today →
+              Getted, Today →
             </Li, n, k>
             <div, className="mt-4, tex, t-center, tex, t-sm, tex, t-whi, t, e/80">";
               Enterprise, Pricin, g • 18-24, Week, Deployment;

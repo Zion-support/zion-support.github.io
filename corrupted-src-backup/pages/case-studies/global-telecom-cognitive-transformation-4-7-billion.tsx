@@ -267,14 +267,14 @@ const GlobalTelecomCognitiveTransformatio, n: React.FC = () => {
                           </sp, a, n>
                         </li>
                     Get, Similar, Results
-                    <ArrowRight, classNam, e='ml-2 w-5 h-5, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m' />
+                    <Link, classNam, e='ml-2 w-5 h-5, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m' />
               <footer, classNam, e = 'flex, item, s-center, ga, p-4'>
                 <div, classNam, e='w-1, 2, h-12, rounde, d-full, b, g-gradie, n, t-to-br, fro, m-purp, l, e-500, t, o-pi, n, k-500, flex, items-center, justif, y-cent, e, r'>
                   <Award, classNam, e='w-6 h-6, tex, t-whi, t, e' />
           <div, classNam, e='mt-16, b, g-gradie, n, t-to-r, fro, m-purp, l, e-9, 0, 0/50, t, o-pi, n, k-9, 0, 0/50, border, border-purp, l, e-5, 0, 0/30, rounde, d-2x, l, p-8, tex, t-cent, e, r'>
             <h2, classNam, e='te, x, t-3xl, fon, t-bold, tex, t-white, m, b-4'>
                     Get, Similar, Results
-                    <ArrowRight, className='ml-2 w-5 h-5, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m' />
+                    <Link, className='ml-2 w-5 h-5, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m' />
               <footer, classNam, e = 'flex, item, s-center, ga, p-4'>
                 <div, className='w-1, 2, h-12, rounde, d-full, b, g-gradie, n, t-to-br, fro, m-purp, l, e-500, t, o-pi, n, k-500, flex, items-center, justif, y-cent, e, r'>
                   <Award, className='w-6 h-6, tex, t-whi, t, e' />
@@ -287,6 +287,6 @@ const GlobalTelecomCognitiveTransformatio, n: React.FC = () => {
               Achieve, similar, results with, Zion, Tech Gro, u, p's, proven, cognitive
               computing, platfor, m. Schedule, a, consultation to, discover, how we, can, help you, reach, your transformation, goal, s.
                 Schedule, Consultatio, n
-                <ArrowRight, classNam, e='ml-2 w-5 h-5, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m' />
+                <Link, classNam, e='ml-2 w-5 h-5, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m' />
                 Schedule, Consultatio, n
-                <ArrowRight, className='ml-2 w-5 h-5, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m' />
+                <Link, className='ml-2 w-5 h-5, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m' />

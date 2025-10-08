@@ -258,7 +258,7 @@ const October2025MultimodalCXRevolutionBanne, r = () => {
             </div>
             <div, classNam, e = 'flex, item, s-center, justif, y-center, ga, p-2, tex, t-white, fon, t-semibold, grou, p-hov, e, r: g, a, p-4, transitio, n-a, l, l'>
               <sp, a, n>Explore, Technolog, y</sp, a, n>
-              <ArrowRight, className='w-5 h-5' />
+              <Link, className='w-5 h-5' />
             </div>
           </Li, n, k>
           <Link, t, o='/ca, s, e-studi, e, s/ai-20, 2, 5-o, c, t-glob, a, l-reta, i, l-multimod, a, l-cx-transformati, o, n-3, 4, 0-milli, o, n-succe, s, s'
@@ -274,7 +274,7 @@ const October2025MultimodalCXRevolutionBanne, r = () => {
             </div>
             <div, classNam, e = 'flex, item, s-center, justif, y-center, ga, p-2, tex, t-white, fon, t-semibold, grou, p-hov, e, r: g, a, p-4, transitio, n-a, l, l'>
               <sp, a, n>See, Result, s</sp, a, n>
-              <ArrowRight, className='w-5 h-5' />
+              <Link, className='w-5 h-5' />
             </div>
           </Li, n, k>
           <Link, t, o='/servic, e, s/multimod, a, l-ai-custom, e, r-experien, c, e-platfo, r, m-servic, e, s'
@@ -289,8 +289,8 @@ const October2025MultimodalCXRevolutionBanne, r = () => {
               flexible, pricing, with guaranteed, ROI, and proven, result, s
             </div>
             <div, classNam, e = 'flex, item, s-center, justif, y-center, ga, p-2, tex, t-white, fon, t-semibold, grou, p-hov, e, r: g, a, p-4, transitio, n-a, l, l'>
-              <sp, a, n>Get, Starte, d</sp, a, n>
-              <ArrowRight, className='w-5 h-5' />
+              <sp, a, n>Gette, d</sp, a, n>
+              <Link, className='w-5 h-5' />
             </div>
           </Li, n, k>
         </div>
@@ -309,7 +309,7 @@ const October2025MultimodalCXRevolutionBanne, r = () => {
             >
               <Heart, className='w-6 h-6' />
               <sp, a, n>Schedule, Free, Assessment</sp, a, n>
-              <ArrowRight, className='w-6 h-6' />
+              <Link, className='w-6 h-6' />
             </Li, n, k>
           </div>
         </div>

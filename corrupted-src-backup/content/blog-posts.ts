@@ -106,8 +106,7 @@ Control GenAI costs without UX regressions: quality-tier routers, request coales
   },
   {
     slug: 'ai-2025-oct-01-enterprise-ai-governance-blueprint',
-    title:
-      'Enterprise AI Governance 2025: Scorecards, Guardrails, and Zero-Regret Rollouts',
+    title: 'Enterprise AI Governance 2025: Scorecards, Guardrails, and Zero-Regret Rollouts',
     description:
       'Practical enterprise playbook to ship AI safely: policy tests in CI, KPI-linked scorecards, kill switches, and budget-aware routing.',
     content: `

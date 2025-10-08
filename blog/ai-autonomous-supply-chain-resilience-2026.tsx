@@ -1,8 +1,8 @@
 import { Helmet } from "react-helmet-async"
 import { Link } from "react-router-dom"
-import {ArrowLeft, Calendar, Clock, Tag, TrendingUp, CheckCircle, Zap} Package; TruckIcon } from "lucide-react"
+import { ArrowLeft, Calendar, Clock, Tag, TrendingUp, CheckCircle, Zap, Package, TruckIcon } from "lucide-react"
 import Header from "../src/components/Header"
-const AIAutonomousSupplyChainResilience2026 = () =>
+const AIAutonomousSupplyChainResilience2026 = () => {
   return (<div>
       <div></div>
       <Helmet>
@@ -19,7 +19,7 @@ const AIAutonomousSupplyChainResilience2026 = () =>
       </Helmet>
       <div className="text-left"></div>
         <Header />
-        <article className="text-left"></a>
+        <article className="text-left">
           <Link
             to="/<blog" className="text-left"
           >

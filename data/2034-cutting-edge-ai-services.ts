@@ -22,7 +22,7 @@
 export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [,
     id: 'ai - emotional - support - agent',
     name: 'AI Emotional Support Agent',
-    description: any,
+    description: unknown,
       'On - demand AI agent trained on CBT and mindfulness protocols with escalation pathways.',
     category: 'AI Emotional Intelligence',
     pricing: { starter: '$99 / mo' },
@@ -39,7 +39,7 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [,
   },
     id: 'ai - product - spec - writer',
     name: 'AI Product Spec Writer',
-    description: any,
+    description: unknown,
       'Generate PRDs, user stories, and acceptance criteria aligned with business goals and analytics.',
     category: 'AI Business Management',
     pricing: { starter: '$79 / mo' },
@@ -59,7 +59,7 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [,
   },
     id: 'ai - creative - studio',
     name: 'AI Creative Studio',
-    description: any,
+    description: unknown,
       'Generate brand - consistent images and short - form videos with approvals and rights management.',
     category: 'AI Creativity',
     pricing: { starter: '$149 / mo' },
@@ -146,7 +146,7 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [,
 ];
 name: string;
 description: string;
-category: any,
+category: unknown,
   | 'AI Consciousness'
   | 'AI Emotional Intelligence'
   | 'AI Creativity'
@@ -207,7 +207,7 @@ export type CuttingEdgeAIService = {;
 	id: string;
 	name: string,,
   description: string;
-	category: any,
+	category: unknown,
 		| 'AI Consciousness'
 		| 'AI Emotional Intelligence'
 		| 'AI Creativity'
@@ -268,7 +268,7 @@ export type CuttingEdgeAIService = {;
 	id: string;
 	name: string,,
   description: string;
-	category: any,
+	category: unknown,
 		| 'AI Consciousness'
 		| 'AI Emotional Intelligence'
 		| 'AI Creativity'
@@ -328,7 +328,7 @@ export type CuttingEdgeAIService =
   id: string,
   name: string,
   description: string;
-  category: any,
+  category: unknown,
       'PRD templates',
       'Story generation',
       'Acceptance criteria',
@@ -395,7 +395,7 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [,
 ];
 name: string,
   description: string;
-category: any,
+category: unknown,
   | 'AI Consciousness'
   | 'AI Emotional Intelligence'
   | 'AI Creativity'

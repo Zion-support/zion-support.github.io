@@ -27,7 +27,7 @@ export const cuttingEdgeMicroSaasServices2025 = [{id: 'customer-success-ai-pro'
       'Performance metrics and reporting'
       'Custom AI model training'
     ]
-    pricing: starter: any;
+    pricing: starter: unknown;
         price: 199}
         period: 'month'
         features: [,
@@ -104,7 +104,7 @@ export const cuttingEdgeMicroSaasServices2025 = [{id: 'customer-success-ai-pro'
       'Multi-modal transportation planning'
       'Real-time collaboration tools'
     ]
-    pricing: starter: any;
+    pricing: starter: unknown;
         price: 299;
         period: 'month'
         features: [,
@@ -184,7 +184,7 @@ export const cuttingEdgeMicroSaasServices2025 = [{id: 'customer-success-ai-pro'
       'Mobile and web applications'
       'White-label solutions'
     ]
-    pricing: starter: any;
+    pricing: starter: unknown;
         price: 149;
         period: 'month'
         features: [,
@@ -266,7 +266,7 @@ export const cuttingEdgeMicroSaasServices2025 = [{id: 'customer-success-ai-pro'
       'Integration with HR systems'
       'Predictive modeling capabilities'
     ]
-    pricing: starter: any;
+    pricing: starter: unknown;
         price: 249;
         period: 'month'
         features: [,
@@ -347,7 +347,7 @@ export const cuttingEdgeMicroSaasServices2025 = [{id: 'customer-success-ai-pro'
       'Performance attribution analysis'
       'Comprehensive risk reporting'
     ]
-    pricing: starter: any;
+    pricing: starter: unknown;
         price: 399;
         period: 'month'
         features: [,
@@ -420,9 +420,9 @@ export const cuttingEdgeMicroSaasServices2025 = [{id: 'customer-success-ai-pro'
       'AI-powered churn prediction with 92% accuracyPersonalized engagement recommendationsCustomer health scoring and monitoringAutomated success playbook creationReal-time customer sentiment analysisPredictive analytics dashboardIntegration with CRM and support toolsAutomated customer onboarding workflows'
       'Performance metrics and reportingCustom AI model training'
     market_size: '$28.9B',
-    target_audience: any,
+    target_audience: unknown,
       'Investment firms, banks, hedge funds, asset management companies, financial institutions',
-    competitive_advantage: any,
+    competitive_advantage: unknown,
       'Quantum - enhanced risk modeling, real - time optimization, advanced analytics',
     use_cases: [,
       'Portfolio risk assessment',

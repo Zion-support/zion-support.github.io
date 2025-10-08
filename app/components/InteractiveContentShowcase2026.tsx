@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 
+
 const InteractiveContentShowcase2026: React.FC = () => {
   const [activeTab, setActiveTab] = useState(0);
 

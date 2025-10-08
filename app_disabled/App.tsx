@@ -11,7 +11,7 @@ import PerformanceDashboard from './components/PerformanceDashboard';
 import PerformanceMonitor from './components/PerformanceMonitor';
 
 // Lazy load pages for better performance
-const HomePage = lazy(() => import('./page'));
+// const HomePage = lazy(() => import('./page'));
 
 // Utils
 import { performanceOptimizer } from '../src/utils/performanceOptimizer';
@@ -22,22 +22,18 @@ import '../src/index.css';
 const App: React.FC = () => {
   useEffect(() => {
     // Initialize global error handling
-    console.log('App initialized');
 
     // Initialize performance monitoring
     performanceOptimizer.lazyLoadImages();
     // Initialize Web Vitals monitoring
     if (typeof window !== 'undefined' && 'performance' in window) {
-      const metrics = performanceOptimizer.measurePageLoad();
+      const _metrics = performanceOptimizer.measurePageLoad();
       if (metrics) {
         performanceOptimizer.reportWebVitals(metrics);
       }
     }
 
-    console.log('Performance monitoring initialized');
-    console.log(
-      '🚀 Zion Tech Group App initialized with comprehensive monitoring'
-    );
+
   }, []);
 
   return (

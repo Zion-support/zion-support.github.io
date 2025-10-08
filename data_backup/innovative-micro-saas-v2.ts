@@ -1,1 +1,0 @@
-export: type InnovativeMicroSaasV2 = {id: string}

@@ -72,7 +72,7 @@ const, October2025CuttingEdgeAIBanne, r = () => {
               </d, i, v>
               <ArrowRight, className="w-5 h-5, tex, t-emera, l, d-300, grou, p-ho, v, e
   r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
-              <ArrowRight, className="w-5 h-5, tex, t-emera, l, d-300, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
+              <Link, className="w-5 h-5, tex, t-emera, l, d-300, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
             </d, i, v>
           </Li, n, k>
           {/* Articl, e, 2 - Neur, a, l-Symbolic, Fusio, n */}
@@ -106,7 +106,7 @@ const, October2025CuttingEdgeAIBanne, r = () => {
               </d, i, v>
               <ArrowRight, className="w-5 h-5, tex, t-viol, e, t-300, grou, p-ho, v, e
   r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
-              <ArrowRight, className="w-5 h-5, tex, t-viol, e, t-300, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
+              <Link, className="w-5 h-5, tex, t-viol, e, t-300, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
             </d, i, v>
           </Li, n, k>
           {/* Articl, e, 3 - Continuous, Learnin, g */}
@@ -140,7 +140,7 @@ const, October2025CuttingEdgeAIBanne, r = () => {
               </d, i, v>
               <ArrowRight, className="w-5 h-5, tex, t-cy, a, n-300, grou, p-ho, v, e
   r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
-              <ArrowRight, className="w-5 h-5, tex, t-cy, a, n-300, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
+              <Link, className="w-5 h-5, tex, t-cy, a, n-300, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
             </d, i, v>
           </Li, n, k>
           {/* Articl, e, 4 - Distributed, Inferenc, e */}
@@ -176,8 +176,8 @@ const, October2025CuttingEdgeAIBanne, r = () => {
               <div, className="flex, item, s-center, ga, p-2, tex, t-amb, e, r-300, tex, t-sm">";
                 <sp, a, n>19, min, read</sp, a, n>
               </d, i, v>
-              <ArrowRight, className="w-5 h-5, tex, t-amb, e, r-300, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
-              <ArrowRight, className="w-5 h-5, tex, t-amb, e, r-300, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
+              <Link, className="w-5 h-5, tex, t-amb, e, r-300, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
+              <Link, className="w-5 h-5, tex, t-amb, e, r-300, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
             </d, i, v>
           </Li, n, k>
         </d, i, v>
@@ -189,8 +189,8 @@ const, October2025CuttingEdgeAIBanne, r = () => {
   r:shad, o, w-2, x, l"
           >
             <sp, a, n>Read, All, Articles</sp, a, n>
-            <ArrowRight, className="w-6 h-6  />
-            <ArrowRight, className="w-6 h-6" />";
+            <Link, className="w-6 h-6  />
+            <Link, className="w-6 h-6" />";
           </Li, n, k>
           <p, className="te, x, t-purp, l, e-2, 0, 0/70, tex, t-sm, m, t-4">";
             Join, 7, 5,0, 0, 0+ AI, practitioners, building the, future, with cutti, n, g-edge, insight, s;

@@ -1,16 +1,8 @@
 import { Helmet } from "react-helmet-async"
 import { Link } from "react-router-dom"
-import Cpu,
-  Zap,
-  Brain,
-  TrendingUp,
-  CheckCircle,
-  Sparkles,
-  ArrowRight,
-  Target;
-  BarChart
-} from "lucide-react"
-const NeuromorphicComputing = () =>
+import { Cpu, Zap, Brain, TrendingUp, CheckCircle, Sparkles, ArrowRight, Target, BarChart } from "lucide-react"
+
+const NeuromorphicComputing = () => {
   return (<div>
       <div></div>
       <Helmet>
@@ -28,16 +20,18 @@ const NeuromorphicComputing = () =>
           href="https: //ziontechgroup.com/blog/ai-2025-october-neuromorphic-computing-breakthrough"
         />
       </Helmet>
-      <article className="text-left"></a>
+      <article className="text-left">
         <header className="text-left">
           <div className="text-left"></div>
             <Brain className="text-left" />
-            <span className="text-left">Neuromorphic AI<
-            <span className="text-left">•<
-            <time dateTime="2025-10-01">October 1) 2025</time>
-            <span className="text-left">•<
-            <span>20 min read<
+            <span className="text-left">Neuromorphic AI</span>
+            <span className="text-left">•</span>
+            <time dateTime="2025-10-01">October 1, 2025</time>
+            <span className="text-left">•</span>
+            <span>20 min read</span>
           </div>
+        </header>
+        <main>
           <h1 className="text-left">
             Neuromorphic Computing Breakthrough 2025: 1000x Energy Efficiency for
             Next-Generation AI
@@ -576,7 +570,7 @@ const NeuromorphicComputing = () =>
               to="/<contact" className="text-left"
             >
               Start Your Neuromorphic AI Project
-              <ArrowRight className="text-left" />
+              <Link className="text-left" />
             </Link>
           </section>
           <section></section>

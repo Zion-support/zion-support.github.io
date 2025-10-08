@@ -1,6 +1,7 @@
-// Metadata removed - using react-helmet-async instead;
+import React from 'react';
+// import { Metadata } from 'next'; // Removed for Vite
 
-// Metadata moved to Helmet component
+// Metadata removed for Vite compatibility
 
 export default function January2025AdvancedAIRevolution() {
   return (

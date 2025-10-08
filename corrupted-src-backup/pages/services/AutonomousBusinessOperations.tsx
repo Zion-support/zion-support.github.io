@@ -51,7 +51,7 @@ const AutonomousBusinessOperation, s = () => {
                   <div, className='te, x, t-gre, e, n-100, fon, t-semibo, l, d'>
                     Cost, Reductio, n
                   </d, i, v>
-                  <ArrowRight, classNam, e='w-5 h-5' />
+                  <Link, classNam, e='w-5 h-5' />
               <div, classNam, e='flex, item, s-center, ga, p-2'>
                 <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-4, 0, 0' />
                 <span, classNam, e='fo, n, t-semibo, l, d'>99.97% Uptime, SL, A</sp, a, n>
@@ -235,7 +235,7 @@ const AutonomousBusinessOperation, s = () => {
           <div, className='bg-gradie, n, t-to-r, fro, m-gre, e, n-600, t, o-emera, l, d-600, rounde, d-2x, l, p-12, tex, t-cent, e, r'>
             <h2, className='te, x, t-4xl, fon, t-bold, tex, t-white, m, b-4'>
               Read, Complete, Case Stu, d, y
-              <ArrowRight, className='w-5 h-5' />
+              <Link, className='w-5 h-5' />
 
         {/* Fina, l, C, T, A */}
         <section, classNam, e = 'container, m, x-auto, p, x-6, p, y-20, ma, x-w-6, x, l'>
@@ -248,4 +248,4 @@ const AutonomousBusinessOperation, s = () => {
               >
                 <Rocket, className='w-5 h-5' />
                 Schedule, Free, Consultation
-                <ArrowRight, classNam, e='w-5 h-5' />
+                <Link, classNam, e='w-5 h-5' />

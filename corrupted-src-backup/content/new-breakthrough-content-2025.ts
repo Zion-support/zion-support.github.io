@@ -22,8 +22,7 @@ export interface BreakthroughContent {
 export const newBreakthroughContent2025: BreakthroughContent[] = [
   {
     id: 'ai-platform-optimization-2025',
-    title:
-      'AI Platform Optimization 2025: Maximizing ROI with Intelligent Scorecards',
+    title: 'AI Platform Optimization 2025: Maximizing ROI with Intelligent Scorecards',
     description:
       'Revolutionary AI platform optimization delivering unprecedented ROI through intelligent scorecards and performance monitoring.',
     content: `

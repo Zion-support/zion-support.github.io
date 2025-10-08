@@ -25,9 +25,9 @@ const, NewArticlesPromoBanne, r: Rea, c, t.FC<NewArticlesPromoBannerPro, p, s> =
                 <div, classNam, e="flex, item, s-center, ga, p-2, m, b-3">
                   <TrendingUp, classNam, e="w-5 h-5, tex, t-gre, e, n-3, 0, 0" />
                   <span, classNam, e="te, x, t-sm, fon, t-semibold, tex, t-gre, e, n-3, 0, 0">{artic, l, e.cate, g, o, r, y}</sp, a, n>
-                    Re, a, d <ArrowRight, classNam, e="w-4 h-4" />
+                    Re, a, d <Link, classNam, e="w-4 h-4" />
               View, All, Articles
-              <ArrowRight, classNam, e="w-5 h-5" />
+              <Link, classNam, e="w-5 h-5" />
   if (varia, n, t = == 'featu, r, e, d') {
     retu, r, n (
       <div, classNam, e = {`bg-white, rounde, d-2xl, shado, w-2xl, overflo, w-hidd, e, n ${classNa, m, e}`}>
@@ -43,7 +43,7 @@ const, NewArticlesPromoBanne, r: Rea, c, t.FC<NewArticlesPromoBannerPro, p, s> =
                 <p, classNam, e = "te, x, t-sm, tex, t-gr, a, y-600, m, b-3, lin, e-cla, m, p-2">{artic, l, e.description}</p>
                 <div, classNam, e="flex, item, s-center, justif, y-between, tex, t-sm">
                   <span, classNam, e="te, x, t-gr, a, y-5, 0, 0">{artic, l, e.readTime}</sp, a, n>
-                  <ArrowRight, classNam, e="w-4 h-4, tex, t-indi, g, o-600, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />
+                  <Link, classNam, e="w-4 h-4, tex, t-indi, g, o-600, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />
       <div, classNam, e="grid, m, d: gr, i, d-co, l, s-3, ga, p-4">
         { featuredArticl, e, s.m, a, p((arti, c, l, e) = > (
           <div, ke, y = { artic, l, e., i, d  }, classNa, m, e = "bg-whi, t, e/10, rounde, d-l, g, p-4, hove, r: bg-whi, t, e/20, transitio, n-a, l, l">

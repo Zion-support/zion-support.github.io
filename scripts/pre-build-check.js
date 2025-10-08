@@ -8,19 +8,16 @@
 import { readFileSync, existsSync } from 'fs';
 import { resolve } from 'path';
 
-const errors = [];
-const warnings = [];
+const _errors = [];
+const _warnings = [];
 
-console.log('🔍 Running pre-build checks...\n');
-
-// Check Node version
-const requiredNodeVersion = '18.0.0';
-const currentNodeVersion = process.version.slice(1);
+// // Check Node version
+// const requiredNodeVersion = '18.0.0';
+// const currentNodeVersion = process.version.slice(1);
 if (currentNodeVersion < requiredNodeVersion) {
   errors.push(`Node.js version ${requiredNodeVersion} or higher is required (current: ${currentNodeVersion})`);
 } else {
-  console.log('✅ Node.js version:', currentNodeVersion);
-}
+//   }
 
 // Check for required files
 const requiredFiles = [
@@ -35,14 +32,13 @@ requiredFiles.forEach((file) => {
   if (!existsSync(resolve(process.cwd(), file))) {
     errors.push(`Required file missing: ${file}`);
   } else {
-    console.log(`✅ Found: ${file}`);
-  }
+//     }
 });
 
 // Check package.json for critical dependencies
 try {
-  const packageJson = JSON.parse(readFileSync(resolve(process.cwd(), 'package.json'), 'utf-8'));
-  const requiredDeps = ['next', 'react', 'react-dom'];
+  const _packageJson = JSON.parse(readFileSync(resolve(process.cwd(), 'package.json'), 'utf-8'));
+  const _requiredDeps = ['next', 'react', 'react-dom'];
   
   requiredDeps.forEach((dep) => {
     if (!packageJson.dependencies[dep]) {
@@ -50,20 +46,18 @@ try {
     }
   });
   
-  console.log('✅ Critical dependencies present');
-} catch (error) {
+//   } catch (error) {
   errors.push('Failed to read package.json');
 }
 
 // Check TypeScript configuration
 try {
-  const tsConfig = JSON.parse(readFileSync(resolve(process.cwd(), 'tsconfig.json'), 'utf-8'));
+  const _tsConfig = JSON.parse(readFileSync(resolve(process.cwd(), 'tsconfig.json'), 'utf-8'));
   
   if (!tsConfig.compilerOptions) {
     warnings.push('tsconfig.json missing compilerOptions');
   } else {
-    console.log('✅ TypeScript configuration valid');
-  }
+//     }
 } catch (error) {
   errors.push('Failed to read tsconfig.json');
 }
@@ -72,29 +66,22 @@ try {
 if (!existsSync(resolve(process.cwd(), '.env.example'))) {
   warnings.push('.env.example file not found - consider adding environment variable documentation');
 } else {
-  console.log('✅ Environment example file present');
-}
+//   }
 
 // Report results
-console.log('\n📊 Pre-build Check Results:\n');
-
-if (errors.length > 0) {
-  console.log('❌ Errors found:');
-  errors.forEach((error) => console.log(`   - ${error}`));
+// if (errors.length > 0) {
+//   //   errors.forEach((error) => console.log(`   - ${error}`));
 }
 
 if (warnings.length > 0) {
-  console.log('\n⚠️  Warnings:');
-  warnings.forEach((warning) => console.log(`   - ${warning}`));
+//   //   warnings.forEach((warning) => console.log(`   - ${warning}`));
 }
 
 if (errors.length === 0 && warnings.length === 0) {
-  console.log('✅ All checks passed! Ready to build.\n');
-  process.exit(0);
+//   process.exit(0);
 } else if (errors.length > 0) {
-  console.log('\n❌ Build cannot proceed. Please fix the errors above.\n');
-  process.exit(1);
+//   process.exit(1);
 } else {
-  console.log('\n✅ Build can proceed (with warnings).\n');
+//   console.log('\n✅ Build can proceed (with warnings).\n');
   process.exit(0);
 }

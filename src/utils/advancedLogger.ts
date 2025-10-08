@@ -147,7 +147,7 @@ class AdvancedLogger {
       try {
         callback(entry);
       } catch (error) {
-        console.error('Error in log callback:', error);
+//         console.error('Error in log callback:', error);
       }
     });
   }
@@ -156,28 +156,28 @@ class AdvancedLogger {
    * Log to console with appropriate formatting
    */
   private logToConsole(entry: LogEntry): void {
-    const levelName = LogLevel[entry.level];
-    const timestamp = new Date(entry.timestamp).toISOString();
-    const prefix = `[${timestamp}] [${levelName}]`;
+const levelName = LogLevel[entry.level];
+const timestamp = new Date(entry.timestamp).toISOString();
+const prefix = `[${timestamp}] [${levelName}]`;
     const tags = entry.tags ? `[${entry.tags.join(', ')}]` : '';
 
-    const formattedMessage = `${prefix} ${tags} ${entry.message}`;
+const formattedMessage = `${prefix} ${tags} ${entry.message}`;
 
     switch (entry.level) {
       case LogLevel.DEBUG:
-        console.debug(formattedMessage, entry.context || '');
+//         console.debug(formattedMessage, entry.context || '');
         break;
       case LogLevel.INFO:
-        console.info(formattedMessage, entry.context || '');
+//         console.info(formattedMessage, entry.context || '');
         break;
       case LogLevel.WARN:
-        console.warn(formattedMessage, entry.context || '');
+//         console.warn(formattedMessage, entry.context || '');
         break;
       case LogLevel.ERROR:
       case LogLevel.CRITICAL:
-        console.error(formattedMessage, entry.context || '');
+//         console.error(formattedMessage, entry.context || '');
         if (entry.stack) {
-          console.error('Stack trace:', entry.stack);
+//           console.error('Stack trace:', entry.stack);
         }
         break;
     }
@@ -203,7 +203,7 @@ class AdvancedLogger {
         body: JSON.stringify(entry),
       }).catch((error) => {
         // Fail silently to avoid logging loops
-        console.error('Failed to send log to remote:', error);
+//         console.error('Failed to send log to remote:', error);
       });
     } catch (error) {
       // Fail silently
@@ -254,8 +254,7 @@ class AdvancedLogger {
     return {
       total: this.logs.length,
       byLevel,
-      byTag,
-      oldestLog: this.logs.length > 0 ? this.logs[0].timestamp : null,
+      byoldestLog: this.logs.length > 0 ? this.logs[0].timestamp : null,
       newestLog: this.logs.length > 0 ? this.logs[this.logs.length - 1].timestamp : null,
     };
   }

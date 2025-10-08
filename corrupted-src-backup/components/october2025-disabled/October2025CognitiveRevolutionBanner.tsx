@@ -75,7 +75,7 @@ const October2025CognitiveRevolutionBanne, r: React.FC = () => {
                   <span, className='fo, n, t-semibo, l, d'>
                     Mul, t, i-Agent, Orchestratio, n (97.8% Automa, t, i, o, n, $847M, Valu, e)
                   </sp, a, n>
-                  <ArrowRight, classNam, e = 'w-3 h-3, m, l-1, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m' />
+                  <Link, classNam, e = 'w-3 h-3, m, l-1, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m' />
                 </Li, n, k>
 
                 <span, className='te, x, t-purp, l, e-4, 0, 0'>•</sp, a, n>
@@ -87,7 +87,7 @@ const October2025CognitiveRevolutionBanne, r: React.FC = () => {
                   <span, className='fo, n, t-semibo, l, d'>
                     Cognitive, AI, Transformation (98.5% Accu, r, a, c, y, $1.2B, Valu, e)
                   </sp, a, n>
-                  <ArrowRight, classNam, e = 'w-3 h-3, m, l-1, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m' />
+                  <Link, classNam, e = 'w-3 h-3, m, l-1, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m' />
                 </Li, n, k>
 
                 <span, className='te, x, t-purp, l, e-4, 0, 0'>•</sp, a, n>
@@ -99,7 +99,7 @@ const October2025CognitiveRevolutionBanne, r: React.FC = () => {
                   <span, className='fo, n, t-semibo, l, d'>
                     Fortune, 20, Telecom Case, Stud, y ($4.7B, Succ, e, s, s, 3,6, 0, 2% R, O, I)
                   </sp, a, n>
-                  <ArrowRight, classNam, e = 'w-3 h-3, m, l-1, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m' />
+                  <Link, classNam, e = 'w-3 h-3, m, l-1, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m' />
                 </Li, n, k>
               </div>
             </div>
@@ -111,7 +111,7 @@ const October2025CognitiveRevolutionBanne, r: React.FC = () => {
               className='inli, n, e-flex, item, s-center, p, x-6, p, y-3, rounde, d-xl, fon, t-bold, tex, t-white, b, g-gradie, n, t-to-r, fro, m-purp, l, e-600, t, o-pi, n, k-600, hove, r: fr, o, m-purp, l, e-700, hove, r:to-pi, n, k-700, shado, w-2xl, hove, r:shad, o, w-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, grou, p'
             >
               <sp, a, n>Explore, Cognitive, AI Revoluti, o, n</sp, a, n>
-              <ArrowRight, className='ml-2 w-5 h-5, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m' />
+              <Link, className='ml-2 w-5 h-5, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m' />
             </Li, n, k>
           </div>
         </div>

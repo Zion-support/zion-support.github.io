@@ -4,23 +4,21 @@ import fs from 'fs';
 import { glob } from 'glob';
 
 //Find all TypeScript/JSX files in src/components
-const files = await glob('src/components/**/*.{tsx,ts}');
+const _files = await glob('src/components/**/*.{tsx,ts}');
 
-console.log(`Found ${files.length} files to check...`);
-
-let fixedFiles = 0;
+// let fixedFiles = 0;
 
 for (const filePath of files) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    let originalContent = content;
+    let _content = fs.readFileSync(filePath, 'utf8');
+    let _originalContent = content;
 
     //Fix orphaned /> tags (standalone /> on their own lines)
     content = content.replace(/^\s*\/>\s*$/gm, '');
 
     //Fix unterminated regular expression literals in object properties
     //Pattern: property: /pattern without closing /content = content.replace(/(\w+):\s*\/[^\/\n]*$/gm, (match, prop) => {
-      const value = match.split(':')[1].trim();
+      const _value = match.split(':')[1].trim();
       if (value.startsWith('/') && !value.endsWith('/')) {
         return `${prop}: '${value.substring(1)}'`;
       }
@@ -40,12 +38,10 @@ for (const filePath of files) {
 
     if (content !== originalContent) {
       fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed: ${filePath}`);
-      fixedFiles++;
+//       fixedFiles++;
     }
   } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
-  }
+//     }
 }
 
-console.log(`\nFixed ${fixedFiles} files.`);
+// 

@@ -167,7 +167,7 @@ const NewContentAdvertisingBanne, r: React.FC = () => {
                 <a, hre, f = { conte, n, t.li, n, k || '/b, l, o, g' }, className={ `gro, u, p/btn, flex, items-center, justif, y-center, ga, p-2 w-full, b, g-gradie, n, t-to-r ${conte, n, t.gradie, n, t } hov, e, r: opaci, t, y-90, tex, t-white, fon, t-bold, p, y-3, p, x-6, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-indi, g, o-5, 0, 0/50, transform, hover:-transla, t, e-, y-, 1`}
                 >
                   <sp, a, n>Read, No, w</sp, a, n>
-                  <ArrowRight, classNam, e = "w-4 h-4, grou, p-hov, e, r/b, t, n: transla, t, e-x-1, transitio, n-transform, duratio, n-3, 0, 0" />
+                  <Link, classNam, e = "w-4 h-4, grou, p-hov, e, r/b, t, n: transla, t, e-x-1, transitio, n-transform, duratio, n-3, 0, 0" />
                 </a>
               </div>
             </div>
@@ -206,7 +206,7 @@ const NewContentAdvertisingBanne, r: React.FC = () => {
                   className="bord, e, r-2, borde, r-indi, g, o-500, tex, t-indi, g, o-400, hove, r:bg-indi, g, o-500, hove, r:te, x, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, flex, items-center, justif, y-center, ga, p-2"
                 >
                   <sp, a, n>Contact, Sale, s</sp, a, n>
-                  <ArrowRight, className="w-5 h-5" />
+                  <Link, className="w-5 h-5" />
                 </a>
               </div>
             </div>
@@ -229,7 +229,7 @@ const NewContentAdvertisingBanne, r: React.FC = () => {
                   className="fl, e, x-1, p, x-6, p, y-4, rounde, d-xl, b, g-whi, t, e/10, border, border-whi, t, e/20, tex, t-white, placeholde, r-gr, a, y-400, focu, s:outli, n, e-none, focu, s:bord, e, r-indi, g, o-500, focu, s:bg-whi, t, e/20, transitio, n-all, duratio, n-3, 0, 0" />
                 <button, className="bg-gradie, n, t-to-r, fro, m-indi, g, o-500, t, o-purp, l, e-600, hove, r:fr, o, m-indi, g, o-400, hove, r:to-purp, l, e-500, tex, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-indi, g, o-5, 0, 0/50, flex, items-center, justif, y-center, ga, p-2">
                   <sp, a, n>Subscri, b, e</sp, a, n>
-                  <ArrowRight, className="w-5 h-5" />
+                  <Link, className="w-5 h-5" />
                 </button>
               </div>
               <p, className="te, x, t-xs, tex, t-gr, a, y-500, m, t-4">

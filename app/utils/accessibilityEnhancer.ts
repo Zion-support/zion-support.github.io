@@ -152,8 +152,8 @@ class AccessibilityEnhancer {
     if (!currentElement) return;
 
     // Handle radio button groups
-    if ((currentElement as HTMLInputElement).type === 'radio') {
-      this.handleRadioGroupNavigation(event, currentElement as HTMLInputElement);
+    if (currentElement instanceof HTMLInputElement && currentElement.type === 'radio') {
+      this.handleRadioGroupNavigation(event, currentElement);
     }
     
     // Handle menu navigation
@@ -674,20 +674,34 @@ class AccessibilityEnhancer {
    */
   getReport(): string {
     const metrics = this.getMetrics();
+    
     return `
-Accessibility Report
-===================
-Focusable Elements: ${metrics.focusableElements}
-Images Without Alt: ${metrics.imagesWithoutAlt}
-Links Without Text: ${metrics.linksWithoutText}
-Headings Without Content: ${metrics.headingsWithoutContent}
-Color Contrast Issues: ${metrics.colorContrastIssues}
-Keyboard Navigation Score: ${metrics.keyboardNavigationScore}
-Screen Reader Score: ${metrics.screenReaderScore}
+Accessibility Report:
+====================
 Overall Score: ${metrics.overallScore}/100
-    `;
+
+Keyboard Navigation: ${metrics.keyboardNavigationScore}/100
+Screen Reader Support: ${metrics.screenReaderScore}/100
+
+Issues Found:
+- Images without alt text: ${metrics.imagesWithoutAlt}
+- Links without text: ${metrics.linksWithoutText}
+- Empty headings: ${metrics.headingsWithoutContent}
+- Color contrast issues: ${metrics.colorContrastIssues}
+
+Focusable Elements: ${metrics.focusableElements}
+    `.trim();
+  }
+
+  /**
+   * Cleanup
+   */
+  cleanup(): void {
+    this.observers.forEach(observer => observer.disconnect());
+    this.observers = [];
+    this.isInitialized = false;
   }
 }
 
 export const accessibilityEnhancer = new AccessibilityEnhancer();
-export default AccessibilityEnhancer;
+export default accessibilityEnhancer;

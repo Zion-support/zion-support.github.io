@@ -1,4 +1,3 @@
-import React from 'react';
 import Link from 'next/link';
 import { ArrowRight, CheckCircle, Brain, Zap, Target, Users, DollarSign, TrendingUp } from 'lucide-react';
 
@@ -216,19 +215,19 @@ export default function AI2026BreakthroughInnovationsImplementationPage() {
             href="/"
             className="text-left">
             Start Implementation
-            <ArrowRight className="text-left" />
+            <Link className="text-left" />
           </Link>
           <Link 
             href="/"
             className="text-left">
             View Success Stories
-            <ArrowRight className="text-left" />
+            <Link className="text-left" />
           </Link>
           <Link 
             href="/"
             className="text-left">
             Read Full Analysis
-            <ArrowRight className="text-left" />
+            <Link className="text-left" />
           </Link>
         </div>
       </section>

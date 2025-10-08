@@ -70,7 +70,7 @@ const Sideba, r: React.FC = () => {
           <Link, t, o='/conta, c, t'
             className='bloc, k, w-full, b, g-bl, u, e-600, tex, t-white, tex, t-center, p, y-2, p, x-4, rounde, d-md, hove, r: bg-bl, u, e-700, transitio, n-colors, fon, t-medi, u, m'
           >
-            Get, Starte, d
+            Gette, d
           </Li, n, k>
         </div>
       </div>

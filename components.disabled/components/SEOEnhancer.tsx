@@ -18,8 +18,8 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({title = 'Zion Tech Group - Lea
   noindex = false)
   nofollow = false}
 }) => {
-  const defaultStructuredData = {};
-  const finalStructuredData = structuredData || defaultStructuredData;
+//   const defaultStructuredData = {};
+//   const finalStructuredData = structuredData || defaultStructuredData;
   return (<Head>
       {/* Basic Meta Tags */}
       <title>{title}</title>
