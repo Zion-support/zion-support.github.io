@@ -29,16 +29,17 @@ export interface PerformanceBudget {
  * Lazy load images with Intersection Observer
  */
 export const lazyLoadImages = (): void => {
-  if (typeof window === 'undefined' || !('IntersectionObserver' in window)) return;
+  if (typeof window === 'undefined' || !('IntersectionObserver' in window))
+    return;
 
   const imageObserver = new IntersectionObserver(
     entries => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           const img = entry.target as HTMLImageElement;
-          const src = img.dataset['src'];
+const src = img.dataset['src'];
           if (src) {
-            img.src = src;
+            img['src'] = src;
             img.removeAttribute('data-src');
             imageObserver.unobserve(img);
           }
@@ -143,7 +144,8 @@ export const measurePageLoad = (): WebVitalsMetrics | null => {
     TTFB: perfData.responseStart - perfData.navigationStart,
     loadTime: perfData.loadEventEnd - perfData.navigationStart,
     interactiveTime: perfData.domInteractive - perfData.navigationStart,
-    domContentLoaded: perfData.domContentLoadedEventEnd - perfData.navigationStart,
+    domContentLoaded:
+      perfData.domContentLoadedEventEnd - perfData.navigationStart,
   };
 };
 
@@ -158,7 +160,11 @@ export const reportWebVitals = (metrics: WebVitalsMetrics): void => {
     typeof window !== 'undefined' &&
     (
       window as unknown as {
-        gtag?: (command: string, eventName: string, parameters: Record<string, unknown>) => void;
+        gtag?: (
+          command: string,
+          eventName: string,
+          parameters: Record<string, unknown>
+        ) => void;
       }
     ).gtag
   ) {
@@ -166,7 +172,11 @@ export const reportWebVitals = (metrics: WebVitalsMetrics): void => {
       if (value !== undefined) {
         (
           window as unknown as {
-            gtag: (command: string, eventName: string, parameters: Record<string, unknown>) => void;
+            gtag: (
+              command: string,
+              eventName: string,
+              parameters: Record<string, unknown>
+            ) => void;
           }
         ).gtag('event', key, {
           value: Math.round(value),
@@ -184,7 +194,8 @@ export const reportWebVitals = (metrics: WebVitalsMetrics): void => {
 export const monitorLongTasks = (
   callback: (entries: PerformanceEntry[]) => void
 ): PerformanceObserver | null => {
-  if (typeof window === 'undefined' || !('PerformanceObserver' in window)) return null;
+  if (typeof window === 'undefined' || !('PerformanceObserver' in window))
+    return null;
 
   try {
     const observer = new PerformanceObserver(list => {
@@ -238,14 +249,6 @@ class PerformanceOptimizer {
 
   private constructor() {}
 
-  public init(): void {
-    // Initialize performance optimizations
-    this.lazyLoadImages();
-    this.optimizeScroll();
-    this.preloadCriticalResources();
-    this.addCriticalResourceHints();
-  }
-
   static getInstance(): PerformanceOptimizer {
     if (!PerformanceOptimizer.instance) {
       PerformanceOptimizer.instance = new PerformanceOptimizer();
@@ -254,10 +257,10 @@ class PerformanceOptimizer {
   }
 
   public measurePerformance(name: string, fn: () => void): number {
-    const start = performance.now();
+const start = performance.now();
     fn();
-    const end = performance.now();
-    const duration = end - start;
+const end = performance.now();
+const duration = end - start;
     this.metrics.set(name, duration);
     return duration;
   }
@@ -298,13 +301,13 @@ class PerformanceOptimizer {
 
   public initialize(): void {
     this.measurePerformance('lazyLoadImages', () => this.lazyLoadImages());
-    this.measurePerformance('preloadCriticalResources', () => this.preloadCriticalResources());
+    this.measurePerformance('preloadCriticalResources', () =>
+      this.preloadCriticalResources()
+    );
     this.measurePerformance('optimizeScroll', () => this.optimizeScroll());
-    this.measurePerformance('addCriticalResourceHints', () => this.addCriticalResourceHints());
-  }
-
-  public init(): void {
-    this.initialize();
+    this.measurePerformance('addCriticalResourceHints', () =>
+      this.addCriticalResourceHints()
+    );
   }
 }
 

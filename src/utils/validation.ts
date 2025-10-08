@@ -23,7 +23,7 @@ export function validateEmail(email: string): ValidationResult {
   }
 
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
+  
   if (!emailRegex.test(email)) {
     return { isValid: false, error: 'Invalid email format' };
   }
@@ -68,7 +68,7 @@ export function validateURL(url: string, requireProtocol = true): ValidationResu
 
   try {
     const urlObj = new URL(url);
-
+    
     if (requireProtocol && !['http:', 'https:'].includes(urlObj.protocol)) {
       return { isValid: false, error: 'URL must use HTTP or HTTPS protocol' };
     }
@@ -182,10 +182,10 @@ export function validatePassword(password: string): ValidationResult {
     return { isValid: false, error: 'Password is too long' };
   }
 
-  const hasUpperCase = /[A-Z]/.test(password);
-  const hasLowerCase = /[a-z]/.test(password);
-  const hasNumbers = /\d/.test(password);
-  const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>]/.test(password);
+const hasUpperCase = /[A-Z]/.test(password);
+const hasLowerCase = /[a-z]/.test(password);
+const hasNumbers = /\d/.test(password);
+const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>]/.test(password);
 
   if (!hasUpperCase) {
     return { isValid: false, error: 'Password must contain at least one uppercase letter' };
@@ -254,14 +254,14 @@ export function validateDate(date: string): ValidationResult {
   }
 
   const dateRegex = /^\d{4}-\d{2}-\d{2}$/;
-
+  
   if (!dateRegex.test(date)) {
     return { isValid: false, error: 'Date must be in YYYY-MM-DD format' };
   }
 
   const [year, month, day] = date.split('-').map(Number);
   const dateObj = new Date(year, month - 1, day);
-
+  
   // Check if the date components match (handles invalid dates like Feb 30)
   if (
     isNaN(dateObj.getTime()) ||
@@ -368,7 +368,7 @@ export async function validateAsync(
   } catch (error) {
     return {
       isValid: false,
-      error: error instanceof Error ? error.message : 'Validation error',
+      error: error instanceof Error ? error.message : 'Validation error'
     };
   }
 }
@@ -521,7 +521,7 @@ export default {
   validateComposite,
   validateAsync,
   validateRequiredFields,
-
+  
   // Type guards
   isDefined,
   isString,
@@ -541,7 +541,7 @@ export default {
   isValidJson,
   isValidHexColor,
   isValidUuid,
-
+  
   // Utilities
   sanitizeHTML,
   sanitizeInput,
