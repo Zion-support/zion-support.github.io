@@ -264,16 +264,8 @@ class SEOOptimizer {
       let clsValue = 0
       new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
-<<<<<<< HEAD
           if (!(entry as any).hadRecentInput) {
             clsValue += (entry as any).value
-=======
-          if (entry.entryType === 'layout-shift') {
-            const layoutShiftEntry = entry as any
-            if (!layoutShiftEntry.hadRecentInput) {
-              clsValue += layoutShiftEntry.value || 0
-            }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-cd0d
           }
         }
         if (clsValue > 0.25) { // Poor CLS
@@ -286,12 +278,7 @@ class SEOOptimizer {
    * Track SEO-related metrics
    */
   private trackSEOMetric(metric: string, value: number): void {
-<<<<<<< HEAD
     if (typeof gtag === 'function') {
-=======
-    // Track SEO metrics for analytics
-    if (typeof gtag !== 'undefined') {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-cd0d
       gtag('event', 'seo_metric', {
         metric_name: metric,
         metric_value: Math.round(value),

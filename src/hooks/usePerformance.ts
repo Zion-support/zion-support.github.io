@@ -9,13 +9,8 @@ export const usePerformance = () => {
 
     const performanceMonitor = PerformanceMonitor.getInstance();
 
-<<<<<<< HEAD
     const observer = new PerformanceObserver(list => {
       list.getEntries().forEach(entry => {
-=======
-    const observer = new PerformanceObserver((list) => {
-      list.getEntries().forEach((entry) => {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-cd0d
         performanceMonitor.recordMetric('long-task', entry.duration);
       });
     });
