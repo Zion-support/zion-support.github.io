@@ -1,6 +1,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-const AIAutonomousBusinessSystems2026: React.FC = () => {
+import { Link } from 'react-router-dom';
+
+export default function AIAutonomousBusinessSystems2026() {
   return (
 
     <>

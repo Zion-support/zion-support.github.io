@@ -4,7 +4,7 @@
  */
 
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { _logger} from '../utils/logger';
+import { logger } from '../utils/logger';
 import monitoring from '../utils/monitoring';
 
 interface Props {
@@ -56,14 +56,14 @@ class ImprovedErrorBoundary extends Component<Props, State> {
     }
 
     // Update state with error details
-    this.setState((__prevState) => ({
+    this.setState((prevState) => ({
       errorInfo,
       errorCount: prevState.errorCount + 1,
     }));
 
     // Log to console in development
     if (process.env['NODE_ENV'] === 'development') {
-// Error logging disabled for production
+      logger.error('Error Boundary caught an error:', error, errorInfo);
     }
 
     // Send to external error tracking (if available)
@@ -82,7 +82,7 @@ class ImprovedErrorBoundary extends Component<Props, State> {
     // Reset error state if resetKeys changed
     if (this.props.resetKeys && prevProps.resetKeys) {
       const resetKeysChanged = this.props.resetKeys.some(
-        (__key, __index) => key !== prevProps.resetKeys![index]
+        (key, index) => key !== prevProps.resetKeys![index]
       );
       
       if (resetKeysChanged && this.state.hasError) {

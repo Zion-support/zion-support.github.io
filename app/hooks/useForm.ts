@@ -4,7 +4,7 @@
  */
 
 import { useState, useCallback, ChangeEvent } from 'react';
-import { _logger} from '../utils/logger';
+import { logger } from '../utils/logger';
 import {
   ValidationRule,
   validateField,
@@ -129,7 +129,7 @@ export function useForm<T extends Record<string, unknown>>({
       e.preventDefault();
 
       // Mark all fields as touched
-      const allTouched = Object.keys(values).reduce((__acc, __key) => {
+      const allTouched = Object.keys(values).reduce((acc, key) => {
         acc[key as keyof T] = true;
         return acc;
       }, {} as Record<keyof T, boolean>);
@@ -147,8 +147,7 @@ export function useForm<T extends Record<string, unknown>>({
       try {
         await onSubmit(values);
       } catch (error) {
- 
-    console.error('Form submission error:', error);
+        logger.error('Form submission error:', error);
       } finally {
         setIsSubmitting(false);
       }

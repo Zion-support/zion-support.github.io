@@ -598,7 +598,7 @@ export class AccessibilityChecker {
     }
 
     let report = `Accessibility Report\n`;
-    report += `===================\n\n`;
+    report += `=====\n\n`;
     report += `Total Issues: ${this.issues.length}\n`;
     report += `Score: ${this.calculateScore()}/100\n\n`;
 

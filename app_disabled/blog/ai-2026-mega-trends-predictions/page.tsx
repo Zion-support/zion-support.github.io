@@ -24,7 +24,7 @@ export const metadata = {
 export default function AI2026MegaTrendsPredictionsPage() {
   return (
     <div>
-      <h1>AI 2026 Mega Trends: The Next Frontier of Enterprise Transformation</h1>
+      <h1>AI 2026 Mega Trends</h1>
     </div>
   );
 } 

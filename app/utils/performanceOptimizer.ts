@@ -94,9 +94,9 @@ class PerformanceOptimizer {
       this.observeFCP();
       this.observeTTFB();
       this.observeMemory();
-    } catch (error) {
+    } catch (_error) {
        
-      console.warn('Performance monitoring initialization failed:', error);
+      console.warn('Performance monitoring initialization failed:', _error);
     }
   }
 
@@ -118,7 +118,7 @@ class PerformanceOptimizer {
     try {
       const observer = new PerformanceObserver((list) => {
         const entries = list.getEntries();
-        entries.forEach((entry: PerformanceEntry) => {
+        entries.forEach((entry: any) => {
           this.metrics.fid = entry.processingStart - entry.startTime;
         });
       });
@@ -134,7 +134,7 @@ class PerformanceOptimizer {
       let clsValue = 0;
       const observer = new PerformanceObserver((list) => {
         const entries = list.getEntries();
-        entries.forEach((entry: PerformanceEntry) => {
+        entries.forEach((entry: any) => {
           if (!entry.hadRecentInput) {
             clsValue += entry.value;
           }
@@ -152,7 +152,7 @@ class PerformanceOptimizer {
     try {
       const observer = new PerformanceObserver((list) => {
         const entries = list.getEntries();
-        entries.forEach((entry: any) => {
+        entries.forEach((entry) => {
           if (entry.name === 'first-contentful-paint') {
             this.metrics.fcp = entry.startTime;
           }
@@ -169,7 +169,7 @@ class PerformanceOptimizer {
     try {
       const observer = new PerformanceObserver((list) => {
         const entries = list.getEntries();
-        entries.forEach((entry: PerformanceEntry) => {
+        entries.forEach((entry: any) => {
           if (entry.responseStart > 0) {
             this.metrics.ttfb = entry.responseStart - entry.requestStart;
           }

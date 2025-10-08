@@ -4,7 +4,7 @@
  */
 
 import { useEffect, useCallback, useRef } from 'react';
-import { _logger} from '../utils/logger';
+import { logger } from '../utils/logger';
 import { _performanceOptimizer } from '../utils/_performanceOptimizer';
 import { errorTracker } from '../utils/enhancedErrorTracking';
 import { analytics } from '../utils/enhancedAnalytics';
@@ -66,8 +66,7 @@ export function useEnhancedPerformance(
 
     if (trackPerformance && renderCountRef.current > 10) {
       // Many re-renders detected
- 
-    console.warn(
+      logger.warn(
         `Component ${component} has re-rendered ${renderCountRef.current} times`
       );
       analytics.trackCustomEvent(
@@ -94,7 +93,7 @@ export function useEnhancedPerformance(
   const trackUserAction = useCallback(
     (action: string, metadata?: Record<string, unknown>) => {
       if (trackAnalytics) {
-        analytics.trackCustomEvent('User Action', action, component, undefined, __metadata);
+        analytics.trackCustomEvent('User Action', action, component, undefined, metadata);
       }
     },
     [component, trackAnalytics]

@@ -4,7 +4,7 @@
  */
 
 import React from 'react';
-import { _logger} from './logger';
+import { logger } from './logger';
 
 /**
  * Debounce function to limit execution rate
@@ -92,8 +92,9 @@ export async function measureTime<T>(
   const result = await func();
   const duration = performance.now() - start;
   
-if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) {  
-    console.log(`[Performance] ${name}: ${duration.toFixed(2)}ms`); } }
+  if (process.env['NODE_ENV'] === 'development') {
+    logger.info(`[Performance] ${name}: ${duration.toFixed(2)}ms`);
+  }
   
   return { result, duration };
 }
@@ -218,8 +219,8 @@ export function setupLazyImages(
 ): () => void {
   const images = document.querySelectorAll<HTMLImageElement>(selector);
   
-  const observer = new IntersectionObserver((__entries) => {
-    entries.forEach((__entry) => {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
       if (entry.isIntersecting) {
         const img = entry.target as HTMLImageElement;
         const src = img.dataset['src'];
@@ -233,7 +234,7 @@ export function setupLazyImages(
     });
   }, options);
 
-  images.forEach((__img) => observer.observe(img));
+  images.forEach((img) => observer.observe(img));
 
   return () => observer.disconnect();
 }

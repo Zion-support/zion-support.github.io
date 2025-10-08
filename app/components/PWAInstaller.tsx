@@ -1,7 +1,7 @@
 // // 'use client'; // Removed for Vite compatibility // Removed for Vite compatibility
 
 import React, { useEffect, useState } from 'react';
-import { _logger} from '../utils/logger';
+import { logger } from '../utils/logger';
 
 /**
  * PWA Installer Component
@@ -30,7 +30,7 @@ const PWAInstaller: React.FC = () => {
     if ('serviceWorker' in navigator && process.env['NODE_ENV'] === 'production') {
       navigator.serviceWorker
         .register('/service-worker.js')
-        .then((__registration) => {
+        .then((registration) => {
           // Service Worker registered
 
           // Check for updates periodically
@@ -54,8 +54,8 @@ const PWAInstaller: React.FC = () => {
             }
           });
         })
-.catch(() => {
-          // Service Worker registration failed
+        .catch((error) => {
+          logger.error('Service Worker registration failed:', error);
         });
 
       // Listen for controller change

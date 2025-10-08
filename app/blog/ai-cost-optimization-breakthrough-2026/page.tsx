@@ -1,6 +1,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-const AICostOptimizationBreakthrough2026: React.FC = () => {
+import { Link } from 'react-router-dom';
+
+export default function AICostOptimizationBreakthrough2026() {
   return (
 
     <>
