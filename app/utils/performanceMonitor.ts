@@ -19,7 +19,6 @@ export interface PerformanceThresholds {
   needsImprovement: number;
 }
 
->>>>>>> 5a6fab5466218b5fd438f48f6649158efa56a5c3
 // These interfaces are defined for future use but not currently used
 // interface _PerformancePaintTiming extends PerformanceEntry {
 //   name: 'first-paint' | 'first-contentful-paint';
@@ -43,11 +42,8 @@ export interface PerformanceThresholds {
 =======
 // Extended types for specific performance entry types
 =======
->>>>>>> 1684f58a157a4496bdf1f11291796d45799723dd
 // Performance entry types are handled inline where needed
->>>>>>> cursor/fix-errors-and-merge-to-main-5c5e
 =======
->>>>>>> 5a6fab5466218b5fd438f48f6649158efa56a5c3
 
 class PerformanceMonitor {
   private metrics: Map<string, PerformanceMetric> = new Map();
@@ -89,7 +85,6 @@ class PerformanceMonitor {
 
         // Largest Contentful Paint
         this.observeEntry('largest-contentful-paint', (entries) => {
->>>>>>> 1684f58a157a4496bdf1f11291796d45799723dd
           if (lastEntry) {
             this.recordMetric('LCP', lastEntry.renderTime || lastEntry.loadTime || lastEntry.startTime);
           }
@@ -97,7 +92,6 @@ class PerformanceMonitor {
 
         // First Input Delay
         this.observeEntry('first-input', (entries) => {
->>>>>>> 1684f58a157a4496bdf1f11291796d45799723dd
           if (firstInput && firstInput.processingStart !== undefined) {
             const fid = firstInput.processingStart - firstInput.startTime;
             this.recordMetric('FID', fid);

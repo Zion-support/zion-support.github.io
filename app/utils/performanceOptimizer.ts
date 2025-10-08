@@ -75,13 +75,10 @@ class PerformanceOptimizer {
       try {
         performance.measure(`${markName}-duration`, markName);
       } catch {
->>>>>>> cursor/fix-errors-and-merge-to-main-fbf5
 =======
       } catch {
->>>>>>> cursor/fix-errors-and-merge-to-main-5c5e
 =======
       } catch {
->>>>>>> 5a6fab5466218b5fd438f48f6649158efa56a5c3
         // Ignore measure errors
       }
     }
@@ -115,13 +112,10 @@ class PerformanceOptimizer {
       observer.observe({ entryTypes: ['largest-contentful-paint'] });
       this.observers.push(observer);
     } catch {
->>>>>>> cursor/fix-errors-and-merge-to-main-fbf5
 =======
     } catch {
->>>>>>> cursor/fix-errors-and-merge-to-main-5c5e
 =======
     } catch {
->>>>>>> 5a6fab5466218b5fd438f48f6649158efa56a5c3
       // Ignore if not supported
     }
   }
@@ -133,19 +127,15 @@ class PerformanceOptimizer {
         entries.forEach((entry: PerformanceEntry) => {
           const fidEntry = entry as PerformanceEntry & { processingStart: number };
           this.metrics.fid = fidEntry.processingStart - fidEntry.startTime;
->>>>>>> cursor/fix-errors-and-merge-to-main-5c5e
         });
       });
       observer.observe({ entryTypes: ['first-input'] });
       this.observers.push(observer);
     } catch {
->>>>>>> cursor/fix-errors-and-merge-to-main-fbf5
 =======
     } catch {
->>>>>>> cursor/fix-errors-and-merge-to-main-5c5e
 =======
     } catch {
->>>>>>> 5a6fab5466218b5fd438f48f6649158efa56a5c3
       // Ignore if not supported
     }
   }
@@ -159,7 +149,6 @@ class PerformanceOptimizer {
           const clsEntry = entry as PerformanceEntry & { hadRecentInput?: boolean; value: number };
           if (!clsEntry.hadRecentInput) {
             clsValue += clsEntry.value;
->>>>>>> cursor/fix-errors-and-merge-to-main-5c5e
           }
         });
         this.metrics.cls = clsValue;
@@ -167,13 +156,10 @@ class PerformanceOptimizer {
       observer.observe({ entryTypes: ['layout-shift'] });
       this.observers.push(observer);
     } catch {
->>>>>>> cursor/fix-errors-and-merge-to-main-fbf5
 =======
     } catch {
->>>>>>> cursor/fix-errors-and-merge-to-main-5c5e
 =======
     } catch {
->>>>>>> 5a6fab5466218b5fd438f48f6649158efa56a5c3
       // Ignore if not supported
     }
   }
@@ -191,13 +177,10 @@ class PerformanceOptimizer {
       observer.observe({ entryTypes: ['paint'] });
       this.observers.push(observer);
     } catch {
->>>>>>> cursor/fix-errors-and-merge-to-main-fbf5
 =======
     } catch {
->>>>>>> cursor/fix-errors-and-merge-to-main-5c5e
 =======
     } catch {
->>>>>>> 5a6fab5466218b5fd438f48f6649158efa56a5c3
       // Ignore if not supported
     }
   }
@@ -210,20 +193,16 @@ class PerformanceOptimizer {
           const navEntry = entry as PerformanceEntry & { responseStart: number; requestStart: number };
           if (navEntry.responseStart > 0) {
             this.metrics.ttfb = navEntry.responseStart - navEntry.requestStart;
->>>>>>> cursor/fix-errors-and-merge-to-main-5c5e
           }
         });
       });
       observer.observe({ entryTypes: ['navigation'] });
       this.observers.push(observer);
     } catch {
->>>>>>> cursor/fix-errors-and-merge-to-main-fbf5
 =======
     } catch {
->>>>>>> cursor/fix-errors-and-merge-to-main-5c5e
 =======
     } catch {
->>>>>>> 5a6fab5466218b5fd438f48f6649158efa56a5c3
       // Ignore if not supported
     }
   }
@@ -234,7 +213,6 @@ class PerformanceOptimizer {
       if (memory) {
         this.metrics.memory = memory.usedJSHeapSize / memory.jsHeapSizeLimit;
       }
->>>>>>> cursor/fix-errors-and-merge-to-main-5c5e
     }
   }
 

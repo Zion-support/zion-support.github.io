@@ -1,5 +1,5 @@
 
->>>>>>> 1684f58a157a4496bdf1f11291796d45799723dd
+export default function sitemap() {
   const baseUrl = 'https://ziontechgroup.com';
 
   return [
