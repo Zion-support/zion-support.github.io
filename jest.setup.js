@@ -56,8 +56,30 @@ jest.mock('react-router-dom', () => ({
   }),
   useParams: () => ({}),
   BrowserRouter: ({ children }) => children,
-  MemoryRouter: ({ children }) => children,
+  MemoryRouter: ({ children, basename = '/' }) => {
+    const React = require('react');
+    const { createContext } = React;
+    
+    // Create a mock router context
+    const RouterContext = createContext({
+      basename,
+      location: { pathname: '/', search: '', hash: '', state: null },
+      navigator: {
+        createHref: jest.fn(),
+        go: jest.fn(),
+        push: jest.fn(),
+        replace: jest.fn(),
+      },
+      static: false,
+    });
+    
+    return React.createElement(RouterContext.Provider, { value: RouterContext._currentValue }, children);
+  },
   RouterProvider: ({ router }) => null,
+  Link: ({ children, to, ...props }) => {
+    const React = require('react');
+    return React.createElement('a', { href: to, ...props }, children);
+  },
 }));
 
 // Mock window.matchMedia
@@ -86,10 +108,7 @@ global.IntersectionObserver = class IntersectionObserver {
   unobserve() {}
 };
 
-// Mock TextEncoder and TextDecoder
-const { TextEncoder, TextDecoder } = require('util');
-global.TextEncoder = TextEncoder;
-global.TextDecoder = TextDecoder;
+// TextEncoder and TextDecoder are already set above
 
 // Suppress console errors in tests
 const originalError = console.error;
