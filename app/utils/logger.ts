@@ -170,29 +170,6 @@ class Logger {
   }
 
   /**
-   * Log performance metrics
-   */
-  perf(metric: string, value: number, metadata?: Record<string, unknown>): void {
-    this.info(`Performance: ${metric} = ${value}ms`, metadata);
-  }
-
-  /**
-   * Create a console group
-   */
-  group(label: string, fn: () => void): void {
-    if (typeof console !== 'undefined' && console.group) {
-      console.group(label);
-      try {
-        fn();
-      } finally {
-        console.groupEnd();
-      }
-    } else {
-      fn();
-    }
-  }
-
-  /**
    * End a console group
    */
   groupEnd(): void {
