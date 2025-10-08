@@ -322,33 +322,6 @@ class Logger {
   }
 
   /**
-   * Log a performance metric
-   */
-  perf(metric: string, value: number, metadata?: Record<string, unknown>): void {
-    this.log(LogLevel.DEBUG, `Performance: ${metric}`, 'Performance', {
-      ...metadata,
-      metric,
-      value,
-    });
-  }
-
-  /**
-   * Group related log messages
-   */
-  group(label: string, fn: () => void): void {
-    if (this.config.enableConsole) {
-      console.group(label);
-      try {
-        fn();
-      } finally {
-        console.groupEnd();
-      }
-    } else {
-      fn();
-    }
-  }
-
-  /**
    * Get human-readable log level name
    */
   private getLevelName(level: LogLevel): string {
