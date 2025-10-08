@@ -9,6 +9,12 @@ interface PerformanceMetrics {
   memoryUsage: number;
   bundleSize: number;
   cacheHitRate: number;
+  ttfb?: number;
+  fcp?: number;
+  lcp?: number;
+  fid?: number;
+  cls?: number;
+  fmp?: number;
 }
 
 interface OptimizationConfig {
@@ -35,6 +41,9 @@ class PerformanceOptimizer {
     enableCaching: true,
     enableCompression: true,
   };
+
+  private observers: IntersectionObserver[] = [];
+  private isMonitoring = false;
 
   constructor(config?: Partial<OptimizationConfig>) {
     this.config = { ...this.config, ...config };
@@ -241,7 +250,9 @@ class PerformanceOptimizer {
     });
 
     images.forEach(img => imageObserver.observe(img));
-    logger.info('Lazy loading initialized for images', 'PerformanceOptimizer');
+    if (process.env.NODE_ENV === 'development') {
+      console.log('Lazy loading initialized for images');
+    }
   }
 
   /**
@@ -265,13 +276,15 @@ class PerformanceOptimizer {
       document.head.appendChild(link);
     });
 
-    logger.info('Critical resource hints added', 'PerformanceOptimizer');
+    if (process.env.NODE_ENV === 'development') {
+      console.log('Critical resource hints added');
+    }
   }
 
   /**
    * Measure page load metrics
    */
-  measurePageLoad(): PerformanceMetrics | null {
+  measurePageLoad(): Partial<PerformanceMetrics> | null {
     if (typeof window === 'undefined' || !('performance' in window)) return null;
 
     const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
@@ -291,7 +304,9 @@ class PerformanceOptimizer {
    * Report web vitals
    */
   reportWebVitals(metrics: PerformanceMetrics): void {
-    logger.performance('Web Vitals reported', metrics as unknown as Record<string, unknown>, 'PerformanceOptimizer');
+    if (process.env.NODE_ENV === 'development') {
+      console.log('Web Vitals reported:', metrics);
+    }
     
     // Send to analytics if available
     if (typeof window !== 'undefined' && (window as { gtag?: Function }).gtag) {
@@ -351,4 +366,4 @@ ${metrics.memoryUsage > 30 * 1024 * 1024 ? '- Review memory usage and optimize c
 // Export singleton instance
 export const performanceOptimizer = new PerformanceOptimizer();
 export default PerformanceOptimizer;
-export { PerformanceOptimizer, type PerformanceMetrics, type PerformanceConfig };
+export { PerformanceOptimizer, type PerformanceMetrics, type OptimizationConfig };
