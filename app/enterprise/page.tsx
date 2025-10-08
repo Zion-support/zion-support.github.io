@@ -33,7 +33,7 @@ const EnterprisePage: React.FC = () => {
               >
                 <span>Schedule Enterprise Demo</span>
                 <span className="group-hover:translate-x-1 transition-transform">
-                  →
+                  &rarr;
                 </span>
               </Link>
               <Link
@@ -42,7 +42,7 @@ const EnterprisePage: React.FC = () => {
               >
                 <span>View Solutions</span>
                 <span className="group-hover:translate-x-1 transition-transform">
-                  ↓
+                  &darr;
                 </span>
               </Link>
             </div>
@@ -126,3 +126,7 @@ const EnterprisePage: React.FC = () => {
   );
 };
 
+<<<<<<< HEAD
+export default EnterprisePage;
+=======
+>>>>>>> origin/main

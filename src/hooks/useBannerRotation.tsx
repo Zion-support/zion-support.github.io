@@ -4,7 +4,7 @@
  */
 
 import React, { useState, useEffect, useCallback, useMemo } from 'react';
-import bannerConfigurations, { BannerConfig, RotationStrategy } from "../data/bannerConfigurations";
+import bannerConfigurations, { BannerConfig, RotationStrategy } from "../data/bannerConfigurations"; // @ts-ignore
 
 interface UseBannerRotationOptions {
   strategy?: RotationStrategy;
@@ -74,46 +74,53 @@ export const useBannerRotation = (options: UseBannerRotationOptions = {}) => {
     currentBanners: [],
     isLoading: true,
     error: null,
-    stats: {
-      impressions: 0,
-      clicks: 0,
-      ctr: 0
-    }
+    stats: loadBannerStats()
   });
 
-  // Load initial banners
+  // Initial banner selection
   useEffect(() => {
-    try {
-      const configs = Array.isArray(bannerConfigurations) ? bannerConfigurations : [];
-      const selected = strategy === 'balanced' 
-        ? selectBalancedBanners(configs, maxBanners)
-        : selectBannersForDisplay(configs, maxBanners, strategy);
-      
-      setState(prev => ({
-        ...prev,
-        currentBanners: selected,
-        isLoading: false
-      }));
-    } catch (error) {
-      setState(prev => ({
-        ...prev,
-        error: 'Failed to load banners',
-        isLoading: false
-      }));
-    }
-  }, [strategy, maxBanners]);
+    const selectBanners = () => {
+      try {
+        const selected = selectBalancedBanners(bannerConfigurations, maxBanners);
+        setState(prev => ({
+          ...prev,
+          currentBanners: selected,
+          isLoading: false
+        }));
+      } catch (error) {
+        setState(prev => ({
+          ...prev,
+          error: 'Failed to load banners',
+          isLoading: false
+        }));
+      }
+    };
 
-  // Track impressions
+    selectBanners();
+  }, [maxBanners]);
+
+  // Rotation interval
   useEffect(() => {
-    if (enableTracking && state.currentBanners.length > 0) {
-      state.currentBanners.forEach(banner => {
-        trackImpression(banner.id);
-      });
-    }
-  }, [state.currentBanners, enableTracking]);
+    if (refreshInterval > 0) {
+      const interval = setInterval(() => {
+        const selected = selectBalancedBanners(bannerConfigurations, maxBanners);
+        setState(prev => ({
+          ...prev,
+          currentBanners: selected
+        }));
+      }, refreshInterval);
 
-  // Handle banner click
-  const handleBannerClick = useCallback((bannerId: string) => {
+      return () => clearInterval(interval);
+    }
+  }, [refreshInterval, maxBanners]);
+
+  const handleImpression = useCallback((bannerId: string) => {
+    if (enableTracking) {
+      trackImpression(bannerId);
+    }
+  }, [enableTracking]);
+
+  const handleClick = useCallback((bannerId: string) => {
     if (enableTracking) {
       trackClick(bannerId);
     }
@@ -121,11 +128,16 @@ export const useBannerRotation = (options: UseBannerRotationOptions = {}) => {
 
   return {
     ...state,
-    handleBannerClick,
+    trackImpression: handleImpression,
+    trackClick: handleClick,
     refresh: () => {
-      // Trigger refresh
-      setState(prev => ({ ...prev, isLoading: true }));
+      const selected = selectBalancedBanners(bannerConfigurations, maxBanners);
+      setState(prev => ({
+        ...prev,
+        currentBanners: selected
+      }));
     }
   };
 };
 
+export default useBannerRotation;
