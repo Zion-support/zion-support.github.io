@@ -85,7 +85,6 @@ const HomePage: React.FC = () => {
           }`}
           aria-labelledby="hero-heading"
         >
-<<<<<<< HEAD
           <h1 id="hero-heading" className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
             Zion Tech Group
           </h1>
@@ -114,7 +113,6 @@ const HomePage: React.FC = () => {
               <h3 className="font-bold text-gray-900 mb-3 text-lg">Enterprise Security</h3>
               <p className="text-sm text-gray-600 leading-relaxed">Bank-level security and compliance for your critical data and infrastructure</p>
             </div>
-=======
           <h1 
             id="hero-heading" 
             className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent"
@@ -145,17 +143,14 @@ const HomePage: React.FC = () => {
             >
               Get Free Consultation
             </a>
->>>>>>> cursor/analyze-improve-and-deploy-application-3d67
           </div>
         </section>
 
         {/* Services Section */}
         <section className="mb-16" aria-labelledby="services-heading">
-<<<<<<< HEAD
           <h2 id="services-heading" className="text-3xl font-bold text-center text-gray-900 mb-12">
             Our Core Services
           </h2>
-=======
           <h2 id="services-heading" className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 text-center">
             Our Services
           </h2>
@@ -211,7 +206,6 @@ const HomePage: React.FC = () => {
               </article>
             </Suspense>
           </div>
->>>>>>> cursor/analyze-improve-and-deploy-application-3d67
           
           <div className="grid md:grid-cols-3 gap-8">
             <article className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 focus-within:ring-4 focus-within:ring-indigo-300">
@@ -331,7 +325,6 @@ const HomePage: React.FC = () => {
 
         {/* Call to Action Section */}
         <section className="text-center bg-gradient-to-r from-indigo-50 to-purple-50 rounded-2xl p-12" aria-labelledby="cta-heading">
-<<<<<<< HEAD
           <h2 id="cta-heading" className="text-4xl font-bold text-gray-900 mb-6">
             Ready to Transform Your Business?
           </h2>
@@ -369,7 +362,6 @@ const HomePage: React.FC = () => {
             <p>✓ Custom solution design</p>
             <p>✓ 24/7 support available</p>
           </div>
-=======
           <h2 id="cta-heading" className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
             Ready to Transform Your Business?
           </h2>
@@ -392,7 +384,6 @@ const HomePage: React.FC = () => {
               Get Free Consultation
             </a>
           </div>
->>>>>>> cursor/analyze-improve-and-deploy-application-3d67
         </section>
       </main>
       

@@ -14,20 +14,16 @@ import AdvancedSEOOptimizer from './components/AdvancedSEOOptimizer';
 import LoadingSpinner from './components/LoadingSpinner';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
-<<<<<<< HEAD
 import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
 import SEOEnhancer from './components/SEOEnhancer';
 import AdvancedErrorBoundary from './components/AdvancedErrorBoundary';
 import AdvancedPerformanceMonitor from './components/AdvancedPerformanceMonitor';
 import { LoadingSpinner } from './components/LoadingComponents';
-=======
 import PerformanceOptimizer from './components/PerformanceOptimizer';
 import Analytics from './components/Analytics';
->>>>>>> cursor/analyze-improve-and-deploy-application-3d67
 
 // Lazy load components for better performance
-<<<<<<< HEAD
 // const ContentShowcase = lazy(() => import('./components/ContentShowcase'));
 // const InteractiveContentShowcase2026 = lazy(
 //   () => import('./components/InteractiveContentShowcase2026')
@@ -35,7 +31,6 @@ import Analytics from './components/Analytics';
 // const InteractiveAIROICalculator = lazy(
 //   () => import('./components/InteractiveAIROICalculator')
 // );
-=======
 const _ContentShowcase = lazy(() => import('./components/ContentShowcase'));
 const InteractiveContentShowcase2026 = lazy(
   () => import('./components/InteractiveContentShowcase2026')
@@ -86,7 +81,6 @@ const App: React.FC = () => {
     
     // Initialize Web Vitals monitoring
     if (typeof window !== 'undefined' && 'performance' in window) {
-<<<<<<< HEAD
       const pageLoadMetrics = collectPerformanceMetrics();
       const metrics = performanceOptimizer.getMetrics();
       // const performanceMetrics = performanceMonitor.getMetrics();
@@ -102,7 +96,6 @@ const App: React.FC = () => {
       if (performanceMetrics) {
         // eslint-disable-next-line no-console
         console.log('Core Web Vitals:', performanceMetrics);
-=======
       const _pageLoadMetrics = collectPerformanceMetrics();
       const _metrics = performanceOptimizer.getMetrics();
       const _performanceMetrics = performanceMonitor.getMetrics();
@@ -121,10 +114,8 @@ const App: React.FC = () => {
     
     // Log performance and accessibility metrics periodically
     const metricsInterval = setInterval(() => {
-<<<<<<< HEAD
       // const _performanceMetrics = performanceMonitor.getMetrics();
       const accessibilityMetrics = accessibilityEnhancer.getMetrics();
-=======
       const _performanceMetrics = performanceMonitor.getMetrics();
       const _accessibilityMetrics = accessibilityEnhancer.getMetrics();
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-6395
@@ -132,10 +123,8 @@ const App: React.FC = () => {
       if (process.env.NODE_ENV === 'development') {
         // eslint-disable-next-line no-console
         console.log('Performance Score:', performanceMonitor.getScore());
-<<<<<<< HEAD
         // eslint-disable-next-line no-console
         console.log('Accessibility Score:', accessibilityMetrics.overallScore);
-=======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-6395
       }
@@ -162,7 +151,6 @@ const App: React.FC = () => {
           logger.error(error.message, { error, errorInfo });
         }}
       >
-<<<<<<< HEAD
         <PerformanceOptimizer>
           <AccessibilityEnhancer>
             <SEOEnhancer
@@ -217,7 +205,6 @@ const App: React.FC = () => {
                     </Suspense>
                   </main>
                   <Footer />
-=======
         <AccessibilityEnhancer>
           <SEOEnhancer
             title="Zion Tech Group - Advanced AI and IT Solutions"
@@ -276,7 +263,6 @@ const App: React.FC = () => {
                   </Suspense>
                 </main>
                 <Footer />
->>>>>>> cursor/analyze-improve-and-deploy-application-3d67
 
                   {/* Performance Dashboard */}
                   <PerformanceDashboard />

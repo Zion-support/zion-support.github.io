@@ -1,10 +1,8 @@
 import { MetadataRoute } from 'next'
 
-<<<<<<< HEAD
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://ziontechgroup.com'
   
-=======
 export default function sitemap() {
   const _baseUrl = 'https://ziontechgroup.com';
 

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
 
 interface PerformanceMetrics {
@@ -9,11 +8,9 @@ interface PerformanceMetrics {
   firstInputDelay: number;
 }
 
-<<<<<<< HEAD
 const PerformanceOptimizer: React.FC = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
   const [isOptimized, setIsOptimized] = useState(false);
-=======
 const PerformanceOptimizerComponent: React.FC<PerformanceOptimizerProps> = ({
   children,
 }) => {
@@ -65,32 +62,25 @@ const PerformanceOptimizerComponent: React.FC<PerformanceOptimizerProps> = ({
       window.addEventListener('load', measurePerformance);
     }
 
-=======
 import React, { useEffect } from 'react';
 
 const PerformanceOptimizer: React.FC = () => {
   useEffect(() => {
->>>>>>> cursor/analyze-improve-and-deploy-application-3d67
     // Preload critical resources
     const preloadCriticalResources = () => {
       const criticalImages = [
         '/og-image.jpg',
-<<<<<<< HEAD
         '/logo.png'
-=======
         '/logo.png',
         '/favicon.ico'
->>>>>>> cursor/analyze-improve-and-deploy-application-3d67
       ];
 
       criticalImages.forEach(src => {
-<<<<<<< HEAD
         const link = document.createElement('link');
         link.rel = 'preload';
         link.as = 'image';
         link.href = src;
         document.head.appendChild(link);
-=======
         const _img = new Image();
         img['src'] = src;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-6395
@@ -132,9 +122,7 @@ const PerformanceOptimizer: React.FC = () => {
 
     // Initialize optimizations
     preloadCriticalResources();
-<<<<<<< HEAD
 
-<<<<<<< HEAD
     // Optimize images
     const optimizeImages = () => {
       const images = document.querySelectorAll('img');
@@ -146,7 +134,6 @@ const PerformanceOptimizer: React.FC = () => {
           img.decoding = 'async';
         }
       });
-=======
   // Optimize scroll performance
   const handleScroll = useCallback(() => {
     // Throttle scroll events for better performance
@@ -175,7 +162,6 @@ const PerformanceOptimizer: React.FC = () => {
         { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossOrigin: 'anonymous' }
       ];
 
-<<<<<<< HEAD
       hints.forEach(hint => {
         const link = document.createElement('link');
         link.rel = hint.rel;
@@ -184,7 +170,6 @@ const PerformanceOptimizer: React.FC = () => {
           link.crossOrigin = hint.crossOrigin;
         }
         document.head.appendChild(link);
-=======
   // Add performance monitoring
   useEffect(() => {
     if ('performance' in window) {
@@ -203,7 +188,6 @@ const PerformanceOptimizer: React.FC = () => {
   }, []);
 
   // Don't render anything visible
-=======
     optimizeImages();
     setupIntersectionObserver();
 
@@ -213,7 +197,6 @@ const PerformanceOptimizer: React.FC = () => {
     };
   }, []);
 
->>>>>>> cursor/analyze-improve-and-deploy-application-3d67
   return null;
 };
 

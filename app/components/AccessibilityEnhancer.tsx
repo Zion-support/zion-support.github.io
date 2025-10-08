@@ -4,12 +4,10 @@ interface AccessibilityEnhancerProps {
   children: React.ReactNode;
 }
 
-<<<<<<< HEAD
 const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {
   const [isHighContrast, setIsHighContrast] = useState(false);
   const [fontSize, setFontSize] = useState(16);
   const [isReducedMotion, setIsReducedMotion] = useState(false);
-=======
 /**
  * Accessibility Enhancer Component
  * Provides comprehensive accessibility improvements
@@ -47,11 +45,9 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
 
     mediaQuery.addEventListener('change', handleChange);
 
-<<<<<<< HEAD
     // Check for high contrast preference
     const highContrastQuery = window.matchMedia('(prefers-contrast: high)');
     setIsHighContrast(highContrastQuery.matches);
-=======
     const _titleElement = document.querySelector('title');
     if (titleElement) {
       observer.observe(titleElement.parentNode as Node, {
@@ -83,7 +79,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   useEffect(() => {
     if (typeof window === 'undefined') return;
 
-<<<<<<< HEAD
     const root = document.documentElement;
     
     // Apply high contrast styles
@@ -122,7 +117,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
           activeElement.click();
         }
       }
-=======
     // Enhanced keyboard navigation
     const handleKeyDown = (e: KeyboardEvent) => {
       // Skip to main content with Alt + M
@@ -188,10 +182,8 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   }, []);
 
   useEffect(() => {
-<<<<<<< HEAD
     document.addEventListener('focusin', handleFocusIn);
     document.addEventListener('focusout', handleFocusOut);
-=======
     if (!enableFocusIndicators) return;
 
     // Add custom focus styles

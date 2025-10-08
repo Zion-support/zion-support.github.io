@@ -38,7 +38,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       this.props.onError(error, errorInfo);
     }
 
-<<<<<<< HEAD
     // Enhanced error reporting
     if (this.props.enableErrorReporting) {
       this.reportError(error, errorInfo);
@@ -48,7 +47,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     if (process.env.NODE_ENV === 'development') {
       // eslint-disable-next-line no-console
       console.group('🚨 Error Boundary Caught Error');
-<<<<<<< HEAD
       // eslint-disable-next-line no-console
       console.error('Error:', error);
       // eslint-disable-next-line no-console
@@ -56,7 +54,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       // eslint-disable-next-line no-console
       console.error('Component Stack:', errorInfo.componentStack);
       // eslint-disable-next-line no-console
-=======
 
 
 
@@ -99,11 +96,9 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     try {
       // In a real app, you would send this to your error reporting service
       // For now, we'll just log it
-<<<<<<< HEAD
       // eslint-disable-next-line no-console
       console.log('Error Report:', errorReport);
       
-=======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-6395
       // Example: Send to error reporting service
@@ -113,10 +108,8 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       //   body: JSON.stringify(errorReport)
       // });
     } catch (reportingError) {
-<<<<<<< HEAD
       // eslint-disable-next-line no-console
       console.warn('Failed to send error report:', reportingError);
-=======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-6395
     }
@@ -181,16 +174,13 @@ class EnhancedErrorBoundary extends Component<Props, State> {
         }
       })
       .catch(() => {
-<<<<<<< HEAD
         // eslint-disable-next-line no-console
         console.warn('Failed to copy error details');
-=======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-6395
       });
   };
 
-=======
     // In production, you might want to send this to an error reporting service
     if (process.env.NODE_ENV === 'production') {
       // Example: send to error reporting service
@@ -198,15 +188,12 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     }
   }
 
->>>>>>> cursor/analyze-improve-and-deploy-application-3d67
   render() {
     if (this.state.hasError) {
       if (this.props.fallback) {
         return this.props.fallback;
       }
 
-<<<<<<< HEAD
-=======
       const { retryCount, error, errorId } = this.state;
       const _canRetry = retryCount < this.maxRetries;
 
