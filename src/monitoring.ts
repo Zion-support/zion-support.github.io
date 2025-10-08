@@ -13,9 +13,7 @@ function initializeMonitoring() {
     // Set up performance monitoring
     if (typeof window !== 'undefined') {
       // Monitor web vitals
-      performanceOptimizer.lazyLoadImages();
-      performanceOptimizer.optimizeScroll();
-      performanceOptimizer.preloadCriticalResources();
+      performanceOptimizer.init();
       
       // Set up error tracking
       // errorHandler.init(); // Method may not exist

@@ -54,16 +54,11 @@ export class PerformanceOptimizer {
         console.error('Failed to initialize performance observer:', error);
       }
     }
-    
-    return duration;
   }
 
   private initMonitoring() {
-    this.observeFID();
-    this.observeCLS();
-    this.observeFCP();
-    this.observeTTFB();
-    this.observeMemory();
+    // Initialize web vitals monitoring
+    this.initializeWebVitals();
   }
 }
 

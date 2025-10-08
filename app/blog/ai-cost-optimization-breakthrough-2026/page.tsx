@@ -201,9 +201,6 @@ export default function AICostOptimizationBreakthrough2026() {
       </div>
     </div>
   );
-<<<<<<< HEAD
-}
-=======
 };
 
 export default AICostOptimizationBreakthrough2026;

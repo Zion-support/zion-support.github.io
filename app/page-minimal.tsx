@@ -177,9 +177,6 @@ export default function HomePage() {
       </footer>
     </div>
   );
-<<<<<<< HEAD
-}
-=======
 };
 
 export default HomePage;

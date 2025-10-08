@@ -44,10 +44,6 @@ export async function registerServiceWorker(
       }
     });
 
-<<<<<<< HEAD
-=======
-     
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3228
     console.log('[SW] Registering service worker...');
 
     const registration = await navigator.serviceWorker.register('/service-worker.js', {

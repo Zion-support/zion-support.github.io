@@ -98,13 +98,8 @@ class HealthCheckService {
           name,
           duration,
         });
-<<<<<<< HEAD
       } catch (error) {
         logger.error(`Health check "${name}" failed`, error as Error);
-=======
-      } catch (_error) {
-        logger.error(`Health check "${name}" failed`, _error as Error);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3228
         checks.push({
           name,
           status: 'fail',

@@ -152,9 +152,6 @@ export default function OptimizedHomePage() {
       </div>
     </AccessibilityEnhancer>
   );
-<<<<<<< HEAD
-}
-=======
 };
 
 export default OptimizedHomePage;

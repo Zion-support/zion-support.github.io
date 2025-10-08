@@ -203,9 +203,6 @@ export default function AIAutonomousBusinessSystems2026() {
       </div>
     </div>
   );
-<<<<<<< HEAD
-}
-=======
 };
 
 export default AIAutonomousBusinessSystems2026;
