@@ -133,13 +133,13 @@ const HomePage: React.FC = () => {
 
         {/* Services Section */}
         <section className="mb-16" aria-labelledby="services-heading">
-          <h2 id="services-heading" className="text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text">
+          <h2 id="services-heading" className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 text-center neon-text">
             Our Services
           </h2>
-          <p className="text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto">
+          <p className="text-lg md:text-xl text-gray-300 text-center mb-12 max-w-4xl mx-auto px-4">
             Comprehensive AI and IT solutions designed to transform your business operations
           </p>
-          <div className="grid md:grid-cols-3 gap-8 mb-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 mb-12 px-4">
             <Suspense fallback={<ServiceCardSkeleton />}>
               <article className="cyber-card hologram-card">
                 <div className="text-5xl mb-6 text-center">🤖</div>
@@ -189,16 +189,16 @@ const HomePage: React.FC = () => {
             </Suspense>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-8 mb-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 mb-12 px-4">
             <Suspense fallback={<ServiceCardSkeleton />}>
               <article className="cyber-card hologram-card">
                 <div className="text-5xl mb-6 text-center">🏥</div>
-                <h3 className="text-2xl font-bold text-white mb-4 text-center">AI Healthcare</h3>
-                <p className="text-gray-300 mb-6 text-center leading-relaxed">
+                <h3 className="text-xl md:text-2xl font-bold text-white mb-4 text-center">AI Healthcare</h3>
+                <p className="text-gray-300 mb-6 text-center leading-relaxed text-sm md:text-base">
                   Cutting-edge AI solutions for medical imaging, drug discovery, and personalized medicine.
                 </p>
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-green-400 mb-2">Starting at $1,999/month</div>
+                  <div className="text-xl md:text-2xl font-bold text-green-400 mb-2">Starting at $1,999/month</div>
                   <a href="/ai-healthcare" className="text-green-400 hover:text-green-300 font-medium">
                     Learn More →
                   </a>
@@ -333,13 +333,13 @@ const HomePage: React.FC = () => {
         </Suspense>
 
         {/* Social Proof Section */}
-        <section className="bg-gradient-to-r from-slate-800 to-purple-900 py-16" aria-labelledby="social-proof-heading">
+        <section className="bg-gradient-to-r from-slate-800 to-purple-900 py-12 md:py-16" aria-labelledby="social-proof-heading">
           <div className="max-w-7xl mx-auto px-4">
-            <h2 id="social-proof-heading" className="text-3xl font-bold text-center text-white mb-12 neon-text">
+            <h2 id="social-proof-heading" className="text-2xl md:text-3xl lg:text-4xl font-bold text-center text-white mb-8 md:mb-12 neon-text">
               Trusted by Industry Leaders
             </h2>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 mb-8 md:mb-12">
               <div className="text-center cyber-card">
                 <div className="text-4xl font-bold text-cyan-400 mb-2">500+</div>
                 <div className="text-gray-300">Enterprise Clients</div>
@@ -359,11 +359,11 @@ const HomePage: React.FC = () => {
             </div>
 
             <div className="cyber-card hologram-card">
-              <div className="text-center mb-8">
-                <h3 className="text-2xl font-bold text-white mb-4">What Our Clients Say</h3>
+              <div className="text-center mb-6 md:mb-8">
+                <h3 className="text-xl md:text-2xl font-bold text-white mb-4">What Our Clients Say</h3>
               </div>
               
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
                 <div className="text-center">
                   <div className="text-yellow-400 text-2xl mb-4">★★★★★</div>
                   <p className="text-gray-300 mb-4 italic">"Zion Tech Group transformed our operations with AI solutions that delivered $50M in annual savings. Their expertise is unmatched."</p>
@@ -395,11 +395,11 @@ const HomePage: React.FC = () => {
         </Suspense>
 
         {/* Call to Action Section */}
-        <section className="text-center bg-gradient-to-r from-slate-800 to-purple-900 rounded-2xl p-12 cyber-card" aria-labelledby="cta-heading">
-          <h2 id="cta-heading" className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">
+        <section className="text-center bg-gradient-to-r from-slate-800 to-purple-900 rounded-2xl p-6 md:p-12 cyber-card mx-4" aria-labelledby="cta-heading">
+          <h2 id="cta-heading" className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-4 md:mb-6 neon-text">
             Ready to Transform Your Business?
           </h2>
-          <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
+          <p className="text-base md:text-lg text-gray-300 mb-6 md:mb-8 max-w-2xl mx-auto px-4">
             Join thousands of enterprises that have already transformed their operations with our AI solutions.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
