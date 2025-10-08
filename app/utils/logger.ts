@@ -53,10 +53,14 @@ class Logger {
   }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-f285
 
   error(message: string, error?: Error | any): void {
     if (typeof console !== 'undefined') {
       console.error(`[ERROR] ${message}`, error || '');
+<<<<<<< HEAD
 =======
 =======
 
@@ -265,6 +269,8 @@ class Logger {
       default:
         return 'UNKNOWN';
 >>>>>>> cursor/fix-errors-and-merge-to-main-ea96
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-f285
     }
   }
 }
