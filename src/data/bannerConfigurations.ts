@@ -6,6 +6,7 @@ export interface BannerConfig {
   component: string;
   priority: number;
   enabled: boolean;
+  title?: string;
 }
 
 const bannerConfigurations: BannerConfig[] = [
