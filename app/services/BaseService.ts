@@ -108,7 +108,9 @@ export class BaseService {
 
       return data as T;
     } catch (error) {
-      logger.error('GET request failed', error as Error, 'BaseService', { endpoint });
+      logger.error('GET request failed', error as Error, 'BaseService', {
+        endpoint,
+      });
       throw error;
     }
   }
@@ -124,7 +126,9 @@ export class BaseService {
         retries: this.options.retries,
       })) as T;
     } catch (error) {
-      logger.error('POST request failed', error as Error, 'BaseService', { endpoint });
+      logger.error('POST request failed', error as Error, 'BaseService', {
+        endpoint,
+      });
       throw error;
     }
   }
@@ -140,7 +144,9 @@ export class BaseService {
         retries: this.options.retries,
       })) as T;
     } catch (error) {
-      logger.error('PUT request failed', error as Error, 'BaseService', { endpoint });
+      logger.error('PUT request failed', error as Error, 'BaseService', {
+        endpoint,
+      });
       throw error;
     }
   }
@@ -156,7 +162,9 @@ export class BaseService {
         retries: this.options.retries,
       })) as T;
     } catch (error) {
-      logger.error('PATCH request failed', error as Error, 'BaseService', { endpoint });
+      logger.error('PATCH request failed', error as Error, 'BaseService', {
+        endpoint,
+      });
       throw error;
     }
   }
@@ -172,7 +180,9 @@ export class BaseService {
         retries: this.options.retries,
       })) as T;
     } catch (error) {
-      logger.error('DELETE request failed', error as Error, 'BaseService', { endpoint });
+      logger.error('DELETE request failed', error as Error, 'BaseService', {
+        endpoint,
+      });
       throw error;
     }
   }

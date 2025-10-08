@@ -181,7 +181,7 @@ export const cachingMiddleware = (ttl: number): Middleware => {
     const cached = cache.get(key);
 
     if (cached && Date.now() - cached.timestamp < ttl) {
-      logger.debug('Cache hit', { component: 'CachingMiddleware', url: key });
+      logger.debug('Cache hit', 'CachingMiddleware', { url: key });
       return cached.data;
     }
 
@@ -210,8 +210,7 @@ export const retryMiddleware = (maxRetries: number, delay: number): Middleware =
         lastError = error as Error;
 
         if (attempt < maxRetries) {
-          logger.warn(`Request failed, retrying (${attempt + 1}/${maxRetries})`, {
-            component: 'RetryMiddleware',
+          logger.warn(`Request failed, retrying (${attempt + 1}/${maxRetries})`, 'RetryMiddleware', {
             url: context.request.url,
           });
 

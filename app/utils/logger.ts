@@ -162,6 +162,31 @@ class Logger {
   }
 
   /**
+   * Group related logs together (for console grouping)
+   */
+  group(label: string): void {
+    if (typeof console.group !== 'undefined') {
+      console.group(label);
+    }
+  }
+
+  /**
+   * End a log group
+   */
+  groupEnd(): void {
+    if (typeof console.groupEnd !== 'undefined') {
+      console.groupEnd();
+    }
+  }
+
+  /**
+   * Log performance measurements
+   */
+  perf(label: string, duration: number, metadata?: Record<string, unknown>): void {
+    this.info(`⚡ ${label}: ${duration.toFixed(2)}ms`, 'Performance', metadata);
+  }
+
+  /**
    * Flush buffered logs to remote endpoint
    */
   async flush(): Promise<void> {
