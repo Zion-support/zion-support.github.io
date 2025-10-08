@@ -772,7 +772,7 @@ export class TestRunner {
     assertions?: (result: RenderResult) => void;
     userInteractions?: (result: RenderResult) => Promise<void>;
   }>): Promise<{ passed: boolean; results: Array<{ name: string; type: string; passed: boolean; error?: string }> }> {
-    const results = [];
+    const results: Array<{ name: string; type: string; passed: boolean; error?: string }> = [];
 
     for (const test of tests) {
       let result;
