@@ -61,14 +61,14 @@ export const usePerformanceOptimization = () => {
     const fidObserver = new PerformanceObserver(list => {
       for (const entry of list.getEntries()) {
         const fidEntry = entry as PerformanceEntry & {
-          processingStart?: number;
-        };
 <<<<<<< HEAD
-        metrics.firstInputDelay =
-          (fidEntry.processingStart || 0) - entry.startTime;
+          processingStart: number;
+          processingEnd: number;
 =======
+          processingStart?: number;
+>>>>>>> cursor/fix-errors-and-merge-to-main-d70e
+        };
         metrics.firstInputDelay = fidEntry.processingStart - fidEntry.startTime;
->>>>>>> cursor/fix-errors-and-merge-to-main-17dd
       }
     });
 

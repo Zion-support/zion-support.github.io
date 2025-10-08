@@ -19,9 +19,6 @@ class AnalyticsService {
   private isInitialized = false
   private queue: AnalyticsEvent[] = []
   private readonly maxQueueSize = 100
-  private config = {
-    trackingId: process.env['NEXT_PUBLIC_GA_ID'] || 'GA_MEASUREMENT_ID'
-  }
 
   /**
    * Initialize analytics service
@@ -108,7 +105,7 @@ class AnalyticsService {
         stack: error.stack,
         ...metadata
       }
-    });
+    })
   }
   /**
    * Track timing events (for performance monitoring)
@@ -121,7 +118,7 @@ class AnalyticsService {
   ): void {
     try {
       if (this.hasGtag()) {
-        gtag('event', 'custom_metric', {
+        gtag('event', 'timing_complete', {
           name: variable,
           value: Math.round(value),
           event_category: category,
@@ -129,7 +126,7 @@ class AnalyticsService {
         });
       }
     } catch (error) {
-      console.error('Failed to track timing:', error);
+      console.error('Failed to track timing:', error)
     }
   }
   /**
@@ -143,9 +140,9 @@ class AnalyticsService {
         label: metric,
         value: Math.round(value),
         metadata
-      });
+      })
     } catch (error) {
-      console.error('Failed to track performance:', error);
+      console.error('Failed to track performance:', error)
     }
   }
   /**
