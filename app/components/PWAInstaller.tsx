@@ -30,7 +30,7 @@ const PWAInstaller: React.FC = () => {
       navigator.serviceWorker
         .register('/service-worker.js')
         .then((registration) => {
-          console.log('Service Worker registered:', registration);
+          // Service Worker registered
 
           // Check for updates periodically
           setInterval(() => {
@@ -79,7 +79,7 @@ const PWAInstaller: React.FC = () => {
 
     // Listen for successful installation
     window.addEventListener('appinstalled', () => {
-      console.log('PWA installed successfully');
+      // PWA installed successfully
       setIsInstalled(true);
       setShowPrompt(false);
       setDeferredPrompt(null);
@@ -102,9 +102,9 @@ const PWAInstaller: React.FC = () => {
     const choiceResult = await deferredPrompt.userChoice;
 
     if (choiceResult.outcome === 'accepted') {
-      console.log('User accepted the install prompt');
+      // User accepted the install prompt
     } else {
-      console.log('User dismissed the install prompt');
+      // User dismissed the install prompt
     }
 
     // Clear the deferred prompt

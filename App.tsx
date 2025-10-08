@@ -1,4 +1,4 @@
-import React, { memo, useMemo, useCallback, Suspense } from 'react';
+import React, { memo, useMemo, Suspense } from 'react';
 import { HelmetProvider, Helmet } from 'react-helmet-async';
 
 // Memoized components for better performance
