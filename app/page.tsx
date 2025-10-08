@@ -85,36 +85,6 @@ const HomePage: React.FC = () => {
           }`}
           aria-labelledby="hero-heading"
         >
-<<<<<<< HEAD
-          <h1 id="hero-heading" className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
-            Zion Tech Group
-          </h1>
-          <p className="text-xl md:text-2xl text-gray-600 mb-8" role="doc-subtitle">
-            Advanced AI & Technology Solutions
-          </p>
-          <p className="text-lg md:text-xl text-gray-700 max-w-4xl mx-auto mb-8 leading-relaxed">
-            Leading provider of enterprise AI solutions, digital transformation, and cutting-edge technology services. 
-            Transform your business with our proven strategies delivering $50M+ annual savings and 95% process automation.
-          </p>
-          
-          {/* Key Benefits */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto mb-12">
-            <div className="bg-white bg-opacity-60 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
-              <div className="text-3xl mb-3">🚀</div>
-              <h3 className="font-bold text-gray-900 mb-3 text-lg">AI-Powered Solutions</h3>
-              <p className="text-sm text-gray-600 leading-relaxed">Transform your business with cutting-edge artificial intelligence, machine learning, and automation technologies</p>
-            </div>
-            <div className="bg-white bg-opacity-60 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
-              <div className="text-3xl mb-3">⚡</div>
-              <h3 className="font-bold text-gray-900 mb-3 text-lg">Proven Results</h3>
-              <p className="text-sm text-gray-600 leading-relaxed">Delivering $50M+ annual savings, 95% process automation, and 300% ROI for enterprise clients</p>
-            </div>
-            <div className="bg-white bg-opacity-60 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
-              <div className="text-3xl mb-3">🔒</div>
-              <h3 className="font-bold text-gray-900 mb-3 text-lg">Enterprise Security</h3>
-              <p className="text-sm text-gray-600 leading-relaxed">Bank-level security and compliance for your critical data and infrastructure</p>
-            </div>
-=======
           <h1 
             id="hero-heading" 
             className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent"
@@ -124,10 +94,29 @@ const HomePage: React.FC = () => {
           <p className="text-xl md:text-2xl text-gray-600 mb-8 font-medium" role="doc-subtitle">
             Advanced AI and IT Solutions
           </p>
-          <p className="text-lg md:text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed">
-            Leading provider of enterprise AI solutions, quantum computing, and autonomous systems.
-            Transform your business with our cutting-edge technology and achieve unprecedented growth.
+          <p className="text-lg md:text-xl text-gray-700 max-w-4xl mx-auto mb-8 leading-relaxed">
+            Leading provider of enterprise AI solutions, quantum computing, autonomous systems, and digital transformation services. 
+            Transform your business with our proven strategies delivering $50M+ annual savings and 95% process automation.
           </p>
+          
+          {/* Key Benefits */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 max-w-6xl mx-auto mb-12">
+            <div className="bg-white bg-opacity-60 rounded-xl p-4 sm:p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+              <div className="text-3xl mb-3 text-center sm:text-left">🚀</div>
+              <h3 className="font-bold text-gray-900 mb-3 text-base sm:text-lg text-center sm:text-left">AI-Powered Solutions</h3>
+              <p className="text-sm text-gray-600 leading-relaxed text-center sm:text-left">Transform your business with cutting-edge artificial intelligence, machine learning, and automation technologies</p>
+            </div>
+            <div className="bg-white bg-opacity-60 rounded-xl p-4 sm:p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+              <div className="text-3xl mb-3 text-center sm:text-left">⚡</div>
+              <h3 className="font-bold text-gray-900 mb-3 text-base sm:text-lg text-center sm:text-left">Proven Results</h3>
+              <p className="text-sm text-gray-600 leading-relaxed text-center sm:text-left">Delivering $50M+ annual savings, 95% process automation, and 300% ROI for enterprise clients</p>
+            </div>
+            <div className="bg-white bg-opacity-60 rounded-xl p-4 sm:p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 sm:col-span-2 lg:col-span-1">
+              <div className="text-3xl mb-3 text-center sm:text-left">🔒</div>
+              <h3 className="font-bold text-gray-900 mb-3 text-base sm:text-lg text-center sm:text-left">Enterprise Security</h3>
+              <p className="text-sm text-gray-600 leading-relaxed text-center sm:text-left">Bank-level security and compliance for your critical data and infrastructure</p>
+            </div>
+          </div>
           
           {/* CTA Buttons */}
           <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -145,34 +134,28 @@ const HomePage: React.FC = () => {
             >
               Get Free Consultation
             </a>
->>>>>>> cursor/analyze-improve-and-deploy-application-3d67
           </div>
         </section>
 
         {/* Services Section */}
         <section className="mb-16" aria-labelledby="services-heading">
-<<<<<<< HEAD
-          <h2 id="services-heading" className="text-3xl font-bold text-center text-gray-900 mb-12">
-            Our Core Services
-          </h2>
-=======
           <h2 id="services-heading" className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 text-center">
             Our Services
           </h2>
           <p className="text-lg text-gray-600 text-center mb-12 max-w-3xl mx-auto">
             Comprehensive AI and IT solutions designed to transform your business operations
           </p>
-          <div className="grid md:grid-cols-3 gap-8 mb-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-12">
             <Suspense fallback={<ServiceCardSkeleton />}>
-              <article className="bg-white rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
-                <div className="text-5xl mb-6 text-center">🤖</div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">AI Services</h3>
-                <p className="text-gray-600 mb-6 text-center leading-relaxed">
+              <article className="bg-white rounded-xl shadow-lg p-6 sm:p-8 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
+                <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">🤖</div>
+                <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 sm:mb-4 text-center">AI Services</h3>
+                <p className="text-gray-600 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
                   Advanced artificial intelligence solutions including machine learning, natural language processing, and computer vision.
                 </p>
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-blue-600 mb-2">Starting at $1,500/month</div>
-                  <a href="/ai-services" className="text-blue-600 hover:text-blue-700 font-medium">
+                  <div className="text-xl sm:text-2xl font-bold text-blue-600 mb-2">Starting at $1,500/month</div>
+                  <a href="/ai-services" className="text-blue-600 hover:text-blue-700 font-medium text-sm sm:text-base">
                     Learn More →
                   </a>
                 </div>
@@ -180,15 +163,15 @@ const HomePage: React.FC = () => {
             </Suspense>
 
             <Suspense fallback={<ServiceCardSkeleton />}>
-              <article className="bg-white rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
-                <div className="text-5xl mb-6 text-center">⚛️</div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">Quantum Computing</h3>
-                <p className="text-gray-600 mb-6 text-center leading-relaxed">
+              <article className="bg-white rounded-xl shadow-lg p-6 sm:p-8 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
+                <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">⚛️</div>
+                <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 sm:mb-4 text-center">Quantum Computing</h3>
+                <p className="text-gray-600 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
                   Next-generation quantum computing capabilities for complex problem solving and optimization.
                 </p>
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-purple-600 mb-2">Custom Pricing</div>
-                  <a href="/quantum-computing" className="text-purple-600 hover:text-purple-700 font-medium">
+                  <div className="text-xl sm:text-2xl font-bold text-purple-600 mb-2">Custom Pricing</div>
+                  <a href="/quantum-computing" className="text-purple-600 hover:text-purple-700 font-medium text-sm sm:text-base">
                     Learn More →
                   </a>
                 </div>
@@ -196,22 +179,21 @@ const HomePage: React.FC = () => {
             </Suspense>
 
             <Suspense fallback={<ServiceCardSkeleton />}>
-              <article className="bg-white rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
-                <div className="text-5xl mb-6 text-center">🔄</div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">Autonomous Systems</h3>
-                <p className="text-gray-600 mb-6 text-center leading-relaxed">
+              <article className="bg-white rounded-xl shadow-lg p-6 sm:p-8 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 sm:col-span-2 lg:col-span-1">
+                <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">🔄</div>
+                <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 sm:mb-4 text-center">Autonomous Systems</h3>
+                <p className="text-gray-600 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
                   Self-managing and self-optimizing systems for enterprise operations and infrastructure.
                 </p>
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-green-600 mb-2">Starting at $2,500/month</div>
-                  <a href="/autonomous-systems" className="text-green-600 hover:text-green-700 font-medium">
+                  <div className="text-xl sm:text-2xl font-bold text-green-600 mb-2">Starting at $2,500/month</div>
+                  <a href="/autonomous-systems" className="text-green-600 hover:text-green-700 font-medium text-sm sm:text-base">
                     Learn More →
                   </a>
                 </div>
               </article>
             </Suspense>
           </div>
->>>>>>> cursor/analyze-improve-and-deploy-application-3d67
           
           <div className="grid md:grid-cols-3 gap-8">
             <article className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 focus-within:ring-4 focus-within:ring-indigo-300">
@@ -276,22 +258,22 @@ const HomePage: React.FC = () => {
               Trusted by Industry Leaders
             </h2>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-8 mb-12">
               <div className="text-center">
-                <div className="text-4xl font-bold text-indigo-600 mb-2">500+</div>
-                <div className="text-gray-600">Enterprise Clients</div>
+                <div className="text-2xl sm:text-4xl font-bold text-indigo-600 mb-2">500+</div>
+                <div className="text-gray-600 text-sm sm:text-base">Enterprise Clients</div>
               </div>
               <div className="text-center">
-                <div className="text-4xl font-bold text-green-600 mb-2">$2.5B+</div>
-                <div className="text-gray-600">Cost Savings Delivered</div>
+                <div className="text-2xl sm:text-4xl font-bold text-green-600 mb-2">$2.5B+</div>
+                <div className="text-gray-600 text-sm sm:text-base">Cost Savings Delivered</div>
               </div>
               <div className="text-center">
-                <div className="text-4xl font-bold text-purple-600 mb-2">99.9%</div>
-                <div className="text-gray-600">Uptime Guarantee</div>
+                <div className="text-2xl sm:text-4xl font-bold text-purple-600 mb-2">99.9%</div>
+                <div className="text-gray-600 text-sm sm:text-base">Uptime Guarantee</div>
               </div>
               <div className="text-center">
-                <div className="text-4xl font-bold text-orange-600 mb-2">24/7</div>
-                <div className="text-gray-600">Support Available</div>
+                <div className="text-2xl sm:text-4xl font-bold text-orange-600 mb-2">24/7</div>
+                <div className="text-gray-600 text-sm sm:text-base">Support Available</div>
               </div>
             </div>
 
@@ -300,26 +282,26 @@ const HomePage: React.FC = () => {
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">What Our Clients Say</h3>
               </div>
               
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
                 <div className="text-center">
-                  <div className="text-yellow-400 text-2xl mb-4">★★★★★</div>
-                  <p className="text-gray-600 mb-4 italic">"Zion Tech Group transformed our operations with AI solutions that delivered $50M in annual savings. Their expertise is unmatched."</p>
-                  <div className="font-semibold text-gray-900">Sarah Johnson</div>
-                  <div className="text-sm text-gray-500">CTO, Fortune 500 Company</div>
+                  <div className="text-yellow-400 text-xl sm:text-2xl mb-4">★★★★★</div>
+                  <p className="text-gray-600 mb-4 italic text-sm sm:text-base">"Zion Tech Group transformed our operations with AI solutions that delivered $50M in annual savings. Their expertise is unmatched."</p>
+                  <div className="font-semibold text-gray-900 text-sm sm:text-base">Sarah Johnson</div>
+                  <div className="text-xs sm:text-sm text-gray-500">CTO, Fortune 500 Company</div>
                 </div>
                 
                 <div className="text-center">
-                  <div className="text-yellow-400 text-2xl mb-4">★★★★★</div>
-                  <p className="text-gray-600 mb-4 italic">"The digital transformation they implemented increased our efficiency by 300%. Highly recommend their services."</p>
-                  <div className="font-semibold text-gray-900">Michael Chen</div>
-                  <div className="text-sm text-gray-500">VP Operations, Global Corp</div>
+                  <div className="text-yellow-400 text-xl sm:text-2xl mb-4">★★★★★</div>
+                  <p className="text-gray-600 mb-4 italic text-sm sm:text-base">"The digital transformation they implemented increased our efficiency by 300%. Highly recommend their services."</p>
+                  <div className="font-semibold text-gray-900 text-sm sm:text-base">Michael Chen</div>
+                  <div className="text-xs sm:text-sm text-gray-500">VP Operations, Global Corp</div>
                 </div>
                 
-                <div className="text-center">
-                  <div className="text-yellow-400 text-2xl mb-4">★★★★★</div>
-                  <p className="text-gray-600 mb-4 italic">"Outstanding cloud infrastructure and AI implementation. They exceeded all our expectations."</p>
-                  <div className="font-semibold text-gray-900">Emily Rodriguez</div>
-                  <div className="text-sm text-gray-500">Director of Technology, Tech Giant</div>
+                <div className="text-center sm:col-span-2 lg:col-span-1">
+                  <div className="text-yellow-400 text-xl sm:text-2xl mb-4">★★★★★</div>
+                  <p className="text-gray-600 mb-4 italic text-sm sm:text-base">"Outstanding cloud infrastructure and AI implementation. They exceeded all our expectations."</p>
+                  <div className="font-semibold text-gray-900 text-sm sm:text-base">Emily Rodriguez</div>
+                  <div className="text-xs sm:text-sm text-gray-500">Director of Technology, Tech Giant</div>
                 </div>
               </div>
             </div>
@@ -331,45 +313,6 @@ const HomePage: React.FC = () => {
 
         {/* Call to Action Section */}
         <section className="text-center bg-gradient-to-r from-indigo-50 to-purple-50 rounded-2xl p-12" aria-labelledby="cta-heading">
-<<<<<<< HEAD
-          <h2 id="cta-heading" className="text-4xl font-bold text-gray-900 mb-6">
-            Ready to Transform Your Business?
-          </h2>
-          <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-            Join hundreds of companies already using our AI solutions to drive growth and efficiency.
-          </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <a
-              href="tel:+13026009898"
-              onClick={handlePhoneClick}
-              className="inline-flex items-center bg-indigo-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-indigo-700 transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-4 focus:ring-indigo-300 shadow-lg"
-              aria-label="Call us at (302) 600-9898"
-            >
-              <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-              </svg>
-              Call: (302) 600-9898
-            </a>
-            
-            <a
-              href="/contact"
-              className="inline-flex items-center bg-white text-indigo-600 px-8 py-4 rounded-lg font-semibold border-2 border-indigo-600 hover:bg-indigo-50 transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-4 focus:ring-indigo-300 shadow-lg"
-              aria-label="Contact us via form"
-            >
-              <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-              </svg>
-              Get Free Consultation
-            </a>
-          </div>
-          
-          <div className="mt-8 text-sm text-gray-500">
-            <p>✓ Free initial consultation</p>
-            <p>✓ Custom solution design</p>
-            <p>✓ 24/7 support available</p>
-          </div>
-=======
           <h2 id="cta-heading" className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
             Ready to Transform Your Business?
           </h2>
@@ -392,7 +335,12 @@ const HomePage: React.FC = () => {
               Get Free Consultation
             </a>
           </div>
->>>>>>> cursor/analyze-improve-and-deploy-application-3d67
+          
+          <div className="mt-8 text-sm text-gray-500">
+            <p>✓ Free initial consultation</p>
+            <p>✓ Custom solution design</p>
+            <p>✓ 24/7 support available</p>
+          </div>
         </section>
       </main>
       

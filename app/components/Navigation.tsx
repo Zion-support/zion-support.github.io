@@ -64,36 +64,51 @@ const Navigation: React.FC = () => {
                   <ChevronDown className="w-4 h-4 ml-1" />
                 </button>
                 {servicesOpen && (
-                  <div className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-xl border py-4 z-50">
-                    <div className="grid grid-cols-2 gap-4 px-4">
+                  <div className="absolute top-full left-0 mt-2 w-96 bg-white rounded-lg shadow-xl border py-4 z-50">
+                    <div className="grid grid-cols-3 gap-4 px-4">
                       <div>
-                        <h3 className="font-semibold text-gray-900 mb-2">Core Services</h3>
-                        <Link to="/services" className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
+                        <h3 className="font-semibold text-gray-900 mb-2 text-sm">Core Services</h3>
+                        <Link to="/services" className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded text-sm">
                           All Services
                         </Link>
-                        <Link to="/micro-saas" className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
+                        <Link to="/micro-saas" className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded text-sm">
                           Micro SAAS Solutions
                         </Link>
-                        <Link to="/ai-services" className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
+                        <Link to="/ai-services" className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded text-sm">
                           AI Services
                         </Link>
-                        <Link to="/it-services" className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
+                        <Link to="/it-services" className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded text-sm">
                           IT Services
                         </Link>
                       </div>
                       <div>
-                        <h3 className="font-semibold text-gray-900 mb-2">Specialized</h3>
-                        <Link to="/quantum-computing" className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
+                        <h3 className="font-semibold text-gray-900 mb-2 text-sm">Advanced Tech</h3>
+                        <Link to="/quantum-computing" className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded text-sm">
                           Quantum Computing
                         </Link>
-                        <Link to="/autonomous-systems" className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
+                        <Link to="/autonomous-systems" className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded text-sm">
                           Autonomous Systems
                         </Link>
-                        <Link to="/blockchain-web3" className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
+                        <Link to="/blockchain-web3" className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded text-sm">
                           Blockchain & Web3
                         </Link>
-                        <Link to="/cybersecurity" className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
+                        <Link to="/cybersecurity" className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded text-sm">
                           Cybersecurity
+                        </Link>
+                      </div>
+                      <div>
+                        <h3 className="font-semibold text-gray-900 mb-2 text-sm">Specialized</h3>
+                        <Link to="/business-intelligence" className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded text-sm">
+                          Business Intelligence
+                        </Link>
+                        <Link to="/iot-edge-computing" className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded text-sm">
+                          IoT & Edge Computing
+                        </Link>
+                        <Link to="/enterprise" className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded text-sm">
+                          Enterprise Solutions
+                        </Link>
+                        <Link to="/guides" className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded text-sm">
+                          Technical Guides
                         </Link>
                       </div>
                     </div>
@@ -169,6 +184,12 @@ const Navigation: React.FC = () => {
                     </Link>
                     <Link to="/cybersecurity" className="block text-gray-600 hover:text-blue-600 transition-colors">
                       Cybersecurity
+                    </Link>
+                    <Link to="/business-intelligence" className="block text-gray-600 hover:text-blue-600 transition-colors">
+                      Business Intelligence
+                    </Link>
+                    <Link to="/iot-edge-computing" className="block text-gray-600 hover:text-blue-600 transition-colors">
+                      IoT & Edge Computing
                     </Link>
                   </div>
                 </div>

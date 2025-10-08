@@ -18,12 +18,7 @@ export default function RootLayout({
     url: 'https://ziontechgroup.com',
     logo: 'https://ziontechgroup.com/logo.png',
 <<<<<<< HEAD
-    description: 'Leading provider of AI-powered enterprise solutions, automation, and digital transformation services. Specializing in AI implementation, enterprise architecture, and cost optimization strategies.',
-    foundingDate: '2020',
-    numberOfEmployees: '50-100',
-    industry: 'Technology',
-=======
-    description: 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.',
+    description: 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Specializing in AI implementation, enterprise architecture, and cost optimization strategies.',
     foundingDate: '2020',
     numberOfEmployees: '50-100',
     industry: 'Technology',
@@ -36,10 +31,9 @@ export default function RootLayout({
       'Automation',
       'Business Intelligence'
     ],
->>>>>>> cursor/analyze-improve-and-deploy-application-3d67
     contactPoint: {
       '@type': 'ContactPoint',
-      telephone: '+1-302-600-9898',
+      telephone: '+1-302-464-0950',
       contactType: 'Customer Service',
       areaServed: 'US',
       availableLanguage: 'en',
@@ -52,7 +46,6 @@ export default function RootLayout({
       '@type': 'PostalAddress',
       addressCountry: 'US',
     },
-<<<<<<< HEAD
     offers: [
       {
         '@type': 'Offer',
@@ -76,6 +69,19 @@ export default function RootLayout({
         priceSpecification: {
           '@type': 'PriceSpecification',
           price: '2500',
+          priceCurrency: 'USD',
+          billingIncrement: 'P1M'
+        }
+      },
+      {
+        '@type': 'Offer',
+        category: 'Micro SAAS Solutions',
+        description: 'Affordable, powerful AI-driven tools for modern businesses',
+        price: '79',
+        priceCurrency: 'USD',
+        priceSpecification: {
+          '@type': 'PriceSpecification',
+          price: '79',
           priceCurrency: 'USD',
           billingIncrement: 'P1M'
         }
@@ -119,13 +125,6 @@ export default function RootLayout({
           }
         }
       ]
-=======
-    offers: {
-      '@type': 'Offer',
-      category: 'AI and IT Services',
-      priceRange: '$1500-$5000+',
-      availability: 'https://schema.org/InStock'
->>>>>>> cursor/analyze-improve-and-deploy-application-3d67
     }
   };
 
@@ -203,14 +202,12 @@ export default function RootLayout({
         <meta name='twitter:image' content='https://ziontechgroup.com/og-image.jpg' />
         <meta name='twitter:site' content='@ziontechgroup' />
         <meta name='twitter:creator' content='@ziontechgroup' />
-=======
         
         {/* Preconnect to external domains */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         
         {/* Structured Data */}
->>>>>>> cursor/analyze-improve-and-deploy-application-3d67
         <script
           type='application/ld+json'
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
