@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import './globals.css';
 
 function Header(): React.JSX.Element {
@@ -7,27 +7,27 @@ function Header(): React.JSX.Element {
     <header className="border-b border-gray-200 sticky top-0 z-50 bg-white shadow-sm">
       <nav className="flex items-center justify-between px-4 py-3 max-w-6xl mx-auto">
         <Link
-          href="/"
+          to="/"
           className="font-bold text-lg text-gray-900 hover:text-blue-600 transition-colors"
         >
           Zion Tech Group
         </Link>
         <div className="hidden md:flex gap-6">
           <Link
-            href="/about"
+            to="/about"
             className="text-gray-700 hover:text-blue-600 transition-colors"
           >
             About
           </Link>
           <Link
-            href="/services"
+            to="/services"
             className="text-gray-700 hover:text-blue-600 transition-colors"
           >
             Services
           </Link>
           <div className="relative group">
             <Link
-              href="/services/ai-autonomous-operations-2026"
+              to="/services/ai-autonomous-operations-2026"
               className="text-gray-700 hover:text-blue-600 transition-colors flex items-center gap-1"
             >
               AI Operations 2026
@@ -38,7 +38,7 @@ function Header(): React.JSX.Element {
           </div>
           <div className="relative group">
             <Link
-              href="/services/quantum-computing-solutions"
+              to="/services/quantum-computing-solutions"
               className="text-gray-700 hover:text-blue-600 transition-colors flex items-center gap-1"
             >
               Quantum Computing
@@ -48,7 +48,7 @@ function Header(): React.JSX.Element {
             </Link>
           </div>
           <Link
-            href="/contact"
+            to="/contact"
             className="text-gray-700 hover:text-blue-600 transition-colors"
           >
             Contact
@@ -56,7 +56,7 @@ function Header(): React.JSX.Element {
         </div>
         <div className="flex items-center gap-4">
           <Link
-            href="/contact"
+            to="/contact"
             className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
           >
             Get Started
@@ -98,19 +98,19 @@ function Footer(): React.JSX.Element {
           <div>
             <h4 className="text-lg font-semibold mb-4">Services</h4>
             <ul className="space-y-2">
-              <li><Link href="/services/ai-autonomous-operations-2026" className="text-gray-400 hover:text-white transition-colors">AI Autonomous Operations</Link></li>
-              <li><Link href="/services/quantum-computing-solutions" className="text-gray-400 hover:text-white transition-colors">Quantum Computing</Link></li>
-              <li><Link href="/services/business-intelligence" className="text-gray-400 hover:text-white transition-colors">Business Intelligence</Link></li>
-              <li><Link href="/services/cloud-migration" className="text-gray-400 hover:text-white transition-colors">Cloud Migration</Link></li>
+              <li><Link to="/services/ai-autonomous-operations-2026" className="text-gray-400 hover:text-white transition-colors">AI Autonomous Operations</Link></li>
+              <li><Link to="/services/quantum-computing-solutions" className="text-gray-400 hover:text-white transition-colors">Quantum Computing</Link></li>
+              <li><Link to="/services/business-intelligence" className="text-gray-400 hover:text-white transition-colors">Business Intelligence</Link></li>
+              <li><Link to="/services/cloud-migration" className="text-gray-400 hover:text-white transition-colors">Cloud Migration</Link></li>
             </ul>
           </div>
           <div>
             <h4 className="text-lg font-semibold mb-4">Company</h4>
             <ul className="space-y-2">
-              <li><Link href="/about" className="text-gray-400 hover:text-white transition-colors">About Us</Link></li>
-              <li><Link href="/careers" className="text-gray-400 hover:text-white transition-colors">Careers</Link></li>
-              <li><Link href="/blog" className="text-gray-400 hover:text-white transition-colors">Blog</Link></li>
-              <li><Link href="/news" className="text-gray-400 hover:text-white transition-colors">News</Link></li>
+              <li><Link to="/about" className="text-gray-400 hover:text-white transition-colors">About Us</Link></li>
+              <li><Link to="/careers" className="text-gray-400 hover:text-white transition-colors">Careers</Link></li>
+              <li><Link to="/blog" className="text-gray-400 hover:text-white transition-colors">Blog</Link></li>
+              <li><Link to="/news" className="text-gray-400 hover:text-white transition-colors">News</Link></li>
             </ul>
           </div>
           <div>

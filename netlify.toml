@@ -15,6 +15,11 @@
   NODE_VERSION = "20"
   NPM_VERSION = "10"
 
+# NOTE: The @netlify/plugin-nextjs plugin MUST be manually removed from Netlify UI
+# UI-installed plugins cannot be disabled via netlify.toml configuration
+# See NETLIFY_BUILD_FIX.md for step-by-step removal instructions
+# Alternative: Remove Next.js dependencies to prevent auto-detection
+
 [[headers]]
   for = "/*"
   [headers.values]
