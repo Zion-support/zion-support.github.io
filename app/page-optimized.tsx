@@ -1,27 +1,8 @@
 import React from 'react';
 import dynamic from 'next/dynamic';
-import { UnifiedBanner, bannerConfigurations } from './components/UnifiedBannerSystem';
-import { LazyWrapper } from './components/LazyLoader';
-import { SEOOptimizer } from './components/SEOOptimizer';
-import { AccessibilityEnhancer } from './components/AccessibilityEnhancer';
-import { PerformanceMonitor } from './components/PerformanceMonitor';
-
-// Lazy load heavy components
-const UnifiedContentPromotion = dynamic(() => import('../components/UnifiedContentPromotion'), {
-  loading: () => <div className="animate-pulse bg-gray-200 h-32 rounded-lg"></div>
-});
-
-const InteractiveAIROICalculator = dynamic(() => import('../components/InteractiveAIROICalculator'), {
-  loading: () => <div className="animate-pulse bg-gray-200 h-64 rounded-lg"></div>
-});
-
-const ContentShowcase = dynamic(() => import('../components/ContentShowcase'), {
-  loading: () => <div className="animate-pulse bg-gray-200 h-48 rounded-lg"></div>
-});
-
-const InteractiveContentShowcase2026 = dynamic(() => import('../components/InteractiveContentShowcase2026'), {
-  loading: () => <div className="animate-pulse bg-gray-200 h-48 rounded-lg"></div>
-});
+import SEOOptimizer from './components/SEOOptimizer';
+import AccessibilityEnhancer from './components/AccessibilityEnhancer';
+import PerformanceMonitor from './components/PerformanceMonitor';
 
 export const metadata = {
   title: 'Zion Tech Group — AI Enterprise Transformation & IT Services | 300% ROI Guaranteed',
