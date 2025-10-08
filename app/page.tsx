@@ -139,17 +139,19 @@ const HomePage: React.FC = () => {
           <p className="text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto">
             Comprehensive AI and IT solutions designed to transform your business operations
           </p>
+          
+          {/* Featured Services */}
           <div className="grid md:grid-cols-3 gap-8 mb-12">
             <Suspense fallback={<ServiceCardSkeleton />}>
-              <article className="cyber-card hologram-card">
-                <div className="text-5xl mb-6 text-center">🤖</div>
+              <article className="cyber-card hologram-card group hover:scale-105 transition-all duration-300">
+                <div className="text-5xl mb-6 text-center group-hover:animate-pulse">🤖</div>
                 <h3 className="text-2xl font-bold text-white mb-4 text-center">AI Services</h3>
                 <p className="text-gray-300 mb-6 text-center leading-relaxed">
                   Advanced artificial intelligence solutions including machine learning, natural language processing, and computer vision.
                 </p>
                 <div className="text-center">
                   <div className="text-2xl font-bold text-cyan-400 mb-2">Starting at $1,500/month</div>
-                  <a href="/ai-services" className="text-cyan-400 hover:text-cyan-300 font-medium">
+                  <a href="/ai-services" className="text-cyan-400 hover:text-cyan-300 font-medium group-hover:underline">
                     Learn More →
                   </a>
                 </div>
@@ -157,15 +159,15 @@ const HomePage: React.FC = () => {
             </Suspense>
 
             <Suspense fallback={<ServiceCardSkeleton />}>
-              <article className="cyber-card hologram-card">
-                <div className="text-5xl mb-6 text-center">📢</div>
+              <article className="cyber-card hologram-card group hover:scale-105 transition-all duration-300">
+                <div className="text-5xl mb-6 text-center group-hover:animate-pulse">📢</div>
                 <h3 className="text-2xl font-bold text-white mb-4 text-center">AI Marketing</h3>
                 <p className="text-gray-300 mb-6 text-center leading-relaxed">
                   Revolutionary AI-powered marketing automation, ad optimization, and content generation.
                 </p>
                 <div className="text-center">
                   <div className="text-2xl font-bold text-pink-400 mb-2">Starting at $199/month</div>
-                  <a href="/ai-marketing" className="text-pink-400 hover:text-pink-300 font-medium">
+                  <a href="/ai-marketing" className="text-pink-400 hover:text-pink-300 font-medium group-hover:underline">
                     Learn More →
                   </a>
                 </div>
@@ -173,15 +175,15 @@ const HomePage: React.FC = () => {
             </Suspense>
 
             <Suspense fallback={<ServiceCardSkeleton />}>
-              <article className="cyber-card hologram-card">
-                <div className="text-5xl mb-6 text-center">⚙️</div>
+              <article className="cyber-card hologram-card group hover:scale-105 transition-all duration-300">
+                <div className="text-5xl mb-6 text-center group-hover:animate-pulse">⚙️</div>
                 <h3 className="text-2xl font-bold text-white mb-4 text-center">AI Automation</h3>
                 <p className="text-gray-300 mb-6 text-center leading-relaxed">
                   Intelligent automation of business processes with decision-making capabilities and exception handling.
                 </p>
                 <div className="text-center">
                   <div className="text-2xl font-bold text-blue-400 mb-2">Starting at $399/month</div>
-                  <a href="/ai-automation" className="text-blue-400 hover:text-blue-300 font-medium">
+                  <a href="/ai-automation" className="text-blue-400 hover:text-blue-300 font-medium group-hover:underline">
                     Learn More →
                   </a>
                 </div>
@@ -189,17 +191,18 @@ const HomePage: React.FC = () => {
             </Suspense>
           </div>
           
+          {/* Industry-Specific Services */}
           <div className="grid md:grid-cols-3 gap-8 mb-12">
             <Suspense fallback={<ServiceCardSkeleton />}>
-              <article className="cyber-card hologram-card">
-                <div className="text-5xl mb-6 text-center">🏥</div>
+              <article className="cyber-card hologram-card group hover:scale-105 transition-all duration-300">
+                <div className="text-5xl mb-6 text-center group-hover:animate-pulse">🏥</div>
                 <h3 className="text-2xl font-bold text-white mb-4 text-center">AI Healthcare</h3>
                 <p className="text-gray-300 mb-6 text-center leading-relaxed">
                   Cutting-edge AI solutions for medical imaging, drug discovery, and personalized medicine.
                 </p>
                 <div className="text-center">
                   <div className="text-2xl font-bold text-green-400 mb-2">Starting at $1,999/month</div>
-                  <a href="/ai-healthcare" className="text-green-400 hover:text-green-300 font-medium">
+                  <a href="/ai-healthcare" className="text-green-400 hover:text-green-300 font-medium group-hover:underline">
                     Learn More →
                   </a>
                 </div>
@@ -207,15 +210,15 @@ const HomePage: React.FC = () => {
             </Suspense>
 
             <Suspense fallback={<ServiceCardSkeleton />}>
-              <article className="cyber-card hologram-card">
-                <div className="text-5xl mb-6 text-center">💰</div>
+              <article className="cyber-card hologram-card group hover:scale-105 transition-all duration-300">
+                <div className="text-5xl mb-6 text-center group-hover:animate-pulse">💰</div>
                 <h3 className="text-2xl font-bold text-white mb-4 text-center">AI Fintech</h3>
                 <p className="text-gray-300 mb-6 text-center leading-relaxed">
                   Revolutionary AI-powered financial services including trading, fraud detection, and risk management.
                 </p>
                 <div className="text-center">
                   <div className="text-2xl font-bold text-indigo-400 mb-2">Starting at $1,499/month</div>
-                  <a href="/ai-fintech" className="text-indigo-400 hover:text-indigo-300 font-medium">
+                  <a href="/ai-fintech" className="text-indigo-400 hover:text-indigo-300 font-medium group-hover:underline">
                     Learn More →
                   </a>
                 </div>
@@ -223,98 +226,82 @@ const HomePage: React.FC = () => {
             </Suspense>
 
             <Suspense fallback={<ServiceCardSkeleton />}>
-              <article className="cyber-card hologram-card">
-                <div className="text-5xl mb-6 text-center">⚛️</div>
+              <article className="cyber-card hologram-card group hover:scale-105 transition-all duration-300">
+                <div className="text-5xl mb-6 text-center group-hover:animate-pulse">⚛️</div>
                 <h3 className="text-2xl font-bold text-white mb-4 text-center">Quantum Computing</h3>
                 <p className="text-gray-300 mb-6 text-center leading-relaxed">
                   Next-generation quantum computing capabilities for complex problem solving and optimization.
                 </p>
                 <div className="text-center">
                   <div className="text-2xl font-bold text-purple-400 mb-2">Custom Pricing</div>
-                  <a href="/quantum-computing" className="text-purple-400 hover:text-purple-300 font-medium">
+                  <a href="/quantum-computing" className="text-purple-400 hover:text-purple-300 font-medium group-hover:underline">
                     Learn More →
                   </a>
                 </div>
               </article>
             </Suspense>
-<<<<<<< HEAD
-=======
+          </div>
 
+          {/* Micro SAAS Services */}
+          <div className="grid md:grid-cols-3 gap-8 mb-12">
             <Suspense fallback={<ServiceCardSkeleton />}>
-              <article className="bg-white rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
-                <div className="text-5xl mb-6 text-center">🔄</div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">Autonomous Systems</h3>
-                <p className="text-gray-600 mb-6 text-center leading-relaxed">
-                  Self-managing and self-optimizing systems for enterprise operations and infrastructure.
+              <article className="cyber-card hologram-card group hover:scale-105 transition-all duration-300">
+                <div className="text-5xl mb-6 text-center group-hover:animate-pulse">🚀</div>
+                <h3 className="text-2xl font-bold text-white mb-4 text-center">Micro SAAS Solutions</h3>
+                <p className="text-gray-300 mb-6 text-center leading-relaxed">
+                  Affordable, intelligent micro SAAS solutions for every business need - from developer tools to marketing automation.
                 </p>
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-green-600 mb-2">Starting at $2,500/month</div>
-                  <a href="/autonomous-systems" className="text-green-600 hover:text-green-700 font-medium">
+                  <div className="text-2xl font-bold text-orange-400 mb-2">Starting at $49/month</div>
+                  <a href="/micro-saas" className="text-orange-400 hover:text-orange-300 font-medium group-hover:underline">
+                    Explore 20+ Solutions →
+                  </a>
+                </div>
+              </article>
+            </Suspense>
+
+            <Suspense fallback={<ServiceCardSkeleton />}>
+              <article className="cyber-card hologram-card group hover:scale-105 transition-all duration-300">
+                <div className="text-5xl mb-6 text-center group-hover:animate-pulse">🔒</div>
+                <h3 className="text-2xl font-bold text-white mb-4 text-center">AI Cybersecurity</h3>
+                <p className="text-gray-300 mb-6 text-center leading-relaxed">
+                  Advanced AI-powered security solutions with real-time threat detection and automated response.
+                </p>
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-red-400 mb-2">Starting at $799/month</div>
+                  <a href="/ai-cybersecurity" className="text-red-400 hover:text-red-300 font-medium group-hover:underline">
                     Learn More →
                   </a>
                 </div>
               </article>
             </Suspense>
->>>>>>> cursor/analyze-improve-and-deploy-application-144c
-          </div>
-          
-          <div className="grid md:grid-cols-3 gap-8">
-            <article className="cyber-card hologram-card">
-              <div className="text-4xl mb-4">🤖</div>
-              <h3 className="text-2xl font-semibold text-white mb-4">AI Solutions</h3>
-              <p className="text-gray-300 mb-4">
-                Harness the power of artificial intelligence to drive innovation and efficiency in
-                your organization.
-              </p>
-              <ul className="text-sm text-gray-400 space-y-1">
-                <li>• Machine Learning Models</li>
-                <li>• Natural Language Processing</li>
-                <li>• Computer Vision</li>
-                <li>• Predictive Analytics</li>
-              </ul>
-            </article>
 
-            <article className="cyber-card hologram-card">
-              <div className="text-4xl mb-4">🔄</div>
-              <h3 className="text-2xl font-semibold text-white mb-4">Digital Transformation</h3>
-              <p className="text-gray-300 mb-4">
-                Transform your business processes with cutting-edge technology and expert
-                consultation.
-              </p>
-              <ul className="text-sm text-gray-400 space-y-1">
-                <li>• Process Automation</li>
-                <li>• Legacy System Modernization</li>
-                <li>• Workflow Optimization</li>
-                <li>• Change Management</li>
-              </ul>
-            </article>
-
-            <article className="cyber-card hologram-card">
-              <div className="text-4xl mb-4">☁️</div>
-              <h3 className="text-2xl font-semibold text-white mb-4">Cloud Services</h3>
-              <p className="text-gray-300 mb-4">
-                Scale your infrastructure with secure, reliable, and efficient cloud solutions.
-              </p>
-              <ul className="text-sm text-gray-400 space-y-1">
-                <li>• Cloud Migration</li>
-                <li>• Infrastructure as Code</li>
-                <li>• DevOps & CI/CD</li>
-                <li>• 24/7 Monitoring</li>
-              </ul>
-            </article>
+            <Suspense fallback={<ServiceCardSkeleton />}>
+              <article className="cyber-card hologram-card group hover:scale-105 transition-all duration-300">
+                <div className="text-5xl mb-6 text-center group-hover:animate-pulse">☁️</div>
+                <h3 className="text-2xl font-bold text-white mb-4 text-center">AI Cloud Infrastructure</h3>
+                <p className="text-gray-300 mb-6 text-center leading-relaxed">
+                  Intelligent cloud solutions with automated scaling, optimization, and cost management.
+                </p>
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-sky-400 mb-2">Starting at $999/month</div>
+                  <a href="/ai-cloud-infrastructure" className="text-sky-400 hover:text-sky-300 font-medium group-hover:underline">
+                    Learn More →
+                  </a>
+                </div>
+              </article>
+            </Suspense>
           </div>
-<<<<<<< HEAD
-=======
-          
-          <div className="text-center mt-8">
+
+          {/* View All Services Button */}
+          <div className="text-center mt-12">
             <a 
               href="/services"
-              className="inline-block bg-indigo-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-4 focus:ring-indigo-300"
+              className="cyber-button text-lg px-8 py-4 inline-block"
             >
               View All Services
             </a>
           </div>
->>>>>>> cursor/analyze-improve-and-deploy-application-144c
         </section>
 
         {/* Content Carousel */}

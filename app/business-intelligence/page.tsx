@@ -134,7 +134,7 @@ const BusinessIntelligencePage: React.FC = () => {
       benefits: ['Align BI with business goals', 'Maximize BI investment', 'Ensure successful adoption'],
       marketPrice: '$500-1,200/hour',
       category: 'BI Consulting',
-      technologies: ['Strategic Planning', 'Technology Assessment', 'Change Management', 'Training Programs']cursor/add-new-services-and-deploy-updates-f159
+      technologies: ['Strategic Planning', 'Technology Assessment', 'Change Management', 'Training Programs']
     }
   ];
 

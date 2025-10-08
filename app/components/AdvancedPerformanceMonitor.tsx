@@ -35,16 +35,27 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     const observers: PerformanceObserver[] = [];
 
     // Measure First Contentful Paint (FCP)
+<<<<<<< HEAD
     const fcpEntries = performance.getEntriesByName('first-contentful-paint') || [];
     const fcp = fcpEntries.length > 0 ? fcpEntries[0].startTime : null;
+=======
+    const _fcpEntries = performance.getEntriesByName('first-contentful-paint') || [];
+    const _fcp = _fcpEntries.length > 0 ? _fcpEntries[0].startTime : null;
+>>>>>>> origin/main
 
     // Measure Largest Contentful Paint (LCP)
     if ('PerformanceObserver' in window) {
       try {
         const lcpObserver = new PerformanceObserver(list => {
+<<<<<<< HEAD
           const entries = list.getEntries();
           const lastEntry = entries[entries.length - 1];
           setMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }));
+=======
+          const _entries = list.getEntries();
+          const _lastEntry = _entries[_entries.length - 1];
+          setMetrics(prev => ({ ...prev, lcp: _lastEntry.startTime }));
+>>>>>>> origin/main
         });
         lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
         observers.push(lcpObserver);
@@ -68,7 +79,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
               const fidEntry = entry as PerformanceEventTiming;
               setMetrics(prev => ({
                 ...prev,
-                fid: fidEntry.processingStart - fidEntry.startTime,
+                fid: _fidEntry.processingStart - _fidEntry.startTime,
               }));
             }
           });
@@ -93,9 +104,15 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
               'hadRecentInput' in entry &&
               'value' in entry
             ) {
+<<<<<<< HEAD
               const clsEntry = entry as LayoutShift;
               if (!clsEntry.hadRecentInput) {
                 clsValue += clsEntry.value;
+=======
+              const _clsEntry = entry as LayoutShift;
+              if (!_clsEntry.hadRecentInput) {
+                clsValue += _clsEntry.value;
+>>>>>>> origin/main
                 setMetrics(prev => ({ ...prev, cls: clsValue }));
               }
             }
@@ -111,10 +128,17 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
 
     // Measure Time to First Byte (TTFB)
     try {
+<<<<<<< HEAD
       const navigationEntries = performance.getEntriesByType?.('navigation') || [];
       const navigationEntry = navigationEntries[0] as PerformanceNavigationTiming;
       const ttfb = navigationEntry
         ? navigationEntry.responseStart - navigationEntry.requestStart
+=======
+      const _navigationEntries = performance.getEntriesByType?.('navigation') || [];
+      const _navigationEntry = _navigationEntries[0] as PerformanceNavigationTiming;
+      const ttfb = _navigationEntry
+        ? _navigationEntry.responseStart - _navigationEntry.requestStart
+>>>>>>> origin/main
         : null;
 
       // Measure Memory Usage
@@ -124,13 +148,13 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
 
       setMetrics(prev => ({
         ...prev,
-        fcp,
+        fcp: _fcp,
         ttfb,
         memory,
       }));
     } catch (error) {
       // eslint-disable-next-line no-console
-      console.warn('Performance measurement failed:', error);origin/cursor/fix-errors-and-merge-to-main-6395
+      console.warn('Performance measurement failed:', error);
     }
 
     // Cleanup observers
@@ -149,8 +173,13 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   const measureResourceTiming = useCallback(() => {
     if (typeof window === 'undefined' || !('performance' in window)) return;
 
+<<<<<<< HEAD
     const resources = performance.getEntriesByType('resource');
     const slowResources = resources.filter(
+=======
+    const _resources = performance.getEntriesByType('resource');
+    const slowResources = _resources.filter(
+>>>>>>> origin/main
       (resource: PerformanceResourceTiming) => resource.duration > 1000
     );
 
@@ -219,7 +248,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     }, 5000);
 
     return () => {
-      if (cleanup) cleanup();
+      if (_cleanup) _cleanup();
       clearInterval(interval);
     };
   }, [

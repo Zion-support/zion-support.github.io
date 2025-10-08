@@ -176,7 +176,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     // Example: send to error reporting service
     // errorReportingService.captureException(error, { extra: errorInfo });
   }
-}
+  }
 
   render() {
     if (this.state.hasError) {
