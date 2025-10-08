@@ -1,6 +1,11 @@
 import React, { useCallback, useState, useEffect, Suspense, lazy } from 'react';
 
 // Dynamically import heavy components for better performance
+const ContentPromotionBanner = lazy(() => import('./components/ContentPromotionBanner'));
+const ContentCarousel = lazy(() => import('./components/ContentCarousel'));
+const DynamicContentShowcase = lazy(() => import('./components/DynamicContentShowcase'));
+const ContentStatistics = lazy(() => import('./components/ContentStatistics'));
+const ContentNewsletterSignup = lazy(() => import('./components/ContentNewsletterSignup'));
 
 // Loading skeleton component
 const ServiceCardSkeleton: React.FC = () => (
