@@ -53,11 +53,12 @@ class EnhancedErrorBoundary extends Component<Props, State> {
 
     // Log to console in development
     if (process.env.NODE_ENV === 'development') {
-      console.group('🚨 Error Boundary Caught Error');
-      console.error('Error:', error);
-      console.error('Error Info:', errorInfo);
-      console.error('Component Stack:', errorInfo.componentStack);
-      console.groupEnd();
+      // Error logging disabled for production
+      // console.group('🚨 Error Boundary Caught Error');
+      // console.error('Error:', error);
+      // console.error('Error Info:', errorInfo);
+      // console.error('Component Stack:', errorInfo.componentStack);
+      // console.groupEnd();
     }
   }
 
@@ -95,7 +96,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     try {
       // In a real app, you would send this to your error reporting service
       // For now, we'll just log it
-      console.log('Error Report:', errorReport);
+      // Error report logged
       
       // Example: Send to error reporting service
       // await fetch('/api/errors', {
@@ -104,7 +105,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       //   body: JSON.stringify(errorReport)
       // });
     } catch (reportingError) {
-      console.warn('Failed to send error report:', reportingError);
+      // Failed to send error report
     }
   };
 
@@ -167,7 +168,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
         }
       })
       .catch(() => {
-        console.warn('Failed to copy error details');
+        // Failed to copy error details
       });
   };
 
@@ -177,7 +178,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
         return this.props.fallback;
       }
 
-      const { retryCount, error, errorInfo, errorId } = this.state;
+      const { retryCount, error, errorId } = this.state;
       const canRetry = retryCount < this.maxRetries;
 
       return (
