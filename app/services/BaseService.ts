@@ -51,7 +51,7 @@ export class BaseService {
    */
   protected getFromCache<T>(key: string): T | null {
     if (!this.options.cache) return null;
-    
+
     if (this.isCacheValid(key)) {
       logger.debug(`Cache hit for key: ${key}`, { component: 'BaseService' });
       return this.cache.get(key)?.data as T;
@@ -89,7 +89,7 @@ export class BaseService {
    */
   protected async get<T>(endpoint: string, useCache = true): Promise<T> {
     const cacheKey = `GET:${endpoint}`;
-    
+
     if (useCache) {
       const cached = this.getFromCache<T>(cacheKey);
       if (cached) return cached;

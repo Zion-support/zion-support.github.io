@@ -60,7 +60,7 @@ export class PerformanceMetrics {
     if ('PerformanceObserver' in window) {
       try {
         // Navigation timing
-        const navObserver = new PerformanceObserver((list) => {
+        const navObserver = new PerformanceObserver(list => {
           for (const entry of list.getEntries()) {
             if (entry.entryType === 'navigation') {
               const navEntry = entry as PerformanceNavigationTiming;
@@ -82,7 +82,7 @@ export class PerformanceMetrics {
         this.observers.push(navObserver);
 
         // Paint timing
-        const paintObserver = new PerformanceObserver((list) => {
+        const paintObserver = new PerformanceObserver(list => {
           for (const entry of list.getEntries()) {
             if (entry.name === 'first-contentful-paint') {
               this.webVitals.FCP = entry.startTime;
@@ -100,7 +100,7 @@ export class PerformanceMetrics {
         this.observers.push(paintObserver);
 
         // Largest Contentful Paint
-        const lcpObserver = new PerformanceObserver((list) => {
+        const lcpObserver = new PerformanceObserver(list => {
           const entries = list.getEntries();
           const lastEntry = entries[entries.length - 1];
           if (lastEntry) {
@@ -118,7 +118,7 @@ export class PerformanceMetrics {
         this.observers.push(lcpObserver);
 
         // Layout Shift
-        const clsObserver = new PerformanceObserver((list) => {
+        const clsObserver = new PerformanceObserver(list => {
           let clsValue = 0;
           for (const entry of list.getEntries()) {
             if ((entry as LayoutShift).hadRecentInput) continue;
@@ -265,7 +265,7 @@ export class PerformanceMetrics {
    * Get metrics by category
    */
   getMetricsByCategory(category: PerformanceMetric['category']): PerformanceMetric[] {
-    return this.metrics.filter((m) => m.category === category);
+    return this.metrics.filter(m => m.category === category);
   }
 
   /**
@@ -315,15 +315,21 @@ export class PerformanceMetrics {
     const recommendations: string[] = [];
 
     if (this.webVitals.FCP && this.webVitals.FCP > 1800) {
-      recommendations.push('Optimize First Contentful Paint (FCP) - consider reducing render-blocking resources');
+      recommendations.push(
+        'Optimize First Contentful Paint (FCP) - consider reducing render-blocking resources'
+      );
     }
 
     if (this.webVitals.LCP && this.webVitals.LCP > 2500) {
-      recommendations.push('Improve Largest Contentful Paint (LCP) - optimize largest element loading');
+      recommendations.push(
+        'Improve Largest Contentful Paint (LCP) - optimize largest element loading'
+      );
     }
 
     if (this.webVitals.CLS && this.webVitals.CLS > 0.1) {
-      recommendations.push('Reduce Cumulative Layout Shift (CLS) - add size attributes to images and embeds');
+      recommendations.push(
+        'Reduce Cumulative Layout Shift (CLS) - add size attributes to images and embeds'
+      );
     }
 
     if (this.webVitals.FID && this.webVitals.FID > 100) {
@@ -331,9 +337,12 @@ export class PerformanceMetrics {
     }
 
     const networkMetrics = this.getMetricsByCategory('network');
-    const avgNetworkTime = networkMetrics.reduce((sum, m) => sum + m.value, 0) / networkMetrics.length;
+    const avgNetworkTime =
+      networkMetrics.reduce((sum, m) => sum + m.value, 0) / networkMetrics.length;
     if (avgNetworkTime > 500) {
-      recommendations.push('Optimize network requests - consider caching and reducing payload sizes');
+      recommendations.push(
+        'Optimize network requests - consider caching and reducing payload sizes'
+      );
     }
 
     return recommendations;
@@ -378,7 +387,7 @@ export class PerformanceMetrics {
    * Cleanup observers
    */
   cleanup(): void {
-    this.observers.forEach((observer) => observer.disconnect());
+    this.observers.forEach(observer => observer.disconnect());
     this.observers = [];
   }
 }

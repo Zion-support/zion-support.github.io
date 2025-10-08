@@ -28,8 +28,7 @@ export const insights: Insight[] = [
   },
   {
     id: 'rag-quality-budgets-production',
-    title:
-      'RAG Quality Budgets in Production: Freshness Windows and Cache Tiers',
+    title: 'RAG Quality Budgets in Production: Freshness Windows and Cache Tiers',
     summary:
       'Optimize RAG systems with quality budgets, freshness windows, and tiered caching strategies for cost-effective performance.',
     category: 'RAG Engineering',

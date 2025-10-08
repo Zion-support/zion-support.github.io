@@ -25,10 +25,7 @@ export const generateOrganizationSchema = (): StructuredData => ({
     areaServed: 'US',
     availableLanguage: ['English'],
   },
-  sameAs: [
-    'https://www.linkedin.com/company/zion-tech-group',
-    'https://twitter.com/ziontechgroup',
-  ],
+  sameAs: ['https://www.linkedin.com/company/zion-tech-group', 'https://twitter.com/ziontechgroup'],
 });
 
 export const generateWebsiteSchema = (): StructuredData => ({
@@ -94,10 +91,7 @@ export const injectStructuredData = (data: StructuredData | StructuredData[]) =>
   document.head.appendChild(script);
 };
 
-export const generatePageTitle = (
-  pageTitle: string,
-  separator: string = '|'
-): string => {
+export const generatePageTitle = (pageTitle: string, separator: string = '|'): string => {
   const siteName = 'Zion Tech Group';
   return `${pageTitle} ${separator} ${siteName}`;
 };

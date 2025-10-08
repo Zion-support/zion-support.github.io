@@ -23,9 +23,7 @@ export function usePerformanceMetrics() {
     // First Contentful Paint
     new PerformanceObserver(list => {
       const entries = list.getEntries();
-      const fcpEntry = entries.find(
-        entry => entry.name === 'first-contentful-paint'
-      );
+      const fcpEntry = entries.find(entry => entry.name === 'first-contentful-paint');
       if (fcpEntry) {
         setMetrics(prev => ({ ...prev, fcp: fcpEntry.startTime }));
       }

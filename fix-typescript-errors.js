@@ -11,10 +11,10 @@ const __dirname = path.dirname(__filename);
 function fixCommentedVariables(content) {
   // Fix patterns like "//     const variableName = ..." to "const variableName = ..."
   content = content.replace(/^(\s*)\/\/\s*(const|let|var)\s+(\w+)/gm, '$1$2 $3');
-  
+
   // Fix patterns like "//     const variableName" to "const variableName"
   content = content.replace(/^(\s*)\/\/\s*(const|let|var)\s+(\w+)(\s*[=;])/gm, '$1$2 $3$4');
-  
+
   return content;
 }
 
@@ -22,10 +22,10 @@ function fixCommentedVariables(content) {
 function fixSpecificPatterns(content) {
   // Fix analytics.ts specific issues
   content = content.replace(/analytics\./g, 'this.');
-  
+
   // Fix common variable name issues
   content = content.replace(/\b(analytics)\b(?!\s*[=:])/g, 'this');
-  
+
   return content;
 }
 
@@ -35,7 +35,7 @@ function processFile(filePath) {
     const content = fs.readFileSync(filePath, 'utf8');
     let fixedContent = fixCommentedVariables(content);
     fixedContent = fixSpecificPatterns(fixedContent);
-    
+
     if (content !== fixedContent) {
       fs.writeFileSync(filePath, fixedContent);
       console.log(`Fixed: ${filePath}`);
@@ -52,18 +52,18 @@ function processFile(filePath) {
 function findTsFiles(dir) {
   const files = [];
   const items = fs.readdirSync(dir);
-  
+
   for (const item of items) {
     const fullPath = path.join(dir, item);
     const stat = fs.statSync(fullPath);
-    
+
     if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
       files.push(...findTsFiles(fullPath));
     } else if (item.endsWith('.ts') || item.endsWith('.tsx')) {
       files.push(fullPath);
     }
   }
-  
+
   return files;
 }
 

@@ -21,16 +21,9 @@
       "Performance monitoring hook",
       "Caching strategy"
     ],
-    "security": [
-      "Security headers configuration",
-      "Enhanced error handler"
-    ],
-    "accessibility": [
-      "Accessibility configuration"
-    ],
-    "seo": [
-      "SEO optimization configuration"
-    ]
+    "security": ["Security headers configuration", "Enhanced error handler"],
+    "accessibility": ["Accessibility configuration"],
+    "seo": ["SEO optimization configuration"]
   },
   "recommendations": [
     "Enable Progressive Web App (PWA) features",

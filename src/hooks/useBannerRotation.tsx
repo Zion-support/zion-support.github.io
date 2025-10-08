@@ -4,7 +4,7 @@
  */
 
 import React, { useState, useEffect, useCallback, useMemo } from 'react';
-import bannerConfigurations, { BannerConfig, RotationStrategy } from "../data/bannerConfigurations";
+import bannerConfigurations, { BannerConfig, RotationStrategy } from '../data/bannerConfigurations';
 
 interface UseBannerRotationOptions {
   strategy?: RotationStrategy;
@@ -25,9 +25,15 @@ interface BannerRotationState {
 }
 
 // Helper functions defined inline
-const selectBannersForDisplay = (banners: BannerConfig[], maxBanners: number, strategy: RotationStrategy) => {
+const selectBannersForDisplay = (
+  banners: BannerConfig[],
+  maxBanners: number,
+  strategy: RotationStrategy
+) => {
   const enabled = banners.filter((b: BannerConfig) => b.enabled !== false);
-  const sorted = enabled.sort((a: BannerConfig, b: BannerConfig) => (b.priority || 0) - (a.priority || 0));
+  const sorted = enabled.sort(
+    (a: BannerConfig, b: BannerConfig) => (b.priority || 0) - (a.priority || 0)
+  );
   return sorted.slice(0, maxBanners);
 };
 
@@ -55,7 +61,7 @@ const loadBannerStats = () => {
   return {
     impressions: 0,
     clicks: 0,
-    ctr: 0
+    ctr: 0,
   };
 };
 
@@ -67,7 +73,7 @@ export const useBannerRotation = (options: UseBannerRotationOptions = {}) => {
     strategy = 'balanced',
     maxBanners = 3,
     refreshInterval = 30000,
-    enableTracking = true
+    enableTracking = true,
   } = options;
 
   const [state, setState] = useState<BannerRotationState>({
@@ -77,28 +83,29 @@ export const useBannerRotation = (options: UseBannerRotationOptions = {}) => {
     stats: {
       impressions: 0,
       clicks: 0,
-      ctr: 0
-    }
+      ctr: 0,
+    },
   });
 
   // Load initial banners
   useEffect(() => {
     try {
       const configs = Array.isArray(bannerConfigurations) ? bannerConfigurations : [];
-      const selected = strategy === 'balanced' 
-        ? selectBalancedBanners(configs, maxBanners)
-        : selectBannersForDisplay(configs, maxBanners, strategy);
-      
+      const selected =
+        strategy === 'balanced'
+          ? selectBalancedBanners(configs, maxBanners)
+          : selectBannersForDisplay(configs, maxBanners, strategy);
+
       setState(prev => ({
         ...prev,
         currentBanners: selected as BannerConfig[],
-        isLoading: false
+        isLoading: false,
       }));
     } catch (error) {
       setState(prev => ({
         ...prev,
         error: 'Failed to load banners',
-        isLoading: false
+        isLoading: false,
       }));
     }
   }, [strategy, maxBanners]);
@@ -113,11 +120,14 @@ export const useBannerRotation = (options: UseBannerRotationOptions = {}) => {
   }, [state.currentBanners, enableTracking]);
 
   // Handle banner click
-  const handleBannerClick = useCallback((bannerId: string) => {
-    if (enableTracking) {
-      trackClick(bannerId);
-    }
-  }, [enableTracking]);
+  const handleBannerClick = useCallback(
+    (bannerId: string) => {
+      if (enableTracking) {
+        trackClick(bannerId);
+      }
+    },
+    [enableTracking]
+  );
 
   return {
     ...state,
@@ -125,7 +135,7 @@ export const useBannerRotation = (options: UseBannerRotationOptions = {}) => {
     refresh: () => {
       // Trigger refresh
       setState(prev => ({ ...prev, isLoading: true }));
-    }
+    },
   };
 };
 

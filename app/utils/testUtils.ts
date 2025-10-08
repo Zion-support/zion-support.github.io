@@ -19,7 +19,7 @@ export const waitFor = async (
   interval = 100
 ): Promise<void> => {
   const startTime = Date.now();
-  
+
   while (!condition()) {
     if (Date.now() - startTime > timeout) {
       throw new Error(`Timeout waiting for condition after ${timeout}ms`);
@@ -154,7 +154,9 @@ export const createMockPerformance = (): Performance => {
  */
 export const generateTestData = {
   string: (length = 10): string => {
-    return Math.random().toString(36).substring(2, length + 2);
+    return Math.random()
+      .toString(36)
+      .substring(2, length + 2);
   },
 
   number: (min = 0, max = 100): number => {
@@ -279,7 +281,7 @@ export const retryWithBackoff = async <T>(
   initialDelay = 1000
 ): Promise<T> => {
   let lastError: Error;
-  
+
   for (let i = 0; i < maxRetries; i++) {
     try {
       return await fn();
@@ -290,7 +292,7 @@ export const retryWithBackoff = async <T>(
       }
     }
   }
-  
+
   throw lastError!;
 };
 
@@ -303,7 +305,7 @@ export const measureExecutionTime = async <T>(
   const start = performance.now();
   const result = await fn();
   const duration = performance.now() - start;
-  
+
   return { result, duration };
 };
 

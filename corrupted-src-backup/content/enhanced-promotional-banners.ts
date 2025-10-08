@@ -30,8 +30,7 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
   },
   {
     id: 'oct-01-ai-governance-framework-2025',
-    title:
-      'NEW: AI Governance Framework 2025 — Ship AI Safely with Zero Regret',
+    title: 'NEW: AI Governance Framework 2025 — Ship AI Safely with Zero Regret',
     description:
       'Complete governance framework for enterprise AI deployment with policy tests, scorecards, and rollback capabilities.',
     ctaText: 'Learn More',

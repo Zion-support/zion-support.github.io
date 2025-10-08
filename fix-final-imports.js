@@ -15,22 +15,22 @@ function processFile(filePath) {
       // Fix SEOOptimizer component
       {
         pattern: /import\s+{\s*useRouter\s*}\s+from\s+'\.\.\/\.\.\/utils\/navigation';/g,
-        replacement: "import { useRouter } from '../utils/navigation';"
+        replacement: "import { useRouter } from '../utils/navigation';",
       },
       // Fix root-level files
       {
         pattern: /import\s+{\s*Metadata\s*}\s+from\s+'\.\/types\/next';/g,
-        replacement: "import { Metadata } from './types/next';"
+        replacement: "import { Metadata } from './types/next';",
       },
       {
         pattern: /import\s+Link\s+from\s+'\.\/utils\/link';/g,
-        replacement: "import Link from './utils/link';"
+        replacement: "import Link from './utils/link';",
       },
       // Fix MetadataRoute namespace issue
       {
         pattern: /MetadataRoute\./g,
-        replacement: "MetadataRoute"
-      }
+        replacement: 'MetadataRoute',
+      },
     ];
 
     replacements.forEach(({ pattern, replacement }) => {

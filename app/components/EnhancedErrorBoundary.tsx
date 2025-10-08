@@ -25,23 +25,23 @@ class EnhancedErrorBoundary extends Component<Props, State> {
 
   constructor(props: Props) {
     super(props);
-    this.state = { 
-      hasError: false, 
-      retryCount: 0 
+    this.state = {
+      hasError: false,
+      retryCount: 0,
     };
   }
 
   static getDerivedStateFromError(error: Error): Partial<State> {
-    return { 
-      hasError: true, 
+    return {
+      hasError: true,
       error,
-      errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
+      errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
     };
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({ errorInfo });
-    
+
     // Call custom error handler
     if (this.props.onError) {
       this.props.onError(error, errorInfo);
@@ -80,24 +80,24 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     this.sendErrorReport(errorReport);
 
     // Send to analytics if available
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('event', 'exception', {
+    if (typeof window !== 'undefined' && (window as unknown as { gtag?: unknown }).gtag) {
+      (window as unknown as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag('event', 'exception', {
         description: error.message,
         fatal: false,
         custom_map: {
           error_id: this.state.errorId,
           retry_count: this.state.retryCount,
-        }
+        },
       });
     }
   };
 
-  private sendErrorReport = async (errorReport: any) => {
+  private sendErrorReport = async (errorReport: Record<string, unknown>) => {
     try {
       // In a real app, you would send this to your error reporting service
       // For now, we'll just log it
       console.log('Error Report:', errorReport);
-      
+
       // Example: Send to error reporting service
       // await fetch('/api/errors', {
       //   method: 'POST',
@@ -129,7 +129,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
         hasError: false,
         error: undefined,
         errorInfo: undefined,
-        retryCount: prevState.retryCount + 1
+        retryCount: prevState.retryCount + 1,
       }));
     } else {
       // Max retries reached, reload the page
@@ -155,7 +155,8 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       url: window.location.href,
     };
 
-    navigator.clipboard.writeText(JSON.stringify(errorDetails, null, 2))
+    navigator.clipboard
+      .writeText(JSON.stringify(errorDetails, null, 2))
       .then(() => {
         // Show success message
         const button = document.getElementById('copy-error-details');
@@ -178,11 +179,13 @@ class EnhancedErrorBoundary extends Component<Props, State> {
         return this.props.fallback;
       }
 
-      const { retryCount, error, errorInfo, errorId } = this.state;
+      const { retryCount, error, errorId } = this.state;
       const canRetry = retryCount < this.maxRetries;
 
       return (
-        <div className={`min-h-screen flex items-center justify-center bg-gradient-to-br from-red-50 to-orange-50 ${this.props.className || ''}`}>
+        <div
+          className={`min-h-screen flex items-center justify-center bg-gradient-to-br from-red-50 to-orange-50 ${this.props.className || ''}`}
+        >
           <div className="max-w-2xl w-full mx-4">
             <div className="bg-white rounded-2xl shadow-xl p-8">
               {/* Header */}
@@ -196,11 +199,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
                 <p className="text-gray-600 mb-4">
                   We're sorry for the inconvenience. Our team has been notified about this issue.
                 </p>
-                {errorId && (
-                  <p className="text-sm text-gray-500 font-mono">
-                    Error ID: {errorId}
-                  </p>
-                )}
+                {errorId && <p className="text-sm text-gray-500 font-mono">Error ID: {errorId}</p>}
               </div>
 
               {/* Error Details (if enabled) */}

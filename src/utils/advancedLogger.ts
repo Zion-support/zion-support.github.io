@@ -143,11 +143,11 @@ class AdvancedLogger {
     }
 
     // Notify callbacks
-    this.callbacks.forEach((callback) => {
+    this.callbacks.forEach(callback => {
       try {
         callback(entry);
       } catch (error) {
-//         console.error('Error in log callback:', error);
+        //         console.error('Error in log callback:', error);
       }
     });
   }
@@ -156,28 +156,28 @@ class AdvancedLogger {
    * Log to console with appropriate formatting
    */
   private logToConsole(entry: LogEntry): void {
-const levelName = LogLevel[entry.level];
-const timestamp = new Date(entry.timestamp).toISOString();
-const prefix = `[${timestamp}] [${levelName}]`;
+    const levelName = LogLevel[entry.level];
+    const timestamp = new Date(entry.timestamp).toISOString();
+    const prefix = `[${timestamp}] [${levelName}]`;
     const tags = entry.tags ? `[${entry.tags.join(', ')}]` : '';
 
-const formattedMessage = `${prefix} ${tags} ${entry.message}`;
+    const formattedMessage = `${prefix} ${tags} ${entry.message}`;
 
     switch (entry.level) {
       case LogLevel.DEBUG:
-//         console.debug(formattedMessage, entry.context || '');
+        //         console.debug(formattedMessage, entry.context || '');
         break;
       case LogLevel.INFO:
-//         console.info(formattedMessage, entry.context || '');
+        //         console.info(formattedMessage, entry.context || '');
         break;
       case LogLevel.WARN:
-//         console.warn(formattedMessage, entry.context || '');
+        //         console.warn(formattedMessage, entry.context || '');
         break;
       case LogLevel.ERROR:
       case LogLevel.CRITICAL:
-//         console.error(formattedMessage, entry.context || '');
+        //         console.error(formattedMessage, entry.context || '');
         if (entry.stack) {
-//           console.error('Stack trace:', entry.stack);
+          //           console.error('Stack trace:', entry.stack);
         }
         break;
     }
@@ -201,9 +201,9 @@ const formattedMessage = `${prefix} ${tags} ${entry.message}`;
           'Content-Type': 'application/json',
         },
         body: JSON.stringify(entry),
-      }).catch((error) => {
+      }).catch(error => {
         // Fail silently to avoid logging loops
-//         console.error('Failed to send log to remote:', error);
+        //         console.error('Failed to send log to remote:', error);
       });
     } catch (error) {
       // Fail silently
@@ -217,13 +217,11 @@ const formattedMessage = `${prefix} ${tags} ${entry.message}`;
     let filtered = this.logs;
 
     if (level !== undefined) {
-      filtered = filtered.filter((entry) => entry.level === level);
+      filtered = filtered.filter(entry => entry.level === level);
     }
 
     if (tags && tags.length > 0) {
-      filtered = filtered.filter((entry) =>
-        tags.some((tag) => entry.tags?.includes(tag))
-      );
+      filtered = filtered.filter(entry => tags.some(tag => entry.tags?.includes(tag)));
     }
 
     return [...filtered];
@@ -243,10 +241,10 @@ const formattedMessage = `${prefix} ${tags} ${entry.message}`;
 
     const byTag: Record<string, number> = {};
 
-    this.logs.forEach((entry) => {
+    this.logs.forEach(entry => {
       byLevel[LogLevel[entry.level]]++;
 
-      entry.tags?.forEach((tag) => {
+      entry.tags?.forEach(tag => {
         byTag[tag] = (byTag[tag] || 0) + 1;
       });
     });
@@ -279,14 +277,17 @@ const formattedMessage = `${prefix} ${tags} ${entry.message}`;
   onLog(callback: (entry: LogEntry) => void): () => void {
     this.callbacks.push(callback);
     return () => {
-      this.callbacks = this.callbacks.filter((cb) => cb !== callback);
+      this.callbacks = this.callbacks.filter(cb => cb !== callback);
     };
   }
 
   /**
    * Create a child logger with additional context
    */
-  child(context: Record<string, any>, tags?: string[]): {
+  child(
+    context: Record<string, any>,
+    tags?: string[]
+  ): {
     debug: (message: string, extraContext?: Record<string, any>) => void;
     info: (message: string, extraContext?: Record<string, any>) => void;
     warn: (message: string, extraContext?: Record<string, any>) => void;

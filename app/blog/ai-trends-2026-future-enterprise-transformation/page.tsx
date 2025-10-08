@@ -33,9 +33,10 @@ export default function AITrends2026FutureEnterpriseTransformation() {
           <div className="prose max-w-none">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">🔮 2026 AI Trends Overview</h2>
             <p className="text-gray-700 mb-6">
-              The year 2026 marks a pivotal moment in AI evolution, with breakthrough technologies 
-              transforming how enterprises operate. From <strong>quantum intelligence</strong> to 
-              <strong>conscious computing</strong>, these trends are reshaping the future of business.
+              The year 2026 marks a pivotal moment in AI evolution, with breakthrough technologies
+              transforming how enterprises operate. From <strong>quantum intelligence</strong> to
+              <strong>conscious computing</strong>, these trends are reshaping the future of
+              business.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
               <div className="bg-purple-50 p-6 rounded-lg text-center">
@@ -54,7 +55,8 @@ export default function AITrends2026FutureEnterpriseTransformation() {
 
             <h2 className="text-2xl font-bold text-gray-900 mb-6">🧠 Top AI Trends 2026</h2>
             <p className="text-gray-700 mb-6">
-              Here are the revolutionary AI trends that will define enterprise transformation in 2026:
+              Here are the revolutionary AI trends that will define enterprise transformation in
+              2026:
             </p>
 
             <h3 className="text-xl font-semibold text-gray-800 mb-4">1. Quantum Intelligence</h3>
@@ -73,7 +75,9 @@ export default function AITrends2026FutureEnterpriseTransformation() {
               <li>• Advanced emotional intelligence in AI</li>
             </ul>
 
-            <h3 className="text-xl font-semibold text-gray-800 mb-4">3. Neuromorphic Architectures</h3>
+            <h3 className="text-xl font-semibold text-gray-800 mb-4">
+              3. Neuromorphic Architectures
+            </h3>
             <ul className="list-disc list-inside text-gray-700 mb-4 space-y-2">
               <li>• Brain-inspired computing systems</li>
               <li>• Ultra-low power consumption</li>
@@ -88,16 +92,24 @@ export default function AITrends2026FutureEnterpriseTransformation() {
 
             <h3 className="text-xl font-semibold text-gray-800 mb-4">Operational Transformation</h3>
             <ul className="list-disc list-inside text-gray-700 mb-6 space-y-2">
-              <li>• <strong>95% process automation</strong> through conscious AI systems</li>
-              <li>• <strong>Quantum-powered optimization</strong> delivering 10x efficiency gains</li>
-              <li>• <strong>Autonomous operations</strong> requiring minimal human intervention</li>
-              <li>• <strong>Real-time adaptation</strong> to changing business conditions</li>
+              <li>
+                • <strong>95% process automation</strong> through conscious AI systems
+              </li>
+              <li>
+                • <strong>Quantum-powered optimization</strong> delivering 10x efficiency gains
+              </li>
+              <li>
+                • <strong>Autonomous operations</strong> requiring minimal human intervention
+              </li>
+              <li>
+                • <strong>Real-time adaptation</strong> to changing business conditions
+              </li>
             </ul>
 
             <h2 className="text-2xl font-bold text-gray-900 mb-6">🛠️ Technology Stack 2026</h2>
             <div className="bg-gray-100 p-6 rounded-lg mb-6">
               <pre className="text-sm text-gray-800 overflow-x-auto">
-{`2026 AI Technology Stack:
+                {`2026 AI Technology Stack:
 ├── Quantum Computing
 │   ├── Quantum Processors
 │   ├── Quantum Algorithms
@@ -119,24 +131,28 @@ export default function AITrends2026FutureEnterpriseTransformation() {
 
             <h2 className="text-2xl font-bold text-gray-900 mb-6">🚀 Prepare for 2026</h2>
             <p className="text-gray-700 mb-6">
-              Ready to embrace the AI trends of 2026? Our expert team can help you prepare 
-              for the quantum intelligence revolution and transform your enterprise.
+              Ready to embrace the AI trends of 2026? Our expert team can help you prepare for the
+              quantum intelligence revolution and transform your enterprise.
             </p>
 
             <div className="bg-purple-50 p-6 rounded-lg text-center">
-              <h3 className="text-xl font-semibold text-gray-800 mb-4">Start Your 2026 AI Journey</h3>
+              <h3 className="text-xl font-semibold text-gray-800 mb-4">
+                Start Your 2026 AI Journey
+              </h3>
               <p className="text-gray-700 mb-4">
                 Join leading enterprises preparing for the quantum intelligence revolution
               </p>
               <div className="space-x-4">
-                <a 
+                <a
                   href="/contact"
-                  className="inline-block bg-purple-600 text-white px-6 py-3 rounded-lg hover:bg-purple-700 transition-colors">
+                  className="inline-block bg-purple-600 text-white px-6 py-3 rounded-lg hover:bg-purple-700 transition-colors"
+                >
                   Get 2026 AI Assessment
                 </a>
-                <a 
+                <a
                   href="/services"
-                  className="inline-block bg-white text-purple-600 px-6 py-3 rounded-lg border-2 border-purple-600 hover:bg-purple-50 transition-colors">
+                  className="inline-block bg-white text-purple-600 px-6 py-3 rounded-lg border-2 border-purple-600 hover:bg-purple-50 transition-colors"
+                >
                   Explore AI Services
                 </a>
               </div>

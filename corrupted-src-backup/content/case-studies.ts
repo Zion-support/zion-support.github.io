@@ -14,8 +14,7 @@ export type CaseStudy = {
 export const caseStudies: CaseStudy[] = [
   {
     id: 'global-energy-digital-twin-850m',
-    title:
-      'Global Energy Corporation: $850M Digital Twin Transformation Success',
+    title: 'Global Energy Corporation: $850M Digital Twin Transformation Success',
     company: 'Global Energy Corporation (Fortune 100)',
     industry: 'Energy & Utilities',
     challenge:
@@ -56,14 +55,7 @@ export const caseStudies: CaseStudy[] = [
       'Increased client satisfaction scores by 40%',
       'Generated $2.3M in additional revenue through better insights',
     ],
-    technologies: [
-      'Python',
-      'TensorFlow',
-      'React',
-      'AWS',
-      'PostgreSQL',
-      'Docker',
-    ],
+    technologies: ['Python', 'TensorFlow', 'React', 'AWS', 'PostgreSQL', 'Docker'],
     duration: '12 weeks',
     imageUrl: '/images/case-studies/fintech-platform.jpg',
   },
@@ -101,13 +93,7 @@ export const caseStudies: CaseStudy[] = [
       'Boosted average order value by 35%',
       'Generated $1.8M in additional revenue in 6 months',
     ],
-    technologies: [
-      'Machine Learning',
-      'Python',
-      'Vue.js',
-      'Redis',
-      'Kubernetes',
-    ],
+    technologies: ['Machine Learning', 'Python', 'Vue.js', 'Redis', 'Kubernetes'],
     duration: '10 weeks',
     imageUrl: '/images/case-studies/ecommerce-ai.jpg',
   },
@@ -126,13 +112,7 @@ export const caseStudies: CaseStudy[] = [
       'Saved $2.1M annually in maintenance costs',
       'Increased production output by 18%',
     ],
-    technologies: [
-      'IoT Sensors',
-      'Edge Computing',
-      'Python',
-      'React',
-      'Azure IoT Hub',
-    ],
+    technologies: ['IoT Sensors', 'Edge Computing', 'Python', 'React', 'Azure IoT Hub'],
     duration: '16 weeks',
     imageUrl: '/images/case-studies/manufacturing-iot.jpg',
   },
@@ -170,13 +150,7 @@ export const caseStudies: CaseStudy[] = [
       'Achieved 100% compliance audit success rate',
       'Prevented $3.2M in potential security breaches',
     ],
-    technologies: [
-      'SIEM',
-      'Machine Learning',
-      'Python',
-      'Elasticsearch',
-      'Kubernetes',
-    ],
+    technologies: ['SIEM', 'Machine Learning', 'Python', 'Elasticsearch', 'Kubernetes'],
     duration: '20 weeks',
     imageUrl: '/images/case-studies/cybersecurity.jpg',
   },
@@ -185,8 +159,7 @@ export const caseStudies: CaseStudy[] = [
     title: 'Telco Edge Observability Overhaul',
     company: 'GlobalTel Communications',
     industry: 'Telecommunications',
-    challenge:
-      'Edge outages and opaque client performance caused churn and SLA penalties.',
+    challenge: 'Edge outages and opaque client performance caused churn and SLA penalties.',
     solution:
       'Implemented end-to-end tracing from device to POP, latency budgets, and automated error budget alerts across 40 regions.',
     results: [
@@ -195,13 +168,7 @@ export const caseStudies: CaseStudy[] = [
       'Decreased churn by 18% in 2 quarters',
       '$4.7M annual SLA penalty savings',
     ],
-    technologies: [
-      'OpenTelemetry',
-      'ClickHouse',
-      'Edge Workers',
-      'TypeScript',
-      'Kubernetes',
-    ],
+    technologies: ['OpenTelemetry', 'ClickHouse', 'Edge Workers', 'TypeScript', 'Kubernetes'],
     duration: '18 weeks',
     imageUrl: '/images/case-studies/telco-edge.jpg',
   },

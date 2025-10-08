@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState, useCallback } from 'react';
 
-
-import { Link } from 'react-router-dom';interface AccessibilityConfig {
+import { Link } from 'react-router-dom';
+interface AccessibilityConfig {
   enableKeyboardNavigation: boolean;
   enableScreenReaderSupport: boolean;
   enableHighContrast: boolean;
@@ -22,10 +22,10 @@ interface AccessibilityEnhancerRef {
   setFontSize: (size: number) => void;
 }
 
-const AccessibilityEnhancer = React.forwardRef<AccessibilityEnhancerRef, AccessibilityEnhancerProps>(({
-  config = {},
-  children
-}, ref) => {
+const AccessibilityEnhancer = React.forwardRef<
+  AccessibilityEnhancerRef,
+  AccessibilityEnhancerProps
+>(({ config = {}, children }, ref) => {
   const [isHighContrast, setIsHighContrast] = useState(false);
   const [fontSize, setFontSize] = useState(16);
   const [isReducedMotion, setIsReducedMotion] = useState(false);
@@ -41,7 +41,7 @@ const AccessibilityEnhancer = React.forwardRef<AccessibilityEnhancerRef, Accessi
     enableSkipLinks: true,
     enableARIALabels: true,
     enableColorContrast: true,
-    ...config
+    ...config,
   };
 
   const announceToScreenReader = useCallback((message: string) => {
@@ -81,12 +81,17 @@ const AccessibilityEnhancer = React.forwardRef<AccessibilityEnhancerRef, Accessi
       document.removeEventListener('keydown', handleKeyDown);
       document.removeEventListener('mousedown', handleMouseDown);
     };
-  }, [defaultConfig.enableHighContrast, defaultConfig.enableReducedMotion, handleKeyDown, handleMouseDown]);
+  }, [
+    defaultConfig.enableHighContrast,
+    defaultConfig.enableReducedMotion,
+    handleKeyDown,
+    handleMouseDown,
+  ]);
 
   useEffect(() => {
     // Apply accessibility styles
     const root = document.documentElement;
-    
+
     if (isHighContrast) {
       root.classList.add('high-contrast');
     } else {
@@ -110,40 +115,41 @@ const AccessibilityEnhancer = React.forwardRef<AccessibilityEnhancerRef, Accessi
   }, [isHighContrast, isReducedMotion, isKeyboardNavigation, fontSize]);
 
   // Expose methods via ref
-  React.useImperativeHandle(ref, () => ({
-    announceToScreenReader,
-    setFontSize: (size: number) => {
-      setFontSize(Math.max(12, Math.min(24, size)));
-    }
-  }), [announceToScreenReader]);
+  React.useImperativeHandle(
+    ref,
+    () => ({
+      announceToScreenReader,
+      setFontSize: (size: number) => {
+        setFontSize(Math.max(12, Math.min(24, size)));
+      },
+    }),
+    [announceToScreenReader]
+  );
 
   return (
     <div className="accessibility-enhancer">
       {defaultConfig.enableSkipLinks && (
         <div className="skip-links">
-          <Link to="#main-content" 
+          <Link
+            to="#main-content"
             className="skip-link sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50"
           >
             Skip to main content
           </Link>
-          <Link to="#navigation" 
+          <Link
+            to="#navigation"
             className="skip-link sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-32 bg-blue-600 text-white px-4 py-2 rounded z-50"
           >
             Skip to navigation
           </Link>
         </div>
       )}
-      
+
       {children}
-      
+
       {/* Screen reader announcements */}
       {defaultConfig.enableScreenReaderSupport && (
-        <div
-          ref={announcementRef}
-          className="sr-only"
-          aria-live="polite"
-          aria-atomic="true"
-        />
+        <div ref={announcementRef} className="sr-only" aria-live="polite" aria-atomic="true" />
       )}
     </div>
   );

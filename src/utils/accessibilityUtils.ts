@@ -34,7 +34,11 @@ export const getContrastRatio = (foreground: string, background: string): number
 /**
  * Check if contrast ratio meets WCAG AA standards
  */
-export const meetsWCAGAA = (foreground: string, background: string, largeText: boolean = false): boolean => {
+export const meetsWCAGAA = (
+  foreground: string,
+  background: string,
+  largeText: boolean = false
+): boolean => {
   const ratio = getContrastRatio(foreground, background);
   return largeText ? ratio >= 3 : ratio >= 4.5;
 };
@@ -42,7 +46,11 @@ export const meetsWCAGAA = (foreground: string, background: string, largeText: b
 /**
  * Check if contrast ratio meets WCAG AAA standards
  */
-export const meetsWCAGAAA = (foreground: string, background: string, largeText: boolean = false): boolean => {
+export const meetsWCAGAAA = (
+  foreground: string,
+  background: string,
+  largeText: boolean = false
+): boolean => {
   const ratio = getContrastRatio(foreground, background);
   return largeText ? ratio >= 4.5 : ratio >= 7;
 };
@@ -72,7 +80,7 @@ export const generateARIALabel = (elementType: string, context?: string): string
 /**
  * Trap focus within a modal or dialog
  */
-export const trapFocus = (element: HTMLElement): () => void => {
+export const trapFocus = (element: HTMLElement): (() => void) => {
   const focusableElements = element.querySelectorAll<HTMLElement>(
     'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
   );
@@ -109,7 +117,10 @@ export const trapFocus = (element: HTMLElement): () => void => {
 /**
  * Announce message to screen readers
  */
-export const announceToScreenReader = (message: string, priority: 'polite' | 'assertive' = 'polite'): void => {
+export const announceToScreenReader = (
+  message: string,
+  priority: 'polite' | 'assertive' = 'polite'
+): void => {
   if (typeof document === 'undefined') return;
 
   let liveRegion = document.getElementById('a11y-live-region');
@@ -145,16 +156,14 @@ export const announceToScreenReader = (message: string, priority: 'polite' | 'as
  */
 export const isVisibleToScreenReader = (element: HTMLElement): boolean => {
   // Check if element has screen reader only class or styles
-  const hasScreenReaderClass = element.classList.contains('sr-only') || 
-                                element.classList.contains('visually-hidden');
-  
+  const hasScreenReaderClass =
+    element.classList.contains('sr-only') || element.classList.contains('visually-hidden');
+
   if (hasScreenReaderClass) return true;
 
   // Check if element is visible in viewport
   const style = window.getComputedStyle(element);
-  return style.display !== 'none' && 
-         style.visibility !== 'hidden' && 
-         style.opacity !== '0';
+  return style.display !== 'none' && style.visibility !== 'hidden' && style.opacity !== '0';
 };
 
 /**
@@ -167,7 +176,7 @@ export const addKeyboardNavigation = (
     orientation?: 'horizontal' | 'vertical' | 'both';
     loop?: boolean;
   } = {}
-): () => void => {
+): (() => void) => {
   const {
     selector = '[role="button"], [role="tab"], [role="menuitem"]',
     orientation = 'both',
@@ -275,7 +284,7 @@ export const validateARIA = (element: HTMLElement): string[] => {
 
   // Check for required ARIA attributes based on role
   const role = element.getAttribute('role');
-  
+
   if (role) {
     const requiredAttributes: Record<string, string[]> = {
       button: [],
@@ -290,7 +299,7 @@ export const validateARIA = (element: HTMLElement): string[] => {
 
     const required = requiredAttributes[role];
     if (required) {
-      required.forEach((attr) => {
+      required.forEach(attr => {
         if (!element.hasAttribute(attr)) {
           issues.push(`Missing required attribute: ${attr} for role="${role}"`);
         }

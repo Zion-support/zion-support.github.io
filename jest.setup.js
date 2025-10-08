@@ -42,13 +42,12 @@ jest.mock('./app/hooks/usePerformanceMonitoring.ts', () => ({
   })),
 }));
 
-
 // Mock React Router (this is a Vite project, not Next.js)
 jest.mock('react-router-dom', () => {
   const actual = jest.requireActual('react-router-dom');
   const { createContext } = require('react');
   const RouterContext = createContext({ basename: '/' });
-  
+
   return {
     ...actual,
     useNavigate: () => jest.fn(),
@@ -60,14 +59,10 @@ jest.mock('react-router-dom', () => {
     }),
     useParams: () => ({}),
     BrowserRouter: ({ children }) => (
-      <RouterContext.Provider value={{ basename: '/' }}>
-        {children}
-      </RouterContext.Provider>
+      <RouterContext.Provider value={{ basename: '/' }}>{children}</RouterContext.Provider>
     ),
     MemoryRouter: ({ children }) => (
-      <RouterContext.Provider value={{ basename: '/' }}>
-        {children}
-      </RouterContext.Provider>
+      <RouterContext.Provider value={{ basename: '/' }}>{children}</RouterContext.Provider>
     ),
     RouterProvider: ({ router }) => null,
   };
@@ -76,7 +71,7 @@ jest.mock('react-router-dom', () => {
 // Mock window.matchMedia
 Object.defineProperty(window, 'matchMedia', {
   writable: true,
-  value: jest.fn().mockImplementation((query) => ({
+  value: jest.fn().mockImplementation(query => ({
     matches: false,
     media: query,
     onchange: null,

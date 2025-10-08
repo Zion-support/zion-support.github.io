@@ -33,16 +33,13 @@ class AnalyticsOptimizer {
   }
 
   generateSessionId() {
-    return (
-      'session_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9)
-    );
+    return 'session_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
   }
 
   getUserId() {
     let userId = localStorage.getItem('analytics_user_id');
     if (!userId) {
-      userId =
-        'user_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+      userId = 'user_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
       localStorage.setItem('analytics_user_id', userId);
     }
     return userId;
@@ -63,8 +60,7 @@ class AnalyticsOptimizer {
       'scroll',
       this.throttle(() => {
         const scrollDepth = Math.round(
-          (window.scrollY / (document.body.scrollHeight - window.innerHeight)) *
-            100
+          (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100
         );
         if (scrollDepth > maxScrollDepth) {
           maxScrollDepth = scrollDepth;
@@ -101,15 +97,13 @@ class AnalyticsOptimizer {
   setupPerformanceTracking() {
     // Track Core Web Vitals
     if ('web-vitals' in window) {
-      import('web-vitals').then(
-        ({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
-          getCLS(metric => this.trackWebVital('CLS', metric));
-          getFID(metric => this.trackWebVital('FID', metric));
-          getFCP(metric => this.trackWebVital('FCP', metric));
-          getLCP(metric => this.trackWebVital('LCP', metric));
-          getTTFB(metric => this.trackWebVital('TTFB', metric));
-        }
-      );
+      import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
+        getCLS(metric => this.trackWebVital('CLS', metric));
+        getFID(metric => this.trackWebVital('FID', metric));
+        getFCP(metric => this.trackWebVital('FCP', metric));
+        getLCP(metric => this.trackWebVital('LCP', metric));
+        getTTFB(metric => this.trackWebVital('TTFB', metric));
+      });
     }
 
     // Track page load performance
@@ -117,9 +111,7 @@ class AnalyticsOptimizer {
       const perfData = performance.getEntriesByType('navigation')[0];
       if (perfData) {
         this.track('page_load_performance', {
-          domContentLoaded:
-            perfData.domContentLoadedEventEnd -
-            perfData.domContentLoadedEventStart,
+          domContentLoaded: perfData.domContentLoadedEventEnd - perfData.domContentLoadedEventStart,
           loadComplete: perfData.loadEventEnd - perfData.loadEventStart,
           domInteractive: perfData.domInteractive - perfData.navigationStart,
           totalLoadTime: perfData.loadEventEnd - perfData.navigationStart,
@@ -301,7 +293,7 @@ class AnalyticsOptimizer {
     try {
       await this.sendEvents(events);
     } catch (error) {
-//       console.error('Failed to send analytics events:', error);
+      //       console.error('Failed to send analytics events:', error);
       // Re-queue events for retry
       this.eventQueue.unshift(...events);
     }
@@ -316,10 +308,7 @@ class AnalyticsOptimizer {
     };
 
     // Send to multiple analytics services
-    const promises = [
-      this.sendToGoogleAnalytics(payload),
-      this.sendToCustomEndpoint(payload),
-    ];
+    const promises = [this.sendToGoogleAnalytics(payload), this.sendToCustomEndpoint(payload)];
 
     await Promise.allSettled(promises);
   }
@@ -348,7 +337,7 @@ class AnalyticsOptimizer {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
     } catch (error) {
-//       console.warn('Failed to send to custom analytics endpoint:', error);
+      //       console.warn('Failed to send to custom analytics endpoint:', error);
     }
   }
 
@@ -356,7 +345,7 @@ class AnalyticsOptimizer {
     let timeoutId;
     let lastExecTime = 0;
     return function (...args) {
-//       const currentTime = Date.now();
+      //       const currentTime = Date.now();
 
       if (currentTime - lastExecTime > delay) {
         func.apply(this, args);
@@ -388,12 +377,9 @@ class AnalyticsOptimizer {
   getPerformanceMetrics() {
     const navigation = performance.getEntriesByType('navigation')[0];
     return {
-      loadTime: navigation
-        ? navigation.loadEventEnd - navigation.navigationStart
-        : 0,
+      loadTime: navigation ? navigation.loadEventEnd - navigation.navigationStart : 0,
       domContentLoaded: navigation
-        ? navigation.domContentLoadedEventEnd -
-          navigation.domContentLoadedEventStart
+        ? navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart
         : 0,
       firstPaint: this.getFirstPaint(),
       memoryUsage: this.getMemoryUsage(),

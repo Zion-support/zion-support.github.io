@@ -9,8 +9,8 @@ export const usePerformance = () => {
 
     const performanceMonitor = PerformanceMonitor.getInstance();
 
-    const observer = new PerformanceObserver((list) => {
-      list.getEntries().forEach((entry) => {
+    const observer = new PerformanceObserver(list => {
+      list.getEntries().forEach(entry => {
         performanceMonitor.recordMetric('long-task', entry.duration);
       });
     });

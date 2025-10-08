@@ -100,7 +100,7 @@ export class APIInterceptor {
 
     try {
       const response = await requestPromise;
-      
+
       // Cache successful GET requests
       if (fullConfig.method === 'GET' && fullConfig.cache !== false && this.config.enableCaching) {
         this.setInCache(cacheKey, response);
@@ -117,7 +117,7 @@ export class APIInterceptor {
    */
   private async executeRequest<T>(config: RequestConfig, attempt = 1): Promise<APIResponse<T>> {
     const startTime = performance.now();
-    
+
     try {
       // Apply request interceptor
       let finalConfig = config;
@@ -165,18 +165,10 @@ export class APIInterceptor {
       const err = error as Error;
 
       // Record error metric
-      performanceMetrics.recordNetworkRequest(
-        this.buildURL(config),
-        duration,
-        0
-      );
+      performanceMetrics.recordNetworkRequest(this.buildURL(config), duration, 0);
 
       // Handle error with error handler
-      this.errorHandler.handleNetworkError(
-        err,
-        this.buildURL(config),
-        undefined
-      );
+      this.errorHandler.handleNetworkError(err, this.buildURL(config), undefined);
 
       // Retry logic
       if (attempt < (config.retryAttempts || this.config.retryAttempts)) {
@@ -197,7 +189,10 @@ export class APIInterceptor {
   /**
    * GET request
    */
-  async get<T = unknown>(url: string, config: Partial<RequestConfig> = {}): Promise<APIResponse<T>> {
+  async get<T = unknown>(
+    url: string,
+    config: Partial<RequestConfig> = {}
+  ): Promise<APIResponse<T>> {
     return this.request<T>({ ...config, url, method: 'GET' });
   }
 
@@ -226,7 +221,10 @@ export class APIInterceptor {
   /**
    * DELETE request
    */
-  async delete<T = unknown>(url: string, config: Partial<RequestConfig> = {}): Promise<APIResponse<T>> {
+  async delete<T = unknown>(
+    url: string,
+    config: Partial<RequestConfig> = {}
+  ): Promise<APIResponse<T>> {
     return this.request<T>({ ...config, url, method: 'DELETE' });
   }
 
@@ -261,9 +259,7 @@ export class APIInterceptor {
    * Build full URL with query parameters
    */
   private buildURL(config: RequestConfig): string {
-    let url = config.url.startsWith('http') 
-      ? config.url 
-      : `${this.config.baseURL}${config.url}`;
+    let url = config.url.startsWith('http') ? config.url : `${this.config.baseURL}${config.url}`;
 
     if (config.params) {
       const params = new URLSearchParams();
@@ -281,10 +277,10 @@ export class APIInterceptor {
    */
   private buildHeaders(config: RequestConfig): Headers {
     const headers = new Headers();
-    
+
     // Add default headers
     headers.set('Content-Type', 'application/json');
-    
+
     // Add config headers
     Object.entries(config.headers || {}).forEach(([key, value]) => {
       headers.set(key, value);
@@ -307,15 +303,15 @@ export class APIInterceptor {
    */
   private async parseResponse<T>(response: Response): Promise<T> {
     const contentType = response.headers.get('content-type');
-    
+
     if (contentType?.includes('application/json')) {
       return await response.json();
     }
-    
+
     if (contentType?.includes('text/')) {
       return (await response.text()) as T;
     }
-    
+
     return (await response.blob()) as T;
   }
 
@@ -332,14 +328,14 @@ export class APIInterceptor {
    */
   private getFromCache(key: string): APIResponse | null {
     const entry = this.cache.get(key);
-    
+
     if (!entry) return null;
-    
+
     if (Date.now() > entry.expiresAt) {
       this.cache.delete(key);
       return null;
     }
-    
+
     return entry.data as APIResponse;
   }
 
@@ -379,7 +375,7 @@ export class APIInterceptor {
   getCacheStats() {
     const entries = Array.from(this.cache.values());
     const now = Date.now();
-    const valid = entries.filter((e) => now <= e.expiresAt).length;
+    const valid = entries.filter(e => now <= e.expiresAt).length;
     const expired = entries.length - valid;
 
     return {
@@ -394,7 +390,7 @@ export class APIInterceptor {
    * Delay helper for retry logic
    */
   private delay(ms: number): Promise<void> {
-    return new Promise((resolve) => setTimeout(resolve, ms));
+    return new Promise(resolve => setTimeout(resolve, ms));
   }
 
   /**

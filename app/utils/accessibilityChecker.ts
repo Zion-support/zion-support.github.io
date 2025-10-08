@@ -1,9 +1,9 @@
 /**
  * Accessibility Checker Utility
- * 
+ *
  * Provides tools for checking and improving accessibility (a11y) in React applications.
  * Helps ensure WCAG 2.1 AA compliance.
- * 
+ *
  * @module accessibilityChecker
  * @author Zion Tech Group
  * @version 1.0.0
@@ -77,9 +77,9 @@ export interface A11yCheckResult {
 
 /**
  * Accessibility Checker class
- * 
+ *
  * Provides comprehensive accessibility checking and reporting
- * 
+ *
  * @example
  * ```typescript
  * const checker = new AccessibilityChecker();
@@ -92,7 +92,7 @@ export class AccessibilityChecker {
 
   /**
    * Check an element and its descendants for accessibility issues
-   * 
+   *
    * @param element - The DOM element to check
    * @returns Accessibility check result
    */
@@ -123,7 +123,7 @@ export class AccessibilityChecker {
 
   /**
    * Check entire document for accessibility issues
-   * 
+   *
    * @returns Accessibility check result
    */
   public checkDocument(): A11yCheckResult {
@@ -142,13 +142,13 @@ export class AccessibilityChecker {
 
   /**
    * Check images for alt text
-   * 
+   *
    * @private
    * @param element - Root element to check
    */
   private checkImages(element: Element): void {
     const images = element.querySelectorAll('img');
-    
+
     images.forEach((img, index) => {
       const alt = img.getAttribute('alt');
       const role = img.getAttribute('role');
@@ -185,13 +185,13 @@ export class AccessibilityChecker {
 
   /**
    * Check heading hierarchy
-   * 
+   *
    * @private
    * @param element - Root element to check
    */
   private checkHeadings(element: Element): void {
     const headings = Array.from(element.querySelectorAll('h1, h2, h3, h4, h5, h6'));
-    
+
     if (headings.length === 0) return;
 
     let previousLevel = 0;
@@ -246,7 +246,7 @@ export class AccessibilityChecker {
 
   /**
    * Check links for accessibility
-   * 
+   *
    * @private
    * @param element - Root element to check
    */
@@ -289,7 +289,11 @@ export class AccessibilityChecker {
 
       // Check for links opening in new window without warning
       const target = link.getAttribute('target');
-      if (target === '_blank' && !ariaLabel?.includes('new window') && !text?.includes('(opens in new window)')) {
+      if (
+        target === '_blank' &&
+        !ariaLabel?.includes('new window') &&
+        !text?.includes('(opens in new window)')
+      ) {
         this.addIssue({
           type: 'new-window-no-warning',
           severity: A11ySeverity.MINOR,
@@ -298,7 +302,8 @@ export class AccessibilityChecker {
           message: `Link ${index + 1} opens in new window without warning`,
           element: `a[to="${link.getAttribute('href')}"]`,
           fix: 'Add indication that link opens in new window',
-          codeExample: '<Link to="..." target="_blank" rel="noopener noreferrer">Link text (opens in new window)</Link>',
+          codeExample:
+            '<Link to="..." target="_blank" rel="noopener noreferrer">Link text (opens in new window)</Link>',
         });
       }
     });
@@ -306,7 +311,7 @@ export class AccessibilityChecker {
 
   /**
    * Check buttons for accessibility
-   * 
+   *
    * @private
    * @param element - Root element to check
    */
@@ -336,7 +341,7 @@ export class AccessibilityChecker {
 
   /**
    * Check form elements for accessibility
-   * 
+   *
    * @private
    * @param element - Root element to check
    */
@@ -371,7 +376,7 @@ export class AccessibilityChecker {
 
   /**
    * Check color contrast (basic check)
-   * 
+   *
    * @private
    * @param element - Root element to check
    */
@@ -380,7 +385,7 @@ export class AccessibilityChecker {
     // computing actual rendered colors which is complex
     const elementsWithColor = element.querySelectorAll('[style*="color"]');
 
-    elementsWithColor.forEach((el) => {
+    elementsWithColor.forEach(el => {
       const style = el.getAttribute('style');
       if (style?.includes('color:') && !style.includes('background')) {
         this.addIssue({
@@ -398,7 +403,7 @@ export class AccessibilityChecker {
 
   /**
    * Check keyboard accessibility
-   * 
+   *
    * @private
    * @param element - Root element to check
    */
@@ -406,7 +411,7 @@ export class AccessibilityChecker {
     // Check for interactive elements with tabindex="-1"
     const interactiveElements = element.querySelectorAll('a, button, input, select, textarea');
 
-    interactiveElements.forEach((el) => {
+    interactiveElements.forEach(el => {
       const tabindex = el.getAttribute('tabindex');
       if (tabindex === '-1') {
         this.addIssue({
@@ -425,7 +430,7 @@ export class AccessibilityChecker {
     // Check for divs/spans with onclick but no keyboard handler
     const clickableNonInteractive = element.querySelectorAll('[onclick]:not(a):not(button)');
 
-    clickableNonInteractive.forEach((el) => {
+    clickableNonInteractive.forEach(el => {
       const role = el.getAttribute('role');
       const tabindex = el.getAttribute('tabindex');
       const onKeyDown = el.getAttribute('onkeydown');
@@ -447,21 +452,37 @@ export class AccessibilityChecker {
 
   /**
    * Check ARIA usage
-   * 
+   *
    * @private
    * @param element - Root element to check
    */
   private checkARIA(element: Element): void {
-    const elementsWithAria = element.querySelectorAll('[role], [aria-label], [aria-labelledby], [aria-describedby]');
+    const elementsWithAria = element.querySelectorAll(
+      '[role], [aria-label], [aria-labelledby], [aria-describedby]'
+    );
 
-    elementsWithAria.forEach((el) => {
+    elementsWithAria.forEach(el => {
       const role = el.getAttribute('role');
 
       // Check for invalid ARIA roles
       const validRoles = [
-        'alert', 'button', 'checkbox', 'dialog', 'link', 'navigation',
-        'region', 'search', 'tabpanel', 'banner', 'complementary',
-        'contentinfo', 'form', 'main', 'article', 'note', 'presentation',
+        'alert',
+        'button',
+        'checkbox',
+        'dialog',
+        'link',
+        'navigation',
+        'region',
+        'search',
+        'tabpanel',
+        'banner',
+        'complementary',
+        'contentinfo',
+        'form',
+        'main',
+        'article',
+        'note',
+        'presentation',
       ];
 
       if (role && !validRoles.includes(role)) {
@@ -497,7 +518,7 @@ export class AccessibilityChecker {
 
   /**
    * Check for proper use of landmark regions
-   * 
+   *
    * @private
    * @param element - Root element to check
    */
@@ -520,7 +541,7 @@ export class AccessibilityChecker {
 
   /**
    * Add an issue to the list
-   * 
+   *
    * @private
    * @param issue - Partial issue object
    */
@@ -533,7 +554,7 @@ export class AccessibilityChecker {
 
   /**
    * Generate unique issue ID
-   * 
+   *
    * @private
    * @returns Unique identifier
    */
@@ -543,7 +564,7 @@ export class AccessibilityChecker {
 
   /**
    * Calculate accessibility score based on issues
-   * 
+   *
    * @private
    * @returns Score from 0-100
    */
@@ -568,7 +589,7 @@ export class AccessibilityChecker {
 
   /**
    * Get issues by severity
-   * 
+   *
    * @param severity - Severity level to filter by
    * @returns Array of issues with the specified severity
    */
@@ -578,7 +599,7 @@ export class AccessibilityChecker {
 
   /**
    * Get issues by WCAG level
-   * 
+   *
    * @param level - WCAG level to filter by
    * @returns Array of issues that violate the specified WCAG level
    */
@@ -588,7 +609,7 @@ export class AccessibilityChecker {
 
   /**
    * Generate accessibility report
-   * 
+   *
    * @returns Formatted report string
    */
   public generateReport(): string {

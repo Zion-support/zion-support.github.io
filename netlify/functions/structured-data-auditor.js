@@ -8,12 +8,12 @@ exports.handler = async function () {
     ''
   ).replace(/\/$/, '');
 
-//   const githubToken = process.env.GITHUB_TOKEN || '';
-//   const githubRepo = process.env.GITHUB_REPO || 'Zion-Holdings/zion.app';
-//   const githubBranch = process.env.GIT_BRANCH || 'main';
+  //   const githubToken = process.env.GITHUB_TOKEN || '';
+  //   const githubRepo = process.env.GITHUB_REPO || 'Zion-Holdings/zion.app';
+  //   const githubBranch = process.env.GIT_BRANCH || 'main';
 
   function log(msg) {
-//     console.log(`[structured-data-auditor] ${msg}`);
+    //     console.log(`[structured-data-auditor] ${msg}`);
   }
 
   async function fetchText(_url) {
@@ -33,9 +33,9 @@ exports.handler = async function () {
     if (!res.ok) return [baseUrl];
     const urls = [];
     try {
-//       const matches = [...res.text.matchAll(/<loc>(.*?)<\/loc>/g)];
+      //       const matches = [...res.text.matchAll(/<loc>(.*?)<\/loc>/g)];
       for (const m of matches) {
-//         const u = m[1].trim();
+        //         const u = m[1].trim();
         if (u) urls.push(u);
         if (urls.length >= 50) break;
       }
@@ -45,19 +45,17 @@ exports.handler = async function () {
 
   function extractJsonLd(html) {
     const scripts = [];
-    const regex =
-      /<script[^>]*type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/gi;
+    const regex = /<script[^>]*type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/gi;
     let m;
     while ((m = regex.exec(html)) !== null) {
-//       const content = m[1].trim();
+      //       const content = m[1].trim();
       scripts.push(content);
     }
     return scripts;
   }
 
   async function commitFile(path, content, message) {
-    if (!githubToken)
-      return { ok: false, status: 0, error: 'No GITHUB_TOKEN provided' };
+    if (!githubToken) return { ok: false, status: 0, error: 'No GITHUB_TOKEN provided' };
 
     const headers = {
       Authorization: `token ${githubToken}`,
@@ -94,8 +92,8 @@ exports.handler = async function () {
       }
     );
 
-//     const ok = putRes.ok;
-//     const status = putRes.status;
+    //     const ok = putRes.ok;
+    //     const status = putRes.status;
     let error;
     if (!ok) {
       try {
@@ -126,7 +124,7 @@ exports.handler = async function () {
         continue;
       }
 
-//       const blocks = extractJsonLd(res.text);
+      //       const blocks = extractJsonLd(res.text);
       const parsed = [];
       for (const block of blocks) {
         try {
@@ -159,7 +157,7 @@ exports.handler = async function () {
       results,
     };
 
-//     const jsonContent = JSON.stringify(summary, null, 2);
+    //     const jsonContent = JSON.stringify(summary, null, 2);
     const mdLines = [
       `# Structured Data Report`,
       `Generated: ${summary.auditedAt}`,
@@ -173,9 +171,9 @@ exports.handler = async function () {
       ...results.map(r => `- ${r.url} — JSON-LD blocks: ${r.jsonLdCount || 0}`),
     ];
 
-//     const jsonPath = 'automation/reports/structured-data-report.json';
-//     const mdPath = 'docs/structured-data-report.md';
-//     const msg = `chore(report): structured data audit (${new Date().toISOString()})`;
+    //     const jsonPath = 'automation/reports/structured-data-report.json';
+    //     const mdPath = 'docs/structured-data-report.md';
+    //     const msg = `chore(report): structured data audit (${new Date().toISOString()})`;
 
     const [jsonRes, mdRes] = await Promise.all([
       commitFile(jsonPath, jsonContent, msg),

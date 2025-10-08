@@ -76,7 +76,7 @@ export class CacheManager {
    */
   private cleanup(): void {
     const now = Date.now();
-    
+
     // Clean memory cache
     for (const [key, entry] of this.memoryCache.entries()) {
       if (this.isExpired(entry, now)) {
@@ -87,7 +87,7 @@ export class CacheManager {
     // Clean localStorage
     if (typeof window !== 'undefined' && window.localStorage) {
       const keysToRemove: string[] = [];
-      
+
       for (let i = 0; i < localStorage.length; i++) {
         const key = localStorage.key(i);
         if (key && key.startsWith('cache_')) {
@@ -129,11 +129,7 @@ export class CacheManager {
   /**
    * Set cache entry
    */
-  set<T>(
-    key: string,
-    value: T,
-    options: { ttl?: number } = {}
-  ): void {
+  set<T>(key: string, value: T, options: { ttl?: number } = {}): void {
     const ttl = options.ttl !== undefined ? options.ttl : this.defaultTTL;
 
     const entry: CacheEntry<T> = {
@@ -146,23 +142,25 @@ export class CacheManager {
 
     if (this.storage === CacheStorage.Memory) {
       this.memoryCache.set(key, entry);
-    } else if (this.storage === CacheStorage.LocalStorage && typeof window !== 'undefined' && window.localStorage) {
+    } else if (
+      this.storage === CacheStorage.LocalStorage &&
+      typeof window !== 'undefined' &&
+      window.localStorage
+    ) {
       try {
-        localStorage.setItem(
-          this.getStorageKey(key),
-          JSON.stringify(entry)
-        );
+        localStorage.setItem(this.getStorageKey(key), JSON.stringify(entry));
       } catch (error) {
         logger.error('Failed to set localStorage cache', error);
         // Fallback to memory cache
         this.memoryCache.set(key, entry);
       }
-    } else if (this.storage === CacheStorage.SessionStorage && typeof window !== 'undefined' && window.sessionStorage) {
+    } else if (
+      this.storage === CacheStorage.SessionStorage &&
+      typeof window !== 'undefined' &&
+      window.sessionStorage
+    ) {
       try {
-        sessionStorage.setItem(
-          this.getStorageKey(key),
-          JSON.stringify(entry)
-        );
+        sessionStorage.setItem(this.getStorageKey(key), JSON.stringify(entry));
       } catch (error) {
         logger.error('Failed to set sessionStorage cache', error);
         // Fallback to memory cache
@@ -180,8 +178,12 @@ export class CacheManager {
     let entry: CacheEntry<T> | null = null;
 
     if (this.storage === CacheStorage.Memory) {
-      entry = this.memoryCache.get(key) as CacheEntry<T> | undefined || null;
-    } else if (this.storage === CacheStorage.LocalStorage && typeof window !== 'undefined' && window.localStorage) {
+      entry = (this.memoryCache.get(key) as CacheEntry<T> | undefined) || null;
+    } else if (
+      this.storage === CacheStorage.LocalStorage &&
+      typeof window !== 'undefined' &&
+      window.localStorage
+    ) {
       try {
         const item = localStorage.getItem(this.getStorageKey(key));
         if (item) {
@@ -190,7 +192,11 @@ export class CacheManager {
       } catch (error) {
         logger.error('Failed to get localStorage cache', error);
       }
-    } else if (this.storage === CacheStorage.SessionStorage && typeof window !== 'undefined' && window.sessionStorage) {
+    } else if (
+      this.storage === CacheStorage.SessionStorage &&
+      typeof window !== 'undefined' &&
+      window.sessionStorage
+    ) {
       try {
         const item = sessionStorage.getItem(this.getStorageKey(key));
         if (item) {
@@ -232,9 +238,17 @@ export class CacheManager {
   delete(key: string): void {
     if (this.storage === CacheStorage.Memory) {
       this.memoryCache.delete(key);
-    } else if (this.storage === CacheStorage.LocalStorage && typeof window !== 'undefined' && window.localStorage) {
+    } else if (
+      this.storage === CacheStorage.LocalStorage &&
+      typeof window !== 'undefined' &&
+      window.localStorage
+    ) {
       localStorage.removeItem(this.getStorageKey(key));
-    } else if (this.storage === CacheStorage.SessionStorage && typeof window !== 'undefined' && window.sessionStorage) {
+    } else if (
+      this.storage === CacheStorage.SessionStorage &&
+      typeof window !== 'undefined' &&
+      window.sessionStorage
+    ) {
       sessionStorage.removeItem(this.getStorageKey(key));
     }
   }
@@ -247,7 +261,11 @@ export class CacheManager {
       this.memoryCache.clear();
     }
 
-    if (this.storage === CacheStorage.LocalStorage && typeof window !== 'undefined' && window.localStorage) {
+    if (
+      this.storage === CacheStorage.LocalStorage &&
+      typeof window !== 'undefined' &&
+      window.localStorage
+    ) {
       const keysToRemove: string[] = [];
       for (let i = 0; i < localStorage.length; i++) {
         const key = localStorage.key(i);
@@ -258,7 +276,11 @@ export class CacheManager {
       keysToRemove.forEach(key => localStorage.removeItem(key));
     }
 
-    if (this.storage === CacheStorage.SessionStorage && typeof window !== 'undefined' && window.sessionStorage) {
+    if (
+      this.storage === CacheStorage.SessionStorage &&
+      typeof window !== 'undefined' &&
+      window.sessionStorage
+    ) {
       const keysToRemove: string[] = [];
       for (let i = 0; i < sessionStorage.length; i++) {
         const key = sessionStorage.key(i);

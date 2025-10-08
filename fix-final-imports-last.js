@@ -15,12 +15,12 @@ function processFile(filePath) {
       // Fix root-level files
       {
         pattern: /import\s+{\s*Metadata\s*}\s+from\s+'\.\/types\/next';/g,
-        replacement: "import { Metadata } from './types/next';"
+        replacement: "import { Metadata } from './types/next';",
       },
       {
         pattern: /import\s+Link\s+from\s+'\.\/utils\/link';/g,
-        replacement: "import Link from './utils/link';"
-      }
+        replacement: "import Link from './utils/link';",
+      },
     ];
 
     replacements.forEach(({ pattern, replacement }) => {

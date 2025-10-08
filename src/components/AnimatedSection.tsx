@@ -7,11 +7,11 @@ interface AnimatedSectionProps {
   delay?: number;
 }
 
-const AnimatedSection: React.FC<AnimatedSectionProps> = ({ 
-  children, 
-  className = '', 
+const AnimatedSection: React.FC<AnimatedSectionProps> = ({
+  children,
+  className = '',
   animation = 'fadeIn',
-  delay = 0 
+  delay = 0,
 }) => {
   const getAnimationClass = () => {
     switch (animation) {
@@ -29,10 +29,7 @@ const AnimatedSection: React.FC<AnimatedSectionProps> = ({
   };
 
   return (
-    <div 
-      className={`${getAnimationClass()} ${className}`}
-      style={{ animationDelay: `${delay}ms` }}
-    >
+    <div className={`${getAnimationClass()} ${className}`} style={{ animationDelay: `${delay}ms` }}>
       {children}
     </div>
   );
