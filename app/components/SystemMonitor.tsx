@@ -6,24 +6,12 @@
  */
 
 import React, { useState, useEffect, useCallback } from 'react';
+import { performanceOptimizer } from '../utils/performanceOptimizer';
 import { errorHandler } from '../utils/enhancedErrorHandler';
-
-// Collect basic performance metrics
-const collectPerformanceMetrics = () => {
-  if (typeof window === 'undefined' || !window.performance) return null;
-  
-  const navigation = window.performance.timing;
-  const paint = window.performance.getEntriesByType('paint');
-  
-  return {
-    loadTime: navigation.loadEventEnd - navigation.navigationStart,
-    firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0,
-  };
-};
 
 // Helper functions
 const calculatePerformanceScore = () => {
-  const metrics = collectPerformanceMetrics();
+  const metrics = performanceOptimizer.getMetrics();
   if (!metrics) return 0;
   
   let score = 100;
@@ -109,7 +97,7 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
   // Update metrics
   const updateMetrics = useCallback(() => {
     try {
-      const performanceMetrics = collectPerformanceMetrics();
+      const performanceMetrics = performanceOptimizer.getMetrics();
       const performanceScore = calculatePerformanceScore();
       const errorStats = errorHandler.getErrorStatistics();
 
@@ -201,7 +189,7 @@ console.error('Failed to update metrics:', error);
         effectiveType: connection?.effectiveType || 'unknown',
         downlink: connection?.downlink || 0,
         rtt: connection?.rtt || 0,
-        saveData: connection?.saveData || false,
+        saveData: connection.saveData || false,
       };
     }
 

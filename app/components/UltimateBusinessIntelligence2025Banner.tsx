@@ -115,37 +115,43 @@ const UltimateBusinessIntelligence2025Banner = () => {
               
               <button
                 onClick={handleClose}
-                className="text-gray-300 hover:text-white transition-colors text-3xl"
+                className="text-gray-300 hover:text-white transition-colors"
                 aria-label="Close banner"
               >
                 ×
               </button>
             </div>
 
-            {/* Metrics Grid */}
-            <div className="flex flex-wrap gap-6 mb-8">
+            <h2 className="text-2xl font-bold mb-2 text-white">
+              {currentContent.title}
+            </h2>
+            
+            <p className="text-gray-200 mb-4 max-w-2xl">
+              {currentContent.description}
+            </p>
+            
+            <div className="flex flex-wrap gap-4 mb-4">
               {Object.entries(currentContent.metrics).map(([key, value]) => (
                 <div key={key} className="text-center">
-                  <div className="text-3xl font-bold text-cyan-400">{value}</div>
-                  <div className="text-sm text-gray-300 capitalize">
+                  <div className="text-2xl font-bold text-cyan-400">{value}</div>
+                  <div className="text-xs text-gray-300 capitalize">
                     {key.replace(/([A-Z])/g, ' $1').trim()}
                   </div>
                 </div>
               ))}
             </div>
             
-            {/* Tags */}
-            <div className="flex flex-wrap gap-2 mb-8">
+            <div className="flex flex-wrap gap-2 mb-4">
               {currentContent.tags.map((tag) => (
                 <span
                   key={tag}
-                  className="bg-white/10 text-white px-3 py-1 rounded-full text-sm"
+                  className="bg-white/10 text-white px-2 py-1 rounded text-xs"
                 >
                   {tag}
                 </span>
               ))}
             </div>
-
+            
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
               <Link
