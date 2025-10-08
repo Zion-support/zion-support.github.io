@@ -140,15 +140,9 @@ class EnhancedErrorHandler {
           };
           this.handleError({
             type: 'resource',
-<<<<<<< HEAD
-            message: `Failed to load resource: ${target?.['src'] || target?.href}`,
+            message: `Failed to load resource: ${(target as any)?.src || (target as any)?.href}`,
             element: event.target?.constructor.name,
-            src: target?.['src'] || target?.href,
-=======
-            message: `Failed to load resource: ${target?.src || target?.href}`,
-            element: event.target?.constructor.name,
-            src: target?.src || target?.href,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-17a6
+            src: (target as any)?.src || (target as any)?.href,
           });
         }
       },
