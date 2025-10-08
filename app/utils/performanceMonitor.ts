@@ -43,13 +43,13 @@ class PerformanceMonitor {
     this.observeCLS();
   }
 
-  private observePaint(name: string, metricKey: 'fcp' | 'lcp' | 'fid' | 'cls' | 'ttfb' | 'fmp'): void {
+  private observePaint(name: string, metricKey: keyof PerformanceMetrics): void {
     try {
       const observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           if (entry.name === name) {
             this.metrics[metricKey] = entry.startTime;
-            this.logMetric(metricKey, entry.startTime);
+            this.logMetric(metricKey as string, entry.startTime);
           }
         }
       });
@@ -191,7 +191,7 @@ class PerformanceMonitor {
   }
 
   getScore(): number {
-    const scores: number[] = [];
+    const scores = [];
     
     // FCP scoring (0-100)
     if (this.metrics.fcp) {
@@ -228,21 +228,23 @@ class PerformanceMonitor {
     return scores.length > 0 ? Math.round(scores.reduce((a, b) => a + b, 0) / scores.length) : 0;
   }
 
-
   generateReport(): string {
     const score = this.getScore();
     const metrics = this.getMetrics();
     
-    return `
-Performance Report:
+    
+    return `Performance Report:
 Score: ${score}/100
-FCP: ${metrics.fcp}ms
-LCP: ${metrics.lcp}ms
-FID: ${metrics.fid}ms
-CLS: ${metrics.cls}
-TTFB: ${metrics.ttfb}ms
+Metrics:
+- FCP: ${metrics.fcp ? metrics.fcp.toFixed(2) + 'ms' : 'N/A'}
+- LCP: ${metrics.lcp ? metrics.lcp.toFixed(2) + 'ms' : 'N/A'}
+- FID: ${metrics.fid ? metrics.fid.toFixed(2) + 'ms' : 'N/A'}
+- CLS: ${metrics.cls ? metrics.cls.toFixed(3) : 'N/A'}
+- TTFB: ${metrics.ttfb ? metrics.ttfb.toFixed(2) + 'ms' : 'N/A'}
+- INP: ${metrics.inp ? metrics.inp.toFixed(2) + 'ms' : 'N/A'}
 `;
   }
 }
 
-export default new PerformanceMonitor();
+export const performanceMonitor = new PerformanceMonitor();
+export default PerformanceMonitor;

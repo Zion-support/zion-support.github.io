@@ -1,4 +1,3 @@
-// @ts-nocheck
 /**
  * Advanced Accessibility Enhancement Utility
  * Provides comprehensive accessibility improvements and monitoring
@@ -153,7 +152,7 @@ class AccessibilityEnhancer {
     if (!currentElement) return;
 
     // Handle radio button groups
-    if ('type' in currentElement && (currentElement as HTMLInputElement).type === 'radio') {
+    if ((currentElement as HTMLInputElement).type === 'radio') {
       this.handleRadioGroupNavigation(event, currentElement as HTMLInputElement);
     }
     
@@ -672,19 +671,24 @@ class AccessibilityEnhancer {
 
   /**
    * Get accessibility report
+  /**
+   * Get accessibility report
    */
   getReport(): string {
     const metrics = this.getMetrics();
     
-    return `
-Accessibility Report:
-
-Total Violations: ${metrics.violationsFixed}
-Focus Traps Detected: ${metrics.focusTraps}
-Missing Labels: ${metrics.missingLabels}
-Color Contrast Issues: ${metrics.colorContrastIssues}
+    return `Accessibility Report:
+- Violations: ${metrics.violations}
+- Warnings: ${metrics.warnings}
+- Passes: ${metrics.passes}
+- Tab Index Issues: ${metrics.tabIndexIssues}
+- Missing Alt Text: ${metrics.missingAltText}
+- Missing Labels: ${metrics.missingLabels}
+- Low Contrast: ${metrics.lowContrast}
+- Keyboard Traps: ${metrics.keyboardTraps}
 `;
   }
 }
 
-export default new AccessibilityEnhancer();
+export const accessibilityEnhancer = new AccessibilityEnhancer();
+export default AccessibilityEnhancer;
