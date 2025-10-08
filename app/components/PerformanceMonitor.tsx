@@ -98,10 +98,11 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       setPerformanceScore(score);
 
       if (enableConsoleLogging) {
-        logger.group('Performance Metrics', () => {
+        if (typeof console !== 'undefined') { console.group('Performance Metrics');
           logger.debug('Metrics', { metrics: currentMetrics });
           logger.debug('Score', { score });
-        });
+          console.groupEnd();
+        }
       }
     };
 
