@@ -53,102 +53,69 @@ class Logger {
   }
 
   /**
-   * Log a debug message (supports both string and structured metadata)
+   * Parse arguments to determine context and metadata
    */
-  debug(message: string | Record<string, unknown>, context?: string, metadata?: Record<string, unknown>): void {
-    if (typeof message === 'object') {
-      // If message is an object, extract actual message and merge metadata
-      const { message: msg = 'Debug', ...rest } = message as any;
-      this.log(LogLevel.DEBUG, String(msg), context, { ...rest, ...metadata });
-    } else {
-      this.log(LogLevel.DEBUG, message, context, metadata);
+  private parseArgs(
+    contextOrMetadata?: string | Record<string, unknown>,
+    metadata?: Record<string, unknown>
+  ): [string | undefined, Record<string, unknown> | undefined] {
+    if (typeof contextOrMetadata === 'string') {
+      return [contextOrMetadata, metadata];
     }
+    return [undefined, contextOrMetadata];
   }
 
   /**
-   * Log an info message (supports both string and structured metadata)
+   * Log a debug message
    */
-  info(message: string | Record<string, unknown>, context?: string, metadata?: Record<string, unknown>): void {
-    if (typeof message === 'object') {
-      // If message is an object, extract actual message and merge metadata
-      const { message: msg = 'Info', ...rest } = message as any;
-      this.log(LogLevel.INFO, String(msg), context, { ...rest, ...metadata });
-    } else {
-      this.log(LogLevel.INFO, message, context, metadata);
-    }
+  debug(message: string, contextOrMetadata?: string | Record<string, unknown>, metadata?: Record<string, unknown>): void {
+    const [context, meta] = this.parseArgs(contextOrMetadata, metadata);
+    this.log(LogLevel.DEBUG, message, context, meta);
   }
 
   /**
-   * Log a warning message (supports both string and structured metadata)
+   * Log an info message
    */
-  warn(message: string | Record<string, unknown>, context?: string, metadata?: Record<string, unknown>): void {
-    if (typeof message === 'object') {
-      // If message is an object, extract actual message and merge metadata
-      const { message: msg = 'Warning', ...rest } = message as any;
-      this.log(LogLevel.WARN, String(msg), context, { ...rest, ...metadata });
-    } else {
-      this.log(LogLevel.WARN, message, context, metadata);
-    }
+  info(message: string, contextOrMetadata?: string | Record<string, unknown>, metadata?: Record<string, unknown>): void {
+    const [context, meta] = this.parseArgs(contextOrMetadata, metadata);
+    this.log(LogLevel.INFO, message, context, meta);
   }
 
   /**
-   * Log a performance message (supports both string and structured metadata)
+   * Log a warning message
    */
-  perf(message: string | Record<string, unknown>, context?: string, metadata?: Record<string, unknown>): void {
-    if (typeof message === 'object') {
-      const { message: msg = 'Performance', ...rest } = message as any;
-      this.log(LogLevel.INFO, String(msg), context, { ...rest, ...metadata, type: 'performance' });
-    } else {
-      this.log(LogLevel.INFO, message, context, { ...metadata, type: 'performance' });
-    }
+  warn(message: string, contextOrMetadata?: string | Record<string, unknown>, metadata?: Record<string, unknown>): void {
+    const [context, meta] = this.parseArgs(contextOrMetadata, metadata);
+    this.log(LogLevel.WARN, message, context, meta);
   }
 
   /**
-   * Start a logging group (for console grouping)
-   */
-  group(label: string): void {
-    if (this.config.enableConsole && typeof console.group !== 'undefined') {
-      console.group(label);
-    }
-  }
-
-  /**
-   * End a logging group
-   */
-  groupEnd(): void {
-    if (this.config.enableConsole && typeof console.groupEnd !== 'undefined') {
-      console.groupEnd();
-    }
-  }
-
-  /**
-   * Log an error message (supports both string and structured metadata)
+   * Log an error message
    */
   error(
-    message: string | Record<string, unknown>,
-    error?: Error,
-    context?: string,
+    message: string,
+    errorOrContextOrMetadata?: Error | string | Record<string, unknown>,
+    contextOrMetadata?: string | Record<string, unknown>,
     metadata?: Record<string, unknown>
   ): void {
-    let actualMessage: string;
-    let actualMetadata: Record<string, unknown> = {};
+    let error: Error | undefined;
+    let context: string | undefined;
+    let meta: Record<string, unknown> | undefined;
 
-    if (typeof message === 'object') {
-      const { message: msg = 'Error', ...rest } = message as any;
-      actualMessage = String(msg);
-      actualMetadata = { ...rest, ...metadata };
+    if (errorOrContextOrMetadata instanceof Error) {
+      error = errorOrContextOrMetadata;
+      [context, meta] = this.parseArgs(contextOrMetadata, metadata);
     } else {
-      actualMessage = message;
-      actualMetadata = { ...metadata };
+      [context, meta] = this.parseArgs(errorOrContextOrMetadata, contextOrMetadata as Record<string, unknown> | undefined);
     }
 
     const entry: LogEntry = {
       level: LogLevel.ERROR,
-      message: actualMessage,
+      message,
       timestamp: new Date(),
       context,
       metadata: {
-        ...actualMetadata,
+        ...meta,
         error: error ? {
           name: error.name,
           message: error.message,
@@ -162,33 +129,32 @@ class Logger {
   }
 
   /**
-   * Log a fatal error message (supports both string and structured metadata)
+   * Log a fatal error message
    */
   fatal(
-    message: string | Record<string, unknown>,
-    error?: Error,
-    context?: string,
+    message: string,
+    errorOrContextOrMetadata?: Error | string | Record<string, unknown>,
+    contextOrMetadata?: string | Record<string, unknown>,
     metadata?: Record<string, unknown>
   ): void {
-    let actualMessage: string;
-    let actualMetadata: Record<string, unknown> = {};
+    let error: Error | undefined;
+    let context: string | undefined;
+    let meta: Record<string, unknown> | undefined;
 
-    if (typeof message === 'object') {
-      const { message: msg = 'Fatal', ...rest } = message as any;
-      actualMessage = String(msg);
-      actualMetadata = { ...rest, ...metadata };
+    if (errorOrContextOrMetadata instanceof Error) {
+      error = errorOrContextOrMetadata;
+      [context, meta] = this.parseArgs(contextOrMetadata, metadata);
     } else {
-      actualMessage = message;
-      actualMetadata = { ...metadata };
+      [context, meta] = this.parseArgs(errorOrContextOrMetadata, contextOrMetadata as Record<string, unknown> | undefined);
     }
 
     const entry: LogEntry = {
       level: LogLevel.FATAL,
-      message: actualMessage,
+      message,
       timestamp: new Date(),
       context,
       metadata: {
-        ...actualMetadata,
+        ...meta,
         error: error ? {
           name: error.name,
           message: error.message,
@@ -204,37 +170,37 @@ class Logger {
   }
 
   /**
+   * Log a performance metric
+   */
+  perf(metric: string, value: number, metadata?: Record<string, unknown>): void {
+    this.log(LogLevel.DEBUG, `Performance: ${metric}`, 'Performance', {
+      ...metadata,
+      metric,
+      value,
+    });
+  }
+
+  /**
+   * Group related log messages
+   */
+  group(label: string, fn: () => void): void {
+    if (this.config.enableConsole) {
+      console.group(label);
+      try {
+        fn();
+      } finally {
+        console.groupEnd();
+      }
+    } else {
+      fn();
+    }
+  }
+
+  /**
    * Create a child logger with a specific context
    */
   child(context: string): ContextLogger {
     return new ContextLogger(this, context);
-  }
-
-  /**
-   * Create a performance log group
-   */
-  perf(label: string, callback: () => void): void {
-    if (typeof window !== 'undefined' && performance?.mark) {
-      performance.mark(`${label}-start`);
-      callback();
-      performance.mark(`${label}-end`);
-      try {
-        performance.measure(label, `${label}-start`, `${label}-end`);
-      } catch (e) {
-        // Measurement may fail if marks don't exist
-      }
-    } else {
-      callback();
-    }
-  }
-
-  /**
-   * Create a console group
-   */
-  group(label: string): void {
-    if (this.config.enableConsole && typeof console.group === 'function') {
-      console.group(label);
-    }
   }
 
   /**
@@ -409,36 +375,32 @@ class Logger {
 class ContextLogger {
   constructor(private logger: Logger, private context: string) {}
 
-  debug(message: string | Record<string, unknown>, metadata?: Record<string, unknown>): void {
+  debug(message: string, metadata?: Record<string, unknown>): void {
     this.logger.debug(message, this.context, metadata);
   }
 
-  info(message: string | Record<string, unknown>, metadata?: Record<string, unknown>): void {
+  info(message: string, metadata?: Record<string, unknown>): void {
     this.logger.info(message, this.context, metadata);
   }
 
-  warn(message: string | Record<string, unknown>, metadata?: Record<string, unknown>): void {
+  warn(message: string, metadata?: Record<string, unknown>): void {
     this.logger.warn(message, this.context, metadata);
   }
 
-  error(message: string | Record<string, unknown>, error?: Error, metadata?: Record<string, unknown>): void {
+  error(message: string, error?: Error, metadata?: Record<string, unknown>): void {
     this.logger.error(message, error, this.context, metadata);
   }
 
-  fatal(message: string | Record<string, unknown>, error?: Error, metadata?: Record<string, unknown>): void {
+  fatal(message: string, error?: Error, metadata?: Record<string, unknown>): void {
     this.logger.fatal(message, error, this.context, metadata);
   }
 
-  perf(message: string | Record<string, unknown>, metadata?: Record<string, unknown>): void {
-    this.logger.perf(message, this.context, metadata);
+  perf(metric: string, value: number, metadata?: Record<string, unknown>): void {
+    this.logger.perf(metric, value, { ...metadata, context: this.context });
   }
 
-  group(label: string): void {
-    this.logger.group(label);
-  }
-
-  groupEnd(): void {
-    this.logger.groupEnd();
+  group(label: string, fn: () => void): void {
+    this.logger.group(`${this.context}: ${label}`, fn);
   }
 
   child(subContext: string): ContextLogger {
@@ -450,27 +412,23 @@ class ContextLogger {
 export const logger = new Logger();
 
 // Export convenience functions
-export const debug = (message: string | Record<string, unknown>, context?: string, metadata?: Record<string, unknown>) =>
+export const debug = (message: string, context?: string, metadata?: Record<string, unknown>) =>
   logger.debug(message, context, metadata);
-export const info = (message: string | Record<string, unknown>, context?: string, metadata?: Record<string, unknown>) =>
+export const info = (message: string, context?: string, metadata?: Record<string, unknown>) =>
   logger.info(message, context, metadata);
-export const warn = (message: string | Record<string, unknown>, context?: string, metadata?: Record<string, unknown>) =>
+export const warn = (message: string, context?: string, metadata?: Record<string, unknown>) =>
   logger.warn(message, context, metadata);
 export const error = (
-  message: string | Record<string, unknown>,
+  message: string,
   err?: Error,
   context?: string,
   metadata?: Record<string, unknown>
 ) => logger.error(message, err, context, metadata);
 export const fatal = (
-  message: string | Record<string, unknown>,
+  message: string,
   err?: Error,
   context?: string,
   metadata?: Record<string, unknown>
 ) => logger.fatal(message, err, context, metadata);
-export const perf = (message: string | Record<string, unknown>, context?: string, metadata?: Record<string, unknown>) =>
-  logger.perf(message, context, metadata);
-export const group = (label: string) => logger.group(label);
-export const groupEnd = () => logger.groupEnd();
 
 export default logger;

@@ -128,11 +128,12 @@ export async function performHealthCheck(): Promise<HealthStatus> {
     },
   };
 
-  logger.group('Health Check Results');
-  logger.info(`Status: ${status.status}`);
-  logger.info(`Checks: ${JSON.stringify(status.checks)}`);
-  logger.info(`Metrics: ${JSON.stringify(status.metrics)}`);
-  logger.perf(`Health check duration: ${performance.now() - startTime}ms`);
+  logger.group('Health Check Results', () => {
+    logger.info(`Status: ${status.status}`, 'HealthCheck');
+    logger.info(`Checks: ${JSON.stringify(status.checks)}`, 'HealthCheck');
+    logger.info(`Metrics: ${JSON.stringify(status.metrics)}`, 'HealthCheck');
+    logger.perf('Health check duration', performance.now() - startTime);
+  });
   logger.groupEnd();
 
   return status;
@@ -148,7 +149,7 @@ export function startHealthMonitoring(intervalMs: number = 60000): () => void {
     const health = await performHealthCheck();
     
     if (health.status !== 'healthy') {
-      logger.warn('Application health degraded', { 
+      logger.warn('Application health degraded', 'HealthCheck', { 
         status: health.status,
         timestamp: health.timestamp,
         checks: JSON.stringify(health.checks),
