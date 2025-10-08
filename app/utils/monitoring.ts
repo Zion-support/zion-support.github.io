@@ -166,15 +166,16 @@ class MonitoringService {
       const rating = value <= thresholds.good ? 'good' : value <= thresholds.needsImprovement ? 'needs-improvement' : 'poor'
       
       console.log(`[Performance] ${name}:`, {
-        value
-        rating
+        value,
+        rating,
         unit: name === 'cls' ? 'score' : 'ms'
       })
     }
     // Send to analytics (if configured)
-
-        value: Math.round(name === 'cls' ? value * 1000 : value)
-        event_category: 'Web Vitals'
+    if (typeof gtag !== 'undefined') {
+      gtag('event', 'web_vitals', {
+        value: Math.round(name === 'cls' ? value * 1000 : value),
+        event_category: 'Web Vitals',
         non_interaction: true,
       })
     }
@@ -189,7 +190,11 @@ class MonitoringService {
     console.error('[Error]', error)
 
     // Send to error tracking service (if configured)
-
+    if (typeof gtag !== 'undefined') {
+      gtag('event', 'exception', {
+        description: error.message,
+        fatal: false,
+      })
     }
   }
   public getMetrics(): PerformanceMetrics {
@@ -203,14 +208,12 @@ class MonitoringService {
   }
   public measureMemory(): void {
     if ('memory' in performance && performanceConfig.monitoring.enableMemoryMonitoring) {
-      const memory = (performance as { memory: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory
-
       const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory
 
  
       console.log('[Memory]', {
-        used: `${Math.round(memory.usedJSHeapSize / 1048576)}MB`
-        total: `${Math.round(memory.totalJSHeapSize / 1048576)}MB`
+        used: `${Math.round(memory.usedJSHeapSize / 1048576)}MB`,
+        total: `${Math.round(memory.totalJSHeapSize / 1048576)}MB`,
         limit: `${Math.round(memory.jsHeapSizeLimit / 1048576)}MB`
       })
     }
@@ -220,12 +223,12 @@ class MonitoringService {
       const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
       if (navigation) {
         console.log('[Navigation Timing]', {
-          'DNS Lookup': `${Math.round(navigation.domainLookupEnd - navigation.domainLookupStart)}ms`
-          'TCP Connect': `${Math.round(navigation.connectEnd - navigation.connectStart)}ms`
-          'TTFB': `${Math.round(navigation.responseStart - navigation.requestStart)}ms`
-          'Download': `${Math.round(navigation.responseEnd - navigation.responseStart)}ms`
-          'DOM Interactive': `${Math.round(navigation.domInteractive - navigation.fetchStart)}ms`
-          'DOM Complete': `${Math.round(navigation.domComplete - navigation.fetchStart)}ms`
+          'DNS Lookup': `${Math.round(navigation.domainLookupEnd - navigation.domainLookupStart)}ms`,
+          'TCP Connect': `${Math.round(navigation.connectEnd - navigation.connectStart)}ms`,
+          'TTFB': `${Math.round(navigation.responseStart - navigation.requestStart)}ms`,
+          'Download': `${Math.round(navigation.responseEnd - navigation.responseStart)}ms`,
+          'DOM Interactive': `${Math.round(navigation.domInteractive - navigation.fetchStart)}ms`,
+          'DOM Complete': `${Math.round(navigation.domComplete - navigation.fetchStart)}ms`,
           'Load Complete': `${Math.round(navigation.loadEventEnd - navigation.fetchStart)}ms`
         })
       }
