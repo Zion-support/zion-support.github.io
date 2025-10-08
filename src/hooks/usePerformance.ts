@@ -1,9 +1,5 @@
 import { useEffect } from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-32a9
-import analytics from '../utils/analytics';
+import { analytics } from '../utils/analytics';
 
 export const usePerformance = () => {
   useEffect(() => {
@@ -11,8 +7,8 @@ export const usePerformance = () => {
       return;
     }
 
-    const observer = new PerformanceObserver(list => {
-      list.getEntries().forEach(entry => {
+    const observer = new PerformanceObserver((list) => {
+      list.getEntries().forEach((entry) => {
         analytics.track(
           'long_task',
           'performance',
@@ -22,33 +18,14 @@ export const usePerformance = () => {
         );
       });
     });
-=======
-import { analytics } from '../utils/analytics';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-17a6
 
-export const usePerformance = () => {
-  useEffect(() => {
-    if ('PerformanceObserver' in window) {
-      const observer = new PerformanceObserver((list) => {
-        list.getEntries().forEach((entry) => {
-          analytics.track(
-            'long_task',
-            'performance',
-            'detected',
-            undefined,
-            entry.duration
-          );
-        });
-      });
+    observer.observe({ entryTypes: ['longtask'] });
 
-      observer.observe({ entryTypes: ['longtask'] });
-
-      return () => {
-        if (observer && typeof observer.disconnect === 'function') {
-          observer.disconnect();
-        }
-      };
-    }
+    return () => {
+      if (observer && typeof observer.disconnect === 'function') {
+        observer.disconnect();
+      }
+    };
   }, []);
 };
 

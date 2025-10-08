@@ -9,7 +9,6 @@ export const metadata: Metadata = {
 
 const ContactPage: React.FC = () => {
   return (
-<<<<<<< HEAD
     <div className='min-h-screen bg-gradient-to-br from-blue-50 to-gray-100 py-12 px-4 sm:px-6 lg:px-8'>
       <div className='max-w-7xl mx-auto'>
         <div className='text-center mb-12'>
@@ -37,7 +36,6 @@ const ContactPage: React.FC = () => {
                     United States
                   </p>
                 </div>
-=======
     <div className="min-h-screen bg-gray-50 py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
@@ -76,7 +74,6 @@ const ContactPage: React.FC = () => {
                   Middletown, DE 19709<br />
                   United States
                 </p>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-17a6
               </div>
             </div>
           </div>
@@ -123,10 +120,7 @@ const ContactPage: React.FC = () => {
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-=======
     </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-17a6
   );
 };
 
