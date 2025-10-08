@@ -1,32 +1,32 @@
-const fs = require('fs');
-// const path = require('path');
-const { execSync } = require('child_process');
+import fs from 'fs';
+import { glob } from 'glob';
 
-// Find all backup files
-const result = execSync('find app -name "*.backup" -type f', { encoding: 'utf-8' });
-const backupFiles = result.trim().split('\n').filter(f => f);
-
-// console.log(`Found ${backupFiles.length} backup files`);
-
-backupFiles.forEach(backupFile => {
-//   const targetFile = backupFile.replace('.backup', '');
-//   console.log(`Processing: ${backupFile} -> ${targetFile}`);
+async function fixMergeConflicts() {
+  // Find all files with merge conflicts
+  const files = await glob('app/**/*.{ts,tsx,js,jsx}');
   
-  try {
-    let content = fs.readFileSync(backupFile, 'utf-8');
-    
-    // Check if backup has merge conflicts
-    if (content.includes('<<<<<<<') || content.includes('=======') || content.includes('>>>>>>>')) {
-//       console.log(`  Backup has merge conflicts, keeping original`);
-      return;
+  for (const filePath of files) {
+    try {
+      let content = fs.readFileSync(filePath, 'utf8');
+      
+      // Fix merge conflicts by choosing the newer version (after =======)
+      const pattern = /<<<<<<< HEAD\n([\s\S]*?)\n=======\n([\s\S]*?)\n>>>>>>> [^\n]+\n?/g;
+      
+      if (pattern.test(content)) {
+        content = content.replace(pattern, (match, headContent, mainContent) => {
+          // Choose the main branch version (after =======)
+          return mainContent;
+        });
+        
+        fs.writeFileSync(filePath, content);
+        console.log(`Fixed merge conflicts in: ${filePath}`);
+      }
+    } catch (error) {
+      console.error(`Error fixing ${filePath}:`, error.message);
     }
-    
-    // If backup is clean, use it
-    fs.copyFileSync(backupFile, targetFile);
-//     console.log(`  ✓ Restored from backup`);
-  } catch (err) {
-//     console.log(`  ✗ Error: ${err.message}`);
   }
-});
+  
+  console.log('Merge conflicts fixed');
+}
 
-// console.log('\\nDone!');
+fixMergeConflicts();

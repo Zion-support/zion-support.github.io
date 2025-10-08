@@ -1,6 +1,6 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 
-import { Link } from 'react-router-dom';import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
+import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
 
 interface Props {
   children: ReactNode;
@@ -80,8 +80,8 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     this.sendErrorReport(errorReport);
 
     // Send to analytics if available
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('event', 'exception', {
+    if (typeof window !== 'undefined' && 'gtag' in window) {
+      (window as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag('event', 'exception', {
         description: error.message,
         fatal: false,
         custom_map: {
@@ -92,7 +92,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     }
   };
 
-  private sendErrorReport = async (errorReport: any) => {
+  private sendErrorReport = async (errorReport: Record<string, unknown>) => {
     try {
       // In a real app, you would send this to your error reporting service
       // For now, we'll just log it
@@ -178,7 +178,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
         return this.props.fallback;
       }
 
-      const { retryCount, error, errorInfo, errorId } = this.state;
+      const { retryCount, error, errorId } = this.state;
       const canRetry = retryCount < this.maxRetries;
 
       return (

@@ -112,11 +112,7 @@ class MonitoringService {
           }
         });
         longTaskObserver.observe({ entryTypes: ['longtask'] });
-<<<<<<< HEAD
-      } catch (error) {
-=======
       } catch {
->>>>>>> cursor/fix-errors-and-merge-to-main-fbf5
         // Long task API might not be available
       }
     }
@@ -224,14 +220,9 @@ class MonitoringService {
 
   public measureMemory(): void {
     if ('memory' in performance && performanceConfig.monitoring.enableMemoryMonitoring) {
-<<<<<<< HEAD
-      const memory = (performance as any).memory;
-      console.log('[Memory]', {
-=======
       const memory = (performance as { memory: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
- 
-    console.log('[Memory]', {
->>>>>>> cursor/fix-errors-and-merge-to-main-fbf5
+      
+      console.log('[Memory]', {
         used: `${Math.round(memory.usedJSHeapSize / 1048576)}MB`,
         total: `${Math.round(memory.totalJSHeapSize / 1048576)}MB`,
         limit: `${Math.round(memory.jsHeapSizeLimit / 1048576)}MB`,

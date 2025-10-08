@@ -1,13 +1,6 @@
 import React, { useState, useCallback, memo } from 'react';
 
-<<<<<<< HEAD
-=======
-import { Helmet } from 'react-helmet-async';
-
->>>>>>> main
-
-
-import { Link } from 'react-router-dom';interface OptimizedImageProps {
+interface OptimizedImageProps {
   src: string;
   alt: string;
   width?: number;
@@ -26,7 +19,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = memo(({
   height,
   className = '',
   priority = false,
-  placeholder = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaZWlnaHQ9IjEwMCUiIGZpbGw9IiNmM2Y0ZjYiLz48L3N2Zz4=',
+  placeholder: _placeholder = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaZWlnaHQ9IjEwMCUiIGZpbGw9IiNmM2Y0ZjYiLz48L3N2Zz4=',
   onLoad,
   onError
 }) => {

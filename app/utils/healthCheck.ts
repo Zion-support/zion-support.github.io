@@ -98,17 +98,12 @@ class HealthCheckService {
           name,
           duration,
         });
-<<<<<<< HEAD
-      } catch (error) {
-        logger.error(`Health check "${name}" failed`, error as Error);
-=======
       } catch {
-logger._error(`Health check "${name}" failed`, _error as Error);
->>>>>>> cursor/fix-errors-and-merge-to-main-fbf5
+        logger.error(`Health check "${name}" failed`);
         checks.push({
           name,
           status: 'fail',
-          message: error instanceof Error ? error.message : 'Unknown error',
+          message: 'Health check failed',
         });
       }
     }
@@ -192,12 +187,7 @@ logger._error(`Health check "${name}" failed`, _error as Error);
           usedPercent,
         },
       };
-<<<<<<< HEAD
-    } catch (error) {
-=======
-    } catch {
->>>>>>> cursor/fix-errors-and-merge-to-main-fbf5
-      return {
+    } catch {      return {
         name: 'memory',
         status: 'warn',
         message: 'Could not check memory usage',
@@ -234,12 +224,7 @@ logger._error(`Health check "${name}" failed`, _error as Error);
           summary: report.summary,
         },
       };
-<<<<<<< HEAD
-    } catch (error) {
-=======
-    } catch {
->>>>>>> cursor/fix-errors-and-merge-to-main-fbf5
-      return {
+    } catch {      return {
         name: 'performance',
         status: 'warn',
         message: 'Could not check performance',
@@ -309,12 +294,7 @@ logger._error(`Health check "${name}" failed`, _error as Error);
       try {
         localStorage.setItem('_size_test', testData);
         localStorage.removeItem('_size_test');
-<<<<<<< HEAD
-      } catch (error) {
-=======
-      } catch {
->>>>>>> cursor/fix-errors-and-merge-to-main-fbf5
-        return {
+      } catch {        return {
           name: 'storage',
           status: 'warn',
           message: 'LocalStorage space limited',
@@ -326,12 +306,7 @@ logger._error(`Health check "${name}" failed`, _error as Error);
         status: 'pass',
         message: 'Storage working correctly',
       };
-<<<<<<< HEAD
-    } catch (error) {
-=======
-    } catch {
->>>>>>> cursor/fix-errors-and-merge-to-main-fbf5
-      return {
+    } catch {      return {
         name: 'storage',
         status: 'fail',
         message: 'LocalStorage not available',

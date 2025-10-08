@@ -20,27 +20,6 @@ export interface PerformanceThresholds {
 }
 
 // Extended types for specific performance entry types
-<<<<<<< HEAD
-interface PerformancePaintTiming extends PerformanceEntry {
-  name: 'first-paint' | 'first-contentful-paint';
-}
-
-interface LargestContentfulPaint extends PerformanceEntry {
-  renderTime: number;
-  loadTime: number;
-  size: number;
-  id: string;
-  url: string;
-  element: Element | null;
-}
-
-interface PerformanceEventTiming extends PerformanceEntry {
-  processingStart: number;
-  processingEnd: number;
-  cancelable: boolean;
-  target: EventTarget | null;
-}
-=======
 // These interfaces are defined for future use but not currently used
 // interface _PerformancePaintTiming extends PerformanceEntry {
 //   name: 'first-paint' | 'first-contentful-paint';
@@ -61,8 +40,6 @@ interface PerformanceEventTiming extends PerformanceEntry {
 //   cancelable: boolean;
 //   target: EventTarget | null;
 // }
->>>>>>> cursor/fix-errors-and-merge-to-main-fbf5
-
 class PerformanceMonitor {
   private metrics: Map<string, PerformanceMetric> = new Map();
   private observers: PerformanceObserver[] = [];
