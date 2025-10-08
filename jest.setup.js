@@ -44,43 +44,34 @@ jest.mock('./app/hooks/usePerformanceMonitoring.ts', () => ({
 
 
 // Mock React Router (this is a Vite project, not Next.js)
-jest.mock('react-router-dom', () => ({
-  ...jest.requireActual('react-router-dom'),
-
-  useNavigate: () => jest.fn(),
-  useLocation: () => ({
-    pathname: '/',
-    search: '',
-    hash: '',
-    state: null,
-  }),
-  useParams: () => ({}),
-  BrowserRouter: ({ children }) => children,
-  MemoryRouter: ({ children, basename = '/' }) => {
-    const React = require('react');
-    const { createContext } = React;
-    
-    // Create a mock router context
-    const RouterContext = createContext({
-      basename,
-      location: { pathname: '/', search: '', hash: '', state: null },
-      navigator: {
-        createHref: jest.fn(),
-        go: jest.fn(),
-        push: jest.fn(),
-        replace: jest.fn(),
-      },
-      static: false,
-    });
-    
-    return React.createElement(RouterContext.Provider, { value: RouterContext._currentValue }, children);
-  },
-  RouterProvider: ({ router }) => null,
-  Link: ({ children, to, ...props }) => {
-    const React = require('react');
-    return React.createElement('a', { href: to, ...props }, children);
-  },
-}));
+jest.mock('react-router-dom', () => {
+  const actual = jest.requireActual('react-router-dom');
+  const { createContext } = require('react');
+  const RouterContext = createContext({ basename: '/' });
+  
+  return {
+    ...actual,
+    useNavigate: () => jest.fn(),
+    useLocation: () => ({
+      pathname: '/',
+      search: '',
+      hash: '',
+      state: null,
+    }),
+    useParams: () => ({}),
+    BrowserRouter: ({ children }) => (
+      <RouterContext.Provider value={{ basename: '/' }}>
+        {children}
+      </RouterContext.Provider>
+    ),
+    MemoryRouter: ({ children }) => (
+      <RouterContext.Provider value={{ basename: '/' }}>
+        {children}
+      </RouterContext.Provider>
+    ),
+    RouterProvider: ({ router }) => null,
+  };
+});
 
 // Mock window.matchMedia
 Object.defineProperty(window, 'matchMedia', {
