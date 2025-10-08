@@ -231,7 +231,7 @@ describe('AdvancedPerformanceMonitor', () => {
     const originalEnv = process.env['NODE_ENV'];
     Object.defineProperty(process.env, 'NODE_ENV', { value: 'development', writable: true });
 
-    render(<AdvancedPerformanceMonitor enableRealTimeMonitoring={true} />);
+    renderWithProviders(<AdvancedPerformanceMonitor enableRealTimeMonitoring={true} />);
 
     expect(screen.getByText('Performance Monitor')).toBeInTheDocument();
 
