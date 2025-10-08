@@ -38,7 +38,7 @@ import './globals.css';
 const App: React.FC = () => {
   useEffect(() => {
     // Initialize global error handling
-    logger.lifecycle('initialized', 'App');
+    logger.debug('initialized', { component: 'App' });
 
     // Initialize performance monitoring
     lazyLoadImages();
@@ -80,7 +80,7 @@ const App: React.FC = () => {
       }
     }, 30000);
     
-    logger.lifecycle('performance monitoring initialized', 'App');
+    logger.debug('performance monitoring initialized', { component: 'App' });
     logger.info('🚀 Zion Tech Group App initialized with comprehensive monitoring', { component: 'App' });
 
     return () => {
@@ -98,7 +98,7 @@ const App: React.FC = () => {
         enableErrorReporting={true}
         enableRetry={true}
         onError={(error, errorInfo) => {
-          logger.error('Application Error', error, { component: 'ErrorBoundary', errorInfo });
+          logger.error('Application Error', error, 'ErrorBoundary');
         }}
       >
         <AccessibilityEnhancer>
@@ -107,7 +107,7 @@ const App: React.FC = () => {
             description="Leading provider of enterprise AI solutions, quantum computing, and autonomous systems. Transform your business with our cutting-edge technology."
           >
             <AdvancedSEOOptimizer
-              config={{
+              seoData={{
                 title: 'Zion Tech Group - Advanced AI and IT Solutions',
                 description: 'Leading provider of enterprise AI solutions, quantum computing, and autonomous systems. Transform your business with our cutting-edge technology.',
                 keywords: ['AI solutions', 'enterprise AI', 'quantum computing', 'autonomous systems', 'digital transformation', 'automation', 'cloud services', 'AI consulting', 'business intelligence', 'machine learning'],
@@ -153,7 +153,7 @@ const App: React.FC = () => {
                   enableRealTimeMonitoring={process.env['NODE_ENV'] === 'development'}
                   onMetricsUpdate={(metrics) => {
                     if (process.env['NODE_ENV'] === 'development') {
-                      logger.performance('Performance Metrics', metrics as unknown as Record<string, unknown>, 'PerformanceMonitor');
+                      logger.debug('Performance Metrics', metrics as unknown as Record<string, unknown>, 'PerformanceMonitor');
                     }
                   }}
                 />
