@@ -1,5 +1,19 @@
 'use client';
 
+// Simple logger utility
+const logger = {
+  info: (message: string, context?: string) => {
+    if (process.env.NODE_ENV === 'development') {
+      console.log(`[INFO${context ? ` - ${context}` : ''}]: ${message}`);
+    }
+  },
+  performance: (message: string, data?: Record<string, unknown>, context?: string) => {
+    if (process.env.NODE_ENV === 'development') {
+      console.log(`[PERFORMANCE${context ? ` - ${context}` : ''}]: ${message}`, data);
+    }
+  }
+};
+
 interface PerformanceMetrics {
   lcp?: number;
   fid?: number;
@@ -17,6 +31,9 @@ interface PerformanceOptimizerConfig {
   enableCaching: boolean;
   enableMonitoring: boolean;
 }
+
+// Export as PerformanceConfig for compatibility
+export type PerformanceConfig = OptimizationConfig;
 
 class PerformanceOptimizer {
   private config: PerformanceOptimizerConfig;
