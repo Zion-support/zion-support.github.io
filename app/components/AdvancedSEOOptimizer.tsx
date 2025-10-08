@@ -1,4 +1,4 @@
-import React, { useEffect, useCallback, useRef } from 'react';
+import React, { useEffect, useCallback } from 'react';
 import { Helmet } from 'react-helmet-async';
 
 interface SEOData {
@@ -38,7 +38,6 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
   enableTwitterCards = true,
   enableSchemaMarkup = true,
 }) => {
-  const _structuredDataRef = useRef<HTMLScriptElement | null>(null);
   const generateStructuredData = useCallback(() => {
     if (!enableStructuredData || !seoData.structuredData) return null;
 

@@ -49,7 +49,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         });
         lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
         observers.push(lcpObserver);
-} catch {
+      } catch {
         // LCP observer not supported
       }
     }
@@ -75,7 +75,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         });
         fidObserver.observe({ entryTypes: ['first-input'] });
         observers.push(fidObserver);
-} catch {
+      } catch {
         // FID observer not supported
       }
     }
@@ -102,7 +102,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         });
         clsObserver.observe({ entryTypes: ['layout-shift'] });
         observers.push(clsObserver);
-} catch {
+      } catch {
         // CLS observer not supported
       }
     }
@@ -126,7 +126,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         ttfb,
         memory,
       }));
-} catch {
+    } catch {
       // Performance measurement failed
     }
 
@@ -135,7 +135,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       observers.forEach(observer => {
         try {
           observer.disconnect();
-} catch {
+        } catch {
           // Error disconnecting observer
         }
       });
