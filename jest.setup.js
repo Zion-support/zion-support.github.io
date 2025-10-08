@@ -50,8 +50,9 @@ jest.mock('react-router-dom', () => ({
     state: null,
   }),
   useParams: () => ({}),
-
-
+  BrowserRouter: ({ children }) => children,
+  MemoryRouter: ({ children }) => children,
+  Router: ({ children }) => children,
 }));
 
 // Mock window.matchMedia
@@ -79,6 +80,43 @@ global.IntersectionObserver = class IntersectionObserver {
   }
   unobserve() {}
 };
+
+// Mock TextEncoder and TextDecoder
+global.TextEncoder = class TextEncoder {
+  encode(input) {
+    return new Uint8Array(Buffer.from(input, 'utf8'));
+  }
+};
+
+global.TextDecoder = class TextDecoder {
+  decode(input) {
+    return Buffer.from(input).toString('utf8');
+  }
+};
+
+// Mock React Router context
+const mockRouterContext = {
+  basename: '',
+  location: { pathname: '/', search: '', hash: '', state: null },
+  navigationType: 'POP',
+  navigator: {
+    createHref: jest.fn(),
+    go: jest.fn(),
+    push: jest.fn(),
+    replace: jest.fn(),
+  },
+  static: false,
+};
+
+// Mock React Router context provider
+jest.mock('react-router', () => ({
+  ...jest.requireActual('react-router'),
+  useLocation: () => mockRouterContext.location,
+  useNavigate: () => mockRouterContext.navigator.push,
+  useParams: () => ({}),
+  useSearchParams: () => [new URLSearchParams(), jest.fn()],
+  useRouterContext: () => mockRouterContext,
+}));
 
 // Suppress console errors in tests
 const originalError = console.error;

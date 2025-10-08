@@ -1,5 +1,6 @@
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import { HelmetProvider } from 'react-helmet-async';
+import { MemoryRouter } from 'react-router-dom';
 import AdvancedErrorBoundary from '../app/components/AdvancedErrorBoundary';
 import AdvancedSEOOptimizer from '../app/components/AdvancedSEOOptimizer';
 import AdvancedPerformanceMonitor from '../app/components/AdvancedPerformanceMonitor';
@@ -14,12 +15,23 @@ const ThrowError = ({ shouldThrow }: { shouldThrow: boolean }) => {
   return <div>No error</div>;
 };
 
+// Test wrapper component
+const TestWrapper = ({ children }: { children: React.ReactNode }) => (
+  <MemoryRouter>
+    <HelmetProvider>
+      {children}
+    </HelmetProvider>
+  </MemoryRouter>
+);
+
 describe('AdvancedErrorBoundary', () => {
   it('renders children when there is no error', () => {
     render(
-      <AdvancedErrorBoundary>
-        <div>Test content</div>
-      </AdvancedErrorBoundary>
+      <TestWrapper>
+        <AdvancedErrorBoundary>
+          <div>Test content</div>
+        </AdvancedErrorBoundary>
+      </TestWrapper>
     );
 
     expect(screen.getByText('Test content')).toBeInTheDocument();
@@ -31,9 +43,11 @@ describe('AdvancedErrorBoundary', () => {
       .mockImplementation(() => {});
 
     render(
-      <AdvancedErrorBoundary enableRetry={true}>
-        <ThrowError shouldThrow={true} />
-      </AdvancedErrorBoundary>
+      <TestWrapper>
+        <AdvancedErrorBoundary enableRetry={true}>
+          <ThrowError shouldThrow={true} />
+        </AdvancedErrorBoundary>
+      </TestWrapper>
     );
 
     expect(screen.getByText('Oops! Something went wrong')).toBeInTheDocument();
