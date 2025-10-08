@@ -84,23 +84,23 @@ const NewestContent2025Banner: React.FC = () => {
         </div>
 
         <div className="mt-16 pt-12 border-t border-white/20">
-          <h3 className="text-3xl font-bold text-white mb-6">
+          <h3 className="text-3xl font-bold text-white mb-6 text-center">
             Ready to Transform Your Business?
           </h3>
-          <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
+          <p className="text-gray-300 mb-6 max-w-2xl mx-auto text-center">
             Join thousands of forward-thinking organizations already leveraging these breakthrough 
             AI technologies to achieve unprecedented competitive advantage.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
               href="/services/ai-services"
-              className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
+              className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 text-center"
             >
               Explore AI Services
             </Link>
             <Link 
               href="/contact"
-              className="px-8 py-4 border border-slate-600 text-white font-semibold rounded-lg hover:bg-slate-800/50 transition-all duration-300"
+              className="px-8 py-4 border border-slate-600 text-white font-semibold rounded-lg hover:bg-slate-800/50 transition-all duration-300 text-center"
             >
               Schedule Consultation
             </Link>
@@ -122,7 +122,6 @@ const NewestContent2025Banner: React.FC = () => {
             <h3 className="text-xl font-bold text-white mb-2">Autonomous Systems</h3>
             <p className="text-gray-300">Intelligent automation driving enterprise efficiency</p>
           </div>
-        </div>
       </div>
     </section>
   );
