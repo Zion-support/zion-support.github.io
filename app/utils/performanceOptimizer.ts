@@ -93,8 +93,7 @@ class PerformanceOptimizer {
       console.warn('Performance API not fully supported:', error);
     }
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
+
   private observeLCP() {
     try {
       const observer = new PerformanceObserver((list) => {
@@ -108,6 +107,7 @@ class PerformanceOptimizer {
       // Ignore if not supported
     }
   }
+  
   private observeFID() {
     try {
       const observer = new PerformanceObserver((list) => {
@@ -115,7 +115,6 @@ class PerformanceOptimizer {
         entries.forEach((entry: PerformanceEntry) => {
           const fidEntry = entry as PerformanceEntry & { processingStart: number }
           this.metrics.fid = fidEntry.processingStart - fidEntry.startTime
-
         })
       })
       observer.observe({ entryTypes: ['first-input'] })
@@ -124,6 +123,7 @@ class PerformanceOptimizer {
       // Ignore if not supported
     }
   }
+  
   private observeCLS() {
     try {
       let clsValue = 0
@@ -143,6 +143,7 @@ class PerformanceOptimizer {
       // Ignore if not supported
     }
   }
+  
   private observeFCP() {
     try {
       const observer = new PerformanceObserver((list) => {
@@ -159,6 +160,7 @@ class PerformanceOptimizer {
       // Ignore if not supported
     }
   }
+  
   private observeTTFB() {
     try {
       const observer = new PerformanceObserver((list) => {
@@ -176,6 +178,7 @@ class PerformanceOptimizer {
       // Ignore if not supported
     }
   }
+  
   private observeMemory() {
     if (typeof window !== 'undefined' && 'memory' in performance) {
       const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; jsHeapSizeLimit: number } }).memory
@@ -184,36 +187,12 @@ class PerformanceOptimizer {
       }
     }
   }
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-    const images = document.querySelectorAll('img[data-src]')
-=======
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-6ad8
-
-  /**
-   * Measure render time
-   */
-  private measureRenderTime(): void {
-    if (typeof window === 'undefined' || !window.performance) return;
-<<<<<<< HEAD
->>>>>>> cursor/fix-errors-and-merge-to-main-eab2
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-6ad8
-=======
   /**
    * Measure render time using PerformanceObserver
    */
   private measureRenderTime(): void {
     if (typeof window === 'undefined') return;
->>>>>>> cursor/fix-errors-and-merge-to-main-b1a4
-    
-=======
-  private measureRenderTime(): void {
-    if (typeof window === 'undefined') return
-
->>>>>>> cursor/fix-errors-and-merge-to-main-5f6c
     // Check if PerformanceObserver exists (may not be available in test environments)
     if (typeof PerformanceObserver === 'undefined') return;
 
@@ -448,22 +427,15 @@ class PerformanceOptimizer {
   }
 
   /**
-<<<<<<< HEAD
    * Cleanup observers and resources
    */
-<<<<<<< HEAD
   public cleanup(): void {
-=======
-  cleanup(): void {
->>>>>>> cursor/fix-errors-and-merge-to-main-b1a4
     this.observers.forEach(observer => observer.disconnect());
     this.observers = [];
     this.isMonitoring = false;
   }
 
   /**
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-5f6c
    * Generate comprehensive performance report
    */
   generateComprehensiveReport(): string {
