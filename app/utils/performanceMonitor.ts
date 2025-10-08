@@ -191,7 +191,7 @@ class PerformanceMonitor {
   }
 
   getScore(): number {
-    const scores = [];
+    const scores: number[] = [];
     
     // FCP scoring (0-100)
     if (this.metrics.fcp) {

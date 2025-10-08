@@ -1,5 +1,16 @@
 import React, { useState, useEffect } from 'react';
 
+interface PerformanceMetrics {
+  fcp?: number;
+  lcp?: number;
+  fid?: number;
+  cls?: number;
+  ttfb?: number;
+  [key: string]: number | undefined;
+}
+
+
+
 
 const PerformanceDashboard: React.FC = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
