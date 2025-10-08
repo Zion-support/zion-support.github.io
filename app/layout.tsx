@@ -40,6 +40,21 @@ export default function RootLayout({
       category: 'AI Solutions',
       description: 'Enterprise AI solutions, digital transformation, and cloud services',
     },
+    potentialAction: {
+      '@type': 'SearchAction',
+      target: 'https://ziontechgroup.com/search?q={search_term_string}',
+      'query-input': 'required name=search_term_string'
+    },
+    mainEntity: {
+      '@type': 'WebSite',
+      name: 'Zion Tech Group',
+      url: 'https://ziontechgroup.com',
+      potentialAction: {
+        '@type': 'SearchAction',
+        target: 'https://ziontechgroup.com/search?q={search_term_string}',
+        'query-input': 'required name=search_term_string'
+      }
+    }
   };
 
   return (

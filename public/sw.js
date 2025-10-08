@@ -1,201 +1,118 @@
-/**
- * Service Worker for Zion Tech Group
- * Provides offline support, caching, and performance improvements
- */
-
-// const CACHE_VERSION = 'v1.0.0';
-// const CACHE_NAME = `zion-tech-${CACHE_VERSION}`;
-
-const STATIC_ASSETS = [
+// Service Worker for Zion Tech Group
+const CACHE_NAME = 'zion-tech-group-v1';
+const urlsToCache = [
   '/',
-  '/index.html',
+  '/static/js/bundle.js',
+  '/static/css/main.css',
   '/manifest.json',
-  '/offline.html',
+  '/favicon.ico',
+  '/logo192.png',
+  '/logo512.png'
 ];
 
-const CACHE_STRATEGIES = {
-  CACHE_FIRST: 'cache-first',
-  NETWORK_FIRST: 'network-first',
-  STALE_WHILE_REVALIDATE: 'stale-while-revalidate',
-};
-
-// Install event - cache static assets
+// Install event - cache resources
 self.addEventListener('install', (event) => {
-//   console.log('[Service Worker] Installing...');
-  
   event.waitUntil(
     caches.open(CACHE_NAME)
       .then((cache) => {
-//         console.log('[Service Worker] Caching static assets');
-        return cache.addAll(STATIC_ASSETS);
+        console.log('Opened cache');
+        return cache.addAll(urlsToCache);
       })
-      .then(() => self.skipWaiting())
+      .catch((error) => {
+        console.log('Cache install failed:', error);
+      })
+  );
+});
+
+// Fetch event - serve from cache when offline
+self.addEventListener('fetch', (event) => {
+  event.respondWith(
+    caches.match(event.request)
+      .then((response) => {
+        // Return cached version or fetch from network
+        if (response) {
+          return response;
+        }
+        
+        // Clone the request
+        const fetchRequest = event.request.clone();
+        
+        return fetch(fetchRequest).then((response) => {
+          // Check if valid response
+          if (!response || response.status !== 200 || response.type !== 'basic') {
+            return response;
+          }
+          
+          // Clone the response
+          const responseToCache = response.clone();
+          
+          caches.open(CACHE_NAME)
+            .then((cache) => {
+              cache.put(event.request, responseToCache);
+            });
+          
+          return response;
+        }).catch(() => {
+          // Return offline page if available
+          if (event.request.destination === 'document') {
+            return caches.match('/');
+          }
+        });
+      })
   );
 });
 
 // Activate event - clean up old caches
 self.addEventListener('activate', (event) => {
-//   console.log('[Service Worker] Activating...');
-  
   event.waitUntil(
-    caches.keys()
-      .then((cacheNames) => {
-        return Promise.all(
-          cacheNames
-            .filter((name) => name !== CACHE_NAME)
-            .map((name) => {
-//               console.log('[Service Worker] Deleting old cache:', name);
-              return caches.delete(name);
-            })
-        );
-      })
-      .then(() => self.clients.claim())
+    caches.keys().then((cacheNames) => {
+      return Promise.all(
+        cacheNames.map((cacheName) => {
+          if (cacheName !== CACHE_NAME) {
+            console.log('Deleting old cache:', cacheName);
+            return caches.delete(cacheName);
+          }
+        })
+      );
+    })
   );
 });
 
-// Fetch event - serve from cache or network
-self.addEventListener('fetch', (event) => {
-  const { request } = event;
-  const url = new URL(request.url);
-
-  // Skip cross-origin requests
-  if (url.origin !== location.origin) {
-    return;
-  }
-
-  // Determine caching strategy based on request
-  let strategy = CACHE_STRATEGIES.NETWORK_FIRST;
-
-  if (request.destination === 'image') {
-    strategy = CACHE_STRATEGIES.CACHE_FIRST;
-  } else if (request.destination === 'style' || request.destination === 'script') {
-    strategy = CACHE_STRATEGIES.STALE_WHILE_REVALIDATE;
-  }
-
-  event.respondWith(handleFetch(request, strategy));
-});
-
-// Handle fetch with different strategies
-async function handleFetch(_request, strategy) {
-  const cache = await caches.open(CACHE_NAME);
-
-  switch (strategy) {
-    case CACHE_STRATEGIES.CACHE_FIRST:
-      return cacheFirst(request, cache);
-    
-    case CACHE_STRATEGIES.NETWORK_FIRST:
-      return networkFirst(request, cache);
-    
-    case CACHE_STRATEGIES.STALE_WHILE_REVALIDATE:
-      return staleWhileRevalidate(request, cache);
-    
-    default:
-      return fetch(request);
-  }
-}
-
-// Cache-first strategy
-async function cacheFirst(_request, cache) {
-//   const cached = await cache.match(request);
-  
-  if (cached) {
-    return cached;
-  }
-
-  try {
-    const response = await fetch(request);
-    
-    if (response.ok) {
-      cache.put(request, response.clone());
-    }
-    
-    return response;
-  } catch (error) {
-//     console.error('[Service Worker] Fetch failed:', error);
-    return new Response('Offline', { status: 503 });
-  }
-}
-
-// Network-first strategy
-async function networkFirst(_request, cache) {
-  try {
-    const response = await fetch(request);
-    
-    if (response.ok) {
-      cache.put(request, response.clone());
-    }
-    
-    return response;
-  } catch (error) {
-//     const cached = await cache.match(request);
-    
-    if (cached) {
-      return cached;
-    }
-    
-    // Return offline page for navigation requests
-    if (request.mode === 'navigate') {
-//       const offlinePage = await cache.match('/offline.html');
-      if (offlinePage) {
-        return offlinePage;
-      }
-    }
-    
-    return new Response('Offline', { status: 503 });
-  }
-}
-
-// Stale-while-revalidate strategy
-async function staleWhileRevalidate(_request, cache) {
-//   const cached = await cache.match(request);
-  
-  const fetchPromise = fetch(request).then((response) => {
-    if (response.ok) {
-      cache.put(request, response.clone());
-    }
-    return response;
-  }).catch(() => {
-    // Silent fail - will use cached version
-  });
-
-  return cached || fetchPromise;
-}
-
-// Handle messages from clients
-self.addEventListener('message', (event) => {
-  if (event.data && event.data.type === 'SKIP_WAITING') {
-    self.skipWaiting();
-  }
-  
-  if (event.data && event.data.type === 'CACHE_URLS') {
-//     const urls = event.data.urls || [];
-    
-    event.waitUntil(
-      caches.open(CACHE_NAME)
-        .then((cache) => cache.addAll(urls))
-    );
-  }
-});
-
-// Background sync for offline actions
+// Background sync for form submissions
 self.addEventListener('sync', (event) => {
-  if (event.tag === 'sync-data') {
-    event.waitUntil(syncData());
+  if (event.tag === 'background-sync') {
+    event.waitUntil(doBackgroundSync());
   }
 });
 
-async function syncData() {
-  // Implement background sync logic here
-//   console.log('[Service Worker] Syncing data...');
+async function doBackgroundSync() {
+  // Handle offline form submissions
+  console.log('Background sync triggered');
 }
 
-// Push notification support
+// Push notifications
 self.addEventListener('push', (event) => {
   const options = {
-    body: event.data ? event.data.text() : 'New notification',
-    icon: '/icon-192.png',
-    badge: '/badge-72.png',
-    vibrate: [200, 100, 200],
+    body: event.data ? event.data.text() : 'New update available!',
+    icon: '/logo192.png',
+    badge: '/favicon-32x32.png',
+    vibrate: [100, 50, 100],
+    data: {
+      dateOfArrival: Date.now(),
+      primaryKey: 1
+    },
+    actions: [
+      {
+        action: 'explore',
+        title: 'View',
+        icon: '/favicon-32x32.png'
+      },
+      {
+        action: 'close',
+        title: 'Close',
+        icon: '/favicon-32x32.png'
+      }
+    ]
   };
 
   event.waitUntil(
@@ -203,13 +120,13 @@ self.addEventListener('push', (event) => {
   );
 });
 
-// Notification click handler
+// Notification click
 self.addEventListener('notificationclick', (event) => {
   event.notification.close();
-  
-  event.waitUntil(
-    clients.openWindow('/')
-  );
-});
 
-// console.log('[Service Worker] Loaded successfully');
+  if (event.action === 'explore') {
+    event.waitUntil(
+      clients.openWindow('/')
+    );
+  }
+});

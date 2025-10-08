@@ -1,4 +1,5 @@
 import React, { useCallback, useState, useEffect, Suspense, lazy, memo } from 'react';
+import { Helmet } from 'react-helmet-async';
 
 // Dynamically import heavy components for better performance
 const ContentPromotionBanner = lazy(() => import('./components/ContentPromotionBanner'));
@@ -47,14 +48,49 @@ const HomePage: React.FC = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-white to-purple-50">
-      {/* Skip to main content for accessibility */}
-      <a
-        href="#main-content"
-        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-indigo-600 text-white px-4 py-2 rounded-md z-50"
-      >
-        Skip to main content
-      </a>
+    <>
+      <Helmet>
+        <title>Zion Tech Group - Advanced AI and IT Solutions | Enterprise Technology</title>
+        <meta name="description" content="Leading provider of AI-powered enterprise solutions, automation, and digital transformation services. Transform your business with cutting-edge technology." />
+        <meta name="keywords" content="AI solutions, enterprise technology, digital transformation, cloud services, automation, machine learning, artificial intelligence" />
+        <meta property="og:title" content="Zion Tech Group - Advanced AI and IT Solutions" />
+        <meta property="og:description" content="Leading provider of AI-powered enterprise solutions, automation, and digital transformation services." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://ziontechgroup.com" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Zion Tech Group - Advanced AI and IT Solutions" />
+        <meta name="twitter:description" content="Leading provider of AI-powered enterprise solutions, automation, and digital transformation services." />
+        <link rel="canonical" href="https://ziontechgroup.com" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            "name": "Zion Tech Group - Advanced AI and IT Solutions",
+            "description": "Leading provider of AI-powered enterprise solutions, automation, and digital transformation services.",
+            "url": "https://ziontechgroup.com",
+            "mainEntity": {
+              "@type": "Organization",
+              "name": "Zion Tech Group",
+              "url": "https://ziontechgroup.com",
+              "logo": "https://ziontechgroup.com/logo.png",
+              "description": "Leading provider of AI-powered enterprise solutions, automation, and digital transformation services.",
+              "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": "+1-302-600-9898",
+                "contactType": "Customer Service"
+              }
+            }
+          })}
+        </script>
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-white to-purple-50">
+        {/* Skip to main content for accessibility */}
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-indigo-600 text-white px-4 py-2 rounded-md z-50"
+        >
+          Skip to main content
+        </a>
 
       {/* Content Promotion Banner */}
       <ContentPromotionBanner />
@@ -65,15 +101,15 @@ const HomePage: React.FC = () => {
           className={`text-center mb-16 transition-opacity duration-1000 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}
           aria-labelledby="hero-heading"
         >
-          <h1 id="hero-heading" className="text-5xl font-bold text-gray-900 mb-6">
+          <h1 id="hero-heading" className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
             Zion Tech Group
           </h1>
-          <p className="text-xl text-gray-600 mb-8" role="doc-subtitle">
+          <p className="text-xl md:text-2xl text-gray-600 mb-8" role="doc-subtitle">
             Advanced AI and IT Solutions
           </p>
-          <p className="text-lg text-gray-700 max-w-3xl mx-auto mb-8">
+          <p className="text-lg md:text-xl text-gray-700 max-w-4xl mx-auto mb-8 leading-relaxed">
             Leading provider of enterprise AI solutions, quantum computing, and autonomous systems.
-            Transform your business with our cutting-edge technology.
+            Transform your business with our cutting-edge technology and achieve unprecedented growth.
           </p>
           
           {/* Key Benefits */}
@@ -159,16 +195,24 @@ const HomePage: React.FC = () => {
         </section>
 
         {/* Content Carousel */}
-        <ContentCarousel />
+        <Suspense fallback={<div className="h-96 bg-gray-100 rounded-lg animate-pulse" />}>
+          <ContentCarousel />
+        </Suspense>
 
         {/* Dynamic Content Showcase */}
-        <DynamicContentShowcase />
+        <Suspense fallback={<div className="h-96 bg-gray-100 rounded-lg animate-pulse" />}>
+          <DynamicContentShowcase />
+        </Suspense>
 
         {/* Content Statistics */}
-        <ContentStatistics />
+        <Suspense fallback={<div className="h-64 bg-gray-100 rounded-lg animate-pulse" />}>
+          <ContentStatistics />
+        </Suspense>
 
         {/* Newsletter Signup */}
-        <ContentNewsletterSignup />
+        <Suspense fallback={<div className="h-48 bg-gray-100 rounded-lg animate-pulse" />}>
+          <ContentNewsletterSignup />
+        </Suspense>
 
         {/* Call to Action Section */}
         <section className="text-center bg-gradient-to-r from-indigo-50 to-purple-50 rounded-2xl p-12" aria-labelledby="cta-heading">
@@ -211,7 +255,8 @@ const HomePage: React.FC = () => {
           </div>
         </section>
       </main>
-    </div>
+      </div>
+    </>
   );
 };
 

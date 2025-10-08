@@ -30,6 +30,20 @@ export default defineConfig({
     // Optimize build performance
     emptyOutDir: true,
     copyPublicDir: true,
+    // Enable modern build
+    modernPolyfills: true,
+    // Optimize for production
+    terserOptions: {
+      compress: {
+        drop_console: true,
+        drop_debugger: true,
+        pure_funcs: ['console.log', 'console.info'],
+        passes: 2,
+      },
+      mangle: {
+        safari10: true,
+      },
+    },
     // Reduce memory usage during build
     rollupOptions: {
       maxParallelFileOps: 2,
@@ -73,47 +87,6 @@ export default defineConfig({
         assetFileNames: 'assets/[name]-[hash][extname]',
         chunkFileNames: 'assets/[name]-[hash].js',
         entryFileNames: 'assets/[name]-[hash].js',
-      },
-    },
-    terserOptions: {
-      compress: {
-        drop_console: true,
-        drop_debugger: true,
-        passes: 3,
-        unsafe: true,
-        unsafe_comps: true,
-        unsafe_math: true,
-        unsafe_proto: true,
-        // Remove unused code
-        dead_code: true,
-        // Optimize conditionals
-        conditionals: true,
-        // Optimize comparisons
-        comparisons: true,
-        // Optimize boolean contexts
-        booleans: true,
-        // Optimize loops
-        loops: true,
-        // Optimize if statements
-        if_return: true,
-        // Optimize sequences
-        sequences: true,
-        // Optimize properties
-        properties: true,
-      },
-      mangle: {
-        safari10: true,
-        toplevel: true,
-        // Mangle properties
-        properties: {
-          regex: /^_/,
-        },
-      },
-      format: {
-        comments: false,
-        ecma: 2015,
-        // Preserve semicolons for better compatibility
-        semicolons: true,
       },
     },
   },
