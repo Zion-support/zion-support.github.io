@@ -23,7 +23,7 @@ const UnifiedBanner = lazy(
 const ContentPromotion = lazy(
   () =>
     import('./components/UltimateBusinessIntelligence2025Banner').catch(() => {
-      return { default: EmptyComponent } as any;
+      return { default: EmptyComponent } as { default: React.ComponentType };
     }),
   {
     loading: () => <div className="animate-pulse bg-gray-200 h-64 rounded-lg"></div>,
