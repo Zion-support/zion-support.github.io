@@ -51,41 +51,10 @@ class Logger {
   getLogLevel(): LogLevel {
     return this.logLevel;
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-f285
 
   error(message: string, error?: Error | any): void {
     if (typeof console !== 'undefined') {
       console.error(`[ERROR] ${message}`, error || '');
-<<<<<<< HEAD
-=======
-=======
-
-  /**
-   * Log a debug message
-   */
-  debug(message: string, context?: LogContext, metadata?: Record<string, unknown>): void {
-    this.log(LogLevel.DEBUG, message, context, metadata);
-  }
-
-  /**
-   * Log an info message
-   */
-  info(message: string, context?: LogContext, metadata?: Record<string, unknown>): void {
-    this.log(LogLevel.INFO, message, context, metadata);
-  }
-
-  /**
-   * Log a warning message
-   */
-  warn(message: string, context?: LogContext, metadata?: Record<string, unknown>): void {
-    this.log(LogLevel.WARN, message, context, metadata);
-  }
-
->>>>>>> cursor/fix-errors-and-merge-to-main-ea96
   /**
    * Log an error message
    */
@@ -226,9 +195,6 @@ class Logger {
       case LogLevel.FATAL:
         return 'color: #DC2626; font-weight: bold; background: #FEF2F2;';
       default:
-<<<<<<< HEAD
-        return 'UNKNOWN'
->>>>>>> cursor/fix-errors-and-merge-to-main-1f43
 =======
         return 'color: #6B7280; font-weight: normal;';
     }
