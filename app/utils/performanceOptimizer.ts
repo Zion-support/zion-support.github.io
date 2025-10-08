@@ -126,9 +126,9 @@ class PerformanceOptimizer {
     const fidObserver = new PerformanceObserver((list) => {
       const entries = list.getEntries();
       entries.forEach((entry) => {
-        const eventEntry = entry as PerformanceEventTiming;
-        if (eventEntry.processingStart) {
-          console.log('FID:', eventEntry.processingStart - entry.startTime);
+        const fidEntry = entry as any;
+        if (fidEntry.processingStart) {
+          console.log('FID:', fidEntry.processingStart - entry.startTime);
         }
       });
     });
@@ -253,62 +253,50 @@ Performance Report:
   }
 
   public optimize(): void {
-    // Comprehensive optimization method
+    // Run all optimization strategies
     this.optimizeImages();
     this.enableCaching();
     this.enableCompression();
   }
 
-  public startMark(markName: string): void {
-    if (typeof window !== 'undefined' && window.performance && window.performance.mark) {
-      try {
-        window.performance.mark(`${markName}-start`);
-      } catch (error) {
-        console.warn('Failed to create performance mark:', error);
-      }
+  public startMark(name: string): void {
+    if (typeof window !== 'undefined' && performance.mark) {
+      performance.mark(`${name}-start`);
     }
   }
 
-  public endMark(markName: string): number | null {
-    if (typeof window !== 'undefined' && window.performance && window.performance.mark && window.performance.measure) {
+  public endMark(name: string): number | undefined {
+    if (typeof window !== 'undefined' && performance.mark && performance.measure) {
+      performance.mark(`${name}-end`);
       try {
-        window.performance.mark(`${markName}-end`);
-        const measureName = `${markName}-duration`;
-        window.performance.measure(measureName, `${markName}-start`, `${markName}-end`);
-        
-        const measures = window.performance.getEntriesByName(measureName);
-        if (measures.length > 0) {
-          return measures[0].duration;
-        }
-      } catch (error) {
-        console.warn('Failed to measure performance:', error);
+        const measure = performance.measure(name, `${name}-start`, `${name}-end`);
+        return measure.duration;
+      } catch {
+        return undefined;
       }
     }
-    return null;
+    return undefined;
   }
 
   public getPerformanceScore(): number {
     const metrics = this.getMetrics();
+    // Calculate a score based on metrics (0-100)
     let score = 100;
-
-    // Deduct points for slow load times
+    
+    // Deduct points for poor metrics
     if (metrics.loadTime > 3000) score -= 20;
     else if (metrics.loadTime > 2000) score -= 10;
-    else if (metrics.loadTime > 1000) score -= 5;
-
-    // Deduct points for high memory usage
+    
+    if (metrics.renderTime > 1000) score -= 15;
+    else if (metrics.renderTime > 500) score -= 7;
+    
     if (metrics.memoryUsage > 0.8) score -= 20;
     else if (metrics.memoryUsage > 0.6) score -= 10;
-
-    // Deduct points for low cache hit rate
-    if (metrics.cacheHitRate < 0.5) score -= 15;
-    else if (metrics.cacheHitRate < 0.7) score -= 10;
-
-    // Deduct points for large bundle size
-    if (metrics.bundleSize > 1000) score -= 15;
-    else if (metrics.bundleSize > 500) score -= 10;
-
-    return Math.max(0, Math.min(100, score));
+    
+    if (metrics.cacheHitRate < 0.6) score -= 15;
+    else if (metrics.cacheHitRate < 0.8) score -= 7;
+    
+    return Math.max(0, score);
   }
 
   public cleanup(): void {
