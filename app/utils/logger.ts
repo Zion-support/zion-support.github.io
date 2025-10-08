@@ -192,6 +192,20 @@ class Logger {
   }
 
   /**
+   * Log lifecycle events
+   */
+  lifecycle(message: string, context?: string): void {
+    this.info(`Lifecycle: ${message}`, context);
+  }
+
+  /**
+   * Log performance data
+   */
+  performance(message: string, data: unknown, context?: string): void {
+    this.info(`Performance: ${message}`, context, { performanceData: data });
+  }
+
+  /**
    * Group related log messages
    */
   group(label: string, fn?: () => void): void {
@@ -410,6 +424,14 @@ class ContextLogger {
 
   perf(metric: string, value: number, metadata?: Record<string, unknown>): void {
     this.logger.perf(metric, value, { ...metadata, context: this.context });
+  }
+
+  lifecycle(message: string, metadata?: Record<string, unknown>): void {
+    this.logger.lifecycle(message, this.context);
+  }
+
+  performance(message: string, data: unknown, metadata?: Record<string, unknown>): void {
+    this.logger.performance(message, data, this.context);
   }
 
   group(label: string, fn: () => void): void {

@@ -1,10 +1,8 @@
 # ==============================================================================
 # IMPORTANT: This is a VITE project, NOT a Next.js project!
 # ==============================================================================
-# If build fails with "@netlify/plugin-nextjs" error, you need to:
-# 1. Go to Netlify Dashboard > Site Settings > Build & deploy > Build plugins
-# 2. Remove/Uninstall the "@netlify/plugin-nextjs" plugin
-# 3. See NETLIFY_BUILD_FIX.md for detailed instructions
+# Next.js has been removed from dependencies to prevent Netlify auto-detection
+# This project uses Vite for building and React Router for routing
 # ==============================================================================
 
 [build]
@@ -14,11 +12,8 @@
 [build.environment]
   NODE_VERSION = "20"
   NPM_VERSION = "10"
-
-# NOTE: The @netlify/plugin-nextjs plugin MUST be manually removed from Netlify UI
-# UI-installed plugins cannot be disabled via netlify.toml configuration
-# See NETLIFY_BUILD_FIX.md for step-by-step removal instructions
-# Alternative: Remove Next.js dependencies to prevent auto-detection
+  # Explicitly disable Next.js features
+  NETLIFY_NEXT_PLUGIN_SKIP = "true"
 
 [[headers]]
   for = "/*"

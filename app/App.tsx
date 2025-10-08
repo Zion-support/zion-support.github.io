@@ -35,10 +35,10 @@ const App: React.FC = () => {
       const pageLoadMetrics = collectPerformanceMetrics();
       const metrics = performanceOptimizer.getMetrics();
       if (pageLoadMetrics) {
-        logger.info('Performance metrics collected', 'App', pageLoadMetrics as Record<string, unknown>);
+        logger.info('Performance metrics collected', 'App', { metrics: pageLoadMetrics });
       }
       if (metrics) {
-        logger.info('Core Web Vitals metrics', 'App', { ...metrics } as Record<string, unknown>);
+        logger.info('Core Web Vitals metrics', 'App', { metrics });
       }
     }
     
