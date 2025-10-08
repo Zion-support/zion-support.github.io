@@ -1,6 +1,7 @@
 import React, { createContext, useContext, useEffect, useState } from 'react';
 
-import { Link } from 'react-router-dom';import { logger } from '../utils/logger';
+// import { Link } from 'react-router-dom'; // Not used in this component
+import { logger } from '../utils/logger';
 
 interface AnalyticsEvent {
   event: string;
@@ -128,7 +129,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
     if (!isInitialized || typeof window === 'undefined') return;
 
     if (enableDebug) {
-      // eslint-disable-next-line no-console
+       
       console.error('Analytics Error:', error, context);
     }
 
