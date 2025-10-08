@@ -1,6 +1,5 @@
 import React from 'react';
 import dynamic from 'next/dynamic';
-});
 
 export const metadata = {
   title: 'Zion Tech Group — AI Enterprise Transformation & IT Services | 300% ROI Guaranteed',
