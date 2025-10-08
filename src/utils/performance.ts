@@ -57,7 +57,7 @@ export const logPerformance = (label: string) => {
     performance.mark(mark);
     
     return () => {
-//       const endMark = `${label}-end`;
+      const endMark = `${label}-end`;
       performance.mark(endMark);
       performance.measure(label, mark, endMark);
       
