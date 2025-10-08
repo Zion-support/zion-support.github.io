@@ -16,22 +16,9 @@ import LoadingSpinner from './components/LoadingSpinner';
 // Lazy load pages
 const HomePage = lazy(() => import('./page').catch(() => ({ default: () => <div>Error loading page</div> })));
 
-// Performance monitoring
-const performanceOptimizer = {
-  init: () => {},
-  getMetrics: () => ({ lcp: 0, fid: 0, cls: 0 })
-};
-
-const logger = {
-  lifecycle: (message: string, component: string) => console.log(`[${component}] ${message}`),
-  info: (message: string, data?: any) => console.log(message, data),
-  error: (message: string, error: Error, data?: any) => console.error(message, error, data),
-  performance: (message: string, metrics: any, component: string) => console.log(`[${component}] ${message}`, metrics)
-};
-
-const lazyLoadImages = () => {};
-const preloadCriticalResources = () => {};
-const collectPerformanceMetrics = () => ({ lcp: 0, fid: 0, cls: 0 });
+// Import proper utilities
+import { performanceOptimizer, lazyLoadImages, preloadCriticalResources, collectPerformanceMetrics } from './utils/performanceOptimizer';
+import { logger } from './utils/logger';
 
 const App: React.FC = () => {
   useEffect(() => {
@@ -48,23 +35,19 @@ const App: React.FC = () => {
       const pageLoadMetrics = collectPerformanceMetrics();
       const metrics = performanceOptimizer.getMetrics();
       if (pageLoadMetrics) {
-        // eslint-disable-next-line no-console
-        console.log('Performance metrics collected:', pageLoadMetrics);
+        logger.performance('Performance metrics collected', pageLoadMetrics, 'App');
       }
       if (metrics) {
-        // eslint-disable-next-line no-console
-        console.log('Performance metrics:', metrics);
+        logger.performance('Core Web Vitals metrics', metrics, 'App');
       }
     }
     
     logger.lifecycle('Performance monitoring initialized', 'App');
-    logger.info('🚀 Zion Tech Group App initialized with comprehensive monitoring', 'App');
+    logger.info('🚀 Zion Tech Group App initialized with comprehensive monitoring');
   }, []);
 
   const handleError = useCallback((error: Error, errorInfo: any) => {
-    logger.error('Application Error', error, 'ErrorBoundary');
-    // eslint-disable-next-line no-console
-    console.error('Error info:', errorInfo);
+    logger.error('Application Error', error, { errorInfo, component: 'ErrorBoundary' });
   }, []);
 
   return (
