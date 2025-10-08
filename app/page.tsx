@@ -1,138 +1,157 @@
-import { Suspense, lazy } from 'react';
+'use client';
+
+import React, { useState, useCallback } from 'react';
 import Link from 'next/link';
 
-// Lazy load heavy components
-const UnifiedContentPromotion = lazy(
-  () => import('./components/UnifiedContentPromotion'),
-);
-const InteractiveAIROICalculator = lazy(
-  () => import('./components/InteractiveAIROICalculator'),
-);
-const ContentShowcase = lazy(() => import('./components/ContentShowcase'));
-const InteractiveContentShowcase2026 = lazy(
-  () => import('./components/InteractiveContentShowcase2026'),
+// Loading fallback component
+const LoadingFallback: React.FC<{ height?: string }> = ({
+  height = 'h-32',
+}) => (
+  <div className={`flex items-center justify-center ${height} w-full`}>
+    <div className='animate-spin rounded-full h-8 w-8 border-b-2 border-indigo-600'></div>
+  </div>
 );
 
-// Loading component for Suspense fallback
-const LoadingFallback = ({ height = 'h-32' }: { height?: string }) => (
-  <div className={`${height} bg-gray-200 animate-pulse rounded`}></div>
-);
+const HomePage: React.FC = () => {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-export default function HomePage() {
-  const structuredData = {
-    '@context': 'https://schema.org',
-    '@type': 'Organization',
-    name: 'Zion Tech Group',
-    description:
-      'Leading provider of AI-powered enterprise solutions and digital transformation services',
-    url: 'https://ziontechgroup.com',
-    logo: 'https://ziontechgroup.com/logo.png',
-    contactPoint: {
-      '@type': 'ContactPoint',
-      telephone: '+1-302-464-0950',
-      contactType: 'customer service',
-      email: 'kleber@ziontechgroup.com',
-    },
-    address: {
-      '@type': 'PostalAddress',
-      addressCountry: 'US',
-      addressLocality: 'Wilmington',
-      addressRegion: 'DE',
-    },
-    sameAs: [
-      'https://linkedin.com/company/ziontechgroup',
-      'https://twitter.com/ziontechgroup',
-    ],
-    offers: {
-      '@type': 'Offer',
-      description: 'AI Enterprise Transformation Services',
-      price: '300% ROI Guaranteed',
-      priceCurrency: 'USD',
-    },
-  };
+  // Analytics tracking for phone clicks
+  const handlePhoneClick = useCallback(() => {
+    if (
+      typeof window !== 'undefined' &&
+      (
+        window as unknown as {
+          gtag?: (
+            command: string,
+            action: string,
+            parameters: Record<string, unknown>
+          ) => void;
+        }
+      ).gtag
+    ) {
+      (
+        window as unknown as {
+          gtag: (
+            command: string,
+            action: string,
+            parameters: Record<string, unknown>
+          ) => void;
+        }
+      ).gtag('event', 'phone_click', {
+        event_category: 'engagement',
+        event_label: 'main_phone_number',
+      });
+    }
+  }, []);
+
+  const toggleMobileMenu = useCallback(() => {
+    setIsMobileMenuOpen((prev) => !prev);
+  }, []);
 
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-      />
-      
-      {/* Hero Section */}
-      <section className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center">
-        <div className="container mx-auto px-4">
-          <div className="text-center">
-            <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-              Welcome to Zion Tech Group
+      <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+              Transform Your Business with AI
             </h1>
-            <p className="text-xl md:text-2xl text-gray-700 mb-12 max-w-3xl mx-auto">
-              Pioneering the future with advanced AI and IT solutions that transform businesses and drive innovation
+            <p className="text-xl text-gray-200 mb-8 max-w-3xl mx-auto">
+              Leading provider of enterprise AI solutions, quantum computing, and autonomous systems
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/contact"
-                className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-lg text-lg transition-colors duration-300"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 font-bold"
               >
-                Get Started Today
+                Get Started
               </Link>
-              <Link
-                href="/services"
-                className="border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white font-bold py-4 px-8 rounded-lg text-lg transition-colors duration-300"
+              <a
+                href="tel:+13024640950"
+                onClick={handlePhoneClick}
+                className="inline-flex items-center px-8 py-4 bg-white/20 text-white border border-white/30 rounded-lg hover:bg-white/30 transition-all duration-300 font-bold"
               >
-                View Services
-              </Link>
+                📞 (302) 464-0950
+              </a>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* Main Content */}
-      <main className="container mx-auto px-4 py-16">
-        {/* Unified Content Promotion */}
-        <Suspense fallback={<LoadingFallback height="h-32" />}>
-          <UnifiedContentPromotion />
-        </Suspense>
-
-        {/* Interactive AI ROI Calculator */}
-        <section className="my-16">
-          <Suspense fallback={<LoadingFallback height="h-64" />}>
-            <InteractiveAIROICalculator />
-          </Suspense>
         </section>
 
-        {/* Content Showcase */}
-        <section className="my-16">
-          <Suspense fallback={<LoadingFallback height="h-48" />}>
-            <ContentShowcase />
-          </Suspense>
-        </section>
-
-        {/* Interactive Content Showcase 2026 */}
-        <section className="my-16">
-          <Suspense fallback={<LoadingFallback height="h-48" />}>
-            <InteractiveContentShowcase2026 />
-          </Suspense>
-        </section>
-        
-        {/* CTA Section */}
-        <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-16 rounded-2xl text-center">
-          <div className="max-w-3xl mx-auto px-4">
-            <h2 className="text-4xl font-bold mb-6">
-              Ready to Transform Your Enterprise?
+        {/* Services Section */}
+        <section className="py-20 px-4 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <h2 className="text-4xl font-bold text-white text-center mb-12">
+              Our Services
             </h2>
-            <p className="text-xl mb-8">
-              Join hundreds of companies already achieving 300% ROI with our AI
-              solutions.
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {[
+                {
+                  title: 'AI Solutions',
+                  description: 'Advanced machine learning and AI implementations',
+                  icon: '🤖'
+                },
+                {
+                  title: 'Quantum Computing',
+                  description: 'Next-generation quantum algorithms',
+                  icon: '⚛️'
+                },
+                {
+                  title: 'Autonomous Systems',
+                  description: 'Self-managing enterprise operations',
+                  icon: '🔄'
+                },
+                {
+                  title: 'Business Intelligence',
+                  description: 'Data-driven insights and analytics',
+                  icon: '📊'
+                },
+                {
+                  title: 'Cloud Services',
+                  description: 'Scalable cloud infrastructure',
+                  icon: '☁️'
+                },
+                {
+                  title: 'Digital Transformation',
+                  description: 'Complete business modernization',
+                  icon: '🚀'
+                },
+              ].map((service, index) => (
+                <div
+                  key={index}
+                  className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all"
+                >
+                  <div className="text-4xl mb-4">{service.icon}</div>
+                  <h3 className="text-2xl font-bold text-white mb-4">
+                    {service.title}
+                  </h3>
+                  <p className="text-gray-300">{service.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-200 mb-8">
+              Contact us today to learn how we can help transform your business
             </p>
             <Link
               href="/contact"
-              className="bg-white text-blue-600 hover:bg-gray-100 font-bold py-4 px-8 rounded-lg text-lg transition-colors duration-300 inline-block"
+              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 font-bold text-lg"
             >
-              Start Your Transformation
+              Contact Us Today
             </Link>
           </div>
         </section>
-      </main>
+      </div>
     </>
   );
-}
+};
+
+export default HomePage;

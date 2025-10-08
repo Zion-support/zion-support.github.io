@@ -14,7 +14,7 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "preserve",
+    "jsx": "react-jsx",
     "jsxImportSource": "react",
     "strict": false,
     "strictNullChecks": true,
@@ -75,14 +75,14 @@
   },
   "include": [
     "next-env.d.ts",
-    "app/**/*",
     "app/**/*.ts",
     "app/**/*.tsx",
+    "app/**/*",
     "src/**/*",
     "App.tsx",
-    "components/**/*",
     "components/**/*.ts",
     "components/**/*.tsx",
+    "components/**/*",
     "api/**/*.ts",
     "api/**/*.js",
     "*.ts",
@@ -195,7 +195,9 @@
     "services/**",
     "fix-*.jsx",
     "fix-*.ts",
-    "jest.setup.*"
+    "jest.setup.*",
+    "**/*.disabled/**",
+    "**/*.backup/**"
   ],
   "references": [
     {
