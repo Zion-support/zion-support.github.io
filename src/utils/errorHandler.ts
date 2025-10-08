@@ -66,6 +66,10 @@ class ErrorHandler {
     }
 
     this.reportError(errorData);
+<<<<<<< HEAD
+=======
+    
+>>>>>>> 729f4dc1f33e (Fix: Add ErrorSeverity enum and resolve type conflicts)
     return errorData;
   }
 
@@ -127,7 +131,7 @@ class ErrorHandler {
     const now = new Date();
     const oneHourAgo = new Date(now.getTime() - 60 * 60 * 1000);
     const recent = this.errorQueue.filter(
-      error => error.timestamp ? new Date(error.timestamp) > oneHourAgo : false
+      error => new Date(error.timestamp) > oneHourAgo
     ).length;
 
     return {
