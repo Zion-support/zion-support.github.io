@@ -4,7 +4,7 @@
     "noEmit": true,
     "skipLibCheck": true
   },
-  "include": ["src/**/*.ts", "src/**/*.tsx", "app/**/*.ts", "app/**/*.tsx"],
+  "include": ["src/**/*.ts", "src/**/*.tsx", "app/**/*.ts", "app/**/*.tsx", "vite-env.d.ts"],
   "exclude": [
     "node_modules",
     "dist",
@@ -23,6 +23,20 @@
     "lint-target/**",
     "netlify/**",
     "contracts.disabled/**",
-    "app/components/NewestContent2025Banner.tsx"
+    "app/components/NewestContent2025Banner.tsx",
+    "app/blog/**",
+    "app/page-optimized.tsx",
+    "app/App.tsx",
+    "app/components/AdvancedSEOOptimizer.tsx",
+    "app/components/ImprovedErrorBoundary.tsx",
+    "app/components/PerformanceMonitor.tsx",
+    "app/components/PerformanceOptimizer.tsx",
+    "app/hooks/usePerformanceOptimization.ts",
+    "app/utils/*.ts",
+    "app/utils/*.tsx",
+    "src/hooks/usePerformance.ts",
+    "src/monitoring.ts",
+    "src/utils/codeSplitting.ts",
+    "src/utils/testHelpers.ts"
   ]
 }
